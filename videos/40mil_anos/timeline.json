@@ -1,0 +1,2833 @@
+{
+ "bpm": 118.5,
+ "beat": 0.5063291139240507,
+ "unidad": 2,
+ "total": 180.0,
+ "titulo": "10 cosas que hacías hace 40.000 años (y sigues haciendo)",
+ "estilo": "doodle_psicodelico",
+ "escenas": [
+  {
+   "id": "intro",
+   "t0": 0.0,
+   "t1": 15.1899,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "intro_0",
+     "texto": "Hace cuarenta mil años no había internet, ni ciudades, ni agricultura.",
+     "t0": 1.187,
+     "t1": 5.323,
+     "words": [
+      {
+       "w": "Hace",
+       "s": 1.187,
+       "e": 1.347
+      },
+      {
+       "w": "cuarenta",
+       "s": 1.347,
+       "e": 1.707
+      },
+      {
+       "w": "mil",
+       "s": 1.707,
+       "e": 2.027
+      },
+      {
+       "w": "años",
+       "s": 2.027,
+       "e": 2.207
+      },
+      {
+       "w": "no",
+       "s": 2.207,
+       "e": 2.487
+      },
+      {
+       "w": "había",
+       "s": 2.487,
+       "e": 2.647
+      },
+      {
+       "w": "internet,",
+       "s": 2.647,
+       "e": 2.927
+      },
+      {
+       "w": "ni",
+       "s": 2.927,
+       "e": 3.367
+      },
+      {
+       "w": "ciudades,",
+       "s": 3.367,
+       "e": 3.987
+      },
+      {
+       "w": "ni",
+       "s": 3.987,
+       "e": 4.387
+      },
+      {
+       "w": "agricultura.",
+       "s": 4.387,
+       "e": 4.967
+      }
+     ]
+    },
+    {
+     "key": "intro_1",
+     "texto": "Pero ya había cerebros como el tuyo, haciendo casi lo mismo que tú.",
+     "t0": 5.674,
+     "t1": 9.437,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 5.674,
+       "e": 5.834
+      },
+      {
+       "w": "ya",
+       "s": 5.834,
+       "e": 6.014
+      },
+      {
+       "w": "había",
+       "s": 6.014,
+       "e": 6.234
+      },
+      {
+       "w": "cerebros",
+       "s": 6.234,
+       "e": 6.794
+      },
+      {
+       "w": "como",
+       "s": 6.794,
+       "e": 6.934
+      },
+      {
+       "w": "el",
+       "s": 6.934,
+       "e": 7.074
+      },
+      {
+       "w": "tuyo,",
+       "s": 7.074,
+       "e": 7.354
+      },
+      {
+       "w": "haciendo",
+       "s": 7.414,
+       "e": 7.914
+      },
+      {
+       "w": "casi",
+       "s": 7.914,
+       "e": 8.314
+      },
+      {
+       "w": "lo",
+       "s": 8.314,
+       "e": 8.534
+      },
+      {
+       "w": "mismo",
+       "s": 8.534,
+       "e": 8.754
+      },
+      {
+       "w": "que",
+       "s": 8.754,
+       "e": 8.954
+      },
+      {
+       "w": "tú.",
+       "s": 8.954,
+       "e": 9.074
+      }
+     ]
+    },
+    {
+     "key": "intro_2",
+     "texto": "Estas son diez cosas que hacían los humanos de la Edad de Hielo, y que tú sigues repitiendo.",
+     "t0": 9.787,
+     "t1": 14.638,
+     "words": [
+      {
+       "w": "Estas",
+       "s": 9.787,
+       "e": 10.107
+      },
+      {
+       "w": "son",
+       "s": 10.107,
+       "e": 10.247
+      },
+      {
+       "w": "diez",
+       "s": 10.247,
+       "e": 10.527
+      },
+      {
+       "w": "cosas",
+       "s": 10.527,
+       "e": 10.847
+      },
+      {
+       "w": "que",
+       "s": 10.847,
+       "e": 11.087
+      },
+      {
+       "w": "hacían",
+       "s": 11.087,
+       "e": 11.387
+      },
+      {
+       "w": "los",
+       "s": 11.387,
+       "e": 11.487
+      },
+      {
+       "w": "humanos",
+       "s": 11.487,
+       "e": 11.707
+      },
+      {
+       "w": "de",
+       "s": 11.707,
+       "e": 11.967
+      },
+      {
+       "w": "la",
+       "s": 11.967,
+       "e": 12.027
+      },
+      {
+       "w": "Edad",
+       "s": 12.027,
+       "e": 12.347
+      },
+      {
+       "w": "de",
+       "s": 12.347,
+       "e": 12.447
+      },
+      {
+       "w": "Hielo,",
+       "s": 12.447,
+       "e": 12.747
+      },
+      {
+       "w": "y",
+       "s": 12.747,
+       "e": 13.087
+      },
+      {
+       "w": "que",
+       "s": 13.087,
+       "e": 13.207
+      },
+      {
+       "w": "tú",
+       "s": 13.207,
+       "e": 13.387
+      },
+      {
+       "w": "sigues",
+       "s": 13.387,
+       "e": 13.767
+      },
+      {
+       "w": "repitiendo.",
+       "s": 13.767,
+       "e": 14.267
+      }
+     ]
+    }
+   ],
+   "fin_voz": 14.638,
+   "beats": 30
+  },
+  {
+   "id": "manos",
+   "num": 1,
+   "titulo": "DEJAR TU HUELLA",
+   "antes": "manos en la roca",
+   "ahora": "selfies",
+   "dato": "Sulawesi (Indonesia) y El Castillo (España): ~40.000 años",
+   "fuente": "Aubert et al. 2014, Nature · Pike et al. 2012, Science",
+   "t0": 15.1899,
+   "t1": 28.3544,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "manos_0",
+     "texto": "Número uno: dejar tu huella.",
+     "t0": 15.56,
+     "t1": 17.589,
+     "words": [
+      {
+       "w": "Número",
+       "s": 15.56,
+       "e": 16.0
+      },
+      {
+       "w": "uno:",
+       "s": 16.0,
+       "e": 16.14
+      },
+      {
+       "w": "dejar",
+       "s": 16.58,
+       "e": 16.86
+      },
+      {
+       "w": "tu",
+       "s": 16.86,
+       "e": 17.0
+      },
+      {
+       "w": "huella.",
+       "s": 17.0,
+       "e": 17.3
+      }
+     ]
+    },
+    {
+     "key": "manos_1",
+     "texto": "En cuevas de Indonesia y de España, alguien apoyaba la mano en la roca y soplaba pintura encima.",
+     "t0": 18.049,
+     "t1": 23.233,
+     "words": [
+      {
+       "w": "En",
+       "s": 18.049,
+       "e": 18.169
+      },
+      {
+       "w": "cuevas",
+       "s": 18.169,
+       "e": 18.549
+      },
+      {
+       "w": "de",
+       "s": 18.549,
+       "e": 18.649
+      },
+      {
+       "w": "Indonesia",
+       "s": 18.649,
+       "e": 18.949
+      },
+      {
+       "w": "y",
+       "s": 18.949,
+       "e": 19.249
+      },
+      {
+       "w": "de",
+       "s": 19.249,
+       "e": 19.309
+      },
+      {
+       "w": "España,",
+       "s": 19.309,
+       "e": 19.569
+      },
+      {
+       "w": "alguien",
+       "s": 19.789,
+       "e": 20.369
+      },
+      {
+       "w": "apoyaba",
+       "s": 20.369,
+       "e": 20.889
+      },
+      {
+       "w": "la",
+       "s": 20.889,
+       "e": 20.969
+      },
+      {
+       "w": "mano",
+       "s": 20.969,
+       "e": 21.169
+      },
+      {
+       "w": "en",
+       "s": 21.169,
+       "e": 21.289
+      },
+      {
+       "w": "la",
+       "s": 21.289,
+       "e": 21.329
+      },
+      {
+       "w": "roca",
+       "s": 21.329,
+       "e": 21.689
+      },
+      {
+       "w": "y",
+       "s": 21.689,
+       "e": 21.769
+      },
+      {
+       "w": "soplaba",
+       "s": 21.769,
+       "e": 22.149
+      },
+      {
+       "w": "pintura",
+       "s": 22.149,
+       "e": 22.569
+      },
+      {
+       "w": "encima.",
+       "s": 22.569,
+       "e": 22.729
+      }
+     ]
+    },
+    {
+     "key": "manos_2",
+     "texto": "Hoy lo llamamos selfie. El mensaje es el mismo: yo estuve aquí.",
+     "t0": 23.574,
+     "t1": 27.873,
+     "words": [
+      {
+       "w": "Hoy",
+       "s": 23.574,
+       "e": 23.734
+      },
+      {
+       "w": "lo",
+       "s": 23.734,
+       "e": 23.874
+      },
+      {
+       "w": "llamamos",
+       "s": 23.874,
+       "e": 24.334
+      },
+      {
+       "w": "selfie.",
+       "s": 24.334,
+       "e": 24.674
+      },
+      {
+       "w": "El",
+       "s": 24.994,
+       "e": 25.434
+      },
+      {
+       "w": "mensaje",
+       "s": 25.434,
+       "e": 25.954
+      },
+      {
+       "w": "es",
+       "s": 25.954,
+       "e": 26.174
+      },
+      {
+       "w": "el",
+       "s": 26.174,
+       "e": 26.314
+      },
+      {
+       "w": "mismo:",
+       "s": 26.314,
+       "e": 26.554
+      },
+      {
+       "w": "yo",
+       "s": 26.714,
+       "e": 27.034
+      },
+      {
+       "w": "estuve",
+       "s": 27.034,
+       "e": 27.334
+      },
+      {
+       "w": "aquí.",
+       "s": 27.334,
+       "e": 27.454
+      }
+     ]
+    }
+   ],
+   "fin_voz": 27.873,
+   "beats": 26
+  },
+  {
+   "id": "comida",
+   "num": 2,
+   "titulo": "PRESUMIR LA COMIDA",
+   "antes": "pintar cerdos",
+   "ahora": "foto del plato",
+   "dato": "Cerdo de Leang Tedongnge, Sulawesi: +45.500 años",
+   "fuente": "Brumm et al. 2021, Science Advances",
+   "t0": 28.3544,
+   "t1": 42.5316,
+   "compases": 14,
+   "frases": [
+    {
+     "key": "comida_0",
+     "texto": "Número dos: presumir la comida.",
+     "t0": 28.904,
+     "t1": 30.821,
+     "words": [
+      {
+       "w": "Número",
+       "s": 28.904,
+       "e": 29.164
+      },
+      {
+       "w": "dos:",
+       "s": 29.164,
+       "e": 29.264
+      },
+      {
+       "w": "presumir",
+       "s": 29.704,
+       "e": 29.984
+      },
+      {
+       "w": "la",
+       "s": 29.984,
+       "e": 30.044
+      },
+      {
+       "w": "comida.",
+       "s": 30.044,
+       "e": 30.304
+      }
+     ]
+    },
+    {
+     "key": "comida_1",
+     "texto": "Las pinturas de animales más antiguas que conocemos, en la isla de Sulawesi, son de cerdos salvajes.",
+     "t0": 31.43,
+     "t1": 37.113,
+     "words": [
+      {
+       "w": "Las",
+       "s": 31.43,
+       "e": 31.57
+      },
+      {
+       "w": "pinturas",
+       "s": 31.57,
+       "e": 32.07
+      },
+      {
+       "w": "de",
+       "s": 32.07,
+       "e": 32.19
+      },
+      {
+       "w": "animales",
+       "s": 32.19,
+       "e": 32.35
+      },
+      {
+       "w": "más",
+       "s": 32.35,
+       "e": 32.69
+      },
+      {
+       "w": "antiguas",
+       "s": 32.69,
+       "e": 33.21
+      },
+      {
+       "w": "que",
+       "s": 33.21,
+       "e": 33.31
+      },
+      {
+       "w": "conocemos,",
+       "s": 33.31,
+       "e": 33.83
+      },
+      {
+       "w": "en",
+       "s": 33.83,
+       "e": 34.23
+      },
+      {
+       "w": "la",
+       "s": 34.23,
+       "e": 34.33
+      },
+      {
+       "w": "isla",
+       "s": 34.33,
+       "e": 34.63
+      },
+      {
+       "w": "de",
+       "s": 34.63,
+       "e": 34.69
+      },
+      {
+       "w": "Sulawesi,",
+       "s": 34.69,
+       "e": 35.19
+      },
+      {
+       "w": "son",
+       "s": 35.19,
+       "e": 35.69
+      },
+      {
+       "w": "de",
+       "s": 35.69,
+       "e": 35.87
+      },
+      {
+       "w": "cerdos",
+       "s": 35.87,
+       "e": 36.23
+      },
+      {
+       "w": "salvajes.",
+       "s": 36.23,
+       "e": 36.67
+      }
+     ]
+    },
+    {
+     "key": "comida_2",
+     "texto": "Cuarenta y cinco mil años después, seguimos fotografiando lo que vamos a comer.",
+     "t0": 37.602,
+     "t1": 41.754,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 37.602,
+       "e": 37.749
+      },
+      {
+       "w": "y",
+       "s": 37.749,
+       "e": 37.895
+      },
+      {
+       "w": "cinco",
+       "s": 37.895,
+       "e": 38.042
+      },
+      {
+       "w": "mil",
+       "s": 38.042,
+       "e": 38.462
+      },
+      {
+       "w": "años",
+       "s": 38.462,
+       "e": 38.602
+      },
+      {
+       "w": "después,",
+       "s": 38.602,
+       "e": 38.942
+      },
+      {
+       "w": "seguimos",
+       "s": 39.102,
+       "e": 39.962
+      },
+      {
+       "w": "fotografiando",
+       "s": 39.962,
+       "e": 40.642
+      },
+      {
+       "w": "lo",
+       "s": 40.642,
+       "e": 40.742
+      },
+      {
+       "w": "que",
+       "s": 40.742,
+       "e": 40.862
+      },
+      {
+       "w": "vamos",
+       "s": 40.862,
+       "e": 41.022
+      },
+      {
+       "w": "a",
+       "s": 41.022,
+       "e": 41.202
+      },
+      {
+       "w": "comer.",
+       "s": 41.202,
+       "e": 41.382
+      }
+     ]
+    }
+   ],
+   "fin_voz": 41.754,
+   "beats": 28
+  },
+  {
+   "id": "musica",
+   "num": 3,
+   "titulo": "PONER MÚSICA",
+   "antes": "flauta de hueso",
+   "ahora": "playlist",
+   "dato": "Flautas de Geissenklösterle (Alemania): 42.000 años",
+   "fuente": "Higham et al. 2012, J. Human Evolution",
+   "t0": 42.5316,
+   "t1": 55.6962,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "musica_0",
+     "texto": "Número tres: poner música.",
+     "t0": 43.082,
+     "t1": 44.973,
+     "words": [
+      {
+       "w": "Número",
+       "s": 43.082,
+       "e": 43.302
+      },
+      {
+       "w": "tres:",
+       "s": 43.302,
+       "e": 43.422
+      },
+      {
+       "w": "poner",
+       "s": 43.762,
+       "e": 44.142
+      },
+      {
+       "w": "música.",
+       "s": 44.142,
+       "e": 44.362
+      }
+     ]
+    },
+    {
+     "key": "musica_1",
+     "texto": "En cuevas de Alemania aparecieron flautas de hueso de ave y de marfil de mamut, de más de cuarenta mil años.",
+     "t0": 45.548,
+     "t1": 51.929,
+     "words": [
+      {
+       "w": "En",
+       "s": 45.548,
+       "e": 45.668
+      },
+      {
+       "w": "cuevas",
+       "s": 45.668,
+       "e": 46.088
+      },
+      {
+       "w": "de",
+       "s": 46.088,
+       "e": 46.168
+      },
+      {
+       "w": "Alemania",
+       "s": 46.168,
+       "e": 46.548
+      },
+      {
+       "w": "aparecieron",
+       "s": 46.548,
+       "e": 47.428
+      },
+      {
+       "w": "flautas",
+       "s": 47.428,
+       "e": 47.928
+      },
+      {
+       "w": "de",
+       "s": 47.928,
+       "e": 48.008
+      },
+      {
+       "w": "hueso",
+       "s": 48.008,
+       "e": 48.368
+      },
+      {
+       "w": "de",
+       "s": 48.368,
+       "e": 48.408
+      },
+      {
+       "w": "ave",
+       "s": 48.408,
+       "e": 48.588
+      },
+      {
+       "w": "y",
+       "s": 48.588,
+       "e": 49.008
+      },
+      {
+       "w": "de",
+       "s": 49.008,
+       "e": 49.088
+      },
+      {
+       "w": "marfil",
+       "s": 49.088,
+       "e": 49.508
+      },
+      {
+       "w": "de",
+       "s": 49.508,
+       "e": 49.608
+      },
+      {
+       "w": "mamut,",
+       "s": 49.608,
+       "e": 50.028
+      },
+      {
+       "w": "de",
+       "s": 50.048,
+       "e": 50.468
+      },
+      {
+       "w": "más",
+       "s": 50.468,
+       "e": 50.628
+      },
+      {
+       "w": "de",
+       "s": 50.628,
+       "e": 50.768
+      },
+      {
+       "w": "cuarenta",
+       "s": 50.768,
+       "e": 51.008
+      },
+      {
+       "w": "mil",
+       "s": 51.008,
+       "e": 51.328
+      },
+      {
+       "w": "años.",
+       "s": 51.328,
+       "e": 51.508
+      }
+     ]
+    },
+    {
+     "key": "musica_2",
+     "texto": "Antes de inventar la agricultura, ya teníamos playlist.",
+     "t0": 52.385,
+     "t1": 54.985,
+     "words": [
+      {
+       "w": "Antes",
+       "s": 52.385,
+       "e": 52.565
+      },
+      {
+       "w": "de",
+       "s": 52.565,
+       "e": 52.705
+      },
+      {
+       "w": "inventar",
+       "s": 52.705,
+       "e": 53.105
+      },
+      {
+       "w": "la",
+       "s": 53.105,
+       "e": 53.185
+      },
+      {
+       "w": "agricultura,",
+       "s": 53.185,
+       "e": 53.665
+      },
+      {
+       "w": "ya",
+       "s": 53.665,
+       "e": 53.865
+      },
+      {
+       "w": "teníamos",
+       "s": 53.865,
+       "e": 54.185
+      },
+      {
+       "w": "playlist.",
+       "s": 54.185,
+       "e": 54.505
+      }
+     ]
+    }
+   ],
+   "fin_voz": 54.985,
+   "beats": 26
+  },
+  {
+   "id": "heroes",
+   "num": 4,
+   "titulo": "INVENTAR SUPERHÉROES",
+   "antes": "Hombre León",
+   "ahora": "Hombre Araña",
+   "dato": "Löwenmensch de Hohlenstein-Stadel: ~40.000 años",
+   "fuente": "Museo de Ulm · Kind et al. 2014",
+   "t0": 55.6962,
+   "t1": 69.8734,
+   "compases": 14,
+   "frases": [
+    {
+     "key": "heroes_0",
+     "texto": "Número cuatro: inventar superhéroes.",
+     "t0": 56.083,
+     "t1": 58.48,
+     "words": [
+      {
+       "w": "Número",
+       "s": 56.083,
+       "e": 56.343
+      },
+      {
+       "w": "cuatro:",
+       "s": 56.343,
+       "e": 56.543
+      },
+      {
+       "w": "inventar",
+       "s": 57.143,
+       "e": 57.603
+      },
+      {
+       "w": "superhéroes.",
+       "s": 57.603,
+       "e": 58.203
+      }
+     ]
+    },
+    {
+     "key": "heroes_1",
+     "texto": "El Hombre León es una figura de marfil de unos cuarenta mil años, con cuerpo humano y cabeza de león.",
+     "t0": 58.95,
+     "t1": 64.078,
+     "words": [
+      {
+       "w": "El",
+       "s": 58.95,
+       "e": 59.03
+      },
+      {
+       "w": "Hombre",
+       "s": 59.03,
+       "e": 59.15
+      },
+      {
+       "w": "León",
+       "s": 59.15,
+       "e": 59.53
+      },
+      {
+       "w": "es",
+       "s": 59.53,
+       "e": 59.65
+      },
+      {
+       "w": "una",
+       "s": 59.65,
+       "e": 59.81
+      },
+      {
+       "w": "figura",
+       "s": 59.81,
+       "e": 60.09
+      },
+      {
+       "w": "de",
+       "s": 60.09,
+       "e": 60.27
+      },
+      {
+       "w": "marfil",
+       "s": 60.27,
+       "e": 60.69
+      },
+      {
+       "w": "de",
+       "s": 60.69,
+       "e": 60.79
+      },
+      {
+       "w": "unos",
+       "s": 60.79,
+       "e": 60.93
+      },
+      {
+       "w": "cuarenta",
+       "s": 60.93,
+       "e": 61.17
+      },
+      {
+       "w": "mil",
+       "s": 61.17,
+       "e": 61.49
+      },
+      {
+       "w": "años,",
+       "s": 61.49,
+       "e": 61.67
+      },
+      {
+       "w": "con",
+       "s": 61.79,
+       "e": 62.13
+      },
+      {
+       "w": "cuerpo",
+       "s": 62.13,
+       "e": 62.45
+      },
+      {
+       "w": "humano",
+       "s": 62.45,
+       "e": 62.75
+      },
+      {
+       "w": "y",
+       "s": 62.75,
+       "e": 63.03
+      },
+      {
+       "w": "cabeza",
+       "s": 63.03,
+       "e": 63.27
+      },
+      {
+       "w": "de",
+       "s": 63.27,
+       "e": 63.53
+      },
+      {
+       "w": "león.",
+       "s": 63.53,
+       "e": 63.79
+      }
+     ]
+    },
+    {
+     "key": "heroes_2",
+     "texto": "Es una de las pruebas más antiguas de imaginación. El Hombre Araña es su tataranieto.",
+     "t0": 64.429,
+     "t1": 69.373,
+     "words": [
+      {
+       "w": "Es",
+       "s": 64.429,
+       "e": 64.569
+      },
+      {
+       "w": "una",
+       "s": 64.569,
+       "e": 64.769
+      },
+      {
+       "w": "de",
+       "s": 64.769,
+       "e": 64.909
+      },
+      {
+       "w": "las",
+       "s": 64.909,
+       "e": 65.049
+      },
+      {
+       "w": "pruebas",
+       "s": 65.049,
+       "e": 65.469
+      },
+      {
+       "w": "más",
+       "s": 65.469,
+       "e": 65.609
+      },
+      {
+       "w": "antiguas",
+       "s": 65.609,
+       "e": 66.169
+      },
+      {
+       "w": "de",
+       "s": 66.169,
+       "e": 66.249
+      },
+      {
+       "w": "imaginación.",
+       "s": 66.249,
+       "e": 66.869
+      },
+      {
+       "w": "El",
+       "s": 67.069,
+       "e": 67.469
+      },
+      {
+       "w": "Hombre",
+       "s": 67.469,
+       "e": 67.689
+      },
+      {
+       "w": "Araña",
+       "s": 67.689,
+       "e": 68.109
+      },
+      {
+       "w": "es",
+       "s": 68.109,
+       "e": 68.389
+      },
+      {
+       "w": "su",
+       "s": 68.389,
+       "e": 68.549
+      },
+      {
+       "w": "tataranieto.",
+       "s": 68.549,
+       "e": 69.169
+      }
+     ]
+    }
+   ],
+   "fin_voz": 69.373,
+   "beats": 28
+  },
+  {
+   "id": "joyas",
+   "num": 5,
+   "titulo": "PONERSE JOYAS",
+   "antes": "collar de conchas",
+   "ahora": "accesorios",
+   "dato": "Cuentas de cáscara de avestruz, conchas y dientes",
+   "fuente": "Miller & Wang 2022, Nature",
+   "t0": 69.8734,
+   "t1": 86.0759,
+   "compases": 16,
+   "frases": [
+    {
+     "key": "joyas_0",
+     "texto": "Número cinco: ponerse joyas.",
+     "t0": 70.411,
+     "t1": 72.675,
+     "words": [
+      {
+       "w": "Número",
+       "s": 70.411,
+       "e": 70.851
+      },
+      {
+       "w": "cinco:",
+       "s": 70.851,
+       "e": 70.991
+      },
+      {
+       "w": "ponerse",
+       "s": 71.211,
+       "e": 71.871
+      },
+      {
+       "w": "joyas.",
+       "s": 71.871,
+       "e": 72.411
+      }
+     ]
+    },
+    {
+     "key": "joyas_1",
+     "texto": "Collares de cáscara de huevo de avestruz, conchas y dientes perforados. Nadie los necesitaba para sobrevivir.",
+     "t0": 73.233,
+     "t1": 79.902,
+     "words": [
+      {
+       "w": "Collares",
+       "s": 73.233,
+       "e": 73.633
+      },
+      {
+       "w": "de",
+       "s": 73.633,
+       "e": 73.753
+      },
+      {
+       "w": "cáscara",
+       "s": 73.753,
+       "e": 74.233
+      },
+      {
+       "w": "de",
+       "s": 74.233,
+       "e": 74.313
+      },
+      {
+       "w": "huevo",
+       "s": 74.313,
+       "e": 74.653
+      },
+      {
+       "w": "de",
+       "s": 74.653,
+       "e": 74.773
+      },
+      {
+       "w": "avestruz,",
+       "s": 74.773,
+       "e": 75.293
+      },
+      {
+       "w": "conchas",
+       "s": 75.313,
+       "e": 75.913
+      },
+      {
+       "w": "y",
+       "s": 75.913,
+       "e": 76.093
+      },
+      {
+       "w": "dientes",
+       "s": 76.093,
+       "e": 76.593
+      },
+      {
+       "w": "perforados.",
+       "s": 76.593,
+       "e": 77.153
+      },
+      {
+       "w": "Nadie",
+       "s": 77.493,
+       "e": 78.173
+      },
+      {
+       "w": "los",
+       "s": 78.173,
+       "e": 78.233
+      },
+      {
+       "w": "necesitaba",
+       "s": 78.233,
+       "e": 78.833
+      },
+      {
+       "w": "para",
+       "s": 78.833,
+       "e": 78.973
+      },
+      {
+       "w": "sobrevivir.",
+       "s": 78.973,
+       "e": 79.573
+      }
+     ]
+    },
+    {
+     "key": "joyas_2",
+     "texto": "Probablemente decían quién eras y a qué grupo pertenecías. Igual que tus accesorios.",
+     "t0": 80.34,
+     "t1": 85.399,
+     "words": [
+      {
+       "w": "Probablemente",
+       "s": 80.34,
+       "e": 81.02
+      },
+      {
+       "w": "decían",
+       "s": 81.02,
+       "e": 81.42
+      },
+      {
+       "w": "quién",
+       "s": 81.42,
+       "e": 81.64
+      },
+      {
+       "w": "eras",
+       "s": 81.64,
+       "e": 82.08
+      },
+      {
+       "w": "y",
+       "s": 82.08,
+       "e": 82.24
+      },
+      {
+       "w": "a",
+       "s": 82.24,
+       "e": 82.38
+      },
+      {
+       "w": "qué",
+       "s": 82.38,
+       "e": 82.4
+      },
+      {
+       "w": "grupo",
+       "s": 82.4,
+       "e": 82.64
+      },
+      {
+       "w": "pertenecías.",
+       "s": 82.64,
+       "e": 83.34
+      },
+      {
+       "w": "Igual",
+       "s": 83.48,
+       "e": 84.2
+      },
+      {
+       "w": "que",
+       "s": 84.2,
+       "e": 84.38
+      },
+      {
+       "w": "tus",
+       "s": 84.38,
+       "e": 84.5
+      },
+      {
+       "w": "accesorios.",
+       "s": 84.5,
+       "e": 85.08
+      }
+     ]
+    }
+   ],
+   "fin_voz": 85.399,
+   "beats": 32
+  },
+  {
+   "id": "moda",
+   "num": 6,
+   "titulo": "SEGUIR LA MODA",
+   "antes": "aguja de hueso",
+   "ahora": "ropa con estilo",
+   "dato": "Primeras agujas con ojo, Siberia: ~40.000 años",
+   "fuente": "Gilligan et al. 2024, Science Advances",
+   "t0": 86.0759,
+   "t1": 99.2405,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "moda_0",
+     "texto": "Número seis: seguir la moda.",
+     "t0": 86.582,
+     "t1": 88.377,
+     "words": [
+      {
+       "w": "Número",
+       "s": 86.582,
+       "e": 86.882
+      },
+      {
+       "w": "seis:",
+       "s": 86.882,
+       "e": 87.062
+      },
+      {
+       "w": "seguir",
+       "s": 87.382,
+       "e": 87.742
+      },
+      {
+       "w": "la",
+       "s": 87.742,
+       "e": 87.882
+      },
+      {
+       "w": "moda.",
+       "s": 87.882,
+       "e": 88.182
+      }
+     ]
+    },
+    {
+     "key": "moda_1",
+     "texto": "Las primeras agujas con ojo aparecen en Siberia hace unos cuarenta mil años.",
+     "t0": 88.917,
+     "t1": 93.496,
+     "words": [
+      {
+       "w": "Las",
+       "s": 88.917,
+       "e": 89.337
+      },
+      {
+       "w": "primeras",
+       "s": 89.337,
+       "e": 89.777
+      },
+      {
+       "w": "agujas",
+       "s": 89.777,
+       "e": 90.297
+      },
+      {
+       "w": "con",
+       "s": 90.297,
+       "e": 90.437
+      },
+      {
+       "w": "ojo",
+       "s": 90.437,
+       "e": 90.757
+      },
+      {
+       "w": "aparecen",
+       "s": 90.757,
+       "e": 91.277
+      },
+      {
+       "w": "en",
+       "s": 91.277,
+       "e": 91.357
+      },
+      {
+       "w": "Siberia",
+       "s": 91.357,
+       "e": 91.837
+      },
+      {
+       "w": "hace",
+       "s": 91.837,
+       "e": 91.997
+      },
+      {
+       "w": "unos",
+       "s": 91.997,
+       "e": 92.197
+      },
+      {
+       "w": "cuarenta",
+       "s": 92.197,
+       "e": 92.477
+      },
+      {
+       "w": "mil",
+       "s": 92.477,
+       "e": 92.777
+      },
+      {
+       "w": "años.",
+       "s": 92.777,
+       "e": 92.957
+      }
+     ]
+    },
+    {
+     "key": "moda_2",
+     "texto": "Y los arqueólogos creen que no solo eran para abrigarse, sino para decorar la ropa y lucirla.",
+     "t0": 93.916,
+     "t1": 98.601,
+     "words": [
+      {
+       "w": "Y",
+       "s": 93.916,
+       "e": 93.936
+      },
+      {
+       "w": "los",
+       "s": 93.936,
+       "e": 94.016
+      },
+      {
+       "w": "arqueólogos",
+       "s": 94.016,
+       "e": 94.636
+      },
+      {
+       "w": "creen",
+       "s": 94.636,
+       "e": 94.876
+      },
+      {
+       "w": "que",
+       "s": 94.876,
+       "e": 95.036
+      },
+      {
+       "w": "no",
+       "s": 95.036,
+       "e": 95.156
+      },
+      {
+       "w": "solo",
+       "s": 95.156,
+       "e": 95.336
+      },
+      {
+       "w": "eran",
+       "s": 95.336,
+       "e": 95.556
+      },
+      {
+       "w": "para",
+       "s": 95.556,
+       "e": 95.756
+      },
+      {
+       "w": "abrigarse,",
+       "s": 95.756,
+       "e": 96.196
+      },
+      {
+       "w": "sino",
+       "s": 96.296,
+       "e": 96.736
+      },
+      {
+       "w": "para",
+       "s": 96.736,
+       "e": 96.956
+      },
+      {
+       "w": "decorar",
+       "s": 96.956,
+       "e": 97.416
+      },
+      {
+       "w": "la",
+       "s": 97.416,
+       "e": 97.516
+      },
+      {
+       "w": "ropa",
+       "s": 97.516,
+       "e": 97.856
+      },
+      {
+       "w": "y",
+       "s": 97.856,
+       "e": 97.936
+      },
+      {
+       "w": "lucirla.",
+       "s": 97.936,
+       "e": 98.296
+      }
+     ]
+    }
+   ],
+   "fin_voz": 98.601,
+   "beats": 26
+  },
+  {
+   "id": "cuenta",
+   "num": 7,
+   "titulo": "LLEVAR LA CUENTA",
+   "antes": "29 muescas",
+   "ahora": "una app",
+   "dato": "Hueso de Lebombo (sur de África): ~43.000 años",
+   "fuente": "d'Errico et al. 2012, PNAS",
+   "t0": 99.2405,
+   "t1": 113.4177,
+   "compases": 14,
+   "frases": [
+    {
+     "key": "cuenta_0",
+     "texto": "Número siete: llevar la cuenta.",
+     "t0": 99.663,
+     "t1": 101.655,
+     "words": [
+      {
+       "w": "Número",
+       "s": 99.663,
+       "e": 99.943
+      },
+      {
+       "w": "siete:",
+       "s": 99.943,
+       "e": 100.123
+      },
+      {
+       "w": "llevar",
+       "s": 100.503,
+       "e": 100.903
+      },
+      {
+       "w": "la",
+       "s": 100.903,
+       "e": 101.023
+      },
+      {
+       "w": "cuenta.",
+       "s": 101.023,
+       "e": 101.243
+      }
+     ]
+    },
+    {
+     "key": "cuenta_1",
+     "texto": "El hueso de Lebombo, en el sur de África, tiene veintinueve muescas talladas a propósito, y más de cuarenta mil años.",
+     "t0": 102.146,
+     "t1": 109.157,
+     "words": [
+      {
+       "w": "El",
+       "s": 102.146,
+       "e": 102.246
+      },
+      {
+       "w": "hueso",
+       "s": 102.246,
+       "e": 102.526
+      },
+      {
+       "w": "de",
+       "s": 102.526,
+       "e": 102.546
+      },
+      {
+       "w": "Lebombo,",
+       "s": 102.546,
+       "e": 103.026
+      },
+      {
+       "w": "en",
+       "s": 103.046,
+       "e": 103.406
+      },
+      {
+       "w": "el",
+       "s": 103.406,
+       "e": 103.546
+      },
+      {
+       "w": "sur",
+       "s": 103.546,
+       "e": 103.746
+      },
+      {
+       "w": "de",
+       "s": 103.746,
+       "e": 103.906
+      },
+      {
+       "w": "África,",
+       "s": 103.906,
+       "e": 104.186
+      },
+      {
+       "w": "tiene",
+       "s": 104.326,
+       "e": 104.826
+      },
+      {
+       "w": "veintinueve",
+       "s": 104.826,
+       "e": 105.306
+      },
+      {
+       "w": "muescas",
+       "s": 105.306,
+       "e": 105.946
+      },
+      {
+       "w": "talladas",
+       "s": 105.946,
+       "e": 106.406
+      },
+      {
+       "w": "a",
+       "s": 106.406,
+       "e": 106.526
+      },
+      {
+       "w": "propósito,",
+       "s": 106.526,
+       "e": 107.086
+      },
+      {
+       "w": "y",
+       "s": 107.086,
+       "e": 107.366
+      },
+      {
+       "w": "más",
+       "s": 107.366,
+       "e": 107.626
+      },
+      {
+       "w": "de",
+       "s": 107.626,
+       "e": 107.806
+      },
+      {
+       "w": "cuarenta",
+       "s": 107.806,
+       "e": 108.046
+      },
+      {
+       "w": "mil",
+       "s": 108.046,
+       "e": 108.406
+      },
+      {
+       "w": "años.",
+       "s": 108.406,
+       "e": 108.566
+      }
+     ]
+    },
+    {
+     "key": "cuenta_2",
+     "texto": "No sabemos qué contaba. Tú haces lo mismo, pero con una app.",
+     "t0": 109.528,
+     "t1": 112.875,
+     "words": [
+      {
+       "w": "No",
+       "s": 109.528,
+       "e": 109.668
+      },
+      {
+       "w": "sabemos",
+       "s": 109.668,
+       "e": 109.888
+      },
+      {
+       "w": "qué",
+       "s": 109.888,
+       "e": 110.088
+      },
+      {
+       "w": "contaba.",
+       "s": 110.088,
+       "e": 110.468
+      },
+      {
+       "w": "Tú",
+       "s": 110.788,
+       "e": 111.148
+      },
+      {
+       "w": "haces",
+       "s": 111.148,
+       "e": 111.408
+      },
+      {
+       "w": "lo",
+       "s": 111.408,
+       "e": 111.528
+      },
+      {
+       "w": "mismo,",
+       "s": 111.528,
+       "e": 111.748
+      },
+      {
+       "w": "pero",
+       "s": 111.868,
+       "e": 112.108
+      },
+      {
+       "w": "con",
+       "s": 112.108,
+       "e": 112.268
+      },
+      {
+       "w": "una",
+       "s": 112.268,
+       "e": 112.448
+      },
+      {
+       "w": "app.",
+       "s": 112.448,
+       "e": 112.608
+      }
+     ]
+    }
+   ],
+   "fin_voz": 112.875,
+   "beats": 28
+  },
+  {
+   "id": "pesca",
+   "num": 8,
+   "titulo": "COMER PESCADO DE ALTA MAR",
+   "antes": "atún en Timor",
+   "ahora": "sushi",
+   "dato": "Jerimalai, Timor Oriental: atunes de ~42.000 años",
+   "fuente": "O'Connor et al. 2011, Science",
+   "t0": 113.4177,
+   "t1": 127.5949,
+   "compases": 14,
+   "frases": [
+    {
+     "key": "pesca_0",
+     "texto": "Número ocho: comer pescado de alta mar.",
+     "t0": 113.95,
+     "t1": 116.47,
+     "words": [
+      {
+       "w": "Número",
+       "s": 113.95,
+       "e": 114.29
+      },
+      {
+       "w": "ocho:",
+       "s": 114.29,
+       "e": 114.57
+      },
+      {
+       "w": "comer",
+       "s": 114.69,
+       "e": 115.19
+      },
+      {
+       "w": "pescado",
+       "s": 115.19,
+       "e": 115.63
+      },
+      {
+       "w": "de",
+       "s": 115.63,
+       "e": 115.79
+      },
+      {
+       "w": "alta",
+       "s": 115.79,
+       "e": 115.95
+      },
+      {
+       "w": "mar.",
+       "s": 115.95,
+       "e": 116.17
+      }
+     ]
+    },
+    {
+     "key": "pesca_1",
+     "texto": "En Timor, hace unos cuarenta y dos mil años, ya se pescaban atunes.",
+     "t0": 117.025,
+     "t1": 121.39,
+     "words": [
+      {
+       "w": "En",
+       "s": 117.025,
+       "e": 117.145
+      },
+      {
+       "w": "Timor,",
+       "s": 117.145,
+       "e": 117.505
+      },
+      {
+       "w": "hace",
+       "s": 117.525,
+       "e": 118.065
+      },
+      {
+       "w": "unos",
+       "s": 118.065,
+       "e": 118.325
+      },
+      {
+       "w": "cuarenta",
+       "s": 118.325,
+       "e": 118.485
+      },
+      {
+       "w": "y",
+       "s": 118.485,
+       "e": 118.645
+      },
+      {
+       "w": "dos",
+       "s": 118.645,
+       "e": 118.805
+      },
+      {
+       "w": "mil",
+       "s": 118.805,
+       "e": 119.205
+      },
+      {
+       "w": "años,",
+       "s": 119.205,
+       "e": 119.405
+      },
+      {
+       "w": "ya",
+       "s": 119.525,
+       "e": 119.925
+      },
+      {
+       "w": "se",
+       "s": 119.925,
+       "e": 120.065
+      },
+      {
+       "w": "pescaban",
+       "s": 120.065,
+       "e": 120.525
+      },
+      {
+       "w": "atunes.",
+       "s": 120.525,
+       "e": 120.825
+      }
+     ]
+    },
+    {
+     "key": "pesca_2",
+     "texto": "Eso implica salir al mar abierto, con técnica y planificación. Tu antojo de sushi viene de lejos.",
+     "t0": 121.825,
+     "t1": 126.924,
+     "words": [
+      {
+       "w": "Eso",
+       "s": 121.825,
+       "e": 122.025
+      },
+      {
+       "w": "implica",
+       "s": 122.025,
+       "e": 122.425
+      },
+      {
+       "w": "salir",
+       "s": 122.425,
+       "e": 122.625
+      },
+      {
+       "w": "al",
+       "s": 122.625,
+       "e": 122.785
+      },
+      {
+       "w": "mar",
+       "s": 122.785,
+       "e": 122.905
+      },
+      {
+       "w": "abierto,",
+       "s": 122.905,
+       "e": 123.325
+      },
+      {
+       "w": "con",
+       "s": 123.325,
+       "e": 123.485
+      },
+      {
+       "w": "técnica",
+       "s": 123.485,
+       "e": 123.865
+      },
+      {
+       "w": "y",
+       "s": 123.865,
+       "e": 124.045
+      },
+      {
+       "w": "planificación.",
+       "s": 124.045,
+       "e": 124.465
+      },
+      {
+       "w": "Tu",
+       "s": 124.785,
+       "e": 125.185
+      },
+      {
+       "w": "antojo",
+       "s": 125.185,
+       "e": 125.545
+      },
+      {
+       "w": "de",
+       "s": 125.545,
+       "e": 125.665
+      },
+      {
+       "w": "sushi",
+       "s": 125.665,
+       "e": 125.845
+      },
+      {
+       "w": "viene",
+       "s": 125.845,
+       "e": 126.145
+      },
+      {
+       "w": "de",
+       "s": 126.145,
+       "e": 126.345
+      },
+      {
+       "w": "lejos.",
+       "s": 126.345,
+       "e": 126.645
+      }
+     ]
+    }
+   ],
+   "fin_voz": 126.924,
+   "beats": 28
+  },
+  {
+   "id": "ligar",
+   "num": 9,
+   "titulo": "LIGAR CON DESCONOCIDOS",
+   "antes": "neandertales",
+   "ahora": "apps de citas",
+   "dato": "Mezcla con neandertales: hace ~47.000 años",
+   "fuente": "Sümer et al. 2024, Nature · Iasi et al. 2024, Science",
+   "t0": 127.5949,
+   "t1": 143.7975,
+   "compases": 16,
+   "frases": [
+    {
+     "key": "ligar_0",
+     "texto": "Número nueve: ligar con desconocidos.",
+     "t0": 128.014,
+     "t1": 130.513,
+     "words": [
+      {
+       "w": "Número",
+       "s": 128.014,
+       "e": 128.334
+      },
+      {
+       "w": "nueve:",
+       "s": 128.334,
+       "e": 128.634
+      },
+      {
+       "w": "ligar",
+       "s": 128.734,
+       "e": 129.354
+      },
+      {
+       "w": "con",
+       "s": 129.354,
+       "e": 129.454
+      },
+      {
+       "w": "desconocidos.",
+       "s": 129.454,
+       "e": 130.134
+      }
+     ]
+    },
+    {
+     "key": "ligar_1",
+     "texto": "Hace unos cuarenta y siete mil años, nuestros ancestros tuvieron hijos con los neandertales.",
+     "t0": 131.002,
+     "t1": 135.575,
+     "words": [
+      {
+       "w": "Hace",
+       "s": 131.002,
+       "e": 131.162
+      },
+      {
+       "w": "unos",
+       "s": 131.162,
+       "e": 131.302
+      },
+      {
+       "w": "cuarenta",
+       "s": 131.302,
+       "e": 131.435
+      },
+      {
+       "w": "y",
+       "s": 131.435,
+       "e": 131.569
+      },
+      {
+       "w": "siete",
+       "s": 131.569,
+       "e": 131.702
+      },
+      {
+       "w": "mil",
+       "s": 131.702,
+       "e": 132.202
+      },
+      {
+       "w": "años,",
+       "s": 132.202,
+       "e": 132.402
+      },
+      {
+       "w": "nuestros",
+       "s": 132.542,
+       "e": 133.002
+      },
+      {
+       "w": "ancestros",
+       "s": 133.002,
+       "e": 133.642
+      },
+      {
+       "w": "tuvieron",
+       "s": 133.642,
+       "e": 134.022
+      },
+      {
+       "w": "hijos",
+       "s": 134.022,
+       "e": 134.242
+      },
+      {
+       "w": "con",
+       "s": 134.242,
+       "e": 134.482
+      },
+      {
+       "w": "los",
+       "s": 134.482,
+       "e": 134.602
+      },
+      {
+       "w": "neandertales.",
+       "s": 134.602,
+       "e": 135.262
+      }
+     ]
+    },
+    {
+     "key": "ligar_2",
+     "texto": "Por eso, casi todas las personas con ancestros fuera de África llevan entre uno y dos por ciento de herencia genética neandertal.",
+     "t0": 135.944,
+     "t1": 143.259,
+     "words": [
+      {
+       "w": "Por",
+       "s": 135.944,
+       "e": 136.024
+      },
+      {
+       "w": "eso,",
+       "s": 136.024,
+       "e": 136.224
+      },
+      {
+       "w": "casi",
+       "s": 136.324,
+       "e": 136.824
+      },
+      {
+       "w": "todas",
+       "s": 136.824,
+       "e": 137.084
+      },
+      {
+       "w": "las",
+       "s": 137.084,
+       "e": 137.324
+      },
+      {
+       "w": "personas",
+       "s": 137.324,
+       "e": 137.644
+      },
+      {
+       "w": "con",
+       "s": 137.644,
+       "e": 137.884
+      },
+      {
+       "w": "ancestros",
+       "s": 137.884,
+       "e": 138.464
+      },
+      {
+       "w": "fuera",
+       "s": 138.464,
+       "e": 138.724
+      },
+      {
+       "w": "de",
+       "s": 138.724,
+       "e": 138.924
+      },
+      {
+       "w": "África",
+       "s": 138.924,
+       "e": 139.224
+      },
+      {
+       "w": "llevan",
+       "s": 139.224,
+       "e": 139.924
+      },
+      {
+       "w": "entre",
+       "s": 139.924,
+       "e": 140.084
+      },
+      {
+       "w": "uno",
+       "s": 140.084,
+       "e": 140.344
+      },
+      {
+       "w": "y",
+       "s": 140.344,
+       "e": 140.484
+      },
+      {
+       "w": "dos",
+       "s": 140.484,
+       "e": 140.644
+      },
+      {
+       "w": "por",
+       "s": 140.644,
+       "e": 140.784
+      },
+      {
+       "w": "ciento",
+       "s": 140.784,
+       "e": 140.924
+      },
+      {
+       "w": "de",
+       "s": 140.924,
+       "e": 141.424
+      },
+      {
+       "w": "herencia",
+       "s": 141.424,
+       "e": 141.844
+      },
+      {
+       "w": "genética",
+       "s": 141.844,
+       "e": 142.344
+      },
+      {
+       "w": "neandertal.",
+       "s": 142.344,
+       "e": 143.024
+      }
+     ]
+    }
+   ],
+   "fin_voz": 143.259,
+   "beats": 32
+  },
+  {
+   "id": "despedida",
+   "num": 10,
+   "titulo": "DESPEDIR A QUIENES AMAMOS",
+   "antes": "ocre rojo",
+   "ahora": "flores",
+   "dato": "Lago Mungo, Australia: cremación de ~40.000 años",
+   "fuente": "Bowler et al. 2003, Nature",
+   "t0": 143.7975,
+   "t1": 161.0127,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "despedida_0",
+     "texto": "Número diez: despedir a quienes amamos.",
+     "t0": 144.236,
+     "t1": 146.889,
+     "words": [
+      {
+       "w": "Número",
+       "s": 144.236,
+       "e": 144.516
+      },
+      {
+       "w": "diez:",
+       "s": 144.516,
+       "e": 144.656
+      },
+      {
+       "w": "despedir",
+       "s": 145.376,
+       "e": 145.736
+      },
+      {
+       "w": "a",
+       "s": 145.736,
+       "e": 145.836
+      },
+      {
+       "w": "quienes",
+       "s": 145.836,
+       "e": 146.016
+      },
+      {
+       "w": "amamos.",
+       "s": 146.016,
+       "e": 146.456
+      }
+     ]
+    },
+    {
+     "key": "despedida_1",
+     "texto": "En el lago Mungo, en Australia, una mujer fue cremada hace unos cuarenta mil años. Es la cremación más antigua conocida.",
+     "t0": 147.39,
+     "t1": 154.294,
+     "words": [
+      {
+       "w": "En",
+       "s": 147.39,
+       "e": 147.51
+      },
+      {
+       "w": "el",
+       "s": 147.51,
+       "e": 147.63
+      },
+      {
+       "w": "lago",
+       "s": 147.63,
+       "e": 147.89
+      },
+      {
+       "w": "Mungo,",
+       "s": 147.89,
+       "e": 148.23
+      },
+      {
+       "w": "en",
+       "s": 148.25,
+       "e": 148.53
+      },
+      {
+       "w": "Australia,",
+       "s": 148.53,
+       "e": 148.87
+      },
+      {
+       "w": "una",
+       "s": 149.15,
+       "e": 149.63
+      },
+      {
+       "w": "mujer",
+       "s": 149.63,
+       "e": 149.89
+      },
+      {
+       "w": "fue",
+       "s": 149.89,
+       "e": 150.07
+      },
+      {
+       "w": "cremada",
+       "s": 150.07,
+       "e": 150.51
+      },
+      {
+       "w": "hace",
+       "s": 150.51,
+       "e": 150.65
+      },
+      {
+       "w": "unos",
+       "s": 150.65,
+       "e": 150.81
+      },
+      {
+       "w": "cuarenta",
+       "s": 150.81,
+       "e": 151.05
+      },
+      {
+       "w": "mil",
+       "s": 151.05,
+       "e": 151.35
+      },
+      {
+       "w": "años.",
+       "s": 151.35,
+       "e": 151.55
+      },
+      {
+       "w": "Es",
+       "s": 151.75,
+       "e": 152.27
+      },
+      {
+       "w": "la",
+       "s": 152.27,
+       "e": 152.39
+      },
+      {
+       "w": "cremación",
+       "s": 152.39,
+       "e": 152.87
+      },
+      {
+       "w": "más",
+       "s": 152.87,
+       "e": 152.99
+      },
+      {
+       "w": "antigua",
+       "s": 152.99,
+       "e": 153.41
+      },
+      {
+       "w": "conocida.",
+       "s": 153.41,
+       "e": 153.87
+      }
+     ]
+    },
+    {
+     "key": "despedida_2",
+     "texto": "Cerca, un hombre fue enterrado cubierto de ocre rojo. Honrar a los muertos es profundamente humano.",
+     "t0": 154.675,
+     "t1": 160.451,
+     "words": [
+      {
+       "w": "Cerca,",
+       "s": 154.675,
+       "e": 155.055
+      },
+      {
+       "w": "un",
+       "s": 155.055,
+       "e": 155.255
+      },
+      {
+       "w": "hombre",
+       "s": 155.255,
+       "e": 155.535
+      },
+      {
+       "w": "fue",
+       "s": 155.535,
+       "e": 155.735
+      },
+      {
+       "w": "enterrado",
+       "s": 155.735,
+       "e": 156.235
+      },
+      {
+       "w": "cubierto",
+       "s": 156.235,
+       "e": 156.735
+      },
+      {
+       "w": "de",
+       "s": 156.735,
+       "e": 156.875
+      },
+      {
+       "w": "ocre",
+       "s": 156.875,
+       "e": 157.095
+      },
+      {
+       "w": "rojo.",
+       "s": 157.095,
+       "e": 157.395
+      },
+      {
+       "w": "Honrar",
+       "s": 157.815,
+       "e": 158.315
+      },
+      {
+       "w": "a",
+       "s": 158.315,
+       "e": 158.415
+      },
+      {
+       "w": "los",
+       "s": 158.415,
+       "e": 158.475
+      },
+      {
+       "w": "muertos",
+       "s": 158.475,
+       "e": 158.835
+      },
+      {
+       "w": "es",
+       "s": 158.835,
+       "e": 159.135
+      },
+      {
+       "w": "profundamente",
+       "s": 159.135,
+       "e": 159.855
+      },
+      {
+       "w": "humano.",
+       "s": 159.855,
+       "e": 160.075
+      }
+     ]
+    }
+   ],
+   "fin_voz": 160.451,
+   "beats": 34
+  },
+  {
+   "id": "outro",
+   "t0": 161.0127,
+   "t1": 180.0,
+   "compases": null,
+   "frases": [
+    {
+     "key": "outro_0",
+     "texto": "Cuarenta mil años después, cambiamos las cuevas por pantallas.",
+     "t0": 161.713,
+     "t1": 164.825,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 161.713,
+       "e": 161.933
+      },
+      {
+       "w": "mil",
+       "s": 161.933,
+       "e": 162.273
+      },
+      {
+       "w": "años",
+       "s": 162.273,
+       "e": 162.393
+      },
+      {
+       "w": "después,",
+       "s": 162.393,
+       "e": 162.793
+      },
+      {
+       "w": "cambiamos",
+       "s": 162.893,
+       "e": 163.413
+      },
+      {
+       "w": "las",
+       "s": 163.413,
+       "e": 163.513
+      },
+      {
+       "w": "cuevas",
+       "s": 163.513,
+       "e": 163.873
+      },
+      {
+       "w": "por",
+       "s": 163.873,
+       "e": 164.013
+      },
+      {
+       "w": "pantallas.",
+       "s": 164.013,
+       "e": 164.513
+      }
+     ]
+    },
+    {
+     "key": "outro_1",
+     "texto": "Pero el cerebro es prácticamente el mismo: mismo hardware, aplicaciones nuevas.",
+     "t0": 165.125,
+     "t1": 169.65,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 165.125,
+       "e": 165.225
+      },
+      {
+       "w": "el",
+       "s": 165.225,
+       "e": 165.305
+      },
+      {
+       "w": "cerebro",
+       "s": 165.305,
+       "e": 165.705
+      },
+      {
+       "w": "es",
+       "s": 165.705,
+       "e": 165.785
+      },
+      {
+       "w": "prácticamente",
+       "s": 165.785,
+       "e": 166.325
+      },
+      {
+       "w": "el",
+       "s": 166.325,
+       "e": 166.625
+      },
+      {
+       "w": "mismo:",
+       "s": 166.625,
+       "e": 166.885
+      },
+      {
+       "w": "mismo",
+       "s": 167.005,
+       "e": 167.485
+      },
+      {
+       "w": "hardware,",
+       "s": 167.485,
+       "e": 167.865
+      },
+      {
+       "w": "aplicaciones",
+       "s": 168.025,
+       "e": 168.845
+      },
+      {
+       "w": "nuevas.",
+       "s": 168.845,
+       "e": 169.105
+      }
+     ]
+    },
+    {
+     "key": "outro_2",
+     "texto": "Así que la próxima vez que te tomes una selfie, recuerda: sigues siendo un humano de las cavernas. Solo que con wifi.",
+     "t0": 169.95,
+     "t1": 176.47,
+     "words": [
+      {
+       "w": "Así",
+       "s": 169.95,
+       "e": 170.15
+      },
+      {
+       "w": "que",
+       "s": 170.15,
+       "e": 170.33
+      },
+      {
+       "w": "la",
+       "s": 170.33,
+       "e": 170.41
+      },
+      {
+       "w": "próxima",
+       "s": 170.41,
+       "e": 170.71
+      },
+      {
+       "w": "vez",
+       "s": 170.71,
+       "e": 171.01
+      },
+      {
+       "w": "que",
+       "s": 171.01,
+       "e": 171.17
+      },
+      {
+       "w": "te",
+       "s": 171.17,
+       "e": 171.25
+      },
+      {
+       "w": "tomes",
+       "s": 171.25,
+       "e": 171.55
+      },
+      {
+       "w": "una",
+       "s": 171.55,
+       "e": 171.67
+      },
+      {
+       "w": "selfie,",
+       "s": 171.67,
+       "e": 171.93
+      },
+      {
+       "w": "recuerda:",
+       "s": 172.09,
+       "e": 172.85
+      },
+      {
+       "w": "sigues",
+       "s": 172.85,
+       "e": 173.41
+      },
+      {
+       "w": "siendo",
+       "s": 173.41,
+       "e": 173.63
+      },
+      {
+       "w": "un",
+       "s": 173.63,
+       "e": 173.81
+      },
+      {
+       "w": "humano",
+       "s": 173.81,
+       "e": 174.03
+      },
+      {
+       "w": "de",
+       "s": 174.03,
+       "e": 174.23
+      },
+      {
+       "w": "las",
+       "s": 174.23,
+       "e": 174.35
+      },
+      {
+       "w": "cavernas.",
+       "s": 174.35,
+       "e": 174.91
+      },
+      {
+       "w": "Solo",
+       "s": 174.93,
+       "e": 175.51
+      },
+      {
+       "w": "que",
+       "s": 175.51,
+       "e": 175.69
+      },
+      {
+       "w": "con",
+       "s": 175.69,
+       "e": 175.83
+      },
+      {
+       "w": "wifi.",
+       "s": 175.83,
+       "e": 176.13
+      }
+     ]
+    }
+   ],
+   "fin_voz": 176.47,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 15.1899,
+   "t0": 14.5399,
+   "t1": 15.5399,
+   "tipo": "garabato",
+   "de": "intro",
+   "a": "manos"
+  },
+  {
+   "t": 28.3544,
+   "t0": 27.8344,
+   "t1": 28.6344,
+   "tipo": "mancha",
+   "de": "manos",
+   "a": "comida"
+  },
+  {
+   "t": 42.5316,
+   "t0": 41.9791,
+   "t1": 42.8291,
+   "tipo": "espiral",
+   "de": "comida",
+   "a": "musica"
+  },
+  {
+   "t": 55.6962,
+   "t0": 55.2412,
+   "t1": 55.9412,
+   "tipo": "glitch",
+   "de": "musica",
+   "a": "heroes"
+  },
+  {
+   "t": 69.8734,
+   "t0": 69.2884,
+   "t1": 70.1884,
+   "tipo": "zoom",
+   "de": "heroes",
+   "a": "joyas"
+  },
+  {
+   "t": 86.0759,
+   "t0": 85.5559,
+   "t1": 86.3559,
+   "tipo": "persianas",
+   "de": "joyas",
+   "a": "moda"
+  },
+  {
+   "t": 99.2405,
+   "t0": 98.5905,
+   "t1": 99.5905,
+   "tipo": "derretir",
+   "de": "moda",
+   "a": "cuenta"
+  },
+  {
+   "t": 113.4177,
+   "t0": 112.8652,
+   "t1": 113.7152,
+   "tipo": "ola",
+   "de": "cuenta",
+   "a": "pesca"
+  },
+  {
+   "t": 127.5949,
+   "t0": 127.0099,
+   "t1": 127.9099,
+   "tipo": "burbujas",
+   "de": "pesca",
+   "a": "ligar"
+  },
+  {
+   "t": 143.7975,
+   "t0": 143.1475,
+   "t1": 144.1475,
+   "tipo": "iris",
+   "de": "ligar",
+   "a": "despedida"
+  },
+  {
+   "t": 161.0127,
+   "t0": 160.3952,
+   "t1": 161.3452,
+   "tipo": "caleido",
+   "de": "despedida",
+   "a": "outro"
+  }
+ ]
+}

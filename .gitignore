@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------- SECRETOS (nunca subir)
+canales/youtube_client_secrets.json
+canales/tokens/
+*client_secret*.json
+*youtube_tokens*.json
+.env
+
+# datos privados del canal (métricas y respaldos quedan solo en esta PC)
+canales/metricas/
+canales/respaldos/
+
+# ---------------------------------------------------------------- pesados / regenerables
+# por video solo se versiona el código y la configuración: guion.py, escenas.py, miniaturas.py,
+# youtube.json y timeline.json. Voz, audio, render, previews y logs se regeneran con fab.py.
+videos/*/voz/
+videos/*/audio/
+videos/*/segmentos/
+videos/*/salida/
+videos/*/previews/
+videos/*/*.txt
+videos/*/tiempos_prueba.json
+*.mp4
+*.wav
+*.mp3
+
+# copia vieja del proyecto (1.1 GB) y modelos (viven en la caché de HuggingFace)
+proyecto/
+modelos/*
+!modelos/bajar_t3.sh
+
+# revisión intermedia del arte del canal
+canales/arte/*_revision.jpg
+
+# Python / sistema
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini

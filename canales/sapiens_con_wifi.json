@@ -1,0 +1,53 @@
+{
+  "canal_id": "UCkXoSaafirz7BvxD914kXkA",
+  "nombre": "Sapiens con Wifi",
+  "nombre_anterior": "Just Homo Sapiens",
+  "descripcion": "Hace miles de años los humanos antiguos ya presumían su comida, hacían música, usaban joyas y llevaban cuentas… y tú sigues haciendo lo mismo.\n\nEn Sapiens con Wifi contamos en animación la prehistoria, los inventos antiguos que usas todos los días y la evolución humana: videos cortos, con datos verificados y sus fuentes científicas en cada descripción.\n\nSi te gustan la historia antigua, la arqueología y las curiosidades históricas, suscríbete: eres un Homo sapiens… con wifi.",
+  "palabras_clave": [
+    "humanos antiguos",
+    "prehistoria",
+    "homo sapiens",
+    "historia de la humanidad",
+    "evolución humana",
+    "inventos antiguos",
+    "historia antigua",
+    "arqueología",
+    "curiosidades históricas",
+    "humanos prehistóricos",
+    "neandertales",
+    "paleolítico",
+    "datos curiosos",
+    "animación educativa"
+  ],
+  "idioma": "es",
+  "pais": "MX",
+  "banner": "canales/arte/sapiens_con_wifi_banner.jpg",
+  "perfil": "canales/arte/sapiens_con_wifi_perfil.png",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": [
+      "miércoles",
+      "jueves",
+      "viernes"
+    ],
+    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+    "frecuencia": "1-2 videos largos por semana, mismo día y hora",
+    "nota": "Benchmarks 2026 (Metricool, SocialPilot, Montage, Sprout). Ajustar con Studio > Audiencia cuando haya datos."
+  },
+  "publicados": [
+    {
+      "video": "40mil_anos",
+      "id": "Uvg8hX78deo",
+      "titulo": "Los Humanos Antiguos Hacían lo Mismo que Tú",
+      "publicado": "2026-09-28T19:52:16Z"
+    },
+    {
+      "video": "inventos_antiguos",
+      "id": "ni6FrdYvon0",
+      "titulo": "7 Inventos Antiguos que Usas Todos los Días",
+      "programado": "2026-09-30T20:00:00Z"
+    }
+  ]
+}

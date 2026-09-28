@@ -1,0 +1,687 @@
+{
+ "bpm": 120.0,
+ "beat": 0.5,
+ "unidad": 4,
+ "total": 40.0,
+ "titulo": "Dos cosas que tu cerebro hace sin avisarte",
+ "estilo": "pizarra",
+ "escenas": [
+  {
+   "id": "intro",
+   "claves": [
+    [
+     "permiso",
+     "SIN PERMISO"
+    ]
+   ],
+   "t0": 0.0,
+   "t1": 8.0,
+   "compases": 4,
+   "frases": [
+    {
+     "key": "intro_0",
+     "texto": "Tu cerebro hace cosas increíbles sin pedirte permiso.",
+     "t0": 1.211,
+     "t1": 4.216,
+     "words": [
+      {
+       "w": "Tu",
+       "s": 1.211,
+       "e": 1.331
+      },
+      {
+       "w": "cerebro",
+       "s": 1.331,
+       "e": 1.691
+      },
+      {
+       "w": "hace",
+       "s": 1.691,
+       "e": 1.811
+      },
+      {
+       "w": "cosas",
+       "s": 1.811,
+       "e": 2.071
+      },
+      {
+       "w": "increíbles",
+       "s": 2.071,
+       "e": 2.731
+      },
+      {
+       "w": "sin",
+       "s": 2.731,
+       "e": 3.131
+      },
+      {
+       "w": "pedirte",
+       "s": 3.131,
+       "e": 3.531
+      },
+      {
+       "w": "permiso.",
+       "s": 3.531,
+       "e": 3.971
+      }
+     ]
+    },
+    {
+     "key": "intro_1",
+     "texto": "Aquí van dos que ocurren ahora mismo, mientras ves esto.",
+     "t0": 4.645,
+     "t1": 7.421,
+     "words": [
+      {
+       "w": "Aquí",
+       "s": 4.645,
+       "e": 4.905
+      },
+      {
+       "w": "van",
+       "s": 4.905,
+       "e": 5.085
+      },
+      {
+       "w": "dos",
+       "s": 5.085,
+       "e": 5.305
+      },
+      {
+       "w": "que",
+       "s": 5.305,
+       "e": 5.465
+      },
+      {
+       "w": "ocurren",
+       "s": 5.465,
+       "e": 5.785
+      },
+      {
+       "w": "ahora",
+       "s": 5.785,
+       "e": 5.945
+      },
+      {
+       "w": "mismo,",
+       "s": 5.945,
+       "e": 6.225
+      },
+      {
+       "w": "mientras",
+       "s": 6.325,
+       "e": 6.545
+      },
+      {
+       "w": "ves",
+       "s": 6.545,
+       "e": 6.805
+      },
+      {
+       "w": "esto.",
+       "s": 6.805,
+       "e": 7.065
+      }
+     ]
+    }
+   ],
+   "fin_voz": 7.421,
+   "beats": 16
+  },
+  {
+   "id": "uno",
+   "num": 1,
+   "titulo": "PARPADEAR",
+   "icono": "ojo",
+   "icono_hoy": "cerebro",
+   "dato": "Un adulto parpadea unas 15 a 20 veces por minuto",
+   "fuente": "Volkmann, Riggs y Moore, 1980, Science",
+   "sello": null,
+   "claves": [
+    [
+     "quince",
+     "15–20 POR MINUTO"
+    ],
+    [
+     "borra",
+     "¡BORRADO!"
+    ]
+   ],
+   "t0": 8.0,
+   "t1": 20.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "uno_0",
+     "texto": "Número uno: parpadear.",
+     "t0": 8.55,
+     "t1": 9.785,
+     "words": [
+      {
+       "w": "Número",
+       "s": 8.55,
+       "e": 8.83
+      },
+      {
+       "w": "uno:",
+       "s": 8.83,
+       "e": 8.95
+      },
+      {
+       "w": "parpadear.",
+       "s": 9.01,
+       "e": 9.57
+      }
+     ]
+    },
+    {
+     "key": "uno_1",
+     "texto": "Parpadeas unas quince a veinte veces por minuto, y cada parpadeo te deja a oscuras un instante.",
+     "t0": 10.361,
+     "t1": 15.612,
+     "words": [
+      {
+       "w": "Parpadeas",
+       "s": 10.361,
+       "e": 10.801
+      },
+      {
+       "w": "unas",
+       "s": 10.801,
+       "e": 10.961
+      },
+      {
+       "w": "quince",
+       "s": 10.961,
+       "e": 11.281
+      },
+      {
+       "w": "a",
+       "s": 11.281,
+       "e": 11.441
+      },
+      {
+       "w": "veinte",
+       "s": 11.441,
+       "e": 11.581
+      },
+      {
+       "w": "veces",
+       "s": 11.581,
+       "e": 11.921
+      },
+      {
+       "w": "por",
+       "s": 11.921,
+       "e": 12.141
+      },
+      {
+       "w": "minuto,",
+       "s": 12.141,
+       "e": 12.561
+      },
+      {
+       "w": "y",
+       "s": 12.561,
+       "e": 12.741
+      },
+      {
+       "w": "cada",
+       "s": 12.741,
+       "e": 13.181
+      },
+      {
+       "w": "parpadeo",
+       "s": 13.181,
+       "e": 13.801
+      },
+      {
+       "w": "te",
+       "s": 13.801,
+       "e": 13.881
+      },
+      {
+       "w": "deja",
+       "s": 13.881,
+       "e": 14.121
+      },
+      {
+       "w": "a",
+       "s": 14.121,
+       "e": 14.261
+      },
+      {
+       "w": "oscuras",
+       "s": 14.261,
+       "e": 14.661
+      },
+      {
+       "w": "un",
+       "s": 14.661,
+       "e": 14.761
+      },
+      {
+       "w": "instante.",
+       "s": 14.761,
+       "e": 15.181
+      }
+     ]
+    },
+    {
+     "key": "uno_2",
+     "texto": "Pero tu cerebro borra esos apagones, así que nunca los notas.",
+     "t0": 16.069,
+     "t1": 19.288,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 16.069,
+       "e": 16.169
+      },
+      {
+       "w": "tu",
+       "s": 16.169,
+       "e": 16.268
+      },
+      {
+       "w": "cerebro",
+       "s": 16.268,
+       "e": 16.669
+      },
+      {
+       "w": "borra",
+       "s": 16.669,
+       "e": 16.928
+      },
+      {
+       "w": "esos",
+       "s": 16.928,
+       "e": 17.049
+      },
+      {
+       "w": "apagones,",
+       "s": 17.049,
+       "e": 17.529
+      },
+      {
+       "w": "así",
+       "s": 17.628,
+       "e": 18.049
+      },
+      {
+       "w": "que",
+       "s": 18.049,
+       "e": 18.229
+      },
+      {
+       "w": "nunca",
+       "s": 18.229,
+       "e": 18.428
+      },
+      {
+       "w": "los",
+       "s": 18.428,
+       "e": 18.608
+      },
+      {
+       "w": "notas.",
+       "s": 18.608,
+       "e": 19.009
+      }
+     ]
+    }
+   ],
+   "fin_voz": 19.288,
+   "beats": 24
+  },
+  {
+   "id": "dos",
+   "num": 2,
+   "titulo": "RELLENAR EL PUNTO CIEGO",
+   "icono": "ojo",
+   "icono_hoy": "cerebro",
+   "dato": "El punto ciego: donde el nervio óptico sale del ojo",
+   "fuente": "Descrito por Edme Mariotte, siglo XVII",
+   "sello": null,
+   "claves": [
+    [
+     "punto ciego",
+     "PUNTO CIEGO"
+    ],
+    [
+     "rellena",
+     "RELLENO AUTOMÁTICO"
+    ]
+   ],
+   "t0": 20.0,
+   "t1": 32.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "dos_0",
+     "texto": "Número dos: rellenar el punto ciego.",
+     "t0": 20.428,
+     "t1": 22.943,
+     "words": [
+      {
+       "w": "Número",
+       "s": 20.428,
+       "e": 20.788
+      },
+      {
+       "w": "dos:",
+       "s": 20.788,
+       "e": 20.888
+      },
+      {
+       "w": "rellenar",
+       "s": 21.568,
+       "e": 21.908
+      },
+      {
+       "w": "el",
+       "s": 21.908,
+       "e": 21.988
+      },
+      {
+       "w": "punto",
+       "s": 21.988,
+       "e": 22.208
+      },
+      {
+       "w": "ciego.",
+       "s": 22.208,
+       "e": 22.628
+      }
+     ]
+    },
+    {
+     "key": "dos_1",
+     "texto": "Cada ojo tiene un punto ciego, un lugar sin receptores de luz.",
+     "t0": 23.438,
+     "t1": 27.286,
+     "words": [
+      {
+       "w": "Cada",
+       "s": 23.438,
+       "e": 23.518
+      },
+      {
+       "w": "ojo",
+       "s": 23.518,
+       "e": 23.898
+      },
+      {
+       "w": "tiene",
+       "s": 23.898,
+       "e": 24.098
+      },
+      {
+       "w": "un",
+       "s": 24.098,
+       "e": 24.278
+      },
+      {
+       "w": "punto",
+       "s": 24.278,
+       "e": 24.518
+      },
+      {
+       "w": "ciego,",
+       "s": 24.518,
+       "e": 24.958
+      },
+      {
+       "w": "un",
+       "s": 25.038,
+       "e": 25.458
+      },
+      {
+       "w": "lugar",
+       "s": 25.458,
+       "e": 25.798
+      },
+      {
+       "w": "sin",
+       "s": 25.798,
+       "e": 26.038
+      },
+      {
+       "w": "receptores",
+       "s": 26.038,
+       "e": 26.678
+      },
+      {
+       "w": "de",
+       "s": 26.678,
+       "e": 26.838
+      },
+      {
+       "w": "luz.",
+       "s": 26.838,
+       "e": 26.958
+      }
+     ]
+    },
+    {
+     "key": "dos_2",
+     "texto": "Tu cerebro lo rellena con lo que hay alrededor, y tú nunca ves el hueco.",
+     "t0": 27.661,
+     "t1": 31.45,
+     "words": [
+      {
+       "w": "Tu",
+       "s": 27.661,
+       "e": 27.741
+      },
+      {
+       "w": "cerebro",
+       "s": 27.741,
+       "e": 28.101
+      },
+      {
+       "w": "lo",
+       "s": 28.101,
+       "e": 28.201
+      },
+      {
+       "w": "rellena",
+       "s": 28.201,
+       "e": 28.601
+      },
+      {
+       "w": "con",
+       "s": 28.601,
+       "e": 28.721
+      },
+      {
+       "w": "lo",
+       "s": 28.721,
+       "e": 28.861
+      },
+      {
+       "w": "que",
+       "s": 28.861,
+       "e": 28.981
+      },
+      {
+       "w": "hay",
+       "s": 28.981,
+       "e": 29.101
+      },
+      {
+       "w": "alrededor,",
+       "s": 29.101,
+       "e": 29.381
+      },
+      {
+       "w": "y",
+       "s": 29.681,
+       "e": 30.081
+      },
+      {
+       "w": "tú",
+       "s": 30.081,
+       "e": 30.221
+      },
+      {
+       "w": "nunca",
+       "s": 30.221,
+       "e": 30.461
+      },
+      {
+       "w": "ves",
+       "s": 30.461,
+       "e": 30.681
+      },
+      {
+       "w": "el",
+       "s": 30.681,
+       "e": 30.781
+      },
+      {
+       "w": "hueco.",
+       "s": 30.781,
+       "e": 31.081
+      }
+     ]
+    }
+   ],
+   "fin_voz": 31.45,
+   "beats": 24
+  },
+  {
+   "id": "cierre",
+   "cierre": "¿LO SABÍAS?",
+   "t0": 32.0,
+   "t1": 40.0,
+   "compases": null,
+   "frases": [
+    {
+     "key": "cierre_0",
+     "texto": "Así que no confíes tanto en lo que ves.",
+     "t0": 32.572,
+     "t1": 34.529,
+     "words": [
+      {
+       "w": "Así",
+       "s": 32.572,
+       "e": 32.752
+      },
+      {
+       "w": "que",
+       "s": 32.752,
+       "e": 32.892
+      },
+      {
+       "w": "no",
+       "s": 32.892,
+       "e": 33.012
+      },
+      {
+       "w": "confíes",
+       "s": 33.012,
+       "e": 33.452
+      },
+      {
+       "w": "tanto",
+       "s": 33.452,
+       "e": 33.632
+      },
+      {
+       "w": "en",
+       "s": 33.632,
+       "e": 33.832
+      },
+      {
+       "w": "lo",
+       "s": 33.832,
+       "e": 33.912
+      },
+      {
+       "w": "que",
+       "s": 33.912,
+       "e": 34.012
+      },
+      {
+       "w": "ves.",
+       "s": 34.012,
+       "e": 34.192
+      }
+     ]
+    },
+    {
+     "key": "cierre_1",
+     "texto": "Tu cerebro edita la realidad en vivo.",
+     "t0": 34.829,
+     "t1": 37.114,
+     "words": [
+      {
+       "w": "Tu",
+       "s": 34.829,
+       "e": 34.949
+      },
+      {
+       "w": "cerebro",
+       "s": 34.949,
+       "e": 35.429
+      },
+      {
+       "w": "edita",
+       "s": 35.429,
+       "e": 35.809
+      },
+      {
+       "w": "la",
+       "s": 35.809,
+       "e": 35.909
+      },
+      {
+       "w": "realidad",
+       "s": 35.909,
+       "e": 36.229
+      },
+      {
+       "w": "en",
+       "s": 36.229,
+       "e": 36.469
+      },
+      {
+       "w": "vivo.",
+       "s": 36.469,
+       "e": 36.649
+      }
+     ]
+    }
+   ],
+   "fin_voz": 37.114,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 8.0,
+   "t0": 7.35,
+   "t1": 8.35,
+   "tipo": "garabato",
+   "de": "intro",
+   "a": "uno"
+  },
+  {
+   "t": 20.0,
+   "t0": 19.48,
+   "t1": 20.28,
+   "tipo": "mancha",
+   "de": "uno",
+   "a": "dos"
+  },
+  {
+   "t": 32.0,
+   "t0": 31.4475,
+   "t1": 32.2975,
+   "tipo": "espiral",
+   "de": "dos",
+   "a": "cierre"
+  }
+ ]
+}

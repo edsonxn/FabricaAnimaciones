@@ -1,0 +1,317 @@
+# API de la Fábrica de Animaciones (generado con `python fab.py api` — no editar a mano)
+
+Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre" nucleo/*.py`.
+
+## Catálogos
+- **Estilos visuales** (`estilos.ESTILOS`): doodle_psicodelico, pizarra, cuaderno, neon, recortes, limpio, kurzgesagt
+- **Íconos** (`escena_base.ICONOS`, usar con `dibujar_icono(lz, nombre, x, y, s, t)`): mano, estarcido, cerdo, hamburguesa, flauta, nota, hombre_leon, mascara, collar, aguja, hueso, atun, sushi, adn, cerebro, telefono, fuego, flor, vela, mamut, wifi, ciudad, trigo, ojo, corazon, estrella, australia, copo, bebe, sol, pan, tostada, espejo_obsidiana, rueda_madera, bici, auto, maleta, silla, tablilla, tablilla_numeros, vasija, chat, drenaje, inodoro, reloj, dia_noche, moneda_leon, piramides, carreta, balanza, cavernicola, tu, neandertal
+- **Fondos** (`fondos.FONDOS`): rayos, espiral, tunel, plasma, anillos, ondas, caleido, puntos, cueva, rejilla, cosmos, liso, pizarra, kraft, plano, cartulina, espacio, degradado
+- **Transiciones** (`efectos.TRANSICIONES`): iris, mancha, espiral, glitch, zoom, persianas, derretir, ola, burbujas, caleido, pixeles, garabato, fundido, zoom_suave, bajada, continua
+- **Paletas** (`fondos.PALETAS`): arcoiris, fuego, acido, chicle, oceano, lima, ocaso, cosmos, ocre, neon
+- **Sabores musicales** (`config.SABORES`): build, acid, funk, flauta, epico, brillo, disco, reloj, dub, lounge, ambiente, final, espacio, tension, vacio, esperanza
+- **Patrones de bombo** (`ritmo.PATRONES`): 4x4, break, medio, latido, suave, nada
+- **Efectos de sonido** (`self.ev(t, nombre, vol, pan, tono=, dur=)`): impacto, pop, whoosh, sello, error, brillo, boing, ding, eco, golpe_suave, spray, revelar, obturador, pincel, oink, reloj_rapido, aparicion, rugido, comic, clink, bling, viento, brr, puntada, flashes, tick, hmm, chapuzon, pasos, latido, bebe, match, pin, fuego, campana, arena, morph, zap, puf, escribir, splat, espiral_zap, glitch, zoom_whoosh, persianas, cinta_lenta, ola, burbujas, iris, brillo_caleido, apagon, suspiro, hielo, pio, burbuja, amanecer
+- **Modos** (`musica.MODOS`): dorico, frigio, menor, mixolidio, lidio
+
+## escena_base.py — Base reutilizable de escenas: Escena (genérica), Item (título -> fase A -> fase B), utilidades
+
+- `norm(s)`
+- `pop(t, t0, dur=0.28)` — Escala de aparición con rebote (0 antes de t0).
+- `sale(t, t0, dur=0.25)` — 1 → 0 a partir de t0.
+- `color_arcoiris(u, s=0.75, v=1.0)`
+- **class Escena**
+    - `w(texto, frase=None, n=0, fin=False, desde=0)` — Tiempo (s) en que se dice `texto` (inicio, o fin si fin=True). frase: índice exacto; desde: primera
+    - `ev(t, nombre, vol=1.0, pan=0.0, **kw)`
+    - `post_fx(ta, tb, fn, rampa=0.15)`
+    - `preparar()`
+    - `fondo(t)`
+    - `camara(t)`
+    - `dibujar(lz, t)`
+    - `ui(lz, t)`
+    - `wob(t)`
+    - `matriz_camara(t)`
+    - `render(lz, t)`
+- `fondo_estilo(clave, t, pal=None, pulso=0.0)` — Fondo por defecto del estilo activo. clave: titulo | antes | hoy | libre.
+- `mezcla_fondos(t, tc, fa, fb, dur=0.3)`
+- **class Item** — Escena de ítem numerado. Requiere en guion.py: num, titulo y 3 frases:
+    - `preparar()`
+    - `escena()`
+    - `fondo_titulo(t)`
+    - `fondo_antes(t)`
+    - `fondo_hoy(t)`
+    - `fondo(t)`
+    - `iconos_titulo(lz, t, x, y, s)`
+    - `dibujar(lz, t)`
+    - `tarjeta(lz, t)`
+    - `antes(lz, t)`
+    - `hoy(lz, t)`
+    - `ui(lz, t)`
+    - `sello(lz, t, texto, fondo, tinta, k)`
+- `chip(lz, x, y, texto, k, px=40, rot=-0.03, seed=0, fondo=(255, 250, 235), color=NEGRO, fuente='print')`
+- `flecha(lz, p0, p1, frac, color=AMARILLO, ancho=12, seed=0, curva=0.25)`
+- `palomita(lz, x, y, s, frac, color=VERDE, seed=0)`
+- `icono_app(lz, x, y, s, tipo, seed=0, t=0.0)`
+- `remuestrear_n(P, n)`
+- `caminar(t, t0, dur, x0, x1)`
+- `dibujar_icono(lz, nombre, x, y, s, t)`
+- `iconos_del_video(n=6)` — Íconos únicos usados en el guion (icono + icono_hoy), repetidos en ciclo hasta n.
+- `partir_lineas(texto, n)`
+- **class IntroGenerica** — Título del video (config.TITULO) con rebote + íconos de los ítems en órbita + claves.
+    - `preparar()`
+    - `fondo(t)`
+    - `dibujar(lz, t)`
+- **class ItemGenerico** — Ítem genérico: fase A = d['icono'] grande; fase B = d['icono'] a la izquierda -> d['icono_hoy'] a la derecha.
+    - `escena()`
+    - `iconos_titulo(lz, t, x, y, s)`
+    - `antes(lz, t)`
+    - `hoy(lz, t)`
+- **class EscenaLibre** — Escena sin número (para formatos que no son lista): d['icono'] al centro + claves.
+    - `preparar()`
+    - `dibujar(lz, t)`
+- **class OutroGenerico** — Cierre: íconos de todos los ítems en órbita + tarjeta final (d['cierre']) + fundido a negro.
+    - `preparar()`
+    - `fondo(t)`
+    - `dibujar(lz, t)`
+    - `render(lz, t)`
+- `clases_automaticas(propias=None)` — id -> clase: usa `propias` si la escena tiene clase a medida; si no, la genérica según posición/campos.
+
+## motor.py — Motor doodle: lienzo supersampleado con capas, trazos temblorosos (boil),
+
+- `clamp01(x)`
+- `prog(t, a, b)`
+- `lerp(a, b, u)`
+- `smooth(x)`
+- `e_out(x)`
+- `e_in(x)`
+- `e_inout(x)`
+- `e_back(x, s=1.9)`
+- `e_elastic(x)`
+- `campana(t, a, b)` — 0 fuera de [a,b], sube y baja suave dentro.
+- `hash_arr(a, b=0, c=0)`
+- `h01(a, b=0, c=0)`
+- `ruido1(x, seed=0, canal=0)` — Ruido de valor 1D suave en [-1,1].
+- `r1(x, seed=0, canal=0)`
+- `remuestrear(P, paso, cerrado)`
+- `circulo(cx, cy, r, n=64, a0=0.0)`
+- `elipse(cx, cy, rx, ry, rot=0.0, n=64)`
+- `arco(cx, cy, r, a0, a1, n=32, ry=None)`
+- `blob(cx, cy, r, seed=0, irr=0.18, n=72, lob=5)`
+- `estrella(cx, cy, r1_, r2_, puntas=5, rot=-np.pi / 2)`
+- `corazon(cx, cy, s, n=80)`
+- `rect_red(x, y, w, h, r, n=10)`
+- `bezier(p0, p1, p2, p3, n=40)`
+- `catmull(P, n=12, cerrado=False)`
+- `espiral(cx, cy, r0, r1_, vueltas, n=200, a0=0.0)`
+- `mat_t(x, y)`
+- `mat_r(a)`
+- `mat_s(sx, sy=None)`
+- `fuente(nombre, px)`
+- `sprite_texto(texto, nombre, px, color, borde, borde_px)` — RGBA premultiplicado uint8 con texto relleno + contorno (px ya en espacio destino).
+- `ancho_texto(texto, nombre, px)`
+- **class Lienzo** — Capas: 0 = pared/fondo dibujado, 1 = stickers (borde blanco + sombra), 2 = encima.
+    - `nuevo(t, wob=2.0)`
+    - `push()`
+    - `pop()`
+    - `grupo(x=0.0, y=0.0, s=1.0, rot=0.0, sy=None)`
+    - `capa(i)`
+    - `recorte(pts)` — Todo lo que se dibuje dentro queda recortado a la forma `pts` (coords locales). Se pueden anidar.
+    - `escala()`
+    - `a_px(pts)`
+    - `trazo(pts, color=NEGRO, ancho=6.0, cerrado=False, seed=0, temblor=1.0, afinar=True, capa=None, paso=5.0)`
+    - `relleno(pts, color, seed=0, temblor=1.0, capa=None, alfa=1.0)`
+    - `degradado(pts, c0, c1, p0, p1, capa=None, alfa=1.0, curva=1.0)` — Relleno con degradado lineal: color c0 en el punto p0 y c1 en p1 (coords locales).
+    - `halo(x, y, r, color, alfa=1.0, dureza=1.6, capa=None, r0=0.0)` — Resplandor radial suave (glow) centrado en (x, y), radio r (local). Opaco hasta r0*r, se desvanece
+    - `forma(pts, relleno=None, borde=NEGRO, ancho=6.0, seed=0, temblor=1.0, capa=None)`
+    - `puntos(pts, radio, color, capa=None)` — Muchos círculos rellenos (sin temblor): partículas, spray, estrellas.
+    - `pegar(spr, x, y, k=1.0, rot=0.0, ancla=(0.5, 0.5), alfa=1.0, capa=None)` — spr en píxeles SS; k = escala local.
+    - `texto(s, x, y, px, fuente_='snap', color=BLANCO, borde=NEGRO, borde_px=None, k=1.0, rot=0.0, ancla=(0.5, 0.5), alfa=1.0, capa=None, temblor=1.0, seed=0)`
+    - `resolver()`
+- `estilizar(c)` — Color RGB -> color según el estilo activo (la tinta NEGRO se sustituye; rellenos se transforman).
+- `textura_trazo(boil, fuerza)` — Máscara multiplicativa (H,W,1) que 'rompe' los trazos como tiza/lápiz; cambia a 10 fps.
+- `componer(fondo, capas, sticker=None, sombra=None, borde_col=None, estilo=True, boil=0)` — fondo float32 HxWx3 en [0,1]; capas uint8 premultiplicadas (o None).
+- `a_uint8(img)`
+
+## dibujos.py — Biblioteca de dibujos doodle (coordenadas locales; usar con lz.grupo).
+
+- `miembro(lz, pts, color, grosor, seed)`
+- `trazo_parcial(lz, pts, frac, color=NEGRO, ancho=OW, seed=0, **kw)`
+- `capsula(bx, by, ang, L, w, n=10)`
+- `contorno_unido(lz, partes, relleno, seed=0, ancho=OW, capa=None)` — Silueta unida de varias partes: contornos gruesos debajo, rellenos encima.
+- `personaje(lz, x, y, s=1.0, t=0.0, tipo='cave', seed=1, mano_i=(-125, -175), mano_d=(125, -175), boca=0.0, mirar=(0.0, 0.0), salto=0.0, incl=0.0, cejas=0.0, paso=0.0, obj_i=None, obj_d=None, ojos='normal', accesorios=(), pupila=1.0, rot_cabeza=0.0)` — Origen en los pies. Altura ~480. tipo: cave | tu | neander.
+- `hueso_mini(lz, seed=0, largo=60, col=MARFIL)`
+- `partes_mano()`
+- `mano(lz, x, y, s=1.0, rot=0.0, color=PIEL, seed=0, capa=None)`
+- `estarcido(lz, x, y, s, prog, color=OCRE, rot=0.0, capa=0)` — Mano en negativo sobre la roca: el spray aparece según prog (0..1).
+- `cerdo_rupestre(lz, x, y, s, prog, color=OCRE, oscuro=(110, 30, 18), seed=5, capa=0)` — Cerdo verrugoso de Sulawesi pintado en la roca. prog 0..1 = avance de la pintura.
+- `hamburguesa(lz, x, y, s, seed=9)`
+- `telefono(lz, x, y, s=1.0, rot=0.0, pantalla=None, seed=13, t=0.0, color=(34, 32, 44))` — Pantalla local: x∈[-95,95], y∈[-185,185]. pantalla(lz) dibuja dentro.
+- `ui_camara(lz, t, seed=0)`
+- `corazon_like(lz, x, y, s, seed=0, col=ROJO)`
+- `flauta(lz, x, y, s=1.0, rot=0.0, seed=21, agujeros_on=())`
+- `nota(lz, x, y, s=1.0, color=MAGENTA, rot=0.0, seed=31, doble=False)`
+- `ecualizador(lz, x, y, w, h, t, beat_env, n=9, seed=0)`
+- `hombre_leon(lz, x, y, s=1.0, giro=1.0, seed=41, color=MARFIL, capa=None)`
+- `mascara_arana(lz, x, y, s=1.0, seed=51, rot=0.0)`
+- `collar(lz, x, y, s=1.0, n_vis=99, seed=61, t=0.0)`
+- `destellos(lz, pts, t, s=1.0, seed=0, col=(255, 255, 220))`
+- `aguja(lz, x, y, s=1.0, rot=0.0, seed=71)`
+- `cuero(lz, x, y, s=1.0, seed=73, col=(176, 118, 70))`
+- `hueso(lz, x, y, s=1.0, rot=0.0, marcas=0, seed=81, col=(232, 218, 182))`
+- `atun(lz, x, y, s=1.0, t=0.0, seed=91, rot=0.0)`
+- `canoa(lz, x, y, s=1.0, seed=101, t=0.0)`
+- `olas(lz, y, t, amp=18, col=(40, 120, 220), seed=111, capas=3, w=1920, x0=-40, fondo=1200)`
+- `sushi(lz, x, y, s=1.0, seed=121)`
+- `adn(lz, x, y, s=1.0, t=0.0, largo=700, marca=(0.62, 0.7), seed=131, vertical=False)`
+- `bebe(lz, x, y, s=1.0, t=0.0, seed=141)`
+- `australia(lz, x, y, s=1.0, seed=151, col=(236, 160, 70), pin=1.0, t=0.0)`
+- `fuego(lz, x, y, s=1.0, t=0.0, seed=161, capa=None)`
+- `humo(lz, x, y, t, seed=171, n=7, col=(200, 200, 230))`
+- `flor(lz, x, y, s=1.0, col=MAGENTA, seed=181, t=0.0)`
+- `vela(lz, x, y, s=1.0, t=0.0, seed=191)`
+- `figura_yacente(lz, x, y, s=1.0, seed=201, col=(170, 150, 140), ocre=0.0, t=0.0)` — Silueta estilizada y respetuosa, vista desde arriba, cubierta de ocre según 'ocre'.
+- `wifi(lz, x, y, s=1.0, col=CIAN, seed=211, n=3)`
+- `ciudad(lz, x, y, s=1.0, seed=221, t=0.0)`
+- `trigo(lz, x, y, s=1.0, seed=231)`
+- `tache(lz, x, y, s=1.0, prog=1.0, seed=241)`
+- `cerebro(lz, x, y, s=1.0, t=0.0, seed=251, col=(255, 150, 190), brillo=0.0)`
+- `mamut(lz, x, y, s=1.0, t=0.0, seed=261)`
+- `copo(lz, x, y, s=1.0, rot=0.0, seed=271, col=(230, 245, 255))`
+- `ojo_flotante(lz, x, y, s=1.0, t=0.0, seed=281, mirar=(0.0, 0.0))`
+- `bandera(lz, x, y, s, franjas, seed=291, vertical=False, t=0.0)` — franjas: lista de (color, proporción).
+- `etiqueta(lz, x, y, texto, px=46, fondo=(255, 250, 235), color=NEGRO, rot=-0.03, seed=301, k=1.0, fuente='print', cinta=True, alfa=1.0)` — Papelito pegado con cinta con texto.
+- `pan_plano(lz, x, y, s=1.0, seed=501, quemado=1.0)` — Pan plano redondo visto en 3/4, con manchas tostadas.
+- `tostada(lz, x, y, s=1.0, seed=511)` — Rebanada de pan tostado con mantequilla.
+- `espejo_obsidiana(lz, x, y, s=1.0, t=0.0, seed=521, reflejo=True)` — Espejo de obsidiana pulida (negro brillante) sobre base de yeso.
+- `rueda_madera(lz, x, y, s=1.0, rot=0.0, seed=531)` — Rueda maciza de dos tablones con agujero cuadrado para el eje (como la de Liubliana).
+- `bici(lz, x, y, s=1.0, t=0.0, seed=541, col=(230, 70, 80))`
+- `auto(lz, x, y, s=1.0, t=0.0, seed=551, col=(70, 150, 230))`
+- `maleta(lz, x, y, s=1.0, seed=561, col=(240, 120, 60))`
+- `silla(lz, x, y, s=1.0, seed=571, col=(80, 80, 95))`
+- `tablilla(lz, x, y, s=1.0, marcas=99, seed=581, numeros=False, rot=0.0)` — Tablilla de arcilla con cuñas cuneiformes (o numerales sexagesimales si numeros=True).
+- `cuna(lz, x, y, s, seed, vertical=False)` — Una marca en forma de cuña (cuneiforme).
+- `vasija(lz, x, y, s=1.0, seed=591, col=(190, 110, 70))`
+- `chat(lz, x, y, s=1.0, t=0.0, n=3, seed=601)` — Burbujas de mensajes (izquierda gris, derecha verde) apareciendo.
+- `drenaje(lz, x, y, s=1.0, t=0.0, seed=611)` — Corte de una casa del valle del Indo: baño de ladrillo -> tubo -> drenaje cubierto bajo la calle.
+- `inodoro(lz, x, y, s=1.0, seed=621)`
+- `reloj(lz, x, y, s=1.0, t=0.0, seed=631, vel=1.0)` — Reloj de pared con 60 marcas y agujas que giran.
+- `dia_noche(lz, x, y, s=1.0, t=0.0, seed=641, partes_visibles=24)` — Círculo mitad día (12 partes) y mitad noche (12 partes), como las horas egipcias.
+- `moneda_leon(lz, x, y, s=1.0, giro=1.0, seed=651)` — Moneda de electro (oro+plata) irregular con cabeza de león en relieve. giro in [-1,1] simula voltearla.
+- `piramides(lz, x, y, s=1.0, seed=661)` — Tres pirámides de Guiza (origen en la base).
+- `carreta(lz, x, y, s=1.0, t=0.0, seed=671)` — Carreta de madera con ruedas macizas tirada por un buey (origen: suelo bajo la carreta).
+- `balanza(lz, x, y, s=1.0, t=0.0, seed=681, inclinacion=0.0)` — Balanza de platillos (origen: base). inclinacion en radianes (+ = baja el platillo derecho).
+
+## plano.py — Kit de vector plano (estilo Kurzgesagt) sobre el Lienzo: esferas con sombra de terminador y borde de luz,
+
+- `mezcla(c1, c2, u)`
+- `aclarar(c, u)`
+- `oscurecer(c, u)`
+- `terminador(x, y, r, ang, e, n=48)` — Polígono de la zona en sombra de un disco iluminado desde la dirección `ang` (rad, hacia la luz;
+- `borde_luz(x, y, r, ang, grosor=0.08, n=40)` — Media luna fina del lado iluminado (ancho en el ecuador = 2*grosor*r).
+- `esfera(lz, x, y, r, color, ang_luz=math.pi * 1.25, sombra=-0.15, fuerza=0.5, color_sombra=SOMBRA, rim=0.07, color_rim=None, contenido=None, alfa=1.0)` — Disco con 2 tonos de sombra y borde de luz. contenido(): se dibuja recortado dentro del disco.
+- `sol(lz, x, y, r, t, brillo=1.0, apagado=0.0)` — Sol con halo, corona ondulante y núcleo claro. apagado 0..1 lo convierte en un disco oscuro sin brillo.
+- `tierra(lz, x, y, r, t, rot=0.0, ang_luz=math.pi, luz=1.0, hielo=0.0, nubes=1.0, ciudades=0.0, tilt=-0.35, atmosfera=1.0)` — Planeta Tierra. rot: giro (rad); luz 0..1 (0 = sin Sol: todo en noche); hielo 0..1 congela océanos.
+- `luna(lz, x, y, r, ang_luz=math.pi, luz=1.0)`
+- `pajaro(lz, x, y, s=1.0, t=0.0, color=(126, 88, 214), mirar=(0.0, 0.0), aleteo=0.0, tiritar=0.0, feliz=0.0, escarcha=0.0, voltear=False, boca=0.0)` — Pajarito redondo tipo Kurzgesagt (origen en las patas). mirar (-1..1), aleteo 0..1, tiritar 0..1.
+- `microbio(lz, x, y, s, t, color=(120, 230, 150), seed=0, forma=0, mirar=(0.0, 0.0), brillo=0.4)` — Microbio blandito con ojos y cilios. forma 0 = píldora, 1 = redondo, 2 = alargado.
+- `arbol(lz, x, y, s=1.0, t=0.0, hojas=(80, 176, 100), perdida=0.0, seed=0, escarcha=0.0, oscuro=0.0)` — Árbol de copa redonda (origen en la base). perdida 0..1: las hojas se secan y caen. oscuro: noche.
+- `hojas_cayendo(lz, x, y, t, t0, n=10, col=(170, 140, 100), seed=3)` — Hojas que caen desde (x, y) a partir de t0.
+- `termometro(lz, x, y, s, nivel, col=(255, 90, 90), marcas=6)` — Termómetro vertical (origen = centro del bulbo). nivel 0..1.
+- `fumarola(lz, x, y, s, t, calor=1.0, agua=(14, 30, 72))` — Chimenea hidrotermal del fondo del mar (origen en la base) con penacho y brillo.
+- `onda(lz, x, y, r, ancho, color, alfa=1.0, capa=None, frente=0.45, estela=1.8)` — Frente de onda luminoso (anillo) de radio r: borde delantero nítido y estela suave hacia dentro.
+- `discontinua(lz, pts, color, ancho=4.0, largo=22.0, hueco=16.0, fase=0.0, frac=1.0, capa=None)` — Línea discontinua a lo largo de la polilínea pts (coords locales). frac: porción dibujada.
+- `arco_pts(x, y, r, a0, a1, n=240)`
+- `rotulo(lz, x, y, texto, px=46, k=1.0, color=BLANCO, fuente='geo', ancla=(0.5, 0.5), alfa=1.0, sombra=0.45, capa=2, rot=0.0)` — Texto blanco limpio con sombra suave (sin contorno).
+- `pastilla(lz, x, y, texto, px=40, k=1.0, fondo=(255, 255, 255), color=(34, 28, 80), fuente='geo', alfa=1.0, capa=2)` — Etiqueta en cápsula redondeada (fondo claro, texto oscuro).
+- `linea_llamada(lz, p0, p1, frac=1.0, col=(255, 255, 255), ancho=3.0, alfa=0.9)` — Línea fina de llamada (del objeto al rótulo) con punto en el origen.
+
+## fondos.py — Fondos psicodélicos procedurales. Se calculan a 960x540 y se escalan a 1080p.
+
+- `paleta(v, nombre)`
+- `color_pal(v, nombre)`
+- `rayos(t, pal='arcoiris', n=14, vel=0.08, pulso=0.0, cx=0.0, cy=0.0, sat=1.0)`
+- `espiral(t, pal='acido', brazos=3, giro=2.2, vel=0.35, pulso=0.0, sat=1.0)`
+- `tunel(t, pal='neon', vel=0.9, pulso=0.0, giro=0.15, sat=1.0)`
+- `plasma(t, pal='chicle', vel=1.0, pulso=0.0, esc=1.0, sat=1.0)`
+- `anillos(t, pal='arcoiris', vel=0.6, pulso=0.0, cx=0.0, cy=0.0, sat=1.0)`
+- `ondas(t, pal='ocaso', vel=0.5, pulso=0.0, sat=1.0)`
+- `caleido(t, pal='lima', n=8, vel=0.25, pulso=0.0, sat=1.0)`
+- `puntos(t, pal='chicle', celda=0.09, pulso=0.0, sat=1.0)`
+- `cueva(t, tinte=0.0, fuego=1.0, pulso=0.0, pal='ocre')`
+- `rejilla(t, pal='neon', vel=0.8, pulso=0.0)` — Horizonte synthwave: sol a rayas + rejilla en perspectiva (el 'hoy').
+- `cosmos(t, pal='cosmos', pulso=0.0)`
+- `liso(t, color=(0.98, 0.93, 0.82), lineas=True)` — Papel de cuaderno (para momentos de lectura).
+- `pizarra(t, tono=0, pulso=0.0, pal=None)` — Pizarra de tiza: verde (tono=0) o gris pizarra (tono=1), con manchas de borrado.
+- `kraft(t, tono=0, pulso=0.0, pal=None)` — Papel kraft (tono=0) o cartulina gris-azulada (tono=1) con fibras.
+- `cartulina(t, pal='arcoiris', pulso=0.0, claro=0)` — Cartulina de color (fijo por paleta) con fibras de papel; claro=1 la aclara (para la fase B).
+- `plano(t, pal='arcoiris', pulso=0.0)` — Color plano suave que cambia lento de tono, con degradado radial leve (estilo limpio).
+- `estrellas(img, t, brillo=1.0, dx=0.0, dy=0.0, densidad=1.0)` — Dibuja estrellas titilantes (a 1080p) sobre img. dx, dy: paralaje en px (las lejanas se mueven menos).
+- `espacio(t, tono=0, pulso=0.0, pal=None, brillo_est=1.0, dx=0.0, dy=0.0)` — Espacio estilo Kurzgesagt: degradado azul noche -> violeta, nebulosa suave y estrellas titilantes.
+- `degradado(t, arriba=(0.35, 0.62, 0.95), abajo=(0.75, 0.88, 1.0), pulso=0.0, pal=None)` — Degradado vertical liso (cielos, agua).
+
+## efectos.py — Post-efectos de cámara ("tomas raras") y transiciones entre escenas.
+
+- `ojo_pez(img, k)`
+- `ondular(img, t, amp=14.0, lon=90.0)`
+- `caleido(img, n=6, rot=0.0, mezcla=1.0, zoom=1.0)`
+- `planeta(img, rot=0.0, mezcla=1.0)` — Mini-planeta: el suelo de la imagen se enrolla en un círculo.
+- `tono(img, grados)`
+- `warhol(img, t=0.0, mezcla=1.0)`
+- `droste(img, niveles=4, k=0.55, rot=0.12, fase=0.0)` — Imagen dentro de sí misma, con marco blanco (efecto infinito).
+- `rgb_split(img, px, ang=0.0)`
+- `sacudir(img, dx, dy, rot=0.0, zoom=1.0)`
+- `pixelar(img, bloque)`
+- `glitch(img, t, amt, seed=0)`
+- `espejo(img, vertical=False)`
+- `destello(img, a, color=BLANCO_F)`
+- `bloom(img, fuerza, umbral=0.62)` — Resplandor de lo luminoso Y saturado (soles, lava, luces de color; no cielos claros ni texto blanco).
+- `acabado(img, boil, grano=None, vineta=None)`
+- `tr_iris(A, B, p, seed=0, cx=CX, cy=CY)`
+- `tr_mancha(A, B, p, seed=0)`
+- `tr_espiral(A, B, p, seed=0)`
+- `tr_glitch(A, B, p, seed=0)`
+- `tr_zoom(A, B, p, seed=0, cx=CX, cy=CY)`
+- `tr_persianas(A, B, p, seed=0, periodo=150.0)`
+- `tr_derretir(A, B, p, seed=0)`
+- `tr_ola(A, B, p, seed=0)`
+- `tr_burbujas(A, B, p, seed=0, n=70)`
+- `tr_caleido(A, B, p, seed=0)`
+- `tr_pixeles(A, B, p, seed=0)`
+- `tr_garabato(A, B, p, seed=0)` — Rayones de marcador que tapan A y destapan B.
+- `tr_fundido(A, B, p, seed=0)` — Fundido cruzado suave con un leve acercamiento (documental).
+- `tr_zoom_suave(A, B, p, seed=0, cx=CX, cy=CY)` — Acercamiento hacia el centro de A que se funde con B saliendo de lejos (sin desenfoque radial).
+- `tr_bajada(A, B, p, seed=0)` — Paneo vertical: la cámara baja (A sale por arriba, B entra desde abajo).
+
+## estilos.py — Estilos visuales intercambiables. Un estilo cambia tinta, rellenos, temblor, bordes, texturas,
+
+- `activar(nombre)`
+- `transformar_relleno(rgb)` — Transforma un color de relleno según el estilo activo (la tinta se trata aparte).
+
+## sinte.py — Sintetizador: osciladores band-limited (PolyBLEP), filtros SVF con modulación por muestra,
+
+- `mtof(m)`
+- `saw_blep(freq, sr, fase0)` — freq: array de frecuencias por muestra.
+- `square_blep(freq, sr, fase0, pw)`
+- `seno(freq, fase0=0.0)`
+- `sierra(freq, fase0=0.0)`
+- `cuadrada(freq, pw=0.5, fase0=0.0)`
+- `supersaw(f0, n, voces=7, detune=0.18, seed=0)`
+- `ruido(n, seed=0)`
+- `svf(x, cutoff, q, modo)` — Filtro de estado variable (TPT / Zavalishin). cutoff por muestra en Hz.
+- `lp(x, fc, q=0.707)`
+- `bp(x, fc, q=1.0)`
+- `hp(x, fc, q=0.707)`
+- `butter_hp(x, fc, orden=2)`
+- `butter_lp(x, fc, orden=2)`
+- `peq(x, fc, gain_db, q=1.0)` — Ecualizador paramétrico (biquad RBJ).
+- `shelf(x, fc, gain_db, alto=True)`
+- `adsr(n, a, d, s, r, dur_nota)` — n muestras totales; dur_nota = segundos hasta note-off.
+- `perc(n, ataque=0.002, caida=0.2)`
+- `respuesta_reverb(dur=2.4, predelay=0.02, seed=11, brillo=6000.0)`
+- `reverb(x, mezcla=0.25, dur=2.4, brillo=6000.0)` — x estéreo (2, n). Devuelve wet+dry.
+- `delay_pingpong(x, tiempo, feedback=0.4, mezcla=0.3, lp_fc=5000.0)`
+- `panear(x, pan)` — x mono -> estéreo con ley de potencia constante; pan en [-1, 1].
+- `envolvente(x, ataque=0.005, liberacion=0.15)`
+- `compresor(x, umbral_db=-18, ratio=3.0, ataque=0.005, liberacion=0.12, makeup_db=0.0)`
+- `limitador(x, techo_db=-1.2, lookahead=0.005, liberacion=0.08)`
+- `saturar(x, drive=1.5)`
+- `sumar(buf, señal, t, gain=1.0)` — Suma señal (mono o estéreo) en buf estéreo (2, N) en el tiempo t (s).

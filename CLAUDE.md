@@ -169,6 +169,16 @@ Tras cambiar el núcleo: `python fab.py api` y re-verificar `videos/40mil_anos` 
 - `musica` ya no guarda pistas separadas (FAB_STEMS=1 si se necesitan, ~300 MB).
 - Nombre de los archivos de salida: `ARCHIVO = "..."` en guion.py (si no, se deriva del TITULO).
 
+## Git / GitHub
+- Repo privado (remoto `origin`). Se versiona solo código y configuración (ver `.gitignore`): núcleo, docs,
+  `canales/*.json`, arte del canal y por video `guion.py`, `escenas.py`, `miniaturas.py`, `youtube.json`,
+  `timeline.json`. NUNCA subir `canales/youtube_client_secrets.json`, `canales/tokens/`, métricas, respaldos,
+  voz/audio/render ni `proyecto/`. Antes de cada commit: `git status` y revisa que no entre ningún secreto.
+- Al terminar un cambio que funcione: commit en español describiendo qué y por qué; `git push`.
+- Sesiones en la nube (claude.ai/code) sirven para guion, escenas, investigación y metadatos, pero NO tienen
+  GPU, Chatterbox, voces, Whisper, ffmpeg ni fuentes: voz, música y render siempre en esta PC
+  (`git pull` y luego `python fab.py <video> todo`).
+
 ## Entorno
 Python 3.10 del sistema (torch cu124, numpy, opencv, PIL, librosa, numba, faster-whisper, speechbrain,
 pyloudnorm). Chatterbox en `C:\chatterbox\repo` (Multilingual v3, `language_id="es"`).

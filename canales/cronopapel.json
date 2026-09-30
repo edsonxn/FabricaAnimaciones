@@ -1,0 +1,54 @@
+{
+  "canal_id": "UCqwn92RiGu4DbSlRSijj4ew",
+  "nombre": "Cronopapel",
+  "nombre_anterior": "Animales de Papel",
+  "descripcion": "La historia de un país, un imperio o una época entera, contada en minutos.\n\nEn Cronopapel dibujamos la historia sobre mapas de papel: los imperios crecen, se rompen y se vuelven a unir, con animación original hecha a mano (boceto y guache), datos verificados y las fuentes en la descripción de cada video.\n\n🗺️ Empezamos con «La historia de China en 3 minutos». ¿Cuál quieres ver después? Dímelo en los comentarios.\n\nSuscríbete y recorre el mundo una dinastía, un imperio y un mapa a la vez.",
+  "palabras_clave": [
+    "historia en minutos",
+    "historia resumida",
+    "historia del mundo",
+    "historia animada",
+    "mapas animados",
+    "imperios",
+    "dinastías",
+    "civilizaciones",
+    "historia de china",
+    "historia universal",
+    "historia antigua",
+    "animación educativa",
+    "datos históricos",
+    "historia de los países",
+    "historia en 3 minutos"
+  ],
+  "idioma": "es",
+  "pais": "MX",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": [
+      "miércoles",
+      "jueves",
+      "viernes"
+    ],
+    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando el canal tenga datos de la nueva etapa."
+  },
+  "publicados": [
+    {
+      "video": "historia_china",
+      "id": "4Hc-DNPgiRM",
+      "titulo": "Historia de China en 3 minutos",
+      "subido": "2026-09-30T19:00:00Z",
+      "visibilidad": "private"
+    },
+    {
+      "video": "historia_iran",
+      "id": "CqSg_v6pFjQ",
+      "titulo": "Historia de Irán en 5 minutos",
+      "subido": "2026-09-30T22:00:00Z",
+      "visibilidad": "private",
+      "nota": "falta miniatura (yt aplicar) y programar para 2026-10-07T20:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,2986 @@
+{
+ "bpm": 120.0,
+ "beat": 0.5,
+ "unidad": 4,
+ "total": 187.5,
+ "titulo": "Neandertales: 7 mitos que la ciencia ya derrumbó",
+ "estilo": "doodle",
+ "escenas": [
+  {
+   "id": "intro",
+   "claves": [
+    [
+     "cerebro",
+     "CEREBRO MÁS GRANDE"
+    ]
+   ],
+   "t0": 0.0,
+   "t1": 12.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "intro_0",
+     "texto": "Te dijeron que los neandertales eran brutos y torpes.",
+     "t0": 1.33,
+     "t1": 4.645,
+     "words": [
+      {
+       "w": "Te",
+       "s": 1.33,
+       "e": 1.43
+      },
+      {
+       "w": "dijeron",
+       "s": 1.43,
+       "e": 1.87
+      },
+      {
+       "w": "que",
+       "s": 1.87,
+       "e": 1.97
+      },
+      {
+       "w": "los",
+       "s": 1.97,
+       "e": 2.09
+      },
+      {
+       "w": "neandertales",
+       "s": 2.09,
+       "e": 2.81
+      },
+      {
+       "w": "eran",
+       "s": 2.81,
+       "e": 3.13
+      },
+      {
+       "w": "brutos",
+       "s": 3.13,
+       "e": 3.71
+      },
+      {
+       "w": "y",
+       "s": 3.71,
+       "e": 3.81
+      },
+      {
+       "w": "torpes.",
+       "s": 3.81,
+       "e": 4.31
+      }
+     ]
+    },
+    {
+     "key": "intro_1",
+     "texto": "Pero su cerebro era, en promedio, más grande que el tuyo.",
+     "t0": 5.079,
+     "t1": 8.244,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 5.079,
+       "e": 5.179
+      },
+      {
+       "w": "su",
+       "s": 5.179,
+       "e": 5.299
+      },
+      {
+       "w": "cerebro",
+       "s": 5.299,
+       "e": 5.719
+      },
+      {
+       "w": "era,",
+       "s": 5.719,
+       "e": 5.919
+      },
+      {
+       "w": "en",
+       "s": 5.999,
+       "e": 6.199
+      },
+      {
+       "w": "promedio,",
+       "s": 6.199,
+       "e": 6.699
+      },
+      {
+       "w": "más",
+       "s": 6.699,
+       "e": 7.059
+      },
+      {
+       "w": "grande",
+       "s": 7.059,
+       "e": 7.379
+      },
+      {
+       "w": "que",
+       "s": 7.379,
+       "e": 7.579
+      },
+      {
+       "w": "el",
+       "s": 7.579,
+       "e": 7.619
+      },
+      {
+       "w": "tuyo.",
+       "s": 7.619,
+       "e": 7.919
+      }
+     ]
+    },
+    {
+     "key": "intro_2",
+     "texto": "Aquí van siete mitos que la ciencia ya derrumbó.",
+     "t0": 8.679,
+     "t1": 11.282,
+     "words": [
+      {
+       "w": "Aquí",
+       "s": 8.679,
+       "e": 8.919
+      },
+      {
+       "w": "van",
+       "s": 8.919,
+       "e": 9.079
+      },
+      {
+       "w": "siete",
+       "s": 9.079,
+       "e": 9.319
+      },
+      {
+       "w": "mitos",
+       "s": 9.319,
+       "e": 9.779
+      },
+      {
+       "w": "que",
+       "s": 9.779,
+       "e": 9.879
+      },
+      {
+       "w": "la",
+       "s": 9.879,
+       "e": 9.999
+      },
+      {
+       "w": "ciencia",
+       "s": 9.999,
+       "e": 10.339
+      },
+      {
+       "w": "ya",
+       "s": 10.339,
+       "e": 10.519
+      },
+      {
+       "w": "derrumbó.",
+       "s": 10.519,
+       "e": 10.919
+      }
+     ]
+    }
+   ],
+   "fin_voz": 11.282,
+   "beats": 24
+  },
+  {
+   "id": "torpes",
+   "num": 1,
+   "titulo": "ERAN TORPES",
+   "fase_b": 4,
+   "etiqueta_numero": "MITO",
+   "sello": "HACE ~200.000 AÑOS",
+   "icono": "fuego",
+   "icono_hoy": "pegamento",
+   "dato": "Alquitrán de abedul en lascas de Campitello (Italia): ~200.000 años",
+   "fuente": "Mazza et al. 2006, J. Archaeological Science",
+   "claves": [
+    [
+     "doscientos",
+     "PEGAMENTO DE ABEDUL"
+    ],
+    [
+     "Mar del Norte",
+     "MAR DEL NORTE"
+    ]
+   ],
+   "t0": 12.0,
+   "t1": 36.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "torpes_0",
+     "texto": "Mito uno: eran torpes.",
+     "t0": 12.444,
+     "t1": 14.105,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 12.444,
+       "e": 12.624
+      },
+      {
+       "w": "uno:",
+       "s": 12.694,
+       "e": 12.764
+      },
+      {
+       "w": "eran",
+       "s": 13.064,
+       "e": 13.384
+      },
+      {
+       "w": "torpes.",
+       "s": 13.384,
+       "e": 13.764
+      }
+     ]
+    },
+    {
+     "key": "torpes_1",
+     "texto": "Falso. Hace unos doscientos mil años, en Italia, ya usaban pegamento hecho con alquitrán de abedul.",
+     "t0": 14.567,
+     "t1": 20.367,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 14.567,
+       "e": 14.907
+      },
+      {
+       "w": "Hace",
+       "s": 14.987,
+       "e": 15.547
+      },
+      {
+       "w": "unos",
+       "s": 15.547,
+       "e": 15.767
+      },
+      {
+       "w": "doscientos",
+       "s": 15.767,
+       "e": 16.107
+      },
+      {
+       "w": "mil",
+       "s": 16.107,
+       "e": 16.487
+      },
+      {
+       "w": "años,",
+       "s": 16.487,
+       "e": 16.687
+      },
+      {
+       "w": "en",
+       "s": 16.787,
+       "e": 16.967
+      },
+      {
+       "w": "Italia,",
+       "s": 16.967,
+       "e": 17.307
+      },
+      {
+       "w": "ya",
+       "s": 17.387,
+       "e": 17.847
+      },
+      {
+       "w": "usaban",
+       "s": 17.847,
+       "e": 18.227
+      },
+      {
+       "w": "pegamento",
+       "s": 18.227,
+       "e": 18.727
+      },
+      {
+       "w": "hecho",
+       "s": 18.727,
+       "e": 18.967
+      },
+      {
+       "w": "con",
+       "s": 18.967,
+       "e": 19.187
+      },
+      {
+       "w": "alquitrán",
+       "s": 19.187,
+       "e": 19.647
+      },
+      {
+       "w": "de",
+       "s": 19.647,
+       "e": 19.747
+      },
+      {
+       "w": "abedul.",
+       "s": 19.747,
+       "e": 20.067
+      }
+     ]
+    },
+    {
+     "key": "torpes_2",
+     "texto": "Lo obtenían calentando corteza, y con él pegaban piedras afiladas a mangos de madera.",
+     "t0": 20.709,
+     "t1": 25.634,
+     "words": [
+      {
+       "w": "Lo",
+       "s": 20.709,
+       "e": 20.789
+      },
+      {
+       "w": "obtenían",
+       "s": 20.789,
+       "e": 21.149
+      },
+      {
+       "w": "calentando",
+       "s": 21.149,
+       "e": 21.729
+      },
+      {
+       "w": "corteza,",
+       "s": 21.729,
+       "e": 22.189
+      },
+      {
+       "w": "y",
+       "s": 22.249,
+       "e": 22.769
+      },
+      {
+       "w": "con",
+       "s": 22.769,
+       "e": 22.929
+      },
+      {
+       "w": "él",
+       "s": 22.929,
+       "e": 23.129
+      },
+      {
+       "w": "pegaban",
+       "s": 23.129,
+       "e": 23.469
+      },
+      {
+       "w": "piedras",
+       "s": 23.469,
+       "e": 23.909
+      },
+      {
+       "w": "afiladas",
+       "s": 23.909,
+       "e": 24.369
+      },
+      {
+       "w": "a",
+       "s": 24.369,
+       "e": 24.509
+      },
+      {
+       "w": "mangos",
+       "s": 24.509,
+       "e": 24.769
+      },
+      {
+       "w": "de",
+       "s": 24.769,
+       "e": 24.889
+      },
+      {
+       "w": "madera.",
+       "s": 24.889,
+       "e": 25.209
+      }
+     ]
+    },
+    {
+     "key": "torpes_3",
+     "texto": "En el Mar del Norte apareció una herramienta de hace cincuenta mil años, todavía con su pegamento.",
+     "t0": 25.976,
+     "t1": 31.253,
+     "words": [
+      {
+       "w": "En",
+       "s": 25.976,
+       "e": 26.116
+      },
+      {
+       "w": "el",
+       "s": 26.116,
+       "e": 26.256
+      },
+      {
+       "w": "Mar",
+       "s": 26.256,
+       "e": 26.436
+      },
+      {
+       "w": "del",
+       "s": 26.436,
+       "e": 26.596
+      },
+      {
+       "w": "Norte",
+       "s": 26.596,
+       "e": 26.916
+      },
+      {
+       "w": "apareció",
+       "s": 26.916,
+       "e": 27.436
+      },
+      {
+       "w": "una",
+       "s": 27.436,
+       "e": 27.536
+      },
+      {
+       "w": "herramienta",
+       "s": 27.536,
+       "e": 28.136
+      },
+      {
+       "w": "de",
+       "s": 28.136,
+       "e": 28.196
+      },
+      {
+       "w": "hace",
+       "s": 28.196,
+       "e": 28.396
+      },
+      {
+       "w": "cincuenta",
+       "s": 28.396,
+       "e": 28.776
+      },
+      {
+       "w": "mil",
+       "s": 28.776,
+       "e": 29.116
+      },
+      {
+       "w": "años,",
+       "s": 29.116,
+       "e": 29.336
+      },
+      {
+       "w": "todavía",
+       "s": 29.476,
+       "e": 29.996
+      },
+      {
+       "w": "con",
+       "s": 29.996,
+       "e": 30.296
+      },
+      {
+       "w": "su",
+       "s": 30.296,
+       "e": 30.456
+      },
+      {
+       "w": "pegamento.",
+       "s": 30.456,
+       "e": 30.896
+      }
+     ]
+    },
+    {
+     "key": "torpes_4",
+     "texto": "Tú pegas cosas con un tubito. Ellos ya tenían su propia versión.",
+     "t0": 31.595,
+     "t1": 35.432,
+     "words": [
+      {
+       "w": "Tú",
+       "s": 31.595,
+       "e": 31.715
+      },
+      {
+       "w": "pegas",
+       "s": 31.715,
+       "e": 31.995
+      },
+      {
+       "w": "cosas",
+       "s": 31.995,
+       "e": 32.195
+      },
+      {
+       "w": "con",
+       "s": 32.195,
+       "e": 32.495
+      },
+      {
+       "w": "un",
+       "s": 32.495,
+       "e": 32.635
+      },
+      {
+       "w": "tubito.",
+       "s": 32.635,
+       "e": 32.975
+      },
+      {
+       "w": "Ellos",
+       "s": 33.355,
+       "e": 33.755
+      },
+      {
+       "w": "ya",
+       "s": 33.755,
+       "e": 33.815
+      },
+      {
+       "w": "tenían",
+       "s": 33.815,
+       "e": 34.075
+      },
+      {
+       "w": "su",
+       "s": 34.075,
+       "e": 34.255
+      },
+      {
+       "w": "propia",
+       "s": 34.255,
+       "e": 34.455
+      },
+      {
+       "w": "versión.",
+       "s": 34.455,
+       "e": 34.755
+      }
+     ]
+    }
+   ],
+   "fin_voz": 35.432,
+   "beats": 48
+  },
+  {
+   "id": "joyas",
+   "num": 2,
+   "titulo": "NO USABAN JOYAS",
+   "fase_b": 4,
+   "etiqueta_numero": "MITO",
+   "sello": "HACE ~130.000 AÑOS",
+   "icono": "collar",
+   "icono_hoy": "tu",
+   "dato": "Ocho garras de águila de Krapina (Croacia): ~130.000 años",
+   "fuente": "Radovčić et al. 2015, PLOS ONE",
+   "claves": [
+    [
+     "garras",
+     "8 GARRAS DE ÁGUILA"
+    ],
+    [
+     "Krapina",
+     "KRAPINA, CROACIA"
+    ]
+   ],
+   "t0": 36.0,
+   "t1": 60.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "joyas_0",
+     "texto": "Mito dos: no usaban joyas.",
+     "t0": 36.327,
+     "t1": 38.559,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 36.327,
+       "e": 36.547
+      },
+      {
+       "w": "dos:",
+       "s": 36.637,
+       "e": 36.727
+      },
+      {
+       "w": "no",
+       "s": 36.887,
+       "e": 37.407
+      },
+      {
+       "w": "usaban",
+       "s": 37.407,
+       "e": 37.727
+      },
+      {
+       "w": "joyas.",
+       "s": 37.727,
+       "e": 38.227
+      }
+     ]
+    },
+    {
+     "key": "joyas_1",
+     "texto": "Falso. En Krapina, en Croacia, aparecieron ocho garras de águila de hace unos ciento treinta mil años.",
+     "t0": 38.987,
+     "t1": 45.368,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 38.987,
+       "e": 39.527
+      },
+      {
+       "w": "En",
+       "s": 39.547,
+       "e": 40.007
+      },
+      {
+       "w": "Krapina,",
+       "s": 40.007,
+       "e": 40.587
+      },
+      {
+       "w": "en",
+       "s": 40.607,
+       "e": 40.847
+      },
+      {
+       "w": "Croacia,",
+       "s": 40.847,
+       "e": 41.367
+      },
+      {
+       "w": "aparecieron",
+       "s": 41.447,
+       "e": 42.347
+      },
+      {
+       "w": "ocho",
+       "s": 42.347,
+       "e": 42.667
+      },
+      {
+       "w": "garras",
+       "s": 42.667,
+       "e": 42.947
+      },
+      {
+       "w": "de",
+       "s": 42.947,
+       "e": 43.007
+      },
+      {
+       "w": "águila",
+       "s": 43.007,
+       "e": 43.367
+      },
+      {
+       "w": "de",
+       "s": 43.367,
+       "e": 43.487
+      },
+      {
+       "w": "hace",
+       "s": 43.487,
+       "e": 43.627
+      },
+      {
+       "w": "unos",
+       "s": 43.627,
+       "e": 43.787
+      },
+      {
+       "w": "ciento",
+       "s": 43.787,
+       "e": 43.997
+      },
+      {
+       "w": "treinta",
+       "s": 43.997,
+       "e": 44.207
+      },
+      {
+       "w": "mil",
+       "s": 44.207,
+       "e": 44.607
+      },
+      {
+       "w": "años.",
+       "s": 44.607,
+       "e": 44.807
+      }
+     ]
+    },
+    {
+     "key": "joyas_2",
+     "texto": "Tienen cortes y partes pulidas, como si las hubieran colgado de un collar.",
+     "t0": 45.676,
+     "t1": 49.497,
+     "words": [
+      {
+       "w": "Tienen",
+       "s": 45.676,
+       "e": 45.936
+      },
+      {
+       "w": "cortes",
+       "s": 45.936,
+       "e": 46.436
+      },
+      {
+       "w": "y",
+       "s": 46.436,
+       "e": 46.496
+      },
+      {
+       "w": "partes",
+       "s": 46.496,
+       "e": 46.796
+      },
+      {
+       "w": "pulidas,",
+       "s": 46.796,
+       "e": 47.296
+      },
+      {
+       "w": "como",
+       "s": 47.376,
+       "e": 47.736
+      },
+      {
+       "w": "si",
+       "s": 47.736,
+       "e": 47.876
+      },
+      {
+       "w": "las",
+       "s": 47.876,
+       "e": 47.996
+      },
+      {
+       "w": "hubieran",
+       "s": 47.996,
+       "e": 48.336
+      },
+      {
+       "w": "colgado",
+       "s": 48.336,
+       "e": 48.756
+      },
+      {
+       "w": "de",
+       "s": 48.756,
+       "e": 48.856
+      },
+      {
+       "w": "un",
+       "s": 48.856,
+       "e": 48.936
+      },
+      {
+       "w": "collar.",
+       "s": 48.936,
+       "e": 49.136
+      }
+     ]
+    },
+    {
+     "key": "joyas_3",
+     "texto": "Sería la joyería más antigua de Europa, hecha decenas de miles de años antes de que llegaran los humanos modernos.",
+     "t0": 49.805,
+     "t1": 56.181,
+     "words": [
+      {
+       "w": "Sería",
+       "s": 49.805,
+       "e": 50.105
+      },
+      {
+       "w": "la",
+       "s": 50.105,
+       "e": 50.205
+      },
+      {
+       "w": "joyería",
+       "s": 50.205,
+       "e": 50.725
+      },
+      {
+       "w": "más",
+       "s": 50.725,
+       "e": 50.865
+      },
+      {
+       "w": "antigua",
+       "s": 50.865,
+       "e": 51.385
+      },
+      {
+       "w": "de",
+       "s": 51.385,
+       "e": 51.465
+      },
+      {
+       "w": "Europa,",
+       "s": 51.465,
+       "e": 51.645
+      },
+      {
+       "w": "hecha",
+       "s": 51.865,
+       "e": 52.745
+      },
+      {
+       "w": "decenas",
+       "s": 52.745,
+       "e": 53.225
+      },
+      {
+       "w": "de",
+       "s": 53.225,
+       "e": 53.365
+      },
+      {
+       "w": "miles",
+       "s": 53.365,
+       "e": 53.505
+      },
+      {
+       "w": "de",
+       "s": 53.505,
+       "e": 53.725
+      },
+      {
+       "w": "años",
+       "s": 53.725,
+       "e": 53.885
+      },
+      {
+       "w": "antes",
+       "s": 53.885,
+       "e": 54.285
+      },
+      {
+       "w": "de",
+       "s": 54.285,
+       "e": 54.445
+      },
+      {
+       "w": "que",
+       "s": 54.445,
+       "e": 54.525
+      },
+      {
+       "w": "llegaran",
+       "s": 54.525,
+       "e": 54.885
+      },
+      {
+       "w": "los",
+       "s": 54.885,
+       "e": 55.065
+      },
+      {
+       "w": "humanos",
+       "s": 55.065,
+       "e": 55.265
+      },
+      {
+       "w": "modernos.",
+       "s": 55.265,
+       "e": 55.965
+      }
+     ]
+    },
+    {
+     "key": "joyas_4",
+     "texto": "Tú te pones un collar para verte bien. Ellos ya lo hacían.",
+     "t0": 56.489,
+     "t1": 59.569,
+     "words": [
+      {
+       "w": "Tú",
+       "s": 56.489,
+       "e": 56.589
+      },
+      {
+       "w": "te",
+       "s": 56.589,
+       "e": 56.648
+      },
+      {
+       "w": "pones",
+       "s": 56.648,
+       "e": 56.928
+      },
+      {
+       "w": "un",
+       "s": 56.928,
+       "e": 57.009
+      },
+      {
+       "w": "collar",
+       "s": 57.009,
+       "e": 57.229
+      },
+      {
+       "w": "para",
+       "s": 57.229,
+       "e": 57.449
+      },
+      {
+       "w": "verte",
+       "s": 57.449,
+       "e": 57.669
+      },
+      {
+       "w": "bien.",
+       "s": 57.669,
+       "e": 57.909
+      },
+      {
+       "w": "Ellos",
+       "s": 58.309,
+       "e": 58.648
+      },
+      {
+       "w": "ya",
+       "s": 58.648,
+       "e": 58.709
+      },
+      {
+       "w": "lo",
+       "s": 58.709,
+       "e": 58.829
+      },
+      {
+       "w": "hacían.",
+       "s": 58.829,
+       "e": 59.129
+      }
+     ]
+    }
+   ],
+   "fin_voz": 59.569,
+   "beats": 48
+  },
+  {
+   "id": "cuidado",
+   "num": 3,
+   "titulo": "NO CUIDABAN A LOS SUYOS",
+   "fase_b": 3,
+   "etiqueta_numero": "MITO",
+   "sello": null,
+   "icono": "corazon",
+   "icono_hoy": "bebe",
+   "dato": "Shanidar 1 (Irak): sobrevivió con graves lesiones hasta los cuarenta y tantos",
+   "fuente": "Trinkaus y Villotte 2017, PLOS ONE",
+   "claves": [
+    [
+     "Shanidar",
+     "SHANIDAR, IRAK"
+    ],
+    [
+     "Cova Negra",
+     "COVA NEGRA, ESPAÑA"
+    ]
+   ],
+   "t0": 60.0,
+   "t1": 84.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "cuidado_0",
+     "texto": "Mito tres: no cuidaban a los suyos.",
+     "t0": 60.52,
+     "t1": 62.571,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 60.52,
+       "e": 60.66
+      },
+      {
+       "w": "tres:",
+       "s": 60.76,
+       "e": 60.86
+      },
+      {
+       "w": "no",
+       "s": 60.98,
+       "e": 61.3
+      },
+      {
+       "w": "cuidaban",
+       "s": 61.3,
+       "e": 61.7
+      },
+      {
+       "w": "a",
+       "s": 61.7,
+       "e": 61.84
+      },
+      {
+       "w": "los",
+       "s": 61.84,
+       "e": 61.92
+      },
+      {
+       "w": "suyos.",
+       "s": 61.92,
+       "e": 62.3
+      }
+     ]
+    },
+    {
+     "key": "cuidado_1",
+     "texto": "Falso. En la cueva de Shanidar, en Irak, vivió un neandertal con un brazo atrofiado, cojera y sordera.",
+     "t0": 63.055,
+     "t1": 69.191,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 63.055,
+       "e": 63.535
+      },
+      {
+       "w": "En",
+       "s": 63.555,
+       "e": 63.895
+      },
+      {
+       "w": "la",
+       "s": 63.895,
+       "e": 63.975
+      },
+      {
+       "w": "cueva",
+       "s": 63.975,
+       "e": 64.295
+      },
+      {
+       "w": "de",
+       "s": 64.295,
+       "e": 64.395
+      },
+      {
+       "w": "Shanidar,",
+       "s": 64.395,
+       "e": 64.715
+      },
+      {
+       "w": "en",
+       "s": 64.855,
+       "e": 65.075
+      },
+      {
+       "w": "Irak,",
+       "s": 65.075,
+       "e": 65.395
+      },
+      {
+       "w": "vivió",
+       "s": 65.415,
+       "e": 65.995
+      },
+      {
+       "w": "un",
+       "s": 65.995,
+       "e": 66.095
+      },
+      {
+       "w": "neandertal",
+       "s": 66.095,
+       "e": 66.715
+      },
+      {
+       "w": "con",
+       "s": 66.715,
+       "e": 66.855
+      },
+      {
+       "w": "un",
+       "s": 66.855,
+       "e": 66.995
+      },
+      {
+       "w": "brazo",
+       "s": 66.995,
+       "e": 67.275
+      },
+      {
+       "w": "atrofiado,",
+       "s": 67.275,
+       "e": 67.735
+      },
+      {
+       "w": "cojera",
+       "s": 67.815,
+       "e": 68.375
+      },
+      {
+       "w": "y",
+       "s": 68.375,
+       "e": 68.475
+      },
+      {
+       "w": "sordera.",
+       "s": 68.475,
+       "e": 68.835
+      }
+     ]
+    },
+    {
+     "key": "cuidado_2",
+     "texto": "Aun así llegó a los cuarenta y tantos años, y los investigadores creen que su grupo lo cuidó.",
+     "t0": 69.556,
+     "t1": 74.636,
+     "words": [
+      {
+       "w": "Aun",
+       "s": 69.556,
+       "e": 69.736
+      },
+      {
+       "w": "así",
+       "s": 69.736,
+       "e": 69.896
+      },
+      {
+       "w": "llegó",
+       "s": 69.996,
+       "e": 70.236
+      },
+      {
+       "w": "a",
+       "s": 70.236,
+       "e": 70.376
+      },
+      {
+       "w": "los",
+       "s": 70.376,
+       "e": 70.496
+      },
+      {
+       "w": "cuarenta",
+       "s": 70.496,
+       "e": 70.776
+      },
+      {
+       "w": "y",
+       "s": 70.776,
+       "e": 71.036
+      },
+      {
+       "w": "tantos",
+       "s": 71.036,
+       "e": 71.396
+      },
+      {
+       "w": "años,",
+       "s": 71.396,
+       "e": 71.616
+      },
+      {
+       "w": "y",
+       "s": 71.616,
+       "e": 71.936
+      },
+      {
+       "w": "los",
+       "s": 71.936,
+       "e": 72.236
+      },
+      {
+       "w": "investigadores",
+       "s": 72.236,
+       "e": 72.976
+      },
+      {
+       "w": "creen",
+       "s": 72.976,
+       "e": 73.336
+      },
+      {
+       "w": "que",
+       "s": 73.336,
+       "e": 73.476
+      },
+      {
+       "w": "su",
+       "s": 73.476,
+       "e": 73.576
+      },
+      {
+       "w": "grupo",
+       "s": 73.576,
+       "e": 73.836
+      },
+      {
+       "w": "lo",
+       "s": 73.836,
+       "e": 74.016
+      },
+      {
+       "w": "cuidó.",
+       "s": 74.016,
+       "e": 74.316
+      }
+     ]
+    },
+    {
+     "key": "cuidado_3",
+     "texto": "Y en Cova Negra, en España, un pequeño con síndrome de Down vivió al menos seis años.",
+     "t0": 75.0,
+     "t1": 80.224,
+     "words": [
+      {
+       "w": "Y",
+       "s": 75.0,
+       "e": 75.1
+      },
+      {
+       "w": "en",
+       "s": 75.1,
+       "e": 75.18
+      },
+      {
+       "w": "Cova",
+       "s": 75.18,
+       "e": 75.5
+      },
+      {
+       "w": "Negra,",
+       "s": 75.5,
+       "e": 75.82
+      },
+      {
+       "w": "en",
+       "s": 75.86,
+       "e": 76.38
+      },
+      {
+       "w": "España,",
+       "s": 76.38,
+       "e": 76.64
+      },
+      {
+       "w": "un",
+       "s": 76.86,
+       "e": 77.4
+      },
+      {
+       "w": "pequeño",
+       "s": 77.4,
+       "e": 77.68
+      },
+      {
+       "w": "con",
+       "s": 77.68,
+       "e": 77.92
+      },
+      {
+       "w": "síndrome",
+       "s": 77.92,
+       "e": 78.32
+      },
+      {
+       "w": "de",
+       "s": 78.32,
+       "e": 78.5
+      },
+      {
+       "w": "Down",
+       "s": 78.5,
+       "e": 78.7
+      },
+      {
+       "w": "vivió",
+       "s": 78.7,
+       "e": 79.08
+      },
+      {
+       "w": "al",
+       "s": 79.08,
+       "e": 79.16
+      },
+      {
+       "w": "menos",
+       "s": 79.16,
+       "e": 79.36
+      },
+      {
+       "w": "seis",
+       "s": 79.36,
+       "e": 79.6
+      },
+      {
+       "w": "años.",
+       "s": 79.6,
+       "e": 79.9
+      }
+     ]
+    },
+    {
+     "key": "cuidado_4",
+     "texto": "Cuidar a quien lo necesita no lo inventamos nosotros.",
+     "t0": 80.588,
+     "t1": 83.343,
+     "words": [
+      {
+       "w": "Cuidar",
+       "s": 80.588,
+       "e": 80.868
+      },
+      {
+       "w": "a",
+       "s": 80.868,
+       "e": 80.968
+      },
+      {
+       "w": "quien",
+       "s": 80.968,
+       "e": 81.148
+      },
+      {
+       "w": "lo",
+       "s": 81.148,
+       "e": 81.248
+      },
+      {
+       "w": "necesita",
+       "s": 81.248,
+       "e": 81.608
+      },
+      {
+       "w": "no",
+       "s": 81.608,
+       "e": 81.948
+      },
+      {
+       "w": "lo",
+       "s": 81.948,
+       "e": 82.068
+      },
+      {
+       "w": "inventamos",
+       "s": 82.068,
+       "e": 82.568
+      },
+      {
+       "w": "nosotros.",
+       "s": 82.568,
+       "e": 82.748
+      }
+     ]
+    }
+   ],
+   "fin_voz": 83.343,
+   "beats": 48
+  },
+  {
+   "id": "dieta",
+   "num": 4,
+   "titulo": "SOLO COMÍAN CARNE",
+   "fase_b": 3,
+   "etiqueta_numero": "MITO",
+   "sello": "HACE ~49.000 AÑOS",
+   "icono": "flor",
+   "icono_hoy": "pastilla",
+   "dato": "Sarro de El Sidrón (España): piñones, musgo, álamo y Penicillium",
+   "fuente": "Weyrich et al. 2017, Nature",
+   "claves": [
+    [
+     "piñones",
+     "PIÑONES Y MUSGO"
+    ],
+    [
+     "álamo",
+     "ÁLAMO: ANALGÉSICO"
+    ],
+    [
+     "penicilina",
+     "PENICILINA"
+    ]
+   ],
+   "t0": 84.0,
+   "t1": 106.0,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "dieta_0",
+     "texto": "Mito cuatro: solo comían carne.",
+     "t0": 84.472,
+     "t1": 86.555,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 84.472,
+       "e": 84.632
+      },
+      {
+       "w": "cuatro:",
+       "s": 84.722,
+       "e": 84.812
+      },
+      {
+       "w": "solo",
+       "s": 85.092,
+       "e": 85.452
+      },
+      {
+       "w": "comían",
+       "s": 85.452,
+       "e": 85.812
+      },
+      {
+       "w": "carne.",
+       "s": 85.812,
+       "e": 86.072
+      }
+     ]
+    },
+    {
+     "key": "dieta_1",
+     "texto": "Falso. En el sarro de un neandertal del Sidrón, en España, quedaron restos de piñones, musgo y hongos.",
+     "t0": 87.042,
+     "t1": 93.559,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 87.042,
+       "e": 87.542
+      },
+      {
+       "w": "En",
+       "s": 87.562,
+       "e": 88.182
+      },
+      {
+       "w": "el",
+       "s": 88.182,
+       "e": 88.342
+      },
+      {
+       "w": "sarro",
+       "s": 88.342,
+       "e": 88.602
+      },
+      {
+       "w": "de",
+       "s": 88.602,
+       "e": 88.682
+      },
+      {
+       "w": "un",
+       "s": 88.682,
+       "e": 88.782
+      },
+      {
+       "w": "neandertal",
+       "s": 88.782,
+       "e": 89.342
+      },
+      {
+       "w": "del",
+       "s": 89.342,
+       "e": 89.442
+      },
+      {
+       "w": "Sidrón,",
+       "s": 89.442,
+       "e": 89.802
+      },
+      {
+       "w": "en",
+       "s": 89.902,
+       "e": 90.262
+      },
+      {
+       "w": "España,",
+       "s": 90.262,
+       "e": 90.642
+      },
+      {
+       "w": "quedaron",
+       "s": 90.642,
+       "e": 91.202
+      },
+      {
+       "w": "restos",
+       "s": 91.202,
+       "e": 91.602
+      },
+      {
+       "w": "de",
+       "s": 91.602,
+       "e": 91.662
+      },
+      {
+       "w": "piñones,",
+       "s": 91.662,
+       "e": 92.122
+      },
+      {
+       "w": "musgo",
+       "s": 92.202,
+       "e": 92.702
+      },
+      {
+       "w": "y",
+       "s": 92.702,
+       "e": 92.882
+      },
+      {
+       "w": "hongos.",
+       "s": 92.882,
+       "e": 93.242
+      }
+     ]
+    },
+    {
+     "key": "dieta_2",
+     "texto": "Otro tenía un absceso en la muela, y su sarro guarda rastros de álamo, un analgésico natural, y del moho que produce penicilina.",
+     "t0": 93.926,
+     "t1": 101.227,
+     "words": [
+      {
+       "w": "Otro",
+       "s": 93.926,
+       "e": 94.206
+      },
+      {
+       "w": "tenía",
+       "s": 94.206,
+       "e": 94.406
+      },
+      {
+       "w": "un",
+       "s": 94.406,
+       "e": 94.566
+      },
+      {
+       "w": "absceso",
+       "s": 94.566,
+       "e": 95.066
+      },
+      {
+       "w": "en",
+       "s": 95.066,
+       "e": 95.106
+      },
+      {
+       "w": "la",
+       "s": 95.106,
+       "e": 95.206
+      },
+      {
+       "w": "muela,",
+       "s": 95.206,
+       "e": 95.506
+      },
+      {
+       "w": "y",
+       "s": 95.506,
+       "e": 95.906
+      },
+      {
+       "w": "su",
+       "s": 95.906,
+       "e": 96.026
+      },
+      {
+       "w": "sarro",
+       "s": 96.026,
+       "e": 96.386
+      },
+      {
+       "w": "guarda",
+       "s": 96.386,
+       "e": 96.746
+      },
+      {
+       "w": "rastros",
+       "s": 96.746,
+       "e": 97.106
+      },
+      {
+       "w": "de",
+       "s": 97.106,
+       "e": 97.226
+      },
+      {
+       "w": "álamo,",
+       "s": 97.226,
+       "e": 97.566
+      },
+      {
+       "w": "un",
+       "s": 97.566,
+       "e": 97.886
+      },
+      {
+       "w": "analgésico",
+       "s": 97.886,
+       "e": 98.526
+      },
+      {
+       "w": "natural,",
+       "s": 98.526,
+       "e": 98.806
+      },
+      {
+       "w": "y",
+       "s": 98.806,
+       "e": 99.106
+      },
+      {
+       "w": "del",
+       "s": 99.106,
+       "e": 99.466
+      },
+      {
+       "w": "moho",
+       "s": 99.466,
+       "e": 99.806
+      },
+      {
+       "w": "que",
+       "s": 99.806,
+       "e": 99.906
+      },
+      {
+       "w": "produce",
+       "s": 99.906,
+       "e": 100.186
+      },
+      {
+       "w": "penicilina.",
+       "s": 100.186,
+       "e": 100.926
+      }
+     ]
+    },
+    {
+     "key": "dieta_3",
+     "texto": "Tú abres el botiquín cuando te duele una muela. Él tenía el bosque.",
+     "t0": 101.594,
+     "t1": 105.399,
+     "words": [
+      {
+       "w": "Tú",
+       "s": 101.594,
+       "e": 101.714
+      },
+      {
+       "w": "abres",
+       "s": 101.714,
+       "e": 102.034
+      },
+      {
+       "w": "el",
+       "s": 102.034,
+       "e": 102.134
+      },
+      {
+       "w": "botiquín",
+       "s": 102.134,
+       "e": 102.614
+      },
+      {
+       "w": "cuando",
+       "s": 102.614,
+       "e": 102.794
+      },
+      {
+       "w": "te",
+       "s": 102.794,
+       "e": 102.994
+      },
+      {
+       "w": "duele",
+       "s": 102.994,
+       "e": 103.334
+      },
+      {
+       "w": "una",
+       "s": 103.334,
+       "e": 103.474
+      },
+      {
+       "w": "muela.",
+       "s": 103.474,
+       "e": 103.794
+      },
+      {
+       "w": "Él",
+       "s": 104.034,
+       "e": 104.434
+      },
+      {
+       "w": "tenía",
+       "s": 104.434,
+       "e": 104.694
+      },
+      {
+       "w": "el",
+       "s": 104.694,
+       "e": 104.874
+      },
+      {
+       "w": "bosque.",
+       "s": 104.874,
+       "e": 105.194
+      }
+     ]
+    }
+   ],
+   "fin_voz": 105.399,
+   "beats": 44
+  },
+  {
+   "id": "genes",
+   "num": 5,
+   "titulo": "NO DEJARON DESCENDIENTES",
+   "fase_b": 3,
+   "etiqueta_numero": "MITO",
+   "sello": null,
+   "icono": "adn",
+   "icono_hoy": "tu",
+   "dato": "Genoma neandertal en personas con ancestros no africanos: 1–4 %",
+   "fuente": "Green et al. 2010, Science",
+   "claves": [
+    [
+     "por ciento",
+     "1–4 % NEANDERTAL"
+    ]
+   ],
+   "t0": 106.0,
+   "t1": 128.0,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "genes_0",
+     "texto": "Mito cinco: no dejaron descendientes.",
+     "t0": 106.55,
+     "t1": 109.369,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 106.69,
+       "e": 107.17
+      },
+      {
+       "w": "cinco:",
+       "s": 107.25,
+       "e": 107.33
+      },
+      {
+       "w": "no",
+       "s": 107.57,
+       "e": 107.97
+      },
+      {
+       "w": "dejaron",
+       "s": 107.97,
+       "e": 108.33
+      },
+      {
+       "w": "descendientes.",
+       "s": 108.33,
+       "e": 108.97
+      }
+     ]
+    },
+    {
+     "key": "genes_1",
+     "texto": "Falso. Nuestros ancestros tuvieron hijos con ellos, y esos hijos sobrevivieron.",
+     "t0": 110.065,
+     "t1": 115.086,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 110.065,
+       "e": 110.545
+      },
+      {
+       "w": "Nuestros",
+       "s": 110.885,
+       "e": 111.485
+      },
+      {
+       "w": "ancestros",
+       "s": 111.485,
+       "e": 111.925
+      },
+      {
+       "w": "tuvieron",
+       "s": 111.925,
+       "e": 112.285
+      },
+      {
+       "w": "hijos",
+       "s": 112.285,
+       "e": 112.485
+      },
+      {
+       "w": "con",
+       "s": 112.485,
+       "e": 112.705
+      },
+      {
+       "w": "ellos,",
+       "s": 112.705,
+       "e": 112.925
+      },
+      {
+       "w": "y",
+       "s": 112.925,
+       "e": 113.225
+      },
+      {
+       "w": "esos",
+       "s": 113.225,
+       "e": 113.585
+      },
+      {
+       "w": "hijos",
+       "s": 113.585,
+       "e": 113.845
+      },
+      {
+       "w": "sobrevivieron.",
+       "s": 113.845,
+       "e": 114.745
+      }
+     ]
+    },
+    {
+     "key": "genes_2",
+     "texto": "Por eso, si tus antepasados vienen de fuera de África, entre el uno y el cuatro por ciento de tu genoma es neandertal.",
+     "t0": 115.662,
+     "t1": 122.689,
+     "words": [
+      {
+       "w": "Por",
+       "s": 115.662,
+       "e": 115.782
+      },
+      {
+       "w": "eso,",
+       "s": 115.782,
+       "e": 116.042
+      },
+      {
+       "w": "si",
+       "s": 116.142,
+       "e": 116.562
+      },
+      {
+       "w": "tus",
+       "s": 116.562,
+       "e": 116.742
+      },
+      {
+       "w": "antepasados",
+       "s": 116.742,
+       "e": 117.422
+      },
+      {
+       "w": "vienen",
+       "s": 117.422,
+       "e": 117.662
+      },
+      {
+       "w": "de",
+       "s": 117.662,
+       "e": 117.862
+      },
+      {
+       "w": "fuera",
+       "s": 117.862,
+       "e": 118.082
+      },
+      {
+       "w": "de",
+       "s": 118.082,
+       "e": 118.262
+      },
+      {
+       "w": "África,",
+       "s": 118.262,
+       "e": 118.602
+      },
+      {
+       "w": "entre",
+       "s": 118.702,
+       "e": 119.142
+      },
+      {
+       "w": "el",
+       "s": 119.142,
+       "e": 119.342
+      },
+      {
+       "w": "uno",
+       "s": 119.342,
+       "e": 119.522
+      },
+      {
+       "w": "y",
+       "s": 119.522,
+       "e": 119.642
+      },
+      {
+       "w": "el",
+       "s": 119.642,
+       "e": 119.742
+      },
+      {
+       "w": "cuatro",
+       "s": 119.742,
+       "e": 119.982
+      },
+      {
+       "w": "por",
+       "s": 119.982,
+       "e": 120.192
+      },
+      {
+       "w": "ciento",
+       "s": 120.192,
+       "e": 120.402
+      },
+      {
+       "w": "de",
+       "s": 120.402,
+       "e": 120.782
+      },
+      {
+       "w": "tu",
+       "s": 120.782,
+       "e": 120.862
+      },
+      {
+       "w": "genoma",
+       "s": 120.862,
+       "e": 121.282
+      },
+      {
+       "w": "es",
+       "s": 121.282,
+       "e": 121.742
+      },
+      {
+       "w": "neandertal.",
+       "s": 121.742,
+       "e": 122.422
+      }
+     ]
+    },
+    {
+     "key": "genes_3",
+     "texto": "No desaparecieron del todo: una parte de ellos sigue en ti.",
+     "t0": 123.265,
+     "t1": 126.772,
+     "words": [
+      {
+       "w": "No",
+       "s": 123.265,
+       "e": 123.345
+      },
+      {
+       "w": "desaparecieron",
+       "s": 123.345,
+       "e": 123.905
+      },
+      {
+       "w": "del",
+       "s": 123.905,
+       "e": 124.085
+      },
+      {
+       "w": "todo:",
+       "s": 124.085,
+       "e": 124.285
+      },
+      {
+       "w": "una",
+       "s": 124.565,
+       "e": 124.965
+      },
+      {
+       "w": "parte",
+       "s": 124.965,
+       "e": 125.225
+      },
+      {
+       "w": "de",
+       "s": 125.225,
+       "e": 125.445
+      },
+      {
+       "w": "ellos",
+       "s": 125.445,
+       "e": 125.645
+      },
+      {
+       "w": "sigue",
+       "s": 125.645,
+       "e": 126.105
+      },
+      {
+       "w": "en",
+       "s": 126.105,
+       "e": 126.285
+      },
+      {
+       "w": "ti.",
+       "s": 126.285,
+       "e": 126.425
+      }
+     ]
+    }
+   ],
+   "fin_voz": 126.772,
+   "beats": 44
+  },
+  {
+   "id": "extincion",
+   "num": 6,
+   "titulo": "SE EXTINGUIERON POR DÉBILES",
+   "fase_b": 4,
+   "etiqueta_numero": "MITO",
+   "sello": "HACE ~40.000 AÑOS",
+   "icono": "mamut",
+   "icono_hoy": "reloj",
+   "dato": "Últimos neandertales de Europa: hace ~40.000 años",
+   "fuente": "Higham et al. 2014, Nature",
+   "claves": [
+    [
+     "trescientos",
+     "+300.000 AÑOS"
+    ],
+    [
+     "cuarenta",
+     "ÚLTIMOS: ~40.000 AÑOS"
+    ]
+   ],
+   "t0": 128.0,
+   "t1": 154.0,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "extincion_0",
+     "texto": "Mito seis: se extinguieron por débiles.",
+     "t0": 128.55,
+     "t1": 131.006,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 128.55,
+       "e": 128.73
+      },
+      {
+       "w": "seis:",
+       "s": 128.82,
+       "e": 128.91
+      },
+      {
+       "w": "se",
+       "s": 129.17,
+       "e": 129.59
+      },
+      {
+       "w": "extinguieron",
+       "s": 129.59,
+       "e": 130.13
+      },
+      {
+       "w": "por",
+       "s": 130.13,
+       "e": 130.31
+      },
+      {
+       "w": "débiles.",
+       "s": 130.31,
+       "e": 130.69
+      }
+     ]
+    },
+    {
+     "key": "extincion_1",
+     "texto": "Falso. Su linaje duró más de trescientos mil años, aguantando glaciaciones.",
+     "t0": 131.575,
+     "t1": 136.292,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 131.575,
+       "e": 132.115
+      },
+      {
+       "w": "Su",
+       "s": 132.135,
+       "e": 132.815
+      },
+      {
+       "w": "linaje",
+       "s": 132.815,
+       "e": 133.195
+      },
+      {
+       "w": "duró",
+       "s": 133.195,
+       "e": 133.495
+      },
+      {
+       "w": "más",
+       "s": 133.495,
+       "e": 133.635
+      },
+      {
+       "w": "de",
+       "s": 133.635,
+       "e": 133.835
+      },
+      {
+       "w": "trescientos",
+       "s": 133.835,
+       "e": 134.095
+      },
+      {
+       "w": "mil",
+       "s": 134.095,
+       "e": 134.535
+      },
+      {
+       "w": "años,",
+       "s": 134.535,
+       "e": 134.755
+      },
+      {
+       "w": "aguantando",
+       "s": 134.755,
+       "e": 135.395
+      },
+      {
+       "w": "glaciaciones.",
+       "s": 135.395,
+       "e": 135.895
+      }
+     ]
+    },
+    {
+     "key": "extincion_2",
+     "texto": "Desaparecieron hace unos cuarenta mil años, después de convivir con nuestros ancestros durante algunos miles de años.",
+     "t0": 136.742,
+     "t1": 142.526,
+     "words": [
+      {
+       "w": "Desaparecieron",
+       "s": 136.742,
+       "e": 137.522
+      },
+      {
+       "w": "hace",
+       "s": 137.522,
+       "e": 137.702
+      },
+      {
+       "w": "unos",
+       "s": 137.702,
+       "e": 137.882
+      },
+      {
+       "w": "cuarenta",
+       "s": 137.882,
+       "e": 138.142
+      },
+      {
+       "w": "mil",
+       "s": 138.142,
+       "e": 138.442
+      },
+      {
+       "w": "años,",
+       "s": 138.442,
+       "e": 138.642
+      },
+      {
+       "w": "después",
+       "s": 138.642,
+       "e": 139.242
+      },
+      {
+       "w": "de",
+       "s": 139.242,
+       "e": 139.482
+      },
+      {
+       "w": "convivir",
+       "s": 139.482,
+       "e": 139.962
+      },
+      {
+       "w": "con",
+       "s": 139.962,
+       "e": 140.062
+      },
+      {
+       "w": "nuestros",
+       "s": 140.062,
+       "e": 140.242
+      },
+      {
+       "w": "ancestros",
+       "s": 140.242,
+       "e": 140.862
+      },
+      {
+       "w": "durante",
+       "s": 140.862,
+       "e": 141.082
+      },
+      {
+       "w": "algunos",
+       "s": 141.082,
+       "e": 141.402
+      },
+      {
+       "w": "miles",
+       "s": 141.402,
+       "e": 141.702
+      },
+      {
+       "w": "de",
+       "s": 141.702,
+       "e": 141.922
+      },
+      {
+       "w": "años.",
+       "s": 141.922,
+       "e": 142.122
+      }
+     ]
+    },
+    {
+     "key": "extincion_3",
+     "texto": "Todavía se debate por qué: clima, enfermedades, competencia o mezcla con nuestra especie.",
+     "t0": 142.975,
+     "t1": 148.375,
+     "words": [
+      {
+       "w": "Todavía",
+       "s": 142.975,
+       "e": 143.335
+      },
+      {
+       "w": "se",
+       "s": 143.335,
+       "e": 143.495
+      },
+      {
+       "w": "debate",
+       "s": 143.495,
+       "e": 143.835
+      },
+      {
+       "w": "por",
+       "s": 143.835,
+       "e": 143.975
+      },
+      {
+       "w": "qué:",
+       "s": 143.975,
+       "e": 144.175
+      },
+      {
+       "w": "clima,",
+       "s": 144.515,
+       "e": 144.955
+      },
+      {
+       "w": "enfermedades,",
+       "s": 144.975,
+       "e": 145.815
+      },
+      {
+       "w": "competencia",
+       "s": 145.855,
+       "e": 146.675
+      },
+      {
+       "w": "o",
+       "s": 146.675,
+       "e": 146.895
+      },
+      {
+       "w": "mezcla",
+       "s": 146.895,
+       "e": 147.315
+      },
+      {
+       "w": "con",
+       "s": 147.315,
+       "e": 147.455
+      },
+      {
+       "w": "nuestra",
+       "s": 147.455,
+       "e": 147.675
+      },
+      {
+       "w": "especie.",
+       "s": 147.675,
+       "e": 147.955
+      }
+     ]
+    },
+    {
+     "key": "extincion_4",
+     "texto": "Nuestra especie lleva más o menos el mismo tiempo. Nadie llama fracaso a eso.",
+     "t0": 148.824,
+     "t1": 153.003,
+     "words": [
+      {
+       "w": "Nuestra",
+       "s": 148.824,
+       "e": 149.164
+      },
+      {
+       "w": "especie",
+       "s": 149.164,
+       "e": 149.424
+      },
+      {
+       "w": "lleva",
+       "s": 149.424,
+       "e": 149.764
+      },
+      {
+       "w": "más",
+       "s": 149.764,
+       "e": 150.024
+      },
+      {
+       "w": "o",
+       "s": 150.024,
+       "e": 150.164
+      },
+      {
+       "w": "menos",
+       "s": 150.164,
+       "e": 150.344
+      },
+      {
+       "w": "el",
+       "s": 150.344,
+       "e": 150.524
+      },
+      {
+       "w": "mismo",
+       "s": 150.524,
+       "e": 150.704
+      },
+      {
+       "w": "tiempo.",
+       "s": 150.704,
+       "e": 151.064
+      },
+      {
+       "w": "Nadie",
+       "s": 151.404,
+       "e": 151.764
+      },
+      {
+       "w": "llama",
+       "s": 151.764,
+       "e": 151.924
+      },
+      {
+       "w": "fracaso",
+       "s": 151.924,
+       "e": 152.444
+      },
+      {
+       "w": "a",
+       "s": 152.444,
+       "e": 152.504
+      },
+      {
+       "w": "eso.",
+       "s": 152.504,
+       "e": 152.684
+      }
+     ]
+    }
+   ],
+   "fin_voz": 153.003,
+   "beats": 52
+  },
+  {
+   "id": "habla",
+   "num": 7,
+   "titulo": "NO SABÍAN HABLAR",
+   "fase_b": 3,
+   "etiqueta_numero": "MITO",
+   "sello": null,
+   "icono": "neandertal",
+   "icono_hoy": "chat",
+   "dato": "Oído de neandertales y humanos actuales: capacidad similar",
+   "fuente": "Conde-Valverde et al. 2021, Nature Ecology & Evolution",
+   "claves": [
+    [
+     "oído",
+     "OÍDO COMO EL NUESTRO"
+    ]
+   ],
+   "t0": 154.0,
+   "t1": 174.0,
+   "compases": 10,
+   "frases": [
+    {
+     "key": "habla_0",
+     "texto": "Mito siete: no sabían hablar.",
+     "t0": 154.302,
+     "t1": 156.241,
+     "words": [
+      {
+       "w": "Mito",
+       "s": 154.302,
+       "e": 154.502
+      },
+      {
+       "w": "siete:",
+       "s": 154.612,
+       "e": 154.722
+      },
+      {
+       "w": "no",
+       "s": 154.962,
+       "e": 155.342
+      },
+      {
+       "w": "sabían",
+       "s": 155.342,
+       "e": 155.682
+      },
+      {
+       "w": "hablar.",
+       "s": 155.682,
+       "e": 155.862
+      }
+     ]
+    },
+    {
+     "key": "habla_1",
+     "texto": "Falso. Al escanear el oído de varios neandertales, los científicos vieron que oían un rango de sonidos muy parecido al nuestro.",
+     "t0": 156.662,
+     "t1": 163.603,
+     "words": [
+      {
+       "w": "Falso.",
+       "s": 156.662,
+       "e": 157.022
+      },
+      {
+       "w": "Al",
+       "s": 157.042,
+       "e": 157.522
+      },
+      {
+       "w": "escanear",
+       "s": 157.522,
+       "e": 158.042
+      },
+      {
+       "w": "el",
+       "s": 158.042,
+       "e": 158.122
+      },
+      {
+       "w": "oído",
+       "s": 158.122,
+       "e": 158.422
+      },
+      {
+       "w": "de",
+       "s": 158.422,
+       "e": 158.522
+      },
+      {
+       "w": "varios",
+       "s": 158.522,
+       "e": 158.782
+      },
+      {
+       "w": "neandertales,",
+       "s": 158.782,
+       "e": 159.562
+      },
+      {
+       "w": "los",
+       "s": 159.622,
+       "e": 159.922
+      },
+      {
+       "w": "científicos",
+       "s": 159.922,
+       "e": 160.642
+      },
+      {
+       "w": "vieron",
+       "s": 160.642,
+       "e": 160.882
+      },
+      {
+       "w": "que",
+       "s": 160.882,
+       "e": 161.082
+      },
+      {
+       "w": "oían",
+       "s": 161.082,
+       "e": 161.322
+      },
+      {
+       "w": "un",
+       "s": 161.322,
+       "e": 161.502
+      },
+      {
+       "w": "rango",
+       "s": 161.502,
+       "e": 161.822
+      },
+      {
+       "w": "de",
+       "s": 161.822,
+       "e": 161.902
+      },
+      {
+       "w": "sonidos",
+       "s": 161.902,
+       "e": 162.302
+      },
+      {
+       "w": "muy",
+       "s": 162.302,
+       "e": 162.502
+      },
+      {
+       "w": "parecido",
+       "s": 162.502,
+       "e": 162.962
+      },
+      {
+       "w": "al",
+       "s": 162.962,
+       "e": 163.042
+      },
+      {
+       "w": "nuestro.",
+       "s": 163.042,
+       "e": 163.222
+      }
+     ]
+    },
+    {
+     "key": "habla_2",
+     "texto": "Según sus autores, tenían capacidad para una comunicación hablada tan eficiente como la nuestra.",
+     "t0": 163.903,
+     "t1": 169.076,
+     "words": [
+      {
+       "w": "Según",
+       "s": 163.903,
+       "e": 164.243
+      },
+      {
+       "w": "sus",
+       "s": 164.243,
+       "e": 164.343
+      },
+      {
+       "w": "autores,",
+       "s": 164.343,
+       "e": 164.783
+      },
+      {
+       "w": "tenían",
+       "s": 164.863,
+       "e": 165.143
+      },
+      {
+       "w": "capacidad",
+       "s": 165.143,
+       "e": 165.523
+      },
+      {
+       "w": "para",
+       "s": 165.523,
+       "e": 165.943
+      },
+      {
+       "w": "una",
+       "s": 165.943,
+       "e": 166.143
+      },
+      {
+       "w": "comunicación",
+       "s": 166.143,
+       "e": 166.823
+      },
+      {
+       "w": "hablada",
+       "s": 166.823,
+       "e": 167.543
+      },
+      {
+       "w": "tan",
+       "s": 167.543,
+       "e": 167.683
+      },
+      {
+       "w": "eficiente",
+       "s": 167.683,
+       "e": 168.083
+      },
+      {
+       "w": "como",
+       "s": 168.083,
+       "e": 168.343
+      },
+      {
+       "w": "la",
+       "s": 168.343,
+       "e": 168.483
+      },
+      {
+       "w": "nuestra.",
+       "s": 168.483,
+       "e": 168.663
+      }
+     ]
+    },
+    {
+     "key": "habla_3",
+     "texto": "Hoy mandas audios de un minuto. Ellos ya tenían el oído para escucharlos.",
+     "t0": 169.377,
+     "t1": 173.598,
+     "words": [
+      {
+       "w": "Hoy",
+       "s": 169.377,
+       "e": 169.577
+      },
+      {
+       "w": "mandas",
+       "s": 169.577,
+       "e": 170.077
+      },
+      {
+       "w": "audios",
+       "s": 170.077,
+       "e": 170.437
+      },
+      {
+       "w": "de",
+       "s": 170.437,
+       "e": 170.537
+      },
+      {
+       "w": "un",
+       "s": 170.537,
+       "e": 170.617
+      },
+      {
+       "w": "minuto.",
+       "s": 170.617,
+       "e": 170.957
+      },
+      {
+       "w": "Ellos",
+       "s": 171.357,
+       "e": 171.757
+      },
+      {
+       "w": "ya",
+       "s": 171.757,
+       "e": 171.837
+      },
+      {
+       "w": "tenían",
+       "s": 171.837,
+       "e": 172.157
+      },
+      {
+       "w": "el",
+       "s": 172.157,
+       "e": 172.337
+      },
+      {
+       "w": "oído",
+       "s": 172.337,
+       "e": 172.597
+      },
+      {
+       "w": "para",
+       "s": 172.597,
+       "e": 172.717
+      },
+      {
+       "w": "escucharlos.",
+       "s": 172.717,
+       "e": 173.237
+      }
+     ]
+    }
+   ],
+   "fin_voz": 173.598,
+   "beats": 40
+  },
+  {
+   "id": "cierre",
+   "cierre": "¿CUÁL CREÍAS?",
+   "t0": 174.0,
+   "t1": 187.5,
+   "compases": null,
+   "frases": [
+    {
+     "key": "cierre_0",
+     "texto": "Así que si alguien te llama neandertal, tómalo como un cumplido.",
+     "t0": 174.524,
+     "t1": 178.001,
+     "words": [
+      {
+       "w": "Así",
+       "s": 174.524,
+       "e": 174.704
+      },
+      {
+       "w": "que",
+       "s": 174.704,
+       "e": 174.904
+      },
+      {
+       "w": "si",
+       "s": 174.944,
+       "e": 175.124
+      },
+      {
+       "w": "alguien",
+       "s": 175.124,
+       "e": 175.364
+      },
+      {
+       "w": "te",
+       "s": 175.364,
+       "e": 175.524
+      },
+      {
+       "w": "llama",
+       "s": 175.524,
+       "e": 175.704
+      },
+      {
+       "w": "neandertal,",
+       "s": 175.704,
+       "e": 176.284
+      },
+      {
+       "w": "tómalo",
+       "s": 176.304,
+       "e": 176.944
+      },
+      {
+       "w": "como",
+       "s": 176.944,
+       "e": 177.064
+      },
+      {
+       "w": "un",
+       "s": 177.064,
+       "e": 177.184
+      },
+      {
+       "w": "cumplido.",
+       "s": 177.184,
+       "e": 177.644
+      }
+     ]
+    },
+    {
+     "key": "cierre_1",
+     "texto": "Tenían cerebro grande, herramientas, joyas, medicinas y compasión.",
+     "t0": 178.301,
+     "t1": 182.469,
+     "words": [
+      {
+       "w": "Tenían",
+       "s": 178.301,
+       "e": 178.641
+      },
+      {
+       "w": "cerebro",
+       "s": 178.641,
+       "e": 179.061
+      },
+      {
+       "w": "grande,",
+       "s": 179.061,
+       "e": 179.281
+      },
+      {
+       "w": "herramientas,",
+       "s": 179.461,
+       "e": 180.481
+      },
+      {
+       "w": "joyas,",
+       "s": 180.481,
+       "e": 180.941
+      },
+      {
+       "w": "medicinas",
+       "s": 180.941,
+       "e": 181.501
+      },
+      {
+       "w": "y",
+       "s": 181.501,
+       "e": 181.601
+      },
+      {
+       "w": "compasión.",
+       "s": 181.601,
+       "e": 182.121
+      }
+     ]
+    },
+    {
+     "key": "cierre_2",
+     "texto": "¿Cuál de estos mitos creías tú?",
+     "t0": 182.769,
+     "t1": 184.729,
+     "words": [
+      {
+       "w": "¿Cuál",
+       "s": 182.769,
+       "e": 183.009
+      },
+      {
+       "w": "de",
+       "s": 183.009,
+       "e": 183.109
+      },
+      {
+       "w": "estos",
+       "s": 183.109,
+       "e": 183.289
+      },
+      {
+       "w": "mitos",
+       "s": 183.289,
+       "e": 183.769
+      },
+      {
+       "w": "creías",
+       "s": 183.769,
+       "e": 184.129
+      },
+      {
+       "w": "tú?",
+       "s": 184.129,
+       "e": 184.349
+      }
+     ]
+    }
+   ],
+   "fin_voz": 184.729,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 12.0,
+   "t0": 11.48,
+   "t1": 12.28,
+   "tipo": "persianas",
+   "de": "intro",
+   "a": "torpes"
+  },
+  {
+   "t": 36.0,
+   "t0": 35.285,
+   "t1": 36.385,
+   "tipo": "paneo",
+   "de": "torpes",
+   "a": "joyas"
+  },
+  {
+   "t": 60.0,
+   "t0": 59.4475,
+   "t1": 60.2975,
+   "tipo": "ola",
+   "de": "joyas",
+   "a": "cuidado"
+  },
+  {
+   "t": 84.0,
+   "t0": 83.285,
+   "t1": 84.385,
+   "tipo": "bajada",
+   "de": "cuidado",
+   "a": "dieta"
+  },
+  {
+   "t": 106.0,
+   "t0": 105.35,
+   "t1": 106.35,
+   "tipo": "iris",
+   "de": "dieta",
+   "a": "genes"
+  },
+  {
+   "t": 128.0,
+   "t0": 127.285,
+   "t1": 128.385,
+   "tipo": "zoom_suave",
+   "de": "genes",
+   "a": "extincion"
+  },
+  {
+   "t": 154.0,
+   "t0": 153.415,
+   "t1": 154.315,
+   "tipo": "burbujas",
+   "de": "extincion",
+   "a": "habla"
+  },
+  {
+   "t": 174.0,
+   "t0": 173.448,
+   "t1": 174.548,
+   "tipo": "paneo",
+   "de": "habla",
+   "a": "cierre"
+  }
+ ]
+}

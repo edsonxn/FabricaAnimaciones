@@ -1,0 +1,1 @@
+﻿{"permissions":{"allow":["Bash(python fab.py *)","PowerShell(python fab.py *)","PowerShell(Start-Process -FilePath python *)","PowerShell(Get-CimInstance Win32_Process*)","PowerShell(Get-Process*)","PowerShell(taskkill /PID * /T /F)","PowerShell(Stop-Process -Id *)"]}}

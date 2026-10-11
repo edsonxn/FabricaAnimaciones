@@ -32,11 +32,57 @@ def num_es(n: int) -> str:
         m, r = divmod(n, 1000)
         base = "mil" if m == 1 else num_es(m) + " mil"
         return base + ("" if r == 0 else " " + num_es(r))
+    if n < 1_000_000_000_000:
+        m, r = divmod(n, 1_000_000)
+        base = "un millon" if m == 1 else num_es(m) + " millones"
+        return base + ("" if r == 0 else " " + num_es(r))
     return str(n)
 
 
+ORDINALES = {1: "primero", 2: "segundo", 3: "tercero", 4: "cuarto", 5: "quinto", 6: "sexto", 7: "septimo", 8: "octavo",
+             9: "noveno", 10: "decimo"}
+
+
+def _valor_romano(s: str) -> int:
+    v = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
+    tot = 0
+    for a, b in zip(s, s[1:] + " "):
+        tot += -v[a] if b in v and v[b] > v[a] else v[a]
+    return tot
+
+
+def _romanos(t: str) -> str:
+    """Whisper escribe 'siglo XX' o 'Rodolfo II': se convierten a palabras (cardinal tras 'siglo', ordinal en los demás casos)."""
+    def rep(m):
+        ant = t[:m.start()].split()[-1:] or [""]
+        n = _valor_romano(m.group(0))
+        if ant[0].lower() == "siglo":
+            return num_es(n)
+        if len(m.group(0)) < 2:
+            return m.group(0)
+        return ORDINALES.get(n, num_es(n))
+    return re.sub(r"\b(?=[IVXLC])(?:X{0,3}(?:IX|IV|V?I{0,3}))(?![a-zA-Z])", lambda m: rep(m) if m.group(0) else "", t)
+
+
+_ALIAS = None
+
+
+def _alias():
+    """Alias de nombres propios: guion.py -> ALIAS_QA = {"variante que oye Whisper": "como está en el guion"} (en minúsculas y sin tildes)."""
+    global _ALIAS
+    if _ALIAS is None:
+        try:
+            import guion
+            _ALIAS = {str(k).lower(): str(v).lower() for k, v in getattr(guion, "ALIAS_QA", {}).items()}
+        except Exception:
+            _ALIAS = {}
+    return _ALIAS
+
+
 def normaliza(t: str) -> str:
-    t = t.strip().lower()
+    t = _romanos(t.strip()).lower()
+    t = re.sub(r"\ba\.\s?c\b\.?", " antes de cristo ", t)           # "221 a.C." = "doscientos veintiuno antes de Cristo"
+    t = re.sub(r"\bd\.\s?c\b\.?", " despues de cristo ", t)
     # Whisper abrevia "Número seis: ..." como "6. ..."
     t = re.sub(r"^(\d+)\.(\s|$)", r"numero \1 ", t)
     t = t.replace("%", " por ciento")
@@ -44,14 +90,21 @@ def normaliza(t: str) -> str:
     t = re.sub(r"(\d)\s*km\b", r"\1 kilómetros", t)
     t = re.sub(r"(\d)\s*°\s*c\b", r"\1 grados", t)
     # 40.000 / 40,000 -> 40000
-    t = re.sub(r"(\d)[\.,](\d{3})\b", r"\1\2", t)
+    while re.search(r"(\d)[\.,](\d{3})\b", t):                            # 1.100.000 -> 1100000 (varios grupos)
+        t = re.sub(r"(\d)[\.,](\d{3})\b", r"\1\2", t)
     t = re.sub(r"\d+", lambda m: " " + num_es(int(m.group())) + " ", t)
     t = unicodedata.normalize("NFD", t)
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
     t = re.sub(r"[^a-z0-9ñ ]+", " ", t)
+    # los números escritos con cifras salen en masculino ("3700" -> setecientos): igualar el género
+    t = re.sub(r"cientas\b", "cientos", t)
     # equivalencias fonéticas que Whisper escribe distinto
     t = t.replace("a d n", "adn").replace("self ie", "selfie").replace("wi fi", "wifi")
-    return " ".join(t.split())
+    t = t.replace("knockout", "nocaut").replace("knock out", "nocaut")      # el TTS dice "nocaut" a la inglesa
+    t = " ".join(t.split())
+    for var, canon in _alias().items():                                      # alias por video (nombres propios que Whisper escribe a su manera)
+        t = re.sub(r"\b" + re.escape(var) + r"\b", canon, t)
+    return t
 
 
 def cer(ref: str, hyp: str) -> float:
@@ -110,3 +163,21 @@ def artefactos(wav: np.ndarray, sr: int) -> dict:
         "tail_ratio": rms(tail) / rms(body) if len(body) else 0.0,
         "speech_dur": float((iv[-1][1] - iv[0][0]) / sr) if len(iv) else 0.0,
     }
+
+
+def silenciar_arranque(wav: np.ndarray, sr: int, max_bloque=0.35, min_hueco=0.20, min_resto=1.0):
+    """Chatterbox a veces suelta un sonido ininteligible (0,1-0,4 s, «como un error») ANTES de la primera palabra, separado de ella por
+    un silencio. Whisper lo ignora (CER 0), pero se oye (historia_espana, gancho_0: «Fe… Fenicios»). Si el primer bloque de voz es corto,
+    el hueco siguiente es de >= min_hueco y después queda voz de sobra, lo silencia. Conserva la duración (los tiempos no cambian).
+    Devuelve (wav, segundos silenciados); 0.0 si no hay nada que quitar. Úsalo sobre la toma ya recortada, antes de normalizar."""
+    import librosa
+    iv = librosa.effects.split(np.asarray(wav, dtype=np.float32), top_db=40, frame_length=1024, hop_length=256)
+    if len(iv) < 2:
+        return wav, 0.0
+    bloque, hueco, resto = (iv[0][1] - iv[0][0]) / sr, (iv[1][0] - iv[0][1]) / sr, (iv[-1][1] - iv[1][0]) / sr
+    if bloque > max_bloque or hueco < min_hueco or resto < min_resto:
+        return wav, 0.0
+    fin = iv[1][0] - int(0.05 * sr)                  # 50 ms de silencio antes de la palabra real
+    out = np.array(wav, copy=True)
+    out[:fin] = 0.0
+    return out, fin / sr

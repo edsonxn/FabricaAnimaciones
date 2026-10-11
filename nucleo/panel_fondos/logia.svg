@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="xMaxYMid slice">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#050505"/></linearGradient>
+    <linearGradient id="cono" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <pattern id="lluvia" width="26" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(12)"><rect x="3" y="0" width="1.2" height="22" fill="#cfcfcf" opacity=".28"/><rect x="16" y="30" width="1" height="16" fill="#cfcfcf" opacity=".18"/></pattern>
+  </defs>
+  <rect width="1200" height="300" fill="url(#cielo)"/>
+  <g fill="#111"><rect x="700" y="60" width="90" height="240"/><rect x="800" y="20" width="70" height="280"/><rect x="1090" y="80" width="110" height="220"/><path d="M880 300V90l40-30 40 30v210z"/></g>
+  <g fill="#e8e8e8" opacity=".55"><rect x="712" y="80" width="8" height="12"/><rect x="740" y="120" width="8" height="12"/><rect x="815" y="60" width="7" height="11"/><rect x="845" y="140" width="7" height="11"/><rect x="1110" y="110" width="9" height="13"/><rect x="1150" y="170" width="9" height="13"/></g>
+  <path d="M985 70 L925 300 H1065 Z" fill="url(#cono)"/>
+  <rect x="992" y="70" width="6" height="230" fill="#0a0a0a"/><rect x="970" y="62" width="40" height="14" fill="#f2f2f2"/>
+  <path d="M948 300v-90c0-14 4-24 14-28l-4-10c-10 0-16-4-16-8 0-6 14-8 24-8 2-8 8-12 14-12s12 4 14 12c10 0 24 2 24 8 0 4-6 8-16 8l-4 10c10 4 14 14 14 28v90z" fill="#000"/>
+  <rect width="1200" height="300" fill="url(#lluvia)"/>
+</svg>

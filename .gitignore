@@ -36,3 +36,46 @@ __pycache__/
 *.pyc
 Thumbs.db
 desktop.ini
+
+# Avisos por voz del panel (caché de audio y configuración local)
+panel_avisos/
+panel_config.json
+respaldos_pruebas/
+voz_gpu.lock
+
+# Estudio (versión comercial): nada de datos del usuario en git
+estudio/ajustes.json
+estudio/voces/
+estudio/proyectos/
+estudio/iconos/
+estudio/estilos.json
+estudio/servidor_log.txt
+estudio/portadas/
+estudio/vistas/
+
+# medios de cada video (imágenes de Flow/Commons, clips, cuadros, datos pesados, sfx, muestras de voz):
+# viven en esta PC (y en E:), no son motor; las fotos de Commons se vuelven a bajar con imagenes_web.py (creditos.json sí se versiona)
+videos/*/clips/
+videos/*/medios*/
+videos/*/imagenes/
+videos/*/retratos/
+videos/*/fuentes/
+videos/*/mapas/
+videos/*/datos/
+videos/*/boceto_v1/
+videos/*/v2_lateral/
+videos/*/sfx/
+videos/*/muestras_voz/
+videos/**/*.jpg
+videos/**/*.jpeg
+videos/**/*.png
+videos/**/*.webp
+videos/**/*.npz
+videos/**/*.npy
+videos/**/*.nc
+videos/*/_*.log
+*.bak_*
+
+# logs
+panel_log*.txt
+videos/_*.txt

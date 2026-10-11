@@ -9,10 +9,6 @@ import glob
 import json
 import os
 
-import torch
-import torchaudio as ta
-from chatterbox.mtl_tts import ChatterboxMultilingualTTS
-
 import config
 
 REF = config.VOZ["referencia"]
@@ -32,7 +28,7 @@ args = ap.parse_args()
 os.makedirs(OUT, exist_ok=True)
 
 # si el texto de una frase cambió en guion.py, sus tomas viejas ya no sirven: borrarlas
-actuales = {f"{e}_{i}": t for e, i, t in todas_las_frases()}
+actuales = {f"{e}_{i}": config.FRASES_TTS.get(f"{e}_{i}", t) for e, i, t in todas_las_frases()}   # con corchetes: cambiar una etiqueta también regenera
 prev = json.load(open("voz/textos.json", encoding="utf-8")) if os.path.exists("voz/textos.json") else {}
 cambiadas = [k for k, t in actuales.items() if k in prev and prev[k] != t]
 if cambiadas:
@@ -44,6 +40,15 @@ if cambiadas:
         ev = {n: m for n, m in ev.items() if m.get("key") != k}
     json.dump(ev, open("voz/eval.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump(actuales, open("voz/textos.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+if config.VOZ.get("motor") == "elevenlabs":
+    import tts_eleven
+    tts_eleven.generar(todas_las_frases(), args.seeds, args.solo, OUT)
+    raise SystemExit
+
+import torch
+import torchaudio as ta
+from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+
 model = ChatterboxMultilingualTTS.from_pretrained(device="cuda", t3_model="v3")
 model.prepare_conditionals(REF, exaggeration=CFG["exaggeration"])
 

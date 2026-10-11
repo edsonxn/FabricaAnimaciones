@@ -32,10 +32,11 @@ def golpes_bombo():
         pat = PATRONES[ESTILO[e["id"]]["bombo"]]
         t0, t1 = e["t0"], e["t1"]
         if e["id"] == config.PRIMERA:
-            t0 = e["frases"][0]["t0"] - 0.1   # la primera escena arranca sin bombo
-            t0 = e["t0"] + math.ceil((t0 - e["t0"]) / (4 * BEAT)) * 4 * BEAT
+            if e["frases"] and not TL.get("anclada"):
+                t0 = e["frases"][0]["t0"] - 0.1   # la primera escena arranca sin bombo
+                t0 = e["t0"] + math.ceil((t0 - e["t0"]) / (4 * BEAT)) * 4 * BEAT
         if e["id"] == config.ULTIMA:
-            t1 = e["frases"][-1]["t1"] + 0.2
+            t1 = e["fin_musica"] + 0.2 if "fin_musica" in e else e["frases"][-1]["t1"] + 0.2
         n = int(round((t1 - t0) / PASO))
         for k in range(n):
             if (k % 16) in pat:

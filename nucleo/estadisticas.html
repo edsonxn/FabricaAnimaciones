@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fábrica · Canales</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f6f5c'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='17' font-weight='800' fill='white' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<style>
+/* Mismo lenguaje visual que el panel nuevo de CNB (templates/dashboard.html): fichas, píldoras y tarjetas. */
+:root{
+  --bg:#f4f3ef;--panel:#ffffff;--sunk:#eeece6;--hover:#f7f6f2;--ink:#1b1a18;--muted:#68635c;--faint:#9b968e;--line:#e3e0d8;
+  --brand:#1f6f5c;--brand-ink:#ffffff;--brand-soft:rgba(31,111,92,.10);
+  --red:#c81e1e;--green:#13773b;--amber:#a95204;--amber-soft:rgba(217,119,6,.12);--blue-soft:rgba(37,99,235,.09);--blue:#1d4ed8;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.04);--r:12px;
+  --grid:#ebe9e2;--axis:#c9c5bb;
+  --s0:#2a78d6;--s1:#eb6834;--s2:#1baf7a;--s3:#eda100;--s4:#e87ba4;--s5:#008300;--s6:#4a3aa7;--s7:#e34948;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121211;--panel:#1b1a18;--sunk:#232220;--hover:#201f1d;--ink:#f0eee9;--muted:#a59f96;--faint:#7a756d;--line:#2e2c29;
+  --brand:#52b89c;--brand-ink:#0b1a16;--brand-soft:rgba(82,184,156,.14);
+  --red:#f87171;--green:#4ade80;--amber:#fbbf24;--amber-soft:rgba(251,191,36,.12);--blue-soft:rgba(122,162,255,.13);--blue:#7aa2ff;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  --grid:#272623;--axis:#3a3835;
+  --s0:#3987e5;--s1:#d95926;--s2:#199e70;--s3:#c98500;--s4:#d55181;--s5:#008300;--s6:#9085e9;--s7:#e66767;
+}}
+:root[data-theme="dark"]{
+  --bg:#121211;--panel:#1b1a18;--sunk:#232220;--hover:#201f1d;--ink:#f0eee9;--muted:#a59f96;--faint:#7a756d;--line:#2e2c29;
+  --brand:#52b89c;--brand-ink:#0b1a16;--brand-soft:rgba(82,184,156,.14);
+  --red:#f87171;--green:#4ade80;--amber:#fbbf24;--amber-soft:rgba(251,191,36,.12);--blue-soft:rgba(122,162,255,.13);--blue:#7aa2ff;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25);
+  --grid:#272623;--axis:#3a3835;
+  --s0:#3987e5;--s1:#d95926;--s2:#199e70;--s3:#c98500;--s4:#d55181;--s5:#008300;--s6:#9085e9;--s7:#e66767;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+[hidden]{display:none!important}
+.num{font-variant-numeric:tabular-nums}
+
+.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;padding:.75rem 1.25rem;border-bottom:1px solid var(--line);background:var(--panel)}
+.brand{display:flex;align-items:center;gap:.65rem;min-width:0}
+.brand-mark{width:32px;height:32px;border-radius:9px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-weight:800;flex:none}
+.brand h1{margin:0;font-size:1rem;line-height:1.2}
+.brand p{margin:0;font-size:.78rem;color:var(--muted)}
+.seg{display:flex;gap:.2rem;padding:.2rem;background:var(--sunk);border-radius:10px}
+.seg button{border:0;background:none;padding:.32rem .85rem;border-radius:8px;font-size:.84rem;font-weight:650;color:var(--muted);cursor:pointer;white-space:nowrap}
+.seg button:hover{color:var(--ink)}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.top .seg{margin-left:auto}
+
+.wrap{max-width:1240px;margin:0 auto;padding:1rem 1.25rem 3rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:.45rem;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:.3rem .8rem;font-size:.8rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.chip:hover{border-color:var(--faint)}
+.chip.off{background:none;color:var(--faint)}
+.chip.off .dot{background:var(--faint)!important;opacity:.5}
+.chip.all{border-style:dashed;color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;flex:none}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.6rem;margin:1rem 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:.7rem .9rem}
+.kpi-l{font-size:.76rem;color:var(--muted);font-weight:600}
+.kpi-n{font-size:1.55rem;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.kpi-s{font-size:.74rem;color:var(--faint);min-height:1.2em}
+.up{color:var(--green);font-weight:650}.down{color:var(--red);font-weight:650}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem;margin-bottom:.9rem;box-shadow:var(--shadow)}
+.card-h{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.7rem}
+.card-h h2{margin:0;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-right:auto}
+.card-h input[type=search],.card-h select{font-size:.83rem;padding:.38rem .65rem;border:1px solid var(--line);border-radius:9px;background:var(--bg);min-width:0}
+.card-h input[type=search]{flex:1 1 200px;max-width:320px}
+.note{font-size:.74rem;color:var(--faint);margin:.5rem 0 0}
+
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font:11px system-ui,sans-serif;fill:var(--muted);font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin-top:.5rem;font-size:.78rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:.4rem}
+.tip{position:absolute;pointer-events:none;z-index:5;min-width:170px;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:.5rem .65rem;font-size:.78rem}
+.tip b{display:block;margin-bottom:.25rem}
+.tip-r{display:flex;align-items:center;gap:.4rem}
+.tip-r span:nth-child(2){flex:1;color:var(--muted);white-space:nowrap}
+.tip-t{border-top:1px solid var(--line);margin-top:.25rem;padding-top:.25rem;font-weight:650}
+
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{font-size:.72rem;font-weight:700;color:var(--muted);text-align:right;padding:.4rem .6rem;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:.5rem .6rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;padding-left:.2rem}
+tr:last-child td{border-bottom:0}
+tbody tr.click{cursor:pointer}
+tbody tr:hover{background:var(--hover)}
+.cname{display:inline-flex;align-items:center;gap:.5rem;font-weight:650}
+.bar{display:inline-block;vertical-align:middle;width:90px;height:6px;border-radius:3px;background:var(--sunk);margin-right:.55rem;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:3px}
+.vid{display:flex;align-items:center;gap:.7rem;min-width:260px;max-width:520px;text-decoration:none}
+.vid img{width:80px;height:45px;object-fit:cover;border-radius:6px;background:var(--sunk);flex:none}
+.vid-t{display:block;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vid:hover .vid-t{text-decoration:underline}
+.vid-c{display:flex;align-items:center;gap:.35rem;font-size:.76rem;color:var(--muted)}
+.vid-c .dot{width:7px;height:7px}
+.vid>span{min-width:0}
+.tag{display:inline-block;padding:.08rem .5rem;border-radius:999px;background:var(--sunk);font-size:.72rem;font-weight:600;color:var(--muted)}
+.tag.prog{background:var(--blue-soft);color:var(--blue)}
+.tag.priv{background:var(--amber-soft);color:var(--amber)}
+.more{display:block;margin:.7rem auto 0;border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:.4rem .9rem;font-size:.83rem;font-weight:600;cursor:pointer}
+.more:hover{border-color:var(--faint)}
+.empty{padding:1.5rem;text-align:center;color:var(--muted)}
+
+/* Actualizar datos (solo cuando lo sirve el panel de producción) */
+.act{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:.36rem .85rem;font-size:.84rem;font-weight:650;cursor:pointer;white-space:nowrap}
+.act:hover{border-color:var(--brand);color:var(--brand)}
+.act:disabled{opacity:.6;cursor:progress}
+.act-msg{font-size:.78rem;color:var(--muted);max-width:46ch}
+.act-msg.err{color:var(--red)}
+.act-msg code{background:var(--sunk);border-radius:5px;padding:.05rem .3rem}
+
+/* Calendario: quién se queda antes sin video */
+.n-red{--n:var(--red)}.n-amber{--n:var(--amber)}.n-green{--n:var(--green)}
+.tag.niv{background:color-mix(in srgb,var(--n) 14%,transparent);color:var(--n)}
+.cal-lead{margin:0 0 .8rem;font-size:.95rem}
+.cal-lead b{font-weight:700}
+.cal-eje,.cal-r{display:grid;grid-template-columns:minmax(150px,230px) minmax(160px,1fr) 128px 104px;gap:.4rem .9rem;align-items:center}
+.cal-eje{font-size:.7rem;color:var(--faint);font-variant-numeric:tabular-nums;height:1.3rem}
+.cal-eje>div{position:relative;height:100%}
+.cal-eje span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap}
+.cal-eje span:first-child{transform:none;font-weight:700;color:var(--muted)}
+.cal-r{padding:.5rem .3rem;border-top:1px solid var(--line);border-radius:8px}
+.cal-r:hover{background:var(--hover)}
+.cal-n{display:flex;align-items:center;gap:.5rem;border:0;background:none;padding:0;font-weight:650;cursor:pointer;text-align:left;min-width:0}
+.cal-n .nom{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cal-n .fl{color:var(--faint);font-size:.7rem;transition:transform .15s;flex:none}
+.cal-r.open .cal-n .fl{transform:rotate(90deg)}
+.cal-t{position:relative;height:22px;border-radius:6px;background:var(--sunk)}
+.cal-t.late{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--red) 22%,transparent) 0 6px,transparent 6px 12px),var(--sunk)}
+.cal-cov{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:color-mix(in srgb,var(--n) 26%,transparent);border-right:2px solid var(--n)}
+.cal-cov.mas{border-right:0;border-radius:6px 0 0 6px;-webkit-mask:linear-gradient(90deg,#000 88%,transparent);mask:linear-gradient(90deg,#000 88%,transparent)}
+.cal-p{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;border:2px solid var(--panel);box-shadow:0 0 0 1px rgba(0,0,0,.12);transition:transform .12s;z-index:1}
+.cal-p:hover{transform:scale(1.45);z-index:2}
+.cal-p.sh{border-radius:4px}
+.cal-f{line-height:1.25}
+.cal-f b{display:block;font-weight:700;white-space:nowrap}
+.cal-f span{font-size:.76rem;color:var(--n);font-weight:650}
+.step{display:inline-flex;align-items:center;gap:.15rem;font-size:.8rem;color:var(--muted);white-space:nowrap}
+.step button{width:22px;height:22px;border:1px solid var(--line);background:var(--panel);border-radius:6px;cursor:pointer;line-height:1;padding:0;font-weight:700}
+.step button:hover{border-color:var(--brand);color:var(--brand)}
+.step b{min-width:3.1em;text-align:center;color:var(--ink);font-weight:650}
+.cal-d{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.4rem 1.6rem;padding:.2rem .4rem 1rem 1.3rem;font-size:.84rem}
+.cal-d h3{margin:.6rem 0 .3rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.cal-d ul{margin:0;padding:0;list-style:none}
+.cal-d li{display:flex;gap:.5rem;align-items:baseline;padding:.16rem 0;min-width:0}
+.cal-d li .cu{color:var(--muted);white-space:nowrap;flex:none;font-variant-numeric:tabular-nums}
+.cal-d li a,.cal-d li .ti{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}
+.cal-d li a:hover{text-decoration:underline}
+.cal-d .nada{color:var(--faint)}
+.cal-d .pb{flex:none;width:60px;height:6px;border-radius:3px;background:var(--sunk);overflow:hidden;align-self:center}
+.cal-d .pb i{display:block;height:100%;background:var(--brand)}
+@media(max-width:760px){.cal-eje{display:none}.cal-r{grid-template-columns:1fr auto}.cal-t{grid-column:1/-1;order:3}.cal-r>.step,.cal-r>.cal-c{display:none}}
+
+/* Dentro del panel de producción (pestaña «Canales»): sin cabecera pegada y con la paleta del panel */
+html.emb{--bg:#f3f4fb;--panel:#ffffff;--sunk:#eceef9;--hover:#f6f7fd;--ink:#1c1f3d;--muted:#6b708f;--faint:#9a9fbd;--line:#dcdff0;
+  --brand:#2f6bff;--brand-soft:rgba(47,107,255,.10);--grid:#e6e8f5;--axis:#c5c9e2}
+@media(prefers-color-scheme:dark){html.emb:not([data-theme="light"]){--bg:#0e1024;--panel:#171a38;--sunk:#1f2347;--hover:#1c2042;--ink:#eceefc;--muted:#9298c2;--faint:#6f75a3;--line:#2a2f5c;
+  --brand:#6aa7ff;--brand-ink:#0e1024;--brand-soft:rgba(106,167,255,.14);--grid:#232750;--axis:#3a4078}}
+html.emb[data-theme="dark"]{--bg:#0e1024;--panel:#171a38;--sunk:#1f2347;--hover:#1c2042;--ink:#eceefc;--muted:#9298c2;--faint:#6f75a3;--line:#2a2f5c;
+  --brand:#6aa7ff;--brand-ink:#0e1024;--brand-soft:rgba(106,167,255,.14);--grid:#232750;--axis:#3a4078}
+html.emb{color-scheme:light dark}                     /* igual que el panel: si difiere, el marco se pinta con fondo blanco */
+.emb body{background:transparent;overflow:hidden}
+.emb .top{position:static;border:1px solid var(--line);border-radius:var(--r);margin-bottom:.9rem;box-shadow:var(--shadow)}
+.emb .brand-mark,.emb .brand h1{display:none}
+.emb .wrap{max-width:none;padding:0 0 1rem}
+</style>
+<script>
+// Dentro del panel de producción: mismo tema (claro/oscuro) que el panel
+const EMB = window.parent !== window;
+function tema() { try { const t = localStorage.getItem('t'); if (t) document.documentElement.dataset.theme = t === 'oscuro' ? 'dark' : 'light'; } catch (e) {} }
+if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListener('storage', tema); }
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">
+    <div class="brand-mark">F</div>
+    <div><h1>Fábrica · Canales</h1><p id="sub"></p></div>
+  </div>
+  <button class="act" id="act" title="Pide a YouTube los datos de todos los canales (solo lectura)">↻ Actualizar datos</button>
+  <span class="act-msg" id="act-msg" role="status"></span>
+  <nav class="seg" id="periodo" aria-label="Periodo"></nav>
+</header>
+
+<div class="wrap">
+  <nav class="chips" id="chips" aria-label="Canales"></nav>
+
+  <section class="card" id="cal-card" style="margin-top:1rem">
+    <div class="card-h">
+      <h2>¿Qué canal se queda sin video?</h2>
+      <nav class="seg" id="cal-nivel" aria-label="Urgencia"></nav>
+      <select id="cal-orden" aria-label="Ordenar">
+        <option value="dias">Se queda sin video primero</option>
+        <option value="prog">Menos videos programados</option>
+        <option value="nombre">Por nombre</option>
+      </select>
+      <nav class="seg" id="cal-h" aria-label="Días a la vista"></nav>
+    </div>
+    <p class="cal-lead" id="cal-lead"></p>
+    <div id="cal"></div>
+    <p class="note">Cada punto es un video programado (pasa el ratón; clic lo abre en Studio; cuadrado = Short). La barra llega hasta el primer hueco del ciclo que ya no tiene video: último programado —o último publicado— más el ciclo del canal. Urgente = faltan 3 días o menos; pronto = 7 o menos. Clic en un canal para ver su detalle.</p>
+  </section>
+
+  <section class="kpis" id="kpis" aria-label="Totales del periodo"></section>
+
+  <section class="card">
+    <div class="card-h">
+      <h2 id="chart-title">Vistas por día</h2>
+      <select id="metrica" aria-label="Qué medir">
+        <option value="1">Vistas</option>
+        <option value="2">Horas de reproducción</option>
+        <option value="3">Suscriptores ganados</option>
+      </select>
+    </div>
+    <div class="chart" id="chart"></div>
+    <div class="legend" id="legend"></div>
+    <p class="note">YouTube Analytics llega con 2–3 días de retraso: los últimos días de la gráfica pueden estar incompletos.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><h2>Canales</h2></div>
+    <div class="scroll"><table id="t-canales"></table></div>
+    <p class="note">Clic en un canal para verlo solo; «Todos» los regresa. La comparación es contra el periodo anterior del mismo tamaño.</p>
+  </section>
+
+  <section class="card">
+    <div class="card-h">
+      <h2 id="vid-title">Videos</h2>
+      <input type="search" id="q" placeholder="Buscar título…" aria-label="Buscar título">
+      <select id="tipo" aria-label="Tipo"><option value="">Largos y Shorts</option><option value="largo">Solo largos</option><option value="short">Solo Shorts</option></select>
+      <select id="estado" aria-label="Estado"><option value="">Cualquier estado</option><option value="public">Públicos</option><option value="programado">Programados</option><option value="otros">Privados / no listados</option></select>
+      <select id="orden" aria-label="Ordenar"><option value="periodo">Más vistas en el periodo</option><option value="total">Más vistas totales</option><option value="pct">Mayor % visto</option><option value="fecha">Más recientes</option></select>
+    </div>
+    <div class="scroll"><table id="t-videos"></table></div>
+    <button class="more" id="more" hidden>Ver más</button>
+  </section>
+</div>
+
+<script>
+const DATA = __DATA__;
+const C = DATA.canales;
+const S = {periodo: 28, on: new Set(C.map(c => c.alias)), metrica: 1, limite: 25};
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const n = x => Math.round(x).toLocaleString('es-MX');
+const n1 = x => x.toLocaleString('es-MX', {maximumFractionDigits: x < 100 ? 1 : 0});
+const color = c => `var(--s${c.color})`;
+const MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const fdia = iso => { const [, m, d] = iso.split('-'); return `${+d} ${MES[m - 1]}`; };
+const addDias = (iso, k) => { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + k); return d.toISOString().slice(0, 10); };
+const dur = s => s >= 3600 ? `${Math.floor(s / 3600)}:${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}` : `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+
+// Serie diaria por canal: {fecha: [_, vistas, minutos, subsGanados, subsPerdidos, likes, coment, compart]}
+C.forEach(c => { c.mapa = Object.fromEntries(c.dias.map(d => [d[0], d])); });
+const FIN = C.reduce((m, c) => c.dias.length && c.dias[c.dias.length - 1][0] > m ? c.dias[c.dias.length - 1][0] : m, '2000-01-01');
+const rango = (fin, dias) => Array.from({length: dias}, (_, i) => addDias(fin, i - dias + 1));
+const suma = (c, fechas, k) => fechas.reduce((t, f) => t + (c.mapa[f] ? c.mapa[f][k] : 0), 0);
+const activos = () => C.filter(c => S.on.has(c.alias));
+
+function delta(act, ant) {
+  if (!ant) return '<span>sin periodo anterior</span>';
+  const p = (act - ant) / ant * 100;
+  if (Math.abs(p) < 0.5) return '<span>= igual que antes</span>';
+  return `<span class="${p > 0 ? 'up' : 'down'}">${p > 0 ? '▲ +' : '▼ −'}${p > 999 ? '999+' : n(Math.abs(p))}%</span> vs. anterior`;
+}
+
+function pintaCabecera() {
+  const act = C.map(c => c.actualizado).sort()[0] || DATA.generado;
+  $('sub').textContent = `${C.length} canales · datos del ${fdia(act.slice(0, 10))} ${act.slice(11, 16)} · Analytics hasta el ${fdia(FIN)}`;
+  $('periodo').innerHTML = DATA.periodos.map(p => `<button data-p="${p}" class="${p === S.periodo ? 'on' : ''}">${p} días</button>`).join('');
+  $('chips').innerHTML = `<button class="chip all" data-a="*">Todos</button>` + C.map(c =>
+    `<button class="chip ${S.on.has(c.alias) ? '' : 'off'}" data-a="${esc(c.alias)}" aria-pressed="${S.on.has(c.alias)}"><span class="dot" style="background:${color(c)}"></span>${esc(c.nombre)}</button>`).join('');
+}
+
+function pintaKpis() {
+  const cs = activos(), hoy = rango(FIN, S.periodo), ant = rango(addDias(FIN, -S.periodo), S.periodo);
+  const t = k => cs.reduce((x, c) => x + suma(c, hoy, k), 0), a = k => cs.reduce((x, c) => x + suma(c, ant, k), 0);
+  const ini = hoy[0], pub = cs.reduce((x, c) => x + c.videos.filter(v => v.estado === 'public' && v.fecha && v.fecha.slice(0, 10) >= ini).length, 0);
+  const prog = cs.reduce((x, c) => x + c.videos.filter(v => v.estado === 'programado').length, 0);
+  const neto = t(3) - t(4), subs = cs.reduce((x, c) => x + c.suscriptores, 0);
+  const tiles = [
+    ['Vistas', n(t(1)), delta(t(1), a(1))],
+    ['Horas de reproducción', n1(t(2) / 60), delta(t(2), a(2))],
+    ['Suscriptores', n(subs), `<span class="${neto > 0 ? 'up' : neto < 0 ? 'down' : ''}">${neto > 0 ? '▲ +' : neto < 0 ? '▼ −' : ''}${n(Math.abs(neto))}</span> netos en el periodo`],
+    ['Me gusta', n(t(5)), delta(t(5), a(5))],
+    ['Videos publicados', n(pub), prog ? `${n(prog)} programado${prog > 1 ? 's' : ''} por salir` : 'ninguno programado'],
+  ];
+  $('kpis').innerHTML = tiles.map(x => `<div class="kpi"><div class="kpi-l">${x[0]}</div><div class="kpi-n">${x[1]}</div><div class="kpi-s">${x[2]}</div></div>`).join('');
+}
+
+function escalaBonita(max) {
+  if (max <= 0) return [1, 1];
+  const bruto = max / 4, pot = Math.pow(10, Math.floor(Math.log10(bruto))), paso = [1, 2, 2.5, 5, 10].map(m => m * pot).find(p => p >= bruto);
+  return [Math.ceil(max / paso) * paso, paso];
+}
+
+function pintaGrafica() {
+  const cs = activos(), fechas = rango(FIN, S.periodo), k = S.metrica, div = k === 2 ? 60 : 1;
+  const nombre = {1: 'Vistas', 2: 'Horas de reproducción', 3: 'Suscriptores ganados'}[k];
+  $('chart-title').textContent = `${nombre} por día`;
+  const filas = fechas.map(f => cs.map(c => (c.mapa[f] ? c.mapa[f][k] : 0) / div));
+  const [tope, paso] = escalaBonita(Math.max(...filas.map(r => r.reduce((a, b) => a + b, 0))));
+  const W = 1180, H = 300, L = 46, R = 8, T = 10, B = 24, pw = W - L - R, ph = H - T - B, bw = pw / fechas.length, gap = Math.min(4, bw * 0.22);
+  let s = '';
+  for (let v = 0; v <= tope + 1e-9; v += paso) {
+    const y = T + ph - v / tope * ph;
+    s += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="var(--${v ? 'grid' : 'axis'})"/><text x="${L - 8}" y="${y + 4}" text-anchor="end">${n1(v)}</text>`;
+  }
+  const cada = Math.ceil(fechas.length / 9);
+  fechas.forEach((f, i) => {
+    if ((fechas.length - 1 - i) % cada === 0) s += `<text x="${L + bw * (i + .5)}" y="${H - 6}" text-anchor="middle">${fdia(f)}</text>`;
+    let y = T + ph;
+    filas[i].forEach((v, j) => {
+      const h = v / tope * ph;
+      if (h > 0) { y -= h; s += `<rect x="${L + bw * i + gap / 2}" y="${y}" width="${bw - gap}" height="${Math.max(h - (h > 3 ? 1 : 0), .6)}" fill="${color(cs[j])}"/>`; }
+    });
+    s += `<rect class="hit" data-i="${i}" x="${L + bw * i}" y="${T}" width="${bw}" height="${ph}" fill="transparent"/>`;
+  });
+  $('chart').innerHTML = cs.length ? `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${nombre} por día, apilado por canal">${s}</svg><div class="tip" id="tip" hidden></div>` : '<div class="empty">Elige al menos un canal.</div>';
+  $('legend').innerHTML = cs.length > 1 ? cs.map(c => `<span><i class="dot" style="background:${color(c)}"></i>${esc(c.nombre)}</span>`).join('') : '';
+  const tip = $('tip'), caja = $('chart');
+  caja.querySelectorAll('.hit').forEach(r => {
+    r.onmouseenter = r.onmousemove = e => {
+      const i = +r.dataset.i, vals = filas[i], tot = vals.reduce((a, b) => a + b, 0);
+      const lineas = cs.map((c, j) => [c, vals[j]]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]);
+      tip.innerHTML = `<b>${fdia(fechas[i])}</b>` + lineas.map(([c, v]) => `<div class="tip-r"><i class="dot" style="background:${color(c)}"></i><span>${esc(c.nombre)}</span><span class="num">${n1(v)}</span></div>`).join('')
+        + (lineas.length !== 1 ? `<div class="tip-r tip-t"><span></span><span>Total</span><span class="num">${n1(tot)}</span></div>` : '');
+      tip.hidden = false;
+      const b = caja.getBoundingClientRect(), x = e.clientX - b.left, ancho = tip.offsetWidth;
+      tip.style.left = Math.max(0, Math.min(b.width - ancho, x + (x > b.width / 2 ? -ancho - 14 : 14))) + 'px';
+      tip.style.top = '8px';
+      r.setAttribute('fill', 'var(--brand-soft)');
+    };
+    r.onmouseleave = () => { tip.hidden = true; r.setAttribute('fill', 'transparent'); };
+  });
+}
+
+function pintaCanales() {
+  const hoy = rango(FIN, S.periodo), ant = rango(addDias(FIN, -S.periodo), S.periodo), ini = hoy[0];
+  const filas = activos().map(c => {
+    const v = suma(c, hoy, 1), m = suma(c, hoy, 2);
+    return {c, v, va: suma(c, ant, 1), m, neto: suma(c, hoy, 3) - suma(c, hoy, 4),
+            pub: c.videos.filter(x => x.estado === 'public' && x.fecha && x.fecha.slice(0, 10) >= ini).length};
+  }).sort((a, b) => b.v - a.v);
+  const max = Math.max(1, ...filas.map(f => f.v));
+  $('t-canales').innerHTML = `<thead><tr><th>Canal</th><th>Suscriptores</th><th>Netos</th><th>Vistas (${S.periodo} d)</th><th>vs. anterior</th><th>Horas</th><th>Duración media vista</th><th>Publicados</th><th>Vistas totales</th></tr></thead><tbody>`
+    + filas.map(f => `<tr class="click" data-a="${esc(f.c.alias)}" title="Ver solo ${esc(f.c.nombre)}">
+      <td><span class="cname"><i class="dot" style="background:${color(f.c)}"></i>${esc(f.c.nombre)}</span></td>
+      <td class="num">${n(f.c.suscriptores)}</td>
+      <td class="num">${f.neto > 0 ? '+' : f.neto < 0 ? '−' : ''}${n(Math.abs(f.neto))}</td>
+      <td class="num"><span class="bar"><i style="width:${f.v / max * 100}%;background:${color(f.c)}"></i></span>${n(f.v)}</td>
+      <td class="num">${delta(f.v, f.va).replace(' vs. anterior', '').replace('sin periodo anterior', '—').replace('= igual que antes', '=')}</td>
+      <td class="num">${n1(f.m / 60)}</td>
+      <td class="num">${f.v ? dur(Math.round(f.m * 60 / f.v)) : '—'}</td>
+      <td class="num">${n(f.pub)}</td>
+      <td class="num">${n(f.c.vistas_totales)}</td></tr>`).join('') + '</tbody>';
+}
+
+function pintaVideos() {
+  const q = $('q').value.trim().toLowerCase(), tipo = $('tipo').value, est = $('estado').value, ord = $('orden').value, P = String(S.periodo);
+  let vs = [];
+  activos().forEach(c => c.videos.forEach(v => vs.push({c, v, per: v.p[P] || [0, 0, null, 0]})));
+  vs = vs.filter(x => (!q || x.v.titulo.toLowerCase().includes(q)) && (!tipo || (tipo === 'short') === !!x.v.short)
+    && (!est || (est === 'otros' ? !['public', 'programado'].includes(x.v.estado) : x.v.estado === est)));
+  const clave = {periodo: x => x.per[0], total: x => x.v.vistas, pct: x => x.per[2] ?? -1, fecha: x => x.v.estado === 'programado' ? '' : (x.v.fecha || '')}[ord];
+  vs.sort((a, b) => clave(b) > clave(a) ? 1 : clave(b) < clave(a) ? -1 : b.v.vistas - a.v.vistas);
+  $('vid-title').textContent = `Videos · ${n(vs.length)}`;
+  const etiqueta = v => v.estado === 'programado' ? `<span class="tag prog">sale ${fdia(v.fecha.slice(0, 10))}</span>` : v.estado === 'public' ? fdia(v.fecha.slice(0, 10)) + ' ' + v.fecha.slice(2, 4)
+    : `<span class="tag priv">${v.estado === 'unlisted' ? 'no listado' : 'privado'}</span>`;
+  $('t-videos').innerHTML = !vs.length ? '<tbody><tr><td class="empty">Ningún video con esos filtros.</td></tr></tbody>'
+    : `<thead><tr><th>Video</th><th>Tipo</th><th>Publicado</th><th>Duración</th><th>Vistas (${S.periodo} d)</th><th>% visto</th><th>Vistas totales</th><th>Me gusta</th></tr></thead><tbody>`
+    + vs.slice(0, S.limite).map(({c, v, per}) => `<tr>
+      <td><a class="vid" href="https://youtu.be/${esc(v.id)}" target="_blank" rel="noopener"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/${esc(v.id)}/mqdefault.jpg"><span><span class="vid-t" title="${esc(v.titulo)}">${esc(v.titulo)}</span><span class="vid-c"><i class="dot" style="background:${color(c)}"></i>${esc(c.nombre)}</span></span></a></td>
+      <td><span class="tag">${v.short ? 'Short' : 'Largo'}</span></td>
+      <td class="num">${etiqueta(v)}</td>
+      <td class="num">${dur(v.dur)}</td>
+      <td class="num">${n(per[0])}</td>
+      <td class="num">${per[2] == null ? '—' : n(per[2]) + '%'}</td>
+      <td class="num">${n(v.vistas)}</td>
+      <td class="num">${n(v.likes)}</td></tr>`).join('') + '</tbody>';
+  $('more').hidden = vs.length <= S.limite;
+  $('more').textContent = `Ver más (${n(vs.length - S.limite)} restantes)`;
+}
+
+// ---- Calendario: qué canal se queda antes sin video (c.cal y c.prod vienen de estadisticas.py)
+const SERVIDO = location.protocol.startsWith('http');      // lo sirve el panel de producción: se puede actualizar y editar el ciclo
+const AHORA = Date.now(), DIA = 864e5;
+const K = Object.assign({nivel: '', orden: 'dias', h: 30, abiertos: []}, (() => { try { return JSON.parse(localStorage.getItem('cal') || '{}'); } catch (e) { return {}; } })());
+const guardaK = () => { try { localStorage.setItem('cal', JSON.stringify(K)); } catch (e) {} };
+const NIV = {atrasado: ['Atrasado', 'red', 'urgente'], urgente: ['Urgente', 'red', 'urgente'], pronto: ['Pronto', 'amber', 'pronto'], bien: ['Bien', 'green', 'bien']};
+const nivelDe = d => d < 0 ? 'atrasado' : d <= 3 ? 'urgente' : d <= 7 ? 'pronto' : 'bien';
+const ponCal = c => { c.cal.t = Date.parse(c.cal.vacio); c.cal.d = (c.cal.t - AHORA) / DIA; c.cal.n = nivelDe(c.cal.d); };
+C.forEach(ponCal);
+const ffecha = t => new Date(t).toLocaleDateString('es-MX', {weekday: 'short', day: 'numeric', month: 'short'}).replace(/[.,]/g, '');
+const fhora = t => new Date(t).toLocaleTimeString('es-MX', {hour: '2-digit', minute: '2-digit', hour12: false});
+const lapso = d => { d = Math.abs(d); return d < 1 ? `${Math.max(1, Math.round(d * 24))} h` : `${Math.round(d)} día${Math.round(d) === 1 ? '' : 's'}`; };
+const faltan = d => d < 0 ? `atrasado ${lapso(d)}` : `en ${lapso(d)}`;
+const cicloTxt = x => `${+x.toFixed(1)} d`;
+
+function pintaCal() {
+  const base = activos(), H = K.h;
+  const grupos = [['', 'Todos'], ['urgente', 'Urgentes'], ['pronto', 'Pronto'], ['bien', 'Bien']];
+  $('cal-nivel').innerHTML = grupos.map(([g, t]) => `<button data-n="${g}" class="${K.nivel === g ? 'on' : ''}">${t} · ${base.filter(c => !g || NIV[c.cal.n][2] === g).length}</button>`).join('');
+  $('cal-h').innerHTML = [14, 30, 60].map(h => `<button data-h="${h}" class="${h === H ? 'on' : ''}">${h} días</button>`).join('');
+  $('cal-orden').value = K.orden;
+  const primero = [...base].sort((a, b) => a.cal.d - b.cal.d)[0];
+  $('cal-lead').innerHTML = !primero ? '' : `El primero en quedarse sin video es <b>${esc(primero.nombre)}</b>: `
+    + (primero.cal.d < 0 ? `ya debió salir uno el <b>${ffecha(primero.cal.t)}</b> (${faltan(primero.cal.d)}).` : `su primer hueco vacío es el <b>${ffecha(primero.cal.t)}</b> (${faltan(primero.cal.d)}).`)
+    + (primero.prod.length ? ` En producción: ${esc(primero.prod[0].video)} (${Math.round(primero.prod[0].progreso * 100)} %).` : ' No tiene nada en producción.');
+  const orden = {dias: (a, b) => a.cal.d - b.cal.d, prog: (a, b) => a.cal.programados.length - b.cal.programados.length || a.cal.d - b.cal.d, nombre: (a, b) => a.nombre.localeCompare(b.nombre)}[K.orden];
+  const cs = base.filter(c => !K.nivel || NIV[c.cal.n][2] === K.nivel).sort(orden);
+  const x = t => (t - AHORA) / DIA / H * 100;
+  const paso = H <= 14 ? 2 : H <= 30 ? 5 : 10;
+  let eje = '<span style="left:0">hoy</span>';
+  for (let d = paso; d <= H; d += paso) eje += `<span style="left:${d / H * 100}%">${fdia(new Date(AHORA + d * DIA - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10))}</span>`;
+  const li = (v, cuando) => `<li><span class="cu">${cuando}</span><a href="https://studio.youtube.com/video/${esc(v.id)}/edit" target="_blank" rel="noopener" title="${esc(v.titulo)}">${esc(v.titulo)}</a>${v.short ? '<span class="tag">Short</span>' : ''}</li>`;
+  $('cal').innerHTML = !cs.length ? '<div class="empty">Ningún canal con ese filtro.</div>' : `<div class="cal-eje"><div></div><div>${eje}</div><div></div><div></div></div>` + cs.map(c => {
+    const k = c.cal, [txt, col] = NIV[k.n], abierto = K.abiertos.includes(c.alias), ancho = Math.max(0, Math.min(100, x(k.t)));
+    const puntos = k.programados.filter(v => x(Date.parse(v.fecha)) <= 100).map(v => { const t = Date.parse(v.fecha);
+      return `<a class="cal-p ${v.short ? 'sh' : ''}" href="https://studio.youtube.com/video/${esc(v.id)}/edit" target="_blank" rel="noopener" style="left:${x(t)}%;background:${color(c)}" title="${esc(v.titulo)} — sale ${ffecha(t)} ${fhora(t)}"></a>`; }).join('');
+    const huecos = [0, 1, 2].map(i => Math.max(k.t, AHORA) + i * k.ciclo * DIA);
+    const det = !abierto ? '' : `<div class="cal-d">
+      <div><h3>Programados · ${k.programados.length}</h3><ul>${k.programados.map(v => li(v, `${ffecha(Date.parse(v.fecha))} ${fhora(Date.parse(v.fecha))}`)).join('') || '<li class="nada">Ninguno programado.</li>'}</ul>
+        <h3>Último publicado</h3><ul>${k.ultimo ? li(k.ultimo, ffecha(Date.parse(k.ultimo.fecha))) : '<li class="nada">Sin videos públicos.</li>'}</ul></div>
+      <div><h3>Siguientes huecos libres (ciclo de ${cicloTxt(k.ciclo)})</h3><ul>${huecos.map(t => `<li><span class="cu">${ffecha(t)}</span><span class="ti">${k.t >= AHORA || t > AHORA ? fhora(k.t) : ''}</span></li>`).join('')}</ul>
+        ${k.sin_fecha.length ? `<h3>En privado, sin fecha · ${k.sin_fecha.length}</h3><ul>${k.sin_fecha.map(v => li(v, 'subido ' + fdia(v.fecha.slice(0, 10)))).join('')}</ul>` : ''}</div>
+      <div><h3>En producción · ${c.prod.length}</h3><ul>${c.prod.map(p => `<li><span class="pb"><i style="width:${p.progreso * 100}%"></i></span><span class="cu">${Math.round(p.progreso * 100)} %</span><span class="ti" title="${esc(p.titulo)}">${esc(p.video)}${p.etapa ? ' · ' + esc(p.etapa) : ''}</span></li>`).join('') || '<li class="nada">Nada en producción para este canal.</li>'}</ul></div>
+    </div>`;
+    return `<div class="cal-r n-${col} ${abierto ? 'open' : ''}" data-a="${esc(c.alias)}">
+      <button class="cal-n" aria-expanded="${abierto}" title="Ver el detalle de ${esc(c.nombre)}"><span class="fl">▶</span><i class="dot" style="background:${color(c)}"></i><span class="nom">${esc(c.nombre)}</span><span class="tag niv">${txt}</span></button>
+      <div class="cal-t ${k.d < 0 ? 'late' : ''}" title="${k.programados.length} programado${k.programados.length === 1 ? '' : 's'} · sin video desde el ${ffecha(k.t)}">${ancho > 0 ? `<i class="cal-cov ${x(k.t) > 100 ? 'mas' : ''}" style="width:${ancho}%"></i>` : ''}${puntos}</div>
+      <div class="cal-f"><b>${ffecha(k.t)}</b><span>${faltan(k.d)}</span></div>
+      ${SERVIDO ? `<span class="step" title="Cada cuántos días publica este canal (se guarda en canales/${esc(c.alias)}.json)"><button data-c="-1" aria-label="Ciclo más corto">−</button><b>${cicloTxt(k.ciclo)}</b><button data-c="1" aria-label="Ciclo más largo">+</button></span>` : `<span class="step cal-c">cada <b>${cicloTxt(k.ciclo)}</b></span>`}
+    </div>${det}`;
+  }).join('');
+}
+
+$('cal-nivel').onclick = e => { const b = e.target.closest('button'); if (b) { K.nivel = b.dataset.n; guardaK(); pintaCal(); } };
+$('cal-h').onclick = e => { const b = e.target.closest('button'); if (b) { K.h = +b.dataset.h; guardaK(); pintaCal(); } };
+$('cal-orden').onchange = e => { K.orden = e.target.value; guardaK(); pintaCal(); };
+$('cal').onclick = e => {
+  const fila = e.target.closest('.cal-r'); if (!fila || e.target.closest('a')) return;
+  const c = C.find(c => c.alias === fila.dataset.a), paso = e.target.closest('[data-c]');
+  if (paso) {                                               // ciclo ±1 día: se ve al instante y se guarda en el .json del canal
+    const nuevo = Math.max(1, Math.min(60, Math.round(c.cal.ciclo) + +paso.dataset.c));
+    c.cal.vacio = new Date(c.cal.t + (nuevo - c.cal.ciclo) * DIA).toISOString(); c.cal.ciclo = nuevo; ponCal(c); pintaCal();
+    fetch('/api/canales/ciclo', {method: 'POST', body: JSON.stringify({alias: c.alias, dias: nuevo})})
+      .then(r => { if (!r.ok) throw 0; }).catch(() => aviso('No se pudo guardar el ciclo: reinicia el panel (python fab.py panel).', true));
+    return;
+  }
+  K.abiertos = K.abiertos.includes(c.alias) ? K.abiertos.filter(a => a !== c.alias) : [...K.abiertos, c.alias];
+  guardaK(); pintaCal();
+};
+
+// ---- Actualizar datos: el panel de producción los pide a YouTube (solo lectura) y la página se recarga sola
+function aviso(html, error) { const m = $('act-msg'); m.innerHTML = html; m.classList.toggle('err', !!error); }
+async function sigueActualizando(lanzado) {
+  let r;
+  try { r = await fetch('/api/canales/progreso', {cache: 'no-store'}); if (!r.ok) throw 0; r = await r.json(); }
+  catch (e) { if (lanzado) aviso('El panel no contesta: reinícialo con <code>python fab.py panel</code>.', true); $('act').disabled = false; return; }
+  if (r.activo) { $('act').disabled = true; aviso(`Pidiendo datos a YouTube… ${r.hecho} de ${r.total} canales`); setTimeout(() => sigueActualizando(true), 900); return; }
+  $('act').disabled = false;
+  if (lanzado) { try { sessionStorage.setItem('act-err', (r.errores || []).join(' · ')); } catch (e) {} location.reload(); }
+}
+$('act').onclick = async () => {
+  if (!SERVIDO) { aviso('Este archivo es una copia fija. Ábrelo desde el panel (<code>python fab.py panel --abrir</code>, pestaña «Canales») o corre <code>python fab.py canales --actualizar</code>.'); return; }
+  $('act').disabled = true; aviso('Pidiendo datos a YouTube…');
+  try { const r = await fetch('/api/canales/actualizar', {method: 'POST'}); if (!r.ok) throw 0; sigueActualizando(true); }
+  catch (e) { $('act').disabled = false; aviso('Este panel es de antes de la pestaña «Canales»: reinícialo con <code>python fab.py panel</code>.', true); }
+};
+if (SERVIDO) {
+  try { const e = sessionStorage.getItem('act-err'); sessionStorage.removeItem('act-err'); if (e) aviso('No se actualizó: ' + esc(e), true); } catch (e) {}
+  sigueActualizando(false);
+}
+if (EMB) new ResizeObserver(() => { try { frameElement.style.height = document.body.scrollHeight + 'px'; } catch (e) {} }).observe(document.body);
+
+function todo() { pintaCabecera(); pintaCal(); pintaKpis(); pintaGrafica(); pintaCanales(); pintaVideos(); }
+
+$('periodo').onclick = e => { const p = e.target.dataset.p; if (p) { S.periodo = +p; todo(); } };
+$('chips').onclick = e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  const a = b.dataset.a;
+  if (a === '*') S.on = new Set(C.map(c => c.alias));
+  else { S.on.has(a) ? S.on.delete(a) : S.on.add(a); if (!S.on.size) S.on = new Set(C.map(c => c.alias)); }
+  S.limite = 25; todo();
+};
+$('t-canales').onclick = e => { const r = e.target.closest('tr[data-a]'); if (r) { S.on = new Set([r.dataset.a]); S.limite = 25; todo(); scrollTo({top: 0, behavior: 'smooth'}); } };
+$('metrica').onchange = e => { S.metrica = +e.target.value; pintaGrafica(); };
+['q', 'tipo', 'estado', 'orden'].forEach(id => $(id).addEventListener('input', () => { S.limite = 25; pintaVideos(); }));
+$('more').onclick = () => { S.limite += 50; pintaVideos(); };
+todo();
+</script>
+</body>
+</html>

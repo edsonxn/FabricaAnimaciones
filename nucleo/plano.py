@@ -11,7 +11,7 @@ import math
 import cv2
 import numpy as np
 
-from motor import SS, BLANCO, catmull, circulo, clamp01, elipse, lerp, rect_red
+from motor import SS, BLANCO, W as W_, H as H_, catmull, circulo, clamp01, elipse, lerp, rect_red, rellenar_suave
 
 SOMBRA = (22, 18, 64)          # color de sombra por defecto (nunca negro)
 TINTA = (30, 26, 62)           # trazos oscuros intencionales (≠ NEGRO, así no los borra "sin_contorno")
@@ -247,6 +247,58 @@ def pajaro(lz, x, y, s=1.0, t=0.0, color=(126, 88, 214), mirar=(0.0, 0.0), alete
                            (235, 245, 255), alfa=escarcha * 0.9)
 
 
+def kuri(lz, x, y, s=1.0, t=0.0, color=(64, 196, 190), mirar=(0.0, 0.0), aleteo=0.0, tiritar=0.0,
+         feliz=0.0, escarcha=0.0, voltear=False, boca=0.0):
+    """Kuri, mascota de Kuriox: robot explorador redondo con pantalla de cara y antena (origen en los pies).
+    Misma firma que `pajaro`: mirar (-1..1), aleteo 0..1 (saluda con los brazos), tiritar 0..1, feliz, boca 0..1."""
+    sx = -1 if voltear else 1
+    dx = math.sin(t * 55) * 3.2 * tiritar
+    col = mezcla(color, (205, 225, 250), escarcha * 0.55)
+    oscuro = oscurecer(col, 0.35)
+    claro = aclarar(col, 0.4)
+    ojo = (150, 255, 236)
+    with lz.grupo(x + dx, y, s):
+        # patas
+        for px_ in (-20, 20):
+            lz.relleno(rect_red(px_ - 10, -20, 20, 22, 8), oscuro)
+        # antena con foco que parpadea
+        lz.trazo(np.array([[0, -108], [8 * sx, -138]]), oscuro, 6, afinar=False)
+        pul = 0.6 + 0.4 * math.sin(t * 5)
+        lz.halo(8 * sx, -144, 24, (255, 214, 64), alfa=0.5 * pul, r0=0.2)
+        lz.relleno(circulo(8 * sx, -144, 9, 20), (255, 214, 64))
+        # brazos
+        for k in (-1, 1):
+            a = (0.5 + 1.6 * aleteo * (1 if k * sx > 0 else 0.4)) * -k * sx if aleteo else 0.35 * k
+            with lz.grupo(52 * k, -68, 1.0, a):
+                lz.relleno(elipse(6 * k, 14, 12, 26, 0, 24), oscuro)
+                lz.relleno(circulo(6 * k, 36, 11, 18), claro)
+        # cuerpo
+        lz.relleno(rect_red(-52, -116, 104, 100, 40), col)
+        lz.relleno(elipse(0, -36, 30, 14, 0, 28), claro, alfa=0.8)
+        lz.relleno(terminador(0, -66, 52, -math.pi / 2 - 0.5 * sx, 0.55), SOMBRA, alfa=0.22)
+        # pantalla-cara
+        lz.relleno(rect_red(-38, -104, 76, 52, 22), (28, 32, 70))
+        for ex in (-16, 16):
+            ox, oy = ex + 5 * mirar[0], -80 + 4 * mirar[1]
+            if feliz > 0.5:
+                arc = np.linspace(np.pi * 1.1, np.pi * 1.9, 12)
+                lz.trazo(np.stack([ox + 9 * np.cos(arc), oy + 5 + 9 * np.sin(arc)], 1), ojo, 5, afinar=False)
+            else:
+                lz.relleno(elipse(ox, oy, 8, 11, 0, 24), ojo)
+                lz.relleno(circulo(ox + 2, oy - 4, 3, 10), (255, 255, 255))
+        m = 7 + 6 * boca
+        lz.trazo(np.stack([5 * mirar[0] + np.linspace(-m, m, 10),
+                           -62 + 2 * np.sin(np.linspace(0, np.pi, 10)) * (1 + 2 * boca)], 1), ojo, 4, afinar=False)
+        if escarcha > 0.05:
+            for i in range(9):
+                a_ = i * 0.7 + 1.0
+                lz.relleno(circulo(math.cos(a_) * 46, -66 + math.sin(a_) * 46, 4 + 2 * (i % 3), 10),
+                           (235, 245, 255), alfa=escarcha * 0.9)
+
+
+mascota = kuri      # mascota de Kuriox (NO usar `pajaro`: es la mascota de otro canal)
+
+
 def microbio(lz, x, y, s, t, color=(120, 230, 150), seed=0, forma=0, mirar=(0.0, 0.0), brillo=0.4):
     """Microbio blandito con ojos y cilios. forma 0 = píldora, 1 = redondo, 2 = alargado."""
     rx, ry = [(42, 26), (32, 30), (58, 20)][forma % 3]
@@ -369,9 +421,9 @@ def onda(lz, x, y, r, ancho, color, alfa=1.0, capa=None, frente=0.45, estela=1.8
         xs = (np.arange(ws, dtype=np.float32) * f + ox - c[0])[None, :]
         ys = (np.arange(hs, dtype=np.float32) * f + oy - c[1])[:, None]
         d = np.sqrt(xs * xs + ys * ys) - R
-        aa = np.where(d > 0, np.exp(-(d / (A * frente)) ** 2), np.exp(-(d / (A * estela)) ** 2))
-        aa = cv2.resize(aa.astype(np.float32), (ws * f, hs * f), interpolation=cv2.INTER_LINEAR)[:h, :w]
-        dst[:] = np.concatenate([col * aa[..., None], aa[..., None] * 255], -1).round().astype(np.uint8)
+        k = np.where(d > 0, 1.0 / (A * frente), 1.0 / (A * estela)).astype(np.float32)
+        aa = np.exp(-(d * k) ** 2)
+        rellenar_suave(dst, aa, f, col)
 
     lz._dibujar_en(lz._buf(capa), (c[0] - ext, c[1] - ext, c[0] + ext, c[1] + ext), dibuja, alfa)
 
@@ -382,14 +434,34 @@ def discontinua(lz, pts, color, ancho=4.0, largo=22.0, hueco=16.0, fase=0.0, fra
     seg = np.hypot(*np.diff(Pp, axis=0).T)
     d = np.concatenate([[0.0], np.cumsum(seg)])
     total = d[-1] * clamp01(frac)
-    s0 = -((fase % (largo + hueco)))
-    while s0 < total:
-        a, b = max(0.0, s0), min(total, s0 + largo)
-        if b > a + 0.5:
-            xs = np.interp([a, (a + b) / 2, b], d, Pp[:, 0])
-            ys = np.interp([a, (a + b) / 2, b], d, Pp[:, 1])
+    per = largo + hueco
+    s0 = -(fase % per)
+    ini = np.arange(s0, total, per)
+    a = np.maximum(ini, 0.0)
+    b = np.minimum(ini + largo, total)
+    ok = b > a + 0.5
+    a, b = a[ok], b[ok]
+    if not len(a):
+        return
+    if lz.recortes:   # con recorte: trazo a trazo (lento pero exacto)
+        for aa, bb in zip(a, b):
+            xs = np.interp([aa, (aa + bb) / 2, bb], d, Pp[:, 0])
+            ys = np.interp([aa, (aa + bb) / 2, bb], d, Pp[:, 1])
             lz.trazo(np.stack([xs, ys], 1), color, ancho, afinar=False, capa=capa, paso=4.0)
-        s0 += largo + hueco
+        return
+    # rápido: todos los trazos en una sola llamada de OpenCV (sin temblor: vector plano)
+    m = (a + b) / 2
+    trozos = np.stack([np.stack([np.interp(v, d, Pp[:, 0]), np.interp(v, d, Pp[:, 1])], -1) for v in (a, m, b)], 1)
+    Q = lz.a_px(trozos.reshape(-1, 2)).reshape(-1, 3, 2)
+    w = ancho * lz.escala()
+    if w <= 0.05:
+        return
+    en_pant = ((Q[:, :, 0] > -50) & (Q[:, :, 0] < W_ + 50) & (Q[:, :, 1] > -50) & (Q[:, :, 1] < H_ + 50)).any(1)
+    Q = Q[en_pant]
+    if not len(Q):
+        return
+    Qi = np.round(Q * SS * 16).astype(np.int32)
+    cv2.polylines(lz._buf(capa), list(Qi), False, lz._col(color), max(1, int(round(w * SS))), cv2.LINE_AA, 4)
 
 
 def arco_pts(x, y, r, a0, a1, n=240):
@@ -433,6 +505,287 @@ def linea_llamada(lz, p0, p1, frac=1.0, col=(255, 255, 255), ancho=3.0, alfa=0.9
     lz.trazo(np.array([p0, p0 + (p1 - p0) * clamp01(frac)]), col, ancho, afinar=False)
 
 
-__all__ = ["mezcla", "aclarar", "oscurecer", "terminador", "borde_luz", "esfera", "sol", "tierra", "luna", "pajaro",
+# ------------------------------------------------------------------ planetas y estrellas
+PLANETAS = {   # color base, color de bandas
+    "mercurio": ((168, 158, 172), None),
+    "venus": ((242, 212, 150), (226, 192, 128)),
+    "marte": ((222, 108, 74), None),
+    "jupiter": ((234, 188, 140), (200, 140, 98)),
+    "saturno": ((238, 214, 158), (214, 184, 122)),
+    "urano": ((156, 222, 232), None),
+    "neptuno": ((86, 126, 232), (66, 100, 206)),
+}
+
+
+def _anillo_saturno(lz, x, y, r, tilt, mitad, col, alfa=1.0):
+    """Mitad trasera (mitad=0) o delantera (mitad=1) de los anillos."""
+    th = np.linspace(np.pi, 2 * np.pi, 48) if mitad == 0 else np.linspace(0, np.pi, 48)
+    a, b = r * 2.25, r * 0.62
+    ext = np.stack([a * np.cos(th), b * np.sin(th)], 1)
+    inn = np.stack([a * 0.62 * np.cos(th[::-1]), b * 0.62 * np.sin(th[::-1])], 1)
+    P = _rotar(np.concatenate([ext, inn]), tilt, x, y)
+    lz.relleno(P, col, alfa=alfa)
+    th2 = th
+    ext2 = np.stack([a * 0.86 * np.cos(th2), b * 0.86 * np.sin(th2)], 1)
+    inn2 = np.stack([a * 0.8 * np.cos(th2[::-1]), b * 0.8 * np.sin(th2[::-1])], 1)
+    lz.relleno(_rotar(np.concatenate([ext2, inn2]), tilt, x, y), oscurecer(col, 0.35), alfa=alfa)
+
+
+def planeta(lz, x, y, r, tipo, t=0.0, luz=1.0, ang_luz=math.pi, seed=0):
+    """Planeta del sistema solar (no la Tierra: usa tierra()). luz 0..1 (0 = sin Sol)."""
+    base, bandas = PLANETAS[tipo]
+    noche = (38, 36, 72)
+    col = mezcla(base, noche, (1 - luz) * 0.85)
+    colb = mezcla(bandas, noche, (1 - luz) * 0.85) if bandas else None
+    tilt = -0.25
+    if tipo == "saturno":
+        _anillo_saturno(lz, x, y, r, tilt, 0, mezcla((226, 204, 150), noche, (1 - luz) * 0.85))
+
+    def contenido():
+        if colb is not None:
+            for i, (hh, gros) in enumerate(((-0.62, 0.1), (-0.3, 0.14), (0.05, 0.1), (0.35, 0.16), (0.68, 0.09))):
+                yy = y + hh * r
+                xs = np.linspace(x - r * 1.1, x + r * 1.1, 24)
+                ond = r * 0.025 * np.sin(xs / (r * 0.3) + i + t * 0.2)
+                top = np.stack([xs, yy - gros * r / 2 + ond], 1)
+                bot = np.stack([xs[::-1], yy + gros * r / 2 + ond[::-1]], 1)
+                lz.relleno(_rotar(np.concatenate([top, bot]) - [x, y], tilt, x, y), colb, alfa=0.8)
+        if tipo == "jupiter":
+            lz.relleno(elipse(x + r * 0.3, y + r * 0.34, r * 0.2, r * 0.11, tilt, 28),
+                       mezcla((214, 110, 84), noche, (1 - luz) * 0.85))
+        if tipo in ("mercurio", "marte"):
+            for dx, dy, s in ((-0.3, -0.25, 0.2), (0.3, 0.15, 0.14), (-0.05, 0.45, 0.12), (0.4, -0.4, 0.09)):
+                lz.relleno(circulo(x + dx * r, y + dy * r, s * r, 24), oscurecer(col, 0.18))
+        if tipo == "marte":
+            lz.relleno(elipse(x, y - r * 0.9, r * 0.4, r * 0.14, tilt, 24), mezcla((250, 244, 240), noche, 1 - luz))
+
+    esfera(lz, x, y, r, col, ang_luz, sombra=-0.05, fuerza=0.55 * luz + 0.15, rim=0.07 * luz,
+           color_rim=aclarar(base, 0.5), contenido=contenido)
+    if tipo == "saturno":
+        _anillo_saturno(lz, x, y, r, tilt, 1, mezcla((226, 204, 150), noche, (1 - luz) * 0.85))
+
+
+def sol_corte(lz, x, y, r, t, apertura=1.0, nucleo=1.0, ang=-0.55, brillo=1.0):
+    """Sol con una cuña recortada que muestra núcleo, zona radiativa y zona convectiva.
+    apertura 0..1 (ancho de la cuña); nucleo 0..1 (0 = núcleo apagado, gris)."""
+    sol(lz, x, y, r, t, brillo=brillo)
+    if apertura <= 0.01:
+        return
+    w = 1.7 * apertura
+    if w >= 2 * np.pi * 0.995:     # corte completo: todo el disco (sin costura)
+        cuna = circulo(x, y, r * 1.2, 160)
+    else:
+        th = np.linspace(ang - w / 2, ang + w / 2, 60)
+        cuna = np.concatenate([[[x, y]], np.stack([x + r * 1.2 * np.cos(th), y + r * 1.2 * np.sin(th)], 1)])
+    with lz.recorte(cuna):
+        lz.relleno(circulo(x, y, r * 1.001, 160), (236, 96, 48))
+        for i in range(22):   # celdas de convección
+            a = ang - w / 2 + (i + 0.5) / 22 * w
+            rr = r * (0.84 + 0.06 * math.sin(t * 1.5 + i * 2.1))
+            lz.relleno(circulo(x + rr * math.cos(a), y + rr * math.sin(a), r * 0.07, 24), (255, 140, 66), alfa=0.8)
+        lz.relleno(circulo(x, y, r * 0.7, 140), (255, 176, 70))
+        for k in range(1, 5):   # zona radiativa: anillos concéntricos
+            lz.relleno(circulo(x, y, r * (0.7 - k * 0.09), 120), (255, 176, 70) if k % 2 == 0 else (255, 194, 92))
+        cn = mezcla((140, 132, 164), (255, 252, 226), nucleo)
+        lz.relleno(circulo(x, y, r * 0.29, 90), mezcla((110, 100, 136), (255, 226, 150), nucleo))
+        lz.halo(x, y, r * 0.36, mezcla((110, 100, 136), (255, 244, 200), nucleo), alfa=0.9 * nucleo, r0=0.55)
+        lz.relleno(circulo(x, y, r * 0.24, 90), cn)
+    for a in ((ang - w / 2, ang + w / 2) if apertura < 1.25 else ()):   # bordes del corte
+        lz.trazo(np.array([[x, y], [x + r * math.cos(a), y + r * math.sin(a)]]), (255, 226, 170), 3 * max(1, r / 300),
+                 afinar=False)
+
+
+_GAL_RNG = np.random.default_rng(77)
+_N_GAL = 5200
+
+
+def _puntos_galaxia():
+    rng = _GAL_RNG
+    brazos = rng.integers(0, 2, _N_GAL)
+    u = rng.random(_N_GAL) ** 0.8
+    rho = 0.1 + 0.9 * u
+    phi = brazos * np.pi + 5.2 * np.log(rho + 0.05) + rng.normal(0, 0.28 + 0.2 * (1 - u), _N_GAL)
+    rho = rho + rng.normal(0, 0.03, _N_GAL)
+    nb = 1600
+    rb = np.abs(rng.normal(0, 0.12, nb))
+    pb = rng.random(nb) * 2 * np.pi
+    rho = np.concatenate([rho, rb])
+    phi = np.concatenate([phi, pb])
+    tipo = np.concatenate([np.where(rng.random(_N_GAL) < 0.12, 2, 1), np.zeros(nb, int)])
+    tam = np.concatenate([0.7 + 1.6 * rng.random(_N_GAL) ** 4, 0.8 + 1.2 * rng.random(nb) ** 3])
+    return rho, phi, tipo, tam
+
+
+_GAL = _puntos_galaxia()
+
+
+def galaxia(lz, x, y, R, t=0.0, rot=0.0, inclin=0.5, alfa=1.0, fondo=(12, 12, 34)):
+    """Galaxia espiral (Vía Láctea estilizada) de radio R; alfa mezcla hacia el color de fondo."""
+    if alfa <= 0.01 or R < 2:
+        return
+    lz.halo(x, y, R * 1.25, (90, 90, 190), alfa=0.35 * alfa)
+    lz.halo(x, y, R * 0.42, (255, 214, 170), alfa=0.8 * alfa, r0=0.2)
+    rho, phi, tipo, tam = _GAL
+    ph = phi + rot
+    X = x + R * rho * np.cos(ph)
+    Y = y + R * rho * np.sin(ph) * inclin
+    esc = max(0.6, min(3.0, R / 500))
+    for k, col in enumerate(((255, 226, 186), (190, 206, 255), (255, 150, 206))):
+        m = tipo == k
+        lz.puntos(np.stack([X[m], Y[m]], 1), tam[m] * esc, mezcla(fondo, col, alfa))
+
+
+def estrella_neutrones(lz, x, y, r, col=(170, 210, 255), brillo=1.0):
+    lz.halo(x, y, r * 5, col, alfa=0.6 * brillo)
+    lz.relleno(circulo(x, y, r, 32), aclarar(col, 0.6))
+
+
+# ------------------------------------------------------------------ personas, casas, animales, iconos
+def humano(lz, x, y, s=1.0, t=0.0, ropa=(92, 142, 232), piel=(250, 202, 164), pelo=(64, 44, 44), paso=0.0,
+           brazo=0.0, voltear=False):
+    """Persona simple estilo Kurzgesagt (origen en los pies, altura ~170*s)."""
+    sx = -1 if voltear else 1
+    with lz.grupo(x, y, s):
+        pierna = oscurecer(ropa, 0.35)
+        for k, lado in enumerate((-1, 1)):
+            a = 0.35 * math.sin(t * 7 + k * math.pi) * paso
+            with lz.grupo(lado * 9, -62, 1.0, a):
+                lz.relleno(rect_red(-8, 0, 16, 62, 8), pierna)
+        lz.relleno(rect_red(-24, -122, 48, 70, 20), ropa)
+        with lz.grupo(22 * sx, -112, 1.0, (-0.3 - 1.6 * brazo) * sx):
+            lz.relleno(rect_red(-7, 0, 14, 52, 7), oscurecer(ropa, 0.12))
+        lz.relleno(circulo(0, -146, 24, 36), piel)
+        lz.relleno(np.concatenate([P for P in [np.stack([24 * np.cos(np.linspace(np.pi, 2 * np.pi, 20)),
+                                                        -146 + 24 * np.sin(np.linspace(np.pi, 2 * np.pi, 20))], 1)]]),
+                   pelo)
+        lz.relleno(circulo(9 * sx, -144, 3.2, 10), TINTA)
+
+
+def casa(lz, x, y, s=1.0, calor=0.0, oscuro=0.0):
+    """Casita (origen en la base). calor 0..1: ventana encendida con luz cálida."""
+    pared = mezcla((226, 214, 204), (40, 40, 70), oscuro)
+    techo = mezcla((190, 86, 76), (40, 30, 60), oscuro)
+    with lz.grupo(x, y, s):
+        lz.relleno(rect_red(-50, -80, 100, 80, 4), pared)
+        lz.relleno(np.array([[-62, -76], [0, -128], [62, -76]]), techo)
+        lz.relleno(rect_red(22, -122, 16, 34, 2), techo)
+        v = mezcla((70, 80, 110), (255, 186, 96), calor)
+        if calor > 0.05:
+            lz.halo(-18, -46, 60, (255, 170, 80), alfa=0.6 * calor)
+        lz.relleno(rect_red(-34, -60, 32, 28, 3), v)
+        lz.relleno(rect_red(12, -48, 22, 48, 3), mezcla((120, 84, 70), (40, 30, 60), oscuro))
+
+
+def planta(lz, x, y, s=1.0, t=0.0, vida=1.0, col=(96, 196, 110)):
+    """Plantita/flor (origen en la base). vida 0..1: 0 = seca y caída."""
+    c = mezcla((150, 120, 90), col, vida)
+    inc = (1 - vida) * 0.9
+    with lz.grupo(x, y, s, inc):
+        lz.relleno(rect_red(-3, -60, 6, 60, 3), c)
+        for lado in (-1, 1):
+            with lz.grupo(0, -30, 1.0, lado * (0.9 - 0.5 * (1 - vida))):
+                lz.relleno(elipse(0, -16, 9, 18, 0, 20), c)
+        lz.relleno(circulo(0, -66, 11 * (0.5 + 0.5 * vida), 20), mezcla((150, 120, 90), (255, 200, 90), vida))
+
+
+def conejo(lz, x, y, s=1.0, t=0.0, col=(196, 184, 178), voltear=False, salto=0.0):
+    sx = -1 if voltear else 1
+    with lz.grupo(x, y - salto, s):
+        lz.relleno(elipse(-6 * sx, -34, 40, 30, 0, 36), col)
+        lz.relleno(circulo(-44 * sx, -40, 12, 18), (250, 248, 246))
+        lz.relleno(circulo(26 * sx, -56, 22, 30), col)
+        for k, a in enumerate((-0.25, 0.05)):
+            with lz.grupo((20 + 8 * k) * sx, -72, 1.0, a * sx):
+                lz.relleno(elipse(0, -24, 7, 26, 0, 20), col)
+                lz.relleno(elipse(0, -24, 3.5, 18, 0, 14), (240, 190, 196))
+        lz.relleno(circulo(34 * sx, -60, 4, 10), TINTA)
+        for px_ in (-24, 12):
+            lz.relleno(elipse(px_ * sx, -4, 14, 6, 0, 16), oscurecer(col, 0.15))
+
+
+def zorro(lz, x, y, s=1.0, t=0.0, voltear=False):
+    sx = -1 if voltear else 1
+    nar, bla = (236, 128, 60), (250, 246, 240)
+    with lz.grupo(x, y, s):
+        with lz.grupo(-50 * sx, -40, 1.0, (0.5 + 0.15 * math.sin(t * 3)) * sx):
+            lz.relleno(elipse(-30 * sx, 0, 38, 16, 0, 30), nar)
+            lz.relleno(elipse(-58 * sx, 0, 12, 10, 0, 16), bla)
+        lz.relleno(elipse(0, -40, 46, 24, 0, 36), nar)
+        for px_ in (-28, -12, 18, 32):
+            lz.relleno(rect_red(px_ * sx - 4, -24, 8, 24, 4), oscurecer(nar, 0.45))
+        lz.relleno(np.array([[30 * sx, -46], [78 * sx, -58], [38 * sx, -78]]), nar)
+        lz.relleno(np.array([[62 * sx, -54], [80 * sx, -58], [66 * sx, -64]]), bla)
+        for ex in (34, 50):
+            lz.relleno(np.array([[ex * sx, -70], [(ex + 4) * sx, -96], [(ex + 14) * sx, -72]]), nar)
+        lz.relleno(circulo(52 * sx, -64, 3.5, 10), TINTA)
+
+
+def gusano_tubo(lz, x, y, s=1.0, t=0.0, seed=0, alto=1.0):
+    """Gusano de tubo gigante (Riftia): tubo blanco y penacho rojo que se mece (origen en la base)."""
+    oscil = 0.12 * math.sin(t * 1.3 + seed * 1.7)
+    with lz.grupo(x, y, s, oscil):
+        h = 150 * alto
+        lz.relleno(rect_red(-9, -h, 18, h, 9), (226, 222, 214))
+        lz.relleno(rect_red(-9, -h, 7, h, 4), (250, 248, 244), alfa=0.7)
+        for k in range(5):
+            a = -0.7 + k * 0.35 + 0.1 * math.sin(t * 2 + k + seed)
+            with lz.grupo(0, -h + 4, 1.0, a):
+                lz.relleno(elipse(0, -20, 7, 22, 0, 20), (230, 52, 68))
+        lz.relleno(circulo(0, -h - 6, 12, 20), (246, 80, 90))
+
+
+def panel_solar(lz, x, y, s=1.0, activo=1.0):
+    with lz.grupo(x, y, s):
+        lz.relleno(rect_red(-6, -60, 12, 60, 3), (150, 156, 176))
+        P = np.array([[-80, -60], [80, -60], [60, -130], [-60, -130]])
+        lz.relleno(P, mezcla((60, 64, 90), (60, 120, 220), activo))
+        for i in range(1, 4):
+            u = i / 4
+            lz.trazo(np.array([[-80 + 20 * u, -60 - 70 * u], [80 - 20 * u, -60 - 70 * u]]), (40, 60, 120), 3,
+                     afinar=False)
+        for i in range(1, 4):
+            xx = -80 + 160 * i / 4
+            lz.trazo(np.array([[xx, -60], [xx * 0.75, -130]]), (40, 60, 120), 3, afinar=False)
+
+
+def central_nuclear(lz, x, y, s=1.0, t=0.0, activa=1.0):
+    """Torre de refrigeración con vapor (origen en la base)."""
+    with lz.grupo(x, y, s):
+        yy = np.linspace(0, -170, 20)
+        ancho = 70 - 40 * np.sin(np.linspace(0, np.pi * 0.8, 20))
+        P = np.concatenate([np.stack([-ancho, yy], 1), np.stack([ancho[::-1], yy[::-1]], 1)])
+        lz.relleno(P, (214, 214, 226))
+        lz.relleno(P * [0.45, 1] - [ancho.max() * 0.45, 0], (240, 240, 248), alfa=0.6)
+        if activa > 0:
+            for i in range(6):
+                u = (t * 0.25 + i / 6) % 1
+                lz.relleno(circulo(10 * math.sin(i * 2 + u * 3), -190 - u * 160, 30 + 40 * u, 28), (236, 238, 248),
+                           alfa=0.75 * (1 - u) * activa)
+
+
+def interruptor(lz, x, y, s=1.0, encendido=1.0):
+    with lz.grupo(x, y, s):
+        lz.relleno(rect_red(-60, -90, 120, 180, 20), (236, 236, 244))
+        lz.relleno(rect_red(-24, -54, 48, 108, 12), (196, 198, 214))
+        yy = lerp(22, -22, encendido)
+        lz.relleno(rect_red(-18, yy - 26, 36, 52, 10), (255, 255, 255))
+
+
+def molecula(lz, x, y, s=1.0, tipo="O2", rot=0.0):
+    """O2 (dos esferas rojas) o CO2 (carbono gris entre dos oxígenos)."""
+    with lz.grupo(x, y, s, rot):
+        if tipo == "CO2":
+            for dx in (-34, 34):
+                lz.relleno(circulo(dx, 0, 20, 24), (236, 84, 84))
+            lz.relleno(circulo(0, 0, 22, 24), (90, 90, 104))
+        else:
+            for dx in (-15, 15):
+                lz.relleno(circulo(dx, 0, 20, 24), (236, 84, 84))
+        lz.relleno(circulo(-6, -8, 7, 12), (255, 255, 255), alfa=0.5)
+
+
+__all__ = ["mezcla", "aclarar", "oscurecer", "terminador", "borde_luz", "esfera", "sol", "tierra", "luna", "pajaro", "kuri", "mascota",
            "microbio", "arbol", "hojas_cayendo", "termometro", "fumarola", "rotulo", "pastilla", "linea_llamada",
-           "onda", "discontinua", "arco_pts", "SOMBRA", "TINTA", "lerp"]
+           "onda", "discontinua", "arco_pts", "SOMBRA", "TINTA", "lerp", "PLANETAS", "planeta", "sol_corte",
+           "galaxia", "estrella_neutrones", "humano", "casa", "planta", "conejo", "zorro", "gusano_tubo",
+           "panel_solar", "central_nuclear", "interruptor", "molecula"]

@@ -1,0 +1,289 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 3.863,
+  "tipo": "imagen",
+  "texto": "Si sales a la calle y miras a cualquier persona, sabes que todos"
+ },
+ {
+  "id": "scene-002",
+  "t0": 3.863,
+  "t1": 8.019,
+  "tipo": "imagen",
+  "texto": "pertenecemos a la misma especie. Pero si viajaras cien mil años al pasado,"
+ },
+ {
+  "id": "scene-003",
+  "t0": 8.019,
+  "t1": 10.858,
+  "tipo": "imagen",
+  "texto": "descubrirías un planeta irreconocible."
+ },
+ {
+  "id": "scene-004",
+  "t0": 10.858,
+  "t1": 15.562,
+  "tipo": "imagen",
+  "texto": "En esa época, los humanos modernos no éramos los únicos dueños de la Tierra."
+ },
+ {
+  "id": "scene-005",
+  "t0": 15.562,
+  "t1": 19.644,
+  "tipo": "imagen",
+  "texto": "No estábamos solos. Hace cien mil años, al menos cinco"
+ },
+ {
+  "id": "scene-006",
+  "t0": 19.644,
+  "t1": 23.639,
+  "tipo": "imagen",
+  "texto": "especies humanas distintas caminaban por el mundo al mismo tiempo."
+ },
+ {
+  "id": "scene-007",
+  "t0": 23.639,
+  "t1": 27.925,
+  "tipo": "imagen",
+  "texto": "En el calor de África vivían nuestros ancestros directos, los Homo sapiens."
+ },
+ {
+  "id": "scene-008",
+  "t0": 27.925,
+  "t1": 31.625,
+  "tipo": "imagen",
+  "texto": "Mientras tanto, en los valles helados de Europa, los neandertales"
+ },
+ {
+  "id": "scene-009",
+  "t0": 31.625,
+  "t1": 35.847,
+  "tipo": "imagen",
+  "texto": "cazaban renos con lanzas pesadas. Eran fuertes, robustos"
+ },
+ {
+  "id": "scene-010",
+  "t0": 35.847,
+  "t1": 39.245,
+  "tipo": "imagen",
+  "texto": "y estaban perfectamente adaptados al frío glacial."
+ },
+ {
+  "id": "scene-011",
+  "t0": 39.245,
+  "t1": 44.04,
+  "tipo": "imagen",
+  "texto": "Más hacia el oriente, en las montañas de Siberia, habitaban los misteriosos denisovanos."
+ },
+ {
+  "id": "scene-012",
+  "t0": 44.04,
+  "t1": 47.32,
+  "tipo": "imagen",
+  "texto": "Y en las selvas de una isla remota de Indonesia, vivía una especie"
+ },
+ {
+  "id": "scene-013",
+  "t0": 47.32,
+  "t1": 50.43,
+  "tipo": "imagen",
+  "texto": "diminuta de menos de un metro de altura."
+ },
+ {
+  "id": "scene-014",
+  "t0": 50.43,
+  "t1": 56.296,
+  "tipo": "imagen",
+  "texto": "Durante mucho tiempo nos dijeron que eran seres primitivos que solo sabían gruñir en cuevas oscuras."
+ },
+ {
+  "id": "scene-015",
+  "t0": 56.296,
+  "t1": 60.078,
+  "tipo": "imagen",
+  "texto": "La ciencia moderna ha demostrado que eso era una completa mentira."
+ },
+ {
+  "id": "scene-016",
+  "t0": 60.078,
+  "t1": 63.438,
+  "tipo": "imagen",
+  "texto": "Aquellos humanos vivían en pequeños clanes familiares de unas veinte"
+ },
+ {
+  "id": "scene-017",
+  "t0": 63.438,
+  "t1": 67.06,
+  "tipo": "imagen",
+  "texto": "o treinta personas. Dominaban el fuego a la perfección y"
+ },
+ {
+  "id": "scene-018",
+  "t0": 67.06,
+  "t1": 70.323,
+  "tipo": "imagen",
+  "texto": "cocinaban carne fresca sobre brasas ardientes."
+ },
+ {
+  "id": "scene-019",
+  "t0": 70.323,
+  "t1": 75.614,
+  "tipo": "imagen",
+  "texto": "Fabricaban herramientas afiladas atando puntas de piedra a madera con resina de árbol."
+ },
+ {
+  "id": "scene-020",
+  "t0": 75.614,
+  "t1": 78.994,
+  "tipo": "imagen",
+  "texto": "Molían minerales de color rojo brillante para pintar sus cuerpos y"
+ },
+ {
+  "id": "scene-021",
+  "t0": 78.994,
+  "t1": 83.092,
+  "tipo": "imagen",
+  "texto": "decorar pieles de animales. Y perforaban conchas marinas con una paciencia"
+ },
+ {
+  "id": "scene-022",
+  "t0": 83.092,
+  "t1": 87.722,
+  "tipo": "imagen",
+  "texto": "infinita para fabricar los primeros collares del mundo."
+ },
+ {
+  "id": "scene-023",
+  "t0": 87.722,
+  "t1": 90.392,
+  "tipo": "imagen",
+  "texto": "Hay un detalle asombroso que solemos olvidar."
+ },
+ {
+  "id": "scene-024",
+  "t0": 90.392,
+  "t1": 93.897,
+  "tipo": "imagen",
+  "texto": "Biológicamente, aquellos humanos eran idénticos a nosotros."
+ },
+ {
+  "id": "scene-025",
+  "t0": 93.897,
+  "t1": 99.316,
+  "tipo": "imagen",
+  "texto": "Tenían exactamente la misma capacidad cerebral, la misma curiosidad y los mismos miedos."
+ },
+ {
+  "id": "scene-026",
+  "t0": 99.316,
+  "t1": 102.646,
+  "tipo": "imagen",
+  "texto": "Si trajeras al presente a un recién nacido de hace cien mil años,"
+ },
+ {
+  "id": "scene-027",
+  "t0": 102.646,
+  "t1": 107.314,
+  "tipo": "imagen",
+  "texto": "crecería sin ninguna diferencia. Aprendería a hablar cualquier idioma moderno,"
+ },
+ {
+  "id": "scene-028",
+  "t0": 107.314,
+  "t1": 110.896,
+  "tipo": "imagen",
+  "texto": "usaría un teléfono móvil y podría estudiar ingeniería."
+ },
+ {
+  "id": "scene-029",
+  "t0": 110.896,
+  "t1": 115.016,
+  "tipo": "imagen",
+  "texto": "Sentían amor, despedían a sus muertos con flores y contaban leyendas"
+ },
+ {
+  "id": "scene-030",
+  "t0": 115.016,
+  "t1": 117.731,
+  "tipo": "imagen",
+  "texto": "bajo cielos repletos de estrellas."
+ },
+ {
+  "id": "scene-031",
+  "t0": 117.731,
+  "t1": 122.807,
+  "tipo": "imagen",
+  "texto": "Pero su supervivencia pendía de un hilo constante. Eran pocos, apenas unos miles"
+ },
+ {
+  "id": "scene-032",
+  "t0": 122.807,
+  "t1": 126.23,
+  "tipo": "imagen",
+  "texto": "de individuos dispersos por inmensos paisajes vírgenes."
+ },
+ {
+  "id": "scene-033",
+  "t0": 126.23,
+  "t1": 131.973,
+  "tipo": "imagen",
+  "texto": "A su alrededor merodeaban hienas gigantes, felinos con colmillos de sable y mamuts colosales."
+ },
+ {
+  "id": "scene-034",
+  "t0": 131.973,
+  "t1": 134.733,
+  "tipo": "imagen",
+  "texto": "Una simple herida o un invierno demasiado duro"
+ },
+ {
+  "id": "scene-035",
+  "t0": 134.733,
+  "t1": 137.834,
+  "tipo": "imagen",
+  "texto": "podía significar el final de todo un grupo."
+ },
+ {
+  "id": "scene-036",
+  "t0": 137.834,
+  "t1": 143.139,
+  "tipo": "imagen",
+  "texto": "Con el paso de los milenios, todas las demás especies humanas fueron desapareciendo una a una."
+ },
+ {
+  "id": "scene-037",
+  "t0": 143.139,
+  "t1": 147.303,
+  "tipo": "imagen",
+  "texto": "Solo nosotros logramos cruzar los continentes y poblar cada rincón del globo."
+ },
+ {
+  "id": "scene-038",
+  "t0": 147.303,
+  "t1": 150.699,
+  "tipo": "imagen",
+  "texto": "Sin embargo, aquellos otros humanos no se borraron del todo."
+ },
+ {
+  "id": "scene-039",
+  "t0": 150.699,
+  "t1": 154.812,
+  "tipo": "imagen",
+  "texto": "Parte de su código genético todavía late en nuestra propia sangre."
+ },
+ {
+  "id": "scene-040",
+  "t0": 154.812,
+  "t1": 158.172,
+  "tipo": "imagen",
+  "texto": "Hace cien mil años compartimos el fuego con ellos, y en nuestro interior,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 158.172,
+  "t1": 162.5,
+  "tipo": "imagen",
+  "texto": "su historia sigue viva."
+ }
+]

@@ -1,0 +1,660 @@
+{
+ "bpm": 100.0,
+ "beat": 0.6,
+ "unidad": 4,
+ "total": 42.6,
+ "titulo": "El viaje de una semilla",
+ "estilo": "boceto",
+ "escenas": [
+  {
+   "id": "vuelo",
+   "pre": 1.2,
+   "t0": 0.0,
+   "t1": 7.2,
+   "compases": 3,
+   "frases": [
+    {
+     "key": "vuelo_0",
+     "texto": "Esta pequeña semilla está lista para recorrer el mundo.",
+     "t0": 1.208,
+     "t1": 4.147,
+     "words": [
+      {
+       "w": "Esta",
+       "s": 1.208,
+       "e": 1.388
+      },
+      {
+       "w": "pequeña",
+       "s": 1.388,
+       "e": 1.648
+      },
+      {
+       "w": "semilla",
+       "s": 1.648,
+       "e": 2.228
+      },
+      {
+       "w": "está",
+       "s": 2.228,
+       "e": 2.428
+      },
+      {
+       "w": "lista",
+       "s": 2.428,
+       "e": 2.688
+      },
+      {
+       "w": "para",
+       "s": 2.688,
+       "e": 2.908
+      },
+      {
+       "w": "recorrer",
+       "s": 2.908,
+       "e": 3.348
+      },
+      {
+       "w": "el",
+       "s": 3.348,
+       "e": 3.468
+      },
+      {
+       "w": "mundo.",
+       "s": 3.468,
+       "e": 3.648
+      }
+     ]
+    },
+    {
+     "key": "vuelo_1",
+     "texto": "Solo necesita que sople un poco de viento.",
+     "t0": 4.407,
+     "t1": 6.74,
+     "words": [
+      {
+       "w": "Solo",
+       "s": 4.407,
+       "e": 4.647
+      },
+      {
+       "w": "necesita",
+       "s": 4.647,
+       "e": 5.007
+      },
+      {
+       "w": "que",
+       "s": 5.007,
+       "e": 5.287
+      },
+      {
+       "w": "sople",
+       "s": 5.287,
+       "e": 5.627
+      },
+      {
+       "w": "un",
+       "s": 5.627,
+       "e": 5.707
+      },
+      {
+       "w": "poco",
+       "s": 5.707,
+       "e": 5.847
+      },
+      {
+       "w": "de",
+       "s": 5.847,
+       "e": 6.027
+      },
+      {
+       "w": "viento.",
+       "s": 6.027,
+       "e": 6.327
+      }
+     ]
+    }
+   ],
+   "fin_voz": 6.74,
+   "beats": 12
+  },
+  {
+   "id": "viento",
+   "t0": 7.2,
+   "t1": 12.0,
+   "compases": 2,
+   "frases": [
+    {
+     "key": "viento_0",
+     "texto": "Es capaz de subir cientos de metros y flotar durante días enteros.",
+     "t0": 7.507,
+     "t1": 11.582,
+     "words": [
+      {
+       "w": "Es",
+       "s": 7.507,
+       "e": 7.647
+      },
+      {
+       "w": "capaz",
+       "s": 7.647,
+       "e": 7.967
+      },
+      {
+       "w": "de",
+       "s": 7.967,
+       "e": 8.188
+      },
+      {
+       "w": "subir",
+       "s": 8.188,
+       "e": 8.447
+      },
+      {
+       "w": "cientos",
+       "s": 8.447,
+       "e": 9.047
+      },
+      {
+       "w": "de",
+       "s": 9.047,
+       "e": 9.127
+      },
+      {
+       "w": "metros",
+       "s": 9.127,
+       "e": 9.407
+      },
+      {
+       "w": "y",
+       "s": 9.407,
+       "e": 9.747
+      },
+      {
+       "w": "flotar",
+       "s": 9.747,
+       "e": 10.227
+      },
+      {
+       "w": "durante",
+       "s": 10.227,
+       "e": 10.407
+      },
+      {
+       "w": "días",
+       "s": 10.407,
+       "e": 10.747
+      },
+      {
+       "w": "enteros.",
+       "s": 10.747,
+       "e": 11.327
+      }
+     ]
+    }
+   ],
+   "fin_voz": 11.582,
+   "beats": 8
+  },
+  {
+   "id": "tormenta",
+   "t0": 12.0,
+   "t1": 16.8,
+   "compases": 2,
+   "frases": [
+    {
+     "key": "tormenta_0",
+     "texto": "Pero una sola gota de lluvia puede cambiarlo todo.",
+     "t0": 12.55,
+     "t1": 15.054,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 12.55,
+       "e": 12.67
+      },
+      {
+       "w": "una",
+       "s": 12.67,
+       "e": 12.79
+      },
+      {
+       "w": "sola",
+       "s": 12.79,
+       "e": 13.01
+      },
+      {
+       "w": "gota",
+       "s": 13.01,
+       "e": 13.31
+      },
+      {
+       "w": "de",
+       "s": 13.31,
+       "e": 13.31
+      },
+      {
+       "w": "lluvia",
+       "s": 13.31,
+       "e": 13.71
+      },
+      {
+       "w": "puede",
+       "s": 13.71,
+       "e": 13.87
+      },
+      {
+       "w": "cambiarlo",
+       "s": 13.87,
+       "e": 14.35
+      },
+      {
+       "w": "todo.",
+       "s": 14.35,
+       "e": 14.55
+      }
+     ]
+    }
+   ],
+   "fin_voz": 15.054,
+   "beats": 8
+  },
+  {
+   "id": "grieta",
+   "t0": 16.8,
+   "t1": 21.6,
+   "compases": 2,
+   "frases": [
+    {
+     "key": "grieta_0",
+     "texto": "Aterriza en una diminuta grieta, fría y olvidada.",
+     "t0": 17.25,
+     "t1": 20.85,
+     "words": [
+      {
+       "w": "Aterriza",
+       "s": 17.25,
+       "e": 17.85
+      },
+      {
+       "w": "en",
+       "s": 17.85,
+       "e": 17.95
+      },
+      {
+       "w": "una",
+       "s": 17.95,
+       "e": 18.09
+      },
+      {
+       "w": "diminuta",
+       "s": 18.09,
+       "e": 18.57
+      },
+      {
+       "w": "grieta,",
+       "s": 18.57,
+       "e": 18.95
+      },
+      {
+       "w": "fría",
+       "s": 18.97,
+       "e": 19.73
+      },
+      {
+       "w": "y",
+       "s": 19.73,
+       "e": 19.93
+      },
+      {
+       "w": "olvidada.",
+       "s": 19.93,
+       "e": 20.59
+      }
+     ]
+    }
+   ],
+   "fin_voz": 20.85,
+   "beats": 8
+  },
+  {
+   "id": "brote",
+   "t0": 21.6,
+   "t1": 26.4,
+   "compases": 2,
+   "frases": [
+    {
+     "key": "brote_0",
+     "texto": "Hasta que el calor de la primavera despierta sus raíces.",
+     "t0": 22.109,
+     "t1": 25.514,
+     "words": [
+      {
+       "w": "Hasta",
+       "s": 22.109,
+       "e": 22.329
+      },
+      {
+       "w": "que",
+       "s": 22.329,
+       "e": 22.509
+      },
+      {
+       "w": "el",
+       "s": 22.509,
+       "e": 22.589
+      },
+      {
+       "w": "calor",
+       "s": 22.589,
+       "e": 22.889
+      },
+      {
+       "w": "de",
+       "s": 22.889,
+       "e": 23.069
+      },
+      {
+       "w": "la",
+       "s": 23.069,
+       "e": 23.109
+      },
+      {
+       "w": "primavera",
+       "s": 23.109,
+       "e": 23.669
+      },
+      {
+       "w": "despierta",
+       "s": 23.669,
+       "e": 24.409
+      },
+      {
+       "w": "sus",
+       "s": 24.409,
+       "e": 24.489
+      },
+      {
+       "w": "raíces.",
+       "s": 24.489,
+       "e": 24.929
+      }
+     ]
+    }
+   ],
+   "fin_voz": 25.514,
+   "beats": 8
+  },
+  {
+   "id": "flor",
+   "t0": 26.4,
+   "t1": 31.2,
+   "compases": 2,
+   "frases": [
+    {
+     "key": "flor_0",
+     "texto": "De la piedra nace un brillante sol amarillo.",
+     "t0": 26.95,
+     "t1": 29.35,
+     "words": [
+      {
+       "w": "De",
+       "s": 26.95,
+       "e": 27.05
+      },
+      {
+       "w": "la",
+       "s": 27.05,
+       "e": 27.11
+      },
+      {
+       "w": "piedra",
+       "s": 27.11,
+       "e": 27.47
+      },
+      {
+       "w": "nace",
+       "s": 27.47,
+       "e": 27.77
+      },
+      {
+       "w": "un",
+       "s": 27.77,
+       "e": 27.85
+      },
+      {
+       "w": "brillante",
+       "s": 27.85,
+       "e": 28.31
+      },
+      {
+       "w": "sol",
+       "s": 28.31,
+       "e": 28.49
+      },
+      {
+       "w": "amarillo.",
+       "s": 28.49,
+       "e": 28.93
+      }
+     ]
+    }
+   ],
+   "fin_voz": 29.35,
+   "beats": 8
+  },
+  {
+   "id": "morfosis",
+   "t0": 31.2,
+   "t1": 36.0,
+   "compases": 2,
+   "frases": [
+    {
+     "key": "morfosis_0",
+     "texto": "Con el paso del tiempo, el amarillo se vuelve nieve.",
+     "t0": 31.75,
+     "t1": 34.478,
+     "words": [
+      {
+       "w": "Con",
+       "s": 31.75,
+       "e": 31.93
+      },
+      {
+       "w": "el",
+       "s": 31.93,
+       "e": 32.05
+      },
+      {
+       "w": "paso",
+       "s": 32.05,
+       "e": 32.23
+      },
+      {
+       "w": "del",
+       "s": 32.23,
+       "e": 32.41
+      },
+      {
+       "w": "tiempo,",
+       "s": 32.41,
+       "e": 32.69
+      },
+      {
+       "w": "el",
+       "s": 32.81,
+       "e": 33.17
+      },
+      {
+       "w": "amarillo",
+       "s": 33.17,
+       "e": 33.59
+      },
+      {
+       "w": "se",
+       "s": 33.59,
+       "e": 33.67
+      },
+      {
+       "w": "vuelve",
+       "s": 33.67,
+       "e": 33.97
+      },
+      {
+       "w": "nieve.",
+       "s": 33.97,
+       "e": 34.23
+      }
+     ]
+    }
+   ],
+   "fin_voz": 34.478,
+   "beats": 8
+  },
+  {
+   "id": "cierre",
+   "post": 1.4,
+   "t0": 36.0,
+   "t1": 42.6,
+   "compases": null,
+   "frases": [
+    {
+     "key": "cierre_0",
+     "texto": "Cientos de hermanas esperan pacientes su turno.",
+     "t0": 36.568,
+     "t1": 39.232,
+     "words": [
+      {
+       "w": "Cientos",
+       "s": 36.568,
+       "e": 37.028
+      },
+      {
+       "w": "de",
+       "s": 37.028,
+       "e": 37.208
+      },
+      {
+       "w": "hermanas",
+       "s": 37.208,
+       "e": 37.528
+      },
+      {
+       "w": "esperan",
+       "s": 37.528,
+       "e": 38.008
+      },
+      {
+       "w": "pacientes",
+       "s": 38.008,
+       "e": 38.428
+      },
+      {
+       "w": "su",
+       "s": 38.428,
+       "e": 38.568
+      },
+      {
+       "w": "turno.",
+       "s": 38.568,
+       "e": 38.968
+      }
+     ]
+    },
+    {
+     "key": "cierre_1",
+     "texto": "Y con la siguiente brisa...",
+     "t0": 39.482,
+     "t1": 40.925,
+     "words": [
+      {
+       "w": "Y",
+       "s": 39.482,
+       "e": 39.562
+      },
+      {
+       "w": "con",
+       "s": 39.562,
+       "e": 39.662
+      },
+      {
+       "w": "la",
+       "s": 39.662,
+       "e": 39.762
+      },
+      {
+       "w": "siguiente",
+       "s": 39.762,
+       "e": 40.022
+      },
+      {
+       "w": "brisa...",
+       "s": 40.022,
+       "e": 40.502
+      }
+     ]
+    }
+   ],
+   "fin_voz": 40.925,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 7.2,
+   "t0": 7.135,
+   "t1": 7.235,
+   "tipo": "continua",
+   "de": "vuelo",
+   "a": "viento"
+  },
+  {
+   "t": 12.0,
+   "t0": 11.935,
+   "t1": 12.035,
+   "tipo": "continua",
+   "de": "viento",
+   "a": "tormenta"
+  },
+  {
+   "t": 16.8,
+   "t0": 16.735,
+   "t1": 16.835,
+   "tipo": "continua",
+   "de": "tormenta",
+   "a": "grieta"
+  },
+  {
+   "t": 21.6,
+   "t0": 21.535,
+   "t1": 21.635,
+   "tipo": "continua",
+   "de": "grieta",
+   "a": "brote"
+  },
+  {
+   "t": 26.4,
+   "t0": 26.335,
+   "t1": 26.435,
+   "tipo": "continua",
+   "de": "brote",
+   "a": "flor"
+  },
+  {
+   "t": 31.2,
+   "t0": 31.135,
+   "t1": 31.235,
+   "tipo": "continua",
+   "de": "flor",
+   "a": "morfosis"
+  },
+  {
+   "t": 36.0,
+   "t0": 35.935,
+   "t1": 36.035,
+   "tipo": "continua",
+   "de": "morfosis",
+   "a": "cierre"
+  }
+ ]
+}

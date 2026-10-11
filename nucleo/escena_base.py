@@ -43,6 +43,9 @@ def sale(t, t0, dur=0.25):
 
 
 def color_arcoiris(u, s=0.75, v=1.0):
+    rango = estilos.ACTUAL.get("hue_rango")      # estilos calmados: solo un rango de tonos (p. ej. cálidos)
+    if rango:
+        u = rango[0] + (rango[1] - rango[0]) * (0.5 + 0.5 * math.sin(u * 2 * math.pi))
     return tuple(int(255 * c) for c in D._hsv(u % 1.0, s, v))
 
 
@@ -405,6 +408,8 @@ ICONOS = {
     "sol": _sol,
     "pan": lambda lz, x, y, s, t: D.pan_plano(lz, x, y, 1.1 * s),
     "tostada": lambda lz, x, y, s, t: D.tostada(lz, x, y, 1.0 * s),
+    "pegamento": lambda lz, x, y, s, t: D.tubo_pegamento(lz, x, y + 10 * s, 1.35 * s),
+    "pastilla": lambda lz, x, y, s, t: D.pastilla(lz, x, y, 1.5 * s),
     "espejo_obsidiana": lambda lz, x, y, s, t: D.espejo_obsidiana(lz, x, y, 1.0 * s, t),
     "rueda_madera": lambda lz, x, y, s, t: D.rueda_madera(lz, x, y, 1.05 * s, t * 0.6),
     "bici": lambda lz, x, y, s, t: D.bici(lz, x, y - 20 * s, 0.9 * s, t),

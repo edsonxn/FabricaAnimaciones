@@ -3,14 +3,14 @@
 Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre" nucleo/*.py`.
 
 ## Catálogos
-- **Estilos visuales** (`estilos.ESTILOS`): doodle_psicodelico, pizarra, cuaderno, neon, recortes, limpio, kurzgesagt
-- **Íconos** (`escena_base.ICONOS`, usar con `dibujar_icono(lz, nombre, x, y, s, t)`): mano, estarcido, cerdo, hamburguesa, flauta, nota, hombre_leon, mascara, collar, aguja, hueso, atun, sushi, adn, cerebro, telefono, fuego, flor, vela, mamut, wifi, ciudad, trigo, ojo, corazon, estrella, australia, copo, bebe, sol, pan, tostada, espejo_obsidiana, rueda_madera, bici, auto, maleta, silla, tablilla, tablilla_numeros, vasija, chat, drenaje, inodoro, reloj, dia_noche, moneda_leon, piramides, carreta, balanza, cavernicola, tu, neandertal
+- **Estilos visuales** (`estilos.ESTILOS`): doodle_psicodelico, doodle, pizarra, cuaderno, neon, recortes, limpio, vox, boceto, documental, kurzgesagt, guache
+- **Íconos** (`escena_base.ICONOS`, usar con `dibujar_icono(lz, nombre, x, y, s, t)`): mano, estarcido, cerdo, hamburguesa, flauta, nota, hombre_leon, mascara, collar, aguja, hueso, atun, sushi, adn, cerebro, telefono, fuego, flor, vela, mamut, wifi, ciudad, trigo, ojo, corazon, estrella, australia, copo, bebe, sol, pan, tostada, pegamento, pastilla, espejo_obsidiana, rueda_madera, bici, auto, maleta, silla, tablilla, tablilla_numeros, vasija, chat, drenaje, inodoro, reloj, dia_noche, moneda_leon, piramides, carreta, balanza, cavernicola, tu, neandertal
 - **Fondos** (`fondos.FONDOS`): rayos, espiral, tunel, plasma, anillos, ondas, caleido, puntos, cueva, rejilla, cosmos, liso, pizarra, kraft, plano, cartulina, espacio, degradado
-- **Transiciones** (`efectos.TRANSICIONES`): iris, mancha, espiral, glitch, zoom, persianas, derretir, ola, burbujas, caleido, pixeles, garabato, fundido, zoom_suave, bajada, continua
+- **Transiciones** (`efectos.TRANSICIONES`): iris, mancha, espiral, glitch, zoom, persianas, derretir, ola, burbujas, caleido, pixeles, garabato, fundido, zoom_suave, bajada, paneo, continua
 - **Paletas** (`fondos.PALETAS`): arcoiris, fuego, acido, chicle, oceano, lima, ocaso, cosmos, ocre, neon
 - **Sabores musicales** (`config.SABORES`): build, acid, funk, flauta, epico, brillo, disco, reloj, dub, lounge, ambiente, final, espacio, tension, vacio, esperanza
 - **Patrones de bombo** (`ritmo.PATRONES`): 4x4, break, medio, latido, suave, nada
-- **Efectos de sonido** (`self.ev(t, nombre, vol, pan, tono=, dur=)`): impacto, pop, whoosh, sello, error, brillo, boing, ding, eco, golpe_suave, spray, revelar, obturador, pincel, oink, reloj_rapido, aparicion, rugido, comic, clink, bling, viento, brr, puntada, flashes, tick, hmm, chapuzon, pasos, latido, bebe, match, pin, fuego, campana, arena, morph, zap, puf, escribir, splat, espiral_zap, glitch, zoom_whoosh, persianas, cinta_lenta, ola, burbujas, iris, brillo_caleido, apagon, suspiro, hielo, pio, burbuja, amanecer
+- **Efectos de sonido** (`self.ev(t, nombre, vol, pan, tono=, dur=)`): impacto, pop, whoosh, sello, error, brillo, boing, ding, eco, golpe_suave, spray, revelar, obturador, pincel, oink, reloj_rapido, aparicion, rugido, comic, clink, bling, viento, brr, puntada, flashes, tick, hmm, chapuzon, pasos, latido, bebe, match, pin, fuego, campana, arena, morph, zap, puf, escribir, splat, espiral_zap, glitch, zoom_whoosh, persianas, cinta_lenta, ola, burbujas, iris, brillo_caleido, apagon, suspiro, hielo, pio, burbuja, amanecer, plop, gota, papel, lluvia, garabato, glug, chorro, borrar, crece, siseo, ronca, chancla, bonk, gong, ko, estrellitas, bocinazo, explosion, canonazo, crujido, galope, tambor, pluck, trueno, cuerno, tren, monedas, espada, fanfarria
 - **Modos** (`musica.MODOS`): dorico, frigio, menor, mixolidio, lidio
 
 ## escena_base.py — Base reutilizable de escenas: Escena (genérica), Item (título -> fase A -> fase B), utilidades
@@ -126,6 +126,7 @@ Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre
     - `pegar(spr, x, y, k=1.0, rot=0.0, ancla=(0.5, 0.5), alfa=1.0, capa=None)` — spr en píxeles SS; k = escala local.
     - `texto(s, x, y, px, fuente_='snap', color=BLANCO, borde=NEGRO, borde_px=None, k=1.0, rot=0.0, ancla=(0.5, 0.5), alfa=1.0, capa=None, temblor=1.0, seed=0)`
     - `resolver()`
+- `rellenar_suave(dst, aa, f, col)` — Llena dst (RGBA premultiplicado uint8) con un alfa suave calculado a 1/f de resolución (aa en [0,1]).
 - `estilizar(c)` — Color RGB -> color según el estilo activo (la tinta NEGRO se sustituye; rellenos se transforman).
 - `textura_trazo(boil, fuerza)` — Máscara multiplicativa (H,W,1) que 'rompe' los trazos como tiza/lápiz; cambia a 10 fps.
 - `componer(fondo, capas, sticker=None, sombra=None, borde_col=None, estilo=True, boil=0)` — fondo float32 HxWx3 en [0,1]; capas uint8 premultiplicadas (o None).
@@ -181,6 +182,8 @@ Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre
 - `etiqueta(lz, x, y, texto, px=46, fondo=(255, 250, 235), color=NEGRO, rot=-0.03, seed=301, k=1.0, fuente='print', cinta=True, alfa=1.0)` — Papelito pegado con cinta con texto.
 - `pan_plano(lz, x, y, s=1.0, seed=501, quemado=1.0)` — Pan plano redondo visto en 3/4, con manchas tostadas.
 - `tostada(lz, x, y, s=1.0, seed=511)` — Rebanada de pan tostado con mantequilla.
+- `tubo_pegamento(lz, x, y, s=1.0, seed=651)` — Tubo de pegamento inclinado con tapa roja y una gota.
+- `pastilla(lz, x, y, s=1.0, seed=661)` — Cápsula de medicina (mitad roja, mitad blanca), inclinada.
 - `espejo_obsidiana(lz, x, y, s=1.0, t=0.0, seed=521, reflejo=True)` — Espejo de obsidiana pulida (negro brillante) sobre base de yeso.
 - `rueda_madera(lz, x, y, s=1.0, rot=0.0, seed=531)` — Rueda maciza de dos tablones con agujero cuadrado para el eje (como la de Liubliana).
 - `bici(lz, x, y, s=1.0, t=0.0, seed=541, col=(230, 70, 80))`
@@ -212,6 +215,7 @@ Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre
 - `tierra(lz, x, y, r, t, rot=0.0, ang_luz=math.pi, luz=1.0, hielo=0.0, nubes=1.0, ciudades=0.0, tilt=-0.35, atmosfera=1.0)` — Planeta Tierra. rot: giro (rad); luz 0..1 (0 = sin Sol: todo en noche); hielo 0..1 congela océanos.
 - `luna(lz, x, y, r, ang_luz=math.pi, luz=1.0)`
 - `pajaro(lz, x, y, s=1.0, t=0.0, color=(126, 88, 214), mirar=(0.0, 0.0), aleteo=0.0, tiritar=0.0, feliz=0.0, escarcha=0.0, voltear=False, boca=0.0)` — Pajarito redondo tipo Kurzgesagt (origen en las patas). mirar (-1..1), aleteo 0..1, tiritar 0..1.
+- `kuri(lz, x, y, s=1.0, t=0.0, color=(64, 196, 190), mirar=(0.0, 0.0), aleteo=0.0, tiritar=0.0, feliz=0.0, escarcha=0.0, voltear=False, boca=0.0)` — Kuri, mascota de Kuriox: robot explorador redondo con pantalla de cara y antena (origen en los pies).
 - `microbio(lz, x, y, s, t, color=(120, 230, 150), seed=0, forma=0, mirar=(0.0, 0.0), brillo=0.4)` — Microbio blandito con ojos y cilios. forma 0 = píldora, 1 = redondo, 2 = alargado.
 - `arbol(lz, x, y, s=1.0, t=0.0, hojas=(80, 176, 100), perdida=0.0, seed=0, escarcha=0.0, oscuro=0.0)` — Árbol de copa redonda (origen en la base). perdida 0..1: las hojas se secan y caen. oscuro: noche.
 - `hojas_cayendo(lz, x, y, t, t0, n=10, col=(170, 140, 100), seed=3)` — Hojas que caen desde (x, y) a partir de t0.
@@ -223,6 +227,20 @@ Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre
 - `rotulo(lz, x, y, texto, px=46, k=1.0, color=BLANCO, fuente='geo', ancla=(0.5, 0.5), alfa=1.0, sombra=0.45, capa=2, rot=0.0)` — Texto blanco limpio con sombra suave (sin contorno).
 - `pastilla(lz, x, y, texto, px=40, k=1.0, fondo=(255, 255, 255), color=(34, 28, 80), fuente='geo', alfa=1.0, capa=2)` — Etiqueta en cápsula redondeada (fondo claro, texto oscuro).
 - `linea_llamada(lz, p0, p1, frac=1.0, col=(255, 255, 255), ancho=3.0, alfa=0.9)` — Línea fina de llamada (del objeto al rótulo) con punto en el origen.
+- `planeta(lz, x, y, r, tipo, t=0.0, luz=1.0, ang_luz=math.pi, seed=0)` — Planeta del sistema solar (no la Tierra: usa tierra()). luz 0..1 (0 = sin Sol).
+- `sol_corte(lz, x, y, r, t, apertura=1.0, nucleo=1.0, ang=-0.55, brillo=1.0)` — Sol con una cuña recortada que muestra núcleo, zona radiativa y zona convectiva.
+- `galaxia(lz, x, y, R, t=0.0, rot=0.0, inclin=0.5, alfa=1.0, fondo=(12, 12, 34))` — Galaxia espiral (Vía Láctea estilizada) de radio R; alfa mezcla hacia el color de fondo.
+- `estrella_neutrones(lz, x, y, r, col=(170, 210, 255), brillo=1.0)`
+- `humano(lz, x, y, s=1.0, t=0.0, ropa=(92, 142, 232), piel=(250, 202, 164), pelo=(64, 44, 44), paso=0.0, brazo=0.0, voltear=False)` — Persona simple estilo Kurzgesagt (origen en los pies, altura ~170*s).
+- `casa(lz, x, y, s=1.0, calor=0.0, oscuro=0.0)` — Casita (origen en la base). calor 0..1: ventana encendida con luz cálida.
+- `planta(lz, x, y, s=1.0, t=0.0, vida=1.0, col=(96, 196, 110))` — Plantita/flor (origen en la base). vida 0..1: 0 = seca y caída.
+- `conejo(lz, x, y, s=1.0, t=0.0, col=(196, 184, 178), voltear=False, salto=0.0)`
+- `zorro(lz, x, y, s=1.0, t=0.0, voltear=False)`
+- `gusano_tubo(lz, x, y, s=1.0, t=0.0, seed=0, alto=1.0)` — Gusano de tubo gigante (Riftia): tubo blanco y penacho rojo que se mece (origen en la base).
+- `panel_solar(lz, x, y, s=1.0, activo=1.0)`
+- `central_nuclear(lz, x, y, s=1.0, t=0.0, activa=1.0)` — Torre de refrigeración con vapor (origen en la base).
+- `interruptor(lz, x, y, s=1.0, encendido=1.0)`
+- `molecula(lz, x, y, s=1.0, tipo='O2', rot=0.0)` — O2 (dos esferas rojas) o CO2 (carbono gris entre dos oxígenos).
 
 ## fondos.py — Fondos psicodélicos procedurales. Se calculan a 960x540 y se escalan a 1080p.
 
@@ -247,6 +265,8 @@ Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre
 - `estrellas(img, t, brillo=1.0, dx=0.0, dy=0.0, densidad=1.0)` — Dibuja estrellas titilantes (a 1080p) sobre img. dx, dy: paralaje en px (las lejanas se mueven menos).
 - `espacio(t, tono=0, pulso=0.0, pal=None, brillo_est=1.0, dx=0.0, dy=0.0)` — Espacio estilo Kurzgesagt: degradado azul noche -> violeta, nebulosa suave y estrellas titilantes.
 - `degradado(t, arriba=(0.35, 0.62, 0.95), abajo=(0.75, 0.88, 1.0), pulso=0.0, pal=None)` — Degradado vertical liso (cielos, agua).
+- `papel(t, tinte=(1.0, 1.0, 1.0), oscuro=0.0, dx=0.0, dy=0.0, pulso=0.0, pal=None)` — Mesa de papel crema (estilo Vox). tinte multiplica el color; oscuro 0..1 lo apaga; dx, dy: paralaje en px.
+- `cielo_fondo(colores, alfa=1.0, papel_img=None)` — Degradado vertical (arriba, abajo) a pantalla completa; se mezcla con el papel según alfa.
 
 ## efectos.py — Post-efectos de cámara ("tomas raras") y transiciones entre escenas.
 
@@ -280,6 +300,7 @@ Consulta esto en vez de leer el código completo. Detalles: `grep -n "def nombre
 - `tr_fundido(A, B, p, seed=0)` — Fundido cruzado suave con un leve acercamiento (documental).
 - `tr_zoom_suave(A, B, p, seed=0, cx=CX, cy=CY)` — Acercamiento hacia el centro de A que se funde con B saliendo de lejos (sin desenfoque radial).
 - `tr_bajada(A, B, p, seed=0)` — Paneo vertical: la cámara baja (A sale por arriba, B entra desde abajo).
+- `tr_paneo(A, B, p, seed=0)` — Paneo horizontal de cámara: A sale por la izquierda y B entra por la derecha, con un leve alejamiento
 
 ## estilos.py — Estilos visuales intercambiables. Un estilo cambia tinta, rellenos, temblor, bordes, texturas,
 

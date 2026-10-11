@@ -19,7 +19,7 @@ import escena_base  # noqa: F401  (activa el estilo del video)
 import efectos as E
 import miniaturas as V
 from final import slug
-from motor import Lienzo, a_uint8, componer
+from motor import Lienzo, a_uint8, componer, VERTICAL, W
 
 os.makedirs("salida", exist_ok=True)
 os.makedirs("previews", exist_ok=True)
@@ -33,6 +33,9 @@ for nombre in pedidas:
     img = componer(fondo, lz.resolver(), boil=lz.boil)
     img = E.acabado(img, 3)
     rgb = a_uint8(np.clip(img, 0, 1))
+    if VERTICAL:      # video vertical: la miniatura 16:9 se dibuja en una franja del lienzo
+        y0 = getattr(V, "CROP_Y", 0)
+        rgb = rgb[y0:y0 + int(W * 9 / 16)]
     mini = cv2.resize(rgb, (1280, 720), interpolation=cv2.INTER_AREA)
     ruta = f"{base}{nombre}.jpg"
     for q in (95, 90, 85, 80):

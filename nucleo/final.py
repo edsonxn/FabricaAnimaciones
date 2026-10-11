@@ -71,13 +71,20 @@ def main():
     srt(base + ".srt")
     for r in [x for x in (master, wa, base + ".srt") if x]:
         print(f"{r}  {os.path.getsize(r) / 1e6:.1f} MB")
-    # limpiar intermedios regenerables (~1 GB por video de 3 min); FAB_CONSERVAR=1 para mantenerlos
-    if not os.environ.get("FAB_CONSERVAR"):
-        import shutil
-        shutil.rmtree("segmentos", ignore_errors=True)
-        if os.path.exists("salida/video_sin_audio.mp4"):
-            os.remove("salida/video_sin_audio.mp4")
-        print("intermedios borrados (segmentos/ y video_sin_audio.mp4); el MASTER conserva el video")
+    # video_sin_audio.mp4 se borra (el concat de segmentos lo rehace en segundos). segmentos/ se CONSERVA (desde
+    # 2026-10-04) para corregir una toma sin re-renderizar todo: `fab.py <v> video --rehacer 270-280` + `final`.
+    # Se borran con `fab.py <v> limpiar` cuando el video está aprobado/subido (o FAB_LIMPIAR=1 aquí mismo).
+    if os.path.exists("salida/video_sin_audio.mp4") and not os.environ.get("FAB_CONSERVAR"):
+        os.remove("salida/video_sin_audio.mp4")
+    if os.path.isdir("segmentos"):
+        if os.environ.get("FAB_LIMPIAR"):
+            import shutil
+            shutil.rmtree("segmentos", ignore_errors=True)
+            print("segmentos/ borrados; el MASTER conserva el video")
+        else:
+            mb = sum(os.path.getsize(os.path.join("segmentos", x)) for x in os.listdir("segmentos")) / 1e6
+            print(f"segmentos/ conservados ({mb:.0f} MB) para arreglos por tramos (`video --rehacer t0-t1`); "
+                  f"bórralos con `python fab.py <video> limpiar` cuando el video esté aprobado")
 
 
 if __name__ == "__main__":

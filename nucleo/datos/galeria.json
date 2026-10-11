@@ -1,0 +1,288 @@
+{
+ "_nota": "Catálogo de la pestaña «Estilos» del panel. Se relee en cada petición: editar este archivo NO exige reiniciar el panel. Una entrada por estilo, con un video terminado de ejemplo (`archivos`: el primero que exista en videos/<video>/salida/). Las entradas sin archivo se omiten solas.",
+ "estilos": [
+  {
+   "id": "kurzgesagt_iso",
+   "nombre": "Kurzgesagt isométrico + mapas con relieve",
+   "estilo": "kurzgesagt",
+   "canal": "Bitácora Perdida",
+   "video": "independencia_mx",
+   "archivos": [
+    "independencia_mexico_MASTER.mp4"
+   ],
+   "desc": "Dioramas isométricos de cada lugar, interiores en corte, mapas con relieve real, retratos reales de dominio público en marco dorado y rótulos de cápsula; la cámara nunca se queda quieta.",
+   "uso": "Historia y geografía de México de más de 3 min: el estándar de calidad de Bitácora Perdida.",
+   "extra": "kz_iso*.py · kz_mapa*.py · kz_retrato_real.py · catálogo docs/api_kz.md · estilo_kurzgesagt.md §A"
+  },
+  {
+   "id": "kurzgesagt_kuri",
+   "nombre": "Kurzgesagt vertical · Kuri",
+   "estilo": "kurzgesagt",
+   "canal": "Kuriox",
+   "video": "historia_60",
+   "archivos": [
+    "historia_humanidad_60s_MASTER.mp4"
+   ],
+   "desc": "Mismo vector plano, pero vertical 1080x1920, mascota Kuri, épocas con portales y movimiento constante.",
+   "uso": "Shorts dinámicos: nada se queda quieto, pausas cortas.",
+   "extra": "kit.py + era.py · sin voz"
+  },
+  {
+   "id": "boceto_guache",
+   "nombre": "Boceto + guache con mapa · v2",
+   "estilo": "boceto",
+   "canal": "Cronopapel",
+   "video": "historia_espana",
+   "archivos": [
+    "historia_espana_5min_MASTER.mp4"
+   ],
+   "desc": "Relieve real (ETOPO1) bajo el guache, ríos, capas de reinos con fronteras reales y pegatinas de papel recortado; los territorios cambian con transiciones procedurales (tinta, pincel, portal, ola).",
+   "uso": "Historia de países en pocos minutos, con territorios que cambian.",
+   "extra": "mapa.py + core.py · historia_iran, historia_china y historia_japon son la v1"
+  },
+  {
+   "id": "boceto_short",
+   "nombre": "Boceto + guache · Short vertical",
+   "estilo": "boceto",
+   "canal": "Kuriox",
+   "video": "primer_foton",
+   "archivos": [
+    "primer_foton_short_MASTER.mp4"
+   ],
+   "desc": "Short 1080x1920 sin mapa: pegatinas de papel sobre fondos guache con la mascota Foti, cambios pintados (iris, pincelada) y oclusión por capas.",
+   "uso": "Shorts de ciencia de ~1 min.",
+   "extra": "escenas.py (Ctx.capa) + coreo_*.py · estilo_boceto_guache_mapa.md"
+  },
+  {
+   "id": "doodle",
+   "nombre": "Doodle",
+   "estilo": "doodle",
+   "canal": "Sapiens con Wifi",
+   "video": "neandertales",
+   "archivos": [
+    "neandertales_7_mitos_MASTER.mp4"
+   ],
+   "desc": "Garabatos con trazo que tiembla, stickers y videos de lista por ítems (antes/hoy) con coreografía a medida.",
+   "uso": "Listas y mitos de prehistoria y ciencia.",
+   "extra": "Item + escenas.py"
+  },
+  {
+   "id": "doodle_psicodelico",
+   "nombre": "Doodle psicodélico",
+   "estilo": "doodle_psicodelico",
+   "canal": "Sapiens con Wifi",
+   "video": "40mil_anos",
+   "archivos": [
+    "10_cosas_hace_40000_anos_WHATSAPP.mp4",
+    "10_cosas_hace_40000_anos_MASTER.mp4"
+   ],
+   "desc": "Doodle con fondos psicodélicos, tomas raras (ojo de pez, caleidoscopio, warhol, droste) y 12 transiciones.",
+   "uso": "El video de referencia del núcleo (3:00, 12 escenas a medida).",
+   "extra": "versión ligera (WhatsApp) del archivo"
+  },
+  {
+   "id": "documental_tablero",
+   "nombre": "Documental · tablero de detective vivo",
+   "estilo": "documental",
+   "canal": "Edsonxn",
+   "video": "polybius",
+   "archivos": [
+    "polybius_MASTER.mp4"
+   ],
+   "desc": "Un solo plano secuencia sobre un corcho infinito: polaroids, hilos, lupa y linterna; cada tema entra por un portal dibujado (almacén a oscuras, cabina arcade) y vuelve al corcho. Motion graphics propios, sin reciclar.",
+   "uso": "Misterios y leyendas de internet de 5 a 15 min, voz Faraon, sin subtítulos.",
+   "extra": "tablero.py + piezas + portales · el original es satoshi_nakamoto"
+  },
+  {
+   "id": "documental_crimen",
+   "nombre": "Documental · noticia / crimen real",
+   "estilo": "documental",
+   "canal": "Edsonxn",
+   "video": "christa_pike",
+   "archivos": [
+    "christa_pike_MASTER.mp4"
+   ],
+   "desc": "Extractos cortos de noticias con crédito en pantalla, fotos de archivo, mapa de relieve real con rutas, líneas de tiempo, relojes y esquemas dibujados propios; el texto nunca va sobre rostros.",
+   "uso": "Casos de crimen real y noticias de actualidad (8 min).",
+   "extra": "kit_cp.py · estilo_documental.md § noticia / crimen real"
+  },
+  {
+   "id": "documental",
+   "nombre": "Documental de misterio",
+   "estilo": "documental",
+   "canal": "Experimento",
+   "video": "voynich",
+   "archivos": [
+    "voynich_v3_MASTER.mp4",
+    "voynich_v3_preview_720p.mp4"
+   ],
+   "desc": "Fotos con parallax por profundidad, texto cinético en cursiva, filtro de película (tilt-shift, escaneo, grano) y música Lyria.",
+   "uso": "Misterios con material real y fuentes citadas.",
+   "extra": "nucleo/docu.py · ver BITACORA antes de reutilizarlo"
+  },
+  {
+   "id": "noir",
+   "nombre": "Noir · tinta y aguada",
+   "estilo": "noir",
+   "canal": "LogIA",
+   "video": "informante_2027",
+   "archivos": [
+    "informante_2027_MASTER.mp4"
+   ],
+   "desc": "Cine negro solo en blanco y negro: claroscuro, lluvia y persianas. Dibujo cuadro a cuadro, con video real y fotos reales de las personas entintados en el mismo B/N; un detective narra la investigación.",
+   "uso": "Casos e investigaciones sobre IA y tecnología, voz ElevenLabs con corchetes de actuación.",
+   "extra": "kit27.py + mundos27.py + comite.py · nucleo/noir*.py · estilo_noir.md"
+  },
+  {
+   "id": "noir_color",
+   "nombre": "Noir a color (neo-noir apagado)",
+   "estilo": "noir_color",
+   "canal": "— (prueba)",
+   "video": "prueba_noir_color",
+   "archivos": [
+    "prueba_noir_color_sodio.mp4"
+   ],
+   "desc": "La misma esencia del noir en tinta y aguada (claroscuro, persianas, lluvia que brilla con la luz, grano) con un poco de color, siempre oscuro y desaturado: sombras azul acero, luces de sodio ámbar y un solo acento (neón rojo, lámpara verde, sello rojo).",
+   "uso": "Casos, misterios e investigaciones con detective narrador cuando el B/N se queda corto. Paletas sodio · bourbon · medianoche.",
+   "extra": "nucleo/noir_color.py (+ noir*.py) · estilo_noir_color.md"
+  },
+  {
+   "id": "noir_feudal",
+   "nombre": "Noir feudal (pesquisidor medieval)",
+   "estilo": "noir_feudal",
+   "canal": "— (prueba)",
+   "video": "prueba_noir_feudal",
+   "archivos": [
+    "prueba_noir_feudal_antorcha.mp4"
+   ],
+   "desc": "Variante medieval del noir a color: un pesquisidor encapuchado con farol investiga casos, personas y sucesos antiguos. Villas amuralladas, castillos bajo la luna, antorchas y velas vivas, estandartes que ondean, pergaminos con letra gótica y sello de lacre.",
+   "uso": "Historias de reinos y dinastías (sagas de fantasía medieval, historia antigua y medieval). Paletas antorcha · pergamino.",
+   "extra": "nucleo/noir_feudal.py + noir_color.py · estilo_noir_color.md § Variante FEUDAL"
+  },
+  {
+   "id": "flow_plastilina",
+   "nombre": "Secuencia Flow · plastilina",
+   "estilo": "secuencia_flow",
+   "canal": "Plastitube",
+   "video": "teflon_sarten",
+   "archivos": [
+    "teflon_sarten_MASTER.mp4"
+   ],
+   "desc": "Claymation hecha con imágenes de Google Flow, una por beat de la narración, con cámara lenta y música Lyria adaptada al guion. No se dibuja por código.",
+   "uso": "Inventos y sus inventores, voz Dan. Esta prueba es solo imágenes; los episodios completos abren con 1-2 min de clips.",
+   "extra": "motor secuencia · estilo_secuencia_flow.md"
+  },
+  {
+   "id": "flow_naturaleza",
+   "nombre": "Secuencia Flow · ilustración de naturaleza",
+   "estilo": "secuencia_flow",
+   "canal": "Wild Next Door",
+   "video": "bichos_invierno",
+   "archivos": [
+    "bugs_winter_MASTER.mp4"
+   ],
+   "desc": "Ilustración con 7 clips de video de Flow al inicio e imágenes después; dos escenas por clip con transición dibujada. Narrado en inglés.",
+   "uso": "Preguntas sobre los bichos y animales cercanos, 9 min.",
+   "extra": "motor secuencia · avispas_invierno y aranas_otono usan el mismo formato"
+  },
+  {
+   "id": "secuencia_fx",
+   "nombre": "Secuencia con efectos · animación fumada",
+   "estilo": "secuencia_fx",
+   "canal": "Experimento",
+   "video": "guason_fumado",
+   "archivos": [
+    "guason_fumado_MASTER.mp4"
+   ],
+   "desc": "Dibujos exagerados y mal hechos a propósito, una imagen por frase con cámara dirigida, golpes y destellos sincronizados a la palabra y SFX de ElevenLabs anclados. Usa un audio ya grabado.",
+   "uso": "Sketches y parodias de ~3 min; la receta de efectos también sirve para Plastitube y Wild Next Door.",
+   "extra": "efectos.py + nucleo/secuencia_fx.py · estilo_secuencia_fx.md"
+  },
+  {
+   "id": "rayosx_tecno",
+   "nombre": "Rayos X tecno · vertical",
+   "estilo": "documental",
+   "canal": "Experimento",
+   "video": "mods_ia_fusion",
+   "archivos": [
+    "mods_ia_fusion_MASTER.mp4"
+   ],
+   "desc": "Neón sobre fondo oscuro con estética de interfaz: el video real vive dentro de una ventana de programa y la animación muestra lo que pasa por debajo (procesos, memoria, datos, código).",
+   "uso": "Explicadores verticales de tecnología, software, juegos e IA.",
+   "extra": "pix.py + comp.py · estilo_rayosx_tecno.md"
+  },
+  {
+   "id": "boceto_bucle",
+   "nombre": "Boceto de lápiz en bucle",
+   "estilo": "boceto",
+   "canal": "Experimento",
+   "video": "gota_bucle",
+   "archivos": [
+    "viaje_de_una_gota_MASTER.mp4"
+   ],
+   "desc": "Papel crema, tinta que tiembla a 12 cuadros/s, crayón en zigzag; los objetos se dibujan, se borran y se transforman uno en otro. El último cuadro es igual al primero.",
+   "uso": "Loops verticales con una mascota que viaja entre escenas.",
+   "extra": "nucleo/boceto.py · vertical"
+  },
+  {
+   "id": "guache",
+   "nombre": "Guache (libro infantil)",
+   "estilo": "guache",
+   "canal": "Experimento",
+   "video": "pelea_meme",
+   "archivos": [
+    "hombre_vs_criaturas_MASTER.mp4"
+   ],
+   "desc": "Paleta apagada y cálida, formas planas con media luna de sombra, grano y fibra de papel. Mundo continuo por biomas.",
+   "uso": "Videos de meme por rondas, con humor.",
+   "extra": "nucleo/guache.py"
+  },
+  {
+   "id": "pizarra",
+   "nombre": "Pizarra de tiza",
+   "estilo": "pizarra",
+   "canal": "Demo",
+   "video": "demo_cerebro",
+   "archivos": [
+    "Dos_cosas_que_tu_cerebro_hace_sin_avisarte_MASTER.mp4"
+   ],
+   "desc": "Fondo de pizarra con textura de tiza y trazos claros; usa las escenas genéricas de la plantilla.",
+   "uso": "Explicaciones cortas y didácticas.",
+   "extra": "plantilla sin coreografía a medida"
+  },
+  {
+   "id": "kurzgesagt",
+   "nombre": "Kurzgesagt · plano (versión anterior)",
+   "estilo": "kurzgesagt",
+   "canal": "Bitácora Perdida",
+   "video": "tesoro_moctezuma",
+   "archivos": [
+    "tesoro_moctezuma_MASTER.mp4"
+   ],
+   "desc": "Vector plano sin contornos, bloom en lo luminoso, plano secuencia con cámara continua. Mapas, figuras y shots hechos con Lienzo.",
+   "uso": "Primera generación del estilo en el canal; los videos nuevos usan el isométrico de arriba.",
+   "extra": "Lienzo + plano.py · también teotihuacan"
+  },
+  {
+   "id": "kurzgesagt_espacio",
+   "nombre": "Kurzgesagt · plano secuencia",
+   "estilo": "kurzgesagt",
+   "canal": "Experimento",
+   "video": "sol_apagado",
+   "archivos": [
+    "si_el_sol_se_apagara_MASTER.mp4"
+   ],
+   "desc": "El primer video Kurzgesagt: una sola clase `Mundo` dibuja todo sin cortes; zoom de la Tierra que se aplana en horizonte.",
+   "uso": "Documental de espacio y ciencia, 1 minuto.",
+   "extra": "plano.py: esfera, sol, tierra, luna"
+  }
+ ],
+ "sin_ejemplo": [
+  "neon",
+  "cuaderno",
+  "recortes",
+  "limpio",
+  "vox",
+  "cartoon90 (gato_cobarde: se entrega sin renderizar)"
+ ]
+}

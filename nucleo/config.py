@@ -6,12 +6,23 @@ Campos opcionales de guion.py:
   VOZ = dict(referencia, idioma, exaggeration, cfg_weight, temperature),
   TRANSICIONES = [(tipo, dur), ...], MUSICA = {id_escena: dict(bombo, modo, raiz, sabor)}
 Campos opcionales por escena: "pre", "post" (márgenes en s antes/después de la voz).
+SIN_VOZ = True: sin voz; cada escena (sección musical) indica "compases": N y "frases": [] (ver linea_tiempo_mudo.py).
 """
 import os
+import re
 
 import guion as _g
 
 ESCENAS = _g.ESCENAS
+# Etiquetas de actuación de ElevenLabs v3 («[sighs] Nadie lo sabía. [short pause] Ni yo.», docs/voz.md § Corchetes): solo las lee
+# el TTS. Aquí se separan: FRASES_TTS[clave] guarda la frase con corchetes y ESCENAS queda limpia para Whisper, timeline, .srt y escenas.
+_ETIQUETA = re.compile(r"\s*\[[A-Za-z][A-Za-z' -]*\]\s*")
+FRASES_TTS = {}
+for _e in ESCENAS:
+    for _i, _f in enumerate(_e.get("frases") or []):
+        if isinstance(_f, str) and _ETIQUETA.search(_f):
+            FRASES_TTS[f"{_e['id']}_{_i}"] = _f
+            _e["frases"][_i] = _ETIQUETA.sub(" ", _f).strip()
 IDS = [e["id"] for e in ESCENAS]
 PRIMERA, ULTIMA = IDS[0], IDS[-1]
 TITULO = getattr(_g, "TITULO", "Video")
@@ -19,12 +30,15 @@ ARCHIVO = getattr(_g, "ARCHIVO", None)          # nombre base de los archivos de
 ESTILO_VISUAL = os.environ.get("FAB_ESTILO") or getattr(_g, "ESTILO_VISUAL", "doodle_psicodelico")
 DURACION = getattr(_g, "DURACION", None)
 BPM = getattr(_g, "BPM", 120)
+GAP = getattr(_g, "GAP", 0.30)                 # pausa (s) entre frases de una escena
+SUBTITULOS = getattr(_g, "SUBTITULOS", False)      # REGLA DEL USUARIO (30-sep-2026): sin subtítulos quemados en ningún canal; el .srt sí se genera (para YouTube)
+SIN_VOZ = getattr(_g, "SIN_VOZ", False)         # video sin narración: cada escena trae "compases" y no hay frases
 
 VOZ = dict(referencia="C:/chatterbox_voices/Dan.mp3", idioma="es", exaggeration=0.8, cfg_weight=0.3,
            temperature=0.8)
 VOZ.update(getattr(_g, "VOZ", {}))
 # niveles de mezcla (LUFS de partida de música y efectos antes del ducking); opcional en guion.py
-MEZCLA = dict(musica=-20.0, sfx=-22.0)
+MEZCLA = dict(musica=-20.0, sfx=-22.0, fx=-6.0)   # fx = recorte en dB de audio/fx.wav (SFX de ElevenLabs, secuencia con efectos)
 MEZCLA.update(getattr(_g, "MEZCLA", {}))
 
 TRANS_DEFECTO = [("garabato", 1.0), ("mancha", 0.8), ("espiral", 0.85), ("glitch", 0.7), ("zoom", 0.9),

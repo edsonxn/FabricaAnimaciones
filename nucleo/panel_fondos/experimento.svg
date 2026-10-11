@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" preserveAspectRatio="xMaxYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1b2540"/><stop offset="1" stop-color="#2f3f6a"/></linearGradient>
+    <pattern id="rej" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#8fa4d8" stroke-opacity=".22" stroke-width="1"/></pattern>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#rej)"/>
+  <g fill="none" stroke="#9db4ff" stroke-opacity=".55" stroke-width="2.5">
+    <circle cx="900" cy="150" r="90"/><circle cx="900" cy="150" r="55" stroke-dasharray="6 8"/><rect x="620" y="70" width="150" height="110" rx="8"/>
+    <path d="M620 220 L770 220 M700 70 L700 40 M1060 60 L1160 60 L1160 160"/>
+  </g>
+  <g fill="#9db4ff" opacity=".6"><circle cx="900" cy="150" r="7"/><circle cx="1160" cy="160" r="6"/><circle cx="700" cy="40" r="6"/></g>
+  <path d="M640 150 L670 112 L700 136 L735 90 L752 100" fill="none" stroke="#ffd36b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+  <g font-family="Consolas,monospace" font-size="15" fill="#c6d3ff" opacity=".7"><text x="1000" y="250">fab.py prueba</text><text x="620" y="250">t = 0.00 s</text></g>
+</svg>

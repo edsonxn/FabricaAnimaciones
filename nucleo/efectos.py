@@ -168,6 +168,26 @@ _GRANOS = [_grano(s) for s in range(4)]
 _fib = np.random.default_rng(77).normal(0, 1, (H, W)).astype(np.float32)
 _FIBRA = cv2.GaussianBlur(_fib, (0, 0), sigmaX=6, sigmaY=0.8) * 3.0
 _VIG = (1 - 0.28 * np.clip(_R / RMAX, 0, 1) ** 2.2).astype(np.float32)[..., None]
+_VIG2 = np.ascontiguousarray(_VIG[..., 0])
+_UNO = np.ones((H, W), np.float32)
+
+try:                                    # grano + fibra + viñeta de `acabado` en un paso con numba (FAB_SIN_NUMBA=1 la apaga)
+    import os as _os
+    if _os.environ.get("FAB_SIN_NUMBA"):
+        raise ImportError
+    from numba import njit as _njit, prange as _prange
+
+    @_njit(parallel=True, cache=True)
+    def _grano_nb(img, gr, fib, grano, vig, out):
+        uno, medio = np.float32(1.0), np.float32(0.5)
+        for y in _prange(img.shape[0]):
+            for x in range(img.shape[1]):
+                f = uno + (gr[y, x] * grano + fib[y, x] * grano * medio)
+                v = vig[y, x]
+                for ch in range(3):
+                    out[y, x, ch] = img[y, x, ch] * f * v
+except Exception:
+    _grano_nb = None
 
 
 def bloom(img, fuerza, umbral=0.62):
@@ -184,13 +204,44 @@ def bloom(img, fuerza, umbral=0.62):
     return img + fuerza * cv2.resize(g, (W, H), interpolation=cv2.INTER_LINEAR)
 
 
+def _papel_tex():
+    """Textura de papel para gouache: manchas suaves de pigmento + fibras + pequeñas motas (precalculada)."""
+    rng = np.random.default_rng(2026)
+    tot = np.zeros((H, W), np.float32)
+    for sg, am in ((70, 0.5), (28, 0.35), (9, 0.25)):
+        n = rng.normal(0, 1, (H // 4, W // 4)).astype(np.float32)
+        n = cv2.resize(n, (W, H), interpolation=cv2.INTER_CUBIC)
+        n = cv2.GaussianBlur(n, (0, 0), sg / 4)
+        tot += n / (n.std() + 1e-6) * am
+    fib = cv2.GaussianBlur(rng.normal(0, 1, (H, W)).astype(np.float32), (0, 0), sigmaX=1.2, sigmaY=5.0)
+    tot += fib / (fib.std() + 1e-6) * 0.35
+    mota = (rng.random((H, W)) > 0.9993).astype(np.float32)
+    mota = cv2.GaussianBlur(mota, (0, 0), 1.3) * 26
+    return (tot * 0.020 - mota * 0.05).astype(np.float32)[..., None]
+
+
+_PAPEL = None
+
+
 def acabado(img, boil, grano=None, vineta=None):
     import estilos
+    global _PAPEL
+    pap = estilos.ACTUAL.get("papel", 0.0)
+    if pap > 0:                      # gouache: la textura del papel se ve más en los tonos claros
+        if _PAPEL is None:
+            _PAPEL = _papel_tex()
+        lum = img @ np.array([0.3, 0.59, 0.11], np.float32)
+        img = img * (1 + _PAPEL * pap * (0.55 + 0.45 * lum[..., None]))
+        img = img * np.array([1.0, 0.985, 0.955], np.float32) + np.array([0.008, 0.004, 0.0], np.float32)
     img = bloom(img, estilos.ACTUAL.get("bloom", 0.0))
     grano = estilos.ACTUAL["grano"] if grano is None else grano
     vineta = estilos.ACTUAL["vineta"] if vineta is None else vineta
     if grano <= 0:
         return img * _VIG if vineta else img
+    if _grano_nb is not None and img.dtype == np.float32 and img.shape == (H, W, 3):
+        out = np.empty((H, W, 3), np.float32)
+        _grano_nb(img, _GRANOS[boil % 4], _FIBRA, np.float32(grano), _VIG2 if vineta else _UNO, out)
+        return out
     g = _GRANOS[boil % 4] * grano + _FIBRA * grano * 0.5
     img = img * (1 + g[..., None])
     if vineta:
@@ -421,8 +472,24 @@ def tr_bajada(A, B, p, seed=0):
     return out
 
 
+def tr_paneo(A, B, p, seed=0):
+    """Paneo horizontal de cámara: A sale por la izquierda y B entra por la derecha, con un leve alejamiento
+    en el medio (la cámara viaja) y desenfoque de movimiento suave."""
+    u = e_inout(p)
+    off = int(round(u * W))
+    out = np.empty_like(A)
+    out[:, :W - off] = A[:, off:]
+    out[:, W - off:] = B[:, :off]
+    v = abs(math.sin(math.pi * p))          # 0 en los extremos, 1 en el punto de mayor velocidad
+    k = int(v * 22) * 2 + 1
+    if k > 3:
+        out = cv2.blur(out, (k, 1))
+    z = 1.0 - 0.05 * v
+    return _escalar(out, z) if z < 0.998 else out
+
+
 TRANSICIONES = dict(iris=tr_iris, mancha=tr_mancha, espiral=tr_espiral, glitch=tr_glitch, zoom=tr_zoom,
                     persianas=tr_persianas, derretir=tr_derretir, ola=tr_ola, burbujas=tr_burbujas,
                     caleido=tr_caleido, pixeles=tr_pixeles, garabato=tr_garabato,
-                    fundido=tr_fundido, zoom_suave=tr_zoom_suave, bajada=tr_bajada,
+                    fundido=tr_fundido, zoom_suave=tr_zoom_suave, bajada=tr_bajada, paneo=tr_paneo,
                     continua=lambda A, B, p, seed=0: B)   # plano secuencia (render.py la salta)

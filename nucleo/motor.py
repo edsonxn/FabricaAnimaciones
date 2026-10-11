@@ -2,6 +2,7 @@
 """Motor doodle: lienzo supersampleado con capas, trazos temblorosos (boil),
 rellenos, texto, sprites y composición con borde tipo sticker."""
 import math
+import os
 from contextlib import contextmanager
 from functools import lru_cache
 
@@ -11,9 +12,14 @@ from PIL import Image, ImageDraw, ImageFont
 
 import estilos
 
-W, H = 1920, 1080
-SS = 2                 # supersampling del lienzo vectorial
-FPS = 30
+try:                    # formato del video: guion.py -> FORMATO = "vertical" (1080x1920) o "horizontal" (1920x1080)
+    import guion as _g
+    VERTICAL = getattr(_g, "FORMATO", "horizontal") == "vertical"
+except Exception:
+    VERTICAL = False
+W, H = (1080, 1920) if VERTICAL else (1920, 1080)
+SS = int(os.environ.get("FAB_SS", "2"))        # supersampling del lienzo vectorial (FAB_SS=1: borrador rápido, solo vista previa)
+FPS = int(os.environ.get("FAB_FPS", "30"))     # un video puede pedir 60 fps con `FPS = 60` en guion.py (fab.py lo pasa en FAB_FPS)
 BOIL_FPS = 10          # las líneas "hierven" a 10 fps, como animación a mano
 
 FUENTES = {
@@ -25,6 +31,11 @@ FUENTES = {
     # sans geométrica limpia (estilo Kurzgesagt); si falta Poppins se usa Bahnschrift
     "geo": "~/AppData/Local/Microsoft/Windows/Fonts/Poppins-Bold.ttf|C:/Windows/Fonts/bahnschrift.ttf",
     "geo_n": "~/AppData/Local/Microsoft/Windows/Fonts/Poppins-SemiBold.ttf|C:/Windows/Fonts/bahnschrift.ttf",
+    # rotulación estilo Vox: grotesca gruesa + serif para pies de mapa
+    "vox_x": "~/AppData/Local/Microsoft/Windows/Fonts/Montserrat-Black.ttf|C:/Windows/Fonts/seguibl.ttf",
+    "vox_b": "~/AppData/Local/Microsoft/Windows/Fonts/Montserrat-ExtraBold.ttf|C:/Windows/Fonts/seguibl.ttf",
+    "vox_s": "~/AppData/Local/Microsoft/Windows/Fonts/Montserrat-SemiBold.ttf|C:/Windows/Fonts/seguisb.ttf",
+    "vox_serif": "~/AppData/Local/Microsoft/Windows/Fonts/Baskervville-BoldItalic.ttf|C:/Windows/Fonts/georgiaz.ttf",
     "geo_x": "~/AppData/Local/Microsoft/Windows/Fonts/Poppins-ExtraBold.ttf|C:/Windows/Fonts/seguibl.ttf",
 }
 
@@ -296,6 +307,9 @@ class Lienzo:
         self.t = t
         self.boil = int(math.floor(t * BOIL_FPS + 1e-6))
         self.wob = wob
+        self.dif = []                  # etiquetas sin cola diferidas (se dibujan al final del cuadro, ya sabiendo dónde quedó todo lo demás)
+        self.zonas_rot = []            # rectángulos de rótulos ya dibujados en este cuadro (para que las etiquetas sin cola no se encimen)
+        self.ocupado = []              # huecos ya usados por íconos de ciudad en este cuadro (evita que se amontonen en el mapa)
 
     # ---- transformaciones
     def push(self):
@@ -358,8 +372,24 @@ class Lienzo:
         fn(tmp, np.array([x0 * 16, y0 * 16], np.int32))
         m = self._mascara_recorte(x0, y0, x1, y1)
         if m is not None:
-            tmp = (tmp.astype(np.float32) * (m[..., None].astype(np.float32) / 255.0))
-        self._componer(buf, tmp, x0, y0, alfa)
+            a = cv2.multiply(tmp, cv2.merge([m, m, m, m]), scale=1 / 255.0)
+            tmp = a
+        self._componer_bloques(buf, tmp, x0, y0, alfa)
+
+    def _componer_bloques(self, buf, tmp, x0, y0, alfa=1.0, T=256):
+        """Compone regiones grandes por bloques de TxT, saltando los bloques totalmente transparentes."""
+        h, w = tmp.shape[:2]
+        if h * w < 600_000:
+            self._componer(buf, tmp, x0, y0, alfa)
+            return
+        a = tmp[..., 3]
+        ny, nx = -(-h // T), -(-w // T)
+        pad = np.zeros((ny * T, nx * T), np.uint8)
+        pad[:h, :w] = a
+        ocupado = pad.reshape(ny, T, nx, T).max(axis=(1, 3)) > 0
+        for by, bx in zip(*np.nonzero(ocupado)):
+            ya, xa = by * T, bx * T
+            self._componer(buf, tmp[ya:ya + T, xa:xa + T], x0 + xa, y0 + ya, alfa)
 
     def escala(self):
         return math.sqrt(abs(np.linalg.det(self.M[:2, :2])))
@@ -483,8 +513,7 @@ class Lienzo:
             ys = (np.arange(hs, dtype=np.float32) * f + oy - c[1])[:, None]
             dist = np.sqrt(xs * xs + ys * ys) / R
             aa = np.clip((1 - dist) / max(1e-3, 1 - r0), 0, 1) ** dureza
-            aa = cv2.resize(aa, (ws * f, hs * f), interpolation=cv2.INTER_LINEAR)[:h, :w]
-            dst[:] = np.concatenate([col * aa[..., None], aa[..., None] * 255], -1).round().astype(np.uint8)
+            rellenar_suave(dst, aa, f, col)
 
         self._dibujar_en(self._buf(capa), (c[0] - R - 2, c[1] - R - 2, c[0] + R + 3, c[1] + R + 3), dibuja, alfa)
 
@@ -519,14 +548,13 @@ class Lienzo:
     # ---- sprites
     @staticmethod
     def _componer(buf, spr, x0, y0, alfa=1.0):
+        """'Over' premultiplicado: dst = spr + dst * (1 - alfa_spr), con OpenCV en enteros."""
         h, w = spr.shape[:2]
         dst = buf[y0:y0 + h, x0:x0 + w]
-        s = spr.astype(np.float32)
-        if alfa < 0.999:
-            s *= alfa
-        d = dst.astype(np.float32)
-        out = s + d * (1.0 - s[..., 3:4] / 255.0)
-        dst[:] = np.clip(out + 0.5, 0, 255).astype(np.uint8)
+        if spr.dtype != np.uint8 or alfa < 0.999:
+            spr = cv2.convertScaleAbs(spr, alpha=float(min(1.0, alfa)))
+        inv = 255 - spr[..., 3]
+        dst[:] = cv2.add(cv2.multiply(dst, cv2.merge([inv, inv, inv, inv]), scale=1 / 255.0), spr)
 
     def pegar(self, spr, x, y, k=1.0, rot=0.0, ancla=(0.5, 0.5), alfa=1.0, capa=None):
         """spr en píxeles SS; k = escala local."""
@@ -586,6 +614,15 @@ class Lienzo:
         return out
 
 
+def rellenar_suave(dst, aa, f, col):
+    """Llena dst (RGBA premultiplicado uint8) con un alfa suave calculado a 1/f de resolución (aa en [0,1])."""
+    h, w = dst.shape[:2]
+    a8 = np.clip(aa * 255 + 0.5, 0, 255).astype(np.uint8)
+    A = cv2.resize(a8, (a8.shape[1] * f, a8.shape[0] * f), interpolation=cv2.INTER_LINEAR)[:h, :w]
+    ch = [cv2.convertScaleAbs(A, alpha=float(c) / 255.0) for c in col[:3]]
+    dst[:] = cv2.merge(ch + [A])
+
+
 # ---------------------------------------------------------------- estilo
 def estilizar(c):
     """Color RGB -> color según el estilo activo (la tinta NEGRO se sustituye; rellenos se transforman)."""
@@ -638,12 +675,21 @@ def componer(fondo, capas, sticker=None, sombra=None, borde_col=None, estilo=Tru
     img = fondo
     c0, c1, c2 = capas
     T = textura_trazo(boil, tex) if tex > 0 else None
+    # «over» de cada capa con numba (fusiona astype + /255 + mezcla: ~3x menos tiempo, mismo resultado). `propio` = img ya
+    # es un arreglo nuestro y se puede escribir encima (el fondo puede venir de una caché y no se toca).
+    rapido = _sobre_nb is not None and T is None and img.dtype == np.float32 and img.shape == (H, W, 3)
+    propio = False
     if c0 is not None:
-        c = c0.astype(np.float32) / 255
-        if T is not None:
-            c = c * T
-        img = c[..., :3] + img * (1 - c[..., 3:4])
-    if c1 is not None:
+        if rapido:
+            img, propio = _sobre(img, c0, propio), True
+        else:
+            c = c0.astype(np.float32) / 255
+            if T is not None:
+                c = c * T
+            img = c[..., :3] + img * (1 - c[..., 3:4])
+    if c1 is not None and rapido and not (sticker or sombra > 0 or neon > 0):
+        img, propio = _sobre(img, c1, propio), True
+    elif c1 is not None:
         m = c1[..., 3]
         c = c1.astype(np.float32) / 255
         if T is not None:
@@ -669,11 +715,67 @@ def componer(fondo, capas, sticker=None, sombra=None, borde_col=None, estilo=Tru
             fuente = rgb * (sat ** 2) * np.clip(mx * 1.3 - 0.3, 0, 1)
             glow = cv2.GaussianBlur(fuente, (0, 0), 8) * 0.9 + cv2.GaussianBlur(fuente, (0, 0), 2.5) * 0.35
             img = img + neon * glow
+        propio = True
     if c2 is not None:
-        c = c2.astype(np.float32) / 255
-        img = c[..., :3] + img * (1 - c[..., 3:4])
+        if rapido and img.dtype == np.float32:
+            img = _sobre(img, c2, propio)
+        else:
+            c = c2.astype(np.float32) / 255
+            img = c[..., :3] + img * (1 - c[..., 3:4])
     return img
 
 
-def a_uint8(img):
+def _a_uint8_numpy(img):
     return np.clip(img * 255 + 0.5, 0, 255).astype(np.uint8)
+
+
+try:                                    # conversión float [0,1] -> uint8 en un solo paso multihilo (FAB_SIN_NUMBA=1 la apaga)
+    if os.environ.get("FAB_SIN_NUMBA"):
+        raise ImportError
+    from numba import njit as _njit, prange as _prange
+
+    @_njit(parallel=True, cache=True)
+    def _a8(x, out):
+        c255, medio = np.float32(255.0), np.float32(0.5)
+        for i in _prange(x.shape[0]):
+            v = x[i] * c255 + medio
+            out[i] = 0 if v < 0 else (255 if v > 255 else np.uint8(v))
+except Exception:
+    _a8 = None
+
+try:                                    # «over» de una capa uint8 premultiplicada sobre una imagen float32 (componer)
+    if os.environ.get("FAB_SIN_NUMBA"):
+        raise ImportError
+    from numba import njit as _njit, prange as _prange
+
+    @_njit(parallel=True, cache=True)
+    def _sobre_nb(img, cap, out):
+        k = np.float32(255.0)
+        uno = np.float32(1.0)
+        for y in _prange(img.shape[0]):
+            for x in range(img.shape[1]):
+                a = cap[y, x, 3]
+                if a == 0:
+                    for ch in range(3):
+                        out[y, x, ch] = img[y, x, ch] * uno
+                else:
+                    inv = uno - np.float32(a) / k
+                    for ch in range(3):
+                        out[y, x, ch] = np.float32(cap[y, x, ch]) / k + img[y, x, ch] * inv
+except Exception:
+    _sobre_nb = None
+
+
+def _sobre(img, cap, en_sitio):
+    """cap (uint8 HxWx4 premultiplicada) 'over' img (float32 HxWx3). en_sitio=True escribe sobre img."""
+    out = img if en_sitio else np.empty((H, W, 3), np.float32)
+    _sobre_nb(img, cap, out)
+    return out
+
+
+def a_uint8(img):
+    if _a8 is not None and img.dtype == np.float32 and img.flags.c_contiguous:
+        out = np.empty(img.shape, np.uint8)
+        _a8(img.reshape(-1), out.reshape(-1))
+        return out
+    return _a_uint8_numpy(img)

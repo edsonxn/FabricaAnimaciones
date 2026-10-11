@@ -560,11 +560,117 @@ def s_amanecer(dur=2.5, **k):
     return nrm(np.stack([x, np.roll(x, 300)])) * 0.55
 
 
-BIB = {k[2:]: v for k, v in globals().items() if k.startswith("s_")}
+# ------------------------------------------------------------ estilo boceto: sonidos de movimiento
+def s_plop(tono=1.0, **k):
+    """Gota que cae al agua: burbuja grave + salpicadura."""
+    d = 0.26
+    t = _t(d)
+    b = glide(240 * tono, 640 * tono, 0.15, 0.7) * env_exp(0.15, 0.05, 0.002)
+    y = np.zeros(len(t))
+    y[:len(b)] += b
+    y += hp(ruido(len(t), 31), 1600) * np.exp(-t * 55) * 0.25
+    return nrm(y) * 0.85
+
+
+def s_gota(tono=1.0, **k):
+    """Plip agudo (una gota que se forma o gotea)."""
+    d = 0.1
+    return nrm(glide(1250 * tono, 2300 * tono, d, 0.8) * env_exp(d, 0.03, 0.001)) * 0.55
+
+
+def s_papel(**k):
+    """Hoja que se voltea o cruza volando."""
+    d = 0.2
+    t = _t(d)
+    x = svf(ruido(len(t), 41), np.linspace(2200, 7000, len(t)), 1.4, 1) * np.sin(np.pi * np.minimum(1, t / d)) ** 0.8
+    return nrm(x) * 0.6
+
+
+def s_lluvia(dur=3.0, **k):
+    """Lluvia fina sobre papel (miles de golpecitos)."""
+    d = max(0.5, dur)
+    n = int(d * SR)
+    out = np.zeros(n)
+    rng = np.random.default_rng(51)
+    for _ in range(int(d * 75)):
+        m = int(rng.uniform(0.006, 0.018) * SR)
+        i = int(rng.uniform(0, d - 0.03) * SR)
+        b = hp(ruido(m, int(rng.integers(1, 99999))), 2400 + rng.uniform(0, 3200)) * np.exp(-np.arange(m) / (m / 3.5))
+        out[i:i + m] += (b * rng.uniform(0.2, 1.0))[:n - i]
+    tt = np.arange(n) / SR
+    env = np.minimum(1, tt / 0.4) * np.minimum(1, (d - tt) / 0.5)
+    return nrm(out * env) * 0.5
+
+
+def s_garabato(dur=0.4, **k):
+    """Trazos rápidos de lápiz (boceto que aparece)."""
+    d = max(0.15, dur)
+    out = np.zeros(int(d * SR))
+    rng = np.random.default_rng(61)
+    tt = 0.0
+    while tt < d - 0.06:
+        dd = rng.uniform(0.05, 0.11)
+        m = int(dd * SR)
+        x = svf(ruido(m, int(tt * 1000) + 5), np.linspace(2200, 4200, m), 1.3, 1) * np.sin(np.pi * np.linspace(0, 1, m))
+        i = int(tt * SR)
+        out[i:i + m] += x[:len(out) - i]
+        tt += dd + rng.uniform(0.01, 0.04)
+    return nrm(out) * 0.6
+
+
+def s_glug(tono=1.0, **k):
+    """Trago de agua."""
+    d = 0.22
+    t = _t(d)
+    f = glide(320 * tono, 150 * tono, d, 1.0) * (0.55 + 0.45 * np.sin(2 * np.pi * 24 * t)) * env_exp(d, 0.1, 0.01)
+    return nrm(f) * 0.85
+
+
+def s_chorro(dur=1.2, **k):
+    """Agua que corre o se vierte."""
+    d = max(0.4, dur)
+    t = _t(d)
+    x = svf(ruido(len(t), 71), 900 + 500 * np.sin(2 * np.pi * 3 * t), 0.9, 1) * (0.7 + 0.3 * np.sin(2 * np.pi * 31 * t))
+    return nrm(x * np.minimum(1, t / 0.08) * np.minimum(1, (d - t) / 0.2)) * 0.6
+
+
+def s_borrar(dur=0.4, **k):
+    """Goma que raspa el papel."""
+    d = max(0.15, dur)
+    t = _t(d)
+    x = svf(ruido(len(t), 81), np.full(len(t), 1900.0), 0.8, 1) * (0.5 + 0.5 * np.abs(np.sin(2 * np.pi * 13 * t)))
+    return nrm(x * np.minimum(1, t / 0.03) * np.minimum(1, (d - t) / 0.06)) * 0.55
+
+
+def s_crece(dur=0.8, **k):
+    """Algo que crece del suelo: rumor grave que sube."""
+    d = max(0.3, dur)
+    t = _t(d)
+    x = glide(55, 190, d, 1.6) * np.minimum(1, t / 0.1) * np.minimum(1, (d - t) / 0.15)
+    x += lp(ruido(len(t), 91), 500) * np.minimum(1, t / 0.2) * 0.5
+    return nrm(x) * 0.7
+
+
+def s_siseo(dur=0.8, **k):
+    """Vapor que se escapa."""
+    d = max(0.3, dur)
+    t = _t(d)
+    x = hp(ruido(len(t), 95), 3800) * np.minimum(1, t / 0.05) * np.exp(-t * 2.4)
+    return nrm(x) * 0.55
+
+
+def s_ronca(**k):
+    """Ronquido suave (zzz)."""
+    d = 0.7
+    t = _t(d)
+    f = glide(190, 115, d, 1.0) * (0.75 + 0.25 * np.sin(2 * np.pi * 7 * t))
+    return nrm(lp(f * np.sin(np.pi * t / d) ** 1.5, 700)) * 0.6
+
+
 TRANS_SFX = dict(garabato="escribir", mancha="splat", espiral="espiral_zap", glitch="glitch", zoom="zoom_whoosh",
                  persianas="persianas", derretir="cinta_lenta", ola="ola", burbujas="burbujas", iris="iris",
                  caleido="brillo_caleido", pixeles="glitch", fundido="suspiro", zoom_suave="suspiro",
-                 bajada="suspiro", continua=None)
+                 bajada="suspiro", paneo="zoom_whoosh", continua=None)
 
 
 def eventos():
@@ -582,6 +688,8 @@ def eventos():
 
 
 def main():
+    global BIB
+    BIB = {k[2:]: v for k, v in globals().items() if k.startswith("s_")}     # incluye los efectos definidos al final
     os.makedirs("audio", exist_ok=True)
     evs = eventos()
     faltan = sorted({e["nombre"] for e in evs} - set(BIB))
@@ -607,6 +715,205 @@ def main():
     sf.write("audio/sfx.wav", (buf / pico * 0.9).T.astype(np.float32), SR, subtype="FLOAT")
     json.dump(evs, open("audio/sfx_eventos.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print(f"{len(evs)} eventos, {len(cache)} sonidos distintos, pico previo {pico:.2f}")
+
+
+# ------------------------------------------------------------ efectos de pelea (video meme, estilo guache)
+def s_chancla(tono=1.0, **k):
+    """Chanclazo: palmada seca de goma + un 'pop' hueco."""
+    d = 0.35
+    t = _t(d)
+    slap = hp(ruido(len(t), 41), 1800) * np.exp(-t * 55) + bp(ruido(len(t), 42), 900 * tono, 1.2) * np.exp(-t * 30) * 0.9
+    thump = np.sin(2 * np.pi * np.cumsum(220 * tono * np.exp(-t * 18) + 70) / SR) * np.exp(-t * 16)
+    return nrm(slap * 0.9 + thump * 0.8)
+
+
+def s_bonk(tono=1.0, **k):
+    """Sartenazo: campanazo metálico corto (FM) con golpe grave."""
+    d = 0.9
+    t = _t(d)
+    golpe = np.sin(2 * np.pi * np.cumsum(140 * np.exp(-t * 25) + 60) / SR) * np.exp(-t * 20)
+    metal = fm_campana(620 * tono, d, 2.4, 2.76, 0.28) * 0.7 + fm_campana(1480 * tono, d, 1.6, 1.4, 0.16) * 0.35
+    return nrm(golpe * 0.9 + metal + hp(ruido(len(t), 43), 3000) * np.exp(-t * 60) * 0.3)
+
+
+def s_gong(tono=1.0, **k):
+    """Gong de inicio de ronda."""
+    d = 2.6
+    t = _t(d)
+    x = sum(np.sin(2 * np.pi * f * tono * t + 0.6 * np.sin(2 * np.pi * f * 1.41 * tono * t) * np.exp(-t * 2)) * a
+            for f, a in ((110, 1.0), (165, 0.6), (233, 0.5), (331, 0.35), (467, 0.2))) * np.exp(-t * 1.5)
+    return nrm(x + hp(ruido(len(t), 44), 2500) * np.exp(-t * 25) * 0.3)
+
+
+def s_ko(tono=1.0, **k):
+    """Nocaut: golpe grande + campana descendente."""
+    d = 1.5
+    t = _t(d)
+    golpe = np.sin(2 * np.pi * np.cumsum(180 * np.exp(-t * 12) + 45) / SR) * np.exp(-t * 6)
+    caida = np.sin(2 * np.pi * np.cumsum(900 * tono * np.exp(-t * 1.8) + 200) / SR) * np.exp(-t * 3) * 0.35
+    return nrm(saturar(golpe * 1.1 + caida + butter_lp(ruido(len(t), 45), 1400, 2) * np.exp(-t * 14) * 0.7, 1.4))
+
+
+def s_estrellitas(tono=1.0, **k):
+    """Mareo de dibujos animados: trino de campanitas descendente."""
+    d = 0.9
+    t = _t(d)
+    x = np.zeros_like(t)
+    for i in range(6):
+        x += np.sin(2 * np.pi * 1900 * tono * (0.82 ** i) * t) * np.exp(-np.maximum(t - 0.09 * i, 0) * 14) * (t >= 0.09 * i) * 0.6
+    return nrm(x)
+
+
+def s_bocinazo(tono=1.0, **k):
+    """Trombón triste (fracaso cómico): dos notas que caen."""
+    d = 0.9
+    t = _t(d)
+    f = np.where(t < 0.35, 220 * tono, 220 * tono * (0.86 ** (np.minimum(t - 0.35, 0.5) * 5) ) * 0.84)
+    x = sierra(f) * 0.6 + np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.5
+    return nrm(lp(x, 1500) * np.minimum(1, t / 0.02) * np.exp(-np.maximum(t - 0.6, 0) * 9))
+
+
+# ------------------------------------------------------------ efectos para historias con mapa (historia_china, 30-sep-2026)
+def s_explosion(tono=1.0, **k):
+    """Explosión de pólvora: estampido grave + ruido que cae + silbido de chispas."""
+    d = 1.6
+    t = _t(d)
+    bajo = np.sin(2 * np.pi * np.cumsum(120 * tono * np.exp(-t * 7) + 38) / SR) * np.exp(-t * 4.5)
+    cuerpo = butter_lp(ruido(len(t), 71), 900 * tono, 2) * np.exp(-t * 5.5)
+    chis = hp(ruido(len(t), 72), 5000) * np.exp(-t * 9) * 0.35
+    return nrm(saturar(bajo * 1.1 + cuerpo * 0.9 + chis, 1.5))
+
+
+def s_canonazo(tono=1.0, **k):
+    d = 1.3
+    t = _t(d)
+    bajo = np.sin(2 * np.pi * np.cumsum(90 * tono * np.exp(-t * 14) + 34) / SR) * np.exp(-t * 6)
+    cuerpo = butter_lp(ruido(len(t), 73), 1600, 2) * np.exp(-t * 9)
+    return nrm(saturar(bajo * 1.2 + cuerpo * 0.8, 1.6))
+
+
+def s_crujido(dur=0.8, **k):
+    """Grieta que se abre: chasquidos secos y un crujido grave."""
+    d = dur
+    t = _t(d)
+    x = butter_lp(ruido(len(t), 74), 500, 2) * 0.6 * np.minimum(1, t / 0.05) * np.exp(-t * 2.6)
+    rng = np.random.default_rng(75)
+    for ti in np.sort(rng.uniform(0, d * 0.8, 9)):
+        i = int(ti * SR)
+        n = int(0.03 * SR)
+        x[i:i + n] += hp(ruido(n, int(ti * 1000)), 1800) * np.exp(-np.arange(n) / SR * 160) * rng.uniform(0.4, 1.0)
+    return nrm(x)
+
+
+def s_galope(dur=1.4, **k):
+    """Galope: tres golpes y pausa, repetidos."""
+    d = dur
+    t = _t(d)
+    x = np.zeros_like(t)
+    paso = 0.42
+    for c in range(int(d / paso) + 1):
+        for j, (off, a) in enumerate(((0.0, 0.8), (0.11, 0.6), (0.24, 1.0))):
+            i = int((c * paso + off) * SR)
+            n = int(0.09 * SR)
+            if i + n < len(x):
+                x[i:i + n] += butter_lp(ruido(n, 80 + c * 3 + j), 420, 2) * np.exp(-np.arange(n) / SR * 38) * a
+    return nrm(x)
+
+
+def s_tambor(tono=1.0, **k):
+    d = 0.9
+    t = _t(d)
+    x = np.sin(2 * np.pi * np.cumsum(95 * tono * np.exp(-t * 10) + 52) / SR) * np.exp(-t * 6)
+    return nrm(saturar(x + butter_lp(ruido(len(t), 81), 400, 2) * np.exp(-t * 25) * 0.4, 1.3))
+
+
+def s_pluck(tono=1.0, **k):
+    """Cuerda pulsada pentatónica (guzheng): ataque brillante y caída larga."""
+    d = 1.6
+    t = _t(d)
+    f = 329.63 * tono
+    x = sum(np.sin(2 * np.pi * f * h * t + 0.3 * h) * a * np.exp(-t * (2.0 + 1.8 * h)) for h, a in ((1, 1.0), (2, 0.5), (3, 0.3), (4.02, 0.18), (5.03, 0.1)))
+    x += hp(ruido(len(t), 82), 3000) * np.exp(-t * 90) * 0.4
+    return nrm(x)
+
+
+def s_trueno(**k):
+    d = 2.2
+    t = _t(d)
+    x = butter_lp(ruido(len(t), 83), 300, 2) * np.minimum(1, t / 0.08) * np.exp(-t * 1.6)
+    return nrm(saturar(x * 1.4 + butter_lp(ruido(len(t), 84), 120, 2) * np.exp(-t * 1.0), 1.5))
+
+
+def s_cuerno(tono=1.0, **k):
+    """Cuerno largo de guerra."""
+    d = 1.4
+    t = _t(d)
+    f = 110 * tono * (1 + 0.02 * np.sin(2 * np.pi * 5 * t))
+    x = sierra(f) * 0.6 + np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.5
+    return nrm(lp(x, 900) * np.minimum(1, t / 0.12) * np.exp(-np.maximum(t - 0.9, 0) * 6))
+
+
+def s_tren(dur=1.6, **k):
+    """Tren que pasa: traqueteo rápido + silbido de aire."""
+    d = dur
+    t = _t(d)
+    x = butter_lp(ruido(len(t), 85), 1400, 2) * (0.5 + 0.5 * np.sin(2 * np.pi * 18 * t)) * 0.5
+    x *= np.minimum(1, t / 0.15) * np.exp(-np.maximum(t - d * 0.6, 0) * 3)
+    x += hp(ruido(len(t), 86), 2500) * np.sin(np.pi * t / d) ** 2 * 0.25
+    return nrm(x)
+
+
+def s_monedas(**k):
+    """Puñado de monedas que cae."""
+    d = 1.0
+    t = _t(d)
+    x = np.zeros_like(t)
+    rng = np.random.default_rng(87)
+    for ti in np.sort(rng.uniform(0, 0.6, 7)):
+        f = rng.uniform(2600, 4200)
+        i = int(ti * SR)
+        n = int(0.35 * SR)
+        tt = np.arange(n) / SR
+        x[i:i + n] += np.sin(2 * np.pi * f * tt) * np.exp(-tt * 14) * rng.uniform(0.3, 0.8)
+    return nrm(x)
+
+
+def s_espada(tono=1.0, **k):
+    """Choque metálico de gladius o espadas: brillo alto FM + rasguño de acero."""
+    d = 0.8
+    t = _t(d)
+    metal = fm_campana(1850 * tono, d, 2.2, 1.414, 0.18) * 0.7 + fm_campana(3200 * tono, d, 1.5, 2.76, 0.09) * 0.5
+    raspe = hp(ruido(len(t), 88), 4200) * np.exp(-t * 35) * 0.4
+    return nrm(metal + raspe)
+
+
+def s_fanfarria(tono=1.0, **k):
+    """Fanfarria romana breve y triunfal (metales en tríada mayor)."""
+    d = 1.8
+    t = _t(d)
+    out = np.zeros(len(t))
+    # Arpegio triunfal: C4, E4, G4, C5 (60, 64, 67, 72)
+    notas = [(0.0, 60, 0.25), (0.18, 64, 0.25), (0.36, 67, 0.35), (0.60, 72, 1.1)]
+    for t0, m, dur_n in notas:
+        f = mtof(m) * tono
+        i0 = int(t0 * SR)
+        L = int(dur_n * SR)
+        if i0 + L > len(out):
+            L = len(out) - i0
+        tt = np.arange(L) / SR
+        cuerno = sierra(f) * 0.6 + np.sin(2 * np.pi * f * tt) * 0.4
+        env = np.minimum(1.0, tt / 0.04) * np.exp(-np.maximum(tt - (dur_n - 0.2), 0) * 8)
+        out[i0:i0 + L] += lp(cuerno, 1800) * env * 0.7
+    return nrm(out) * 0.8
+
+
+# efectos del estilo cartoon90 (gritos, cascabel, crujidos, refri...): nucleo/sfx_toon.py
+from sfx_toon import *  # noqa: E402,F401,F403
+
+
+
+# efectos del estilo noir (lluvia, máquina de escribir, revólver, servos...): nucleo/sfx_noir.py
+from sfx_noir import *  # noqa: E402,F401,F403
 
 
 if __name__ == "__main__":

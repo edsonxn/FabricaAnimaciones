@@ -1,0 +1,394 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 2.16,
+  "tipo": "imagen",
+  "texto": "¿Dónde está el detective Gordon, Guasón?"
+ },
+ {
+  "id": "scene-002",
+  "t0": 2.16,
+  "t1": 6.48,
+  "tipo": "imagen",
+  "texto": "No te lo voy a decir. Dime, ¿dónde está el detective?"
+ },
+ {
+  "id": "scene-003",
+  "t0": 6.48,
+  "t1": 10.8,
+  "tipo": "imagen",
+  "texto": "No te lo voy a decir. El tiempo corre."
+ },
+ {
+  "id": "scene-004",
+  "t0": 10.8,
+  "t1": 13.92,
+  "tipo": "imagen",
+  "texto": "Si sigues insistiendo,"
+ },
+ {
+  "id": "scene-005",
+  "t0": 13.92,
+  "t1": 16.88,
+  "tipo": "imagen",
+  "texto": "menos lo vas a encontrar."
+ },
+ {
+  "id": "scene-006",
+  "t0": 16.88,
+  "t1": 19.22,
+  "tipo": "imagen",
+  "texto": "Me estás colmando la paciencia,"
+ },
+ {
+  "id": "scene-007",
+  "t0": 19.22,
+  "t1": 21.58,
+  "tipo": "imagen",
+  "texto": "Guasón."
+ },
+ {
+  "id": "scene-008",
+  "t0": 21.58,
+  "t1": 24.8,
+  "tipo": "imagen",
+  "texto": "¿Dónde dejaste a Robin? ¿Dónde lo tienes?"
+ },
+ {
+  "id": "scene-009",
+  "t0": 24.8,
+  "t1": 29.71,
+  "tipo": "imagen",
+  "texto": "También secuestraste a Robin."
+ },
+ {
+  "id": "scene-010",
+  "t0": 29.71,
+  "t1": 31.51,
+  "tipo": "imagen",
+  "texto": "¿Lo dices en serio?"
+ },
+ {
+  "id": "scene-011",
+  "t0": 31.51,
+  "t1": 35.25,
+  "tipo": "imagen",
+  "texto": "Si tanto quieres a Robin, pues ve por él en el basurero."
+ },
+ {
+  "id": "scene-012",
+  "t0": 35.25,
+  "t1": 38.45,
+  "tipo": "imagen",
+  "texto": "A veces trato de ayudarte, pero eres"
+ },
+ {
+  "id": "scene-013",
+  "t0": 38.45,
+  "t1": 41.21,
+  "tipo": "imagen",
+  "texto": "difícil de convencer."
+ },
+ {
+  "id": "scene-014",
+  "t0": 41.21,
+  "t1": 44.13,
+  "tipo": "imagen",
+  "texto": "No importa cuántas veces te atrape,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 44.13,
+  "t1": 49.17,
+  "tipo": "imagen",
+  "texto": "siempre te voy a capturar y regresar a Arkham."
+ },
+ {
+  "id": "scene-016",
+  "t0": 49.17,
+  "t1": 52.25,
+  "tipo": "imagen",
+  "texto": "Atrápame si puedes, murciélago"
+ },
+ {
+  "id": "scene-017",
+  "t0": 52.25,
+  "t1": 54.15,
+  "tipo": "imagen",
+  "texto": "del inframundo."
+ },
+ {
+  "id": "scene-018",
+  "t0": 54.15,
+  "t1": 58.45,
+  "tipo": "imagen",
+  "texto": "Voy a tener que encontrar, cueste lo que cueste, al detective Gordon."
+ },
+ {
+  "id": "scene-019",
+  "t0": 58.45,
+  "t1": 60.77,
+  "tipo": "imagen",
+  "texto": "Mientras que a ti te dejaré amarrado."
+ },
+ {
+  "id": "scene-020",
+  "t0": 60.77,
+  "t1": 65.07,
+  "tipo": "imagen",
+  "texto": "Aquí colgado de cabeza. No me importa las veces que me amares."
+ },
+ {
+  "id": "scene-021",
+  "t0": 65.07,
+  "t1": 67.59,
+  "tipo": "imagen",
+  "texto": "Yo siempre encontraré la forma de"
+ },
+ {
+  "id": "scene-022",
+  "t0": 67.59,
+  "t1": 71.13,
+  "tipo": "imagen",
+  "texto": "desatarme. Por eso el"
+ },
+ {
+  "id": "scene-023",
+  "t0": 71.13,
+  "t1": 75.1,
+  "tipo": "imagen",
+  "texto": "Jason Todd me abandonó para irte de cacería."
+ },
+ {
+  "id": "scene-024",
+  "t0": 75.1,
+  "t1": 76.47,
+  "tipo": "imagen",
+  "texto": "Una vez trato de"
+ },
+ {
+  "id": "scene-025",
+  "t0": 76.47,
+  "t1": 79.16,
+  "tipo": "imagen",
+  "texto": "asesinarte."
+ },
+ {
+  "id": "scene-026",
+  "t0": 79.16,
+  "t1": 82.58,
+  "tipo": "imagen",
+  "texto": "No me importa lo que piensan de tus amigos."
+ },
+ {
+  "id": "scene-027",
+  "t0": 82.58,
+  "t1": 86.85,
+  "tipo": "imagen",
+  "texto": "Yo solamente quiero hacerte sentirte más"
+ },
+ {
+  "id": "scene-028",
+  "t0": 86.85,
+  "t1": 90.76,
+  "tipo": "imagen",
+  "texto": "loco de lo que ya estás. En ese entonces se escucha un explosivo."
+ },
+ {
+  "id": "scene-029",
+  "t0": 90.76,
+  "t1": 93.09,
+  "tipo": "imagen",
+  "texto": "Una gran explosión detrás del Joker."
+ },
+ {
+  "id": "scene-030",
+  "t0": 93.09,
+  "t1": 97.47,
+  "tipo": "imagen",
+  "texto": "Joker sabe de qué se trata la explosión, pero Batman no sabe qué fue."
+ },
+ {
+  "id": "scene-031",
+  "t0": 97.47,
+  "t1": 99.37,
+  "tipo": "imagen",
+  "texto": "¿Qué rayos?"
+ },
+ {
+  "id": "scene-032",
+  "t0": 99.37,
+  "t1": 103.31,
+  "tipo": "imagen",
+  "texto": "¡Joker! ¡No te saldrás con la tuya!"
+ },
+ {
+  "id": "scene-033",
+  "t0": 103.31,
+  "t1": 105.15,
+  "tipo": "imagen",
+  "texto": "Yo no ordené ese ataque,"
+ },
+ {
+  "id": "scene-034",
+  "t0": 105.15,
+  "t1": 109.41,
+  "tipo": "imagen",
+  "texto": "no hay evidencia. No puede ser."
+ },
+ {
+  "id": "scene-035",
+  "t0": 109.41,
+  "t1": 113.07,
+  "tipo": "imagen",
+  "texto": "¿Controlaste a Superman? No."
+ },
+ {
+  "id": "scene-036",
+  "t0": 113.07,
+  "t1": 115.68,
+  "tipo": "imagen",
+  "texto": "No, él no tuvo nada que ver con esto."
+ },
+ {
+  "id": "scene-037",
+  "t0": 115.68,
+  "t1": 118.77,
+  "tipo": "imagen",
+  "texto": "Clark, no hagas esto. No lo mates a... No, no."
+ },
+ {
+  "id": "scene-038",
+  "t0": 118.77,
+  "t1": 123.39,
+  "tipo": "imagen",
+  "texto": "No mates al Guasón. Oye. Oye, oye. Yo no estaba haciendo nada malo."
+ },
+ {
+  "id": "scene-039",
+  "t0": 123.39,
+  "t1": 125.17,
+  "tipo": "imagen",
+  "texto": "Sé que..."
+ },
+ {
+  "id": "scene-040",
+  "t0": 125.17,
+  "t1": 128.41,
+  "tipo": "imagen",
+  "texto": "Clark, sé que estás dolido sobre tu esposa, Lane,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 128.41,
+  "t1": 131.96,
+  "tipo": "imagen",
+  "texto": "y tu hijo, pero por favor, detente,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 131.96,
+  "t1": 134.05,
+  "tipo": "imagen",
+  "texto": "Clark."
+ },
+ {
+  "id": "scene-043",
+  "t0": 134.05,
+  "t1": 138.87,
+  "tipo": "imagen",
+  "texto": "No le atravieses con la mano al Guasón."
+ },
+ {
+  "id": "scene-044",
+  "t0": 138.87,
+  "t1": 141.51,
+  "tipo": "imagen",
+  "texto": "En ese momento, Superman"
+ },
+ {
+  "id": "scene-045",
+  "t0": 141.51,
+  "t1": 143.83,
+  "tipo": "imagen",
+  "texto": "le mete un dedo al Joker en el ano."
+ },
+ {
+  "id": "scene-046",
+  "t0": 143.83,
+  "t1": 149.25,
+  "tipo": "imagen",
+  "texto": "Eso no era parte del guión."
+ },
+ {
+  "id": "scene-047",
+  "t0": 149.25,
+  "t1": 150.95,
+  "tipo": "imagen",
+  "texto": "Clark. Es peor que"
+ },
+ {
+  "id": "scene-048",
+  "t0": 150.95,
+  "t1": 154.14,
+  "tipo": "imagen",
+  "texto": "el ahorcado. Clark."
+ },
+ {
+  "id": "scene-049",
+  "t0": 154.14,
+  "t1": 157.82,
+  "tipo": "imagen",
+  "texto": "No, Clark. No, Clark."
+ },
+ {
+  "id": "scene-050",
+  "t0": 157.82,
+  "t1": 161.23,
+  "tipo": "imagen",
+  "texto": "El corazón con la mano. Eras el caballero del día,"
+ },
+ {
+  "id": "scene-051",
+  "t0": 161.23,
+  "t1": 163.66,
+  "tipo": "imagen",
+  "texto": "Superman, pero ahora eres el caballero"
+ },
+ {
+  "id": "scene-052",
+  "t0": 163.66,
+  "t1": 167.12,
+  "tipo": "imagen",
+  "texto": "del homo... Ya, Clark, detente."
+ },
+ {
+  "id": "scene-053",
+  "t0": 167.12,
+  "t1": 170.66,
+  "tipo": "imagen",
+  "texto": "Por favor, no, Clark. Superman... Ya basta, Clark."
+ },
+ {
+  "id": "scene-054",
+  "t0": 170.66,
+  "t1": 173.88,
+  "tipo": "imagen",
+  "texto": "No, mis ojos. En ese momento, Superman levanta"
+ },
+ {
+  "id": "scene-055",
+  "t0": 173.88,
+  "t1": 176.56,
+  "tipo": "imagen",
+  "texto": "al Joker con una mano, porque es muy fuerte, y sigue"
+ },
+ {
+  "id": "scene-056",
+  "t0": 176.56,
+  "t1": 180.026,
+  "tipo": "imagen",
+  "texto": "con su mano dentro del ano del Joker. No, Clark. Ya no."
+ }
+]

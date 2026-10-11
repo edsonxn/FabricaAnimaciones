@@ -272,7 +272,7 @@ def componer():
         fin_musica = t1
         primera, ultima = e["id"] == config.PRIMERA, e["id"] == config.ULTIMA
         if ultima:
-            fin_musica = e["frases"][-1]["t1"] + 0.12   # golpe final
+            fin_musica = e["fin_musica"] if "fin_musica" in e else e["frases"][-1]["t1"] + 0.12   # golpe final
         nst = int(round((fin_musica - t0) / PASO))
         pat = R.PATRONES[R.ESTILO[e["id"]]["bombo"]]
         inicio_bombo = t0
@@ -426,7 +426,8 @@ def componer():
                 tt = t1 - BEAT + j * PASO / 2
                 sumar(B["bateria"], caja(0.35 + 0.08 * j, seed=j), tt, 0.6)
     # golpe final
-    fin = TL["escenas"][-1]["frases"][-1]["t1"] + 0.12
+    _u = TL["escenas"][-1]
+    fin = _u["fin_musica"] if "fin_musica" in _u else _u["frases"][-1]["t1"] + 0.12
     est = R.ESTILO[config.ULTIMA]
     notas = acorde(est["raiz"] + 12, est["modo"], 0)
     if est["sabor"] in SUAVES and est["sabor"] != "ambiente":     # cierre documental: acorde que florece + campanas, sin golpe

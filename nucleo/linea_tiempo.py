@@ -16,8 +16,16 @@ PRE_PRIMERA, POST_PRIMERA = 1.10, 0.45     # la primera escena deja una entrada 
 PRE_ULTIMA, POST_ULTIMA = 0.45, 2.6        # la última incluye la tarjeta final
 PRE_ITEM, POST_ITEM = 0.30, 0.40
 GAP_TITULO = 0.42                          # tras "Número X: ..."
-GAP = 0.30
+GAP = config.GAP                           # 0.30 por defecto; guion.py puede fijar GAP
 ULTIMA_HOLGURA = (0.0, 2.2)                # con DURACION fija, la última escena puede estirarse
+
+if getattr(config._g, "AUDIO_EXTERNO", None):   # el audio ya viene grabado: se transcribe y ese es el timeline
+    import linea_tiempo_audio  # noqa: F401
+    raise SystemExit(0)
+
+if config.SIN_VOZ:                       # video sin narración: timeline por compases (sin voz/palabras.json)
+    import linea_tiempo_mudo  # noqa: F401
+    raise SystemExit(0)
 
 ESCENAS = config.ESCENAS
 pal = json.load(open("voz/palabras.json", encoding="utf-8"))

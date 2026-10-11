@@ -1,0 +1,106 @@
+{
+  "canal_id": "UC7QhLbgQcdshoidlUzbaTgg",
+  "nombre": "Kuriox",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": [
+      "miércoles",
+      "jueves",
+      "viernes"
+    ],
+    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando se analicen sus datos.",
+    "ciclo_dias": 3
+  },
+  "publicados": [
+    {
+      "video": "sol_apagado_8min",
+      "id": "l3JexzfS6-Y",
+      "titulo": "¿Qué pasaría si el Sol se apagara?",
+      "publicado": "2026-09-29"
+    },
+    {
+      "video": "primer_foton",
+      "id": "83T3h3K9gVs",
+      "titulo": "¿Cómo nació el primer fotón? #Shorts",
+      "subido": "2026-10-05",
+      "visibilidad": "public",
+      "nota": "Short vertical boceto+guache, subido público a petición del usuario"
+    },
+    {
+      "video": "platano_radiactivo",
+      "id": "_DJUwuogxeo",
+      "titulo": "Tu plátano es radiactivo #Shorts",
+      "subido": "2026-10-05",
+      "visibilidad": "programado",
+      "publicar": "2026-10-09T00:00:00Z",
+      "nota": "Short; 8-oct 18:00 CDMX"
+    },
+    {
+      "video": "luna_se_aleja",
+      "id": "Ac5Xv12bllc",
+      "titulo": "La Luna se está yendo #Shorts",
+      "subido": "2026-10-05",
+      "visibilidad": "programado",
+      "publicar": "2026-10-12T00:00:00Z",
+      "nota": "Short; 11-oct 18:00 CDMX"
+    },
+    {
+      "video": "peso_nube",
+      "id": "xYM1mFDrmZs",
+      "titulo": "¿Cuánto pesa una nube? #Shorts",
+      "subido": "2026-10-05",
+      "visibilidad": "programado",
+      "publicar": "2026-10-15T00:00:00Z",
+      "nota": "Short; 14-oct 18:00 CDMX"
+    },
+    {
+      "video": "dedos_arrugados",
+      "id": "qcdEAcp9r84",
+      "titulo": "¿Por qué se arrugan los dedos en el agua? #Shorts",
+      "subido": "2026-10-05",
+      "visibilidad": "programado",
+      "publicar": "2026-10-18T00:00:00Z",
+      "nota": "Short; 17-oct 18:00 CDMX"
+    },
+    {
+      "video": "cielo_azul",
+      "id": "kCqZ1Bep07s",
+      "titulo": "¿Por qué el cielo es azul? #Shorts",
+      "subido": "2026-10-05",
+      "visibilidad": "programado",
+      "publicar": "2026-10-21T00:00:00Z",
+      "nota": "Short; 20-oct 18:00 CDMX"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "por qué ciencia curiosidades shorts",
+      "qué pasaría si ciencia",
+      "datos curiosos del cuerpo humano"
+    ],
+    "competidores": [
+      "UCHa5VTI_9L8OUHc6SgA1asg",
+      "UCsqwX-eav80-wih2Frj514Q",
+      "UCtZJCMR1LTASb6qNV1oKLng",
+      "UCOx8egrwO9LiwzbKRF5uifQ",
+      "UCWNaNOB8mGggfGAucq0SmkA",
+      "UC_33lqg8euwqRAO4XH1oxqQ"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "qué pas",
+      "que pas",
+      "por qué",
+      "por que",
+      "cuerpo",
+      "ciencia",
+      "curios"
+    ]
+  }
+}

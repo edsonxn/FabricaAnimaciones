@@ -1,0 +1,464 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 4.317,
+  "tipo": "imagen",
+  "texto": "It is late at night. You turn on the bathroom light."
+ },
+ {
+  "id": "scene-002",
+  "t0": 4.317,
+  "t1": 8.839,
+  "tipo": "imagen",
+  "texto": "And something with way too many legs shoots across the wall."
+ },
+ {
+  "id": "scene-003",
+  "t0": 8.839,
+  "t1": 12.61,
+  "tipo": "imagen",
+  "texto": "It might be the scariest looking thing that lives in your house."
+ },
+ {
+  "id": "scene-004",
+  "t0": 12.61,
+  "t1": 15.567,
+  "tipo": "imagen",
+  "texto": "Your first instinct is to grab a shoe."
+ },
+ {
+  "id": "scene-005",
+  "t0": 15.567,
+  "t1": 19.575,
+  "tipo": "imagen",
+  "texto": "Don't. Because that little monster is the best roommate you will ever"
+ },
+ {
+  "id": "scene-006",
+  "t0": 19.575,
+  "t1": 23.788,
+  "tipo": "imagen",
+  "texto": "have. This is the house centipede."
+ },
+ {
+  "id": "scene-007",
+  "t0": 23.788,
+  "t1": 27.956,
+  "tipo": "imagen",
+  "texto": "It originally came from the warm coasts of the Mediterranean."
+ },
+ {
+  "id": "scene-008",
+  "t0": 27.956,
+  "t1": 31.976,
+  "tipo": "imagen",
+  "texto": "But it followed people around the world, and today it lives in homes on"
+ },
+ {
+  "id": "scene-009",
+  "t0": 31.976,
+  "t1": 35.913,
+  "tipo": "imagen",
+  "texto": "almost every continent. And it has probably been in your house"
+ },
+ {
+  "id": "scene-010",
+  "t0": 35.913,
+  "t1": 38.83,
+  "tipo": "imagen",
+  "texto": "for years without you noticing."
+ },
+ {
+  "id": "scene-011",
+  "t0": 38.83,
+  "t1": 45.325,
+  "tipo": "imagen",
+  "texto": "Let's start with those legs. A grown house centipede walks on fifteen pairs of legs."
+ },
+ {
+  "id": "scene-012",
+  "t0": 45.325,
+  "t1": 47.525,
+  "tipo": "imagen",
+  "texto": "But it is not born that way."
+ },
+ {
+  "id": "scene-013",
+  "t0": 47.525,
+  "t1": 50.693,
+  "tipo": "imagen",
+  "texto": "A baby hatches with only eight legs."
+ },
+ {
+  "id": "scene-014",
+  "t0": 50.693,
+  "t1": 57.141,
+  "tipo": "imagen",
+  "texto": "Every time it sheds its skin, it grows a few more, until it finally has the full set."
+ },
+ {
+  "id": "scene-015",
+  "t0": 57.141,
+  "t1": 59.941,
+  "tipo": "imagen",
+  "texto": "The last pair is so long that it looks like a"
+ },
+ {
+  "id": "scene-016",
+  "t0": 59.941,
+  "t1": 63.917,
+  "tipo": "imagen",
+  "texto": "second pair of antennae. That makes it very hard for an enemy"
+ },
+ {
+  "id": "scene-017",
+  "t0": 63.917,
+  "t1": 67.63,
+  "tipo": "imagen",
+  "texto": "to tell which end is the head."
+ },
+ {
+  "id": "scene-018",
+  "t0": 67.63,
+  "t1": 71.628,
+  "tipo": "imagen",
+  "texto": "All those legs are built for one thing: speed."
+ },
+ {
+  "id": "scene-019",
+  "t0": 71.628,
+  "t1": 75.556,
+  "tipo": "imagen",
+  "texto": "A house centipede can run more than a foot every second."
+ },
+ {
+  "id": "scene-020",
+  "t0": 75.556,
+  "t1": 79.736,
+  "tipo": "imagen",
+  "texto": "For an animal that small, that is like a person running as fast as"
+ },
+ {
+  "id": "scene-021",
+  "t0": 79.736,
+  "t1": 83.234,
+  "tipo": "imagen",
+  "texto": "a car on the highway. It can sprint across floors,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 83.234,
+  "t1": 87.616,
+  "tipo": "imagen",
+  "texto": "straight up walls, and even upside down along the ceiling."
+ },
+ {
+  "id": "scene-023",
+  "t0": 87.616,
+  "t1": 91.916,
+  "tipo": "imagen",
+  "texto": "And if something grabs one of its legs, it just lets that leg go and keeps"
+ },
+ {
+  "id": "scene-024",
+  "t0": 91.916,
+  "t1": 97.0,
+  "tipo": "imagen",
+  "texto": "running. But that speed is not for running away from you."
+ },
+ {
+  "id": "scene-025",
+  "t0": 97.0,
+  "t1": 100.136,
+  "tipo": "imagen",
+  "texto": "It is for hunting. The house centipede"
+ },
+ {
+  "id": "scene-026",
+  "t0": 100.136,
+  "t1": 103.707,
+  "tipo": "imagen",
+  "texto": "does not build a web, and it does not wait in a trap."
+ },
+ {
+  "id": "scene-027",
+  "t0": 103.707,
+  "t1": 107.234,
+  "tipo": "imagen",
+  "texto": "It goes out every night and chases its food."
+ },
+ {
+  "id": "scene-028",
+  "t0": 107.234,
+  "t1": 111.474,
+  "tipo": "imagen",
+  "texto": "Unlike most centipedes, it has large eyes, and it uses its long"
+ },
+ {
+  "id": "scene-029",
+  "t0": 111.474,
+  "t1": 114.846,
+  "tipo": "imagen",
+  "texto": "antennae to smell and feel its prey."
+ },
+ {
+  "id": "scene-030",
+  "t0": 114.846,
+  "t1": 119.89,
+  "tipo": "imagen",
+  "texto": "When it catches up, it pounces and grabs the victim with its front legs."
+ },
+ {
+  "id": "scene-031",
+  "t0": 119.89,
+  "t1": 124.985,
+  "tipo": "imagen",
+  "texto": "Then it delivers a quick dose of venom, and the hunt is over."
+ },
+ {
+  "id": "scene-032",
+  "t0": 124.985,
+  "t1": 128.308,
+  "tipo": "imagen",
+  "texto": "So what is it hunting inside your house?"
+ },
+ {
+  "id": "scene-033",
+  "t0": 128.308,
+  "t1": 131.271,
+  "tipo": "imagen",
+  "texto": "Pretty much everything you hate. Cockroaches."
+ },
+ {
+  "id": "scene-034",
+  "t0": 131.271,
+  "t1": 135.781,
+  "tipo": "imagen",
+  "texto": "Silverfish. Termites. Bed bugs. Flies. Ants."
+ },
+ {
+  "id": "scene-035",
+  "t0": 135.781,
+  "t1": 139.783,
+  "tipo": "imagen",
+  "texto": "And spiders too. It can even hold several victims at once,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 139.783,
+  "t1": 143.242,
+  "tipo": "imagen",
+  "texto": "trapped between its legs, while it eats another one."
+ },
+ {
+  "id": "scene-037",
+  "t0": 143.242,
+  "t1": 149.23,
+  "tipo": "imagen",
+  "texto": "Many bug experts consider it one of the most helpful animals that can live in a home."
+ },
+ {
+  "id": "scene-038",
+  "t0": 149.23,
+  "t1": 151.685,
+  "tipo": "imagen",
+  "texto": "And it is surprisingly clean."
+ },
+ {
+  "id": "scene-039",
+  "t0": 151.685,
+  "t1": 155.345,
+  "tipo": "imagen",
+  "texto": "After a meal, a house centipede carefully grooms itself,"
+ },
+ {
+  "id": "scene-040",
+  "t0": 155.345,
+  "t1": 158.933,
+  "tipo": "imagen",
+  "texto": "pulling each leg through its mouth, one at a time."
+ },
+ {
+  "id": "scene-041",
+  "t0": 158.933,
+  "t1": 162.505,
+  "tipo": "imagen",
+  "texto": "It does not make a nest. It does not spin webs."
+ },
+ {
+  "id": "scene-042",
+  "t0": 162.505,
+  "t1": 168.43,
+  "tipo": "imagen",
+  "texto": "It does not chew on wood, and it does not touch your food or your clothes."
+ },
+ {
+  "id": "scene-043",
+  "t0": 168.43,
+  "t1": 172.527,
+  "tipo": "imagen",
+  "texto": "But can it hurt you? Technically, it does have venom."
+ },
+ {
+  "id": "scene-044",
+  "t0": 172.527,
+  "t1": 175.387,
+  "tipo": "imagen",
+  "texto": "But it is made for insects, and its tiny jaws"
+ },
+ {
+  "id": "scene-045",
+  "t0": 175.387,
+  "t1": 178.357,
+  "tipo": "imagen",
+  "texto": "can barely get through human skin."
+ },
+ {
+  "id": "scene-046",
+  "t0": 178.357,
+  "t1": 183.737,
+  "tipo": "imagen",
+  "texto": "Bites are extremely rare, and they usually happen only when someone grabs one"
+ },
+ {
+  "id": "scene-047",
+  "t0": 183.737,
+  "t1": 187.674,
+  "tipo": "imagen",
+  "texto": "with a bare hand. Even then, it feels like"
+ },
+ {
+  "id": "scene-048",
+  "t0": 187.674,
+  "t1": 190.007,
+  "tipo": "imagen",
+  "texto": "a mild bee sting."
+ },
+ {
+  "id": "scene-049",
+  "t0": 190.007,
+  "t1": 194.047,
+  "tipo": "imagen",
+  "texto": "A house centipede that sees you has only one plan:"
+ },
+ {
+  "id": "scene-050",
+  "t0": 194.047,
+  "t1": 199.849,
+  "tipo": "imagen",
+  "texto": "run and hide. So why is it in your bathroom?"
+ },
+ {
+  "id": "scene-051",
+  "t0": 199.849,
+  "t1": 203.489,
+  "tipo": "imagen",
+  "texto": "Its body loses water very easily, so it needs damp"
+ },
+ {
+  "id": "scene-052",
+  "t0": 203.489,
+  "t1": 207.136,
+  "tipo": "imagen",
+  "texto": "air to survive. That is why you find it in bathrooms,"
+ },
+ {
+  "id": "scene-053",
+  "t0": 207.136,
+  "t1": 212.924,
+  "tipo": "imagen",
+  "texto": "basements, and under the kitchen sink. And here is the part most people miss."
+ },
+ {
+  "id": "scene-054",
+  "t0": 212.924,
+  "t1": 216.492,
+  "tipo": "imagen",
+  "texto": "A house centipede only stays where there is food."
+ },
+ {
+  "id": "scene-055",
+  "t0": 216.492,
+  "t1": 219.872,
+  "tipo": "imagen",
+  "texto": "If you keep seeing them, it means your house has other bugs,"
+ },
+ {
+  "id": "scene-056",
+  "t0": 219.872,
+  "t1": 223.63,
+  "tipo": "imagen",
+  "texto": "and they are eating them for you."
+ },
+ {
+  "id": "scene-057",
+  "t0": 223.63,
+  "t1": 227.361,
+  "tipo": "imagen",
+  "texto": "If you really don't want them around, don't reach for the spray."
+ },
+ {
+  "id": "scene-058",
+  "t0": 227.361,
+  "t1": 232.588,
+  "tipo": "imagen",
+  "texto": "Dry out the damp rooms, seal the cracks, and deal with the pests they are feeding on."
+ },
+ {
+  "id": "scene-059",
+  "t0": 232.588,
+  "t1": 235.648,
+  "tipo": "imagen",
+  "texto": "When the food and the moisture are gone, the centipedes"
+ },
+ {
+  "id": "scene-060",
+  "t0": 235.648,
+  "t1": 239.506,
+  "tipo": "imagen",
+  "texto": "leave on their own. And if you find one in the sink, slide a glass"
+ },
+ {
+  "id": "scene-061",
+  "t0": 239.506,
+  "t1": 242.742,
+  "tipo": "imagen",
+  "texto": "over it and move it to the basement."
+ },
+ {
+  "id": "scene-062",
+  "t0": 242.742,
+  "t1": 246.346,
+  "tipo": "imagen",
+  "texto": "A house centipede can live for up to seven years."
+ },
+ {
+  "id": "scene-063",
+  "t0": 246.346,
+  "t1": 252.265,
+  "tipo": "imagen",
+  "texto": "That is seven years of quiet night shifts, hunting the things that really cause problems."
+ },
+ {
+  "id": "scene-064",
+  "t0": 252.265,
+  "t1": 255.505,
+  "tipo": "imagen",
+  "texto": "So the next time one races across your wall, take a breath,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 255.505,
+  "t1": 258.819,
+  "tipo": "imagen",
+  "texto": "and put the shoe down. It was never after you."
+ },
+ {
+  "id": "scene-066",
+  "t0": 258.819,
+  "t1": 263.4,
+  "tipo": "imagen",
+  "texto": "It is just late for work."
+ }
+]

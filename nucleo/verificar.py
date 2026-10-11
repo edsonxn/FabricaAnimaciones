@@ -13,21 +13,23 @@ import numpy as np
 import soundfile as sf
 
 import config
+from motor import VERTICAL as VERT
 from qa import cer
 
 TL = json.load(open("timeline.json", encoding="utf-8"))
 os.makedirs("previews", exist_ok=True)
 
-# (1) inteligibilidad sobre la mezcla final
-from faster_whisper import WhisperModel
-
+# (1) inteligibilidad sobre la mezcla final (un video sin voz no tiene frases que comprobar)
+SIN_VOZ = not any(e["frases"] for e in TL["escenas"])
 y, sr = sf.read("audio/final.wav")
-m16 = librosa.resample(y.mean(1).astype(np.float32), orig_sr=sr, target_sr=16000)
-wm = WhisperModel("large-v3", device="cuda", compute_type="float16")
 malas, cs = [], []
-for e in TL["escenas"]:
+if not SIN_VOZ:
+    from faster_whisper import WhisperModel
+    m16 = librosa.resample(y.mean(1).astype(np.float32), orig_sr=sr, target_sr=16000)
+    wm = WhisperModel("large-v3", device="cuda", compute_type="float16")
+for e in ([] if SIN_VOZ else TL["escenas"]):
     for f in e["frases"]:
-        a, b = int((f["t0"] - 0.15) * 16000), int((f["t1"] + 0.15) * 16000)
+        a, b = int(max(0.0, f["t0"] - 0.15) * 16000), int((f["t1"] + 0.15) * 16000)
         prompt = "Número uno: el pan." if f["texto"].startswith("Número") else None
         segs, _ = wm.transcribe(m16[a:b], language=config.VOZ["idioma"], beam_size=5, initial_prompt=prompt)
         hyp = " ".join(s.text for s in segs).strip()
@@ -35,7 +37,10 @@ for e in TL["escenas"]:
         cs.append(c)
         if c > 0.02:
             malas.append((f["key"], round(c, 3), hyp))
-print(f"Inteligibilidad (Whisper sobre la mezcla final): CER medio {np.mean(cs):.4f}, frases con CER>2%: {len(malas)}")
+if cs:
+    print(f"Inteligibilidad (Whisper sobre la mezcla final): CER medio {np.mean(cs):.4f}, frases con CER>2%: {len(malas)}")
+else:
+    print("Video sin voz: se omite la comprobación con Whisper.")
 for m in malas:
     print("   ", m)
 
@@ -59,15 +64,16 @@ c = correlate(b[seg], a[seg], mode="full", method="fft")
 lag = int(np.argmax(c) - (len(a[seg]) - 1))
 print(f"Desfase audio MP4 vs master: {lag} muestras ({lag / 48:.2f} ms)")
 os.remove(tmp)
+PC = 6 if VERT else 3
 tiles = []
 for t in np.linspace(2.0, TL["total"] - 1.5, 12):
     out = f"previews/_f_{t:07.2f}.png"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", M, "-frames:v", "1", "-vf", "scale=640:360", out], check=True)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", M, "-frames:v", "1", "-vf", "scale=%d:%d" % ((360, 640) if VERT else (640, 360)), out], check=True)
     im = cv2.imread(out)
-    cv2.putText(im, f"{t:.1f}s", (8, 350), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 3, cv2.LINE_AA)
-    cv2.putText(im, f"{t:.1f}s", (8, 350), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv2.LINE_AA)
+    cv2.putText(im, f"{t:.1f}s", (8, im.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 3, cv2.LINE_AA)
+    cv2.putText(im, f"{t:.1f}s", (8, im.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv2.LINE_AA)
     tiles.append(im)
     os.remove(out)
-cv2.imwrite("previews/final_hoja.jpg", np.vstack([np.hstack(tiles[i:i + 3]) for i in range(0, 12, 3)]),
+cv2.imwrite("previews/final_hoja.jpg", np.vstack([np.hstack(tiles[i:i + PC]) for i in range(0, 12, PC)]),
             [cv2.IMWRITE_JPEG_QUALITY, 88])
 print("previews/final_hoja.jpg")

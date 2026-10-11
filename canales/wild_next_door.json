@@ -1,0 +1,105 @@
+{
+  "canal_id": "UCC3FA60nnkQ-gynof-VV7pQ",
+  "nombre": "Wild Next Door",
+  "estilo": "EN INGLÉS. Insectos y animales que viven en tu casa y jardín, con giro de «no es lo que crees / no lo mates». Ilustración dibujada (tinta y color plano sobre fondo claro) hecha con clips e imágenes de Google Flow; motor secuencia; voz EnglishComic; 4-10 min",
+  "horario": {
+    "separacion_min_horas": 72,
+    "nota": "REGLA del usuario (7-oct-2026): UN video cada 3 días (ese es el ciclo del canal), NUNCA varios el mismo día. Lotes: en privado y programados cada 3 días a las 16:00 UTC (mediodía del Este de EE. UU.; sin datos de audiencia todavía).",
+    "utc": "16:00"
+  },
+  "publicados": [
+    {
+      "video": "avispas_invierno",
+      "id": "sHqcDnMrQTU",
+      "titulo": "What Happens to Wasps When Winter Comes?",
+      "publicado": "2026-10-06"
+    },
+    {
+      "video": "aranas_otono",
+      "id": "A0uq0XZgWmI",
+      "titulo": "Why Spiders \"Invade\" Your House Every Fall (They Don't)",
+      "publicado": "2026-10-09"
+    },
+    {
+      "video": "ciempies_casa",
+      "id": "8voZAKYUAkM",
+      "titulo": "Never Kill a House Centipede. Here's Why",
+      "publicado": "2026-10-09",
+      "formato": "never_kill",
+      "nota": "salio publico el 9-oct 01:32 UTC (8-oct en Studio), no el 12-oct programado; 440 vistas en ~2,5 dias = el ganador del canal"
+    },
+    {
+      "video": "bichos_invierno",
+      "id": "AYmaIJedCPc",
+      "titulo": "Where Do All the Bugs Go in Winter?",
+      "visibilidad": "programado",
+      "publicar": "2026-10-15T16:00:00Z",
+      "formato": "temporada"
+    },
+    {
+      "video": "arana_techo",
+      "id": "gG2REwAK54Q",
+      "titulo": "Never Kill the Spider in Your Ceiling Corner. It Hunts Black Widows",
+      "visibilidad": "programado",
+      "publicar": "2026-10-18T16:00:00Z",
+      "formato": "never_kill",
+      "prueba": "9 min + 78 s de clips (el ciempies duraba 4:24 y era todo imagen)"
+    },
+    {
+      "video": "arana_techo",
+      "id": "gG2REwAK54Q",
+      "titulo": "Never Kill the Spider in Your Ceiling Corner. It Hunts Black Widows",
+      "visibilidad": "programado",
+      "publicar": "2026-10-18T16:00:00Z",
+      "formato": "never_kill"
+    }
+  ],
+  "duplicados_para_borrar": [
+    {
+      "video": "aranas_otono",
+      "id": "9E9j5ZWxZHo",
+      "nota": "subida vieja en PRIVADO (fue pública por error el 7-oct); sustituida por A0uq0XZgWmI. El usuario la borra en Studio."
+    },
+    {
+      "video": "ciempies_casa",
+      "id": "oFi5HDkClVE",
+      "nota": "subida vieja en PRIVADO (fue pública por error el 7-oct); sustituida por 8voZAKYUAkM. El usuario la borra en Studio."
+    },
+    {
+      "video": "bichos_invierno",
+      "id": "mqHB3cK7RF8",
+      "nota": "subida vieja en PRIVADO (fue pública por error el 7-oct); sustituida por AYmaIJedCPc. El usuario la borra en Studio."
+    }
+  ],
+  "ideas": {
+    "idioma": "en",
+    "region": "US",
+    "busquedas": [
+      "bugs in your house explained",
+      "why you should never kill this insect",
+      "backyard animals facts"
+    ],
+    "competidores": [
+      "UCVQXkhgY_SOW3f_m0NBH3ZA",
+      "UCFc5u4JNuKHoXtgp8tyVbNg",
+      "UCwjNvDLLEeUQFJ_nFaD-A_Q",
+      "UCNTtVSJl_z-vIeUpFtzDKLw",
+      "UCyWKv8OilfgURJBaD9Bfzqw",
+      "UCqWxn9jriEaGkTLAYvlWVTQ"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "kill",
+      "bug",
+      "spider",
+      "insect",
+      "house",
+      "yard",
+      "garden",
+      "centipede",
+      "wasp",
+      "animal"
+    ]
+  }
+}

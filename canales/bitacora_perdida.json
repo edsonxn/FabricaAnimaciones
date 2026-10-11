@@ -1,0 +1,89 @@
+{
+  "canal_id": "UCZeiiNb2XgM0kt2Ye3d8qbQ",
+  "nombre": "Bitácora Perdida",
+  "idioma": "es",
+  "pais": "MX",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": [
+      "miércoles",
+      "jueves",
+      "viernes"
+    ],
+    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC); Shorts 18:00-21:00 locales",
+    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando el canal tenga datos.",
+    "ciclo_dias": 5
+  },
+  "publicados": [
+    {
+      "video": "teotihuacan",
+      "id": "riVJpyvvRgg",
+      "titulo": "Teotihuacán: la ciudad que se quedó sin nombre",
+      "subido": "2026-09-29T23:08:34Z",
+      "visibilidad": "public",
+      "publicar": "2026-10-03T18:00:00Z"
+    },
+    {
+      "video": "tesoro_moctezuma",
+      "id": "EUXq7-n_i7E",
+      "titulo": "Tesoro de Moctezuma: la noche en que desapareció",
+      "subido": "2026-09-30T17:30:00Z",
+      "visibilidad": "public"
+    },
+    {
+      "video": "independencia_mx",
+      "id": "f4Ipx5rLdmQ",
+      "titulo": "Independencia de México: la historia completa",
+      "subido": "2026-10-01T02:30:00Z",
+      "visibilidad": "private",
+      "nota": "v2 con defectos. NO publicar; reemplazada por la v5 (dPk9bs6dX0Q). Se puede borrar desde Studio."
+    },
+    {
+      "video": "independencia_mx",
+      "id": "1lq_vl0VTGQ",
+      "titulo": "Independencia de México: la historia completa",
+      "subido": "2026-10-02T23:00:00Z",
+      "visibilidad": "private",
+      "nota": "v3. NO publicar; reemplazada por la v5 (dPk9bs6dX0Q). Se puede borrar desde Studio."
+    },
+    {
+      "video": "independencia_mx",
+      "id": "dPk9bs6dX0Q",
+      "titulo": "Independencia de México: la historia completa",
+      "subido": "2026-10-06T19:20:00Z",
+      "visibilidad": "private",
+      "programado": "2026-10-10T18:00:00Z",
+      "nota": "v5 (retratos reales, mar y rótulos corregidos, 2 parches del 6-oct), 10:50, miniatura IA de Flow «11 AÑOS DE GUERRA», .srt. Programado sáb 10-oct 12:00 CDMX."
+    },
+    {
+      "video": "juchipila",
+      "id": "UHZ9sXW0D1g",
+      "titulo": "Juchipila: el pueblo de las flores y la guerra",
+      "subido": "2026-10-11T22:30:00Z",
+      "visibilidad": "private",
+      "nota": "Subido con defectos conocidos (REVISION_MASTER.md). Programado jue 15-oct 14:00 CDMX.",
+      "programado": "2026-10-15T20:00:00Z"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "historia de México documental",
+      "México prehispánico historia",
+      "leyendas y misterios de México historia"
+    ],
+    "competidores": [
+      "UC83CdE5wYDN8aMNF0G_wmqA",
+      "UCGbQ8qGKFCVt3ibGNZWM2YA",
+      "UCwW82k-HHK1nIcHpFlgbTsg",
+      "UCFzaFJSsE_cF_AabYilHlmQ",
+      "UCEo0ExFRh4fTO44EIvZMnJw",
+      "UCIgheJc90gwS2H3j3yK-jsA"
+    ],
+    "dias": 60,
+    "min_vistas": 1000
+  }
+}

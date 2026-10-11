@@ -1,0 +1,72 @@
+{
+  "canal_id": "UCPiRBTFWvxEdqBlEY0os4PQ",
+  "nombre": "Edsonxn",
+  "estilo": "documental de misterio (referencia: Detrás del Enigma; ejemplo videos/voynich/)",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": [
+      "miércoles",
+      "jueves",
+      "viernes"
+    ],
+    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando haya datos.",
+    "ciclo_dias": 6
+  },
+  "publicados": [
+    {
+      "video": "christa_pike",
+      "id": "PGF2sbmC0po",
+      "titulo": "Christa Pike: la ejecución que no terminó",
+      "estado": "público",
+      "subido": "2026-10-03",
+      "visibilidad": "public",
+      "publicado": "2026-10-04T01:03:18Z"
+    },
+    {
+      "video": "satoshi_nakamoto",
+      "id": "amA4bPr0aAY",
+      "titulo": "¿Quién es Satoshi Nakamoto? El tablero completo",
+      "visibilidad": "public",
+      "publicado": "2026-10-06T14:48:25Z"
+    },
+    {
+      "video": "polybius",
+      "id": "6rqPo_fgz58",
+      "titulo": "Polybius: el videojuego que nunca existió",
+      "visibilidad": "programado",
+      "publicar": "2026-10-14T20:00:00Z"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "misterio sin resolver documental",
+      "caso real crimen documental",
+      "misterios de internet"
+    ],
+    "competidores": [
+      "UCCoFBJI1NDIJiQcw_FkWC3g",
+      "UCMn0L94ECzA7XYCR9ok6aRg",
+      "UC93DGRH41IJfn_zzqcapcwA",
+      "UCdwV7IeiR4wh4OLwe7uRBbQ",
+      "UCz--PpQfBRtyKG2qg_sxHYg",
+      "UCYr9BpHaw0vKjUPE4dZl1UA",
+      "UCn_UdsLQCOu2RcfbGAnjNsQ",
+      "UCaYCKhJHK6ZeyulMW2Yra5g"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "misterio",
+      "caso",
+      "crimen",
+      "desapar",
+      "enigma",
+      "resolv"
+    ]
+  }
+}

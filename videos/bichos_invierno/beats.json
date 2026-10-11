@@ -1,0 +1,779 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.249,
+  "tipo": "video",
+  "texto": "In summer, your backyard is loud. Bees in the flowers. Crickets in the grass. Mosquitoes on your arm.",
+  "t_medio": 3.787,
+  "texto_a": "In summer, your backyard is loud.",
+  "texto_b": "Bees in the flowers. Crickets in the grass. Mosquitoes on your arm."
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.249,
+  "t1": 20.403,
+  "tipo": "video",
+  "texto": "Millions of tiny animals, all buzzing, crawling, and flying at the same time. Then the first hard frost arrives. And in a single night, all of it goes silent.",
+  "t_medio": 14.301,
+  "texto_a": "Millions of tiny animals, all buzzing, crawling, and flying at the same time.",
+  "texto_b": "Then the first hard frost arrives. And in a single night, all of it goes silent."
+ },
+ {
+  "id": "scene-003",
+  "t0": 20.403,
+  "t1": 32.112,
+  "tipo": "video",
+  "texto": "No buzzing. No chirping. Nothing. It looks like every bug on Earth just died. But a few months later, on the first warm day of spring, they are all back.",
+  "t_medio": 27.442,
+  "texto_a": "No buzzing. No chirping. Nothing. It looks like every bug on Earth just died.",
+  "texto_b": "But a few months later, on the first warm day of spring, they are all back."
+ },
+ {
+  "id": "scene-004",
+  "t0": 32.112,
+  "t1": 41.212,
+  "tipo": "video",
+  "texto": "So where did they go? The answer is stranger than you think. Some of them fly across a continent. Some turn into ice.",
+  "t_medio": 36.76,
+  "texto_a": "So where did they go? The answer is stranger than you think.",
+  "texto_b": "Some of them fly across a continent. Some turn into ice."
+ },
+ {
+  "id": "scene-005",
+  "t0": 41.212,
+  "t1": 49.841,
+  "tipo": "video",
+  "texto": "And some are hiding closer to you than you would like. An insect cannot make its own body heat.",
+  "t_medio": 46.03,
+  "texto_a": "And some are hiding closer to you than you would like.",
+  "texto_b": "An insect cannot make its own body heat."
+ },
+ {
+  "id": "scene-006",
+  "t0": 49.841,
+  "t1": 60.807,
+  "tipo": "video",
+  "texto": "When the air gets cold, the insect gets cold, and a frozen insect is usually a dead insect. So every species needs a plan. And over millions of years,",
+  "t_medio": 56.07,
+  "texto_a": "When the air gets cold, the insect gets cold, and a frozen insect is usually a dead insect.",
+  "texto_b": "So every species needs a plan. And over millions of years,"
+ },
+ {
+  "id": "scene-007",
+  "t0": 60.807,
+  "t1": 71.307,
+  "tipo": "video",
+  "texto": "they have come up with some truly wild ones. Run away. Huddle together. Dig down. Hide in a house. Or just freeze, and hope for the best.",
+  "t_medio": 66.114,
+  "texto_a": "they have come up with some truly wild ones. Run away. Huddle together.",
+  "texto_b": "Dig down. Hide in a house. Or just freeze, and hope for the best."
+ },
+ {
+  "id": "scene-008",
+  "t0": 71.307,
+  "t1": 74.83,
+  "tipo": "imagen",
+  "texto": "Let's go through them, one by one."
+ },
+ {
+  "id": "scene-009",
+  "t0": 74.83,
+  "t1": 78.48,
+  "tipo": "imagen",
+  "texto": "Plan number one: leave. Every fall,"
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.48,
+  "t1": 83.917,
+  "tipo": "imagen",
+  "texto": "monarch butterflies from the United States and Canada start flying south."
+ },
+ {
+  "id": "scene-011",
+  "t0": 83.917,
+  "t1": 86.087,
+  "tipo": "imagen",
+  "texto": "They weigh less than a paper clip."
+ },
+ {
+  "id": "scene-012",
+  "t0": 86.087,
+  "t1": 92.136,
+  "tipo": "imagen",
+  "texto": "And they travel as far as three thousand miles, to a few mountain forests in central Mexico."
+ },
+ {
+  "id": "scene-013",
+  "t0": 92.136,
+  "t1": 96.323,
+  "tipo": "imagen",
+  "texto": "There, millions of them cover the trees like orange leaves."
+ },
+ {
+  "id": "scene-014",
+  "t0": 96.323,
+  "t1": 99.363,
+  "tipo": "imagen",
+  "texto": "The strangest part is that none of them has ever"
+ },
+ {
+  "id": "scene-015",
+  "t0": 99.363,
+  "t1": 104.12,
+  "tipo": "imagen",
+  "texto": "made the trip before. A summer monarch lives for a few weeks."
+ },
+ {
+  "id": "scene-016",
+  "t0": 104.12,
+  "t1": 107.77,
+  "tipo": "imagen",
+  "texto": "But the generation born at the end of summer lives for eight months,"
+ },
+ {
+  "id": "scene-017",
+  "t0": 107.77,
+  "t1": 109.819,
+  "tipo": "imagen",
+  "texto": "just to make this journey."
+ },
+ {
+  "id": "scene-018",
+  "t0": 109.819,
+  "t1": 114.593,
+  "tipo": "imagen",
+  "texto": "And they are not the only travelers. Some dragonflies migrate too,"
+ },
+ {
+  "id": "scene-019",
+  "t0": 114.593,
+  "t1": 120.369,
+  "tipo": "imagen",
+  "texto": "flying south in huge swarms that can show up on weather radar."
+ },
+ {
+  "id": "scene-020",
+  "t0": 120.369,
+  "t1": 122.489,
+  "tipo": "imagen",
+  "texto": "Honey bees chose the opposite plan."
+ },
+ {
+  "id": "scene-021",
+  "t0": 122.489,
+  "t1": 126.88,
+  "tipo": "imagen",
+  "texto": "They stay, and they make their own heat. When it gets cold,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 126.88,
+  "t1": 130.894,
+  "tipo": "imagen",
+  "texto": "the whole colony packs into a tight ball around the queen."
+ },
+ {
+  "id": "scene-023",
+  "t0": 130.894,
+  "t1": 135.71,
+  "tipo": "imagen",
+  "texto": "Then the bees shiver, flexing their flight muscles without moving their wings."
+ },
+ {
+  "id": "scene-024",
+  "t0": 135.71,
+  "t1": 139.87,
+  "tipo": "imagen",
+  "texto": "That shivering keeps the center of the ball as warm as a summer day,"
+ },
+ {
+  "id": "scene-025",
+  "t0": 139.87,
+  "t1": 142.835,
+  "tipo": "imagen",
+  "texto": "even when it is snowing outside."
+ },
+ {
+  "id": "scene-026",
+  "t0": 142.835,
+  "t1": 148.348,
+  "tipo": "imagen",
+  "texto": "The bees take turns, slowly rotating from the cold outside edge to the warm middle."
+ },
+ {
+  "id": "scene-027",
+  "t0": 148.348,
+  "t1": 150.568,
+  "tipo": "imagen",
+  "texto": "And all that honey they made in summer?"
+ },
+ {
+  "id": "scene-028",
+  "t0": 150.568,
+  "t1": 154.03,
+  "tipo": "imagen",
+  "texto": "That is the fuel for the heater."
+ },
+ {
+  "id": "scene-029",
+  "t0": 154.03,
+  "t1": 159.797,
+  "tipo": "imagen",
+  "texto": "Bumble bees do it very differently. When the cold comes, the entire colony dies."
+ },
+ {
+  "id": "scene-030",
+  "t0": 159.797,
+  "t1": 163.997,
+  "tipo": "imagen",
+  "texto": "The workers, the males, and the old queen."
+ },
+ {
+  "id": "scene-031",
+  "t0": 163.997,
+  "t1": 166.56,
+  "tipo": "imagen",
+  "texto": "Only the young queens survive."
+ },
+ {
+  "id": "scene-032",
+  "t0": 166.56,
+  "t1": 170.68,
+  "tipo": "imagen",
+  "texto": "Each one digs a small hole in the ground, just a few inches deep,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 170.68,
+  "t1": 174.542,
+  "tipo": "imagen",
+  "texto": "and sleeps there alone for six months. In spring,"
+ },
+ {
+  "id": "scene-034",
+  "t0": 174.542,
+  "t1": 178.827,
+  "tipo": "imagen",
+  "texto": "she wakes up and starts a whole new colony by herself."
+ },
+ {
+  "id": "scene-035",
+  "t0": 178.827,
+  "t1": 183.327,
+  "tipo": "imagen",
+  "texto": "So if you see a huge bumble bee flying low over the grass in early spring,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 183.327,
+  "t1": 187.381,
+  "tipo": "imagen",
+  "texto": "that is a queen looking for a home."
+ },
+ {
+  "id": "scene-037",
+  "t0": 187.381,
+  "t1": 189.881,
+  "tipo": "imagen",
+  "texto": "Ladybugs prefer a sleepover."
+ },
+ {
+  "id": "scene-038",
+  "t0": 189.881,
+  "t1": 194.381,
+  "tipo": "imagen",
+  "texto": "In fall, they gather by the thousands, under bark, under rocks,"
+ },
+ {
+  "id": "scene-039",
+  "t0": 194.381,
+  "t1": 198.191,
+  "tipo": "imagen",
+  "texto": "and inside cracks in old logs. Packed together,"
+ },
+ {
+  "id": "scene-040",
+  "t0": 198.191,
+  "t1": 203.122,
+  "tipo": "imagen",
+  "texto": "they stay a little warmer and lose less water. Then they simply shut down and wait,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 203.122,
+  "t1": 206.795,
+  "tipo": "imagen",
+  "texto": "living off the fat they stored in summer."
+ },
+ {
+  "id": "scene-042",
+  "t0": 206.795,
+  "t1": 211.491,
+  "tipo": "imagen",
+  "texto": "And some bugs have discovered an even better shelter. Yours."
+ },
+ {
+  "id": "scene-043",
+  "t0": 211.491,
+  "t1": 215.111,
+  "tipo": "imagen",
+  "texto": "Stink bugs, cluster flies, and some lady beetles squeeze in"
+ },
+ {
+  "id": "scene-044",
+  "t0": 215.111,
+  "t1": 218.355,
+  "tipo": "imagen",
+  "texto": "through tiny gaps around windows and siding."
+ },
+ {
+  "id": "scene-045",
+  "t0": 218.355,
+  "t1": 222.29,
+  "tipo": "imagen",
+  "texto": "They are not there to eat, and they are not there to breed."
+ },
+ {
+  "id": "scene-046",
+  "t0": 222.29,
+  "t1": 225.952,
+  "tipo": "imagen",
+  "texto": "They just want a dry wall to sleep inside until spring."
+ },
+ {
+  "id": "scene-047",
+  "t0": 225.952,
+  "t1": 231.092,
+  "tipo": "imagen",
+  "texto": "That is why you sometimes find a confused stink bug walking across your ceiling in"
+ },
+ {
+  "id": "scene-048",
+  "t0": 231.092,
+  "t1": 235.817,
+  "tipo": "imagen",
+  "texto": "January. Now for the strangest plan of all."
+ },
+ {
+  "id": "scene-049",
+  "t0": 235.817,
+  "t1": 238.37,
+  "tipo": "imagen",
+  "texto": "This is the woolly bear caterpillar."
+ },
+ {
+  "id": "scene-050",
+  "t0": 238.37,
+  "t1": 242.586,
+  "tipo": "imagen",
+  "texto": "It does not fly south, and it does not look for a warm place."
+ },
+ {
+  "id": "scene-051",
+  "t0": 242.586,
+  "t1": 247.197,
+  "tipo": "imagen",
+  "texto": "It curls up under a leaf, and it freezes solid. Its heart stops."
+ },
+ {
+  "id": "scene-052",
+  "t0": 247.197,
+  "t1": 250.286,
+  "tipo": "imagen",
+  "texto": "Its body turns hard as a rock."
+ },
+ {
+  "id": "scene-053",
+  "t0": 250.286,
+  "t1": 254.886,
+  "tipo": "imagen",
+  "texto": "But before the cold arrives, it fills its body with a natural antifreeze"
+ },
+ {
+  "id": "scene-054",
+  "t0": 254.886,
+  "t1": 258.366,
+  "tipo": "imagen",
+  "texto": "that protects its cells from the ice. When spring comes,"
+ },
+ {
+  "id": "scene-055",
+  "t0": 258.366,
+  "t1": 264.43,
+  "tipo": "imagen",
+  "texto": "the caterpillar thaws out, and it walks away like nothing happened."
+ },
+ {
+  "id": "scene-056",
+  "t0": 264.43,
+  "t1": 267.465,
+  "tipo": "imagen",
+  "texto": "One butterfly uses a similar trick."
+ },
+ {
+  "id": "scene-057",
+  "t0": 267.465,
+  "t1": 270.625,
+  "tipo": "imagen",
+  "texto": "The mourning cloak spends the whole winter as an adult,"
+ },
+ {
+  "id": "scene-058",
+  "t0": 270.625,
+  "t1": 273.762,
+  "tipo": "imagen",
+  "texto": "wedged into a crack in a tree."
+ },
+ {
+  "id": "scene-059",
+  "t0": 273.762,
+  "t1": 278.862,
+  "tipo": "imagen",
+  "texto": "That is why it is often the first butterfly you see in spring, sometimes while there is still snow"
+ },
+ {
+  "id": "scene-060",
+  "t0": 278.862,
+  "t1": 282.744,
+  "tipo": "imagen",
+  "texto": "on the ground. Other butterflies and moths"
+ },
+ {
+  "id": "scene-061",
+  "t0": 282.744,
+  "t1": 286.729,
+  "tipo": "imagen",
+  "texto": "spend the winter in disguise. A swallowtail turns into a chrysalis"
+ },
+ {
+  "id": "scene-062",
+  "t0": 286.729,
+  "t1": 289.382,
+  "tipo": "imagen",
+  "texto": "that looks exactly like a broken twig."
+ },
+ {
+  "id": "scene-063",
+  "t0": 289.382,
+  "t1": 295.359,
+  "tipo": "imagen",
+  "texto": "A giant silk moth wraps itself in a cocoon and hangs from a branch like a dead leaf."
+ },
+ {
+  "id": "scene-064",
+  "t0": 295.359,
+  "t1": 298.789,
+  "tipo": "imagen",
+  "texto": "You have probably looked right at one and never noticed."
+ },
+ {
+  "id": "scene-065",
+  "t0": 298.789,
+  "t1": 305.141,
+  "tipo": "imagen",
+  "texto": "Inside, the animal is alive, and it is slowly being rebuilt into something with wings."
+ },
+ {
+  "id": "scene-066",
+  "t0": 305.141,
+  "t1": 310.405,
+  "tipo": "imagen",
+  "texto": "And what about mosquitoes? Sadly, they do not all die."
+ },
+ {
+  "id": "scene-067",
+  "t0": 310.405,
+  "t1": 314.245,
+  "tipo": "imagen",
+  "texto": "In some species, the females spend the winter hiding in hollow logs,"
+ },
+ {
+  "id": "scene-068",
+  "t0": 314.245,
+  "t1": 318.629,
+  "tipo": "imagen",
+  "texto": "storm drains, and basements. Others leave their eggs behind,"
+ },
+ {
+  "id": "scene-069",
+  "t0": 318.629,
+  "t1": 322.559,
+  "tipo": "imagen",
+  "texto": "and those eggs can survive being frozen for months."
+ },
+ {
+  "id": "scene-070",
+  "t0": 322.559,
+  "t1": 328.815,
+  "tipo": "imagen",
+  "texto": "They hatch as soon as the ice melts. That is how mosquitoes show up so fast, the very first"
+ },
+ {
+  "id": "scene-071",
+  "t0": 328.815,
+  "t1": 333.465,
+  "tipo": "imagen",
+  "texto": "warm week of the year. Ants go down."
+ },
+ {
+  "id": "scene-072",
+  "t0": 333.465,
+  "t1": 339.69,
+  "tipo": "imagen",
+  "texto": "As the soil gets cold, the whole colony moves deeper, below the level where the ground freezes."
+ },
+ {
+  "id": "scene-073",
+  "t0": 339.69,
+  "t1": 345.115,
+  "tipo": "imagen",
+  "texto": "They seal the entrance, huddle around the queen, and barely move for months."
+ },
+ {
+  "id": "scene-074",
+  "t0": 345.115,
+  "t1": 350.775,
+  "tipo": "imagen",
+  "texto": "The ant hill in your lawn is not empty. It is just closed for the season."
+ },
+ {
+  "id": "scene-075",
+  "t0": 350.775,
+  "t1": 353.494,
+  "tipo": "imagen",
+  "texto": "Fireflies are underground too."
+ },
+ {
+  "id": "scene-076",
+  "t0": 353.494,
+  "t1": 357.608,
+  "tipo": "imagen",
+  "texto": "The glowing adults you see in summer only live for a few weeks."
+ },
+ {
+  "id": "scene-077",
+  "t0": 357.608,
+  "t1": 362.152,
+  "tipo": "imagen",
+  "texto": "Most of a firefly's life is spent as a larva, down in the soil or under bark."
+ },
+ {
+  "id": "scene-078",
+  "t0": 362.152,
+  "t1": 369.846,
+  "tipo": "imagen",
+  "texto": "It can stay there for one or two winters before it ever flies. And even the larvae glow."
+ },
+ {
+  "id": "scene-079",
+  "t0": 369.846,
+  "t1": 373.275,
+  "tipo": "imagen",
+  "texto": "And deeper still, there are the cicadas."
+ },
+ {
+  "id": "scene-080",
+  "t0": 373.275,
+  "t1": 378.231,
+  "tipo": "imagen",
+  "texto": "A young cicada lives underground, drinking sap from tree roots."
+ },
+ {
+  "id": "scene-081",
+  "t0": 378.231,
+  "t1": 382.222,
+  "tipo": "imagen",
+  "texto": "Winter passes over its head, again and again."
+ },
+ {
+  "id": "scene-082",
+  "t0": 382.222,
+  "t1": 387.827,
+  "tipo": "imagen",
+  "texto": "Some kinds stay down there for seventeen years before they finally climb out and sing."
+ },
+ {
+  "id": "scene-083",
+  "t0": 387.827,
+  "t1": 394.03,
+  "tipo": "imagen",
+  "texto": "So right now, under an ordinary lawn, there may be thousands of them, just waiting."
+ },
+ {
+  "id": "scene-084",
+  "t0": 394.03,
+  "t1": 397.11,
+  "tipo": "imagen",
+  "texto": "Even a frozen pond is full of life."
+ },
+ {
+  "id": "scene-085",
+  "t0": 397.11,
+  "t1": 404.159,
+  "tipo": "imagen",
+  "texto": "Under the ice, young dragonflies are still awake. They have no wings yet. They live underwater,"
+ },
+ {
+  "id": "scene-086",
+  "t0": 404.159,
+  "t1": 407.172,
+  "tipo": "imagen",
+  "texto": "and they keep hunting all winter long."
+ },
+ {
+  "id": "scene-087",
+  "t0": 407.172,
+  "t1": 415.63,
+  "tipo": "imagen",
+  "texto": "Water at the bottom of a pond stays just above freezing, so for them, winter is only a slower season."
+ },
+ {
+  "id": "scene-088",
+  "t0": 415.63,
+  "t1": 419.219,
+  "tipo": "imagen",
+  "texto": "And then there are the ones that really do die."
+ },
+ {
+  "id": "scene-089",
+  "t0": 419.219,
+  "t1": 424.819,
+  "tipo": "imagen",
+  "texto": "Crickets, grasshoppers, and praying mantises do not survive the frost."
+ },
+ {
+  "id": "scene-090",
+  "t0": 424.819,
+  "t1": 428.106,
+  "tipo": "imagen",
+  "texto": "But before they go, they leave their eggs behind."
+ },
+ {
+  "id": "scene-091",
+  "t0": 428.106,
+  "t1": 433.866,
+  "tipo": "imagen",
+  "texto": "A praying mantis wraps hers in a foam case that hardens like a tiny sleeping bag."
+ },
+ {
+  "id": "scene-092",
+  "t0": 433.866,
+  "t1": 438.9,
+  "tipo": "imagen",
+  "texto": "It can hold up to two hundred babies, waiting on a twig all winter."
+ },
+ {
+  "id": "scene-093",
+  "t0": 438.9,
+  "t1": 444.187,
+  "tipo": "imagen",
+  "texto": "The adults are gone. The next generation is already there."
+ },
+ {
+  "id": "scene-094",
+  "t0": 444.187,
+  "t1": 447.97,
+  "tipo": "imagen",
+  "texto": "A few bugs do not hide at all. On a sunny winter day,"
+ },
+ {
+  "id": "scene-095",
+  "t0": 447.97,
+  "t1": 455.332,
+  "tipo": "imagen",
+  "texto": "look closely at the snow near the base of a tree. Those tiny black specks that look like pepper are alive."
+ },
+ {
+  "id": "scene-096",
+  "t0": 455.332,
+  "t1": 460.813,
+  "tipo": "imagen",
+  "texto": "They are called snow fleas, and they walk around on the snow like it is nothing."
+ },
+ {
+  "id": "scene-097",
+  "t0": 460.813,
+  "t1": 465.723,
+  "tipo": "imagen",
+  "texto": "Their bodies make a special protein that stops ice crystals from growing inside them."
+ },
+ {
+  "id": "scene-098",
+  "t0": 465.723,
+  "t1": 470.636,
+  "tipo": "imagen",
+  "texto": "Scientists are studying it to help protect human organs for transplants."
+ },
+ {
+  "id": "scene-099",
+  "t0": 470.636,
+  "t1": 474.072,
+  "tipo": "imagen",
+  "texto": "So your backyard in winter is not empty."
+ },
+ {
+  "id": "scene-100",
+  "t0": 474.072,
+  "t1": 479.188,
+  "tipo": "imagen",
+  "texto": "It is full of sleeping animals. And most of them are in the places we clean up."
+ },
+ {
+  "id": "scene-101",
+  "t0": 479.188,
+  "t1": 485.514,
+  "tipo": "imagen",
+  "texto": "The pile of dead leaves. The hollow flower stems. The old log by the fence."
+ },
+ {
+  "id": "scene-102",
+  "t0": 485.514,
+  "t1": 490.134,
+  "tipo": "imagen",
+  "texto": "When we rake everything and bag it in the fall, we throw away next year's butterflies,"
+ },
+ {
+  "id": "scene-103",
+  "t0": 490.134,
+  "t1": 494.891,
+  "tipo": "imagen",
+  "texto": "fireflies, and bees. So here is the easiest thing you can do for them."
+ },
+ {
+  "id": "scene-104",
+  "t0": 494.891,
+  "t1": 499.569,
+  "tipo": "imagen",
+  "texto": "Leave some leaves on the ground, and wait until spring to tidy up."
+ },
+ {
+  "id": "scene-105",
+  "t0": 499.569,
+  "t1": 504.009,
+  "tipo": "imagen",
+  "texto": "Winter does not kill the bugs. It only hides them."
+ },
+ {
+  "id": "scene-106",
+  "t0": 504.009,
+  "t1": 509.269,
+  "tipo": "imagen",
+  "texto": "They are in the soil, under the bark, inside the walls, and under the ice."
+ },
+ {
+  "id": "scene-107",
+  "t0": 509.269,
+  "t1": 512.145,
+  "tipo": "imagen",
+  "texto": "All of them are waiting for the same signal."
+ },
+ {
+  "id": "scene-108",
+  "t0": 512.145,
+  "t1": 519.0,
+  "tipo": "imagen",
+  "texto": "One warm morning, and the whole noisy world wakes up again."
+ }
+]

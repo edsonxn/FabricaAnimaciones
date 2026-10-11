@@ -1,0 +1,163 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 3.25,
+  "tipo": "imagen",
+  "texto": "Una parte del jardincito frente al templo de San Francisco"
+ },
+ {
+  "id": "scene-002",
+  "t0": 3.25,
+  "t1": 5.9,
+  "tipo": "imagen",
+  "texto": "fue el primer panteón de Juchipila."
+ },
+ {
+  "id": "scene-003",
+  "t0": 5.9,
+  "t1": 9.0,
+  "tipo": "imagen",
+  "texto": "Hoy tiene rosales y palmeras."
+ },
+ {
+  "id": "scene-004",
+  "t0": 9.0,
+  "t1": 12.05,
+  "tipo": "imagen",
+  "texto": "Todo empezó en enero de mil quinientos cuarenta y dos."
+ },
+ {
+  "id": "scene-005",
+  "t0": 12.05,
+  "t1": 15.65,
+  "tipo": "imagen",
+  "texto": "Dos frailes franciscanos, Antonio de Segovia y Miguel de Bolonia,"
+ },
+ {
+  "id": "scene-006",
+  "t0": 15.65,
+  "t1": 19.2,
+  "tipo": "imagen",
+  "texto": "bajaron de paz a los caxcanes que sobrevivieron al Mixtón."
+ },
+ {
+  "id": "scene-007",
+  "t0": 19.2,
+  "t1": 21.05,
+  "tipo": "imagen",
+  "texto": "Con ellos se fundó la villa."
+ },
+ {
+  "id": "scene-008",
+  "t0": 21.05,
+  "t1": 25.0,
+  "tipo": "imagen",
+  "texto": "Aquel jardincito se llamó Plazuela Segovia, en honor al fundador."
+ },
+ {
+  "id": "scene-009",
+  "t0": 25.0,
+  "t1": 27.0,
+  "tipo": "imagen",
+  "texto": "Pasaron cuatro siglos."
+ },
+ {
+  "id": "scene-010",
+  "t0": 27.0,
+  "t1": 29.7,
+  "tipo": "imagen",
+  "texto": "El Jardín Juárez, frente al Palacio Municipal,"
+ },
+ {
+  "id": "scene-011",
+  "t0": 29.7,
+  "t1": 32.4,
+  "tipo": "imagen",
+  "texto": "data de mil novecientos cuarenta y tres."
+ },
+ {
+  "id": "scene-012",
+  "t0": 32.4,
+  "t1": 34.35,
+  "tipo": "imagen",
+  "texto": "Bancas de hierro forjado, palmeras,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 34.35,
+  "t1": 37.0,
+  "tipo": "imagen",
+  "texto": "y al centro un kiosco de ocho lados."
+ },
+ {
+  "id": "scene-014",
+  "t0": 37.0,
+  "t1": 39.0,
+  "tipo": "imagen",
+  "texto": "Seis años después, el dieciocho"
+ },
+ {
+  "id": "scene-015",
+  "t0": 39.0,
+  "t1": 41.35,
+  "tipo": "imagen",
+  "texto": "de mayo de mil novecientos cuarenta y nueve,"
+ },
+ {
+  "id": "scene-016",
+  "t0": 41.35,
+  "t1": 43.8,
+  "tipo": "imagen",
+  "texto": "el presidente Miguel Alemán puso"
+ },
+ {
+  "id": "scene-017",
+  "t0": 43.8,
+  "t1": 46.1,
+  "tipo": "imagen",
+  "texto": "la primera piedra del Parque Municipal."
+ },
+ {
+  "id": "scene-018",
+  "t0": 46.1,
+  "t1": 49.45,
+  "tipo": "imagen",
+  "texto": "Ese mismo día puso la del Mercado Veintisiete de Septiembre."
+ },
+ {
+  "id": "scene-019",
+  "t0": 49.45,
+  "t1": 51.35,
+  "tipo": "imagen",
+  "texto": "Hoy son dos punto siete hectáreas"
+ },
+ {
+  "id": "scene-020",
+  "t0": 51.35,
+  "t1": 54.0,
+  "tipo": "imagen",
+  "texto": "con pista, juegos y teatro al aire libre."
+ },
+ {
+  "id": "scene-021",
+  "t0": 54.0,
+  "t1": 57.3,
+  "tipo": "imagen",
+  "texto": "Cada enero, la feria regional llena el jardín."
+ },
+ {
+  "id": "scene-022",
+  "t0": 57.3,
+  "t1": 60.65,
+  "tipo": "imagen",
+  "texto": "De cuándo se inauguró el parque, no hemos encontrado la fecha."
+ },
+ {
+  "id": "scene-023",
+  "t0": 60.65,
+  "t1": 64.0,
+  "tipo": "imagen",
+  "texto": "Si tú la sabes, cuéntanosla en los comentarios."
+ }
+]

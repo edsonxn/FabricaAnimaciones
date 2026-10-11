@@ -32,7 +32,8 @@
       "viernes"
     ],
     "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
-    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando el canal tenga datos de la nueva etapa."
+    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando el canal tenga datos de la nueva etapa.",
+    "ciclo_dias": 5
   },
   "publicados": [
     {
@@ -40,7 +41,7 @@
       "id": "4Hc-DNPgiRM",
       "titulo": "Historia de China en 3 minutos",
       "subido": "2026-09-30T19:00:00Z",
-      "visibilidad": "private"
+      "visibilidad": "public"
     },
     {
       "video": "historia_iran",
@@ -48,8 +49,57 @@
       "titulo": "Historia de Irán en 5 minutos",
       "subido": "2026-09-30T22:00:00Z",
       "visibilidad": "programado",
-      "nota": "miniatura IA aplicada (30-sep); programado mié 7-oct 14:00 CDMX",
+      "nota": "miniatura IA; programado mié 21-oct 14:00 CDMX (recorrido una semana el 6-oct)",
+      "publicar": "2026-10-21T20:00:00Z"
+    },
+    {
+      "video": "historia_japon",
+      "id": "EI0c27EY89E",
+      "titulo": "Historia de Japón en 5 minutos",
+      "subido": "2026-10-01T16:07:00Z",
+      "visibilidad": "programado",
+      "nota": "miniatura IA y .srt; programado mié 14-oct 13:00 CDMX (recorrido una semana el 6-oct)",
+      "publicar": "2026-10-14T19:00:00Z"
+    },
+    {
+      "video": "historia_egipto",
+      "id": "3V_C7ZEj5is",
+      "titulo": "La historia de Egipto en 5 minutos: De los faraones al canal de Suez",
+      "subido": "2026-10-01T19:33:42Z",
+      "visibilidad": "programado",
+      "nota": "miniatura IA y .srt; programado mié 21-oct 11:00 CDMX; recorrido al mié 28-oct 11:00 CDMX el 6-oct; pendiente arreglar el mapa del inicio y resubir",
+      "publicar": "2026-10-28T17:00:00Z"
+    },
+    {
+      "video": "historia_espana",
+      "id": "eSMFJWNy5IA",
+      "titulo": "Historia de España en 5 minutos",
+      "subido": "2026-10-06T20:30:00Z",
+      "visibilidad": "programado",
+      "nota": "miniatura por código y .srt; programado mié 7-oct 14:00 CDMX",
       "publicar": "2026-10-07T20:00:00Z"
     }
-  ]
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "historia de en 10 minutos",
+      "años de historia en minutos",
+      "historia completa de un país resumida"
+    ],
+    "competidores": [
+      "UCQ7rpXb-OypGlZQ3zEkMaHQ",
+      "UCsXFLfI3DxGGnu7E-90LGPw",
+      "UCVs4DbrEbdoxWIFS7E4hBiQ",
+      "UCm2nL30i-FWxFc04jgwiH9g"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "historia",
+      "imperio",
+      "años de"
+    ]
+  }
 }

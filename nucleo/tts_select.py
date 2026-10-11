@@ -20,12 +20,26 @@ import soundfile as sf
 from faster_whisper import WhisperModel
 
 import config
-from qa import SpeakerSim, artefactos, cer, normaliza
+from qa import SpeakerSim, artefactos, cer, normaliza, silenciar_arranque
 
 SR_OUT = 48000
 CER_MAX = 0.012
 GAP_MAX = 0.65
 TAIL_MAX = 0.35
+PEAK_MAX = 1.25
+# Umbral de cola por frase (guion.py: TAIL_MAX_POR_FRASE = {"escena_i": 0.40}) para frases que terminan hablando hasta el final
+# (CER 0 en todas las tomas, pero el último 8 % tiene voz). Úsalo solo tras comprobar que la transcripción termina bien.
+try:
+    import guion as _g
+    _TAIL_POR_FRASE = dict(getattr(_g, "TAIL_MAX_POR_FRASE", {}))
+    _CER_POR_FRASE = dict(getattr(_g, "CER_MAX_POR_FRASE", {}))   # nombres propios que Whisper escribe distinto (Geoffrey -> Jeffrey)
+except Exception:
+    _TAIL_POR_FRASE, _CER_POR_FRASE = {}, {}
+# ElevenLabs entrega la toma recortada justo al acabar la voz y no alucina colas: el filtro de cola (pensado para Chatterbox) no aplica
+if config.VOZ.get("motor") == "elevenlabs":
+    TAIL_MAX = 1.0
+    if config.FRASES_TTS:   # etiquetas [pause], [sighs]… meten silencios a propósito dentro de la frase
+        GAP_MAX = 2.5
 
 os.makedirs("voz/final", exist_ok=True)
 evals = json.load(open("voz/eval.json", encoding="utf-8")) if os.path.exists("voz/eval.json") else {}
@@ -61,9 +75,11 @@ for key in textos:
         fallan.append(key)
         continue
     med = float(np.median([m["dur"] for _, m in cands]))
+    tmax = _TAIL_POR_FRASE.get(key, TAIL_MAX)
+    cmax = _CER_POR_FRASE.get(key, CER_MAX)
     ok = [(n, m) for n, m in cands
-          if m["cer"] <= CER_MAX and m["gap_max"] <= GAP_MAX and m["tail_ratio"] <= TAIL_MAX
-          and m["peak"] < 0.999]
+          if m["cer"] <= cmax and m["gap_max"] <= GAP_MAX and m["tail_ratio"] <= tmax
+          and m["peak"] <= PEAK_MAX]
     if not ok:
         fallan.append(key)
         continue
@@ -132,6 +148,9 @@ for key, (n, m) in elegidas.items():
     a = max(0, iv[0][0] - int(0.04 * SR_OUT))
     b = min(len(y), iv[-1][1] + int(0.12 * SR_OUT))
     y = y[a:b].astype(np.float64)
+    y, mudo = silenciar_arranque(y, SR_OUT)           # sonido suelto antes de la 1.ª palabra (Whisper no lo ve)
+    if mudo:
+        print(f"{key}: silenciado un sonido de {mudo:.2f} s antes de la primera palabra")
     fi, fo = int(0.006 * SR_OUT), int(0.05 * SR_OUT)
     y[:fi] *= np.linspace(0, 1, fi)
     y[-fo:] *= np.linspace(1, 0, fo) ** 2

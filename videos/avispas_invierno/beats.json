@@ -1,0 +1,520 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.096,
+  "tipo": "video",
+  "texto": "Every autumn, a wasp nest the size of a basketball goes completely silent."
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.096,
+  "t1": 14.692,
+  "tipo": "video",
+  "texto": "Thousands of wasps, gone in a matter of days. No bodies on your porch. No swarm flying south. Nothing."
+ },
+ {
+  "id": "scene-003",
+  "t0": 14.692,
+  "t1": 24.237,
+  "tipo": "video",
+  "texto": "So where did they all go? The answer is stranger than you think, and one of them might be sleeping inside your house right now."
+ },
+ {
+  "id": "scene-004",
+  "t0": 24.237,
+  "t1": 31.062,
+  "tipo": "video",
+  "texto": "Most people believe wasps hibernate together inside the nest, like bears in a cave. They don't."
+ },
+ {
+  "id": "scene-005",
+  "t0": 31.062,
+  "t1": 36.806,
+  "tipo": "video",
+  "texto": "Almost the entire colony is about to die, and the wasps have known it for weeks."
+ },
+ {
+  "id": "scene-006",
+  "t0": 36.806,
+  "t1": 46.03,
+  "tipo": "video",
+  "texto": "Only one kind of wasp is built to see the spring. To understand who survives, we have to go back to the best days of summer."
+ },
+ {
+  "id": "scene-007",
+  "t0": 46.03,
+  "t1": 54.866,
+  "tipo": "video",
+  "texto": "In July, a yellowjacket nest is a booming city. At the center is one queen, and her only job is laying eggs."
+ },
+ {
+  "id": "scene-008",
+  "t0": 54.866,
+  "t1": 61.273,
+  "tipo": "video",
+  "texto": "Around her, thousands of workers hunt flies, caterpillars and other insects all day long."
+ },
+ {
+  "id": "scene-009",
+  "t0": 61.273,
+  "t1": 64.577,
+  "tipo": "imagen",
+  "texto": "But the workers can't eat that meat themselves."
+ },
+ {
+  "id": "scene-010",
+  "t0": 64.577,
+  "t1": 68.032,
+  "tipo": "imagen",
+  "texto": "An adult wasp cannot digest solid food."
+ },
+ {
+  "id": "scene-011",
+  "t0": 68.032,
+  "t1": 73.349,
+  "tipo": "imagen",
+  "texto": "So they chew it up and feed it to the larvae, the hungry babies of the colony."
+ },
+ {
+  "id": "scene-012",
+  "t0": 73.349,
+  "t1": 77.802,
+  "tipo": "imagen",
+  "texto": "In return, each larva pays them with a drop of sugary liquid."
+ },
+ {
+  "id": "scene-013",
+  "t0": 77.802,
+  "t1": 81.342,
+  "tipo": "imagen",
+  "texto": "Meat goes in, sugar comes out. That trade keeps"
+ },
+ {
+  "id": "scene-014",
+  "t0": 81.342,
+  "t1": 84.215,
+  "tipo": "imagen",
+  "texto": "the whole city running."
+ },
+ {
+  "id": "scene-015",
+  "t0": 84.215,
+  "t1": 90.23,
+  "tipo": "imagen",
+  "texto": "Then, near the end of summer, the queen changes the plan. She stops making workers."
+ },
+ {
+  "id": "scene-016",
+  "t0": 90.23,
+  "t1": 93.42,
+  "tipo": "imagen",
+  "texto": "The last eggs she lays grow into something different:"
+ },
+ {
+  "id": "scene-017",
+  "t0": 93.42,
+  "t1": 97.716,
+  "tipo": "imagen",
+  "texto": "males, and brand new queens. When those leave the nest,"
+ },
+ {
+  "id": "scene-018",
+  "t0": 97.716,
+  "t1": 100.741,
+  "tipo": "imagen",
+  "texto": "there are no more babies to feed."
+ },
+ {
+  "id": "scene-019",
+  "t0": 100.741,
+  "t1": 105.435,
+  "tipo": "imagen",
+  "texto": "And no babies means no sugar. Thousands of workers are suddenly unemployed"
+ },
+ {
+  "id": "scene-020",
+  "t0": 105.435,
+  "t1": 110.484,
+  "tipo": "imagen",
+  "texto": "and starving. That is why wasps crash your picnic in September."
+ },
+ {
+  "id": "scene-021",
+  "t0": 110.484,
+  "t1": 113.814,
+  "tipo": "imagen",
+  "texto": "They are not angry. They are desperate for anything sweet,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 113.814,
+  "t1": 118.03,
+  "tipo": "imagen",
+  "texto": "like your soda, your fruit, your ice cream."
+ },
+ {
+  "id": "scene-023",
+  "t0": 118.03,
+  "t1": 121.223,
+  "tipo": "imagen",
+  "texto": "And then the cold arrives."
+ },
+ {
+  "id": "scene-024",
+  "t0": 121.223,
+  "t1": 126.453,
+  "tipo": "imagen",
+  "texto": "Worker wasps have no way to store fat and no way to stay warm."
+ },
+ {
+  "id": "scene-025",
+  "t0": 126.453,
+  "t1": 129.513,
+  "tipo": "imagen",
+  "texto": "After the first hard frosts, they slow down,"
+ },
+ {
+  "id": "scene-026",
+  "t0": 129.513,
+  "t1": 134.894,
+  "tipo": "imagen",
+  "texto": "fall, and die. The males die too, usually right after mating."
+ },
+ {
+  "id": "scene-027",
+  "t0": 134.894,
+  "t1": 138.134,
+  "tipo": "imagen",
+  "texto": "Even the old queen, the mother of the whole city,"
+ },
+ {
+  "id": "scene-028",
+  "t0": 138.134,
+  "t1": 140.776,
+  "tipo": "imagen",
+  "texto": "does not make it. By early winter,"
+ },
+ {
+  "id": "scene-029",
+  "t0": 140.776,
+  "t1": 146.668,
+  "tipo": "imagen",
+  "texto": "the nest is an empty paper shell. And it will never be used again."
+ },
+ {
+  "id": "scene-030",
+  "t0": 146.668,
+  "t1": 149.626,
+  "tipo": "imagen",
+  "texto": "But remember those brand new queens."
+ },
+ {
+  "id": "scene-031",
+  "t0": 149.626,
+  "t1": 154.623,
+  "tipo": "imagen",
+  "texto": "Before the cold came, each one flew away from home and mated."
+ },
+ {
+  "id": "scene-032",
+  "t0": 154.623,
+  "t1": 157.473,
+  "tipo": "imagen",
+  "texto": "Then she did something no worker ever does."
+ },
+ {
+  "id": "scene-033",
+  "t0": 157.473,
+  "t1": 161.551,
+  "tipo": "imagen",
+  "texto": "She got fat. She packed her body with enough fuel to"
+ },
+ {
+  "id": "scene-034",
+  "t0": 161.551,
+  "t1": 164.492,
+  "tipo": "imagen",
+  "texto": "last half a year without a single meal."
+ },
+ {
+  "id": "scene-035",
+  "t0": 164.492,
+  "t1": 170.044,
+  "tipo": "imagen",
+  "texto": "Each of these young queens now carries the future of an entire colony inside her."
+ },
+ {
+  "id": "scene-036",
+  "t0": 170.044,
+  "t1": 173.117,
+  "tipo": "imagen",
+  "texto": "All she needs is a place to hide."
+ },
+ {
+  "id": "scene-037",
+  "t0": 173.117,
+  "t1": 177.994,
+  "tipo": "imagen",
+  "texto": "She looks for somewhere dry, dark, and out of the wind. Under loose tree bark."
+ },
+ {
+  "id": "scene-038",
+  "t0": 177.994,
+  "t1": 182.724,
+  "tipo": "imagen",
+  "texto": "Inside a rotting log. Deep in a pile of firewood."
+ },
+ {
+  "id": "scene-039",
+  "t0": 182.724,
+  "t1": 185.613,
+  "tipo": "imagen",
+  "texto": "And very often, inside your house."
+ },
+ {
+  "id": "scene-040",
+  "t0": 185.613,
+  "t1": 188.733,
+  "tipo": "imagen",
+  "texto": "In the attic. Behind the siding. In the shed."
+ },
+ {
+  "id": "scene-041",
+  "t0": 188.733,
+  "t1": 193.621,
+  "tipo": "imagen",
+  "texto": "Even in the folds of a curtain. She tucks her wings and antennae under her"
+ },
+ {
+  "id": "scene-042",
+  "t0": 193.621,
+  "t1": 196.101,
+  "tipo": "imagen",
+  "texto": "body and holds on with her jaws."
+ },
+ {
+  "id": "scene-043",
+  "t0": 196.101,
+  "t1": 202.555,
+  "tipo": "imagen",
+  "texto": "And then, she simply stops. Scientists call this state diapause."
+ },
+ {
+  "id": "scene-044",
+  "t0": 202.555,
+  "t1": 205.255,
+  "tipo": "imagen",
+  "texto": "Her heartbeat slows. She does not eat."
+ },
+ {
+  "id": "scene-045",
+  "t0": 205.255,
+  "t1": 210.488,
+  "tipo": "imagen",
+  "texto": "She does not move. Her body even fills with a natural antifreeze,"
+ },
+ {
+  "id": "scene-046",
+  "t0": 210.488,
+  "t1": 214.523,
+  "tipo": "imagen",
+  "texto": "so ice crystals can't tear her cells apart."
+ },
+ {
+  "id": "scene-047",
+  "t0": 214.523,
+  "t1": 218.38,
+  "tipo": "imagen",
+  "texto": "She will hang there for months, alone, in the dark."
+ },
+ {
+  "id": "scene-048",
+  "t0": 218.38,
+  "t1": 221.62,
+  "tipo": "imagen",
+  "texto": "A whole wasp city, folded into a single sleeping"
+ },
+ {
+  "id": "scene-049",
+  "t0": 221.62,
+  "t1": 227.071,
+  "tipo": "imagen",
+  "texto": "insect. But sleeping through winter is a terrible gamble."
+ },
+ {
+  "id": "scene-050",
+  "t0": 227.071,
+  "t1": 229.511,
+  "tipo": "imagen",
+  "texto": "Spiders find the queens and eat them."
+ },
+ {
+  "id": "scene-051",
+  "t0": 229.511,
+  "t1": 233.123,
+  "tipo": "imagen",
+  "texto": "Mold grows over them. And, strangely,"
+ },
+ {
+  "id": "scene-052",
+  "t0": 233.123,
+  "t1": 236.632,
+  "tipo": "imagen",
+  "texto": "a warm winter is worse than a freezing one."
+ },
+ {
+  "id": "scene-053",
+  "t0": 236.632,
+  "t1": 242.605,
+  "tipo": "imagen",
+  "texto": "A warm spell wakes her up too early, she burns through her fat, and there is nothing outside to eat."
+ },
+ {
+  "id": "scene-054",
+  "t0": 242.605,
+  "t1": 246.318,
+  "tipo": "imagen",
+  "texto": "Most of the queens that go to sleep in autumn never wake up."
+ },
+ {
+  "id": "scene-055",
+  "t0": 246.318,
+  "t1": 249.821,
+  "tipo": "imagen",
+  "texto": "So what happens to the few that do?"
+ },
+ {
+  "id": "scene-056",
+  "t0": 249.821,
+  "t1": 254.936,
+  "tipo": "imagen",
+  "texto": "On the first warm days of spring, a survivor crawls out into the light."
+ },
+ {
+  "id": "scene-057",
+  "t0": 254.936,
+  "t1": 257.436,
+  "tipo": "imagen",
+  "texto": "She is alone. No workers."
+ },
+ {
+  "id": "scene-058",
+  "t0": 257.436,
+  "t1": 261.786,
+  "tipo": "imagen",
+  "texto": "No nest. No help. She scrapes wood from a fence,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 261.786,
+  "t1": 266.291,
+  "tipo": "imagen",
+  "texto": "chews it into paper, and builds a nest no bigger than a golf ball."
+ },
+ {
+  "id": "scene-060",
+  "t0": 266.291,
+  "t1": 270.282,
+  "tipo": "imagen",
+  "texto": "She lays a few eggs, and then she does every job herself."
+ },
+ {
+  "id": "scene-061",
+  "t0": 270.282,
+  "t1": 274.402,
+  "tipo": "imagen",
+  "texto": "She hunts. She feeds the babies. She guards the door."
+ },
+ {
+  "id": "scene-062",
+  "t0": 274.402,
+  "t1": 278.445,
+  "tipo": "imagen",
+  "texto": "About a month later, her first daughters hatch and take over the work."
+ },
+ {
+  "id": "scene-063",
+  "t0": 278.445,
+  "t1": 281.941,
+  "tipo": "imagen",
+  "texto": "From that day on, the queen never leaves the nest again."
+ },
+ {
+  "id": "scene-064",
+  "t0": 281.941,
+  "t1": 285.981,
+  "tipo": "imagen",
+  "texto": "By midsummer, one sleepy insect from your attic has become a"
+ },
+ {
+  "id": "scene-065",
+  "t0": 285.981,
+  "t1": 291.064,
+  "tipo": "imagen",
+  "texto": "city of thousands. Unless winter never really comes."
+ },
+ {
+  "id": "scene-066",
+  "t0": 291.064,
+  "t1": 294.244,
+  "tipo": "imagen",
+  "texto": "In warm places like Florida and southern Alabama,"
+ },
+ {
+  "id": "scene-067",
+  "t0": 294.244,
+  "t1": 296.998,
+  "tipo": "imagen",
+  "texto": "some nests don't die at all."
+ },
+ {
+  "id": "scene-068",
+  "t0": 296.998,
+  "t1": 302.02,
+  "tipo": "imagen",
+  "texto": "They keep growing for years, with many queens laying eggs at the same time."
+ },
+ {
+  "id": "scene-069",
+  "t0": 302.02,
+  "t1": 307.654,
+  "tipo": "imagen",
+  "texto": "One of those giant nests completely filled the inside of an abandoned car."
+ },
+ {
+  "id": "scene-070",
+  "t0": 307.654,
+  "t1": 312.306,
+  "tipo": "imagen",
+  "texto": "So that silent gray nest under your roof is not sleeping."
+ },
+ {
+  "id": "scene-071",
+  "t0": 312.306,
+  "t1": 316.358,
+  "tipo": "imagen",
+  "texto": "It is empty, and it is safe to take down in the middle of winter."
+ },
+ {
+  "id": "scene-072",
+  "t0": 316.358,
+  "t1": 321.623,
+  "tipo": "imagen",
+  "texto": "But if you find one slow, sleepy wasp in your attic in January, look closer."
+ },
+ {
+  "id": "scene-073",
+  "t0": 321.623,
+  "t1": 325.256,
+  "tipo": "imagen",
+  "texto": "You are not looking at a leftover. You are looking at a queen."
+ },
+ {
+  "id": "scene-074",
+  "t0": 325.256,
+  "t1": 331.2,
+  "tipo": "imagen",
+  "texto": "And she is carrying next summer's entire city."
+ }
+]

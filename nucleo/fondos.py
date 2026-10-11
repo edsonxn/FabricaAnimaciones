@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """Fondos psicodélicos procedurales. Se calculan a 960x540 y se escalan a 1080p."""
 import math
+from functools import lru_cache
 
 import cv2
 import numpy as np
 
-from motor import W, H
+from motor import W, H, VERTICAL
 
-BW, BH = 960, 540
+BW, BH = (540, 960) if VERTICAL else (960, 540)
 _yy, _xx = np.mgrid[0:BH, 0:BW].astype(np.float32)
 X = (_xx - BW / 2) / (BH / 2)
 Y = (_yy - BH / 2) / (BH / 2)
@@ -305,18 +306,24 @@ def estrellas(img, t, brillo=1.0, dx=0.0, dy=0.0, densidad=1.0):
     return img * (1 - capa) + col * capa
 
 
-def espacio(t, tono=0, pulso=0.0, pal=None, brillo_est=1.0, dx=0.0, dy=0.0):
-    """Espacio estilo Kurzgesagt: degradado azul noche -> violeta, nebulosa suave y estrellas titilantes.
-    tono=1: más violeta/oscuro."""
+@lru_cache(maxsize=6)
+def _espacio_base(tono, ox):
     arriba = np.array([0.045, 0.06, 0.17] if tono == 0 else [0.05, 0.035, 0.12], np.float32)
     abajo = np.array([0.15, 0.085, 0.29] if tono == 0 else [0.12, 0.05, 0.2], np.float32)
     v = np.clip((Y + 1) / 2, 0, 1)[..., None]
     img = arriba * (1 - v) + abajo * v
-    ox = int((t * 3) % BW)
-    neb = _NEB[:BH, ox:ox + BW] if ox + BW <= BW * 2 else _NEB[:BH, :BW]
+    neb = _NEB[:BH, ox:ox + BW]
     img = img + neb[..., None] ** 2.2 * np.array([0.16, 0.07, 0.24], np.float32) * 0.9
     img = img + np.exp(-((X + 0.9) ** 2 + (Y - 0.6) ** 2) * 1.2)[..., None] * np.array([0.03, 0.06, 0.14], np.float32)
     img = _final(img, vign=0.25)
+    img.setflags(write=False)
+    return img
+
+
+def espacio(t, tono=0, pulso=0.0, pal=None, brillo_est=1.0, dx=0.0, dy=0.0):
+    """Espacio estilo Kurzgesagt: degradado azul noche -> violeta, nebulosa suave y estrellas titilantes.
+    tono=1: más violeta/oscuro. La base (sin estrellas) se cachea."""
+    img = _espacio_base(int(tono), int((t * 3) % BW))
     return estrellas(img, t, brillo_est, dx, dy)
 
 
@@ -337,3 +344,50 @@ def _desat(img, sat):
 FONDOS = dict(rayos=rayos, espiral=espiral, tunel=tunel, plasma=plasma, anillos=anillos, ondas=ondas,
               caleido=caleido, puntos=puntos, cueva=cueva, rejilla=rejilla, cosmos=cosmos, liso=liso,
               pizarra=pizarra, kraft=kraft, plano=plano, cartulina=cartulina, espacio=espacio, degradado=degradado)
+
+
+# ---------------------------------------------------------------- papel (estilo Vox)
+@lru_cache(maxsize=2)
+def _papel_base():
+    """Textura de papel crema a resolución de pantalla: motas suaves + fibras cortas. (H+pad, W+pad) para paralaje."""
+    pad = 160
+    h, w = H + pad, W + pad
+    rng = np.random.default_rng(64)
+    lo = cv2.resize(rng.normal(0, 1, (h // 90 + 2, w // 90 + 2)).astype(np.float32), (w, h), interpolation=cv2.INTER_CUBIC)
+    mid = cv2.resize(rng.normal(0, 1, (h // 14 + 2, w // 14 + 2)).astype(np.float32), (w, h), interpolation=cv2.INTER_CUBIC)
+    fib = np.zeros((h, w), np.float32)
+    for _ in range(int(h * w / 2600)):
+        x, y = rng.random() * w, rng.random() * h
+        L, a = 6 + rng.random() * 22, rng.random() * np.pi
+        cv2.line(fib, (int(x), int(y)), (int(x + L * np.cos(a)), int(y + L * np.sin(a))),
+                 float(rng.random() * 0.8 + 0.2), 1, cv2.LINE_AA)
+    fib = cv2.GaussianBlur(fib, (0, 0), 0.6)
+    g = 0.014 * lo + 0.012 * mid + 0.05 * fib
+    base = np.array([0.925, 0.885, 0.79], np.float32)
+    img = base[None, None, :] * (1 + g[..., None]) + (fib[..., None] > 0.5) * 0.012
+    img.setflags(write=False)
+    return img
+
+
+def papel(t, tinte=(1.0, 1.0, 1.0), oscuro=0.0, dx=0.0, dy=0.0, pulso=0.0, pal=None):
+    """Mesa de papel crema (estilo Vox). tinte multiplica el color; oscuro 0..1 lo apaga; dx, dy: paralaje en px."""
+    b = _papel_base()
+    ox, oy = int(dx) % 160, int(dy) % 160
+    img = b[oy:oy + H, ox:ox + W]
+    img = img * np.array(tinte, np.float32) * (1 - 0.86 * oscuro)
+    return np.ascontiguousarray(img)
+
+
+def cielo_fondo(colores, alfa=1.0, papel_img=None):
+    """Degradado vertical (arriba, abajo) a pantalla completa; se mezcla con el papel según alfa."""
+    a = np.array(colores[0], np.float32) / 255
+    b = np.array(colores[1], np.float32) / 255
+    v = np.clip(np.linspace(0, 1, H, dtype=np.float32) / 0.72, 0, 1)[:, None, None]
+    col = a * (1 - v) + b * v
+    img = np.broadcast_to(col, (H, W, 3))
+    if papel_img is not None:
+        return papel_img * (1 - alfa) + img * alfa
+    return np.ascontiguousarray(img)
+
+
+FONDOS["papel"] = papel

@@ -1,189 +1,115 @@
 # Fábrica de Animaciones — guía para Claude Code
 
-Pipeline propio (Python, todo local) que produce videos animados 2D procedurales con narración
-(Chatterbox), subtítulos palabra por palabra, música y efectos de sonido sintetizados y sincronizados.
-Ejemplo terminado: `videos/40mil_anos/` (3:00, estilo doodle psicodélico, 12 escenas a medida).
+Pipeline propio (Python, todo local) que produce videos animados 2D procedurales con narración (Chatterbox), música y efectos
+sintetizados y sincronizados. El usuario habla español: responde en español. Usa rutas absolutas o `python fab.py ...` desde `C:\FabricaAnimaciones`.
 
-## Reglas para ahorrar tokens (IMPORTANTE)
-- **No leas el núcleo completo.** Consulta `API.md` (catálogos + firmas). Si necesitas un detalle:
-  `grep -n "def nombre" nucleo/*.py` y lee solo ese rango.
-- Para una coreografía nueva, copia patrones de `videos/40mil_anos/escenas.py` buscando la clase
-  parecida con grep (p. ej. `grep -n "class Cuenta" -A 60`), no el archivo entero.
-- El usuario habla español: responde en español.
-- Comandos largos (>~8 KB) fallan en este Windows: escribe archivos con Write/Edit, no con heredocs enormes.
-- Usa rutas absolutas o `python fab.py ...` desde `C:\FabricaAnimaciones`.
+## RETOMAR UN VIDEO EN UNA CONVERSACIÓN NUEVA (hazlo así, ahorra contexto)
+1. `python fab.py estado` → tabla de todos los videos (canal, estilo, etapa, qué falta). `python fab.py estado <video>` → su `ESTADO.md`.
+2. Lee **solo** `videos/<video>/ESTADO.md` (≤ 60 líneas: estilo, qué está hecho, qué falta, comandos, archivos clave, lecciones) y el doc de estilo que cite.
+3. **No leas** `BITACORA.md`, `API.md` ni el núcleo completo: `API.md` solo con grep (`grep -n "def nombre" nucleo/*.py` y lees ese rango).
+4. Antes de terminar la sesión (o si el usuario se va): **actualiza `ESTADO.md`** (qué quedó hecho, siguiente paso exacto, comando para retomar). Si cambió el calendario de publicación o un video se subió, una línea en `BITACORA.md`.
+5. Video nuevo: `python fab.py nuevo <nombre>` crea el `ESTADO.md` desde la plantilla; protocolo completo en `docs/publicacion.md`.
 
-## Cuando el usuario pide un video nuevo (PROTOCOLO — hazlo siempre, en este orden)
-1. **Canal.** `python fab.py yt canales` y pregunta para qué canal es (hoy solo hay uno conectado:
-   **Sapiens con Wifi**, alias `sapiens_con_wifi`, `canales/sapiens_con_wifi.json`). Canal nuevo:
-   `python fab.py yt conectar` (el usuario inicia sesión en el navegador) + crear `canales/<alias>.json`.
-2. **Métricas primero.** `python fab.py yt metricas <alias> 90` y analiza ANTES de proponer nada:
-   % visto medio y curva de retención de cada video (¿dónde cae? → intro/gancho/duración), fuentes de tráfico
-   (búsqueda vs sugeridos vs navegación), términos de búsqueda, países/edades, qué títulos/miniaturas rinden.
-   Compara con el último `canales/metricas/*.json`. Da al usuario 2-4 recomendaciones concretas para el
-   proceso y el canal (tema, duración, gancho, estilo, miniatura, frecuencia). Canal con pocos datos
-   (<1.000 vistas en 28 días): dilo y apóyate en investigación del nicho (vidIQ/Nexlev si hay créditos).
-3. **Preguntas** (AskUserQuestion, con tu recomendación primero): tema (3 ideas basadas en métricas y
-   búsquedas), estilo visual, duración, formato (largo o Short vertical), voz (Dan por defecto) y cuándo
-   publicar (por defecto el siguiente hueco del horario del canal, abajo). Nunca versiones para WhatsApp.
-4. **Producir** (flujo de abajo) → miniatura (2-3 variantes) → `youtube.json` (título ≤ 50 caracteres con
-   la palabra clave al inicio; descripción con capítulos reales del timeline, fuentes, enlace a otro video
-   del canal y 3 hashtags; 15-25 etiquetas ≤ 450 caracteres) → `yt subir ... --publicar <ISO>`.
-   Publicar o hacer público = confirmarlo con el usuario (programar lo que él pidió está bien).
+## INICIO DE DÍA: ¿QUÉ CANAL SE QUEDA SIN VIDEO? (8-oct-2026)
+Si el usuario pregunta qué toca hoy o qué canal urge: `python fab.py canales --actualizar` (lee YouTube, solo lectura, ~15 s) → tabla ordenada por el primer hueco del ciclo SIN video (último programado o publicado + ciclo del canal), con lo que hay en producción. Sin `--actualizar` usa los datos guardados. Responde con el canal más urgente y propón el siguiente video. Lo mismo, interactivo, en la pestaña **«Canales»** del panel (`python fab.py panel --abrir`): filtros, detalle por canal, botón «Actualizar datos» y ciclo editable (`horario.ciclo_dias` de `canales/<alias>.json`; si falta: `separacion_min_horas`/24, y si no, 7).
 
-## Horario de publicación (investigado 2026-09-28; revisar con métricas propias)
-- Audiencia objetivo: México/Latinoamérica (+ España). Videos largos: **miércoles a viernes 14:00 CDMX
-  (20:00 UTC)** = 15:00 Bogotá/Lima, 17:00 Buenos Aires, 22:00 Madrid; alternativa sábado/domingo 10:00 CDMX
-  (16:00 UTC). Regla: publicar 1-2 h antes del pico de la audiencia. Shorts: 18:00-21:00 locales.
-- Constancia > hora exacta: 1-2 videos por semana el mismo día/hora. Programa con `--publicar` (UTC).
-- Cuando el canal tenga datos, pide al usuario la gráfica "Cuándo están conectados tus usuarios" de
-  YouTube Studio > Estadísticas > Audiencia (no está en la API) y ajusta `horario` en `canales/<alias>.json`.
+## REGLA GLOBAL: EL SIGUIENTE VIDEO SE DECIDE CON DATOS (el usuario, 8-oct-2026)
+Antes de proponer el tema de un video nuevo (cualquier canal): `python fab.py ideas <alias>` (`--actualizar` si el informe tiene más de ~1 semana; solo lectura, ~350 de cuota). Da (1) lo tuyo contra la mediana del propio canal, con % visto, y (2) los videos del nicho que rompieron la media DE SU PROPIO CANAL en los últimos 60 días (× mediana). Propón 3 temas, cada uno con su video de referencia y su ×; prefiere formatos que se repiten en varios canales chicos. Formato ganador = se repite cambiando tema y gancho (con escenas nuevas, nunca recicladas). Los canales son chicos: lo propio son pistas, la señal fuerte es la de fuera. **Y SIEMPRE revisar QUÉ funciona y POR QUÉ (el usuario, 11-oct-2026): `docs/que_funciona.md`** (miniaturas con `nucleo/hoja_miniaturas.py`, gancho del mejor atípico por transcripción, el porqué en 5 ejes: tema, empaque, gancho, estructura y distribución). La conclusión va a **`canales/formula/<alias>.md`** (fórmula vigente, qué evitar, UNA hipótesis por video y registro a 7 días); el siguiente video repite la fórmula y cambia una sola variable. Al subir, `"formato": "<nombre>"` en `publicados` de `canales/<alias>.json` para medir la apuesta. Configuración (`ideas.busquedas`, `competidores`, `filtro`) y detalle: cabecera de `nucleo/ideas.py`; `python fab.py ideas` lista los canales.
 
-## Estructura
+## REGLA GLOBAL: SIN SUBTÍTULOS QUEMADOS (todos los canales, 30-sep-2026)
+Ningún video lleva subtítulos dibujados. Texto en pantalla solo para énfasis visual (título, cifra, nombre, etiqueta de mapa). `config.SUBTITULOS = False`; el `.srt` se genera igual (subtítulos opcionales de YouTube). Videos anteriores con subtítulos quemados solo se rehacen si el usuario lo pide.
+
+## REGLA GLOBAL: VOZ DE ELEVENLABS = CORCHETES DE ACTUACIÓN (el usuario, 7-oct-2026)
+Todo guion que se narre con ElevenLabs (cualquier canal) lleva etiquetas en inglés entre corchetes que le dan ánimo y sentimiento a la voz según lo narrado: `"[sighs] Esa regla murió en enero. [short pause] En Hong Kong."` (`[thoughtful]`, `[serious]`, `[curious]`, `[whispers]`, `[sighs]`, `[short pause]`…). Modelo `eleven_v4` (entiende corchetes y es el más barato de calidad completa, ≈ 0,11 créditos/carácter; `eleven_multilingual_v2` NO las entiende). El núcleo las quita solo para Whisper, timeline y .srt (`config.FRASES_TTS`). Detalle, lista de etiquetas y costos: `docs/voz.md` § «Corchetes». Ejemplo: `videos/videollamada_falsa/guion.py`.
+
+## REGLA GLOBAL: NUNCA VARIOS VIDEOS DEL MISMO CANAL EL MISMO DÍA (el usuario, 7-oct-2026)
+Origen: se hicieron públicos 3 videos de Wild Next Door el mismo día y hubo que retirarlos. **No se repite.**
+- Un video por canal a la vez, espaciados según `horario.separacion_min_horas` de `canales/<alias>.json` (48 h por defecto). **Ciclos fijados por el usuario (7-oct-2026): Wild Next Door uno cada 3 días (16:00 UTC); LogIA uno cada 4-5 días desde el último publicado; Plastitube semanal, martes 19:00 UTC.**
+- Lote de varios videos listos = todos en PRIVADO y programados en huecos sucesivos, enseñando antes el calendario al usuario. «Súbelos/publícalos» sobre un lote no significa «todos hoy».
+- Antes de publicar o programar: `python fab.py yt videos <canal>` y BITACORA. El código se detiene si hay choque (`comprobar_separacion`); `--forzar` solo si el usuario pidió expresamente esa excepción. Detalle: `docs/publicacion.md`.
+
+## REGLA GLOBAL: RIGOR CON LA CALIDAD Y EL DETALLE, SIEMPRE (el usuario, 30-sep-2026)
+Origen: «La Independencia de México, completa» se subió con mapas que eran manchas verdes, el mismo desierto vacío en casi todas las escenas, figuras mal dibujadas, tomas sin nada y un cuadro negro. **No se repite.**
+- Un video NO está terminado porque el render pasó y la voz tiene CER 0: está terminado cuando cada toma se ve a la altura del mejor ejemplo de su estilo. Si el tiempo no alcanza, se dice al usuario; no se entrega a medias.
+- **Revisar con la vista, a tamaño completo (Read de la imagen), antes del render largo y otra vez sobre el MASTER:** un cuadro cada ~3 s y uno por fase de cada toma. No basta la hoja de miniaturas.
+- **Defectos que bloquean la entrega:** escenario vacío; mismo fondo en escenas distintas; mapa sin geografía real (costa, relieve, ríos, límites, ciudades en su coordenada, con etiqueta) o con «manchas»; figuras mal proporcionadas, sin cara o manos, flotando o montadas unas sobre otras; texto que choca con personajes o se sale del cuadro; cuadros negros o saltos; algo quieto más de ~2 s; personajes demasiado pequeños.
+- **Lista de errores ya vividos (Juchipila, 11-oct-2026; se subió con ellos por decisión del usuario): `docs/estilo_kurzgesagt.md` § «ERRORES A NO REPETIR»** — transición de manchas sucia, suelo plano/escena vacía, figuras clonadas, etiquetas diminutas o encimadas, bajo contraste, retratos oscuros/rayados, mapas borrosos, líneas de tiempo sin escala, pergaminos vacíos. Revisar el MASTER con hoja 2×3 (1 cuadro/3 s) ANTES de dar el video por bueno.
+- **Densidad mínima por toma** (estilos ilustrados/Kurzgesagt): ≥ 3 planos de profundidad; detalle propio del lugar y la época; animación ambiente continua (nubes, aves, polvo, humo, agua, hierba); la acción narrada la hacen los personajes. Cada escena, su propio mundo visual.
+- **«Estilo Kurzgesagt» = replicar al canal Kurzgesagt con MUY BUENA calidad, mucho detalle y buen movimiento** (no «vector plano minimalista»): texturas suaves, sombras de 2 tonos, luces, partículas, personajes expresivos (ojos, cejas, boca, manos, pliegues), anticipación/rebote/seguimiento, caminatas con ciclo creíble, multitudes con ritmo propio, cámara siempre en deriva/zoom/paneo con paralaje. «Muñecos quietos sobre un fondo» no está terminado.
+- **Mapas:** geografía REAL de dominio público (Natural Earth, ETOPO) con relieve, ríos, litoral, límites y ciudades verdaderas; ejércitos y rutas animados.
+- Si el usuario critica la calidad: se arregla también el estilo (kit reutilizable + doc de estilo) y la lección va a `ESTADO.md`/`BITACORA.md`. Entre tardar más y entregar flojo: siempre lo primero.
+- **Cuando un video crea o mejora un estilo/kit, actualiza EN LA MISMA SESIÓN `docs/estilo_*.md`, la tabla de estilos de este archivo, `docs/api_kz.md` (`python nucleo/api_kz.py`) y la galería de la pestaña «Estilos» del panel (`nucleo/datos/galeria.json`, se relee sola, sin reiniciar el panel), no solo el `ESTADO.md` del video.**
+
+## ARRANQUE RÁPIDO de un video DIBUJADO POR CÓDIGO (no repitas la exploración; 7-oct-2026)
+- **Vertical:** `FORMATO = "vertical"` en guion.py → `motor.W, H = 1080, 1920`. Ritmo de Short: `GAP = 0.16`.
+- **Escena que dibuja el cuadro entero:** una clase `Mundo(Escena)` con `render(self, lz, t)` que devuelve float32 HxWx3 en 0..1, `CLASES = {id: Mundo}` y `TRANSICIONES = [("continua", 0.5)] * (n_escenas - 1)` en guion.py (si no, el núcleo mete sus propias transiciones). `ESTILO_VISUAL = "documental"` para motion graphics propios.
+- **Voz ElevenLabs:** `VOZ = dict(motor="elevenlabs", voice_id=..., modelo="eleven_v4", referencia="<mp3>", tomas=1, stability=0.5)` + corchetes de actuación en las frases (regla global de arriba). Voces y saldo: `python videos/mods_ia_fusion/_voces.py`; la referencia sale gratis de la muestra pública: `python videos/mods_ia_fusion/_ref_voz.py <voice_id> ref.mp3`. Si `seleccionar` dice REGENERAR: `voz --seeds 5 --solo <key>`.
+- **SFX de ElevenLabs fuera del motor secuencia:** copiar `videos/mods_ia_fusion/fx_audio.py` (escribe `audio/fx.wav`, que `mezcla` suma). Empezar con `MEZCLA["fx"] = -17`; revisar que la relación voz/fondo que imprime `mezcla` sea ≥ ~11 dB.
+- **Música Lyria:** `LYRIA = dict(estilo=..., escenas={id: (descripción, intensidad)})` en guion.py; desde la carpeta del video, con `$env:PYTHONPATH = "<carpeta del video>;C:\FabricaAnimaciones\nucleo"`: `python ..\..\nucleo\lyria.py --n 1` y luego `--usar 1`.
+- **Anclas por palabra sin instancia de escena:** `pix.ww(escena, frase, "palabra")` lee `timeline.json` directamente.
+- **Video real:** `python -m yt_dlp -f "bv*[height<=720][ext=mp4]+ba[ext=m4a]/b[height<=720]" -o "videos/<v>/clips/<nombre>.%(ext)s" <url>`; hoja de contacto con ffmpeg (`fps=1/3,scale=320:-1,tile=7x4`) para elegir el tramo.
+- Ejemplo completo de todo lo anterior: `videos/mods_ia_fusion/` (estilo «rayos X tecno», `docs/estilo_rayosx_tecno.md`).
+
+## Ahorrar tokens
+- `API.md` (catálogos + firmas) solo con grep. Para coreografías nuevas, copia patrones del video de referencia con `grep -n "class X" -A 60`, no el archivo entero.
+- Comandos largos (> ~8 KB) fallan en este Windows: escribe archivos con Write/Edit, no heredocs enormes; los parches van a un `.py` y se ejecutan.
+- Mira imágenes (hojas de prueba) a 640x360 para explorar y a tamaño completo solo para el rigor final.
+
+## ESTILO POR CANAL (REGLA FIJA, 30-sep-2026): NO cambiar de motor por comodidad; si otro motor sería más rápido, PREGUNTAR
+`ESTILO_VISUAL` de `guion.py` debe coincidir con el motor realmente usado. Al empezar: anota estilo y ejemplo en el primer mensaje.
+| Canal (alias) | Estilo | Ejemplo a copiar | Doc de estilo |
+|---|---|---|---|
+| **Bitácora Perdida** (`bitacora_perdida`) | **Kurzgesagt siempre**, muy buena calidad, mucho detalle y movimiento. **Estándar actual: Kurzgesagt ISOMÉTRICO + mapas con relieve real** (dioramas, interiores en corte, **retratos REALES de dominio público en marco dorado** — `nucleo/kz_retrato_real.py`, no bustos dibujados —, rótulos de cápsula). Zacatecas (`vox` vertical) fue excepción | **`videos/independencia_mx/`** (`tNN.py`, `mundos_*.py`; kit `nucleo/kz_*.py`, catálogo `docs/api_kz.md`); antes `tesoro_moctezuma/`, `teotihuacan/` | `docs/estilo_kurzgesagt.md` §A (leer entera antes de empezar) |
+| **Cronopapel** (`cronopapel`) | Boceto + guache con mapa pintado y pegatinas, cambios de escena procedurales. **Short vertical sin mapa: `videos/primer_foton/` (pegatinas sobre fondos guache, mascota Foti)**. **Estándar actual (v2): relieve real ETOPO1 bajo el guache, ríos, capas de reinos, fronteras reales, dos rejillas** | **`videos/historia_espana/`** (antes `historia_china/`, `historia_iran/`, `historia_japon/`) | `docs/estilo_boceto_guache_mapa.md` (§ Versión 2) |
+| **Sapiens con Wifi** (`sapiens_con_wifi`) | Doodle (`doodle`, `doodle_psicodelico`, `recortes`), listas por ítems | `videos/neandertales/`, `un_dia_30mil/`, `40mil_anos/` | `docs/flujo_produccion.md` (estilos visuales) |
+| **Kuriox** (`kuriox`) | Kurzgesagt con la mascota **Kuri** (nunca el pájaro morado); Shorts verticales; más dinámico (pausas cortas, mucho movimiento) | `videos/sol_apagado_8min/`, `historia_60/` | `docs/estilo_kurzgesagt.md` |
+| **Edsonxn** (`edsonxn`) | **Documental de misterio / crimen real** (calco de «Detrás del Enigma»), voz **Faraon**, sin subtítulos; noticias de actualidad con extractos de video (yt-dlp) + fotos Commons + mapa de relieve real | `videos/voynich/`, `videos/polybius/`, `videos/christa_pike/` (kit `kit_cp.py`), **`videos/satoshi_nakamoto/` = TABLERO DE DETECTIVE VIVO** (kit `tablero.py` + portales); **`videos/polybius/`** = el mismo tablero ya desligado del tema Bitcoin (piezas genéricas, `portal_base.py`, kit `arcade.py`): copiar de aquí | `docs/estilo_documental.md` (§ «Documental de NOTICIA / crimen real», § «Motion graphics DIBUJADOS propios» y § «Tablero de detective VIVO») |
+| **LogIA** (`logia`) | **Noir**: cine negro en tinta y aguada, SOLO B/N, claroscuro, lluvia, persianas; dibujo cuadro a cuadro + video real de Pexels entintado (`clip_noir`); detective narrador; voz ElevenLabs con corchetes de actuación (`eleven_v4`), opción de más voces para personajes (`VOZ_POR_FRASE`) y SFX de ElevenLabs para el drama. **REGLA (el usuario, 8-oct-2026): MEDIOS REALES** — cada persona pública que el guion nombre sale con su FOTO REAL (`python nucleo/imagenes_web.py persona "<Nombre>" 3 --dir imagenes --descargar` → ficha `nucleo/noir_real.retrato_noir`) y el video real (Pexels/Pixabay y **yt-dlp** `videos_stock.py ytbuscar/ytbajar`) entra donde ayude, SIEMPRE en B/N de tinta (`clip_real`/`clip_noir`), con créditos (`imagenes_web.py creditos`); solo figuras públicas con hechos documentados (particulares e hipótesis = dibujados), clips de YouTube ≤ 8 s con crédito en pantalla y aviso de derechos al usuario | **`videos/informante_2027/`** (10 min, 20 escenas; kit `kit27.py` + `mundos27.py` + `comite.py`) y `videos/ia_noir/` (kit `nucleo/noir*.py`, `sfx_noir.py`, `tts_eleven.py`) | `docs/estilo_noir.md` |
+| **Plastitube** (alias `pieza_oculta`; antes «La Pieza Oculta») | **Secuencia Flow**: plastilina/claymation hecha con clips e imágenes de Google Flow (1–2 min de video al inicio, luego imagen por beat); motor `secuencia`, NO se dibuja por código; inventos y sus inventores; voz Dan | mismo sistema que Wild Next Door: copiar `videos/bichos_invierno/` (clips de Flow al inicio + imágenes) o `videos/aranas_otono/` (todo imagen); primer video propio (prueba, todo imagen): `videos/teflon_sarten/` en la Fábrica (antes: proyecto `Documents\Platitube`, jubilado) | `docs/estilo_secuencia_flow.md` (preguntar duración, minutos de video y clip antes de empezar); efectos y SFX opcionales: `docs/estilo_secuencia_fx.md` § «Ideas para Plastitube y Wild Next Door» |
+| **Wild Next Door** (`wild_next_door`) | **EN INGLÉS.** Secuencia Flow en **dibujo animado** (tinta + color plano, fondo claro; no plastilina), voz Chatterbox **EnglishComic**, música Lyria; bichos de casa con giro «no lo mates». **Formato ganador: «Never Kill a X»** (ciempiés: 440 vistas en 2,5 días vs 2-3 de los demás) | **`videos/arana_techo/`** (guion plantilla con `clips_s`), `ciempies_casa/` (prompts), `bichos_invierno/` (clips) | **`docs/manual_wild_next_door.md` (LEER PRIMERO: paso a paso, qué funciona y errores)** |
+**Reels de la página de Facebook «Que pasa en Juchipila» (8-oct-2026):** no son de ningún canal de YouTube y el camino ya está decidido: secuencia con efectos en VERTICAL (`FORMATO = "vertical"` en guion.py, `docs/estilo_secuencia_flow.md` § «Formato vertical»). Videos `jch_<tema>`; receta completa y publicación en `E:\PaginaFace\CLAUDE.md` § «hazme un reel». No se suben a YouTube.
+
+**VIDEO SIN CANAL (regla del usuario, 7-oct-2026): si pide un video y no es para ningún canal, PREGUNTAR antes de empezar** (AskUserQuestion) cuál de los dos caminos quiere, salvo que ya lo haya dicho en el pedido:
+1. **Secuencia con efectos** (tipo Flow): imágenes/clips de Google Flow, una por frase, con cámara dirigida, golpes, rótulos de énfasis y SFX/camas de ElevenLabs anclados a las palabras. Motor `secuencia` + `efectos.py` (`nucleo/secuencia_fx.py`). Doc: **`docs/estilo_secuencia_fx.md`**. Ejemplos: `docs/ejemplos/un_segundo/` (el corto que originó el estilo) y **`videos/guason_fumado/`** (audio externo + estilo «animación fumada / sin presupuesto»). También acepta un audio ya grabado (`AUDIO_EXTERNO` en guion.py).
+2. **Animación tradicional** dibujada por código, como la de los otros canales (elegir entonces el estilo de la tabla).
+
+Otros estilos de prueba: **noir a color** = la esencia del noir con un poco de color oscuro y apagado (sombras frías, sodio ámbar, UN acento; paletas sodio/bourbon/medianoche; kit `nucleo/noir_color.py`, prueba `videos/prueba_noir_color/`) y su **variante feudal** = pesquisidor encapuchado con farol que investiga casos y sucesos antiguos (castillos, antorchas, pergamino y lacre; para sagas medievales tipo GoT/HotD e historia antigua; kit `nucleo/noir_feudal.py` + reparto de corte `nucleo/noir_corte.py`, prueba `videos/prueba_noir_feudal/`, **primer video completo `videos/got_joffrey/`** = «¿Quién envenenó al rey?», 3:12), doc de ambos `docs/estilo_noir_color.md` (11-oct-2026); **rayos X tecno** = explicador de tecnología vertical, neón sobre oscuro, video real dentro de ventanas de programa y diagramas animados alrededor (`videos/mods_ia_fusion/`, kit `pix.py` + `comp.py`, `docs/estilo_rayosx_tecno.md`), boceto en bucle (`docs/estilo_boceto_gota.md`), guache/meme (`docs/estilo_guache_meme.md`), **cartoon90** = dibujo animado de los 90 tipo «Coraje el perro cobarde», tinta que se redibuja cada cuadro (`videos/gato_cobarde/`, kit `nucleo/toon*.py`, `docs/estilo_cartoon90.md`; lo entrega con la vista previa del panel lista y SIN renderizar: el usuario renderiza escena por escena).
+
+## Índice de docs (léelos solo cuando haga falta)
+- `docs/flujo_produccion.md` — estructura del núcleo, etapas del flujo, cómo se escribe una escena a medida, estilos visuales, velocidad de render, QA, modelos, disco, entorno.
+- `docs/voz.md` — problemas de voz ya vividos (leer ANTES de `voz`; guion final primero, GPU compartida, nombres raros).
+- `docs/publicacion.md` — protocolo de video nuevo (canal → métricas → preguntas → producir), horario, miniaturas con IA, subida a YouTube.
+- `docs/estudio.md` — **Estudio** (versión comercial, `python fab.py estudio --abrir`, puerto 8790): videos de 60 s horizontal/vertical, voz clonada, estilos personales, guion con Gemini barato. Código en `estudio/` (no toca `nucleo/`).
+- `docs/panel.md` — panel de avance y vista previa. `docs/estilo_*.md` — recetas por estilo.
+- `BITACORA.md` — calendario de publicaciones y estado por canal (corto). Historial largo: `docs/historial.md`.
+
+## Comandos esenciales
 ```
-fab.py                  lanzador de todas las etapas (ver abajo)
-API.md                  referencia generada (python fab.py api)
-nucleo/                 motor reutilizable (NO específico de ningún video)
-  config.py             lee guion.py del video + valores por defecto
-  estilos.py            6 estilos visuales intercambiables
-  motor.py              lienzo 2x supersampleado, trazos "boil", texto, composición (sticker/tiza/neón)
-  dibujos.py            personajes (cave/tu/neander) y ~40 objetos dibujados por código
-  fondos.py             15 fondos procedurales (psicodélicos, pizarra, kraft, plano, cueva, synthwave...)
-  efectos.py            tomas raras (ojo_pez, caleido, warhol, droste, espejo, planeta...) + 12 transiciones
-  escena_base.py        Escena, Item, helpers (chip, flecha...), ICONOS, escenas genéricas
-  tts_gen.py / tts_select.py / qa.py      voz: generación, selección con Whisper+ECAPA, alineación
-  linea_tiempo.py / ritmo.py              timeline.json (fuente única de verdad) y bombos compartidos
-  sinte.py / musica.py / sfx.py / mezcla.py   síntesis, música por escena, efectos, mezcla y máster
-  render.py / final.py                    render paralelo -> MASTER + WHATSAPP + .srt
-videos/<nombre>/        un video = guion.py + escenas.py (+ datos generados)
-  voz/ timeline.json audio/ segmentos/ previews/ salida/
-videos/_plantilla/      punto de partida (escenas genéricas: funciona sin programar coreografía)
+python fab.py estado [video]            estado de todos / de uno
+python fab.py <v> voz | seleccionar | tiempo | comprobar | musica | sfx | mezcla | video | final | verificar | todo
+python fab.py <v> escena <id> t1 t2 ... hoja de prueba de una escena (previews/esc_<id>.jpg; MÍRALA)
+python fab.py <v> video --rehacer 270-280 [..]  re-renderiza solo esos tramos (s); luego `final`
+python fab.py nuevo <v> --secuencia     video del motor SECUENCIA (Google Flow); luego beats | prompts | ingesta | medios | video
+python fab.py <v> fx [--seco | hoja]    motor SECUENCIA con efectos.py: SFX de ElevenLabs -> audio/fx.wav (lo suma `mezcla`); --seco lista tiempos; hoja = previews/fx_NN.jpg
+python fab.py <v> limpiar               borra segmentos/ cuando el video está aprobado
+python fab.py yt canales | metricas <alias> 90 | subir <v> <canal> private | aplicar <v> <canal> <id> | publicar ...
+python fab.py canales [--actualizar]      inicio de día: qué canal se queda antes sin video (misma vista en la pestaña «Canales» del panel)
+python fab.py ideas [<canal>] [--actualizar]  siguiente video con datos: lo tuyo vs. lo que rompió la media en el nicho (canales/metricas/ideas/<canal>.md)
+python fab.py estadisticas [--actualizar] panel general de estadísticas de TODOS los canales (HTML sin servidor: canales/metricas/panel_canales.html;
+                                        `--actualizar` pide datos frescos a YouTube, solo lectura; código nucleo/estadisticas.py + .html;
+                                        canal nuevo = agregarlo AL FINAL de ORDEN para no repintar los colores)
+python fab.py panel --abrir             panel de avance (NUNCA detenerlo ni matarlo con los python)
+                                        Vista previa → «Renderizar esta escena»: queda fluida en el panel y el render completo la REUTILIZA
+                                        (segmentos/ + firma del código; ver docs/panel.md «Escena fluida»). Tras editar código, ámbar = obsoleta.
+                                        El render completo también deja las escenas en verde (anota sus segmentos; el motor arma el mp4 al abrir).
+                                        ANTES de `video --rehacer` tras editar código: «conservar» en el panel (si no, `depurar` borra todo lo guardado)
 ```
 
-## Flujo para un video nuevo
-1. `python fab.py nuevo <nombre>` → edita `videos/<nombre>/guion.py` (el docstring explica todos los campos).
-   - Investiga y verifica los datos; pon `dato` y `fuente` reales. Números en PALABRAS en las frases.
-   - Ítems de lista: `num`, `titulo` y 3 frases ("Número N: <titulo>", fase A, fase B).
-   - Elige `ESTILO_VISUAL`, `DURACION` (o None), `TRANSICIONES`, `MUSICA` (opcionales).
-2. `python fab.py <nombre> voz` → `python fab.py <nombre> seleccionar`
-   (si imprime REGENERAR: `python fab.py <nombre> voz --seeds 5 6 7 8 --solo <keys>` y volver a seleccionar;
-   si una frase falla siempre, reescríbela. `fab.py <nombre> todo` hace estas rondas solo.)
-3. `python fab.py <nombre> tiempo` → timeline.json (BPM y escenas en tiempo fuerte).
-4. Escenas: la plantilla ya genera todo con `ItemGenerico` etc. Para coreografía a medida, crea clases en
-   `escenas.py` (heredan de `Item`/`Escena`) y regístralas en `PROPIAS`. Revisa con
-   `python fab.py <nombre> escena <id> t1 t2 ...` y **mira la imagen** `previews/esc_<id>.jpg`.
-5. `python fab.py <nombre> prueba t1 t2 ...` (cuadros finales con transiciones y subtítulos).
-   Antes del render largo: `python fab.py <nombre> comprobar` (nombres sin definir, anclas, un cuadro por
-   fase; tarda segundos y evita que un NameError tumbe el render a los 10 minutos).
-6. `python fab.py <nombre> musica` → `sfx` → `mezcla` → `video` → `final`
-   (o `python fab.py <nombre> todo` para todo en orden). Salida en `videos/<nombre>/salida/`.
-7. `python fab.py <nombre> verificar`: Whisper frase por frase sobre la mezcla final (CER), duración y
-   desfase A/V del MASTER y `previews/final_hoja.jpg` (MÍRALA). Reporta estos números al usuario.
-8. Miniatura: `videos/<nombre>/miniaturas.py` con `VARIANTES = {nombre: fn(lz) -> fondo}` (ejemplo en
-   `videos/40mil_anos/miniaturas.py`) → `python fab.py <nombre> miniatura` → `salida/*_mini_<variante>.jpg`
-   (1280x720) y `previews/miniaturas.jpg` (MÍRALA: incluye la vista a tamaño de celular). En el nicho funciona:
-   personaje grande con cara de sorpresa, 1-3 palabras enormes amarillas con contorno negro, alto contraste.
-   Usa `ojos="abiertos"` (a un T fijo el parpadeo automático puede cerrar los ojos).
-   Metadatos de YouTube del video en `videos/<nombre>/youtube.json`; datos del canal en `canales/*.json`.
-9. YouTube (`nucleo/youtube.py`, portado de RemoGravity; cliente OAuth en `canales/youtube_client_secrets.json`,
-   tokens en `canales/tokens/`): `python fab.py yt ayuda`. Canal por alias = nombre de `canales/<alias>.json`
-   (p. ej. `sapiens_con_wifi`). `yt videos <canal>`, `yt metricas <canal> [dias]`, `yt aplicar <video> <canal> <id>` (metadatos + miniatura +
-   .srt a un video ya subido, sin cambiar su visibilidad), `yt subir <video> <canal> [private|unlisted|public]
-   [--publicar ISO]`, `yt publicar <canal> <id> [public|unlisted|private] [--programar ISO]`, `yt canal <alias>` (descripción, palabras clave, idioma, país, banner). Nombre y foto de
-   perfil del canal NO se pueden cambiar por API (Studio). Publicar o hacer público = preguntar antes.
-   Arte del canal: `python canales/arte_canal.py "NOMBRE" "lema"` → `canales/arte/` (revisar `*_revision.jpg`).
-- Evita escenario vacío: el objeto principal de cada fase debe aparecer al empezar su frase
-  (`self.B + 0.35` / `self.C + 0.15`); la palabra clave solo lo remarca (rebote, etiqueta).
-
-Tiempos aprox. (RTX 4060): voz ~4 s por toma (x4 tomas por frase), selección ~2-3 min, música ~2.5 min
-por 3 min de video, render ~20 min por 3 min (13 procesos). Si otro programa ocupa la GPU
-(p. ej. un `chatterbox_server.py` del usuario), la voz puede ir 5-8x más lenta: no lo mates, avisa.
-
-## Cómo se escribe una escena a medida (lo esencial)
-- `preparar()` / `escena()` (en Item): calcula anclas con `self.w("palabra")` (tiempo en que se dice;
-  `fin=True` = cuando termina; `frase=i`; `n=` enésima aparición; KeyError si no existe) y registra
-  sonidos con `self.ev(t, "nombre_sfx", vol, pan, tono=, dur=)`.
-- `dibujar(lz, t)` (Escena) o `antes(lz, t)` / `hoy(lz, t)` (Item, fases A/B). Todo es función del tiempo
-  global `t`; usa `pop(t, t0)`, `sale(t, t0)`, `prog(t, a, b)`, `e_out/e_inout/e_back`.
-- Fases de Item: `self.A` (título), `self.B` (inicio fase A), `self.C` (inicio fase B; `fase_b` en guion = índice
-  de frase que la abre, para ítems de 4+ frases). `ANTES_PERSISTE = True`
-  mantiene lo de la fase A dibujado durante la fase B.
-- Cámara: `camara(t) -> (zoom, rot, dx, dy)`. Fondo: `fondo(t)` / `fondo_antes` / `fondo_hoy`
-  (por defecto los del estilo: `fondo_estilo("antes", t, pal, pulso)`).
-- Tomas raras: `self.post_fx(t_ini, t_fin, lambda img, t, u: E.caleido(img, 6, t, u))` (u = rampa 0..1).
-- Capas del lienzo: 0 = pared (sin borde), 1 = stickers (defecto), 2 = encima (partículas, destellos).
-  `with lz.grupo(x, y, s, rot):` transforma; `with lz.capa(2):` cambia de capa.
-- Texto que no debe distorsionarse con un post-efecto (espejo, warhol): dibújalo en `ui(lz, t)`.
-- Zona segura: encabezado arriba-izq (y≈62), sello arriba-der, tarjeta dato (y≈150-240), subtítulos
-  abajo (y≈950-1040), barra de progreso arriba al centro. El escenario útil es y≈260-900.
-
-## Estilos visuales (`ESTILO_VISUAL` en guion.py o `set FAB_ESTILO=...` para probar)
-doodle_psicodelico · pizarra · cuaderno · neon · recortes (con stop-motion `fps_mov`=15 y fondo `cartulina`
-por escena según `PAL`) · limpio. Un estilo cambia tinta, rellenos,
-temblor, borde sticker, sombra, textura (tiza), brillo (neón), grano y fondos por defecto — sin tocar la
-coreografía. Ver `python fab.py <video> estilos <t>` (mismo cuadro en todos) y `catalogo` (íconos).
-Nuevo estilo: copiar una entrada de `nucleo/estilos.py` y ajustar. Nuevo fondo: función en `fondos.py`
-+ registrar en `FONDOS`. Nueva transición: `tr_x(A, B, p, seed)` en `efectos.py` + `TRANSICIONES`.
-Nuevo sonido: `s_x(**k)` en `sfx.py` (se registra solo). Nuevo sabor musical: rama en `musica.componer`
-+ entrada en `musica.PROG` y `config.SABORES`.
-Tras cambiar el núcleo: `python fab.py api` y re-verificar `videos/40mil_anos` (no debe cambiar).
-
-## Estilo Kurzgesagt y plano secuencia (ejemplo: `videos/sol_apagado/`, 1:00)
-- `ESTILO_VISUAL = "kurzgesagt"`: sin contornos (los trazos NEGRO no se dibujan; usa `plano.TINTA` si quieres
-  una línea oscura), sin temblor, bloom de lo luminoso y saturado. Dibuja con `nucleo/plano.py`: `esfera`,
-  `sol`, `tierra` (continentes que giran, `luz`, `ciudades`), `luna`, `pajaro`, `microbio`, `arbol`, `fumarola`,
-  `termometro`, `onda` (frente de onda), `discontinua`, `rotulo`/`pastilla` (fuente `geo` = Poppins).
-- Lienzo nuevo: `with lz.recorte(pts):` (clip), `lz.degradado(pts, c0, c1, p0, p1)`, `lz.halo(x, y, r, color)`.
-- Fondos `espacio` (estrellas con paralaje dx/dy) y `degradado`; `F.estrellas(img, t, brillo)` sobre cualquier fondo.
-- Sabores musicales documental: `espacio`, `tension`, `vacio`, `esperanza` (sin bombo; cierre suave).
-- **Plano secuencia (sin cortes)**: `TRANSICIONES = [("continua", 0.1)] * n` y en escenas.py una sola clase
-  (`Mundo`) para todos los ids que dibuja el mundo en función del t global; las escenas solo marcan narración y
-  música. Anclas entre escenas con `T(id, palabra)`. Transformaciones usadas: zoom a la Tierra cuyo borde se
-  aplana en horizonte (clase `Sup`: paisaje doblado con curvatura 1/radio), paneo continuo, brillo que llena la
-  pantalla y se encoge convertido en otro objeto. Registra los sfx solo en la instancia `idx == 0`.
-- `MEZCLA = dict(musica=-21.5, sfx=-22.5)` en guion.py baja el fondo cuando la narración es casi continua.
-
-## Control de calidad (el usuario exige rigor)
-- Voz: 36/36 frases con CER 0 en el ejemplo; mira `voz/eval.json`. Whisper escribe "Número seis" como
-  "6." (ya normalizado); siglas pueden leerse mal ("ADN" → "Adán"): reescribir.
-- Imagen: SIEMPRE revisar hojas de contacto (`escena`, `prueba`) buscando choques de texto, etiquetas
-  fuera de cuadro al hacer zoom, dibujos ilegibles, escenario vacío. Corregir antes del render final.
-- Audio: `mezcla` imprime LUFS (objetivo −14), pico verdadero (≤ −1 dBTP) y relación voz/fondo (≥ ~11 dB).
-  Verificación extra: transcribir la mezcla final con Whisper (debe dar CER ≈ 0).
-- Sin parpadeos rápidos a pantalla completa (fotosensibilidad): flashes solo locales.
-- `render.py video` reanuda: borra `segmentos/seg_XXXX.mp4` afectados para re-renderizar solo esos.
-
-## Modelos (no borrar)
-- `~/.cache/huggingface/hub` guarda Chatterbox (~3 GB) y Whisper large-v3 (~3 GB). Si se borra (p. ej. al
-  liberar espacio), la etapa `voz` los vuelve a bajar (~1.4 MB/s ≈ 40 min) y puede quedarse trabada:
-  si un `.incomplete` no crece en 1-2 min, detén solo tus procesos (`tts_gen`) y relanza; HF retoma.
-- `modelos/ecapa` (similitud de voz) son enlaces a esa caché: si están rotos, bórralos y se regeneran.
-
-## Disco (C: suele estar casi lleno)
-- Antes de producir, revisa espacio: `powershell -Command "[math]::Round((Get-PSDrive C).Free/1GB,2)"`.
-  Un video de 3 min necesita ~1.5 GB temporales (segmentos ~470 MB + video sin audio ~470 MB + MASTER ~500 MB).
-  Con < 2 GB libres, avisa al usuario antes de renderizar (un disco lleno corta la escritura: p. ej. un
-  .wav de 80 bytes = toma rota; bórrala y reanuda).
-- `final` borra solos `segmentos/` y `video_sin_audio.mp4` al terminar (FAB_CONSERVAR=1 para mantenerlos);
-  si luego cambias solo el audio, `final` remuxa desde el MASTER existente.
-- `musica` ya no guarda pistas separadas (FAB_STEMS=1 si se necesitan, ~300 MB).
-- Nombre de los archivos de salida: `ARCHIVO = "..."` en guion.py (si no, se deriva del TITULO).
-
-## Git / GitHub
-- Repo privado (remoto `origin`). Se versiona solo código y configuración (ver `.gitignore`): núcleo, docs,
-  `canales/*.json`, arte del canal y por video `guion.py`, `escenas.py`, `miniaturas.py`, `youtube.json`,
-  `timeline.json`. NUNCA subir `canales/youtube_client_secrets.json`, `canales/tokens/`, métricas, respaldos,
-  voz/audio/render ni `proyecto/`. Antes de cada commit: `git status` y revisa que no entre ningún secreto.
-- Al terminar un cambio que funcione: commit en español describiendo qué y por qué; `git push`.
-- Sesiones en la nube (claude.ai/code) sirven para guion, escenas, investigación y metadatos, pero NO tienen
-  GPU, Chatterbox, voces, Whisper, ffmpeg ni fuentes: voz, música y render siempre en esta PC
-  (`git pull` y luego `python fab.py <video> todo`).
-
-## Entorno
-Python 3.10 del sistema (torch cu124, numpy, opencv, PIL, librosa, numba, faster-whisper, speechbrain,
-pyloudnorm). Chatterbox en `C:\chatterbox\repo` (Multilingual v3, `language_id="es"`).
-Voces de referencia en `C:\chatterbox_voices` (Dan.mp3 = narrador usado). Whisper large-v3 y ECAPA
-en caché de HuggingFace. ffmpeg en `C:\ffmpeg\bin`. Fuentes: Snap ITC (títulos), Segoe UI Black
-(subtítulos), Segoe Print (notas). GPU RTX 4060 8 GB, 16 hilos, 34 GB RAM.
-Entrega: `salida/*_MASTER.mp4` (1080p) + `.srt`. El usuario YA NO quiere versiones para WhatsApp
-(no generarlas salvo que lo pida; existe FAB_WHATSAPP=1). SendUserFile solo llega al móvil si pesa < 30 MB.
+## Disco, git y entorno (resumen; detalle en docs/flujo_produccion.md)
+- **Lo pesado vive en E:\FabricaAnimaciones** (junctions, 5-oct-2026, a pedido del usuario): `videos/*/{salida*,segmentos,audio,voz,previews,clips}` y los proyectos/vistas del Estudio (`E:\FabricaAnimaciones\estudio`). `fab.py nuevo` ya crea esas carpetas en E:. **E: (HDD USB) debe estar conectado** para producir, renderizar o subir. Herramienta: `python nucleo/mover_pesados.py` (ver docs/flujo_produccion.md «Disco»).
+- C: suele estar casi lleno: antes de renderizar mira el espacio libre (un video de 3 min ≈ 1,5 GB temporales; con < 2 GB libres avisa). `final` CONSERVA `segmentos/` para arreglos por tramos (`python fab.py <v> video --rehacer 270-280` + `final`, minutos en vez de re-render completo); al aprobar/subir el video: `python fab.py <v> limpiar`.
+- Render rápido (2026-10-04, ver docs/flujo_produccion.md «Optimización»): el límite es la memoria virtual de Windows, no el CPU. Antes de un render largo pide al usuario cerrar `chatterbox_server.py` y `app.py` (~8 GB cada uno) y usa 12 procesos (por defecto); el render ya no deja dormir la PC, dice qué cerrar si no caben y **sube solo de procesos cuando se libera memoria** (y si a uno le falta memoria, reintenta su segmento en vez de caerse).
+- Git: repo privado `origin`; versionar solo código/config (ver `.gitignore`); NUNCA `canales/youtube_client_secrets.json`, `canales/tokens/`, métricas, voz/audio/render. `git status` antes de cada commit; commit en español; `git push`. Hay muchos cambios sin confirmar (ver BITACORA §6).
+- Python 3.10 del sistema (torch cu124, numpy, opencv, numba, faster-whisper…); Chatterbox en `C:\chatterbox\repo`; voces en `C:\chatterbox_voices` (Dan = narrador por defecto); ffmpeg `C:\ffmpeg\bin`; GPU RTX 4060 8 GB. No borrar `~/.cache/huggingface/hub` (Chatterbox y Whisper, ~6 GB).
+- Entrega: `videos/<v>/salida/*_MASTER.mp4` (1080p) + `.srt`. Nada de versiones para WhatsApp salvo que lo pida. Publicar o hacer público = preguntar antes (subir en privado y programar lo que él pidió está bien).
+- Con voz (Chatterbox) y render a la vez se agota la memoria virtual: no los corras juntos; render con `--procs 12` (el render baja solo los procesos si no hay memoria).

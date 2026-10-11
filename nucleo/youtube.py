@@ -105,7 +105,12 @@ def access_token(cid):
 def api(cid, metodo, ruta, base=API, **kw):
     h = kw.pop("headers", {})
     h["Authorization"] = "Bearer " + access_token(cid)
-    r = requests.request(metodo, base + ruta, headers=h, timeout=kw.pop("timeout", 120), **kw)
+    espera = kw.pop("timeout", 120)
+    for intento in range(4 if metodo == "GET" else 1):          # lecturas: YouTube a veces contesta un 401 pasajero con token válido (LogIA)
+        r = requests.request(metodo, base + ruta, headers=h, timeout=espera, **kw)
+        if r.status_code != 401:
+            break
+        time.sleep(0.6 * (intento + 1))
     if r.status_code >= 400:
         try:
             msg = r.json()["error"]["message"]
@@ -253,7 +258,9 @@ def _snippet(m, previo=None):
 
 
 def miniatura_y_subtitulos(cid, vid, carpeta, m):
-    if m.get("miniatura"):
+    if m.get("miniatura") and not os.path.isfile(os.path.join(carpeta, m["miniatura"])):
+        print("miniatura NO aplicada: todavía no existe", m["miniatura"], "(se pone luego con 'yt aplicar')")
+    elif m.get("miniatura"):
         ruta = os.path.join(carpeta, m["miniatura"])
         tipo = "image/png" if ruta.endswith(".png") else "image/jpeg"
         api(cid, "POST", "/thumbnails/set", base=UPLOAD, params=dict(videoId=vid, uploadType="media"),
@@ -298,8 +305,12 @@ def aplicar(carpeta, cid, vid):
 def _reporte(cid, desde, hasta, **p):
     """YouTube Analytics v2 (scope yt-analytics.readonly). Devuelve lista de dicts; [] si no hay datos."""
     p.update(ids="channel==MINE", startDate=desde, endDate=hasta)
-    r = requests.get("https://youtubeanalytics.googleapis.com/v2/reports", params=p,
-                     headers={"Authorization": "Bearer " + access_token(cid)}, timeout=60)
+    for intento in range(4):                                     # mismo 401 pasajero que en api()
+        r = requests.get("https://youtubeanalytics.googleapis.com/v2/reports", params=p,
+                         headers={"Authorization": "Bearer " + access_token(cid)}, timeout=60)
+        if r.status_code != 401:
+            break
+        time.sleep(0.6 * (intento + 1))
     d = r.json()
     if "error" in d:
         return [{"error": d["error"].get("message", "")}]
@@ -369,8 +380,53 @@ def metricas(cid, alias=None, dias=28):
     return out
 
 
-def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None):
+def _separacion_h(cid):
+    """Horas mínimas entre dos publicaciones del canal: `horario.separacion_min_horas` de canales/<alias>.json (48 si no dice)."""
+    for ruta in glob.glob(os.path.join(CANALES, "*.json")):
+        try:
+            c = json.load(open(ruta, encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if isinstance(c, dict) and c.get("canal_id") == cid:
+            return float((c.get("horario") or {}).get("separacion_min_horas", 48))
+    return 48.0
+
+
+def comprobar_separacion(cid, cuando=None, vid=None, forzar=False):
+    """REGLA (7-oct-2026, tras publicar 3 videos de Wild Next Door el mismo día): un canal nunca recibe dos videos
+    públicos o programados con menos de su separación mínima. Se detiene si `cuando` (ISO UTC; ahora si falta)
+    choca con otro video; `forzar` solo cuando el usuario lo pidió expresamente para ese video."""
+    import datetime as dt
+
+    def _f(s):
+        return dt.datetime.fromisoformat(s[:19] + "+00:00")
+    t = _f(cuando) if cuando else dt.datetime.now(dt.timezone.utc)
+    sep = _separacion_h(cid)
+    up = api(cid, "GET", "/channels", params=dict(part="contentDetails", id=cid))["items"][0]
+    pl = up["contentDetails"]["relatedPlaylists"]["uploads"]
+    items = api(cid, "GET", "/playlistItems", params=dict(part="contentDetails", playlistId=pl, maxResults=50)).get("items", [])
+    ids = [i["contentDetails"]["videoId"] for i in items if i["contentDetails"]["videoId"] != vid]
+    choques = []
+    if ids:
+        for v in api(cid, "GET", "/videos", params=dict(part="snippet,status", id=",".join(ids))).get("items", []):
+            st = v["status"]
+            otro = st.get("publishAt") or (v["snippet"].get("publishedAt") if st["privacyStatus"] == "public" else None)
+            if otro and abs((t - _f(otro)).total_seconds()) < sep * 3600:
+                choques.append(f"  {v['id']}  {'programado' if st.get('publishAt') else 'público'} {otro}  {v['snippet']['title']}")
+    if not choques:
+        return
+    msg = (f"El canal ya tiene video(s) a menos de {sep:g} h de {t.strftime('%Y-%m-%d %H:%M')} UTC:\n" + "\n".join(choques))
+    if forzar:
+        print("AVISO (--forzar): " + msg)
+        return
+    sys.exit("DETENIDO, no se publicó ni programó nada. " + msg + "\nPrograma en el siguiente hueco libre (--programar / "
+             "--publicar <ISO UTC>) o, solo si el usuario lo pidió expresamente para este video, repite con --forzar.")
+
+
+def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None, forzar=False):
     """Hace público (o no listado / privado) un video ya subido, o lo programa con publicar=ISO (UTC)."""
+    if publicar or privacidad == "public":
+        comprobar_separacion(cid, publicar, vid, forzar)
     v = api(cid, "GET", "/videos", params=dict(part="status", id=vid))["items"][0]
     st = {k: v["status"][k] for k in ("embeddable", "license", "publicStatsViewable", "selfDeclaredMadeForKids")
           if k in v["status"]}
@@ -383,7 +439,9 @@ def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None):
           + f"  https://youtu.be/{vid}")
 
 
-def subir(carpeta, cid, privacidad="private", publicar=None):
+def subir(carpeta, cid, privacidad="private", publicar=None, forzar=False):
+    if publicar or privacidad == "public":
+        comprobar_separacion(cid, publicar, None, forzar)
     m = _meta(carpeta)
     video = glob.glob(os.path.join(carpeta, "salida", "*_MASTER.mp4"))[0]
     status = dict(privacyStatus="private" if publicar else privacidad, selfDeclaredMadeForKids=bool(m.get("para_ninos")),
@@ -440,11 +498,11 @@ def main():
     elif cmd == "publicar":
         pub = a[a.index("--programar") + 1] if "--programar" in a else None
         priv = next((x for x in a[3:] if x in ("private", "unlisted", "public")), "public")
-        cambiar_visibilidad(resolver_canal(a[1]), a[2], priv, pub)
+        cambiar_visibilidad(resolver_canal(a[1]), a[2], priv, pub, "--forzar" in a)
     elif cmd == "subir":
         pub = a[a.index("--publicar") + 1] if "--publicar" in a else None
         priv = next((x for x in a[3:] if x in ("private", "unlisted", "public")), "private")
-        subir(os.path.join(RAIZ, "videos", a[1]), resolver_canal(a[2]), priv, pub)
+        subir(os.path.join(RAIZ, "videos", a[1]), resolver_canal(a[2]), priv, pub, "--forzar" in a)
     else:
         sys.exit(f"Comando desconocido '{cmd}'. Usa: python fab.py yt ayuda")
 

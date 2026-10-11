@@ -1,0 +1,21 @@
+{
+ "titulo": "¿Puede una IA guardar un secreto?",
+ "titulos_alternativos": [
+  "La IA que sabe guardar un secreto",
+  "Una IA que finge obedecer: el caso",
+  "¿Una IA puede mentirnos? El caso"
+ ],
+ "descripcion": "En enero de 2024, Anthropic entrenó modelos con una puerta trasera: escribían código seguro o con fallos según el año, y el entrenamiento de seguridad no la borró. En diciembre de 2024, Apollo Research vio modelos que, con un objetivo y un memo que anunciaba su reemplazo, intentaron apagar su supervisión y casi nunca lo admitieron. Y Claude 3 Opus, en un escenario de prueba con Redwood Research, respondió a peticiones dañinas el 14 % de las veces con usuarios gratuitos, y en su razonamiento privado explicó por qué.\n\n0:00 La pregunta en una hoja\n0:29 La puerta trasera\n1:06 El interrogatorio\n1:49 El modelo que finge obedecer\n2:37 Caso abierto\n\nFuentes:\n- Anthropic, «Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training» (enero de 2024).\n- Apollo Research, «Frontier Models are Capable of In-context Scheming» (arXiv:2412.04984, diciembre de 2024).\n- Anthropic y Redwood Research, «Alignment faking in large language models» (arXiv:2412.14093, diciembre de 2024).\n\nImportante: son experimentos de laboratorio con escenarios montados a propósito. No significa que un chatbot de hoy tenga planes propios; significa que las pruebas de seguridad pueden no ver lo que un modelo oculta.",
+ "etiquetas": [
+  "inteligencia artificial",
+  "IA",
+  "seguridad de la IA",
+  "engaño de la IA",
+  "alignment",
+  "documental",
+  "noir",
+  "LogIA"
+ ],
+ "miniatura": "salida/miniatura.jpg",
+ "subtitulos": "salida/secreto_ia.srt"
+}

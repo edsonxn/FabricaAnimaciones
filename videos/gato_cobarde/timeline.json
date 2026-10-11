@@ -1,0 +1,109 @@
+{
+ "bpm": 96.0,
+ "beat": 0.625,
+ "unidad": 4,
+ "total": 60.0,
+ "titulo": "Mostacho y el ruido de la cocina",
+ "estilo": "cartoon90",
+ "sin_voz": true,
+ "anclada": false,
+ "escenas": [
+  {
+   "id": "exterior",
+   "compases": 3,
+   "t0": 0.0,
+   "t1": 7.5,
+   "frases": [],
+   "fin_voz": 0.0,
+   "beats": 12
+  },
+  {
+   "id": "sala",
+   "compases": 3,
+   "t0": 7.5,
+   "t1": 15.0,
+   "frases": [],
+   "fin_voz": 7.5,
+   "beats": 12
+  },
+  {
+   "id": "pasillo",
+   "compases": 4,
+   "t0": 15.0,
+   "t1": 25.0,
+   "frases": [],
+   "fin_voz": 15.0,
+   "beats": 16
+  },
+  {
+   "id": "cocina",
+   "compases": 5,
+   "t0": 25.0,
+   "t1": 37.5,
+   "frases": [],
+   "fin_voz": 25.0,
+   "beats": 20
+  },
+  {
+   "id": "cosa",
+   "compases": 5,
+   "t0": 37.5,
+   "t1": 50.0,
+   "frases": [],
+   "fin_voz": 37.5,
+   "beats": 20
+  },
+  {
+   "id": "final",
+   "compases": 4,
+   "t0": 50.0,
+   "t1": 60.0,
+   "frases": [],
+   "fin_voz": 50.0,
+   "beats": 16,
+   "fin_musica": 58.125
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 7.5,
+   "t0": 7.45,
+   "t1": 7.55,
+   "tipo": "continua",
+   "de": "exterior",
+   "a": "sala"
+  },
+  {
+   "t": 15.0,
+   "t0": 14.95,
+   "t1": 15.05,
+   "tipo": "continua",
+   "de": "sala",
+   "a": "pasillo"
+  },
+  {
+   "t": 25.0,
+   "t0": 24.95,
+   "t1": 25.05,
+   "tipo": "continua",
+   "de": "pasillo",
+   "a": "cocina"
+  },
+  {
+   "t": 37.5,
+   "t0": 37.45,
+   "t1": 37.55,
+   "tipo": "continua",
+   "de": "cocina",
+   "a": "cosa"
+  },
+  {
+   "t": 50.0,
+   "t0": 49.95,
+   "t1": 50.05,
+   "tipo": "continua",
+   "de": "cosa",
+   "a": "final"
+  }
+ ]
+}

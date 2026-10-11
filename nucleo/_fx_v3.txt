@@ -1,0 +1,174 @@
+
+
+# ================================================================== v3: calco del original (filtro de película, estilos de texto, trazos, fuga de luz)
+_CACHE_CINE = {}
+
+
+def _mapas_ca(fuerza):
+    k = ("ca", round(fuerza, 2))
+    if k not in _CACHE_CINE:
+        Xg, Yg = _GRID()
+        dx, dy = (Xg - W / 2) / (W / 2), (Yg - H / 2) / (H / 2)
+        r2 = dx * dx + dy * dy
+        _CACHE_CINE[k] = (((Xg + dx * r2 * fuerza)).astype(np.float32), Yg.astype(np.float32), ((Xg - dx * r2 * fuerza)).astype(np.float32))
+    return _CACHE_CINE[k]
+
+
+def _mascara_tilt(banda=0.50, ancho=0.17, suave=0.30):
+    k = ("tilt", banda, ancho, suave)
+    if k not in _CACHE_CINE:
+        y = np.linspace(0, 1, H, dtype=np.float32)
+        m = np.clip((np.abs(y - banda) - ancho) / suave, 0, 1)
+        m = m * m * (3 - 2 * m)
+        Xg, Yg = _GRID()
+        r = np.sqrt(((Xg - W / 2) / (W / 2)) ** 2 + ((Yg - H / 2) / (H / 2)) ** 2)
+        lat = np.clip((r - 0.85) / 0.55, 0, 1)                   # desenfoque suave también en los bordes laterales
+        _CACHE_CINE[k] = np.clip(np.maximum(m[:, None] * np.ones((1, W), np.float32), lat * 0.7), 0, 1)[..., None].astype(np.float32)
+    return _CACHE_CINE[k]
+
+
+def cine(img, t, tilt=5.0, banda=0.52, ca=2.2, bloom=0.22, escaneo=0.13, periodo=4, vineta=0.68, grano=0.05, polvo=0.18, sat=0.92,
+         tinte=None, calido=0.05, teal=0.04, destello=0.0):
+    """FILTRO DE PELÍCULA del original: desenfoque tilt-shift (arriba/abajo/bordes), aberración cromática radial, bloom en luces, gradación
+    cálida/teal, viñeta fuerte, polvo, grano y LÍNEAS DE ESCANEO horizontales sobre todo el cuadro (también sobre el texto)."""
+    img = np.clip(img, 0, 1)
+    if tilt > 0:
+        pq = cv2.resize(img, (W // 2, H // 2), interpolation=cv2.INTER_AREA)
+        pq = cv2.GaussianBlur(pq, (0, 0), tilt / 2.0 * 1.6)
+        bl = cv2.resize(pq, (W, H), interpolation=cv2.INTER_LINEAR)
+        m = _mascara_tilt(banda)
+        img = img * (1 - m) + bl * m
+    if ca > 0:
+        mr, my, mb = _mapas_ca(ca)
+        r = cv2.remap(img[..., 0], mr, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+        b = cv2.remap(img[..., 2], mb, my, cv2.INTER_LINEAR, borderMode=cv2.BORDER_REPLICATE)
+        img = np.stack([r, img[..., 1], b], -1)
+    if bloom > 0:
+        alt = np.clip(img - 0.68, 0, 1)
+        h2 = cv2.GaussianBlur(cv2.resize(alt, (W // 4, H // 4), interpolation=cv2.INTER_AREA), (0, 0), 6)
+        img = img + cv2.resize(h2, (W, H), interpolation=cv2.INTER_LINEAR) * bloom * 1.6
+    img = D.acabado(img, t, fuerza_vineta=vineta, grano=grano, polvo=polvo, teal=teal, calido=calido, destello=destello, sat=sat, tinte=tinte)
+    if escaneo > 0:
+        y = (np.arange(H) + int(t * 24)) % periodo
+        f = np.where(y < periodo / 2, 1.0 - escaneo, 1.0).astype(np.float32)
+        img = img * f[:, None, None]
+    return np.clip(img, 0, 1)
+
+
+def rotulo(palabras, cx, cy, px=74, lineas=None, color=(0.97, 0.95, 0.92), interlinea=1.17, espacio=0.27):
+    """Texto principal del original: cursiva mayúsculas (Poppins SemiBold Italic), blanco, dos líneas centradas."""
+    return titular(palabras, cx, cy, px, "pop_sbi", lineas, color, None, mayus=True, interlinea=interlinea, espacio=espacio)
+
+
+def dibujar_rotulo(lz, pal, t, px=74, salida=None, op=1.0, scan=True, sube=8.0):
+    """Cada palabra aparece con fundido (0,30 s) subiendo unos píxeles; líneas de escaneo a través de las letras; sombra suave."""
+    o = op * (1 - (smooth(prog(t, salida, salida + 0.3)) if salida is not None else 0))
+    if o <= 0.003:
+        return
+    for w, ta, col, x, y in pal:
+        if t < ta:
+            continue
+        pm, a, m = D.palabra_img(w, "pop_sbi", px, tuple(col), stroke=0.012, glow=0.5)
+        u = smooth(prog(t, ta, ta + 0.30))
+        if scan:
+            rows = (0.55 + 0.45 * ((np.arange(a.shape[0]) % 4) < 2)).astype(np.float32)
+            pm, a = pm * rows[:, None, None], a * rows[:, None]
+        mezclar_pm(lz, pm, a, int(x - m), int(y - m + (1 - u) * sube), o * u)
+
+
+def serif_amarillo(palabras, cx, cy, px=60, lineas=None, color=(0.95, 1.0, 0.10)):
+    """Serif amarillo condensado, Título Con Mayúsculas, pequeño (como 'Es Cahuachi' / '24 Kilómetros Cuadrados')."""
+    pal = [(w[:1].upper() + w[1:], t) for w, t in palabras]
+    return titular(pal, cx, cy, px, "serif_cond", lineas, color, None, mayus=False, interlinea=1.0, espacio=0.24)
+
+
+def dibujar_serif(lz, pal, t, px=60, salida=None, op=1.0, fnt="serif_cond"):
+    o = op * (1 - (smooth(prog(t, salida, salida + 0.3)) if salida is not None else 0))
+    if o <= 0.003:
+        return
+    for w, ta, col, x, y in pal:
+        if t < ta:
+            continue
+        pm, a, m = D.palabra_img(w, fnt, px, tuple(col), stroke=0.045, glow=0.6)
+        u = smooth(prog(t, ta, ta + 0.18))
+        mezclar_pm(lz, pm, a, int(x - m), int(y - m), o * u)
+
+
+def pregunta_c(lz, lineas, t, t0, cx, cy, px=60, salida=None):
+    """Serif blanco condensado + signo '?' rojo grande (como 'Pregunta Alimenta Teorías Extremas'); lineas = [[(palabra, t), ...], ...]."""
+    o = 1 - (smooth(prog(t, salida, salida + 0.3)) if salida is not None else 0)
+    if t < t0:
+        return
+    pm, a, m = D.palabra_img("?", "abril_cond", 330, tuple(ROJO), stroke=0.0, glow=0.0)
+    s = e_back(prog(t, t0, t0 + 0.45))
+    if s > 0.02:
+        pm2 = cv2.resize(pm, None, fx=s, fy=s, interpolation=cv2.INTER_LINEAR)
+        a2 = cv2.resize(a, None, fx=s, fy=s, interpolation=cv2.INTER_LINEAR)
+        mezclar_pm(lz, pm2, a2, int(cx - pm2.shape[1] / 2), int(cy - 190 - pm2.shape[0] / 2), o * smooth(prog(t, t0, t0 + 0.2)))
+    pal = D.bloque_texto([[(w[:1].upper() + w[1:], tt) for w, tt in ln] for ln in lineas], cx, cy + 40, "serif_cond", px, (0.97, 0.96, 0.93), "centro", 1.05, 0.24)
+    for w, ta, col, x, y in pal:
+        if t < ta:
+            continue
+        pm, a, m = D.palabra_img(w, "serif_cond", px, tuple(col), stroke=0.04, glow=0.6)
+        mezclar_pm(lz, pm, a, int(x - m), int(y - m), o * smooth(prog(t, ta, ta + 0.2)))
+
+
+def trazo_recto(lz, p0, p1, u_ini, u_fin, w=26, color=(0.80, 0.02, 0.09), op=0.95):
+    """Trazo rojo grueso de extremos redondos sobre la recta p0->p1, visible entre las fracciones u_ini..u_fin (se dibuja avanzando u_fin
+    y se borra avanzando u_ini): las 'líneas rectas' del minuto 1 del original ('nueve kilómetros')."""
+    u_ini, u_fin = clamp01(u_ini), clamp01(u_fin)
+    if u_fin - u_ini < 0.004 or op <= 0:
+        return
+    a = (p0[0] + (p1[0] - p0[0]) * u_ini, p0[1] + (p1[1] - p0[1]) * u_ini)
+    b = (p0[0] + (p1[0] - p0[0]) * u_fin, p0[1] + (p1[1] - p0[1]) * u_fin)
+    x0, y0 = int(max(0, min(a[0], b[0]) - w - 8)), int(max(0, min(a[1], b[1]) - w - 8))
+    x1, y1 = int(min(W, max(a[0], b[0]) + w + 8)), int(min(H, max(a[1], b[1]) + w + 8))
+    if x1 <= x0 or y1 <= y0:
+        return
+    m = np.zeros((y1 - y0, x1 - x0), np.uint8)
+    cv2.line(m, (int((a[0] - x0) * 16), int((a[1] - y0) * 16)), (int((b[0] - x0) * 16), int((b[1] - y0) * 16)), 255, int(w), cv2.LINE_AA, shift=4)
+    for p in (a, b):
+        cv2.circle(m, (int((p[0] - x0) * 16), int((p[1] - y0) * 16)), int(w * 8), 255, -1, cv2.LINE_AA, shift=4)
+    al = cv2.GaussianBlur(m.astype(np.float32) / 255.0, (0, 0), 0.9)
+    borde = np.clip(al - cv2.erode(al, np.ones((5, 5), np.uint8)), 0, 1)
+    col = np.float32(color)
+    pm = (al[..., None] * col) * (1 - 0.35 * borde[..., None])
+    mezclar_pm(lz, pm, al, x0, y0, op)
+
+
+def marco_pelicula(lz, ancho=78, t=0.0, op=1.0):
+    """Barras negras laterales de fotograma de película (irregulares) con arañazos verticales tenues."""
+    if "mp" not in _CACHE_CINE:
+        rng = np.random.default_rng(9)
+        r = cv2.GaussianBlur(rng.random((H, 1)).astype(np.float32), (0, 0), 6)
+        _CACHE_CINE["mp"] = ((r - r.min()) / (r.max() - r.min() + 1e-6))[:, 0]
+    r = _CACHE_CINE["mp"]
+    for y in range(0, H, 2):
+        e = int(ancho + 14 * r[y])
+        lz[y:y + 2, :e] *= (1 - op)
+        lz[y:y + 2, W - e:] *= (1 - op)
+    rng = np.random.default_rng(int(t * 12) % 97)
+    for _ in range(2):
+        x = int(rng.random() * (W - 2 * ancho) + ancho)
+        lz[:, x:x + 1] += 0.05 * op * rng.random()
+
+
+def hoja_mapa(nombre_png="imagenes/mapa_lacio.png", centro=(1500, 1610), ancho=980, alto=740, marcas=None):
+    """Recorte gris del mapa de relieve con marcadores amarillo-verde, línea blanca y nombre (como la polaroid de Cahuachi).
+    `marcas` = [(nombre, x, y)] en píxeles del mapa original."""
+    im = np.asarray(Image.open(nombre_png).convert("RGB"))
+    cx, cy = centro
+    x0, y0 = max(0, cx - ancho // 2), max(0, cy - alto // 2)
+    rec = im[y0:y0 + alto, x0:x0 + ancho].astype(np.float32)
+    g = rec @ np.array([0.30, 0.59, 0.11], np.float32)
+    g = np.clip((g - 90) * 1.6 + 110, 0, 255)
+    rec = np.repeat(g[..., None], 3, -1)
+    pil = Image.fromarray(rec.astype(np.uint8))
+    d = ImageDraw.Draw(pil)
+    pts = [(mx - x0, my - y0) for _, mx, my in (marcas or [])]
+    if len(pts) >= 2:
+        d.line(pts, fill=(255, 255, 255), width=4)
+    for (nm, mx, my), (px_, py_) in zip(marcas or [], pts):
+        d.ellipse([px_ - 44, py_ - 44, px_ + 44, py_ + 44], fill=(190, 235, 30))
+        d.text((px_, py_ - 62), nm, font=D.fuente("sans_l", 30), fill=(255, 255, 255), anchor="mb", stroke_width=3, stroke_fill=(0, 0, 0))
+    return np.asarray(pil)

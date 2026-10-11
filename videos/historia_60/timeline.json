@@ -1,0 +1,567 @@
+{
+ "bpm": 128.0,
+ "beat": 0.46875,
+ "unidad": 4,
+ "total": 60.0,
+ "titulo": "200 000 años de historia en 60 segundos",
+ "estilo": "kurzgesagt",
+ "sin_voz": false,
+ "anclada": true,
+ "escenas": [
+  {
+   "id": "origen",
+   "compases": 6,
+   "t0": 0.0,
+   "t1": 11.25,
+   "frases": [
+    {
+     "key": "origen_0",
+     "texto": "Nace Homo sapiens.",
+     "t0": 0.0,
+     "t1": 1.288,
+     "words": [
+      {
+       "w": "Nace",
+       "s": 0.0,
+       "e": 0.38
+      },
+      {
+       "w": "Homo",
+       "s": 0.38,
+       "e": 0.54
+      },
+      {
+       "w": "sapiens.",
+       "s": 0.54,
+       "e": 0.96
+      }
+     ]
+    },
+    {
+     "key": "origen_1",
+     "texto": "Salimos de África.",
+     "t0": 3.75,
+     "t1": 5.091,
+     "words": [
+      {
+       "w": "Salimos",
+       "s": 3.75,
+       "e": 4.19
+      },
+      {
+       "w": "de",
+       "s": 4.19,
+       "e": 4.33
+      },
+      {
+       "w": "África.",
+       "s": 4.33,
+       "e": 4.71
+      }
+     ]
+    },
+    {
+     "key": "origen_2",
+     "texto": "Nace el arte.",
+     "t0": 7.5,
+     "t1": 8.553,
+     "words": [
+      {
+       "w": "Nace",
+       "s": 7.5,
+       "e": 7.8
+      },
+      {
+       "w": "el",
+       "s": 7.8,
+       "e": 7.92
+      },
+      {
+       "w": "arte.",
+       "s": 7.92,
+       "e": 8.1
+      }
+     ]
+    }
+   ],
+   "fin_voz": 8.553,
+   "beats": 24
+  },
+  {
+   "id": "ciudades",
+   "compases": 6,
+   "t0": 11.25,
+   "t1": 22.5,
+   "frases": [
+    {
+     "key": "ciudades_0",
+     "texto": "La agricultura.",
+     "t0": 11.25,
+     "t1": 12.293,
+     "words": [
+      {
+       "w": "La",
+       "s": 11.25,
+       "e": 11.39
+      },
+      {
+       "w": "agricultura.",
+       "s": 11.39,
+       "e": 11.83
+      }
+     ]
+    },
+    {
+     "key": "ciudades_1",
+     "texto": "La rueda.",
+     "t0": 14.062,
+     "t1": 14.898,
+     "words": [
+      {
+       "w": "La",
+       "s": 14.062,
+       "e": 14.223
+      },
+      {
+       "w": "rueda.",
+       "s": 14.223,
+       "e": 14.543
+      }
+     ]
+    },
+    {
+     "key": "ciudades_2",
+     "texto": "La escritura.",
+     "t0": 16.875,
+     "t1": 17.827,
+     "words": [
+      {
+       "w": "La",
+       "s": 16.875,
+       "e": 17.035
+      },
+      {
+       "w": "escritura.",
+       "s": 17.035,
+       "e": 17.555
+      }
+     ]
+    },
+    {
+     "key": "ciudades_3",
+     "texto": "Las pirámides.",
+     "t0": 19.688,
+     "t1": 20.747,
+     "words": [
+      {
+       "w": "Las",
+       "s": 19.688,
+       "e": 19.887
+      },
+      {
+       "w": "pirámides.",
+       "s": 19.887,
+       "e": 20.427
+      }
+     ]
+    }
+   ],
+   "fin_voz": 20.747,
+   "beats": 24
+  },
+  {
+   "id": "imperios",
+   "compases": 6,
+   "t0": 22.5,
+   "t1": 33.75,
+   "frases": [
+    {
+     "key": "imperios_0",
+     "texto": "Atenas: democracia.",
+     "t0": 22.5,
+     "t1": 23.895,
+     "words": [
+      {
+       "w": "Atenas:",
+       "s": 22.5,
+       "e": 22.9
+      },
+      {
+       "w": "democracia.",
+       "s": 22.9,
+       "e": 23.54
+      }
+     ]
+    },
+    {
+     "key": "imperios_1",
+     "texto": "Roma: un imperio.",
+     "t0": 25.312,
+     "t1": 26.867,
+     "words": [
+      {
+       "w": "Roma:",
+       "s": 25.312,
+       "e": 25.613
+      },
+      {
+       "w": "un",
+       "s": 25.733,
+       "e": 26.093
+      },
+      {
+       "w": "imperio.",
+       "s": 26.093,
+       "e": 26.532
+      }
+     ]
+    },
+    {
+     "key": "imperios_2",
+     "texto": "La imprenta.",
+     "t0": 28.125,
+     "t1": 28.938,
+     "words": [
+      {
+       "w": "La",
+       "s": 28.125,
+       "e": 28.285
+      },
+      {
+       "w": "imprenta.",
+       "s": 28.285,
+       "e": 28.765
+      }
+     ]
+    },
+    {
+     "key": "imperios_3",
+     "texto": "Cruzar el océano.",
+     "t0": 30.938,
+     "t1": 32.141,
+     "words": [
+      {
+       "w": "Cruzar",
+       "s": 30.938,
+       "e": 31.238
+      },
+      {
+       "w": "el",
+       "s": 31.238,
+       "e": 31.378
+      },
+      {
+       "w": "océano.",
+       "s": 31.378,
+       "e": 31.777
+      }
+     ]
+    }
+   ],
+   "fin_voz": 32.141,
+   "beats": 24
+  },
+  {
+   "id": "maquinas",
+   "compases": 6,
+   "t0": 33.75,
+   "t1": 45.0,
+   "frases": [
+    {
+     "key": "maquinas_0",
+     "texto": "El telescopio.",
+     "t0": 33.75,
+     "t1": 34.761,
+     "words": [
+      {
+       "w": "El",
+       "s": 33.75,
+       "e": 33.91
+      },
+      {
+       "w": "telescopio.",
+       "s": 33.91,
+       "e": 34.43
+      }
+     ]
+    },
+    {
+     "key": "maquinas_1",
+     "texto": "La revolución industrial.",
+     "t0": 36.562,
+     "t1": 37.958,
+     "words": [
+      {
+       "w": "La",
+       "s": 36.562,
+       "e": 36.682
+      },
+      {
+       "w": "revolución",
+       "s": 36.682,
+       "e": 37.182
+      },
+      {
+       "w": "industrial.",
+       "s": 37.182,
+       "e": 37.422
+      }
+     ]
+    },
+    {
+     "key": "maquinas_2",
+     "texto": "La luz eléctrica.",
+     "t0": 39.375,
+     "t1": 40.471,
+     "words": [
+      {
+       "w": "La",
+       "s": 39.375,
+       "e": 39.515
+      },
+      {
+       "w": "luz",
+       "s": 39.515,
+       "e": 39.675
+      },
+      {
+       "w": "eléctrica.",
+       "s": 39.675,
+       "e": 40.195
+      }
+     ]
+    },
+    {
+     "key": "maquinas_3",
+     "texto": "Por fin volamos.",
+     "t0": 42.188,
+     "t1": 43.219,
+     "words": [
+      {
+       "w": "Por",
+       "s": 42.188,
+       "e": 42.328
+      },
+      {
+       "w": "fin",
+       "s": 42.328,
+       "e": 42.508
+      },
+      {
+       "w": "volamos.",
+       "s": 42.508,
+       "e": 42.907
+      }
+     ]
+    }
+   ],
+   "fin_voz": 43.219,
+   "beats": 24
+  },
+  {
+   "id": "hoy",
+   "compases": 8,
+   "t0": 45.0,
+   "t1": 60.0,
+   "frases": [
+    {
+     "key": "hoy_0",
+     "texto": "Un paso en la Luna.",
+     "t0": 45.0,
+     "t1": 46.261,
+     "words": [
+      {
+       "w": "Un",
+       "s": 45.0,
+       "e": 45.16
+      },
+      {
+       "w": "paso",
+       "s": 45.16,
+       "e": 45.34
+      },
+      {
+       "w": "en",
+       "s": 45.34,
+       "e": 45.52
+      },
+      {
+       "w": "la",
+       "s": 45.52,
+       "e": 45.54
+      },
+      {
+       "w": "Luna.",
+       "s": 45.54,
+       "e": 45.76
+      }
+     ]
+    },
+    {
+     "key": "hoy_1",
+     "texto": "Nace la web.",
+     "t0": 47.344,
+     "t1": 48.704,
+     "words": [
+      {
+       "w": "Nace",
+       "s": 47.344,
+       "e": 47.744
+      },
+      {
+       "w": "la",
+       "s": 47.744,
+       "e": 47.824
+      },
+      {
+       "w": "web.",
+       "s": 47.824,
+       "e": 48.004
+      }
+     ]
+    },
+    {
+     "key": "hoy_2",
+     "texto": "El mundo en tu bolsillo.",
+     "t0": 49.688,
+     "t1": 51.108,
+     "words": [
+      {
+       "w": "El",
+       "s": 49.688,
+       "e": 49.847
+      },
+      {
+       "w": "mundo",
+       "s": 49.847,
+       "e": 50.108
+      },
+      {
+       "w": "en",
+       "s": 50.108,
+       "e": 50.248
+      },
+      {
+       "w": "tu",
+       "s": 50.248,
+       "e": 50.367
+      },
+      {
+       "w": "bolsillo.",
+       "s": 50.367,
+       "e": 50.807
+      }
+     ]
+    },
+    {
+     "key": "hoy_3",
+     "texto": "Ocho mil millones de personas.",
+     "t0": 52.969,
+     "t1": 54.945,
+     "words": [
+      {
+       "w": "Ocho",
+       "s": 52.969,
+       "e": 53.169
+      },
+      {
+       "w": "mil",
+       "s": 53.169,
+       "e": 53.469
+      },
+      {
+       "w": "millones",
+       "s": 53.469,
+       "e": 53.729
+      },
+      {
+       "w": "de",
+       "s": 53.729,
+       "e": 54.069
+      },
+      {
+       "w": "personas.",
+       "s": 54.069,
+       "e": 54.349
+      }
+     ]
+    },
+    {
+     "key": "hoy_4",
+     "texto": "Doscientos mil años. Y apenas empezamos.",
+     "t0": 55.875,
+     "t1": 58.368,
+     "words": [
+      {
+       "w": "Doscientos",
+       "s": 55.875,
+       "e": 56.195
+      },
+      {
+       "w": "mil",
+       "s": 56.195,
+       "e": 56.515
+      },
+      {
+       "w": "años.",
+       "s": 56.515,
+       "e": 56.715
+      },
+      {
+       "w": "Y",
+       "s": 56.715,
+       "e": 57.175
+      },
+      {
+       "w": "apenas",
+       "s": 57.175,
+       "e": 57.355
+      },
+      {
+       "w": "empezamos.",
+       "s": 57.355,
+       "e": 57.955
+      }
+     ]
+    }
+   ],
+   "fin_voz": 58.368,
+   "beats": 32,
+   "fin_musica": 58.5938
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 11.25,
+   "t0": 11.2,
+   "t1": 11.3,
+   "tipo": "continua",
+   "de": "origen",
+   "a": "ciudades"
+  },
+  {
+   "t": 22.5,
+   "t0": 22.45,
+   "t1": 22.55,
+   "tipo": "continua",
+   "de": "ciudades",
+   "a": "imperios"
+  },
+  {
+   "t": 33.75,
+   "t0": 33.7,
+   "t1": 33.8,
+   "tipo": "continua",
+   "de": "imperios",
+   "a": "maquinas"
+  },
+  {
+   "t": 45.0,
+   "t0": 44.95,
+   "t1": 45.05,
+   "tipo": "continua",
+   "de": "maquinas",
+   "a": "hoy"
+  }
+ ]
+}

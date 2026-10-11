@@ -1,0 +1,197 @@
+{
+  "canal_id": "UCVyWl1OmMqJ1PyOM0m-mjHw",
+  "nombre": "Plastitube",
+  "estilo": "documental narrado de inventos y sus inventores en plastilina (claymation) hecho con clips e imágenes de Google Flow; motor secuencia; voz Dan",
+  "descripcion": "Documentales narrados en español sobre los inventos y accidentes que cambiaron el mundo, contados con animación en plastilina.\n\nEn Plastitube convertimos historias reales en dioramas de plastilina: inventores olvidados, errores que se volvieron descubrimientos, y los objetos cotidianos que usas todos los días sin pensar en su origen.\n\nCada episodio explica qué problema existía, quién encontró la solución por accidente o por terquedad, y por qué esa idea sigue en tu casa hoy.\n\nSuscríbete para descubrir la próxima historia moldeada en plastilina.\n\nDocumentales · Inventos por accidente · Animación en plastilina · Historias reales",
+  "palabras_clave": [
+    "Plastitube",
+    "documentales en español",
+    "historia de inventos",
+    "inventos por accidente",
+    "animación en plastilina",
+    "plastilina",
+    "claymation",
+    "inventores",
+    "inventos que cambiaron el mundo",
+    "ciencia y tecnología",
+    "documentales históricos",
+    "historias reales",
+    "curiosidades históricas",
+    "innovación",
+    "historia universal",
+    "educación"
+  ],
+  "idioma": "es",
+  "pais": "MX",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "13:00",
+    "utc": "19:00",
+    "nota": "Ciclo real del canal (verificado 7-oct-2026): SEMANAL, martes 19:00 UTC (13:00 CDMX). Antes de programar, mirar el último publishAt ocupado y poner el martes siguiente.",
+    "ciclo_dias": 5
+  },
+  "publicados": [
+    {
+      "video": "teflon_sarten",
+      "id": "bQj_Ip4dhEo",
+      "titulo": "El cilindro vacío que seguía pesando lo mismo",
+      "subido": "2026-10-07",
+      "visibilidad": "programado",
+      "nota": "primer video hecho en la Fábrica (todo imagen, música Lyria); miniatura «¿Y EL GAS?»",
+      "publicar": "2026-11-03T19:00:00Z"
+    },
+    {
+      "id": "_FObPPuYTFI",
+      "titulo": "Todos se rindieron... menos este hombre",
+      "duracion": "PT15M41S",
+      "visibilidad": "public",
+      "publicado": "2026-09-14",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "lPakeirBIWc",
+      "titulo": "Se robó el invento de su esposo… y cambió la historia",
+      "duracion": "PT8M13S",
+      "visibilidad": "public",
+      "publicado": "2026-09-15",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "AMGE-22m2tw",
+      "titulo": "El vidrio que se negó a romperse",
+      "duracion": "PT7M49S",
+      "visibilidad": "public",
+      "publicado": "2026-09-17",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "4JxDyXFWO3I",
+      "titulo": "La planta que la NASA necesitó para llegar a la Luna",
+      "duracion": "PT5M32S",
+      "visibilidad": "public",
+      "publicado": "2026-09-19",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "9NnQqoQjyks",
+      "titulo": "Revolucionó al mundo... y murió en la miseria",
+      "duracion": "PT7M55S",
+      "visibilidad": "public",
+      "publicado": "2026-09-21",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "EjWlaIEEbi8",
+      "titulo": "Casi Tiró a la Basura el Descubrimiento Médico Más Importante de la Historia",
+      "duracion": "PT8M32S",
+      "visibilidad": "public",
+      "publicado": "2026-09-23",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "GH0UDDHShW8",
+      "titulo": "Un abrojo terminó en la Luna 🚀 #Shorts",
+      "duracion": "PT36S",
+      "visibilidad": "public",
+      "publicado": "2026-09-25",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "5UnU9bX3XFU",
+      "titulo": "El arma secreta de guerra que terminó en tu cocina | Percy Spencer y el microondas",
+      "duracion": "PT4M",
+      "visibilidad": "public",
+      "publicado": "2026-09-25",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "CNfTHcNEDEY",
+      "titulo": "Casi tira a la basura el descubrimiento médico más importante de la historia #Shorts",
+      "duracion": "PT36S",
+      "visibilidad": "public",
+      "publicado": "2026-09-26",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "CvStZb9Hx_Q",
+      "titulo": "El Pegamento que NO PEGABA y Terminó en Todo el Mundo",
+      "duracion": "PT8M31S",
+      "visibilidad": "public",
+      "publicado": "2026-09-27",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "oJNvjCIpgnk",
+      "titulo": "Este árbol \"sangraba\" un material mágico 🌳 #Shorts",
+      "duracion": "PT36S",
+      "visibilidad": "public",
+      "publicado": "2026-09-28",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "hLFerV-tags",
+      "titulo": "El resistor equivocado que le dio ritmo a un millón de corazones",
+      "duracion": "PT7M39S",
+      "visibilidad": "public",
+      "publicado": "2026-09-29",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "1iU1R1qvvMw",
+      "titulo": "El líquido turbio que nadie quiso usar y que terminó parando balas",
+      "duracion": "PT6M15S",
+      "visibilidad": "public",
+      "publicado": "2026-10-06",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "V7AtCh6vrxo",
+      "titulo": "El fracaso número cuarenta que terminó en todos los garages del mundo",
+      "duracion": "PT6M27S",
+      "visibilidad": "programado",
+      "publicar": "2026-10-13T19:00:00Z",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "Q1EBDHc1t5Y",
+      "titulo": "La casualidad fría que se volvió el postre de todo el mundo",
+      "duracion": "PT5M5S",
+      "visibilidad": "programado",
+      "publicar": "2026-10-20T19:00:00Z",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    },
+    {
+      "id": "z_7ovFWmTec",
+      "titulo": "La masa que limpiaba paredes y terminó en las manos de todos los niños",
+      "duracion": "PT5M43S",
+      "visibilidad": "programado",
+      "publicar": "2026-10-27T19:00:00Z",
+      "nota": "hecho fuera de la Fábrica (proyecto Platitube)"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "quién inventó historia del invento",
+      "inventos que cambiaron el mundo",
+      "inventos por accidente"
+    ],
+    "competidores": [
+      "UCLzCZ0NFgabj02duyDY3EXQ",
+      "UCjTocbwWyVtbywcJlt1EUxw",
+      "UC1x1CTY9M6rEpjV_dYlubZQ",
+      "UC7SqodxRbHrldLXWFTCVjNA",
+      "UC2WztKVr71O6zMVwOxk3FnA",
+      "UCuDXQuiU6JZwAU09bMlifUg"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "invent",
+      "historia de",
+      "creó",
+      "creación"
+    ]
+  }
+}

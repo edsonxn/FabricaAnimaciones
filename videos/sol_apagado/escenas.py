@@ -417,7 +417,7 @@ def termometro(lz, t, S, est):
     a = e_out(prog(t, A.semana - 0.9, A.semana - 0.3))
     nivel = (temp + 90) / 170
     with S.en(lz, -640, -118, 0.72 * (0.7 + 0.3 * a)):
-        P.termometro(lz, 0, 0, 1.0, nivel, col=mezcla((255, 110, 90), (120, 190, 255), prog(temp, 5, -60)))
+        P.termometro(lz, 0, 0, 1.0, nivel, col=mezcla((255, 110, 90), (120, 190, 255), prog(-temp, -5, 60)))
     x, y = S.p(-585, 380)
     txt = f"{int(round(temp))} °C".replace("-", "−")
     P.rotulo(lz, float(x), float(y), txt, 72 * S.k, k=a, ancla=(0, 0.5), capa=1)

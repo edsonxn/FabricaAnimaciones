@@ -1,0 +1,1070 @@
+{
+ "bpm": 96.0,
+ "beat": 0.625,
+ "unidad": 4,
+ "total": 76.875,
+ "titulo": "La Conspiración y el Grito de Dolores",
+ "estilo": "kurzgesagt",
+ "escenas": [
+  {
+   "id": "intro",
+   "t0": 0.0,
+   "t1": 12.5,
+   "compases": 5,
+   "frases": [
+    {
+     "key": "intro_0",
+     "texto": "En septiembre de mil ochocientos diez, la Nueva España vivía bajo una aparente calma.",
+     "t0": 1.35,
+     "t1": 6.161,
+     "words": [
+      {
+       "w": "En",
+       "s": 1.35,
+       "e": 1.45
+      },
+      {
+       "w": "septiembre",
+       "s": 1.45,
+       "e": 1.97
+      },
+      {
+       "w": "de",
+       "s": 1.97,
+       "e": 2.09
+      },
+      {
+       "w": "mil",
+       "s": 2.09,
+       "e": 2.383
+      },
+      {
+       "w": "ochocientos",
+       "s": 2.383,
+       "e": 2.677
+      },
+      {
+       "w": "diez,",
+       "s": 2.677,
+       "e": 2.97
+      },
+      {
+       "w": "la",
+       "s": 3.09,
+       "e": 3.61
+      },
+      {
+       "w": "Nueva",
+       "s": 3.61,
+       "e": 3.95
+      },
+      {
+       "w": "España",
+       "s": 3.95,
+       "e": 4.15
+      },
+      {
+       "w": "vivía",
+       "s": 4.15,
+       "e": 4.59
+      },
+      {
+       "w": "bajo",
+       "s": 4.59,
+       "e": 4.73
+      },
+      {
+       "w": "una",
+       "s": 4.73,
+       "e": 4.97
+      },
+      {
+       "w": "aparente",
+       "s": 4.97,
+       "e": 5.43
+      },
+      {
+       "w": "calma.",
+       "s": 5.43,
+       "e": 5.77
+      }
+     ]
+    },
+    {
+     "key": "intro_1",
+     "texto": "Pero en el corazón del Bajío, un grupo secreto preparaba una rebelión histórica.",
+     "t0": 7.161,
+     "t1": 11.388,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 7.161,
+       "e": 7.321
+      },
+      {
+       "w": "en",
+       "s": 7.321,
+       "e": 7.441
+      },
+      {
+       "w": "el",
+       "s": 7.441,
+       "e": 7.541
+      },
+      {
+       "w": "corazón",
+       "s": 7.541,
+       "e": 7.801
+      },
+      {
+       "w": "del",
+       "s": 7.801,
+       "e": 8.001
+      },
+      {
+       "w": "Bajío,",
+       "s": 8.001,
+       "e": 8.341
+      },
+      {
+       "w": "un",
+       "s": 8.441,
+       "e": 8.821
+      },
+      {
+       "w": "grupo",
+       "s": 8.821,
+       "e": 9.061
+      },
+      {
+       "w": "secreto",
+       "s": 9.061,
+       "e": 9.601
+      },
+      {
+       "w": "preparaba",
+       "s": 9.601,
+       "e": 10.121
+      },
+      {
+       "w": "una",
+       "s": 10.121,
+       "e": 10.241
+      },
+      {
+       "w": "rebelión",
+       "s": 10.241,
+       "e": 10.701
+      },
+      {
+       "w": "histórica.",
+       "s": 10.701,
+       "e": 11.121
+      }
+     ]
+    }
+   ],
+   "fin_voz": 11.388,
+   "beats": 20
+  },
+  {
+   "id": "conspiracion",
+   "t0": 12.5,
+   "t1": 35.0,
+   "compases": 9,
+   "frases": [
+    {
+     "key": "conspiracion_0",
+     "texto": "En Querétaro, bajo la apariencia de simples tertulias literarias, criollos y militares conspiraban en secreto.",
+     "t0": 13.05,
+     "t1": 19.749,
+     "words": [
+      {
+       "w": "En",
+       "s": 13.05,
+       "e": 13.21
+      },
+      {
+       "w": "Querétaro,",
+       "s": 13.21,
+       "e": 13.69
+      },
+      {
+       "w": "bajo",
+       "s": 13.79,
+       "e": 14.31
+      },
+      {
+       "w": "la",
+       "s": 14.31,
+       "e": 14.49
+      },
+      {
+       "w": "apariencia",
+       "s": 14.49,
+       "e": 15.01
+      },
+      {
+       "w": "de",
+       "s": 15.01,
+       "e": 15.11
+      },
+      {
+       "w": "simples",
+       "s": 15.11,
+       "e": 15.41
+      },
+      {
+       "w": "tertulias",
+       "s": 15.41,
+       "e": 16.17
+      },
+      {
+       "w": "literarias,",
+       "s": 16.17,
+       "e": 16.73
+      },
+      {
+       "w": "criollos",
+       "s": 16.85,
+       "e": 17.61
+      },
+      {
+       "w": "y",
+       "s": 17.61,
+       "e": 17.73
+      },
+      {
+       "w": "militares",
+       "s": 17.73,
+       "e": 18.29
+      },
+      {
+       "w": "conspiraban",
+       "s": 18.29,
+       "e": 19.01
+      },
+      {
+       "w": "en",
+       "s": 19.01,
+       "e": 19.09
+      },
+      {
+       "w": "secreto.",
+       "s": 19.09,
+       "e": 19.57
+      }
+     ]
+    },
+    {
+     "key": "conspiracion_1",
+     "texto": "Doña Josefa Ortiz de Domínguez e Ignacio Allende planeaban levantarse en armas contra el virreinato.",
+     "t0": 20.749,
+     "t1": 26.773,
+     "words": [
+      {
+       "w": "Doña",
+       "s": 20.749,
+       "e": 20.989
+      },
+      {
+       "w": "Josefa",
+       "s": 20.989,
+       "e": 21.469
+      },
+      {
+       "w": "Ortiz",
+       "s": 21.509,
+       "e": 22.189
+      },
+      {
+       "w": "de",
+       "s": 22.189,
+       "e": 22.249
+      },
+      {
+       "w": "Domínguez",
+       "s": 22.249,
+       "e": 22.689
+      },
+      {
+       "w": "e",
+       "s": 22.689,
+       "e": 22.869
+      },
+      {
+       "w": "Ignacio",
+       "s": 22.869,
+       "e": 23.289
+      },
+      {
+       "w": "Allende",
+       "s": 23.289,
+       "e": 23.629
+      },
+      {
+       "w": "planeaban",
+       "s": 23.629,
+       "e": 24.509
+      },
+      {
+       "w": "levantarse",
+       "s": 24.509,
+       "e": 25.049
+      },
+      {
+       "w": "en",
+       "s": 25.049,
+       "e": 25.169
+      },
+      {
+       "w": "armas",
+       "s": 25.169,
+       "e": 25.389
+      },
+      {
+       "w": "contra",
+       "s": 25.389,
+       "e": 25.689
+      },
+      {
+       "w": "el",
+       "s": 25.689,
+       "e": 25.889
+      },
+      {
+       "w": "virreinato.",
+       "s": 25.889,
+       "e": 26.309
+      }
+     ]
+    },
+    {
+     "key": "conspiracion_2",
+     "texto": "Pero una delación lo cambió todo: las autoridades descubrieron las reuniones y ordenaron arrestarlos de inmediato.",
+     "t0": 27.773,
+     "t1": 33.744,
+     "words": [
+      {
+       "w": "Pero",
+       "s": 27.773,
+       "e": 27.893
+      },
+      {
+       "w": "una",
+       "s": 27.893,
+       "e": 28.033
+      },
+      {
+       "w": "delación",
+       "s": 28.033,
+       "e": 28.433
+      },
+      {
+       "w": "lo",
+       "s": 28.433,
+       "e": 28.573
+      },
+      {
+       "w": "cambió",
+       "s": 28.573,
+       "e": 28.913
+      },
+      {
+       "w": "todo:",
+       "s": 28.913,
+       "e": 29.073
+      },
+      {
+       "w": "las",
+       "s": 29.253,
+       "e": 29.733
+      },
+      {
+       "w": "autoridades",
+       "s": 29.733,
+       "e": 30.273
+      },
+      {
+       "w": "descubrieron",
+       "s": 30.273,
+       "e": 30.973
+      },
+      {
+       "w": "las",
+       "s": 30.973,
+       "e": 31.073
+      },
+      {
+       "w": "reuniones",
+       "s": 31.073,
+       "e": 31.573
+      },
+      {
+       "w": "y",
+       "s": 31.573,
+       "e": 31.893
+      },
+      {
+       "w": "ordenaron",
+       "s": 31.893,
+       "e": 32.373
+      },
+      {
+       "w": "arrestarlos",
+       "s": 32.373,
+       "e": 32.873
+      },
+      {
+       "w": "de",
+       "s": 32.873,
+       "e": 33.033
+      },
+      {
+       "w": "inmediato.",
+       "s": 33.033,
+       "e": 33.533
+      }
+     ]
+    }
+   ],
+   "fin_voz": 33.744,
+   "beats": 36
+  },
+  {
+   "id": "correo",
+   "t0": 35.0,
+   "t1": 50.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "correo_0",
+     "texto": "Desde su encierro, Josefa logró avisar a tiempo, y un mensajero partió a galope tendido en medio de la noche.",
+     "t0": 35.55,
+     "t1": 41.862,
+     "words": [
+      {
+       "w": "Desde",
+       "s": 35.55,
+       "e": 35.71
+      },
+      {
+       "w": "su",
+       "s": 35.71,
+       "e": 35.87
+      },
+      {
+       "w": "encierro,",
+       "s": 35.87,
+       "e": 36.39
+      },
+      {
+       "w": "Josefa",
+       "s": 36.41,
+       "e": 37.21
+      },
+      {
+       "w": "logró",
+       "s": 37.21,
+       "e": 37.57
+      },
+      {
+       "w": "avisar",
+       "s": 37.57,
+       "e": 37.89
+      },
+      {
+       "w": "a",
+       "s": 37.89,
+       "e": 37.93
+      },
+      {
+       "w": "tiempo,",
+       "s": 37.93,
+       "e": 38.19
+      },
+      {
+       "w": "y",
+       "s": 38.31,
+       "e": 38.79
+      },
+      {
+       "w": "un",
+       "s": 38.79,
+       "e": 38.95
+      },
+      {
+       "w": "mensajero",
+       "s": 38.95,
+       "e": 39.53
+      },
+      {
+       "w": "partió",
+       "s": 39.53,
+       "e": 39.91
+      },
+      {
+       "w": "a",
+       "s": 39.91,
+       "e": 40.01
+      },
+      {
+       "w": "galope",
+       "s": 40.01,
+       "e": 40.39
+      },
+      {
+       "w": "tendido",
+       "s": 40.39,
+       "e": 40.77
+      },
+      {
+       "w": "en",
+       "s": 40.77,
+       "e": 40.89
+      },
+      {
+       "w": "medio",
+       "s": 40.89,
+       "e": 41.09
+      },
+      {
+       "w": "de",
+       "s": 41.09,
+       "e": 41.29
+      },
+      {
+       "w": "la",
+       "s": 41.29,
+       "e": 41.33
+      },
+      {
+       "w": "noche.",
+       "s": 41.33,
+       "e": 41.61
+      }
+     ]
+    },
+    {
+     "key": "correo_1",
+     "texto": "Cabalgaron sin descanso por caminos oscuros para advertir a los líderes antes de que los soldados reales los capturaran.",
+     "t0": 42.862,
+     "t1": 49.043,
+     "words": [
+      {
+       "w": "Cabalgaron",
+       "s": 42.862,
+       "e": 43.362
+      },
+      {
+       "w": "sin",
+       "s": 43.362,
+       "e": 43.502
+      },
+      {
+       "w": "descanso",
+       "s": 43.502,
+       "e": 44.022
+      },
+      {
+       "w": "por",
+       "s": 44.022,
+       "e": 44.122
+      },
+      {
+       "w": "caminos",
+       "s": 44.122,
+       "e": 44.522
+      },
+      {
+       "w": "oscuros",
+       "s": 44.522,
+       "e": 44.942
+      },
+      {
+       "w": "para",
+       "s": 44.942,
+       "e": 45.142
+      },
+      {
+       "w": "advertir",
+       "s": 45.142,
+       "e": 45.622
+      },
+      {
+       "w": "a",
+       "s": 45.622,
+       "e": 45.642
+      },
+      {
+       "w": "los",
+       "s": 45.642,
+       "e": 45.762
+      },
+      {
+       "w": "líderes",
+       "s": 45.762,
+       "e": 46.262
+      },
+      {
+       "w": "antes",
+       "s": 46.262,
+       "e": 46.762
+      },
+      {
+       "w": "de",
+       "s": 46.762,
+       "e": 46.962
+      },
+      {
+       "w": "que",
+       "s": 46.962,
+       "e": 47.082
+      },
+      {
+       "w": "los",
+       "s": 47.082,
+       "e": 47.222
+      },
+      {
+       "w": "soldados",
+       "s": 47.222,
+       "e": 47.702
+      },
+      {
+       "w": "reales",
+       "s": 47.702,
+       "e": 48.082
+      },
+      {
+       "w": "los",
+       "s": 48.082,
+       "e": 48.182
+      },
+      {
+       "w": "capturaran.",
+       "s": 48.182,
+       "e": 48.722
+      }
+     ]
+    }
+   ],
+   "fin_voz": 49.043,
+   "beats": 24
+  },
+  {
+   "id": "dolores",
+   "t0": 50.0,
+   "t1": 67.5,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "dolores_0",
+     "texto": "Al amanecer del dieciséis de septiembre, la noticia llegó al pueblo de Dolores.",
+     "t0": 50.401,
+     "t1": 54.52,
+     "words": [
+      {
+       "w": "Al",
+       "s": 50.401,
+       "e": 50.48
+      },
+      {
+       "w": "amanecer",
+       "s": 50.48,
+       "e": 50.921
+      },
+      {
+       "w": "del",
+       "s": 50.921,
+       "e": 51.041
+      },
+      {
+       "w": "dieciséis",
+       "s": 51.041,
+       "e": 51.401
+      },
+      {
+       "w": "de",
+       "s": 51.401,
+       "e": 51.62
+      },
+      {
+       "w": "septiembre,",
+       "s": 51.62,
+       "e": 52.06
+      },
+      {
+       "w": "la",
+       "s": 52.12,
+       "e": 52.501
+      },
+      {
+       "w": "noticia",
+       "s": 52.501,
+       "e": 53.001
+      },
+      {
+       "w": "llegó",
+       "s": 53.001,
+       "e": 53.221
+      },
+      {
+       "w": "al",
+       "s": 53.221,
+       "e": 53.421
+      },
+      {
+       "w": "pueblo",
+       "s": 53.421,
+       "e": 53.681
+      },
+      {
+       "w": "de",
+       "s": 53.681,
+       "e": 53.861
+      },
+      {
+       "w": "Dolores.",
+       "s": 53.861,
+       "e": 54.2
+      }
+     ]
+    },
+    {
+     "key": "dolores_1",
+     "texto": "El cura Miguel Hidalgo tomó una decisión irreversible: hacer sonar la campana de la parroquia.",
+     "t0": 55.229,
+     "t1": 60.021,
+     "words": [
+      {
+       "w": "El",
+       "s": 55.229,
+       "e": 55.349
+      },
+      {
+       "w": "cura",
+       "s": 55.349,
+       "e": 55.649
+      },
+      {
+       "w": "Miguel",
+       "s": 55.649,
+       "e": 55.809
+      },
+      {
+       "w": "Hidalgo",
+       "s": 55.809,
+       "e": 56.249
+      },
+      {
+       "w": "tomó",
+       "s": 56.249,
+       "e": 56.549
+      },
+      {
+       "w": "una",
+       "s": 56.549,
+       "e": 56.649
+      },
+      {
+       "w": "decisión",
+       "s": 56.649,
+       "e": 57.129
+      },
+      {
+       "w": "irreversible:",
+       "s": 57.129,
+       "e": 57.769
+      },
+      {
+       "w": "hacer",
+       "s": 57.849,
+       "e": 58.249
+      },
+      {
+       "w": "sonar",
+       "s": 58.249,
+       "e": 58.709
+      },
+      {
+       "w": "la",
+       "s": 58.709,
+       "e": 58.789
+      },
+      {
+       "w": "campana",
+       "s": 58.789,
+       "e": 59.209
+      },
+      {
+       "w": "de",
+       "s": 59.209,
+       "e": 59.289
+      },
+      {
+       "w": "la",
+       "s": 59.289,
+       "e": 59.329
+      },
+      {
+       "w": "parroquia.",
+       "s": 59.329,
+       "e": 59.769
+      }
+     ]
+    },
+    {
+     "key": "dolores_2",
+     "texto": "El repique congregó a campesinos y artesanos en la plaza, iniciando una lucha que cambiaría el destino de la nación.",
+     "t0": 60.73,
+     "t1": 66.983,
+     "words": [
+      {
+       "w": "El",
+       "s": 60.73,
+       "e": 60.81
+      },
+      {
+       "w": "repique",
+       "s": 60.81,
+       "e": 61.15
+      },
+      {
+       "w": "congregó",
+       "s": 61.15,
+       "e": 61.95
+      },
+      {
+       "w": "a",
+       "s": 61.95,
+       "e": 62.01
+      },
+      {
+       "w": "campesinos",
+       "s": 62.01,
+       "e": 62.57
+      },
+      {
+       "w": "y",
+       "s": 62.57,
+       "e": 62.65
+      },
+      {
+       "w": "artesanos",
+       "s": 62.65,
+       "e": 63.13
+      },
+      {
+       "w": "en",
+       "s": 63.13,
+       "e": 63.25
+      },
+      {
+       "w": "la",
+       "s": 63.25,
+       "e": 63.35
+      },
+      {
+       "w": "plaza,",
+       "s": 63.35,
+       "e": 63.69
+      },
+      {
+       "w": "iniciando",
+       "s": 63.71,
+       "e": 64.63
+      },
+      {
+       "w": "una",
+       "s": 64.63,
+       "e": 64.81
+      },
+      {
+       "w": "lucha",
+       "s": 64.81,
+       "e": 65.13
+      },
+      {
+       "w": "que",
+       "s": 65.13,
+       "e": 65.27
+      },
+      {
+       "w": "cambiaría",
+       "s": 65.27,
+       "e": 65.67
+      },
+      {
+       "w": "el",
+       "s": 65.67,
+       "e": 65.77
+      },
+      {
+       "w": "destino",
+       "s": 65.77,
+       "e": 66.19
+      },
+      {
+       "w": "de",
+       "s": 66.19,
+       "e": 66.25
+      },
+      {
+       "w": "la",
+       "s": 66.25,
+       "e": 66.33
+      },
+      {
+       "w": "nación.",
+       "s": 66.33,
+       "e": 66.63
+      }
+     ]
+    }
+   ],
+   "fin_voz": 66.983,
+   "beats": 28
+  },
+  {
+   "id": "cierre",
+   "t0": 67.5,
+   "t1": 76.875,
+   "compases": null,
+   "frases": [
+    {
+     "key": "cierre_0",
+     "texto": "Esa madrugada nació un movimiento imparable.",
+     "t0": 67.975,
+     "t1": 70.319,
+     "words": [
+      {
+       "w": "Esa",
+       "s": 67.975,
+       "e": 68.275
+      },
+      {
+       "w": "madrugada",
+       "s": 68.275,
+       "e": 68.755
+      },
+      {
+       "w": "nació",
+       "s": 68.755,
+       "e": 69.095
+      },
+      {
+       "w": "un",
+       "s": 69.095,
+       "e": 69.135
+      },
+      {
+       "w": "movimiento",
+       "s": 69.135,
+       "e": 69.435
+      },
+      {
+       "w": "imparable.",
+       "s": 69.435,
+       "e": 70.015
+      }
+     ]
+    },
+    {
+     "key": "cierre_1",
+     "texto": "Una chispa que encendió la libertad de todo un continente.",
+     "t0": 70.969,
+     "t1": 74.217,
+     "words": [
+      {
+       "w": "Una",
+       "s": 70.969,
+       "e": 71.129
+      },
+      {
+       "w": "chispa",
+       "s": 71.129,
+       "e": 71.549
+      },
+      {
+       "w": "que",
+       "s": 71.549,
+       "e": 71.609
+      },
+      {
+       "w": "encendió",
+       "s": 71.609,
+       "e": 72.109
+      },
+      {
+       "w": "la",
+       "s": 72.109,
+       "e": 72.249
+      },
+      {
+       "w": "libertad",
+       "s": 72.249,
+       "e": 72.769
+      },
+      {
+       "w": "de",
+       "s": 72.769,
+       "e": 72.929
+      },
+      {
+       "w": "todo",
+       "s": 72.929,
+       "e": 73.169
+      },
+      {
+       "w": "un",
+       "s": 73.169,
+       "e": 73.389
+      },
+      {
+       "w": "continente.",
+       "s": 73.389,
+       "e": 73.989
+      }
+     ]
+    }
+   ],
+   "fin_voz": 74.217,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 12.5,
+   "t0": 12.435,
+   "t1": 12.535,
+   "tipo": "continua",
+   "de": "intro",
+   "a": "conspiracion"
+  },
+  {
+   "t": 35.0,
+   "t0": 34.935,
+   "t1": 35.035,
+   "tipo": "continua",
+   "de": "conspiracion",
+   "a": "correo"
+  },
+  {
+   "t": 50.0,
+   "t0": 49.935,
+   "t1": 50.035,
+   "tipo": "continua",
+   "de": "correo",
+   "a": "dolores"
+  },
+  {
+   "t": 67.5,
+   "t0": 67.435,
+   "t1": 67.535,
+   "tipo": "continua",
+   "de": "dolores",
+   "a": "cierre"
+  }
+ ]
+}

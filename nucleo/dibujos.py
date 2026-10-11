@@ -5,6 +5,7 @@ import math
 import cv2
 import numpy as np
 
+import estilos
 from motor import (NEGRO, BLANCO, OCRE, OCRE_CLARO, PIEL, PIEL_N, arco, bezier, blob, catmull, circulo,
                    clamp01, corazon, e_out, elipse, espiral, estrella, h01, lerp, r1, rect_red, ruido1, smooth)
 
@@ -93,7 +94,10 @@ def personaje(lz, x, y, s=1.0, t=0.0, tipo="cave", seed=1, mano_i=(-125, -175), 
         cuerpo = catmull([(-62 * ancho, -278), (0, -284), (62 * ancho, -278), (90 * ancho, -200),
                           (98 * ancho, -122), (72 * ancho, -94), (0, -88), (-72 * ancho, -94),
                           (-98 * ancho, -122), (-90 * ancho, -200)], 8, cerrado=True)
-        if tu:
+        if tu and estilos.ACTUAL.get("camiseta_tu"):     # estilos calmados: camiseta lisa, sin arcoíris ni espiral
+            lz.forma(cuerpo, estilos.ACTUAL["camiseta_tu"], NEGRO, OW, seed + 30)
+            lz.trazo([(-62, -230), (62, -230)], BLANCO, 8, seed=seed + 31)
+        elif tu:
             hue = (t * 0.15) % 1.0
             c1 = tuple(int(255 * v) for v in _hsv(hue, 0.75, 1.0))
             lz.forma(cuerpo, c1, NEGRO, OW, seed + 30)
@@ -878,6 +882,29 @@ def tostada(lz, x, y, s=1.0, seed=511):
         lz.relleno(interior, (236, 180, 95), seed + 1)
         lz.forma(rect_red(-45, -40, 90, 60, 10), (255, 232, 130), NEGRO, 5, seed + 2)
         lz.trazo([(-30, -30), (20, -34)], BLANCO, 5, seed=seed + 3)
+
+
+def tubo_pegamento(lz, x, y, s=1.0, seed=651):
+    """Tubo de pegamento inclinado con tapa roja y una gota."""
+    with lz.grupo(x, y, s, -0.35):
+        lz.forma(catmull([(-72, -30), (72, -30), (88, 130), (-88, 130)], 6, True), (70, 130, 220), NEGRO, OW, seed)
+        lz.relleno(rect_red(-80, 40, 160, 46, 6), (250, 240, 200), seed + 1)
+        lz.trazo([(-50, 63), (50, 63)], (70, 60, 50), 6, seed=seed + 2)
+        lz.forma([(-46, -30), (46, -30), (26, -84), (-26, -84)], (240, 240, 245), NEGRO, 5, seed + 3)
+        lz.forma(rect_red(-30, -140, 60, 62, 8), (220, 60, 50), NEGRO, 5, seed + 4)
+        lz.trazo([(-10, -128), (-10, -92)], BLANCO, 5, seed=seed + 5)
+        lz.forma(blob(0, 158, 22, seed=seed + 6, irr=0.1), (255, 235, 130), NEGRO, 4, seed + 6)
+
+
+def pastilla(lz, x, y, s=1.0, seed=661):
+    """Cápsula de medicina (mitad roja, mitad blanca), inclinada."""
+    with lz.grupo(x, y, s, -0.5):
+        lz.forma(rect_red(-130, -55, 260, 110, 55), (250, 248, 240), NEGRO, OW, seed)
+        mitad = np.vstack([arco(-75, 0, 55, math.pi / 2, math.pi * 3 / 2, 16), [(0, -55), (0, 55)]])
+        lz.relleno(mitad, (225, 70, 60), seed + 1)
+        lz.trazo(rect_red(-130, -55, 260, 110, 55), NEGRO, OW, cerrado=True, seed=seed)
+        lz.trazo([(0, -55), (0, 55)], NEGRO, 5, seed=seed + 2)
+        lz.trazo([(-100, -30), (-60, -38)], BLANCO, 8, seed=seed + 3)
 
 
 def espejo_obsidiana(lz, x, y, s=1.0, t=0.0, seed=521, reflejo=True):

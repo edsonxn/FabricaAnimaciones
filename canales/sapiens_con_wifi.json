@@ -34,7 +34,8 @@
     ],
     "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
     "frecuencia": "1-2 videos largos por semana, mismo día y hora",
-    "nota": "Benchmarks 2026 (Metricool, SocialPilot, Montage, Sprout). Ajustar con Studio > Audiencia cuando haya datos."
+    "nota": "Benchmarks 2026 (Metricool, SocialPilot, Montage, Sprout). Ajustar con Studio > Audiencia cuando haya datos.",
+    "ciclo_dias": 6
   },
   "publicados": [
     {
@@ -48,6 +49,47 @@
       "id": "ni6FrdYvon0",
       "titulo": "7 Inventos Antiguos que Usas Todos los Días",
       "programado": "2026-09-30T20:00:00Z"
+    },
+    {
+      "video": "neandertales",
+      "id": "mlR8vD9ABuw",
+      "titulo": "Neandertales: 7 Mitos que la Ciencia Derrumbó",
+      "programado": "2026-10-07T20:00:00Z"
+    },
+    {
+      "video": "un_dia_30mil",
+      "id": "MADQ6aemfZY",
+      "titulo": "Un Día en la Vida Hace 30.000 Años",
+      "programado": "2026-10-14T20:00:00Z",
+      "nota": "miniatura por código «¿SOBREVIVIRÍAS? HACE 30.000 AÑOS» (miniaturas.py, variante sobrevivir) y .srt; programado mié 14-oct 14:00 CDMX"
     }
-  ]
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "prehistoria cómo vivían los humanos",
+      "evolución humana curiosidades",
+      "neandertales homo sapiens"
+    ],
+    "competidores": [
+      "UCQSiOPL4a-SCbdKAvk8r59A",
+      "UCH6Yv_lEnubWBS_badmfHCQ",
+      "UCYjU7BjAAaixQqyl8U_uc_g",
+      "UCi29aLe_KfmlLusjV_oZnGw",
+      "UC4pq5bdX9MMZf6JmKaco_sQ"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "human",
+      "sapiens",
+      "neandert",
+      "prehist",
+      "edad de piedra",
+      "especie",
+      "evoluc",
+      "denisov"
+    ]
+  }
 }

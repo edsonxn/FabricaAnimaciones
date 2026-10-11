@@ -19,7 +19,8 @@ errores = 0
 arbol = ast.parse(io.open("escenas.py", encoding="utf-8").read())
 disponibles = set(dir(escena_base)) | set(dir(builtins)) | set(dir(S))
 locales = {a.arg for n in ast.walk(arbol) if isinstance(n, (ast.FunctionDef, ast.Lambda))
-           for a in n.args.args + n.args.kwonlyargs}
+           for a in n.args.args + n.args.kwonlyargs + n.args.posonlyargs
+           + ([n.args.vararg] if n.args.vararg else []) + ([n.args.kwarg] if n.args.kwarg else [])}
 locales |= {t.id for n in ast.walk(arbol) for t in ast.walk(n) if isinstance(t, ast.Name) and isinstance(t.ctx, ast.Store)}
 locales |= {n.name for n in ast.walk(arbol) if isinstance(n, (ast.FunctionDef, ast.ClassDef))}          # también anidadas
 locales |= {(a.asname or a.name).split(".")[0] for n in ast.walk(arbol) if isinstance(n, (ast.Import, ast.ImportFrom))

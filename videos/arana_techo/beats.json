@@ -1,0 +1,804 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.207,
+  "tipo": "video",
+  "texto": "It is two in the morning. You get up for a glass of water. You flip on the light, and there it is, hanging in the corner of the ceiling.",
+  "clip_s": 10,
+  "t_medio": 4.532,
+  "texto_a": "It is two in the morning. You get up for a glass of water.",
+  "texto_b": "You flip on the light, and there it is, hanging in the corner of the ceiling."
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.207,
+  "t1": 18.889,
+  "tipo": "video",
+  "texto": "A tiny pale body, floating in the middle of eight impossibly long, thin legs. And a messy, dusty web that looks like it has been there for years.",
+  "clip_s": 10,
+  "t_medio": 14.052,
+  "texto_a": "A tiny pale body, floating in the middle of eight impossibly long, thin legs.",
+  "texto_b": "And a messy, dusty web that looks like it has been there for years."
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.889,
+  "t1": 28.657,
+  "tipo": "video",
+  "texto": "Your first instinct is to grab the broom. Don't. Because that fragile little spider is one of the best bodyguards your house can have.",
+  "clip_s": 10,
+  "t_medio": 23.182,
+  "texto_a": "Your first instinct is to grab the broom. Don't.",
+  "texto_b": "Because that fragile little spider is one of the best bodyguards your house can have."
+ },
+ {
+  "id": "scene-004",
+  "t0": 28.657,
+  "t1": 38.925,
+  "tipo": "video",
+  "texto": "It hunts other spiders. Bigger ones. Scarier ones. Including the one spider you really do not want living in your home. The black widow.",
+  "clip_s": 10,
+  "t_medio": 32.67,
+  "texto_a": "It hunts other spiders. Bigger ones. Scarier ones.",
+  "texto_b": "Including the one spider you really do not want living in your home. The black widow."
+ },
+ {
+  "id": "scene-005",
+  "t0": 38.925,
+  "t1": 50.83,
+  "tipo": "video",
+  "texto": "And you have probably heard a rumor about it, too. That it is secretly the most venomous spider in the world. We will get to that. Because the truth is even stranger.",
+  "clip_s": 10,
+  "t_medio": 45.434,
+  "texto_a": "And you have probably heard a rumor about it, too. That it is secretly the most venomous spider in the world.",
+  "texto_b": "We will get to that. Because the truth is even stranger."
+ },
+ {
+  "id": "scene-006",
+  "t0": 50.83,
+  "t1": 58.86,
+  "tipo": "video",
+  "texto": "First, which spider are we talking about? People use the name daddy longlegs for at least three completely different animals.",
+  "clip_s": 10,
+  "t_medio": 53.635,
+  "texto_a": "First, which spider are we talking about?",
+  "texto_b": "People use the name daddy longlegs for at least three completely different animals."
+ },
+ {
+  "id": "scene-007",
+  "t0": 58.86,
+  "t1": 67.689,
+  "tipo": "video",
+  "texto": "One is the harvestman, the one you see walking across the grass outside. It is not even a spider. Another is the crane fly,",
+  "clip_s": 10,
+  "t_medio": 63.54,
+  "texto_a": "One is the harvestman, the one you see walking across the grass outside.",
+  "texto_b": "It is not even a spider. Another is the crane fly,"
+ },
+ {
+  "id": "scene-008",
+  "t0": 67.689,
+  "t1": 77.215,
+  "tipo": "video",
+  "texto": "a clumsy flying insect that looks like a giant mosquito. And the third is the one in your ceiling corner. The cellar spider.",
+  "clip_s": 8,
+  "t_medio": 72.291,
+  "texto_a": "a clumsy flying insect that looks like a giant mosquito.",
+  "texto_b": "And the third is the one in your ceiling corner. The cellar spider."
+ },
+ {
+  "id": "scene-009",
+  "t0": 77.215,
+  "t1": 80.516,
+  "tipo": "imagen",
+  "texto": "Its body is about the size of a grain of rice."
+ },
+ {
+  "id": "scene-010",
+  "t0": 80.516,
+  "t1": 84.566,
+  "tipo": "imagen",
+  "texto": "But its legs can be five or six times longer than its body,"
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.566,
+  "t1": 89.23,
+  "tipo": "imagen",
+  "texto": "with thin dark bands at every knee."
+ },
+ {
+  "id": "scene-012",
+  "t0": 89.23,
+  "t1": 94.345,
+  "tipo": "imagen",
+  "texto": "Now look at that web. It is a tangled, three dimensional mess."
+ },
+ {
+  "id": "scene-013",
+  "t0": 94.345,
+  "t1": 96.765,
+  "tipo": "imagen",
+  "texto": "No neat spiral, no pattern,"
+ },
+ {
+  "id": "scene-014",
+  "t0": 96.765,
+  "t1": 102.027,
+  "tipo": "imagen",
+  "texto": "just threads going everywhere. It looks abandoned. It is not."
+ },
+ {
+  "id": "scene-015",
+  "t0": 102.027,
+  "t1": 104.346,
+  "tipo": "imagen",
+  "texto": "That chaos is the trick."
+ },
+ {
+  "id": "scene-016",
+  "t0": 104.346,
+  "t1": 109.006,
+  "tipo": "imagen",
+  "texto": "A mosquito flying into the corner hits several threads at once, from different angles,"
+ },
+ {
+  "id": "scene-017",
+  "t0": 109.006,
+  "t1": 112.907,
+  "tipo": "imagen",
+  "texto": "and gets tangled. And when another spider walks into it,"
+ },
+ {
+  "id": "scene-018",
+  "t0": 112.907,
+  "t1": 115.848,
+  "tipo": "imagen",
+  "texto": "every step shakes the threads."
+ },
+ {
+  "id": "scene-019",
+  "t0": 115.848,
+  "t1": 120.258,
+  "tipo": "imagen",
+  "texto": "The cellar spider cannot see very well. It hunts by touch,"
+ },
+ {
+  "id": "scene-020",
+  "t0": 120.258,
+  "t1": 124.018,
+  "tipo": "imagen",
+  "texto": "feeling those vibrations through its long legs."
+ },
+ {
+  "id": "scene-021",
+  "t0": 124.018,
+  "t1": 129.052,
+  "tipo": "imagen",
+  "texto": "So that ugly web is really an alarm system. And the spider hangs upside down"
+ },
+ {
+  "id": "scene-022",
+  "t0": 129.052,
+  "t1": 132.208,
+  "tipo": "imagen",
+  "texto": "in the middle of it, all day long, waiting."
+ },
+ {
+  "id": "scene-023",
+  "t0": 132.208,
+  "t1": 137.125,
+  "tipo": "imagen",
+  "texto": "Most of its hunting happens at night, while you are asleep."
+ },
+ {
+  "id": "scene-024",
+  "t0": 137.125,
+  "t1": 141.449,
+  "tipo": "imagen",
+  "texto": "So how does a spider this fragile beat a black widow?"
+ },
+ {
+  "id": "scene-025",
+  "t0": 141.449,
+  "t1": 143.817,
+  "tipo": "imagen",
+  "texto": "On paper, it should lose."
+ },
+ {
+  "id": "scene-026",
+  "t0": 143.817,
+  "t1": 148.797,
+  "tipo": "imagen",
+  "texto": "A black widow is heavier, its venom is much stronger, and its bite can"
+ },
+ {
+  "id": "scene-027",
+  "t0": 148.797,
+  "t1": 153.707,
+  "tipo": "imagen",
+  "texto": "send a person to the hospital. But the cellar spider has one huge advantage."
+ },
+ {
+  "id": "scene-028",
+  "t0": 153.707,
+  "t1": 156.853,
+  "tipo": "imagen",
+  "texto": "Reach. Those long legs let it fight"
+ },
+ {
+  "id": "scene-029",
+  "t0": 156.853,
+  "t1": 159.895,
+  "tipo": "imagen",
+  "texto": "from a distance, where the widow cannot touch it."
+ },
+ {
+  "id": "scene-030",
+  "t0": 159.895,
+  "t1": 164.711,
+  "tipo": "imagen",
+  "texto": "When the widow stumbles into the tangle, the cellar spider does not rush in."
+ },
+ {
+  "id": "scene-031",
+  "t0": 164.711,
+  "t1": 169.401,
+  "tipo": "imagen",
+  "texto": "It stays back, and it uses its long back legs to fling silk at its enemy,"
+ },
+ {
+  "id": "scene-032",
+  "t0": 169.401,
+  "t1": 172.856,
+  "tipo": "imagen",
+  "texto": "strand after strand. It keeps wrapping,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 172.856,
+  "t1": 177.046,
+  "tipo": "imagen",
+  "texto": "faster and faster, until the widow can barely move."
+ },
+ {
+  "id": "scene-034",
+  "t0": 177.046,
+  "t1": 181.631,
+  "tipo": "imagen",
+  "texto": "Only then does it step in, and deliver one careful bite."
+ },
+ {
+  "id": "scene-035",
+  "t0": 181.631,
+  "t1": 185.351,
+  "tipo": "imagen",
+  "texto": "Spider experts have watched cellar spiders kill black widows,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 185.351,
+  "t1": 188.327,
+  "tipo": "imagen",
+  "texto": "and house spiders much bigger than themselves."
+ },
+ {
+  "id": "scene-037",
+  "t0": 188.327,
+  "t1": 193.047,
+  "tipo": "imagen",
+  "texto": "That is why some of them actually recommend leaving cellar spiders alone in garages"
+ },
+ {
+  "id": "scene-038",
+  "t0": 193.047,
+  "t1": 197.23,
+  "tipo": "imagen",
+  "texto": "and basements, right where widows like to hide."
+ },
+ {
+  "id": "scene-039",
+  "t0": 197.23,
+  "t1": 202.244,
+  "tipo": "imagen",
+  "texto": "And sometimes, the cellar spider does not wait for its enemy to come."
+ },
+ {
+  "id": "scene-040",
+  "t0": 202.244,
+  "t1": 204.604,
+  "tipo": "imagen",
+  "texto": "It walks right into another spider's web,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 204.604,
+  "t1": 208.174,
+  "tipo": "imagen",
+  "texto": "and gently plucks the threads. To the owner,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 208.174,
+  "t1": 213.244,
+  "tipo": "imagen",
+  "texto": "that vibration feels exactly like an insect that just got stuck."
+ },
+ {
+  "id": "scene-043",
+  "t0": 213.244,
+  "t1": 216.588,
+  "tipo": "imagen",
+  "texto": "So the owner comes running to grab its dinner."
+ },
+ {
+  "id": "scene-044",
+  "t0": 216.588,
+  "t1": 219.142,
+  "tipo": "imagen",
+  "texto": "And dinner is waiting for it."
+ },
+ {
+  "id": "scene-045",
+  "t0": 219.142,
+  "t1": 224.292,
+  "tipo": "imagen",
+  "texto": "Scientists call this aggressive mimicry. It is like a hunter using a duck call,"
+ },
+ {
+  "id": "scene-046",
+  "t0": 224.292,
+  "t1": 228.43,
+  "tipo": "imagen",
+  "texto": "except the duck is a spider."
+ },
+ {
+  "id": "scene-047",
+  "t0": 228.43,
+  "t1": 231.945,
+  "tipo": "imagen",
+  "texto": "Of course, the cellar spider has enemies too."
+ },
+ {
+  "id": "scene-048",
+  "t0": 231.945,
+  "t1": 236.068,
+  "tipo": "imagen",
+  "texto": "So it has one of the strangest defenses of any spider."
+ },
+ {
+  "id": "scene-049",
+  "t0": 236.068,
+  "t1": 240.408,
+  "tipo": "imagen",
+  "texto": "When something big gets too close, like a bird, a bigger spider,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 240.408,
+  "t1": 243.295,
+  "tipo": "imagen",
+  "texto": "or your finger, it starts to shake."
+ },
+ {
+  "id": "scene-051",
+  "t0": 243.295,
+  "t1": 249.431,
+  "tipo": "imagen",
+  "texto": "It whirls its body around and around in the web, so fast that it turns into a blur."
+ },
+ {
+  "id": "scene-052",
+  "t0": 249.431,
+  "t1": 252.471,
+  "tipo": "imagen",
+  "texto": "For a predator, it becomes almost impossible to tell"
+ },
+ {
+  "id": "scene-053",
+  "t0": 252.471,
+  "t1": 256.451,
+  "tipo": "imagen",
+  "texto": "where the spider actually is. That is why you sometimes see one"
+ },
+ {
+  "id": "scene-054",
+  "t0": 256.451,
+  "t1": 260.855,
+  "tipo": "imagen",
+  "texto": "vibrating wildly when the vacuum gets close. It is not attacking you."
+ },
+ {
+  "id": "scene-055",
+  "t0": 260.855,
+  "t1": 264.38,
+  "tipo": "imagen",
+  "texto": "It is trying to disappear."
+ },
+ {
+  "id": "scene-056",
+  "t0": 264.38,
+  "t1": 268.638,
+  "tipo": "imagen",
+  "texto": "Now, about that rumor. Maybe you heard it on the playground."
+ },
+ {
+  "id": "scene-057",
+  "t0": 268.638,
+  "t1": 271.888,
+  "tipo": "imagen",
+  "texto": "Daddy longlegs are the most venomous spiders in the world,"
+ },
+ {
+  "id": "scene-058",
+  "t0": 271.888,
+  "t1": 277.107,
+  "tipo": "imagen",
+  "texto": "but their fangs are too short to bite you. It is one of the most famous bug myths ever."
+ },
+ {
+  "id": "scene-059",
+  "t0": 277.107,
+  "t1": 279.343,
+  "tipo": "imagen",
+  "texto": "And it is wrong, twice."
+ },
+ {
+  "id": "scene-060",
+  "t0": 279.343,
+  "t1": 284.323,
+  "tipo": "imagen",
+  "texto": "First, there is no evidence that its venom is unusually strong, and it is"
+ },
+ {
+  "id": "scene-061",
+  "t0": 284.323,
+  "t1": 289.504,
+  "tipo": "imagen",
+  "texto": "not dangerous to people. Second, its fangs are not too short."
+ },
+ {
+  "id": "scene-062",
+  "t0": 289.504,
+  "t1": 292.244,
+  "tipo": "imagen",
+  "texto": "In one famous television experiment, a host"
+ },
+ {
+  "id": "scene-063",
+  "t0": 292.244,
+  "t1": 295.797,
+  "tipo": "imagen",
+  "texto": "let a cellar spider bite him on purpose. The result?"
+ },
+ {
+  "id": "scene-064",
+  "t0": 295.797,
+  "t1": 300.338,
+  "tipo": "imagen",
+  "texto": "A tiny burning feeling that faded after a few seconds."
+ },
+ {
+  "id": "scene-065",
+  "t0": 300.338,
+  "t1": 307.027,
+  "tipo": "imagen",
+  "texto": "So yes, it can bite. It almost never does. And it is less painful than a mosquito."
+ },
+ {
+  "id": "scene-066",
+  "t0": 307.027,
+  "t1": 309.667,
+  "tipo": "imagen",
+  "texto": "And the harvestman, the other daddy longlegs,"
+ },
+ {
+  "id": "scene-067",
+  "t0": 309.667,
+  "t1": 316.809,
+  "tipo": "imagen",
+  "texto": "has no venom at all. Cellar spiders are also surprisingly devoted parents."
+ },
+ {
+  "id": "scene-068",
+  "t0": 316.809,
+  "t1": 321.398,
+  "tipo": "imagen",
+  "texto": "Most spiders wrap their eggs in a silk sac and leave them behind."
+ },
+ {
+  "id": "scene-069",
+  "t0": 321.398,
+  "t1": 324.937,
+  "tipo": "imagen",
+  "texto": "A cellar spider mother carries her eggs in her mouth."
+ },
+ {
+  "id": "scene-070",
+  "t0": 324.937,
+  "t1": 330.878,
+  "tipo": "imagen",
+  "texto": "She holds the little bundle in her jaws for weeks, wrapped in just a few threads of silk."
+ },
+ {
+  "id": "scene-071",
+  "t0": 330.878,
+  "t1": 335.398,
+  "tipo": "imagen",
+  "texto": "When the babies hatch, they stay close to her in the web for a while, before they leave to"
+ },
+ {
+  "id": "scene-072",
+  "t0": 335.398,
+  "t1": 341.682,
+  "tipo": "imagen",
+  "texto": "find corners of their own. And they are tough little survivors."
+ },
+ {
+  "id": "scene-073",
+  "t0": 341.682,
+  "t1": 345.803,
+  "tipo": "imagen",
+  "texto": "A cellar spider can go for months without a single meal."
+ },
+ {
+  "id": "scene-074",
+  "t0": 345.803,
+  "t1": 351.116,
+  "tipo": "imagen",
+  "texto": "If something grabs one of its legs, it can let that leg go and escape."
+ },
+ {
+  "id": "scene-075",
+  "t0": 351.116,
+  "t1": 355.416,
+  "tipo": "imagen",
+  "texto": "That is why you sometimes find one getting around on six or seven legs."
+ },
+ {
+  "id": "scene-076",
+  "t0": 355.416,
+  "t1": 360.497,
+  "tipo": "imagen",
+  "texto": "It is fine. And it can live for two or three years, quietly guarding the"
+ },
+ {
+  "id": "scene-077",
+  "t0": 360.497,
+  "t1": 366.357,
+  "tipo": "imagen",
+  "texto": "same corner. This spider is also one of the great world travelers."
+ },
+ {
+  "id": "scene-078",
+  "t0": 366.357,
+  "t1": 369.247,
+  "tipo": "imagen",
+  "texto": "It probably came from the warm parts of Asia."
+ },
+ {
+  "id": "scene-079",
+  "t0": 369.247,
+  "t1": 375.307,
+  "tipo": "imagen",
+  "texto": "But for centuries, it has hitched rides with people, hidden in boxes, ships, and luggage."
+ },
+ {
+  "id": "scene-080",
+  "t0": 375.307,
+  "t1": 381.047,
+  "tipo": "imagen",
+  "texto": "Today it lives inside buildings on every continent except Antarctica."
+ },
+ {
+  "id": "scene-081",
+  "t0": 381.047,
+  "t1": 386.471,
+  "tipo": "imagen",
+  "texto": "It is one of the most widespread spiders on Earth, and almost all of them live with us."
+ },
+ {
+  "id": "scene-082",
+  "t0": 386.471,
+  "t1": 389.611,
+  "tipo": "imagen",
+  "texto": "Those old dusty cobwebs in the corners of old houses?"
+ },
+ {
+  "id": "scene-083",
+  "t0": 389.611,
+  "t1": 396.869,
+  "tipo": "imagen",
+  "texto": "Many of them were built by cellar spiders. So why are there so many in your house?"
+ },
+ {
+  "id": "scene-084",
+  "t0": 396.869,
+  "t1": 400.924,
+  "tipo": "imagen",
+  "texto": "Because a cellar spider only stays where there is food."
+ },
+ {
+  "id": "scene-085",
+  "t0": 400.924,
+  "t1": 405.744,
+  "tipo": "imagen",
+  "texto": "It eats mosquitoes, gnats, moths, flies, small beetles, and of course,"
+ },
+ {
+  "id": "scene-086",
+  "t0": 405.744,
+  "t1": 409.595,
+  "tipo": "imagen",
+  "texto": "other spiders. If your basement is full of cellar spiders,"
+ },
+ {
+  "id": "scene-087",
+  "t0": 409.595,
+  "t1": 416.705,
+  "tipo": "imagen",
+  "texto": "it means there are a lot of other bugs down there. And they are being eaten, every single night."
+ },
+ {
+  "id": "scene-088",
+  "t0": 416.705,
+  "t1": 420.645,
+  "tipo": "imagen",
+  "texto": "So think of them as free pest control, and a warning light at"
+ },
+ {
+  "id": "scene-089",
+  "t0": 420.645,
+  "t1": 426.266,
+  "tipo": "imagen",
+  "texto": "the same time. But how do you know which spider you are looking at?"
+ },
+ {
+  "id": "scene-090",
+  "t0": 426.266,
+  "t1": 430.999,
+  "tipo": "imagen",
+  "texto": "Here is the quick test. A cellar spider is pale, almost see through,"
+ },
+ {
+  "id": "scene-091",
+  "t0": 430.999,
+  "t1": 434.345,
+  "tipo": "imagen",
+  "texto": "with a tiny body and legs that seem to go on forever."
+ },
+ {
+  "id": "scene-092",
+  "t0": 434.345,
+  "t1": 440.959,
+  "tipo": "imagen",
+  "texto": "It hangs high up, in corners and along the ceiling. A black widow is the opposite. A shiny black,"
+ },
+ {
+  "id": "scene-093",
+  "t0": 440.959,
+  "t1": 446.149,
+  "tipo": "imagen",
+  "texto": "round body, shorter, thicker legs, and a red hourglass underneath."
+ },
+ {
+  "id": "scene-094",
+  "t0": 446.149,
+  "t1": 450.249,
+  "tipo": "imagen",
+  "texto": "It hides low and out of sight, under shelves, in woodpiles,"
+ },
+ {
+  "id": "scene-095",
+  "t0": 450.249,
+  "t1": 456.471,
+  "tipo": "imagen",
+  "texto": "in old boxes, and around the garage door. Pale and high up, let it be."
+ },
+ {
+  "id": "scene-096",
+  "t0": 456.471,
+  "t1": 461.007,
+  "tipo": "imagen",
+  "texto": "Shiny black and low, keep your hands away."
+ },
+ {
+  "id": "scene-097",
+  "t0": 461.007,
+  "t1": 465.155,
+  "tipo": "imagen",
+  "texto": "That is also why bug spray can backfire. Spray does not choose."
+ },
+ {
+  "id": "scene-098",
+  "t0": 465.155,
+  "t1": 470.858,
+  "tipo": "imagen",
+  "texto": "It kills the hunters along with the pests. And the pests usually bounce back much faster than"
+ },
+ {
+  "id": "scene-099",
+  "t0": 470.858,
+  "t1": 475.702,
+  "tipo": "imagen",
+  "texto": "the spiders that were eating them. So what should you do when you find one?"
+ },
+ {
+  "id": "scene-100",
+  "t0": 475.702,
+  "t1": 481.035,
+  "tipo": "imagen",
+  "texto": "The easiest answer is nothing. Let it work. If you don't want it over your bed,"
+ },
+ {
+  "id": "scene-101",
+  "t0": 481.035,
+  "t1": 487.431,
+  "tipo": "imagen",
+  "texto": "slide a cup over it, slip a piece of paper underneath, and move it to the basement or the garage."
+ },
+ {
+  "id": "scene-102",
+  "t0": 487.431,
+  "t1": 490.191,
+  "tipo": "imagen",
+  "texto": "If there are too many, vacuum the old webs,"
+ },
+ {
+  "id": "scene-103",
+  "t0": 490.191,
+  "t1": 495.595,
+  "tipo": "imagen",
+  "texto": "seal the cracks around windows and doors, and dry out the damp rooms."
+ },
+ {
+  "id": "scene-104",
+  "t0": 495.595,
+  "t1": 500.976,
+  "tipo": "imagen",
+  "texto": "Fewer bugs means fewer cellar spiders. They will move on by themselves."
+ },
+ {
+  "id": "scene-105",
+  "t0": 500.976,
+  "t1": 506.86,
+  "tipo": "imagen",
+  "texto": "And if you ever find a black widow, do not touch it. Call a professional."
+ },
+ {
+  "id": "scene-106",
+  "t0": 506.86,
+  "t1": 512.152,
+  "tipo": "imagen",
+  "texto": "So the next time you see that pale spider hanging in the corner, look at it a little differently."
+ },
+ {
+  "id": "scene-107",
+  "t0": 512.152,
+  "t1": 516.077,
+  "tipo": "imagen",
+  "texto": "It is not a sign of a dirty house. It is a night guard with eight"
+ },
+ {
+  "id": "scene-108",
+  "t0": 516.077,
+  "t1": 521.212,
+  "tipo": "imagen",
+  "texto": "long arms, watching over a corner you never look at. It eats the mosquitoes."
+ },
+ {
+  "id": "scene-109",
+  "t0": 521.212,
+  "t1": 525.657,
+  "tipo": "imagen",
+  "texto": "It fights the widows. And it has never wanted anything from you."
+ },
+ {
+  "id": "scene-110",
+  "t0": 525.657,
+  "t1": 531.0,
+  "tipo": "imagen",
+  "texto": "So put the broom down, and let it keep its job."
+ }
+]

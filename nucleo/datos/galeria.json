@@ -150,14 +150,14 @@
    "id": "noir_feudal",
    "nombre": "Noir feudal (pesquisidor medieval)",
    "estilo": "noir_feudal",
-   "canal": "— (prueba)",
-   "video": "prueba_noir_feudal",
+   "canal": "— (prueba con guion y voz)",
+   "video": "got_joffrey",
    "archivos": [
-    "prueba_noir_feudal_antorcha.mp4"
+    "got_joffrey_MASTER.mp4"
    ],
-   "desc": "Variante medieval del noir a color: un pesquisidor encapuchado con farol investiga casos, personas y sucesos antiguos. Villas amuralladas, castillos bajo la luna, antorchas y velas vivas, estandartes que ondean, pergaminos con letra gótica y sello de lacre.",
-   "uso": "Historias de reinos y dinastías (sagas de fantasía medieval, historia antigua y medieval). Paletas antorcha · pergamino.",
-   "extra": "nucleo/noir_feudal.py + noir_color.py · estilo_noir_color.md § Variante FEUDAL"
+   "desc": "Variante medieval del noir a color: el pesquisidor encapuchado narra un caso. Corte medieval propia (reyes, reinas, ancianas con toca, enanos, bufones, comensales), salón de banquete con candelabros, mazmorra, rosaleda al atardecer, puerto en la niebla; cartelas de pergamino en letra gótica y un solo acento de color (el púrpura del veneno).",
+   "uso": "Historias de sagas medievales (GoT/HotD) e historia antigua o medieval contadas como pesquisa. Ejemplo: «¿Quién envenenó al rey?» (3:12).",
+   "extra": "nucleo/noir_feudal.py + noir_corte.py + noir_color.py · estilo_noir_color.md § Variante FEUDAL · prueba de 30 s: prueba_noir_feudal"
   },
   {
    "id": "flow_plastilina",

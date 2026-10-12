@@ -20,7 +20,7 @@
 - Sin fotos ni escudos de la serie: personajes y emblemas propios (sol, llave).
 
 ## Falta
-- [x] Revisión por planos (`_lote.py`) y del MASTER cada 3 s (`previews/master_0..5.jpg`); 6 defectos corregidos y re-renderizados por tramos
+- [x] Revisión por planos (`_lote.py`) y del MASTER cada 3 s (`previews/master_0..5.jpg`); 7 defectos corregidos (palomas, arco, rollo, manos del ahogo, cartelas, terraza, puente) y re-render; MASTER final revisado 11-oct 18:40
 - [x] .srt corregido con `_srt.py` (Joffrey, Tyrion, Cersei, Olenna)
 - [ ] Opcional si se publica: miniatura, youtube.json; flojos conocidos: el cofre abierto no enseña la tapa; el cristal que se
       disuelve es pequeño; muchas tomas son oscuras por diseño (noir)
@@ -39,4 +39,5 @@ python videos/got_joffrey/_reg.py                                             (r
 - `NC.pegar` con `dx` grande deja ver el borde replicado del Lienzo (rayas verticales): desplazar poco o pintar más ancho.
 - El ancla del primer corte va en «delante», no en «Nunca»: la grúa de la ciudad necesita ~5 s.
 - `video --rehacer` tras editar código (sobre todo del núcleo) DESCARTA todos los segmentos con firma vieja y rehace el video entero
-  (pasó aquí: 65 en vez de 22). Antes: «conservar» en el panel, o asumir el render completo.
+  (pasó aquí dos veces: 65 en vez de 22, y 65 en vez de 3). La firma abarca TODO el código importado por `escenas.py` (todos los
+  esc_*, el kit y el núcleo): tocar una sola escena también invalida todo. Antes: «conservar» en el panel, o asumir ~35 min.

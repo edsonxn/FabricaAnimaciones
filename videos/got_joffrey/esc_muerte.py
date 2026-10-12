@@ -16,7 +16,7 @@ import props_j as P
 import reparto as RP
 from basen import BaseNoir
 from motor import H, W, clamp01, e_out, smooth
-from toon import Pista, pulso
+from toon import Pista, blob, pulso
 
 
 class Muerte(BaseNoir):
@@ -80,8 +80,9 @@ class Muerte(BaseNoir):
         h.rim_color(pal["vela"])
         self._fondo_estrado(h, t, dx=200, oscuro=0.85)
         p = dict(x=900, y=430, s=1.2, d=1, luz=(0.9, -0.4), rim=0.95, ahogo=0.25 + 0.75 * smooth(clamp01((t - self.t_cara) / 1.2)),
-                 manos_cuello=smooth(clamp01((t - self.t_manos) / 0.5)), cab_rot=-0.08 * ah, mira=0.6 * ah, ceño=0.9)
+                 manos_cuello=0.0, cab_rot=-0.08 * ah, mira=0.6 * ah, ceño=0.9)
         self.busto.dibujar(h, p)
+        self._manos(h, t, p, smooth(clamp01((t - self.t_manos) / 0.5)))
         par = 0.65 + 0.35 * math.sin(t * 13) * math.sin(t * 7.3)
         for i, (x, y) in enumerate(((250, 820), (1650, 860))):
             NF.vela(h, t, x, y, s=1.2, sem=90 + i, alto=170, luz=par, alcance=900, k=par)
@@ -90,6 +91,29 @@ class Muerte(BaseNoir):
         C.banda(h, "MORADA", 1500, 220, 80, t, self.t_morada, sem=6)
         N.motas(h, t, n=90, k=0.6)
         return h.acabado(t, niebla=dict(dens=0.14, y0=0, y1=H, sem=8, vel=12.0), bloom=0.55)
+
+    def _manos(self, h, t, p, k):
+        """Manos aferradas al cuello: muñecas cortas con puño dorado que asoman del cuello de armiño (sube con k 0..1)."""
+        if k <= 0:
+            return
+        T = self.busto._T0(p)
+        s = p["s"]
+        L = p.get("luz", (0.9, -0.4))
+        for i in range(2):
+            mano = np.array([10.0 + 70 * i, 176.0 + 16 * i]) + (0, 260 * (1 - k))
+            mano[0] += 4 * math.sin(t * 23 + i) * k
+            muñeca = mano + (-50 + 40 * i, 120)
+            h.pieza(T(np.array([muñeca + (-34, 30), muñeca + (34, 30), mano + (26, 10), mano + (-26, 10)])), 95, 300 + i, w=7 * s, luz=L,
+                    d=16 * s, trama=0.4, rim=0.9, rampa="estandarte")
+            q = muñeca * 0.6 + mano * 0.4
+            h.pieza(T(np.array([q + (-34, 6), q + (34, 6), q + (32, 24), q + (-32, 24)])), 160, 302 + i, w=5 * s, luz=L, d=6 * s,
+                    trama=0, rim=1.0, rampa="oro")
+            h.pieza(T(blob(mano[0], mano[1], 48, 34, rad=[1, 1.1, 1.0, 0.9, 0.85, 0.95, 1.05, 1.1], n=8)), 118, 304 + i, w=7 * s, luz=L,
+                    d=12 * s, trama=0.3, rim=0.9, rampa="piel")
+            for f in range(4):
+                a0 = mano + (-28 + f * 17, -18)
+                h.trazo(T(np.array([a0, a0 + (4 - 2 * i, 30)])), 3.2 * s, 306 + f, color=(14, 12, 16), alfa=0.85)
+        h.pieza(T(np.array([[60.0, 168], [100, 172]])), 40, 310, w=0, d=0, sombra=0, trama=0, rim=0, alfa=0.0, linea=False)
 
     def p_acusa(self, h, t, u):
         pal = h.pal

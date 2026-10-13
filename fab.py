@@ -4,6 +4,8 @@
   python fab.py estado [<video>]                estado de todos los videos / ESTADO.md de uno (para retomar en una conversación nueva)
   python fab.py nuevo <video>                   crea videos/<video> desde videos/_plantilla
   python fab.py nuevo <video> --secuencia       igual, pero con el motor SECUENCIA (clips e imágenes de Google Flow; docs/estilo_secuencia_flow.md)
+  python fab.py nuevo <video> --yt              motor SECUENCIA YT: gameplay de YouTube por beat (Warcraft; docs/estilo_secuencia_yt.md)
+  python fab.py <video> busquedas | bajar | fuentes            motor SECUENCIA YT: una búsqueda por beat, bajar y cortar, créditos
   python fab.py <video> beats | prompts | ingesta | medios     motor SECUENCIA: cortes por beat, prompts para Flow, traer descargas, hojas de revisión
   python fab.py <video> voz [--seeds 1 2 3 4]   genera tomas de voz con Chatterbox
   python fab.py <video> seleccionar             elige la mejor toma por frase (Whisper + similitud), alinea palabras
@@ -47,6 +49,9 @@ ETAPAS = {
     "beats": ["-m", "secuencia", "beats"], "prompts": ["-m", "secuencia", "prompts"],
     "ingesta": ["-m", "secuencia", "ingesta"], "medios": ["-m", "secuencia", "medios"],
     "ambiente": ["-m", "secuencia", "ambiente"], "servir": ["-m", "secuencia", "servir"],
+    # motor SECUENCIA YT (nucleo/secuencia_yt.py): gameplay de YouTube por beat (Crónicas de Warcraft)
+    "busquedas": ["-m", "secuencia_yt", "busquedas"], "bajar": ["-m", "secuencia_yt", "bajar"],
+    "fuentes": ["-m", "secuencia_yt", "fuentes"],
     "fx": ["-m", "secuencia_fx"],   # capa de efectos del motor secuencia (efectos.py): SFX de ElevenLabs -> audio/fx.wav; `fx hoja`
 }
 
@@ -212,7 +217,7 @@ def main():
         destino = os.path.join(VIDEOS, a[1])
         if os.path.exists(destino):
             sys.exit(f"Ya existe {destino}")
-        shutil.copytree(os.path.join(VIDEOS, "_plantilla_secuencia" if "--secuencia" in a else "_plantilla"), destino,
+        shutil.copytree(os.path.join(VIDEOS, "_plantilla_yt" if "--yt" in a else "_plantilla_secuencia" if "--secuencia" in a else "_plantilla"), destino,
                         ignore=shutil.ignore_patterns("__pycache__"))
         pesados_a_e(a[1])
         print(f"Creado {destino}. Edita guion.py y ESTADO.md y luego: python fab.py {a[1]} todo")

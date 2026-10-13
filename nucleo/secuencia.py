@@ -682,7 +682,12 @@ def video(args):
             u = (t - bs[k]["t0"]) / fund
             if u < 1.0:
                 u = u * u * (3 - 2 * u)
-                img = cv2.addWeighted(prev.cuadro(t), 1 - u, img, u, 0)
+                if c.get("transicion") == "slideleft":      # motor yt (Warcraft): el clip nuevo empuja al anterior hacia la izquierda
+                    import numpy as np
+                    d = int(round(u * W))
+                    img = np.concatenate([prev.cuadro(t)[:, d:], img[:, :d]], axis=1) if 0 < d < W else img
+                else:
+                    img = cv2.addWeighted(prev.cuadro(t), 1 - u, img, u, 0)
             else:
                 prev = None
         if capa:

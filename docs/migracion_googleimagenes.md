@@ -57,12 +57,15 @@ sistema viejo: pitch 0, index_rate 0.75, protect 0.5, f0 `rmvpe`. Voces RVC en `
   da 403 de Microsoft) y RVC con el python de Applio (`nucleo/applio_lote.py`, modelo cargado una vez). Probado 13-oct:
   ~1 min de arranque + ~6 s por frase. `tts_select` no recorta colas para Applio (TAIL_MAX 1.0).
 - Tokens: `nucleo/youtube.py` ya lee los de `C:\googleimagenes` → `fab.py yt …` funciona con los 3 canales.
+- **S2a (13-oct) motor SECUENCIA YT** ✅: `nucleo/secuencia_yt.py` (`busquedas`, `bajar`, `fuentes`) sobre
+  `nucleo/secuencia.py` (+ transición `slideleft`), plantilla `fab.py nuevo <v> --yt`, filtros oscuro/quieto/webcam.
+  Probado con 4 beats reales (37 s, 1080p). Doc: `docs/estilo_secuencia_yt.md`.
 - Fichas: `canales/cronicas_warcraft.json` (cada 2 días 09:00 CDMX, heredado), `cronicas_tamriel.json`, `runa_caida.json`
   (provisionales).
 
 ## Pendiente (por sesiones)
-- [ ] S2: motor «secuencia yt-dlp»: guion por secciones → voz → Whisper → por frase buscar/bajar gameplay (yt-dlp) y
-  cortar; transición slideleft; apoyos (Wowhead/tarjetas); 3 MG. Leer `C:\googleimagenes\scripts\estudio.mjs` y
-  `estudio_apoyos.js` con grep. Vista «Montaje» en el panel.
+- [ ] S2b: apoyos (tooltips Wowhead/tarjetas como capa en `efectos.py`) + 3 MG (Remotion de `holavideo` o por código);
+  receta en `C:\googleimagenes\CLAUDE.md` § «Apoyos» y `estudio_apoyos.js` (grep).
+- [ ] S2c: vista «Montaje» en el panel (timeline de `beats.json`+`fuentes.json`, monitor, «cambiar clip» = `bajar N --q`).
 - [ ] S3: comercial Overgear (20-30 s propios + tramo intacto 33,0-40,0 s del creativo con CRONICAS10) + primer video.
 - [ ] `docs/estilo_broll_wow.md`, tabla de CLAUDE.md, memoria; luego Tamriel y Runa (Chatterbox).

@@ -11,11 +11,6 @@ import os
 
 import config
 
-REF = config.VOZ["referencia"]
-IDIOMA = config.VOZ["idioma"]
-CFG = {k: config.VOZ[k] for k in ("exaggeration", "cfg_weight", "temperature")}
-
-
 def todas_las_frases():
     return [(e["id"], i, f) for e in config.ESCENAS for i, f in enumerate(e["frases"])]
 OUT = "voz/cands"
@@ -44,6 +39,14 @@ if config.VOZ.get("motor") == "elevenlabs":
     import tts_eleven
     tts_eleven.generar(todas_las_frases(), args.seeds, args.solo, OUT)
     raise SystemExit
+if config.VOZ.get("motor") == "applio":
+    import tts_applio
+    tts_applio.generar(todas_las_frases(), args.seeds, args.solo, OUT)
+    raise SystemExit
+
+REF = config.VOZ["referencia"]
+IDIOMA = config.VOZ["idioma"]
+CFG = {k: config.VOZ[k] for k in ("exaggeration", "cfg_weight", "temperature")}
 
 import torch
 import torchaudio as ta

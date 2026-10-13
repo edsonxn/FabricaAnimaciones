@@ -1,0 +1,57 @@
+{
+  "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
+  "nombre": "Runa Caída",
+  "estilo": "Secretos y lore de Elden Ring; secuencia de clips de gameplay (yt-dlp); voz Chatterbox. Pendiente de mudar (después de Warcraft).",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "10:00",
+    "utc": "16:00",
+    "ciclo_dias": 7,
+    "separacion_min_horas": 96,
+    "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (22-sep, 5-oct). Provisional hasta analizar el canal.",
+    "historial": [
+      {
+        "fecha": "2026-10-13",
+        "ciclo_dias": 7,
+        "hora_local": "10:00",
+        "motivo": "registro inicial; provisional"
+      }
+    ]
+  },
+  "publicados": [
+    {
+      "video": null,
+      "id": "5qjNn7U-Vy4",
+      "titulo": "Los 5 secretos perturbadores de las Tierras Intermedias que CAMBIARÁN tu juego",
+      "visibilidad": "public",
+      "publicado": "2026-10-05T16:58:26Z"
+    },
+    {
+      "video": null,
+      "id": "B3VjwOzO3as",
+      "titulo": "Los secretos más perturbadores de la Aldea Bonny QUE IGNORASTE",
+      "visibilidad": "public",
+      "publicado": "2026-09-22T14:11:07Z"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "elden ring secretos",
+      "elden ring lore",
+      "elden ring nightreign"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 2000,
+    "filtro": [
+      "elden ring",
+      "tierras intermedias",
+      "marika",
+      "fromsoftware",
+      "nightreign"
+    ]
+  },
+  "estado": "registrado el 13-oct-2026; se produce aún en C:\\googleimagenes hasta mudarlo"
+}

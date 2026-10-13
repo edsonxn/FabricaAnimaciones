@@ -40,6 +40,8 @@ if config.VOZ.get("motor") == "elevenlabs":
     TAIL_MAX = 1.0
     if config.FRASES_TTS:   # etiquetas [pause], [sighs]… meten silencios a propósito dentro de la frase
         GAP_MAX = 2.5
+elif config.VOZ.get("motor") == "applio":   # Edge TTS + RVC tampoco alucina colas
+    TAIL_MAX = 1.0
 
 os.makedirs("voz/final", exist_ok=True)
 evals = json.load(open("voz/eval.json", encoding="utf-8")) if os.path.exists("voz/eval.json") else {}

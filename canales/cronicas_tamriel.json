@@ -1,0 +1,64 @@
+{
+  "canal_id": "UCWeCfdm8py6dYKHq7HwUIXw",
+  "nombre": "Crónicas de Tamriel",
+  "estilo": "Listas de Skyrim/Elder Scrolls; secuencia de clips de gameplay (yt-dlp) como Warcraft; voz Chatterbox. Pendiente de mudar (después de Warcraft).",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "09:15",
+    "utc": "15:15",
+    "ciclo_dias": 7,
+    "separacion_min_horas": 96,
+    "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (26-sep, 30-sep, 10-oct). Provisional hasta analizar el canal.",
+    "historial": [
+      {
+        "fecha": "2026-10-13",
+        "ciclo_dias": 7,
+        "hora_local": "09:15",
+        "motivo": "registro inicial; provisional"
+      }
+    ]
+  },
+  "publicados": [
+    {
+      "video": null,
+      "id": "fKPDEaOYMxQ",
+      "titulo": "Los 8 dragones más PODEROSOS de Skyrim",
+      "visibilidad": "public",
+      "publicado": "2026-10-10T15:15:00Z"
+    },
+    {
+      "video": null,
+      "id": "i31mjVpNSiA",
+      "titulo": "Los 8 hechizos más ROTOS de Skyrim",
+      "visibilidad": "public",
+      "publicado": "2026-10-01T00:20:14Z"
+    },
+    {
+      "video": null,
+      "id": "KKjWjznbV_4",
+      "titulo": "Los 7 jefes más peligrosos de Skyrim",
+      "visibilidad": "public",
+      "publicado": "2026-09-26T19:30:37Z"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "skyrim secretos",
+      "elder scrolls lore",
+      "skyrim lo mas poderoso"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 2000,
+    "filtro": [
+      "skyrim",
+      "elder scrolls",
+      "tamriel",
+      "oblivion",
+      "morrowind"
+    ]
+  },
+  "estado": "registrado el 13-oct-2026; se produce aún en C:\\googleimagenes hasta mudarlo"
+}

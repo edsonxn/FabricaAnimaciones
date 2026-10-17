@@ -60,7 +60,7 @@ PISTAS  = [dict(sfx="boom", en="Primer final", vol=.55),              # disparo
   empieza; `"...|fin"` = cuando termina; `"...#2"` = segunda vez), con desfase `("un empujón", -0.15)`. Las palabras son las de
   `timeline.json` (lo que transcribió Whisper): si el ancla no existe, el comando lo dice y no arma nada.
 - **Tipos de FX**: `temblor`, `destello`, `zoom`, `latido`, `vineta`, `desaturar`, `tinte`, `oscurecer`, `sirena`, `rec`, `tv`,
-  `abre`, `cierra`, `fondo` (tarjeta de color), `imagen` (logo PNG), `repaso` (ráfaga de otros beats), `cortina` (antes | después).
+  `abre`, `cierra`, `neon` (halo palpitante sobre lo saturado y brillante; estilo `docs/estilo_linea_neon.md`, 16-oct-2026), `fondo` (tarjeta de color), `imagen` (logo PNG), `repaso` (ráfaga de otros beats), `cortina` (antes | después).
 - Rebobinado = `repaso` (beats anteriores en orden inverso) + `tv` + rótulo con `parpadea=2.5`.
 - Tarjeta final = dar `"post": 7` a la última escena y poner `fondo` + rótulos + `imagen` en ese tramo.
 - Nivel: `MEZCLA = dict(fx=-6.0)` en guion.py (dB de recorte de toda la pista). Meta: `mezcla` debe decir

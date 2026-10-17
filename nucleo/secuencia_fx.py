@@ -19,7 +19,9 @@ ANCLAS (en / de / a):  12.5 = segundo · "scene-004" = inicio del beat · "scene
 
 TIPOS de FX:  temblor(en, amp, dur) · destello(en, dur, fuerza, color) · zoom(en|de, a, cuanto, entra, sale, cx, cy) ·
   latido(de, a, bpm, zoom, color, fuerza) · vineta(de, a, color, fuerza) · desaturar(de, a, k) · tinte(de, a, color, k) ·
-  oscurecer(de, a, k) · sirena(de, a, fuerza) · rec(de, a) · tv(de, a) · abre(en, dur) · cierra(en, dur) ·
+  oscurecer(de, a, k) · neon(de, a, fuerza, vel, radio, sat, val) — lo saturado y brillante de la imagen (neón amarillo, ojos
+    rojos) brilla con halo y palpita/parpadea como tubo de neón; estilo «línea blanca + neón» (docs/estilo_linea_neon.md) ·
+  sirena(de, a, fuerza) · rec(de, a) · tv(de, a) · abre(en, dur) · cierra(en, dur) ·
   fondo(de, a, centro, borde) · imagen(de, a, ruta, x, y, ancho) ·
   repaso(beat|de+a, partes=["scene-010", ("scene-003", (1.7, .1, .7)), ...], destello) · cortina(beat, desde="scene-009", dur)
   Los de rango aceptan entra= y sale= (segundos de fundido del efecto).
@@ -45,7 +47,7 @@ _DIR_FUENTES = [os.path.join(os.environ.get("LOCALAPPDATA", ""), "Microsoft", "W
 FUENTES = dict(black=("Poppins-Black.ttf", "seguibl.ttf"), xbold=("Poppins-ExtraBold.ttf", "segoeuib.ttf"),
                semi=("Poppins-SemiBold.ttf", "seguisb.ttf"))
 INSTANTE = dict(temblor=0.45, destello=0.2, abre=0.8)          # efectos de un instante: duración por defecto
-ORDEN = ("fondo", "zoom", "latido", "temblor", "desaturar", "tinte", "tv", "vineta", "sirena", "oscurecer", "rec", "imagen",
+ORDEN = ("fondo", "zoom", "latido", "temblor", "desaturar", "tinte", "neon", "tv", "vineta", "sirena", "oscurecer", "rec", "imagen",
          "destello")                                            # los rótulos van después; abre/cierra, al final
 
 clamp = lambda u: max(0.0, min(1.0, u))
@@ -226,6 +228,20 @@ class Capa:
                 y = int((t * 900) % H)
                 f[y:y + 40] = np.clip(f[y:y + 40].astype(np.int16) + 70, 0, 255).astype(np.uint8)
                 f = (f * .5 + cv2.cvtColor(f, cv2.COLOR_BGR2GRAY)[..., None] * .5).astype(np.uint8)
+            elif tipo == "neon":                       # halo de neón sobre lo saturado y brillante, con pulso y parpadeo
+                q = 4
+                pq = cv2.resize(f, (W // q, H // q), interpolation=cv2.INTER_AREA)
+                hsv = cv2.cvtColor(pq, cv2.COLOR_BGR2HSV)
+                m = ((hsv[..., 1] > d.get("sat", 90)) & (hsv[..., 2] > d.get("val", 110)))[..., None].astype(np.float32)
+                src = pq.astype(np.float32) * m
+                r = d.get("radio", 9)
+                halo = cv2.GaussianBlur(src, (0, 0), r) * 1.6 + cv2.GaussianBlur(src, (0, 0), r * 3) * 1.2
+                v = d.get("vel", 1.3)
+                pulso = .78 + .22 * math.sin(t * 2 * math.pi * v * .5) + .08 * math.sin(t * 2 * math.pi * v * 2.7)
+                if (math.sin(t * 17.3) * math.sin(t * 5.1 + 1) > .93):   # chisporroteo raro del tubo
+                    pulso *= .55
+                halo = cv2.resize(halo, (W, H), interpolation=cv2.INTER_LINEAR) * (d.get("fuerza", 0.9) * e * pulso)
+                f = np.clip(f.astype(np.float32) + halo, 0, 255).astype(np.uint8)
             elif tipo == "vineta":
                 f = vin(f, self.color(d.get("color", "noche")), d.get("fuerza", 0.5) * e)
             elif tipo == "latido":

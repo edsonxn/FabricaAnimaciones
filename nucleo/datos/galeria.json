@@ -275,6 +275,17 @@
    "desc": "El primer video Kurzgesagt: una sola clase `Mundo` dibuja todo sin cortes; zoom de la Tierra que se aplana en horizonte.",
    "uso": "Documental de espacio y ciencia, 1 minuto.",
    "extra": "plano.py: esfera, sol, tierra, luna"
+  },
+  {
+   "id": "linea_neon",
+   "nombre": "Línea blanca + neón",
+   "estilo": "secuencia_flow (con efectos)",
+   "canal": "Cuerpo en Neón (@cuerpoenneon)",
+   "video": "freno_enojo",
+   "archivos": [
+    "freno_enojo_MASTER.mp4"
+   ],
+   "desc": "Grabado en línea blanca fina sobre negro puro con UN elemento protagonista en neón amarillo que palpita por código (FX neon). Monigotes simpáticos y anatomía en grabado; palabras clave gigantes al centro; clips de Flow al inicio e imágenes después. Voz ElevenLabs Alejandro Durán + Lyria ambiental."
   }
  ],
  "sin_ejemplo": [

@@ -87,3 +87,6 @@ Al terminar un video o sesión: actualiza `videos/<v>/ESTADO.md` (etapa + siguie
 - 8-oct-2026: LogIA, `informante_2027` REHECHO (texto paralelo a las hojas, caminatas) y resubido en privado: 5D-kQtNWF4w, programado mié 14-oct-2026 14:00 CDMX (publishAt 2026-10-14T20:00:00Z). Sustituye a eHIxoZLpbMc, que el usuario borra en Studio.
 - 11-oct-2026: Bitácora Perdida, «Juchipila: el pueblo de las flores y la guerra» (8:18) SUBIDO en privado: UHZ9sXW0D1g (miniatura Flow «FLORES Y GUERRA»), SIN programar; usuario decidió subir el render actual con defectos documentados en docs/estilo_kurzgesagt.md. Hueco sugerido: jue 15-oct 14:00 CDMX (20:00 UTC).
 - 11-oct-2026: Juchipila (UHZ9sXW0D1g) PROGRAMADO jue 15-oct-2026 14:00 CDMX (publishAt 2026-10-15T20:00:00Z): ciclo de 5 días desde Independencia (10-oct).
+- 16-oct-2026: freno_enojo (sin canal, prueba de estilo «línea blanca + neón») terminado: MASTER 4:33 en videos/freno_enojo/salida/; espera revisión.
+- 17-oct-2026: canal «Cuentas Pendientes» reconvertido en «Cuerpo en Neón» (@cuerpoenneon, cuerpo_en_neon; 5 videos viejos a privado). freno_enojo subido en PRIVADO: https://youtu.be/-zNE22UIjko (sin fecha).
+- 17-oct-2026: freno_enojo PROGRAMADO en Cuerpo en Neón para hoy sáb 17-oct 14:00 CDMX (20:00 UTC): https://youtu.be/-zNE22UIjko

@@ -1,0 +1,65 @@
+{
+ "canal_id": "UCAn3gnOyX2Ec0BhO99o0wGA",
+ "nombre": "Cuerpo en Neón",
+ "estilo": "LÍNEA BLANCA + NEÓN (secuencia Flow con efectos): grabado en línea blanca sobre negro con UN elemento en neón amarillo que palpita (FX neon), palabras clave gigantes al centro; psicología y fisiología de las emociones explicadas; voz ElevenLabs Alejandro Durán + Lyria ambiental. Doc: docs/estilo_linea_neon.md · ejemplo: videos/freno_enojo/",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "14:00",
+  "utc": "20:00",
+  "dias": [
+   "miércoles",
+   "jueves",
+   "viernes"
+  ],
+  "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+  "nota": "Canal nuevo (conectado el 17-oct-2026, 1 suscriptor): horario por defecto del protocolo hasta tener datos en Studio > Audiencia.",
+  "separacion_min_horas": 96,
+  "ciclo_dias": 5
+ },
+ "publicados": [
+  {
+   "video": "freno_enojo",
+   "id": "-zNE22UIjko",
+   "titulo": "Por Qué LLORAS Cuando Te Callas el Coraje (y Cómo Evitarlo en 5 Minutos)",
+   "visibilidad": "private",
+   "subido": "2026-10-17",
+   "formato": "línea blanca + neón, explicación fisiológica + 5 técnicas, 4:33, voz Alejandro Durán",
+   "programado": "2026-10-17T20:00:00Z"
+  }
+ ],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "qué pasa en tu cuerpo cuando te enojas",
+   "nervio vago explicado",
+   "por qué lloramos cuando nos enojamos",
+   "cómo calmar la ansiedad en segundos ciencia"
+  ],
+  "competidores": [],
+  "dias": 60,
+  "min_vistas": 1000,
+  "filtro": [
+   "cuerpo",
+   "cerebro",
+   "nervio",
+   "ansiedad",
+   "enojo",
+   "emocion",
+   "llorar",
+   "estrés",
+   "estres"
+  ]
+ },
+ "historial": [
+  {
+   "fecha": "2026-10-17",
+   "nota": "Canal conectado con `yt conectar` para el estilo línea blanca + neón; primer video candidato: freno_enojo (MASTER listo, sin subir)."
+  },
+  {
+   "fecha": "2026-10-17",
+   "nota": "Canal reconvertido de «Cuentas Pendientes» (historias de herencias) a «Cuerpo en Neón» (@cuerpoenneon): 5 videos viejos a privado por API; nombre, handle, icono, banner, descripción y palabras clave puestos por el usuario en Studio; idioma es por API."
+  }
+ ],
+ "handle": "@cuerpoenneon"
+}

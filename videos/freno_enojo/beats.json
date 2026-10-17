@@ -1,0 +1,429 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 11.498,
+  "tipo": "video",
+  "texto": "Estás en medio de una discusión. Algo te dolió, y decides quedarte callado. Pasan cinco minutos. La otra persona regresa, te pide perdón con calma…",
+  "clip_s": 10,
+  "t_medio": 6.116,
+  "texto_a": "Estás en medio de una discusión. Algo te dolió, y decides quedarte callado.",
+  "texto_b": "Pasan cinco minutos. La otra persona regresa, te pide perdón con calma…"
+ },
+ {
+  "id": "scene-002",
+  "t0": 11.498,
+  "t1": 19.992,
+  "tipo": "video",
+  "texto": "y justo ahí, sin aviso, se te cierra la garganta y te ganan las lágrimas. No es debilidad. Es química.",
+  "clip_s": 10,
+  "t_medio": 15.858,
+  "texto_a": "y justo ahí, sin aviso, se te cierra la garganta",
+  "texto_b": "y te ganan las lágrimas. No es debilidad. Es química."
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.992,
+  "t1": 30.585,
+  "tipo": "video",
+  "texto": "Tu cuerpo se preparó para una pelea que nunca ocurrió. Todo empieza en la amígdala, una almendra de neuronas escondida en lo profundo del cerebro.",
+  "clip_s": 10,
+  "t_medio": 24.43,
+  "texto_a": "Tu cuerpo se preparó para una pelea que nunca ocurrió.",
+  "texto_b": "Todo empieza en la amígdala, una almendra de neuronas escondida en lo profundo del cerebro."
+ },
+ {
+  "id": "scene-004",
+  "t0": 30.585,
+  "t1": 41.935,
+  "tipo": "video",
+  "texto": "En menos de un segundo decide que estás en peligro, y no espera a que tú pienses. Avisa al hipotálamo, que enciende el acelerador del cuerpo: el sistema nervioso simpático.",
+  "clip_s": 10,
+  "t_medio": 35.78,
+  "texto_a": "En menos de un segundo decide que estás en peligro, y no espera a que tú pienses.",
+  "texto_b": "Avisa al hipotálamo, que enciende el acelerador del cuerpo: el sistema nervioso simpático."
+ },
+ {
+  "id": "scene-005",
+  "t0": 41.935,
+  "t1": 51.5,
+  "tipo": "video",
+  "texto": "La señal llega a las glándulas suprarrenales, encima de los riñones. Y sueltan adrenalina. El corazón se acelera. La presión sube.",
+  "clip_s": 10,
+  "t_medio": 45.835,
+  "texto_a": "La señal llega a las glándulas suprarrenales, encima de los riñones.",
+  "texto_b": "Y sueltan adrenalina. El corazón se acelera. La presión sube."
+ },
+ {
+  "id": "scene-006",
+  "t0": 51.5,
+  "t1": 60.696,
+  "tipo": "video",
+  "texto": "El hígado libera glucosa, combustible listo para quemar. La sangre corre a brazos y piernas. Los puños se cierran.",
+  "clip_s": 10,
+  "t_medio": 55.981,
+  "texto_a": "El hígado libera glucosa, combustible listo para quemar.",
+  "texto_b": "La sangre corre a brazos y piernas. Los puños se cierran."
+ },
+ {
+  "id": "scene-007",
+  "t0": 60.696,
+  "t1": 72.47,
+  "tipo": "video",
+  "texto": "Las pupilas se dilatan y la vista se cierra en un túnel. Estás listo para pelear o huir. Pero tú… no haces ninguna de las dos.",
+  "clip_s": 10,
+  "t_medio": 67.037,
+  "texto_a": "Las pupilas se dilatan y la vista se cierra en un túnel. Estás listo para pelear o huir.",
+  "texto_b": "Pero tú… no haces ninguna de las dos."
+ },
+ {
+  "id": "scene-008",
+  "t0": 72.47,
+  "t1": 77.184,
+  "tipo": "imagen",
+  "texto": "Te quedas quieto, con el tanque lleno y el motor revolucionado."
+ },
+ {
+  "id": "scene-009",
+  "t0": 77.184,
+  "t1": 80.664,
+  "tipo": "imagen",
+  "texto": "Y cuando la amenaza desaparece, el cerebro pisa el freno"
+ },
+ {
+  "id": "scene-010",
+  "t0": 80.664,
+  "t1": 84.581,
+  "tipo": "imagen",
+  "texto": "de golpe. Ese freno es el nervio vago."
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.581,
+  "t1": 87.459,
+  "tipo": "imagen",
+  "texto": "Y frenar a fondo con el motor así…"
+ },
+ {
+  "id": "scene-012",
+  "t0": 87.459,
+  "t1": 93.43,
+  "tipo": "imagen",
+  "texto": "el cuerpo descarga la tensión por donde puede: la garganta y los ojos."
+ },
+ {
+  "id": "scene-013",
+  "t0": 93.43,
+  "t1": 95.89,
+  "tipo": "imagen",
+  "texto": "El truco es no frenar de golpe."
+ },
+ {
+  "id": "scene-014",
+  "t0": 95.89,
+  "t1": 101.305,
+  "tipo": "imagen",
+  "texto": "Tienes dos caminos. Quemar el combustible para que el cuerpo crea que la pelea ya pasó,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 101.305,
+  "t1": 103.395,
+  "tipo": "imagen",
+  "texto": "o frenar poco a poco."
+ },
+ {
+  "id": "scene-016",
+  "t0": 103.395,
+  "t1": 108.53,
+  "tipo": "imagen",
+  "texto": "Aquí van cinco formas."
+ },
+ {
+  "id": "scene-017",
+  "t0": 108.53,
+  "t1": 111.455,
+  "tipo": "imagen",
+  "texto": "Uno. El suspiro fisiológico."
+ },
+ {
+  "id": "scene-018",
+  "t0": 111.455,
+  "t1": 117.822,
+  "tipo": "imagen",
+  "texto": "Inhala profundo por la nariz, y con los pulmones llenos, mete un segundo jalón corto de aire."
+ },
+ {
+  "id": "scene-019",
+  "t0": 117.822,
+  "t1": 120.622,
+  "tipo": "imagen",
+  "texto": "Ese jalón vuelve a inflar los alvéolos que se habían"
+ },
+ {
+  "id": "scene-020",
+  "t0": 120.622,
+  "t1": 125.398,
+  "tipo": "imagen",
+  "texto": "cerrado. Luego suelta todo despacio por la boca,"
+ },
+ {
+  "id": "scene-021",
+  "t0": 125.398,
+  "t1": 128.572,
+  "tipo": "imagen",
+  "texto": "el doble de largo. Cada vez que exhalas,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 128.572,
+  "t1": 131.322,
+  "tipo": "imagen",
+  "texto": "el nervio vago frena un poco el corazón."
+ },
+ {
+  "id": "scene-023",
+  "t0": 131.322,
+  "t1": 136.568,
+  "tipo": "imagen",
+  "texto": "Exhalar largo es frenar largo. En 2023, un estudio de Stanford"
+ },
+ {
+  "id": "scene-024",
+  "t0": 136.568,
+  "t1": 140.688,
+  "tipo": "imagen",
+  "texto": "vio que este suspiro mejoraba el ánimo más que la meditación."
+ },
+ {
+  "id": "scene-025",
+  "t0": 140.688,
+  "t1": 144.6,
+  "tipo": "imagen",
+  "texto": "Con dos o tres, el golpe baja."
+ },
+ {
+  "id": "scene-026",
+  "t0": 144.6,
+  "t1": 147.504,
+  "tipo": "imagen",
+  "texto": "Dos. Tensión isométrica."
+ },
+ {
+  "id": "scene-027",
+  "t0": 147.504,
+  "t1": 153.089,
+  "tipo": "imagen",
+  "texto": "Tus músculos ya tienen la orden de pelear. Dales lo que piden, sin moverte."
+ },
+ {
+  "id": "scene-028",
+  "t0": 153.089,
+  "t1": 158.048,
+  "tipo": "imagen",
+  "texto": "Empuja el piso con los pies, aprieta los puños o empuja una pared."
+ },
+ {
+  "id": "scene-029",
+  "t0": 158.048,
+  "t1": 161.168,
+  "tipo": "imagen",
+  "texto": "Diez segundos al máximo. Y suelta."
+ },
+ {
+  "id": "scene-030",
+  "t0": 161.168,
+  "t1": 164.846,
+  "tipo": "imagen",
+  "texto": "El músculo quema parte de esa glucosa."
+ },
+ {
+  "id": "scene-031",
+  "t0": 164.846,
+  "t1": 168.406,
+  "tipo": "imagen",
+  "texto": "Y tras tensarse al máximo, se relaja más que antes."
+ },
+ {
+  "id": "scene-032",
+  "t0": 168.406,
+  "t1": 171.786,
+  "tipo": "imagen",
+  "texto": "Lo describió el médico Edmund Jacobson hace casi cien"
+ },
+ {
+  "id": "scene-033",
+  "t0": 171.786,
+  "t1": 177.669,
+  "tipo": "imagen",
+  "texto": "años. Tres. El reflejo de inmersión."
+ },
+ {
+  "id": "scene-034",
+  "t0": 177.669,
+  "t1": 181.219,
+  "tipo": "imagen",
+  "texto": "Si puedes ir al baño, échate agua bien fría en la frente,"
+ },
+ {
+  "id": "scene-035",
+  "t0": 181.219,
+  "t1": 183.817,
+  "tipo": "imagen",
+  "texto": "los ojos y los pómulos."
+ },
+ {
+  "id": "scene-036",
+  "t0": 183.817,
+  "t1": 188.597,
+  "tipo": "imagen",
+  "texto": "Tu cara está conectada al nervio trigémino. Con el frío, el cuerpo cree que"
+ },
+ {
+  "id": "scene-037",
+  "t0": 188.597,
+  "t1": 192.896,
+  "tipo": "imagen",
+  "texto": "te sumergiste en el agua. Y activa un reflejo antiguo de mamífero:"
+ },
+ {
+  "id": "scene-038",
+  "t0": 192.896,
+  "t1": 195.749,
+  "tipo": "imagen",
+  "texto": "el corazón baja entre un diez y un veinticinco por"
+ },
+ {
+  "id": "scene-039",
+  "t0": 195.749,
+  "t1": 201.993,
+  "tipo": "imagen",
+  "texto": "ciento. Cuatro. Sacudirte o caminar rápido."
+ },
+ {
+  "id": "scene-040",
+  "t0": 201.993,
+  "t1": 204.293,
+  "tipo": "imagen",
+  "texto": "Muchos animales, al escapar de un ataque,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 204.293,
+  "t1": 209.286,
+  "tipo": "imagen",
+  "texto": "lo primero que hacen es sacudirse. Sal un minuto, sacude las manos,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 209.286,
+  "t1": 212.58,
+  "tipo": "imagen",
+  "texto": "haz quince sentadillas o camina rápido."
+ },
+ {
+  "id": "scene-043",
+  "t0": 212.58,
+  "t1": 217.13,
+  "tipo": "imagen",
+  "texto": "Las piernas son tus músculos más grandes: gastan el combustible de la huida."
+ },
+ {
+  "id": "scene-044",
+  "t0": 217.13,
+  "t1": 220.4,
+  "tipo": "imagen",
+  "texto": "Y la adrenalina, si no la alimentas, se apaga"
+ },
+ {
+  "id": "scene-045",
+  "t0": 220.4,
+  "t1": 224.815,
+  "tipo": "imagen",
+  "texto": "en minutos. Cinco. Abre la mirada."
+ },
+ {
+  "id": "scene-046",
+  "t0": 224.815,
+  "t1": 228.885,
+  "tipo": "imagen",
+  "texto": "La visión de túnel va de la mano con la alerta. Sin mover la cabeza,"
+ },
+ {
+  "id": "scene-047",
+  "t0": 228.885,
+  "t1": 232.677,
+  "tipo": "imagen",
+  "texto": "trata de ver las esquinas del cuarto con el rabillo del ojo."
+ },
+ {
+  "id": "scene-048",
+  "t0": 232.677,
+  "t1": 236.357,
+  "tipo": "imagen",
+  "texto": "Es la mirada de alguien tranquilo. Es la menos estudiada,"
+ },
+ {
+  "id": "scene-049",
+  "t0": 236.357,
+  "t1": 240.312,
+  "tipo": "imagen",
+  "texto": "pero mucha gente nota que el pecho se afloja."
+ },
+ {
+  "id": "scene-050",
+  "t0": 240.312,
+  "t1": 244.619,
+  "tipo": "imagen",
+  "texto": "El combo para la vida real. Cuando sientas el golpe de coraje,"
+ },
+ {
+  "id": "scene-051",
+  "t0": 244.619,
+  "t1": 248.329,
+  "tipo": "imagen",
+  "texto": "afloja la mirada y haz dos suspiros fisiológicos."
+ },
+ {
+  "id": "scene-052",
+  "t0": 248.329,
+  "t1": 253.206,
+  "tipo": "imagen",
+  "texto": "Nadie lo nota. Y si puedes, agua fría en la cara o puños apretados"
+ },
+ {
+  "id": "scene-053",
+  "t0": 253.206,
+  "t1": 256.82,
+  "tipo": "imagen",
+  "texto": "diez segundos. Pasan cinco minutos."
+ },
+ {
+  "id": "scene-054",
+  "t0": 256.82,
+  "t1": 260.552,
+  "tipo": "imagen",
+  "texto": "La otra persona regresa y te pide perdón."
+ },
+ {
+  "id": "scene-055",
+  "t0": 260.552,
+  "t1": 265.607,
+  "tipo": "imagen",
+  "texto": "Y esta vez la garganta no se cierra. Tu cuerpo ya drenó la tormenta."
+ },
+ {
+  "id": "scene-056",
+  "t0": 265.607,
+  "t1": 269.247,
+  "tipo": "imagen",
+  "texto": "Y puedes escuchar esa disculpa… desde"
+ },
+ {
+  "id": "scene-057",
+  "t0": 269.247,
+  "t1": 273.0,
+  "tipo": "imagen",
+  "texto": "la calma."
+ }
+]

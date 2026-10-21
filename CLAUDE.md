@@ -98,7 +98,7 @@ python fab.py ideas [<canal>] [--actualizar]  siguiente video con datos: lo tuyo
 python fab.py estadisticas [--actualizar] panel general de estadísticas de TODOS los canales (HTML sin servidor: canales/metricas/panel_canales.html;
                                         `--actualizar` pide datos frescos a YouTube, solo lectura; código nucleo/estadisticas.py + .html;
                                         canal nuevo = agregarlo AL FINAL de ORDEN para no repintar los colores)
-python fab.py panel --abrir             panel de avance (NUNCA detenerlo ni matarlo con los python)
+python fab.py panel --abrir             panel de avance (NUNCA detenerlo ni matarlo con los python) · lienzo v2 (canvas con todo lo producido + CPU/RAM/GPU/procesos): /v2 o `--lienzo` (docs/panel.md)
                                         Vista previa → «Renderizar esta escena»: queda fluida en el panel y el render completo la REUTILIZA
                                         (segmentos/ + firma del código; ver docs/panel.md «Escena fluida»). Tras editar código, ámbar = obsoleta.
                                         El render completo también deja las escenas en verde (anota sus segmentos; el motor arma el mp4 al abrir).

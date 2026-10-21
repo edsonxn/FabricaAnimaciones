@@ -3,7 +3,7 @@
 _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 
 ## Panel de avance
-`python fab.py panel [--puerto 8765] [--abrir]` → http://127.0.0.1:8765. Muestra en vivo las 14 etapas de cada
+`python fab.py panel [--puerto 8765] [--abrir] [--lienzo]` → http://127.0.0.1:8765 (clásico) · http://127.0.0.1:8765/v2 (lienzo, ver abajo). Muestra en vivo las 14 etapas de cada
 proyecto de `videos/` (los nuevos aparecen solos; deduce el estado de los archivos y de los procesos en marcha),
 disco libre, GPU y logs. **Avisos por voz**: un vigilante detecta etapas terminadas, hitos del render (25/50/75 %),
 etapas que piden atención o se detienen, y un locutor los dice con Chatterbox (`nucleo/avisos.py` + `avisos_voz.py`,
@@ -87,6 +87,47 @@ reabrir la ventana); fuera de ellas siguen los cuadros del motor. **El render co
 **Filtro por canal y por estilo (11-oct-2026)**: dos desplegables junto a los filtros de etapa («Todos los canales» / «Todos los estilos») muestran solo los videos de un canal (`canal` de cada proyecto, misma regla que el fondo) o de un `ESTILO_VISUAL` (vacío = «(sin estilo)»); se combinan entre sí y con En curso/Terminados/Ocultos, acotan también los contadores de arriba, y cada opción lleva cuántos videos visibles tiene. Se recuerdan en el navegador (`localStorage` `fc`/`fe`). Solo `panel.html`: no hace falta reiniciar el panel.
 
 **Ocultos (7-oct-2026)**: todo video que ya está en YouTube (registrado en `publicados` de `canales/<alias>.json`: público, programado o privado) sale OCULTO por defecto; solo aparece con el filtro «Ocultos». El botón «👁 mostrar» lo vuelve a enseñar (guarda `"oculto": false` en `videos/<v>/panel.json`); «🙈 ocultar» guarda `"oculto": true` en cualquier proyecto. No borra nada.
+
+## Panel v2 «Lienzo» (21-oct-2026, idea del usuario a partir de MiniMax Design)
+**http://127.0.0.1:8765/v2** (o `python fab.py panel --abrir --lienzo`). El mismo servidor y las mismas funciones que el clásico, pero
+en un lienzo infinito: **cada video es un tablero** y cada canal un carril de color (los carriles se empacan lado a lado como un
+muro; lo que está en curso va primero). Código: `nucleo/panel_v2.py` (backend) + `nucleo/panel_v2.html` (página).
+- **Arriba, el sistema en vivo**: estado de la lectura, CPU (con historial), RAM, GPU (uso, VRAM, temperatura), GB libres de cada
+  unidad (C:, D:, E:), E/S de disco y red, y procesos (python/ffmpeg). Clic en CPU/RAM/GPU/Procesos → núcleos de la CPU, **trabajos de
+  la fábrica agrupados** (un render = `fab.py <v> video` + sus 12 procesos + ffmpeg, con su video, etapa, CPU, RAM y cuánto lleva; clic
+  en la fila = sus procesos), quién usa la GPU y lo que más memoria gasta del resto del equipo. Por debajo de ~1900 px de ancho, las
+  métricas van en una segunda fila. Botones: ▶ En curso (producciones en marcha), 🔔 avisos por voz (los mismos: activar, destino,
+  probar, repetir), 🎨 Estilos, 📅 Canales (la pestaña de siempre en un cajón), ▤ Clásico, tema (misma clave `localStorage.t`).
+- **Tablero cerrado**: portada (miniatura de YouTube > fotograma del MASTER > hoja > última prueba > primer medio), barra de las
+  17 etapas, anillo de avance, recuadro «en vivo» si algo corre, y botones: ⤢ Ver todo, ▶ Video (se reproduce ahí mismo),
+  🎞 Montaje, 🔍 Vista previa, 👁 Ver estilo, 📂 carpeta (abre el Explorador), 🙈/👁 ocultar.
+- **Tablero abierto** (doble clic o «Ver todo»): TODO lo producido en columnas que siguen el pipeline, unidas con flechas:
+  ① Guion y voz (escenas y frases con ▶ por frase = la toma elegida de `voz/final/`; las etiquetas de actuación `[sighs]` resaltadas;
+  ESTADO.md legible) → ② Imágenes y clips (cada subcarpeta: `medios/`, `imagenes/`, `pegatinas/`, `hojas/`, `piezas/*`…; al pasar el
+  ratón por un clip se reproduce en silencio) → ③ Música y efectos (`audio/`, `sfx/`: un solo reproductor abajo que sigue sonando
+  mientras te mueves; los `.wav` de > 25 MB se convierten una vez a `.m4a` en `previews/_v2/`) → ④ Pruebas y vistas (`previews/`, lo
+  último primero) → ⑤ Entrega (MASTER y otros mp4 reproducibles, miniatura, `.srt`, metadatos de `youtube.json`). Se refresca solo cada
+  8 s mientras está a la vista (sirve para ver llegar los medios de Flow). Fuera: `segmentos/`, `voz/cands`, código y cachés.
+- **Clic** en cualquier archivo → inspector a la derecha (vista grande, medidas reales, tamaño, fecha, ⤢ Ver grande, ↗ Abrir aparte,
+  📂 Mostrar en carpeta, ⧉ Copiar ruta). **Doble clic** → visor a pantalla completa con ← → por toda la carpeta. Clic en la cabecera
+  de un tablero → inspector del proyecto (etapas con detalle, «Siguiente: comando + copiar», último log, botones).
+- **Montaje, Vista previa y Muestra son los del clásico**, incrustados: el lienzo abre `/?embed=montaje|previa|muestra&v=<video>` (modo
+  «embebido» de `panel.html`: solo ese diálogo, fondo transparente; al cerrarlo avisa con `postMessage` y el lienzo lo quita). Cualquier
+  mejora a esos diálogos en `panel.html` sale en los dos paneles.
+- **Moverse**: arrastrar, rueda = zoom (botón 🖱 para que la rueda mueva), Ctrl+rueda/pellizco, minimapa (clic para ir), F = todo,
+  1 = 100 %, + −, flechas, / = buscar, Esc. La lista de la izquierda (filtros En curso/Sin terminar/Terminados/Ocultos, canal, estilo,
+  buscador que atenúa el resto) vuela al tablero. Se recuerdan vista, tableros abiertos y filtros (`localStorage` `v2*`). `/v2#v=<video>`
+  abre ese tablero.
+- **Backend** (`panel_v2.py`; panel.py lo **recarga solo si cambia**, así que editarlo NO exige reiniciar el panel; `panel.html`/
+  `panel_v2.html` se releen en cada carga): `/api/v2/estado` (el estado de `/api/estado` **al instante**: devuelve el último calculado y
+  calcula el siguiente en segundo plano; el 21-oct, con un render a CPU 100 %, `/api/estado` tardó 250 s), `/api/v2/sistema` (lo mide
+  un hilo cada 2 s mientras alguien mira; los procesos salen de UNA llamada a Windows, `NtQuerySystemInformation`, porque psutil tardaba
+  segundos por proceso protegido y `tasklist` 5 minutos), `/api/v2/portadas`, `/api/v2/recursos?video=`, `/api/v2/guion?video=`,
+  `/v2/archivo/<v>/<ruta>` (con Range; solo extensiones de medios/texto y dentro del video, también a través de junctions),
+  `/v2/mini/<v>/<ruta>?w=` (miniaturas en `previews/_v2/`, máx. 3 a la vez para no estorbar a un render), `/v2/oir/<v>/<ruta>`,
+  `POST /api/v2/revelar`. Solo lee, salvo esas cachés y el Explorador.
+- Registra el uso como `v2-lienzo` en la bitácora (`/uso.js`). Cambios en `panel.py` (rutas `/v2`, `--lienzo`, Estilos robusto):
+  el panel en marcha los toma **cuando el usuario lo reinicie** (nunca lo reinicia Claude).
 
 ## Pestaña «Canales» (8-oct-2026)
 El panel de estadísticas (`nucleo/estadisticas.py` + plantilla `nucleo/estadisticas.html`) vive dentro del panel como tercera pestaña: un `<iframe>` a `/canales`, que arma la misma plantilla con los datos de `canales/metricas/panel/<alias>.json` y los proyectos en producción. `python fab.py estadisticas` sigue generando la copia suelta (`canales/metricas/panel_canales.html`), sin botones que escriban.

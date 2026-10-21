@@ -1180,7 +1180,7 @@ def galeria():
             _lanzar_cuadros(g)
         titulo = parsear_guion(os.path.join(VIDEOS, g["video"], "guion.py")).get("TITULO") if os.path.exists(
             os.path.join(VIDEOS, g["video"], "guion.py")) else g["video"]
-        d = {k: g[k] for k in ("id", "nombre", "estilo", "canal", "video", "desc", "uso", "extra")}
+        d = {k: g.get(k, "") for k in ("id", "nombre", "estilo", "canal", "video", "desc", "uso", "extra")}   # una entrada sin «uso»/«extra» tumbaba la pestaña entera
         d.update(archivo=arch, titulo=titulo or g["video"], duracion=dur, vertical=h > w, cuadros=cuadros,
                  mb=round(os.path.getsize(ruta) / 1048576), version=int(mt(ruta)))
         items.append(d)
@@ -1383,6 +1383,26 @@ def canales_actualizar():
     return dict(CAN)
 
 
+# ======================================================================== panel v2 «Lienzo» (nucleo/panel_v2.py + panel_v2.html)
+_V2 = {"mod": None, "t": 0.0}
+_v2_lock = threading.Lock()
+
+
+def _v2():
+    """El backend del lienzo, recargado si cambió su archivo: editar panel_v2.py NO exige reiniciar el panel."""
+    import importlib
+    ruta = os.path.join(NUCLEO, "panel_v2.py")
+    with _v2_lock:
+        t = mt(ruta)
+        if _V2["mod"] is None or t != _V2["t"]:
+            import panel_v2 as m
+            if _V2["mod"] is not None:
+                m = importlib.reload(m)
+            m.P = sys.modules[__name__]
+            _V2.update(mod=m, t=t)
+        return _V2["mod"]
+
+
 # ======================================================================== servidor
 class Manejador(BaseHTTPRequestHandler):
     def log_message(self, *a):
@@ -1453,6 +1473,8 @@ class Manejador(BaseHTTPRequestHandler):
                     return self._enviar(404, b"", "text/plain")
                 self._enviar(200, open(real, "rb").read(), mimetypes.guess_type(real)[0] or "image/jpeg",
                              cache="max-age=120")
+            elif ruta in ("/v2", "/v2/") or ruta.startswith(("/v2/", "/api/v2/")):
+                _v2().get(self, ruta)
             else:
                 self._enviar(404, b"no encontrado", "text/plain")
         except ConnectionError:
@@ -1490,6 +1512,8 @@ class Manejador(BaseHTTPRequestHandler):
             elif ruta == "/api/probar" and LOC:
                 LOC.decir(datos.get("texto") or "Panel de la fábrica listo. Este es un aviso de prueba.", motivo="prueba")
                 self._enviar(200, b"{}", "application/json")
+            elif ruta.startswith("/api/v2/"):
+                _v2().post(self, ruta, datos)
             else:
                 self._enviar(404, b"", "text/plain")
         except ConnectionError:
@@ -1506,6 +1530,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--puerto", type=int, default=8765)
     ap.add_argument("--abrir", action="store_true")
+    ap.add_argument("--lienzo", action="store_true", help="con --abrir, abre el lienzo v2 (/v2) en vez del panel clásico")
     ap.add_argument("--json", action="store_true", help="imprime el estado y sale")
     ap.add_argument("--sin-voz", action="store_true", help="no arranca el vigilante de avisos por voz")
     a = ap.parse_args()
@@ -1516,7 +1541,7 @@ def main():
         return
     srv = ThreadingHTTPServer(("127.0.0.1", a.puerto), Manejador)
     url = f"http://127.0.0.1:{a.puerto}"
-    print(f"Panel en {url}  (Ctrl+C para cerrar)", flush=True)
+    print(f"Panel en {url}  ·  lienzo (v2) en {url}/v2  (Ctrl+C para cerrar)", flush=True)
     threading.Thread(target=_refrescar_sistema, daemon=True).start()
     if not a.sin_voz:
         LOC = AV.Locutor()
@@ -1524,7 +1549,7 @@ def main():
         print("Avisos por voz activos (config: panel_config.json)", flush=True)
     if a.abrir:
         import webbrowser
-        webbrowser.open(url)
+        webbrowser.open(url + ("/v2" if a.lienzo else ""))
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

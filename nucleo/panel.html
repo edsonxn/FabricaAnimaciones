@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Panel · Fábrica de Animaciones</title>
+<script>if(/[?&]embed=/.test(location.search))document.documentElement.classList.add("embebido");</script>
 <style>
+/* modo embebido (21-oct-2026): el lienzo /v2 abre aquí solo un diálogo (Montaje, Vista previa, Muestra) encima de su canvas */
+html.embebido,html.embebido body{background:transparent}
+html.embebido .wrap,html.embebido #bloqueo{display:none}
 :root{
   --bg:#f3f4fb; --panel:#ffffff; --panel2:#eceef9; --txt:#1c1f3d; --mut:#6b708f; --line:#dcdff0;
   --ok:#17a673; --run:#2f6bff; --warn:#e07a1f; --bad:#d9435b; --acc:#c99a00; --shadow:0 1px 2px rgba(20,24,60,.08),0 8px 24px rgba(20,24,60,.06);
@@ -1000,7 +1004,14 @@ document.addEventListener("click",e=>{
   if(e.target.id==="ev"||e.target.id==="ev-cerrar")evCerrar();
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("ev").classList.contains("on"))evCerrar();});
-try{if(["est","can"].includes(localStorage.getItem("pest")))pestana(localStorage.getItem("pest"));}catch(e){}
+// Lienzo v2 (21-oct-2026): /?embed=montaje|previa|muestra&v=<video>[&t=<s>] abre solo ese diálogo; al cerrarlo avisa a la página madre
+const EMB=new URLSearchParams(location.search), EMB_DLG={montaje:"mj",previa:"vp",muestra:"mu"}[EMB.get("embed")];
+if(EMB_DLG){
+  encolarAudios=()=>{};                                         // los avisos por voz ya suenan en el lienzo
+  const v=EMB.get("v")||"",t=parseFloat(EMB.get("t"));let visto=false;
+  ({mj:()=>mjAbrir(v),vp:()=>vpAbrir(v,isNaN(t)?undefined:t),mu:()=>muAbrir(v,false)})[EMB_DLG]();
+  setInterval(()=>{if($(EMB_DLG).classList.contains("on"))visto=true;else if(visto)parent.postMessage({fab:"cerrar"},"*");},250);
+}else{try{if(["est","can"].includes(localStorage.getItem("pest")))pestana(localStorage.getItem("pest"));}catch(e){}}
 cargar();setInterval(cargar,3000);
 </script>
 </body>

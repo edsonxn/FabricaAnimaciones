@@ -98,16 +98,38 @@ muro; lo que está en curso va primero). Código: `nucleo/panel_v2.py` (backend)
   en la fila = sus procesos), quién usa la GPU y lo que más memoria gasta del resto del equipo. Por debajo de ~1900 px de ancho, las
   métricas van en una segunda fila. Botones: ▶ En curso (producciones en marcha), 🔔 avisos por voz (los mismos: activar, destino,
   probar, repetir), 🎨 Estilos, 📅 Canales (la pestaña de siempre en un cajón), ▤ Clásico, tema (misma clave `localStorage.t`).
-- **Tablero cerrado**: portada (miniatura de YouTube > fotograma del MASTER > hoja > última prueba > primer medio), barra de las
-  17 etapas, anillo de avance, recuadro «en vivo» si algo corre, y botones: ⤢ Ver todo, ▶ Video (se reproduce ahí mismo),
-  🎞 Montaje, 🔍 Vista previa, 👁 Ver estilo, 📂 carpeta (abre el Explorador), 🙈/👁 ocultar.
-- **Tablero abierto** (doble clic o «Ver todo»): TODO lo producido en columnas que siguen el pipeline, unidas con flechas:
+- **Tablero cerrado**: arriba, al inicio de la cabecera, el botón destacado **⤢ Abrir / ⤡ Contraer** (en un tablero abierto muy ancho
+  la esquina derecha queda fuera de vista); portada (miniatura de YouTube > fotograma del MASTER > hoja > última prueba > primer medio),
+  barra de las 17 etapas, anillo de avance, recuadro «en vivo» si algo corre, y abajo: ▶ Video (se reproduce ahí mismo), 🎞 Montaje,
+  🔍 Vista previa, 👁 Ver estilo, 📂 carpeta (abre el Explorador), 🙈/👁 ocultar.
+- **Proceso en marcha** (el usuario, 21-oct): borde azul que gira alrededor de la tarjeta (`@property --giro`), insignia arriba
+  «● RENDER · 41 %» (de cerca) o pastilla de avance encima (de lejos, ver zoom semántico) y marco azul en el minimapa; el grosor
+  del borde crece al alejar (`--inv` = 1/zoom).
+- **Tablero abierto** (⤢ Abrir o doble clic): TODO lo producido en columnas que siguen el pipeline, unidas con flechas:
   ① Guion y voz (escenas y frases con ▶ por frase = la toma elegida de `voz/final/`; las etiquetas de actuación `[sighs]` resaltadas;
   ESTADO.md legible) → ② Imágenes y clips (cada subcarpeta: `medios/`, `imagenes/`, `pegatinas/`, `hojas/`, `piezas/*`…; al pasar el
   ratón por un clip se reproduce en silencio) → ③ Música y efectos (`audio/`, `sfx/`: un solo reproductor abajo que sigue sonando
   mientras te mueves; los `.wav` de > 25 MB se convierten una vez a `.m4a` en `previews/_v2/`) → ④ Pruebas y vistas (`previews/`, lo
   último primero) → ⑤ Entrega (MASTER y otros mp4 reproducibles, miniatura, `.srt`, metadatos de `youtube.json`). Se refresca solo cada
   8 s mientras está a la vista (sirve para ver llegar los medios de Flow). Fuera: `segmentos/`, `voz/cands`, código y cachés.
+- **Contraer secciones** (el usuario, 21-oct): ▾/▸ en la cabecera de cada sección (Guion, ESTADO.md, `medios`, `audio`, `previews`,
+  el video…) y de cada columna. **La regla vale para esa sección en TODOS los tableros**, también en los que se abran después
+  (clave por tipo o carpeta: `guion`, `g:medios`, `col:guion`…; `localStorage` `v2pleg`). Se aplica en el sitio, sin redibujar
+  (un video que suena no se corta).
+- **Zoom semántico** (el usuario, 21-oct: «de lejos se ve raro: menos texto, más visual»): **cerca** (≥ 70 %) todo; **medio** (40-70 %)
+  sin letra menuda ni botones salvo ⤢; **lejos** (< 40 %) solo lo visual: portadas, miniaturas, etapas en color, el borde azul de lo que
+  corre y los carriles; las secciones de texto se vuelven un bloque con icono (📝 guion · 📋 ESTADO · 🎵 audio · 📺 YouTube). En medio y
+  lejos **el título sale al pasar el ratón** (`#tip`; probé pastillas de título fijas y al usuario le gustó más así) y **solo lo que
+  está en marcha** lleva ENCIMA de su tarjeta una pastilla de avance a tamaño fijo de pantalla (capa `#etiquetas`): título, barra
+  gruesa y «RENDER · 49 % · termina 15:07» (la hora sale del `detalle` de la etapa), legible hasta el 16 %. Los tableros no cambian
+  de tamaño entre niveles (no se reacomoda nada al hacer zoom).
+- **Nitidez**: `will-change: transform` solo mientras te mueves; con él fijo Chrome estiraba una imagen del lienzo al hacer zoom
+  (texto borroso). Al detenerse (~160 ms) se quita, la posición se redondea a píxel y las miniaturas a la vista piden una versión
+  mayor si se muestran más grandes que su archivo (de 160 en 160 px, hasta 960).
+- **Arrastrar nunca selecciona texto** (`user-select:none` en el lienzo + `preventDefault` en `pointerdown`); para copiar, el inspector
+  y el visor. Arrastrar mueve desde cualquier parte salvo botones, reproductores y la barra de las listas.
+- **Imágenes por turnos**: máx. 6 a la vez, lo último que entró a la vista primero, con un reintento. El servidor del panel solo
+  encolaba 5 conexiones (valor de Python) y con la CPU al 100 % Windows rechazaba el resto: `panel.py` ahora usa 128.
 - **Clic** en cualquier archivo → inspector a la derecha (vista grande, medidas reales, tamaño, fecha, ⤢ Ver grande, ↗ Abrir aparte,
   📂 Mostrar en carpeta, ⧉ Copiar ruta). **Doble clic** → visor a pantalla completa con ← → por toda la carpeta. Clic en la cabecera
   de un tablero → inspector del proyecto (etapas con detalle, «Siguiente: comando + copiar», último log, botones).
@@ -126,7 +148,7 @@ muro; lo que está en curso va primero). Código: `nucleo/panel_v2.py` (backend)
   `/v2/archivo/<v>/<ruta>` (con Range; solo extensiones de medios/texto y dentro del video, también a través de junctions),
   `/v2/mini/<v>/<ruta>?w=` (miniaturas en `previews/_v2/`, máx. 3 a la vez para no estorbar a un render), `/v2/oir/<v>/<ruta>`,
   `POST /api/v2/revelar`. Solo lee, salvo esas cachés y el Explorador.
-- Registra el uso como `v2-lienzo` en la bitácora (`/uso.js`). Cambios en `panel.py` (rutas `/v2`, `--lienzo`, Estilos robusto):
+- Registra el uso como `v2-lienzo` en la bitácora (`/uso.js`). Cambios en `panel.py` (rutas `/v2`, `--lienzo`, Estilos robusto, cola de 128):
   el panel en marcha los toma **cuando el usuario lo reinicie** (nunca lo reinicia Claude).
 
 ## Pestaña «Canales» (8-oct-2026)

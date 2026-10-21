@@ -1539,6 +1539,7 @@ def main():
         sistema(forzar=True)
         print(json.dumps(estado(), ensure_ascii=False, indent=1))
         return
+    ThreadingHTTPServer.request_queue_size = 128     # el lienzo pide muchas miniaturas a la vez: con 5 (por defecto) Windows rechazaba las demás
     srv = ThreadingHTTPServer(("127.0.0.1", a.puerto), Manejador)
     url = f"http://127.0.0.1:{a.puerto}"
     print(f"Panel en {url}  ·  lienzo (v2) en {url}/v2  (Ctrl+C para cerrar)", flush=True)

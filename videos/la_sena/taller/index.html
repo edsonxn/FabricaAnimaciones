@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antes de decir que sí</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-400.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-600.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-800.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:900;src:url(fonts/poppins-900.woff2) format("woff2")}
+@font-face{font-family:Bask;font-weight:700;src:url(fonts/baskervville-bold.ttf) format("truetype")}
+@font-face{font-family:Bask;font-weight:700;font-style:italic;src:url(fonts/baskervville-bolditalic.ttf) format("truetype")}
+:root{--papel:#f4eedf;--papel2:#ebe2cc;--tinta:#2a1d14;--rojo:#c8322a;--verde:#2f8a4a;--dorado:#f2b45a;--guinda:#7a1f2b;--noche:#0d1424}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#07090f;overflow:hidden;font-family:Poppins,"Segoe UI",system-ui,sans-serif;color:var(--tinta);cursor:default;user-select:none}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center;overflow:hidden;background:#000}
+
+/* ---------- escenario: fondo de Flow con empuje lento, profundidad de campo y viñeta ---------- */
+.slide{position:absolute;inset:0;display:none;overflow:hidden}
+.slide.active{display:block}
+.fondo{position:absolute;inset:-4%;background-size:cover;background-position:center;transition:filter 1.2s ease,opacity 1.5s ease}
+.slide.active .fondo{animation:kb 34s ease-in-out infinite alternate}
+.fondo.kb2{animation-name:kb2!important}
+@keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.09) translate(-1.6%,1%)}}
+@keyframes kb2{from{transform:scale(1.08) translate(1.5%,-.8%)}to{transform:scale(1) translate(-.5%,.5%)}}
+.fondo.foco{filter:blur(3px) brightness(.78) saturate(.95)}
+.vineta{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.42) 100%)}
+.grano{position:absolute;inset:0;pointer-events:none;opacity:.10;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+#fx{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
+
+/* ---------- pegatinas (las mismas piezas recortadas del corto, con su borde de papel) ---------- */
+.peg{position:absolute;transform-origin:50% 100%;opacity:0;
+  filter:drop-shadow(4px 0 0 var(--papel)) drop-shadow(-4px 0 0 var(--papel)) drop-shadow(0 4px 0 var(--papel)) drop-shadow(0 -4px 0 var(--papel)) drop-shadow(7px 10px 7px rgba(0,0,0,.38))}
+.peg img{display:block;height:100%;transform-origin:50% 100%;animation:respira 3.1s ease-in-out infinite;animation-delay:var(--fa,0s);filter:var(--tono,none)}
+.peg.voltea img{transform:scaleX(-1);animation-name:respiraV}
+.peg::before{content:"";position:absolute;left:12%;right:12%;bottom:-2.2%;height:6%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.42),transparent);filter:blur(2px)}
+.peg.flota::before,.peg.vuela::before{display:none}
+.slide.active .peg.vuela{animation:vuelo 17s linear infinite;animation-delay:var(--d,0s)}
+@keyframes vuelo{0%{opacity:1;transform:translate(-300px,0)}50%{transform:translate(1100px,-40px)}100%{opacity:1;transform:translate(2400px,10px)}}
+.slide.active .peg{animation:pegar .6s cubic-bezier(.2,1.6,.4,1) both;animation-delay:var(--d,.2s)}
+.slide.active .peg[data-s]:not(.on){animation:none;opacity:0}
+.peg.flota img{animation:flota 4.2s ease-in-out infinite;animation-delay:var(--fa,0s)}
+@keyframes pegar{0%{opacity:0;transform:scale(.55) rotate(9deg)}60%{opacity:1;transform:scale(1.06) rotate(-1deg)}100%{opacity:1;transform:scale(1) rotate(var(--r,0deg))}}
+@keyframes respira{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.013)}}
+@keyframes respiraV{0%,100%{transform:scaleX(-1) scaleY(1)}50%{transform:scaleX(-1) scaleY(1.013)}}
+@keyframes flota{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+.mece img{animation:mece 3.4s ease-in-out infinite!important;transform-origin:50% 0}
+@keyframes mece{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+.noche{--tono:brightness(.66) saturate(.75) contrast(1.05)}
+.foquito{--tono:brightness(.85) sepia(.25) saturate(1.1)}
+.dorado{--tono:sepia(.16) saturate(1.08)}
+
+/* ---------- texto: tiras de papel pegadas en la escena (la misma letra de los rótulos del corto) ---------- */
+[data-s]{opacity:0;transform:translateY(40px) scale(.96) rotate(var(--r,0deg));transition:opacity .45s ease,transform .7s cubic-bezier(.2,1.5,.4,1)}
+[data-s].on{opacity:1;transform:rotate(var(--r,0deg))}
+.tira{display:inline-block;position:relative;background:var(--papel);color:var(--tinta);font-family:Bask,Georgia,serif;font-weight:700;
+  padding:.16em .55em .2em;line-height:1.08;box-shadow:7px 11px 16px rgba(0,0,0,.42);transform:rotate(var(--r,-1.5deg));
+  background-image:linear-gradient(170deg,rgba(255,255,255,.35),rgba(0,0,0,.04) 70%)}
+.tira::before{content:"";position:absolute;left:50%;top:-14px;width:110px;height:30px;margin-left:-55px;background:rgba(255,248,220,.55);
+  transform:rotate(-4deg);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.tira.sin::before{display:none}
+.nota{position:relative;background:var(--papel);color:var(--tinta);padding:30px 40px 34px;box-shadow:8px 12px 18px rgba(0,0,0,.42);
+  font-size:38px;line-height:1.28;transform:rotate(var(--r,0deg));background-image:linear-gradient(175deg,rgba(255,255,255,.4),rgba(0,0,0,.05))}
+.nota::before{content:"";position:absolute;left:50%;top:-15px;width:120px;height:30px;margin-left:-60px;background:rgba(255,248,220,.6);transform:rotate(3deg)}
+.nota b{font-weight:800}
+.nota .peque{font-size:28px;color:#5d4b3b}
+.rojo{color:var(--rojo)}.verde{color:var(--verde)}.guinda{color:var(--guinda)}
+.abs{position:absolute}
+.col{display:flex;flex-direction:column;gap:30px}
+.pill{display:inline-block;padding:14px 34px;border-radius:999px;font-weight:800;font-size:34px;background:var(--papel);color:var(--tinta);box-shadow:5px 8px 14px rgba(0,0,0,.4)}
+
+/* ---------- el celular (dibujado como en el corto) ---------- */
+.cel{position:absolute;width:440px;height:880px;border-radius:58px;background:#17171b;padding:20px;box-shadow:18px 26px 40px rgba(0,0,0,.55),inset 0 0 0 3px #2c2c33}
+.cel .pan{position:relative;width:100%;height:100%;border-radius:42px;background:#eaecf1;overflow:hidden;font-family:Poppins,sans-serif}
+.cel .bar{height:74px;background:#fff;display:flex;align-items:center;padding:20px 26px 0;font-size:21px;color:#464a54}
+.cel .post{margin:20px 18px;background:#fff;border-radius:14px;padding:22px 26px 26px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.cel .quien{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.cel .av{width:46px;height:46px;border-radius:50%;background:#787c86}
+.cel .quien b{font-size:22px;color:#1e1e24;display:block}.cel .quien span{font-size:17px;color:#82828c}
+.cel .l{position:relative;display:block;font-weight:800;color:#141418;line-height:1.18;margin:6px 0;width:max-content;max-width:100%}
+.cel .l.g{font-size:56px;letter-spacing:-.01em}.cel .l.m{font-size:34px}.cel .l.n{font-size:26px;font-weight:400;color:#2b2b33}
+.cel .l.din{color:#178c3c}.cel .l.inb{color:#be1e1e}
+.cel .caja{position:absolute;left:18px;right:84px;bottom:22px;height:58px;border-radius:30px;background:#fff;border:2px solid #c8c8d2;font-size:20px;color:#9696a0;padding:15px 22px}
+.cel .env{position:absolute;right:18px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#2a6ee6}
+.cel .env::after{content:"";position:absolute;left:23px;top:17px;border-left:18px solid #fff;border-top:12px solid transparent;border-bottom:12px solid transparent}
+.cel.vibra{animation:vibra .09s linear 9}
+@keyframes vibra{0%,100%{transform:translate(0,0) rotate(var(--r,0deg))}25%{transform:translate(-6px,2px) rotate(calc(var(--r,0deg) - 1deg))}75%{transform:translate(6px,-2px) rotate(calc(var(--r,0deg) + 1deg))}}
+.marca{position:absolute;inset:-10px -18px;border:6px solid var(--rojo);border-radius:50%;transform:rotate(-2deg) scale(.6);opacity:0;transition:all .45s cubic-bezier(.2,1.6,.4,1)}
+.l.mk .marca{opacity:1;transform:rotate(-2deg) scale(1)}
+.n-marca{position:absolute;right:-22px;top:-20px;width:44px;height:44px;border-radius:50%;background:var(--rojo);color:#fff;font-size:28px;font-weight:900;text-align:center;line-height:44px;opacity:0;transition:opacity .3s .2s}
+.l.mk .n-marca{opacity:1}
+
+/* ---------- piezas de cada diapositiva ---------- */
+.titulo{font-size:118px;letter-spacing:-.01em;white-space:nowrap}
+.tira{white-space:nowrap}
+.sello{position:absolute;padding:10px 30px;border:8px solid;border-radius:14px;font-family:Bask,serif;font-weight:700;font-size:86px;transform:rotate(-10deg) scale(2.4);opacity:0;transition:all .38s cubic-bezier(.3,1.5,.5,1);background:rgba(244,238,223,.92)}
+.sello.on{opacity:1;transform:rotate(-10deg) scale(1)}
+.sello.chamba{color:var(--verde);border-color:var(--verde)}.sello.trampa{color:var(--rojo);border-color:var(--rojo)}
+.giro{width:330px;height:300px;perspective:1200px}
+.giro .in{position:relative;width:100%;height:100%;transition:transform .9s cubic-bezier(.3,1.3,.5,1);transform-style:preserve-3d}
+.giro.voltea .in{transform:rotateY(180deg)}
+.giro .cara{position:absolute;inset:0;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  background:var(--papel);box-shadow:8px 12px 18px rgba(0,0,0,.42);padding:24px}
+.giro .cara.atras{transform:rotateY(180deg);background:#f7e7c4}
+.giro .cara b{font-family:Bask,serif;font-size:62px}
+.giro .cara span{font-size:42px;font-weight:600;line-height:1.2}
+.parpado{position:absolute;left:-5%;right:-5%;height:56%;background:#030305;transition:transform 2.4s cubic-bezier(.6,0,.3,1);filter:blur(18px);pointer-events:none}
+.parpado.arr{top:-6%;transform:translateY(-100%);border-radius:0 0 50% 50%}
+.parpado.aba{bottom:-6%;transform:translateY(100%);border-radius:50% 50% 0 0}
+.cierra .parpado.arr{transform:translateY(-12%)}.cierra .parpado.aba{transform:translateY(12%)}
+#corto{position:absolute;inset:0;width:100%;height:100%;background:#000;opacity:0;transition:opacity .6s}
+#corto.on{opacity:1}
+#sinvideo{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;flex-direction:column;gap:30px;color:var(--papel)}
+#sinvideo.on{display:flex}
+.silueta{position:absolute;left:50%;bottom:16%;height:62%;transform:translateX(-50%);opacity:0;
+  filter:brightness(0) drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)}
+.slide.active .apaga{animation:apaga 6s ease-in forwards}
+.slide.active .silueta{animation:aparece 3s ease 6.5s forwards}
+@keyframes apaga{to{filter:brightness(0)}}
+@keyframes aparece{to{opacity:.95}}
+.reloj{font-family:Bask,serif;font-size:96px;color:var(--papel);text-shadow:0 4px 18px #000}
+.lista li{list-style:none;margin:6px 0}
+.logos{display:flex;gap:26px;align-items:center}
+.logos img{height:110px;background:#fff;padding:8px;box-shadow:5px 8px 12px rgba(0,0,0,.4)}
+
+/* ---------- interfaz ---------- */
+#bar{position:absolute;left:0;bottom:0;height:7px;background:var(--dorado);transition:width .5s;z-index:9}
+#hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:24px;color:rgba(255,255,255,.75);background:rgba(0,0,0,.45);padding:10px 26px;border-radius:999px;transition:opacity .6s;z-index:9}
+#notes{position:absolute;right:30px;top:30px;width:620px;background:rgba(12,10,8,.9);color:#f4eedf;border-radius:18px;padding:26px 30px;font-size:24px;line-height:1.4;display:none;z-index:10}
+#notes.on{display:block}
+#notes h4{font-size:18px;letter-spacing:.18em;color:var(--dorado);margin-bottom:10px}
+aside.notes{display:none}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 · EL ANUNCIO -->
+  <section class="slide dorado" id="s-anuncio" data-steps="1" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/jalpa_panorama_a.jpg)"></div>
+    <div class="peg vuela" style="left:12%;bottom:78%;height:7%;--d:.1s" data-zanate></div>
+    <div class="cel" id="cel1" style="left:735px;top:120px;--r:-3deg;transform:rotate(-3deg)"></div>
+    <div class="abs" style="left:1240px;top:430px"><div class="tira" data-s="1" style="font-size:84px;--r:3deg">¿Le<br>contestarías?</div></div>
+    <aside class="notes">Arranca SIN presentarte. Deja que lo lean en silencio unos segundos. Nadie contesta en voz alta: «Guárdenla. Volvemos a este anuncio al final».</aside>
+  </section>
+
+  <!-- 2 · TÍTULO -->
+  <section class="slide dorado" id="s-titulo" data-steps="0" data-fx="polvo">
+    <div class="fondo kb2" style="background-image:url(img/plaza_jalpa_a.jpg)"></div>
+    <div class="peg mece" style="left:-2%;top:-3%;height:22%;--d:.1s"><img src="img/p_utileria_fiesta_00.png"></div>
+    <div class="peg mece" style="left:54%;top:-4%;height:21%;--d:.25s"><img src="img/p_utileria_fiesta_01.png"></div>
+    <div class="peg vuela" style="left:0;top:18%;height:6%" data-zanate></div>
+    <div class="abs" style="left:0;right:0;top:300px;text-align:center">
+      <div class="tira titulo auto" style="--r:-2deg">ANTES DE DECIR QUE SÍ</div><br>
+      <div class="tira sin" style="font-size:50px;margin-top:40px;--r:1.2deg;font-style:italic">Decisiones, ofertas y las personas que te esperan</div>
+    </div>
+    <div class="abs logos" style="left:0;right:0;bottom:70px;justify-content:center">
+      <img src="img/logo_gobierno_jalpa.jpg"><img src="img/logo_imm_jalpa.jpg"><img src="img/logo_secretaria_mujeres.jpg"><img src="img/logo_centro_libre_jalpa.jpg">
+    </div>
+    <aside class="notes">Preséntate aquí. «No vengo a decirles qué hacer. Vengo a enseñarles a leer la letra chiquita.»</aside>
+  </section>
+
+  <!-- 3 · CUATRO PREGUNTAS -->
+  <section class="slide" id="s-preguntas" data-steps="4" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/secundaria_patio_a.jpg)"></div>
+    <div class="peg" style="left:74%;bottom:8%;height:44%;--d:.3s;--fa:-1s"><img src="img/p_gente_hoja_05.png"></div>
+    <div class="peg voltea" style="left:83%;bottom:6%;height:46%;--d:.45s"><img src="img/p_gente_hoja_06.png"></div>
+    <div class="peg" id="camina3" style="left:-20%;bottom:4%;height:50%;--d:0s"><img src="img/c_angel14_camina_00.png"></div>
+    <div class="abs col" style="left:110px;top:90px">
+      <div class="tira" data-s="1" style="font-size:72px;--r:-1.5deg">¿Qué me ofrecen de verdad?</div>
+      <div class="tira" data-s="2" style="font-size:72px;--r:1deg;margin-left:60px">¿Qué me cuesta?</div>
+      <div class="tira" data-s="3" style="font-size:72px;--r:-1deg">¿Me puedo salir?</div>
+      <div class="tira" data-s="4" style="font-size:72px;--r:1.5deg;margin-left:40px"><span class="guinda">¿Quién me espera?</span></div>
+    </div>
+    <aside class="notes">30 segundos. Son la promesa del taller: «Al final vas a poder contestar estas cuatro antes de decir que sí a cualquier cosa».</aside>
+  </section>
+
+  <!-- 4 · OJOS CERRADOS -->
+  <section class="slide" id="s-ojos" data-steps="3" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/salon_a.jpg)"></div>
+    <div class="parpado arr"></div><div class="parpado aba"></div>
+    <div class="abs" style="left:0;right:0;top:120px;text-align:center"><div class="tira" style="font-size:76px;--r:-1deg">Cierren los ojos. Levanten la mano si…</div></div>
+    <div class="abs col" style="left:300px;right:300px;top:380px;align-items:center">
+      <div class="nota" data-s="1" style="--r:-1deg">…alguna vez quisiste tener más para <b>ayudar en tu casa</b>.</div>
+      <div class="nota" data-s="2" style="--r:1deg">…alguien de tu familia <b>trabaja lejos</b>.</div>
+      <div class="nota" data-s="3" style="--r:-.6deg">…te llegó un <b>mensaje demasiado bueno</b>.</div>
+    </div>
+    <aside class="notes">Con los ojos cerrados nadie se expone. Quien facilita levanta la mano primero. Después de la tercera: «Pueden abrir los ojos. Querer ayudar a tu casa es de lo más noble que hay».</aside>
+  </section>
+
+  <!-- 5 · EL GANCHO -->
+  <section class="slide dorado" id="s-gancho" data-steps="5" data-fx="polvo">
+    <div class="fondo kb2" style="background-image:url(img/huerta_guayaba_a.jpg)"></div>
+    <div class="peg flota" style="left:4%;top:8%;height:15%;--d:.3s;--r:-8deg"><img src="img/p_utileria_casa_02.png"></div>
+    <div class="peg flota" style="left:88%;top:6%;height:20%;--d:.45s;--r:9deg;--fa:-2s"><img src="img/p_utileria_casa_03.png"></div>
+    <div class="peg flota" style="left:85%;top:62%;height:16%;--d:.6s;--fa:-1s"><img src="img/p_naturaleza_08.png"></div>
+    <div class="abs" style="left:0;right:0;top:90px;text-align:center"><div class="tira" style="font-size:80px">¿Qué te ofrecen de verdad?</div></div>
+    <div class="abs" style="left:0;right:0;top:330px;display:flex;justify-content:center;gap:44px">
+      <div class="giro" id="g1"><div class="in"><div class="cara"><b>LANA</b></div><div class="cara atras"><span>ayudar en tu casa</span></div></div></div>
+      <div class="giro" id="g2" style="margin-top:40px"><div class="in"><div class="cara"><b>RESPETO</b></div><div class="cara atras"><span>que te volteen a ver</span></div></div></div>
+      <div class="giro" id="g3"><div class="in"><div class="cara"><b>FAMILIA</b></div><div class="cara atras"><span>pertenecer a algo</span></div></div></div>
+      <div class="giro" id="g4" style="margin-top:40px"><div class="in"><div class="cara"><b>PROTECCIÓN</b></div><div class="cara atras"><span>sentirte seguro</span></div></div></div>
+    </div>
+    <div class="abs" style="left:0;right:0;top:820px;text-align:center"><div class="tira" data-s="5" style="font-size:66px;--r:1deg">No venden dinero: <span class="rojo">venden lo que te falta.</span></div></div>
+    <aside class="notes">Voltea una tarjeta por clic y pregunta qué hay detrás antes de mostrarlo. No juzgues las necesidades: son reales. Lo que es trampa es el atajo.</aside>
+  </section>
+
+  <!-- 6 · ¿CHAMBA O TRAMPA? -->
+  <section class="slide" id="s-chamba" data-steps="12" data-fx="polvo">
+    <div class="fondo foco" style="background-image:url(img/salon_a.jpg)"></div>
+    <div class="abs" style="left:120px;top:80px"><div class="tira" style="font-size:80px;--r:-2deg">¿Chamba o trampa?</div></div>
+    <div class="abs col" style="left:130px;top:300px;width:620px">
+      <div class="nota" style="--r:1deg;font-size:40px"><b class="verde">DE PIE</b> = chamba<br><b class="rojo">SENTADOS</b> = trampa</div>
+      <div class="nota" id="porque" style="--r:-1deg;font-size:34px;opacity:0;transition:opacity .4s"></div>
+    </div>
+    <div class="cel" id="cel6" style="left:900px;top:110px;--r:2deg;transform:rotate(2deg)"></div>
+    <div class="sello" id="sello6" style="left:1330px;top:420px"></div>
+    <div class="abs pill" id="cuenta6" style="left:1500px;top:90px">1 / 6</div>
+    <aside class="notes">Un clic muestra el anuncio y todos votan: de pie = chamba, sentados = trampa. Otro clic da la respuesta. Si el salón se divide, pregunta por qué a uno de cada lado antes de revelarla.</aside>
+  </section>
+
+  <!-- 7 · CINCO SEÑALES -->
+  <section class="slide" id="s-senales" data-steps="5" data-fx="polvo">
+    <div class="fondo foco kb2" style="background-image:url(img/salon_a.jpg)"></div>
+    <div class="cel" id="cel7" style="left:140px;top:110px;--r:-2deg;transform:rotate(-2deg)"></div>
+    <div class="abs" style="left:760px;top:80px"><div class="tira" style="font-size:78px;--r:1.5deg">Cinco señales de trampa</div></div>
+    <div class="abs col" style="left:780px;top:290px;gap:22px">
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:36px"><b class="rojo">1</b> · Mucho dinero <b>sin experiencia</b></div>
+      <div class="nota" data-s="2" style="--r:.8deg;font-size:36px"><b class="rojo">2</b> · Te sacan de tu pueblo con <b>viaje pagado</b></div>
+      <div class="nota" data-s="3" style="--r:-.5deg;font-size:36px"><b class="rojo">3</b> · Todo por <b>inbox</b>, sin dirección ni nombre</div>
+      <div class="nota" data-s="4" style="--r:1deg;font-size:36px"><b class="rojo">4</b> · Prisa: <b>«hoy mismo»</b></div>
+      <div class="nota" data-s="5" style="--r:-1deg;font-size:36px"><b class="rojo">5</b> · <b>«No le digas a nadie»</b></div>
+    </div>
+    <aside class="notes">Una señal por clic; se marca en el anuncio. Dato para quien facilita (no leerlo con detalle): en 2025 la Fiscalía de Jalisco informó de jóvenes contactados por redes con ofertas de trabajo y llevados a campamentos en Zacatecas (La Crónica, 7-ago-2025 — VERIFICAR antes del taller). Sin detalles escabrosos.</aside>
+  </section>
+
+  <!-- 8 · ANTES DEL CORTO (= primer cuadro del corto) -->
+  <section class="slide" id="s-antes" data-steps="1" data-fx="nada">
+    <div class="fondo" style="background-image:url(img/corto_inicio.jpg);inset:0;animation:none"></div>
+    <div class="abs" style="left:0;right:0;top:120px;text-align:center">
+      <div class="tira" style="font-size:130px;--r:-2deg">LA SEÑA</div><br>
+      <div class="tira sin" style="font-size:52px;margin-top:30px;--r:1deg;font-style:italic">dos hermanos de aquí</div>
+    </div>
+    <div class="abs" style="left:0;right:0;bottom:90px;text-align:center"><div class="pill" data-s="1">▶ &nbsp;→ &nbsp;· &nbsp;apaguen la luz</div></div>
+    <aside class="notes">Antes de darle: «Si a alguien se le sale algo, está bien. Aquí nadie voltea a ver a nadie». Los pañuelos ya repartidos. Apaga la luz.</aside>
+  </section>
+
+  <!-- 9 · EL CORTO -->
+  <section class="slide" id="s-corto" data-steps="1" data-fx="nada" style="background:#000">
+    <video id="corto" src="video/la_sena.mp4" preload="auto" playsinline></video>
+    <div id="sinvideo"><div class="tira" style="font-size:80px">Aquí va el corto «La seña»</div><p style="font-size:30px">(falta el MASTER: `empaquetar.py` lo mete cuando esté)</p></div>
+    <aside class="notes">No lo presentes ni lo expliques. → lo reproduce. Al terminar se queda el último cuadro; espera y pasa a la siguiente.</aside>
+  </section>
+
+  <!-- 10 · SILENCIO (= último cuadro del corto) -->
+  <section class="slide" id="s-silencio" data-steps="0" data-fx="nada" style="background:#000">
+    <div class="fondo apaga" style="background-image:url(img/corto_fin.jpg);inset:0"></div>
+    <img class="silueta" src="img/p_angel14_hoja_04.png">
+    <aside class="notes">10 a 15 segundos sin hablar. No preguntes nada todavía.</aside>
+  </section>
+
+  <!-- 11 · ¿A QUIÉN LE HARÍAS LA SEÑA? -->
+  <section class="slide noche" id="s-quien" data-steps="2" data-fx="estrellas">
+    <div class="fondo" style="background-image:url(img/azotea_noche_b.jpg)"></div>
+    <div class="peg" style="left:36%;bottom:23%;height:30%;--d:.4s"><img src="img/p_angel14_hoja_04.png"></div>
+    <div class="peg" style="left:47%;bottom:24%;height:34%;--d:.6s;--fa:-1.4s"><img src="img/p_tono19b_hoja_03.png"></div>
+    <div class="abs" style="left:0;right:0;top:70px;text-align:center"><div class="tira" style="font-size:84px;--r:-1.5deg">¿A quién le harías la seña?</div></div>
+    <div class="abs" style="left:1180px;top:300px;width:620px"><div class="nota" data-s="1" style="--r:1.5deg;font-size:36px">Escribe el <b>nombre</b> de alguien a quien le harías la seña…<br>y <b>una cosa</b> que harías por esa persona.<br><span class="peque">Nadie lo va a leer: es tuyo.</span></div></div>
+    <div class="abs reloj" id="reloj" data-s="2" style="left:180px;top:780px">3:00</div>
+    <aside class="notes">3 minutos con la música del corto bajita (se enciende sola al llegar aquí; M la apaga). El reloj arranca en el segundo clic. No se recogen las hojas.</aside>
+  </section>
+
+  <!-- 12 · SOBRE LOS PERSONAJES -->
+  <section class="slide" id="s-personajes" data-steps="3" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/cocina_dia_a.jpg)"></div>
+    <div class="peg" style="left:47%;bottom:26%;height:37%;--d:.3s;--fa:-.8s"><img src="img/p_rosa_hoja_04.png"></div>
+    <div class="peg" style="left:62%;bottom:1%;height:66%;--d:.5s"><img src="img/p_tono19b_hoja_00.png"></div>
+    <div class="abs col" style="left:90px;top:90px;width:760px;gap:34px">
+      <div class="tira" data-s="1" style="font-size:58px;--r:-1.5deg">¿Por qué dijo que sí Toño?</div>
+      <div class="tira" data-s="2" style="font-size:58px;--r:1deg">¿En qué momento se podía frenar?</div>
+      <div class="tira" data-s="3" style="font-size:58px;--r:-1deg">¿Qué le dio Toño a Ángel<br>que nadie le dio a él?</div>
+    </div>
+    <aside class="notes">Se habla de los personajes, nunca de ellos mismos. Idea a sembrar: «Toño no era malo: tenía una gotera y un encargo». Momentos para frenar: el anuncio, el «info», la combi… y el regreso, cuando ya no se reía.</aside>
+  </section>
+
+  <!-- 13 · LA FRASE DEL TALLER -->
+  <section class="slide" id="s-frase" data-steps="3" data-fx="lluvia">
+    <div class="fondo" style="background-image:url(img/cocina_noche_lluvia_a.jpg)"></div>
+    <div class="abs" style="left:80px;right:420px;top:150px;text-align:center"><div class="tira" style="font-size:96px;--r:-1.5deg">SI NO TE PUEDES SALIR,<br><span class="rojo">NO ES CHAMBA.</span></div></div>
+    <div class="abs col" style="left:180px;top:560px;gap:20px">
+      <div class="tira sin" data-s="1" style="font-size:44px;--r:1deg;font-style:italic">Antes de decir que sí:</div>
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:38px">¿Qué me dan?</div>
+      <div class="nota" data-s="2" style="--r:1deg;font-size:38px;margin-left:50px">¿Qué me piden a cambio?</div>
+      <div class="nota" data-s="3" style="--r:-.8deg;font-size:38px"><b>¿Me puedo salir cuando quiera?</b></div>
+    </div>
+    <aside class="notes">Conecta con «Porque yo ya no me puedo regresar». Pide que alguien la repita con sus propias palabras.</aside>
+  </section>
+
+  <!-- 14 · DECIR QUE NO SIN QUEDAR MAL -->
+  <section class="slide" id="s-decirno" data-steps="4" data-fx="polvo">
+    <div class="fondo kb2" style="background-image:url(img/secundaria_patio_a.jpg)"></div>
+    <div class="peg" style="left:4%;bottom:6%;height:48%;--d:.3s"><img src="img/p_gente_hoja_05.png"></div>
+    <div class="peg voltea" style="left:15%;bottom:5%;height:50%;--d:.45s;--fa:-1.2s"><img src="img/p_gente_hoja_06.png"></div>
+    <div class="abs" style="left:640px;top:70px"><div class="tira" style="font-size:76px;--r:-1deg">Decir que no sin quedar mal</div></div>
+    <div class="abs" style="left:640px;top:270px;display:grid;grid-template-columns:1fr 1fr;gap:34px 40px;width:1180px">
+      <div class="nota" data-s="1" style="--r:-1.2deg"><b>«No, gracias»</b><br>y cambias de tema.</div>
+      <div class="nota" data-s="2" style="--r:1deg"><b>Una excusa que nadie discute:</b><br>«mi jefa me tiene checado» · «ando en el fut».</div>
+      <div class="nota" data-s="3" style="--r:.8deg"><b>Irte.</b><br>Alejarte no es correr.</div>
+      <div class="nota" data-s="4" style="--r:-1deg"><b>Contarle a alguien</b><br>en quien confíes.</div>
+    </div>
+    <aside class="notes">En parejas, con ofertas inofensivas (un chicle, irse de pinta): uno ofrece, el otro practica las cuatro. Estrategias del programa «keepin' it REAL» / «Mantente REAL» (VERIFICAR la cita antes de mencionarla).</aside>
+  </section>
+
+  <!-- 15 · AVISAR NO ES SER RATA -->
+  <section class="slide foquito" id="s-avisar" data-steps="2" data-fx="estrellas">
+    <div class="fondo" style="background-image:url(img/puerta_noche_a.jpg)"></div>
+    <div class="peg voltea" style="left:17%;bottom:11%;height:43%;--d:.3s"><img src="img/p_tono13_hoja_04.png"></div>
+    <div class="peg" style="left:27%;bottom:11%;height:31%;--d:.45s;--fa:-.7s"><img src="img/p_angel8_hoja_04.png"></div>
+    <div class="abs" style="left:880px;top:110px"><div class="tira" style="font-size:88px;--r:1.5deg">Avisar no es ser rata.</div></div>
+    <div class="abs col" style="left:930px;top:350px;width:860px">
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:40px">Contarle a un adulto que te ofrecieron algo raro <b>no es ser soplón</b>.</div>
+      <div class="nota" data-s="2" style="--r:1deg;font-size:44px">Es hacer lo que hizo Toño:<br><b class="guinda">cuidar.</b></div>
+    </div>
+    <aside class="notes">Es la creencia más dura de mover: dedícale tiempo. Pregunta qué pasa en su escuela cuando alguien «avisa». Distingue chismear de cuidar.</aside>
+  </section>
+
+  <!-- 16 · LOS QUE TE ESPERAN -->
+  <section class="slide" id="s-esperan" data-steps="5" data-fx="luces">
+    <div class="fondo" id="anochece" style="background-image:url(img/jalpa_panorama_b.jpg)"></div>
+    <div class="abs" style="left:0;right:0;top:60px;text-align:center"><div class="tira" style="font-size:84px;--r:-1deg">Los que te esperan</div></div>
+    <div class="peg" data-s="1" style="left:9%;bottom:12%;height:40%"><img src="img/p_rosa_hoja_04.png"></div>
+    <div class="peg" data-s="2" style="left:31%;bottom:12%;height:36%"><img src="img/p_gente_hoja_03.png"></div>
+    <div class="peg" data-s="3" style="left:52%;bottom:12%;height:44%"><img src="img/p_graduacion_gente_hoja_06.png"></div>
+    <div class="peg" data-s="4" style="left:73%;bottom:12%;height:44%"><img src="img/p_gente_hoja_02.png"></div>
+    <div class="abs tira sin" data-s="1" style="left:9%;bottom:5%;font-size:38px;--r:-2deg">tu mamá</div>
+    <div class="abs tira sin" data-s="2" style="left:30%;bottom:5%;font-size:38px;--r:1.5deg">tu abuela</div>
+    <div class="abs tira sin" data-s="3" style="left:52%;bottom:5%;font-size:38px;--r:-1deg">un profe</div>
+    <div class="abs tira sin" data-s="4" style="left:71%;bottom:5%;font-size:38px;--r:2deg">el entrenador</div>
+    <div class="abs" style="left:420px;right:420px;top:250px"><div class="nota" data-s="5" style="--r:1deg;font-size:40px;text-align:center">Escribe <b>dos adultos</b> a los que les dirías:<br><b class="guinda">«me ofrecieron algo raro»</b>.</div></div>
+    <aside class="notes">Cada clic enciende más luces del pueblo. Si alguien no encuentra a nadie, quien facilita se queda con esa persona al final (sin exhibirla).</aside>
+  </section>
+
+  <!-- 17 · A QUIÉN ACUDIR -->
+  <section class="slide" id="s-acudir" data-steps="5" data-fx="polvo">
+    <div class="fondo foco" style="background-image:url(img/plaza_jalpa_a.jpg)"></div>
+    <div class="abs" style="left:120px;top:70px"><div class="tira" style="font-size:80px;--r:-1.5deg">A quién acudir</div></div>
+    <div class="abs col" style="left:140px;top:270px;gap:24px;width:1100px">
+      <div class="nota" data-s="1" style="--r:-1deg">Orientación de tu escuela</div>
+      <div class="nota" data-s="2" style="--r:.8deg">Instituto Municipal de las Mujeres de Jalpa</div>
+      <div class="nota" data-s="3" style="--r:-.6deg">DIF municipal de Jalpa</div>
+      <div class="nota" data-s="4" style="--r:1deg"><b>089</b> · denuncia anónima</div>
+      <div class="nota" data-s="5" style="--r:-1deg"><b>Línea de la Vida 800 911 2000</b> · gratis, 24 horas</div>
+    </div>
+    <div class="abs logos" style="right:110px;bottom:90px;flex-direction:column"><img src="img/logo_imm_jalpa.jpg"><img src="img/logo_gobierno_jalpa.jpg"></div>
+    <aside class="notes">VERIFICAR los números antes de imprimir o proyectar. Ten la ruta de canalización de la escuela a la mano.</aside>
+  </section>
+
+  <!-- 18 · CIERRE -->
+  <section class="slide dorado" id="s-cierre" data-steps="7" data-fx="polvo">
+    <div class="fondo" id="cierre1" style="background-image:url(img/jalpa_panorama_a.jpg)"></div>
+    <div class="fondo kb2" id="cierre2" style="background-image:url(img/cuesta_tarde_b_a.jpg);opacity:0"></div>
+    <div class="cel" id="cel18" style="left:735px;top:120px;--r:-3deg;transform:rotate(-3deg);transition:opacity .8s"></div>
+    <div class="abs" id="mismo" style="left:1240px;top:300px;opacity:0;transition:opacity .6s"><div class="tira" style="font-size:62px;--r:2deg">Mismo anuncio.<br><span class="guinda">Ahora ya sabes leerlo.</span></div></div>
+    <div class="peg" id="angelfin" style="left:44%;bottom:19%;height:40%;display:none"><img src="img/p_angel14_hoja_04.png"></div>
+    <div class="abs" id="final" style="left:0;right:0;top:80px;text-align:center;opacity:0;transition:opacity 1.2s">
+      <div class="tira" style="font-size:88px;--r:-1.5deg">Alguien te está viendo.</div><br>
+      <div class="tira sin" style="font-size:52px;margin-top:26px;--r:1deg;font-style:italic">Antes de decir que sí… acuérdate de quién te espera.</div>
+    </div>
+    <aside class="notes">Regresa al anuncio del principio: un clic por señal. Luego «Mismo anuncio. Ahora ya sabes leerlo». Último clic: Ángel en la cuesta. Baja la voz y deja la imagen en pantalla.</aside>
+  </section>
+
+  <canvas id="fx" width="1920" height="1080"></canvas>
+  <div class="vineta"></div><div class="grano"></div>
+  <div id="bar"></div>
+  <div id="hint">→ avanzar · ← regresar · F pantalla completa · N notas · M sonido</div>
+  <div id="notes"><h4>NOTAS PARA QUIEN FACILITA</h4><div id="notestxt"></div></div>
+</div>
+
+<audio id="musica" src="audio/musica_azotea.mp3" loop preload="auto"></audio>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const stage=$('#stage');
+const ruta=n=>(window.IMG&&window.IMG[n])||'img/'+n;     // empaquetar.py llena window.IMG con los cuadros que se cambian por código
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${k})`}
+addEventListener('resize',fit);fit();
+
+/* ---------- el celular con el anuncio (el mismo del corto, con las 5 señales escondidas) ---------- */
+const AD=[['g','SE SOLICITAN',0],['g','JÓVENES',0],['m din','$4,000 A LA SEMANA',1],['n','Sin experiencia',1],['n','Hospedaje, comida y viaje pagado',2],
+          ['n','Salida hoy mismo',4],['n','Discreción total',5],['m inb','Manda inbox',3]];
+function celular(el,lineas,quien='Chamba Ya',hace='hace 2 h'){
+  el.innerHTML=`<div class="pan"><div class="bar">Ofertas de empleo · región</div><div class="post"><div class="quien"><div class="av"></div><div><b>${quien}</b><span>${hace}</span></div></div>
+  ${lineas.map(([c,t,s])=>`<span class="l ${c}" data-sig="${s}">${t}<i class="marca"></i><i class="n-marca">${s}</i></span>`).join('')}</div>
+  <div class="caja">Escribe un mensaje…</div><div class="env"></div></div>`}
+celular($('#cel1'),AD);celular($('#cel7'),AD);celular($('#cel18'),AD);
+
+const ANUNCIOS=[
+ {q:'Taller de motos El Güero',h:'Jalpa · hace 1 día',l:[['m','Se busca ayudante'],['n','Sábados de 9 a 3'],['m din','$900 a la semana'],['n','Calle Hidalgo, centro de Jalpa'],['n','Pregunta por don Chuy']],
+  k:'chamba',w:'Tiene <b>dirección, horario y un pago normal</b>. Puedes ir con tu jefa a preguntar.'},
+ {q:'Chamba Ya',h:'hace 2 h',l:[['g','JÓVENES 15 A 25'],['m din','$4,000 semanales'],['n','Viaje pagado y hospedaje'],['m inb','Manda inbox']],
+  k:'trampa',w:'Mucho dinero, <b>sin experiencia</b>, y <b>te sacan del pueblo</b>.'},
+ {q:'Huerta Los Guayabos',h:'Jalpa · hace 3 días',l:[['m','Corte de guayaba'],['n','Salida 6 a. m. de la plaza'],['n','Regreso a las 3 p. m.'],['m din','Pago diario'],['n','Trae gorra y agua']],
+  k:'chamba',w:'Se sabe <b>dónde, cuándo y con quién</b>. Regresas el mismo día.'},
+ {q:'Empleos Seguros MX',h:'hace 5 h',l:[['m','Personal de «seguridad»'],['n','Sin experiencia'],['n','Cita en la central de camiones'],['m inb','Discreción']],
+  k:'trampa',w:'¿Seguridad <b>sin experiencia</b>? Cita <b>lejos de tu casa</b> y «discreción».'},
+ {q:'Gana Desde Casa',h:'hace 40 min',l:[['g','GANA DÓLARES'],['m','desde tu cel'],['n','Manda tu nombre, foto y dirección'],['m inb','Escríbeme ya']],
+  k:'trampa',w:'Te piden <b>tus datos y tu foto</b>. Nadie te paga por eso.'},
+ {q:'Ofertas rápidas',h:'hace 1 h',l:[['m','Te pagamos por estar en la esquina'],['n','y avisar quién pasa'],['m din','$500 diarios'],['n','Fácil, sin horario']],
+  k:'trampa',w:'Te pagan por vigilar <b>para alguien que no da la cara</b>.'}];
+
+/* ---------- zanates y el ciclo de caminar (las mismas piezas del corto) ---------- */
+$$('[data-zanate]').forEach(z=>{z.innerHTML=`<img src="${ruta('p_zanate_vuelo_00.png')}">`;let k=0;const F=['00','02','04','02'];
+  setInterval(()=>{k=(k+1)%4;z.firstChild.src=ruta(`p_zanate_vuelo_${F[k]}.png`)},110)});
+let walkT=null;
+function camina(el,dur=11000){const img=el.firstChild;let i=0;clearInterval(walkT);el.style.transition='none';el.style.left='-20%';void el.offsetWidth;
+  el.style.transition=`left ${dur}ms linear`;el.style.left='112%';walkT=setInterval(()=>{i=(i+1)%8;img.src=ruta(`c_angel14_camina_0${i}.png`)},115)}
+
+/* ---------- partículas: polvo, estrellas, lluvia, luces del pueblo ---------- */
+const cv=$('#fx'),cx=cv.getContext('2d');let FX='nada',luces=0;
+const P=Array.from({length:80},()=>({x:Math.random()*1920,y:Math.random()*1080,r:1+Math.random()*3,v:.12+Math.random()*.4,a:.1+Math.random()*.3,p:Math.random()*6}));
+const E=Array.from({length:120},()=>({x:Math.random()*1920,y:Math.random()*330,r:.8+Math.random()*1.8,p:Math.random()*6,w:.6+Math.random()*1.6}));
+const L=Array.from({length:150},()=>({x:80+Math.random()*1760,y:470+Math.random()*300,r:2+Math.random()*3,p:Math.random()*6}));
+const R=Array.from({length:260},()=>({x:Math.random()*1920,y:Math.random()*1080,v:18+Math.random()*14,l:16+Math.random()*26}));
+let gota=0;
+(function loop(t){cx.clearRect(0,0,1920,1080);
+ if(FX==='polvo'){cx.fillStyle='#fff6dd';for(const d of P){d.y-=d.v;d.x+=Math.sin(t/1800+d.p)*.3;if(d.y<-10){d.y=1090;d.x=Math.random()*1920}
+   cx.globalAlpha=d.a*(.6+.4*Math.sin(t/900+d.p));cx.beginPath();cx.arc(d.x,d.y,d.r,0,7);cx.fill()}}
+ if(FX==='estrellas'){cx.fillStyle='#e8efff';for(const s of E){cx.globalAlpha=.25+.6*Math.pow(.5+.5*Math.sin(t/600*s.w+s.p),2);cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);cx.fill()}}
+ if(FX==='luces'){for(let i=0;i<Math.min(luces,L.length);i++){const s=L[i];const g=cx.createRadialGradient(s.x,s.y,0,s.x,s.y,s.r*5);
+   g.addColorStop(0,'rgba(255,214,140,.95)');g.addColorStop(1,'rgba(255,170,80,0)');cx.globalAlpha=.75+.25*Math.sin(t/400+s.p);cx.fillStyle=g;cx.beginPath();cx.arc(s.x,s.y,s.r*5,0,7);cx.fill()}}
+ if(FX==='lluvia'){cx.strokeStyle='#cfdcf5';cx.lineWidth=1.4;cx.globalAlpha=.32;cx.beginPath();
+   for(const d of R){d.y+=d.v;d.x-=d.v*.12;if(d.y>1090){d.y=-30;d.x=Math.random()*2100}cx.moveTo(d.x,d.y);cx.lineTo(d.x-d.l*.12,d.y+d.l)}cx.stroke();
+   const ph=(t%1600)/1600,X=1385,Y0=150,Y1=790;cx.globalAlpha=.9;cx.fillStyle='#d7e4ff';      // la gotera sobre la cubeta
+   if(ph<.4){const y=Y0+(Y1-Y0)*Math.pow(ph/.4,2);cx.beginPath();cx.ellipse(X,y,5,9,0,0,7);cx.fill()}
+   else{const u=(ph-.4)/.6;cx.globalAlpha=.7*(1-u);cx.strokeStyle='#e4ecff';cx.lineWidth=3;cx.beginPath();cx.ellipse(X,Y1,8+60*u,(8+60*u)*.3,0,0,7);cx.stroke();
+     if(gota!==Math.floor(t/1600)){gota=Math.floor(t/1600);S.gota()}}}
+ cx.globalAlpha=1;requestAnimationFrame(loop)})(0);
+
+/* ---------- sonido ---------- */
+let AC=null,muted=false,lluviaSrc=null;
+function ac(){if(muted)return null;if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){return null}}if(AC.state==='suspended')AC.resume();return AC}
+function tone(f0,f1,dur,type='sine',vol=.18,delay=0){const a=ac();if(!a)return;const t=a.currentTime+delay,o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(Math.max(f1,1),t+dur);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(a.destination);o.start(t);o.stop(t+dur+.05)}
+function noise(dur,vol=.15,f=900,delay=0,q=1){const a=ac();if(!a)return;const t=a.currentTime+delay,b=a.createBuffer(1,a.sampleRate*dur,a.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);const s=a.createBufferSource(),g=a.createGain(),fl=a.createBiquadFilter();fl.type='bandpass';fl.Q.value=q;fl.frequency.setValueAtTime(f,t);s.buffer=b;g.gain.value=vol;s.connect(fl).connect(g).connect(a.destination);s.start(t)}
+const S={papel:()=>noise(.16,.22,2400,0,.7),pop:()=>tone(520,880,.12,'triangle',.14),whoosh:()=>noise(.4,.12,600),
+ thud:()=>{tone(120,40,.4,'sine',.45);noise(.1,.18,200)},chime:()=>{[523,659,784,1047].forEach((f,i)=>tone(f,f,.9,'sine',.10,i*.09))},
+ vibra:()=>{for(let i=0;i<2;i++)tone(150,150,.38,'square',.05,i*.55)},sello:()=>{tone(90,40,.25,'sine',.5);noise(.08,.25,300)},
+ bien:()=>{tone(660,660,.12,'triangle',.14);tone(990,990,.3,'triangle',.14,.11)},mal:()=>tone(220,110,.35,'sawtooth',.10),
+ gota:()=>tone(1500,700,.09,'sine',.07),tick:()=>tone(1200,1200,.04,'square',.05)};
+function lluvia(on){if(lluviaSrc){try{lluviaSrc.stop()}catch(e){}lluviaSrc=null}if(!on)return;const a=ac();if(!a)return;
+ const b=a.createBuffer(1,a.sampleRate*3,a.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;
+ const s=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain();s.buffer=b;s.loop=true;f.type='lowpass';f.frequency.value=1400;g.gain.value=.05;s.connect(f).connect(g).connect(a.destination);s.start();lluviaSrc=s}
+const mus=$('#musica');
+function musica(on){if(on&&!muted){mus.volume=0;mus.play().catch(()=>{});let v=0;const k=setInterval(()=>{v=Math.min(.35,v+.02);mus.volume=v;if(v>=.35)clearInterval(k)},120)}else{mus.pause()}}
+
+/* ---------- motor ---------- */
+const slides=$$('.slide');let cur=0,step=0,timers=[],reloj=null;
+const later=(f,ms)=>timers.push(setTimeout(f,ms));
+const vid=$('#corto');let hayVideo=false;
+vid.addEventListener('loadeddata',()=>{hayVideo=true});vid.addEventListener('error',()=>{hayVideo=false});
+function marcar(cel,n){$$('.l',cel).forEach(l=>l.classList.toggle('mk',+l.dataset.sig>0&&+l.dataset.sig<=n))}
+const hooks={
+ 's-anuncio':(s,f)=>{const c=$('#cel1');if(s===0&&f){c.style.opacity=0;later(()=>{c.style.transition='opacity .5s';c.style.opacity=1;c.classList.remove('vibra');void c.offsetWidth;c.classList.add('vibra');S.vibra()},900)}else c.style.opacity=1;if(s===1&&f)S.papel()},
+ 's-titulo':(s,f)=>{if(f){later(S.papel,300);later(S.chime,900)}},
+ 's-preguntas':(s,f)=>{if(s===0)camina($('#camina3'));if(f&&s>0)S.papel()},
+ 's-ojos':(s,f)=>{$('#s-ojos').classList.toggle('cierra',true);if(f&&s>0)S.pop()},
+ 's-gancho':(s,f)=>{for(let i=1;i<=4;i++)$('#g'+i).classList.toggle('voltea',s>=i);if(f&&s>=1&&s<=4)S.whoosh();if(f&&s===5)S.thud()},
+ 's-chamba':(s,f)=>{const i=Math.min(5,Math.floor(Math.max(0,s-1)/2)),rev=s>0&&(s%2===0),A=ANUNCIOS[s===0?0:i],c=$('#cel6'),se=$('#sello6'),w=$('#porque');
+   celular(c,A.l.map(([k,t])=>[k,t,0]),A.q,A.h);c.style.opacity=s===0?.0:1;$('#cuenta6').textContent=(s===0?1:i+1)+' / 6';
+   se.className='sello '+A.k+(rev?' on':'');se.textContent=A.k==='chamba'?'CHAMBA':'TRAMPA';w.innerHTML=A.w;w.style.opacity=rev?1:0;
+   if(f){if(rev){S.sello();(A.k==='chamba'?S.bien:S.mal)()}else if(s>0){c.classList.remove('vibra');void c.offsetWidth;c.classList.add('vibra');S.vibra()}}},
+ 's-senales':(s,f)=>{marcar($('#cel7'),s);if(f&&s>0)S.pop()},
+ 's-antes':(s,f)=>{if(f&&s===1)S.pop()},
+ 's-corto':(s,f)=>{$('#sinvideo').classList.toggle('on',!hayVideo&&s===1);vid.classList.toggle('on',s===1&&hayVideo);
+   if(s===1&&hayVideo){vid.currentTime=0;vid.muted=muted;vid.play().catch(()=>{})}else vid.pause()},
+ 's-quien':(s,f)=>{if(s===2&&f){let n=180;clearInterval(reloj);const el=$('#reloj');reloj=setInterval(()=>{n--;el.textContent=Math.floor(n/60)+':'+String(n%60).padStart(2,'0');if(n<=0){clearInterval(reloj);S.chime()}},1000)}},
+ 's-personajes':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-frase':(s,f)=>{if(f&&s===0)later(S.thud,500);if(f&&s>0)S.papel()},
+ 's-decirno':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-avisar':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-esperan':(s,f)=>{const goal=[18,45,75,105,130,150][s];if(f){const a=luces;for(let i=a;i<=goal;i++)later(()=>{luces=i},(i-a)*40)}else luces=goal;
+   $('#anochece').style.filter=`brightness(${.85-.09*s}) saturate(${1-.06*s})`;if(f&&s>0)S.pop()},
+ 's-acudir':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-cierre':(s,f)=>{marcar($('#cel18'),Math.min(s,5));const fin=s>=7;$('#mismo').style.opacity=s===6?1:0;$('#cel18').style.opacity=fin?0:1;
+   $('#cierre2').style.opacity=fin?1:0;$('#cierre1').style.opacity=fin?0:1;$('#angelfin').style.display=fin?'block':'none';$('#final').style.opacity=fin?1:0;
+   if(f){if(s>=1&&s<=5)S.pop();if(s===6)S.thud();if(s===7)S.chime()}}
+};
+function render(fwd,newSlide){
+  timers.forEach(clearTimeout);timers=[];
+  const sl=slides[cur];
+  if(newSlide){vid.pause();clearInterval(reloj);clearInterval(walkT);slides.forEach(x=>x.classList.remove('active','cierra'));void sl.offsetWidth;sl.classList.add('active');
+    FX=sl.dataset.fx||'nada';const fs=$$('.fondo',sl);fs.length?fs[fs.length-1].after(cv):sl.prepend(cv);   // partículas DETRÁS de pegatinas y papeles
+    lluvia(sl.id==='s-frase');musica(sl.id==='s-quien');if(sl.id==='s-quien'){$('#reloj').textContent='3:00'}}
+  $$('[data-s]',sl).forEach(e=>e.classList.toggle('on',+e.dataset.s<=step));
+  const h=hooks[sl.id];if(h)h(step,fwd);
+  if(fwd&&newSlide&&sl.id!=='s-corto'&&sl.id!=='s-silencio')S.whoosh();
+  $('#bar').style.width=(100*(cur+(step/(+sl.dataset.steps+1)))/slides.length)+'%';
+  $('#notestxt').textContent=$('.notes',sl)?.textContent||'';
+  try{history.replaceState(null,'','#'+(cur+1))}catch(e){}
+}
+function next(){const n=+slides[cur].dataset.steps;if(step<n){step++;render(true,false)}else if(cur<slides.length-1){cur++;step=0;render(true,true)}}
+function prev(){if(step>0){step--;render(false,false)}else if(cur>0){cur--;step=+slides[cur].dataset.steps;render(false,true)}}
+function go(i){cur=Math.max(0,Math.min(slides.length-1,i));step=0;render(true,true)}
+addEventListener('keydown',e=>{$('#hint').style.opacity=0;
+  if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();next()}
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();prev()}
+  else if(e.key==='Home')go(0);else if(e.key==='End')go(slides.length-1)
+  else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+  else if(e.key==='n'||e.key==='N')$('#notes').classList.toggle('on')
+  else if(e.key==='m'||e.key==='M'){muted=!muted;if(muted){mus.pause();lluvia(false)}else{musica(slides[cur].id==='s-quien');lluvia(slides[cur].id==='s-frase')}
+    $('#hint').textContent=muted?'Sonido apagado':'Sonido encendido';$('#hint').style.opacity=1;setTimeout(()=>$('#hint').style.opacity=0,1500)}});
+addEventListener('click',e=>{$('#hint').style.opacity=0;(e.clientX<innerWidth*.25)?prev():next()});
+window.__deck={go,next,prev,set:(i,s)=>{cur=i;step=s;render(false,true)}};
+const [h0,p0]=location.hash.slice(1).split('.').map(x=>parseInt(x));cur=h0>0&&h0<=slides.length?h0-1:0;   // #diapositiva.paso
+step=p0>0?Math.min(p0,+slides[cur].dataset.steps):0;render(false,true);
+})();
+</script>
+</body>
+</html>

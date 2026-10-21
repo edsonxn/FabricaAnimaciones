@@ -188,6 +188,12 @@ Kit: `nucleo/pegaflow.py` · ESTILO_VISUAL = `"pegatina_flow"` (registrado en `n
   (`desenfocado()`: pieza dibujada en una copia y mezclada con GaussianBlur) que tapa el corte lateral.
 - Celular/anuncio/chat = PIL dentro del cuadro (`_cel()` con caché) sobre el fondo desenfocado; el texto «se escribe» por letras.
 - Lyria: pedido de > ~100 s sale corto (98-100 s) → tramos ≤ 80 s; no respeta silencios → ajustar `audio/musica.wav` por código.
+- (21-oct) **Presentación HTML en el mismo estilo** (`videos/la_sena/taller/`): fondos de Flow con empuje lento (CSS), pegatinas = los
+  PNG de `piezas/` con borde de papel por `drop-shadow` ×4 + sombra de contacto + respiración; texto en tiras/notas de papel con cinta
+  (Baskervville como `PF.rotulo`), nunca paneles; partículas en un canvas que se mueve DETRÁS de pegatinas y papeles. Costuras: la
+  diapositiva previa al corto = su primer cuadro (`render_mundo`), la siguiente = el último. `empaquetar.py` → un solo HTML con
+  todo en base64 (corto a 720p y 2 Mbps; a 1080p crf 25 el grano daba 299 MB). `#diap.paso` en la URL para revisar.
+- Silencio total del negro final: también en `audio/fx.wav` (`SILENCIO` en `fx_audio.py`), no solo en la música.
 
 ## 8. Lore oscuro de Warcraft (Crónicas de Warcraft, `videos/wow_darrowshire/`, 20-oct-2026)
 - FICHA «cuento oscuro pintado a mano con proporciones de Warcraft» (gris ceniza + verde de peste + azul de luna, UN acento de vela)

@@ -712,7 +712,8 @@ def main():
     buf = butter_hp(buf, 40, 2)
     buf = reverb(buf, 0.12, 1.2, 7000)
     pico = np.abs(buf).max()
-    sf.write("audio/sfx.wav", (buf / pico * 0.9).T.astype(np.float32), SR, subtype="FLOAT")
+    escala = 0.9 / pico if pico > 1e-9 else 0.0              # sin eventos (escenas que dibujan todo el cuadro): silencio, no NaN
+    sf.write("audio/sfx.wav", (buf * escala).T.astype(np.float32), SR, subtype="FLOAT")
     json.dump(evs, open("audio/sfx_eventos.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print(f"{len(evs)} eventos, {len(cache)} sonidos distintos, pico previo {pico:.2f}")
 

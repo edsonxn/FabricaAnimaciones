@@ -123,6 +123,8 @@ body.sin-lado #lado{transform:translateX(-100%)}
 #vista{position:fixed;top:var(--top);left:var(--lado);right:0;bottom:0;overflow:hidden;background-color:var(--bg);
   background-image:radial-gradient(circle,var(--dot) 1.1px,transparent 1.4px);cursor:grab;touch-action:none;transition:left .18s ease}
 body.sin-lado #vista{left:0}
+/* arrastrar el lienzo nunca selecciona texto (el usuario, 21-oct): para copiar, el inspector y el visor (fuera del lienzo) */
+#vista{-webkit-user-select:none;user-select:none}
 #vista.arrastrando{cursor:grabbing}
 #vista.arrastrando *{pointer-events:none}
 #mundo{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
@@ -358,6 +360,7 @@ dl.meta dd{margin:0;overflow-wrap:anywhere}
   #met{order:3;flex:1 0 100%;padding:0}
   .acciones{margin-left:auto}
 }
+@media (max-width:1250px){.ayuda{display:none}}
 @media (max-width:900px){
   :root{--lado:0px;--insp:100vw}
   #lado{width:290px;box-shadow:var(--sombra2)}
@@ -504,9 +507,12 @@ function irA(n,abrirInsp=true){
 
 // arrastrar para moverse (y pellizco con dos dedos)
 const punteros=new Map();let arr=null,pinza=null;
-const NO_ARRASTRE="button,a,input,select,textarea,video,audio,.scroll,.pistas,iframe,#minimapa,.ctl,#rep,.ayuda";
+const NO_ARRASTRE="button,a,input,select,textarea,video,audio,iframe,#minimapa,.ctl,#rep,.ayuda";
+const enBarra=e=>{const s=e.target.closest(".scroll,.pistas");if(!s||s.scrollHeight<=s.clientHeight)return false;   // la barra de desplazamiento de una lista
+  const r=s.getBoundingClientRect();return e.clientX>r.left+s.clientLeft+s.clientWidth;};
 vista.addEventListener("pointerdown",e=>{
-  if(e.button===2||e.target.closest(NO_ARRASTRE))return;
+  if(e.button===2||e.target.closest(NO_ARRASTRE)||enBarra(e))return;
+  if(e.pointerType==="mouse")e.preventDefault();                       // sin esto el navegador empieza a seleccionar texto al arrastrar
   punteros.set(e.pointerId,{x:e.clientX,y:e.clientY});
   if(punteros.size===1)arr={x0:e.clientX,y0:e.clientY,vx:V.x,vy:V.y,movio:false,id:e.pointerId};
   if(punteros.size===2){const [a,b]=[...punteros.values()];pinza={d:Math.hypot(a.x-b.x,a.y-b.y),z:V.z};arr=null;}
@@ -518,7 +524,7 @@ vista.addEventListener("pointermove",e=>{
     zoomEn((a.x+b.x)/2-r.left,(a.y+b.y)/2-r.top,(pinza.z*Math.hypot(a.x-b.x,a.y-b.y)/pinza.d)/V.z);return;}
   if(!arr)return;
   const dx=e.clientX-arr.x0,dy=e.clientY-arr.y0;
-  if(!arr.movio&&Math.hypot(dx,dy)>4){arr.movio=true;vista.classList.add("arrastrando");try{vista.setPointerCapture(e.pointerId)}catch(_){}}
+  if(!arr.movio&&Math.hypot(dx,dy)>4){arr.movio=true;vista.classList.add("arrastrando");try{getSelection().removeAllRanges();vista.setPointerCapture(e.pointerId)}catch(_){}}
   if(arr.movio){V.x=arr.vx+dx;V.y=arr.vy+dy;aplicarVista();}
 });
 function soltar(e){

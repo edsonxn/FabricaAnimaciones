@@ -23,10 +23,57 @@ _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 3. **Preguntas** (AskUserQuestion, con tu recomendación primero): tema (3 ideas sacadas del informe de `ideas`,
    cada una con el video de referencia y su × mediana), estilo visual, duración, formato (largo o Short vertical), voz (Dan por defecto) y cuándo
    publicar (por defecto el siguiente hueco del horario del canal, abajo). Nunca versiones para WhatsApp.
+3b. **Plan de sesiones** (regla del 12-oct-2026, `docs/sesiones.md`): con la duración y el estilo ya elegidos, estima en cuántas
+   conversaciones conviene hacerlo (tabla de ritmos de `docs/sesiones.md`), pregúntale al usuario cuántas quiere (tu recomendación
+   primero) y escribe la sección «## Sesiones» del `ESTADO.md` con su `alias`. Luego el usuario solo dice «continúa el video <alias>».
 4. **Producir** (flujo de abajo) → miniatura (2-3 variantes) → `youtube.json` (título ≤ 50 caracteres con
    la palabra clave al inicio; descripción con capítulos reales del timeline, fuentes, enlace a otro video
-   del canal y 3 hashtags; 15-25 etiquetas ≤ 450 caracteres) → `yt subir ... --publicar <ISO>`.
-   Publicar o hacer público = confirmarlo con el usuario (programar lo que él pidió está bien).
+   del canal y 3 hashtags; 15-25 etiquetas ≤ 450 caracteres) → `yt subir <v> <canal> private --publicar <ISO del hueco>`.
+   **Render terminado = subir y programar SIN preguntar (regla abajo, 20-oct-2026).** Hacer público YA sigue siendo del usuario.
+5. **Cierre (regla del 12-oct-2026):** registrar en `canales/<alias>.json` (`publicados`, con `formato`), BITACORA y `ESTADO.md`, y DOCUMENTAR hallazgos y
+   mejoras en el manual/estilo del video (CLAUDE.md «CIERRE DE VIDEO»). Verificar los DOI de las fuentes con Crossref antes de subir.
+
+## REGLA: render terminado = SUBIR Y PROGRAMAR en el hueco (el usuario, 20-oct-2026, CUALQUIER canal)
+«Súbelo y prográmalo en el hueco que se necesite, y documéntalo para que así sea siempre: cuando rendericemos hay que subir y dejar
+programado; lo mismo aplica para cualquier canal.» (dicho sobre `asteroide_invisible`, Kuriox). Es autorización permanente:
+- Al terminar `final` + `verificar` y la revisión de rigor del MASTER (hoja 2×3 + 1 cuadro/3 s) **sin bloqueos**, Claude sube SIN
+  preguntar: `python fab.py yt subir <v> <canal> private --publicar <ISO UTC>` (privado + `publishAt`; miniatura, `youtube.json` y .srt).
+- **Hueco** = el que da `python fab.py canales --actualizar` para ese canal (el siguiente libre de su `horario`), comprobado con
+  `yt videos <canal>` + BITACORA. Si choca (`comprobar_separacion`), el siguiente hueco libre; **nunca `--forzar`**.
+- Después: registrar en `canales/<alias>.json` → `publicados` (`programado`, `formato`), BITACORA, `ESTADO.md`; `canales --actualizar`
+  y decir al usuario fecha/hora programada (CDMX) y qué canal se queda antes sin video.
+- Sigue requiriendo preguntar: hacer público YA (sin fecha), `--forzar`, y los videos que el usuario se reserva (p. ej. los privados de
+  reserva de Warcraft). Si la revisión del MASTER encuentra un bloqueo, se arregla antes; no se sube flojo.
+- Reels de Facebook (Juchipila) no van a YouTube: esta regla no les aplica.
+
+## REGLA: lo que la API no hace, se hace en Studio con el navegador integrado (el usuario, 21-oct-2026, TODOS los canales)
+«Lo que no puedas hacer entra en el navegador y hazlo» — la sesión principal de Google (jairedson5) ya está iniciada en el navegador
+integrado y gestiona todos los canales. Tras cada `yt subir`, en Studio:
+- **Cambiar primero al canal correcto** (avatar > Cambiar de cuenta > el canal): Studio abre por defecto **Edsonxn** y su buscador
+  solo ve los videos del canal activo. Lo fiable: `studio.youtube.com/channel/<canal_id>/videos` y desde ahí abrir el video.
+- **Short → «Vídeo relacionado» = su largo** (Detalles > columna derecha > lápiz > elegir > Guardar). Solo ofrece videos YA PÚBLICOS
+  y el campo no aparece hasta que YouTube termina de procesar el Short: si el largo sale más tarde, se pone cuando salga (anotarlo en
+  «siguiente» del `ESTADO.md`). La Data API no tiene este campo.
+- **Canales monetizados (`"monetizado": true` en `canales/<alias>.json`; al 21-oct: Crónicas de Warcraft y Crónicas de Tamriel):
+  pestaña «Monetización» del video → Anuncios **Activado** + todos los tipos de anuncio (pre/mid/post-roll; mid-rolls automáticos
+  en videos ≥ 8 min) y el **cuestionario de idoneidad para anunciantes** respondido con verdad → Guardar. La API no lo expone.
+  Studio no deja guardarlo hasta que termina de procesar la versión SD. No hay interruptor de anuncios por canal (Configuración >
+  Ajustes de subida > Monetización solo tiene la casilla de mid-rolls, marcada en Tamriel el 21-oct): se activa video por video. Lo
+  subido por API a Warcraft solía salir «Activada», pero `wow_curiosidades_kalimdor` (21-oct) salió «Desactivada», igual que Tamriel
+  (tes_misiones_nunca) → revisarlo SIEMPRE.
+  Ruta directa: `studio.youtube.com/video/<id>/monetization` (abre en el canal del video). Cuestionario de un video de gameplay
+  de Skyrim/WoW (21-oct, salió «Adecuado para anuncios»): Violencia = 1.ª opción (violencia de gameplay sin editar, sangre mínima),
+  Contenido desagradable = 1.ª (con contexto), Temas delicados = 1.ª (mención breve/ficción); el resto sin marcar → Enviar →
+  Guardar (sí deja guardar aunque avise de la versión SD; queda «Comprobando»).
+  **Cada video se responde por SU contenido, no copiando el anterior** (21-oct): «Temas delicados» = violencia doméstica, autolesiones,
+  suicidio, abuso o acoso sexual, aborto; un video de curiosidades sin nada de eso lo deja SIN marcar (`wow_curiosidades_kalimdor`:
+  solo Violencia 1.ª —gameplay sin editar tras los 7 primeros segundos, violencia leve— y Contenido desagradable 1.ª). Los tipos de
+  anuncio (pre/mid/post-roll) no aparecen hasta que termina la versión SD: se dejan para la siguiente visita.
+- **Subtítulos (.srt): el navegador integrado NO abre el selector de archivos** («Subir manualmente» > Continuar no hace nada).
+  Camino: el usuario reconecta el canal con `python fab.py yt conectar` (pide el permiso youtube.force-ssl) y luego
+  `python fab.py yt aplicar <v> <canal> <id>` sube el .srt por API (conserva privado + `publishAt`). Tamriel ya reconectado con
+  force-ssl el 21-oct; en `conectar` hay que elegir el canal correcto en la pantalla de Google (el token queda por canal).
+- Listas de reproducción SÍ van por API (`playlists.insert` / `playlistItems.insert`, 50 de cuota cada una).
 
 ## REGLA: NUNCA varios videos del mismo canal el mismo día (el usuario, 7-oct-2026)
 Origen: el 7-oct-2026 se hicieron públicos de golpe 3 videos de Wild Next Door (arañas, ciempiés, bichos en
@@ -53,6 +100,24 @@ invierno) un día después del de avispas. Hubo que retirarlos a privado. **No s
 - Cuando el canal tenga datos, pide al usuario la gráfica "Cuándo están conectados tus usuarios" de
   YouTube Studio > Estadísticas > Audiencia (no está en la API) y ajusta `horario` en `canales/<alias>.json`.
 
+### Frecuencia y hora de CADA canal: Claude las decide con datos y las cambia (el usuario, 13-oct-2026; vale para TODOS los canales)
+El usuario autorizó que, **cada vez que analices un canal para hacer un video** (paso 2 del protocolo: `yt metricas`, `ideas`,
+`canales --actualizar`, la gráfica «Cuándo están conectados tus usuarios» si el usuario la pasa), recojas esos datos y **cambies
+la frecuencia y la hora** de ese canal según lo que decidas. Los ciclos y horas anteriores (Wild Next Door cada 3 días, LogIA 4-5,
+Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú los ajustas.
+- **Qué mirar:** vistas y % visto de los últimos videos según día/hora de salida, ritmo real de producción, cuánto tardan en arrancar
+  los videos (vistas a 48 h vs. a 7 d), cola de videos listos, hueco actual del canal (`canales --actualizar`).
+- **Cómo se cambia:** edita `horario` en `canales/<alias>.json` — `ciclo_dias` (lo lee el panel/«Canales»), `separacion_min_horas`
+  (≈ ciclo × 24: es el freno de `youtube.py`; si no lo subes/bajas junto con el ciclo, el freno manda), `hora_local`, `utc`, `zona`.
+  Añade una entrada a `horario.historial` (`fecha`, `ciclo_dias`, `hora_local`, `motivo` con el dato que lo justifica) y una línea
+  en `BITACORA.md`.
+- **Díselo al usuario** en la misma respuesta: «cambié X de A a B porque …». No pide permiso, pero no es silencioso.
+- **Límites que NO cambian:** nunca dos videos del mismo canal el mismo día ni por debajo de `separacion_min_horas`; lotes en
+  privado y programados en huecos sucesivos; un video renderizado se sube ya programado en su hueco (20-oct); hacer público YA sigue siendo del usuario.
+- Con pocos datos (< 1.000 vistas/28 d) di que la decisión es por criterio, no por datos, y revisa cuando haya más.
+- **Crónicas del gaming** (`cronicas_gaming`, terror CRT): arranca el 13-oct-2026 con un video cada 4 días a las 18:00 CDMX
+  (00:00 UTC del día siguiente; terror = tráfico de noche), por pedido del usuario el ciclo y por criterio la hora.
+
 8. Miniatura: `videos/<nombre>/miniaturas.py` con `VARIANTES = {nombre: fn(lz) -> fondo}` (ejemplo en
    `videos/40mil_anos/miniaturas.py`) → `python fab.py <nombre> miniatura` → `salida/*_mini_<variante>.jpg`
    (1280x720) y `previews/miniaturas.jpg` (MÍRALA: incluye la vista a tamaño de celular). En el nicho funciona:
@@ -68,13 +133,19 @@ invierno) un día después del de avispas. Hubo que retirarlos a privado. **No s
    (6) NEGATIVE: sin marca de agua, sin texto extra, sin faltas, sin rostros reales, sin desenfoque en el texto. Dar 2 variantes (misterio «¿DÓNDE ESTÁ?» y consecuencia «NUNCA APARECIÓ»).
    Si un acento sale mal: pedir corregir solo el texto conservando todo lo demás. Comprobar a tamaño de celular (~170 px de ancho): deben leerse el texto y la cara.
    Las miniaturas hechas por código (`miniaturas.py` / `hacer_miniaturas.py`) quedan como respaldo; la de IA es mucho más llamativa.
+   **Texto dentro de la imagen (el usuario, 13-oct-2026): Nano Banana 2.1 en Flow escribe texto muy bien; aprovéchalo** y pide el título
+   en el propio prompt en vez de sobreponerlo por código (deletrea la palabra con tilde: «spelled exactly E-X-I-S-T-I-Ó with an acute
+   accent on the final O»). Claude la genera él mismo en Flow desde el navegador integrado (chip por defecto Imagen · 16:9 · 2.1 · x2,
+   0 puntos). Receta y prompt probado: `docs/estilo_terror_crt.md` § «Miniatura» (`videos/sonic_exe/prompt_miniatura.md`).
 8c. **Publicación (flujo acordado con el usuario):** Claude sube el video con `python fab.py yt subir <video> <canal> private` (sube video, aplica `youtube.json`, miniatura `miniatura` y subtítulos .srt), anota el
-   id en `canales/<canal>.json` (`publicados`) y en BITACORA.md; **el usuario lo publica él mismo desde Studio** (o pide programarlo con `yt publicar <canal> <id> public --programar <ISO UTC>`).
+   id en `canales/<canal>.json` (`publicados`) y en BITACORA.md. **Desde el 20-oct-2026 se sube YA PROGRAMADO en el hueco del canal
+   (`private --publicar <ISO UTC>`) sin preguntar** (regla «render terminado = subir y programar» arriba); a uno ya subido sin fecha:
+   `yt publicar <canal> <id> public --programar <ISO UTC>`.
    Antes de subir: cerrar VLC u otro reproductor que tenga el MASTER abierto (si no, `final` falla con PermissionError), correr `verificar` y abrir la hoja `previews/final_hoja.jpg`.
 9. YouTube (`nucleo/youtube.py`, portado de RemoGravity; cliente OAuth en `canales/youtube_client_secrets.json`,
    tokens en `canales/tokens/`): `python fab.py yt ayuda`. Canal por alias = nombre de `canales/<alias>.json`
    (p. ej. `sapiens_con_wifi`). `yt videos <canal>`, `yt metricas <canal> [dias]`, `yt aplicar <video> <canal> <id>` (metadatos + miniatura +
    .srt a un video ya subido, sin cambiar su visibilidad), `yt subir <video> <canal> [private|unlisted|public]
    [--publicar ISO]`, `yt publicar <canal> <id> [public|unlisted|private] [--programar ISO]`, `yt canal <alias>` (descripción, palabras clave, idioma, país, banner). Nombre y foto de
-   perfil del canal NO se pueden cambiar por API (Studio). Publicar o hacer público = preguntar antes.
+   perfil del canal NO se pueden cambiar por API (Studio). Hacer público YA = preguntar antes; programar en el hueco = automático (20-oct).
    Arte del canal: `python canales/arte_canal.py "NOMBRE" "lema"` → `canales/arte/` (revisar `*_revision.jpg`).

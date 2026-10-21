@@ -1,0 +1,294 @@
+{
+ "ame01": {
+  "titulo": "A-Me 01",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/a/a1/A-Me_01.jpg/revision/latest?cb=20201130011313"
+ },
+ "agamaggan": {
+  "titulo": "Agamaggan",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/b6/Agamaggan%2C_the_Great_Boar_HS.jpg/revision/latest?cb=20210506084624"
+ },
+ "kodo": {
+  "titulo": "Aged Kodo",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/48/Aged_Kodo.jpg/revision/latest?cb=20100314120141"
+ },
+ "geddon": {
+  "titulo": "Baron Geddon",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/6/6e/Something_that_Burns_TCG.jpg/revision/latest?cb=20151202151312"
+ },
+ "centauro": {
+  "titulo": "Centaur",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/e/ee/Centaur_Pariah.jpg/revision/latest?cb=20220723155618"
+ },
+ "daelin": {
+  "titulo": "Daelin Proudmoore",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/5/53/Daelin.jpg/revision/latest?cb=20191217192912"
+ },
+ "hydraxis": {
+  "titulo": "Duke Hydraxis",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/e/e7/Duke_Hydraxis.jpg/revision/latest?cb=20170223025910"
+ },
+ "fizzle": {
+  "titulo": "Fizzle Brassbolts",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/1/15/Photographer_Fizzle_HS.png/revision/latest?cb=20230628235357"
+ },
+ "gahzrilla": {
+  "titulo": "Gahz'rilla",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/3/3d/Gahz%27rilla_TCG.jpg/revision/latest?cb=20130208162110"
+ },
+ "garr": {
+  "titulo": "Garr",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/41/Garr_HS.JPG/revision/latest?cb=20150410093826"
+ },
+ "demitrian": {
+  "titulo": "Highlord Demitrian",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/0/0b/Highlord_Demitrian.jpg/revision/latest?cb=20230225222800"
+ },
+ "jaina": {
+  "titulo": "jaina",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/ba/Jaina_Proudmoore_old_model.jpg/revision/latest?cb=20130829230130"
+ },
+ "karna": {
+  "titulo": "Karna Remtravel",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/bb/Karna_Remtravel.jpg/revision/latest?cb=20151108130324"
+ },
+ "gordok": {
+  "titulo": "gordok",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/f/f4/King_Gordok.jpg/revision/latest?cb=20091017034322"
+ },
+ "legacki": {
+  "titulo": "Legacki",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/f/fa/Legacki.jpg/revision/latest?cb=20211226143122"
+ },
+ "benedict": {
+  "titulo": "Lieutenant Benedict",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/5/50/Lieutenant_Benedict.jpg/revision/latest?cb=20180306154958"
+ },
+ "linken": {
+  "titulo": "Linken",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/47/Linken_Northern_Stranglethorn.jpg/revision/latest?cb=20201012211549"
+ },
+ "executus": {
+  "titulo": "Majordomo Executus",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/ba/Chronicle3_Majordomo_Executus.jpg/revision/latest?cb=20181001142242"
+ },
+ "malfurion": {
+  "titulo": "Malfurion Stormrage",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/4b/Malfurion_Stormrage_Cataclysm.jpeg/revision/latest?cb=20100730193835"
+ },
+ "mankrik": {
+  "titulo": "Mankrik",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/c/ca/Mankrik_Mercenaries_1.jpg/revision/latest?cb=20220208033608"
+ },
+ "mannoroth": {
+  "titulo": "Mannoroth",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/0/03/Mannoroth_Remains.jpg/revision/latest?cb=20191005192120"
+ },
+ "yeti": {
+  "titulo": "Mechanical Yeti",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/1/19/Mechanical_Yeti.jpg/revision/latest?cb=20090622030622"
+ },
+ "naralex": {
+  "titulo": "Naralex",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/e/ee/Naralex.jpg/revision/latest?cb=20151004085158"
+ },
+ "neeru": {
+  "titulo": "Neeru Fireblade",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/2/2d/Neeru_Fireblade_new.png/revision/latest?cb=20110305143138"
+ },
+ "pozzik": {
+  "titulo": "Pozzik",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/0/01/Pozzik_Audio_Engineer_HS.jpg/revision/latest?cb=20230410041355"
+ },
+ "pusillin": {
+  "titulo": "Pusillin",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/a/a5/Pusillin.jpg/revision/latest?cb=20091017021958"
+ },
+ "jabaespin": {
+  "titulo": "Quilboar",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/9/91/BTNQuillBoar.png/revision/latest?cb=20210512152600"
+ },
+ "ragnaros": {
+  "titulo": "ragnaros",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/5/53/Ragnaros2.jpg/revision/latest?cb=20051008192431"
+ },
+ "sable": {
+  "titulo": "Reins of the Winterspring Frostsaber",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/a/ab/Wintersaber_tiger.jpg/revision/latest?cb=20050817094135"
+ },
+ "ringo": {
+  "titulo": "Ringo",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/6/6a/Ringo_tcg.jpg/revision/latest?cb=20130602103726"
+ },
+ "smeed": {
+  "titulo": "Smeed Scrabblescrew",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/e/e4/Smeed_Scrabblescrew.jpg/revision/latest?cb=20111206042457"
+ },
+ "taragaman": {
+  "titulo": "Taragaman the Hungerer",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/45/Taragaman_the_Hungerer.jpg/revision/latest?cb=20080921113938"
+ },
+ "theradras": {
+  "titulo": "Theradras",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/d/d6/Theradras.jpg/revision/latest?cb=20090223124900"
+ },
+ "thrall": {
+  "titulo": "thrall",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/6/63/Thrall_8.2.jpg/revision/latest?cb=20200621185237"
+ },
+ "thunderaan": {
+  "titulo": "Thunderaan",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/5/58/Thunderaan_The_Windlord.jpg/revision/latest?cb=20160606232849"
+ },
+ "umi": {
+  "titulo": "Umi Rumplesnicker",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/4a/Umi_Rumplesnicker.jpg/revision/latest?cb=20211226131158"
+ },
+ "voljin": {
+  "titulo": "voljin",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/d/d4/Vol%27jin_%28Sen%27jin_Village%29.png/revision/latest?cb=20100909152921"
+ },
+ "zaetar": {
+  "titulo": "Zaetar",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/6/63/Zaetar.jpg/revision/latest?cb=20220724165204"
+ },
+ "zalazane": {
+  "titulo": "zalazane",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/48/Zalazane.jpg/revision/latest?cb=20080108082112"
+ },
+ "colmillo": {
+  "titulo": "Druid of the Fang",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/0/0c/Fangbound_Druid_HS.jpg/revision/latest?cb=20230220225213"
+ },
+ "anachronos": {
+  "titulo": "Anachronos",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/3/37/Dragonswarm.jpg/revision/latest?cb=20070523075521"
+ },
+ "anaya": {
+  "titulo": "Anaya Dawnrunner",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/0/0d/Anaya_Dawnrunner.jpg/revision/latest?cb=20151221194915"
+ },
+ "qiraji": {
+  "titulo": "Black Qiraji Resonating Crystal",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/e/e2/Black_Qiraji_Battle_Tank.jpg/revision/latest?cb=20090506105508"
+ },
+ "cerellean": {
+  "titulo": "Cerellean Whiteclaw",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/41/Cerellean-whiteclaw-cataclysm.jpg/revision/latest?cb=20151221195253"
+ },
+ "discos": {
+  "titulo": "Discs of Norgannon",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/f/f7/Discs_of_Norgannon.jpg/revision/latest?cb=20071104080720"
+ },
+ "fandral": {
+  "titulo": "Fandral Staghelm",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/2/2f/Fandral.jpg/revision/latest?cb=20080508162524"
+ },
+ "rajaxx": {
+  "titulo": "General Rajaxx",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/4a/General_Rajaxx.jpg/revision/latest?cb=20100628105608"
+ },
+ "furbolg": {
+  "titulo": "furbolg",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/e/e0/Gnarlpine_Ambusher.jpg/revision/latest?cb=20100403095254"
+ },
+ "onyxia": {
+  "titulo": "Onyxia",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/a/a4/Raid_Boss_Onyxia_HS.jpg/revision/latest?cb=20220215120228"
+ },
+ "cria": {
+  "titulo": "Onyxian Whelp",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/4/4a/Onyxian_Whelp.jpg/revision/latest?cb=20140121181928"
+ },
+ "quixxil": {
+  "titulo": "Quixxil",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/6/6d/Quixxil.jpg/revision/latest?cb=20111204192914"
+ },
+ "sprinkle": {
+  "titulo": "Sprinkle Noggenfogger",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/be/Sprinkle.jpg/revision/latest?cb=20061129211542"
+ },
+ "vigia": {
+  "titulo": "Stone Watcher of Norgannon",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/8/87/Stone_Watcher_of_Norgannon.jpg/revision/latest?cb=20080101143727"
+ },
+ "tyrande": {
+  "titulo": "Tyrande Whisperwind",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/c/cf/Tyrandetrin.JPG/revision/latest?cb=20181026174525"
+ },
+ "zul_trol": {
+  "titulo": "Sandfury tribe",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/f/f4/Divino-matic_Rod_TCG.jpg/revision/latest?cb=20160212211029"
+ },
+ "grom": {
+  "titulo": "grom",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/1/17/Grom_Hellscream.jpg/revision/latest?cb=20140914191345"
+ },
+ "thunderfury": {
+  "titulo": "Thunderfury, Blessed Blade of the Windseeker",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg"
+ },
+ "ataduras": {
+  "titulo": "Bindings of the Windseeker",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_ice_lament.jpg"
+ },
+ "quintaesencia": {
+  "titulo": "Aqual Quintessence",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_76.jpg"
+ },
+ "mazo": {
+  "titulo": "Mallet of Zul'Farrak",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_19.jpg"
+ },
+ "bumeran": {
+  "titulo": "Linken's Boomerang",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_weapon_shortblade_10.jpg"
+ },
+ "espada_linken": {
+  "titulo": "Linken's Sword of Mastery",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg"
+ },
+ "traje_ogro": {
+  "titulo": "Gordok Ogre Suit",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_14.jpg"
+ },
+ "quelserrar": {
+  "titulo": "Quel'Serrar",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_sword_01.jpg"
+ },
+ "compendio": {
+  "titulo": "Foror's Compendium of Dragon Slaying",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_11.jpg"
+ },
+ "kombobulator": {
+  "titulo": "Kodo Kombobulator",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_battery_01.jpg"
+ },
+ "cetro": {
+  "titulo": "Scepter of the Shifting Sands",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_hammer_25.jpg"
+ },
+ "cantimplora": {
+  "titulo": "Spraggle's Canteen",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_drink_18.jpg"
+ },
+ "flor": {
+  "titulo": "flor",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/a/ac/Cleansed_Songflower.jpg/revision/latest?cb=20080519023850"
+ },
+ "flor_c": {
+  "titulo": "flor_c",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/3/33/Corrupted_Songflower.jpg/revision/latest?cb=20080519023959"
+ },
+ "esposa": {
+  "titulo": "esposa",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/ba/Beaten_Corpse.jpg/revision/latest?cb=20080711102436"
+ },
+ "pedestal": {
+  "titulo": "pedestal",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/b/bc/UldumPedestal.jpg/revision/latest?cb=20080113221032"
+ },
+ "uldum_puerta": {
+  "titulo": "uldum_puerta",
+  "url": "https://static.wikia.nocookie.net/wowpedia/images/1/1c/Uldum_entrance.jpg/revision/latest?cb=20070821153155"
+ }
+}

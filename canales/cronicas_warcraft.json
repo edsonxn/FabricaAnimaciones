@@ -1,4 +1,5 @@
 {
+  "monetizado": true,
   "canal_id": "UCjzJdQdD2vCpw1jHCqiQeFw",
   "nombre": "Crónicas de Warcraft",
   "estilo": "CANAL N.º 1 (el más importante). Secuencia de clips de gameplay de YouTube (yt-dlp) cortados por frase de Whisper + ~30 apoyos (tooltips Wowhead/tarjetas) + 3 motion graphics + PEGATINAS CONSTANTES (regla fija del usuario, 18-oct-2026: cada personaje, criatura, objeto o prenda que nombre la voz sale con su imagen real como pegatina animada, ADEMÁS de clips y tarjetas; receta docs/estilo_secuencia_yt.md § PEGATINAS); voz Applio (Edge Remy + RVC RemyOriginal); guion estilo «gema» (humor seco, cita ficticia dramática). Patrocinio Overgear activo (código CRONICAS10). Migrando desde C:\\googleimagenes: docs/migracion_googleimagenes.md",
@@ -117,6 +118,16 @@
       "programado": "2026-10-22T15:00:00Z",
       "formato": "cuento de lore oscuro poco contado (Darrowshire / Pamela) · ~13:49 · FORMATO NUEVO pegatina Flow (Flow pinta escenarios y hojas, el código anima) + pegatinas reales de WoW + SFX del propio juego · voz ElevenLabs Lily · Lyria de terror · sin Overgear (cambia la variable «estilo/formato» respecto a las listas secuencia_yt)",
       "nota": "subido y programado el 21-oct-2026 (regla «render terminado»): jue 22-oct 09:00 CDMX, 70 h tras curiosidades (separación mínima 44 h); miniatura y .srt aplicados con `yt aplicar`"
+    },
+    {
+      "video": "wow_curiosidades_kalimdor",
+      "id": "lE1SS7xJc_4",
+      "titulo": "30 CURIOSIDADES de Kalimdor que casi nadie conoce (WoW Classic)",
+      "visibilidad": "private",
+      "programado": "2026-10-25T15:00:00Z",
+      "formato": "lista cuenta regresiva 30 puestos · ~15:47 · curiosidades de Classic (Kalimdor) con gancho a Forever · secuencia_yt + Applio + pegatinas + 3 pantallas + 4 MG nuevos (runas, linaje, cadena, consola) · música original de WoW (no Lyria) · sin Overgear",
+      "prueba": "duración: misma fórmula que Reinos del Este (31 min) a la mitad de duración (16 min)",
+      "nota": "subido y programado el 21-oct-2026 por la regla «render terminado = subir y programar»: dom 25-oct 09:00 CDMX"
     }
   ],
   "ideas": {

@@ -22,6 +22,7 @@
   python fab.py <video> verificar               QA final: Whisper sobre la mezcla, duración, desfase A/V, hoja de cuadros
   python fab.py <video> todo                    voz→seleccionar→tiempo→musica→sfx→mezcla→video→final
   python fab.py <video> limpiar [--previews]    borra segmentos/ del render (y previews/ con --previews) al aprobar el video
+  python fab.py limpiar --publicados [--borrar] libera disco: videos y mezclas .wav de los ya públicos en YouTube (conserva proyecto y voz)
   python fab.py panel [--puerto 8765] [--abrir] panel web con el avance de todos los proyectos (nucleo/panel.py)
   python fab.py estudio [--puerto 8790] [--abrir]  ESTUDIO: interfaz sencilla (comercial) para videos de 60 s (estudio/servidor.py)
   python fab.py estadisticas [--actualizar]     panel general de estadísticas de todos los canales (nucleo/estadisticas.py)
@@ -213,6 +214,9 @@ def main():
     if a[0] == "yt":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "youtube.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "limpiar" and "--publicados" in a:   # disco: borra videos y mezclas de los ya públicos (nucleo/limpiar_publicados.py)
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "limpiar_publicados.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "nuevo":
         destino = os.path.join(VIDEOS, a[1])
         if os.path.exists(destino):

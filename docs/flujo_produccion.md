@@ -142,6 +142,10 @@ Tras cambiar el núcleo: `python fab.py api` y re-verificar `videos/40mil_anos` 
   (`video --rehacer t0-t1`). Cuando el video esté aprobado/subido: `python fab.py <v> limpiar` (borra segmentos;
   `--previews` también previews/). FAB_LIMPIAR=1 en `final` los borra de inmediato. Si luego cambias solo el audio,
   `final` remuxa desde el MASTER existente.
+- Cuando el video ya es PÚBLICO en YouTube (22-oct-2026): `python fab.py limpiar --publicados` simula y
+  `--borrar` borra en todos los públicos los videos (MASTER, segmentos, medios/clips bajados, previews .mp4) y las
+  mezclas .wav de audio/. Conserva el proyecto (código, guion, ESTADO, imágenes, .srt, Lyria .mp3, voz .wav);
+  registro en `E:\FabricaAnimaciones\_limpieza_publicados.txt`. Los programados a futuro no se tocan.
 - **Mover lo pesado a otro disco (4-oct-2026)**: `python nucleo/mover_pesados.py` (simula) / `--aplicar` mueve `videos/<v>/salida*/` a
   `E:\FabricaAnimaciones\videos\<v>\` (FAB_PESADOS cambia el destino; E: = HDD USB «Edson Externo») y deja un **junction** en la ruta
   original, así `fab.py`, el panel y el render no notan nada. Verifica tamaños antes de borrar el original y no mueve lo que esté en

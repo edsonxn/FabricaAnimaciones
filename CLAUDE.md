@@ -92,6 +92,7 @@ python fab.py <v> video --rehacer 270-280 [..]  re-renderiza solo esos tramos (s
 python fab.py nuevo <v> --secuencia     video del motor SECUENCIA (Google Flow); luego beats | prompts | ingesta | medios | video
 python fab.py <v> fx [--seco | hoja]    motor SECUENCIA con efectos.py: SFX de ElevenLabs -> audio/fx.wav (lo suma `mezcla`); --seco lista tiempos; hoja = previews/fx_NN.jpg
 python fab.py <v> limpiar               borra segmentos/ cuando el video está aprobado
+python fab.py limpiar --publicados [--borrar]   disco: borra videos y mezclas .wav de los YA públicos (conserva proyecto, imágenes, Lyria y voz; registro en E:\FabricaAnimaciones\_limpieza_publicados.txt; 22-oct)
 python fab.py yt canales | metricas <alias> 90 | subir <v> <canal> private | aplicar <v> <canal> <id> | publicar ...
 python fab.py canales [--actualizar]      inicio de día: qué canal se queda antes sin video (misma vista en la pestaña «Canales» del panel)
 python fab.py ideas [<canal>] [--actualizar]  siguiente video con datos: lo tuyo vs. lo que rompió la media en el nicho (canales/metricas/ideas/<canal>.md)

@@ -302,6 +302,35 @@ repetir `hilos` ni ningún MG ya hecho; cada oportunidad pide un diseño propio 
   clip: medir el brillo por segundo de cada clip rehecho (`cv2`, media < 20 = negro) además de `blackdetect` sobre el MASTER.
 - YouTube: ~110 descargas en la sesión → 429 y luego «not a bot»; un reintento automático cada 5 min (script con los ids pendientes)
   lo resolvió en la primera vuelta ~40 min después.
+- **MARCOS PINTADOS EN FLOW, no paneles dibujados por código (el usuario, 22-oct-2026, `zelda_oot`: «esos cuadros de texto se
+  ven muy poco trabajados… puedes apoyarte de Flow para obtener mejor calidad»).** Los paneles de `mg_gaming` (rectángulo chocolate
+  con borde miel) se veían planos. Receta nueva: `prompts.json` con piezas de interfaz SOBRE BLANCO (tablilla de piedra con marco
+  de oro, pergamino con rodillos, medallón, cinta de terciopelo, tablero de templo con cresta, sello de cera, cartucho con etiqueta
+  en blanco, letrero de madera, botones del mando) con una FICHA común («hand-painted video game interface asset… isolated on a
+  plain flat pure white background… No text, no letters, no numbers, no runes») → `flow_integrado.py paquete` → Flow en el
+  navegador integrado (Nano Banana 2.1, 16:9, x2 = 0 puntos; 9 prompts en ~2 min) → bajar con numeración 901+ → `ui/` →
+  `python nucleo/recortar_ui.py pieza.jpg pieza.png [--partes N]` (quita el blanco CONECTADO al borde, conserva el interior
+  claro de pergaminos/etiquetas). Kit **`nucleo/mg_zelda.py`**: `nueve()` escala sin deformar esquinas ni la cresta central
+  (márgenes en `CORTES`), `brillo()` = destello que barre el oro al entrar, sombra suave, Engravers MT (títulos grabados) + Book
+  Antiqua negrita; `puesto`, `ficha(piel="piedra"|"pergamino")`, `linea_tiempo`, `ocarina`, `paradoja`, `versiones`,
+  `tres_lineas`. Para otro juego: mismas funciones, otras piezas (cambiar la FICHA de Flow a la estética de ese juego).
+- **REGLA NUEVA (el usuario, 22-oct-2026, al ver la ficha «Carrera de obstáculos» de zelda_oot): FICHAS TRANSLÚCIDAS, nunca
+  carteles opacos que cubran tanta pantalla y tapen el video.** Modelo: las de Crónicas de Tamriel (`mg_tes.objeto`/`mision`: humo
+  negro difuminado, separadores finos, tipografía de la interfaz) — «los de Tamriel son los mejores» — pero ADAPTADAS a cada juego,
+  no recicladas de Skyrim. Para el siguiente video: diseñar la versión translúcida con la interfaz de ese juego; las piezas de Flow
+  solo como adorno pequeño (filigrana, icono, separador), y los MG grandes con panel translúcido. zelda_oot salió con las
+  tablillas opacas (ya renderizado).
+- **Lecciones de `zelda_oot` (22-oct-2026, 111 beats, 15:56):**
+  - **Plan de clips por FRASE antes de los beats** (`videos/zelda_oot/plan_clips.py`): hojas de contacto propias a 360p de las partes
+    de una serie limpia (ZeldaCentral NSO 1080p60), un cuadro cada 15 s con el segundo impreso → lista (id, segundo) por frase →
+    `busquedas.json` sale solo al terminar `beats`. 111 clips con 21 rehechos en total (vs ~40-50 % en Warcraft/Tamriel).
+  - **Medir el BRILLO de todos los clips (un cuadro cada 0,3 s, media < 14) ANTES del render**: `blackdetect` sobre el MASTER no
+    caza negros de 0,3-0,6 s tapados por transiciones o efectos, y cada vuelta cuesta un render de ~35 min (aquí hubo 3 renders).
+    Los fundidos están DENTRO del clip (fin de cinemática, cambio de zona), no solo en los bordes.
+  - Fuentes que ensucian: videos con rótulo de título al principio (SoupyGhost «Gossip Stone behaviors…»), comparativas con texto
+    gigante («And last but not least»), TV grabada con cámara, marca IGN en esquina, videos de UNA imagen fija (pentagrama del molino).
+  - Clips cortos de fans (40-100 s) con `{url, desde}`: bajar `yt.min_s` a 30 en guion.py.
+  - `medir_marco.py`: el marco NSO da 0,131; escenas casi quietas lo inflan (0,2-0,34) → fijar 0,131 para toda la serie NSO.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;

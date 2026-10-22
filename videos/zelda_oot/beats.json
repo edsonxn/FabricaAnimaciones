@@ -1,0 +1,890 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.902,
+  "tipo": "video",
+  "texto": "El cinco de noviembre, Nintendo vuelve a lanzar un juego de mil novecientos noventa y ocho. Rehecho desde cero, para Nintendo Switch 2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.902,
+  "t1": 17.962,
+  "tipo": "video",
+  "texto": "Y no es un juego cualquiera. Es Ocarina of Time, el juego con la nota más alta de la historia de Metacritic.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.962,
+  "t1": 27.343,
+  "tipo": "video",
+  "texto": "Pero antes de que el remake lo cambie todo, vale la pena mirar el original. Porque ese cartucho guarda cosas que muchos no vieron en su día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.343,
+  "t1": 34.983,
+  "tipo": "video",
+  "texto": "Una vaca que aparece dentro de tu casa, un canto que Nintendo borró en silencio, y una canción que nadie compuso,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.983,
+  "t1": 42.972,
+  "tipo": "video",
+  "texto": "porque se la enseñaste tú mismo. Así que hoy te cuento cómo se hizo, la historia de Link, y los doce secretos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.972,
+  "t1": 51.647,
+  "tipo": "video",
+  "texto": "de Ocarina of Time que seguramente ignoraste. Mientras un equipo de Nintendo hacía Super Mario sesenta y cuatro, otro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.647,
+  "t1": 59.338,
+  "tipo": "video",
+  "texto": "en el mismo edificio y con el mismo motor de base, se preguntaba cómo se pelea con espada en tres dimensiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.338,
+  "t1": 67.438,
+  "tipo": "video",
+  "texto": "Al frente estaba Shigeru Miyamoto, como productor, con Koji Kondo en la música, y cinco directores que se repartían el trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.438,
+  "t1": 75.565,
+  "tipo": "video",
+  "texto": "Uno de ellos era un joven Eiji Aonuma, que diseñó las mazmorras. La primera idea de Miyamoto era rara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 75.565,
+  "t1": 86.049,
+  "tipo": "video",
+  "texto": "Todo el juego iba a pasar dentro del castillo de Ganon, como Mario sesenta y cuatro dentro del castillo de Peach, saltando a otras aventuras a través de puertas y cuadros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.049,
+  "t1": 95.139,
+  "tipo": "video",
+  "texto": "Y pensó en hacerlo en primera persona, para lucir la gran llanura de Hyrule. Lo descartó cuando decidieron que también habría un Link niño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 95.139,
+  "t1": 101.586,
+  "tipo": "video",
+  "texto": "porque sentía que a Link había que verlo en pantalla. El problema más difícil fue pelear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.586,
+  "t1": 111.354,
+  "tipo": "video",
+  "texto": "¿Cómo apuntas con una espada a un enemigo que se mueve a tu alrededor? Parte de la respuesta salió de un parque temático. En los estudios Toei de Kioto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.354,
+  "t1": 121.298,
+  "tipo": "video",
+  "texto": "el equipo vio un espectáculo de ninjas donde los enemigos rodeaban al héroe, pero atacaban de uno en uno. Así quedó el fijado con el gatillo Z.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.298,
+  "t1": 131.234,
+  "tipo": "video",
+  "texto": "Apuntas, la cámara se centra en el enemigo, y los demás esperan su turno. Desde entonces, muchísimos juegos de acción en tercera persona lo han copiado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 131.234,
+  "t1": 137.892,
+  "tipo": "video",
+  "texto": "Al principio se pensó para un lector de discos de la consola, pero acabó en cartucho, y llegó en noviembre de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.892,
+  "t1": 145.538,
+  "tipo": "video",
+  "texto": "mil novecientos noventa y ocho. Doscientos cincuenta y seis megabits, el juego más grande que Nintendo había hecho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.538,
+  "t1": 157.706,
+  "tipo": "video",
+  "texto": "Y entonces llovieron las notas. Fue el primer juego con un cuarenta sobre cuarenta en la revista japonesa Famitsu, y todavía hoy es el único con un noventa y nueve en Metacritic.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 157.706,
+  "t1": 162.106,
+  "tipo": "video",
+  "texto": "Vendió siete millones seiscientas mil copias en Nintendo sesenta y cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.106,
+  "t1": 171.844,
+  "tipo": "video",
+  "texto": "No estaba mal para un juego de un niño con una flauta. Ahora, la historia. Link vive en el bosque de los Kokiri,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.844,
+  "t1": 181.235,
+  "tipo": "video",
+  "texto": "unos niños que nunca crecen y que tienen cada uno su hada. Todos menos él. Hasta que el Gran Árbol Deku, el guardián del bosque,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.235,
+  "t1": 188.037,
+  "tipo": "video",
+  "texto": "le manda una, Navi, y le pide ayuda. Un hombre del desierto le ha echado una maldición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.037,
+  "t1": 198.097,
+  "tipo": "video",
+  "texto": "Link rompe la maldición, pero llega tarde. El árbol le cuenta que ese hombre es Ganondorf, el rey de los Gerudo, y muere delante de él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.097,
+  "t1": 205.937,
+  "tipo": "video",
+  "texto": "En el castillo de Hyrule, la princesa Zelda le cuenta su sueño. Ganondorf busca la Trifuerza, el poder de los dioses,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.937,
+  "t1": 215.333,
+  "tipo": "video",
+  "texto": "y para abrir su puerta hacen falta tres piedras espirituales y la Ocarina del Tiempo. Link las consigue, abre la puerta del Templo del Tiempo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.333,
+  "t1": 223.287,
+  "tipo": "video",
+  "texto": "y saca la Espada Maestra. Y ese es justo el error. Ganondorf lo había seguido. Con la puerta abierta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.287,
+  "t1": 232.35,
+  "tipo": "video",
+  "texto": "entra al Reino Sagrado y toma la Trifuerza. Link era demasiado joven para la espada, y queda dormido durante siete años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.35,
+  "t1": 241.41,
+  "tipo": "video",
+  "texto": "Cuando despierta, ya es adulto, y Hyrule es otro. El castillo es una fortaleza oscura, el pueblo está en ruinas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.41,
+  "t1": 252.439,
+  "tipo": "video",
+  "texto": "y los templos están malditos. Un misterioso guerrero sheikah, Sheik, le enseña canciones para viajar entre templos y despertar a los seis sabios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 252.439,
+  "t1": 258.05,
+  "tipo": "video",
+  "texto": "Y al final se revela que Sheik era Zelda, escondida todo ese tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.05,
+  "t1": 268.77,
+  "tipo": "video",
+  "texto": "Juntos sellan a Ganon, y Zelda devuelve a Link a su infancia con la ocarina. Un final que, como verás en el número uno, partió la historia de Zelda en tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 268.77,
+  "t1": 274.968,
+  "tipo": "video",
+  "texto": "Vamos con los secretos. Número doce. Una vaca en tu casa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.968,
+  "t1": 285.416,
+  "tipo": "video",
+  "texto": "En el Rancho Lon Lon, de adulto, Malon te reta a una carrera de obstáculos a caballo. Hay que dar la vuelta saltando vallas en menos de cincuenta segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 285.416,
+  "t1": 291.81,
+  "tipo": "video",
+  "texto": "Si lo consigues, el premio es raro. Te regalan una vaca, y no te la dan en mano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.81,
+  "t1": 303.052,
+  "tipo": "video",
+  "texto": "Vuelves al bosque Kokiri, entras en la casita del árbol donde Link se despertó al principio del juego, y ahí está. Una vaca, dentro de la casa, mirando a la pared.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 303.052,
+  "t1": 310.865,
+  "tipo": "video",
+  "texto": "Si le tocas la canción de Epona, te da leche. Es la única recompensa del juego que se queda a vivir contigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.865,
+  "t1": 320.413,
+  "tipo": "video",
+  "texto": "En el once, el pescador calvo. Junto al lago Hylia hay un estanque de pesca, y su dueño lleva siempre un sombrero de paja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.413,
+  "t1": 326.541,
+  "tipo": "video",
+  "texto": "Lo que no sabías es por qué. Si vas de adulto y lanzas el anzuelo hacia él,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.541,
+  "t1": 335.378,
+  "tipo": "video",
+  "texto": "con buena puntería, se lo enganchas y se lo quitas. Y debajo no hay nada. Está completamente calvo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.378,
+  "t1": 343.481,
+  "tipo": "video",
+  "texto": "Te regaña, y si se lo vuelves a quitar, te vuelve a regañar. Un detalle que alguien en Nintendo programó a propósito,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.481,
+  "t1": 353.175,
+  "tipo": "video",
+  "texto": "sabiendo que casi nadie iba a lanzarle un anzuelo a la cabeza al pescador. Número diez. Un cameo que muchos se perdieron,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 353.175,
+  "t1": 360.421,
+  "tipo": "video",
+  "texto": "en el patio del castillo. Cuando encuentras a Zelda de niña, está espiando a Ganondorf por una ventana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.421,
+  "t1": 370.145,
+  "tipo": "video",
+  "texto": "Pero hay otras ventanas en ese patio. Si te asomas a una de ellas, verás unos cuadros colgados. Son Mario, Luigi, la princesa Peach,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.145,
+  "t1": 377.801,
+  "tipo": "video",
+  "texto": "Bowser y Yoshi. Si le disparas a esa ventana con el tirachinas, alguien de dentro te tira una rupia roja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.801,
+  "t1": 385.206,
+  "tipo": "video",
+  "texto": "Pero si le disparas a la otra ventana, sale un soldado, te regaña, y te lanza una bomba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.206,
+  "t1": 397.627,
+  "tipo": "video",
+  "texto": "Y en la versión de tres de ese, la ventana de Mario ya no tiene cuadros. Ahora enseña un nivel de Super Mario Bros. En el nueve, las piedras chismosas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 397.627,
+  "t1": 404.687,
+  "tipo": "video",
+  "texto": "Por todo Hyrule hay unas piedras grises con un ojo, las piedras Sheikah. Si te pones la Máscara de la Verdad,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.687,
+  "t1": 413.643,
+  "tipo": "video",
+  "texto": "te cuentan rumores y pistas. Si les pegas con la espada, te dicen la hora del día. Útil, pero poco más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.643,
+  "t1": 420.149,
+  "tipo": "video",
+  "texto": "Pero si les pones una bomba, despegan. Salen disparadas al cielo como un cohete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.149,
+  "t1": 430.838,
+  "tipo": "video",
+  "texto": "Y hay más. Si les tocas la canción de la tormenta, algunas sueltan un hada. Cada piedra de Hyrule esconde algo, si sabes cómo preguntarle.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.838,
+  "t1": 438.531,
+  "tipo": "video",
+  "texto": "Número ocho. La casa maldita de Kakariko. En la aldea hay una casa con la puerta cerrada de noche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.531,
+  "t1": 449.26,
+  "tipo": "video",
+  "texto": "Dentro vive una familia entera convertida en arañas doradas, por culpa de su propia codicia. Por todo el juego hay cien Skulltulas doradas escondidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 449.26,
+  "t1": 455.863,
+  "tipo": "video",
+  "texto": "Cada una que destruyes devuelve a un miembro de la familia a su forma humana. Cada diez te dan un premio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.863,
+  "t1": 464.878,
+  "tipo": "video",
+  "texto": "Una cartera más grande, la piedra de la agonía, otra cartera todavía mayor, bombchus y una pieza de corazón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.878,
+  "t1": 472.918,
+  "tipo": "video",
+  "texto": "Y por las cien, el premio final es una rupia enorme de doscientas. Que puedes volver a pedir cada vez que entras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.918,
+  "t1": 481.97,
+  "tipo": "video",
+  "texto": "Para cuando la consigues, ya no tienes nada que comprar. Número siete. La cadena más larga del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.97,
+  "t1": 489.708,
+  "tipo": "video",
+  "texto": "La mejor espada de Ocarina no está en un cofre. Hay que ganarla con un intercambio de objetos que cruza todo el mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 489.708,
+  "t1": 500.108,
+  "tipo": "video",
+  "texto": "Empieza con un huevo de bolsillo que se convierte en un pollo, sigue con una seta mágica, una poción, una sierra, una espada rota, un frasco de colirio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 500.108,
+  "t1": 508.408,
+  "tipo": "video",
+  "texto": "y termina con un resguardo. Y algunos tienen el tiempo contado. La seta y el colirio se echan a perder en unos minutos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 508.408,
+  "t1": 517.534,
+  "tipo": "video",
+  "texto": "así que hay que cruzar Hyrule corriendo. Al final, Biggoron, un goron del tamaño de una montaña, te forja la espada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.534,
+  "t1": 524.492,
+  "tipo": "video",
+  "texto": "Pero tarda tres días. O tocas seis veces la canción del Sol, para que pasen más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.492,
+  "t1": 533.932,
+  "tipo": "video",
+  "texto": "El premio es la espada de Biggoron, de dos manos, mucho más fuerte que la Espada Maestra. Y a diferencia de la espada de los gigantes, que se rompe,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.932,
+  "t1": 543.713,
+  "tipo": "video",
+  "texto": "esta no se rompe nunca. En el seis, el templo más odiado de la historia de Zelda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 543.713,
+  "t1": 550.533,
+  "tipo": "video",
+  "texto": "El Templo del Agua tiene un nivel de agua que subes y bajas tocando la canción de Zelda en puntos concretos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.533,
+  "t1": 559.491,
+  "tipo": "video",
+  "texto": "Y si te equivocas, toca volver atrás. Pero lo que de verdad desesperaba eran las botas de hierro. Para hundirte, te las ponías.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.491,
+  "t1": 568.205,
+  "tipo": "video",
+  "texto": "Para salir, te las quitabas. Y cada vez, había que abrir el menú. Ponte las botas, menú, quítate las botas, menú,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 568.205,
+  "t1": 577.013,
+  "tipo": "video",
+  "texto": "y así decenas de veces en una sola mazmorra. Eiji Aonuma, el que la diseñó, pidió perdón en público en dos mil nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.013,
+  "t1": 585.552,
+  "tipo": "video",
+  "texto": "Dijo que lo que más lamentaba era lo difícil que era ponerse y quitarse esas botas, y que debió hacerlo mucho más fácil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.552,
+  "t1": 593.872,
+  "tipo": "video",
+  "texto": "Y lo arregló. En la versión de tres de ese, las botas de hierro pasaron a un botón. Diez años cargando con un templo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.872,
+  "t1": 601.968,
+  "tipo": "video",
+  "texto": "y la solución era un botón. Número cinco. El juego que cambió en silencio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 601.968,
+  "t1": 610.647,
+  "tipo": "video",
+  "texto": "Ocarina of Time tiene varias versiones del cartucho, y no todas son iguales. Nintendo fue cambiando cosas sin avisar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.647,
+  "t1": 622.687,
+  "tipo": "video",
+  "texto": "En las primeras copias, la música del Templo del Fuego tenía un canto de voces. Era un fragmento de la llamada islámica a la oración, sacado de una biblioteca de sonidos comercial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.687,
+  "t1": 629.917,
+  "tipo": "video",
+  "texto": "En la versión uno punto dos del cartucho, el canto desapareció. Y en esa misma versión cambió otra cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 629.917,
+  "t1": 637.588,
+  "tipo": "video",
+  "texto": "En la pelea final, la sangre que escupe Ganondorf era roja. Desde entonces, es verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 637.588,
+  "t1": 646.108,
+  "tipo": "video",
+  "texto": "Y cuando el juego llegó a GameCube, Nintendo cambió también el símbolo de los Gerudo, una luna y una estrella, que estaba en el escudo espejo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 646.108,
+  "t1": 657.821,
+  "tipo": "video",
+  "texto": "en los interruptores y en los bloques del tiempo. Así que, si tienes un cartucho de los primeros, tienes un Ocarina que Nintendo ya no quiso volver a vender.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 657.821,
+  "t1": 663.249,
+  "tipo": "video",
+  "texto": "En el cuatro, el Zelda que iba a salir en un disco. Nintendo preparaba un",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.249,
+  "t1": 672.228,
+  "tipo": "video",
+  "texto": "accesorio para la Nintendo sesenta y cuatro, el sesenta y cuatro de de, una unidad de discos magnéticos que se conectaba debajo de la consola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.228,
+  "t1": 680.538,
+  "tipo": "video",
+  "texto": "Ocarina of Time se pensó en un principio para ese formato, pero el disco no leía los datos lo bastante rápido, y pasó al cartucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 680.538,
+  "t1": 688.886,
+  "tipo": "video",
+  "texto": "Para el disco se planeó otra cosa, una expansión con las mazmorras rehechas. Su nombre era Ura Zelda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.886,
+  "t1": 697.341,
+  "tipo": "video",
+  "texto": "El sesenta y cuatro de de fue un fracaso, y casi no salió de Japón. La expansión se quedó guardada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 697.341,
+  "t1": 706.091,
+  "tipo": "video",
+  "texto": "Y aquí viene lo mejor. Miyamoto le dio a Eiji Aonuma a elegir. O terminaba Ura Zelda, o hacía un juego nuevo en un solo año,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 706.091,
+  "t1": 714.363,
+  "tipo": "video",
+  "texto": "con lo que ya tenían de Ocarina. Eligió lo segundo, y así nació Majora's Mask. Pero Ura Zelda no se perdió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 714.363,
+  "t1": 725.647,
+  "tipo": "video",
+  "texto": "En dos mil dos volvió como Master Quest, en GameCube, con las mazmorras cambiadas por completo. Y se regalaba al reservar The Wind Waker.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 725.647,
+  "t1": 734.212,
+  "tipo": "video",
+  "texto": "Número tres. La ocarina de cinco notas. El mando de Nintendo sesenta y cuatro solo tenía cinco botones libres para tocar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 734.212,
+  "t1": 740.933,
+  "tipo": "video",
+  "texto": "El A y los cuatro botones C. Así que la ocarina tiene cinco notas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.933,
+  "t1": 749.093,
+  "tipo": "video",
+  "texto": "Koji Kondo tuvo que componer con eso doce melodías. La de Saria, la de Epona, la nana de Zelda, la del Sol,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 749.093,
+  "t1": 756.934,
+  "tipo": "video",
+  "texto": "la del Tiempo, y las de los templos. Él mismo contó que con solo cinco notas fue difícil componer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 756.934,
+  "t1": 765.736,
+  "tipo": "video",
+  "texto": "Y tenían que ser cortas, para que pudieras tocarlas tú, pero lo bastante buenas para que se te quedaran pegadas veinticinco años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 765.736,
+  "t1": 773.596,
+  "tipo": "video",
+  "texto": "Por eso la canción de Saria suena en cualquier sitio, y por eso alguien que no ha jugado nunca reconoce la nana de Zelda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 773.596,
+  "t1": 784.726,
+  "tipo": "video",
+  "texto": "Cinco notas, y salió una de las bandas sonoras más famosas de la historia. Número dos. La canción que no compuso nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.726,
+  "t1": 791.086,
+  "tipo": "video",
+  "texto": "De adulto, en el molino de Kakariko, hay un hombre que toca un organillo. Está furioso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.086,
+  "t1": 800.696,
+  "tipo": "video",
+  "texto": "Dice que hace siete años un niño con una ocarina tocó una canción, y desde entonces su molino gira sin control y el pozo se secó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.696,
+  "t1": 807.387,
+  "tipo": "video",
+  "texto": "Te enseña esa canción, la canción de la tormenta, para que no se te olvide quién tiene la culpa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.387,
+  "t1": 819.517,
+  "tipo": "video",
+  "texto": "Entonces vuelves al pasado con la Espada Maestra, entras al molino de niño, y se la tocas. El molino se dispara, el pozo se seca, y el hombre aprende la canción de ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 819.517,
+  "t1": 827.027,
+  "tipo": "video",
+  "texto": "Él te la enseña porque tú se la tocaste, y tú se la tocaste porque él te la enseñó. Nadie la compuso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 827.027,
+  "t1": 835.808,
+  "tipo": "video",
+  "texto": "La canción existe solo porque Link viajó en el tiempo. Es una paradoja de libro, metida en un juego de Nintendo sesenta y cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 835.808,
+  "t1": 843.035,
+  "tipo": "video",
+  "texto": "Y es el único sitio donde el juego te hace culpable de algo que todavía no habías hecho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.035,
+  "t1": 853.644,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. El final que partió la historia de Zelda en tres. ¿Recuerdas que, al final, Zelda devuelve a Link a su infancia?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 853.644,
+  "t1": 861.871,
+  "tipo": "video",
+  "texto": "Durante años, los fans discutieron qué significaba eso. Porque Hyrule seguía existiendo en el futuro, sin su héroe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 861.871,
+  "t1": 870.552,
+  "tipo": "video",
+  "texto": "Y en el pasado, Link volvía con todo lo que sabía. En dos mil once, Nintendo publicó en Japón el libro Hyrule Historia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 870.552,
+  "t1": 876.742,
+  "tipo": "video",
+  "texto": "y lo confirmó. El final de Ocarina of Time divide la cronología en tres líneas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 876.742,
+  "t1": 887.402,
+  "tipo": "video",
+  "texto": "En una, Link adulto se va, y Hyrule queda sin héroe. Esa lleva a The Wind Waker, con el reino bajo el mar. En otra, Link niño avisa del peligro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 887.402,
+  "t1": 896.728,
+  "tipo": "video",
+  "texto": "y de ahí salen Majora's Mask y Twilight Princess. Y hay una tercera, la más rara. La línea en la que Link pierde contra Ganon.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 896.728,
+  "t1": 905.642,
+  "tipo": "video",
+  "texto": "De ahí salen A Link to the Past y el primer Zelda. Así que casi toda la saga, de un modo u otro, sale de este juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 905.642,
+  "t1": 911.682,
+  "tipo": "video",
+  "texto": "Y el cinco de noviembre, el remake de Nintendo Switch 2 vuelve justo a ese punto de partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.682,
+  "t1": 921.988,
+  "tipo": "video",
+  "texto": "La historia de la que salió todo lo demás. Esos son los doce secretos de Ocarina of Time. Una vaca en casa, un pescador calvo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 921.988,
+  "t1": 930.855,
+  "tipo": "video",
+  "texto": "un canto borrado en silencio, y una canción que nadie compuso. Es el juego que enseñó a pelear con espada en tres dimensiones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 930.855,
+  "t1": 937.579,
+  "tipo": "video",
+  "texto": "y que todavía hoy marca cómo se cuenta una aventura. ¿Tú conocías la paradoja de la canción de la tormenta?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 937.579,
+  "t1": 949.086,
+  "tipo": "video",
+  "texto": "¿O tenías uno de esos cartuchos con el canto del Templo del Fuego? Cuéntamelo en los comentarios. Y si quieres que hagamos lo mismo con Majora's Mask, o con otro clásico de la Nintendo sesenta y cuatro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 949.086,
+  "t1": 956.087,
+  "tipo": "video",
+  "texto": "déjalo también abajo. Nos vemos en la próxima crónica.",
+  "clip_s": 8
+ }
+]

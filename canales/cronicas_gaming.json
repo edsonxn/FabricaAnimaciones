@@ -1,0 +1,98 @@
+{
+  "canal_id": "UCJpxLWrreWjuTffcjUgDi5Q",
+  "nombre": "Crónicas del gaming",
+  "estilo": "Nintendo/retro (VUELVE el 19-oct-2026 por decisión del usuario; el terror CRT del 13-oct queda como especial): fórmula de Warcraft/Tamriel/Runa = motor SECUENCIA YT (gameplay por beat) + pegatinas reales + fichas + MG nuevos por guion (kit nucleo/mg_gaming.py, estilo N64), voz Chatterbox Sarcastica; docs/estilo_secuencia_yt.md § Crónicas del gaming",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "18:00",
+    "utc": "00:00",
+    "ciclo_dias": 5,
+    "separacion_min_horas": 96,
+    "nota": "Fijado el 13-oct-2026 a pedido del usuario: un video cada 4 días; la hora la eligió Claude (18:00 CDMX = 00:00 UTC del día siguiente: terror = tráfico de noche; cubre MX 18:00, CO 19:00, AR 21:00). AJUSTABLE por Claude con datos: ver docs/publicacion.md § «Frecuencia y hora».",
+    "historial": [
+      {
+        "fecha": "2026-10-13",
+        "ciclo_dias": 4,
+        "hora_local": "18:00",
+        "motivo": "inicio del canal de terror; ciclo pedido por el usuario, hora por criterio (sin datos propios todavía)"
+      }
+    ]
+  },
+  "publicados": [
+    {
+      "video": "sonic_exe",
+      "id": "RrucyrC_1e8",
+      "titulo": "Sonic.exe: el CD maldito que nunca existió",
+      "subido": "2026-10-13",
+      "visibilidad": "programado",
+      "formato": "creepypasta desmontado (terror CRT monitor de PC, largo 3:45)",
+      "nota": "primer video del canal de terror; ElevenLabs David, Lyria, miniatura Flow (Nano Banana 2.1 con texto); mié 14-oct 18:00 CDMX (aprobado por el usuario el 13-oct)",
+      "publicar": "2026-10-15T00:00:00Z",
+      "programado": "2026-10-15T00:00:00Z"
+    },
+    {
+      "video": "banjo_tooie",
+      "id": "HxURLhWv1Vs",
+      "titulo": "Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE",
+      "subido": "2026-10-20",
+      "visibilidad": "public",
+      "publicado": "2026-10-20T14:00:00Z",
+      "formato": "historia_y_10_secretos_secuencia_yt",
+      "nota": "resubido con voz ElevenLabs Hope (la Chatterbox decía mal Tooie/Kazooie; el 1.er upload zJkKmdBzlpE quedó privado, en `retirados`); 15:07; publicado al momento a pedido del usuario el 20-oct; sin .srt subido"
+    },
+    {
+      "video": "zelda_oot",
+      "id": "tHGhx72-OTs",
+      "titulo": "Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE",
+      "subido": "2026-10-22",
+      "visibilidad": "private",
+      "programado": "2026-10-25T00:00:00Z",
+      "formato": "historia_y_12_secretos_secuencia_yt",
+      "nota": "15:56, voz ElevenLabs Hope; gancho = remake de Switch 2 (5-nov-2026); fichas/MG con marcos de Flow (mg_zelda); miniatura Flow con ingredientes reales"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "secretos de videojuegos nintendo 64",
+      "curiosidades banjo kazooie",
+      "historia de rare videojuegos",
+      "secretos zelda ocarina of time",
+      "curiosidades nintendo 64",
+      "contenido cortado videojuegos",
+      "secretos que ignoraste videojuego"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "nintendo",
+      "n64",
+      "64",
+      "zelda",
+      "mario",
+      "banjo",
+      "rare",
+      "secreto",
+      "curiosidad",
+      "historia",
+      "cortado",
+      "juego"
+    ]
+  },
+  "estado": "19-oct-2026: vuelve a Nintendo/retro con la fórmula SECUENCIA YT; primer video banjo_tooie. Antes: terror CRT (13-oct, sonic_exe) y, hasta el 13-oct, 146 videos de Nintendo/Zelda que pasaron a PRIVADO (respaldo canales/metricas/ocultados_cronicas_gaming_2026-10-13.json)",
+  "retirados": [
+    {
+      "video": "banjo_tooie",
+      "id": "zJkKmdBzlpE",
+      "titulo": "Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE",
+      "subido": "2026-10-19",
+      "visibilidad": "privado",
+      "formato": "historia_y_10_secretos_secuencia_yt",
+      "nota": "primer video de la vuelta a Nintendo (SECUENCIA YT, voz Chatterbox Sarcastica, 13:22, miniatura Flow con ingredientes reales); programado a pedido del usuario el 19-oct; sin pantalla final (el canal no tiene) ni subtítulos subidos",
+      "retirado": "2026-10-19",
+      "motivo": "el usuario lo pasó a privado para corregir la voz (Tooie/Kazooie mal dichos) y resubirlo con voz ElevenLabs Hope"
+    }
+  ]
+}

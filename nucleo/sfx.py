@@ -4,6 +4,7 @@ Salida: audio/sfx.wav y audio/sfx_eventos.json"""
 import json
 import math
 import os
+from collections import Counter
 
 import numpy as np
 import soundfile as sf
@@ -689,19 +690,39 @@ def eventos():
 
 def main():
     global BIB
+    import sys
+    import sfx_eleven as SE
     BIB = {k[2:]: v for k, v in globals().items() if k.startswith("s_")}     # incluye los efectos definidos al final
     os.makedirs("audio", exist_ok=True)
     evs = eventos()
-    faltan = sorted({e["nombre"] for e in evs} - set(BIB))
-    assert not faltan, f"SFX sin sintetizar: {faltan}"
+    decl = SE.declarados()                 # guion.SFX_ELEVEN: ElevenLabs/biblioteca en vez del sintetizador (22-oct-2026)
+    if decl:
+        SE.resolver(decl, seco="--seco" in sys.argv)
+    nombres = {e["nombre"] for e in evs}
+    de_archivo = {n: SE.archivos(n) for n in nombres if n in decl or n not in BIB}
+    de_archivo = {n: fs for n, fs in de_archivo.items() if fs}
+    SE.aviso_repetidos(evs, de_archivo)
+    if "--seco" in sys.argv:
+        return
+    faltan = sorted(nombres - set(BIB) - set(de_archivo))
+    assert not faltan, f"SFX sin sintetizar ni en sfx/: {faltan}"
     buf = np.zeros((2, N))
     cache = {}
+    vuelta = Counter()
     for e in evs:
         params = {k: v for k, v in e.items() if k in ("tono", "dur")}
-        key = (e["nombre"], tuple(sorted(params.items())))
-        if key not in cache:
-            x = BIB[e["nombre"]](**params)
-            cache[key] = x.astype(np.float64)
+        if e["nombre"] in de_archivo:                         # archivo: las variantes se turnan evento a evento
+            fs = de_archivo[e["nombre"]]
+            ruta = fs[vuelta[e["nombre"]] % len(fs)]
+            vuelta[e["nombre"]] += 1
+            key = (ruta, params.get("dur"))
+            if key not in cache:
+                cache[key] = SE.recortar(SE.cargar(ruta, SR), params.get("dur"), SR)
+        else:
+            key = (e["nombre"], tuple(sorted(params.items())))
+            if key not in cache:
+                x = BIB[e["nombre"]](**params)
+                cache[key] = x.astype(np.float64)
         x = cache[key]
         if x.ndim == 1:
             x = panear(x, e.get("pan", 0.0))

@@ -1,0 +1,4255 @@
+{
+ "piezas": {
+  "agotado_cortisol__alarma": {
+   "id": "agotado_cortisol__alarma",
+   "video": "agotado_cortisol",
+   "nombre": "alarma",
+   "archivo": "agotado_cortisol__alarma.mp3",
+   "md5": "31d780e11967c0c5b30025e905669ee2",
+   "prompt": "Muffled distant alarm bell ringing in another room, tense, steady loop",
+   "dur": 6.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__almohada": {
+   "id": "agotado_cortisol__almohada",
+   "video": "agotado_cortisol",
+   "nombre": "almohada",
+   "archivo": "agotado_cortisol__almohada.mp3",
+   "md5": "42533ff99ccc77b3bc7c6e6da4da1d13",
+   "prompt": "Soft punches on a fluffy pillow, muffled thumps, comedic",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__arena": {
+   "id": "agotado_cortisol__arena",
+   "video": "agotado_cortisol",
+   "nombre": "arena",
+   "archivo": "agotado_cortisol__arena.mp3",
+   "md5": "f83fb8911d1e98ca4afb2ac917104854",
+   "prompt": "Fine sand trickling softly through an hourglass, gentle continuous hiss",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__baraja": {
+   "id": "agotado_cortisol__baraja",
+   "video": "agotado_cortisol",
+   "nombre": "baraja",
+   "archivo": "agotado_cortisol__baraja.mp3",
+   "md5": "d0ab22e08caa9dd39164c002bd10e971",
+   "prompt": "Deck of playing cards being shuffled and riffled quickly",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__cajon": {
+   "id": "agotado_cortisol__cajon",
+   "video": "agotado_cortisol",
+   "nombre": "cajon",
+   "archivo": "agotado_cortisol__cajon.mp3",
+   "md5": "8224c227a27f56627600f623de2633c7",
+   "prompt": "Metal filing cabinet drawer sliding shut with a soft click",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__campana": {
+   "id": "agotado_cortisol__campana",
+   "video": "agotado_cortisol",
+   "nombre": "campana",
+   "archivo": "agotado_cortisol__campana.mp3",
+   "md5": "884fb8e6be7f9898098f03a694eeadfb",
+   "prompt": "Soft warm singing bowl chime, calm, gentle long resonance",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__ducha": {
+   "id": "agotado_cortisol__ducha",
+   "video": "agotado_cortisol",
+   "nombre": "ducha",
+   "archivo": "agotado_cortisol__ducha.mp3",
+   "md5": "5c3b371eb35f81f10d247a689f1d58d4",
+   "prompt": "Hot shower running water in a small tiled bathroom, steady",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__foco": {
+   "id": "agotado_cortisol__foco",
+   "video": "agotado_cortisol",
+   "nombre": "foco",
+   "archivo": "agotado_cortisol__foco.mp3",
+   "md5": "2d33498eb7ffbfd6fe6721a4cc383271",
+   "prompt": "Light bulb buzzing on suddenly with a bright electric hum, magical rising shimmer",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__gallo": {
+   "id": "agotado_cortisol__gallo",
+   "video": "agotado_cortisol",
+   "nombre": "gallo",
+   "archivo": "agotado_cortisol__gallo.mp3",
+   "md5": "ea7acff188788f59f1919e8e61818607",
+   "prompt": "A confused rooster crowing once in the distance at night",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__golpe": {
+   "id": "agotado_cortisol__golpe",
+   "video": "agotado_cortisol",
+   "nombre": "golpe",
+   "archivo": "agotado_cortisol__golpe.mp3",
+   "md5": "b45f47ec90ebb8187e8dfc03f05b1643",
+   "prompt": "Soft deep cinematic hit with a subtle airy whoosh, for a title word appearing",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__interruptor": {
+   "id": "agotado_cortisol__interruptor",
+   "video": "agotado_cortisol",
+   "nombre": "interruptor",
+   "archivo": "agotado_cortisol__interruptor.mp3",
+   "md5": "c700a33aab2fe7c32d549fcf24b37563",
+   "prompt": "Single click of a bedside lamp pull-chain switch, close and quiet",
+   "dur": 1.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__lapiz": {
+   "id": "agotado_cortisol__lapiz",
+   "video": "agotado_cortisol",
+   "nombre": "lapiz",
+   "archivo": "agotado_cortisol__lapiz.mp3",
+   "md5": "24e7c6d41e9a81315c4abcdd79a3e80a",
+   "prompt": "Pencil writing quickly on a paper notepad, scribbling, close up",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__neon": {
+   "id": "agotado_cortisol__neon",
+   "video": "agotado_cortisol",
+   "nombre": "neon",
+   "archivo": "agotado_cortisol__neon.mp3",
+   "md5": "c469f27024fe2d65177d68fdb2642baa",
+   "prompt": "Electric neon tube buzzing and flickering on, short crackle then steady low hum",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__pantuflas": {
+   "id": "agotado_cortisol__pantuflas",
+   "video": "agotado_cortisol",
+   "nombre": "pantuflas",
+   "archivo": "agotado_cortisol__pantuflas.mp3",
+   "md5": "2ab0e9dc6bdde5679a1c70b9afea15a6",
+   "prompt": "Soft slippers shuffling slowly on a wooden floor at night",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__reloj": {
+   "id": "agotado_cortisol__reloj",
+   "video": "agotado_cortisol",
+   "nombre": "reloj",
+   "archivo": "agotado_cortisol__reloj.mp3",
+   "md5": "bb9e1a68002ea2970c57ce94080bdf03",
+   "prompt": "Quiet ticking of a bedside analog clock in a silent bedroom at night, steady loop",
+   "dur": 6.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__vibra": {
+   "id": "agotado_cortisol__vibra",
+   "video": "agotado_cortisol",
+   "nombre": "vibra",
+   "archivo": "agotado_cortisol__vibra.mp3",
+   "md5": "8e6e8d3479602f4156a61b32c2f5ecef",
+   "prompt": "Phone vibrating once on a wooden nightstand, short buzz",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "agotado_cortisol__villano": {
+   "id": "agotado_cortisol__villano",
+   "video": "agotado_cortisol",
+   "nombre": "villano",
+   "archivo": "agotado_cortisol__villano.mp3",
+   "md5": "0f7f752e0ba087c3e73095be4bb9cdb3",
+   "prompt": "Low ominous cinematic sting, deep brass swell with a dark rumble",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "banjo_tooie__apagado": {
+   "id": "banjo_tooie__apagado",
+   "video": "banjo_tooie",
+   "nombre": "apagado",
+   "archivo": "banjo_tooie__apagado.mp3",
+   "md5": "c56baf1932ffe6c50df3d4b0fd2fb497",
+   "prompt": "Old game console power switch clicking off with a fading electronic hum",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "banjo_tooie__cartucho": {
+   "id": "banjo_tooie__cartucho",
+   "video": "banjo_tooie",
+   "nombre": "cartucho",
+   "archivo": "banjo_tooie__cartucho.mp3",
+   "md5": "556c0e207515e9e3f1d77b42c2863c36",
+   "prompt": "Cartoon boing boing hopping footsteps of a small living box, playful",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "banjo_tooie__dragon": {
+   "id": "banjo_tooie__dragon",
+   "video": "banjo_tooie",
+   "nombre": "dragon",
+   "archivo": "banjo_tooie__dragon.mp3",
+   "md5": "d7a9ff6764ff588ac35396220287a92c",
+   "prompt": "Magical transformation sparkle swirl ending in a small fiery dragon roar, whimsical",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "banjo_tooie__explosion": {
+   "id": "banjo_tooie__explosion",
+   "video": "banjo_tooie",
+   "nombre": "explosion",
+   "archivo": "banjo_tooie__explosion.mp3",
+   "md5": "22bbd306b37120f9afdfe3f5bc32c383",
+   "prompt": "Cartoon house exploding in a magic blast, wooden debris, rumble, whimsical 90s platformer",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "banjo_tooie__fantasma": {
+   "id": "banjo_tooie__fantasma",
+   "video": "banjo_tooie",
+   "nombre": "fantasma",
+   "archivo": "banjo_tooie__fantasma.mp3",
+   "md5": "a5df90f775afe63462fb1d45becc77cc",
+   "prompt": "Ghostly cartoon mole laugh turning devilish with a spooky echo, playful horror",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "banjo_tooie__pesa1": {
+   "id": "banjo_tooie__pesa1",
+   "video": "banjo_tooie",
+   "nombre": "pesa1",
+   "archivo": "banjo_tooie__pesa1.mp3",
+   "md5": "033e1076982b960503814c37d62e0d67",
+   "prompt": "Heavy cartoon one-ton weight dropping with a whistle then a big comedic crash and dust",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "banjo_tooie__pesa2": {
+   "id": "banjo_tooie__pesa2",
+   "video": "banjo_tooie",
+   "nombre": "pesa2",
+   "archivo": "banjo_tooie__pesa2.mp3",
+   "md5": "bc74c68dfa9fd2ec54333560681508b0",
+   "prompt": "Giant iron weight slamming onto a wooden stage, deep thud and wood creak, cartoon",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "duo_promo__aparece": {
+   "id": "duo_promo__aparece",
+   "video": "duo_promo",
+   "nombre": "aparece",
+   "archivo": "duo_promo__aparece.mp3",
+   "md5": "d594b0b4654034236f13f5fa7a09ef90",
+   "prompt": "Very soft UI swish of cards appearing, light and subtle",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo__aviso": {
+   "id": "duo_promo__aviso",
+   "video": "duo_promo",
+   "nombre": "aviso",
+   "archivo": "duo_promo__aviso.mp3",
+   "md5": "7bf93a3d2752e4b447f53851ce15e13d",
+   "prompt": "Soft two-note phone notification chime, warm and friendly, clean",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "duo_promo__burbuja_a": {
+   "id": "duo_promo__burbuja_a",
+   "video": "duo_promo",
+   "nombre": "burbuja_a",
+   "archivo": "duo_promo__burbuja_a.mp3",
+   "md5": "712a31d482aca55211b582cdf504cfb7",
+   "prompt": "Soft bubbly chat message pop, friendly mobile messenger notification blip, very short, clean",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo__burbuja_b": {
+   "id": "duo_promo__burbuja_b",
+   "video": "duo_promo",
+   "nombre": "burbuja_b",
+   "archivo": "duo_promo__burbuja_b.mp3",
+   "md5": "c2f54f503cac368d5b2f4a4118de9275",
+   "prompt": "Gentle water droplet message sent sound, cute UI blip, very short, clean",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo__check_1": {
+   "id": "duo_promo__check_1",
+   "video": "duo_promo",
+   "nombre": "check_1",
+   "archivo": "duo_promo__check_1.mp3",
+   "md5": "eb6c22b906c003723617c87f2d6f5c89",
+   "prompt": "Satisfying bright UI checkmark ding, task completed, mobile app, short",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo__check_2": {
+   "id": "duo_promo__check_2",
+   "video": "duo_promo",
+   "nombre": "check_2",
+   "archivo": "duo_promo__check_2.mp3",
+   "md5": "a9f6be894057ac5cbbb98646398ee5d8",
+   "prompt": "Cheerful task complete chime with a soft pluck, mobile game reward, short",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo__check_3": {
+   "id": "duo_promo__check_3",
+   "video": "duo_promo",
+   "nombre": "check_3",
+   "archivo": "duo_promo__check_3.mp3",
+   "md5": "c2e6586c4d11e617db428930e5817703",
+   "prompt": "Bright sparkly success tick sound, positive UI confirmation, short",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo__confeti": {
+   "id": "duo_promo__confeti",
+   "video": "duo_promo",
+   "nombre": "confeti",
+   "archivo": "duo_promo__confeti.mp3",
+   "md5": "b6ee13be0a149986e927912965499edb",
+   "prompt": "Party popper pop with paper confetti fluttering, festive, short",
+   "dur": 1.48,
+   "canal": "sin"
+  },
+  "duo_promo__corazon": {
+   "id": "duo_promo__corazon",
+   "video": "duo_promo",
+   "nombre": "corazon",
+   "archivo": "duo_promo__corazon.mp3",
+   "md5": "b1739f920b2f094557c5a4de3fd8cdf5",
+   "prompt": "Cute soft heart pop, warm bubbly UI like sound, short",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo__final": {
+   "id": "duo_promo__final",
+   "video": "duo_promo",
+   "nombre": "final",
+   "archivo": "duo_promo__final.mp3",
+   "md5": "5c47550c56446dc00605306c582b31b2",
+   "prompt": "Bright sparkle chime success sting, uplifting, clean ending",
+   "dur": 1.48,
+   "canal": "sin"
+  },
+  "duo_promo__latido": {
+   "id": "duo_promo__latido",
+   "video": "duo_promo",
+   "nombre": "latido",
+   "archivo": "duo_promo__latido.mp3",
+   "md5": "dcc672ca1a6c5b61da16a753e66e3e11",
+   "prompt": "Soft warm heartbeat, two gentle thumps",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo__llenado": {
+   "id": "duo_promo__llenado",
+   "video": "duo_promo",
+   "nombre": "llenado",
+   "archivo": "duo_promo__llenado.mp3",
+   "md5": "6cb9c9d9261f2105f277c9d3dd205386",
+   "prompt": "Rising energetic progress bar filling sound, ascending sparkly synth tones building up",
+   "dur": 3.48,
+   "canal": "sin"
+  },
+  "duo_promo__magia": {
+   "id": "duo_promo__magia",
+   "video": "duo_promo",
+   "nombre": "magia",
+   "archivo": "duo_promo__magia.mp3",
+   "md5": "383d36ebd5a4620d56e589be7dc1cfd7",
+   "prompt": "Magical sparkle shimmer swell rising into a warm soft chime, logo reveal, romantic",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "duo_promo__nivel": {
+   "id": "duo_promo__nivel",
+   "video": "duo_promo",
+   "nombre": "nivel",
+   "archivo": "duo_promo__nivel.mp3",
+   "md5": "96975af1fc2046e8a068e9efeddbcb8c",
+   "prompt": "Triumphant level up fanfare, short bright brass and chimes, mobile game celebration",
+   "dur": 2.2,
+   "canal": "sin"
+  },
+  "duo_promo__pestana": {
+   "id": "duo_promo__pestana",
+   "video": "duo_promo",
+   "nombre": "pestana",
+   "archivo": "duo_promo__pestana.mp3",
+   "md5": "3891d6c822c611174868c87852e64b0b",
+   "prompt": "Soft UI tab switch click, smooth, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo__remolino": {
+   "id": "duo_promo__remolino",
+   "video": "duo_promo",
+   "nombre": "remolino",
+   "archivo": "duo_promo__remolino.mp3",
+   "md5": "8741a93eaae2cd96154c1fac560209fa",
+   "prompt": "Magical swirling whoosh with sparkles converging to the center",
+   "dur": 1.48,
+   "canal": "sin"
+  },
+  "duo_promo__sube": {
+   "id": "duo_promo__sube",
+   "video": "duo_promo",
+   "nombre": "sube",
+   "archivo": "duo_promo__sube.mp3",
+   "md5": "0c10fa3c8742eb9191b5069b4d6f6c97",
+   "prompt": "Smooth soft whoosh of a phone sliding up into view, airy, short",
+   "dur": 0.88,
+   "canal": "sin"
+  },
+  "duo_promo__tache": {
+   "id": "duo_promo__tache",
+   "video": "duo_promo",
+   "nombre": "tache",
+   "archivo": "duo_promo__tache.mp3",
+   "md5": "04051b12c93a7539b0f8aeb2863576e6",
+   "prompt": "Quick marker pen scribble cross out on paper, short",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo__taza": {
+   "id": "duo_promo__taza",
+   "video": "duo_promo",
+   "nombre": "taza",
+   "archivo": "duo_promo__taza.mp3",
+   "md5": "45a808903a4db2f802233dfa5febd8e8",
+   "prompt": "Ceramic tea mug gently set on a wooden table with a soft clink",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo__tic": {
+   "id": "duo_promo__tic",
+   "video": "duo_promo",
+   "nombre": "tic",
+   "archivo": "duo_promo__tic.mp3",
+   "md5": "64f21d6269d339639c8f95a26420ce57",
+   "prompt": "Fast soft clock ticking, gentle, close",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo__toque": {
+   "id": "duo_promo__toque",
+   "video": "duo_promo",
+   "nombre": "toque",
+   "archivo": "duo_promo__toque.mp3",
+   "md5": "941ba39a29d672832626f92030e51773",
+   "prompt": "Phone screen tap, soft finger click on glass, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo__whoosh": {
+   "id": "duo_promo__whoosh",
+   "video": "duo_promo",
+   "nombre": "whoosh",
+   "archivo": "duo_promo__whoosh.mp3",
+   "md5": "31391ec6358bea73264cd3e1aa85b687",
+   "prompt": "Soft airy swoosh transition, smooth and light, short",
+   "dur": 0.8,
+   "canal": "sin"
+  },
+  "duo_promo__xp_1": {
+   "id": "duo_promo__xp_1",
+   "video": "duo_promo",
+   "nombre": "xp_1",
+   "archivo": "duo_promo__xp_1.mp3",
+   "md5": "166592f0034961b649e918d57501256d",
+   "prompt": "Sparkly magical points collected chime, ascending little bells, short",
+   "dur": 0.88,
+   "canal": "sin"
+  },
+  "duo_promo__xp_2": {
+   "id": "duo_promo__xp_2",
+   "video": "duo_promo",
+   "nombre": "xp_2",
+   "archivo": "duo_promo__xp_2.mp3",
+   "md5": "9845590a37d097a06ac41aa717c7e161",
+   "prompt": "Soft coins and glitter collect sound, mobile game XP gained, short",
+   "dur": 0.88,
+   "canal": "sin"
+  },
+  "duo_promo_60__aparece": {
+   "id": "duo_promo_60__aparece",
+   "video": "duo_promo_60",
+   "nombre": "aparece",
+   "archivo": "duo_promo_60__aparece.mp3",
+   "md5": "4ae4171440917c1490479eee4c816838",
+   "prompt": "Very soft UI swish of cards appearing one after another, light and subtle",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo_60__aviso": {
+   "id": "duo_promo_60__aviso",
+   "video": "duo_promo_60",
+   "nombre": "aviso",
+   "archivo": "duo_promo_60__aviso.mp3",
+   "md5": "05008046646487e2488b7f14dbb41845",
+   "prompt": "Soft two-note phone notification chime, warm and friendly, clean",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "duo_promo_60__bloque": {
+   "id": "duo_promo_60__bloque",
+   "video": "duo_promo_60",
+   "nombre": "bloque",
+   "archivo": "duo_promo_60__bloque.mp3",
+   "md5": "b4706d17bf94742f5852e06d1ff4d9e1",
+   "prompt": "Wooden toy block dropping onto a stack, solid soft clack",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__boton": {
+   "id": "duo_promo_60__boton",
+   "video": "duo_promo_60",
+   "nombre": "boton",
+   "archivo": "duo_promo_60__boton.mp3",
+   "md5": "2f9c080d773d1f4c7bd6ca68f8c8ed5a",
+   "prompt": "Soft rubbery game button press, satisfying",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__brillo_a": {
+   "id": "duo_promo_60__brillo_a",
+   "video": "duo_promo_60",
+   "nombre": "brillo_a",
+   "archivo": "duo_promo_60__brillo_a.mp3",
+   "md5": "d558db7755d71feba00beb8691dd2cc5",
+   "prompt": "Small magical sparkle twinkle, short bright chime, cute",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo_60__brillo_b": {
+   "id": "duo_promo_60__brillo_b",
+   "video": "duo_promo_60",
+   "nombre": "brillo_b",
+   "archivo": "duo_promo_60__brillo_b.mp3",
+   "md5": "8b9656567049fceb5aa85e7be034ac3b",
+   "prompt": "Tiny glittery ding with soft bells, magical UI, short",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo_60__brote_a": {
+   "id": "duo_promo_60__brote_a",
+   "video": "duo_promo_60",
+   "nombre": "brote_a",
+   "archivo": "duo_promo_60__brote_a.mp3",
+   "md5": "96470ed0e5fb8103479869592878ba7b",
+   "prompt": "Tiny plant sprouting pop, cute soft plink",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__brote_b": {
+   "id": "duo_promo_60__brote_b",
+   "video": "duo_promo_60",
+   "nombre": "brote_b",
+   "archivo": "duo_promo_60__brote_b.mp3",
+   "md5": "adf0614d6714eb50e8d6c83dc60c5deb",
+   "prompt": "Little bubbly growth pop, cute garden game, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__caen": {
+   "id": "duo_promo_60__caen",
+   "video": "duo_promo_60",
+   "nombre": "caen",
+   "archivo": "duo_promo_60__caen.mp3",
+   "md5": "f13928b2c9ed19e652b070e63f2b0d1d",
+   "prompt": "Many gold coins pouring into a pile, sparkly video game cash in",
+   "dur": 1.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__cartas": {
+   "id": "duo_promo_60__cartas",
+   "video": "duo_promo_60",
+   "nombre": "cartas",
+   "archivo": "duo_promo_60__cartas.mp3",
+   "md5": "1b852b18f072ad2e83df6505841b313f",
+   "prompt": "Cards swiping away and new cards sliding in, soft paper swish, UI",
+   "dur": 0.8,
+   "canal": "sin"
+  },
+  "duo_promo_60__cerdito": {
+   "id": "duo_promo_60__cerdito",
+   "video": "duo_promo_60",
+   "nombre": "cerdito",
+   "archivo": "duo_promo_60__cerdito.mp3",
+   "md5": "07fc608e6880543553a4e504271abb7a",
+   "prompt": "Cute cartoon pig oink, playful, short",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__choque": {
+   "id": "duo_promo_60__choque",
+   "video": "duo_promo_60",
+   "nombre": "choque",
+   "archivo": "duo_promo_60__choque.mp3",
+   "md5": "b51a4cb52870336bb1323f189b591242",
+   "prompt": "Wooden fort crashing apart with glass breaking, cartoon game destruction, short",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo_60__cojin": {
+   "id": "duo_promo_60__cojin",
+   "video": "duo_promo_60",
+   "nombre": "cojin",
+   "archivo": "duo_promo_60__cojin.mp3",
+   "md5": "655f77557cec2b0fd039681c377a9052",
+   "prompt": "Person flopping down onto a soft couch cushion, gentle fabric thump, tired",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__colgar": {
+   "id": "duo_promo_60__colgar",
+   "video": "duo_promo_60",
+   "nombre": "colgar",
+   "archivo": "duo_promo_60__colgar.mp3",
+   "md5": "519f95f27a3bf12818a879ddb7201fc5",
+   "prompt": "Video call ending soft descending blip",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__confeti": {
+   "id": "duo_promo_60__confeti",
+   "video": "duo_promo_60",
+   "nombre": "confeti",
+   "archivo": "duo_promo_60__confeti.mp3",
+   "md5": "89e1d775f4b7eaac190fc289fbcc4033",
+   "prompt": "Party popper pop with paper confetti fluttering, festive, short",
+   "dur": 1.36,
+   "canal": "sin"
+  },
+  "duo_promo_60__correcto": {
+   "id": "duo_promo_60__correcto",
+   "video": "duo_promo_60",
+   "nombre": "correcto",
+   "archivo": "duo_promo_60__correcto.mp3",
+   "md5": "308be0a15acb5cf254a4d209f953d249",
+   "prompt": "Bright correct answer chime, cheerful quiz game, short",
+   "dur": 0.8,
+   "canal": "sin"
+  },
+  "duo_promo_60__correcto2": {
+   "id": "duo_promo_60__correcto2",
+   "video": "duo_promo_60",
+   "nombre": "correcto2",
+   "archivo": "duo_promo_60__correcto2.mp3",
+   "md5": "a00c05fade28ffaa25b8349d80588d50",
+   "prompt": "Cheerful success jingle with a soft pluck, teamwork win, mobile game, short",
+   "dur": 0.88,
+   "canal": "sin"
+  },
+  "duo_promo_60__deslizar": {
+   "id": "duo_promo_60__deslizar",
+   "video": "duo_promo_60",
+   "nombre": "deslizar",
+   "archivo": "duo_promo_60__deslizar.mp3",
+   "md5": "45acf81904d6888c42e98e01678e63cf",
+   "prompt": "Soft fabric slide of two people scooting closer on a couch, gentle swish",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo_60__dia_noche": {
+   "id": "duo_promo_60__dia_noche",
+   "video": "duo_promo_60",
+   "nombre": "dia_noche",
+   "archivo": "duo_promo_60__dia_noche.mp3",
+   "md5": "689f700ffc987a2969ed405fb0ebce08",
+   "prompt": "Magical time lapse swirl, wind and twinkling chimes rising and falling",
+   "dur": 1.28,
+   "canal": "sin"
+  },
+  "duo_promo_60__ding": {
+   "id": "duo_promo_60__ding",
+   "video": "duo_promo_60",
+   "nombre": "ding",
+   "archivo": "duo_promo_60__ding.mp3",
+   "md5": "c9e79867c8f9775e70e7c837225795f1",
+   "prompt": "Cash register soft ding, coin counter, cute game",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__fase_a": {
+   "id": "duo_promo_60__fase_a",
+   "video": "duo_promo_60",
+   "nombre": "fase_a",
+   "archivo": "duo_promo_60__fase_a.mp3",
+   "md5": "3fa371682a06c0f1042973b04e7b93e5",
+   "prompt": "Soft warm marimba note chime, gentle UI change",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__fase_b": {
+   "id": "duo_promo_60__fase_b",
+   "video": "duo_promo_60",
+   "nombre": "fase_b",
+   "archivo": "duo_promo_60__fase_b.mp3",
+   "md5": "61a42c8b081583f3dd832d4908d52185",
+   "prompt": "Soft glockenspiel note, gentle UI change, short",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__fase_c": {
+   "id": "duo_promo_60__fase_c",
+   "video": "duo_promo_60",
+   "nombre": "fase_c",
+   "archivo": "duo_promo_60__fase_c.mp3",
+   "md5": "21a82dd8869cc355f0cc46e15fb397d6",
+   "prompt": "Soft kalimba pluck, gentle UI change, short",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__ficha_a": {
+   "id": "duo_promo_60__ficha_a",
+   "video": "duo_promo_60",
+   "nombre": "ficha_a",
+   "archivo": "duo_promo_60__ficha_a.mp3",
+   "md5": "5dc654b379f0a120792ab8c60bcc24c0",
+   "prompt": "Cute bouncy boing hop, playful game token jump, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__ficha_b": {
+   "id": "duo_promo_60__ficha_b",
+   "video": "duo_promo_60",
+   "nombre": "ficha_b",
+   "archivo": "duo_promo_60__ficha_b.mp3",
+   "md5": "b59df0185e01f6c2046e392084773064",
+   "prompt": "Soft springy bloop jump, cartoon hop, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__ficha_c4": {
+   "id": "duo_promo_60__ficha_c4",
+   "video": "duo_promo_60",
+   "nombre": "ficha_c4",
+   "archivo": "duo_promo_60__ficha_c4.mp3",
+   "md5": "191e7e564bea6373783b0b10a0b283fd",
+   "prompt": "Plastic disc dropping into a connect four board, clacky plastic slide",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__final": {
+   "id": "duo_promo_60__final",
+   "video": "duo_promo_60",
+   "nombre": "final",
+   "archivo": "duo_promo_60__final.mp3",
+   "md5": "ac4c65e1e6055c7430457976cd3fb435",
+   "prompt": "Bright sparkle chime success sting, uplifting, clean ending",
+   "dur": 1.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__florece": {
+   "id": "duo_promo_60__florece",
+   "video": "duo_promo_60",
+   "nombre": "florece",
+   "archivo": "duo_promo_60__florece.mp3",
+   "md5": "254cc70bf9bc5466a3a6aa0383554719",
+   "prompt": "Plants blooming sparkle, magical bright chimes ascending, cozy garden game",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo_60__gotas": {
+   "id": "duo_promo_60__gotas",
+   "video": "duo_promo_60",
+   "nombre": "gotas",
+   "archivo": "duo_promo_60__gotas.mp3",
+   "md5": "8cc0b1de607f35b962a4a7ba45df7507",
+   "prompt": "Water droplets falling into soil, a few gentle drips and a splash",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "duo_promo_60__grua": {
+   "id": "duo_promo_60__grua",
+   "video": "duo_promo_60",
+   "nombre": "grua",
+   "archivo": "duo_promo_60__grua.mp3",
+   "md5": "3835069d36e644b57f0d6d86ed20ae60",
+   "prompt": "Small toy crane motor whirring back and forth, cute mechanical",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "duo_promo_60__isla": {
+   "id": "duo_promo_60__isla",
+   "video": "duo_promo_60",
+   "nombre": "isla",
+   "archivo": "duo_promo_60__isla.mp3",
+   "md5": "58c7c8485f3a50fea6bb4c23ef68a223",
+   "prompt": "Magical rising whoosh with soft wind chimes, floating island appears",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo_60__lanza": {
+   "id": "duo_promo_60__lanza",
+   "video": "duo_promo_60",
+   "nombre": "lanza",
+   "archivo": "duo_promo_60__lanza.mp3",
+   "md5": "252737a001575b1062f9be4b5a14a8e5",
+   "prompt": "Slingshot release twang with a quick whoosh",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__lapiz": {
+   "id": "duo_promo_60__lapiz",
+   "video": "duo_promo_60",
+   "nombre": "lapiz",
+   "archivo": "duo_promo_60__lapiz.mp3",
+   "md5": "07a88c912e3e8fa73dc802ae18f4cdbd",
+   "prompt": "Pencil quickly sketching on paper, drawing scribbles",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo_60__latido": {
+   "id": "duo_promo_60__latido",
+   "video": "duo_promo_60",
+   "nombre": "latido",
+   "archivo": "duo_promo_60__latido.mp3",
+   "md5": "4bfebe2ebca5e03981380df8d7a154d7",
+   "prompt": "Soft warm heartbeat, two gentle thumps",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo_60__llamada": {
+   "id": "duo_promo_60__llamada",
+   "video": "duo_promo_60",
+   "nombre": "llamada",
+   "archivo": "duo_promo_60__llamada.mp3",
+   "md5": "cc078f22dc00c458e2632ccb252d6c0f",
+   "prompt": "Video call connecting tone, soft friendly ascending blips",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "duo_promo_60__magia": {
+   "id": "duo_promo_60__magia",
+   "video": "duo_promo_60",
+   "nombre": "magia",
+   "archivo": "duo_promo_60__magia.mp3",
+   "md5": "44c52318528454ff2d05fd72c8c1998d",
+   "prompt": "Magical sparkle shimmer swell rising into a warm soft chime, logo reveal, romantic",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "duo_promo_60__marchita": {
+   "id": "duo_promo_60__marchita",
+   "video": "duo_promo_60",
+   "nombre": "marchita",
+   "archivo": "duo_promo_60__marchita.mp3",
+   "md5": "6a04ba9e51ab85935f56a777b1e60b53",
+   "prompt": "Sad cartoon descending slide whistle, soft and short",
+   "dur": 0.88,
+   "canal": "sin"
+  },
+  "duo_promo_60__monedas": {
+   "id": "duo_promo_60__monedas",
+   "video": "duo_promo_60",
+   "nombre": "monedas",
+   "archivo": "duo_promo_60__monedas.mp3",
+   "md5": "d0c761b29b663719d96fe1f0bfdb2c13",
+   "prompt": "Shower of coins jingling and bouncing, video game reward",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "duo_promo_60__mueble_a": {
+   "id": "duo_promo_60__mueble_a",
+   "video": "duo_promo_60",
+   "nombre": "mueble_a",
+   "archivo": "duo_promo_60__mueble_a.mp3",
+   "md5": "7bca58335f0f0442203af06576b985c5",
+   "prompt": "Furniture piece dropping onto a wooden floor with a soft bouncy thud, cozy game",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__mueble_b": {
+   "id": "duo_promo_60__mueble_b",
+   "video": "duo_promo_60",
+   "nombre": "mueble_b",
+   "archivo": "duo_promo_60__mueble_b.mp3",
+   "md5": "2aa419b8774a8fb8207ee9160b7c4006",
+   "prompt": "Soft cushioned plop of an object landing, cute building game, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__mueble_c": {
+   "id": "duo_promo_60__mueble_c",
+   "video": "duo_promo_60",
+   "nombre": "mueble_c",
+   "archivo": "duo_promo_60__mueble_c.mp3",
+   "md5": "d584bb8c425224f138aefde3c352805c",
+   "prompt": "Light wooden knock of furniture placed down, cozy game, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__pagina": {
+   "id": "duo_promo_60__pagina",
+   "video": "duo_promo_60",
+   "nombre": "pagina",
+   "archivo": "duo_promo_60__pagina.mp3",
+   "md5": "8f1d0fe801748082bef4e53de057fd16",
+   "prompt": "Magazine page turning, crisp paper flip",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__pasa": {
+   "id": "duo_promo_60__pasa",
+   "video": "duo_promo_60",
+   "nombre": "pasa",
+   "archivo": "duo_promo_60__pasa.mp3",
+   "md5": "f522f012eafb49c7031f3dfe8d5d2a88",
+   "prompt": "Quick soft UI swipe, page slides sideways in an app, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__pasa_b": {
+   "id": "duo_promo_60__pasa_b",
+   "video": "duo_promo_60",
+   "nombre": "pasa_b",
+   "archivo": "duo_promo_60__pasa_b.mp3",
+   "md5": "90cc1d47c18e10f6597948fade4c62bc",
+   "prompt": "Light paper-like swish of a screen sliding sideways, mobile app, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__pestana": {
+   "id": "duo_promo_60__pestana",
+   "video": "duo_promo_60",
+   "nombre": "pestana",
+   "archivo": "duo_promo_60__pestana.mp3",
+   "md5": "33c28b87e07f9e9ac8109059be5c2e5f",
+   "prompt": "Soft UI tab switch click, smooth, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__pila": {
+   "id": "duo_promo_60__pila",
+   "video": "duo_promo_60",
+   "nombre": "pila",
+   "archivo": "duo_promo_60__pila.mp3",
+   "md5": "3256bae63423541fc48a12681de67a06",
+   "prompt": "Low battery warning blip, two soft descending electronic beeps, phone, quiet",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo_60__plato": {
+   "id": "duo_promo_60__plato",
+   "video": "duo_promo_60",
+   "nombre": "plato",
+   "archivo": "duo_promo_60__plato.mp3",
+   "md5": "972a3f3ad07b0ebfe95fd7bda507a44a",
+   "prompt": "Ceramic plate set down gently on a table with a fork clink",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__pop_a": {
+   "id": "duo_promo_60__pop_a",
+   "video": "duo_promo_60",
+   "nombre": "pop_a",
+   "archivo": "duo_promo_60__pop_a.mp3",
+   "md5": "8901194e1de9788e974d70c1e68c4093",
+   "prompt": "Soft bubble pop, cute UI icon appearing, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__pop_b": {
+   "id": "duo_promo_60__pop_b",
+   "video": "duo_promo_60",
+   "nombre": "pop_b",
+   "archivo": "duo_promo_60__pop_b.mp3",
+   "md5": "297cc12b9f6a3251d472c00404994fc5",
+   "prompt": "Light airy pop with a tiny chime, UI, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__resortera": {
+   "id": "duo_promo_60__resortera",
+   "video": "duo_promo_60",
+   "nombre": "resortera",
+   "archivo": "duo_promo_60__resortera.mp3",
+   "md5": "7452dd3b31f7fbdc0a8aba557064f9ae",
+   "prompt": "Rubber slingshot band stretching, creaky elastic pull",
+   "dur": 0.8,
+   "canal": "sin"
+  },
+  "duo_promo_60__scroll_a": {
+   "id": "duo_promo_60__scroll_a",
+   "video": "duo_promo_60",
+   "nombre": "scroll_a",
+   "archivo": "duo_promo_60__scroll_a.mp3",
+   "md5": "b204407f70b978db04974dd01aa358c9",
+   "prompt": "Soft finger swipe scrolling on a phone screen, light glass flick, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__scroll_b": {
+   "id": "duo_promo_60__scroll_b",
+   "video": "duo_promo_60",
+   "nombre": "scroll_b",
+   "archivo": "duo_promo_60__scroll_b.mp3",
+   "md5": "338bea105e0792d476d42535878b0d1f",
+   "prompt": "Quick light thumb flick on smartphone glass, subtle swipe, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__sin_red": {
+   "id": "duo_promo_60__sin_red",
+   "video": "duo_promo_60",
+   "nombre": "sin_red",
+   "archivo": "duo_promo_60__sin_red.mp3",
+   "md5": "38b6869842f2f1120f35a2bd95587c7a",
+   "prompt": "Soft gentle error blip, low two-note, mobile app, quiet",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__sube": {
+   "id": "duo_promo_60__sube",
+   "video": "duo_promo_60",
+   "nombre": "sube",
+   "archivo": "duo_promo_60__sube.mp3",
+   "md5": "fad19b2c355022e9f7055e5e238701f7",
+   "prompt": "Smooth soft whoosh of a phone sliding up into view, airy, short",
+   "dur": 0.88,
+   "canal": "sin"
+  },
+  "duo_promo_60__switch": {
+   "id": "duo_promo_60__switch",
+   "video": "duo_promo_60",
+   "nombre": "switch",
+   "archivo": "duo_promo_60__switch.mp3",
+   "md5": "593d74c2d44a1c99614171a35d106aa5",
+   "prompt": "Toggle switch flicked on in a mobile app, soft satisfying click with a tiny chime",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__tarjeta": {
+   "id": "duo_promo_60__tarjeta",
+   "video": "duo_promo_60",
+   "nombre": "tarjeta",
+   "archivo": "duo_promo_60__tarjeta.mp3",
+   "md5": "1b7ca871a73d66533b4c95f884df1528",
+   "prompt": "Soft paper card flip pop, friendly UI, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__teclas": {
+   "id": "duo_promo_60__teclas",
+   "video": "duo_promo_60",
+   "nombre": "teclas",
+   "archivo": "duo_promo_60__teclas.mp3",
+   "md5": "5d88274fb9bfbcedbe4af7664f307bd7",
+   "prompt": "Soft phone keyboard typing four taps",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__tictac": {
+   "id": "duo_promo_60__tictac",
+   "video": "duo_promo_60",
+   "nombre": "tictac",
+   "archivo": "duo_promo_60__tictac.mp3",
+   "md5": "8311eccadf87fdced26c11f7d7f1dfe9",
+   "prompt": "Fast soft clock ticking speeding up, time passing, gentle",
+   "dur": 1.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__toque": {
+   "id": "duo_promo_60__toque",
+   "video": "duo_promo_60",
+   "nombre": "toque",
+   "archivo": "duo_promo_60__toque.mp3",
+   "md5": "d0b836cc520ede581cd030c687244df4",
+   "prompt": "Phone screen tap, soft finger click on glass, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "duo_promo_60__vibra": {
+   "id": "duo_promo_60__vibra",
+   "video": "duo_promo_60",
+   "nombre": "vibra",
+   "archivo": "duo_promo_60__vibra.mp3",
+   "md5": "6c0bcce4605d1082a958a4ee74570057",
+   "prompt": "Phone vibrating on a couch cushion, short soft buzz buzz",
+   "dur": 0.8,
+   "canal": "sin"
+  },
+  "duo_promo_60__victoria": {
+   "id": "duo_promo_60__victoria",
+   "video": "duo_promo_60",
+   "nombre": "victoria",
+   "archivo": "duo_promo_60__victoria.mp3",
+   "md5": "097e8da7993d2308a40f5ece63049356",
+   "prompt": "Short bright victory fanfare, mobile game win, celebratory chimes",
+   "dur": 1.6,
+   "canal": "sin"
+  },
+  "duo_promo_60__whoosh_a": {
+   "id": "duo_promo_60__whoosh_a",
+   "video": "duo_promo_60",
+   "nombre": "whoosh_a",
+   "archivo": "duo_promo_60__whoosh_a.mp3",
+   "md5": "fa21d40fc75c66253aa4c50595da39d8",
+   "prompt": "Soft airy swoosh transition, smooth and light, short",
+   "dur": 0.68,
+   "canal": "sin"
+  },
+  "duo_promo_60__whoosh_b": {
+   "id": "duo_promo_60__whoosh_b",
+   "video": "duo_promo_60",
+   "nombre": "whoosh_b",
+   "archivo": "duo_promo_60__whoosh_b.mp3",
+   "md5": "3816102e1e570ca851295d5f74be963b",
+   "prompt": "Gentle quick whoosh pass by, airy and clean, short",
+   "dur": 0.6,
+   "canal": "sin"
+  },
+  "er_miquella_atrocidades__campana": {
+   "id": "er_miquella_atrocidades__campana",
+   "video": "er_miquella_atrocidades",
+   "nombre": "campana",
+   "archivo": "er_miquella_atrocidades__campana.mp3",
+   "md5": "7f13495781c3e7da13a23edfacd99cfb",
+   "prompt": "One deep ominous church bell toll with a long reverb tail, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_miquella_atrocidades__costura": {
+   "id": "er_miquella_atrocidades__costura",
+   "video": "er_miquella_atrocidades",
+   "nombre": "costura",
+   "archivo": "er_miquella_atrocidades__costura.mp3",
+   "md5": "479f242d875063b32a883a32e6de49c7",
+   "prompt": "Slow wet flesh stitching with taut thread pulled through, grotesque and quiet, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_miquella_atrocidades__cruz": {
+   "id": "er_miquella_atrocidades__cruz",
+   "video": "er_miquella_atrocidades",
+   "nombre": "cruz",
+   "archivo": "er_miquella_atrocidades__cruz.mp3",
+   "md5": "15aed109b8e6553b8fcdc37d9ab8be11",
+   "prompt": "Heavy stone cross grinding as it settles into earth, low rumble, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_miquella_atrocidades__runa": {
+   "id": "er_miquella_atrocidades__runa",
+   "video": "er_miquella_atrocidades",
+   "nombre": "runa",
+   "archivo": "er_miquella_atrocidades__runa.mp3",
+   "md5": "ffc197889b6addcd2ad3ac0ab3248dd2",
+   "prompt": "A great golden rune shattering in the sky, bright crystalline burst with a deep resonant boom, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_miquella_atrocidades__susurro": {
+   "id": "er_miquella_atrocidades__susurro",
+   "video": "er_miquella_atrocidades",
+   "nombre": "susurro",
+   "archivo": "er_miquella_atrocidades__susurro.mp3",
+   "md5": "fd8298d02754cea75032d43e5909afb8",
+   "prompt": "Soft eerie whisper in an empty ruined chapel with a long ghostly reverb, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_radagon_atrocidades__campana": {
+   "id": "er_radagon_atrocidades__campana",
+   "video": "er_radagon_atrocidades",
+   "nombre": "campana",
+   "archivo": "er_radagon_atrocidades__campana.mp3",
+   "md5": "059045908ee9aa800baa9decee635ad4",
+   "prompt": "One deep ominous church bell toll with a long reverb tail, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_radagon_atrocidades__lobo": {
+   "id": "er_radagon_atrocidades__lobo",
+   "video": "er_radagon_atrocidades",
+   "nombre": "lobo",
+   "archivo": "er_radagon_atrocidades__lobo.mp3",
+   "md5": "6e60905aa0b8fa7bececa11dffa01b22",
+   "prompt": "Distant giant wolf howl echoing through a vast stone library",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_radagon_atrocidades__martillo": {
+   "id": "er_radagon_atrocidades__martillo",
+   "video": "er_radagon_atrocidades",
+   "nombre": "martillo",
+   "archivo": "er_radagon_atrocidades__martillo.mp3",
+   "md5": "d80faa889e554c8980ff836004c63930",
+   "prompt": "Heavy stone hammer striking a golden ring that cracks, deep metallic ring with reverb",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_radagon_atrocidades__revela": {
+   "id": "er_radagon_atrocidades__revela",
+   "video": "er_radagon_atrocidades",
+   "nombre": "revela",
+   "archivo": "er_radagon_atrocidades__revela.mp3",
+   "md5": "9e47072dbb7d04cf6abd2c1b7ec058df",
+   "prompt": "Ethereal golden shimmer with a low choir swell revealing a hidden secret, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "estres_cuerpo__abrazo": {
+   "id": "estres_cuerpo__abrazo",
+   "video": "estres_cuerpo",
+   "nombre": "abrazo",
+   "archivo": "estres_cuerpo__abrazo.mp3",
+   "md5": "ae7ae77a7eebb69fba611190e0e8db14",
+   "prompt": "Warm soft clothing rustle of a hug with a gentle happy sigh",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__agua": {
+   "id": "estres_cuerpo__agua",
+   "video": "estres_cuerpo",
+   "nombre": "agua",
+   "archivo": "estres_cuerpo__agua.mp3",
+   "md5": "42f504903d62af2d42a332bfa1cad0bc",
+   "prompt": "Splash of cold water in a bowl with ice cubes clinking",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__alarma": {
+   "id": "estres_cuerpo__alarma",
+   "video": "estres_cuerpo",
+   "nombre": "alarma",
+   "archivo": "estres_cuerpo__alarma.mp3",
+   "md5": "15a0f93f810ade371467185fa21917d9",
+   "prompt": "Old mechanical fire alarm bell ringing, sharp short burst",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__camion": {
+   "id": "estres_cuerpo__camion",
+   "video": "estres_cuerpo",
+   "nombre": "camion",
+   "archivo": "estres_cuerpo__camion.mp3",
+   "md5": "ea43d258eb50678cebf54eea44212149",
+   "prompt": "Crowded city bus interior ambience, diesel engine rumble, air brakes hiss, muffled chatter",
+   "dur": 6.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__campana": {
+   "id": "estres_cuerpo__campana",
+   "video": "estres_cuerpo",
+   "nombre": "campana",
+   "archivo": "estres_cuerpo__campana.mp3",
+   "md5": "2952f4f436eecad85b65a5844d676642",
+   "prompt": "Soft warm singing bowl chime, calm, gentle long resonance",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__correo": {
+   "id": "estres_cuerpo__correo",
+   "video": "estres_cuerpo",
+   "nombre": "correo",
+   "archivo": "estres_cuerpo__correo.mp3",
+   "md5": "a5adba23b418e4218c34435ebaac8826",
+   "prompt": "Single soft email notification ping",
+   "dur": 1.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__delfin": {
+   "id": "estres_cuerpo__delfin",
+   "video": "estres_cuerpo",
+   "nombre": "delfin",
+   "archivo": "estres_cuerpo__delfin.mp3",
+   "md5": "dd9ac2b4c31f28c05f9ea19b7dbb8806",
+   "prompt": "Underwater bubbles with soft dolphin clicks, deep and calm",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__estornudo": {
+   "id": "estres_cuerpo__estornudo",
+   "video": "estres_cuerpo",
+   "nombre": "estornudo",
+   "archivo": "estres_cuerpo__estornudo.mp3",
+   "md5": "a6761be2ae61eaf117c67c1834fd9641",
+   "prompt": "A single human sneeze, close, slightly comedic",
+   "dur": 1.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__fusible": {
+   "id": "estres_cuerpo__fusible",
+   "video": "estres_cuerpo",
+   "nombre": "fusible",
+   "archivo": "estres_cuerpo__fusible.mp3",
+   "md5": "3168cfea6c86328a8a6861a425d574ea",
+   "prompt": "Electric fuse popping with a spark and a short buzz",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__golpe": {
+   "id": "estres_cuerpo__golpe",
+   "video": "estres_cuerpo",
+   "nombre": "golpe",
+   "archivo": "estres_cuerpo__golpe.mp3",
+   "md5": "66ea54815444b2ee3eec1e1d5e1b89bd",
+   "prompt": "Soft deep cinematic hit with a subtle airy whoosh, for a title word appearing",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__gota": {
+   "id": "estres_cuerpo__gota",
+   "video": "estres_cuerpo",
+   "nombre": "gota",
+   "archivo": "estres_cuerpo__gota.mp3",
+   "md5": "126e52df0c91adba0505ac470d753975",
+   "prompt": "Single water drop falling from a glass dropper, clean plink",
+   "dur": 1.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__jadeo": {
+   "id": "estres_cuerpo__jadeo",
+   "video": "estres_cuerpo",
+   "nombre": "jadeo",
+   "archivo": "estres_cuerpo__jadeo.mp3",
+   "md5": "1be3c98634597de726fe2f31a1a7900c",
+   "prompt": "Fast shallow anxious breathing through the mouth, close",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__latido": {
+   "id": "estres_cuerpo__latido",
+   "video": "estres_cuerpo",
+   "nombre": "latido",
+   "archivo": "estres_cuerpo__latido.mp3",
+   "md5": "e16255744ef2be8188eb0d29c297dff4",
+   "prompt": "Fast heartbeat thumping, close and muffled, tense",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__mariposas": {
+   "id": "estres_cuerpo__mariposas",
+   "video": "estres_cuerpo",
+   "nombre": "mariposas",
+   "archivo": "estres_cuerpo__mariposas.mp3",
+   "md5": "bc20d8874840c7516e9e3ac4da3c6580",
+   "prompt": "Soft fluttering of butterfly wings, light and magical",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__neon": {
+   "id": "estres_cuerpo__neon",
+   "video": "estres_cuerpo",
+   "nombre": "neon",
+   "archivo": "estres_cuerpo__neon.mp3",
+   "md5": "ab1c4a9bed1833fa3c82d42028a2302e",
+   "prompt": "Electric neon tube buzzing and flickering on, short crackle then steady low hum",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__punos": {
+   "id": "estres_cuerpo__punos",
+   "video": "estres_cuerpo",
+   "nombre": "punos",
+   "archivo": "estres_cuerpo__punos.mp3",
+   "md5": "925340614e994cb4846c874faea0559e",
+   "prompt": "Leather creaking as fists clench tight, tension",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__rugido": {
+   "id": "estres_cuerpo__rugido",
+   "video": "estres_cuerpo",
+   "nombre": "rugido",
+   "archivo": "estres_cuerpo__rugido.mp3",
+   "md5": "685807979d3cca0296be31ee6119dda7",
+   "prompt": "Big lion roar in the distance, cinematic",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__suelta": {
+   "id": "estres_cuerpo__suelta",
+   "video": "estres_cuerpo",
+   "nombre": "suelta",
+   "archivo": "estres_cuerpo__suelta.mp3",
+   "md5": "e1df24495bf6262e2680364c39c17fbb",
+   "prompt": "Soft airy whoosh of release, like air leaving a cushion",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__suspiro": {
+   "id": "estres_cuerpo__suspiro",
+   "video": "estres_cuerpo",
+   "nombre": "suspiro",
+   "archivo": "estres_cuerpo__suspiro.mp3",
+   "md5": "21213663073fd3fcaba3d72b352c47f1",
+   "prompt": "Two quick sniffs of air through the nose followed by one long slow relieved exhale through the mouth",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__tripas": {
+   "id": "estres_cuerpo__tripas",
+   "video": "estres_cuerpo",
+   "nombre": "tripas",
+   "archivo": "estres_cuerpo__tripas.mp3",
+   "md5": "9aacb044e93db38c315d1cacbb32556f",
+   "prompt": "Stomach gurgling and rumbling, close, slightly comedic",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "estres_cuerpo__vidrio": {
+   "id": "estres_cuerpo__vidrio",
+   "video": "estres_cuerpo",
+   "nombre": "vidrio",
+   "archivo": "estres_cuerpo__vidrio.mp3",
+   "md5": "5269ba00d60e8a5588187db6ef960fb1",
+   "prompt": "Muffled distant city sounds as if heard through thick glass or underwater, dreamy",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__agua": {
+   "id": "freno_enojo__agua",
+   "video": "freno_enojo",
+   "nombre": "agua",
+   "archivo": "freno_enojo__agua.mp3",
+   "md5": "11d388e3ac56aecc8d1459cbfeda4b2a",
+   "prompt": "Splash of cold water on a face over a bathroom sink, close up",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__boom": {
+   "id": "freno_enojo__boom",
+   "video": "freno_enojo",
+   "nombre": "boom",
+   "archivo": "freno_enojo__boom.mp3",
+   "md5": "db22a7537b7d05e22c15a025aca510ce",
+   "prompt": "Deep soft cinematic sub boom with a long airy reverb tail, dark and calm",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__campana": {
+   "id": "freno_enojo__campana",
+   "video": "freno_enojo",
+   "nombre": "campana",
+   "archivo": "freno_enojo__campana.mp3",
+   "md5": "1f5d688d683ddfc48499b17a9938cf80",
+   "prompt": "Soft warm singing bowl chime, calm, gentle resonance",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__exhala": {
+   "id": "freno_enojo__exhala",
+   "video": "freno_enojo",
+   "nombre": "exhala",
+   "archivo": "freno_enojo__exhala.mp3",
+   "md5": "150306add13c8b708cf2ac1ce6842029",
+   "prompt": "Long slow relaxed human exhale through the mouth",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__freno": {
+   "id": "freno_enojo__freno",
+   "video": "freno_enojo",
+   "nombre": "freno",
+   "archivo": "freno_enojo__freno.mp3",
+   "md5": "1874e0ba47fdf369bd64e3a0342e165b",
+   "prompt": "Deep whoosh that suddenly stops, like a heavy brake, followed by silence",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__golpe": {
+   "id": "freno_enojo__golpe",
+   "video": "freno_enojo",
+   "nombre": "golpe",
+   "archivo": "freno_enojo__golpe.mp3",
+   "md5": "5d24c6cf9a1dfcc6c3f8c58b34610f7b",
+   "prompt": "Soft deep cinematic hit with a subtle whoosh, for a title word appearing",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__inhala": {
+   "id": "freno_enojo__inhala",
+   "video": "freno_enojo",
+   "nombre": "inhala",
+   "archivo": "freno_enojo__inhala.mp3",
+   "md5": "df69591542b59ca66a644f66fafcbdc2",
+   "prompt": "Calm deep human inhale through the nose followed by a short second sniff of air",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__latido": {
+   "id": "freno_enojo__latido",
+   "video": "freno_enojo",
+   "nombre": "latido",
+   "archivo": "freno_enojo__latido.mp3",
+   "md5": "be1819b245a949788f3a848223851a07",
+   "prompt": "Slow deep human heartbeat, muffled, inside the chest, steady loop",
+   "dur": 6.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__latido_rapido": {
+   "id": "freno_enojo__latido_rapido",
+   "video": "freno_enojo",
+   "nombre": "latido_rapido",
+   "archivo": "freno_enojo__latido_rapido.mp3",
+   "md5": "6f66e05e4915c646854a3f0ee9322e83",
+   "prompt": "Fast pounding human heartbeat, muffled, tense, steady loop",
+   "dur": 6.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__neon": {
+   "id": "freno_enojo__neon",
+   "video": "freno_enojo",
+   "nombre": "neon",
+   "archivo": "freno_enojo__neon.mp3",
+   "md5": "ccddc87f0067477f8e0a300e8857b017",
+   "prompt": "Electric neon tube buzzing and flickering on, short crackle then steady hum",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__pasos": {
+   "id": "freno_enojo__pasos",
+   "video": "freno_enojo",
+   "nombre": "pasos",
+   "archivo": "freno_enojo__pasos.mp3",
+   "md5": "776c19861a26e060f9cd6a22bbc8f879",
+   "prompt": "Brisk footsteps walking quickly on a wooden floor, a few seconds",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__tension": {
+   "id": "freno_enojo__tension",
+   "video": "freno_enojo",
+   "nombre": "tension",
+   "archivo": "freno_enojo__tension.mp3",
+   "md5": "11c22dc30dce9b2334295c2e784928e3",
+   "prompt": "Muscles straining, low creaking tension sound, rising then sudden release whoosh",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "freno_enojo__zumbido": {
+   "id": "freno_enojo__zumbido",
+   "video": "freno_enojo",
+   "nombre": "zumbido",
+   "archivo": "freno_enojo__zumbido.mp3",
+   "md5": "ea4a37c9b0dd4d206243db5c8d21f571",
+   "prompt": "Low tense electric drone rising in pitch, adrenaline rush, cinematic riser",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "got_joffrey__ballesta": {
+   "id": "got_joffrey__ballesta",
+   "video": "got_joffrey",
+   "nombre": "ballesta",
+   "archivo": "got_joffrey__ballesta.mp3",
+   "md5": "45828426d836b6985095bb56eaec9356",
+   "prompt": "Crossbow shot, sharp string twang and a bolt whooshing, then a dull thud into a body",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "got_joffrey__campanas": {
+   "id": "got_joffrey__campanas",
+   "video": "got_joffrey",
+   "nombre": "campanas",
+   "archivo": "got_joffrey__campanas.mp3",
+   "md5": "b396f1cc165a45b16354add571bdc130",
+   "prompt": "Distant medieval city church bells tolling slowly at dawn, melancholic, with light wind",
+   "dur": 6.0,
+   "canal": ""
+  },
+  "got_joffrey__copa": {
+   "id": "got_joffrey__copa",
+   "video": "got_joffrey",
+   "nombre": "copa",
+   "archivo": "got_joffrey__copa.mp3",
+   "md5": "8a116247f2d4a9f682e3346900887966",
+   "prompt": "Heavy golden metal goblet dropped on a stone floor in a large hall, clanging, bouncing and rolling, reverberant",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "got_joffrey__grito": {
+   "id": "got_joffrey__grito",
+   "video": "got_joffrey",
+   "nombre": "grito",
+   "archivo": "got_joffrey__grito.mp3",
+   "md5": "8908af77e11d9df7ad2be7a59998b1ae",
+   "prompt": "Medieval crowd in a stone banquet hall gasping in shock, a woman screams, chairs scraping, panic",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "got_joffrey__impacto": {
+   "id": "got_joffrey__impacto",
+   "video": "got_joffrey",
+   "nombre": "impacto",
+   "archivo": "got_joffrey__impacto.mp3",
+   "md5": "fc550323d3cc40ee5f468da12959f029",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "got_joffrey__impacto2": {
+   "id": "got_joffrey__impacto2",
+   "video": "got_joffrey",
+   "nombre": "impacto2",
+   "archivo": "got_joffrey__impacto2.mp3",
+   "md5": "a06fb9eea50fe1a28a7e4565caf6ec5e",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "got_joffrey__latido": {
+   "id": "got_joffrey__latido",
+   "video": "got_joffrey",
+   "nombre": "latido",
+   "archivo": "got_joffrey__latido.mp3",
+   "md5": "2e10b4d5d00bf6c09886eddb0e6db46e",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "got_joffrey__palomas": {
+   "id": "got_joffrey__palomas",
+   "video": "got_joffrey",
+   "nombre": "palomas",
+   "archivo": "got_joffrey__palomas.mp3",
+   "md5": "2a692663597aff886ff041363f474b45",
+   "prompt": "A flock of doves bursting out and flying away, loud wing flapping, close",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "got_joffrey__subida": {
+   "id": "got_joffrey__subida",
+   "video": "got_joffrey",
+   "nombre": "subida",
+   "archivo": "got_joffrey__subida.mp3",
+   "md5": "ac81406305bed4c73d7efcf023d052f1",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "got_joffrey__susurro": {
+   "id": "got_joffrey__susurro",
+   "video": "got_joffrey",
+   "nombre": "susurro",
+   "archivo": "got_joffrey__susurro.mp3",
+   "md5": "5ab315af42ba69fe27e9cf8a90460187",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": ""
+  },
+  "got_joffrey__tos": {
+   "id": "got_joffrey__tos",
+   "video": "got_joffrey",
+   "nombre": "tos",
+   "archivo": "got_joffrey__tos.mp3",
+   "md5": "399758b1d6c2be8028265fca4b1dc81e",
+   "prompt": "A young man coughing and then choking, gasping for air, struggling to breathe, dramatic",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "got_joffrey__trueno": {
+   "id": "got_joffrey__trueno",
+   "video": "got_joffrey",
+   "nombre": "trueno",
+   "archivo": "got_joffrey__trueno.mp3",
+   "md5": "92ed1651546a9a6fe8b6380031a958a1",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": ""
+  },
+  "got_joffrey__zumbido": {
+   "id": "got_joffrey__zumbido",
+   "video": "got_joffrey",
+   "nombre": "zumbido",
+   "archivo": "got_joffrey__zumbido.mp3",
+   "md5": "ba349454d57cad9542985a2b6d1c8c94",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": ""
+  },
+  "guason_fumado__basura": {
+   "id": "guason_fumado__basura",
+   "video": "guason_fumado",
+   "nombre": "basura",
+   "archivo": "guason_fumado__basura.mp3",
+   "md5": "3e5215d58e1d4c3e79c0247c8c2416ad",
+   "prompt": "Metal trash can lid clanging and garbage falling, comedic",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "guason_fumado__boing": {
+   "id": "guason_fumado__boing",
+   "video": "guason_fumado",
+   "nombre": "boing",
+   "archivo": "guason_fumado__boing.mp3",
+   "md5": "63efd517d40b42009a47af06e8e9ca24",
+   "prompt": "Single cartoon boing spring jump",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "guason_fumado__coro": {
+   "id": "guason_fumado__coro",
+   "video": "guason_fumado",
+   "nombre": "coro",
+   "archivo": "guason_fumado__coro.mp3",
+   "md5": "65e5c6317227bc7df20e1c4b7ba0330f",
+   "prompt": "Angelic heavenly choir singing a single bright chord, shimmering",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "guason_fumado__cuerda": {
+   "id": "guason_fumado__cuerda",
+   "video": "guason_fumado",
+   "nombre": "cuerda",
+   "archivo": "guason_fumado__cuerda.mp3",
+   "md5": "3a6c082be64ab3f0b7363e7279dfab8b",
+   "prompt": "Cartoon rope stretching and creaking then a boing spring",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "guason_fumado__dun_dun": {
+   "id": "guason_fumado__dun_dun",
+   "video": "guason_fumado",
+   "nombre": "dun_dun",
+   "archivo": "guason_fumado__dun_dun.mp3",
+   "md5": "14ba8d95e5d385c82e68db09e1c3adb5",
+   "prompt": "Dramatic dun dun dun orchestral sting, exaggerated soap opera reveal",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__explosion": {
+   "id": "guason_fumado__explosion",
+   "video": "guason_fumado",
+   "nombre": "explosion",
+   "archivo": "guason_fumado__explosion.mp3",
+   "md5": "a930bc09263fe07709a58fa2d2162ec5",
+   "prompt": "Massive cartoon explosion with debris falling and a long rumble",
+   "dur": 5.0,
+   "canal": ""
+  },
+  "guason_fumado__fanfarria": {
+   "id": "guason_fumado__fanfarria",
+   "video": "guason_fumado",
+   "nombre": "fanfarria",
+   "archivo": "guason_fumado__fanfarria.mp3",
+   "md5": "444d5c2cb7ce82abc08ed603032d6ce3",
+   "prompt": "Short cheesy heroic brass fanfare, slightly out of tune, comedic",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__frito": {
+   "id": "guason_fumado__frito",
+   "video": "guason_fumado",
+   "nombre": "frito",
+   "archivo": "guason_fumado__frito.mp3",
+   "md5": "a7ffd7bd0c4be5fcef83a9f0c74b0696",
+   "prompt": "Sizzling frying sound with a short hiss of steam",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "guason_fumado__grillos": {
+   "id": "guason_fumado__grillos",
+   "video": "guason_fumado",
+   "nombre": "grillos",
+   "archivo": "guason_fumado__grillos.mp3",
+   "md5": "1f354a3fe25f5f7c261da1316a283457",
+   "prompt": "Awkward silence with crickets chirping at night",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__hipnosis": {
+   "id": "guason_fumado__hipnosis",
+   "video": "guason_fumado",
+   "nombre": "hipnosis",
+   "archivo": "guason_fumado__hipnosis.mp3",
+   "md5": "cbc00cc8efd4663d6599d1b701d01fef",
+   "prompt": "Wobbly spooky theremin hypnosis sound, cartoon",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "guason_fumado__llegada": {
+   "id": "guason_fumado__llegada",
+   "video": "guason_fumado",
+   "nombre": "llegada",
+   "archivo": "guason_fumado__llegada.mp3",
+   "md5": "0b128e46fea8df45795b7fca39d62a77",
+   "prompt": "Powerful superhero landing whoosh and heavy impact with a low rumble",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__maligno": {
+   "id": "guason_fumado__maligno",
+   "video": "guason_fumado",
+   "nombre": "maligno",
+   "archivo": "guason_fumado__maligno.mp3",
+   "md5": "d67436464aafd261b9701748f396d706",
+   "prompt": "Short evil organ sting with thunder, cheesy horror movie",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__mazazo": {
+   "id": "guason_fumado__mazazo",
+   "video": "guason_fumado",
+   "nombre": "mazazo",
+   "archivo": "guason_fumado__mazazo.mp3",
+   "md5": "85a78ba30a19eec529582e5e6e5259b8",
+   "prompt": "Huge cartoon wooden mallet bonk on a head followed by tweeting birds",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__musica_boba": {
+   "id": "guason_fumado__musica_boba",
+   "video": "guason_fumado",
+   "nombre": "musica_boba",
+   "archivo": "guason_fumado__musica_boba.mp3",
+   "md5": "d45890db732ae3006ce818ced861d5f9",
+   "prompt": "Goofy sneaky cartoon comedy underscore, pizzicato strings, tuba and bassoon, silly and bouncy, loopable, no drums",
+   "dur": 22.0,
+   "canal": ""
+  },
+  "guason_fumado__musica_caos": {
+   "id": "guason_fumado__musica_caos",
+   "video": "guason_fumado",
+   "nombre": "musica_caos",
+   "archivo": "guason_fumado__musica_caos.mp3",
+   "md5": "ac7e4f5c264c9463c59e78a87a45cded",
+   "prompt": "Frantic silly cartoon chase music, fast xylophone and brass, chaotic and funny, loopable",
+   "dur": 22.0,
+   "canal": ""
+  },
+  "guason_fumado__patada": {
+   "id": "guason_fumado__patada",
+   "video": "guason_fumado",
+   "nombre": "patada",
+   "archivo": "guason_fumado__patada.mp3",
+   "md5": "ff7886a963008c52edf70650dcefa174",
+   "prompt": "Cartoon kick impact followed by a long slide whistle going up as something flies away",
+   "dur": 2.48,
+   "canal": ""
+  },
+  "guason_fumado__pedorreta": {
+   "id": "guason_fumado__pedorreta",
+   "video": "guason_fumado",
+   "nombre": "pedorreta",
+   "archivo": "guason_fumado__pedorreta.mp3",
+   "md5": "dc8f258923bb1607861631397f091712",
+   "prompt": "Long wet cartoon raspberry tongue blowing sound, comedic",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "guason_fumado__pop": {
+   "id": "guason_fumado__pop",
+   "video": "guason_fumado",
+   "nombre": "pop",
+   "archivo": "guason_fumado__pop.mp3",
+   "md5": "0164c5800c1da7f3cfa3c21812b3c86c",
+   "prompt": "Loud comedic cork pop followed by a slide whistle going up fast",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "guason_fumado__scratch": {
+   "id": "guason_fumado__scratch",
+   "video": "guason_fumado",
+   "nombre": "scratch",
+   "archivo": "guason_fumado__scratch.mp3",
+   "md5": "c6a3421a84e274662f9d40a3db5af3dc",
+   "prompt": "Vinyl record scratch, music stops abruptly",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "guason_fumado__tada": {
+   "id": "guason_fumado__tada",
+   "video": "guason_fumado",
+   "nombre": "tada",
+   "archivo": "guason_fumado__tada.mp3",
+   "md5": "a8284e72c2e012bc2bb1a83f575f50da",
+   "prompt": "Cheesy magician ta-da fanfare with cymbal",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "guason_fumado__trombon": {
+   "id": "guason_fumado__trombon",
+   "video": "guason_fumado",
+   "nombre": "trombon",
+   "archivo": "guason_fumado__trombon.mp3",
+   "md5": "ac3d4c9e70231ee0dd6b32d00f0fbdc9",
+   "prompt": "Sad trombone wah wah wah fail sound",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "guason_fumado__vomito": {
+   "id": "guason_fumado__vomito",
+   "video": "guason_fumado",
+   "nombre": "vomito",
+   "archivo": "guason_fumado__vomito.mp3",
+   "md5": "f9c1ea28a3fa6de8a219e69e6c0b658d",
+   "prompt": "Cartoon retching and splashing into a metal bucket, comedic",
+   "dur": 2.48,
+   "canal": ""
+  },
+  "guason_fumado__whoosh": {
+   "id": "guason_fumado__whoosh",
+   "video": "guason_fumado",
+   "nombre": "whoosh",
+   "archivo": "guason_fumado__whoosh.mp3",
+   "md5": "ef13b0daf6c2673fd2eef59ae4dfd56f",
+   "prompt": "Fast cartoon arm swing whoosh",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "informante_2027__apagon": {
+   "id": "informante_2027__apagon",
+   "video": "informante_2027",
+   "nombre": "apagon",
+   "archivo": "informante_2027__apagon.mp3",
+   "md5": "5c36d5d8ae8b1359ffef1ca3728cd08b",
+   "prompt": "Large building power shutting down, electrical hum winding down to silence, deep and ominous",
+   "dur": 4.0,
+   "canal": "logia"
+  },
+  "informante_2027__dinero": {
+   "id": "informante_2027__dinero",
+   "video": "informante_2027",
+   "nombre": "dinero",
+   "archivo": "informante_2027__dinero.mp3",
+   "md5": "7b883f3a63830228182f7c9ad4709ee0",
+   "prompt": "Rapid counting of paper banknotes by a money counting machine, fast flutter",
+   "dur": 3.0,
+   "canal": "logia"
+  },
+  "informante_2027__glitch": {
+   "id": "informante_2027__glitch",
+   "video": "informante_2027",
+   "nombre": "glitch",
+   "archivo": "informante_2027__glitch.mp3",
+   "md5": "df7ad7eebc28745e08902379234afdda",
+   "prompt": "Digital video signal glitch, data corruption stutter and static burst, short",
+   "dur": 1.2,
+   "canal": "logia"
+  },
+  "informante_2027__mazo": {
+   "id": "informante_2027__mazo",
+   "video": "informante_2027",
+   "nombre": "mazo",
+   "archivo": "informante_2027__mazo.mp3",
+   "md5": "82f5824b9d2a6192f14034d87cf70a95",
+   "prompt": "Single heavy wooden judge gavel strike on a desk in a large quiet room, reverberant",
+   "dur": 2.0,
+   "canal": "logia"
+  },
+  "informante_2027__reloj": {
+   "id": "informante_2027__reloj",
+   "video": "informante_2027",
+   "nombre": "reloj",
+   "archivo": "informante_2027__reloj.mp3",
+   "md5": "0ca64a7d87931b03b70c71f97a9abc51",
+   "prompt": "Fast frantic clock ticking accelerating, tense",
+   "dur": 4.0,
+   "canal": "logia"
+  },
+  "la_sena__alba": {
+   "id": "la_sena__alba",
+   "video": "la_sena",
+   "nombre": "alba",
+   "archivo": "la_sena__alba.mp3",
+   "md5": "54bdbf16dd8ad5de49638f0390812b99",
+   "prompt": "Soft morning wind in a dry canyon at dawn with a few distant birds",
+   "dur": 12.0,
+   "canal": "ninguno"
+  },
+  "la_sena__aplausos": {
+   "id": "la_sena__aplausos",
+   "video": "la_sena",
+   "nombre": "aplausos",
+   "archivo": "la_sena__aplausos.mp3",
+   "md5": "5904e7e23a20544c1b63035fc78aae2c",
+   "prompt": "A small crowd of families applauding warmly outdoors, a few cheers",
+   "dur": 4.0,
+   "canal": "ninguno"
+  },
+  "la_sena__aviso": {
+   "id": "la_sena__aviso",
+   "video": "la_sena",
+   "nombre": "aviso",
+   "archivo": "la_sena__aviso.mp3",
+   "md5": "44f9c163898da13ecc4dad6e031fa26a",
+   "prompt": "A short soft smartphone message notification sound",
+   "dur": 1.0,
+   "canal": "ninguno"
+  },
+  "la_sena__bici": {
+   "id": "la_sena__bici",
+   "video": "la_sena",
+   "nombre": "bici",
+   "archivo": "la_sena__bici.mp3",
+   "md5": "7f3fcf3d0cb2d0002888186f5a1f8eb6",
+   "prompt": "A small kid's bicycle rolling fast down a steep cement street, chain rattling, tires on rough pavement",
+   "dur": 6.0,
+   "canal": "ninguno"
+  },
+  "la_sena__combi": {
+   "id": "la_sena__combi",
+   "video": "la_sena",
+   "nombre": "combi",
+   "archivo": "la_sena__combi.mp3",
+   "md5": "3f5e0c68ebfa683b269a334d812c44aa",
+   "prompt": "A minibus van passing fast on a two-lane highway, engine roar and whoosh, then fading away",
+   "dur": 5.0,
+   "canal": "ninguno"
+  },
+  "la_sena__fiesta": {
+   "id": "la_sena__fiesta",
+   "video": "la_sena",
+   "nombre": "fiesta",
+   "archivo": "la_sena__fiesta.mp3",
+   "md5": "4496529b26483f53d2cfafd716aaa204",
+   "prompt": "Outdoor school graduation ceremony in a small Mexican town: murmuring families, children, plastic chairs, light breeze, no music",
+   "dur": 22.0,
+   "canal": "ninguno"
+  },
+  "la_sena__gallo": {
+   "id": "la_sena__gallo",
+   "video": "la_sena",
+   "nombre": "gallo",
+   "archivo": "la_sena__gallo.mp3",
+   "md5": "a8bd0771701bf765a2e2b799e99e353e",
+   "prompt": "A rooster crowing at dawn in the countryside, slightly distant",
+   "dur": 4.0,
+   "canal": "ninguno"
+  },
+  "la_sena__grillos": {
+   "id": "la_sena__grillos",
+   "video": "la_sena",
+   "nombre": "grillos",
+   "archivo": "la_sena__grillos.mp3",
+   "md5": "66baa157866a4e1550b4c0097239427f",
+   "prompt": "Crickets chirping at night in a quiet small town, a dog barking far away, very calm",
+   "dur": 14.0,
+   "canal": "ninguno"
+  },
+  "la_sena__lluvia": {
+   "id": "la_sena__lluvia",
+   "video": "la_sena",
+   "nombre": "lluvia",
+   "archivo": "la_sena__lluvia.mp3",
+   "md5": "4cbfb405c11b4109f660130ab83f8ba8",
+   "prompt": "Heavy rain drumming on a corrugated metal roof, heard from inside a small kitchen at night",
+   "dur": 22.0,
+   "canal": "ninguno"
+  },
+  "la_sena__moto": {
+   "id": "la_sena__moto",
+   "video": "la_sena",
+   "nombre": "moto",
+   "archivo": "la_sena__moto.mp3",
+   "md5": "6fef6a5b0ad7e5c846b7dab41e40a7c9",
+   "prompt": "A motorcycle passing slowly on a dirt street outside a house, heard from inside, engine fading away",
+   "dur": 5.0,
+   "canal": "ninguno"
+  },
+  "la_sena__risas": {
+   "id": "la_sena__risas",
+   "video": "la_sena",
+   "nombre": "risas",
+   "archivo": "la_sena__risas.mp3",
+   "md5": "85eda2d9db208004103c02ac476a70d1",
+   "prompt": "Two young boys laughing happily outdoors on a quiet street, childish giggles, no music",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "la_sena__tarde": {
+   "id": "la_sena__tarde",
+   "video": "la_sena",
+   "nombre": "tarde",
+   "archivo": "la_sena__tarde.mp3",
+   "md5": "a82a6f8fe0f0688d482d932ffd35700e",
+   "prompt": "Peaceful small town evening ambience: distant birds, children playing far away, a faraway rooster, soft breeze",
+   "dur": 16.0,
+   "canal": "ninguno"
+  },
+  "la_sena__troca": {
+   "id": "la_sena__troca",
+   "video": "la_sena",
+   "nombre": "troca",
+   "archivo": "la_sena__troca.mp3",
+   "md5": "ce9ff4d7cfd2569510a5f70d70d7c800",
+   "prompt": "An old pickup truck engine starting and driving away down a street at night, fading into the distance",
+   "dur": 6.0,
+   "canal": "ninguno"
+  },
+  "la_sena__vibra": {
+   "id": "la_sena__vibra",
+   "video": "la_sena",
+   "nombre": "vibra",
+   "archivo": "la_sena__vibra.mp3",
+   "md5": "93c4b49b375001c6c3c540f867b86587",
+   "prompt": "A smartphone vibrating on a wooden kitchen table, two short buzzes, quiet room",
+   "dur": 2.0,
+   "canal": "ninguno"
+  },
+  "la_sena__zanates": {
+   "id": "la_sena__zanates",
+   "video": "la_sena",
+   "nombre": "zanates",
+   "archivo": "la_sena__zanates.mp3",
+   "md5": "3f5c54519bc2f69dedcb37c407d62eac",
+   "prompt": "Great-tailed grackles calling at sunset, loud whistles and clacks of black birds, outdoors",
+   "dur": 6.0,
+   "canal": "ninguno"
+  },
+  "mods_ia_fusion__campana": {
+   "id": "mods_ia_fusion__campana",
+   "video": "mods_ia_fusion",
+   "nombre": "campana",
+   "archivo": "mods_ia_fusion__campana.mp3",
+   "md5": "8328eacb6ca83dc10360fa1e97224559",
+   "prompt": "Bright positive success chime, single ding, clean",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__datos": {
+   "id": "mods_ia_fusion__datos",
+   "video": "mods_ia_fusion",
+   "nombre": "datos",
+   "archivo": "mods_ia_fusion__datos.mp3",
+   "md5": "2e9bdfd7e434a7a7f524f246a740116b",
+   "prompt": "Fast digital data transfer, rapid computer blips and beeps, processing, futuristic interface",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__explosion": {
+   "id": "mods_ia_fusion__explosion",
+   "video": "mods_ia_fusion",
+   "nombre": "explosion",
+   "archivo": "mods_ia_fusion__explosion.mp3",
+   "md5": "cd6d88d416602f8ff5fb133ea9eba4aa",
+   "prompt": "Punchy dynamite explosion boom with debris, short",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__glitch": {
+   "id": "mods_ia_fusion__glitch",
+   "video": "mods_ia_fusion",
+   "nombre": "glitch",
+   "archivo": "mods_ia_fusion__glitch.mp3",
+   "md5": "8813f3cf5bb4fa35c235d4d29777e732",
+   "prompt": "Digital glitch static burst, data corruption stutter, short",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__golpe": {
+   "id": "mods_ia_fusion__golpe",
+   "video": "mods_ia_fusion",
+   "nombre": "golpe",
+   "archivo": "mods_ia_fusion__golpe.mp3",
+   "md5": "f044203ab63c7e8a6f3b5792b0455e3b",
+   "prompt": "Deep punchy cinematic bass impact hit with a short tail, trailer style",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "mods_ia_fusion__golpe2": {
+   "id": "mods_ia_fusion__golpe2",
+   "video": "mods_ia_fusion",
+   "nombre": "golpe2",
+   "archivo": "mods_ia_fusion__golpe2.mp3",
+   "md5": "b755593ef5027fb6b804d17cd6625d3e",
+   "prompt": "Tight sub bass thump hit, short and dry, modern trailer",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__pop": {
+   "id": "mods_ia_fusion__pop",
+   "video": "mods_ia_fusion",
+   "nombre": "pop",
+   "archivo": "mods_ia_fusion__pop.mp3",
+   "md5": "d6cbf89ef9f849e5f8cfdd0667db35cb",
+   "prompt": "Bright soft UI pop, bubble click, very short, clean",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "mods_ia_fusion__reja": {
+   "id": "mods_ia_fusion__reja",
+   "video": "mods_ia_fusion",
+   "nombre": "reja",
+   "archivo": "mods_ia_fusion__reja.mp3",
+   "md5": "941a4ee1f7dcccf813bc89f75d3bd7f6",
+   "prompt": "Heavy metal prison bars slamming shut with a loud reverberant clang",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__sello": {
+   "id": "mods_ia_fusion__sello",
+   "video": "mods_ia_fusion",
+   "nombre": "sello",
+   "archivo": "mods_ia_fusion__sello.mp3",
+   "md5": "322caaffa9aaee94d7445367d9d8e2fe",
+   "prompt": "Heavy rubber stamp slammed on a wooden desk, single thud",
+   "dur": 0.8,
+   "canal": ""
+  },
+  "mods_ia_fusion__subida": {
+   "id": "mods_ia_fusion__subida",
+   "video": "mods_ia_fusion",
+   "nombre": "subida",
+   "archivo": "mods_ia_fusion__subida.mp3",
+   "md5": "812bde01006d28f49df700af43743107",
+   "prompt": "Tense electronic riser sweep building up fast, ending abruptly",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__tecleo": {
+   "id": "mods_ia_fusion__tecleo",
+   "video": "mods_ia_fusion",
+   "nombre": "tecleo",
+   "archivo": "mods_ia_fusion__tecleo.mp3",
+   "md5": "9455546ecbec1d3c67fac1a4e6a3c980",
+   "prompt": "Fast mechanical keyboard typing, close and crisp",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "mods_ia_fusion__whoosh": {
+   "id": "mods_ia_fusion__whoosh",
+   "video": "mods_ia_fusion",
+   "nombre": "whoosh",
+   "archivo": "mods_ia_fusion__whoosh.mp3",
+   "md5": "26783cb562fde9e257e05d24a5685af1",
+   "prompt": "Fast airy cinematic whoosh swoosh transition, short",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "nervio_vago__auditorio": {
+   "id": "nervio_vago__auditorio",
+   "video": "nervio_vago",
+   "nombre": "auditorio",
+   "archivo": "nervio_vago__auditorio.mp3",
+   "md5": "60a8708fa2e1622586b03d8404a4c59e",
+   "prompt": "Quiet school auditorium ambience, people shuffling in seats, a single nervous cough, microphone hum",
+   "dur": 6.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__campana": {
+   "id": "nervio_vago__campana",
+   "video": "nervio_vago",
+   "nombre": "campana",
+   "archivo": "nervio_vago__campana.mp3",
+   "md5": "3d09e50d5df304ebcd4b9a729764f6f8",
+   "prompt": "Soft warm singing bowl chime, calm, gentle long resonance",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__chispa": {
+   "id": "nervio_vago__chispa",
+   "video": "nervio_vago",
+   "nombre": "chispa",
+   "archivo": "nervio_vago__chispa.mp3",
+   "md5": "81dafb2a8a5414d955eaf560269fa2bc",
+   "prompt": "Small electric spark zap from an old brass apparatus",
+   "dur": 1.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__coro": {
+   "id": "nervio_vago__coro",
+   "video": "nervio_vago",
+   "nombre": "coro",
+   "archivo": "nervio_vago__coro.mp3",
+   "md5": "db2ed09310aa0d13ad89943fcc45cefe",
+   "prompt": "Small choir humming one warm sustained note together, soft, no words",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__desmayo": {
+   "id": "nervio_vago__desmayo",
+   "video": "nervio_vago",
+   "nombre": "desmayo",
+   "archivo": "nervio_vago__desmayo.mp3",
+   "md5": "965b89e52c1899c9a70f721042f59f9c",
+   "prompt": "Low dull whoosh dropping in pitch, like hearing fade before fainting, muffled",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__frio": {
+   "id": "nervio_vago__frio",
+   "video": "nervio_vago",
+   "nombre": "frio",
+   "archivo": "nervio_vago__frio.mp3",
+   "md5": "ed729e581dc5bcb8592d1dd28015272a",
+   "prompt": "Cold wet towel pressed on skin with ice cubes clinking in a bowl",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__golpe": {
+   "id": "nervio_vago__golpe",
+   "video": "nervio_vago",
+   "nombre": "golpe",
+   "archivo": "nervio_vago__golpe.mp3",
+   "md5": "a0d6281e550cc50fd011682f0d91a6b5",
+   "prompt": "Soft deep cinematic hit with a subtle airy whoosh, for a title word appearing",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__gota": {
+   "id": "nervio_vago__gota",
+   "video": "nervio_vago",
+   "nombre": "gota",
+   "archivo": "nervio_vago__gota.mp3",
+   "md5": "9337cf60de79bbecb7cfd540bb87344a",
+   "prompt": "Liquid poured gently from a glass beaker into another, clean trickle",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__laboratorio": {
+   "id": "nervio_vago__laboratorio",
+   "video": "nervio_vago",
+   "nombre": "laboratorio",
+   "archivo": "nervio_vago__laboratorio.mp3",
+   "md5": "9f79275fdf2ddc8f60f73bf9732b7511",
+   "prompt": "1920s laboratory: glass flasks clinking, a bubbling liquid, a small electrical buzz",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__lapiz": {
+   "id": "nervio_vago__lapiz",
+   "video": "nervio_vago",
+   "nombre": "lapiz",
+   "archivo": "nervio_vago__lapiz.mp3",
+   "md5": "fddbe20051b735039bbf57605333c837",
+   "prompt": "Pencil scribbling quickly on paper in the dark",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__latido": {
+   "id": "nervio_vago__latido",
+   "video": "nervio_vago",
+   "nombre": "latido",
+   "archivo": "nervio_vago__latido.mp3",
+   "md5": "9c50dd82e5f7cbf2d1ceda2f54dbe0df",
+   "prompt": "Fast heartbeat thumping, close and muffled, tense",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__latido_lento": {
+   "id": "nervio_vago__latido_lento",
+   "video": "nervio_vago",
+   "nombre": "latido_lento",
+   "archivo": "nervio_vago__latido_lento.mp3",
+   "md5": "886d9e86e77bc75cd8e249674b812a03",
+   "prompt": "Single slow calm heartbeat thump, deep and soft, repeating slowly",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__neon": {
+   "id": "nervio_vago__neon",
+   "video": "nervio_vago",
+   "nombre": "neon",
+   "archivo": "nervio_vago__neon.mp3",
+   "md5": "df1fc9721e0890984dd3b56e0799af5e",
+   "prompt": "Electric neon tube buzzing and flickering on, short crackle then steady low hum",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__notificacion": {
+   "id": "nervio_vago__notificacion",
+   "video": "nervio_vago",
+   "nombre": "notificacion",
+   "archivo": "nervio_vago__notificacion.mp3",
+   "md5": "11fe35fad01d557183da621a2afda2ff",
+   "prompt": "Several overlapping phone notification pings and short social-video sounds, busy",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__pasos": {
+   "id": "nervio_vago__pasos",
+   "video": "nervio_vago",
+   "nombre": "pasos",
+   "archivo": "nervio_vago__pasos.mp3",
+   "md5": "ba05bec133303194963a4289f6d16de3",
+   "prompt": "Running footsteps on a park path, steady breathing",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__reloj": {
+   "id": "nervio_vago__reloj",
+   "video": "nervio_vago",
+   "nombre": "reloj",
+   "archivo": "nervio_vago__reloj.mp3",
+   "md5": "898e209eca02287c94dcc920a8e0f381",
+   "prompt": "Old mechanical alarm clock ticking in a quiet bedroom at night",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "nervio_vago__risas": {
+   "id": "nervio_vago__risas",
+   "video": "nervio_vago",
+   "nombre": "risas",
+   "archivo": "nervio_vago__risas.mp3",
+   "md5": "8f7021680bc5822c911800921a1ea272",
+   "prompt": "Friends laughing softly together around a table, warm",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "secreto_ia__alarma_suave": {
+   "id": "secreto_ia__alarma_suave",
+   "video": "secreto_ia",
+   "nombre": "alarma_suave",
+   "archivo": "secreto_ia__alarma_suave.mp3",
+   "md5": "801be826838b90e344063de28fa3eaa5",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "logia"
+  },
+  "secreto_ia__cerrojo": {
+   "id": "secreto_ia__cerrojo",
+   "video": "secreto_ia",
+   "nombre": "cerrojo",
+   "archivo": "secreto_ia__cerrojo.mp3",
+   "md5": "3d2114859d5978798718d0dc2a40e028",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "logia"
+  },
+  "secreto_ia__cristal": {
+   "id": "secreto_ia__cristal",
+   "video": "secreto_ia",
+   "nombre": "cristal",
+   "archivo": "secreto_ia__cristal.mp3",
+   "md5": "08cbc881e2df302ef2dfeb084dde1c30",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "logia"
+  },
+  "secreto_ia__estatica": {
+   "id": "secreto_ia__estatica",
+   "video": "secreto_ia",
+   "nombre": "estatica",
+   "archivo": "secreto_ia__estatica.mp3",
+   "md5": "c01ec8067d0b46676a7e029a56a3db51",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "logia"
+  },
+  "secreto_ia__golpe_puerta": {
+   "id": "secreto_ia__golpe_puerta",
+   "video": "secreto_ia",
+   "nombre": "golpe_puerta",
+   "archivo": "secreto_ia__golpe_puerta.mp3",
+   "md5": "007fb63fbb962efbf9b444eca07f6cf7",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "logia"
+  },
+  "secreto_ia__pulso_grave": {
+   "id": "secreto_ia__pulso_grave",
+   "video": "secreto_ia",
+   "nombre": "pulso_grave",
+   "archivo": "secreto_ia__pulso_grave.mp3",
+   "md5": "e1d9456e5a19615f99ccc4d6828354d2",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "logia"
+  },
+  "secreto_ia__sello_metal": {
+   "id": "secreto_ia__sello_metal",
+   "video": "secreto_ia",
+   "nombre": "sello_metal",
+   "archivo": "secreto_ia__sello_metal.mp3",
+   "md5": "63c69c1e62a82fe78cdfed64a9e97849",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "logia"
+  },
+  "sonic_exe__agua": {
+   "id": "sonic_exe__agua",
+   "video": "sonic_exe",
+   "nombre": "agua",
+   "archivo": "sonic_exe__agua.mp3",
+   "md5": "ae2851c0906a7976fb7b7ca915e6ec04",
+   "prompt": "Thick dark liquid sloshing slowly, heavy and unsettling, low",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__apagado": {
+   "id": "sonic_exe__apagado",
+   "video": "sonic_exe",
+   "nombre": "apagado",
+   "archivo": "sonic_exe__apagado.mp3",
+   "md5": "fdb59055ec943da02f82ed702ab42f50",
+   "prompt": "Old CRT television shutting off, high pitched electronic whine collapsing with a final low thump",
+   "dur": 1.76,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__borrar": {
+   "id": "sonic_exe__borrar",
+   "video": "sonic_exe",
+   "nombre": "borrar",
+   "archivo": "sonic_exe__borrar.mp3",
+   "md5": "9d6f75b132bba025b91861754f881a2b",
+   "prompt": "Fast digital deletion sweep, descending glitchy erase, short",
+   "dur": 1.36,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__cartucho": {
+   "id": "sonic_exe__cartucho",
+   "video": "sonic_exe",
+   "nombre": "cartucho",
+   "archivo": "sonic_exe__cartucho.mp3",
+   "md5": "aa53df88e29091236c69404f085acc4a",
+   "prompt": "Video game cartridge pushed into a console slot with a plastic click and a dull clunk, close",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__chiptune": {
+   "id": "sonic_exe__chiptune",
+   "video": "sonic_exe",
+   "nombre": "chiptune",
+   "archivo": "sonic_exe__chiptune.mp3",
+   "md5": "c9a510fdb50fbe8572c1abe2a4e81262",
+   "prompt": "Slowed down, detuned and distorted 16-bit video game title jingle, creepy, warped like a dying cassette",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__choque": {
+   "id": "sonic_exe__choque",
+   "video": "sonic_exe",
+   "nombre": "choque",
+   "archivo": "sonic_exe__choque.mp3",
+   "md5": "f4942762b79e5afd1e68aba8b26f70cf",
+   "prompt": "Metallic crunch of a machine being smashed, sparks and a burst of static, short",
+   "dur": 1.28,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__clic": {
+   "id": "sonic_exe__clic",
+   "video": "sonic_exe",
+   "nombre": "clic",
+   "archivo": "sonic_exe__clic.mp3",
+   "md5": "4a4ac363854377d7a60b56b23f7ab130",
+   "prompt": "Single computer mouse click, close and dry",
+   "dur": 0.48,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__corte": {
+   "id": "sonic_exe__corte",
+   "video": "sonic_exe",
+   "nombre": "corte",
+   "archivo": "sonic_exe__corte.mp3",
+   "md5": "79e1423af6621bbfb4ce204a870b76d8",
+   "prompt": "Violent digital tear: a glitchy distorted cry cut off abruptly by a burst of static, short, horror",
+   "dur": 1.28,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__crt_on": {
+   "id": "sonic_exe__crt_on",
+   "video": "sonic_exe",
+   "nombre": "crt_on",
+   "archivo": "sonic_exe__crt_on.mp3",
+   "md5": "45756852e2cf77738aba6f71a3512a09",
+   "prompt": "Old CRT computer monitor turning on, electric buzz and static crackle rising, then a steady low hum",
+   "dur": 2.48,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__disco_mesa": {
+   "id": "sonic_exe__disco_mesa",
+   "video": "sonic_exe",
+   "nombre": "disco_mesa",
+   "archivo": "sonic_exe__disco_mesa.mp3",
+   "md5": "13032a84c5c53862e528b426565cd7fe",
+   "prompt": "Plastic disc set down on a wooden desk, soft tap and slide, close",
+   "dur": 0.8,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__error": {
+   "id": "sonic_exe__error",
+   "video": "sonic_exe",
+   "nombre": "error",
+   "archivo": "sonic_exe__error.mp3",
+   "md5": "3bb469566af8b7d8604456f89081bc4f",
+   "prompt": "Short harsh old computer error beep, dry, small speaker",
+   "dur": 0.6,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__estatica": {
+   "id": "sonic_exe__estatica",
+   "video": "sonic_exe",
+   "nombre": "estatica",
+   "archivo": "sonic_exe__estatica.mp3",
+   "md5": "d72d9303d187928262ed374426afb762",
+   "prompt": "TV static noise burst, harsh white noise hiss, short and sharp",
+   "dur": 1.2,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__glitch": {
+   "id": "sonic_exe__glitch",
+   "video": "sonic_exe",
+   "nombre": "glitch",
+   "archivo": "sonic_exe__glitch.mp3",
+   "md5": "419bd977f33dd7be0acdfc9c48554818",
+   "prompt": "Digital glitch stutter with tape rewind squeal, short, unsettling",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__golpe": {
+   "id": "sonic_exe__golpe",
+   "video": "sonic_exe",
+   "nombre": "golpe",
+   "archivo": "sonic_exe__golpe.mp3",
+   "md5": "46fb28e6fed7e555e82cf8341713fc3f",
+   "prompt": "Deep low horror impact boom, sub bass hit with a long dark reverberant tail, cinematic",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__goteo": {
+   "id": "sonic_exe__goteo",
+   "video": "sonic_exe",
+   "nombre": "goteo",
+   "archivo": "sonic_exe__goteo.mp3",
+   "md5": "55a0f0fe938a2412b021b00d484b5e0f",
+   "prompt": "Slow thick liquid dripping onto fabric, three heavy drops, quiet room",
+   "dur": 2.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__lampara": {
+   "id": "sonic_exe__lampara",
+   "video": "sonic_exe",
+   "nombre": "lampara",
+   "archivo": "sonic_exe__lampara.mp3",
+   "md5": "d26e61cd9bebd901449d506a0023f1b0",
+   "prompt": "Small desk lamp switching on, plastic click and a faint electric buzz, close",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__latido": {
+   "id": "sonic_exe__latido",
+   "video": "sonic_exe",
+   "nombre": "latido",
+   "archivo": "sonic_exe__latido.mp3",
+   "md5": "a33e0edcf9334a1f66fa1581f90a62af",
+   "prompt": "Slow deep heartbeat thumping, dark and tense, three beats",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__lector": {
+   "id": "sonic_exe__lector",
+   "video": "sonic_exe",
+   "nombre": "lector",
+   "archivo": "sonic_exe__lector.mp3",
+   "md5": "1ea847a7038e4296ce2ec6e4ee4ef674",
+   "prompt": "Old computer CD-ROM drive: tray sliding closed with a motor whine, disc spinning up, seeking clicks and whirring",
+   "dur": 4.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__oxido": {
+   "id": "sonic_exe__oxido",
+   "video": "sonic_exe",
+   "nombre": "oxido",
+   "archivo": "sonic_exe__oxido.mp3",
+   "md5": "655aca65811f7ab9445595db50b346de",
+   "prompt": "Rusty metal creaking and scraping slowly, dark, horror",
+   "dur": 2.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__pantallas": {
+   "id": "sonic_exe__pantallas",
+   "video": "sonic_exe",
+   "nombre": "pantallas",
+   "archivo": "sonic_exe__pantallas.mp3",
+   "md5": "02d8ff0ec2ce0e61d9b48ec98562bf7f",
+   "prompt": "Many small old monitors and screens flickering on at once, electric buzz and crackle, rising",
+   "dur": 2.48,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__papel": {
+   "id": "sonic_exe__papel",
+   "video": "sonic_exe",
+   "nombre": "papel",
+   "archivo": "sonic_exe__papel.mp3",
+   "md5": "4eca5b6630bca4e61bdda55fe0942137",
+   "prompt": "Paper note being crumpled and unfolded slowly, close, dry rustle",
+   "dur": 1.2,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__pasos": {
+   "id": "sonic_exe__pasos",
+   "video": "sonic_exe",
+   "nombre": "pasos",
+   "archivo": "sonic_exe__pasos.mp3",
+   "md5": "ee3aed2ddb42479dc01f5482753b0b44",
+   "prompt": "Slow soft footsteps on a wooden floor in a dark quiet room, close, right behind the listener",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__ping": {
+   "id": "sonic_exe__ping",
+   "video": "sonic_exe",
+   "nombre": "ping",
+   "archivo": "sonic_exe__ping.mp3",
+   "md5": "e3c22b52bbc220b73d8d6d28618ac5f6",
+   "prompt": "Small cold digital notification blip, short",
+   "dur": 0.48,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__polvo": {
+   "id": "sonic_exe__polvo",
+   "video": "sonic_exe",
+   "nombre": "polvo",
+   "archivo": "sonic_exe__polvo.mp3",
+   "md5": "81d84014e4cc2e4bb7e265c3fb8829b2",
+   "prompt": "Glassy disc crumbling into fine dust, soft dissolving shimmer, quiet",
+   "dur": 1.6,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__risa": {
+   "id": "sonic_exe__risa",
+   "video": "sonic_exe",
+   "nombre": "risa",
+   "archivo": "sonic_exe__risa.mp3",
+   "md5": "35a30913abe38ff01e1b5fc48fe4f935",
+   "prompt": "Distorted low demonic laughter with echo, unsettling and slow, horror",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__sello": {
+   "id": "sonic_exe__sello",
+   "video": "sonic_exe",
+   "nombre": "sello",
+   "archivo": "sonic_exe__sello.mp3",
+   "md5": "f66176c84552e0d82b91dbc9c7be2af0",
+   "prompt": "Heavy rubber stamp hitting paper, dull thump, short",
+   "dur": 0.68,
+   "canal": "cronicas_gaming"
+  },
+  "sonic_exe__susurro": {
+   "id": "sonic_exe__susurro",
+   "video": "sonic_exe",
+   "nombre": "susurro",
+   "archivo": "sonic_exe__susurro.mp3",
+   "md5": "ef60ba2a011c5714fe746fd9c5bd7e54",
+   "prompt": "Faint ghostly whisper, breathy and unintelligible, very close, horror",
+   "dur": 2.48,
+   "canal": "cronicas_gaming"
+  },
+  "terror_ben_drowned__agua": {
+   "id": "terror_ben_drowned__agua",
+   "video": "terror_ben_drowned",
+   "nombre": "agua",
+   "archivo": "terror_ben_drowned__agua.mp3",
+   "md5": "791cbeeea5ebadd34236339d035b7497",
+   "prompt": "Muffled underwater ambience, slow bubbles rising, deep and cold",
+   "dur": 6.0,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__apagado": {
+   "id": "terror_ben_drowned__apagado",
+   "video": "terror_ben_drowned",
+   "nombre": "apagado",
+   "archivo": "terror_ben_drowned__apagado.mp3",
+   "md5": "cbe998663427cfe0f54564e9e27ca315",
+   "prompt": "Old CRT television shutting off, high pitched electronic whine collapsing with a final low thump",
+   "dur": 1.76,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__cartel": {
+   "id": "terror_ben_drowned__cartel",
+   "video": "terror_ben_drowned",
+   "nombre": "cartel",
+   "archivo": "terror_ben_drowned__cartel.mp3",
+   "md5": "f8ddc3a99c25ff056eaf54f22a0efd3a",
+   "prompt": "Cardboard sign swinging and tapping softly against a wall, short",
+   "dur": 0.8,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__cartucho": {
+   "id": "terror_ben_drowned__cartucho",
+   "video": "terror_ben_drowned",
+   "nombre": "cartucho",
+   "archivo": "terror_ben_drowned__cartucho.mp3",
+   "md5": "9b563cef1b54c3a9d9dc4391d0436e5f",
+   "prompt": "Video game cartridge pushed into a console slot with a plastic click and a dull clunk, close",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__crt_on": {
+   "id": "terror_ben_drowned__crt_on",
+   "video": "terror_ben_drowned",
+   "nombre": "crt_on",
+   "archivo": "terror_ben_drowned__crt_on.mp3",
+   "md5": "796a58ce82ccb94cfcb7e77704d1d6f6",
+   "prompt": "Old CRT television turning on, electric buzz and static crackle rising, then a steady low hum",
+   "dur": 2.48,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__estatica": {
+   "id": "terror_ben_drowned__estatica",
+   "video": "terror_ben_drowned",
+   "nombre": "estatica",
+   "archivo": "terror_ben_drowned__estatica.mp3",
+   "md5": "ad0f42d6445fdb9e21db7a062491ad06",
+   "prompt": "TV static noise burst, harsh white noise hiss, short and sharp",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__foco": {
+   "id": "terror_ben_drowned__foco",
+   "video": "terror_ben_drowned",
+   "nombre": "foco",
+   "archivo": "terror_ben_drowned__foco.mp3",
+   "md5": "6073cc6d2df052929bf4ed71e8246cdf",
+   "prompt": "Old spotlight switching on, heavy electric click and a faint hum",
+   "dur": 1.2,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__glitch": {
+   "id": "terror_ben_drowned__glitch",
+   "video": "terror_ben_drowned",
+   "nombre": "glitch",
+   "archivo": "terror_ben_drowned__glitch.mp3",
+   "md5": "6bcda523fcd36fbf6dce32fc1fa23fb2",
+   "prompt": "Digital glitch stutter with tape rewind squeal, short, unsettling",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__golpe": {
+   "id": "terror_ben_drowned__golpe",
+   "video": "terror_ben_drowned",
+   "nombre": "golpe",
+   "archivo": "terror_ben_drowned__golpe.mp3",
+   "md5": "29f9ffd7d351f09be25cc10daebf0815",
+   "prompt": "Deep low horror impact boom, sub bass hit with a long dark reverberant tail, cinematic",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__latido": {
+   "id": "terror_ben_drowned__latido",
+   "video": "terror_ben_drowned",
+   "nombre": "latido",
+   "archivo": "terror_ben_drowned__latido.mp3",
+   "md5": "b12525abea7876ac3eb579e2faf1f038",
+   "prompt": "Slow deep heartbeat thumping, dark and tense, three beats",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__piedra": {
+   "id": "terror_ben_drowned__piedra",
+   "video": "terror_ben_drowned",
+   "nombre": "piedra",
+   "archivo": "terror_ben_drowned__piedra.mp3",
+   "md5": "ce706a710ec6bf907845df0f055de258",
+   "prompt": "Heavy stone scraping slowly on a wooden floor, low rumble, horror",
+   "dur": 2.48,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__ping": {
+   "id": "terror_ben_drowned__ping",
+   "video": "terror_ben_drowned",
+   "nombre": "ping",
+   "archivo": "terror_ben_drowned__ping.mp3",
+   "md5": "cc55baaa10bf7a4d83c14d6072b73d17",
+   "prompt": "Small cold digital notification blip, short",
+   "dur": 0.48,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__reloj": {
+   "id": "terror_ben_drowned__reloj",
+   "video": "terror_ben_drowned",
+   "nombre": "reloj",
+   "archivo": "terror_ben_drowned__reloj.mp3",
+   "md5": "06d69ab37b08312b57af35fb5f545056",
+   "prompt": "Fast clock ticking that accelerates and then stops abruptly",
+   "dur": 2.2,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__risa": {
+   "id": "terror_ben_drowned__risa",
+   "video": "terror_ben_drowned",
+   "nombre": "risa",
+   "archivo": "terror_ben_drowned__risa.mp3",
+   "md5": "43138e41bc9b3814a6e3e4924bc81046",
+   "prompt": "Distorted creepy laughter of a man, unsettling manic laugh with echo, horror",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "terror_ben_drowned__susurro": {
+   "id": "terror_ben_drowned__susurro",
+   "video": "terror_ben_drowned",
+   "nombre": "susurro",
+   "archivo": "terror_ben_drowned__susurro.mp3",
+   "md5": "37d6dcf3ce4695149ed6dfed79f41cc7",
+   "prompt": "Faint ghostly whisper, breathy and unintelligible, very close, horror",
+   "dur": 2.48,
+   "canal": "sin"
+  },
+  "tes_exploits_rotos__desborde": {
+   "id": "tes_exploits_rotos__desborde",
+   "video": "tes_exploits_rotos",
+   "nombre": "desborde",
+   "archivo": "tes_exploits_rotos__desborde.mp3",
+   "md5": "c590629a978995d2825e45d807825276",
+   "prompt": "Digital glitch overflow burst with a deep magical whoosh, numbers breaking",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_exploits_rotos__mision_a": {
+   "id": "tes_exploits_rotos__mision_a",
+   "video": "tes_exploits_rotos",
+   "nombre": "mision_a",
+   "archivo": "tes_exploits_rotos__mision_a.mp3",
+   "md5": "300cb2118beef2ca19f463fb8253ee31",
+   "prompt": "Deep nordic war drum hit with a short low horn swell, dark fantasy game quest notification",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_exploits_rotos__mision_b": {
+   "id": "tes_exploits_rotos__mision_b",
+   "video": "tes_exploits_rotos",
+   "nombre": "mision_b",
+   "archivo": "tes_exploits_rotos__mision_b.mp3",
+   "md5": "e8d1000ec35a55ddc4727a0dc02845a8",
+   "prompt": "Low ominous choir breath with a single deep drum hit, dark fantasy quest started sting",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_exploits_rotos__monedas": {
+   "id": "tes_exploits_rotos__monedas",
+   "video": "tes_exploits_rotos",
+   "nombre": "monedas",
+   "archivo": "tes_exploits_rotos__monedas.mp3",
+   "md5": "84d1e224201996b97d8308ebeb8ab8ee",
+   "prompt": "Handful of gold coins pouring into a leather pouch, medieval fantasy",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_exploits_rotos__olla": {
+   "id": "tes_exploits_rotos__olla",
+   "video": "tes_exploits_rotos",
+   "nombre": "olla",
+   "archivo": "tes_exploits_rotos__olla.mp3",
+   "md5": "34c6c23242d86d3813adce1d6b40854e",
+   "prompt": "Hollow wooden bucket placed on a head with a dull clunk",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_daedricas__caida": {
+   "id": "tes_misiones_daedricas__caida",
+   "video": "tes_misiones_daedricas",
+   "nombre": "caida",
+   "archivo": "tes_misiones_daedricas__caida.mp3",
+   "md5": "ea37a3d9897542a37738b3c6dc82a047",
+   "prompt": "Muffled body falls onto a stone floor with a low thud",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_daedricas__mision_a": {
+   "id": "tes_misiones_daedricas__mision_a",
+   "video": "tes_misiones_daedricas",
+   "nombre": "mision_a",
+   "archivo": "tes_misiones_daedricas__mision_a.mp3",
+   "md5": "7ca121e46697b2a0eea34fb31c1d7e75",
+   "prompt": "Deep nordic war drum hit with a short low horn swell, dark fantasy game quest notification",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_daedricas__mision_b": {
+   "id": "tes_misiones_daedricas__mision_b",
+   "video": "tes_misiones_daedricas",
+   "nombre": "mision_b",
+   "archivo": "tes_misiones_daedricas__mision_b.mp3",
+   "md5": "fb91cb3c8cd3636b79f7645692d348a7",
+   "prompt": "Low ominous choir breath with a single deep drum hit, dark fantasy quest started sting",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_daedricas__navaja": {
+   "id": "tes_misiones_daedricas__navaja",
+   "video": "tes_misiones_daedricas",
+   "nombre": "navaja",
+   "archivo": "tes_misiones_daedricas__navaja.mp3",
+   "md5": "16fc0f5233e0e0ecb7ec295617a672ed",
+   "prompt": "Sharp dagger unsheathing with a dark magical shimmer sting",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_daedricas__reloj": {
+   "id": "tes_misiones_daedricas__reloj",
+   "video": "tes_misiones_daedricas",
+   "nombre": "reloj",
+   "archivo": "tes_misiones_daedricas__reloj.mp3",
+   "md5": "32ccc99d0cef5df573e2519fd7323aea",
+   "prompt": "Slow heavy clock ticking in a stone crypt, five ticks",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_nunca__cadena": {
+   "id": "tes_misiones_nunca__cadena",
+   "video": "tes_misiones_nunca",
+   "nombre": "cadena",
+   "archivo": "tes_misiones_nunca__cadena.mp3",
+   "md5": "08fb82c522cd8858f18d5772c9180bd0",
+   "prompt": "Heavy iron chain link snapping and breaking, metallic clank",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_nunca__cerrojo": {
+   "id": "tes_misiones_nunca__cerrojo",
+   "video": "tes_misiones_nunca",
+   "nombre": "cerrojo",
+   "archivo": "tes_misiones_nunca__cerrojo.mp3",
+   "md5": "895f74c8988b4f9d30908956c2acf1eb",
+   "prompt": "Old heavy wooden door slammed shut and an iron bolt locked, dark cabin",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_nunca__fuego": {
+   "id": "tes_misiones_nunca__fuego",
+   "video": "tes_misiones_nunca",
+   "nombre": "fuego",
+   "archivo": "tes_misiones_nunca__fuego.mp3",
+   "md5": "fc85c03011634d8942df99cad517fafb",
+   "prompt": "Large fire suddenly bursting into flames with a whoosh, burning wood",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_misiones_nunca__sello": {
+   "id": "tes_misiones_nunca__sello",
+   "video": "tes_misiones_nunca",
+   "nombre": "sello",
+   "archivo": "tes_misiones_nunca__sello.mp3",
+   "md5": "96183a8c3c0c92e6cc5c85b368e320c1",
+   "prompt": "Heavy rubber stamp slammed hard on a wooden desk, single thud",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "trailero_parada2__boom": {
+   "id": "trailero_parada2__boom",
+   "video": "trailero_parada2",
+   "nombre": "boom",
+   "archivo": "trailero_parada2__boom.mp3",
+   "md5": "280d13fbafb589d8d86a8ced7ab85e1f",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "trailero_parada2__claxon": {
+   "id": "trailero_parada2__claxon",
+   "video": "trailero_parada2",
+   "nombre": "claxon",
+   "archivo": "trailero_parada2__claxon.mp3",
+   "md5": "6e71d1eb2fd268f64bfe43f3630fbc7e",
+   "prompt": "",
+   "dur": 1.6,
+   "canal": ""
+  },
+  "trailero_parada2__ding": {
+   "id": "trailero_parada2__ding",
+   "video": "trailero_parada2",
+   "nombre": "ding",
+   "archivo": "trailero_parada2__ding.mp3",
+   "md5": "7cc568b26cb02aee935ca1135a08ec33",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "trailero_parada2__drama": {
+   "id": "trailero_parada2__drama",
+   "video": "trailero_parada2",
+   "nombre": "drama",
+   "archivo": "trailero_parada2__drama.mp3",
+   "md5": "126167cc678eb5f0299636797a84a0ba",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "trailero_parada2__glitch": {
+   "id": "trailero_parada2__glitch",
+   "video": "trailero_parada2",
+   "nombre": "glitch",
+   "archivo": "trailero_parada2__glitch.mp3",
+   "md5": "891a696fe17140648086610c43510147",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": ""
+  },
+  "trailero_parada2__golpe": {
+   "id": "trailero_parada2__golpe",
+   "video": "trailero_parada2",
+   "nombre": "golpe",
+   "archivo": "trailero_parada2__golpe.mp3",
+   "md5": "15aae3ce1b2907dc30855281d2df9fa9",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": ""
+  },
+  "trailero_parada2__latigo": {
+   "id": "trailero_parada2__latigo",
+   "video": "trailero_parada2",
+   "nombre": "latigo",
+   "archivo": "trailero_parada2__latigo.mp3",
+   "md5": "51448665e9c17158b115b74e73140e24",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": ""
+  },
+  "trailero_parada2__pop": {
+   "id": "trailero_parada2__pop",
+   "video": "trailero_parada2",
+   "nombre": "pop",
+   "archivo": "trailero_parada2__pop.mp3",
+   "md5": "ac089ff315b0bbd6e30e7b2108f72476",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "trailero_parada2__puerta": {
+   "id": "trailero_parada2__puerta",
+   "video": "trailero_parada2",
+   "nombre": "puerta",
+   "archivo": "trailero_parada2__puerta.mp3",
+   "md5": "08c97b419fae7f214b9049aad9a3185a",
+   "prompt": "",
+   "dur": 1.6,
+   "canal": ""
+  },
+  "trailero_parada2__rapido": {
+   "id": "trailero_parada2__rapido",
+   "video": "trailero_parada2",
+   "nombre": "rapido",
+   "archivo": "trailero_parada2__rapido.mp3",
+   "md5": "a089dcc5cb067a1e490077656b134512",
+   "prompt": "",
+   "dur": 1.76,
+   "canal": ""
+  },
+  "trailero_parada2__scratch": {
+   "id": "trailero_parada2__scratch",
+   "video": "trailero_parada2",
+   "nombre": "scratch",
+   "archivo": "trailero_parada2__scratch.mp3",
+   "md5": "53c143d1e155cbb7ea42992e4a60ab2e",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "trailero_parada2__subida": {
+   "id": "trailero_parada2__subida",
+   "video": "trailero_parada2",
+   "nombre": "subida",
+   "archivo": "trailero_parada2__subida.mp3",
+   "md5": "7e2be81185729ef4a6e88ba413508448",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "trailero_parada2__trinquete": {
+   "id": "trailero_parada2__trinquete",
+   "video": "trailero_parada2",
+   "nombre": "trinquete",
+   "archivo": "trailero_parada2__trinquete.mp3",
+   "md5": "9f82466f489b590eb34104263b39e8fe",
+   "prompt": "",
+   "dur": 1.6,
+   "canal": ""
+  },
+  "trailero_parada2__whoosh": {
+   "id": "trailero_parada2__whoosh",
+   "video": "trailero_parada2",
+   "nombre": "whoosh",
+   "archivo": "trailero_parada2__whoosh.mp3",
+   "md5": "892b08b1ad200e241d3583e23963d0dc",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": ""
+  },
+  "videollamada_falsa__bip": {
+   "id": "videollamada_falsa__bip",
+   "video": "videollamada_falsa",
+   "nombre": "bip",
+   "archivo": "videollamada_falsa__bip.mp3",
+   "md5": "88a29cca3e12a929bd86683edf991913",
+   "prompt": "Short soft digital bank transfer confirmation beep, single",
+   "dur": 0.48,
+   "canal": "logia"
+  },
+  "videollamada_falsa__celda": {
+   "id": "videollamada_falsa__celda",
+   "video": "videollamada_falsa",
+   "nombre": "celda",
+   "archivo": "videollamada_falsa__celda.mp3",
+   "md5": "bf30979c526d026c60ec04386f593afb",
+   "prompt": "Heavy iron prison cell door slamming shut with reverberant clang",
+   "dur": 2.48,
+   "canal": "logia"
+  },
+  "videollamada_falsa__conecta": {
+   "id": "videollamada_falsa__conecta",
+   "video": "videollamada_falsa",
+   "nombre": "conecta",
+   "archivo": "videollamada_falsa__conecta.mp3",
+   "md5": "7265ef4866ad3163e078a8372d5e150d",
+   "prompt": "Video conference call connecting chime, soft modern join-meeting notification sound",
+   "dur": 1.48,
+   "canal": "logia"
+  },
+  "videollamada_falsa__correo": {
+   "id": "videollamada_falsa__correo",
+   "video": "videollamada_falsa",
+   "nombre": "correo",
+   "archivo": "videollamada_falsa__correo.mp3",
+   "md5": "d8ac797cca3ca8c0ea6b44a6d8077415",
+   "prompt": "Single soft email notification ding on a computer, clean",
+   "dur": 1.0,
+   "canal": "logia"
+  },
+  "videollamada_falsa__cuelga": {
+   "id": "videollamada_falsa__cuelga",
+   "video": "videollamada_falsa",
+   "nombre": "cuelga",
+   "archivo": "videollamada_falsa__cuelga.mp3",
+   "md5": "83e8db25026b38f4269c61f0610402e7",
+   "prompt": "Video call ending, short descending disconnect tone followed by silence",
+   "dur": 1.48,
+   "canal": "logia"
+  },
+  "videollamada_falsa__linea": {
+   "id": "videollamada_falsa__linea",
+   "video": "videollamada_falsa",
+   "nombre": "linea",
+   "archivo": "videollamada_falsa__linea.mp3",
+   "md5": "023d5f449435885006825d01189ae2cc",
+   "prompt": "Old telephone line ringing tone heard through the earpiece, two rings, slightly distorted",
+   "dur": 4.0,
+   "canal": "logia"
+  },
+  "wow_clases_ocultas__overgear_codigo": {
+   "id": "wow_clases_ocultas__overgear_codigo",
+   "video": "wow_clases_ocultas",
+   "nombre": "overgear_codigo",
+   "archivo": "wow_clases_ocultas__overgear_codigo.mp3",
+   "md5": "8368ec0d3c8c59c97f55e0ed41e82328",
+   "prompt": "",
+   "dur": 6.89,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_estofado_poniente__aleteo": {
+   "id": "wow_estofado_poniente__aleteo",
+   "video": "wow_estofado_poniente",
+   "nombre": "aleteo",
+   "archivo": "wow_estofado_poniente__aleteo.mp3",
+   "md5": "f2b0db6ff8e7cdbfcdb14732309cd61f",
+   "prompt": "Large ragged bird wings flapping close past the microphone",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__buitre": {
+   "id": "wow_estofado_poniente__buitre",
+   "video": "wow_estofado_poniente",
+   "nombre": "buitre",
+   "archivo": "wow_estofado_poniente__buitre.mp3",
+   "md5": "68acb2574efdac0269e77a3a38734502",
+   "prompt": "Raspy comic vulture squawk, cartoonish but real bird",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__burbujas": {
+   "id": "wow_estofado_poniente__burbujas",
+   "video": "wow_estofado_poniente",
+   "nombre": "burbujas",
+   "archivo": "wow_estofado_poniente__burbujas.mp3",
+   "md5": "2fbf79d7b67524623781b710a5180217",
+   "prompt": "Thick stew bubbling in an iron cauldron, seamless loop",
+   "dur": 8.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__crujido": {
+   "id": "wow_estofado_poniente__crujido",
+   "video": "wow_estofado_poniente",
+   "nombre": "crujido",
+   "archivo": "wow_estofado_poniente__crujido.mp3",
+   "md5": "114dad396f41451ee5b2154342cd74fd",
+   "prompt": "Slow creaking of rusty iron plates and old wooden joints, a scarecrow golem rising",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__fuego": {
+   "id": "wow_estofado_poniente__fuego",
+   "video": "wow_estofado_poniente",
+   "nombre": "fuego",
+   "archivo": "wow_estofado_poniente__fuego.mp3",
+   "md5": "0e428019ea207fb1a8e263f249453168",
+   "prompt": "Crackling fireplace inside a cosy farmhouse, seamless loop",
+   "dur": 10.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__glup": {
+   "id": "wow_estofado_poniente__glup",
+   "video": "wow_estofado_poniente",
+   "nombre": "glup",
+   "archivo": "wow_estofado_poniente__glup.mp3",
+   "md5": "426f5fe37763b368f94eb29d0493d535",
+   "prompt": "Comic wet squelchy blink and gloop of a clay creature rising from soup",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__grillos": {
+   "id": "wow_estofado_poniente__grillos",
+   "video": "wow_estofado_poniente",
+   "nombre": "grillos",
+   "archivo": "wow_estofado_poniente__grillos.mp3",
+   "md5": "56c2b54a1e3db0bdb4fcea60856e43e7",
+   "prompt": "Quiet farm field at night, crickets and a light breeze, seamless loop",
+   "dur": 10.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__impacto": {
+   "id": "wow_estofado_poniente__impacto",
+   "video": "wow_estofado_poniente",
+   "nombre": "impacto",
+   "archivo": "wow_estofado_poniente__impacto.mp3",
+   "md5": "d7dda0692bd989fcc1cd4e4361c28573",
+   "prompt": "Comic heavy body thud into dry grass with a puff of dust",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__jabali": {
+   "id": "wow_estofado_poniente__jabali",
+   "video": "wow_estofado_poniente",
+   "nombre": "jabali",
+   "archivo": "wow_estofado_poniente__jabali.mp3",
+   "md5": "01da2de4f80ffe0cf1a845d5158d67df",
+   "prompt": "Angry boar grunts and hooves pawing dry ground, then charging snort",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__murloc": {
+   "id": "wow_estofado_poniente__murloc",
+   "video": "wow_estofado_poniente",
+   "nombre": "murloc",
+   "archivo": "wow_estofado_poniente__murloc.mp3",
+   "md5": "113ce086efc4932970fd0686ca66e0a7",
+   "prompt": "Wet gurgling bubbly creature chorus, small fish-frog monsters burbling 'mrglglgl'",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__ola": {
+   "id": "wow_estofado_poniente__ola",
+   "video": "wow_estofado_poniente",
+   "nombre": "ola",
+   "archivo": "wow_estofado_poniente__ola.mp3",
+   "md5": "39d0f25c343b75aeb150ed02e6d67eb2",
+   "prompt": "Big ocean wave crashing over rocks, foam hissing as it drains",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__pergamino": {
+   "id": "wow_estofado_poniente__pergamino",
+   "video": "wow_estofado_poniente",
+   "nombre": "pergamino",
+   "archivo": "wow_estofado_poniente__pergamino.mp3",
+   "md5": "114eff27cb3d2f8fe630b172003b9ea1",
+   "prompt": "Old parchment scroll unrolling and dropping on a wooden porch floor",
+   "dur": 2.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__pisadas": {
+   "id": "wow_estofado_poniente__pisadas",
+   "video": "wow_estofado_poniente",
+   "nombre": "pisadas",
+   "archivo": "wow_estofado_poniente__pisadas.mp3",
+   "md5": "9414729f25a4e19ab635daff2f15bd85",
+   "prompt": "Heavy stomping metal footsteps chasing through crops, plants being slashed",
+   "dur": 5.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__portazo": {
+   "id": "wow_estofado_poniente__portazo",
+   "video": "wow_estofado_poniente",
+   "nombre": "portazo",
+   "archivo": "wow_estofado_poniente__portazo.mp3",
+   "md5": "5fd6811c601dc1e75e1ddbc955883e6a",
+   "prompt": "Heavy wooden farmhouse door slammed shut",
+   "dur": 1.0,
+   "canal": "sin"
+  },
+  "wow_estofado_poniente__rafaga": {
+   "id": "wow_estofado_poniente__rafaga",
+   "video": "wow_estofado_poniente",
+   "nombre": "rafaga",
+   "archivo": "wow_estofado_poniente__rafaga.mp3",
+   "md5": "14b5a82c2bdb4ebe6cf3a1203710a9e1",
+   "prompt": "Strong gust of wind sweeping through a dry wheat field, rustling stalks",
+   "dur": 3.0,
+   "canal": "sin"
+  },
+  "wow_tres_noches__agua_termal": {
+   "id": "wow_tres_noches__agua_termal",
+   "video": "wow_tres_noches",
+   "nombre": "agua_termal",
+   "archivo": "wow_tres_noches__agua_termal.mp3",
+   "md5": "3589146fdcc043efc9e7893a885a9505",
+   "prompt": "Hot spring bubbling softly in a snowy forest, gentle steam hiss, cold wind",
+   "dur": 10.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__almas": {
+   "id": "wow_tres_noches__almas",
+   "video": "wow_tres_noches",
+   "nombre": "almas",
+   "archivo": "wow_tres_noches__almas.mp3",
+   "md5": "0476dbb2aa72a41332d270d7079f0c76",
+   "prompt": "Many distant ghostly moans and sighs echoing, a procession of lost souls, faint",
+   "dur": 6.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__amanecer": {
+   "id": "wow_tres_noches__amanecer",
+   "video": "wow_tres_noches",
+   "nombre": "amanecer",
+   "archivo": "wow_tres_noches__amanecer.mp3",
+   "md5": "e7e3b7917ba119b69e6be8a37d4c062a",
+   "prompt": "Dawn breaking over a desolate field: cold wind, a distant rooster, then a soft warm choir swell",
+   "dur": 6.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__apagar": {
+   "id": "wow_tres_noches__apagar",
+   "video": "wow_tres_noches",
+   "nombre": "apagar",
+   "archivo": "wow_tres_noches__apagar.mp3",
+   "md5": "4a13297fe02d0e999edf9244464ea6e1",
+   "prompt": "A candle flame being snuffed out, short hiss and a puff of smoke",
+   "dur": 1.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__ataque": {
+   "id": "wow_tres_noches__ataque",
+   "video": "wow_tres_noches",
+   "nombre": "ataque",
+   "archivo": "wow_tres_noches__ataque.mp3",
+   "md5": "774cd28acb8c08cf65b5dcbb212f4a84",
+   "prompt": "Wolf snarling and lunging, then people screaming in panic in a stone hall",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__caida": {
+   "id": "wow_tres_noches__caida",
+   "video": "wow_tres_noches",
+   "nombre": "caida",
+   "archivo": "wow_tres_noches__caida.mp3",
+   "md5": "192f880e4129aef4afd4e63e1727d524",
+   "prompt": "A body collapsing to the ground and bones rattling onto stone",
+   "dur": 1.36,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__caja": {
+   "id": "wow_tres_noches__caja",
+   "video": "wow_tres_noches",
+   "nombre": "caja",
+   "archivo": "wow_tres_noches__caja.mp3",
+   "md5": "bee088098e6bd50657a58f3e9284eda5",
+   "prompt": "Wooden crate lid pried open with a creak and a sickly hiss of gas escaping",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__caja_musica": {
+   "id": "wow_tres_noches__caja_musica",
+   "video": "wow_tres_noches",
+   "nombre": "caja_musica",
+   "archivo": "wow_tres_noches__caja_musica.mp3",
+   "md5": "b3a0aadefd47925e7d4a8608db50900b",
+   "prompt": "Eerie old music box melody slowly winding down, lonely",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__calle_caos": {
+   "id": "wow_tres_noches__calle_caos",
+   "video": "wow_tres_noches",
+   "nombre": "calle_caos",
+   "archivo": "wow_tres_noches__calle_caos.mp3",
+   "md5": "da80dfa83c3ad1b6a11cd5ab7ea5449f",
+   "prompt": "Medieval city at night in chaos: zombies groaning, people screaming, alarm bells far away",
+   "dur": 10.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__campana": {
+   "id": "wow_tres_noches__campana",
+   "video": "wow_tres_noches",
+   "nombre": "campana",
+   "archivo": "wow_tres_noches__campana.mp3",
+   "md5": "ec487d467a526dabe8d08f40e6a3e99c",
+   "prompt": "A single distant cold church bell toll at night, long reverberant decay, eerie",
+   "dur": 5.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__campanilla": {
+   "id": "wow_tres_noches__campanilla",
+   "video": "wow_tres_noches",
+   "nombre": "campanilla",
+   "archivo": "wow_tres_noches__campanilla.mp3",
+   "md5": "e6a2d8e6f47a75f93c7cd7c8040ec68c",
+   "prompt": "A hand bell ringing urgently as a warning, outdoors in cold air",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__carga": {
+   "id": "wow_tres_noches__carga",
+   "video": "wow_tres_noches",
+   "nombre": "carga",
+   "archivo": "wow_tres_noches__carga.mp3",
+   "md5": "98497cdb56afe02aa55761eab7079136",
+   "prompt": "A war band charging downhill: battle cries, armor clanking, running footsteps in snow",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__ceniza": {
+   "id": "wow_tres_noches__ceniza",
+   "video": "wow_tres_noches",
+   "nombre": "ceniza",
+   "archivo": "wow_tres_noches__ceniza.mp3",
+   "md5": "94d5486ac41e023d3fccc1ecb057d3de",
+   "prompt": "Bodies crumbling into dust and ash, dry hissing disintegration",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__coro": {
+   "id": "wow_tres_noches__coro",
+   "video": "wow_tres_noches",
+   "nombre": "coro",
+   "archivo": "wow_tres_noches__coro.mp3",
+   "md5": "c928233700971bccafa3766ed7df113d",
+   "prompt": "Short eerie angelic choir swell, ethereal, cold reverb, rising then fading",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__cruzar": {
+   "id": "wow_tres_noches__cruzar",
+   "video": "wow_tres_noches",
+   "nombre": "cruzar",
+   "archivo": "wow_tres_noches__cruzar.mp3",
+   "md5": "84918962a2e4c713c1ed4324cc51d295",
+   "prompt": "Rushing whoosh of passing through a magic portal, wind and arcane shimmer",
+   "dur": 1.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__cuervos": {
+   "id": "wow_tres_noches__cuervos",
+   "video": "wow_tres_noches",
+   "nombre": "cuervos",
+   "archivo": "wow_tres_noches__cuervos.mp3",
+   "md5": "f98a3147b73e70dcf1670fbcbdcec080",
+   "prompt": "A few crows cawing in the distance at night, sparse, eerie",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__espada": {
+   "id": "wow_tres_noches__espada",
+   "video": "wow_tres_noches",
+   "nombre": "espada",
+   "archivo": "wow_tres_noches__espada.mp3",
+   "md5": "898831c3ad8371b561a832131143fab6",
+   "prompt": "A sword being drawn from a sheath, metallic ring",
+   "dur": 1.2,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__fantasma": {
+   "id": "wow_tres_noches__fantasma",
+   "video": "wow_tres_noches",
+   "nombre": "fantasma",
+   "archivo": "wow_tres_noches__fantasma.mp3",
+   "md5": "09cfdb0428387076ba720ec42356c6a8",
+   "prompt": "Ghostly whoosh passing by, airy spectral swoosh with a faint moan",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__fuego": {
+   "id": "wow_tres_noches__fuego",
+   "video": "wow_tres_noches",
+   "nombre": "fuego",
+   "archivo": "wow_tres_noches__fuego.mp3",
+   "md5": "213368e2535da5401864cc4b5f3046ef",
+   "prompt": "Several torches igniting in sequence, fire whoosh and crackling",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__fuego_aldea": {
+   "id": "wow_tres_noches__fuego_aldea",
+   "video": "wow_tres_noches",
+   "nombre": "fuego_aldea",
+   "archivo": "wow_tres_noches__fuego_aldea.mp3",
+   "md5": "e646f48516c738a1fc6d2e6fcff92feb",
+   "prompt": "A village burning in the distance at night, roaring fire and crackling timber, faint screams",
+   "dur": 6.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__gas": {
+   "id": "wow_tres_noches__gas",
+   "video": "wow_tres_noches",
+   "nombre": "gas",
+   "archivo": "wow_tres_noches__gas.mp3",
+   "md5": "10d2c76c936b302caa1cbdf6c9aa7dc8",
+   "prompt": "Sickly poison gas hissing and bubbling, wet and toxic",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__globo": {
+   "id": "wow_tres_noches__globo",
+   "video": "wow_tres_noches",
+   "nombre": "globo",
+   "archivo": "wow_tres_noches__globo.mp3",
+   "md5": "0f19cc363a7dc192c1b35e74cdfe3694",
+   "prompt": "Old wooden globe spinning on its creaking stand",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__golpes_espada": {
+   "id": "wow_tres_noches__golpes_espada",
+   "video": "wow_tres_noches",
+   "nombre": "golpes_espada",
+   "archivo": "wow_tres_noches__golpes_espada.mp3",
+   "md5": "f20b782579bcfcb51b3fc648c33940b0",
+   "prompt": "Swords striking, bodies falling into snow, a short cry",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__gotas": {
+   "id": "wow_tres_noches__gotas",
+   "video": "wow_tres_noches",
+   "nombre": "gotas",
+   "archivo": "wow_tres_noches__gotas.mp3",
+   "md5": "f71c9395fbe09e8202233693822e3967",
+   "prompt": "Thick drops of blood dripping onto stone floor, slow, echoing",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__gritos": {
+   "id": "wow_tres_noches__gritos",
+   "video": "wow_tres_noches",
+   "nombre": "gritos",
+   "archivo": "wow_tres_noches__gritos.mp3",
+   "md5": "55faba4a23caa598ca1e670f961628d7",
+   "prompt": "Crowd of people screaming and fleeing in panic, outdoors",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__hechizo": {
+   "id": "wow_tres_noches__hechizo",
+   "video": "wow_tres_noches",
+   "nombre": "hechizo",
+   "archivo": "wow_tres_noches__hechizo.mp3",
+   "md5": "f36664b49fac9ea0a02c820836e56edf",
+   "prompt": "A frost bolt and a fireball spell whooshing past and impacting",
+   "dur": 1.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__huesos": {
+   "id": "wow_tres_noches__huesos",
+   "video": "wow_tres_noches",
+   "nombre": "huesos",
+   "archivo": "wow_tres_noches__huesos.mp3",
+   "md5": "8dd0849f2861dd6e93ce83822882a632",
+   "prompt": "Skeletons dancing, wooden bones clacking and rattling rhythmically, macabre",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__hundir": {
+   "id": "wow_tres_noches__hundir",
+   "video": "wow_tres_noches",
+   "nombre": "hundir",
+   "archivo": "wow_tres_noches__hundir.mp3",
+   "md5": "b66da6f01e0d8056e2d9de91791507d7",
+   "prompt": "Stone tombstones sinking into the ground, low rumble and grinding, short",
+   "dur": 1.6,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__jaula": {
+   "id": "wow_tres_noches__jaula",
+   "video": "wow_tres_noches",
+   "nombre": "jaula",
+   "archivo": "wow_tres_noches__jaula.mp3",
+   "md5": "29b4fe90d6e75d78623a145268da7837",
+   "prompt": "Small iron cage door creaking and clanking shut, metallic",
+   "dur": 1.2,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__lapida": {
+   "id": "wow_tres_noches__lapida",
+   "video": "wow_tres_noches",
+   "nombre": "lapida",
+   "archivo": "wow_tres_noches__lapida.mp3",
+   "md5": "e99c0fb2068985290399eee70e8ceb6e",
+   "prompt": "Heavy stone slab grinding up out of the earth, gravel and dirt falling, short",
+   "dur": 1.6,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__latido": {
+   "id": "wow_tres_noches__latido",
+   "video": "wow_tres_noches",
+   "nombre": "latido",
+   "archivo": "wow_tres_noches__latido.mp3",
+   "md5": "b45b75e70c8a58f50d3df8da571bac98",
+   "prompt": "Slow deep heartbeat thumping, dark and tense, three beats",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__libro": {
+   "id": "wow_tres_noches__libro",
+   "video": "wow_tres_noches",
+   "nombre": "libro",
+   "archivo": "wow_tres_noches__libro.mp3",
+   "md5": "e051ebe8722172241bfcb57e5d3f7211",
+   "prompt": "Heavy old leather book dropped open on a wooden table, dust",
+   "dur": 1.2,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__lobo": {
+   "id": "wow_tres_noches__lobo",
+   "video": "wow_tres_noches",
+   "nombre": "lobo",
+   "archivo": "wow_tres_noches__lobo.mp3",
+   "md5": "d4b840e122576d4173322fc729b14556",
+   "prompt": "A wolf growling low and menacing, close",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__losa": {
+   "id": "wow_tres_noches__losa",
+   "video": "wow_tres_noches",
+   "nombre": "losa",
+   "archivo": "wow_tres_noches__losa.mp3",
+   "md5": "5c4ac20e75e8f960dbaa721de5a256b5",
+   "prompt": "Heavy stone slab sliding closed over a grave, grinding then a deep thud",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__madera": {
+   "id": "wow_tres_noches__madera",
+   "video": "wow_tres_noches",
+   "nombre": "madera",
+   "archivo": "wow_tres_noches__madera.mp3",
+   "md5": "f51382327c8d510bf55e229405014505",
+   "prompt": "Wooden barricade slammed down into the ground, heavy wooden thud",
+   "dur": 1.2,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__monedas": {
+   "id": "wow_tres_noches__monedas",
+   "video": "wow_tres_noches",
+   "nombre": "monedas",
+   "archivo": "wow_tres_noches__monedas.mp3",
+   "md5": "fe6165f98d2cbe6d1950c3f012b2091f",
+   "prompt": "Many gold coins spilling and scattering across cobblestones",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__mordisco": {
+   "id": "wow_tres_noches__mordisco",
+   "video": "wow_tres_noches",
+   "nombre": "mordisco",
+   "archivo": "wow_tres_noches__mordisco.mp3",
+   "md5": "0a66fe5f53e3ca39b604a91e6ead51c7",
+   "prompt": "Zombie bite: flesh tearing and a short muffled scream",
+   "dur": 1.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__multitud": {
+   "id": "wow_tres_noches__multitud",
+   "video": "wow_tres_noches",
+   "nombre": "multitud",
+   "archivo": "wow_tres_noches__multitud.mp3",
+   "md5": "f77ec0e1b5b980e3c80685a1041bb9ac",
+   "prompt": "Medieval crowd murmuring in a large stone hall, a forge crackling in the background",
+   "dur": 8.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__murmullo": {
+   "id": "wow_tres_noches__murmullo",
+   "video": "wow_tres_noches",
+   "nombre": "murmullo",
+   "archivo": "wow_tres_noches__murmullo.mp3",
+   "md5": "1d4780fba3f40f88f4ca5bbfd5b85288",
+   "prompt": "Quiet city plaza at night: soft murmur of mourners, candles, a distant church bell",
+   "dur": 6.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__necrofago": {
+   "id": "wow_tres_noches__necrofago",
+   "video": "wow_tres_noches",
+   "nombre": "necrofago",
+   "archivo": "wow_tres_noches__necrofago.mp3",
+   "md5": "89d6cfe0f4b9b504c10e02ea2521cb5a",
+   "prompt": "Undead ghoul snarling and groaning, wet raspy zombie growl",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__nieve": {
+   "id": "wow_tres_noches__nieve",
+   "video": "wow_tres_noches",
+   "nombre": "nieve",
+   "archivo": "wow_tres_noches__nieve.mp3",
+   "md5": "67e9206e44f735fda8a56514113ef198",
+   "prompt": "Cold wind howling over snowy mountains, blowing snow, desolate ambience",
+   "dur": 10.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__olas": {
+   "id": "wow_tres_noches__olas",
+   "video": "wow_tres_noches",
+   "nombre": "olas",
+   "archivo": "wow_tres_noches__olas.mp3",
+   "md5": "0f0fab5beeac3ffc62627b030635b8a3",
+   "prompt": "Night harbor ambience: gentle waves lapping against a wooden pier, creaking ropes and ship timbers",
+   "dur": 10.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__papel": {
+   "id": "wow_tres_noches__papel",
+   "video": "wow_tres_noches",
+   "nombre": "papel",
+   "archivo": "wow_tres_noches__papel.mp3",
+   "md5": "3e645dbec969241d832d37c1b1528e52",
+   "prompt": "Old parchment letter unfolding and rustling, close",
+   "dur": 1.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__pasos_nieve": {
+   "id": "wow_tres_noches__pasos_nieve",
+   "video": "wow_tres_noches",
+   "nombre": "pasos_nieve",
+   "archivo": "wow_tres_noches__pasos_nieve.mp3",
+   "md5": "30494b4f1b549107aa1d8bf898b6d573",
+   "prompt": "Many people walking slowly in deep snow, quiet crunching footsteps, no voices",
+   "dur": 5.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__pluma": {
+   "id": "wow_tres_noches__pluma",
+   "video": "wow_tres_noches",
+   "nombre": "pluma",
+   "archivo": "wow_tres_noches__pluma.mp3",
+   "md5": "722e253513e1e20cbb666c2076af1fea",
+   "prompt": "Quill pen scratching quickly on parchment, writing",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__portal": {
+   "id": "wow_tres_noches__portal",
+   "video": "wow_tres_noches",
+   "nombre": "portal",
+   "archivo": "wow_tres_noches__portal.mp3",
+   "md5": "12c14818589d57179d44c611165a4b8d",
+   "prompt": "Magic portal humming and swirling, deep arcane drone with a shimmering whoosh",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__reloj": {
+   "id": "wow_tres_noches__reloj",
+   "video": "wow_tres_noches",
+   "nombre": "reloj",
+   "archivo": "wow_tres_noches__reloj.mp3",
+   "md5": "72098800b75bee262bccd8ced85326cd",
+   "prompt": "Sand pouring fast through an hourglass, granular trickle, close",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__risa": {
+   "id": "wow_tres_noches__risa",
+   "video": "wow_tres_noches",
+   "nombre": "risa",
+   "archivo": "wow_tres_noches__risa.mp3",
+   "md5": "2e6b83b15c235e5b9abfd4a05bb5bff4",
+   "prompt": "Distorted creepy manic laughter of a man running, echoing, horror",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__sanacion": {
+   "id": "wow_tres_noches__sanacion",
+   "video": "wow_tres_noches",
+   "nombre": "sanacion",
+   "archivo": "wow_tres_noches__sanacion.mp3",
+   "md5": "f253cba9d17c36429c4b8caec2376709",
+   "prompt": "Soft holy healing spell chime with a warm shimmer",
+   "dur": 2.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__selva": {
+   "id": "wow_tres_noches__selva",
+   "video": "wow_tres_noches",
+   "nombre": "selva",
+   "archivo": "wow_tres_noches__selva.mp3",
+   "md5": "8d9d80a857cf6569facaf4f609efeb1e",
+   "prompt": "Night jungle ambience, insects, distant frogs and strange birds, humid and threatening",
+   "dur": 10.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__siseo": {
+   "id": "wow_tres_noches__siseo",
+   "video": "wow_tres_noches",
+   "nombre": "siseo",
+   "archivo": "wow_tres_noches__siseo.mp3",
+   "md5": "111274145a09e053060df402c80bdba6",
+   "prompt": "Huge serpent hissing, deep and menacing, long hiss with reverb in a stone chamber",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__susto": {
+   "id": "wow_tres_noches__susto",
+   "video": "wow_tres_noches",
+   "nombre": "susto",
+   "archivo": "wow_tres_noches__susto.mp3",
+   "md5": "c98acdedee5bfb81f4fe7b508c6afec6",
+   "prompt": "Sudden loud horror jumpscare: violent impact boom with a monstrous serpent shriek, cinematic",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__susto_angel": {
+   "id": "wow_tres_noches__susto_angel",
+   "video": "wow_tres_noches",
+   "nombre": "susto_angel",
+   "archivo": "wow_tres_noches__susto_angel.mp3",
+   "md5": "fba90e29184ef35a54403f9766e5a4fb",
+   "prompt": "Sudden loud horror jumpscare: violent impact boom with a choir shriek and a sharp whispered gasp, cinematic",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__susto_carga": {
+   "id": "wow_tres_noches__susto_carga",
+   "video": "wow_tres_noches",
+   "nombre": "susto_carga",
+   "archivo": "wow_tres_noches__susto_carga.mp3",
+   "md5": "f569f629f0f393679da9cd4f3f82922a",
+   "prompt": "Sudden loud horror jumpscare: violent impact boom with a sword slash and a war cry right at the camera, cinematic",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__susto_necrofago": {
+   "id": "wow_tres_noches__susto_necrofago",
+   "video": "wow_tres_noches",
+   "nombre": "susto_necrofago",
+   "archivo": "wow_tres_noches__susto_necrofago.mp3",
+   "md5": "6b13c9fdc46081625b96163d72a9e035",
+   "prompt": "Sudden loud horror jumpscare: violent impact boom with a ghoul's screeching snarl right in your face, cinematic",
+   "dur": 2.48,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__tambor": {
+   "id": "wow_tres_noches__tambor",
+   "video": "wow_tres_noches",
+   "nombre": "tambor",
+   "archivo": "wow_tres_noches__tambor.mp3",
+   "md5": "0bfd7b163c41ecb438af5c13aed58e70",
+   "prompt": "Three slow deep tribal war drum hits in a jungle temple, reverberant",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__teclado": {
+   "id": "wow_tres_noches__teclado",
+   "video": "wow_tres_noches",
+   "nombre": "teclado",
+   "archivo": "wow_tres_noches__teclado.mp3",
+   "md5": "e51e4ec5467bf61f300bb2598a47c789",
+   "prompt": "Old computer: mouse clicks and fast keyboard typing, a short dial-up modem screech",
+   "dur": 3.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__templo": {
+   "id": "wow_tres_noches__templo",
+   "video": "wow_tres_noches",
+   "nombre": "templo",
+   "archivo": "wow_tres_noches__templo.mp3",
+   "md5": "cbec80b50bf23ee751cac5dab3c85f2d",
+   "prompt": "Deep dark drone rumble inside an ancient stone temple, ominous low hum",
+   "dur": 6.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__tictac": {
+   "id": "wow_tres_noches__tictac",
+   "video": "wow_tres_noches",
+   "nombre": "tictac",
+   "archivo": "wow_tres_noches__tictac.mp3",
+   "md5": "48c60e31646e0619358b1dfea07e4896",
+   "prompt": "Loud clock ticking, relentless countdown, close and dry",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__tinta": {
+   "id": "wow_tres_noches__tinta",
+   "video": "wow_tres_noches",
+   "nombre": "tinta",
+   "archivo": "wow_tres_noches__tinta.mp3",
+   "md5": "0ae24d6157720717a6ef04da87daf7c4",
+   "prompt": "Thick liquid ink splashing and spreading, wet viscous whoosh, dark",
+   "dur": 1.6,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__tinta2": {
+   "id": "wow_tres_noches__tinta2",
+   "video": "wow_tres_noches",
+   "nombre": "tinta2",
+   "archivo": "wow_tres_noches__tinta2.mp3",
+   "md5": "00834c7ac2acdf66d56c5730506f3526",
+   "prompt": "Ink drop falling into water and blooming outward, deep muffled whoosh, dark",
+   "dur": 1.6,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__vela": {
+   "id": "wow_tres_noches__vela",
+   "video": "wow_tres_noches",
+   "nombre": "vela",
+   "archivo": "wow_tres_noches__vela.mp3",
+   "md5": "d9bdad78b6ebcfe8e8442bfe1c72f282",
+   "prompt": "A candle wick igniting with a soft whoosh and crackle, close",
+   "dur": 1.2,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_tres_noches__viento": {
+   "id": "wow_tres_noches__viento",
+   "video": "wow_tres_noches",
+   "nombre": "viento",
+   "archivo": "wow_tres_noches__viento.mp3",
+   "md5": "eca1c49b1a5467a547180ac11716282f",
+   "prompt": "Night wind blowing through an old graveyard, soft howling, dry leaves, distant, eerie ambience",
+   "dur": 10.0,
+   "canal": "cronicas_warcraft"
+  },
+  "caxcan_mixton__arcabuz": {
+   "id": "caxcan_mixton__arcabuz",
+   "video": "caxcan_mixton",
+   "nombre": "arcabuz",
+   "archivo": "caxcan_mixton__arcabuz.mp3",
+   "md5": "b69dc84d9a7f8ab12b6cf6c059edd4c2",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__batalla": {
+   "id": "caxcan_mixton__batalla",
+   "video": "caxcan_mixton",
+   "nombre": "batalla",
+   "archivo": "caxcan_mixton__batalla.mp3",
+   "md5": "bf620b1f517ce4dadc0fb9e2345367d3",
+   "prompt": "",
+   "dur": 10.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__bebe": {
+   "id": "caxcan_mixton__bebe",
+   "video": "caxcan_mixton",
+   "nombre": "bebe",
+   "archivo": "caxcan_mixton__bebe.mp3",
+   "md5": "1d1491574f6f00f44f97401a0395a3e3",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__caballos": {
+   "id": "caxcan_mixton__caballos",
+   "video": "caxcan_mixton",
+   "nombre": "caballos",
+   "archivo": "caxcan_mixton__caballos.mp3",
+   "md5": "ff2cebb264173f6ecb138dfdc60dabbd",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__canonazo": {
+   "id": "caxcan_mixton__canonazo",
+   "video": "caxcan_mixton",
+   "nombre": "canonazo",
+   "archivo": "caxcan_mixton__canonazo.mp3",
+   "md5": "7aecfe4d757e7e85c295fdfdae3f3c59",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__caracol": {
+   "id": "caxcan_mixton__caracol",
+   "video": "caxcan_mixton",
+   "nombre": "caracol",
+   "archivo": "caxcan_mixton__caracol.mp3",
+   "md5": "5eeb1715adf81b4734dfb4b797f2f783",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__derrumbe": {
+   "id": "caxcan_mixton__derrumbe",
+   "video": "caxcan_mixton",
+   "nombre": "derrumbe",
+   "archivo": "caxcan_mixton__derrumbe.mp3",
+   "md5": "a5eadb75317ba8f2663ae369c06fc018",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__galeon": {
+   "id": "caxcan_mixton__galeon",
+   "video": "caxcan_mixton",
+   "nombre": "galeon",
+   "archivo": "caxcan_mixton__galeon.mp3",
+   "md5": "4e0a16d667a9de03d0955d2db8846aac",
+   "prompt": "",
+   "dur": 8.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__hierro": {
+   "id": "caxcan_mixton__hierro",
+   "video": "caxcan_mixton",
+   "nombre": "hierro",
+   "archivo": "caxcan_mixton__hierro.mp3",
+   "md5": "77f91328b4d7e501ba7fd714c5d5d663",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__incendio": {
+   "id": "caxcan_mixton__incendio",
+   "video": "caxcan_mixton",
+   "nombre": "incendio",
+   "archivo": "caxcan_mixton__incendio.mp3",
+   "md5": "e11734b1b357f128506f2993ce22d1d5",
+   "prompt": "",
+   "dur": 8.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__latigo": {
+   "id": "caxcan_mixton__latigo",
+   "video": "caxcan_mixton",
+   "nombre": "latigo",
+   "archivo": "caxcan_mixton__latigo.mp3",
+   "md5": "7b1ad9c63bdd340cf83522914b369839",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__marcha": {
+   "id": "caxcan_mixton__marcha",
+   "video": "caxcan_mixton",
+   "nombre": "marcha",
+   "archivo": "caxcan_mixton__marcha.mp3",
+   "md5": "650708fa1b19fc40bac55000661194c4",
+   "prompt": "",
+   "dur": 8.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__metate": {
+   "id": "caxcan_mixton__metate",
+   "video": "caxcan_mixton",
+   "nombre": "metate",
+   "archivo": "caxcan_mixton__metate.mp3",
+   "md5": "dfc44e14617c61ce5ee5a6d6c99e023e",
+   "prompt": "",
+   "dur": 8.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__multitud_canto": {
+   "id": "caxcan_mixton__multitud_canto",
+   "video": "caxcan_mixton",
+   "nombre": "multitud_canto",
+   "archivo": "caxcan_mixton__multitud_canto.mp3",
+   "md5": "82a7b48d19fb89963234781f8d5b4ed3",
+   "prompt": "",
+   "dur": 8.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__multitud_grito": {
+   "id": "caxcan_mixton__multitud_grito",
+   "video": "caxcan_mixton",
+   "nombre": "multitud_grito",
+   "archivo": "caxcan_mixton__multitud_grito.mp3",
+   "md5": "2e5be1b694bc2b70ab8cc313303a5a8e",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__perros": {
+   "id": "caxcan_mixton__perros",
+   "video": "caxcan_mixton",
+   "nombre": "perros",
+   "archivo": "caxcan_mixton__perros.mp3",
+   "md5": "5bf3e57771bd38705947213fd48809fc",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": "bitacora_perdida"
+  },
+  "caxcan_mixton__tormenta": {
+   "id": "caxcan_mixton__tormenta",
+   "video": "caxcan_mixton",
+   "nombre": "tormenta",
+   "archivo": "caxcan_mixton__tormenta.mp3",
+   "md5": "4199654bf89f1ba290864935b4028f36",
+   "prompt": "",
+   "dur": 10.0,
+   "canal": "bitacora_perdida"
+  },
+  "er_ranni_atrocidades__hilos": {
+   "id": "er_ranni_atrocidades__hilos",
+   "video": "er_ranni_atrocidades",
+   "nombre": "hilos",
+   "archivo": "er_ranni_atrocidades__hilos.mp3",
+   "md5": "132caebc264d205cad023c64c2f38452",
+   "prompt": "Wooden marionette joints clattering and taut strings creaking in an empty stone tower, eerie, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_ranni_atrocidades__llamas": {
+   "id": "er_ranni_atrocidades__llamas",
+   "video": "er_ranni_atrocidades",
+   "nombre": "llamas",
+   "archivo": "er_ranni_atrocidades__llamas.mp3",
+   "md5": "a9d610fe9134c52b6b7883f36b34df65",
+   "prompt": "Low crackling black flames with a hollow magical rumble, ominous, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "zelda_oot__bomba": {
+   "id": "zelda_oot__bomba",
+   "video": "zelda_oot",
+   "nombre": "bomba",
+   "archivo": "zelda_oot__bomba.mp3",
+   "md5": "621fa8af11383571a1abe674fa3303a4",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "zelda_oot__botas": {
+   "id": "zelda_oot__botas",
+   "video": "zelda_oot",
+   "nombre": "botas",
+   "archivo": "zelda_oot__botas.mp3",
+   "md5": "4c41f50e91116783a60b8d6ab844e950",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "zelda_oot__cohete": {
+   "id": "zelda_oot__cohete",
+   "video": "zelda_oot",
+   "nombre": "cohete",
+   "archivo": "zelda_oot__cohete.mp3",
+   "md5": "1b1a1174889bd12b77539ab4bcd26600",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "zelda_oot__puerta": {
+   "id": "zelda_oot__puerta",
+   "video": "zelda_oot",
+   "nombre": "puerta",
+   "archivo": "zelda_oot__puerta.mp3",
+   "md5": "38fa513e9d2b3a75fa72e2d34d454870",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronicas_gaming"
+  },
+  "zelda_oot__vaca": {
+   "id": "zelda_oot__vaca",
+   "video": "zelda_oot",
+   "nombre": "vaca",
+   "archivo": "zelda_oot__vaca.mp3",
+   "md5": "7a61e4157f7a538c7cd0933a030a49ff",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  }
+ },
+ "actualizado": "2026-10-22 10:39"
+}

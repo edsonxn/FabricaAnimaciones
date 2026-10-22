@@ -1,12 +1,12 @@
 {
   "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
   "nombre": "Runa Caída",
-  "estilo": "Secretos y lore de Elden Ring; secuencia de clips de gameplay (yt-dlp); voz Chatterbox. Pendiente de mudar (después de Warcraft).",
+  "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz Chatterbox Faraon; ~6-7 min.",
   "horario": {
     "zona": "America/Mexico_City",
     "hora_local": "10:00",
     "utc": "16:00",
-    "ciclo_dias": 7,
+    "ciclo_dias": 4,
     "separacion_min_horas": 96,
     "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (22-sep, 5-oct). Provisional hasta analizar el canal.",
     "historial": [
@@ -19,6 +19,36 @@
     ]
   },
   "publicados": [
+    {
+      "video": "er_ranni_atrocidades",
+      "id": "ZamBFBDZ6OI",
+      "titulo": "Las 5 peores atrocidades de Ranni QUE IGNORASTE",
+      "visibilidad": "private",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-22T14:10:00Z",
+      "nota": "~12 min (12:16 con la pantalla final) pedidos por el usuario; subido en privado con miniatura y PROGRAMADO en el hueco del canal (regla 20-oct); .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-10-25T16:00:00Z"
+    },
+    {
+      "video": "er_miquella_atrocidades",
+      "id": "vUaTbbI9yiM",
+      "titulo": "Las 5 peores atrocidades de Miquella QUE IGNORASTE",
+      "visibilidad": "private",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-19T17:01:00Z",
+      "nota": "PRUEBA de duración (~20 min, 20:15 con la pantalla final) pedida por el usuario; subido en privado con miniatura el 19-oct y PROGRAMADO por orden del usuario para mar 20-oct 10:00 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-10-20T16:00:00Z"
+    },
+    {
+      "video": "er_radagon_atrocidades",
+      "id": "L0HTszG4ycM",
+      "titulo": "Las 5 peores atrocidades de Radagon QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-14T17:18:14Z",
+      "publicado": "2026-10-14T17:18:14Z",
+      "nota": "subido en privado y publicado a mano por el usuario el mismo día (14-oct 11:18 CDMX)"
+    },
     {
       "video": null,
       "id": "5qjNn7U-Vy4",
@@ -53,5 +83,6 @@
       "nightreign"
     ]
   },
-  "estado": "registrado el 13-oct-2026; se produce aún en C:\\googleimagenes hasta mudarlo"
+  "estado": "mudado a la Fábrica el 14-oct-2026 (primer video: er_radagon_atrocidades)",
+  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\runa_caida.mp4"
 }

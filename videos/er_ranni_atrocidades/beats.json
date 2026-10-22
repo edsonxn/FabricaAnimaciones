@@ -1,0 +1,666 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.39,
+  "tipo": "video",
+  "texto": "Si hay un personaje de Elden Ring al que todo el mundo adora, es la bruja Ranni. Cuatro brazos, un sombrero puntiagudo, ese ojo azul debajo del ala,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.39,
+  "t1": 19.284,
+  "tipo": "video",
+  "texto": "y una forma de hablar sacada de un libro de caballerías. La mitad de la comunidad hizo su misión solo para volver a verla, y la otra mitad la hizo para casarse con ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.284,
+  "t1": 26.43,
+  "tipo": "video",
+  "texto": "Yo hice las dos cosas, para qué te voy a mentir. Pero hay un detalle en el que casi nadie se para a pensar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.43,
+  "t1": 37.627,
+  "tipo": "video",
+  "texto": "Ella misma lo confiesa, con su voz tranquila, en su torre: robé un fragmento de la Runa de la Muerte, y con un ritual terrible forjé los cuchillos negros que matan dioses.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 37.627,
+  "t1": 43.107,
+  "tipo": "video",
+  "texto": "Y luego lo remata con tres palabras: todo lo hice yo. Así que hoy van las cinco",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.107,
+  "t1": 53.805,
+  "tipo": "video",
+  "texto": "peores atrocidades de Ranni que ignoraste, porque la bruja más querida del juego dejó detrás de ella un rastro de cadáveres que da para llenar un cementerio entero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 53.805,
+  "t1": 60.43,
+  "tipo": "video",
+  "texto": "Y te aviso desde ya: el número uno no le pasó a un semidiós. Te pasó a ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.43,
+  "t1": 70.245,
+  "tipo": "video",
+  "texto": "Número cinco. El preceptor de las marionetas. Cuando entras al servicio de la bruja, en su torre de Liurnia, ella misma te presenta a su gente:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.245,
+  "t1": 77.732,
+  "tipo": "video",
+  "texto": "allí encontrarás a Iji, mi consejero de guerra, y a Seluvis, preceptor en las artes de la hechicería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.732,
+  "t1": 87.873,
+  "tipo": "video",
+  "texto": "Seluvis es ese mago con cara de pocos amigos que te recibe con un desprecio que no se molesta en esconder: no sé qué es lo que la señora ve en un Sinluz de provincias como tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 87.873,
+  "t1": 93.977,
+  "tipo": "video",
+  "texto": "Y enseguida te pide un favor. Que busques a una guerrera llamada Nepheli, y le des a beber una poción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.977,
+  "t1": 103.725,
+  "tipo": "video",
+  "texto": "Esa poción convierte a la gente en marionetas. Y Seluvis las colecciona. Si le compras alguna, te dice con cariño que cada una de ellas es como un hijo para él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.725,
+  "t1": 113.44,
+  "tipo": "video",
+  "texto": "Debajo de un suelo falso de su torre tiene un cuarto secreto, y en el suelo te espera un mensaje: marioneta de Seluvis. No tocar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 113.44,
+  "t1": 122.168,
+  "tipo": "video",
+  "texto": "Y todo eso la bruja lo sabe. Lo tiene en nómina. El hombre que convierte personas en muñecos es su profesor de magia de confianza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 122.168,
+  "t1": 129.168,
+  "tipo": "video",
+  "texto": "Pero Seluvis tiene un plan más grande. Te da un brebaje ámbar, y te dice: dáselo a la señora y asegúrate de que se lo beba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.168,
+  "t1": 135.96,
+  "tipo": "video",
+  "texto": "Cuando lo haga, mi plan dará fruto. Quería convertir a su propia señora en una marioneta más de su colección.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 135.96,
+  "t1": 146.101,
+  "tipo": "video",
+  "texto": "Si le llevas el brebaje, ella se da cuenta enseguida, y te pide que te vayas. Y si no te vas, te mata ahí mismo. Y si no se lo llevas, y sigues con su misión,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.101,
+  "t1": 154.002,
+  "tipo": "video",
+  "texto": "en cuanto le entregas la Hoja matadedos, Seluvis aparece muerto en su torre. Y con él muere también Pidia, su ayudante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.002,
+  "t1": 162.085,
+  "tipo": "video",
+  "texto": "Y lo más macabro es que su cadáver sigue ahí, y si le hablas, todavía te vende marionetas. El titiritero acabó de mostrador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.085,
+  "t1": 172.127,
+  "tipo": "video",
+  "texto": "Él quería una muñeca obediente, y ella, que vive dentro de un cuerpo de muñeca, le enseñó quién mueve los hilos de verdad. Y eso que Seluvis era un traidor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.127,
+  "t1": 181.469,
+  "tipo": "video",
+  "texto": "Lo que viene ahora le pasó a los que le fueron leales. Número cuatro. Blaidd, el medio lobo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.469,
+  "t1": 190.449,
+  "tipo": "video",
+  "texto": "Si jugaste esta misión, Blaidd fue tu mejor amigo de todo el juego. El lobo grandote que te ayuda contra Darriwil, que te espera en el festival de Radahn,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.449,
+  "t1": 198.718,
+  "tipo": "video",
+  "texto": "y que te dice que su único propósito es luchar por el destino de su señora, con espada y colmillo. Pero Blaidd no llegó a su lado por casualidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.718,
+  "t1": 208.516,
+  "tipo": "video",
+  "texto": "El consejero Iji te lo cuenta con mucha pena: los Dos Dedos le dieron a Blaidd a la señora como un seguidor fiel. Su propia sombra, incapaz de traicionarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 208.516,
+  "t1": 216.993,
+  "tipo": "video",
+  "texto": "O sea, Blaidd era un regalo de los Dedos. Una correa con forma de lobo, para que la Empírea no se saliera del camino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.993,
+  "t1": 224.673,
+  "tipo": "video",
+  "texto": "Y el viejo Iji sigue: pero si la señora, como Empírea, se resiste a ser un instrumento de los Dos Dedos, la sombra enloquecerá,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.673,
+  "t1": 232.822,
+  "tipo": "video",
+  "texto": "y pasará de ser un seguidor a ser una horrible maldición. Ahora acuérdate de lo que hizo ella. Se rebeló contra los Dos Dedos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.822,
+  "t1": 243.281,
+  "tipo": "video",
+  "texto": "Y lo dice sin pestañear: no me dejaría controlar por esa cosa. Es difícil creer que la bruja que planeó la noche más famosa del juego no supiera cómo funcionaba su propia sombra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 243.281,
+  "t1": 249.527,
+  "tipo": "video",
+  "texto": "Y aun así siguió adelante. Así que, a mitad de la misión, Blaidd desaparece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.527,
+  "t1": 257.879,
+  "tipo": "video",
+  "texto": "Lo encuentras encerrado en una celda, y te dice: el viejo Iji me encerró aquí. Soy parte de su ser. Su propia sombra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.879,
+  "t1": 269.924,
+  "tipo": "video",
+  "texto": "Y al final, Blaidd se escapa. Lo encuentras delante de la torre, gruñendo, hablando solo: no, soy parte de su ser, nunca podría traicionarla, pase lo que pase.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 269.924,
+  "t1": 275.654,
+  "tipo": "video",
+  "texto": "Y te ataca. Y tienes que matarlo tú. Al amigo que te acompañó media partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.654,
+  "t1": 283.939,
+  "tipo": "video",
+  "texto": "Su guantelete lo describe como el aliado leal que desafiaría al destino mismo, si el destino le ordenaba volverse contra su señora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.939,
+  "t1": 293.519,
+  "tipo": "video",
+  "texto": "Y lo desafió. Se volvió loco antes que traicionarla. Iji lo resume con una frase que duele: Blaidd se convirtió en una maldición que atormentaba a la señora,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.519,
+  "t1": 303.324,
+  "tipo": "video",
+  "texto": "pero en su locura, se entregó a ella. La libertad se la quedó la bruja. La factura la pagó el lobo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 303.324,
+  "t1": 310.244,
+  "tipo": "video",
+  "texto": "Número tres. Las que pusieron las manos. La bruja no mató a Godwyn con sus propias manos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.244,
+  "t1": 322.447,
+  "tipo": "video",
+  "texto": "Para eso tuvo a las asesinas de los Cuchillos Negros. Su armadura cuenta que todas eran mujeres, y que se rumoreaba que eran numen con lazos muy estrechos con la mismísima Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 322.447,
+  "t1": 328.882,
+  "tipo": "video",
+  "texto": "Sí, con Márika. En esta familia hasta los asesinatos son un negocio familiar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 328.882,
+  "t1": 339.666,
+  "tipo": "video",
+  "texto": "Una de ellas se llamaba Tiche. Sus cenizas cuentan que, en la noche de la conspiración, impregnó su cuchillo con la Runa de la Muerte y mató a Godwyn el Dorado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 339.666,
+  "t1": 345.802,
+  "tipo": "video",
+  "texto": "Tiche era hija de la cabecilla, Alecto. Y murió protegiendo a su madre mientras huían de la capital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.802,
+  "t1": 354.639,
+  "tipo": "video",
+  "texto": "La madre sobrevivió, y acabó encerrada en una prisión eterna a la que solo puedes entrar si avanzas bastante en la misión de la bruja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 354.639,
+  "t1": 361.938,
+  "tipo": "video",
+  "texto": "O sea, para conocer a la mujer que le hizo el trabajo sucio, primero tienes que hacerle tú el trabajo sucio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.938,
+  "t1": 369.058,
+  "tipo": "video",
+  "texto": "Y cuando entras, Alecto te ataca, y la matas. Tu recompensa son las cenizas de su hija.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.058,
+  "t1": 379.251,
+  "tipo": "video",
+  "texto": "Y luego está Iji, el gigante herrero que encerró a Blaidd llorando por dentro. Iji se despide de ti con una calma rarísima: mi propósito está llegando a su fin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.251,
+  "t1": 388.95,
+  "tipo": "video",
+  "texto": "Te alcanzaré pronto, Blaidd, y cuando lo haga, solo espero que aceptes mis disculpas. Y si vuelves a su yunque después de matar a Blaidd, lo encuentras muerto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.95,
+  "t1": 395.626,
+  "tipo": "video",
+  "texto": "cubierto de llamas negras. Y a su alrededor, tres asesinas de los Cuchillos Negros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.626,
+  "t1": 404.877,
+  "tipo": "video",
+  "texto": "El juego no te dice quién las mandó. Pero el viejo que guardaba los secretos de la bruja terminó callado para siempre, rodeado de las mismas asesinas de aquella noche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.877,
+  "t1": 414.737,
+  "tipo": "video",
+  "texto": "Y lo que más duele es que ella, en una conversación escondida, deja escapar: Blaidd e Iji, los dos, están dispuestos a darme demasiado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 414.737,
+  "t1": 423.43,
+  "tipo": "video",
+  "texto": "Diles que los quiero. Y lo dice en serio. Los quería. Y aun así, de los que la quisieron, no queda ninguno en pie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 423.43,
+  "t1": 430.928,
+  "tipo": "video",
+  "texto": "Ya en el podio, el número dos. La noche que lo cambió todo. Godwyn el Dorado era el primogénito de Márika,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.928,
+  "t1": 439.2,
+  "tipo": "video",
+  "texto": "el semidiós más querido de su tiempo. Tan bondadoso que acabó haciéndose amigo del dragón contra el que peleó, Fortissax.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 439.2,
+  "t1": 450.053,
+  "tipo": "video",
+  "texto": "Y en la Noche de los Cuchillos Negros, se convirtió en el primer semidiós en morir. Pero no murió del todo. Y ahí está la atrocidad, porque fue un crimen con dos víctimas a la vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 450.053,
+  "t1": 457.266,
+  "tipo": "video",
+  "texto": "Ella misma lo cuenta así: robé la Runa de la Muerte, maté mi propia carne de Empírea, y la deseché.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.266,
+  "t1": 464.732,
+  "tipo": "video",
+  "texto": "Esa misma noche, ella sacrificó su cuerpo y se quedó con el alma. A Godwyn le arrancaron el alma, y le dejaron el cuerpo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.732,
+  "t1": 473.947,
+  "tipo": "video",
+  "texto": "Un cuerpo vivo y vacío, enterrado en lo más hondo, bajo el Árbol Áureo. Y ese cadáver que no termina de morir empezó a echar raíces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.947,
+  "t1": 480.289,
+  "tipo": "video",
+  "texto": "De ahí brota la raíz de la muerte, que según su descripción es el origen de los que viven en la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.289,
+  "t1": 492.007,
+  "tipo": "video",
+  "texto": "Los no muertos de las catacumbas, los que adoran a Godwyn como el Príncipe de la Muerte, todo eso sale de ese cuerpo. Y para que la muerte se pudiera robar, alguien tuvo que fallar al guardarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 492.007,
+  "t1": 498.58,
+  "tipo": "video",
+  "texto": "Maliketh, la Espada Negra, el guardián de la Runa de la Muerte. Su espada lo cuenta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.58,
+  "t1": 509.298,
+  "tipo": "video",
+  "texto": "después de que robaran un fragmento de la Muerte aquella noche fatídica, Maliketh selló la hoja dentro de su propia carne, para que nadie volviera a robar la Muerte nunca más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 509.298,
+  "t1": 519.359,
+  "tipo": "video",
+  "texto": "Y aun así, el pobre terminó como Gurranq, el clérigo bestia, encerrado en una iglesia, pidiéndote raíces de la muerte para devorarlas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 519.359,
+  "t1": 525.629,
+  "tipo": "video",
+  "texto": "Y después vino lo peor. Tras la muerte de Godwyn, Márika hizo pedazos el Anillo de Elden.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.629,
+  "t1": 533.999,
+  "tipo": "video",
+  "texto": "Los semidioses se quedaron cada uno con un trozo, y empezó la Fragmentación, la guerra que dejó las Tierras Intermedias como las recorres tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.999,
+  "t1": 543.43,
+  "tipo": "video",
+  "texto": "No digo que la bruja rompiera el Anillo. Ese martillazo es de Márika. Pero la primera ficha del dominó la empujó ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 543.43,
+  "t1": 553.989,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. El que te pasa a ti. Al final de su misión, la bruja te pregunta, con esa voz que derrite a medio internet:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 553.989,
+  "t1": 561.984,
+  "tipo": "video",
+  "texto": "vendrías a mí, incluso ahora, mi único señor? Y tú le pones el anillo de la Luna Oscura en el dedo, y le dices que sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 561.984,
+  "t1": 569.066,
+  "tipo": "video",
+  "texto": "Media comunidad lloró con esa escena. Yo también. Pero escucha lo que promete el día de la boda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 569.066,
+  "t1": 579.317,
+  "tipo": "video",
+  "texto": "Delante de los restos de Márika, ella ocupa su lugar como diosa, acaba con la Orden Áurea, y arranca de las Tierras Intermedias la influencia del Árbol Áureo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 579.317,
+  "t1": 585.777,
+  "tipo": "video",
+  "texto": "Y anuncia: ahora llega la era de las estrellas. Un viaje de mil años bajo la sabiduría de la Luna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.777,
+  "t1": 594.049,
+  "tipo": "video",
+  "texto": "Aquí comienza la noche helada que lo abarca todo. Y describe ese viaje como un camino hacia el miedo, la duda y la soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.049,
+  "t1": 603.873,
+  "tipo": "video",
+  "texto": "Y luego se va. Con su orden nuevo, y contigo de consorte, en un viaje de mil años. Y deja las Tierras Intermedias sin señor, por primera vez en toda una era.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 603.873,
+  "t1": 613.363,
+  "tipo": "video",
+  "texto": "Piénsalo. Todos los que sobrevivieron a la Fragmentación y a la putrefacción se quedan en un mundo frío, oscuro, y sin nadie al mando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 613.363,
+  "t1": 622.853,
+  "tipo": "video",
+  "texto": "Durante mil años. La gente lo llama el final bueno. Y lo es, para dos personas. Para ella, y para el que se va con ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.853,
+  "t1": 629.653,
+  "tipo": "video",
+  "texto": "Y ese eres tú. Porque la última atrocidad de la bruja no es contra un semidiós. Es contra ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 629.653,
+  "t1": 638.353,
+  "tipo": "video",
+  "texto": "Todos los que la quisieron, Blaidd, Iji, y hasta Seluvis a su manera, acabaron muertos por el camino. Y el último que queda en pie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 638.353,
+  "t1": 647.159,
+  "tipo": "video",
+  "texto": "el que se la lleva al final, es el Sinluz que le hizo todos los recados. Mi bello consorte, eterno, te dice. Eterno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 647.159,
+  "t1": 656.768,
+  "tipo": "video",
+  "texto": "En este juego no hay final de divorcio. Y si escuchaste las conversaciones escondidas de su muñequita, la última frase cambia por una más tierna:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 656.768,
+  "t1": 662.718,
+  "tipo": "video",
+  "texto": "vayamos juntos. Vayamos juntos. A la oscuridad. Durante mil años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 662.718,
+  "t1": 675.521,
+  "tipo": "video",
+  "texto": "Y lo más fuerte es que mucha gente, sabiendo todo esto, la volvería a elegir. Yo incluido. Esa es su atrocidad más grande: que la quieres igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 675.521,
+  "t1": 682.261,
+  "tipo": "video",
+  "texto": "Esa es la lista. La bruja más querida de Elden Ring dejó un preceptor muerto, un lobo loco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 682.261,
+  "t1": 689.266,
+  "tipo": "video",
+  "texto": "un herrero en llamas, una madre sin hija, un dios sin alma, y un mundo entero a oscuras durante mil años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 689.266,
+  "t1": 700.197,
+  "tipo": "video",
+  "texto": "Ahora te pregunto, y quiero leerlo en los comentarios: sabiendo todo esto, te volverías a casar con Ranni? Y si quieres conocer al resto de la familia, en el canal tienes las atrocidades de Márika,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 700.197,
+  "t1": 706.928,
+  "tipo": "video",
+  "texto": "las de Radagon, que es su padre, y las de Miquella, su medio hermano. Ninguno sale bien parado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 706.928,
+  "t1": 716.25,
+  "tipo": "video",
+  "texto": "Y la próxima vez que una muñeca con sombrero te pida un favor, pregúntale primero qué le pasó al último que se lo hizo.",
+  "clip_s": 8
+ }
+]

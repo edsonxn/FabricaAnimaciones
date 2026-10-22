@@ -350,6 +350,22 @@ repetir `hilos` ni ningún MG ya hecho; cada oportunidad pide un diseño propio 
   «<jefe> 4k»** y los walkthroughs de **SourceSpy91** (4K60, sin comentarios) con `--url --desde`. Abyssal Woods y Stone Coffin
   Fissure devuelven casi siempre el MAPA (la zona se busca en el mapa): fijar `--url`. Para revisar rehechos, un mosaico de
   3 cuadros por clip (20/50/85 %) caza lo que un solo cuadro no ve (menú al final del clip, «YOU DIED» al 85 %).
+- **`er_ranni_atrocidades` (21/22-oct-2026, ~12 min, 83 beats, 1 sola sesión de guion a MASTER):**
+  - MG nuevos en `mg_er`: `marionetas(titiritero, munecos, dueno)` (cruceta con muñecos; la última marca da la vuelta y el titiritero
+    cuelga de los hilos de `dueno` en azul luna), `sombra(ama, sombra_, amos)` (los Dos Dedos atan a la Empírea y a su sombra; ella
+    corta su hilo y la sombra tiembla en rojo), `domino(fichas)` (fichas que caen una sobre otra, la última en rojo; causa → efecto) y
+    `constelacion(nombres, centro, tu, remate)` (estrellas unidas a la Luna que se apagan una por marca; queda «Tú» y el remate).
+    Repartidos en 2-3 apariciones del mismo MG con las marcas ya pasadas al inicio, para no tapar pegatinas ni quedarse quietos.
+  - **Fijar url+segundo ANTES de bajar** con hojas de contacto a 240p de 3-4 videos limpios (SourceSpy91 Part 18 y Part 25 de la
+    misión de Ranni, el final de 4KGameScape, la intro de BonfireVN): 17 de 83 rehechos (20 %) frente al 39-50 % de los videos anteriores.
+  - **Marcas de agua nuevas**: Shirrako firma «SHIRRAKO» abajo a la derecha en TODOS sus clips (`recorte_por` .09; las hojas de 240 px no
+    lo ven, solo un recorte a tamaño real de la esquina), «KGA», «Misternoobie», «DRAKULUS»; un cartel de texto de otro canal («I forgot
+    to script this…»), un «tributo» con IA (Abyssal_Realms_) y una mujer de acción real hecha con IA en «Ranni the Witch 4k». Las
+    búsquedas «Seluvis Rise», «Deathroot location», «Two Fingers Roundtable» devuelven MAPA o MENÚ.
+  - Toma repetida: la misma escena de Ranni en la ventana salió 8 veces (P18 y otros videos que graban lo mismo): repartir planos.
+  - Anclas: comprobar TODAS de una vez contra `timeline.json` con límites de palabra («el dragón» ≠ «del dragón») antes de `fx hoja`.
+  - Voz Faraon: 31 de 33 «REGENERAR» eran falsas alarmas (Selubis, Blythe/Blyde, E.G./Ishi por Iji); reales: una toma que se comía
+    las dos primeras palabras («Media comunidad») y «rito» → «grito» (cambiado a «ritual»).
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.

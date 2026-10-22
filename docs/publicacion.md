@@ -149,3 +149,14 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
    [--publicar ISO]`, `yt publicar <canal> <id> [public|unlisted|private] [--programar ISO]`, `yt canal <alias>` (descripción, palabras clave, idioma, país, banner). Nombre y foto de
    perfil del canal NO se pueden cambiar por API (Studio). Hacer público YA = preguntar antes; programar en el hueco = automático (20-oct).
    Arte del canal: `python canales/arte_canal.py "NOMBRE" "lema"` → `canales/arte/` (revisar `*_revision.jpg`).
+
+
+## Facebook: Bitácora Perdida y Cronopapel también, publicados al instante (el usuario, 22-oct-2026)
+«Ahora todos los videos que subamos a Bitácora y Cronopapel también se suben a Facebook y se publican al instante aunque en YouTube
+estén programados.» Es la aprobación permanente del usuario para ESOS dos canales (para los demás no aplica).
+- Página: «Historias Perdidas de México» = `historias_mx` en `E:\PaginaFace` (id de API 1388991384298203; token ya guardado).
+- Tras subir y programar en YouTube: copia comprimida del MASTER (< 1 GB, la subida simple de `/videos` no admite más; H.264
+  CRF 23, AAC 192k) → `python pagina.py --pagina historias_mx nuevo <slug> --tipo video --categoria historia` → copiar el mp4 a la
+  carpeta, `medios` + `"titulo"` en post.json, `texto.txt` (descripción corta sacada de youtube.json: gancho, lugares, fuentes y
+  créditos de fotos; sin capítulos ni enlaces a YouTube programados) → `aprobar <id>` → `programar <id> --ya`.
+- Anotar el `fb_id` en el ESTADO.md del video y una línea en BITACORA.md.

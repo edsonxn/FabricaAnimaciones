@@ -704,7 +704,14 @@
     "dinamica": 0.6
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "agotado_cortisol__lyria_tramo2": {
@@ -10512,7 +10519,14 @@
     "dinamica": 0.8
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "juchipila__lyria_1": {
@@ -10588,7 +10602,20 @@
     "dinamica": 0.63
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    },
+    {
+     "video": "historia_aguascalientes",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "la_sena__lyria_tramo1": {
@@ -22205,6 +22232,9 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -24833,7 +24863,612 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__lyria_tramo5": {
+   "id": "historia_aguascalientes__lyria_tramo5",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\lyria_tramo5.mp3",
+   "archivo": "historia_aguascalientes__lyria_tramo5.mp3",
+   "md5": "2ce90089fa162f6f245deaa14cb82a44",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 5,
+   "escenas": [
+    "convencion"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it. Total length: exactly 1:12 (73 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Revolutionary tension: snare drums and brass, a tense assembly, a dramatic confrontation, ending in an ominous held chord.\n\n[0:00 - 1:12] Section 1: Intensity 4/10. the underscore continues in the same mood",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 72,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    }
+   ],
+   "intensidad": [
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "metales",
+     "percusión",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 74.61,
+    "rms_db": -15.1,
+    "tempo": 117.5,
+    "brillo_hz": 1685,
+    "energia": [
+     0.62,
+     0.66,
+     0.75,
+     0.82,
+     0.72,
+     0.83,
+     0.79,
+     0.83,
+     0.72,
+     0.93,
+     1.0,
+     0.36
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__lyria_tramo3": {
+   "id": "historia_aguascalientes__lyria_tramo3",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\lyria_tramo3.mp3",
+   "archivo": "historia_aguascalientes__lyria_tramo3.mp3",
+   "md5": "11eae7841bb1e3479ff502cbcea2751c",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 3,
+   "escenas": [
+    "feria",
+    "beso"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "BIBLIOTECA: juchipila__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nCinematic documentary score for an animated story of a Mexican canyon town: acoustic guitar, vihuela, harp, violin, flutes, light folk percussion, orchestral strings. Warm and mysterious, then tense and dark, melodies kept low so a narrator can speak over it.\ngancho: Hook: a soft flute over a warm drone, curiosity building, then a gentle pulsing rhythm.\ncanon: Wide landscape: slow plucked harp and strings, wind, a sense of space and time.\nventanas: Ancient city: mysterious flutes, deep soft drums, wonder and awe, a slow ascending theme.\ncaxcanes: Festival of flowers: light joyful folk percussion, flutes and plucked strings, warm and communal.\nllegada: Invasion: low ominous drums, a dissonant string rise, a sudden cold silence, unease.\nhartazgo: Pressure building: ticking pulse, tense whispering strings, a restless crescendo.\nmixton: War on the mountain: pounding war drums, brass hits, chaotic energy, then a sudden dramatic drop.\nmendoza: A great army marches: heavy martial drums, determined strings and brass, inexorable.\ncastigo: Aftermath and sorrow: low mournful cello, slow somber march, a long dark final note.\nrefundacion: A fragile new beginning: a gentle guitar and soft strings, small hope, quiet bells.\ntenamaxtli: Solemn dignity: a lone guitar and soft strings, a proud sad theme, hopeful at the end.\nrevolucion: Revolution: rhythmic snare, trumpets, a heroic and bittersweet folk march.\ncierre: Warm resolving outro: the flute theme returns gently on guitar and strings, flowers blooming, a final soft chord.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "cello",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "metales",
+     "percusión",
+     "tambores tribales",
+     "violín"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "frío",
+     "misterio",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "tierno",
+     "triste",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 120.86,
+    "rms_db": -15.4,
+    "tempo": 80.7,
+    "brillo_hz": 1206,
+    "energia": [
+     0.28,
+     0.71,
+     0.78,
+     0.83,
+     0.82,
+     0.79,
+     0.98,
+     0.99,
+     0.92,
+     0.84,
+     0.8,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__lyria_tramo4": {
+   "id": "historia_aguascalientes__lyria_tramo4",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\lyria_tramo4.mp3",
+   "archivo": "historia_aguascalientes__lyria_tramo4.mp3",
+   "md5": "aebc0b8676a4673d1f3f8de0a6489c27",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 4,
+   "escenas": [
+    "posada",
+    "porfiriato"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it. Total length: exactly 2:27 (148 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with a bittersweet calavera-like folk dance (printmaking, Day of the Dead), then a chugging train rhythm and industrial pride, end proud and warm.\n\n[0:00 - 1:02] Section 1: Intensity 4/10. the underscore continues in the same mood\n[1:02 - 2:27] Section 2: Intensity 4/10. the underscore continues in the same mood",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 62,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 62,
+     "t1": 147,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    }
+   ],
+   "intensidad": [
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "metales",
+     "percusión",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 146.1,
+    "rms_db": -14.7,
+    "tempo": 161.5,
+    "brillo_hz": 1366,
+    "energia": [
+     0.94,
+     0.92,
+     0.99,
+     0.98,
+     1.0,
+     0.98,
+     0.98,
+     0.95,
+     0.95,
+     0.86,
+     0.9,
+     0.27
+    ],
+    "huecos": [],
+    "dinamica": 0.73
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__lyria_tramo1": {
+   "id": "historia_aguascalientes__lyria_tramo1",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\lyria_tramo1.mp3",
+   "archivo": "historia_aguascalientes__lyria_tramo1.mp3",
+   "md5": "1e07b0b005e3f03fad3cdba804a5508b",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "origenes",
+    "plata"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "BIBLIOTECA: apozol__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nCinematic documentary score for an animated story of a small Mexican canyon town: acoustic guitar, vihuela, harp, violin, flutes, light folk percussion, orchestral strings. Warm and mysterious, then tense and dark, melodies kept low so a narrator can speak over it. Total length: exactly 2:37 (157 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from a held tense note. Peace returns slowly. End with a natural fade-out on a final soft chord.\n\n[0:00 - 0:44] Section 1: Intensity 6/10. War on the mountain: pounding war drums, brass hits, chaotic energy, then a sudden dramatic drop and silence.\n[0:44 - 1:24] Section 2: Intensity 4/10. Fragile peace: gentle guitar and soft strings, quiet bells, small hope, a document being signed.\n[1:24 - 1:48] Section 3: Intensity 5/10. Sunny hacienda life: lively folk guitar and light percussion, harvest and work, warm and rhythmic.\n[1:48 - 2:37] Section 4: Intensity 5/10. Warm resolving outro: the flute theme returns gently on guitar and strings, fiesta brass far away, a final soft chord.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 44,
+     "intensidad": 6,
+     "desc": "War on the mountain: pounding war drums, brass hits, chaotic energy, then a sudden dramatic drop and silence."
+    },
+    {
+     "t0": 44,
+     "t1": 84,
+     "intensidad": 4,
+     "desc": "Fragile peace: gentle guitar and soft strings, quiet bells, small hope, a document being signed."
+    },
+    {
+     "t0": 84,
+     "t1": 108,
+     "intensidad": 5,
+     "desc": "Sunny hacienda life: lively folk guitar and light percussion, harvest and work, warm and rhythmic."
+    },
+    {
+     "t0": 108,
+     "t1": 157,
+     "intensidad": 5,
+     "desc": "Warm resolving outro: the flute theme returns gently on guitar and strings, fiesta brass far away, a final soft chord."
+    }
+   ],
+   "intensidad": [
+    6,
+    4,
+    5,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "cuerdas",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "metales",
+     "percusión",
+     "tambores tribales",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "esperanza",
+     "misterio",
+     "oscuro",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 153.52,
+    "rms_db": -15.0,
+    "tempo": 117.5,
+    "brillo_hz": 1615,
+    "energia": [
+     0.49,
+     0.87,
+     1.0,
+     0.4,
+     0.73,
+     0.92,
+     0.95,
+     0.96,
+     0.96,
+     0.97,
+     0.92,
+     0.58
+    ],
+    "huecos": [],
+    "dinamica": 0.6
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__lyria_tramo6": {
+   "id": "historia_aguascalientes__lyria_tramo6",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\lyria_tramo6.mp3",
+   "archivo": "historia_aguascalientes__lyria_tramo6.mp3",
+   "md5": "68a260c86a69d52285d1cab8ab2584ab",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 6,
+   "escenas": [
+    "siglo20",
+    "ruta",
+    "cierre"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it. Total length: exactly 2:24 (145 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin reflective and a little melancholic (a flooded town), turn modern and optimistic, end warmly with a natural fade-out.\n\n[0:00 - 1:27] Section 1: Intensity 4/10. the underscore continues in the same mood\n[1:27 - 2:06] Section 2: Intensity 4/10. the underscore continues in the same mood\n[2:06 - 2:24] Section 3: Intensity 4/10. the underscore continues in the same mood",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 87,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 87,
+     "t1": 126,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 126,
+     "t1": 144,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "metales",
+     "percusión",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "esperanza",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 155.14,
+    "rms_db": -15.0,
+    "tempo": 107.7,
+    "brillo_hz": 1576,
+    "energia": [
+     0.52,
+     0.65,
+     0.7,
+     0.81,
+     0.91,
+     1.0,
+     0.88,
+     0.84,
+     0.93,
+     0.81,
+     0.82,
+     0.5
+    ],
+    "huecos": [],
+    "dinamica": 0.5
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__lyria_tramo2": {
+   "id": "historia_aguascalientes__lyria_tramo2",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\lyria_tramo2.mp3",
+   "archivo": "historia_aguascalientes__lyria_tramo2.mp3",
+   "md5": "e7094177c4fe7ee20ad7a10ef0eab909",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 2,
+   "escenas": [
+    "fundacion",
+    "colonia",
+    "aguas"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "BIBLIOTECA: juchipila__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-22\n\nCinematic documentary score for an animated story of a Mexican canyon town: acoustic guitar, vihuela, harp, violin, flutes, light folk percussion, orchestral strings. Warm and mysterious, then tense and dark, melodies kept low so a narrator can speak over it. Total length: exactly 2:36 (156 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin quietly from a low note. End with a natural fade-out on a final soft chord.\n\n[0:00 - 0:42] Section 1: Intensity 6/10. A fragile new beginning: a gentle guitar and soft strings, small hope, quiet bells.\n[0:42 - 1:24] Section 2: Intensity 6/10. Solemn dignity: a lone guitar and soft strings, a proud sad theme, hopeful at the end.\n[1:24 - 2:04] Section 3: Intensity 6/10. Revolution: rhythmic snare, trumpets, a heroic and bittersweet folk march.\n[2:04 - 2:36] Section 4: Intensity 5/10. Warm resolving outro: the flute theme returns gently on guitar and strings, flowers blooming, a final soft chord.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 42,
+     "intensidad": 6,
+     "desc": "A fragile new beginning: a gentle guitar and soft strings, small hope, quiet bells."
+    },
+    {
+     "t0": 42,
+     "t1": 84,
+     "intensidad": 6,
+     "desc": "Solemn dignity: a lone guitar and soft strings, a proud sad theme, hopeful at the end."
+    },
+    {
+     "t0": 84,
+     "t1": 124,
+     "intensidad": 6,
+     "desc": "Revolution: rhythmic snare, trumpets, a heroic and bittersweet folk march."
+    },
+    {
+     "t0": 124,
+     "t1": 156,
+     "intensidad": 5,
+     "desc": "Warm resolving outro: the flute theme returns gently on guitar and strings, flowers blooming, a final soft chord."
+    }
+   ],
+   "intensidad": [
+    6,
+    6,
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "cuerdas",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "metales",
+     "percusión",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "esperanza",
+     "misterio",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "tierno",
+     "triste",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 157.88,
+    "rms_db": -15.1,
+    "tempo": 123.0,
+    "brillo_hz": 1175,
+    "energia": [
+     0.2,
+     0.55,
+     0.57,
+     0.59,
+     0.79,
+     0.75,
+     0.81,
+     0.72,
+     0.99,
+     0.87,
+     1.0,
+     0.7
+    ],
+    "huecos": [],
+    "dinamica": 0.8
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "historia_aguascalientes__antes_lyria_tramo3": {
+   "id": "historia_aguascalientes__antes_lyria_tramo3",
+   "video": "historia_aguascalientes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\historia_aguascalientes\\audio\\_antes_lyria_tramo3.mp3",
+   "archivo": "historia_aguascalientes__antes_lyria_tramo3.mp3",
+   "md5": "aeedf688f3fd2717e8b4ce46b2e04760",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Aguascalientes",
+   "tramo": 3,
+   "escenas": [
+    "feria",
+    "beso"
+   ],
+   "estilo": "Warm, vibrant and cinematic animated-history documentary score inspired by central Mexico and the Bajío: jarana and vihuela strumming, violins and noble trumpets, clay flute and huehuetl drum for ancient times, orchestral strings and crisp percussion with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "BIBLIOTECA: juchipila__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nCinematic documentary score for an animated story of a Mexican canyon town: acoustic guitar, vihuela, harp, violin, flutes, light folk percussion, orchestral strings. Warm and mysterious, then tense and dark, melodies kept low so a narrator can speak over it.\ngancho: Hook: a soft flute over a warm drone, curiosity building, then a gentle pulsing rhythm.\ncanon: Wide landscape: slow plucked harp and strings, wind, a sense of space and time.\nventanas: Ancient city: mysterious flutes, deep soft drums, wonder and awe, a slow ascending theme.\ncaxcanes: Festival of flowers: light joyful folk percussion, flutes and plucked strings, warm and communal.\nllegada: Invasion: low ominous drums, a dissonant string rise, a sudden cold silence, unease.\nhartazgo: Pressure building: ticking pulse, tense whispering strings, a restless crescendo.\nmixton: War on the mountain: pounding war drums, brass hits, chaotic energy, then a sudden dramatic drop.\nmendoza: A great army marches: heavy martial drums, determined strings and brass, inexorable.\ncastigo: Aftermath and sorrow: low mournful cello, slow somber march, a long dark final note.\nrefundacion: A fragile new beginning: a gentle guitar and soft strings, small hope, quiet bells.\ntenamaxtli: Solemn dignity: a lone guitar and soft strings, a proud sad theme, hopeful at the end.\nrevolucion: Revolution: rhythmic snare, trumpets, a heroic and bittersweet folk march.\ncierre: Warm resolving outro: the flute theme returns gently on guitar and strings, flowers blooming, a final soft chord.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "cello",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "metales",
+     "percusión",
+     "tambores tribales",
+     "violín"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "frío",
+     "misterio",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "tierno",
+     "triste",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 179.77,
+    "rms_db": -15.2,
+    "tempo": 161.5,
+    "brillo_hz": 1173,
+    "energia": [
+     0.37,
+     0.69,
+     0.75,
+     0.69,
+     0.94,
+     0.79,
+     0.7,
+     1.0,
+     0.92,
+     0.88,
+     0.8,
+     0.46
+    ],
+    "huecos": [],
+    "dinamica": 0.63
+   },
+   "variante": true,
+   "usos": [],
+   "catalogado": "2026-10-22"
   }
  },
- "actualizado": "2026-10-22 10:31"
+ "actualizado": "2026-10-22 14:23"
 }

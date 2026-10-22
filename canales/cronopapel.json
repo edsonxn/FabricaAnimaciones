@@ -32,8 +32,17 @@
       "viernes"
     ],
     "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
-    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando el canal tenga datos de la nueva etapa.",
-    "ciclo_dias": 5
+    "nota": "Ciclo de 4 días a las 14:00 CDMX (20:00 UTC): España (mié 7-oct 14:00 CDMX) logró ×1,28 de la mediana (309 vistas, 46 % visto). Con <1.000 vistas/28 d (440) se mantiene por criterio y cola cubierta hasta el 22-oct.",
+    "ciclo_dias": 4,
+    "separacion_min_horas": 96,
+    "historial": [
+      {
+        "fecha": "2026-10-17",
+        "ciclo_dias": 4,
+        "hora_local": "14:00",
+        "motivo": "Revisión al iniciar historia_mexico: España publicada a las 14:00 CDMX lleva ×1,28 (309 vistas vs 174 de China); canal con 440 vistas/28d y cola programada cada 4 días (14, 18 y 22-oct a las 14:00 CDMX). Se fija separacion_min_horas=96."
+      }
+    ]
   },
   "publicados": [
     {
@@ -49,35 +58,80 @@
       "titulo": "Historia de Irán en 5 minutos",
       "subido": "2026-09-30T22:00:00Z",
       "visibilidad": "programado",
-      "nota": "miniatura IA; programado mié 21-oct 14:00 CDMX (recorrido una semana el 6-oct)",
-      "publicar": "2026-10-21T20:00:00Z"
+      "nota": "miniatura IA; programado dom 18-oct 14:00 CDMX (reprogramado el 12-oct; verificado en YouTube el 17-oct)",
+      "publicar": "2026-10-18T20:00:00Z"
     },
     {
       "video": "historia_japon",
       "id": "EI0c27EY89E",
       "titulo": "Historia de Japón en 5 minutos",
       "subido": "2026-10-01T16:07:00Z",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "nota": "miniatura IA y .srt; programado mié 14-oct 13:00 CDMX (recorrido una semana el 6-oct)",
-      "publicar": "2026-10-14T19:00:00Z"
+      "publicar": "2026-10-14T19:00:00Z",
+      "publicado": "2026-10-14T19:00:37Z"
     },
     {
       "video": "historia_egipto",
-      "id": "3V_C7ZEj5is",
-      "titulo": "La historia de Egipto en 5 minutos: De los faraones al canal de Suez",
-      "subido": "2026-10-01T19:33:42Z",
+      "id": "R1LQTkRiwzI",
+      "titulo": "Historia de Egipto en 5 minutos",
+      "subido": "2026-10-12T00:00:00Z",
       "visibilidad": "programado",
-      "nota": "miniatura IA y .srt; programado mié 21-oct 11:00 CDMX; recorrido al mié 28-oct 11:00 CDMX el 6-oct; pendiente arreglar el mapa del inicio y resubir",
-      "publicar": "2026-10-28T17:00:00Z"
+      "nota": "v2 (relieve real, ~150 dibujos); miniatura por código y .srt; programado jue 22-oct 14:00 CDMX (reprogramado el 12-oct; verificado en YouTube el 17-oct). La v1 (3V_C7ZEj5is) la borra el usuario en Studio.",
+      "publicar": "2026-10-22T20:00:00Z"
     },
     {
       "video": "historia_espana",
       "id": "eSMFJWNy5IA",
       "titulo": "Historia de España en 5 minutos",
       "subido": "2026-10-06T20:30:00Z",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "nota": "miniatura por código y .srt; programado mié 7-oct 14:00 CDMX",
-      "publicar": "2026-10-07T20:00:00Z"
+      "publicar": "2026-10-07T20:00:00Z",
+      "publicado": "2026-10-07T20:00:15Z"
+    },
+    {
+      "video": "historia_mexico",
+      "id": "BZd71Z5BIrk",
+      "titulo": "Historia de México en 5 minutos",
+      "subido": "2026-10-17T19:28:33Z",
+      "visibilidad": "programado",
+      "nota": "relieve real ETOPO1 + 78 dibujos + música Lyria 3 Pro en 3 partes; miniatura por código y .srt cargados; PROGRAMADO lun 26-oct 14:00 CDMX (20:00 UTC) el 17-oct-2026, hueco del ciclo de 4 días tras Egipto (jue 22-oct)",
+      "formato": "historia_pais_5m",
+      "prueba": "pais_audiencia_mx",
+      "publicar": "2026-10-26T20:00:00Z"
+    },
+    {
+      "video": "historia_eeuu",
+      "id": "dGkN7MnhxoA",
+      "titulo": "Historia de Estados Unidos en 6 minutos",
+      "subido": "2026-10-22T15:44:42Z",
+      "visibilidad": "programado",
+      "nota": "relieve real ETOPO1 + ~170 dibujos propios + música Lyria en 3 partes + 181 SFX; miniatura por código y .srt cargados; PROGRAMADO vie 30-oct 14:00 CDMX (20:00 UTC) el 22-oct-2026, hueco de canales --actualizar (ciclo de 4 días)",
+      "formato": "historia_pais_5m",
+      "prueba": "pais_no_hispano_eeuu_6min",
+      "publicar": "2026-10-30T20:00:00Z"
+    },
+    {
+      "video": "historia_jalisco",
+      "id": "SiA13ZlBK5A",
+      "titulo": "La historia de Jalisco en 5 minutos",
+      "subido": "2026-10-22T16:35:00Z",
+      "visibilidad": "programado",
+      "nota": "PRIMER Cronopapel con PEGATINAS DE FLOW (ingrediente = dibujos del kit) sobre el mapa por código; relieve ETOPO1 + NE 10 m; Lyria 3 tramos; miniatura por código y .srt; PROGRAMADO mar 3-nov 14:00 CDMX (20:00 UTC) el 22-oct-2026, hueco del ciclo de 4 días tras EE. UU.",
+      "formato": "historia_pais_5m",
+      "prueba": "estado_mx_pegatinas_flow",
+      "publicar": "2026-11-03T20:00:00Z"
+    },
+    {
+      "video": "historia_aguascalientes",
+      "id": "VTdzWTuzrLg",
+      "titulo": "La historia de Aguascalientes",
+      "subido": "2026-10-22T21:00:00Z",
+      "visibilidad": "programado",
+      "publicar": "2026-11-07T20:00:00Z",
+      "formato": "historia_estado_12min_pegatinas_flow_voz_eleven",
+      "nota": "primer Cronopapel con voz ElevenLabs (Alberto Rodríguez), SFX_ELEVEN, 13:05, curiosidades + lugares para visitar + fotos reales; también en Facebook «Historias Perdidas de México»"
     }
   ],
   "ideas": {

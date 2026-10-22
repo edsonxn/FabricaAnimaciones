@@ -123,8 +123,10 @@ def cargar(ruta, sr):
 
 def recortar(x, dur, sr):
     """Si el evento pide `dur` (transiciones) y el archivo es mucho más largo, corta con un fundido de 0,15 s."""
+    if not dur:
+        return x
     n = int((dur + 0.4) * sr)
-    if dur and x.shape[1] > int(n * 1.3):
+    if x.shape[1] > int(n * 1.3):
         x = x[:, :n].copy()
         f = min(int(0.15 * sr), n)
         x[:, -f:] *= np.linspace(1, 0, f)

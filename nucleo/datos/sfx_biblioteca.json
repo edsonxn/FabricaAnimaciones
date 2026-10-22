@@ -458,7 +458,15 @@
    "md5": "31391ec6358bea73264cd3e1aa85b687",
    "prompt": "Soft airy swoosh transition, smooth and light, short",
    "dur": 0.8,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "whoosh_d",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo__xp_1": {
    "id": "duo_promo__xp_1",
@@ -528,7 +536,21 @@
    "md5": "d558db7755d71feba00beb8691dd2cc5",
    "prompt": "Small magical sparkle twinkle, short bright chime, cute",
    "dur": 0.68,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "brillo_a",
+     "fecha": "2026-10-22"
+    },
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "brillo_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo_60__brillo_b": {
    "id": "duo_promo_60__brillo_b",
@@ -538,7 +560,15 @@
    "md5": "8b9656567049fceb5aa85e7be034ac3b",
    "prompt": "Tiny glittery ding with soft bells, magical UI, short",
    "dur": 0.68,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "brillo_b",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo_60__brote_a": {
    "id": "duo_promo_60__brote_a",
@@ -808,7 +838,15 @@
    "md5": "07a88c912e3e8fa73dc802ae18f4cdbd",
    "prompt": "Pencil quickly sketching on paper, drawing scribbles",
    "dur": 1.2,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "escribir_2",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo_60__latido": {
    "id": "duo_promo_60__latido",
@@ -858,7 +896,15 @@
    "md5": "d0c761b29b663719d96fe1f0bfdb2c13",
    "prompt": "Shower of coins jingling and bouncing, video game reward",
    "dur": 1.2,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "monedas",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo_60__mueble_a": {
    "id": "duo_promo_60__mueble_a",
@@ -958,7 +1004,15 @@
    "md5": "8901194e1de9788e974d70c1e68c4093",
    "prompt": "Soft bubble pop, cute UI icon appearing, short",
    "dur": 0.48,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "pop_a",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo_60__pop_b": {
    "id": "duo_promo_60__pop_b",
@@ -968,7 +1022,15 @@
    "md5": "297cc12b9f6a3251d472c00404994fc5",
    "prompt": "Light airy pop with a tiny chime, UI, short",
    "dur": 0.48,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "pop_b",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "duo_promo_60__resortera": {
    "id": "duo_promo_60__resortera",
@@ -1108,7 +1170,15 @@
    "md5": "3816102e1e570ca851295d5f74be963b",
    "prompt": "Gentle quick whoosh pass by, airy and clean, short",
    "dur": 0.6,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "whoosh_b",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "er_miquella_atrocidades__campana": {
    "id": "er_miquella_atrocidades__campana",
@@ -1468,7 +1538,15 @@
    "md5": "5d24c6cf9a1dfcc6c3f8c58b34610f7b",
    "prompt": "Soft deep cinematic hit with a subtle whoosh, for a title word appearing",
    "dur": 2.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "golpe_titulo",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "freno_enojo__inhala": {
    "id": "freno_enojo__inhala",
@@ -1738,7 +1816,15 @@
    "md5": "444d5c2cb7ce82abc08ed603032d6ce3",
    "prompt": "Short cheesy heroic brass fanfare, slightly out of tune, comedic",
    "dur": 3.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "fanfarria_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "guason_fumado__frito": {
    "id": "guason_fumado__frito",
@@ -1978,7 +2064,15 @@
    "md5": "44f9c163898da13ecc4dad6e031fa26a",
    "prompt": "A short soft smartphone message notification sound",
    "dur": 1.0,
-   "canal": "ninguno"
+   "canal": "ninguno",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "whatsapp",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "la_sena__bici": {
    "id": "la_sena__bici",
@@ -2108,7 +2202,15 @@
    "md5": "8328eacb6ca83dc10360fa1e97224559",
    "prompt": "Bright positive success chime, single ding, clean",
    "dur": 1.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "ding",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "mods_ia_fusion__datos": {
    "id": "mods_ia_fusion__datos",
@@ -2148,7 +2250,15 @@
    "md5": "f044203ab63c7e8a6f3b5792b0455e3b",
    "prompt": "Deep punchy cinematic bass impact hit with a short tail, trailer style",
    "dur": 1.48,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "golpe_precio",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "mods_ia_fusion__golpe2": {
    "id": "mods_ia_fusion__golpe2",
@@ -2168,7 +2278,15 @@
    "md5": "d6cbf89ef9f849e5f8cfdd0667db35cb",
    "prompt": "Bright soft UI pop, bubble click, very short, clean",
    "dur": 0.48,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "pop_c",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "mods_ia_fusion__reja": {
    "id": "mods_ia_fusion__reja",
@@ -2188,7 +2306,15 @@
    "md5": "322caaffa9aaee94d7445367d9d8e2fe",
    "prompt": "Heavy rubber stamp slammed on a wooden desk, single thud",
    "dur": 0.8,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "sello_2",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "mods_ia_fusion__subida": {
    "id": "mods_ia_fusion__subida",
@@ -2218,7 +2344,15 @@
    "md5": "26783cb562fde9e257e05d24a5685af1",
    "prompt": "Fast airy cinematic whoosh swoosh transition, short",
    "dur": 1.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "whoosh_a",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "nervio_vago__auditorio": {
    "id": "nervio_vago__auditorio",
@@ -2318,7 +2452,15 @@
    "md5": "fddbe20051b735039bbf57605333c837",
    "prompt": "Pencil scribbling quickly on paper in the dark",
    "dur": 2.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "escribir_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "nervio_vago__latido": {
    "id": "nervio_vago__latido",
@@ -2668,7 +2810,15 @@
    "md5": "4eca5b6630bca4e61bdda55fe0942137",
    "prompt": "Paper note being crumpled and unfolded slowly, close, dry rustle",
    "dur": 1.2,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "papel_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "sonic_exe__pasos": {
    "id": "sonic_exe__pasos",
@@ -2718,7 +2868,15 @@
    "md5": "f66176c84552e0d82b91dbc9c7be2af0",
    "prompt": "Heavy rubber stamp hitting paper, dull thump, short",
    "dur": 0.68,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "historia_aguascalientes",
+     "canal": "cronopapel",
+     "nombre": "sello_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "sonic_exe__susurro": {
    "id": "sonic_exe__susurro",
@@ -3098,7 +3256,15 @@
    "md5": "ac089ff315b0bbd6e30e7b2108f72476",
    "prompt": "",
    "dur": 0.48,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "pop_d",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "trailero_parada2__puerta": {
    "id": "trailero_parada2__puerta",
@@ -3158,7 +3324,15 @@
    "md5": "892b08b1ad200e241d3583e23963d0dc",
    "prompt": "",
    "dur": 0.8,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "duos_promo",
+     "canal": "ninguno",
+     "nombre": "whoosh_c",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "videollamada_falsa__bip": {
    "id": "videollamada_falsa__bip",
@@ -4249,7 +4423,437 @@
    "prompt": "",
    "dur": 3.0,
    "canal": "cronicas_gaming"
+  },
+  "historia_aguascalientes__agua_termal": {
+   "id": "historia_aguascalientes__agua_termal",
+   "video": "historia_aguascalientes",
+   "nombre": "agua_termal",
+   "archivo": "historia_aguascalientes__agua_termal.mp3",
+   "md5": "7489dab680a0fd7e411619050c968e0e",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__agua_tunel": {
+   "id": "historia_aguascalientes__agua_tunel",
+   "video": "historia_aguascalientes",
+   "nombre": "agua_tunel",
+   "archivo": "historia_aguascalientes__agua_tunel.mp3",
+   "md5": "eb1e0ca68b61915fe770be8fc19d14ab",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__balazos": {
+   "id": "historia_aguascalientes__balazos",
+   "video": "historia_aguascalientes",
+   "nombre": "balazos",
+   "archivo": "historia_aguascalientes__balazos.mp3",
+   "md5": "0c02fcc3ce6378ce05667cbf7fbc8025",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__beso": {
+   "id": "historia_aguascalientes__beso",
+   "video": "historia_aguascalientes",
+   "nombre": "beso",
+   "archivo": "historia_aguascalientes__beso.mp3",
+   "md5": "9d15c9e357ccdc666c8da746664bedfc",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__brillo_2": {
+   "id": "historia_aguascalientes__brillo_2",
+   "video": "historia_aguascalientes",
+   "nombre": "brillo_2",
+   "archivo": "historia_aguascalientes__brillo_2.mp3",
+   "md5": "321222618edd61293dbf9db602b60c95",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__campana": {
+   "id": "historia_aguascalientes__campana",
+   "video": "historia_aguascalientes",
+   "nombre": "campana",
+   "archivo": "historia_aguascalientes__campana.mp3",
+   "md5": "b1f309686bd6a1acfbf3014b116eb44a",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__clink": {
+   "id": "historia_aguascalientes__clink",
+   "video": "historia_aguascalientes",
+   "nombre": "clink",
+   "archivo": "historia_aguascalientes__clink.mp3",
+   "md5": "d6bffca7fad3504aa54e20973340ecde",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__crece_1": {
+   "id": "historia_aguascalientes__crece_1",
+   "video": "historia_aguascalientes",
+   "nombre": "crece_1",
+   "archivo": "historia_aguascalientes__crece_1.mp3",
+   "md5": "dd6cdf58ae096c97b577a8065fdffdf1",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__crece_2": {
+   "id": "historia_aguascalientes__crece_2",
+   "video": "historia_aguascalientes",
+   "nombre": "crece_2",
+   "archivo": "historia_aguascalientes__crece_2.mp3",
+   "md5": "8a1f106264e85ecee782618254268ddb",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__crece_3": {
+   "id": "historia_aguascalientes__crece_3",
+   "video": "historia_aguascalientes",
+   "nombre": "crece_3",
+   "archivo": "historia_aguascalientes__crece_3.mp3",
+   "md5": "3061d1df03246da219a82dad84905fda",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__crujido": {
+   "id": "historia_aguascalientes__crujido",
+   "video": "historia_aguascalientes",
+   "nombre": "crujido",
+   "archivo": "historia_aguascalientes__crujido.mp3",
+   "md5": "68ec3a4d609135969587045f25e1149e",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__escribir_3": {
+   "id": "historia_aguascalientes__escribir_3",
+   "video": "historia_aguascalientes",
+   "nombre": "escribir_3",
+   "archivo": "historia_aguascalientes__escribir_3.mp3",
+   "md5": "b08fdf39ace47c401cd96fbc1faad1ff",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__fabrica": {
+   "id": "historia_aguascalientes__fabrica",
+   "video": "historia_aguascalientes",
+   "nombre": "fabrica",
+   "archivo": "historia_aguascalientes__fabrica.mp3",
+   "md5": "12706b3b5459ee5da07bb3d22db3e28c",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__fanfarria_2": {
+   "id": "historia_aguascalientes__fanfarria_2",
+   "video": "historia_aguascalientes",
+   "nombre": "fanfarria_2",
+   "archivo": "historia_aguascalientes__fanfarria_2.mp3",
+   "md5": "a68d37931e52917e0a9f71b53d9aa9dd",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__feria": {
+   "id": "historia_aguascalientes__feria",
+   "video": "historia_aguascalientes",
+   "nombre": "feria",
+   "archivo": "historia_aguascalientes__feria.mp3",
+   "md5": "2a489322893087a43f30ff6c578307b9",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__flecha": {
+   "id": "historia_aguascalientes__flecha",
+   "video": "historia_aguascalientes",
+   "nombre": "flecha",
+   "archivo": "historia_aguascalientes__flecha.mp3",
+   "md5": "5a2a5da3c5da71e6ef320a6c19d2582b",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__galope_1": {
+   "id": "historia_aguascalientes__galope_1",
+   "video": "historia_aguascalientes",
+   "nombre": "galope_1",
+   "archivo": "historia_aguascalientes__galope_1.mp3",
+   "md5": "678d3459e22770ea341722570f46280d",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__galope_2": {
+   "id": "historia_aguascalientes__galope_2",
+   "video": "historia_aguascalientes",
+   "nombre": "galope_2",
+   "archivo": "historia_aguascalientes__galope_2.mp3",
+   "md5": "fe1819bf900ac8837d200b8ddefac22f",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__golpe_suave_1": {
+   "id": "historia_aguascalientes__golpe_suave_1",
+   "video": "historia_aguascalientes",
+   "nombre": "golpe_suave_1",
+   "archivo": "historia_aguascalientes__golpe_suave_1.mp3",
+   "md5": "045a24ad77c7ccd0bcce7bb79a1ecd29",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__golpe_suave_2": {
+   "id": "historia_aguascalientes__golpe_suave_2",
+   "video": "historia_aguascalientes",
+   "nombre": "golpe_suave_2",
+   "archivo": "historia_aguascalientes__golpe_suave_2.mp3",
+   "md5": "8c58a45d4e9b65f3f0659cc9d34cb885",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__golpe_suave_3": {
+   "id": "historia_aguascalientes__golpe_suave_3",
+   "video": "historia_aguascalientes",
+   "nombre": "golpe_suave_3",
+   "archivo": "historia_aguascalientes__golpe_suave_3.mp3",
+   "md5": "101cd0fe4ddff513c190e2378c653012",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__impacto_1": {
+   "id": "historia_aguascalientes__impacto_1",
+   "video": "historia_aguascalientes",
+   "nombre": "impacto_1",
+   "archivo": "historia_aguascalientes__impacto_1.mp3",
+   "md5": "99c9535bcd9220102cebb932c34980ac",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__impacto_2": {
+   "id": "historia_aguascalientes__impacto_2",
+   "video": "historia_aguascalientes",
+   "nombre": "impacto_2",
+   "archivo": "historia_aguascalientes__impacto_2.mp3",
+   "md5": "9fa894d1516e4483b54441705159a15f",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__mugido": {
+   "id": "historia_aguascalientes__mugido",
+   "video": "historia_aguascalientes",
+   "nombre": "mugido",
+   "archivo": "historia_aguascalientes__mugido.mp3",
+   "md5": "7b7cfd19b7cc84a9d80f16a0d9170006",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__multitud": {
+   "id": "historia_aguascalientes__multitud",
+   "video": "historia_aguascalientes",
+   "nombre": "multitud",
+   "archivo": "historia_aguascalientes__multitud.mp3",
+   "md5": "324bc5eb9130e3524ea4ca48068fec29",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__papel_2": {
+   "id": "historia_aguascalientes__papel_2",
+   "video": "historia_aguascalientes",
+   "nombre": "papel_2",
+   "archivo": "historia_aguascalientes__papel_2.mp3",
+   "md5": "511545979f97d5da1de531db7d000cb9",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pasos_1": {
+   "id": "historia_aguascalientes__pasos_1",
+   "video": "historia_aguascalientes",
+   "nombre": "pasos_1",
+   "archivo": "historia_aguascalientes__pasos_1.mp3",
+   "md5": "03d6b08ed8a04a40a7c7cd930094b707",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pasos_2": {
+   "id": "historia_aguascalientes__pasos_2",
+   "video": "historia_aguascalientes",
+   "nombre": "pasos_2",
+   "archivo": "historia_aguascalientes__pasos_2.mp3",
+   "md5": "c2e202a51efaf05da9754cfc2b979cb5",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pincel": {
+   "id": "historia_aguascalientes__pincel",
+   "video": "historia_aguascalientes",
+   "nombre": "pincel",
+   "archivo": "historia_aguascalientes__pincel.mp3",
+   "md5": "7f2fcf97d5abb3ccc2a0b09530a82c89",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pluck_1": {
+   "id": "historia_aguascalientes__pluck_1",
+   "video": "historia_aguascalientes",
+   "nombre": "pluck_1",
+   "archivo": "historia_aguascalientes__pluck_1.mp3",
+   "md5": "ffb03f04bcd5babdb7deac8860fd1202",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pluck_2": {
+   "id": "historia_aguascalientes__pluck_2",
+   "video": "historia_aguascalientes",
+   "nombre": "pluck_2",
+   "archivo": "historia_aguascalientes__pluck_2.mp3",
+   "md5": "7be1915bf5b31643ae3731468a489c98",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pluck_3": {
+   "id": "historia_aguascalientes__pluck_3",
+   "video": "historia_aguascalientes",
+   "nombre": "pluck_3",
+   "archivo": "historia_aguascalientes__pluck_3.mp3",
+   "md5": "eb4923eb02b49cd49f380141616ae2e8",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pop_1": {
+   "id": "historia_aguascalientes__pop_1",
+   "video": "historia_aguascalientes",
+   "nombre": "pop_1",
+   "archivo": "historia_aguascalientes__pop_1.mp3",
+   "md5": "7bfb022e23939f71d61a03b2e97bf27e",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pop_2": {
+   "id": "historia_aguascalientes__pop_2",
+   "video": "historia_aguascalientes",
+   "nombre": "pop_2",
+   "archivo": "historia_aguascalientes__pop_2.mp3",
+   "md5": "d70fdd06c2fc745d93e9a31ac42bb812",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pop_3": {
+   "id": "historia_aguascalientes__pop_3",
+   "video": "historia_aguascalientes",
+   "nombre": "pop_3",
+   "archivo": "historia_aguascalientes__pop_3.mp3",
+   "md5": "6ce5853356012b7740d03ebddf915094",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__pop_4": {
+   "id": "historia_aguascalientes__pop_4",
+   "video": "historia_aguascalientes",
+   "nombre": "pop_4",
+   "archivo": "historia_aguascalientes__pop_4.mp3",
+   "md5": "19169cf50d6d10da61f47341479684b0",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__tambor_1": {
+   "id": "historia_aguascalientes__tambor_1",
+   "video": "historia_aguascalientes",
+   "nombre": "tambor_1",
+   "archivo": "historia_aguascalientes__tambor_1.mp3",
+   "md5": "0788f55b20ade7fd3e94cfd8ad41910c",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__tambor_2": {
+   "id": "historia_aguascalientes__tambor_2",
+   "video": "historia_aguascalientes",
+   "nombre": "tambor_2",
+   "archivo": "historia_aguascalientes__tambor_2.mp3",
+   "md5": "ed67ccb07824fe31ffb75801847f5647",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__terremoto": {
+   "id": "historia_aguascalientes__terremoto",
+   "video": "historia_aguascalientes",
+   "nombre": "terremoto",
+   "archivo": "historia_aguascalientes__terremoto.mp3",
+   "md5": "e6e8d6d73fc84a241c677295fa240320",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__tren": {
+   "id": "historia_aguascalientes__tren",
+   "video": "historia_aguascalientes",
+   "nombre": "tren",
+   "archivo": "historia_aguascalientes__tren.mp3",
+   "md5": "012e2b5d92100bfeb4982a5a45fdbd1b",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__whoosh_1": {
+   "id": "historia_aguascalientes__whoosh_1",
+   "video": "historia_aguascalientes",
+   "nombre": "whoosh_1",
+   "archivo": "historia_aguascalientes__whoosh_1.mp3",
+   "md5": "b37604367d6c5250530c4f99a80c137a",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__whoosh_2": {
+   "id": "historia_aguascalientes__whoosh_2",
+   "video": "historia_aguascalientes",
+   "nombre": "whoosh_2",
+   "archivo": "historia_aguascalientes__whoosh_2.mp3",
+   "md5": "e60b079faec0237c3e0d3caa97396573",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "historia_aguascalientes__whoosh_3": {
+   "id": "historia_aguascalientes__whoosh_3",
+   "video": "historia_aguascalientes",
+   "nombre": "whoosh_3",
+   "archivo": "historia_aguascalientes__whoosh_3.mp3",
+   "md5": "75c348e0f64bc0e498d94abe8c65b0fb",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
   }
  },
- "actualizado": "2026-10-22 10:39"
+ "actualizado": "2026-10-22 14:23"
 }

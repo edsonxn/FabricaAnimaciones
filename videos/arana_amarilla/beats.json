@@ -1,0 +1,807 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.929,
+  "tipo": "video",
+  "texto": "It is a warm morning at the end of summer. You step outside to water the tomatoes. And right there, between two plants, you almost walk face first into it.",
+  "clip_s": 10,
+  "t_medio": 6.124,
+  "texto_a": "It is a warm morning at the end of summer. You step outside to water the tomatoes.",
+  "texto_b": "And right there, between two plants, you almost walk face first into it."
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.929,
+  "t1": 22.411,
+  "tipo": "video",
+  "texto": "A huge round web, nearly as wide as a bicycle wheel, glittering with dew. And in the middle, hanging head down, is the biggest spider you have ever seen in your yard.",
+  "clip_s": 10,
+  "t_medio": 16.494,
+  "texto_a": "A huge round web, nearly as wide as a bicycle wheel, glittering with dew.",
+  "texto_b": "And in the middle, hanging head down, is the biggest spider you have ever seen in your yard."
+ },
+ {
+  "id": "scene-003",
+  "t0": 22.411,
+  "t1": 29.451,
+  "tipo": "video",
+  "texto": "Bright yellow and black. Long striped legs. And a strange white zigzag running straight through the web.",
+  "clip_s": 10,
+  "t_medio": 25.311,
+  "texto_a": "Bright yellow and black. Long striped legs.",
+  "texto_b": "And a strange white zigzag running straight through the web."
+ },
+ {
+  "id": "scene-004",
+  "t0": 29.451,
+  "t1": 40.22,
+  "tipo": "video",
+  "texto": "Your first thought is to grab a stick, or the hose, or the bug spray. Don't. Because that spider is one of the hardest working pest hunters in your entire garden.",
+  "clip_s": 10,
+  "t_medio": 34.884,
+  "texto_a": "Your first thought is to grab a stick, or the hose, or the bug spray. Don't.",
+  "texto_b": "Because that spider is one of the hardest working pest hunters in your entire garden."
+ },
+ {
+  "id": "scene-005",
+  "t0": 40.22,
+  "t1": 48.561,
+  "tipo": "video",
+  "texto": "It catches the grasshoppers chewing your plants. The flies. The moths. Even wasps. And it really cannot hurt you.",
+  "clip_s": 10,
+  "t_medio": 43.82,
+  "texto_a": "It catches the grasshoppers chewing your plants. The flies.",
+  "texto_b": "The moths. Even wasps. And it really cannot hurt you."
+ },
+ {
+  "id": "scene-006",
+  "t0": 48.561,
+  "t1": 61.603,
+  "tipo": "video",
+  "texto": "But there is an old story about this spider, told for generations in the American South. It says this spider can write. And if it ever writes your name in its web, you do not have long to live.",
+  "clip_s": 10,
+  "t_medio": 54.539,
+  "texto_a": "But there is an old story about this spider, told for generations in the American South.",
+  "texto_b": "It says this spider can write. And if it ever writes your name in its web, you do not have long to live."
+ },
+ {
+  "id": "scene-007",
+  "t0": 61.603,
+  "t1": 70.07,
+  "tipo": "video",
+  "texto": "We will get to that zigzag. Because the real reason it is there is a mystery that scientists are still arguing about.",
+  "clip_s": 10,
+  "t_medio": 65.703,
+  "texto_a": "We will get to that zigzag. Because the real reason it is there is a",
+  "texto_b": "mystery that scientists are still arguing about."
+ },
+ {
+  "id": "scene-008",
+  "t0": 70.07,
+  "t1": 73.968,
+  "tipo": "imagen",
+  "texto": "First, let's meet her. And yes, it is a her."
+ },
+ {
+  "id": "scene-009",
+  "t0": 73.968,
+  "t1": 79.371,
+  "tipo": "imagen",
+  "texto": "This is the yellow garden spider, also called the black and yellow garden spider."
+ },
+ {
+  "id": "scene-010",
+  "t0": 79.371,
+  "t1": 82.751,
+  "tipo": "imagen",
+  "texto": "Depending on where you live, people call her the writing spider,"
+ },
+ {
+  "id": "scene-011",
+  "t0": 82.751,
+  "t1": 86.941,
+  "tipo": "imagen",
+  "texto": "the zipper spider, the corn spider, or the banana spider."
+ },
+ {
+  "id": "scene-012",
+  "t0": 86.941,
+  "t1": 89.541,
+  "tipo": "imagen",
+  "texto": "She lives across almost all of the United States,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 89.541,
+  "t1": 93.455,
+  "tipo": "imagen",
+  "texto": "southern Canada, Mexico, and Central America."
+ },
+ {
+  "id": "scene-014",
+  "t0": 93.455,
+  "t1": 96.835,
+  "tipo": "imagen",
+  "texto": "A grown female can have a body more than an inch long."
+ },
+ {
+  "id": "scene-015",
+  "t0": 96.835,
+  "t1": 101.848,
+  "tipo": "imagen",
+  "texto": "With her legs stretched out, she can cover the palm of your hand. The males?"
+ },
+ {
+  "id": "scene-016",
+  "t0": 101.848,
+  "t1": 105.388,
+  "tipo": "imagen",
+  "texto": "Tiny. About a quarter of her size, and plain brown."
+ },
+ {
+  "id": "scene-017",
+  "t0": 105.388,
+  "t1": 109.896,
+  "tipo": "imagen",
+  "texto": "Most people never even notice them. She sits in the center of her web almost"
+ },
+ {
+  "id": "scene-018",
+  "t0": 109.896,
+  "t1": 113.836,
+  "tipo": "imagen",
+  "texto": "all day, head down, holding her legs together in pairs,"
+ },
+ {
+  "id": "scene-019",
+  "t0": 113.836,
+  "t1": 117.923,
+  "tipo": "imagen",
+  "texto": "so she looks like a big letter X."
+ },
+ {
+  "id": "scene-020",
+  "t0": 117.923,
+  "t1": 121.637,
+  "tipo": "imagen",
+  "texto": "Now look at that web. It is an orb web,"
+ },
+ {
+  "id": "scene-021",
+  "t0": 121.637,
+  "t1": 125.737,
+  "tipo": "imagen",
+  "texto": "the classic wheel with spokes and a sticky spiral, and it can be up to"
+ },
+ {
+  "id": "scene-022",
+  "t0": 125.737,
+  "t1": 129.793,
+  "tipo": "imagen",
+  "texto": "two feet across. She builds it in sunny, open spots."
+ },
+ {
+  "id": "scene-023",
+  "t0": 129.793,
+  "t1": 133.703,
+  "tipo": "imagen",
+  "texto": "Between tall plants, along fences, under the edge of the porch,"
+ },
+ {
+  "id": "scene-024",
+  "t0": 133.703,
+  "t1": 138.227,
+  "tipo": "imagen",
+  "texto": "wherever insects fly through. And here is the surprising part."
+ },
+ {
+  "id": "scene-025",
+  "t0": 138.227,
+  "t1": 141.297,
+  "tipo": "imagen",
+  "texto": "On many nights, she takes down the center of her web,"
+ },
+ {
+  "id": "scene-026",
+  "t0": 141.297,
+  "t1": 145.449,
+  "tipo": "imagen",
+  "texto": "and builds it again. She does not waste the old silk."
+ },
+ {
+  "id": "scene-027",
+  "t0": 145.449,
+  "t1": 149.945,
+  "tipo": "imagen",
+  "texto": "She eats it. Silk is made of protein, and protein is precious."
+ },
+ {
+  "id": "scene-028",
+  "t0": 149.945,
+  "t1": 154.383,
+  "tipo": "imagen",
+  "texto": "So she recycles it, and uses it to spin fresh threads."
+ },
+ {
+  "id": "scene-029",
+  "t0": 154.383,
+  "t1": 156.853,
+  "tipo": "imagen",
+  "texto": "The spokes are dry, so she can walk on them."
+ },
+ {
+  "id": "scene-030",
+  "t0": 156.853,
+  "t1": 161.021,
+  "tipo": "imagen",
+  "texto": "The spiral is sticky, so the insects cannot walk away."
+ },
+ {
+  "id": "scene-031",
+  "t0": 161.021,
+  "t1": 165.621,
+  "tipo": "imagen",
+  "texto": "She cannot see very well. She hunts by touch, feeling every tiny vibration"
+ },
+ {
+  "id": "scene-032",
+  "t0": 165.621,
+  "t1": 169.265,
+  "tipo": "imagen",
+  "texto": "through her legs. So the whole web is a giant trap,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 169.265,
+  "t1": 173.23,
+  "tipo": "imagen",
+  "texto": "and a giant ear, at the same time."
+ },
+ {
+  "id": "scene-034",
+  "t0": 173.23,
+  "t1": 176.67,
+  "tipo": "imagen",
+  "texto": "So what happens when something hits the web?"
+ },
+ {
+  "id": "scene-035",
+  "t0": 176.67,
+  "t1": 181.231,
+  "tipo": "imagen",
+  "texto": "A grasshopper jumps, misses the leaf, and lands right in the spiral."
+ },
+ {
+  "id": "scene-036",
+  "t0": 181.231,
+  "t1": 184.524,
+  "tipo": "imagen",
+  "texto": "In a heartbeat, she runs across the spokes."
+ },
+ {
+  "id": "scene-037",
+  "t0": 184.524,
+  "t1": 188.304,
+  "tipo": "imagen",
+  "texto": "She grabs the insect with her legs and spins it around and around,"
+ },
+ {
+  "id": "scene-038",
+  "t0": 188.304,
+  "t1": 192.923,
+  "tipo": "imagen",
+  "texto": "wrapping it in silk like a tiny mummy. Only then does she bite,"
+ },
+ {
+  "id": "scene-039",
+  "t0": 192.923,
+  "t1": 195.647,
+  "tipo": "imagen",
+  "texto": "and her venom stops the struggling."
+ },
+ {
+  "id": "scene-040",
+  "t0": 195.647,
+  "t1": 201.037,
+  "tipo": "imagen",
+  "texto": "She can tackle insects as big as she is, or even bigger. Grasshoppers,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 201.037,
+  "t1": 205.965,
+  "tipo": "imagen",
+  "texto": "moths, flies, beetles, and even bees and wasps."
+ },
+ {
+  "id": "scene-042",
+  "t0": 205.965,
+  "t1": 210.298,
+  "tipo": "imagen",
+  "texto": "Then she carries the package back to the center, and saves it for later."
+ },
+ {
+  "id": "scene-043",
+  "t0": 210.298,
+  "t1": 212.938,
+  "tipo": "imagen",
+  "texto": "Over a whole summer, one garden spider"
+ },
+ {
+  "id": "scene-044",
+  "t0": 212.938,
+  "t1": 218.252,
+  "tipo": "imagen",
+  "texto": "catches a lot of insects. Many of them are the ones that chew on your vegetables."
+ },
+ {
+  "id": "scene-045",
+  "t0": 218.252,
+  "t1": 221.032,
+  "tipo": "imagen",
+  "texto": "That is why so many gardeners are happy to see her"
+ },
+ {
+  "id": "scene-046",
+  "t0": 221.032,
+  "t1": 226.224,
+  "tipo": "imagen",
+  "texto": "move in. Now, about that zigzag."
+ },
+ {
+  "id": "scene-047",
+  "t0": 226.224,
+  "t1": 228.394,
+  "tipo": "imagen",
+  "texto": "Right through the center of the web,"
+ },
+ {
+  "id": "scene-048",
+  "t0": 228.394,
+  "t1": 234.328,
+  "tipo": "imagen",
+  "texto": "there is a thick band of white silk, going up and down like a zipper."
+ },
+ {
+  "id": "scene-049",
+  "t0": 234.328,
+  "t1": 236.768,
+  "tipo": "imagen",
+  "texto": "Scientists call it a stabilimentum."
+ },
+ {
+  "id": "scene-050",
+  "t0": 236.768,
+  "t1": 241.086,
+  "tipo": "imagen",
+  "texto": "And it is where the writing spider got its name. In the old Southern story,"
+ },
+ {
+  "id": "scene-051",
+  "t0": 241.086,
+  "t1": 243.575,
+  "tipo": "imagen",
+  "texto": "those zigzags are letters."
+ },
+ {
+  "id": "scene-052",
+  "t0": 243.575,
+  "t1": 249.039,
+  "tipo": "imagen",
+  "texto": "If the spider writes your name in its web, so the story goes, you are going to die."
+ },
+ {
+  "id": "scene-053",
+  "t0": 249.039,
+  "t1": 251.799,
+  "tipo": "imagen",
+  "texto": "Of course, the spider is not writing anything."
+ },
+ {
+  "id": "scene-054",
+  "t0": 251.799,
+  "t1": 255.812,
+  "tipo": "imagen",
+  "texto": "It does not know your name, and it does not know how to spell."
+ },
+ {
+  "id": "scene-055",
+  "t0": 255.812,
+  "t1": 260.552,
+  "tipo": "imagen",
+  "texto": "No one has ever died because of a zigzag. It is just a spooky story,"
+ },
+ {
+  "id": "scene-056",
+  "t0": 260.552,
+  "t1": 263.686,
+  "tipo": "imagen",
+  "texto": "passed down from grandparents to grandkids."
+ },
+ {
+  "id": "scene-057",
+  "t0": 263.686,
+  "t1": 270.04,
+  "tipo": "imagen",
+  "texto": "But here is the strange part. Scientists still do not fully agree on why she makes it."
+ },
+ {
+  "id": "scene-058",
+  "t0": 270.04,
+  "t1": 272.85,
+  "tipo": "imagen",
+  "texto": "One idea is that it is a warning sign for birds,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 272.85,
+  "t1": 276.7,
+  "tipo": "imagen",
+  "texto": "like a sticker on a glass door, so they do not fly through"
+ },
+ {
+  "id": "scene-060",
+  "t0": 276.7,
+  "t1": 279.781,
+  "tipo": "imagen",
+  "texto": "and wreck the web."
+ },
+ {
+  "id": "scene-061",
+  "t0": 279.781,
+  "t1": 285.201,
+  "tipo": "imagen",
+  "texto": "Another is that it reflects ultraviolet light, which some insects are drawn to,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 285.201,
+  "t1": 287.778,
+  "tipo": "imagen",
+  "texto": "so it might lure dinner closer."
+ },
+ {
+  "id": "scene-063",
+  "t0": 287.778,
+  "t1": 292.455,
+  "tipo": "imagen",
+  "texto": "A third idea is that it helps hide her, breaking up the outline of her body."
+ },
+ {
+  "id": "scene-064",
+  "t0": 292.455,
+  "t1": 296.515,
+  "tipo": "imagen",
+  "texto": "It might do all three. For now, it is one of the most famous little"
+ },
+ {
+  "id": "scene-065",
+  "t0": 296.515,
+  "t1": 300.47,
+  "tipo": "imagen",
+  "texto": "mysteries in the spider world."
+ },
+ {
+  "id": "scene-066",
+  "t0": 300.47,
+  "t1": 305.74,
+  "tipo": "imagen",
+  "texto": "And when something big gets too close, like a bird, a curious dog, or your hand,"
+ },
+ {
+  "id": "scene-067",
+  "t0": 305.74,
+  "t1": 309.762,
+  "tipo": "imagen",
+  "texto": "she has a trick. She grabs the web and shakes it, hard,"
+ },
+ {
+  "id": "scene-068",
+  "t0": 309.762,
+  "t1": 315.832,
+  "tipo": "imagen",
+  "texto": "until the whole thing is swinging back and forth. To a predator, she suddenly looks bigger,"
+ },
+ {
+  "id": "scene-069",
+  "t0": 315.832,
+  "t1": 319.896,
+  "tipo": "imagen",
+  "texto": "and she is much harder to grab. And if that does not work,"
+ },
+ {
+  "id": "scene-070",
+  "t0": 319.896,
+  "t1": 324.43,
+  "tipo": "imagen",
+  "texto": "she simply drops to the ground and hides in the leaves."
+ },
+ {
+  "id": "scene-071",
+  "t0": 324.43,
+  "t1": 329.941,
+  "tipo": "imagen",
+  "texto": "Now, remember that tiny male. In late summer, he goes looking for a female,"
+ },
+ {
+  "id": "scene-072",
+  "t0": 329.941,
+  "t1": 335.446,
+  "tipo": "imagen",
+  "texto": "and builds a small web right next to hers. Then he carefully plucks her threads with"
+ },
+ {
+  "id": "scene-073",
+  "t0": 335.446,
+  "t1": 339.013,
+  "tipo": "imagen",
+  "texto": "a special rhythm, so she knows he is not dinner."
+ },
+ {
+  "id": "scene-074",
+  "t0": 339.013,
+  "t1": 343.763,
+  "tipo": "imagen",
+  "texto": "And scientists discovered something incredible about these males."
+ },
+ {
+  "id": "scene-075",
+  "t0": 343.763,
+  "t1": 350.879,
+  "tipo": "imagen",
+  "texto": "During mating, his heart simply stops. He dies, and she did not even have to touch him."
+ },
+ {
+  "id": "scene-076",
+  "t0": 350.879,
+  "t1": 355.439,
+  "tipo": "imagen",
+  "texto": "His body stays attached to her, which makes it harder for any other male to take his"
+ },
+ {
+  "id": "scene-077",
+  "t0": 355.439,
+  "t1": 360.613,
+  "tipo": "imagen",
+  "texto": "place. By early fall, she gets to work on the most important"
+ },
+ {
+  "id": "scene-078",
+  "t0": 360.613,
+  "t1": 365.494,
+  "tipo": "imagen",
+  "texto": "thing she will ever build. She weaves a round, brown, papery egg sac,"
+ },
+ {
+  "id": "scene-079",
+  "t0": 365.494,
+  "t1": 369.747,
+  "tipo": "imagen",
+  "texto": "about an inch across, and hangs it in the web or close by."
+ },
+ {
+  "id": "scene-080",
+  "t0": 369.747,
+  "t1": 375.811,
+  "tipo": "imagen",
+  "texto": "Each sac can hold hundreds of eggs, sometimes more than a thousand. And she may make several."
+ },
+ {
+  "id": "scene-081",
+  "t0": 375.811,
+  "t1": 378.69,
+  "tipo": "imagen",
+  "texto": "Then she guards them, for as long as she can."
+ },
+ {
+  "id": "scene-082",
+  "t0": 378.69,
+  "t1": 386.45,
+  "tipo": "imagen",
+  "texto": "When the first hard frost of the year arrives, she dies. Most yellow garden spiders live for just one summer."
+ },
+ {
+  "id": "scene-083",
+  "t0": 386.45,
+  "t1": 391.01,
+  "tipo": "imagen",
+  "texto": "But the babies hatch inside the sac, and they wait there, all winter long,"
+ },
+ {
+  "id": "scene-084",
+  "t0": 391.01,
+  "t1": 395.572,
+  "tipo": "imagen",
+  "texto": "safe inside that ball of silk. In the spring, they climb out,"
+ },
+ {
+  "id": "scene-085",
+  "t0": 395.572,
+  "t1": 400.743,
+  "tipo": "imagen",
+  "texto": "let a thread of silk catch the wind, and float away to find gardens of their own."
+ },
+ {
+  "id": "scene-086",
+  "t0": 400.743,
+  "t1": 405.323,
+  "tipo": "imagen",
+  "texto": "So if you find one of those brown sacs on your porch this winter, please leave it alone."
+ },
+ {
+  "id": "scene-087",
+  "t0": 405.323,
+  "t1": 410.49,
+  "tipo": "imagen",
+  "texto": "That is next year's pest control. But wait. A spider this big"
+ },
+ {
+  "id": "scene-088",
+  "t0": 410.49,
+  "t1": 416.034,
+  "tipo": "imagen",
+  "texto": "must be dangerous, right? Not really. The yellow garden spider is not aggressive,"
+ },
+ {
+  "id": "scene-089",
+  "t0": 416.034,
+  "t1": 418.926,
+  "tipo": "imagen",
+  "texto": "and it would much rather run than bite."
+ },
+ {
+  "id": "scene-090",
+  "t0": 418.926,
+  "t1": 425.807,
+  "tipo": "imagen",
+  "texto": "It only bites if it is grabbed or squeezed. And even then, for a healthy adult, it feels like a bee sting."
+ },
+ {
+  "id": "scene-091",
+  "t0": 425.807,
+  "t1": 430.051,
+  "tipo": "imagen",
+  "texto": "A little red, a little swollen, and gone soon after."
+ },
+ {
+  "id": "scene-092",
+  "t0": 430.051,
+  "t1": 434.83,
+  "tipo": "imagen",
+  "texto": "Its venom is made for grasshoppers, not for people."
+ },
+ {
+  "id": "scene-093",
+  "t0": 434.83,
+  "t1": 441.217,
+  "tipo": "imagen",
+  "texto": "So how do you know you are looking at a yellow garden spider? Here is the quick check."
+ },
+ {
+  "id": "scene-094",
+  "t0": 441.217,
+  "t1": 445.417,
+  "tipo": "imagen",
+  "texto": "A big round web in a sunny spot, a white zigzag in the middle,"
+ },
+ {
+  "id": "scene-095",
+  "t0": 445.417,
+  "t1": 449.162,
+  "tipo": "imagen",
+  "texto": "and a black and yellow spider hanging head down at the center."
+ },
+ {
+  "id": "scene-096",
+  "t0": 449.162,
+  "t1": 455.582,
+  "tipo": "imagen",
+  "texto": "Lately, people in the Southeast have also started seeing another big yellow spider. The Joro spider,"
+ },
+ {
+  "id": "scene-097",
+  "t0": 455.582,
+  "t1": 459.775,
+  "tipo": "imagen",
+  "texto": "a newcomer from Asia. The Joro has yellow and bluish stripes,"
+ },
+ {
+  "id": "scene-098",
+  "t0": 459.775,
+  "t1": 465.992,
+  "tipo": "imagen",
+  "texto": "a red patch underneath, and a golden web with no zigzag. Both of them are harmless to you."
+ },
+ {
+  "id": "scene-099",
+  "t0": 465.992,
+  "t1": 470.83,
+  "tipo": "imagen",
+  "texto": "And both of them eat a lot of bugs."
+ },
+ {
+  "id": "scene-100",
+  "t0": 470.83,
+  "t1": 475.077,
+  "tipo": "imagen",
+  "texto": "So what should you do when you find one? The easiest answer is nothing."
+ },
+ {
+  "id": "scene-101",
+  "t0": 475.077,
+  "t1": 479.661,
+  "tipo": "imagen",
+  "texto": "Let her work. If her web is right across a doorway or a path,"
+ },
+ {
+  "id": "scene-102",
+  "t0": 479.661,
+  "t1": 484.75,
+  "tipo": "imagen",
+  "texto": "gently move her with a stick to a bush nearby. She will build again."
+ },
+ {
+  "id": "scene-103",
+  "t0": 484.75,
+  "t1": 491.337,
+  "tipo": "imagen",
+  "texto": "Skip the bug spray. It kills the hunters along with the pests, and the pests come back much faster."
+ },
+ {
+  "id": "scene-104",
+  "t0": 491.337,
+  "t1": 495.697,
+  "tipo": "imagen",
+  "texto": "And if you want more of them, leave some tall plants and flowers standing."
+ },
+ {
+  "id": "scene-105",
+  "t0": 495.697,
+  "t1": 499.547,
+  "tipo": "imagen",
+  "texto": "That is all she needs."
+ },
+ {
+  "id": "scene-106",
+  "t0": 499.547,
+  "t1": 506.468,
+  "tipo": "imagen",
+  "texto": "So the next time you step into your garden and see that big yellow spider in her web, take a second look."
+ },
+ {
+  "id": "scene-107",
+  "t0": 506.468,
+  "t1": 509.237,
+  "tipo": "imagen",
+  "texto": "She is not writing your name."
+ },
+ {
+  "id": "scene-108",
+  "t0": 509.237,
+  "t1": 516.897,
+  "tipo": "imagen",
+  "texto": "She is guarding your tomatoes, catching the bugs you do not want, and building a fresh trap almost every night."
+ },
+ {
+  "id": "scene-109",
+  "t0": 516.897,
+  "t1": 520.517,
+  "tipo": "imagen",
+  "texto": "In a few months she will be gone, and she will leave you hundreds"
+ },
+ {
+  "id": "scene-110",
+  "t0": 520.517,
+  "t1": 525.983,
+  "tipo": "imagen",
+  "texto": "of tiny helpers for next spring. So put down the stick, step around the web,"
+ },
+ {
+  "id": "scene-111",
+  "t0": 525.983,
+  "t1": 530.4,
+  "tipo": "imagen",
+  "texto": "and let her finish her summer."
+ }
+]

@@ -5,7 +5,8 @@
   "horario": {
     "separacion_min_horas": 72,
     "nota": "REGLA del usuario (7-oct-2026): UN video cada 3 días (ese es el ciclo del canal), NUNCA varios el mismo día. Lotes: en privado y programados cada 3 días a las 16:00 UTC (mediodía del Este de EE. UU.; sin datos de audiencia todavía).",
-    "utc": "16:00"
+    "utc": "16:00",
+    "ciclo_dias": 3
   },
   "publicados": [
     {
@@ -52,23 +53,38 @@
       "visibilidad": "programado",
       "publicar": "2026-10-18T16:00:00Z",
       "formato": "never_kill"
-    }
-  ],
-  "duplicados_para_borrar": [
-    {
-      "video": "aranas_otono",
-      "id": "9E9j5ZWxZHo",
-      "nota": "subida vieja en PRIVADO (fue pública por error el 7-oct); sustituida por A0uq0XZgWmI. El usuario la borra en Studio."
     },
     {
-      "video": "ciempies_casa",
-      "id": "oFi5HDkClVE",
-      "nota": "subida vieja en PRIVADO (fue pública por error el 7-oct); sustituida por 8voZAKYUAkM. El usuario la borra en Studio."
+      "video": "cinco_bichos",
+      "id": "8q2TyqEBRNg",
+      "titulo": "5 Bugs You Should NEVER Kill Around Your House (And 1 You Should)",
+      "visibilidad": "public",
+      "formato": "never_kill_lista",
+      "prueba": "estructura en lista 5+1, 8:38, todo imagen (Flow sin puntos)",
+      "publicado": "2026-10-12T21:42:14Z",
+      "nota": "adelantado por el usuario: público desde el 12-oct 21:42 UTC (estaba programado para 21-oct 16:00 UTC); `--forzar`, 66 h hasta bichos_invierno"
     },
     {
-      "video": "bichos_invierno",
-      "id": "mqHB3cK7RF8",
-      "nota": "subida vieja en PRIVADO (fue pública por error el 7-oct); sustituida por AYmaIJedCPc. El usuario la borra en Studio."
+      "video": "doce_animales",
+      "id": "fRiMIprIcM8",
+      "titulo": "12 Animals You Should NEVER Kill Around Your House (And 2 You Should)",
+      "visibilidad": "private",
+      "formato": "never_kill_lista",
+      "prueba": "lista 12+2 de ANIMALES del patio, 14:25, 66 s de clips, fotos reales, imágenes vivas",
+      "subido": "2026-10-19",
+      "nota": "programado por orden del usuario (pidió 21-oct 16:00 UTC; 16:01 para cumplir 72 h tras arana_techo, publicado 18-oct 16:00:39). La v1 kDsjeEwoLMA (sin imágenes vivas por un bug del motor) la borra el usuario en Studio",
+      "programado": "2026-10-21T16:01:00Z"
+    },
+    {
+      "video": "arana_amarilla",
+      "id": "Oq0Tbhz8x0g",
+      "titulo": "Never Kill the Big Yellow Spider in Your Garden",
+      "visibilidad": "private",
+      "formato": "never_kill",
+      "prueba": "vuelta al never_kill de UN bicho; lugar = jardín + leyenda «writing spider»; 8:50, 70 s de clips, 6 fotos reales, imágenes vivas",
+      "subido": "2026-10-22",
+      "programado": "2026-10-24T16:05:00Z",
+      "nota": "16:05 UTC para cumplir las 72 h tras doce_animales (público 21-oct 16:01:10)"
     }
   ],
   "ideas": {

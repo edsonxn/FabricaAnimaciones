@@ -281,6 +281,47 @@ repetir `hilos` ni ningún MG ya hecho; cada oportunidad pide un diseño propio 
 - Referencias del NIVEL esperado (para inspirarse, no para copiar): Runa `mg_er.doble_vida/gemelos/hilos/cosido/cruces/triada`; Warcraft `mg_wow.filas/grupos/contadores` y (21-oct, `wow_curiosidades_kalimdor`) `runas` (cadena de suministro: 7 runas que se apagan con el agua de Azshara), `linaje` (pareja -> hijos que tachan al padre, con retratos reales en medallón), `cadena` (causa -> efecto en medallones que se tiñen de rojo) y `consola` (terminal titán que teclea «FALTAN» y estampa sellos); Tamriel
   `mg_tes.rejilla/traiciones/reloj/contadores/rehenes/sospechosos/cadena/balanza`.
 
+## MAPAS REALES CON RUTA (el usuario, 23-oct-2026: Warcraft, Runa Caída, Tamriel y Crónicas del gaming)
+El usuario: «en ocasiones hay que mostrar mapas reales del juego con rutas cuando hablemos de misiones o cosas que el espectador
+quiera saber dónde es; tú decides en qué escenas y cómo… adaptados cada uno a su juego». Kit **`nucleo/mg_mapa.py`** (`mapa()`),
+helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo de ahí con `_MAP` y `TEMA_MAPA`).
+- **Cuándo (lo decide el agente al leer el guion, en el mismo plan que los MG nuevos; 1-4 por video, sin forzarlo):**
+  1. **Ruta de misión**: la voz cuenta dónde empieza, por dónde se pasa y dónde acaba → **pantalla completa** 6-10 s, un lugar con
+     nombre por cada sitio que la voz nombra (la ruta llega cuando lo dice).
+  2. **«¿Dónde está?»**: un secreto, jefe, objeto o PNJ escondido que el espectador querría ir a buscar → **ventana** 3-5 s
+     (`ventana=True`, sobre el clip, a la derecha) con 1-2 lugares; con un solo lugar no hay ruta: su marcador late.
+  3. **Viajes del lore** (de dónde a dónde marchó un ejército, un exilio, una persecución) → pantalla completa.
+  NO va si el guion no da geografía, ni cuando el clip de ese beat ya enseña el sitio con su nombre. Mientras hay mapa, nada de
+  tarjetas a la derecha (`x=.72`) si es ventana; las pegatinas siguen (abajo a la izquierda) y se dibujan ENCIMA del mapa a pantalla.
+- **Mapas = imagen REAL del juego** (nunca dibujada por código ni pintada en Flow; si no hay mapa real decente, no hay mapa).
+  Guardar en `videos/<v>/mapas/<slug>.jpg|png` y la URL en `mapas/_fuentes.txt`. Fuentes probadas el 23-oct-2026:
+  | Juego | Fuente | Notas |
+  |---|---|---|
+  | WoW | `wow.zamimg.com/images/wow/maps/enus/original/<id zona>.jpg` (id de `wowhead.com/classic/zone=<id>`; Elwynn = 12) | 1022x668 (la cámara amplía ≤ 1,6x de más: se ve bien, es pintura). Las coordenadas de Wowhead de PNJ/misiones (x, y en %) ≈ fracción /100 en esa imagen; confirmar en la rejilla |
+  | Elden Ring | eldenring.fandom.com `File:ER Region Map <Región>.jpg` (4700 px) · mundo entero `ER Lands Between Map.jpg` (9644 px, con `recorte`) | Los `Map … MENU Knowledge` son el objeto «fragmento de mapa», NO el mapa |
+  | Skyrim | UESP (`en.uesp.net/w/api.php?action=query&list=allimages&aiprefix=SR-map-`): `SR-map-Skyrim.jpg` (papel del juego, 2048) · `SR-map-<Comarca>_Hold.jpg` | `SR-map-All_Holds.jpg` es el político a colores (no el del juego) |
+  | Gaming | la wiki del juego en Fandom (`list=search&srnamespace=6&srsearch=<juego> map`); Zelda OoT: `TheLegendOfZeldaOcarinaOfTime map.png` (1980x1440, ilustrado) | vgmaps.com tiene mapas cenitales hechos de capturas |
+- **Coordenadas**: `python nucleo/mg_mapa.py rejilla videos/<v>/mapas/<slug>.jpg` → `<slug>_rejilla.jpg` con rejilla cada 0,05
+  (MÍRALA y lee x, y de cada lugar). `puntos`: `(x, y)` = punto de paso sin nombre (hace que la ruta siga el camino del mapa:
+  pon 1-3 entre lugares para no cortar montañas ni mar) y `(x, y, "Nombre"[, "inicio"|"paso"|"meta"|"peligro"])`. Nombres
+  como los dice la voz (es-MX oficial: Villanorte, Villadorada, Páramos de Poniente, Necrolimbo, Carrera Blanca, Robledal…).
+- **Temas** (`TEMA_MAPA` en efectos.py): `wow` = rayas amarillas que avanzan + «!» de misión al inicio y «?» de entrega en la meta,
+  Georgia oro con contorno negro, título como el rótulo de zona · `er` = hilo dorado de la guía de gracia con chispas que corren,
+  marcadores de Sitio de gracia, Garamond sobre banda negra difusa · `tes` = puntos hueso con sombra, marcador de misión de Skyrim
+  (triángulo invertido que flota), Bahnschrift Condensed espaciada · `gaming` = bolitas miel que brotan con rebote y pines
+  (plataformas de Rare) · `zelda` = puntos dorados, triángulo dorado en la meta, Engravers MT. **Juego nuevo de Crónicas del
+  gaming = tema nuevo en `TEMAS`** con los colores/letra de la interfaz de ESE juego (marcadores en `_marcador`).
+- **Animación**: la cámara empieza cerca del primer lugar y se abre a medida que la ruta avanza (`ajuste` .30 = cuánto enseña la
+  ruta entera desde el principio), respira y deriva despacio (nada quieto); la ruta llega a cada lugar en su `marca`; el marcador
+  rebota, su nombre busca un hueco libre (fuera del título y de otros nombres; si no hay, no se pone); la meta y los `peligro`
+  emiten un anillo que late sin parar. Título arriba al centro (zona + `sub`, p. ej. «Misión: Desatado»); la ruta se encuadra
+  DEBAJO de él. Rendimiento: 0,1-0,2 s por cuadro; la imagen se carga en el primer cuadro (perezoso).
+- **Revisión**: `MP.hoja(fn, dur, marcas, "previews/mapa_<slug>.jpg")` antes de `fx`, y luego `fx hoja`. Cazar: lugar fuera del
+  sitio real (coordenada mal leída), nombre pegado al título, ruta que cruza mar/montaña (faltan puntos de paso), ruta tan larga
+  que no cabe (la cámara la sigue y los primeros lugares salen de cuadro: usar un mapa de región o partirla en dos).
+- Prueba del kit (23-oct-2026): Elwynn (wow), Necrolimbo de la Iglesia de Elleh al Castillo Morne (er), Helgen → Robledal →
+  Carrera Blanca (tes), Hyrule de OoT (zelda y gaming en ventana). Aún sin estrenar en un video.
+
 ## Crónicas del gaming con este motor (Nintendo/retro; primer video `banjo_tooie`, 19-oct-2026)
 - **El canal VUELVE a Nintendo/retro** (el usuario, 19-oct-2026; el terror CRT queda como especial) con la fórmula de Warcraft/Tamriel/
   Runa: historia + lore + lista de 10 secretos «QUE IGNORASTE», ~12-13 min, voz **Chatterbox `Sarcastica`** + `FONETICA` (Banjo →

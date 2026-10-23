@@ -59,6 +59,7 @@
 ## Cierre (regla del 12-oct-2026)
 - [x] subido y PROGRAMADO (7-nov), miniatura, registrado en canales/cronopapel.json y BITACORA; Facebook publicado
 - [x] 22-oct (pedido del usuario): bloque «📍 CÓMO LLEGAR (Google Maps)» con 15 links en la descripción (youtube.json `"maps"`),
-  aplicado en YouTube con `yt aplicar` (sigue programado 7-nov). Facebook: pendiente de confirmar (ya es público).
+  aplicado en YouTube con `yt aplicar` (sigue programado 7-nov). Facebook: el mismo bloque añadido a la publicación (fb 980974675052533)
+  tras el párrafo de lugares, con permiso del usuario (22-oct).
 - [x] HALLAZGOS en docs/estilo_boceto_guache_mapa.md § «historia_aguascalientes»
 - [x] `biblioteca catalogar` y `biblioteca sfx catalogar`

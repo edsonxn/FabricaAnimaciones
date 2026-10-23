@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: ninguno (cliente: grupo musical Los Duos) · se publica en Facebook/Instagram Reels + estados de WhatsApp
 - estilo: anuncio vertical con VIDEOS REALES del grupo + motion graphics por CÓDIGO (Mundo(Escena), como duo_promo) → docs/estilo_app_promo.md
-- etapa: v2 verificada — esperando revisión del usuario (sin Juchipila; 3 pausas de 9-10 s con el grupo cantando + 5 s de canto al final; 86 s)
-- siguiente: cambios que pida el usuario (`video --rehacer t0-t1` + `final`); al aprobar: `limpiar`, catalogar SFX, commit
+- etapa: CERRADO — aprobado por el usuario el 22-oct-2026 (v2, 86 s); segmentos limpiados; commit 1f9eaca
+- siguiente: nada (entregables en salida/: MASTER + WHATSAPP)
 
 ## Sesiones (plan de tramos · «continúa el video duos_promo» retoma aquí · protocolo docs/sesiones.md)
 - alias: Los Duos, anuncio de Los Duos, duos_promo

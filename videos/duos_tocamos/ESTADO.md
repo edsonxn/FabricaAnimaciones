@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
 - canal: ninguno (cliente: grupo musical Los Duos) · para mandar por WhatsApp/Facebook a quien pida videos de cómo tocan
 - estilo: mismo kit del anuncio `videos/duos_promo/` (pix.py + duos.py copiados): videos reales + marca negro/dorado → docs/estilo_app_promo.md § 7
-- etapa: verificado — esperando revisión del usuario (MASTER + WHATSAPP entregados el 22-oct)
-- siguiente: cambios que pida el usuario (`video --rehacer t0-t1` + `final`); al aprobar: `limpiar` y commit (junto con duos_promo)
+- etapa: CERRADO — aprobado por el usuario el 22-oct-2026; segmentos limpiados; commit 1f9eaca
+- siguiente: nada (entregables en salida/: MASTER + WHATSAPP)
 
 ## Sesiones («continúa el video duos_tocamos» retoma aquí)
 - alias: así tocamos, video sin narrador de Los Duos, duos_tocamos

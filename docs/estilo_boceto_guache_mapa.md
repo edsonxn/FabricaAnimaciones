@@ -170,3 +170,25 @@ Hecho en una sola sesión con subagentes (investigación, mapa, fotos, y la core
   INEGI: Aguascalientes tiene 11 municipios, no 12 (la investigación lo traía mal; se regeneró una frase).
 - Música: 3 tramos de la biblioteca (Bitácora: apozol/juchipila) + 3 Lyria; LYRIA en 6 tramos (máx. 175 s por tramo, también
   para los que salen de la biblioteca). SFX: 214/247 eventos con efectos propios (SFX_ELEVEN).
+
+### Variante VERTICAL con mapa (22-oct-2026, `videos/tequisquiapan/`, Short de 2:58 de un pueblo del Bajío)
+Kit de `historia_aguascalientes` + `FORMATO = "vertical"`; todo en UNA sesión (~3 h) con 2 subagentes (hechos+fotos; mapa). Copiar de ahí:
+- **Mapa**: rejilla de Querétaro MÁS ALTA que ancha, 700 px/° (FW×FH 1540×2546); `core.ZREF = 1.0` (= estado entero); umbral de
+  `escenas.fondo` `(z − 1,8)/3,7`; pueblo a z 5-7. **Deriva de `CamPath` a 0,055/0,035** (la de país movía ~200 px el encuadre).
+- **Composición** (`coreo_1.py`): fila de año y sellos en y ≈ 200 (`escenas.Y_FILA`), títulos en 300-500, FOTO real en la mitad de
+  arriba (pies en y 1190, `foto_peg.s_ancho(clave, 0,8, 0,33)`), pegatinas de Flow abajo (pies en y 1480), nada importante en x > 930
+  (botones de Shorts) ni en y > 1550; sello grande en (820, 600) a 220 px. Año sin fecha → `R.anio(t, 0)` = «antes de 1551».
+- **Cámara**: la última clave de cada escena en `fin − 0,25`, NUNCA `fin + 0,4` (pisa la primera de la siguiente y la cámara se va).
+- **≤ 180 s**: `DURACION` fija (178,5) y `pre/post` cortos por escena; el redondeo al compás con `DURACION = None` sumó 16 s.
+- 8 hojas de Flow bastan para 3 min (6 hojas de 8 + 2 ciclos); 19 fotos (1 cada ~9 s). Render 1080x1920 ≈ 6-9 min con 12 procesos.
+
+### REGLA del usuario (22-oct-2026, tras `historia_aguascalientes`): LUGARES CON GOOGLE MAPS + MÁS FOTOS REALES
+- **Descripción:** cada lugar de interés con su link de Google Maps en «📍 CÓMO LLEGAR (Google Maps)», uno por línea:
+  `• <nombre>: https://maps.google.com/?q=<nombre+municipio+estado>` (URL corta: la descripción de YouTube tope 5000 BYTES;
+  la lista va en `youtube.json` → `"maps"`). Script de referencia: el bloque de `videos/historia_aguascalientes/youtube.json`.
+  En Facebook, el mismo bloque tras el párrafo de lugares.
+- **En el video:** decirlo en la narración, en el tramo de lugares o en el cierre: «te dejo en la descripción cómo llegar a
+  cada lugar» (una frase, natural; en Shorts, en los últimos segundos).
+- **Más fotos reales:** subir la cantidad de fotos que enseñan el elemento/personaje/lugar del que se habla (Aguascalientes:
+  22 en 13 min, ~1,7/min → meta ≥ 3/min en largos y ≥ 1 cada ~8-10 s en Shorts); a cada persona, edificio, objeto o lugar
+  nombrado, su foto (Commons con licencia comprobada) además de la pegatina de Flow; varias fotos por lugar visitable.

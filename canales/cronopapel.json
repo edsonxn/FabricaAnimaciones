@@ -132,6 +132,18 @@
       "publicar": "2026-11-07T20:00:00Z",
       "formato": "historia_estado_12min_pegatinas_flow_voz_eleven",
       "nota": "primer Cronopapel con voz ElevenLabs (Alberto Rodríguez), SFX_ELEVEN, 13:05, curiosidades + lugares para visitar + fotos reales; también en Facebook «Historias Perdidas de México»"
+    },
+    {
+      "video": "tequisquiapan",
+      "id": "OfGVLuL490w",
+      "titulo": "La historia de Tequisquiapan en 3 minutos #Shorts",
+      "subido": "2026-10-22",
+      "visibilidad": "programado",
+      "publicar": "2026-10-24T16:00:00Z",
+      "short": true,
+      "formato": "short_vertical_3min_pueblo_bajio_pegatinas_flow_voz_eleven",
+      "prueba": "primer Short vertical de 3 min de un pueblo del Bajío (sorteo), con Google Maps en la descripción y la frase en la narración",
+      "nota": "mapa vertical de Querétaro 700 px/°, 8 hojas Flow, 19 fotos de Commons, música de la biblioteca (no_vuelve + la_sena; Lyria API sin saldo); .srt pendiente por cuota"
     }
   ],
   "ideas": {

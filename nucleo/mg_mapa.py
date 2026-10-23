@@ -27,6 +27,9 @@ Uso desde videos/<v>/efectos.py (FX `pantalla` si cubre el cuadro, `mg` si va en
          entra=.5, sale=.5, nombre="mapa elwynn")
   puntos = (x, y) de PASO (sin marcador; da forma a la ruta para que siga caminos) o (x, y, "Nombre"[, tipo]) con tipo
   "inicio" | "paso" (por defecto) | "meta" (el último con nombre es meta si no se dice) | "peligro" (jefe, zona letal).
+  FOTO (regla del usuario, 23-oct-2026, TODO mapa de cualquier canal): (x, y, "Nombre", tipo, foto) — la imagen REAL de lo que
+  la voz nombra en ese lugar (personaje, sitio u objeto que hay que juntar): ruta a .png/.jpg (pegatina) o "ico:<ícono de
+  Wowhead>"; sale junto al marcador con rebote cuando la ruta llega y se va al llegar al siguiente. Sin imagen real: None.
   x, y en fracción de la imagen (tras `recorte`). Para leerlas: `python nucleo/mg_mapa.py rejilla <imagen> [x0 y0 x1 y1]`.
   marcas: una por lugar CON nombre (la 1.ª = aparece el inicio; cada siguiente = la ruta llega a ese lugar). Sin marcas se
   reparten solas en la duración.
@@ -352,6 +355,13 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
     VW, VH = (int(ancho), int(alto or ancho * .62)) if ventana else (W, H)
 
     pts = [(float(p[0]) * im.width, float(p[1]) * im.height) for p in puntos]
+    # FOTO por lugar (regla del 23-oct-2026, todo mapa de cualquier canal): 5.º elemento = imagen real de lo que la voz nombra
+    # ahí (personaje, lugar u objeto): ruta a .png/.jpg o "ico:<ícono de Wowhead>" (mg_wow._foto: marco dorado, giro leve)
+    fotos = {}
+    for i, p in enumerate(puntos):
+        if len(p) > 4 and p[4]:
+            import mg_wow
+            fotos[i] = _bgra(mg_wow._foto(p[4], alto=int(280 * (.62 if modo == "ventana" else 1)), giro=(-4 if i % 2 else 4)))
     lug = [(i, p[2], (p[3] if len(p) > 3 else None)) for i, p in enumerate(puntos) if len(p) > 2 and p[2]]
     if not lug:
         raise ValueError("mg_mapa.mapa: hace falta al menos un punto con nombre")
@@ -493,6 +503,28 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
                 ex_, ey_, r = elegido
                 ocupados.append(r)
                 _pegar(f, et, ex_, ey_, _eo((dt - mk[j] - .12) / .3), 1.0)
+        # fotos: la del último lugar al que llegó la ruta (se va cuando llega al siguiente), en el primer hueco libre junto a él
+        for j in range(len(lug) - 1, -1, -1):
+            i = lug[j][0]
+            if i not in fotos or dt < mk[j]:
+                continue
+            a = _eo((dt - mk[j] - .25) / .3)
+            if j + 1 < len(lug) and dt > mk[j + 1]:
+                a *= 1 - _eo((dt - mk[j + 1]) / .35)
+            if a <= .01:
+                continue
+            x, y = a_vista(pts_b[i])
+            spr = fotos[i]
+            fh, fw = spr.shape[:2]
+            sep = 60 if not ventana else 36
+            for cx_, cy_ in ((x, y - sep - fh / 2), (x + sep + fw / 2, y), (x - sep - fw / 2, y), (x, y + sep + fh / 2),
+                             (x + sep + fw / 2, y - fh / 2), (x - sep - fw / 2, y - fh / 2)):
+                r = (cx_ - fw / 2, cy_ - fh / 2, cx_ + fw / 2, cy_ + fh / 2)
+                if r[0] >= 0 and r[2] <= VW and r[1] >= 0 and r[3] <= VH and not any(
+                        r[0] < q[2] and q[0] < r[2] and r[1] < q[3] and q[1] < r[3] for q in ocupados):
+                    break
+            ocupados.append(r)
+            _pegar(f, spr, cx_, cy_, a, .55 + .45 * _pop(dt - mk[j] - .25, .35))
         # título de la zona (arriba al centro)
         if titulo:
             e = _eo((dt - .25) / .6)

@@ -198,6 +198,7 @@ El usuario: «los mapas de Cronopapel se ven bien pero no se nota en qué parte 
 `videos/_muestras_mapa_cronopapel/salida/` (0 hoy · 1 fronteras a lápiz · 2 minimapa · 3 recorte de papel · 4 México entero ·
 5 región con estados · 6 combinada · 7 vertical). **Eligió: abrir con la 4, hacer zoom hasta la 6 y usar la 5 cuando la historia
 cruza varios estados.** Demo con el motor real: `salida/demo_apertura_estado_region.mp4` (`demo_kit.py`).
+- **Fotos en el mapa (regla global del 23-oct-2026):** cuando la voz nombra una ciudad, un personaje o un objeto mientras se ve el mapa, su FOTO REAL (≥ 3 fotos reales/min ya es regla del canal) sale junto a su punto y se va al pasar al siguiente; nunca inventada. Detalle: `docs/reglas_globales_completas.md` § «RIGOR».
 - **Módulo:** `nucleo/crono_ubicacion.py` (datos en `nucleo/datos/mx_ubicacion.npz`: 32 estados Natural Earth 10 m simplificados,
   tierra, ETOPO1 de México, vecindades y colores; se regenera con `python nucleo/crono_ubicacion.py`). Todo alineado con la cámara
   del kit (Mercator, px/° = z · `M.PXDEG_REF`), así que el zoom de México al estado es continuo.

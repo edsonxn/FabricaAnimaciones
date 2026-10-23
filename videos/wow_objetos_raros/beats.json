@@ -1,0 +1,762 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.367,
+  "tipo": "video",
+  "texto": "El veintidós de octubre, en el evento que cerró la beta de World of Warcraft Forever, los jefes soltaban Sulfuras y Trueno Furioso como si fueran dulces de piñata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.367,
+  "t1": 17.238,
+  "tipo": "video",
+  "texto": "En el World of Warcraft original, esas dos armas costaban meses de banda, y hubo jugadores que esperaron veinte años para terminar una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.238,
+  "t1": 25.817,
+  "tipo": "video",
+  "texto": "Forever sale el cuatro de noviembre, y con él vuelve la pregunta de qué objetos del Vanilla vamos a volver a perseguir. Forever es un Classic con historia propia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.817,
+  "t1": 34.811,
+  "tipo": "video",
+  "texto": "con nivel sesenta para siempre, y está ambientado justo antes del Núcleo de Magma. Así que aquí va una docena de objetos, los más raros de aquella época,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.811,
+  "t1": 45.43,
+  "tipo": "video",
+  "texto": "del más difícil de ver al que casi nadie tuvo nunca. Te voy a enseñar en el mapa del juego dónde se consiguen, y la ruta de las cadenas de misiones que los esconden.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.43,
+  "t1": 51.91,
+  "tipo": "video",
+  "texto": "Número doce, el Puño de Verigan, una maza de dos manos que un paladín podía ganarse a nivel veinte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.91,
+  "t1": 61.814,
+  "tipo": "video",
+  "texto": "Suena a premio menor, hasta que ves la ruta, porque empieza con Duthorian Rall en Ventormenta, que te manda a los Páramos de Poniente a defender la casa de Daphne Fontana de los Defias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.814,
+  "t1": 67.98,
+  "tipo": "video",
+  "texto": "Luego vas con Jordan Fontana, a las puertas de Forjaz, y él te pide los materiales para forjarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.98,
+  "t1": 78.028,
+  "tipo": "video",
+  "texto": "Madera de roble blanco de las Minas de la Muerte y un cargamento de mineral de Bailor Petramano, en Loch Modan. Además, su martillo perdido en el Castillo de Colmillo Oscuro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.028,
+  "t1": 87.895,
+  "tipo": "video",
+  "texto": "y una gema Kor de las Cavernas de Brazanegra. Esa gema hay que purificarla con Thundris Tejevientos, en Costa Oscura, o sea, en otro continente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 87.895,
+  "t1": 92.595,
+  "tipo": "video",
+  "texto": "Son tres mazmorras y dos continentes para un arma que dejas de usar a nivel treinta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 92.595,
+  "t1": 105.43,
+  "tipo": "video",
+  "texto": "Jordan Fontana la bautizó en honor de su amigo Bosch Verigan, un paladín enano ya muerto. La quitaron en el parche cuatro punto cero punto tres, y en Forever las tres mazmorras siguen ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.43,
+  "t1": 112.795,
+  "tipo": "video",
+  "texto": "Número once, las Riendas del sable de hielo de Cuna del Invierno, la montura que convirtió a la Alianza en la envidia de la Horda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.795,
+  "t1": 121.424,
+  "tipo": "video",
+  "texto": "Costaba cien de oro, que era lo de menos, porque Rivern Ventogélido solo te la vendía con reputación exaltada con los Entrenadores de Sableinvernal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.424,
+  "t1": 130.618,
+  "tipo": "video",
+  "texto": "Esa facción tiene exactamente dos miembros, y se sube a base de misiones contra osos, quimeras, gigantes y furbolgs en la nieve de Cuna del Invierno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.618,
+  "t1": 138.032,
+  "tipo": "video",
+  "texto": "La descripción del objeto dice que domar a esta raza requiere paciencia, fuerza y un buen suministro de ratones falsos y cordel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.032,
+  "t1": 144.992,
+  "tipo": "video",
+  "texto": "Y si no eras elfo de la noche, además tenías que ser exaltado con Darnassus, por si la paciencia no alcanzaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 144.992,
+  "t1": 151.845,
+  "tipo": "video",
+  "texto": "La Horda no tuvo nada parecido hasta el parche tres punto dos, y se quejó todo ese tiempo, con bastante razón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 151.845,
+  "t1": 162.225,
+  "tipo": "video",
+  "texto": "En el parche cuatro punto uno cambiaron el farmeo por veinte días de misiones diarias criando un cachorro, que es otra forma de paciencia. Cuna del Invierno vuelve en Forever como zona de nivel alto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.225,
+  "t1": 174.882,
+  "tipo": "video",
+  "texto": "y nadie ha dicho todavía si esta vez la Horda tendrá su propio felino. Número diez, Ferromazo, una maza que cae del Emperador Dagran Thaurissan en las Profundidades de Roca Negra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 174.882,
+  "t1": 180.422,
+  "tipo": "video",
+  "texto": "La comunidad calcula que sale entre un cero coma dieciocho y un cero coma cincuenta y nueve por ciento de las veces,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.422,
+  "t1": 190.205,
+  "tipo": "video",
+  "texto": "o sea, que puedes matar al emperador quinientas veces sin verla. Su efecto era delicioso, porque al acertar te daba dos ataques extra en el siguiente golpe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.205,
+  "t1": 196.954,
+  "tipo": "video",
+  "texto": "Y tiene historia, porque la forjó Franclorn Forjamaestro, y era la reliquia de la familia del Mariscal Windsor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.954,
+  "t1": 204.343,
+  "tipo": "video",
+  "texto": "Los Hierro Negro se la quitaron cuando lo capturaron, y Thaurissan la usó hasta el día de su muerte, que suele ser el día en que llegas tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 204.343,
+  "t1": 215.096,
+  "tipo": "video",
+  "texto": "Para llegar hasta el emperador hay que entrar a la Montaña Roca Negra por la Garganta de Fuego y cruzar la mazmorra entera, hasta el Palacio Imperial. Las Profundidades de Roca Negra están confirmadas en Forever,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.096,
+  "t1": 224.37,
+  "tipo": "video",
+  "texto": "así que esta podría caer desde la primera semana en el nivel máximo. Número nueve, el Corcel nefasto, la montura épica del brujo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.37,
+  "t1": 233.744,
+  "tipo": "video",
+  "texto": "que no se compraba, se arrancaba de otro plano. La cadena empieza en las Estepas Ardientes con Mor'zul Sangredoble, que te manda a Cuna del Invierno y luego a Frondavil,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 233.744,
+  "t1": 241.167,
+  "tipo": "video",
+  "texto": "a la Guarida de Jaedenar, donde te espera Lord Banehollow. Al final hay que reunir una Campana de Dethmoora, una Rueda de la Marcha",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.167,
+  "t1": 251.919,
+  "tipo": "video",
+  "texto": "Negra y una Vela del Juicio Final, y montar un ritual dentro de La Masacre. Para eso el brujo necesita a cuatro amigos dispuestos a jugarse la vida por un caballo que ellos nunca van a montar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 251.919,
+  "t1": 260.58,
+  "tipo": "video",
+  "texto": "El ritual invoca a un corcel xorothiano, el grupo entero lo mata, y su espíritu se queda contigo, lo cual dice bastante del contrato de esta montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 260.58,
+  "t1": 265.743,
+  "tipo": "video",
+  "texto": "Los mejores corceles son de Lord Hel'nurath, al que el juego llama el caballerizo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.743,
+  "t1": 276.586,
+  "tipo": "video",
+  "texto": "En el parche dos punto cuatro el corcel pasó al entrenador, y la cadena desapareció en cuatro punto cero punto uno. La Masacre está en Forever, así que el ritual tiene dónde volver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.586,
+  "t1": 285.43,
+  "tipo": "video",
+  "texto": "Y el paladín tenía su versión, el Destrero, con una cadena que terminaba dentro de Scholomance, redimiendo a un caballo caído.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 285.43,
+  "t1": 290.515,
+  "tipo": "video",
+  "texto": "Número ocho, Quel'Serrar, la espada que necesita que un dragón la caliente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 290.515,
+  "t1": 299.289,
+  "tipo": "video",
+  "texto": "Todo empieza con un libro, el Compendio de matar dragones de Nostro, que cae en La Masacre con una probabilidad tan baja que se consideraba imposible de farmear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.289,
+  "t1": 308.709,
+  "tipo": "video",
+  "texto": "Por suerte era ligado al equipar, así que el que tenía oro lo compraba en la subasta. Se lo llevas al Tradicionalista Lydros, en la biblioteca de La Masacre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.709,
+  "t1": 317.564,
+  "tipo": "video",
+  "texto": "Luego viene la parte que nadie más en el juego te pedía, que es dejar la hoja vieja en el suelo de la Guarida de Onyxia y esperar a que su Respiración profunda la caliente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.564,
+  "t1": 326.267,
+  "tipo": "video",
+  "texto": "La hoja se enfría con el tiempo, así que hay que matar a Onyxia rápido y clavarla en su cadáver. El libro, por cierto, es una burla de EverQuest,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.267,
+  "t1": 336.405,
+  "tipo": "video",
+  "texto": "porque recomienda esconderse bajo un puente y rotar entre cinco y quince clérigos. La quitaron en el parche tres punto dos punto dos, y aún hoy es raro ver una original.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 336.405,
+  "t1": 343.036,
+  "tipo": "video",
+  "texto": "Y aquí viene lo bueno, porque Onyxia es la única banda clásica confirmada en Forever, y abre el nueve de diciembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.036,
+  "t1": 350.38,
+  "tipo": "video",
+  "texto": "Así que, de toda esta lista, Quel'Serrar es la candidata más seria a volver en los primeros meses.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 350.38,
+  "t1": 360.86,
+  "tipo": "video",
+  "texto": "Número siete, Rhok'delar, el arco largo de los Guardianes ancianos, la misión épica del cazador. Empieza con una Hoja petrificada vieja que sale del Alijo del Señor del Fuego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.86,
+  "t1": 370.75,
+  "tipo": "video",
+  "texto": "el cofre del Mayordomo Executus en el Núcleo de Magma. Los Ancianos de Frondavil, Vartrus, Stoma y Hastat, te mandan a matar a cuatro demonios disfrazados,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.75,
+  "t1": 378.607,
+  "tipo": "video",
+  "texto": "y tienes que hacerlo solo y sin tu mascota. Simone la Discreta está en el Cráter de Un'Goro, Franklin el Amistoso en las Estepas Ardientes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.607,
+  "t1": 386.91,
+  "tipo": "video",
+  "texto": "Nelson the Nice en Silithus y Artorius el Afable en Cuna del Invierno. Son demonios con nombre de vecino amable, repartidos por dos continentes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.91,
+  "t1": 393.442,
+  "tipo": "video",
+  "texto": "y antes del parche uno punto ocho el arco y el bastón gemelo, Lok'delar, se podían convertir uno en otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.442,
+  "t1": 402.803,
+  "tipo": "video",
+  "texto": "Además pide tendones de dragón azul de Azuregos y de dragón negro de Onyxia. Y el arco, que está vivo, echa flores de vez en cuando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 402.803,
+  "t1": 413.268,
+  "tipo": "video",
+  "texto": "Número seis, las Riendas de destrero de la muerte, el caballo esquelético del Barón Osahendido, en Stratholme. En Classic la probabilidad era de un cero coma cero dos por ciento,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.268,
+  "t1": 422.802,
+  "tipo": "video",
+  "texto": "una montura cada cinco mil muertes del barón. Blizzard la subió al uno por ciento en el parche tres punto cero punto dos, lo cual ya fue un acto de caridad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.802,
+  "t1": 429.232,
+  "tipo": "video",
+  "texto": "Era el único caballo esquelético que podía montar la Alianza, porque no pedía la habilidad de equitación no-muerta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 429.232,
+  "t1": 441.409,
+  "tipo": "video",
+  "texto": "Y en el parche uno punto tres tuvieron que arreglarlo para que los tauren pudieran subirse. En el lore, el barón condenó a su caballo favorito a la no-muerte junto con él, que es la forma más egoísta de tener mascota.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 441.409,
+  "t1": 448.719,
+  "tipo": "video",
+  "texto": "Stratholme tiene dos entradas en las Tierras de la Peste del Este, y la que lleva al barón es la de servicio, la del lado no-muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 448.719,
+  "t1": 454.136,
+  "tipo": "video",
+  "texto": "Stratholme está confirmada en Forever, y alguien va a hacer esa mazmorra cinco mil veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 454.136,
+  "t1": 467.422,
+  "tipo": "video",
+  "texto": "Lo que nadie ha dicho es si la probabilidad vuelve al cero coma cero dos por ciento o se queda en el uno. Número cinco, Sulfuras, Mano de Ragnaros, el martillo que hay que fabricar con el arma del propio señor del fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 467.422,
+  "t1": 473.392,
+  "tipo": "video",
+  "texto": "Ragnaros suelta el Ojo de Sulfuras alrededor de un tres por ciento de las veces, y puede caer para cualquier clase,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.392,
+  "t1": 483.291,
+  "tipo": "video",
+  "texto": "aunque no sepa usar una maza. Para los planos hay que llevar un lingote de sulfuron a Lokhtos Tratoscuro, el mercader del Bar Tragapenas en las Profundidades de Roca Negra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 483.291,
+  "t1": 490.569,
+  "tipo": "video",
+  "texto": "El martillo pide ocho lingotes de sulfuron, veinte barras de hierro negro, cincuenta de arcanita y diez Sangres de la Montaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.569,
+  "t1": 498.147,
+  "tipo": "video",
+  "texto": "Hasta la Guarida Alanegra fue el arma cuerpo a cuerpo con más DPS del juego, y hasta el parche uno punto once, la de más daño bruto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.147,
+  "t1": 507.79,
+  "tipo": "video",
+  "texto": "Y en abril de dos mil veintiséis un jugador contó en Reddit que por fin la había terminado, después de unos veinte años. Número cuatro, la Crematoria corrupta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.79,
+  "t1": 516.662,
+  "tipo": "video",
+  "texto": "la espada que llevaba el Alto señor Mograine en Naxxramas, y que caía del cofre de los Cuatro Jinetes. Al equiparla, el espíritu de Mograine te susurra,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.662,
+  "t1": 525.565,
+  "tipo": "video",
+  "texto": "frase por frase, que alguna vez fue puro y que su hijo lo vio morir. Detrás se oye al Rey Exánime, y la última frase la dicen los dos a la vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.565,
+  "t1": 534.133,
+  "tipo": "video",
+  "texto": "Además te vuelve hostil con el Alba Argenta y amistoso con la Cruzada Escarlata. Y tenía un evento secreto, porque si entrabas con ella a la catedral",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 534.133,
+  "t1": 542.766,
+  "tipo": "video",
+  "texto": "del Monasterio Escarlata los cruzados se arrodillaban. Aparecía el fantasma de Alexandros Mograine, mataba a su propio hijo Renault y liberaba a Fairbanks,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 542.766,
+  "t1": 551.424,
+  "tipo": "video",
+  "texto": "que te contaba la traición. La Crematoria fue de los primeros legendarios que los jugadores sacaron de los archivos del juego, y como el Cuidador Alen la mencionaba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 551.424,
+  "t1": 562.93,
+  "tipo": "video",
+  "texto": "todo el mundo buscó una misión secreta para purificarla. Esa misión nunca existió, Blizzard lo desmintió, y desde Wrath of the Lich King la espada ya no se puede conseguir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 562.93,
+  "t1": 567.91,
+  "tipo": "video",
+  "texto": "Número tres, Trueno Furioso, espada bendita del Hijo del Viento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.91,
+  "t1": 576.501,
+  "tipo": "video",
+  "texto": "En el Núcleo de Magma, el Barón Geddon guarda la atadura izquierda y Garr la derecha, y la comunidad calcula que cada una cae un tres por ciento de las veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.501,
+  "t1": 584.682,
+  "tipo": "video",
+  "texto": "Dentro está encerrado el Príncipe Thunderaan, hijo de Al'Akir, al que Ragnaros derrotó, y cuya esencia quedó en un talismán partido en dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.682,
+  "t1": 593.486,
+  "tipo": "video",
+  "texto": "Con las dos ataduras vas a Silithus, con el Alto señor Demitrian, que te pide diez barras de elementium de la Guarida Alanegra y la Esencia del Señor del Fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.486,
+  "t1": 602.082,
+  "tipo": "video",
+  "texto": "Luego invoca a Thunderaan, la banda entera lo mata, y te llevas la espada. Llegó en el parche uno punto seis, el doce de julio de dos mil cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.082,
+  "t1": 614.058,
+  "tipo": "video",
+  "texto": "y en el lore su primer portador conocido fue un enano guerrero llamado Wray. Fue tan rara y tan presumida que su nombre se volvió un meme del chat de Los Baldíos, con la frase Did someone say Thunderfury.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 614.058,
+  "t1": 622.93,
+  "tipo": "video",
+  "texto": "Y en el cierre de la beta de Forever, Thunderaan apareció de paseo fuera de las ciudades, como si supiera algo que nosotros no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.93,
+  "t1": 628.127,
+  "tipo": "video",
+  "texto": "Número dos, Atiesh, gran báculo del Guardián, el bastón de Medivh.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.127,
+  "t1": 634.967,
+  "tipo": "video",
+  "texto": "Para armarlo hay que juntar cuarenta Astillas de Atiesh, que caen de todos los jefes de Naxxramas salvo Sapphiron y Kel'Thuzad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 634.967,
+  "t1": 645.006,
+  "tipo": "video",
+  "texto": "Con el armazón vas a Tanaris, con Anacronos, a la entrada de las Cavernas del Tiempo, y él te pide la cabeza del báculo de Kel'Thuzad y la base de C'Thun, en Ahn'Qiraj.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 645.006,
+  "t1": 652.694,
+  "tipo": "video",
+  "texto": "Después hay que purificarlo en Stratholme, donde aparece el demonio Atiesh con más de doscientos mil puntos de vida y dos espadas en las manos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.694,
+  "t1": 664.683,
+  "tipo": "video",
+  "texto": "Fue el primer legendario para lanzadores de hechizos de la historia del juego. Y abría un portal a la puerta de Karazhan cuando Karazhan todavía no existía, así que el bastón conocía el futuro mejor que los jugadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 664.683,
+  "t1": 671.853,
+  "tipo": "video",
+  "texto": "Y un personaje del juego moderno encontró treinta y nueve astillas en el almacén del vacío de un aventurero, al que le faltó una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 671.853,
+  "t1": 679.381,
+  "tipo": "video",
+  "texto": "Cuando por fin entrabas a Karazhan con él, el fantasma de Nielas Aran, el padre de Medivh, te preguntaba de dónde lo habías sacado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.381,
+  "t1": 687.721,
+  "tipo": "video",
+  "texto": "En Forever, Naxxramas ni siquiera está anunciada, así que de toda esta lista, el objeto que más lejos queda es Atiesh.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.721,
+  "t1": 698.203,
+  "tipo": "video",
+  "texto": "Número uno, el Cetro del Mar de Dunas, y lo que te daba, que era el Cristal resonador negro qiraji. Esta es la cadena más larga del Vanilla, y arranca en el Fuerte Cenarion,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.203,
+  "t1": 708.293,
+  "tipo": "video",
+  "texto": "en Silithus, con Baristolth del Mar de Dunas. Te pide la cabeza del Señor de linaje Capazote en la Guarida Alanegra, y te manda con Anacronos, en Tanaris.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 708.293,
+  "t1": 714.853,
+  "tipo": "video",
+  "texto": "El fragmento rojo sale de Nefarian. Para el azul hay que descifrar un libro de dragones con Narain Sabelotodo e invocar",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 714.853,
+  "t1": 723.643,
+  "tipo": "video",
+  "texto": "a un tiburón gigante llamado Maws, un guiño a la película Tiburón. El verde empieza con un fuego fatuo en Teldrassil y sigue con el Guardián Remulos en Claro de la Luna,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 723.643,
+  "t1": 732.562,
+  "tipo": "video",
+  "texto": "persiguiendo la corrupción de la Pesadilla por cuatro zonas hasta pelear con Eranikus. Con el cetro armado tocas el Gong del Escarabajo, en la puerta de Ahn'Qiraj,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.562,
+  "t1": 739.005,
+  "tipo": "video",
+  "texto": "y se abre la guerra para todo el reino. El primero en tocarlo, y los que tuvieran cetro durante la Guerra de las Diez Horas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 739.005,
+  "t1": 750.153,
+  "tipo": "video",
+  "texto": "se llevaban el título de Señor del Escarabajo y el tanque negro, y después nadie más. El primero del mundo fue Kalahad, en el reino Medivh, el veintidós de enero de dos mil seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 750.153,
+  "t1": 758.597,
+  "tipo": "video",
+  "texto": "Fue la primera montura legendaria del juego y la única hasta Dragonflight, y desde febrero de dos mil nueve los reinos nuevos nacían con la puerta ya abierta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 758.597,
+  "t1": 766.544,
+  "tipo": "video",
+  "texto": "En Classic de dos mil diecinueve hubo noventa Señores del Escarabajo en Flamegor y cuarenta y nueve en Fairbanks, en reinos con miles de jugadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 766.544,
+  "t1": 775.469,
+  "tipo": "video",
+  "texto": "Blizzard no ha dicho nada del evento de Ahn'Qiraj en Forever, pero si vuelve, el primer gong de cada servidor va a valer más que cualquier legendario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 775.469,
+  "t1": 784.789,
+  "tipo": "video",
+  "texto": "Y esa es la docena de objetos más raros que dejó el Vanilla. Forever todavía no confirma el Núcleo de Magma, ni Naxxramas, ni el evento de Ahn'Qiraj.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.789,
+  "t1": 792.897,
+  "tipo": "video",
+  "texto": "Lo que sí promete es una cadena legendaria nueva en la primavera de dos mil veintisiete, y una banda icónica rehecha en el verano, sin decir cuál.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 792.897,
+  "t1": 800.045,
+  "tipo": "video",
+  "texto": "Lo seguro es que Onyxia abre el nueve de diciembre, y que La Masacre, Stratholme y Roca Negra ya esperan desde el primer día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.045,
+  "t1": 810.616,
+  "tipo": "video",
+  "texto": "Dime en los comentarios cuál de todos vas a perseguir primero, y cuál crees que Blizzard va a dejar guardado para siempre. Al final, en el Vanilla los objetos más raros no se compraban ni se farmeaban,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 810.616,
+  "t1": 818.125,
+  "tipo": "video",
+  "texto": "se ganaban recorriendo el mapa entero, y por eso hoy nadie los ha olvidado.",
+  "clip_s": 8
+ }
+]

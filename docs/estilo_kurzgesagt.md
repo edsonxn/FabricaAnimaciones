@@ -9,7 +9,7 @@ _Primera parte nueva (1-oct-2026): receta del estilo isométrico de `videos/inde
 - `kz_iso.py` motor isométrico (`Iso`, `Mundo`, `caja`, `habitacion`, `isla`, techos, cúpulas, suelos); `kz_iso_arq.py`/`kz_iso_arq2.py` arquitectura colonial (casas, iglesia, haciendas, alhóndiga, palacio, catedral, mina, puente, acueducto, tiendas, cañón, barco); `kz_iso_obj.py`/`kz_iso_obj2.py` objetos (árboles, nopal, maguey, fuego, humo, banderas, carretas, estandarte guadalupano, lingotes, pergaminos, trincheras…); `kz_iso_int.py` interiores (cortinas, ventanas, escudos, chimenea, araña…); `kz_iso_deco.py` densidad automática (bosque, campos, hierba, aves, polvo, acequia).
 - `kz_gente_iso.py` personas (`persona(..., tipo=, accion=, cara=)`, tipos en `G.TIPOS`, `Multitud` con `camina/ronda/quieto`, caballos, burros, ovejas).
 - `kz_retrato.py` bustos grandes expresivos (`RT.QUIEN`: Hidalgo, Allende, Morelos, Iturbide, Calleja, Napoleón…). `kz_ui.py` etiquetas `llamada`/`globo`, `pop/repop/salida`, `fecha_lugar`, `contador`, `bokeh`, `haces_luz`, `ondas_sonoras`, `gradacion`, `pergamino_grande`.
-- `kz_mapa.py` (relieve ETOPO1 + países Natural Earth: `MAPA.base(cam, t, exag, rios_umbral)`, `proy`), `kz_mapa_dib.py` (sobre el mapa: `ciudad`, `ejercito`, `ruta`, `pais`, `mar_vivo`, `montes`, `medallon`, `insignia_batalla`, `etiqueta`; 37 lugares nombrados en `CIUDADES`, o una tupla (lon, lat)). Datos en `nucleo/datos/` (y `videos/<v>/datos/`).
+- `kz_mapa.py` (relieve ETOPO1 + países Natural Earth: `MAPA.base(cam, t, exag, rios_umbral)`, `proy`), `kz_mapa_dib.py` (sobre el mapa: `ciudad`, `ejercito`, `ruta`, `pais`, `mar_vivo`, `montes`, `medallon`, `insignia_batalla`, `etiqueta`; 37 lugares nombrados en `CIUDADES`, o una tupla (lon, lat)). Datos en `nucleo/datos/` (y `videos/<v>/datos/`). **Fotos en el mapa (regla global, 23-oct-2026):** cuando la voz nombra una ciudad/personaje/objeto sobre el mapa, su retrato o foto REAL (`kz_retrato_real`) sale junto a su punto y se va al pasar al siguiente.
 
 **Esqueleto de un video nuevo (copiar de `independencia_mx`):** `reg.py` (registro de tomas `@shot` y sonidos `snd`), `escenas.py` (ensambla las tomas y las transiciones; una clase `Mundo` para todas las escenas), `util.py` (anclas de la voz `T()`, claves de cámara `K/Klog`, fondos), `_prueba.py`/`_cuadro.py`/`_clip.py`/`_pal.py`/`run.sh`/`_esc.sh` (herramientas de revisión), y por escena `tNN.py` + mundos propios `mundos_X.py`. Orden de trabajo: guion y voz primero (`fab.py voz/seleccionar/tiempo`), luego una escena a la vez con revisión visual, al final música (Lyria), SFX (`snd`), mezcla, render con `--procs 8`, `final`, `verificar`.
 
@@ -51,6 +51,15 @@ _Primera parte nueva (1-oct-2026): receta del estilo isométrico de `videos/inde
 - `kz_pers2d`: máscara de **tastoán** rehecha (madera rosada, nariz larga, ojos saltones, dientes, cuernitos, cabellera de ixtle).
 - Revisión: `_humo.py <paso>` (en el video) recorre TODO el video renderizando un cuadro cada `paso` s y reporta excepciones, cuadros negros y cuadros lentos; correrlo antes de entregar.
 
+**Lecciones de `videos/apozol/` (11-oct-2026; 4 min, 7 escenas, kurzgesagt isométrico + mapa; todo escrito en una sesión):**
+- **Estructura que funciona para 4 min:** 7 escenas de 30-50 s, 4-9 tomas cada una (~40 tomas); cada escena con su propio mundo (`mundos_N.py`) y las tomas 2D de apoyo (infografía, medallón, línea de tiempo) entre dioramas isométricos.
+- **Línea de tiempo provisional para desarrollar sin voz:** `_tl_prov.py` (copiar de independencia_mx; 3,3 palabras/s para Dan, `unidad=4`, `BPM=108`) → las anclas `T(escena, "palabra", frase=i)` buscan por PREFIJO en las palabras del GUION (no en Whisper): cualquier palabra escrita en la frase sirve; `fab.py <v> tiempo` la sustituye.
+- **Isométrico sin «isla vacía»:** una isla de 600×600 u a zoom ≤ 1 deja 60 % de la pantalla morada; zoom 1,3-2,2 con la acción centrada y relleno automático (`DC.bosque` en el borde exterior, `O.agua` en una orilla, camino, tiendas/fogatas, rocas). Para ruinas o interiores: zoom 1,9-2,2 y utilería (alfombra, reloj, maceta, mapa de pared, haz de luz de la ventana).
+- **Interiores (`I.habitacion`):** las paredes de fondo son las caras `"yi"` (plano y mínimo, a a lo largo de +x) y `"xi"` (plano x mínimo); usar `"y"`/`"x"` coloca el objeto en el plano delantero, invisible o flotando.
+- **No inventar cifras en pantalla** (un contador «4 000» donde la narración dice «miles»): rótulo «MILES». Contadores de año solo entre hitos que el guion nombra.
+- `lz.trazo` no tiene `alfa=`: pasar color RGBA `(r, g, b, a)`. Medallones con busto `K2` → fondo en `capa=1`. Banderas/telas llevadas por figuras 2D: asta propia pegada al cuerpo (no rectángulos flotando sobre la cabeza).
+- `post_fundido_negro` solo al FINAL del video: entre escenas deja un cuadro negro (`_humo.py` lo marca).
+
 ### ERRORES A NO REPETIR (revisión de 166 cuadros del MASTER de Juchipila, 11-oct-2026; detalle con tiempos: `videos/juchipila/REVISION_MASTER.md`)
 El video se subió así por decisión del usuario, pero estos fallos NO deben llegar a un video nuevo. **Antes del render largo, repasa esta lista con la hoja de cuadros y márcala:**
 1. **Transición de «manchas» (`tinta`/máscara de ruido) con contorno negro:** se ve sucia y tapa texto. Usa barrido/iris/continua limpios; si usas `tinta`, sin contorno oscuro y SIN texto importante en pantalla durante la transición (reubica o retrasa la etiqueta).
@@ -68,6 +77,39 @@ El video se subió así por decisión del usuario, pero estos fallos NO deben ll
 
 ---
 # (Anterior) Estilo Kurzgesagt plano, plano secuencia, videos sin voz y portales
+
+## BAÚL ESPACIAL `nucleo/kz_espacio.py` (12-oct-2026, Kuriox; nació en `videos/dos_lunas/`)
+Piezas reutilizables para cualquier video de espacio (catálogo con firmas: `grep -n "def cuerpo_rocoso" docs/api_kz.md`):
+- `cuerpo_rocoso(tipo=luna|ceniza|rojiza|hielo|volcanica|mercurio|oscura, seed, rot, fase=)` lunas con mares y cráteres que giran con
+  foreshortening (`fase` 0..1 = fase lunar limpia); `roca` (asteroide/Fobos); `luna_rota(estira, rompe)` (límite de Roche: se estira, se
+  agrieta con lava y se parte); `planeta_gas(paleta)`; `anillo` (continuo, `mitad=0` antes del planeta y `mitad=1` después) y
+  `anillo_escombros` (rocas con Kepler); `lluvia_rocas`.
+- Órbitas y zonas: `orbita` (discontinua que corre o se traza), `pos_orbita`, `estela`, `esfera_hill`, `punto_lagrange`, `triangulo_equilibrio`.
+- Mareas: `tierra_marea(lunas=[(ang, fuerza)])` (el agua se deforma; con dos lunas a 90° los tirones semidiurnos se anulan, a 0°/180° se suman)
+  y `flechas_marea`. Diagrama: `flecha`, `regla`, `etiqueta`, `destello`, `nebulosa`, `fondo_espacio`.
+- Prueba visual: `videos/dos_lunas/_hoja_kit.py` (→ `previews/kit_hoja.jpg`). Convención: `ang_luz` apunta HACIA la luz; `seed` fija los detalles.
+- Lección: dos tonos de `esfera` (terminador doble) ensucian las fases lunares → por eso `fase=` dibuja el cuerpo a plena luz y sobrepone UN terminador elíptico.
+- (13-oct) `luna_dos_caras(rot, panqueque)` (cara visible lisa con mares / oculta con cráteres) y utilidades de trayectoria: `fantasma`
+  (cuerpo hipotético punteado), `marca_x`, `bez2` + `kepler(a, e, w, M)` (aproximación y elipse de un asteroide capturado), `trail(f, t)`
+  (estela; `f` debe valer para tiempos anteriores). Cámara de plano secuencia: `cam_claves` de `videos/dos_lunas/mundo_comun.py` (zoom log).
+- HALLAZGOS `dos_lunas` (13-oct): (1) un cierre «quieto» de > 10 s con solo animación ambiente (peces, reflejos) se nota estático:
+  mueve algo grande (la Luna sube y crece despacio, `luna_c`) además del ambiente. (2) Rótulos y tarjetas se comprueban contra el
+  rectángulo del foco (la tarjeta tapaba la Luna). (3) Mitad del cuadro vacía en un primer plano (Luna a la izquierda) → llénala con
+  un recuadro que explique (la otra cara, corteza, año del estudio) en vez de dejar cielo. (4) `fab.py <v> musica` era la PROCEDURAL
+  y pisaba la Lyria: desde el 13-oct, si guion.py tiene `LYRIA` con `tramos`, `musica` corre `nucleo/lyria_tramos.py todo` (sin `tramos`
+  avisa y no hace nada; la procedural solo con `--procedural`).
+
+- HALLAZGOS `oxigeno_5s` (14-oct, 5:52, plano secuencia en módulos; copiar de ahí):
+  (1) `mundo_comun.Sup(hx, hy, k, kappa, X0)` se dobla alrededor de X0 y `S.par(f)` da capas lejanas con paralaje (Sol 0,04,
+  nubes 0,3, cordillera 0,2, cerros 0,42, lomas 0,68, skyline 0,86). (2) Zoom paisaje <-> planeta (`camara.zoom_global`): k = rs/RW
+  con RW = 1e5; si solo se dobla el paisaje se ve un «bloque» con el corte del subsuelo (el usuario lo vio: «aparece ese cuadro de
+  tierra»): durante el zoom dibuja SOLO la piel de la superficie (`MP.dibujar(delgado=True)`: suelo de 70 u, mar de 70 u, montaña
+  rellena), encima un planeta liso + continente en forma de lente (`escenas._tapa_planeta`), y `P.tierra` solo con rs < 3200 y girada
+  un poco (con rs grande su casquete polar ocupa media pantalla). (3) Mundo interior por PORTAL: círculo que se abre en el pecho
+  (`mundo_cuerpo.portal`, el cuerpo se dibuja recortado con su fondo como polígono) y se cierra en la cabeza al salir.
+  (4) Poppins no trae «₂», «✓», «→», «⚠»: `ui_base.texto_q/pildora` dibujan O2/H2O con subíndice y `check`/`cruz`/`prohibido`
+  son vectores. (5) La visión de túnel se hace en el posproceso: los rótulos de ese momento van al centro (si no, se oscurecen).
+  (6) Contador «SEGUNDO n» + insignia «VERSIÓN A/B» ordenan un experimento mental largo. Hoja rápida: `_cuadro.py hoja t...`.
 
 ## Estilo Kurzgesagt y plano secuencia (ejemplo: `videos/sol_apagado/`, 1:00)
 - `ESTILO_VISUAL = "kurzgesagt"`: sin contornos (los trazos NEGRO no se dibujan; usa `plano.TINTA` si quieres

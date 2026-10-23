@@ -170,8 +170,12 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   nueva falla. Antes, un HTTP 429 / «Sign in to confirm you're not a bot» de YouTube (tras ~150 descargas en la sesión)
   dejó 4 beats sin clip. Ante un 429: esperar 30-60 min; no insistir.
 - **Miniatura de Tamriel = estilo PROPIO del canal** (no el de Warcraft): ver `videos/tes_misiones_daedricas/prompt_miniatura.md`.
+  **El personaje debe verse como el PNJ REAL del juego (render 3D de la imagen de la wiki), no como ilustración pintada**
+  (el usuario, 23-oct-2026, `tes_cosas_inutiles`: eligió la versión con Nazeem «real» sobre la pintada). En el prompt: «keep the
+  man from image 2 exactly as the in-game 3D character render, not painted».
 - **Lecciones de `tes_exploits_rotos` (17-oct-2026):**
-  - **FONÉTICA: `"Skyrim": "Eskaai rim"`** (no «Eskáirim»: en frase se comprime a «Skirim»; ver `docs/voz.md` § problemas, punto 10).
+  - **FONÉTICA: `"Skyrim": "Escairim"`** (el usuario, 23-oct-2026, `tes_cosas_inutiles`: «dice mal Skyrim, ponlo como escairim»;
+    sustituye a «Eskaai rim» del 17-oct). Si en alguna frase Whisper oye «Skirim», reescribir esa frase, no volver a la grafía vieja.
   - **PEGATINAS (el usuario, 17-oct-2026: «cuando hables de objetos, ropa o personajes busca una imagen de esa cosa y ponla como pegatina
     con animación»)**: `mg_tes.pegatina(ruta, titulo, tam)` — imagen REAL recortada con borde blanco y sombra (las fotos opacas, p. ej.
     retratos de PNJ, salen como tarjeta redondeada), entra con rebote y giro, se balancea y flota; píldora negra con el nombre. Helper
@@ -321,6 +325,21 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   que no cabe (la cámara la sigue y los primeros lugares salen de cuadro: usar un mapa de región o partirla en dos).
 - Prueba del kit (23-oct-2026): Elwynn (wow), Necrolimbo de la Iglesia de Elleh al Castillo Morne (er), Helgen → Robledal →
   Carrera Blanca (tes), Hyrule de OoT (zelda y gaming en ventana). Aún sin estrenar en un video.
+- **FOTOS EN EL MAPA (el usuario, 23-oct-2026, al ver `wow_objetos_raros`; REGLA para TODO mapa de CUALQUIER canal):** «cuando
+  salgan escenas de mapa, muestra también fotos del objeto, lugar o personaje del que se habla en el momento; por ejemplo, cuando
+  dice que tienes que juntar ciertos ítems, al mencionarlos mostrar una foto de él, para que el mapa se sienta aún más dinámico».
+  En cada lugar/paso con nombre va su foto como 5.º elemento del punto: `(x, y, "Nombre", tipo, foto)` en `mg_mapa.mapa` y
+  `(x, y, rótulo, sub, foto)` en `mg_wow.ruta`. foto = imagen REAL (pegatina de la wiki, ruta .png/.jpg) o `"ico:<ícono>"` (ícono
+  real de Wowhead para objetos: ingredientes, fragmentos, llaves). Sale junto al marcador con rebote cuando la voz lo nombra, en
+  el primer hueco libre (esquiva título y nombres), y se va cuando la ruta llega al siguiente; la del premio se queda. El rótulo
+  del paso dice el NOMBRE OFICIAL del objeto (tooltip es-MX: «Madera de roble de Piedrablanca», «Gema kor corrupta»). Sin imagen
+  real de ese paso, `None` (nunca una inventada; p. ej. los objetos del ritual del Corcel nefasto no existen como ítem).
+- **`mg_wow.ruta` (`wow_objetos_raros`, 23-oct-2026)**: variante de Warcraft hecha antes de `mg_mapa` — mapas de Wowhead con
+  rótulos en español (`.../classic/maps/eses/original/<zona>.jpg`; `-1` mundo, `-3` Reinos del Este, `-6` Kalimdor sin `eses`),
+  pines rojos numerados, línea punteada dorada con marcador que viaja, medallón del premio con halo (verde en la última marca),
+  rótulos de los 2 últimos pasos. Rutas entre continentes en el mapa del mundo: centro de cada zona en su mapa de continente →
+  mundo con `kal()`/`ek()` (ver `videos/wow_objetos_raros/efectos.py`). Mismo video: `forja` (receta de un legendario: los
+  ingredientes vuelan al medallón, que estalla en naranja) y `sorteo` (5 000 casillas de intentos y UNA dorada: 0,02 %).
 
 ## Crónicas del gaming con este motor (Nintendo/retro; primer video `banjo_tooie`, 19-oct-2026)
 - **El canal VUELVE a Nintendo/retro** (el usuario, 19-oct-2026; el terror CRT queda como especial) con la fórmula de Warcraft/Tamriel/
@@ -388,6 +407,13 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   larga tras punto, «Mohg» → «Moj/Mohawk» en Whisper): leer `voz/eval.json`, comprobar que la transcripción termina con las
   palabras del guion y fijar `CER_/GAP_/TAIL_MAX_POR_FRASE` a la mejor toma (`GAP_MAX_POR_FRASE` existe desde el 18-oct);
   regenerar solo los errores reales («restos» → «vestos», «rezaba» → «besaba»).
+- **CORRECCIÓN (22-oct-2026, comentarios del Miquella publicado): «Moj/Mojé» y «Mikeya» NO eran falsas alarmas.** El público
+  oyó «Miqueya y Mojé» y se burló («que la IA sea eterna», 3-4 comentarios de 32). **Causa:** Miquella se grabó el 18-oct y
+  Chatterbox NO aplicaba `FONETICA` hasta el 20-oct (docs/voz.md): leyó la grafía real. Regla: si Whisper escribe un NOMBRE PROPIO
+  distinto de la grafía del guion (`ll` → `y`, final `g` → `j/e`), es error real: regenerar o elegir la toma donde salga bien,
+  nunca subir el CER. Grafías: «Miquella» → «Mikuéla» (en Ranni Whisper ya oye «Mikuela», sí funciona); «Mohg» con «Mog» suelta
+  «Moj/Mojé» en Faraon: probar «Mog» a media frase seguido de vocal o «Móg» y comprobar en Whisper. «el Cornudo» es la traducción
+  oficial de *Hornsent*: hace gracia pero es correcto.
 - **Kit `nucleo/mg_er.py`** (interfaz de Elden Ring por código: Garamond `GARA.TTF`, dorado viejo, pergamino, paneles casi negros con
   filete dorado): `puesto` (banda negra a lo ancho estilo «ENEMIGO ABATIDO», `y=.80`), `descripcion` (ficha de objeto con icono real,
   *asteriscos* = dorado, el texto entra línea a línea; `x=.74, y=.30`), `mensaje` (mensaje del suelo en ámbar que se escribe solo),

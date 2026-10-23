@@ -1,65 +1,180 @@
 {
- "canal_id": "UCAn3gnOyX2Ec0BhO99o0wGA",
- "nombre": "Cuerpo en Neón",
- "estilo": "LÍNEA BLANCA + NEÓN (secuencia Flow con efectos): grabado en línea blanca sobre negro con UN elemento en neón amarillo que palpita (FX neon), palabras clave gigantes al centro; psicología y fisiología de las emociones explicadas; voz ElevenLabs Alejandro Durán + Lyria ambiental. Doc: docs/estilo_linea_neon.md · ejemplo: videos/freno_enojo/",
- "horario": {
-  "zona": "America/Mexico_City",
-  "hora_local": "14:00",
-  "utc": "20:00",
-  "dias": [
-   "miércoles",
-   "jueves",
-   "viernes"
-  ],
-  "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
-  "nota": "Canal nuevo (conectado el 17-oct-2026, 1 suscriptor): horario por defecto del protocolo hasta tener datos en Studio > Audiencia.",
-  "separacion_min_horas": 96,
-  "ciclo_dias": 5
- },
- "publicados": [
-  {
-   "video": "freno_enojo",
-   "id": "-zNE22UIjko",
-   "titulo": "Por Qué LLORAS Cuando Te Callas el Coraje (y Cómo Evitarlo en 5 Minutos)",
-   "visibilidad": "private",
-   "subido": "2026-10-17",
-   "formato": "línea blanca + neón, explicación fisiológica + 5 técnicas, 4:33, voz Alejandro Durán",
-   "programado": "2026-10-17T20:00:00Z"
-  }
- ],
- "ideas": {
-  "idioma": "es",
-  "region": "MX",
-  "busquedas": [
-   "qué pasa en tu cuerpo cuando te enojas",
-   "nervio vago explicado",
-   "por qué lloramos cuando nos enojamos",
-   "cómo calmar la ansiedad en segundos ciencia"
-  ],
-  "competidores": [],
-  "dias": 60,
-  "min_vistas": 1000,
-  "filtro": [
-   "cuerpo",
-   "cerebro",
-   "nervio",
-   "ansiedad",
-   "enojo",
-   "emocion",
-   "llorar",
-   "estrés",
-   "estres"
-  ]
- },
- "historial": [
-  {
-   "fecha": "2026-10-17",
-   "nota": "Canal conectado con `yt conectar` para el estilo línea blanca + neón; primer video candidato: freno_enojo (MASTER listo, sin subir)."
+  "canal_id": "UCAn3gnOyX2Ec0BhO99o0wGA",
+  "nombre": "Cuerpo en Neón",
+  "estilo": "LÍNEA BLANCA + NEÓN (secuencia Flow con efectos): grabado en línea blanca sobre negro con UN elemento en neón amarillo que palpita (FX neon), palabras clave gigantes al centro; psicología y fisiología de las emociones explicadas; voz ElevenLabs Alejandro Durán + Lyria ambiental. Doc: docs/estilo_linea_neon.md · ejemplo: videos/freno_enojo/",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": [
+      "miércoles",
+      "jueves",
+      "viernes"
+    ],
+    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+    "nota": "Canal nuevo (conectado el 17-oct-2026, 1 suscriptor): horario por defecto del protocolo hasta tener datos en Studio > Audiencia.",
+    "separacion_min_horas": 48,
+    "ciclo_dias": 2,
+    "historial": [
+      {
+        "fecha": "2026-10-17",
+        "ciclo_dias": 2,
+        "hora_local": "14:00",
+        "motivo": "separacion_min_horas 96 -> 48 para cuadrar con el ciclo de 2 días que fijó el usuario (el freno de youtube.py bloqueaba el hueco del 19-oct); hora 14:00 CDMX sin cambio: canal nuevo sin datos de audiencia."
+      }
+    ]
   },
-  {
-   "fecha": "2026-10-17",
-   "nota": "Canal reconvertido de «Cuentas Pendientes» (historias de herencias) a «Cuerpo en Neón» (@cuerpoenneon): 5 videos viejos a privado por API; nombre, handle, icono, banner, descripción y palabras clave puestos por el usuario en Studio; idioma es por API."
-  }
- ],
- "handle": "@cuerpoenneon"
+  "publicados": [
+    {
+      "video": "freno_enojo",
+      "id": "-zNE22UIjko",
+      "titulo": "¿Por Qué LLORAS Cuando Te Enojas?",
+      "visibilidad": "private",
+      "subido": "2026-10-17",
+      "formato": "línea blanca + neón, explicación fisiológica + 5 técnicas, 4:33, voz Alejandro Durán",
+      "programado": "2026-10-17T20:00:00Z",
+      "titulo_original": "Por Qué LLORAS Cuando Te Callas el Coraje (y Cómo Evitarlo en 5 Minutos)",
+      "prueba_titulo": "2026-10-20: título corto (búsqueda literal); comparar vistas/impresiones a 7 días"
+    },
+    {
+      "video": "agotado_cortisol",
+      "id": "fLmNcI235FU",
+      "titulo": "¿Cansado Pero No Puedes Dormir?",
+      "visibilidad": "private",
+      "subido": "2026-10-17",
+      "formato": "línea blanca + neón, explicación fisiológica + 5 técnicas, 5:11, voz Alejandro Durán, 7 clips + 59 imágenes",
+      "prueba": "tema con señal fuera en 4 canales (cansado pero la mente no se apaga / cortisol)",
+      "programado": "2026-10-19T20:00:00Z",
+      "titulo_original": "Por Qué Estás AGOTADO Pero Tu Mente No Se Apaga de Noche (y Cómo Apagarla en 5 Minutos)",
+      "prueba_titulo": "2026-10-20: título corto (búsqueda literal); comparar vistas/impresiones a 7 días"
+    },
+    {
+      "video": "estres_cuerpo",
+      "id": "rdzUobc1UAM",
+      "titulo": "5 Cosas Que el ESTRÉS Le Hace a Tu Cuerpo Sin Que Te Des Cuenta (y Cómo Frenar Cada Una)",
+      "visibilidad": "private",
+      "subido": "2026-10-20",
+      "formato": "línea blanca + neón, recopilatorio de 5 zonas del cuerpo con una técnica cada una, 13:22, voz Alejandro Durán, 7 clips + 145 imágenes",
+      "prueba": "variable nueva pedida por el usuario: video LARGO (~13 min) que junta varios temas, frente a los de ~5 min de una emoción",
+      "programado": "2026-10-21T20:02:00Z"
+    },
+    {
+      "video": "short_suspiro",
+      "id": "b6ekhWhnnFQ",
+      "titulo": "Si lloras cuando te enojas, haz esto #Shorts",
+      "visibilidad": "public",
+      "subido": "2026-10-21",
+      "formato": "Short vertical derivado de `freno_enojo`: una técnica (suspiro fisiológico), 0:52, imágenes del largo reencuadradas 9:16, voz Alejandro Durán (tomas del largo + gancho/cierre nuevos)",
+      "publicado": "2026-10-21",
+      "nota": "estaba programado para 2026-10-23T01:00:00Z; el usuario lo publicó a mano el 21-oct-2026",
+      "short": true,
+      "largo": "freno_enojo"
+    },
+    {
+      "video": "short_dientes",
+      "id": "za1GvddkcL8",
+      "titulo": "¿Tus dientes se están tocando ahora mismo? #Shorts",
+      "visibilidad": "private",
+      "subido": "2026-10-21",
+      "formato": "Short vertical derivado de `estres_cuerpo`: una técnica (posición de descanso de la quijada), 0:60, imágenes del largo reencuadradas 9:16, voz Alejandro Durán (tomas del largo + gancho/cierre nuevos)",
+      "programado": "2026-10-25T01:00:00Z",
+      "short": true,
+      "largo": "estres_cuerpo"
+    },
+    {
+      "video": "short_pendientes",
+      "id": "NQAT0Sb-krM",
+      "titulo": "¿Tu mente no se apaga de noche? Haz esto #Shorts",
+      "visibilidad": "private",
+      "subido": "2026-10-21",
+      "formato": "Short vertical derivado de `agotado_cortisol`: una técnica (lista de pendientes en papel, Baylor 2018), 0:59, imágenes del largo reencuadradas 9:16, voz Alejandro Durán (tomas del largo + gancho/cierre nuevos)",
+      "programado": "2026-10-27T01:00:00Z",
+      "short": true,
+      "largo": "agotado_cortisol"
+    },
+    {
+      "video": "nervio_vago",
+      "id": "NzMhKv8pl6w",
+      "titulo": "¿Qué Es el NERVIO VAGO y Cómo Activarlo?",
+      "visibilidad": "private",
+      "subido": "2026-10-21",
+      "programado": "2026-10-23T20:02:00Z",
+      "formato": "línea blanca + neón, tema monográfico (nervio vago: anatomía, historia de Loewi, tono vagal, fallas, reflejo inflamatorio, mitos) + 5 técnicas, 9:53, voz Alejandro Durán, 7 clips + 113 imágenes",
+      "prueba": "duración MEDIA (~10 min) de un solo tema con señal fuera (Rebelde-Mente ×4,43), frente a ~5 min y al recopilatorio de 13 min"
+    },
+    {
+      "video": "duelo_cuerpo",
+      "id": "Mb8umuTXxf4",
+      "titulo": "¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas?",
+      "visibilidad": "private",
+      "subido": "2026-10-23",
+      "formato": "línea blanca + neón, fórmula nueva «¿Qué le pasa a tu CUERPO cuando…?», escalera de tiempo + 3 cosas para hoy, 5:52, voz Alejandro Durán, 9 clips + 65 imágenes",
+      "prueba": "fórmula nueva del 22-oct (título-situación, 4-6 min, Short por largo) frente a los títulos-concepto de 10-13 min",
+      "programado": "2026-10-25T20:05:00Z",
+      "miniatura_b": "salida/miniatura_b.jpg"
+    },
+    {
+      "video": "duelo_cuerpo_short",
+      "id": "xw4uMsggHa4",
+      "titulo": "¿Se puede romper un corazón de verdad? #Shorts",
+      "visibilidad": "private",
+      "subido": "2026-10-23",
+      "formato": "Short vertical derivado de `duelo_cuerpo`: síndrome del corazón roto (takotsubo), 0:53, imágenes del largo reencuadradas 9:16, 4 tomas de voz del largo + gancho/cierre nuevos",
+      "programado": "2026-10-29T01:05:00Z",
+      "short": true,
+      "largo": "duelo_cuerpo"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "qué pasa en tu cuerpo cuando te enojas",
+      "nervio vago explicado",
+      "por qué lloramos cuando nos enojamos",
+      "cómo calmar la ansiedad en segundos ciencia",
+      "qué le pasa a tu cerebro cuando tienes miedo",
+      "por qué sentimos vergüenza ciencia",
+      "qué hace el cortisol en tu cuerpo",
+      "por qué te tiembla la voz cuando estás nervioso",
+      "qué pasa en tu cuerpo cuando estás triste",
+      "ataque de pánico qué pasa en el cuerpo"
+    ],
+    "competidores": [],
+    "dias": 120,
+    "min_vistas": 500,
+    "filtro": [
+      "cuerpo",
+      "cerebro",
+      "nervio",
+      "ansiedad",
+      "enojo",
+      "emocion",
+      "llorar",
+      "estrés",
+      "estres",
+      "miedo",
+      "vergüenza",
+      "verguenza",
+      "cortisol",
+      "pánico",
+      "panico",
+      "triste",
+      "nervios",
+      "celos",
+      "ansioso",
+      "dopamina"
+    ]
+  },
+  "historial": [
+    {
+      "fecha": "2026-10-17",
+      "nota": "Canal conectado con `yt conectar` para el estilo línea blanca + neón; primer video candidato: freno_enojo (MASTER listo, sin subir)."
+    },
+    {
+      "fecha": "2026-10-17",
+      "nota": "Canal reconvertido de «Cuentas Pendientes» (historias de herencias) a «Cuerpo en Neón» (@cuerpoenneon): 5 videos viejos a privado por API; nombre, handle, icono, banner, descripción y palabras clave puestos por el usuario en Studio; idioma es por API."
+    }
+  ],
+  "handle": "@cuerpoenneon"
 }

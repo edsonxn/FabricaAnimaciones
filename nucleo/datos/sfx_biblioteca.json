@@ -5685,7 +5685,187 @@
    "prompt": "",
    "dur": 0.8,
    "canal": "cronopapel"
+  },
+  "duelo_cuerpo__ambulancia": {
+   "id": "duelo_cuerpo__ambulancia",
+   "video": "duelo_cuerpo",
+   "nombre": "ambulancia",
+   "archivo": "duelo_cuerpo__ambulancia.mp3",
+   "md5": "73d993afc750d2fffca9939c4b46695d",
+   "prompt": "Ambulance siren passing quickly down a town street at night, doppler fade",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__campana": {
+   "id": "duelo_cuerpo__campana",
+   "video": "duelo_cuerpo",
+   "nombre": "campana",
+   "archivo": "duelo_cuerpo__campana.mp3",
+   "md5": "86fcd3df28d11cb457cb6fc9653038da",
+   "prompt": "Single soft distant church bell toll at dusk, long gentle decay",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__engranes": {
+   "id": "duelo_cuerpo__engranes",
+   "video": "duelo_cuerpo",
+   "nombre": "engranes",
+   "archivo": "duelo_cuerpo__engranes.mp3",
+   "md5": "ab2f6b478abddd073cb15c0d97a75f93",
+   "prompt": "Old iron gears grinding slowly and jamming with a heavy metallic clunk",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__faro": {
+   "id": "duelo_cuerpo__faro",
+   "video": "duelo_cuerpo",
+   "nombre": "faro",
+   "archivo": "duelo_cuerpo__faro.mp3",
+   "md5": "fd3c2e36843e24301f06e89cb26096ac",
+   "prompt": "Lighthouse at night, slow sea swell and wind, a low foghorn far away",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__latido_susto": {
+   "id": "duelo_cuerpo__latido_susto",
+   "video": "duelo_cuerpo",
+   "nombre": "latido_susto",
+   "archivo": "duelo_cuerpo__latido_susto.mp3",
+   "md5": "ff78dbbd1543534dabb3090af08fa106",
+   "prompt": "Heartbeat suddenly speeding up, deep muffled chest thumps getting faster and louder",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__mercado": {
+   "id": "duelo_cuerpo__mercado",
+   "video": "duelo_cuerpo",
+   "nombre": "mercado",
+   "archivo": "duelo_cuerpo__mercado.mp3",
+   "md5": "075b7f74a3c46a3fe2107331623ecc23",
+   "prompt": "Busy Mexican street market crowd murmur, vendors calling softly, footsteps on stone",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__neon_tubo": {
+   "id": "duelo_cuerpo__neon_tubo",
+   "video": "duelo_cuerpo",
+   "nombre": "neon_tubo",
+   "archivo": "duelo_cuerpo__neon_tubo.mp3",
+   "md5": "6bdc04addcbf1c5763eb7aa9b937612b",
+   "prompt": "Old neon sign flickering on with a soft electric tick and a warm low buzz",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__niebla": {
+   "id": "duelo_cuerpo__niebla",
+   "video": "duelo_cuerpo",
+   "nombre": "niebla",
+   "archivo": "duelo_cuerpo__niebla.mp3",
+   "md5": "11b9b7b9f28f40a1e7211c693ea48935",
+   "prompt": "Soft airy wind drifting through thick fog, muffled distant town sounds",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__noche": {
+   "id": "duelo_cuerpo__noche",
+   "video": "duelo_cuerpo",
+   "nombre": "noche",
+   "archivo": "duelo_cuerpo__noche.mp3",
+   "md5": "5789342b903d860f7321a8a92565378f",
+   "prompt": "Quiet bedroom at night, soft wall clock ticking, a distant dog barking once",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__ola": {
+   "id": "duelo_cuerpo__ola",
+   "video": "duelo_cuerpo",
+   "nombre": "ola",
+   "archivo": "duelo_cuerpo__ola.mp3",
+   "md5": "50514c87fec4a1ac4778a2bc4017272c",
+   "prompt": "Big ocean wave rising and crashing on rocks, deep roar and foam hiss",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__parque": {
+   "id": "duelo_cuerpo__parque",
+   "video": "duelo_cuerpo",
+   "nombre": "parque",
+   "archivo": "duelo_cuerpo__parque.mp3",
+   "md5": "39565902ab5b590d2e834c2c5927beed",
+   "prompt": "Sunny morning park with birds singing and a small fountain splashing",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__platos": {
+   "id": "duelo_cuerpo__platos",
+   "video": "duelo_cuerpo",
+   "nombre": "platos",
+   "archivo": "duelo_cuerpo__platos.mp3",
+   "md5": "c713b76ff2ae0961435f0c374db4421c",
+   "prompt": "Two ceramic plates set gently on a wooden table with a soft cutlery clink",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__puerto": {
+   "id": "duelo_cuerpo__puerto",
+   "video": "duelo_cuerpo",
+   "nombre": "puerto",
+   "archivo": "duelo_cuerpo__puerto.mp3",
+   "md5": "2d88885aab6b17a2370002643a58f2b1",
+   "prompt": "Small fishing harbor at dawn, water lapping on wooden boats, creaking ropes, distant gulls",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__risas_mesa": {
+   "id": "duelo_cuerpo__risas_mesa",
+   "video": "duelo_cuerpo",
+   "nombre": "risas_mesa",
+   "archivo": "duelo_cuerpo__risas_mesa.mp3",
+   "md5": "d134cffa5e346314a8e6c9a702712f0a",
+   "prompt": "Older women laughing warmly together around a kitchen table, coffee cups clinking",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__sopa": {
+   "id": "duelo_cuerpo__sopa",
+   "video": "duelo_cuerpo",
+   "nombre": "sopa",
+   "archivo": "duelo_cuerpo__sopa.mp3",
+   "md5": "8a2402ecc7e6cf892a5d4463c8ce1cf2",
+   "prompt": "Spoon stirring a bowl of hot soup on a table, soft clink, quiet kitchen",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__telefono": {
+   "id": "duelo_cuerpo__telefono",
+   "video": "duelo_cuerpo",
+   "nombre": "telefono",
+   "archivo": "duelo_cuerpo__telefono.mp3",
+   "md5": "82bd321bdfcc6129d00ee7fe8f11c000",
+   "prompt": "Old landline telephone ringing twice in a quiet kitchen at night, then the receiver lifted with a click",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__titulo": {
+   "id": "duelo_cuerpo__titulo",
+   "video": "duelo_cuerpo",
+   "nombre": "titulo",
+   "archivo": "duelo_cuerpo__titulo.mp3",
+   "md5": "1cd29469ac08a054cdb87a2e16b71c63",
+   "prompt": "Deep soft low piano boom with a breathy rising swell, gentle, for a chapter title",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "duelo_cuerpo__velas": {
+   "id": "duelo_cuerpo__velas",
+   "video": "duelo_cuerpo",
+   "nombre": "velas",
+   "archivo": "duelo_cuerpo__velas.mp3",
+   "md5": "940b609dc3b60eff2b65aea516abf459",
+   "prompt": "A match struck and candles lit one after another, soft crackle of flames in a quiet room",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
   }
  },
- "actualizado": "2026-10-22 21:07"
+ "actualizado": "2026-10-23 07:34"
 }

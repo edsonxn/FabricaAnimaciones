@@ -2348,7 +2348,14 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "duelo_cuerpo",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "christa_pike__lyria_2": {
@@ -2415,7 +2422,14 @@
     "dinamica": 0.9
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "duelo_cuerpo",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "christa_pike__lyria_tramo2": {
@@ -11107,7 +11121,14 @@
     "dinamica": 1.0
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "duelo_cuerpo_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "la_sena__lyria_tramo3": {
@@ -22385,6 +22406,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -24853,7 +24875,14 @@
     "dinamica": 0.72
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "duelo_cuerpo",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "zelda_oot__lyria_tramo6": {
@@ -28260,7 +28289,823 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-22"
+  },
+  "duelo_cuerpo_short__lyria_tramo1": {
+   "id": "duelo_cuerpo_short__lyria_tramo1",
+   "video": "duelo_cuerpo_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\duelo_cuerpo_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "duelo_cuerpo_short__lyria_tramo1.mp3",
+   "md5": "bc562b2e1812f5acf3a1be40f6047a7d",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Se puede romper un corazón de verdad?",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "corazon",
+    "cierre"
+   ],
+   "estilo": "Tender, intimate ambient score for a science explainer drawn in white chalk lines on black with glowing neon: soft felt piano, warm cello, slow pads, a faint heartbeat pulse. Instrumental only, no vocals, never loud.",
+   "prompt": "BIBLIOTECA: la_sena__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nIntimate, heartbreaking score for a short animated film about two brothers in a poor small town in a dry canyon: a gentle whistled four-note motif, warm nylon-string folk requinto guitar, soft felt piano, later a small string ensemble and cello. Tender and nostalgic, never melodramatic; lots of space so dialogue and narration sit on top. No drum kit, no pop, no electronic beats. Total length: exactly 0:34 (34 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. A rainy night: almost silence, only a very soft low drone for the first twenty seconds, then a fragile piano and the whistled motif on guitar at dawn, a worried farewell, ending on a held note.\n\n[0:00 - 0:34] Section 1: Intensity 2/10. Rainy night then dawn: near silence (only room tone) for the first seconds, then a fragile piano and the motif on guitar, worried farewell.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 34,
+     "intensidad": 2,
+     "desc": "Rainy night then dawn: near silence (only room tone) for the first seconds, then a fragile piano and the motif on guitar, worried farewell."
+    }
+   ],
+   "intensidad": [
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cuerdas",
+     "drone",
+     "guitarra",
+     "piano",
+     "silbido"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "nostálgico",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 55.88,
+    "rms_db": -14.9,
+    "tempo": 61.5,
+    "brillo_hz": 787,
+    "energia": [
+     0.74,
+     0.66,
+     0.44,
+     0.84,
+     0.57,
+     1.0,
+     0.65,
+     0.65,
+     0.95,
+     0.37,
+     0.59,
+     0.22
+    ],
+    "huecos": [],
+    "dinamica": 0.78
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "duelo_cuerpo__lyria_tramo2": {
+   "id": "duelo_cuerpo__lyria_tramo2",
+   "video": "duelo_cuerpo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\duelo_cuerpo\\audio\\lyria_tramo2.mp3",
+   "archivo": "duelo_cuerpo__lyria_tramo2.mp3",
+   "md5": "e77c26ca293c1d28d402508abf65f56b",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas?",
+   "tramo": 2,
+   "escenas": [
+    "semanas",
+    "meses"
+   ],
+   "estilo": "Tender, intimate science-explainer score for a film drawn in white chalk lines on black with glowing yellow neon: soft felt piano, warm cello, slow analog pads, a faint heartbeat-like low pulse. Instrumental only, no vocals, never loud, always leaves space for a deep narrator voice.",
+   "prompt": "BIBLIOTECA: christa_pike__lyria_2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nSomber cinematic true-crime documentary score in the style of a serious modern investigative documentary: slow low strings, sparse felt piano, a deep soft sub-bass pulse like a heartbeat, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, no vocals, never triumphant, never sentimental.\ngancho: Hook: a sparse low drone, a single slow heartbeat pulse, thin high string harmonics building dread, a held swell and a sudden silence at the end.\nquien: Quiet, bleak and human: solitary felt piano, soft low strings, cold air, a sense of a childhood lost.\ncolleen: Tender and sad: a gentle piano motif alone, warm sustained strings, a small hope that fades. Very soft.\ncrimen: Dark and tense but restrained: low pulsing bass, dissonant strings held long, no melody, dread without gore, a heavy hit at the end.\njuicio: Cold procedural weight: steady low pulse, sparse piano notes like a ticking courtroom clock, sober and factual.\ncorredor: Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still.\ndebate: Two opposing weights: two alternating low string phrases, unresolved, questioning, moral gravity, building slightly.\ncamino: Countdown tension: a quickening quiet pulse, ticking, rising strings, inevitability building step by step.\nnoche: Peak of tension and dread, restrained: very slow heartbeat bass, long cold string clusters rising, silences, a final unresolved cluster. No release.\ndespues: Aftermath: shocked emptiness, soft low drone, sparse piano, slow unsettled resolve, quietly accusatory.\nhistorial: Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural, questions accumulating, a sense of a system under scrutiny.\nprecedente: Historical and thoughtful: old-world solemn strings, slow piano, a feeling of history repeating, grave.\ncierre: Ethereal pads and a slow solitary piano, the question remains unanswered, quiet and haunting, final single note, fades to silence.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "frío",
+     "misterio",
+     "nostálgico",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "terror",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 106.33,
+    "rms_db": -16.2,
+    "tempo": 80.7,
+    "brillo_hz": 716,
+    "energia": [
+     0.54,
+     0.55,
+     0.61,
+     0.73,
+     0.73,
+     0.64,
+     0.69,
+     0.67,
+     0.95,
+     0.97,
+     1.0,
+     0.28
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "duelo_cuerpo__lyria_tramo3": {
+   "id": "duelo_cuerpo__lyria_tramo3",
+   "video": "duelo_cuerpo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\duelo_cuerpo\\audio\\lyria_tramo3.mp3",
+   "archivo": "duelo_cuerpo__lyria_tramo3.mp3",
+   "md5": "e344673fbf060a0727b5a75500d6a0ca",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas?",
+   "tramo": 3,
+   "escenas": [
+    "anio",
+    "hoy",
+    "cierre"
+   ],
+   "estilo": "Tender, intimate science-explainer score for a film drawn in white chalk lines on black with glowing yellow neon: soft felt piano, warm cello, slow analog pads, a faint heartbeat-like low pulse. Instrumental only, no vocals, never loud, always leaves space for a deep narrator voice.",
+   "prompt": "BIBLIOTECA: zelda_oot__lyria_tramo8 (desde 0.0 s) — reutilizada el 2026-10-22\n\nLate-90s fantasy adventure soundtrack: ocarina-like flute, harp arpeggios, warm strings, soft hand percussion, light choir pads, instrumental only, no vocals, gentle and unobtrusive under narration. Total length: exactly 1:53 (113 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin on a suspended note, rise to an epic emotional peak with choir, then settle into a warm nostalgic reprise and fade out to silence at the end.\n\n[0:00 - 1:13] Section 1: Intensity 7/10. epic and emotional, full orchestra and choir rising, three paths of fate, majestic\n[1:13 - 1:53] Section 2: Intensity 4/10. warm nostalgic reprise of the flute theme, gentle harp, fading out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 73,
+     "intensidad": 7,
+     "desc": "epic and emotional, full orchestra and choir rising, three paths of fate, majestic"
+    },
+    {
+     "t0": 73,
+     "t1": 113,
+     "intensidad": 4,
+     "desc": "warm nostalgic reprise of the flute theme, gentle harp, fading out"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "cello",
+     "coro",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "percusión",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "emotivo",
+     "nostálgico",
+     "tierno",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 122.04,
+    "rms_db": -15.3,
+    "tempo": 80.7,
+    "brillo_hz": 1162,
+    "energia": [
+     0.34,
+     0.5,
+     0.48,
+     0.8,
+     1.0,
+     0.93,
+     0.95,
+     0.85,
+     0.88,
+     0.85,
+     0.7,
+     0.28
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "duelo_cuerpo__lyria_tramo1": {
+   "id": "duelo_cuerpo__lyria_tramo1",
+   "video": "duelo_cuerpo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\duelo_cuerpo\\audio\\lyria_tramo1.mp3",
+   "archivo": "duelo_cuerpo__lyria_tramo1.mp3",
+   "md5": "ba7dce3ef9146ce627d68abdc5811cbf",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas?",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "minutos",
+    "horas"
+   ],
+   "estilo": "Tender, intimate science-explainer score for a film drawn in white chalk lines on black with glowing yellow neon: soft felt piano, warm cello, slow analog pads, a faint heartbeat-like low pulse. Instrumental only, no vocals, never loud, always leaves space for a deep narrator voice.",
+   "prompt": "BIBLIOTECA: christa_pike__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nSomber cinematic true-crime documentary score in the style of a serious modern investigative documentary: slow low strings, sparse felt piano, a deep soft sub-bass pulse like a heartbeat, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, no vocals, never triumphant, never sentimental.\ngancho: Hook: a sparse low drone, a single slow heartbeat pulse, thin high string harmonics building dread, a held swell and a sudden silence at the end.\nquien: Quiet, bleak and human: solitary felt piano, soft low strings, cold air, a sense of a childhood lost.\ncolleen: Tender and sad: a gentle piano motif alone, warm sustained strings, a small hope that fades. Very soft.\ncrimen: Dark and tense but restrained: low pulsing bass, dissonant strings held long, no melody, dread without gore, a heavy hit at the end.\njuicio: Cold procedural weight: steady low pulse, sparse piano notes like a ticking courtroom clock, sober and factual.\ncorredor: Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still.\ndebate: Two opposing weights: two alternating low string phrases, unresolved, questioning, moral gravity, building slightly.\ncamino: Countdown tension: a quickening quiet pulse, ticking, rising strings, inevitability building step by step.\nnoche: Peak of tension and dread, restrained: very slow heartbeat bass, long cold string clusters rising, silences, a final unresolved cluster. No release.\ndespues: Aftermath: shocked emptiness, soft low drone, sparse piano, slow unsettled resolve, quietly accusatory.\nhistorial: Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural, questions accumulating, a sense of a system under scrutiny.\nprecedente: Historical and thoughtful: old-world solemn strings, slow piano, a feeling of history repeating, grave.\ncierre: Ethereal pads and a slow solitary piano, the question remains unanswered, quiet and haunting, final single note, fades to silence.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "frío",
+     "misterio",
+     "nostálgico",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "terror",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 143.0,
+    "rms_db": -15.6,
+    "tempo": 161.5,
+    "brillo_hz": 978,
+    "energia": [
+     0.81,
+     0.7,
+     0.53,
+     0.67,
+     0.69,
+     1.0,
+     0.85,
+     0.13,
+     0.72,
+     0.86,
+     0.73,
+     0.78
+    ],
+    "huecos": [
+     [
+      87.8,
+      90.0
+     ]
+    ],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo10": {
+   "id": "wow_objetos_raros__lyria_tramo10",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo10.mp3",
+   "md5": "6f53a3f8f6cc839893c10fb08c6e6cff",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 10,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 68.5,
+    "rms_db": -24.8,
+    "tempo": 129.2,
+    "brillo_hz": 707,
+    "energia": [
+     0.53,
+     0.34,
+     0.59,
+     0.84,
+     0.2,
+     0.05,
+     0.12,
+     0.47,
+     0.9,
+     0.83,
+     0.91,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.95
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo2": {
+   "id": "wow_objetos_raros__lyria_tramo2",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo2.mp3",
+   "md5": "d9a71e81b4b97d325e74abd9331f6f8d",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 2,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 66.0,
+    "rms_db": -22.6,
+    "tempo": 123.0,
+    "brillo_hz": 1022,
+    "energia": [
+     0.31,
+     1.0,
+     0.99,
+     0.48,
+     0.31,
+     0.32,
+     0.31,
+     0.41,
+     0.28,
+     0.3,
+     0.23,
+     0.09
+    ],
+    "huecos": [],
+    "dinamica": 0.91
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo1": {
+   "id": "wow_objetos_raros__lyria_tramo1",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo1.mp3",
+   "md5": "1deab2a38bb96c815446dbabe39a2cfa",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 1,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 108.5,
+    "rms_db": -24.5,
+    "tempo": 80.7,
+    "brillo_hz": 1266,
+    "energia": [
+     1.0,
+     0.73,
+     0.53,
+     0.49,
+     0.54,
+     0.35,
+     0.27,
+     0.65,
+     0.65,
+     0.67,
+     0.45,
+     0.52
+    ],
+    "huecos": [],
+    "dinamica": 0.73
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo5": {
+   "id": "wow_objetos_raros__lyria_tramo5",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo5.mp3",
+   "md5": "f98f9a87034cb75f8ee0333985da1036",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 5,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 56.0,
+    "rms_db": -26.6,
+    "tempo": 143.6,
+    "brillo_hz": 1298,
+    "energia": [
+     0.67,
+     0.28,
+     1.0,
+     0.73,
+     0.35,
+     0.38,
+     0.32,
+     0.31,
+     0.36,
+     0.27,
+     0.31,
+     0.25
+    ],
+    "huecos": [],
+    "dinamica": 0.75
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo4": {
+   "id": "wow_objetos_raros__lyria_tramo4",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo4.mp3",
+   "md5": "d34d1c408819330da06484f7094c901d",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 4,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 68.5,
+    "rms_db": -26.9,
+    "tempo": 80.7,
+    "brillo_hz": 772,
+    "energia": [
+     1.0,
+     0.52,
+     0.46,
+     0.67,
+     0.58,
+     0.63,
+     0.66,
+     0.67,
+     0.65,
+     0.61,
+     0.64,
+     0.63
+    ],
+    "huecos": [],
+    "dinamica": 0.54
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo7": {
+   "id": "wow_objetos_raros__lyria_tramo7",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo7.mp3",
+   "md5": "0640e57136925f87d2b53674c61060c3",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 7,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 48.5,
+    "rms_db": -29.5,
+    "tempo": 129.2,
+    "brillo_hz": 508,
+    "energia": [
+     0.33,
+     0.21,
+     0.79,
+     0.87,
+     0.38,
+     0.81,
+     0.52,
+     0.59,
+     0.73,
+     0.54,
+     1.0,
+     0.62
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo6": {
+   "id": "wow_objetos_raros__lyria_tramo6",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo6.mp3",
+   "md5": "4cbd993b5f01bc3822305b981e565b99",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 6,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 61.0,
+    "rms_db": -25.8,
+    "tempo": 117.5,
+    "brillo_hz": 879,
+    "energia": [
+     0.37,
+     0.78,
+     0.34,
+     0.4,
+     0.36,
+     0.32,
+     0.39,
+     1.0,
+     1.0,
+     0.89,
+     0.78,
+     0.72
+    ],
+    "huecos": [],
+    "dinamica": 0.68
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo8": {
+   "id": "wow_objetos_raros__lyria_tramo8",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo8.mp3",
+   "md5": "939fd69584d1efe7963abe4759e8355b",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 8,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 61.0,
+    "rms_db": -25.0,
+    "tempo": 99.4,
+    "brillo_hz": 1049,
+    "energia": [
+     0.45,
+     0.88,
+     1.0,
+     0.51,
+     0.31,
+     0.78,
+     0.51,
+     0.47,
+     0.55,
+     0.84,
+     0.84,
+     0.86
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo11": {
+   "id": "wow_objetos_raros__lyria_tramo11",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo11.mp3",
+   "md5": "3b370ad4389b853fe59e397ccb8e1013",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 11,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 134.13,
+    "rms_db": -24.6,
+    "tempo": 80.7,
+    "brillo_hz": 1070,
+    "energia": [
+     0.56,
+     0.61,
+     0.91,
+     0.95,
+     0.63,
+     0.7,
+     1.0,
+     0.89,
+     0.29,
+     0.81,
+     0.84,
+     0.96
+    ],
+    "huecos": [],
+    "dinamica": 0.71
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo3": {
+   "id": "wow_objetos_raros__lyria_tramo3",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo3.mp3",
+   "md5": "91f9e5d79835354f671844d99363a85f",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 3,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 121.0,
+    "rms_db": -21.4,
+    "tempo": 89.1,
+    "brillo_hz": 690,
+    "energia": [
+     0.77,
+     0.6,
+     0.44,
+     0.71,
+     0.69,
+     0.65,
+     0.6,
+     1.0,
+     0.98,
+     0.87,
+     0.98,
+     0.85
+    ],
+    "huecos": [],
+    "dinamica": 0.56
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "wow_objetos_raros__lyria_tramo9": {
+   "id": "wow_objetos_raros__lyria_tramo9",
+   "video": "wow_objetos_raros",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_objetos_raros\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_objetos_raros__lyria_tramo9.mp3",
+   "md5": "bd8c4450c03c9ee55d75d42cc591c59c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "",
+   "titulo_video": "",
+   "tramo": 9,
+   "escenas": [],
+   "estilo": "",
+   "prompt": "",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 63.5,
+    "rms_db": -25.2,
+    "tempo": 92.3,
+    "brillo_hz": 849,
+    "energia": [
+     0.85,
+     0.98,
+     0.72,
+     0.69,
+     0.31,
+     0.36,
+     0.37,
+     0.52,
+     0.69,
+     0.72,
+     0.68,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
   }
  },
- "actualizado": "2026-10-22 21:18"
+ "actualizado": "2026-10-23 07:34"
 }

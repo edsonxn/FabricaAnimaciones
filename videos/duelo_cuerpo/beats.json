@@ -1,0 +1,556 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.839,
+  "tipo": "video",
+  "texto": "Suena el teléfono a una hora rara. Contestas. Y alguien te dice que una persona que amas ya no está. En ese momento, algo se te cae por dentro.",
+  "clip_s": 10,
+  "t_medio": 5.47,
+  "texto_a": "Suena el teléfono a una hora rara. Contestas. Y alguien te dice que",
+  "texto_b": "una persona que amas ya no está. En ese momento, algo se te cae por dentro."
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.839,
+  "t1": 20.903,
+  "tipo": "video",
+  "texto": "El pecho se aprieta, las piernas se aflojan, y el aire no alcanza. No es solo tristeza. Es tu cuerpo entero reaccionando.",
+  "clip_s": 10,
+  "t_medio": 16.359,
+  "texto_a": "El pecho se aprieta, las piernas se aflojan, y el aire no alcanza.",
+  "texto_b": "No es solo tristeza. Es tu cuerpo entero reaccionando."
+ },
+ {
+  "id": "scene-003",
+  "t0": 20.903,
+  "t1": 29.563,
+  "tipo": "video",
+  "texto": "Hoy vamos a ver, minuto a minuto y mes a mes, qué le pasa a tu cuerpo cuando muere alguien que amas. Por qué el corazón roto existe de verdad.",
+  "clip_s": 10,
+  "t_medio": 25.083,
+  "texto_a": "Hoy vamos a ver, minuto a minuto y mes a mes, qué le pasa a",
+  "texto_b": "tu cuerpo cuando muere alguien que amas. Por qué el corazón roto existe de verdad."
+ },
+ {
+  "id": "scene-004",
+  "t0": 29.563,
+  "t1": 41.244,
+  "tipo": "video",
+  "texto": "Y qué puedes hacer desde hoy para cuidarte. Los primeros minutos. Para tu cerebro, perder a alguien es una amenaza. Y responde como ante un peligro:",
+  "clip_s": 10,
+  "t_medio": 36.074,
+  "texto_a": "Y qué puedes hacer desde hoy para cuidarte. Los primeros minutos.",
+  "texto_b": "Para tu cerebro, perder a alguien es una amenaza. Y responde como ante un peligro:"
+ },
+ {
+  "id": "scene-005",
+  "t0": 41.244,
+  "t1": 49.754,
+  "tipo": "video",
+  "texto": "suelta adrenalina y cortisol, las hormonas de la alarma. El corazón se acelera, la presión sube, los músculos se tensan.",
+  "clip_s": 10,
+  "t_medio": 45.444,
+  "texto_a": "suelta adrenalina y cortisol, las hormonas de la alarma.",
+  "texto_b": "El corazón se acelera, la presión sube, los músculos se tensan."
+ },
+ {
+  "id": "scene-006",
+  "t0": 49.754,
+  "t1": 62.046,
+  "tipo": "video",
+  "texto": "Por eso tiemblas, o sientes frío, o no puedes ni llorar. En 2003, en la Universidad de Arizona, midieron el cerebro de personas en duelo mientras miraban la foto de quien habían perdido.",
+  "clip_s": 10,
+  "t_medio": 55.117,
+  "texto_a": "Por eso tiemblas, o sientes frío, o no puedes ni llorar. En 2003,",
+  "texto_b": "en la Universidad de Arizona, midieron el cerebro de personas en duelo mientras miraban la foto de quien habían perdido."
+ },
+ {
+  "id": "scene-007",
+  "t0": 62.046,
+  "t1": 73.763,
+  "tipo": "video",
+  "texto": "Se encendieron, entre otras, zonas que también trabajan cuando algo nos duele en el cuerpo. Por eso, que te duela el pecho de tristeza no es una forma de hablar.",
+  "clip_s": 10,
+  "t_medio": 67.904,
+  "texto_a": "Se encendieron, entre otras, zonas que también trabajan cuando algo nos duele en el cuerpo.",
+  "texto_b": "Por eso, que te duela el pecho de tristeza no es una forma de hablar."
+ },
+ {
+  "id": "scene-008",
+  "t0": 73.763,
+  "t1": 83.497,
+  "tipo": "video",
+  "texto": "Las primeras 24 horas. En 2012, investigadores de Harvard entrevistaron a casi 2000 personas que habían sufrido un infarto.",
+  "clip_s": 10,
+  "t_medio": 78.512,
+  "texto_a": "Las primeras 24 horas. En 2012, investigadores de",
+  "texto_b": "Harvard entrevistaron a casi 2000 personas que habían sufrido un infarto."
+ },
+ {
+  "id": "scene-009",
+  "t0": 83.497,
+  "t1": 91.131,
+  "tipo": "video",
+  "texto": "Y encontraron que, en el día siguiente a la muerte de alguien cercano, el riesgo de infarto se multiplicaba por 21.",
+  "clip_s": 10,
+  "t_medio": 87.177,
+  "texto_a": "Y encontraron que, en el día siguiente a la muerte de alguien cercano,",
+  "texto_b": "el riesgo de infarto se multiplicaba por 21."
+ },
+ {
+  "id": "scene-010",
+  "t0": 91.131,
+  "t1": 95.231,
+  "tipo": "imagen",
+  "texto": "Luego iba bajando, día con día, pero seguía alto toda"
+ },
+ {
+  "id": "scene-011",
+  "t0": 95.231,
+  "t1": 99.014,
+  "tipo": "imagen",
+  "texto": "la primera semana. Y hay algo todavía más extraño:"
+ },
+ {
+  "id": "scene-012",
+  "t0": 99.014,
+  "t1": 103.409,
+  "tipo": "imagen",
+  "texto": "el síndrome del corazón roto. Ante una noticia terrible,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.409,
+  "t1": 107.189,
+  "tipo": "imagen",
+  "texto": "la oleada de adrenalina puede ser tan fuerte que la punta"
+ },
+ {
+  "id": "scene-014",
+  "t0": 107.189,
+  "t1": 111.543,
+  "tipo": "imagen",
+  "texto": "del corazón se queda casi sin moverse, y se infla como un globo."
+ },
+ {
+  "id": "scene-015",
+  "t0": 111.543,
+  "t1": 115.183,
+  "tipo": "imagen",
+  "texto": "En Japón lo llamaron takotsubo, porque el corazón toma la"
+ },
+ {
+  "id": "scene-016",
+  "t0": 115.183,
+  "t1": 119.296,
+  "tipo": "imagen",
+  "texto": "forma de una vasija que usan los pescadores para atrapar pulpos."
+ },
+ {
+  "id": "scene-017",
+  "t0": 119.296,
+  "t1": 123.596,
+  "tipo": "imagen",
+  "texto": "Se siente igual que un infarto: dolor en el pecho y falta de aire."
+ },
+ {
+  "id": "scene-018",
+  "t0": 123.596,
+  "t1": 126.836,
+  "tipo": "imagen",
+  "texto": "Y en 9 de cada 10 casos, le pasa a mujeres,"
+ },
+ {
+  "id": "scene-019",
+  "t0": 126.836,
+  "t1": 130.34,
+  "tipo": "imagen",
+  "texto": "sobre todo después de los 50. En la mayoría,"
+ },
+ {
+  "id": "scene-020",
+  "t0": 130.34,
+  "t1": 134.68,
+  "tipo": "imagen",
+  "texto": "el corazón recupera su forma en unas semanas. Pero no es inofensivo:"
+ },
+ {
+  "id": "scene-021",
+  "t0": 134.68,
+  "t1": 140.43,
+  "tipo": "imagen",
+  "texto": "si te duele el pecho, es a urgencias, siempre."
+ },
+ {
+  "id": "scene-022",
+  "t0": 140.43,
+  "t1": 142.712,
+  "tipo": "imagen",
+  "texto": "Las primeras semanas."
+ },
+ {
+  "id": "scene-023",
+  "t0": 142.712,
+  "t1": 147.972,
+  "tipo": "imagen",
+  "texto": "La alarma no se apaga del todo. El cortisol sigue alto, y el sueño se rompe:"
+ },
+ {
+  "id": "scene-024",
+  "t0": 147.972,
+  "t1": 151.882,
+  "tipo": "imagen",
+  "texto": "te despiertas de madrugada, o no puedes levantarte."
+ },
+ {
+  "id": "scene-025",
+  "t0": 151.882,
+  "t1": 155.132,
+  "tipo": "imagen",
+  "texto": "Se te olvidan las cosas. Dejas las llaves en el refri,"
+ },
+ {
+  "id": "scene-026",
+  "t0": 155.132,
+  "t1": 160.431,
+  "tipo": "imagen",
+  "texto": "no te acuerdas de lo que ibas a decir. Muchos le llaman la niebla del duelo."
+ },
+ {
+  "id": "scene-027",
+  "t0": 160.431,
+  "t1": 163.131,
+  "tipo": "imagen",
+  "texto": "Y tus defensas bajan. En 2011,"
+ },
+ {
+  "id": "scene-028",
+  "t0": 163.131,
+  "t1": 168.116,
+  "tipo": "imagen",
+  "texto": "en Inglaterra, compararon a adultos mayores en duelo con otros de su misma edad."
+ },
+ {
+  "id": "scene-029",
+  "t0": 168.116,
+  "t1": 171.436,
+  "tipo": "imagen",
+  "texto": "En los que acababan de perder a alguien, los glóbulos blancos"
+ },
+ {
+  "id": "scene-030",
+  "t0": 171.436,
+  "t1": 175.596,
+  "tipo": "imagen",
+  "texto": "que atacan a las bacterias funcionaban peor. Y la balanza de sus hormonas"
+ },
+ {
+  "id": "scene-031",
+  "t0": 175.596,
+  "t1": 178.665,
+  "tipo": "imagen",
+  "texto": "del estrés estaba cargada hacia el cortisol."
+ },
+ {
+  "id": "scene-032",
+  "t0": 178.665,
+  "t1": 182.865,
+  "tipo": "imagen",
+  "texto": "Por eso no es raro enfermarse en los meses de un duelo. No es debilidad."
+ },
+ {
+  "id": "scene-033",
+  "t0": 182.865,
+  "t1": 187.097,
+  "tipo": "imagen",
+  "texto": "Es un cuerpo cansado de estar en alerta."
+ },
+ {
+  "id": "scene-034",
+  "t0": 187.097,
+  "t1": 192.19,
+  "tipo": "imagen",
+  "texto": "Los primeros meses. Aquí pasa algo que parece de película."
+ },
+ {
+  "id": "scene-035",
+  "t0": 192.19,
+  "t1": 195.15,
+  "tipo": "imagen",
+  "texto": "Volteas porque oyes una voz parecida en la calle."
+ },
+ {
+  "id": "scene-036",
+  "t0": 195.15,
+  "t1": 199.851,
+  "tipo": "imagen",
+  "texto": "Agarras el teléfono para contarle algo. Pones dos platos en la mesa."
+ },
+ {
+  "id": "scene-037",
+  "t0": 199.851,
+  "t1": 202.321,
+  "tipo": "imagen",
+  "texto": "No te estás volviendo loco."
+ },
+ {
+  "id": "scene-038",
+  "t0": 202.321,
+  "t1": 208.182,
+  "tipo": "imagen",
+  "texto": "La psicóloga Mary-Frances O'Connor, que estudia el cerebro en duelo, lo explica con un mapa."
+ },
+ {
+  "id": "scene-039",
+  "t0": 208.182,
+  "t1": 211.762,
+  "tipo": "imagen",
+  "texto": "Tu cerebro tiene un mapa donde esa persona siempre está."
+ },
+ {
+  "id": "scene-040",
+  "t0": 211.762,
+  "t1": 214.894,
+  "tipo": "imagen",
+  "texto": "Siempre contesta, siempre llega a cenar."
+ },
+ {
+  "id": "scene-041",
+  "t0": 214.894,
+  "t1": 219.774,
+  "tipo": "imagen",
+  "texto": "Y ese mapa no se borra con una noticia. Se reescribe despacio, con"
+ },
+ {
+  "id": "scene-042",
+  "t0": 219.774,
+  "t1": 224.247,
+  "tipo": "imagen",
+  "texto": "cada día que vives sin ella. A veces, ese mapa se atora."
+ },
+ {
+  "id": "scene-043",
+  "t0": 224.247,
+  "t1": 227.767,
+  "tipo": "imagen",
+  "texto": "En 2008, ese mismo grupo de Arizona vio que,"
+ },
+ {
+  "id": "scene-044",
+  "t0": 227.767,
+  "t1": 232.067,
+  "tipo": "imagen",
+  "texto": "en las personas a las que el duelo no les aflojaba, la foto de su ser querido"
+ },
+ {
+  "id": "scene-045",
+  "t0": 232.067,
+  "t1": 236.628,
+  "tipo": "imagen",
+  "texto": "encendía el circuito de la recompensa: el mismo de los antojos."
+ },
+ {
+  "id": "scene-046",
+  "t0": 236.628,
+  "t1": 240.028,
+  "tipo": "imagen",
+  "texto": "El cerebro seguía buscando a esa persona, como quien busca"
+ },
+ {
+  "id": "scene-047",
+  "t0": 240.028,
+  "t1": 243.739,
+  "tipo": "imagen",
+  "texto": "algo que necesita para vivir."
+ },
+ {
+  "id": "scene-048",
+  "t0": 243.739,
+  "t1": 248.236,
+  "tipo": "imagen",
+  "texto": "El primer año. Para la mayoría, el dolor no desaparece,"
+ },
+ {
+  "id": "scene-049",
+  "t0": 248.236,
+  "t1": 251.696,
+  "tipo": "imagen",
+  "texto": "pero cambia. Llega en olas: un cumpleaños,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 251.696,
+  "t1": 255.549,
+  "tipo": "imagen",
+  "texto": "una canción, una fecha. Y entre ola y ola,"
+ },
+ {
+  "id": "scene-051",
+  "t0": 255.549,
+  "t1": 260.582,
+  "tipo": "imagen",
+  "texto": "el cuerpo vuelve a dormir, a comer, y a reírse sin culpa."
+ },
+ {
+  "id": "scene-052",
+  "t0": 260.582,
+  "t1": 264.842,
+  "tipo": "imagen",
+  "texto": "Pero si pasa un año y el dolor no afloja nada, y no te deja vivir,"
+ },
+ {
+  "id": "scene-053",
+  "t0": 264.842,
+  "t1": 268.444,
+  "tipo": "imagen",
+  "texto": "eso tiene nombre: duelo prolongado."
+ },
+ {
+  "id": "scene-054",
+  "t0": 268.444,
+  "t1": 272.944,
+  "tipo": "imagen",
+  "texto": "Desde 2022 es un diagnóstico oficial, y tiene tratamiento."
+ },
+ {
+  "id": "scene-055",
+  "t0": 272.944,
+  "t1": 277.097,
+  "tipo": "imagen",
+  "texto": "Pedir ayuda no es olvidar a quien se fue."
+ },
+ {
+  "id": "scene-056",
+  "t0": 277.097,
+  "t1": 279.877,
+  "tipo": "imagen",
+  "texto": "Entonces, ¿qué puedes hacer desde hoy?"
+ },
+ {
+  "id": "scene-057",
+  "t0": 279.877,
+  "t1": 284.261,
+  "tipo": "imagen",
+  "texto": "Tres cosas sencillas. Uno: dale a tu cuerpo señales"
+ },
+ {
+  "id": "scene-058",
+  "t0": 284.261,
+  "t1": 288.061,
+  "tipo": "imagen",
+  "texto": "de que está a salvo. Come algo caliente, aunque sea poco."
+ },
+ {
+  "id": "scene-059",
+  "t0": 288.061,
+  "t1": 292.856,
+  "tipo": "imagen",
+  "texto": "Duérmete a la misma hora. Sal a caminar diez minutos con luz de día."
+ },
+ {
+  "id": "scene-060",
+  "t0": 292.856,
+  "t1": 296.88,
+  "tipo": "imagen",
+  "texto": "Tu alarma necesita pruebas de que el peligro ya pasó."
+ },
+ {
+  "id": "scene-061",
+  "t0": 296.88,
+  "t1": 300.41,
+  "tipo": "imagen",
+  "texto": "Dos: no lo cargues solo. Habla de esa persona,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 300.41,
+  "t1": 303.51,
+  "tipo": "imagen",
+  "texto": "en voz alta, con alguien que la conoció."
+ },
+ {
+  "id": "scene-063",
+  "t0": 303.51,
+  "t1": 309.246,
+  "tipo": "imagen",
+  "texto": "Contar sus historias ayuda a tu cerebro a reescribir el mapa, sin borrarla."
+ },
+ {
+  "id": "scene-064",
+  "t0": 309.246,
+  "t1": 312.676,
+  "tipo": "imagen",
+  "texto": "Y tres: escucha a tu pecho. Si te duele,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 312.676,
+  "t1": 316.886,
+  "tipo": "imagen",
+  "texto": "te falta el aire, o el corazón late raro, no lo dejes para mañana."
+ },
+ {
+  "id": "scene-066",
+  "t0": 316.886,
+  "t1": 320.424,
+  "tipo": "imagen",
+  "texto": "Ve a urgencias."
+ },
+ {
+  "id": "scene-067",
+  "t0": 320.424,
+  "t1": 324.484,
+  "tipo": "imagen",
+  "texto": "En México, cada 1 y 2 de noviembre, ponemos una ofrenda."
+ },
+ {
+  "id": "scene-068",
+  "t0": 324.484,
+  "t1": 329.604,
+  "tipo": "imagen",
+  "texto": "Su foto, su comida favorita, su música, las velas encendidas."
+ },
+ {
+  "id": "scene-069",
+  "t0": 329.604,
+  "t1": 331.924,
+  "tipo": "imagen",
+  "texto": "Y sin saberlo, hacemos justo eso:"
+ },
+ {
+  "id": "scene-070",
+  "t0": 331.924,
+  "t1": 336.563,
+  "tipo": "imagen",
+  "texto": "hablar de ellos, en compañía, y dejarles un lugar en el mapa."
+ },
+ {
+  "id": "scene-071",
+  "t0": 336.563,
+  "t1": 339.423,
+  "tipo": "imagen",
+  "texto": "Porque el duelo duele tanto por una sola razón:"
+ },
+ {
+  "id": "scene-072",
+  "t0": 339.423,
+  "t1": 343.805,
+  "tipo": "imagen",
+  "texto": "es del tamaño de lo que amaste. Si quieres,"
+ },
+ {
+  "id": "scene-073",
+  "t0": 343.805,
+  "t1": 348.495,
+  "tipo": "imagen",
+  "texto": "cuéntame en los comentarios a quién vas a recordar este año. Aquí también hay"
+ },
+ {
+  "id": "scene-074",
+  "t0": 348.495,
+  "t1": 352.5,
+  "tipo": "imagen",
+  "texto": "un lugar para ellos."
+ }
+]

@@ -192,3 +192,37 @@ Kit de `historia_aguascalientes` + `FORMATO = "vertical"`; todo en UNA sesión (
 - **Más fotos reales:** subir la cantidad de fotos que enseñan el elemento/personaje/lugar del que se habla (Aguascalientes:
   22 en 13 min, ~1,7/min → meta ≥ 3/min en largos y ≥ 1 cada ~8-10 s en Shorts); a cada persona, edificio, objeto o lugar
   nombrado, su foto (Commons con licencia comprobada) además de la pegatina de Flow; varias fotos por lugar visitable.
+
+## Ubicación en México: APERTURA con México entero + ESTADO con fronteras y minimapa + REGIÓN (22-oct-2026, elegido por el usuario)
+El usuario: «los mapas de Cronopapel se ven bien pero no se nota en qué parte de México estamos». Muestras en
+`videos/_muestras_mapa_cronopapel/salida/` (0 hoy · 1 fronteras a lápiz · 2 minimapa · 3 recorte de papel · 4 México entero ·
+5 región con estados · 6 combinada · 7 vertical). **Eligió: abrir con la 4, hacer zoom hasta la 6 y usar la 5 cuando la historia
+cruza varios estados.** Demo con el motor real: `salida/demo_apertura_estado_region.mp4` (`demo_kit.py`).
+- **Módulo:** `nucleo/crono_ubicacion.py` (datos en `nucleo/datos/mx_ubicacion.npz`: 32 estados Natural Earth 10 m simplificados,
+  tierra, ETOPO1 de México, vecindades y colores; se regenera con `python nucleo/crono_ubicacion.py`). Todo alineado con la cámara
+  del kit (Mercator, px/° = z · `M.PXDEG_REF`), así que el zoom de México al estado es continuo.
+- **Activarlo** (kit de `historia_aguascalientes/` y `tequisquiapan/`; escenas.py ya lo trae, sin efecto si falta):
+  `guion.py` → `UBICACION = {"prota": "MX-AGU", "subtitulo": "centro-norte de México"}` (clave ISO del estado; `nombre=` si se
+  quiere otro rótulo, `vecinos=[...]` si no bastan los colindantes). En la coreografía:
+  `R.ubic.apertura(0.0, 6.5)` → México quieto 2 s (mares, CDMX, rosa, chincheta y nombre del estado) y zoom hasta la clave de cámara
+  de la coreografía en t1; al llegar entra sola la capa ESTADO 6 s (`estado=` para cambiarlo, `tarjeta=False`...).
+  `R.ubic.estado(t0, t1)` → otra vez fronteras a lápiz + vecinos con velo y nombre DENTRO de su territorio + estado teñido con
+  contorno de tinta + minimapa en tarjeta (recuadro rojo = lo que ve la cámara) + cartela «NOMBRE · subtítulo» + escala en km.
+  `R.ubic.region(t0, t1, extra=[("Guadalajara", -103.35, 20.67)])` → mapa escolar con todos los estados (aflojar la cámara a
+  z ≈ 0,35-0,45 en esas claves; el mapa de región solo entra cuando la cámara ya se alejó —de cerca el ETOPO1 se pixela— y los nombres
+  se colocan con la cámara de t0 + 2,5 s y se apagan si el zoom se aleja de esa escala).
+- **Dónde va cada cosa (16:9):** cartela bajo el año (40, 118); tarjeta abajo a la izquierda (centro 290, 860); escala a su derecha
+  (560, 1010); el sello grande de época estampa en (1720, 760) → sin choque. Vertical: cartela (50, 300), tarjeta (310, 1450).
+  Cartela y tarjeta entran en `R.cajas` (el `_qa_choques.py` avisa si una pegatina las pisa): **no poner pegatinas abajo a la
+  izquierda durante una ventana ESTADO.**
+- **Cuándo:** apertura SIEMPRE al empezar (antes del gancho o justo después); ESTADO al volver al estado entero tras haber estado
+  en una ciudad o en otro sitio; REGIÓN cuando la narración nombra estados vecinos o rutas que los cruzan (Camino Real, guerras,
+  migraciones). Las fronteras actuales en épocas sin estados (antes del s. XIX) solo como referencia breve; para territorios de época
+  siguen las capas `Territorio` del kit.
+- **Coste:** ~1 s/cuadro en las ventanas (el mapa de México se pinta en ~0,6 s; fuera de las ventanas no cuesta nada).
+- **Lecciones de las muestras:** (1) los nombres de estado se colocan con `cabe()` (rectángulo del texto entero DENTRO de la parte
+  visible del estado; si no cabe, más chico; si tampoco, abreviado u omitido) y se guardan en lon/lat: así se mueven con el mapa y no
+  saltan; (2) nunca forzar un nombre al borde: `texto(..., borde=30)` lo desvanece antes de cortarse; (3) el nombre del estado en la
+  apertura va en desplazamiento de PANTALLA respecto a la chincheta (en coordenadas geográficas sale volando con el zoom) y se
+  despide al empezar el zoom; (4) el mapa fino entra por zoom (log z a −1,05…−0,2 del final) con la capa del estado ya puesta, para
+  que el rojo del estado no salte.

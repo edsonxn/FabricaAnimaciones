@@ -25,6 +25,13 @@ B.OMEGA = 2 * math.pi * round(TOTAL / 1.85) / TOTAL
 M.cargar()
 M.usar("mx")
 R = Reg()
+import crono_ubicacion  # noqa: E402
+try:                    # ubicación en México (apertura con México entero, estado con fronteras y minimapa, región): guion.UBICACION
+    import guion as _G
+    _UBIC = getattr(_G, "UBICACION", None)
+except Exception:       # noqa: BLE001
+    _UBIC = None
+R.ubic = crono_ubicacion.Ubicacion(M, **_UBIC) if _UBIC else None    # en la coreografía: R.ubic.apertura/estado/region(t0, t1)
 import importlib  # noqa: E402
 import traceback  # noqa: E402
 
@@ -60,6 +67,10 @@ R.anios[:] = _puentes(R.anios)
 SELLOS = sorted(R.sellos, key=lambda s: s["t"])
 N_SELLOS = max(1, len(SELLOS))
 CAM = CamPath(R.cam)
+if R.ubic:
+    R.ubic.cam_fn = CAM.estado
+    for _t0, _t1, _c, _n in R.ubic.cajas_ocupadas():      # cartela y minimapa entran al control de choques
+        R.cajas.append((_t0, _t1, lambda t, cam, c=_c: c, _n))
 CAPAS = {k: Territorio(v) for k, v in R.terr.items()}
 ACTORES = sorted(enumerate(R.actores), key=lambda p: (p[1].z, p[0]))
 ACTORES = [a for _, a in ACTORES]
@@ -77,7 +88,8 @@ def texto_anio(v):
 
 def estado_cam(t, w=0.0):
     M.usar("mx")
-    return CAM.estado(t)
+    st = CAM.estado(t)
+    return R.ubic.camara(t, st) if R.ubic else st
 
 
 def fondo(st, t, fs):
@@ -111,6 +123,8 @@ def fondo(st, t, fs):
         f(img, cam, t, fs)
     for txt, lon, lat, px, alfa, rot, col in R.mares["mx"]:
         M.rotulo_mapa(img, txt, cam, lon, lat, px, alfa, color=col, rot=rot)
+    if R.ubic:
+        img = R.ubic.componer(img, cam, t)
     return img, cam, formas
 
 

@@ -1,0 +1,528 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.9,
+  "tipo": "video",
+  "texto": "Abres los ojos. Está oscuro. Miras el reloj… y otra vez son las tres de la mañana.",
+  "clip_s": 10,
+  "t_medio": 3.18,
+  "texto_a": "Abres los ojos. Está oscuro.",
+  "texto_b": "Miras el reloj… y otra vez son las tres de la mañana."
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.9,
+  "t1": 20.43,
+  "tipo": "video",
+  "texto": "No hay ruido, no tienes ganas de ir al baño, nadie te habló. Y aun así, ahí estás: despierto, con la cabeza dándole vueltas a todo. Si te pasa, no eres el único.",
+  "clip_s": 10,
+  "t_medio": 14.06,
+  "texto_a": "No hay ruido, no tienes ganas de ir al baño, nadie te habló. Y aun así, ahí estás:",
+  "texto_b": "despierto, con la cabeza dándole vueltas a todo. Si te pasa, no eres el único."
+ },
+ {
+  "id": "scene-003",
+  "t0": 20.43,
+  "t1": 28.632,
+  "tipo": "video",
+  "texto": "En un estudio con casi 9000 adultos, más de 1 de cada 3 se despertaba de noche, al menos tres veces por semana.",
+  "clip_s": 10,
+  "t_medio": 24.69,
+  "texto_a": "En un estudio con casi 9000 adultos, más de 1 de cada 3",
+  "texto_b": "se despertaba de noche, al menos tres veces por semana."
+ },
+ {
+  "id": "scene-004",
+  "t0": 28.632,
+  "t1": 40.43,
+  "tipo": "video",
+  "texto": "Hoy vamos a ver, hora por hora, qué hace tu cuerpo mientras duermes. Por qué tantos se despiertan justo a esa hora. Y qué hacer para volver a dormir.",
+  "clip_s": 10,
+  "t_medio": 35.532,
+  "texto_a": "Hoy vamos a ver, hora por hora, qué hace tu cuerpo mientras duermes. Por qué tantos se despiertan justo a esa hora.",
+  "texto_b": "Y qué hacer para volver a dormir."
+ },
+ {
+  "id": "scene-005",
+  "t0": 40.43,
+  "t1": 53.082,
+  "tipo": "video",
+  "texto": "Las 11 de la noche. Te acuestas, y en unos minutos el cerebro baja de marcha. El sueño no es parejo: va en ciclos de una hora y media, como olas que suben y bajan.",
+  "clip_s": 10,
+  "t_medio": 46.401,
+  "texto_a": "Las 11 de la noche. Te acuestas, y en unos minutos el cerebro baja de marcha.",
+  "texto_b": "El sueño no es parejo: va en ciclos de una hora y media, como olas que suben y bajan."
+ },
+ {
+  "id": "scene-006",
+  "t0": 53.082,
+  "t1": 61.303,
+  "tipo": "video",
+  "texto": "Y las primeras olas son las más hondas. Ahí está el sueño profundo, el que repara los músculos y limpia el cerebro.",
+  "clip_s": 10,
+  "t_medio": 57.562,
+  "texto_a": "Y las primeras olas son las más hondas. Ahí está el sueño profundo,",
+  "texto_b": "el que repara los músculos y limpia el cerebro."
+ },
+ {
+  "id": "scene-007",
+  "t0": 61.303,
+  "t1": 70.43,
+  "tipo": "video",
+  "texto": "Casi todo el sueño profundo de la noche se gasta en las primeras horas. Después, ya no regresa igual.",
+  "clip_s": 10,
+  "t_medio": 65.483,
+  "texto_a": "Casi todo el sueño profundo de la noche se gasta en las primeras horas.",
+  "texto_b": "Después, ya no regresa igual."
+ },
+ {
+  "id": "scene-008",
+  "t0": 70.43,
+  "t1": 81.253,
+  "tipo": "video",
+  "texto": "La 1 de la mañana. Tu cuerpo está en su punto más bajo. El corazón late más lento, la presión baja y la temperatura sigue bajando hasta la madrugada.",
+  "clip_s": 10,
+  "t_medio": 74.727,
+  "texto_a": "La 1 de la mañana. Tu cuerpo está en su punto más bajo.",
+  "texto_b": "El corazón late más lento, la presión baja y la temperatura sigue bajando hasta la madrugada."
+ },
+ {
+  "id": "scene-009",
+  "t0": 81.253,
+  "t1": 91.541,
+  "tipo": "video",
+  "texto": "Y la hormona del estrés, el cortisol, está casi en cero. En 1971, en Nueva York, la midieron cada 20 minutos durante toda la noche.",
+  "clip_s": 10,
+  "t_medio": 86.893,
+  "texto_a": "Y la hormona del estrés, el cortisol, está casi en cero. En 1971,",
+  "texto_b": "en Nueva York, la midieron cada 20 minutos durante toda la noche."
+ },
+ {
+  "id": "scene-010",
+  "t0": 91.541,
+  "t1": 97.097,
+  "tipo": "imagen",
+  "texto": "Vieron que se apaga al empezar a dormir. Pero no se queda apagada."
+ },
+ {
+  "id": "scene-011",
+  "t0": 97.097,
+  "t1": 99.346,
+  "tipo": "imagen",
+  "texto": "Las 3 de la mañana."
+ },
+ {
+  "id": "scene-012",
+  "t0": 99.346,
+  "t1": 103.576,
+  "tipo": "imagen",
+  "texto": "Justo en la segunda mitad de la noche, el cortisol empieza a subir otra vez,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.576,
+  "t1": 109.096,
+  "tipo": "imagen",
+  "texto": "en pequeños pulsos. Es tu despertador interno, preparándote para la mañana."
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.096,
+  "t1": 112.636,
+  "tipo": "imagen",
+  "texto": "Al mismo tiempo, las olas del sueño ya son más bajitas:"
+ },
+ {
+  "id": "scene-015",
+  "t0": 112.636,
+  "t1": 115.682,
+  "tipo": "imagen",
+  "texto": "más sueño ligero, más sueños."
+ },
+ {
+  "id": "scene-016",
+  "t0": 115.682,
+  "t1": 119.442,
+  "tipo": "imagen",
+  "texto": "Y al final de cada ola, todos nos despertamos un momento."
+ },
+ {
+  "id": "scene-017",
+  "t0": 119.442,
+  "t1": 123.827,
+  "tipo": "imagen",
+  "texto": "Normalmente, no lo recuerdas. Te acomodas la almohada y sigues."
+ },
+ {
+  "id": "scene-018",
+  "t0": 123.827,
+  "t1": 127.967,
+  "tipo": "imagen",
+  "texto": "El problema es cuando ese despertar coincide con el cortisol subiendo."
+ },
+ {
+  "id": "scene-019",
+  "t0": 127.967,
+  "t1": 132.396,
+  "tipo": "imagen",
+  "texto": "Entonces ya no es un momento. Abres los ojos del todo."
+ },
+ {
+  "id": "scene-020",
+  "t0": 132.396,
+  "t1": 136.236,
+  "tipo": "imagen",
+  "texto": "Y con los años pasa más. Al juntar decenas de estudios,"
+ },
+ {
+  "id": "scene-021",
+  "t0": 136.236,
+  "t1": 139.216,
+  "tipo": "imagen",
+  "texto": "se vio que el sueño profundo se va adelgazando con la edad,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 139.216,
+  "t1": 144.208,
+  "tipo": "imagen",
+  "texto": "y el tiempo despierto a media noche crece. Por eso, después de los 50,"
+ },
+ {
+  "id": "scene-023",
+  "t0": 144.208,
+  "t1": 147.028,
+  "tipo": "imagen",
+  "texto": "despertarse de madrugada es de lo más común."
+ },
+ {
+  "id": "scene-024",
+  "t0": 147.028,
+  "t1": 152.485,
+  "tipo": "imagen",
+  "texto": "No es que algo esté mal. Las 3 y cuarto."
+ },
+ {
+  "id": "scene-025",
+  "t0": 152.485,
+  "t1": 156.265,
+  "tipo": "imagen",
+  "texto": "Ya estás despierto, y empieza lo peor: la cabeza."
+ },
+ {
+  "id": "scene-026",
+  "t0": 156.265,
+  "t1": 159.445,
+  "tipo": "imagen",
+  "texto": "Las deudas, la salud, los hijos,"
+ },
+ {
+  "id": "scene-027",
+  "t0": 159.445,
+  "t1": 162.528,
+  "tipo": "imagen",
+  "texto": "aquella frase que dijiste hace años."
+ },
+ {
+  "id": "scene-028",
+  "t0": 162.528,
+  "t1": 167.405,
+  "tipo": "imagen",
+  "texto": "A esa hora, todo parece más grave. Y tiene explicación."
+ },
+ {
+  "id": "scene-029",
+  "t0": 167.405,
+  "t1": 172.225,
+  "tipo": "imagen",
+  "texto": "En 2022, investigadores de Harvard y Arizona propusieron una idea:"
+ },
+ {
+  "id": "scene-030",
+  "t0": 172.225,
+  "t1": 177.048,
+  "tipo": "imagen",
+  "texto": "la mente despierta después de la medianoche se inclina hacia lo negativo."
+ },
+ {
+  "id": "scene-031",
+  "t0": 177.048,
+  "t1": 179.808,
+  "tipo": "imagen",
+  "texto": "La parte del cerebro que pone freno y perspectiva"
+ },
+ {
+  "id": "scene-032",
+  "t0": 179.808,
+  "t1": 185.146,
+  "tipo": "imagen",
+  "texto": "está cansada, y el cuerpo está programado para dormir, no para pensar."
+ },
+ {
+  "id": "scene-033",
+  "t0": 185.146,
+  "t1": 188.806,
+  "tipo": "imagen",
+  "texto": "Por eso, un problema a las 3 de la mañana parece un abismo."
+ },
+ {
+  "id": "scene-034",
+  "t0": 188.806,
+  "t1": 193.533,
+  "tipo": "imagen",
+  "texto": "Y a las 9, con luz, es solo un pendiente."
+ },
+ {
+  "id": "scene-035",
+  "t0": 193.533,
+  "t1": 195.889,
+  "tipo": "imagen",
+  "texto": "Hay cosas que lo empeoran."
+ },
+ {
+  "id": "scene-036",
+  "t0": 195.889,
+  "t1": 199.589,
+  "tipo": "imagen",
+  "texto": "La copa de la noche. El alcohol te ayuda a caer dormido,"
+ },
+ {
+  "id": "scene-037",
+  "t0": 199.589,
+  "t1": 204.091,
+  "tipo": "imagen",
+  "texto": "pero en la segunda mitad de la noche rompe el sueño y te despierta."
+ },
+ {
+  "id": "scene-038",
+  "t0": 204.091,
+  "t1": 207.861,
+  "tipo": "imagen",
+  "texto": "Los bochornos de la menopausia, que encienden el cuerpo de golpe."
+ },
+ {
+  "id": "scene-039",
+  "t0": 207.861,
+  "t1": 212.077,
+  "tipo": "imagen",
+  "texto": "Y la vejiga, que con la edad pide ir al baño de madrugada."
+ },
+ {
+  "id": "scene-040",
+  "t0": 212.077,
+  "t1": 215.577,
+  "tipo": "imagen",
+  "texto": "En internet hay quien dice que a las 3 es la hora del hígado."
+ },
+ {
+  "id": "scene-041",
+  "t0": 215.577,
+  "t1": 220.862,
+  "tipo": "imagen",
+  "texto": "Lo que sí está medido es el cortisol, y el sueño que se hace más ligero."
+ },
+ {
+  "id": "scene-042",
+  "t0": 220.862,
+  "t1": 223.802,
+  "tipo": "imagen",
+  "texto": "Y si roncas fuerte, o te despiertas ahogándote,"
+ },
+ {
+  "id": "scene-043",
+  "t0": 223.802,
+  "t1": 227.312,
+  "tipo": "imagen",
+  "texto": "eso no es estrés: puede ser apnea del sueño."
+ },
+ {
+  "id": "scene-044",
+  "t0": 227.312,
+  "t1": 232.07,
+  "tipo": "imagen",
+  "texto": "Eso lo tiene que ver un médico. Y ahora, algo que"
+ },
+ {
+  "id": "scene-045",
+  "t0": 232.07,
+  "t1": 236.576,
+  "tipo": "imagen",
+  "texto": "quizá te tranquilice. El historiador Roger Ekirch revisó"
+ },
+ {
+  "id": "scene-046",
+  "t0": 236.576,
+  "t1": 241.049,
+  "tipo": "imagen",
+  "texto": "diarios, cartas y juicios de hace siglos, en Europa."
+ },
+ {
+  "id": "scene-047",
+  "t0": 241.049,
+  "t1": 243.549,
+  "tipo": "imagen",
+  "texto": "Y encontró que la gente hablaba de dos sueños:"
+ },
+ {
+  "id": "scene-048",
+  "t0": 243.549,
+  "t1": 247.649,
+  "tipo": "imagen",
+  "texto": "el primer sueño, y el segundo sueño. Entre uno y otro,"
+ },
+ {
+  "id": "scene-049",
+  "t0": 247.649,
+  "t1": 252.849,
+  "tipo": "imagen",
+  "texto": "se despertaban un rato a media noche. Rezaban, platicaban con su pareja,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 252.849,
+  "t1": 256.932,
+  "tipo": "imagen",
+  "texto": "cuidaban el fuego. Y luego se volvían a dormir."
+ },
+ {
+  "id": "scene-051",
+  "t0": 256.932,
+  "t1": 258.992,
+  "tipo": "imagen",
+  "texto": "A nadie le parecía raro."
+ },
+ {
+  "id": "scene-052",
+  "t0": 258.992,
+  "t1": 263.763,
+  "tipo": "imagen",
+  "texto": "Despertarse a media noche era parte de la noche."
+ },
+ {
+  "id": "scene-053",
+  "t0": 263.763,
+  "t1": 269.056,
+  "tipo": "imagen",
+  "texto": "Entonces, ¿qué hacer cuando te despiertas a las 3? Tres cosas."
+ },
+ {
+  "id": "scene-054",
+  "t0": 269.056,
+  "t1": 272.046,
+  "tipo": "imagen",
+  "texto": "Uno: no mires el reloj. En Oxford,"
+ },
+ {
+  "id": "scene-055",
+  "t0": 272.046,
+  "t1": 277.783,
+  "tipo": "imagen",
+  "texto": "a quienes les hicieron vigilar la hora, se preocuparon más y tardaron más en dormirse."
+ },
+ {
+  "id": "scene-056",
+  "t0": 277.783,
+  "t1": 281.933,
+  "tipo": "imagen",
+  "texto": "Voltea el reloj, o deja el celular lejos de la cama."
+ },
+ {
+  "id": "scene-057",
+  "t0": 281.933,
+  "t1": 285.193,
+  "tipo": "imagen",
+  "texto": "Dos: si en unos 20 minutos no te vuelves a dormir,"
+ },
+ {
+  "id": "scene-058",
+  "t0": 285.193,
+  "t1": 288.143,
+  "tipo": "imagen",
+  "texto": "levántate. Ve a otro cuarto con luz baja,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 288.143,
+  "t1": 291.184,
+  "tipo": "imagen",
+  "texto": "y haz algo tranquilo hasta que te dé sueño."
+ },
+ {
+  "id": "scene-060",
+  "t0": 291.184,
+  "t1": 295.864,
+  "tipo": "imagen",
+  "texto": "Así tu cerebro deja de asociar la cama con dar vueltas. Y tres:"
+ },
+ {
+  "id": "scene-061",
+  "t0": 295.864,
+  "t1": 300.004,
+  "tipo": "imagen",
+  "texto": "vacía la cabeza antes de acostarte. En 2018,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 300.004,
+  "t1": 304.684,
+  "tipo": "imagen",
+  "texto": "en Texas, quienes escribieron 5 minutos la lista de pendientes del día siguiente"
+ },
+ {
+  "id": "scene-063",
+  "t0": 304.684,
+  "t1": 308.111,
+  "tipo": "imagen",
+  "texto": "se durmieron más rápido. Lo que queda en el papel,"
+ },
+ {
+  "id": "scene-064",
+  "t0": 308.111,
+  "t1": 313.71,
+  "tipo": "imagen",
+  "texto": "ya no tiene que cuidarlo tu cabeza a las 3 de la mañana."
+ },
+ {
+  "id": "scene-065",
+  "t0": 313.71,
+  "t1": 316.82,
+  "tipo": "imagen",
+  "texto": "Así que la próxima vez que abras los ojos de madrugada,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 316.82,
+  "t1": 319.71,
+  "tipo": "imagen",
+  "texto": "recuerda: no te estás rompiendo."
+ },
+ {
+  "id": "scene-067",
+  "t0": 319.71,
+  "t1": 325.095,
+  "tipo": "imagen",
+  "texto": "Tu cuerpo está haciendo lo que hace cada noche. Despertarse no es el problema."
+ },
+ {
+  "id": "scene-068",
+  "t0": 325.095,
+  "t1": 328.307,
+  "tipo": "imagen",
+  "texto": "El problema es pelearse con la noche."
+ },
+ {
+  "id": "scene-069",
+  "t0": 328.307,
+  "t1": 331.647,
+  "tipo": "imagen",
+  "texto": "Y cuéntame en los comentarios: ¿a qué hora te despiertas tú?"
+ },
+ {
+  "id": "scene-070",
+  "t0": 331.647,
+  "t1": 336.6667,
+  "tipo": "imagen",
+  "texto": "¿Y qué haces para volver a dormir?"
+ }
+]

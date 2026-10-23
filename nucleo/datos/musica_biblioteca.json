@@ -12566,7 +12566,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "despertar_3am_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "polybius__lyria_tramo2": {
@@ -16587,6 +16594,12 @@
      "tramo": 3,
      "desde": 0.0,
      "fecha": "2026-10-21"
+    },
+    {
+     "video": "despertar_3am",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
     }
    ],
    "catalogado": "2026-10-21"
@@ -19479,7 +19492,14 @@
     "dinamica": 0.97
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "despertar_3am",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "wow_curiosidades_reinos_este__lyria_tramo4": {
@@ -22407,6 +22427,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23192,7 +23213,10 @@
    },
    "variante": false,
    "usos": [],
-   "catalogado": "2026-10-22"
+   "catalogado": "2026-10-22",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3"
+   ]
   },
   "er_ranni_atrocidades__lyria_tramo6": {
    "id": "er_ranni_atrocidades__lyria_tramo6",
@@ -27728,7 +27752,14 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "despertar_3am",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "telarana_rota__lyria_tramo3": {
@@ -29105,7 +29136,283 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-23"
+  },
+  "despertar_3am_short__lyria_tramo1": {
+   "id": "despertar_3am_short__lyria_tramo1",
+   "video": "despertar_3am_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\despertar_3am_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "despertar_3am_short__lyria_tramo1.mp3",
+   "md5": "2b919a1ad572d574d57fdb86a7832711",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Por qué a las 3 de la mañana todo parece peor?",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "mente",
+    "cierre"
+   ],
+   "estilo": "Calm nocturnal ambient score for a science explainer drawn in white chalk lines on black with glowing neon: soft felt piano, a music-box, slow pads, a faint clock tick. Instrumental only, no vocals, never loud.",
+   "prompt": "BIBLIOTECA: primer_foton__lyria_2 (desde 0.0 s) — reutilizada el 2026-10-23\n\nPlayful, curious and wonder-filled score for a one-minute animated science short for kids and adults: warm glockenspiel and celesta, pizzicato strings, soft marimba, a light ticking pulse, tiny synth sparkles, and a gentle bass; a cut-paper, hand-made feel. Keeps moving, with short stingers at scene changes. Melodies low and sparse so a narrator can speak over it. Instrumental only.\ngancho: Hook: a curious mysterious rise, sparkling celesta over a ticking pulse, a bright cosmic hit at the end.\ncalor: Silence-then-heat: a hollow low drone, then a rising bubbling boil of marimba and pizzicato, comic tension.\nhiggs: Frantic busy chaos with fast marimba, then a big switch click, heavy slow low brass-like plods for the weights, then a light feather-like flute twirl.\nmultitud: Joyful multiplication: sparkling arpeggios multiplying and stacking up, a wonder-filled swell and a big bright chime.\nniebla: Trapped and dizzy: pinball-like plucks bouncing around, then a slow sad bass and ticking clock.\nlibre: Cooling down: icy glockenspiel, then warm hugging chords as atoms form, then a huge liberating release and a triumphant whoosh upward.\nhoy: Quiet cold space travel: soft airy pad and a lonely celesta, then a cozy retro TV hum.\ncierre: Zooming into static: building tension, then a final bright big-bang chord and sparkles with a magical ending.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "laúd",
+     "marimba",
+     "metales",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "frío",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno",
+     "triste",
+     "épico"
+    ],
+    "genero": [
+     "ciencia ficción",
+     "cinematográfico",
+     "infantil"
+    ]
+   },
+   "medidas": {
+    "dur": 59.32,
+    "rms_db": -15.2,
+    "tempo": 123.0,
+    "brillo_hz": 1602,
+    "energia": [
+     0.25,
+     0.47,
+     0.53,
+     0.55,
+     0.83,
+     0.94,
+     1.0,
+     0.79,
+     0.41,
+     0.57,
+     0.41,
+     0.16
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "despertar_3am__lyria_tramo1": {
+   "id": "despertar_3am__lyria_tramo1",
+   "video": "despertar_3am",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo1.mp3",
+   "archivo": "despertar_3am__lyria_tramo1.mp3",
+   "md5": "59afd72f6f4d79afa9b7864fde39657a",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Por Qué Te DESPIERTAS a las 3 de la Mañana?",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "once",
+    "una"
+   ],
+   "estilo": "Calm nocturnal science-explainer score for a film drawn in white chalk lines on black with glowing yellow neon: soft felt piano, a gentle music-box, slow analog pads, a faint clock-like tick. Instrumental only, no vocals, never loud, always leaves space for a deep narrator voice.",
+   "prompt": "BIBLIOTECA: polilla_foco__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-23\n\nBIBLIOTECA: dos_lunas__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWonder-filled, curious yet slightly tense space-documentary score for a fast-paced animated science video: shimmering celesta and glockenspiel, soft analog synth pads, light pulsing pizzicato, a gentle deep bass, tiny sparkling synth arpeggios; modern, playful, cosmic. Keeps moving, with short stingers at changes. Melodies low and sparse so a narrator can speak over it. Instrumental only. Total length: exactly 2:43 (164 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a cosmic rise. Keep one consistent melodic theme throughout. End on a held, soft, dreamy tone that can flow into the next part.\n\n[0:00 - 0:21] Section 1: Intensity 5/10. Hook: a mysterious cosmic rise with a playful stinger on the question, then a curious ticking pulse.\n[0:21 - 0:41] Section 2: Intensity 4/10. Calm floating pads with a light heartbeat pulse, tides rolling softly in the low end.\n[0:41 - 1:22] Section 3: Intensity 6/10. Playful curious pizzicato, a tiny heist-like rhythm, bright glockenspiel stabs on each idea.\n[1:22 - 2:13] Section 4: Intensity 5/10. Orbital waltz feel: circling arpeggios, a precise ticking clock, delicate and elegant.\n[2:13 - 2:43] Section 5: Intensity 4/10. Dreamy night-sky pads with celesta twinkles, warm and magical, slow shimmer.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 21,
+     "intensidad": 5,
+     "desc": "Hook: a mysterious cosmic rise with a playful stinger on the question, then a curious ticking pulse."
+    },
+    {
+     "t0": 21,
+     "t1": 41,
+     "intensidad": 4,
+     "desc": "Calm floating pads with a light heartbeat pulse, tides rolling softly in the low end."
+    },
+    {
+     "t0": 41,
+     "t1": 82,
+     "intensidad": 6,
+     "desc": "Playful curious pizzicato, a tiny heist-like rhythm, bright glockenspiel stabs on each idea."
+    },
+    {
+     "t0": 82,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "Orbital waltz feel: circling arpeggios, a precise ticking clock, delicate and elegant."
+    },
+    {
+     "t0": 133,
+     "t1": 163,
+     "intensidad": 4,
+     "desc": "Dreamy night-sky pads with celesta twinkles, warm and magical, slow shimmer."
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    6,
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "ciencia ficción",
+     "cinematográfico",
+     "documental",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 111.0,
+    "rms_db": -15.0,
+    "tempo": 123.0,
+    "brillo_hz": 985,
+    "energia": [
+     0.49,
+     0.38,
+     0.35,
+     0.42,
+     0.6,
+     0.71,
+     0.96,
+     0.69,
+     0.65,
+     0.62,
+     1.0,
+     0.76
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "despertar_3am__lyria_tramo2": {
+   "id": "despertar_3am__lyria_tramo2",
+   "video": "despertar_3am",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo2.mp3",
+   "archivo": "despertar_3am__lyria_tramo2.mp3",
+   "md5": "2ddd7dea459bca8573b93b85e903e02e",
+   "canal": "cuerpo_en_neon",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "¿Por Qué Te DESPIERTAS a las 3 de la Mañana?",
+   "tramo": 2,
+   "escenas": [
+    "tres",
+    "mente",
+    "empeora"
+   ],
+   "estilo": "Calm nocturnal science-explainer score for a film drawn in white chalk lines on black with glowing yellow neon: soft felt piano, a gentle music-box, slow analog pads, a faint clock-like tick. Instrumental only, no vocals, never loud, always leaves space for a deep narrator voice.",
+   "prompt": "BIBLIOTECA: wow_darrowshire__lyria_tramo7 (desde 0.0 s) — reutilizada el 2026-10-23\n\nDark fantasy horror score for an animated World of Warcraft lore story about a ghost girl waiting for her father in a ruined village of the Plaguelands: a fragile, slightly out-of-tune music box lullaby as the main motif, low cello and contrabass drones, distant wordless choir, cold plague wind, slow tolling bells, sparse harp and celesta; medieval, mournful and haunted; long silences, melodies kept low so a narrator can speak over it. No drum kit, no pop, no sung words. Total length: exactly 2:09 (129 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with the music box lullaby, tender and bittersweet. A reunion that warms for a moment, then turns cold and haunting; end with the lullaby fading alone.\n\n[0:00 - 0:50] Section 1: Intensity 4/10. bittersweet reunion: the music box lullaby, tender and warm for a moment, soft strings swell gently\n[0:50 - 2:09] Section 2: Intensity 3/10. melancholic and haunting epilogue: the lullaby alone, slower, fading into cold wind and silence",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 4,
+     "desc": "bittersweet reunion: the music box lullaby, tender and warm for a moment, soft strings swell gently"
+    },
+    {
+     "t0": 50,
+     "t1": 129,
+     "intensidad": 3,
+     "desc": "melancholic and haunting epilogue: the lullaby alone, slower, fading into cold wind and silence"
+    }
+   ],
+   "intensidad": [
+    4,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "cajita de música",
+     "campanas",
+     "cello",
+     "coro",
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "frío",
+     "oscuro",
+     "terror",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval",
+     "infantil",
+     "terror"
+    ]
+   },
+   "medidas": {
+    "dur": 121.84,
+    "rms_db": -15.7,
+    "tempo": 161.5,
+    "brillo_hz": 1079,
+    "energia": [
+     0.72,
+     0.57,
+     0.87,
+     1.0,
+     0.97,
+     0.99,
+     0.8,
+     0.76,
+     0.82,
+     0.55,
+     0.15,
+     0.03
+    ],
+    "huecos": [],
+    "dinamica": 0.97
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
   }
  },
- "actualizado": "2026-10-23 07:34"
+ "actualizado": "2026-10-23 08:58"
 }

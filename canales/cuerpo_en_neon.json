@@ -123,6 +123,28 @@
       "programado": "2026-10-29T01:05:00Z",
       "short": true,
       "largo": "duelo_cuerpo"
+    },
+    {
+      "video": "despertar_3am",
+      "id": "xnRw-_gBtMs",
+      "titulo": "¿Por Qué Te DESPIERTAS a las 3 de la Mañana?",
+      "visibilidad": "private",
+      "subido": "2026-10-23",
+      "formato": "línea blanca + neón, fórmula nueva con título «¿Por Qué Te…?», la noche hora por hora + 3 cosas para volver a dormir, 5:37, voz Alejandro Durán, 9 clips + 61 imágenes",
+      "prueba": "tema con señal fuerte fuera (3 AM: drkhoob 4,4 M) dentro de la fórmula nueva; sustituye a corazon_roto",
+      "programado": "2026-10-27T20:05:00Z",
+      "miniatura_b": "salida/miniatura_b.jpg"
+    },
+    {
+      "video": "despertar_3am_short",
+      "id": "aJFzF3I0bBc",
+      "titulo": "¿Por qué a las 3 de la mañana todo parece peor? #Shorts",
+      "visibilidad": "private",
+      "subido": "2026-10-23",
+      "formato": "Short vertical derivado de `despertar_3am`: la mente después de medianoche (Tubbs 2022), 0:54, imágenes del largo reencuadradas 9:16, 5 tomas de voz del largo + gancho/cierre nuevos",
+      "programado": "2026-10-31T01:05:00Z",
+      "short": true,
+      "largo": "despertar_3am"
     }
   ],
   "ideas": {

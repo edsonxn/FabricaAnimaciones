@@ -49,7 +49,7 @@ igual el 28 y el 30-oct, pero no se espera a ellas para cambiar el empaque.
 | # | alias | título | gancho / referencia |
 |---|---|---|---|
 | 1 | `duelo_cuerpo` | ¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas? | Heridas Invisibles 583 K (×45); Día de Muertos 1-2 nov: publicar antes |
-| 2 | `corazon_roto` | ¿Qué Le Pasa a Tu CORAZÓN Cuando Te Lo Rompen? | síndrome de takotsubo (real y medible); mismo público del duelo |
+| 2 | ~~`corazon_roto`~~ → **`despertar_3am`** (23-oct, elegido por el usuario) | ¿Por Qué Te DESPIERTAS a las 3 de la Mañana? | el takotsubo ya lo cuentan `duelo_cuerpo` y su Short la misma semana; vidIQ 23-oct: drkhoob Spanish 4,4 M (63 K subs) |
 | 3 | `soledad_cuerpo` | ¿Qué Le Pasa a Tu CUERPO Cuando Vives Solo? | comentarios de soledad en 55+; Dentro de la Mente ×12-×42 |
 | 4 | `abrazo_20s` | ¿Qué Le Pasa a Tu CUERPO Cuando Abrazas a Alguien 20 Segundos? | «acción de N segundos» (Nexo Mental ×12,7; Código Tesla ×148) |
 | 5 | `despertar_3am` | ¿Por Qué Te DESPIERTAS a las 3 de la Mañana? | cortisol / no dormir, señal en 4 canales (ver abajo) |
@@ -61,6 +61,7 @@ Validar cada tema con `vidiq_youtube_search` antes de escribirlo; si alguno ya t
 | fecha | vistas canal (90 d) | lo nuevo que rindió / no rindió | fuera (vidIQ/Nexlev) | mejora que entra en el siguiente video |
 |---|---|---|---|---|
 | 22-oct | 106 · 1 sub | `short_suspiro` 86 vistas y 6 likes en 1 día; los largos 1-3 | «¿Qué le pasa a tu cuerpo cuando…?» 4-7 min, emoción + ciencia (×45 a ×472) | fórmula nueva completa (arriba) |
+| 23-oct | 19 en 28 d · 1 sub (panel) | todavía nada nuevo público (duelo sale el 25) | validación de la tanda en vidIQ: 3 AM 4,4 M (drkhoob, 63 K subs) y boca seca ×180; soledad 914 K (Fan de Ciencia); llorar y abrazo 20 s sin señal | `despertar_3am` sustituye a `corazon_roto` (tema repetido con el duelo); 5:37 + Short «todo parece peor» |
 
 ## Fórmula vigente hasta el 22-oct (aún sin datos propios: `freno_enojo` salió el 17-oct)
 - **Tema:** una emoción cotidiana explicada por lo que hace el CUERPO (hormonas, nervio vago, amígdala) + qué hacer.
@@ -92,6 +93,7 @@ Validar cada tema con `vidiq_youtube_search` antes de escribirlo; si alguno ya t
 | `estres_cuerpo` (rdzUobc1UAM) | 21-oct 14:02 | línea+neón, recopilatorio 5 zonas, 13:22 | duración LARGA | | medir el 28-oct |
 | `nervio_vago` (NzMhKv8pl6w) | 23-oct 14:02 | línea+neón, un tema (nervio vago) + historia + mitos + 5 técnicas, 9:53, título corto | duración MEDIA + tema con señal fuera | | medir el 30-oct |
 | `duelo_cuerpo` (Mb8umuTXxf4) | 25-oct 20:05 UTC | **fórmula nueva**: «¿Qué Le Pasa a Tu CUERPO Cuando…?», escalera de tiempo + 3 cosas + ofrenda, 5:52; Short `duelo_cuerpo_short` (xw4uMsggHa4, 29-oct) | título-situación + 4-6 min + Short por largo | | medir el 1-nov contra los 4 anteriores |
+| `despertar_3am` | 27-oct 20:05 UTC | fórmula nueva con título «¿Por Qué Te…?» (no «¿Qué Le Pasa…?»), la noche hora por hora + 3 cosas, 5:37; Short `despertar_3am_short` (31-oct 01:05 UTC) | tema con señal fuerte fuera (3 AM, 4,4 M) dentro de la fórmula nueva | | medir el 3-nov contra duelo_cuerpo |
 
 ## Diagnóstico 21-oct: «no tiene impresiones»
 - Datos: `freno_enojo` 0 vistas en 4 días públicos; `agotado_cortisol` 3 en 2 días; Analytics API va ~3 días atrasada

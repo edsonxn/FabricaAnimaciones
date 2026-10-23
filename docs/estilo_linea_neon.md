@@ -142,3 +142,17 @@ Pedido del usuario: el canal no tenía impresiones (1 suscriptor, nicho de salud
   `biblioteca sugerir <v> --excluir <videos del canal>` y `biblioteca buscar "<ánimo>"` encontraron piezas tiernas de
   Edsonxn (suspendido) y Crónicas del gaming.
 - `_hoja_rotulos.py` hace `chdir` a la carpeta del video: pasarle la salida con ruta ABSOLUTA.
+
+## Hallazgos de despertar_3am (23-oct-2026, 2.º largo de la fórmula nueva, 5:37, la noche hora por hora)
+- **61 de 61 imágenes en estilo a la primera** (Nano Banana 2.1 x1, 0 puntos) con «medium close-up» en todas las figuras: ninguna
+  diminuta. Personaje nuevo «el señor» (pijama a rayas, bigote): en ~1 de cada 4 sale con la cabeza NEGRA de contorno blanco
+  (como la miniatura) en vez de blanca; se aceptó, se lee como el mismo.
+- **Política de Flow (video), «menores de edad»:** «a small sleeping figure floating peacefully» en una cueva submarina se
+  rechazó (sin cobro). Nunca «small figure» dormida/flotando en un clip: se cambió por una almohada en el fondo del mar y pasó.
+- **Clip que se queda en 99 % y nunca aparece:** 1 de 9 se quedó así ~10 min y su tarjeta desapareció sin error. Contar los
+  `<video>` (8 ≠ 9), identificar el que falta con la hoja de 2 cuadros por clip y reenviarlo (salió en ~1 min).
+- **Ancla repetida = video negro:** el `cierra` del final se ancló en «para volver a dormir», que también está en la frase del
+  gancho → en `fx hoja` todo lo posterior a 0:39 salió NEGRO. Toda ancla del cierre que se repita en el guion lleva `#2`
+  (o la ocurrencia que toque). `fx hoja` antes del render lo detecta en segundos.
+- Música sin Lyria (402): `biblioteca sugerir` ya no ofrece lo del mismo canal si se pasa `--excluir <todos sus videos>`; aun así
+  sugiere piezas de OTRO video que el canal ya oyó (`christa_pike__lyria_2`, usada en duelo): cotejar con el ESTADO del anterior.

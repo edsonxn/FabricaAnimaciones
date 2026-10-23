@@ -5865,7 +5865,277 @@
    "prompt": "A match struck and candles lit one after another, soft crackle of flames in a quiet room",
    "dur": 3.0,
    "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__abanico": {
+   "id": "despertar_3am__abanico",
+   "video": "despertar_3am",
+   "nombre": "abanico",
+   "archivo": "despertar_3am__abanico.mp3",
+   "md5": "6ee99ceab62184c147cc9a37c7ae1c8a",
+   "prompt": "Hand fan flapping quickly in a quiet room at night",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__almohada": {
+   "id": "despertar_3am__almohada",
+   "video": "despertar_3am",
+   "nombre": "almohada",
+   "archivo": "despertar_3am__almohada.mp3",
+   "md5": "93a20ffc8105e30dc5393950f49e60db",
+   "prompt": "Pillow being turned over and fluffed, soft fabric rustle and a sleepy sigh",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__amanecer": {
+   "id": "despertar_3am__amanecer",
+   "video": "despertar_3am",
+   "nombre": "amanecer",
+   "archivo": "despertar_3am__amanecer.mp3",
+   "md5": "e92e9ed9e38302e2673108b43c0cb07c",
+   "prompt": "Early dawn over a small town: a distant rooster, first birds and a soft breeze",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__arena": {
+   "id": "despertar_3am__arena",
+   "video": "despertar_3am",
+   "nombre": "arena",
+   "archivo": "despertar_3am__arena.mp3",
+   "md5": "6e68ad4ae0543f0b877aeb96db599360",
+   "prompt": "Fine sand pouring slowly through an hourglass, soft continuous hiss",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__arroyo": {
+   "id": "despertar_3am__arroyo",
+   "video": "despertar_3am",
+   "nombre": "arroyo",
+   "archivo": "despertar_3am__arroyo.mp3",
+   "md5": "80ae3396e02ae97e976b18c469acf0e1",
+   "prompt": "Gentle stream of water trickling over smooth stones, close and calm",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__cafe_manana": {
+   "id": "despertar_3am__cafe_manana",
+   "video": "despertar_3am",
+   "nombre": "cafe_manana",
+   "archivo": "despertar_3am__cafe_manana.mp3",
+   "md5": "5bf2f375a3e06e2a0771139a4d6eeed9",
+   "prompt": "Morning kitchen, coffee poured into a ceramic cup, birds chirping outside",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__canon": {
+   "id": "despertar_3am__canon",
+   "video": "despertar_3am",
+   "nombre": "canon",
+   "archivo": "despertar_3am__canon.mp3",
+   "md5": "d9e9cae50c4e189647c82d251d44ce4e",
+   "prompt": "Cold wind blowing across a deep empty canyon at night, hollow and lonely",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__chimenea": {
+   "id": "despertar_3am__chimenea",
+   "video": "despertar_3am",
+   "nombre": "chimenea",
+   "archivo": "despertar_3am__chimenea.mp3",
+   "md5": "d2805eac3a330eb12d18a60ac6ea7a2b",
+   "prompt": "Log placed on a crackling fireplace, embers popping softly",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__copa": {
+   "id": "despertar_3am__copa",
+   "video": "despertar_3am",
+   "nombre": "copa",
+   "archivo": "despertar_3am__copa.mp3",
+   "md5": "c4c9a411bad2045f69bf13daeb10e259",
+   "prompt": "Wine poured into a glass, then the glass set down gently on wood",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__cuerda": {
+   "id": "despertar_3am__cuerda",
+   "video": "despertar_3am",
+   "nombre": "cuerda",
+   "archivo": "despertar_3am__cuerda.mp3",
+   "md5": "c571d94c2dcefd7586c7f84155de5127",
+   "prompt": "Old clock being wound by hand, ratcheting brass spring clicks speeding up",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__gato": {
+   "id": "despertar_3am__gato",
+   "video": "despertar_3am",
+   "nombre": "gato",
+   "archivo": "despertar_3am__gato.mp3",
+   "md5": "51a49ad603a2eec98e23f2ddb64c8ab5",
+   "prompt": "Cat purring softly while asleep, close and gentle",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__grillos": {
+   "id": "despertar_3am__grillos",
+   "video": "despertar_3am",
+   "nombre": "grillos",
+   "archivo": "despertar_3am__grillos.mp3",
+   "md5": "499b50ac30d9b0e9075dfbe437a76637",
+   "prompt": "Crickets chirping outside an open window on a warm quiet night, very calm",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__laboratorio": {
+   "id": "despertar_3am__laboratorio",
+   "video": "despertar_3am",
+   "nombre": "laboratorio",
+   "archivo": "despertar_3am__laboratorio.mp3",
+   "md5": "5e8f13b8c32a7739090fbf33095a089c",
+   "prompt": "Old hospital ward at night, faint electric hum, soft footsteps and a clipboard page turning",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__lampara": {
+   "id": "despertar_3am__lampara",
+   "video": "despertar_3am",
+   "nombre": "lampara",
+   "archivo": "despertar_3am__lampara.mp3",
+   "md5": "c74e622f5ba602abeb8b296d501c81e6",
+   "prompt": "Small bedside lamp switched off with a soft plastic click",
+   "dur": 1.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__lapiz": {
+   "id": "despertar_3am__lapiz",
+   "video": "despertar_3am",
+   "nombre": "lapiz",
+   "archivo": "despertar_3am__lapiz.mp3",
+   "md5": "5ce63ffe9209bcdf36027b34673de834",
+   "prompt": "Pencil writing quickly on paper in a notebook, a short list being scribbled",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__mar_hondo": {
+   "id": "despertar_3am__mar_hondo",
+   "video": "despertar_3am",
+   "nombre": "mar_hondo",
+   "archivo": "despertar_3am__mar_hondo.mp3",
+   "md5": "308700e454eb87513ea60f8c1dcd2cc1",
+   "prompt": "Slow deep ocean swell heard from underwater, muffled low rumble and soft bubbles",
+   "dur": 5.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__ojos": {
+   "id": "despertar_3am__ojos",
+   "video": "despertar_3am",
+   "nombre": "ojos",
+   "archivo": "despertar_3am__ojos.mp3",
+   "md5": "78330158624efe38e3e58d42ae594998",
+   "prompt": "Soft sharp intake of breath and bed sheets rustling as someone wakes suddenly in the dark",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__pagina": {
+   "id": "despertar_3am__pagina",
+   "video": "despertar_3am",
+   "nombre": "pagina",
+   "archivo": "despertar_3am__pagina.mp3",
+   "md5": "bb0a1fc4221b8a2c06bc5b81ebb8fefb",
+   "prompt": "Book page turned slowly in a quiet room, a cup of tea set on a saucer",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__pantuflas": {
+   "id": "despertar_3am__pantuflas",
+   "video": "despertar_3am",
+   "nombre": "pantuflas",
+   "archivo": "despertar_3am__pantuflas.mp3",
+   "md5": "789ed92d9d518a7f7fb63e8b1a6cd2d8",
+   "prompt": "Feet sliding into slippers on a wooden floor, then a few quiet steps",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__papeles": {
+   "id": "despertar_3am__papeles",
+   "video": "despertar_3am",
+   "nombre": "papeles",
+   "archivo": "despertar_3am__papeles.mp3",
+   "md5": "94c3e3e65cb8080c975d42198f1cb397",
+   "prompt": "Envelopes and paper bills shuffled nervously on a wooden table",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__pasillo": {
+   "id": "despertar_3am__pasillo",
+   "video": "despertar_3am",
+   "nombre": "pasillo",
+   "archivo": "despertar_3am__pasillo.mp3",
+   "md5": "cc033f2fb2b9bf6833551b54208987bc",
+   "prompt": "Slippers shuffling down a wooden hallway at night, a door creaking softly",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__peldano": {
+   "id": "despertar_3am__peldano",
+   "video": "despertar_3am",
+   "nombre": "peldano",
+   "archivo": "despertar_3am__peldano.mp3",
+   "md5": "e3e7337417ea7b7ae0fb9afe1b9b256e",
+   "prompt": "Soft low felt-piano note with a shimmering glassy tail, gentle chapter marker",
+   "dur": 2.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__pueblo_viejo": {
+   "id": "despertar_3am__pueblo_viejo",
+   "video": "despertar_3am",
+   "nombre": "pueblo_viejo",
+   "archivo": "despertar_3am__pueblo_viejo.mp3",
+   "md5": "c3c78c894ce80ea5e7531714eb6caa87",
+   "prompt": "Medieval village at night, wind through wooden shutters, a distant owl",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__reloj_cama": {
+   "id": "despertar_3am__reloj_cama",
+   "video": "despertar_3am",
+   "nombre": "reloj_cama",
+   "archivo": "despertar_3am__reloj_cama.mp3",
+   "md5": "69408cd47c611d4eeb69df3989eb7f39",
+   "prompt": "Small wind-up alarm clock ticking loudly on a wooden nightstand in a silent bedroom",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__ronquido": {
+   "id": "despertar_3am__ronquido",
+   "video": "despertar_3am",
+   "nombre": "ronquido",
+   "archivo": "despertar_3am__ronquido.mp3",
+   "md5": "94165b343e4fe47738fb3181cb19db25",
+   "prompt": "Older man snoring loudly and then catching his breath with a short gasp, comic but gentle",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__susurros": {
+   "id": "despertar_3am__susurros",
+   "video": "despertar_3am",
+   "nombre": "susurros",
+   "archivo": "despertar_3am__susurros.mp3",
+   "md5": "998e317d4af2dcc30554c6d402569e84",
+   "prompt": "Two people whispering softly in bed by candlelight, words not understandable",
+   "dur": 3.0,
+   "canal": "cuerpo_en_neon"
+  },
+  "despertar_3am__trueno": {
+   "id": "despertar_3am__trueno",
+   "video": "despertar_3am",
+   "nombre": "trueno",
+   "archivo": "despertar_3am__trueno.mp3",
+   "md5": "79bacdd6c312c613e1cafb6151b4d6d8",
+   "prompt": "Distant soft thunder rolling far away at night, no rain",
+   "dur": 4.0,
+   "canal": "cuerpo_en_neon"
   }
  },
- "actualizado": "2026-10-23 07:34"
+ "actualizado": "2026-10-23 08:58"
 }

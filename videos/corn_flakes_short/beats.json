@@ -1,0 +1,114 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 2.65,
+  "tipo": "imagen",
+  "texto": "Los Corn Flakes nacieron de una olla"
+ },
+ {
+  "id": "scene-002",
+  "t0": 2.65,
+  "t1": 6.318,
+  "tipo": "imagen",
+  "texto": "de trigo que alguien olvidó."
+ },
+ {
+  "id": "scene-003",
+  "t0": 6.318,
+  "t1": 7.858,
+  "tipo": "imagen",
+  "texto": "En mil ochocientos noventa y cuatro,"
+ },
+ {
+  "id": "scene-004",
+  "t0": 7.858,
+  "t1": 11.248,
+  "tipo": "imagen",
+  "texto": "dos hermanos cocían trigo en la cocina de un sanatorio."
+ },
+ {
+  "id": "scene-005",
+  "t0": 11.248,
+  "t1": 12.988,
+  "tipo": "imagen",
+  "texto": "Tuvieron que salir, y el trigo"
+ },
+ {
+  "id": "scene-006",
+  "t0": 12.988,
+  "t1": 14.892,
+  "tipo": "imagen",
+  "texto": "se quedó reposando durante horas."
+ },
+ {
+  "id": "scene-007",
+  "t0": 14.892,
+  "t1": 18.172,
+  "tipo": "imagen",
+  "texto": "Cuando volvieron, estaba duro y rancio. Lo pasaron"
+ },
+ {
+  "id": "scene-008",
+  "t0": 18.172,
+  "t1": 20.694,
+  "tipo": "imagen",
+  "texto": "por los rodillos de todos modos. Y en lugar de masa,"
+ },
+ {
+  "id": "scene-009",
+  "t0": 20.694,
+  "t1": 22.736,
+  "tipo": "imagen",
+  "texto": "salieron hojuelas."
+ },
+ {
+  "id": "scene-010",
+  "t0": 22.736,
+  "t1": 26.209,
+  "tipo": "imagen",
+  "texto": "El hermano mayor, médico, las quería sin azúcar."
+ },
+ {
+  "id": "scene-011",
+  "t0": 26.209,
+  "t1": 28.489,
+  "tipo": "imagen",
+  "texto": "El menor les puso azúcar, fundó"
+ },
+ {
+  "id": "scene-012",
+  "t0": 28.489,
+  "t1": 30.883,
+  "tipo": "imagen",
+  "texto": "su propia empresa, y se hizo millonario."
+ },
+ {
+  "id": "scene-013",
+  "t0": 30.883,
+  "t1": 33.483,
+  "tipo": "imagen",
+  "texto": "Terminaron peleando por su apellido hasta la Suprema"
+ },
+ {
+  "id": "scene-014",
+  "t0": 33.483,
+  "t1": 36.114,
+  "tipo": "imagen",
+  "texto": "Corte. Ese apellido, Kellogg,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 36.114,
+  "t1": 37.786,
+  "tipo": "imagen",
+  "texto": "sigue en tu caja de cereal."
+ },
+ {
+  "id": "scene-016",
+  "t0": 37.786,
+  "t1": 41.25,
+  "tipo": "imagen",
+  "texto": "La historia completa está en el video relacionado."
+ }
+]

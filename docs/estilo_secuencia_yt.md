@@ -112,6 +112,12 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   dentro de un video «WoW Forever» y un rótulo «Hellfire Peninsula» de otro canal → `bajar N --rehacer --q "..."`).
 
 ## Música, render y miniatura (primer cierre: `wow_clases_ocultas`, 13-oct-2026)
+- **MÚSICA = BANDA SONORA OFICIAL DEL JUEGO (el usuario, 23-oct-2026; Warcraft, Tamriel, Runa Caída y Crónicas del gaming): nada de
+  Lyria.** Una pista por puesto elegida por lo que cuenta (tema del jefe/personaje del que se habla, la zona, el tema principal en gancho y
+  cierre), de los canales oficiales «<compositor> - Topic» (Elden Ring: Yuka Kitamura, Shoi Miyazawa, Tai Tomisawa, Tsukasa Saitoh),
+  `yt-dlp -x --audio-format wav` a `audio/ost/`, cada tramo igualado a la misma sonoridad, fundidos cruzados de 2 s y escrito en
+  `audio/musica.wav` (lo que lee `mezcla`; ducking bajo la voz como siempre). Primer uso: `er_malenia_atrocidades` (lista en su ESTADO).
+  Lo de abajo sobre Lyria queda para videos viejos. Riesgo: Content ID del OST (reclamo de monetización): anotarlo si llega.
 - **Lyria**: `LYRIA` con `tramos` (cada uno <= 175 s) y `fab.py <v> musica` llama a `lyria_tramos.py`. En `estilo` NO pongas el
   nombre del juego («in the style of World of Warcraft»): el filtro rechaza nombres propios. Usa «classic high-fantasy MMORPG soundtrack».
 - **Música del patrocinio (el usuario, 13-oct-2026): durante el anuncio de Overgear suena la «musica promo» del canal**
@@ -223,6 +229,20 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   - `ffmpeg -ss 3 -i MASTER -vf fps=1/6,…,tile=8x6` se saltó un tramo entero (867-1023 s) sin avisar: comprueba que las etiquetas
     de la última hoja lleguen al final del video; si hay hueco, saca ese tramo aparte.
   - `bajar --rehacer` truena con `PermissionError` si el 🎞 Montaje del panel tiene abierto el clip: reintentar basta.
+- **Lecciones de `tes_cosas_inutiles` (23-oct-2026, 115 beats, 16:35, todo en 1 sesión):**
+  - **6 MG nuevos en `mg_tes`** (cada uno para su idea, con retratos reales): `agenda` (reloj de 24 h con sectores por tramo del
+    día y medallón del PNJ al centro; remate «Horas de trabajo: 0»), `lena` (troncos que se apilan y contador que se dispara hasta
+    el precio de la casa, barra que se llena), `salud` (barras de salud rojas: 5 contra 25 y cinco bollos que igualan la poción),
+    `receta` (ingredientes que entran uno por palabra y se funden en el resultado), `trato` (bifurcación del trato daédrico: camino
+    A se apaga, camino B con aspa, datos y sello; en dos apariciones) y `compraventa` (línea de tiempo con +2 000/-4 000 y
+    «TU BALANCE» que corre). Hojas de prueba con un script propio antes de `fx` (cuadros a varios dt sobre fondo gris).
+  - **Clips: 30 + 13 + 4 + 2 rehechos en las hojas y 5 + 3 más en `fx hoja` y el MASTER.** Lo nuevo que ensucia: videos de COCINA
+    con personas reales («sweetroll», «cooking»), un mando de Xbox real, teclado real, Elden Ring («mounted combat … vs Elden Ring»),
+    «Unbreakable»/perks a pantalla completa, rótulos de listas de otros canales («#8 FRENZY RUNE», «Instant Kill again!!»),
+    chat de stream a un lado, letreros de mods («JK's Dragonsreach», «BANDICAM» → `recorte_por`). Lo limpio: **Loopy Longplays**
+    (longplays no commentary por facción), Kasaru (Gremio de Ladrones), Otaku Gamboa, guías de UESP-estilo sin rótulos.
+  - Música: Lyria API sin saldo (402) → biblioteca de OTROS canales + OST original de Skyrim (el usuario lo autorizó); la OST se
+    acredita en la descripción (Jeremy Soule / Bethesda) y puede traer Content ID. No catalogar esos tramos como Lyria.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los
@@ -462,6 +482,10 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   - Anclas: comprobar TODAS de una vez contra `timeline.json` con límites de palabra («el dragón» ≠ «del dragón») antes de `fx hoja`.
   - Voz Faraon: 31 de 33 «REGENERAR» eran falsas alarmas (Selubis, Blythe/Blyde, E.G./Ishi por Iji); reales: una toma que se comía
     las dos primeras palabras («Media comunidad») y «rito» → «grito» (cambiado a «ritual»).
+- **`er_malenia_atrocidades` (23-oct-2026, ~19 min, 134 beats):** 37 rehechos en 3 rondas (28 %) con url+segundo fijados por CAPÍTULOS de
+  YouTube (`yt-dlp --print "%(chapters)j"`: SourceSpy91 Part 20 Caelid de 4,5 h marca cada jefe/zona). **Gamerpillar** (guías de misión)
+  lleva rótulos «STEP N» en todos sus clips: evitarlo. Mapas: un mapa de ruta se queda quieto en cuanto la ruta llega (la cámara apenas
+  deriva): terminarlo ~1,5 s tras la última marca o `freezedetect` lo caza (3,9 s). Música = OST oficial (ver § Música).
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.

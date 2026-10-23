@@ -6135,7 +6135,267 @@
    "prompt": "Distant soft thunder rolling far away at night, no rain",
    "dur": 4.0,
    "canal": "cuerpo_en_neon"
+  },
+  "er_malenia_atrocidades__aguja": {
+   "id": "er_malenia_atrocidades__aguja",
+   "video": "er_malenia_atrocidades",
+   "nombre": "aguja",
+   "archivo": "er_malenia_atrocidades__aguja.mp3",
+   "md5": "f894f21ab5c9c2052027d1bf1f87c34e",
+   "prompt": "A thin golden needle slowly pulled out of flesh with a delicate metallic ring, quiet and eerie",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_malenia_atrocidades__alas": {
+   "id": "er_malenia_atrocidades__alas",
+   "video": "er_malenia_atrocidades",
+   "nombre": "alas",
+   "archivo": "er_malenia_atrocidades__alas.mp3",
+   "md5": "9af3f900d5162eaebefb00ee8dab0e44",
+   "prompt": "Huge crimson wings unfurling with a fleshy whoosh and petals scattering in the air, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_malenia_atrocidades__flor": {
+   "id": "er_malenia_atrocidades__flor",
+   "video": "er_malenia_atrocidades",
+   "nombre": "flor",
+   "archivo": "er_malenia_atrocidades__flor.mp3",
+   "md5": "b5491ad21bd06228a60a7193b4cb0013",
+   "prompt": "A giant crimson flower bursting open with a wet organic bloom and a deep rumbling explosion, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_malenia_atrocidades__fuego": {
+   "id": "er_malenia_atrocidades__fuego",
+   "video": "er_malenia_atrocidades",
+   "nombre": "fuego",
+   "archivo": "er_malenia_atrocidades__fuego.mp3",
+   "md5": "d7213edba81c00bc401b08ea069e5178",
+   "prompt": "Crackling torches and a large bonfire burning in a windy red wasteland, distant soldiers, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_malenia_atrocidades__sello": {
+   "id": "er_malenia_atrocidades__sello",
+   "video": "er_malenia_atrocidades",
+   "nombre": "sello",
+   "archivo": "er_malenia_atrocidades__sello.mp3",
+   "md5": "64ee67a842013e7b7e240b5d044bd564",
+   "prompt": "A heavy wax seal stamp slammed onto old parchment, sharp thud with a paper rustle",
+   "dur": 2.0,
+   "canal": "runa_caida"
+  },
+  "heredera_cap2__campana": {
+   "id": "heredera_cap2__campana",
+   "video": "heredera_cap2",
+   "nombre": "campana",
+   "archivo": "heredera_cap2__campana.mp3",
+   "md5": "c67ea8635e372d45cffcb875cdd6159f",
+   "prompt": "A single slow church bell toll inside a small stone chapel at night, long reverberating tail",
+   "dur": 6.0,
+   "canal": "p"
+  },
+  "heredera_cap2__gallo": {
+   "id": "heredera_cap2__gallo",
+   "video": "heredera_cap2",
+   "nombre": "gallo",
+   "archivo": "heredera_cap2__gallo.mp3",
+   "md5": "bff94fd9f0a6c40a3be28e25fe126344",
+   "prompt": "A rooster crowing at dawn on a Mexican ranch, distant, with morning birds and a far dog bark",
+   "dur": 5.0,
+   "canal": "p"
+  },
+  "heredera_cap2__sting_final": {
+   "id": "heredera_cap2__sting_final",
+   "video": "heredera_cap2",
+   "nombre": "sting_final",
+   "archivo": "heredera_cap2__sting_final.mp3",
+   "md5": "8bbea8e1faf937710531826dbf67d5b9",
+   "prompt": "Telenovela shock cliffhanger: a sharp rising violin tremolo that slams into a deep brass and timpani hit, then a long low decay",
+   "dur": 5.0,
+   "canal": "p"
+  },
+  "heredera_cap2__trueno": {
+   "id": "heredera_cap2__trueno",
+   "video": "heredera_cap2",
+   "nombre": "trueno",
+   "archivo": "heredera_cap2__trueno.mp3",
+   "md5": "5805928c86eba1bfcfa8fe5cf4a888cb",
+   "prompt": "A distant rolling thunder at night over the countryside, low and ominous",
+   "dur": 5.0,
+   "canal": "p"
+  },
+  "heredera_cap2__viento": {
+   "id": "heredera_cap2__viento",
+   "video": "heredera_cap2",
+   "nombre": "viento",
+   "archivo": "heredera_cap2__viento.mp3",
+   "md5": "ae2745cfbca8fc0043112167b74d1e29",
+   "prompt": "Cold night wind whistling through old stone corridors and wooden shutters, eerie and hollow",
+   "dur": 10.0,
+   "canal": "p"
+  },
+  "heredera_rancho__campanas": {
+   "id": "heredera_rancho__campanas",
+   "video": "heredera_rancho",
+   "nombre": "campanas",
+   "archivo": "heredera_rancho__campanas.mp3",
+   "md5": "00a1e94076915b0a1faf99a806718c3f",
+   "prompt": "Distant small-town church bell tolling slowly for a funeral, outdoors, melancholic",
+   "dur": 6.0,
+   "canal": "p"
+  },
+  "heredera_rancho__corazon": {
+   "id": "heredera_rancho__corazon",
+   "video": "heredera_rancho",
+   "nombre": "corazon",
+   "archivo": "heredera_rancho__corazon.mp3",
+   "md5": "3590e79d3c616e887d2681db4913bd8b",
+   "prompt": "Muffled anxious heartbeat, slow and heavy, with a faint low room tone, suspense",
+   "dur": 8.0,
+   "canal": "p"
+  },
+  "heredera_rancho__golpe_final": {
+   "id": "heredera_rancho__golpe_final",
+   "video": "heredera_rancho",
+   "nombre": "golpe_final",
+   "archivo": "heredera_rancho__golpe_final.mp3",
+   "md5": "b7220fbc6598e0e6acd40de63734cb61",
+   "prompt": "Big cinematic soap opera cliffhanger hit: timpani and full strings, three descending notes",
+   "dur": 4.0,
+   "canal": "p"
+  },
+  "heredera_rancho__revelacion": {
+   "id": "heredera_rancho__revelacion",
+   "video": "heredera_rancho",
+   "nombre": "revelacion",
+   "archivo": "heredera_rancho__revelacion.mp3",
+   "md5": "020293143022413c9342aeb741c0d62c",
+   "prompt": "Dramatic telenovela reveal hit: deep orchestral string stab with a low piano chord and cymbal swell",
+   "dur": 3.0,
+   "canal": "p"
+  },
+  "novela_altar__copa": {
+   "id": "novela_altar__copa",
+   "video": "novela_altar",
+   "nombre": "copa",
+   "archivo": "novela_altar__copa.mp3",
+   "md5": "d29c7e58de8383af526fcc313b242980",
+   "prompt": "A wine glass falling and shattering on a tile floor",
+   "dur": 1.48,
+   "canal": "p"
+  },
+  "novela_altar__ding": {
+   "id": "novela_altar__ding",
+   "video": "novela_altar",
+   "nombre": "ding",
+   "archivo": "novela_altar__ding.mp3",
+   "md5": "abf3c55b9cce46c742a0feced06666e3",
+   "prompt": "Smartphone text message notification sound, single soft ding in a silent room",
+   "dur": 1.0,
+   "canal": "p"
+  },
+  "novela_altar__frenos": {
+   "id": "novela_altar__frenos",
+   "video": "novela_altar",
+   "nombre": "frenos",
+   "archivo": "novela_altar__frenos.mp3",
+   "md5": "296066a43b9832f1ddbc2ca69a55001b",
+   "prompt": "Car brake pedal pumping uselessly then tires screeching on a mountain curve at night",
+   "dur": 4.0,
+   "canal": "p"
+  },
+  "novela_altar__latido": {
+   "id": "novela_altar__latido",
+   "video": "novela_altar",
+   "nombre": "latido",
+   "archivo": "novela_altar__latido.mp3",
+   "md5": "231b0c966c225207782c0a3c319a7e2e",
+   "prompt": "Slow heavy human heartbeat, low and muffled, tense, cinematic",
+   "dur": 8.0,
+   "canal": "p"
+  },
+  "novela_altar__papel": {
+   "id": "novela_altar__papel",
+   "video": "novela_altar",
+   "nombre": "papel",
+   "archivo": "novela_altar__papel.mp3",
+   "md5": "53da2bb4ed65084e2975fb92d85c84a1",
+   "prompt": "A sheet of paper being crumpled angrily in a fist, close",
+   "dur": 1.48,
+   "canal": "p"
+  },
+  "novela_altar__sting": {
+   "id": "novela_altar__sting",
+   "video": "novela_altar",
+   "nombre": "sting",
+   "archivo": "novela_altar__sting.mp3",
+   "md5": "334fa052af381026901069e9547a0897",
+   "prompt": "Classic Mexican telenovela dramatic reveal sting: short orchestral hit with timpani and strings, dun dun dun",
+   "dur": 3.0,
+   "canal": "p"
+  },
+  "novela_altar__viento_velas": {
+   "id": "novela_altar__viento_velas",
+   "video": "novela_altar",
+   "nombre": "viento_velas",
+   "archivo": "novela_altar__viento_velas.mp3",
+   "md5": "b5ef82f568061ddc62a1e4edf916722b",
+   "prompt": "Sudden strong gust of wind whooshing through a room and blowing out many candles at once",
+   "dur": 2.48,
+   "canal": "p"
+  },
+  "tes_cosas_inutiles__aviso_c": {
+   "id": "tes_cosas_inutiles__aviso_c",
+   "video": "tes_cosas_inutiles",
+   "nombre": "aviso_c",
+   "archivo": "tes_cosas_inutiles__aviso_c.mp3",
+   "md5": "f9895987077fdfb0e1671bc456c0f984",
+   "prompt": "Single deep frame drum hit with a short rising low brass swell, nordic fantasy quest notification",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_inutiles__aviso_d": {
+   "id": "tes_cosas_inutiles__aviso_d",
+   "video": "tes_cosas_inutiles",
+   "nombre": "aviso_d",
+   "archivo": "tes_cosas_inutiles__aviso_d.mp3",
+   "md5": "b6f9a2ffd4104366b36eac6c2b356598",
+   "prompt": "Low male choir hum swelling into one soft drum hit, fantasy quest objective sting",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_inutiles__hachazo": {
+   "id": "tes_cosas_inutiles__hachazo",
+   "video": "tes_cosas_inutiles",
+   "nombre": "hachazo",
+   "archivo": "tes_cosas_inutiles__hachazo.mp3",
+   "md5": "bbbb4861b6fd856d74ad603b28842bc3",
+   "prompt": "Single axe chop splitting a wooden log on a chopping block, crisp wood crack",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_inutiles__monedas_b": {
+   "id": "tes_cosas_inutiles__monedas_b",
+   "video": "tes_cosas_inutiles",
+   "nombre": "monedas_b",
+   "archivo": "tes_cosas_inutiles__monedas_b.mp3",
+   "md5": "e8c19949b304cf2c9f3818abc00b1757",
+   "prompt": "Small stack of gold coins clinking onto a wooden table one by one, medieval tavern",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_inutiles__sello_b": {
+   "id": "tes_cosas_inutiles__sello_b",
+   "video": "tes_cosas_inutiles",
+   "nombre": "sello_b",
+   "archivo": "tes_cosas_inutiles__sello_b.mp3",
+   "md5": "3113eb691b6caf98344bb963527be967",
+   "prompt": "Wax seal stamp pressed hard onto parchment on a wooden desk, dull thud",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-10-23 08:58"
+ "actualizado": "2026-10-23 15:52"
 }

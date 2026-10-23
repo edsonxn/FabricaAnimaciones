@@ -1,0 +1,1129 @@
+# -*- coding: utf-8 -*-
+"""MOTION GRAPHICS «interfaz de Skyrim» por código (Crónicas de Tamriel; primer uso `tes_misiones_daedricas`, 13-oct-2026).
+Hermano de nucleo/mg_wow.py con la estética de los menús de The Elder Scrolls V: humo negro de bordes difuminados (no caja
+con marco), separadores color hueso que se desvanecen en los extremos con un rombo al centro, letra condensada en
+MAYÚSCULAS espaciadas (Bahnschrift Condensed, lo más parecido a la Futura Condensed del juego en Windows) y el rojo sangre
+para lo daédrico. CERO cifras inventadas: solo números que el guion ya dice.
+
+Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a o en/dur):
+    import mg_tes as T
+    FX = [dict(tipo="mg", fn=T.mision("Misión iniciada", "La llamada de Boethiah"), en="Y llegamos al número uno", dur=4.0,
+               y=.16, sale=.4)]
+  mision(arriba, titulo)                       aviso de misión del juego (arriba al centro, sin panel)
+  objeto(nombre, efecto, origen=None)          ficha de objeto del inventario: nombre, separador, efecto con las cifras del guion
+  rejilla(titulo, n, encendidas, remate)       n casillas que se llenan en la marca 0; `encendidas` se vuelven rojas en la marca 1
+  traiciones(titulo, n, ini, paso, cada, etiqueta)   n siluetas; desde la marca 1 caen una a una (hasta la marca 2) y el
+                                               número sube `paso` cada `cada` caídas (Hoja de Ébano: 10 -> 30)
+  reloj(titulo, minutos, remate)               anillo que se vacía de mm:00 a 0:00 entre las marcas 0 y 1; remate en la 2
+  contadores(titulo, [(etiqueta, valor, i_ini, i_fin), ...], remate=(texto, i))   como mg_wow.contadores, sin íconos
+  pegatina(ruta, titulo=None, tam=360)         imagen REAL (wiki) de lo que se nombra como pegatina con borde blanco que rebota y flota
+  Con retratos REALES de la wiki (tes_misiones_nunca, 20-oct-2026):
+  rehenes(titulo, [(ruta, etiqueta)], arriba, dudas, tachar)   la cabaña: quien está sobre el armario arriba, «?» rojos, aspa
+  sospechosos(titulo, pista, falso, culpable)  tablero con hilo rojo: ARRESTADO → el hilo se corta, INOCENTE → EL CARNICERO
+  cadena(titulo, [(texto, ruta)])              pasos unidos por eslabones en serpiente; el último eslabón se rompe y arde
+  balanza(titulo, izq, [der], remate)          lo que te pagan contra lo que pierdes: cada cosa cae al plato y lo inclina
+  tes_cosas_inutiles (23-oct-2026):
+  agenda(titulo, [(h0, h1, etiqueta, color)], retrato, remate)   reloj de 24 h con los tramos del día de un PNJ
+  lena(titulo, tronco, casa, precio, meta, nombre_casa, remate)  troncos apilados y contador hasta el precio de la casa
+  salud(titulo, chico, grande, n_chicos)       barras de salud: lo poco que cura uno contra otro, y cuántos hacen falta
+  receta(titulo, [(ruta, nombre)], resultado, efecto, remate)    ingredientes que se funden en el resultado
+  trato(titulo, perro, premio_a, premio_b, condiciones, datos, sello)   bifurcación de un trato daédrico
+  compraventa(titulo, objeto, [(texto, delta)], remate)          línea de tiempo de compras/ventas con el balance
+"""
+import math
+import os
+
+import numpy as np
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+HUESO, BLANCO, GRIS, SANGRE, ORO = (236, 230, 214), (255, 255, 255), (150, 146, 138), (196, 38, 30), (214, 186, 120)
+_fc, _bc = {}, {}
+
+
+def fuente(estilo, tam):
+    """estilo = variación de Bahnschrift («Condensed», «SemiBold Condensed», «Bold Condensed», «Light Condensed»)."""
+    k = (estilo, tam)
+    if k not in _fc:
+        f = ImageFont.truetype("C:/Windows/Fonts/bahnschrift.ttf", tam)
+        try:
+            f.set_variation_by_name(estilo)
+        except Exception:
+            pass
+        _fc[k] = f
+    return _fc[k]
+
+
+def _pop(dt, dur=0.35):
+    if dt <= 0:
+        return 0.0
+    u = dt / dur
+    return 1.0 if u >= 1.6 else 1 - math.exp(-6 * u) * math.cos(9 * u)
+
+
+def _eo(u):
+    u = max(0.0, min(1.0, u))
+    return 1 - (1 - u) ** 3
+
+
+def _texto(d, xy, s, f, color, ancla="la", alfa=255, track=0):
+    """Texto con sombra suave; track = espacio extra entre letras (px)."""
+    a = int(max(0, min(255, alfa)))
+    if a <= 0:
+        return
+    if not track:
+        d.text((xy[0] + 2, xy[1] + 2), s, font=f, fill=(0, 0, 0, int(a * .85)), anchor=ancla)
+        d.text(xy, s, font=f, fill=tuple(color) + (a,), anchor=ancla)
+        return
+    ancho = sum(d.textlength(c, font=f) for c in s) + track * (len(s) - 1)
+    x = xy[0] - (ancho / 2 if ancla[0] == "m" else ancho if ancla[0] == "r" else 0)
+    for c in s:
+        d.text((x + 2, xy[1] + 2), c, font=f, fill=(0, 0, 0, int(a * .85)), anchor="l" + ancla[1])
+        d.text((x, xy[1]), c, font=f, fill=tuple(color) + (a,), anchor="l" + ancla[1])
+        x += d.textlength(c, font=f) + track
+
+
+def _ancho_track(d, s, f, track):
+    return sum(d.textlength(c, font=f) for c in s) + track * (len(s) - 1)
+
+
+def separador(d, cx, y, medio, alfa=255, color=HUESO, rombo=True):
+    """Línea fina que se desvanece hacia los extremos, con rombo al centro (separador de los menús)."""
+    a = alfa / 255
+    pasos = 60
+    for i in range(pasos):
+        u0, u1 = i / pasos, (i + 1) / pasos
+        k = (1 - u0) ** 1.4
+        for s in (-1, 1):
+            d.line([(cx + s * (8 + u0 * medio), y), (cx + s * (8 + u1 * medio), y)], fill=color + (int(230 * k * a),), width=2)
+    if rombo:
+        d.polygon([(cx - 7, y), (cx, y - 7), (cx + 7, y), (cx, y + 7)], outline=color + (int(255 * a),), fill=(0, 0, 0, int(160 * a)))
+        d.polygon([(cx - 3, y), (cx, y - 3), (cx + 3, y), (cx, y + 3)], fill=color + (int(255 * a),))
+
+
+def _humo(w, h, titulo=None):
+    """Panel de humo negro con bordes difuminados + título espaciado con separador debajo (se calcula una vez)."""
+    k = (w, h, titulo)
+    if k not in _bc:
+        M = 60
+        im = Image.new("RGBA", (w + 2 * M, h + 2 * M), (0, 0, 0, 0))
+        m = Image.new("L", im.size, 0)
+        ImageDraw.Draw(m).rounded_rectangle((M + 10, M + 10, M + w - 10, M + h - 10), 40, fill=205)
+        m = m.filter(ImageFilter.GaussianBlur(26))
+        negro = Image.new("RGBA", im.size, (6, 6, 8, 255))
+        negro.putalpha(m)
+        im.alpha_composite(negro)
+        d = ImageDraw.Draw(im)
+        if titulo:
+            f = fuente("SemiBold Condensed", 40)
+            _texto(d, (M + w / 2, M + 48), titulo.upper(), f, HUESO, "mm", track=5)
+            separador(d, M + w / 2, M + 84, min(w * .42, _ancho_track(d, titulo.upper(), f, 5) / 2 + 120))
+        _bc[k] = (im, M)
+    im, M = _bc[k]
+    return im.copy(), M
+
+
+def _salida(im, dt, pop=True):
+    s = _pop(dt, .45) if pop else _eo(dt / .35)
+    if s <= 0.02:
+        return np.zeros((2, 2, 4), np.uint8)
+    if pop and abs(s - 1) > .004:
+        im = im.resize((max(2, int(im.width * s)), max(2, int(im.height * s))), Image.BILINEAR)
+    elif not pop and s < 1:
+        a = np.array(im)
+        a[..., 3] = (a[..., 3] * s).astype(np.uint8)
+        return a[..., [2, 1, 0, 3]].copy()
+    return np.array(im)[..., [2, 1, 0, 3]].copy()
+
+
+# ------------------------------------------------------------------ aviso de misión
+def mision(arriba, titulo, ancho=1500, color_titulo=HUESO):
+    """«MISIÓN INICIADA» chico y espaciado entre dos separadores; debajo el nombre de la misión, que entra cerrando el
+    espaciado (como el aviso del juego). Sin panel: solo una sombra difusa detrás para que se lea sobre cualquier clip."""
+    h = 190
+    f1, f2 = fuente("Condensed", 34), fuente("SemiBold Condensed", 70)
+
+    def fn(dt, dur, marcas):
+        M = 40
+        im = Image.new("RGBA", (ancho + 2 * M, h + 2 * M), (0, 0, 0, 0))
+        sh = Image.new("L", im.size, 0)
+        ImageDraw.Draw(sh).rounded_rectangle((M + ancho * .18, M + 20, M + ancho * .82, M + h - 10), 60, fill=150)
+        sombra = Image.new("RGBA", im.size, (0, 0, 0, 255))
+        sombra.putalpha(sh.filter(ImageFilter.GaussianBlur(30)))
+        im.alpha_composite(sombra)
+        d = ImageDraw.Draw(im)
+        a = 255 * _eo(dt / .5)
+        cx = M + ancho / 2
+        s1 = arriba.upper()
+        _texto(d, (cx, M + 50), s1, f1, GRIS, "mm", a, track=6)
+        mitad = _ancho_track(d, s1, f1, 6) / 2
+        for s in (-1, 1):                               # separadores a los lados del rótulo chico
+            x0 = cx + s * (mitad + 24)
+            for i in range(40):
+                u0, u1 = i / 40, (i + 1) / 40
+                d.line([(x0 + s * u0 * 240, M + 50), (x0 + s * u1 * 240, M + 50)], fill=HUESO + (int(a * .9 * (1 - u0)),), width=2)
+        tr = 4 + 26 * (1 - _eo(dt / .9))                # el título entra cerrando el espaciado
+        _texto(d, (cx, M + 128), titulo.upper(), f2, color_titulo, "mm", a, track=tr)
+        sale = max(0.0, min(1.0, (dur - dt) / .45))
+        arr = np.array(im)
+        arr[..., 3] = (arr[..., 3] * sale).astype(np.uint8)
+        return arr[..., [2, 1, 0, 3]].copy()
+    return fn
+
+
+# ------------------------------------------------------------------ ficha de objeto
+def _partir(d, s, f, ancho):
+    lineas, cur = [], ""
+    for w in s.split():
+        prueba = (cur + " " + w).strip()
+        if d.textlength(prueba, font=f) <= ancho or not cur:
+            cur = prueba
+        else:
+            lineas.append(cur)
+            cur = w
+    return lineas + [cur] if cur else lineas
+
+
+def objeto(nombre, efecto, origen=None, ancho=780, rojo=False):
+    """Ficha del inventario: `origen` gris arriba (p. ej. «Artefacto de Mephala»), nombre en mayúsculas, separador y el
+    efecto centrado. En `efecto`, lo que va entre *asteriscos* sale en blanco y negrita (las cifras, como en el juego)."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    fe, fb = fuente("Condensed", 36), fuente("Bold Condensed", 36)
+    lineas = _partir(tmp, efecto.replace("*", ""), fe, ancho - 110)
+    fn_ = fuente("SemiBold Condensed", 56)
+    nombres = _partir(tmp, nombre.upper(), fn_, ancho - 160)      # nombre largo (un título de video) en dos líneas
+    h = (60 if origen else 20) + 96 + 66 * (len(nombres) - 1) + 40 + len(lineas) * 50 + 40
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        y = M + 30
+        if origen:
+            _texto(d, (M + ancho / 2, y + 16), origen.upper(), fuente("Condensed", 30), GRIS, "mm", track=4)
+            y += 48
+        for k, ln in enumerate(nombres):
+            _texto(d, (M + ancho / 2, y + 40 + 66 * k), ln, fn_, SANGRE if rojo else HUESO, "mm", track=3)
+        y += 92 + 66 * (len(nombres) - 1)
+        separador(d, M + ancho / 2, y, ancho * .40)
+        y += 34
+        # efecto: reparte las palabras con su estilo (normal gris claro / *negrita blanca*)
+        palabras, neg, pegado = [], False, False
+        for trozo in efecto.split("*"):
+            ws = trozo.split()
+            if ws and pegado and not trozo[0].isspace():     # «*10*.»: el punto va con la palabra en negrita
+                palabras[-1] = (palabras[-1][0] + ws[0], palabras[-1][1])
+                ws = ws[1:]
+            for w in ws:
+                palabras.append((w, neg))
+            pegado = bool(trozo) and not trozo[-1].isspace() and bool(palabras)
+            neg = not neg
+        i = 0
+        for ln in lineas:
+            n = len(ln.split())
+            tramo = palabras[i:i + n]
+            i += n
+            anchos = [d.textlength(w, font=fb if b else fe) for w, b in tramo]
+            esp = d.textlength(" ", font=fe)
+            x = M + ancho / 2 - (sum(anchos) + esp * (len(tramo) - 1)) / 2
+            for (w, b), aw in zip(tramo, anchos):
+                _texto(d, (x, y + 25), w, fb if b else fe, BLANCO if b else (205, 200, 190), "lm")
+                x += aw + esp
+            y += 50
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ rejilla de probabilidad
+def rejilla(titulo, n=100, encendidas=2, remate=None, cols=20, ancho=1180):
+    """n casillas (cols por fila) que aparecen en barrido desde la marca 0; en la marca 1 `encendidas` casillas (repartidas)
+    se vuelven rojo sangre con destello; remate = (texto, i_marca) en grande abajo."""
+    T, G = 40, 9
+    filas_ = math.ceil(n / cols)
+    w_rej = cols * T + (cols - 1) * G
+    h = 110 + filas_ * (T + G) + (96 if remate else 30)
+    rojas = {int(round((k + .5) * n / encendidas + 7)) % n for k in range(encendidas)}
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t0 = marcas[0] if marcas else .3
+        t1 = marcas[1] if len(marcas) > 1 else t0 + 2
+        x0, y0 = M + (ancho - w_rej) / 2, M + 112
+        for i in range(n):
+            r, c = divmod(i, cols)
+            u = dt - t0 - (r + c) * .025
+            if u <= 0:
+                continue
+            a = 255 * _eo(u / .25)
+            x, y = x0 + c * (T + G), y0 + r * (T + G)
+            roja = i in rojas and dt >= t1
+            if roja:
+                v = dt - t1
+                s = _pop(v, .3)
+                e = int((T / 2) * (1 - s))
+                d.rectangle((x - 3, y - 3, x + T + 3, y + T + 3), outline=SANGRE + (int(255 * max(0, 1 - v)),), width=3)
+                d.rectangle((x + e, y + e, x + T - e, y + T - e), fill=SANGRE + (255,))
+            else:
+                d.rectangle((x, y, x + T, y + T), fill=(30, 29, 27, int(a * .9)), outline=HUESO + (int(a * .45),), width=1)
+        if remate and len(marcas) > remate[1] and dt >= marcas[remate[1]]:
+            s = _pop(dt - marcas[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 52), remate[0].upper(), fuente("Bold Condensed", max(8, int(56 * s))), SANGRE, "mm", track=3)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ siluetas que caen (Hoja de Ébano)
+def _silueta(d, x, y, t, color, a):
+    """Busto simple: cabeza y hombros."""
+    r = t * .17
+    d.ellipse((x + t / 2 - r, y + t * .04, x + t / 2 + r, y + t * .04 + 2 * r), fill=color + (int(a),))
+    d.pieslice((x + t * .12, y + t * .46, x + t * .88, y + t * 1.3), 180, 360, fill=color + (int(a),))
+
+
+def traiciones(titulo, n=10, ini=10, paso=4, cada=2, etiqueta="Absorber salud", ancho=1360):
+    """n siluetas hueso aparecen en la marca 0; entre las marcas 1 y 2 caen una a una (se vuelven rojo sangre con una
+    tachadura) y el número de la derecha sube `paso` cada `cada` caídas, de `ini` a ini + paso * n / cada."""
+    T, G = 74, 18
+    w_s = n * T + (n - 1) * G
+    h = 110 + T + 30 + 70
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t0 = marcas[0] if marcas else .3
+        t1 = marcas[1] if len(marcas) > 1 else t0 + 1.5
+        t2 = marcas[2] if len(marcas) > 2 else t1 + 3
+        x0, y0 = M + 60, M + 116
+        caidas = 0
+        for i in range(n):
+            u = dt - t0 - i * .06
+            if u <= 0:
+                continue
+            x = x0 + i * (T + G)
+            tc = t1 + (t2 - t1) * i / max(1, n - 1) if n > 1 else t1
+            if dt >= tc:
+                caidas += 1
+                v = dt - tc
+                _silueta(d, x, y0 + 6 * _eo(v / .3), T, SANGRE, 255)
+                k = _eo(v / .2)
+                d.line([(x + 6, y0 + 8), (x + 6 + (T - 12) * k, y0 + 8 + (T - 4) * k)], fill=(10, 8, 8, 255), width=6)
+            else:
+                _silueta(d, x, y0, T, HUESO, 255 * _eo(u / .25))
+        valor = ini + paso * (caidas // cada)
+        xr = M + 60 + w_s + 40
+        _texto(d, (xr + (ancho - 60 - w_s - 100) / 2 + 20, y0 + 18), etiqueta.upper(), fuente("Condensed", 26), GRIS, "mm", track=3)
+        _texto(d, (xr + (ancho - 60 - w_s - 100) / 2 + 20, y0 + 68), str(valor), fuente("Bold Condensed", 78),
+               SANGRE if caidas >= n else BLANCO, "mm")
+        _texto(d, (M + ancho / 2, M + h - 40), f"{caidas} DE {n}", fuente("SemiBold Condensed", 34),
+               SANGRE if caidas else GRIS, "mm", track=4)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ reloj que se vacía (Anillo de Namira)
+def reloj(titulo, minutos=5, remate=None, ancho=760):
+    """Anillo hueso lleno con «m:00» en la marca 0; entre las marcas 0 y 1 se vacía a 0:00 (el último tramo en rojo);
+    remate = (texto, i_marca)."""
+    R = 128
+    h = 110 + 2 * R + 40 + (80 if remate else 10)
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t0 = marcas[0] if marcas else .3
+        t1 = marcas[1] if len(marcas) > 1 else t0 + 3
+        u = 0.0 if dt < t0 else min(1.0, (dt - t0) / max(.3, t1 - t0))
+        resto = minutos * 60 * (1 - u)
+        cx, cy = M + ancho / 2, M + 110 + R + 10
+        d.ellipse((cx - R, cy - R, cx + R, cy + R), outline=(60, 58, 54, 255), width=16)
+        col = SANGRE if u > .8 else HUESO
+        if u < 1:
+            d.arc((cx - R, cy - R, cx + R, cy + R), -90, -90 + 360 * (1 - u), fill=col + (255,), width=16)
+        _texto(d, (cx, cy), f"{int(resto // 60)}:{int(resto % 60):02d}", fuente("Bold Condensed", 96), SANGRE if u >= 1 else BLANCO, "mm")
+        if remate and len(marcas) > remate[1] and dt >= marcas[remate[1]]:
+            s = _pop(dt - marcas[remate[1]], .35)
+            _texto(d, (cx, M + h - 46), remate[0].upper(), fuente("Bold Condensed", max(8, int(46 * s))), SANGRE, "mm", track=3)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ contadores
+def contadores(titulo, filas_, remate=None, ancho=1100):
+    """filas_ = [(etiqueta, valor, i_ini, i_fin), ...]: la fila aparece en la marca i_ini (None = desde el inicio) y su número
+    corre de 0 a `valor` hasta la marca i_fin. remate = (texto, i_marca) en rojo sangre."""
+    AF = 84
+    h = 110 + len(filas_) * AF + (80 if remate else 20)
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        for k, (et, valor, i0, i1) in enumerate(filas_):
+            t0 = marcas[i0] if i0 is not None and i0 < len(marcas) else 0.0
+            t1 = marcas[i1] if i1 is not None and i1 < len(marcas) else t0 + 2.0
+            if dt < t0:
+                continue
+            y = M + 120 + k * AF
+            a = 255 * _eo((dt - t0) / .3)
+            _texto(d, (M + 70, y + 30), et.upper(), fuente("Condensed", 40), HUESO, "lm", a, track=3)
+            u = (dt - t0) / max(.3, t1 - t0)
+            v = valor if u >= 1 else int(round(valor * (1 - (1 - max(0.0, u)) ** 2.2)))
+            _texto(d, (M + ancho - 70, y + 30), str(max(v, 0)), fuente("Bold Condensed", 66), BLANCO, "rm", a)
+            if k < len(filas_) - 1:
+                separador(d, M + ancho / 2, y + 74, ancho * .38, a * .5, rombo=False)
+        if remate and len(marcas) > remate[1] and dt >= marcas[remate[1]]:
+            s = _pop(dt - marcas[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 50), remate[0].upper(), fuente("Bold Condensed", max(8, int(48 * s))), SANGRE, "mm", track=3)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ pegatina (17-oct-2026, petición del usuario)
+def _base_pegatina(ruta, tam, borde=12):
+    """Recorte con borde blanco y sombra. Render con fondo transparente (íconos de la wiki) -> contorno blanco que sigue la
+    silueta; foto opaca (retratos de PNJ) -> rectángulo de esquinas redondeadas con marco blanco."""
+    im = Image.open(ruta).convert("RGBA")
+    a = np.array(im)[..., 3]
+    recorte = (a < 10).mean() > .12
+    if recorte:
+        im = im.crop(im.getbbox())
+    esc = tam / max(im.size)
+    im = im.resize((max(2, int(im.width * esc)), max(2, int(im.height * esc))), Image.LANCZOS)
+    P = borde * 3
+    lienzo = Image.new("RGBA", (im.width + 2 * P, im.height + 2 * P), (0, 0, 0, 0))
+    if recorte:
+        al = Image.new("L", lienzo.size, 0)
+        al.paste(im.getchannel("A"), (P, P))
+        al = al.point(lambda v: 255 if v > 40 else 0).filter(ImageFilter.MaxFilter(2 * borde + 1)).filter(ImageFilter.GaussianBlur(1.2))
+    else:
+        al = Image.new("L", lienzo.size, 0)
+        ImageDraw.Draw(al).rounded_rectangle((P - borde, P - borde, P + im.width + borde, P + im.height + borde), radius=borde * 2, fill=255)
+        m = Image.new("L", im.size, 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, im.width - 1, im.height - 1), radius=borde, fill=255)
+        im.putalpha(m)
+    sombra = Image.new("RGBA", lienzo.size, (0, 0, 0, 0))
+    sombra.putalpha(al.point(lambda v: int(v * .55)).filter(ImageFilter.GaussianBlur(9)))
+    lienzo.alpha_composite(sombra, (6, 10))
+    blanco = Image.new("RGBA", lienzo.size, (250, 247, 238, 0))
+    blanco.putalpha(al)
+    lienzo.alpha_composite(blanco)
+    lienzo.alpha_composite(im, (P, P))
+    return lienzo
+
+
+def pegatina(ruta, titulo=None, tam=360, giro=-6.0):
+    """Imagen REAL de lo que nombra la voz (objeto, ropa, personaje) como pegatina: entra con rebote girando hasta quedar
+    inclinada `giro` grados, se balancea y flota suave mientras está en pantalla; `titulo` en una píldora hueso debajo.
+    La salida la hace el FX (`sale=`). Imágenes: la wiki de Fandom (elderscrolls.fandom.com, prop=pageimages)."""
+    base = _base_pegatina(ruta, tam)
+    if titulo:
+        f = fuente("Bold Condensed", 34)
+        tw = int(_ancho_track(ImageDraw.Draw(base), titulo.upper(), f, 2)) + 44
+        alto = base.height + 40
+        lien = Image.new("RGBA", (max(base.width, tw + 20), alto), (0, 0, 0, 0))
+        lien.alpha_composite(base, ((lien.width - base.width) // 2, 0))
+        d = ImageDraw.Draw(lien)
+        cx, y0 = lien.width / 2, base.height - 46
+        d.rounded_rectangle((cx - tw / 2, y0, cx + tw / 2, y0 + 52), radius=26, fill=(18, 16, 14, 235), outline=HUESO + (255,), width=2)
+        _texto(d, (cx, y0 + 26), titulo.upper(), f, HUESO, "mm", track=2)
+        base = lien
+
+    def fn(dt, dur, marcas):
+        s = _pop(dt, .42)
+        if s <= 0.02:
+            return np.zeros((2, 2, 4), np.uint8)
+        ang = giro * min(1.0, dt / .5) + (1 - min(1.0, dt / .5)) * -22 + 2.2 * math.sin(dt * 2.1)
+        im = base.rotate(ang, resample=Image.BICUBIC, expand=True)
+        k = s * (1 + .025 * math.sin(dt * 3.0))
+        im = im.resize((max(2, int(im.width * k)), max(2, int(im.height * k))), Image.BILINEAR)
+        a = np.array(im)[..., [2, 1, 0, 3]]
+        fl = int(round(7 * math.sin(dt * 1.7)))           # flota: margen arriba/abajo que se desplaza
+        out = np.zeros((a.shape[0] + 16, a.shape[1], 4), np.uint8)
+        out[8 + fl:8 + fl + a.shape[0]] = a
+        return out
+    return fn
+
+
+# ======================================================================= MG nuevos de `tes_misiones_nunca` (19/20-oct-2026)
+# Retratos REALES (pegatinas/<slug>.png de la wiki) dentro del humo de la interfaz, animados por las marcas de la voz.
+_rc = {}
+
+
+def _retrato(ruta, w, h, gris=0.0):
+    """Recorte w×h de la parte alta de la imagen (las caras de los PNJ están arriba) con esquinas redondeadas y filete hueso.
+    gris 0..1 = desaturado y oscurecido (el que sale de la historia)."""
+    k = (ruta, w, h)
+    if k not in _rc:
+        im = Image.open(ruta).convert("RGBA")
+        if (np.array(im)[..., 3] < 10).mean() > .12:            # objeto con fondo transparente: entero, centrado sobre oscuro
+            im = im.crop(im.getchannel("A").point(lambda v: 255 if v > 40 else 0).getbbox())
+            esc = min((w - 24) / im.width, (h - 24) / im.height)
+            im = im.resize((max(2, int(im.width * esc)), max(2, int(im.height * esc))), Image.LANCZOS)
+            fondo = Image.new("RGBA", (w, h), (30, 28, 26, 255))
+            fondo.alpha_composite(im, ((w - im.width) // 2, (h - im.height) // 2))
+            im = fondo
+        else:
+            if im.height > im.width * 1.2:                      # retrato de cuerpo entero: cabeza y torso
+                im = im.crop((int(im.width * .14), 0, int(im.width * .86), int(im.height * .58)))
+            esc = max(w / im.width, h / im.height)
+            im = im.resize((max(w, int(im.width * esc)), max(h, int(im.height * esc))), Image.LANCZOS)
+            x0 = (im.width - w) // 2
+            y0 = int(min(im.height - h, im.height * .03)) if im.height > im.width else (im.height - h) // 2
+            im = im.crop((x0, y0, x0 + w, y0 + h))
+            a = np.array(im).astype(np.float32)               # fotos oscuras del juego (Astrid): subir la luz
+            lum = a[..., :3].mean()
+            if lum < 80:
+                a[..., :3] = 255 * (a[..., :3] / 255) ** (math.log(80 / 255) / math.log(max(lum, 8) / 255))
+                im = Image.fromarray(a.clip(0, 255).astype(np.uint8))
+        m = Image.new("L", (w, h), 0)
+        ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), radius=14, fill=255)
+        im.putalpha(m)
+        _rc[k] = im
+    im = _rc[k].copy()
+    if gris > 0:
+        a = np.array(im).astype(np.float32)
+        l = a[..., :3].mean(axis=2, keepdims=True)
+        a[..., :3] = (a[..., :3] * (1 - gris) + l * gris) * (1 - .45 * gris)
+        im = Image.fromarray(a.clip(0, 255).astype(np.uint8))
+    return im
+
+
+def _marco(d, x, y, w, h, color, a, ancho=3):
+    d.rounded_rectangle((x - 4, y - 4, x + w + 4, y + h + 4), radius=17, outline=tuple(color) + (int(a),), width=ancho)
+
+
+def _tacha(d, x, y, w, h, u, color=SANGRE, ancho=12):
+    """Aspa roja que se dibuja en dos trazos (u 0..1)."""
+    u1, u2 = min(1.0, u * 2), max(0.0, u * 2 - 1)
+    if u1 > 0:
+        d.line([(x + 10, y + 10), (x + 10 + (w - 20) * u1, y + 10 + (h - 20) * u1)], fill=color + (255,), width=ancho)
+    if u2 > 0:
+        d.line([(x + w - 10, y + 10), (x + w - 10 - (w - 20) * u2, y + 10 + (h - 20) * u2)], fill=color + (255,), width=ancho)
+
+
+def _sello(im, cx, cy, texto, u, color=SANGRE, giro=-12, tam=58):
+    """Sello de tinta que cae desde grande (u 0..1) y se queda torcido."""
+    if u <= 0:
+        return
+    f = fuente("Bold Condensed", tam)
+    tmp = ImageDraw.Draw(Image.new("RGBA", (4, 4)))
+    tw = int(_ancho_track(tmp, texto, f, 4)) + 50
+    th = tam + 34
+    s = Image.new("RGBA", (tw + 20, th + 20), (0, 0, 0, 0))
+    d = ImageDraw.Draw(s)
+    d.rounded_rectangle((10, 10, tw + 10, th + 10), radius=8, outline=color + (255,), width=6)
+    d.rounded_rectangle((18, 18, tw + 2, th + 2), radius=5, outline=color + (170,), width=2)
+    _texto(d, (10 + tw / 2, 10 + th / 2 + 2), texto, f, color, "mm", track=4)
+    k = 1 + 1.4 * (1 - _eo(u / .6))
+    s = s.rotate(giro, resample=Image.BICUBIC, expand=True)
+    s = s.resize((max(2, int(s.width * k)), max(2, int(s.height * k))), Image.BILINEAR)
+    a = np.array(s)
+    a[..., 3] = (a[..., 3] * min(1.0, u / .25)).astype(np.uint8)
+    im.alpha_composite(Image.fromarray(a), (int(cx - s.width / 2), int(cy - s.height / 2)))
+
+
+# ------------------------------------------------------------------ la cabaña (rehenes)
+def rehenes(titulo, personas, arriba=None, dudas=None, tachar=(), ancho=1500):
+    """La cabaña abandonada. personas = [(ruta, etiqueta), ...]; `arriba` = índice de quien está sentado encima del armario
+    (más grande, arriba al centro, con filete rojo). Cada persona entra con su marca (marca i = persona i). `dudas` = marca en la
+    que aparece un «?» rojo sobre cada uno de los demás (cuál tiene el contrato). tachar = [(índice, marca), ...]: aspa roja y
+    el retrato se apaga; si es el de `arriba`, el título se vuelve rojo. Puerta cerrada dibujada a la derecha."""
+    RW, RH = 230, 300
+    otros = [i for i in range(len(personas)) if i != arriba]
+    h = 110 + (RH + 90 if arriba is not None else 0) + RH + 110
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (len(personas) + 4)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        tach = {i: mk[m] if m < len(mk) else 99 for i, m in tachar}
+        y_fila = M + 120 + (RH + 90 if arriba is not None else 0)
+        xs = {}
+        sep = 70
+        w_f = len(otros) * RW + (len(otros) - 1) * sep
+        for k, i in enumerate(otros):
+            xs[i] = (M + (ancho - w_f) / 2 - 90 + k * (RW + sep), y_fila)
+        if arriba is not None:
+            xs[arriba] = (M + ancho / 2 - 90 - RW / 2, M + 116)
+        # puerta cerrada a la derecha (tablones + barra)
+        px, py = M + ancho - 250, y_fila - 40
+        a_p = 255 * _eo((dt - mk[0]) / .5)
+        for t in range(4):
+            d.rectangle((px + t * 42, py, px + t * 42 + 38, py + RH + 40), fill=(52, 40, 30, int(a_p)), outline=(20, 15, 10, int(a_p)))
+        d.rectangle((px - 8, py + RH * .45, px + 176, py + RH * .45 + 26), fill=(90, 70, 50, int(a_p)))
+        _texto(d, (px + 84, py + RH + 74), "CERRADA", fuente("SemiBold Condensed", 32), GRIS, "mm", a_p, track=4)
+        for i, (ruta, et) in enumerate(personas):
+            t0 = mk[i]
+            if dt < t0:
+                continue
+            u = _eo((dt - t0) / .45)
+            x, y = xs[i]
+            y += 30 * (1 - u)
+            ut = _eo((dt - tach.get(i, 99)) / .5)
+            r = _retrato(ruta, RW, RH, gris=.85 * ut)
+            if u < 1:
+                a = np.array(r)
+                a[..., 3] = (a[..., 3] * u).astype(np.uint8)
+                r = Image.fromarray(a)
+            im.alpha_composite(r, (int(x), int(y)))
+            col = SANGRE if i == arriba else HUESO
+            _marco(d, x, y, RW, RH, col, 255 * u, 4 if i == arriba else 2)
+            _texto(d, (x + RW / 2, y + RH + 34), et.upper(), fuente("SemiBold Condensed", 34),
+                   SANGRE if (i == arriba or ut > .5) else HUESO, "mm", 255 * u, track=3)
+            if ut > 0:
+                _tacha(d, x, y, RW, RH, ut)
+            if dudas is not None and i != arriba and ut <= 0 and dt >= mk[dudas]:
+                s = _pop(dt - mk[dudas] - .12 * otros.index(i), .35)
+                if s > .02:
+                    cx, cy = x + RW - 16, y + 14
+                    rr = 34 * s
+                    d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=SANGRE + (255,), outline=BLANCO + (255,), width=3)
+                    _texto(d, (cx, cy + 2), "?", fuente("Bold Condensed", max(8, int(52 * s))), BLANCO, "mm")
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ el tablero del Carnicero
+def sospechosos(titulo, pista, falso, culpable, ancho=1500):
+    """Tablero de corcho en humo. pista/falso/culpable = (ruta, etiqueta). marca 0: la pista (amuleto) al centro · marca 1:
+    el sospechoso falso a la izquierda, unido por hilo rojo · marca 2: sello ARRESTADO sobre él · marca 3: el hilo se corta y
+    el sello cambia a INOCENTE · marca 4: el culpable a la derecha, hilo nuevo y sello EL CARNICERO."""
+    RW, RH = 300, 380
+    h = 110 + RH + 120
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        y = M + 118
+        cx = M + ancho / 2
+        xs = {"pista": cx - 140, "falso": M + 90, "culpable": M + ancho - 90 - RW}
+        pw = 280
+        u_p = _eo((dt - mk[0]) / .45)
+        u_f = _eo((dt - mk[1]) / .45)
+        u_c = _eo((dt - mk[4]) / .45)
+        corte = _eo((dt - mk[3]) / .35)
+        # hilos rojos (se dibujan antes de los retratos)
+        pc = (cx, y + 120)
+        if u_f > 0:
+            pf = (xs["falso"] + RW / 2, y + 40)
+            k = u_f
+            if corte <= 0:
+                d.line([pc, (pc[0] + (pf[0] - pc[0]) * k, pc[1] + (pf[1] - pc[1]) * k)], fill=SANGRE + (230,), width=4)
+            else:                                           # se corta: dos trozos que caen
+                mx, my = (pc[0] + pf[0]) / 2, (pc[1] + pf[1]) / 2
+                caida = 60 * corte
+                d.line([pc, (mx + 20, my + caida)], fill=SANGRE + (int(230 * (1 - corte * .7)),), width=4)
+                d.line([pf, (mx - 20, my + caida)], fill=SANGRE + (int(230 * (1 - corte * .7)),), width=4)
+        if u_c > 0:
+            pq = (xs["culpable"] + RW / 2, y + 40)
+            d.line([pc, (pc[0] + (pq[0] - pc[0]) * u_c, pc[1] + (pq[1] - pc[1]) * u_c)], fill=SANGRE + (255,), width=5)
+        for clave, (ruta, et), u, w_, h_ in (("pista", pista, u_p, pw, pw), ("falso", falso, u_f, RW, RH),
+                                              ("culpable", culpable, u_c, RW, RH)):
+            if u <= 0:
+                continue
+            x = xs[clave]
+            yy = y + (40 if clave == "pista" else 0) + 26 * (1 - u)
+            r = _retrato(ruta, w_, h_, gris=.6 * corte if clave == "falso" else 0)
+            if u < 1:
+                a = np.array(r)
+                a[..., 3] = (a[..., 3] * u).astype(np.uint8)
+                r = Image.fromarray(a)
+            im.alpha_composite(r, (int(x), int(yy)))
+            _marco(d, x, yy, w_, h_, SANGRE if clave == "culpable" else HUESO, 255 * u, 4 if clave == "culpable" else 2)
+            d.ellipse((x + w_ / 2 - 11, yy - 15, x + w_ / 2 + 11, yy + 7), fill=SANGRE + (int(255 * u),),
+                      outline=(40, 0, 0, int(255 * u)), width=2)       # chincheta
+            _texto(d, (x + w_ / 2, yy + h_ + 36), et.upper(), fuente("SemiBold Condensed", 34),
+                   SANGRE if clave == "culpable" else HUESO, "mm", 255 * u, track=3)
+        if dt >= mk[2] and u_f > 0:
+            u_s = (dt - mk[2]) if dt < mk[3] else 1.0
+            _sello(im, xs["falso"] + RW / 2, y + RH * .55, "INOCENTE" if corte > .5 else "ARRESTADO", min(1.0, u_s),
+                   color=GRIS if corte > .5 else SANGRE, giro=-12)
+        if u_c > 0 and dt >= mk[4] + .5:
+            _sello(im, xs["culpable"] + RW / 2, y + RH * .55, "EL CARNICERO", min(1.0, dt - mk[4] - .5), giro=10)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ la cadena de la Hermandad
+def cadena(titulo, pasos, ancho=1760):
+    """pasos = [(texto, ruta|None), ...] en dos filas de 3. Marca i = entra el paso i (retrato chico arriba, texto debajo) con un
+    eslabón que lo une al anterior. Marca len(pasos): el último eslabón se rompe (las dos mitades se separan con chispas) y el
+    último paso arde en rojo. Lo usé para boda → Emperador → sopa → doble → traición → santuario en llamas."""
+    n = len(pasos)
+    por_fila = math.ceil(n / 2)
+    CW, CH, IMG = 380, 250, 150
+    h = 110 + 2 * CH + 70
+
+    def _eslabon(d, x0, y0, x1, y1, u, a, roto=0.0):
+        """Dos óvalos entrelazados entre (x0,y0) y (x1,y1); roto 0..1 los separa."""
+        mx, my = (x0 + x1) / 2, (y0 + y1) / 2
+        vert = abs(y1 - y0) > abs(x1 - x0)
+        for s in (-1, 1):
+            off = s * (16 + 22 * roto)
+            if vert:
+                c = (mx + 4 * s * roto, my + off)
+                bb = (c[0] - 14, c[1] - 22, c[0] + 14, c[1] + 22)
+            else:
+                c = (mx + off, my + 4 * s * roto)
+                bb = (c[0] - 22, c[1] - 14, c[0] + 22, c[1] + 14)
+            col = SANGRE if roto > 0 else ORO
+            d.ellipse(bb, outline=col + (int(a * u),), width=6)
+        col = HUESO + (int(170 * u * (1 - roto)),)
+        if vert:
+            d.line([(x0, y0), (mx, my - 38)], fill=col, width=3)
+            d.line([(mx, my + 38), (x1, y1)], fill=col, width=3)
+        else:
+            d.line([(x0, y0), (mx - 38, my)], fill=col, width=3)
+            d.line([(mx + 38, my), (x1, y1)], fill=col, width=3)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        pos = []
+        x_ini = M + (ancho - (por_fila * CW + (por_fila - 1) * 150)) / 2
+        for i in range(n):
+            fila, col = divmod(i, por_fila)
+            if fila % 2:                                   # la segunda fila va de derecha a izquierda (serpiente)
+                col = por_fila - 1 - col
+            pos.append((x_ini + col * (CW + 150), M + 116 + fila * (CH + 40)))
+        rompe = _eo((dt - mk[n]) / .5)
+        for i in range(1, n):                              # eslabones entre pasos
+            u = _eo((dt - mk[i]) / .4)
+            if u <= 0:
+                continue
+            (xa, ya), (xb, yb) = pos[i - 1], pos[i]
+            if ya == yb:
+                p0 = (xa + CW if xb > xa else xa, ya + CH / 2)
+                p1 = (xb if xb > xa else xb + CW, yb + CH / 2)
+            else:
+                p0, p1 = (xa + CW / 2, ya + CH), (xb + CW / 2, yb)
+            _eslabon(d, p0[0], p0[1], p1[0], p1[1], u, 255, roto=rompe if i == n - 1 else 0)
+        for i, (txt, ruta) in enumerate(pasos):
+            u = _eo((dt - mk[i]) / .45)
+            if u <= 0:
+                continue
+            x, y = pos[i]
+            ultimo = i == n - 1
+            arde = ultimo and rompe > 0
+            fondo = (60, 12, 10) if arde else (22, 21, 20)
+            d.rounded_rectangle((x, y, x + CW, y + CH), radius=16, fill=fondo + (int(220 * u),),
+                                outline=(SANGRE if arde else HUESO) + (int(200 * u),), width=3 if arde else 2)
+            if ruta:
+                r = _retrato(ruta, IMG, IMG)
+                if u < 1:
+                    a = np.array(r)
+                    a[..., 3] = (a[..., 3] * u).astype(np.uint8)
+                    r = Image.fromarray(a)
+                im.alpha_composite(r, (int(x + (CW - IMG) / 2), int(y + 18)))
+            f = fuente("Bold Condensed" if arde else "SemiBold Condensed", 38)
+            lineas = _partir(d, txt.upper(), f, CW - 30)
+            for k, ln in enumerate(lineas[:2]):
+                _texto(d, (x + CW / 2, y + (IMG + 50 if ruta else CH / 2 - 20) + 42 * k), ln, f,
+                       SANGRE if arde else HUESO, "mm", 255 * u, track=2)
+            _texto(d, (x + 28, y + 26), str(i + 1), fuente("Bold Condensed", 34), ORO, "mm", 255 * u)
+            if arde:                                       # llamas: chispas que suben
+                for c in range(18):
+                    fase = (dt * .9 + c * .137) % 1
+                    cxp = x + 20 + (c * 53) % (CW - 40) + 6 * math.sin(dt * 5 + c)
+                    cyp = y + CH - 10 - fase * (CH - 20)
+                    rr = 5 * (1 - fase) + 1
+                    d.ellipse((cxp - rr, cyp - rr, cxp + rr, cyp + rr), fill=(255, 140 + int(80 * (1 - fase)), 40, int(230 * (1 - fase) * rompe)))
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ la balanza
+def balanza(titulo, izq, der, remate=None, ancho=1700):
+    """Balanza de dos platos. izq = (texto, ruta|None) en la marca 0. der = [(texto, ruta|None), ...]: cada cosa cae al plato
+    derecho en la marca 1+k y la balanza se inclina más hacia ese lado. remate = (texto, i_marca) en rojo abajo."""
+    n = len(der)
+    h = 110 + 520 + (80 if remate else 20)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 4)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        cx, top = M + ancho * .34, M + 150
+        llegados = sum(1 for k in range(n) if dt >= mk[1 + k])
+        frac = 0.0
+        for k in range(n):
+            frac += _eo((dt - mk[1 + k]) / .6)
+        ang = math.radians(-4 + 16 * frac / max(1, n))   # izquierda un poco más pesada al principio; luego gana la derecha
+        a0 = 255 * _eo(dt / .4)
+        # poste y base
+        d.line([(cx, top), (cx, top + 400)], fill=ORO + (int(a0),), width=8)
+        d.polygon([(cx - 90, top + 420), (cx + 90, top + 420), (cx + 40, top + 392), (cx - 40, top + 392)], fill=ORO + (int(a0),))
+        d.ellipse((cx - 16, top - 16, cx + 16, top + 16), fill=ORO + (int(a0),))
+        L = ancho * .20
+        pts = {}
+        for s in (-1, 1):
+            ex = cx + s * L * math.cos(ang)
+            ey = top + s * L * math.sin(ang)
+            pts[s] = (ex, ey)
+        d.line([pts[-1], pts[1]], fill=ORO + (int(a0),), width=8)
+        for s in (-1, 1):                                  # cuerdas y plato
+            ex, ey = pts[s]
+            py = ey + 150
+            d.line([(ex, ey), (ex - 120, py)], fill=HUESO + (int(a0 * .8),), width=2)
+            d.line([(ex, ey), (ex + 120, py)], fill=HUESO + (int(a0 * .8),), width=2)
+            d.chord((ex - 150, py - 30, ex + 150, py + 40), 0, 180, fill=(70, 58, 40, int(a0)), outline=ORO + (int(a0),), width=3)
+        # plato izquierdo: lo que te pagan
+        u = _eo((dt - mk[0]) / .45)
+        ex, ey = pts[-1]
+        py = ey + 150
+        if u > 0:
+            if izq[1]:
+                r = _retrato(izq[1], 120, 120)
+                im.alpha_composite(r, (int(ex - 60), int(py - 128 - 20 * (1 - u))))
+            _texto(d, (ex, py + 74), izq[0].upper(), fuente("Bold Condensed", 46), BLANCO, "mm", 255 * u, track=2)
+        # plato derecho: lo que pierdes, se apila
+        ex, ey = pts[1]
+        py = ey + 150
+        for k, (txt, ruta) in enumerate(der):
+            uk = _eo((dt - mk[1 + k]) / .45)
+            if uk <= 0:
+                continue
+            col, fila = k % 3, k // 3
+            xk = ex - 150 + col * 104
+            yk = py - 116 - fila * 110 - 80 * (1 - uk)
+            if ruta:
+                r = _retrato(ruta, 98, 98)
+                a = np.array(r)
+                a[..., 3] = (a[..., 3] * uk).astype(np.uint8)
+                im.alpha_composite(Image.fromarray(a), (int(xk), int(yk)))
+                _marco(d, xk, yk, 98, 98, HUESO, 255 * uk, 2)
+        # lista de lo perdido a la derecha del todo
+        for k, (txt, ruta) in enumerate(der):
+            uk = _eo((dt - mk[1 + k]) / .4)
+            if uk <= 0:
+                continue
+            _texto(d, (M + ancho * .64, M + 160 + k * 64), "- " + txt.upper(), fuente("SemiBold Condensed", 36), HUESO, "lm", 255 * uk, track=2)
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 50), remate[0].upper(), fuente("Bold Condensed", max(8, int(52 * s))), SANGRE, "mm", track=3)
+        return _salida(im, dt)
+    return fn
+
+
+# ================================================================== tes_cosas_inutiles (23-oct-2026): 6 MG nuevos
+def _pega(im, r, x, y, u):
+    """Pega la imagen RGBA r con opacidad u (0..1)."""
+    if u <= 0:
+        return
+    if u < 1:
+        a = np.array(r)
+        a[..., 3] = (a[..., 3] * u).astype(np.uint8)
+        r = Image.fromarray(a)
+    im.alpha_composite(r, (int(x), int(y)))
+
+
+def _redondo(ruta, D):
+    """Retrato recortado en círculo (medallón)."""
+    r = _retrato(ruta, D, D)
+    m = Image.new("L", (D, D), 0)
+    ImageDraw.Draw(m).ellipse((0, 0, D - 1, D - 1), fill=255)
+    r.putalpha(Image.fromarray(np.minimum(np.array(r)[..., 3], np.array(m))))
+    return r
+
+
+def agenda(titulo, tramos, retrato=None, remate=None, ancho=1500):
+    """Reloj de 24 h (0 arriba) cuyos sectores se pintan con la marca de cada tramo. tramos = [(h_ini, h_fin, etiqueta,
+    color), ...]; a la derecha la lista «20:00 - 08:00  POSADA». Retrato en medallón al centro. remate = (texto, i_marca).
+    Primer uso: la agenda de Nazeem (posada 12 h, mercado 4 h, paseo, posada otra vez)."""
+    R = 215
+    h = 110 + 2 * R + 90 + (70 if remate else 0)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (len(tramos) + 3)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        cx, cy = M + ancho * .29, M + 120 + R + 10
+        a0 = 255 * _eo(dt / .4)
+        d.ellipse((cx - R, cy - R, cx + R, cy + R), outline=(70, 66, 60, int(a0)), width=52)
+        for hh in range(24):                               # marcas de las horas
+            ang = math.radians(hh * 15 - 90)
+            r0, r1 = R + 34, R + (48 if hh % 6 == 0 else 40)
+            d.line([(cx + r0 * math.cos(ang), cy + r0 * math.sin(ang)), (cx + r1 * math.cos(ang), cy + r1 * math.sin(ang))],
+                   fill=HUESO + (int(a0 * (1 if hh % 6 == 0 else .5)),), width=3 if hh % 6 == 0 else 2)
+        for hh in (0, 6, 12, 18):
+            ang = math.radians(hh * 15 - 90)
+            _texto(d, (cx + (R + 74) * math.cos(ang), cy + (R + 74) * math.sin(ang)), f"{hh}:00", fuente("SemiBold Condensed", 28),
+                   GRIS, "mm", a0)
+        aguja = None
+        for k, (h0, h1, et, col) in enumerate(tramos):
+            u = _eo((dt - mk[k]) / .9)
+            if u <= 0:
+                continue
+            span = (h1 - h0) % 24 or 24
+            a_ini = h0 * 15 - 90
+            a_fin = a_ini + span * 15 * u
+            d.arc((cx - R, cy - R, cx + R, cy + R), a_ini, a_fin, fill=tuple(col) + (255,), width=50)
+            aguja = a_fin
+            yl = M + 150 + k * 92
+            al = 255 * _eo((dt - mk[k]) / .35)
+            xl = M + ancho * .58
+            d.rounded_rectangle((xl, yl - 16, xl + 32, yl + 16), radius=6, fill=tuple(col) + (int(al),))
+            _texto(d, (xl + 56, yl), f"{h0:02d}:00 - {h1:02d}:00", fuente("Condensed", 34), GRIS, "lm", al, track=2)
+            _texto(d, (xl + 300, yl), et.upper(), fuente("SemiBold Condensed", 44), HUESO, "lm", al, track=3)
+        if retrato:
+            D = 2 * R - 90
+            _pega(im, _redondo(retrato, D), cx - D / 2, cy - D / 2, _eo(dt / .5))
+            d.ellipse((cx - D / 2 - 3, cy - D / 2 - 3, cx + D / 2 + 3, cy + D / 2 + 3), outline=HUESO + (int(a0),), width=3)
+        if aguja is not None:
+            ang = math.radians(aguja)
+            d.line([(cx + (R - 30) * math.cos(ang), cy + (R - 30) * math.sin(ang)),
+                    (cx + (R + 30) * math.cos(ang), cy + (R + 30) * math.sin(ang))], fill=SANGRE + (255,), width=8)
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (M + ancho * .58 + 260, M + h - 70), remate[0].upper(), fuente("Bold Condensed", max(8, int(54 * s))),
+                   SANGRE, "mm", track=3)
+        return _salida(im, dt)
+    return fn
+
+
+def lena(titulo, tronco, casa, precio, meta, nombre_casa, remate=None, ancho=1560):
+    """La cuenta de la leña. marca 0: cae el primer tronco «1 TRONCO = precio MONEDAS» · marca 1: aparece la casa con su
+    precio y la barra vacía · entre las marcas 2 y 3 los troncos se apilan, el contador corre hasta meta/precio troncos y la
+    barra se llena hasta la casa · remate = (texto, i_marca) en rojo."""
+    n_meta = meta // precio
+    h = 110 + 470 + (70 if remate else 10)
+    TW, TH = 120, 72
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        r_t = _retrato(tronco, TW, TH)
+        u0 = _eo((dt - mk[0]) / .5)
+        t2 = mk[2]
+        t3 = mk[3] if mk[3] < 99 else t2 + 3
+        u = 0.0 if dt < t2 else min(1.0, (dt - t2) / max(.5, t3 - t2))
+        u = u ** 2.2                                          # empieza tronco a tronco y luego se dispara
+        n = 1 if u0 > 0 else 0
+        if u > 0:
+            n = max(1, int(round(n_meta * u)))
+        bx, by = M + 70, M + 540                              # pila en pirámide (15 visibles)
+        k = 0
+        for f_i, cnt in enumerate([5, 4, 3, 2, 1]):
+            for c in range(cnt):
+                if k >= min(15, n):
+                    break
+                _pega(im, r_t, bx + f_i * TW / 2 + c * TW, by - (f_i + 1) * (TH - 6), u0)
+                k += 1
+        xr = M + ancho * .50
+        _texto(d, (xr, M + 160), "TRONCOS", fuente("Condensed", 32), GRIS, "lm", 255 * u0, track=4)
+        _texto(d, (xr + 380, M + 160), f"{n:,}".replace(",", " "), fuente("Bold Condensed", 70), BLANCO, "rm", 255 * u0)
+        _texto(d, (xr, M + 250), "MONEDAS", fuente("Condensed", 32), GRIS, "lm", 255 * u0, track=4)
+        _texto(d, (xr + 380, M + 250), f"{n * precio:,}".replace(",", " "), fuente("Bold Condensed", 70), ORO, "rm", 255 * u0)
+        if u0 > 0 and dt < t2:
+            _texto(d, (xr + 190, M + 340), f"1 TRONCO = {precio} MONEDAS", fuente("SemiBold Condensed", 36), HUESO, "mm",
+                   255 * u0, track=3)
+        u1 = _eo((dt - mk[1]) / .5)
+        if u1 > 0:
+            cw, ch = 300, 190
+            cxs, cys = M + ancho - 60 - cw, M + 110
+            _pega(im, _retrato(casa, cw, ch), cxs, cys + 20 * (1 - u1), u1)
+            _marco(d, cxs, cys, cw, ch, ORO, 255 * u1, 2)
+            _texto(d, (cxs + cw / 2, cys + ch + 34), nombre_casa.upper(), fuente("SemiBold Condensed", 30), HUESO, "mm",
+                   255 * u1, track=3)
+            _texto(d, (cxs + cw / 2, cys + ch + 76), f"{meta:,}".replace(",", " ") + " MONEDAS", fuente("Bold Condensed", 40),
+                   ORO, "mm", 255 * u1, track=2)
+            x0, x1, yb = xr, M + ancho - 60, M + 450
+            d.rounded_rectangle((x0, yb, x1, yb + 30), radius=15, fill=(40, 38, 34, int(235 * u1)),
+                                outline=HUESO + (int(150 * u1),), width=2)
+            fr = min(1.0, n * precio / meta)
+            if fr > 0:
+                d.rounded_rectangle((x0, yb, x0 + max(30, (x1 - x0) * fr), yb + 30), radius=15, fill=ORO + (255,))
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 50), remate[0].upper(), fuente("Bold Condensed", max(8, int(50 * s))), SANGRE, "mm",
+                   track=3)
+        return _salida(im, dt)
+    return fn
+
+
+def salud(titulo, chico, grande, n_chicos, ancho=1400):
+    """Barras de salud rojas. chico/grande = (ruta, etiqueta, puntos). marca 0: fila del chico · marca 1: fila del grande ·
+    entre las marcas 2 y 3 aparecen n_chicos iconos del chico y su barra crece hasta igualar al grande."""
+    h = 110 + 3 * 140 + 30
+    IC = 110
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        maxp = grande[2]
+        x0, x1 = M + 330, M + ancho - 170
+
+        def barra(y, et, pts, u, rojo_final=False):
+            _texto(d, (x0, y - 42), et.upper(), fuente("SemiBold Condensed", 32), HUESO, "lm", 255 * u, track=3)
+            d.rectangle((x0, y - 10, x1, y + 22), fill=(30, 10, 8, int(235 * u)), outline=HUESO + (int(120 * u),), width=2)
+            w = (x1 - x0) * pts / maxp * u
+            if w > 6:
+                d.rectangle((x0 + 3, y - 7, x0 + w - 3, y + 19), fill=SANGRE + (255,))
+            _texto(d, (x1 + 24, y + 6), f"+{int(round(pts * u))}", fuente("Bold Condensed", 54),
+                   SANGRE if rojo_final else BLANCO, "lm", 255 * u)
+
+        u = _eo((dt - mk[0]) / .5)
+        if u > 0:
+            _pega(im, _retrato(chico[0], IC, IC), M + 90, M + 170 - IC / 2, u)
+            barra(M + 170, chico[1], chico[2], u)
+        u = _eo((dt - mk[1]) / .5)
+        if u > 0:
+            _pega(im, _retrato(grande[0], IC, IC), M + 90, M + 310 - IC / 2, u)
+            barra(M + 310, grande[1], grande[2], u)
+        if dt >= mk[2]:
+            t3 = mk[3] if mk[3] < 99 else mk[2] + 2.5
+            v = min(1.0, (dt - mk[2]) / max(.5, t3 - mk[2]))
+            k = max(1, min(n_chicos, int(v * n_chicos) + 1))
+            y = M + 450
+            for i in range(k):
+                _pega(im, _retrato(chico[0], 70, 70), M + 40 + i * 50, y - 35, 1.0)
+            barra(y, f"{k} × {chico[1]}", k * chico[2] * 1.0, 1.0, rojo_final=k == n_chicos)
+        return _salida(im, dt)
+    return fn
+
+
+def receta(titulo, ingredientes, resultado, efecto, remate=None, ancho=1640):
+    """ingredientes = [(ruta, nombre)]: entran uno por marca (0..n-1) en fila; en la marca n se juntan hacia el centro y sale
+    resultado = (ruta, nombre) grande con `efecto` («+5 DE SALUD»); remate = (texto, i_marca)."""
+    n = len(ingredientes)
+    IW = 200
+    h = 110 + 300 + 220 + (60 if remate else 0)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 4)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        sep = (ancho - 120 - n * IW) / max(1, n - 1)
+        junta = _eo((dt - mk[n]) / .7)
+        cx = M + ancho / 2
+        for k, (ruta, nom) in enumerate(ingredientes):
+            u = _eo((dt - mk[k]) / .45)
+            if u <= 0:
+                continue
+            x = M + 60 + k * (IW + sep)
+            y = M + 130 + 30 * (1 - u)
+            x += (cx - IW / 2 - x) * junta
+            y += 120 * junta
+            a = u * (1 - junta)
+            _pega(im, _retrato(ruta, IW, IW), x, y, a)
+            _marco(d, x, y, IW, IW, HUESO, 255 * a, 2)
+            if junta < .05:                                    # al juntarse, los nombres se amontonarían
+                _texto(d, (x + IW / 2, y + IW + 30), nom.upper(), fuente("SemiBold Condensed", 32), HUESO, "mm", 255 * a, track=3)
+            if k < n - 1 and junta <= 0:
+                _texto(d, (x + IW + sep / 2, y + IW / 2), "+", fuente("Bold Condensed", 60), ORO, "mm", 255 * u)
+        if junta > 0:
+            s = _pop(dt - mk[n] - .4, .45)
+            if s > .02:
+                D = max(2, int(260 * s))
+                _pega(im, _retrato(resultado[0], D, D), cx - D / 2, M + 120, 1.0)
+                _texto(d, (cx, M + 120 + 260 + 40), resultado[1].upper(), fuente("SemiBold Condensed", 40), HUESO, "mm", track=4)
+                _texto(d, (cx, M + 120 + 260 + 100), efecto.upper(), fuente("Bold Condensed", 64), SANGRE, "mm", track=3)
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (cx, M + h - 46), remate[0].upper(), fuente("Bold Condensed", max(8, int(46 * s))), ORO, "mm", track=3)
+        return _salida(im, dt)
+    return fn
+
+
+def trato(titulo, perro, premio_a, premio_b, condiciones, datos, sello=None, ancho=1700):
+    """Bifurcación del trato daédrico. perro = (ruta, nombre). marca 0: camino A (el perro vivo → premio_a = (ruta, nombre),
+    texto condiciones[0]) · marca 1: camino B (el perro con aspa → premio_b, condiciones[1]) y el A se apaga · marcas 2..: una
+    línea de `datos` por marca bajo el camino B · sello = (texto, i_marca) sobre el premio B."""
+    RW, RH = 210, 250
+    h = 110 + RH + 130 + len(datos) * 52 + 30
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (len(datos) + 6)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ua, ub = _eo((dt - mk[0]) / .5), _eo((dt - mk[1]) / .5)
+        apaga = .75 * ub
+        y = M + 150
+        for lado, u, prem, cond, tach in ((0, ua, premio_a, condiciones[0], False), (1, ub, premio_b, condiciones[1], True)):
+            if u <= 0:
+                continue
+            x0 = M + 50 + lado * ancho / 2
+            gris = apaga if lado == 0 else 0
+            ut = _eo((dt - mk[1] - .4) / .5) if tach else 0
+            _pega(im, _retrato(perro[0], RW, RH, gris=max(gris, .8 * ut)), x0, y, u)
+            _marco(d, x0, y, RW, RH, HUESO, 255 * u, 2)
+            if ut > 0:
+                _tacha(d, x0, y, RW, RH, ut)
+            _texto(d, (x0 + RW / 2, y + RH + 30), perro[1].upper(), fuente("SemiBold Condensed", 30),
+                   SANGRE if ut > .5 else HUESO, "mm", 255 * u, track=3)
+            ax = x0 + RW + 24
+            k = _eo((dt - mk[lado] - .3) / .5)
+            colf = SANGRE if tach else ORO
+            if k > 0:
+                d.line([(ax, y + RH / 2), (ax + 130 * k, y + RH / 2)], fill=colf + (255,), width=6)
+            if k > .9:
+                d.polygon([(ax + 130, y + RH / 2 - 16), (ax + 156, y + RH / 2), (ax + 130, y + RH / 2 + 16)], fill=colf + (255,))
+            px = ax + 176
+            if k > 0:
+                _pega(im, _retrato(prem[0], RW, RH, gris=gris), px, y, k)
+                _marco(d, px, y, RW, RH, colf, 255 * k, 3)
+                _texto(d, (px + RW / 2, y + RH + 30), prem[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * k,
+                       track=3)
+            _texto(d, ((x0 + px + RW) / 2, y - 34), cond.upper(), fuente("Condensed", 30), GRIS if gris > .3 else HUESO, "mm",
+                   255 * u, track=3)
+        xb = M + 50 + ancho / 2
+        for i, txt in enumerate(datos):
+            u = _eo((dt - mk[2 + i]) / .35)
+            if u <= 0:
+                continue
+            yy = y + RH + 92 + i * 52
+            _texto(d, (xb, yy), "- " + txt.upper(), fuente("SemiBold Condensed", 36), HUESO, "lm", 255 * u, track=2)
+        if sello and dt >= mk[sello[1]]:
+            _sello(im, xb + RW + 176 + RW / 2, y + RH * .55, sello[0], min(1.0, dt - mk[sello[1]]), giro=-10, tam=40)
+        return _salida(im, dt)
+    return fn
+
+
+def compraventa(titulo, objeto, pasos, remate=None, ancho=1700):
+    """Libro de cuentas en línea de tiempo. objeto = (ruta, nombre) arriba al centro. pasos = [(texto, delta|None), ...]: el nodo
+    i entra en la marca i con su texto y su movimiento (+2 000 en oro, -4 000 en rojo); abajo «TU BALANCE» corre con cada
+    movimiento. remate = (texto, i_marca)."""
+    n = len(pasos)
+    h = 110 + 200 + 250 + (60 if remate else 0)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 4)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        ow, oh = 520, 120
+        _pega(im, _retrato(objeto[0], ow, oh), M + ancho / 2 - ow / 2, M + 112, a0)
+        y = M + 350
+        x0, x1 = M + 170, M + ancho - 170
+        d.line([(x0, y), (x1, y)], fill=(70, 66, 60, int(255 * a0)), width=6)
+        bal = 0.0
+        for i, (txt, delta) in enumerate(pasos):
+            u = _eo((dt - mk[i]) / .5)
+            x = x0 + (x1 - x0) * i / max(1, n - 1)
+            if i > 0 and u > 0:
+                xa = x0 + (x1 - x0) * (i - 1) / max(1, n - 1)
+                d.line([(xa, y), (xa + (x - xa) * u, y)], fill=HUESO + (255,), width=6)
+            if u <= 0:
+                d.ellipse((x - 12, y - 12, x + 12, y + 12), fill=(30, 30, 30, int(230 * a0)), outline=GRIS + (int(220 * a0),), width=3)
+                continue
+            col = ORO if (delta or 0) > 0 else SANGRE if (delta or 0) < 0 else HUESO
+            r = 12 + 10 * min(1.0, _pop(dt - mk[i], .35))
+            d.ellipse((x - r, y - r, x + r, y + r), fill=col + (255,), outline=BLANCO + (255,), width=3)
+            for k, ln in enumerate(_partir(d, txt.upper(), fuente("SemiBold Condensed", 30), 320)[:3]):
+                _texto(d, (x, y + 50 + 36 * k), ln, fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * u, track=2)
+            if delta:
+                _texto(d, (x, y - 50), ("+" if delta > 0 else "-") + f"{abs(delta):,}".replace(",", " "),
+                       fuente("Bold Condensed", 50), col, "mm", 255 * u)
+                bal += delta * min(1.0, (dt - mk[i]) / .8)
+        yb = M + h - (110 if remate else 55)
+        _texto(d, (M + ancho / 2 - 20, yb), "TU BALANCE", fuente("Condensed", 30), GRIS, "rm", 255 * a0, track=4)
+        _texto(d, (M + ancho / 2 + 20, yb), ("-" if bal < 0 else "") + f"{abs(int(bal)):,}".replace(",", " "),
+               fuente("Bold Condensed", 56), SANGRE if bal < 0 else ORO, "lm", 255 * a0)
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 44), remate[0].upper(), fuente("Bold Condensed", max(8, int(44 * s))), SANGRE, "mm",
+                   track=3)
+        return _salida(im, dt)
+    return fn

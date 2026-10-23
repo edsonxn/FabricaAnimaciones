@@ -1,0 +1,922 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.982,
+  "tipo": "video",
+  "texto": "Hay un objeto en Skyrim que le da nombre a toda la saga. Y cuando por fin lo tienes en la mochila, lo más útil que puedes hacer con él es venderlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.982,
+  "t1": 17.603,
+  "tipo": "video",
+  "texto": "Y no es el único. Skyrim lleva casi quince años con nosotros, y tiene una colección impresionante de cosas que no sirven absolutamente para nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.603,
+  "t1": 27.941,
+  "tipo": "video",
+  "texto": "Hechizos que gastan tu magia para hacer lo que ya hace la brújula. Ventajas que te dan la llave de una puerta que acabas de abrir. Y un grito que te cuesta tres almas de dragón para insultar a un bandido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.941,
+  "t1": 35.351,
+  "tipo": "video",
+  "texto": "Así que hoy van las quince cosas más INÚTILES de Skyrim, de las que solo dan risa a las que te hacen sentir estafado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.351,
+  "t1": 43.055,
+  "tipo": "video",
+  "texto": "Y todo lo que vas a ver está en el juego, con sus cifras reales. No me lo invento. Ojalá me lo inventara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.055,
+  "t1": 51.695,
+  "tipo": "video",
+  "texto": "Número quince. Nazeem. Si has pasado por el mercado de Carrera Blanca, ya lo conoces. Es el señor que te pregunta si vas mucho al Distrito de la Nube,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.695,
+  "t1": 61.589,
+  "tipo": "video",
+  "texto": "y antes de que contestes, se responde él solo. Pues claro que no. Nazeem presume de que aconseja al jarl en asuntos políticos, y de que su opinión es muy valiosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.589,
+  "t1": 67.236,
+  "tipo": "video",
+  "texto": "Pero nunca pisa el palacio. Y ni el jarl ni nadie de su corte lo menciona jamás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.236,
+  "t1": 76.354,
+  "tipo": "video",
+  "texto": "Dice que llegó a lo más alto gracias a su granja, la Granja de Escalofrío. Y la granja la trabaja otro, un empleado suyo llamado Wilmuth.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.354,
+  "t1": 85.274,
+  "tipo": "video",
+  "texto": "¿Y él qué hace todo el día? Duerme doce horas en la posada, El Cazador Ebrio. Se levanta, pasa cuatro horas en el mercado criticando los puestos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.274,
+  "t1": 92.864,
+  "tipo": "video",
+  "texto": "pasea un rato, y a las cuatro de la tarde vuelve a la posada a descansar. Es el único personaje de Skyrim con una agenda más",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 92.864,
+  "t1": 100.37,
+  "tipo": "video",
+  "texto": "relajada que la de un guardia con una flecha en la rodilla. Está en el último puesto porque, al menos, nos regaló el mejor meme del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 100.37,
+  "t1": 109.591,
+  "tipo": "video",
+  "texto": "Y porque con él puedes hacer algo que con el resto de esta lista no puedes. Ignorarlo. En el catorce, cortar leña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.591,
+  "t1": 117.9,
+  "tipo": "video",
+  "texto": "En Cauce Boscoso, el primer pueblo al que llegas, el leñador Hod te deja usar su tajo y te compra cada pieza de leña por cinco monedas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 117.9,
+  "t1": 126.045,
+  "tipo": "video",
+  "texto": "El juego te lo presenta como un trabajo honrado. Coges el hacha, partes un tronco, y te quedas mirando cómo tu personaje da hachazos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 126.045,
+  "t1": 133.483,
+  "tipo": "video",
+  "texto": "La casa más barata de Carrera Blanca, el Hogar de la Brisa, cuesta cinco mil monedas. O sea, mil piezas de leña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 133.483,
+  "t1": 142.387,
+  "tipo": "video",
+  "texto": "Mil veces la misma animación, para tener un techo. Y si esa leña se la vendes a cualquier otro mercader, cada pieza vale una moneda. Hod te paga cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 142.387,
+  "t1": 151.9,
+  "tipo": "video",
+  "texto": "probablemente por lástima. Eres el Sangre de Dragón, el héroe de la profecía, y si quieres casa sin matar a nadie, te toca ahorrar partiendo troncos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 151.9,
+  "t1": 160.43,
+  "tipo": "video",
+  "texto": "Es inútil, sí. Pero es la única forma de ganar dinero sin robar ni matar en todo Skyrim, y eso dice mucho de Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 160.43,
+  "t1": 165.879,
+  "tipo": "video",
+  "texto": "Número trece. La Piedra de la Torre. Skyrim tiene trece piedras guardianas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 165.879,
+  "t1": 172.271,
+  "tipo": "video",
+  "texto": "y cada una te da una bendición. El Guerrero, el Mago, el Ladrón, el Amante... y luego está esta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 172.271,
+  "t1": 181.13,
+  "tipo": "video",
+  "texto": "Está a medio camino entre Lucero del Alba e Hibernalia, en lo alto de un acantilado nevado, y para llegar tienes que subir la montaña a pulso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 181.13,
+  "t1": 189.244,
+  "tipo": "video",
+  "texto": "Su poder es abrir sola, una vez al día, una cerradura de nivel experto o menor. Una vez al día, y solo hasta experto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 189.244,
+  "t1": 200.974,
+  "tipo": "video",
+  "texto": "Las de nivel maestro, que son las únicas que de verdad cuestan, esas no las abre. Mientras tanto, cualquier ganzúa, que te encuentras por todas partes, hace lo mismo cuantas veces quieras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 200.974,
+  "t1": 208.483,
+  "tipo": "video",
+  "texto": "Y encima, las cerraduras que abre la piedra no cuentan en tus estadísticas. Ni siquiera cuentan para el logro de ladrón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 208.483,
+  "t1": 214.863,
+  "tipo": "video",
+  "texto": "Su único uso de verdad es escapar de la cárcel, porque los cofres de la prisión tienen cerradura experta. O sea,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 214.863,
+  "t1": 221.467,
+  "tipo": "video",
+  "texto": "que es una piedra para gente a la que arrestan todos los días. En el doce, la Llave de cera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 221.467,
+  "t1": 231.509,
+  "tipo": "video",
+  "texto": "Es una ventaja de Abrir cerraduras, de nivel cincuenta, y suena de maravilla. Cada vez que fuerzas una cerradura, te llevas una copia de su llave. Piénsalo un segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 231.509,
+  "t1": 240.283,
+  "tipo": "video",
+  "texto": "Te dan la llave de una puerta que acabas de abrir. Es como si te regalaran un paraguas justo cuando deja de llover. Y en el mismo árbol, en el nivel cien,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 240.283,
+  "t1": 248.958,
+  "tipo": "video",
+  "texto": "está Irrompible, la ventaja que hace que tus ganzúas no se rompan nunca. Con esa, la Llave de cera ya no sirve ni de recuerdo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 248.958,
+  "t1": 258.685,
+  "tipo": "video",
+  "texto": "Gastar un punto de ventaja en esto es elegir, con toda la calma del mundo, no mejorar en nada. Lo único que consigue es llenarte el inventario de llaves con nombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 258.685,
+  "t1": 266.919,
+  "tipo": "video",
+  "texto": "Llave de la casa de no sé quién. Llave del cofre de no sé qué. Llaves de puertas que ya están abiertas. Si eso no es la definición de inútil,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 266.919,
+  "t1": 275.325,
+  "tipo": "video",
+  "texto": "que alguien me explique cuál es. Número once. Clarividencia. Es un hechizo de Ilusión de nivel novato,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 275.325,
+  "t1": 286.444,
+  "tipo": "video",
+  "texto": "y lo vende casi cualquier mago, y hasta la tienda de Cauce Boscoso. Mientras lo mantienes, dibuja en el suelo un rastro de luz que te lleva hacia tu objetivo actual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 286.444,
+  "t1": 293.816,
+  "tipo": "video",
+  "texto": "El problema es que el juego ya tiene una brújula que te marca exactamente lo mismo, con un marcador encima, y sin gastar nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 293.816,
+  "t1": 302.536,
+  "tipo": "video",
+  "texto": "Clarividencia hace lo que ya hace la brújula, pero gastando veinticinco puntos de magia por segundo. Es el mapa más caro de todo Tamriel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 302.536,
+  "t1": 311.145,
+  "tipo": "video",
+  "texto": "Y como solo funciona mientras lo lanzas, vas por el camino con la mano en alto, gastando magia, como quien busca señal con el teléfono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 311.145,
+  "t1": 320.43,
+  "tipo": "video",
+  "texto": "Su mayor virtud es que sube Ilusión sin ningún peligro. O sea, que lo mejor que puedes hacer con él es lanzarlo contra la nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 320.43,
+  "t1": 325.281,
+  "tipo": "video",
+  "texto": "En el diez, el bollo dulce. Es la comida más famosa de Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 325.281,
+  "t1": 335.41,
+  "tipo": "video",
+  "texto": "Tan famosa, que hasta los guardias se burlan de ti con ella. A ver si lo adivino, alguien te robó tu bollo dulce. Hay ciento sesenta bollos colocados a mano por el mundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 335.41,
+  "t1": 342.321,
+  "tipo": "video",
+  "texto": "en más de ochenta sitios distintos. ¿Y qué hace? Te cura cinco puntos de salud. Cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 342.321,
+  "t1": 354.355,
+  "tipo": "video",
+  "texto": "La poción de curación más pequeña del juego te cura veinticinco. O sea, que para igualar un frasquito tendrías que comerte cinco bollos en mitad de la pelea, mientras un draugr te espera con mucha educación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 354.355,
+  "t1": 361.578,
+  "tipo": "video",
+  "texto": "Y con Hearthfire, puedes hornearlo tú mismo con cinco ingredientes. Sal, harina, mantequilla, leche y un huevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 361.578,
+  "t1": 370.935,
+  "tipo": "video",
+  "texto": "Cinco ingredientes para cinco puntos de salud. Un punto por ingrediente. Las cuentas de la panadería de Skyrim no fallan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 370.935,
+  "t1": 378.007,
+  "tipo": "video",
+  "texto": "Número nueve. Telequinesia. En cualquier otro mundo, mover objetos con la mente sería el poder más temido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 378.007,
+  "t1": 385.415,
+  "tipo": "video",
+  "texto": "En Skyrim es un hechizo de Alteración, de nivel adepto, que te deja atraer un objeto desde lejos o lanzarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 385.415,
+  "t1": 395.529,
+  "tipo": "video",
+  "texto": "Y cuesta ciento setenta puntos de magia por segundo. Por segundo. Lo que lanzas apenas hace daño. Lo justo para que un aldeano se enfade contigo, y nada más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 395.529,
+  "t1": 402.67,
+  "tipo": "video",
+  "texto": "En combate, no sirve. Y encima, en el juego base no hay ni un solo sitio fijo donde encontrar el libro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 402.67,
+  "t1": 410.015,
+  "tipo": "video",
+  "texto": "O se lo compras a Tolfdir en el Colegio de Hibernalia, o tienes un veinticinco por ciento de suerte de que aparezca en una ruina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 410.015,
+  "t1": 420.752,
+  "tipo": "video",
+  "texto": "Lo más útil que hace es robar cosas desde el otro lado de la mesa sin que el dueño te vea. Que, siendo sinceros, es justo para lo que lo querías. Y si te quedas sin magia mientras sujetas algo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 420.752,
+  "t1": 429.479,
+  "tipo": "video",
+  "texto": "el objeto sale disparado con el mismo ruido que un grito de dragón. Muy discreto todo. En el ocho, Reflejos rápidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 429.479,
+  "t1": 438.354,
+  "tipo": "video",
+  "texto": "Es una ventaja de Bloquear, de nivel treinta. Cuando un enemigo te lanza un ataque de poder, y tú estás bloqueando, el tiempo se ralentiza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 438.354,
+  "t1": 444.887,
+  "tipo": "video",
+  "texto": "Léelo otra vez. El tiempo se ralentiza, para que esquives un golpe que ya estás parando con el escudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 444.887,
+  "t1": 456.127,
+  "tipo": "video",
+  "texto": "Es ponerle cámara lenta a un problema que ya tenías resuelto. Y por si fuera poco, tiene un error famoso. Si golpeas con el escudo justo en ese momento, y hay varios enemigos a la vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 456.127,
+  "t1": 463.896,
+  "tipo": "video",
+  "texto": "la cámara lenta puede no terminar nunca. Al principio tiene gracia. Luego te das cuenta de que estás atrapado",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 463.896,
+  "t1": 472.43,
+  "tipo": "video",
+  "texto": "en una película de acción a cámara lenta, y que la única forma segura de salir es bloquear otra vez y esperar a que te vuelvan a pegar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 472.43,
+  "t1": 482.81,
+  "tipo": "video",
+  "texto": "Número siete. Los caballos. En la tierra de los dragones, un caballo debería ser tu mejor aliado. En Skyrim, es un compañero con ideas propias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 482.81,
+  "t1": 489.259,
+  "tipo": "video",
+  "texto": "Se mete a pelear por su cuenta contra lo que se te ponga delante, y tú te pasas el combate intentando que no se muera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 489.259,
+  "t1": 496.58,
+  "tipo": "video",
+  "texto": "Desde una actualización del juego puedes luchar montado, pero solo con armas y con arco. Con magia, nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 496.58,
+  "t1": 506.424,
+  "tipo": "video",
+  "texto": "Eso sí, sube montañas casi verticales como si fuera una cabra. Y si caes desde muy alto, a veces la caída que te iba a matar a ti, mata al caballo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 506.424,
+  "t1": 514.518,
+  "tipo": "video",
+  "texto": "Y mi favorita. El caballo cuenta como testigo. Si cometes un crimen delante de él, es como si te hubiera visto alguien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 514.518,
+  "t1": 524.519,
+  "tipo": "video",
+  "texto": "Así que tu fiel corcel, en el fondo, es un chivato de cuatro patas. Y el único caballo que de verdad vale la pena, Shadowmere, solo lo consigues con la Hermandad Oscura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 524.519,
+  "t1": 531.956,
+  "tipo": "video",
+  "texto": "Si la destruyes, no lo vas a ver nunca. En el seis, dos poderes de raza que nadie usa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 531.956,
+  "t1": 540.876,
+  "tipo": "video",
+  "texto": "Cada raza de Skyrim tiene un poder especial que puedes usar una vez al día. Los nórdicos hacen huir a sus enemigos, los bretones absorben hechizos...",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 540.876,
+  "t1": 549.789,
+  "tipo": "video",
+  "texto": "y luego están los imperiales y los bosmer. El imperial tiene la Voz del Emperador. Calma a la gente que tiene cerca durante sesenta segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 549.789,
+  "t1": 558.319,
+  "tipo": "video",
+  "texto": "Solo a la gente. Ni animales, ni monstruos, ni dragones. Que, casualmente, es casi todo lo que quiere matarte en este juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 558.319,
+  "t1": 566.917,
+  "tipo": "video",
+  "texto": "Y aunque se parece mucho a un hechizo de Ilusión, no aprovecha ninguna ventaja de Ilusión. Un minuto de paz, y luego a pelear igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 566.917,
+  "t1": 574.332,
+  "tipo": "video",
+  "texto": "El bosmer tiene Dominar animal. Convierte a un animal en tu aliado, también sesenta segundos, una vez al día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 574.332,
+  "t1": 584.017,
+  "tipo": "video",
+  "texto": "Un lobo amigo durante un minuto. Justo lo que tarda en morir contra el primer bandido. Lo más irónico es que el imperial tiene otra habilidad que sí funciona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 584.017,
+  "t1": 592.43,
+  "tipo": "video",
+  "texto": "Encuentra unas cuantas monedas de más en los cofres con oro. Su verdadero poder de raza es encontrar calderilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 592.43,
+  "t1": 602.208,
+  "tipo": "video",
+  "texto": "Número cinco. La Cuchilla de Mehrunes. En Lucero del Alba vive Silo Vesuio, un hombre que tiene en su casa un museo dedicado al Amanecer Mítico,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 602.208,
+  "t1": 610.243,
+  "tipo": "video",
+  "texto": "la secta que intentó traer a Mehrunes Dagon a Tamriel. Te pide que le ayudes a reunir las piezas de la daga más legendaria de su señor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 610.243,
+  "t1": 616.164,
+  "tipo": "video",
+  "texto": "El pomo, la empuñadura y los fragmentos de la hoja. La vaina ya la tiene él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 616.164,
+  "t1": 626.138,
+  "tipo": "video",
+  "texto": "Y cuando las llevas al santuario, Mehrunes Dagon te pone una condición. La daga se repara, si matas a Silo. Así que matas al único fan de Dagon que te trató bien,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 626.138,
+  "t1": 636.075,
+  "tipo": "video",
+  "texto": "y a cambio te llevas una daga que puede matar a cualquier enemigo de un solo golpe. ¿La probabilidad? Según el propio código del juego, tenía que ser del uno por ciento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 636.075,
+  "t1": 644.485,
+  "tipo": "video",
+  "texto": "Pero por un error, es de dos entre ciento uno. Casi un dos por ciento. Más o menos, un golpe de cada cincuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 644.485,
+  "t1": 653.149,
+  "tipo": "video",
+  "texto": "Y además, la daga no mejora con ninguna ventaja de Herrería. Y los dos jefes más duros de Dragonborn, Miraak y Karstaag,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 653.149,
+  "t1": 660.811,
+  "tipo": "video",
+  "texto": "son inmunes a la muerte instantánea. Siendo justos, como daga no está mal. Hace lo mismo que una daga daédrica y pesa la mitad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 660.811,
+  "t1": 670.085,
+  "tipo": "video",
+  "texto": "Pero si la quieres por el milagro, prepárate para dar muchas puñaladas esperándolo. En el cuatro, el Hacha del arrepentimiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 670.085,
+  "t1": 679.725,
+  "tipo": "video",
+  "texto": "Cerca de Falkreath te encuentras con un perro que habla. Se llama Barbas, y es el compañero de Clavicus Vile, el príncipe de los tratos, con el que se acaba de pelear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 679.725,
+  "t1": 685.007,
+  "tipo": "video",
+  "texto": "Lo acompañas por media provincia hasta el santuario del príncipe, y Clavicus te manda a por un hacha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 685.007,
+  "t1": 695.73,
+  "tipo": "video",
+  "texto": "Y cuando vuelves con ella, te ofrece un trato. Si le devuelves al perro, te da su máscara. Pero si matas a Barbas con el hacha, te la puedes quedar. Barbas es invulnerable durante todo el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 695.73,
+  "t1": 702.542,
+  "tipo": "video",
+  "texto": "Esa hacha es lo único que puede hacerle daño. Así que matas al perro que te acompañó todo el camino, ¿y qué te llevas?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 702.542,
+  "t1": 713.492,
+  "tipo": "video",
+  "texto": "Un hacha de veintidós de daño, que le quita veinte puntos de aguante al enemigo. Es el arma cuerpo a cuerpo más lenta de todo el juego. Más lenta que cualquier martillo de guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 713.492,
+  "t1": 720.699,
+  "tipo": "video",
+  "texto": "No mejora con ninguna ventaja de Herrería, y ni siquiera cuenta como artefacto daédrico para el logro de reunirlos todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 720.699,
+  "t1": 728.374,
+  "tipo": "video",
+  "texto": "Mataste a un perro por un hacha que ni el propio juego considera especial. Con razón se llama del arrepentimiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 728.374,
+  "t1": 739.563,
+  "tipo": "video",
+  "texto": "Número tres. Ser hombre lobo, en el juego original. Los Compañeros de Carrera Blanca te ofrecen la sangre de la bestia como el mayor de los honores. Y la primera vez, la verdad, impresiona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 739.563,
+  "t1": 747.335,
+  "tipo": "video",
+  "texto": "Te transformas una vez al día durante dos minutos y medio, y cada vez que te comes un cadáver, ganas treinta segundos más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 747.335,
+  "t1": 753.514,
+  "tipo": "video",
+  "texto": "Pero mientras eres lobo no puedes usar tu equipo, ni hechizos, ni gritos, ni poderes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 753.514,
+  "t1": 764.263,
+  "tipo": "video",
+  "texto": "No puedes recoger nada, ni abrir cofres, ni forzar cerraduras, ni hablar con nadie. Ni siquiera puedes mirar el mapa. Y no vuelves a ser humano cuando quieres. Te toca esperar a que se acabe,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 764.263,
+  "t1": 774.83,
+  "tipo": "video",
+  "texto": "o sentarte a esperar con el menú del tiempo. En la versión original, además, al volver a ser humano te tenías que poner otra vez toda la armadura, pieza por pieza, a mano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 774.83,
+  "t1": 782.05,
+  "tipo": "video",
+  "texto": "Y antes de Dawnguard, el lobo no tenía ni un solo árbol de ventajas. Ni uno. Tu personaje podía subir cien niveles,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 782.05,
+  "t1": 788.795,
+  "tipo": "video",
+  "texto": "y tu lobo seguía igual que el primer día. Era un superpoder que te dejaba sin manos, sin bolsillos y sin conversación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 788.795,
+  "t1": 797.908,
+  "tipo": "video",
+  "texto": "Una mascota muy cara, que encima eras tú. Número dos. Proyectar voz. Los gritos de dragón son lo que te hace especial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 797.908,
+  "t1": 807.539,
+  "tipo": "video",
+  "texto": "Fuerza implacable, que manda a volar a cualquiera. Y luego está Proyectar voz. Sus tres palabras están juntas en una sola pared, en Punta Mellada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 807.539,
+  "t1": 816.76,
+  "tipo": "video",
+  "texto": "Y esa pared la vigilan un dragón y un sacerdote dragón, Krosis. Es uno de los dos únicos gritos con todas sus paredes guardadas por un sacerdote dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 816.76,
+  "t1": 824.857,
+  "tipo": "video",
+  "texto": "O sea, de lo más difícil de conseguir. Y cada palabra te cuesta su propia alma de dragón. Tres almas, en total.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 824.857,
+  "t1": 833.746,
+  "tipo": "video",
+  "texto": "¿Y qué hace? Lanza tu voz a otro sitio, para que los enemigos vayan a mirar qué fue eso. Y solo engaña a los que todavía no te han visto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 833.746,
+  "t1": 839.69,
+  "tipo": "video",
+  "texto": "Las tres palabras hacen exactamente lo mismo. La única diferencia es que esperas menos para volver a gritar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 839.69,
+  "t1": 847.864,
+  "tipo": "video",
+  "texto": "¿Y qué dice la voz del Sangre de Dragón cuando la proyectas? Insultos. Oye, cerebro de queso. Oye, nariz de melón. Oye, feo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 847.864,
+  "t1": 859.891,
+  "tipo": "video",
+  "texto": "Y si apuntas a un gigante o a un mamut que estaba tranquilo, se vuelve hostil. Su uso más práctico es enfadar a un gigante desde lejos. Tres almas de dragón para llamar cerebro de queso a un bandido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 859.891,
+  "t1": 868.598,
+  "tipo": "video",
+  "texto": "Ese es el poder de la voz, señoras y señores. Y llegamos al número uno. El objeto que le da nombre a toda la saga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 868.598,
+  "t1": 875.078,
+  "tipo": "video",
+  "texto": "Un Pergamino Antiguo, un Elder Scroll. Según el lore, guardan todo lo que pasó, lo que pasa y lo que va a pasar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 875.078,
+  "t1": 885.987,
+  "tipo": "video",
+  "texto": "Y leerlos puede dejarte ciego, o loco. En el juego base solo hay uno, y para conseguirlo bajas a lo más hondo de una ciudad dwemer enterrada bajo Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 885.987,
+  "t1": 891.601,
+  "tipo": "video",
+  "texto": "Lo usas una vez, en la cima de la Garganta del Mundo, para aprender el grito que derrota a Alduin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 891.601,
+  "t1": 901.72,
+  "tipo": "video",
+  "texto": "Y después de eso, el objeto más poderoso de toda la saga se queda en tu mochila sin hacer nada. Pesa veinte, pero como es de misión, en tu inventario no pesa nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 901.72,
+  "t1": 909.976,
+  "tipo": "video",
+  "texto": "Y vale cero monedas. Lo único que puedes hacer con él es llevárselo a Urag gro-Shub, el orco bibliotecario del Colegio de Hibernalia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 909.976,
+  "t1": 916.338,
+  "tipo": "video",
+  "texto": "que te lo compra por dos mil monedas. Y si tienes Dawnguard, lo vuelves a necesitar para otra misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 916.338,
+  "t1": 925.256,
+  "tipo": "video",
+  "texto": "Y si ya se lo vendiste a Urag, te lo revende por cuatro mil. El doble. Piénsalo. La saga se llama The Elder Scrolls.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 925.256,
+  "t1": 932.94,
+  "tipo": "video",
+  "texto": "Y en Skyrim, lo más útil que puedes hacer con un Elder Scroll es vendérselo a un orco, y luego volver a comprarlo más caro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 932.94,
+  "t1": 941.807,
+  "tipo": "video",
+  "texto": "Por eso es el número uno. Todo lo demás de esta lista es inútil por un error o por un mal diseño. Este es inútil por destino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 941.807,
+  "t1": 950.208,
+  "tipo": "video",
+  "texto": "Esa es mi lista. Quince cosas de Skyrim que no sirven para nada, de un vecino pesado en Carrera Blanca al pergamino que da nombre a la saga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 950.208,
+  "t1": 957.249,
+  "tipo": "video",
+  "texto": "Si tú conoces algo todavía más inútil, déjalo en los comentarios, que los leo todos. Y no vale decir Nazeem otra vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 957.249,
+  "t1": 964.906,
+  "tipo": "video",
+  "texto": "Y si quieres ver justo lo contrario, en el canal tienes los ocho exploits más ROTOS de Skyrim, donde el juego sí te da demasiado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 964.906,
+  "t1": 975.3333,
+  "tipo": "video",
+  "texto": "Y la próxima vez que un guardia te pregunte si alguien te robó tu bollo dulce, ya sabes qué contestarle. Que se lo quede. Cura cinco.",
+  "clip_s": 8
+ }
+]

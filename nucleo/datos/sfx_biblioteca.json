@@ -4853,7 +4853,137 @@
    "prompt": "",
    "dur": 0.8,
    "canal": "cronopapel"
+  },
+  "arana_escusado__burbujas_esc": {
+   "id": "arana_escusado__burbujas_esc",
+   "video": "arana_escusado",
+   "nombre": "burbujas_esc",
+   "archivo": "arana_escusado__burbujas_esc.mp3",
+   "md5": "219d637dc40ee7139cdb74181b752a37",
+   "prompt": "Gentle cartoon underwater bubbles rising, soft bloops",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "arana_escusado__despierta_esc": {
+   "id": "arana_escusado__despierta_esc",
+   "video": "arana_escusado",
+   "nombre": "despierta_esc",
+   "archivo": "arana_escusado__despierta_esc.mp3",
+   "md5": "b344ec6a743bd6f63d846fcf4267566d",
+   "prompt": "Tiny cartoon twitch with a soft magical sparkle chime",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "arana_escusado__flush_esc": {
+   "id": "arana_escusado__flush_esc",
+   "video": "arana_escusado",
+   "nombre": "flush_esc",
+   "archivo": "arana_escusado__flush_esc.mp3",
+   "md5": "98855af8d0e74336fde342829d6de12b",
+   "prompt": "Modern toilet flushing, strong whoosh of water and a gurgling swirl draining away",
+   "dur": 4.0,
+   "canal": "wild_next_door"
+  },
+  "arana_escusado__goteo_esc": {
+   "id": "arana_escusado__goteo_esc",
+   "video": "arana_escusado",
+   "nombre": "goteo_esc",
+   "archivo": "arana_escusado__goteo_esc.mp3",
+   "md5": "051f45f81bab5fffa7dece5cd0376c1d",
+   "prompt": "Echoing water drips and a slow stream in a dark brick sewer tunnel, ambient",
+   "dur": 8.0,
+   "canal": "wild_next_door"
+  },
+  "arana_escusado__tobogan_esc": {
+   "id": "arana_escusado__tobogan_esc",
+   "video": "arana_escusado",
+   "nombre": "tobogan_esc",
+   "archivo": "arana_escusado__tobogan_esc.mp3",
+   "md5": "643c7119655be8b36eb355158417d365",
+   "prompt": "Cartoon water slide rush, fast swirling water tunnel with a comic whoosh",
+   "dur": 3.0,
+   "canal": "wild_next_door"
+  },
+  "arana_escusado_short__flush_short_esc": {
+   "id": "arana_escusado_short__flush_short_esc",
+   "video": "arana_escusado_short",
+   "nombre": "flush_short_esc",
+   "archivo": "arana_escusado_short__flush_short_esc.mp3",
+   "md5": "d0ab1635e2edd417c77cc0a20cf01d0a",
+   "prompt": "Quick toilet flush whoosh with a bright gurgle, short and punchy",
+   "dur": 2.0,
+   "canal": "pieza_oculta"
+  },
+  "arana_escusado_short__tobogan_short_esc": {
+   "id": "arana_escusado_short__tobogan_short_esc",
+   "video": "arana_escusado_short",
+   "nombre": "tobogan_short_esc",
+   "archivo": "arana_escusado_short__tobogan_short_esc.mp3",
+   "md5": "ee9f73c85fafd4a847fcd5c33b0c5103",
+   "prompt": "Fast cartoon water slide swish with splashes",
+   "dur": 2.0,
+   "canal": "pieza_oculta"
+  },
+  "chinche_invierno__bonk_chi": {
+   "id": "chinche_invierno__bonk_chi",
+   "video": "chinche_invierno",
+   "nombre": "bonk_chi",
+   "archivo": "chinche_invierno__bonk_chi.mp3",
+   "md5": "4f8d128e9694584a1cfde0d45b8d3be3",
+   "prompt": "Small cartoon bonk of a bug hitting a lampshade",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "chinche_invierno__burbujas_chi": {
+   "id": "chinche_invierno__burbujas_chi",
+   "video": "chinche_invierno",
+   "nombre": "burbujas_chi",
+   "archivo": "chinche_invierno__burbujas_chi.mp3",
+   "md5": "b1c973da8793bf50d3273a8221129266",
+   "prompt": "Soapy water bubbles and a tiny plop of a bug falling into a jar",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "chinche_invierno__zumbido_chi": {
+   "id": "chinche_invierno__zumbido_chi",
+   "video": "chinche_invierno",
+   "nombre": "zumbido_chi",
+   "archivo": "chinche_invierno__zumbido_chi.mp3",
+   "md5": "cbb246e3598a19c87d11f8340cb26c1c",
+   "prompt": "Clumsy loud buzzing of a single large beetle flying around a lamp, bumping",
+   "dur": 4.0,
+   "canal": "wild_next_door"
+  },
+  "mariquitas_casa__aspiradora_mar": {
+   "id": "mariquitas_casa__aspiradora_mar",
+   "video": "mariquitas_casa",
+   "nombre": "aspiradora_mar",
+   "archivo": "mariquitas_casa__aspiradora_mar.mp3",
+   "md5": "685be7bd1e51defe9f621b5efa246f6e",
+   "prompt": "Household vacuum cleaner switching on briefly, then off",
+   "dur": 3.0,
+   "canal": "wild_next_door"
+  },
+  "mariquitas_casa__bostezo_mar": {
+   "id": "mariquitas_casa__bostezo_mar",
+   "video": "mariquitas_casa",
+   "nombre": "bostezo_mar",
+   "archivo": "mariquitas_casa__bostezo_mar.mp3",
+   "md5": "39b775152a97ec940a3cfa1d1c6a4ced",
+   "prompt": "Tiny cartoon bug yawn and stretch, cute and short",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "mariquitas_casa__enjambre_mar": {
+   "id": "mariquitas_casa__enjambre_mar",
+   "video": "mariquitas_casa",
+   "nombre": "enjambre_mar",
+   "archivo": "mariquitas_casa__enjambre_mar.mp3",
+   "md5": "41be88433133c01e603f4954bfcaa6dc",
+   "prompt": "Soft buzzing of many small beetles flying around a sunny window, gentle",
+   "dur": 5.0,
+   "canal": "wild_next_door"
   }
  },
- "actualizado": "2026-10-22 14:23"
+ "actualizado": "2026-10-22 19:30"
 }

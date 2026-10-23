@@ -1,0 +1,109 @@
+{
+ "bpm": 480.0,
+ "beat": 0.125,
+ "unidad": 4,
+ "total": 121.0,
+ "titulo": "Los Duos — así tocamos",
+ "estilo": "documental",
+ "sin_voz": true,
+ "anclada": false,
+ "escenas": [
+  {
+   "id": "intro",
+   "compases": 7,
+   "t0": 0.0,
+   "t1": 3.5,
+   "frases": [],
+   "fin_voz": 0.0,
+   "beats": 28
+  },
+  {
+   "id": "indita",
+   "compases": 53,
+   "t0": 3.5,
+   "t1": 30.0,
+   "frases": [],
+   "fin_voz": 3.5,
+   "beats": 212
+  },
+  {
+   "id": "ojos",
+   "compases": 52,
+   "t0": 30.0,
+   "t1": 56.0,
+   "frases": [],
+   "fin_voz": 30.0,
+   "beats": 208
+  },
+  {
+   "id": "amor",
+   "compases": 57,
+   "t0": 56.0,
+   "t1": 84.5,
+   "frases": [],
+   "fin_voz": 56.0,
+   "beats": 228
+  },
+  {
+   "id": "teodora",
+   "compases": 57,
+   "t0": 84.5,
+   "t1": 113.0,
+   "frases": [],
+   "fin_voz": 84.5,
+   "beats": 228
+  },
+  {
+   "id": "cierre",
+   "compases": 16,
+   "t0": 113.0,
+   "t1": 121.0,
+   "frases": [],
+   "fin_voz": 113.0,
+   "beats": 64,
+   "fin_musica": 120.625
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 3.5,
+   "t0": 3.45,
+   "t1": 3.55,
+   "tipo": "continua",
+   "de": "intro",
+   "a": "indita"
+  },
+  {
+   "t": 30.0,
+   "t0": 29.95,
+   "t1": 30.05,
+   "tipo": "continua",
+   "de": "indita",
+   "a": "ojos"
+  },
+  {
+   "t": 56.0,
+   "t0": 55.95,
+   "t1": 56.05,
+   "tipo": "continua",
+   "de": "ojos",
+   "a": "amor"
+  },
+  {
+   "t": 84.5,
+   "t0": 84.45,
+   "t1": 84.55,
+   "tipo": "continua",
+   "de": "amor",
+   "a": "teodora"
+  },
+  {
+   "t": 113.0,
+   "t0": 112.95,
+   "t1": 113.05,
+   "tipo": "continua",
+   "de": "teodora",
+   "a": "cierre"
+  }
+ ]
+}

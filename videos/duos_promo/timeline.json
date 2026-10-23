@@ -1,0 +1,657 @@
+{
+ "bpm": 480.0,
+ "beat": 0.125,
+ "unidad": 4,
+ "total": 86.375,
+ "titulo": "Los Duos — música en vivo para tu fiesta",
+ "estilo": "documental",
+ "escenas": [
+  {
+   "id": "gancho",
+   "pre": 0.5,
+   "t0": 0.0,
+   "t1": 6.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "gancho_0",
+     "texto": "¿Tienes boda, quince años o cumpleaños? ¡Ponle música en vivo!",
+     "t0": 0.647,
+     "t1": 5.207,
+     "words": [
+      {
+       "w": "¿Tienes",
+       "s": 0.647,
+       "e": 0.967
+      },
+      {
+       "w": "boda,",
+       "s": 0.967,
+       "e": 1.287
+      },
+      {
+       "w": "quince",
+       "s": 1.347,
+       "e": 1.747
+      },
+      {
+       "w": "años",
+       "s": 1.747,
+       "e": 2.187
+      },
+      {
+       "w": "o",
+       "s": 2.187,
+       "e": 2.527
+      },
+      {
+       "w": "cumpleaños?",
+       "s": 2.527,
+       "e": 3.247
+      },
+      {
+       "w": "¡Ponle",
+       "s": 3.547,
+       "e": 4.187
+      },
+      {
+       "w": "música",
+       "s": 4.187,
+       "e": 4.507
+      },
+      {
+       "w": "en",
+       "s": 4.507,
+       "e": 4.707
+      },
+      {
+       "w": "vivo!",
+       "s": 4.707,
+       "e": 4.827
+      }
+     ]
+    }
+   ],
+   "fin_voz": 5.207,
+   "beats": 48
+  },
+  {
+   "id": "grupo",
+   "post": 9.35,
+   "t0": 6.0,
+   "t1": 22.5,
+   "compases": 33,
+   "frases": [
+    {
+     "key": "grupo_0",
+     "texto": "Llegan Los Duos: tecladista y dos voces, listos para que nadie se quede sentado.",
+     "t0": 6.421,
+     "t1": 12.867,
+     "words": [
+      {
+       "w": "Llegan",
+       "s": 6.421,
+       "e": 6.801
+      },
+      {
+       "w": "Los",
+       "s": 6.801,
+       "e": 6.982
+      },
+      {
+       "w": "Duos:",
+       "s": 6.982,
+       "e": 7.542
+      },
+      {
+       "w": "tecladista",
+       "s": 7.582,
+       "e": 8.541
+      },
+      {
+       "w": "y",
+       "s": 8.541,
+       "e": 8.881
+      },
+      {
+       "w": "dos",
+       "s": 8.881,
+       "e": 9.122
+      },
+      {
+       "w": "voces,",
+       "s": 9.122,
+       "e": 9.662
+      },
+      {
+       "w": "listos",
+       "s": 9.721,
+       "e": 10.601
+      },
+      {
+       "w": "para",
+       "s": 10.601,
+       "e": 10.782
+      },
+      {
+       "w": "que",
+       "s": 10.782,
+       "e": 10.962
+      },
+      {
+       "w": "nadie",
+       "s": 10.962,
+       "e": 11.421
+      },
+      {
+       "w": "se",
+       "s": 11.421,
+       "e": 11.721
+      },
+      {
+       "w": "quede",
+       "s": 11.721,
+       "e": 11.982
+      },
+      {
+       "w": "sentado.",
+       "s": 11.982,
+       "e": 12.502
+      }
+     ]
+    }
+   ],
+   "fin_voz": 12.867,
+   "beats": 132
+  },
+  {
+   "id": "generos",
+   "post": 10.749999999999998,
+   "t0": 22.5,
+   "t1": 41.0,
+   "compases": 37,
+   "frases": [
+    {
+     "key": "generos_0",
+     "texto": "Cumbias, norteño, zapateado, banda... grupera, baladas, mariachi ¡y hasta rock!",
+     "t0": 22.851,
+     "t1": 30.131,
+     "words": [
+      {
+       "w": "Cumbias,",
+       "s": 22.851,
+       "e": 23.371
+      },
+      {
+       "w": "norteño,",
+       "s": 23.491,
+       "e": 24.171
+      },
+      {
+       "w": "zapateado,",
+       "s": 24.331,
+       "e": 25.131
+      },
+      {
+       "w": "banda...",
+       "s": 25.311,
+       "e": 25.731
+      },
+      {
+       "w": "grupera,",
+       "s": 26.111,
+       "e": 27.071
+      },
+      {
+       "w": "baladas,",
+       "s": 27.071,
+       "e": 27.891
+      },
+      {
+       "w": "mariachi",
+       "s": 28.051,
+       "e": 28.671
+      },
+      {
+       "w": "¡y",
+       "s": 28.671,
+       "e": 28.851
+      },
+      {
+       "w": "hasta",
+       "s": 28.851,
+       "e": 29.291
+      },
+      {
+       "w": "rock!",
+       "s": 29.291,
+       "e": 29.691
+      }
+     ]
+    }
+   ],
+   "fin_voz": 30.131,
+   "beats": 148
+  },
+  {
+   "id": "eventos",
+   "post": 10.250000000000002,
+   "t0": 41.0,
+   "t1": 58.0,
+   "compases": 34,
+   "frases": [
+    {
+     "key": "eventos_0",
+     "texto": "Fiestas, reuniones familiares, eventos privados... ellos ponen el ambiente.",
+     "t0": 41.429,
+     "t1": 47.448,
+     "words": [
+      {
+       "w": "Fiestas,",
+       "s": 41.429,
+       "e": 42.069
+      },
+      {
+       "w": "reuniones",
+       "s": 42.069,
+       "e": 42.729
+      },
+      {
+       "w": "familiares,",
+       "s": 42.729,
+       "e": 43.429
+      },
+      {
+       "w": "eventos",
+       "s": 43.469,
+       "e": 44.229
+      },
+      {
+       "w": "privados...",
+       "s": 44.229,
+       "e": 44.809
+      },
+      {
+       "w": "ellos",
+       "s": 44.989,
+       "e": 45.809
+      },
+      {
+       "w": "ponen",
+       "s": 45.809,
+       "e": 46.509
+      },
+      {
+       "w": "el",
+       "s": 46.509,
+       "e": 46.629
+      },
+      {
+       "w": "ambiente.",
+       "s": 46.629,
+       "e": 46.889
+      }
+     ]
+    }
+   ],
+   "fin_voz": 47.448,
+   "beats": 136
+  },
+  {
+   "id": "zona",
+   "t0": 58.0,
+   "t1": 64.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "zona_0",
+     "texto": "Tocan en todo Aguascalientes y sus municipios... ¡llegan hasta tu fiesta!",
+     "t0": 58.382,
+     "t1": 63.409,
+     "words": [
+      {
+       "w": "Tocan",
+       "s": 58.382,
+       "e": 58.722
+      },
+      {
+       "w": "en",
+       "s": 58.722,
+       "e": 58.802
+      },
+      {
+       "w": "todo",
+       "s": 58.802,
+       "e": 59.142
+      },
+      {
+       "w": "Aguascalientes",
+       "s": 59.142,
+       "e": 60.062
+      },
+      {
+       "w": "y",
+       "s": 60.062,
+       "e": 60.222
+      },
+      {
+       "w": "sus",
+       "s": 60.222,
+       "e": 60.362
+      },
+      {
+       "w": "municipios...",
+       "s": 60.362,
+       "e": 61.182
+      },
+      {
+       "w": "¡llegan",
+       "s": 61.762,
+       "e": 62.162
+      },
+      {
+       "w": "hasta",
+       "s": 62.162,
+       "e": 62.362
+      },
+      {
+       "w": "tu",
+       "s": 62.362,
+       "e": 62.562
+      },
+      {
+       "w": "fiesta!",
+       "s": 62.562,
+       "e": 62.942
+      }
+     ]
+    }
+   ],
+   "fin_voz": 63.409,
+   "beats": 48
+  },
+  {
+   "id": "precio",
+   "t0": 64.0,
+   "t1": 69.0,
+   "compases": 10,
+   "frases": [
+    {
+     "key": "precio_0",
+     "texto": "¿Y el precio?  ¡A solo mil doscientos pesos la hora!",
+     "t0": 64.427,
+     "t1": 68.302,
+     "words": [
+      {
+       "w": "¿Y",
+       "s": 64.427,
+       "e": 64.547
+      },
+      {
+       "w": "el",
+       "s": 64.547,
+       "e": 64.627
+      },
+      {
+       "w": "precio?",
+       "s": 64.627,
+       "e": 64.907
+      },
+      {
+       "w": "¡A",
+       "s": 65.307,
+       "e": 65.867
+      },
+      {
+       "w": "solo",
+       "s": 65.867,
+       "e": 66.167
+      },
+      {
+       "w": "mil",
+       "s": 66.167,
+       "e": 66.468
+      },
+      {
+       "w": "doscientos",
+       "s": 66.468,
+       "e": 66.867
+      },
+      {
+       "w": "pesos",
+       "s": 66.867,
+       "e": 67.407
+      },
+      {
+       "w": "la",
+       "s": 67.407,
+       "e": 67.688
+      },
+      {
+       "w": "hora!",
+       "s": 67.688,
+       "e": 67.867
+      }
+     ]
+    }
+   ],
+   "fin_voz": 68.302,
+   "beats": 40
+  },
+  {
+   "id": "contacto",
+   "t0": 69.0,
+   "t1": 77.0,
+   "compases": 16,
+   "frases": [
+    {
+     "key": "contacto_0",
+     "texto": "Aparta tu fecha por WhatsApp: cuatro, cuatro, nueve... tres, cero, seis... cincuenta y cuatro, treinta y uno.",
+     "t0": 69.306,
+     "t1": 76.586,
+     "words": [
+      {
+       "w": "Aparta",
+       "s": 69.306,
+       "e": 69.746
+      },
+      {
+       "w": "tu",
+       "s": 69.746,
+       "e": 69.826
+      },
+      {
+       "w": "fecha",
+       "s": 69.826,
+       "e": 70.186
+      },
+      {
+       "w": "por",
+       "s": 70.186,
+       "e": 70.326
+      },
+      {
+       "w": "WhatsApp:",
+       "s": 70.326,
+       "e": 70.706
+      },
+      {
+       "w": "cuatro,",
+       "s": 70.706,
+       "e": 73.116
+      },
+      {
+       "w": "cuatro,",
+       "s": 70.706,
+       "e": 73.116
+      },
+      {
+       "w": "nueve...",
+       "s": 73.116,
+       "e": 73.306
+      },
+      {
+       "w": "tres,",
+       "s": 73.306,
+       "e": 73.686
+      },
+      {
+       "w": "cero,",
+       "s": 73.306,
+       "e": 73.686
+      },
+      {
+       "w": "seis...",
+       "s": 73.686,
+       "e": 74.066
+      },
+      {
+       "w": "cincuenta",
+       "s": 74.066,
+       "e": 74.956
+      },
+      {
+       "w": "y",
+       "s": 74.066,
+       "e": 74.956
+      },
+      {
+       "w": "cuatro,",
+       "s": 74.066,
+       "e": 74.956
+      },
+      {
+       "w": "treinta",
+       "s": 74.956,
+       "e": 75.253
+      },
+      {
+       "w": "y",
+       "s": 75.253,
+       "e": 75.549
+      },
+      {
+       "w": "uno.",
+       "s": 75.549,
+       "e": 75.846
+      }
+     ]
+    }
+   ],
+   "fin_voz": 76.586,
+   "beats": 64
+  },
+  {
+   "id": "cierre",
+   "post": 5.0,
+   "t0": 77.0,
+   "t1": 86.375,
+   "compases": null,
+   "frases": [
+    {
+     "key": "cierre_0",
+     "texto": "Los Duos... música que alegra tus momentos.",
+     "t0": 77.451,
+     "t1": 81.371,
+     "words": [
+      {
+       "w": "Los",
+       "s": 77.451,
+       "e": 77.632
+      },
+      {
+       "w": "Duos...",
+       "s": 77.632,
+       "e": 78.231
+      },
+      {
+       "w": "música",
+       "s": 78.712,
+       "e": 79.352
+      },
+      {
+       "w": "que",
+       "s": 79.352,
+       "e": 79.671
+      },
+      {
+       "w": "alegra",
+       "s": 79.671,
+       "e": 80.231
+      },
+      {
+       "w": "tus",
+       "s": 80.231,
+       "e": 80.352
+      },
+      {
+       "w": "momentos.",
+       "s": 80.352,
+       "e": 80.691
+      }
+     ]
+    }
+   ],
+   "fin_voz": 81.371,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 6.0,
+   "t0": 5.974,
+   "t1": 6.014,
+   "tipo": "continua",
+   "de": "gancho",
+   "a": "grupo"
+  },
+  {
+   "t": 22.5,
+   "t0": 22.474,
+   "t1": 22.514,
+   "tipo": "continua",
+   "de": "grupo",
+   "a": "generos"
+  },
+  {
+   "t": 41.0,
+   "t0": 40.974,
+   "t1": 41.014,
+   "tipo": "continua",
+   "de": "generos",
+   "a": "eventos"
+  },
+  {
+   "t": 58.0,
+   "t0": 57.974,
+   "t1": 58.014,
+   "tipo": "continua",
+   "de": "eventos",
+   "a": "zona"
+  },
+  {
+   "t": 64.0,
+   "t0": 63.974,
+   "t1": 64.014,
+   "tipo": "continua",
+   "de": "zona",
+   "a": "precio"
+  },
+  {
+   "t": 69.0,
+   "t0": 68.974,
+   "t1": 69.014,
+   "tipo": "continua",
+   "de": "precio",
+   "a": "contacto"
+  },
+  {
+   "t": 77.0,
+   "t0": 76.974,
+   "t1": 77.014,
+   "tipo": "continua",
+   "de": "contacto",
+   "a": "cierre"
+  }
+ ]
+}

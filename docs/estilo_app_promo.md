@@ -67,3 +67,32 @@ gancho presenta la app desde cero (nunca «ya llevamos semanas con…»).
   arte oficial. Órbita de íconos de las funciones alrededor del logo (detrás/delante según sen(ángulo)).
 - Audio: 63 SFX de ElevenLabs (≈ 500 créditos) con `tts_eleven.post` (salta solo a la cuenta de respaldo); Lyria: el candidato
   más corto (58,8 s) se apagaba antes del cierre → elegir el que mantiene volumen en los últimos 3 s aunque dure más.
+
+## 7. Variante: anuncio de un NEGOCIO con sus videos reales (`videos/duos_promo/`, 22-oct-2026)
+Grupo musical Los Duos (tecladista y dos voces, Aguascalientes / Juchipila): vertical 56 s para Reels y estados de WhatsApp.
+- **Identidad del cliente sin archivos originales:** su póster de Facebook (hecho con IA) dio la paleta (negro + DORADO), el lema
+  y los iconos; el logo se rehízo por código con **Kaushan Script** (Google Fonts) en degradado metálico (`texto_oro` del kit
+  `duos.py`: degradado vertical, contorno oscuro, sombra y franja de brillo que cruza). Titulares en **Anton**.
+- **Videos de celular del cliente (360-476 px):** `prep_clips.py` recorta los tramos elegidos de una hoja de contacto cada 2 s y
+  los deja en 1080x1920 (lanczos + `hqdn3d` + `unsharp` + color cálido). Se usan a pantalla completa con zoom lento, en
+  **tarjetas giradas con marco de oro** (`tarjeta`, con `enfoque`/`enfoque_x` para centrar a la persona) o difusos de fondo.
+- **Música = las canciones del propio cliente** (popurrí, `musica_popurri.py`): Demucs separa el canto; debajo del locutor va el
+  instrumental y, cuando calla, entra la mezcla con las voces del grupo. Un tramo por bloque, cortado en un pulso, y en «precio»
+  un pasa-bajos que se abre de golpe en la cifra.
+- **Estructura que funcionó:** gancho con los eventos (BODA / XV AÑOS / CUMPLEAÑOS) sobre gente bailando → el logo nace →
+  quiénes son (tarjeta con el músico + insignias) → ráfaga de géneros en píldoras de colores con cortes de baile → tarjetas de
+  eventos reales → mapa con relieve real de la zona (pines, radio, ruta punteada) → precio que cae con destellos → WhatsApp con el
+  número cifra por cifra al ritmo del locutor (marcas por palabra de Whisper sobre la frase) → logo + tira con número y precio.
+- **Zona segura de Reels:** nada importante debajo de y ≈ 1550 ni arriba de y ≈ 200.
+- Entregables: MASTER 1080x1920 + copia 720x1280 de ~11 MB para WhatsApp (estados aceptan 60 s).
+- **Versión 2 del anuncio (pedida por el usuario):** el cliente quiere OÍR al grupo → 3 pausas de 9-10 s sin narrador con una
+  frase cantada completa (`guion.PAUSA` + `post` en la escena previa; la escena previa lleva el instrumental de la misma pieza
+  para que el canto entre sin corte) y 5 s de canto al final; en pantalla, video real + «● EN VIVO» + ecualizador dorado que
+  baila con la música real (`duos.ecualizador`, energía por banda de audio/musica.wav). 86 s (Reels admite 90).
+- **Video hermano SIN NARRADOR para mandar a quien pide «cómo tocan»** (`videos/duos_tocamos/`, 2:01): `SIN_VOZ = True` con
+  `BPM = 480` (compás = 0,5 s) para dar a cada canción su duración; 4 tramos de 26-28 s cortados en frases completas; cortes de
+  toma al pulso de cada canción (`plan_cortes.py` → cortes.json, librosa) y empujón de cámara en cada pulso; rótulo con la
+  primera frase cantada + «EN VIVO · n DE 4»; cierre con WhatsApp y precio. Los 4 videos de celular se preparan ENTEROS y las
+  tomas se eligen por (video, segundo).
+- Ecualizador sobre canciones completas (muy comprimidas): normalizar cada banda entre sus percentiles 8 y 99.
+- Anton no trae «»: títulos sin comillas. El «♪» tampoco: notas dibujadas aparte (`duos.nota`, Segoe UI Symbol).

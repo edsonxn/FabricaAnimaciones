@@ -1290,7 +1290,14 @@
     "dinamica": 0.63
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "chinche_invierno",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "banjo_tooie__lyria_tramo3": {
@@ -6883,7 +6890,14 @@
     "dinamica": 0.67
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "chinche_invierno",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "got_joffrey__lyria_tramo2": {
@@ -14812,7 +14826,14 @@
     "dinamica": 0.76
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "chinche_invierno",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "terror_ben_drowned__lyria_1": {
@@ -22235,6 +22256,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -25468,7 +25490,937 @@
    "variante": true,
    "usos": [],
    "catalogado": "2026-10-22"
+  },
+  "arana_escusado_short__lyria_tramo1": {
+   "id": "arana_escusado_short__lyria_tramo1",
+   "video": "arana_escusado_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_escusado_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "arana_escusado_short__lyria_tramo1.mp3",
+   "md5": "5340e71c6fdb186aee5b3784b847eb9e",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider You Flush? #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "flush",
+    "ride",
+    "coma",
+    "cierre"
+   ],
+   "estilo": "Playful, curious cartoon score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, celesta, light brushed percussion. Comic suspense. Instrumental only, never loud under the voice.",
+   "prompt": "Playful, curious cartoon score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, celesta, light brushed percussion. Comic suspense. Instrumental only, never loud under the voice. Total length: exactly 0:46 (46 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Start instantly with a comic gulp and swirling marimba, a quick water-slide chase, a magical wake-up sparkle, then a warm resolved ending that fades out.\n\n[0:00 - 0:09] Section 1: Intensity 4/10. the underscore continues in the same mood\n[0:09 - 0:22] Section 2: Intensity 4/10. the underscore continues in the same mood\n[0:22 - 0:34] Section 3: Intensity 4/10. the underscore continues in the same mood\n[0:34 - 0:46] Section 4: Intensity 4/10. the underscore continues in the same mood",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 9,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 9,
+     "t1": 22,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 22,
+     "t1": 34,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 34,
+     "t1": 46,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "pizzicato"
+    ],
+    "animo": [
+     "acción",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 44.04,
+    "rms_db": -14.8,
+    "tempo": 123.0,
+    "brillo_hz": 1600,
+    "energia": [
+     0.94,
+     0.89,
+     0.93,
+     0.92,
+     1.0,
+     0.99,
+     0.94,
+     0.94,
+     1.0,
+     0.83,
+     0.74,
+     0.07
+    ],
+    "huecos": [],
+    "dinamica": 0.93
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "arana_escusado__lyria_tramo3": {
+   "id": "arana_escusado__lyria_tramo3",
+   "video": "arana_escusado",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_escusado\\audio\\lyria_tramo3.mp3",
+   "archivo": "arana_escusado__lyria_tramo3.mp3",
+   "md5": "2aadfc7333f66becda46f8a6a6bba23e",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider You Flush Down the Toilet?",
+   "tramo": 3,
+   "escenas": [
+    "home",
+    "deal",
+    "outro"
+   ],
+   "estilo": "Playful, curious cartoon nature documentary score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Comic suspense and gentle wonder. Never epic, never horror.",
+   "prompt": "Playful, curious cartoon nature documentary score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Comic suspense and gentle wonder. Never epic, never horror. Total length: exactly 1:09 (69 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 0:28] Section 1: Intensity 2/10. Tender and a bit sad: felt piano and soft strings, a small character who lost its home.\n[0:28 - 0:50] Section 2: Intensity 3/10. Practical and friendly: light guitar and piano, calm and helpful.\n[0:50 - 1:09] Section 3: Intensity 3/10. Return to the opening late-night theme, now warm and resolved, a smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 28,
+     "intensidad": 2,
+     "desc": "Tender and a bit sad: felt piano and soft strings, a small character who lost its home."
+    },
+    {
+     "t0": 28,
+     "t1": 50,
+     "intensidad": 3,
+     "desc": "Practical and friendly: light guitar and piano, calm and helpful."
+    },
+    {
+     "t0": 50,
+     "t1": 69,
+     "intensidad": 3,
+     "desc": "Return to the opening late-night theme, now warm and resolved, a smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    2,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 67.76,
+    "rms_db": -15.2,
+    "tempo": 99.4,
+    "brillo_hz": 950,
+    "energia": [
+     0.26,
+     0.3,
+     0.41,
+     0.38,
+     0.61,
+     0.66,
+     0.7,
+     0.91,
+     0.96,
+     1.0,
+     0.74,
+     0.18
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "chinche_invierno__lyria_tramo3": {
+   "id": "chinche_invierno__lyria_tramo3",
+   "video": "chinche_invierno",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\chinche_invierno\\audio\\lyria_tramo3.mp3",
+   "archivo": "chinche_invierno__lyria_tramo3.mp3",
+   "md5": "2eaa1707bb6dd4c2c7b8805e0bb12608",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens If You Let a Stink Bug Live in Your House All Winter?",
+   "tramo": 3,
+   "escenas": [
+    "spring",
+    "deal",
+    "outro"
+   ],
+   "estilo": "Cozy, wry cartoon nature documentary score about a clumsy stink bug spending the winter in a house: pizzicato strings, bassoon, tuba, marimba, felt piano, soft clarinet, light brushed percussion. Comic, warm, a little grumpy. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: teflon_sarten__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, handmade documentary score for a stop-motion story about an accidental discovery: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and a gentle upright bass. Playful but intelligent, never epic, never sad. Total length: exactly 2:15 (135 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a bright sustained chord that can flow into the next piece. No loud ending.\n\n[0:00 - 0:20] Section 1: Intensity 3/10. A single ticking pizzicato note and a low held clarinet, puzzled and suspended, with one small questioning marimba figure. Almost empty.\n[0:20 - 0:35] Section 2: Intensity 4/10. The pulse appears: gentle marimba ostinato, upright bass enters, a feeling of a story about to begin.\n[0:35 - 1:17] Section 3: Intensity 4/10. Light everyday routine in a workshop: steady walking bass, pizzicato strings, small glockenspiel details, relaxed and tidy.\n[1:17 - 1:47] Section 4: Intensity 3/10. The routine stops. Sparse and puzzled: isolated pizzicato notes, long quiet clarinet tone, pauses of near silence, a slow ticking.\n[1:47 - 2:15] Section 5: Intensity 6/10. Growing suspense with a mischievous edge: a quickening pizzicato pulse, low strings rising step by step, ending on one bright surprised chord.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 20,
+     "intensidad": 3,
+     "desc": "A single ticking pizzicato note and a low held clarinet, puzzled and suspended, with one small questioning marimba figure. Almost empty."
+    },
+    {
+     "t0": 20,
+     "t1": 35,
+     "intensidad": 4,
+     "desc": "The pulse appears: gentle marimba ostinato, upright bass enters, a feeling of a story about to begin."
+    },
+    {
+     "t0": 35,
+     "t1": 77,
+     "intensidad": 4,
+     "desc": "Light everyday routine in a workshop: steady walking bass, pizzicato strings, small glockenspiel details, relaxed and tidy."
+    },
+    {
+     "t0": 77,
+     "t1": 107,
+     "intensidad": 3,
+     "desc": "The routine stops. Sparse and puzzled: isolated pizzicato notes, long quiet clarinet tone, pauses of near silence, a slow ticking."
+    },
+    {
+     "t0": 107,
+     "t1": 135,
+     "intensidad": 6,
+     "desc": "Growing suspense with a mischievous edge: a quickening pizzicato pulse, low strings rising step by step, ending on one bright surprised chord."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4,
+    3,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 81.0,
+    "rms_db": -15.1,
+    "tempo": 123.0,
+    "brillo_hz": 913,
+    "energia": [
+     0.22,
+     0.3,
+     0.38,
+     0.82,
+     0.63,
+     0.67,
+     0.78,
+     0.75,
+     1.0,
+     0.97,
+     0.73,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.78
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "chinche_invierno__lyria_tramo2": {
+   "id": "chinche_invierno__lyria_tramo2",
+   "video": "chinche_invierno",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\chinche_invierno\\audio\\lyria_tramo2.mp3",
+   "archivo": "chinche_invierno__lyria_tramo2.mp3",
+   "md5": "1003c8c70784e3b6267a4c2034ca299f",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens If You Let a Stink Bug Live in Your House All Winter?",
+   "tramo": 2,
+   "escenas": [
+    "winter",
+    "warm",
+    "smell"
+   ],
+   "estilo": "Cozy, wry cartoon nature documentary score about a clumsy stink bug spending the winter in a house: pizzicato strings, bassoon, tuba, marimba, felt piano, soft clarinet, light brushed percussion. Comic, warm, a little grumpy. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:36 (96 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:36] Section 1: Intensity 5/10. Busy and inventive: plucked strings like stitching, marimba patterns, celesta sparkles for each discovery, playful.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 96,
+     "intensidad": 5,
+     "desc": "Busy and inventive: plucked strings like stitching, marimba patterns, celesta sparkles for each discovery, playful."
+    }
+   ],
+   "intensidad": [
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 92.87,
+    "rms_db": -14.7,
+    "tempo": 123.0,
+    "brillo_hz": 1177,
+    "energia": [
+     0.84,
+     0.58,
+     0.6,
+     0.53,
+     0.86,
+     0.73,
+     0.72,
+     0.61,
+     0.9,
+     0.84,
+     1.0,
+     0.33
+    ],
+    "huecos": [],
+    "dinamica": 0.67
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "arana_escusado__lyria_tramo2": {
+   "id": "arana_escusado__lyria_tramo2",
+   "video": "arana_escusado",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_escusado\\audio\\lyria_tramo2.mp3",
+   "archivo": "arana_escusado__lyria_tramo2.mp3",
+   "md5": "354e9e8d5bdd8fb4bd1d3fdec27a7109",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider You Flush Down the Toilet?",
+   "tramo": 2,
+   "escenas": [
+    "sewer",
+    "coma",
+    "back"
+   ],
+   "estilo": "Playful, curious cartoon nature documentary score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Comic suspense and gentle wonder. Never epic, never horror.",
+   "prompt": "Playful, curious cartoon nature documentary score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Comic suspense and gentle wonder. Never epic, never horror. Total length: exactly 1:33 (94 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 0:28] Section 1: Intensity 4/10. Dark tunnel stroll: low clarinet and plucked bass, echoing drips, lonely but comic.\n[0:28 - 1:02] Section 2: Intensity 4/10. Mysterious stillness, then a soft magical wake-up sparkle and a surprised little cadence.\n[1:02 - 1:33] Section 3: Intensity 4/10. Investigative groove: walking bass, curious bassoon, a myth being busted with a wink.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 28,
+     "intensidad": 4,
+     "desc": "Dark tunnel stroll: low clarinet and plucked bass, echoing drips, lonely but comic."
+    },
+    {
+     "t0": 28,
+     "t1": 62,
+     "intensidad": 4,
+     "desc": "Mysterious stillness, then a soft magical wake-up sparkle and a surprised little cadence."
+    },
+    {
+     "t0": 62,
+     "t1": 93,
+     "intensidad": 4,
+     "desc": "Investigative groove: walking bass, curious bassoon, a myth being busted with a wink."
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "juguetón",
+     "misterio",
+     "oscuro",
+     "tenso",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 94.64,
+    "rms_db": -14.6,
+    "tempo": 161.5,
+    "brillo_hz": 867,
+    "energia": [
+     0.51,
+     0.81,
+     0.74,
+     0.77,
+     0.69,
+     0.59,
+     1.0,
+     0.98,
+     0.85,
+     0.8,
+     0.73,
+     0.44
+    ],
+    "huecos": [],
+    "dinamica": 0.56
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "chinche_invierno__lyria_tramo1": {
+   "id": "chinche_invierno__lyria_tramo1",
+   "video": "chinche_invierno",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\chinche_invierno\\audio\\lyria_tramo1.mp3",
+   "archivo": "chinche_invierno__lyria_tramo1.mp3",
+   "md5": "1dd57177e1d09aae48baa841d5f94d74",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens If You Let a Stink Bug Live in Your House All Winter?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "who",
+    "invade"
+   ],
+   "estilo": "Cozy, wry cartoon nature documentary score about a clumsy stink bug spending the winter in a house: pizzicato strings, bassoon, tuba, marimba, felt piano, soft clarinet, light brushed percussion. Comic, warm, a little grumpy. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: banjo_tooie__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWhimsical late-90s 3D platformer soundtrack: bouncy tuba and bassoon, plucked banjo, marimba, kazoo-like woodwinds, playful pizzicato strings, light percussion, instrumental only, no vocals, cheerful and unobtrusive under narration. Total length: exactly 1:35 (95 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin on a warm chord. End on a held note, curious.\n\n[0:00 - 1:35] Section 1: Intensity 5/10. busy workshop, ticking percussion, inventive marimba runs, building momentum",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 95,
+     "intensidad": 5,
+     "desc": "busy workshop, ticking percussion, inventive marimba runs, building momentum"
+    }
+   ],
+   "intensidad": [
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 93.68,
+    "rms_db": -15.3,
+    "tempo": 123.0,
+    "brillo_hz": 1356,
+    "energia": [
+     0.64,
+     0.82,
+     0.87,
+     0.81,
+     0.92,
+     0.72,
+     0.86,
+     0.94,
+     0.83,
+     0.86,
+     1.0,
+     0.37
+    ],
+    "huecos": [],
+    "dinamica": 0.63
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "arana_escusado__lyria_tramo1": {
+   "id": "arana_escusado__lyria_tramo1",
+   "video": "arana_escusado",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_escusado\\audio\\lyria_tramo1.mp3",
+   "archivo": "arana_escusado__lyria_tramo1.mp3",
+   "md5": "4491df27839b4958bd88d648a5e33833",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider You Flush Down the Toilet?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "ride",
+    "float"
+   ],
+   "estilo": "Playful, curious cartoon nature documentary score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Comic suspense and gentle wonder. Never epic, never horror.",
+   "prompt": "Playful, curious cartoon nature documentary score about a tiny house spider swept into the plumbing: pizzicato strings, marimba, bassoon, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Comic suspense and gentle wonder. Never epic, never horror. Total length: exactly 1:36 (96 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:45] Section 1: Intensity 3/10. Quiet late-night bathroom, a ticking pizzicato, then a comic gulp and a swirl of descending marimba.\n[0:45 - 1:09] Section 2: Intensity 6/10. A fast twisting water-slide chase: rushing tremolo strings, tumbling marimba runs, a bassoon bump.\n[1:09 - 1:36] Section 3: Intensity 4/10. Sudden calm: a silvery celesta bubble theme, floating and fragile, a little hopeful.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 3,
+     "desc": "Quiet late-night bathroom, a ticking pizzicato, then a comic gulp and a swirl of descending marimba."
+    },
+    {
+     "t0": 45,
+     "t1": 69,
+     "intensidad": 6,
+     "desc": "A fast twisting water-slide chase: rushing tremolo strings, tumbling marimba runs, a bassoon bump."
+    },
+    {
+     "t0": 69,
+     "t1": 96,
+     "intensidad": 4,
+     "desc": "Sudden calm: a silvery celesta bubble theme, floating and fragile, a little hopeful."
+    }
+   ],
+   "intensidad": [
+    3,
+    6,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "acción",
+     "calma",
+     "curioso",
+     "esperanza",
+     "juguetón",
+     "tenso",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 95.16,
+    "rms_db": -15.4,
+    "tempo": 117.5,
+    "brillo_hz": 1491,
+    "energia": [
+     0.2,
+     0.43,
+     0.48,
+     0.64,
+     0.54,
+     0.72,
+     0.84,
+     0.86,
+     0.91,
+     1.0,
+     0.74,
+     0.23
+    ],
+    "huecos": [],
+    "dinamica": 0.8
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "mariquitas_casa__lyria_tramo1": {
+   "id": "mariquitas_casa__lyria_tramo1",
+   "video": "mariquitas_casa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\mariquitas_casa\\audio\\lyria_tramo1.mp3",
+   "archivo": "mariquitas_casa__lyria_tramo1.mp3",
+   "md5": "03f63beecc550ae445dc17e55ca74682",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to the Ladybugs Hiding in Your House This Winter?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "who",
+    "choose"
+   ],
+   "estilo": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror.",
+   "prompt": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror. Total length: exactly 1:45 (106 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held curious tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:33] Section 1: Intensity 3/10. Golden autumn afternoon, a busy buzzing pizzicato swarm, then a comic pause and a curious glockenspiel question.\n[0:33 - 1:09] Section 2: Intensity 4/10. A playful reveal with a slightly exotic pentatonic marimba hint, then a brisk travelling theme.\n[1:09 - 1:45] Section 3: Intensity 4/10. A house-hunting tune: bouncy upright bass and clarinet, picky and funny.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 33,
+     "intensidad": 3,
+     "desc": "Golden autumn afternoon, a busy buzzing pizzicato swarm, then a comic pause and a curious glockenspiel question."
+    },
+    {
+     "t0": 33,
+     "t1": 69,
+     "intensidad": 4,
+     "desc": "A playful reveal with a slightly exotic pentatonic marimba hint, then a brisk travelling theme."
+    },
+    {
+     "t0": 69,
+     "t1": 105,
+     "intensidad": 4,
+     "desc": "A house-hunting tune: bouncy upright bass and clarinet, picky and funny."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "emotivo",
+     "frío",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 114.21,
+    "rms_db": -14.7,
+    "tempo": 117.5,
+    "brillo_hz": 1311,
+    "energia": [
+     0.45,
+     0.54,
+     0.6,
+     0.72,
+     0.73,
+     0.87,
+     0.89,
+     0.85,
+     0.97,
+     1.0,
+     0.42,
+     0.01
+    ],
+    "huecos": [
+     [
+      105.1,
+      110.7
+     ]
+    ],
+    "dinamica": 0.99
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "mariquitas_casa__lyria_tramo2": {
+   "id": "mariquitas_casa__lyria_tramo2",
+   "video": "mariquitas_casa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\mariquitas_casa\\audio\\lyria_tramo2.mp3",
+   "archivo": "mariquitas_casa__lyria_tramo2.mp3",
+   "md5": "9bc4e09e2748038f50d8d44434527d8f",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to the Ladybugs Hiding in Your House This Winter?",
+   "tramo": 2,
+   "escenas": [
+    "inside",
+    "wake",
+    "defense"
+   ],
+   "estilo": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror.",
+   "prompt": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror. Total length: exactly 1:19 (79 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 0:26] Section 1: Intensity 2/10. Sleepy and cozy: felt piano, soft strings, slow breathing rhythm, a winter lullaby.\n[0:26 - 0:55] Section 2: Intensity 3/10. Gentle confusion: a warm sunny melody that stumbles, then fades to a lonely quiet tone.\n[0:55 - 1:19] Section 3: Intensity 6/10. Funny and a bit gross: a squelchy bassoon, a sneaky pizzicato, a comic sting.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 26,
+     "intensidad": 2,
+     "desc": "Sleepy and cozy: felt piano, soft strings, slow breathing rhythm, a winter lullaby."
+    },
+    {
+     "t0": 26,
+     "t1": 55,
+     "intensidad": 3,
+     "desc": "Gentle confusion: a warm sunny melody that stumbles, then fades to a lonely quiet tone."
+    },
+    {
+     "t0": 55,
+     "t1": 79,
+     "intensidad": 6,
+     "desc": "Funny and a bit gross: a squelchy bassoon, a sneaky pizzicato, a comic sting."
+    }
+   ],
+   "intensidad": [
+    2,
+    3,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "emotivo",
+     "frío",
+     "juguetón",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "infantil",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 77.98,
+    "rms_db": -14.9,
+    "tempo": 161.5,
+    "brillo_hz": 1043,
+    "energia": [
+     0.45,
+     0.41,
+     0.45,
+     0.45,
+     0.83,
+     0.81,
+     1.0,
+     0.79,
+     0.78,
+     0.82,
+     0.93,
+     0.17
+    ],
+    "huecos": [],
+    "dinamica": 0.83
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "mariquitas_casa__lyria_tramo3": {
+   "id": "mariquitas_casa__lyria_tramo3",
+   "video": "mariquitas_casa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\mariquitas_casa\\audio\\lyria_tramo3.mp3",
+   "archivo": "mariquitas_casa__lyria_tramo3.mp3",
+   "md5": "b0a3b19cfa56af4613041e2dc35ee0d0",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to the Ladybugs Hiding in Your House This Winter?",
+   "tramo": 3,
+   "escenas": [
+    "spring",
+    "deal",
+    "outro"
+   ],
+   "estilo": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror.",
+   "prompt": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror. Total length: exactly 1:06 (67 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 0:24] Section 1: Intensity 4/10. Bright spring awakening: flute-like celesta and marimba, hopeful and light.\n[0:24 - 0:48] Section 2: Intensity 3/10. Practical and friendly: light guitar and piano, calm and helpful.\n[0:48 - 1:06] Section 3: Intensity 3/10. Return to the opening autumn theme, warm and resolved, a smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 24,
+     "intensidad": 4,
+     "desc": "Bright spring awakening: flute-like celesta and marimba, hopeful and light."
+    },
+    {
+     "t0": 24,
+     "t1": 48,
+     "intensidad": 3,
+     "desc": "Practical and friendly: light guitar and piano, calm and helpful."
+    },
+    {
+     "t0": 48,
+     "t1": 66,
+     "intensidad": 3,
+     "desc": "Return to the opening autumn theme, warm and resolved, a smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "frío",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 66.9,
+    "rms_db": -14.6,
+    "tempo": 103.4,
+    "brillo_hz": 1222,
+    "energia": [
+     0.33,
+     0.58,
+     0.71,
+     0.93,
+     0.82,
+     0.52,
+     0.65,
+     0.81,
+     0.86,
+     0.86,
+     1.0,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.67
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
   }
  },
- "actualizado": "2026-10-22 14:23"
+ "actualizado": "2026-10-22 19:30"
 }

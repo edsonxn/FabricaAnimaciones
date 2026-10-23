@@ -11199,7 +11199,14 @@
     "dinamica": 0.97
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "novela_altar",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "luna_se_aleja__lyria_2": {
@@ -17612,7 +17619,14 @@
     "dinamica": 0.92
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tes_cosas_inutiles",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "wow_clases_ocultas__lyria_tramo2": {
@@ -17778,7 +17792,14 @@
     "dinamica": 0.91
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tes_cosas_inutiles",
+     "tramo": 8,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "wow_curiosidades_kalimdor__lyria_tramo10": {
@@ -18145,7 +18166,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tes_cosas_inutiles",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "wow_curiosidades_kalimdor__lyria_tramo7": {
@@ -18330,7 +18358,14 @@
     "dinamica": 0.51
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tes_cosas_inutiles",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "wow_curiosidades_kalimdor__lyria_tramo9": {
@@ -22160,7 +22195,14 @@
     "dinamica": 0.81
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tes_cosas_inutiles",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-10-23"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "caxcan_mixton__lyria_tramo8": {
@@ -22411,6 +22453,7 @@
    "usos": [],
    "catalogado": "2026-10-21",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
@@ -23215,6 +23258,7 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3"
    ]
   },
@@ -29412,7 +29456,1149 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-23"
+  },
+  "corn_flakes__lyria_tramo5": {
+   "id": "corn_flakes__lyria_tramo5",
+   "video": "corn_flakes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\corn_flakes\\audio\\lyria_tramo5.mp3",
+   "archivo": "corn_flakes__lyria_tramo5.mp3",
+   "md5": "95a461f473986b8cd6935197689c2af3",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Los Corn Flakes Nacieron de un ERROR (Y Separaron a Dos Hermanos Para Siempre)",
+   "tramo": 5,
+   "escenas": [
+    "carta",
+    "mexico",
+    "cierre"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 1:35 (95 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin very softly with solo piano. End with a natural slow fade-out to silence.\n\n[0:00 - 0:25] Section 1: Intensity 2/10. Tender and sad: solo felt piano, a few soft clarinet notes, silence between phrases.\n[0:25 - 1:02] Section 2: Intensity 6/10. Warm and wide: flowing piano arpeggios, sustained strings, glockenspiel sparkle, a sunny morning feeling.\n[1:02 - 1:35] Section 3: Intensity 4/10. Return to the opening piano figure, now warm and resolved, a small smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 2,
+     "desc": "Tender and sad: solo felt piano, a few soft clarinet notes, silence between phrases."
+    },
+    {
+     "t0": 25,
+     "t1": 62,
+     "intensidad": 6,
+     "desc": "Warm and wide: flowing piano arpeggios, sustained strings, glockenspiel sparkle, a sunny morning feeling."
+    },
+    {
+     "t0": 62,
+     "t1": 95,
+     "intensidad": 4,
+     "desc": "Return to the opening piano figure, now warm and resolved, a small smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    2,
+    6,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 92.81,
+    "rms_db": -15.2,
+    "tempo": 129.2,
+    "brillo_hz": 1125,
+    "energia": [
+     0.35,
+     0.31,
+     0.44,
+     0.82,
+     0.78,
+     1.0,
+     0.81,
+     0.54,
+     0.73,
+     0.62,
+     0.68,
+     0.15
+    ],
+    "huecos": [],
+    "dinamica": 0.85
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "corn_flakes__lyria_tramo3": {
+   "id": "corn_flakes__lyria_tramo3",
+   "video": "corn_flakes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\corn_flakes\\audio\\lyria_tramo3.mp3",
+   "archivo": "corn_flakes__lyria_tramo3.mp3",
+   "md5": "f98a3279e7ea4c55e8704683e704bce0",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Los Corn Flakes Nacieron de un ERROR (Y Separaron a Dos Hermanos Para Siempre)",
+   "tramo": 3,
+   "escenas": [
+    "patente",
+    "fiebre",
+    "azucar"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 1:20 (80 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained low tone that can flow into the next piece.\n\n[0:00 - 0:17] Section 1: Intensity 3/10. Deflated and bitter: a slow falling clarinet phrase, low strings, one unresolved chord.\n[0:17 - 0:45] Section 2: Intensity 6/10. A bustling small-town boom: quick ragtime piano, busy pizzicato, comic energy, many things happening at once.\n[0:45 - 1:20] Section 3: Intensity 5/10. Tension between two people: low pulsing strings and muted piano, stubborn and heavy, building slowly.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 17,
+     "intensidad": 3,
+     "desc": "Deflated and bitter: a slow falling clarinet phrase, low strings, one unresolved chord."
+    },
+    {
+     "t0": 17,
+     "t1": 45,
+     "intensidad": 6,
+     "desc": "A bustling small-town boom: quick ragtime piano, busy pizzicato, comic energy, many things happening at once."
+    },
+    {
+     "t0": 45,
+     "t1": 80,
+     "intensidad": 5,
+     "desc": "Tension between two people: low pulsing strings and muted piano, stubborn and heavy, building slowly."
+    }
+   ],
+   "intensidad": [
+    3,
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 82.7,
+    "rms_db": -15.0,
+    "tempo": 80.7,
+    "brillo_hz": 981,
+    "energia": [
+     0.44,
+     0.48,
+     0.54,
+     0.86,
+     0.89,
+     1.0,
+     0.92,
+     0.25,
+     0.48,
+     0.43,
+     0.47,
+     0.23
+    ],
+    "huecos": [],
+    "dinamica": 0.77
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "corn_flakes__lyria_tramo4": {
+   "id": "corn_flakes__lyria_tramo4",
+   "video": "corn_flakes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\corn_flakes\\audio\\lyria_tramo4.mp3",
+   "archivo": "corn_flakes__lyria_tramo4.mp3",
+   "md5": "bf2aa1c90768f8f317bac658023c2903",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Los Corn Flakes Nacieron de un ERROR (Y Separaron a Dos Hermanos Para Siempre)",
+   "tramo": 4,
+   "escenas": [
+    "salto",
+    "guino",
+    "pleito"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 1:32 (92 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End on a dark sustained tone that can flow into the next piece.\n\n[0:00 - 0:25] Section 1: Intensity 6/10. Courage and a new beginning: the pulse lifts, warm strings and marimba climb together, hopeful and brave.\n[0:25 - 0:57] Section 2: Intensity 7/10. Playful and cheeky: bouncy ragtime piano with pizzicato and glockenspiel winks, charming and fast.\n[0:57 - 1:32] Section 3: Intensity 5/10. Serious and cold: slow low strings, a ticking pulse, heavy and stubborn, ending on a held dark tone.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 6,
+     "desc": "Courage and a new beginning: the pulse lifts, warm strings and marimba climb together, hopeful and brave."
+    },
+    {
+     "t0": 25,
+     "t1": 57,
+     "intensidad": 7,
+     "desc": "Playful and cheeky: bouncy ragtime piano with pizzicato and glockenspiel winks, charming and fast."
+    },
+    {
+     "t0": 57,
+     "t1": 92,
+     "intensidad": 5,
+     "desc": "Serious and cold: slow low strings, a ticking pulse, heavy and stubborn, ending on a held dark tone."
+    }
+   ],
+   "intensidad": [
+    6,
+    7,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "frío",
+     "juguetón",
+     "oscuro",
+     "rabia"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 93.41,
+    "rms_db": -15.0,
+    "tempo": 117.5,
+    "brillo_hz": 1163,
+    "energia": [
+     0.33,
+     0.8,
+     0.95,
+     0.78,
+     0.79,
+     0.85,
+     0.87,
+     0.92,
+     0.86,
+     0.82,
+     1.0,
+     0.56
+    ],
+    "huecos": [],
+    "dinamica": 0.67
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "corn_flakes__lyria_tramo1": {
+   "id": "corn_flakes__lyria_tramo1",
+   "video": "corn_flakes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\corn_flakes\\audio\\lyria_tramo1.mp3",
+   "archivo": "corn_flakes__lyria_tramo1.mp3",
+   "md5": "8447b61596f2c329dc3f69f015a6fe3b",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Los Corn Flakes Nacieron de un ERROR (Y Separaron a Dos Hermanos Para Siempre)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "promesa",
+    "sanatorio",
+    "granos"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 2:02 (122 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:22] Section 1: Intensity 3/10. A single questioning felt piano figure over a low held clarinet, curious and a little ironic. Almost empty.\n[0:22 - 0:42] Section 2: Intensity 4/10. A gentle marimba pulse begins, upright bass enters, the feeling of a family story about to unfold.\n[0:42 - 1:25] Section 3: Intensity 4/10. Orderly, slightly stiff routine: steady walking bass, tidy pizzicato, a polite old-fashioned waltz feeling.\n[1:25 - 2:02] Section 4: Intensity 4/10. Light comic trial and error: clumsy bassoon-like clarinet, plucked strings, small stumbles and a crunchy little stop.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 22,
+     "intensidad": 3,
+     "desc": "A single questioning felt piano figure over a low held clarinet, curious and a little ironic. Almost empty."
+    },
+    {
+     "t0": 22,
+     "t1": 42,
+     "intensidad": 4,
+     "desc": "A gentle marimba pulse begins, upright bass enters, the feeling of a family story about to unfold."
+    },
+    {
+     "t0": 42,
+     "t1": 85,
+     "intensidad": 4,
+     "desc": "Orderly, slightly stiff routine: steady walking bass, tidy pizzicato, a polite old-fashioned waltz feeling."
+    },
+    {
+     "t0": 85,
+     "t1": 122,
+     "intensidad": 4,
+     "desc": "Light comic trial and error: clumsy bassoon-like clarinet, plucked strings, small stumbles and a crunchy little stop."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 119.2,
+    "rms_db": -14.6,
+    "tempo": 184.6,
+    "brillo_hz": 1048,
+    "energia": [
+     0.34,
+     0.46,
+     0.45,
+     0.42,
+     0.67,
+     0.77,
+     0.8,
+     0.78,
+     0.89,
+     1.0,
+     0.95,
+     0.31
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "corn_flakes__lyria_tramo2": {
+   "id": "corn_flakes__lyria_tramo2",
+   "video": "corn_flakes",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\corn_flakes\\audio\\lyria_tramo2.mp3",
+   "archivo": "corn_flakes__lyria_tramo2.mp3",
+   "md5": "206110e2201d2989e9056cb916f43e52",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Los Corn Flakes Nacieron de un ERROR (Y Separaron a Dos Hermanos Para Siempre)",
+   "tramo": 2,
+   "escenas": [
+    "hermano",
+    "olvido",
+    "hojuelas"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 1:40 (100 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a held tone. End on a bright sustained tone that can flow into the next piece.\n\n[0:00 - 0:35] Section 1: Intensity 3/10. Quiet and melancholic: a lonely clarinet line over sparse piano, patient and tired.\n[0:35 - 1:07] Section 2: Intensity 4/10. Something has gone wrong in the kitchen: hesitant pizzicato, ticking glockenspiel, a small rising question.\n[1:07 - 1:40] Section 3: Intensity 6/10. Delighted surprise: bright marimba and glockenspiel flourish, a warm discovery, light and crunchy.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 35,
+     "intensidad": 3,
+     "desc": "Quiet and melancholic: a lonely clarinet line over sparse piano, patient and tired."
+    },
+    {
+     "t0": 35,
+     "t1": 67,
+     "intensidad": 4,
+     "desc": "Something has gone wrong in the kitchen: hesitant pizzicato, ticking glockenspiel, a small rising question."
+    },
+    {
+     "t0": 67,
+     "t1": 100,
+     "intensidad": 6,
+     "desc": "Delighted surprise: bright marimba and glockenspiel flourish, a warm discovery, light and crunchy."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 103.39,
+    "rms_db": -15.0,
+    "tempo": 161.5,
+    "brillo_hz": 897,
+    "energia": [
+     0.29,
+     0.44,
+     0.53,
+     0.46,
+     0.44,
+     0.45,
+     0.62,
+     0.72,
+     0.91,
+     0.87,
+     1.0,
+     0.47
+    ],
+    "huecos": [],
+    "dinamica": 0.71
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "novela_altar__lyria_tramo1": {
+   "id": "novela_altar__lyria_tramo1",
+   "video": "novela_altar",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\novela_altar\\audio\\lyria_tramo1.mp3",
+   "archivo": "novela_altar__lyria_tramo1.mp3",
+   "md5": "64ee06217054cb5e4b7d5edc36726661",
+   "canal": "p",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "La muerta en el altar · Capítulo 1",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "traicion",
+    "flashback",
+    "nina",
+    "climax"
+   ],
+   "estilo": "Mexican telenovela dramatic score: lush strings, solo piano, soft nylon guitar and a distant Day of the Dead choir, slow tempo 80 BPM, cinematic and melodramatic, mixed low under dialogue.",
+   "prompt": "BIBLIOTECA: la_sena__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-23\n\nIntimate, heartbreaking score for a short animated film about two brothers in a poor small town in a dry canyon: a gentle whistled four-note motif, warm nylon-string folk requinto guitar, soft felt piano, later a small string ensemble and cello. Tender and nostalgic, never melodramatic; lots of space so dialogue and narration sit on top. No drum kit, no pop, no electronic beats.\nBegin uneasy and restrained, rise to a confrontation that breaks into silence, a lonely cello, then the slow folk waltz that swells into the full-strings return of the whistled motif, a moment of total silence, and the motif whistled alone to close.\ntenis: Something is wrong: guitar with one held dissonant note, uneasy but restrained, no horror.\nmensaje: Rooftop at night, confrontation: low cello drone rising, the music breaks off for a silence, then a tender broken piano.\nrecamara: Empty bed at dawn: a single sustained cello note and a lonely piano phrase.\ngraduacion: Graduation waltz turning into emotion: a slow simple small-town folk waltz on guitar and strings, then the whistled motif returns on full strings and swells, then silence.\nepilogo: Hopeful ending: the four-note motif whistled alone, then a soft guitar chord, warm and quiet.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "coro",
+     "cuerdas",
+     "drone",
+     "guitarra",
+     "piano",
+     "silbido"
+    ],
+    "animo": [
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "nostálgico",
+     "tenso",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "folk mexicano",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 90.44,
+    "rms_db": -15.2,
+    "tempo": 161.5,
+    "brillo_hz": 853,
+    "energia": [
+     0.31,
+     0.3,
+     0.48,
+     0.56,
+     0.5,
+     0.5,
+     1.0,
+     0.97,
+     0.96,
+     0.98,
+     0.62,
+     0.03
+    ],
+    "huecos": [],
+    "dinamica": 0.97
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo1": {
+   "id": "tes_cosas_inutiles__lyria_tramo1",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo1.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo1.mp3",
+   "md5": "233ac69f1df05c94255faac20cf635f7",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "p15"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: wow_curiosidades_kalimdor__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-23\n\nEpic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nBegin softly from near silence with a curious pulse. End on a sustained held chord, gently.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 116.0,
+    "rms_db": -24.8,
+    "tempo": 143.6,
+    "brillo_hz": 1225,
+    "energia": [
+     0.26,
+     0.23,
+     0.16,
+     0.25,
+     0.55,
+     1.0,
+     0.93,
+     0.38,
+     0.35,
+     0.58,
+     0.52,
+     0.74
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo7": {
+   "id": "tes_cosas_inutiles__lyria_tramo7",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo7.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo7.mp3",
+   "md5": "614fa2359e8cdd445f618c758f612f1b",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 7,
+   "escenas": [
+    "p4"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: caxcan_mixton__lyria_tramo7 (desde 0.0 s) — reutilizada el 2026-10-23\n\nCinematic orchestral film score for an animated historical epic about an indigenous Caxcan family in western Mexico, 1525-1541: low strings, cello, solo clay flute and ocarina, rain stick, teponaztli and huehuetl log drums, soft choir hums, a recurring tender four-note flute motif for the father and son. Emotional like a feature film, never pop, no drum kit, no electronic beats; melodies kept low so dialogue sits on top. Total length: exactly 1:08 (69 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin weary and repetitive like forced labor; end bitter and cold with a single bell.\n\n[0:00 - 0:51] Section 1: Intensity 4/10. Years of servitude: a tired repeating ostinato like forced labor, a distant church bell, weary.\n[0:51 - 1:08] Section 2: Intensity 4/10. A royal order that changes nothing: a single cold church bell and a dark held cello note, bitter.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 51,
+     "intensidad": 4,
+     "desc": "Years of servitude: a tired repeating ostinato like forced labor, a distant church bell, weary."
+    },
+    {
+     "t0": 51,
+     "t1": 68,
+     "intensidad": 4,
+     "desc": "A royal order that changes nothing: a single cold church bell and a dark held cello note, bitter."
+    }
+   ],
+   "intensidad": [
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "percusión"
+    ],
+    "animo": [
+     "emotivo",
+     "frío",
+     "oscuro",
+     "tierno",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval",
+     "western"
+    ]
+   },
+   "medidas": {
+    "dur": 67.32,
+    "rms_db": -14.9,
+    "tempo": 80.7,
+    "brillo_hz": 957,
+    "energia": [
+     0.67,
+     0.65,
+     0.8,
+     0.74,
+     1.0,
+     0.9,
+     0.97,
+     0.93,
+     0.77,
+     0.56,
+     0.72,
+     0.19
+    ],
+    "huecos": [],
+    "dinamica": 0.81
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo2": {
+   "id": "tes_cosas_inutiles__lyria_tramo2",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo2.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo2.mp3",
+   "md5": "534fe751b3a15ef96c7c3aedc87bf134",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 2,
+   "escenas": [
+    "p14",
+    "p13"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.\nBegin on a sustained low string tone. End on a cold held note.\np14: rustic lumber mill by a river, steady wooden percussion, folk fiddle, honest toil\np13: windy snowy cliff with an ancient stone, cold airy pads, a lonely horn",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión",
+     "violín"
+    ],
+    "animo": [
+     "frío",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 121.0,
+    "rms_db": -23.7,
+    "tempo": 103.4,
+    "brillo_hz": 965,
+    "energia": [
+     0.3,
+     0.27,
+     0.39,
+     0.46,
+     0.5,
+     0.6,
+     0.82,
+     0.8,
+     0.84,
+     0.63,
+     1.0,
+     0.27
+    ],
+    "huecos": [],
+    "dinamica": 0.73
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo3": {
+   "id": "tes_cosas_inutiles__lyria_tramo3",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo3.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo3.mp3",
+   "md5": "086085afaa2051655dda1cde7fdfc278",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 3,
+   "escenas": [
+    "p12",
+    "p11"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: wow_curiosidades_kalimdor__lyria_tramo8 (desde 0.0 s) — reutilizada el 2026-10-23\n\nEpic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nBegin on a sustained held chord. End on a sustained held chord, gently.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 96.0,
+    "rms_db": -26.3,
+    "tempo": 152.0,
+    "brillo_hz": 909,
+    "energia": [
+     1.0,
+     0.66,
+     0.76,
+     0.63,
+     0.78,
+     0.66,
+     0.56,
+     0.49,
+     0.54,
+     0.6,
+     0.55,
+     0.49
+    ],
+    "huecos": [],
+    "dinamica": 0.51
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo5": {
+   "id": "tes_cosas_inutiles__lyria_tramo5",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo5.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo5.mp3",
+   "md5": "dce1d44f9b51287b5c23fba15320dd86",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 5,
+   "escenas": [
+    "p8",
+    "p7"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.\nBegin on a quiet suspended note. End on a light held chord.\np8: slow-motion duel, stretched low strings and a heavy slow drum\np7: galloping plains, bouncy strings, comic trotting rhythm",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 105.0,
+    "rms_db": -27.0,
+    "tempo": 161.5,
+    "brillo_hz": 687,
+    "energia": [
+     0.59,
+     0.81,
+     1.0,
+     0.93,
+     0.94,
+     0.85,
+     0.91,
+     0.93,
+     0.79,
+     0.86,
+     0.95,
+     0.66
+    ],
+    "huecos": [],
+    "dinamica": 0.41
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo4": {
+   "id": "tes_cosas_inutiles__lyria_tramo4",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo4.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo4.mp3",
+   "md5": "7e80508b8c3a5790ab4f4d4665e4e4ed",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 4,
+   "escenas": [
+    "p10",
+    "p9"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: wow_clases_ocultas__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-23\n\nEpic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration. Total length: exactly 2:05 (125 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin on a soft suspended tone. End on a building held note, anticipation.\n\n[0:00 - 0:55] Section 1: Intensity 5/10. arcane library wonder, celesta and harp, rising curiosity\n[0:55 - 2:05] Section 2: Intensity 6/10. long journey across the world, travelling drums, building strings",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 55,
+     "intensidad": 5,
+     "desc": "arcane library wonder, celesta and harp, rising curiosity"
+    },
+    {
+     "t0": 55,
+     "t1": 125,
+     "intensidad": 6,
+     "desc": "long journey across the world, travelling drums, building strings"
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 109.67,
+    "rms_db": -15.7,
+    "tempo": 107.7,
+    "brillo_hz": 1711,
+    "energia": [
+     0.09,
+     0.23,
+     0.42,
+     0.52,
+     0.55,
+     0.84,
+     0.85,
+     0.97,
+     1.0,
+     0.99,
+     0.87,
+     0.68
+    ],
+    "huecos": [],
+    "dinamica": 0.91
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo9": {
+   "id": "tes_cosas_inutiles__lyria_tramo9",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo9.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo9.mp3",
+   "md5": "e66a76ba86c786388713fe6afb2fe495",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 9,
+   "escenas": [
+    "p1",
+    "cierre"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.\nBegin on a deep held tone. Climb to a vast peak, then settle and fade out to silence at the end.\np1: ancient sacred scroll on a mountain summit, vast choir and deep drums, then irony\ncierre: calm and wry, warm low strings, a final playful pluck fading out",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "juguetón",
+     "solemne"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 119.0,
+    "rms_db": -23.7,
+    "tempo": 107.7,
+    "brillo_hz": 924,
+    "energia": [
+     0.18,
+     0.36,
+     0.57,
+     0.57,
+     0.48,
+     0.47,
+     0.49,
+     0.42,
+     0.74,
+     0.81,
+     1.0,
+     0.67
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo6": {
+   "id": "tes_cosas_inutiles__lyria_tramo6",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo6.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo6.mp3",
+   "md5": "2bdb6a640d7aed513ec450de1d5a6e34",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 6,
+   "escenas": [
+    "p6",
+    "p5"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.\nBegin on a light held chord. End on a dark held drone.\np6: imperial court fanfare that deflates, small brass, ironic\np5: dark cult museum, ominous low choir, creeping cellos",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "drone",
+     "metales",
+     "percusión"
+    ],
+    "animo": [
+     "oscuro"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 143.0,
+    "rms_db": -23.7,
+    "tempo": 95.7,
+    "brillo_hz": 1441,
+    "energia": [
+     0.08,
+     0.11,
+     0.22,
+     0.33,
+     0.53,
+     1.0,
+     0.56,
+     0.2,
+     0.33,
+     0.43,
+     0.52,
+     0.46
+    ],
+    "huecos": [],
+    "dinamica": 0.92
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "tes_cosas_inutiles__lyria_tramo8": {
+   "id": "tes_cosas_inutiles__lyria_tramo8",
+   "video": "tes_cosas_inutiles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tes_cosas_inutiles\\audio\\lyria_tramo8.mp3",
+   "archivo": "tes_cosas_inutiles__lyria_tramo8.mp3",
+   "md5": "50da80f21816aad7da09eaf78e0e17f6",
+   "canal": "cronicas_tamriel",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 15 cosas más INÚTILES de Skyrim",
+   "tramo": 8,
+   "escenas": [
+    "p3",
+    "p2"
+   ],
+   "estilo": "Nordic fantasy orchestral underscore like a classic open-world RPG soundtrack: low male choir, frame drums, cello and viola, distant horns, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: wow_clases_ocultas__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-10-23\n\nEpic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration. Total length: exactly 2:28 (149 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin on a building held note. Climb to a triumphant peak, then settle and fade out to silence at the end.\n\n[0:00 - 1:47] Section 1: Intensity 8/10. tense hunt building to triumphant discovery, full orchestra and choir\n[1:47 - 2:28] Section 2: Intensity 4/10. resolved and a little mischievous, warm horns fading out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 107,
+     "intensidad": 8,
+     "desc": "tense hunt building to triumphant discovery, full orchestra and choir"
+    },
+    {
+     "t0": 107,
+     "t1": 148,
+     "intensidad": 4,
+     "desc": "resolved and a little mischievous, warm horns fading out"
+    }
+   ],
+   "intensidad": [
+    8,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 146.94,
+    "rms_db": -15.1,
+    "tempo": 107.7,
+    "brillo_hz": 1303,
+    "energia": [
+     0.68,
+     0.78,
+     0.81,
+     0.79,
+     0.87,
+     0.95,
+     0.96,
+     1.0,
+     0.89,
+     0.56,
+     0.5,
+     0.09
+    ],
+    "huecos": [],
+    "dinamica": 0.91
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
   }
  },
- "actualizado": "2026-10-23 08:58"
+ "actualizado": "2026-10-23 17:17"
 }

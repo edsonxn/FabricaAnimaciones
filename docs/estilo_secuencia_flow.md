@@ -17,11 +17,20 @@ python fab.py <v> beats                 cortes en pausas reales de la voz -> bea
    (Claude escribe prompts.json: un prompt por beat)
 python fab.py <v> prompts               valida y exporta flow/prompts.txt + flow/escenas.json
    (generación en Flow; ver «Generar en Flow»)
+   (mientras salen: el usuario ve el avance en el panel, 🎞 Montaje; bajar cada lote al salir y los clips en la misma tanda,
+    regla del usuario del 20-oct-2026; docs/panel.md § «Vista Montaje»)
 python fab.py <v> servir                puente con Flow: entrega los prompts y recibe cada resultado en medios/ (cero tokens)
 python fab.py <v> medios                hojas previews/medios_NN.jpg (20 por hoja, con la frase de cada beat): MIRARLAS
+python fab.py <v> vivo                  imágenes vivas: candidatas + previews/vivo_NN.jpg -> líneas FX en efectos.py
+                                        (local, 0 tokens de API, ~10-15 min en 2.º plano; § «Imágenes vivas»)
 python fab.py <v> video [--borrador] [--tramo 100-140]   arma salida/video_sin_audio.mp4 (~8 min de video en ~4 min)
+python fab.py <v> ambiente | mezcla | video --hasta 60  VISTA PREVIA con audio: salida/<v>_AVANCE.mp4 (60 s en ~40 s)
 python fab.py <v> musica | sfx | mezcla | final | verificar      (mezcla después de video: usa audio/ambiente.wav)
 ```
+**Vista previa (19-oct-2026, `doce_animales`):** antes `video --hasta` se IGNORABA en este motor y renderizaba el video
+entero. Ahora `--hasta N` = `--tramo 0-N` + los primeros N s de `audio/final.wav` → `salida/<v>_AVANCE.mp4`. Orden: `fx`
+(si hay SFX) → `ambiente` (el render parcial no lo genera) → Lyria → `mezcla` → `video --hasta 60`. Render real medido:
+865 s con 23 imágenes vivas + `VIVO_AUTO` en ~30 min (un solo proceso; sin vivos, ~8 min).
 `comprobar`, `escena` y `prueba` no aplican a este motor. `medios/` nace en E: (junction), igual que `salida/`.
 
 ## Formato vertical (reels 9:16; añadido el 8-oct-2026 para la página «Que pasa en Juchipila», `E:\PaginaFace`)
@@ -113,7 +122,11 @@ Cada prompt lleva, en este orden: estilo fijo + iluminación → sujeto y acció
   rinde más por punto). Con 55 puntos, 7×10 + 1×8 = 78 s.
 
 ## Generar en Flow
-Claude lanza el lote manejando la extensión `flowscrap` (`Documentslowscrap`, instalada en el Chrome del usuario) con
+> **Antes de lanzar nada lee `docs/manual_wild_next_door.md` § «Hallazgos de sin_medicina» (12-oct-2026):** pestaña de Flow VISIBLE, saldo real,
+> el falso error «no mostró la pestaña Video», lote de imágenes por pegado (más rápido que la extensión) y no volver a correr `beats` a medias.
+> **Sin extensión / sin Chrome / con 0 puntos (11-oct-2026):** las IMÁGENES salen gratis y se pueden lanzar desde el navegador
+> integrado del app con `nucleo/flow_integrado.py`; receta en `docs/manual_wild_next_door.md` § «Imágenes SIN extensión».
+Claude lanza el lote manejando la extensión `flowscrap` (`Documents\flowscrap`, instalada en el Chrome del usuario) con
 Claude in Chrome, y los resultados vuelven por un **puente local** (no por las descargas de Chrome). Probado el 6-oct-2026
 con imágenes (2 de 2 llegaron a `medios/`); **video aún sin probar**.
 1. Abrir Flow, crear un **proyecto nuevo** (uno por episodio) y no tocar esa pestaña mientras corre.
@@ -180,6 +193,11 @@ con imágenes (2 de 2 llegaron a `medios/`); **video aún sin probar**.
   Sirve también para quitar un rótulo pegado al borde (en `arana_techo` el clip 6 traía números de estatura: 0.09). Para
   detectar marcos, mide las esquinas de cada clip en varios tiempos (receta en `docs/manual_wild_next_door.md`).
 - flowscrap puede saltar a 720p a mitad de un lote de clips en 360p: los que falten se mandan a mano (ver el manual).
+- **Ingrediente en el navegador INTEGRADO sin portapapeles (23-oct-2026, `corn_flakes`):** el Ctrl+V del portapapeles de Windows
+  no llega al panel, pero un pegado SINTÉTICO sí: en `javascript_tool`, `fetch` de la imagen (upload.wikimedia.org tiene CORS
+  abierto; también un blob de la propia página), opcionalmente unir varias en un `<canvas>` → `File` → `const dt = new
+  DataTransfer(); dt.items.add(file); ed.dispatchEvent(new ClipboardEvent('paste', {clipboardData: dt, bubbles: true,
+  cancelable: true}))` sobre `.ProseMirror`. Flow lo sube como ingrediente («Subidas»). Prompt y receta: `videos/corn_flakes/prompt_miniatura.md`.
 - Miniatura: mismo camino (escenas `scene-901/902` en un `flow/escenas.json` temporal, luego `prompts` lo restaura). Nano Banana 2
   Lite escribió bien frases cortas en inglés entre comillas. Receta que gana en el nicho de insectos: dibujo sobre fondo claro,
   frase manuscrita de 2-4 palabras y flecha curva al sujeto.
@@ -212,6 +230,86 @@ Lo aprendido con `flowscrap` (vale también para el script propio; detalle en `f
   (también `fab.py <v> ambiente`) y `mezcla` lo suma bajo la voz, con todos los clips igualados de nivel. Volumen general en
   `SECUENCIA["ambiente"]` (0.5; 0 = mudo) y por clip en `ambiente_por={"scene-004": 0.0}` para callar uno que suene mal
   (voces, música rara). Por eso `mezcla` va DESPUÉS de `video`. Escuchar el primer minuto antes de `final`.
+
+## Imágenes vivas (pedido del usuario, 19-oct-2026; kit `nucleo/vivo.py`, probado en `videos/doce_animales`)
+Las imágenes fijas de Flow se sentían quietas. Ahora pueden **respirar**: el personaje se separa del fondo y se mueve un
+poco encima («como un baile»), y el fondo lleva **parallax 2.5D**. No en todas: donde el personaje destaca (primer plano,
+dos personajes frente a frente, un objeto en mano como una lupa o un matamoscas). Ayuda a la regla de «nada quieto > 2 s».
+- **Preparar** (desde `C:\FabricaAnimaciones`): `python fab.py <v> vivo` prepara todas las imágenes (profundidad con Depth
+  Anything V2 Small en la GPU + recorte con rembg en la CPU; ~2 s por imagen, caché en `medios/capas/<beat>/` que se rehace
+  sola si la imagen cambia), imprime las **candidatas** con su línea FX lista para pegar y hace la hoja
+  `previews/vivo_NN.jpg`: original | capas numeradas | fondo rellenado | cuadro vivo en su pico. **Mírala antes de pegar.**
+  `vivo hoja scene-032 scene-037` = hoja de esas aunque no sean candidatas · `vivo preparar --solo-prof` = solo profundidad.
+- **Candidata** = máscara entre el 8 y el 55 % del cuadro con 1-3 componentes. Animación propuesta: 2-3 componentes → `baile`;
+  uno que no toca el borde de abajo y queda alto → `flota`; uno grande (> 30 %) → `respira`; si no → `balanceo`.
+  En Flow casi todo es candidato (145 de 191 en `doce_animales`), así que el selector **recomienda** solo las que más
+  destacan: puntos = tamaño de la pieza principal (hasta 40 %) + 0,12 si hay dos personajes + 0,08 si el beat dura ≥ 3,5 s
+  − 0,15 si el recorte es de `isnet-anime`; pieza principal ≥ 12 %, ~20 % de las imágenes, nunca dos beats seguidos. Las
+  demás salen comentadas. **Aun así hay que mirar la hoja:** en `doce_animales`, de 38 recomendadas, 20 iban tal cual, 8
+  necesitaban `capa` (cabeza cortada, suelo, el sueño de un personaje dormido) y 10 se descartaron (el recorte arrastraba
+  el mapa entero, la multitud, la cama, la telaraña). Un murciélago colgado se mece con `pivote=(.5, 0)` (arriba).
+- **Declarar** en `efectos.py`: `FX = [dict(tipo="vivo", beat="scene-092", anim="baile"), dict(tipo="vivo",
+  beat="scene-016", anim="balanceo", capa=1), ...]`. `capa` = qué recortes se mueven (los números de la hoja; None = todos;
+  los que no se mueven siguen en el fondo con sus píxeles originales, sin rellenar). Con `en="palabras"` la animación entra
+  suave en esa palabra. `amp` (1.0) escala todo el movimiento, `par` (16 px) el parallax, `escala` (1.04) el recorte,
+  `pivote` (`"pies"`, `"centro"` o (fx, fy) relativo a la caja), `modelo` (`"isnet-anime"` si el general falla).
+- **Parallax en TODAS** las imágenes: `VIVO_AUTO = 12` en `efectos.py` (px; requiere `vivo preparar --solo-prof`). Sin
+  recorte: el fondo se desplaza por profundidad en la dirección en que ya va la cámara del beat (radial si solo hay zoom).
+- **Animaciones** (`vivo.mov`): `respira` (squash vertical 1,8 % en 2,8 s, giro 0,7°) · `balanceo` (3° en 2,6 s) ·
+  `baile` (vaivén 3,2° + rebote squash dos veces por vaivén, sin despegar los pies; los personajes en contrafase) ·
+  `flota` (sube y baja 6 px, deriva 3 px, giro 1,6°; pivote al centro) · `parallax` (rígido, sale 1,8x más que el fondo).
+- **Cómo se esconde el hueco:** el recorte va un **4 % más grande** con pivote en los pies (idea del usuario: tapa el borde
+  del relleno); lo que mide > 300 px de alto **gira proporcionalmente menos** (la lupa de 980 px gira 0,8°, el sapo 3°); los
+  lados que tocan el borde de la imagen se estiran por fuera del cuadro (al girar no asoma nada); el relleno es
+  `cv2.inpaint` TELEA a media resolución con la máscara dilatada ~8 px, para que el contorno negro se vaya con el personaje.
+- **Lo que costó (no repetir):** rembg en este dibujo de tinta y color plano marca el CONTORNO y deja fuera el relleno de color
+  (camisa, pantalón, el vidrio de la lupa): sin rellenar los huecos interiores el recorte sale hueco y deja ver el fondo
+  borroso (halo azul). El kit rellena huecos (sellando los lados que tocan el borde de la imagen), usa un alfa casi binario
+  (lo semitransparente de rembg dejaba ver el relleno a través del brazo blanco) y **corta los puentes**: la mariquita, la
+  uña y la cabeza venían unidas por el contorno del dedo; las líneas largas y delgadas (contorno de la mesa o del suelo) se
+  quedan en el fondo, las patas, antenas y mangos vuelven a su pieza. `isnet-general-use` recorta mejor que `isnet-anime`
+  en este estilo (el anime se comía el suelo o el dedo, y en el perro con el sapo no vio nada); el kit prueba el general
+  y solo si no da candidata pasa al anime.
+- **BUG que costó un render (19-oct-2026, arreglado):** `fab.py <v> video` lanza `python -m secuencia`, que corre como
+  módulo `__main__`; `secuencia_fx` importaba OTRA copia de `secuencia` y `isinstance(act, S.Imagen)` fallaba, así que el
+  MASTER salió SIN imágenes vivas ni parallax aunque `fx hoja` y las pruebas sí los mostraban (usan otra ruta). Arreglo:
+  alias en `sys.modules` al principio de `nucleo/secuencia.py`. **Comprobar en el MASTER, no en la hoja:** medir el vaivén
+  de un beat `baile` con `cv2.phaseCorrelate` sobre el personaje (≈ 6 px en 3 s; 0,3 px = no se aplicó) o comparar con
+  `previews/vivo_prueba/`. Con vivos el render tarda ~3x (un beat de 3 s: 2 s → 11 s).
+- **Cuidado al elegir:** una cabeza cortada por el cuello (la capa 0 de un primer plano de persona) NO se anima: se rompe en
+  el cuello; mueve la otra capa (`capa=1`). Fondos sin personaje claro → solo parallax (`VIVO_AUTO`).
+- **Coste de render:** 35-40 ms por cuadro con solo parallax, 55-140 ms con recortes grandes (1080p).
+- **Lugar en el flujo y coste total** (el usuario, 19-oct-2026): va DESPUÉS de aprobar las hojas de medios y ANTES de
+  `video`. La preparación es una vez por video (~10-15 min para ~190 imágenes, en segundo plano, sin vigilarla) y no
+  gasta tokens de API: todo es local. Lo único que consume tokens es revisar las hojas `vivo_NN.jpg` (~8 en un video de
+  14 min). Render MEDIDO: 8 → 30 min con 23 vivos + `VIVO_AUTO` en 14:25 (la estimación previa era ~+6 min por ~30 beats animados y ~+15 min si `VIVO_AUTO` da parallax a todas). Sin prisa, ambos.
+
+## Hallazgos de `corn_flakes` (23-oct-2026, primer video de la fórmula de marcas; todo en una sesión)
+- **Prompts por TIEMPO, no por número de beat** (resuelve la mejora pendiente de `sin_medicina`): `videos/corn_flakes/_imagenes.py`
+  describe CADA FRASE del guion (`"escena_i": [variante, …]`) y `hacer_prompts.py` cruza `beats.json` con `timeline.json`: cada beat
+  toma la frase que más suena dentro de él (siguiente variante si se repite; si no hay, otro encuadre) y cada clip combinado toma
+  A = frase en [t0, t_medio] y B = [t_medio, t1]. Se puede escribir ANTES de tener la voz y sobrevive a cualquier `beats`. Copiarlo.
+- **Clips 720p con Claude in Chrome: esperar a que llegue cada archivo** a `E:\Downloads_jaire` antes de navegar al siguiente clip;
+  si se cambia de página justo después de pulsar «720p · Resolución mejorada», la descarga se cancela (de 6 llegó 1). Receta: abrir
+  `flow.google.com/project/<p>/edit/<id>` → `find` «Descargar contenido multimedia» → clic → `find` «720p Resolución mejorada» →
+  clic → esperar el archivo con un bucle `ls` → siguiente. Los `edit/<id>` se sacan en el integrado haciendo clic en cada mosaico
+  (el más viejo es el último del DOM) y leyendo el título que pone Flow.
+- **Letterbox negro en los primeros 2-3 s** de 2 de 6 clips combinados (filas negras arriba y abajo: 64 y 83 px de 720). Medir la
+  primera fila con media > 20 cada 0,5 s y fijar `recorte_por` (0.09 y 0.12). Whisper `small` en CPU sobre los clips encontró una
+  voz de conferencia y un «hmm» → `ambiente_por` 0.
+- **Nano Banana 2.1 en el integrado: 94 imágenes + 3 rehechas en ~25 min, 0 envíos perdidos** (lotes de 12 con `__ins` + Return + `__col`).
+  Fallos típicos: «both brothers» dibujó a otros dos personajes y una mancha de colores (nombrar SIEMPRE las fichas); «small figures
+  of the two brothers» dio niños (pedir «figurines… one is <ficha> in miniature»); un ciclista que no era el doctor.
+- **Imágenes vivas en interiores de plastilina:** el recorte arrastra mesas, máquinas y edificios en ~la mitad de las candidatas
+  (9 de 19 descartadas); con dos personajes separados funciona `baile`, y `capa=` salva las que mezclan persona + mueble.
+- **Chatterbox (Dan) con «Will»:** la fonética «Uíl» falló en 10 frases (Uiri, Gil, Wee) y «Güil» solo funcionó a mitad de frase;
+  al principio o al final de la frase no hubo grafía que pasara → reescribir sin el nombre («el hermano menor»). La FONETICA por
+  CONTEXTO («Will va»: «Güil va») cambia solo esas frases y no regenera las que ya pasaron. «Llegan» al inicio se oyó «Ya eran».
+- Voz con 2 semillas por frase: 103/123 a la primera (≈ 30 min en vez de 65); las que fallan se regeneran aparte.
+- **El disco E: falló a mitad del video** (reintentos de E/S, reinicio USB, NTFS 55): `lyria_tramos.py armar` y ffmpeg daban
+  «Error closing file: Invalid argument». Se pasó el video a C: (robocopy leyendo de E: + `rmdir` del junction). Ver memoria del disco.
+- Tiempos: guion + investigación 40 min; voz 45 min; Flow (94 imágenes + 6 clips + descargas) ≈ 1 h; vivo 10 min; render con 10
+  vivos + parallax 11 min (8:10); mezcla + final + verificar 5 min; subida 4 min.
 
 ## Pendiente del departamento
 - Probar con puntos: clip en 360p + descarga mejorada por el puente, y un clip combinado de 10 s con transición.

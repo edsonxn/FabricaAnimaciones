@@ -1,0 +1,726 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 11.323,
+  "tipo": "video",
+  "texto": "Este cereal lo inventó un médico que quería una comida que no supiera a casi nada. Él creía que los sabores fuertes despertaban las pasiones del cuerpo, y que un desayuno simple las calmaba.",
+  "clip_s": 10,
+  "t_medio": 5.145,
+  "texto_a": "Este cereal lo inventó un médico que quería una comida que no supiera a casi nada.",
+  "texto_b": "Él creía que los sabores fuertes despertaban las pasiones del cuerpo, y que un desayuno simple las calmaba."
+ },
+ {
+  "id": "scene-002",
+  "t0": 11.323,
+  "t1": 19.715,
+  "tipo": "video",
+  "texto": "Pero el que lo convirtió en uno de los desayunos más vendidos del mundo fue su hermano menor. El hombre al que humilló durante veinticinco años.",
+  "clip_s": 10,
+  "t_medio": 16.637,
+  "texto_a": "Pero el que lo convirtió en uno de los desayunos más vendidos del mundo fue su hermano menor.",
+  "texto_b": "El hombre al que humilló durante veinticinco años."
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.715,
+  "t1": 30.182,
+  "tipo": "video",
+  "texto": "Y todo empezó con un error en la cocina. Una olla de trigo olvidada, que debió terminar en la basura. De ahí salió una empresa que hoy vale miles de millones.",
+  "clip_s": 10,
+  "t_medio": 26.783,
+  "texto_a": "Y todo empezó con un error en la cocina. Una olla de trigo olvidada, que debió terminar en la basura.",
+  "texto_b": "De ahí salió una empresa que hoy vale miles de millones."
+ },
+ {
+  "id": "scene-004",
+  "t0": 30.182,
+  "t1": 42.93,
+  "tipo": "video",
+  "texto": "Pero también una guerra entre dos hermanos que llegó hasta la Suprema Corte. Y una carta de perdón que llegó demasiado tarde. Esta es la historia de los Corn Flakes, y de los hermanos Kellogg.",
+  "clip_s": 10,
+  "t_medio": 37.419,
+  "texto_a": "Pero también una guerra entre dos hermanos que llegó hasta la Suprema Corte. Y una carta de perdón que llegó demasiado tarde.",
+  "texto_b": "Esta es la historia de los Corn Flakes, y de los hermanos Kellogg."
+ },
+ {
+  "id": "scene-005",
+  "t0": 42.93,
+  "t1": 50.858,
+  "tipo": "video",
+  "texto": "Battle Creek, Michigan, a finales del siglo diecinueve. Aquí está uno de los hospitales más famosos de Estados Unidos.",
+  "clip_s": 10,
+  "t_medio": 47.059,
+  "texto_a": "Battle Creek, Michigan, a finales del siglo diecinueve.",
+  "texto_b": "Aquí está uno de los hospitales más famosos de Estados Unidos."
+ },
+ {
+  "id": "scene-006",
+  "t0": 50.858,
+  "t1": 61.129,
+  "tipo": "video",
+  "texto": "No es un hospital común. Es un sanatorio, una especie de hotel para curarse. Vienen ricos, políticos y estrellas, a bañarse, a hacer ejercicio y a comer bien.",
+  "clip_s": 10,
+  "t_medio": 55.632,
+  "texto_a": "No es un hospital común. Es un sanatorio, una especie de hotel para curarse.",
+  "texto_b": "Vienen ricos, políticos y estrellas, a bañarse, a hacer ejercicio y a comer bien."
+ },
+ {
+  "id": "scene-007",
+  "t0": 61.129,
+  "t1": 66.291,
+  "tipo": "imagen",
+  "texto": "Lo dirige el doctor John Harvey Kellogg, famoso por vestirse de blanco de pies a cabeza."
+ },
+ {
+  "id": "scene-008",
+  "t0": 66.291,
+  "t1": 69.541,
+  "tipo": "imagen",
+  "texto": "John tiene ideas muy firmes: nada de carne, nada de alcohol,"
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.541,
+  "t1": 73.015,
+  "tipo": "imagen",
+  "texto": "nada de café. En su época, el desayuno típico era pesado:"
+ },
+ {
+  "id": "scene-010",
+  "t0": 73.015,
+  "t1": 76.271,
+  "tipo": "imagen",
+  "texto": "carne frita, papas, pan con manteca."
+ },
+ {
+  "id": "scene-011",
+  "t0": 76.271,
+  "t1": 81.191,
+  "tipo": "imagen",
+  "texto": "Y muchísima gente vivía con indigestión. El doctor quiere inventar un desayuno ligero,"
+ },
+ {
+  "id": "scene-012",
+  "t0": 81.191,
+  "t1": 85.43,
+  "tipo": "imagen",
+  "texto": "de granos, fácil de digerir."
+ },
+ {
+  "id": "scene-013",
+  "t0": 85.43,
+  "t1": 88.935,
+  "tipo": "imagen",
+  "texto": "Sus primeros intentos no son precisamente un éxito."
+ },
+ {
+  "id": "scene-014",
+  "t0": 88.935,
+  "t1": 92.415,
+  "tipo": "imagen",
+  "texto": "Primero hornea una galleta de harina integral, dos veces,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 92.415,
+  "t1": 97.121,
+  "tipo": "imagen",
+  "texto": "hasta dejarla dura como piedra. Luego la muele en pedacitos, y le pone el mismo"
+ },
+ {
+  "id": "scene-016",
+  "t0": 97.121,
+  "t1": 100.884,
+  "tipo": "imagen",
+  "texto": "nombre que ya usaba el cereal de otro médico. El otro médico lo demanda,"
+ },
+ {
+  "id": "scene-017",
+  "t0": 100.884,
+  "t1": 106.387,
+  "tipo": "imagen",
+  "texto": "y el doctor tiene que cambiarle una letra al nombre. Ese cereal acabó llamándose granola."
+ },
+ {
+  "id": "scene-018",
+  "t0": 106.387,
+  "t1": 109.187,
+  "tipo": "imagen",
+  "texto": "También sirven pan tostado durísimo, porque el doctor creía"
+ },
+ {
+  "id": "scene-019",
+  "t0": 109.187,
+  "t1": 114.665,
+  "tipo": "imagen",
+  "texto": "que masticar mucho era sano. Cuentan que una paciente se rompió la dentadura postiza con ese pan."
+ },
+ {
+  "id": "scene-020",
+  "t0": 114.665,
+  "t1": 117.624,
+  "tipo": "imagen",
+  "texto": "Y le exigió al sanatorio que le pagara una nueva."
+ },
+ {
+  "id": "scene-021",
+  "t0": 117.624,
+  "t1": 120.644,
+  "tipo": "imagen",
+  "texto": "El doctor necesitaba algo nutritivo, pero que no rompiera"
+ },
+ {
+  "id": "scene-022",
+  "t0": 120.644,
+  "t1": 124.87,
+  "tipo": "imagen",
+  "texto": "dientes. Pero John no trabaja solo."
+ },
+ {
+  "id": "scene-023",
+  "t0": 124.87,
+  "t1": 129.219,
+  "tipo": "imagen",
+  "texto": "Detrás de él, siempre un paso atrás, está su hermano menor."
+ },
+ {
+  "id": "scene-024",
+  "t0": 129.219,
+  "t1": 133.504,
+  "tipo": "imagen",
+  "texto": "Will es ocho años más joven, callado y muy bueno con los números."
+ },
+ {
+  "id": "scene-025",
+  "t0": 133.504,
+  "t1": 137.084,
+  "tipo": "imagen",
+  "texto": "Lleva las cuentas del sanatorio, contrata, despide, paga"
+ },
+ {
+  "id": "scene-026",
+  "t0": 137.084,
+  "t1": 141.174,
+  "tipo": "imagen",
+  "texto": "y resuelve todo lo que el doctor no quiere ver. Trabaja jornadas larguísimas"
+ },
+ {
+  "id": "scene-027",
+  "t0": 141.174,
+  "t1": 146.116,
+  "tipo": "imagen",
+  "texto": "por un sueldo muy pequeño. Y su hermano no pierde oportunidad de recordarle quién manda."
+ },
+ {
+  "id": "scene-028",
+  "t0": 146.116,
+  "t1": 149.703,
+  "tipo": "imagen",
+  "texto": "John recorre el sanatorio en bicicleta, dictando órdenes."
+ },
+ {
+  "id": "scene-029",
+  "t0": 149.703,
+  "t1": 154.453,
+  "tipo": "imagen",
+  "texto": "Y Will va trotando a su lado, con la libreta en la mano, anotando cada palabra."
+ },
+ {
+  "id": "scene-030",
+  "t0": 154.453,
+  "t1": 157.742,
+  "tipo": "imagen",
+  "texto": "Así pasan casi veinticinco años."
+ },
+ {
+  "id": "scene-031",
+  "t0": 157.742,
+  "t1": 160.334,
+  "tipo": "imagen",
+  "texto": "Agosto de mil ochocientos noventa y cuatro."
+ },
+ {
+  "id": "scene-032",
+  "t0": 160.334,
+  "t1": 164.715,
+  "tipo": "imagen",
+  "texto": "En la cocina experimental del sanatorio, los hermanos están cociendo trigo."
+ },
+ {
+  "id": "scene-033",
+  "t0": 164.715,
+  "t1": 169.371,
+  "tipo": "imagen",
+  "texto": "La idea es aplastarlo con rodillos para hacer una masa, y hornearla como pan."
+ },
+ {
+  "id": "scene-034",
+  "t0": 169.371,
+  "t1": 172.051,
+  "tipo": "imagen",
+  "texto": "Pero algo los interrumpe, y tienen que salir."
+ },
+ {
+  "id": "scene-035",
+  "t0": 172.051,
+  "t1": 178.285,
+  "tipo": "imagen",
+  "texto": "El trigo cocido se queda ahí, reposando, durante horas. Cuando vuelven, ya está duro y algo rancio."
+ },
+ {
+  "id": "scene-036",
+  "t0": 178.285,
+  "t1": 181.285,
+  "tipo": "imagen",
+  "texto": "Lo normal sería tirarlo. El sanatorio cuidaba"
+ },
+ {
+  "id": "scene-037",
+  "t0": 181.285,
+  "t1": 186.184,
+  "tipo": "imagen",
+  "texto": "mucho cada centavo. Así que deciden pasarlo de todos modos por los rodillos."
+ },
+ {
+  "id": "scene-038",
+  "t0": 186.184,
+  "t1": 190.43,
+  "tipo": "imagen",
+  "texto": "Y en lugar de una masa, sale algo que nunca habían visto."
+ },
+ {
+  "id": "scene-039",
+  "t0": 190.43,
+  "t1": 193.57,
+  "tipo": "imagen",
+  "texto": "Cada grano se aplasta y sale convertido en una hojuela delgada,"
+ },
+ {
+  "id": "scene-040",
+  "t0": 193.57,
+  "t1": 198.71,
+  "tipo": "imagen",
+  "texto": "separada de las demás. Las meten al horno, y salen doradas y crujientes."
+ },
+ {
+  "id": "scene-041",
+  "t0": 198.71,
+  "t1": 201.13,
+  "tipo": "imagen",
+  "texto": "Sin querer, habían descubierto el templado:"
+ },
+ {
+  "id": "scene-042",
+  "t0": 201.13,
+  "t1": 204.708,
+  "tipo": "imagen",
+  "texto": "dejar reposar el grano cocido para que se aplaste en hojuelas."
+ },
+ {
+  "id": "scene-043",
+  "t0": 204.708,
+  "t1": 208.319,
+  "tipo": "imagen",
+  "texto": "Esa técnica se volvería la base de toda una industria."
+ },
+ {
+  "id": "scene-044",
+  "t0": 208.319,
+  "t1": 213.41,
+  "tipo": "imagen",
+  "texto": "Se las sirven a los pacientes, y les encantan. Tanto, que al volver a casa escriben"
+ },
+ {
+  "id": "scene-045",
+  "t0": 213.41,
+  "t1": 217.062,
+  "tipo": "imagen",
+  "texto": "pidiendo que se las manden por correo. Más tarde prueban con maíz,"
+ },
+ {
+  "id": "scene-046",
+  "t0": 217.062,
+  "t1": 221.039,
+  "tipo": "imagen",
+  "texto": "y el resultado es todavía mejor. Habían nacido las hojuelas"
+ },
+ {
+  "id": "scene-047",
+  "t0": 221.039,
+  "t1": 225.335,
+  "tipo": "imagen",
+  "texto": "de maíz. Llega la hora de registrar el invento."
+ },
+ {
+  "id": "scene-048",
+  "t0": 225.335,
+  "t1": 228.557,
+  "tipo": "imagen",
+  "texto": "La patente sale en mil ochocientos noventa y seis."
+ },
+ {
+  "id": "scene-049",
+  "t0": 228.557,
+  "t1": 233.127,
+  "tipo": "imagen",
+  "texto": "Y en ella aparece un solo nombre: el del doctor John Harvey Kellogg."
+ },
+ {
+  "id": "scene-050",
+  "t0": 233.127,
+  "t1": 237.205,
+  "tipo": "imagen",
+  "texto": "Will no aparece por ningún lado. Él pasaría el resto de su vida diciendo"
+ },
+ {
+  "id": "scene-051",
+  "t0": 237.205,
+  "t1": 240.197,
+  "tipo": "imagen",
+  "texto": "que la idea también era suya."
+ },
+ {
+  "id": "scene-052",
+  "t0": 240.197,
+  "t1": 246.617,
+  "tipo": "imagen",
+  "texto": "Y el invento se les escapa de las manos. Entre los pacientes del sanatorio había pasado un hombre llamado Charles Post."
+ },
+ {
+  "id": "scene-053",
+  "t0": 246.617,
+  "t1": 248.677,
+  "tipo": "imagen",
+  "texto": "Ese hombre conoció los cereales del sanatorio,"
+ },
+ {
+  "id": "scene-054",
+  "t0": 248.677,
+  "t1": 252.4,
+  "tipo": "imagen",
+  "texto": "y al salir abrió su propia fábrica en el mismo pueblo."
+ },
+ {
+  "id": "scene-055",
+  "t0": 252.4,
+  "t1": 257.476,
+  "tipo": "imagen",
+  "texto": "Se hace millonario antes que los Kellogg. Detrás de él llegan decenas de imitadores."
+ },
+ {
+  "id": "scene-056",
+  "t0": 257.476,
+  "t1": 262.72,
+  "tipo": "imagen",
+  "texto": "Battle Creek se llena de fábricas de cereal, cada una con su caja y su promesa de salud."
+ },
+ {
+  "id": "scene-057",
+  "t0": 262.72,
+  "t1": 265.22,
+  "tipo": "imagen",
+  "texto": "Y mientras todos se hacen ricos con su idea, Will"
+ },
+ {
+  "id": "scene-058",
+  "t0": 265.22,
+  "t1": 267.93,
+  "tipo": "imagen",
+  "texto": "sigue llevando las cuentas de su hermano."
+ },
+ {
+  "id": "scene-059",
+  "t0": 267.93,
+  "t1": 273.363,
+  "tipo": "imagen",
+  "texto": "Will sabe exactamente qué le falta a ese cereal para conquistar al mundo. Azúcar."
+ },
+ {
+  "id": "scene-060",
+  "t0": 273.363,
+  "t1": 276.483,
+  "tipo": "imagen",
+  "texto": "Las hojuelas del doctor son sanas, pero sosas."
+ },
+ {
+  "id": "scene-061",
+  "t0": 276.483,
+  "t1": 281.281,
+  "tipo": "imagen",
+  "texto": "A la gente le gustaría un poco de dulce. Para John, eso es un sacrilegio."
+ },
+ {
+  "id": "scene-062",
+  "t0": 281.281,
+  "t1": 285.5,
+  "tipo": "imagen",
+  "texto": "El azúcar va contra todo lo que él predica. Si Will quiere endulzar el cereal,"
+ },
+ {
+  "id": "scene-063",
+  "t0": 285.5,
+  "t1": 289.229,
+  "tipo": "imagen",
+  "texto": "tendrá que hacerlo sin él. Y aquí Will tiene que tomar la"
+ },
+ {
+  "id": "scene-064",
+  "t0": 289.229,
+  "t1": 292.923,
+  "tipo": "imagen",
+  "texto": "decisión más difícil de su vida. Tiene cuarenta y cinco años,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 292.923,
+  "t1": 297.198,
+  "tipo": "imagen",
+  "texto": "poco dinero, y nunca ha trabajado para nadie más que su hermano."
+ },
+ {
+  "id": "scene-066",
+  "t0": 297.198,
+  "t1": 302.93,
+  "tipo": "imagen",
+  "texto": "¿Se queda a salvo, a la sombra del doctor? ¿O lo arriesga todo?"
+ },
+ {
+  "id": "scene-067",
+  "t0": 302.93,
+  "t1": 306.472,
+  "tipo": "imagen",
+  "texto": "En febrero de mil novecientos seis, Will renuncia."
+ },
+ {
+  "id": "scene-068",
+  "t0": 306.472,
+  "t1": 313.95,
+  "tipo": "imagen",
+  "texto": "Le compra a su hermano los derechos de las hojuelas de maíz, y funda su propia compañía. Le pone malta y azúcar a la receta."
+ },
+ {
+  "id": "scene-069",
+  "t0": 313.95,
+  "t1": 318.073,
+  "tipo": "imagen",
+  "texto": "Y cambia algo más: empieza a gastar en anuncios como nadie lo había hecho."
+ },
+ {
+  "id": "scene-070",
+  "t0": 318.073,
+  "t1": 324.369,
+  "tipo": "imagen",
+  "texto": "Para que nadie confunda su cereal con los imitadores, pone su firma en cada caja. Debajo, una advertencia:"
+ },
+ {
+  "id": "scene-071",
+  "t0": 324.369,
+  "t1": 329.99,
+  "tipo": "imagen",
+  "texto": "ninguna es legítima sin esta firma. Pero su golpe maestro lo da en Nueva York,"
+ },
+ {
+  "id": "scene-072",
+  "t0": 329.99,
+  "t1": 335.389,
+  "tipo": "imagen",
+  "texto": "en mil novecientos siete. Will publica un anuncio con una promesa extraña."
+ },
+ {
+  "id": "scene-073",
+  "t0": 335.389,
+  "t1": 343.151,
+  "tipo": "imagen",
+  "texto": "Los miércoles serán el día del guiño. Cualquier mujer que entre a su tienda y le guiñe el ojo al tendero, se lleva una caja de hojuelas gratis."
+ },
+ {
+  "id": "scene-074",
+  "t0": 343.151,
+  "t1": 346.552,
+  "tipo": "imagen",
+  "texto": "En una época tan seria, aquello es casi un escándalo."
+ },
+ {
+  "id": "scene-075",
+  "t0": 346.552,
+  "t1": 352.434,
+  "tipo": "imagen",
+  "texto": "Y justamente por eso, todo Nueva York habla del cereal. En poco tiempo, los trenes llevan vagones"
+ },
+ {
+  "id": "scene-076",
+  "t0": 352.434,
+  "t1": 357.771,
+  "tipo": "imagen",
+  "texto": "enteros de hojuelas a la ciudad cada mes. El empleado humillado se ha convertido en uno de los empresarios"
+ },
+ {
+  "id": "scene-077",
+  "t0": 357.771,
+  "t1": 363.434,
+  "tipo": "imagen",
+  "texto": "más exitosos del país. Y entonces su hermano mayor vuelve a aparecer."
+ },
+ {
+  "id": "scene-078",
+  "t0": 363.434,
+  "t1": 368.016,
+  "tipo": "imagen",
+  "texto": "John también empieza a vender cereal, con el mismo apellido en la caja: Kellogg's."
+ },
+ {
+  "id": "scene-079",
+  "t0": 368.016,
+  "t1": 375.069,
+  "tipo": "imagen",
+  "texto": "Para los clientes, ¿cuál es el verdadero Kellogg? El menor lo demanda. El mayor contraataca con otra demanda."
+ },
+ {
+  "id": "scene-080",
+  "t0": 375.069,
+  "t1": 379.571,
+  "tipo": "imagen",
+  "texto": "La pelea dura casi diez años, y llega hasta la Suprema Corte de Michigan."
+ },
+ {
+  "id": "scene-081",
+  "t0": 379.571,
+  "t1": 385.973,
+  "tipo": "imagen",
+  "texto": "En mil novecientos veinte, los jueces le dan la razón al hermano menor. John tiene que pagar los gastos del juicio."
+ },
+ {
+  "id": "scene-082",
+  "t0": 385.973,
+  "t1": 390.683,
+  "tipo": "imagen",
+  "texto": "Y solo puede poner su nombre en letras pequeñitas, en el fondo de sus propias cajas."
+ },
+ {
+  "id": "scene-083",
+  "t0": 390.683,
+  "t1": 395.43,
+  "tipo": "imagen",
+  "texto": "Desde entonces, los dos hermanos casi no vuelven a hablarse."
+ },
+ {
+  "id": "scene-084",
+  "t0": 395.43,
+  "t1": 400.396,
+  "tipo": "imagen",
+  "texto": "Muchos años después, ya anciano, John se sienta a escribirle a Will una carta."
+ },
+ {
+  "id": "scene-085",
+  "t0": 400.396,
+  "t1": 407.415,
+  "tipo": "imagen",
+  "texto": "En ella le pide perdón por cómo lo trató toda la vida. Pero su secretaria la lee, decide que es indigna de un doctor tan importante,"
+ },
+ {
+  "id": "scene-086",
+  "t0": 407.415,
+  "t1": 413.677,
+  "tipo": "imagen",
+  "texto": "y la guarda. La carta nunca sale. El hermano menor la lee cuando John ya ha muerto."
+ },
+ {
+  "id": "scene-087",
+  "t0": 413.677,
+  "t1": 416.488,
+  "tipo": "imagen",
+  "texto": "Para entonces, Will está casi ciego."
+ },
+ {
+  "id": "scene-088",
+  "t0": 416.488,
+  "t1": 423.171,
+  "tipo": "imagen",
+  "texto": "Y ya no hay nadie a quien contestarle. El hermano menor no se quedó con su fortuna."
+ },
+ {
+  "id": "scene-089",
+  "t0": 423.171,
+  "t1": 430.528,
+  "tipo": "imagen",
+  "texto": "En mil novecientos treinta creó una fundación para la salud y la educación de los niños, y le dejó casi todo lo que tenía."
+ },
+ {
+  "id": "scene-090",
+  "t0": 430.528,
+  "t1": 434.694,
+  "tipo": "imagen",
+  "texto": "Los dos hermanos murieron a la misma edad, a los noventa y un años."
+ },
+ {
+  "id": "scene-091",
+  "t0": 434.694,
+  "t1": 440.357,
+  "tipo": "imagen",
+  "texto": "Y su cereal siguió viajando. En mil novecientos cincuenta y uno, Kellogg's llegó a México."
+ },
+ {
+  "id": "scene-092",
+  "t0": 440.357,
+  "t1": 445.218,
+  "tipo": "imagen",
+  "texto": "Años después, en Querétaro, abrió una de las plantas de cereal más grandes del mundo."
+ },
+ {
+  "id": "scene-093",
+  "t0": 445.218,
+  "t1": 451.849,
+  "tipo": "imagen",
+  "texto": "Y aquí pasó algo que al doctor le habría quitado el sueño. Las hojuelas que más triunfaron fueron las cubiertas de azúcar."
+ },
+ {
+  "id": "scene-094",
+  "t0": 451.849,
+  "t1": 457.971,
+  "tipo": "imagen",
+  "texto": "Las Zucaritas se volvieron tan famosas, que su nombre se usa para cualquier hojuela dulce."
+ },
+ {
+  "id": "scene-095",
+  "t0": 457.971,
+  "t1": 460.836,
+  "tipo": "imagen",
+  "texto": "El doctor quería un desayuno que calmara al mundo."
+ },
+ {
+  "id": "scene-096",
+  "t0": 460.836,
+  "t1": 469.356,
+  "tipo": "imagen",
+  "texto": "Su hermano lo endulzó, y el mundo entero se sentó a desayunarlo. Así que la próxima vez que sirvas un plato de hojuelas, acuérdate de aquella olla olvidada."
+ },
+ {
+  "id": "scene-097",
+  "t0": 469.356,
+  "t1": 472.901,
+  "tipo": "imagen",
+  "texto": "Y de los dos hermanos que se pelearon por ella hasta el final."
+ },
+ {
+  "id": "scene-098",
+  "t0": 472.901,
+  "t1": 478.921,
+  "tipo": "imagen",
+  "texto": "Ahora dime tú: ¿habrías aguantado veinticinco años a la sombra de tu hermano, o te habrías ido mucho antes?"
+ },
+ {
+  "id": "scene-099",
+  "t0": 478.921,
+  "t1": 484.919,
+  "tipo": "imagen",
+  "texto": "Te leo en los comentarios. Y si te gustan las historias de las marcas que tienes en tu cocina, suscríbete."
+ },
+ {
+  "id": "scene-100",
+  "t0": 484.919,
+  "t1": 490.0,
+  "tipo": "imagen",
+  "texto": "La próxima ya se está moldeando."
+ }
+]

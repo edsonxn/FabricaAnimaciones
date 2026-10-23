@@ -38,3 +38,5 @@ python videos/teflon_sarten/_armado.py      video → sfx → mezcla → final �
 - Escenas médicas: decir «sin paciente, sin sangre, sin órganos» o Flow modela una cirugía abierta.
 - `verificar` marca 4 frases con CER 2-5 % («pegas»→«peras», «enrede»→«entrete»): es Whisper bajo la música; en la selección de voz dieron CER 0.
 - El motor secuencia no genera SFX (0 eventos): la mezcla es voz + música.
+
+- 23-oct-2026: título cambiado en YouTube (sigue programado dom 25-oct 13:00 CDMX) de «El cilindro vacío que seguía pesando lo mismo» a «El ACCIDENTE que Creó el Teflón: de la Bomba Atómica a Tu Sartén» — los títulos que esconden el objeto no reciben búsqueda (diagnóstico en canales/formula/pieza_oculta.md).

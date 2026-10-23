@@ -23,6 +23,11 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
                                                  sombra enloquece en rojo
   domino(fichas)                                 fila de fichas que caen una sobre otra (causa -> efecto); la última en rojo
   constelacion(nombres, centro, tu, remate)      estrellas unidas a la Luna que se apagan una por marca; quedan la Luna y «Tú»
+  juramento(clausulas, firmas, remate)           contrato en pergamino: cláusulas por marca, firmas que se pudren, sello rojo
+                                                 (er_malenia_atrocidades, 23-oct-2026)
+  contagio(nombres, centro, remate)              flor escarlata que late; una vena roja tiñe cada nombre del anillo por marca
+  floraciones(etiquetas, final)                  tres capullos: se abren la 1.ª y la 2.ª; la 3.ª late en rojo con `final`
+  repudio(madre, hijas, remate)                  madre unida a sus hijas por hilos dorados que se parten en rojo
 """
 import math
 
@@ -747,5 +752,223 @@ def constelacion(nombres, centro="Ranni", tu="Tú", remate="Mil años de noche",
             t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
             _texto(ImageDraw.Draw(t2), (cx, M + h - 38), remate.upper(), fr, AMBAR, "mm", 255 * u_r, track=8, sombra=False)
             im.alpha_composite(_brillo(t2, 12, 1.8))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+# ------------------------------------------------------------------ er_malenia_atrocidades (23-oct-2026)
+CARMIN = (196, 40, 52)
+TINTA = (46, 32, 20)
+
+
+def _petalos(d, cx, cy, r, abre, color, a, n=7, giro=0.0):
+    """Flor escarlata: `n` pétalos (elipses rotadas) que se abren con `abre` (0 = capullo cerrado, 1 = abierta)."""
+    if a <= 0:
+        return
+    for i in range(n):
+        ang = giro + 2 * math.pi * i / n
+        sep = r * (.15 + .55 * abre)
+        px, py = cx + math.cos(ang) * sep, cy + math.sin(ang) * sep
+        largo, ancho = r * (.45 + .5 * abre), r * (.22 + .18 * abre)
+        pts = []
+        for k in range(16):
+            t = 2 * math.pi * k / 16
+            ex, ey = math.cos(t) * largo, math.sin(t) * ancho
+            pts.append((px + ex * math.cos(ang) - ey * math.sin(ang), py + ex * math.sin(ang) + ey * math.cos(ang)))
+        d.polygon(pts, fill=color + (int(a * .85),))
+    d.ellipse((cx - r * .18, cy - r * .18, cx + r * .18, cy + r * .18), fill=AMBAR + (int(a),))
+
+
+def juramento(clausulas, firmas=5, remate="Firme aquí", titulo="Juramento de los caballeros", w=1240, h=660):
+    """Contrato en pergamino: marca k (< n) escribe la cláusula k; marca n: aparecen las firmas de los caballeros, que
+    luego se pudren (manchas rojas que crecen sin parar); marca n+1: sello rojo `remate` que cae sobre el papel."""
+    ftit, fc, fs = fuente("b", 42), fuente("i", 40), fuente("b", 64)
+    n = len(clausulas)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        a0 = 255 * _eo(dt / .4)
+        pap = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dp = ImageDraw.Draw(pap)
+        x0, y0, x1, y1 = M + 70, M + 40, M + w - 70, M + h - 40
+        dp.rounded_rectangle((x0, y0, x1, y1), 10, fill=(214, 198, 158, int(a0)))
+        dp.rounded_rectangle((x0 + 14, y0 + 14, x1 - 14, y1 - 14), 6, outline=ORO_OSC + (int(a0 * .8),), width=2)
+        _texto(dp, ((x0 + x1) / 2, y0 + 58), titulo.upper(), ftit, TINTA, "mm", a0, track=5, sombra=False)
+        _filete(dp, (x0 + x1) / 2, y0 + 92, (x1 - x0) * .32, color=ORO_OSC, alfa=a0)
+        y = y0 + 140
+        for k, c in enumerate(clausulas):
+            u = _eo((dt - mk[k]) / 1.1)
+            if u <= 0:
+                continue
+            for ln in _partir(dp, f"{k + 1}. {c}", fc, x1 - x0 - 120):
+                vis = ln[:int(len(ln) * u + .999)]
+                _texto(dp, (x0 + 60, y), vis, fc, TINTA, "lm", 255 * min(1, u * 3), sombra=False)
+                y += 50
+            y += 14
+        u_f = _eo((dt - mk[n]) / .9)
+        manchas = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dm = ImageDraw.Draw(manchas)
+        yf = y1 - 90
+        for i in range(firmas):
+            cx = x0 + 90 + (x1 - x0 - 180) * (i + .5) / firmas
+            p = _eo((dt - mk[n] - .18 * i) / .7)
+            if p <= 0:
+                continue
+            pts = [(cx - 70 + 140 * t, yf + 16 * math.sin(t * 9 + i * 1.7) * (1 - t * .4) - 10 * math.cos(t * 21 + i))
+                   for t in [j / 40 for j in range(int(40 * p) + 1)]]
+            if len(pts) > 1:
+                dp.line(pts, fill=TINTA + (int(a0),), width=3)
+            dp.line([(cx - 80, yf + 30), (cx + 80, yf + 30)], fill=TINTA + (int(a0 * .5),), width=1)
+            pod = max(0.0, dt - mk[n] - .9 - .25 * i)                         # la carne se pudre: no para de crecer
+            if pod > 0:
+                r = min(70, 14 + 26 * pod)
+                for j in range(3):
+                    ox, oy = 26 * math.sin(i * 3 + j * 2.1), 14 * math.cos(i * 5 + j)
+                    dm.ellipse((cx + ox - r * .7, yf + oy - r * .5, cx + ox + r * .7, yf + oy + r * .5),
+                               fill=CARMIN + (int(min(150, 60 + 50 * pod)),))
+        pap.alpha_composite(manchas.filter(ImageFilter.GaussianBlur(6)))
+        u_s = _eo((dt - mk[n + 1]) / .35)
+        if u_s > 0:
+            sello = Image.new("RGBA", (560, 170), (0, 0, 0, 0))
+            ds = ImageDraw.Draw(sello)
+            ds.rounded_rectangle((8, 8, 552, 162), 12, outline=CARMIN + (230,), width=8)
+            _texto(ds, (280, 88), remate.upper(), fs, CARMIN, "mm", 235, track=4, sombra=False)
+            esc = 1.7 - .7 * u_s
+            sello = sello.resize((int(560 * esc), int(170 * esc))).rotate(-9, expand=True)
+            sa = np.array(sello)
+            sa[..., 3] = (sa[..., 3] * u_s).astype(np.uint8)
+            sello = Image.fromarray(sa)
+            pap.alpha_composite(sello, (int((x0 + x1) / 2 + 150 - sello.width / 2), int(y0 + 345 - sello.height / 2)))
+        im.alpha_composite(pap)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def contagio(nombres, centro="La flor", remate=None, titulo="Lo que pudrió una flor", w=1500, h=660):
+    """Flor escarlata al centro que late; un nombre por marca en el anillo: una vena roja sale de la flor y lo tiñe
+    (pergamino -> carmín). Con `remate`, la última marca + 1 lo enciende abajo en ámbar."""
+    fn_, ftit, fr = fuente("r", 46), fuente("r", 40), fuente("r", 58)
+    n = len(nombres)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 1)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, cy = M + w / 2, M + 285
+        pts = [(M + 110 + (w - 220) * (i + .5) / n, M + 505 + 22 * math.sin(i * 1.9)) for i in range(n)]
+        venas = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dv = ImageDraw.Draw(venas)
+        tocados = 0
+        for i, (x, y) in enumerate(pts):
+            u = _eo((dt - mk[i]) / .7)
+            tocados += u > .5
+            if u > 0:
+                mx, my = (cx + x) / 2 + 40 * math.sin(i * 2.3), (cy + y) / 2 + 30
+                seg = [(cx + (mx - cx) * t * 2, cy + (my - cy) * t * 2) if t < .5 else
+                       (mx + (x - mx) * (t - .5) * 2, my + (y - my) * (t - .5) * 2) for t in [j / 30 for j in range(int(30 * u) + 1)]]
+                if len(seg) > 1:
+                    dv.line(seg, fill=CARMIN + (int(230 * u),), width=6)
+        im.alpha_composite(_brillo(venas, 8, 1.4))
+        d = ImageDraw.Draw(im)
+        for i, (x, y) in enumerate(pts):
+            u = _eo((dt - mk[i]) / .7)
+            ua = _eo((dt - .12 * i) / .5)
+            col = tuple(int(PERGAMINO[c] + (CARMIN[c] - PERGAMINO[c]) * u) for c in range(3))
+            r = 9 + 5 * u * (1 + math.sin(dt * 5 + i))
+            d.ellipse((x - r, y - r, x + r, y + r), fill=col + (int(255 * ua),))
+            _texto(d, (x, y + 22), nombres[i], fn_, col, "mt", 255 * ua)
+        flor = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        lat = 1 + .06 * math.sin(dt * 3.2) + .04 * tocados
+        _petalos(ImageDraw.Draw(flor), cx, cy, 78 * lat, _eo(dt / 1.2), CARMIN, a0, giro=dt * .15)
+        im.alpha_composite(_brillo(flor, 14, 1.5))
+        d = ImageDraw.Draw(im)
+        _texto(d, (cx + 120, cy - 20), centro, fuente("i", 38), AMBAR, "lm", a0)
+        if remate:
+            u_r = _eo((dt - mk[n]) / .6)
+            if u_r > 0:
+                t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                _texto(ImageDraw.Draw(t2), (cx, M + h - 40), remate.upper(), fr, AMBAR, "mm", 255 * u_r, track=8, sombra=False)
+                im.alpha_composite(_brillo(t2, 12, 1.8))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def floraciones(etiquetas, final="Diosa de la putrefacción", titulo="Las tres flores", w=1500, h=600):
+    """Tres capullos en fila. Marca k (k < 2) abre la flor k con su etiqueta; la marca 2 enciende el tercero en rojo, que
+    late cada vez más grande con `final` debajo (lo que pasaría con la tercera flor)."""
+    fe, ftit, ff = fuente("r", 42), fuente("r", 40), fuente("b", 50)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 3
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        flor = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        df = ImageDraw.Draw(flor)
+        for i in range(3):
+            cx, cy = M + w * (i + .5) / 3, M + 280
+            u = _eo((dt - mk[i]) / .9)
+            ua = _eo((dt - .15 * i) / .5)
+            if i < 2:
+                _petalos(df, cx, cy, 95, u, CARMIN if u > 0 else ORO_OSC, 255 * ua * (.45 + .55 * max(u, .0)), giro=i)
+                txt = f"{i + 1}.ª · {etiquetas[i]}" if u > 0 else f"{i + 1}.ª"
+                _texto(d, (cx, cy + 135), txt, fe, PERGAMINO if u > 0 else GRIS, "mt", 255 * ua)
+            else:
+                lat = (1 + .10 * math.sin(dt * (4 + 3 * u))) * (1 + .35 * u)
+                col = ROJO if u > 0 else ORO_OSC
+                _petalos(df, cx, cy, 95 * lat, .25 + .75 * u, col, 255 * ua * (.45 + .55 * u), giro=dt * .3 * u)
+                _texto(d, (cx, cy + 135), "3.ª · ?" if u <= 0 else "3.ª", fe, GRIS if u <= 0 else ROJO, "mt", 255 * ua)
+                if u > 0:
+                    _texto(d, (M + w / 2, M + h - 40), final.upper(), ff, ROJO, "mm", 255 * u, track=4)
+        im.alpha_composite(_brillo(flor, 12, 1.4))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def repudio(madre, hijas, titulo="Las hijas de la flor", remate="Como hizo tu madre", w=1500, h=640):
+    """`madre` arriba unida por hilos dorados a cada hija (entran escalonadas desde la marca 0). Marca 1: los hilos se
+    tiñen de rojo y se parten por la mitad, y aparece `remate`. Marca 2 (opcional): la primera hija se enciende en ámbar."""
+    fn_, fs, ftit, fr = fuente("r", 46), fuente("i", 32), fuente("r", 40), fuente("i", 44)
+    n = len(hijas)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 3
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        mx, my = M + w / 2, M + 170
+        corte = _eo((dt - mk[1]) / .6)
+        luz = _eo((dt - mk[2]) / .6)
+        hil = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dh = ImageDraw.Draw(hil)
+        for i, (nom, sub) in enumerate(hijas):
+            hx, hy = M + 120 + (w - 240) * (i + .5) / n, M + 430
+            u = _eo((dt - mk[0] - .25 * i) / .6)
+            col = tuple(int(ORO[c] + (ROJO[c] - ORO[c]) * corte) for c in range(3))
+            if corte < .05:
+                _linea(dh, (mx, my + 16), (hx, hy - 16), u, col, 230 * u, 3)
+            else:
+                g = 40 * corte
+                vx, vy = hx - mx, hy - my
+                L = math.hypot(vx, vy)
+                ux, uy = vx / L, vy / L
+                medio = (mx + vx / 2, my + vy / 2)
+                dh.line([(mx, my + 16), (medio[0] - ux * g, medio[1] - uy * g - 10 * corte)], fill=col + (230,), width=3)
+                dh.line([(medio[0] + ux * g, medio[1] + uy * g + 18 * corte), (hx, hy - 16)], fill=col + (int(230 * (1 - .5 * corte)),), width=3)
+            c_h = AMBAR if (i == 0 and luz > .5) else PERGAMINO
+            _nodo(d, hx, hy, nom, sub, c_h, 255 * u, fn_, fs, abajo=True)
+        im.alpha_composite(_brillo(hil, 6, 1.3))
+        d = ImageDraw.Draw(im)
+        _nodo(d, mx, my, madre, None, CARMIN if corte > .5 else ORO, a0, fuente("b", 54), fs)
+        if corte > 0:
+            _texto(d, (mx, M + h - 46), f"«{remate}»", fr, ROJO, "mm", 255 * corte)
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

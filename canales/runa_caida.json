@@ -20,6 +20,16 @@
   },
   "publicados": [
     {
+      "video": "er_malenia_atrocidades",
+      "id": "3qrJnRE6ol4",
+      "titulo": "Las 5 peores atrocidades de Malenia QUE IGNORASTE",
+      "visibilidad": "private",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-23T22:00:00Z",
+      "nota": "~19 min (19:34 con la pantalla final) copiando a Miquella (×48); MÚSICA = OST OFICIAL de Elden Ring (regla nueva del usuario, 23-oct); subido en privado con miniatura y PROGRAMADO en el hueco del canal; .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-10-29T16:00:00Z"
+    },
+    {
       "video": "er_ranni_atrocidades",
       "id": "ZamBFBDZ6OI",
       "titulo": "Las 5 peores atrocidades de Ranni QUE IGNORASTE",
@@ -33,11 +43,12 @@
       "video": "er_miquella_atrocidades",
       "id": "vUaTbbI9yiM",
       "titulo": "Las 5 peores atrocidades de Miquella QUE IGNORASTE",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
       "subido": "2026-10-19T17:01:00Z",
       "nota": "PRUEBA de duración (~20 min, 20:15 con la pantalla final) pedida por el usuario; subido en privado con miniatura el 19-oct y PROGRAMADO por orden del usuario para mar 20-oct 10:00 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
-      "programado": "2026-10-20T16:00:00Z"
+      "programado": "2026-10-20T16:00:00Z",
+      "publicado": "2026-10-20"
     },
     {
       "video": "er_radagon_atrocidades",

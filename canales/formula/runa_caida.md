@@ -28,3 +28,15 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
 - Variable cambiada: el SUJETO (Ranni, la personaje más querida: el contraste «la favorita es la peor» es el gancho) y una duración
   intermedia que pidió el usuario: **~12 min** (12:16 con la pantalla final), entre Márika 5:54 / Radagon 7:42 y Miquella 20:15.
 - Con los tres puntos (6-7, 12, 20 min) se ve a los 7 días qué duración da más minutos vistos por vista sin hundir el % visto.
+
+## Miquella explota (22-oct-2026, 2 días públicos): 4 786 vistas ≈ ×48 de la mediana (100); 32 comentarios
+- Los comentarios se burlan de la voz en los nombres («Miqueya», «Mojé») y 3-4 piden «voz de Loquendo»: aun así crece. Lección
+  de voz en docs/estilo_secuencia_yt.md § Runa Caída (nombre propio mal en Whisper = regenerar).
+- Un comentario pregunta «¿Malenia también estaba hechizada por Miquella?» → gancho del siguiente.
+
+## «Las 5 peores atrocidades de Malenia QUE IGNORASTE» (`er_malenia_atrocidades`, 22-oct-2026, elegido por el usuario)
+- Copia del ganador (Miquella, ~20 min) cambiando UNA variable: el SUJETO → su gemela Malenia (la jefa más buscada del juego).
+- Descartados por ahora: Melina (mismo gancho que Ranni: esperar a ver Ranni) y Mohg (villano obvio, gancho débil).
+- Meta jue 29-oct-2026 10:00 CDMX.
+- Subido el 23-oct-2026 (https://youtu.be/3qrJnRE6ol4, 19:34), programado jue 29-oct 10:00 CDMX. Primer video con la MÚSICA OFICIAL del juego
+  (OST, sin Lyria: regla del usuario del 23-oct). Comparar a los 7 días con Miquella (misma duración): vistas, % visto, y si hubo reclamo de Content ID.

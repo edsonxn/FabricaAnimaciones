@@ -65,6 +65,10 @@ integrado y gestiona todos los canales. Tras cada `yt subir`, en Studio:
   de Skyrim/WoW (21-oct, salió «Adecuado para anuncios»): Violencia = 1.ª opción (violencia de gameplay sin editar, sangre mínima),
   Contenido desagradable = 1.ª (con contexto), Temas delicados = 1.ª (mención breve/ficción); el resto sin marcar → Enviar →
   Guardar (sí deja guardar aunque avise de la versión SD; queda «Comprobando»).
+  **Cuidado al marcar (23-oct-2026, `wow_objetos_raros`):** al desplegar una sección el diálogo se desplaza y el clic cae en OTRA
+  (se marcó por error «Contenido para adultos»; se canceló sin enviar). Marcar por JS: cada `[role=radiogroup]` se identifica por el
+  texto de su 1.ª opción (Violencia = «Se muestran intervenciones de la policía…», Desagradable = «Contenido ligera o moderadamente
+  desagradable…»), `.click()` y comprobar `aria-checked` antes de Enviar; el resumen debe decir «Nada» en las demás.
   **Cada video se responde por SU contenido, no copiando el anterior** (21-oct): «Temas delicados» = violencia doméstica, autolesiones,
   suicidio, abuso o acoso sexual, aborto; un video de curiosidades sin nada de eso lo deja SIN marcar (`wow_curiosidades_kalimdor`:
   solo Violencia 1.ª —gameplay sin editar tras los 7 primeros segundos, violencia leve— y Contenido desagradable 1.ª). Los tipos de

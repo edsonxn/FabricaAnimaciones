@@ -3,7 +3,7 @@
 - canal: cronicas_warcraft · ~14 min · hueco mié 28-oct-2026 09:00 CDMX (15:00 UTC; `canales --actualizar` del 22-oct)
 - estilo: secuencia_yt (gameplay por beat + apoyos + pegatinas + pantallas + MG nuevos con MAPAS REALES; SIN Overgear) → doc: docs/estilo_secuencia_yt.md
 - etapa: ✅ SUBIDO y PROGRAMADO mié 28-oct-2026 09:00 CDMX (2xO3Wf1B4XQ) · miniatura + .srt
-- siguiente: Studio > Monetización (anuncios + cuestionario) cuando procese la SD; medir a los 7 días (4-nov, día de Forever) contra Kalimdor; luego `limpiar`
+- siguiente: medir a los 7 días (4-nov, día de Forever) contra Kalimdor; luego `limpiar`
 
 ## Sesiones (plan de tramos · «continúa el video objetos raros» retoma aquí · protocolo docs/sesiones.md)
 - alias: objetos raros, armas raras, objetos raros vanilla
@@ -52,4 +52,4 @@ python fab.py wow_objetos_raros medios          hojas previews/medios_NN.jpg (M�
 ## Cierre (regla del 12-oct-2026)
 - [x] subido y PROGRAMADO mié 28-oct 09:00 CDMX (2xO3Wf1B4XQ), miniatura y .srt; registrado en `canales/cronicas_warcraft.json` y BITACORA
 - [x] HALLAZGOS documentados: docs/estilo_secuencia_yt.md (fotos en el mapa, mg_wow.ruta/forja/sorteo), reglas_globales_completas, CLAUDE.md, docs de Kurzgesagt y Cronopapel
-- [ ] Monetización en Studio
+- [x] Monetización en Studio (23-oct): anuncios Activada + cuestionario (Violencia 1.ª, Desagradable 1.ª) → «Adecuado para anuncios», guardado

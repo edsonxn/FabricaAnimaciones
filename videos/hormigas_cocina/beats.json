@@ -1,0 +1,471 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 3.306,
+  "tipo": "imagen",
+  "texto": "It is seven in the morning. You walk into the kitchen,"
+ },
+ {
+  "id": "scene-002",
+  "t0": 3.306,
+  "t1": 7.432,
+  "tipo": "imagen",
+  "texto": "and there they are again. A perfect line of tiny ants,"
+ },
+ {
+  "id": "scene-003",
+  "t0": 7.432,
+  "t1": 11.208,
+  "tipo": "imagen",
+  "texto": "marching from a crack by the window, straight to the sugar bowl."
+ },
+ {
+  "id": "scene-004",
+  "t0": 11.208,
+  "t1": 13.458,
+  "tipo": "imagen",
+  "texto": "So you do what everyone does."
+ },
+ {
+  "id": "scene-005",
+  "t0": 13.458,
+  "t1": 17.208,
+  "tipo": "imagen",
+  "texto": "You squish them. All of them. Thumb, paper towel,"
+ },
+ {
+  "id": "scene-006",
+  "t0": 17.208,
+  "t1": 21.364,
+  "tipo": "imagen",
+  "texto": "done. By lunch, the line is back. Same crack."
+ },
+ {
+  "id": "scene-007",
+  "t0": 21.364,
+  "t1": 23.135,
+  "tipo": "imagen",
+  "texto": "Same sugar bowl."
+ },
+ {
+  "id": "scene-008",
+  "t0": 23.135,
+  "t1": 27.535,
+  "tipo": "imagen",
+  "texto": "So what actually happens to the colony when you squish the ants on your counter?"
+ },
+ {
+  "id": "scene-009",
+  "t0": 27.535,
+  "t1": 31.127,
+  "tipo": "imagen",
+  "texto": "And why does it never work? The short answer is,"
+ },
+ {
+  "id": "scene-010",
+  "t0": 31.127,
+  "t1": 33.577,
+  "tipo": "imagen",
+  "texto": "the ants you see are not the colony."
+ },
+ {
+  "id": "scene-011",
+  "t0": 33.577,
+  "t1": 38.13,
+  "tipo": "imagen",
+  "texto": "Not even close. First, how did they find your"
+ },
+ {
+  "id": "scene-012",
+  "t0": 38.13,
+  "t1": 41.744,
+  "tipo": "imagen",
+  "texto": "sugar in the first place? One scout wandered out,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 41.744,
+  "t1": 45.214,
+  "tipo": "imagen",
+  "texto": "found it, and walked home, dragging her belly on"
+ },
+ {
+  "id": "scene-014",
+  "t0": 45.214,
+  "t1": 48.676,
+  "tipo": "imagen",
+  "texto": "the counter to leave an invisible scent trail."
+ },
+ {
+  "id": "scene-015",
+  "t0": 48.676,
+  "t1": 52.446,
+  "tipo": "imagen",
+  "texto": "Every ant that follows the trail and finds food adds more scent."
+ },
+ {
+  "id": "scene-016",
+  "t0": 52.446,
+  "t1": 55.713,
+  "tipo": "imagen",
+  "texto": "So the trail gets stronger and stronger."
+ },
+ {
+  "id": "scene-017",
+  "t0": 55.713,
+  "t1": 59.263,
+  "tipo": "imagen",
+  "texto": "Think of it like a food delivery app. The order is on the screen,"
+ },
+ {
+  "id": "scene-018",
+  "t0": 59.263,
+  "t1": 61.913,
+  "tipo": "imagen",
+  "texto": "and the drivers just follow the map."
+ },
+ {
+  "id": "scene-019",
+  "t0": 61.913,
+  "t1": 66.213,
+  "tipo": "imagen",
+  "texto": "Squishing a few drivers does not cancel the order. The map is still there,"
+ },
+ {
+  "id": "scene-020",
+  "t0": 66.213,
+  "t1": 69.851,
+  "tipo": "imagen",
+  "texto": "and the restaurant sends more."
+ },
+ {
+  "id": "scene-021",
+  "t0": 69.851,
+  "t1": 72.51,
+  "tipo": "imagen",
+  "texto": "And the restaurant is huge."
+ },
+ {
+  "id": "scene-022",
+  "t0": 72.51,
+  "t1": 76.61,
+  "tipo": "imagen",
+  "texto": "In some ant species, scientists have counted the foragers, and found"
+ },
+ {
+  "id": "scene-023",
+  "t0": 76.61,
+  "t1": 80.308,
+  "tipo": "imagen",
+  "texto": "they are only seven to fifteen percent of all the workers."
+ },
+ {
+  "id": "scene-024",
+  "t0": 80.308,
+  "t1": 83.368,
+  "tipo": "imagen",
+  "texto": "In many species, the ones sent outside are"
+ },
+ {
+  "id": "scene-025",
+  "t0": 83.368,
+  "t1": 87.078,
+  "tipo": "imagen",
+  "texto": "the older workers, near the end of their lives. To the colony,"
+ },
+ {
+  "id": "scene-026",
+  "t0": 87.078,
+  "t1": 89.32,
+  "tipo": "imagen",
+  "texto": "they are the most expendable."
+ },
+ {
+  "id": "scene-027",
+  "t0": 89.32,
+  "t1": 93.36,
+  "tipo": "imagen",
+  "texto": "Meanwhile, deep inside your wall, there are nurses, builders,"
+ },
+ {
+  "id": "scene-028",
+  "t0": 93.36,
+  "t1": 98.077,
+  "tipo": "imagen",
+  "texto": "baby ants, and the queen. Sometimes many queens."
+ },
+ {
+  "id": "scene-029",
+  "t0": 98.077,
+  "t1": 100.427,
+  "tipo": "imagen",
+  "texto": "So when you squish twenty ants on the counter,"
+ },
+ {
+  "id": "scene-030",
+  "t0": 100.427,
+  "t1": 103.63,
+  "tipo": "imagen",
+  "texto": "the colony barely notices."
+ },
+ {
+  "id": "scene-031",
+  "t0": 103.63,
+  "t1": 108.648,
+  "tipo": "imagen",
+  "texto": "Now, here is a weird test. Next time, smell your fingers."
+ },
+ {
+  "id": "scene-032",
+  "t0": 108.648,
+  "t1": 111.228,
+  "tipo": "imagen",
+  "texto": "If it smells like rotten coconut, you just met"
+ },
+ {
+  "id": "scene-033",
+  "t0": 111.228,
+  "t1": 115.874,
+  "tipo": "imagen",
+  "texto": "the odorous house ant, one of the most common kitchen ants in America."
+ },
+ {
+  "id": "scene-034",
+  "t0": 115.874,
+  "t1": 118.134,
+  "tipo": "imagen",
+  "texto": "That smell comes from defensive chemicals"
+ },
+ {
+  "id": "scene-035",
+  "t0": 118.134,
+  "t1": 121.554,
+  "tipo": "imagen",
+  "texto": "in its body. And to other ants, chemicals like that"
+ },
+ {
+  "id": "scene-036",
+  "t0": 121.554,
+  "t1": 125.23,
+  "tipo": "imagen",
+  "texto": "can mean danger."
+ },
+ {
+  "id": "scene-037",
+  "t0": 125.23,
+  "t1": 128.57,
+  "tipo": "imagen",
+  "texto": "And here is where it gets worse. Say you lose"
+ },
+ {
+  "id": "scene-038",
+  "t0": 128.57,
+  "t1": 132.185,
+  "tipo": "imagen",
+  "texto": "patience and blast the line with bug spray."
+ },
+ {
+  "id": "scene-039",
+  "t0": 132.185,
+  "t1": 135.425,
+  "tipo": "imagen",
+  "texto": "With some house ants, a fast-acting spray can make"
+ },
+ {
+  "id": "scene-040",
+  "t0": 135.425,
+  "t1": 138.836,
+  "tipo": "imagen",
+  "texto": "the colony do something strange. It splits."
+ },
+ {
+  "id": "scene-041",
+  "t0": 138.836,
+  "t1": 142.256,
+  "tipo": "imagen",
+  "texto": "A few queens and a crowd of workers pack up and move out,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 142.256,
+  "t1": 145.399,
+  "tipo": "imagen",
+  "texto": "and start new nests somewhere else."
+ },
+ {
+  "id": "scene-043",
+  "t0": 145.399,
+  "t1": 149.339,
+  "tipo": "imagen",
+  "texto": "Odorous house ants are famous for this. One colony in your wall"
+ },
+ {
+  "id": "scene-044",
+  "t0": 149.339,
+  "t1": 153.613,
+  "tipo": "imagen",
+  "texto": "can quietly turn into three. And since they are all relatives,"
+ },
+ {
+  "id": "scene-045",
+  "t0": 153.613,
+  "t1": 156.373,
+  "tipo": "imagen",
+  "texto": "they do not fight each other. They just share"
+ },
+ {
+  "id": "scene-046",
+  "t0": 156.373,
+  "t1": 158.83,
+  "tipo": "imagen",
+  "texto": "your kitchen."
+ },
+ {
+  "id": "scene-047",
+  "t0": 158.83,
+  "t1": 164.097,
+  "tipo": "imagen",
+  "texto": "So what happens to the ants you squished? Their sisters come and carry them away."
+ },
+ {
+  "id": "scene-048",
+  "t0": 164.097,
+  "t1": 166.697,
+  "tipo": "imagen",
+  "texto": "In the nineteen fifties, the famous ant"
+ },
+ {
+  "id": "scene-049",
+  "t0": 166.697,
+  "t1": 170.157,
+  "tipo": "imagen",
+  "texto": "scientist E. O. Wilson figured out how they know"
+ },
+ {
+  "id": "scene-050",
+  "t0": 170.157,
+  "t1": 173.774,
+  "tipo": "imagen",
+  "texto": "a nestmate is dead. A dead ant gives off a"
+ },
+ {
+  "id": "scene-051",
+  "t0": 173.774,
+  "t1": 176.994,
+  "tipo": "imagen",
+  "texto": "fatty acid called oleic acid. Ants smell it,"
+ },
+ {
+  "id": "scene-052",
+  "t0": 176.994,
+  "t1": 180.32,
+  "tipo": "imagen",
+  "texto": "and haul the body to the colony trash pile."
+ },
+ {
+  "id": "scene-053",
+  "t0": 180.32,
+  "t1": 184.18,
+  "tipo": "imagen",
+  "texto": "His team even reported that a living ant, painted with that acid,"
+ },
+ {
+  "id": "scene-054",
+  "t0": 184.18,
+  "t1": 187.3,
+  "tipo": "imagen",
+  "texto": "got carried out to the trash, kicking and very much"
+ },
+ {
+  "id": "scene-055",
+  "t0": 187.3,
+  "t1": 190.03,
+  "tipo": "imagen",
+  "texto": "alive."
+ },
+ {
+  "id": "scene-056",
+  "t0": 190.03,
+  "t1": 195.078,
+  "tipo": "imagen",
+  "texto": "So what actually works? First, wipe the trail with soapy water."
+ },
+ {
+  "id": "scene-057",
+  "t0": 195.078,
+  "t1": 199.267,
+  "tipo": "imagen",
+  "texto": "That erases the map, so new ants cannot follow it."
+ },
+ {
+  "id": "scene-058",
+  "t0": 199.267,
+  "t1": 201.547,
+  "tipo": "imagen",
+  "texto": "Then put the sugar in a sealed jar."
+ },
+ {
+  "id": "scene-059",
+  "t0": 201.547,
+  "t1": 204.242,
+  "tipo": "imagen",
+  "texto": "No order, no delivery."
+ },
+ {
+  "id": "scene-060",
+  "t0": 204.242,
+  "t1": 209.629,
+  "tipo": "imagen",
+  "texto": "And if they keep coming, use a slow ant bait instead of spray."
+ },
+ {
+  "id": "scene-061",
+  "t0": 209.629,
+  "t1": 212.389,
+  "tipo": "imagen",
+  "texto": "The workers carry it home and share it mouth to mouth,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 212.389,
+  "t1": 215.409,
+  "tipo": "imagen",
+  "texto": "all the way to the queens. That is how you reach"
+ },
+ {
+  "id": "scene-063",
+  "t0": 215.409,
+  "t1": 218.764,
+  "tipo": "imagen",
+  "texto": "the colony you never see."
+ },
+ {
+  "id": "scene-064",
+  "t0": 218.764,
+  "t1": 221.864,
+  "tipo": "imagen",
+  "texto": "So the next time you see that perfect line on your counter,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 221.864,
+  "t1": 226.42,
+  "tipo": "imagen",
+  "texto": "remember what you are looking at. Not the army. Just a few delivery drivers,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 226.42,
+  "t1": 228.775,
+  "tipo": "imagen",
+  "texto": "following a map. Erase the map,"
+ },
+ {
+  "id": "scene-067",
+  "t0": 228.775,
+  "t1": 232.8,
+  "tipo": "imagen",
+  "texto": "and close the restaurant."
+ }
+]

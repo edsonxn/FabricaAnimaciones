@@ -4,6 +4,49 @@ _Creado el 11-oct-2026 (video `arana_techo`) a pedido del usuario: para que un a
 minutos qué hacer, sin repetir la exploración. Léelo entero (≈ 5 min); el detalle técnico vive en
 `docs/estilo_secuencia_flow.md` (consúltalo por sección, no entero)._
 
+## FÓRMULA NUEVA DESDE EL 22-oct-2026: «What Happens If…» de ~4 min + Short (canal PRIORITARIO; LEER PRIMERO)
+Diagnóstico y datos: `canales/formula/wild_next_door.md` § «Revisión 22-oct». Regla del usuario: **analizar el canal al menos
+una vez al día** (yt metricas + outliers de vidIQ → fila en § «Registro diario» y una mejora para el siguiente video).
+- **Formato:** «What Happens If/After You <acción común contra un bicho>?», 3:30-4:30 (nunca ≤ 3:00: `_es_short` lo
+  contaría como Short), ~600-700 palabras (EnglishComic ≈ 2,73 palabras/s reales con GAP 0.26), `img_s=3.5`, todo imagen.
+  Estructura de Zyka: escena en 2.ª persona → pregunta inquietante → experto con nombre en < 30 s → el viaje paso a paso →
+  «but here is the strange part» cada ~40 s → 1-2 consejos prácticos → giro final. El bicho en una situación HUMANA
+  reconocible (snowbirds, el compañero de cuarto, los repartidores): es lo que más comenta este público (35-54 años).
+- **Miniatura:** persona haciendo la acción + bicho grande y expresivo + cuarto con color + 1-2 palabras («STILL ALIVE?»).
+  Flow Nano Banana 2.1 **x4 = 0 puntos** → 8 variantes; guardar A y B (`salida/miniatura.jpg` y `miniatura_b.jpg`) para la
+  prueba A/B de Studio. Plantilla: `videos/arana_escusado/_miniatura.py`.
+- **Short por cada largo:** `<v>_short` (FORMATO vertical, 30-45 s, BPM 160, GAP 0.18, img_s 2.6), imágenes NUEVAS 9:16
+  (en el chip de Flow: radio «9:16»), Lyria de 1 tramo, 1-2 SFX propios, la foto real del bicho. Se publica 12 h después del
+  largo (04:05 UTC) y en Studio «Vídeo relacionado» = el largo. Guiones: `videos/_hacer_shorts_wnd.py`.
+- **Voces en cola:** `python videos/_cola_voces_wnd.py [videos…]` corre los `_ronda.py` uno tras otro. **Voz y render
+  nunca a la vez:** para renderizar, matar SOLO el proceso de la cola (el `_ronda.py` en curso termina su video) y esperar
+  a ese PID antes de `video` (`Wait-Process -Id <pid>` en PowerShell).
+- **Cifras en inglés (arreglado 22-oct en `nucleo/qa.py`):** el CER ya convierte los dígitos de Whisper a palabras en inglés
+  cuando `VOZ["idioma"] == "en"` («2009» = «two thousand nine», años «nineteen ninety eight», «%» = «percent», «$37 million»).
+  Antes, toda frase con números fallaba las 12 tomas.
+- **Flow por lotes (22-oct):** `__col(12)` espera hasta 55 s y la herramienta corta a los 45 s → si se pasa, el recolector
+  sigue en la página y MARCA las imágenes como vistas aunque no las devuelva. Mejor: lote de 12 envíos SIN `__col`, luego
+  `computer wait` 20 s y un lector que no marque nada (`__ver()` en `videos/arana_escusado_short`), bajar, y marcar después.
+  En un lote de 12 se perdieron 3 envíos (los 3 primeros): contar siempre lo que llegó y reenviar lo que falte.
+- **Música (22-oct, Lyria API en 402):** piezas de la biblioteca de OTROS canales en español (otro público): Sapiens
+  `frio_extremo`/`sin_medicina`, Crónicas del gaming `banjo_tooie`, Kuriox `dos_lunas`/`oxigeno_5s`, Plastitube
+  `teflon_sarten`. `biblioteca sugerir` solo propone piezas de Wild Next Door (mismo público): elegir a mano con
+  `biblioteca buscar` / el JSON (`usos` vacío) y la duración ≥ tramo; `usar <id> <v> <tramo> [--desde s]` + `armar`.
+- **Lecciones de la tanda 1 (22-oct-2026, 7 largos + 7 Shorts en un día):**
+  - Flow: lote de 12 = 24 acciones de `browser_batch`; leer con `__ver()` (no marca) tras ~20-35 s y bajar con
+    `videos/_lote.py <v> <N>`; `__mark()` ANTES del siguiente lote. Un envío perdido se ve como un salto de ~7 s en
+    los «Expires» (normal ≈ 3,5 s): mapear por ese hueco y reenviar solo ese prompt. Si faltan al final, esperar 15 s.
+  - Un proyecto de Flow por largo; los 4 Shorts juntos en uno (9:16) cambiando `window.__I` sin recargar.
+  - Revisar SIEMPRE las hojas `medios`: Flow a veces cambia la mascota (otra araña, colores morados), mete una
+    mamá humana, el científico como mujer cuando el guion nombra a un hombre, o pone la escena de día en vez de noche.
+    Se rehace con `window.__X(prompt completo)` en el mismo proyecto (cambiando el radio a 16:9 si hace falta);
+    guardar la vieja en `medios/_variantes/` y, si ya corrió `vivo`, apartar `medios/capas/scene-NNN` y relanzar `vivo`.
+  - Fotos reales: `python videos/_wiki_foto.py <v> <slug> "<File title>" "<qué es>"` (miniatura 1280 px + línea en
+    CREDITOS.md; Wikimedia exige User-Agent también en la descarga).
+  - Pegatina del Short: que no tape la cara del humano ni el título de Shorts; y≈.27-.40 en un beat donde el bicho
+    no esté arriba (Short de la chinche: se movió a «No eating, no eggs»).
+  - Renders: un largo (~4 min, 6-10 vivas) ≈ 7-8 min; `vivo` de otro video en paralelo (GPU) no estorba.
+
 ## SIGUIENTE VIDEO: propuesta y receta rápida (actualizado el 11-oct-2026 tras `cinco_bichos`)
 **Estado del calendario:** `bichos_invierno` 15-oct, `arana_techo` 18-oct, `cinco_bichos` 21-oct (todos 16:00 UTC). El siguiente
 hueco es el **24-oct**. Confirma con `python fab.py yt videos wild_next_door` y BITACORA.

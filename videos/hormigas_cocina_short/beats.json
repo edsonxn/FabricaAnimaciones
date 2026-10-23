@@ -1,0 +1,100 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 1.962,
+  "tipo": "imagen",
+  "texto": "You squish the ants on your counter."
+ },
+ {
+  "id": "scene-002",
+  "t0": 1.962,
+  "t1": 4.122,
+  "tipo": "imagen",
+  "texto": "By lunch, the line is back."
+ },
+ {
+  "id": "scene-003",
+  "t0": 4.122,
+  "t1": 7.91,
+  "tipo": "imagen",
+  "texto": "Why? Because they are following"
+ },
+ {
+  "id": "scene-004",
+  "t0": 7.91,
+  "t1": 10.69,
+  "tipo": "imagen",
+  "texto": "an invisible scent trail, like drivers"
+ },
+ {
+  "id": "scene-005",
+  "t0": 10.69,
+  "t1": 13.395,
+  "tipo": "imagen",
+  "texto": "following a map on a delivery app."
+ },
+ {
+  "id": "scene-006",
+  "t0": 13.395,
+  "t1": 15.795,
+  "tipo": "imagen",
+  "texto": "Squish a few drivers, and the order is"
+ },
+ {
+  "id": "scene-007",
+  "t0": 15.795,
+  "t1": 18.43,
+  "tipo": "imagen",
+  "texto": "still on the screen."
+ },
+ {
+  "id": "scene-008",
+  "t0": 18.43,
+  "t1": 21.03,
+  "tipo": "imagen",
+  "texto": "And the ants you see may be only a small slice"
+ },
+ {
+  "id": "scene-009",
+  "t0": 21.03,
+  "t1": 23.57,
+  "tipo": "imagen",
+  "texto": "of the colony. The queens are safe inside"
+ },
+ {
+  "id": "scene-010",
+  "t0": 23.57,
+  "t1": 26.307,
+  "tipo": "imagen",
+  "texto": "your wall. Spray some kinds,"
+ },
+ {
+  "id": "scene-011",
+  "t0": 26.307,
+  "t1": 28.427,
+  "tipo": "imagen",
+  "texto": "and the colony can split into"
+ },
+ {
+  "id": "scene-012",
+  "t0": 28.427,
+  "t1": 31.419,
+  "tipo": "imagen",
+  "texto": "three. Wipe the trail with"
+ },
+ {
+  "id": "scene-013",
+  "t0": 31.419,
+  "t1": 34.819,
+  "tipo": "imagen",
+  "texto": "soapy water, seal the sugar, and use a slow bait."
+ },
+ {
+  "id": "scene-014",
+  "t0": 34.819,
+  "t1": 36.75,
+  "tipo": "imagen",
+  "texto": "Erase the map."
+ }
+]

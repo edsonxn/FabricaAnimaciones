@@ -1,0 +1,506 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 3.51,
+  "tipo": "imagen",
+  "texto": "It is a cold night in November. You are reading by"
+ },
+ {
+  "id": "scene-002",
+  "t0": 3.51,
+  "t1": 7.111,
+  "tipo": "imagen",
+  "texto": "the lamp, and something starts buzzing around the shade."
+ },
+ {
+  "id": "scene-003",
+  "t0": 7.111,
+  "t1": 11.251,
+  "tipo": "imagen",
+  "texto": "A brown, shield-shaped bug. It flies like a drunk helicopter,"
+ },
+ {
+  "id": "scene-004",
+  "t0": 11.251,
+  "t1": 14.716,
+  "tipo": "imagen",
+  "texto": "bonks into the lamp, and lands on your sleeve."
+ },
+ {
+  "id": "scene-005",
+  "t0": 14.716,
+  "t1": 17.768,
+  "tipo": "imagen",
+  "texto": "Your first thought is to squish it, or flush it."
+ },
+ {
+  "id": "scene-006",
+  "t0": 17.768,
+  "t1": 21.188,
+  "tipo": "imagen",
+  "texto": "But what if you just let it be? What happens to a stink"
+ },
+ {
+  "id": "scene-007",
+  "t0": 21.188,
+  "t1": 25.021,
+  "tipo": "imagen",
+  "texto": "bug that spends the whole winter in your house?"
+ },
+ {
+  "id": "scene-008",
+  "t0": 25.021,
+  "t1": 27.481,
+  "tipo": "imagen",
+  "texto": "The short answer is, almost nothing."
+ },
+ {
+  "id": "scene-009",
+  "t0": 27.481,
+  "t1": 31.63,
+  "tipo": "imagen",
+  "texto": "And that is the strange part."
+ },
+ {
+  "id": "scene-010",
+  "t0": 31.63,
+  "t1": 34.26,
+  "tipo": "imagen",
+  "texto": "This is the brown marmorated stink bug."
+ },
+ {
+  "id": "scene-011",
+  "t0": 34.26,
+  "t1": 38.533,
+  "tipo": "imagen",
+  "texto": "Look for the little white bands on its antennae and legs."
+ },
+ {
+  "id": "scene-012",
+  "t0": 38.533,
+  "t1": 41.859,
+  "tipo": "imagen",
+  "texto": "It is not from here. It comes from East Asia."
+ },
+ {
+  "id": "scene-013",
+  "t0": 41.859,
+  "t1": 45.679,
+  "tipo": "imagen",
+  "texto": "The first ones in America were collected in Allentown, Pennsylvania, in"
+ },
+ {
+  "id": "scene-014",
+  "t0": 45.679,
+  "t1": 50.373,
+  "tipo": "imagen",
+  "texto": "nineteen ninety-eight. Probably stowaways in a shipping container."
+ },
+ {
+  "id": "scene-015",
+  "t0": 50.373,
+  "t1": 52.713,
+  "tipo": "imagen",
+  "texto": "Today they live in as many as forty-seven"
+ },
+ {
+  "id": "scene-016",
+  "t0": 52.713,
+  "t1": 55.63,
+  "tipo": "imagen",
+  "texto": "states."
+ },
+ {
+  "id": "scene-017",
+  "t0": 55.63,
+  "t1": 61.053,
+  "tipo": "imagen",
+  "texto": "Every fall, when the nights get cold, they go looking for a place to spend the winter."
+ },
+ {
+  "id": "scene-018",
+  "t0": 61.053,
+  "t1": 63.273,
+  "tipo": "imagen",
+  "texto": "And a warm house, full of tiny gaps"
+ },
+ {
+  "id": "scene-019",
+  "t0": 63.273,
+  "t1": 67.509,
+  "tipo": "imagen",
+  "texto": "around windows, doors and air conditioners, is perfect."
+ },
+ {
+  "id": "scene-020",
+  "t0": 67.509,
+  "t1": 70.289,
+  "tipo": "imagen",
+  "texto": "Once a few find a good spot, they give"
+ },
+ {
+  "id": "scene-021",
+  "t0": 70.289,
+  "t1": 73.332,
+  "tipo": "imagen",
+  "texto": "off a chemical signal that invites their friends."
+ },
+ {
+  "id": "scene-022",
+  "t0": 73.332,
+  "t1": 77.492,
+  "tipo": "imagen",
+  "texto": "One man in Maryland collected every stink bug he found inside his home,"
+ },
+ {
+  "id": "scene-023",
+  "t0": 77.492,
+  "t1": 81.035,
+  "tipo": "imagen",
+  "texto": "every single day, for six months."
+ },
+ {
+  "id": "scene-024",
+  "t0": 81.035,
+  "t1": 84.055,
+  "tipo": "imagen",
+  "texto": "His final count was more than twenty-six thousand."
+ },
+ {
+  "id": "scene-025",
+  "t0": 84.055,
+  "t1": 86.83,
+  "tipo": "imagen",
+  "texto": "In one house."
+ },
+ {
+  "id": "scene-026",
+  "t0": 86.83,
+  "t1": 91.275,
+  "tipo": "imagen",
+  "texto": "So what do they do in there? Mostly, they sleep."
+ },
+ {
+  "id": "scene-027",
+  "t0": 91.275,
+  "t1": 94.956,
+  "tipo": "imagen",
+  "texto": "They tuck themselves into wall spaces, attics and behind"
+ },
+ {
+  "id": "scene-028",
+  "t0": 94.956,
+  "t1": 98.456,
+  "tipo": "imagen",
+  "texto": "the siding, and slip into a deep winter rest called"
+ },
+ {
+  "id": "scene-029",
+  "t0": 98.456,
+  "t1": 101.959,
+  "tipo": "imagen",
+  "texto": "diapause. They do not eat your food."
+ },
+ {
+  "id": "scene-030",
+  "t0": 101.959,
+  "t1": 106.683,
+  "tipo": "imagen",
+  "texto": "They do not mate. They do not lay eggs. They do not chew your house."
+ },
+ {
+  "id": "scene-031",
+  "t0": 106.683,
+  "t1": 109.273,
+  "tipo": "imagen",
+  "texto": "It is like having a roommate who pays no rent,"
+ },
+ {
+  "id": "scene-032",
+  "t0": 109.273,
+  "t1": 112.443,
+  "tipo": "imagen",
+  "texto": "never cooks, never talks, and sleeps from"
+ },
+ {
+  "id": "scene-033",
+  "t0": 112.443,
+  "t1": 115.63,
+  "tipo": "imagen",
+  "texto": "Halloween to Easter."
+ },
+ {
+  "id": "scene-034",
+  "t0": 115.63,
+  "t1": 120.055,
+  "tipo": "imagen",
+  "texto": "The trouble starts on warm days. When the sun heats the walls,"
+ },
+ {
+  "id": "scene-035",
+  "t0": 120.055,
+  "t1": 123.085,
+  "tipo": "imagen",
+  "texto": "or the furnace runs, some of them wake up,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 123.085,
+  "t1": 126.519,
+  "tipo": "imagen",
+  "texto": "confused, and wander out into your rooms."
+ },
+ {
+  "id": "scene-037",
+  "t0": 126.519,
+  "t1": 129.039,
+  "tipo": "imagen",
+  "texto": "The Maryland study found the same thing."
+ },
+ {
+  "id": "scene-038",
+  "t0": 129.039,
+  "t1": 133.288,
+  "tipo": "imagen",
+  "texto": "More bugs came out on days that were warmer than normal."
+ },
+ {
+  "id": "scene-039",
+  "t0": 133.288,
+  "t1": 137.468,
+  "tipo": "imagen",
+  "texto": "So they buzz toward your lamps and windows, slow and clumsy,"
+ },
+ {
+  "id": "scene-040",
+  "t0": 137.468,
+  "t1": 140.818,
+  "tipo": "imagen",
+  "texto": "because their bodies still think it is winter."
+ },
+ {
+  "id": "scene-041",
+  "t0": 140.818,
+  "t1": 144.877,
+  "tipo": "imagen",
+  "texto": "Inside a dry, heated house, many of them simply run out of energy."
+ },
+ {
+  "id": "scene-042",
+  "t0": 144.877,
+  "t1": 146.857,
+  "tipo": "imagen",
+  "texto": "They are found on windowsills in"
+ },
+ {
+  "id": "scene-043",
+  "t0": 146.857,
+  "t1": 151.024,
+  "tipo": "imagen",
+  "texto": "spring. And then there is the smell."
+ },
+ {
+  "id": "scene-044",
+  "t0": 151.024,
+  "t1": 154.604,
+  "tipo": "imagen",
+  "texto": "Squeeze one, and it sprays a defensive chemical from"
+ },
+ {
+  "id": "scene-045",
+  "t0": 154.604,
+  "t1": 157.916,
+  "tipo": "imagen",
+  "texto": "glands on its body. Here is the weird part."
+ },
+ {
+  "id": "scene-046",
+  "t0": 157.916,
+  "t1": 162.926,
+  "tipo": "imagen",
+  "texto": "One of those chemicals is the same one that gives cilantro its smell."
+ },
+ {
+  "id": "scene-047",
+  "t0": 162.926,
+  "t1": 165.446,
+  "tipo": "imagen",
+  "texto": "So if cilantro tastes like soap to you,"
+ },
+ {
+  "id": "scene-048",
+  "t0": 165.446,
+  "t1": 168.403,
+  "tipo": "imagen",
+  "texto": "this bug is your worst nightmare."
+ },
+ {
+  "id": "scene-049",
+  "t0": 168.403,
+  "t1": 172.463,
+  "tipo": "imagen",
+  "texto": "It cannot bite and it cannot sting. But the spray can irritate some people,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 172.463,
+  "t1": 175.585,
+  "tipo": "imagen",
+  "texto": "and make a curious dog drool."
+ },
+ {
+  "id": "scene-051",
+  "t0": 175.585,
+  "t1": 179.265,
+  "tipo": "imagen",
+  "texto": "When spring arrives, the survivors climb toward the light, and head"
+ },
+ {
+  "id": "scene-052",
+  "t0": 179.265,
+  "t1": 183.836,
+  "tipo": "imagen",
+  "texto": "back outside to mate. And this is where the story turns."
+ },
+ {
+  "id": "scene-053",
+  "t0": 183.836,
+  "t1": 186.376,
+  "tipo": "imagen",
+  "texto": "Outside, this bug feeds on more than"
+ },
+ {
+  "id": "scene-054",
+  "t0": 186.376,
+  "t1": 189.976,
+  "tipo": "imagen",
+  "texto": "a hundred kinds of crops. Apples, peaches, tomatoes,"
+ },
+ {
+  "id": "scene-055",
+  "t0": 189.976,
+  "t1": 193.073,
+  "tipo": "imagen",
+  "texto": "peppers, sweet corn. In twenty ten,"
+ },
+ {
+  "id": "scene-056",
+  "t0": 193.073,
+  "t1": 197.053,
+  "tipo": "imagen",
+  "texto": "it damaged an estimated thirty-seven million dollars' worth of"
+ },
+ {
+  "id": "scene-057",
+  "t0": 197.053,
+  "t1": 199.99,
+  "tipo": "imagen",
+  "texto": "apples in the mid-Atlantic alone."
+ },
+ {
+  "id": "scene-058",
+  "t0": 199.99,
+  "t1": 203.27,
+  "tipo": "imagen",
+  "texto": "Scientists have a hope, though. A tiny wasp from Asia,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 203.27,
+  "t1": 207.35,
+  "tipo": "imagen",
+  "texto": "called the samurai wasp, that lays its eggs inside stink bug"
+ },
+ {
+  "id": "scene-060",
+  "t0": 207.35,
+  "t1": 211.01,
+  "tipo": "imagen",
+  "texto": "eggs. So what should you do with the one"
+ },
+ {
+  "id": "scene-061",
+  "t0": 211.01,
+  "t1": 213.845,
+  "tipo": "imagen",
+  "texto": "on your sleeve? Do not squish it."
+ },
+ {
+  "id": "scene-062",
+  "t0": 213.845,
+  "t1": 219.154,
+  "tipo": "imagen",
+  "texto": "Grab a jar with some soapy water, and nudge the bug in. It cannot climb out."
+ },
+ {
+  "id": "scene-063",
+  "t0": 219.154,
+  "t1": 222.054,
+  "tipo": "imagen",
+  "texto": "For a crowd, try the trick from Virginia Tech."
+ },
+ {
+  "id": "scene-064",
+  "t0": 222.054,
+  "t1": 224.734,
+  "tipo": "imagen",
+  "texto": "A pan of soapy water under a lamp,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 224.734,
+  "t1": 229.013,
+  "tipo": "imagen",
+  "texto": "in a dark room, at night. And before next September,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 229.013,
+  "t1": 232.113,
+  "tipo": "imagen",
+  "texto": "seal the gaps around your windows, doors"
+ },
+ {
+  "id": "scene-067",
+  "t0": 232.113,
+  "t1": 235.65,
+  "tipo": "imagen",
+  "texto": "and air conditioner."
+ },
+ {
+  "id": "scene-068",
+  "t0": 235.65,
+  "t1": 240.355,
+  "tipo": "imagen",
+  "texto": "So what happens if you let a stink bug live in your house all winter?"
+ },
+ {
+  "id": "scene-069",
+  "t0": 240.355,
+  "t1": 242.845,
+  "tipo": "imagen",
+  "texto": "It sleeps. It wakes up confused."
+ },
+ {
+  "id": "scene-070",
+  "t0": 242.845,
+  "t1": 247.372,
+  "tipo": "imagen",
+  "texto": "And in spring, it leaves to go eat your neighbor's peaches."
+ },
+ {
+  "id": "scene-071",
+  "t0": 247.372,
+  "t1": 249.752,
+  "tipo": "imagen",
+  "texto": "The perfect roommate. Until it"
+ },
+ {
+  "id": "scene-072",
+  "t0": 249.752,
+  "t1": 253.2,
+  "tipo": "imagen",
+  "texto": "moves out."
+ }
+]

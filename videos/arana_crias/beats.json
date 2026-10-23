@@ -1,0 +1,443 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 3.67,
+  "tipo": "imagen",
+  "texto": "You flip on the garage light, and there it is. A big,"
+ },
+ {
+  "id": "scene-002",
+  "t0": 3.67,
+  "t1": 6.597,
+  "tipo": "imagen",
+  "texto": "hairy spider, right in the middle of the floor."
+ },
+ {
+  "id": "scene-003",
+  "t0": 6.597,
+  "t1": 11.24,
+  "tipo": "imagen",
+  "texto": "Something about its back looks strange. Lumpy. Almost like it is moving."
+ },
+ {
+  "id": "scene-004",
+  "t0": 11.24,
+  "t1": 14.42,
+  "tipo": "imagen",
+  "texto": "You raise your boot. And just before you bring it down,"
+ },
+ {
+  "id": "scene-005",
+  "t0": 14.42,
+  "t1": 17.982,
+  "tipo": "imagen",
+  "texto": "you see it. Those lumps have legs."
+ },
+ {
+  "id": "scene-006",
+  "t0": 17.982,
+  "t1": 20.813,
+  "tipo": "imagen",
+  "texto": "Dozens of them. Maybe hundreds."
+ },
+ {
+  "id": "scene-007",
+  "t0": 20.813,
+  "t1": 24.813,
+  "tipo": "imagen",
+  "texto": "So what actually happens if you squish a spider carrying babies?"
+ },
+ {
+  "id": "scene-008",
+  "t0": 24.813,
+  "t1": 29.056,
+  "tipo": "imagen",
+  "texto": "It is not what most people imagine."
+ },
+ {
+  "id": "scene-009",
+  "t0": 29.056,
+  "t1": 31.886,
+  "tipo": "imagen",
+  "texto": "This is a wolf spider. And that is a mother,"
+ },
+ {
+  "id": "scene-010",
+  "t0": 31.886,
+  "t1": 35.577,
+  "tipo": "imagen",
+  "texto": "doing something almost no other spider does."
+ },
+ {
+  "id": "scene-011",
+  "t0": 35.577,
+  "t1": 38.617,
+  "tipo": "imagen",
+  "texto": "Wolf spiders do not build webs to catch food."
+ },
+ {
+  "id": "scene-012",
+  "t0": 38.617,
+  "t1": 42.117,
+  "tipo": "imagen",
+  "texto": "They hunt on the ground at night, running down insects like"
+ },
+ {
+  "id": "scene-013",
+  "t0": 42.117,
+  "t1": 44.938,
+  "tipo": "imagen",
+  "texto": "tiny wolves. And here is a trick."
+ },
+ {
+  "id": "scene-014",
+  "t0": 44.938,
+  "t1": 49.038,
+  "tipo": "imagen",
+  "texto": "Shine a flashlight across your yard at night, and their eyes glow"
+ },
+ {
+  "id": "scene-015",
+  "t0": 49.038,
+  "t1": 53.23,
+  "tipo": "imagen",
+  "texto": "back at you, like little green sparkles."
+ },
+ {
+  "id": "scene-016",
+  "t0": 53.23,
+  "t1": 55.99,
+  "tipo": "imagen",
+  "texto": "Before her babies hatch, she carries her eggs"
+ },
+ {
+  "id": "scene-017",
+  "t0": 55.99,
+  "t1": 59.942,
+  "tipo": "imagen",
+  "texto": "in a round silk ball, attached to the back end of her body."
+ },
+ {
+  "id": "scene-018",
+  "t0": 59.942,
+  "t1": 62.762,
+  "tipo": "imagen",
+  "texto": "She drags it everywhere for weeks. Hunting,"
+ },
+ {
+  "id": "scene-019",
+  "t0": 62.762,
+  "t1": 66.419,
+  "tipo": "imagen",
+  "texto": "hiding, running. She does not let it go."
+ },
+ {
+  "id": "scene-020",
+  "t0": 66.419,
+  "t1": 70.709,
+  "tipo": "imagen",
+  "texto": "When the babies finally hatch, they climb up her legs, and pile onto her back."
+ },
+ {
+  "id": "scene-021",
+  "t0": 70.709,
+  "t1": 73.325,
+  "tipo": "imagen",
+  "texto": "Sometimes several layers deep."
+ },
+ {
+  "id": "scene-022",
+  "t0": 73.325,
+  "t1": 76.495,
+  "tipo": "imagen",
+  "texto": "Think of a mom carrying a hundred kids to the grocery store."
+ },
+ {
+  "id": "scene-023",
+  "t0": 76.495,
+  "t1": 80.389,
+  "tipo": "imagen",
+  "texto": "No stroller. No car. Just her back."
+ },
+ {
+  "id": "scene-024",
+  "t0": 80.389,
+  "t1": 82.969,
+  "tipo": "imagen",
+  "texto": "And they do not even eat during the ride."
+ },
+ {
+  "id": "scene-025",
+  "t0": 82.969,
+  "t1": 87.1,
+  "tipo": "imagen",
+  "texto": "They live off the yolk they were born with. If one falls off,"
+ },
+ {
+  "id": "scene-026",
+  "t0": 87.1,
+  "t1": 90.8,
+  "tipo": "imagen",
+  "texto": "she does not stop to pick it up. It has to scramble back up"
+ },
+ {
+  "id": "scene-027",
+  "t0": 90.8,
+  "t1": 94.03,
+  "tipo": "imagen",
+  "texto": "her legs on its own."
+ },
+ {
+  "id": "scene-028",
+  "t0": 94.03,
+  "t1": 98.072,
+  "tipo": "imagen",
+  "texto": "So now, back to your boot. If you stomp on her,"
+ },
+ {
+  "id": "scene-029",
+  "t0": 98.072,
+  "t1": 101.252,
+  "tipo": "imagen",
+  "texto": "the mother dies. But the babies do not"
+ },
+ {
+  "id": "scene-030",
+  "t0": 101.252,
+  "t1": 105.142,
+  "tipo": "imagen",
+  "texto": "all go with her. Most of them jump off and run."
+ },
+ {
+  "id": "scene-031",
+  "t0": 105.142,
+  "t1": 108.422,
+  "tipo": "imagen",
+  "texto": "In every direction. Under the workbench,"
+ },
+ {
+  "id": "scene-032",
+  "t0": 108.422,
+  "t1": 111.796,
+  "tipo": "imagen",
+  "texto": "behind the boxes, into the cracks."
+ },
+ {
+  "id": "scene-033",
+  "t0": 111.796,
+  "t1": 114.736,
+  "tipo": "imagen",
+  "texto": "And that is the moment people film and post online,"
+ },
+ {
+  "id": "scene-034",
+  "t0": 114.736,
+  "t1": 118.649,
+  "tipo": "imagen",
+  "texto": "because it looks like the floor is exploding with spiders."
+ },
+ {
+  "id": "scene-035",
+  "t0": 118.649,
+  "t1": 121.83,
+  "tipo": "imagen",
+  "texto": "So squishing the mother does not get rid of the spiders."
+ },
+ {
+  "id": "scene-036",
+  "t0": 121.83,
+  "t1": 125.23,
+  "tipo": "imagen",
+  "texto": "It just spreads them out."
+ },
+ {
+  "id": "scene-037",
+  "t0": 125.23,
+  "t1": 129.327,
+  "tipo": "imagen",
+  "texto": "And then what happens to them? Without their mother, the babies"
+ },
+ {
+  "id": "scene-038",
+  "t0": 129.327,
+  "t1": 132.985,
+  "tipo": "imagen",
+  "texto": "are on their own, a little earlier than planned."
+ },
+ {
+  "id": "scene-039",
+  "t0": 132.985,
+  "t1": 135.655,
+  "tipo": "imagen",
+  "texto": "In a dry garage, with almost nothing to eat,"
+ },
+ {
+  "id": "scene-040",
+  "t0": 135.655,
+  "t1": 140.682,
+  "tipo": "imagen",
+  "texto": "many of them will not make it. The ones that do will grow up into wolf spiders."
+ },
+ {
+  "id": "scene-041",
+  "t0": 140.682,
+  "t1": 143.162,
+  "tipo": "imagen",
+  "texto": "And then they get to work, hunting crickets,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 143.162,
+  "t1": 146.494,
+  "tipo": "imagen",
+  "texto": "roaches, and other bugs, right there in your garage."
+ },
+ {
+  "id": "scene-043",
+  "t0": 146.494,
+  "t1": 150.304,
+  "tipo": "imagen",
+  "texto": "Outside, many baby spiders leave home in a stranger way."
+ },
+ {
+  "id": "scene-044",
+  "t0": 150.304,
+  "t1": 153.284,
+  "tipo": "imagen",
+  "texto": "They climb up high, let out a thread of silk,"
+ },
+ {
+  "id": "scene-045",
+  "t0": 153.284,
+  "t1": 156.96,
+  "tipo": "imagen",
+  "texto": "and float away on the wind. But wait."
+ },
+ {
+  "id": "scene-046",
+  "t0": 156.96,
+  "t1": 160.424,
+  "tipo": "imagen",
+  "texto": "Is a mother wolf spider dangerous?"
+ },
+ {
+  "id": "scene-047",
+  "t0": 160.424,
+  "t1": 164.384,
+  "tipo": "imagen",
+  "texto": "Not really. Wolf spiders would much rather run than fight,"
+ },
+ {
+  "id": "scene-048",
+  "t0": 164.384,
+  "t1": 167.399,
+  "tipo": "imagen",
+  "texto": "and she is busy protecting her babies."
+ },
+ {
+  "id": "scene-049",
+  "t0": 167.399,
+  "t1": 171.479,
+  "tipo": "imagen",
+  "texto": "They only bite if they are grabbed or pinned. And for a healthy adult,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 171.479,
+  "t1": 175.63,
+  "tipo": "imagen",
+  "texto": "it feels about like a bee sting."
+ },
+ {
+  "id": "scene-051",
+  "t0": 175.63,
+  "t1": 178.509,
+  "tipo": "imagen",
+  "texto": "So what should you do instead of the boot?"
+ },
+ {
+  "id": "scene-052",
+  "t0": 178.509,
+  "t1": 181.769,
+  "tipo": "imagen",
+  "texto": "Grab a big bowl or a bucket, set it over her, and slide a"
+ },
+ {
+  "id": "scene-053",
+  "t0": 181.769,
+  "t1": 185.939,
+  "tipo": "imagen",
+  "texto": "piece of cardboard underneath. Slowly. Her babies will hold on."
+ },
+ {
+  "id": "scene-054",
+  "t0": 185.939,
+  "t1": 188.719,
+  "tipo": "imagen",
+  "texto": "Then carry the whole family outside, to"
+ },
+ {
+  "id": "scene-055",
+  "t0": 188.719,
+  "t1": 192.861,
+  "tipo": "imagen",
+  "texto": "a garden bed or a pile of leaves, and let them go."
+ },
+ {
+  "id": "scene-056",
+  "t0": 192.861,
+  "t1": 195.861,
+  "tipo": "imagen",
+  "texto": "Wolf spiders are outdoor hunters, so outside"
+ },
+ {
+  "id": "scene-057",
+  "t0": 195.861,
+  "t1": 199.557,
+  "tipo": "imagen",
+  "texto": "is exactly where they want to be."
+ },
+ {
+  "id": "scene-058",
+  "t0": 199.557,
+  "t1": 202.717,
+  "tipo": "imagen",
+  "texto": "So the next time you spot a lumpy spider in the garage,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 202.717,
+  "t1": 206.172,
+  "tipo": "imagen",
+  "texto": "take a closer look before the boot comes down."
+ },
+ {
+  "id": "scene-060",
+  "t0": 206.172,
+  "t1": 209.972,
+  "tipo": "imagen",
+  "texto": "That is not one spider. It is a mom with a hundred kids,"
+ },
+ {
+  "id": "scene-061",
+  "t0": 209.972,
+  "t1": 213.045,
+  "tipo": "imagen",
+  "texto": "on the longest piggyback ride of their lives."
+ },
+ {
+  "id": "scene-062",
+  "t0": 213.045,
+  "t1": 216.725,
+  "tipo": "imagen",
+  "texto": "A bucket and a piece of cardboard. And the whole family"
+ },
+ {
+  "id": "scene-063",
+  "t0": 216.725,
+  "t1": 220.2,
+  "tipo": "imagen",
+  "texto": "goes home."
+ }
+]

@@ -39,6 +39,47 @@ def num_es(n: int) -> str:
     return str(n)
 
 
+_EN_U = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve",
+         "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
+_EN_D = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+
+def num_en(n: int, anio=True) -> str:
+    """Cifra -> palabras en inglés (para el CER de videos en inglés: Whisper escribe «2009», el guion «two thousand
+    nine»). Con `anio`, 1100-1999 y 2010-2099 se leen como años («nineteen ninety eight», «twenty twenty four»)."""
+    if anio and (1100 <= n <= 1999 or 2010 <= n <= 2099):
+        a, b = divmod(n, 100)
+        return num_en(a, False) + (" hundred" if b == 0 else " " + (num_en(b, False) if b >= 10 else "oh " + _EN_U[b]))
+    if n < 20:
+        return _EN_U[n]
+    if n < 100:
+        d, u = divmod(n, 10)
+        return _EN_D[d] + ("" if u == 0 else " " + _EN_U[u])
+    if n < 1000:
+        c, r = divmod(n, 100)
+        return _EN_U[c] + " hundred" + ("" if r == 0 else " " + num_en(r, False))
+    for base, nombre in ((1_000_000_000, " billion"), (1_000_000, " million"), (1000, " thousand")):
+        if n >= base:
+            m, r = divmod(n, base)
+            return num_en(m, False) + nombre + ("" if r == 0 else " " + num_en(r, False))
+    return str(n)
+
+
+_IDIOMA = None
+
+
+def _idioma():
+    """Idioma de la voz del video (guion.py -> VOZ["idioma"]); por defecto español."""
+    global _IDIOMA
+    if _IDIOMA is None:
+        try:
+            import guion
+            _IDIOMA = str(getattr(guion, "VOZ", {}).get("idioma", "es"))[:2].lower()
+        except Exception:
+            _IDIOMA = "es"
+    return _IDIOMA
+
+
 ORDINALES = {1: "primero", 2: "segundo", 3: "tercero", 4: "cuarto", 5: "quinto", 6: "sexto", 7: "septimo", 8: "octavo",
              9: "noveno", 10: "decimo"}
 
@@ -85,14 +126,19 @@ def normaliza(t: str) -> str:
     t = re.sub(r"\bd\.\s?c\b\.?", " despues de cristo ", t)
     # Whisper abrevia "Número seis: ..." como "6. ..."
     t = re.sub(r"^(\d+)\.(\s|$)", r"numero \1 ", t)
-    t = t.replace("%", " por ciento")
+    t = t.replace("%", " percent" if _idioma() == "en" else " por ciento")
     # unidades que Whisper abrevia ("30 km por segundo", "-18 °C")
     t = re.sub(r"(\d)\s*km\b", r"\1 kilómetros", t)
     t = re.sub(r"(\d)\s*°\s*c\b", r"\1 grados", t)
     # 40.000 / 40,000 -> 40000
     while re.search(r"(\d)[\.,](\d{3})\b", t):                            # 1.100.000 -> 1100000 (varios grupos)
         t = re.sub(r"(\d)[\.,](\d{3})\b", r"\1\2", t)
-    t = re.sub(r"\d+", lambda m: " " + num_es(int(m.group())) + " ", t)
+    if _idioma() == "en":                                                  # inglés: «$37 million» / «1950s»
+        t = re.sub(r"\$\s*([\d.]+)\s*(million|billion|thousand)?", r"\1 \2 dollars", t)
+        t = re.sub(r"(\d)s\b", r"\1 s", t)
+        t = re.sub(r"\d+", lambda m: " " + num_en(int(m.group())) + " ", t)
+    else:
+        t = re.sub(r"\d+", lambda m: " " + num_es(int(m.group())) + " ", t)
     t = unicodedata.normalize("NFD", t)
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
     t = re.sub(r"[^a-z0-9ñ ]+", " ", t)

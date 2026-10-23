@@ -1,7 +1,70 @@
 # Fórmula de Wild Next Door — qué funciona y por qué
 _Documento vivo (procedimiento: `docs/que_funciona.md`). Última revisión: 11-oct-2026, tras `cinco_bichos`._
 
-## Fórmula vigente (repetir en cada video)
+## Revisión 22-oct-2026: el nicho funciona, nuestro empaque no
+**Datos propios (yt metricas 90 d):** 1 036 vistas en total, 1 suscriptor. El ciempiés tiene 765 (74 %); todo lo publicado
+después va en 5-10 vistas (`arana_techo` 6, `cinco_bichos` 10, `doce_animales` 9, `bichos_invierno` 5). Tráfico: 66 % de
+«explorar»/inicio (SUBSCRIBER en la API = browse), 16 % sugeridos, 10 % búsqueda → el nicho vive del feed, no de búsquedas.
+Público: 35-44 años, 50/50, EE. UU. 34 %, celular 60 %, TV 8 %. Retención: ciempiés (4:24) 34 %; los de 9 min 13-26 %.
+
+**El nicho (vidIQ/Nexlev, 22-oct):** adultos angloparlantes con casa/jardín que se topan con bichos (EE. UU., UK, CA, AU).
+- 30 videos de canales < 200 K subs en 6 meses suman ~13 M de vistas; muchos de canales de 1-5 K subs.
+- «What Happens When a Wasp Comes Home but Its Nest Is Gone?»: Zyka 1,1 M (×321, 3:51) y Titly 465 K, el mismo tema.
+- Zyka (2,6 K subs, monito de palitos + bicho dibujado): «…After You Vacuum It Up?» 437 K en 4 días (×344, 4:00),
+  «…Trap a Spider and Forget About It?» 229 K en 2 días (×136). Formato «What Happens If/After You <acción común>».
+- Forgotten Lin (28,6 K subs) hace «If You See This X on Your Porch — Don't Touch It» casi a diario: la mayoría 1-5 K,
+  4 aciertos de 185 K-3 M. El «Never Kill» de un bicho está SATURADO (Forgotten Lin, Backyard Story, Root Signal,
+  Fields of Return, ApexKore) y es lotería por volumen.
+- Shorts: Zack D. Films hace esta misma curiosidad en 30 s («Why You Shouldn't Stomp On A Spider» 25 M, «Can A Flushed
+  Fish Reach The Ocean?» 19 M). Ladybugs en casa (Miniminuteman, Short) 3,6 M: temporada oct-nov.
+- Búsqueda pequeña («spiders» 83 K/mes, «pest control» 97 K/mes en YT): se crece por feed, o sea por CTR + retención.
+
+**Diagnóstico (por qué no llegan vistas):**
+1. Miniatura de «caricatura infantil»: mascotas con gorra/audífonos sobre blanco. Las que ganan muestran UNA ACCIÓN humana
+   sobre el bicho (escoba, aspiradora, vaso, pistola de silicón) en un cuarto con color, o un bicho realista grande con una
+   mano; 1-2 palabras. La nuestra no cuenta ninguna historia.
+2. Duración: a 9-14 min la retención cae a 13-26 % y YouTube deja de probar el video. Los éxitos de Zyka duran 3:30-4:00
+   (y nuestro ciempiés 4:24).
+3. Volumen: 9 videos en total, uno cada 3 días; la competencia sube 3-7 por semana y vive de 1 acierto de cada 10-15.
+4. Sin Shorts: cero embudo hacia los largos y cero «video relacionado» desde Shorts.
+
+**Fórmula NUEVA a probar (cambia el EMPAQUE; se conservan estilo, voz y fotos reales):** título «What Happens If/After You
+<acción común contra un bicho>?», 3:30-4:30 min, miniatura = monito/persona haciendo la acción + bicho grande + 1-2 palabras
+(«BIG MISTAKE?»), fondo de cuarto con color, nada de mascotas con accesorios. Cada largo lleva su Short vertical de 30-45 s
+con la pregunta y el «video relacionado» al largo. Medir a 7 días: vistas/día, % visto y CTR (Studio).
+
+**Qué le gusta a este público (comentarios del video de Zyka de 1,1 M y transcripción del de la aspiradora, 22-oct):**
+- Son adultos mayores de 35 (cuentan que les robaron el coche hace 40-53 años, exterminadores jubilados, padres): les gusta
+  verse en el bicho. Los comentarios top convierten la situación del bicho en una de la vida humana (divorcio, la renta,
+  jubilarse, «Dude, where's my car?», Star Wars). → **El guion pone al bicho en una situación humana reconocible** y deja
+  una frase citable («the worker still works perfectly; there's just nothing left to work for» = 753 likes).
+- La empatía con giro funciona («Great, now I feel bad for those homeless wasps»): terminar con el bicho como víctima
+  inesperada o como aliado, sin sermón.
+- Piden lo práctico: cómo atraparlo con un vaso, si se te sube por el brazo, qué hace el exterminador. 1-2 consejos reales.
+- Estructura de Zyka (≈ 650 palabras, 4:00): escena en 2.ª persona con una acción que TODOS hicieron → pregunta inquietante
+  («could it crawl out while you're asleep?») → respuesta corta del experto con nombre e institución (Smithsonian, Burke
+  Museum) en < 30 s → el viaje paso a paso → «but scientists found a strange exception» cada ~40 s → consejo práctico →
+  giro final. Frases cortas, nada de relleno; un comentario top se queja de lo «meandering».
+
+**Tanda de 2 semanas (26-oct a 7-nov, un largo cada 2 días a las 16:00 UTC + su Short 12 h después):**
+| # | alias | título | gancho / referencia |
+|---|---|---|---|
+| 1 | `arana_escusado` | What Happens to a Spider You Flush Down the Toilet? | aspiradora de Zyka 437 K (×344); sin video largo del tema |
+| 2 | `mariquitas_casa` | What Happens to the Ladybugs Hiding in Your House This Winter? | temporada oct-nov; Miniminuteman 3,6 M |
+| 3 | `chinche_invierno` | What Happens If You Let a Stink Bug Live in Your House All Winter? | Fields of Return 660 K (×1711); Frank Taylor 2,6 M |
+| 4 | `hormigas_cocina` | What Happens to the Colony After You Squish the Ants on Your Counter? | Clem Reveals 695 K (×228) |
+| 5 | `telarana_rota` | What Happens to a Spider After You Knock Down Its Web? | nido de avispa de Zyka 1,1 M (mismo esquema «casa destruida») |
+| 6 | `polilla_foco` | What Happens to a Moth That Circles Your Porch Light All Night? | pregunta universal, sin dueño en largo |
+| 7 | `arana_crias` | What Happens If You Squish a Spider Carrying Babies? | Science Channel 23 M; Forgotten Lin «Never Trap» ×2,3 |
+Reserva: «What Happens to a House Centipede When You Turn On the Light?» (nuestro ganador). Validar cada tema con
+`vidiq_youtube_search` antes de escribirlo; si alguno ya tiene un largo grande reciente, se cambia por la reserva.
+
+## Registro diario (regla del usuario, 22-oct-2026: al menos una vez al día)
+| fecha | vistas canal (90 d) | lo nuevo que rindió / no rindió | fuera (vidIQ) | mejora que entra en el siguiente video |
+|---|---|---|---|---|
+| 22-oct | 1 036 · 1 sub | ciempiés 765; todo lo demás 5-25 | Zyka «What happens…» 4 min arrasa | formato nuevo completo (arriba) |
+
+## Fórmula vigente hasta el 22-oct (repetir en cada video)
 - **Tema:** un bicho de casa que da miedo o asco y que en realidad te ayuda o no es lo que crees. Mejor si ya es viral
   fuera. Evidencia: `ciempies_casa` (440 vistas en 2,5 días); la cellar spider que caza viudas negras (×382, ×32 y ×30 en
   3 canales chicos distintos).

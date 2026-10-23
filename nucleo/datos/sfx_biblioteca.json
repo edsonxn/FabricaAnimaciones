@@ -118,7 +118,15 @@
    "md5": "24e7c6d41e9a81315c4abcdd79a3e80a",
    "prompt": "Pencil writing quickly on a paper notepad, scribbling, close up",
    "dur": 4.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "tequisquiapan",
+     "canal": "cronopapel",
+     "nombre": "escribir_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "agotado_cortisol__neon": {
    "id": "agotado_cortisol__neon",
@@ -566,6 +574,12 @@
      "video": "duos_promo",
      "canal": "ninguno",
      "nombre": "brillo_b",
+     "fecha": "2026-10-22"
+    },
+    {
+     "video": "tequisquiapan",
+     "canal": "cronopapel",
+     "nombre": "brillo_1",
      "fecha": "2026-10-22"
     }
    ]
@@ -3176,7 +3190,15 @@
    "md5": "96183a8c3c0c92e6cc5c85b368e320c1",
    "prompt": "Heavy rubber stamp slammed hard on a wooden desk, single thud",
    "dur": 1.0,
-   "canal": "cronicas_tamriel"
+   "canal": "cronicas_tamriel",
+   "usos": [
+    {
+     "video": "tequisquiapan",
+     "canal": "cronopapel",
+     "nombre": "sello_1",
+     "fecha": "2026-10-22"
+    }
+   ]
   },
   "trailero_parada2__boom": {
    "id": "trailero_parada2__boom",
@@ -4983,7 +5005,687 @@
    "prompt": "Soft buzzing of many small beetles flying around a sunny window, gentle",
    "dur": 5.0,
    "canal": "wild_next_door"
+  },
+  "arana_crias__corren_cri": {
+   "id": "arana_crias__corren_cri",
+   "video": "arana_crias",
+   "nombre": "corren_cri",
+   "archivo": "arana_crias__corren_cri.mp3",
+   "md5": "39bbd646a2b7054aa7da007d1a86ce52",
+   "prompt": "Fast tiny scurrying of many little legs scattering across a concrete floor, comic",
+   "dur": 3.0,
+   "canal": "wild_next_door"
+  },
+  "arana_crias__cubeta_cri": {
+   "id": "arana_crias__cubeta_cri",
+   "video": "arana_crias",
+   "nombre": "cubeta_cri",
+   "archivo": "arana_crias__cubeta_cri.mp3",
+   "md5": "628fd99e9225b7126b2651d4528c69e0",
+   "prompt": "Plastic bowl gently set down on concrete, then cardboard sliding underneath",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "arana_crias__foco_cri": {
+   "id": "arana_crias__foco_cri",
+   "video": "arana_crias",
+   "nombre": "foco_cri",
+   "archivo": "arana_crias__foco_cri.mp3",
+   "md5": "3ea8021700fa18f4cd1e47d656f324f1",
+   "prompt": "Fluorescent garage light flickering on with a buzz and a click",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "arana_crias_short__corren_short_cri": {
+   "id": "arana_crias_short__corren_short_cri",
+   "video": "arana_crias_short",
+   "nombre": "corren_short_cri",
+   "archivo": "arana_crias_short__corren_short_cri.mp3",
+   "md5": "f1f6b7c072704f507fc062d78e3bbd3c",
+   "prompt": "Many tiny legs scurrying in every direction on concrete, quick and comic",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "arana_crias_short__foco_short_cri": {
+   "id": "arana_crias_short__foco_short_cri",
+   "video": "arana_crias_short",
+   "nombre": "foco_short_cri",
+   "archivo": "arana_crias_short__foco_short_cri.mp3",
+   "md5": "e345a53712c13168ba611f18d29e8428",
+   "prompt": "Garage light switching on with a fluorescent buzz and click",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "chinche_invierno_short__aterriza_short_chi": {
+   "id": "chinche_invierno_short__aterriza_short_chi",
+   "video": "chinche_invierno_short",
+   "nombre": "aterriza_short_chi",
+   "archivo": "chinche_invierno_short__aterriza_short_chi.mp3",
+   "md5": "047cc85e1bc6befef48dcb9d28a0817f",
+   "prompt": "Tiny clumsy beetle landing on soft flannel fabric, a soft cartoon thump with a short buzz",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "chinche_invierno_short__pfft_short_chi": {
+   "id": "chinche_invierno_short__pfft_short_chi",
+   "video": "chinche_invierno_short",
+   "nombre": "pfft_short_chi",
+   "archivo": "chinche_invierno_short__pfft_short_chi.mp3",
+   "md5": "2d47b730866f16b61f830f9a12ad585d",
+   "prompt": "Short comic spray puff, a squeaky cartoon pfft of a smelly gas cloud",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "hormigas_cocina__aplasta_hor": {
+   "id": "hormigas_cocina__aplasta_hor",
+   "video": "hormigas_cocina",
+   "nombre": "aplasta_hor",
+   "archivo": "hormigas_cocina__aplasta_hor.mp3",
+   "md5": "cfde6900ae720e66caa4e35a53936961",
+   "prompt": "Quick cartoon thumb squish on a kitchen counter, a soft squeak and a paper towel rub",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "hormigas_cocina__ding_hor": {
+   "id": "hormigas_cocina__ding_hor",
+   "video": "hormigas_cocina",
+   "nombre": "ding_hor",
+   "archivo": "hormigas_cocina__ding_hor.mp3",
+   "md5": "db29d73326534bef216ae6139a372755",
+   "prompt": "Bright short food delivery app notification chime from a phone",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "hormigas_cocina__spray_hor": {
+   "id": "hormigas_cocina__spray_hor",
+   "video": "hormigas_cocina",
+   "nombre": "spray_hor",
+   "archivo": "hormigas_cocina__spray_hor.mp3",
+   "md5": "8111bd674b1a6c439436a026f3de8504",
+   "prompt": "Long hissing aerosol bug spray can blast, comic",
+   "dur": 3.0,
+   "canal": "wild_next_door"
+  },
+  "hormigas_cocina_short__esponja_short_hor": {
+   "id": "hormigas_cocina_short__esponja_short_hor",
+   "video": "hormigas_cocina_short",
+   "nombre": "esponja_short_hor",
+   "archivo": "hormigas_cocina_short__esponja_short_hor.mp3",
+   "md5": "a7abca9437f44512e03aea3cad09c0e0",
+   "prompt": "Wet soapy sponge wiping a kitchen counter with little bubble pops",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "hormigas_cocina_short__pisa_short_hor": {
+   "id": "hormigas_cocina_short__pisa_short_hor",
+   "video": "hormigas_cocina_short",
+   "nombre": "pisa_short_hor",
+   "archivo": "hormigas_cocina_short__pisa_short_hor.mp3",
+   "md5": "48f1db371b8b17aa02907c0aa1a5a23c",
+   "prompt": "Small cartoon squish with a squeaky rub of a paper towel on a counter",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "mariquitas_casa_short__aspira_short_mar": {
+   "id": "mariquitas_casa_short__aspira_short_mar",
+   "video": "mariquitas_casa_short",
+   "nombre": "aspira_short_mar",
+   "archivo": "mariquitas_casa_short__aspira_short_mar.mp3",
+   "md5": "f2537470f0bda3c3199bc9f597f762c4",
+   "prompt": "Short handheld vacuum cleaner whir that sucks something up with a little pop",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "mariquitas_casa_short__enjambre_short_mar": {
+   "id": "mariquitas_casa_short__enjambre_short_mar",
+   "video": "mariquitas_casa_short",
+   "nombre": "enjambre_short_mar",
+   "archivo": "mariquitas_casa_short__enjambre_short_mar.mp3",
+   "md5": "55a020535820768c89e6e180506115ef",
+   "prompt": "Soft rustle of hundreds of tiny beetles crawling on a sunny wooden wall, light clicking",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "polilla_foco__aleteo_pol": {
+   "id": "polilla_foco__aleteo_pol",
+   "video": "polilla_foco",
+   "nombre": "aleteo_pol",
+   "archivo": "polilla_foco__aleteo_pol.mp3",
+   "md5": "ca467ef0d244404debaa932e904755d2",
+   "prompt": "Soft papery fluttering of several moths circling a lamp, light taps on glass",
+   "dur": 4.0,
+   "canal": "wild_next_door"
+  },
+  "polilla_foco__clic_pol": {
+   "id": "polilla_foco__clic_pol",
+   "video": "polilla_foco",
+   "nombre": "clic_pol",
+   "archivo": "polilla_foco__clic_pol.mp3",
+   "md5": "b7508725f62677d6675a8ef261a4374a",
+   "prompt": "Single crisp click of an old porch light switch with a soft electric hum starting",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "polilla_foco__murcielago_pol": {
+   "id": "polilla_foco__murcielago_pol",
+   "video": "polilla_foco",
+   "nombre": "murcielago_pol",
+   "archivo": "polilla_foco__murcielago_pol.mp3",
+   "md5": "ca0d78e64e041054cea7681b2f2cba54",
+   "prompt": "Quick swoosh of a small bat swooping past with a tiny high squeak",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "polilla_foco_short__aleteo_short_pol": {
+   "id": "polilla_foco_short__aleteo_short_pol",
+   "video": "polilla_foco_short",
+   "nombre": "aleteo_short_pol",
+   "archivo": "polilla_foco_short__aleteo_short_pol.mp3",
+   "md5": "3a549f4889e7c8ddd7eb6f4296430245",
+   "prompt": "Soft papery flutter of a moth bumping a glass lamp, tiny taps",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "polilla_foco_short__interruptor_short_pol": {
+   "id": "polilla_foco_short__interruptor_short_pol",
+   "video": "polilla_foco_short",
+   "nombre": "interruptor_short_pol",
+   "archivo": "polilla_foco_short__interruptor_short_pol.mp3",
+   "md5": "33b32d8c8ffd2e280463e44295ed81c6",
+   "prompt": "Single crisp click of a light switch turning off, a soft electric hum stopping",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "telarana_rota__cae_tel": {
+   "id": "telarana_rota__cae_tel",
+   "video": "telarana_rota",
+   "nombre": "cae_tel",
+   "archivo": "telarana_rota__cae_tel.mp3",
+   "md5": "d698f8511d02dfa025d3e373d5b1987d",
+   "prompt": "Quick descending cartoon zip of a tiny spider dropping on a silk line",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "telarana_rota__escoba_tel": {
+   "id": "telarana_rota__escoba_tel",
+   "video": "telarana_rota",
+   "nombre": "escoba_tel",
+   "archivo": "telarana_rota__escoba_tel.mp3",
+   "md5": "8a347373ddcf2a49b9c9a4bf468c83fc",
+   "prompt": "Fast broom swoosh through the air snapping thin threads, comic",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "telarana_rota__sorbe_tel": {
+   "id": "telarana_rota__sorbe_tel",
+   "video": "telarana_rota",
+   "nombre": "sorbe_tel",
+   "archivo": "telarana_rota__sorbe_tel.mp3",
+   "md5": "92c97ea21a7911ac63bc4d9aa3cb40e1",
+   "prompt": "Small cartoon slurp of someone eating spaghetti noodles",
+   "dur": 2.0,
+   "canal": "wild_next_door"
+  },
+  "telarana_rota_short__escoba_short_tel": {
+   "id": "telarana_rota_short__escoba_short_tel",
+   "video": "telarana_rota_short",
+   "nombre": "escoba_short_tel",
+   "archivo": "telarana_rota_short__escoba_short_tel.mp3",
+   "md5": "3bfaeab99f828e37ce98aad25781fa30",
+   "prompt": "Quick broom swish snapping thin silk threads, light and comic",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "telarana_rota_short__hilo_short_tel": {
+   "id": "telarana_rota_short__hilo_short_tel",
+   "video": "telarana_rota_short",
+   "nombre": "hilo_short_tel",
+   "archivo": "telarana_rota_short__hilo_short_tel.mp3",
+   "md5": "fcd5c591ab23e3af86e1da11b2173e23",
+   "prompt": "Fast cartoon zip of a tiny spider sliding down a silk line",
+   "dur": 1.0,
+   "canal": "wild_next_door"
+  },
+  "tequisquiapan__agua_termal": {
+   "id": "tequisquiapan__agua_termal",
+   "video": "tequisquiapan",
+   "nombre": "agua_termal",
+   "archivo": "tequisquiapan__agua_termal.mp3",
+   "md5": "bfd9f0b57c982bb7d62ab9efec4837be",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__brillo_2": {
+   "id": "tequisquiapan__brillo_2",
+   "video": "tequisquiapan",
+   "nombre": "brillo_2",
+   "archivo": "tequisquiapan__brillo_2.mp3",
+   "md5": "884368075b3694613c41765eb179a89d",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__camara": {
+   "id": "tequisquiapan__camara",
+   "video": "tequisquiapan",
+   "nombre": "camara",
+   "archivo": "tequisquiapan__camara.mp3",
+   "md5": "ddf5822435f286bf32a4dcb0dd71f950",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__campana": {
+   "id": "tequisquiapan__campana",
+   "video": "tequisquiapan",
+   "nombre": "campana",
+   "archivo": "tequisquiapan__campana.mp3",
+   "md5": "e2cb16bd8b41175005ad2563b395cc16",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__cesteria": {
+   "id": "tequisquiapan__cesteria",
+   "video": "tequisquiapan",
+   "nombre": "cesteria",
+   "archivo": "tequisquiapan__cesteria.mp3",
+   "md5": "30bcd8aea704d42e0f7da14b38115b3f",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__chapuzon": {
+   "id": "tequisquiapan__chapuzon",
+   "video": "tequisquiapan",
+   "nombre": "chapuzon",
+   "archivo": "tequisquiapan__chapuzon.mp3",
+   "md5": "f75186783758777d18c23c87096e7628",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__copas": {
+   "id": "tequisquiapan__copas",
+   "video": "tequisquiapan",
+   "nombre": "copas",
+   "archivo": "tequisquiapan__copas.mp3",
+   "md5": "f8ae45939b2e3233e98272975070c02c",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__crece_1": {
+   "id": "tequisquiapan__crece_1",
+   "video": "tequisquiapan",
+   "nombre": "crece_1",
+   "archivo": "tequisquiapan__crece_1.mp3",
+   "md5": "67dfc58fc96a39bbea136721eea5cc55",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__crece_2": {
+   "id": "tequisquiapan__crece_2",
+   "video": "tequisquiapan",
+   "nombre": "crece_2",
+   "archivo": "tequisquiapan__crece_2.mp3",
+   "md5": "5899803b19878e47e0ba0fc6f682309a",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__crece_3": {
+   "id": "tequisquiapan__crece_3",
+   "video": "tequisquiapan",
+   "nombre": "crece_3",
+   "archivo": "tequisquiapan__crece_3.mp3",
+   "md5": "27364cf9b6d89f86fe50dfd497c480d9",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__escribir_2": {
+   "id": "tequisquiapan__escribir_2",
+   "video": "tequisquiapan",
+   "nombre": "escribir_2",
+   "archivo": "tequisquiapan__escribir_2.mp3",
+   "md5": "3cea03df84031013c46b1d11f1719738",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__escribir_3": {
+   "id": "tequisquiapan__escribir_3",
+   "video": "tequisquiapan",
+   "nombre": "escribir_3",
+   "archivo": "tequisquiapan__escribir_3.mp3",
+   "md5": "a4ac0e6d9ed478fa7f05d658904a3921",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__feria": {
+   "id": "tequisquiapan__feria",
+   "video": "tequisquiapan",
+   "nombre": "feria",
+   "archivo": "tequisquiapan__feria.mp3",
+   "md5": "79aaba24600d83d9de85bdad6cd8b4aa",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__foto_1": {
+   "id": "tequisquiapan__foto_1",
+   "video": "tequisquiapan",
+   "nombre": "foto_1",
+   "archivo": "tequisquiapan__foto_1.mp3",
+   "md5": "63482637f48a11dbe2406c187be72f98",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__foto_2": {
+   "id": "tequisquiapan__foto_2",
+   "video": "tequisquiapan",
+   "nombre": "foto_2",
+   "archivo": "tequisquiapan__foto_2.mp3",
+   "md5": "1b0f7e1d4bfc41c4e6bc4c3ca60eb79a",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__foto_3": {
+   "id": "tequisquiapan__foto_3",
+   "video": "tequisquiapan",
+   "nombre": "foto_3",
+   "archivo": "tequisquiapan__foto_3.mp3",
+   "md5": "ea7a128d84e0e4a93030a20d894733a8",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__foto_4": {
+   "id": "tequisquiapan__foto_4",
+   "video": "tequisquiapan",
+   "nombre": "foto_4",
+   "archivo": "tequisquiapan__foto_4.mp3",
+   "md5": "24f1c1c6a226bf6c06247e1f5200e506",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__galope_1": {
+   "id": "tequisquiapan__galope_1",
+   "video": "tequisquiapan",
+   "nombre": "galope_1",
+   "archivo": "tequisquiapan__galope_1.mp3",
+   "md5": "96df58c8a205a8603dd9e606241e2449",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__galope_2": {
+   "id": "tequisquiapan__galope_2",
+   "video": "tequisquiapan",
+   "nombre": "galope_2",
+   "archivo": "tequisquiapan__galope_2.mp3",
+   "md5": "1e6881f8f66eeb09eafd8a2765752b5d",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__golpe_suave_1": {
+   "id": "tequisquiapan__golpe_suave_1",
+   "video": "tequisquiapan",
+   "nombre": "golpe_suave_1",
+   "archivo": "tequisquiapan__golpe_suave_1.mp3",
+   "md5": "f25a1414a79be3db42a0c5d67fb50e54",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__golpe_suave_2": {
+   "id": "tequisquiapan__golpe_suave_2",
+   "video": "tequisquiapan",
+   "nombre": "golpe_suave_2",
+   "archivo": "tequisquiapan__golpe_suave_2.mp3",
+   "md5": "75ce7bf8652fcec6af9b0ba2b6335f99",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__golpe_suave_3": {
+   "id": "tequisquiapan__golpe_suave_3",
+   "video": "tequisquiapan",
+   "nombre": "golpe_suave_3",
+   "archivo": "tequisquiapan__golpe_suave_3.mp3",
+   "md5": "abfc0e7170d801d459a51a3e18eba5fa",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__gotas": {
+   "id": "tequisquiapan__gotas",
+   "video": "tequisquiapan",
+   "nombre": "gotas",
+   "archivo": "tequisquiapan__gotas.mp3",
+   "md5": "56457b21934a44e775061a78ee9807d2",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__luz": {
+   "id": "tequisquiapan__luz",
+   "video": "tequisquiapan",
+   "nombre": "luz",
+   "archivo": "tequisquiapan__luz.mp3",
+   "md5": "3bef0126bd6b96035f6fc04bb9db198b",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__multitud": {
+   "id": "tequisquiapan__multitud",
+   "video": "tequisquiapan",
+   "nombre": "multitud",
+   "archivo": "tequisquiapan__multitud.mp3",
+   "md5": "151d7dc4e6beff3e9c2a81b4a4649df7",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__papel_1": {
+   "id": "tequisquiapan__papel_1",
+   "video": "tequisquiapan",
+   "nombre": "papel_1",
+   "archivo": "tequisquiapan__papel_1.mp3",
+   "md5": "98913d8c0f15d7d488e69b27a3e14ab4",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__papel_2": {
+   "id": "tequisquiapan__papel_2",
+   "video": "tequisquiapan",
+   "nombre": "papel_2",
+   "archivo": "tequisquiapan__papel_2.mp3",
+   "md5": "9451073838f5ce173c5f591d7c61a388",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pasos_1": {
+   "id": "tequisquiapan__pasos_1",
+   "video": "tequisquiapan",
+   "nombre": "pasos_1",
+   "archivo": "tequisquiapan__pasos_1.mp3",
+   "md5": "80be4588c952e730f1a70027f41b7138",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pasos_2": {
+   "id": "tequisquiapan__pasos_2",
+   "video": "tequisquiapan",
+   "nombre": "pasos_2",
+   "archivo": "tequisquiapan__pasos_2.mp3",
+   "md5": "cc86242a00c6fa7d121b21b602f147c9",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pluck_1": {
+   "id": "tequisquiapan__pluck_1",
+   "video": "tequisquiapan",
+   "nombre": "pluck_1",
+   "archivo": "tequisquiapan__pluck_1.mp3",
+   "md5": "4acf3afe3940aa32c52415905309c452",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pluck_2": {
+   "id": "tequisquiapan__pluck_2",
+   "video": "tequisquiapan",
+   "nombre": "pluck_2",
+   "archivo": "tequisquiapan__pluck_2.mp3",
+   "md5": "cf085970984c8af2f6cd5a3a953d8846",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pluck_3": {
+   "id": "tequisquiapan__pluck_3",
+   "video": "tequisquiapan",
+   "nombre": "pluck_3",
+   "archivo": "tequisquiapan__pluck_3.mp3",
+   "md5": "e7f06d50ca42e90c8f793acfd53314cf",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pop_1": {
+   "id": "tequisquiapan__pop_1",
+   "video": "tequisquiapan",
+   "nombre": "pop_1",
+   "archivo": "tequisquiapan__pop_1.mp3",
+   "md5": "8ba46ef343ccca106c719f219da33fc2",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pop_2": {
+   "id": "tequisquiapan__pop_2",
+   "video": "tequisquiapan",
+   "nombre": "pop_2",
+   "archivo": "tequisquiapan__pop_2.mp3",
+   "md5": "20ac44d9618b2d732010b02bd763a12c",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pop_3": {
+   "id": "tequisquiapan__pop_3",
+   "video": "tequisquiapan",
+   "nombre": "pop_3",
+   "archivo": "tequisquiapan__pop_3.mp3",
+   "md5": "46e0659ce6d25ffa0c7ba4716655ed81",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__pop_4": {
+   "id": "tequisquiapan__pop_4",
+   "video": "tequisquiapan",
+   "nombre": "pop_4",
+   "archivo": "tequisquiapan__pop_4.mp3",
+   "md5": "531f6ad7ce0ae837ec143119dd6341f7",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__presa": {
+   "id": "tequisquiapan__presa",
+   "video": "tequisquiapan",
+   "nombre": "presa",
+   "archivo": "tequisquiapan__presa.mp3",
+   "md5": "5677095afaa7e12280d4da3891914f3f",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__reloj": {
+   "id": "tequisquiapan__reloj",
+   "video": "tequisquiapan",
+   "nombre": "reloj",
+   "archivo": "tequisquiapan__reloj.mp3",
+   "md5": "6e36c5e112acc396ffa36338c426d4fe",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__sello_2": {
+   "id": "tequisquiapan__sello_2",
+   "video": "tequisquiapan",
+   "nombre": "sello_2",
+   "archivo": "tequisquiapan__sello_2.mp3",
+   "md5": "a68239cc17a6a247fbd6f59ecabdf7ec",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__tren": {
+   "id": "tequisquiapan__tren",
+   "video": "tequisquiapan",
+   "nombre": "tren",
+   "archivo": "tequisquiapan__tren.mp3",
+   "md5": "6cf7bf0cef58f8979ebd6c2f3cd4a830",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__volcan": {
+   "id": "tequisquiapan__volcan",
+   "video": "tequisquiapan",
+   "nombre": "volcan",
+   "archivo": "tequisquiapan__volcan.mp3",
+   "md5": "ce01f0796e4c3580a0bd09183bb2733b",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__whoosh_1": {
+   "id": "tequisquiapan__whoosh_1",
+   "video": "tequisquiapan",
+   "nombre": "whoosh_1",
+   "archivo": "tequisquiapan__whoosh_1.mp3",
+   "md5": "e00c3044b26f786e2bdc02386f69e661",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__whoosh_2": {
+   "id": "tequisquiapan__whoosh_2",
+   "video": "tequisquiapan",
+   "nombre": "whoosh_2",
+   "archivo": "tequisquiapan__whoosh_2.mp3",
+   "md5": "bb8d88cc18d8b7a1e4e8a45a0eabeea7",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
+  },
+  "tequisquiapan__whoosh_3": {
+   "id": "tequisquiapan__whoosh_3",
+   "video": "tequisquiapan",
+   "nombre": "whoosh_3",
+   "archivo": "tequisquiapan__whoosh_3.mp3",
+   "md5": "6c10ef0761669d8d0fd8bb96928b48a7",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "cronopapel"
   }
  },
- "actualizado": "2026-10-22 19:30"
+ "actualizado": "2026-10-22 21:07"
 }

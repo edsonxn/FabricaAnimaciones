@@ -1,0 +1,422 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 3.51,
+  "tipo": "imagen",
+  "texto": "It is late. You step out on the porch, and walk"
+ },
+ {
+  "id": "scene-002",
+  "t0": 3.51,
+  "t1": 6.954,
+  "tipo": "imagen",
+  "texto": "face first into a spider web. You flail."
+ },
+ {
+  "id": "scene-003",
+  "t0": 6.954,
+  "t1": 10.564,
+  "tipo": "imagen",
+  "texto": "You spit. You grab the broom and wipe out"
+ },
+ {
+  "id": "scene-004",
+  "t0": 10.564,
+  "t1": 14.217,
+  "tipo": "imagen",
+  "texto": "every thread between the post and the porch light."
+ },
+ {
+  "id": "scene-005",
+  "t0": 14.217,
+  "t1": 18.334,
+  "tipo": "imagen",
+  "texto": "The spider drops out of sight. Good riddance."
+ },
+ {
+  "id": "scene-006",
+  "t0": 18.334,
+  "t1": 21.074,
+  "tipo": "imagen",
+  "texto": "The next morning, you open the door, and the web is back."
+ },
+ {
+  "id": "scene-007",
+  "t0": 21.074,
+  "t1": 25.313,
+  "tipo": "imagen",
+  "texto": "Same spot. Perfect circle. Like nothing happened."
+ },
+ {
+  "id": "scene-008",
+  "t0": 25.313,
+  "t1": 27.953,
+  "tipo": "imagen",
+  "texto": "So what did that spider go through last night?"
+ },
+ {
+  "id": "scene-009",
+  "t0": 27.953,
+  "t1": 31.253,
+  "tipo": "imagen",
+  "texto": "And how did it rebuild an entire web while you were"
+ },
+ {
+  "id": "scene-010",
+  "t0": 31.253,
+  "t1": 34.03,
+  "tipo": "imagen",
+  "texto": "asleep?"
+ },
+ {
+  "id": "scene-011",
+  "t0": 34.03,
+  "t1": 38.208,
+  "tipo": "imagen",
+  "texto": "First, understand what you actually destroyed. For a spider,"
+ },
+ {
+  "id": "scene-012",
+  "t0": 38.208,
+  "t1": 42.478,
+  "tipo": "imagen",
+  "texto": "the web is not just a house. It is the fridge, the fishing net,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 42.478,
+  "t1": 45.993,
+  "tipo": "imagen",
+  "texto": "and the doorbell, all in one. It catches dinner."
+ },
+ {
+  "id": "scene-014",
+  "t0": 45.993,
+  "t1": 48.773,
+  "tipo": "imagen",
+  "texto": "And it tells the spider, through tiny vibrations,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 48.773,
+  "t1": 52.046,
+  "tipo": "imagen",
+  "texto": "exactly what just landed and where."
+ },
+ {
+  "id": "scene-016",
+  "t0": 52.046,
+  "t1": 56.266,
+  "tipo": "imagen",
+  "texto": "So with one swipe of a broom, the spider lost its home, its food,"
+ },
+ {
+  "id": "scene-017",
+  "t0": 56.266,
+  "t1": 60.43,
+  "tipo": "imagen",
+  "texto": "and its job. All in the same second."
+ },
+ {
+  "id": "scene-018",
+  "t0": 60.43,
+  "t1": 62.913,
+  "tipo": "imagen",
+  "texto": "But it did not lose its life."
+ },
+ {
+  "id": "scene-019",
+  "t0": 62.913,
+  "t1": 66.983,
+  "tipo": "imagen",
+  "texto": "Spiders almost always trail a safety line of silk behind them,"
+ },
+ {
+  "id": "scene-020",
+  "t0": 66.983,
+  "t1": 70.274,
+  "tipo": "imagen",
+  "texto": "called a dragline. Like a climber's rope."
+ },
+ {
+  "id": "scene-021",
+  "t0": 70.274,
+  "t1": 73.354,
+  "tipo": "imagen",
+  "texto": "When the broom came, it simply let go and dropped,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 73.354,
+  "t1": 77.399,
+  "tipo": "imagen",
+  "texto": "paying out silk as it fell. Then it hid in a crack in"
+ },
+ {
+  "id": "scene-023",
+  "t0": 77.399,
+  "t1": 82.015,
+  "tipo": "imagen",
+  "texto": "the porch post, and waited for you to go inside."
+ },
+ {
+  "id": "scene-024",
+  "t0": 82.015,
+  "t1": 85.502,
+  "tipo": "imagen",
+  "texto": "And then, in the dark, it went back to work."
+ },
+ {
+  "id": "scene-025",
+  "t0": 85.502,
+  "t1": 87.982,
+  "tipo": "imagen",
+  "texto": "Many orb weaving spiders rebuild their web"
+ },
+ {
+  "id": "scene-026",
+  "t0": 87.982,
+  "t1": 91.522,
+  "tipo": "imagen",
+  "texto": "almost every night anyway. And a single web can take around"
+ },
+ {
+  "id": "scene-027",
+  "t0": 91.522,
+  "t1": 95.065,
+  "tipo": "imagen",
+  "texto": "sixty-five feet of silk. That silk is made of protein,"
+ },
+ {
+  "id": "scene-028",
+  "t0": 95.065,
+  "t1": 99.185,
+  "tipo": "imagen",
+  "texto": "and protein is expensive. So here is the clever part."
+ },
+ {
+  "id": "scene-029",
+  "t0": 99.185,
+  "t1": 101.721,
+  "tipo": "imagen",
+  "texto": "Spiders eat their old webs."
+ },
+ {
+  "id": "scene-030",
+  "t0": 101.721,
+  "t1": 105.741,
+  "tipo": "imagen",
+  "texto": "Scientists fed spiders silk marked with a radioactive tag,"
+ },
+ {
+  "id": "scene-031",
+  "t0": 105.741,
+  "t1": 108.028,
+  "tipo": "imagen",
+  "texto": "and then tracked where it went."
+ },
+ {
+  "id": "scene-032",
+  "t0": 108.028,
+  "t1": 112.548,
+  "tipo": "imagen",
+  "texto": "The spiders digested the old silk, and some of that protein came back out as"
+ },
+ {
+  "id": "scene-033",
+  "t0": 112.548,
+  "t1": 116.166,
+  "tipo": "imagen",
+  "texto": "brand-new web. So that perfect circle on your porch this"
+ },
+ {
+  "id": "scene-034",
+  "t0": 116.166,
+  "t1": 120.43,
+  "tipo": "imagen",
+  "texto": "morning may be built partly from the web you swept away."
+ },
+ {
+  "id": "scene-035",
+  "t0": 120.43,
+  "t1": 123.451,
+  "tipo": "imagen",
+  "texto": "But a spider can only lose so much."
+ },
+ {
+  "id": "scene-036",
+  "t0": 123.451,
+  "t1": 126.751,
+  "tipo": "imagen",
+  "texto": "In one study of orb weavers, about half of all the"
+ },
+ {
+  "id": "scene-037",
+  "t0": 126.751,
+  "t1": 130.151,
+  "tipo": "imagen",
+  "texto": "times a spider moved to a new spot came right after its"
+ },
+ {
+  "id": "scene-038",
+  "t0": 130.151,
+  "t1": 133.731,
+  "tipo": "imagen",
+  "texto": "web was destroyed. And spiders that had a bad day of hunting"
+ },
+ {
+  "id": "scene-039",
+  "t0": 133.731,
+  "t1": 136.6,
+  "tipo": "imagen",
+  "texto": "were even more likely to pack up and go."
+ },
+ {
+  "id": "scene-040",
+  "t0": 136.6,
+  "t1": 141.995,
+  "tipo": "imagen",
+  "texto": "Another study found that spiders tend to move away from wherever the damage keeps coming from."
+ },
+ {
+  "id": "scene-041",
+  "t0": 141.995,
+  "t1": 144.735,
+  "tipo": "imagen",
+  "texto": "So if you sweep the same web every single day,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 144.735,
+  "t1": 147.515,
+  "tipo": "imagen",
+  "texto": "the spider will probably give up and move."
+ },
+ {
+  "id": "scene-043",
+  "t0": 147.515,
+  "t1": 151.63,
+  "tipo": "imagen",
+  "texto": "Maybe somewhere you will never see it."
+ },
+ {
+  "id": "scene-044",
+  "t0": 151.63,
+  "t1": 156.192,
+  "tipo": "imagen",
+  "texto": "And what about those dusty, gray cobwebs in the corners of your ceiling?"
+ },
+ {
+  "id": "scene-045",
+  "t0": 156.192,
+  "t1": 158.272,
+  "tipo": "imagen",
+  "texto": "Here is a secret. Most of"
+ },
+ {
+  "id": "scene-046",
+  "t0": 158.272,
+  "t1": 161.991,
+  "tipo": "imagen",
+  "texto": "those are old webs that nobody lives in anymore."
+ },
+ {
+  "id": "scene-047",
+  "t0": 161.991,
+  "t1": 165.351,
+  "tipo": "imagen",
+  "texto": "Once a web stops catching food, its owner moves on,"
+ },
+ {
+  "id": "scene-048",
+  "t0": 165.351,
+  "t1": 168.031,
+  "tipo": "imagen",
+  "texto": "and the dust moves in. Sweep those all you"
+ },
+ {
+  "id": "scene-049",
+  "t0": 168.031,
+  "t1": 172.57,
+  "tipo": "imagen",
+  "texto": "want. So what should you do with a web across"
+ },
+ {
+  "id": "scene-050",
+  "t0": 172.57,
+  "t1": 175.925,
+  "tipo": "imagen",
+  "texto": "your front door? Take a stick, wind up the web,"
+ },
+ {
+  "id": "scene-051",
+  "t0": 175.925,
+  "t1": 178.575,
+  "tipo": "imagen",
+  "texto": "and let the spider ride it to a bush nearby."
+ },
+ {
+  "id": "scene-052",
+  "t0": 178.575,
+  "t1": 183.061,
+  "tipo": "imagen",
+  "texto": "It will rebuild there by tonight. And here is a trick."
+ },
+ {
+  "id": "scene-053",
+  "t0": 183.061,
+  "t1": 187.369,
+  "tipo": "imagen",
+  "texto": "Spiders build next to your porch light because that is where the moths are."
+ },
+ {
+  "id": "scene-054",
+  "t0": 187.369,
+  "t1": 189.949,
+  "tipo": "imagen",
+  "texto": "Swap the white bulb for a yellow bug light."
+ },
+ {
+  "id": "scene-055",
+  "t0": 189.949,
+  "t1": 194.865,
+  "tipo": "imagen",
+  "texto": "Fewer moths, fewer webs, and nobody gets hurt."
+ },
+ {
+  "id": "scene-056",
+  "t0": 194.865,
+  "t1": 197.585,
+  "tipo": "imagen",
+  "texto": "So the next time you walk into a web on the porch,"
+ },
+ {
+  "id": "scene-057",
+  "t0": 197.585,
+  "t1": 199.661,
+  "tipo": "imagen",
+  "texto": "remember who you just met."
+ },
+ {
+  "id": "scene-058",
+  "t0": 199.661,
+  "t1": 204.211,
+  "tipo": "imagen",
+  "texto": "A tiny builder who lost its home, its fridge and its job in one second,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 204.211,
+  "t1": 206.972,
+  "tipo": "imagen",
+  "texto": "and rebuilt all three before breakfast."
+ },
+ {
+  "id": "scene-060",
+  "t0": 206.972,
+  "t1": 211.2,
+  "tipo": "imagen",
+  "texto": "Partly out of the old one."
+ }
+]

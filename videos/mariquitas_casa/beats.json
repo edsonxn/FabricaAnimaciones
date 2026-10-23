@@ -1,0 +1,506 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 2.79,
+  "tipo": "imagen",
+  "texto": "It is a sunny afternoon in October."
+ },
+ {
+  "id": "scene-002",
+  "t0": 2.79,
+  "t1": 7.37,
+  "tipo": "imagen",
+  "texto": "You walk outside, and the whole side of your house is moving."
+ },
+ {
+  "id": "scene-003",
+  "t0": 7.37,
+  "t1": 11.0,
+  "tipo": "imagen",
+  "texto": "Hundreds of little orange beetles, crawling on the siding,"
+ },
+ {
+  "id": "scene-004",
+  "t0": 11.0,
+  "t1": 13.782,
+  "tipo": "imagen",
+  "texto": "buzzing around the window frames."
+ },
+ {
+  "id": "scene-005",
+  "t0": 13.782,
+  "t1": 18.262,
+  "tipo": "imagen",
+  "texto": "A week later, they are gone. Except for the one walking across your ceiling."
+ },
+ {
+  "id": "scene-006",
+  "t0": 18.262,
+  "t1": 20.835,
+  "tipo": "imagen",
+  "texto": "And the three on your kitchen window."
+ },
+ {
+  "id": "scene-007",
+  "t0": 20.835,
+  "t1": 25.245,
+  "tipo": "imagen",
+  "texto": "So where did all the others go? What are they doing inside your walls all winter?"
+ },
+ {
+  "id": "scene-008",
+  "t0": 25.245,
+  "t1": 27.691,
+  "tipo": "imagen",
+  "texto": "And why did they pick your house?"
+ },
+ {
+  "id": "scene-009",
+  "t0": 27.691,
+  "t1": 31.631,
+  "tipo": "imagen",
+  "texto": "Here is the first surprise. Those are probably not ladybugs"
+ },
+ {
+  "id": "scene-010",
+  "t0": 31.631,
+  "t1": 35.26,
+  "tipo": "imagen",
+  "texto": "at all. Look closely at the head."
+ },
+ {
+  "id": "scene-011",
+  "t0": 35.26,
+  "t1": 38.355,
+  "tipo": "imagen",
+  "texto": "See that little black mark, shaped like an M?"
+ },
+ {
+  "id": "scene-012",
+  "t0": 38.355,
+  "t1": 41.915,
+  "tipo": "imagen",
+  "texto": "That is an Asian lady beetle. A cousin of the ladybug,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 41.915,
+  "t1": 44.879,
+  "tipo": "imagen",
+  "texto": "from China, Korea and Japan."
+ },
+ {
+  "id": "scene-014",
+  "t0": 44.879,
+  "t1": 48.979,
+  "tipo": "imagen",
+  "texto": "Its shell can be tan, orange or red, with lots of spots,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 48.979,
+  "t1": 51.02,
+  "tipo": "imagen",
+  "texto": "or no spots at all."
+ },
+ {
+  "id": "scene-016",
+  "t0": 51.02,
+  "t1": 55.88,
+  "tipo": "imagen",
+  "texto": "And it is here partly because of us. For decades, the United States Department"
+ },
+ {
+  "id": "scene-017",
+  "t0": 55.88,
+  "t1": 60.361,
+  "tipo": "imagen",
+  "texto": "of Agriculture released them on purpose, to eat crop pests."
+ },
+ {
+  "id": "scene-018",
+  "t0": 60.361,
+  "t1": 63.061,
+  "tipo": "imagen",
+  "texto": "The first wild population turned up in Louisiana"
+ },
+ {
+  "id": "scene-019",
+  "t0": 63.061,
+  "t1": 65.241,
+  "tipo": "imagen",
+  "texto": "in nineteen eighty-eight."
+ },
+ {
+  "id": "scene-020",
+  "t0": 65.241,
+  "t1": 70.03,
+  "tipo": "imagen",
+  "texto": "Now they live in almost every state."
+ },
+ {
+  "id": "scene-021",
+  "t0": 70.03,
+  "t1": 73.145,
+  "tipo": "imagen",
+  "texto": "So why your house? Back home in Asia,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 73.145,
+  "t1": 77.584,
+  "tipo": "imagen",
+  "texto": "these beetles spend the winter in cracks in sunny, rocky cliffs."
+ },
+ {
+  "id": "scene-023",
+  "t0": 77.584,
+  "t1": 80.344,
+  "tipo": "imagen",
+  "texto": "And to a lady beetle, your house looks"
+ },
+ {
+  "id": "scene-024",
+  "t0": 80.344,
+  "t1": 83.878,
+  "tipo": "imagen",
+  "texto": "a lot like a cliff. They love the sunny side"
+ },
+ {
+  "id": "scene-025",
+  "t0": 83.878,
+  "t1": 88.038,
+  "tipo": "imagen",
+  "texto": "that faces southwest. Light siding with dark shutters."
+ },
+ {
+  "id": "scene-026",
+  "t0": 88.038,
+  "t1": 91.255,
+  "tipo": "imagen",
+  "texto": "A house next to woods or fields."
+ },
+ {
+  "id": "scene-027",
+  "t0": 91.255,
+  "t1": 94.375,
+  "tipo": "imagen",
+  "texto": "And many scientists think the scent left behind by last"
+ },
+ {
+  "id": "scene-028",
+  "t0": 94.375,
+  "t1": 98.886,
+  "tipo": "imagen",
+  "texto": "year's beetles helps lead new ones to the very same spots."
+ },
+ {
+  "id": "scene-029",
+  "t0": 98.886,
+  "t1": 101.276,
+  "tipo": "imagen",
+  "texto": "In other words, they are snowbirds."
+ },
+ {
+  "id": "scene-030",
+  "t0": 101.276,
+  "t1": 105.887,
+  "tipo": "imagen",
+  "texto": "And your house is their winter condo."
+ },
+ {
+  "id": "scene-031",
+  "t0": 105.887,
+  "t1": 108.147,
+  "tipo": "imagen",
+  "texto": "Getting in is easy. A gap"
+ },
+ {
+  "id": "scene-032",
+  "t0": 108.147,
+  "t1": 111.357,
+  "tipo": "imagen",
+  "texto": "thinner than a pencil lead around a window, a vent,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 111.357,
+  "t1": 115.108,
+  "tipo": "imagen",
+  "texto": "or under the siding is plenty. Then they crawl deep"
+ },
+ {
+  "id": "scene-034",
+  "t0": 115.108,
+  "t1": 119.435,
+  "tipo": "imagen",
+  "texto": "into the attic and the hollow spaces inside your walls."
+ },
+ {
+  "id": "scene-035",
+  "t0": 119.435,
+  "t1": 121.715,
+  "tipo": "imagen",
+  "texto": "There, they pack together in big clusters,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 121.715,
+  "t1": 125.692,
+  "tipo": "imagen",
+  "texto": "and shut almost everything down. They do not eat."
+ },
+ {
+  "id": "scene-037",
+  "t0": 125.692,
+  "t1": 129.432,
+  "tipo": "imagen",
+  "texto": "They do not lay eggs. They do not chew your wood. They just wait,"
+ },
+ {
+  "id": "scene-038",
+  "t0": 129.432,
+  "t1": 132.43,
+  "tipo": "imagen",
+  "texto": "barely moving, for months."
+ },
+ {
+  "id": "scene-039",
+  "t0": 132.43,
+  "t1": 136.107,
+  "tipo": "imagen",
+  "texto": "But your house has a problem. It is warm."
+ },
+ {
+  "id": "scene-040",
+  "t0": 136.107,
+  "t1": 139.047,
+  "tipo": "imagen",
+  "texto": "On a mild winter day, or when the heat comes on,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 139.047,
+  "t1": 142.848,
+  "tipo": "imagen",
+  "texto": "some of them wake up too early. They think spring is here."
+ },
+ {
+  "id": "scene-042",
+  "t0": 142.848,
+  "t1": 146.698,
+  "tipo": "imagen",
+  "texto": "So they crawl toward the light, out of the baseboards, the ceiling lights,"
+ },
+ {
+  "id": "scene-043",
+  "t0": 146.698,
+  "t1": 150.301,
+  "tipo": "imagen",
+  "texto": "and onto your windows. And that is the sad part."
+ },
+ {
+  "id": "scene-044",
+  "t0": 150.301,
+  "t1": 153.481,
+  "tipo": "imagen",
+  "texto": "Inside a heated house, there is nothing to eat,"
+ },
+ {
+  "id": "scene-045",
+  "t0": 153.481,
+  "t1": 156.053,
+  "tipo": "imagen",
+  "texto": "and the air is very dry."
+ },
+ {
+  "id": "scene-046",
+  "t0": 156.053,
+  "t1": 161.23,
+  "tipo": "imagen",
+  "texto": "Many of those early risers never make it to spring."
+ },
+ {
+  "id": "scene-047",
+  "t0": 161.23,
+  "t1": 164.385,
+  "tipo": "imagen",
+  "texto": "Now, before you grab one, a warning."
+ },
+ {
+  "id": "scene-048",
+  "t0": 164.385,
+  "t1": 166.845,
+  "tipo": "imagen",
+  "texto": "When a lady beetle is squeezed or scared,"
+ },
+ {
+  "id": "scene-049",
+  "t0": 166.845,
+  "t1": 171.224,
+  "tipo": "imagen",
+  "texto": "it bleeds a yellow liquid from its knees. It smells terrible,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 171.224,
+  "t1": 174.384,
+  "tipo": "imagen",
+  "texto": "it tastes awful to birds, and it can"
+ },
+ {
+  "id": "scene-051",
+  "t0": 174.384,
+  "t1": 177.06,
+  "tipo": "imagen",
+  "texto": "stain your curtains and walls."
+ },
+ {
+  "id": "scene-052",
+  "t0": 177.06,
+  "t1": 181.88,
+  "tipo": "imagen",
+  "texto": "And yes, these beetles can bite. It feels like a tiny pinprick."
+ },
+ {
+  "id": "scene-053",
+  "t0": 181.88,
+  "t1": 185.171,
+  "tipo": "imagen",
+  "texto": "Annoying, but not dangerous."
+ },
+ {
+  "id": "scene-054",
+  "t0": 185.171,
+  "t1": 188.713,
+  "tipo": "imagen",
+  "texto": "The ones that do survive wait for real spring."
+ },
+ {
+  "id": "scene-055",
+  "t0": 188.713,
+  "t1": 192.013,
+  "tipo": "imagen",
+  "texto": "When the days get longer, they head for the windows again,"
+ },
+ {
+  "id": "scene-056",
+  "t0": 192.013,
+  "t1": 194.532,
+  "tipo": "imagen",
+  "texto": "this time to get out."
+ },
+ {
+  "id": "scene-057",
+  "t0": 194.532,
+  "t1": 199.292,
+  "tipo": "imagen",
+  "texto": "They fly back to the trees and the fields, and go right back to work, eating aphids,"
+ },
+ {
+  "id": "scene-058",
+  "t0": 199.292,
+  "t1": 202.81,
+  "tipo": "imagen",
+  "texto": "the tiny bugs that suck the life out of plants."
+ },
+ {
+  "id": "scene-059",
+  "t0": 202.81,
+  "t1": 206.23,
+  "tipo": "imagen",
+  "texto": "That is why farmers wanted them in the first place. Outside,"
+ },
+ {
+  "id": "scene-060",
+  "t0": 206.23,
+  "t1": 209.23,
+  "tipo": "imagen",
+  "texto": "they are great at their job."
+ },
+ {
+  "id": "scene-061",
+  "t0": 209.23,
+  "t1": 212.82,
+  "tipo": "imagen",
+  "texto": "So what should you do with the beetles on your window?"
+ },
+ {
+  "id": "scene-062",
+  "t0": 212.82,
+  "t1": 216.62,
+  "tipo": "imagen",
+  "texto": "Do not squish them, and do not sweep them. That is how you get the smell"
+ },
+ {
+  "id": "scene-063",
+  "t0": 216.62,
+  "t1": 219.982,
+  "tipo": "imagen",
+  "texto": "and the stains. Vacuum them up instead."
+ },
+ {
+  "id": "scene-064",
+  "t0": 219.982,
+  "t1": 224.803,
+  "tipo": "imagen",
+  "texto": "Tuck a handkerchief between the hose and the bag, and you can shake them out outside."
+ },
+ {
+  "id": "scene-065",
+  "t0": 224.803,
+  "t1": 226.653,
+  "tipo": "imagen",
+  "texto": "And the real fix comes in summer."
+ },
+ {
+  "id": "scene-066",
+  "t0": 226.653,
+  "t1": 230.403,
+  "tipo": "imagen",
+  "texto": "Seal the little gaps around windows, vents and siding, before"
+ },
+ {
+  "id": "scene-067",
+  "t0": 230.403,
+  "t1": 233.202,
+  "tipo": "imagen",
+  "texto": "October comes back."
+ },
+ {
+  "id": "scene-068",
+  "t0": 233.202,
+  "t1": 237.372,
+  "tipo": "imagen",
+  "texto": "So the next time you see one walking across your ceiling in the middle of winter,"
+ },
+ {
+  "id": "scene-069",
+  "t0": 237.372,
+  "t1": 240.46,
+  "tipo": "imagen",
+  "texto": "remember what it is. Not an invader."
+ },
+ {
+  "id": "scene-070",
+  "t0": 240.46,
+  "t1": 244.511,
+  "tipo": "imagen",
+  "texto": "A snowbird that woke up too early, looking for the way out."
+ },
+ {
+  "id": "scene-071",
+  "t0": 244.511,
+  "t1": 246.711,
+  "tipo": "imagen",
+  "texto": "Open the window for it in spring."
+ },
+ {
+  "id": "scene-072",
+  "t0": 246.711,
+  "t1": 251.4,
+  "tipo": "imagen",
+  "texto": "It has aphids to catch."
+ }
+]

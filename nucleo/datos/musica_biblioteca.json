@@ -1441,7 +1441,14 @@
     "dinamica": 0.89
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "hormigas_cocina",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "asteroide_invisible__lyria_tramo1": {
@@ -1809,7 +1816,14 @@
     "dinamica": 0.75
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "hormigas_cocina_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "banjo_tooie__lyria_tramo6": {
@@ -2143,7 +2157,14 @@
     "dinamica": 0.85
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "chinche_invierno_short",
+     "tramo": 1,
+     "desde": 88.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "christa_pike__lyria_tramo1": {
@@ -3656,7 +3677,14 @@
     "dinamica": 0.76
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "polilla_foco_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "doce_animales__lyria_tramo8": {
@@ -4267,7 +4295,14 @@
     "dinamica": 0.61
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "polilla_foco",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "er_miquella_atrocidades__lyria_tramo12": {
@@ -5902,7 +5937,14 @@
     "dinamica": 0.9
    },
    "variante": true,
-   "usos": [],
+   "usos": [
+    {
+     "video": "mariquitas_casa_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "frio_extremo__lyria_tramo10": {
@@ -5987,7 +6029,14 @@
     "dinamica": 0.96
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "arana_crias",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "frio_extremo__lyria_tramo2": {
@@ -6062,7 +6111,14 @@
     "dinamica": 0.98
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "hormigas_cocina",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "frio_extremo__lyria_tramo1": {
@@ -6319,7 +6375,14 @@
     "dinamica": 0.78
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "telarana_rota_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "freno_enojo__lyria_tramo2": {
@@ -6507,7 +6570,14 @@
     "dinamica": 0.7
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "telarana_rota",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "frio_extremo__lyria_tramo7": {
@@ -6661,7 +6731,14 @@
     "dinamica": 0.83
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "telarana_rota",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "frio_extremo__lyria_tramo6": {
@@ -6815,7 +6892,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "arana_crias_short",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "frio_extremo__lyria_tramo5": {
@@ -10893,7 +10977,14 @@
     "dinamica": 0.76
    },
    "variante": true,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tequisquiapan",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "luna_se_aleja__lyria_1": {
@@ -11820,7 +11911,14 @@
     "dinamica": 0.82
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "arana_crias",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "platano_radiactivo__lyria_1": {
@@ -13564,7 +13662,14 @@
     "dinamica": 0.76
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "hormigas_cocina",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "sin_medicina__lyria_tramo3": {
@@ -13652,7 +13757,14 @@
     "dinamica": 0.79
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "telarana_rota",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "sociedad_1200__lyria_tramo1": {
@@ -13941,7 +14053,14 @@
     "dinamica": 0.52
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "arana_crias",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "sociedad_1200__lyria_tramo2": {
@@ -14991,7 +15110,14 @@
     "dinamica": 0.86
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "polilla_foco",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "historia_egipto__musica_lyria_respaldo": {
@@ -22257,6 +22383,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -22473,7 +22600,14 @@
     "dinamica": 0.93
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "tequisquiapan",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-22"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "no_vuelve__lyria_tramo3": {
@@ -26420,7 +26554,1712 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-22"
+  },
+  "arana_crias_short__lyria_tramo1": {
+   "id": "arana_crias_short__lyria_tramo1",
+   "video": "arana_crias_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_crias_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "arana_crias_short__lyria_tramo1.mp3",
+   "md5": "7fd0748845058dd232ab688149dc6a25",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Never Stomp a Spider With a Lumpy Back #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "ride",
+    "squish",
+    "cierre"
+   ],
+   "estilo": "Tender, slightly suspenseful cartoon nature documentary score about a wolf spider mother carrying her babies: pizzicato strings, marimba, celesta, soft clarinet, felt piano, bassoon, light brushed percussion. Warm, surprising and a little funny. Instrumental only, never loud under the voice.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo8 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:04 (64 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with a windy low held tone. End on a sustained hopeful chord that can flow into the next piece.\n\n[0:00 - 1:04] Section 1: Intensity 5/10. Brave and windy: low drums and cello, a long breath of cold air, tension, then a proud hopeful phrase on flute.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 64,
+     "intensidad": 5,
+     "desc": "Brave and windy: low drums and cello, a long breath of cold air, tension, then a proud hopeful phrase on flute."
+    }
+   ],
+   "intensidad": [
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "cello",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "frío",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 35.25,
+    "rms_db": -17.2,
+    "tempo": 123.0,
+    "brillo_hz": 839,
+    "energia": [
+     0.13,
+     0.43,
+     0.6,
+     0.99,
+     0.88,
+     0.73,
+     0.65,
+     0.71,
+     0.82,
+     0.92,
+     1.0,
+     0.44
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "chinche_invierno_short__lyria_tramo1": {
+   "id": "chinche_invierno_short__lyria_tramo1",
+   "video": "chinche_invierno_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\chinche_invierno_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "chinche_invierno_short__lyria_tramo1.mp3",
+   "md5": "fe2987933b305481573d3560f78e6d9c",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What If You Let a Stink Bug Stay All Winter? #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "winter",
+    "smell",
+    "cierre"
+   ],
+   "estilo": "Cozy, wry cartoon nature documentary score about a clumsy stink bug spending the winter in a house: pizzicato strings, bassoon, tuba, marimba, felt piano, soft clarinet, light brushed percussion. Comic, warm, a little grumpy. Instrumental only, never loud under the voice.",
+   "prompt": "BIBLIOTECA: banjo_tooie__lyria_tramo8 (desde 88.0 s) — reutilizada el 2026-10-22\n\nWhimsical late-90s 3D platformer soundtrack: bouncy tuba and bassoon, plucked banjo, marimba, kazoo-like woodwinds, playful pizzicato strings, light percussion, instrumental only, no vocals, cheerful and unobtrusive under narration. Total length: exactly 2:13 (134 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin on a suspended note, spooky. Rise to a triumphant peak, then settle and fade out to silence at the end.\n\n[0:00 - 1:30] Section 1: Intensity 8/10. devilish ghost theme, spooky theremin-like woodwinds, rising to a triumphant reveal\n[1:30 - 2:13] Section 2: Intensity 4/10. warm nostalgic reprise, gentle banjo and tuba, fading out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 90,
+     "intensidad": 8,
+     "desc": "devilish ghost theme, spooky theremin-like woodwinds, rising to a triumphant reveal"
+    },
+    {
+     "t0": 90,
+     "t1": 133,
+     "intensidad": 4,
+     "desc": "warm nostalgic reprise, gentle banjo and tuba, fading out"
+    }
+   ],
+   "intensidad": [
+    8,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "cálido",
+     "frío",
+     "juguetón",
+     "nostálgico",
+     "tierno",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 43.53,
+    "rms_db": -16.3,
+    "tempo": 117.5,
+    "brillo_hz": 1301,
+    "energia": [
+     0.5,
+     0.66,
+     0.69,
+     0.6,
+     0.64,
+     0.8,
+     0.75,
+     1.0,
+     0.7,
+     0.3,
+     0.1,
+     0.02
+    ],
+    "huecos": [],
+    "dinamica": 0.98
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "arana_crias__lyria_tramo3": {
+   "id": "arana_crias__lyria_tramo3",
+   "video": "arana_crias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_crias\\audio\\lyria_tramo3.mp3",
+   "archivo": "arana_crias__lyria_tramo3.mp3",
+   "md5": "fc6aa16072e644c08504f736b9bc2534",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens If You Squish a Spider Carrying Babies?",
+   "tramo": 3,
+   "escenas": [
+    "deal",
+    "outro"
+   ],
+   "estilo": "Tender, slightly suspenseful cartoon nature documentary score about a wolf spider mother carrying her babies: pizzicato strings, marimba, celesta, soft clarinet, felt piano, bassoon, light brushed percussion. Warm, surprising and a little funny. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo10 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:08 (69 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 0:45] Section 1: Intensity 3/10. Clear friendly modern groove: light pizzicato and piano, marimba, a gentle smile.\n[0:45 - 1:08] Section 2: Intensity 3/10. Return to the opening theme, now warm and resolved: celesta, felt piano and flute, a smile, then a calm slow fade.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 3,
+     "desc": "Clear friendly modern groove: light pizzicato and piano, marimba, a gentle smile."
+    },
+    {
+     "t0": 45,
+     "t1": 68,
+     "intensidad": 3,
+     "desc": "Return to the opening theme, now warm and resolved: celesta, felt piano and flute, a smile, then a calm slow fade."
+    }
+   ],
+   "intensidad": [
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 48.0,
+    "rms_db": -14.8,
+    "tempo": 161.5,
+    "brillo_hz": 1029,
+    "energia": [
+     0.63,
+     0.49,
+     0.45,
+     0.73,
+     0.7,
+     0.86,
+     0.81,
+     0.82,
+     0.95,
+     1.0,
+     0.96,
+     0.56
+    ],
+    "huecos": [],
+    "dinamica": 0.55
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "arana_crias__lyria_tramo2": {
+   "id": "arana_crias__lyria_tramo2",
+   "video": "arana_crias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_crias\\audio\\lyria_tramo2.mp3",
+   "archivo": "arana_crias__lyria_tramo2.mp3",
+   "md5": "a9d77573528202bdc321e0f5190559c8",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens If You Squish a Spider Carrying Babies?",
+   "tramo": 2,
+   "escenas": [
+    "squish",
+    "after",
+    "bite"
+   ],
+   "estilo": "Tender, slightly suspenseful cartoon nature documentary score about a wolf spider mother carrying her babies: pizzicato strings, marimba, celesta, soft clarinet, felt piano, bassoon, light brushed percussion. Warm, surprising and a little funny. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: oxigeno_5s__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nCurious, playful yet suspenseful science-documentary score for a fast-paced animated video about breathing and air: airy breathy synth pads, soft celesta and glockenspiel, light pizzicato, a gentle pulsing bass, a subtle ticking clock motif for a five-second countdown; modern and cinematic. Keeps moving, with short stingers at changes. Melodies low and sparse so a narrator can speak over it. Instrumental only. Total length: exactly 2:08 (129 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a held-breath hush. Keep one consistent melodic theme throughout. End on a soft held tone that can flow into the next part.\n\n[0:00 - 0:21] Section 1: Intensity 5/10. Hook: a held breath, a sudden hush, then a playful stinger on the question and a ticking countdown pulse.\n[0:21 - 0:45] Section 2: Intensity 4/10. Light curious pizzicato explaining the rules of a game, bright glockenspiel on each idea.\n[0:45 - 1:14] Section 3: Intensity 6/10. A sudden drop in pressure: a deep whoosh, muffled underwater-like pads, a tense heartbeat pulse.\n[1:14 - 2:08] Section 4: Intensity 7/10. Rising urgency: flames snuffing out, engines winding down, a slowing low drone with metallic hits.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 21,
+     "intensidad": 5,
+     "desc": "Hook: a held breath, a sudden hush, then a playful stinger on the question and a ticking countdown pulse."
+    },
+    {
+     "t0": 21,
+     "t1": 45,
+     "intensidad": 4,
+     "desc": "Light curious pizzicato explaining the rules of a game, bright glockenspiel on each idea."
+    },
+    {
+     "t0": 45,
+     "t1": 74,
+     "intensidad": 6,
+     "desc": "A sudden drop in pressure: a deep whoosh, muffled underwater-like pads, a tense heartbeat pulse."
+    },
+    {
+     "t0": 74,
+     "t1": 128,
+     "intensidad": 7,
+     "desc": "Rising urgency: flames snuffing out, engines winding down, a slowing low drone with metallic hits."
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    6,
+    7
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "cuerdas",
+     "drone",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "emotivo",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 84.6,
+    "rms_db": -16.8,
+    "tempo": 123.0,
+    "brillo_hz": 1399,
+    "energia": [
+     0.21,
+     0.23,
+     0.27,
+     0.34,
+     0.46,
+     0.49,
+     0.53,
+     0.79,
+     0.79,
+     0.89,
+     1.0,
+     0.71
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "hormigas_cocina__lyria_tramo3": {
+   "id": "hormigas_cocina__lyria_tramo3",
+   "video": "hormigas_cocina",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\hormigas_cocina\\audio\\lyria_tramo3.mp3",
+   "archivo": "hormigas_cocina__lyria_tramo3.mp3",
+   "md5": "3568240089b347a61268a5adc7256228",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to the Colony After You Squish the Ants on Your Counter?",
+   "tramo": 3,
+   "escenas": [
+    "deal",
+    "outro"
+   ],
+   "estilo": "Busy, clever cartoon nature documentary score about an ant colony behind a kitchen wall: pizzicato strings, marimba, xylophone, bassoon, soft clarinet, felt piano, light brushed percussion and upright bass. Bustling, witty and warm. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 0:45 (45 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with a held cold tone. End on a sustained low tone that can flow into the next piece.\n\n[0:00 - 0:45] Section 1: Intensity 3/10. Vast frozen world: slow bowed vibraphone and low strings like wind over ice, a small curious flute figure, sense of scale.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 3,
+     "desc": "Vast frozen world: slow bowed vibraphone and low strings like wind over ice, a small curious flute figure, sense of scale."
+    }
+   ],
+   "intensidad": [
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 48.77,
+    "rms_db": -15.3,
+    "tempo": 161.5,
+    "brillo_hz": 862,
+    "energia": [
+     0.82,
+     0.92,
+     0.86,
+     1.0,
+     0.96,
+     0.86,
+     0.73,
+     0.73,
+     0.69,
+     0.66,
+     0.4,
+     0.02
+    ],
+    "huecos": [],
+    "dinamica": 0.98
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "hormigas_cocina__lyria_tramo2": {
+   "id": "hormigas_cocina__lyria_tramo2",
+   "video": "hormigas_cocina",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\hormigas_cocina\\audio\\lyria_tramo2.mp3",
+   "archivo": "hormigas_cocina__lyria_tramo2.mp3",
+   "md5": "f9a3256e62547df8d4b4bc03e10a2606",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to the Colony After You Squish the Ants on Your Counter?",
+   "tramo": 2,
+   "escenas": [
+    "smell",
+    "split",
+    "dead"
+   ],
+   "estilo": "Busy, clever cartoon nature documentary score about an ant colony behind a kitchen wall: pizzicato strings, marimba, xylophone, bassoon, soft clarinet, felt piano, light brushed percussion and upright bass. Bustling, witty and warm. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: banjo_tooie__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWhimsical late-90s 3D platformer soundtrack: bouncy tuba and bassoon, plucked banjo, marimba, kazoo-like woodwinds, playful pizzicato strings, light percussion, instrumental only, no vocals, cheerful and unobtrusive under narration. Total length: exactly 1:47 (108 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a music box. End on a warm sustained chord.\n\n[0:00 - 0:50] Section 1: Intensity 5/10. mysterious music box twist on a cheerful tune, a secret hidden in a cartridge\n[0:50 - 1:47] Section 2: Intensity 4/10. cheerful bouncy opening, sunny mountain morning, tuba and banjo",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 5,
+     "desc": "mysterious music box twist on a cheerful tune, a secret hidden in a cartridge"
+    },
+    {
+     "t0": 50,
+     "t1": 107,
+     "intensidad": 4,
+     "desc": "cheerful bouncy opening, sunny mountain morning, tuba and banjo"
+    }
+   ],
+   "intensidad": [
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "cajita de música",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "cálido",
+     "juguetón",
+     "misterio"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 89.4,
+    "rms_db": -15.3,
+    "tempo": 117.5,
+    "brillo_hz": 1052,
+    "energia": [
+     0.1,
+     0.21,
+     0.19,
+     0.7,
+     0.79,
+     0.79,
+     0.83,
+     0.86,
+     1.0,
+     0.93,
+     0.92,
+     0.69
+    ],
+    "huecos": [],
+    "dinamica": 0.9
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "hormigas_cocina__lyria_tramo1": {
+   "id": "hormigas_cocina__lyria_tramo1",
+   "video": "hormigas_cocina",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\hormigas_cocina\\audio\\lyria_tramo1.mp3",
+   "archivo": "hormigas_cocina__lyria_tramo1.mp3",
+   "md5": "72943ba93d7e0f753cf830b6c950c09b",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to the Colony After You Squish the Ants on Your Counter?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "trail",
+    "few"
+   ],
+   "estilo": "Busy, clever cartoon nature documentary score about an ant colony behind a kitchen wall: pizzicato strings, marimba, xylophone, bassoon, soft clarinet, felt piano, light brushed percussion and upright bass. Bustling, witty and warm. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: sin_medicina__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 1:43 (103 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:57] Section 1: Intensity 3/10. Quiet modern morning feel turning to wonder: soft felt piano and pizzicato, then a gentle drum pulse arrives as the question is asked, a small mysterious flute figure.\n[0:57 - 1:43] Section 2: Intensity 4/10. Light debunking groove: marimba ostinato, walking upright bass and brushed percussion, a wink of humor, steady and confident.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 57,
+     "intensidad": 3,
+     "desc": "Quiet modern morning feel turning to wonder: soft felt piano and pizzicato, then a gentle drum pulse arrives as the question is asked, a small mysterious flute figure."
+    },
+    {
+     "t0": 57,
+     "t1": 103,
+     "intensidad": 4,
+     "desc": "Light debunking groove: marimba ostinato, walking upright bass and brushed percussion, a wink of humor, steady and confident."
+    }
+   ],
+   "intensidad": [
+    3,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 108.93,
+    "rms_db": -15.1,
+    "tempo": 117.5,
+    "brillo_hz": 1256,
+    "energia": [
+     0.24,
+     0.28,
+     0.49,
+     0.56,
+     0.8,
+     0.8,
+     0.9,
+     0.93,
+     0.96,
+     0.95,
+     1.0,
+     0.26
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "hormigas_cocina_short__lyria_tramo1": {
+   "id": "hormigas_cocina_short__lyria_tramo1",
+   "video": "hormigas_cocina_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\hormigas_cocina_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "hormigas_cocina_short__lyria_tramo1.mp3",
+   "md5": "a6179fcd666423c188b7b2c99c99fb6a",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Why Squishing Ants Never Works #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "trail",
+    "few",
+    "cierre"
+   ],
+   "estilo": "Busy, clever cartoon nature documentary score about an ant colony behind a kitchen wall: pizzicato strings, marimba, xylophone, bassoon, soft clarinet, felt piano, light brushed percussion and upright bass. Bustling, witty and warm. Instrumental only, never loud under the voice.",
+   "prompt": "BIBLIOTECA: banjo_tooie__lyria_tramo7 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWhimsical late-90s 3D platformer soundtrack: bouncy tuba and bassoon, plucked banjo, marimba, kazoo-like woodwinds, playful pizzicato strings, light percussion, instrumental only, no vocals, cheerful and unobtrusive under narration. Total length: exactly 1:27 (88 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin on a bittersweet chord, mysterious and ticking. End on a suspended note.\n\n[0:00 - 1:27] Section 1: Intensity 6/10. mysterious puzzle, ticking clock, chimes and low strings, a lost connection",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 87,
+     "intensidad": 6,
+     "desc": "mysterious puzzle, ticking clock, chimes and low strings, a lost connection"
+    }
+   ],
+   "intensidad": [
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 39.75,
+    "rms_db": -15.2,
+    "tempo": 117.5,
+    "brillo_hz": 1481,
+    "energia": [
+     0.11,
+     0.35,
+     0.54,
+     0.55,
+     0.67,
+     0.75,
+     0.82,
+     0.79,
+     0.77,
+     1.0,
+     0.72,
+     0.39
+    ],
+    "huecos": [],
+    "dinamica": 0.89
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "mariquitas_casa_short__lyria_tramo1": {
+   "id": "mariquitas_casa_short__lyria_tramo1",
+   "video": "mariquitas_casa_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\mariquitas_casa_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "mariquitas_casa_short__lyria_tramo1.mp3",
+   "md5": "11b9a07ae21728aa34cb76d8be835da7",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Where Do the Ladybugs in Your House Go? #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "who",
+    "wake",
+    "cierre"
+   ],
+   "estilo": "Cozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Instrumental only, never loud under the voice.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo3_corto (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:17 (77 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:17] Section 1: Intensity 4/10. Light explanatory groove: marimba ostinato, walking upright bass, brushed percussion, a wink of humor.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 77,
+     "intensidad": 4,
+     "desc": "Light explanatory groove: marimba ostinato, walking upright bass, brushed percussion, a wink of humor."
+    }
+   ],
+   "intensidad": [
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "emotivo",
+     "frío",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 50.25,
+    "rms_db": -15.5,
+    "tempo": 123.0,
+    "brillo_hz": 858,
+    "energia": [
+     0.84,
+     0.83,
+     0.78,
+     0.86,
+     0.78,
+     0.74,
+     0.87,
+     0.88,
+     0.78,
+     0.92,
+     1.0,
+     0.71
+    ],
+    "huecos": [],
+    "dinamica": 0.29
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "polilla_foco_short__lyria_tramo1": {
+   "id": "polilla_foco_short__lyria_tramo1",
+   "video": "polilla_foco_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\polilla_foco_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "polilla_foco_short__lyria_tramo1.mp3",
+   "md5": "29a23b54452ec71aced0937a2c1f388a",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Moths Aren't Attracted to Light. They're Trapped #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "trap",
+    "night",
+    "cierre"
+   ],
+   "estilo": "Dreamy, curious cartoon nature documentary score about moths circling a porch light at night: celesta, vibraphone, pizzicato strings, soft clarinet, felt piano, light brushed percussion and upright bass. Nocturnal, gently comic and a little bittersweet. Instrumental only, never loud under the voice.",
+   "prompt": "BIBLIOTECA: dos_lunas__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWonder-filled, curious yet slightly tense space-documentary score for a fast-paced animated science video: shimmering celesta and glockenspiel, soft analog synth pads, light pulsing pizzicato, a gentle deep bass, tiny sparkling synth arpeggios; modern, playful, cosmic. Keeps moving, with short stingers at changes. Melodies low and sparse so a narrator can speak over it. Instrumental only. Total length: exactly 1:08 (69 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Open with hushed suspense after the previous swell, then resolve into the warm main theme. End with a gentle natural fade-out.\n\n[0:00 - 0:50] Section 1: Intensity 6/10. Mystery-reveal: hushed suspense, then a slow soft impact and a wondrous, thoughtful resolution.\n[0:50 - 1:08] Section 2: Intensity 4/10. Warm hopeful final theme, gentle and glowing, soft fade with one last twinkle.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 6,
+     "desc": "Mystery-reveal: hushed suspense, then a slow soft impact and a wondrous, thoughtful resolution."
+    },
+    {
+     "t0": 50,
+     "t1": 68,
+     "intensidad": 4,
+     "desc": "Warm hopeful final theme, gentle and glowing, soft fade with one last twinkle."
+    }
+   ],
+   "intensidad": [
+    6,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "ciencia ficción",
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 36.38,
+    "rms_db": -19.1,
+    "tempo": 117.5,
+    "brillo_hz": 2061,
+    "energia": [
+     0.07,
+     0.64,
+     1.0,
+     0.35,
+     0.47,
+     0.5,
+     0.55,
+     0.64,
+     0.78,
+     0.53,
+     0.62,
+     0.18
+    ],
+    "huecos": [],
+    "dinamica": 0.93
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "arana_crias__lyria_tramo1": {
+   "id": "arana_crias__lyria_tramo1",
+   "video": "arana_crias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\arana_crias\\audio\\lyria_tramo1.mp3",
+   "archivo": "arana_crias__lyria_tramo1.mp3",
+   "md5": "c03107f1e4c11b9d96f8ad56719c2332",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens If You Squish a Spider Carrying Babies?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "who",
+    "ride"
+   ],
+   "estilo": "Tender, slightly suspenseful cartoon nature documentary score about a wolf spider mother carrying her babies: pizzicato strings, marimba, celesta, soft clarinet, felt piano, bassoon, light brushed percussion. Warm, surprising and a little funny. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: sin_medicina__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:14] Section 1: Intensity 4/10. Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan.\n[1:14 - 1:55] Section 2: Intensity 3/10. Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato.\n[1:55 - 2:50] Section 3: Intensity 4/10. Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 4,
+     "desc": "Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan."
+    },
+    {
+     "t0": 74,
+     "t1": 115,
+     "intensidad": 3,
+     "desc": "Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato."
+    },
+    {
+     "t0": 115,
+     "t1": 170,
+     "intensidad": 4,
+     "desc": "Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 96.6,
+    "rms_db": -14.0,
+    "tempo": 123.0,
+    "brillo_hz": 845,
+    "energia": [
+     0.58,
+     0.62,
+     0.62,
+     0.74,
+     0.74,
+     0.73,
+     0.86,
+     0.82,
+     1.0,
+     0.75,
+     0.63,
+     0.52
+    ],
+    "huecos": [],
+    "dinamica": 0.48
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "telarana_rota_short__lyria_tramo1": {
+   "id": "telarana_rota_short__lyria_tramo1",
+   "video": "telarana_rota_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\telarana_rota_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "telarana_rota_short__lyria_tramo1.mp3",
+   "md5": "ae2c6d9d5e22192b7a45f2418e5507b4",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What a Spider Does After You Wreck Its Web #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "drop",
+    "rebuild",
+    "cierre"
+   ],
+   "estilo": "Warm, clever cartoon nature documentary score about a porch spider rebuilding its web overnight: pizzicato strings, marimba, harp-like plucks, celesta, bassoon, soft clarinet, felt piano, light brushed percussion. Resourceful, a little bittersweet, funny. Instrumental only, never loud under the voice.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:17 (77 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:17] Section 1: Intensity 4/10. Light explanatory groove: marimba ostinato, walking upright bass, brushed percussion, a wink of humor.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 77,
+     "intensidad": 4,
+     "desc": "Light explanatory groove: marimba ostinato, walking upright bass, brushed percussion, a wink of humor."
+    }
+   ],
+   "intensidad": [
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 38.63,
+    "rms_db": -15.5,
+    "tempo": 123.0,
+    "brillo_hz": 449,
+    "energia": [
+     0.6,
+     0.71,
+     0.69,
+     0.65,
+     0.67,
+     0.89,
+     0.97,
+     1.0,
+     0.9,
+     0.91,
+     0.86,
+     0.58
+    ],
+    "huecos": [],
+    "dinamica": 0.42
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "polilla_foco__lyria_tramo1": {
+   "id": "polilla_foco__lyria_tramo1",
+   "video": "polilla_foco",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\polilla_foco\\audio\\lyria_tramo1.mp3",
+   "archivo": "polilla_foco__lyria_tramo1.mp3",
+   "md5": "4099aca55d722e469247fa8deb6350d8",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Moth That Circles Your Porch Light All Night?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "myth",
+    "trap"
+   ],
+   "estilo": "Dreamy, curious cartoon nature documentary score about moths circling a porch light at night: celesta, vibraphone, pizzicato strings, soft clarinet, felt piano, light brushed percussion and upright bass. Nocturnal, gently comic and a little bittersweet. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: dos_lunas__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWonder-filled, curious yet slightly tense space-documentary score for a fast-paced animated science video: shimmering celesta and glockenspiel, soft analog synth pads, light pulsing pizzicato, a gentle deep bass, tiny sparkling synth arpeggios; modern, playful, cosmic. Keeps moving, with short stingers at changes. Melodies low and sparse so a narrator can speak over it. Instrumental only. Total length: exactly 2:43 (164 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a cosmic rise. Keep one consistent melodic theme throughout. End on a held, soft, dreamy tone that can flow into the next part.\n\n[0:00 - 0:21] Section 1: Intensity 5/10. Hook: a mysterious cosmic rise with a playful stinger on the question, then a curious ticking pulse.\n[0:21 - 0:41] Section 2: Intensity 4/10. Calm floating pads with a light heartbeat pulse, tides rolling softly in the low end.\n[0:41 - 1:22] Section 3: Intensity 6/10. Playful curious pizzicato, a tiny heist-like rhythm, bright glockenspiel stabs on each idea.\n[1:22 - 2:13] Section 4: Intensity 5/10. Orbital waltz feel: circling arpeggios, a precise ticking clock, delicate and elegant.\n[2:13 - 2:43] Section 5: Intensity 4/10. Dreamy night-sky pads with celesta twinkles, warm and magical, slow shimmer.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 21,
+     "intensidad": 5,
+     "desc": "Hook: a mysterious cosmic rise with a playful stinger on the question, then a curious ticking pulse."
+    },
+    {
+     "t0": 21,
+     "t1": 41,
+     "intensidad": 4,
+     "desc": "Calm floating pads with a light heartbeat pulse, tides rolling softly in the low end."
+    },
+    {
+     "t0": 41,
+     "t1": 82,
+     "intensidad": 6,
+     "desc": "Playful curious pizzicato, a tiny heist-like rhythm, bright glockenspiel stabs on each idea."
+    },
+    {
+     "t0": 82,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "Orbital waltz feel: circling arpeggios, a precise ticking clock, delicate and elegant."
+    },
+    {
+     "t0": 133,
+     "t1": 163,
+     "intensidad": 4,
+     "desc": "Dreamy night-sky pads with celesta twinkles, warm and magical, slow shimmer."
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    6,
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "ciencia ficción",
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "naturaleza",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 111.0,
+    "rms_db": -15.0,
+    "tempo": 123.0,
+    "brillo_hz": 984,
+    "energia": [
+     0.49,
+     0.38,
+     0.35,
+     0.42,
+     0.6,
+     0.71,
+     0.96,
+     0.69,
+     0.65,
+     0.63,
+     1.0,
+     0.76
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "telarana_rota__lyria_tramo3": {
+   "id": "telarana_rota__lyria_tramo3",
+   "video": "telarana_rota",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\telarana_rota\\audio\\lyria_tramo3.mp3",
+   "archivo": "telarana_rota__lyria_tramo3.mp3",
+   "md5": "90d6fb715f90ba7c47621ce91c4dcb46",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider After You Knock Down Its Web?",
+   "tramo": 3,
+   "escenas": [
+    "deal",
+    "outro"
+   ],
+   "estilo": "Warm, clever cartoon nature documentary score about a porch spider rebuilding its web overnight: pizzicato strings, marimba, harp-like plucks, celesta, bassoon, soft clarinet, felt piano, light brushed percussion. Resourceful, a little bittersweet, funny. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo9 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:06 (67 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End on a sustained cozy chord that can flow into the next piece.\n\n[0:00 - 1:06] Section 1: Intensity 3/10. Snug and clever: soft celesta and felt piano, a gentle groove, cozy like being inside out of the wind.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 66,
+     "intensidad": 3,
+     "desc": "Snug and clever: soft celesta and felt piano, a gentle groove, cozy like being inside out of the wind."
+    }
+   ],
+   "intensidad": [
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 43.8,
+    "rms_db": -15.4,
+    "tempo": 161.5,
+    "brillo_hz": 907,
+    "energia": [
+     0.75,
+     0.54,
+     0.49,
+     0.59,
+     0.89,
+     0.72,
+     0.71,
+     0.87,
+     0.85,
+     0.71,
+     1.0,
+     0.52
+    ],
+    "huecos": [],
+    "dinamica": 0.51
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "telarana_rota__lyria_tramo1": {
+   "id": "telarana_rota__lyria_tramo1",
+   "video": "telarana_rota",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\telarana_rota\\audio\\lyria_tramo1.mp3",
+   "archivo": "telarana_rota__lyria_tramo1.mp3",
+   "md5": "d20dad83ba345856ab3969b6a41646fc",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider After You Knock Down Its Web?",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "all",
+    "drop"
+   ],
+   "estilo": "Warm, clever cartoon nature documentary score about a porch spider rebuilding its web overnight: pizzicato strings, marimba, harp-like plucks, celesta, bassoon, soft clarinet, felt piano, light brushed percussion. Resourceful, a little bittersweet, funny. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: frio_extremo__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:25 (85 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained warm chord that can flow into the next piece.\n\n[0:00 - 1:25] Section 1: Intensity 4/10. Warmth arriving: crackling-feel hand drums, warm flute melody over pizzicato, glowing and hopeful.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 85,
+     "intensidad": 4,
+     "desc": "Warmth arriving: crackling-feel hand drums, warm flute melody over pizzicato, glowing and hopeful."
+    }
+   ],
+   "intensidad": [
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "frío",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 85.55,
+    "rms_db": -14.7,
+    "tempo": 161.5,
+    "brillo_hz": 1069,
+    "energia": [
+     0.38,
+     0.36,
+     0.3,
+     0.7,
+     0.99,
+     1.0,
+     0.96,
+     0.9,
+     0.87,
+     0.94,
+     0.96,
+     0.47
+    ],
+    "huecos": [],
+    "dinamica": 0.7
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "telarana_rota__lyria_tramo2": {
+   "id": "telarana_rota__lyria_tramo2",
+   "video": "telarana_rota",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\telarana_rota\\audio\\lyria_tramo2.mp3",
+   "archivo": "telarana_rota__lyria_tramo2.mp3",
+   "md5": "f4a165a901efc82506a0bc8caaebd198",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Spider After You Knock Down Its Web?",
+   "tramo": 2,
+   "escenas": [
+    "rebuild",
+    "move",
+    "cobwebs"
+   ],
+   "estilo": "Warm, clever cartoon nature documentary score about a porch spider rebuilding its web overnight: pizzicato strings, marimba, harp-like plucks, celesta, bassoon, soft clarinet, felt piano, light brushed percussion. Resourceful, a little bittersweet, funny. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: sin_medicina__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:00 (120 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End on a sustained calm chord that can flow into the next piece.\n\n[0:00 - 0:57] Section 1: Intensity 5/10. Dramatic but wondering: low drums and cello, tension building slowly, then resolving to a hopeful major phrase on flute.\n[0:57 - 2:00] Section 2: Intensity 2/10. Tender and gentle: felt piano and soft strings, warm and caring, almost a lullaby with a quiet flute melody.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 57,
+     "intensidad": 5,
+     "desc": "Dramatic but wondering: low drums and cello, tension building slowly, then resolving to a hopeful major phrase on flute."
+    },
+    {
+     "t0": 57,
+     "t1": 120,
+     "intensidad": 2,
+     "desc": "Tender and gentle: felt piano and soft strings, warm and caring, almost a lullaby with a quiet flute melody."
+    }
+   ],
+   "intensidad": [
+    5,
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "cello",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "esperanza",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "infantil",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 91.8,
+    "rms_db": -14.9,
+    "tempo": 80.7,
+    "brillo_hz": 895,
+    "energia": [
+     0.21,
+     0.48,
+     0.79,
+     0.7,
+     0.62,
+     0.78,
+     0.9,
+     1.0,
+     0.91,
+     0.8,
+     0.73,
+     0.61
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "polilla_foco__lyria_tramo2": {
+   "id": "polilla_foco__lyria_tramo2",
+   "video": "polilla_foco",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\polilla_foco\\audio\\lyria_tramo2.mp3",
+   "archivo": "polilla_foco__lyria_tramo2.mp3",
+   "md5": "ec91c358d0ea796c393ae574270a04c9",
+   "canal": "wild_next_door",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "What Happens to a Moth That Circles Your Porch Light All Night?",
+   "tramo": 2,
+   "escenas": [
+    "night",
+    "cost",
+    "deal",
+    "outro"
+   ],
+   "estilo": "Dreamy, curious cartoon nature documentary score about moths circling a porch light at night: celesta, vibraphone, pizzicato strings, soft clarinet, felt piano, light brushed percussion and upright bass. Nocturnal, gently comic and a little bittersweet. Never epic, never horror.",
+   "prompt": "BIBLIOTECA: teflon_sarten__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, handmade documentary score for a stop-motion story about an accidental discovery: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and a gentle upright bass. Playful but intelligent, never epic, never sad. Total length: exactly 1:57 (118 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a held tone. End on a sustained low tone that can flow into the next piece.\n\n[0:00 - 0:27] Section 1: Intensity 3/10. Wonder and stillness after the surprise: soft felt piano arpeggio, glassy glockenspiel, then a brief deflated falling phrase.\n[0:27 - 0:57] Section 2: Intensity 5/10. Playful experimenting montage: bouncy marimba and pizzicato pattern, each phrase ending on a little comic stop, growing curiosity.\n[0:57 - 1:20] Section 3: Intensity 2/10. The energy drains away: slow solitary clarinet, sparse piano, dusty and quiet, an unanswered question at the end.\n[1:20 - 1:57] Section 4: Intensity 6/10. Serious and secretive: low steady pulse, muted strings, restrained snare brushes far away, tension building slowly, ending on a held tone.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 27,
+     "intensidad": 3,
+     "desc": "Wonder and stillness after the surprise: soft felt piano arpeggio, glassy glockenspiel, then a brief deflated falling phrase."
+    },
+    {
+     "t0": 27,
+     "t1": 57,
+     "intensidad": 5,
+     "desc": "Playful experimenting montage: bouncy marimba and pizzicato pattern, each phrase ending on a little comic stop, growing curiosity."
+    },
+    {
+     "t0": 57,
+     "t1": 80,
+     "intensidad": 2,
+     "desc": "The energy drains away: slow solitary clarinet, sparse piano, dusty and quiet, an unanswered question at the end."
+    },
+    {
+     "t0": 80,
+     "t1": 117,
+     "intensidad": 6,
+     "desc": "Serious and secretive: low steady pulse, muted strings, restrained snare brushes far away, tension building slowly, ending on a held tone."
+    }
+   ],
+   "intensidad": [
+    3,
+    5,
+    2,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "fantasía medieval",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 118.91,
+    "rms_db": -15.1,
+    "tempo": 161.5,
+    "brillo_hz": 1129,
+    "energia": [
+     0.14,
+     0.42,
+     0.41,
+     0.98,
+     0.95,
+     0.66,
+     0.36,
+     0.39,
+     0.47,
+     0.89,
+     1.0,
+     0.44
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "tequisquiapan__lyria_tramo1": {
+   "id": "tequisquiapan__lyria_tramo1",
+   "video": "tequisquiapan",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tequisquiapan\\audio\\lyria_tramo1.mp3",
+   "archivo": "tequisquiapan__lyria_tramo1.mp3",
+   "md5": "73676d8fed9a2915363de5d2f30b808e",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Tequisquiapan",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "origenes",
+    "fundacion"
+   ],
+   "estilo": "Warm, lively animated-history score for a small town in the Bajío of central Mexico: jarana and vihuela strumming, violins, a light trumpet and soft hand percussion, with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "BIBLIOTECA: no_vuelve__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-22\n\nIntimate, heartbreaking score for a short animated film about a boy, his little sister and their mother in a small Mexican canyon town: a tender lullaby melody (a mother's hummed cradle song) on music box and soft felt piano, warm nylon-string guitar, later a small string ensemble and cello. A distant small-town fair waltz played by a brass band for the fair scenes. Tender and nostalgic, never melodramatic; lots of space for dialogue and narration. No drum kit, no pop, no electronic beats. Total length: exactly 1:12 (72 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with a sweet but slightly false bright guitar morning, then the fair waltz returns and keeps speeding up until it becomes dizzy and unsettling and stops on one note; then a light warm guitar for first love with a subtle shadow; end with an abrupt cut to silence and one low piano note.\n\n[0:00 - 0:17] Section 1: Intensity 4/10. Next morning: a sweet but slightly false bright guitar, then a sad piano phrase.\n[0:17 - 0:41] Section 2: Intensity 6/10. The cycle repeating: the fair waltz returns but keeps speeding up and becomes unsettling, then stops on one note.\n[0:41 - 0:58] Section 3: Intensity 4/10. First love, today: light warm guitar and piano, sweet; then a subtle shadow creeps in.\n[0:58 - 1:05] Section 4: Intensity 1/10. A shout: the music cuts out abruptly.\n[1:05 - 1:12] Section 5: Intensity 2/10. Shock: a single low piano note and silence.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 17,
+     "intensidad": 4,
+     "desc": "Next morning: a sweet but slightly false bright guitar, then a sad piano phrase."
+    },
+    {
+     "t0": 17,
+     "t1": 41,
+     "intensidad": 6,
+     "desc": "The cycle repeating: the fair waltz returns but keeps speeding up and becomes unsettling, then stops on one note."
+    },
+    {
+     "t0": 41,
+     "t1": 58,
+     "intensidad": 4,
+     "desc": "First love, today: light warm guitar and piano, sweet; then a subtle shadow creeps in."
+    },
+    {
+     "t0": 58,
+     "t1": 65,
+     "intensidad": 1,
+     "desc": "A shout: the music cuts out abruptly."
+    },
+    {
+     "t0": 65,
+     "t1": 72,
+     "intensidad": 2,
+     "desc": "Shock: a single low piano note and silence."
+    }
+   ],
+   "intensidad": [
+    4,
+    6,
+    4,
+    1,
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "cajita de música",
+     "cello",
+     "cuerdas",
+     "guitarra",
+     "metales",
+     "percusión",
+     "piano",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "fiesta",
+     "nostálgico",
+     "oscuro",
+     "tenso",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "folk mexicano",
+     "infantil",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 71.42,
+    "rms_db": -15.4,
+    "tempo": 123.0,
+    "brillo_hz": 1064,
+    "energia": [
+     0.21,
+     0.34,
+     0.47,
+     1.0,
+     0.9,
+     0.79,
+     0.52,
+     0.29,
+     0.47,
+     0.43,
+     0.33,
+     0.07
+    ],
+    "huecos": [],
+    "dinamica": 0.93
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
+  },
+  "tequisquiapan__lyria_tramo2": {
+   "id": "tequisquiapan__lyria_tramo2",
+   "video": "tequisquiapan",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\tequisquiapan\\audio\\lyria_tramo2.mp3",
+   "archivo": "tequisquiapan__lyria_tramo2.mp3",
+   "md5": "2fb7805836114650cd845beb776a6afe",
+   "canal": "cronopapel",
+   "estilo_video": "boceto",
+   "titulo_video": "La historia de Tequisquiapan",
+   "tramo": 2,
+   "escenas": [
+    "siglos",
+    "centro",
+    "turismo",
+    "ruta"
+   ],
+   "estilo": "Warm, lively animated-history score for a small town in the Bajío of central Mexico: jarana and vihuela strumming, violins, a light trumpet and soft hand percussion, with a modern documentary pulse. Instrumental only, no singing. Middle frequencies kept clear so a Spanish narrator can speak distinctly over it.",
+   "prompt": "BIBLIOTECA: la_sena__lyria_tramo1_b (desde 0.0 s) — reutilizada el 2026-10-22\n\nIntimate, heartbreaking score for a short animated film about two brothers in a poor small town in a dry canyon: a gentle whistled four-note motif, warm nylon-string folk requinto guitar, soft felt piano, later a small string ensemble and cello. Tender and nostalgic, never melodramatic; lots of space so dialogue and narration sit on top. No drum kit, no pop, no electronic beats. Total length: exactly 1:18 (79 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with the whistled four-note motif. Childhood warmth, a night farewell, then the happiest sunset; end softly as the sun goes down.\n\n[0:00 - 0:30] Section 1: Intensity 4/10. Golden childhood memory: a boy whistles a simple four-note motif, answered by a warm solo guitar, light and playful.\n[0:30 - 0:44] Section 2: Intensity 3/10. Night farewell: the same motif slowed on solo guitar, crickets-like quiet, a soft low piano note, sadness.\n[0:44 - 1:18] Section 3: Intensity 5/10. Warm sunset with brothers laughing: guitar and soft piano, gentle rhythm, the happiest moment of the film.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 30,
+     "intensidad": 4,
+     "desc": "Golden childhood memory: a boy whistles a simple four-note motif, answered by a warm solo guitar, light and playful."
+    },
+    {
+     "t0": 30,
+     "t1": 44,
+     "intensidad": 3,
+     "desc": "Night farewell: the same motif slowed on solo guitar, crickets-like quiet, a soft low piano note, sadness."
+    },
+    {
+     "t0": 44,
+     "t1": 78,
+     "intensidad": 5,
+     "desc": "Warm sunset with brothers laughing: guitar and soft piano, gentle rhythm, the happiest moment of the film."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cuerdas",
+     "guitarra",
+     "metales",
+     "percusión",
+     "piano",
+     "silbido",
+     "violín"
+    ],
+    "animo": [
+     "cálido",
+     "juguetón",
+     "nostálgico",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 100.39,
+    "rms_db": -14.8,
+    "tempo": 161.5,
+    "brillo_hz": 875,
+    "energia": [
+     0.43,
+     0.47,
+     0.52,
+     0.84,
+     0.76,
+     0.61,
+     0.84,
+     1.0,
+     0.96,
+     0.98,
+     0.62,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-22"
   }
  },
- "actualizado": "2026-10-22 19:30"
+ "actualizado": "2026-10-22 21:07"
 }

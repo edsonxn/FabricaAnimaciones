@@ -1,0 +1,450 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 4.01,
+  "tipo": "imagen",
+  "texto": "It is a warm summer night. You flip on the porch light,"
+ },
+ {
+  "id": "scene-002",
+  "t0": 4.01,
+  "t1": 6.546,
+  "tipo": "imagen",
+  "texto": "and within minutes, they arrive."
+ },
+ {
+  "id": "scene-003",
+  "t0": 6.546,
+  "t1": 9.966,
+  "tipo": "imagen",
+  "texto": "Moths. Dozens of them. Spinning around the bulb,"
+ },
+ {
+  "id": "scene-004",
+  "t0": 9.966,
+  "t1": 14.036,
+  "tipo": "imagen",
+  "texto": "bumping into the glass, never landing, never leaving."
+ },
+ {
+  "id": "scene-005",
+  "t0": 14.036,
+  "t1": 18.66,
+  "tipo": "imagen",
+  "texto": "In the morning, a few are still there, stuck flat against the wall."
+ },
+ {
+  "id": "scene-006",
+  "t0": 18.66,
+  "t1": 20.94,
+  "tipo": "imagen",
+  "texto": "So what happens to a moth that circles"
+ },
+ {
+  "id": "scene-007",
+  "t0": 20.94,
+  "t1": 25.372,
+  "tipo": "imagen",
+  "texto": "your porch light all night long? And why can't it just fly away?"
+ },
+ {
+  "id": "scene-008",
+  "t0": 25.372,
+  "t1": 28.062,
+  "tipo": "imagen",
+  "texto": "For centuries, people said moths love the light."
+ },
+ {
+  "id": "scene-009",
+  "t0": 28.062,
+  "t1": 32.052,
+  "tipo": "imagen",
+  "texto": "In twenty twenty-four, scientists finally filmed it in three dimensions."
+ },
+ {
+  "id": "scene-010",
+  "t0": 32.052,
+  "t1": 34.377,
+  "tipo": "imagen",
+  "texto": "And it turns out, they don't."
+ },
+ {
+  "id": "scene-011",
+  "t0": 34.377,
+  "t1": 38.83,
+  "tipo": "imagen",
+  "texto": "They are not attracted. They are trapped."
+ },
+ {
+  "id": "scene-012",
+  "t0": 38.83,
+  "t1": 42.662,
+  "tipo": "imagen",
+  "texto": "The old idea was that moths steer by the moon."
+ },
+ {
+  "id": "scene-013",
+  "t0": 42.662,
+  "t1": 46.462,
+  "tipo": "imagen",
+  "texto": "Keep the moon at the same angle, and you fly in a straight line."
+ },
+ {
+  "id": "scene-014",
+  "t0": 46.462,
+  "t1": 49.961,
+  "tipo": "imagen",
+  "texto": "Mistake a bulb for the moon, and you spiral into it."
+ },
+ {
+  "id": "scene-015",
+  "t0": 49.961,
+  "t1": 52.66,
+  "tipo": "imagen",
+  "texto": "It sounded smart. But when researchers from"
+ },
+ {
+  "id": "scene-016",
+  "t0": 52.66,
+  "t1": 56.02,
+  "tipo": "imagen",
+  "texto": "Imperial College London tracked insects around lights with"
+ },
+ {
+  "id": "scene-017",
+  "t0": 56.02,
+  "t1": 60.192,
+  "tipo": "imagen",
+  "texto": "motion capture cameras, that is not what they saw."
+ },
+ {
+  "id": "scene-018",
+  "t0": 60.192,
+  "t1": 62.427,
+  "tipo": "imagen",
+  "texto": "Here is what really happens."
+ },
+ {
+  "id": "scene-019",
+  "t0": 62.427,
+  "t1": 66.367,
+  "tipo": "imagen",
+  "texto": "For millions of years, the brightest thing in the night was the sky."
+ },
+ {
+  "id": "scene-020",
+  "t0": 66.367,
+  "t1": 70.052,
+  "tipo": "imagen",
+  "texto": "So the brightest direction meant up. To stay level,"
+ },
+ {
+  "id": "scene-021",
+  "t0": 70.052,
+  "t1": 73.562,
+  "tipo": "imagen",
+  "texto": "flying insects tilt their backs toward the brightest light."
+ },
+ {
+  "id": "scene-022",
+  "t0": 73.562,
+  "t1": 77.255,
+  "tipo": "imagen",
+  "texto": "It is like an autopilot that keeps them right side up."
+ },
+ {
+  "id": "scene-023",
+  "t0": 77.255,
+  "t1": 80.615,
+  "tipo": "imagen",
+  "texto": "Now put a bright bulb next to a moth. Its autopilot"
+ },
+ {
+  "id": "scene-024",
+  "t0": 80.615,
+  "t1": 85.238,
+  "tipo": "imagen",
+  "texto": "says the sky is over there, sideways. So it tilts its back toward the bulb."
+ },
+ {
+  "id": "scene-025",
+  "t0": 85.238,
+  "t1": 87.938,
+  "tipo": "imagen",
+  "texto": "And it ends up flying in circles around it."
+ },
+ {
+  "id": "scene-026",
+  "t0": 87.938,
+  "t1": 91.593,
+  "tipo": "imagen",
+  "texto": "Orbiting. Stuck. When it passes right over the top,"
+ },
+ {
+  "id": "scene-027",
+  "t0": 91.593,
+  "t1": 94.573,
+  "tipo": "imagen",
+  "texto": "it can even flip upside down, because now the"
+ },
+ {
+  "id": "scene-028",
+  "t0": 94.573,
+  "t1": 98.06,
+  "tipo": "imagen",
+  "texto": "sky seems to be below it. The researchers saw the same"
+ },
+ {
+  "id": "scene-029",
+  "t0": 98.06,
+  "t1": 102.21,
+  "tipo": "imagen",
+  "texto": "thing in moths, dragonflies and other night fliers."
+ },
+ {
+  "id": "scene-030",
+  "t0": 102.21,
+  "t1": 104.89,
+  "tipo": "imagen",
+  "texto": "Imagine driving home at night with your GPS"
+ },
+ {
+  "id": "scene-031",
+  "t0": 104.89,
+  "t1": 108.236,
+  "tipo": "imagen",
+  "texto": "stuck on turn left. Forever."
+ },
+ {
+  "id": "scene-032",
+  "t0": 108.236,
+  "t1": 112.316,
+  "tipo": "imagen",
+  "texto": "So the moth circles. And circles. Burning energy it"
+ },
+ {
+  "id": "scene-033",
+  "t0": 112.316,
+  "t1": 115.353,
+  "tipo": "imagen",
+  "texto": "needed for finding food and finding a mate."
+ },
+ {
+  "id": "scene-034",
+  "t0": 115.353,
+  "t1": 118.133,
+  "tipo": "imagen",
+  "texto": "Some fall out of the air, exhausted."
+ },
+ {
+  "id": "scene-035",
+  "t0": 118.133,
+  "t1": 122.821,
+  "tipo": "imagen",
+  "texto": "Others finally land on the wall, and freeze until morning."
+ },
+ {
+  "id": "scene-036",
+  "t0": 122.821,
+  "t1": 127.301,
+  "tipo": "imagen",
+  "texto": "And at dawn, a pale moth on a bright wall has nowhere to hide."
+ },
+ {
+  "id": "scene-037",
+  "t0": 127.301,
+  "t1": 130.522,
+  "tipo": "imagen",
+  "texto": "Birds and lizards know exactly where to look."
+ },
+ {
+  "id": "scene-038",
+  "t0": 130.522,
+  "t1": 133.962,
+  "tipo": "imagen",
+  "texto": "Even at night, a light full of moths is a buffet."
+ },
+ {
+  "id": "scene-039",
+  "t0": 133.962,
+  "t1": 136.882,
+  "tipo": "imagen",
+  "texto": "Bats swoop in. And spiders build their webs"
+ },
+ {
+  "id": "scene-040",
+  "t0": 136.882,
+  "t1": 140.183,
+  "tipo": "imagen",
+  "texto": "right next to the bulb. And every moth stuck at"
+ },
+ {
+  "id": "scene-041",
+  "t0": 140.183,
+  "t1": 144.43,
+  "tipo": "imagen",
+  "texto": "your porch is a moth that is not out there doing its job."
+ },
+ {
+  "id": "scene-042",
+  "t0": 144.43,
+  "t1": 147.156,
+  "tipo": "imagen",
+  "texto": "And this matters more than it seems."
+ },
+ {
+  "id": "scene-043",
+  "t0": 147.156,
+  "t1": 150.856,
+  "tipo": "imagen",
+  "texto": "Moths are the night shift of pollination. While bees sleep,"
+ },
+ {
+  "id": "scene-044",
+  "t0": 150.856,
+  "t1": 154.194,
+  "tipo": "imagen",
+  "texto": "moths carry pollen from flower to flower."
+ },
+ {
+  "id": "scene-045",
+  "t0": 154.194,
+  "t1": 157.914,
+  "tipo": "imagen",
+  "texto": "In England, another team found that moths visit a huge variety"
+ },
+ {
+  "id": "scene-046",
+  "t0": 157.914,
+  "t1": 162.461,
+  "tipo": "imagen",
+  "texto": "of wild flowers, carrying pollen across whole fields in the dark."
+ },
+ {
+  "id": "scene-047",
+  "t0": 162.461,
+  "t1": 165.121,
+  "tipo": "imagen",
+  "texto": "In one experiment in Switzerland, meadows"
+ },
+ {
+  "id": "scene-048",
+  "t0": 165.121,
+  "t1": 168.101,
+  "tipo": "imagen",
+  "texto": "lit up at night got sixty-two percent fewer"
+ },
+ {
+  "id": "scene-049",
+  "t0": 168.101,
+  "t1": 170.581,
+  "tipo": "imagen",
+  "texto": "visits from night pollinators."
+ },
+ {
+  "id": "scene-050",
+  "t0": 170.581,
+  "t1": 174.381,
+  "tipo": "imagen",
+  "texto": "And one of the plants there made thirteen percent less fruit."
+ },
+ {
+  "id": "scene-051",
+  "t0": 174.381,
+  "t1": 178.03,
+  "tipo": "imagen",
+  "texto": "Just because of the lights."
+ },
+ {
+  "id": "scene-052",
+  "t0": 178.03,
+  "t1": 181.814,
+  "tipo": "imagen",
+  "texto": "So what can you do? It is surprisingly easy."
+ },
+ {
+  "id": "scene-053",
+  "t0": 181.814,
+  "t1": 186.436,
+  "tipo": "imagen",
+  "texto": "Turn the porch light off when nobody needs it, or put it on a motion sensor."
+ },
+ {
+  "id": "scene-054",
+  "t0": 186.436,
+  "t1": 189.416,
+  "tipo": "imagen",
+  "texto": "Swap the bright white bulb for a warm yellow one."
+ },
+ {
+  "id": "scene-055",
+  "t0": 189.416,
+  "t1": 192.252,
+  "tipo": "imagen",
+  "texto": "Fewer insects get caught in its spell."
+ },
+ {
+  "id": "scene-056",
+  "t0": 192.252,
+  "t1": 196.252,
+  "tipo": "imagen",
+  "texto": "And point your lights down, toward the ground, not up into the sky."
+ },
+ {
+  "id": "scene-057",
+  "t0": 196.252,
+  "t1": 199.407,
+  "tipo": "imagen",
+  "texto": "That keeps the fake sky out of their eyes."
+ },
+ {
+  "id": "scene-058",
+  "t0": 199.407,
+  "t1": 203.347,
+  "tipo": "imagen",
+  "texto": "Even closing the curtains helps, so the lights inside your house do"
+ },
+ {
+  "id": "scene-059",
+  "t0": 203.347,
+  "t1": 206.772,
+  "tipo": "imagen",
+  "texto": "not spill out into the yard."
+ },
+ {
+  "id": "scene-060",
+  "t0": 206.772,
+  "t1": 210.272,
+  "tipo": "imagen",
+  "texto": "So the next time you see a moth spinning around your porch light,"
+ },
+ {
+  "id": "scene-061",
+  "t0": 210.272,
+  "t1": 214.208,
+  "tipo": "imagen",
+  "texto": "you will know the truth. It is not in love with the light."
+ },
+ {
+  "id": "scene-062",
+  "t0": 214.208,
+  "t1": 216.568,
+  "tipo": "imagen",
+  "texto": "It is lost, flying in circles,"
+ },
+ {
+  "id": "scene-063",
+  "t0": 216.568,
+  "t1": 221.02,
+  "tipo": "imagen",
+  "texto": "trying to keep the sky on top. Flip the switch, and let it find"
+ },
+ {
+  "id": "scene-064",
+  "t0": 221.02,
+  "t1": 224.4,
+  "tipo": "imagen",
+  "texto": "the real one."
+ }
+]

@@ -1,0 +1,86 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 2.45,
+  "tipo": "imagen",
+  "texto": "You see a big spider in the garage."
+ },
+ {
+  "id": "scene-002",
+  "t0": 2.45,
+  "t1": 5.33,
+  "tipo": "imagen",
+  "texto": "Its back looks lumpy. Look closer before"
+ },
+ {
+  "id": "scene-003",
+  "t0": 5.33,
+  "t1": 7.93,
+  "tipo": "imagen",
+  "texto": "you stomp."
+ },
+ {
+  "id": "scene-004",
+  "t0": 7.93,
+  "t1": 9.95,
+  "tipo": "imagen",
+  "texto": "Those lumps are babies."
+ },
+ {
+  "id": "scene-005",
+  "t0": 9.95,
+  "t1": 13.49,
+  "tipo": "imagen",
+  "texto": "A wolf spider mom carries them on her back, sometimes in"
+ },
+ {
+  "id": "scene-006",
+  "t0": 13.49,
+  "t1": 16.688,
+  "tipo": "imagen",
+  "texto": "layers. They do not even eat on the ride."
+ },
+ {
+  "id": "scene-007",
+  "t0": 16.688,
+  "t1": 19.732,
+  "tipo": "imagen",
+  "texto": "They live off their yolk."
+ },
+ {
+  "id": "scene-008",
+  "t0": 19.732,
+  "t1": 21.512,
+  "tipo": "imagen",
+  "texto": "Stomp on her, and the babies do"
+ },
+ {
+  "id": "scene-009",
+  "t0": 21.512,
+  "t1": 24.032,
+  "tipo": "imagen",
+  "texto": "not die with her. They run. In every"
+ },
+ {
+  "id": "scene-010",
+  "t0": 24.032,
+  "t1": 26.896,
+  "tipo": "imagen",
+  "texto": "direction. So skip the boot."
+ },
+ {
+  "id": "scene-011",
+  "t0": 26.896,
+  "t1": 29.056,
+  "tipo": "imagen",
+  "texto": "A bucket and a piece of cardboard,"
+ },
+ {
+  "id": "scene-012",
+  "t0": 29.056,
+  "t1": 32.25,
+  "tipo": "imagen",
+  "texto": "and carry the whole family outside."
+ }
+]

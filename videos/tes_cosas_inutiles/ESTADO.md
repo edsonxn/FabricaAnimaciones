@@ -41,7 +41,7 @@
   ⚠ la OST puede traer reclamaciones de Content ID: créditos en la descripción.
 
 ## Falta
-- [ ] monetización en Studio (https://studio.youtube.com/video/uz1kE1BI4w8/edit): anuncios + cuestionario «Adecuado para anuncios»
+- [x] monetización en Studio: anuncios Activada + mid-rolls, cuestionario «Nada de lo anterior» → «Adecuado para anuncios» (23-oct)
 - [ ] `python fab.py tes_cosas_inutiles limpiar` cuando salga público
 - cierre: registrado en canales/cronicas_tamriel.json (formato) y BITACORA ✅ · hallazgos en docs/estilo_secuencia_yt.md § Tamriel ✅
   · SFX catalogados ✅ · música NO catalogada (tramos 2/5/6/9 son OST de Skyrim, no Lyria)

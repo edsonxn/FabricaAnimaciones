@@ -95,5 +95,11 @@ enganche de la casa lo pagó ella).
   Lyria dio 402). Pedir «Instrumental only» con la estructura por segundos; devuelve ~3 min. El WAV es público: la respuesta de
   `POST /__api/clips` trae `wav_url` (storage.googleapis.com/producer-app-public/clips/<id>.wav) → curl. Recortar a la duración
   del capítulo con fundido cruzado hacia el clímax y el final de la pieza. El menú Download del navegador integrado no baja nada.
+- **Capítulos siguientes (cap. 2, `videos/heredera_cap2/`, 23-oct):** carpeta nueva por capítulo (`nuevo heredera_capN --secuencia`),
+  guion copiado con las MISMAS fichas; personajes nuevos en el mismo proyecto (selector de voz con buscador). Lanzar en lote por JS en
+  la página: buscar el ingrediente en «Buscar recursos» → opción «<nombre> Personaje/Imagen» → «Añadir a petición»; duración en el
+  «Activador de ajustes» (y Escape real); prompt pegado con `ClipboardEvent('paste')`; clic real en «Iniciar generación». Bajar en
+  Chrome desde el editor del clip (icono de descarga → 720p; la tira de miniaturas pasa al siguiente). ≈ 94 pts y ~1 h por capítulo.
+  Si Flow rechaza por «menores de edad» a una adulta, escribir «an adult woman» en la acción.
 - **Orden de etapas (SIN_VOZ con diálogo): fx → música → `video` → `mezcla` → `final`.** `video` escribe audio/ambiente.wav con el
   diálogo de los clips; si `mezcla` va antes, el MASTER sale solo con música (pasó en el cap. 1 y lo notó el usuario).

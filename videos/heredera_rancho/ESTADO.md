@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: página de Facebook «Lágrimas y Venganza» (`novelas_ia`; E:\PaginaFace --pagina novelas_ia) · novela de MUCHOS capítulos
 - estilo: novela con IA = secuencia Flow realista con diálogo y lipsync → docs: docs/formato_novela_ia.md (+ copiar videos/novela_altar/)
-- etapa: ✅ CAP. 1 PUBLICADO en FB (23-oct) · siguiente: capítulo 2
-- siguiente: capítulo 2 «¿Qué le pasó a Carmen?» (mismo proyecto Flow y personajes; copiar guion.py como base, ver biblia en su docstring)
+- etapa: ✅ CAP. 1 PUBLICADO en FB (23-oct) · el cap. 2 vive en `videos/heredera_cap2/` (publicado el 23-oct)
+- siguiente: la serie sigue en `videos/heredera_cap2/ESTADO.md` → capítulo 3 «¿Quién está en la tumba?»
 
 ## Sesiones (plan de tramos · «continúa el video heredera_rancho» retoma aquí · protocolo docs/sesiones.md)
 - alias: heredera, la heredera del rancho, heredera_rancho, novela 2

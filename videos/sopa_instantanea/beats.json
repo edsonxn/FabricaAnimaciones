@@ -1,0 +1,694 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.098,
+  "tipo": "video",
+  "texto": "Cada año, el mundo se come más de ciento veinte mil millones de estas sopas. Y la inventó un hombre que, a los cuarenta y siete años, lo había perdido todo.",
+  "clip_s": 10,
+  "t_medio": 5.573,
+  "texto_a": "Cada año, el mundo se come más de ciento veinte mil millones de estas sopas.",
+  "texto_b": "Y la inventó un hombre que, a los cuarenta y siete años, lo había perdido todo."
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.098,
+  "t1": 18.16,
+  "tipo": "video",
+  "texto": "Sin empresa, sin dinero y con dos años de cárcel a cuestas. Lo único que le quedaba era su casa, y un cobertizo de madera en el patio.",
+  "clip_s": 10,
+  "t_medio": 13.95,
+  "texto_a": "Sin empresa, sin dinero y con dos años de cárcel a cuestas.",
+  "texto_b": "Lo único que le quedaba era su casa, y un cobertizo de madera en el patio."
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.16,
+  "t1": 29.787,
+  "tipo": "video",
+  "texto": "Ahí, solo, con una máquina de fideos usada y la sartén de su esposa, cambió la forma de comer del planeta. Es una historia de hambre, de una fila larguísima en una noche helada.",
+  "clip_s": 10,
+  "t_medio": 25.43,
+  "texto_a": "Ahí, solo, con una máquina de fideos usada y la sartén de su esposa, cambió la forma de comer del planeta.",
+  "texto_b": "Es una historia de hambre, de una fila larguísima en una noche helada."
+ },
+ {
+  "id": "scene-004",
+  "t0": 29.787,
+  "t1": 37.838,
+  "tipo": "video",
+  "texto": "De una cárcel por regalar dinero. De un plato de tempura que le dio la respuesta. Y de un vaso que terminó en el espacio.",
+  "clip_s": 10,
+  "t_medio": 35.337,
+  "texto_a": "De una cárcel por regalar dinero. De un plato de tempura que le dio la respuesta.",
+  "texto_b": "Y de un vaso que terminó en el espacio."
+ },
+ {
+  "id": "scene-005",
+  "t0": 37.838,
+  "t1": 50.743,
+  "tipo": "video",
+  "texto": "Esta es la historia de la sopa instantánea, y de Momofuku Ando. Nace en mil novecientos diez, en Taiwán, que entonces era territorio japonés. Pierde a sus padres siendo muy pequeño.",
+  "clip_s": 10,
+  "t_medio": 42.93,
+  "texto_a": "Esta es la historia de la sopa instantánea, y de Momofuku Ando.",
+  "texto_b": "Nace en mil novecientos diez, en Taiwán, que entonces era territorio japonés. Pierde a sus padres siendo muy pequeño."
+ },
+ {
+  "id": "scene-006",
+  "t0": 50.743,
+  "t1": 61.339,
+  "tipo": "video",
+  "texto": "Lo crían sus abuelos, que tienen una tiendita de telas. Ahí aprende a vender, a contar y a regatear. Es un muchacho que no se queda quieto: siempre está buscando qué vender.",
+  "clip_s": 10,
+  "t_medio": 57.245,
+  "texto_a": "Lo crían sus abuelos, que tienen una tiendita de telas. Ahí aprende a vender, a contar y a regatear.",
+  "texto_b": "Es un muchacho que no se queda quieto: siempre está buscando qué vender."
+ },
+ {
+  "id": "scene-007",
+  "t0": 61.339,
+  "t1": 70.43,
+  "tipo": "video",
+  "texto": "A los veintidós años ya tiene su propia empresa textil. Y poco después se muda a Osaka, en Japón, a hacer negocios en grande.",
+  "clip_s": 10,
+  "t_medio": 66.255,
+  "texto_a": "A los veintidós años ya tiene su propia empresa textil. Y poco después se muda a Osaka,",
+  "texto_b": "en Japón, a hacer negocios en grande."
+ },
+ {
+  "id": "scene-008",
+  "t0": 70.43,
+  "t1": 78.294,
+  "tipo": "video",
+  "texto": "Pero llega la Segunda Guerra Mundial. Las bombas caen sobre Osaka, y sus fábricas y oficinas quedan en cenizas.",
+  "clip_s": 10,
+  "t_medio": 74.634,
+  "texto_a": "Pero llega la Segunda Guerra Mundial. Las bombas caen sobre Osaka,",
+  "texto_b": "y sus fábricas y oficinas quedan en cenizas."
+ },
+ {
+  "id": "scene-009",
+  "t0": 78.294,
+  "t1": 92.93,
+  "tipo": "video",
+  "texto": "Cuando termina la guerra, Ando tiene treinta y cinco años, y tiene que empezar de cero. Japón está en ruinas, y lo peor es el hambre. Falta arroz, falta pan, y miles de personas comen lo que pueden.",
+  "clip_s": 10,
+  "t_medio": 86.601,
+  "texto_a": "Cuando termina la guerra, Ando tiene treinta y cinco años, y tiene que empezar de cero. Japón está en ruinas, y lo peor es el hambre.",
+  "texto_b": "Falta arroz, falta pan, y miles de personas comen lo que pueden."
+ },
+ {
+  "id": "scene-010",
+  "t0": 92.93,
+  "t1": 101.622,
+  "tipo": "video",
+  "texto": "Una noche de invierno, Ando pasa por un mercado negro cerca de la estación de Umeda. Ve una fila larguísima de gente, temblando de frío en la oscuridad.",
+  "clip_s": 10,
+  "t_medio": 97.713,
+  "texto_a": "Una noche de invierno, Ando pasa por un mercado negro cerca de la estación de Umeda.",
+  "texto_b": "Ve una fila larguísima de gente, temblando de frío en la oscuridad."
+ },
+ {
+  "id": "scene-011",
+  "t0": 101.622,
+  "t1": 110.761,
+  "tipo": "video",
+  "texto": "Todos esperan lo mismo: un plato de fideos caliente. Ando se queda mirando esa fila. Piensa que la gente haría lo que fuera por un plato de fideos.",
+  "clip_s": 10,
+  "t_medio": 107.237,
+  "texto_a": "Todos esperan lo mismo: un plato de fideos caliente. Ando se queda mirando esa fila.",
+  "texto_b": "Piensa que la gente haría lo que fuera por un plato de fideos."
+ },
+ {
+  "id": "scene-012",
+  "t0": 110.761,
+  "t1": 120.225,
+  "tipo": "video",
+  "texto": "¿Y si se pudieran preparar en casa, en minutos, solo con agua caliente? Pero la idea se queda guardada. Todavía no es su momento.",
+  "clip_s": 10,
+  "t_medio": 115.17,
+  "texto_a": "¿Y si se pudieran preparar en casa, en minutos, solo con agua caliente?",
+  "texto_b": "Pero la idea se queda guardada. Todavía no es su momento."
+ },
+ {
+  "id": "scene-013",
+  "t0": 120.225,
+  "t1": 123.265,
+  "tipo": "imagen",
+  "texto": "Ando sigue haciendo negocios, y le va bien."
+ },
+ {
+  "id": "scene-014",
+  "t0": 123.265,
+  "t1": 126.721,
+  "tipo": "imagen",
+  "texto": "Tan bien, que empieza a darles becas a estudiantes pobres."
+ },
+ {
+  "id": "scene-015",
+  "t0": 126.721,
+  "t1": 132.205,
+  "tipo": "imagen",
+  "texto": "Pero las autoridades de la posguerra ven ese dinero de otra forma. Dicen que regalar becas es"
+ },
+ {
+  "id": "scene-016",
+  "t0": 132.205,
+  "t1": 135.982,
+  "tipo": "imagen",
+  "texto": "una manera de no pagar impuestos. En mil novecientos cuarenta y ocho lo"
+ },
+ {
+  "id": "scene-017",
+  "t0": 135.982,
+  "t1": 140.43,
+  "tipo": "imagen",
+  "texto": "condenan por evasión fiscal. Y pasa dos años en la cárcel."
+ },
+ {
+  "id": "scene-018",
+  "t0": 140.43,
+  "t1": 143.62,
+  "tipo": "imagen",
+  "texto": "Al salir, lo invitan a presidir una cooperativa de crédito,"
+ },
+ {
+  "id": "scene-019",
+  "t0": 143.62,
+  "t1": 147.634,
+  "tipo": "imagen",
+  "texto": "un pequeño banco local. Es un puesto de prestigio."
+ },
+ {
+  "id": "scene-020",
+  "t0": 147.634,
+  "t1": 151.95,
+  "tipo": "imagen",
+  "texto": "Hasta que en mil novecientos cincuenta y siete, la cooperativa quiebra."
+ },
+ {
+  "id": "scene-021",
+  "t0": 151.95,
+  "t1": 155.965,
+  "tipo": "imagen",
+  "texto": "Y Ando, como presidente, lo pierde todo. Le quitan casi todo lo que tiene,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 155.965,
+  "t1": 159.528,
+  "tipo": "imagen",
+  "texto": "para pagar las deudas. Tiene cuarenta y siete años."
+ },
+ {
+  "id": "scene-023",
+  "t0": 159.528,
+  "t1": 163.817,
+  "tipo": "imagen",
+  "texto": "Le queda una sola cosa: su casa en Ikeda, cerca de Osaka."
+ },
+ {
+  "id": "scene-024",
+  "t0": 163.817,
+  "t1": 167.882,
+  "tipo": "imagen",
+  "texto": "Cualquier otro se habría rendido. Pero él se acuerda de aquella fila en la noche"
+ },
+ {
+  "id": "scene-025",
+  "t0": 167.882,
+  "t1": 170.43,
+  "tipo": "imagen",
+  "texto": "helada."
+ },
+ {
+  "id": "scene-026",
+  "t0": 170.43,
+  "t1": 175.642,
+  "tipo": "imagen",
+  "texto": "En el patio de su casa construye un cobertizo de madera, no más grande que un cuarto."
+ },
+ {
+  "id": "scene-027",
+  "t0": 175.642,
+  "t1": 179.689,
+  "tipo": "imagen",
+  "texto": "Consigue una máquina de fideos de segunda mano y una sartén honda."
+ },
+ {
+  "id": "scene-028",
+  "t0": 179.689,
+  "t1": 183.104,
+  "tipo": "imagen",
+  "texto": "Y se pone cinco metas. La sopa tiene que saber bien."
+ },
+ {
+  "id": "scene-029",
+  "t0": 183.104,
+  "t1": 186.977,
+  "tipo": "imagen",
+  "texto": "Tiene que durar meses en la alacena. Tiene que estar lista en minutos."
+ },
+ {
+  "id": "scene-030",
+  "t0": 186.977,
+  "t1": 192.291,
+  "tipo": "imagen",
+  "texto": "Tiene que ser barata, y segura. Trabaja solo, desde el amanecer hasta pasada la medianoche,"
+ },
+ {
+  "id": "scene-031",
+  "t0": 192.291,
+  "t1": 195.622,
+  "tipo": "imagen",
+  "texto": "sin un solo día de descanso. Durante casi un año,"
+ },
+ {
+  "id": "scene-032",
+  "t0": 195.622,
+  "t1": 199.228,
+  "tipo": "imagen",
+  "texto": "todo le sale mal. Los fideos se pegan, se deshacen,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 199.228,
+  "t1": 203.56,
+  "tipo": "imagen",
+  "texto": "o se echan a perder en pocos días. Secarlos al sol no funciona."
+ },
+ {
+  "id": "scene-034",
+  "t0": 203.56,
+  "t1": 207.481,
+  "tipo": "imagen",
+  "texto": "Ahumarlos, tampoco. Cada fracaso termina en la basura, y cada"
+ },
+ {
+  "id": "scene-035",
+  "t0": 207.481,
+  "t1": 211.47,
+  "tipo": "imagen",
+  "texto": "mañana vuelve a empezar. Hasta que una noche,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 211.47,
+  "t1": 214.825,
+  "tipo": "imagen",
+  "texto": "en la cocina, ve a su esposa Masako preparar tempura."
+ },
+ {
+  "id": "scene-037",
+  "t0": 214.825,
+  "t1": 218.784,
+  "tipo": "imagen",
+  "texto": "Ella sumerge los vegetales en masa, y luego en aceite hirviendo."
+ },
+ {
+  "id": "scene-038",
+  "t0": 218.784,
+  "t1": 223.64,
+  "tipo": "imagen",
+  "texto": "Ando ve las burbujas, y entiende algo. El aceite caliente saca el agua de la masa,"
+ },
+ {
+  "id": "scene-039",
+  "t0": 223.64,
+  "t1": 226.422,
+  "tipo": "imagen",
+  "texto": "y deja miles de hoyitos diminutos."
+ },
+ {
+  "id": "scene-040",
+  "t0": 226.422,
+  "t1": 231.04,
+  "tipo": "imagen",
+  "texto": "Corre al cobertizo y fríe un bloque de fideos ya sazonados. El agua se escapa."
+ },
+ {
+  "id": "scene-041",
+  "t0": 231.04,
+  "t1": 235.26,
+  "tipo": "imagen",
+  "texto": "Los fideos quedan secos, crujientes, y llenos de poros."
+ },
+ {
+  "id": "scene-042",
+  "t0": 235.26,
+  "t1": 239.496,
+  "tipo": "imagen",
+  "texto": "Les echa agua hirviendo, y en un par de minutos esos poros se llenan."
+ },
+ {
+  "id": "scene-043",
+  "t0": 239.496,
+  "t1": 242.227,
+  "tipo": "imagen",
+  "texto": "Los fideos se ablandan, como recién hechos."
+ },
+ {
+  "id": "scene-044",
+  "t0": 242.227,
+  "t1": 247.25,
+  "tipo": "imagen",
+  "texto": "Había nacido la sopa instantánea. El veinticinco de agosto de mil novecientos cincuenta"
+ },
+ {
+  "id": "scene-045",
+  "t0": 247.25,
+  "t1": 251.323,
+  "tipo": "imagen",
+  "texto": "y ocho sale a la venta. Se llama Chicken Ramen:"
+ },
+ {
+  "id": "scene-046",
+  "t0": 251.323,
+  "t1": 256.004,
+  "tipo": "imagen",
+  "texto": "fideos con sabor a pollo. Ando tiene cuarenta y ocho años."
+ },
+ {
+  "id": "scene-047",
+  "t0": 256.004,
+  "t1": 258.989,
+  "tipo": "imagen",
+  "texto": "Y hay un problema: cuesta treinta y cinco yenes."
+ },
+ {
+  "id": "scene-048",
+  "t0": 258.989,
+  "t1": 263.13,
+  "tipo": "imagen",
+  "texto": "Unas seis veces lo que costaba un plato de fideos en un puesto de la calle."
+ },
+ {
+  "id": "scene-049",
+  "t0": 263.13,
+  "t1": 267.016,
+  "tipo": "imagen",
+  "texto": "Los comerciantes creen que nadie va a pagar eso por un bloque seco."
+ },
+ {
+  "id": "scene-050",
+  "t0": 267.016,
+  "t1": 271.274,
+  "tipo": "imagen",
+  "texto": "Ando organiza pruebas en las tiendas, para que la gente lo pruebe ahí mismo."
+ },
+ {
+  "id": "scene-051",
+  "t0": 271.274,
+  "t1": 275.688,
+  "tipo": "imagen",
+  "texto": "Y los comerciantes se equivocan. La gente prueba, y vuelve."
+ },
+ {
+  "id": "scene-052",
+  "t0": 275.688,
+  "t1": 280.43,
+  "tipo": "imagen",
+  "texto": "Al poco tiempo, su empresa cambia de nombre: Nissin."
+ },
+ {
+  "id": "scene-053",
+  "t0": 280.43,
+  "t1": 283.796,
+  "tipo": "imagen",
+  "texto": "Y en cuanto el invento triunfa, empiezan las copias."
+ },
+ {
+  "id": "scene-054",
+  "t0": 283.796,
+  "t1": 288.143,
+  "tipo": "imagen",
+  "texto": "Aparecen decenas de fábricas que hacen fideos fritos idénticos."
+ },
+ {
+  "id": "scene-055",
+  "t0": 288.143,
+  "t1": 291.376,
+  "tipo": "imagen",
+  "texto": "Algunos venden fideos mal hechos, que se echan a perder."
+ },
+ {
+  "id": "scene-056",
+  "t0": 291.376,
+  "t1": 294.112,
+  "tipo": "imagen",
+  "texto": "Ando registra su método y pelea por él."
+ },
+ {
+  "id": "scene-057",
+  "t0": 294.112,
+  "t1": 298.953,
+  "tipo": "imagen",
+  "texto": "Pero entiende que copiar un invento es fácil. Lo difícil es inventar el siguiente."
+ },
+ {
+  "id": "scene-058",
+  "t0": 298.953,
+  "t1": 304.75,
+  "tipo": "imagen",
+  "texto": "Y el siguiente le espera muy lejos de Japón. En mil novecientos sesenta y seis,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 304.75,
+  "t1": 311.445,
+  "tipo": "imagen",
+  "texto": "Ando viaja a Estados Unidos a vender sus fideos. Ahí se da cuenta de algo que nunca había pensado."
+ },
+ {
+  "id": "scene-060",
+  "t0": 311.445,
+  "t1": 316.298,
+  "tipo": "imagen",
+  "texto": "En un supermercado ve que ahí no hay tazones para fideos, ni nadie que use palillos."
+ },
+ {
+  "id": "scene-061",
+  "t0": 316.298,
+  "t1": 321.836,
+  "tipo": "imagen",
+  "texto": "Así que los compradores parten el bloque, lo meten en vasos de papel y le echan agua caliente."
+ },
+ {
+  "id": "scene-062",
+  "t0": 321.836,
+  "t1": 327.313,
+  "tipo": "imagen",
+  "texto": "Y se lo comen con tenedor. Para ellos no es un platillo japonés. Es comida rápida."
+ },
+ {
+  "id": "scene-063",
+  "t0": 327.313,
+  "t1": 332.324,
+  "tipo": "imagen",
+  "texto": "Ando lo ve, y se le ocurre la segunda gran idea de su vida. El vaso no es el problema."
+ },
+ {
+  "id": "scene-064",
+  "t0": 332.324,
+  "t1": 337.87,
+  "tipo": "imagen",
+  "texto": "El vaso es la solución. En el avión de regreso le sirven nueces en"
+ },
+ {
+  "id": "scene-065",
+  "t0": 337.87,
+  "t1": 342.772,
+  "tipo": "imagen",
+  "texto": "un envase con tapa de aluminio, que se despega. Esa tapa se la queda."
+ },
+ {
+  "id": "scene-066",
+  "t0": 342.772,
+  "t1": 347.818,
+  "tipo": "imagen",
+  "texto": "Diseña un vaso de espuma, ligero y que no quema las manos. Y resuelve un detalle genial:"
+ },
+ {
+  "id": "scene-067",
+  "t0": 347.818,
+  "t1": 356.483,
+  "tipo": "imagen",
+  "texto": "los fideos van suspendidos a la mitad del vaso. Así no se rompen en el camino, y el agua caliente los cubre por todos lados."
+ },
+ {
+  "id": "scene-068",
+  "t0": 356.483,
+  "t1": 360.197,
+  "tipo": "imagen",
+  "texto": "Encima, la tapa de aluminio, como aquella del avión."
+ },
+ {
+  "id": "scene-069",
+  "t0": 360.197,
+  "t1": 366.273,
+  "tipo": "imagen",
+  "texto": "En mil novecientos setenta y uno, con sesenta y un años, lanza su sopa de vaso: Cup Noodles."
+ },
+ {
+  "id": "scene-070",
+  "t0": 366.273,
+  "t1": 370.43,
+  "tipo": "imagen",
+  "texto": "Y al principio, casi nadie la compra."
+ },
+ {
+  "id": "scene-071",
+  "t0": 370.43,
+  "t1": 378.804,
+  "tipo": "imagen",
+  "texto": "Hasta febrero de mil novecientos setenta y dos. En las montañas de Japón, unos guerrilleros se atrincheran en una cabaña con una rehén."
+ },
+ {
+  "id": "scene-072",
+  "t0": 378.804,
+  "t1": 383.327,
+  "tipo": "imagen",
+  "texto": "Todo el país sigue el asedio en vivo por televisión, durante diez días."
+ },
+ {
+  "id": "scene-073",
+  "t0": 383.327,
+  "t1": 387.242,
+  "tipo": "imagen",
+  "texto": "Hace tanto frío, que la comida de los policías se congela."
+ },
+ {
+  "id": "scene-074",
+  "t0": 387.242,
+  "t1": 393.536,
+  "tipo": "imagen",
+  "texto": "Y en la pantalla aparecen los policías, en medio de la nieve, comiendo fideos calientes de un vaso."
+ },
+ {
+  "id": "scene-075",
+  "t0": 393.536,
+  "t1": 400.342,
+  "tipo": "imagen",
+  "texto": "Millones de personas lo ven. Al día siguiente, todos quieren la sopa de los policías."
+ },
+ {
+  "id": "scene-076",
+  "t0": 400.342,
+  "t1": 403.537,
+  "tipo": "imagen",
+  "texto": "La sopa de Ando le da la vuelta al mundo. En el año dos mil,"
+ },
+ {
+  "id": "scene-077",
+  "t0": 403.537,
+  "t1": 409.363,
+  "tipo": "imagen",
+  "texto": "los japoneses la eligen como el mejor invento japonés del siglo veinte. Por encima del karaoke."
+ },
+ {
+  "id": "scene-078",
+  "t0": 409.363,
+  "t1": 414.735,
+  "tipo": "imagen",
+  "texto": "Y a los noventa y cinco años, Ando cumple un último sueño. Crea una sopa para comer sin gravedad,"
+ },
+ {
+  "id": "scene-079",
+  "t0": 414.735,
+  "t1": 421.118,
+  "tipo": "imagen",
+  "texto": "y la manda al espacio con un astronauta japonés. Muere en dos mil siete, a los noventa y seis años."
+ },
+ {
+  "id": "scene-080",
+  "t0": 421.118,
+  "t1": 425.304,
+  "tipo": "imagen",
+  "texto": "Hoy, en Ikeda, hay un museo con una réplica de aquel cobertizo."
+ },
+ {
+  "id": "scene-081",
+  "t0": 425.304,
+  "t1": 433.063,
+  "tipo": "imagen",
+  "texto": "Decía que su secreto era jugar golf, y comer su sopa casi todos los días. Y su invento llegó hasta nuestras cocinas."
+ },
+ {
+  "id": "scene-082",
+  "t0": 433.063,
+  "t1": 437.218,
+  "tipo": "imagen",
+  "texto": "En México se comen más de mil millones de sopas instantáneas al año."
+ },
+ {
+  "id": "scene-083",
+  "t0": 437.218,
+  "t1": 441.092,
+  "tipo": "imagen",
+  "texto": "Las más famosas aquí son de otra empresa japonesa: Maruchan."
+ },
+ {
+  "id": "scene-084",
+  "t0": 441.092,
+  "t1": 450.214,
+  "tipo": "imagen",
+  "texto": "Tan famosas, que en México mucha gente le dice maruchan a cualquier sopa de vaso. La de la tiendita, la de la oficina, la de la quincena flaca."
+ },
+ {
+  "id": "scene-085",
+  "t0": 450.214,
+  "t1": 453.868,
+  "tipo": "imagen",
+  "texto": "Con un vaso en la mano, cualquiera come caliente en tres minutos."
+ },
+ {
+  "id": "scene-086",
+  "t0": 453.868,
+  "t1": 460.482,
+  "tipo": "imagen",
+  "texto": "Todas usan la misma idea de aquel cobertizo: fideos fritos, porosos, que reviven con agua caliente."
+ },
+ {
+  "id": "scene-087",
+  "t0": 460.482,
+  "t1": 464.467,
+  "tipo": "imagen",
+  "texto": "Ando decía que la paz llega cuando la gente tiene suficiente para comer."
+ },
+ {
+  "id": "scene-088",
+  "t0": 464.467,
+  "t1": 470.475,
+  "tipo": "imagen",
+  "texto": "Y que nunca es demasiado tarde para empezar. Él empezó a los cuarenta y siete, sin nada, en un cobertizo."
+ },
+ {
+  "id": "scene-089",
+  "t0": 470.475,
+  "t1": 476.452,
+  "tipo": "imagen",
+  "texto": "Así que la próxima vez que esperes tres minutos frente a tu vaso, acuérdate de aquella fila en la noche helada."
+ },
+ {
+  "id": "scene-090",
+  "t0": 476.452,
+  "t1": 482.163,
+  "tipo": "imagen",
+  "texto": "Ahora dime tú: ¿te habrías atrevido a empezar de cero a los cuarenta y siete años, o te habrías rendido?"
+ },
+ {
+  "id": "scene-091",
+  "t0": 482.163,
+  "t1": 488.017,
+  "tipo": "imagen",
+  "texto": "Te leo en los comentarios. Y si te gustan las historias de las marcas que tienes en tu cocina, suscríbete."
+ },
+ {
+  "id": "scene-092",
+  "t0": 488.017,
+  "t1": 493.125,
+  "tipo": "imagen",
+  "texto": "La próxima ya se está moldeando."
+ }
+]

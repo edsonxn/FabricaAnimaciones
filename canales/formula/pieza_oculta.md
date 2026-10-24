@@ -113,6 +113,7 @@ Títulos cambiados el 23-oct para medir si el objeto nombrado trae búsqueda e i
 | paleta (`Q1EBDHc1t5Y`) | 17-oct | | | | | título cambiado el 23-oct |
 | teflón (`bQj_Ip4dhEo`) | 25-oct | | | | | primero con el objeto en el título desde el estreno |
 | corn flakes (`4GLQgAKPQBg`) | 29-oct | | | | | tanda #1: marca + giro humano, 8:10, miniatura con retratos reales |
+| sopa instantánea (`iJ7QsuU1nUA`) | 2-nov | | | | | tanda #2: Ando/Cup Noodles, 8:13, 2 min de clips, miniatura con el producto real |
 
 ## Por verificar
 - CTR e impresiones de cada video: no salen por la Analytics API (Studio → Alcance).

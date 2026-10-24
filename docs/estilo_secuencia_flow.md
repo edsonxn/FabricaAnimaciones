@@ -311,6 +311,25 @@ dos personajes frente a frente, un objeto en mano como una lupa o un matamoscas)
 - Tiempos: guion + investigación 40 min; voz 45 min; Flow (94 imágenes + 6 clips + descargas) ≈ 1 h; vivo 10 min; render con 10
   vivos + parallax 11 min (8:10); mezcla + final + verificar 5 min; subida 4 min.
 
+## Hallazgos de `sopa_instantanea` (23-oct-2026, tanda #2; 2 min de clips; todo en una sesión)
+- **Filtro de Flow con personajes mujer:** TODA imagen con la ficha «a plasticine Japanese woman about forty-five years old…» salió
+  «Esta generación podría infringir nuestras políticas» (5 de 5; el hombre con ficha equivalente pasaba). Con «a cheerful plasticine
+  housewife figure with black hair in a low bun…» pasaron todas. Si un personaje falla siempre, quitar nacionalidad + edad exacta.
+- **Colector del integrado:** `__col` con timeout de 55 s choca con el límite de 45 s de `javascript_tool`; la promesa sigue viva,
+  marca las imágenes como vistas y se pierden. Además los mosaicos con error NO tienen `<img>` y descuadran el orden. Lo que funciona:
+  `window.__tiles()` = `flow-grid-tile-container` ordenados por posición (arriba = último enviado, error o pendiente incluidos) y
+  `__lote(n)` = los n primeros al revés, con «ERR»/«PEND» en su sitio; espera de 30 s DENTRO del batch antes de llamarlo.
+- **Clips: 12 a la vez desde el panel** (Vídeo · Ingredientes · 16:9 · 360p · 10 s · x1 = 7 puntos), en un proyecto aparte del de
+  imágenes y en otra pestaña del integrado: las dos colas corren en paralelo. Los IDs de edición salen del `outerHTML` de cada
+  `flow-grid-tile-container` (sin abrir cada clip). Descarga 720p en Claude in Chrome por JS: clic en el botón con aria-label
+  «Descargar contenido multimedia» y en el `[role=menuitem]` que dice 720p; esperar el archivo en `E:\Downloads_jaire` antes de navegar
+  (≈ 35 s por clip). 2 de 12 traían letterbox (71 y 82 px) y uno un «hmm».
+- **Lyria:** un tramo salió 62 s para 70 pedidos (fuera de ±12 %) y dejó 7 s de silencio; medir el RMS por segundo de `musica.wav`
+  alrededor de cada unión y regenerar ese tramo (0,08 US$).
+- `hacer_prompts.py` ahora prefiere una frase AÚN NO USADA que suene ≥ 0,6 s en el beat (antes repetía la misma frase con otro
+  encuadre en dos beats seguidos).
+- Tiempos: guion + investigación 35 min; voz 40 min; 80 imágenes + 12 clips ≈ 50 min; render 11 min; subida 4 min.
+
 ## Pendiente del departamento
 - Probar con puntos: clip en 360p + descarga mejorada por el puente, y un clip combinado de 10 s con transición.
 - `flowscrap` 0.14.6 ya reconoce «No tienes saldo suficiente» (requiere recargar la extensión).

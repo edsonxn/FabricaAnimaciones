@@ -22471,6 +22471,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23258,6 +23259,7 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3"
    ]
@@ -30598,7 +30600,671 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-23"
+  },
+  "corn_flakes_short__lyria_tramo1": {
+   "id": "corn_flakes_short__lyria_tramo1",
+   "video": "corn_flakes_short",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\corn_flakes_short\\audio\\lyria_tramo1.mp3",
+   "archivo": "corn_flakes_short__lyria_tramo1.mp3",
+   "md5": "aa77495f6eb988df581d2bc24c4e6b14",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Los Corn Flakes Nacieron de un Trigo OLVIDADO #Shorts",
+   "tramo": 1,
+   "escenas": [
+    "hook",
+    "olla",
+    "pelea",
+    "cierre"
+   ],
+   "estilo": "Playful handmade documentary score for a stop-motion short about an accidental breakfast and two feuding brothers: pizzicato strings, marimba, a touch of old ragtime piano, glockenspiel and upright bass. Quick, curious and warm. Instrumental only, never loud under the voice.",
+   "prompt": "Playful handmade documentary score for a stop-motion short about an accidental breakfast and two feuding brothers: pizzicato strings, marimba, a touch of old ragtime piano, glockenspiel and upright bass. Quick, curious and warm. Instrumental only, never loud under the voice. Total length: exactly 0:41 (41 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Start instantly with a curious plucked hook, a bouncy ragtime pulse under the voice, a tense little turn in the middle, then a warm resolved ending that fades out.\n\n[0:00 - 0:06] Section 1: Intensity 4/10. the underscore continues in the same mood\n[0:06 - 0:22] Section 2: Intensity 4/10. the underscore continues in the same mood\n[0:22 - 0:34] Section 3: Intensity 4/10. the underscore continues in the same mood\n[0:34 - 0:41] Section 4: Intensity 4/10. the underscore continues in the same mood",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 6,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 6,
+     "t1": 22,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 22,
+     "t1": 34,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 34,
+     "t1": 41,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 44.07,
+    "rms_db": -15.2,
+    "tempo": 117.5,
+    "brillo_hz": 1015,
+    "energia": [
+     0.48,
+     0.68,
+     0.83,
+     0.94,
+     0.98,
+     0.82,
+     0.95,
+     1.0,
+     0.91,
+     0.86,
+     0.6,
+     0.02
+    ],
+    "huecos": [],
+    "dinamica": 0.98
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "sopa_instantanea__lyria_tramo1_corto": {
+   "id": "sopa_instantanea__lyria_tramo1_corto",
+   "video": "sopa_instantanea",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sopa_instantanea\\audio\\_lyria_tramo1_corto.mp3",
+   "archivo": "sopa_instantanea__lyria_tramo1_corto.mp3",
+   "md5": "d9d636e9d73a73b9c2d7fc1cb9dd7bf0",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "promesa",
+    "origen"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché. Total length: exactly 1:10 (70 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:25] Section 1: Intensity 3/10. A single questioning felt piano figure with a soft koto pluck over a low held tone, curious and a little ironic.\n[0:25 - 0:42] Section 2: Intensity 4/10. A gentle marimba pulse begins with an upright bass, the feeling of a life story about to unfold.\n[0:42 - 1:10] Section 3: Intensity 3/10. Tender and nostalgic: koto and felt piano, a child's world in a small family shop, warm and simple.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 3,
+     "desc": "A single questioning felt piano figure with a soft koto pluck over a low held tone, curious and a little ironic."
+    },
+    {
+     "t0": 25,
+     "t1": 42,
+     "intensidad": 4,
+     "desc": "A gentle marimba pulse begins with an upright bass, the feeling of a life story about to unfold."
+    },
+    {
+     "t0": 42,
+     "t1": 70,
+     "intensidad": 3,
+     "desc": "Tender and nostalgic: koto and felt piano, a child's world in a small family shop, warm and simple."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "nostálgico",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 64.94,
+    "rms_db": -15.1,
+    "tempo": 117.5,
+    "brillo_hz": 962,
+    "energia": [
+     0.31,
+     0.65,
+     0.69,
+     0.71,
+     0.8,
+     0.9,
+     0.74,
+     0.83,
+     0.88,
+     1.0,
+     0.74,
+     0.05
+    ],
+    "huecos": [],
+    "dinamica": 0.95
+   },
+   "variante": true,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "sopa_instantanea__lyria_tramo1": {
+   "id": "sopa_instantanea__lyria_tramo1",
+   "video": "sopa_instantanea",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sopa_instantanea\\audio\\lyria_tramo1.mp3",
+   "archivo": "sopa_instantanea__lyria_tramo1.mp3",
+   "md5": "c1fe0a13717a676a6e382ff778d01d10",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "promesa",
+    "origen"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché. Total length: exactly 1:10 (70 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:25] Section 1: Intensity 3/10. A single questioning felt piano figure with a soft koto pluck over a low held tone, curious and a little ironic.\n[0:25 - 0:42] Section 2: Intensity 4/10. A gentle marimba pulse begins with an upright bass, the feeling of a life story about to unfold.\n[0:42 - 1:10] Section 3: Intensity 3/10. Tender and nostalgic: koto and felt piano, a child's world in a small family shop, warm and simple.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 3,
+     "desc": "A single questioning felt piano figure with a soft koto pluck over a low held tone, curious and a little ironic."
+    },
+    {
+     "t0": 25,
+     "t1": 42,
+     "intensidad": 4,
+     "desc": "A gentle marimba pulse begins with an upright bass, the feeling of a life story about to unfold."
+    },
+    {
+     "t0": 42,
+     "t1": 70,
+     "intensidad": 3,
+     "desc": "Tender and nostalgic: koto and felt piano, a child's world in a small family shop, warm and simple."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "nostálgico",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 72.05,
+    "rms_db": -15.2,
+    "tempo": 161.5,
+    "brillo_hz": 657,
+    "energia": [
+     0.32,
+     0.27,
+     0.28,
+     0.41,
+     0.62,
+     0.67,
+     0.64,
+     0.64,
+     0.96,
+     0.88,
+     1.0,
+     0.32
+    ],
+    "huecos": [],
+    "dinamica": 0.73
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "sopa_instantanea__lyria_tramo2": {
+   "id": "sopa_instantanea__lyria_tramo2",
+   "video": "sopa_instantanea",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sopa_instantanea\\audio\\lyria_tramo2.mp3",
+   "archivo": "sopa_instantanea__lyria_tramo2.mp3",
+   "md5": "a8a2c3840c46b0e23ad81e0af6e247b2",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
+   "tramo": 2,
+   "escenas": [
+    "guerra",
+    "fila",
+    "carcel",
+    "quiebra"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché. Total length: exactly 1:40 (100 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained low tone that can flow into the next piece.\n\n[0:00 - 0:22] Section 1: Intensity 2/10. Dark and hollow: low drones and distant taiko, the sound of loss, sparse and heavy.\n[0:22 - 0:50] Section 2: Intensity 3/10. Cold winter night: shakuhachi over thin strings, hungry and patient, a small spark of an idea at the end.\n[0:50 - 1:10] Section 3: Intensity 3/10. Stern and cold: slow low strings, a ticking pulse, closed walls.\n[1:10 - 1:40] Section 4: Intensity 2/10. Everything falls: a slow descending piano line, silence between notes, then a small stubborn held tone.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 22,
+     "intensidad": 2,
+     "desc": "Dark and hollow: low drones and distant taiko, the sound of loss, sparse and heavy."
+    },
+    {
+     "t0": 22,
+     "t1": 50,
+     "intensidad": 3,
+     "desc": "Cold winter night: shakuhachi over thin strings, hungry and patient, a small spark of an idea at the end."
+    },
+    {
+     "t0": 50,
+     "t1": 70,
+     "intensidad": 3,
+     "desc": "Stern and cold: slow low strings, a ticking pulse, closed walls."
+    },
+    {
+     "t0": 70,
+     "t1": 100,
+     "intensidad": 2,
+     "desc": "Everything falls: a slow descending piano line, silence between notes, then a small stubborn held tone."
+    }
+   ],
+   "intensidad": [
+    2,
+    3,
+    3,
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "contrabajo",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "oscuro",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 93.75,
+    "rms_db": -15.3,
+    "tempo": 123.0,
+    "brillo_hz": 744,
+    "energia": [
+     0.39,
+     0.37,
+     1.0,
+     0.75,
+     0.87,
+     0.78,
+     0.81,
+     0.7,
+     0.71,
+     0.6,
+     0.34,
+     0.07
+    ],
+    "huecos": [],
+    "dinamica": 0.93
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "sopa_instantanea__lyria_tramo3": {
+   "id": "sopa_instantanea__lyria_tramo3",
+   "video": "sopa_instantanea",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sopa_instantanea\\audio\\lyria_tramo3.mp3",
+   "archivo": "sopa_instantanea__lyria_tramo3.mp3",
+   "md5": "cacd6a2826ff922ca7d1ba0fcb8750a8",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
+   "tramo": 3,
+   "escenas": [
+    "cobertizo",
+    "tempura",
+    "lanzamiento"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché. Total length: exactly 1:50 (110 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a held tone. End on a bright sustained tone that can flow into the next piece.\n\n[0:00 - 0:40] Section 1: Intensity 4/10. Stubborn tinkering through the night: plucked shamisen, ticking marimba, small comic failures and restarts.\n[0:40 - 1:15] Section 2: Intensity 6/10. Delighted discovery: bright marimba and glockenspiel flourish with sizzling texture, a warm eureka.\n[1:15 - 1:50] Section 3: Intensity 6/10. Hopeful bustle: a lively pizzicato and koto groove, a small shop filling with people.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 40,
+     "intensidad": 4,
+     "desc": "Stubborn tinkering through the night: plucked shamisen, ticking marimba, small comic failures and restarts."
+    },
+    {
+     "t0": 40,
+     "t1": 75,
+     "intensidad": 6,
+     "desc": "Delighted discovery: bright marimba and glockenspiel flourish with sizzling texture, a warm eureka."
+    },
+    {
+     "t0": 75,
+     "t1": 110,
+     "intensidad": 6,
+     "desc": "Hopeful bustle: a lively pizzicato and koto groove, a small shop filling with people."
+    }
+   ],
+   "intensidad": [
+    4,
+    6,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "juguetón"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 109.3,
+    "rms_db": -14.7,
+    "tempo": 123.0,
+    "brillo_hz": 1364,
+    "energia": [
+     0.25,
+     0.33,
+     0.47,
+     0.55,
+     0.75,
+     0.75,
+     0.81,
+     0.97,
+     0.95,
+     1.0,
+     0.79,
+     0.16
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "sopa_instantanea__lyria_tramo4": {
+   "id": "sopa_instantanea__lyria_tramo4",
+   "video": "sopa_instantanea",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sopa_instantanea\\audio\\lyria_tramo4.mp3",
+   "archivo": "sopa_instantanea__lyria_tramo4.mp3",
+   "md5": "9a7ecd6bb8b2da2455975c80650717e1",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
+   "tramo": 4,
+   "escenas": [
+    "copias",
+    "america",
+    "vaso",
+    "nieve"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché. Total length: exactly 2:00 (120 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End on a sustained tone that can flow into the next piece.\n\n[0:00 - 0:22] Section 1: Intensity 5/10. Tension and rivalry: busy low strings, a nervous pulse, many hands copying.\n[0:22 - 0:55] Section 2: Intensity 4/10. Wide and curious: a gentle travelling groove with piano and brushed drums, a new world.\n[0:55 - 1:30] Section 3: Intensity 6/10. Inventive and playful: pizzicato and marimba building a clever little machine, light and bright.\n[1:30 - 2:00] Section 4: Intensity 5/10. Cold and tense live broadcast: low strings and soft taiko under falling snow, then warmth breaking through.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 22,
+     "intensidad": 5,
+     "desc": "Tension and rivalry: busy low strings, a nervous pulse, many hands copying."
+    },
+    {
+     "t0": 22,
+     "t1": 55,
+     "intensidad": 4,
+     "desc": "Wide and curious: a gentle travelling groove with piano and brushed drums, a new world."
+    },
+    {
+     "t0": 55,
+     "t1": 90,
+     "intensidad": 6,
+     "desc": "Inventive and playful: pizzicato and marimba building a clever little machine, light and bright."
+    },
+    {
+     "t0": 90,
+     "t1": 120,
+     "intensidad": 5,
+     "desc": "Cold and tense live broadcast: low strings and soft taiko under falling snow, then warmth breaking through."
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 118.99,
+    "rms_db": -15.0,
+    "tempo": 123.0,
+    "brillo_hz": 1334,
+    "energia": [
+     0.17,
+     0.59,
+     0.92,
+     0.91,
+     1.0,
+     0.9,
+     0.76,
+     0.75,
+     0.87,
+     0.75,
+     0.6,
+     0.23
+    ],
+    "huecos": [],
+    "dinamica": 0.83
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
+  },
+  "sopa_instantanea__lyria_tramo5": {
+   "id": "sopa_instantanea__lyria_tramo5",
+   "video": "sopa_instantanea",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sopa_instantanea\\audio\\lyria_tramo5.mp3",
+   "archivo": "sopa_instantanea__lyria_tramo5.mp3",
+   "md5": "63665a40c6160bbad8d4e96445555491",
+   "canal": "pieza_oculta",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
+   "tramo": 5,
+   "escenas": [
+    "espacio",
+    "mexico",
+    "cierre"
+   ],
+   "estilo": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché.",
+   "prompt": "Warm, handmade documentary score for a stop-motion story about a ruined man who invents a meal in his backyard: koto and shamisen plucks blended with pizzicato strings, marimba, felt piano, soft shakuhachi flute, light hand percussion and an upright bass. Curious and human, never epic, never cliché. Total length: exactly 1:33 (93 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin very softly. End with a natural slow fade-out to silence.\n\n[0:00 - 0:30] Section 1: Intensity 5/10. Floating and wondrous: soft pads, glockenspiel and koto harmonics, weightless and proud.\n[0:30 - 1:00] Section 2: Intensity 6/10. Warm and wide: flowing piano arpeggios with a soft guitar and koto, a sunny everyday feeling.\n[1:00 - 1:33] Section 3: Intensity 4/10. Return to the opening piano figure, now warm and resolved, a small smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 30,
+     "intensidad": 5,
+     "desc": "Floating and wondrous: soft pads, glockenspiel and koto harmonics, weightless and proud."
+    },
+    {
+     "t0": 30,
+     "t1": 60,
+     "intensidad": 6,
+     "desc": "Warm and wide: flowing piano arpeggios with a soft guitar and koto, a sunny everyday feeling."
+    },
+    {
+     "t0": 60,
+     "t1": 93,
+     "intensidad": 4,
+     "desc": "Return to the opening piano figure, now warm and resolved, a small smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    5,
+    6,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 89.36,
+    "rms_db": -15.0,
+    "tempo": 161.5,
+    "brillo_hz": 802,
+    "energia": [
+     0.23,
+     0.2,
+     0.19,
+     0.24,
+     0.79,
+     0.91,
+     1.0,
+     0.71,
+     0.53,
+     0.46,
+     0.38,
+     0.12
+    ],
+    "huecos": [],
+    "dinamica": 0.88
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-23"
   }
  },
- "actualizado": "2026-10-23 17:17"
+ "actualizado": "2026-10-23 19:52"
 }

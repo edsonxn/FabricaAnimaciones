@@ -55,3 +55,10 @@ _Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 1
   Al empezar, banjo_tooie llevaba 150 vistas en 3 días y 47,9 % visto (la mejor retención del canal).
 - **Hipótesis:** un ranking de dificultad del mismo clásico retiene igual (≥ 45 % visto) y saca más vistas por búsqueda
   («Canary Mary», «Banjo Tooie 100%») que el de secretos. Programado mar 27-oct 18:00 CDMX (ciclo nuevo de 3 días). Registro a 7 días: (pendiente, ~3-nov).
+
+## 24-oct-2026 — Video 3 de la etapa Nintendo: `majora_mask`
+- «Zelda Majora's Mask: su historia y los 12 secretos QUE IGNORASTE» (15:20, EFWqji6rqIg), programado vie 30-oct 18:00 CDMX.
+  Variable que cambia respecto a zelda_oot: SOLO el juego (la secuela, que arrastra la ola del remake). Novedades de forma (no de
+  fórmula): fichas translúcidas con la interfaz del juego, OST oficial en vez de Lyria, mapas reales con ruta.
+- **Hipótesis:** la secuela de un juego en tendencia supera a banjo_tooie en vistas a 7 días y se acerca a zelda_oot; ≥ 35 % visto.
+  Registro a 7 días: (pendiente, ~7-nov).

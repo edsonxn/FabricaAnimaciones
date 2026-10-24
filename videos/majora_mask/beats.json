@@ -1,0 +1,858 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.85,
+  "tipo": "video",
+  "texto": "Este mes, Nintendo subió a su aplicación de música la banda sonora completa de Majora's Mask.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.85,
+  "t1": 16.288,
+  "tipo": "video",
+  "texto": "Ciento once pistas, veintiséis años después. Y no es casualidad. El cinco de noviembre llega el remake de Ocarina of Time,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.288,
+  "t1": 25.207,
+  "tipo": "video",
+  "texto": "y Majora's Mask es el juego que nació justo de sus restos. Un juego hecho en un solo año, con una luna que te mira desde el cielo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.207,
+  "t1": 34.066,
+  "tipo": "video",
+  "texto": "y tres días que se repiten una y otra vez. Un cartero que no puede huir, unas máscaras que guardan a gente muerta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.066,
+  "t1": 43.124,
+  "tipo": "video",
+  "texto": "y un micrófono que nunca llegaste a usar. Así que hoy te cuento cómo se hizo, la historia de Termina, y los doce secretos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.124,
+  "t1": 52.963,
+  "tipo": "video",
+  "texto": "de Majora's Mask que seguramente ignoraste. Cuando terminó Ocarina of Time, a Eiji Aonuma le tocaba un encargo poco emocionante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.963,
+  "t1": 58.078,
+  "tipo": "video",
+  "texto": "Rehacer sus mazmorras para una expansión, la que se llamaba Ura Zelda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.078,
+  "t1": 68.292,
+  "tipo": "video",
+  "texto": "Aonuma no quería volver a hacer las mismas mazmorras, y pidió hacer un juego nuevo. Shigeru Miyamoto le dijo que sí, pero con una condición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.292,
+  "t1": 77.695,
+  "tipo": "video",
+  "texto": "Tenía que estar terminado en un año, reutilizando los modelos en tres dimensiones de Ocarina of Time. El proyecto empezó en febrero de mil novecientos noventa y nueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.695,
+  "t1": 85.005,
+  "tipo": "video",
+  "texto": "con un nombre provisional. Zelda Gaiden, algo así como Zelda, la historia paralela.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.005,
+  "t1": 96.81,
+  "tipo": "video",
+  "texto": "La idea del tiempo salió de Yoshiaki Koizumi, el otro director. Él estaba diseñando un juego de mesa de policías y ladrones, en el que había que atrapar a un criminal en una semana de juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 96.81,
+  "t1": 101.31,
+  "tipo": "video",
+  "texto": "Al principio el ciclo de Majora's Mask también iba a durar una semana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.31,
+  "t1": 109.911,
+  "tipo": "video",
+  "texto": "Pero era demasiado largo para repetirlo, y no daba tiempo a terminarlo en un año. Así que se quedó en tres días.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.911,
+  "t1": 122.74,
+  "tipo": "video",
+  "texto": "Entre las influencias citadas está también Corre, Lola, corre, una película alemana de mil novecientos noventa y ocho donde la protagonista repite la misma carrera de veinte minutos hasta salvar a su novio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 122.74,
+  "t1": 128.16,
+  "tipo": "video",
+  "texto": "Y el juego pedía más de lo que la consola tenía. Era obligatorio el Expansion Pak,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.16,
+  "t1": 135.134,
+  "tipo": "video",
+  "texto": "el accesorio que doblaba la memoria de cuatro a ocho megas. En Japón se vendía en el mismo paquete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 135.134,
+  "t1": 148.92,
+  "tipo": "video",
+  "texto": "Salió en Japón en abril del dos mil, y en América el veintiséis de octubre. Sacó un treinta y siete sobre cuarenta en Famitsu, un noventa y cinco en Metacritic, y vendió más de tres millones de copias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 148.92,
+  "t1": 153.4,
+  "tipo": "video",
+  "texto": "Ahora, la historia. Unos meses después de Ocarina of Time,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.4,
+  "t1": 164.137,
+  "tipo": "video",
+  "texto": "Link se va de Hyrule a caballo, en un viaje secreto, buscando a un amigo querido. En un bosque, un Skull Kid con una máscara extraña y dos hadas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.137,
+  "t1": 173.384,
+  "tipo": "video",
+  "texto": "Tatl y Tael, le roban a Epona y la ocarina. Link lo persigue, cae por un tronco hueco, y aparece en otro mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.384,
+  "t1": 181.151,
+  "tipo": "video",
+  "texto": "Ese mundo es Termina. Y lo primero que le pasa es que el Skull Kid lo convierte en un Deku, una criatura de madera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.151,
+  "t1": 191.357,
+  "tipo": "video",
+  "texto": "Allí conoce al vendedor de máscaras felices. Skull Kid le robó su tesoro, la Máscara de Majora, un objeto que da un poder terrible a quien la lleva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 191.357,
+  "t1": 197.677,
+  "tipo": "video",
+  "texto": "Y con ese poder, el Skull Kid está tirando la luna sobre Ciudad Reloj. Una luna con cara,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.677,
+  "t1": 207.999,
+  "tipo": "video",
+  "texto": "que caerá en tres días, justo cuando empieza el carnaval. Link recupera su ocarina, toca la Canción del Tiempo, y vuelve al amanecer del primer día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.999,
+  "t1": 213.178,
+  "tipo": "video",
+  "texto": "Así empieza el ciclo. Cada tres días, todo vuelve a empezar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 213.178,
+  "t1": 226.481,
+  "tipo": "video",
+  "texto": "Para pararla, tiene que despertar a cuatro gigantes que duermen en los templos de Termina. El pantano del sur, las montañas nevadas del norte, la gran bahía del oeste y el valle de Ikana al este.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 226.481,
+  "t1": 232.011,
+  "tipo": "video",
+  "texto": "Esos gigantes eran los amigos del Skull Kid. Cuando se fueron a proteger el mundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.011,
+  "t1": 240.846,
+  "tipo": "video",
+  "texto": "él se sintió abandonado, y esa soledad fue lo que la máscara aprovechó. Con los cuatro despiertos, los gigantes sostienen la luna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.846,
+  "t1": 249.391,
+  "tipo": "video",
+  "texto": "La máscara abandona al Skull Kid, entra en la luna, y Link la sigue. Vamos con los secretos. Número doce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.391,
+  "t1": 257.498,
+  "tipo": "video",
+  "texto": "El hombre que no puede huir. En Ciudad Reloj, cuando la luna está a punto de caer, casi todo el mundo se va.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.498,
+  "t1": 265.398,
+  "tipo": "video",
+  "texto": "Pero el cartero sigue repartiendo cartas, mirando el reloj, como si no pasara nada. ¿Por qué no huye?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.398,
+  "t1": 276.523,
+  "tipo": "video",
+  "texto": "Porque su horario no se lo permite. Su vida entera es cumplir el reparto a la hora exacta. Solo se va la última noche, cuando Madame Aroma, la alcaldesa, le da permiso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.523,
+  "t1": 284.589,
+  "tipo": "video",
+  "texto": "Y antes de correr, te regala su gorra de cartero. Es uno de los detalles más tristes y más graciosos del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.589,
+  "t1": 294.223,
+  "tipo": "video",
+  "texto": "Un hombre al que el fin del mundo no asusta tanto como llegar tarde. En el once, las canciones que no salen en el menú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 294.223,
+  "t1": 302.132,
+  "tipo": "video",
+  "texto": "Tres días son poco tiempo, y el juego lo sabe. Por eso esconde dos canciones que no aparecen en tu lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.132,
+  "t1": 311.48,
+  "tipo": "video",
+  "texto": "Si tocas la Canción del Tiempo al revés, el reloj se ralentiza. En la Nintendo sesenta y cuatro, el tiempo pasa a un tercio de su velocidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 311.48,
+  "t1": 319.756,
+  "tipo": "video",
+  "texto": "Y si tocas cada nota dos veces, la Canción del Doble Tiempo te salta directamente a la siguiente mañana o la siguiente noche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 319.756,
+  "t1": 329.126,
+  "tipo": "video",
+  "texto": "¿Quién te lo cuenta? Un espantapájaros que baila. Muchos jugadores terminaron el juego sin hablar nunca con él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 329.126,
+  "t1": 333.886,
+  "tipo": "video",
+  "texto": "Número diez. Lo que viene del cielo al rancho Romani.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 333.886,
+  "t1": 344.446,
+  "tipo": "video",
+  "texto": "En el rancho vive una niña, Romani, que te pide ayuda con algo muy raro. Dice que la primera noche, de madrugada, llegan Ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.446,
+  "t1": 352.072,
+  "tipo": "video",
+  "texto": "Unos seres que bajan de una luz y se llevan a las vacas. Si te quedas a defender el granero con tu arco hasta el amanecer,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.072,
+  "t1": 360.084,
+  "tipo": "video",
+  "texto": "los espantas, y Romani te regala una botella de leche. Pero si fallas, Ellos también se llevan a Romani.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.084,
+  "t1": 370.875,
+  "tipo": "video",
+  "texto": "Al día siguiente ella vuelve, pero no recuerda nada, se agarra la cabeza, y apenas habla. Y ya no puedes acompañar a su hermana Cremia con la leche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.875,
+  "t1": 378.622,
+  "tipo": "video",
+  "texto": "En un juego de Nintendo, una abducción con consecuencias. Así de raro era Majora's Mask.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.622,
+  "t1": 387.435,
+  "tipo": "video",
+  "texto": "En el nueve, el juego que te castigaba por guardar. Para guardar de verdad en Majora's Mask tienes que tocar la Canción del Tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.435,
+  "t1": 393.923,
+  "tipo": "video",
+  "texto": "Y eso te devuelve al primer día. Perdiendo tus rupias y tus objetos de usar y tirar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.923,
+  "t1": 403.217,
+  "tipo": "video",
+  "texto": "Había otra forma, las estatuas de búho. Pero ese guardado era temporal. Lo cargabas una vez, y se borraba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.217,
+  "t1": 412.582,
+  "tipo": "video",
+  "texto": "Así que si te quedaban diez minutos para la luna y tenías que irte a cenar, la decisión era dura. En la versión de tres de ese, de dos mil quince,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.582,
+  "t1": 423.039,
+  "tipo": "video",
+  "texto": "Nintendo cambió todo eso. Los búhos y unas estatuas nuevas guardan para siempre, y el cuaderno de los Bombers se rellena solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 423.039,
+  "t1": 429.362,
+  "tipo": "video",
+  "texto": "Número ocho. La misión más larga del juego. Anju lleva el hotel de Ciudad Reloj,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 429.362,
+  "t1": 438.625,
+  "tipo": "video",
+  "texto": "y está a punto de casarse con Kafei. Pero Kafei ha desaparecido. Lo que nadie sabe es que el Skull Kid lo convirtió en niño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.625,
+  "t1": 444.767,
+  "tipo": "video",
+  "texto": "y que un ladrón, Sakon, le robó la Máscara del Sol, la que iba a usar en la boda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 444.767,
+  "t1": 455.361,
+  "tipo": "video",
+  "texto": "Para reunirlos tienes que seguirlos los tres días enteros, a horas exactas. Es la única misión del cuaderno de los Bombers que ocupa un ciclo completo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.361,
+  "t1": 466.687,
+  "tipo": "video",
+  "texto": "Por el camino te llevas la máscara de Keaton, la gorra del cartero y la máscara de los novios. Y si lo logras, Kafei llega al hotel de madrugada, en las últimas horas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 466.687,
+  "t1": 472.247,
+  "tipo": "video",
+  "texto": "Se unen con sus máscaras en el hotel, a minutos de que caiga la luna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.247,
+  "t1": 480.935,
+  "tipo": "video",
+  "texto": "Saben que es el final, y deciden recibirlo juntos. En el siete, un viejo conocido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.935,
+  "t1": 490.471,
+  "tipo": "video",
+  "texto": "Al final del juego, el Skull Kid le dice a Link algo muy curioso. Que huele igual que el niño hada que le enseñó una canción en el bosque.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.471,
+  "t1": 499.888,
+  "tipo": "video",
+  "texto": "En Ocarina of Time, en el Bosque Perdido, hay un Skull Kid sentado en un tronco. Si le tocas la canción de Saria, te da una pieza de corazón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.888,
+  "t1": 509.283,
+  "tipo": "video",
+  "texto": "Ese niño hada era Link. Así que el villano de Majora's Mask sería el mismo Skull Kid al que hiciste bailar años antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 509.283,
+  "t1": 516.583,
+  "tipo": "video",
+  "texto": "Nintendo nunca lo ha dicho con todas las letras, pero el juego deja la pista ahí. Y le da al final otro sentido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.583,
+  "t1": 523.109,
+  "tipo": "video",
+  "texto": "El Skull Kid solo quería un amigo, y el amigo era Link. Número seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 523.109,
+  "t1": 533.104,
+  "tipo": "video",
+  "texto": "La máscara más poderosa. Dentro de la luna hay un prado, un árbol, y cuatro niños que llevan las máscaras de los jefes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.104,
+  "t1": 542.579,
+  "tipo": "video",
+  "texto": "Corretean por el prado, y te piden máscaras a cambio de jugar con ellos. Mucha gente dice que necesitas las veinticuatro máscaras para la recompensa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 542.579,
+  "t1": 550.347,
+  "tipo": "video",
+  "texto": "Pero no es así. Necesitas las veinte que no te transforman. Cuando se las das todas, el último niño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.347,
+  "t1": 559.489,
+  "tipo": "video",
+  "texto": "el de la Máscara de Majora, te regala la Máscara de la Fiera Deidad. Con ella, Link se convierte en un guerrero adulto de ojos blancos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.489,
+  "t1": 566.674,
+  "tipo": "video",
+  "texto": "con una espada doble que lanza rayos. La pelea final pasa de difícil a casi injusta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.674,
+  "t1": 576.849,
+  "tipo": "video",
+  "texto": "Pero tiene truco. En la Nintendo sesenta y cuatro solo funciona en las peleas contra jefes. Fuera de ellas, no te la puedes poner.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.849,
+  "t1": 585.597,
+  "tipo": "video",
+  "texto": "Número cinco. Las máscaras que guardan a un muerto. En las montañas del norte encuentras a un fantasma junto a una tumba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.597,
+  "t1": 591.947,
+  "tipo": "video",
+  "texto": "Es Darmani, el héroe de los Goron, que murió al caer por un barranco por culpa de un alud.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 591.947,
+  "t1": 602.092,
+  "tipo": "video",
+  "texto": "Le tocas la Canción de Curación, su alma descansa, y te deja una máscara con su cara. Con ella, Link se convierte en Darmani.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.092,
+  "t1": 609.412,
+  "tipo": "video",
+  "texto": "En la gran bahía pasa lo mismo. Mikau, el guitarrista de una banda zora, llega a la orilla herido de muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 609.412,
+  "t1": 617.867,
+  "tipo": "video",
+  "texto": "Las piratas le robaron los huevos de su compañera Lulu. Tú le tocas la canción, él muere, y tú cavas su tumba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.867,
+  "t1": 627.101,
+  "tipo": "video",
+  "texto": "Su lápida es su propia guitarra. Así que, cada vez que te pones esas máscaras, vas por Termina con la cara de alguien que ya no está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 627.101,
+  "t1": 635.363,
+  "tipo": "video",
+  "texto": "Y los demás personajes te saludan como si fueran ellos. En el cuatro, ¿de quién era la máscara Deku?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.363,
+  "t1": 643.87,
+  "tipo": "video",
+  "texto": "La primera transformación del juego es la máscara Deku. Y el juego nunca dice de quién era. Pero deja pistas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.87,
+  "t1": 653.97,
+  "tipo": "video",
+  "texto": "En el palacio Deku, el mayordomo del rey te dice que le recuerdas a su hijo, que desapareció. Y en los créditos, ese mayordomo llora frente a un árbol retorcido,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.97,
+  "t1": 664.026,
+  "tipo": "video",
+  "texto": "con forma de niño Deku. Y hay más. En el valle de Ikana aprendes la Elegía del Vacío, una canción que deja una estatua de ti mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 664.026,
+  "t1": 670.9,
+  "tipo": "video",
+  "texto": "Una por cada forma de Link. La estatua de Darmani, la de Mikau, la del propio Link,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.9,
+  "t1": 677.543,
+  "tipo": "video",
+  "texto": "y la de Link Deku, que tiene la cara del hijo del mayordomo. Nintendo nunca lo ha confirmado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 677.543,
+  "t1": 686.359,
+  "tipo": "video",
+  "texto": "Pero todo apunta a que la máscara Deku es el alma de ese niño, y que, cada vez que te la pones, llevas su cara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.359,
+  "t1": 696.337,
+  "tipo": "video",
+  "texto": "Número tres. El cartucho maldito que nunca existió. En septiembre de dos mil diez, un usuario de 4chan contó que había comprado un cartucho",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.337,
+  "t1": 706.266,
+  "tipo": "video",
+  "texto": "de Majora's Mask en una venta de garaje. Con una partida guardada a nombre de Ben. Según su relato, el juego se rompía de formas imposibles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 706.266,
+  "t1": 713.246,
+  "tipo": "video",
+  "texto": "Un cuarto día que no existe, una ciudad vacía, y una estatua de Link que lo seguía y lo miraba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.246,
+  "t1": 721.351,
+  "tipo": "video",
+  "texto": "Lo fue publicando por capítulos, con videos de la partida, y miles de personas lo siguieron en directo, día a día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 721.351,
+  "t1": 730.851,
+  "tipo": "video",
+  "texto": "Pero todo era ficción. Lo escribió Alex Hall, que firmaba como Jadusable. Era una historia de terror con forma de juego de realidad alternativa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 730.851,
+  "t1": 738.904,
+  "tipo": "video",
+  "texto": "y no terminó hasta octubre de dos mil veinte. Ben Drowned se convirtió en una de las leyendas más famosas de internet.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.904,
+  "t1": 746.517,
+  "tipo": "video",
+  "texto": "Y no eligió Majora's Mask por casualidad. Ningún otro Zelda daba tanto miedo sin intentarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.517,
+  "t1": 756.82,
+  "tipo": "video",
+  "texto": "Número dos. Un micrófono que nunca usaste. En Japón, Nintendo vendía un micrófono para la Nintendo sesenta y cuatro. Se usaba en Hey You,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 756.82,
+  "t1": 765.554,
+  "tipo": "video",
+  "texto": "Pikachu!, para hablarle a Pikachu. Y resulta que Majora's Mask tiene, escondido en el código, soporte para ese micrófono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 765.554,
+  "t1": 773.207,
+  "tipo": "video",
+  "texto": "En todas las versiones del cartucho. Según lo que encontraron los investigadores, ibas a poder sacar fotos con tu voz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 773.207,
+  "t1": 782.445,
+  "tipo": "video",
+  "texto": "y despertar a un Deku dormido hablándole en japonés. Pero el juego lo desactiva con una variable que nunca toma el valor necesario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 782.445,
+  "t1": 792.619,
+  "tipo": "video",
+  "texto": "El código estuvo ahí veinticuatro años sin que nadie lo usara. En diciembre de dos mil veinticuatro, un aficionado lo encendió y lo probó con el micrófono real.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 792.619,
+  "t1": 801.3,
+  "tipo": "video",
+  "texto": "Y funcionaba. Majora's Mask iba a ser uno de los primeros juegos de la consola que te escuchaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.3,
+  "t1": 807.202,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. La teoría que convirtió Termina en otra cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.202,
+  "t1": 815.422,
+  "tipo": "video",
+  "texto": "Hay una idea que los fans repiten desde hace años. Que cada zona de Termina es una de las cinco etapas del duelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 815.422,
+  "t1": 826.929,
+  "tipo": "video",
+  "texto": "Ciudad Reloj sería la negación, gente que sigue con el carnaval aunque la luna está encima. El pantano sería la ira, el rey Deku castigando a un mono inocente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 826.929,
+  "t1": 833.049,
+  "tipo": "video",
+  "texto": "Las montañas nevadas serían la negociación, con el fantasma de Darmani pidiendo otra oportunidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 833.049,
+  "t1": 841.155,
+  "tipo": "video",
+  "texto": "La gran bahía, la depresión, con Lulu que perdió la voz. Y el valle de Ikana, la aceptación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 841.155,
+  "t1": 853.07,
+  "tipo": "video",
+  "texto": "Un reino de muertos que ya no luchan contra su destino. Algunos van más allá, y dicen que Link murió al caer por el tronco, y que Termina es una especie de limbo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 853.07,
+  "t1": 859.37,
+  "tipo": "video",
+  "texto": "Ojo, todo esto es una teoría. Aonuma solo ha dicho que algunos episodios tenían un tono",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 859.37,
+  "t1": 868.078,
+  "tipo": "video",
+  "texto": "emocional buscado a propósito, no que cada zona sea una etapa. Pero que tanta gente lo vea así dice mucho del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 868.078,
+  "t1": 876.478,
+  "tipo": "video",
+  "texto": "Majora's Mask habla de perder a alguien, de lo que haces cuando sabes que se acaba el tiempo. Y eso, en un juego hecho en un año,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 876.478,
+  "t1": 885.705,
+  "tipo": "video",
+  "texto": "es mucho decir. Esos son los doce secretos de Majora's Mask. Un cartero puntual, unas máscaras con dueño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.705,
+  "t1": 893.575,
+  "tipo": "video",
+  "texto": "un micrófono olvidado y una luna que nunca dejó de mirarnos. Es el Zelda más raro, el más triste,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.575,
+  "t1": 900.778,
+  "tipo": "video",
+  "texto": "y para muchos el mejor. Y salió de un reto imposible, un juego entero en un año.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 900.778,
+  "t1": 911.45,
+  "tipo": "video",
+  "texto": "¿Tú llegaste a sacar la Máscara de la Fiera Deidad? ¿O sabías lo del micrófono? Cuéntamelo en los comentarios. Y si quieres más secretos de otro clásico de la Nintendo sesenta y cuatro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.45,
+  "t1": 919.5652,
+  "tipo": "video",
+  "texto": "déjalo también abajo. Nos vemos en el amanecer de la próxima crónica.",
+  "clip_s": 8
+ }
+]

@@ -16,6 +16,7 @@ Cada juego tiene su TEMA (trazo, marcadores, letra y título como en su propia i
   "gaming"  (Nintendo/plataformas de Rare) bolitas miel que brotan con rebote como el mapa de un plataformas; pines de colores;
             Arial Rounded en píldora chocolate; título Cooper Black.
   "zelda"   (aventura de fantasía) puntos dorados, triángulo dorado en la meta, Engravers MT grabado sobre banda azul noche.
+  "majora"  (Majora's Mask) puntos rosa, rombo amarillo de las púas en la meta, letra del diálogo N64 sobre humo; título serifa.
 Para otro juego de Crónicas del gaming: copiar un tema de TEMAS y cambiar colores/letras a la interfaz de ESE juego.
 
 Uso desde videos/<v>/efectos.py (FX `pantalla` si cubre el cuadro, `mg` si va en ventana):
@@ -85,6 +86,11 @@ TEMAS = {
     "zelda": dict(trazo="puntos", color=(246, 206, 110), borde=(30, 22, 10), grueso=6, letra=("ENGR.TTF", 36, None),
                   texto=(250, 240, 215), contorno=None, titulo=("ENGR.TTF", 72, None), subt=("ANTQUABI.TTF", 38, None),
                   tinte=(.95, .95, .95, .05), fondo=(8, 10, 22), caja=(8, 10, 22), filo=(246, 206, 110)),
+    # Majora's Mask (majora_mask, 23-oct-2026): ruta de puntos ROSA (ojos de la máscara), meta = rombo amarillo de sus púas,
+    # nombres en la letra del diálogo de N64 sobre humo negro, título en la serifa blanca del cartel «Amanecer del primer día».
+    "majora": dict(trazo="puntos", color=(255, 92, 150), borde=(40, 10, 50), grueso=6, letra=("ARLRDBD.TTF", 40, None),
+                   texto=(250, 250, 248), contorno=None, titulo=("georgiab.ttf", 84, None), subt=("georgiaz.ttf", 38, None),
+                   tinte=(.92, .90, .96, .06), fondo=(10, 4, 18)),
 }
 
 
@@ -204,6 +210,17 @@ def _marcador(tema, tipo):
                 d.polygon(pts, fill=(255, 240, 120))
             else:
                 d.ellipse((c - 9, c - 61, c + 9, c - 43), fill=(255, 250, 235))
+        elif tema == "majora":
+            col = (255, 80, 80) if tipo == "peligro" else T["color"]
+            if tipo == "meta":                              # rombo amarillo de las púas con el ojo rosa
+                im.alpha_composite(_halo(30, (255, 206, 60), 150), (int(c - 60), int(c - 60)))
+                p = [(c, c - 34), (c + 26, c), (c, c + 34), (c - 26, c)]
+                d.polygon(p, fill=(250, 206, 60), outline=T["borde"], width=4)
+                d.ellipse((c - 10, c - 10, c + 10, c + 10), fill=col, outline=T["borde"], width=3)
+            else:
+                r = 14 if tipo == "inicio" else 11
+                d.ellipse((c - r - 5, c - r - 5, c + r + 5, c + r + 5), fill=(120, 50, 160))
+                d.ellipse((c - r, c - r, c + r, c + r), fill=col)
         elif tema == "zelda":
             col = (214, 44, 32) if tipo == "peligro" else T["color"]
             if tipo == "meta":                              # triángulo dorado
@@ -237,7 +254,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes"):                         # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora"):               # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))
@@ -261,7 +278,7 @@ def _titulo(tema, titulo, sub):
         f = _fuente(nom, tam, var)
         fs = _fuente(*T["subt"])
         s = titulo.upper() if tema in ("er", "tes", "zelda") else titulo
-        track = {"er": 10, "tes": 9, "zelda": 6}.get(tema, 0)
+        track = {"er": 10, "tes": 9, "zelda": 6, "majora": 3}.get(tema, 0)
         dd = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
         tw = int(_track(dd, s, f, track))
         sw = int(dd.textlength(sub or "", font=fs))
@@ -289,8 +306,9 @@ def _titulo(tema, titulo, sub):
                 for sgn in (-1, 1):
                     x0 = cx + sgn * (k / 60) * half
                     d.line([(x0, ly), (x0 + sgn * half / 60, ly)], fill=T["color"] + (a,), width=2)
-            if tema == "tes":
-                d.polygon([(cx, ly - 9), (cx + 9, ly), (cx, ly + 9), (cx - 9, ly)], fill=T["color"])
+            if tema in ("tes", "majora"):
+                d.polygon([(cx, ly - 9), (cx + 9, ly), (cx, ly + 9), (cx - 9, ly)],
+                          fill=(250, 206, 60) if tema == "majora" else T["color"])
         if sub:
             col = (255, 255, 255) if tema == "wow" else T["texto"]
             st = (0, 0, 0) if tema in ("wow", "gaming") else None
@@ -517,14 +535,24 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             spr = fotos[i]
             fh, fw = spr.shape[:2]
             sep = 60 if not ventana else 36
+            mejor = None                                    # sin hueco libre: el que menos tapa (el título pesa el triple)
             for cx_, cy_ in ((x, y - sep - fh / 2), (x + sep + fw / 2, y), (x - sep - fw / 2, y), (x, y + sep + fh / 2),
-                             (x + sep + fw / 2, y - fh / 2), (x - sep - fw / 2, y - fh / 2)):
+                             (x + sep + fw / 2, y - fh / 2), (x - sep - fw / 2, y - fh / 2),
+                             (x + sep + fw / 2, y + fh / 2), (x - sep - fw / 2, y + fh / 2)):
+                cx_ = min(max(cx_, fw / 2), VW - fw / 2)
+                cy_ = min(max(cy_, fh / 2), VH - fh / 2)
                 r = (cx_ - fw / 2, cy_ - fh / 2, cx_ + fw / 2, cy_ + fh / 2)
-                if r[0] >= 0 and r[2] <= VW and r[1] >= 0 and r[3] <= VH and not any(
-                        r[0] < q[2] and q[0] < r[2] and r[1] < q[3] and q[1] < r[3] for q in ocupados):
+                tapa = sum(max(0, min(r[2], q[2]) - max(r[0], q[0])) * max(0, min(r[3], q[3]) - max(r[1], q[1]))
+                           * (3 if q is rect_t else 1) for q in ocupados)
+                if mejor is None or tapa < mejor[0]:
+                    mejor = (tapa, cx_, cy_, r)
+                if tapa == 0:
                     break
+            _, cx_, cy_, r = mejor
             ocupados.append(r)
-            _pegar(f, spr, cx_, cy_, a, .55 + .45 * _pop(dt - mk[j] - .25, .35))
+            # la foto flota despacio (un mapa esperando la siguiente marca no queda quieto > 2 s: freezedetect, majora_mask)
+            _pegar(f, spr, cx_, cy_ + 7 * math.sin(dt * 1.8 + j), a,
+                   (.55 + .45 * _pop(dt - mk[j] - .25, .35)) * (1 + .02 * math.sin(dt * 2.3 + j)))
         # título de la zona (arriba al centro)
         if titulo:
             e = _eo((dt - .25) / .6)

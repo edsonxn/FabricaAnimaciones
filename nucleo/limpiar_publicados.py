@@ -49,7 +49,10 @@ def pesados(video):
             ext = os.path.splitext(x)[1].lower()
             if ext in VIDEO_EXT or (ext == ".wav" and top != "voz"):
                 p = os.path.join(r, x)
-                yield p, os.path.getsize(p)
+                try:
+                    yield p, os.path.getsize(p)
+                except OSError:   # junction rota o entrada NTFS dañada (E: con errores, 23-oct-2026): se salta
+                    continue
 
 
 def main():

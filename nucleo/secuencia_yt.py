@@ -30,11 +30,13 @@ import shutil
 import subprocess
 import sys
 import threading
+import time
 
 import secuencia as S
 
 DEF_YT = dict(sufijo="", min_s=90, max_min=240, alto=1080, candidatos=12, margen=0.12, evitar_canales=[],
-              evitar_palabras=["reaction", "react", "podcast", "tier list", "news", "shorts", "#shorts", "trailer reaction"],
+              evitar_palabras=["reaction", "react", "podcast", "tier list", "news", "shorts", "#shorts", "trailer reaction",
+                              "ai cine", "ai movie", "ai generated", "pinkfong", "baby shark", "nursery", "infantiles"],
               separacion=6, oscuro=0.07, quieto=0.012)
 ENV = dict(os.environ, PYTHONIOENCODING="utf-8", PYTHONUTF8="1")
 _lock = threading.Lock()
@@ -65,6 +67,12 @@ def guardar_fuentes(fu):
     with _lock:
         tmp = "fuentes.json.tmp"
         json.dump(fu, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        for k in range(20):             # 17-oct-2026: el panel lo tenía abierto (WinError 5) y tumbó `bajar` a medias
+            try:
+                os.replace(tmp, "fuentes.json")
+                return
+            except PermissionError:
+                time.sleep(.5)
         os.replace(tmp, "fuentes.json")
 
 
@@ -156,7 +164,12 @@ def _bajar_tramo(vid, desde, L, y, destino, tmpdir):
     """Baja [desde, desde+L+1] solo video y lo deja en `destino` a W×H, 30 fps, h264, sin audio."""
     os.makedirs(tmpdir, exist_ok=True)
     for f in os.listdir(tmpdir):
-        os.remove(os.path.join(tmpdir, f))
+        try:
+            os.remove(os.path.join(tmpdir, f))
+        except PermissionError:   # un ffmpeg colgado de una vuelta anterior lo tiene abierto (24-oct-2026): se usa otra carpeta
+            tmpdir = tmpdir + "_b"
+            os.makedirs(tmpdir, exist_ok=True)
+            break
     url = f"https://www.youtube.com/watch?v={vid}"
     fmt = f"bv*[height<={y['alto']}][height>=720][vcodec^=avc1]/bv*[height<={y['alto']}][height>=720]"
     r = subprocess.run(["yt-dlp", url, "-f", fmt, "--download-sections", f"*{desde:.1f}-{desde + L + 1.5:.1f}",
@@ -250,7 +263,8 @@ def _uno(b, entrada, y, fu, usados_global, forzar_q=None, forzar_url=None, forza
             reg, motivos = None, []
             for q in qs:
                 qq = q if (not sufijo or sufijo.lower() in q.lower() or "wow" in q.lower().split()) else f"{q} {sufijo}"
-                cands = [v for v in _buscar(qq, y, fu) if _apto(v, y)]
+                malos = fu.get("_rechazados", {}).get(b["id"], [])
+                cands = [v for v in _buscar(qq, y, fu) if _apto(v, y) and v["id"] not in malos]
                 with _lock:          # los videos usados en beats cercanos van al final: variedad
                     cerca = {u[0] for u in usados_global if abs(u[2] - b["t0"]) < y["separacion"] * 9}
                 cands.sort(key=lambda v: v["id"] in cerca)
@@ -303,15 +317,25 @@ def bajar(args):
             m = re.fullmatch(r"(?:scene-)?(\d+)(?:-(\d+))?", p)
             if m:
                 pedidos.update(range(int(m.group(1)), int(m.group(2) or m.group(1)) + 1))
-    sel = [b for b in bs if (not pedidos or int(b["id"][6:]) in pedidos)]
+    if (q or url) and not pedidos:      # 14-oct-2026: un `--q` sin ids rehizo los 51 beats con la misma búsqueda
+        raise SystemExit("bajar: --q/--url necesitan los beats a rehacer (p. ej. `bajar 12 --q \"...\"`); no se toca nada.")
+    if rehacer and not pedidos and "--todos" not in args:   # 24-oct-2026: un `--rehacer` sin ids (bucle con stdin comido) rehizo 357 beats
+        raise SystemExit("bajar: --rehacer necesita los beats (p. ej. `bajar 12,15 --rehacer`); para TODOS añade --todos. No se toca nada.")
+    sel =[b for b in bs if (not pedidos or int(b["id"][6:]) in pedidos)]
+    guardados = {}                      # id -> (ruta en _respaldo, entrada de fuentes): vuelven si la descarga nueva falla
     if rehacer or q or url:
         for b in sel:
             r = os.path.join("medios", b["id"] + ".mp4")
-            if os.path.exists(r):
-                os.remove(r)
-            fu.pop(b["id"], None)
+            viejo = fu.pop(b["id"], None)
+            if os.path.exists(r):       # antes se borraba: un «Sign in to confirm you're not a bot» dejaba el beat sin clip
+                os.makedirs(os.path.join("medios", "_respaldo"), exist_ok=True)
+                resp = os.path.join("medios", "_respaldo", f"{b['id']}_{int(time.time())}.mp4")
+                os.replace(r, resp)
+                guardados[b["id"]] = (resp, viejo)
+            if viejo and rehacer:       # sin esto la búsqueda en caché devuelve el MISMO video y tramo
+                fu.setdefault("_rechazados", {}).setdefault(b["id"], []).append(viejo["video"])
     sel = [b for b in sel if not S.medio_de(b)]
-    usados = [(r["video"], r["desde"], next((b["t0"] for b in bs if b["id"] == k), 0)) for k, r in fu.items() if k != "_busquedas"]
+    usados = [(r["video"], r["desde"], next((b["t0"] for b in bs if b["id"] == k), 0)) for k, r in fu.items() if not k.startswith("_")]
     print(f"bajar: {len(sel)} clips ({j} a la vez) · {S.W}x{S.H} {S.FPS} fps · sufijo «{y['sufijo']}»", flush=True)
     fallos = []
     with cf.ThreadPoolExecutor(max_workers=j) as ex:
@@ -321,6 +345,13 @@ def bajar(args):
             print(f"  {i} {msg}", flush=True)
             if msg.startswith("FALLÓ"):
                 fallos.append(i)
+    for i in fallos:                    # la descarga nueva falló: vuelve el clip anterior con su crédito
+        if i in guardados:
+            resp, viejo = guardados[i]
+            os.replace(resp, os.path.join("medios", i + ".mp4"))
+            if viejo:
+                fu[i] = viejo
+            print(f"  {i} se queda con el clip anterior", flush=True)
     guardar_fuentes(fu)
     hechos = sum(1 for b in bs if S.medio_de(b))
     print(f"{hechos}/{len(bs)} clips en medios/" + (f" · fallaron: {' '.join(sorted(fallos))} (cambia su búsqueda y repite)" if fallos else ""))

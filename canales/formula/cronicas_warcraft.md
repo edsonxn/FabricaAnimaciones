@@ -52,3 +52,11 @@
 - **Decisión (el usuario, 21-oct):** (1) `wow_curiosidades_kalimdor`, ~16 min, SIN Overgear, música original de WoW (no Lyria),
   sin vista previa; hueco dom 25-oct 09:00 CDMX. **A vigilar a los 7 días (1-nov):** vistas y % visto contra Reinos del Este
   (31 min) para separar si pesa la duración o el tema «curiosidades».
+
+## Conclusión del 23-oct-2026 — «100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath» (`wow_100_curiosidades_tbc_wotlk`, formato `curiosidades_dos_expansiones`)
+- **Tema elegido por el usuario** (no se propusieron 3): 100 curiosidades de TBC + WotLK visitables en el mapa, ≥ 45 min, con easter eggs y secretos.
+- **Encaja con el dato que ya teníamos:** en curiosidades manda el ALCANCE («TODO Kalimdor» ×6,35; «62 curiosidades de los Reinos del
+  Este» 49 % visto a 31 min). Variables que cambian a la vez: alcance (dos expansiones enteras) y duración (53 min, la más larga del canal).
+  Fuera: los reinos del 20.º aniversario están en Burning Crusade todo 2026 (Wrath se espera en 2027) → público caliente para Terrallende.
+- **A vigilar a los 7 días (7-nov):** % visto y minutos por vista contra Reinos del Este (31 min) y Kalimdor (16 min). Si los minutos por
+  vista superan los 15 de Reinos del Este, la duración larga no castiga y el formato «dos expansiones» puede repetirse (Cataclysm + MoP).

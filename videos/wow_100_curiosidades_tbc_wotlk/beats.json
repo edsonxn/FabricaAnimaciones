@@ -1,0 +1,2858 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.263,
+  "tipo": "video",
+  "texto": "Cien lugares, dos expansiones y una sola regla: todo lo que te voy a contar lo puedes ir a ver con tus propios pies, o con tu propia montura voladora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.263,
+  "t1": 15.6,
+  "tipo": "video",
+  "texto": "Terrallende y Rasganorte están llenos de secretos que pasaste corriendo rumbo al siguiente signo de exclamación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.6,
+  "t1": 26.775,
+  "tipo": "video",
+  "texto": "Una ciudad que dejó un cráter al mudarse, un enano que todo el mundo cree muerto, una banda de empleados de Blizzard tocando en una taberna. Y un goblin que te borra la memoria al salir del pueblo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.775,
+  "t1": 34.925,
+  "tipo": "video",
+  "texto": "Vamos a recorrer las dos expansiones zona por zona, del Portal Oscuro al Trono Helado, y en cada parada te digo exactamente dónde pararte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.925,
+  "t1": 42.93,
+  "tipo": "video",
+  "texto": "Son cien, así que ponte cómodo. Y espera al número uno, porque no es un lugar: es una persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.93,
+  "t1": 50.746,
+  "tipo": "video",
+  "texto": "Número cien. El Bastión del Honor es la base más vieja de la Alianza en Terrallende, y lleva veinte años esperando refuerzos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.746,
+  "t1": 58.589,
+  "tipo": "video",
+  "texto": "La fundaron los Hijos de Lothar, la expedición que cruzó el Portal Oscuro al final de la Segunda Guerra y se quedó atrapada cuando el portal se cerró.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.589,
+  "t1": 67.391,
+  "tipo": "video",
+  "texto": "Su comandante, Danath Trollbane, sigue ahí; Khadgar te espera en Shattrath, y Kurdran Wildhammer en el Valle Sombraluna, con sus grifos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.391,
+  "t1": 77.714,
+  "tipo": "video",
+  "texto": "De los cinco héroes que cruzaron, dos no aparecen por ningún lado: Alleria y Turalyon. En Ventormenta tienen estatua, y en Terrallende, nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.714,
+  "t1": 86.598,
+  "tipo": "video",
+  "texto": "Número noventa y nueve. El camino que va del Portal Oscuro a la Ciudadela del Fuego Infernal se llama Camino de la Gloria, y está pavimentado con huesos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.598,
+  "t1": 93.652,
+  "tipo": "video",
+  "texto": "La Horda de Gul'dan lo construyó con los restos de los draenei que masacró, para que cada guerrero orco marchara sobre su victoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.652,
+  "t1": 105.43,
+  "tipo": "video",
+  "texto": "Bájate de la montura y mira el suelo: las calaveras y las costillas están modeladas una por una. Es la primera carretera de la expansión, y nadie la ve, porque todos van viendo el mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.43,
+  "t1": 112.773,
+  "tipo": "video",
+  "texto": "Número noventa y ocho. En la Península del Fuego Infernal hay algo que escuchas antes de verlo: el Segador vil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.773,
+  "t1": 119.823,
+  "tipo": "video",
+  "texto": "Es una máquina de la Legión del tamaño de una casa que patrulla el centro de la zona, y sus pasos suenan a cientos de metros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.823,
+  "t1": 130.046,
+  "tipo": "video",
+  "texto": "Si lo ves aparecer en el horizonte y estás a nivel sesenta, ya es tarde; con un golpe te manda al cementerio. Hoy sigue ahí, patrullando el mismo circuito que en dos mil siete,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.046,
+  "t1": 136.87,
+  "tipo": "video",
+  "texto": "como un guardia de seguridad al que nadie ha ido a relevar. Número noventa y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 136.87,
+  "t1": 145.92,
+  "tipo": "video",
+  "texto": "Las Pozas de Aggonar eran un manantial sagrado de los draenei, hasta que un señor del foso se murió encima. Aggonar cayó ahí, nadie sabe cómo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.92,
+  "t1": 154.817,
+  "tipo": "video",
+  "texto": "y su sangre vil envenenó el agua; sus huesos siguen en medio de las pozas, enormes. Los draenei del Templo de Telhamat te mandan a limpiarlas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.817,
+  "t1": 165.43,
+  "tipo": "video",
+  "texto": "y lo que sale del fondo es Aggonis, lo que quedó de su esencia. Ve a verlo: es uno de los pocos jefes de misión que literalmente nació de un charco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 165.43,
+  "t1": 171.21,
+  "tipo": "video",
+  "texto": "Número noventa y seis. Lord Kazzak se mudó. En Classic vivía en las Tierras Devastadas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.21,
+  "t1": 181.703,
+  "tipo": "video",
+  "texto": "y en Burning Crusade apareció en lo alto del Trono de Kil'jaeden. Es la montaña del norte de la península donde la Legión abrió su puerta a Terrallende, y Kazzak la vigila como jefe de mundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.703,
+  "t1": 188.936,
+  "tipo": "video",
+  "texto": "con título nuevo. Sube con montura voladora y lo ves ahí, esperando a cuarenta personas que ya no van.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.936,
+  "t1": 197.15,
+  "tipo": "video",
+  "texto": "Su colega Caminante del Destino hace lo mismo frente al Templo Oscuro; luego pasamos a saludarlo. Número noventa y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.15,
+  "t1": 204.344,
+  "tipo": "video",
+  "texto": "Debajo de la Ciudadela del Fuego Infernal hay un señor del foso encadenado, y la Horda de Illidan lo usa como refinería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 204.344,
+  "t1": 217.995,
+  "tipo": "video",
+  "texto": "Magtheridon gobernó Terrallende hasta que Illidan lo derrotó y lo colgó de cadenas en su propia fortaleza. Su sangre gotea a los barriles del Horno de Sangre, y con ella los orcos de la Mano Arrasada se convierten en orcos viles rojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 217.995,
+  "t1": 225.35,
+  "tipo": "video",
+  "texto": "Puedes entrar a verlo encadenado en su guarida, y si llevas veinticuatro amigos, soltarlo un rato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.35,
+  "t1": 234.068,
+  "tipo": "video",
+  "texto": "Número noventa y cuatro. Las Salas Arrasadas en heroico tienen un reloj que nadie te explica: una hora y veinte para llegar a Kargath Puño Maldito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 234.068,
+  "t1": 240.269,
+  "tipo": "video",
+  "texto": "Cuando cae el brujo Nethekurse empieza la cuenta, y al fondo hay prisioneros de tu facción esperando al verdugo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.269,
+  "t1": 247.041,
+  "tipo": "video",
+  "texto": "Cada tanto Kargath grita que va a ejecutar a otro, y lo cumple; si llegas tarde, te encuentras los cuerpos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 247.041,
+  "t1": 256.82,
+  "tipo": "video",
+  "texto": "Es la única mazmorra de la expansión donde perder el tiempo mata a alguien que no eres tú. Número noventa y tres. En la Marisma de Zangar no hay árboles:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 256.82,
+  "t1": 267.523,
+  "tipo": "video",
+  "texto": "lo que parecen árboles son hongos de cuarenta metros. Y los draenei construyeron un pueblo entero encima de uno de ellos, Telredor, al que se sube en un elevador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.523,
+  "t1": 274.251,
+  "tipo": "video",
+  "texto": "Desde arriba se ve toda la marisma, con las esporas flotando y los hongos gigantes brillando de azul por la noche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.251,
+  "t1": 284.45,
+  "tipo": "video",
+  "texto": "Es la única capital de zona a la que llegas por ascensor, y no, no se puede saltar; ya lo intentó medio servidor. Número noventa y dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.45,
+  "t1": 291.997,
+  "tipo": "video",
+  "texto": "Al este de la marisma hay un lago que ya no existe, el Lodo Muerto, y es un adelanto de lo que iba a pasar con toda la zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.997,
+  "t1": 299.303,
+  "tipo": "video",
+  "texto": "Las bombas de vapor de los naga de Lady Vashj drenan el agua hacia el Reserva Colmillo Torcido, y los lagos bajan a la vista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.303,
+  "t1": 308.054,
+  "tipo": "video",
+  "texto": "Los druidas de la Expedición Cenarion miden el nivel del agua en misiones, y tú vas a sabotear las bombas una por una. El Lodo Muerto sigue seco hoy;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.054,
+  "t1": 320.074,
+  "tipo": "video",
+  "texto": "era la parte de la marisma que Vashj ya había terminado. Número noventa y uno. Esporaggar es el único pueblo de Terrallende donde la población son hongos que caminan y hablan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.074,
+  "t1": 328.28,
+  "tipo": "video",
+  "texto": "Los esporelines te piden ayuda contra los lores del lodo, y subir reputación con ellos tiene premio: una mascota murcielespora diminuta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 328.28,
+  "t1": 335.191,
+  "tipo": "video",
+  "texto": "Hablan en una especie de balbuceo, te llaman amigo, y son los únicos vecinos de la marisma que no quieren matarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.191,
+  "t1": 342.93,
+  "tipo": "video",
+  "texto": "Está escondido al oeste, detrás de los hongos más grandes; la mitad de los jugadores no lo pisó jamás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.93,
+  "t1": 355.586,
+  "tipo": "video",
+  "texto": "Número noventa. La entrada del Reserva Colmillo Torcido está bajo el agua, en medio del Lago Serpiente. Tienes que bucear hasta el fondo y meterte por una tubería enorme que te escupe en el vestíbulo de las mazmorras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 355.586,
+  "t1": 361.655,
+  "tipo": "video",
+  "texto": "Y adentro, en la Caverna Santuario Serpiente, el segundo jefe no se busca: se pesca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.655,
+  "t1": 370.89,
+  "tipo": "video",
+  "texto": "El Rondador de abajo sale si lanzas la caña en un estanque extraño frente a su plataforma; es el único jefe de banda que ha mordido un anzuelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.89,
+  "t1": 378.906,
+  "tipo": "video",
+  "texto": "Número ochenta y nueve. Auchindoun era la ciudad de los muertos de los draenei, hasta que el Consejo de la Sombra la hizo explotar desde adentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.906,
+  "t1": 386.39,
+  "tipo": "video",
+  "texto": "Los brujos de Gul'dan invocaron a Murmur, una esencia de puro sonido, y la onda expansiva arrancó el bosque de alrededor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.39,
+  "t1": 393.453,
+  "tipo": "video",
+  "texto": "Por eso los Yermos de Hueso son blancos y planos: son el cráter, y lo que cruje bajo tus pies son restos de la ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.453,
+  "t1": 404.61,
+  "tipo": "video",
+  "texto": "Hoy Auchindoun son cuatro mazmorras en un hoyo, y Murmur sigue al fondo del Laberinto de las Sombras. Número ochenta y ocho. Skettis, la ciudad de los arakkoa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.61,
+  "t1": 410.161,
+  "tipo": "video",
+  "texto": "está en las copas de los árboles del sur de Terokkar, y sin montura voladora no existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 410.161,
+  "t1": 424.25,
+  "tipo": "video",
+  "texto": "Fue la primera zona del juego hecha exclusivamente para gente con alas, con misiones diarias de la Guardia del Cielo Sha'tari. Ahí vive la sombra de Terokk, el rey arakkoa, al que invocas en una cima con un ritual y unos cuantos amigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 424.25,
+  "t1": 430.43,
+  "tipo": "video",
+  "texto": "Si subiste de nivel a pie, pasaste debajo de una ciudad entera sin verla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.43,
+  "t1": 439.734,
+  "tipo": "video",
+  "texto": "Número ochenta y siete. En la Taberna del Fin del Mundo de Shattrath hay una elfa de sangre que vende una bolsa de veintidós espacios por mil doscientas monedas de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 439.734,
+  "t1": 447.264,
+  "tipo": "video",
+  "texto": "Se llama Haris Pilton, con sus perritos, sus lentes oscuros y la socialité en el nombre, y la bolsa se llama, textualmente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.264,
+  "t1": 455.719,
+  "tipo": "video",
+  "texto": "Bolsa gigantesca, con comillas. En Wrath subió la apuesta: una bolsa de veinticuatro espacios por diez mil monedas de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.719,
+  "t1": 464.34,
+  "tipo": "video",
+  "texto": "La gente lo compraba, igual que la gente real compraba lo otro. La parodia estaba completa. Número ochenta y seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.34,
+  "t1": 470.756,
+  "tipo": "video",
+  "texto": "En el Bajo Arrabal de Shattrath hay un trol que vende amuletos milagrosos, y todos son basura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 470.756,
+  "t1": 481.223,
+  "tipo": "video",
+  "texto": "Griftah ofrece el jabón con cuerda y collares que prometen protegerte de cosas que no existen, y el texto de cada uno lo admite si lo lees. Lo echaron de la ciudad una temporada por estafador;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.223,
+  "t1": 489.167,
+  "tipo": "video",
+  "texto": "siguió vendiendo en la entrada, con un guardia revisándole la mercancía. Volvieron a dejarlo entrar en el parche dos punto tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 489.167,
+  "t1": 496.91,
+  "tipo": "video",
+  "texto": "Sigue ahí, con la misma sonrisa, y la gente le sigue comprando. Número ochenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 496.91,
+  "t1": 506.854,
+  "tipo": "video",
+  "texto": "En la misma taberna de Shattrath toca una banda de metal formada por empleados de Blizzard. Se llaman Level Setenta Elite Tauren Chieftain: cinco músicos de la Horda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.854,
+  "t1": 517.554,
+  "tipo": "video",
+  "texto": "con sus instrumentos y su show de luces, en un escenario de taberna. La banda existe de verdad; tocaron en cada BlizzCon hasta que Metallica les cerró el show en dos mil catorce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.554,
+  "t1": 525.43,
+  "tipo": "video",
+  "texto": "Espera un rato junto al escenario de la Taberna del Fin del Mundo y los ves salir a tocar, con público de elfos borrachos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.43,
+  "t1": 533.045,
+  "tipo": "video",
+  "texto": "Número ochenta y cuatro. En Shattrath tienes que elegir bando, y el bando de los elfos de sangre existe por una visión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.045,
+  "t1": 540.895,
+  "tipo": "video",
+  "texto": "Voren'thal el Vidente desertó de Kael'thas con sus magos y se rindió ante A'dal, el naaru, porque soñó que su destino estaba en Shattrath.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.895,
+  "t1": 551.022,
+  "tipo": "video",
+  "texto": "Los draenei del Aldor no les creen ni una palabra, y cuando te unes a uno, el otro te ve como traidor para siempre. Las dos facciones viven en terrazas opuestas de la misma ciudad,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 551.022,
+  "t1": 559.548,
+  "tipo": "video",
+  "texto": "mirándose desde arriba, como vecinos de un edificio que llevan años peleados. Número ochenta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.548,
+  "t1": 567.585,
+  "tipo": "video",
+  "texto": "Junto a A'dal hay un elfo de sangre discreto llamado Zephyr que vende viajes en el tiempo. Si los Vigilantes del Tiempo te respetan lo suficiente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.585,
+  "t1": 576.217,
+  "tipo": "video",
+  "texto": "te teletransporta directo a las Cavernas del Tiempo, en Tanaris, al otro lado del universo. Es la agencia de viajes más exclusiva del juego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.217,
+  "t1": 585.43,
+  "tipo": "video",
+  "texto": "y la mayoría pasó a su lado mil veces sin hablarle. Luego lo vamos a usar: las Cavernas también guardan un secreto de esta lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.43,
+  "t1": 593.177,
+  "tipo": "video",
+  "texto": "Número ochenta y dos. La montaña de cristal de Nagrand, Oshu'gun, no es una montaña: es una nave espacial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.177,
+  "t1": 602.172,
+  "tipo": "video",
+  "texto": "Es la Genedar, la nave con la que los draenei huyeron de Argus, estrellada hace siglos, y dentro agoniza K'ure, uno de los naaru que la pilotaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.172,
+  "t1": 609.162,
+  "tipo": "video",
+  "texto": "Los orcos la tenían por sagrada porque ahí hablaban con sus ancestros; en realidad era la energía del naaru moribundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 609.162,
+  "t1": 619.467,
+  "tipo": "video",
+  "texto": "Puedes entrar: hay una grieta en la base y un pasillo que baja hasta el corazón de la nave. Número ochenta y uno. En Garadar, el pueblo de los orcos marrones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 619.467,
+  "t1": 630.324,
+  "tipo": "video",
+  "texto": "hay un orco joven deprimido sentado en una choza: Garrosh Grito Infernal. Se avergüenza de ser hijo de Grom, porque cree que su padre solo fue el primero en beber la sangre del demonio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 630.324,
+  "t1": 638.18,
+  "tipo": "video",
+  "texto": "La Gran Madre Geyah, la abuela de Thrall, lo cuida, y cuando terminas la zona, Thrall en persona viene a contarle cómo murió Grom.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 638.18,
+  "t1": 645.275,
+  "tipo": "video",
+  "texto": "Esa escena es el origen de todo lo que Garrosh hizo después; y lo vas a ver en la Tundra Boreal, muy cambiado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 645.275,
+  "t1": 653.943,
+  "tipo": "video",
+  "texto": "Número ochenta. Corki es un niño orco de Garadar al que secuestran tres veces en la misma zona. Primero lo tienen los Sangrelodo en el Puesto Primasol,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.943,
+  "t1": 664.114,
+  "tipo": "video",
+  "texto": "luego los ogros en la Colina Mazo de Guerra, y luego otro ogro, Cho'war. La misión de la tercera se llama, literalmente, Corki desapareció otra vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 664.114,
+  "t1": 672.894,
+  "tipo": "video",
+  "texto": "Lo rescatas, vuelve a casa, y la siguiente vez que pasas ya no está. Nagrand tenía un problema de supervisión infantil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.894,
+  "t1": 680.43,
+  "tipo": "video",
+  "texto": "Número setenta y nueve. En el norte de Nagrand hay un pozo de peleas con un goblin promotor que te va a seguir el resto de tu vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 680.43,
+  "t1": 688.109,
+  "tipo": "video",
+  "texto": "Gurgthock organiza combates en un pozo con su ayudante Wodin, y la pelea final es contra Mogor, el ogro que grita que te va a hacer puré.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.109,
+  "t1": 695.677,
+  "tipo": "video",
+  "texto": "Vuelve en Zul'Drak con el Anfiteatro de la Angustia, luego en las Tierras Altas Crepusculares, luego en la Hermandad de Camorristas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.677,
+  "t1": 704.421,
+  "tipo": "video",
+  "texto": "Es el único empresario de Azeroth con sucursales en tres expansiones; de pequeño emprendedor, nada. Número setenta y ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 704.421,
+  "t1": 712.679,
+  "tipo": "video",
+  "texto": "Nagrand tiene dos lugares a los que, sin montura voladora, simplemente no se puede llegar. La Meseta Elemental, al norte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 712.679,
+  "t1": 724.973,
+  "tipo": "video",
+  "texto": "donde los elementales sueltan las motas que medio servidor granjeaba para vender. Y la Cordillera del Crepúsculo, al oeste, un pedazo de tierra flotante con dos campamentos de la Legión y sus hornos de forja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 724.973,
+  "t1": 730.43,
+  "tipo": "video",
+  "texto": "Si subiste de nivel a pie, en tu mapa hay dos manchas que nunca se iluminaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 730.43,
+  "t1": 739.776,
+  "tipo": "video",
+  "texto": "Número setenta y siete. Halaa es un pueblo en una isla flotante que cambia de dueño varias veces al día, y se conquista bombardeando desde un wyvern.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 739.776,
+  "t1": 746.647,
+  "tipo": "video",
+  "texto": "El bando que lo controla tiene vendedores, y el otro vuela encima tirando bombas de fuego hasta que los guardias caen.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.647,
+  "t1": 760.428,
+  "tipo": "video",
+  "texto": "Las recompensas se pagan en fragmentos de cristal de Oshu'gun y en marcas de batalla, con monturas de talbuk. Fue el primer pueblo del juego que se gana y se pierde, y en los servidores llenos no tuvo paz jamás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 760.428,
+  "t1": 766.088,
+  "tipo": "video",
+  "texto": "Número setenta y seis. En las Montañas Filospada hay dragones negros clavados en los picos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 766.088,
+  "t1": 774.507,
+  "tipo": "video",
+  "texto": "como mariposas en un corcho. Alamuerte mandó a su hijo Sabellian con parte de su linaje a Draenor, y los gronn los cazaron uno por uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.507,
+  "t1": 782.503,
+  "tipo": "video",
+  "texto": "Gruul se ganó el apellido Asesino de Dragones ensartándolos en las agujas de piedra, y ahí siguen los esqueletos, con las alas abiertas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 782.503,
+  "t1": 791.01,
+  "tipo": "video",
+  "texto": "Vuela despacio sobre la zona y cuéntalos: son más de los que te acuerdas. Número setenta y cinco. En el Círculo de Sangre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.01,
+  "t1": 800.11,
+  "tipo": "video",
+  "texto": "un barón humano elegante te pide ayuda contra los gronn, con mucha educación. Se llama Baron Sablemane, y no es humano ni barón: es Sabellian,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.11,
+  "t1": 809.475,
+  "tipo": "video",
+  "texto": "el hijo de Alamuerte, en forma mortal. Quiere venganza por los dragones de los picos, y te usa a ti para matar a Gorgrom el Devoradragones y a Goc.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 809.475,
+  "t1": 817.93,
+  "tipo": "video",
+  "texto": "El juego nunca te lo dice de frente; lo descubres por sus misiones, o muchos años después, cuando volvió en Dragonflight.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.93,
+  "t1": 827.364,
+  "tipo": "video",
+  "texto": "Número setenta y cuatro. Rexxar, el héroe de Warcraft tres, está sentado en la Bastión Señor del Trueno de las Filospada, con su osa Misha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 827.364,
+  "t1": 834.99,
+  "tipo": "video",
+  "texto": "Volvió a Terrallende a buscar a su gente, los mok'nathal, mitad orcos y mitad ogros, que viven en una aldea al este.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.99,
+  "t1": 843.096,
+  "tipo": "video",
+  "texto": "Su padre, Leoroxx, lo echó de la aldea hace años, y sigue sin querer recibirlo; tú haces de mensajero entre los dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.096,
+  "t1": 851.89,
+  "tipo": "video",
+  "texto": "El campeón de la Horda de Durotar vive exiliado por su propio padre, en una fortaleza prestada. Número setenta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 851.89,
+  "t1": 858.705,
+  "tipo": "video",
+  "texto": "En lo alto de las Filospada hay ogros que meditan, hablan con calma y resuelven acertijos: Ogri'la.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.705,
+  "t1": 868.741,
+  "tipo": "video",
+  "texto": "Los cristales apexis de la meseta los volvieron inteligentes, y para ganarte su confianza juegas con reliquias apexis a un juego de luces de colores. Es, exactamente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 868.741,
+  "t1": 880.43,
+  "tipo": "video",
+  "texto": "un Simon: cuatro luces, una secuencia, y si fallas, te electrocuta. Fue la primera vez que el juego metió un juguete de los ochenta como misión diaria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 880.43,
+  "t1": 885.58,
+  "tipo": "video",
+  "texto": "Número setenta y dos. Cerca de Ogri'la hay un círculo de runas en el que no pasa nada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.58,
+  "t1": 896.255,
+  "tipo": "video",
+  "texto": "hasta que cinco personas se paran una en cada runa al mismo tiempo. Entonces aparece Vim'gol el Vil, un demonio enorme, y hay que matarlo antes de que termine su ritual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 896.255,
+  "t1": 902.816,
+  "tipo": "video",
+  "texto": "No hay letrero, ni guía, ni pista: lo descubres si lees la misión de los ogros o si tienes amigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 902.816,
+  "t1": 912.226,
+  "tipo": "video",
+  "texto": "Es uno de los pocos secretos del juego que exige cinco jugadores de carne y hueso parados en el lugar correcto. Número setenta y uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.226,
+  "t1": 919.238,
+  "tipo": "video",
+  "texto": "Estación de Toshley, el puesto de los gnomos en las Filospada, es un homenaje a todas las películas del espacio a la vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 919.238,
+  "t1": 927.228,
+  "tipo": "video",
+  "texto": "Toshley es la Tosche Station de Star Wars, y una misión se llama Recoger unos convertidores de energía, la frase de Luke Skywalker.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 927.228,
+  "t1": 938.38,
+  "tipo": "video",
+  "texto": "Los bichos que atacan el campamento son el ataque de Starship Troopers, y el ingeniero Smiles O'Byron es el jefe O'Brien de Star Trek. Los francotiradores dicen frases de los fantasmas de StarCraft;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 938.38,
+  "t1": 946.42,
+  "tipo": "video",
+  "texto": "los gnomos nunca supieron hacer una base sin referencias. Número setenta. Si sales de Área cincuenta y dos a pie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 946.42,
+  "t1": 955.694,
+  "tipo": "video",
+  "texto": "un destello te pega en la cara y te deja un efecto llamado Neuralizador A cincuenta y dos. El texto dice: el destello de luz que no viste no te borró la memoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 955.694,
+  "t1": 965.846,
+  "tipo": "video",
+  "texto": "Es el neuralizador de Hombres de Negro. Los agentes de la zona van de traje negro con lentes oscuros, y el nombre del pueblo es el Área cincuenta y uno, más uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.846,
+  "t1": 972.93,
+  "tipo": "video",
+  "texto": "Es el chiste mejor escondido de la expansión, porque la mayoría salió del pueblo volando y nunca lo vio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 972.93,
+  "t1": 980.502,
+  "tipo": "video",
+  "texto": "Número sesenta y nueve. En la Tormenta Abisal hay burbujas verdes con bosque adentro, en medio de un desierto púrpura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 980.502,
+  "t1": 988.592,
+  "tipo": "video",
+  "texto": "Son los ecodomos, construidos por los etéreos del Protectorado para salvar los últimos animales de Draenor mientras el continente se deshace.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 988.592,
+  "t1": 995.385,
+  "tipo": "video",
+  "texto": "Adentro hay talbuks, ciervos y hasta un bosque; afuera, la nada, flotando en el Vacío Abisal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 995.385,
+  "t1": 1007.13,
+  "tipo": "video",
+  "texto": "Son los únicos zoológicos de Azeroth, y los cuidan unos seres de vendas y energía que ni siquiera son de este planeta. Número sesenta y ocho. Una de las forjas de maná de Kael'thas explotó,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1007.13,
+  "t1": 1017.551,
+  "tipo": "video",
+  "texto": "y lo que dejó es un agujero al Vacío. La Forja de Maná Ultris saltó por los aires, y en el cráter flotan criaturas del Vacío y un gigante llamado Culuthas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1017.551,
+  "t1": 1024.127,
+  "tipo": "video",
+  "texto": "Las otras siguen bombeando energía del Vacío Abisal para la flota de Kael, y tú las vas apagando una por una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1024.127,
+  "t1": 1031.663,
+  "tipo": "video",
+  "texto": "Ultris es el aviso de qué pasa cuando un príncipe elfo chupa demasiado del enchufe. Número sesenta y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1031.663,
+  "t1": 1039.467,
+  "tipo": "video",
+  "texto": "En el Poblado Kirin'Var, un pueblo de magos de Dalaran destruido por Kael'thas, los habitantes siguen ahí, fantasmas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1039.467,
+  "t1": 1047.362,
+  "tipo": "video",
+  "texto": "Vagan entre las casas quemadas, y en la Torre Violeta queda vivo un solo mago, el Archimago Vargoth, encerrado por una maldición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1047.362,
+  "t1": 1060.89,
+  "tipo": "video",
+  "texto": "Te habla a través de una imagen, y de premio te da su bastón, que invoca su copia donde quieras, para que te dé consejos no pedidos. Vargoth vuelve en Wrath, en Dalaran, y ahí también lo vamos a encontrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1060.89,
+  "t1": 1068.403,
+  "tipo": "video",
+  "texto": "Número sesenta y seis. En la Tormenta Abisal flota una esfera negra del tamaño de una fortaleza que se está comiendo todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1068.403,
+  "t1": 1075.906,
+  "tipo": "video",
+  "texto": "Es Dimensius el Devoratodo, un dios del Vacío, y los etéreos del Protectorado te reclutan en un escuadrón para enfrentarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1075.906,
+  "t1": 1082.951,
+  "tipo": "video",
+  "texto": "El Capitán Saeed te lleva marchando con su tropa hasta el lugar, y la batalla es contra una cosa que no tiene cara ni cuerpo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1082.951,
+  "t1": 1091.93,
+  "tipo": "video",
+  "texto": "Fue el primer señor del Vacío del juego, mucho antes de que el Vacío se volviera la trama principal. Número sesenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1091.93,
+  "t1": 1101.717,
+  "tipo": "video",
+  "texto": "En el Valle Sombraluna hay un volcán con forma de mano abierta, y se llama Mano de Gul'dan. Gul'dan usó la Cifra de la Condena para separar a los orcos de los elementos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1101.717,
+  "t1": 1112.245,
+  "tipo": "video",
+  "texto": "y la tierra respondió abriéndose en una erupción con forma de garra. Desde entonces el valle es ceniza, y el volcán sigue escupiendo elementales de fuego furiosos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1112.245,
+  "t1": 1120.714,
+  "tipo": "video",
+  "texto": "Desde el aire la forma de los dedos es perfecta; es el letrero más grande de Draenor, y dice quién tuvo la culpa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1120.714,
+  "t1": 1128.93,
+  "tipo": "video",
+  "texto": "Número sesenta y cuatro. El Templo Oscuro no lo construyeron Illidan ni la Horda: es el Templo de Karabor, el lugar más sagrado de los draenei.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1128.93,
+  "t1": 1135.301,
+  "tipo": "video",
+  "texto": "La Horda lo tomó, luego Magtheridon, y al final Illidan se sentó en la cima a gritar que no estás preparado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1135.301,
+  "t1": 1143.227,
+  "tipo": "video",
+  "texto": "Y en la puerta, afuera, patrulla Caminante del Destino, un jefe de mundo mecánico que mata a todo el que llega sin banda. Puedes ir a verlo hoy:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1143.227,
+  "t1": 1153.546,
+  "tipo": "video",
+  "texto": "sigue custodiando una entrada por la que ya nadie necesita pasar. Número sesenta y tres. Maiev Cantosombrío, la guardiana que persiguió a Illidan diez mil años,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1153.546,
+  "t1": 1162.587,
+  "tipo": "video",
+  "texto": "está presa en una jaula del Valle Sombraluna. Akama y sus Lengua de Ceniza la mantienen en la Jaula de la Guardiana, y tú puedes bajar a hablar con ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1162.587,
+  "t1": 1169.474,
+  "tipo": "video",
+  "texto": "Te dice, con la humildad de siempre, que ella sola bastaba, y que necesita que la liberen para terminar el trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1169.474,
+  "t1": 1179.04,
+  "tipo": "video",
+  "texto": "Al final del Templo Oscuro aparece a ayudarte contra Illidan y se queda con la última palabra. Número sesenta y dos. En el Arrecife del Ala Abisal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1179.04,
+  "t1": 1184.698,
+  "tipo": "video",
+  "texto": "al sur del valle, te disfrazan de orco Faucedraco y te ponen a trabajar para el enemigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1184.698,
+  "t1": 1198.296,
+  "tipo": "video",
+  "texto": "Las diarias incluyen una carrera aérea contra los pilotos de los Faucedraco, con el Capitán Skyshatter de jefe final. Si subes la reputación hasta exaltado, los dragones del Ala Abisal te regalan uno de los suyos como montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1198.296,
+  "t1": 1205.43,
+  "tipo": "video",
+  "texto": "Y en la ceremonia final aparece Illidan en persona, y todos los orcos descubren que eras tú el espía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1205.43,
+  "t1": 1212.843,
+  "tipo": "video",
+  "texto": "Número sesenta y uno. Hay una misión en el Valle Sombraluna en la que no juegas tú: juegas como Teron Gorefiend.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1212.843,
+  "t1": 1220.032,
+  "tipo": "video",
+  "texto": "El espíritu del primer caballero de la muerte te pide que recuperes sus reliquias, y al final te posee para matar a un dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1220.032,
+  "t1": 1231.718,
+  "tipo": "video",
+  "texto": "Lo haces, con sus poderes, sintiéndote invencible, y en cuanto terminas, Gorefiend se va libre a servir a Illidan. Acabas de resucitar a un jefe del Templo Oscuro con tus propias manos;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1231.718,
+  "t1": 1236.93,
+  "tipo": "video",
+  "texto": "luego lo pagas en la banda. Número sesenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1236.93,
+  "t1": 1244.862,
+  "tipo": "video",
+  "texto": "Debajo de Lunargenta, en la sede de los Caballeros de Sangre, hay un ángel encadenado, y los paladines le exprimen la Luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1244.862,
+  "t1": 1255.261,
+  "tipo": "video",
+  "texto": "Kael'thas capturó al naaru M'uru en el Castillo de la Tempestad y lo mandó a su ciudad como regalo para su nueva orden. Durante toda la expansión puedes bajar a verlo, con su luz apagándose,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1255.261,
+  "t1": 1263.649,
+  "tipo": "video",
+  "texto": "hasta que en el parche dos punto cuatro Kael lo roba de vuelta. Su corazón acaba en manos de Velen, y con él se vuelve a encender la Fuente del Sol;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1263.649,
+  "t1": 1275.769,
+  "tipo": "video",
+  "texto": "el prisionero resultó ser el remedio. Número cincuenta y nueve. Hay una franja de tierra muerta que cruza Quel'Thalas de sur a norte, y es la huella de un ejército.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1275.769,
+  "t1": 1283.368,
+  "tipo": "video",
+  "texto": "La Cicatriz Muerta es el camino que siguió Arthas con la Plaga hasta la Fuente del Sol, y en veinte años no ha crecido ni una hoja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1283.368,
+  "t1": 1290.546,
+  "tipo": "video",
+  "texto": "Puedes caminarla completa, de las Tierras Fantasma a Lunargenta, con los no-muertos todavía arrastrándose en fila.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1290.546,
+  "t1": 1300.311,
+  "tipo": "video",
+  "texto": "En el extremo sur está la Ciudad de la Muerte, donde Dar'Khan Drathir, el mago que vendió la ciudad a Arthas, sigue vivo, o algo parecido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1300.311,
+  "t1": 1309.5,
+  "tipo": "video",
+  "texto": "Número cincuenta y ocho. En las Tierras Fantasma están las ruinas de la Aguja Brisaveloz, la casa de Sylvanas, y hay algo suyo tirado en el suelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1309.5,
+  "t1": 1316.027,
+  "tipo": "video",
+  "texto": "Un collar, el collar de la Dama, que una aparición te entrega, y la misión te manda a llevárselo a Entrañas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1316.027,
+  "t1": 1322.911,
+  "tipo": "video",
+  "texto": "Cuando se lo das, Sylvanas se queda callada, aparecen los espíritus de su familia y canta el Lamento de los Altonato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1322.911,
+  "t1": 1333.39,
+  "tipo": "video",
+  "texto": "Es la única vez en todo el juego que la Reina Alma en Pena canta, y empieza en una torre en ruinas que casi nadie visita. Número cincuenta y siete. Harrison Jones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1333.39,
+  "t1": 1342.41,
+  "tipo": "video",
+  "texto": "el Indiana Jones de Azeroth, debutó en Zul'Aman, golpeando un gong en la puerta. Llegó en el parche dos punto tres, con su sombrero y su látigo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1342.41,
+  "t1": 1351.614,
+  "tipo": "video",
+  "texto": "y es quien abre la banda de los trols amani. Después lo encuentras en las Colinas Pardas, en Uldum y en Draenor, siempre a punto de perder el sombrero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1351.614,
+  "t1": 1359.307,
+  "tipo": "video",
+  "texto": "Su siguiente parada está en esta misma lista; es un hombre con el pasaporte muy sellado. Número cincuenta y seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1359.307,
+  "t1": 1367.905,
+  "tipo": "video",
+  "texto": "La Isla de Quel'Danas fue la primera vez que un servidor entero tuvo que construir algo entre todos. La Ofensiva Sol Devastado abría vendedores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1367.905,
+  "t1": 1375.202,
+  "tipo": "video",
+  "texto": "un portal y una posada conforme el servidor completaba misiones diarias; los servidores lentos vivieron semanas sin tienda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1375.202,
+  "t1": 1384.688,
+  "tipo": "video",
+  "texto": "Y en la Bancal del Magister está Kael'thas, con su frase inmortal: el Castillo de la Tempestad fue solo un contratiempo. Lo dice después de que ya lo mataste una vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1384.688,
+  "t1": 1394.389,
+  "tipo": "video",
+  "texto": "Hay gente que no sabe perder. Número cincuenta y cinco. En la Isla Bruma Azur hay un draenei llamado Kessel que te pide hacer, textualmente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1394.389,
+  "t1": 1404.05,
+  "tipo": "video",
+  "texto": "la Carrera de Kessel. Te monta en un elekk en la Encrucijada de Kessel y te manda a avisar a tres aldeas de un ataque; el chiste es Han Solo presumiendo su Kessel Run.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1404.05,
+  "t1": 1411.74,
+  "tipo": "video",
+  "texto": "Y toda la isla está regada de pedazos de nave, porque el Exodar no es una ciudad: es un ala del Castillo de la Tempestad que se estrelló.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1411.74,
+  "t1": 1419.219,
+  "tipo": "video",
+  "texto": "Si entras al Castillo en Terrallende, los pasillos son idénticos a los de la capital draenei. Número cincuenta y cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1419.219,
+  "t1": 1428.257,
+  "tipo": "video",
+  "texto": "La Isla Bruma de Sangre es roja porque está irradiada. Los cristales de la Espiral Vectorial, el pedazo de nave que cayó ahí, envenenaron el agua,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1428.257,
+  "t1": 1436.739,
+  "tipo": "video",
+  "texto": "la tierra y a los animales. Los elfos de sangre de Sironas aprovechan la radiación para sus experimentos, y tú vas a bajarles la luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1436.739,
+  "t1": 1444.47,
+  "tipo": "video",
+  "texto": "Es la única zona inicial del juego en la que el color del paisaje es una advertencia sanitaria. Número cincuenta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1444.47,
+  "t1": 1455.451,
+  "tipo": "video",
+  "texto": "En Karazhan, el fantasma que te prohibía moverte con su círculo de fuego es el papá de Medivh. La Sombra de Aran es Nielas Aran, el mago de la corte de Ventormenta que engendró al Guardián,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1455.451,
+  "t1": 1462.219,
+  "tipo": "video",
+  "texto": "encerrado en la biblioteca de su propio hijo. Y en el teatro de la torre se representa una obra al azar: el Mago de Oz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1462.219,
+  "t1": 1473.39,
+  "tipo": "video",
+  "texto": "Caperucita Roja, o Romulo y Julianne. Sube a la Terraza del Maestro al final: desde ahí Medivh miraba el cielo mientras planeaba abrir el Portal Oscuro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1473.39,
+  "t1": 1481.416,
+  "tipo": "video",
+  "texto": "Número cincuenta y dos. Detrás de Karazhan, en el cementerio, hay una cripta con la puerta cerrada que nunca se abrió oficialmente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1481.416,
+  "t1": 1490.258,
+  "tipo": "video",
+  "texto": "Adentro, y esto lo conocemos por la gente que entró con trucos, hay salas con cadáveres colgados de los pies dentro del agua: los pecadores invertidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1490.258,
+  "t1": 1496.483,
+  "tipo": "video",
+  "texto": "También hay una cámara de huesos y pasillos sin salida; Blizzard la construyó completa y nunca la usó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1496.483,
+  "t1": 1505.304,
+  "tipo": "video",
+  "texto": "La puerta se ve desde afuera, en el Paso de la Muerte; es el lugar más perturbador del juego y está a unos metros de la entrada de la banda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1505.304,
+  "t1": 1514.688,
+  "tipo": "video",
+  "texto": "Número cincuenta y uno. En las Cavernas del Tiempo, las Antiguas Laderas de Trabalomas te dejan ver Costasur antes de la Plaga, con sus vecinos famosos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1514.688,
+  "t1": 1523.333,
+  "tipo": "video",
+  "texto": "Por el camino del norte camina un humano llamado Kel'Thuzad, todavía vivo, acompañado por el nigromante Helcular. Y en el pueblo juegan tres niños:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1523.333,
+  "t1": 1529.528,
+  "tipo": "video",
+  "texto": "Sally Melenablanca, Renault Mograine y el pequeño Jimmy Vishas, con Herod el abusivo rondando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1529.528,
+  "t1": 1539.18,
+  "tipo": "video",
+  "texto": "Son los futuros jefes del Monasterio Escarlata jugando a las escondidas; el juego te enseña a los villanos cuando todavía eran niños. Número cincuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1539.18,
+  "t1": 1549.788,
+  "tipo": "video",
+  "texto": "En el Bastión Grito de Guerra de la Tundra Boreal manda un orco que acabamos de ver llorando en Nagrand. Garrosh Grito Infernal llegó a Rasganorte como señor supremo de la expedición de la Horda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1549.788,
+  "t1": 1560.06,
+  "tipo": "video",
+  "texto": "y ya no se avergüenza de nada. Le grita a Varok Colmillosauro, el veterano que trató de contenerlo, y manda a cargar contra la Alianza antes que contra la Plaga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1560.06,
+  "t1": 1567.93,
+  "tipo": "video",
+  "texto": "Entre un pueblo y el otro hay una expansión de distancia, y es la mejor forma de ver cómo se fabrica un tirano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1567.93,
+  "t1": 1573.97,
+  "tipo": "video",
+  "texto": "Número cuarenta y nueve. En la Tundra Boreal hay un campamento de druidas que persigue cazadores, y se llama",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1573.97,
+  "t1": 1584.58,
+  "tipo": "video",
+  "texto": "D. E. H. T. A. Druidas por el Trato Ético y Humano de los Animales: la parodia de PETA, con el Archidruida Lathorius al frente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1584.58,
+  "t1": 1591.977,
+  "tipo": "video",
+  "texto": "Sus misiones te mandan a liberar mamuts de las trampas, matar cazadores y recoger sus orejas, lo cual es muy ético.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1591.977,
+  "t1": 1600.43,
+  "tipo": "video",
+  "texto": "El enemigo es la expedición de Hemet Nesingwary, que puso su campamento al otro lado del continente; ahí también vamos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1600.43,
+  "t1": 1608.102,
+  "tipo": "video",
+  "texto": "Número cuarenta y ocho. En la Pista de Aterrizaje de Palanqueta, un robot enorme te cuenta de dónde vienen los gnomos de verdad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1608.102,
+  "t1": 1618.153,
+  "tipo": "video",
+  "texto": "El Maestro de Engranajes Mechazod se activa en los géiseres y explica que los gnomos eran mecagnomos, máquinas de los titanes, hasta que la Maldición de la Carne los volvió de carne.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1618.153,
+  "t1": 1626.364,
+  "tipo": "video",
+  "texto": "Mechazod ofrece curarlos, es decir, convertirlos otra vez en robots, y los gnomos de la pista dicen que gracias, pero no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1626.364,
+  "t1": 1632.76,
+  "tipo": "video",
+  "texto": "Fue el primer lugar donde el juego confirmó que el origen de una raza entera era una avería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1632.76,
+  "t1": 1641.502,
+  "tipo": "video",
+  "texto": "Número cuarenta y siete. Keristrasza, la dragona roja que te ayuda en toda la cadena de Gelidar, termina siendo un jefe que tú mismo matas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-192",
+  "t0": 1641.502,
+  "t1": 1654.539,
+  "tipo": "video",
+  "texto": "Ella pelea contigo contra el azul Malygos, hasta que él la captura y la congela como su consorte, dentro del Nexo. Cuando entras a la mazmorra, el último jefe es ella, pidiendo que la liberes de la única manera posible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-193",
+  "t0": 1654.539,
+  "t1": 1660.252,
+  "tipo": "video",
+  "texto": "Es la misión más triste de la tundra, y la mayoría la hizo apurada para subir de nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-194",
+  "t0": 1660.252,
+  "t1": 1666.628,
+  "tipo": "video",
+  "texto": "Número cuarenta y seis. La isla de Gelidar tiene un puente que no se ve: el Escudo de Tránsito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-195",
+  "t0": 1666.628,
+  "t1": 1678.714,
+  "tipo": "video",
+  "texto": "Los magos de Kirin Tor levantaron un campamento mágico oculto frente al Nexo de Malygos, y la entrada es un portal en el Saliente Ámbar. Desde ahí se ve la Guerra del Nexo: Malygos robando la magia del mundo con sus anillos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-196",
+  "t0": 1678.714,
+  "t1": 1686.171,
+  "tipo": "video",
+  "texto": "los dragones rojos y azules peleando en el aire. Y adentro de la isla están el Nexo, el Oculus y el Ojo de la Eternidad;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-197",
+  "t0": 1686.171,
+  "t1": 1698.309,
+  "tipo": "video",
+  "texto": "tres instancias en una roca del tamaño de un pueblo. Número cuarenta y cinco. En el Poblado Taunka'le viven los primos de los tauren que se quedaron en el frío, y son otra cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-198",
+  "t0": 1698.309,
+  "t1": 1703.249,
+  "tipo": "video",
+  "texto": "Los taunka tienen el pelaje más denso, el carácter más duro y una filosofía distinta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-199",
+  "t0": 1703.249,
+  "t1": 1714.344,
+  "tipo": "video",
+  "texto": "no piden permiso a los espíritus, los doblegan. Son parientes de los tauren de Mulgore, separados hace milenios, y ni unos ni otros sabían que los otros existían.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-200",
+  "t0": 1714.344,
+  "t1": 1722.93,
+  "tipo": "video",
+  "texto": "Se unen a la Horda en Rasganorte con un juramento de sangre, y son los únicos vecinos de la tundra que no quieren comerse a nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-201",
+  "t0": 1722.93,
+  "t1": 1730.914,
+  "tipo": "video",
+  "texto": "Número cuarenta y cuatro. En el Fiordo Aquilonal el juego te cuenta de dónde salieron los humanos, y la respuesta son los vrykul.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-202",
+  "t0": 1730.914,
+  "t1": 1738.113,
+  "tipo": "video",
+  "texto": "En Nafsavar, con un elixir, ves el eco del rey Ymiron ordenando matar a los bebés que nacían débiles y pequeños.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-203",
+  "t0": 1738.113,
+  "t1": 1745.472,
+  "tipo": "video",
+  "texto": "Algunos padres los escondieron y los sacaron de Rasganorte; esos bebés débiles son los ancestros de Ventormenta y Lordaeron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-204",
+  "t0": 1745.472,
+  "t1": 1754.39,
+  "tipo": "video",
+  "texto": "Puedes ir a Nafsavar y ver la escena; la raza humana entera es una desobediencia de hace miles de años. Número cuarenta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-205",
+  "t0": 1754.39,
+  "t1": 1761.42,
+  "tipo": "video",
+  "texto": "En la Fortaleza de Utgarde, el jefe final se muere a la mitad de la pelea, y lo resucita una mujer con alas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-206",
+  "t0": 1761.42,
+  "t1": 1774.623,
+  "tipo": "video",
+  "texto": "Ingvar el Saqueador cae, y Annhylde la Invocadora baja del techo a levantarlo como no-muerto para la segunda fase. Fue la primera val'kyr que vio el juego, dos años antes de que Sylvanas las convirtiera en su nuevo modelo de negocio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-207",
+  "t0": 1774.623,
+  "t1": 1780.43,
+  "tipo": "video",
+  "texto": "Y el fiordo está lleno de ellas, ahí se fabrican; Utgarde es la escuela.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-208",
+  "t0": 1780.43,
+  "t1": 1789.308,
+  "tipo": "video",
+  "texto": "Número cuarenta y dos. En Nuevo Agamand, el pueblo de los Renegados del fiordo, los boticarios prueban una peste nueva con prisioneros vrykul.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-209",
+  "t0": 1789.308,
+  "t1": 1796.465,
+  "tipo": "video",
+  "texto": "Te mandan a recoger ingredientes y a aplicar el veneno a los enfermos, con misiones alegres y nombres de receta de cocina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-210",
+  "t0": 1796.465,
+  "t1": 1810.406,
+  "tipo": "video",
+  "texto": "Es la Sociedad Real de Boticarios perfeccionando el mismo producto que unas zonas después explota en la Puerta de Cólera. Si haces las misiones de la Horda en orden, eres cómplice del mayor crimen de guerra de Rasganorte sin enterarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-211",
+  "t0": 1810.406,
+  "t1": 1816.076,
+  "tipo": "video",
+  "texto": "Número cuarenta y uno. El Cementerio de Dragones se llama así porque es, literalmente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-212",
+  "t0": 1816.076,
+  "t1": 1825.997,
+  "tipo": "video",
+  "texto": "a donde los dragones van a morir. Alrededor del Templo del Reposo del Dragón hay cinco santuarios, uno por vuelo, y los huesos salen de la nieve en toda la zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-213",
+  "t0": 1825.997,
+  "t1": 1832.513,
+  "tipo": "video",
+  "texto": "La Plaga llegó a levantar esos huesos: en el santuario Obsidiana y en el Azur hay dragones muertos caminando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-214",
+  "t0": 1832.513,
+  "t1": 1840.43,
+  "tipo": "video",
+  "texto": "Y en la cima del templo está Alexstrasza en persona, Reina de los Dragones, recibiendo visitas de nivel setenta y dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-215",
+  "t0": 1840.43,
+  "t1": 1850.349,
+  "tipo": "video",
+  "texto": "Número cuarenta. En el centro del Cementerio hay un esqueleto que se ve desde cualquier punto de la zona: Galakrond. Es el protodragón del que descienden todos los dragones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-216",
+  "t0": 1850.349,
+  "t1": 1858.525,
+  "tipo": "video",
+  "texto": "un monstruo devorador de su propia especie, muerto hace una eternidad. La Plaga excava entre sus costillas para levantar protodragones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-217",
+  "t0": 1858.525,
+  "t1": 1867.93,
+  "tipo": "video",
+  "texto": "y tú bajas ahí a quemarles los planes. Puedes caminar dentro de su caja torácica; la cabeza sola es más grande que una posada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-218",
+  "t0": 1867.93,
+  "t1": 1877.081,
+  "tipo": "video",
+  "texto": "Número treinta y nueve. Naxxramas se mudó. En Classic flotaba sobre las Tierras de la Peste; en Wrath flota sobre el Cementerio de Dragones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-219",
+  "t0": 1877.081,
+  "t1": 1884.136,
+  "tipo": "video",
+  "texto": "La necrópolis voló de un continente a otro con Kel'Thuzad a bordo, y la Plaga la estacionó encima del Fortaleza de Hibergarde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-220",
+  "t0": 1884.136,
+  "t1": 1895.228,
+  "tipo": "video",
+  "texto": "Desde el bastión se ve la sombra en el cielo todo el día, y la gente de abajo vive con eso. Es el único edificio del juego que ha estado en dos continentes sin que nadie lo cargara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-221",
+  "t0": 1895.228,
+  "t1": 1903.184,
+  "tipo": "video",
+  "texto": "Número treinta y ocho. La Puerta de Cólera es el lugar de la cinemática más famosa del juego, y puedes pararte en el mismo punto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-222",
+  "t0": 1903.184,
+  "t1": 1911.588,
+  "tipo": "video",
+  "texto": "Angrathar, con el campo de batalla todavía lleno de catapultas, la mancha verde de la peste de Putress y los cuerpos de Bolvar y Saurfang el joven.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-223",
+  "t0": 1911.588,
+  "t1": 1918.659,
+  "tipo": "video",
+  "texto": "En Wrath original, esa escena abría la Batalla por Entrañas, con Thrall y Varian; Cataclysm la borró del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-224",
+  "t0": 1918.659,
+  "t1": 1926.719,
+  "tipo": "video",
+  "texto": "En Classic sigue completa; es la única forma de volver a jugar la misión que hizo llorar a medio servidor. Número treinta y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-225",
+  "t0": 1926.719,
+  "t1": 1934.926,
+  "tipo": "video",
+  "texto": "En la Costa Olvidada, al sureste del Cementerio, hay barcos quemados y soldados fantasmas que todavía esperan órdenes de Arthas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-226",
+  "t0": 1934.926,
+  "t1": 1942.448,
+  "tipo": "video",
+  "texto": "Son la Primera Legión de Lordaeron, los hombres que Arthas trajo a cazar a Mal'Ganis, y a los que les quemó los barcos para que no volvieran.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-227",
+  "t0": 1942.448,
+  "t1": 1955.43,
+  "tipo": "video",
+  "texto": "Orik Trueheart te da un elixir para entrar al mundo espiritual y oír sus historias: ninguno sabe que su príncipe los traicionó. Les prometió que volverían a casa; llevan veinte años en la playa esperando el barco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-228",
+  "t0": 1955.43,
+  "t1": 1963.461,
+  "tipo": "video",
+  "texto": "Número treinta y seis. En la Caverna Agonía de Escarcha puedes ver el momento exacto en que Arthas tomó la espada y perdió el alma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-229",
+  "t0": 1963.461,
+  "t1": 1972.239,
+  "tipo": "video",
+  "texto": "Una visión repite la escena: Muradin Barbabronce leyendo la inscripción, la espada volando a la mano del príncipe, el enano cayendo con el hielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-230",
+  "t0": 1972.239,
+  "t1": 1977.55,
+  "tipo": "video",
+  "texto": "Todo el mundo salió de ahí convencido de que Muradin murió; el juego nunca lo dice.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-231",
+  "t0": 1977.55,
+  "t1": 1986.776,
+  "tipo": "video",
+  "texto": "Guarda ese detalle: en las Cumbres Tormentosas hay un enano con amnesia que va a aparecer en esta lista. Número treinta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-232",
+  "t0": 1986.776,
+  "t1": 1994.383,
+  "tipo": "video",
+  "texto": "Los Escarlata que destruiste como caballero de la muerte no murieron: huyeron en barco a Rasganorte y se llaman Embate Escarlata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-233",
+  "t0": 1994.383,
+  "t1": 2005.22,
+  "tipo": "video",
+  "texto": "Nueva Vega del Amparo, en el Cementerio, es su ciudad nueva, con la Gran General Abbendis siguiendo una voz que dice ser la Luz. Fundaron un pueblo entero, con catedral y puerto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-234",
+  "t0": 2005.22,
+  "t1": 2015.311,
+  "tipo": "video",
+  "texto": "para seguir una voz en la cabeza de una sola persona. Quién es la voz lo descubres en la Corona de Hielo; también está en esta lista, casi al final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-235",
+  "t0": 2015.311,
+  "t1": 2024.558,
+  "tipo": "video",
+  "texto": "Número treinta y cuatro. Fauceparda, la capital de los furbolgs de las Colinas Pardas, está construida dentro del tocón de un árbol del mundo fallido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-236",
+  "t0": 2024.558,
+  "t1": 2031.987,
+  "tipo": "video",
+  "texto": "Vordrassil lo plantaron los druidas hace milenios, y sus raíces llegaron hasta la prisión de Yogg-Saron; lo tuvieron que destruir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-237",
+  "t0": 2031.987,
+  "t1": 2038.983,
+  "tipo": "video",
+  "texto": "Los furbolgs resucitaron ahí a su dios oso, Ursoc, y volvió corrompido por las raíces, enloquecido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-238",
+  "t0": 2038.983,
+  "t1": 2046.85,
+  "tipo": "video",
+  "texto": "Tú lo matas en las raíces del árbol; el dios de los furbolgs muere por culpa del jardín de los elfos. Número treinta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-239",
+  "t0": 2046.85,
+  "t1": 2056.987,
+  "tipo": "video",
+  "texto": "En las Colinas Pardas la Alianza manda a los granjeros de Páramos de Poniente a pelear una guerra en la nieve. La Brigada de los Páramos de Poniente, con Gryan Stoutmantle al frente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-240",
+  "t0": 2056.987,
+  "t1": 2068.098,
+  "tipo": "video",
+  "texto": "el mismo de la milicia de Classic, tiene su campamento al norte de la zona. Es la única unidad del juego que pasó de perseguir a los Defias con horquillas a pelear contra la Horda en Rasganorte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-241",
+  "t0": 2068.098,
+  "t1": 2075.289,
+  "tipo": "video",
+  "texto": "Reconoces a los personajes de las misiones de nivel diez, unos años después y a treinta grados bajo cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-242",
+  "t0": 2075.289,
+  "t1": 2084.362,
+  "tipo": "video",
+  "texto": "Número treinta y dos. Los tramperos de Arroyoplata, en las Colinas Pardas, son muy amables, hasta que cae la luna y se convierten en huargen.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-243",
+  "t0": 2084.362,
+  "t1": 2092.848,
+  "tipo": "video",
+  "texto": "Arugal, el mago del Castillo de Colmillo Oscuro que creó la maldición, murió en Classic; el Rey Exánime lo levantó como sombra y lo mandó aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-244",
+  "t0": 2092.848,
+  "t1": 2099.761,
+  "tipo": "video",
+  "texto": "Está en la Isla Luna de Sangre, dirigiendo a los huargen de Rasganorte desde el más allá; tú lo matas por segunda vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-245",
+  "t0": 2099.761,
+  "t1": 2108.147,
+  "tipo": "video",
+  "texto": "El canal ya contó la historia de Arugal; esta es la secuela que casi nadie jugó. Número treinta y uno. Harrison Jones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-246",
+  "t0": 2108.147,
+  "t1": 2115.519,
+  "tipo": "video",
+  "texto": "segunda aparición: las Ruinas de Drakil'jin, en las Colinas Pardas, con el gong, el sombrero y una trampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-247",
+  "t0": 2115.519,
+  "t1": 2126.716,
+  "tipo": "video",
+  "texto": "Te pide que lo saques de un templo trol lleno de guardias de piedra, mientras él grita que esto es para el museo. Después se queda tranquilo en el campamento, hasta que lo arrastran a Uldum en Cataclysm.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-248",
+  "t0": 2126.716,
+  "t1": 2132.808,
+  "tipo": "video",
+  "texto": "Un arqueólogo que aparece en cada expansión, siempre metido en un templo que no es suyo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-249",
+  "t0": 2132.808,
+  "t1": 2141.313,
+  "tipo": "video",
+  "texto": "Número treinta. Los trols Drakkari de Zul'Drak sacrificaron a sus propios dioses para sobrevivir a la Plaga, y puedes ver los altares.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-250",
+  "t0": 2141.313,
+  "t1": 2149.139,
+  "tipo": "video",
+  "texto": "Mataron a Rhunok el oso, a Quetz'lun la serpiente alada, a Sseratus, a Akali el rinoceronte, para beberse su poder.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-251",
+  "t0": 2149.139,
+  "t1": 2157.004,
+  "tipo": "video",
+  "texto": "Har'koa, la leopardo de las nieves, es la única que queda viva, encadenada en su altar, y es ella quien te cuenta la traición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-252",
+  "t0": 2157.004,
+  "t1": 2170.986,
+  "tipo": "video",
+  "texto": "Es la única civilización del juego que se comió a sus dioses y aun así perdió la guerra. Número veintinueve. En el centro de Zul'Drak hay un cráter enorme con hielo adentro, y es la tumba de un dios que prefirió explotar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-253",
+  "t0": 2170.986,
+  "t1": 2179.651,
+  "tipo": "video",
+  "texto": "Mam'toth, el dios mamut, se destruyó a sí mismo cuando los Drakkari fueron a sacrificarlo, y la explosión se llevó el altar y a los sacerdotes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-254",
+  "t0": 2179.651,
+  "t1": 2186.23,
+  "tipo": "video",
+  "texto": "Lo que quedó es el Altar de Mam'toth: un hoyo en la ciudad, con sus restos y los trols que no alcanzaron a correr.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-255",
+  "t0": 2186.23,
+  "t1": 2194.115,
+  "tipo": "video",
+  "texto": "Único caso de dios que eligió volarse antes que dejarse comer; el cráter se ve desde el aire. Número veintiocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-256",
+  "t0": 2194.115,
+  "t1": 2202.141,
+  "tipo": "video",
+  "texto": "En Zul'Drak hay una misión en la que no caminas: viajas sentado en el hombro de un gigante de la tormenta. Gymer, el rey de los gigantes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-257",
+  "t0": 2202.141,
+  "t1": 2210.996,
+  "tipo": "video",
+  "texto": "está preso en Zul'Drak, y cuando lo liberas te sube y recorren la ciudad pisando trols. Él agarra enemigos, los lanza, y tú le dices a quién;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-258",
+  "t0": 2210.996,
+  "t1": 2220.43,
+  "tipo": "video",
+  "texto": "es la venganza del Rey de la Tormenta. Dura cinco minutos y es lo más poderoso que te vas a sentir en toda la expansión, sin contar la banda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-259",
+  "t0": 2220.43,
+  "t1": 2229.879,
+  "tipo": "video",
+  "texto": "Número veintisiete. Drakuru, el trol simpático al que ayudaste en las Colinas Pardas, es ahora un caballero de la muerte al servicio del Rey Exánime.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-260",
+  "t0": 2229.879,
+  "t1": 2236.676,
+  "tipo": "video",
+  "texto": "En Zul'Drak te disfraza de guerrero de la Plaga y te hace trabajar para él en Voltarus, el zigurat flotante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-261",
+  "t0": 2236.676,
+  "t1": 2245.853,
+  "tipo": "video",
+  "texto": "Al final, el Rey Exánime en persona te dice que Drakuru ya no le sirve, y te manda matarlo. Pasaste dos zonas trabajando para los dos lados a la vez;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-262",
+  "t0": 2245.853,
+  "t1": 2254.73,
+  "tipo": "video",
+  "texto": "el único que lo tenía claro era Arthas. Número veintiséis. Gurgthock, el goblin de las peleas de Nagrand,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-263",
+  "t0": 2254.73,
+  "t1": 2262.436,
+  "tipo": "video",
+  "texto": "abrió su segunda sucursal en Zul'Drak: el Anfiteatro de la Angustia. Mismo pozo, mismo ayudante trol, Wodin,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-264",
+  "t0": 2262.436,
+  "t1": 2273.525,
+  "tipo": "video",
+  "texto": "y una cartelera de monstruos que termina con Vladof el Carnicero. La recompensa final es un anillo o un arma épica; la recompensa real es volver a oír al goblin anunciando la pelea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-265",
+  "t0": 2273.525,
+  "t1": 2280.43,
+  "tipo": "video",
+  "texto": "Es la mejor pista de que, en Azeroth, el negocio de las peleas clandestinas nunca quiebra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-266",
+  "t0": 2280.43,
+  "t1": 2288.376,
+  "tipo": "video",
+  "texto": "Número veinticinco. En la Fortaleza de Drak'Tharon, el último jefe te convierte en esqueleto, y peleas como esqueleto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-267",
+  "t0": 2288.376,
+  "t1": 2296.449,
+  "tipo": "video",
+  "texto": "El Profeta Tharon'ja te roba la carne a mitad de la pelea: tu personaje queda en huesos, con habilidades nuevas, y luego te la devuelve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-268",
+  "t0": 2296.449,
+  "t1": 2307.93,
+  "tipo": "video",
+  "texto": "Es la única mazmorra en la que el grupo entero juega con un personaje que no es el suyo. Y es una buena pista de lo que hace la Plaga con los trols; Drak'Tharon es un matadero elegante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-269",
+  "t0": 2307.93,
+  "t1": 2316.462,
+  "tipo": "video",
+  "texto": "Número veinticuatro. La Cuenca de Sholazar es una reserva natural de los titanes, con pilares de piedra que la sellan como un invernadero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-270",
+  "t0": 2316.462,
+  "t1": 2324.333,
+  "tipo": "video",
+  "texto": "Es la hermana del Cráter de Un'Goro, con la misma selva, los mismos pilares y la misma guardiana: Freya, la vigilante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-271",
+  "t0": 2324.333,
+  "t1": 2330.358,
+  "tipo": "video",
+  "texto": "Uno de los pilares cayó, en la Avalancha, y por ese hueco la Plaga empezó a entrar al jardín.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-272",
+  "t0": 2330.358,
+  "t1": 2339.195,
+  "tipo": "video",
+  "texto": "El Avatar de Freya te recibe en persona, cosa que no hacen muchas diosas, y te pone a reparar la cerca. Número veintitrés.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-273",
+  "t0": 2339.195,
+  "t1": 2347.856,
+  "tipo": "video",
+  "texto": "En Sholazar hay una puerta de los titanes que te lleva a Un'Goro, al otro lado del planeta, caminando. La puerta se activa con dos interruptores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-274",
+  "t0": 2347.856,
+  "t1": 2359.482,
+  "tipo": "video",
+  "texto": "en el Pedestal de los Creadores y en el Mirador de los Creadores, y al pasar apareces en Kalimdor. Del otro lado despiertas al Etymidian, un gigante de piedra que patrulla el cráter desde entonces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-275",
+  "t0": 2359.482,
+  "t1": 2365.43,
+  "tipo": "video",
+  "texto": "Es el único viaje intercontinental gratis del juego, y lo usan cuatro personas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-276",
+  "t0": 2365.43,
+  "t1": 2375.251,
+  "tipo": "video",
+  "texto": "Número veintidós. Hemet Nesingwary llegó a Sholazar con su tercer campamento base, tras Vallefresno y Tuercespina, y aquí está la presa definitiva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-277",
+  "t0": 2375.251,
+  "t1": 2381.792,
+  "tipo": "video",
+  "texto": "Loque'nahak, el leopardo espectral, aparece cada muchas horas en cualquiera de varios puntos de la cuenca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-278",
+  "t0": 2381.792,
+  "t1": 2391.963,
+  "tipo": "video",
+  "texto": "Para los cazadores era la mascota más buscada del juego: una bestia espiritual que medio servidor acampó turnándose. Si quieres verla, trae café; si quieres domarla,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-279",
+  "t0": 2391.963,
+  "t1": 2402.4,
+  "tipo": "video",
+  "texto": "trae amigos que te avisen. Número veintiuno. En Sholazar tienes que elegir entre dos tribus, y la elección correcta trae un dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-280",
+  "t0": 2402.4,
+  "t1": 2411.488,
+  "tipo": "video",
+  "texto": "Los Oráculos, ranas místicas, y los Corazón Frenético, lobos chaparros, se odian; tú matas al líder de una y la otra te adopta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-281",
+  "t0": 2411.488,
+  "t1": 2418.496,
+  "tipo": "video",
+  "texto": "Si eliges a los Oráculos, su huevo misterioso, que compras cada semana, puede traer un protodraco verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-282",
+  "t0": 2418.496,
+  "t1": 2425.43,
+  "tipo": "video",
+  "texto": "La mayoría eligió a los lobos porque son más simpáticos, y se quedó sin montura por tener buen gusto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-283",
+  "t0": 2425.43,
+  "t1": 2435.579,
+  "tipo": "video",
+  "texto": "Número veinte. La base goblin de las Cumbres Tormentosas se llama K tres, y el chiste es la montaña. Es el K dos de la vida real, la segunda cima del mundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-284",
+  "t0": 2435.579,
+  "t1": 2446.865,
+  "tipo": "video",
+  "texto": "con un número más, porque los goblins no se quedan atrás. Desde K tres se ven las tormentas de Ulduar, y los goblins venden de todo mientras los gigantes de hielo pelean arriba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-285",
+  "t0": 2446.865,
+  "t1": 2452.93,
+  "tipo": "video",
+  "texto": "Es tu primera parada en la zona, y ya te está contando un chiste de alpinismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-286",
+  "t0": 2452.93,
+  "t1": 2461.13,
+  "tipo": "video",
+  "texto": "Número diecinueve. En el Poblado Brunnhildar, las vrykul de hielo no aceptan hombres, así que el juego te convierte en mujer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-287",
+  "t0": 2461.13,
+  "t1": 2469.757,
+  "tipo": "video",
+  "texto": "Las Hyldnir te capturan, te disfrazan de guerrera vrykul gigante, con trenzas, y compites en sus pruebas para ganarte el favor de Hodir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-288",
+  "t0": 2469.757,
+  "t1": 2477.712,
+  "tipo": "video",
+  "texto": "Montas sus osos, peleas en su arena y cazas protodracos; todo eso con tres metros de estatura y una voz que no es la tuya.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-289",
+  "t0": 2477.712,
+  "t1": 2486.683,
+  "tipo": "video",
+  "texto": "Es la cadena de misiones más larga de las Cumbres, y la mayoría la hizo sin pensar en lo que llevaba puesto. Número dieciocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-290",
+  "t0": 2486.683,
+  "t1": 2493.535,
+  "tipo": "video",
+  "texto": "En lo alto del Templo de las Tormentas hay un dios sentado que no se mueve, y lleva milenios sin moverse: Thorim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-291",
+  "t0": 2493.535,
+  "t1": 2503.86,
+  "tipo": "video",
+  "texto": "Su esposa, Sif, fue asesinada, y le hicieron creer que fueron los gigantes de hielo; el culpable fue su hermano Loken. Thorim dejó de gobernar y se sentó a mirar la nieve;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-292",
+  "t0": 2503.86,
+  "t1": 2511.276,
+  "tipo": "video",
+  "texto": "Loken tomó Ulduar y la zona entera con sus enanos de hierro. Tú le llevas las pruebas al templo, y baja a pelear con Loken en Ulduar;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-293",
+  "t0": 2511.276,
+  "t1": 2522.31,
+  "tipo": "video",
+  "texto": "ir a ver a un dios deprimido es una misión real. Número diecisiete. En las Cumbres Tormentosas vuela una montura que muchísima gente buscó durante años sin verla jamás:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-294",
+  "t0": 2522.31,
+  "t1": 2530.011,
+  "tipo": "video",
+  "texto": "el Protodraco Perdido en el Tiempo. Aparece en varias rutas, cada muchas horas, compartiendo lugar con una dragona azul,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-295",
+  "t0": 2530.011,
+  "t1": 2540.749,
+  "tipo": "video",
+  "texto": "Vyragosa, que es la que normalmente te sale. Quien lo mata se lleva la montura garantizada; por eso hay gente que lleva años estacionada en una roca mirando el cielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-296",
+  "t0": 2540.749,
+  "t1": 2547.93,
+  "tipo": "video",
+  "texto": "Si ves a alguien quieto en lo alto de las Cumbres, no está desconectado: está trabajando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-297",
+  "t0": 2547.93,
+  "t1": 2556.235,
+  "tipo": "video",
+  "texto": "Número dieciséis. El enano que todo el mundo cree muerto en la Caverna Agonía de Escarcha está vivo, y gobierna un pueblo en las Cumbres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-298",
+  "t0": 2556.235,
+  "t1": 2564.05,
+  "tipo": "video",
+  "texto": "Se hace llamar Yorg Stormheart, rey de los enanos de Fuerte Escarcha, y no recuerda quién es: el hielo le borró la memoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-299",
+  "t0": 2564.05,
+  "t1": 2571.779,
+  "tipo": "video",
+  "texto": "Es Muradin Barbabronce, el hermano del rey de Forjaz, y tú eres quien lo descubre, gracias a Brann, el otro hermano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-300",
+  "t0": 2571.779,
+  "t1": 2580.43,
+  "tipo": "video",
+  "texto": "Los tres Barbabronce están repartidos: Magni en Forjaz, Brann en Ulduar y Muradin con amnesia entre gigantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-301",
+  "t0": 2580.43,
+  "t1": 2588.672,
+  "tipo": "video",
+  "texto": "Número quince. En Ulduar hay un jefe que la mayoría de los jugadores jamás vio, y no está escondido: está en el planetario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-302",
+  "t0": 2588.672,
+  "t1": 2600.075,
+  "tipo": "video",
+  "texto": "Algalon el Observador solo aparece si derrotas a los cuatro guardianes en su modo difícil, y te da una hora para intentarlo. Es un enviado de los titanes que viene a decidir si Azeroth se reinicia desde cero;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-303",
+  "t0": 2600.075,
+  "t1": 2608.043,
+  "tipo": "video",
+  "texto": "si lo convences, manda la señal de que el planeta vale la pena. El Planetario Celestial sigue ahí, cerrado para casi todos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-304",
+  "t0": 2608.043,
+  "t1": 2614.006,
+  "tipo": "video",
+  "texto": "con un juez que lleva años esperando visitas. Número catorce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-305",
+  "t0": 2614.006,
+  "t1": 2624.613,
+  "tipo": "video",
+  "texto": "La montura más rara de Wrath es la cabeza de un gnomo robot, y se consigue haciendo enojar a un dios antiguo. Mimiron, el guardián ingeniero, construyó un vehículo con su propia cara,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-306",
+  "t0": 2624.613,
+  "t1": 2632.344,
+  "tipo": "video",
+  "texto": "y Yogg-Saron lo suelta solo si lo derrotas sin que ningún guardián te ayude. Veinticinco personas, el jefe final en su versión más difícil,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-307",
+  "t0": 2632.344,
+  "t1": 2642.683,
+  "tipo": "video",
+  "texto": "y una tasa de caída que convierte la montura en un trofeo de servidor. La Cabeza de Mimiron sigue siendo el objeto que más identifica a los que raidearon en dos mil nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-308",
+  "t0": 2642.683,
+  "t1": 2652.072,
+  "tipo": "video",
+  "texto": "Número trece. Dalaran dejó un cráter. Si vas a las Laderas de Trabalomas, en los Reinos del Este, hay un hoyo enorme donde estaba la ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-309",
+  "t0": 2652.072,
+  "t1": 2660.416,
+  "tipo": "video",
+  "texto": "En Classic era una burbuja violeta impenetrable; los magos levantaron la ciudad completa y la volaron a Rasganorte, para enfrentar a Malygos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-310",
+  "t0": 2660.416,
+  "t1": 2667.118,
+  "tipo": "video",
+  "texto": "El cráter se quedó, y Cataclysm lo convirtió en un lago; la ciudad flota ahora sobre el Bosque Canto de Cristal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-311",
+  "t0": 2667.118,
+  "t1": 2675.02,
+  "tipo": "video",
+  "texto": "Es la única mudanza en la historia del juego que dejó daños estructurales en un continente. Número doce. En Dalaran,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-312",
+  "t0": 2675.02,
+  "t1": 2683.509,
+  "tipo": "video",
+  "texto": "la plataforma de vuelo se llama Alto de Krasus, y Krasus no es un mago: es un dragón. Korialstrasz, consorte de Alexstrasza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-313",
+  "t0": 2683.509,
+  "t1": 2692.902,
+  "tipo": "video",
+  "texto": "vivió siglos entre los Kirin Tor con forma de elfo y ese nombre. La ciudad la dirige Rhonin, el héroe de las novelas, casado con Vereesa Brisaveloz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-314",
+  "t0": 2692.902,
+  "t1": 2701.883,
+  "tipo": "video",
+  "texto": "la hermana de Sylvanas, que lidera a los elfos de la Alianza. Dalaran es, básicamente, una ciudad administrada por los personajes de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-315",
+  "t0": 2701.883,
+  "t1": 2709.77,
+  "tipo": "video",
+  "texto": "los libros de Richard Knaak. Número once. En la Ciudadela Violeta hay un portal que casi nadie cruza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-316",
+  "t0": 2709.77,
+  "t1": 2719.275,
+  "tipo": "video",
+  "texto": "y sube a un salón escondido en lo alto de la torre: el Salón Púrpura. Y si encuentras ocho libros de magia repartidos por la ciudad, que aparecen y desaparecen,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-317",
+  "t0": 2719.275,
+  "t1": 2729.964,
+  "tipo": "video",
+  "texto": "el logro Educación Superior abre otra sala secreta. Es el Refugio del Archimago Vargoth, el mismo de Kirin'Var, que te regala un familiar Kirin Tor como mascota.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-318",
+  "t0": 2729.964,
+  "t1": 2737.824,
+  "tipo": "video",
+  "texto": "Dalaran tiene más cuartos secretos que cualquier ciudad del juego, y la mayoría pasó un año entero sin abrir uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-319",
+  "t0": 2737.824,
+  "t1": 2746.335,
+  "tipo": "video",
+  "texto": "Número diez. En el banco de Dalaran, un gnomo te convierte en oveja, se ríe y se teletransporta, y luego te pide perdón por correo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-320",
+  "t0": 2746.335,
+  "t1": 2754.546,
+  "tipo": "video",
+  "texto": "Minigob Manacapón anda suelto desde el parche tres punto uno, y después de la broma te llega una carta con una varita: el Hacedor de Travesuras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-321",
+  "t0": 2754.546,
+  "t1": 2760.529,
+  "tipo": "video",
+  "texto": "Sirve para convertir en oveja a otro jugador, solo dentro de Dalaran, para que la cadena siga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-322",
+  "t0": 2760.529,
+  "t1": 2770.73,
+  "tipo": "video",
+  "texto": "Es el único personaje del juego cuyo trabajo es molestar a la gente y repartir las herramientas para seguir molestando. Número nueve. El Bosque Canto de Cristal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-323",
+  "t0": 2770.73,
+  "t1": 2776.153,
+  "tipo": "video",
+  "texto": "debajo de Dalaran, es la zona más bonita de la expansión y no tiene casi misiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-324",
+  "t0": 2776.153,
+  "t1": 2788.128,
+  "tipo": "video",
+  "texto": "Los árboles son de cristal porque los dragones azules lo cristalizaron en una batalla antigua contra los Altonato de Shandaral, y así se quedó. Hay dos campamentos, un par de misiones, y el resto es paisaje;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-325",
+  "t0": 2788.128,
+  "t1": 2797.93,
+  "tipo": "video",
+  "texto": "los diseñadores lo dejaron como patio de la ciudad. Vale la pena bajar a caminarlo: es un bosque entero que parece sonar a vidrio cuando lo cruzas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-326",
+  "t0": 2797.93,
+  "t1": 2806.438,
+  "tipo": "video",
+  "texto": "Número ocho. El Lago Conquista del Invierno es una zona entera dedicada a una guerra de asedio con vehículos, y tiene una banda escondida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-327",
+  "t0": 2806.438,
+  "t1": 2813.255,
+  "tipo": "video",
+  "texto": "Cada dos horas y media los dos bandos se pelean la fortaleza con catapultas y demoledores que construyes en talleres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-328",
+  "t0": 2813.255,
+  "t1": 2823.646,
+  "tipo": "video",
+  "texto": "El que gana abre la Cámara de Archavon, una banda con cuatro jefes a la que solo el dueño del lago puede entrar a saquear. Es la única banda del juego cuya puerta la abre un resultado de PvP;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-329",
+  "t0": 2823.646,
+  "t1": 2828.749,
+  "tipo": "video",
+  "texto": "si perdiste, vuelve en dos horas y media. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-330",
+  "t0": 2828.749,
+  "t1": 2839.226,
+  "tipo": "video",
+  "texto": "El Torneo Argenta, en el norte de la Corona de Hielo, no existía al salir la expansión; lo construyeron frente a tus ojos. En el parche tres punto uno aparecieron las obras,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-331",
+  "t0": 2839.226,
+  "t1": 2847.483,
+  "tipo": "video",
+  "texto": "y semana a semana se levantó la carpa, las gradas y después el Coliseo de los Cruzados. Ahí se justa a caballo contra campeones de cada ciudad,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-332",
+  "t0": 2847.483,
+  "t1": 2857.93,
+  "tipo": "video",
+  "texto": "y un Caballero Negro se cuela al torneo a matar gente en plena justa. Es el único lugar del juego donde el enemigo es la Plaga y la diaria es ganar un torneo medieval.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-333",
+  "t0": 2857.93,
+  "t1": 2866.656,
+  "tipo": "video",
+  "texto": "Número seis. La dragona de hielo que vuela sobre la Ciudadela de la Corona de Hielo tiene una tumba en la misma zona, y se llama Caída de Sindragosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-334",
+  "t0": 2866.656,
+  "t1": 2874.139,
+  "tipo": "video",
+  "texto": "Sindragosa era la consorte de Malygos, y murió en la Guerra de los Ancestros, destrozada por el Alma de Dragón de Alamuerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-335",
+  "t0": 2874.139,
+  "t1": 2880.55,
+  "tipo": "video",
+  "texto": "Sus huesos quedaron en la Corona de Hielo diez mil años, hasta que el Rey Exánime la levantó como su dracoliche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-336",
+  "t0": 2880.55,
+  "t1": 2890.51,
+  "tipo": "video",
+  "texto": "El cráter de su caída tiene su silueta, y se puede visitar; el jefe de la banda empezó siendo un fósil. Número cinco. En Puerto del Embate,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-337",
+  "t0": 2890.51,
+  "t1": 2900.376,
+  "tipo": "video",
+  "texto": "los Escarlata que seguían a una voz descubren quién les hablaba: Mal'Ganis. El Gran Almirante Barean Westwind, su líder, era el señor del terror disfrazado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-338",
+  "t0": 2900.376,
+  "t1": 2908.881,
+  "tipo": "video",
+  "texto": "el mismo demonio que empujó a Arthas a Stratholme. Tú lo expones en una misión, y los Escarlata que destruiste dos veces caen por tercera vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-339",
+  "t0": 2908.881,
+  "t1": 2917.93,
+  "tipo": "video",
+  "texto": "por fin con razón. Mal'Ganis se escapa, como siempre; es el villano con más huidas del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-340",
+  "t0": 2917.93,
+  "t1": 2925.66,
+  "tipo": "video",
+  "texto": "Número cuatro. Sobre la Corona de Hielo vuelan dos barcos de guerra, uno por facción, y puedes subirte en pleno vuelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-341",
+  "t0": 2925.66,
+  "t1": 2932.996,
+  "tipo": "video",
+  "texto": "El Martillo de Orgrim y el Rompecielos patrullan la zona dando vueltas, con misiones, vendedores y cañones a bordo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-342",
+  "t0": 2932.996,
+  "t1": 2942.694,
+  "tipo": "video",
+  "texto": "Hay que volar hasta ellos, aterrizar en la cubierta y aguantarse el vértigo; son los únicos pueblos del juego en movimiento. Luego los dos se encuentran dentro de la Ciudadela,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-343",
+  "t0": 2942.694,
+  "t1": 2950.808,
+  "tipo": "video",
+  "texto": "y se disparan entre sí mientras tú saltas de un barco al otro. Número tres. El Pináculo de los Cruzados,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-344",
+  "t0": 2950.808,
+  "t1": 2961.042,
+  "tipo": "video",
+  "texto": "el campamento de Tirion en la Corona de Hielo, lo construyes tú con misiones. Al llegar es una colina vacía; terminas la cadena de la Vanguardia Argenta y aparece un fuerte completo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-345",
+  "t0": 2961.042,
+  "t1": 2967.804,
+  "tipo": "video",
+  "texto": "con torre, vendedores y Tirion al frente. Fue uno de los primeros usos del cambio de fases en el mundo abierto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-346",
+  "t0": 2967.804,
+  "t1": 2977.841,
+  "tipo": "video",
+  "texto": "el mapa cambia según lo que tú hiciste. Dos jugadores en la misma colina pueden ver cosas distintas; uno ve nieve, el otro ve una fortaleza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-347",
+  "t0": 2977.841,
+  "t1": 2985.527,
+  "tipo": "video",
+  "texto": "Número dos. En las Cámaras de Reflexión, el Rey Exánime en persona te persigue por un pasillo, y no se puede ganar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-348",
+  "t0": 2985.527,
+  "t1": 2993.911,
+  "tipo": "video",
+  "texto": "Tocas la espada Agonía de Escarcha, aparece Uther, aparece Arthas, y la única salida es correr mientras él rompe muro tras muro de hielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-349",
+  "t0": 2993.911,
+  "t1": 3003.315,
+  "tipo": "video",
+  "texto": "Jaina o Sylvanas, según tu bando, te sacan en un barco, y Arthas se queda en la orilla, mirando. Es la única mazmorra donde el jefe final no se mata:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-350",
+  "t0": 3003.315,
+  "t1": 3012.899,
+  "tipo": "video",
+  "texto": "se huye de él, y te deja un recuerdo de lo que viene arriba. Número uno. En el noreste de la Corona de Hielo hay un paladín agonizando en una colina,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-351",
+  "t0": 3012.899,
+  "t1": 3020.418,
+  "tipo": "video",
+  "texto": "en la Vigilia Silenciosa, y Tirion te manda a salvarlo. Es el Cruzado Bridenbrad, y vas por una cura con Alexstrasza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-352",
+  "t0": 3020.418,
+  "t1": 3029.135,
+  "tipo": "video",
+  "texto": "con Remulos en el Claro de la Luna y con A'dal en Shattrath; ninguno puede curarlo. A'dal baja a Rasganorte en persona y se lleva su espíritu a la Luz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-353",
+  "t0": 3029.135,
+  "t1": 3038.809,
+  "tipo": "video",
+  "texto": "para que la Plaga no lo levante jamás. Bridenbrad existió: es el hermano de un empleado de Blizzard que murió de cáncer, y la cadena de misiones es su funeral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-354",
+  "t0": 3038.809,
+  "t1": 3045.736,
+  "tipo": "video",
+  "texto": "Se puede visitar, y vale la pena ir callado. Y esas son las cien. Dos continentes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-355",
+  "t0": 3045.736,
+  "t1": 3053.306,
+  "tipo": "video",
+  "texto": "cien lugares, y todos siguen ahí, esperando a que alguien baje de la montura. Si me quedo con una, es el cráter de Dalaran:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-356",
+  "t0": 3053.306,
+  "t1": 3064.279,
+  "tipo": "video",
+  "texto": "la prueba de que en este juego hasta las ciudades se van, pero el mapa se acuerda. Dime en los comentarios cuál no conocías, y cuál vas a ir a comprobar primero; yo apuesto que el gnomo del banco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-357",
+  "t0": 3064.279,
+  "t1": 3071.875,
+  "tipo": "video",
+  "texto": "Y si llegaste hasta aquí sin saltarte ninguna, tienes más paciencia que Thorim.",
+  "clip_s": 8
+ }
+]

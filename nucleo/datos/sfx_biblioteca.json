@@ -6395,7 +6395,117 @@
    "prompt": "Wax seal stamp pressed hard onto parchment on a wooden desk, dull thud",
    "dur": 1.0,
    "canal": "cronicas_tamriel"
+  },
+  "heredera_cap3__amanecer": {
+   "id": "heredera_cap3__amanecer",
+   "video": "heredera_cap3",
+   "nombre": "amanecer",
+   "archivo": "heredera_cap3__amanecer.mp3",
+   "md5": "abf7ef741e88827eda032983b4af503d",
+   "prompt": "Countryside dawn on a Mexican ranch: many small birds waking up, a rooster crowing far away, soft breeze over the fields, distant cow, no music",
+   "dur": 10.0,
+   "canal": "p"
+  },
+  "heredera_cap3__capilla_noche": {
+   "id": "heredera_cap3__capilla_noche",
+   "video": "heredera_cap3",
+   "nombre": "capilla_noche",
+   "archivo": "heredera_cap3__capilla_noche.mp3",
+   "md5": "faf20b1b8bc4e68c5270820dea215117",
+   "prompt": "Quiet night room tone inside a small old stone chapel: faint crickets outside, a soft cold draft through an open wooden door, the gentle hiss of a kerosene lantern flame, no music, no voices",
+   "dur": 22.0,
+   "canal": "p"
+  },
+  "heredera_cap3__cocina": {
+   "id": "heredera_cap3__cocina",
+   "video": "heredera_cap3",
+   "nombre": "cocina",
+   "archivo": "heredera_cap3__cocina.mp3",
+   "md5": "76ee8c3321143d43f54e4f820f90fb96",
+   "prompt": "Old ranch kitchen room tone at dawn: a wood fire crackling inside a stove, a clay pot simmering softly, birds outside the window, no music, no voices",
+   "dur": 22.0,
+   "canal": "p"
+  },
+  "heredera_cap3__golpe_final": {
+   "id": "heredera_cap3__golpe_final",
+   "video": "heredera_cap3",
+   "nombre": "golpe_final",
+   "archivo": "heredera_cap3__golpe_final.mp3",
+   "md5": "be9e17cebf63811c0a83dfd4256c29c1",
+   "prompt": "Telenovela cliffhanger hit: a sudden orchestral string stab with a deep taiko boom and a long dark reverb tail",
+   "dur": 5.0,
+   "canal": "p"
+  },
+  "heredera_cap3__latido": {
+   "id": "heredera_cap3__latido",
+   "video": "heredera_cap3",
+   "nombre": "latido",
+   "archivo": "heredera_cap3__latido.mp3",
+   "md5": "ddbb31774c6e15149e0e52bd7ce2c0ea",
+   "prompt": "A slow deep cinematic heartbeat, low and tense, steady thumps, no music",
+   "dur": 10.0,
+   "canal": "p"
+  },
+  "heredera_cap3__patio_noche": {
+   "id": "heredera_cap3__patio_noche",
+   "video": "heredera_cap3",
+   "nombre": "patio_noche",
+   "archivo": "heredera_cap3__patio_noche.mp3",
+   "md5": "de108ab4ce27ef180bcb70e16474d2cd",
+   "prompt": "Night courtyard of an old Mexican hacienda: crickets, two dogs barking far away, wind moving a cypress tree, no music",
+   "dur": 10.0,
+   "canal": "p"
+  },
+  "tes_armas_poderosas__aviso_e": {
+   "id": "tes_armas_poderosas__aviso_e",
+   "video": "tes_armas_poderosas",
+   "nombre": "aviso_e",
+   "archivo": "tes_armas_poderosas__aviso_e.mp3",
+   "md5": "5a5c7c5ebbcf975cc37654845c5226dc",
+   "prompt": "Deep nordic war drum hit followed by a short low horn call, fantasy quest notification",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_armas_poderosas__aviso_f": {
+   "id": "tes_armas_poderosas__aviso_f",
+   "video": "tes_armas_poderosas",
+   "nombre": "aviso_f",
+   "archivo": "tes_armas_poderosas__aviso_f.mp3",
+   "md5": "be1e2cb838f82dec42c591ab247ecdeb",
+   "prompt": "Steel sword being drawn from a scabbard with a low choir swell, fantasy weapon reveal sting",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_armas_poderosas__forja": {
+   "id": "tes_armas_poderosas__forja",
+   "video": "tes_armas_poderosas",
+   "nombre": "forja",
+   "archivo": "tes_armas_poderosas__forja.mp3",
+   "md5": "f50bc0a3c7018c8f0bcbfbfbbaee0631",
+   "prompt": "Blacksmith hammer striking a glowing blade on an anvil three times, sparks hiss",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_armas_poderosas__golpe_metal": {
+   "id": "tes_armas_poderosas__golpe_metal",
+   "video": "tes_armas_poderosas",
+   "nombre": "golpe_metal",
+   "archivo": "tes_armas_poderosas__golpe_metal.mp3",
+   "md5": "ec08e6fa316e6bfb0b6fb3d2a5b3e7fb",
+   "prompt": "Heavy steel blade clanging on armor, single hit, medieval combat",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_armas_poderosas__ruleta": {
+   "id": "tes_armas_poderosas__ruleta",
+   "video": "tes_armas_poderosas",
+   "nombre": "ruleta",
+   "archivo": "tes_armas_poderosas__ruleta.mp3",
+   "md5": "6d66e302f6d40570a9fa5f505b0a5384",
+   "prompt": "Wooden prize wheel spinning fast with clicking pegs then slowing to a stop, single final click",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-10-23 15:52"
+ "actualizado": "2026-10-23 20:48"
 }

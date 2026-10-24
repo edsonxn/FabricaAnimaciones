@@ -103,3 +103,54 @@ enganche de la casa lo pagó ella).
   Si Flow rechaza por «menores de edad» a una adulta, escribir «an adult woman» en la acción.
 - **Orden de etapas (SIN_VOZ con diálogo): fx → música → `video` → `mezcla` → `final`.** `video` escribe audio/ambiente.wav con el
   diálogo de los clips; si `mezcla` va antes, el MASTER sale solo con música (pasó en el cap. 1 y lo notó el usuario).
+
+## NOVELA, NO TRÁILER (crítica del usuario tras los caps. 1-2, 23-oct-2026) — receta obligatoria desde el cap. 3
+**Síntomas:** «la música se escucha muy fuerte y opaca las voces» y «los capítulos se sienten como tráilers, secuencia de
+varias escenas; no parece novela de verdad». Causa: 13 clips = 13 momentos en 10 lugares y horas distintas, 1-2 frases por clip
+y corte a otra cosa; cada clip termina en gancho; música continua de principio a fin; música solo ~6 dB bajo el diálogo y sin
+ducking (en modo novela `mezcla` no reconocía el audio de los clips como voz).
+**Mezcla (arreglado en `nucleo/mezcla.py`):** con `SIN_VOZ` + `SECUENCIA["dialogo"]` el audio de los clips se trata como la voz:
+a −16 LUFS y la música se agacha 12 dB cuando hablan (`MEZCLA["duck_dialogo"]`); cama `MEZCLA["musica"] = -25`. La mezcla imprime
+«relación diálogo/música durante el habla»: **≥ 15 dB** (cap. 2 remezclado: 18,8 dB). `MEZCLA["musica_curva"] = [(s, dB), …]` baja
+o sube la música por tramos.
+**Estructura de un capítulo (≈ los mismos 13 clips y puntos):**
+1. **«En el capítulo anterior…»** (8-10 s): el último clip del capítulo anterior, reutilizado (0 puntos). Las novelas abren así.
+2. **3-4 ESCENAS, no 13 momentos.** Escena = un lugar, un momento, una conversación que avanza de verdad (30-60 s, 3-5 clips
+   seguidos). El tiempo no salta dentro de la escena; entre escenas, un plano de establecimiento sin diálogo (fachada de la
+   hacienda al amanecer, la capilla de noche: 4-6 s) + cortinilla musical.
+3. **Cobertura de telenovela dentro de la escena:** plano/contraplano de cada personaje que habla (primeros planos), plano de
+   REACCIÓN mudo (el rostro que se descompone, zoom lento: 3-5 s; la firma de la telenovela), plano de dos en el clímax.
+   Los clips de una escena llevan la MISMA imagen de escenario, la misma luz y vestuario, y el prompt dice «continuing the same
+   conversation, same moment, same lighting».
+4. **Diálogo de ida y vuelta:** cada línea responde a la anterior y la tensión sube dentro de la escena (6-12 líneas por escena).
+   Una línea por clip con su reacción, no 2-3 frases apretadas; dejar silencios (las pausas son de novela, el ritmo frenético es
+   de tráiler).
+5. **Un solo cliffhanger, al final del capítulo.** Las escenas intermedias cierran en un giro, no cada clip en un gancho.
+6. **Música por momentos, no continua:** casi muda (o fuera) bajo la plática, entra en el giro de la escena, cortinilla entre
+   escenas y golpe en el cliffhanger (`musica_curva`). Bajo la escena, **ambiente de cuarto continuo** (`PISTAS` en bucle por
+   escena: fogón y grillos, viento en el pasillo) para que los cortes entre clips no salten de sonido.
+7. Rótulos: título al inicio y «Continuará…» + capítulo siguiente al final; nada a mitad.
+8. **Escenas ENCADENADAS, no aisladas** (el usuario, cap. 3, 23-oct: «que no parezca tráiler ni escenas aisladas casi sin
+   conexión»): cada escena termina en la DECISIÓN que provoca la siguiente (cap. 3: «Hoy no, nos está mirando» → «mañana la tapan
+   con cemento» → «Entonces es esta noche») y la cortinilla puede llevar a un personaje que ata las dos (Valeria vigila desde el
+   balcón). Pocas cosas por escena: una revelación y su consecuencia, no cuatro sucesos en 40 s.
+9. **Puesta en escena fija por escena** (`_PUESTAn` en guion.py, ej. `videos/heredera_cap3/`): quién está a la IZQUIERDA/DERECHA,
+   qué sostiene y de dónde viene la luz, repetido palabra por palabra en cada clip de la escena + «the characters stay exactly where
+   they were». Todo personaje que la puesta nombre va de ingrediente en ese clip (si no, Flow inventa a otra persona); máx. 3.
+   Lanzar primero UNA escena y verla seguida antes de gastar el resto de los puntos.
+10. **Cap. 3 (`videos/heredera_cap3/`, 23-oct, aprobado sin cambios):** 19 clips / 186 s ≈ 117 pts con 4 repeticiones. Lo que
+   falló y cómo se arregló: (a) un clip salió en otro cuarto (claro, paredes amarillas) → repetir con «the same dark night chapel…
+   NOT a bright room»; (b) Flow RECHAZA un arma apuntando a la cara de alguien → «pointed at the floor» / «across his chest, NOT
+   aiming it at anyone»; (c) Flow INVENTA líneas: voz en off en planos sin gente (silenciar el clip), monólogo en primer plano
+   (repetir con «her lips stay closed… No dialogue, no voice-over»), frase extra al inicio de un plano general (silenciar ese
+   tramo con ffmpeg). Pasar Whisper a TODOS los clips antes de montar; originales en `previews/originales/`.
+- **Descargar 720p desde el navegador integrado, sin Chrome y sin ventanas de guardado** (el usuario se quejó de las ventanas):
+  en la página de Flow, gancho en `window.fetch` que guarda las URL `flow-content.google/video/<id>_720p_upsampled?…Signature…`
+  y `HTMLAnchorElement.prototype.click = () => {}` (lo que abría el «Guardar como»); en el editor del clip, menú «Descargar» →
+  «720p» lanza el reescalado y la URL llega en ~30 s → `curl`. «Siguiente archivo multimedia» recorre los clips del más nuevo
+  al más viejo. Ojo: el ajuste del formato venía en 16:9 → comprobar `crop_9_16` antes de lanzar.
+- **El .srt**: `final` lo deja VACÍO en modo novela; se hace clip por clip con Whisper (vad + word_timestamps) desplazado al
+  inicio de cada beat (`t0` de beats.json), quitando las líneas silenciadas. Whisper sobre la mezcla entera da tiempos malos.
+- **Música por momentos** con `MEZCLA["musica_curva"]` + ducking: salió 25 dB bajo el diálogo. Flow Music entrega ~3 min: se
+  arma `audio/musica.wav` con un empalme de 3 s dentro de una escena (donde la música va baja) para que el golpe final de la
+  pieza caiga en el «Continuará…».

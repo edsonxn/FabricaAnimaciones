@@ -1,0 +1,154 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "REPRISE: no se genera en Flow (es el último clip del capítulo 2)."
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.0,
+  "t1": 20.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Lupe stands in front of the nameless tomb on the LEFT of the frame holding a lantern; Doña Leonor stands on the RIGHT, near the open chapel door, holding her own lantern; Emiliano stands behind Lupe, near the altar. Night; the only light comes from the two lanterns. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Right after Lupe asked who is in the tomb. Close-up of Doña Leonor's face, half lit by her lantern: she glances at the nameless tomb, a thin cold smile, and answers slowly. Then a silent reverse close-up of Lupe listening, jaw tight, eyes wet."
+ },
+ {
+  "id": "scene-003",
+  "t0": 20.0,
+  "t1": 30.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Lupe stands in front of the nameless tomb on the LEFT of the frame holding a lantern; Doña Leonor stands on the RIGHT, near the open chapel door, holding her own lantern; Emiliano stands behind Lupe, near the altar. Night; the only light comes from the two lanterns. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Lupe, voice shaking but holding Leonor's gaze; then a silent reverse shot of Doña Leonor tilting her head, unimpressed, her red nails tapping her lantern."
+ },
+ {
+  "id": "scene-004",
+  "t0": 30.0,
+  "t1": 40.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Lupe stands in front of the nameless tomb on the LEFT of the frame holding a lantern; Doña Leonor stands on the RIGHT, near the open chapel door, holding her own lantern; Emiliano stands behind Lupe, near the altar. Night; the only light comes from the two lanterns. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Doña Leonor takes two slow steps toward Lupe until the two lanterns almost touch; tight over-the-shoulder shot from behind Lupe; Leonor lowers her voice to an icy whisper."
+ },
+ {
+  "id": "scene-005",
+  "t0": 40.0,
+  "t1": 50.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Lupe stands in front of the nameless tomb on the LEFT of the frame holding a lantern; Doña Leonor stands on the RIGHT, near the open chapel door, holding her own lantern; Emiliano stands behind Lupe, near the altar. Night; the only light comes from the two lanterns. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Silent reaction shot: very slow push-in on Lupe's face for three seconds as she understands, hope and fear at once; she whispers. Doña Leonor does not answer: she turns her back and walks out through the chapel door; the door creaks."
+ },
+ {
+  "id": "scene-006",
+  "t0": 50.0,
+  "t1": 60.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Lupe stands in front of the nameless tomb on the LEFT of the frame holding a lantern; Doña Leonor stands on the RIGHT, near the open chapel door, holding her own lantern; Emiliano stands behind Lupe, near the altar. Night; the only light comes from the two lanterns. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Doña Leonor is gone. Two-shot: Emiliano steps beside Lupe; a long silence, a tear runs down her cheek; she wipes it, determined, and looks at the tomb; Emiliano glances at the dark doorway and stops her."
+ },
+ {
+  "id": "scene-007",
+  "t0": 60.0,
+  "t1": 68.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Slow wide establishing shot drifting toward the hacienda at dawn, the morning after; mist moves over the fields; a rooster flaps its wings on the wall; smoke rises from the kitchen chimney. No people. Nobody speaks."
+ },
+ {
+  "id": "scene-008",
+  "t0": 68.0,
+  "t1": 76.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Fixed blocking of this scene: Doña Chela stands at the wood-fired stove on the RIGHT, patting tortillas on the clay comal; Lupe stands beside her on the LEFT, in her light-blue uniform, with dark circles under her eyes; the open kitchen door is in the background between them. Pale-blue dawn light from the window and warm firelight. Two-shot: Lupe, who has not slept, comes close to old Doña Chela and speaks low; Doña Chela's hands freeze on the tortilla; silence."
+ },
+ {
+  "id": "scene-009",
+  "t0": 76.0,
+  "t1": 86.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Doña Chela stands at the wood-fired stove on the RIGHT, patting tortillas on the clay comal; Lupe stands beside her on the LEFT, in her light-blue uniform, with dark circles under her eyes; the open kitchen door is in the background between them. Pale-blue dawn light from the window and warm firelight. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Doña Chela: she slowly takes her hands off the comal, crosses herself, looks toward the open door to make sure nobody is there, and whispers; Lupe in soft focus in the foreground."
+ },
+ {
+  "id": "scene-010",
+  "t0": 86.0,
+  "t1": 96.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Doña Chela stands at the wood-fired stove on the RIGHT, patting tortillas on the clay comal; Lupe stands beside her on the LEFT, in her light-blue uniform, with dark circles under her eyes; the open kitchen door is in the background between them. Pale-blue dawn light from the window and warm firelight. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Reverse close-up of Lupe asking, shocked; then Doña Chela answers, bitter, pulling her grey rebozo tight around her shoulders."
+ },
+ {
+  "id": "scene-011",
+  "t0": 96.0,
+  "t1": 106.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Doña Chela stands at the wood-fired stove on the RIGHT, patting tortillas on the clay comal; Lupe stands beside her on the LEFT, in her light-blue uniform, with dark circles under her eyes; the open kitchen door is in the background between them. Pale-blue dawn light from the window and warm firelight. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. A noise at the open kitchen door behind them: Lupe and Doña Chela turn, frightened. Valeria is standing in the doorway, phone lowered, no makeup, she heard everything; a silent beat as the three women look at each other; then Valeria speaks, ashamed but firm. Exactly the same woman as the Valeria character reference."
+ },
+ {
+  "id": "scene-012",
+  "t0": 106.0,
+  "t1": 116.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Doña Chela stands at the wood-fired stove on the RIGHT, patting tortillas on the clay comal; Lupe stands beside her on the LEFT, in her light-blue uniform, with dark circles under her eyes; the open kitchen door is in the background between them. Pale-blue dawn light from the window and warm firelight. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Valeria has stepped into the kitchen. Close-up of Lupe, distrustful, arms crossed; then reverse close-up of Valeria answering, nervous, glancing back at the door."
+ },
+ {
+  "id": "scene-013",
+  "t0": 116.0,
+  "t1": 124.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Fixed blocking of this scene: Doña Chela stands at the wood-fired stove on the RIGHT, patting tortillas on the clay comal; Lupe stands beside her on the LEFT, in her light-blue uniform, with dark circles under her eyes; the open kitchen door is in the background between them. Pale-blue dawn light from the window and warm firelight. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Silent reaction: Lupe and Doña Chela look at each other for three seconds; the tortilla burns on the comal and smokes; then Lupe speaks, decided."
+ },
+ {
+  "id": "scene-014",
+  "t0": 124.0,
+  "t1": 132.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "That night. From the dark balcony, Valeria watches, nervous, phone in her hand; far below, a single lantern crosses the courtyard toward the chapel, carried by two small figures. Dogs bark in the distance. Nobody speaks."
+ },
+ {
+  "id": "scene-015",
+  "t0": 132.0,
+  "t1": 142.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Emiliano kneels at the head of the nameless tomb holding the crowbar; Lupe stands on the LEFT side of the tomb holding the lantern high; the wooden chapel door is in the background behind them. Night; the only light is Lupe's lantern. Emiliano pushes the crowbar under the heavy stone lid of the nameless tomb and strains; the stone grinds and slides a few inches; dust falls into the lantern light."
+ },
+ {
+  "id": "scene-016",
+  "t0": 142.0,
+  "t1": 152.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Emiliano kneels at the head of the nameless tomb holding the crowbar; Lupe stands on the LEFT side of the tomb holding the lantern high; the wooden chapel door is in the background behind them. Night; the only light is Lupe's lantern. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. The lid is half open. Close-up of Lupe leaning over the tomb, the lantern light on her face; inside only an old rotten grey blanket and the buckle; she slowly picks up the buckle, blows the dust off it and turns it in the light; Emiliano watches her. Nothing gory."
+ },
+ {
+  "id": "scene-017",
+  "t0": 152.0,
+  "t1": 162.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Emiliano kneels at the head of the nameless tomb holding the crowbar; Lupe stands on the LEFT side of the tomb holding the lantern high; the wooden chapel door is in the background behind them. Night; the only light is Lupe's lantern. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. The chapel door behind them bangs open: Chuy stands in the doorway pointing the shotgun at them; Lupe and Emiliano turn; Chuy shouts, then sees the silver buckle in Lupe's hand and stops."
+ },
+ {
+  "id": "scene-018",
+  "t0": 162.0,
+  "t1": 172.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Emiliano kneels at the head of the nameless tomb holding the crowbar; Lupe stands on the LEFT side of the tomb holding the lantern high; the wooden chapel door is in the background behind them. Night; the only light is Lupe's lantern. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Chuy walks in slowly, lowering the shotgun, staring at the buckle; his face falls and his voice breaks; silent reverse close-up of Lupe holding the buckle out in her trembling hand."
+ },
+ {
+  "id": "scene-019",
+  "t0": 172.0,
+  "t1": 186.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking of this scene: Emiliano kneels at the head of the nameless tomb holding the crowbar; Lupe stands on the LEFT side of the tomb holding the lantern high; the wooden chapel door is in the background behind them. Night; the only light is Lupe's lantern. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Chuy's eyes fill with tears and rage; he raises the shotgun again and points it at Lupe's face. Then a slow push-in on Lupe's face as she freezes in shock, the lantern shaking in her hand."
+ }
+]

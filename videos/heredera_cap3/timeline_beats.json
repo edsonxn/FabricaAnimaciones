@@ -1,0 +1,109 @@
+{
+ "bpm": 80.0,
+ "beat": 0.75,
+ "unidad": 4,
+ "total": 186.0,
+ "titulo": "La heredera del rancho · Capítulo 3",
+ "estilo": "secuencia_flow",
+ "sin_voz": true,
+ "anclada": false,
+ "escenas": [
+  {
+   "id": "reprise",
+   "compases": 3,
+   "t0": 0.0,
+   "t1": 9.0,
+   "frases": [],
+   "fin_voz": 0.0,
+   "beats": 12
+  },
+  {
+   "id": "capilla1",
+   "compases": 17,
+   "t0": 9.0,
+   "t1": 60.0,
+   "frases": [],
+   "fin_voz": 9.0,
+   "beats": 68
+  },
+  {
+   "id": "cortinilla1",
+   "compases": 3,
+   "t0": 60.0,
+   "t1": 69.0,
+   "frases": [],
+   "fin_voz": 60.0,
+   "beats": 12
+  },
+  {
+   "id": "cocina",
+   "compases": 18,
+   "t0": 69.0,
+   "t1": 123.0,
+   "frases": [],
+   "fin_voz": 69.0,
+   "beats": 72
+  },
+  {
+   "id": "cortinilla2",
+   "compases": 3,
+   "t0": 123.0,
+   "t1": 132.0,
+   "frases": [],
+   "fin_voz": 123.0,
+   "beats": 12
+  },
+  {
+   "id": "tumba",
+   "compases": 18,
+   "t0": 132.0,
+   "t1": 186.0,
+   "frases": [],
+   "fin_voz": 132.0,
+   "beats": 72,
+   "fin_musica": 183.75
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 9.0,
+   "t0": 8.95,
+   "t1": 9.05,
+   "tipo": "continua",
+   "de": "reprise",
+   "a": "capilla1"
+  },
+  {
+   "t": 60.0,
+   "t0": 59.95,
+   "t1": 60.05,
+   "tipo": "continua",
+   "de": "capilla1",
+   "a": "cortinilla1"
+  },
+  {
+   "t": 69.0,
+   "t0": 68.95,
+   "t1": 69.05,
+   "tipo": "continua",
+   "de": "cortinilla1",
+   "a": "cocina"
+  },
+  {
+   "t": 123.0,
+   "t0": 122.95,
+   "t1": 123.05,
+   "tipo": "continua",
+   "de": "cocina",
+   "a": "cortinilla2"
+  },
+  {
+   "t": 132.0,
+   "t0": 131.95,
+   "t1": 132.05,
+   "tipo": "continua",
+   "de": "cortinilla2",
+   "a": "tumba"
+  }
+ ]
+}

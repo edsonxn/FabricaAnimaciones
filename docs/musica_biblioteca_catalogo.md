@@ -1,6 +1,6 @@
 # Catálogo de la biblioteca de música (generado por `python nucleo/musica_biblioteca.py catalogar`; NO editar a mano)
 
-372 piezas · 670 min · actualizado 2026-10-23 19:52. Cómo buscar y reutilizar: `docs/musica_biblioteca.md`. Audio en `E:\FabricaAnimaciones\musica_biblioteca\<id>.mp3`.
+372 piezas · 670 min · actualizado 2026-10-23 20:48. Cómo buscar y reutilizar: `docs/musica_biblioteca.md`. Audio en `E:\FabricaAnimaciones\musica_biblioteca\<id>.mp3`.
 
 ## Por video
 

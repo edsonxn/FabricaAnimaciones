@@ -38,3 +38,20 @@ _Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 1
   Switch 2 (5-nov-2026). Referencias: N Deluxe «8 secretos que tomaron años» (330 k), Mundo N «Misterios aún sin resolver» (×4,5).
 - **Hipótesis:** con el mismo formato, un juego con más demanda y un remake a dos semanas supera a banjo_tooie en vistas a 7 días
   y mantiene ≥ 35 % visto. Registro a 7 días: (pendiente, ~1-nov).
+
+## 23-oct-2026 — Datos frescos de Nintendo/retro (`ideas --actualizar`) para el video 3
+- La ola del **remake de Ocarina of Time** arrastra TODO Zelda: Mundo N ×14,4 y ×4,7, N Deluxe ×6,5/×4,4/×4,2; Shorts de
+  Majora's Mask en un canal chico (RinnKu!, 10 300 subs) ×5,6 y ×1,9. Lo replicable: el mismo público busca la SECUELA.
+- **Historia de estudio:** «The Rise and Fall of Rare» ×9,1 en un canal de 1 910 subs (Kilobyte Chronicles): formato replicable.
+- **Contenido borrado:** «Nintendo BORRÓ esta estrella de Mario 64» ×3,5 (Short, Nachotaro).
+- Propuesta (una variable cada una): (1) **Majora's Mask** con la fórmula de zelda_oot, cambia SOLO el juego (recomendado);
+  (2) **auge y caída de Rare**, cambia el formato (estudio en vez de juego); (3) **Mario 64: lo que Nintendo borró**, cambia el ángulo.
+
+## 23-oct-2026 — Video 3 de la etapa Nintendo: `bt_jiggies_crueles` (pedido por el usuario: «algo de Banjo-Tooie»)
+- «Los 10 Jiggies más CRUELES de Banjo-Tooie» (11:30), hueco del jue 29-oct 18:00 CDMX. Elegido por el usuario entre 3 (jefes
+  del más fácil al más difícil; lo que Rare cortó). Variable que cambia respecto a banjo_tooie: SOLO el ángulo (la dificultad del
+  100 % en vez de historia + secretos), mismo juego, mismo público, 9 días después.
+- Referencias: F.A.P Bros «El 100% más DOLOROSO de un juego: Banjo-Tooie» (309 k), darkxz «Top 12 Jiggies más difíciles» (6 k).
+  Al empezar, banjo_tooie llevaba 150 vistas en 3 días y 47,9 % visto (la mejor retención del canal).
+- **Hipótesis:** un ranking de dificultad del mismo clásico retiene igual (≥ 45 % visto) y saca más vistas por búsqueda
+  («Canary Mary», «Banjo Tooie 100%») que el de secretos. Programado mar 27-oct 18:00 CDMX (ciclo nuevo de 3 días). Registro a 7 días: (pendiente, ~3-nov).

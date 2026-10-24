@@ -429,6 +429,44 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
     gigante («And last but not least»), TV grabada con cámara, marca IGN en esquina, videos de UNA imagen fija (pentagrama del molino).
   - Clips cortos de fans (40-100 s) con `{url, desde}`: bajar `yt.min_s` a 30 en guion.py.
   - `medir_marco.py`: el marco NSO da 0,131; escenas casi quietas lo inflan (0,2-0,34) → fijar 0,131 para toda la serie NSO.
+- **Video 3 `majora_mask` (23-oct-2026): FICHAS TRANSLÚCIDAS con la interfaz del propio juego (cumple la regla del 22-oct) —
+  kit `nucleo/mg_majora.py`**: `ficha` = el cuadro de diálogo de N64 (negro translúcido con borde difuso, texto que se escribe
+  letra a letra, *resaltado* rosa como los nombres, triángulo verde de «siguiente»); `puesto` = el cartel «Amanecer del primer
+  día» (serifa blanca con tracking + «-título-»); `reloj` (el reloj de 3 días del HUD con sol/luna y «Quedan N horas»), `ciclo`
+  (bucle Día 1 → … → Canción del Tiempo), `horario` (cuaderno de los Bombers), `rejilla` (las 24 máscaras con sus íconos reales →
+  la especial), `almas` (retrato real que se funde en su máscara), `pegatina` con píldora translúcida. Para otro juego: misma
+  receta, la interfaz de ESE juego (su caja de diálogo, su cartel de zona, su HUD). Tema de mapa nuevo `"majora"` en mg_mapa.
+  - **Música OST** (regla del 23-oct): `armar_musica_ost.py` con las secciones por id de escena (lee los t0 de timeline.json);
+    para Nintendo no hay canales «- Topic»: lista «Complete Soundtrack» de Nintendo Music Archive (audio original de N64).
+  - Plan de clips por un AGENTE que mira las hojas propias (`escanear.py` = 360p + hoja cada 15 s con el segundo impreso) y
+    escribe busquedas.json directamente: 107/107 a la primera (1 rehecho por ser una pantalla quieta). ZeldaCentral mete su
+    animación del canal también A MITAD de algunas partes, y tras cada Canción del Tiempo hay ~20 s de espiral/blanco/negro.
+  - Pegatinas: `bajar_pegatinas.py` (API imageinfo de zelda.fandom.com por nombre de archivo `MM_<X>_Artwork.png`); los íconos
+    de máscara son de 32 px: para pegatinas usar `MM3D_<X>_Model/Render.png`, los íconos solo en la rejilla (NEAREST).
+  - Miniatura Flow por Chrome: bajar con el menú «Más opciones → Descargar → 1K» (va a Descargas sin diálogo); el fetch a
+    localhost desde Flow lo bloquea la CSP y el canvas queda «tainted».
+- **`bt_jiggies_crueles` (23-oct-2026, 80 beats, 11:30): PRIMER kit TRANSLÚCIDO del canal, `nucleo/mg_banjo.py`** (la regla del
+  22-oct aplicada): humo chocolate de bordes difuminados (no caja), filetes miel que se desvanecen con un panal al centro, Cooper
+  Black miel con contorno + Arial Rounded crema. `puesto(num, titulo, jiggy)` = el Jiggy REAL de la wiki girando sobre su eje
+  (ancho = |cos|) con el número; `crueldad(n)` = medidor en panales como la barra de vida del juego (sale al irse el puesto, arriba
+  a la derecha); `ficha` translúcida. MG del guion: `marcador` (puntos con dos metas: página de Cheato / Jiggy + reloj),
+  `contrarreloj` (n objetivos que caen con reloj; remate BOOM o gas tóxico; `hasta` < 1 = no te da tiempo), `carrera` (Canary
+  Mary: acelera si te pegas, acelerón final, el truco), `recados` (problema → solución, ✓, premio y sello «NO»), `cadena`.
+  Probar cada MG con marcas SIMULADAS en varios instantes (script propio sobre un cuadro de gameplay) antes de `fx hoja`: así
+  salieron las etiquetas de metas encimadas (40/50 de 60) y los tamaños chicos (dinamita, carrera, cadena) sin gastar un render.
+  - **Ninbanyan con widescreen (NSO, «Widescreen» en la Parte 1)**: sin marco gris → `recorte_por` vacío; las cinemáticas traen
+    una franja negra arriba fina, aceptable. Los cuadros de la serie (360p, un cuadro cada 4-15 s) dieron el segundo exacto de los
+    80 beats a la primera (`plan_clips.py` por BEAT, no por frase); solo 3 rehechos (2 con negro de túnel/fundido, 1 de lona).
+  - **Brillo de TODOS los clips antes del render** (media < 14 cada 0,3 s): cazó el túnel del tren (P26 @150) y el fundido de la
+    pantalla de totales (P26 @280).
+  - **Música**: no hay álbum oficial de Banjo-Tooie en «Grant Kirkhope - Topic» (solo Re-Jiggyed de BK); se usó el ripeo del
+    juego de «Video-Game OST HQ» (`armar_musica_ost.py`, una pista por puesto: «Racin' With Mary», «Ordinance Storage», «Vs. Mr. Patch»…).
+  - **Sin mapa**: el único mapa real de Isle o' Hags es el pergamino del manual, sin nombres; no se ubican los sitios con certeza
+    → `recados` con fotos reales en vez de un mapa con posiciones inventadas (regla: sin mapa real decente, no hay mapa).
+  - **Miniatura**: la wiki de Banjo (static.wikia.nocookie.net) tiene CORS abierto → collage de los renders en un `<canvas>`
+    dentro de la página de Flow y pegado sintético como ingrediente; salió bien a la primera (`prompt_miniatura.md`).
+  - Voz Hope: Whisper escribe «Zubas/uvas», «Umba Umba», «Cheeto», «Scrooge» → tolerancias; la única mala real fue «Dentro, Banjo»
+    leído «Ventro» (dos palabras que empiezan igual): reescribir la frase, no repetir la semilla.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;

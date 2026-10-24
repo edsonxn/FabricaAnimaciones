@@ -6,15 +6,21 @@
     "zona": "America/Mexico_City",
     "hora_local": "18:00",
     "utc": "00:00",
-    "ciclo_dias": 5,
-    "separacion_min_horas": 96,
-    "nota": "Fijado el 13-oct-2026 a pedido del usuario: un video cada 4 días; la hora la eligió Claude (18:00 CDMX = 00:00 UTC del día siguiente: terror = tráfico de noche; cubre MX 18:00, CO 19:00, AR 21:00). AJUSTABLE por Claude con datos: ver docs/publicacion.md § «Frecuencia y hora».",
+    "ciclo_dias": 3,
+    "separacion_min_horas": 72,
+    "nota": "Ciclo de 3 días desde el 23-oct-2026 (el usuario lo bajó de 4-5 a 3 y pidió reacomodar lo programado). Hora 18:00 CDMX = 00:00 UTC del día siguiente (cubre MX 18:00, CO 19:00, AR 21:00). AJUSTABLE por Claude con datos: ver docs/publicacion.md § «Frecuencia y hora».",
     "historial": [
       {
         "fecha": "2026-10-13",
         "ciclo_dias": 4,
         "hora_local": "18:00",
         "motivo": "inicio del canal de terror; ciclo pedido por el usuario, hora por criterio (sin datos propios todavía)"
+      },
+      {
+        "fecha": "2026-10-23",
+        "ciclo_dias": 3,
+        "hora_local": "18:00",
+        "motivo": "el usuario bajó el ciclo a 3 días; separación mínima 72 h; zelda_oot se queda el 24-oct (el hueco del 23 ya había pasado) y bt_jiggies_crueles pasa al 27-oct"
       }
     ]
   },
@@ -24,11 +30,12 @@
       "id": "RrucyrC_1e8",
       "titulo": "Sonic.exe: el CD maldito que nunca existió",
       "subido": "2026-10-13",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "formato": "creepypasta desmontado (terror CRT monitor de PC, largo 3:45)",
       "nota": "primer video del canal de terror; ElevenLabs David, Lyria, miniatura Flow (Nano Banana 2.1 con texto); mié 14-oct 18:00 CDMX (aprobado por el usuario el 13-oct)",
       "publicar": "2026-10-15T00:00:00Z",
-      "programado": "2026-10-15T00:00:00Z"
+      "programado": "2026-10-15T00:00:00Z",
+      "publicado": "2026-10-15"
     },
     {
       "video": "banjo_tooie",
@@ -49,6 +56,16 @@
       "programado": "2026-10-25T00:00:00Z",
       "formato": "historia_y_12_secretos_secuencia_yt",
       "nota": "15:56, voz ElevenLabs Hope; gancho = remake de Switch 2 (5-nov-2026); fichas/MG con marcos de Flow (mg_zelda); miniatura Flow con ingredientes reales"
+    },
+    {
+      "video": "bt_jiggies_crueles",
+      "id": "qLBP3ce4AC4",
+      "titulo": "Los 10 Jiggies más CRUELES de Banjo-Tooie",
+      "subido": "2026-10-23",
+      "visibilidad": "private",
+      "programado": "2026-10-28T00:00:00Z",
+      "formato": "ranking_10_secuencia_yt",
+      "nota": "11:30, voz ElevenLabs Hope, OST oficial de Banjo-Tooie, kit translúcido mg_banjo; subido para el 29-oct y adelantado al 27-oct por el nuevo ciclo de 3 días"
     }
   ],
   "ideas": {

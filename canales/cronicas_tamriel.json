@@ -1,102 +1,110 @@
 {
- "monetizado": true,
- "canal_id": "UCWeCfdm8py6dYKHq7HwUIXw",
- "nombre": "Crónicas de Tamriel",
- "estilo": "Listas de Skyrim/Elder Scrolls; secuencia de clips de gameplay (yt-dlp) como Warcraft; voz Chatterbox. Pendiente de mudar (después de Warcraft).",
- "horario": {
-  "zona": "America/Mexico_City",
-  "hora_local": "09:15",
-  "utc": "15:15",
-  "ciclo_dias": 4,
-  "separacion_min_horas": 96,
-  "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (26-sep, 30-sep, 10-oct). Provisional hasta analizar el canal.",
-  "historial": [
-   {
-    "fecha": "2026-10-13",
-    "ciclo_dias": 7,
+  "monetizado": true,
+  "canal_id": "UCWeCfdm8py6dYKHq7HwUIXw",
+  "nombre": "Crónicas de Tamriel",
+  "estilo": "Listas de Skyrim/Elder Scrolls; secuencia de clips de gameplay (yt-dlp) como Warcraft; voz Chatterbox. Pendiente de mudar (después de Warcraft).",
+  "horario": {
+    "zona": "America/Mexico_City",
     "hora_local": "09:15",
-    "motivo": "registro inicial; provisional"
-   }
-  ]
- },
- "publicados": [
-  {
-   "video": "tes_misiones_nunca",
-   "id": "R4nzGhWuTmo",
-   "titulo": "Las 15 misiones de Skyrim que NUNCA debes hacer",
-   "visibilidad": "public",
-   "programado": "2026-10-22T18:07:00Z",
-   "formato": "lista_15_misiones_nunca_secuencia_yt",
-   "publicado": "2026-10-22"
+    "utc": "15:15",
+    "ciclo_dias": 3,
+    "separacion_min_horas": 96,
+    "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (26-sep, 30-sep, 10-oct). Provisional hasta analizar el canal.",
+    "historial": [
+      {
+        "fecha": "2026-10-13",
+        "ciclo_dias": 7,
+        "hora_local": "09:15",
+        "motivo": "registro inicial; provisional"
+      }
+    ]
   },
-  {
-   "video": "tes_exploits_rotos",
-   "id": "GMJE7dyiV_k",
-   "titulo": "Los 8 exploits más ROTOS de Skyrim",
-   "visibilidad": "public",
-   "programado": "2026-10-18T18:06:00Z",
-   "formato": "lista_8_exploits_secuencia_yt",
-   "publicado": "2026-10-18"
-  },
-  {
-   "video": "tes_misiones_daedricas",
-   "id": "O2ZsE2AFGYc",
-   "titulo": "Las 8 misiones daédricas PROHIBIDAS de Skyrim",
-   "visibilidad": "public",
-   "programado": "2026-10-15T15:15:00Z",
-   "formato": "lista_8_daedrico_secuencia_yt",
-   "publicado": "2026-10-14",
-   "nota": "salió antes de lo programado (14-oct 18:05 UTC en vez de 15-oct 15:15 UTC)"
-  },
-  {
-   "video": null,
-   "id": "fKPDEaOYMxQ",
-   "titulo": "Los 8 dragones más PODEROSOS de Skyrim",
-   "visibilidad": "public",
-   "publicado": "2026-10-10T15:15:00Z"
-  },
-  {
-   "video": null,
-   "id": "i31mjVpNSiA",
-   "titulo": "Los 8 hechizos más ROTOS de Skyrim",
-   "visibilidad": "public",
-   "publicado": "2026-10-01T00:20:14Z"
-  },
-  {
-   "video": null,
-   "id": "KKjWjznbV_4",
-   "titulo": "Los 7 jefes más peligrosos de Skyrim",
-   "visibilidad": "public",
-   "publicado": "2026-09-26T19:30:37Z"
-  },
-  {
-   "video": "tes_cosas_inutiles",
-   "id": "uz1kE1BI4w8",
-   "titulo": "Las 15 cosas más INÚTILES de Skyrim",
-   "visibilidad": "private",
-   "programado": "2026-10-26T18:08:00Z",
-   "formato": "lista_15_inutiles_secuencia_yt"
-  }
- ],
- "ideas": {
-  "idioma": "es",
-  "region": "MX",
-  "busquedas": [
-   "skyrim secretos",
-   "elder scrolls lore",
-   "skyrim lo mas poderoso"
+  "publicados": [
+    {
+      "video": "tes_misiones_nunca",
+      "id": "R4nzGhWuTmo",
+      "titulo": "Las 15 misiones de Skyrim que NUNCA debes hacer",
+      "visibilidad": "public",
+      "programado": "2026-10-22T18:07:00Z",
+      "formato": "lista_15_misiones_nunca_secuencia_yt",
+      "publicado": "2026-10-22"
+    },
+    {
+      "video": "tes_exploits_rotos",
+      "id": "GMJE7dyiV_k",
+      "titulo": "Los 8 exploits más ROTOS de Skyrim",
+      "visibilidad": "public",
+      "programado": "2026-10-18T18:06:00Z",
+      "formato": "lista_8_exploits_secuencia_yt",
+      "publicado": "2026-10-18"
+    },
+    {
+      "video": "tes_misiones_daedricas",
+      "id": "O2ZsE2AFGYc",
+      "titulo": "Las 8 misiones daédricas PROHIBIDAS de Skyrim",
+      "visibilidad": "public",
+      "programado": "2026-10-15T15:15:00Z",
+      "formato": "lista_8_daedrico_secuencia_yt",
+      "publicado": "2026-10-14",
+      "nota": "salió antes de lo programado (14-oct 18:05 UTC en vez de 15-oct 15:15 UTC)"
+    },
+    {
+      "video": null,
+      "id": "fKPDEaOYMxQ",
+      "titulo": "Los 8 dragones más PODEROSOS de Skyrim",
+      "visibilidad": "public",
+      "publicado": "2026-10-10T15:15:00Z"
+    },
+    {
+      "video": null,
+      "id": "i31mjVpNSiA",
+      "titulo": "Los 8 hechizos más ROTOS de Skyrim",
+      "visibilidad": "public",
+      "publicado": "2026-10-01T00:20:14Z"
+    },
+    {
+      "video": null,
+      "id": "KKjWjznbV_4",
+      "titulo": "Los 7 jefes más peligrosos de Skyrim",
+      "visibilidad": "public",
+      "publicado": "2026-09-26T19:30:37Z"
+    },
+    {
+      "video": "tes_cosas_inutiles",
+      "id": "uz1kE1BI4w8",
+      "titulo": "Las 15 cosas más INÚTILES de Skyrim",
+      "visibilidad": "private",
+      "programado": "2026-10-26T18:08:00Z",
+      "formato": "lista_15_inutiles_secuencia_yt"
+    },
+    {
+      "video": "tes_armas_poderosas",
+      "id": "m6Pk4FLQGuc",
+      "titulo": "Las 15 armas más PODEROSAS de Skyrim",
+      "visibilidad": "private",
+      "programado": "2026-10-30T18:08:00Z",
+      "formato": "lista_15_armas_secuencia_yt"
+    }
   ],
-  "competidores": [],
-  "dias": 60,
-  "min_vistas": 2000,
-  "filtro": [
-   "skyrim",
-   "elder scrolls",
-   "tamriel",
-   "oblivion",
-   "morrowind"
-  ]
- },
- "estado": "primer video hecho en la Fábrica: tes_misiones_daedricas (14-oct-2026), motor SECUENCIA YT + Chatterbox Sarcastica",
- "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_tamriel.mp4"
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "skyrim secretos",
+      "elder scrolls lore",
+      "skyrim lo mas poderoso"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 2000,
+    "filtro": [
+      "skyrim",
+      "elder scrolls",
+      "tamriel",
+      "oblivion",
+      "morrowind"
+    ]
+  },
+  "estado": "primer video hecho en la Fábrica: tes_misiones_daedricas (14-oct-2026), motor SECUENCIA YT + Chatterbox Sarcastica",
+  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_tamriel.mp4"
 }

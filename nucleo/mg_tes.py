@@ -29,6 +29,11 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   receta(titulo, [(ruta, nombre)], resultado, efecto, remate)    ingredientes que se funden en el resultado
   trato(titulo, perro, premio_a, premio_b, condiciones, datos, sello)   bifurcación de un trato daédrico
   compraventa(titulo, objeto, [(texto, delta)], remate)          línea de tiempo de compras/ventas con el balance
+  tes_armas_poderosas (23-oct-2026):
+  ruleta(titulo, [(etiqueta, color)], paradas)   rueda del Wabbajack: en cada marca gira y frena en paradas[k]; lista de resultados
+  barras(titulo, [(ruta, etiqueta, valor, i, color)], refs, unidad, remate)   barras comparadas + líneas de referencia punteadas
+  niveles(titulo, [(rango, valor)], notas)     escalera del arma nivelada; notas enmarcan la trampa de un nivel
+  golpes(titulo, objetivo, salud, [(ruta, arma, a, b)], fases, remate)   golpes para tumbar a X en dos fases (fuego / escarcha)
 """
 import math
 import os
@@ -1124,6 +1129,275 @@ def compraventa(titulo, objeto, pasos, remate=None, ancho=1700):
         if remate and dt >= mk[remate[1]]:
             s = _pop(dt - mk[remate[1]], .35)
             _texto(d, (M + ancho / 2, M + h - 44), remate[0].upper(), fuente("Bold Condensed", max(8, int(44 * s))), SANGRE, "mm",
+                   track=3)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ tes_armas_poderosas (23-oct-2026)
+def _num(v):
+    """1980 -> «1 980» (separador de miles con espacio, como el resto del canal)."""
+    if isinstance(v, float) and not v.is_integer() and abs(v) < 100:
+        return f"{v:.1f}".replace(".", ",")
+    return f"{int(round(v)):,}".replace(",", " ")
+
+
+_rul = {}
+_ic = {}
+
+
+def _icono(ruta, w, h):
+    """Como _retrato, pero un arma larga con fondo transparente (espada, arco) se tumba en horizontal para llenar un icono
+    apaisado en vez de quedar como una astilla."""
+    k = (ruta, w, h)
+    if k not in _ic:
+        im = Image.open(ruta).convert("RGBA")
+        if (np.array(im)[..., 3] < 10).mean() > .12:
+            im = im.crop(im.getchannel("A").point(lambda v: 255 if v > 40 else 0).getbbox())
+            if im.height > im.width * 1.6:
+                im = im.rotate(-90, expand=True, resample=Image.BICUBIC)
+            esc = min((w - 16) / im.width, (h - 16) / im.height)
+            im = im.resize((max(2, int(im.width * esc)), max(2, int(im.height * esc))), Image.LANCZOS)
+            fondo = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            m = Image.new("L", (w, h), 0)
+            ImageDraw.Draw(m).rounded_rectangle((0, 0, w - 1, h - 1), 14, fill=255)
+            fondo.paste(Image.new("RGBA", (w, h), (30, 28, 26, 235)), (0, 0), m)
+            ImageDraw.Draw(fondo).rounded_rectangle((0, 0, w - 1, h - 1), 14, outline=HUESO + (150,), width=2)
+            fondo.alpha_composite(im, ((w - im.width) // 2, (h - im.height) // 2))
+            _ic[k] = fondo
+        else:
+            _ic[k] = _retrato(ruta, w, h)
+    return _ic[k]
+
+
+def ruleta(titulo, opciones, paradas, ancho=1560):
+    """Ruleta del Wabbajack: rueda con un sector por opción [(etiqueta, color)] que gira despacio y, en cada marca k, da
+    dos vueltas y frena con `paradas[k]` (índice de opción) bajo el puntero de arriba; cada resultado se apunta en la lista
+    de la derecha (el último en su color). Primer uso: «Puede lanzar fuego… o en un bollo dulce» (n.º 14)."""
+    n = len(opciones)
+    h = 760
+    R = 270
+    paso = 360 / n
+
+    def rueda():
+        k = (titulo, n)
+        if k not in _rul:
+            D = 2 * R + 20
+            im = Image.new("RGBA", (D, D), (0, 0, 0, 0))
+            d = ImageDraw.Draw(im)
+            c = D / 2
+            for i in range(n):
+                base = (34, 30, 28) if i % 2 == 0 else (18, 16, 15)
+                d.pieslice((c - R, c - R, c + R, c + R), i * paso, (i + 1) * paso, fill=base + (245,))
+            for i in range(n):                                   # radios color hueso
+                a = math.radians(i * paso)
+                d.line([(c, c), (c + R * math.cos(a), c + R * math.sin(a))], fill=HUESO + (200,), width=3)
+            d.ellipse((c - R, c - R, c + R, c + R), outline=HUESO + (255,), width=5)
+            d.ellipse((c - R + 14, c - R + 14, c + R - 14, c + R - 14), outline=(120, 112, 100, 160), width=2)
+            f = fuente("SemiBold Condensed", 30)
+            for i, (et, col) in enumerate(opciones):             # etiqueta radial, leyendo hacia fuera
+                s = et.upper()
+                tw = int(_ancho_track(d, s, f, 2)) + 10
+                t = Image.new("RGBA", (tw, 44), (0, 0, 0, 0))
+                _texto(ImageDraw.Draw(t), (tw / 2, 22), s, f, col, "mm", track=2)
+                ang = (i + .5) * paso
+                t = t.rotate(-ang, expand=True, resample=Image.BICUBIC)
+                rr = R * .60
+                x = c + rr * math.cos(math.radians(ang)) - t.width / 2
+                y = c + rr * math.sin(math.radians(ang)) - t.height / 2
+                im.alpha_composite(t, (int(x), int(y)))
+            d.ellipse((c - 46, c - 46, c + 46, c + 46), fill=(10, 10, 12, 255), outline=HUESO + (255,), width=4)
+            d.polygon([(c - 12, c), (c, c - 12), (c + 12, c), (c, c + 12)], fill=SANGRE + (255,))
+            _rul[k] = im
+        return _rul[k]
+
+    def durs(mk):                                                 # giros seguidos más cortos (nunca se pisan)
+        return [max(.6, min(1.6, mk[k + 1] - mk[k] - .15)) if mk[k + 1] < 99 else 1.6 for k in range(len(paradas))]
+
+    def angulo(dt, mk):
+        a = 18.0 * min(dt, mk[0])                                 # deriva lenta antes del primer giro
+        ds = durs(mk)
+        for k, idx in enumerate(paradas):
+            if dt < mk[k]:
+                break
+            meta = (idx + .5) * paso + 90                         # sector idx bajo el puntero (arriba)
+            fin = a + ((meta - a) % 360) + (720 if ds[k] > 1.2 else 360)
+            u = _eo((dt - mk[k]) / ds[k])
+            a = a + (fin - a) * u
+            if u < 1:
+                break
+        return a
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (len(paradas) + 2)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        rw = rueda()
+        cx, cy = M + 90 + R + 10, M + 120 + R + 10
+        r = rw.rotate(angulo(dt, mk), resample=Image.BICUBIC)
+        im.alpha_composite(r, (int(cx - r.width / 2), int(cy - r.height / 2)))
+        d.polygon([(cx - 22, cy - R - 34), (cx + 22, cy - R - 34), (cx, cy - R + 6)], fill=HUESO + (255,),
+                  outline=(0, 0, 0, 255))                          # puntero
+        ds = durs(mk)
+        hechos = [k for k in range(len(paradas)) if dt >= mk[k] + ds[k]]
+        if hechos:                                                 # el sector ganador brilla bajo el puntero
+            k = hechos[-1]
+            et, col = opciones[paradas[k]]
+            br = .55 + .45 * math.sin((dt - mk[k]) * 6)
+            d.pieslice((cx - R, cy - R, cx + R, cy + R), 270 - paso / 2, 270 + paso / 2, outline=col + (int(255 * br),),
+                       width=6)
+        xl = M + 2 * R + 190
+        _texto(d, (xl, M + 150), "RESULTADOS", fuente("Condensed", 30), GRIS, "lm", track=5)
+        for j, k in enumerate(hechos[-9:]):
+            et, col = opciones[paradas[k]]
+            u = _eo((dt - mk[k] - ds[k]) / .35)
+            y = M + 210 + j * 58
+            _texto(d, (xl + 40 * (1 - u), y), et.upper(), fuente("Bold Condensed", 46), col if k == hechos[-1] else HUESO, "lm",
+                   255 * u, track=2)
+        return _salida(im, dt)
+    return fn
+
+
+def barras(titulo, filas, refs=(), unidad="", remate=None, ancho=1660):
+    """Barras horizontales comparadas. filas = [(ruta|None, etiqueta, valor, i_marca, color)]: cada barra crece en su marca
+    y su número corre. refs = [(etiqueta, valor, i_marca)]: líneas verticales punteadas de referencia (salud de un dragón).
+    La escala la fija el mayor de todos los valores. remate = (texto, i_marca). Primer uso: «Una sola puñalada» (n.º 1)."""
+    AF = 104
+    h = 200 + len(filas) * AF + (90 if remate else 40)
+    vmax = max([f[2] for f in filas] + [r[1] for r in refs]) * 1.04
+    IW, IC = 170, 84
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 12
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, x1 = M + 560, M + ancho - 200
+        ytop = M + 190
+        for k, (ruta, et, v, i, col) in enumerate(filas):
+            t0 = mk[i]
+            if dt < t0:
+                continue
+            u = _eo((dt - t0) / .9)
+            y = ytop + k * AF + AF / 2
+            a = 255 * _eo((dt - t0) / .3)
+            if ruta:
+                _pega(im, _icono(ruta, IW, IC), M + 50, y - IC / 2, a / 255)
+            lns = _partir(d, et.upper(), fuente("SemiBold Condensed", 30), 230)[:2]
+            for j, ln in enumerate(lns):
+                _texto(d, (M + 240, y + 32 * j - 16 * (len(lns) - 1)), ln, fuente("SemiBold Condensed", 30), HUESO, "lm", a,
+                       track=2)
+            d.rectangle((x0, y - 20, x1, y + 20), fill=(24, 20, 18, int(.8 * a)))
+            w = (x1 - x0) * v / vmax * u
+            if w > 4:
+                d.rectangle((x0, y - 16, x0 + w, y + 16), fill=col + (255,))
+                d.rectangle((x0, y - 16, x0 + w, y - 9), fill=tuple(min(255, c + 40) for c in col) + (255,))
+            _texto(d, (min(x0 + w + 18, x1 + 10), y + 2), _num(v * u if u < 1 else v) + unidad, fuente("Bold Condensed", 48),
+                   BLANCO, "lm", a)
+        for kr, (et, v, i) in enumerate(refs):
+            if dt < mk[i]:
+                continue
+            a = 255 * _eo((dt - mk[i]) / .4)
+            x = x0 + (x1 - x0) * v / vmax
+            yb = ytop + len(filas) * AF
+            for yy in range(int(ytop - 6 - 32 * (kr % 2)), int(yb), 18):
+                d.line([(x, yy), (x, yy + 10)], fill=SANGRE + (int(a),), width=4)
+            _texto(d, (min(x, M + ancho - 250), ytop - 26 - 32 * (kr % 2)),f"{et.upper()} · {_num(v)}", fuente("SemiBold Condensed", 28),
+                   SANGRE, "mm", a, track=2)
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 48), remate[0].upper(), fuente("Bold Condensed", max(8, int(46 * s))), ORO, "mm",
+                   track=3)
+        return _salida(im, dt)
+    return fn
+
+
+def niveles(titulo, pasos, notas=(), unidad="", ancho=1500):
+    """Escalera del arma que «sube contigo»: pasos = [(rango de nivel, valor)] que aparecen uno a uno entre las marcas 0 y 1
+    (columna alta según el valor). notas = [(i_paso, texto, color, i_marca)]: en su marca la columna se enmarca en ese color
+    con el texto encima (la trampa: «NO SE MEJORA», «PROMETE 30, HACE 20»). Primer uso: Hoja de Ruiseñor y Azote de dragones."""
+    n = len(pasos)
+    h = 700
+    vmax = max(v for _, v in pasos)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 10
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t0, t1 = mk[0], (mk[1] if mk[1] < 99 else mk[0] + 2.5)
+        x0, x1 = M + 110, M + ancho - 110
+        yb, hmax = M + h - 100, h - 400
+        cw = (x1 - x0) / n
+        d.line([(x0 - 20, yb), (x1 + 20, yb)], fill=HUESO + (200,), width=3)
+        for i, (rango, v) in enumerate(pasos):
+            ti = t0 + (t1 - t0) * i / max(1, n - 1) if n > 1 else t0
+            if dt < ti:
+                continue
+            u = _eo((dt - ti) / .5)
+            xa, xb = x0 + i * cw + 18, x0 + (i + 1) * cw - 18
+            hh = hmax * (.25 + .75 * v / vmax) * u
+            d.rectangle((xa, yb - hh, xb, yb), fill=(46, 40, 34, 235), outline=HUESO + (150,), width=2)
+            d.rectangle((xa + 4, yb - hh + 4, xb - 4, yb - hh + 16), fill=ORO + (220,))
+            _texto(d, ((xa + xb) / 2, yb + 40), "NIV. " + rango, fuente("SemiBold Condensed", 32), GRIS, "mm", 255 * u, track=2)
+            _texto(d, ((xa + xb) / 2, yb - hh - 40), "+" + _num(v) + unidad, fuente("Bold Condensed", 56), BLANCO, "mm", 255 * u)
+        for i, txt, col, im_ in notas:
+            if dt < mk[im_]:
+                continue
+            rango, v = pasos[i]
+            xa, xb = x0 + i * cw + 18, x0 + (i + 1) * cw - 18
+            hh = hmax * (.25 + .75 * v / vmax)
+            br = .65 + .35 * math.sin((dt - mk[im_]) * 5)
+            d.rectangle((xa - 6, yb - hh - 6, xb + 6, yb + 6), outline=col + (int(255 * br),), width=6)
+            s = _pop(dt - mk[im_], .35)
+            lns = _partir(d, txt.upper(), fuente("Bold Condensed", 34), cw + 30)[:2]
+            for j, ln in enumerate(lns):
+                _texto(d, ((xa + xb) / 2, yb - hh - 100 - 38 * (len(lns) - 1 - j)), ln,
+                       fuente("Bold Condensed", max(8, int(34 * s))), col, "mm", track=2)
+        return _salida(im, dt)
+    return fn
+
+
+def golpes(titulo, objetivo, salud, filas, fases=("Dragón de fuego", "Dragón de escarcha"), remate=None, ancho=1500):
+    """¿Cuántos golpes para tumbar a X? objetivo = (ruta, nombre); salud = su vida. filas = [(ruta, arma, golpes_a, golpes_b)].
+    marca 0: la barra de salud se vacía y los contadores corren hasta golpes_a (fase A) · marca 1: la fase pasa a la B y los
+    contadores ruedan hasta golpes_b; la fila con menos golpes se pone en oro y las que suben en rojo · remate = (texto, i)."""
+    AF = 130
+    h = 330 + len(filas) * AF + (80 if remate else 20)
+    IC = 100
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        _pega(im, _retrato(objetivo[0], 220, 124), M + 70, M + 120, a0)
+        fase_b = dt >= mk[1]
+        _texto(d, (M + 320, M + 150), (fases[1] if fase_b else fases[0]).upper(), fuente("Bold Condensed", 46),
+               (150, 200, 255) if fase_b else (255, 150, 90), "lm", 255 * a0, track=3)
+        bx0, bx1, by = M + 320, M + ancho - 260, M + 205
+        ua = (dt - mk[0]) / 2.2 if dt >= mk[0] else 0.0
+        vida = 1.0 - min(1.0, max(0.0, ua)) if not fase_b else 1.0 - min(1.0, (dt - mk[1]) / 2.2)
+        d.rectangle((bx0, by, bx1, by + 30), fill=(30, 10, 8, int(235 * a0)), outline=HUESO + (int(140 * a0),), width=2)
+        if vida > .003:
+            d.rectangle((bx0 + 3, by + 3, bx0 + 3 + (bx1 - bx0 - 6) * vida, by + 27), fill=SANGRE + (255,))
+        _texto(d, (bx1 + 24, by + 15), _num(salud * vida), fuente("Bold Condensed", 44), BLANCO, "lm", 255 * a0)
+        mejor = min(f[3] for f in filas)
+        for k, (ruta, arma, ga, gb) in enumerate(filas):
+            y = M + 290 + k * AF
+            _pega(im, _icono(ruta, 190, IC), M + 70, y, a0)
+            _texto(d, (M + 290, y + IC / 2), arma.upper(), fuente("SemiBold Condensed", 40), HUESO, "lm", 255 * a0, track=3)
+            if dt < mk[0]:
+                continue
+            if not fase_b:
+                v, col = ga * min(1.0, max(0.0, ua)), BLANCO
+            else:
+                ub = _eo((dt - mk[1]) / 1.6)
+                v = ga + (gb - ga) * ub
+                col = ORO if gb == mejor and ub >= 1 else SANGRE if gb > ga and ub >= 1 else BLANCO
+            _texto(d, (M + ancho - 90, y + IC / 2), f"{int(round(v))} GOLPES", fuente("Bold Condensed", 60), col, "rm", 255,
+                   track=2)
+        if remate and dt >= mk[remate[1]]:
+            s = _pop(dt - mk[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 46), remate[0].upper(), fuente("Bold Condensed", max(8, int(46 * s))), ORO, "mm",
                    track=3)
         return _salida(im, dt)
     return fn

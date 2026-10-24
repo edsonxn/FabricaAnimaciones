@@ -1,0 +1,906 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 11.164,
+  "tipo": "video",
+  "texto": "El arma más poderosa de Skyrim no te la da ningún príncipe daédrico. No está en ningún altar, ni en ninguna tumba. Y lo más seguro es que la tengas a tu alcance desde hace años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 11.164,
+  "t1": 17.804,
+  "tipo": "video",
+  "texto": "Skyrim está lleno de armas legendarias. Espadas que paralizan, martillos que te roban las fuerzas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.804,
+  "t1": 27.313,
+  "tipo": "video",
+  "texto": "y arcos que hacen llover luz del cielo. Algunas son poderosas porque así las diseñaron. Y otras, por un error que nadie se molestó en arreglar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.313,
+  "t1": 34.921,
+  "tipo": "video",
+  "texto": "Así que hoy van las quince armas más PODEROSAS de Skyrim, con dónde se consigue cada una y con sus cifras reales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.921,
+  "t1": 43.086,
+  "tipo": "video",
+  "texto": "Y quédate hasta el final, porque el número uno no es lo que esperas. Número quince. Viento Cortante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.086,
+  "t1": 50.629,
+  "tipo": "video",
+  "texto": "Es una cimitarra que está clavada en la proa del Katariah, el barco del emperador Titus Mede segundo, frente a la costa de Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.629,
+  "t1": 60.453,
+  "tipo": "video",
+  "texto": "Y solo puedes subir a ese barco durante Salve, Sithis, la misión de la Hermandad Oscura en la que vas a matar al emperador. Si destruyes la Hermandad, no la vas a ver nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.453,
+  "t1": 70.507,
+  "tipo": "video",
+  "texto": "Sobre el papel, su encantamiento es modesto. El golpe con la empuñadura, mientras bloqueas, a veces derriba al enemigo. Y solo si llevas la otra mano vacía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.507,
+  "t1": 78.097,
+  "tipo": "video",
+  "texto": "Pero por un error, ese tambaleo se aplica en cada golpe. Normal o potente. Y da igual el tamaño del enemigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.097,
+  "t1": 85.081,
+  "tipo": "video",
+  "texto": "Así que el enemigo se tambalea, tú vuelves a golpear, se vuelve a tambalear, y ya no te devuelve ni uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.081,
+  "t1": 93.7,
+  "tipo": "video",
+  "texto": "¿Y cuánto vale esta maravilla? Cuarenta monedas. Menos que muchas armas de hierro encantadas. Y a veces ni siquiera se queda donde debe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.7,
+  "t1": 103.643,
+  "tipo": "video",
+  "texto": "Puede acabar encajada donde no llegas, o en el fondo del mar. El truco es dispararle una flecha para que caiga. En el catorce, el Wabbajack.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.643,
+  "t1": 112.523,
+  "tipo": "video",
+  "texto": "Es el bastón de Sheogorath, el príncipe de la locura. Lo consigues en La mente de la locura, una misión que empieza en el Palacio Azul de Soledad,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.523,
+  "t1": 120.096,
+  "tipo": "video",
+  "texto": "y acaba dentro de la cabeza de un emperador muerto. Cada vez que lo usas pasa algo distinto. Y nunca sabes qué.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.096,
+  "t1": 130.051,
+  "tipo": "video",
+  "texto": "Puede lanzar fuego, escarcha o rayos. Puede robarle al enemigo la mitad de su salud, su aguante y su magia, y dártelos a ti. O puede matarlo en el acto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.051,
+  "t1": 138.901,
+  "tipo": "video",
+  "texto": "O puede convertirlo en un pollo. En un cangrejo del barro. En un queso de cabra. O en un bollo dulce. Sí, ese bollo dulce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.901,
+  "t1": 145.261,
+  "tipo": "video",
+  "texto": "Y también puede curarlo, o volverlo invisible. Es una ruleta, y a veces la ruleta juega en tu contra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.261,
+  "t1": 157.163,
+  "tipo": "video",
+  "texto": "Pero tiene un secreto. Su daño elemental, sesenta puntos, no lo reduce nada. Ni la dificultad, ni las resistencias. Un enemigo inmune al frío se come sus sesenta de escarcha igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 157.163,
+  "t1": 163.843,
+  "tipo": "video",
+  "texto": "Por eso en Legendario, cuando todas tus armas hacen cosquillas, el bastón del loco sigue pegando lo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.843,
+  "t1": 170.858,
+  "tipo": "video",
+  "texto": "Y cuidado. Un personaje esencial convertido en bollo dulce, si te lo comes, desaparece del juego para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.858,
+  "t1": 181.015,
+  "tipo": "video",
+  "texto": "Número trece. La Espada de Sangreskal. Está en Solstheim, la isla de Dragonborn, al fondo del Túmulo de Sangreskal, en el cadáver de Graciano Cerelio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.015,
+  "t1": 191.71,
+  "tipo": "video",
+  "texto": "Y allí abajo te espera un sacerdote dragón, Zahkriisos. Es un mandoble de veintiuno de daño. Pero lo que importa es lo que hace con cada ataque potente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 191.71,
+  "t1": 198.86,
+  "tipo": "video",
+  "texto": "Lanza una onda de energía roja, horizontal o vertical según el tajo, que hace treinta de daño a distancia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.86,
+  "t1": 206.797,
+  "tipo": "video",
+  "texto": "Es una espada que dispara. Y nunca necesita recarga. Ni gemas de alma, ni nada. Y la hicieron a medida para ese jefe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.797,
+  "t1": 213.192,
+  "tipo": "video",
+  "texto": "La onda hace daño extra contra Zahkriisos. El arma está diseñada para matar al que la vigila.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 213.192,
+  "t1": 224.122,
+  "tipo": "video",
+  "texto": "Además, hay una segunda Espada de Sangreskal escondida en un hueco detrás del muro de palabras. Solo se saca con un hechizo de área, y casi nadie la ha visto. Y un truco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.122,
+  "t1": 232.308,
+  "tipo": "video",
+  "texto": "Mientras eres etéreo por el grito, puedes atacar al aire y la onda sale igual. Un fantasma que lanza cuchillas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.308,
+  "t1": 241.355,
+  "tipo": "video",
+  "texto": "En el doce, la Maza de Molag Bal. En Markarth hay una casa abandonada que nadie quiere comprar. Y con razón. Dentro te habla una voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.355,
+  "t1": 250.401,
+  "tipo": "video",
+  "texto": "Es Molag Bal, el príncipe de la dominación. Te manda a buscar a un seguidor de Boethiah, Logrolf, para que lo lleves a su altar y lo mates allí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.401,
+  "t1": 258.023,
+  "tipo": "video",
+  "texto": "Sin preguntas. La recompensa es una maza que en cada golpe le quita veinticinco puntos de aguante y veinticinco de magia al enemigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.023,
+  "t1": 268.573,
+  "tipo": "video",
+  "texto": "Y si muere enseguida, le atrapa el alma. O sea, al mago lo deja sin hechizos y al guerrero sin ataques potentes. Y encima te llena las gemas de alma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 268.573,
+  "t1": 275.774,
+  "tipo": "video",
+  "texto": "Y tiene un error precioso. Por una etiqueta mal puesta, su daño al aguante cuenta como daño de fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.774,
+  "t1": 282.875,
+  "tipo": "video",
+  "texto": "Así que las ventajas de fuego de Destrucción la potencian. Con Llamas aumentadas, sube de veinticinco a treinta y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.875,
+  "t1": 292.429,
+  "tipo": "video",
+  "texto": "El príncipe de la dominación, convertido en pirómano por un error de etiqueta. Número once. El Hacha rúnica de la Guardia del Alba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.429,
+  "t1": 300.629,
+  "tipo": "video",
+  "texto": "Si te unes a la Guardia del Alba, en Dawnguard, el sacerdote del fuerte, Florencio Baenio, te manda a recuperar reliquias perdidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.629,
+  "t1": 311.227,
+  "tipo": "video",
+  "texto": "Una de las recompensas es esta hacha. Es la única hacha de guerra artefacto de todo el juego. Y sobre el papel, poca cosa. Once de daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 311.227,
+  "t1": 319.78,
+  "tipo": "video",
+  "texto": "Pero cada diez no muertos que matas con ella, gana diez puntos de daño solar contra no muertos, en un área alrededor del golpe. Hasta cien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 319.78,
+  "t1": 327.533,
+  "tipo": "video",
+  "texto": "Cien puntos extra contra draugr, vampiros y esqueletos. Y en área. Un solo golpe limpia una tumba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.533,
+  "t1": 337.312,
+  "tipo": "video",
+  "texto": "Además, rompe al instante cualquier barrera mágica que golpee. Y el contador debía reiniciarse cada día, pero por un error nunca se reinicia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.312,
+  "t1": 343.571,
+  "tipo": "video",
+  "texto": "Los cien muertos son para siempre. En el diez, Volendrung.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.571,
+  "t1": 354.093,
+  "tipo": "video",
+  "texto": "Es el martillo de Malacath, el príncipe de los parias. Lo consigues ayudando a los orcos de Largashbur, una fortaleza de la Grieta maldita por culpa de un gigante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 354.093,
+  "t1": 361.351,
+  "tipo": "video",
+  "texto": "Matas al gigante, recuperas el martillo del jefe, y en el ritual Malacath lo convierte en Volendrung.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.351,
+  "t1": 370.257,
+  "tipo": "video",
+  "texto": "Veinticinco de daño, y absorbe cincuenta de aguante por golpe. Tu enemigo se cansa. Tú no. Pero su verdadero secreto es la velocidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.257,
+  "t1": 377.559,
+  "tipo": "video",
+  "texto": "Todos los martillos de guerra del juego tienen velocidad cero coma seis. Volendrung tiene cero coma siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.559,
+  "t1": 386.177,
+  "tipo": "video",
+  "texto": "Parece poco, pero en un martillo de ese tamaño es un golpe más por cada seis. Por eso pega más por segundo que casi cualquier arma normal del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.177,
+  "t1": 395.097,
+  "tipo": "video",
+  "texto": "Según el lore, lo forjaron los dwemer, y tiene la costumbre de desaparecer y aparecer en otra parte. Igual que los propios dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.097,
+  "t1": 406.342,
+  "tipo": "video",
+  "texto": "Número nueve. La Hoja de ébano. En el palacio de Carrera Blanca hay una puerta cerrada que te susurra. Y el que te habla de ella es un niño, Nelkir, el hijo del jarl.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 406.342,
+  "t1": 412.941,
+  "tipo": "video",
+  "texto": "Detrás está la Hoja de ébano, el arma de Mephala, la príncipe de los secretos y las mentiras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.941,
+  "t1": 421.35,
+  "tipo": "video",
+  "texto": "Empieza siendo poca cosa. Absorbe diez puntos de salud. Pero cada vez que matas a dos amigos con ella, sube cuatro. Y no vale cualquiera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.35,
+  "t1": 431.615,
+  "tipo": "video",
+  "texto": "Tienen que ser personas que te aprecian. Seguidores, vecinos, gente a la que le caes bien. Diez traiciones después, absorbe treinta de salud por golpe. Y con carga infinita.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.615,
+  "t1": 441.161,
+  "tipo": "video",
+  "texto": "Nunca se gasta. Por un error, aunque la empuñas con las dos manos, el juego la trata como una espada a una mano, y aprovecha todas sus ventajas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 441.161,
+  "t1": 448.154,
+  "tipo": "video",
+  "texto": "Eso sí, si te la quitan antes de llegar a diez, por ejemplo en la mina de Cidhna, el contador vuelve a cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 448.154,
+  "t1": 456.528,
+  "tipo": "video",
+  "texto": "Es un arma buenísima. A cambio de quedarte sin amigos. En el ocho, el Bastón de Magnus.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 456.528,
+  "t1": 465.867,
+  "tipo": "video",
+  "texto": "En el Colegio de Hibernalia te mandan a buscarlo a Laberintia, una ciudad en ruinas cerca de Morthal, llena de draugr, fantasmas y trampas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.867,
+  "t1": 475.084,
+  "tipo": "video",
+  "texto": "Al final te espera el sacerdote dragón Morokei, uno de los jefes más duros del juego. El bastón lanza un chorro que absorbe veinte puntos de magia por segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.084,
+  "t1": 483.405,
+  "tipo": "video",
+  "texto": "Y cuando al enemigo ya no le queda magia, empieza a absorberle la salud. Contra magos y sacerdotes dragón es una pesadilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 483.405,
+  "t1": 490.83,
+  "tipo": "video",
+  "texto": "Los dejas secos, y su magia pasa a ser tuya. Y su alcance es mucho mayor que el de las Llamas o las Chispas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.83,
+  "t1": 499.204,
+  "tipo": "video",
+  "texto": "Eso sí, en el juego sin parches tiene un error. A veces, la parte de la salud no funciona nunca. Y otro error más divertido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.204,
+  "t1": 509.763,
+  "tipo": "video",
+  "texto": "Si llevas el bastón como única arma, tus puñetazos se aceleran muchísimo. El bastón más poderoso de los magos te convierte en boxeador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 509.763,
+  "t1": 517.301,
+  "tipo": "video",
+  "texto": "Número siete. La Quebrantadora del amanecer. Es la espada de Meridia, la príncipe que odia a los no muertos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.301,
+  "t1": 524.748,
+  "tipo": "video",
+  "texto": "Primero encuentras su baliza, la Luz de Meridia, en un cofre cualquiera, y luego subes con ella al Monte Kilkreath, al oeste de Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.748,
+  "t1": 533.587,
+  "tipo": "video",
+  "texto": "Allí la estatua de Meridia te manda a limpiar su templo de un nigromante, Malkoran, que lo ha llenado de cadáveres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.587,
+  "t1": 543.541,
+  "tipo": "video",
+  "texto": "La espada quema diez puntos con cada golpe. Pero cuando matas a un no muerto con ella, puede soltar una explosión de luz que hace huir o destruye a los no muertos de alrededor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 543.541,
+  "t1": 553.921,
+  "tipo": "video",
+  "texto": "Los deja en cenizas. Ni siquiera hace falta que tú des el golpe final. Si el no muerto recibió un tajo en los diez segundos anteriores, puede explotar igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 553.921,
+  "t1": 562.664,
+  "tipo": "video",
+  "texto": "Y tiene la mayor carga de todas las armas encantadas que se gastan. Cinco mil. Te pasas una mazmorra entera sin mirar una gema de alma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 562.664,
+  "t1": 567.244,
+  "tipo": "video",
+  "texto": "Un aviso. Si eres vampiro, la explosión también te quema a ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.244,
+  "t1": 576.862,
+  "tipo": "video",
+  "texto": "Meridia no hace excepciones. En el seis, la Hoja de Ruiseñor. Te la da Karliah al final de la historia del Gremio de Ladrones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.862,
+  "t1": 583.467,
+  "tipo": "video",
+  "texto": "en el sótano de una casa de Hibernalia. Fue de Galo, el maestro del gremio al que asesinó Mercer Frey.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 583.467,
+  "t1": 596.839,
+  "tipo": "video",
+  "texto": "Cada golpe absorbe veinticinco puntos de salud y veinticinco de aguante. Te curas y le quitas las fuerzas al enemigo a la vez. Pero es un arma que sube contigo. Lo que te dan depende del nivel que tengas al acabar la misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 596.839,
+  "t1": 602.056,
+  "tipo": "video",
+  "texto": "La mejor versión sale a partir del nivel cuarenta y seis. Y aquí viene la trampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.056,
+  "t1": 611.279,
+  "tipo": "video",
+  "texto": "Esa versión, por un error, no se puede mejorar en la forja. Así que la que de verdad conviene es la anterior, la del nivel treinta y seis al cuarenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 611.279,
+  "t1": 622.102,
+  "tipo": "video",
+  "texto": "Que, por otro error, trae veinticinco de aguante en vez de veinte. Un error que tapa otro error. Muy de ladrones. Número cinco. La Espada de Miraak.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.102,
+  "t1": 628.452,
+  "tipo": "video",
+  "texto": "Es el arma del primer Sangre de Dragón, el villano de Dragonborn. Y solo la consigues de una forma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.452,
+  "t1": 637.753,
+  "tipo": "video",
+  "texto": "Matándolo a él, en Apocrypha, el reino de Hermaeus Mora. Y tiene un récord. A partir del nivel sesenta hace dieciséis de daño base.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 637.753,
+  "t1": 646.635,
+  "tipo": "video",
+  "texto": "Lo más alto de todas las espadas a una mano del juego. Más que la espada daédrica, que hace catorce. Más que la de hueso de dragón, que hace quince.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 646.635,
+  "t1": 656.428,
+  "tipo": "video",
+  "texto": "Y pesa tres. Tres. Menos que una daga. Cada tajo absorbe quince puntos de aguante, y suelta un tentáculo, como los de los acechadores de Apocrypha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 656.428,
+  "t1": 664.43,
+  "tipo": "video",
+  "texto": "El tentáculo no hace nada, es pura decoración. Pero si vas a ir por ahí con la espada de un dios de los tentáculos, que se note.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 664.43,
+  "t1": 672.07,
+  "tipo": "video",
+  "texto": "En el cuatro, el Azote de dragones. La historia principal te lleva con Esbern y Delphine, los últimos Cuchillas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.07,
+  "t1": 680.605,
+  "tipo": "video",
+  "texto": "hasta el Templo de Refugio Celestial, escondido tras la Aguja de Karth, al este de Markarth. En la armería del templo, encima de una mesa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 680.605,
+  "t1": 689.878,
+  "tipo": "video",
+  "texto": "está esta katana. Y mucha gente pasa de largo, porque parece una espada más de los Cuchillas. En su mejor versión, a partir del nivel cuarenta y seis,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 689.878,
+  "t1": 696.932,
+  "tipo": "video",
+  "texto": "hace cuarenta puntos de daño extra a los dragones. Y a todo lo demás, diez de descarga eléctrica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.932,
+  "t1": 707.907,
+  "tipo": "video",
+  "texto": "Y otra vez, ojo con el nivel. Si la coges entre el veintisiete y el treinta y cinco, la descripción te promete treinta contra dragones, y en realidad hace veinte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 707.907,
+  "t1": 714.997,
+  "tipo": "video",
+  "texto": "Hice las cuentas. Con todo al máximo, para tumbar a un dragón ancestral de fuego necesitas unos treinta y ocho golpes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 714.997,
+  "t1": 723.103,
+  "tipo": "video",
+  "texto": "Los mismos que con el arma número tres de esta lista. Pero contra un dragón de escarcha, el Azote necesita catorce golpes menos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 723.103,
+  "t1": 731.294,
+  "tipo": "video",
+  "texto": "Contra el bicho para el que la forjaron, no hay espada mejor. Número tres. La Desgarradora gélida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 731.294,
+  "t1": 743.07,
+  "tipo": "video",
+  "texto": "Es la espada de cristal de Mercer Frey, el traidor del Gremio de Ladrones. La guarda en una vitrina con cerradura experta, en los túneles de su casa de Riften, la Hacienda Bosque de la Grieta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 743.07,
+  "t1": 749.822,
+  "tipo": "video",
+  "texto": "En su mejor versión, cada golpe hace treinta puntos de daño por escarcha, además de los quince del filo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 749.822,
+  "t1": 758.829,
+  "tipo": "video",
+  "texto": "Y puede paralizar al enemigo dos segundos. No siempre. Más o menos un golpe de cada cuatro. Un enemigo paralizado no se defiende. No bloquea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 758.829,
+  "t1": 768.821,
+  "tipo": "video",
+  "texto": "No lanza hechizos. Solo espera. Según la wiki más completa de la saga, es el arma a una mano más devastadora que puedes conseguir tal cual, sin mejorarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 768.821,
+  "t1": 774.698,
+  "tipo": "video",
+  "texto": "Y si tienes las ventajas de escarcha de Destrucción, el frío sube hasta cuarenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.698,
+  "t1": 784.898,
+  "tipo": "video",
+  "texto": "Y el detalle que más me gusta. No hace falta ser ladrón para tenerla. Si saltas desde el templo de Mara al tejado, te cuelas en la casa de Mercer y se la robas sin haber pisado el gremio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.898,
+  "t1": 790.505,
+  "tipo": "video",
+  "texto": "Robarle al ladrón. Número dos. El Arco de Auriel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 790.505,
+  "t1": 801.3,
+  "tipo": "video",
+  "texto": "Es el arco del dios elfo del sol, y está en el Valle Olvidado, un valle helado al que solo se llega bajando por la Cueva de Sima Negra, en la Cuenca, cerca de Markarth.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.3,
+  "t1": 811.625,
+  "tipo": "video",
+  "texto": "Lo custodia Gelebor, el último caballero paladín de los elfos de la nieve. Y para conseguirlo tienes que matar a Vyrthur, el archicoadjutor, que también es un vampiro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 811.625,
+  "t1": 818.797,
+  "tipo": "video",
+  "texto": "Sus flechas queman con luz solar. Según su descripción, hacen el triple contra los no muertos. Y dispara rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 818.797,
+  "t1": 829.108,
+  "tipo": "video",
+  "texto": "El arco daédrico tarda el doble en tensarse. Pero el truco está en las flechas élficas bendecidas por el sol. Si disparas una al sol, el sol te contesta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 829.108,
+  "t1": 837.289,
+  "tipo": "video",
+  "texto": "Durante diez segundos caen rayos de luz sobre los enemigos que tienes cerca. Le disparas al cielo, y el cielo dispara por ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 837.289,
+  "t1": 843.709,
+  "tipo": "video",
+  "texto": "Y con las flechas malditas con sangre, las que hace Serana, tapas el sol hasta la mañana siguiente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.709,
+  "t1": 853.735,
+  "tipo": "video",
+  "texto": "Justo lo que quería el villano de Dawnguard. Por eso es el número dos. Es la única arma de Skyrim con la que puedes apagar el sol.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 853.735,
+  "t1": 861.715,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. El arma más poderosa de Skyrim. No está en ningún altar daédrico. No te la da ningún dios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 861.715,
+  "t1": 870.44,
+  "tipo": "video",
+  "texto": "No la custodia ningún dragón. La forjas tú. Con los huesos de los dragones que has matado. Es una daga de hueso de dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 870.44,
+  "t1": 879.268,
+  "tipo": "video",
+  "texto": "Necesitas Herrería al cien, la ventaja Armadura de dragón, un hueso de dragón y unas tiras de cuero. Y tener Dawnguard. Sola, parece poca cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 879.268,
+  "t1": 886.958,
+  "tipo": "video",
+  "texto": "Doce de daño base. Es la más débil de toda la familia de hueso de dragón. Pero una daga tiene algo que no tiene ninguna otra arma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 886.958,
+  "t1": 893.906,
+  "tipo": "video",
+  "texto": "Con la ventaja Hoja del asesino, de Discreción, los ataques furtivos con daga hacen quince veces más daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.906,
+  "t1": 903.607,
+  "tipo": "video",
+  "texto": "Y si te pones los Guantes etéreos de la Hermandad Oscura, ese multiplicador se duplica. Treinta veces. Forjada a legendaria y con las ventajas de A una mano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 903.607,
+  "t1": 912.667,
+  "tipo": "video",
+  "texto": "una sola puñalada por la espalda hace mil novecientos ochenta puntos de daño. La Desgarradora gélida, en la misma puñalada, se queda en novecientos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.667,
+  "t1": 923.5,
+  "tipo": "video",
+  "texto": "Porque con espada el sigilo multiplica por doce, no por treinta. Y un dragón anciano tiene unos dos mil doscientos de salud. Una sola puñalada lo deja con un hilo de vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 923.5,
+  "t1": 929.92,
+  "tipo": "video",
+  "texto": "Y si además la mejoras con el bucle de alquimia del video de los exploits, llegas a siete mil seiscientos cincuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 929.92,
+  "t1": 939.362,
+  "tipo": "video",
+  "texto": "Más que la vida entera de un dragón legendario. Por eso es la número uno. Todas las demás armas de esta lista te las dio alguien. Esta te la ganaste tú,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 939.362,
+  "t1": 949.414,
+  "tipo": "video",
+  "texto": "dragón a dragón. Esa es mi lista. Quince armas de Skyrim, de una cimitarra rota por un error a una daga que forjas con los huesos de tus enemigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 949.414,
+  "t1": 957.314,
+  "tipo": "video",
+  "texto": "Si tu arma favorita no está, déjala en los comentarios y dime por qué. Y si es la Hoja de ébano, dime también cuántos amigos te costó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 957.314,
+  "t1": 965.646,
+  "tipo": "video",
+  "texto": "Y si quieres ver justo lo contrario, en el canal tienes las quince cosas más INÚTILES de Skyrim, con dos armas que no deberías tocar nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.646,
+  "t1": 974.0,
+  "tipo": "video",
+  "texto": "Y la próxima vez que pases por la armería del Refugio Celestial, mira bien encima de la mesa.",
+  "clip_s": 8
+ }
+]

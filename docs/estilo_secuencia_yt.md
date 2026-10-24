@@ -243,6 +243,24 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
     (longplays no commentary por facción), Kasaru (Gremio de Ladrones), Otaku Gamboa, guías de UESP-estilo sin rótulos.
   - Música: Lyria API sin saldo (402) → biblioteca de OTROS canales + OST original de Skyrim (el usuario lo autorizó); la OST se
     acredita en la descripción (Jeremy Soule / Bethesda) y puede traer Content ID. No catalogar esos tramos como Lyria.
+- **Lecciones de `tes_armas_poderosas` (23-oct-2026, 113 beats, 16:33, todo en 1 sesión; tema elegido por Claude):**
+  - **4 MG nuevos en `mg_tes`**: `ruleta` (rueda del Wabbajack que gira y frena en cada marca; giros seguidos se acortan solos para
+    no pisarse; lista de resultados al lado), `niveles` (escalera del arma nivelada; `notas` enmarcan la trampa: «No se mejora en la
+    forja», «Promete 30, hace 20»), `golpes` (¿cuántos golpes para tumbar a X? en dos fases: la barra de salud se vacía y el contador
+    corre; en la fase B la mejor fila se pone en oro) y `barras` (barras comparadas + líneas de referencia punteadas, p. ej. la salud
+    de los dragones). `_icono` tumba en horizontal las armas largas con fondo transparente (si no, quedan como astillas).
+  - **Anclas y marcas = primera aparición en TODO el video**: «La Desgarradora gélida» (marca de un MG del n.º 1) casó con el aviso
+    del n.º 3 y la barra salió antes de tiempo; «tiene un error» casó con «tiene un error precioso» de otro puesto. Usa un trozo que
+    solo exista en esa frase. Revisar SIEMPRE en `fx hoja` que cada ficha sale en su puesto.
+  - **Búsquedas «… no HUD»** (no HUD sword fight / dungeon / shout / ward spell…) salieron limpias 13 de 14 a la primera; «no
+    commentary» seguía trayendo menús de forja, inventario, diario y árbol de ventajas. 56 de 113 clips rehechos en 5 vueltas. Canales a
+    evitar añadidos: Spoiler Alert Theater, PIXEL STORYZ, Syzleaf, RGR29 (marcas de agua); contadores de FPS/GPU en una esquina →
+    `recorte_por` .04-.09. Hoja propia de 2 cuadros por clip (1 s y 6 s, `videos/tes_armas_poderosas/_hoja_clips.py`) antes de `fx hoja`;
+    los beats de más de 10 s, mirar también el final (uno acababa en el menú de la forja a los 12 s).
+  - **Arreglar un tramo sin re-renderizar 20 min**: `video --tramo a-b` (sale `salida/tramo_a_b.mp4`) y empalmarlo por número de cuadro
+    en `video_sin_audio.mp4` (trim start_frame/end_frame + concat, 30 fps) y repetir `final`. NO empalmar sobre el MASTER: el concat
+    pierde la pantalla final. Si `final` truena con PermissionError, el panel tiene abierto el MASTER: renombrar el `.tmp.mp4` y repetir.
+  - Rigor del MASTER con `_rigor.py` (un `-ss` por cuadro cada 6 s, hojas 8×6 con la hora + blackdetect/freezedetect): cazó 10 clips más.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los

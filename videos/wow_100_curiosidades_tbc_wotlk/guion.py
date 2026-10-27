@@ -123,7 +123,12 @@ SECUENCIA = dict(
     clip_s=8.6,             # ~8,6 s por clip (ritmo del canal en el sistema viejo)
     transicion="slideleft", # el clip nuevo empuja al anterior
     fundido=0.35,           # duración de la transición
-    ambiente=0.0,           # el audio del gameplay no se usa (se bajan solo imágenes)
+    ambiente=0.0,           # el audio del gameplay no se usa salvo en ambiente_por
+    # SONIDO ORIGINAL (regla del 26-oct-2026): beats donde lo que SUENA es el punto (la banda E.T.C. tocando, los gritos de
+    # Garrosh, Algalon, el viaje en Gymer, la huida del Rey Exánime); musica_wow.py aparta la OST ahí (27-oct: 080, 247 con narrador y 155, 261 mudos fuera)
+    ambiente_por={"scene-014": .6, "scene-059": .9, "scene-060": .9, "scene-061": .9, "scene-132": .6,
+                  "scene-181": .7, "scene-257": .6, "scene-302": .6,
+                  "scene-348": .6, "scene-349": .6},
     yt=dict(sufijo="World of Warcraft", min_s=90, max_min=240, alto=1080,
             evitar_canales=["Thraex", "Video Game Collector", "TheLtColonel", "Jansn Benchmarks", "Platinum WoW", "WoWAholics101"]),
     recorte_por={},
@@ -159,7 +164,20 @@ _ANIMO_ZONA = {
 LYRIA = dict(
     estilo="(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
     escenas={k: (_ANIMO_ZONA[z], 4) for k, z in ZONA_DE.items()},
-    tramos=[],   # se escriben en la sesión 2 con la línea de tiempo real de `tiempo` (<= 175 s cada uno; ~18 tramos para 50 min)
+    tramos=[   # un tema de la OST por zona (musica_wow.py); la misma zona partida en dos sigue el tema donde se quedó (27-oct)
+        (['intro', 'c100', 'c099', 'c098'], "fuego"), (['c097', 'c096', 'c095', 'c094'], "fuego"),
+        (['c093', 'c092', 'c091', 'c090'], "zangar"), (['c089', 'c088', 'c087', 'c086'], "terokkar"),
+        (['c085', 'c084', 'c083'], "terokkar"), (['c082', 'c081', 'c080'], "nagrand"), (['c079', 'c078', 'c077'], "nagrand"),
+        (['c076', 'c075', 'c074'], "filospada"), (['c073', 'c072', 'c071'], "filospada"),
+        (['c070', 'c069', 'c068', 'c067', 'c066'], "tormenta"), (['c065', 'c064', 'c063', 'c062', 'c061'], "sombraluna"),
+        (['c060', 'c059', 'c058', 'c057', 'c056'], "quelthalas"), (['c055', 'c054'], "azuremyst"), (['c053', 'c052'], "karazhan"),
+        (['c051'], "cavernas"), (['c050', 'c049', 'c048'], "boreal"), (['c047', 'c046', 'c045'], "boreal"),
+        (['c044', 'c043', 'c042'], "fiordo"), (['c041', 'c040', 'c039', 'c038'], "dragones"), (['c037', 'c036', 'c035'], "dragones"),
+        (['c034', 'c033', 'c032', 'c031'], "pardas"), (['c030', 'c029', 'c028'], "zuldrak"), (['c027', 'c026', 'c025'], "zuldrak"),
+        (['c024', 'c023', 'c022', 'c021'], "sholazar"), (['c020', 'c019', 'c018', 'c017'], "cumbres"),
+        (['c016', 'c015', 'c014'], "cumbres"), (['c013', 'c012', 'c011', 'c010', 'c009'], "dalaran"), (['c008'], "invierno"),
+        (['c007', 'c006', 'c005', 'c004'], "corona"), (['c003', 'c002', 'c001', 'cierre'], "corona"),
+    ],
 )
 
 ESCENAS = [

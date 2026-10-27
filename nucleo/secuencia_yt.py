@@ -160,8 +160,17 @@ def _tramo(v, beat_id, L, y, usados):
     return None
 
 
-def _bajar_tramo(vid, desde, L, y, destino, tmpdir):
-    """Baja [desde, desde+L+1] solo video y lo deja en `destino` a W×H, 30 fps, h264, sin audio."""
+def _con_audio(beat_id):
+    """¿Este beat lleva el SONIDO ORIGINAL del juego? (regla del usuario, 26-oct-2026: música del juego, gritos, SFX, voces del
+    clip donde conviene oírlos; Warcraft, Tamriel, Runa Caída y Crónicas del gaming). Sí cuando SECUENCIA["ambiente_por"] le da
+    volumen > 0 (o `ambiente` general > 0): entonces el clip baja CON su audio y `ambiente`/`mezcla` lo ponen bajo la voz."""
+    c = S.cfg()
+    return float(c.get("ambiente_por", {}).get(beat_id, c.get("ambiente", 0.0))) > 0
+
+
+def _bajar_tramo(vid, desde, L, y, destino, tmpdir, audio=False):
+    """Baja [desde, desde+L+1] y lo deja en `destino` a W×H, 30 fps, h264; sin audio salvo `audio=True` (sonido original
+    del juego en ese beat, ver _con_audio): entonces baja también la mejor pista de audio y la conserva en AAC 48 kHz."""
     os.makedirs(tmpdir, exist_ok=True)
     for f in os.listdir(tmpdir):
         try:
@@ -171,7 +180,8 @@ def _bajar_tramo(vid, desde, L, y, destino, tmpdir):
             os.makedirs(tmpdir, exist_ok=True)
             break
     url = f"https://www.youtube.com/watch?v={vid}"
-    fmt = f"bv*[height<={y['alto']}][height>=720][vcodec^=avc1]/bv*[height<={y['alto']}][height>=720]"
+    v1, v2 = f"bv*[height<={y['alto']}][height>=720][vcodec^=avc1]", f"bv*[height<={y['alto']}][height>=720]"
+    fmt = f"{v1}+ba/{v2}+ba" if audio else f"{v1}/{v2}"
     r = subprocess.run(["yt-dlp", url, "-f", fmt, "--download-sections", f"*{desde:.1f}-{desde + L + 1.5:.1f}",
                         "-o", os.path.join(tmpdir, "c.%(ext)s"), "--no-warnings", "--no-playlist", "--quiet"] + _cookies(),
                        capture_output=True, text=True, encoding="utf-8", errors="replace", env=ENV, timeout=300)
@@ -181,8 +191,12 @@ def _bajar_tramo(vid, desde, L, y, destino, tmpdir):
         return f"yt-dlp: {err or r.returncode}"
     W, H = S.W, S.H
     vf = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={S.FPS}"
-    r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.4", "-i", bajado[0], "-t", f"{L:.3f}", "-an",
-                        "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", destino],
+    sonido = ["-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-ac", "2"] if audio else ["-an"]
+    # OJO (27-oct-2026): con +ba el tramo de yt-dlp NO sale igual que sin audio (otro keyframe, video que empieza segundos
+    # después que el audio): rebajar con audio un clip YA aprobado cambia lo que se ve y deja clips de 1 cuadro. Para añadir el
+    # sonido a un clip aprobado sin tocar su imagen: videos/wow_100_curiosidades_tbc_wotlk/_sonido_original.py alinear.
+    r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "0.4", "-i", bajado[0], "-t", f"{L:.3f}"] + sonido +
+                       ["-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p", destino],
                        capture_output=True, text=True)
     return None if r.returncode == 0 and os.path.exists(destino) else f"ffmpeg: {r.stderr[-200:]}"
 
@@ -253,7 +267,7 @@ def _uno(b, entrada, y, fu, usados_global, forzar_q=None, forzar_url=None, forza
         if url:
             vid = re.search(r"(?:v=|youtu\.be/|shorts/)([\w-]{11})", url).group(1)
             desde = float(forzar_desde if forzar_desde is not None else (entrada.get("desde", 30) if isinstance(entrada, dict) else 30))
-            err = _bajar_tramo(vid, desde, L, y, destino, tmpdir)
+            err = _bajar_tramo(vid, desde, L, y, destino, tmpdir, audio=_con_audio(b["id"]))
             if err:
                 return b["id"], f"FALLÓ fijo {vid}@{desde}: {err}"
             reg = dict(video=vid, desde=desde, titulo="(fijado a mano)", canal="", q="")
@@ -273,7 +287,7 @@ def _uno(b, entrada, y, fu, usados_global, forzar_q=None, forzar_url=None, forza
                         desde = _tramo(v, b["id"], L, y, usados_global)
                     if desde is None:
                         continue
-                    err = _bajar_tramo(v["id"], desde, L, y, destino, tmpdir)
+                    err = _bajar_tramo(v["id"], desde, L, y, destino, tmpdir, audio=_con_audio(b["id"]))
                     if err:
                         motivos.append(err[:60])
                         continue

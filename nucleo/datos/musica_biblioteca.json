@@ -11380,7 +11380,14 @@
     "dinamica": 0.8
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-26"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "nervio_vago__lyria_tramo4": {
@@ -22473,6 +22480,8 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23260,6 +23269,8 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -31266,7 +31277,3026 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-23"
+  },
+  "lol_worlds_2026__lyria_tramo2": {
+   "id": "lol_worlds_2026__lyria_tramo2",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo2.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo2.mp3",
+   "md5": "5414359276ab048d2fff4426e46c88d2",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 2,
+   "escenas": [
+    "playin",
+    "dia1"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:16 (76 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Continue the groove, turn darker and tense toward the end. End on a suspended note.\n\n[0:00 - 0:37] Section 1: Intensity 5/10. hopeful underdog groove, rising synths\n[0:37 - 1:16] Section 2: Intensity 6/10. ominous low drones, tension builds toward a fight",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 37,
+     "intensidad": 5,
+     "desc": "hopeful underdog groove, rising synths"
+    },
+    {
+     "t0": 37,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "ominous low drones, tension builds toward a fight"
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "drone",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "esperanza",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 98.46,
+    "rms_db": -14.4,
+    "tempo": 123.0,
+    "brillo_hz": 1849,
+    "energia": [
+     0.94,
+     0.83,
+     0.99,
+     0.95,
+     0.97,
+     0.83,
+     0.83,
+     0.86,
+     0.99,
+     0.92,
+     1.0,
+     0.41
+    ],
+    "huecos": [],
+    "dinamica": 0.59
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo10": {
+   "id": "lol_worlds_2026__lyria_tramo10",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo10.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo10.mp3",
+   "md5": "630ecd4a4cb5bcad93a169ace633a50a",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 10,
+   "escenas": [
+    "queviene",
+    "lecciones",
+    "cierre"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:45 (106 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Forward-looking anticipation, warm reflective pads, final big hit and ring out.\n\n[0:00 - 0:54] Section 1: Intensity 5/10. forward-looking anticipation, rising\n[0:54 - 1:27] Section 2: Intensity 4/10. reflective, warm synth pads\n[1:27 - 1:45] Section 3: Intensity 5/10. final big hit and ring out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 54,
+     "intensidad": 5,
+     "desc": "forward-looking anticipation, rising"
+    },
+    {
+     "t0": 54,
+     "t1": 87,
+     "intensidad": 4,
+     "desc": "reflective, warm synth pads"
+    },
+    {
+     "t0": 87,
+     "t1": 105,
+     "intensidad": 5,
+     "desc": "final big hit and ring out"
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 102.79,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 1690,
+    "energia": [
+     0.87,
+     0.86,
+     0.88,
+     0.87,
+     0.87,
+     0.86,
+     0.94,
+     1.0,
+     0.99,
+     0.94,
+     0.88,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo6": {
+   "id": "lol_worlds_2026__lyria_tramo6",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo6.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo6.mp3",
+   "md5": "514d0cbe85c06a3866d0f16b18574f8b",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 6,
+   "escenas": [
+    "dia3b",
+    "jugada4",
+    "dia3c"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:49 (109 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Surprise sting, heroic underdog swell, then a slower cool groove.\n\n[0:00 - 0:06] Section 1: Intensity 6/10. surprise sting\n[0:06 - 1:40] Section 2: Intensity 7/10. underdog anthem energy, heroic swell\n[1:40 - 1:49] Section 3: Intensity 5/10. veteran mystique, slower groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 6,
+     "intensidad": 6,
+     "desc": "surprise sting"
+    },
+    {
+     "t0": 6,
+     "t1": 100,
+     "intensidad": 7,
+     "desc": "underdog anthem energy, heroic swell"
+    },
+    {
+     "t0": 100,
+     "t1": 109,
+     "intensidad": 5,
+     "desc": "veteran mystique, slower groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    7,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 110.81,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2204,
+    "energia": [
+     0.7,
+     0.92,
+     0.95,
+     0.78,
+     1.0,
+     0.85,
+     0.43,
+     0.67,
+     0.91,
+     0.66,
+     0.69,
+     0.2
+    ],
+    "huecos": [],
+    "dinamica": 0.8
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo4": {
+   "id": "lol_worlds_2026__lyria_tramo4",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo4.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo4.mp3",
+   "md5": "2590ff40c95b8abf1a03ed48b9fafd05",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 4,
+   "escenas": [
+    "dia2",
+    "jugada2"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:08 (129 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Anticipation, then analysis bed with rising tension and a triumphant swell near the end.\n\n[0:00 - 0:28] Section 1: Intensity 6/10. anticipation for a heavyweight clash, low brass synths\n[0:28 - 2:08] Section 2: Intensity 7/10. analysis bed with rising tension and a triumphant swell at the comeback",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 28,
+     "intensidad": 6,
+     "desc": "anticipation for a heavyweight clash, low brass synths"
+    },
+    {
+     "t0": 28,
+     "t1": 128,
+     "intensidad": 7,
+     "desc": "analysis bed with rising tension and a triumphant swell at the comeback"
+    }
+   ],
+   "intensidad": [
+    6,
+    7
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "metales",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 130.82,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 2156,
+    "energia": [
+     0.33,
+     0.64,
+     0.88,
+     0.91,
+     0.93,
+     0.85,
+     0.92,
+     0.92,
+     0.94,
+     1.0,
+     0.54,
+     0.32
+    ],
+    "huecos": [],
+    "dinamica": 0.68
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo3": {
+   "id": "lol_worlds_2026__lyria_tramo3",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo3.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo3.mp3",
+   "md5": "b090ca2ad932322ea03ae8d134827fb9",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 3,
+   "escenas": [
+    "jugada1",
+    "dia1b"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:21 (142 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal pulse for analysis, a big hit around the middle, then a lighter recap groove.\n\n[0:00 - 1:51] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:51 - 2:21] Section 2: Intensity 5/10. upbeat recap groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 111,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 111,
+     "t1": 141,
+     "intensidad": 5,
+     "desc": "upbeat recap groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 140.62,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2069,
+    "energia": [
+     0.5,
+     0.73,
+     0.82,
+     0.96,
+     0.98,
+     0.76,
+     0.96,
+     1.0,
+     0.35,
+     0.66,
+     0.96,
+     0.41
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo1": {
+   "id": "lol_worlds_2026__lyria_tramo1",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo1.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo1.mp3",
+   "md5": "56c3d48cc860f9473464721720e3afca",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "formato"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:15 (135 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit. Driving pulse, then settle under the explanation. End steady.\n\n[0:00 - 0:50] Section 1: Intensity 7/10. cold open, dramatic hit then driving pulse, sense of shock\n[0:50 - 2:15] Section 2: Intensity 4/10. steady informative groove, light arpeggios, building curiosity",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 7,
+     "desc": "cold open, dramatic hit then driving pulse, sense of shock"
+    },
+    {
+     "t0": 50,
+     "t1": 135,
+     "intensidad": 4,
+     "desc": "steady informative groove, light arpeggios, building curiosity"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 137.67,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1116,
+    "energia": [
+     0.83,
+     0.9,
+     1.0,
+     1.0,
+     0.81,
+     0.85,
+     0.89,
+     0.89,
+     0.92,
+     0.97,
+     0.74,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.62
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo5": {
+   "id": "lol_worlds_2026__lyria_tramo5",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo5.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo5.mp3",
+   "md5": "a95d08fee8e8de2dd0635523c7b03680",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 5,
+   "escenas": [
+    "dia2b",
+    "dia3",
+    "jugada3"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Recap groove, build stakes, analysis bed exploding into a climax at the end.\n\n[0:00 - 0:52] Section 1: Intensity 5/10. bouncy recap groove\n[0:52 - 1:11] Section 2: Intensity 6/10. high stakes build-up\n[1:11 - 2:50] Section 3: Intensity 8/10. analysis bed, tension rising to an explosive climax",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 52,
+     "intensidad": 5,
+     "desc": "bouncy recap groove"
+    },
+    {
+     "t0": 52,
+     "t1": 71,
+     "intensidad": 6,
+     "desc": "high stakes build-up"
+    },
+    {
+     "t0": 71,
+     "t1": 170,
+     "intensidad": 8,
+     "desc": "analysis bed, tension rising to an explosive climax"
+    }
+   ],
+   "intensidad": [
+    5,
+    6,
+    8
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 169.69,
+    "rms_db": -14.6,
+    "tempo": 123.0,
+    "brillo_hz": 2781,
+    "energia": [
+     0.69,
+     0.92,
+     0.93,
+     0.82,
+     0.76,
+     0.75,
+     0.83,
+     0.76,
+     0.95,
+     0.97,
+     1.0,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo8": {
+   "id": "lol_worlds_2026__lyria_tramo8",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo8.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo8.mp3",
+   "md5": "bea31ef901543937df20dc9158743e44",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 8,
+   "escenas": [
+    "jugada6",
+    "meta"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:17 (137 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Patient tension, a bittersweet final hit, then a light curious groove.\n\n[0:00 - 1:44] Section 1: Intensity 7/10. analysis bed, patient tension, a final bittersweet hit\n[1:44 - 2:17] Section 2: Intensity 4/10. light curious groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 104,
+     "intensidad": 7,
+     "desc": "analysis bed, patient tension, a final bittersweet hit"
+    },
+    {
+     "t0": 104,
+     "t1": 137,
+     "intensidad": 4,
+     "desc": "light curious groove"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 136.15,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 1892,
+    "energia": [
+     0.93,
+     0.93,
+     0.85,
+     0.3,
+     0.67,
+     0.75,
+     0.76,
+     0.35,
+     0.69,
+     0.97,
+     1.0,
+     0.37
+    ],
+    "huecos": [],
+    "dinamica": 0.7
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_tl_al__lyria_tramo1": {
+   "id": "lol_worlds_tl_al__lyria_tramo1",
+   "video": "lol_worlds_tl_al",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_tl_al\\audio\\lyria_tramo1.mp3",
+   "archivo": "lol_worlds_tl_al__lyria_tramo1.mp3",
+   "md5": "1c6496b2f4af7a461a21fea009765b2c",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Cómo Team Liquid ganó el Barón SIN PELEAR | Análisis Worlds 2026",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "contexto",
+    "dragon",
+    "tempo",
+    "vision",
+    "baron",
+    "remate"
+   ],
+   "estilo": "Modern sports broadcast analysis underscore: tight electronic drums, pulsing synth bass, glassy arpeggios, tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: mods_ia_fusion__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-26\n\nModern dark electronic explainer underscore: punchy synthwave and glitch-hop, tight drums, pulsing bass arpeggios, digital textures, energetic and addictive, 120 BPM, instrumental only, no vocals.\ngancho: starts immediately with a punchy beat and a catchy synth stab, high energy hook\npuente: steady driving groove, curious and technical, arpeggios like data flowing, light percussion\nlimite: the beat drops out, dark tense bass hit and a rising sweep\nreescribir: the beat returns harder, glitchy and mechanical, building in layers\nverdad: half-time, more serious and thoughtful, sparse drums, warm pad\ncierre: big uplifting final build, full drums and bright synths, then a clean ending",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "curioso",
+     "cálido",
+     "esperanza",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 132.27,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2226,
+    "energia": [
+     0.67,
+     0.65,
+     0.79,
+     0.71,
+     0.4,
+     0.53,
+     1.0,
+     0.94,
+     0.92,
+     0.99,
+     0.72,
+     0.57
+    ],
+    "huecos": [],
+    "dinamica": 0.6
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo9": {
+   "id": "lol_worlds_2026__lyria_tramo9",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo9.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo9.mp3",
+   "md5": "2a95de876e18bc17b0ca2675a4bdacfe",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 9,
+   "escenas": [
+    "jugadores",
+    "equipos"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:34 (155 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Countdown energy growing step by step, then a confident ranking groove.\n\n[0:00 - 1:18] Section 1: Intensity 6/10. countdown energy, each step a little bigger\n[1:18 - 2:34] Section 2: Intensity 5/10. power ranking groove, confident",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 78,
+     "intensidad": 6,
+     "desc": "countdown energy, each step a little bigger"
+    },
+    {
+     "t0": 78,
+     "t1": 154,
+     "intensidad": 5,
+     "desc": "power ranking groove, confident"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 150.57,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 1724,
+    "energia": [
+     0.6,
+     0.83,
+     0.95,
+     0.95,
+     0.93,
+     0.58,
+     0.78,
+     1.0,
+     0.9,
+     0.99,
+     0.94,
+     0.53
+    ],
+    "huecos": [],
+    "dinamica": 0.47
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "lol_worlds_2026__lyria_tramo7": {
+   "id": "lol_worlds_2026__lyria_tramo7",
+   "video": "lol_worlds_2026",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_worlds_2026\\audio\\lyria_tramo7.mp3",
+   "archivo": "lol_worlds_2026__lyria_tramo7.mp3",
+   "md5": "70b6878e06071739430e9c238608f318",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que ha pasado | Las mejores jugadas, jugadores y equipos (análisis)",
+   "tramo": 7,
+   "escenas": [
+    "jugada5",
+    "dia4"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:41 (161 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Confident analysis pulse with a climax, then darker serious drums.\n\n[0:00 - 1:31] Section 1: Intensity 7/10. analysis bed, cool confident pulse, climax\n[1:31 - 2:41] Section 2: Intensity 6/10. elimination day, darker serious drums",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 91,
+     "intensidad": 7,
+     "desc": "analysis bed, cool confident pulse, climax"
+    },
+    {
+     "t0": 91,
+     "t1": 161,
+     "intensidad": 6,
+     "desc": "elimination day, darker serious drums"
+    }
+   ],
+   "intensidad": [
+    7,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 160.42,
+    "rms_db": -14.4,
+    "tempo": 63.0,
+    "brillo_hz": 2287,
+    "energia": [
+     0.73,
+     0.8,
+     0.76,
+     0.97,
+     0.8,
+     0.85,
+     0.65,
+     0.92,
+     0.94,
+     0.93,
+     1.0,
+     0.51
+    ],
+    "huecos": [],
+    "dinamica": 0.49
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo13": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo13",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo13.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo13.mp3",
+   "md5": "f42d3b6583f57d0e201de8f442fee649",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 13,
+   "escenas": [
+    "c055",
+    "c054"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nazuremyst",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 58.5,
+    "rms_db": -26.0,
+    "tempo": 123.0,
+    "brillo_hz": 630,
+    "energia": [
+     0.33,
+     0.73,
+     0.76,
+     0.75,
+     0.96,
+     0.63,
+     0.85,
+     1.0,
+     0.78,
+     0.82,
+     0.96,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.67
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo14": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo14",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo14.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo14.mp3",
+   "md5": "8616180354c686c0155a59dc46ea4561",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 14,
+   "escenas": [
+    "c053",
+    "c052"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nkarazhan",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 66.0,
+    "rms_db": -23.1,
+    "tempo": 152.0,
+    "brillo_hz": 946,
+    "energia": [
+     0.09,
+     0.23,
+     0.53,
+     0.66,
+     0.65,
+     0.81,
+     0.92,
+     0.79,
+     0.95,
+     1.0,
+     0.87,
+     0.89
+    ],
+    "huecos": [],
+    "dinamica": 0.91
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo15": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo15",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo15.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo15.mp3",
+   "md5": "191dce922c34702dda35cf551b97ad76",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 15,
+   "escenas": [
+    "c051"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ncavernas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 36.0,
+    "rms_db": -25.9,
+    "tempo": 152.0,
+    "brillo_hz": 1198,
+    "energia": [
+     0.16,
+     0.35,
+     0.45,
+     0.39,
+     0.63,
+     0.94,
+     0.6,
+     0.72,
+     0.78,
+     0.97,
+     1.0,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo1": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo1",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo1.mp3",
+   "md5": "0432d93e4a3dcfdc512b3c6f873bbc3e",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "c100",
+    "c099",
+    "c098"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nfuego",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 138.5,
+    "rms_db": -22.9,
+    "tempo": 152.0,
+    "brillo_hz": 541,
+    "energia": [
+     0.65,
+     0.21,
+     0.24,
+     0.54,
+     1.0,
+     0.62,
+     0.8,
+     0.83,
+     0.79,
+     0.64,
+     0.23,
+     0.11
+    ],
+    "huecos": [],
+    "dinamica": 0.89
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo11": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo11",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo11.mp3",
+   "md5": "278b813221a7ea02f8cde8c4881148f5",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 11,
+   "escenas": [
+    "c065",
+    "c064",
+    "c063",
+    "c062",
+    "c061"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nsombraluna",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 148.5,
+    "rms_db": -24.3,
+    "tempo": 117.5,
+    "brillo_hz": 505,
+    "energia": [
+     0.13,
+     0.26,
+     0.3,
+     0.58,
+     0.68,
+     1.0,
+     0.75,
+     0.15,
+     0.58,
+     0.77,
+     0.58,
+     0.21
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo10": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo10",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo10.mp3",
+   "md5": "17c265ba5d1a9fc8403fb487f8f36f28",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 10,
+   "escenas": [
+    "c070",
+    "c069",
+    "c068",
+    "c067",
+    "c066"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ntormenta",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 151.0,
+    "rms_db": -25.2,
+    "tempo": 123.0,
+    "brillo_hz": 879,
+    "energia": [
+     0.14,
+     0.38,
+     0.59,
+     0.72,
+     0.88,
+     0.82,
+     1.0,
+     0.72,
+     0.93,
+     0.61,
+     0.41,
+     0.13
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo17": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo17",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo17.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo17.mp3",
+   "md5": "d44a2edadbc6195b40e555857e27df5c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 17,
+   "escenas": [
+    "c047",
+    "c046",
+    "c045"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nboreal",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 93.5,
+    "rms_db": -26.6,
+    "tempo": 112.3,
+    "brillo_hz": 653,
+    "energia": [
+     0.16,
+     0.66,
+     0.6,
+     0.39,
+     0.52,
+     0.85,
+     1.0,
+     0.66,
+     0.52,
+     0.31,
+     0.27,
+     0.64
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo16": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo16",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo16.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo16.mp3",
+   "md5": "1c15c981fe23c2c851a946f5e90aec8d",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 16,
+   "escenas": [
+    "c050",
+    "c049",
+    "c048"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nboreal",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 98.5,
+    "rms_db": -23.6,
+    "tempo": 99.4,
+    "brillo_hz": 532,
+    "energia": [
+     0.23,
+     0.6,
+     0.6,
+     0.8,
+     0.9,
+     0.84,
+     0.98,
+     0.85,
+     0.63,
+     1.0,
+     0.58,
+     0.61
+    ],
+    "huecos": [],
+    "dinamica": 0.77
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo18": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo18",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo18.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo18.mp3",
+   "md5": "005e5293eb6b15b8c51c2f85f639c9fd",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 18,
+   "escenas": [
+    "c044",
+    "c043",
+    "c042"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nfiordo",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 91.0,
+    "rms_db": -22.1,
+    "tempo": 86.1,
+    "brillo_hz": 1951,
+    "energia": [
+     0.34,
+     0.8,
+     0.7,
+     0.71,
+     0.7,
+     0.77,
+     0.58,
+     0.91,
+     0.82,
+     1.0,
+     0.37,
+     0.34
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo12": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo12",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo12.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo12.mp3",
+   "md5": "07164943e751e3256c34602b8047d6f1",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 12,
+   "escenas": [
+    "c060",
+    "c059",
+    "c058",
+    "c057",
+    "c056"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nquelthalas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 156.0,
+    "rms_db": -22.9,
+    "tempo": 112.3,
+    "brillo_hz": 1139,
+    "energia": [
+     0.46,
+     0.69,
+     0.73,
+     0.91,
+     0.85,
+     0.65,
+     0.81,
+     1.0,
+     0.24,
+     0.23,
+     0.79,
+     0.76
+    ],
+    "huecos": [],
+    "dinamica": 0.77
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo19": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo19",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo19.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo19.mp3",
+   "md5": "ee6a8d5aa7cc4d8574502118466ed61c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 19,
+   "escenas": [
+    "c041",
+    "c040",
+    "c039",
+    "c038"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ndragones",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 118.5,
+    "rms_db": -23.4,
+    "tempo": 161.5,
+    "brillo_hz": 1563,
+    "energia": [
+     0.58,
+     0.7,
+     0.93,
+     0.77,
+     0.72,
+     0.74,
+     0.83,
+     0.77,
+     1.0,
+     0.58,
+     0.68,
+     0.52
+    ],
+    "huecos": [],
+    "dinamica": 0.48
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo20": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo20",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo20.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo20.mp3",
+   "md5": "6c6fcb853d9e217e93e5178ef8683fe0",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 20,
+   "escenas": [
+    "c037",
+    "c036",
+    "c035"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ndragones",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 93.5,
+    "rms_db": -26.1,
+    "tempo": 123.0,
+    "brillo_hz": 842,
+    "energia": [
+     0.74,
+     0.68,
+     0.72,
+     0.67,
+     0.2,
+     0.27,
+     0.68,
+     0.3,
+     0.65,
+     0.8,
+     0.39,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.8
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo22": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo22",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo22.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo22.mp3",
+   "md5": "ca7c22e3a85328c56c022581d1d6ff94",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 22,
+   "escenas": [
+    "c030",
+    "c029",
+    "c028"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nzuldrak",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 91.0,
+    "rms_db": -25.3,
+    "tempo": 107.7,
+    "brillo_hz": 1119,
+    "energia": [
+     0.13,
+     0.46,
+     0.64,
+     0.97,
+     0.91,
+     0.91,
+     0.85,
+     0.93,
+     1.0,
+     0.78,
+     0.48,
+     0.25
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo2": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo2",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo2.mp3",
+   "md5": "7ffab4671072095313cc16c80b9507fe",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 2,
+   "escenas": [
+    "c097",
+    "c096",
+    "c095",
+    "c094"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nfuego",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 121.0,
+    "rms_db": -24.2,
+    "tempo": 198.8,
+    "brillo_hz": 546,
+    "energia": [
+     0.38,
+     0.87,
+     0.82,
+     0.51,
+     0.27,
+     0.09,
+     0.46,
+     0.81,
+     1.0,
+     0.32,
+     0.14,
+     0.51
+    ],
+    "huecos": [],
+    "dinamica": 0.91
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo23": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo23",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo23.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo23.mp3",
+   "md5": "a5ad4ca3d7c710a0b484a393b48db1bb",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 23,
+   "escenas": [
+    "c027",
+    "c026",
+    "c025"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nzuldrak",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 91.0,
+    "rms_db": -28.8,
+    "tempo": 136.0,
+    "brillo_hz": 1116,
+    "energia": [
+     0.13,
+     0.41,
+     0.8,
+     0.67,
+     0.88,
+     0.65,
+     0.48,
+     0.89,
+     1.0,
+     0.18,
+     0.86,
+     0.32
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo21": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo21",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo21.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo21.mp3",
+   "md5": "35eeae8f0d214833e1ba1545f4a3854e",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 21,
+   "escenas": [
+    "c034",
+    "c033",
+    "c032",
+    "c031"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\npardas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 121.0,
+    "rms_db": -23.5,
+    "tempo": 129.2,
+    "brillo_hz": 1941,
+    "energia": [
+     0.38,
+     0.51,
+     0.61,
+     0.6,
+     0.7,
+     0.72,
+     0.93,
+     1.0,
+     0.67,
+     0.76,
+     0.53,
+     0.41
+    ],
+    "huecos": [
+     [
+      1.6,
+      3.4
+     ]
+    ],
+    "dinamica": 0.62
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo24": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo24",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo24.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo24.mp3",
+   "md5": "d06232ab519719deebefdb61b312cea4",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 24,
+   "escenas": [
+    "c024",
+    "c023",
+    "c022",
+    "c021"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nsholazar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 121.0,
+    "rms_db": -26.5,
+    "tempo": 89.1,
+    "brillo_hz": 1391,
+    "energia": [
+     0.14,
+     0.31,
+     0.68,
+     0.81,
+     0.85,
+     0.69,
+     0.26,
+     0.1,
+     0.12,
+     0.51,
+     0.81,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.9
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo28": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo28",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo28.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo28.mp3",
+   "md5": "c6e717c2e65a0a8ea68adfe64403ae42",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 28,
+   "escenas": [
+    "c008"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ninvierno",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 33.5,
+    "rms_db": -25.6,
+    "tempo": 161.5,
+    "brillo_hz": 951,
+    "energia": [
+     0.29,
+     0.51,
+     0.77,
+     0.52,
+     0.74,
+     0.13,
+     0.68,
+     0.94,
+     0.46,
+     0.6,
+     1.0,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo25": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo25",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo25.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo25.mp3",
+   "md5": "b83aa92dbbf4bbf0e4879215747e439a",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 25,
+   "escenas": [
+    "c020",
+    "c019",
+    "c018",
+    "c017"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ncumbres",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 126.0,
+    "rms_db": -25.2,
+    "tempo": 112.3,
+    "brillo_hz": 1032,
+    "energia": [
+     0.33,
+     0.5,
+     0.5,
+     0.47,
+     0.77,
+     0.79,
+     1.0,
+     0.39,
+     0.19,
+     0.36,
+     0.52,
+     0.47
+    ],
+    "huecos": [],
+    "dinamica": 0.81
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo26": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo26",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo26.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo26.mp3",
+   "md5": "cc6c59953ca74d3e53ea9d653d26d752",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 26,
+   "escenas": [
+    "c016",
+    "c015",
+    "c014"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ncumbres",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 98.5,
+    "rms_db": -24.6,
+    "tempo": 107.7,
+    "brillo_hz": 991,
+    "energia": [
+     0.46,
+     0.59,
+     0.61,
+     0.69,
+     0.28,
+     0.31,
+     0.48,
+     0.73,
+     0.66,
+     0.81,
+     1.0,
+     0.89
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo3": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo3",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo3.mp3",
+   "md5": "d112d4d290ff496422fb7fdde3796997",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 3,
+   "escenas": [
+    "c093",
+    "c092",
+    "c091",
+    "c090"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nzangar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 121.0,
+    "rms_db": -24.2,
+    "tempo": 89.1,
+    "brillo_hz": 1283,
+    "energia": [
+     0.36,
+     0.83,
+     0.56,
+     0.84,
+     0.95,
+     1.0,
+     0.48,
+     0.48,
+     0.3,
+     0.1,
+     0.35,
+     0.52
+    ],
+    "huecos": [],
+    "dinamica": 0.9
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo29": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo29",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo29.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo29.mp3",
+   "md5": "40a9490c46efb9f4cff55e446cb42b3f",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 29,
+   "escenas": [
+    "c007",
+    "c006",
+    "c005",
+    "c004"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ncorona",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 123.5,
+    "rms_db": -23.4,
+    "tempo": 172.3,
+    "brillo_hz": 864,
+    "energia": [
+     0.39,
+     0.55,
+     0.64,
+     0.67,
+     0.36,
+     0.11,
+     0.41,
+     0.4,
+     0.37,
+     1.0,
+     0.86,
+     0.4
+    ],
+    "huecos": [],
+    "dinamica": 0.89
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo5": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo5",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo5.mp3",
+   "md5": "b9ba67373dd6eb8e36263cf37b8f0f54",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 5,
+   "escenas": [
+    "c085",
+    "c084",
+    "c083"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nterokkar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 93.5,
+    "rms_db": -24.3,
+    "tempo": 172.3,
+    "brillo_hz": 842,
+    "energia": [
+     0.16,
+     0.53,
+     0.47,
+     0.7,
+     1.0,
+     0.77,
+     0.67,
+     0.54,
+     0.76,
+     0.58,
+     0.66,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo7": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo7",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo7.mp3",
+   "md5": "12ee8d07d3645e45e37aa4e210df9127",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 7,
+   "escenas": [
+    "c079",
+    "c078",
+    "c077"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nnagrand",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 91.0,
+    "rms_db": -25.0,
+    "tempo": 129.2,
+    "brillo_hz": 1238,
+    "energia": [
+     1.0,
+     0.57,
+     0.73,
+     0.86,
+     0.79,
+     0.64,
+     0.34,
+     0.8,
+     0.85,
+     0.82,
+     0.72,
+     0.73
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo30": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo30",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo30.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo30.mp3",
+   "md5": "b48e257e6ed9e1c28ff0ed81d3b0b03c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 30,
+   "escenas": [
+    "c003",
+    "c002",
+    "c001",
+    "cierre"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ncorona",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 127.88,
+    "rms_db": -24.0,
+    "tempo": 152.0,
+    "brillo_hz": 1027,
+    "energia": [
+     0.3,
+     0.4,
+     0.45,
+     0.3,
+     0.46,
+     1.0,
+     0.91,
+     0.83,
+     0.28,
+     0.6,
+     0.68,
+     0.86
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo27": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo27",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo27.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo27.mp3",
+   "md5": "b32b47118f8efdc1946871226c8a90fb",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 27,
+   "escenas": [
+    "c013",
+    "c012",
+    "c011",
+    "c010",
+    "c009"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\ndalaran",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 158.5,
+    "rms_db": -21.8,
+    "tempo": 117.5,
+    "brillo_hz": 1334,
+    "energia": [
+     0.29,
+     0.47,
+     0.72,
+     1.0,
+     0.26,
+     0.33,
+     0.3,
+     0.37,
+     0.35,
+     0.32,
+     0.38,
+     0.26
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo4": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo4",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo4.mp3",
+   "md5": "58d594059f6c06797eb3f7273b87e562",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 4,
+   "escenas": [
+    "c089",
+    "c088",
+    "c087",
+    "c086"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nterokkar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 128.5,
+    "rms_db": -23.7,
+    "tempo": 80.7,
+    "brillo_hz": 763,
+    "energia": [
+     0.33,
+     0.64,
+     0.8,
+     0.69,
+     1.0,
+     0.86,
+     0.8,
+     0.79,
+     0.64,
+     0.63,
+     0.76,
+     0.31
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo6": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo6",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo6.mp3",
+   "md5": "ad66952bfd4aebb45adc825a027ed0e8",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 6,
+   "escenas": [
+    "c082",
+    "c081",
+    "c080"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nnagrand",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 91.0,
+    "rms_db": -26.9,
+    "tempo": 107.7,
+    "brillo_hz": 1241,
+    "energia": [
+     0.42,
+     0.63,
+     0.73,
+     0.7,
+     0.66,
+     0.91,
+     1.0,
+     0.5,
+     0.53,
+     0.22,
+     0.7,
+     0.97
+    ],
+    "huecos": [],
+    "dinamica": 0.78
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo8": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo8",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo8.mp3",
+   "md5": "93788110394003eca95c9a49b3bd3af8",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 8,
+   "escenas": [
+    "c076",
+    "c075",
+    "c074"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nfilospada",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 93.5,
+    "rms_db": -23.0,
+    "tempo": 143.6,
+    "brillo_hz": 378,
+    "energia": [
+     0.3,
+     0.45,
+     0.67,
+     0.82,
+     0.81,
+     0.92,
+     1.0,
+     0.56,
+     0.27,
+     0.11,
+     0.29,
+     0.5
+    ],
+    "huecos": [],
+    "dinamica": 0.89
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_100_curiosidades_tbc_wotlk__lyria_tramo9": {
+   "id": "wow_100_curiosidades_tbc_wotlk__lyria_tramo9",
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_100_curiosidades_tbc_wotlk\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_100_curiosidades_tbc_wotlk__lyria_tramo9.mp3",
+   "md5": "568dbbb8cd1c1f23f14cfbd0440b3f78",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "100 curiosidades, secretos y easter eggs de Burning Crusade y Wrath que puedes ir a ver",
+   "tramo": 9,
+   "escenas": [
+    "c073",
+    "c072",
+    "c071"
+   ],
+   "estilo": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)",
+   "prompt": "(NO SE USA: música original del juego, docs/musica_biblioteca.md § canales de videojuegos)\nfilospada",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [],
+    "genero": []
+   },
+   "medidas": {
+    "dur": 96.0,
+    "rms_db": -22.9,
+    "tempo": 136.0,
+    "brillo_hz": 532,
+    "energia": [
+     0.71,
+     1.0,
+     0.95,
+     0.52,
+     0.3,
+     0.13,
+     0.15,
+     0.48,
+     0.84,
+     0.6,
+     0.59,
+     0.85
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo11": {
+   "id": "wow_jugadores_rompieron__lyria_tramo11",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo11.mp3",
+   "md5": "152ff59368914f56c7b06e1b6518a3d2",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 11,
+   "escenas": [
+    "cierre"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nOrgrimmar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "oscuro",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 34.13,
+    "rms_db": -28.0,
+    "tempo": 69.8,
+    "brillo_hz": 583,
+    "energia": [
+     0.14,
+     0.76,
+     0.88,
+     0.71,
+     0.84,
+     0.84,
+     1.0,
+     0.85,
+     0.74,
+     0.86,
+     0.84,
+     0.91
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo3": {
+   "id": "wow_jugadores_rompieron__lyria_tramo3",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo3.mp3",
+   "md5": "44414c8e1564cdd29ad7698db88a3094",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 3,
+   "escenas": [
+    "overgear"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nForjaz",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 56.0,
+    "rms_db": -25.1,
+    "tempo": 123.0,
+    "brillo_hz": 1435,
+    "energia": [
+     0.42,
+     0.37,
+     0.41,
+     0.49,
+     0.53,
+     0.55,
+     0.62,
+     0.93,
+     0.9,
+     0.92,
+     0.97,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.63
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo10": {
+   "id": "wow_jugadores_rompieron__lyria_tramo10",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo10.mp3",
+   "md5": "3c0a8e07414e4e3f857b37fb21fc0b56",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 10,
+   "escenas": [
+    "c01"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nEntrañas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 81.0,
+    "rms_db": -21.7,
+    "tempo": 112.3,
+    "brillo_hz": 889,
+    "energia": [
+     0.54,
+     0.97,
+     1.0,
+     0.4,
+     0.61,
+     0.51,
+     0.52,
+     0.61,
+     0.63,
+     0.92,
+     0.55,
+     0.42
+    ],
+    "huecos": [],
+    "dinamica": 0.6
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo4": {
+   "id": "wow_jugadores_rompieron__lyria_tramo4",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo4.mp3",
+   "md5": "7b5fe94e232a1dbc4092778e39452942",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 4,
+   "escenas": [
+    "c07"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nCima del Trueno",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 63.5,
+    "rms_db": -21.2,
+    "tempo": 129.2,
+    "brillo_hz": 971,
+    "energia": [
+     0.59,
+     0.53,
+     0.77,
+     0.64,
+     0.88,
+     1.0,
+     0.9,
+     0.37,
+     0.4,
+     0.31,
+     0.38,
+     0.48
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo5": {
+   "id": "wow_jugadores_rompieron__lyria_tramo5",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo5.mp3",
+   "md5": "1698c6111dbb084933541d3f8de91e3a",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 5,
+   "escenas": [
+    "c06"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDarnassus",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 68.5,
+    "rms_db": -25.3,
+    "tempo": 95.7,
+    "brillo_hz": 861,
+    "energia": [
+     0.61,
+     0.83,
+     0.75,
+     0.72,
+     0.75,
+     0.94,
+     0.26,
+     0.41,
+     0.99,
+     1.0,
+     0.85,
+     0.72
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo6": {
+   "id": "wow_jugadores_rompieron__lyria_tramo6",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo6.mp3",
+   "md5": "a4b21e0b026924333fd22bbb44b8761c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 6,
+   "escenas": [
+    "c05"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nAhn'Qiraj",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 71.0,
+    "rms_db": -34.1,
+    "tempo": 161.5,
+    "brillo_hz": 1177,
+    "energia": [
+     0.34,
+     0.94,
+     0.37,
+     0.49,
+     0.45,
+     0.3,
+     0.48,
+     0.45,
+     0.29,
+     0.83,
+     1.0,
+     0.34
+    ],
+    "huecos": [],
+    "dinamica": 0.71
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo7": {
+   "id": "wow_jugadores_rompieron__lyria_tramo7",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo7.mp3",
+   "md5": "f6e879b81a7d29e85f6cde4ebe5439da",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 7,
+   "escenas": [
+    "c04"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nOrgrimmar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "oscuro",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 76.0,
+    "rms_db": -21.6,
+    "tempo": 129.2,
+    "brillo_hz": 701,
+    "energia": [
+     0.96,
+     1.0,
+     0.8,
+     0.99,
+     0.99,
+     0.81,
+     0.25,
+     0.68,
+     0.66,
+     0.61,
+     0.18,
+     0.08
+    ],
+    "huecos": [],
+    "dinamica": 0.92
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo1": {
+   "id": "wow_jugadores_rompieron__lyria_tramo1",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo1.mp3",
+   "md5": "0708988d56b57383dbad82db4f4a3ddd",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "c10"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nOrgrimmar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "oscuro",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 113.5,
+    "rms_db": -24.5,
+    "tempo": 136.0,
+    "brillo_hz": 613,
+    "energia": [
+     0.62,
+     0.64,
+     0.23,
+     0.1,
+     0.34,
+     0.38,
+     0.36,
+     0.36,
+     0.25,
+     0.15,
+     0.78,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.9
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo2": {
+   "id": "wow_jugadores_rompieron__lyria_tramo2",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo2.mp3",
+   "md5": "601f9c7a1adf75edb26dd08f7ca2abd4",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 2,
+   "escenas": [
+    "c09",
+    "c08"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nForjaz",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 131.0,
+    "rms_db": -23.5,
+    "tempo": 129.2,
+    "brillo_hz": 1152,
+    "energia": [
+     0.64,
+     0.65,
+     0.33,
+     0.8,
+     1.0,
+     0.87,
+     0.78,
+     0.51,
+     0.41,
+     0.41,
+     0.67,
+     0.79
+    ],
+    "huecos": [],
+    "dinamica": 0.67
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo8": {
+   "id": "wow_jugadores_rompieron__lyria_tramo8",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo8.mp3",
+   "md5": "7aaea8c2ed1423b76acbdbe951a319c6",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 8,
+   "escenas": [
+    "c03"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nAhn'Qiraj",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 68.5,
+    "rms_db": -33.8,
+    "tempo": 117.5,
+    "brillo_hz": 1175,
+    "energia": [
+     0.86,
+     0.8,
+     1.0,
+     0.41,
+     0.39,
+     0.54,
+     0.58,
+     0.27,
+     0.08,
+     0.11,
+     0.16,
+     0.31
+    ],
+    "huecos": [
+     [
+      49.2,
+      50.8
+     ]
+    ],
+    "dinamica": 0.92
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
+  },
+  "wow_jugadores_rompieron__lyria_tramo9": {
+   "id": "wow_jugadores_rompieron__lyria_tramo9",
+   "video": "wow_jugadores_rompieron",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_jugadores_rompieron\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_jugadores_rompieron__lyria_tramo9.mp3",
+   "md5": "1ab5796ade05449e65c35d9eff66d59a",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever)",
+   "tramo": 9,
+   "escenas": [
+    "c02"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nForjaz",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 68.5,
+    "rms_db": -21.7,
+    "tempo": 123.0,
+    "brillo_hz": 1179,
+    "energia": [
+     0.62,
+     0.39,
+     0.63,
+     0.67,
+     0.82,
+     0.87,
+     0.7,
+     0.96,
+     1.0,
+     0.62,
+     0.24,
+     0.62
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-27"
   }
  },
- "actualizado": "2026-10-23 20:48"
+ "actualizado": "2026-10-27 17:07"
 }

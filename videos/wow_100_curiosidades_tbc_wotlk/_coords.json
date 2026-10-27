@@ -1,0 +1,631 @@
+{
+ "Warsong Hold": {
+  "coords": [
+   [
+    42.0,
+    53.0,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": "[[Borean Tundra]]{{coords|42|53|Borean Tundra}}, [[Northrend]]"
+ },
+ "Garrosh Hellscream": {
+  "coords": [],
+  "loc": "Remains in the [[Sanctum of Domination]] (lore),<ref name=\"SDC\">[[Soulrender Dormazain#Cinematic]]</ref><br/> [[#Locations|Various]]"
+ },
+ "Varok Saurfang": {
+  "coords": [],
+  "loc": "[[#Locations|Various]]"
+ },
+ "Archdruid Lathorius": {
+  "coords": [],
+  "loc": "[[D.E.H.T.A. Encampment]], [[Borean Tundra]]"
+ },
+ "D.E.H.T.A. Encampment": {
+  "coords": [
+   [
+    57.0,
+    44.0,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": "[[Borean Tundra]]{{coords|57|44|Borean Tundra}}"
+ },
+ "Fizzcrank Airstrip": {
+  "coords": [
+   [
+    57.0,
+    18.0,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": "Northern [[Borean Tundra]]{{coords|57|18|Borean Tundra}}"
+ },
+ "Gearmaster Mechazod": {
+  "coords": [],
+  "loc": "[[Fizzcrank Pumping Station]], [[Borean Tundra]]"
+ },
+ "Keristrasza": {
+  "coords": [],
+  "loc": "[[#Locations|Various]]"
+ },
+ "The Nexus": {
+  "coords": [],
+  "loc": "[[Coldarra]], [[Borean Tundra]]"
+ },
+ "Transitus Shield": {
+  "coords": [
+   [
+    33.0,
+    35.0,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": "[[Borean Tundra]]{{coords|33|35|Borean Tundra}}"
+ },
+ "Amber Ledge": {
+  "coords": [
+   [
+    45.0,
+    33.0,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": "Western [[Borean Tundra]]{{coords|45|33|Borean Tundra}}"
+ },
+ "Taunka'le Village": {
+  "coords": [
+   [
+    77.0,
+    35.0,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": "Southeast of the [[Geyser Fields]], [[Borean Tundra]]{{coords|77|35|Borean Tundra}}"
+ },
+ "Nifflevar": {
+  "coords": [
+   [
+    67.0,
+    53.0,
+    "Howling Fjord"
+   ]
+  ],
+  "loc": "Southeastern [[Howling Fjord]]{{coords|67|53|Howling Fjord}}"
+ },
+ "Utgarde Keep": {
+  "coords": [],
+  "loc": "Central [[Howling Fjord]]"
+ },
+ "Ingvar the Plunderer": {
+  "coords": [],
+  "loc": "[[Utgarde Keep]]"
+ },
+ "New Agamand": {
+  "coords": [],
+  "loc": "Southern [[Howling Fjord]] "
+ },
+ "Wyrmrest Temple": {
+  "coords": [],
+  "loc": ""
+ },
+ "Galakrond's Rest": {
+  "coords": [],
+  "loc": ""
+ },
+ "Naxxramas": {
+  "coords": [
+   [
+    87.0,
+    51.0,
+    "Dragonblight"
+   ]
+  ],
+  "loc": "[[Carrion Fields|The Carrion Fields]], [[Dragonblight]] {{co|87|51|Dragonblight}}"
+ },
+ "Wintergarde Keep": {
+  "coords": [
+   [
+    78.0,
+    46.0,
+    "Dragonblight"
+   ]
+  ],
+  "loc": "Eastern [[Dragonblight]]{{coords|78|46|Dragonblight}}"
+ },
+ "Angrathar the Wrathgate": {
+  "coords": [],
+  "loc": ""
+ },
+ "Wrathgate": {
+  "coords": [],
+  "loc": ""
+ },
+ "Orik Trueheart": {
+  "coords": [
+   [
+    87.2,
+    57.4,
+    "Dragonblight"
+   ]
+  ],
+  "loc": "[[#Locations|Various]]"
+ },
+ "Forgotten Shore": {
+  "coords": [],
+  "loc": ""
+ },
+ "Frostmourne Cavern": {
+  "coords": [
+   [
+    73.0,
+    23.0,
+    "Dragonblight"
+   ]
+  ],
+  "loc": ""
+ },
+ "New Hearthglen": {
+  "coords": [
+   [
+    71.0,
+    75.0,
+    "Dragonblight"
+   ]
+  ],
+  "loc": "[[Dragonblight]], [[Northrend]]{{coords|71|75|Dragonblight}}"
+ },
+ "Grand General Abbendis": {
+  "coords": [],
+  "loc": ""
+ },
+ "Obsidian Dragonshrine": {
+  "coords": [
+   [
+    38.0,
+    31.0,
+    "Dragonblight"
+   ]
+  ],
+  "loc": ""
+ },
+ "Azure Dragonshrine": {
+  "coords": [],
+  "loc": ""
+ },
+ "Ruby Dragonshrine": {
+  "coords": [],
+  "loc": ""
+ },
+ "Emerald Dragonshrine": {
+  "coords": [],
+  "loc": ""
+ },
+ "Bronze Dragonshrine": {
+  "coords": [],
+  "loc": ""
+ },
+ "Grizzlemaw": {
+  "coords": [
+   [
+    51.3,
+    42.5,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": "Central [[Grizzly Hills]]{{coords|51.3|42.5|Grizzly Hills}}"
+ },
+ "Vordrassil": {
+  "coords": [],
+  "loc": ""
+ },
+ "Ursoc": {
+  "coords": [],
+  "loc": "[[#Locations|Various]]"
+ },
+ "Westfall Brigade Encampment": {
+  "coords": [
+   [
+    59.0,
+    27.0,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": "Eastern [[Grizzly Hills]], [[Northrend]]{{coords|59|27|Grizzly Hills}}"
+ },
+ "Gryan Stoutmantle": {
+  "coords": [],
+  "loc": "[[Sentinel Hill]] (lore);<ref name=\"Exploring Azeroth\">''[[World of Warcraft: Exploring Azeroth: The Eastern Kingdoms]]'', pg. 23</ref><br/>"
+ },
+ "Silverbrook": {
+  "coords": [
+   [
+    26.3,
+    37.6,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": "[[Silverbrook Hills]], [[Grizzly Hills]]{{coords|26.3|37.6|Grizzly Hills}}"
+ },
+ "Bloodmoon Isle": {
+  "coords": [
+   [
+    82.6,
+    30.0,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": ""
+ },
+ "Shade of Arugal": {
+  "coords": [],
+  "loc": "[[Shadowfang Tower]] on [[Bloodmoon Isle]], [[Grizzly Hills]]"
+ },
+ "Drakil'jin Ruins": {
+  "coords": [
+   [
+    72.6,
+    24.6,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": ""
+ },
+ "Drak'Tharon Keep": {
+  "coords": [],
+  "loc": "Northwestern [[Grizzly Hills]], on the border with [[Zul'Drak]]"
+ },
+ "Har'koa": {
+  "coords": [],
+  "loc": "[[Altar of Har'koa]], then [[Zim'Torga]], [[Zul'Drak]]"
+ },
+ "Altar of Har'koa": {
+  "coords": [
+   [
+    63.6,
+    70.0,
+    "Zul'Drak"
+   ]
+  ],
+  "loc": ""
+ },
+ "Altar of Rhunok": {
+  "coords": [
+   [
+    53.4,
+    36.8,
+    "Zul'Drak"
+   ]
+  ],
+  "loc": ""
+ },
+ "Altar of Quetz'lun": {
+  "coords": [],
+  "loc": ""
+ },
+ "Altar of Sseratus": {
+  "coords": [
+   [
+    40.3,
+    39.8,
+    "Zul'Drak"
+   ]
+  ],
+  "loc": ""
+ },
+ "Altar of Akali": {
+  "coords": [],
+  "loc": ""
+ },
+ "Altar of Mam'toth": {
+  "coords": [
+   [
+    74.7,
+    43.0,
+    "Zul'Drak"
+   ]
+  ],
+  "loc": ""
+ },
+ "Gymer": {
+  "coords": [],
+  "loc": "[[#Locations|Various]]"
+ },
+ "Drakuru": {
+  "coords": [],
+  "loc": "[[Granite Springs]], [[Grizzly Hills]]; [[Drak'Tharon Keep]]; [[Voltarus]], [[Zul'Drak]]"
+ },
+ "Voltarus": {
+  "coords": [],
+  "loc": ""
+ },
+ "Amphitheater of Anguish": {
+  "coords": [
+   [
+    47.3,
+    57.1,
+    "Zul'Drak"
+   ]
+  ],
+  "loc": ""
+ },
+ "Avatar of Freya": {
+  "coords": [
+   [
+    65.0,
+    49.0,
+    "Sholazar Basin"
+   ]
+  ],
+  "loc": "[[Rainspeaker Rapids]],{{coords|65|49|Sholazar Basin}} [[Sholazar Basin]]"
+ },
+ "The Avalanche": {
+  "coords": [],
+  "loc": ""
+ },
+ "Makers' Overlook": {
+  "coords": [],
+  "loc": ""
+ },
+ "Makers' Perch": {
+  "coords": [
+   [
+    28.0,
+    39.0,
+    "Sholazar Basin"
+   ]
+  ],
+  "loc": ""
+ },
+ "Nesingwary Base Camp": {
+  "coords": [],
+  "loc": "[[Sholazar Basin]], [[Northrend]]"
+ },
+ "Loque'nahak": {
+  "coords": [],
+  "loc": "[[Sholazar Basin]]"
+ },
+ "Rainspeaker Canopy": {
+  "coords": [
+   [
+    53.6,
+    56.6,
+    "Sholazar Basin"
+   ]
+  ],
+  "loc": "[[Sholazar Basin]]{{coords|53.6|56.6|Sholazar Basin}}"
+ },
+ "Frenzyheart Hill": {
+  "coords": [],
+  "loc": "[[Sholazar Basin]]"
+ },
+ "K3": {
+  "coords": [
+   [
+    40.6,
+    85.6,
+    "Storm Peaks"
+   ]
+  ],
+  "loc": "Southern [[Storm Peaks]]{{coords|40.6|85.6|Storm Peaks}}"
+ },
+ "Brunnhildar Village": {
+  "coords": [
+   [
+    48.2,
+    69.2,
+    "Storm Peaks"
+   ]
+  ],
+  "loc": "[[Storm Peaks]]{{coords|48.2|69.2|Storm Peaks}}"
+ },
+ "Temple of Storms": {
+  "coords": [],
+  "loc": ""
+ },
+ "Thorim": {
+  "coords": [],
+  "loc": "[[#Locations|Various]]"
+ },
+ "Frosthold": {
+  "coords": [
+   [
+    29.0,
+    73.0,
+    "Storm Peaks"
+   ]
+  ],
+  "loc": "[[Storm Peaks]], {{coords|29|73|Storm Peaks}}"
+ },
+ "Ulduar": {
+  "coords": [
+   [
+    42.2,
+    24.8,
+    "Storm Peaks"
+   ]
+  ],
+  "loc": "Northern [[Storm Peaks]]{{coords|42.2|24.8|Storm Peaks}}"
+ },
+ "Time-Lost Proto-Drake": {
+  "coords": [
+   [
+    31.0,
+    69.0,
+    "Storm Peaks"
+   ],
+   [
+    51.0,
+    70.0,
+    "Storm Peaks"
+   ],
+   [
+    35.0,
+    76.0,
+    "Storm Peaks"
+   ],
+   [
+    52.0,
+    34.0,
+    "Storm Peaks"
+   ]
+  ],
+  "loc": "[[Storm Peaks]]"
+ },
+ "Dalaran": {
+  "coords": [],
+  "loc": "{{legion-inline}} [[Broken Isles]]<br/> {{wotlk-inline}} [[Crystalsong Forest]]"
+ },
+ "Windrunner's Overlook": {
+  "coords": [
+   [
+    74.0,
+    79.0,
+    "Crystalsong Forest"
+   ]
+  ],
+  "loc": "[[Crystalsong Forest]]{{coords|74|79|Crystalsong Forest}}"
+ },
+ "Sunreaver's Command": {
+  "coords": [
+   [
+    78.0,
+    49.0,
+    "Crystalsong Forest"
+   ]
+  ],
+  "loc": "[[Crystalsong Forest]]{{coords|78|49|Crystalsong Forest}}"
+ },
+ "Wintergrasp Fortress": {
+  "coords": [
+   [
+    50.5,
+    20.5,
+    "Wintergrasp"
+   ]
+  ],
+  "loc": "Northern [[Wintergrasp]]{{coords|50.5|20.5|Wintergrasp}} "
+ },
+ "Vault of Archavon": {
+  "coords": [],
+  "loc": "[[Wintergrasp Fortress]], [[Wintergrasp]]"
+ },
+ "Argent Tournament Grounds": {
+  "coords": [],
+  "loc": "Northeastern [[Icecrown]]"
+ },
+ "Sindragosa's Fall": {
+  "coords": [],
+  "loc": ""
+ },
+ "Onslaught Harbor": {
+  "coords": [
+   [
+    9.0,
+    41.0,
+    "Icecrown"
+   ]
+  ],
+  "loc": "[[Icecrown]], [[Northrend]]{{coords|9|41|Icecrown}}"
+ },
+ "High General Abbendis": {
+  "coords": [],
+  "loc": ""
+ },
+ "Orgrim's Hammer": {
+  "coords": [],
+  "loc": ""
+ },
+ "The Skybreaker": {
+  "coords": [],
+  "loc": ""
+ },
+ "Crusaders' Pinnacle": {
+  "coords": [
+   [
+    79.7,
+    72.3,
+    "Icecrown"
+   ]
+  ],
+  "loc": "[[Icecrown]]{{coords|79.7|72.3|Icecrown}}"
+ },
+ "Icecrown Citadel": {
+  "coords": [],
+  "loc": "[[Icecrown]], [[Northrend]]"
+ },
+ "Crusader Bridenbrad": {
+  "coords": [
+   [
+    79.0,
+    30.0,
+    "Icecrown"
+   ]
+  ],
+  "loc": "[[Icecrown]]{{Coords|79|30|Icecrown}}"
+ },
+ "The Silent Vigil": {
+  "coords": [],
+  "loc": ""
+ },
+ "Angrathar the Wrath Gate": {
+  "coords": [],
+  "loc": ""
+ },
+ "Fizzcrank Pumping Station": {
+  "coords": [
+   [
+    65.0,
+    23.5,
+    "Borean Tundra"
+   ]
+  ],
+  "loc": ""
+ },
+ "Coldarra": {
+  "coords": [],
+  "loc": "West of the [[Borean Tundra]]"
+ },
+ "Vordrassil's Heart": {
+  "coords": [
+   [
+    38.5,
+    52.5,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": ""
+ },
+ "Ursoc's Den": {
+  "coords": [
+   [
+    52.1,
+    23.4,
+    "Grizzly Hills"
+   ]
+  ],
+  "loc": ""
+ },
+ "Dalaran (Northrend)": {
+  "coords": [],
+  "loc": "{{legion-inline}} [[Broken Isles]]<br/> {{wotlk-inline}} [[Crystalsong Forest]]"
+ },
+ "Krasus' Landing": {
+  "coords": [],
+  "loc": ""
+ },
+ "Light's Breach": {
+  "coords": [
+   [
+    31.9,
+    75.1,
+    "Zul'Drak"
+   ]
+  ],
+  "loc": "[[Zul'Drak]], [[Northrend]]{{coords|31.9|75.1|Zul'Drak}}"
+ },
+ "Galakrond": {
+  "coords": [],
+  "loc": "Remains in the [[Dragonblight]]"
+ }
+}

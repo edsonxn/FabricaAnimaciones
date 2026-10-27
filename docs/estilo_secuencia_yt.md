@@ -261,6 +261,13 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
     en `video_sin_audio.mp4` (trim start_frame/end_frame + concat, 30 fps) y repetir `final`. NO empalmar sobre el MASTER: el concat
     pierde la pantalla final. Si `final` truena con PermissionError, el panel tiene abierto el MASTER: renombrar el `.tmp.mp4` y repetir.
   - Rigor del MASTER con `_rigor.py` (un `-ss` por cuadro cada 6 s, hojas 8×6 con la hora + blackdetect/freezedetect): cazó 10 clips más.
+  - **Render cortado a mitad (27-oct-2026, `wow_100_curiosidades_tbc_wotlk`, E: USB desconectado al 56 %)**: el `video_sin_audio.mp4`
+    a medias SÍ se lee (ffmpeg cierra el archivo al morir el pipe). No empezar de cero: (1) keyframe cercano al final del parcial
+    (`ffprobe -skip_frame nokey -show_entries frame=pts_time -read_intervals 1650%1723`), (2) `video --tramo <kf+0,001>-<total>`,
+    (3) parcial recortado POR CUADROS (`-map 0:v -frames:v <kf×30> -c copy`; con `-t` salen 2 cuadros de más por los B-frames y la
+    imagen se desfasa del audio) + concat demuxer `-c copy`, (4) comprobar nb_read_packets = round(total×30) y PSNR de la unión
+    contra el parcial (inf antes del corte, ~50 dB después), (5) `final`. Y antes de un render largo, `medios/` en C: (un clip ilegible
+    en E: lo tumba; leyendo de C: el render fue ~3× más rápido: 23 min en 19 min).
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los

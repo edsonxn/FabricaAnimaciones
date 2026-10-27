@@ -141,6 +141,10 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
    en el propio prompt en vez de sobreponerlo por código (deletrea la palabra con tilde: «spelled exactly E-X-I-S-T-I-Ó with an acute
    accent on the final O»). Claude la genera él mismo en Flow desde el navegador integrado (chip por defecto Imagen · 16:9 · 2.1 · x2,
    0 puntos). Receta y prompt probado: `docs/estilo_terror_crt.md` § «Miniatura» (`videos/sonic_exe/prompt_miniatura.md`).
+   **Ingredientes en el navegador integrado (27-oct-2026):** bloquea `http://127.0.0.1` (ERR_BLOCKED_BY_CLIENT: no sirve un servidor
+   local de imágenes), pero `i.ytimg.com/vi/<id>/maxresdefault.jpg` y upload.wikimedia.org tienen CORS abierto: `fetch` → `File` →
+   `ClipboardEvent('paste')` en `.ProseMirror`. La miniatura oficial de un tráiler del juego es un ingrediente real de primera
+   (`videos/wow_100_curiosidades_tbc_wotlk/prompt_miniatura.md`, 2/2 bien).
 8c. **Publicación (flujo acordado con el usuario):** Claude sube el video con `python fab.py yt subir <video> <canal> private` (sube video, aplica `youtube.json`, miniatura `miniatura` y subtítulos .srt), anota el
    id en `canales/<canal>.json` (`publicados`) y en BITACORA.md. **Desde el 20-oct-2026 se sube YA PROGRAMADO en el hueco del canal
    (`private --publicar <ISO UTC>`) sin preguntar** (regla «render terminado = subir y programar» arriba); a uno ya subido sin fecha:

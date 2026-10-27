@@ -99,6 +99,22 @@ def main():
     open("audio/creditos_musica.txt", "w", encoding="utf-8").write("\n".join(l) + "\n")
 
 
+def aparta(db=-14.0):
+    """SONIDO ORIGINAL (26-oct-2026): tras `fab.py <v> musica`, la OST baja `db` en los beats con ambiente_por (rampas de 0,5 s)
+    para que se oiga el juego; misma receta que oot_remake_cambios/armar_musica_ost.py."""
+    x, sr = sf.read("audio/musica.wav", always_2d=True)
+    vols = guion.SECUENCIA.get("ambiente_por", {})
+    gan, r, g = np.ones(len(x)), int(.5 * sr), 10 ** (db / 20)
+    for b in json.load(open("beats.json", encoding="utf-8")):
+        if vols.get(b["id"], 0) > 0:
+            i0, i1 = int(b["t0"] * sr), min(len(x), int(b["t1"] * sr))
+            gan[i0:i1] = np.minimum(gan[i0:i1], g)
+            gan[max(0, i0 - r):i0] = np.minimum(gan[max(0, i0 - r):i0], np.linspace(1, g, i0 - max(0, i0 - r)))
+            gan[i1:i1 + r] = np.minimum(gan[i1:i1 + r], np.linspace(g, 1, len(gan[i1:i1 + r])))
+    sf.write("audio/musica.wav", (x * gan[:, None]).astype(np.float32), sr, subtype="FLOAT")
+    print(f"OST apartada {db} dB en {sum(1 for v in vols.values() if v > 0)} beats con sonido original")
+
+
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
-    main()
+    aparta() if sys.argv[1:] == ["aparta"] else main()

@@ -6,7 +6,7 @@ _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 Siempre que un video use ElevenLabs, el guion lleva **etiquetas entre corchetes** que le dan ánimo y sentimiento a la voz según lo que
 se narra. Ejemplo que mandó el usuario: `[thoughtful] Anselmo llevaba quince años abriendo la puerta… [short pause] Nadie sabía su
 apellido. [sighs] Para los vecinos…`. Primer video hecho así: `videos/videollamada_falsa/` (LogIA).
-- **Cómo:** en `guion.py`, `VOZ = dict(motor="elevenlabs", voice_id=…, modelo="eleven_v4", idioma="es", referencia=…, tomas=1, stability=0.5)`
+- **Cómo:** en `guion.py`, `VOZ = dict(motor="elevenlabs", voice_id=…, modelo="eleven_v4_turbo", idioma="es", referencia=…, tomas=1, stability=0.5)`
   y las etiquetas dentro de las frases: `"[sighs] Esa regla murió una tarde de enero. [short pause] En Hong Kong."`.
 - **Escritura NORMAL (12-oct-2026):** con ElevenLabs no se aplican reglas fonéticas (son de Chatterbox): números en cifras («11 de julio»), nombres bien escritos («Alice»). «Once de la noche» se leyó en inglés («uans»); «11» sale bien.
 - **Etiquetas en inglés**, al inicio de la frase (tono) o en medio (pausa/gesto). Probadas: `[thoughtful]`, `[serious]`, `[curious]`,
@@ -18,7 +18,13 @@ apellido. [sighs] Para los vecinos…`. Primer video hecho así: `videos/videoll
   esa frase (`voz/textos.json` guarda el texto con corchetes). Con etiquetas, `tts_select` tolera silencios internos de hasta 2,5 s.
 - **Modelos y costo real** (medido el 7-oct-2026 con la misma frase de 118 caracteres; `videos/videollamada_falsa/_modelos.py` lista
   los de la cuenta y `_prueba_voz.py <modelo>` compara): `eleven_v4` 13 créditos (≈ 0,11/carácter) · `eleven_v4_turbo` 6 ·
-  `eleven_v3_conversational` 24 · `eleven_v3` 47 (≈ 0,40, igual que multilingual v2). **Por defecto `eleven_v4`**: un video de
+  `eleven_v3_conversational` 24 · `eleven_v3` 47 (≈ 0,40, igual que multilingual v2). **POR DEFECTO `eleven_v4_turbo` desde el
+  26-oct-2026 (el usuario, al oír a Hope: «suena perfecto… el default debe ser turbo»)**: entiende los corchetes igual (Whisper no
+  oyó ninguna etiqueta leída) y cobra **0,20 créditos/carácter frente a 0,40 de `eleven_v4`** (medido con `character-cost`;
+  muestras en `videos/oot_remake_cambios/muestras/`). `tts_eleven.modelo()` pasa a turbo todo guion NUEVO que diga `eleven_v4`
+  (copiado de un video viejo); un video con tomas ya hechas en v4 sigue en v4 (no cambia la voz a media obra); `VOZ["modelo_fijo"]
+  = True` lo fuerza. `voz/eleven_log.json` anota `modelo` en cada toma. Guion de 15 min ≈ 13 800 caracteres ≈ 2 800 créditos.
+  Antes (hasta el 26-oct) el defecto era `eleven_v4`: un video de
   6:30 (53 frases) costó ~600 créditos. **OJO: desde el 13-oct-2026 `eleven_v4` cobra ≈ 0,40 créditos/carácter** (medido en
   `sonic_exe`, `duo_promo` y `wow_tres_noches` con `voz/eleven_log.json`): un guion de 8:50 (7 100 caracteres) costó ~2 850. `eleven_multilingual_v2` y los flash/turbo v2 NO entienden corchetes (no los uses con etiquetas).
 - Las voces de la biblioteca pública de ElevenLabs se usan por API con su `voice_id` sin añadirlas a la cuenta (Lily en `wow_tres_noches`).
@@ -81,7 +87,7 @@ Antes de generar voz, revisa esta lista. Cada punto costó una ronda completa (~
      tras leer en `voz/eval.json` que la transcripción está completa y termina bien.
 4. **Si una frase falla 4 tomas seguidas, no insistas con más semillas: reescríbela** (o quita el nombre propio). `todo` ya reintenta 2 rondas de 4 semillas.
 5. **GPU compartida = voz 40x más lenta.** Chatterbox va a ~30 it/s; con la GPU llena (VRAM > 7,5 GB de 8) baja a ~1 it/s y una toma tarda 15 min. Los culpables vistos:
-   el locutor del panel (`avisos_voz`, Chatterbox con voz Faraon, ~3 GB; se carga con cada aviso y se descarga a los 5 min) y otros programas del usuario.
+   el locutor del panel y `fab.py avisar` (hasta el 26-oct eran Chatterbox, ~3 GB; **desde el 27-oct-2026 los avisos van por ElevenLabs y no tocan la GPU**) y otros programas del usuario.
    Antes de `voz`/`seleccionar` mira `nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv`: si hay > 4 GB usados sin que corra nada tuyo, espera a que baje
    (no mates el panel: ver memoria "panel-nunca-detener"). Regla: NO lances `voz` y `seleccionar` (Whisper) a la vez, ni depth/rembg mientras genera voz.
 6. Los avisos por voz del panel se disparan al terminar cada etapa: lanzar muchas etapas seguidas mantiene el locutor cargado y frena la voz. Encadena las etapas en un script.

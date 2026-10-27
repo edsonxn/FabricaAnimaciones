@@ -6,9 +6,13 @@ _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 `python fab.py panel [--puerto 8765] [--abrir] [--lienzo]` → http://127.0.0.1:8765 (clásico) · http://127.0.0.1:8765/v2 (lienzo, ver abajo). Muestra en vivo las 14 etapas de cada
 proyecto de `videos/` (los nuevos aparecen solos; deduce el estado de los archivos y de los procesos en marcha),
 disco libre, GPU y logs. **Avisos por voz**: un vigilante detecta etapas terminadas, hitos del render (25/50/75 %),
-etapas que piden atención o se detienen, y un locutor los dice con Chatterbox (`nucleo/avisos.py` + `avisos_voz.py`,
-voz Faraon, por las bocinas de la PC; el modelo se carga al primer aviso y se descarga tras 5 min; respaldo: voz de
-Windows). Se controla desde el panel (activar/silencio, destino, probar) y `panel_config.json`. Lee archivos y procesos; lo único que lanza es la **vista previa**. Código en `nucleo/panel.py` + `nucleo/panel.html`.
+etapas que piden atención o se detienen, y un locutor los dice por las bocinas de la PC con **ElevenLabs** (desde el
+27-oct-2026, el usuario: «para no gastar CPU ni GPU siempre ElevenLabs»; `nucleo/avisos.py` → `avisar.eleven`, voz
+Alberto Rodríguez, caché por texto; respaldo: voz de Windows). Chatterbox (`avisos_voz.py`, Faraon) solo con
+`"motor": "chatterbox"` en `panel_config.json`. Se controla desde el panel (activar/silencio, destino, probar) y `panel_config.json`. Lee archivos y procesos; lo único que lanza es la **vista previa**. Código en `nucleo/panel.py` + `nucleo/panel.html`.
+**Render parcial (12-oct-2026)**: `python fab.py <v> video --hasta <s>` (`nucleo/render_parcial.py`) dibuja solo el principio; con `segmentos/parcial.json` el bloque «Render en vivo» mide el avance solo sobre ese tramo (requiere reiniciar el panel tras el cambio de `panel.py`). Protocolo y regla de preguntar al usuario: `docs/sesiones.md` § 2b.
+
+**Bitácora de uso y rediseño (12-oct-2026)**: el panel registra cómo lo usas (clics y clics muertos, filtros, buscador, scroll, pestañas, atención real, inventario de controles; nunca letras tecleadas) con `nucleo/panel_uso.js` (servido en `/uso.js`, incluye el iframe «Canales») → `POST /api/uso` → `nucleo/datos/uso_panel/AAAA-MM-DD.jsonl` (privado, fuera de git; lógica en `nucleo/uso_panel.py`). `python nucleo/uso_panel.py estado | resumen [--dias 14] [--ui v2] [--json] | borrar --antes AAAA-MM-DD`. Cada evento lleva la versión de la interfaz (`<meta name="ui-version">` de `panel.html`). **Cada cierto tiempo di «analiza mi uso del panel»**: el skill `analizar-uso-panel` lee la bitácora, diagnostica y escribe una propuesta en `nucleo/propuestas_panel/panel_vN.html` (se prueba en `http://127.0.0.1:8765/propuesta/panel_vN.html`, con datos reales y su uso registrado como `vN`); si la adoptas, sustituye `panel.html` y se anota en `docs/panel_ui_versiones.md`. Requiere reiniciar el panel una vez (cambió `panel.py`).
 **Render en vivo (4-oct-2026)**: mientras corre el render de un video, su tarjeta muestra un bloque «Render en vivo»: barra real (segmentos
 terminados + los que se dibujan, rayados), video listo/total, transcurrido, ritmo («1 s de video cada 3,7 s»), segundos por segmento y procesos a la vez,
 y **una fila por escena** con un cuadrito por segmento de 3 s (verde = listo, tenue = ya existía, parpadea = dibujándose, gris = pendiente), su estado y
@@ -148,15 +152,48 @@ muro; lo que está en curso va primero). Código: `nucleo/panel_v2.py` (backend)
   `/v2/archivo/<v>/<ruta>` (con Range; solo extensiones de medios/texto y dentro del video, también a través de junctions),
   `/v2/mini/<v>/<ruta>?w=` (miniaturas en `previews/_v2/`, máx. 3 a la vez para no estorbar a un render), `/v2/oir/<v>/<ruta>`,
   `POST /api/v2/revelar`. Solo lee, salvo esas cachés y el Explorador.
+- **Videos cuya CARPETA ENTERA es un junction** (los 28 movidos a `E:\FabricaAnimaciones\videos_desde_C` el 24-oct): hasta el
+  26-oct-2026 `_car_video` exigía que la ruta real colgara de `videos/`, así que el ▶ Video, el Montaje y los recursos del lienzo
+  daban 404 (el reproductor se quedaba en 0:00, `wow_pistas_futuro`). Ahora se valida el NOMBRE (una carpeta, sin `/ \ :`) y se
+  sigue el enlace: `panel_v2._car` (vale sin reiniciar, el módulo se recarga solo) y `panel._car_video` (vale al reiniciar el panel).
 - Registra el uso como `v2-lienzo` en la bitácora (`/uso.js`). Cambios en `panel.py` (rutas `/v2`, `--lienzo`, Estilos robusto, cola de 128):
   el panel en marcha los toma **cuando el usuario lo reinicie** (nunca lo reinicia Claude).
 
+## Panel remoto: el lienzo en el celular fuera de casa (21-oct-2026, pedido del usuario)
+`python fab.py panel --remoto` → levanta (si no corren) una **puerta con clave** (`nucleo/panel_remoto.py`, 127.0.0.1:8770) y un
+**túnel ngrok**, e imprime el enlace `https://<algo>.ngrok-free.app/entrar?k=<clave>`: se abre una vez en el celular (cookie de
+30 días) y luego basta `<url>/v2`. `--tunel cloudflared` (sin cuenta ni límites; URL nueva cada vez) · `--nueva-clave` · `estado` · `parar`.
+- **El panel no se toca ni se reinicia**: la puerta reenvía a 127.0.0.1:8765, o a 8766 si el de 8765 es anterior al lienzo (el
+  21-oct el de 8765 seguía sin `/v2`; el de 8766, `--sin-voz`, sí lo tiene). Se revisa cada minuto.
+- Puerta y túnel se lanzan desacoplados (siguen vivos al cerrar la terminal); clave y PIDs en `panel_remoto.json` (raíz, fuera de
+  git), registros `panel_remoto.log` / `panel_remoto_tunel.log`. Sin cookie todo da 401 (página «Entrar»); 8 claves malas = 10 min fuera.
+- La puerta **comprime** JSON/HTML/JS y lleva la Vista previa del clásico a su trabajador por `/_pv/<puerto>/…` (solo puertos que
+  el panel anunció en `/api/preview`; `panel.html` usa esa ruta cuando no está en 127.0.0.1). `/` lleva al lienzo; el clásico,
+  `/?clasico`.
+- **Peso**: `/api/v2/estado` ya no manda `secuencia.beats` (era el 72 % de ~800 KB) y con `?si=<huella>` sin cambios devuelve
+  solo avisos/voz/sistema (~300 B). Por el túnel el lienzo pregunta cada 8 s (no 3/2) y nada con la pestaña de fondo.
+- **Lienzo en el celular** (`panel_v2.html`, clases `html.remoto` / `html.tactil`): un dedo mueve, pellizco acerca, **doble toque**
+  abre un tablero (el toque sencillo espera 340 ms por si es doble); el detalle sube como **hoja desde abajo**; la lista ☰ con velo
+  (tocar un video la cierra); botones de 36-40 px; sin «📂 carpeta» por el túnel (abriría el Explorador en casa); horizontal = una
+  sola fila arriba. Probado con Chrome emulando iPhone por la URL pública: lienzo, lista, hoja, tablero, Montaje, Canales, Procesos.
+- **Dirección fija en el dominio** (21-oct, el usuario ofreció su dominio): `--dominio clicknbusiness.com.mx/fabrica` (queda en la
+  config). El hosting (HostGator compartido, solo FTP) no puede correr el panel, así que `fabrica/` es solo una página que reenvía
+  al túnel de hoy; se resube sola cuando cambia la URL de ngrok (con el módulo FTP de `C:\CNB`, cuyas credenciales nunca se leen
+  aquí; solo toca esa carpeta, marcada con `fab_puerta.txt`; `noindex` + `no-store`). La clave no va al servidor: el primer
+  enlace `…/fabrica/#k=<clave>` la deja en el `localStorage` de ESE celular y de ahí en adelante `clicknbusiness.com.mx/fabrica`
+  entra solo (`#olvidar` la borra). Un subdominio con el panel «de verdad» exigiría DNS en Cloudflare o ngrok de pago.
+- **ngrok gratis**: aviso «You are about to visit…» la primera vez (tocar *Visit Site*), URL nueva si ngrok se reinicia (volver a
+  correr el comando) y cupo mensual de datos y peticiones; si se agota, `--tunel cloudflared`.
+
 ## Pestaña «Canales» (8-oct-2026)
 El panel de estadísticas (`nucleo/estadisticas.py` + plantilla `nucleo/estadisticas.html`) vive dentro del panel como tercera pestaña: un `<iframe>` a `/canales`, que arma la misma plantilla con los datos de `canales/metricas/panel/<alias>.json` y los proyectos en producción. `python fab.py estadisticas` sigue generando la copia suelta (`canales/metricas/panel_canales.html`), sin botones que escriban.
-- **¿Qué canal se queda sin video?** (arriba): una fila por canal con sus videos programados sobre una línea de tiempo (14/30/60 días) y la fecha del primer hueco del ciclo sin video = último programado (o último público) + ciclo. Urgente ≤ 3 días, pronto ≤ 7. Filtros por urgencia y por canal (las fichas de arriba), orden, y clic en la fila para el detalle: programados, último publicado, siguientes huecos libres, privados sin fecha y proyectos en producción. Cálculo: `estadisticas.calendario()`; en consola, `python fab.py canales`.
+- **¿Qué canal se queda sin video?** (arriba): una fila por canal con sus videos programados sobre una línea de tiempo (14/30/60 días) y la fecha del primer hueco del ciclo sin video = último programado (o último público) + ciclo. Urgente ≤ 3 días, pronto ≤ 7. Filtros por urgencia y por canal (las fichas de arriba), orden, y clic en la fila para el detalle: programados, último publicado, siguientes huecos libres, privados sin fecha y proyectos en producción. Cálculo: `estadisticas.calendario()`; en consola, `python fab.py canales`. Además de la lectura de YouTube, cuenta lo
+  registrado en `canales/<alias>.json` → `publicados` con `programado`/`publicado` (13-oct-2026: con la cuota agotada tras una
+  subida, el video recién programado no salía). Se actualiza al empezar y al terminar cada video (regla global del 13-oct).
 - **Ciclo editable** (− / +): `POST /api/canales/ciclo` guarda `horario.ciclo_dias` en `canales/<alias>.json`. Solo mueve el pronóstico; el freno de publicación sigue siendo `separacion_min_horas` (`youtube.comprobar_separacion`).
 - **«↻ Actualizar datos»**: `POST /api/canales/actualizar` lanza `estadisticas.actualizar_seguro` de todos los canales en un hilo (4 a la vez, solo lectura); la página consulta `/api/canales/progreso` y se recarga sola. Un canal que falle sale en rojo junto al botón y conserva sus datos anteriores.
 - El marco copia el tema del panel (`localStorage.t`) y su paleta (`html.emb` en la plantilla) y ajusta su alto solo. Tras tocar `panel.py` o `estadisticas.py` hay que reiniciar el panel; la plantilla `.html` se lee en cada carga.
+- **Canal suspendido (21-oct-2026, Edsonxn):** `"suspendido": {"desde", "nota"}` en `canales/<alias>.json` lo saca de esta pestaña, de `python fab.py canales [--actualizar]` y del «buenos días» (`estadisticas.alias_conocidos()`; con `con_suspendidos=True` sale igual, y el color de los demás no cambia). En la pestaña de proyectos, sus videos nacen ocultos (`panel.canales_suspendidos()`; «👁 mostrar» guarda `"oculto": false`) y el canal desaparece del desplegable salvo con el filtro «Ocultos». Reactivar = borrar la clave y reiniciar el panel.
 
 ## Motor SECUENCIA en el panel (6-oct-2026)
 Los videos con `MOTOR = "secuencia"` (clips e imágenes de Google Flow; `docs/estilo_secuencia_flow.md`) no tienen etapa
@@ -166,3 +203,69 @@ llegada de los archivos de `medios/` en los últimos 15 min; «en pausa» si no 
 un recuadro por beat con su miniatura (`/api/medio_mini`, guardadas en `previews/_minis/`), su segundo y su frase; borde ámbar
 = beat de video. Código: `secuencia_info` y `medio_mini` en `panel.py`, `secHTML` en `panel.html`. Canal de un video nuevo:
 `videos/<v>/panel.json` con `{"canal": "<alias>"}` (alias dados de alta en `CANALES_PANEL`).
+
+**Render en vivo del motor SECUENCIA (17-oct-2026).** `secuencia.video` dibuja de una sola pasada en `salida/video_sin_audio.mp4`
+(o `salida/tramo_A_B.mp4` con `--tramo`) y no escribe `segmentos/`, así que el avance sale de **`salida/progreso_render.json`**,
+que reescribe cada ~2 s (atómico): `pid`, `inicio`, `ahora`, `fps`, `f0`/`f1`/`frame` (cuadros), `tramo`, `beat`/`beat_i`/`nbeats`
+y `estado` = `dibujando` → `codificando` (cierra el mp4) → `ambiente` (solo el video completo) → `listo`, o `error` (+ `error`)
+si se corta. Las vistas previas con `--salida` no lo tocan. El panel lo toma por vivo si su `pid` sigue entre los python o se
+reescribió hace < 15 s (sirve también lanzado sin `fab.py`) y pinta la misma tarjeta «Render en vivo»: barra «m:ss/m:ss de video ·
+%», faltan/hora de término (cuadros por segundo de reloj medidos desde el arranque), ritmo, beat en curso, tramo, MB en disco y una fila
+por escena del timeline (sin «▶ Ver fluida»: cada cuadrito son 3 s de video). La etapa «Render» pasa a «en curso» con ese detalle
+aunque exista un MASTER previo. Código: `progreso_secuencia` e `info_render_secuencia` en `panel.py`, `renderHTML` (rama `sec`) en
+`panel.html`. Probado con `agotado_cortisol --tramo 0-10` y `0-40` (ETA estable a ±5 s).
+**«Efectos» del motor SECUENCIA** = `audio/fx.wav` (`fab.py <v> fx`, SFX de `PISTAS` de `efectos.py`): listo si existe (con el nº
+de `sfx/*.mp3`), «atención» si `efectos.py` es más nuevo que `fx.wav` y que el MASTER, pendiente si `efectos.py` tiene `PISTAS` y
+no hay `fx.wav`, y «no aplica» si sus `PISTAS` están vacías (los ejemplos comentados no cuentan). Los Plastitube viejos con
+`audio/sfx.wav` siguen como antes. `fab.py <v> fx` corriendo marca «Efectos» en curso. Cambió `panel.py`: el panel lo toma
+cuando el usuario lo reinicie (nunca lo reinicia Claude).
+
+## Vista «Montaje» (motor SECUENCIA YT, 13-oct-2026)
+Los videos con `ESTILO_VISUAL = "secuencia_yt"` (clips de gameplay con yt-dlp) no muestran «Prompts» y la etapa `flow` se
+llama **Clips** («clips de yt-dlp bajados»). Botón **🎞 Montaje** en la tarjeta: monitor + línea de tiempo con un bloque por
+beat (ancho = duración, miniatura del clip, rayado = aún no baja). Reproduce cada clip de `medios/` en su beat (misma
+velocidad que `secuencia.vel_clip`) con la voz de `voz/final/<key>.wav` encima, y se refresca cada 5 s: los huecos se llenan
+solos mientras corre `bajar`. Clic en un bloque = saltar; espacio = play/pausa; ← → = beat; «saltar huecos». Es un borrador
+del navegador (sin transiciones ni música). Solo lectura. Código: `montaje`, `servir_montaje`, `_servir_rango` en
+`panel.py` (`/api/montaje?video=`, `/montaje/<v>/clip/<scene-id>`, `/montaje/<v>/voz/<key>.wav`, `/montaje/<v>/fx/<archivo>`);
+`mj*` en `panel.html`.
+**REGLA (el usuario, 20-oct-2026): el Montaje vale para TODO video del motor SECUENCIA (también Flow: imágenes `.jpg` y clips `.mp4`),
+no solo SECUENCIA YT.** Mientras se generan las imágenes, cada lote se baja a `medios/` en cuanto sale para que el usuario vea el
+montaje actual, y los clips se generan en la misma tanda (no al final). El botón dice «medios» en los videos Flow.
+**Clic en las casillas Voz / Selección (19-oct-2026):** despliega las mismas barritas por escena que el «en vivo» aunque la etapa no esté
+corriendo (`/api/detalle_voz?video=&etapa=voz|seleccion`, `detalle_voz` en `panel.py`; ✕ cerrar; se refresca cada 4 s). El «en vivo»
+solo aparece si la etapa se lanzó con `fab.py <v> <etapa>` (un `python -m tts_gen` suelto no lo ve el panel).
+**Música en el Montaje (19-oct-2026):** casilla «música»: `audio/musica.wav` en una pista sincronizada con la línea de tiempo, a
+volumen 0,45 bajo la voz; el panel la sirve como `previews/montaje_musica.m4a` (`/montaje/<v>/musica/musica.m4a`, se rehace sola si
+cambia la música). `parsear_guion` entiende ya `VOZ = dict(...)` (antes suponía 4 tomas por frase con ElevenLabs).
+**Capa de efectos (13-oct-2026):** `python fab.py <v> fx montaje` exporta `previews/montaje_fx.json` y un mp4 de 960 px por
+tramo con motion graphics o videos encima (`previews/montaje_fx/`, con el audio de efectos, p. ej. el código del patrocinio).
+El monitor pone los apoyos PNG encima del clip en su momento (marcas doradas arriba en la línea de tiempo) y, dentro de un
+tramo (marca morada abajo), el mp4 compuesto. Casillas **«efectos»** y **«subtítulos»** (esta se recuerda en el navegador).
+Un beat cuyo medio es imagen (captura de la web del patrocinador) se muestra fijo. Si `efectos.py` cambió después de
+exportar, la cabecera lo avisa. Pendiente: «cambiar clip» desde el bloque (= `bajar N --q`).
+**REGLA (el usuario, 19-oct-2026): en TODO video SECUENCIA YT (Warcraft, Tamriel, Runa Caída, Crónicas del gaming) el Montaje
+enseña SIEMPRE los motion graphics, pegatinas, fichas, imágenes y pantallas, como en Warcraft.** Desde ese día `python fab.py <v> fx`
+exporta también la capa del Montaje (antes había que acordarse de `fx montaje`, y en Runa Caída y `tes_misiones_daedricas` nunca se
+hizo: su Montaje solo enseñaba clips). Solo rehace los tramos que cambiaron; la firma incluye TODOS los kits `nucleo/mg_*.py`
+(antes solo mg_wow/mg_tes: cambiar mg_er no rehacía nada). Tras editar `efectos.py`, volver a correr `fx` (o `fx montaje`).
+`fx --sin-montaje` se lo salta. Necesita los clips de `medios/` (va después de `bajar`).
+**Montaje por partes (el usuario, 26-oct-2026: «no veo los efectos» con la exportación de 50 min a medias):** `fx montaje` reescribe
+`montaje_fx.json` tras CADA tramo pintado (el panel enseña lo que ya está; cerrar y abrir el 🎞 Montaje para recargar) y cada tramo
+lleva una firma de SU contenido en `previews/montaje_fx/_firmas.json` (los FX que pisa con los parámetros de sus fn y sus clips;
+`secuencia_fx._sig`), no la fecha de `efectos.py`/kits: antes, tocar una pegatina rehacía los ~200 tramos de un video largo.
+Un cambio en una función auxiliar de un kit (p. ej. `_base` de mg_wow) NO se detecta: `fx montaje --forzar` si hace falta.
+
+## Montaje de los videos dibujados por código (20-oct-2026)
+El usuario: «la vista previa muchas veces tarda mucho en cargar y no se ve bien; la del montaje de Warcraft y Tamriel sí me gusta:
+aplícalo a videos como el de Jalpa». Todo video que NO es motor secuencia y tiene `timeline.json` muestra **🎞 Montaje (n/m
+escenas)** en la tarjeta (la vista previa queda como «🔍 Vista previa cuadro a cuadro»: es la que guarda escenas fluidas para el
+render). Cada escena de `timeline.json` es un bloque que se reproduce fluido con, por orden: su escena fluida
+(`previews/escena_<id>.mp4`, borde verde) o el borrador de **`python fab.py <v> montaje`** (`nucleo/montaje_codigo.py`:
+`previews/montaje/<id>.mp4` 640x360 a 12 fps, mudo, `FAB_SS=1`, + `<id>.jpg` y `info.json` con la firma de `cache_escenas`); si
+ambos existen gana el más nuevo. Borde ámbar = el código cambió desde que se dibujó (se sigue viendo lo viejo); rayado = sin dibujar;
+punteado gris = escena de `ESCENAS` del guion sin voz todavía (duración estimada a 2,7 palabras/s). Audio: `audio/final.wav` (la
+mezcla real) si es posterior a `timeline.json` (`previews/montaje_mezcla.m4a`), si no voz por frase + música. Botón **🖌 Dibujar lo
+que falta** = lanza `fab.py <v> montaje` con prioridad baja (log en `previews/montaje/_montaje.log`, avance en `progreso.json`);
+no a la vez que la voz o el render. Opciones: `montaje <ids…>`, `--todo`, `--fps`, `--ancho`, `--procs`. Código: `montaje_codigo`,
+`_escenas_montaje`, `montaje_resumen`, `montaje_dibujar` en `panel.py` (`/montaje/<v>/esc/<archivo>`, `/montaje/<v>/fl/<archivo>`).

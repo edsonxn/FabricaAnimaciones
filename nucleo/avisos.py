@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Avisos por voz del panel: un vigilante detecta cambios en las etapas de los proyectos y un locutor los dice con
-Chatterbox (proceso auxiliar avisos_voz.py, cargado solo cuando hace falta) por las bocinas de la PC y/o el navegador.
+"""Avisos por voz del panel: un vigilante detecta cambios en las etapas de los proyectos y un locutor los dice por las
+bocinas de la PC y/o el navegador. Voz: ElevenLabs por defecto (27-oct-2026, el usuario: sin gastar CPU ni GPU; ver
+avisar.eleven), voz de Windows si falla; Chatterbox (proceso auxiliar avisos_voz.py) solo con "motor": "chatterbox".
 
 Configuración en panel_config.json (raíz del repo, no se versiona): activo, destino (bocinas|navegador|ambos), voz,
 exaggeration, cfg_weight, temperature, ocioso_min (minutos sin avisos para descargar el modelo) e hitos (% de render).
@@ -198,8 +199,20 @@ class Locutor:
                 self.modelo = "inactivo"
 
     def _sintetizar(self, aviso, hablado, cfg):
-        """WAV de Chatterbox (en caché si ya existe). Devuelve la ruta o None si falló."""
-        clave = hashlib.sha1((hablado + cfg["voz"] + str(cfg["exaggeration"])).encode("utf-8")).hexdigest()[:16]
+        """WAV del aviso (en caché si ya existe). Devuelve la ruta o None si falló (→ voz de Windows).
+        Por defecto ElevenLabs (27-oct-2026, sin GPU ni CPU; como avisar.py); "motor": "chatterbox" en panel_config.json vuelve al viejo."""
+        if cfg.get("motor", "elevenlabs") != "chatterbox":
+            import avisar
+            ruta = os.path.join(DIR, "eleven_" + hashlib.sha1((hablado + avisar.ELEVEN_VOZ).encode("utf-8")).hexdigest()[:16] + ".wav")
+            if os.path.isfile(ruta) and os.path.getsize(ruta) > 2000:
+                return ruta
+            self.modelo = "elevenlabs"
+            try:
+                return ruta if avisar.eleven(hablado, ruta) else None
+            except (Exception, SystemExit) as e:
+                aviso["error"] = f"ElevenLabs: {str(e)[:100]}"
+                return None
+        clave =hashlib.sha1((hablado + cfg["voz"] + str(cfg["exaggeration"])).encode("utf-8")).hexdigest()[:16]
         ruta = os.path.join(DIR, f"{clave}.wav")
         if os.path.isfile(ruta) and os.path.getsize(ruta) > 2000:
             return ruta

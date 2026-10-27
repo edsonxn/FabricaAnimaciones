@@ -22,9 +22,27 @@ TIPOS de FX:  temblor(en, amp, dur) · destello(en, dur, fuerza, color) · zoom(
   oscurecer(de, a, k) · neon(de, a, fuerza, vel, radio, sat, val) — lo saturado y brillante de la imagen (neón amarillo, ojos
     rojos) brilla con halo y palpita/parpadea como tubo de neón; estilo «línea blanca + neón» (docs/estilo_linea_neon.md) ·
   sirena(de, a, fuerza) · rec(de, a) · tv(de, a) · abre(en, dur) · cierra(en, dur) ·
-  fondo(de, a, centro, borde) · imagen(de, a, ruta, x, y, ancho) ·
-  repaso(beat|de+a, partes=["scene-010", ("scene-003", (1.7, .1, .7)), ...], destello) · cortina(beat, desde="scene-009", dur)
-  Los de rango aceptan entra= y sale= (segundos de fundido del efecto).
+  fondo(de, a, centro, borde) · imagen(de, a, ruta, x, y, ancho, alto, anim="slide"|"fade") ·
+  video(de, a, ruta, desde, x, y, ancho, croma, recorte) — otro video encima (sin ancho = cuadro entero; croma=True quita la
+    pantalla verde; recorte=0.03 quita esa fracción por lado, p. ej. el marco de un clip de Flow; vel=0.9 lo frena o acelera;
+    con desde= y el mismo clip del beat se salta un tramo malo (un negro de transición); congela su último cuadro si sobra
+    rango; su audio NO entra en la mezcla) · mg(de, a, fn, marcas, x, y) — motion graphic por código:
+    fn(dt, dur, marcas) -> imagen BGRA; marcas = anclas de la voz, llegan como s desde el inicio (kit nucleo/mg_wow.py) ·
+  pantalla(de, a, fn) — como `mg` pero se dibuja DEBAJO de tarjetas y pegatinas: imagen real a cuadro entero con movimiento
+    lento (`mg_wow.pantalla`), para cuando el clip no enseña lo que la curiosidad necesita ver ·
+  repaso(beat|de+a, partes=["scene-010", ("scene-003", (1.7, .1, .7)), ...], destello) · cortina(beat, desde="scene-009", dur) ·
+  vivo(beat, anim="respira"|"baile"|"flota"|"balanceo"|"parallax", capa=None|0|[0, 1], amp=1.0, par=16, escala=1.04,
+    modelo, pivote="pies"|"centro") — IMAGEN VIVA (nucleo/vivo.py): el personaje (o 2-3, o un objeto) recortado con rembg se
+    mueve encima de su fondo rellenado, con pivote en los pies y un 4 % más grande para tapar el hueco; el fondo lleva parallax
+    2.5D por profundidad. capa = qué recortes se mueven (números de previews/vivo_NN.jpg; None = todos). Con en=/de= la
+    animación entra suave en esa palabra. Antes: `python fab.py <v> vivo` (caché medios/capas/ + candidatos + hoja).
+  VIVO_AUTO = 12  (variable aparte, no en FX): parallax suave de 12 px en TODAS las imágenes sin FX vivo (necesita la
+    profundidad: `python fab.py <v> vivo preparar --solo-prof`; sin ella la imagen va como siempre).
+  Los de rango aceptan entra= y sale= (segundos de fundido del efecto). ancho/alto <= 1 = fracción del cuadro.
+APOYOS = [dict(en="...", wowhead=5060 | tarjeta={...} | web=URL | img=ruta), ...]   tooltips y tarjetas encima del gameplay
+  (nucleo/apoyos.py: `python fab.py <v> apoyos` genera los PNG); aquí se vuelven FX `imagen` con entrada deslizada.
+PISTAS con voz=True (p. ej. el tramo intacto del creativo de un patrocinio) van a audio/fx_voz.wav: `mezcla` las pone a
+  nivel de voz y agacha la música debajo, como con la narración.
 
   python fab.py <v> fx            genera los SFX que falten (ElevenLabs, cuesta créditos) y arma audio/fx.wav (lo suma `mezcla`)
   python fab.py <v> fx --seco     no genera nada: lista cada efecto con su segundo y qué SFX faltan
@@ -47,8 +65,8 @@ _DIR_FUENTES = [os.path.join(os.environ.get("LOCALAPPDATA", ""), "Microsoft", "W
 FUENTES = dict(black=("Poppins-Black.ttf", "seguibl.ttf"), xbold=("Poppins-ExtraBold.ttf", "segoeuib.ttf"),
                semi=("Poppins-SemiBold.ttf", "seguisb.ttf"))
 INSTANTE = dict(temblor=0.45, destello=0.2, abre=0.8)          # efectos de un instante: duración por defecto
-ORDEN = ("fondo", "zoom", "latido", "temblor", "desaturar", "tinte", "neon", "tv", "vineta", "sirena", "oscurecer", "rec", "imagen",
-         "destello")                                            # los rótulos van después; abre/cierra, al final
+ORDEN = ("fondo", "zoom", "latido", "temblor", "desaturar", "tinte", "neon", "tv", "vineta", "sirena", "oscurecer", "rec", "video",
+         "pantalla", "imagen", "mg", "destello")                            # los rótulos van después; abre/cierra, al final
 
 clamp = lambda u: max(0.0, min(1.0, u))
 ease = lambda u: u * u * (3 - 2 * u)
@@ -88,14 +106,26 @@ class Capa:
         for i in list(self.camaras) + list(self.fundidos):
             self._beat(i)
         self.fx = [self._rango(dict(d), "FX") for d in getattr(mod, "FX", [])]
+        for k, ap in enumerate(getattr(mod, "APOYOS", [])):     # tooltips/tarjetas (nucleo/apoyos.py) = FX imagen deslizada
+            import apoyos
+            tam = ap.get("size", apoyos.TAM[apoyos.tipo(ap)])
+            self.fx.append(self._rango(dict(tipo="imagen", ruta=apoyos.ruta(ap), en=ap["en"], dur=ap.get("dur", 4.5),
+                                            x=ap.get("x", .5 if tam > .45 else .78), y=ap.get("y", .48), ancho=tam,
+                                            alto=ap.get("alto", .84), anim=ap.get("anim", "slide"), entra=.35, sale=.3,
+                                            apoyo=k + 1), "APOYOS"))
+        for d in self.fx:                                       # mg: momentos en que la voz dice cada ancla (s desde su inicio)
+            if d["tipo"] in ("mg", "pantalla"):
+                d["_marcas"] = [self.ancla(m) - d["de"] for m in d.get("marcas", [])]
         self.rot = [self._rango(dict(d), "ROTULOS") for d in getattr(mod, "ROTULOS", [])]
         self.pistas = [self._rango(dict(d), "PISTAS") for d in getattr(mod, "PISTAS", [])]
         self.sfx = dict(getattr(mod, "SFX", {}))
         for d in self.fx:
-            if d["tipo"] not in ORDEN + ("abre", "cierra", "repaso", "cortina"):
+            if d["tipo"] not in ORDEN + ("abre", "cierra", "repaso", "cortina", "vivo"):
                 raise SystemExit(f"efectos.py: tipo de FX desconocido «{d['tipo']}»")
         self.fx.sort(key=lambda d: ORDEN.index(d["tipo"]) if d["tipo"] in ORDEN else 99)
-        self._rot_cache, self._img_cache, self._mallas = {}, {}, None
+        self._rot_cache, self._img_cache, self._mallas, self._vids = {}, {}, None, {}
+        self.vivo_auto = float(getattr(mod, "VIVO_AUTO", 0) or 0)      # parallax suave en todas las imágenes (px)
+        self._sin_prof = []
 
     # ------------------------------------------------------------ anclas
     def _beat(self, i):
@@ -158,6 +188,17 @@ class Capa:
 
     # ------------------------------------------------------------ fuentes compuestas (reemplazan la imagen del beat)
     def envolver(self, act, b):
+        if isinstance(act, self.S.Imagen):             # imágenes vivas (nucleo/vivo.py): recorte animado o parallax
+            import vivo
+            d = next((d for d in self.fx if d["tipo"] == "vivo" and d["de"] < b["t1"] and d["a"] > b["t0"]), None)
+            if d is not None:
+                act = vivo.Vivo(act, b, d)
+            elif self.vivo_auto:
+                v = vivo.auto(act, b, self.vivo_auto)
+                if v is None and b["id"] not in self._sin_prof:
+                    self._sin_prof.append(b["id"])
+                    print(f"  (vivo) {b['id']} sin profundidad: va quieta. python fab.py <v> vivo preparar --solo-prof", flush=True)
+                act = v or act
         for d in self.fx:
             if d["tipo"] in ("repaso", "cortina") and d["de"] < b["t1"] and d["a"] > b["t0"]:
                 act = (_Repaso if d["tipo"] == "repaso" else _Cortina)(act, d, self, b)
@@ -191,6 +232,9 @@ class Capa:
         act = [d for d in self.fx if d["de"] <= t < d["a"]]
         if not act and not any(d["de"] <= t < d["a"] for d in self.rot):
             return f
+        # copia: el cuadro de un Clip es su búfer de lectura, que se reutiliza (clip de 24 fps en video de 30, cuadro congelado,
+        # `prev` de la transición). Pegar encima sin copiar dejaba estelas y fantasmas de rótulos/apoyos/MG (13-oct-2026).
+        f = f.copy()
         xx, yy, RAD, TV = self._malla()
         vin = lambda f, col, k: (f * (1 - RAD * k) + np.float32(col) * RAD * k).astype(np.uint8)
         esc, sx, sy, cx, cy = 1.0, 0.0, 0.0, 0.0, 0.0
@@ -257,8 +301,41 @@ class Capa:
                     cv2.circle(f, (150, 120), 26, (60, 40, 255), -1, cv2.LINE_AA)
                 self._pegar(f, self._rotulo("REC", 60, "crema", "black", None), 260, 122)
             elif tipo == "imagen":
-                self._pegar(f, self._imagen(d["ruta"], d.get("ancho", 1400)), d.get("x", .5) * W, d.get("y", .83) * H, 1,
-                            clamp(dt / d.get("entra", 0.6)) if d.get("entra", 0.6) > 0 else 1)
+                ent, anim = d.get("entra", 0.6), d.get("anim")
+                u = clamp(dt / ent) if ent > 0 else 1.0
+                if anim:                               # apoyos: entra deslizándose desde la derecha (o solo funde) y sale fundiendo
+                    s = d.get("sale", 0)
+                    alfa = ease(u) * (ease(clamp((d["a"] - t) / s)) if s > 0 else 1.0)
+                    dx = (1 - u) ** 3 * W * .09 if anim == "slide" else 0.0
+                else:
+                    alfa, dx = u, 0.0
+                self._pegar(f, self._imagen(d["ruta"], d.get("ancho", 1400), d.get("alto")), d.get("x", .5) * W + dx,
+                            d.get("y", .83) * H, 1, alfa)
+            elif tipo == "video":
+                v = self._video(d).cuadro(dt)
+                if d.get("zoom"):                      # acercamiento animado (27-oct-2026, análisis táctico): zoom=(z, cx, cy) final,
+                    v = _zoom_video(v, d, dt)          # zoom0 inicial (por defecto 1, centro), zoom_en/zoom_dur en s del FX
+                if d.get("recorte"):                   # fracción por lado (quita el marco de viñeta de un clip de Flow)
+                    ry, rx = int(v.shape[0] * d["recorte"]), int(v.shape[1] * d["recorte"])
+                    v = v[ry:v.shape[0] - ry, rx:v.shape[1] - rx]
+                if d.get("ancho"):                     # recuadro encima (con croma: solo lo que no es verde)
+                    an = d["ancho"] * W if d["ancho"] <= 1 else d["ancho"]
+                    v = cv2.resize(v, (int(an), round(an * v.shape[0] / v.shape[1])), interpolation=cv2.INTER_AREA)
+                else:                                  # cuadro entero
+                    import secuencia as S
+                    v = cv2.resize(S._cubrir(v, W, H), (W, H), interpolation=cv2.INTER_LINEAR)
+                if d.get("croma"):
+                    v = _croma(v)
+                elif d.get("ancho"):
+                    v = np.dstack([v, np.full(v.shape[:2], 255, np.uint8)])
+                else:
+                    f = (f * (1 - e) + v * e).astype(np.uint8) if e < 1 else v.copy()
+                    continue
+                f = np.ascontiguousarray(f)
+                self._pegar(f, v, d.get("x", .5) * W, d.get("y", .5) * H, 1, e)
+            elif tipo in ("mg", "pantalla"):           # motion graphic por código: fn(dt, dur, marcas) -> BGRA
+                f = np.ascontiguousarray(f)
+                self._pegar(f, d["fn"](dt, d["a"] - d["de"], d["_marcas"]), d.get("x", .5) * W, d.get("y", .5) * H, 1, e)
             elif tipo == "destello":
                 k = (1 - dt / (d["a"] - d["de"])) * d.get("fuerza", 0.8)
                 f = cv2.addWeighted(f, 1 - k, np.full_like(f, self.color(d.get("color", "blanco")), np.uint8), k, 0)
@@ -300,17 +377,35 @@ class Capa:
             self._rot_cache[key] = np.array(im)[..., [2, 1, 0, 3]].copy()
         return self._rot_cache[key]
 
-    def _imagen(self, ruta, ancho):
-        if (ruta, ancho) not in self._img_cache:
+    def _imagen(self, ruta, ancho, alto=None):
+        """La imagen con ese ancho (px, o fracción del cuadro si <= 1); si pasa de `alto`, se achica para caber."""
+        if (ruta, ancho, alto) not in self._img_cache:
             import cv2
             import numpy as np
+            if not os.path.exists(ruta):
+                raise SystemExit(f"efectos.py: falta la imagen {ruta}" + (" (genera los apoyos: python fab.py <v> apoyos)"
+                                                                          if ruta.startswith("apoyos") else ""))
             im = cv2.imdecode(np.fromfile(ruta, np.uint8), cv2.IMREAD_UNCHANGED)
             if im is None:
                 raise SystemExit(f"efectos.py: no pude leer la imagen {ruta}")
+            if im.ndim == 2:
+                im = cv2.cvtColor(im, cv2.COLOR_GRAY2BGR)
             if im.shape[2] == 3:
                 im = np.dstack([im, np.full(im.shape[:2], 255, np.uint8)])
-            self._img_cache[(ruta, ancho)] = cv2.resize(im, (ancho, round(ancho * im.shape[0] / im.shape[1])), interpolation=cv2.INTER_AREA)
-        return self._img_cache[(ruta, ancho)]
+            an = ancho * W if ancho <= 1 else ancho
+            if alto:
+                an = min(an, (alto * H if alto <= 1 else alto) * im.shape[1] / im.shape[0])
+            an = int(round(an))
+            self._img_cache[(ruta, ancho, alto)] = cv2.resize(im, (an, round(an * im.shape[0] / im.shape[1])),
+                                                              interpolation=cv2.INTER_AREA if an < im.shape[1] else cv2.INTER_CUBIC)
+        return self._img_cache[(ruta, ancho, alto)]
+
+    def _video(self, d):
+        if id(d) not in self._vids:
+            if not os.path.exists(d["ruta"]):
+                raise SystemExit(f"efectos.py: falta el video {d['ruta']}")
+            self._vids[id(d)] = _VideoFx(d["ruta"], d.get("desde", 0.0), d.get("vel", 1.0))
+        return self._vids[id(d)]
 
     @staticmethod
     def _pegar(f, r, cx, cy, escala=1.0, alfa=1.0):
@@ -326,8 +421,17 @@ class Capa:
         if x1 <= x0 or y1 <= y0:
             return
         rr = r[y0 - y:y1 - y, x0 - x:x1 - x]
-        a = rr[..., 3:4].astype(np.float32) / 255 * alfa
-        f[y0:y1, x0:x1] = (f[y0:y1, x0:x1] * (1 - a) + rr[..., :3] * a).astype(np.uint8)
+        if rr.shape[0] * rr.shape[1] > 65536:          # capa grande (MG a cuadro entero): solo su recuadro visible (26-oct-2026,
+            bx, by, bw, bh = cv2.boundingRect(np.ascontiguousarray(rr[..., 3]))      # mg_tactica: 70 -> ~10 ms por capa)
+            if bw == 0:
+                return
+            rr = rr[by:by + bh, bx:bx + bw]
+            x0, y0, x1, y1 = x0 + bx, y0 + by, x0 + bx + bw, y0 + by + bh
+            if alfa >= 1 and cv2.minMaxLoc(np.ascontiguousarray(rr[..., 3]))[0] == 255:   # opaca (tablero, pantalla): copia
+                f[y0:y1, x0:x1] = rr[..., :3]
+                return
+        a = rr[..., 3].astype(np.float32) * (alfa / 255)
+        f[y0:y1, x0:x1] = cv2.blendLinear(np.ascontiguousarray(rr[..., :3]), np.ascontiguousarray(f[y0:y1, x0:x1]), a, 1 - a)
 
     # ------------------------------------------------------------ listado
     def lista(self):
@@ -388,6 +492,64 @@ class _Cortina:
         return np.where((np.abs(linea) < d.get("borde", 7))[..., None], np.uint8(self.borde), f).astype(np.uint8)
 
 
+class _VideoFx:
+    """Lector de un video externo para el FX `video`: cuadro en `desde + dt`; se queda en el último si el rango sobra."""
+
+    def __init__(self, ruta, desde, vel=1.0):
+        import cv2
+        self.cap = cv2.VideoCapture(ruta)
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS) or 30.0
+        self.n = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        self.desde, self.vel, self.i, self.ult = desde, vel, -1, None
+
+    def cuadro(self, dt):
+        import cv2
+        obj = min(int(round((self.desde + max(0.0, dt) * self.vel) * self.fps)), self.n - 1)
+        if obj < self.i or obj > self.i + 90:          # salto (la hoja de revisión va y viene): reposiciona
+            self.cap.set(cv2.CAP_PROP_POS_FRAMES, obj)
+            self.i = obj - 1
+        while self.i < obj:
+            ok, f = self.cap.read()
+            if not ok:
+                break
+            self.i, self.ult = self.i + 1, f
+        if self.ult is None:
+            raise SystemExit("efectos.py: no pude leer el video del FX `video`")
+        return self.ult
+
+
+def _zoom_video(v, d, dt):
+    """Recorte que se acerca de `zoom0` a `zoom` (z, cx, cy; cx, cy = centro en fracción del cuadro fuente) con ease-in-out.
+    Lo que dibuje la pizarra encima se mide sobre el cuadro YA acercado (hoja: previews/cuadros con el mismo recorte)."""
+    import cv2
+    import numpy as np
+    z1, cx1, cy1 = d["zoom"]
+    z0, cx0, cy0 = d.get("zoom0", (1.0, .5, .5))
+    dur = d.get("zoom_dur", .6)
+    p = ease(clamp((dt - d.get("zoom_en", 0.0)) / dur)) if dur > 0 else 1.0
+    z, cx, cy = z0 + (z1 - z0) * p, cx0 + (cx1 - cx0) * p, cy0 + (cy1 - cy0) * p
+    if z <= 1.001:
+        return v
+    h, w = v.shape[:2]
+    cw, ch = w / z, h / z
+    x0 = min(max(cx * w - cw / 2, 0), w - cw)
+    y0 = min(max(cy * h - ch / 2, 0), h - ch)
+    m = np.float32([[z, 0, -x0 * z], [0, z, -y0 * z]])
+    return cv2.warpAffine(v, m, (w, h), flags=cv2.INTER_LINEAR)
+
+
+def _croma(v):
+    """Quita la pantalla verde (assets de patrocinios): BGRA con borde suave y sin halo verde."""
+    import cv2
+    import numpy as np
+    b, g, r = (v[..., i].astype(np.int16) for i in range(3))
+    m = np.maximum(r, b)
+    a = 1 - np.clip((g - m - 28) / 52.0, 0, 1)
+    a = cv2.GaussianBlur(a.astype(np.float32), (3, 3), 0)
+    g = np.minimum(g, m + 12)                           # despill
+    return np.dstack([b, g, r, a * 255]).clip(0, 255).astype(np.uint8)
+
+
 # ---------------------------------------------------------------- sonido
 def _generar(capa, seco):
     """Pide a ElevenLabs los SFX que falten en sfx/<nombre>.mp3. Devuelve los que siguen faltando."""
@@ -398,24 +560,19 @@ def _generar(capa, seco):
     faltan = [n for n in capa.sfx if not os.path.exists(f"sfx/{n}.mp3")]
     if seco or not faltan:
         return faltan
-    import time
-    import requests
     import tts_eleven as E
     os.makedirs("sfx", exist_ok=True)
     gasto = 0
     for n in faltan:
         txt, dur = capa.sfx[n]
-        for intento in range(4):
-            r = requests.post(f"{E.URL}/sound-generation", headers={"xi-api-key": E.clave()}, timeout=180,
-                              json=dict(text=txt, duration_seconds=min(float(dur), 22), prompt_influence=0.45))
-            if r.status_code == 200:
-                open(f"sfx/{n}.mp3", "wb").write(r.content)
-                gasto += int(r.headers.get("character-cost") or 0)
-                print(f"  sfx/{n}.mp3  {dur} s", flush=True)
-                break
-            if r.status_code not in (429, 500, 502, 503):
-                raise SystemExit(f"ElevenLabs {r.status_code} en «{n}»: {r.text[:300]}")
-            time.sleep(5 * (intento + 1))
+        # E.post reintenta 429/5xx y pasa a la cuenta de respaldo si la activa se queda sin saldo
+        r = E.post("sound-generation", timeout=180,
+                   json=dict(text=txt, duration_seconds=min(float(dur), 22), prompt_influence=0.45))
+        if r.status_code != 200:
+            raise SystemExit(f"ElevenLabs {r.status_code} en «{n}»: {r.text[:300]}")
+        open(f"sfx/{n}.mp3", "wb").write(r.content)
+        gasto += int(r.headers.get("character-cost") or 0)
+        print(f"  sfx/{n}.mp3  {dur} s", flush=True)
     print(f"ElevenLabs: {len(faltan)} efectos generados, {gasto} créditos")
     return [n for n in capa.sfx if not os.path.exists(f"sfx/{n}.mp3")]
 
@@ -435,6 +592,7 @@ def audio(seco=False):
         return
     N = int(capa.total * SR)
     out, cache = np.zeros((2, N), np.float32), {}
+    out_voz = np.zeros((2, N), np.float32)            # PISTAS con voz=True: a nivel de voz y con la música agachada
     for d in capa.pistas:
         if d["sfx"] not in cache:
             x, _ = librosa.load(f"sfx/{d['sfx']}.mp3", sr=SR, mono=False)
@@ -456,9 +614,14 @@ def audio(seco=False):
             x[:, -fo:] *= np.linspace(1, 0, fo, dtype=np.float32)
         i = max(0, int(d["de"] * SR))
         x = x[:, :N - i] * float(d.get("vol", 1.0))
-        out[:, i:i + x.shape[1]] += x
+        (out_voz if d.get("voz") else out)[:, i:i + x.shape[1]] += x
     os.makedirs("audio", exist_ok=True)
     sf.write("audio/fx.wav", out.T, SR, subtype="PCM_16")
+    if np.abs(out_voz).max() > 0:
+        sf.write("audio/fx_voz.wav", out_voz.T, SR, subtype="PCM_16")
+        print("audio/fx_voz.wav: pistas a nivel de voz (voz=True)")
+    elif os.path.exists("audio/fx_voz.wav"):
+        os.remove("audio/fx_voz.wav")
     print(f"audio/fx.wav: {len(capa.pistas)} sonidos en {capa.total:.1f} s (pico {np.abs(out).max():.2f}); `mezcla` lo suma a la voz")
 
 
@@ -470,31 +633,165 @@ def hoja():
     if capa is None:
         raise SystemExit("Este video no tiene efectos.py")
     S = capa.S
-    ev = [(d["de"] + min(0.12 if d["tipo"] in ("temblor", "destello") else 0.7, (d["a"] - d["de"]) * .6), d["tipo"]) for d in capa.fx]
+    ev = [(d["de"] + min(0.12 if d["tipo"] in ("temblor", "destello") else d.get("ver", 0.7), (d["a"] - d["de"]) * .6),
+           f"apoyo {d['apoyo']}" if d.get("apoyo") else d.get("nombre", d["tipo"])) for d in capa.fx]
     ev += [(d["de"] + min(0.8, (d["a"] - d["de"]) * .6), d["texto"][:22]) for d in capa.rot]
     ev += [((b["t0"] + b["t1"]) / 2, "cámara") for b in capa.bs if b["id"] in capa.camaras]
     ev.sort()
     os.makedirs("previews", exist_ok=True)
     minis = []
+    mw, mh, cols, letra = 480, 270, 4, .55
     for t, nombre in ev:
         k = next((i for i, b in enumerate(capa.bs) if b["t0"] <= t < b["t1"]), len(capa.bs) - 1)
         b = capa.bs[k]
         f = capa.aplicar(capa.envolver(S._fuente(b, k, True, capa), b).cuadro(t), t)
-        m = cv2.resize(f, (480, 270), interpolation=cv2.INTER_AREA)
-        cv2.rectangle(m, (0, 244), (480, 270), (20, 18, 18), -1)
-        cv2.putText(m, f"{t:.1f}s {b['id'][6:]} {nombre}".encode("ascii", "replace").decode(), (6, 263), cv2.FONT_HERSHEY_SIMPLEX, .55,
+        if f.shape[0] > f.shape[1]:          # Short/reel vertical: mini 9:16 (antes se aplastaba a 16:9, 21-oct-2026)
+            mw, mh, cols, letra = 216, 384, 6, .42
+        m = cv2.resize(f, (mw, mh), interpolation=cv2.INTER_AREA)
+        cv2.rectangle(m, (0, mh - 26), (mw, mh), (20, 18, 18), -1)
+        cv2.putText(m, f"{t:.1f}s {b['id'][6:]} {nombre}".encode("ascii", "replace").decode(), (6, mh - 7), cv2.FONT_HERSHEY_SIMPLEX, letra,
                     (90, 214, 255), 1, cv2.LINE_AA)
         minis.append(m)
-    for h in range(0, len(minis), 20):
-        g = minis[h:h + 20] + [np.zeros_like(minis[0])] * (-len(minis[h:h + 20]) % 4)
-        ruta = f"previews/fx_{h // 20 + 1:02d}.jpg"
-        cv2.imwrite(ruta, np.vstack([np.hstack(g[i:i + 4]) for i in range(0, len(g), 4)]))
+    n = cols * 5
+    for h in range(0, len(minis), n):
+        g = minis[h:h + n] + [np.zeros_like(minis[0])] * (-len(minis[h:h + n]) % cols)
+        ruta = f"previews/fx_{h // n + 1:02d}.jpg"
+        cv2.imwrite(ruta, np.vstack([np.hstack(g[i:i + cols]) for i in range(0, len(g), cols)]))
         print(ruta)
     capa.lista()
+
+
+def _sig(o, prof=0):
+    """Firma estable (texto) de un FX: dicts/listas por contenido; las fn de los kits por su código y las variables que
+    capturan (ruta de la pegatina, título, puntos del mapa…), sin direcciones de memoria."""
+    import re
+    if prof > 6:
+        return "…"
+    if isinstance(o, dict):
+        return "{" + ",".join(f"{k}:{_sig(v, prof + 1)}" for k, v in sorted(o.items(), key=lambda kv: str(kv[0]))) + "}"
+    if isinstance(o, (list, tuple)):
+        return "[" + ",".join(_sig(v, prof + 1) for v in o) + "]"
+    if callable(o) and hasattr(o, "__code__"):
+        cel = []
+        for c in (o.__closure__ or ()):
+            try:
+                cel.append(_sig(c.cell_contents, prof + 1))
+            except ValueError:                         # celda vacía
+                cel.append("∅")
+        import hashlib
+        return f"fn:{o.__qualname__}:{hashlib.sha1(o.__code__.co_code).hexdigest()[:12]}(" + ",".join(cel) + ")"
+    if hasattr(o, "shape"):                            # arrays / imágenes cacheadas dentro de un closure
+        return f"arr{getattr(o, 'shape', '')}"
+    if isinstance(o, str) and os.path.exists(o) and os.path.isfile(o):
+        return f"{o}:{os.path.getmtime(o):.0f}"        # una pegatina/mapa cambiada en disco rehace su tramo
+    return re.sub(r" at 0x[0-9a-fA-F]+", "", repr(o))
+
+
+def montaje(forzar=False):
+    """Para la vista «Montaje» del panel: previews/montaje_fx.json (apoyos con su momento y lugar, y tramos con efectos) y un
+    mp4 de 960 px por tramo con motion graphics o videos encima (mismo armado que el render: clips, transiciones y toda la
+    capa), con el audio de efectos de ese tramo (p. ej. el creativo de un patrocinio). Tramos a < 1,2 s se juntan."""
+    import subprocess
+    import time
+    import secuencia as S
+    capa = cargar()
+    if capa is None:
+        raise SystemExit("Este video no tiene efectos.py")
+    car = os.path.join("previews", "montaje_fx")
+    os.makedirs(car, exist_ok=True)
+    nuc = os.path.dirname(os.path.abspath(__file__))
+    # 26-oct-2026: firma POR TRAMO con su contenido (los FX que pisa, con los parámetros de sus fn, y sus clips), no la fecha de
+    # efectos.py/kits: antes, tocar una pegatina rehacía los ~200 tramos de un video de 50 min (horas sin ver nada en el panel)
+    import hashlib
+    base = "|".join(f"{os.path.getmtime(r):.0f}" for r in ["beats.json", "timeline.json", os.path.join(nuc, "secuencia.py"),
+                                                             os.path.join(nuc, "vivo.py")] if os.path.exists(r))
+    rfir = os.path.join(car, "_firmas.json")
+    try:
+        firmas = json.load(open(rfir, encoding="utf-8"))
+    except (OSError, ValueError):
+        firmas = {}
+    apoyos =[dict(n=d["apoyo"], de=round(d["de"], 3), a=round(d["a"], 3), x=d.get("x", .5), y=d.get("y", .5), ancho=d["ancho"],
+                   alto=d.get("alto"), anim=d.get("anim"), archivo=os.path.basename(d["ruta"])) for d in capa.fx if d.get("apoyo")]
+    rangos = sorted((d["de"], d["a"], d.get("nombre", d["tipo"])) for d in capa.fx if d["tipo"] in ("mg", "video", "pantalla"))
+    juntos = []
+    for de, a, n in rangos:
+        if juntos and de - juntos[-1][1] < 1.2:
+            juntos[-1][1] = max(juntos[-1][1], a)
+            juntos[-1][2].append(n)
+        else:
+            juntos.append([de, a, [n]])
+    _bs = S.cargar_beats()
+    plan = []
+    for de, a, ns in juntos:
+        f0, f1 = int(max(0.0, de - .4) * S.FPS), int(min(capa.total, a + .4) * S.FPS)
+        de, a = f0 / S.FPS, f1 / S.FPS
+        nombre = f"fx_{f0:06d}_{f1:06d}.mp4"
+        # y los clips de los beats que pisa el tramo (19-oct-2026: un clip rebajado no rehacía su tramo)
+        clips = [f"{m}:{os.path.getmtime(m):.0f}" for bb in _bs if bb["t1"] > de and bb["t0"] < a
+                 for m in [S.medio_de(bb)] if m and os.path.exists(m)]
+        dentro = sorted(_sig({k: v for k, v in d.items() if k not in ("_marcas",)}) for d in capa.fx
+                        if d["de"] < a and d["a"] > de)
+        sig = hashlib.sha1("\n".join([base] + clips + dentro).encode("utf-8", "replace")).hexdigest()
+        plan.append((de, a, ns, nombre, sig))
+
+    tramos = []
+
+    def _guardar(hechos):
+        json.dump(dict(apoyos=apoyos, tramos=hechos, hecho=time.time()),
+                  open("previews/montaje_fx.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        json.dump(firmas, open(rfir, "w", encoding="utf-8"), indent=0)
+
+    def _al_dia(nombre, sig):
+        return not forzar and os.path.exists(os.path.join(car, nombre)) and firmas.get(nombre) == sig
+
+    # 26-oct-2026: el panel ve el avance; primero lo que ya está al día y luego cada tramo en cuanto se pinta
+    listos = {p[3] for p in plan if _al_dia(p[3], p[4])}
+    pend = len(plan) - len(listos)
+    print(f"montaje: {len(plan)} tramos, {pend} por pintar", flush=True)
+    _guardar([dict(de=round(p[0], 4), a=round(p[1], 4), archivo=p[3], que=" + ".join(p[2])) for p in plan if p[3] in listos])
+    hechos_n = 0
+    for de, a, ns, nombre, sig in plan:
+        ruta = os.path.join(car, nombre)
+        if nombre not in listos:
+            hechos_n += 1
+            print(f"montaje [{hechos_n}/{pend}]: tramo {de:.1f}-{a:.1f} s ({', '.join(ns)})", flush=True)
+            tmp = os.path.join(car, "_tmp.mp4")
+            S.video(["--tramo", f"{de + 1e-4:.4f}-{a + 1e-4:.4f}", "--salida", tmp, "--ancho", "960", "--preset", "veryfast"])
+            pistas = [r for r in ("audio/fx_voz.wav", "audio/fx.wav") if os.path.exists(r)]
+            cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", tmp]
+            for r in pistas:
+                cmd += ["-ss", f"{de:.3f}", "-t", f"{a - de:.3f}", "-i", r]
+            if pistas:
+                mezcla = "".join(f"[{k + 1}:a]" for k in range(len(pistas))) + f"amix=inputs={len(pistas)}:normalize=0[a]"
+                cmd += ["-filter_complex", mezcla, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest"]
+            else:
+                cmd += ["-c", "copy"]
+            subprocess.run(cmd + ["-movflags", "+faststart", ruta], check=True)
+            os.remove(tmp)
+            firmas[nombre] = sig
+            listos.add(nombre)
+            _guardar([dict(de=round(p[0], 4), a=round(p[1], 4), archivo=p[3], que=" + ".join(p[2])) for p in plan
+                      if p[3] in listos])
+        tramos.append(dict(de=round(de, 4), a=round(a, 4), archivo=nombre, que=" + ".join(ns)))
+    for r in os.listdir(car):                          # vistas viejas que ya no corresponden a ningún tramo
+        if r.endswith(".mp4") and r not in {t["archivo"] for t in tramos}:
+            os.remove(os.path.join(car, r))
+            firmas.pop(r, None)
+    _guardar(tramos)
+    print(f"previews/montaje_fx.json: {len(apoyos)} apoyos · {len(tramos)} tramos con efectos (ábrelos en el panel: 🎞 Montaje)")
 
 
 if __name__ == "__main__":
     if "hoja" in sys.argv[1:]:
         hoja()
+    elif "montaje" in sys.argv[1:]:
+        montaje(forzar="--forzar" in sys.argv[1:])
     else:
         audio(seco="--seco" in sys.argv[1:])
+        # REGLA (el usuario, 19-oct-2026): en todo video SECUENCIA YT (Warcraft, Tamriel, Runa Caída, Crónicas del gaming) el
+        # Montaje del panel enseña SIEMPRE los MG, pegatinas, fichas y pantallas: `fx` exporta también la capa del Montaje
+        # (solo rehace los tramos que cambiaron). Docs: docs/panel.md § Montaje y docs/estilo_secuencia_yt.md.
+        if "--seco" not in sys.argv[1:] and "--sin-montaje" not in sys.argv[1:]:
+            import config
+            if config.ESTILO_VISUAL == "secuencia_yt" and os.path.isdir("medios"):
+                montaje()

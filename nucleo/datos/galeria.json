@@ -2,6 +2,32 @@
  "_nota": "Catálogo de la pestaña «Estilos» del panel. Se relee en cada petición: editar este archivo NO exige reiniciar el panel. Una entrada por estilo, con un video terminado de ejemplo (`archivos`: el primero que exista en videos/<video>/salida/). Las entradas sin archivo se omiten solas.",
  "estilos": [
   {
+   "id": "terror_crt",
+   "nombre": "Terror CRT — el cuarto y la pantalla",
+   "estilo": "documental (terror_crt)",
+   "canal": "Canal de terror en videojuegos (por crear)",
+   "video": "terror_ben_drowned",
+   "archivos": [
+    "terror_ben_drowned_MASTER.mp4"
+   ],
+   "desc": "Cuarto a oscuras cuya única luz es una tele CRT dibujada en 2D; el gameplay de yt-dlp siempre vive dentro de la tele (curvatura, scanlines, VHS), la cámara entra en la pantalla y la corrupción sale al cuarto. Voz David de LogIA con corchetes, Lyria de terror, SFX de ElevenLabs.",
+   "uso": "Terror y sucesos raros en videojuegos (creepypastas, ARG, glitches, leyendas); horizontal 16:9, 1-10 min.",
+   "extra": "kit en nucleo/terror_pix.py + terror_crt.py (+ anclas.py del video); doc: docs/estilo_terror_crt.md"
+  },
+  {
+   "id": "terror_crt_pc",
+   "nombre": "Terror CRT — monitor de PC de 2011",
+   "estilo": "documental (terror_crt)",
+   "canal": "Crónicas del gaming",
+   "video": "sonic_exe",
+   "archivos": [
+    "sonic_exe_MASTER.mp4"
+   ],
+   "desc": "La variante «PC»: escritorio de 2011 con torre beige y monitor CRT; el CD-R viaja al lector, la cámara entra en el monitor y TODO el gameplay vive dentro. Pantallas de PC dibujadas (escritorio, wiki, editor de imágenes, propiedades de .exe, GameJolt, blog), un Sonic en silueta de pie o de peluche, y un cierre con eventos atados a las palabras.",
+   "uso": "Creepypastas y leyendas de juegos de PC; horizontal 16:9, 3-8 min.",
+   "extra": "kit en nucleo/terror_pix.py + terror_crt.py + terror_pc.py; doc: docs/estilo_terror_crt.md § «Variante monitor de PC»"
+  },
+  {
    "id": "kurzgesagt_iso",
    "nombre": "Kurzgesagt isométrico + mapas con relieve",
    "estilo": "kurzgesagt",
@@ -29,16 +55,16 @@
   },
   {
    "id": "boceto_guache",
-   "nombre": "Boceto + guache con mapa · v2",
+   "nombre": "Boceto + guache con mapa — v2.1",
    "estilo": "boceto",
    "canal": "Cronopapel",
-   "video": "historia_espana",
+   "video": "historia_egipto",
    "archivos": [
-    "historia_espana_5min_MASTER.mp4"
+    "historia_egipto_5min_MASTER.mp4"
    ],
-   "desc": "Relieve real (ETOPO1) bajo el guache, ríos, capas de reinos con fronteras reales y pegatinas de papel recortado; los territorios cambian con transiciones procedurales (tinta, pincel, portal, ola).",
+   "desc": "Relieve real (ETOPO1) bajo el guache, valle verde del Nilo, ríos reales, ~40 territorios históricos que crecen, se rompen y se reúnen, y ~150 pegatinas de papel recortado (personajes, monumentos, carros, barcos) que se mueven por rutas reales; cambios de escena procedurales (tinta, pincel, portal, ola).",
    "uso": "Historia de países en pocos minutos, con territorios que cambian.",
-   "extra": "mapa.py + core.py · historia_iran, historia_china y historia_japon son la v1"
+   "extra": "mapa.py + core.py + coreo_*.py — historia_espana = v2 con dos rejillas; historia_iran, historia_china y historia_japon son la v1"
   },
   {
    "id": "boceto_short",
@@ -277,6 +303,33 @@
    "extra": "plano.py: esfera, sol, tierra, luna"
   },
   {
+   "id": "app_promo_duo",
+   "nombre": "Anuncio de app (UI dibujada)",
+   "estilo": "documental",
+   "canal": "Sin canal (app del usuario)",
+   "video": "duo_promo",
+   "archivos": [
+    "duo_promo_MASTER.mp4"
+   ],
+   "desc": "La interfaz real de la app Dúo (colores, fuente Plus Jakarta Sans, tarjetas, barra de XP, calendario) animada por código en plano secuencia: chat → logo → teléfonos → festejo → cuestionario → descarga.",
+   "uso": "Anuncio vertical de 45 s para una app o producto del usuario; diálogo de dos voces ElevenLabs.",
+   "extra": "videos/duo_promo/duo.py (kit), docs/estilo_app_promo.md"
+  },
+  {
+   "id": "grabado_peste",
+   "nombre": "Grabado de peste — danza macabra en 3D",
+   "estilo": "documental (grabado)",
+   "canal": "Crónicas de Warcraft (especial de Halloween; excepción a SECUENCIA YT)",
+   "video": "wow_tres_noches",
+   "archivos": [
+    "wow_tres_noches_MASTER.mp4",
+    "muestra_look.mp4"
+   ],
+   "desc": "Xilografía / grabado en cobre animado: tinta sobre papel hueso, sombras de trama que hierve, un color de acento por acto. Todo vive en un espacio 3D dibujado a buril (suelos y muros en perspectiva, desenfoque por distancia, claroscuro de velas y fraguas, sombras proyectadas); el video real va dentro de cuadros colgados, pasado a tinta.",
+   "uso": "Historias oscuras o de terror con hechos reales (epidemias, leyendas, sucesos), especiales de Halloween; 16:9.",
+   "extra": "kit en nucleo/grabado.py + grabado_3d.py; doc: docs/estilo_grabado_peste.md"
+  },
+  {
    "id": "linea_neon",
    "nombre": "Línea blanca + neón",
    "estilo": "secuencia_flow (con efectos)",
@@ -286,6 +339,30 @@
     "freno_enojo_MASTER.mp4"
    ],
    "desc": "Grabado en línea blanca fina sobre negro puro con UN elemento protagonista en neón amarillo que palpita por código (FX neon). Monigotes simpáticos y anatomía en grabado; palabras clave gigantes al centro; clips de Flow al inicio e imágenes después. Voz ElevenLabs Alejandro Durán + Lyria ambiental."
+  },
+  {
+   "id": "pegatina_flow",
+   "nombre": "Pegatina Flow (recortes animados)",
+   "estilo": "pegatina_flow (código + piezas de Flow)",
+   "canal": "Bitácora Perdida (prueba)",
+   "video": "jalpa",
+   "archivos": [
+    "jalpa_MASTER.mp4"
+   ],
+   "desc": "Flow (Nano Banana 2.1) pinta escenarios vacíos y hojas de personajes con sus ciclos de caminar/correr/galopar en la misma imagen, más utilería y naturaleza; nucleo/pegaflow.py las recorta como pegatinas con borde de papel y sombra de contacto y las anima por código: cámara con parallax por profundidad, ciclos que avanzan por distancia, aves, humo, fogatas, arena con viento y rótulos de papel recortado. Voz Chatterbox Dan + Lyria 3.5."
+  },
+  {
+   "id": "analisis_tactico",
+   "nombre": "Análisis táctico — jugadas de esports explicadas como en la NFL",
+   "estilo": "secuencia_yt (análisis táctico)",
+   "canal": "Cronicas de ligoleyen (League of Legends)",
+   "video": "lol_worlds_2026",
+   "archivos": [
+    "lol_worlds_2026_MASTER.mp4"
+   ],
+   "desc": "Resumen de un torneo con clips oficiales y 6 jugadas analizadas: se ven en vivo con el audio de la transmisión, se rebobinan y se pausan con telestrador (anillos, flechas, zonas), zoom en cámara lenta y mapa táctico 3D con fichas reales; gráficos de transmisión propios (tarjetas de vidrio, pegatinas de jugadores, versus, caídas, ranking, fichas de jugador con estadísticas, calendario). Voz ElevenLabs JC + Lyria.",
+   "uso": "Esports y deportes: resúmenes de torneo, jugadas clave, rankings; horizontal 16:9, 2-25 min.",
+   "extra": "kit nucleo/mg_tactica.py + nucleo/mg_lol.py; zoom del FX video; doc: docs/estilo_analisis_tactico.md"
   }
  ],
  "sin_ejemplo": [

@@ -1,0 +1,6 @@
+# Miniatura de «Las 8 pistas…» (Flow + ingredientes reales, 13-oct-2026)
+Ingredientes (`miniatura_ing/`, cuadros de `medios/`): 1 `1_muralla_cringris.jpg` (scene-064), 2 `2_calle_gilneas.jpg` (scene-074,
+Gilneas en la beta), 3 `3_puerta_grim_batol.jpg` (scene-058, reserva). Logo de Forever con PIL después.
+
+## Prompt
+YouTube thumbnail, 16:9. Use image 1 as the base and keep it looking exactly like a real in-game screenshot of the same old MMORPG: the giant stone wall, its huge wooden gate and the small character standing on the rock must stay faithful to image 1, do not redraw them in another style. The huge gate is now slightly ajar, and an intense cold blue-white light pours out through the gap with light rays and mist. Through the opening we clearly see the rainy gothic cobblestone street and dark houses from image 2, faithful to image 2. Make the character a little larger, seen from behind, looking at the opening. A large glowing golden question mark floats above the gate. Dramatic cinematic contrast, darker vignette, warm sunset light on the wall against the cold light from inside. Keep the bottom-left corner fairly dark and empty for a logo, nothing important in the bottom-right corner. No added text, no watermark, no border.

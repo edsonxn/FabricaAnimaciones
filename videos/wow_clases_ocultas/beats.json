@@ -1,0 +1,642 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.207,
+  "tipo": "video",
+  "texto": "Ciento diecinueve pergaminos. Doce veces el mismo barón, en el mismo castillo, con la misma cara de fastidio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.207,
+  "t1": 20.022,
+  "tipo": "video",
+  "texto": "Eso tardó un mago de nivel veinte en fabricar un arma que Blizzard nunca anunció. Un arma que, si la teoría es correcta, convierte al mago en algo que no aparece en la pantalla de creación de personaje.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 20.022,
+  "t1": 25.954,
+  "tipo": "video",
+  "texto": "World of Warcraft Forever ya salió, y oficialmente trae nueve clases y doce profesiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.954,
+  "t1": 35.108,
+  "tipo": "video",
+  "texto": "Al menos, eso es lo oficial. Pero en la beta, en pocos días, los jugadores ya habían encontrado sistemas enteros que nadie mencionó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.108,
+  "t1": 45.112,
+  "tipo": "video",
+  "texto": "Hay habilidades que se desbloquean juntando libros y hay una forma de druida que no está en ningún árbol de talentos. Estas son las nueve clases y profesiones ocultas de World of Warcraft Forever,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.112,
+  "t1": 57.782,
+  "tipo": "video",
+  "texto": "de la más discreta a la más bestia. Aviso rápido: todo esto se descubrió en la beta, así que algún número pudo cambiar en el lanzamiento, y si lo ves distinto en el juego, dímelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 57.782,
+  "t1": 63.713,
+  "tipo": "video",
+  "texto": "Número nueve. El pícaro, que lleva dos profesiones de contrabando y nadie le dice nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 63.713,
+  "t1": 73.612,
+  "tipo": "video",
+  "texto": "Tú tienes dos huecos de profesión principal, como todo ciudadano decente. El pícaro abre su panel y ahí están Venenos y Ganzúa, que no ocupan ningún hueco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 73.612,
+  "t1": 84.236,
+  "tipo": "video",
+  "texto": "Hasta aquí, nostalgia pura. Lo nuevo viene de la página oficial de Blizzard. En Forever los venenos ya se pueden usar junto con los encantamientos temporales de arma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 84.236,
+  "t1": 90.178,
+  "tipo": "video",
+  "texto": "Antes tenías que elegir entre la piedra de afilar y el veneno. Ahora el arma lleva las dos cosas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 90.178,
+  "t1": 101.48,
+  "tipo": "video",
+  "texto": "Es el único personaje del juego que puede intoxicarte con una daga recién afilada, que encima es de mal gusto. Está en el último lugar porque no es un secreto, es un privilegio a plena vista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 101.48,
+  "t1": 107.93,
+  "tipo": "video",
+  "texto": "Yo llevo años pidiendo un tercer hueco de profesión y la respuesta siempre fue que hubiera nacido pícaro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 107.93,
+  "t1": 117.943,
+  "tipo": "video",
+  "texto": "Número ocho. Primeros auxilios dejó de ser la profesión de las vendas. Según lo que se ha visto en la beta, las pociones de sanación ya no salen de Alquimia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 117.943,
+  "t1": 127.46,
+  "tipo": "video",
+  "texto": "Salen de Primeros auxilios. La profesión que todos subían por compromiso, con tela de lino que les sobraba, ahora fabrica lo que más se bebe en una banda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 127.46,
+  "t1": 135.159,
+  "tipo": "video",
+  "texto": "Y el alquimista se queda con las pociones de rejuvenecimiento al principio. Más adelante recibe unas pociones descoloridas que curan más,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 135.159,
+  "t1": 141.766,
+  "tipo": "video",
+  "texto": "con un detalle pequeño. Te devuelven el setenta y cinco por ciento de lo curado como daño con el tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 141.766,
+  "t1": 152.627,
+  "tipo": "video",
+  "texto": "Es una poción con letra chiquita. Te salva hoy y te cobra mañana, igual que una tarjeta de crédito. Solo lo he visto en una guía de la beta, así que tómalo con pinzas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 152.627,
+  "t1": 161.315,
+  "tipo": "video",
+  "texto": "Si se quedó así en el juego final, el enfermero del grupo pasa a ser la persona más importante de la hermandad. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 161.315,
+  "t1": 172.808,
+  "tipo": "video",
+  "texto": "Hay una carrera de repartidor escondida dentro de las profesiones. En inglés aparece como Merchant's Favor, algo así como el favor del mercader, y no encontré traducción oficial todavía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 172.808,
+  "t1": 179.008,
+  "tipo": "video",
+  "texto": "Funciona con las cajas de suministros extraviados, que quizá recuerdes de la Temporada de Descubrimiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 179.008,
+  "t1": 187.808,
+  "tipo": "video",
+  "texto": "Encuentras una caja y la llenas con lo que fabrica tu profesión. Luego la entregas a un vendedor de reputación, sea de la Horda o de la Alianza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 187.808,
+  "t1": 194.736,
+  "tipo": "video",
+  "texto": "A cambio se abren recetas nuevas y unos cascos raros de nivel veinte. Unos cascos, y a nivel veinte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 194.736,
+  "t1": 205.28,
+  "tipo": "video",
+  "texto": "Cualquiera que haya jugado Classic sabe que a ese nivel tu cabeza va al aire, con suerte hasta los treinta. Y al llegar a trescientos de habilidad se desbloquean títulos de certificación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 205.28,
+  "t1": 212.93,
+  "tipo": "video",
+  "texto": "O sea que Azeroth por fin tiene papeleo. Ya puedes ser herrero titulado, que es lo que tu mamá siempre quiso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 212.93,
+  "t1": 228.233,
+  "tipo": "video",
+  "texto": "Ahora que Forever ya salió, encontrar una clase oculta es la mitad. La otra mitad es saber jugarla. Y casi nadie se atasca por ser malo, sino porque nadie le dijo qué estaba haciendo mal, y en Forever los vicios de las primeras semanas se quedan contigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 228.233,
+  "t1": 234.535,
+  "tipo": "video",
+  "texto": "Para eso está Overgear, que patrocina este video, con su coaching para World of Warcraft Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 234.535,
+  "t1": 241.518,
+  "tipo": "video",
+  "texto": "Es self-play: juegas tú con tu personaje, y un profesional verificado te explica por voz en qué fallas y por qué.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 241.518,
+  "t1": 262.725,
+  "tipo": "video",
+  "texto": "Talentos, rotación, addons, mazmorras nuevas o duelos: tú eliges, y pagas solo las horas que necesites. El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti. Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 262.725,
+  "t1": 268.833,
+  "tipo": "video",
+  "texto": "Número seis. El campamento, que es una profesión hecha con pedazos de todas las demás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 268.833,
+  "t1": 279.546,
+  "tipo": "video",
+  "texto": "El instructor de Cocina te enseña la fogata básica y cada profesión le agrega un mueble. Minería pone una piedra imán que da poder de ataque y Sastrería planta el estandarte de tu facción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 279.546,
+  "t1": 289.444,
+  "tipo": "video",
+  "texto": "Peletería arma una tienda de campaña que da experiencia de descanso. Ingeniería trae un robot que vende componentes, porque un gnomo no sabe acampar sin enchufar algo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 289.444,
+  "t1": 299.127,
+  "tipo": "video",
+  "texto": "Te sientas un minuto junto al fuego y te llevas las mejoras durante una hora. La fogata básica aguanta tres muebles, la de oficial cinco y la de experto diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 299.127,
+  "t1": 305.66,
+  "tipo": "video",
+  "texto": "Y mi favorito es el de Pesca, que es una pecera. Una pecera que da ocho por ciento a todas las estadísticas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 305.66,
+  "t1": 315.346,
+  "tipo": "video",
+  "texto": "según la guía que consulté. Tu hermandad va a tumbar dragones gracias a un pez de colores, y lo que no se sabe todavía es si funciona dentro de las bandas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 315.346,
+  "t1": 320.118,
+  "tipo": "video",
+  "texto": "Número cinco. Las once clases que Blizzard enseñó a escondidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 320.118,
+  "t1": 330.549,
+  "tipo": "video",
+  "texto": "En septiembre, a algunas cuentas les apareció una encuesta en el lanzador de Battle punto net, en la sección de Forever. No les salió a todas las cuentas, solo a algunas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 330.549,
+  "t1": 339.639,
+  "tipo": "video",
+  "texto": "Primero preguntaba qué papel querrías en una clase futura, y después te enseñaba once conceptos de clases nuevas. Estaba el manitas, que pilota un robot,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 339.639,
+  "t1": 348.473,
+  "tipo": "video",
+  "texto": "y un ilusionista que pelea con copias de sí mismo. Había un nigromante, una bruja que gasta su propia vida y un bardo que cura con canciones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 348.473,
+  "t1": 354.963,
+  "tipo": "video",
+  "texto": "También un vampiro sanléin, una celadora y un guerrero de runas al que cada filtración le pone un nombre distinto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 354.963,
+  "t1": 364.853,
+  "tipo": "video",
+  "texto": "Y de regreso el monje, el cazador de demonios y un caballero de la muerte que empezaría desde nivel uno. Iba a decir que es la lista de deseos de todo foro desde dos mil cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 364.853,
+  "t1": 375.794,
+  "tipo": "video",
+  "texto": "Bueno, es exactamente eso, pero con membrete oficial. La propia encuesta avisaba que algunos conceptos quizá ni se estén considerando, y ninguno llegó con el lanzamiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 375.794,
+  "t1": 380.392,
+  "tipo": "video",
+  "texto": "Aun así, nadie encuesta once clases por aburrimiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 380.392,
+  "t1": 392.455,
+  "tipo": "video",
+  "texto": "Quedan cuatro puestos, y a partir de aquí ya no hablamos de paneles ni de encuestas. Hablamos de cosas que alguien encontró jugando. Número cuatro. El druida que se convierte en serpiente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 392.455,
+  "t1": 399.1,
+  "tipo": "video",
+  "texto": "Un jugador vio en Ventormenta una víbora idéntica a las de las Cuevas de los Lamentos y pensó que era la mascota de alguien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 399.1,
+  "t1": 408.368,
+  "tipo": "video",
+  "texto": "No era una mascota. Era alguien. Si un druida feral junta las cinco piezas del conjunto de la víbora de esa mazmorra, se transforma en una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 408.368,
+  "t1": 414.505,
+  "tipo": "video",
+  "texto": "El bono de cinco piezas se llama Dream Venom y da una probabilidad de aturdir al objetivo durante un segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 414.505,
+  "t1": 425.736,
+  "tipo": "video",
+  "texto": "Lo confirmó Aidan Moon, diseñador sénior de Classic, con un detalle que me ganó. La serpiente es de un color distinto según la raza del druida, y al acechar se pega al suelo y repta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 425.736,
+  "t1": 431.581,
+  "tipo": "video",
+  "texto": "Yo creía que era un simple cambio de aspecto, y resulta que le animaron el sigilo a un bicho sin patas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 431.581,
+  "t1": 442.339,
+  "tipo": "video",
+  "texto": "Una forma nueva de druida escondida en una mazmorra de nivel veinte, sin avisarle a nadie. Número tres. La profesión que solo existe para una clase.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 442.339,
+  "t1": 449.506,
+  "tipo": "video",
+  "texto": "Los magos de la beta abrieron su panel y encontraron una habilidad nueva, Comprehension, que el resto de clases no tiene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 449.506,
+  "t1": 458.906,
+  "tipo": "video",
+  "texto": "Sirve para descifrar pergaminos misteriosos que van cayendo por el mundo. En los foros de la beta la describen como la ganzúa del pícaro, pero con lentes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 458.906,
+  "t1": 467.01,
+  "tipo": "video",
+  "texto": "Al principio parecía relleno, porque los pergaminos daban cosas curiosas y poco más. Hasta que empezaron a salir los buenos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 467.01,
+  "t1": 478.112,
+  "tipo": "video",
+  "texto": "Uno imbuye una daga para que tus golpes tengan probabilidad de congelar al enemigo. Otro encanta una espada durante una hora para reiniciar un hechizo de fuego cada vez que te pegan cuerpo a cuerpo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 478.112,
+  "t1": 488.6,
+  "tipo": "video",
+  "texto": "Fíjate en lo que tienen en común: dagas, espadas, recibir golpes. Son pergaminos de mago que solo sirven si el mago está donde un mago nunca debería estar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 488.6,
+  "t1": 499.672,
+  "tipo": "video",
+  "texto": "Guárdate ese dato para más adelante. Número dos. Diecinueve libros, seis horas y una segunda profesión escondida dentro de la primera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 499.672,
+  "t1": 504.724,
+  "tipo": "video",
+  "texto": "Un creador llamado Farmerfarms encontró un libro en Trinquete mientras subía su mago.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 504.724,
+  "t1": 513.756,
+  "tipo": "video",
+  "texto": "Reconoció el sistema de la Temporada de Descubrimiento y decidió buscar el resto, con nivel veinte. Montañas de Alterac, Arathi, Los Humedales,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 513.756,
+  "t1": 520.753,
+  "tipo": "video",
+  "texto": "Loch Modan, la Montaña Roca Negra. Zonas con enemigos hasta treinta niveles por encima de él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 520.753,
+  "t1": 531.389,
+  "tipo": "video",
+  "texto": "El libro de las Tierras Inhóspitas le costó más de una hora y más de treinta muertes. El de Alterac lo sacó atravesando la pared de una torre, que es la forma más honesta de hacer trampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 531.389,
+  "t1": 541.027,
+  "tipo": "video",
+  "texto": "Con los primeros nueve libros te dan a elegir un collar. Con los nueve siguientes aparecen dos habilidades nuevas bajo Comprehension, Estudio e Investigación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 541.027,
+  "t1": 547.113,
+  "tipo": "video",
+  "texto": "Investigación tiene una hora de reutilización, gasta plumas ligeras y le dio dos objetos por uso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 547.113,
+  "t1": 556.052,
+  "tipo": "video",
+  "texto": "Según sus pruebas, el botín mejora conforme sube tu nivel de Comprehension. Sí, son nueve más nueve, y sobra uno. Ese libro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 556.052,
+  "t1": 567.868,
+  "tipo": "video",
+  "texto": "el más cercano a Roca Negra, se entrega a un personaje distinto. En la beta nadie llegó a saber qué daba, y ahora que el juego ya salió, el primero en averiguarlo puedes ser tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 567.868,
+  "t1": 578.512,
+  "tipo": "video",
+  "texto": "Número uno. La clase que no está en la pantalla de creación. Día dos de la beta. Un mago descifra pergaminos y le sale uno raro, el Pergamino del Sable.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 578.512,
+  "t1": 587.455,
+  "tipo": "video",
+  "texto": "La descripción dice que hay que usarlo sobre la hoja de Filargenta para crear un arma poderosa. No dice dónde está la hoja. No dice nada más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 587.455,
+  "t1": 592.897,
+  "tipo": "video",
+  "texto": "El apellido sí suena, porque el barón Filargenta es un jefe del Castillo de Colmillo Oscuro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 592.897,
+  "t1": 602.374,
+  "tipo": "video",
+  "texto": "Un grupo de nivel veinte limpió la mazmorra entera buscando un objeto en el suelo o una misión. Nada. La repitieron cinco veces. Nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 602.374,
+  "t1": 613.28,
+  "tipo": "video",
+  "texto": "Mientras tanto, Farmerfarms abrió pergaminos hasta que el suyo salió en el ciento diecinueve. Y entonces un amigo confirmó la teoría, porque la hoja estaba en el botín del barón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 613.28,
+  "t1": 621.516,
+  "tipo": "video",
+  "texto": "Volvieron al castillo. Reiniciar, matar al barón, reiniciar. En el reinicio número doce, cayó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 621.516,
+  "t1": 632.176,
+  "tipo": "video",
+  "texto": "Pergamino más hoja dan el Coldflame Saber, un sable de nivel veintiuno. Su efecto es que tus golpes cuerpo a cuerpo hacen noventa y ocho de daño de fuego extra a objetivos congelados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 632.176,
+  "t1": 640.975,
+  "tipo": "video",
+  "texto": "Un arma cuerpo a cuerpo. Para un mago. Ahora junta las piezas, empezando por la daga que congela al golpear, la del número tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 640.975,
+  "t1": 646.946,
+  "tipo": "video",
+  "texto": "Súmale que el árbol de escarcha trae Dedos de Escarcha, que trata al enemigo como si estuviera congelado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 646.946,
+  "t1": 655.314,
+  "tipo": "video",
+  "texto": "Y hay pruebas preliminares de que ese daño de fuego escala con el poder de hechizos. Eso ya no es un mago de escarcha. Es un mago de batalla,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 655.314,
+  "t1": 665.09,
+  "tipo": "video",
+  "texto": "armado pieza por pieza con pergaminos. Aquí toca ser honesto, porque esto es una teoría. Blizzard no ha confirmado ninguna clase ni estilo nuevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 665.09,
+  "t1": 675.409,
+  "tipo": "video",
+  "texto": "Puede que solo sea un sable simpático de nivel veintiuno. Pero nadie esconde un arma detrás de ciento diecinueve pergaminos y un barón para que sea solo simpática.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 675.409,
+  "t1": 683.326,
+  "tipo": "video",
+  "texto": "Mi veredicto es que el mago se llevó todo el presupuesto de secretos. Tiene tres de los nueve puestos, y el druida uno muy bueno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 683.326,
+  "t1": 688.069,
+  "tipo": "video",
+  "texto": "Del guerrero, el chamán y el brujo todavía no ha aparecido nada parecido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 688.069,
+  "t1": 700.685,
+  "tipo": "video",
+  "texto": "O Blizzard se olvidó de ellos, o sus secretos siguen ahí afuera, y ahora que el juego ya salió, cualquiera puede encontrarlos. Dime cuál crees que falta, y si eres brujo y encontraste algo, con más razón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 700.685,
+  "t1": 707.337,
+  "tipo": "video",
+  "texto": "Si quieres seguir escarbando, en el canal ya tienes el video de los doce secretos que esconde World of Warcraft Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 707.337,
+  "t1": 717.5,
+  "tipo": "video",
+  "texto": "Al final, lo único que separa a un mago común de una leyenda son ciento diecinueve pergaminos y un barón que no aprende a cerrar la puerta.",
+  "clip_s": 8
+ }
+]

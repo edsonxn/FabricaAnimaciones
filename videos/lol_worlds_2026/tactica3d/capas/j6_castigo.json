@@ -1,0 +1,48 @@
+{
+ "modo": "video",
+ "de": 1012.2,
+ "a": 1013.2,
+ "anillos": [
+  {
+   "u": 0.39,
+   "v": 0.3,
+   "r": 0.036458333333333336,
+   "color": "azul",
+   "en": 1012.2,
+   "sale": 1013.2
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.39,
+   "v": 0.3,
+   "r": 0.020052083333333335,
+   "color": "azul",
+   "en": 1012.3000000000001,
+   "sale": 1013.2,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 1012.35,
+   "a": 1013.2,
+   "u": 0.39,
+   "v": 0.3,
+   "alto": 0,
+   "texto": "¡CASTIGO!",
+   "sub": "JOSEDEODO",
+   "color": "azul",
+   "dx": 97.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_worlds_2026/iconos/SummonerSmite.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [],
+ "fondo": "/videos/lol_worlds_2026/tactica3d/capas/j6_castigo_fondo.jpg",
+ "_huella": "cff4c0dc51fb"
+}

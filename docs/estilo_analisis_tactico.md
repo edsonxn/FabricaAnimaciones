@@ -96,6 +96,56 @@ flechas… haciendo pausas, dibujando flechas, rutas, elementos, mapa, todo para
 - Corregir una frase sin mover el resto: regenerar solo esa frase (`voz` detecta el texto cambiado), `seleccionar`, `tiempo`,
   y si la escena pierde/gana un compás, `"post": s` en esa escena del guion para que conserve sus compases.
 - El FX `cierra` sin `a` deja el video en NEGRO hasta el final: entre secciones, `cierra` con `a` + `abre`.
+- (27-oct, 2.ª ronda) Fuentes que NO mienten, en este orden: kill feed y banners del cuadro; los RETRATOS del HUD (se ponen
+  grises con su temporizador: orden real de las muertes); la tabla de K/D/A (quién sumó la muerte); la narración del VOD
+  transcrita con Whisper large-v3 (`initial_prompt` con los nombres) — los subtítulos automáticos cambian nombres («Cuzz» =
+  Keria). Nunca escribir intenciones que nadie dijo («espera a que gasten todo», «busca a uno solo»): o lo dice la narración
+  o se ve en los cuadros. Si dos momentos del resumen están separados (Barón 20:24 → pelea 34:41), la voz lo DICE.
+- Al regenerar varias frases: compara las escenas con `timeline_beats.json` (o una copia previa de timeline.json) y añade
+  `"post"` a las que pierdan un compás; así los ~300 efectos con tiempo absoluto no se mueven.
+
+## Jugada clave en 3D: `nucleo/tactica3d` (el usuario, 27-oct-2026)
+«En la más importante algún sistema 3D como three.js… que se aprecien las intenciones, movimientos y rutas». Primera: el Barón
+de Liquid en `videos/lol_worlds_2026/` (`j6_3d.py` → `tactica3d/j6.json` → `medios/_fuente/j6_3d.mp4`, 35 s en 66 s).
+- Motor: `nucleo/tactica3d/grieta3d.html` + `grieta3d.js` (three.js r160 en `vendor/`, sin CDN). Terreno de la Grieta con
+  relieve real, río y árboles a partir del minimapa oficial (`preparar_grieta.py` → `assets/`), fichas con el retrato del
+  campeón y el nombre del jugador, rastros (rutas) que se dibujan solos, flechas de INTENCIÓN (discontinuas) y de movimiento
+  (continuas), anillos, oleadas de súbditos, TP con haz, proyectiles (cohete de Jinx), torres que caen, objetivos (dragón,
+  Barón) con su imagen REAL recortada del VOD y barra de vida con los números leídos en pantalla, niebla de guerra (oscurece
+  el mapa salvo la visión de un equipo y deja al otro como fantasma), reloj de juego, columna de datos y carteles (PAUSA,
+  «30 segundos después»). Fuente Poppins en `fuentes/` (la del kit).
+- Render: `python nucleo/tactica3d/render3d.py <escena.json> <salida.mp4>` (Edge sin ventana + GPU, ~2 cuadros por cuadro
+  real); `… <carpeta> --cuadros 976 990 1004` para revisar; `--url` lo abre en vivo en el navegador (`&vivo=1`).
+- Escena (JSON, la escribe un `.py` del video): `de`/`a` en segundos del VIDEO; `reloj` = [[t_video, s_juego]…] (permite
+  pausas y saltos); `fichas` con `puntos` [[s_juego, u, v(, "salto")]] medidos en el minimapa (u, v = fracción, mismo
+  encuadre que `mapas/grieta.png`); `estructuras`, `objetivos`, `oleadas`, `tps`, `flechas` (con `id` para colgarles
+  rótulo), `anillos`, `proyectiles`, `focos`, `rastros` (`ventana` en s), `niebla`, `hud`, `etiquetas` (ancla `quien`,
+  `flecha` o u/v), `carteles`, `destellos`, `camara` [[t, u, v, distancia, inclinación°, giro°, fov]] (Catmull-Rom).
+- Medir posiciones: hojas del minimapa con rejilla de décimas cada 2-6 s (recorte 1640,800 de 276 px en las transmisiones de
+  LoL Esports) + la vista principal para saber quién es quién en los grupos. El rastreo automático por plantillas FALLA
+  cuando los iconos se enciman: medir a mano. Precisión ~±0,03 del mapa; donde no hay datos (regresos a base), salto de tiempo
+  con cartel, no rutas inventadas.
+- En efectos.py el 3D entra como FX `video` (`ruta=…j6_3d.mp4`, `desde = t − de`) tras el rebobinado, y al clímax vuelve el
+  VOD real (el castigo). Los sonidos del 3D (TP, torre, cohete) van en PISTAS con los instantes que imprime el JSON.
+
+### VOD real INTERCALADO con 3D (el usuario, 27-oct-2026: «no olvides mostrar la jugada con el video real y ahí también
+### elementos 3D… una combinación de video real intercalando 3D»)
+- Nunca 30 s seguidos de mapa 3D: alternar por frases. j6: 3D (contexto) → VOD (el dragón) → 3D (pausa, oleada, TP) → VOD
+  congelado con elementos 3D (AL vuelve a defender) → 3D (flanco, oscuridad, Barón) → VOD con 3D (cohete) → VOD (castigo).
+  `V3(de, a)` toma el tramo del clip 3D que corresponde (`desde = de − inicio del clip`).
+- **Elementos 3D sobre el VOD** (`E.modo = "video"`, `nucleo/tactica3d/sobre_video.py`): `pizarra3d(nombre, de, a, els, reloj,
+  (fuente, s))` convierte la pizarra 2D de una pausa (mismos x, y medidos en el cuadro) en capa transparente: anillos tumbados
+  en perspectiva del suelo, columna de luz sobre cada jugador (anillos ≤ 80 px), flechas en arco con sombra, zonas con borde
+  de luz, rótulos con retrato; `extra=dict(proyectiles=[…])` para el cohete, etc. Se renderiza con
+  `python nucleo/tactica3d/sobre_video.py <video>` (solo las que cambian; dos MP4 color+alfa que lee `capa.py`).
+  Revisar: `render3d.py <capa>.json <carpeta> --cuadros t` (pone el cuadro real debajo).
+- **«Mesa»** (`E.modo = "mesa"`, `videos/lol_worlds_2026/mesas_3d.py`): el cuadro congelado se proyecta sobre un suelo 3D; la
+  cámara parte del encuadre del juego (con el cuadro real encima fundiéndose: el corte no se ve), baja y gira, los jugadores se
+  levantan como fichas con retrato en su sitio real (placa de nombre + 0,06 = pies) y vuelve al encuadre del juego para que el
+  VOD siga desde ese cuadro. `MESA(k, de, a, reloj)` en efectos.py. Para PELEAS es mejor que el mapa: el minimapa encima los
+  iconos y los resúmenes de LoL Esports no dan un rectángulo de cámara fiable (el Anciano no cae donde dice el rectángulo).
+- Comprobar la alineación de las fichas con la cámara fija en la pose del juego (`camara = [[de]+G, [a]+G]`, fichas visibles)
+  antes del render: cada disco debe caer bajo su campeón.
 
 ## Pendiente
 - Zoom con la pizarra transformada (hoy la pizarra se mide sobre el cuadro ya acercado).

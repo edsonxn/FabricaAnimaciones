@@ -64,12 +64,12 @@ FONETICA = {
     "SkewMond": "Skiúmond", "jojopyun": "Yoyopiún", "Supa": "Súpa", "Doggo": "Dógo", "Shadow": "Shádou",
     "Josedeodo": "Josedeodo", "Morgan": "Mórgan", "Yeon": "Yon", "CoreJJ": "Cor yei yei", "Breathe": "Brid",
     "Tarzan": "Tárzan", "Shanks": "Shanks", "Hope": "Jóup", "Viper": "Váiper", "Kai'Sa": "Káisa", "Lee Sin": "Li Sin",
-    "Xin Zhao": "Shin Zháo", "Jax": "Yax", "K'Sante": "Kasánte", "Ambessa": "Ambésa",
+    "Xin Zhao": "Shin Zháo", "Jax": "Yax", "Jinx": "Yinx", "K'Sante": "Kasánte", "Myrwn": "Mírwin", "Jayce": "Yéis", "Ambessa": "Ambésa",
 }
 # Whisper oye mal los nombres («Carmen Corp», «Genji», «Billy Billy», «varón»): transcripciones de las 49 frases revisadas el
 # 27-oct (texto completo, sin cortes); umbral = lo medido + margen. ElevenLabs termina en seco (cola alta sin cortar palabra).
-CER_MAX_POR_FRASE = {"gancho_1": 0.045, "gancho_2": 0.015, "gancho_3": 0.015, "playin_1": 0.041, "playin_2": 0.04, "playin_3": 0.04, "dia1_1": 0.061, "dia1_2": 0.055, "jugada1_2": 0.094, "jugada1_3": 0.041, "jugada1_4": 0.049, "jugada1_6": 0.038, "dia2_0": 0.044, "dia2_1": 0.064, "jugada2_0": 0.074, "jugada2_3": 0.032, "jugada2_5": 0.027, "dia2b_0": 0.077, "dia2b_1": 0.054, "dia2b_2": 0.069, "dia2b_3": 0.098, "dia2b_5": 0.036, "jugada3_0": 0.05, "jugada3_1": 0.058, "dia3b_0": 0.076, "jugada4_0": 0.049, "jugada4_1": 0.105, "jugada4_2": 0.042, "jugada4_3": 0.015, "jugada4_4": 0.057, "jugada5_0": 0.034, "dia4_2": 0.114, "dia4_3": 0.048, "dia4_4": 0.053, "dia4_5": 0.047, "jugada6_3": 0.034, "jugada6_4": 0.038, "meta_2": 0.047, "jugadores_0": 0.081, "jugadores_3": 0.047, "jugadores_6": 0.034, "equipos_1": 0.034, "equipos_2": 0.015, "equipos_6": 0.052, "queviene_1": 0.032, "queviene_2": 0.082, "queviene_4": 0.036, "lecciones_1": 0.052, "lecciones_2": 0.072, "lecciones_3": 0.076}
-TAIL_MAX_POR_FRASE = {"gancho_1": 0.98, "gancho_2": 1.13, "gancho_3": 1.11, "playin_1": 0.72, "playin_2": 0.68, "playin_3": 0.91, "dia1_1": 0.76, "dia1_2": 0.93, "jugada1_2": 0.68, "jugada1_3": 0.8, "jugada1_4": 0.32, "jugada1_6": 0.5, "dia2_0": 1.0, "dia2_1": 0.78, "jugada2_0": 0.3, "jugada2_3": 0.92, "jugada2_5": 0.78, "dia2b_0": 0.57, "dia2b_1": 0.87, "dia2b_2": 0.83, "dia2b_3": 0.27, "dia2b_5": 0.93, "jugada3_0": 0.4, "jugada3_1": 0.95, "dia3b_0": 0.22, "jugada4_0": 0.33, "jugada4_1": 0.84, "jugada4_2": 0.78, "jugada4_3": 1.3, "jugada4_4": 0.83, "jugada5_0": 0.69, "dia4_2": 0.63, "dia4_3": 0.8, "dia4_4": 0.84, "dia4_5": 0.96, "jugada6_3": 0.52, "jugada6_4": 0.14, "meta_2": 0.89, "jugadores_0": 0.35, "jugadores_3": 0.78, "jugadores_6": 0.87, "equipos_1": 0.81, "equipos_2": 1.08, "equipos_6": 0.96, "queviene_1": 1.03, "queviene_2": 0.89, "queviene_4": 0.78, "lecciones_1": 1.04, "lecciones_2": 0.69, "lecciones_3": 0.79}
+CER_MAX_POR_FRASE = {"jugada1_3": 0.04, "jugada2_3": 0.08, "jugada3_2": 0.045, "jugada3_3": 0.04, "jugada4_2": 0.08, "gancho_1": 0.045, "gancho_2": 0.015, "gancho_3": 0.015, "playin_1": 0.041, "playin_2": 0.04, "playin_3": 0.04, "dia1_1": 0.061, "dia1_2": 0.055, "jugada1_2": 0.094, "jugada1_4": 0.049, "jugada1_6": 0.038, "dia2_0": 0.044, "dia2_1": 0.064, "jugada2_0": 0.074, "jugada2_5": 0.027, "dia2b_0": 0.077, "dia2b_1": 0.054, "dia2b_2": 0.069, "dia2b_3": 0.098, "dia2b_5": 0.036, "jugada3_0": 0.05, "jugada3_1": 0.058, "dia3b_0": 0.076, "jugada4_0": 0.049, "jugada4_1": 0.105, "jugada4_3": 0.015, "jugada4_4": 0.057, "jugada5_0": 0.034, "dia4_2": 0.114, "dia4_3": 0.048, "dia4_4": 0.053, "dia4_5": 0.047, "jugada6_3": 0.075, "jugada6_4": 0.038, "meta_2": 0.047, "jugadores_0": 0.081, "jugadores_3": 0.047, "jugadores_6": 0.034, "equipos_1": 0.034, "equipos_2": 0.015, "equipos_6": 0.052, "queviene_1": 0.032, "queviene_2": 0.082, "queviene_4": 0.036, "lecciones_1": 0.052, "lecciones_2": 0.072, "lecciones_3": 0.076}
+TAIL_MAX_POR_FRASE = {"gancho_1": 0.98, "gancho_2": 1.13, "gancho_3": 1.11, "playin_1": 0.72, "playin_2": 0.68, "playin_3": 0.91, "dia1_1": 0.76, "dia1_2": 0.93, "jugada1_2": 0.68, "jugada1_3": 0.9, "jugada1_4": 0.32, "jugada1_6": 0.5, "dia2_0": 1.0, "dia2_1": 0.78, "jugada2_0": 0.3, "jugada2_3": 1.1, "jugada2_5": 0.78, "dia2b_0": 0.57, "dia2b_1": 0.87, "dia2b_2": 0.83, "dia2b_3": 0.27, "dia2b_5": 0.93, "jugada3_0": 0.4, "jugada3_1": 0.95, "dia3b_0": 0.22, "jugada4_0": 0.33, "jugada4_1": 0.84, "jugada4_2": 0.78, "jugada4_3": 1.3, "jugada4_4": 0.83, "jugada5_0": 0.69, "dia4_2": 0.63, "dia4_3": 0.8, "dia4_4": 0.84, "dia4_5": 0.96, "jugada6_3": 0.52, "jugada6_4": 0.14, "meta_2": 0.89, "jugadores_0": 0.35, "jugadores_3": 0.78, "jugadores_6": 0.87, "equipos_1": 0.81, "equipos_2": 1.08, "equipos_6": 0.96, "queviene_1": 1.03, "queviene_2": 0.89, "queviene_4": 0.78, "lecciones_1": 1.04, "lecciones_2": 0.69, "lecciones_3": 0.79}
 
 SECUENCIA = dict(
     fuente="yt",
@@ -166,13 +166,13 @@ ESCENAS = [
         "Y Karmine Corp… aplasta a Anyone's Legend. Cuatro equipos chinos, cuatro derrotas. Nunca había pasado que el LPL no ganara ni una partida en la primera ronda.",
         "Y la pelea que lo resume todo está en esa última partida. Vamos a verla de cerca.",
     ]},
-    {"id": "jugada1", "pre": 52.0, "frases": [
+    {"id": "jugada1", "pre": 52.0, "post": 1.8, "frases": [
         "AL busca la pelea. Y tiene con qué: Olaf, Nocturne, Akali y Miss Fortune. Una composición hecha para entrar de frente.",
         "[short pause] Pausa. Mira a Busio. Juega Renata, y su definitiva hace algo cruel: los enemigos que toca… se atacan entre ellos.",
         "La ola de Renata cae encima de AL. Kyeahoo conecta la onda de choque de Orianna, Yike los encierra con la definitiva de Jarvan… y AL queda atrapado, peleándose consigo mismo.",
-        "Ahí entra Canna. Con Jax, por detrás, directo a la línea de atrás, donde están los que hacen el daño.",
+        "Ahí entra Canna. Con Jax, directo a la línea de atrás, donde están los que hacen el daño.",
         "[excited] ¡Cuádruple asesinato para Canna! Karmine Corp gana la pelea cuatro por uno.",
-        "Después llega el Barón, la partida… y el cuarto nexo chino que cae en las cuatro primeras partidas del Mundial.",
+        "Después llega el Barón, la partida… y el cuarto nexo chino que cae en las cuatro primeras partidas de la fase suiza.",
         "[short pause] La lección: AL no perdió por falta de nivel. Perdió por pelear justo donde Karmine Corp lo estaba esperando.",
     ]},
     {"id": "dia1b", "pre": 0.4, "frases": [
@@ -192,7 +192,7 @@ ESCENAS = [
         "T1 ya tiene el alma de Nube, y empieza a tirar el Anciano.",
         "[short pause] Pausa. T1 va arriba en oro y tiene el alma. Si además termina el Anciano, con su bufo la partida prácticamente se acaba.",
         "DK tiene una sola salida: pelear. Ya. Antes de que caiga el dragón.",
-        "Career, con Renata, se lanza con Destello al centro de T1. Smash usa la definitiva de Kalista para recogerlo y volver a lanzarlo… y T1 sale volando.",
+        "Keria se lanza con Destello y la definitiva de Neeko sobre DK. Pero Smash usa la definitiva de Kalista para sacar a Career de ahí… y Career responde con la definitiva de Renata.",
         "[excited] ¡Y DK voltea la pelea entera! ¡De la nada, DK reduce a cenizas a T1… y se queda con el Anciano!",
         "Una pelea. Eso fue todo. DK se pone dos a cero… y T1, el tricampeón, conoce su primera derrota del Mundial.",
     ]},
@@ -212,8 +212,8 @@ ESCENAS = [
     {"id": "jugada3", "pre": 52.0, "frases": [
         "KOI había llegado a ponerse a menos de mil de oro. Pero Jojopyun, con Anivia, da un paso de más.",
         "[short pause] Pausa. Mira la distancia: Jojopyun está adelantado, lejos de su equipo… y Career, con Nautilus, tiene el ancla lista.",
-        "El ancla conecta. Anivia cae primero, y DK se mete hasta la línea de atrás de KOI.",
-        "Ahora mira a Smash. Su Kai'Sa espera a que KOI gaste todo… y entonces entra. Supa cae. El Agotamiento que le lanzan no sirve de nada.",
+        "El ancla atrapa a la Anivia. Pero el primero en caer es el Jayce de Myrwn, y DK se mete hasta la línea de atrás de KOI.",
+        "Ahora mira a Smash, con Kai'Sa. Entra a la pelea… y Supa cae. El Agotamiento que le lanzan no sirve de nada.",
         "[excited] ¡Triple! ¡Cuádruple! ¡Y pentakill para Smash!",
         "El primer y único pentakill del Mundial hasta ahora. DK gana la serie dos a cero y se convierte en el primer equipo clasificado a cuartos.",
     ]},
@@ -221,18 +221,18 @@ ESCENAS = [
         "Y en la otra serie… LYON le hace a Gen.G lo que nadie esperaba.",
     ]},
     {"id": "jugada4", "pre": 52.0, "frases": [
-        "Primera partida. Gen.G viene acumulando dragones; es su plan de siempre.",
-        "[short pause] Pausa. LYON acaba de quedarse con el Barón en la cara de Gen.G, con la Kalista de Berserker. Y ahora mira a Inspired, con Xin Zhao.",
-        "Inspired se mete con Xin Zhao al centro del equipo coreano, sin dudar. Busca a uno solo: Chovy.",
+        "Primera partida. El plan de Gen.G es acumular dragones.",
+        "[short pause] Pausa. En el minuto veinte, LYON le gana el Barón a Gen.G. Pero la pelea que decide la partida llega catorce minutos después. Mira a Inspired, con Xin Zhao.",
+        "Inspired se mete con Xin Zhao al centro del equipo coreano, sin dudar.",
         "[excited] ¡Chovy cae! ¡Y LYON gana la pelea! El estadio de Texas no lo puede creer: Norteamérica le gana una partida al primer sembrado de Corea.",
         "[short pause] Pero Gen.G es Gen.G. Ajusta, gana la segunda y la tercera, y se clasifica tres a cero. LYON cae, pero con la cabeza en alto.",
     ]},
     {"id": "dia3c", "pre": 0.4, "frases": [
         "Los que iban uno a uno se jugaron todo a una sola partida. Y ahí apareció un viejo conocido.",
     ]},
-    {"id": "jugada5", "pre": 52.0, "frases": [
+    {"id": "jugada5", "pre": 52.0, "post": 2.6, "frases": [
         "Invictus contra Hanwha Life. Invictus va arriba en oro y acaba de llevarse el alma del dragón Infernal… pero Hanwha sigue viva.",
-        "[short pause] Pausa. Mira dónde está Rookie: con Annie, detrás de su equipo, esperando a que Hanwha gaste sus herramientas.",
+        "[short pause] Pausa. Mira dónde está Rookie: con Annie, detrás de su equipo.",
         "Gumayusi se queda sin salida. Rookie lo remata. Y en el tres contra tres que queda, la transformación de Lulu deja a Olaf sin poder hacer nada.",
         "[excited] ¡Triple para Rookie… y cuádruple!",
         "Invictus gana. El equipo que perdió el primer día ahora va dos a uno, a una serie de cuartos. Y Top Esports también gana, contra G2.",
@@ -250,8 +250,8 @@ ESCENAS = [
     {"id": "jugada6", "pre": 52.0, "frases": [
         "Minuto 40. Liquid pierde en asesinatos, 11 a 17… pero va arriba en oro y en torres.",
         "Toma el tercer dragón y le quita a AL el alma. [short pause] Pausa. Mira arriba: una oleada de Liquid empuja sola hacia el inhibidor, y Morgan se teletransporta para presionar.",
-        "AL tiene que elegir: defender su base o perseguir a Liquid. No puede hacer las dos cosas. Y mientras duda, Liquid se queda con toda la visión del lado de arriba.",
-        "Liquid empieza el Barón. El Nocturne de AL entra buscando el robo…",
+        "AL tiene que soltar el dragón y volver a su base. Intenta encerrar a Liquid por un flanco… pero Liquid se retira a tiempo, y AL se queda a oscuras.",
+        "Liquid empieza el Barón. Y Hope dispara el cohete de Jinx buscando el robo…",
         "[excited] ¡Pero Josedeodo no falla el castigo! ¡Barón para Liquid!",
         "Minutos después, Liquid termina la partida. [short pause] Anyone's Legend, campeón de China, se despide cero a tres. Sin ganar una sola partida.",
         "[short pause] El favorito cayó.",

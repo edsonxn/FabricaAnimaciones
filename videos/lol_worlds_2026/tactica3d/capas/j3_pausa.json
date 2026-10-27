@@ -1,0 +1,53 @@
+{
+ "modo": "video",
+ "de": 613.68,
+ "a": 617.3,
+ "anillos": [
+  {
+   "u": 0.385,
+   "v": 0.19,
+   "r": 0.028645833333333332,
+   "color": "rojo",
+   "en": 615.5,
+   "sale": 617.3
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.385,
+   "v": 0.19,
+   "r": 0.015755208333333333,
+   "color": "rojo",
+   "en": 615.6,
+   "sale": 617.3,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 615.65,
+   "a": 617.3,
+   "u": 0.385,
+   "v": 0.19,
+   "alto": 0,
+   "texto": "JOJOPYUN",
+   "sub": "ANIVIA · ADELANTADO",
+   "color": "rojo",
+   "dx": -83.5,
+   "dy": -10,
+   "tam": 30
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 613.75,
+   "a": 617.3,
+   "k": 0.4
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/lol_worlds_2026/tactica3d/capas/j3_pausa_fondo.jpg",
+ "_huella": "9d5e49660911"
+}

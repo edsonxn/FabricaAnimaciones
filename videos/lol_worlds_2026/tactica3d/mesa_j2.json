@@ -1,0 +1,258 @@
+{
+ "modo": "mesa",
+ "de": 446.6,
+ "a": 453.32,
+ "fondo": "/videos/lol_worlds_2026/tactica3d/mesa_j2_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "ShowMaker": {
+   "jugador": "ShowMaker",
+   "campeon": "Viktor",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Viktor.png",
+   "puntos": [
+    [
+     0,
+     0.33,
+     0.44
+    ]
+   ],
+   "de": 447.0,
+   "sale": 452.3
+  },
+  "Siwoo": {
+   "jugador": "Siwoo",
+   "campeon": "KSante",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/KSante.png",
+   "puntos": [
+    [
+     0,
+     0.42,
+     0.425
+    ]
+   ],
+   "de": 447.1,
+   "sale": 452.3
+  },
+  "Lucid": {
+   "jugador": "Lucid",
+   "campeon": "JarvanIV",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.4,
+     0.595
+    ]
+   ],
+   "de": 447.2,
+   "sale": 452.3
+  },
+  "Career": {
+   "jugador": "Career",
+   "campeon": "Renata",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Renata.png",
+   "puntos": [
+    [
+     0,
+     0.45,
+     0.64
+    ]
+   ],
+   "de": 447.3,
+   "sale": 452.3
+  },
+  "Smash": {
+   "jugador": "Smash",
+   "campeon": "Kalista",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.41,
+     0.665
+    ]
+   ],
+   "de": 447.4,
+   "sale": 452.3
+  },
+  "Doran": {
+   "jugador": "Doran",
+   "campeon": "Jayce",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Jayce.png",
+   "puntos": [
+    [
+     0,
+     0.67,
+     0.29
+    ]
+   ],
+   "de": 447.2,
+   "sale": 452.3
+  },
+  "Peyz": {
+   "jugador": "Peyz",
+   "campeon": "Caitlyn",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Caitlyn.png",
+   "puntos": [
+    [
+     0,
+     0.74,
+     0.485
+    ]
+   ],
+   "de": 447.3,
+   "sale": 452.3
+  },
+  "Keria": {
+   "jugador": "Keria",
+   "campeon": "Neeko",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Neeko.png",
+   "puntos": [
+    [
+     0,
+     0.61,
+     0.745
+    ]
+   ],
+   "de": 447.4,
+   "sale": 452.3
+  }
+ },
+ "camara": [
+  [
+   446.6,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   446.95000000000005,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   448.7504,
+   -18,
+   36,
+   50,
+   0.6,
+   0.45
+  ],
+  [
+   450.7664,
+   14,
+   40,
+   47.5,
+   0.6,
+   0.45
+  ],
+  [
+   452.42,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   453.32,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "pelear",
+   "pts": [
+    [
+     0.42,
+     0.55
+    ],
+    [
+     0.58,
+     0.44
+    ],
+    [
+     0.78,
+     0.3
+    ]
+   ],
+   "color": "azul",
+   "en": 449.2,
+   "dur": 0.9,
+   "sale": 452.3,
+   "alto": 4,
+   "grosor": 1.5
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.84,
+   "v": 0.27,
+   "r": 0.06,
+   "color": "amarillo",
+   "en": 447.3,
+   "sale": 452.3
+  }
+ ],
+ "pilares": [
+  {
+   "u": 0.84,
+   "v": 0.27,
+   "r": 0.03,
+   "color": "morado",
+   "en": 447.4,
+   "sale": 452.3,
+   "alto": 12
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 447.6,
+   "a": 452.3,
+   "u": 0.84,
+   "v": 0.27,
+   "alto": 3,
+   "texto": "ANCIANO",
+   "sub": "T1 LO ESTÁ TIRANDO",
+   "color": "amarillo",
+   "dx": -170,
+   "dy": 40
+  },
+  {
+   "de": 449.6,
+   "a": 452.3,
+   "flecha": "pelear",
+   "texto": "¡PELEAR YA!",
+   "sub": "LA ÚNICA SALIDA DE DK",
+   "color": "azul",
+   "dx": -60,
+   "dy": 60
+  }
+ ]
+}

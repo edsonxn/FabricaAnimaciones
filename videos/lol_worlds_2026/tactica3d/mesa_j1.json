@@ -1,0 +1,262 @@
+{
+ "modo": "mesa",
+ "de": 277.4,
+ "a": 282.27,
+ "fondo": "/videos/lol_worlds_2026/tactica3d/mesa_j1_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Busio": {
+   "jugador": "Busio",
+   "campeon": "Renata",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Renata.png",
+   "puntos": [
+    [
+     0,
+     0.38,
+     0.375
+    ]
+   ],
+   "de": 277.8,
+   "sale": 281.2
+  },
+  "Yike": {
+   "jugador": "Yike",
+   "campeon": "JarvanIV",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.47,
+     0.365
+    ]
+   ],
+   "de": 277.9,
+   "sale": 281.2
+  },
+  "Canna": {
+   "jugador": "Canna",
+   "campeon": "Jax",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Jax.png",
+   "puntos": [
+    [
+     0,
+     0.35,
+     0.555
+    ]
+   ],
+   "de": 278.0,
+   "sale": 281.2
+  },
+  "Caliste": {
+   "jugador": "Caliste",
+   "campeon": "Kalista",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.47,
+     0.565
+    ]
+   ],
+   "de": 278.1,
+   "sale": 281.2
+  },
+  "kyeahoo": {
+   "jugador": "kyeahoo",
+   "campeon": "Orianna",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Orianna.png",
+   "puntos": [
+    [
+     0,
+     0.62,
+     0.715
+    ]
+   ],
+   "de": 278.2,
+   "sale": 281.2
+  },
+  "Shanks": {
+   "jugador": "Shanks",
+   "campeon": "Akali",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Akali.png",
+   "puntos": [
+    [
+     0,
+     0.2,
+     0.245
+    ]
+   ],
+   "de": 277.9,
+   "sale": 281.2
+  },
+  "Kael": {
+   "jugador": "Kael",
+   "campeon": "Neeko",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Neeko.png",
+   "puntos": [
+    [
+     0,
+     0.35,
+     0.255
+    ]
+   ],
+   "de": 278.0,
+   "sale": 281.2
+  },
+  "Tarzan": {
+   "jugador": "Tarzan",
+   "campeon": "Nocturne",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Nocturne.png",
+   "puntos": [
+    [
+     0,
+     0.72,
+     0.325
+    ]
+   ],
+   "de": 278.1,
+   "sale": 281.2
+  }
+ },
+ "camara": [
+  [
+   277.4,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   277.75,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   278.9584,
+   -18,
+   36,
+   50,
+   0.42,
+   0.42
+  ],
+  [
+   280.4194,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.42
+  ],
+  [
+   281.37,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   282.27,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "ola",
+   "pts": [
+    [
+     0.38,
+     0.37
+    ],
+    [
+     0.33,
+     0.31
+    ],
+    [
+     0.27,
+     0.26
+    ]
+   ],
+   "color": "azul",
+   "en": 278.5,
+   "dur": 0.9,
+   "sale": 281.2,
+   "alto": 3.5,
+   "grosor": 1.6
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.13,
+     0.17
+    ],
+    [
+     0.42,
+     0.17
+    ],
+    [
+     0.44,
+     0.33
+    ],
+    [
+     0.15,
+     0.35
+    ]
+   ],
+   "color": "rojo",
+   "en": 279.0,
+   "sale": 281.2,
+   "alfa": 0.18
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 278.6,
+   "a": 281.2,
+   "flecha": "ola",
+   "texto": "LA OLA DE RENATA",
+   "sub": "BUSIO",
+   "color": "azul",
+   "dx": 40,
+   "dy": -60
+  },
+  {
+   "de": 279.6,
+   "a": 281.2,
+   "u": 0.28,
+   "v": 0.22,
+   "alto": 0,
+   "texto": "SE ATACAN ENTRE ELLOS",
+   "color": "rojo",
+   "dx": -40,
+   "dy": 120
+  }
+ ]
+}

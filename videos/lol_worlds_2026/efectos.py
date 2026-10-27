@@ -9,10 +9,15 @@ Tiempos ABSOLUTOS (timeline.json). Posiciones de la pizarra: fracción del cuadr
 """
 import os
 
+import sys
+
 import mg_lol as L
 import mg_tactica as T
 
 _D = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(_D, "..", "..", "nucleo", "tactica3d"))
+import sobre_video as SV  # noqa: E402
+from capa import capa3d  # noqa: E402
 ICO = os.path.join(_D, "iconos")
 A, R, Y = "azul", "rojo", "amarillo"
 
@@ -45,9 +50,35 @@ def pizarra(de, a, els, reloj, pausa="PAUSA"):
     return dict(tipo="mg", fn=T.pizarra(de, els, pausa, reloj), de=de, a=a, nombre=f"pizarra {reloj}", ver=1.0)
 
 
+CAPAS = os.path.join(_D, "tactica3d", "capas")
+
+
+def pizarra3d(nombre, de, a, els, reloj, fondo, pausa="PAUSA", extra=None):
+    """La pausa con elementos 3D SOBRE EL VIDEO REAL (27-oct-2026): la pizarra 2D solo pone el chip «PAUSA · reloj» y los
+    anillos/flechas/zonas medidos en el cuadro van como capa 3D (nucleo/tactica3d/sobre_video.py). fondo = (ruta, s) del
+    cuadro congelado, para revisar. extra = dict de elementos 3D añadidos (pilares, proyectiles, etiquetas…)."""
+    spec = SV.de_pizarra(de, a, els)
+    for k, v in (extra or {}).items():
+        spec.setdefault(k, []).extend(v)
+    base = SV.registrar(CAPAS, nombre, spec, fondo)
+    return [pizarra(de, a, [], reloj, pausa),
+            dict(tipo="mg", fn=capa3d(base), de=de, a=a, nombre=f"3D {nombre}", ver=1.0)]
+
+
 def rebobinar(de, a, sub=None, texto="REBOBINANDO"):
     return dict(tipo="mg", fn=T.rebobinar(texto, sub), de=de, a=a, nombre="rebobinar")
 
+
+J3D = os.path.join(_D, "medios", "_fuente", "j6_3d.mp4")
+
+
+def V3(de, a, mp4=J3D, t0=975.0):
+    """tramo del clip 3D (render3d.py) que corresponde a [de, a) del video; el clip empieza en t0"""
+    return dict(tipo="video", de=de, a=a, ruta=mp4, desde=de - t0, vel=1.0, nombre=f"3D {de:.1f}")
+
+def MESA(k, de, a, reloj):
+    """la pausa se vuelve 3D: medios/_fuente/mesa_<k>.mp4 (mesas_3d.py) + el chip «PAUSA · reloj» encima"""
+    return [V3(de, a, os.path.join(_D, "medios", "_fuente", f"mesa_{k}.mp4"), de), pizarra(de, a, [], reloj)]
 
 MAPA = os.path.join(_D, "mapas", "grieta.png")
 
@@ -220,44 +251,40 @@ FX += [
     peg(268.3, ART("Akali_carga"), "Akali", R, sub="Shanks", dur=4.9, x=.82, y=.62, tam=210),
     peg(269.1, ART("MissFortune_carga"), "Miss Fortune", R, sub="Hope", dur=4.1, x=.93, y=.62, tam=210),
     dict(tipo="destello", en=273.3, fuerza=.45),
-    J(1, 273.3, 282.4, 75.0, 0),
-    pizarra(273.3, 282.4, [
+    J(1, 273.3, 277.4, 75.0, 0),
+    *pizarra3d("j1_pausa", 273.3, 277.4, [
         dict(tipo="foco", en=273.4, k=.42),
         dict(tipo="anillo", x=.715, y=.36, r=70, color=R, en=273.5, etiqueta="TARZAN", sub="NOCTURNE · KC A CIEGAS",
              lado="izq"),
         dict(tipo="anillo", x=.21, y=.27, r=60, color=R, en=273.7, etiqueta="SHANKS", sub="AKALI", lado="der"),
         dict(tipo="anillo", x=.385, y=.43, r=72, color=A, en=274.7, etiqueta="BUSIO", sub="RENATA",
              icono=os.path.join(ICO, "Renata.png"), lado="abajo"),
-        dict(tipo="flecha", pts=[(.40, .40), (.36, .32), (.30, .25)], color=A, en=277.0, dur=.7, etiqueta="LA OLA",
-             off=(-90, 10)),
-        dict(tipo="zona", pts=[(.15, .17), (.42, .17), (.44, .33), (.17, .35)], color=R, en=279.6, alfa=.18),
-        dict(tipo="flecha", pts=[(.47, .58), (.55, .48), (.66, .38)], color=A, en=280.4, dur=.6, guion=True,
-             etiqueta="KC CIERRA EL PASO", off=(60, 40)),
-    ], "24:36"),
+    ], "24:36", (fuente(1), 75.0)),
+    # «…y su definitiva hace algo cruel: los enemigos que toca… se atacan entre ellos.» — la pausa en 3D (mesas_3d.py)
+    *MESA("j1", 277.4, 282.27, "24:36"),
     peg(275.2, ART("Renata_carga"), "Renata", A, sub="Busio · KC", dur=7.0, x=.93, y=.42, tam=220),
-    tar(278.6, 282.3, "Su definitiva", "El enemigo ataca a sus aliados", A, icono="Renata", x=.5, y=.86, tam=40),
-    J(1, 282.4, 294.27, 75.0, .42),
+    J(1, 282.27, 294.09, 75.0, .42),
     tar(282.4, 285.6, "Cámara lenta", "24:36 → 24:41", R, x=.1, y=.14, tam=30),
     tar(282.9, 294.2, "Definitiva de Renata", "Busio", A, icono="Renata", x=.87, y=.13, tam=30),
     tar(285.9, 294.2, "Onda de choque", "Kyeahoo · Orianna", A, icono="Orianna", x=.87, y=.21, tam=30),
     tar(288.8, 294.2, "Cataclismo", "Yike · Jarvan IV", A, icono="JarvanIV", x=.87, y=.29, tam=30),
     tar(290.9, 294.2, "AL, atrapado", "Peleándose consigo mismo", R, logo="AL", x=.5, y=.86, tam=40),
-    J(1, 294.27, 301.08, 80.0, 1.56),
-    peg(294.8, "Canna", "Canna", A, "KC", "Top", dur=6.2, x=.08, y=.55, tam=240),
-    peg(295.6, ART("Jax_carga"), "Jax", A, sub="Por detrás", dur=5.4, x=.93, y=.42, tam=220),
-    dict(tipo="destello", en=301.1, fuerza=.6),
-    J(1, 301.08, 306.38, 90.6, .55),
-    tar(301.1, 306.3, "¡Cuádruple!", "Canna · Jax", A, logo="KC", dato="4", x=.16, y=.14, tam=44),
-    tar(304.4, 306.3, "KC gana la pelea", "Cuatro por uno", A, x=.5, y=.86, tam=40),
-    J(1, 306.38, 310.6, 126.0), J(1, 310.6, 314.25, 145.5),
-    tar(307.4, 310.5, "Barón para KC", None, A, logo="KC", x=.5, y=.2, tam=60),
+    J(1, 294.09, 300.0, 80.0, 1.79),
+    peg(294.5, "Canna", "Canna", A, "KC", "Top", dur=5.4, x=.08, y=.55, tam=240),
+    peg(295.5, ART("Jax_carga"), "Jax", A, sub="A la línea de atrás", dur=4.4, x=.93, y=.42, tam=220),
+    dict(tipo="destello", en=300.0, fuerza=.6),
+    J(1, 300.0, 305.24, 90.6, .55),
+    tar(300.0, 305.2, "¡Cuádruple!", "Canna · Jax", A, logo="KC", dato="4", x=.16, y=.14, tam=44),
+    tar(303.3, 305.2, "KC gana la pelea", "Cuatro por uno", A, x=.5, y=.86, tam=40),
+    J(1, 305.24, 309.5, 126.0), J(1, 309.5, 313.21, 145.5),
+    tar(306.1, 309.4, "Barón para KC", None, A, logo="KC", x=.5, y=.2, tam=60),
     mg(L.caida("Día 1: el LPL", [(EQ(c), n) for c, n in (("IG", "IG"), ("TES", "TES"), ("BLG", "BLG"), ("AL", "AL"))], "0-4"),
-       309.5, 314.3, [309.6, 309.9, 310.3, 310.8, 311.3, 312.6], y=.42, nombre="caida China 2"),
-    J(1, 314.25, 322.9, 149.2, 0),
-    pizarra(314.25, 322.9, [dict(tipo="foco", en=314.3, k=.5)], "FIN", "LA LECCIÓN"),
-    tar(314.4, 322.4, "La lección", None, "oro", x=.5, y=.3, tam=70),
-    tar(315.9, 322.4, "AL no perdió por nivel", None, R, logo="AL", x=.5, y=.47, tam=58),
-    tar(317.7, 322.4, "Peleó donde KC lo esperaba", None, A, logo="KC", x=.5, y=.64, tam=58),
+       308.4, 313.2, [308.5, 308.8, 309.2, 309.7, 310.2, 311.5], y=.42, nombre="caida China 2"),
+    J(1, 313.21, 322.9, 149.2, 0),
+    pizarra(313.21, 322.9, [dict(tipo="foco", en=313.3, k=.5)], "FIN", "LA LECCIÓN"),
+    tar(313.3, 322.4, "La lección", None, "oro", x=.5, y=.3, tam=70),
+    tar(314.8, 322.4, "AL no perdió por nivel", None, R, logo="AL", x=.5, y=.47, tam=58),
+    tar(316.7, 322.4, "Peleó donde KC lo esperaba", None, A, logo="KC", x=.5, y=.64, tam=58),
     dict(tipo="cierra", en=322.2, dur=.45, a=322.91), dict(tipo="abre", en=322.91, dur=.45),
 ]
 
@@ -299,26 +326,28 @@ FX += [
     J(2, 435.1, 438.79, 73.9, .19),
     tar(435.2, 438.7, "Alma de Nube", "Ya es de T1", R, logo="T1", x=.13, y=.14, tam=30),
     dict(tipo="destello", en=438.79, fuerza=.4),
-    J(2, 438.79, 453.31, 74.6, 0),
-    pizarra(438.79, 453.31, [
+    J(2, 438.79, 446.6, 74.6, 0),
+    *pizarra3d("j2_pausa", 438.79, 446.6, [
         dict(tipo="foco", en=438.85, k=.4),
         anillo(.84, .27, 85, Y, 438.9, "ANCIANO", "T1 LO ESTÁ TIRANDO", "izq"),
         anillo(.665, .31, 46, R, 439.3), anillo(.71, .52, 46, R, 440.5, "T1", "+1,8K DE ORO", "der"), anillo(.62, .76, 64, R, 439.6),
         dict(tipo="zona", pts=[(.74, .12), (.95, .12), (.95, .42), (.74, .42)], color=R, en=443.3, alfa=.2),
         dict(tipo="texto", x=.84, y=.48, texto="CON SU BUFO, SE ACABA", color=R, en=444.4, tam=32),
-        anillo(.385, .55, 150, A, 447.25, "DK", "LOS CINCO, AGRUPADOS", "izq"),
-        flecha([(.45, .52), (.58, .42), (.76, .30)], A, 449.3, "¡PELEAR YA!", off=(0, -60), dur=.7),
-    ], "40:25"),
+    ], "40:25", (fuente(2), 74.6)),
+    # «DK tiene una sola salida: pelear. Ya. Antes de que caiga el dragón.» — la pausa en 3D
+    *MESA("j2", 446.6, 453.31, "40:25"),
     tar(440.6, 446.8, "T1 · +1,8K de oro", "Y ya tiene el alma de Nube", R, logo="T1", x=.5, y=.88, tam=34),
-    # «Career, con Renata, se lanza con Destello… Smash usa la definitiva de Kalista…» — cámara lenta con zoom
+    # «Keria se lanza con Destello y la definitiva de Neeko sobre DK. Pero Smash usa la definitiva de Kalista para sacar a
+    # Career de ahí… y Career responde con la definitiva de Renata.» (cuadros 78.0-79.6 y VOD 47:08) — cámara lenta con zoom
     J(2, 453.31, 461.1, 74.6, .64, zoom=(1.35, .45, .55), zoom_en=.15, zoom_dur=1.0),
     J(2, 461.1, 464.36, 79.6, .45, zoom0=(1.35, .45, .55), zoom=(1.35, .45, .55)),
     tar(453.4, 457.2, "Cámara lenta", "40:25 → 40:31", "oro", x=.1, y=.14, tam=30),
-    peg(453.5, ART("Renata_carga"), "Renata", A, sub="Career · Destello", dur=6.0, x=.07, y=.6, tam=210),
-    tar(455.4, 463.9, "Destello al centro", "Career · Renata", A, icono="Renata", x=.87, y=.13, tam=30),
+    peg(453.4, ART("Neeko_carga"), "Neeko", R, sub="Keria · Destello", dur=4.2, x=.07, y=.6, tam=210),
+    tar(454.2, 463.9, "Destello y definitiva de Neeko", "Keria · T1", R, icono="Neeko", x=.87, y=.13, tam=30),
     peg(457.4, ART("Kalista_carga"), "Kalista", A, sub="Smash · definitiva", dur=6.8, x=.93, y=.6, tam=210),
-    tar(459.1, 463.9, "Definitiva de Kalista", "Smash la lanza", A, icono="Kalista", x=.87, y=.21, tam=30),
-    tar(462.2, 464.3, "T1 sale volando", None, R, logo="T1", x=.5, y=.86, tam=40),
+    tar(458.3, 463.9, "Smash saca a Career", "Definitiva de Kalista", A, icono="Kalista", x=.87, y=.21, tam=30),
+    peg(461.1, ART("Renata_carga"), "Renata", A, sub="Career responde", dur=3.2, x=.07, y=.6, tam=210),
+    tar(462.3, 464.3, "Definitiva de Renata", "Career · DK", A, icono="Renata", x=.5, y=.86, tam=40),
     # «¡Y DK voltea la pelea entera! ¡De la nada, DK reduce a cenizas a T1… y se queda con el Anciano!»
     dict(tipo="destello", en=464.4, fuerza=.55),
     J(2, 464.36, 471.7, 81.07, 1.6, zoom0=(1.35, .45, .55), zoom=(1.0, .5, .5), zoom_dur=.8),
@@ -367,31 +396,30 @@ FX += [
     tar(606.9, 612.9, "KOI se había acercado", "A menos de mil de oro · 32:30", R, logo="MKOI", x=.13, y=.14, tam=30),
     peg(610.1, ART("Anivia_carga"), "Anivia", R, sub="Jojopyun", dur=3.5, x=.07, y=.6, tam=210),
     dict(tipo="destello", en=613.68, fuerza=.4),
-    J(3, 613.68, 622.37, 59.5, 0),
-    pizarra(613.68, 622.37, [
+    J(3, 613.68, 617.3, 59.5, 0),
+    *pizarra3d("j3_pausa", 613.68, 617.3, [
         dict(tipo="foco", en=613.75, k=.4),
         anillo(.385, .19, 55, R, 615.5, "JOJOPYUN", "ANIVIA · ADELANTADO", "izq"),
-        dict(tipo="zona", pts=[(.08, .25), (.34, .25), (.34, .6), (.08, .6)], color=R, en=617.4, alfa=.18),
-        flecha([(.30, .34), (.34, .27), (.37, .22)], R, 617.6, "LEJOS DE SU EQUIPO", off=(-170, 40), guion=True),
-        anillo(.47, .21, 55, A, 619.0, "CAREER", "NAUTILUS · ANCLA LISTA", "der", icono="Nautilus"),
-        flecha([(.46, .19), (.43, .18), (.40, .18)], A, 621.0, dur=.4),
-    ], "38:23"),
-    J(3, 622.37, 628.43, 59.5, .75),
-    tar(622.6, 628.3, "Ancla conectada", "Career · Nautilus", A, icono="Nautilus", x=.87, y=.13, tam=30),
-    tar(624.3, 628.3, "Anivia, la primera", "Jojopyun", R, icono="Anivia", x=.87, y=.21, tam=30),
-    # «Ahora mira a Smash. Su Kai'Sa espera a que KOI gaste todo… y entonces entra. Supa cae…»
-    J(3, 628.43, 638.46, 64.0, .82, zoom=(1.28, .40, .48), zoom_dur=1.0),
-    peg(629.2, "Smash", "Smash", A, "DK", "Kai'Sa", dur=9.2, x=.08, y=.55, tam=240),
-    peg(630.2, ART("Kaisa_carga"), "Kai'Sa", A, sub="Espera su momento", dur=3.6, x=.93, y=.42, tam=220),
-    tar(631.1, 633.8, "Espera a que KOI gaste todo", None, A, x=.5, y=.86, tam=36),
+    ], "38:23", (fuente(3), 59.5)),
+    # «…lejos de su equipo… y Career, con Nautilus, tiene el ancla lista.» — la pausa en 3D
+    *MESA("j3", 617.3, 622.32, "38:23"),
+    J(3, 622.32, 630.02, 59.5, .58),
+    tar(622.6, 629.9, "El ancla atrapa a la Anivia", "Career · Nautilus", A, icono="Nautilus", x=.87, y=.13, tam=30),
+    tar(624.6, 629.9, "Cae primero Myrwn", "Jayce · KOI", R, icono="Jayce", x=.87, y=.21, tam=30),
+    peg(625.6, ART("Jayce_carga"), "Jayce", R, sub="Myrwn · el primero", dur=3.9, x=.93, y=.6, tam=210, gris=True),
+    # «Ahora mira a Smash, con Kai'Sa. Entra a la pelea… y Supa cae. El Agotamiento que le lanzan no sirve de nada.»
+    J(3, 630.02, 638.61, 64.0, .99, zoom=(1.28, .40, .48), zoom_dur=1.0),
+    peg(630.7, "Smash", "Smash", A, "DK", "Kai'Sa", dur=7.8, x=.08, y=.55, tam=240),
+    peg(631.5, ART("Kaisa_carga"), "Kai'Sa", A, sub="Smash · DK", dur=2.3, x=.93, y=.42, tam=220),
+    tar(632.3, 633.8, "Entra a la pelea", None, A, icono="Kaisa", x=.5, y=.86, tam=36),
     peg(634.0, "Supa", "Supa", R, "MKOI", "Ezreal", dur=4.4, x=.93, y=.45, tam=220, gris=True),
     tar(634.8, 638.4, "El Agotamiento no basta", "Supa cae", R, icono="Ezreal", x=.5, y=.86, tam=36),
     # «¡Triple! ¡Cuádruple! ¡Y pentakill para Smash!»
-    J(3, 638.46, 642.57, 72.5, 1.6, zoom0=(1.28, .40, .48), zoom=(1.0, .5, .5), zoom_dur=.6),
-    dict(tipo="destello", en=638.5, fuerza=.4), dict(tipo="destello", en=638.9, fuerza=.45),
-    dict(tipo="destello", en=640.2, fuerza=.7),
-    tar(640.2, 645.3, "¡Pentakill!", "Smash · Kai'Sa", A, logo="DK", dato="5", x=.5, y=.84, tam=58),
-    J(3, 642.57, 645.7, 79.0),
+    J(3, 638.61, 642.69, 72.5, 1.6, zoom0=(1.28, .40, .48), zoom=(1.0, .5, .5), zoom_dur=.6),
+    dict(tipo="destello", en=638.6, fuerza=.4), dict(tipo="destello", en=639.0, fuerza=.45),
+    dict(tipo="destello", en=640.4, fuerza=.7),
+    tar(640.4, 645.3, "¡Pentakill!", "Smash · Kai'Sa", A, logo="DK", dato="5", x=.5, y=.84, tam=58),
+    J(3, 642.69, 645.7, 79.0),
     gran(642.6, "Smash", "Smash", A, "DK", "El único pentakill", dur=3.1, x=.24, tam=520),
     peg(643.0, ART("Kaisa"), dur=2.7, x=.72, y=.45, tam=560),
     vs(645.7, 652.0, "DK", "MKOI", "DK gana la serie 2-0", "Primer clasificado a cuartos", ganador=0, marca=647.0),
@@ -406,45 +434,37 @@ FX += [
 # Inspired (Xin Zhao) dentro de Gen.G junto a Chovy; 90.5 = 34:48 cae Chovy. Vivo (beat 078) termina en j4 114.3.
 FX += [
     J(4, 711.0, 712.0, 114.3, -90.0), rebobinar(711.0, 712.0, "20:15"),
-    J(4, 712.0, 716.71, 24.3),
-    tar(712.1, 716.6, "Gen.G acumula dragones", "Su plan de siempre", R, logo="GEN", x=.87, y=.13, tam=30),
-    dict(tipo="destello", en=716.71, fuerza=.4),
-    J(4, 716.71, 721.9, 29.0, 0),
-    pizarra(716.71, 721.9, [
-        dict(tipo="foco", en=716.75, k=.4),
-        anillo(.38, .33, 110, Y, 716.8, "BARÓN", "PARA LYON", "abajo"),
-        anillo(.27, .5, 85, A, 717.2, "LYON", None, "izq"),
-        anillo(.57, .34, 44, R, 719.6), anillo(.785, .53, 44, R, 719.75), anillo(.555, .76, 44, R, 719.9),
-        flecha([(.77, .50), (.63, .43), (.50, .37)], R, 720.0, "GEN.G LLEGA TARDE", off=(80, 50), guion=True),
-        flecha([(.55, .72), (.50, .56), (.45, .44)], R, 720.15, guion=True),
-    ], "20:24"),
-    tar(719.1, 721.8, "Barón para LYON", "En la cara de Gen.G", A, logo="LYON", x=.5, y=.86, tam=40),
-    peg(721.0, ART("Kalista_carga"), "Kalista", A, sub="Berserker · LYON", dur=4.4, x=.93, y=.6, tam=210),
-    J(4, 721.9, 722.5, 29.0, 91.7), rebobinar(721.9, 722.5, "34:41", "AVANCE RÁPIDO"),
-    J(4, 722.5, 725.51, 84.0, 0),
-    pizarra(722.5, 725.51, [
-        dict(tipo="foco", en=722.55, k=.4),
-        anillo(.36, .44, 60, A, 723.3, "INSPIRED", "XIN ZHAO", "izq", icono="XinZhao"),
-        anillo(.29, .33, 40, R, 723.6), anillo(.40, .33, 44, R, 723.7), anillo(.45, .40, 40, R, 723.8),
-        anillo(.42, .23, 40, R, 723.9),
-        dict(tipo="zona", pts=[(.24, .15), (.50, .15), (.50, .45), (.24, .45)], color=R, en=724.2, alfa=.18),
-    ], "34:41"),
-    # «Inspired se mete con Xin Zhao al centro del equipo coreano, sin dudar. Busca a uno solo: Chovy.»
-    J(4, 725.51, 733.0, 84.0, .867, zoom=(1.45, .40, .36), zoom_dur=1.0),
-    peg(725.6, "Inspired", "Inspired", A, "LYON", "Jungla · Xin Zhao", dur=7.3, x=.08, y=.55, tam=240),
-    peg(726.7, ART("XinZhao_carga"), "Xin Zhao", A, sub="Inspired", dur=6.2, x=.93, y=.45, tam=220),
-    tar(727.5, 732.9, "Al centro de Gen.G", "Sin dudar", A, icono="XinZhao", x=.87, y=.13, tam=30),
-    tar(730.2, 732.9, "Busca a uno solo", "Chovy", R, logo="GEN", x=.5, y=.86, tam=40),
-    # «¡Chovy cae! ¡Y LYON gana la pelea! El estadio de Texas no lo puede creer…»
-    dict(tipo="destello", en=733.0, fuerza=.6),
-    J(4, 733.0, 742.34, 90.5, zoom0=(1.45, .40, .36), zoom=(1.0, .5, .5), zoom_dur=.8),
-    tar(733.0, 737.5, "¡Chovy cae!", "Inspired abrió la pelea", A, logo="LYON", x=.16, y=.14, tam=44),
-    peg(733.2, "Chovy", "Chovy", R, "GEN", "Medio · Anivia", dur=4.4, x=.93, y=.5, tam=230, gris=True),
-    tar(734.6, 742.2, "LYON gana la pelea", "Norteamérica le quita una partida a Gen.G", A, logo="LYON", x=.5, y=.86, tam=40),
-    peg(738.4, "Berserker", "Berserker", A, "LYON", "Tirador", dur=3.9, x=.93, y=.5, tam=230),
+    J(4, 712.0, 715.75, 24.3),
+    tar(712.1, 715.6, "Gen.G acumula dragones", "Ese era su plan", R, logo="GEN", x=.87, y=.13, tam=30),
+    dict(tipo="destello", en=715.75, fuerza=.4),
+    J(4, 715.75, 722.3, 29.0, 0),
+    *pizarra3d("j4_baron", 715.75, 722.3, [
+        dict(tipo="foco", en=715.8, k=.4),
+        anillo(.38, .33, 110, Y, 716.9, "BARÓN", "PARA LYON · 20:24", "abajo"),
+        anillo(.27, .5, 85, A, 717.7, "LYON", None, "izq"),
+        anillo(.57, .34, 44, R, 718.9), anillo(.785, .53, 44, R, 719.05), anillo(.555, .76, 44, R, 719.2),
+        flecha([(.77, .50), (.63, .43), (.50, .37)], R, 719.4, "GEN.G LLEGA TARDE", off=(80, 50), guion=True),
+        flecha([(.55, .72), (.50, .56), (.45, .44)], R, 719.55, guion=True),
+    ], "20:24", (fuente(4), 29.0)),
+    tar(718.9, 722.2, "Barón para LYON", "Minuto 20", A, logo="LYON", x=.5, y=.86, tam=40),
+    J(4, 722.3, 723.9, 29.0, 34.4), rebobinar(722.3, 723.9, "34:41", "AVANCE RÁPIDO · +14 MIN"),
+    # «Mira a Inspired, con Xin Zhao. / Inspired se mete con Xin Zhao al centro…» — la pausa 34:41 en 3D
+    *MESA("j4", 723.9, 729.3, "34:41"),
+    # «Inspired se mete con Xin Zhao al centro del equipo coreano, sin dudar.» (narración: «he jumped into the center»)
+    J(4, 729.3, 732.41, 84.0, 1.3, zoom=(1.45, .40, .36), zoom_dur=1.0),
+    peg(727.1, "Inspired", "Inspired", A, "LYON", "Jungla · Xin Zhao", dur=5.3, x=.08, y=.55, tam=240),
+    peg(728.2, ART("XinZhao_carga"), "Xin Zhao", A, sub="Inspired", dur=4.2, x=.93, y=.45, tam=220),
+    tar(728.9, 732.3, "Al centro de Gen.G", "Sin dudar", A, icono="XinZhao", x=.87, y=.13, tam=30),
+    # «¡Chovy cae! ¡Y LYON gana la pelea!…» (kill feed 34:48: «LYON Dhokla has slain GEN Chovy»)
+    dict(tipo="destello", en=732.41, fuerza=.6),
+    J(4, 732.41, 741.88, 90.5, zoom0=(1.45, .40, .36), zoom=(1.0, .5, .5), zoom_dur=.8),
+    tar(732.4, 736.9, "¡Chovy cae!", "Lo remata Dhokla · Olaf", A, logo="LYON", x=.16, y=.14, tam=44),
+    peg(732.6, "Chovy", "Chovy", R, "GEN", "Medio · Anivia", dur=4.4, x=.93, y=.5, tam=230, gris=True),
+    tar(734.0, 741.7, "LYON gana la pelea", "Norteamérica le quita una partida a Gen.G", A, logo="LYON", x=.5, y=.86, tam=40),
+    peg(737.9, "Berserker", "Berserker", A, "LYON", "Tirador", dur=3.9, x=.93, y=.5, tam=230),
     # «Pero Gen.G es Gen.G. Ajusta, gana la segunda y la tercera, y se clasifica tres a cero. LYON cae…»
-    vs(742.4, 749.0, "GEN", "LYON", "Gen.G gana la serie 2-1", "Y se clasifica 3-0 a cuartos", ganador=0, marca=745.9),
-    tar(749.2, 752.6, "LYON cae", "Con la cabeza en alto", A, logo="LYON", x=.5, y=.84, tam=50),
+    vs(741.9, 748.6, "GEN", "LYON", "Gen.G gana la serie 2-1", "Y se clasifica 3-0 a cuartos", ganador=0, marca=745.4),
+    tar(748.8, 752.6, "LYON cae", "Con la cabeza en alto", A, logo="LYON", x=.5, y=.84, tam=50),
     # «Los que iban uno a uno se jugaron todo a una sola partida. Y ahí apareció un viejo conocido.»
     tar(753.4, 757.2, "Récord 1-1", "Todo a una sola partida", "oro", x=.5, y=.2, tam=64),
     gran(757.4, "Rookie", "Rookie", A, "IG", "Campeón del mundo en 2018", dur=4.1, x=.5, tam=520),
@@ -461,28 +481,22 @@ FX += [
     tar(818.8, 822.9, "Alma del Infernal", "Cuatro dragones para IG", A, x=.13, y=.22, tam=30),
     tar(820.3, 822.9, "Hanwha sigue viva", None, R, logo="HLE", x=.5, y=.86, tam=40),
     dict(tipo="destello", en=823.03, fuerza=.4),
-    J(5, 823.03, 830.38, 61.0, 0),
-    pizarra(823.03, 830.38, [
-        dict(tipo="foco", en=823.1, k=.4),
-        anillo(.465, .70, 56, A, 824.7, "ROOKIE", "ANNIE · ESPERA ATRÁS", "der", icono="Annie"),
-        anillo(.235, .68, 44, A, 826.2), anillo(.325, .68, 44, A, 826.35), anillo(.50, .55, 44, A, 826.5),
-        flecha([(.47, .66), (.48, .58), (.51, .47)], A, 827.3, "ESPERA SU TURNO", off=(150, 10), guion=True),
-        anillo(.09, .26, 40, R, 828.1), anillo(.26, .43, 40, R, 828.2), anillo(.64, .25, 40, R, 828.3),
-        dict(tipo="texto", x=.5, y=.15, texto="QUE HANWHA GASTE SUS HABILIDADES", color=R, en=828.5, tam=34),
-    ], "24:25"),
+    # «Pausa. Mira dónde está Rookie: con Annie, detrás de su equipo.» — la pausa 24:25 en 3D
+    *MESA("j5", 823.03, 827.82, "24:25"),
     # «Gumayusi se queda sin salida. Rookie lo remata. Y en el tres contra tres… la transformación de Lulu deja a Olaf…»
-    J(5, 830.38, 839.79, 61.0, 1.5, zoom=(1.3, .45, .45), zoom_dur=1.0),
-    peg(830.4, "Gumayusi", "Gumayusi", R, "HLE", "Kalista", dur=3.4, x=.93, y=.45, tam=220, gris=True),
-    peg(832.1, "Rookie", "Rookie", A, "IG", "Annie", dur=9.6, x=.08, y=.55, tam=240),
-    tar(832.8, 835.5, "Rookie lo remata", None, A, icono="Annie", x=.5, y=.86, tam=36),
-    peg(835.7, ART("Lulu_carga"), "Lulu", A, sub="Meiko · polimorfo", dur=4.0, x=.93, y=.45, tam=220),
-    tar(837.3, 839.7, "Olaf, sin poder hacer nada", "Zeus · Hanwha Life", R, icono="Olaf", x=.5, y=.86, tam=36),
+    # (24:40 «Rookie is on a rampage» y Gumayusi muere; 3 contra 3: Wei, Rookie, Meiko · Zeus, Zeka, Delight)
+    J(5, 827.82, 837.29, 61.0, 1.5, zoom=(1.3, .45, .45), zoom_dur=1.0),
+    peg(827.85, "Gumayusi", "Gumayusi", R, "HLE", "Kalista", dur=3.4, x=.93, y=.45, tam=220, gris=True),
+    peg(829.5, "Rookie", "Rookie", A, "IG", "Annie", dur=9.6, x=.08, y=.55, tam=240),
+    tar(830.2, 832.9, "Rookie lo remata", None, A, icono="Annie", x=.5, y=.86, tam=36),
+    peg(833.1, ART("Lulu_carga"), "Lulu", A, sub="Meiko · polimorfo", dur=4.0, x=.93, y=.45, tam=220),
+    tar(834.7, 837.2, "Olaf, sin poder hacer nada", "Zeus · Hanwha Life", R, icono="Olaf", x=.5, y=.86, tam=36),
     # «¡Triple para Rookie… y cuádruple!»
-    J(5, 839.79, 842.88, 88.8, 1.3, zoom0=(1.3, .45, .45), zoom=(1.0, .5, .5), zoom_dur=.6),
-    dict(tipo="destello", en=839.8, fuerza=.5), dict(tipo="destello", en=841.2, fuerza=.65),
-    tar(839.8, 845.0, "¡Cuádruple!", "Rookie · Annie", A, logo="IG", dato="4", x=.16, y=.14, tam=44),
-    vs(843.0, 848.9, "IG", "HLE", "Invictus gana", "Ahora va 2-1, a una serie de cuartos", ganador=0, marca=843.4),
-    vs(849.0, 853.0, "TES", "G2", "Top Esports también gana", "Día 3", ganador=0, marca=850.8),
+    J(5, 837.29, 840.44, 88.8, 1.3, zoom0=(1.3, .45, .45), zoom=(1.0, .5, .5), zoom_dur=.6),
+    dict(tipo="destello", en=837.3, fuerza=.5), dict(tipo="destello", en=838.7, fuerza=.65),
+    tar(837.3, 842.4, "¡Cuádruple!", "Rookie · Annie", A, logo="IG", dato="4", x=.16, y=.14, tam=44),
+    vs(840.5, 846.4, "IG", "HLE", "Invictus gana", "Ahora va 2-1, a una serie de cuartos", ganador=0, marca=844.1),
+    vs(846.5, 853.0, "TES", "G2", "Top Esports también gana", "Día 3", ganador=0, marca=848.3),
 ]
 
 # ================================================================== DÍA 4 (853.1-922.9 s)
@@ -514,75 +528,61 @@ FX += [
 ]
 
 # ================================================================== JUGADA 6: el Barón de Liquid (974.8-1028.3 s)
-# Condensada de la prueba (../lol_worlds_tl_al/efectos.py): mismas posiciones medidas; jugada.mp4 = VOD desde 2833 s
-# (reloj = s + 39:40). Vivo (beat 108) = VOD 2909 → termina en jugada.mp4 132.
-M1 = [ficha("Pantheon", A, [(0, .60, .71)], 976.0), ficha("Xayah", A, [(0, .575, .65)], 976.1),
-      ficha("Rakan", A, [(0, .565, .74)], 976.2), ficha("Akali", A, [(0, .62, .62)], 976.3), ficha("Kled", A, [(0, .48, .55)], 976.4),
-      ficha("Nocturne", R, [(0, .735, .655)], 976.5), ficha("TahmKench", R, [(0, .76, .60)], 976.6),
-      ficha("Jinx", R, [(0, .79, .665)], 976.7), ficha("Annie", R, [(0, .755, .72)], 976.8), ficha("Olaf", R, [(0, .72, .77)], 976.9),
-      dict(tipo="anillo", u=.655, v=.695, r=.045, color=Y, en=981.2, etiqueta="DRAGÓN 3", sub="INFERNAL", lado="abajo")]
-HUD1 = [(978.1, "11 - 17 EN ASESINATOS", R, "LIQUID VA ABAJO"), (980.6, "+3 000 DE ORO", A, "VENTAJA DE LIQUID"),
-        (981.5, "6 - 2 EN TORRES", A, "LIQUID PRESIONA")]
-_tl = dict(Pantheon=((.56, .68), (.50, .47), (.57, .32), (.45, .25), (.44, .22)),
-           Xayah=((.53, .64), (.47, .50), (.54, .35), (.43, .30), (.47, .31)),
-           Rakan=((.55, .73), (.52, .51), (.59, .36), (.47, .28), (.45, .35)),
-           Akali=((.59, .63), (.53, .44), (.60, .29), (.48, .24), (.48, .25)))
-M2 = [ficha(c, A, [(986.3,) + p[0], (990.0,) + p[1], (995.0,) + p[2], (999.0,) + p[3], (1003.5,) + p[4]], 986.5)
-      for c, p in _tl.items()]
-M2.append(ficha("Kled", A, [(986.3, .46, .55), (991.75, .46, .55), (991.9, .71, .12), (995.0, .71, .12), (999.0, .52, .16),
-                            (1003.5, .40, .19)], 986.5, "Morgan"))
-_al = dict(Nocturne=((.74, .66), (.84, .53), (.83, .40), (.69, .30)), TahmKench=((.77, .61), (.87, .50), (.86, .37), (.72, .25)),
-           Jinx=((.79, .67), (.88, .56), (.88, .43), (.73, .33)))
-for c, p in _al.items():
-    M2.append(ficha(c, R, [(986.3,) + p[0], (994.5,) + p[1], (999.0,) + p[2], (1003.5,) + p[3]], 986.7))
-M2.append(ficha("Annie", R, [(986.3, .755, .72), (994.5, .85, .58), (998.0, .81, .33), (1001.0, .69, .25), (1003.5, .66, .27)], 986.7))
-M2.append(ficha("Olaf", R, [(986.3, .72, .77), (994.5, .82, .60), (998.0, .78, .35), (1001.0, .67, .29), (1003.5, .64, .31)], 986.7))
-M2 += [
-    dict(tipo="oleada", ruta=[(.30, .085), (.50, .085), (.74, .092)], de=988.5, en=988.5, a=991.2, color=A, n=7, sale=995.5),
-    dict(tipo="anillo", u=.755, v=.095, r=.035, color=R, en=990.9, sale=995.5, etiqueta="INHIBIDOR", lado="der"),
-    dict(tipo="tp", desde=(.46, .55), a=(.71, .12), en=991.8, dur=1.1, color=A, sale=995.5),
-    dict(tipo="flecha", pts=[(.86, .48), (.87, .32), (.79, .15)], color=R, en=995.9, sale=1000.6, guion=True,
-         etiqueta="¿DEFENDER LA BASE?", off=(190, 0)),
-    dict(tipo="flecha", pts=[(.82, .56), (.68, .56), (.56, .51)], color=R, en=997.4, sale=1000.6, guion=True,
-         etiqueta="¿PERSEGUIR A LIQUID?", off=(0, 70)),
-    dict(tipo="niebla", pts=[(0, 0), (1, 0), (0, 1)], en=1001.1, k=.6),
-    dict(tipo="ward", u=.25, v=.17, en=1002.6, color=A), dict(tipo="ward", u=.38, v=.12, en=1002.8, color=A),
-    dict(tipo="ward", u=.40, v=.40, en=1003.0, color=A), dict(tipo="ward", u=.20, v=.38, en=1003.2, color=A),
-    dict(tipo="ward", u=.55, v=.20, en=1003.4, color=A),
-    dict(tipo="anillo", u=.325, v=.295, r=.05, color=Y, en=1004.2, etiqueta="BARÓN", lado="izq"),
-]
-CAM2 = [(986.3, .60, .60, 1.15), (988.3, .54, .22, 1.15), (991.6, .64, .22, 1.35), (995.4, .72, .42, 1.2),
-        (1000.8, .45, .30, 1.1), (1004.0, .38, .28, 1.3)]
-HUD2 = [(992.5, "TP DE MORGAN", A, "PRESIONA EL INHIBIDOR", 995.3), (998.5, "NO PUEDE CON LAS DOS", R, None, 1000.8),
-        (1001.6, "AL ESTÁ A CIEGAS", R, "LIQUID TIENE LA VISIÓN ARRIBA")]
+# jugada.mp4 = VOD wjoQ0ze5bJ4 desde 2833 s (reloj = s + 39:40). Vivo (beat 108) = VOD 2909 → termina en jugada.mp4 132.
+# El análisis (40:14 → 41:46) es una JUGADA EN 3D (nucleo/tactica3d, 27-oct-2026): j6_3d.py escribe tactica3d/j6.json con
+# las posiciones medidas en el minimapa y los datos de la narración oficial; render3d.py → medios/_fuente/j6_3d.mp4
+# (empieza en t = 975.0 del video: desde = t - 975.0). Al grito del castigo vuelve el VOD real.
+J6 = fuente(6)
+
 FX += [
-    J(6, 974.8, 975.9, 132.0, -87.0), rebobinar(974.8, 975.9, "40:16"),
-    tablero(975.7, 982.6, M1, [(975.7, .52, .54, .92), (979.0, .56, .58, 1.0), (981.4, .63, .66, 1.32)], [(975.7, "40:16")], HUD1),
-    J(6, 982.4, 986.3, 36.6),
-    tar(983.1, 986.2, "Tercer dragón para Liquid", "AL se queda sin alma", A, logo="TLAW", x=.5, y=.86, tam=40),
-    tablero(986.1, 1005.4, M2, CAM2, [(986.1, "40:20"), (991.8, "40:35"), (1001.0, "41:05")], HUD2, "EL TEMPO"),
-    # «Liquid empieza el Barón. El Nocturne de AL entra buscando el robo…»
-    J(6, 1005.2, 1007.2, 119.0), J(6, 1007.2, 1010.49, 121.0, 0),
-    pizarra(1007.2, 1010.49, [
-        dict(tipo="foco", en=1007.2, k=.42),
-        dict(tipo="anillo", x=.25, y=.36, r=125, color=Y, en=1007.2, etiqueta="BARÓN", lado="arriba"),
-        dict(tipo="anillo", x=.20, y=.45, r=46, color=A, en=1007.35), dict(tipo="anillo", x=.285, y=.47, r=46, color=A, en=1007.45),
-        dict(tipo="anillo", x=.18, y=.55, r=46, color=A, en=1007.55),
-        dict(tipo="anillo", x=.46, y=.28, r=58, color=R, en=1007.4, etiqueta="NOCTURNE", sub="TARZAN", lado="der"),
-        dict(tipo="flecha", pts=[(.44, .25), (.40, .15), (.30, .14)], color=R, en=1008.3, dur=.8, etiqueta="BUSCA EL ROBO",
-             off=(0, -55)),
-        dict(tipo="anillo", x=.56, y=.50, r=52, color=R, en=1009.2), dict(tipo="anillo", x=.59, y=.73, r=52, color=R, en=1009.3),
-        dict(tipo="flecha", pts=[(.55, .50), (.45, .46), (.37, .43)], color=R, en=1009.5, guion=True),
-    ], "41:41"),
-    peg(1007.3, ART("Nocturne_carga"), "Nocturne", R, sub="Tarzan · AL", dur=3.1, x=.93, y=.6, tam=210),
-    # «¡Pero Josedeodo no falla el castigo! ¡Barón para Liquid!»
-    J(6, 1010.49, 1012.2, 124.6), J(6, 1012.2, 1013.2, 126.3, 0),
+    J(6, 974.8, 975.7, 132.0, -105.0), rebobinar(974.8, 975.7, "40:16"),
+    # «Minuto 40. Liquid pierde en asesinatos, 11 a 17… pero va arriba en oro y en torres.» — el mapa en 3D
+    V3(975.7, 982.4), dict(tipo="destello", en=975.7, fuerza=.45),
+    # «Toma el tercer dragón y le quita a AL el alma.» — VOD: el dragón cae a las 40:20-40:21 (40:21 = buff «3 %»)
+    dict(tipo="destello", en=982.4, fuerza=.35),
+    J(6, 982.4, 984.6, 38.2), J(6, 984.6, 986.4, 41.0, 0),
+    *pizarra3d("j6_dragon", 984.6, 986.4, [
+        dict(tipo="foco", en=984.6, k=.3),
+        anillo(.285, .45, 50, A, 984.65, "YEON", "REMATA EL DRAGÓN", "izq", icono="Xayah"),
+        dict(tipo="zona", pts=[(.40, .50), (.66, .44), (.70, .62), (.50, .78), (.30, .74)], color=R, en=984.9, alfa=.16),
+        dict(tipo="texto", x=.5, y=.86, texto="AL SE QUEDA SIN ALMA", color=R, en=985.0, tam=42),
+    ], "40:21", (J6, 41.0)),
+    # «Pausa. Mira arriba: una oleada de Liquid empuja sola hacia el inhibidor, y Morgan se teletransporta…» — 3D
+    V3(986.4, 994.6), dict(tipo="destello", en=986.4, fuerza=.3),
+    # «AL tiene que soltar el dragón y volver a su base.» — VOD 40:38: Morgan pega al inhibidor, Tarzan, Hope y Kael llegan
+    dict(tipo="destello", en=994.6, fuerza=.35),
+    J(6, 994.6, 998.2, 58.0, 0),
+    *pizarra3d("j6_inhib", 994.6, 998.2, [
+        dict(tipo="foco", en=994.65, k=.3),
+        anillo(.27, .37, 46, A, 994.7, "MORGAN", "LLEGÓ CON TP", "izq", icono="Kled"),
+        anillo(.36, .34, 70, Y, 995.0, "INHIBIDOR DE AL", None, "arriba"),
+        anillo(.45, .41, 40, R, 995.6), anillo(.70, .36, 40, R, 995.75), anillo(.79, .26, 40, R, 995.9),
+        flecha([(.45, .41), (.40, .39), (.33, .37)], R, 996.1, dur=.5),
+        flecha([(.70, .36), (.56, .35), (.42, .34)], R, 996.3, dur=.6, etiqueta="AL VUELVE A DEFENDER", off=(150, 70)),
+        flecha([(.79, .26), (.66, .27), (.50, .31)], R, 996.5, dur=.6),
+    ], "40:38", (J6, 58.0)),
+    # «Intenta encerrar a Liquid por un flanco… pero Liquid se retira a tiempo, y AL se queda a oscuras.» + «Liquid empieza
+    # el Barón. Y Hope…» — 3D
+    V3(998.2, 1007.2), dict(tipo="destello", en=998.2, fuerza=.3),
+    # «…dispara el cohete de Jinx buscando el robo…» — VOD 41:44,8 congelado: el cohete sale de Hope, al este del foso
+    dict(tipo="destello", en=1007.2, fuerza=.4),
+    J(6, 1007.2, 1010.27, 124.8, 0),
+    *pizarra3d("j6_cohete", 1007.2, 1010.27, [
+        dict(tipo="foco", en=1007.25, k=.32),
+        anillo(.34, .36, 120, Y, 1007.3, "BARÓN · 3 634 PV", "LIQUID LO ESTÁ TIRANDO", "abajo"),
+        anillo(.28, .34, 34, A, 1007.4), anillo(.28, .42, 34, A, 1007.5), anillo(.26, .50, 34, A, 1007.6),
+        anillo(.87, .37, 46, R, 1007.5, "HOPE · JINX", "COHETE PARA ROBARLO", "izq", icono="Jinx"),
+    ], "41:45", (J6, 124.8),
+        extra=dict(proyectiles=[dict(desde=(.86, .38), a=(.36, .36), de=1008.1, llega=1009.6, color="#ff4fc3", alto=4)])),
+    # «¡Pero Josedeodo no falla el castigo! ¡Barón para Liquid!»: el VOD desde 41:44.4 (el cohete y el castigo)
+    J(6, 1010.27, 1012.2, 124.4), J(6, 1012.2, 1013.2, 126.3, 0),
     dict(tipo="destello", en=1012.2, fuerza=.6),
-    pizarra(1012.2, 1013.2, [dict(tipo="anillo", x=.39, y=.30, r=70, color=A, en=1012.2, etiqueta="¡CASTIGO!", sub="JOSEDEODO",
-                                  lado="der", icono=os.path.join(ICO, "SummonerSmite.png"))], "41:46"),
-    J(6, 1013.2, 1014.86, 126.3, .4),
-    peg(1010.6, "Josedeodo", "Josedeodo", A, "TLAW", "Jungla · Pantheon", dur=4.2, x=.08, y=.55, tam=240),
-    tar(1012.7, 1014.8, "Barón para Liquid", None, A, logo="TLAW", x=.5, y=.84, tam=48),
+    *pizarra3d("j6_castigo", 1012.2, 1013.2, [dict(tipo="anillo", x=.39, y=.30, r=70, color=A, en=1012.2, etiqueta="¡CASTIGO!",
+                                                    sub="JOSEDEODO", lado="der", icono=os.path.join(ICO, "SummonerSmite.png"))],
+               "41:46", (J6, 126.3)),
+    J(6, 1013.2, 1014.66, 126.3, .4),
+    peg(1010.4, "Josedeodo", "Josedeodo", A, "TLAW", "Jungla · Pantheon", dur=4.2, x=.08, y=.55, tam=240),
+    tar(1012.7, 1014.6, "Barón para Liquid", None, A, logo="TLAW", x=.5, y=.84, tam=48),
     # «Minutos después, Liquid termina la partida. Anyone's Legend, campeón de China, se despide cero a tres…» — clips 119-120
     tar(1015.8, 1018.3, "Liquid termina la partida", "2-0 en la serie", A, logo="TLAW", x=.5, y=.84, tam=48),
     mg(L.eliminado(EQ("AL"), "Anyone's Legend", "Campeón de China · fuera 0-3"), 1018.4, 1025.2, [1021.7, 1022.5], y=.45,
@@ -694,21 +694,24 @@ PISTAS = ([dict(sfx="whoosh", en=0.1, vol=.6), dict(sfx="golpe", en=0.3, vol=.7)
            dict(sfx="golpe", en=13.2, vol=.6), dict(sfx="golpe", en=16.65, vol=.6),
            dict(sfx="golpe", en=26.0, vol=.6), dict(sfx="golpe", en=28.85, vol=.55), dict(sfx="golpe", en=31.25, vol=.55),
            dict(sfx="rebobina", en=263.8, vol=.5), dict(sfx="clic", en=273.3, vol=.55), dict(sfx="golpe", en=273.32, vol=.3),
-           dict(sfx="whoosh2", en=282.4, vol=.35), dict(sfx="subida", en=299.0, vol=.45), dict(sfx="golpe", en=301.1, vol=.7),
-           dict(sfx="clic", en=314.25, vol=.5), dict(sfx="whoosh", en=322.0, vol=.45)]
+           dict(sfx="whoosh2", en=282.4, vol=.35), dict(sfx="subida", en=298.0, vol=.45), dict(sfx="golpe", en=300.0, vol=.7),
+           dict(sfx="clic", en=313.21, vol=.5), dict(sfx="whoosh", en=322.0, vol=.45)]
           + [dict(sfx="whoosh2", en=t, vol=.22) for t in _entra]
           + [dict(sfx="golpe", en=t, vol=.35) for t in (23.3, 24.2, 24.7, 25.4, 61.2, 61.5, 61.8, 160.5, 161.0, 161.6, 95.6)]
           + [dict(sfx="pop", en=t, vol=.3) for t in (273.5, 273.7, 274.7)])
 # tramo 3 (27-oct): rebobinados, pausas (clic + golpe suave), destellos y lo que se dibuja en cada pizarra
-_rebob = (433.9, 606.3, 711.0, 721.9, 813.5, 974.8)
-_pausas = (438.79, 613.68, 716.71, 722.5, 823.03, 1007.2)
+_rebob = (433.9, 606.3, 711.0, 722.3, 813.5, 974.8)
+_pausas = (438.79, 613.68, 715.75, 723.9, 823.03, 986.45)
 _golpes = [d["en"] for d in FX if d.get("tipo") == "destello" and d["en"] > 323]
 _dibujo = sorted({e["en"] for d in FX if d.get("nombre", "").startswith("pizarra") and d["de"] > 323
                   for e in getattr(d["fn"], "_els", [])})
 PISTAS += ([dict(sfx="rebobina", en=t, vol=.5) for t in _rebob] + [dict(sfx="clic", en=t, vol=.55) for t in _pausas]
            + [dict(sfx="golpe", en=t + .02, vol=.3) for t in _pausas] + [dict(sfx="golpe", en=t, vol=.55) for t in _golpes]
-           + [dict(sfx="subida", en=t, vol=.42) for t in (462.0, 636.6, 731.4, 838.0, 1009.6, 1023.6)]
-           + [dict(sfx="pop", en=t, vol=.28) for t in (438.9, 440.5, 447.25, 449.3, 615.5, 617.6, 619.0, 716.8, 717.2, 720.0,
-                                                        723.3, 724.2, 824.7, 826.2, 827.3, 828.5, 1007.4, 1008.3)]
-           + [dict(sfx="whoosh", en=t, vol=.45) for t in (975.7, 986.1, 1005.3)]
+           + [dict(sfx="subida", en=t, vol=.42) for t in (462.0, 636.6, 730.9, 835.5, 1009.6, 1023.6)]
+           + [dict(sfx="pop", en=t, vol=.28) for t in (438.9, 440.5, 447.25, 449.3, 615.5, 617.6, 619.0, 716.9, 717.7, 719.4,
+                                                        724.8, 725.3, 824.9, 826.0)]
+           + [dict(sfx="whoosh", en=t, vol=.45) for t in (975.7, 990.6, 1004.55, 1008.1)]
+           + [dict(sfx="whoosh2", en=t, vol=.28) for t in (277.4, 446.6, 617.3, 723.9, 982.4, 986.4, 994.6, 998.2, 1007.2)]
+           + [dict(sfx="whoosh2", en=t, vol=.3) for t in (998.25, 1000.2)]
+           + [dict(sfx="golpe", en=t, vol=.45) for t in (984.6, 990.96, 993.43, 1009.6)]
            + [dict(sfx="golpe", en=t, vol=.35) for t in (886.2, 888.4, 1287.0, 1021.7, 1022.5)])

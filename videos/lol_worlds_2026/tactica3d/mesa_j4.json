@@ -1,0 +1,237 @@
+{
+ "modo": "mesa",
+ "de": 723.9,
+ "a": 729.3,
+ "fondo": "/videos/lol_worlds_2026/tactica3d/mesa_j4_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Inspired": {
+   "jugador": "Inspired",
+   "campeon": "XinZhao",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/XinZhao.png",
+   "puntos": [
+    [
+     0,
+     0.4,
+     0.4
+    ]
+   ],
+   "de": 724.3,
+   "sale": 728.4
+  },
+  "Dhokla": {
+   "jugador": "Dhokla",
+   "campeon": "Olaf",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Olaf.png",
+   "puntos": [
+    [
+     0,
+     0.1,
+     0.575
+    ]
+   ],
+   "de": 724.5,
+   "sale": 728.4
+  },
+  "Berserker": {
+   "jugador": "Berserker",
+   "campeon": "Kalista",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.65,
+     0.555
+    ]
+   ],
+   "de": 724.5,
+   "sale": 728.4
+  },
+  "Ruler": {
+   "jugador": "Ruler",
+   "campeon": "Jhin",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Jhin.png",
+   "puntos": [
+    [
+     0,
+     0.43,
+     0.245
+    ]
+   ],
+   "de": 724.4,
+   "sale": 728.4
+  },
+  "Kiin": {
+   "jugador": "Kiin",
+   "campeon": "Rumble",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Rumble.png",
+   "puntos": [
+    [
+     0,
+     0.32,
+     0.34
+    ]
+   ],
+   "de": 724.4,
+   "sale": 728.4
+  },
+  "Chovy": {
+   "jugador": "Chovy",
+   "campeon": "Anivia",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Anivia.png",
+   "puntos": [
+    [
+     0,
+     0.41,
+     0.36
+    ]
+   ],
+   "de": 724.5,
+   "sale": 728.4
+  },
+  "Duro": {
+   "jugador": "Duro",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.46,
+     0.4
+    ]
+   ],
+   "de": 724.5,
+   "sale": 728.4
+  }
+ },
+ "camara": [
+  [
+   723.9,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   724.25,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   725.6279999999999,
+   -18,
+   36,
+   50,
+   0.4,
+   0.35
+  ],
+  [
+   727.2479999999999,
+   14,
+   40,
+   47.5,
+   0.4,
+   0.35
+  ],
+  [
+   728.4,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   729.3,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.28,
+     0.2
+    ],
+    [
+     0.52,
+     0.2
+    ],
+    [
+     0.52,
+     0.45
+    ],
+    [
+     0.28,
+     0.45
+    ]
+   ],
+   "color": "rojo",
+   "en": 725.2,
+   "sale": 728.4,
+   "alfa": 0.14
+  }
+ ],
+ "pilares": [
+  {
+   "u": 0.4,
+   "v": 0.4,
+   "r": 0.02,
+   "color": "azul",
+   "en": 724.8,
+   "sale": 728.4,
+   "alto": 11
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 724.8,
+   "a": 728.4,
+   "u": 0.4,
+   "v": 0.4,
+   "alto": 0,
+   "texto": "INSPIRED",
+   "sub": "XIN ZHAO · AL CENTRO DE GEN.G",
+   "color": "azul",
+   "dx": 170,
+   "dy": 60,
+   "icono": "/videos/lol_worlds_2026/iconos/XinZhao.png"
+  },
+  {
+   "de": 725.4,
+   "a": 728.4,
+   "u": 0.3,
+   "v": 0.2,
+   "alto": 0,
+   "texto": "GEN.G",
+   "sub": "LOS CINCO JUNTOS",
+   "color": "rojo",
+   "dx": -80,
+   "dy": -60
+  }
+ ]
+}

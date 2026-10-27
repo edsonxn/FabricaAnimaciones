@@ -1,0 +1,93 @@
+{
+ "modo": "video",
+ "de": 984.6,
+ "a": 986.4,
+ "anillos": [
+  {
+   "u": 0.285,
+   "v": 0.45,
+   "r": 0.026041666666666668,
+   "color": "azul",
+   "en": 984.65,
+   "sale": 986.4
+  }
+ ],
+ "flechas": [],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.4,
+     0.5
+    ],
+    [
+     0.66,
+     0.44
+    ],
+    [
+     0.7,
+     0.62
+    ],
+    [
+     0.5,
+     0.78
+    ],
+    [
+     0.3,
+     0.74
+    ]
+   ],
+   "color": "rojo",
+   "en": 984.9,
+   "sale": 986.4,
+   "alfa": 0.16
+  }
+ ],
+ "pilares": [
+  {
+   "u": 0.285,
+   "v": 0.45,
+   "r": 0.014322916666666668,
+   "color": "azul",
+   "en": 984.75,
+   "sale": 986.4,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 984.8,
+   "a": 986.4,
+   "u": 0.285,
+   "v": 0.45,
+   "alto": 0,
+   "texto": "YEON",
+   "sub": "REMATA EL DRAGÓN",
+   "color": "azul",
+   "dx": -79.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_worlds_2026/iconos/Xayah.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 984.6,
+   "a": 986.4,
+   "k": 0.3
+  }
+ ],
+ "carteles": [
+  {
+   "de": 985.0,
+   "a": 986.4,
+   "texto": "AL SE QUEDA SIN ALMA",
+   "sub": null,
+   "color": "rojo",
+   "y": 898.8,
+   "tam": 42
+  }
+ ],
+ "fondo": "/videos/lol_worlds_2026/tactica3d/capas/j6_dragon_fondo.jpg",
+ "_huella": "bb98f412bce7"
+}

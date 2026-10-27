@@ -1,0 +1,239 @@
+{
+ "modo": "mesa",
+ "de": 823.03,
+ "a": 827.82,
+ "fondo": "/videos/lol_worlds_2026/tactica3d/mesa_j5_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Rookie": {
+   "jugador": "Rookie",
+   "campeon": "Annie",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Annie.png",
+   "puntos": [
+    [
+     0,
+     0.465,
+     0.67
+    ]
+   ],
+   "de": 823.5,
+   "sale": 826.9
+  },
+  "Wei": {
+   "jugador": "Wei",
+   "campeon": "Nocturne",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Nocturne.png",
+   "puntos": [
+    [
+     0,
+     0.5,
+     0.56
+    ]
+   ],
+   "de": 823.6,
+   "sale": 826.9
+  },
+  "Meiko": {
+   "jugador": "Meiko",
+   "campeon": "Lulu",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.325,
+     0.67
+    ]
+   ],
+   "de": 823.6,
+   "sale": 826.9
+  },
+  "JiaQi": {
+   "jugador": "JiaQi",
+   "campeon": "Yunara",
+   "equipo": "A",
+   "icono": "/videos/lol_worlds_2026/iconos/Yunara.png",
+   "puntos": [
+    [
+     0,
+     0.235,
+     0.69
+    ]
+   ],
+   "de": 823.7,
+   "sale": 826.9
+  },
+  "Delight": {
+   "jugador": "Delight",
+   "campeon": "Renata",
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/Renata.png",
+   "puntos": [
+    [
+     0,
+     0.27,
+     0.42
+    ]
+   ],
+   "de": 823.7,
+   "sale": 826.9
+  },
+  "HLE": {
+   "jugador": "HLE",
+   "campeon": null,
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/equipos/HLE.png",
+   "puntos": [
+    [
+     0,
+     0.09,
+     0.235
+    ]
+   ],
+   "de": 823.8,
+   "sale": 826.9
+  },
+  "HLE ": {
+   "jugador": "HLE ",
+   "campeon": null,
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/equipos/HLE.png",
+   "puntos": [
+    [
+     0,
+     0.64,
+     0.24
+    ]
+   ],
+   "de": 823.8,
+   "sale": 826.9
+  },
+  "HLE  ": {
+   "jugador": "HLE  ",
+   "campeon": null,
+   "equipo": "R",
+   "icono": "/videos/lol_worlds_2026/iconos/equipos/HLE.png",
+   "puntos": [
+    [
+     0,
+     0.545,
+     0.465
+    ]
+   ],
+   "de": 823.8,
+   "sale": 826.9
+  }
+ },
+ "camara": [
+  [
+   823.03,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   823.38,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   824.5628,
+   -18,
+   36,
+   50,
+   0.42,
+   0.5
+  ],
+  [
+   825.9998,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.5
+  ],
+  [
+   826.9200000000001,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   827.82,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "frente",
+   "pts": [
+    [
+     0.465,
+     0.66
+    ],
+    [
+     0.48,
+     0.6
+    ],
+    [
+     0.5,
+     0.565
+    ]
+   ],
+   "color": "azul",
+   "en": 825.6,
+   "dur": 0.5,
+   "sale": 826.9,
+   "guion": true,
+   "alto": 1.2
+  }
+ ],
+ "pilares": [
+  {
+   "u": 0.465,
+   "v": 0.67,
+   "r": 0.02,
+   "color": "azul",
+   "en": 824.8,
+   "sale": 826.9,
+   "alto": 11
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 824.9,
+   "a": 826.9,
+   "u": 0.465,
+   "v": 0.67,
+   "alto": 0,
+   "texto": "ROOKIE",
+   "sub": "ANNIE · DETRÁS DE SU EQUIPO",
+   "color": "azul",
+   "dx": 170,
+   "dy": 40,
+   "icono": "/videos/lol_worlds_2026/iconos/Annie.png"
+  }
+ ]
+}

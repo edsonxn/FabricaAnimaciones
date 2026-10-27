@@ -1,0 +1,114 @@
+{
+ "modo": "video",
+ "de": 273.3,
+ "a": 277.4,
+ "anillos": [
+  {
+   "u": 0.715,
+   "v": 0.36,
+   "r": 0.036458333333333336,
+   "color": "rojo",
+   "en": 273.5,
+   "sale": 277.4
+  },
+  {
+   "u": 0.21,
+   "v": 0.27,
+   "r": 0.03125,
+   "color": "rojo",
+   "en": 273.7,
+   "sale": 277.4
+  },
+  {
+   "u": 0.385,
+   "v": 0.43,
+   "r": 0.0375,
+   "color": "azul",
+   "en": 274.7,
+   "sale": 277.4
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.715,
+   "v": 0.36,
+   "r": 0.020052083333333335,
+   "color": "rojo",
+   "en": 273.6,
+   "sale": 277.4,
+   "alto": 7
+  },
+  {
+   "u": 0.21,
+   "v": 0.27,
+   "r": 0.0171875,
+   "color": "rojo",
+   "en": 273.8,
+   "sale": 277.4,
+   "alto": 7
+  },
+  {
+   "u": 0.385,
+   "v": 0.43,
+   "r": 0.020625,
+   "color": "azul",
+   "en": 274.8,
+   "sale": 277.4,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 273.65,
+   "a": 277.4,
+   "u": 0.715,
+   "v": 0.36,
+   "alto": 0,
+   "texto": "TARZAN",
+   "sub": "NOCTURNE · KC A CIEGAS",
+   "color": "rojo",
+   "dx": -97.0,
+   "dy": -10,
+   "tam": 30
+  },
+  {
+   "de": 273.84999999999997,
+   "a": 277.4,
+   "u": 0.21,
+   "v": 0.27,
+   "alto": 0,
+   "texto": "SHANKS",
+   "sub": "AKALI",
+   "color": "rojo",
+   "dx": 88.0,
+   "dy": -10,
+   "tam": 30
+  },
+  {
+   "de": 274.84999999999997,
+   "a": 277.4,
+   "u": 0.385,
+   "v": 0.43,
+   "alto": 0,
+   "texto": "BUSIO",
+   "sub": "RENATA",
+   "color": "azul",
+   "dx": 0,
+   "dy": 79.04,
+   "tam": 30,
+   "icono": "/videos/lol_worlds_2026/iconos/Renata.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 273.4,
+   "a": 277.4,
+   "k": 0.42
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/lol_worlds_2026/tactica3d/capas/j1_pausa_fondo.jpg",
+ "_huella": "364daa46afb5"
+}

@@ -46,6 +46,7 @@ Para re-verificar contra YouTube: `python fab.py yt videos <alias>` (los privado
 | mar 20-oct 08:00 | Crónicas del gaming | Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE (`banjo_tooie`, HxURLhWv1Vs, voz Hope, 15:07) | **Público** (al momento, a pedido del usuario) |
 | sáb 24-oct 18:00 | Crónicas del gaming | Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE (`zelda_oot`, tHGhx72-OTs, voz Hope, 15:56) | Programado (subido en privado el 22-oct) |
 | vie 30-oct 18:00 | Crónicas del gaming | Zelda Majora's Mask: su historia y los 12 secretos QUE IGNORASTE (`majora_mask`, EFWqji6rqIg, voz Hope, OST oficial, 15:20) | Programado (subido en privado el 24-oct; aprobado por el usuario) |
+| lun 2-nov 18:00 | Crónicas del gaming | Zelda Ocarina of Time REMAKE: los 15 CAMBIOS frente al ORIGINAL de N64 (`oot_remake_cambios`, 1wDyy-FJrBg, voz Hope turbo, OST oficial, 12:06) | Programado (subido en privado el 27-oct; pendiente del visto bueno del usuario) |
 | mar 27-oct 18:00 | Crónicas del gaming | Los 10 Jiggies más CRUELES de Banjo-Tooie (`bt_jiggies_crueles`, qLBP3ce4AC4, voz Hope, 11:30) | Programado (subido en privado el 23-oct) |
 | jue 15-oct 09:00 | Crónicas de Warcraft | Las 9 clases y profesiones OCULTAS de WoW Forever (`wow_clases_ocultas`, KEXk-wMhX1o) | Programado (privado) |
 | dom 18-oct 09:00 | Crónicas de Warcraft | Las 8 pistas que Blizzard YA dejó sobre lo que viene después de WoW Forever (`wow_pistas_futuro`, vODv9Gm0tjQ) | Programado (privado) |

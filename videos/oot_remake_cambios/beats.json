@@ -1,0 +1,674 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 11.919,
+  "tipo": "video",
+  "texto": "El 5 de noviembre vuelve Ocarina of Time. 28 años después, en Nintendo Switch 2, y con cambios que nadie se atrevió a hacer en 1998.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 11.919,
+  "t1": 19.642,
+  "tipo": "video",
+  "texto": "Link puede saltar cuando quiere. La cámara por fin es tuya. Y la ocarina se puede tocar tarareando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.642,
+  "t1": 25.572,
+  "tipo": "video",
+  "texto": "Pero no todo cambió. Hay una cosa del original que Nintendo dejó igual a propósito,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.572,
+  "t1": 34.652,
+  "tipo": "video",
+  "texto": "y Eiji Aonuma explicó por qué. Así que hoy te cuento cómo llegamos a este remake, y los 15 cambios más grandes frente",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.652,
+  "t1": 42.02,
+  "tipo": "video",
+  "texto": "al Ocarina of Time de Nintendo 64. Primero, un poco de contexto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.02,
+  "t1": 48.672,
+  "tipo": "video",
+  "texto": "Ocarina of Time salió en noviembre de 1998, para la Nintendo 64.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 48.672,
+  "t1": 59.147,
+  "tipo": "video",
+  "texto": "Fue el primer juego en sacar un 40 sobre 40 en la revista Famitsu, y todavía hoy es el juego con la nota más alta de Metacritic, un 99.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.147,
+  "t1": 70.87,
+  "tipo": "video",
+  "texto": "No es la primera vez que se rehace. En 2011, Nintendo y el estudio Grezzo lo llevaron a la Nintendo 3DS, con gráficos nuevos y la pantalla táctil para los objetos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.87,
+  "t1": 76.065,
+  "tipo": "video",
+  "texto": "Pero aquello fue un lavado de cara. Lo de ahora es otra cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.065,
+  "t1": 88.7,
+  "tipo": "video",
+  "texto": "Nintendo lo anunció en su Direct del 9 de junio. Y en septiembre, en el Direct del 40 aniversario de Zelda, publicó una demostración de 15 minutos jugada por el propio Eiji Aonuma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 88.7,
+  "t1": 94.3,
+  "tipo": "video",
+  "texto": "Todo está rehecho, hasta la textura de cada material. Los lugares se remodelaron,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.3,
+  "t1": 104.291,
+  "tipo": "video",
+  "texto": "el juego va más fluido, y las cargas son más cortas. Saldrá solo en Switch 2, a 59,99 dólares en Estados Unidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 104.291,
+  "t1": 112.031,
+  "tipo": "video",
+  "texto": "Y Aonuma lo resumió así: un remake en gran parte fiel al original, con controles modernos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.031,
+  "t1": 120.218,
+  "tipo": "video",
+  "texto": "Fiel, sí. Pero con muchos cambios. Vamos con ellos, del más pequeño al más grande.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.218,
+  "t1": 128.844,
+  "tipo": "video",
+  "texto": "Número 15. Una bolsa más grande. En el original, Link empezaba con una bolsa de solo 99 rupias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.844,
+  "t1": 137.306,
+  "tipo": "video",
+  "texto": "Y en cuanto querías algo caro, tocaba juntar y esperar. La primera mejora era la bolsa de adulto, de 200 rupias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.306,
+  "t1": 148.586,
+  "tipo": "video",
+  "texto": "Te la daban en la Casa Skulltula de Kakariko, a cambio de 10 Skulltulas doradas. En las imágenes del Direct, el contador del remake ya marca 200 desde el principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 148.586,
+  "t1": 156.952,
+  "tipo": "video",
+  "texto": "Parece poca cosa. Pero menos viajes para juntar rupias es menos relleno, justo al empezar la aventura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 156.952,
+  "t1": 164.609,
+  "tipo": "video",
+  "texto": "En el 14, unas figuras que traen máscaras. Nintendo anunció dos amiibo nuevos para 2027.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.609,
+  "t1": 173.465,
+  "tipo": "video",
+  "texto": "Link niño, y Zelda niña. Al usarlos en el remake, desbloquean unas máscaras especiales de estilo retro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.465,
+  "t1": 182.387,
+  "tipo": "video",
+  "texto": "En el original, las máscaras eran parte de una misión, la de la tienda de máscaras felices. Aquí llegan desde fuera del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 182.387,
+  "t1": 190.669,
+  "tipo": "video",
+  "texto": "Nintendo todavía no ha detallado qué máscaras son, ni si hacen algo más que cambiar el aspecto de Link.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.669,
+  "t1": 198.534,
+  "tipo": "video",
+  "texto": "Número 13. El cambio que no hicieron. Las cargas son más rápidas, pero al pasar entre ciertas zonas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.534,
+  "t1": 208.901,
+  "tipo": "video",
+  "texto": "sigue habiendo una pantalla de carga. Y no es un descuido. Aonuma dijo que la mantuvieron a propósito, para conservar la esencia del juego original.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 208.901,
+  "t1": 219.283,
+  "tipo": "video",
+  "texto": "A muchos jugadores no les convenció. Hay quien cree que es una necesidad técnica, y hay quien dice que esos dos o tres segundos ayudan a separar cada lugar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 219.283,
+  "t1": 225.993,
+  "tipo": "video",
+  "texto": "Lo curioso es esto. En 1998, esa pausa era una necesidad del cartucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.993,
+  "t1": 233.558,
+  "tipo": "video",
+  "texto": "En 2026, es una decisión. En el 12, el juego sale de la consola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 233.558,
+  "t1": 241.974,
+  "tipo": "video",
+  "texto": "El remake se conecta con Zelda Notes, una sección de la aplicación de Nintendo Switch para el celular. Guarda un registro de cada día,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.974,
+  "t1": 249.21,
+  "tipo": "video",
+  "texto": "con datos como los enemigos que derrotaste. Y tiene un juego de encontrar lugares a partir de imágenes de pista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.21,
+  "t1": 259.905,
+  "tipo": "video",
+  "texto": "También te deja tocar una ocarina virtual en la pantalla, y crear partituras para compartirlas con un código QR. Y trae un concurso de más de 2000 preguntas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.905,
+  "t1": 267.717,
+  "tipo": "video",
+  "texto": "Un intento gratis al día. Y si quieres más, pagas con rupias del juego. Número 11.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.717,
+  "t1": 276.038,
+  "tipo": "video",
+  "texto": "El tiempo ya no se detiene. En la Nintendo 64, el día y la noche pasaban en el campo de Hyrule.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.038,
+  "t1": 287.277,
+  "tipo": "video",
+  "texto": "Pero al entrar a sitios como la Ciudadela o el Bosque Kokiri, el reloj se congelaba. Si querías que se hiciera de noche, tenías que salir al campo, y esperar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 287.277,
+  "t1": 294.024,
+  "tipo": "video",
+  "texto": "En el remake, el ciclo de día y noche sigue en todas partes, también dentro de los pueblos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 294.024,
+  "t1": 303.039,
+  "tipo": "video",
+  "texto": "Así que la plaza del mercado puede cambiar de ambiente mientras estás dentro. Y el pueblo deja de ser una foto fija.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 303.039,
+  "t1": 309.808,
+  "tipo": "video",
+  "texto": "En el 10, un menú nuevo. En el original solo tenías tres botones C para tus objetos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.808,
+  "t1": 321.184,
+  "tipo": "video",
+  "texto": "Para cambiar de arma, pausabas, buscabas en una cuadrícula, y volvías. Las botas de hierro del Templo del Agua son el ejemplo más famoso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 321.184,
+  "t1": 326.644,
+  "tipo": "video",
+  "texto": "Ponerlas, quitarlas, y ponerlas otra vez, siempre desde el menú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.644,
+  "t1": 336.364,
+  "tipo": "video",
+  "texto": "En la demo del remake, el inventario es una cuadrícula que se recorre rápido, con accesos directos en la cruceta. Y según quienes analizaron las imágenes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 336.364,
+  "t1": 345.859,
+  "tipo": "video",
+  "texto": "Link puede seguir moviéndose mientras sostiene un objeto. Número 9. Apuntar moviendo el control.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.859,
+  "t1": 353.554,
+  "tipo": "video",
+  "texto": "En la Nintendo 64, el tirachinas, el arco y el gancho se apuntaban con el stick, en primera persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 353.554,
+  "t1": 363.889,
+  "tipo": "video",
+  "texto": "En el remake se puede apuntar con el giroscopio, moviendo el control o la consola. No es nuevo del todo. La versión de 3DS ya lo hacía en 2011,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 363.889,
+  "t1": 373.473,
+  "tipo": "video",
+  "texto": "y también Breath of the Wild. Pero para una Skulltula dorada en lo alto de una pared, es la diferencia entre un tiro y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 373.473,
+  "t1": 379.213,
+  "tipo": "video",
+  "texto": "En el 8, un pueblo que por fin es de verdad. En la Nintendo 64,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.213,
+  "t1": 388.896,
+  "tipo": "video",
+  "texto": "la plaza del mercado de la Ciudadela de Hyrule no era un escenario en 3D. Eran fondos pintados de antemano, vistos desde cámaras fijas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.896,
+  "t1": 398.276,
+  "tipo": "video",
+  "texto": "Por eso no podías girar la cámara ahí. Y por eso esos fondos esconden detalles raros, como puertas modeladas que nunca llegas a ver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 398.276,
+  "t1": 409.331,
+  "tipo": "video",
+  "texto": "La versión de 3DS ya la hizo en 3D. Pero en el remake la cámara se mueve libre por la plaza, y en las imágenes se ven calles nuevas y mucha más gente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 409.331,
+  "t1": 415.651,
+  "tipo": "video",
+  "texto": "Hasta un mod de fans para la Nintendo 64 está rehaciendo esos fondos en 3D este mismo año.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 415.651,
+  "t1": 424.541,
+  "tipo": "video",
+  "texto": "La Ciudadela era una espina clavada para todos. Número 7. Una orquesta para Koji Kondo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 424.541,
+  "t1": 433.088,
+  "tipo": "video",
+  "texto": "La música original de Koji Kondo la generaba la propia consola, con instrumentos grabados en pequeñas muestras dentro del cartucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 433.088,
+  "t1": 440.036,
+  "tipo": "video",
+  "texto": "En el remake, Nintendo habla de música orquestal sinfónica, y de efectos de sonido renovados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 440.036,
+  "t1": 450.575,
+  "tipo": "video",
+  "texto": "Lo que todavía no ha dicho es si se podrá elegir la banda sonora original. Y es un cambio grande. Porque en Ocarina of Time, la música no es un fondo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 450.575,
+  "t1": 457.87,
+  "tipo": "video",
+  "texto": "Es el centro del juego. En el 6, adiós a depender de Navi.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.87,
+  "t1": 468.418,
+  "tipo": "video",
+  "texto": "En 1998, si te perdías, la ayuda principal era Navi. ¡Hey, escucha!, y una pista que a veces no ayudaba mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 468.418,
+  "t1": 475.705,
+  "tipo": "video",
+  "texto": "El remake trae una función nueva que en inglés se llama Threads of Time, los Hilos del Tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.705,
+  "t1": 481.669,
+  "tipo": "video",
+  "texto": "Te deja revisar en cualquier momento lo que llevas hecho, y cuál es tu siguiente objetivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.669,
+  "t1": 493.254,
+  "tipo": "video",
+  "texto": "Y mientras avanzas, se va llenando un gran tapiz con tu aventura. Es opcional. Así que quien quiera perderse como en 1998, puede.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 493.254,
+  "t1": 500.537,
+  "tipo": "video",
+  "texto": "Número 5. Hyrule por fin habla. En la Nintendo 64 todo era texto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 500.537,
+  "t1": 511.376,
+  "tipo": "video",
+  "texto": "Link gritaba al atacar, y poco más. En el remake, las cinemáticas tienen voces completas, se ampliaron, y los personajes tienen más diálogo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 511.376,
+  "t1": 516.376,
+  "tipo": "video",
+  "texto": "Es la primera vez que la historia de Ocarina of Time se cuenta con actores de voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.376,
+  "t1": 529.161,
+  "tipo": "video",
+  "texto": "Lo que Nintendo no ha aclarado es la pregunta que todos se hacen. Si Link dirá una sola palabra. En el 4, la ocarina, como nunca la tocaste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 529.161,
+  "t1": 536.852,
+  "tipo": "video",
+  "texto": "En el original, cada canción era una secuencia de botones, con las notas del botón A y los cuatro botones C.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 536.852,
+  "t1": 545.451,
+  "tipo": "video",
+  "texto": "En Switch 2 puedes tararear, o tocar, una canción que ya aprendiste frente al micrófono de la consola. Y Link la toca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 545.451,
+  "t1": 553.021,
+  "tipo": "video",
+  "texto": "Y el juego responde a dos ocarinas de verdad que salen este año. Una se toca soplando, y la otra, electrónica,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 553.021,
+  "t1": 563.908,
+  "tipo": "video",
+  "texto": "de la marca Hori, toca canciones enteras con un botón. Así que, por fin, la Canción de Epona puede salir de tu propia voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 563.908,
+  "t1": 569.136,
+  "tipo": "video",
+  "texto": "Número 3. Correr de verdad. En la Nintendo 64,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 569.136,
+  "t1": 576.923,
+  "tipo": "video",
+  "texto": "rodar era más rápido que correr. Por eso media generación cruzó Hyrule dando volteretas sin parar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.923,
+  "t1": 587.121,
+  "tipo": "video",
+  "texto": "En el remake, Link tiene un esprint. Mantienes el botón, y corre. Y en el agua, también puede acelerar nadando. Según quienes analizaron la demo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 587.121,
+  "t1": 594.418,
+  "tipo": "video",
+  "texto": "mantener el botón de rodar ahora lo pone a correr. Así que el truco de las volteretas pierde sentido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.418,
+  "t1": 605.392,
+  "tipo": "video",
+  "texto": "Y el aire al bucear ya no es una cuenta atrás arriba de la pantalla. Ahora es una barra, junto a Link. En el 2, la cámara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 605.392,
+  "t1": 612.432,
+  "tipo": "video",
+  "texto": "La Nintendo 64 tenía un solo stick. La cámara iba detrás de Link, la centrabas con el botón Z,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.432,
+  "t1": 624.948,
+  "tipo": "video",
+  "texto": "y para mirar alrededor tenías la vista en primera persona. En el remake, la cámara es libre. Se maneja con el stick derecho, y da la vuelta completa alrededor de Link.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 624.948,
+  "t1": 632.666,
+  "tipo": "video",
+  "texto": "Y eso cambia hasta los escenarios. Nintendo dice que los lugares se remodelaron para que la cámara pueda moverse por ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 632.666,
+  "t1": 642.169,
+  "tipo": "video",
+  "texto": "Rincones que en 1998 se pensaron para verse desde un solo ángulo, ahora se pueden mirar desde todos lados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 642.169,
+  "t1": 646.672,
+  "tipo": "video",
+  "texto": "Y el cambio número 1. Link puede saltar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 646.672,
+  "t1": 655.602,
+  "tipo": "video",
+  "texto": "En Ocarina of Time, Link nunca saltaba cuando tú querías. Saltaba solo, al correr hacia un borde. En 1998,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 655.602,
+  "t1": 667.819,
+  "tipo": "video",
+  "texto": "casi nadie sabía moverse en tres dimensiones, y el salto automático evitaba muchas caídas. En el remake hay un botón para saltar, cuando y donde tú quieras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 667.819,
+  "t1": 674.559,
+  "tipo": "video",
+  "texto": "Parece lo más simple del mundo. Pero todas las mazmorras se diseñaron para un Link que no saltaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 674.559,
+  "t1": 682.538,
+  "tipo": "video",
+  "texto": "Así que la gran pregunta es qué atajos van a aparecer, y qué tuvo que cambiar Nintendo para que nada se rompa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 682.538,
+  "t1": 690.221,
+  "tipo": "video",
+  "texto": "Lo sabremos el 5 de noviembre. Y lo que todavía no sabemos también importa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 690.221,
+  "t1": 699.958,
+  "tipo": "video",
+  "texto": "Nintendo no ha confirmado mazmorras nuevas, ni un campo de Hyrule más grande, ni si vuelve Master Quest, la versión con las mazmorras más difíciles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 699.958,
+  "t1": 708.255,
+  "tipo": "video",
+  "texto": "Lo confirmado es un remake fiel, con controles modernos, voces, orquesta, y un Link que por fin salta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 708.255,
+  "t1": 716.929,
+  "tipo": "video",
+  "texto": "Ahora dime tú en los comentarios. ¿Qué cambio te gusta más? ¿Y cuál no debieron tocar? Y si quieres saber cómo nació este juego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 716.929,
+  "t1": 725.8696,
+  "tipo": "video",
+  "texto": "aquí tienes la historia de Ocarina of Time y sus 12 secretos. Nos vemos en Hyrule.",
+  "clip_s": 8
+ }
+]

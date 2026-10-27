@@ -14,6 +14,8 @@ Uso (desde C:\\FabricaAnimaciones):
   python fab.py yt canales                        canales conectados y su estado
   python fab.py yt videos <canal>                 últimos videos del canal (incluye privados/borradores)
   python fab.py yt metricas <canal> [dias]        radiografía del canal (Analytics) -> canales/metricas/*.json
+  python fab.py yt comentarios <canal> [dias]     comentarios recientes y sin contestar -> canales/comentarios/<alias>.json
+  python fab.py yt comentario <video> <canal> <id>  tarjeta del comentario REAL como pegatina (videos/<v>/pegatinas/com_<id>.png)
   python fab.py yt canal <canal>                  aplica canales/<canal>.json: descripción, palabras clave, idioma,
                                                   país y banner (el nombre y la foto de perfil solo se cambian en Studio)
   python fab.py yt aplicar <video> <canal> <id>   aplica videos/<video>/youtube.json a un video ya subido
@@ -488,6 +490,12 @@ def main():
         canales()
     elif cmd == "videos":
         videos(resolver_canal(a[1]))
+    elif cmd == "comentarios":
+        import comentarios
+        comentarios.guardar(a[1], int(a[2]) if len(a) > 2 else 21)
+    elif cmd == "comentario":
+        import comentarios
+        comentarios.pegatina(a[1], a[2], a[3])
     elif cmd == "canal":
         cfg = json.load(open(os.path.join(CANALES, a[1] + ".json"), encoding="utf-8"))
         configurar_canal(resolver_canal(a[1]), cfg)

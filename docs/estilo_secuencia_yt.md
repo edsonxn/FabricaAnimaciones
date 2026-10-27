@@ -589,5 +589,22 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.
 
+## COMENTARIOS de la gente (el usuario, 27-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
+Que el público se sienta tomado en cuenta. Tres momentos:
+1. **Al proponer tema:** `python fab.py yt comentarios <canal> [dias]` → `canales/comentarios/<alias>.json` (fuera de git) y los
+   25 con más ♥ en pantalla. Los temas que la gente pide van a `docs/ideas_guardadas.md` con su @usuario y el id del comentario;
+   cuentan como dato para elegir (junto a `ideas` y la fórmula), sobre todo si se repiten o tienen ♥.
+2. **En el guion:** si el video nace de un comentario o corrige un error que alguien señaló, la voz lo dice («@silentsword nos
+   pidió el corcel de Xoroth…») y en pantalla sale el comentario REAL: `python fab.py yt comentario <v> <canal> <id>` dibuja la
+   tarjeta (modo oscuro de YouTube: avatar, @usuario, «hace N días», texto, 👍) en `videos/<v>/pegatinas/com_<id>.png`, y en
+   `efectos.py`: `peg(en, "com_<id>", "", tam=760, x=.30, y=.30)`, 3-5 s. 1-3 por video, en el gancho o al abrir el puesto que pidió.
+   Nunca inventar ni retocar el texto (solo cortar con «…», máx. 5 líneas); nunca un comentario para ridiculizar a nadie;
+   nada de datos personales más allá del @usuario y su avatar públicos.
+3. **Contestar:** borrador de respuestas con el tono del canal → el usuario lo aprueba → envío por la API espaciado 25-60 s
+   (`comments.insert`, 50 unidades c/u). Permitido por las Developer Policies si el usuario aprueba cada respuesta (III.I.2,
+   III.C.3); el riesgo es el filtro de spam: sin respuestas idénticas, sin enlaces ni «suscríbete». Las preguntas de «¿la voz es
+   IA?» las decide el usuario: nunca mentir. Corazones y fijar comentario: solo en Studio (la API no lo hace).
+Plastitube y Runa Caída necesitan reconectar el token (`yt conectar`) para leer comentarios (403 de permisos, 27-oct).
+
 ## Pendiente del estilo
 «Cambiar clip» desde el bloque del Montaje; dos apoyos a la vez en el mismo instante (hoy se pueden, pero se enciman).

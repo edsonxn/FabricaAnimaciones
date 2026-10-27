@@ -320,8 +320,21 @@ repetir `hilos` ni ningún MG ya hecho; cada oportunidad pide un diseño propio 
   función nueva se documenta en la sección de su canal en este doc, pero lo normal es **diseñar uno distinto en cada video**: un MG ya
   hecho solo se reutiliza si de verdad es lo que mejor cuenta esa escena (los contadores y casillas de Warcraft son la excepción
   natural).
-- Referencias del NIVEL esperado (para inspirarse, no para copiar): Runa `mg_er.doble_vida/gemelos/hilos/cosido/cruces/triada`; Warcraft `mg_wow.filas/grupos/contadores` y (21-oct, `wow_curiosidades_kalimdor`) `runas` (cadena de suministro: 7 runas que se apagan con el agua de Azshara), `linaje` (pareja -> hijos que tachan al padre, con retratos reales en medallón), `cadena` (causa -> efecto en medallones que se tiñen de rojo) y `consola` (terminal titán que teclea «FALTAN» y estampa sellos); Tamriel
+- Referencias del NIVEL esperado (para inspirarse, no para copiar): Runa `mg_er.doble_vida/gemelos/hilos/cosido/cruces/triada`; Warcraft `mg_wow.filas/grupos/contadores` y (21-oct, `wow_curiosidades_kalimdor`) `runas` (cadena de suministro: 7 runas que se apagan con el agua de Azshara), `linaje` (pareja -> hijos que tachan al padre, con retratos reales en medallón), `cadena` (causa -> efecto en medallones que se tiñen de rojo) y `consola` (terminal titán que teclea «FALTAN» y estampa sellos); (24-oct, `wow_100_curiosidades_tbc_wotlk`) `paradero` (¿dónde está cada uno?: medallones en fila con su lugar; los que faltan, grises con «?» y sello rojo), `simon` (el juego de 4 luces de Ogri'la: secuencias que crecen en bucle y el fallo con rayos) y `franquicia` (un personaje con «sucursales»: letreros de neón que prenden parpadeando y contador); (27-oct, `wow_jugadores_rompieron`) `reckoning` (un talento sin tope: contador de cargas que sube, el jefe con su barra de vida, lluvia de íconos que lo revienta y el parche que desploma el contador a 4), `inmortal` (jefe que se cura con cada muerte: la barra baja a golpes y cada calavera la rellena en verde; sello «INMORTAL» y un MJ que se lo lleva) y `expediente` (un caso judicial que se escribe año a año con golpe de mazo y veredicto en sello rojo); Tamriel
   `mg_tes.rejilla/traiciones/reloj/contadores/rehenes/sospechosos/cadena/balanza`.
+
+## METRAJE DE ARCHIVO < 720p (27-oct-2026, `wow_jugadores_rompieron`)
+Los videos originales de 2005-2006 (Kazzak en Ventormenta 240p, el gong de Medivh 480p, la exploración de Hyjal 256p, el récord de
+Joana 360p, la «Reckoning Bomb» 480p) son lo más valioso de un video de jugadores REALES, pero `bajar` los rechaza («Requested
+format is not available»: pide ≥ 720p). Receta: bajarlos enteros (`yt-dlp -f "bv*+ba/b"` a `medios/_archivo/<n>_raw.mp4`), hoja de
+contacto 4x4 con la hora (ffmpeg `fps=16/dur,drawtext,tile`) para elegir tramos, y armar `medios/scene-NNN.mp4` a mano como VENTANA
+DE ARCHIVO: el mismo clip escalado a 860 px de alto con marco dorado (`pad … color=0xC9A227`) sobre él mismo desenfocado y oscurecido
+a cuadro entero. Se registran en `fuentes.json` (crédito) y en `busquedas.json` con `"_archivo"` para no pasarles `--rehacer`.
+Un tramo puede salir negro (Kazzak a 203 s): mirar el clip armado. En la descripción, línea «METRAJE DE ARCHIVO» con sus canales.
+- Animaciones de fans sobre audio real (Onyxia Wipe): revisar TODOS sus cuadros; la «YouTube Approved Edition» trae fotos ajenas
+  (una sugerente, un faquir) y el audio original tiene tacos justo después del grito: cortar el beat antes (`ambiente_por`).
+- Guion de jugadores: los nombres que Whisper escribe distinto (Kazzak → «Kazakh», Joana → «Johanna», Ahn'Qiraj → «Anquiraj») se
+  aceptan con `CER_MAX_POR_FRASE` tras oírlos; «WoW» va en FONETICA como «uórld of uárcraft».
 
 ## MAPAS REALES CON RUTA (el usuario, 23-oct-2026: Warcraft, Runa Caída, Tamriel y Crónicas del gaming)
 El usuario: «en ocasiones hay que mostrar mapas reales del juego con rutas cuando hablemos de misiones o cosas que el espectador
@@ -343,6 +356,13 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   | Elden Ring | eldenring.fandom.com `File:ER Region Map <Región>.jpg` (4700 px) · mundo entero `ER Lands Between Map.jpg` (9644 px, con `recorte`) | Los `Map … MENU Knowledge` son el objeto «fragmento de mapa», NO el mapa |
   | Skyrim | UESP (`en.uesp.net/w/api.php?action=query&list=allimages&aiprefix=SR-map-`): `SR-map-Skyrim.jpg` (papel del juego, 2048) · `SR-map-<Comarca>_Hold.jpg` | `SR-map-All_Holds.jpg` es el político a colores (no el del juego) |
   | Gaming | la wiki del juego en Fandom (`list=search&srnamespace=6&srsearch=<juego> map`); Zelda OoT: `TheLegendOfZeldaOcarinaOfTime map.png` (1980x1440, ilustrado) | vgmaps.com tiene mapas cenitales hechos de capturas |
+- **Mapas de continente de Wowhead (24-oct-2026)**: `.../maps/eses/original/-2.jpg` = Terrallende, `-5` = Rasganorte, `-4` = el cosmos
+  (Azeroth/Draenor), `-7` = Pandaria. Los ids `3` y `4` son ZONAS (Tierras Inhóspitas y Las Tierras Devastadas): MIRAR cada mapa
+  bajado antes de usarlo. **Video con 100 paradas** (`wow_100_curiosidades_tbc_wotlk`): un mapa general a pantalla en la intro
+  (solo inicio y meta con nombre: el mapa ya pinta las zonas; con 8 rótulos se amontonaban) y una VENTANA de 4-6 s por parada
+  (helper `parada()` en su efectos.py: zona + «N.º n» + foto), con ruta corta cuando la voz va de un sitio a otro. Coordenadas
+  dudosas: `{{coords|x|y|zona}}` en el wikitexto de Wowpedia (`prop=revisions`) del PNJ. Un recorrido largo con solo inicio
+  y meta necesita `traza=99` (si no, cada tramo se dibuja en 1,7 s y la ruta sale de golpe al final).
 - **Coordenadas**: `python nucleo/mg_mapa.py rejilla videos/<v>/mapas/<slug>.jpg` → `<slug>_rejilla.jpg` con rejilla cada 0,05
   (MÍRALA y lee x, y de cada lugar). `puntos`: `(x, y)` = punto de paso sin nombre (hace que la ruta siga el camino del mapa:
   pon 1-3 entre lugares para no cortar montañas ni mar) y `(x, y, "Nombre"[, "inicio"|"paso"|"meta"|"peligro"])`. Nombres
@@ -467,6 +487,29 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
     dentro de la página de Flow y pegado sintético como ingrediente; salió bien a la primera (`prompt_miniatura.md`).
   - Voz Hope: Whisper escribe «Zubas/uvas», «Umba Umba», «Cheeto», «Scrooge» → tolerancias; la única mala real fue «Dentro, Banjo»
     leído «Ventro» (dos palabras que empiezan igual): reescribir la frase, no repetir la semilla.
+
+## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
+«Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
+de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.
+- **Qué beats:** los que enseñan algo que SUENA y la voz lo nombra: la música del juego cuando se habla de ella, una canción que
+  se toca (ocarina, laúd), gritos/voces del personaje, golpes y saltos, una maldición, el cartel de una zona. ~1 de cada 4 beats;
+  el resto sigue mudo (dos músicas a la vez = ruido).
+- **Cómo:** `SECUENCIA["ambiente_por"] = {"scene-050": .9, ...}` (0,5 ambiente, 0,8-0,9 cuando el sonido ES el punto) con
+  `ambiente=0.0` general → `python fab.py <v> bajar 50,51 --rehacer` (con volumen > 0, `secuencia_yt._bajar_tramo` baja
+  `bv+ba` y conserva el audio en AAC) → la OST se APARTA −14 dB en esos beats (`armar_musica_ost.py`, `APARTA_DB`, rampas de
+  0,5 s) → `python fab.py <v> ambiente` (audio/ambiente.wav, nivelado) → `mezcla` lo pone bajo la voz con ducking de 5 dB.
+- **Narrador encima** (demos de desarrolladores, tráileres «overview», guías): Whisper sobre cada clip con audio; si habla
+  alguien, Demucs `--two-stems vocals` y el clip se queda con `no_vocals` (`videos/oot_remake_cambios/quitar_narrador.py`),
+  y Whisper otra vez (debe salir «sin habla»). En oot_remake_cambios 10 de 21 clips traían la voz en inglés de la demo.
+- **A un clip YA APROBADO no se le rebaja con `bajar --url --desde` (27-oct-2026, `wow_100_curiosidades_tbc_wotlk`):** con
+  `+ba` yt-dlp corta el tramo en OTRO keyframe (video que empieza segundos después que el audio) y 11 de 12 clips salieron con
+  otra imagen o de 1 cuadro. Para sumarle el sonido sin tocar la imagen: `_sonido_original.py alinear <carpeta de aprobados>`
+  (baja el tramo con audio y margen, busca por imagen dónde empieza el aprobado y le pega el audio de ese instante; dif < 8 =
+  mismo cuadro). Antes copia los aprobados de `medios/_respaldo` (el más nuevo de cada beat). Luego `creditos` (el `--url` deja
+  «fijado a mano» en fuentes.json), `habla` (Whisper: 2 de 14 traían narrador → fuera) y `nivel` (−52 LUFS = mudo → fuera).
+  Elegir por el TÍTULO del clip: «Music Video», «LIVE», «No Commentary», cinemáticas; las guías casi siempre llevan narrador.
+- **Pausas para oírlo:** el guion solo admite `post` por ESCENA y añadirlo re-corta TODOS los beats (85 en vez de 84, otros
+  límites): decidirlo ANTES de `beats`/plan de clips, nunca después.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;

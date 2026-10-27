@@ -17,6 +17,7 @@ guardan en nucleo/datos/iconos_wow/.
                                                      un grupo con rótulo None se queda apagado con «?» (lo que falta)
   contadores(titulo, [(ícono, etiqueta, valor, i_ini, i_fin), ...], remate=(texto, i))   números que corren de 0 al valor
                                                      entre dos marcas; el remate sale en verde en su marca
+  (más abajo, por video: runas/linaje/cadena/consola · ruta/forja/sorteo · paradero/simon/franquicia · altares/apariciones)
 """
 import math
 import os
@@ -923,5 +924,499 @@ def sorteo(titulo, n, ico_premio, etiqueta, remate=None, ancho=1400):
             _texto(d, (cx, cy + 140), f"1 de {n:,}".replace(",", " "), f_g, ORO_T, "mm", 255 * _eo(v / .3))
         if remate and dt >= t2:
             _texto(d, (M + ancho / 2, y0 + gh + 52), remate, f_c, VERDE, "mm", 255 * _eo((dt - t2) / .3))
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ MG nuevos de `wow_100_curiosidades_tbc_wotlk` (24-oct-2026)
+#   paradero(titulo, [(img, nombre, lugar|None), ...], sello)   ¿dónde está cada uno? medallones en fila; los que no están, en
+#                                                               gris con un «?» que late y «sin rastro», y un sello rojo encima
+#   simon(titulo, sello)                                        el juego de 4 luces de colores (las reliquias apexis de Ogri'la):
+#                                                               secuencias que crecen en bucle y el fallo con rayos
+#   franquicia(retrato, titulo, [(lugar, sub), ...], sello)     un personaje con «sucursales»: letreros de neón que prenden
+#                                                               parpadeando, unidos a su retrato, y el contador que sube
+def paradero(titulo, personas, sello=None, ancho=1640):
+    """¿Dónde está cada uno? (c100: los 5 héroes de la expedición de los Hijos de Lothar). personas = [(img, nombre, lugar),
+    ...]: la persona k sale en la marca k (medallón con rebote; antes, su hueco vacío) con el nombre y debajo DÓNDE está, en oro;
+    lugar None = medallón gris, «?» que late encima y «sin rastro» en rojo. sello = (texto, i_marca): sello rojo sobre los que
+    faltan."""
+    R, n = 88, len(personas)
+    h = 96 + 2 * R + 150
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        paso = (ancho - 2 * 175) / max(1, n - 1)
+        cy = M + 100 + R
+        faltan = []
+        for k, (ruta, nom, lugar) in enumerate(personas):
+            tk = _mk(marcas, k, .4 + k * 1.0)
+            cx = M + 175 + k * paso
+            if dt < tk:                                # hueco que espera a su héroe
+                lat = .5 + .5 * math.sin(dt * 3 + k)
+                d.ellipse((cx - R, cy - R, cx + R, cy + R), fill=(4, 6, 18, 200), outline=ORO + (int(60 + 60 * lat),), width=3)
+                continue
+            u = dt - tk
+            gris = lugar is None
+            _pegar(im, _medallon(ruta, R, gris), cx, cy, _pop(u))
+            d = ImageDraw.Draw(im)
+            a = 255 * _eo(u / .3)
+            _texto(d, (cx, cy + R + 36), nom, fuente("sans", 28), BLANCO, "mm", a)
+            if gris:
+                faltan.append(cx)
+                _texto(d, (cx, cy + 4), "?", fuente("serif", 120), ORO_T, "mm", a * (.55 + .45 * math.sin(dt * 4 + k)))
+                _texto(d, (cx, cy + R + 74), "sin rastro", fuente("sans", 25), ROJO, "mm", a)
+            else:
+                d.ellipse((cx - 7, cy + R + 66, cx + 7, cy + R + 80), fill=ORO_T + (int(a),))
+                _texto(d, (cx + 16, cy + R + 74), lugar, fuente("sans", 25), ORO_T, "lm", a)
+        if sello and len(marcas) > sello[1] and faltan:
+            _sello(im, sello[0], sum(faltan) / len(faltan), cy - 6, dt - marcas[sello[1]], ROJO, 40)
+        return _salida(im, dt)
+    return fn
+
+
+_SIMON = [(40, 200, 70), (225, 40, 40), (240, 200, 30), (40, 110, 235)]   # verde, rojo, amarillo, azul (como el juego)
+_SEC = [1, 3, 0, 2, 3, 1, 2, 0]
+
+
+def simon(titulo, sello="TE ELECTROCUTA", ancho=980):
+    """El juego de luces de colores (c073: las reliquias apexis de Ogri'la, «exactamente un Simon»). Disco partido en 4 luces
+    (verde, rojo, amarillo, azul) con un núcleo de cristal apexis. marca 0: las luces aparecen apagadas, una a una · 1: la
+    secuencia: se encienden en orden con halo, cada ronda una más larga (1, 2, 3, 4...), en bucle · 2: el fallo: la luz
+    equivocada parpadea en blanco, rayos que saltan del núcleo al borde y cae el sello rojo."""
+    Ro, Ri, gap = 236, 84, 14
+    h = 96 + 2 * Ro + 70
+
+    def _lit(dt, t1, t2):
+        """Índice de la luz encendida ahora en la secuencia (None = ninguna)."""
+        if dt < t1 or dt >= t2:
+            return None
+        u, ronda = dt - t1, 1
+        while True:
+            largo = ronda * .55 + .55
+            if u < largo:
+                i = int(u / .55)
+                return _SEC[i % len(_SEC)] if i < ronda and (u - i * .55) < .42 else None
+            u -= largo
+            ronda = ronda % 4 + 1
+
+    def fn(dt, dur, marcas):
+        t0, t1, t2 = _mk(marcas, 0, .3), _mk(marcas, 1, 1.6), _mk(marcas, 2, 99.0)
+        im, M = _base(ancho, h, titulo)
+        cx, cy = M + ancho / 2, M + 96 + Ro + 6
+        lit, fallo = _lit(dt, t1, t2), dt >= t2
+        mal = 2                                       # la luz que el jugador toca mal
+        halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dh, dc = ImageDraw.Draw(halo), ImageDraw.Draw(capa)
+        for q, col in enumerate(_SIMON):
+            tq = t0 + q * .14
+            if dt < tq:
+                continue
+            s = _pop(dt - tq, .3)
+            r = Ro * s
+            on = lit == q or (fallo and q == mal and int((dt - t2) * 10) % 2 == 0)
+            c = (255, 255, 255) if (fallo and q == mal and on) else (col if on else tuple(int(v * .32) for v in col))
+            a0 = {0: 180, 1: 270, 2: 90, 3: 0}[q]    # 0 arriba-izq, 1 arriba-der, 2 abajo-izq, 3 abajo-der
+            dc.pieslice((cx - r, cy - r, cx + r, cy + r), a0, a0 + 90, fill=c + (255,))
+            if on:
+                for k in range(3, 0, -1):
+                    rr = Ro + 18 * k
+                    dh.pieslice((cx - rr, cy - rr, cx + rr, cy + rr), a0, a0 + 90, fill=c + (int(50 + 20 * (3 - k)),))
+        im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(16)))
+        dc.rectangle((cx - gap / 2, cy - Ro - 4, cx + gap / 2, cy + Ro + 4), fill=(0, 0, 0, 0))   # cruz que separa las luces
+        dc.rectangle((cx - Ro - 4, cy - gap / 2, cx + Ro + 4, cy + gap / 2), fill=(0, 0, 0, 0))
+        im.alpha_composite(capa)
+        d = ImageDraw.Draw(im)
+        if dt >= t0:                                   # núcleo de cristal apexis
+            s = _pop(dt - t0, .35)
+            r = Ri * s
+            lat = .5 + .5 * math.sin(dt * 5)
+            d.ellipse((cx - r - 8, cy - r - 8, cx + r + 8, cy + r + 8), fill=(4, 6, 18, 255), outline=ORO + (255,), width=5)
+            d.ellipse((cx - r * .62, cy - r * .62, cx + r * .62, cy + r * .62), fill=(int(70 + 60 * lat), int(150 + 60 * lat), 255, 255))
+            d.polygon([(cx, cy - r * .5), (cx + r * .3, cy), (cx, cy + r * .5), (cx - r * .3, cy)], fill=(235, 250, 255, 255))
+        if fallo:                                      # rayos que saltan del núcleo al borde
+            rng = np.random.default_rng(int(dt * 14))
+            ray = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dr = ImageDraw.Draw(ray)
+            for _ in range(5):
+                ang = rng.uniform(0, 2 * math.pi)
+                pts = [(cx + Ri * math.cos(ang), cy + Ri * math.sin(ang))]
+                for j in range(1, 7):
+                    rr = Ri + (Ro + 30 - Ri) * j / 6
+                    aj = ang + rng.uniform(-.18, .18)
+                    pts.append((cx + rr * math.cos(aj), cy + rr * math.sin(aj)))
+                dr.line(pts, fill=(150, 210, 255, 200), width=12)
+                dr.line(pts, fill=(255, 255, 255, 255), width=4)
+            im.alpha_composite(ray.filter(ImageFilter.GaussianBlur(1)))
+            _sello(im, sello, cx, cy + Ro - 30, dt - t2 - .25, ROJO, 46, ang=-7)
+        return _salida(im, dt)
+    return fn
+
+
+def franquicia(retrato, titulo, sedes, sello=None, ancho=1500):
+    """Un personaje que vuelve con negocio propio en otras zonas (c079: Gurgthock, del pozo de Nagrand al Anfiteatro de la
+    Angustia y más allá). retrato = ruta de su imagen real (medallón a la izquierda); sedes = [(lugar, sub), ...]: la sede k
+    se enciende en la marca k como un letrero de neón que parpadea al prender, unido al retrato por una línea dorada; la 1.ª
+    es la MATRIZ (oro) y las demás sucursales (cian), con el contador de sucursales bajo el retrato. sello = (texto, i_marca)
+    en verde."""
+    R, AL, G = 124, 78, 16
+    n = len(sedes)
+    h = 96 + n * (AL + G) + 30 + (70 if sello else 0)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        mx, my = M + 200, M + 96 + n * (AL + G) / 2
+        t0 = _mk(marcas, 0, .3)
+        if dt >= t0 - .25:
+            _pegar(im, _medallon(retrato, R), mx, my - 20, _pop(dt - t0 + .25))
+        halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dh = ImageDraw.Draw(halo)
+        d = ImageDraw.Draw(im)
+        x0, x1 = M + 420, M + ancho - 50
+        encendidas = 0
+        for k, (lugar, sub) in enumerate(sedes):
+            tk = _mk(marcas, k, .4 + k * 1.3)
+            y = M + 96 + k * (AL + G)
+            if dt < tk:
+                d.rounded_rectangle((x0, y, x1, y + AL), 12, fill=(4, 6, 18, 160), outline=(60, 60, 80, 200), width=2)
+                continue
+            u = dt - tk
+            encendidas += 1
+            on = u > .55 or int(u * 18) % 3 != 1        # parpadeo del neón al prender
+            col = ORO_T if k == 0 else CIAN
+            ya = y + AL / 2                            # línea retrato -> letrero
+            xe = mx + R + 14 + (x0 - 18 - mx - R - 14) * _eo(u / .35)
+            d.line([(mx + R + 14, my - 20), ((mx + R + x0) / 2, my - 20), ((mx + R + x0) / 2, ya), (xe, ya)],
+                   fill=col + (200,), width=4)
+            d.rounded_rectangle((x0, y, x1, y + AL), 12, fill=(8, 10, 28, 245),
+                                outline=col + ((255,) if on else (70,)), width=4)
+            if on:
+                dh.rounded_rectangle((x0 - 6, y - 6, x1 + 6, y + AL + 6), 16, outline=col + (150,), width=10)
+            a = 255 if on else 90
+            _texto(d, (x0 + 28, ya), lugar, fuente("serif", 36), col, "lm", a)
+            tag = "MATRIZ" if k == 0 else f"SUCURSAL {k}"
+            _texto(d, (x1 - 26, ya - 14), tag, fuente("negra", 22), BLANCO, "rm", a)
+            _texto(d, (x1 - 26, ya + 16), sub, fuente("sans", 22), GRIS if not on else BLANCO, "rm", a)
+        im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(9)))
+        d = ImageDraw.Draw(im)
+        if dt >= t0:
+            suc = max(0, encendidas - 1)
+            _texto(d, (mx, my + R + 10), "SUCURSALES", fuente("sans", 24), GRIS, "mm")
+            _texto(d, (mx, my + R + 52), str(suc), fuente("serif", 58), VERDE if suc == n - 1 and n > 1 else ORO_T, "mm")
+        if sello and len(marcas) > sello[1]:
+            _sello(im, sello[0], (x0 + x1) / 2, M + h - 52, dt - marcas[sello[1]], VERDE, 34, ang=-4)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ MG nuevos de Rasganorte (26-oct-2026, mismo video)
+#   altares(titulo, [(img, nombre, sub, viva), ...], sello)     dioses sobre sus altares-zigurat: los sacrificados reciben un
+#                                                               tajo rojo y se vuelven grises; la que sigue viva, encadenada
+#   apariciones(retrato, titulo, [(lugar, sub), ...], actual, sello)   un personaje que sale en cada expansión: su medallón
+#                                                               viaja por una vía de paradas que se encienden; «ESTÁS AQUÍ»
+def _zigurat(d, cx, y0):
+    """Altar escalonado de piedra trol (3 escalones): arriba en y0, base en y0 + 78."""
+    for k, w in enumerate((140, 180, 220)):
+        y = y0 + k * 26
+        d.rectangle((cx - w / 2, y, cx + w / 2, y + 26), fill=(70, 104, 112, 255), outline=(28, 40, 46, 255), width=2)
+        d.line([(cx - w / 2 + 4, y + 3), (cx + w / 2 - 4, y + 3)], fill=(150, 185, 190, 120), width=2)
+
+
+def _eslabones(d, a, b, t=1.0):
+    """Cadena de eslabones de hierro de a a b (t = fracción ya dibujada)."""
+    n = 11
+    for i in range(int(n * max(0.0, min(1.0, t)))):
+        q = (i + .5) / n
+        x, y = a[0] + (b[0] - a[0]) * q, a[1] + (b[1] - a[1]) * q
+        rx, ry = (6, 11) if i % 2 else (11, 6)
+        d.ellipse((x - rx, y - ry, x + rx, y + ry), outline=(30, 30, 34, 255), width=6)
+        d.ellipse((x - rx, y - ry, x + rx, y + ry), outline=(185, 190, 200, 255), width=3)
+
+
+def altares(titulo, dioses, sello=None, ancho=1640):
+    """Los dioses que un pueblo sacrificó (c030: los Drakkari de Zul'Drak se bebieron a sus dioses). dioses = [(img, nombre,
+    sub, viva), ...]: el dios k aparece sobre su altar en la marca k; si no está vivo, 0,45 s después un tajo rojo lo cruza,
+    se vuelve gris y sale «SACRIFICADO»; viva=True = cadenas que lo atan al altar, halo verde que late y «VIVA · ENCADENADA».
+    sello = (texto, i_marca) rojo sobre la fila."""
+    R, n = 80, len(dioses)
+    h = 96 + 2 * R + 24 + 78 + 112 + (70 if sello else 0)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        paso = (ancho - 2 * 170) / max(1, n - 1)
+        cy = M + 96 + R + 6
+        ya = cy + R + 18                              # cima del altar
+        halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dh = ImageDraw.Draw(halo)
+        for k, (_r, _n, _s, viva) in enumerate(dioses):   # halo verde DETRÁS del medallón de la que sigue viva
+            tk = _mk(marcas, k, .4 + k * 1.1)
+            if viva and dt >= tk:
+                lat = .5 + .5 * math.sin(dt * 4)
+                cx = M + 170 + k * paso
+                dh.ellipse((cx - R - 24, cy - R - 24, cx + R + 24, cy + R + 24),
+                           fill=VERDE + (int((70 + 80 * lat) * min(1, dt - tk)),))
+        im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(14)))
+        d = ImageDraw.Draw(im)
+        for k in range(n):
+            _zigurat(d, M + 170 + k * paso, ya)
+        tajos = []
+        for k, (ruta, nom, sub, viva) in enumerate(dioses):
+            tk = _mk(marcas, k, .4 + k * 1.1)
+            cx = M + 170 + k * paso
+            if dt < tk:                                # altar vacío que espera
+                lat = .5 + .5 * math.sin(dt * 3 + k)
+                d.ellipse((cx - R, cy - R, cx + R, cy + R), fill=(4, 6, 18, 180), outline=ORO + (int(50 + 50 * lat),), width=3)
+                continue
+            u = dt - tk
+            s = _pop(u)
+            if viva:
+                _pegar(im, _medallon(ruta, R), cx, cy, s)
+            else:
+                q = _eo((u - .55) / .4)                # de color a gris tras el tajo
+                _pegar(im, _medallon(ruta, R), cx, cy, s)
+                if q > 0:
+                    _pegar(im, _medallon(ruta, R, gris=True), cx, cy, s, q)
+                if u > .45:
+                    tajos.append((cx, cy, _eo((u - .45) / .22)))
+            d = ImageDraw.Draw(im)
+            a = 255 * _eo(u / .3)
+            _texto(d, (cx, ya + 78 + 28), nom, fuente("sans", 28), BLANCO, "mm", a)
+            if sub:
+                _texto(d, (cx, ya + 78 + 60), sub, fuente("sans", 21), ORO_T, "mm", a)
+            if viva and u > .35:
+                tc = _eo((u - .35) / .5)
+                _eslabones(d, (cx - 110, ya + 40), (cx - R * .55, cy + R * .2), tc)
+                _eslabones(d, (cx + 110, ya + 40), (cx + R * .55, cy + R * .2), tc)
+                _texto(d, (cx, ya + 78 + 92), "VIVA · ENCADENADA", fuente("negra", 21), VERDE, "mm", 255 * tc)
+            elif not viva and u > .6:
+                _texto(d, (cx, ya + 78 + 92), "SACRIFICADO", fuente("negra", 21), ROJO, "mm", 255 * _eo((u - .6) / .3))
+        if tajos:                                      # tajo rojo en diagonal, con brillo
+            capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dc = ImageDraw.Draw(capa)
+            lineas = []
+            for cx, cy_, t in tajos:
+                a, b = (cx - R * .9, cy_ - R * .9), (cx + R * .9, cy_ + R * .9)
+                lineas.append((a, (a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t)))
+            for a, e in lineas:
+                dc.line([a, e], fill=ROJO + (170,), width=22)
+            im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(6)))
+            d = ImageDraw.Draw(im)
+            for a, e in lineas:
+                d.line([a, e], fill=(255, 235, 230, 255), width=5)
+        if sello and len(marcas) > sello[1]:
+            _sello(im, sello[0], M + ancho / 2, M + h - 34, dt - marcas[sello[1]], ROJO, 38, ang=-2)
+        return _salida(im, dt)
+    return fn
+
+
+def apariciones(retrato, titulo, paradas, actual=None, sello=None, ancho=1640):
+    """Un personaje que reaparece en cada expansión (c031: Harrison Jones, de Zul'Aman a Draenor). paradas = [(lugar, sub),
+    ...] sobre una vía horizontal: la parada k se enciende en la marca k y el medallón (retrato) viaja hasta ella con una
+    estela; la parada `actual` va en cian con «ESTÁS AQUÍ» que late. sello = (texto, i_marca) en verde."""
+    R, n = 74, len(paradas)
+    h = 96 + 2 * R + 40 + 150 + (90 if sello else 0)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        x0, x1 = M + 190, M + ancho - 190
+        paso = (x1 - x0) / max(1, n - 1)
+        yv = M + 96 + 2 * R + 40                       # la vía
+        d = ImageDraw.Draw(im)
+        d.line([(x0 - 60, yv), (x1 + 60, yv)], fill=(60, 64, 90, 255), width=6)
+        prendidas = [k for k in range(n) if dt >= _mk(marcas, k, .4 + k * 1.4)]
+        if prendidas:                                  # tramo de vía ya recorrido, en oro
+            d.line([(x0, yv), (x0 + prendidas[-1] * paso, yv)], fill=ORO_T + (255,), width=6)
+        for k, (lugar, sub) in enumerate(paradas):
+            tk = _mk(marcas, k, .4 + k * 1.4)
+            cx = x0 + k * paso
+            if dt < tk:
+                d.ellipse((cx - 16, yv - 16, cx + 16, yv + 16), fill=(4, 6, 18, 255), outline=(90, 90, 110, 255), width=3)
+                continue
+            u = dt - tk
+            r = 18 * max(.2, _pop(u))
+            col = CIAN if k == actual else ORO_T
+            d.ellipse((cx - r, yv - r, cx + r, yv + r), fill=col + (255,), outline=(20, 20, 30, 255), width=3)
+            a = 255 * _eo(u / .3)
+            _texto(d, (cx, yv + 50), lugar, fuente("serif", 30), col, "mm", a)
+            if sub:
+                _texto(d, (cx, yv + 88), sub, fuente("sans", 22), BLANCO, "mm", a)
+            if k == actual:
+                lat = .55 + .45 * math.sin(dt * 5)
+                _texto(d, (cx, yv + 124), "ESTÁS AQUÍ", fuente("negra", 22), CIAN, "mm", a * lat)
+        if prendidas:                                  # el medallón viaja de la parada anterior a la última encendida
+            k = prendidas[-1]
+            tk = _mk(marcas, k, .4 + k * 1.4)
+            q = _eo((dt - tk) / .8) if k else 1.0
+            xa = x0 + (k - 1) * paso if k else x0
+            mx = xa + (x0 + k * paso - xa) * q
+            my = M + 96 + R
+            if 0 < q < 1:                              # estela
+                for j in range(1, 6):
+                    _pegar(im, _medallon(retrato, R), mx - j * 26, my, .9, .14 * (6 - j) / 5)
+            _pegar(im, _medallon(retrato, R), mx, my, _pop(dt - _mk(marcas, 0, .4)))
+            d = ImageDraw.Draw(im)
+            d.line([(mx, my + R + 8), (mx, yv - 20)], fill=ORO + (180,), width=3)
+        if sello and len(marcas) > sello[1]:
+            _sello(im, sello[0], M + ancho / 2, M + h - 46, dt - marcas[sello[1]], VERDE, 34, ang=-3)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ 27-oct-2026, `wow_jugadores_rompieron` (jugadores reales)
+def _barra_vida(d, x, y, w, h, q, color=(40, 200, 60)):
+    """Barra de vida de placa de nombre del juego: marco negro, relleno q (0..1) con brillo arriba."""
+    d.rounded_rectangle((x - 3, y - 3, x + w + 3, y + h + 3), 6, fill=(0, 0, 0, 255), outline=ORO + (255,), width=2)
+    d.rounded_rectangle((x, y, x + w, y + h), 4, fill=(30, 8, 8, 255))
+    q = max(0.0, min(1.0, q))
+    if w * q >= 10:                                    # más angosta no cabe el redondeo (PIL exige x1 >= x0)
+        d.rounded_rectangle((x, y, x + w * q, y + h), 4, fill=color + (255,))
+        d.rectangle((x + 3, y + 3, x + w * q - 3, y + h * .38), fill=tuple(min(255, c + 70) for c in color) + (255,))
+
+
+def reckoning(titulo, ico_buff, rotulo_buff, cargas, retrato, jefe, sub_jefe, sello, tope=4, ancho=1560):
+    """Un talento sin tope que revienta a un jefe (c02: la bomba de Reckoning de Karmerr contra Lord Kazzak).
+    marca 0: el ícono del beneficio y su contador empiezan a subir · 1: el contador llega a `cargas` (blanco, late) ·
+    2: entra el jefe (medallón + nombre + barra llena) · 3: una lluvia de íconos del beneficio cruza al jefe, la barra cae a
+    cero, el medallón se apaga y se tacha · 4: `sello` rojo y el contador se desploma a `tope` en rojo (el parche)."""
+    T, R, h = 132, 92, 420
+
+    def fn(dt, dur, marcas):
+        t = [_mk(marcas, i, .4 + i * 1.8) for i in range(5)]
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        bx, by = M + 70, M + 120
+        if dt >= t[0]:                                  # beneficio y contador
+            u = dt - t[0]
+            _casilla(im, d, bx, by, T, ico_buff, u)
+            _texto(d, (bx + T / 2, by + T + 36), rotulo_buff, fuente("sans", 28), BLANCO, "mm", 255 * _eo(u / .3))
+            if dt < t[4]:
+                q = min(1.0, (dt - t[0]) / max(.3, t[1] - t[0]))
+                v = int(round(cargas * (q ** 1.8)))
+                lleno = q >= 1
+                lat = (.85 + .15 * math.sin(dt * 9)) if lleno else 1.0
+                f = fuente("serif", int(96 * lat) if lleno else 84)
+                _texto(d, (bx + T + 50, by + T / 2), f"{v:,}".replace(",", " "), f, BLANCO if lleno else ORO_T, "lm")
+            else:
+                u4 = dt - t[4]
+                v = tope if u4 > .45 else int(cargas - (cargas - tope) * _eo(u4 / .45))
+                _texto(d, (bx + T + 50, by + T / 2), f"{v:,}".replace(",", " "), fuente("serif", 96), ROJO, "lm")
+        jx, jy = M + ancho - 460, M + 120 + T / 2
+        q_vida = 1.0
+        if dt >= t[3]:
+            q_vida = 1 - _eo((dt - t[3] - .35) / .8)
+        if dt >= t[2]:                                  # el jefe
+            u = dt - t[2]
+            muerto = dt >= t[3] + 1.15
+            _pegar(im, _medallon(retrato, R, gris=muerto), jx, jy, _pop(u))
+            d = ImageDraw.Draw(im)
+            a = 255 * _eo(u / .3)
+            _texto(d, (jx + R + 30, jy - 52), jefe, fuente("serif", 40), ROJO if not muerto else GRIS, "lm", a)
+            _texto(d, (jx + R + 30, jy - 12), sub_jefe, fuente("sans", 24), ORO_T, "lm", a)
+            if a > 0:
+                _barra_vida(d, jx + R + 30, jy + 22, 300, 30, q_vida)
+            if muerto:
+                k = R * .8 * _eo((dt - t[3] - 1.15) / .3)
+                d.line([(jx - k, jy - k), (jx + k, jy + k)], fill=ROJO + (255,), width=12)
+                d.line([(jx + k, jy - k), (jx - k, jy + k)], fill=ROJO + (255,), width=12)
+        if t[3] <= dt < t[3] + 1.4:                     # la descarga: íconos que vuelan del beneficio al jefe
+            mini = icono(ico_buff, 40)
+            for i in range(36):
+                s0 = t[3] + i * .028
+                u = (dt - s0) / .45
+                if 0 <= u <= 1:
+                    x = bx + T + (jx - R - bx - T) * _eo(u)
+                    y = by + T / 2 + math.sin(i * 2.7) * 70 * (1 - u)
+                    _pegar(im, mini, x, y, 1.0, 1 - .4 * u)
+            d = ImageDraw.Draw(im)
+            fl = max(0.0, 1 - abs(dt - t[3] - .6) / .5)
+            if fl > 0:                                  # destello en el jefe (capa aparte: ImageDraw no mezcla alfa)
+                capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                ImageDraw.Draw(capa).ellipse((jx - R * 1.6, jy - R * 1.6, jx + R * 1.6, jy + R * 1.6),
+                                             fill=(255, 230, 150, int(170 * fl)))
+                im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(18)))
+        if dt >= t[4]:
+            _sello(im, sello, M + ancho / 2, M + h - 52, dt - t[4], ROJO, 40, ang=-3)
+        return _salida(im, dt)
+    return fn
+
+
+def inmortal(retrato, jefe, sub_jefe, titulo, sello, retiro=None, ancho=1400):
+    """Un jefe que se cura con cada muerte (c04: Lord Kazzak arrastrado a Ventormenta).
+    marca 0: placa del jefe con la barra llena · 1: empieza la pelea: la barra baja a golpes y cada calavera que cae debajo
+    (un jugador muerto) la rellena con un destello verde; nunca baja de ~60 % · 2: `sello` rojo · 3 (si hay `retiro` =
+    (ruta_imagen, texto)): entra el maestro de juego y el jefe se desvanece."""
+    R, h = 96, 400
+    calav = "inv_misc_bone_humanskull_01"
+
+    def fn(dt, dur, marcas):
+        t = [_mk(marcas, i, .4 + i * 2.0) for i in range(4)]
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        jx, jy = M + 170, M + 110 + R
+        sale = _eo((dt - t[3] - .6) / .8) if retiro and dt >= t[3] else 0.0
+        if dt >= t[0]:
+            u = dt - t[0]
+            _pegar(im, _medallon(retrato, R), jx, jy, _pop(u), 1 - sale)
+            d = ImageDraw.Draw(im)
+            a = 255 * _eo(u / .3) * (1 - sale)
+            _texto(d, (jx + R + 34, jy - 64), jefe, fuente("serif", 42), ROJO, "lm", a)
+            _texto(d, (jx + R + 34, jy - 22), sub_jefe, fuente("sans", 25), ORO_T, "lm", a)
+            q, curas = 1.0, []
+            if dt >= t[1]:                              # pelea: baja 0,22/s y cada calavera (cada 0,55 s) devuelve 0,14
+                v = dt - t[1]
+                n = int(v / .55)
+                q = max(.6, min(1.0, 1.0 - .22 * v + .14 * n))
+                curas = [t[1] + (k + 1) * .55 for k in range(n)]
+            if a > 0:
+                _barra_vida(d, jx + R + 34, jy + 14, 560, 34, q)
+            for k, tc in enumerate(curas[-14:]):        # fila de calaveras que crece (se queda con las 14 últimas)
+                _pegar(im, icono(calav, 34), jx + R + 56 + k * 40, jy + 90, _pop(dt - tc, .25), 1 - sale)
+            d = ImageDraw.Draw(im)
+            if curas and dt - curas[-1] < .35 and sale < 1:   # destello verde de la cura
+                fl = 1 - (dt - curas[-1]) / .35
+                d.rounded_rectangle((jx + R + 31, jy + 11, jx + R + 597, jy + 51), 6, outline=VERDE + (int(255 * fl),), width=4)
+                _texto(d, (jx + R + 614, jy + 31), "+", fuente("negra", 44), VERDE, "lm", 255 * fl)
+        if dt >= t[2]:
+            _sello(im, sello, M + ancho - 230, M + 92, dt - t[2], ROJO, 42, ang=-7)
+        if retiro and dt >= t[3]:
+            u = dt - t[3]
+            _pegar(im, _medallon(retiro[0], 70), M + ancho - 170, M + h - 120, _pop(u))
+            d = ImageDraw.Draw(im)
+            _texto(d, (M + ancho - 270, M + h - 120), retiro[1], fuente("sans", 28), CIAN, "rm", 255 * _eo(u / .3))
+        return _salida(im, dt)
+    return fn
+
+
+def expediente(titulo, entradas, veredicto, ancho=1500):
+    """Un caso judicial que se va escribiendo (c01: Blizzard contra Glider). entradas = [(año, texto, color|None), ...]: la
+    entrada k entra en la marca k (el año cae con un golpe de mazo dorado y el texto se teclea a 0,025 s por letra);
+    ROJO para las sanciones. veredicto = (texto, i_marca): sello rojo grande cruzado sobre el expediente."""
+    fila = 64
+    h = 110 + len(entradas) * fila + 40
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, y0 = M + 60, M + 104
+        d.line([(x0 + 150, y0 - 10), (x0 + 150, y0 + len(entradas) * fila - 14)], fill=ORO + (120,), width=3)
+        for k, (anio, texto, color) in enumerate(entradas):
+            tk = _mk(marcas, k, .4 + k * 1.2)
+            if dt < tk:
+                continue
+            u = dt - tk
+            y = y0 + k * fila + fila / 2 - 14
+            s = 1.5 - .5 * _pop(u, .25)
+            _texto(d, (x0 + 120, y), anio, fuente("serif", max(8, int(40 * s))), ORO_T, "rm")
+            d.ellipse((x0 + 141, y - 9, x0 + 159, y + 9), fill=(color or ORO_T) + (255,))
+            _texto(d, (x0 + 186, y), texto[:int(u / .025)], fuente("sans", 32), color or BLANCO, "lm")
+            if u < .3:                                  # golpe del mazo: destello dorado en la línea
+                capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                rr = 20 + 60 * u
+                ImageDraw.Draw(capa).ellipse((x0 + 150 - rr, y - rr, x0 + 150 + rr, y + rr), fill=ORO_T + (int(200 * (1 - u / .3)),))
+                im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(8)))
+                d = ImageDraw.Draw(im)
+        if veredicto and len(marcas) > veredicto[1]:
+            _sello(im, veredicto[0], M + ancho / 2 + 60, M + h / 2 + 30, dt - marcas[veredicto[1]], ROJO, 46, ang=-8)
         return _salida(im, dt)
     return fn

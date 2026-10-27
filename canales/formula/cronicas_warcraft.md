@@ -60,3 +60,12 @@
   Fuera: los reinos del 20.º aniversario están en Burning Crusade todo 2026 (Wrath se espera en 2027) → público caliente para Terrallende.
 - **A vigilar a los 7 días (7-nov):** % visto y minutos por vista contra Reinos del Este (31 min) y Kalimdor (16 min). Si los minutos por
   vista superan los 15 de Reinos del Este, la duración larga no castiga y el formato «dos expansiones» puede repetirse (Cataclysm + MoP).
+
+## Conclusión del 27-oct-2026 — jugadores reales con Overgear (`wow_jugadores_rompieron`, formato `jugadores_reales_rompieron`)
+- **Propuesta (una variable cada una):** (1) jugadores REALES que rompieron Vanilla — el eje más fuerte del canal (Kungen ×50, Angwe ×16,6,
+  «12 Legendarios» ×2,54 con 53 % visto); (2) «12 ERRORES al empezar Forever» — fuera Comeback Kids ×4,2, pero las guías propias
+  van ×0,4-0,6; (3) «9 clases de peor a mejor tras la beta» — «9 clases» 7 069 (×1,3), Bellular ×5,8. Recomendada y elegida: (1).
+- Variable que cambia respecto a «12 Legendarios»: el ángulo «rompieron el juego» (exploits, récords, baneos, un juicio) + gancho a
+  Forever; ~14 min (13:34) con Overgear campaña 2 (coaching) tras el n.º 8 y metraje de archivo de 2005-06.
+- Programado mar 3-nov 09:00 CDMX (jBumLmFN600). **A vigilar a los 7 días (10-nov):** vistas vs mediana (~5 100) y % visto vs
+  «12 Legendarios». Si supera ×2 con % visto ≥ 45, «jugadores reales» pasa a serie (1 cada 2 semanas: TBC, Wrath, Classic 2019).

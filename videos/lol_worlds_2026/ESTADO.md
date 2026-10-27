@@ -3,7 +3,7 @@
 - canal: Cronicas de ligoleyen (UCXU8DV4QJ24yhwXmrR_eLhw; el usuario, 27-oct: subido por la pestaña de Studio, NO está en la API ni en canales/*.json)
 - estilo: análisis táctico (secuencia_yt con clips del VOD + telestrador `nucleo/mg_tactica.py`) → doc: docs/estilo_analisis_tactico.md
 - etapa: SUBIDO EN PRIVADO el 27-oct (https://youtu.be/lcGGYgWwZEg), monetización activada, «Adecuado para anuncios»; el usuario lo publica a mano
-- siguiente: miniatura (miniatura/elegida.jpg) si aún no la puso el usuario; registrar el canal en canales/ si se va a usar más; ronda 4 (28-30 oct) deja viejos «queviene», «equipos» y «cierre»
+- siguiente: ⚠ NO PUBLICAR AÚN: revisión de jugadas con errores (Destello de Keria en j2, «Anivia cae primero» en j3, nexo «del Mundial» en j1, montaje 20:24→34:41 en j4…). LEER REVISION_JUGADAS.md: terminar de revisar j4-j6, corregir, re-render, subir de nuevo. Registrar el canal en canales/ si se va a usar más; ronda 4 (28-30 oct) deja viejos «queviene», «equipos» y «cierre»
 
 ## Sesiones (plan de tramos · «continúa el video lol_worlds_2026» retoma aquí · protocolo docs/sesiones.md)
 - alias: Worlds 22 min, resumen de la Worlds, «el favorito cayó»

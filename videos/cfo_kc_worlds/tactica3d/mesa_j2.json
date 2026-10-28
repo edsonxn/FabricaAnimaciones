@@ -1,0 +1,245 @@
+{
+ "modo": "mesa",
+ "de": 398.15,
+ "a": 407.2,
+ "fondo": "/videos/cfo_kc_worlds/tactica3d/mesa_j2_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Doggo": {
+   "jugador": "Doggo",
+   "campeon": "Kaisa",
+   "equipo": "R",
+   "icono": "/videos/cfo_kc_worlds/iconos/Kaisa.png",
+   "puntos": [
+    [
+     0,
+     0.44,
+     0.43
+    ]
+   ],
+   "de": 398.55,
+   "sale": 406.2
+  },
+  "Kino": {
+   "jugador": "Kino",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/cfo_kc_worlds/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.365,
+     0.52
+    ]
+   ],
+   "de": 398.63,
+   "sale": 406.2
+  },
+  "Keria": {
+   "jugador": "Keria",
+   "campeon": "Rakan",
+   "equipo": "A",
+   "icono": "/videos/cfo_kc_worlds/iconos/Rakan.png",
+   "puntos": [
+    [
+     0,
+     0.42,
+     0.71
+    ]
+   ],
+   "de": 398.71,
+   "sale": 406.2
+  },
+  "Oner": {
+   "jugador": "Oner",
+   "campeon": "Vi",
+   "equipo": "A",
+   "icono": "/videos/cfo_kc_worlds/iconos/Vi.png",
+   "puntos": [
+    [
+     0,
+     0.67,
+     0.75
+    ]
+   ],
+   "de": 398.79,
+   "sale": 406.2
+  }
+ },
+ "camara": [
+  [
+   398.15,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   398.5,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   401.046,
+   -18,
+   36,
+   50,
+   0.48,
+   0.58
+  ],
+  [
+   403.76099999999997,
+   14,
+   40,
+   47.5,
+   0.48,
+   0.58
+  ],
+  [
+   406.3,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   407.2,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "paso",
+   "pts": [
+    [
+     0.365,
+     0.52
+    ],
+    [
+     0.38,
+     0.58
+    ],
+    [
+     0.4,
+     0.64
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.7,
+   "alto": 3,
+   "grosor": 1.5,
+   "en": 399.15,
+   "sale": 406.2
+  },
+  {
+   "id": "keria",
+   "pts": [
+    [
+     0.42,
+     0.7
+    ],
+    [
+     0.43,
+     0.56
+    ],
+    [
+     0.44,
+     0.46
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "guion": true,
+   "alto": 2.5,
+   "grosor": 1.3,
+   "en": 400.15,
+   "sale": 406.2
+  },
+  {
+   "id": "oner",
+   "pts": [
+    [
+     0.66,
+     0.74
+    ],
+    [
+     0.55,
+     0.58
+    ],
+    [
+     0.46,
+     0.46
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "guion": true,
+   "alto": 2.5,
+   "grosor": 1.3,
+   "en": 400.55,
+   "sale": 406.2
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.44,
+   "v": 0.43,
+   "r": 0.06,
+   "color": "rojo",
+   "en": 398.55,
+   "sale": 406.2
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.44,
+   "v": 0.43,
+   "alto": 0,
+   "texto": "DOGGO",
+   "sub": "EL QUE HAY QUE PROTEGER",
+   "color": "rojo",
+   "dx": -190,
+   "dy": -50,
+   "de": 398.65,
+   "a": 406.2
+  },
+  {
+   "flecha": "paso",
+   "texto": "KINO",
+   "sub": "UN PASO AL FRENTE",
+   "color": "rojo",
+   "dx": -180,
+   "dy": 30,
+   "de": 399.45,
+   "a": 406.2
+  },
+  {
+   "flecha": "oner",
+   "texto": "T1",
+   "sub": "TODOS A POR DOGGO",
+   "color": "azul",
+   "dx": 150,
+   "dy": -30,
+   "de": 400.55,
+   "a": 406.2
+  }
+ ]
+}

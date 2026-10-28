@@ -172,3 +172,20 @@ de Liquid en `videos/lol_worlds_2026/` (`j6_3d.py` → `tactica3d/j6.json` → `
 - Tablero de otros juegos/deportes: solo cambia el mapa (cancha, campo) y los iconos.
 
 - **Fecha relativa = día de PUBLICACIÓN (28-oct-2026, `ig_lyon_worlds`):** la previa se produjo la víspera y la voz decía «mañana»; sale el mismo día del partido → «hoy / esta tarde». Antes de `voz`, grep de «mañana|hoy|ayer» en guion y placas contra la fecha de publicación. Corregir después cuesta voz + re-render de los tramos (las escenas no se mueven: van a compás).
+
+## Errores corregidos tras la revisión del usuario (28-oct-2026, `cfo_kc_worlds`) — revisar SIEMPRE antes de entregar
+1. **Anillos fuera de sitio** («esos círculos mal posicionados», también en videos anteriores). Causas: (a) medir en hojas 2×2
+   (`j1_comp.jpg`) y leer la altura de los cuadros de ABAJO respecto a la hoja entera; (b) poner los pies en «placa + 0,07»: en
+   1080p los pies quedan entre +0,08 y +0,18 bajo el nombre según el zoom de la cámara. Regla: `rejilla2.py <n> <t>` = UN cuadro a
+   1280 px con rejilla cada 0,05, y se miden directamente los PIES de cada campeón (nunca la placa). Lo que esté bajo el HUD
+   (y > 0,76) o no se identifique con seguridad, no lleva anillo: texto suelto.
+2. **Rutas con puntos inventados**: una ruta solo con puntos MEDIDOS y dentro de la MISMA toma de cámara
+   (`investigacion/cam_j*.json` marca los cortes; `ruta()` avisa «AVISO ruta … cruza un corte» y no dibuja). Nada de puntos
+   intermedios estimados ni rutas de reserva escritas a mano.
+3. **Saltos de tiempo tras una pausa** («la pausa no está sincronizada con la continuación»): cada tramo del VOD arranca en el
+   cuadro EXACTO donde quedó la pausa o la mesa anterior; si hay que avanzar, `CLIP(t_pausa → t_destino)` con «▶▶ ACELERADO»;
+   las repeticiones con `desde = t_pausa_siguiente − vel·duración` para terminar en ese cuadro; nunca volver atrás salvo en un
+   «REBOBINANDO» o una «REPETICIÓN» rotulados.
+4. **Narradores lentos en los tramos en vivo**: con video+audio (`+ba`) yt-dlp entrega tramos más cortos (~10 s para un beat de
+   17 s) y el motor los estira (0,6×), voz incluida. Tras `bajar`, comparar la duración de cada clip con su beat; los tramos en
+   vivo se cortan de la fuente local de la jugada (`medios/_fuente/j*.mp4`, imagen y narración alineadas) con ffmpeg.

@@ -26,6 +26,7 @@ recortado) y arte de campeones (Data Dragon). Cero datos inventados: todo sale d
   tabla(titulo, columnas)                            equipos por récord en columnas (2-0 | 0-2)
   calendario(titulo, hitos)                          línea de fechas; la última (la final) con halo
   barras(titulo, items, total)                       picks de campeones: barra por marca, «12 de 29»
+  duelo(a, b, titulo, filas)                         cara a cara por posición: dos fotos y barras que crecen desde el centro
 """
 import math
 import os
@@ -1103,5 +1104,105 @@ def barras(titulo, items, total, ancho=1340, fila=92):
             if ub > .6:
                 _sobre(out, et, min(xe + 16, x1 + 10), y, clamp((ub - .6) / .3))
         return out
+
+    return fn
+
+
+# ================================================================== DUELO POR POSICIÓN (28-oct-2026, `cfo_kc_worlds`)
+def duelo(a, b, titulo, filas, W_=1760, H_=700):
+    """Cara a cara de dos jugadores de la misma posición (previa de un partido). a, b = (foto, nombre, logo, color, sub).
+    filas = [(etiqueta, valor_a, valor_b, frac_a, frac_b, mejor)] con mejor = 0|1|None: la fila k entra en la marca k; las
+    barras crecen desde el centro hacia cada jugador y la del mejor brilla con su color. Las fotos suben desde abajo, el
+    título dorado cae en el centro y la pieza respira en 3D como la tarjeta."""
+    k = ("duelo", a[1], b[1], titulo, tuple(f[0] for f in filas))
+    fw = 430                                                   # ancho de cada foto
+    cx = W_ / 2
+    y0, paso = 210, 92
+    bw = 260                                                   # largo máximo de cada barra
+    if k not in _cache:
+        panel, P = _panel(W_ - 2 * fw + 40, 120 + len(filas) * paso + 40, "oro", sesgo=10)
+        base = Image.new("RGBA", (W_, H_), (0, 0, 0, 0))
+        base.alpha_composite(panel, (int(fw - 20 - P), int(y0 - 90 - P)))
+        d = ImageDraw.Draw(base)
+        fe = fuente("SemiBold Condensed", 30)
+        for i, f in enumerate(filas):
+            y = y0 + 30 + i * paso
+            _texto(d, (cx, y - 30), f[0].upper(), fe, (210, 216, 228), "mm", track=2)
+            d.rounded_rectangle((cx - bw - 8, y - 4, cx - 8, y + 16), 6, fill=(255, 255, 255, 28))
+            d.rounded_rectangle((cx + 8, y - 4, cx + bw + 8, y + 16), 6, fill=(255, 255, 255, 28))
+        fv = fuente("Bold Condensed", 40)
+        vals = []
+        for f in filas:
+            par = []
+            for lado in (0, 1):
+                v = Image.new("RGBA", (200, 60), (0, 0, 0, 0))
+                col = _c((a, b)[lado][3]) if f[5] == lado else (235, 238, 245)
+                _texto(ImageDraw.Draw(v), (100, 30), str(f[1 + lado]), fv, col, "mm")
+                par.append(_np(v))
+            vals.append(par)
+        fotos, placas = [], []
+        for foto, nombre, logo, color, sub in (a, b):
+            fotos.append(_np(_base_pegatina(foto, 400, borde=8)))
+            pl = Image.new("RGBA", (fw, 130), (0, 0, 0, 0))
+            dp = ImageDraw.Draw(pl)
+            c = _c(color)
+            dp.polygon([(14, 10), (fw - 14, 10), (fw - 34, 120), (34, 120)], fill=NOCHE + (235,), outline=c + (255,))
+            dp.rectangle((14, 10, fw - 14, 18), fill=c + (255,))
+            x = fw / 2
+            if logo:
+                lg = _img(logo, alto=50, ancho=50)
+                pl.alpha_composite(lg, (40, 46))
+            _texto(dp, (x + 20, 56), nombre.upper(), fuente("Bold Condensed", 54), (255, 255, 255), "mm", track=2)
+            if sub:
+                _texto(dp, (x + 20, 98), sub.upper(), fuente("SemiBold Condensed", 26), ORO_C, "mm", track=2)
+            placas.append(_np(pl))
+        cab = _cabecera(titulo, 760)
+        _cache[k] = (_np(base), vals, fotos, placas, cab)
+    base, vals, fotos, placas, cab = _cache[k]
+    cols = [_c(a[3]), _c(b[3])]
+
+    def fn(dt, dur, marcas):
+        out = _vacio(W_, H_)
+        if dt <= 0:
+            return out
+        u = _eo(dt / .45)
+        h = int(H_ * u)
+        out[H_ - h:] = base[H_ - h:] if h else out[H_ - h:]
+        uc = _eo((dt - .15) / .4)
+        if uc > 0:
+            _sobre(out, cab, int(cx - 380 + 30), int(40 - 60 * (1 - uc)), uc)
+        for lado in (0, 1):
+            s = _pop(dt - .1 - .12 * lado, .5)
+            if s > .02:
+                fx = fw / 2 if lado == 0 else W_ - fw / 2
+                fl = 5 * math.sin(dt * 1.5 + lado * 2)
+                _centro(out, fotos[lado], fx, H_ - 130 - fotos[lado].shape[0] / 2 + 70 + fl + 80 * (1 - min(1, s)), min(1.0, s))
+                _sobre(out, placas[lado], int(fx - fw / 2), H_ - 140, clamp(s))
+        for i, f in enumerate(filas):
+            tk = _mk(marcas, i, .7 + .5 * i)
+            ub = _eo((dt - tk) / .55)
+            if ub <= 0:
+                continue
+            y = y0 + 30 + i * paso
+            for lado in (0, 1):
+                fr = f[3 + lado] * ub
+                L = int(bw * fr)
+                if L > 3:
+                    c = cols[lado] if f[5] in (lado, None) else (120, 128, 140)
+                    if lado == 0:
+                        x0_, x1_ = int(cx - 8 - L), int(cx - 8)
+                    else:
+                        x0_, x1_ = int(cx + 8), int(cx + 8 + L)
+                    cv2.rectangle(out, (x0_, y - 3), (x1_, y + 15), c[::-1] + (255,), -1)
+                    cv2.rectangle(out, (x0_, y - 3), (x1_, y + 2), (255, 255, 255, 120), -1)
+                vx = cx - bw - 75 if lado == 0 else cx + bw + 75
+                _sobre(out, vals[i][lado], int(vx - 100), y - 24, clamp((dt - tk) / .3))
+            if f[5] in (0, 1) and dt - tk > .55:                 # el mejor de la fila late
+                p = .5 + .5 * math.sin((dt - tk) * 5)
+                xg = int(cx - bw - 150) if f[5] == 0 else int(cx + bw + 150)
+                cv2.circle(out, (xg, y + 6), int(7 + 3 * p), cols[f[5]][::-1] + (255,), -1, cv2.LINE_AA)
+        out = _brillo_barrido(out, (dt - .5) / .8)
+        ang = 4 * (1 - _eo(dt / .6)) * 3 + 1.6 * math.sin(dt * 1.1)
+        return _perspectiva(out, ang)
 
     return fn

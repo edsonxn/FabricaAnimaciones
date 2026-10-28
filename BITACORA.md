@@ -37,36 +37,44 @@ Para re-verificar contra YouTube: `python fab.py yt videos <alias>` (los privado
 | ~~mié 21-oct~~ **lun 12-oct 21:42 UTC** | Wild Next Door | 5 Bugs You Should NEVER Kill Around Your House (And 1 You Should) (`cinco_bichos`, 8q2TyqEBRNg) | **Público** (adelantado por el usuario para cubrir el hueco del 12-oct; `--forzar`: quedó a 66 h del de bichos_invierno) |
 | mar 13-oct 13:00 | Plastitube | El fracaso número cuarenta que terminó en todos los garages del mundo (V7AtCh6vrxo; hecho fuera de la Fábrica) | Público |
 | mié 14-oct 13:00 | Cronopapel | Historia de Japón en 5 min (`historia_japon`, EI0c27EY89E) | Público |
-| mié 14-oct 14:00 | Edsonxn | Polybius: el videojuego que nunca existió (`polybius`, 6rqPo_fgz58) | Programado |
-| mié 14-oct 14:00 | Sapiens con Wifi | Un día en la vida hace 30.000 años (`un_dia_30mil`, MADQ6aemfZY) | Programado |
-| mié 14-oct 14:00 | LogIA | Qué pasará con la IA en 2027 (`informante_2027`, 5D-kQtNWF4w) | Programado |
-| mié 14-oct 18:00 | Kuriox | ¿Cuánto pesa una nube? Short (`peso_nube`, xYM1mFDrmZs) | Programado |
-| mié 14-oct 18:00 | Crónicas del gaming | Sonic.exe: el CD maldito que nunca existió (`sonic_exe`, RrucyrC_1e8) | Programado |
+| mié 14-oct 14:00 | Edsonxn | Polybius: el videojuego que nunca existió (`polybius`, 6rqPo_fgz58) | Público |
+| mié 14-oct 14:00 | Sapiens con Wifi | Un día en la vida hace 30.000 años (`un_dia_30mil`, MADQ6aemfZY) | Público |
+| mié 14-oct 14:00 | LogIA | Qué pasará con la IA en 2027 (`informante_2027`, 5D-kQtNWF4w) | Público |
+| mié 14-oct 18:00 | Kuriox | ¿Cuánto pesa una nube? Short (`peso_nube`, xYM1mFDrmZs) | Público |
+| mié 14-oct 18:00 | Crónicas del gaming | Sonic.exe: el CD maldito que nunca existió (`sonic_exe`, RrucyrC_1e8) | Público |
 | lun 19-oct 18:00 | Crónicas del gaming | Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE (`banjo_tooie`, zJkKmdBzlpE) | RETIRADO (privado): voz decía mal Tooie/Kazooie |
 | mar 20-oct 08:00 | Crónicas del gaming | Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE (`banjo_tooie`, HxURLhWv1Vs, voz Hope, 15:07) | **Público** (al momento, a pedido del usuario) |
-| sáb 24-oct 18:00 | Crónicas del gaming | Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE (`zelda_oot`, tHGhx72-OTs, voz Hope, 15:56) | Programado (subido en privado el 22-oct) |
+| ~~sáb 24-oct 18:00~~ **sáb 24-oct 10:00** | Crónicas del gaming | Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE (`zelda_oot`, tHGhx72-OTs, voz Hope, 15:56) | **Público** (salió antes de lo programado) |
 | vie 30-oct 18:00 | Crónicas del gaming | Zelda Majora's Mask: su historia y los 12 secretos QUE IGNORASTE (`majora_mask`, EFWqji6rqIg, voz Hope, OST oficial, 15:20) | Programado (subido en privado el 24-oct; aprobado por el usuario) |
 | lun 2-nov 18:00 | Crónicas del gaming | Zelda Ocarina of Time REMAKE: los 15 CAMBIOS frente al ORIGINAL de N64 (`oot_remake_cambios`, 1wDyy-FJrBg, voz Hope turbo, OST oficial, 12:06) | Programado (subido en privado el 27-oct; pendiente del visto bueno del usuario) |
-| mar 27-oct 18:00 | Crónicas del gaming | Los 10 Jiggies más CRUELES de Banjo-Tooie (`bt_jiggies_crueles`, qLBP3ce4AC4, voz Hope, 11:30) | Programado (subido en privado el 23-oct) |
+| mar 27-oct 18:00 | Crónicas del gaming | Los 10 Jiggies más CRUELES de Banjo-Tooie (`bt_jiggies_crueles`, qLBP3ce4AC4, voz Hope, 11:30) | Público |
 | jue 15-oct 09:00 | Crónicas de Warcraft | Las 9 clases y profesiones OCULTAS de WoW Forever (`wow_clases_ocultas`, KEXk-wMhX1o) | Programado (privado) |
 | dom 18-oct 09:00 | Crónicas de Warcraft | Las 8 pistas que Blizzard YA dejó sobre lo que viene después de WoW Forever (`wow_pistas_futuro`, vODv9Gm0tjQ) | Programado (privado) |
 | jue 15-oct 14:00 | Bitácora Perdida | Juchipila: el pueblo de las flores y la guerra (`juchipila`, UHZ9sXW0D1g) | Público |
-| jue 15-oct 14:00 | Kuriox | ¿Qué pasaría si la Tierra tuviera DOS Lunas? (`dos_lunas`, ix2tlWFWjqM) | Programado |
-| jue 15-oct 16:00 UTC | Wild Next Door | Where Do All the Bugs Go in Winter? (`bichos_invierno`, AYmaIJedCPc) | Programado |
-| sáb 17-oct 13:00 | Plastitube | La casualidad fría que se volvió el postre de todo el mundo (Q1EBDHc1t5Y) | Programado |
-| sáb 17-oct 18:00 | Kuriox | ¿Por qué se arrugan los dedos? Short (`dedos_arrugados`, qcdEAcp9r84) | Programado |
-| dom 18-oct 14:00 | Cronopapel | Historia de Irán en 5 min (`historia_iran`, CqSg_v6pFjQ) | Programado |
-| dom 18-oct 14:00 | Sapiens con Wifi | ¿Cómo sobrevivían los humanos antiguos sin medicina? (`sin_medicina`, d53XquSO440) | Programado |
-| dom 18-oct 14:00 | LogIA | 1.200 IAs crearon una sociedad secreta en OpenAI (`sociedad_1200`, GMGBr5KkzTs) | Programado |
-| dom 18-oct 16:00 UTC | Wild Next Door | Never Kill the Spider in Your Ceiling Corner (`arana_techo`, gG2REwAK54Q) | Programado |
-| lun 19-oct 14:00 | Bitácora Perdida | Apozol: el pueblo de los dos nombres de agua (`apozol`, W_Lznwd9o8k) | Programado |
-| mar 20-oct 18:00 | Kuriox | ¿Por qué el cielo es azul? Short (`cielo_azul`, kCqZ1Bep07s) | Programado |
-| mié 21-oct 13:00 | Plastitube | La masa que limpiaba paredes y terminó en las manos de todos (z_7ovFWmTec) | Programado |
-| jue 22-oct 14:00 | Cronopapel | Historia de Egipto en 5 min v2 (`historia_egipto`, R1LQTkRiwzI) | Programado; la v1 3V_C7ZEj5is la borra el usuario |
-| vie 23-oct 14:00 | Sapiens con Wifi | ¿Cómo sobrevivían los humanos prehistóricos al frío extremo? (`frio_extremo`, psl-j5NFljk) | Programado |
-| lun 26-oct 14:00 | Cronopapel | Historia de México en 5 min (`historia_mexico`, BZd71Z5BIrk) | Programado |
-| dom 25-oct 13:00 | Plastitube | El cilindro vacío que seguía pesando lo mismo (`teflon_sarten`, bQj_Ip4dhEo) | Programado |
-| mar 27-oct 14:00 | Kuriox | ¿Qué pasaría si un asteroide INVISIBLE chocara contra la Tierra? (`asteroide_invisible`, KQdki-Rq-2w) | Programado |
+| jue 15-oct 14:00 | Kuriox | ¿Qué pasaría si la Tierra tuviera DOS Lunas? (`dos_lunas`, ix2tlWFWjqM) | Público |
+| jue 15-oct 16:00 UTC | Wild Next Door | Where Do All the Bugs Go in Winter? (`bichos_invierno`, AYmaIJedCPc) | Público |
+| sáb 17-oct 13:00 | Plastitube | La casualidad fría que se volvió el postre de todo el mundo (Q1EBDHc1t5Y) | Público |
+| sáb 17-oct 18:00 | Kuriox | ¿Por qué se arrugan los dedos? Short (`dedos_arrugados`, qcdEAcp9r84) | Público |
+| lun 26-oct 14:00 | Cronopapel | Historia de Irán en 5 min (`historia_iran`, CqSg_v6pFjQ) | Público |
+| dom 18-oct 14:00 | Sapiens con Wifi | ¿Cómo sobrevivían los humanos antiguos sin medicina? (`sin_medicina`, d53XquSO440) | Público |
+| dom 18-oct 14:00 | LogIA | 1.200 IAs crearon una sociedad secreta en OpenAI (`sociedad_1200`, GMGBr5KkzTs) | Público |
+| dom 18-oct 16:00 UTC | Wild Next Door | Never Kill the Spider in Your Ceiling Corner (`arana_techo`, gG2REwAK54Q) | Público |
+| lun 19-oct 14:00 | Bitácora Perdida | Apozol: el pueblo de los dos nombres de agua (`apozol`, W_Lznwd9o8k) | Público |
+| mar 20-oct 18:00 | Kuriox | ¿Por qué el cielo es azul? Short (`cielo_azul`, kCqZ1Bep07s) | Público |
+| mié 21-oct 13:00 | Plastitube | La masa que limpiaba paredes y terminó en las manos de todos (z_7ovFWmTec) | Público |
+| jue 22-oct 14:00 | Cronopapel | Historia de Egipto en 5 min v2 (`historia_egipto`, R1LQTkRiwzI) | Público |
+| vie 23-oct 14:00 | Sapiens con Wifi | ¿Cómo sobrevivían los humanos prehistóricos al frío extremo? (`frio_extremo`, psl-j5NFljk) | Público |
+| dom 18-oct 14:00 | Cronopapel | Historia de México en 5 min (`historia_mexico`, BZd71Z5BIrk) | Público |
+| dom 25-oct 13:00 | Plastitube | El cilindro vacío que seguía pesando lo mismo (`teflon_sarten`, bQj_Ip4dhEo) | Público |
+| mar 27-oct 14:00 | Kuriox | ¿Qué pasaría si un asteroide INVISIBLE chocara contra la Tierra? (`asteroide_invisible`, KQdki-Rq-2w) | Público |
+| sáb 24-oct 10:05 | Wild Next Door | Never Kill the Big Yellow Spider in Your Garden (`arana_amarilla`, Oq0Tbhz8x0g) | Público |
+| sáb 24-oct 14:00 | Bitácora Perdida | Jalpa: el pueblo que echó a su encomendero (`jalpa`, Ae7B03_QMDw) | Público |
+| sáb 24-oct 14:00 | LogIA | ¿Puede una IA guardar un secreto? (`secreto_ia`, _OCS1atQpQA) | Público |
+| dom 25-oct 14:05 | Cuerpo en Neón | ¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas? (`duelo_cuerpo`, Mb8umuTXxf4) | Público |
+| lun 26-oct 10:05 | Wild Next Door | What Happens to a Spider You Flush Down the Toilet? (`arana_escusado`, WQu7K19q7u8) | Público |
+| lun 26-oct 12:08 | Crónicas de Tamriel | Las 15 cosas más INÚTILES de Skyrim (`tes_cosas_inutiles`, uz1kE1BI4w8) | Público |
+| mar 27-oct 09:00 | Crónicas de Warcraft | Los 12 objetos más RAROS de WoW Vanilla (y cuáles vuelven en Forever) (`wow_objetos_raros`, 2xO3Wf1B4XQ) | Público |
+| mar 27-oct 14:05 | Cuerpo en Neón | ¿Por Qué Te DESPIERTAS a las 3 de la Mañana? (`despertar_3am`, xnRw-_gBtMs) | Público |
 | sin fecha | (prueba, sin canal) | Mostacho y el ruido de la cocina, cartoon90 (`gato_cobarde`) | El usuario renderiza escena por escena desde el panel |
 
 
@@ -208,3 +216,5 @@ Al terminar un video o sesión: actualiza `videos/<v>/ESTADO.md` (etapa + siguie
 - 27-oct-2026 · **Crónicas de Tamriel**: «Las 20 cosas que NUNCA debes hacer en Skyrim» (`tes_cosas_nunca`, 19:13 con pantalla final, formato `lista_20_nunca_hacer_secuencia_yt`; tema elegido por el usuario, repite el gancho de misiones_nunca ×9 cambiando a ACCIONES del jugador; 3 comentarios reales del canal en el video) subido en privado y PROGRAMADO mar 03-nov 12:08 CDMX (2026-11-03T18:08:00Z: el lun 02-11 quedaba a 72 h de armas y la separación es 96 h) con miniatura Flow, .srt · https://youtu.be/GDT4s9U9kPs
 - 28-oct-2026 · **Runa Caída**: «Las 5 peores atrocidades de Melina QUE IGNORASTE» (er_melina_atrocidades, 20:31 con la pantalla final; el usuario pidió ≥ 18 min y hacerlo en UNA sesión; secuencia_yt + Chatterbox Faraon + OST oficial + pegatinas + MG nuevos de mg_er: acuerdo, ecos, arbol_arde, muerte_suelta + 3 mapas reales) SUBIDO en privado con miniatura y PROGRAMADO dom 1-nov-2026 10:00 CDMX (publishAt 2026-11-01T16:00:00Z): https://youtu.be/U4reFaDG6Vg. 96 h tras Malenia. Subtítulos sin cargar (token sin youtube.force-ssl).
 - 28-oct-2026 · Cronicas de ligoleyen: «IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)» (`ig_lyon_worlds`, 12:55; análisis táctico, 4 jugadas con pausas + mesas 3D, voz JC, Lyria nueva) SUBIDO por Studio y PROGRAMADO mié 28-oct 10:00 CDMX: https://youtu.be/xP4IKYzFf5A — monetización (mid-roll, «Nada de lo anterior»), miniatura «¿QUIÉN PASA?», .srt. La 1.ª subida (Who8udd68Rw) decía «mañana»: corregida a «hoy» y borrada por el usuario.
+- 28-oct-2026 · **Registro al día** (actualizar-canales): 17 videos ya públicos marcados como tales en `canales/*.json` y en el calendario §2 — Jalpa, Zelda OoT (salió el 24-oct 10:00 CDMX, antes de lo programado), Jiggies de Banjo-Tooie, 15 inútiles de Skyrim, 12 objetos raros de WoW, Irán, Tequisquiapan #Shorts, duelo_cuerpo, despertar_3am y 2 Shorts de Cuerpo en Neón, asteroide invisible, secreto_ia, teflón, araña amarilla, araña del escusado y su Short. Corregidas las fechas cruzadas de Irán (26-oct) y México (18-oct) en §2. Urgen Sapiens con Wifi (hueco hoy), Cuerpo en Neón (29-oct) y LogIA (30-oct).
+- 28-oct-2026 · Cronicas de ligoleyen: «CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)» (`cfo_kc_worlds`, 15:01; análisis táctico, 4 jugadas con pausas, rutas, repeticiones y 2 mesas 3D, duelos por posición, voz JC, Lyria nueva) SUBIDO por Studio y PROGRAMADO jue 29-oct 10:00 CDMX: https://youtu.be/NO9hRcIKTQw — monetización (mid-roll, «Nada de lo anterior»), miniatura «¿QUIÉN SE VA?», .srt publicado.

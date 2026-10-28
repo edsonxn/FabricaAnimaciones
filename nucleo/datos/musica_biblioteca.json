@@ -22483,6 +22483,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23270,6 +23271,7 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -34815,7 +34817,627 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo1": {
+   "id": "cfo_kc_worlds__lyria_tramo1",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo1.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo1.mp3",
+   "md5": "3cdc1c9012b0182214efefd0a6d6385f",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "juego"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:29 (89 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit, elimination-match tension, driving pulse, then settle under the explanation.\n\n[0:00 - 0:52] Section 1: Intensity 7/10. cold open, elimination-match tension, dramatic hit then driving pulse\n[0:52 - 1:29] Section 2: Intensity 4/10. steady informative groove, stakes rising, do-or-die feeling",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 52,
+     "intensidad": 7,
+     "desc": "cold open, elimination-match tension, dramatic hit then driving pulse"
+    },
+    {
+     "t0": 52,
+     "t1": 89,
+     "intensidad": 4,
+     "desc": "steady informative groove, stakes rising, do-or-die feeling"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 87.67,
+    "rms_db": -14.5,
+    "tempo": 80.7,
+    "brillo_hz": 1935,
+    "energia": [
+     0.4,
+     0.56,
+     0.93,
+     0.9,
+     0.71,
+     0.68,
+     0.84,
+     1.0,
+     0.97,
+     0.87,
+     0.58,
+     0.14
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo4": {
+   "id": "cfo_kc_worlds__lyria_tramo4",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo4.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo4.mp3",
+   "md5": "3070d45c81c6b9a8f57109fc70f953f7",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 4,
+   "escenas": [
+    "jugada2",
+    "jugada2_rep"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Uneasy analysis tension that suddenly collapses, then a sober afterglow.\n\n[0:00 - 1:16] Section 1: Intensity 6/10. analysis bed, uneasy tension, a sudden collapse\n[1:16 - 1:38] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "analysis bed, uneasy tension, a sudden collapse"
+    },
+    {
+     "t0": 76,
+     "t1": 98,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    }
+   ],
+   "intensidad": [
+    6,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 100.08,
+    "rms_db": -14.5,
+    "tempo": 184.6,
+    "brillo_hz": 1532,
+    "energia": [
+     0.99,
+     0.9,
+     1.0,
+     0.86,
+     0.39,
+     0.35,
+     0.36,
+     0.67,
+     0.78,
+     0.82,
+     0.77,
+     0.41
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo6": {
+   "id": "cfo_kc_worlds__lyria_tramo6",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo6.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo6.mp3",
+   "md5": "617156fc223f6ac0d467757a1cd7ffcc",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 6,
+   "escenas": [
+    "jugada3",
+    "jugada3_rep",
+    "kc_jugadores"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:53 (113 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Tense analysis bed exploding into a triumphant swell, then a bright confident groove.\n\n[0:00 - 1:07] Section 1: Intensity 7/10. analysis bed, tense, then an explosive triumphant swell\n[1:07 - 1:29] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve\n[1:29 - 1:53] Section 3: Intensity 5/10. confident stat-card groove, brighter",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 67,
+     "intensidad": 7,
+     "desc": "analysis bed, tense, then an explosive triumphant swell"
+    },
+    {
+     "t0": 67,
+     "t1": 89,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    },
+    {
+     "t0": 89,
+     "t1": 113,
+     "intensidad": 5,
+     "desc": "confident stat-card groove, brighter"
+    }
+   ],
+   "intensidad": [
+    7,
+    3,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 115.17,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2054,
+    "energia": [
+     0.86,
+     0.89,
+     0.95,
+     0.63,
+     0.95,
+     1.0,
+     0.71,
+     0.11,
+     0.7,
+     0.9,
+     0.93,
+     0.56
+    ],
+    "huecos": [],
+    "dinamica": 0.89
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo7": {
+   "id": "cfo_kc_worlds__lyria_tramo7",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo7.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo7.mp3",
+   "md5": "b0394d7b4a9ff7165c9daaf4d8a2852d",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 7,
+   "escenas": [
+    "jugada4",
+    "jugada4_rep"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:27 (87 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Do-or-die suspense building to a heroic explosive climax, then a triumphant afterglow.\n\n[0:00 - 1:07] Section 1: Intensity 8/10. analysis bed, do-or-die suspense, heroic climax\n[1:07 - 1:27] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 67,
+     "intensidad": 8,
+     "desc": "analysis bed, do-or-die suspense, heroic climax"
+    },
+    {
+     "t0": 67,
+     "t1": 87,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    }
+   ],
+   "intensidad": [
+    8,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 82.68,
+    "rms_db": -14.7,
+    "tempo": 123.0,
+    "brillo_hz": 2385,
+    "energia": [
+     0.82,
+     0.87,
+     0.86,
+     0.98,
+     0.7,
+     0.44,
+     0.68,
+     1.0,
+     1.0,
+     0.96,
+     0.98,
+     0.36
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo3": {
+   "id": "cfo_kc_worlds__lyria_tramo3",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo3.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo3.mp3",
+   "md5": "bbd6611a481dde4fd01dc53b7e3e9ce0",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 3,
+   "escenas": [
+    "jugada1",
+    "jugada1_rep",
+    "cfo_jugadores"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:34 (155 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:31] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:31 - 2:08] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve\n[2:08 - 2:34] Section 3: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 91,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 91,
+     "t1": 128,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    },
+    {
+     "t0": 128,
+     "t1": 154,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    3,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 156.03,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1604,
+    "energia": [
+     0.61,
+     0.82,
+     0.93,
+     0.99,
+     1.0,
+     0.97,
+     0.21,
+     0.83,
+     0.88,
+     0.84,
+     0.81,
+     0.2
+    ],
+    "huecos": [],
+    "dinamica": 0.8
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo5": {
+   "id": "cfo_kc_worlds__lyria_tramo5",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo5.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo5.mp3",
+   "md5": "6c53bcf89ef6201ee969b427b7728349",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 5,
+   "escenas": [
+    "kc_historia",
+    "kc_camino"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:53 (113 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Stadium chant energy on synths with big drums, then a rising underdog anthem.\n\n[0:00 - 0:50] Section 1: Intensity 7/10. French stadium chant energy on synths, big drums, fan-wall hype\n[0:50 - 1:53] Section 2: Intensity 6/10. rising underdog anthem",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 7,
+     "desc": "French stadium chant energy on synths, big drums, fan-wall hype"
+    },
+    {
+     "t0": 50,
+     "t1": 113,
+     "intensidad": 6,
+     "desc": "rising underdog anthem"
+    }
+   ],
+   "intensidad": [
+    7,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "coro",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 114.78,
+    "rms_db": -14.8,
+    "tempo": 123.0,
+    "brillo_hz": 2627,
+    "energia": [
+     0.57,
+     0.62,
+     0.58,
+     0.84,
+     0.87,
+     0.93,
+     0.95,
+     0.99,
+     1.0,
+     0.97,
+     0.95,
+     0.63
+    ],
+    "huecos": [],
+    "dinamica": 0.43
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo8": {
+   "id": "cfo_kc_worlds__lyria_tramo8",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo8.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo8.mp3",
+   "md5": "2dbd5763db8c07c12bf1bcab136634b4",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 8,
+   "escenas": [
+    "duelos",
+    "claves",
+    "cierre"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:21 (142 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Punchy head-to-head groove, then a focused preview, building hype to a final big hit and ring out.\n\n[0:00 - 1:01] Section 1: Intensity 6/10. head-to-head versus groove, punchy hits\n[1:01 - 1:57] Section 2: Intensity 5/10. tactical preview groove, focused\n[1:57 - 2:21] Section 3: Intensity 6/10. hype build-up toward match day, final big hit and ring out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 61,
+     "intensidad": 6,
+     "desc": "head-to-head versus groove, punchy hits"
+    },
+    {
+     "t0": 61,
+     "t1": 117,
+     "intensidad": 5,
+     "desc": "tactical preview groove, focused"
+    },
+    {
+     "t0": 117,
+     "t1": 141,
+     "intensidad": 6,
+     "desc": "hype build-up toward match day, final big hit and ring out"
+    }
+   ],
+   "intensidad": [
+    6,
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 138.71,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1984,
+    "energia": [
+     0.57,
+     0.71,
+     0.75,
+     1.0,
+     0.97,
+     0.77,
+     0.77,
+     0.7,
+     0.35,
+     0.95,
+     0.95,
+     0.47
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_worlds__lyria_tramo2": {
+   "id": "cfo_kc_worlds__lyria_tramo2",
+   "video": "cfo_kc_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_worlds\\audio\\lyria_tramo2.mp3",
+   "archivo": "cfo_kc_worlds__lyria_tramo2.mp3",
+   "md5": "df759a4e08ab465798962e7b005a51d0",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 2,
+   "escenas": [
+    "cfo_historia",
+    "cfo_camino"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:42 (103 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. A proud East Asian pentatonic synth motif, then a determined comeback groove.\n\n[0:00 - 0:50] Section 1: Intensity 5/10. East Asian pentatonic synth motif, proud and warm, championship memory\n[0:50 - 1:42] Section 2: Intensity 5/10. comeback groove, determined",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 5,
+     "desc": "East Asian pentatonic synth motif, proud and warm, championship memory"
+    },
+    {
+     "t0": 50,
+     "t1": 102,
+     "intensidad": 5,
+     "desc": "comeback groove, determined"
+    }
+   ],
+   "intensidad": [
+    5,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "laúd",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "nostálgico",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 104.96,
+    "rms_db": -14.7,
+    "tempo": 123.0,
+    "brillo_hz": 1934,
+    "energia": [
+     0.34,
+     0.39,
+     0.81,
+     0.79,
+     0.75,
+     0.91,
+     0.95,
+     0.72,
+     1.0,
+     0.97,
+     0.98,
+     0.18
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
   }
  },
- "actualizado": "2026-10-28 08:04"
+ "actualizado": "2026-10-28 12:40"
 }

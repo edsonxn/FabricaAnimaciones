@@ -22482,6 +22482,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23269,6 +23270,7 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -34296,7 +34298,524 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-27"
+  },
+  "ig_lyon_worlds__lyria_tramo7": {
+   "id": "ig_lyon_worlds__lyria_tramo7",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo7.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo7.mp3",
+   "md5": "c7482ff11be4a99a5e10d3b7e5ecf14d",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 7,
+   "escenas": [
+    "claves",
+    "cierre"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:20 (81 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. A focused tactical preview groove, building hype toward match day, final big hit and ring out.\n\n[0:00 - 0:50] Section 1: Intensity 5/10. tactical preview groove, focused\n[0:50 - 1:20] Section 2: Intensity 6/10. hype build-up toward match day, final big hit and ring out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 5,
+     "desc": "tactical preview groove, focused"
+    },
+    {
+     "t0": 50,
+     "t1": 80,
+     "intensidad": 6,
+     "desc": "hype build-up toward match day, final big hit and ring out"
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 83.8,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2272,
+    "energia": [
+     0.68,
+     0.65,
+     0.73,
+     0.82,
+     0.83,
+     0.89,
+     0.74,
+     0.83,
+     1.0,
+     0.67,
+     0.63,
+     0.26
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "ig_lyon_worlds__lyria_tramo1": {
+   "id": "ig_lyon_worlds__lyria_tramo1",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo1.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo1.mp3",
+   "md5": "9136ddb5a34a5dada4bf9c31caed59fc",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "juego"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:22 (83 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit, driving pulse, then settle under the explanation.\n\n[0:00 - 0:45] Section 1: Intensity 7/10. cold open, dramatic hit then driving pulse, rivalry tension\n[0:45 - 1:22] Section 2: Intensity 4/10. steady informative groove, light arpeggios, stakes rising",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 7,
+     "desc": "cold open, dramatic hit then driving pulse, rivalry tension"
+    },
+    {
+     "t0": 45,
+     "t1": 82,
+     "intensidad": 4,
+     "desc": "steady informative groove, light arpeggios, stakes rising"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 85.71,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 1856,
+    "energia": [
+     0.14,
+     0.42,
+     0.8,
+     0.9,
+     0.88,
+     0.95,
+     0.85,
+     1.0,
+     0.97,
+     0.97,
+     0.99,
+     0.27
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "ig_lyon_worlds__lyria_tramo6": {
+   "id": "ig_lyon_worlds__lyria_tramo6",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo6.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo6.mp3",
+   "md5": "b4c08b45625a0cb15d2dc1fa2bdf0987",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 6,
+   "escenas": [
+    "jugada4"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Patient suspense building to a heroic explosive climax, then a triumphant afterglow.\n\n[0:00 - 1:38] Section 1: Intensity 8/10. analysis bed, patient suspense, heroic explosive climax",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 8,
+     "desc": "analysis bed, patient suspense, heroic explosive climax"
+    }
+   ],
+   "intensidad": [
+    8
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 100.31,
+    "rms_db": -14.7,
+    "tempo": 129.2,
+    "brillo_hz": 2704,
+    "energia": [
+     0.65,
+     0.68,
+     0.89,
+     0.87,
+     0.85,
+     0.61,
+     0.82,
+     0.99,
+     0.92,
+     1.0,
+     0.99,
+     0.36
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "ig_lyon_worlds__lyria_tramo2": {
+   "id": "ig_lyon_worlds__lyria_tramo2",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo2.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo2.mp3",
+   "md5": "ba1a6b0e88180b833b951c4082fb6b63",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 2,
+   "escenas": [
+    "ig_historia",
+    "ig_camino"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:42 (103 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Nostalgic triumphant brass, then a determined comeback groove.\n\n[0:00 - 0:56] Section 1: Intensity 5/10. nostalgic triumphant synth brass, championship memory\n[0:56 - 1:42] Section 2: Intensity 5/10. determined comeback groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 56,
+     "intensidad": 5,
+     "desc": "nostalgic triumphant synth brass, championship memory"
+    },
+    {
+     "t0": 56,
+     "t1": 102,
+     "intensidad": 5,
+     "desc": "determined comeback groove"
+    }
+   ],
+   "intensidad": [
+    5,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "metales",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "nostálgico",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 103.73,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 2578,
+    "energia": [
+     0.74,
+     0.71,
+     0.97,
+     0.9,
+     0.86,
+     0.6,
+     0.61,
+     0.89,
+     1.0,
+     0.93,
+     0.97,
+     0.21
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "ig_lyon_worlds__lyria_tramo5": {
+   "id": "ig_lyon_worlds__lyria_tramo5",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo5.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo5.mp3",
+   "md5": "6857277e20ab95c40720db49f3c78fb2",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 5,
+   "escenas": [
+    "lyon_camino",
+    "jugada3"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:04 (124 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Rising underdog energy, then a tense analysis bed with a triumphant swell.\n\n[0:00 - 0:45] Section 1: Intensity 6/10. rising underdog anthem energy\n[0:45 - 2:04] Section 2: Intensity 7/10. analysis bed, tense, then a triumphant swell",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 6,
+     "desc": "rising underdog anthem energy"
+    },
+    {
+     "t0": 45,
+     "t1": 124,
+     "intensidad": 7,
+     "desc": "analysis bed, tense, then a triumphant swell"
+    }
+   ],
+   "intensidad": [
+    6,
+    7
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 121.73,
+    "rms_db": -14.6,
+    "tempo": 123.0,
+    "brillo_hz": 1923,
+    "energia": [
+     0.69,
+     0.69,
+     0.73,
+     0.85,
+     0.83,
+     0.71,
+     0.72,
+     0.83,
+     0.62,
+     1.0,
+     0.99,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.62
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "ig_lyon_worlds__lyria_tramo3": {
+   "id": "ig_lyon_worlds__lyria_tramo3",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo3.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo3.mp3",
+   "md5": "564b8717451d91c6d709eaeee9df70af",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 3,
+   "escenas": [
+    "jugada1",
+    "ig_jugadores"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 135.65,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2279,
+    "energia": [
+     0.88,
+     0.93,
+     0.95,
+     0.91,
+     0.89,
+     0.93,
+     0.9,
+     1.0,
+     0.95,
+     0.88,
+     0.92,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "ig_lyon_worlds__lyria_tramo4": {
+   "id": "ig_lyon_worlds__lyria_tramo4",
+   "video": "ig_lyon_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ig_lyon_worlds\\audio\\lyria_tramo4.mp3",
+   "archivo": "ig_lyon_worlds__lyria_tramo4.mp3",
+   "md5": "d0458ea6837b872711cd2aecdbf7e19f",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "IG vs LYON: todo lo que debes saber antes del partido | Worlds 2026 (análisis)",
+   "tramo": 4,
+   "escenas": [
+    "jugada2",
+    "lyon_historia"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:32 (153 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Patient tension exploding into a climax, then a hopeful underdog story groove.\n\n[0:00 - 1:14] Section 1: Intensity 7/10. analysis bed, patient tension exploding into a climax\n[1:14 - 2:32] Section 2: Intensity 5/10. underdog story, warm Latin-tinged percussion over synths, hopeful",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 7,
+     "desc": "analysis bed, patient tension exploding into a climax"
+    },
+    {
+     "t0": 74,
+     "t1": 152,
+     "intensidad": 5,
+     "desc": "underdog story, warm Latin-tinged percussion over synths, hopeful"
+    }
+   ],
+   "intensidad": [
+    7,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 148.79,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1624,
+    "energia": [
+     0.96,
+     0.89,
+     0.86,
+     0.98,
+     0.92,
+     0.34,
+     0.74,
+     0.72,
+     0.96,
+     1.0,
+     0.98,
+     0.48
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
   }
  },
- "actualizado": "2026-10-27 17:07"
+ "actualizado": "2026-10-28 08:04"
 }

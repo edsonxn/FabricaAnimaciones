@@ -1,0 +1,54 @@
+{
+ "modo": "video",
+ "de": 237.416,
+ "a": 246.896,
+ "anillos": [
+  {
+   "u": 0.344,
+   "v": 0.57,
+   "r": 0.03854166666666667,
+   "color": "rojo",
+   "en": 239.196,
+   "sale": 246.896
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.344,
+   "v": 0.57,
+   "r": 0.02119791666666667,
+   "color": "rojo",
+   "en": 239.296,
+   "sale": 246.896,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 239.346,
+   "a": 246.896,
+   "u": 0.344,
+   "v": 0.57,
+   "alto": 0,
+   "texto": "ZEUS · OLAF",
+   "sub": "INMUNE AL CONTROL",
+   "color": "rojo",
+   "dx": -100.60000000000001,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/ig_lyon_worlds/iconos/Olaf.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 237.61599999999999,
+   "a": 246.896,
+   "k": 0.42
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/ig_lyon_worlds/tactica3d/capas/j1_olaf_fondo.jpg",
+ "_huella": "a8eaf0d5aa54"
+}

@@ -1,0 +1,240 @@
+{
+ "modo": "mesa",
+ "de": 246.9,
+ "a": 252.49,
+ "fondo": "/videos/ig_lyon_worlds/tactica3d/mesa_j1_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Zeus": {
+   "jugador": "Zeus",
+   "campeon": "Olaf",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Olaf.png",
+   "puntos": [
+    [
+     0,
+     0.344,
+     0.57
+    ]
+   ],
+   "de": 247.3,
+   "sale": 251.49
+  },
+  "Zeka": {
+   "jugador": "Zeka",
+   "campeon": "Lissandra",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Lissandra.png",
+   "puntos": [
+    [
+     0,
+     0.208,
+     0.495
+    ]
+   ],
+   "de": 247.38,
+   "sale": 251.49
+  },
+  "Gumayusi": {
+   "jugador": "Gumayusi",
+   "campeon": "Kalista",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.417,
+     0.36
+    ]
+   ],
+   "de": 247.46,
+   "sale": 251.49
+  },
+  "Rookie": {
+   "jugador": "Rookie",
+   "campeon": "Annie",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Annie.png",
+   "puntos": [
+    [
+     0,
+     0.609,
+     0.325
+    ]
+   ],
+   "de": 247.54,
+   "sale": 251.49
+  },
+  "Wei": {
+   "jugador": "Wei",
+   "campeon": "Nocturne",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Nocturne.png",
+   "puntos": [
+    [
+     0,
+     0.5625,
+     0.23
+    ]
+   ],
+   "de": 247.62,
+   "sale": 251.49
+  },
+  "Meiko": {
+   "jugador": "Meiko",
+   "campeon": "Lulu",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.63,
+     0.556
+    ]
+   ],
+   "de": 247.7,
+   "sale": 251.49
+  }
+ },
+ "camara": [
+  [
+   246.9,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   247.25,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   248.68880000000001,
+   -18,
+   36,
+   50,
+   0.42,
+   0.42
+  ],
+  [
+   250.3658,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.42
+  ],
+  [
+   251.59,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   252.49,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "atras",
+   "pts": [
+    [
+     0.6,
+     0.33
+    ],
+    [
+     0.66,
+     0.27
+    ],
+    [
+     0.72,
+     0.22
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "alto": 2.5,
+   "grosor": 1.3,
+   "en": 248.3,
+   "sale": 251.49
+  },
+  {
+   "id": "atras2",
+   "pts": [
+    [
+     0.63,
+     0.55
+    ],
+    [
+     0.69,
+     0.5
+    ],
+    [
+     0.75,
+     0.46
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "alto": 2.5,
+   "grosor": 1.3,
+   "en": 248.5,
+   "sale": 251.49
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.344,
+   "v": 0.57,
+   "r": 0.07,
+   "color": "rojo",
+   "en": 247.4,
+   "sale": 251.49
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.344,
+   "v": 0.57,
+   "alto": 0,
+   "texto": "ZEUS · OLAF",
+   "sub": "INMUNE AL CONTROL",
+   "color": "rojo",
+   "dx": -150,
+   "dy": 90,
+   "de": 247.6,
+   "a": 251.49
+  },
+  {
+   "flecha": "atras",
+   "texto": "IG RETROCEDE",
+   "sub": "Y ESPERA",
+   "color": "azul",
+   "dx": 90,
+   "dy": -60,
+   "de": 248.8,
+   "a": 251.49
+  }
+ ]
+}

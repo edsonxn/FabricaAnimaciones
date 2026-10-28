@@ -1,0 +1,158 @@
+{
+ "modo": "video",
+ "de": 662.602,
+ "a": 668.324,
+ "anillos": [
+  {
+   "u": 0.36,
+   "v": 0.54,
+   "r": 0.040625,
+   "color": "azul",
+   "en": 662.802,
+   "sale": 668.324
+  },
+  {
+   "u": 0.198,
+   "v": 0.57,
+   "r": 0.026041666666666668,
+   "color": "azul",
+   "en": 665.702,
+   "sale": 668.324
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f2",
+   "pts": [
+    [
+     0.36,
+     0.54
+    ],
+    [
+     0.31,
+     0.4
+    ],
+    [
+     0.27,
+     0.27
+    ]
+   ],
+   "color": "azul",
+   "en": 663.202,
+   "dur": 0.4,
+   "sale": 668.324,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  },
+  {
+   "id": "f3",
+   "pts": [
+    [
+     0.36,
+     0.54
+    ],
+    [
+     0.41,
+     0.48
+    ],
+    [
+     0.44,
+     0.42
+    ]
+   ],
+   "color": "azul",
+   "en": 663.352,
+   "dur": 0.4,
+   "sale": 668.324,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  },
+  {
+   "id": "f4",
+   "pts": [
+    [
+     0.36,
+     0.54
+    ],
+    [
+     0.29,
+     0.52
+    ],
+    [
+     0.23,
+     0.48
+    ]
+   ],
+   "color": "azul",
+   "en": 663.502,
+   "dur": 0.4,
+   "sale": 668.324,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.36,
+   "v": 0.54,
+   "r": 0.022343750000000002,
+   "color": "azul",
+   "en": 662.902,
+   "sale": 668.324,
+   "alto": 7
+  },
+  {
+   "u": 0.198,
+   "v": 0.57,
+   "r": 0.014322916666666668,
+   "color": "azul",
+   "en": 665.802,
+   "sale": 668.324,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 662.952,
+   "a": 668.324,
+   "u": 0.36,
+   "v": 0.54,
+   "alto": 0,
+   "texto": "INSPIRED",
+   "sub": "GUARDIA CRECIENTE",
+   "color": "azul",
+   "dx": 104.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/ig_lyon_worlds/iconos/XinZhao.png"
+  },
+  {
+   "de": 665.852,
+   "a": 668.324,
+   "u": 0.198,
+   "v": 0.57,
+   "alto": 0,
+   "texto": "DHOKLA",
+   "sub": "INMUNE AL CONTROL",
+   "color": "azul",
+   "dx": -79.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/ig_lyon_worlds/iconos/Olaf.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 662.702,
+   "a": 668.324,
+   "k": 0.38
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/ig_lyon_worlds/tactica3d/capas/j4_guardia_fondo.jpg",
+ "_huella": "c9695f96e32b"
+}

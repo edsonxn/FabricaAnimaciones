@@ -147,7 +147,28 @@ de Liquid en `videos/lol_worlds_2026/` (`j6_3d.py` → `tactica3d/j6.json` → `
 - Comprobar la alineación de las fichas con la cámara fija en la pose del juego (`camara = [[de]+G, [a]+G]`, fichas visibles)
   antes del render: cada disco debe caer bajo su campeón.
 
+## Previa de un partido + jugadas con MÁS pausas (27-oct-2026, `videos/ig_lyon_worlds/`)
+- Pedido del usuario: video de ~12 min para quien NO conoce a los equipos (historia, camino, jugadores, jugadas) y «más pausas
+  durante los enfrentamientos… más líneas, rutas, flechas». Receta: 4 jugadas × 4-6 pausas, cada pausa con 2-5 elementos
+  (anillos con etiqueta, flecha de la acción, zona, chips de «quién/qué»), una mesa 3D y una capa 3D por jugada; entre pausas el
+  VOD corre estirado/acelerado para llenar la frase (`CLIP(n, de, a, t0, t1)`), con «▶▶ ACELERADO» si va rápido.
+- **Hallar las peleas sin ver horas de VOD:** el feed oficial `feed.lolesports.com/livestats/v1/window/<gameId>?startingTime=…`
+  (cada 10 s, sin clave) da muertes, oro, dragones y barones por jugador → lista de quién mató a quién y cuándo
+  (`videos/ig_lyon_worlds/investigacion/muertes.py <gameId>…`; también `cortar.py` = tramo 1080p de un VOD y `vtt.py`). Los gameId salen de `getEventDetails`. El reloj del feed puede ir desfasado
+  hasta ~100 s del reloj del HUD (TSW-IG): calibrar SIEMPRE con un cuadro del VOD y dar en la voz el reloj del HUD.
+- **Narración del VOD:** los subtítulos automáticos de YouTube (`yt-dlp --write-auto-subs --sub-langs en`) salen en segundos y
+  bastan para saber qué dijeron los narradores; Whisper large-v3 solo si hace falta precisión (con la GPU ocupada tarda > 20 min).
+- **Efectos anclados a la VOZ, no a segundos:** `efectos.py` lee `timeline.json` y usa `T0(k)`, `T1(k)`, `W(k, "palabra")` y
+  `NX(k)` (inicio de la siguiente frase): se escribe antes de tener la línea de tiempo y sobrevive a `tiempo` si cambia la voz.
+  `W` falla con KeyError si la palabra no está (se ve en `fx --seco`).
+- Con ElevenLabs, Whisper rechaza ~la mitad de las frases por los NOMBRES («Lion», «Yachi», «Genji», «Janjoa»): leer las
+  transcripciones de eval.json y poner `CER_MAX_POR_FRASE`/`TAIL_MAX_POR_FRASE` = medido + margen (sin regenerar voz).
+- Duración: 1 760 palabras + 4 tramos en vivo salieron 13:27; recortar los `pre` en vivo (16/12/12/18 s) y una frase final de
+  escena (no del medio: desplaza índices) bajó a 12:55 sin regenerar nada.
+
 ## Pendiente
 - Zoom con la pizarra transformada (hoy la pizarra se mide sobre el cuadro ya acercado).
 - Audio de los comentaristas/estadio bajo la voz en los tramos que juegan (FX `video` no lleva audio a la mezcla).
 - Tablero de otros juegos/deportes: solo cambia el mapa (cancha, campo) y los iconos.
+
+- **Fecha relativa = día de PUBLICACIÓN (28-oct-2026, `ig_lyon_worlds`):** la previa se produjo la víspera y la voz decía «mañana»; sale el mismo día del partido → «hoy / esta tarde». Antes de `voz`, grep de «mañana|hoy|ayer» en guion y placas contra la fecha de publicación. Corregir después cuesta voz + re-render de los tramos (las escenas no se mueven: van a compás).

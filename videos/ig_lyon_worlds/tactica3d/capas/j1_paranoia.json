@@ -1,0 +1,97 @@
+{
+ "modo": "video",
+ "de": 213.982,
+ "a": 224.002,
+ "anillos": [
+  {
+   "u": 0.43,
+   "v": 0.39,
+   "r": 0.03229166666666667,
+   "color": "rojo",
+   "en": 217.922,
+   "sale": 224.002
+  },
+  {
+   "u": 0.557,
+   "v": 0.245,
+   "r": 0.028125,
+   "color": "rojo",
+   "en": 218.222,
+   "sale": 224.002
+  },
+  {
+   "u": 0.115,
+   "v": 0.135,
+   "r": 0.026041666666666668,
+   "color": "rojo",
+   "en": 218.422,
+   "sale": 224.002
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.43,
+   "v": 0.39,
+   "r": 0.01776041666666667,
+   "color": "rojo",
+   "en": 218.022,
+   "sale": 224.002,
+   "alto": 7
+  },
+  {
+   "u": 0.557,
+   "v": 0.245,
+   "r": 0.015468750000000002,
+   "color": "rojo",
+   "en": 218.322,
+   "sale": 224.002,
+   "alto": 7
+  },
+  {
+   "u": 0.115,
+   "v": 0.135,
+   "r": 0.014322916666666668,
+   "color": "rojo",
+   "en": 218.522,
+   "sale": 224.002,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 218.072,
+   "a": 224.002,
+   "u": 0.43,
+   "v": 0.39,
+   "alto": 0,
+   "texto": "NEARSIGHTED",
+   "sub": "SIN VISIÓN",
+   "color": "rojo",
+   "dx": 89.80000000000001,
+   "dy": -10,
+   "tam": 30
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 214.182,
+   "a": 224.002,
+   "k": 0.4
+  }
+ ],
+ "carteles": [
+  {
+   "de": 219.242,
+   "a": 224.002,
+   "texto": "PARANOIA",
+   "sub": "LA DEFINITIVA DE WEI · NOCTURNE",
+   "color": "azul",
+   "y": 855.5999999999999,
+   "tam": 36
+  }
+ ],
+ "fondo": "/videos/ig_lyon_worlds/tactica3d/capas/j1_paranoia_fondo.jpg",
+ "_huella": "ff902a0f6db3"
+}

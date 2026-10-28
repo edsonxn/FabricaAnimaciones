@@ -1,0 +1,312 @@
+{
+ "modo": "mesa",
+ "de": 652.58,
+ "a": 658.72,
+ "fondo": "/videos/ig_lyon_worlds/tactica3d/mesa_j4_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Ruler": {
+   "jugador": "Ruler",
+   "campeon": "Jhin",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Jhin.png",
+   "puntos": [
+    [
+     0,
+     0.406,
+     0.214
+    ]
+   ],
+   "de": 652.98,
+   "sale": 657.72
+  },
+  "Duro": {
+   "jugador": "Duro",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.484,
+     0.25
+    ]
+   ],
+   "de": 653.06,
+   "sale": 657.72
+  },
+  "Canyon": {
+   "jugador": "Canyon",
+   "campeon": "Qiyana",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Qiyana.png",
+   "puntos": [
+    [
+     0,
+     0.375,
+     0.37
+    ]
+   ],
+   "de": 653.14,
+   "sale": 657.72
+  },
+  "Chovy": {
+   "jugador": "Chovy",
+   "campeon": "Anivia",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Anivia.png",
+   "puntos": [
+    [
+     0,
+     0.443,
+     0.37
+    ]
+   ],
+   "de": 653.22,
+   "sale": 657.72
+  },
+  "Kiin": {
+   "jugador": "Kiin",
+   "campeon": "Rumble",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Rumble.png",
+   "puntos": [
+    [
+     0,
+     0.1875,
+     0.33
+    ]
+   ],
+   "de": 653.3,
+   "sale": 657.72
+  },
+  "Dhokla": {
+   "jugador": "Dhokla",
+   "campeon": "Olaf",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Olaf.png",
+   "puntos": [
+    [
+     0,
+     0.068,
+     0.43
+    ]
+   ],
+   "de": 653.38,
+   "sale": 657.72
+  },
+  "Inspired": {
+   "jugador": "Inspired",
+   "campeon": "XinZhao",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/XinZhao.png",
+   "puntos": [
+    [
+     0,
+     0.396,
+     0.6
+    ]
+   ],
+   "de": 653.46,
+   "sale": 657.72
+  },
+  "Isles": {
+   "jugador": "Isles",
+   "campeon": "Renata",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Renata.png",
+   "puntos": [
+    [
+     0,
+     0.604,
+     0.59
+    ]
+   ],
+   "de": 653.54,
+   "sale": 657.72
+  },
+  "Berserker": {
+   "jugador": "Berserker",
+   "campeon": "Kalista",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.635,
+     0.74
+    ]
+   ],
+   "de": 653.62,
+   "sale": 657.72
+  }
+ },
+ "camara": [
+  [
+   652.58,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   652.9300000000001,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   654.5448,
+   -18,
+   36,
+   50,
+   0.38,
+   0.4
+  ],
+  [
+   656.3868,
+   14,
+   40,
+   47.5,
+   0.38,
+   0.4
+  ],
+  [
+   657.82,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   658.72,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "flanco",
+   "pts": [
+    [
+     0.07,
+     0.43
+    ],
+    [
+     0.17,
+     0.4
+    ],
+    [
+     0.3,
+     0.36
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "guion": true,
+   "alto": 2,
+   "grosor": 1.3,
+   "en": 654.18,
+   "sale": 657.72
+  },
+  {
+   "id": "entra",
+   "pts": [
+    [
+     0.4,
+     0.6
+    ],
+    [
+     0.41,
+     0.5
+    ],
+    [
+     0.42,
+     0.38
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.7,
+   "alto": 4,
+   "grosor": 1.6,
+   "en": 654.88,
+   "sale": 657.72
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.33,
+     0.16
+    ],
+    [
+     0.53,
+     0.16
+    ],
+    [
+     0.53,
+     0.42
+    ],
+    [
+     0.33,
+     0.42
+    ]
+   ],
+   "color": "rojo",
+   "alfa": 0.15,
+   "en": 653.38,
+   "sale": 657.72
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.43,
+   "v": 0.2,
+   "alto": 0,
+   "texto": "GEN.G",
+   "sub": "LOS CINCO, SOBRE EL DRAGÓN",
+   "color": "rojo",
+   "dx": 120,
+   "dy": -60,
+   "de": 653.58,
+   "a": 657.72
+  },
+  {
+   "flecha": "flanco",
+   "texto": "DHOKLA",
+   "sub": "ESCONDIDO EN EL FLANCO",
+   "color": "azul",
+   "dx": -40,
+   "dy": 80,
+   "de": 654.38,
+   "a": 657.72
+  },
+  {
+   "flecha": "entra",
+   "texto": "INSPIRED",
+   "sub": "XIN ZHAO · AL CENTRO",
+   "color": "azul",
+   "dx": 150,
+   "dy": 40,
+   "de": 655.18,
+   "a": 657.72
+  }
+ ]
+}

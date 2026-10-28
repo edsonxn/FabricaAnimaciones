@@ -1,0 +1,295 @@
+{
+ "modo": "mesa",
+ "de": 376.33,
+ "a": 383.3,
+ "fondo": "/videos/ig_lyon_worlds/tactica3d/mesa_j2_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Dire": {
+   "jugador": "Dire",
+   "campeon": "Ryze",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Ryze.png",
+   "puntos": [
+    [
+     0,
+     0.27,
+     0.22
+    ]
+   ],
+   "de": 376.73,
+   "sale": 382.3
+  },
+  "Hizto": {
+   "jugador": "Hizto",
+   "campeon": "Qiyana",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Qiyana.png",
+   "puntos": [
+    [
+     0,
+     0.23,
+     0.25
+    ]
+   ],
+   "de": 376.81,
+   "sale": 382.3
+  },
+  "Pun": {
+   "jugador": "Pun",
+   "campeon": "Shen",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Shen.png",
+   "puntos": [
+    [
+     0,
+     0.22,
+     0.35
+    ]
+   ],
+   "de": 376.89,
+   "sale": 382.3
+  },
+  "Bie": {
+   "jugador": "Bie",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.345,
+     0.36
+    ]
+   ],
+   "de": 376.97,
+   "sale": 382.3
+  },
+  "Eddie": {
+   "jugador": "Eddie",
+   "campeon": "Ezreal",
+   "equipo": "R",
+   "icono": "/videos/ig_lyon_worlds/iconos/Ezreal.png",
+   "puntos": [
+    [
+     0,
+     0.135,
+     0.545
+    ]
+   ],
+   "de": 377.05,
+   "sale": 382.3
+  },
+  "TheShy": {
+   "jugador": "TheShy",
+   "campeon": "KSante",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/KSante.png",
+   "puntos": [
+    [
+     0,
+     0.345,
+     0.45
+    ]
+   ],
+   "de": 377.13,
+   "sale": 382.3
+  },
+  "Wei": {
+   "jugador": "Wei",
+   "campeon": "Nocturne",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Nocturne.png",
+   "puntos": [
+    [
+     0,
+     0.375,
+     0.43
+    ]
+   ],
+   "de": 377.21,
+   "sale": 382.3
+  },
+  "JiaQi": {
+   "jugador": "JiaQi",
+   "campeon": "Ashe",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Ashe.png",
+   "puntos": [
+    [
+     0,
+     0.51,
+     0.42
+    ]
+   ],
+   "de": 377.29,
+   "sale": 382.3
+  },
+  "Meiko": {
+   "jugador": "Meiko",
+   "campeon": "Seraphine",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Seraphine.png",
+   "puntos": [
+    [
+     0,
+     0.54,
+     0.4
+    ]
+   ],
+   "de": 377.37,
+   "sale": 382.3
+  },
+  "Rookie": {
+   "jugador": "Rookie",
+   "campeon": "Orianna",
+   "equipo": "A",
+   "icono": "/videos/ig_lyon_worlds/iconos/Orianna.png",
+   "puntos": [
+    [
+     0,
+     0.47,
+     0.6
+    ]
+   ],
+   "de": 377.45,
+   "sale": 382.3
+  }
+ },
+ "camara": [
+  [
+   376.33,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   376.68,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   378.5604,
+   -18,
+   36,
+   50,
+   0.33,
+   0.36
+  ],
+  [
+   380.6514,
+   14,
+   40,
+   47.5,
+   0.33,
+   0.36
+  ],
+  [
+   382.40000000000003,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   383.3,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "onda",
+   "pts": [
+    [
+     0.47,
+     0.58
+    ],
+    [
+     0.4,
+     0.45
+    ],
+    [
+     0.3,
+     0.3
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "alto": 4,
+   "grosor": 1.5,
+   "en": 378.33,
+   "sale": 382.3
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.17,
+     0.17
+    ],
+    [
+     0.38,
+     0.17
+    ],
+    [
+     0.4,
+     0.4
+    ],
+    [
+     0.17,
+     0.4
+    ]
+   ],
+   "color": "rojo",
+   "alfa": 0.18,
+   "en": 377.13,
+   "sale": 382.3
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.27,
+   "v": 0.24,
+   "alto": 0,
+   "texto": "CUATRO JUNTOS",
+   "sub": "TEAM SECRET WHALES",
+   "color": "rojo",
+   "dx": -60,
+   "dy": -70,
+   "de": 377.33,
+   "a": 382.3
+  },
+  {
+   "u": 0.47,
+   "v": 0.6,
+   "alto": 0,
+   "texto": "ROOKIE · ORIANNA",
+   "sub": "LA ONDA DE CHOQUE, LISTA",
+   "color": "azul",
+   "dx": -300,
+   "dy": 70,
+   "de": 378.63,
+   "a": 382.3
+  }
+ ]
+}

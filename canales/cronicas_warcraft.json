@@ -77,23 +77,29 @@
   },
   {
    "video": "wow_clases_ocultas",
-   "id": "atKakPRR410",
+   "id": "2hdnW7T5dl8",
    "titulo": "Las 9 clases y profesiones OCULTAS de WoW Forever",
    "visibilidad": "private",
    "programado": null,
    "formato": "lista cuenta regresiva 9 puestos · secuencia_yt (primer video de la Fábrica) · Overgear coaching (campaña 2)",
-   "nota": "27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (KEXk-wMhX1o) sigue en privado en el canal.",
-   "id_anterior": "KEXk-wMhX1o"
+   "nota": "28-oct-2026: versión nueva con el kit «WoW - Forever (nov)» y el creativo CRONICAS10_forever (-10 %) de Alice, en privado SIN fecha; la publica el usuario (fechas de Overgear: 1, 4, 5, 7 y 9-nov). Las anteriores siguen en privado: atKakPRR410, KEXk-wMhX1o. 27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (KEXk-wMhX1o) sigue en privado en el canal.",
+   "id_anterior": [
+    "atKakPRR410",
+    "KEXk-wMhX1o"
+   ]
   },
   {
    "video": "wow_pistas_futuro",
-   "id": "ZinI3H8kleI",
+   "id": "Hx0eAoY4szk",
    "titulo": "Las 8 pistas que Blizzard YA dejó sobre lo que viene después de WoW Forever",
    "visibilidad": "private",
    "programado": null,
    "formato": "lista cuenta regresiva 8 puestos · especulación/futuro (cambia la variable «tema» respecto a clases ocultas) · secuencia_yt · Overgear coaching bandas (campaña 2)",
-   "nota": "27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (vODv9Gm0tjQ) sigue en privado en el canal.",
-   "id_anterior": "vODv9Gm0tjQ"
+   "nota": "28-oct-2026: versión nueva con el kit «WoW - Forever (nov)» y el creativo CRONICAS10_forever (-10 %) de Alice, en privado SIN fecha; la publica el usuario (fechas de Overgear: 1, 4, 5, 7 y 9-nov). Las anteriores siguen en privado: ZinI3H8kleI, vODv9Gm0tjQ. 27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (vODv9Gm0tjQ) sigue en privado en el canal.",
+   "id_anterior": [
+    "ZinI3H8kleI",
+    "vODv9Gm0tjQ"
+   ]
   },
   {
    "video": "wow_tres_noches",
@@ -139,11 +145,12 @@
    "video": "wow_objetos_raros",
    "id": "2xO3Wf1B4XQ",
    "titulo": "Los 12 objetos más RAROS de WoW Vanilla (y cuáles vuelven en Forever)",
-   "visibilidad": "private",
+   "visibilidad": "public",
    "programado": "2026-10-27T15:00:00Z",
    "formato": "lista cuenta regresiva 12 puestos · 13:59 · objetos raros de Vanilla con gancho a Forever · secuencia_yt + Applio + pegatinas + 3 pantallas + 9 MAPAS REALES con ruta y FOTOS en cada paso (mg_wow.ruta) + MG nuevos (forja ×2, sorteo) · música original de WoW (no Lyria) · sin Overgear",
    "prueba": "tema pedido por el usuario: objetos/armas raros (eje «oculto/raro» de Kadrath ×4) con mapas reales; misma duración que Kalimdor (~14-16 min)",
-   "nota": "subido y programado el 23-oct-2026 por la regla «render terminado = subir y programar»: mié 28-oct 09:00 CDMX; ADELANTADO el 24-oct al mar 27-oct 09:00 CDMX (ciclo de 3 días tras Kalimdor, publicado antes por el usuario)"
+   "nota": "subido y programado el 23-oct-2026 por la regla «render terminado = subir y programar»: mié 28-oct 09:00 CDMX; ADELANTADO el 24-oct al mar 27-oct 09:00 CDMX (ciclo de 3 días tras Kalimdor, publicado antes por el usuario)",
+   "publicado": "2026-10-27T15:00:06Z"
   },
   {
    "video": "wow_jugadores_rompieron",

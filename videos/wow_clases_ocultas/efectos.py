@@ -11,23 +11,29 @@
 import mg_wow as M
 
 OG = r"medios\_overgear" + "\\"                   # copias de D:\Cronicas de Warcraft\Overgear\ y del creativo de Descargas
-CREATIVO = OG + "overgear_promo_ES_remy_preview_720p.mp4"
-CODIGO = ("scene-029", -6.97)                      # el tramo (6,97 s) termina justo donde empieza el puesto 6; entra con «CRONICAS10»
+OGF = OG + "forever\\"                             # kit WoW Forever (nov) del 28-oct: D:\Cronicas de Warcraft\Overgear\Forever\
+CREATIVO = OG + "CRONICAS10_forever.mp4"          # creativo del código de Forever (Alice, 28-oct): rótulo en verde de 10 s
+                                                   # «-10% WITH PROMO CODE CRONICAS10» (2,5-6 s) → «LINK IN THE DESCRIPTION»
+CODIGO = ("scene-029", -9.47)   # el creativo entra 2,5 s antes de «CRONICAS10» y acaba en el puesto siguiente
 
 CAMARA = {}   # scene-026 = recorrido por overgear.com/games/wow-forever/coaching (26-oct, el brief pide screencast): ya se mueve solo
 FUNDIDO = {
     "scene-029": 0,                                # corte seco del creativo («LINK IN THE DESCRIPTION») al «Número seis»
 }
 FX = [
-    # ---- patrocinio Overgear, campaña 2 (26-oct-2026): coaching de WoW Forever; insignias EN PARES (kit de marca)
-    dict(tipo="video", ruta=OG + "1 pair_green.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,
+    # ---- patrocinio Overgear, campaña 2: coaching de WoW Forever con el kit «WoW - Forever (nov)» (28-oct-2026): logo de
+    # esquina todo el anuncio, par de USP, tarjeta de coaching, reseñas reales (croma ROJO) y packshot «PLAY BETTER FOREVER»
+    dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True, de="Para eso está Overgear",
+         a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
+    dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,
          nombre="og pros"),
-    dict(tipo="video", ruta=OG + "2 pair_green.mp4", croma=True, en="Talentos, rotación", dur=4.0, sale=.25, nombre="og coaching"),
-    # sin esto quedaban ~4 s de fondo vacío hasta el logo (26-oct)
-    dict(tipo="video", ruta=OG + "3 pair_green.mp4", croma=True, en="tú eliges", dur=3.8, sale=.25, nombre="og trustpilot"),
-    dict(tipo="video", ruta=OG + "packshot-logo_greenscreen.mp4", croma=True, en="El enlace está en la descripción", a=CODIGO,
-         entra=.2, nombre="og logo", ver=2.0),
-    dict(tipo="video", ruta=CREATIVO, desde=33.0, de=CODIGO, a="scene-029", nombre="og CODIGO", ver=3.0),
+    dict(tipo="video", ruta=OGF + "cards-1-coaching_green-screen_wow-forever.mp4", croma=True, en="Talentos, rotación", dur=4.0,
+         sale=.25, nombre="og coaching"),
+    dict(tipo="video", ruta=OGF + "Reviews_v3_redscreen_march_wow-forever.mp4", croma="rojo", en="tú eliges", dur=4.0, sale=.25,
+         nombre="og reseñas"),
+    dict(tipo="video", ruta=OGF + "packshot-text_greenscreen_wow-forever.mp4", croma=True, en="El enlace está en la descripción",
+         a=CODIGO, entra=.2, nombre="og packshot", ver=2.5),
+    dict(tipo="video", ruta=CREATIVO, croma=True, de=CODIGO, a="scene-029", entra=.15, nombre="og CODIGO", ver=3.0),
     # el clip de scene-030 trae un tooltip enorme en inglés: se oscurece debajo de la tarjeta del campamento
     dict(tipo="oscurecer", en="Minería pone una piedra imán", dur=13.0, k=.45, entra=.35, sale=.3, nombre="oscurece campamento"),
     # ---- motion graphics (3, regla de canal)

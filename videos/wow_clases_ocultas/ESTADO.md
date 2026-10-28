@@ -66,3 +66,7 @@ python fab.py wow_clases_ocultas fx | fx montaje   audio de efectos | tramos par
 ## Cierre (regla del 12-oct-2026)
 - [x] subido, miniatura, programado y registrado (`canales/cronicas_warcraft.json`, BITACORA) — 13-oct
 - [x] HALLAZGOS y mejoras documentados (`docs/estilo_secuencia_yt.md` § «Música, render y miniatura») en el manual/estilo (ver CLAUDE.md «CIERRE DE VIDEO»)
+
+- **28-oct-2026 · kit Overgear «WoW - Forever (nov)» aplicado en efectos.py** (logo de esquina, par, tarjeta de coaching, reseñas con croma rojo, packshot «PLAY BETTER FOREVER»; revisado en hoja). SIN re-render: esperar el código y el creativo nuevos de Alice → cambiar CREATIVO/CREATIVO_DESDE + voz overgear_5/6 (decir «descuento mayor que el habitual, solo un mes») → fx → mezcla → render → final → verificar → subir la versión nueva en privado.
+
+28-oct-2026 ✅ creativo del código de Alice (`medios/_overgear/CRONICAS10_forever.mp4`, -10 % CRONICAS10, rótulo en verde con croma; entra 2,5 s antes de «CRONICAS10») + kit Forever → fx, mezcla, render, final, verificar (CER como el 27-oct) → subido en privado SIN fecha: https://youtu.be/2hdnW7T5dl8. La voz no cambió: ya decía «diez por ciento». Fechas de Overgear: 1, 4, 5, 7 y 9-nov.

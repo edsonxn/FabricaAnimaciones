@@ -24,9 +24,10 @@ TIPOS de FX:  temblor(en, amp, dur) · destello(en, dur, fuerza, color) · zoom(
   sirena(de, a, fuerza) · rec(de, a) · tv(de, a) · abre(en, dur) · cierra(en, dur) ·
   fondo(de, a, centro, borde) · imagen(de, a, ruta, x, y, ancho, alto, anim="slide"|"fade") ·
   video(de, a, ruta, desde, x, y, ancho, croma, recorte) — otro video encima (sin ancho = cuadro entero; croma=True quita la
-    pantalla verde; recorte=0.03 quita esa fracción por lado, p. ej. el marco de un clip de Flow; vel=0.9 lo frena o acelera;
-    con desde= y el mismo clip del beat se salta un tramo malo (un negro de transición); congela su último cuadro si sobra
-    rango; su audio NO entra en la mezcla) · mg(de, a, fn, marcas, x, y) — motion graphic por código:
+    pantalla verde, croma="rojo" la roja (reseñas de Overgear); recorte=0.03 quita esa fracción por lado, p. ej. el marco de
+    un clip de Flow; vel=0.9 lo frena o acelera; con desde= y el mismo clip del beat se salta un tramo malo (un negro de
+    transición); congela su último cuadro si sobra rango, o lo repite con bucle=True (logo de esquina); su audio NO entra en
+    la mezcla) · mg(de, a, fn, marcas, x, y) — motion graphic por código:
     fn(dt, dur, marcas) -> imagen BGRA; marcas = anclas de la voz, llegan como s desde el inicio (kit nucleo/mg_wow.py) ·
   pantalla(de, a, fn) — como `mg` pero se dibuja DEBAJO de tarjetas y pegatinas: imagen real a cuadro entero con movimiento
     lento (`mg_wow.pantalla`), para cuando el clip no enseña lo que la curiosidad necesita ver ·
@@ -325,7 +326,7 @@ class Capa:
                     import secuencia as S
                     v = cv2.resize(S._cubrir(v, W, H), (W, H), interpolation=cv2.INTER_LINEAR)
                 if d.get("croma"):
-                    v = _croma(v)
+                    v = _croma(v, d["croma"])
                 elif d.get("ancho"):
                     v = np.dstack([v, np.full(v.shape[:2], 255, np.uint8)])
                 else:
@@ -404,7 +405,7 @@ class Capa:
         if id(d) not in self._vids:
             if not os.path.exists(d["ruta"]):
                 raise SystemExit(f"efectos.py: falta el video {d['ruta']}")
-            self._vids[id(d)] = _VideoFx(d["ruta"], d.get("desde", 0.0), d.get("vel", 1.0))
+            self._vids[id(d)] = _VideoFx(d["ruta"], d.get("desde", 0.0), d.get("vel", 1.0), d.get("bucle", False))
         return self._vids[id(d)]
 
     @staticmethod
@@ -493,18 +494,20 @@ class _Cortina:
 
 
 class _VideoFx:
-    """Lector de un video externo para el FX `video`: cuadro en `desde + dt`; se queda en el último si el rango sobra."""
+    """Lector de un video externo para el FX `video`: cuadro en `desde + dt`; se queda en el último si el rango sobra
+    (o vuelve a empezar con bucle=True)."""
 
-    def __init__(self, ruta, desde, vel=1.0):
+    def __init__(self, ruta, desde, vel=1.0, bucle=False):
         import cv2
         self.cap = cv2.VideoCapture(ruta)
         self.fps = self.cap.get(cv2.CAP_PROP_FPS) or 30.0
         self.n = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))
-        self.desde, self.vel, self.i, self.ult = desde, vel, -1, None
+        self.desde, self.vel, self.bucle, self.i, self.ult = desde, vel, bucle, -1, None
 
     def cuadro(self, dt):
         import cv2
-        obj = min(int(round((self.desde + max(0.0, dt) * self.vel) * self.fps)), self.n - 1)
+        obj = int(round((self.desde + max(0.0, dt) * self.vel) * self.fps))
+        obj = obj % self.n if self.bucle else min(obj, self.n - 1)
         if obj < self.i or obj > self.i + 90:          # salto (la hoja de revisión va y viene): reposiciona
             self.cap.set(cv2.CAP_PROP_POS_FRAMES, obj)
             self.i = obj - 1
@@ -538,15 +541,22 @@ def _zoom_video(v, d, dt):
     return cv2.warpAffine(v, m, (w, h), flags=cv2.INTER_LINEAR)
 
 
-def _croma(v):
-    """Quita la pantalla verde (assets de patrocinios): BGRA con borde suave y sin halo verde."""
+def _croma(v, clave=True):
+    """Quita la pantalla verde (o roja con clave="rojo") de los assets de patrocinios: BGRA con borde suave y sin halo.
+    Umbral alto (28-oct-2026, kit WoW Forever de Overgear): con el viejo (28) el verde de Trustpilot (g-max(r,b) ≈ 60)
+    se volvía medio transparente; el croma (verde g-max ≈ 145, rojo r-max ≈ 187) sigue saliendo entero."""
     import cv2
     import numpy as np
     b, g, r = (v[..., i].astype(np.int16) for i in range(3))
-    m = np.maximum(r, b)
-    a = 1 - np.clip((g - m - 28) / 52.0, 0, 1)
+    if clave == "rojo":
+        m = np.maximum(g, b)
+        a = 1 - np.clip((r - m - 70) / 50.0, 0, 1)
+        r = np.minimum(r, m + 40)                       # despill (deja el dorado de las estrellas)
+    else:
+        m = np.maximum(r, b)
+        a = 1 - np.clip((g - m - 62) / 50.0, 0, 1)
+        g = np.minimum(g, m + 12)
     a = cv2.GaussianBlur(a.astype(np.float32), (3, 3), 0)
-    g = np.minimum(g, m + 12)                           # despill
     return np.dstack([b, g, r, a * 255]).clip(0, 255).astype(np.uint8)
 
 

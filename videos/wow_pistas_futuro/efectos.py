@@ -12,21 +12,27 @@
 import mg_wow as M
 
 OG = r"medios\_overgear" + "\\"                   # copias de D:\Cronicas de Warcraft\Overgear\ y del creativo de Descargas
-CREATIVO = OG + "overgear_promo_ES_remy_preview_720p.mp4"
-CODIGO = ("Número cinco", -6.97)                   # el tramo (6,97 s) termina justo donde empieza el puesto 5; entra con «CRONICAS10»
+OGF = OG + "forever\\"                             # kit WoW Forever (nov) del 28-oct: D:\Cronicas de Warcraft\Overgear\Forever\
+CREATIVO = OG + "CRONICAS10_forever.mp4"          # creativo del código de Forever (Alice, 28-oct): rótulo en verde de 10 s
+                                                   # «-10% WITH PROMO CODE CRONICAS10» (2,5-6 s) → «LINK IN THE DESCRIPTION»
+CODIGO = ("Número cinco", -9.47)   # el creativo entra 2,5 s antes de «CRONICAS10» y acaba en el puesto siguiente
 
 CAMARA = {}   # scene-029 = recorrido por overgear.com/games/wow-forever/coaching (26-oct, el brief pide screencast): ya se mueve solo
 FUNDIDO = {}
 FX = [
-    # ---- patrocinio Overgear, campaña 2 (26-oct-2026): coaching de WoW Forever, vía bandas; insignias EN PARES (kit de marca)
-    dict(tipo="video", ruta=OG + "1 pair_green.mp4", croma=True, en="te explica por voz", dur=3.0, sale=.25,
+    # ---- patrocinio Overgear, campaña 2: coaching de WoW Forever, vía bandas, con el kit «WoW - Forever (nov)» (28-oct-2026):
+    # logo de esquina todo el anuncio, par de USP, tarjeta de coaching, reseñas reales (croma ROJO) y packshot «PLAY BETTER FOREVER»
+    dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True, de="preparado está Overgear",
+         a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
+    dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="te explica por voz", dur=3.0, sale=.25,
          nombre="og pros"),
-    dict(tipo="video", ruta=OG + "2 pair_green.mp4", croma=True, en="mazmorras nuevas", dur=4.0, sale=.25, nombre="og coaching"),
-    dict(tipo="video", ruta=OG + "3 pair_green.mp4", croma=True, en="Como en Forever el equipo no caduca", dur=4.0, sale=.25,
-         nombre="og trustpilot"),
-    dict(tipo="video", ruta=OG + "packshot-logo_greenscreen.mp4", croma=True, en="El enlace está en la descripción", a=CODIGO,
-         entra=.2, nombre="og logo", ver=2.0),
-    dict(tipo="video", ruta=CREATIVO, desde=33.0, de=CODIGO, a=("Número cinco", 0), nombre="og CODIGO", ver=3.0),
+    dict(tipo="video", ruta=OGF + "cards-1-coaching_green-screen_wow-forever.mp4", croma=True, en="mazmorras nuevas", dur=4.0,
+         sale=.25, nombre="og coaching"),
+    dict(tipo="video", ruta=OGF + "Reviews_v3_redscreen_march_wow-forever.mp4", croma="rojo",
+         en="Como en Forever el equipo no caduca", dur=4.0, sale=.25, nombre="og reseñas"),
+    dict(tipo="video", ruta=OGF + "packshot-text_greenscreen_wow-forever.mp4", croma=True, en="El enlace está en la descripción",
+         a=CODIGO, entra=.2, nombre="og packshot", ver=2.5),
+    dict(tipo="video", ruta=CREATIVO, croma=True, de=CODIGO, a=("Número cinco", 0), entra=.15, nombre="og CODIGO", ver=3.0),
     # ---- motion graphics (3, regla de canal)
     dict(tipo="mg", fn=M.filas("HOJA DE RUTA DE FOREVER", [
         ("9 de diciembre", 3, ["achievement_boss_onyxia", "inv_misc_head_dragon_01", "inv_misc_head_dragon_01"]),

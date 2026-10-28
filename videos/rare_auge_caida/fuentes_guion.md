@@ -1,0 +1,46 @@
+# Fuentes del guion de rare_auge_caida (verificadas el 28-oct-2026)
+[O] oficial · [P] prensa · [W] Wikipedia/wikis · [R] discutido (se dice como tal)
+
+- Stamper / Ultimate / Jetpac / Sabre Wulf [W]: https://en.wikipedia.org/wiki/Ultimate_Play_the_Game · https://en.wikipedia.org/wiki/Stamper_brothers
+- Knight Lore guardado [R] (CRASH 51, 1988; Retro Gamer 105 lo cree exagerado): https://en.wikipedia.org/wiki/Knight_Lore
+- Rare Limited 16-abr-1985 [O]: https://find-and-update.company-information.service.gov.uk/company/01905690
+- Ingeniería inversa de la NES, Dave Thomas (GamesTM 2010) [P]: https://raregamer.co.uk/?p=35368
+- 47 juegos de NES [W]: https://www.nesdev.org/wiki/Rare
+- SGI ~80 000 £, dos máquinas, demo de boxeo (David Wise) [P]: https://www.nintendolife.com/news/2014/02/donkey_kong_countrys_fate_was_determined_by_a_risky_rare_investment
+- Nintendo 25 % (1994) -> 49 %; 84 -> 250 empleados [W]: https://en.wikipedia.org/wiki/Rare_(company)
+- DKC 9,3 M / DKC2 5,15 / DKC3 3,51 / KI 3,2 [W]: https://www.vgchartz.com/article/262015/top-10-best-selling-snes-games/
+- Miyamoto y DKC [P]: https://www.nintendolife.com/news/2010/06/turns_out_shigeru_miyamoto_does_like_donkey_kong_country
+- Diddy = DK Jr. rediseñado [W]: https://en.wikipedia.org/wiki/Diddy_Kong
+- GoldenEye 8,09 M (Guinness) [P]: https://www.guinnessworldrecords.com/world-records/548710-best-selling-james-bond-videogame
+- Kirkhope: 12 personas, «complete disaster» (FRVR, 7-sep-2026) [P]: https://frvr.com/blog/news/we-expected-it-to-be-a-complete-disaster-rares-goldeneye-007-composer-reveals-it-took-years-to-realise-the-james-bond-games-true-popularity/
+- Hollis, equipo sin experiencia [P]: https://www.gamedeveloper.com/design/from-me-to-wii-martin-hollis-journey
+- Multijugador en un mes, a escondidas (GDC Europe 2012) [P]: https://www.engadget.com/2012-08-14-goldeneye-007s-multiplayer-was-added-last-minute-unknown-to-ra.html
+- Fax de Miyamoto, hospital [P]: https://www.gamespot.com/articles/goldeneye-007-originally-more-violent-miyamoto-sug/1100-6431708/
+- Ventas N64 (DKR 4,88; DK64 5,27; BK 3,65) [W]: https://en.wikipedia.org/wiki/List_of_best-selling_Nintendo_64_video_games
+- Dream / Edson [W, comprobado]: https://en.wikipedia.org/wiki/Project_Dream
+- Expansion Pak de DK64 [R]: https://www.superjumpmagazine.com/the-rare-mistake-that-lead-to-an-n64-upgrade/
+- DK Rap en la película [P]: https://gamespot.com/articles/original-composer-of-dk-rap-goes-uncredited-in-super-mario-bros-movie/1100-6512983/
+- Conker / Twelve Tales / gira de Playboy [W][P]: https://en.wikipedia.org/wiki/Conker_(series) · https://www.timeextension.com/news/2024/01/even-conkers-dad-didnt-know-about-the-playboy-multiplayer-tour
+- Free Radical [W]: https://en.wikipedia.org/wiki/Free_Radical_Design
+- Star Fox Adventures 23-sep-2002 [W]: https://en.wikipedia.org/wiki/Star_Fox_Adventures
+- Compra de Microsoft 375 M, X02 Sevilla, cita de Ed Fries [O]: https://news.microsoft.com/source/2002/09/24/microsoft-acquires-video-game-powerhouse-rare-ltd/
+- Nintendo vende su 49 % [P]: https://www.gamedeveloper.com/game-platforms/microsoft-buys-rare
+- MacDougall, «limited», 1,5 % [P]: https://money.cnn.com/2002/09/20/news/deals/rare/
+- Tim Stamper, «I've no idea why» (Develop 2015) [P]: https://mcvuk.com/?p=68034
+- Activision ganando la puja (Ed Fries) [P/R]: https://www.gameinformer.com/b/news/archive/2010/10/27/rare-was-almost-bought-by-activision-instead-of-microsoft.aspx
+- Ghoulies, Kameo/PDZ «six more months» (MCV 2010) [P]: https://www.mcvuk.com/development-news/rare-reveals-past-secrets-of-25-year-legacy/
+- Viva Piñata [W]: https://en.wikipedia.org/wiki/Viva_Pi%C3%B1ata_(video_game)
+- Los Stamper se van (2-ene-2007) [P]: https://mcvuk.com/development-news/stampers-quit-rare/
+- Nuts & Bolts [W]: https://en.wikipedia.org/wiki/Banjo-Kazooie:_Nuts_%26_Bolts
+- Avatares de Xbox [P]: https://kotaku.com/the-untold-story-of-the-xbox-360-avatars-5269441
+- Kinect Sports 3 M [O]: https://blogs.microsoft.com/blog/2011/05/12/kinect-sports-dance-central-help-keep-xbox-360-in-the-no-1-spot/
+- Despidos 2014 [P]: https://www.engadget.com/2014-05-19-layoffs-at-rare-16-employees-reportedly-let-go.html
+- Yooka-Laylee / Kickstarter [W]: https://en.wikipedia.org/wiki/Yooka-Laylee
+- Rare Replay [O]: https://news.xbox.com/en-us/2015/06/16/xbox-rare-celebrates-its-30th-anniversary-with-a-massive-30-game-collection/
+- Sea of Thieves 40 M [P]: https://videogameschronicle.com/news/rare-says-sea-of-thieves-has-attracted-40-million-players-ahead-of-ps5-release
+- PS5 n.º 1 en Europa abr-2024 [O]: https://blog.playstation.com/2024/05/09/playstation-store-april-2024s-top-downloads/
+- Everwild cancelado 2-jul-2025 [P]: https://www.videogameschronicle.com/news/sources-everwild-has-been-cancelled-as-xbox-layoffs-hit-rare/
+- Gregg Mayles se va (14-oct-2025) [P]: https://www.timeextension.com/news/2025/10/thanks-to-everyone-who-played-donkey-kong-country-and-banjo-kazooie-designer-gregg-mayles-leaves-rare-after-36-years
+- Película de Sea of Thieves (23-jun-2026) [P]: https://gameinformer.com/2026/06/23/sea-of-thieves-is-getting-a-live-action-movie
+- Despidos de Xbox, Rare fuera de los 5 estudios (6-jul-2026) [P]: https://hitmarker.net/news/xbox-cuts-3-200-jobs-and-parts-ways-with-five-studios-in-the-largest-gaming-industry-layoff-in-years-1937079
+- Memorando de Matt Booty, Rare bajo Activision (22-sep-2026) [O, comprobado]: https://news.xbox.com/en-us/2026/09/22/continuing-our-reset/

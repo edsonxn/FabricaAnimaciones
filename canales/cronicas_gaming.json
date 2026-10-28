@@ -52,20 +52,22 @@
    "id": "tHGhx72-OTs",
    "titulo": "Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE",
    "subido": "2026-10-22",
-   "visibilidad": "private",
+   "visibilidad": "public",
    "programado": "2026-10-25T00:00:00Z",
    "formato": "historia_y_12_secretos_secuencia_yt",
-   "nota": "15:56, voz ElevenLabs Hope; gancho = remake de Switch 2 (5-nov-2026); fichas/MG con marcos de Flow (mg_zelda); miniatura Flow con ingredientes reales"
+   "nota": "15:56, voz ElevenLabs Hope; gancho = remake de Switch 2 (5-nov-2026); fichas/MG con marcos de Flow (mg_zelda); miniatura Flow con ingredientes reales; salió antes de lo programado (estaba para el 25-oct 00:00 UTC)",
+   "publicado": "2026-10-24T16:00:20Z"
   },
   {
    "video": "bt_jiggies_crueles",
    "id": "qLBP3ce4AC4",
    "titulo": "Los 10 Jiggies más CRUELES de Banjo-Tooie",
    "subido": "2026-10-23",
-   "visibilidad": "private",
+   "visibilidad": "public",
    "programado": "2026-10-28T00:00:00Z",
    "formato": "ranking_10_secuencia_yt",
-   "nota": "11:30, voz ElevenLabs Hope, OST oficial de Banjo-Tooie, kit translúcido mg_banjo; subido para el 29-oct y adelantado al 27-oct por el nuevo ciclo de 3 días"
+   "nota": "11:30, voz ElevenLabs Hope, OST oficial de Banjo-Tooie, kit translúcido mg_banjo; subido para el 29-oct y adelantado al 27-oct por el nuevo ciclo de 3 días",
+   "publicado": "2026-10-28T00:00:04Z"
   },
   {
    "video": "majora_mask",
@@ -86,6 +88,16 @@
    "programado": "2026-11-03T00:00:00Z",
    "formato": "ranking_15_cambios_remake_vs_original_secuencia_yt",
    "nota": "12:06, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 21 clips; comparativas N64/Switch 2 en ventana; gancho = sale el 5-nov; miniatura Flow antes/después con ingredientes reales"
+  },
+  {
+   "video": "rare_auge_caida",
+   "id": "RwkNXgEnqsU",
+   "titulo": "Rare: el estudio que Nintendo DEJÓ IR",
+   "subido": "2026-10-28",
+   "visibilidad": "private",
+   "programado": "2026-11-06T00:00:00Z",
+   "formato": "historia_de_estudio_capitulos_secuencia_yt",
+   "nota": "18:00, 8 capítulos, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial por época + sonido original en 8 clips; kit nuevo mg_rare (acciones, reparto, éxodo, torres, apuesta, eras); cierre con el memorando de Xbox del 22-sep-2026 (Rare bajo Activision); miniatura Flow «NINTENDO LO DEJÓ IR» con ingredientes reales"
   }
  ],
  "ideas": {

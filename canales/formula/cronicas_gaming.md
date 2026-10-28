@@ -62,3 +62,13 @@ _Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 1
   fórmula): fichas translúcidas con la interfaz del juego, OST oficial en vez de Lyria, mapas reales con ruta.
 - **Hipótesis:** la secuela de un juego en tendencia supera a banjo_tooie en vistas a 7 días y se acerca a zelda_oot; ≥ 35 % visto.
   Registro a 7 días: (pendiente, ~7-nov).
+
+## 28-oct-2026 — Video 5 de la etapa Nintendo: `rare_auge_caida` (pedido del usuario: «algo de 18 minutos»)
+- «Rare: el estudio que Nintendo DEJÓ IR» (~18:20), hueco del jue 5-nov-2026 18:00 CDMX. Elegido por el usuario entre 3 con datos
+  (Rare / Mario 64 historia + 20 secretos / Ocarina 10 misterios). Variable que cambia: SOLO el formato (historia de un ESTUDIO en
+  8 capítulos en vez de un juego con N secretos); mismo público N64 (Banjo, DK, GoldenEye) y misma forma (SECUENCIA YT, pegatinas,
+  fichas translúcidas, OST oficial, MG nuevos). Referencia: Kilobyte Chronicles «The Rise and Fall of Rare…» ×9,1 (1 910 subs).
+  Gancho de actualidad: el memorando de Xbox del 22-sep-2026 que pone a Rare bajo Activision.
+- **Hipótesis:** un documental largo de estudio retiene ≥ 35 % (como banjo_tooie) pese a durar 18 min y saca más vistas por
+  búsqueda («historia de Rare», «Rare Nintendo Microsoft») que los de secretos. Registro a 7 días: (pendiente, ~12-nov).
+- Comentarios al empezar (28-oct): 1 nuevo (@riuma77, ♥0, sobre Banjo-Tooie), sin quejas ni sugerencias.

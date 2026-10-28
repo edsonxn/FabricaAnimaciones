@@ -189,3 +189,16 @@ de Liquid en `videos/lol_worlds_2026/` (`j6_3d.py` → `tactica3d/j6.json` → `
 4. **Narradores lentos en los tramos en vivo**: con video+audio (`+ba`) yt-dlp entrega tramos más cortos (~10 s para un beat de
    17 s) y el motor los estira (0,6×), voz incluida. Tras `bajar`, comparar la duración de cada clip con su beat; los tramos en
    vivo se cortan de la fuente local de la jugada (`medios/_fuente/j*.mp4`, imagen y narración alineadas) con ffmpeg.
+
+## Análisis de un partido YA JUGADO, el mismo día (28-oct-2026, `videos/t1_koi_worlds/`, ~1 h 40 min de principio a subida)
+- **Sin spoiler** (el usuario): ni miniatura, ni título, ni gancho, ni los clips del gancho dicen quién ganó; el resultado de cada
+  partida se descubre en su última jugada. Miniatura neutra («T1 vs KOI · LA PELEA CLAVE»).
+- **Investigación en paralelo**: un agente por partida (feed `window` + VOD + Whisper) deja `investigacion/datos_g<p>.md` con el
+  desfase VOD = HUD + K, las jugadas con reloj del HUD y las fuentes `medios/_fuente/g<p>_j<k>.mp4` (HUD = t + K por fuente).
+  Los VOD de la Worlds en el canal `UC-I8d_BjKP6MMsYjZhAtjIA` salen en ESPAÑOL a la hora de terminar cada partida.
+- **Tramos EN VIVO con la narración original**: el FX `video` de la fuente local cubre de e0 a la primera frase y
+  `vivos_audio.py` escribe `audio/ambiente.wav` (48 kHz) con el audio de esa misma fuente; la música baja 16 dB (`MEZCLA.musica_curva`).
+  Se corre DESPUÉS de `video` (que borra ambiente.wav si ningún beat lleva `ambiente_por`) y antes de `mezcla`.
+- **Pausas 3D**: en `sobre_video`, los `texto` de una pizarra 3D salen CENTRADOS en x (solo cuenta `y`): sacar a `tar(...)` los que
+  choquen con anillos. Un `tar(...)` NO puede ir dentro de la lista de una pizarra (KeyError 'en').
+- **Duración**: la voz JC habla ~2,4 palabras/s; 1 700 palabras + 7 vivos de 17-21 s + 6 repeticiones = 15:27.

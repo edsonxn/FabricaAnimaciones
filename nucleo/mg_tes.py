@@ -34,6 +34,14 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   barras(titulo, [(ruta, etiqueta, valor, i, color)], refs, unidad, remate)   barras comparadas + líneas de referencia punteadas
   niveles(titulo, [(rango, valor)], notas)     escalera del arma nivelada; notas enmarcan la trampa de un nivel
   golpes(titulo, objetivo, salud, [(ruta, arma, a, b)], fases, remate)   golpes para tumbar a X en dos fases (fuego / escarcha)
+  tes_cosas_nunca (27-oct-2026):
+  plazo(titulo, horas, retrato, avisos, curas, final, remate)   cuenta atrás en una línea de días (sol/luna), avisos del juego
+                                               en su hora, remedios que se tachan al acabar (Sanguinare Vampiris, Lydia 72 h)
+  paciencia(titulo, retrato, golpes, aviso, estallido, remate)  casillas de aviso que se llenan golpe a golpe y el PNJ se
+                                               pone rojo: HOSTIL (fuego amigo)
+  escalado(titulo, objeto, contador, niveles_, tu, hitos, remate)   contador que sube tu nivel mientras tu arma se queda; lo
+                                               que el mundo trae a cada nivel aparece en la regla (dagas de hierro / dragones)
+  reinicio(titulo, objetos, dias, seguro, remate)   cofre con tu botín, calendario que se tacha y todo desaparece; tu casa SEGURO
 """
 import math
 import os
@@ -1399,5 +1407,263 @@ def golpes(titulo, objetivo, salud, filas, fases=("Dragón de fuego", "Dragón d
             s = _pop(dt - mk[remate[1]], .35)
             _texto(d, (M + ancho / 2, M + h - 46), remate[0].upper(), fuente("Bold Condensed", max(8, int(46 * s))), ORO, "mm",
                    track=3)
+        return _salida(im, dt)
+    return fn
+
+
+# ================================================================== tes_cosas_nunca (27-oct-2026): 4 MG nuevos
+def _remate(d, M, ancho, h, remate, dt, mk, color=SANGRE, tam=50):
+    if remate and dt >= mk[remate[1]]:
+        s = _pop(dt - mk[remate[1]], .35)
+        _texto(d, (M + ancho / 2, M + h - 48), remate[0].upper(), fuente("Bold Condensed", max(8, int(tam * s))), color, "mm",
+               track=3)
+
+
+def _sol(d, x, y, r, a, noche=False):
+    """Iconito de sol (rayos) o de luna (creciente) para la línea de los días."""
+    if noche:
+        d.ellipse((x - r, y - r, x + r, y + r), fill=(200, 205, 230, int(a)))
+        d.ellipse((x - r + r * .55, y - r - r * .15, x + r + r * .55, y + r - r * .15), fill=(6, 6, 8, int(a)))
+        return
+    for k in range(8):
+        ang = k * math.pi / 4
+        d.line([(x + r * 1.35 * math.cos(ang), y + r * 1.35 * math.sin(ang)),
+                (x + r * 1.8 * math.cos(ang), y + r * 1.8 * math.sin(ang))], fill=ORO + (int(a),), width=3)
+    d.ellipse((x - r, y - r, x + r, y + r), fill=ORO + (int(a),))
+
+
+def plazo(titulo, horas, retrato, avisos=(), curas=(), final=None, remate=None, ancho=1600):
+    """Cuenta atrás de un plazo del juego en una línea de días (sol/luna). retrato = (ruta, nombre) en medallón a la izquierda.
+    marca 0: el marcador echa a andar · avisos = [(hora, texto)]: salen bajo la línea cuando el marcador pasa por esa hora ·
+    curas = [(ruta, nombre)]: fila de remedios que se tachan cuando el plazo se acaba · final = (texto, i_marca): el plazo
+    llega a `horas` en esa marca, el medallón se pone rojo con el texto · remate = (texto, i). Primer uso: Sanguinare Vampiris
+    (72 h, los dos avisos del juego, las curas tachadas) y el seguidor que se cansa de esperar (72 h)."""
+    h = 110 + 300 + 46 * max(0, len(avisos) - 1) + (150 if curas else 0) + (70 if remate else 10)
+    D = 210
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 8
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        t_fin = mk[final[1]] if final else dur - .8
+        u = 0.0 if dt < mk[0] else min(1.0, (dt - mk[0]) / max(.6, t_fin - mk[0]))
+        acabado = final and dt >= t_fin
+        cx, cy = M + 60 + D / 2, M + 120 + D / 2
+        _pega(im, _redondo(retrato[0], D), cx - D / 2, cy - D / 2, a0)
+        d.ellipse((cx - D / 2 - 4, cy - D / 2 - 4, cx + D / 2 + 4, cy + D / 2 + 4),
+                  outline=(SANGRE if acabado else HUESO) + (int(255 * a0),), width=6 if acabado else 3)
+        if not acabado:
+            _texto(d, (cx, cy + D / 2 + 34), retrato[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * a0, track=3)
+        x0, x1, yl = M + 380, M + ancho - 90, M + 205
+        d.rounded_rectangle((x0, yl - 12, x1, yl + 12), radius=12, fill=(40, 38, 34, int(235 * a0)),
+                            outline=HUESO + (int(120 * a0),), width=2)
+        dias = max(1, int(round(horas / 24)))
+        for k in range(dias + 1):                               # divisiones por día, con sol (amanecer) y luna (anochecer)
+            xk = x0 + (x1 - x0) * k / dias
+            d.line([(xk, yl - 26), (xk, yl + 26)], fill=HUESO + (int(200 * a0),), width=3)
+            _texto(d, (xk, yl - 54), f"{k * 24} H", fuente("Condensed", 28), GRIS, "mm", 255 * a0, track=2)
+            if k < dias:
+                _sol(d, xk + (x1 - x0) / dias * .25, yl + 56, 11, 230 * a0)
+                _sol(d, xk + (x1 - x0) / dias * .75, yl + 56, 11, 230 * a0, noche=True)
+        if u > 0:
+            xm = x0 + (x1 - x0) * u
+            d.rounded_rectangle((x0 + 2, yl - 9, max(x0 + 20, xm), yl + 9), radius=9, fill=(SANGRE if acabado else ORO) + (255,))
+            d.polygon([(xm - 14, yl - 40), (xm + 14, yl - 40), (xm, yl - 16)], fill=BLANCO + (255,))
+            _texto(d, (xm, yl - 92), f"{int(round(horas * u))} H", fuente("Bold Condensed", 46), BLANCO, "mm", 255)
+        for k, (hh, txt) in enumerate(avisos):                   # los avisos del juego, cuando el marcador pasa por su hora
+            if u * horas >= hh:
+                ua = _eo((u * horas - hh) / (horas * .06))
+                _texto(d, ((x0 + x1) / 2, yl + 112 + 46 * k), "« " + txt.upper() + " »",
+                       fuente("SemiBold Condensed", 34), HUESO, "mm", 255 * ua, track=2)
+        if curas:
+            yc = M + 110 + 300 + 20 + 46 * max(0, len(avisos) - 1)
+            n = len(curas)
+            paso = (x1 - x0) / n
+            for k, (ruta, nom) in enumerate(curas):
+                xk = x0 + paso * k + 20
+                _pega(im, _retrato(ruta, 96, 96), xk, yc, a0)
+                _texto(d, (xk + 116, yc + 48), nom.upper(), fuente("SemiBold Condensed", 32), HUESO, "lm", 255 * a0, track=2)
+                if acabado:
+                    ux = _eo((dt - t_fin - .25 * k) / .3)
+                    if ux > 0:
+                        x_e = xk + (paso - 40) * ux
+                        d.line([(xk - 6, yc + 48), (x_e, yc + 48)], fill=SANGRE + (255,), width=7)
+        if acabado:
+            s = _pop(dt - t_fin, .35)
+            _texto(d, (cx, cy + D / 2 + 40), final[0].upper(), fuente("Bold Condensed", max(8, int(52 * s))), SANGRE, "mm", track=4)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def paciencia(titulo, retrato, golpes=3, aviso="Aviso", estallido="Hostil", remate=None, ancho=1100):
+    """La paciencia de un PNJ: medallón y `golpes` casillas; en cada marca 0..golpes-1 un golpe llena una casilla
+    («AVISO») con un temblor; en la marca `golpes` el medallón se tiñe de rojo, tiembla y sale `estallido`.
+    Primer uso: el fuego amigo con Lydia (más de tres golpes y se vuelve hostil)."""
+    h = 110 + 330 + (70 if remate else 10)
+    D = 230
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (golpes + 4)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        roto = dt >= mk[golpes]
+        sac = 0.0
+        for k in range(golpes + 1):                           # temblor corto en cada golpe
+            if 0 <= dt - mk[k] < .35:
+                sac = (1 - (dt - mk[k]) / .35) * (16 if k == golpes else 7)
+        sx = sac * math.sin(dt * 90)
+        cx, cy = M + 90 + D / 2 + sx, M + 130 + D / 2
+        r = _redondo(retrato[0], D)
+        if roto:
+            a = np.array(r).astype(np.float32)
+            v = min(1.0, (dt - mk[golpes]) / .4)
+            a[..., 0] = a[..., 0] * (1 - .35 * v) + 200 * .35 * v
+            a[..., 1] *= 1 - .45 * v
+            a[..., 2] *= 1 - .45 * v
+            r = Image.fromarray(a.clip(0, 255).astype(np.uint8))
+        _pega(im, r, cx - D / 2, cy - D / 2, a0)
+        d.ellipse((cx - D / 2 - 4, cy - D / 2 - 4, cx + D / 2 + 4, cy + D / 2 + 4),
+                  outline=(SANGRE if roto else HUESO) + (int(255 * a0),), width=7 if roto else 3)
+        _texto(d, (cx, cy + D / 2 + 36), retrato[1].upper(), fuente("SemiBold Condensed", 32), HUESO, "mm", 255 * a0, track=3)
+        bw, gap = 190, 28
+        x0 = M + 90 + D + 90
+        for k in range(golpes):
+            xk, yk = x0 + k * (bw + gap), M + 150
+            lleno = dt >= mk[k]
+            d.rounded_rectangle((xk, yk, xk + bw, yk + 110), radius=14, fill=(30, 26, 22, int(220 * a0)),
+                                outline=(ORO if lleno else GRIS) + (int(220 * a0),), width=3)
+            if lleno:
+                s = _pop(dt - mk[k], .3)
+                _texto(d, (xk + bw / 2, yk + 46), f"{k + 1}", fuente("Bold Condensed", max(8, int(64 * s))), ORO, "mm")
+                _texto(d, (xk + bw / 2, yk + 92), aviso.upper(), fuente("SemiBold Condensed", 26), HUESO, "mm", 255, track=3)
+        if roto:
+            s = _pop(dt - mk[golpes], .35)
+            _texto(d, (x0 + (golpes * (bw + gap) - gap) / 2, M + 340), estallido.upper(),
+                   fuente("Bold Condensed", max(8, int(84 * s))), SANGRE, "mm", track=8)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def escalado(titulo, objeto, contador, niveles_, tu, hitos, remate=None, ancho=1700):
+    """Subir de nivel sin pelear. objeto = (ruta, nombre) del objeto que se fabrica; contador = (n_fin, etiqueta).
+    niveles_ = (nivel_ini, nivel_fin): entre las marcas 0 y 1 el contador corre hasta n_fin y TU NIVEL sube de nivel_ini a
+    nivel_fin en una regla de niveles (0-80); tu = (ruta, etiqueta): tu arma, que se queda clavada en nivel_ini, en gris ·
+    hitos = [(nivel, ruta, texto, i_marca)]: lo que el mundo trae a ese nivel aparece sobre la regla en su marca (en rojo) ·
+    remate = (texto, i). Primer uso: cien dagas de hierro, dragones de escarcha (27) y legendarios (78)."""
+    h = 110 + 620 + (70 if remate else 10)
+    NMAX = 80
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 8
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        u = 0.0 if dt < mk[0] else min(1.0, (dt - mk[0]) / max(.6, mk[1] - mk[0] if mk[1] < 99 else 3.0))
+        u = 1 - (1 - u) ** 2
+        _pega(im, _icono(objeto[0], 150, 150), M + 70, M + 130, a0)
+        _texto(d, (M + 145, M + 310), f"{int(round(contador[0] * u))}", fuente("Bold Condensed", 76), BLANCO, "mm", 255 * a0)
+        _texto(d, (M + 145, M + 362), contador[1].upper(), fuente("SemiBold Condensed", 26), GRIS, "mm", 255 * a0, track=3)
+        x0, x1 = M + 330, M + ancho - 110
+        yr = M + 560
+        d.line([(x0, yr), (x1, yr)], fill=HUESO + (int(200 * a0),), width=3)
+        for nv in range(0, NMAX + 1, 10):
+            xn = x0 + (x1 - x0) * nv / NMAX
+            d.line([(xn, yr - 12), (xn, yr + 12)], fill=HUESO + (int(200 * a0),), width=2)
+            _texto(d, (xn, yr + 38), str(nv), fuente("Condensed", 28), GRIS, "mm", 255 * a0)
+        _texto(d, (x0, yr + 80), "NIVEL", fuente("SemiBold Condensed", 26), GRIS, "lm", 255 * a0, track=4)
+
+        def xn(nv):
+            return x0 + (x1 - x0) * nv / NMAX
+        n_tu = niveles_[0] + (niveles_[1] - niveles_[0]) * u
+        yb1, yb2 = M + 150, M + 250                                 # dos barras: tu personaje y tu arma
+        _texto(d, (x0, yb1 - 32), "TU PERSONAJE", fuente("SemiBold Condensed", 30), HUESO, "lm", 255 * a0, track=3)
+        d.rounded_rectangle((x0, yb1, x1, yb1 + 34), radius=17, fill=(40, 38, 34, int(230 * a0)))
+        d.rounded_rectangle((x0, yb1, max(x0 + 34, xn(n_tu)), yb1 + 34), radius=17, fill=ORO + (int(255 * a0),))
+        _texto(d, (xn(n_tu) + 16, yb1 + 17), f"NIVEL {int(round(n_tu))}", fuente("Bold Condensed", 36), BLANCO, "lm", 255 * a0)
+        _texto(d, (x0, yb2 - 32), tu[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "lm", 255 * a0, track=3)
+        d.rounded_rectangle((x0, yb2, x1, yb2 + 34), radius=17, fill=(40, 38, 34, int(230 * a0)))
+        d.rounded_rectangle((x0, yb2, xn(niveles_[0]), yb2 + 34), radius=17, fill=GRIS + (int(255 * a0),))
+        _texto(d, (xn(niveles_[0]) + 16, yb2 + 17), f"NIVEL {niveles_[0]}", fuente("Bold Condensed", 36), GRIS, "lm", 255 * a0)
+        for nv, ruta, txt, i in hitos:                               # lo que trae el mundo a cada nivel
+            uh = _eo((dt - mk[i]) / .45)
+            if uh <= 0:
+                continue
+            xh = xn(nv)
+            d.line([(xh, yb1 - 10), (xh, yr)], fill=SANGRE + (int(220 * uh),), width=4)
+            iw = 170
+            _pega(im, _retrato(ruta, iw, 96), xh - iw / 2, yr - 140 - 30 * (1 - uh), uh)
+            _marco(d, xh - iw / 2, yr - 140 - 30 * (1 - uh), iw, 96, SANGRE, 255 * uh, 3)
+            _texto(d, (min(xh, x1 - 110), yr + 80), txt.upper(), fuente("Bold Condensed", 32), SANGRE, "mm", 255 * uh, track=2)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def reinicio(titulo, objetos, dias, seguro, remate=None, ancho=1700):
+    """El cofre que se reinicia. objetos = [(ruta, nombre)]: entran al cofre uno por marca (0..n-1) · marca n: el calendario
+    de `dias` casillas se tacha día a día hasta la marca n+1, y en ella los objetos se desvanecen uno tras otro y queda
+    «VACÍO» · seguro = (ruta, texto, i_marca): a la derecha tu casa con un sello verde «SEGURO» · remate = (texto, i)."""
+    n = len(objetos)
+    h = 110 + 520 + (70 if remate else 10)
+    VERDE = (120, 210, 120)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 6)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        cx0, cy0, cw, ch = M + 70, M + 120, 820, 330                # el «cofre»: rejilla de inventario
+        d.rounded_rectangle((cx0, cy0, cx0 + cw, cy0 + ch), radius=18, fill=(34, 26, 18, int(235 * a0)),
+                            outline=ORO + (int(220 * a0),), width=4)
+        _texto(d, (cx0 + cw / 2, cy0 + 34), "COFRE CUALQUIERA", fuente("SemiBold Condensed", 30), ORO, "mm", 255 * a0, track=4)
+        t_vacio = mk[n + 1]
+        cols = 4
+        for k, (ruta, nom) in enumerate(objetos):
+            uk = _eo((dt - mk[k]) / .4)
+            if dt >= t_vacio:
+                uk *= 1 - _eo((dt - t_vacio - .22 * k) / .35)
+            if uk <= 0:
+                continue
+            c, f = k % cols, k // cols
+            xk, yk = cx0 + 40 + c * 195, cy0 + 70 + f * 128
+            _pega(im, _icono(ruta, 112, 96), xk, yk - 20 * (1 - uk), uk)
+            _texto(d, (xk + 56, yk + 112), nom.upper(), fuente("Condensed", 22), HUESO, "mm", 255 * uk, track=1)
+        if dt >= t_vacio + .22 * n + .2:
+            s = _pop(dt - (t_vacio + .22 * n + .2), .35)
+            _texto(d, (cx0 + cw / 2, cy0 + ch / 2 + 20), "VACÍO", fuente("Bold Condensed", max(8, int(110 * s))), SANGRE, "mm",
+                   track=12)
+        # calendario de días
+        yc = cy0 + ch + 40
+        cwd = (cw - (dias - 1) * 10) / dias
+        uc = 0.0 if dt < mk[n] else min(1.0, (dt - mk[n]) / max(.6, t_vacio - mk[n] if t_vacio < 99 else 3.0))
+        for k in range(dias):
+            xk = cx0 + k * (cwd + 10)
+            d.rounded_rectangle((xk, yc, xk + cwd, yc + 70), radius=8, fill=(30, 28, 24, int(220 * a0)),
+                                outline=HUESO + (int(140 * a0),), width=2)
+            _texto(d, (xk + cwd / 2, yc + 35), str(k + 1), fuente("SemiBold Condensed", 32), GRIS, "mm", 255 * a0)
+            if dt >= mk[n] and uc * dias >= k + 1:
+                d.line([(xk + 10, yc + 10), (xk + cwd - 10, yc + 60)], fill=SANGRE + (255,), width=6)
+                d.line([(xk + cwd - 10, yc + 10), (xk + 10, yc + 60)], fill=SANGRE + (255,), width=6)
+        _texto(d, (cx0 + cw / 2, yc + 104), f"{dias} DÍAS Y SE REINICIA", fuente("SemiBold Condensed", 30), HUESO, "mm",
+               255 * _eo((dt - mk[n]) / .4), track=3)
+        if seguro:
+            us = _eo((dt - mk[seguro[2]]) / .45)
+            sx0, sw, sh = cx0 + cw + 90, ancho - cw - 230, 300
+            if us < 1:                                          # la casa, apagada, hasta que la voz la nombra
+                _pega(im, _retrato(seguro[0], int(sw), sh, gris=1.0), sx0, cy0, a0 * .55 * (1 - us))
+                _texto(d, (sx0 + sw / 2, cy0 + sh / 2), "?", fuente("Bold Condensed", 120), HUESO, "mm", 200 * a0 * (1 - us))
+            if us > 0:
+                _pega(im, _retrato(seguro[0], int(sw), sh), sx0, cy0 + 20 * (1 - us), us)
+                _marco(d, sx0, cy0 + 20 * (1 - us), sw, sh, VERDE, 255 * us, 3)
+                _texto(d, (sx0 + sw / 2, cy0 + sh + 50), seguro[1].upper(), fuente("SemiBold Condensed", 32), HUESO, "mm",
+                       255 * us, track=3)
+                s = _pop(dt - mk[seguro[2]] - .3, .35)
+                _texto(d, (sx0 + sw / 2, cy0 + sh + 110), "SEGURO", fuente("Bold Condensed", max(8, int(70 * s))), VERDE, "mm",
+                       track=8)
+        _remate(d, M, ancho, h, remate, dt, mk)
         return _salida(im, dt)
     return fn

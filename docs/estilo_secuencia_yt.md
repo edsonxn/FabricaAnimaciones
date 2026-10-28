@@ -268,6 +268,21 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
     imagen se desfasa del audio) + concat demuxer `-c copy`, (4) comprobar nb_read_packets = round(total×30) y PSNR de la unión
     contra el parcial (inf antes del corte, ~50 dB después), (5) `final`. Y antes de un render largo, `medios/` en C: (un clip ilegible
     en E: lo tumba; leyendo de C: el render fue ~3× más rápido: 23 min en 19 min).
+- **Lecciones de `tes_cosas_nunca` (27-oct-2026, «Las 20 cosas que NUNCA…», 19:13, todo en una sesión):**
+  - **Siglas en la voz**: Chatterbox lee «PNJ» como «puenche/pungo» (4 frases fallidas): escribir «personajes» en el guion (o
+    FONETICA) y en el ancla de efectos. Nombres que Whisper escribe distinto (Boethiah→boecia, Sanguine→Sangin, Aranea→Arania):
+    `CER_MAX_POR_FRASE` tras leer la transcripción; frases largas con CER 0 que acaban hablando: `TAIL_MAX_POR_FRASE` 0,55.
+  - **4 MG nuevos en `mg_tes`**: `plazo` (barra de horas con avisos y curas: Lydia 72 h, Sanguinare Vampiris), `paciencia` (golpes
+    que perdona hasta «hostil»), `escalado` (tu nivel contra el mundo, hitos de dragones), `reinicio` (cofre que se vacía, casa
+    segura). Un MG de lista que tape > 30 s el gameplay es demasiado: cortarlo por la frase clave (escalado 42 s → 28 s).
+  - **Clips**: 45 de 132 rehechos. Nuevos tipos a cazar en la hoja: animación/cartoon de fans («Skyrim chicken», «Skyrim Schmyrim»),
+    gente real (sketch «Lydia carrying», forja real «Make N' Create», maquetas «Book Nook»), otro juego (Uncharted 4 con «jail
+    cell»), pantallas de carga INVENTADAS por fans («Sarcastic Loading Screens»), collages blancos, temporizador de speedrun y
+    clips más cortos que el beat (5,9 s para 9,3 s: cuadro negro en la hoja). `bajar N --rehacer --q "…"` dirigido los arregla.
+  - **Sonido original**: 4 de 15 beats con `ambiente_por` traían narrador/streamer (`_sonido_original.py habla`): quitarlos antes
+    de `armar_musica_ost.py` + `ambiente`. El de Uthgerd («Who taught you to fight…») es diálogo del juego: se queda.
+  - **Programar**: `ciclo_dias` 3 (panel) y `separacion_min_horas` 96 chocan; `canales` dio el lun 02-11 pero `yt subir` lo
+    detiene (72 h tras armas): se programó en el primer hueco con 96 h (mar 03-11 12:08 CDMX), sin `--forzar`.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los
@@ -592,6 +607,20 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   YouTube (`yt-dlp --print "%(chapters)j"`: SourceSpy91 Part 20 Caelid de 4,5 h marca cada jefe/zona). **Gamerpillar** (guías de misión)
   lleva rótulos «STEP N» en todos sus clips: evitarlo. Mapas: un mapa de ruta se queda quieto en cuanto la ruta llega (la cámara apenas
   deriva): terminarlo ~1,5 s tras la última marca o `freezedetect` lo caza (3,9 s). Música = OST oficial (ver § Música).
+- **`er_melina_atrocidades` (27-oct-2026, ~20 min, todo en UNA sesión por petición del usuario):** MG nuevos en `mg_er`:
+  `acuerdo(da, pides, letra, remate)` (contrato de dos columnas «Ella te da / Tú la llevas»; vuelve en el n.º 1 con la letra
+  pequeña que crece en rojo, los regalos se tiñen de carmín y cae el sello «Deber»), `ecos(lineas, firma, revela)` (las citas de
+  Márika se escriben con el Círculo de Elden girando tenue; la firma «una desconocida» se tacha y sale «SU MADRE»),
+  `arbol_arde(etapas)` (el Árbol Áureo dibujado por código: la llama llega al pie, trepa, la copa arde en brasas y llueve ceniza;
+  primera versión con lenguas de fuego geométricas se veía de dibujo infantil: desenfoque 2,5 px antes del halo + brasas
+  redondas) y `muerte_suelta(nombres, remate)` (la Runa de la Muerte presa en eslabones que saltan volando; ondas que tachan a
+  todos los nombres). Fuentes de citas: el WIKITEXTO de eldenring.fandom.com (`api.php?action=parse&prop=wikitext`, p. ej.
+  `Melina/dialogue` con el texto inglés y japonés completo) — Fextralife cierra la conexión a scripts; nombres oficiales en
+  español con `eldenring.fandom.com/es/api.php` (Torrentera, Hoja de la invocación, doncella enyescada, Maliketh la Hoja Negra,
+  Reino de las Sombras, Reina del Ojo Velado). `armar_musica_ost.py` de este video corta por escena leyendo `timeline.json`
+  (no a mano) y `asignar_clips.py` pasa un plan POR FRASE (`plan_frases.json`) a `busquedas.json` por beat.
+  `flow_thumb.py` en PowerShell 5.1: el prompt con comillas dobles se rompe al pasar a python → `--file` con RUTAS ABSOLUTAS
+  (las relativas las resuelve contra C:\googleimagenes).
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.

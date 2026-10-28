@@ -102,6 +102,32 @@ def _hace(fecha):
         if d < 31 else f"hace {d // 30} mes{'es' if d >= 60 else ''}"
 
 
+def _es_emoji(ch):
+    o = ord(ch)
+    return o >= 0x1F000 or 0x2600 <= o <= 0x27BF or o in (0xFE0F, 0x200D)
+
+
+def _linea(d, x, y, texto, fuente, emo):
+    """Texto con emojis (27-oct-2026: «☝🏻🧐» salía como cuadritos): los emojis van con Segoe UI Emoji a color."""
+    trozos, act = [], ""
+    for ch in texto:
+        if 0x1F3FB <= ord(ch) <= 0x1F3FF:      # tono de piel: sin raqm sale como un cuadro suelto
+            continue
+        if act and _es_emoji(ch) != _es_emoji(act[-1]):
+            trozos.append(act)
+            act = ""
+        act += ch
+    if act:
+        trozos.append(act)
+    for t in trozos:
+        if _es_emoji(t[0]):
+            d.text((x, y + 2), t, font=emo, embedded_color=True)
+            x += d.textlength(t, font=emo)
+        else:
+            d.text((x, y), t, font=fuente, fill=(241, 241, 241))
+            x += d.textlength(t, font=fuente)
+
+
 def tarjeta(c, salida, ancho=1000, max_lineas=5):
     """Tarjeta tipo comentario de YouTube (modo oscuro) con los datos REALES; PNG con transparencia."""
     nombre, cuerpo, meta = _f(("Roboto-Medium.ttf", "segoeuib.ttf"), 34), _f(("Roboto-Regular.ttf", "segoeui.ttf"), 38), \
@@ -128,8 +154,9 @@ def tarjeta(c, salida, ancho=1000, max_lineas=5):
     d.text((x, pad - 2), c["autor"], font=nombre, fill=(241, 241, 241))
     d.text((x + d.textlength(c["autor"], font=nombre) + 16, pad + 2), _hace(c["fecha"]), font=meta, fill=(170, 170, 170))
     y = pad + 50
+    emo = _f(("seguiemj.ttf",), 34)
     for ln in lineas:
-        d.text((x, y), ln, font=cuerpo, fill=(241, 241, 241))
+        _linea(d, x, y, ln, cuerpo, emo)
         y += 52
     d.text((x, y + 14), f"👍  {c['likes']}" if c["likes"] else "👍", font=_f(("seguiemj.ttf",), 30), fill=(200, 200, 200),
            embedded_color=True)

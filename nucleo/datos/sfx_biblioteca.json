@@ -176,7 +176,15 @@
    "md5": "0f7f752e0ba087c3e73095be4bb9cdb3",
    "prompt": "Low ominous cinematic sting, deep brass swell with a dark rumble",
    "dur": 3.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "majora_mask",
+     "canal": "cronicas_gaming",
+     "nombre": "ellos",
+     "fecha": "2026-10-23"
+    }
+   ]
   },
   "banjo_tooie__apagado": {
    "id": "banjo_tooie__apagado",
@@ -376,7 +384,15 @@
    "md5": "383d36ebd5a4620d56e589be7dc1cfd7",
    "prompt": "Magical sparkle shimmer swell rising into a warm soft chime, logo reveal, romantic",
    "dur": 2.0,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "majora_mask",
+     "canal": "cronicas_gaming",
+     "nombre": "magia",
+     "fecha": "2026-10-23"
+    }
+   ]
   },
   "duo_promo__nivel": {
    "id": "duo_promo__nivel",
@@ -1202,7 +1218,15 @@
    "md5": "7f13495781c3e7da13a23edfacd99cfb",
    "prompt": "One deep ominous church bell toll with a long reverb tail, dark fantasy",
    "dur": 4.0,
-   "canal": "runa_caida"
+   "canal": "runa_caida",
+   "usos": [
+    {
+     "video": "majora_mask",
+     "canal": "cronicas_gaming",
+     "nombre": "campana",
+     "fecha": "2026-10-23"
+    }
+   ]
   },
   "er_miquella_atrocidades__costura": {
    "id": "er_miquella_atrocidades__costura",
@@ -1958,7 +1982,15 @@
    "md5": "c6a3421a84e274662f9d40a3db5af3dc",
    "prompt": "Vinyl record scratch, music stops abruptly",
    "dur": 1.48,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "scratch",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "guason_fumado__tada": {
    "id": "guason_fumado__tada",
@@ -2271,6 +2303,12 @@
      "canal": "ninguno",
      "nombre": "golpe_precio",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "golpe",
+     "fecha": "2026-10-26"
     }
    ]
   },
@@ -2299,6 +2337,12 @@
      "canal": "ninguno",
      "nombre": "pop_c",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "pop",
+     "fecha": "2026-10-26"
     }
    ]
   },
@@ -2338,7 +2382,15 @@
    "md5": "812bde01006d28f49df700af43743107",
    "prompt": "Tense electronic riser sweep building up fast, ending abruptly",
    "dur": 2.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "subida",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "mods_ia_fusion__tecleo": {
    "id": "mods_ia_fusion__tecleo",
@@ -2534,7 +2586,15 @@
    "md5": "898e209eca02287c94dcc920a8e0f381",
    "prompt": "Old mechanical alarm clock ticking in a quiet bedroom at night",
    "dur": 4.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "majora_mask",
+     "canal": "cronicas_gaming",
+     "nombre": "reloj",
+     "fecha": "2026-10-23"
+    }
+   ]
   },
   "nervio_vago__risas": {
    "id": "nervio_vago__risas",
@@ -2684,7 +2744,15 @@
    "md5": "4a4ac363854377d7a60b56b23f7ab130",
    "prompt": "Single computer mouse click, close and dry",
    "dur": 0.48,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "clic",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "sonic_exe__corte": {
    "id": "sonic_exe__corte",
@@ -2744,7 +2812,15 @@
    "md5": "419bd977f33dd7be0acdfc9c48554818",
    "prompt": "Digital glitch stutter with tape rewind squeal, short, unsettling",
    "dur": 1.0,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "rebobina",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "sonic_exe__golpe": {
    "id": "sonic_exe__golpe",
@@ -3197,6 +3273,12 @@
      "canal": "cronopapel",
      "nombre": "sello_1",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "majora_mask",
+     "canal": "cronicas_gaming",
+     "nombre": "sello",
+     "fecha": "2026-10-23"
     }
    ]
   },
@@ -3754,7 +3836,15 @@
    "md5": "09cfdb0428387076ba720ec42356c6a8",
    "prompt": "Ghostly whoosh passing by, airy spectral swoosh with a faint moan",
    "dur": 2.0,
-   "canal": "cronicas_warcraft"
+   "canal": "cronicas_warcraft",
+   "usos": [
+    {
+     "video": "majora_mask",
+     "canal": "cronicas_gaming",
+     "nombre": "fantasma",
+     "fecha": "2026-10-23"
+    }
+   ]
   },
   "wow_tres_noches__fuego": {
    "id": "wow_tres_noches__fuego",
@@ -4854,7 +4944,15 @@
    "md5": "b37604367d6c5250530c4f99a80c137a",
    "prompt": "",
    "dur": 0.8,
-   "canal": "cronopapel"
+   "canal": "cronopapel",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "whoosh2",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "historia_aguascalientes__whoosh_2": {
    "id": "historia_aguascalientes__whoosh_2",
@@ -5574,7 +5672,15 @@
    "md5": "8ba46ef343ccca106c719f219da33fc2",
    "prompt": "",
    "dur": 0.6,
-   "canal": "cronopapel"
+   "canal": "cronopapel",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "pop2",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "tequisquiapan__pop_2": {
    "id": "tequisquiapan__pop_2",
@@ -5674,7 +5780,15 @@
    "md5": "bb8d88cc18d8b7a1e4e8a45a0eabeea7",
    "prompt": "",
    "dur": 0.8,
-   "canal": "cronopapel"
+   "canal": "cronopapel",
+   "usos": [
+    {
+     "video": "lol_worlds_tl_al",
+     "canal": "",
+     "nombre": "whoosh",
+     "fecha": "2026-10-26"
+    }
+   ]
   },
   "tequisquiapan__whoosh_3": {
    "id": "tequisquiapan__whoosh_3",
@@ -6505,7 +6619,217 @@
    "prompt": "Wooden prize wheel spinning fast with clicking pegs then slowing to a stop, single final click",
    "dur": 2.0,
    "canal": "cronicas_tamriel"
+  },
+  "bt_jiggies_crueles__arcoiris": {
+   "id": "bt_jiggies_crueles__arcoiris",
+   "video": "bt_jiggies_crueles",
+   "nombre": "arcoiris",
+   "archivo": "bt_jiggies_crueles__arcoiris.mp3",
+   "md5": "09f67f68da2d0c363c7f2f89d064fbbd",
+   "prompt": "Magical cartoon rainbow appearing with a sparkling shimmer and chime glissando",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__boom": {
+   "id": "bt_jiggies_crueles__boom",
+   "video": "bt_jiggies_crueles",
+   "nombre": "boom",
+   "archivo": "bt_jiggies_crueles__boom.mp3",
+   "md5": "bd2368467db270c36e734a4ca84171c4",
+   "prompt": "Cartoon dynamite warehouse explosion, big comedic boom with falling debris",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__chispazo": {
+   "id": "bt_jiggies_crueles__chispazo",
+   "video": "bt_jiggies_crueles",
+   "nombre": "chispazo",
+   "archivo": "bt_jiggies_crueles__chispazo.mp3",
+   "md5": "6e88182af46874aaf2d2d4e8857aa916",
+   "prompt": "Electric floor sparking and zapping, buzzing electricity crackle, cartoon factory",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__gas": {
+   "id": "bt_jiggies_crueles__gas",
+   "video": "bt_jiggies_crueles",
+   "nombre": "gas",
+   "archivo": "bt_jiggies_crueles__gas.mp3",
+   "md5": "702736a255e813b9d53f9c68b9c33525",
+   "prompt": "Toxic gas hissing out of vents filling a sewer cave, ominous",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__inflar": {
+   "id": "bt_jiggies_crueles__inflar",
+   "video": "bt_jiggies_crueles",
+   "nombre": "inflar",
+   "archivo": "bt_jiggies_crueles__inflar.mp3",
+   "md5": "15f3f681763d5044b8556b5d24bff2f3",
+   "prompt": "Giant inflatable toy dinosaur inflating fast with air pump hiss and rubber squeak",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__mordida": {
+   "id": "bt_jiggies_crueles__mordida",
+   "video": "bt_jiggies_crueles",
+   "nombre": "mordida",
+   "archivo": "bt_jiggies_crueles__mordida.mp3",
+   "md5": "a879337b193dcbdd1752ae13306da51f",
+   "prompt": "Cartoon piranha snapping bite, sharp chomp underwater with bubbles",
+   "dur": 2.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__salida": {
+   "id": "bt_jiggies_crueles__salida",
+   "video": "bt_jiggies_crueles",
+   "nombre": "salida",
+   "archivo": "bt_jiggies_crueles__salida.mp3",
+   "md5": "31fc145609778cb72cd8d0f188481896",
+   "prompt": "Cartoon race starting pistol shot followed by a quick whoosh",
+   "dur": 2.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__sello": {
+   "id": "bt_jiggies_crueles__sello",
+   "video": "bt_jiggies_crueles",
+   "nombre": "sello",
+   "archivo": "bt_jiggies_crueles__sello.mp3",
+   "md5": "89c1413e59a1015005489a87e0f6a1c7",
+   "prompt": "Rubber stamp slammed on paper with a firm comedic thump",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "bt_jiggies_crueles__zumbido": {
+   "id": "bt_jiggies_crueles__zumbido",
+   "video": "bt_jiggies_crueles",
+   "nombre": "zumbido",
+   "archivo": "bt_jiggies_crueles__zumbido.mp3",
+   "md5": "a70b96e2b06db5b4d0fb8970827f9bb1",
+   "prompt": "Swarm of cartoon bees buzzing around a honey hive, playful 90s platformer",
+   "dur": 3.0,
+   "canal": "cronicas_gaming"
+  },
+  "er_melina_atrocidades__cadenas": {
+   "id": "er_melina_atrocidades__cadenas",
+   "video": "er_melina_atrocidades",
+   "nombre": "cadenas",
+   "archivo": "er_melina_atrocidades__cadenas.mp3",
+   "md5": "a7e88ffc553ad6004da14607eeb6ac56",
+   "prompt": "Heavy golden chains snapping and shattering link by link, metallic and ominous",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_melina_atrocidades__coro": {
+   "id": "er_melina_atrocidades__coro",
+   "video": "er_melina_atrocidades",
+   "nombre": "coro",
+   "archivo": "er_melina_atrocidades__coro.mp3",
+   "md5": "95fce7a3ba8fad88a43083faa2755b97",
+   "prompt": "A choir of faint whistles in the wind over ashes, haunting and sad, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_melina_atrocidades__ignicion": {
+   "id": "er_melina_atrocidades__ignicion",
+   "video": "er_melina_atrocidades",
+   "nombre": "ignicion",
+   "archivo": "er_melina_atrocidades__ignicion.mp3",
+   "md5": "26400d2be5903e7edddf6b5d34a7b803",
+   "prompt": "A colossal ancient flame igniting with a deep roar and rushing wind, a giant tree catching fire, dark fantasy",
+   "dur": 5.0,
+   "canal": "runa_caida"
+  },
+  "er_melina_atrocidades__mano": {
+   "id": "er_melina_atrocidades__mano",
+   "video": "er_melina_atrocidades",
+   "nombre": "mano",
+   "archivo": "er_melina_atrocidades__mano.mp3",
+   "md5": "a0764a1af1a8c339662c794cb3ebb93f",
+   "prompt": "A gentle hand resting on a cloth shoulder with a faint warm golden shimmer, intimate and quiet",
+   "dur": 2.0,
+   "canal": "runa_caida"
+  },
+  "er_melina_atrocidades__sello_deber": {
+   "id": "er_melina_atrocidades__sello_deber",
+   "video": "er_melina_atrocidades",
+   "nombre": "sello_deber",
+   "archivo": "er_melina_atrocidades__sello_deber.mp3",
+   "md5": "a02a5ec8847da3be8eb473d37c258186",
+   "prompt": "A heavy wax seal stamped hard onto thick parchment, deep thud, a cracking wax snap",
+   "dur": 2.0,
+   "canal": "runa_caida"
+  },
+  "er_melina_atrocidades__silbido": {
+   "id": "er_melina_atrocidades__silbido",
+   "video": "er_melina_atrocidades",
+   "nombre": "silbido",
+   "archivo": "er_melina_atrocidades__silbido.mp3",
+   "md5": "1f93cbde82791ea3675c9d58b51b4af3",
+   "prompt": "A soft ghostly whistle echoing in an empty misty graveyard, dark fantasy, eerie and gentle",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "tes_cosas_nunca__aviso_e": {
+   "id": "tes_cosas_nunca__aviso_e",
+   "video": "tes_cosas_nunca",
+   "nombre": "aviso_e",
+   "archivo": "tes_cosas_nunca__aviso_e.mp3",
+   "md5": "05d414cc249b0e0d3f0a165912531fb9",
+   "prompt": "Deep nordic war drum hit followed by a short low horn call, fantasy quest notification",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_nunca__aviso_f": {
+   "id": "tes_cosas_nunca__aviso_f",
+   "video": "tes_cosas_nunca",
+   "nombre": "aviso_f",
+   "archivo": "tes_cosas_nunca__aviso_f.mp3",
+   "md5": "fd538ef13def9534f4346793e9ae233e",
+   "prompt": "Low dramatic choir swell with a soft metallic shimmer, fantasy warning notification",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_nunca__cofre_vacio": {
+   "id": "tes_cosas_nunca__cofre_vacio",
+   "video": "tes_cosas_nunca",
+   "nombre": "cofre_vacio",
+   "archivo": "tes_cosas_nunca__cofre_vacio.mp3",
+   "md5": "cd11026567ed805bb3a90e71da5b0f33",
+   "prompt": "Old wooden chest lid creaking open then hollow empty thud, eerie wind",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_nunca__fuego": {
+   "id": "tes_cosas_nunca__fuego",
+   "video": "tes_cosas_nunca",
+   "nombre": "fuego",
+   "archivo": "tes_cosas_nunca__fuego.mp3",
+   "md5": "94e4f3d12e44254d23e80634e9636f5e",
+   "prompt": "Fireball spell whoosh and explosion, fantasy magic",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_nunca__fus": {
+   "id": "tes_cosas_nunca__fus",
+   "video": "tes_cosas_nunca",
+   "nombre": "fus",
+   "archivo": "tes_cosas_nunca__fus.mp3",
+   "md5": "4262cb2c0f50f76d4f507a7e0c496dff",
+   "prompt": "Powerful dragon shout shockwave, deep booming voice blast with rushing wind, fantasy",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_cosas_nunca__gallina": {
+   "id": "tes_cosas_nunca__gallina",
+   "video": "tes_cosas_nunca",
+   "nombre": "gallina",
+   "archivo": "tes_cosas_nunca__gallina.mp3",
+   "md5": "860d0ec684a73507267013d82c769be4",
+   "prompt": "Single startled chicken squawk and wing flaps, farm animal",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-10-23 20:48"
+ "actualizado": "2026-10-27 21:10"
 }

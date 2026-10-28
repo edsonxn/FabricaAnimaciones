@@ -627,9 +627,17 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
 
 ## COMENTARIOS de la gente (el usuario, 27-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 Que el público se sienta tomado en cuenta. Tres momentos:
-1. **Al proponer tema:** `python fab.py yt comentarios <canal> [dias]` → `canales/comentarios/<alias>.json` (fuera de git) y los
-   25 con más ♥ en pantalla. Los temas que la gente pide van a `docs/ideas_guardadas.md` con su @usuario y el id del comentario;
-   cuentan como dato para elegir (junto a `ideas` y la fórmula), sobre todo si se repiten o tienen ♥.
+1. **ANTES DE CADA VIDEO (el usuario, 28-oct-2026), al proponer tema:** `python fab.py yt comentarios <canal> [dias]` →
+   `canales/comentarios/<alias>.json` (fuera de git; recuerda qué ya se vio) y en pantalla tres listas por ♥:
+   - **NUEVOS** desde la última lectura: léelos todos.
+   - **QUEJAS** (voz/IA, errores de dato, pronunciación, «redondeas», duración, sin sonido…): lo que se repite o tiene ♥ se
+     corrige en ESTE video (nombre bien pronunciado en `FONETICA`, dato verificado, ritmo, mezcla) y se anota como lección en
+     `canales/formula/<alias>.md`. Quejas de la voz IA o del formato: se le reportan al usuario con cifras (cuántas, ♥), no se
+     cambia de voz ni de motor sin preguntar.
+   - **SUGERENCIAS** (temas, partes 2, «te faltó X»): las de muchos ♥ o repetidas son candidatas fuertes a tema; van a
+     `docs/ideas_guardadas.md` con su @usuario y el id del comentario (para enseñarlo después, punto 2).
+   Las pistas de QUEJA/SUGERENCIA (`QUEJA`, `SUGERENCIA` en `nucleo/comentarios.py`) solo ordenan la lectura: la conclusión sale de
+   leerlos. Deja una línea «Comentarios: …» (quejas atendidas, sugerencia elegida) en el `ESTADO.md` del video.
 2. **En el guion:** si el video nace de un comentario o corrige un error que alguien señaló, la voz lo dice («@silentsword nos
    pidió el corcel de Xoroth…») y en pantalla sale el comentario REAL: `python fab.py yt comentario <v> <canal> <id>` dibuja la
    tarjeta (modo oscuro de YouTube: avatar, @usuario, «hace N días», texto, 👍) en `videos/<v>/pegatinas/com_<id>.png`, y en

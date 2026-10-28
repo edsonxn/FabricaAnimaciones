@@ -2,8 +2,8 @@
 """Comentarios de los canales (el usuario, 27-oct-2026; Warcraft, Tamriel, Runa Caída y Crónicas del gaming).
 
 Dos usos:
-  1. Tenerlos en cuenta al proponer el SIGUIENTE video (temas que pide la gente, correcciones, dudas):
-       python fab.py yt comentarios <canal> [dias]      -> canales/comentarios/<alias>.json (+ resumen en pantalla)
+  1. ANTES DE CADA VIDEO (28-oct-2026): de qué se queja la gente y qué sugiere con muchos ♥:
+       python fab.py yt comentarios <canal> [dias]      -> canales/comentarios/<alias>.json + NUEVOS / QUEJAS / SUGERENCIAS
   2. Enseñar en el video el comentario de quien lo pidió, para que se sienta tomado en cuenta: tarjeta de comentario
      dibujada con los datos REALES (avatar, @usuario, texto, ♥) como pegatina de la plantilla yt:
        python fab.py yt comentario <video> <canal> <id del comentario>   -> videos/<video>/pegatinas/com_<id>.png
@@ -15,6 +15,7 @@ import datetime as dt
 import io
 import json
 import os
+import re
 import sys
 import textwrap
 
@@ -75,18 +76,46 @@ def leer(cid, dias=21):
     return out
 
 
+# Pistas para clasificar (28-oct-2026). Solo ordenan la lectura: la conclusión sale de LEER los comentarios.
+QUEJA = re.compile(r"\b(ia|ai|voz|voces|robot\w*|error\w*|errad\w*|falso|mentira\w*|se dice|se pronuncia|pronuncia\w*|"
+                   r"te falt\w+|muy largo|redond\w+|aburr\w+|dislike|clickbait|no entend\w+|no tiene sentido|sin sonido|"
+                   r"no tiene sonido|fuentes|despropósito|no sabes|no es lo tuyo|no entendiste)\b", re.I)
+SUGERENCIA = re.compile(r"\b(haz|has un|hagas|deber[ií]as|podr[ií]as|pr[oó]ximo|ojal[aá]|v[ií]deo de|recomiendo|recomendar|"
+                        r"estar[ií]a genial|toca la|toca el|habla de|hablar de|me gustar[ií]a|quisiera|siguiente|parte 2|"
+                        r"segunda parte|te falt\w+|integraras|deber[ií]an)\b", re.I)
+
+
+def _tiene(c, pistas):
+    return bool(pistas.search(c["texto"]))
+
+
+def _ver(c):
+    return f"  ♥{c['likes']:<3} {'  ' if c['contestado'] else '· '}{c['id']}  {c['autor']}: {c['texto'][:110].replace(chr(10), ' ')}"
+
+
 def guardar(canal, dias=21):
+    """Lee, guarda y resume: NUEVOS desde la última lectura, QUEJAS y SUGERENCIAS (ordenadas por ♥)."""
     cid = yt.resolver_canal(canal)
     alias = _alias(cid)
-    cs = leer(cid, dias)
     os.makedirs(DIR, exist_ok=True)
     ruta = os.path.join(DIR, f"{alias}.json")
-    json.dump(dict(fecha=dt.date.today().isoformat(), dias=dias, comentarios=cs), open(ruta, "w", encoding="utf-8"),
-              ensure_ascii=False, indent=1)
+    previo = json.load(open(ruta, encoding="utf-8")) if os.path.isfile(ruta) else {}
+    visto = {c["id"]: c.get("visto", previo.get("fecha")) for c in previo.get("comentarios", [])}
+    hoy = dt.date.today().isoformat()
+    cs = leer(cid, dias)
+    for c in cs:
+        c["visto"] = visto.get(c["id"], hoy)
+    json.dump(dict(fecha=hoy, dias=dias, comentarios=cs), open(ruta, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    nuevos = [c for c in cs if c["id"] not in visto] if visto else cs
     pend = [c for c in cs if not c["contestado"]]
-    print(f"{alias}: {len(cs)} comentarios en {dias} d, {len(pend)} sin contestar -> {ruta}")
-    for c in sorted(cs, key=lambda c: -c["likes"])[:25]:
-        print(f"  ♥{c['likes']:<3} {'  ' if c['contestado'] else '· '}{c['id']}  {c['autor']}: {c['texto'][:110].replace(chr(10), ' ')}")
+    print(f"{alias}: {len(cs)} comentarios en {dias} d, {len(pend)} sin contestar, "
+          f"{len(nuevos)} nuevos desde {previo.get('fecha', 'siempre')} -> {ruta}")
+    porlikes = lambda xs: sorted(xs, key=lambda c: -c["likes"])
+    for titulo, grupo, n in (("NUEVOS", nuevos, 25), ("QUEJAS (de qué se queja la gente)", [c for c in cs if _tiene(c, QUEJA)], 15),
+                             ("SUGERENCIAS (lo que piden)", [c for c in cs if _tiene(c, SUGERENCIA)], 15)):
+        print(f"\n{titulo}: {len(grupo)}")
+        for c in porlikes(grupo)[:n]:
+            print(_ver(c))
     return cs
 
 

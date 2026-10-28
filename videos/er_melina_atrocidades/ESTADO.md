@@ -3,7 +3,7 @@
 - canal: runa_caida · PROGRAMADO dom 01-11-2026 10:00 CDMX (2026-11-01T16:00:00Z) · https://youtu.be/U4reFaDG6Vg
 - estilo: secuencia_yt (gameplay de Elden Ring por beat + PEGATINAS + imágenes a pantalla + MG NUEVOS `nucleo/mg_er.py` + mapas; sin patrocinio) · voz Chatterbox Faraon → doc: docs/estilo_secuencia_yt.md § Runa Caída
 - etapa: programado (subido private el 28-oct con miniatura; .srt sin cargar)
-- siguiente: visto bueno del usuario · .srt a mano en Studio (o `yt conectar`) · a los 7 días (8-nov) métricas vs Ranni/Miquella/Malenia
+- siguiente: ✅ APROBADO por el usuario (28-oct) · .srt a mano en Studio (o `yt conectar`) · a los 7 días (8-nov) métricas vs Ranni/Miquella/Malenia
 
 ## Sesiones (plan de tramos · «continúa el video melina» retoma aquí · protocolo docs/sesiones.md)
 - alias: melina, atrocidades de melina

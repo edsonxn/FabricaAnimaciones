@@ -1,0 +1,1130 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.387,
+  "tipo": "video",
+  "texto": "Hay un personaje en Elden Ring que está contigo desde el primer minuto hasta casi el último. Te da el caballo, te sube de nivel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.387,
+  "t1": 17.728,
+  "tipo": "video",
+  "texto": "te lleva a la Mesa Redonda y se sienta a tu lado en cada lugar de gracia. Melina. La chica de la capucha. La que todo el mundo recuerda con cariño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.728,
+  "t1": 25.255,
+  "tipo": "video",
+  "texto": "porque es la única que nunca te pide nada raro. Bueno. Casi nada raro. Porque el día que por fin te dice lo que quiere,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.255,
+  "t1": 33.133,
+  "tipo": "video",
+  "texto": "te lo pregunta así, con su voz tranquila de siempre: ¿estás preparado para cometer un pecado capital? Y no es una forma de hablar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.133,
+  "t1": 44.526,
+  "tipo": "video",
+  "texto": "Melina sabe perfectamente lo que te está pidiendo. Lo dice ella misma: sé que te estoy pidiendo que cometas un pecado capital. En el video de Ranni vimos que la favorita del público era la peor de todas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 44.526,
+  "t1": 52.256,
+  "tipo": "video",
+  "texto": "Hoy toca la otra favorita. La que nunca levanta la voz, la que nunca te traiciona, y la que, si lees con calma lo que dice,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.256,
+  "t1": 60.387,
+  "tipo": "video",
+  "texto": "deja la lista más larga de todo el juego. Así que van las cinco peores atrocidades de Melina que ignoraste. Y te aviso desde ya:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.387,
+  "t1": 68.347,
+  "tipo": "video",
+  "texto": "la número uno es una amenaza. Contra ti. Ponte cómodo, que este va largo. Y la próxima vez que subas de nivel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.347,
+  "t1": 75.784,
+  "tipo": "video",
+  "texto": "fíjate bien en lo que te dice mientras te toca el hombro. Número cinco. Te eligió porque no tenías a nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 75.784,
+  "t1": 87.612,
+  "tipo": "video",
+  "texto": "Lo primero que hace Melina en el juego no es presentarse. Es mirarte. Cuando despiertas en el cementerio del principio, ella está ahí, montada en Torrentera, hablando de ti como si no estuvieras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 87.612,
+  "t1": 94.332,
+  "tipo": "video",
+  "texto": "Tranquilo, Torrentera, la suerte está de su lado. Lo encontramos aquí, después de todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.332,
+  "t1": 102.632,
+  "tipo": "video",
+  "texto": "Alguien de su clase seguro que buscará el Círculo de Elden. Y entonces añade, en voz bajita: aunque vaya en contra del Orden Áureo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 102.632,
+  "t1": 111.956,
+  "tipo": "video",
+  "texto": "Fíjate en el orden de las cosas. Antes de saber tu nombre, antes de que tú sepas el suyo, ya ha decidido que vas a romper la ley. Y que le conviene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.956,
+  "t1": 120.606,
+  "tipo": "video",
+  "texto": "Luego llega el acuerdo. Te pregunta si has oído hablar de las doncellas del Dedo, las que guían a los Sinluz. Y te suelta, con toda la educación del mundo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.606,
+  "t1": 128.665,
+  "tipo": "video",
+  "texto": "pero a ti, me temo, no te acompaña ninguna. O sea, que estás solo. Y ella lo sabe. Por eso viene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.665,
+  "t1": 136.53,
+  "tipo": "video",
+  "texto": "Yo puedo hacer el papel de doncella, te dice. Convertiré tus runas en poder. Solo tienes que llevarme contigo hasta el pie del Árbol Áureo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 136.53,
+  "t1": 144.866,
+  "tipo": "video",
+  "texto": "Solo tienes que llevarme. Ese es el trato. Tú pones las piernas, las muertes y los jefes. Ella pone el viaje gratis hasta su casa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 144.866,
+  "t1": 154.106,
+  "tipo": "video",
+  "texto": "Y para que no te lo pienses mucho, te regala un anillo con un silbato, que llama a un corcel espectral. Torrentera te ha elegido, te dice.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.106,
+  "t1": 162.365,
+  "tipo": "video",
+  "texto": "Trátalo con respeto. Al caballo le pide respeto para él. A ti no te pide nada. Tú ya estás contratado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.365,
+  "t1": 171.173,
+  "tipo": "video",
+  "texto": "Y aquí viene lo bueno. Cuando sales de Necrolimbo, Melina te espera en un lugar de gracia y te pide perdón. Perdóname. Te he estado poniendo a prueba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.173,
+  "t1": 180.089,
+  "tipo": "video",
+  "texto": "Para ver si la gracia de verdad te guía, y si eres apto para el desafío que eso supone. Y remata con la frase más sincera que dice en todo el juego:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.089,
+  "t1": 189.457,
+  "tipo": "video",
+  "texto": "Torrentera te tomó la medida desde el principio. Yo, en cambio, solo fingía. Solo fingía. Todo lo que hablaste con ella en Necrolimbo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.457,
+  "t1": 196.724,
+  "tipo": "video",
+  "texto": "toda la amabilidad, era un examen. Y el que te aprobó fue el caballo. Otra cosa que casi nadie se para a pensar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.724,
+  "t1": 206.642,
+  "tipo": "video",
+  "texto": "Cada vez que le pides subir de nivel, Melina te dice lo mismo: deja que pose mi mano sobre ti, solo un momento. Y luego, en voz baja: compártelos conmigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.642,
+  "t1": 216.236,
+  "tipo": "video",
+  "texto": "Tus pensamientos. Tus ambiciones. Los principios que seguirías. Cada nivel que subiste en todo el juego, ella te estaba leyendo por dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.236,
+  "t1": 223.143,
+  "tipo": "video",
+  "texto": "Ochenta, cien, ciento cincuenta veces. Sabe lo que piensas mejor que tú. Y ella de sí misma no te cuenta nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.143,
+  "t1": 232.444,
+  "tipo": "video",
+  "texto": "Lo admite: te he servido como doncella del Dedo, pero no puedo ofrecerte guía. No soy ninguna doncella. Mi propósito se perdió hace mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.444,
+  "t1": 239.744,
+  "tipo": "video",
+  "texto": "Y en cuanto llegas a la capital, al pie del Árbol Áureo, lo dice sin rodeos: mi más sincero agradecimiento por traerme hasta aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 239.744,
+  "t1": 249.12,
+  "tipo": "video",
+  "texto": "Aquí puedo gobernar mis propios movimientos. Y así, el acuerdo queda cumplido. Adiós. Te dejo a Torrentera y el poder de las runas. Y se va.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.12,
+  "t1": 256.913,
+  "tipo": "video",
+  "texto": "Medio continente contigo, y se despide en tres frases, como quien se baja de un taxi. Pero tranquilo, que vuelve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 256.913,
+  "t1": 264.297,
+  "tipo": "video",
+  "texto": "Vuelve justo cuando te necesita otra vez. Y entonces te saluda así: hola de nuevo, viejo amigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 264.297,
+  "t1": 275.42,
+  "tipo": "video",
+  "texto": "Número cuatro. La hija que no te dijo de quién era hija. Melina habla mucho de su madre. Te dice que busca el propósito que le dio su madre, dentro del Árbol Áureo, hace mucho tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.42,
+  "t1": 284.425,
+  "tipo": "video",
+  "texto": "Que nació al pie del árbol, donde su madre le dio ese propósito. Lo que nunca te dice es cómo se llama su madre. Ni una vez en todo el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.425,
+  "t1": 293.357,
+  "tipo": "video",
+  "texto": "Y no hace falta ser muy listo para sospecharlo. En los archivos del juego, el nombre interno de Melina es, literalmente, hija de Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.357,
+  "t1": 300.797,
+  "tipo": "video",
+  "texto": "Pero la confirmación llegó con la expansión. Cuando matas a Mésmer el Empalador, te llevas su yesca,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.797,
+  "t1": 308.29,
+  "tipo": "video",
+  "texto": "y su descripción dice: Mésmer, al igual que su hermana menor, tenía una visión del fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.29,
+  "t1": 317.995,
+  "tipo": "video",
+  "texto": "Su hermana menor. La única persona del juego que tiene una visión del fuego es Melina. O sea que la chica de la capucha es hija de la reina Márika y hermana pequeña de Mésmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.995,
+  "t1": 327.235,
+  "tipo": "video",
+  "texto": "Y ahora, con eso en la cabeza, acuérdate de lo que hace en las iglesias. Melina se ofrece a contarte los ecos de la reina Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.235,
+  "t1": 333.269,
+  "tipo": "video",
+  "texto": "Palabras de una reina que desapareció hace mucho, te dice. Como si hablara de una desconocida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 333.269,
+  "t1": 345.369,
+  "tipo": "video",
+  "texto": "En la Tercera Iglesia de Márika te recita esto: mi señor, y tus guerreros. Os despojo a cada uno de vuestra gracia. Con los ojos apagados, seréis expulsados de las Tierras Intermedias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.369,
+  "t1": 352.863,
+  "tipo": "video",
+  "texto": "Haréis la guerra en una tierra lejana, donde viviréis y moriréis. Esas son las palabras que te convirtieron en Sinluz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.863,
+  "t1": 360.033,
+  "tipo": "video",
+  "texto": "La orden que te sacó la luz de los ojos y te mandó a morir lejos. Y Melina, cuando termina, te dice: y bien,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.033,
+  "t1": 368.089,
+  "tipo": "video",
+  "texto": "quizá te sirva en lugar de la guía de una doncella. Te lee el destierro que firmó su madre, y te lo vende como un consejo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 368.089,
+  "t1": 378.31,
+  "tipo": "video",
+  "texto": "Sin decirte que la que te desterró es su madre. Y hay otro eco que da todavía más frío. Este te lo recita cerca de la capital:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.31,
+  "t1": 385.614,
+  "tipo": "video",
+  "texto": "escuchadme, semidioses, mis hijos amados. Haced de vosotros lo que deseéis. Un señor, o un dios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.614,
+  "t1": 395.327,
+  "tipo": "video",
+  "texto": "Pero si no llegáis a ser nada en absoluto, seréis abandonados. Y no seréis más que sacrificios. Melina te está leyendo lo que su madre pensaba de sus hijos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.327,
+  "t1": 403.86,
+  "tipo": "video",
+  "texto": "De ella. Hijo que no sirve, sacrificio. Y te lo lee sin que le tiemble la voz. Ahora fíjate en cómo habla de las madres de los demás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.86,
+  "t1": 413.113,
+  "tipo": "video",
+  "texto": "Cuando le preguntas por Boc, el costurero, te dice: a veces lo veo llorar. Creo que echa de menos a su madre. Quiere que alguien le diga que es bonito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.113,
+  "t1": 419.337,
+  "tipo": "video",
+  "texto": "Y luego hace una pregunta que la retrata entera: ¿nacer de una madre significa comportarse así?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.337,
+  "t1": 427.921,
+  "tipo": "video",
+  "texto": "Para ella, extrañar a una madre es raro. No lo entiende. Y en todo el juego, a la suya ni siquiera la nombra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 427.921,
+  "t1": 436.401,
+  "tipo": "video",
+  "texto": "Y en eso Mésmer y ella se parecen más de lo que parece. A los dos su madre les dio un propósito. El de Mésmer lo dice él mismo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 436.401,
+  "t1": 445.897,
+  "tipo": "video",
+  "texto": "todos los despojados de la gracia del oro hallarán la muerte, en el abrazo de la llama de Mésmer. Y su orbe cuenta que Mésmer despreciaba su propio fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 445.897,
+  "t1": 455.008,
+  "tipo": "video",
+  "texto": "Una y otra vez quiso librarse de él, pero siempre ardía. Ya hicimos un video entero de lo que Mésmer hizo con ese fuego en el Reino de las Sombras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.008,
+  "t1": 463.047,
+  "tipo": "video",
+  "texto": "La hermana pequeña tenía la misma visión. La diferencia es que ella no la desprecia. La abraza. Y hay un detalle más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.047,
+  "t1": 472.664,
+  "tipo": "video",
+  "texto": "Si invocas a Melina contra Morgott, en la capital, ella lanza un encantamiento secreto de la reina Márika. Un pequeño Árbol Áureo que cura a los aliados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.664,
+  "t1": 482.964,
+  "tipo": "video",
+  "texto": "Su descripción dice: solo la bondad del oro, sin el Orden. Márika bañó en oro la aldea de su hogar, sabiendo perfectamente que no quedaba nadie a quien curar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 482.964,
+  "t1": 489.251,
+  "tipo": "video",
+  "texto": "Ese es el truco que la hija aprendió de la madre: curar cuando ya no queda nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 489.251,
+  "t1": 498.062,
+  "tipo": "video",
+  "texto": "Número tres. El pecado capital. Cuando por fin matas a Morgott y llegas a la puerta del Árbol Áureo, descubres que no puedes entrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.062,
+  "t1": 507.634,
+  "tipo": "video",
+  "texto": "Un muro de espinas cierra el paso. Y entonces reaparece Melina. Hola de nuevo, viejo amigo. No pudiste entrar en el Árbol Áureo, ¿verdad?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.634,
+  "t1": 514.413,
+  "tipo": "video",
+  "texto": "Las espinas son impenetrables. La única forma de convertirte en Señor del Círculo es atravesarlas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.413,
+  "t1": 524.733,
+  "tipo": "video",
+  "texto": "Y la solución que propone es esta: quiero que emprendas un nuevo viaje conmigo. Hasta la llama de la perdición, muy por encima de las nubes, en los picos nevados de los gigantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.733,
+  "t1": 533.077,
+  "tipo": "video",
+  "texto": "Así podré prenderle fuego al Árbol Áureo. Prenderle fuego al Árbol Áureo. El árbol que gobierna la vida de todo el mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.077,
+  "t1": 541.954,
+  "tipo": "video",
+  "texto": "El que se ve desde cualquier punto del mapa. El árbol a cuyo pie ella misma nació. Y la llama que quiere usar no es una llama cualquiera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.954,
+  "t1": 548.774,
+  "tipo": "video",
+  "texto": "Un encantamiento lo explica: la llama de los gigantes es la llama de la perdición, capaz de quemar el Árbol Áureo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 548.774,
+  "t1": 558.474,
+  "tipo": "video",
+  "texto": "Por eso, tras la guerra contra los gigantes, su fuego fue sellado y vigilado. Ahora acuérdate de otro eco que te leyó Melina, en la Primera Iglesia de Márika:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.474,
+  "t1": 567.723,
+  "tipo": "video",
+  "texto": "pasad a los gigantes por la espada, y confinad la llama en lo alto del monte. Que empiece una nueva época, una época resplandeciente de vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.723,
+  "t1": 575.573,
+  "tipo": "video",
+  "texto": "Ese fue el primer gran acto de su madre: una guerra entera para apagar ese fuego y que empezara la era del Árbol Áureo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.573,
+  "t1": 585.515,
+  "tipo": "video",
+  "texto": "Y la hija te lleva de la mano a encenderlo otra vez. Para que funcione hace falta algo más, y te lo explica Enia, la lectora de dedos de la Mesa Redonda:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.515,
+  "t1": 592.495,
+  "tipo": "video",
+  "texto": "para que la llama queme el Árbol Áureo, se necesita un sacrificio. El de alguien que tenga una visión de la llama,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.495,
+  "t1": 602.121,
+  "tipo": "video",
+  "texto": "y que pueda guiarte hasta la Runa de la Muerte. Alguien con una visión de la llama. Ya sabes quién es. Y Melina te lo confirma: no te preocupes por la yesca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.121,
+  "t1": 608.952,
+  "tipo": "video",
+  "texto": "Yo me encargo de eso. Y luego te pide perdón por adelantado: lo sé. Te estoy pidiendo que cometas un pecado capital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 608.952,
+  "t1": 618.59,
+  "tipo": "video",
+  "texto": "Pero debe hacerse para llegar al camino de más allá. Y ese es el camino que yo quiero recorrer. Ese es el camino que ella quiere. No el tuyo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.59,
+  "t1": 626.271,
+  "tipo": "video",
+  "texto": "Y por si te quedaba alguna duda, en el valle nevado de camino a los picos, te lo deja clarísimo. Mi propósito me lo dio mi madre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.271,
+  "t1": 634.532,
+  "tipo": "video",
+  "texto": "Pero ahora actúo por voluntad propia. He puesto mi corazón en el mundo que yo quiero, sin importar los designios de mi madre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 634.532,
+  "t1": 644.595,
+  "tipo": "video",
+  "texto": "Y añade: no permitiré que nadie hable mal de eso. Ni siquiera tú. Ni siquiera tú. Después de todo el viaje juntos, la conversación se termina ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.595,
+  "t1": 654.438,
+  "tipo": "video",
+  "texto": "Ella ya decidió cómo debe ser el mundo, y tu opinión no entra en el acuerdo. Cuando por fin llegas a la Forja de los gigantes, Melina te pregunta una última vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 654.438,
+  "t1": 662.198,
+  "tipo": "video",
+  "texto": "He observado las Tierras Intermedias durante mucho tiempo. Este mundo necesita ser reparado. Y la muerte, indiscriminada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 662.198,
+  "t1": 669.568,
+  "tipo": "video",
+  "texto": "¿Estás preparado para cometer un pecado capital? Le dices que sí. Y entonces te toma de la mano, como cuando subías de nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 669.568,
+  "t1": 678.563,
+  "tipo": "video",
+  "texto": "Y te quedas dormido. Ni siquiera te deja verlo. Mientras duermes, ella se convierte en la yesca. Oh, Árbol Áureo, arderás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 678.563,
+  "t1": 687.143,
+  "tipo": "video",
+  "texto": "Arde por el nuevo señor. Gracias por traerme hasta aquí. Quien camina junto a la llama algún día se encontrará con el camino de la muerte destinada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.143,
+  "t1": 697.159,
+  "tipo": "video",
+  "texto": "Adiós. Y despiertas en Farum Azula, la ciudad en ruinas, al otro lado del cielo, sin caballo y sin compañera. Otra vez sin doncella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 697.159,
+  "t1": 703.179,
+  "tipo": "video",
+  "texto": "Y cuando vuelves a la capital, lo que encuentras es esto. Leyndell, la capital de ceniza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 703.179,
+  "t1": 711.536,
+  "tipo": "video",
+  "texto": "La ciudad al pie del árbol donde nació Melina, enterrada bajo una capa tan gruesa de ceniza que solo asoman los edificios más altos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 711.536,
+  "t1": 720.612,
+  "tipo": "video",
+  "texto": "Enia lo resume sin dramatismo: la Runa de la Muerte ha sido liberada, y las Tierras Intermedias están cubiertas por el oscuro destino de la Muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.612,
+  "t1": 732.41,
+  "tipo": "video",
+  "texto": "Melina quemó el árbol de su madre, enterró su ciudad natal en ceniza, y te dejó dormido en el suelo para que no vieras cómo lo hacía. Y aun así, es la número tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.41,
+  "t1": 740.357,
+  "tipo": "video",
+  "texto": "Número dos. Muerte para todos. Vuelve un momento a esa frase de la Forja, porque casi todo el mundo la escucha y sigue de largo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.357,
+  "t1": 746.167,
+  "tipo": "video",
+  "texto": "este mundo necesita ser reparado. Y la muerte, indiscriminada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.167,
+  "t1": 753.298,
+  "tipo": "video",
+  "texto": "Indiscriminada. Para todos. Sin excepciones. Eso es lo que Melina quiere devolverle al mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 753.298,
+  "t1": 763.478,
+  "tipo": "video",
+  "texto": "Para entender lo grave que es, hay que saber qué es la Runa de la Muerte. Enia lo cuenta así: la Runa de la Muerte tiene dos nombres. El otro es muerte destinada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.478,
+  "t1": 772.185,
+  "tipo": "video",
+  "texto": "La sombra prohibida, arrancada del Orden Áureo en su creación. Arrancada en su creación. Cuando Márika fundó su Orden,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.185,
+  "t1": 780.813,
+  "tipo": "video",
+  "texto": "lo primero que hizo fue sacar la muerte del Círculo de Elden. Y se la dio a guardar a Maliketh, la Hoja Negra, que la selló dentro de su espada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.813,
+  "t1": 791.793,
+  "tipo": "video",
+  "texto": "En el video de Ranni vimos lo que pasó cuando alguien robó un trocito de esa muerte: una sola noche, y el semidiós más querido del mundo murió y se quedó a medias para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.793,
+  "t1": 799.327,
+  "tipo": "video",
+  "texto": "Eso fue con un fragmento. Melina no quiere un fragmento. Quiere la runa entera, suelta, para todo el mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.327,
+  "t1": 808.917,
+  "tipo": "video",
+  "texto": "Y para soltarla, alguien tiene que matar a Maliketh, su guardián. Adivina quién. Melina te deja dormido en Farum Azula y ya no está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 808.917,
+  "t1": 816.388,
+  "tipo": "video",
+  "texto": "El que tiene que recorrerla, pelear contra la bestia y romperle la espada, eres tú. Es el patrón de todo el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 816.388,
+  "t1": 824.575,
+  "tipo": "video",
+  "texto": "Ella decide adónde se va, y tú haces el trabajo sucio. Con Godrick, con Morgott, y ahora con el guardián de la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 824.575,
+  "t1": 832.555,
+  "tipo": "video",
+  "texto": "Y mientras peleas contra Maliketh, ten en cuenta una cosa. La sombra que guarda esa espada, la que podía matar dioses,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 832.555,
+  "t1": 840.337,
+  "tipo": "video",
+  "texto": "es exactamente lo que la chica de la capucha te mandó a liberar. Y la propia arma de Melina te lo anunciaba desde el principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.337,
+  "t1": 849.156,
+  "tipo": "video",
+  "texto": "Es una daga que puedes encontrar escondida en un cuarto secreto de las Tierras Prohibidas, y se llama la Hoja de la invocación. Su descripción dice:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 849.156,
+  "t1": 858.975,
+  "tipo": "video",
+  "texto": "daga entregada a quien partió hace mucho para cumplir con su deber. El poder de su antigua dueña, la doncella enyescada, aún se nota.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.975,
+  "t1": 867.522,
+  "tipo": "video",
+  "texto": "Y debajo, otra vez, la misma frase: quien camina junto a la llama algún día se encontrará con el camino de la muerte destinada. Su deber.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 867.522,
+  "t1": 876.583,
+  "tipo": "video",
+  "texto": "Desde mucho antes de conocerte, ese era el plan. No buscaba un compañero. Buscaba a alguien que la llevara hasta la llama y luego hasta la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 876.583,
+  "t1": 885.723,
+  "tipo": "video",
+  "texto": "Y fíjate en el detalle más raro de esa daga. La misma hoja la lleva Poliána, una de las hermanas de Millicent, las valquirias de la putrefacción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.723,
+  "t1": 894.694,
+  "tipo": "video",
+  "texto": "Si viste el video de Malenia, ya sabes de qué familia te hablo. Ahora, para ser justos, Melina también dice cosas bonitas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 894.694,
+  "t1": 901.934,
+  "tipo": "video",
+  "texto": "Cuando te acercas a la llama frenética, te suplica: la vida perdura. Los nacimientos continúan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 901.934,
+  "t1": 913.153,
+  "tipo": "video",
+  "texto": "¿No hay belleza en eso? Y suena precioso. Hasta que te das cuenta de que la misma persona que defiende los nacimientos es la que te pidió devolverle al mundo la muerte indiscriminada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 913.153,
+  "t1": 920.033,
+  "tipo": "video",
+  "texto": "En su cabeza no hay contradicción. Que todo nazca, y que todo muera. Y que nadie se libre, ni siquiera los dioses.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 920.033,
+  "t1": 927.765,
+  "tipo": "video",
+  "texto": "Es un mundo más justo, sí. Pero es un mundo que decide ella. Y de esa misma escena, la de la llama frenética,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 927.765,
+  "t1": 936.308,
+  "tipo": "video",
+  "texto": "sale la número uno. Porque Melina tiene un límite. Y cuando lo cruzas, deja de ser tu compañera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 936.308,
+  "t1": 946.031,
+  "tipo": "video",
+  "texto": "Número uno. La promesa de matarte. Debajo de la capital, en lo más hondo, hay una puerta sellada que lleva a los Tres Dedos y a la llama frenética.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 946.031,
+  "t1": 954.019,
+  "tipo": "video",
+  "texto": "La llama del caos, la que lo quema todo. Melina no quiere que vayas. Te lo pide una vez. Y otra. Y otra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 954.019,
+  "t1": 963.823,
+  "tipo": "video",
+  "texto": "Si pretendes reclamar esa llama, te pido que desistas. Es el caos, que devora la vida y el pensamiento sin fin. Por favor, deja en paz la llama frenética.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 963.823,
+  "t1": 969.783,
+  "tipo": "video",
+  "texto": "Y en una de esas veces se le escapa algo: yo me encargo de la yesca. Es un propósito que elijo cumplir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 969.783,
+  "t1": 979.499,
+  "tipo": "video",
+  "texto": "O sea, prefiere quemarse ella antes que dejarte esa llama a ti. Hasta aquí, parece una buena amiga. El problema es lo que pasa si no le haces caso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 979.499,
+  "t1": 988.886,
+  "tipo": "video",
+  "texto": "Si bajas, te arrodillas ante los Tres Dedos y aceptas la llama, la próxima vez que descansas en un lugar de gracia, Melina aparece por última vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 988.886,
+  "t1": 996.11,
+  "tipo": "video",
+  "texto": "Has heredado la llama frenética. Qué lástima. Ya no eres digno. Nuestro acuerdo termina aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 996.11,
+  "t1": 1005.661,
+  "tipo": "video",
+  "texto": "Pero recuerda. Si te alzas como Señor del Caos, te mataré. Tan seguro como que la noche sigue al día. Y la frase siguiente es la que lo cambia todo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1005.661,
+  "t1": 1014.215,
+  "tipo": "video",
+  "texto": "ese es mi deber, por haberte concedido el poder de las runas. Por haberte concedido el poder de las runas. Cada nivel que te subió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1014.215,
+  "t1": 1022.435,
+  "tipo": "video",
+  "texto": "Cada vez que te puso la mano en el hombro. Todo eso no era un regalo. Era un préstamo. Y la letra pequeña del acuerdo decía que,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1022.435,
+  "t1": 1032.43,
+  "tipo": "video",
+  "texto": "si no le gustaba en qué te convertías, te lo cobraba con tu vida. Y luego se despide. Adiós, mi compañero. Adiós, Torrentera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1032.43,
+  "t1": 1041.578,
+  "tipo": "video",
+  "texto": "Y cumple. Si llegas hasta el final como Señor de la Llama Frenética, después de los créditos hay una escena que mucha gente nunca vio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1041.578,
+  "t1": 1049.138,
+  "tipo": "video",
+  "texto": "Todo es ceniza. Se oye un coro de silbidos, como el silbato del caballo, y Melina aparece, cambiada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1049.138,
+  "t1": 1057.117,
+  "tipo": "video",
+  "texto": "Recoge del suelo, entre las cenizas, el anillo del silbato. El de Torrentera, que ha ardido con todo lo demás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1057.117,
+  "t1": 1065.326,
+  "tipo": "video",
+  "texto": "Y por primera vez abre el ojo izquierdo. Ese ojo que tuvo cerrado todo el juego, con un sello encima. Y es de color violeta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1065.326,
+  "t1": 1074.937,
+  "tipo": "video",
+  "texto": "Y te dice: Señor de la Llama Frenética. Te buscaré, tan lejos como viajes. Para darte lo que es tuyo. La muerte destinada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1074.937,
+  "t1": 1081.797,
+  "tipo": "video",
+  "texto": "Ahora vuelve a la frase de su daga. Quien camina junto a la llama algún día se encontrará con el camino de la muerte destinada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1081.797,
+  "t1": 1091.872,
+  "tipo": "video",
+  "texto": "En el final normal, la que camina con la llama es ella. En este final, el que camina con la llama eres tú. Y la muerte que te espera, es Melina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1091.872,
+  "t1": 1098.142,
+  "tipo": "video",
+  "texto": "Y aquí entra la teoría favorita de la comunidad. Hubo una reina antigua, la Reina del Ojo Velado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1098.142,
+  "t1": 1107.991,
+  "tipo": "video",
+  "texto": "una Empírea elegida por los Dedos que manejaba las llamas negras de la muerte de los dioses, hasta que Maliketh la derrotó. Y tenía un ojo especial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1107.991,
+  "t1": 1117.011,
+  "tipo": "video",
+  "texto": "El juego nunca dice que sean la misma persona. Pero una hija de Márika con un ojo sellado, que acaba con el poder de la muerte destinada en la mano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1117.011,
+  "t1": 1125.673,
+  "tipo": "video",
+  "texto": "se parece demasiado como para ser casualidad. Así que la chica que te acompañó todo el juego, la que te subía de nivel con la mano en el hombro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1125.673,
+  "t1": 1133.224,
+  "tipo": "video",
+  "texto": "guardaba debajo de la capucha la cara de la muerte. Y tú le contabas tus ambiciones cada vez que subías de nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1133.224,
+  "t1": 1143.463,
+  "tipo": "video",
+  "texto": "Su última frase en ese final no es para el mundo, ni para su madre, ni para el caballo que murió. Es para ti. Y es una promesa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1143.463,
+  "t1": 1151.433,
+  "tipo": "video",
+  "texto": "Esa es la lista. La compañera perfecta te eligió porque estabas solo, te puso a prueba fingiendo, te ocultó de quién era hija,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1151.433,
+  "t1": 1160.888,
+  "tipo": "video",
+  "texto": "quemó el árbol de su madre, enterró su propia ciudad en ceniza, le devolvió la muerte a todo el mundo, y te prometió matarte si no le gustaba el rey que eras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1160.888,
+  "t1": 1167.808,
+  "tipo": "video",
+  "texto": "Y lo más inquietante es que, de todos los personajes del juego, Melina es la única que nunca te mintió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1167.808,
+  "t1": 1176.364,
+  "tipo": "video",
+  "texto": "Te dijo desde el principio que te estaba pidiendo un pecado capital. Simplemente, nunca te preguntó si querías. Ahora te toca a ti:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1176.364,
+  "t1": 1184.444,
+  "tipo": "video",
+  "texto": "quién fue peor de las dos favoritas. Ranni, que te usó para matar a un dios, o Melina, que te usó para soltar la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1184.444,
+  "t1": 1193.316,
+  "tipo": "video",
+  "texto": "Te leo en los comentarios, que los leo todos, de verdad. Y si quieres al resto de la familia, en el canal tienes las atrocidades de Márika y Radagon,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1193.316,
+  "t1": 1202.023,
+  "tipo": "video",
+  "texto": "de Miquella y Malenia, y la de Ranni. Y el genocidio de su hermano Mésmer. Es una familia muy unida. Sobre todo para quemar cosas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1202.023,
+  "t1": 1211.25,
+  "tipo": "video",
+  "texto": "Y la próxima vez que alguien te diga que solo quiere acompañarte, pregúntale hasta dónde. Y qué piensa quemar al llegar.",
+  "clip_s": 8
+ }
+]

@@ -621,6 +621,13 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   (no a mano) y `asignar_clips.py` pasa un plan POR FRASE (`plan_frases.json`) a `busquedas.json` por beat.
   `flow_thumb.py` en PowerShell 5.1: el prompt con comillas dobles se rompe al pasar a python → `--file` con RUTAS ABSOLUTAS
   (las relativas las resuelve contra C:\googleimagenes).
+  Revisión: 12 de 141 clips rehechos (9 %) con el plan por frase de un subagente que miró hojas a 0/3/6/9/12 s. Lo que cazó mi
+  mosaico de 3 cuadros por clip: menú de subir de nivel y menú «Hablar» al final del tramo, un destello BLANCO de 2 s, y el
+  personaje del jugador CASI DESNUDO en los videos de diálogos de TheFinalEpic (d2FRpV9KrkY ~1213-1238, Maiko pecrcqqbrNE @42):
+  revisar siempre al jugador en tomas de diálogo. **MG grande y casi opaco + clip quieto = 8 s congelados** en freezedetect
+  (MASTER 1): `CAMARA` sobre ese beat NO movió el clip (el HUD salió en el mismo sitio); se arregló cambiando el clip por uno con
+  movimiento (Torrentera galopando). Voz: «DLC» → «dieque» (escribir «la expansión») y un nombre a final de frase se come la
+  cola («matar a Maliketh.» → «Malik»; arreglado con «…a Maliketh, su guardián.»).
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.

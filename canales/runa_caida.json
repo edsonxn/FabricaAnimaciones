@@ -1,99 +1,117 @@
 {
-  "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
-  "nombre": "Runa Caída",
-  "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz Chatterbox Faraon; ~6-7 min.",
-  "horario": {
-    "zona": "America/Mexico_City",
+ "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
+ "nombre": "Runa Caída",
+ "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz Chatterbox Faraon; ~6-7 min.",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "10:00",
+  "utc": "16:00",
+  "ciclo_dias": 4,
+  "separacion_min_horas": 90,
+  "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (22-sep, 5-oct). Provisional hasta analizar el canal.",
+  "historial": [
+   {
+    "fecha": "2026-10-13",
+    "ciclo_dias": 7,
     "hora_local": "10:00",
-    "utc": "16:00",
+    "motivo": "registro inicial; provisional"
+   },
+   {
+    "fecha": "2026-10-24",
     "ciclo_dias": 4,
-    "separacion_min_horas": 96,
-    "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (22-sep, 5-oct). Provisional hasta analizar el canal.",
-    "historial": [
-      {
-        "fecha": "2026-10-13",
-        "ciclo_dias": 7,
-        "hora_local": "10:00",
-        "motivo": "registro inicial; provisional"
-      }
-    ]
+    "hora_local": "10:00",
+    "separacion_min_horas": 90,
+    "motivo": "el usuario publicó Ranni a mano a las 11:03 CDMX; con 96 h el siguiente ciclo de 4 días a las 10:00 no cabía (95 h). 90 h deja margen para publicaciones manuales sin mover la hora del canal"
+   }
+  ]
+ },
+ "publicados": [
+  {
+   "video": "er_melina_atrocidades",
+   "id": "U4reFaDG6Vg",
+   "titulo": "Las 5 peores atrocidades de Melina QUE IGNORASTE",
+   "visibilidad": "private",
+   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+   "subido": "2026-10-28T06:00:00Z",
+   "nota": "~20 min (20:31 con la pantalla final; el usuario pidió >= 18) copiando a Miquella (x18) y el gancho de Ranni; OST oficial; MG nuevos acuerdo/ecos/arbol_arde/muerte_suelta; subido en privado con miniatura y PROGRAMADO en el hueco del canal (96 h tras Malenia); .srt sin cargar (token sin youtube.force-ssl)",
+   "programado": "2026-11-01T16:00:00Z"
   },
-  "publicados": [
-    {
-      "video": "er_malenia_atrocidades",
-      "id": "3qrJnRE6ol4",
-      "titulo": "Las 5 peores atrocidades de Malenia QUE IGNORASTE",
-      "visibilidad": "private",
-      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-      "subido": "2026-10-23T22:00:00Z",
-      "nota": "~19 min (19:34 con la pantalla final) copiando a Miquella (×48); MÚSICA = OST OFICIAL de Elden Ring (regla nueva del usuario, 23-oct); subido en privado con miniatura y PROGRAMADO en el hueco del canal; .srt sin cargar (token sin youtube.force-ssl)",
-      "programado": "2026-10-29T16:00:00Z"
-    },
-    {
-      "video": "er_ranni_atrocidades",
-      "id": "ZamBFBDZ6OI",
-      "titulo": "Las 5 peores atrocidades de Ranni QUE IGNORASTE",
-      "visibilidad": "private",
-      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-      "subido": "2026-10-22T14:10:00Z",
-      "nota": "~12 min (12:16 con la pantalla final) pedidos por el usuario; subido en privado con miniatura y PROGRAMADO en el hueco del canal (regla 20-oct); .srt sin cargar (token sin youtube.force-ssl)",
-      "programado": "2026-10-25T16:00:00Z"
-    },
-    {
-      "video": "er_miquella_atrocidades",
-      "id": "vUaTbbI9yiM",
-      "titulo": "Las 5 peores atrocidades de Miquella QUE IGNORASTE",
-      "visibilidad": "public",
-      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-      "subido": "2026-10-19T17:01:00Z",
-      "nota": "PRUEBA de duración (~20 min, 20:15 con la pantalla final) pedida por el usuario; subido en privado con miniatura el 19-oct y PROGRAMADO por orden del usuario para mar 20-oct 10:00 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
-      "programado": "2026-10-20T16:00:00Z",
-      "publicado": "2026-10-20"
-    },
-    {
-      "video": "er_radagon_atrocidades",
-      "id": "L0HTszG4ycM",
-      "titulo": "Las 5 peores atrocidades de Radagon QUE IGNORASTE",
-      "visibilidad": "public",
-      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-      "subido": "2026-10-14T17:18:14Z",
-      "publicado": "2026-10-14T17:18:14Z",
-      "nota": "subido en privado y publicado a mano por el usuario el mismo día (14-oct 11:18 CDMX)"
-    },
-    {
-      "video": null,
-      "id": "5qjNn7U-Vy4",
-      "titulo": "Los 5 secretos perturbadores de las Tierras Intermedias que CAMBIARÁN tu juego",
-      "visibilidad": "public",
-      "publicado": "2026-10-05T16:58:26Z"
-    },
-    {
-      "video": null,
-      "id": "B3VjwOzO3as",
-      "titulo": "Los secretos más perturbadores de la Aldea Bonny QUE IGNORASTE",
-      "visibilidad": "public",
-      "publicado": "2026-09-22T14:11:07Z"
-    }
+  {
+   "video": "er_malenia_atrocidades",
+   "id": "3qrJnRE6ol4",
+   "titulo": "Las 5 peores atrocidades de Malenia QUE IGNORASTE",
+   "visibilidad": "private",
+   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+   "subido": "2026-10-23T22:00:00Z",
+   "nota": "~19 min (19:34 con la pantalla final) copiando a Miquella (×48); MÚSICA = OST OFICIAL de Elden Ring (regla nueva del usuario, 23-oct); subido en privado con miniatura y PROGRAMADO en el hueco del canal; .srt sin cargar (token sin youtube.force-ssl); ADELANTADO el 24-oct al mié 28-oct 10:00 CDMX al publicar el usuario Ranni antes de tiempo",
+   "programado": "2026-10-28T16:00:00Z"
+  },
+  {
+   "video": "er_ranni_atrocidades",
+   "id": "ZamBFBDZ6OI",
+   "titulo": "Las 5 peores atrocidades de Ranni QUE IGNORASTE",
+   "visibilidad": "public",
+   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+   "subido": "2026-10-22T14:10:00Z",
+   "nota": "~12 min (12:16 con la pantalla final) pedidos por el usuario; subido en privado con miniatura y PROGRAMADO para el 25-oct; el usuario lo PUBLICÓ a mano antes, el sáb 24-oct 11:03 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
+   "programado": "2026-10-25T16:00:00Z",
+   "publicado": "2026-10-24T17:03:34Z"
+  },
+  {
+   "video": "er_miquella_atrocidades",
+   "id": "vUaTbbI9yiM",
+   "titulo": "Las 5 peores atrocidades de Miquella QUE IGNORASTE",
+   "visibilidad": "public",
+   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+   "subido": "2026-10-19T17:01:00Z",
+   "nota": "PRUEBA de duración (~20 min, 20:15 con la pantalla final) pedida por el usuario; subido en privado con miniatura el 19-oct y PROGRAMADO por orden del usuario para mar 20-oct 10:00 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
+   "programado": "2026-10-20T16:00:00Z",
+   "publicado": "2026-10-20"
+  },
+  {
+   "video": "er_radagon_atrocidades",
+   "id": "L0HTszG4ycM",
+   "titulo": "Las 5 peores atrocidades de Radagon QUE IGNORASTE",
+   "visibilidad": "public",
+   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+   "subido": "2026-10-14T17:18:14Z",
+   "publicado": "2026-10-14T17:18:14Z",
+   "nota": "subido en privado y publicado a mano por el usuario el mismo día (14-oct 11:18 CDMX)"
+  },
+  {
+   "video": null,
+   "id": "5qjNn7U-Vy4",
+   "titulo": "Los 5 secretos perturbadores de las Tierras Intermedias que CAMBIARÁN tu juego",
+   "visibilidad": "public",
+   "publicado": "2026-10-05T16:58:26Z"
+  },
+  {
+   "video": null,
+   "id": "B3VjwOzO3as",
+   "titulo": "Los secretos más perturbadores de la Aldea Bonny QUE IGNORASTE",
+   "visibilidad": "public",
+   "publicado": "2026-09-22T14:11:07Z"
+  }
+ ],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "elden ring secretos",
+   "elden ring lore",
+   "elden ring nightreign"
   ],
-  "ideas": {
-    "idioma": "es",
-    "region": "MX",
-    "busquedas": [
-      "elden ring secretos",
-      "elden ring lore",
-      "elden ring nightreign"
-    ],
-    "competidores": [],
-    "dias": 60,
-    "min_vistas": 2000,
-    "filtro": [
-      "elden ring",
-      "tierras intermedias",
-      "marika",
-      "fromsoftware",
-      "nightreign"
-    ]
-  },
-  "estado": "mudado a la Fábrica el 14-oct-2026 (primer video: er_radagon_atrocidades)",
-  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\runa_caida.mp4"
+  "competidores": [],
+  "dias": 60,
+  "min_vistas": 2000,
+  "filtro": [
+   "elden ring",
+   "tierras intermedias",
+   "marika",
+   "fromsoftware",
+   "nightreign"
+  ]
+ },
+ "estado": "mudado a la Fábrica el 14-oct-2026 (primer video: er_radagon_atrocidades)",
+ "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\runa_caida.mp4"
 }

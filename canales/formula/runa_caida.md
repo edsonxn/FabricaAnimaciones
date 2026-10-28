@@ -38,5 +38,12 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
 - Copia del ganador (Miquella, ~20 min) cambiando UNA variable: el SUJETO → su gemela Malenia (la jefa más buscada del juego).
 - Descartados por ahora: Melina (mismo gancho que Ranni: esperar a ver Ranni) y Mohg (villano obvio, gancho débil).
 - Meta jue 29-oct-2026 10:00 CDMX.
-- Subido el 23-oct-2026 (https://youtu.be/3qrJnRE6ol4, 19:34), programado jue 29-oct 10:00 CDMX. Primer video con la MÚSICA OFICIAL del juego
+- Subido el 23-oct-2026 (https://youtu.be/3qrJnRE6ol4, 19:34), programado jue 29-oct 10:00 CDMX.
+
+## «Las 5 peores atrocidades de Melina QUE IGNORASTE» (`er_melina_atrocidades`, 27/28-oct-2026, elegido por el usuario)
+- Datos al elegir (27-oct): Miquella (20:15) ×18,3 con 46 % visto a los 7 días; Ranni 8 437 vistas en 2 días (mejor arranque).
+- Variable cambiada: el SUJETO → Melina, la acompañante de todo el juego (mismo gancho «la favorita es la peor» que Ranni) con la
+  duración larga del ganador (el usuario pidió ≥ 18 min: 20:31 con la pantalla final). Descartados: Mésmer (ya tuvo video sin la
+  fórmula, ×0,26) y la Voluntad Mayor (sin cara). Gancho nuevo: «la número uno es una amenaza. Contra ti».
+- Comparar a los 7 días con Ranni (mismo gancho, 12 min) y Miquella/Malenia (misma duración): vistas, % visto y min por vista. Primer video con la MÚSICA OFICIAL del juego
   (OST, sin Lyria: regla del usuario del 23-oct). Comparar a los 7 días con Miquella (misma duración): vistas, % visto, y si hubo reclamo de Content ID.

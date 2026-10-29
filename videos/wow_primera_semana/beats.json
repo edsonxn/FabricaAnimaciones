@@ -1,0 +1,818 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.522,
+  "tipo": "video",
+  "texto": "El miércoles cuatro de noviembre abre World of Warcraft Forever, y la primera semana va a decidir cómo te va el resto del año.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.522,
+  "t1": 14.663,
+  "tipo": "video",
+  "texto": "Porque en Forever no hay expansiones: el nivel sesenta es para siempre, y lo que hagas mal al principio se queda contigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 14.663,
+  "t1": 25.531,
+  "tipo": "video",
+  "texto": "Hace unos días Fede nos escribió pidiendo ayuda para dar el primer paso en Forever, y no fue el único. Así que este video es para él y para todos los que nos lo pidieron en los comentarios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.531,
+  "t1": 33.082,
+  "tipo": "video",
+  "texto": "Y no son consejos genéricos: todo sale de lo que Blizzard ha confirmado y de lo que se vio en la beta, que terminó la semana pasada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.082,
+  "t1": 42.194,
+  "tipo": "video",
+  "texto": "Hoy te traigo las diez cosas que debes hacer la primera semana de World of Warcraft Forever, de la décima a la más importante. Y la número uno tiene fecha de caducidad:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.194,
+  "t1": 50.768,
+  "tipo": "video",
+  "texto": "si no la haces antes del martes, ya no hay vuelta atrás. Número diez. Usa tu código de invitación,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.768,
+  "t1": 62.27,
+  "tipo": "video",
+  "texto": "porque tu amigo puede jugar gratis justo la semana del lanzamiento. Los paquetes de Forever traen códigos de Invita a un amigo: el paquete Heroico trae uno, y el Épico y la colección traen tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 62.27,
+  "t1": 67.104,
+  "tipo": "video",
+  "texto": "Con ese código, tu amigo juega sin suscripción del cuatro al once de noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.104,
+  "t1": 78.734,
+  "tipo": "video",
+  "texto": "Siete días gratis para que descubra si lo suyo es la Alianza, la Horda o salir corriendo de Los Baldíos. Y si tu amigo ya juega, úsalo con ese otro que lleva años diciendo que vuelve en la próxima expansión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.734,
+  "t1": 85.51,
+  "tipo": "video",
+  "texto": "Esta vez no hay expansión que esperar. Y no es un detalle menor: en World of Warcraft casi nadie aguanta solo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.51,
+  "t1": 94.269,
+  "tipo": "video",
+  "texto": "y subir de nivel con alguien conocido lo cambia todo. Eso sí, elijan juntos el tipo de servidor antes de crear personaje, porque luego no se pueden mudar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.269,
+  "t1": 105.43,
+  "tipo": "video",
+  "texto": "y en el número dos te explico por qué. Pasado el día once, tu amigo tiene dos opciones: pagar la suscripción o convertirse en esa persona que nunca volvió a conectarse.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.43,
+  "t1": 111.244,
+  "tipo": "video",
+  "texto": "Número nueve. Llega con la hora clara, el juego descargado y un plan B para la cola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.244,
+  "t1": 118.221,
+  "tipo": "video",
+  "texto": "Forever abre una sola vez para todo el mundo: el miércoles cuatro, a las tres de la tarde, hora del Pacífico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 118.221,
+  "t1": 127.199,
+  "tipo": "video",
+  "texto": "Eso son las cinco de la tarde en Ciudad de México, las seis en Bogotá y Lima, y las ocho en Buenos Aires y Santiago. En España será la medianoche del jueves cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 127.199,
+  "t1": 138.278,
+  "tipo": "video",
+  "texto": "así que si ves medios europeos diciendo cinco de noviembre, no se equivocaron. Y esa hora ya es la definitiva, porque Estados Unidos deja el horario de verano justo el uno de noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.278,
+  "t1": 144.45,
+  "tipo": "video",
+  "texto": "Deja todo listo desde antes, porque ese miércoles medio planeta va a intentar entrar en el mismo minuto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 144.45,
+  "t1": 153.919,
+  "tipo": "video",
+  "texto": "La prueba de estrés del veintiuno de octubre empezó con errores para iniciar sesión, y Clay Stone, de Blizzard, ya avisó que la apertura puede tener tropiezos técnicos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.919,
+  "t1": 163.081,
+  "tipo": "video",
+  "texto": "Y las capas se quedan: Blizzard dice que siempre habrá algo de capas en sus servidores de gran capacidad. La buena noticia es que prometieron que ya no te separarán de tu grupo en",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.081,
+  "t1": 174.247,
+  "tipo": "video",
+  "texto": "el barco o el zepelín, ni al entrar a las capitales. La mala es que al cruzar de una zona a otra todavía puedes cambiar de capa, así que si el jabalí que perseguías desaparece, no fue magia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 174.247,
+  "t1": 178.667,
+  "tipo": "video",
+  "texto": "Y si la cola es eterna, aprovecha para leer los talentos rehechos de tu clase.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 178.667,
+  "t1": 188.615,
+  "tipo": "video",
+  "texto": "Por lo menos que la espera te sirva de algo. Número ocho. Consigue la Bolsa de dormir acogedora en cuanto llegues al nivel catorce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.615,
+  "t1": 194.561,
+  "tipo": "video",
+  "texto": "Es uno de los sistemas de la Temporada de Descubrimiento que vuelven en Forever, y en la beta funcionaba así.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 194.561,
+  "t1": 206.598,
+  "tipo": "video",
+  "texto": "Duermes en ella y ganas un uno por ciento más de experiencia por cada minuto, hasta un tres por ciento. Se puede usar cada hora, cuenta como zona de descanso, y se suma a la comida y al campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.598,
+  "t1": 214.16,
+  "tipo": "video",
+  "texto": "Lo divertido es cómo se consigue: todo empieza con una nota clavada en una tabla, como si alguien hubiera perdido su lista del súper.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.16,
+  "t1": 222.794,
+  "tipo": "video",
+  "texto": "Son seis misiones repartidas por cinco zonas, con un salto a la cornisa de la presa de Loch Modan y una escalada a la Muralla de Thoradin subido a una carreta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.794,
+  "t1": 230.639,
+  "tipo": "video",
+  "texto": "En la beta, la Alianza la empezaba en la granja de Alexston, en los Páramos de Poniente, y la Horda en unas ruinas al sur de Los Baldíos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 230.639,
+  "t1": 240.463,
+  "tipo": "video",
+  "texto": "Y la Horda la tiene peor, porque en Loch Modan la esperan guardias de nivel treinta que no aprecian a los turistas. Tres por ciento parece poco, pero sumado a lo demás de esta lista es",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.463,
+  "t1": 251.699,
+  "tipo": "video",
+  "texto": "la diferencia entre llegar al sesenta antes de las bandas o llegar tarde. Y hablando de llegar a tiempo: el nueve de diciembre abren Barrow Deeps, Hyjal Summit y la Guarida de Onyxia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 251.699,
+  "t1": 259.891,
+  "tipo": "video",
+  "texto": "Entre el lanzamiento y esa fecha hay apenas cinco semanas, y casi nadie se atasca por ser malo, sino porque nadie le dijo qué estaba haciendo mal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.891,
+  "t1": 265.96,
+  "tipo": "video",
+  "texto": "Para eso está Overgear, que patrocina este video, con su coaching para World of Warcraft Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.96,
+  "t1": 273.465,
+  "tipo": "video",
+  "texto": "Es self-play: juegas tú con tu personaje todo el tiempo, y un profesional verificado te explica por voz en qué fallas y por qué.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 273.465,
+  "t1": 283.262,
+  "tipo": "video",
+  "texto": "Talentos, rotación, addons, mazmorras nuevas, el plan de equipo antes de las bandas o duelos: tú eliges, y pagas solo las horas que necesites.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.262,
+  "t1": 290.538,
+  "tipo": "video",
+  "texto": "Y como en Forever el equipo no caduca, los vicios de las primeras semanas se quedan contigo: corregirlos pronto sale más barato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 290.538,
+  "t1": 302.93,
+  "tipo": "video",
+  "texto": "El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti. Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.93,
+  "t1": 308.561,
+  "tipo": "video",
+  "texto": "Y antes de seguir, gracias por comentarios como estos, que nos dejan en cada video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.561,
+  "t1": 316.81,
+  "tipo": "video",
+  "texto": "Todos se leen, y todos se toman en cuenta para seguir mejorando el canal. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.81,
+  "t1": 325.996,
+  "tipo": "video",
+  "texto": "Empieza a juntar los libros de la biblioteca, porque ya no son solo cosa de magos. En la Temporada de Descubrimiento solo los magos los entregaban; en Forever,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 325.996,
+  "t1": 336.689,
+  "tipo": "video",
+  "texto": "cualquier clase puede hacerlo. Hay cuarenta libros únicos repartidos por el mundo, y entregarlos da premios: a los diez, un collar, y a los veinte, un anillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 336.689,
+  "t1": 342.037,
+  "tipo": "video",
+  "texto": "Y a los veinticinco, recompensas todavía mejores, así que cada libro cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.037,
+  "t1": 350.659,
+  "tipo": "video",
+  "texto": "Si se repiten los sitios de la Temporada de Descubrimiento, uno está en las catacumbas del Bosque del Ocaso, rodeado de muertos vivientes de nivel veintiocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 350.659,
+  "t1": 362.192,
+  "tipo": "video",
+  "texto": "Y otro, una guía para cuidar a tu mascota demoníaca, se podía despojar a través de los barrotes de una jaula sin abrirla. Pero hay un consejo que duele: si borras un libro, no vuelve a caer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.192,
+  "t1": 367.779,
+  "tipo": "video",
+  "texto": "Así que la primera semana, cuando la bolsa se te llene, tira cualquier cosa menos un libro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.779,
+  "t1": 375.346,
+  "tipo": "video",
+  "texto": "En la Temporada de Descubrimiento se entregaban en Ventormenta, en el Sanctum del Mago, y en Entrañas, en el Barrio Mágico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 375.346,
+  "t1": 387.237,
+  "tipo": "video",
+  "texto": "Cada libro que encuentras de paso mientras subes de nivel es un libro que no tendrás que salir a buscar cuando ya seas sesenta. Número seis. Cocina siempre, y come todavía más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.237,
+  "t1": 393.251,
+  "tipo": "video",
+  "texto": "En Forever, la comida cocinada da un cinco por ciento más de experiencia por cada monstruo que matas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.251,
+  "t1": 406.35,
+  "tipo": "video",
+  "texto": "Ojo, que es por muertes y no por misiones, pero en una subida del uno al sesenta se nota muchísimo. Según los cálculos de la web alemana Mein MMO, mantener ese bonus todo el tiempo te ahorra entre uno y uno y medio niveles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 406.35,
+  "t1": 413.232,
+  "tipo": "video",
+  "texto": "Hay quien nos cuenta que ve estos videos mientras come. Pues en Forever, comer también va a contar como progreso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.232,
+  "t1": 421.63,
+  "tipo": "video",
+  "texto": "A cambio, Blizzard bajó las estadísticas de la comida, y en el foro oficial ya hay quejas: ahora se come por la experiencia, no por la fuerza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.63,
+  "t1": 431.166,
+  "tipo": "video",
+  "texto": "Así que no vendas la carne de jabalí: cocínala. Y si vas a subir profesiones, en Forever hay más de seiscientas recetas nuevas repartidas entre todas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.166,
+  "t1": 439.334,
+  "tipo": "video",
+  "texto": "Y súmale el campamento: hacia el nivel cinco, un aventurero te enseña a encender una hoguera básica con espacio para tres objetos de profesión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 439.334,
+  "t1": 447.059,
+  "tipo": "video",
+  "texto": "Con las mejoras de Cocina, esa hoguera aguanta cinco y hasta diez objetos. Te sientas junto al fuego y ganas una mejora de una hora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.059,
+  "t1": 455.035,
+  "tipo": "video",
+  "texto": "En el MMO más famoso del mundo, descansar también es una estrategia. Comida, hoguera y bolsa de dormir juntas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.035,
+  "t1": 463.688,
+  "tipo": "video",
+  "texto": "ahí tienes la base de una subida más rápida que la de cualquiera que corra sin parar. Número cinco. Recolecta desde la zona inicial, y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.688,
+  "t1": 474.078,
+  "tipo": "video",
+  "texto": "empieza a ahorrar desde el primer día. En Forever no hay Ficha de WoW ni subidas de nivel de pago, así que el oro de la primera semana sale literalmente del suelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 474.078,
+  "t1": 481.315,
+  "tipo": "video",
+  "texto": "Minería, herboristería y desuello desde el primer día, porque al abrir la casa de subastas está vacía y todo se vende.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.315,
+  "t1": 489.859,
+  "tipo": "video",
+  "texto": "Si eres tauren, tienes ventaja: su habilidad Cultivation duplica los nodos de hierbas. Y desollar los bichos que matan los demás también cuenta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 489.859,
+  "t1": 499.506,
+  "tipo": "video",
+  "texto": "el carroñero más rico de Durotar puedes ser tú. La meta es la montura, que en Forever se paga como en Burning Crusade: aprendes a montar y te dan la montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.506,
+  "t1": 505.943,
+  "tipo": "video",
+  "texto": "En la beta costaba unos cien de oro a nivel cuarenta, y el paladín y el brujo la conseguían gratis con una misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 505.943,
+  "t1": 514.087,
+  "tipo": "video",
+  "texto": "Mientras llegas a ella, activa cada maestro de vuelo que pases, porque en Forever no hay salas de portales como en el WoW moderno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.087,
+  "t1": 522.551,
+  "tipo": "video",
+  "texto": "Y hay barcos nuevos, como el de Ventormenta a Auberdine, sin tener que pasar por Menethil. Y guarda lo que te sobre, porque en la beta la montura épica",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 522.551,
+  "t1": 535.43,
+  "tipo": "video",
+  "texto": "de nivel sesenta costaba mil de oro, más doscientos por la montura. Y un truco para la de nivel cuarenta: si eres Honorable con tu facción, en la beta te salía un diez por ciento más barata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 535.43,
+  "t1": 541.834,
+  "tipo": "video",
+  "texto": "Número cuatro. Haz las mazmorras nuevas, y hazlas con todas sus misiones en una sola pasada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.834,
+  "t1": 550.005,
+  "tipo": "video",
+  "texto": "Forever trae nueve mazmorras nuevas, y la primera llega muy pronto. Para la Alianza es Hall of Thanes, de nivel trece a dieciocho,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.005,
+  "t1": 558.057,
+  "tipo": "video",
+  "texto": "escondida debajo del salón del trono de Forjaz. Su jefe final, Durgen Dirgehammer, pelea acompañado de dos gólems de piedra,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.057,
+  "t1": 567.271,
+  "tipo": "video",
+  "texto": "para que nadie diga que los enanos no saben decorar. La Horda tiene Ruins of Lordaeron, de nivel quince a veintidós, justo debajo de Entrañas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.271,
+  "t1": 574.022,
+  "tipo": "video",
+  "texto": "Y hay mazmorras nuevas hasta el sesenta, como Shaper's Terrace, en el cráter de Un'Goro. Y el cambio importante:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 574.022,
+  "t1": 585.818,
+  "tipo": "video",
+  "texto": "los jefes que antes soltaban objetos únicos ahora sueltan azules. Además, la apariencia de un azul ligado de mazmorra se la quedan todos los que podían despojarlo, no solo el que gana la tirada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.818,
+  "t1": 593.566,
+  "tipo": "video",
+  "texto": "Entra con las misiones recogidas, porque según una guía de lanzamiento la experiencia buena está en las misiones y no en los monstruos de adentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.566,
+  "t1": 599.912,
+  "tipo": "video",
+  "texto": "Una pasada bien hecha te da equipo, apariencia y experiencia de golpe, y te ahorra volver tres veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.912,
+  "t1": 610.43,
+  "tipo": "video",
+  "texto": "Y apunta esto para después: Onyxia vuelve a pedir sintonización, personal y no de cuenta, así que en cuanto seas sesenta, empieza esa cadena.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.43,
+  "t1": 617.364,
+  "tipo": "video",
+  "texto": "Número tres. Planea tus personajes secundarios desde el primer día, porque el sistema Legacy los premia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.364,
+  "t1": 625.601,
+  "tipo": "video",
+  "texto": "Legacy sustituye a los logros, y sus puntos son de cuenta: al lanzar hay sesenta y cinco, y cada personaje puede gastar dieciséis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 625.601,
+  "t1": 634.883,
+  "tipo": "video",
+  "texto": "Los ganas, por ejemplo, llevando cada clase a ciertos niveles, subiendo profesiones o explorando Azeroth. Y sirven en todos los tipos de servidor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 634.883,
+  "t1": 644.12,
+  "tipo": "video",
+  "texto": "menos en Hardcore, que va por su cuenta. Y en la beta las mejoras eran muy jugosas: vuelos a mitad de precio y más rápidos, talentos desde el nivel nueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.12,
+  "t1": 653.781,
+  "tipo": "video",
+  "texto": "o habilidades sin componentes de vendedor. La recompensa de cincuenta y cinco puntos es una montura, el Oso espectral, y no te la entrega un héroe ni un rey.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.781,
+  "t1": 661.095,
+  "tipo": "video",
+  "texto": "Te la da el tabernero Wiley, en Trinquete, como quien te cobra la cerveza. Y antes de esa montura hay más premios:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 661.095,
+  "t1": 672.424,
+  "tipo": "video",
+  "texto": "un cachorro de oso espectral a los veinticinco puntos y un tabardo a los cuarenta. Es el único sistema de un MMO donde dejar a tu personaje principal en el nivel veinticinco cuenta como progreso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.424,
+  "t1": 680.43,
+  "tipo": "video",
+  "texto": "Así que si en la primera semana te aburres de tu clase, no la borres: ese personaje ya te está dando puntos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 680.43,
+  "t1": 686.17,
+  "tipo": "video",
+  "texto": "Número dos. Elige bien el tipo de servidor, porque en Forever no hay vuelta atrás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.17,
+  "t1": 695.2,
+  "tipo": "video",
+  "texto": "No hay lista de reinos: eliges un tipo de reglas, y cada uno es un solo reino enorme por región. Normal, jugador contra jugador, rol,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.2,
+  "t1": 705.273,
+  "tipo": "video",
+  "texto": "y rol con jugador contra jugador, que Blizzard añadió el veintidós de octubre. El modo Hardcore llegará después del lanzamiento, así que no lo esperes el miércoles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.273,
+  "t1": 712.437,
+  "tipo": "video",
+  "texto": "Solo puedes agruparte y hacer mazmorras y bandas con gente de tu mismo tipo de servidor; los campos de batalla sí se mezclan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 712.437,
+  "t1": 723.785,
+  "tipo": "video",
+  "texto": "Y no hay transferencias: si te equivocas, toca empezar con un personaje nuevo. En Normal y en rol, en cambio, puedes tener personajes de la Alianza y de la Horda en la misma cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 723.785,
+  "t1": 729.749,
+  "tipo": "video",
+  "texto": "En los servidores jugador contra jugador hay una regla todavía más dura: una sola facción por cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 729.749,
+  "t1": 737.846,
+  "tipo": "video",
+  "texto": "Si creas un personaje de la Alianza, la Horda deja de existir para ti en ese servidor, y el motivo es que nadie haga un espía de la otra facción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 737.846,
+  "t1": 747.93,
+  "tipo": "video",
+  "texto": "La única forma de mudarse es morir en Hardcore, que ni siquiera está al lanzar. Así que pónganse de acuerdo en su grupo de amigos antes del miércoles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 747.93,
+  "t1": 754.347,
+  "tipo": "video",
+  "texto": "Y número uno. Reserva tu nombre y tu apellido antes del martes, o el miércoles en el primer minuto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 754.347,
+  "t1": 763.268,
+  "tipo": "video",
+  "texto": "En Forever los nombres tienen dos partes, nombre y apellido, y el ejemplo oficial de Blizzard es Ana Forever. Lo importante es que son únicos en toda la región,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.268,
+  "t1": 774.618,
+  "tipo": "video",
+  "texto": "sin importar el tipo de servidor, y por ahora no hay cambio de nombre. Si compraste un paquete, puedes reservar hasta tres personajes hasta el tres de noviembre, en la cuenta donde lo compraste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.618,
+  "t1": 780.17,
+  "tipo": "video",
+  "texto": "Después de eso, gana el que llega primero, y media América quiere llamarse igual que tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.17,
+  "t1": 789.142,
+  "tipo": "video",
+  "texto": "Las reglas, según la guía de Method: cada parte de dos a doce letras, sin números, guiones ni apóstrofos, y con acentos permitidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.142,
+  "t1": 797.298,
+  "tipo": "video",
+  "texto": "Así que un Ramírez entra perfecto, pero nada de alargar la e de Legolas para colarte: la misma letra tres veces seguidas no está permitida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.298,
+  "t1": 806.75,
+  "tipo": "video",
+  "texto": "Y en los servidores de rol, el nombre tiene que sonar a una persona real, así que olvídate de Matajabalíes Supremo. Es lo único de esta lista que no se puede arreglar después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 806.75,
+  "t1": 814.514,
+  "tipo": "video",
+  "texto": "y por eso es el número uno. Y antes de despedirme, una noticia importante para el canal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 814.514,
+  "t1": 824.273,
+  "tipo": "video",
+  "texto": "Muchos de ustedes nos escribieron por la historia de Darrowshire, la de la niña que sigue esperando a su padre. Nos dijeron que les encantó el formato, que querían más historias así,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 824.273,
+  "t1": 832.765,
+  "tipo": "video",
+  "texto": "y hasta nos pidieron el siguiente capítulo. Por eso tomamos una decisión: el formato de historias contadas se va a mudar a otro canal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 832.765,
+  "t1": 840.092,
+  "tipo": "video",
+  "texto": "Estamos preparando un gran video de larga duración con ese formato, y muy pronto les daremos noticias del canal donde se publicará.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.092,
+  "t1": 848.013,
+  "tipo": "video",
+  "texto": "Y aquí, en Crónicas de Warcraft, seguimos con las listas, las curiosidades y todo lo que traiga Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 848.013,
+  "t1": 857.696,
+  "tipo": "video",
+  "texto": "Y esas son las diez cosas que debes hacer la primera semana de World of Warcraft Forever. Gracias de verdad a todos los que comentan, como estos que nos dejaron hace poco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 857.696,
+  "t1": 868.45,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen, y todos se toman en cuenta para seguir mejorando. Ahora cuéntame abajo: ¿cuál va a ser tu nombre y apellido en Forever, y en qué tipo de servidor vas a jugar?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 868.45,
+  "t1": 875.625,
+  "tipo": "video",
+  "texto": "Nos vemos en la próxima crónica, y el miércoles nos vemos en Azeroth.",
+  "clip_s": 8
+ }
+]

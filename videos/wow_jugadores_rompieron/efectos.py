@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """Capa de EFECTOS de «Los 10 jugadores REALES que ROMPIERON WoW Vanilla» (motor SECUENCIA YT, Crónicas de Warcraft, 27-oct-2026).
 - Segmento Overgear campaña 2 (coaching self-play de WoW Forever; scene-029..034): insignias en pares con croma, recorrido por
-  overgear.com/games/wow-forever/coaching como clip de scene-031 (el brief exige screencast), logo y la IMAGEN del tramo del
-  creativo con CRONICAS10 (33,0-39,97 s) justo antes de scene-035, SIN su audio (el código lo dice nuestra voz).
+  overgear.com/games/wow-forever/coaching como clip de scene-031 (el brief exige screencast), kit Forever (28-oct) y el creativo
+  del código CRONICAS10_forever (croma) justo antes de scene-035, sin audio (el código lo dice nuestra voz).
 - MG NUEVOS de este guion (nucleo/mg_wow.py): `reckoning` (cargas sin tope → Kazzak en segundos → parche: máx. 4),
   `inmortal` (Kazzak en Ventormenta: cada muerte le rellena la barra; entra un MJ) y `expediente` (Blizzard contra Glider).
 - MAPAS REALES con ruta y foto en cada paso: las zonas prohibidas de la RIdPEF, Kazzak de las Tierras Devastadas a Ventormenta
@@ -18,8 +18,10 @@ import mg_wow as M
 _D = os.path.dirname(os.path.abspath(__file__))
 _PEG, _PAN, _MAP = (os.path.join(_D, c) for c in ("pegatinas", "pantallas", "mapas"))
 OG = r"medios\_overgear" + "\\"                   # copias de D:\Cronicas de Warcraft\Overgear\ y del creativo de Descargas
-CREATIVO = OG + "overgear_promo_ES_remy_preview_720p.mp4"
-CODIGO = ("scene-035", -6.97)                      # el tramo (6,97 s) termina justo donde empieza el puesto 7; entra con «CRONICAS10»
+OGF = OG + "forever\\"                             # kit WoW Forever (nov) del 28-oct: D:\Cronicas de Warcraft\Overgear\Forever\
+CREATIVO = OG + "CRONICAS10_forever.mp4"          # creativo del código de Forever (Alice, 28-oct): rótulo en verde de 10 s
+                                                   # «-10% WITH PROMO CODE CRONICAS10» (2,5-6 s) → «LINK IN THE DESCRIPTION»
+CODIGO = ("scene-035", -9.89)   # el creativo entra 2,5 s antes de «CRONICAS10» (282,94 s) y acaba en el puesto 7
 
 
 def peg(en, slug, titulo, dur=4.0, x=.17, y=.62, tam=420):
@@ -82,15 +84,19 @@ FX = [
     peg("Contra Loatheb", "loatheb", "Loatheb", dur=4.0),
     peg("en Chromaggus los maestros", "chromaggus", "Chromaggus", dur=3.4, x=.13, tam=360),
     peg("llegaron a intervenir", "gm", "Maestros de juego", dur=3.6, x=.36, tam=360),
-    # =========================================================== Overgear (campaña 2, 26-oct-2026): insignias EN PARES (kit de marca)
-    dict(tipo="video", ruta=OG + "1 pair_green.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,
+    # =========================================================== Overgear campaña 2 con el kit «WoW - Forever (nov)» (28-oct-2026): logo de
+    # esquina todo el anuncio, par de USP, tarjeta de coaching, reseñas reales (croma ROJO) y packshot «PLAY BETTER FOREVER»
+    dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True,
+         de="Este video lo patrocina Overgear", a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
+    dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,
          nombre="og pros"),
-    dict(tipo="video", ruta=OG + "2 pair_green.mp4", croma=True, en="Tácticas de jefes, mazmorras", dur=4.0, sale=.25,
-         nombre="og coaching"),
-    dict(tipo="video", ruta=OG + "3 pair_green.mp4", croma=True, en="tú eliges, y pagas", dur=3.8, sale=.25, nombre="og trustpilot"),
-    dict(tipo="video", ruta=OG + "packshot-logo_greenscreen.mp4", croma=True, en="El enlace está en la descripción", a=CODIGO,
-         entra=.2, nombre="og logo", ver=2.0),
-    dict(tipo="video", ruta=CREATIVO, desde=33.0, de=CODIGO, a="scene-035", nombre="og CODIGO", ver=3.0),
+    dict(tipo="video", ruta=OGF + "cards-1-coaching_green-screen_wow-forever.mp4", croma=True, en="Tácticas de jefes, mazmorras",
+         dur=4.0, sale=.25, nombre="og coaching"),
+    dict(tipo="video", ruta=OGF + "Reviews_v3_redscreen_march_wow-forever.mp4", croma="rojo", en="tú eliges, y pagas", dur=4.0,
+         sale=.25, nombre="og reseñas"),
+    dict(tipo="video", ruta=OGF + "packshot-text_greenscreen_wow-forever.mp4", croma=True, en="El enlace está en la descripción",
+         a=CODIGO, entra=.2, nombre="og packshot", ver=2.5),
+    dict(tipo="video", ruta=CREATIVO, croma=True, de=CODIGO, a="scene-035", entra=.15, nombre="og CODIGO", ver=3.0),
     # =========================================================== 7 Joana (contadores: lo único con cifras del guion)
     dict(tipo="mg", fn=M.contadores("JOANA · DEL NIVEL 1 AL 60", [
         ("ability_hunter_beastcall", "Días de tiempo jugado (2006)", 4, 0, 1),

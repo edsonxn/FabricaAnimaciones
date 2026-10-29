@@ -133,7 +133,7 @@ ESCENAS = [
         "Es self-play: juegas tú con tu personaje todo el tiempo, y un profesional verificado, a veces de hermandades que pelean primeros del mundo, te guía por voz.",
         "Casi nadie se atasca por ser malo, sino porque nadie le dijo qué estaba haciendo mal, y en Forever el equipo no caduca: los vicios de las primeras semanas se quedan.",
         "Tácticas de jefes, mazmorras nuevas, el plan de equipo antes de las bandas, o duelos y campos de batalla: tú eliges, y pagas solo las horas que necesites.",
-        "El enlace está en la descripción, y por el lanzamiento de Forever el descuento es mayor que el habitual, solo durante un mes.",
+        "El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti.",
         "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
     ]},
     {"id": "c07", "frases": [

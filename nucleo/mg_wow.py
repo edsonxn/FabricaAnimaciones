@@ -1420,3 +1420,415 @@ def expediente(titulo, entradas, veredicto, ancho=1500):
             _sello(im, veredicto[0], M + ancho / 2 + 60, M + h / 2 + 30, dt - marcas[veredicto[1]], ROJO, 46, ang=-8)
         return _salida(im, dt)
     return fn
+
+
+# ------------------------------------------------------------------ 28-oct-2026, `wow_primera_semana` (la semana de Forever)
+_DIAS = ["DOM", "LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB"]
+
+
+def calendario(titulo, dia0, sem0, n, eventos, hoy=None, ancho=1640):
+    """La semana del lanzamiento como calendario (c10/c09/c01). Casillas de día desde `dia0` (número del mes) y `sem0`
+    (0 = DOM) durante `n` días; `hoy` = índice con la etiqueta «HOY» que late. eventos = [(i0, i1, texto, color), ...]: el
+    evento k entra en la marca k; un día suelto (i0 == i1) se ilumina con aro y un ícono que cae; un rango (i0 < i1) se pinta
+    como franja que se extiende de i0 a i1. El texto sale debajo de su franja/día."""
+    T, G = 118, 10
+    w_cal = n * T + (n - 1) * G
+    h = 96 + 30 + T + 40 + len(eventos) * 46 + 30
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, y0 = M + (ancho - w_cal) / 2, M + 120
+        for i in range(n):                             # las casillas entran en cascada
+            u = dt - .1 - i * .04
+            if u <= 0:
+                continue
+            a = 255 * _eo(u / .25)
+            x = x0 + i * (T + G)
+            d.rounded_rectangle((x, y0, x + T, y0 + T), 10, fill=(6, 9, 26, int(a * .92)), outline=(95, 82, 45, int(a)), width=2)
+            _texto(d, (x + T / 2, y0 + 26), _DIAS[(sem0 + i) % 7], fuente("sans", 24), GRIS, "mm", a)
+            _texto(d, (x + T / 2, y0 + 72), str(dia0 + i), fuente("serif", 50), BLANCO, "mm", a)
+        if hoy is not None and dt > .4:
+            x = x0 + hoy * (T + G) + T / 2
+            lat = .85 + .15 * math.sin(dt * 6)
+            _texto(d, (x, y0 - 22), "HOY", fuente("negra", int(28 * lat)), CIAN, "mm")
+        for k, (i0, i1, texto, color) in enumerate(eventos):
+            tk = _mk(marcas, k, .6 + k * 1.4)
+            if dt < tk:
+                continue
+            u = dt - tk
+            xa = x0 + i0 * (T + G)
+            if i1 > i0:                                # franja que crece de i0 a i1
+                xb = xa + ((i1 - i0) * (T + G) + T) * _eo(u / .6)
+                capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                ImageDraw.Draw(capa).rounded_rectangle((xa, y0 + T - 18, xb, y0 + T - 4), 6, fill=tuple(color) + (230,))
+                im.alpha_composite(capa)
+                d = ImageDraw.Draw(im)
+                cx = xa + ((i1 - i0) * (T + G) + T) / 2
+            else:                                      # día suelto: aro que late y destello
+                cx = xa + T / 2
+                g = 4 + 2 * (.5 + .5 * math.sin(dt * 5))
+                d.rounded_rectangle((xa - 4, y0 - 4, xa + T + 4, y0 + T + 4), 13, outline=tuple(color) + (255,), width=int(g))
+                if u < .4:
+                    capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                    ImageDraw.Draw(capa).ellipse((cx - 90, y0 - 30, cx + 90, y0 + T + 30), fill=tuple(color) + (int(160 * (1 - u / .4)),))
+                    im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(16)))
+                    d = ImageDraw.Draw(im)
+            yt = y0 + T + 40 + k * 46
+            cx = min(max(cx, M + 300), M + ancho - 300)
+            _texto(d, (cx, yt), texto[:int(u / .022)], fuente("sans", 32), color, "mm")
+        return _salida(im, dt)
+    return fn
+
+
+def experiencia(titulo, bonos, remate=None, ancho=1500):
+    """Dos barras de experiencia del juego (c06: comida + hoguera + bolsa de dormir). Arriba «sin nada» avanza a paso fijo;
+    abajo «con todo», cuyo ritmo sube con cada bono. bonos = [(ícono, texto), ...]: el bono k entra en la marca k (casilla +
+    texto) y acelera la barra de abajo; remate = (texto, i_marca) en verde cuando la de abajo se adelanta."""
+    W, H = 900, 34
+    h = 96 + 2 * 92 + 40 + 96 + (60 if remate else 10)
+
+    def barra(d, x, y, q, color):
+        d.rounded_rectangle((x - 3, y - 3, x + W + 3, y + H + 3), 6, fill=(0, 0, 0, 255), outline=ORO + (255,), width=2)
+        d.rounded_rectangle((x, y, x + W, y + H), 4, fill=(18, 10, 30, 255))
+        q = min(1.0, q)
+        if W * q >= 10:
+            d.rounded_rectangle((x, y, x + W * q, y + H), 4, fill=color + (255,))
+            d.rectangle((x + 3, y + 3, x + W * q - 3, y + H * .38), fill=tuple(min(255, c + 70) for c in color) + (255,))
+        for k in range(1, 20):                         # las 20 divisiones de la barra de experiencia
+            d.line([(x + W * k / 20, y), (x + W * k / 20, y + H)], fill=(0, 0, 0, 160), width=2)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        bx = M + 400
+        t = [_mk(marcas, i, .6 + i * 1.2) for i in range(len(bonos))]
+        _texto(d, (M + 50, M + 132), "Sin nada", fuente("sans", 32), GRIS, "lm")
+        _texto(d, (M + 50, M + 224), "Con todo", fuente("sans", 32), BLANCO, "lm")
+        v0 = .07
+        q0 = v0 * max(0.0, dt - .3)
+        q1, ritmo = 0.0, v0                            # integra a trozos: cada bono sube el ritmo
+        tt = .3
+        cortes = sorted(x for x in t if x > .3)
+        for k, c in enumerate(cortes + [None]):
+            fin = dt if c is None or c > dt else c
+            if fin > tt:
+                q1 += ritmo * (fin - tt)
+                tt = fin
+            if c is None or c > dt:
+                break
+            ritmo *= 1.6
+        barra(d, bx, M + 116, q0, (140, 60, 200))
+        barra(d, bx, M + 208, q1, (160, 80, 230))
+        if q1 >= 1:                                    # la de abajo llega primero: ¡nivel!
+            _texto(d, (bx + W + 24, M + 224), "¡NIVEL!", fuente("negra", 34), VERDE, "lm", 155 + 100 * math.sin(dt * 7))
+        T = 72
+        xb = M + (ancho - (len(bonos) * (T + 300))) / 2 + 40
+        for k, (ico, txt) in enumerate(bonos):
+            if dt < t[k]:
+                continue
+            u = dt - t[k]
+            x = xb + k * (T + 300)
+            _casilla(im, d, int(x), M + 290, T, ico, u)
+            _texto(d, (x + T + 16, M + 290 + T / 2), txt, fuente("sans", 30), VERDE, "lm", 255 * _eo(u / .3))
+        if remate and len(marcas) > remate[1] and dt >= marcas[remate[1]]:
+            s = _pop(dt - marcas[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 40), remate[0], fuente("negra", max(8, int(44 * s))), VERDE, "mm")
+        return _salida(im, dt)
+    return fn
+
+
+def reglas(titulo, tipos, elegido, candado, faccion=None, ancho=1640):
+    """Los tipos de servidor como puertas (c02). tipos = [(ícono, nombre), ...] entran en las marcas 0..n-1; marca n: se
+    elige `elegido` (índice), los demás se apagan y cae un candado con el sello `candado`; marca n+1 (si hay `faccion` =
+    (ícono_sí, ícono_no, texto)): en el elegido aparecen las dos facciones y la segunda se tacha en rojo con `texto`."""
+    T, G = 220, 40
+    n = len(tipos)
+    w_p = n * T + (n - 1) * G
+    h = 96 + T + 150 + (90 if faccion else 20)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t = [_mk(marcas, i, .5 + i * .9) for i in range(n + 2)]
+        x0, y0 = M + (ancho - w_p) / 2, M + 104
+        elegida = dt >= t[n]
+        for k, (ico, nombre) in enumerate(tipos):
+            if dt < t[k]:
+                continue
+            u = dt - t[k]
+            x = x0 + k * (T + G)
+            apag = elegida and k != elegido
+            s = _pop(u, .3)
+            if s <= .02:
+                continue
+            capa = Image.new("RGBA", (T + 20, T + 70), (0, 0, 0, 0))
+            cd = ImageDraw.Draw(capa)               # la puerta: arco con marco dorado y el ícono del tipo dentro
+            col = (60, 60, 70) if apag else ORO
+            cd.rounded_rectangle((10, 40, T + 10, T + 60), 14, fill=(6, 9, 26, 235), outline=col + (255,), width=4)
+            cd.pieslice((10, 0, T + 10, 90), 180, 360, fill=(6, 9, 26, 235), outline=col + (255,), width=4)
+            ic = icono(ico, 110, apag)
+            capa.alpha_composite(ic, (int(10 + T / 2 - 55), 70))
+            cd.text((10 + T / 2, T + 30), nombre, font=fuente("sans", 26), fill=(GRIS if apag else BLANCO) + (255,), anchor="mm")
+            _pegar(im, capa, x + T / 2, y0 + T / 2 + 30, s, .55 if apag else 1.0)
+            d = ImageDraw.Draw(im)
+        if elegida:                                    # aro en la elegida y candado que cae
+            u = dt - t[n]
+            x = x0 + elegido * (T + G)
+            g = 5 + 2 * (.5 + .5 * math.sin(dt * 5))
+            d.rounded_rectangle((x - 6, y0 + 34, x + T + 26, y0 + T + 96), 16, outline=VERDE + (255,), width=int(g))
+            _sello(im, candado, M + 300, M + h - 64, u - .35, ROJO, 38, ang=-3)
+        if faccion and dt >= t[n + 1]:
+            u = dt - t[n + 1]
+            si, no, texto = faccion
+            x = M + ancho / 2 + 60
+            yf = M + h - 64
+            _pegar(im, icono(si, 70), x - 70, yf, _pop(u, .3))
+            _pegar(im, icono(no, 70, apagado=u > .6), x + 70, yf, _pop(u, .3))
+            d = ImageDraw.Draw(im)
+            if u > .6:
+                k = 40 * _eo((u - .6) / .25)
+                d.line([(x + 70 - k, yf - k), (x + 70 + k, yf + k)], fill=ROJO + (255,), width=9)
+                d.line([(x + 70 + k, yf - k), (x + 70 - k, yf + k)], fill=ROJO + (255,), width=9)
+                _texto(d, (x + 130, yf), texto, fuente("sans", 30), ROJO, "lm", 255 * _eo((u - .6) / .3))
+        return _salida(im, dt)
+    return fn
+
+
+def nombre(titulo, pruebas, ancho=1360):
+    """El campo de nombre y apellido de la creación de personaje (c01). pruebas = [(nombre, apellido, ok, motivo), ...]: la
+    prueba k se teclea en la marca k (0,05 s por letra, con cursor) y al terminar sale ✔ verde u ✖ rojo con `motivo`."""
+    fila = 92
+    h = 96 + len(pruebas) * fila + 36
+    ancho = max(ancho, 1400)
+
+    def campo(d, x, y, w, txt, activo, color):
+        d.rounded_rectangle((x, y, x + w, y + 60), 8, fill=(0, 0, 0, 235), outline=(color if activo else (95, 82, 45)) + (255,), width=3)
+        _texto(d, (x + 18, y + 30), txt, fuente("serif", 34), BLANCO, "lm")
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        for k, (nom, ape, ok, motivo) in enumerate(pruebas):
+            tk = _mk(marcas, k, .5 + k * 1.6)
+            if dt < tk:
+                continue
+            u = dt - tk
+            y = M + 96 + k * fila
+            a = 255 * _eo(u / .25)
+            _texto(d, (M + 34, y + 30), "Nombre", fuente("sans", 22), GRIS, "lm", a)
+            _texto(d, (M + 424, y + 30), "Apellido", fuente("sans", 22), GRIS, "lm", a)
+            ln = int(u / .05)
+            tn, ta = nom[:ln], ape[:max(0, ln - len(nom))]
+            escribiendo = ln < len(nom) + len(ape)
+            cur = "|" if escribiendo and int(dt * 4) % 2 == 0 else ""
+            col = VERDE if ok else ROJO
+            campo(d, M + 140, y, 260, tn + (cur if ln < len(nom) else ""), not escribiendo, col)
+            campo(d, M + 540, y, 300, ta + (cur if ln >= len(nom) else ""), not escribiendo, col)
+            if not escribiendo:
+                v = u - (len(nom) + len(ape)) * .05
+                s = _pop(v, .3)
+                r, cx, cy = 20 * s, M + 885, y + 30          # ✔ / ✖ dibujados (Poppins no trae esos glifos)
+                if ok:
+                    d.line([(cx - r, cy), (cx - r * .3, cy + r * .7), (cx + r, cy - r * .8)], fill=col + (255,), width=8, joint="curve")
+                else:
+                    d.line([(cx - r, cy - r), (cx + r, cy + r)], fill=col + (255,), width=8)
+                    d.line([(cx + r, cy - r), (cx - r, cy + r)], fill=col + (255,), width=8)
+                _texto(d, (M + 925, y + 30), motivo, fuente("sans", 28), col, "lm", 255 * _eo(v / .3))
+        return _salida(im, dt)
+    return fn
+
+
+def relojes(titulo, ciudades, ancho=1640):
+    """La misma hora en varias ciudades (c09). ciudades = [(nombre, hh, mm, nota), ...]: el reloj k entra en la marca k y sus
+    agujas giran desde las 12 hasta su hora; debajo, la hora digital y la nota (p. ej. «jue 5»)."""
+    R = 92
+    n = len(ciudades)
+    paso = (ancho - 120) / n
+    h = 96 + 2 * R + 130
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        for k, (nom, hh, mm, nota) in enumerate(ciudades):
+            tk = _mk(marcas, k, .4 + k * .7)
+            if dt < tk:
+                continue
+            u = dt - tk
+            cx, cy = M + 60 + paso * (k + .5), M + 100 + R
+            capa = Image.new("RGBA", (2 * R + 20, 2 * R + 20), (0, 0, 0, 0))
+            c = ImageDraw.Draw(capa)
+            o = R + 10
+            c.ellipse((10, 10, 10 + 2 * R, 10 + 2 * R), fill=(8, 12, 32, 240), outline=ORO + (255,), width=5)
+            for i in range(12):                        # marcas de las horas
+                a = math.radians(i * 30)
+                r0 = R - (18 if i % 3 == 0 else 11)
+                c.line([(o + r0 * math.sin(a), o - r0 * math.cos(a)), (o + (R - 5) * math.sin(a), o - (R - 5) * math.cos(a))],
+                       fill=ORO_T + (255,), width=4 if i % 3 == 0 else 2)
+            q = _eo(u / .9)                            # las agujas giran hasta la hora
+            am = math.radians(360 * (mm / 60) * q + 360 * 2 * (1 - q))
+            ah = math.radians(30 * ((hh % 12) + mm / 60) * q)
+            c.line([(o, o), (o + R * .52 * math.sin(ah), o - R * .52 * math.cos(ah))], fill=BLANCO + (255,), width=9)
+            c.line([(o, o), (o + R * .78 * math.sin(am), o - R * .78 * math.cos(am))], fill=BLANCO + (255,), width=5)
+            c.ellipse((o - 9, o - 9, o + 9, o + 9), fill=ORO_T + (255,))
+            _pegar(im, capa, cx, cy, _pop(u, .3))
+            d = ImageDraw.Draw(im)
+            a = 255 * _eo((u - .5) / .3)
+            _texto(d, (cx, cy + R + 34), f"{hh:02d}:{mm:02d}", fuente("serif", 44), ORO_T if not nota else VERDE, "mm", a)
+            _texto(d, (cx, cy + R + 80), nom + (f" · {nota}" if nota else ""), fuente("sans", 26), BLANCO, "mm", a)
+        return _salida(im, dt)
+    return fn
+
+
+def capas(titulo, ico_yo, ico_bicho, rotulo, ancho=1500):
+    """Las capas del servidor (c09). Dos planos en perspectiva (CAPA 1 abajo, CAPA 2 arriba) cruzados por la frontera de zona.
+    marca 0: tu personaje (ícono) camina por la CAPA 1 detrás de un bicho · 1: cruza la frontera y salta a la CAPA 2 · 2: el bicho
+    de la CAPA 1 se queda solo y se desvanece con «?» · 3: `rotulo` en rojo."""
+    h = 470
+
+    def plano(d, y, txt, activo):
+        x0, x1, sk = M_ + 120, M_ + ancho - 120, 90
+        col = ORO if activo else (80, 80, 95)
+        d.polygon([(x0 + sk, y), (x1 + sk, y), (x1 - sk, y + 120), (x0 - sk, y + 120)], fill=(10, 16, 44, 220), outline=col + (255,))
+        _texto(d, (x0 - sk + 20, y + 100), txt, fuente("sans", 26), col, "lm")
+
+    M_ = 26
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t = [_mk(marcas, i, .4 + i * 1.3) for i in range(4)]
+        arriba = dt >= t[1] + .5
+        plano(d, M + 110, "CAPA 2", arriba)
+        plano(d, M + 270, "CAPA 1", not arriba)
+        fx = M + ancho / 2 + 40                       # la frontera de zona, en líneas
+        for y in range(int(M + 96), int(M + 400), 22):
+            d.line([(fx, y), (fx, y + 12)], fill=CIAN + (220,), width=3)
+        _texto(d, (fx, M + 86), "frontera de zona", fuente("sans", 22), CIAN, "mm")
+        if dt >= t[0]:                                 # tú y el bicho en la capa 1
+            v = min(1.0, (dt - t[0]) / max(.6, t[1] + .5 - t[0]))
+            xb = M + 330 + 520 * v
+            xy = xb - 110
+            yb, yy = M + 330, M + 330
+            if arriba:
+                u = dt - t[1] - .5
+                xy = fx + 60 + 260 * _eo(u / .8)
+                yy = M + 330 - 160 * _eo(u / .35)
+                xb = fx - 60
+            a_b = 1.0
+            if dt >= t[2]:
+                a_b = 1 - _eo((dt - t[2] - .4) / .5)
+            _pegar(im, icono(ico_bicho, 78), xb, yb, _pop(dt - t[0]), a_b)
+            _pegar(im, icono(ico_yo, 84), xy, yy, _pop(dt - t[0]))
+            d = ImageDraw.Draw(im)
+            if dt >= t[2]:
+                _texto(d, (fx - 60, yb - 70), "?", fuente("negra", 60), ORO_T, "mm", 255 * _eo((dt - t[2]) / .3))
+        if dt >= t[3]:
+            _sello(im, rotulo, M + ancho - 330, M + h - 60, dt - t[3], ROJO, 36, ang=-4)
+        return _salida(im, dt)
+    return fn
+
+
+def botin(titulo, ico_jefe, ico_item, grupo, rotulo, ancho=1500):
+    """El botín azul de una mazmorra (c04). grupo = 5 íconos de clase. marca 0: el jefe y el grupo · 1: cae el objeto (gris) y se
+    vuelve AZUL con destello · 2: cinco copias de su apariencia vuelan, una a cada miembro del grupo, con ✔ · 3: `rotulo` verde."""
+    h, T = 470, 84
+    AZUL = (0, 112, 221)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t = [_mk(marcas, i, .4 + i * 1.2) for i in range(4)]
+        jx, jy = M + ancho / 2, M + 150
+        xs = [M + ancho / 2 + (k - 2) * 230 for k in range(5)]
+        gy = M + 360
+        if dt >= t[0]:
+            _pegar(im, icono(ico_jefe, 100), jx, jy, _pop(dt - t[0]))
+            for k, ic in enumerate(grupo):
+                _pegar(im, icono(ic, T), xs[k], gy, _pop(dt - t[0] - .08 * k))
+            d = ImageDraw.Draw(im)
+        if dt >= t[1]:
+            u = dt - t[1]
+            iy = jy + 60 + 70 * _eo(u / .4)
+            azul = u > .55
+            ic = icono(ico_item, 76, apagado=not azul)
+            if dt < t[2] + .2:
+                _pegar(im, ic, jx, iy, _pop(u, .3))
+                d = ImageDraw.Draw(im)
+                if azul:
+                    d.rounded_rectangle((jx - 42, iy - 42, jx + 42, iy + 42), 8, outline=AZUL + (255,), width=5)
+                    if u < 1.0:
+                        capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                        ImageDraw.Draw(capa).ellipse((jx - 90, iy - 90, jx + 90, iy + 90), fill=AZUL + (int(180 * (1 - (u - .55) / .45)),))
+                        im.alpha_composite(capa.filter(ImageFilter.GaussianBlur(14)))
+                        d = ImageDraw.Draw(im)
+        if dt >= t[2]:
+            for k in range(5):
+                u = (dt - t[2] - .08 * k) / .55
+                if u <= 0:
+                    continue
+                q = _eo(min(1.0, u))
+                x = jx + (xs[k] - jx) * q
+                y = (jy + 130) + (gy - 70 - (jy + 130)) * q
+                _pegar(im, icono(ico_item, 52), x, y)
+                d = ImageDraw.Draw(im)
+                d.rounded_rectangle((x - 28, y - 28, x + 28, y + 28), 6, outline=AZUL + (255,), width=4)
+                if u >= 1:
+                    r, cx, cy = 14, xs[k] + 46, gy + 34
+                    d.line([(cx - r, cy), (cx - r * .3, cy + r * .7), (cx + r, cy - r * .8)], fill=VERDE + (255,), width=6, joint="curve")
+        if dt >= t[3]:
+            s = _pop(dt - t[3], .35)
+            _texto(d, (M + ancho / 2, M + h - 34), rotulo, fuente("negra", max(8, int(40 * s))), VERDE, "mm")
+        return _salida(im, dt)
+    return fn
+
+
+def mudanza(titulo, canal, retrato, caja, sigue, ancho=1640):
+    """Un formato que se muda de canal (anuncio). Izquierda: el canal (`canal`) con la caja `caja` y el medallón `retrato`.
+    marca 0: todo aparece · 1: la caja sale por una flecha punteada hacia un canal nuevo en silueta con «?» · 2: sello «PRONTO» ·
+    3: en el canal se quedan `sigue` = [texto, ...] (cada uno entra con ✔)."""
+    h = 540
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t = [_mk(marcas, i, .4 + i * 1.4) for i in range(4)]
+        lx, rx, cy = M + 300, M + ancho - 300, M + 240
+        if dt >= t[0]:                                 # el canal de siempre
+            a = 255 * _eo((dt - t[0]) / .3)
+            d.rounded_rectangle((lx - 270, cy - 130, lx + 270, cy + 220), 18, fill=(10, 16, 44, int(a * .9)), outline=ORO + (int(a),), width=4)
+            _texto(d, (lx, cy - 98), canal, fuente("serif", 30), ORO_T, "mm", a)
+        u1 = dt - t[1]
+        q = _eo(u1 / 1.0) if u1 > 0 else 0.0
+        bx = lx + (rx - lx) * q                         # la caja con el retrato viaja a la derecha
+        if dt >= t[1]:
+            for i in range(14):
+                x = lx + 150 + i * ((rx - lx - 300) / 14)
+                if x < bx:
+                    d.line([(x, cy + 20), (x + 18, cy + 20)], fill=ORO_T + (200,), width=4)
+            d.polygon([(rx - 170, cy + 4), (rx - 140, cy + 20), (rx - 170, cy + 36)], fill=ORO_T + (int(255 * q),))
+        if dt >= t[1] - .1 or dt >= t[0]:              # el canal nuevo, en silueta
+            a = 255 * _eo((dt - t[1]) / .5) if dt >= t[1] else 0
+            if a > 0:
+                d.rounded_rectangle((rx - 130, cy - 130, rx + 230, cy + 220), 18, fill=(4, 6, 18, int(a * .9)), outline=GRIS + (int(a),), width=4)
+                _texto(d, (rx + 50, cy - 98), "CANAL NUEVO", fuente("serif", 30), BLANCO, "mm", a)
+                lat = .8 + .2 * math.sin(dt * 5)
+                _texto(d, (rx + 50, cy + 40), "?", fuente("negra", int(110 * lat)), GRIS, "mm", a)
+        if dt >= t[0]:
+            x = bx if dt >= t[1] else lx
+            _pegar(im, _medallon(retrato, 62), x, cy + 10, _pop(dt - t[0]))
+            d = ImageDraw.Draw(im)
+            _texto(d, (x, cy + 96), caja, fuente("sans", 26), BLANCO, "mm")
+        if dt >= t[2]:
+            _sello(im, "PRONTO", rx + 50, cy + 180, dt - t[2], VERDE, 40, ang=-6)
+        if dt >= t[3] and q >= 1:
+            for k, s in enumerate(sigue):
+                u = dt - t[3] - .35 * k
+                if u <= 0:
+                    continue
+                y = cy - 30 + k * 52
+                a = 255 * _eo(u / .3)
+                r, cx = 11, lx - 170
+                d.line([(cx - r, y), (cx - r * .3, y + r * .7), (cx + r, y - r * .8)], fill=VERDE + (int(a),), width=5, joint="curve")
+                _texto(d, (cx + 26, y), s, fuente("sans", 30), BLANCO, "lm", a)
+        return _salida(im, dt)
+    return fn

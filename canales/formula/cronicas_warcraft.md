@@ -69,3 +69,12 @@
   Forever; ~14 min (13:34) con Overgear campaña 2 (coaching) tras el n.º 8 y metraje de archivo de 2005-06.
 - Programado mar 3-nov 09:00 CDMX (jBumLmFN600). **A vigilar a los 7 días (10-nov):** vistas vs mediana (~5 100) y % visto vs
   «12 Legendarios». Si supera ×2 con % visto ≥ 45, «jugadores reales» pasa a serie (1 cada 2 semanas: TBC, Wrath, Classic 2019).
+
+## Pendiente para el video del 1-nov-2026 (el usuario, 28-oct-2026): abre la campaña de Overgear y lleva un ANUNCIO
+- Casi al final (antes de la despedida), la voz anuncia que el formato de **historias contadas** (como la de Darrowshire:
+  la niña, Pamela, que sigue esperando a su padre — `wow_darrowshire`) **se muda a otro canal**; que estamos preparando un
+  **gran video de larga duración** con ese formato, y que **pronto daremos noticias del canal** donde se publicará. Sin nombre
+  de canal (todavía no existe). Pegatina/escena de Pamela de apoyo si el guion lo permite.
+- Lleva también ≥ 4 comentarios de agradecimiento repartidos (regla del 28-oct, `docs/estilo_secuencia_yt.md` § 2b).
+- Tema: lista para quien empieza WoW Forever (propuestas del 28-oct: «9 clases de Forever: qué dice de ti la que elijas»
+  ×7,3/×5,1 en la serie «Si juegas X»; «10 errores de novato»; «10 cosas la primera semana»).

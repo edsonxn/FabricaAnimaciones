@@ -100,6 +100,7 @@ sistema viejo: pitch 0, index_rate 0.75, protect 0.5, f0 `rmvpe`. Voces RVC en `
   noviembre: 1, 4, 5, 7 y 9-nov** (5 integraciones). Hecho el mismo día: re-render de los 2 privados (2hdnW7T5dl8,
   Hx0eAoY4szk; los anteriores siguen en privado) y promo en inglés con el creativo nuevo («special discount, for one month
   only» + «ten percent off»), listo para mandar a Overgear.
+- **NUNCA decir «no compres oro» ni hablar mal de la compra de oro/boosts en un video con Overgear (el usuario, 28-oct-2026):** Overgear vende oro y servicios; en `wow_primera_semana` se cambió por datos de la montura. Tono neutro o positivo con el sector.
 - Trato y pagos: Alice Garner (Ansvery, ag@ansvery.agency) en cronicas.warcraft@gmail.com; 75 US$/integración + 20 US$ por
   1 000 vistas (18-sep-2026); factura PayPal con los enlaces de los videos.
 

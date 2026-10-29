@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · 13:34 · programado mar 3-nov-2026 09:00 CDMX (15:00 UTC), víspera de Forever
 - estilo: secuencia_yt (gameplay por beat + apoyos + pegatinas + MG nuevos + mapas si hay ruta + Overgear campaña 2) → doc: docs/estilo_secuencia_yt.md
-- etapa: ✅ SUBIDO y PROGRAMADO mar 3-nov-2026 09:00 CDMX (jBumLmFN600) · miniatura + .srt
+- etapa: ✅ RESUBIDO (28-oct, promo Overgear kit Forever) y PROGRAMADO mar 3-nov-2026 09:00 CDMX (8okTILCdn-o) · miniatura + .srt; jBumLmFN600 en privado sin fecha
 - siguiente: (MASTER aprobado por el usuario el 27-oct, se queda programado) Studio: monetización + video relacionado; medir a los 7 días (10-nov) contra «12 Legendarios» (×2,54); luego `limpiar`
 
 ## Sesiones (plan de tramos · «continúa el video jugadores rompieron» retoma aquí · protocolo docs/sesiones.md)
@@ -15,6 +15,7 @@
 | 2 | voz Applio + seleccionar + tiempo + beats + busquedas.json | ✅ 27-oct | 123/123 (43 con CER_MAX_POR_FRASE por nombres; «WoW» en FONETICA = «World of Warcraft»); 793,1 s + 20,6 final ≈ 13:34; 92 beats; 19 fijados con url (Onyxia Wipe, Kazzak en Ventormenta, Reckoning, gong de Medivh, RIdPEF, Joana); scene-008 con el audio real de Dives |
 | 3 | bajar clips + revisar hojas `medios` | ✅ 27-oct | 92/92; 14 beats con metraje de ARCHIVO < 720p (Kazzak en Ventormenta, gong de Medivh, Hyjal, Joana, video original de Karmerr) hechos a mano como ventana con marco dorado sobre su propio fondo desenfocado (`medios/_archivo/`, NO `--rehacer`); 29 rehechos en la 1.ª vuelta + 5 en la 2.ª + 2 en la 3.ª; scene-031 = screencast de la web de coaching |
 | 4 | apoyos + pegatinas + MG nuevos + Overgear (`fx hoja`) | ✅ 27-oct | efectos.py: 48 FX + 5 rótulos + 13 apoyos; MG nuevos `reckoning`, `inmortal`, `expediente` en nucleo/mg_wow.py; 3 mapas (RIdPEF, Kazzak, gong) |
+| 6 | Promo actualizada (el usuario, 28-oct): kit «WoW - Forever (nov)» + creativo CRONICAS10_forever; overgear_5 sin «descuento mayor»; voz → reajustar → scene-034 rebajado (misma fuente) → fx → mezcla → render → final → verificar → resubir | ✅ 28-oct | 8okTILCdn-o, programado 3-nov; CER como el 27-oct; respaldo en `_respaldo_promo_vieja/` |
 | 5 | OST de WoW → mezcla → render → final → verificar → avisar → miniatura → subir y programar | ✅ 27-oct | OST: Orgrimmar, Forjaz, Cima del Trueno, Darnassus, Ahn'Qiraj, Entrañas (`musica_wow.py`; `aparta` −14 dB en scene-008) + música promo en Overgear; mezcla −14,09 LUFS, voz/música 14,3 dB; miniatura Flow v1 (Kazzak en Ventormenta, «10 LO ROMPIERON»); youtube.json listo; render 25 min; MASTER 13:34; blackdetect: 4 negros breves de origen (0:11 0,5 s · 8:09 0,23 s · 9:10 0,33 s · 10:37 0,4 s) + mapa del mundo abierto en el clip 042 (6:00), aceptados por el usuario (27-oct); subido jBumLmFN600 |
 
 ## Decisiones del episodio (el usuario, 27-oct-2026)
@@ -30,7 +31,7 @@
 - `nuevo --yt` + `canales --actualizar` (27-oct)
 
 ## Pendiente del usuario
-- % del descuento y creativo personalizado de la campaña 2: se usa CRONICAS10 al 10 % y el creativo viejo hasta que lleguen
+- Studio: monetización de 8okTILCdn-o
 
 ## Cómo retomar (comandos)
 ```

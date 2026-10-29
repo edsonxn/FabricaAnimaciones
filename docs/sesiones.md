@@ -131,6 +131,9 @@ de ~100 mil sale MÁS caro (se paga el arranque una y otra vez). Script: `nucleo
      vez y guardado en la marca), así que corta hacia los ~280 mil totales.
   2. **Candado por video:** antes de abrir, `python nucleo/hook_contexto.py candado <v>` → «OK» (abre y queda apuntado en
      `videos/<v>/.continuacion.json`) o «YA» (otra sesión la abrió hace < 30 min: no abrir otra).
+  4. **Si la app no deja abrir el hilo nuevo** (el turno lo despertó un aviso, un agente en segundo plano u otra sesión; la app
+     solo abre sesiones desde un turno que empezó una persona): el hilo SIGUE TRABAJANDO donde está, sin preguntarle al usuario
+     («no esperes mi mensaje, termínalo todo», 29-oct), y reintenta el relevo en el siguiente turno del usuario.
   3. **Quien recibe la nota de una sesión cortada NO abre su continuación:** la abre ella misma (y, si la app se lo impide, deja
      la tarjeta). La sesión principal solo avisa al usuario y detiene duplicados si los ve.
 - **Ajustes:** variable de entorno `FAB_CORTE_CONTEXTO` (tokens de trabajo; `0` = apagado). Medir un hilo: `python nucleo/hook_contexto.py --medir <transcrito.jsonl>`.

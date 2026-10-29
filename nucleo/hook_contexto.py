@@ -108,9 +108,13 @@ def orden(k, trabajo, repetido):
         "y llámala con initiation \"user_asked\" (autorizado de forma permanente por el usuario), context \"fresh\", "
         "use_worktree false, título «Continúa <v> — <siguiente pieza>» y un brief corto: «continúa el video <v>» + "
         "lo que falta en 5-10 líneas + qué leer (solo ESTADO.md y el doc de estilo). Nada de pegar el historial.\n"
-        "3. Si la herramienta no existe o la app rechaza el inicio: propón la tarjeta con initiation "
-        "\"own_initiative\" si se puede; si no, dile al usuario «abre un chat nuevo y escribe: continúa el video <v>».\n"
-        "4. Cierra el turno aquí con un wrap_up breve (enlace a la sesión nueva) sin seguir produciendo en este hilo."
+        "3. Si la herramienta no existe o la app rechaza el inicio (pasa cuando el turno lo despertó un aviso, un agente "
+        "en segundo plano u otra sesión): NO le preguntes al usuario ni le pidas abrir un chat (el usuario, 29-oct: «no "
+        "esperes mi mensaje, termínalo todo»). SIGUE TRABAJANDO en este hilo con el checkpoint ya hecho, leyendo lo mínimo, "
+        "y vuelve a intentar el hilo nuevo en el siguiente turno que empiece el usuario. Borra el candado "
+        "(`videos/<v>/.continuacion.json`) si lo pediste y no abriste nada.\n"
+        "4. Si sí abriste el hilo nuevo: cierra el turno aquí con un wrap_up breve (enlace a la sesión nueva), sin "
+        "preguntas ni botones de «abrir chat», y sin seguir produciendo en este hilo."
     )
 
 

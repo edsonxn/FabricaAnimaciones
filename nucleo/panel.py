@@ -926,7 +926,7 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
     return dict(
         nombre=nombre, titulo=g.get("TITULO") or nombre, archivo=archivo, estilo=g.get("ESTILO_VISUAL", ""),
         formato=g.get("FORMATO", "horizontal"), duracion=total or g.get("DURACION"), frases=frases,
-        escenas=len(escenas), progreso=prog_total, etapa_actual=en_curso, etapas=E, actividad=actividad,
+        escenas=len(escenas), progreso=prog_total, etapa_actual=en_curso, etapas=E, actividad=actividad, editado=editado,
         log=dict(archivo=log_nombre, lineas=log_lineas), miniaturas=fotos, hojas=hojas,
         master=os.path.basename(master) if master else None, publicado=bool(p), oculto=bool(meta.get("oculto", bool(p))),   # lo que ya está en YouTube nace oculto (salvo `"oculto": false`)
  archivado=bool(meta.get("archivado")), reemplazado_por=meta.get("reemplazado_por"),
@@ -1064,6 +1064,10 @@ def ocultar_proyecto(nombre, oculto):
         _est["t"] = 0.0              # que el siguiente estado ya lo refleje
     return dict(video=nombre, oculto=bool(oculto))
 
+    try:                                             # «editado»: solo archivos del proyecto (guion.py, ESTADO.md, efectos…); borrar o limpiar carpetas no cuenta
+        editado = max([mt(e.path) for e in os.scandir(car) if e.is_file() and e.name != "panel.json"] or [0.0])
+    except OSError:
+        editado = 0.0
 
 def estado_completo():
     d = dict(estado_cache())

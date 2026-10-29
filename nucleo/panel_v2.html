@@ -523,11 +523,16 @@ const ICO={listo:"✓",en_curso:"●",parcial:"◐",atencion:"!",omitido:"–",p
 const CMD={beats:"python fab.py {v} beats",prompts:"python fab.py {v} prompts",flow:"python fab.py {v} servir  (y lanzar el lote en Flow)",guion:"editar videos/{v}/guion.py",voz:"python fab.py {v} voz",
   seleccion:"python fab.py {v} seleccionar",tiempo:"python fab.py {v} tiempo",escenas:"python fab.py {v} comprobar",musica:"python fab.py {v} musica",sfx:"python fab.py {v} sfx",mezcla:"python fab.py {v} mezcla",
   video:"python fab.py {v} video",final:"python fab.py {v} final",verificar:"python fab.py {v} verificar",miniatura:"python fab.py {v} miniatura",metadatos:"escribir videos/{v}/youtube.json",subida:"python fab.py yt subir {v} <canal> private"};
-const FILTROS=[["todos","Todos"],["curso","En curso"],["pend","Sin terminar"],["listos","Terminados"],["ocultos","Ocultos"]];
+const FILTROS=[["trabajo","En trabajo"],["activos","Activos"],["pend","Sin terminar"],["listos","Terminados"],["todos","Todos"],["ocultos","Ocultos"]];
+// «Activos» = algo corriendo (voz, render, Flow…) o un archivo del proyecto editado en las últimas 2 h; sale aunque esté oculto (p. ej. re-editar un video ya subido)
+const ACTIVO_S=2*3600, activo=p=>!!p.etapa_actual||Date.now()/1e3-(p.editado||0)<ACTIVO_S;
+const visible=p=>!p.oculto||activo(p);                                  // lo oculto vuelve a la lista mientras tenga trabajo vivo
+const FILTRA={trabajo:p=>activo(p)||!p.oculto&&p.progreso<1,activos:activo,   // «En trabajo» (por defecto) = activos + sin terminar; los activos van primero
+pend:p=>visible(p)&&!activo(p)&&p.progreso<1,listos:p=>visible(p)&&!activo(p)&&p.progreso>=1,todos:visible,ocultos:p=>p.oculto};
 const SIN_ESTILO="(sin estilo)";
 
 // ====================================================== estado
-const S={D:null,SIS:null,POR:{},GAL:null,rec:{},abiertos:new Set(LS.get("v2ab",[])),filtro:LS.get("v2f","todos"),fCanal:LS.get("v2fc",""),fEstilo:LS.get("v2fe",""),q:"",
+const S={D:null,SIS:null,POR:{},GAL:null,rec:{},abiertos:new Set(LS.get("v2ab",[])),filtro:({curso:"trabajo",todos:"trabajo"})[LS.get("v2f","trabajo")]||LS.get("v2f","trabajo"),fCanal:LS.get("v2fc",""),fEstilo:LS.get("v2fe",""),q:"",
   verEst:LS.get("v2est",false),rueda:LS.get("v2rueda","zoom"),sel:null,mas:{},orden:null,cajas:[],lim:{x:0,y:0,w:1000,h:800},hist:{cpu:[],ram:[],gpu:[],vram:[]},
   ultimo:0,sinClic:false,caja:null,volarA:null,firmaSel:"",ultimaAv:Date.now()/1000,ocultoLocal:{},plegados:new Set(LS.get("v2pleg",[]))};
 const PRIMERA_VEZ=!LS.get("v2vista",null), V=Object.assign({x:80,y:60,z:.55},LS.get("v2vista",{}));
@@ -679,11 +684,7 @@ function nitidez(){
 function filtrados(){
   const D=S.D;if(!D)return [];
   const sel=D.proyectos.filter(p=>(!S.fCanal||(p.canal||"experimento")===S.fCanal)&&(!S.fEstilo||(p.estilo||SIN_ESTILO)===S.fEstilo));
-  let ps=S.filtro==="ocultos"?sel.filter(p=>p.oculto):sel.filter(p=>!p.oculto);
-  if(S.filtro==="curso")ps=ps.filter(p=>p.etapa_actual);
-  if(S.filtro==="pend")ps=ps.filter(p=>p.progreso<1);
-  if(S.filtro==="listos")ps=ps.filter(p=>p.progreso>=1);
-  return ps;
+  return sel.filter(FILTRA[S.filtro]||visible);
 }
 function carriles(ps){
   const m=new Map(),rango=p=>p.etapa_actual?0:(p.progreso<1?1:2);
@@ -1125,7 +1126,7 @@ window.addEventListener("message",e=>{if(e.data&&e.data.fab==="cerrar")cerrarEmb
 
 // ====================================================== barra lateral
 function pintaSelects(){
-  const todos=S.D.proyectos.filter(p=>!p.suspendido||S.filtro==="ocultos"),vis=p=>!!p.oculto===(S.filtro==="ocultos");
+  const todos=S.D.proyectos.filter(p=>!p.suspendido||S.filtro==="ocultos"||activo(p)),vis=FILTRA[S.filtro]||visible;
   const cuenta=(f,y)=>{const m=new Map();todos.forEach(p=>{const k=f(p);m.set(k,(m.get(k)||0)+(vis(p)&&y(p)?1:0));});return m;};
   const cs=cuenta(p=>p.canal||"experimento",p=>!S.fEstilo||(p.estilo||SIN_ESTILO)===S.fEstilo),es=cuenta(p=>p.estilo||SIN_ESTILO,p=>!S.fCanal||(p.canal||"experimento")===S.fCanal);
   const nom={};todos.forEach(p=>{nom[p.canal||"experimento"]=p.canal_nombre||p.canal;});
@@ -1140,9 +1141,9 @@ function pintaSelects(){
 function pintarLado(){
   if(!S.D)return;
   pintaSelects();
-  const sel=S.D.proyectos.filter(p=>(!S.fCanal||(p.canal||"experimento")===S.fCanal)&&(!S.fEstilo||(p.estilo||SIN_ESTILO)===S.fEstilo)),base=sel.filter(p=>!p.oculto);
-  $("#filtros").innerHTML=FILTROS.map(([k,n])=>`<button data-f="${k}" class="${k===S.filtro?"on":""}">${n}${k==="ocultos"?` (${sel.filter(p=>p.oculto).length})`:""}</button>`).join("");
-  $("#kpis").innerHTML=`<div><span class="k">Videos</span><b>${base.length}</b></div><div><span class="k">En curso</span><b style="color:var(--run)">${base.filter(p=>p.etapa_actual).length}</b></div><div><span class="k">Listos</span><b style="color:var(--ok)">${base.filter(p=>p.progreso>=1).length}</b></div>`;
+  const sel=S.D.proyectos.filter(p=>(!S.fCanal||(p.canal||"experimento")===S.fCanal)&&(!S.fEstilo||(p.estilo||SIN_ESTILO)===S.fEstilo)),cu=k=>sel.filter(FILTRA[k]).length;
+  $("#filtros").innerHTML=FILTROS.map(([k,n])=>`<button data-f="${k}" class="${k===S.filtro?"on":""}">${n} (${cu(k)})</button>`).join("");
+  $("#kpis").innerHTML=`<div><span class="k">Activos</span><b style="color:var(--run)">${cu("activos")}</b></div><div><span class="k">Sin terminar</span><b style="color:var(--warn)">${cu("pend")}</b></div><div><span class="k">Listos</span><b style="color:var(--ok)">${cu("listos")}</b></div>`;
   const ns=(S.orden||[]).filter(l=>l.id!=="__est").flatMap(l=>l.ns),q=S.q;
   const filas=ns.map(porNombre).filter(p=>p&&(!q||(p.nombre+" "+p.titulo).toLowerCase().includes(q))).map(p=>{
     const run=!!p.etapa_actual,et=run?((S.D.etapas.find(x=>x.id===p.etapa_actual)||{}).nombre||p.etapa_actual):"";

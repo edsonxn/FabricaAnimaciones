@@ -328,7 +328,12 @@ h1 small{display:block;font-size:12.5px;font-weight:500;color:var(--mut);letter-
   </div>
 </div>
 <script>
-const FILTROS=[["todos","Todos"],["curso","En curso"],["pend","Sin terminar"],["listos","Terminados"],["ocultos","Ocultos"]];
+const FILTROS=[["trabajo","En trabajo"],["activos","Activos"],["pend","Sin terminar"],["listos","Terminados"],["todos","Todos"],["ocultos","Ocultos"]];
+// «Activos» = algo corriendo (voz, render, Flow…) o un archivo del proyecto editado en las últimas 2 h; sale aunque esté oculto (p. ej. re-editar un video ya subido)
+const ACTIVO_S=2*3600, activo=p=>!!p.etapa_actual||Date.now()/1e3-(p.editado||0)<ACTIVO_S;
+const visible=p=>!p.oculto||activo(p);
+const FILTRA={trabajo:p=>activo(p)||!p.oculto&&p.progreso<1,activos:activo,   // «En trabajo» (por defecto) = activos + sin terminar; los activos van primero
+pend:p=>visible(p)&&!activo(p)&&p.progreso<1,listos:p=>visible(p)&&!activo(p)&&p.progreso>=1,todos:visible,ocultos:p=>p.oculto};
 const CMD={beats:"python fab.py {v} beats",prompts:"python fab.py {v} prompts",flow:"python fab.py {v} servir  (y lanzar el lote en Flow)",guion:"editar videos/{v}/guion.py",voz:"python fab.py {v} voz",seleccion:"python fab.py {v} seleccionar",
   tiempo:"python fab.py {v} tiempo",escenas:"python fab.py {v} comprobar",musica:"python fab.py {v} musica",
   sfx:"python fab.py {v} sfx",mezcla:"python fab.py {v} mezcla",video:"python fab.py {v} video",
@@ -350,7 +355,7 @@ function pintaSelects(todos,vis){           // opciones de todos los proyectos, 
   e.innerHTML=`<option value="">Todos los estilos</option>`+oe.map(([k,n])=>op(k,k,n,k===fEstilo)).join("");
   c.classList.toggle("on",!!fCanal); e.classList.toggle("on",!!fEstilo);
 }
-let firmaPrev='',ultimoPinta=0,D=null, filtro=localStorage.getItem("f")||"todos", abiertos=new Set(JSON.parse(localStorage.getItem("ab")||"[]")), ultimo=0;
+let firmaPrev='',ultimoPinta=0,D=null, filtro=({curso:"trabajo",todos:"trabajo"})[localStorage.getItem("f")]||localStorage.getItem("f")||"trabajo", abiertos=new Set(JSON.parse(localStorage.getItem("ab")||"[]")), ultimo=0;
 
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mmss=s=>{s=Math.round(s);return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")};
@@ -548,16 +553,11 @@ function ordenar(ps){
 function pinta(){
   if(!D)return;
   const q=document.getElementById("q").value.trim().toLowerCase();
-  pintaSelects(D.proyectos,p=>!!p.oculto===(filtro==="ocultos"));
+  const vis=FILTRA[filtro]||visible;
+  pintaSelects(D.proyectos.filter(p=>!p.suspendido||filtro==="ocultos"||activo(p)),vis);   // canal suspendido: fuera del desplegable salvo en «Ocultos» o con trabajo vivo
   const sel=D.proyectos.filter(p=>(!fCanal||(p.canal||"experimento")===fCanal)&&(!fEstilo||estiloDe(p)===fEstilo));   // canal y estilo acotan también los contadores
-  const nOcultos=sel.filter(p=>p.oculto).length;
-  const base=sel.filter(p=>!p.oculto);                 // los ocultos solo salen con el filtro «Ocultos»
-  let ps=filtro==="ocultos"?sel.filter(p=>p.oculto):base;
-  const nRun=base.filter(p=>p.etapa_actual).length, nDone=base.filter(p=>p.progreso>=1).length;
-  ps=ps.filter(p=>!q||(p.nombre+" "+p.titulo).toLowerCase().includes(q));
-  if(filtro==="curso")ps=ps.filter(p=>p.etapa_actual);
-  if(filtro==="pend")ps=ps.filter(p=>p.progreso<1);
-  if(filtro==="listos")ps=ps.filter(p=>p.progreso>=1);
+  const cu=k=>sel.filter(FILTRA[k]).length, base=sel.filter(visible);
+  const ps=sel.filter(vis).filter(p=>!q||(p.nombre+" "+p.titulo).toLowerCase().includes(q));
   const s=D.sistema, g=s.gpu;
   document.getElementById("sys").innerHTML=
     `<div class="chip"><span class="pulse ${Date.now()/1000-D.generado>15?"off":""}" id="pulso"></span><span id="edad">${edadTxt()}</span></div>`+
@@ -567,10 +567,10 @@ function pinta(){
   document.getElementById("avisos").innerHTML=avisosHTML();
   document.getElementById("resumen").innerHTML=
     `<div class="kpi"><span>Proyectos</span><b>${base.length}</b></div>`+
-    `<div class="kpi"><span>En curso</span><b style="color:var(--run)">${nRun}</b></div>`+
-    `<div class="kpi"><span>Terminados</span><b style="color:var(--ok)">${nDone}</b></div>`+
-    `<div class="kpi"><span>Sin terminar</span><b style="color:var(--warn)">${base.length-nDone}</b></div>`;
-  document.getElementById("filtros").innerHTML=FILTROS.map(([k,n])=>`<button data-f="${k}" class="${k===filtro?"on":""}">${n}${k==="ocultos"?` (${nOcultos})`:""}</button>`).join("");
+    `<div class="kpi"><span>Activos</span><b style="color:var(--run)">${cu("activos")}</b></div>`+
+    `<div class="kpi"><span>Terminados</span><b style="color:var(--ok)">${cu("listos")}</b></div>`+
+    `<div class="kpi"><span>Sin terminar</span><b style="color:var(--warn)">${cu("pend")}</b></div>`;
+  document.getElementById("filtros").innerHTML=FILTROS.map(([k,n])=>`<button data-f="${k}" class="${k===filtro?"on":""}">${n} (${cu(k)})</button>`).join("");
   const sc={};document.querySelectorAll(".rnd-esc").forEach(el=>{sc[el.dataset.n]=el.scrollTop;});
   document.getElementById("lista").innerHTML=ps.length?ordenar(ps).map(tarjeta).join(""):`<div class="vacio">No hay proyectos que coincidan.</div>`;
   document.querySelectorAll(".rnd-esc").forEach(el=>{                // la lista de escenas conserva su desplazamiento; si no la tocaste, sigue a la escena que se dibuja

@@ -47,3 +47,11 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
   fórmula, ×0,26) y la Voluntad Mayor (sin cara). Gancho nuevo: «la número uno es una amenaza. Contra ti».
 - Comparar a los 7 días con Ranni (mismo gancho, 12 min) y Miquella/Malenia (misma duración): vistas, % visto y min por vista. Primer video con la MÚSICA OFICIAL del juego
   (OST, sin Lyria: regla del usuario del 23-oct). Comparar a los 7 días con Miquella (misma duración): vistas, % visto, y si hubo reclamo de Content ID.
+
+## «Las 5 peores atrocidades de Radahn QUE IGNORASTE» (`er_radahn_atrocidades`, 28/29-oct-2026, elegido por el usuario)
+- Tema pedido en los comentarios (@zoharysakiyamablue471 ♥4 «el día que publiques las atrocidades de Radahn…», @ConkerLord22 pide
+  Radahn y Morgott → Morgott queda como candidato). Variable cambiada: el SUJETO → Radahn (el jefe más querido) y la duración (el
+  usuario pidió ≥ 22 min: 24:38 con la pantalla final). Primer video que ENSEÑA comentarios reales (gancho, Dinobot como teoría,
+  5 de agradecimiento) y que corrige en voz la queja de pronunciación («Micuela» → «Miquela»).
+- Subido el 29-oct-2026 (https://youtu.be/Uuj8Bw45-fs), programado jue 5-nov 10:00 CDMX (96 h tras Melina).
+- Comparar a los 7 días con Miquella/Melina (~20 min) y Ranni: vistas, % visto (¿aguanta 24 min?), y si bajan las quejas de la voz.

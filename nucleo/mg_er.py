@@ -33,6 +33,12 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   ecos(lineas, firma, revela)                    citas que se escriben con el Círculo de Elden girando; la firma se tacha
   arbol_arde(etapas)                             el Árbol Áureo por código: la llama llega, trepa, la copa arde, llueve ceniza
   muerte_suelta(nombres, remate)                 Runa de la Muerte presa en eslabones que saltan; ondas que tachan a todos
+  lanzas(bando, centro, tu)                      las lanzas del enemigo se clavan en el león rojo y vuelven contra ti como
+                                                 flechas de gravedad (er_radahn_atrocidades, 28-oct-2026)
+  cielo_sujeto(atados, quien, remate)            cielo quieto: hilos de gravedad atan estrellas (destinos) a `quien`; al caer
+                                                 se rompen, el cielo gira y cae una estrella
+  balanza(izq, der, pesos, remate)               balanza de pruebas que se inclina por marca; al final vuelve al centro
+  espejo(padre, hijo, papel_padre, papel_hijo, idolo)   el padre y el hijo acaban en el mismo papel; el ídolo se tacha
 """
 import math
 
@@ -1258,5 +1264,263 @@ def muerte_suelta(nombres, titulo="La Runa de la Muerte", remate="Indiscriminada
             _texto(ImageDraw.Draw(t2), (cx, M + h - 46), remate.upper(), fr, (210, 46, 56), "mm", 255 * _eo((u2 - .5) * 2),
                    track=8, sombra=False)
             im.alpha_composite(_brillo(t2, 12, 1.8))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+# ------------------------------------------------------------------ er_radahn_atrocidades (28-oct-2026)
+def _lanza(d, x0, y0, x1, y1, color, a, ancho=5):
+    """Asta de (x0,y0) a la punta (x1,y1), con punta triangular."""
+    if a <= 0:
+        return
+    d.line([(x0, y0), (x1, y1)], fill=color + (int(a),), width=ancho)
+    ang = math.atan2(y1 - y0, x1 - x0)
+    d.polygon([(x1 + math.cos(ang) * 22, y1 + math.sin(ang) * 22),
+               (x1 + math.cos(ang + 2.5) * 13, y1 + math.sin(ang + 2.5) * 13),
+               (x1 + math.cos(ang - 2.5) * 13, y1 + math.sin(ang - 2.5) * 13)], fill=color + (int(a),))
+
+
+def lanzas(bando="Caballeros de Malenia", centro="Radahn", tu="Tú", titulo="Las lanzas del festival", n=7, w=1500, h=640):
+    """Marca 0: las lanzas de `bando` (izquierda, plata) vuelan y se clavan en el león rojo del centro · marca 1: salen
+    girando en rojo, con halo violeta de gravedad, y vuelan hacia `tu` (derecha) como flechas."""
+    ftit, fn_, fs = fuente("r", 40), fuente("r", 44), fuente("i", 34)
+    rng = np.random.default_rng(3)
+    angs = [(-.55 + 1.1 * k / (n - 1)) + float(rng.normal(0, .05)) for k in range(n)]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 3
+        im, M = _panel(w, h)
+        a0 = 255 * _eo(dt / .4)
+        cx, cy = M + w * .5, M + h * .56
+        ox, tx = M + 150, M + w - 150
+        u0, u1 = dt - mk[0], dt - mk[1]
+        cap = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dc = ImageDraw.Draw(cap)
+        lat = 1 + .03 * math.sin(dt * 2.4)
+        for k in range(40):                                           # la melena roja del león
+            t = 2 * math.pi * k / 40
+            r0, r1 = 78 * lat, (118 + 14 * math.sin(k * 1.7 + dt * 3)) * lat
+            dc.line([(cx + math.cos(t) * r0, cy + math.sin(t) * r0), (cx + math.cos(t) * r1, cy + math.sin(t) * r1)],
+                    fill=(196, 58, 36, int(a0 * .9)), width=6)
+        dc.ellipse((cx - 80, cy - 80, cx + 80, cy + 80), fill=(24, 18, 14, int(a0)), outline=ORO + (int(a0),), width=3)
+        im.alpha_composite(_brillo(cap, 14, 1.2))
+        lz = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dl = ImageDraw.Draw(lz)
+        for k, ang in enumerate(angs):
+            lag = k * .12
+            v0 = _eo((u0 - lag) / .55)
+            if v0 <= 0:
+                continue
+            px, py = cx - math.cos(ang) * 92, cy + math.sin(ang) * 92           # punta clavada
+            bx, by = px - math.cos(ang) * 210, py + math.sin(ang) * 210         # cola
+            sx, sy = ox - 40, cy + math.sin(ang) * 260                           # de dónde sale
+            v1 = _eo((u1 - lag * .6) / .9)
+            if v1 <= 0:
+                x1, y1 = sx + (px - sx) * v0, sy + (py - sy) * v0
+                _lanza(dl, x1 - (px - bx), y1 - (py - by), x1, y1, (200, 204, 212), a0 * min(1, v0 * 2))
+            else:
+                gx, gy = tx - 40, cy + (k - (n - 1) / 2) * 34
+                hx, hy = cx + math.cos(ang) * 120, cy - math.sin(ang) * 70
+                x1, y1 = hx + (gx - hx) * v1, hy + (gy - hy) * v1
+                ang2 = math.atan2(y1 - cy, x1 - (cx - 200))
+                _lanza(dl, x1 - math.cos(ang2) * 200, y1 - math.sin(ang2) * 200, x1, y1, (214, 70, 50),
+                       a0 * (1 - .7 * max(0, v1 - .85) / .15))
+        if u1 > 0:
+            ha = np.array(lz.filter(ImageFilter.GaussianBlur(9)))
+            ha[..., :3] = (150, 90, 230)
+            im.alpha_composite(Image.fromarray(ha))
+        im.alpha_composite(lz)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        _texto(d, (cx, cy + 150), centro, fn_, ORO, "mt", a0)
+        ua, ub = _eo(u0 / .5), _eo(u1 / .5)
+        if ua > 0:
+            _texto(d, (ox + 60, M + h - 60), bando, fs, (200, 204, 212), "mm", 255 * ua)
+        if ub > 0:
+            _texto(d, (tx - 60, M + h - 60), "Ahora, flechas contra ti", fs, (214, 70, 50), "mm", 255 * ub)
+            _nodo(d, tx, cy, tu, None, PERGAMINO, 255 * ub, fn_, fs)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def cielo_sujeto(atados, quien="Radahn", remate="Las estrellas vuelven a moverse", titulo="El cielo sujeto", w=1500, h=700):
+    """Cielo de estrellas QUIETO. Cada marca ata con un hilo violeta de gravedad a `quien` (abajo) una estrella con su
+    etiqueta (lo que su victoria congeló). Marca len(atados): `quien` se tacha, los hilos se rompen en rojo, el cielo empieza
+    a girar y cae una estrella grande con estela; sale `remate`."""
+    ftit, fe, fq, fr = fuente("r", 40), fuente("r", 36), fuente("r", 46), fuente("i", 46)
+    rng = np.random.default_rng(11)
+    fondo = [(float(rng.random()), float(rng.random()) * .72, float(.6 + rng.random() * 1.6), float(rng.random() * 6.28))
+             for _ in range(160)]
+    n = len(atados)
+    pos = [(.17 + .66 * (i / max(1, n - 1)), .26 + .10 * (i % 2)) for i in range(n)]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        a0 = 255 * _eo(dt / .4)
+        fin = dt - mk[n]
+        suelta = _eo(fin / 1.0)
+        giro = fin ** 1.6 * .05 if fin > 0 else 0.0
+        qx, qy = M + w / 2, M + h - 130
+        cx0, cy0 = M + w / 2, M + h * .95
+        st = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        ds = ImageDraw.Draw(st)
+        for x, y, r, f in fondo:
+            px, py = M + 40 + x * (w - 80), M + 110 + y * (h - 200)
+            if giro:
+                ang = giro * (1.2 - y)
+                dx, dy = px - cx0, py - cy0
+                px, py = cx0 + dx * math.cos(ang) - dy * math.sin(ang), cy0 + dx * math.sin(ang) + dy * math.cos(ang)
+            if M + 90 < py < M + h - 30 and M + 20 < px < M + w - 20:
+                ds.ellipse((px - r, py - r, px + r, py + r), fill=(230, 226, 240, int(a0 * (.45 + .3 * math.sin(dt * 1.3 + f)))))
+        im.alpha_composite(st)
+        hl = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dh = ImageDraw.Draw(hl)
+        for i in range(n):
+            u = _eo((dt - mk[i]) / .7)
+            if u <= 0:
+                continue
+            sx, sy = M + pos[i][0] * w, M + pos[i][1] * h + 40
+            col = tuple(int((170, 120, 250)[c] * (1 - suelta) + ROJO[c] * suelta) for c in range(3))
+            al = 255 * u * (1 - suelta)
+            if al > 2:
+                for j in range(3):                                     # hilo tenso que vibra
+                    off = math.sin(dt * 9 + i + j) * 2
+                    _linea(dh, (qx + off, qy - 30), (sx + off, sy), u, col, al * (.6 if j else 1), 3 if j == 0 else 1)
+            r = 13 + 2 * math.sin(dt * 2 + i)
+            dh.ellipse((sx - r, sy - r, sx + r, sy + r), fill=(250, 244, 255, int(255 * u)))
+        im.alpha_composite(_brillo(hl, 10, 1.6))
+        d = ImageDraw.Draw(im)
+        for i, s in enumerate(atados):
+            u = _eo((dt - mk[i]) / .7)
+            if u > 0:
+                sx, sy = M + pos[i][0] * w, M + pos[i][1] * h + 40
+                _texto(d, (sx, sy - 30), s, fe, PERGAMINO, "mb", 255 * u)
+        cq = tuple(int(ORO[c] * (1 - suelta) + 90 * suelta) for c in range(3))
+        d.ellipse((qx - 26, qy - 26, qx + 26, qy + 26), fill=(20, 14, 10, int(a0)), outline=cq + (int(a0),), width=4)
+        _texto(d, (qx, qy + 40), quien, fq, cq, "mt", a0)
+        if suelta > 0:
+            wl = d.textlength(quien, font=fq) / 2 + 10
+            d.line([(qx - wl, qy + 66), (qx - wl + 2 * wl * suelta, qy + 66)], fill=ROJO + (230,), width=4)
+            v = min(1.0, max(0.0, (fin - .4) / 1.8))                  # la estrella que cae
+            if 0 < v < 1:
+                ex, ey = M + w * (.86 - .55 * v), M + 120 + (h - 300) * v ** 1.4
+                cola = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                dk = ImageDraw.Draw(cola)
+                for k in range(18):
+                    q = k / 18
+                    rr = 14 * (1 - q)
+                    dk.ellipse((ex + 120 * q - rr, ey - 90 * q - rr, ex + 120 * q + rr, ey - 90 * q + rr),
+                               fill=(200, 160, 255, int(220 * (1 - q))))
+                im.alpha_composite(_brillo(cola, 16, 2.0))
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + 60), remate, fr, AMBAR, "mm", 255 * _eo((fin - .3) / .6), sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.4))
+        else:
+            _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+            _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def balanza(izq, der, pesos, remate="Nunca lo sabremos", titulo="¿Aceptó?", w=1500, h=720):
+    """Balanza dorada con dos platillos (`izq`, `der`). Marca k deja caer pesos[k] = ("i"|"d", texto) en su platillo (el
+    texto se apila debajo) y el brazo se inclina según cuántas pruebas tiene cada lado. Marca len(pesos): el brazo vuelve
+    al centro, las pruebas se atenúan y sale `remate` en ámbar."""
+    ftit, fl, fp, fr = fuente("r", 40), fuente("b", 46), fuente("r", 30), fuente("i", 50)
+    n = len(pesos)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        a0 = 255 * _eo(dt / .4)
+        cx, cy = M + w / 2, M + 210
+        L = w * .29
+        ni = sum(_eo((dt - mk[k]) / .6) for k, (l, _) in enumerate(pesos) if l == "i")
+        nd = sum(_eo((dt - mk[k]) / .6) for k, (l, _) in enumerate(pesos) if l == "d")
+        fin = _eo((dt - mk[n]) / 1.2)
+        ang = max(-.2, min(.2, (nd - ni) * .07)) * (1 - fin) + .012 * math.sin(dt * 1.5)
+        d = ImageDraw.Draw(im)
+        d.line([(cx, cy), (cx, M + h - 70)], fill=ORO_OSC + (int(a0),), width=8)
+        d.polygon([(cx - 70, M + h - 50), (cx + 70, M + h - 50), (cx, M + h - 95)], fill=ORO_OSC + (int(a0),))
+        xi, yi = cx - math.cos(ang) * L, cy - math.sin(ang) * L
+        xd, yd = cx + math.cos(ang) * L, cy + math.sin(ang) * L
+        br = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        db = ImageDraw.Draw(br)
+        db.line([(xi, yi), (xd, yd)], fill=ORO + (int(a0),), width=7)
+        db.ellipse((cx - 14, cy - 14, cx + 14, cy + 14), fill=ORO + (int(a0),))
+        for px, py in ((xi, yi), (xd, yd)):
+            for s in (-1, 1):
+                db.line([(px, py), (px + s * 110, py + 90)], fill=ORO_OSC + (int(a0),), width=2)
+            db.chord((px - 125, py + 50, px + 125, py + 130), 0, 180, fill=(40, 32, 20, int(a0)), outline=ORO + (int(a0),), width=3)
+        im.alpha_composite(_brillo(br, 6, 1.0))
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        _texto(d, (xi, yi - 22), izq, fl, ORO, "mb", a0)
+        _texto(d, (xd, yd - 22), der, fl, ORO, "mb", a0)
+        cnt = {"i": 0, "d": 0}
+        for k, (lado, s) in enumerate(pesos):
+            u = _eo((dt - mk[k]) / .6)
+            if u <= 0:
+                continue
+            j = cnt[lado]
+            cnt[lado] += 1
+            px, py = (xi, yi) if lado == "i" else (xd, yd)
+            col = tuple(int(PERGAMINO[c] * (1 - .5 * fin)) for c in range(3))
+            _texto(d, (px, py + 155 + 50 * j - 40 * (1 - u)), s, fp, col, "mt", 255 * u)
+        if fin > 0:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (cx, cy - 60), remate, fr, AMBAR, "mm", 255 * fin, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def espejo(padre=("Radagon", "dejó a Rennala"), hijo=("Radahn", "en un cuerpo prestado"), papel_padre="Consorte de Márika",
+           papel_hijo="Consorte de Miquella", idolo="Godfrey", remate="De tal palo, tal astilla", titulo="El padre y el hijo",
+           w=1500, h=640):
+    """Dos filas en espejo. Marca 0: arriba, `padre` → caja `papel_padre` · marca 1: abajo, `hijo`, que de niño «soñaba con
+    ser» `idolo` (se tacha), y su flecha llega a `papel_hijo` · marca 2: las dos cajas se encienden en ámbar unidas por un
+    «=» y sale `remate`."""
+    ftit, fn_, fs, fc, fr = fuente("r", 40), fuente("b", 48), fuente("i", 32), fuente("r", 40), fuente("i", 50)
+
+    def caja(d, x, y, s, col, a):
+        wl = d.textlength(s, font=fc) / 2 + 34
+        d.rounded_rectangle((x - wl, y - 40, x + wl, y + 40), 14, fill=(26, 20, 14, int(a)), outline=col + (int(a),), width=3)
+        _texto(d, (x, y), s, fc, col, "mm", a)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _panel(w, h)
+        a0 = 255 * _eo(dt / .4)
+        u0, u1, u2 = _eo((dt - mk[0]) / .7), _eo((dt - mk[1]) / .7), _eo((dt - mk[2]) / .8)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        xa, xb = M + 210, M + w - 300
+        ya, yb = M + 220, M + 450
+        col_p = tuple(int(ORO[c] * (1 - u2) + AMBAR[c] * u2) for c in range(3))
+        if u0 > 0:
+            _nodo(d, xa, ya, padre[0], padre[1], ORO, 255 * u0, fn_, fs)
+            _linea(d, (xa + 40, ya), (xb - 200, ya), u0, ORO_OSC, 255 * u0, 3)
+            caja(d, xb, ya, papel_padre, col_p, 255 * u0)
+        if u1 > 0:
+            _nodo(d, xa, yb, hijo[0], hijo[1], ORO, 255 * u1, fn_, fs)
+            mx = (xa + xb) / 2 - 70
+            g = _eo((dt - mk[1] - .6) / .6)
+            _texto(d, (mx, yb - 34), "soñaba con ser", fs, GRIS, "mb", 255 * u1)
+            _texto(d, (mx, yb + 6), idolo, fn_, PERGAMINO, "mm", 255 * u1 * (1 - .5 * g))
+            if g > 0:
+                wl = d.textlength(idolo, font=fn_) / 2 + 10
+                d.line([(mx - wl, yb + 10), (mx - wl + 2 * wl * g, yb + 10)], fill=ROJO + (230,), width=5)
+                caja(d, xb, yb, papel_hijo, col_p, 255 * g)
+        if u2 > 0:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            d2 = ImageDraw.Draw(t2)
+            _texto(d2, (xb, (ya + yb) / 2), "=", fuente("b", 84), AMBAR, "mm", 255 * u2, sombra=False)
+            _texto(d2, (M + w / 2, M + h - 40), remate, fr, AMBAR, "mm", 255 * u2, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.6))
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

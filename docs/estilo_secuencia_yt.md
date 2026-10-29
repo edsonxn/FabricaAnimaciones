@@ -651,6 +651,24 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   (MASTER 1): `CAMARA` sobre ese beat NO movió el clip (el HUD salió en el mismo sitio); se arregló cambiando el clip por uno con
   movimiento (Torrentera galopando). Voz: «DLC» → «dieque» (escribir «la expansión») y un nombre a final de frase se come la
   cola («matar a Maliketh.» → «Malik»; arreglado con «…a Maliketh, su guardián.»).
+- **`er_radahn_atrocidades` (28/29-oct-2026, 24:38, 170 beats, todo en UNA sesión, tema pedido en los comentarios):** MG nuevos en
+  `mg_er`: `lanzas(bando, centro, tu)` (las lanzas del enemigo se clavan en el león rojo y salen como flechas de gravedad contra
+  «Tú»), `cielo_sujeto(atados, quien, remate)` (cielo quieto con destinos atados a `quien` por hilos violetas; la última marca los
+  rompe, el cielo gira y cae una estrella), `balanza(izq, der, pesos, remate)` (las dos posturas de un debate: cada prueba cae en su
+  platillo y la balanza se inclina; al final vuelve al centro con «Nunca lo dice») y `espejo(padre, hijo, papel_padre, papel_hijo,
+  idolo)` (padre e hijo acaban en el mismo papel; el ídolo de infancia se tacha). **FONÉTICA (queja de los comentarios): «Mikuéla»
+  SUENA «Mi-cue-la» = «Micuela», la burla de la gente → «Mikéla» (Whisper: «Miquela»). Mohg «Móg»: ante consonante sale «mock/mok»
+  («Mohg secuestró») → reescribir para que vaya ante vocal («Fue Mohg el que…», «a Mohg, y…»).** Comentarios en pantalla: tarjeta
+  `com_<id>` con `peg(…, tam=700-760)` en el gancho, cuando la voz cita a quien pidió o corrigió, y 5 de agradecimiento en el cierre.
+  Revisión: 30 de 170 clips rehechos (18 %). Lo que cazaron las hojas: las recopilaciones de diálogos de **Stratek** (Jerren, Iji,
+  Sellen, Freyja, Ansbach) son el MISMO plano estático y oscuro en cada capítulo → 4-5 seguidos parecen congelados (máx. 1-2 por
+  puesto, el resto pelea/cinemática); el «Summon this companion?» de una partida con HUD; Seluvis en un video de la misión de
+  Ranni; un fundido a negro al EMPEZAR un clip vuelto a bajar con audio (`ambiente_por`): **medir el brillo después de CADA
+  `--rehacer`**, no solo antes del render. Anclas: `efectos.py` sale de un `orden.py` que avisa si un ancla cae > 40 palabras ANTES
+  que la anterior («Su hermana» enganchaba «Ranni es su hermana» del puesto anterior). `seleccionar` guarda en `voz/eval.json` las
+  tomas que apartas a `_descartes/`: podarlo (solo las que existen en `cands/`) o truena con `FileNotFoundError`. Cambiar UNA toma
+  tras el render sin rehacer tiempos: rellenar la toma nueva con silencio hasta la duración exacta de la vieja → `mezcla` → `final`.
+  `video --rehacer` con 4 tramos volvió a renderizar TODO (32 min). Créditos: `yt-dlp --print "%(channel)s"` por id de `fuentes.json`.
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.

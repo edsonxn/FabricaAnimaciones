@@ -6829,7 +6829,67 @@
    "prompt": "Single startled chicken squawk and wing flaps, farm animal",
    "dur": 2.0,
    "canal": "cronicas_tamriel"
+  },
+  "er_radahn_atrocidades__aullido": {
+   "id": "er_radahn_atrocidades__aullido",
+   "video": "er_radahn_atrocidades",
+   "nombre": "aullido",
+   "archivo": "er_radahn_atrocidades__aullido.mp3",
+   "md5": "a5a4706df9514355c719f50ddc6f82ea",
+   "prompt": "A distant monstrous howl echoing over a windy desert of red sand, grief and madness, dark fantasy",
+   "dur": 4.0,
+   "canal": "runa_caida"
+  },
+  "er_radahn_atrocidades__balanza": {
+   "id": "er_radahn_atrocidades__balanza",
+   "video": "er_radahn_atrocidades",
+   "nombre": "balanza",
+   "archivo": "er_radahn_atrocidades__balanza.mp3",
+   "md5": "90df290ed0ce4195dce36a3852b9b07f",
+   "prompt": "An old brass balance scale creaking and tilting, small weights clinking onto metal pans",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_radahn_atrocidades__cadenas_luz": {
+   "id": "er_radahn_atrocidades__cadenas_luz",
+   "video": "er_radahn_atrocidades",
+   "nombre": "cadenas_luz",
+   "archivo": "er_radahn_atrocidades__cadenas_luz.mp3",
+   "md5": "a476e2f987772474f060601a0c62d6e6",
+   "prompt": "Taut glowing threads of energy snapping one after another with a crystalline twang, cosmic",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_radahn_atrocidades__cuernos": {
+   "id": "er_radahn_atrocidades__cuernos",
+   "video": "er_radahn_atrocidades",
+   "nombre": "cuernos",
+   "archivo": "er_radahn_atrocidades__cuernos.mp3",
+   "md5": "e8b5da6c345a3243bd053369bd6c42f8",
+   "prompt": "Wet flesh and bone cracking as horns push out of skin, low and unsettling, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
+  },
+  "er_radahn_atrocidades__estrella": {
+   "id": "er_radahn_atrocidades__estrella",
+   "video": "er_radahn_atrocidades",
+   "nombre": "estrella",
+   "archivo": "er_radahn_atrocidades__estrella.mp3",
+   "md5": "fc9f28683ee90a103b7a11a66bbae614",
+   "prompt": "A huge meteor streaking across the sky and crashing far away, deep rumble and shockwave, dark fantasy",
+   "dur": 5.0,
+   "canal": "runa_caida"
+  },
+  "er_radahn_atrocidades__lanzas": {
+   "id": "er_radahn_atrocidades__lanzas",
+   "video": "er_radahn_atrocidades",
+   "nombre": "lanzas",
+   "archivo": "er_radahn_atrocidades__lanzas.mp3",
+   "md5": "d7a217574a048d828921e1809fc7df86",
+   "prompt": "A volley of heavy spears whooshing and thudding into armor, then a deep gravitational hum, dark fantasy",
+   "dur": 3.0,
+   "canal": "runa_caida"
   }
  },
- "actualizado": "2026-10-27 21:10"
+ "actualizado": "2026-10-29 07:49"
 }

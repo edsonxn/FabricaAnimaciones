@@ -135,7 +135,7 @@ de ~100 mil sale MÁS caro (se paga el arranque una y otra vez). Script: `nucleo
      solo abre sesiones desde un turno que empezó una persona): el hilo SIGUE TRABAJANDO donde está, sin preguntarle al usuario
      («no esperes mi mensaje, termínalo todo», 29-oct), y reintenta el relevo en el siguiente turno del usuario.
   4. **Quien recibe la nota de una sesión cortada NO abre su continuación:** la abre ella misma (y, si la app se lo impide, sigue
-     la tarjeta). La sesión principal solo avisa al usuario y detiene duplicados si los ve.
+     trabajando ella, punto 3). La sesión principal solo avisa al usuario y detiene duplicados si los ve.
 - **Ajustes:** variable de entorno `FAB_CORTE_CONTEXTO` (tokens de trabajo; `0` = apagado). Medir un hilo: `python nucleo/hook_contexto.py --medir <transcrito.jsonl>`.
 - **La otra palanca:** los ~83 mil del arranque se pagan en cada llamada de cada sesión; recortar `CLAUDE.md`/`MEMORY.md` y los
   conectores que la Fábrica no usa ahorra en todo.

@@ -124,6 +124,15 @@ de ~100 mil sale MÁS caro (se paga el arranque una y otra vez). Script: `nucleo
   checkpoint (§6: `## En curso` + fila `◐ parcial`), abrir sesión nueva con `start_session` (`user_asked`, `fresh`, sin worktree, brief
   «continúa el video <v>» + lo que falta) y cerrar el turno. Si la app no deja abrirla: tarjeta propuesta o «abre un chat nuevo y
   escribe: continúa el video <v>». Repite el aviso cada +40 mil si el hilo sigue; se rearma tras compactar; no salta en subagentes.
-- **Ajustes:** variable de entorno `FAB_CORTE_CONTEXTO` (tokens; `0` = apagado). Medir un hilo: `python nucleo/hook_contexto.py --medir <transcrito.jsonl>`.
+- **Cambio del 29-oct-2026 (el usuario: «cámbialo»), por qué:** en la práctica los hilos arrancaban ya con ~100-108 mil, así
+  que a los 180 mil totales cada sesión trabajaba solo 70-80 mil y pedía otra a cada rato; además la sesión cortada y la que la
+  lanzó abrían cada una su continuación (CFO vs KC: dos idénticas con 8 s de diferencia; la Crematoria: tres a la vez).
+  1. **Cuenta solo el TRABAJO:** el umbral va por encima de la base de la sesión (el contexto de su primera llamada, medido una
+     vez y guardado en la marca), así que corta hacia los ~280 mil totales.
+  2. **Candado por video:** antes de abrir, `python nucleo/hook_contexto.py candado <v>` → «OK» (abre y queda apuntado en
+     `videos/<v>/.continuacion.json`) o «YA» (otra sesión la abrió hace < 30 min: no abrir otra).
+  3. **Quien recibe la nota de una sesión cortada NO abre su continuación:** la abre ella misma (y, si la app se lo impide, deja
+     la tarjeta). La sesión principal solo avisa al usuario y detiene duplicados si los ve.
+- **Ajustes:** variable de entorno `FAB_CORTE_CONTEXTO` (tokens de trabajo; `0` = apagado). Medir un hilo: `python nucleo/hook_contexto.py --medir <transcrito.jsonl>`.
 - **La otra palanca:** los ~83 mil del arranque se pagan en cada llamada de cada sesión; recortar `CLAUDE.md`/`MEMORY.md` y los
   conectores que la Fábrica no usa ahorra en todo.

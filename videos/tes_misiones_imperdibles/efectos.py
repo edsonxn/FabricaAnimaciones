@@ -9,7 +9,9 @@ Todo con el kit de interfaz de Skyrim por código (nucleo/mg_tes.py), anclado a 
 - MG NUEVOS de este guion (regla 19-oct-2026): versiones «¿Quién dice la verdad?» (Saadia, 20) · inversion «Lo que le pagas
   a Ralis» (10) · fragmentos «El Amuleto de Gauldur» (3). Del kit: contadores (Kyne, 22), plazo (Desenterrado no: 72 h ya
   salió) — no se repiten.
-- Mapas reales (tema tes) con FOTO de cada paso: las cacerías de Kyne (22) y los tres hijos de Gauldur (3).
+- Mapas reales (tema tes) con FOTO de cada paso y ruta, en 15 de las 25 misiones (el usuario, 29-oct-2026: «al menos la
+  mitad, con donde inician y sus objetivos»): 25, 23, 22, 21, 20, 18, 17, 16, 8, 7, 6, 5, 4, 3 y 2 (ventana).
+  Coordenadas reales de la base de datos del mapa de UESP calibradas sobre el mapa de papel (`_coords_uesp.py`).
   python fab.py tes_misiones_imperdibles fx --seco   tiempos      python fab.py tes_misiones_imperdibles fx hoja   previews/fx_NN.jpg
 """
 import os
@@ -130,8 +132,10 @@ FX = [
     grande("dentro de la cabeza de un emperador", "sheogorath", "", dur=3.0, x=.75, tam=560),
 
     # ---- 25 · Simas insondables
-    grande("aparece una argoniana", "fathoms", "De la Sima", dur=4.5, x=.75, tam=520),
-    peg("Te pide que lleves un léxico", "lexicon", "Léxico", dur=4.0, x=.17, tam=360),
+    mapa("skyrim", [(.89, .78, "Riften · muelles", "inicio", P("fathoms")), (.84, .82),
+                    (.774, .814, "Avanchnzel", "meta", P("lexicon"))],
+         de="en los muelles de Riften", a=("en las montañas de Jerall|fin", .8),
+         marcas=["en los muelles de Riften", "lleves un léxico a Avanchnzel"], titulo="Skyrim", sub="Simas insondables", ajuste=.6),
     peg("Breya muere junto a un centurión", "breya", "Breya", dur=4.0, x=.17),
     ficha("Tenía que subir un veinticinco", "Conocimiento antiguo", "*+25 %* de armadura… con la armadura *enana.*",
           origen="Efecto permanente", dur=6.0),
@@ -148,15 +152,16 @@ FX = [
     peg("Es Sinderion", "sinderion", "Sinderion", dur=4.5, x=.17),
     grande("la raíz de nirn carmesí", "nirn_carmesi", "Raíz de nirn carmesí", dur=4.5, x=.75, tam=480),
     com("nos recordó que se dice Oblivion", "Ugz2pMFkyhOQRp78FYZ4AaABAg", dur=6.5),
-    ficha("Juntar treinta raíces", "Raíz de nirn carmesí", "Hacen falta *30.* Solo en la oscuridad, cerca del agua.",
-          origen="Límite Sombrío", dur=6.0),
-    peg("Avrusa Sarethi", "avrusa", "Avrusa Sarethi", dur=4.0, x=.17),
+    mapa("skyrim", [(.663, .281, "Límite Sombrío · entrada de Alftand", "inicio", P("nirn_carmesi")), (.70, .45), (.72, .60),
+                    (.750, .709, "Granja Sarethi · Avrusa", "meta", P("avrusa"))],
+         de="Juntar treinta raíces", a=("a su granja cerca de Riften|fin", .8),
+         marcas=["Juntar treinta raíces", "Avrusa Sarethi"], titulo="Skyrim", sub="Vuelta a las raíces", ajuste=.6),
     ficha("El premio es Descubrimiento", "Descubrimiento de Sinderion", "*25 %* de sacar *dos* pociones en vez de una.",
           origen="Efecto permanente", dur=7.0),
 
     # ---- 22 · Kyne
     peg("un viejo cazador Froki", "froki", "Froki", dur=4.0, x=.17),
-    mapa("skyrim", [(.68, .73, "Choza de Froki", "inicio", P("froki")), (.62, .62),
+    mapa("skyrim", [(.715, .798, "Choza de Froki", "inicio", P("froki")), (.64, .66),
                     (.52, .52, "Carrera Blanca · cangrejo del barro", "paso", None), (.58, .44),
                     (.63, .34, "El Pálido · skeever", "paso", None), (.55, .55), (.47, .66),
                     (.42, .76, "Falkreath · lobo y oso", "paso", None), (.48, .62), (.60, .45),
@@ -171,7 +176,10 @@ FX = [
           rojo=True, dur=7.0),
 
     # ---- 21 · Que no se apaguen las llamas
-    peg("Viarmo te manda", "viarmo", "Viarmo", dur=4.0, x=.17),
+    mapa("skyrim", [(.33, .20, "Soledad · Colegio de Bardos", "inicio", P("viarmo")), (.35, .28),
+                    (.341, .351, "Respiro del Muerto · el verso", "meta", P("olaf"))],
+         de="Para entrar en el Colegio", a=("en el Respiro del Muerto|fin", 1.8),
+         marcas=["Colegio de Bardos de Soledad", "en el Respiro del Muerto"], titulo="Skyrim", sub="Que no se apaguen las llamas", ajuste=.6),
     grande("Olaf Ojo Único ejecutó", "olaf", "Olaf Ojo Único", dur=4.5, x=.75, tam=520),
     peg("al bardo Svaknir", "svaknir", "Svaknir", dur=4.0, x=.17),
     ficha("ahora es una fiesta cada semana", "Pastel de carne", "En realidad es un pastel de *manzana.*",
@@ -182,7 +190,10 @@ FX = [
     peg("unos guerreros alik'r", "alikr", "Guerrero alik'r", dur=4.0, x=.17),
     mg(_versiones(), ("Es Saadia que trabaja", -.2), ("Eliges a ciegas|fin", .8),
        ["Es Saadia que trabaja", "Los alik'r te cuentan", "no te da pruebas", "Eliges a ciegas"], "versiones saadia"),
-    ficha("Pagas la multa", "Multa", "Pagas *100.* No lo sueltan *nunca.*", origen="Cuenca del Dragón", rojo=True, dur=6.5),
+    mapa("skyrim", [(.545, .49, "Carrera Blanca · Saadia", "inicio", P("saadia")), (.47, .50),
+                    (.392, .498, "Guarida de los Timadores · Kematu", "peligro", P("kematu"))],
+         de="Para hablar con su jefe", a=("El guarda pierde las llaves|fin", .5),
+         marcas=["Para hablar con su jefe", "Pagas la multa"], titulo="Skyrim", sub="En tiempos de necesidad", ajuste=.6),
     ficha("se puede cobrar a los dos", "Doble cobro", "*1 100* monedas por traicionar a todo el mundo.", origen="Trampa",
           dur=6.0),
 
@@ -195,7 +206,10 @@ FX = [
 
     # ---- 18 · El Vial Blanco
     peg("el viejo alquimista Nurelion", "nurelion", "Nurelion", dur=4.5, x=.17),
-    peg("custodiado por un draugr", "vial", "Vial Blanco", dur=4.5, x=.75, y=.55, tam=260),
+    mapa("skyrim", [(.78, .42, "Ventalia · Nurelion", "inicio", P("nurelion")), (.73, .38),
+                    (.684, .359, "Cueva abandonada · Curalmil", "meta", P("vial"))],
+         de="Lo encuentras en la Cueva", a=("Y está roto|fin", .8),
+         marcas=["Lo encuentras en la Cueva", "custodiado por un draugr"], titulo="Skyrim", sub="El Vial Blanco", ajuste=.6),
     peg("Su aprendiz Quinto Navale", "quinto", "Quinto Navale", dur=4.0, x=.17),
     ficha("se rellena solo cada día", "Vial Blanco", "Se rellena *cada día.* *+100* de salud, o *+50 %* a una mano.",
           origen="Reparado", dur=8.0),
@@ -203,13 +217,21 @@ FX = [
     # ---- 17 · Desaparecido
     peg("Fralia Melena Gris discute", "fralia", "Fralia Melena Gris", dur=4.5, x=.17),
     grande("Su hijo Thorald", "thorald", "Thorald Melena Gris", dur=4.5, x=.75, tam=500),
+    mapa("skyrim", [(.545, .49, "Carrera Blanca · Fralia", "inicio", P("fralia")), (.42, .40), (.30, .29), (.22, .21),
+                    (.165, .165, "Bastión de la Guardia del Norte · Thorald", "meta", P("thorald"))],
+         de="Lo tienen preso los thalmor", a=("en el Bastión de la Guardia del Norte|fin", 2.0),
+         marcas=["Lo tienen preso los thalmor", "en el Bastión de la Guardia del Norte"], titulo="Skyrim", sub="Desaparecido en acto de servicio", ajuste=.5, traza=99),
     peg("convenciendo a Idolaf", "idolaf", "Idolaf Batallador", dur=3.5, x=.17, tam=360),
     peg("que el padre Eorlund", "eorlund", "Eorlund Melena Gris", dur=4.0, x=.17),
     ficha("al general Tulio", "Vía pacífica", "El diálogo está grabado. *Nunca* se activa.", origen="Error", rojo=True, dur=7.0),
 
     # ---- 16 · Águila Roja
     grande("La leyenda de Águila Roja un rey", "aguila_roja", "Águila Roja", dur=5.0, x=.75, tam=520),
-    peg("Recuperas la espada", "furia_aguila", "Furia del Águila Roja", dur=4.5, x=.17, tam=420),
+    mapa("skyrim", [(.214, .459, "Reducto del Águila Roja", "inicio", P("aguila_roja")),
+                    (.230, .423, "Torres Hendidas · la espada", "paso", P("furia_aguila")),
+                    (.249, .437, "Túmulo del Rebelde", "meta", None)],
+         de=("Recuperas la espada", -.4), a=("y la llevas a su túmulo|fin", 2.0),
+         marcas=["Recuperas la espada", "en las Torres Hendidas", "y la llevas a su túmulo"], titulo="Skyrim", sub="La leyenda de Águila Roja", ajuste=.5),
     ficha("Diez de fuego y los no muertos", "Perdición del Águila Roja", "*10* de fuego. Los no muertos *arden* y huyen.",
           origen="Espada", dur=6.5),
 
@@ -274,7 +296,10 @@ FX = [
 
     # ---- 8 · La gloria de los muertos
     grande("Kodlak Melena Blanca el Heraldo", "kodlak", "Kodlak Melena Blanca", dur=5.0, x=.75, tam=520),
-    peg("con el hacha Wuuthrad", "wuuthrad", "Wuuthrad", dur=4.5, x=.17, tam=420),
+    mapa("skyrim", [(.545, .49, "Carrera Blanca · Forja del Cielo", "inicio", P("kodlak")), (.62, .38), (.68, .26),
+                    (.696, .156, "Tumba de Ysgramor", "meta", P("wuuthrad"))],
+         de="Para liberarla vas a la Tumba", a=("en la Forja del Cielo|fin", 1.0),
+         marcas=["Para liberarla vas", "a la Tumba de Ysgramor"], titulo="Skyrim", sub="La gloria de los muertos", ajuste=.5, traza=99),
     peg("una cabeza de bruja de Glenmoril", "cabeza_bruja", "Cabeza de bruja de Glenmoril", dur=4.5, x=.17, tam=380),
     grande("y con el Escudo de Ysgramor", "escudo_ysgramor", "Escudo de Ysgramor", dur=5.0, x=.25, tam=460),
     ficha("veinte de resistencia a la magia", "Escudo de Ysgramor", "*+20* resistencia a la magia · *+20* de salud.",
@@ -284,14 +309,19 @@ FX = [
     # ---- 7 · Al alba
     peg("la Luz de Meridia", "luz_meridia", "Luz de Meridia", dur=4.0, x=.17, tam=360),
     ficha("más de ciento cincuenta sitios", "Luz de Meridia", "Puede salir en más de *150* cofres.", origen="Al alba", dur=5.0),
-    grande("Y Meridia te eleva", "meridia", "Meridia", dur=5.0, x=.75, tam=560),
-    peg("un nigromante Malkoran", "malkoran", "Malkoran", dur=4.0, x=.17),
+    mapa("skyrim", [(.278, .218, "Monte Kilkreath · estatua de Meridia", "inicio", P("meridia")),
+                    (.292, .211, "Ruinas de Kilkreath · Malkoran", "meta", P("malkoran"))],
+         de="Te lleva al Monte Kilkreath", a=("de pedestal en pedestal|fin", .8),
+         marcas=["Te lleva al Monte Kilkreath", "Te manda limpiar su templo"], titulo="Skyrim", sub="Al alba", ajuste=.4),
     ficha("cuarenta y tres cadáveres", "Templo de Kilkreath", "*43* cadáveres con oro: más de *5 000.*", origen="Botín", dur=6.0),
     grande("es el Quebrantador de amaneceres", "dawnbreaker", "Quebrantador de amaneceres", dur=5.0, x=.25, tam=500),
     com("nadie le había explicado", "UgyQu8Ua86q9VZ6IevJ4AaABAg", dur=8.0),
 
     # ---- 6 · Reina Loba
-    peg("Falk Barba de Fuego", "falk", "Falk Barba de Fuego", dur=4.0, x=.17),
+    mapa("skyrim", [(.33, .20, "Soledad · Falk Barba de Fuego", "inicio", P("falk")),
+                    (.270, .194, "Cueva Cráneo de Lobo", "peligro", P("potema"))],
+         de="En Soledad Falk Barba", a=("Parece una falsa alarma|fin", 1.0),
+         marcas=["En Soledad Falk Barba", "en la Cueva Cráneo de Lobo"], titulo="Skyrim", sub="El despertar de la Reina Loba", ajuste=.4),
     grande("resucitar a Potema", "potema", "Potema, la Reina Loba", dur=5.0, x=.75, tam=560),
     ficha("Las flechas no le hacen nada", "Potema", "Flechas: *nada.* Magia: *sí.*", origen="Catacumbas", dur=5.5),
     peg("recuperas su calavera", "calavera_potema", "Calavera de Potema", dur=4.0, x=.17, tam=380),
@@ -300,22 +330,30 @@ FX = [
     # ---- 5 · Guerrero de ébano
     grande("un guerrero con armadura de ébano", "guerrero_ebano", "Guerrero de ébano", dur=5.5, x=.75, tam=600),
     ficha("al nivel ochenta", "Guerrero de ébano", "Solo a partir del nivel *80.*", origen="Requisito", dur=5.0, x=.30),
+    mapa("skyrim", [(.89, .78, "Riften", "inicio", None),
+                    (.934, .719, "Última Vigilia", "peligro", P("guerrero_ebano"))],
+         de="Te espera en la Última Vigilia", a=("hasta que le pegas tú|fin", .6),
+         marcas=["Te espera en la Última Vigilia", ("Te espera en la Última Vigilia", 1.2)], titulo="Skyrim", sub="El guerrero de ébano", ajuste=.4),
     ficha("dos mil setenta y uno", "Guerrero de ébano", "*2 071* de salud. Gritos. *Reflejar golpes.*", origen="Jefe",
           rojo=True, dur=7.0),
     peg("la Cuchilla de Mehrunes", "cuchilla_mehrunes", "Cuchilla de Mehrunes", dur=4.0, x=.17, tam=380),
 
     # ---- 4 · Oghma
     grande("vive Séptimo Signo", "septimo", "Séptimo Signo", dur=5.0, x=.75, tam=520),
+    mapa("skyrim", [(.740, .097, "Puesto de Séptimo Signo", "inicio", P("septimo")), (.70, .19),
+                    (.663, .281, "Alftand · bajada al Límite Sombrío", "meta", None)],
+         de="Te manda al Límite Sombrío", a=("a leer un Pergamino antiguo|fin", 1.0),
+         marcas=["Te manda al Límite Sombrío", "a la Torre de Mzark"], titulo="Skyrim", sub="Descifrar lo transmundano", ajuste=.5),
     grande("El Oghma Infinium", "oghma", "Oghma Infinium", dur=4.5, x=.25, tam=460),
     peg("Y Hermaeus Mora que le había", "hermaeus", "Hermaeus Mora", dur=4.0, x=.75, y=.58, tam=420),
     ficha("cinco puntos en seis habilidades", "Oghma Infinium", "*+5* a *6* habilidades: *30* niveles gratis.",
           origen="Poder · sombra · magia", dur=7.0),
 
     # ---- 3 · Gauldur
-    mapa("skyrim", [(.38, .27, "Folgunthur · Mikrul", "inicio", P("mikrul")), (.50, .24), (.62, .22),
-                    (.72, .22, "Saarthal · Jyrik", "paso", P("jyrik")), (.74, .40), (.72, .58),
-                    (.70, .69, "Sala de Geirmund · Sigdis", "paso", P("sigdis")), (.55, .64), (.35, .60), (.22, .56),
-                    (.16, .55, "Roca de la Cuenca · Gauldur", "meta", P("gauldur"))],
+    mapa("skyrim", [(.381, .240, "Folgunthur · Mikrul", "inicio", P("mikrul")), (.50, .23), (.62, .22),
+                    (.692, .239, "Saarthal · Jyrik", "paso", P("jyrik")), (.74, .40), (.72, .58),
+                    (.698, .691, "Sala de Geirmund · Sigdis", "paso", P("sigdis")), (.55, .64), (.35, .60), (.22, .55),
+                    (.182, .514, "Roca de la Cuenca · Gauldur", "meta", P("gauldur"))],
          de="Cada hijo está en una mazmorra", a=("aparece el propio Gauldur|fin", .2),
          marcas=["Mikrul en Folgunthur", "Jyrik en Saarthal", "Sigdis en la Sala", "la Roca de la Cuenca"],
          titulo="Skyrim", sub="Leyenda prohibida", ajuste=1.0, traza=99),
@@ -330,7 +368,8 @@ FX = [
 
     # ---- 2 · Tocando el cielo
     peg("Con Serana llegas", "serana", "Serana", dur=4.0, x=.17),
-    peg("un caballero Gelebor", "gelebor", "Gelebor", dur=4.0, x=.17),
+    mapa("skyrim", [(.146, .294, "Cueva de Sima Negra · Gelebor", "meta", P("gelebor"))],
+         de=("Con Serana llegas", .8), a=("te abre un pasaje|fin", .8), marcas=["la Cueva de Sima Negra"], titulo="Skyrim", sub="Tocando el cielo", ventana=True),
     grande("el Archicoadjutor Vyrthur", "vyrthur", "Vyrthur", dur=5.0, x=.75, tam=520),
     peg("que persigue Harkon", "harkon", "Harkon", dur=3.5, x=.17, tam=360),
     grande("El Arco de Auriel ya salió", "arco_auriel", "Arco de Auriel", dur=5.0, x=.25, tam=520),

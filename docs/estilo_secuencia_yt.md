@@ -302,9 +302,10 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
     pasaron medios/audio/voz/previews/salida/segmentos/sfx a E: con junctions (`Move-Item` + `New-Item -ItemType Junction`).
   - Miniatura Flow a la primera (Sheogorath + Wabbajack + queso sobre la composición de la ganadora): `prompt_miniatura.md`.
   - **`final` BORRA `salida/video_sin_audio.mp4`** (y este motor no deja `segmentos/`): si el blackdetect del MASTER pide arreglos,
-    no hay sobre qué empalmar. Corre `final` con `FAB_CONSERVAR=1` en videos largos, o empalma sobre el MASTER con
-    `videos/tes_misiones_imperdibles/_empalme.py` (trim por cuadros de la imagen + tramos de `video --tramo` + audio copiado; la
-    pantalla final se conserva porque el último trozo llega hasta el final). Aquí: 3 negros de 1-2,3 s al final/inicio de clips
+    no hay sobre qué empalmar. **Corre `final` SIEMPRE con `FAB_CONSERVAR=1`** y empalma los tramos sobre `video_sin_audio.mp4`
+    (luego `final` otra vez). NO uses `videos/tes_misiones_imperdibles/_empalme.py` sobre el MASTER: el trim por cuadros SE COMIÓ
+    LA IMAGEN DE LA PANTALLA FINAL (la imagen acabó en 1374,6 s y solo quedó su audio; el usuario lo vio, 29-oct) — comprueba
+    siempre con ffprobe que la duración del stream de VIDEO del MASTER incluya la pantalla final. Aquí: 3 negros de 1-2,3 s al final/inicio de clips
     (013, 018, 065) que ni la hoja de clips ni `fx hoja` vieron; rehechos con la misma url y `desde` + 40 s.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
@@ -385,7 +386,16 @@ Un tramo puede salir negro (Kazzak a 203 s): mirar el clip armado. En la descrip
 El usuario: «en ocasiones hay que mostrar mapas reales del juego con rutas cuando hablemos de misiones o cosas que el espectador
 quiera saber dónde es; tú decides en qué escenas y cómo… adaptados cada uno a su juego». Kit **`nucleo/mg_mapa.py`** (`mapa()`),
 helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo de ahí con `_MAP` y `TEMA_MAPA`).
-- **Cuándo (lo decide el agente al leer el guion, en el mismo plan que los MG nuevos; 1-4 por video, sin forzarlo):**
+- **MÁS MAPAS (el usuario, 29-oct-2026, al ver `tes_misiones_imperdibles` con solo 2): «siempre que se pueda y el guion lo
+  permita, usar mapas con rutas»; en listas de misiones, AL MENOS LA MITAD de los puestos con mapa de dónde inicia y sus
+  objetivos, con la ruta.** Sustituye al «1-4 por video» de abajo: el mapa va en todo puesto que tenga geografía (dónde empieza,
+  adónde te manda, dónde está el jefe o el premio), aunque la voz solo nombre uno de los lugares (los demás van rotulados). Uno de
+  cada puesto, 6-12 s, en la frase que cuenta el viaje; quita la pegatina de lo que ya sale como foto en un punto del mapa.
+  **Coordenadas REALES**: base de datos del mapa de UESP (`gamemap.uesp.net/sr/db/gamemap.php?action=search&db=sr&search=<lugar>`,
+  `worldId` 1 = Skyrim, 2 = Solstheim) calibrada con las ciudades del mapa de papel por mínimos cuadrados:
+  `videos/tes_misiones_imperdibles/_coords_uesp.py` (error ≈ 3 % del mapa; los lugares de un DLC llevan sufijo: «Darkfall Cave (DG)»,
+  «Last Vigil (DB)»). Revisión: `_prueba_mapas.py` (último cuadro de cada mapa en un mosaico). Primer uso: 15 de 25 misiones.
+- **Cuándo (lo decide el agente al leer el guion, en el mismo plan que los MG nuevos; antes 1-4 por video, ver la regla de arriba):**
   1. **Ruta de misión**: la voz cuenta dónde empieza, por dónde se pasa y dónde acaba → **pantalla completa** 6-10 s, un lugar con
      nombre por cada sitio que la voz nombra (la ruta llega cuando lo dice).
   2. **«¿Dónde está?»**: un secreto, jefe, objeto o PNJ escondido que el espectador querría ir a buscar → **ventana** 3-5 s
@@ -536,6 +546,14 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
 de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.
+- **SFX DEL MISMO JUEGO (el usuario, 29-oct-2026): «siempre que se pueda, SFX del mismo juego también».** Además del audio del
+  clip, los efectos de sonido del video (aviso de misión, ficha, pegatina, mapa, sello, golpe de un MG) salen del JUEGO del que se
+  habla, no de ElevenLabs ni sintetizados: los sonidos de interfaz y de mundo del juego (Skyrim: «Misión iniciada / completada»,
+  subir de nivel, descubrir un lugar, gritos, abrir el diario, monedas; WoW: misión aceptada/completada, subir de nivel, botín;
+  Elden Ring: gracia descubierta, objeto obtenido, «ENEMY FELLED»), bajados con yt-dlp de videos «<juego> sound effects / UI
+  sounds» limpios (sin voz, se comprueba con Whisper) o recortados del audio de los propios clips, guardados en
+  `nucleo/datos/sfx_juego/<juego>/` y catalogados en la biblioteca de SFX para reutilizarlos sin repetir el mismo en el canal.
+  Solo si el juego no tiene ese sonido, ElevenLabs con `SFX_ELEVEN`.
 - **Qué beats:** los que enseñan algo que SUENA y la voz lo nombra: la música del juego cuando se habla de ella, una canción que
   se toca (ocarina, laúd), gritos/voces del personaje, golpes y saltos, una maldición, el cartel de una zona. ~1 de cada 4 beats;
   el resto sigue mudo (dos músicas a la vez = ruido).

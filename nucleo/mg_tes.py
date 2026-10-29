@@ -42,6 +42,12 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   escalado(titulo, objeto, contador, niveles_, tu, hitos, remate)   contador que sube tu nivel mientras tu arma se queda; lo
                                                que el mundo trae a cada nivel aparece en la regla (dagas de hierro / dragones)
   reinicio(titulo, objetos, dias, seguro, remate)   cofre con tu botín, calendario que se tacha y todo desaparece; tu casa SEGURO
+  tes_misiones_imperdibles (28-oct-2026):
+  inversion(titulo, socio, [(monto, motivo)], nota, despierta, remate)   pilas de monedas que crecen pago a pago, «INVERTIDO»
+                                               suma, la carta final cae como sello y el que despierta pasa de gris a rojo (Ralis/Ahzidal)
+  versiones(titulo, izq, der, veredicto, remate)   dos testimonios enfrentados con retrato, «PRUEBAS: 0» y sello «SIN PRUEBAS»
+  fragmentos(titulo, padre, objeto, [(ruta, nombre, lugar)], bono, remate)   un objeto que se parte entre varios: los trozos
+                                               vuelan a cada uno, vuelven, se recompone y los portadores se tachan (Gauldur)
 """
 import math
 import os
@@ -1664,6 +1670,208 @@ def reinicio(titulo, objetos, dias, seguro, remate=None, ancho=1700):
                 s = _pop(dt - mk[seguro[2]] - .3, .35)
                 _texto(d, (sx0 + sw / 2, cy0 + sh + 110), "SEGURO", fuente("Bold Condensed", max(8, int(70 * s))), VERDE, "mm",
                        track=8)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ tes_misiones_imperdibles (28-oct-2026)
+def _monedas(d, cx, base, n, a, r=34):
+    """Pila de n monedas de oro (elipses apiladas) con la base en `base`."""
+    for k in range(n):
+        y = base - k * 13
+        d.ellipse((cx - r, y - 11, cx + r, y + 11), fill=(150, 116, 46, int(a)), outline=(90, 66, 22, int(a)), width=2)
+        d.ellipse((cx - r + 5, y - 9, cx + r - 5, y + 5), fill=ORO + (int(a),))
+
+
+def inversion(titulo, socio, pagos, nota=None, despierta=None, remate=None, ancho=1700):
+    """Lo que le vas pagando a alguien. socio = (ruta, nombre) en medallón a la izquierda · pagos = [(monto, motivo)]: la pila
+    i de monedas crece en la marca i con su cifra y su motivo; «INVERTIDO» suma · nota = (texto, i_marca): la carta del
+    final cae al centro como sello · despierta = (ruta, nombre, i_marca): a la derecha, el que despierta (gris → rojo, con
+    «DESPIERTA») · remate = (texto, i). Primer uso: Ralis Sedarys y Ahzidal (1 000 + 2 000 + 3 000 + 5 000)."""
+    n = len(pagos)
+    h = 110 + 430 + (70 if remate else 10)
+    D = 200
+    tope = max(m for m, _ in pagos)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 6)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        cx, cy = M + 60 + D / 2, M + 150 + D / 2
+        _pega(im, _redondo(socio[0], D), cx - D / 2, cy - D / 2, a0)
+        d.ellipse((cx - D / 2 - 4, cy - D / 2 - 4, cx + D / 2 + 4, cy + D / 2 + 4), outline=HUESO + (int(255 * a0),), width=3)
+        _texto(d, (cx, cy + D / 2 + 36), socio[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * a0, track=3)
+        x0, x1 = M + 360, M + (ancho - 330 if despierta else ancho - 80)
+        base = M + 420
+        d.line([(x0 - 20, base + 16), (x1 + 20, base + 16)], fill=(70, 66, 60, int(255 * a0)), width=4)
+        total = 0.0
+        for i, (monto, motivo) in enumerate(pagos):
+            u = _eo((dt - mk[i]) / .7)
+            if u <= 0:
+                continue
+            xc = x0 + (x1 - x0) * (i + .5) / n
+            nmon = max(1, int(round(16 * monto / tope * u)))
+            _monedas(d, xc, base, nmon, 255)
+            ytop = base - (nmon - 1) * 13 - 40
+            _texto(d, (xc, ytop - 18), _num(monto * u), fuente("Bold Condensed", 46), ORO, "mm", 255)
+            for k, ln in enumerate(_partir(d, motivo.upper(), fuente("Condensed", 24), (x1 - x0) / n - 20)[:2]):
+                _texto(d, (xc, base + 48 + 28 * k), ln, fuente("Condensed", 24), HUESO, "mm", 255 * u, track=1)
+            total += monto * u
+        _texto(d, (M + 110, M + 118), "INVERTIDO", fuente("Condensed", 26), GRIS, "lm", 255 * a0, track=4)
+        _texto(d, (M + 110 + 150, M + 118), _num(total), fuente("Bold Condensed", 48), ORO, "lm", 255 * a0)
+        if despierta:
+            us = _eo((dt - mk[despierta[2]]) / .5)
+            dx, dy = M + ancho - 60 - D / 2, M + 150 + D / 2
+            _pega(im, _redondo(despierta[0], D), dx - D / 2, dy - D / 2 + 30 * (1 - us), .35 * a0 + .65 * us)
+            col = tuple(int(GRIS[j] + (SANGRE[j] - GRIS[j]) * us) for j in range(3))
+            d.ellipse((dx - D / 2 - 4, dy - D / 2 - 4, dx + D / 2 + 4, dy + D / 2 + 4), outline=col + (int(255 * a0),),
+                      width=3 + int(4 * us))
+            if us <= 0:
+                _texto(d, (dx, dy), "?", fuente("Bold Condensed", 110), HUESO, "mm", 210 * a0)
+            else:
+                _texto(d, (dx, dy + D / 2 + 36), despierta[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * us,
+                       track=3)
+                s = _pop(dt - mk[despierta[2]] - .3, .35)
+                _texto(d, (dx, dy - D / 2 - 30), "DESPIERTA", fuente("Bold Condensed", max(8, int(46 * s))), SANGRE, "mm", track=5)
+        if nota and dt >= mk[nota[1]]:
+            _sello(im, (x0 + x1) / 2, M + 200, "« " + nota[0].upper() + " »", min(1.0, (dt - mk[nota[1]]) / .6), color=HUESO,
+                   giro=-6, tam=50)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def versiones(titulo, izq, der, veredicto=None, remate=None, ancho=1760):
+    """Dos versiones de la misma historia, enfrentadas. izq/der = (ruta, nombre, [líneas], i_marca): la tarjeta entra en su marca
+    y sus líneas aparecen una tras otra (0,7 s); debajo, «PRUEBAS: 0» · veredicto = (texto, i_marca): sello rojo cruzado sobre
+    las dos (p. ej. «SIN PRUEBAS») · remate = (texto, i). Primer uso: Saadia contra los alik'r (ninguna versión se demuestra)."""
+    RW, RH = 250, 310
+    h = 110 + 520 + (70 if remate else 10)
+    HUECO = 130                                                 # hueco central para el «VS» y el sello
+
+    def lado(im, d, dt, mk, M, datos, x, w):
+        ruta, nombre, lineas, i = datos
+        u = _eo((dt - mk[i]) / .45)
+        if u <= 0:
+            return
+        y = M + 120 + 20 * (1 - u)
+        _pega(im, _retrato(ruta, RW, RH), x, y, u)
+        _marco(d, x, y, RW, RH, HUESO, 200 * u, 2)
+        _texto(d, (x + RW / 2, M + 120 + RH + 34), nombre.upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * u, track=3)
+        tx, ty = x + RW + 30, M + 140
+        f = fuente("SemiBold Condensed", 42)
+        k = 0
+        for j, ln in enumerate(lineas):
+            ul = _eo((dt - mk[i] - .5 - .7 * j) / .4)
+            for sub in _partir(d, "— " + ln, f, w - RW - 40):
+                _texto(d, (tx, ty + 54 * k), sub, f, HUESO, "la", 255 * ul)
+                k += 1
+        _texto(d, (tx, M + 120 + RH - 10), "PRUEBAS: 0", fuente("Bold Condensed", 40), SANGRE, "lm",
+               255 * _eo((dt - mk[i] - .6 - .7 * len(lineas)) / .4), track=3)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        xm = M + ancho / 2
+        mitad = ancho / 2 - HUECO / 2 - 30
+        lado(im, d, dt, mk, M, izq, M + 30, mitad)
+        lado(im, d, dt, mk, M, der, xm + HUECO / 2, mitad)
+        d.line([(xm, M + 130), (xm, M + 230)], fill=HUESO + (int(110 * a0),), width=2)
+        d.line([(xm, M + 370), (xm, M + 470)], fill=HUESO + (int(110 * a0),), width=2)
+        _texto(d, (xm, M + 300), "VS", fuente("Bold Condensed", 56), ORO, "mm", 255 * _eo((dt - mk[der[3]]) / .4))
+        if veredicto and dt >= mk[veredicto[1]]:
+            _sello(im, xm, M + 120 + RH + 110, veredicto[0].upper(), min(1.0, (dt - mk[veredicto[1]]) / .6), tam=64, giro=-5)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+_lb = {}
+
+
+def _libre(ruta, w, h):
+    """El objeto recortado por su contorno, sin fondo ni giro, cabiendo en w×h (amuletos, joyas)."""
+    k = (ruta, w, h)
+    if k not in _lb:
+        im = Image.open(ruta).convert("RGBA")
+        bb = im.getchannel("A").point(lambda v: 255 if v > 40 else 0).getbbox()
+        if bb:
+            im = im.crop(bb)
+        esc = min(w / im.width, h / im.height)
+        _lb[k] = im.resize((max(2, int(im.width * esc)), max(2, int(im.height * esc))), Image.LANCZOS)
+    return _lb[k]
+
+
+def fragmentos(titulo, padre, objeto, hijos, bono=None, remate=None, ancho=1600):
+    """Un objeto partido entre varios. padre = (ruta, nombre) en medallón arriba a la izquierda (apagado hasta la reunión) ·
+    objeto = (ruta, nombre) arriba al centro · hijos = [(ruta, nombre, lugar)]: marca 0 = el objeto se parte y cada trozo vuela
+    hacia su hijo; marcas 1..n = cada hijo aparece con su lugar · marca n+1 = los trozos vuelven y el objeto se recompone (el
+    padre se enciende) · marca n+2 = los hijos se tachan y se apagan · bono = (texto, i_marca) en oro junto al objeto ·
+    remate = (texto, i). Primer uso: el Amuleto de Gauldur y sus tres hijos."""
+    n = len(hijos)
+    RW, RH = 220, 250
+    h = 110 + 260 + RH + 120 + (70 if remate else 10)
+    D = 170
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 6)
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        t_par, t_jun, t_fin = mk[0], mk[n + 1], mk[n + 2]
+        up = _eo((dt - t_jun) / .5)
+        px, py = M + 70 + D / 2, M + 120 + D / 2
+        _pega(im, _redondo(padre[0], D), px - D / 2, py - D / 2, a0 * (.4 + .6 * up))
+        d.ellipse((px - D / 2 - 4, py - D / 2 - 4, px + D / 2 + 4, py + D / 2 + 4),
+                  outline=(ORO if up > .5 else GRIS) + (int(255 * a0),), width=3 + int(3 * up))
+        _texto(d, (px, py + D / 2 + 32), padre[1].upper(), fuente("SemiBold Condensed", 28), HUESO, "mm", 255 * a0, track=3)
+        ox, oy, ow = M + ancho / 2, M + 220, 210
+        ico = _libre(objeto[0], ow, ow)
+        ys = M + 110 + 260 + 30
+        xs = [M + ancho / 2 + (k - (n - 1) / 2) * (RW + 150) for k in range(n)]
+        if dt < t_par:
+            _pega(im, ico, ox - ow / 2, oy - ow / 2, a0)
+        elif dt < t_jun:
+            for k in range(n):
+                u = _eo((dt - t_par - .15 * k) / .9)
+                tx = ox + (xs[k] + RW / 2 + 40 - ox) * u
+                ty = oy + (ys + 30 - oy) * u
+                tr = _libre(objeto[0], 110, 110).rotate(25 * (k - 1) * u, resample=Image.BICUBIC, expand=True)
+                _pega(im, tr, tx - tr.width / 2, ty - tr.height / 2, 1)
+        else:
+            uj = _eo((dt - t_jun) / .8)
+            if uj < 1:
+                for k in range(n):
+                    tx = xs[k] + RW / 2 + 40 + (ox - xs[k] - RW / 2 - 40) * uj
+                    ty = ys + 30 + (oy - ys - 30) * uj
+                    _pega(im, _libre(objeto[0], 110, 110), tx - 55, ty - 55, 1)
+            else:
+                s = _pop(dt - t_jun - .8, .4)
+                big = ico.resize((max(2, int(ow * s)), max(2, int(ow * s))), Image.BILINEAR)
+                _pega(im, big, ox - big.width / 2, oy - big.height / 2, 1)
+        _texto(d, (ox, oy + ow / 2 + 26), objeto[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * a0, track=3)
+        if bono and dt >= mk[bono[1]]:
+            s = _pop(dt - mk[bono[1]], .35)
+            for k, ln in enumerate(bono[0].upper().split(" · ")):
+                _texto(d, (ox + 400, oy - 50 + 52 * k), ln, fuente("Bold Condensed", max(8, int(44 * s))), ORO, "mm", track=2)
+        for k, (ruta, nom, lugar) in enumerate(hijos):
+            u = _eo((dt - mk[k + 1]) / .45)
+            if u <= 0:
+                d.rounded_rectangle((xs[k] - RW / 2, ys, xs[k] + RW / 2, ys + RH), radius=14, outline=GRIS + (int(140 * a0),),
+                                    width=2)
+                _texto(d, (xs[k], ys + RH / 2), "?", fuente("Bold Condensed", 90), GRIS, "mm", 180 * a0)
+                continue
+            apaga = _eo((dt - t_fin - .25 * k) / .4) if dt >= t_fin else 0
+            _pega(im, _retrato(ruta, RW, RH, gris=apaga), xs[k] - RW / 2, ys + 20 * (1 - u), u)
+            _marco(d, xs[k] - RW / 2, ys + 20 * (1 - u), RW, RH, HUESO, 200 * u, 2)
+            _texto(d, (xs[k], ys + RH + 30), nom.upper(), fuente("SemiBold Condensed", 28), HUESO, "mm", 255 * u, track=2)
+            _texto(d, (xs[k], ys + RH + 64), lugar.upper(), fuente("Condensed", 24), GRIS, "mm", 255 * u, track=2)
+            if apaga > 0:
+                _tacha(d, xs[k] - RW / 2, ys, RW, RH, apaga)
         _remate(d, M, ancho, h, remate, dt, mk)
         return _salida(im, dt)
     return fn

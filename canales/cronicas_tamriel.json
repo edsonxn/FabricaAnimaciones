@@ -81,9 +81,10 @@
       "video": "tes_cosas_inutiles",
       "id": "uz1kE1BI4w8",
       "titulo": "Las 15 cosas más INÚTILES de Skyrim",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "programado": "2026-10-26T18:08:00Z",
-      "formato": "lista_15_inutiles_secuencia_yt"
+      "formato": "lista_15_inutiles_secuencia_yt",
+      "publicado": "2026-10-26T18:08:28Z"
     },
     {
       "video": "tes_armas_poderosas",
@@ -92,6 +93,14 @@
       "visibilidad": "private",
       "programado": "2026-10-30T18:08:00Z",
       "formato": "lista_15_armas_secuencia_yt"
+    },
+    {
+      "video": "tes_misiones_imperdibles",
+      "id": "xnOdTqaZWrM",
+      "titulo": "Las 25 misiones de Skyrim que NUNCA debes saltarte",
+      "visibilidad": "private",
+      "programado": "2026-11-07T18:08:00Z",
+      "formato": "lista_25_misiones_imperdibles_secuencia_yt"
     }
   ],
   "ideas": {

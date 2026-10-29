@@ -283,6 +283,29 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
     de `armar_musica_ost.py` + `ambiente`. El de Uthgerd («Who taught you to fight…») es diálogo del juego: se queda.
   - **Programar**: `ciclo_dias` 3 (panel) y `separacion_min_horas` 96 chocan; `canales` dio el lun 02-11 pero `yt subir` lo
     detiene (72 h tras armas): se programó en el primer hueco con 96 h (mar 03-11 12:08 CDMX), sin `--forzar`.
+- **Lecciones de `tes_misiones_imperdibles` (28/29-oct-2026, «Las 25 misiones que NUNCA debes saltarte», 22:55 de voz, 160 beats):**
+  - **Investigación con 3 subagentes en paralelo** (8-9 misiones cada uno, fichas UESP + nombres es-ES + búsquedas de YouTube): 25
+    misiones verificadas en ~30 min sin gastar contexto. Pedirles que avisen de lo que no casa (dieron con 2 errores del brief:
+    «The Lost Expedition» es en Nchuand-Zel, no Alftand; Ildari es de «Old Friends», no de «The Gardener of Men»).
+  - **3 MG nuevos en `mg_tes`**: `inversion` (pilas de monedas pago a pago + «INVERTIDO» + carta-sello + el que despierta en rojo:
+    Ralis/Ahzidal), `versiones` (dos testimonios con «PRUEBAS: 0» y sello «SIN PRUEBAS»: Saadia/alik'r) y `fragmentos` (objeto que
+    se parte entre sus portadores, vuelve y los tacha: Gauldur, en 2 apariciones alrededor del mapa). `_icono` TUMBA los objetos
+    largos (un amuleto salía como astilla): para joyas, `_libre` (contorno sin giro). El sello no va sobre un retrato: abajo al centro.
+  - **Clips: ~100 de 160 rehechos en 5 vueltas** (el peor ratio hasta ahora: misiones con nombre propio = guías con menús). Nuevos
+    sucios: subtítulos en ruso, rótulo «MODDED», créditos de Patreon, «Added Actors» de un mod, cara de cartoon encima, «Tiny Tower
+    - Playerhome», mods con ropa mínima. La hoja de 2 cuadros (1 s y 6 s) NO ve el final de los beats largos: `fx hoja` cazó 6 más
+    con menú o negro a mitad. Lo que salvó la última vuelta: `{url, desde}` de un video ya limpio del mismo video (otro segundo).
+  - **`ambiente_por` + `+ba` = clips cortos** (11 de 18 beats con sonido salieron de 1,2-8 s para beats de 7-11 s): rebajarlos SIN
+    audio con la misma url/desde y dejar el sonido solo donde bajó entero (4 beats). `_chequeo_clips.py` (ffprobe: clip < beat)
+    los caza en 1 s; `_hoja_clips.py` necesita `-pix_fmt yuvj420p -strict -1` para los clips con audio (si no, cuadro negro falso).
+  - **C: se llenó a mitad de `bajar`** (otra sesión; 12 GB → 0,06): 4 clips truncados e ilegibles. Con E: sin errores en 12 h, se
+    pasaron medios/audio/voz/previews/salida/segmentos/sfx a E: con junctions (`Move-Item` + `New-Item -ItemType Junction`).
+  - Miniatura Flow a la primera (Sheogorath + Wabbajack + queso sobre la composición de la ganadora): `prompt_miniatura.md`.
+  - **`final` BORRA `salida/video_sin_audio.mp4`** (y este motor no deja `segmentos/`): si el blackdetect del MASTER pide arreglos,
+    no hay sobre qué empalmar. Corre `final` con `FAB_CONSERVAR=1` en videos largos, o empalma sobre el MASTER con
+    `videos/tes_misiones_imperdibles/_empalme.py` (trim por cuadros de la imagen + tramos de `video --tramo` + audio copiado; la
+    pantalla final se conserva porque el último trozo llega hasta el final). Aquí: 3 negros de 1-2,3 s al final/inicio de clips
+    (013, 018, 065) que ni la hoja de clips ni `fx hoja` vieron; rehechos con la misma url y `desde` + 40 s.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los

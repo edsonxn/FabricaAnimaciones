@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casting de voces — La Crematoria</title>
+<style>
+  :root { --fondo:#14110d; --tarjeta:#201b14; --borde:#3a3126; --oro:#e8c06a; --texto:#efe6d6; --tenue:#a99b84; --elegido:#3d6b3a; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--fondo); color:var(--texto); font:15px/1.45 Georgia, "Times New Roman", serif; }
+  header { padding:22px 16px 8px; max-width:980px; margin:auto; }
+  h1 { margin:0; color:var(--oro); font-size:26px; letter-spacing:.5px; }
+  header p { margin:6px 0 0; color:var(--tenue); }
+  main { max-width:980px; margin:auto; padding:8px 16px 120px; display:grid; gap:14px; }
+  .per { background:var(--tarjeta); border:1px solid var(--borde); border-radius:12px; padding:14px 16px; }
+  .per h2 { margin:0 0 2px; font-size:19px; color:var(--oro); }
+  .linea { color:var(--tenue); font-style:italic; margin:0 0 10px; }
+  .ops { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px; }
+  .op { border:1px solid var(--borde); border-radius:10px; padding:10px; cursor:pointer; transition:background .15s, border-color .15s; }
+  .op:hover { border-color:var(--oro); }
+  .op.sel { background:var(--elegido); border-color:#8fd18a; }
+  .op b { display:block; margin-bottom:6px; }
+  .op small { color:var(--tenue); display:block; margin-bottom:6px; }
+  audio { width:100%; height:34px; }
+  .otra { margin-top:8px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; color:var(--tenue); }
+  .otra input[type=text] { flex:1; min-width:200px; background:#15120e; border:1px solid var(--borde); color:var(--texto); border-radius:8px; padding:6px 8px; font:inherit; }
+  footer { position:fixed; left:0; right:0; bottom:0; background:#0d0b08ee; border-top:1px solid var(--borde); padding:10px 16px; }
+  footer div { max-width:980px; margin:auto; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+  #resumen { flex:1; color:var(--tenue); font-size:13px; }
+  button { background:var(--oro); color:#1b140a; border:0; border-radius:8px; padding:10px 18px; font:bold 15px Georgia, serif; cursor:pointer; }
+  button:disabled { opacity:.45; cursor:default; }
+  #ok { color:#8fd18a; font-weight:bold; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Casting de voces · La Crematoria</h1>
+  <p>Escucha a los dos candidatos de cada personaje y toca la tarjeta del que quieres. Si ninguno te convence, marca «Buscar otra» y di cómo lo imaginas. Al terminar, pulsa «Listo».</p>
+</header>
+<main id="lista"></main>
+<footer><div><span id="resumen"></span><span id="ok"></span><button id="listo" disabled>Listo</button></div></footer>
+<script>
+const M = "muestras_personajes/";
+const P = [
+  ["alexandros", "Alexandros Mograine", "«Mientras yo empuñe esta espada, ningún muerto volverá a levantarse en Lordaeron. Ninguno.»", [["salvatore","Salvatore","épica, grave, anciano"],["elder","Elder","firme, autoridad, anciano"]]],
+  ["tirion", "Tirion Vadín", "«Hijo… perdóname. Llegué tarde. Siempre llego tarde.»", [["arturo","Arturo Casares","anciano, cálida"],["elder","Elder","firme, autoridad, anciano"]]],
+  ["renault", "Renault Mograine", "«Padre, la Plaga no te va a matar. Yo sí.»", [["enrique","Enrique Mondragón","elegante, mexicana"],["antonio","Antonio","joven, suave"]]],
+  ["darion", "Darion Mograine", "«¡Me arrancaste el corazón, Rey Exánime! ¡Ahora vas a tener que arrancarme el alma!»", [["alejandro","Alejandro","joven, ronca, intensa"],["david","David","joven, enérgica"]]],
+  ["taelan", "Taelan Vadín", "«¡Padre! Sabía que vendrías. Te lo juro, lo sabía.»", [["david","David","joven, enérgica"],["antonio","Antonio","joven, suave"]]],
+  ["isillien", "Gran Inquisidor Isillien", "«Qué conmovedor. El traidor vino a ver morir a su hijo. Que así sea.»", [["murdock","Murdock","villano, autoritaria"],["odran","Odran","argentina, teatral"]]],
+  ["kelthuzad", "Kel'Thuzad", "«Tu padre sirve ahora a un señor más grande, muchacho. Igual que pronto lo harás tú.»", [["ivan","Iván","susurrante, sabia"],["mordred","Mordred","villano sarcástico"]]],
+  ["rey_exanime", "El Rey Exánime", "«Arrodíllate. La muerte no es el final, Mograine. Es el principio de tu servicio.»", [["miguel","Miguel","de tráiler de cine"],["final_boss","Final Boss","oscura, imponente"]]],
+  ["eitrigg", "Eitrigg", "«Un humano me perdonó la vida, y por eso lo perdió todo. Los orcos no olvidamos esas deudas.»", [["ragnar","Ragnar","áspera, rasposa"],["ludovico","Ludovico","grave, aterciopelada"]]],
+];
+let eleccion = {};
+try { eleccion = JSON.parse(localStorage.getItem("casting_crematoria") || "{}"); } catch (e) {}
+const lista = document.getElementById("lista");
+for (const [id, nombre, linea, cands] of P) {
+  const d = document.createElement("section");
+  d.className = "per";
+  d.innerHTML = `<h2>${nombre}</h2><p class="linea">${linea}</p><div class="ops"></div>
+    <label class="otra"><input type="checkbox" data-otra="${id}"> Buscar otra:
+      <input type="text" data-nota="${id}" placeholder="cómo lo imaginas (más viejo, más ronco…)"></label>`;
+  const ops = d.querySelector(".ops");
+  cands.forEach(([v, nom, desc], i) => {
+    const o = document.createElement("div");
+    o.className = "op";
+    o.dataset.per = id; o.dataset.n = i + 1; o.dataset.voz = v;
+    o.innerHTML = `<b>${i + 1} · ${nom}</b><small>${desc}</small><audio controls preload="none" src="${M}${id}_${i + 1}_${v}.mp3"></audio>`;
+    o.addEventListener("click", ev => { if (ev.target.tagName !== "AUDIO") elegir(id, { n: i + 1, voz: v, nombre: nom }); });
+    ops.appendChild(o);
+  });
+  lista.appendChild(d);
+}
+document.querySelectorAll("[data-otra]").forEach(c => c.addEventListener("change", () => {
+  const id = c.dataset.otra;
+  if (c.checked) elegir(id, { n: 0, voz: "otra", nota: document.querySelector(`[data-nota="${id}"]`).value });
+  else { delete eleccion[id]; pintar(); }
+}));
+document.querySelectorAll("[data-nota]").forEach(t => t.addEventListener("input", () => {
+  const id = t.dataset.nota;
+  if (eleccion[id] && eleccion[id].voz === "otra") { eleccion[id].nota = t.value; guardar(); }
+}));
+// al reproducir uno, se pausan los demás
+document.addEventListener("play", e => document.querySelectorAll("audio").forEach(a => { if (a !== e.target) a.pause(); }), true);
+function elegir(id, v) { eleccion[id] = v; pintar(); }
+function guardar() { try { localStorage.setItem("casting_crematoria", JSON.stringify(eleccion)); } catch (e) {} window.__eleccion = eleccion; }
+function pintar() {
+  document.querySelectorAll(".op").forEach(o => {
+    const e = eleccion[o.dataset.per];
+    o.classList.toggle("sel", !!e && e.n === +o.dataset.n);
+  });
+  document.querySelectorAll("[data-otra]").forEach(c => {
+    const e = eleccion[c.dataset.otra];
+    c.checked = !!e && e.voz === "otra";
+    if (c.checked && e.nota) document.querySelector(`[data-nota="${c.dataset.otra}"]`).value = e.nota;
+  });
+  const n = Object.keys(eleccion).length;
+  document.getElementById("resumen").textContent = `${n} de ${P.length} personajes elegidos`;
+  document.getElementById("listo").disabled = n < P.length;
+  guardar();
+}
+document.getElementById("listo").addEventListener("click", () => {
+  window.__listo = true;
+  try { localStorage.setItem("casting_crematoria_listo", "1"); } catch (e) {}
+  document.getElementById("ok").textContent = "¡Listo! Dile a Claude «ya elegí».";
+});
+pintar();
+</script>
+</body>
+</html>

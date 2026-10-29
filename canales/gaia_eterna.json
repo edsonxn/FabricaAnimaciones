@@ -1,0 +1,41 @@
+{
+  "canal_id": "UCx-Cz_FshdMPdPlBgp8UmLw",
+  "nombre": "Gaia Eterna",
+  "handle": "@EternaGaia-MX",
+  "estilo": "HISTORIAS CONTADAS de lore de WoW (el formato de «Pamela» de wow_darrowshire): pegatina Flow (Flow pinta escenarios y hojas, el código anima) + pegatinas REALES del juego + mapas reales con ruta (mg_mapa tema wow) + SFX DEL JUEGO; narradora = la voz clonada de la dueña del canal (ElevenLabs BwV6RplmLHPGm7QVf6II, solo en la cuenta 2) + voces de ElevenLabs para los personajes (VOZ_POR_FRASE); Lyria. Doc: docs/estilo_pegatina_flow.md § 8. Ejemplo: videos/wow_darrowshire/ (primer video del canal: videos/gaia_crematoria/).",
+  "nota": "Canal de la esposa del usuario (WoW en español: monturas, logros, guías; 265 suscriptores el 29-oct-2026). Recibe las historias contadas que se mudan desde Crónicas de Warcraft (anuncio en el video de Warcraft del 1-nov-2026). Falta `python fab.py yt conectar` con la cuenta de ella antes de la primera subida.",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "10:00",
+    "utc": "16:00",
+    "dias": ["sábado", "domingo"],
+    "alternativa": "viernes 18:00 CDMX (00:00 UTC del sábado)",
+    "nota": "Sin datos de la fábrica todavía: historias largas (40+ min) en fin de semana por la mañana, cuando hay tiempo de verlas enteras. Revisar con Studio > Audiencia tras el primer video.",
+    "separacion_min_horas": 96,
+    "ciclo_dias": 14,
+    "historial": [
+      {
+        "fecha": "2026-10-29",
+        "ciclo_dias": 14,
+        "hora_local": "10:00",
+        "motivo": "Alta del canal en la fábrica: una historia larga cada 2 semanas (cada una lleva ~10 sesiones); sábado 10:00 CDMX por la duración. Sin datos de audiencia aún."
+      }
+    ]
+  },
+  "publicados": [],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": ["historia completa lore world of warcraft", "historia de la crematoria ashbringer", "historia de tirion vadin", "lore de warcraft explicado", "la historia más triste de world of warcraft", "historia de arthas completa", "lore de warcraft terror", "historia de los renegados warcraft"],
+    "competidores": [],
+    "dias": 120,
+    "min_vistas": 500,
+    "filtro": ["lore", "historia", "warcraft", "wow", "crematoria", "ashbringer", "tirion", "arthas", "mograine", "renegados", "sylvanas"]
+  },
+  "historial": [
+    {
+      "fecha": "2026-10-29",
+      "nota": "Canal dado de alta en la fábrica para las historias contadas al estilo Pamela/Darrowshire; primer video gaia_crematoria (La Crematoria: los Mograine y los Vadín, 40+ min, voces de personajes, mapas con ruta y SFX del juego)."
+    }
+  ]
+}

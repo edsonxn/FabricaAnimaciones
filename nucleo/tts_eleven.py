@@ -4,11 +4,14 @@
 guion.py:  VOZ = dict(motor="elevenlabs", voice_id="...", modelo="eleven_multilingual_v2", idioma="es",
                       referencia="<mp3 de muestra de esa voz>",   # para la similitud de voz de tts_select
                       tomas=1, stability=0.45, similarity_boost=0.8, style=0.35)
-Clave en canales/tokens/elevenlabs_api_key.txt (no versionada). Cada toma cuesta créditos: por defecto 1 toma por frase;
+Clave en canales/tokens/elevenlabs_api_key.txt (no versionada). Cuentas de RESPALDO (20-oct-2026): elevenlabs_api_key_2.txt,
+_3.txt…; cuando una cuenta se queda sin saldo (401/402) se sigue con la siguiente sin parar. `python nucleo/tts_eleven.py` = saldo
+de cada cuenta. Cada toma cuesta créditos: por defecto 1 toma por frase;
 tts_select marca las que fallan y `voz --seeds 5 --solo <keys>` las rehace con otra semilla.
 Se envían la frase anterior y la siguiente (previous_text/next_text) para que la entonación fluya entre frases.
 Registro de créditos gastados: voz/eleven_log.json.
-Voz con actuación (docs/voz.md § «Corchetes»): modelo="eleven_v4" (o eleven_v3) y etiquetas en inglés dentro de las frases del guion,
+Voz con actuación (docs/voz.md § «Corchetes»): modelo="eleven_v4_turbo" (POR DEFECTO desde el 26-oct-2026: mitad de créditos que
+eleven_v4; ver modelo()) y etiquetas en inglés dentro de las frases del guion,
 p. ej. "[sighs] Nadie lo sabía. [short pause] Ni yo."; config.py las quita para todo lo demás (Whisper, timeline, .srt).
 """
 import io
@@ -20,25 +23,92 @@ import librosa
 import requests
 import soundfile as sf
 
-import config
+try:
+    import config
+except ImportError:   # sin video activo (`python nucleo/tts_eleven.py` solo para ver saldos)
+    config = None
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CLAVE = os.path.join(RAIZ, "canales", "tokens", "elevenlabs_api_key.txt")
+TOKENS = os.path.join(RAIZ, "canales", "tokens")
+CLAVE = os.path.join(TOKENS, "elevenlabs_api_key.txt")   # cuenta 1; respaldo: elevenlabs_api_key_2.txt, _3.txt…
 URL = "https://api.elevenlabs.io/v1"
+_activa = 0   # índice en cuentas() de la cuenta en uso; post() pasa a la siguiente cuando esta se queda sin saldo
+
+
+def cuentas():
+    """[(n, clave)] en orden de uso: n=1 la principal, n≥2 las de respaldo (elevenlabs_api_key_<n>.txt)."""
+    rutas = [(1, CLAVE)] + [(n, os.path.join(TOKENS, f"elevenlabs_api_key_{n}.txt")) for n in range(2, 10)]
+    cs = [(n, open(p, encoding="utf-8").read().strip()) for n, p in rutas if os.path.exists(p)]
+    if not cs:
+        raise SystemExit(f"ElevenLabs: falta la clave en {CLAVE}")
+    return cs
 
 
 def clave():
-    return open(CLAVE, encoding="utf-8").read().strip()
+    return cuentas()[_activa][1]
 
 
-def saldo():
-    d = requests.get(f"{URL}/user/subscription", headers={"xi-api-key": clave()}, timeout=30).json()
+def saldo(k=None):
+    d = requests.get(f"{URL}/user/subscription", headers={"xi-api-key": k or clave()}, timeout=30).json()
     return d["character_limit"] - d["character_count"]
 
 
+def saldos():
+    """[(n, saldo)] de cada cuenta; saldo None si la clave no responde (inválida, bloqueada)."""
+    out = []
+    for n, k in cuentas():
+        try:
+            out.append((n, saldo(k)))
+        except (KeyError, ValueError, requests.RequestException):
+            out.append((n, None))
+    return out
+
+
+def post(ruta, **kw):
+    """POST a ElevenLabs con la cuenta activa: reintenta 429/5xx y, si la cuenta se queda sin saldo o la rechaza (401/402),
+    sigue con la siguiente cuenta de respaldo. Devuelve la última respuesta (200 o el error que ya no tiene salida)."""
+    global _activa
+    cs = cuentas()
+    while True:
+        n, k = cs[_activa]
+        for intento in range(4):
+            r = requests.post(f"{URL}/{ruta}", headers={"xi-api-key": k}, **kw)
+            if r.status_code not in (429, 500, 502, 503):
+                break
+            time.sleep(4 * (intento + 1))
+        # 404 voice_not_found: una voz CLONADA solo vive en la cuenta donde se creó (la narradora de Gaia Eterna, en la 2)
+        sin_voz = r.status_code in (400, 404) and "voice_not_found" in r.text
+        if (r.status_code in (401, 402) or sin_voz) and _activa + 1 < len(cs):
+            _activa += 1
+            print(f"ElevenLabs: la cuenta {n} ya no puede ({r.status_code}: {r.text[:150]}); sigo con la cuenta "
+                  f"{cs[_activa][0]}", flush=True)
+            continue
+        return r
+
+
+# Modelo por defecto desde el 26-oct-2026 (el usuario: «suena perfecto… el default debe ser turbo»): eleven_v4_turbo entiende los
+# corchetes igual que eleven_v4 y cobra la MITAD (0,20 créditos/carácter frente a 0,40, medido con `character-cost`).
+MODELO_DEFECTO = "eleven_v4_turbo"
+TASA = {"eleven_v4_turbo": 0.20, "eleven_v4": 0.40, "eleven_v3": 0.40, "eleven_multilingual_v2": 0.40}
+LOG = "voz/eleven_log.json"
+
+
+def modelo():
+    """Modelo de este video. Un guion que dice "eleven_v4" (copiado de un video viejo) pasa a eleven_v4_turbo, salvo que el video ya
+    tenga tomas hechas con v4 (registro sin `modelo` = anterior al 26-oct = v4): así no cambia la voz a media obra.
+    Para forzar v4 en un video nuevo: VOZ["modelo_fijo"] = True."""
+    m = config.VOZ.get("modelo") or MODELO_DEFECTO
+    if m != "eleven_v4" or config.VOZ.get("modelo_fijo"):
+        return m
+    log = json.load(open(LOG, encoding="utf-8")) if os.path.exists(LOG) else []
+    if any(d.get("modelo", "eleven_v4") == "eleven_v4" for d in log):
+        return "eleven_v4"
+    return MODELO_DEFECTO
+
+
 def es_v3():
-    """Modelos expresivos (eleven_v3, eleven_v4 y sus variantes): entienden etiquetas entre corchetes."""
-    return any(v in config.VOZ.get("modelo", "") for v in ("_v3", "_v4"))
+    """Modelos expresivos (eleven_v3, eleven_v4 y sus variantes, turbo incluido): entienden etiquetas entre corchetes."""
+    return any(v in modelo() for v in ("_v3", "_v4"))
 
 
 def voz_de(key):
@@ -53,10 +123,10 @@ def tts(texto, seed, prev="", sig="", voice_id=None):
     if es_v3():
         # eleven_v3 / eleven_v4: entienden etiquetas entre corchetes; stability solo 0.0 (creativa) / 0.5 (natural) / 1.0 (robusta)
         # y no se les manda previous_text/next_text
-        body = dict(text=texto, model_id=v["modelo"], seed=int(seed), voice_settings=dict(stability=v.get("stability", 0.5)))
+        body = dict(text=texto, model_id=modelo(), seed=int(seed), voice_settings=dict(stability=v.get("stability", 0.5)))
         prev = sig = ""
     else:
-        body = dict(text=texto, model_id=v.get("modelo", "eleven_multilingual_v2"), seed=int(seed),
+        body = dict(text=texto, model_id=modelo(), seed=int(seed),
                     voice_settings=dict(stability=v.get("stability", 0.45), similarity_boost=v.get("similarity_boost", 0.8),
                                         style=v.get("style", 0.35), use_speaker_boost=True))
     if v.get("idioma"):
@@ -65,16 +135,10 @@ def tts(texto, seed, prev="", sig="", voice_id=None):
         body["previous_text"] = prev
     if sig:
         body["next_text"] = sig
-    for intento in range(4):
-        r = requests.post(f"{URL}/text-to-speech/{voice_id or v['voice_id']}?output_format=mp3_44100_128", json=body,
-                          headers={"xi-api-key": clave()}, timeout=120)
-        if r.status_code == 200:
-            return r.content, int(r.headers.get("character-cost") or 0)
-        if r.status_code in (429, 500, 502, 503):
-            time.sleep(4 * (intento + 1))
-            continue
-        raise SystemExit(f"ElevenLabs {r.status_code}: {r.text[:300]}")
-    raise SystemExit("ElevenLabs no respondió tras 4 intentos")
+    r = post(f"text-to-speech/{voice_id or v['voice_id']}?output_format=mp3_44100_128", json=body, timeout=120)
+    if r.status_code == 200:
+        return r.content, int(r.headers.get("character-cost") or 0)
+    raise SystemExit(f"ElevenLabs {r.status_code} (cuenta {cuentas()[_activa][0]}): {r.text[:300]}")
 
 
 def generar(frases, seeds, solo, out):
@@ -92,22 +156,41 @@ def generar(frases, seeds, solo, out):
     if not pend:
         print("ElevenLabs: nada pendiente")
         return
+    global _activa
     chars = sum(len(p[2]) for p in pend)
-    disp = saldo()
-    print(f"ElevenLabs: {len(pend)} tomas, {chars} caracteres; saldo {disp} créditos", flush=True)
-    log_p = "voz/eleven_log.json"
+    log_p = LOG
     log = json.load(open(log_p, encoding="utf-8")) if os.path.exists(log_p) else []
+    mod = modelo()
+    tasa = TASA.get(mod, 0.40)   # créditos por carácter de ese modelo (medidos con character-cost)
+    sal = saldos()
+    disp = sum(s for _, s in sal if s)
+    _activa = next((i for i, (_, s) in enumerate(sal) if s), 0)   # empieza por la primera cuenta con saldo
+    if mod != config.VOZ.get("modelo"):
+        print(f"ElevenLabs: guion.py dice {config.VOZ.get('modelo')!r}; se usa {mod} (por defecto desde el 26-oct-2026, mitad de "
+              f"créditos; VOZ['modelo_fijo']=True para no cambiarlo)", flush=True)
+    print(f"ElevenLabs ({mod}): {len(pend)} tomas, {chars} caracteres (≈ {round(chars * tasa)} créditos); saldo "
+          + " · ".join(f"cuenta {n}: {'?' if s is None else s}" for n, s in sal), flush=True)
+    if chars * tasa > disp:
+        print(f"  ⚠ no alcanza: faltan ≈ {round(chars * tasa - disp)} créditos; se genera lo que se pueda", flush=True)
     gasto = 0
-    for n, key, texto, seed, path in pend:
-        prev = " ".join(textos[max(0, n - 2):n])
-        sig = textos[n + 1] if n + 1 < len(textos) else ""
-        if es_v3():
-            texto = config.FRASES_TTS.get(key, texto)   # con las etiquetas [..] que config quitó del guion
-        mp3, costo = tts(texto, seed, prev, sig, voice_id=voz_de(key))
-        y, sr = librosa.load(io.BytesIO(mp3), sr=None, mono=True)
-        sf.write(path, y, sr)
-        gasto += costo
-        log.append(dict(key=key, seed=seed, chars=len(texto), costo=costo, t=time.strftime("%Y-%m-%d %H:%M")))
-        print(path, round(len(y) / sr, 2), f"costo {costo}", flush=True)
-    json.dump(log, open(log_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    try:
+        for n, key, texto, seed, path in pend:
+            prev = " ".join(textos[max(0, n - 2):n])
+            sig = textos[n + 1] if n + 1 < len(textos) else ""
+            if es_v3():
+                texto = config.FRASES_TTS.get(key, texto)   # con las etiquetas [..] que config quitó del guion
+            mp3, costo = tts(texto, seed, prev, sig, voice_id=voz_de(key))
+            y, sr = librosa.load(io.BytesIO(mp3), sr=None, mono=True)
+            sf.write(path, y, sr)
+            gasto += costo
+            log.append(dict(key=key, seed=seed, chars=len(texto), costo=costo, cuenta=cuentas()[_activa][0], modelo=mod,
+                            t=time.strftime("%Y-%m-%d %H:%M")))
+            print(path, round(len(y) / sr, 2), f"costo {costo}", flush=True)
+    finally:   # el registro se guarda aunque todas las cuentas se queden sin saldo a media ronda
+        json.dump(log, open(log_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"ElevenLabs: gastados {gasto} créditos en esta ronda; saldo ≈ {disp - gasto}")
+
+
+if __name__ == "__main__":
+    for n, s in saldos():
+        print(f"cuenta {n}: {'clave rechazada o sin respuesta' if s is None else f'{s} créditos'}")

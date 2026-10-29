@@ -35,7 +35,9 @@ SECCIONES = [
     ("scene-072", [("conker_windy", 0)]),                  # «…nadie veía venir. Conker.»
     ("c6", [("sfa_thorntail", 0)]),                        # el divorcio: Star Fox Adventures
     ("c7", [("kameo_heroe", 0)]),                          # Ghoulies, Kameo, PDZ: Kameo (Steve Burke)
-    ("scene-097", [("viva_tema", 0), ("bk_clickclock", 0)]),  # «En 2006 llegó Viva Piñata» … Nuts and Bolts, Kinect
+    # «En 2006 llegó Viva Piñata» … Nuts and Bolts, Kinect. viva_tema FUERA (28-oct): Content ID «Oven-Fresh Day»
+    # (TEOSTO_TONO_STEF_CS) en 14:20-15:32; Banjo (Grant Kirkhope - Topic) no trae reclamo en este video
+    ("scene-097", [("bk_clickclock", 0)]),
     ("c8", [("sot_estrella", 0)]),                         # Sea of Thieves
     ("cierre", [("dkc_creditos", 0)]),                     # cierre: los créditos de DKC
 ]

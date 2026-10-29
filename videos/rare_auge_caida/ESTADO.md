@@ -1,6 +1,6 @@
 # Rare: el estudio que Nintendo DEJÓ IR (auge y caída) — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: cronicas_gaming · SUBIDO en privado y PROGRAMADO jue 5-nov-2026 18:00 CDMX: https://youtu.be/RwkNXgEnqsU (18:00)
+- canal: cronicas_gaming · SUBIDO en privado y PROGRAMADO jue 5-nov-2026 18:00 CDMX: https://youtu.be/QJzL9XpVLeE (18:00; resubido el 28-oct sin Viva Piñata, el viejo RwkNXgEnqsU borrado)
 - estilo: secuencia_yt + kit NUEVO `nucleo/mg_rare.py` (humo azul noche + oro de Rareware/Rare Replay) + pegatinas + OST oficial por época · voz ElevenLabs Hope (`eleven_v4_turbo`) → doc: docs/estilo_secuencia_yt.md § Crónicas del gaming
 - etapa: subido y programado; esperando el visto bueno del usuario
 - siguiente: visto bueno → `fab.py rare_auge_caida limpiar` · hallazgos al doc de estilo · registro a 7 días (~12-nov) en canales/formula
@@ -11,6 +11,7 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | TODO en una sesión (el usuario, 28-oct) | ✅ 28-oct | investigación con fuentes · guion 130 frases · voz turbo · 126 clips (42 fuentes) · OST · 118 FX · render 27 min · subido RwkNXgEnqsU |
+| 2 | Content ID (el usuario, 28-oct: «arregla, subes y borras») | ✅ 28-oct | reclamo «Oven-Fresh Day» (Viva Piñata, TEOSTO_TONO_STEF_CS) 14:20-15:32 → scene-097 con bk_clickclock, mezcla + final (solo audio) · resubido QJzL9XpVLeE mismo hueco · RwkNXgEnqsU borrado |
 
 ## Decisiones del episodio (28-oct-2026, el usuario)
 - Tema elegido entre 3 con datos (Rare / Mario 64 + 20 secretos / OoT 10 misterios): **auge y caída de Rare**. Variable que
@@ -34,6 +35,8 @@
   revisar el FINAL del clip.
 - Wikimedia: 429 con originales en ráfaga y 400 «use thumbnail sizes»: pedir `pithumbsize=960` / `iiurlwidth=960` y pausas.
 - `armar_musica_ost.py`: una sección con varias pistas solo suena la primera si cabe; para cambiar de juego, corte por beat.
+- Content ID: la OST de Viva Piñata («Oven-Fresh Day») la reclama TEOSTO_TONO_STEF_CS; el resto de la OST (DKC, Banjo, GoldenEye,
+  Perfect Dark, Conker, SFA, Kameo, SoT, KI, Battletoads) pasó sin reclamo. Arreglo barato: solo audio (`final` copia la imagen).
 - E: casi lleno (1,9 GB): salida/ y segmentos/ de este video pasaron de junction a carpetas reales en C:.
 
 ## Cierre (regla del 12-oct-2026)

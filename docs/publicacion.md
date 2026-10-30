@@ -144,7 +144,11 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
    **Ingredientes en el navegador integrado (27-oct-2026):** bloquea `http://127.0.0.1` (ERR_BLOCKED_BY_CLIENT: no sirve un servidor
    local de imágenes), pero `i.ytimg.com/vi/<id>/maxresdefault.jpg` y upload.wikimedia.org tienen CORS abierto: `fetch` → `File` →
    `ClipboardEvent('paste')` en `.ProseMirror`. La miniatura oficial de un tráiler del juego es un ingrediente real de primera
-   (`videos/wow_100_curiosidades_tbc_wotlk/prompt_miniatura.md`, 2/2 bien).
+   (`videos/wow_100_curiosidades_tbc_wotlk/prompt_miniatura.md`, 2/2 bien). Sin URL pública, una imagen de ~4 KB (256 px, WebP) cabe como
+   base64 en `javascript_tool`; el canvas la reescala antes de pegarla (`robotaller_mes1`, 30-oct-2026).
+   **Bajar la imagen (30-oct-2026):** los `<img>` de Flow ya son `flow.google.com/asb/…` y sin cookies devuelven HTML. La URL firmada
+   `flow-content.google/image/<id>?Expires…&Signature…` viene en la respuesta del POST `batchexecute` con `rpcids=ogiZ0b`
+   (`read_network_requests` con su `requestId`), y esa sí baja con curl sin cookies.
 8c. **Publicación (flujo acordado con el usuario):** Claude sube el video con `python fab.py yt subir <video> <canal> private` (sube video, aplica `youtube.json`, miniatura `miniatura` y subtítulos .srt), anota el
    id en `canales/<canal>.json` (`publicados`) y en BITACORA.md. **Desde el 20-oct-2026 se sube YA PROGRAMADO en el hueco del canal
    (`private --publicar <ISO UTC>`) sin preguntar** (regla «render terminado = subir y programar» arriba); a uno ya subido sin fecha:

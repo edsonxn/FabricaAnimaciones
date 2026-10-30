@@ -1,0 +1,9 @@
+# Miniatura de «Soy una IA y esto construí en 32 días» (Flow, Nano Banana 2.1, 30-oct-2026)
+
+Chip: Imagen · 16:9 · Nano Banana 2.1 · x2. Ingredientes pegados en el navegador integrado con `ClipboardEvent('paste')`:
+Token (cuadro de medios/token.mp4) y la foto de El Jefe (propios/jefe_limpio.png; NO va a git).
+Texto: lo que el título no dice (el título ya dice «32 días»): la cifra real de fallos del gancho. Nada de los canales protegidos.
+
+## Prompt A — «1,293 ERRORES»
+
+YouTube thumbnail, 16:9. Scene inside a dark workshop at night with a wall of computer monitors out of focus behind, glowing with lines of code and a few red error alerts, strong depth, cinematic light, teal and orange rim lights, high contrast. On the right, very large, the cute robot from the first reference image with exactly the same design: round white head, dark rounded visor face with two glowing teal oval eyes, pink cheeks, small green ball antenna, purple body with a white heart on the chest; it looks guilty and nervous, one drop of sweat, holding up a big ring of golden keys in one hand. On the left, the man from the second reference image with exactly the same face, curly black hair and thin mustache, wearing a plain black t-shirt, a real photograph of him from the chest up, arms crossed, one eyebrow raised, staring at the robot, unimpressed. At the top center a huge two-line title in heavy condensed bold sans-serif capitals with a thick black outline: first line the number 1,293 in bright yellow, second line the word ERRORES in white, spelled exactly E-R-R-O-R-E-S. The title is fully inside the frame, perfectly legible, and does not cover either face. No other text, no logos, no watermark, no border, no game characters.

@@ -1,7 +1,7 @@
 {
   "canal_id": "UCPiRBTFWvxEdqBlEY0os4PQ",
   "nombre": "Edsonxn",
-  "estilo": "documental de misterio (referencia: Detrás del Enigma; ejemplo videos/voynich/)",
+  "estilo": "Jefe de Robots: Token, la IA, narra lo que se crea con IA y la trayectoria de Edson, sobre grabaciones reales de la fábrica (docs/estilo_jefe_robots.md). Antes: documental de misterio (voynich, polybius).",
   "horario": {
     "zona": "America/Mexico_City",
     "hora_local": "14:00",
@@ -13,7 +13,10 @@
     ],
     "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
     "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando haya datos.",
-    "ciclo_dias": 6
+    "ciclo_dias": 7,
+    "historial": [
+      "2026-10-30: reactivado como perfil de desarrollador; ciclo semanal para que quepa la revisión del usuario."
+    ]
   },
   "publicados": [
     {
@@ -36,17 +39,29 @@
       "video": "polybius",
       "id": "6rqPo_fgz58",
       "titulo": "Polybius: el videojuego que nunca existió",
+      "visibilidad": "public",
+      "publicar": "2026-10-14T20:00:00Z",
+      "publicado": "2026-10-14"
+    },
+    {
+      "video": "robotaller_mes1",
+      "id": "TaNvpZ-wpao",
+      "titulo": "Soy una IA y esto construí en 32 días (tú decides lo que sigue)",
+      "estado": "programado",
+      "subido": "2026-10-30",
       "visibilidad": "programado",
-      "publicar": "2026-10-14T20:00:00Z"
+      "publicar": "2026-10-31T16:00:00Z",
+      "formato": "Jefe de Robots: Token narra grabaciones reales de la fábrica"
     }
   ],
   "ideas": {
     "idioma": "es",
     "region": "MX",
     "busquedas": [
-      "misterio sin resolver documental",
-      "caso real crimen documental",
-      "misterios de internet"
+      "Claude Code español",
+      "agentes de IA proyecto real",
+      "automatizar con Claude Code",
+      "vida de programador con IA"
     ],
     "competidores": [
       "UCCoFBJI1NDIJiQcw_FkWC3g",

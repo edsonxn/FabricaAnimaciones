@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_gaming · hueco dom 8-nov-2026 18:00 CDMX (ciclo 3 d) · gancho = 30 años + la placa «resuelta» (oct-2026)
 - estilo: secuencia_yt + kit NUEVO `nucleo/mg_mario64.py` (diálogo translúcido, selección de estrella, HUD, 7 MG) + tema de mapa `mario64` + pegatinas + OST oficial + SFX del juego · voz ElevenLabs Hope (`eleven_v4_turbo`) → doc: docs/estilo_secuencia_yt.md § Crónicas del gaming
-- etapa: ✅ SUBIDO en privado y PROGRAMADO dom 8-nov-2026 18:00 CDMX: https://youtu.be/-pXDdmgtvPQ · MASTER 21:24 · falta el visto bueno del usuario
-- siguiente: revisión del usuario; si pide cambios, `video --rehacer t0-t1` + `final` + reemplazar la subida
+- etapa: ✅ SUBIDO en privado y PROGRAMADO dom 8-nov-2026 18:00 CDMX: https://youtu.be/-pXDdmgtvPQ · MASTER 21:24 · APROBADO por el usuario el 30-oct
+- siguiente: nada; se publica solo. Revisar el rendimiento en cuanto salga (y si hay reclamo de Content ID)
 
 ## Sesiones (plan de tramos · «continúa el video mario 64» retoma aquí · protocolo docs/sesiones.md)
 - alias: mario 64, super mario 64, video de mario, mario64_secretos

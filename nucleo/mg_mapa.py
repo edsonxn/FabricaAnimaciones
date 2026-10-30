@@ -17,6 +17,8 @@ Cada juego tiene su TEMA (trazo, marcadores, letra y título como en su propia i
             Arial Rounded en píldora chocolate; título Cooper Black.
   "zelda"   (aventura de fantasía) puntos dorados, triángulo dorado en la meta, Engravers MT grabado sobre banda azul noche.
   "majora"  (Majora's Mask) puntos rosa, rombo amarillo de las púas en la meta, letra del diálogo N64 sobre humo; título serifa.
+  "mario64" (Super Mario 64) ruta de monedas doradas que brotan con rebote; meta = la Estrella de poder con ojos y destello; nombres
+            en Arial Rounded blanco sobre humo negro (como los diálogos del juego); título con contorno grueso.
 Para otro juego de Crónicas del gaming: copiar un tema de TEMAS y cambiar colores/letras a la interfaz de ESE juego.
 
 Uso desde videos/<v>/efectos.py (FX `pantalla` si cubre el cuadro, `mg` si va en ventana):
@@ -41,7 +43,12 @@ Uso desde videos/<v>/efectos.py (FX `pantalla` si cubre el cuadro, `mg` si va en
   bajo el título se ocultan: mejor un mapa de región, o partirla en dos mapas.
 Probar SIEMPRE con la hoja ANTES de `fx`: `MP.hoja(fn, dur, marcas, salida)` (2x3 cuadros; MÍRALA) y luego `fx hoja`.
   margen (zona segura a los lados), zoom (respiración de la cámara, 1.05), ajuste (0..1: cuánto encuadra la ruta ENTERA desde
-  el principio; 0 = la cámara va descubriendo la ruta). La cámara nunca amplía más de 1,6x el original ni sale de la imagen.
+  el principio; 0 = la cámara va descubriendo la ruta), traza (s máx. que tarda cada tramo en dibujarse, 1,7; un recorrido
+  largo con solo inicio y meta: traza=99 = se dibuja durante todo el tramo). La cámara no sale de la imagen ni amplía el
+  original más de `amp_max` (2,0 px de salida por px del mapa; el mínimo es lo que haga falta para llenar la pantalla): con un
+  mapa chico (los de Wowhead Classic miden 1024 px) y dos puntos juntos, antes llegaba a 13x y se veía pixelado (29-oct-2026).
+  viajeros=[ruta .png/.jpg, ...]: quien se MUEVE por la ruta (personajes, unidades) va en ella como pegatina redonda pequeña
+  con su imagen REAL del juego, en la punta del trazo (varios, en fila detrás); regla del usuario, 29-oct-2026.
 """
 import math
 import os
@@ -91,6 +98,11 @@ TEMAS = {
     "majora": dict(trazo="puntos", color=(255, 92, 150), borde=(40, 10, 50), grueso=6, letra=("ARLRDBD.TTF", 40, None),
                    texto=(250, 250, 248), contorno=None, titulo=("georgiab.ttf", 84, None), subt=("georgiaz.ttf", 38, None),
                    tinte=(.92, .90, .96, .06), fondo=(10, 4, 18)),
+    # Super Mario 64 (mario64_secretos, 29-oct-2026): ruta de MONEDAS amarillas (bolitas con rebote y borde naranja), meta = la
+    # Estrella de poder; nombres en la letra redonda del diálogo sobre humo negro, título blanco con contorno grueso.
+    "mario64": dict(trazo="bolitas", color=(255, 214, 0), borde=(176, 96, 0), grueso=10, letra=("ARLRDBD.TTF", 40, None),
+                    texto=(250, 250, 248), contorno=None, titulo=("ARLRDBD.TTF", 84, None), subt=("ARLRDBD.TTF", 38, None),
+                    tinte=(1.0, 1.0, 1.0, 0.0), fondo=(10, 30, 60)),
 }
 
 
@@ -221,6 +233,20 @@ def _marcador(tema, tipo):
                 r = 14 if tipo == "inicio" else 11
                 d.ellipse((c - r - 5, c - r - 5, c + r + 5, c + r + 5), fill=(120, 50, 160))
                 d.ellipse((c - r, c - r, c + r, c + r), fill=col)
+        elif tema == "mario64":
+            if tipo == "meta":                              # la Estrella de poder (mg_mario64) con halo
+                import mg_mario64 as M64
+                im.alpha_composite(_halo(34, (255, 230, 90), 160), (int(c - 68), int(c - 68)))
+                st = M64.estrella(96)
+                im.alpha_composite(st, (int(c - st.width / 2), int(c - st.height / 2)))
+            elif tipo == "peligro":                         # Bob-omb: bola negra con mecha
+                d.ellipse((c - 22, c - 22, c + 22, c + 22), fill=(20, 20, 24), outline=(232, 40, 40), width=4)
+                d.line([(c + 8, c - 22), (c + 16, c - 34)], fill=(230, 200, 120), width=4)
+            else:                                           # moneda amarilla de canto grueso
+                r = 17 if tipo == "inicio" else 14
+                d.ellipse((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=T["borde"])
+                d.ellipse((c - r, c - r, c + r, c + r), fill=T["color"])
+                d.rectangle((c - 3, c - r * .55, c + 3, c + r * .55), fill=(255, 246, 170))
         elif tema == "zelda":
             col = (214, 44, 32) if tipo == "peligro" else T["color"]
             if tipo == "meta":                              # triángulo dorado
@@ -254,7 +280,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora"):               # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))
@@ -297,6 +323,8 @@ def _titulo(tema, titulo, sub):
             _escribe(d, cx - tw / 2, y, s, f, (255, 209, 0), stroke=5, stroke_color=(0, 0, 0))
         elif tema == "gaming":
             _escribe(d, cx - tw / 2, y, s, f, T["color"], stroke=8, stroke_color=T["borde"])
+        elif tema == "mario64":
+            _escribe(d, cx - tw / 2, y, s, f, (255, 255, 255), stroke=7, stroke_color=(20, 12, 6))
         else:
             _escribe(d, cx - tw / 2, y, s, f, T["color"] if tema in ("er", "zelda") else T["texto"], track=track)
             ly = y + tam * .62                               # filetes que se desvanecen hacia fuera (rombo al centro en tes)
@@ -311,7 +339,7 @@ def _titulo(tema, titulo, sub):
                           fill=(250, 206, 60) if tema == "majora" else T["color"])
         if sub:
             col = (255, 255, 255) if tema == "wow" else T["texto"]
-            st = (0, 0, 0) if tema in ("wow", "gaming") else None
+            st = (0, 0, 0) if tema in ("wow", "gaming", "mario64") else None
             d.text((cx, y + tam * .62 + tam * .45 + 6), sub, font=fs, fill=col, anchor="mm", stroke_width=3 if st else 0, stroke_fill=st)
         return _bgra(im)
     return _cache(("tit", tema, titulo, sub), hacer)
@@ -362,8 +390,30 @@ def mapa(ruta, puntos, tema="wow", **kw):
     return fn
 
 
+def _medalla(fuente_img, d, color):
+    """Pegatina redonda de quien viaja por la ruta: su imagen REAL (recorte cuadrado desde arriba, donde está la cara),
+    aro del color del tema, borde blanco de pegatina y sombra. RGBA (PIL)."""
+    im = Image.open(fuente_img).convert("RGBA")
+    lado = min(im.width, im.height)
+    im = im.crop(((im.width - lado) // 2, 0, (im.width - lado) // 2 + lado, lado)).resize((d, d), Image.LANCZOS)
+    fondo = Image.new("RGBA", (d, d), (8, 10, 26, 255))
+    fondo.alpha_composite(im)
+    M, a1, a2 = 16, max(3, d // 22), max(2, d // 40)
+    out = Image.new("RGBA", (d + 2 * M, d + 2 * M), (0, 0, 0, 0))
+    sh = Image.new("RGBA", out.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).ellipse((M - a1 - a2 + 3, M - a1 - a2 + 7, M + d + a1 + a2 + 3, M + d + a1 + a2 + 7), fill=(0, 0, 0, 190))
+    out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7)))
+    dr = ImageDraw.Draw(out)
+    dr.ellipse((M - a1 - a2, M - a1 - a2, M + d + a1 + a2, M + d + a1 + a2), fill=(245, 240, 228, 255))
+    dr.ellipse((M - a1, M - a1, M + d + a1, M + d + a1), fill=tuple(int(c) for c in color) + (255,))
+    m = Image.new("L", (d, d), 0)
+    ImageDraw.Draw(m).ellipse((0, 0, d - 1, d - 1), fill=255)
+    out.paste(fondo, (M, M), m)
+    return out
+
+
 def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="pantalla", ancho=1100, alto=None,
-          margen=.16, zoom=1.05, ajuste=.30, W=1920, H=1080):
+          margen=.16, zoom=1.05, ajuste=.30, traza=1.7, amp_max=2.0, viajeros=None, W=1920, H=1080):
     T = TEMAS[tema]
     im = Image.open(ruta).convert("RGB")
     if recorte:
@@ -380,6 +430,7 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
         if len(p) > 4 and p[4]:
             import mg_wow
             fotos[i] = _bgra(mg_wow._foto(p[4], alto=int(280 * (.62 if modo == "ventana" else 1)), giro=(-4 if i % 2 else 4)))
+    viaj = [_bgra(_medalla(v, int(140 * (.62 if ventana else 1)), T["color"])) for v in (viajeros or [])]
     lug = [(i, p[2], (p[3] if len(p) > 3 else None)) for i, p in enumerate(puntos) if len(p) > 2 and p[2]]
     if not lug:
         raise ValueError("mg_mapa.mapa: hace falta al menos un punto con nombre")
@@ -403,6 +454,7 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
     s_min_n = max(VW / im.width, VH / im.height)            # (px de salida por px del original) la vista no se sale de la imagen
     s_full_n = max(s_min_n, min(SW / fw, SH / fh))          # toda la ruta en la zona segura
     s_max_n = max(s_full_n, min(1.6, s_full_n * 2.2))       # lo más cerca: el doble que la vista entera, sin ampliar > 1,6x
+    s_max_n = max(s_min_n, min(s_max_n, amp_max))           # …ni más de amp_max el original (pixelado), salvo para llenar la vista
     k = min(s_max_n * 1.05, 4200 / max(im.size))            # base de trabajo ≈ 1:1 en la vista más cerrada (≤ 4200 px)
 
     base = im.resize((max(2, int(im.width * k)), max(2, int(im.height * k))), Image.LANCZOS)
@@ -439,10 +491,11 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
 
     def fn(dt, dur, marcas):
         mk = tiempos(dur, marcas)
-        # largo de ruta dibujado: tramo k se traza en [max(mk[k-1]+.2, mk[k]-1.7), mk[k]]
+        # largo de ruta dibujado: tramo k se traza en [max(mk[k-1]+.2, mk[k]-traza), mk[k]] (traza = s máx. por tramo: 1,7 en
+        # misiones; un recorrido largo con solo inicio y meta, p. ej. traza=99 = se dibuja durante todo el tramo)
         largo = 0.0
         for j in range(1, len(lug)):
-            t0 = max(mk[j - 1] + .2, mk[j] - 1.7)
+            t0 = max(mk[j - 1] + .2, mk[j] - traza)
             if dt >= mk[j]:
                 largo = Lk[j]
             elif dt > t0:
@@ -486,8 +539,34 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
 
         pv = a_vista(hecho)
         _trazo(f, pv, tema, T, dt, largo * s)
+        # título que tapa un lugar ya alcanzado (lugar en el borde norte del mapa y sin margen para bajar la cámara): se
+        # desvanece justo antes de que salga el marcador y le deja el sitio a su nombre
+        op_t = 1.0
+        if rect_t:
+            for j, (i, _, _) in enumerate(lug):
+                x, y = a_vista(pts_b[i])
+                if dt >= mk[j] - .4 and y < rect_t[3] + 40 and rect_t[0] - 60 < x < rect_t[2] + 60:
+                    op_t = min(op_t, 1 - _eo((dt - mk[j] + .4) / .4))
         # marcadores y nombres
-        ocupados = [rect_t] if rect_t else []
+        ocupados = [rect_t] if rect_t and op_t > .5 else []
+        # viajeros: pegatinas redondas en la punta del trazo (en fila detrás de ella si son varios); saltan al moverse;
+        # van debajo de los marcadores y los nombres las esquivan
+        ocup_v = []
+        if viaj and len(lug) > 1 and dt >= mk[0]:
+            moviendo = any(max(mk[j - 1] + .2, mk[j] - traza) < dt < mk[j] for j in range(1, len(lug)))
+            Lp = np.concatenate([[0], np.cumsum(np.hypot(*np.diff(pv, axis=0).T))]) if len(pv) > 1 else np.zeros(1)
+            for q, spr in reversed(list(enumerate(viaj))):
+                d_atras = q * spr.shape[0] * .62
+                if Lp[-1] >= d_atras:
+                    k_ = int(np.searchsorted(Lp, Lp[-1] - d_atras))
+                    x, y = pv[min(k_, len(pv) - 1)]
+                else:                                       # aún no hay trazo para la fila: en el punto de salida, de lado
+                    x, y = pv[0][0] - d_atras, pv[0][1]
+                rv = spr.shape[0] / 2                       # a la izquierda de la punta: no tapa el marcador ni su nombre
+                x -= rv * 1.05
+                y -= rv * .45 + (7 * abs(math.sin(dt * 7 + q)) if moviendo else 2 * math.sin(dt * 1.6 + q))
+                ocup_v.append((x - rv, y - rv, x + rv, y + rv))
+                _pegar(f, spr, x, y, _eo((dt - mk[0]) / .35), _pop(dt - mk[0] - .05 * q, .4))
         for j, (i, nombre, tipo) in enumerate(lug):
             if dt < mk[j]:
                 continue
@@ -509,18 +588,22 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             eh, ew = et.shape[:2]
             arriba = 84 if (tipo == "meta" and tema == "tes") else (66 if tema == "gaming" else 46)
             elegido = None
-            for lx, ly in ((1, -1), (-1, -1), (1, 1), (-1, 1)):    # el primer hueco libre: dentro, sin título ni otro nombre
-                ex_, ey_ = x + lx * (ew / 2 + 6), y + (-arriba if ly < 0 else 52)
-                r = (ex_ - ew / 2 + 50, ey_ - eh / 2 + 28, ex_ + ew / 2 - 50, ey_ + eh / 2 - 28)
-                libre = r[0] >= 0 and r[2] <= VW and r[1] >= 0 and r[3] <= VH and not any(
-                    r[0] < q[2] and q[0] < r[2] and r[1] < q[3] and q[1] < r[3] for q in ocupados)
-                if libre:
-                    elegido = (ex_, ey_, r)
+            for evita in (ocupados + ocup_v, ocupados):     # mejor sin tapar a los viajeros; si no cabe, encima de ellos
+                for lx, ly in ((1, -1), (-1, -1), (1, 1), (-1, 1)):    # el primer hueco libre: dentro, sin título ni otro nombre
+                    ex_, ey_ = x + lx * (ew / 2 + 6), y + (-arriba if ly < 0 else 52)
+                    r = (ex_ - ew / 2 + 50, ey_ - eh / 2 + 28, ex_ + ew / 2 - 50, ey_ + eh / 2 - 28)
+                    libre = r[0] >= 0 and r[2] <= VW and r[1] >= 0 and r[3] <= VH and not any(
+                        r[0] < q[2] and q[0] < r[2] and r[1] < q[3] and q[1] < r[3] for q in evita)
+                    if libre:
+                        elegido = (ex_, ey_, r)
+                        break
+                if elegido:
                     break
             if elegido:                                     # sin hueco (el lugar quedó bajo el título o fuera): sin nombre
                 ex_, ey_, r = elegido
                 ocupados.append(r)
                 _pegar(f, et, ex_, ey_, _eo((dt - mk[j] - .12) / .3), 1.0)
+        ocupados += ocup_v
         # fotos: la del último lugar al que llegó la ruta (se va cuando llega al siguiente), en el primer hueco libre junto a él
         for j in range(len(lug) - 1, -1, -1):
             i = lug[j][0]
@@ -557,7 +640,7 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
         if titulo:
             e = _eo((dt - .25) / .6)
             esc = esc_t * (1 + .04 * (1 - e))
-            _pegar(f, tt0, VW / 2, y_t + tt0.shape[0] * esc / 2, e, esc)
+            _pegar(f, tt0, VW / 2, y_t + tt0.shape[0] * esc / 2, e * op_t, esc)
         if ventana:
             e = _pop(dt, .5)
             out = np.dstack([f, alfa_v])

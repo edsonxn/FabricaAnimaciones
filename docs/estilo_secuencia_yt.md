@@ -543,6 +543,14 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   - Voz Hope: Whisper escribe «Zubas/uvas», «Umba Umba», «Cheeto», «Scrooge» → tolerancias; la única mala real fue «Dentro, Banjo»
     leído «Ventro» (dos palabras que empiezan igual): reescribir la frase, no repetir la semilla.
 
+
+### Lecciones de `mario64_secretos` (30-oct-2026)
+- **Kit `nucleo/mg_mario64.py`:** diálogo translúcido, rótulo de selección de estrella, HUD y 7 MG (mando, reloj_ttc, agua, boton_a, bit, estrellas, linea_tiempo) + tema de mapa `mario64`. Mapas de VGMaps (2-3 k px con rótulos); los del DS en la wiki son de 128-255 px.
+- **`medir_brillo.py` sobre el clip REAL, no sobre una copia:** `bajar` no fuerza keyframes, así que el tramo real empieza en otro punto que una bajada de 360p del mismo segundo (dos clips «limpios» en 360p salieron con negro de 0,3-1,5 s). Bucle que funciona: corregir `desde` → `bajar <id> --rehacer` → medir → repetir. De 20 marcados, 5 eran oscuros a propósito: mirar el cuadro exacto antes de rehacer.
+- **Rótulos de secreto y ficha:** comprobar en `fx hoja` que no caen sobre un diálogo del juego (el rótulo arriba chocó con el de Bowser en el 081): se corrige moviendo el clip, no el rótulo.
+- **Antes de cambiar la `url` de un beat, mirar `plan_clips.py`:** un longplay de 4,5 h tiene varias fuentes casi iguales; al rehacer con otra `url` el segundo apunta fuera del video y `bajar` dice `ok` sin dejar archivo (el aviso real es `148/149 clips`).
+- **Render en segundo plano y PC suspendida:** el proceso sobrevive y sigue al despertar; el salto en los segundos del log no es un error.
+
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
 de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.

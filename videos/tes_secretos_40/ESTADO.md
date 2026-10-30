@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_tamriel · PROGRAMADO mié 11-nov-2026 12:08 CDMX (2026-11-11T18:08:00Z) · https://youtu.be/nlMINAT_6UI (privado)
 - estilo: secuencia_yt (gameplay Skyrim por beat + MG `nucleo/mg_tes.py` + pegatinas + mapas tema `tes`) · voz Chatterbox Sarcastica · música OST oficial de Skyrim → doc: docs/estilo_secuencia_yt.md § Tamriel
-- etapa: subido y programado (30-oct-2026) · FALTA: miniatura de Flow (necesita el sí del usuario) y monetización en Studio
+- etapa: subido y programado (30-oct-2026) · FALTA: monetización en Studio
 - siguiente: revisión del usuario; monetización en https://studio.youtube.com/video/nlMINAT_6UI/edit ; al publicarse, `canales --actualizar`
 
 ## Sesiones (plan de tramos · «continúa el video tes_secretos_40» retoma aquí · protocolo docs/sesiones.md)
@@ -29,7 +29,7 @@
 - guion.py final: 42 escenas, 146 frases, 2 708 palabras (21:40 → recortado a ~18 min) · FONETICA · ayudantes copiados de imperdibles (`_pegatinas`, `_coords_uesp`, `_hoja_clips`, `_chequeo_clips`, `_rigor`, `_sonido_original`, `_bajar_ost`, `armar_musica_ost`, `_prueba_mg`, `_prueba_mapas`, `_capitulos`, `_fallidas`) · `mapas/skyrim.jpg` · 50 pegatinas + 8 tarjetas
 
 ## Falta
-- [ ] Miniatura de Flow (`salida/miniatura.jpg` es provisional): proyecto 165fa74f-b073-4c5c-8548-2a75bd209124, ingredientes maxresdefault de R4nzGhWuTmo + Paarthurnax_Front_2.jpg, prompt como `tes_misiones_imperdibles/prompt_miniatura.md`
+- [x] Miniatura de Flow aplicada (30-oct, el usuario aceptó el aviso de derechos): `prompt_miniatura.md`
 - [ ] Monetización en Studio
 
 ## Lecciones de este video (solo lo no obvio)

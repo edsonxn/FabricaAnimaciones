@@ -1,0 +1,1362 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.79,
+  "tipo": "video",
+  "texto": "En Banjo-Tooie hay un baño con la puerta cerrada. Una vez de cada mil, por debajo de esa puerta sale luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.79,
+  "t1": 15.528,
+  "tipo": "video",
+  "texto": "Y si te acercas, oyes a alguien adentro. Hay un cartón de leche con el aviso de un personaje desaparecido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.528,
+  "t1": 26.252,
+  "tipo": "video",
+  "texto": "Una constelación escondida en el cielo de un parque de atracciones. Y un pirata borracho que jura que un oso le robó la gloria. Nada de eso te lo explica el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.252,
+  "t1": 34.386,
+  "tipo": "video",
+  "texto": "Está ahí, escondido, desde hace veintiséis años. Hoy vamos a recorrer los ocho mundos de Banjo-Tooie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.386,
+  "t1": 42.93,
+  "tipo": "video",
+  "texto": "del peor al mejor. Y en cada uno te voy a enseñar sus Easter eggs, sus curiosidades y sus secretos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.93,
+  "t1": 51.59,
+  "tipo": "video",
+  "texto": "Antes, dos cosas. La primera: este orden no es solo mi opinión. Crucé cuatro listas, las de MrDrBoi,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.59,
+  "t1": 58.985,
+  "tipo": "video",
+  "texto": "Virtual Bastion, TheGamer y Super Joe Bros, y saqué la media. Y vas a ver que nadie se pone de acuerdo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.985,
+  "t1": 68.881,
+  "tipo": "video",
+  "texto": "Hay mundos que en una lista son de lo mejor del juego, y en otra, lo peor. La segunda: por qué este juego está tan lleno de chistes escondidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.881,
+  "t1": 78.836,
+  "tipo": "video",
+  "texto": "Los de Rare lo contaron en su propio documental. Querían ver cuántos dobles sentidos podían colar, y cruzar los dedos para que no se los cortaran.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.836,
+  "t1": 85.628,
+  "tipo": "video",
+  "texto": "Los diálogos, según ellos, se fueron inventando sobre la marcha. Y se nota.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.628,
+  "t1": 94.988,
+  "tipo": "video",
+  "texto": "Este video también sale de un comentario. Riuma nos escribió que Banjo-Tooie le parece muy interesante, pero que solo pudo disfrutar del primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.988,
+  "t1": 104.183,
+  "tipo": "video",
+  "texto": "Leemos todos los comentarios, y los tomamos en cuenta para mejorar. Así que este recorrido también es para quien nunca entró a estos mundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 104.183,
+  "t1": 112.503,
+  "tipo": "video",
+  "texto": "Son ocho mundos, con diez Jiggies cada uno, y casi todos conectados entre sí por túneles, pasadizos y un tren.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.503,
+  "t1": 121.589,
+  "tipo": "video",
+  "texto": "Empezamos por el último. Y es el más polémico del juego. Puesto número ocho. Grunty Industries.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.589,
+  "t1": 128.509,
+  "tipo": "video",
+  "texto": "La guía oficial de Nintendo lo explica así: como la brujería ya no vende, Gruntilda cambió de negocio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.509,
+  "t1": 137.265,
+  "tipo": "video",
+  "texto": "Ahora fabrica ropa interior. Y el mundo te recibe con una broma pesada. La puerta está cerrada. No puedes entrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.265,
+  "t1": 146.376,
+  "tipo": "video",
+  "texto": "Hay que salir, subirse al tren, y volver dentro de él. ¿Por qué está en el último lugar? Para MrDrBoi es el peor de todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.376,
+  "t1": 155.459,
+  "tipo": "video",
+  "texto": "Para Virtual Bastion, el cuarto mejor. Y en el chat de Super Joe Bros quedó en la categoría A, con la D pisándole los talones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.459,
+  "t1": 163.939,
+  "tipo": "video",
+  "texto": "Las quejas se repiten: demasiadas baterías, demasiados conejos, y gris por todos lados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.939,
+  "t1": 173.114,
+  "tipo": "video",
+  "texto": "Es tan largo que Super Joe necesitó dos directos para terminarlo. Pero aquí están algunos de los mejores Easter eggs de todo el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.114,
+  "t1": 180.697,
+  "tipo": "video",
+  "texto": "Y el primero lo contó un desarrollador de Rare en persona. Primer piso, cuartos de los trabajadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.697,
+  "t1": 190.094,
+  "tipo": "video",
+  "texto": "Justo al entrar, a la izquierda, hay una puerta de baño. Steve Malpass, diseñador de Rare, contó que casi nunca pasa nada con ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.094,
+  "t1": 195.076,
+  "tipo": "video",
+  "texto": "Pero más o menos una vez de cada mil, sale luz por debajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 195.076,
+  "t1": 204.018,
+  "tipo": "video",
+  "texto": "Y si te acercas, oyes a un conejo obrero haciendo sus necesidades, y quejándose de que los dedos le atravesaron el papel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 204.018,
+  "t1": 214.122,
+  "tipo": "video",
+  "texto": "Con esas probabilidades, puedes terminar el juego entero sin haberlo visto nunca. En ese mismo cuarto hay un refrigerador lleno de pegatinas con logos de Rare.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.122,
+  "t1": 222.605,
+  "tipo": "video",
+  "texto": "Una dice B-T, por Banjo-Tooie. Y otra, en rojo, dice DK. Por Donkey Kong.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.605,
+  "t1": 232.43,
+  "tipo": "video",
+  "texto": "Cuando el juego salió en Xbox, Rare ya era de Microsoft. Y ese logo cambió de DK a BK. Una letra, y problema resuelto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.43,
+  "t1": 240.43,
+  "tipo": "video",
+  "texto": "Sigue subiendo, y mira las cajas. Una dice: entregar en Twycross, Inglaterra. Que es donde tiene su sede Rare.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.43,
+  "t1": 248.326,
+  "tipo": "video",
+  "texto": "Y otra, pegada a ella, dice mercancía defectuosa. Se mandaron los defectos a su propia casa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.326,
+  "t1": 257.386,
+  "tipo": "video",
+  "texto": "Otra caja dice BIG-O PANTS, y trae unos calzones. Hay quien la lee como un guiño a Mister Pants, la mascota de la web de Rare.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.386,
+  "t1": 265.462,
+  "tipo": "video",
+  "texto": "Guárdate ese nombre, porque va a volver. En el baño de hombres regresa Loggo, el excusado parlante del primer juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.462,
+  "t1": 274.681,
+  "tipo": "video",
+  "texto": "Porque este mundo tenía que tener más de un chiste de baño. Y la transformación de Humba Wumba es otro chiste viejo. En Banjo-Kazooie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.681,
+  "t1": 282.746,
+  "tipo": "video",
+  "texto": "Mumbo podía convertirte en lavadora por accidente. Aquí lo convierten en poder, y disparas calzones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.746,
+  "t1": 293.443,
+  "tipo": "video",
+  "texto": "Cierro con el jefe, porque su historia es la mejor de todas. Steve Malpass dibujó un soplete con ojos. Le pareció malo, y lo tiró a la basura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.443,
+  "t1": 300.943,
+  "tipo": "video",
+  "texto": "Después lo sacó de la papelera, todavía manchado, y se lo puso enfrente a Gregg Mayles. Así nació Weldar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.943,
+  "t1": 312.93,
+  "tipo": "video",
+  "texto": "uno de los jefes favoritos del juego. Su moraleja es muy buena: no tires nada, porque otro puede ver lo que tú no viste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 312.93,
+  "t1": 319.054,
+  "tipo": "video",
+  "texto": "Puesto número siete. Jolly Roger's Lagoon. Parece un pueblito pesquero con un bar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 319.054,
+  "t1": 328.349,
+  "tipo": "video",
+  "texto": "una tienda de empeños y poco más. Hasta que te metes al agua, y descubres que debajo hay un mar entero y hasta la Atlántida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 328.349,
+  "t1": 334.889,
+  "tipo": "video",
+  "texto": "Collider lo llama el mundo que no deja de dar. Lo que lo hunde en las listas es el control bajo el agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.889,
+  "t1": 343.293,
+  "tipo": "video",
+  "texto": "Apuntar buceando no es divertido, y los pulpos se meten en cada pasillo. El Easter egg más triste del juego está en el bar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.293,
+  "t1": 351.596,
+  "tipo": "video",
+  "texto": "En una habitación de Jolly's hay un pirata borracho, el Capitán Blackeye. Te dice que un oso le robó su gloria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.596,
+  "t1": 359.802,
+  "tipo": "video",
+  "texto": "Y que, por cierto, se parecía bastante a ti. Suena a tontería de borracho. Hasta que sabes quién es.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 359.802,
+  "t1": 372.283,
+  "tipo": "video",
+  "texto": "Blackeye iba a ser el villano de Project Dream, el proyecto que Rare abandonó y que terminó convertido en Banjo-Kazooie. Y Banjo salió de un personaje secundario de ese proyecto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 372.283,
+  "t1": 379.873,
+  "tipo": "video",
+  "texto": "Literalmente, un oso le robó la gloria. Rare nunca lo ha explicado, pero cuesta creer que sea casualidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.873,
+  "t1": 387.185,
+  "tipo": "video",
+  "texto": "Y ahí sigue, bebiendo. Bajo el agua hay un OVNI. Y cuando Kazooie conoce a los alienígenas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.185,
+  "t1": 396.434,
+  "tipo": "video",
+  "texto": "les pregunta si alguno se llama Elvis, que es un guiño a Perfect Dark. Después, si necesitan llamar a casa. Y eso ya es E.T.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 396.434,
+  "t1": 404.654,
+  "tipo": "video",
+  "texto": "En el fondo del mar está el casillero de Davy Jones, donde vive el jefe. Y los casilleros de alrededor llevan nombres del equipo de Rare:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.654,
+  "t1": 413.914,
+  "tipo": "video",
+  "texto": "G. Kirkhope, el compositor. G. Mayles, el diseñador. Es la firma de los desarrolladores, en el último rincón del mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.914,
+  "t1": 423.054,
+  "tipo": "video",
+  "texto": "En la tienda de empeños de Pawno hay una caja marcada con las letras B-K. Banjo y Kazooie, con sus cosas en una casa de empeños.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 423.054,
+  "t1": 429.252,
+  "tipo": "video",
+  "texto": "Se ve que el primer juego no les dejó tanto. Y en este pueblo vive Merry Maggie Malpass.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 429.252,
+  "t1": 437.951,
+  "tipo": "video",
+  "texto": "Sí, Malpass, como Steve Malpass, el del baño secreto. Dicen que el nombre viene de él, aunque eso no está confirmado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.951,
+  "t1": 447.411,
+  "tipo": "video",
+  "texto": "Otro nombre con historia es el del jefe, Lord Woo Fak Fak. Según la wiki de los fans, y tómalo con pinzas, el ingeniero Paul Machacek",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.411,
+  "t1": 457.154,
+  "tipo": "video",
+  "texto": "soltaba groserías con cada error, y gritaba woo al arreglarlo. Y para respirar bajo el agua, Mumbo tiene un hechizo que se llama Sunlight,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.154,
+  "t1": 464.503,
+  "tipo": "video",
+  "texto": "luz del sol. ¿Su efecto? Agua oxigenada. Porque para qué ponerle un nombre que tenga sentido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.503,
+  "t1": 473.983,
+  "tipo": "video",
+  "texto": "Un truco para este mundo: en la Cámara de Códigos escribes CHEATO, y luego jukebox al revés. La rocola de Jolly's vuelve a funcionar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.983,
+  "t1": 481.368,
+  "tipo": "video",
+  "texto": "y te da una prueba de música. Y si te gusta buscar, una página de Cheato está dentro de unos peces transparentes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.368,
+  "t1": 487.93,
+  "tipo": "video",
+  "texto": "y otra te la vende Pawno por cinco doblones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 487.93,
+  "t1": 500.185,
+  "tipo": "video",
+  "texto": "Puesto número seis. Terrydactyland, Terry más pterodáctilo. Otro mundo que parte a los fans en dos. Para Super Joe Bros está en la E, de lo peor del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 500.185,
+  "t1": 507.096,
+  "tipo": "video",
+  "texto": "Para Virtual Bastion, es el tercero mejor. Las críticas son fáciles de entender.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.096,
+  "t1": 519.457,
+  "tipo": "video",
+  "texto": "Es enorme, está bastante vacío, y las cuevas se parecen demasiado por fuera. MrDrBoi contó ocho pasos para sacar un solo Jiggy de los cavernícolas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 519.457,
+  "t1": 524.797,
+  "tipo": "video",
+  "texto": "Pero tiene algo que ningún otro mundo tiene. Humba Wumba te convierte en un T-Rex.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.797,
+  "t1": 533.748,
+  "tipo": "video",
+  "texto": "Y si Mumbo agranda su tienda primero, sales convertido en Daddy T-Rex, que no cabe en ningún lado. El mejor engaño está en Chompa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.748,
+  "t1": 543.498,
+  "tipo": "video",
+  "texto": "Una cinemática épica te hace creer que te acaba de devorar. Y dentro de la barriga, el juego se convierte en un minijuego en primera persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 543.498,
+  "t1": 549.548,
+  "tipo": "video",
+  "texto": "En las Llanuras del Pisotón pasa algo que Rare no se molesta en explicar. Del Stomponadon,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.548,
+  "t1": 558.413,
+  "tipo": "video",
+  "texto": "un dinosaurio gigantesco, solo vas a ver el pie. Nada más. Un pie que baja del cielo y te aplasta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.413,
+  "t1": 567.773,
+  "tipo": "video",
+  "texto": "Terry, la jefa del mundo, es además el personaje que más Jiggies te da de todo el juego. Tres. Tienes que cuidar a sus crías, claro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.773,
+  "t1": 576.344,
+  "tipo": "video",
+  "texto": "Nadie regala nada en esta isla. Lo mejor de Terrydactyland son sus conexiones. La cueva de Unga Bunga tiene una salida",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.344,
+  "t1": 584.196,
+  "tipo": "video",
+  "texto": "secreta que llega a la Cámara del Tesoro de Mayahem Temple. El cavernícola le había robado su reliquia a Targitzan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.196,
+  "t1": 592.34,
+  "tipo": "video",
+  "texto": "La cueva de Oogle Boogle se conecta por un pasadizo con Witchyworld, porque los cavernícolas necesitan comida chatarra del parque.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.34,
+  "t1": 603.25,
+  "tipo": "video",
+  "texto": "Y la piscina de Dippy se llena desde otro mundo. Allá arriba, en Cloud Cuckooland, drenas una piscina con el Talon Torpedo, y el agua cae hasta aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 603.25,
+  "t1": 612.93,
+  "tipo": "video",
+  "texto": "Es decir: el mundo que parece más vacío es el que más cables tiene conectados al resto del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.93,
+  "t1": 618.264,
+  "tipo": "video",
+  "texto": "Puesto número cinco. El primero que pisas. Mayahem Temple.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.264,
+  "t1": 628.998,
+  "tipo": "video",
+  "texto": "El nombre es el primer chiste del mundo: Maya, más mayhem, que en inglés significa caos. Para Super Joe Bros es el mejor arranque posible:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.998,
+  "t1": 636.258,
+  "tipo": "video",
+  "texto": "grande, pero sin abrumar. Para Virtual Bastion es el último de todos, básico y olvidable.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.258,
+  "t1": 643.916,
+  "tipo": "video",
+  "texto": "Y a Stony, la transformación de este mundo, casi nadie la defiende: lento y poco divertido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.916,
+  "t1": 654.026,
+  "tipo": "video",
+  "texto": "Pero aquí se estrenan dos cosas enormes. La primera: por primera vez en la saga, controlas a Mumbo. La segunda es Kazooie como arma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 654.026,
+  "t1": 663.528,
+  "tipo": "video",
+  "texto": "Chris Sutherland, de Rare, contó que cuatro o cinco del equipo jugaban GoldenEye casi todas las horas de comida, durante un par de años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.528,
+  "t1": 671.408,
+  "tipo": "video",
+  "texto": "Y eso se coló en el juego. Separaron a los personajes, y Banjo terminó apuntando con su mejor amiga en primera persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 671.408,
+  "t1": 679.226,
+  "tipo": "video",
+  "texto": "Se estrena aquí, en el templo de Targitzan. Targitzan, por cierto, es el dios maya del tiro al blanco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.226,
+  "t1": 687.628,
+  "tipo": "video",
+  "texto": "Según la wiki, el nombre juntaría target, blanco en inglés, con Tarzán. Y todo su templo va de disparar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.628,
+  "t1": 698.794,
+  "tipo": "video",
+  "texto": "Ahora el Easter egg que más gente ha usado sin saberlo. La Cámara de Códigos. Una sala con la pared llena de letras, donde escribes trucos disparándoles huevos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.794,
+  "t1": 705.214,
+  "tipo": "video",
+  "texto": "Todos los códigos empiezan con CHEATO, y varios van escritos al revés. CHEATO SGGE",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.214,
+  "t1": 714.234,
+  "tipo": "video",
+  "texto": "te da el doble de huevos, porque SGGE es eggs al revés. CHEATO KCABYENOH",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 714.234,
+  "t1": 722.766,
+  "tipo": "video",
+  "texto": "hace que la salud se recupere: honey back. Hay uno que abre todos los mundos, y otro, CHEATO JIGGYS CAST LIST,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.766,
+  "t1": 731.698,
+  "tipo": "video",
+  "texto": "que hace desfilar a todos los personajes del juego. Y mira la primera fila de la pared. Empieza con E, S, R, A.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 731.698,
+  "t1": 739.598,
+  "tipo": "video",
+  "texto": "Al revés, ARSE. Que en el inglés británico de Rare significa culo. No está confirmado que sea a propósito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 739.598,
+  "t1": 749.404,
+  "tipo": "video",
+  "texto": "Pero conociendo a Rare, yo no apostaría a que fue casualidad. Y hay más chistes en los nombres. Targitzan tiene una Cámara Ligeramente Sagrada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 749.404,
+  "t1": 757.114,
+  "tipo": "video",
+  "texto": "y otra Realmente Sagrada. Porque hasta lo sagrado tiene categorías. Y el rótulo de la primera viene con errata:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 757.114,
+  "t1": 765.698,
+  "tipo": "video",
+  "texto": "le falta una letra a la palabra slightly. La música tiene su propia historia. Viene de un tema descartado de Banjo-Kazooie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 765.698,
+  "t1": 774.234,
+  "tipo": "video",
+  "texto": "y de esa misma idea salió también Angry Aztec, en Donkey Kong 64. Una sola melodía que Rare no quiso tirar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.234,
+  "t1": 784.084,
+  "tipo": "video",
+  "texto": "y que terminó en dos de sus juegos. Puesto número cuatro. Glitter Gulch Mine.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.084,
+  "t1": 793.355,
+  "tipo": "video",
+  "texto": "La guía oficial de Nintendo lo resume mejor que nadie: en lugar de un saludo amistoso, aquí te ofrecen dinamita y gas venenoso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 793.355,
+  "t1": 801.955,
+  "tipo": "video",
+  "texto": "A MrDrBoi le encanta que los Jiggies tengan varias soluciones. A Virtual Bastion, su ambiente solitario, bajo tierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.955,
+  "t1": 809.841,
+  "tipo": "video",
+  "texto": "Las quejas: cuesta orientarse, y el Detonator, la transformación de este mundo, no sirve para casi nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 809.841,
+  "t1": 817.361,
+  "tipo": "video",
+  "texto": "Lo curioso es que este mundo iba a estar en el primer juego. Chris Sutherland le contó a Retro Gamer que Witchyworld y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.361,
+  "t1": 825.251,
+  "tipo": "video",
+  "texto": "Glitter Gulch eran ideas de Banjo-Kazooie que se aplazaron por falta de tiempo. Los Easter eggs de aquí están en los nombres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 825.251,
+  "t1": 834.593,
+  "tipo": "video",
+  "texto": "Canary Mary, la de las carreras, no se llama así por capricho. Es una canaria en una mina, como las que bajaban los mineros para detectar el gas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.593,
+  "t1": 841.9,
+  "tipo": "video",
+  "texto": "Sí, el personaje que hizo llorar a media generación está basado en un pájaro que avisaba si ibas a morir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 841.9,
+  "t1": 851.56,
+  "tipo": "video",
+  "texto": "El jefe es Old King Coal, un trozo de carbón con corona, dentro de la caldera del tren. Suena a Old King Cole, la canción infantil inglesa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 851.56,
+  "t1": 860.683,
+  "tipo": "video",
+  "texto": "y muy parecido a Nat King Cole. Bullion Bill, el minero, se llama como los lingotes de oro. Y su socia es Dilberta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.683,
+  "t1": 867.782,
+  "tipo": "video",
+  "texto": "una rata que está atrapada en otro mundo. Hay que abrir un túnel hasta Mayahem Temple para sacarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 867.782,
+  "t1": 877.842,
+  "tipo": "video",
+  "texto": "Y mira la Crushing Shed. Una roca con una veta amarilla entra a la trituradora, salta hecha pedazos, y de ahí sale tu Jiggy, entero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 877.842,
+  "t1": 887.845,
+  "tipo": "video",
+  "texto": "Esto es lo que aquí llaman minería. Ahora el secreto grande. ¿Recuerdas Bottles' Revenge, el modo en el que otro jugador controlaba a los enemigos?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 887.845,
+  "t1": 895.033,
+  "tipo": "video",
+  "texto": "Rare lo confirmó en su documental: lo probaron en un jefe. Y fue este, Old King Coal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 895.033,
+  "t1": 905.23,
+  "tipo": "video",
+  "texto": "Y otro más. Bajo el agua hay una roca que se rompe con el Talon Torpedo. El pasadizo sale, nada menos, al lado helado de Hailfire Peaks.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 905.23,
+  "t1": 911.53,
+  "tipo": "video",
+  "texto": "Allí, una llave de hielo abre la caja del Mega Glowbo. Es parte del famoso Stop 'n' Swop,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.53,
+  "t1": 921.01,
+  "tipo": "video",
+  "texto": "la promesa que unió a dos juegos separados por dos años. Entramos al podio. Puesto número tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 921.01,
+  "t1": 927.873,
+  "tipo": "video",
+  "texto": "Cloud Cuckooland. Un mundo que flota sobre la isla, sin estación de tren y sin camino normal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 927.873,
+  "t1": 938.468,
+  "tipo": "video",
+  "texto": "Es un montón de islas sin ninguna lógica entre ellas. Y por eso divide tanto: para TheGamer es el segundo mejor, para Virtual Bastion, el séptimo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 938.468,
+  "t1": 948.982,
+  "tipo": "video",
+  "texto": "Empieza de maravilla. Lo primero que haces al llegar es matar a alguien. George Ice Cube, un cubo de hielo que cae de un empujón al agua hirviendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 948.982,
+  "t1": 953.59,
+  "tipo": "video",
+  "texto": "Guarda a George, porque su historia termina en el puesto número uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 953.59,
+  "t1": 963.07,
+  "tipo": "video",
+  "texto": "Ahora el Easter egg más famoso del juego. Dentro del bote de basura flotante hay un cartón de leche. Y en el cartón se lee:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 963.07,
+  "t1": 970.966,
+  "tipo": "video",
+  "texto": "desaparecida, Tooty. Vista por última vez en Banjo-Kazooie. Tooty, la hermana de Banjo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 970.966,
+  "t1": 978.872,
+  "tipo": "video",
+  "texto": "La razón de toda la aventura del primer juego. Y el chiste terminó siendo verdad: nunca volvió a aparecer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 978.872,
+  "t1": 991.711,
+  "tipo": "video",
+  "texto": "El nombre del mundo es uno de los guiños más cultos de todo Rare. Cloud cuckoo land viene de Aristófanes, de la comedia griega Las aves, del año cuatrocientos catorce antes de Cristo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 991.711,
+  "t1": 999.801,
+  "tipo": "video",
+  "texto": "Allí, unos pájaros fundan una ciudad en las nubes. Y en inglés, la frase se quedó para decir que alguien vive en las nubes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 999.801,
+  "t1": 1007.326,
+  "tipo": "video",
+  "texto": "Un juego con una protagonista pájaro, citando a los griegos, en un mundo con un bote de basura flotante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1007.326,
+  "t1": 1015.186,
+  "tipo": "video",
+  "texto": "En este mundo hay una caja fuerte con ojos, el Superstash. Se abre con cuatro números: uno, nueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1015.186,
+  "t1": 1024.803,
+  "tipo": "video",
+  "texto": "ocho, cuatro. Rare se fundó en mil novecientos ochenta y cinco. Pero en mil novecientos ochenta y cuatro salió Sabre Wulf, de Ultimate,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1024.803,
+  "t1": 1033.083,
+  "tipo": "video",
+  "texto": "la empresa de la que nació Rare. La teoría es que el guiño va por ahí. Este mundo aislado tampoco está tan aislado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1033.083,
+  "t1": 1039.303,
+  "tipo": "video",
+  "texto": "¿Recuerdas la piscina de Dippy? Se drena aquí, y el agua baja hasta Terrydactyland.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1039.303,
+  "t1": 1048.662,
+  "tipo": "video",
+  "texto": "Y el jefe es de los mejores chistes de la saga. Mingy Jongo, un doble robot de Mumbo, escondido en una de las dos calaveras del mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1048.662,
+  "t1": 1060.228,
+  "tipo": "video",
+  "texto": "Sí, aquí también está la segunda carrera de Canary Mary. Super Joe confiesa que usa un mando con turbo. Y nadie lo juzga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1060.228,
+  "t1": 1066.742,
+  "tipo": "video",
+  "texto": "Puesto número dos. Witchyworld. La guía oficial lo define como la versión de espejo",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1066.742,
+  "t1": 1077.967,
+  "tipo": "video",
+  "texto": "de feria de un buen lugar para llevar a la familia: empleados locos con mazos, tragamonedas que te disparan, y atracciones casi tan peligrosas como la comida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1077.967,
+  "t1": 1083.527,
+  "tipo": "video",
+  "texto": "Es el mundo más fácil de entender: cuatro zonas alrededor de una carpa de circo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1083.527,
+  "t1": 1092.391,
+  "tipo": "video",
+  "texto": "Espacio, Viejo Oeste, Infierno y Área 51. Y es el primero donde Banjo y Kazooie se separan con los pads.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1092.391,
+  "t1": 1100.056,
+  "tipo": "video",
+  "texto": "Virtual Bastion lo pone primero. Y al final, el público de Super Joe Bros también lo dejó arriba del todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1100.056,
+  "t1": 1110.816,
+  "tipo": "video",
+  "texto": "Y aquí está la constelación del principio. Entra al vestíbulo del Dodgem Dome, en la Zona Espacial, y mira por la ventana. Las estrellas forman la figura de Mister Pants.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1110.816,
+  "t1": 1118.824,
+  "tipo": "video",
+  "texto": "Ojo: esta es la versión de Xbox, donde se distingue bien. En Nintendo 64 mis tomas no me dejaron verla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1118.824,
+  "t1": 1127.924,
+  "tipo": "video",
+  "texto": "Mister Pants era la mascota de la web de Rare, un monigote hecho a propósito con pésimo dibujo, que acabó teniendo su propio juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1127.924,
+  "t1": 1133.48,
+  "tipo": "video",
+  "texto": "Y aquí está, en el cielo. El mejor chiste del parque está en un letrero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1133.48,
+  "t1": 1144.336,
+  "tipo": "video",
+  "texto": "Avisa que Witchyworld está cerrado por un historial de seguridad espantoso, y que reabrirá en cuanto hayan sobornado a las autoridades. La comida también tiene su humor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1144.336,
+  "t1": 1153.03,
+  "tipo": "video",
+  "texto": "El letrero de Big Al anuncia hamburguesas con cien por ciento de carne de origen roedor, y una rebanada de queso sintético.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1153.03,
+  "t1": 1161.894,
+  "tipo": "video",
+  "texto": "Y el de las papas de Salty Joe las vende como la alternativa grasosa y sin sabor. Es lo más honesto que vas a leer en todo este parque.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1161.894,
+  "t1": 1170.464,
+  "tipo": "video",
+  "texto": "Una teoría de fans dice que Witchyworld está inspirado en Action Park, un parque real de Nueva Jersey famoso por sus lesiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1170.464,
+  "t1": 1178.514,
+  "tipo": "video",
+  "texto": "Rare nunca lo confirmó, pero ese letrero de los sobornos ayuda. La música tiene un secreto. Un pasaje de Chase,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1178.514,
+  "t1": 1186.719,
+  "tipo": "video",
+  "texto": "un tema de Project Dream, reaparece aquí como Witchyworld. Otra vez el juego cancelado escondido dentro de este.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1186.719,
+  "t1": 1195.639,
+  "tipo": "video",
+  "texto": "Y como Glitter Gulch, este mundo era una idea de Banjo-Kazooie que no llegó a tiempo. Dos años de espera que le sentaron muy bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1195.639,
+  "t1": 1205.704,
+  "tipo": "video",
+  "texto": "El punto débil son los niños Boggy. Uno de ellos exige una habilidad de varios mundos después. Legacy of Games perdió una hora entera sin saberlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1205.704,
+  "t1": 1213.184,
+  "tipo": "video",
+  "texto": "Pero hay algo que nadie olvida: la Van. Humba Wumba convierte a Banjo en una camioneta. Con claxon,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1213.184,
+  "t1": 1222.327,
+  "tipo": "video",
+  "texto": "y con dinero para pagar las atracciones. Y llegamos al número uno. Hailfire Peaks.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1222.327,
+  "t1": 1230.387,
+  "tipo": "video",
+  "texto": "Las cuatro listas lo ponen arriba. Es, para MrDrBoi, como el décimo mundo de Banjo-Kazooie: dos montañas pegadas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1230.387,
+  "t1": 1237.265,
+  "tipo": "video",
+  "texto": "una de lava y otra de hielo, cada una con su jefe, su música y su clima. Y tiene historia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1237.265,
+  "t1": 1247.682,
+  "tipo": "video",
+  "texto": "El lado de fuego nació como Mount Fire Eyes, un nivel cortado de Banjo-Kazooie. Gobi, el camello del primer juego, hablaba de ir a un mundo de lava.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1247.682,
+  "t1": 1256.172,
+  "tipo": "video",
+  "texto": "Ese mundo se canceló. Aquí, dos años después, por fin llega. Y tú le vuelves a robar el agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1256.172,
+  "t1": 1262.43,
+  "tipo": "video",
+  "texto": "Con esa agua enfrías la caldera del tren, porque Chuffy no puede cruzar al lado helado sin ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1262.43,
+  "t1": 1272.38,
+  "tipo": "video",
+  "texto": "El Easter egg más viejo de todos está congelado. Sabreman, el héroe de Sabre Wulf, de mil novecientos ochenta y cuatro, está atrapado en el hielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1272.38,
+  "t1": 1280.888,
+  "tipo": "video",
+  "texto": "Hay que revivirlo y llevarlo hasta su tienda. Un guiño de Rare a su propia historia. Y ahora, la casa de Boggy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1280.888,
+  "t1": 1290.377,
+  "tipo": "video",
+  "texto": "El oso polar del primer juego vive aquí en un iglú con su familia. Tiene sofá, y tiene tele. ¿Y qué sale en la tele? Mister Pants.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1290.377,
+  "t1": 1298.466,
+  "tipo": "video",
+  "texto": "Sí, otra vez. Te dije que iba a volver. Boggy te invita a quedarte, porque acaba de comprar un DVD:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1298.466,
+  "t1": 1308.977,
+  "tipo": "video",
+  "texto": "Bear Babes, chicas oso. Y según él, debe estar candente. Esto es un juego de Nintendo sesenta y cuatro para toda la familia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1308.977,
+  "t1": 1316.017,
+  "tipo": "video",
+  "texto": "Según la wiki de los fans, el título completo también cambió: de Bear Babes and Eskimos en Nintendo 64,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1316.017,
+  "t1": 1325.067,
+  "tipo": "video",
+  "texto": "a Bear Babes and Bigfoot en Xbox. Rare ya lo había advertido: querían ver cuántos dobles sentidos podían colar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1325.067,
+  "t1": 1332.987,
+  "tipo": "video",
+  "texto": "En el cuarto de los niños Boggy cuelga un cuadro con un muñeco de nieve, como el de Freezeezy Peak, el mundo nevado del primer juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1332.987,
+  "t1": 1343.019,
+  "tipo": "video",
+  "texto": "Hasta la decoración de este iglú es nostalgia. ¿Recuerdas a George Ice Cube, el del empujón? Cae aquí. Y su pareja es Mildred Ice Cube.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1343.019,
+  "t1": 1352.281,
+  "tipo": "video",
+  "texto": "Son George y Mildred Roper, de una comedia británica de los años setenta. Un chiste que casi nadie fuera de Inglaterra pudo entender.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1352.281,
+  "t1": 1358.141,
+  "tipo": "video",
+  "texto": "Los secretos siguen. Los dos lados comparten la misma melodía, con arreglos distintos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1358.141,
+  "t1": 1367.342,
+  "tipo": "video",
+  "texto": "uno de fuego, otro de hielo. Mumbo y Humba, los rivales de toda la saga, tienen sus casas conectadas por un pasadizo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1367.342,
+  "t1": 1375.64,
+  "tipo": "video",
+  "texto": "de la calavera en la lava, al wigwam en el hielo. Y el hechizo de Mumbo aquí es Life Force, que devuelve la vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1375.64,
+  "t1": 1384.087,
+  "tipo": "video",
+  "texto": "Sirve para revivir a los hijos de los alienígenas de Jolly Roger, que se estrellaron. Collider lo llama extrañamente desgarrador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1384.087,
+  "t1": 1393.717,
+  "tipo": "video",
+  "texto": "La caja de hielo de Glitter Gulch también termina aquí, con el Mega Glowbo que convierte a Kazooie en dragón. Por eso gana. Porque es enorme,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1393.717,
+  "t1": 1402.397,
+  "tipo": "video",
+  "texto": "pero se recorre fácil. Porque tiene dos mundos en uno. Y porque, si sabes dónde mirar, en cada iglú y en cada calavera,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1402.397,
+  "t1": 1410.649,
+  "tipo": "video",
+  "texto": "Rare dejó un chiste esperándote. Esos son los ocho mundos de Banjo-Tooie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1410.649,
+  "t1": 1419.154,
+  "tipo": "video",
+  "texto": "Y si los miras todos juntos en el mapa, entiendes la idea de Rare. Mayahem conecta con Glitter Gulch y con Terrydactyland.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1419.154,
+  "t1": 1428.717,
+  "tipo": "video",
+  "texto": "Glitter Gulch, con Hailfire. Witchyworld, con Terrydactyland. Y Cloud Cuckooland, flotando arriba, le llena la piscina a Dippy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1428.717,
+  "t1": 1439.27,
+  "tipo": "video",
+  "texto": "No hicieron ocho niveles. Hicieron una sola isla, llena de chistes que no tenías que encontrar, y que aun así están ahí veintiséis años después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1439.27,
+  "t1": 1445.58,
+  "tipo": "video",
+  "texto": "¿Tú cuál pones en el número uno? ¿Viste alguna vez la luz del baño? Y si conoces un Easter egg que me faltó,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1445.58,
+  "t1": 1454.691,
+  "tipo": "video",
+  "texto": "cuéntamelo en los comentarios, porque los leo todos. Si te gustó, aquí te dejo los diez Jiggies más crueles del juego, y la historia de Rare,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1454.691,
+  "t1": 1462.5,
+  "tipo": "video",
+  "texto": "el estudio que Nintendo dejó ir. Nos vemos en la próxima crónica.",
+  "clip_s": 8
+ }
+]

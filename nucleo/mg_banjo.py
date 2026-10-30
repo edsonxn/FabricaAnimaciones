@@ -16,7 +16,9 @@ con rebote y nada queda quieto. CERO cifras ni nombres inventados: solo lo que e
   carrera(banjo, mary)                      Canary Mary contra Banjo: botón A, acelera si te pegas, acelerón final, el truco
   recados(titulo, madre, hijos, premio)     problema -> solución de cada hijo, ✓, Jiggy de premio y sello «NO»
   cadena(titulo, pasos, final)              requisitos encadenados hasta el jefe (en rojo)
-  (pegatinas: mg_tes.pegatina · pantallas: mg_wow.pantalla · mapas: mg_mapa tema «banjo»)
+  bt_mundos_ranking (30-oct-2026): egg(num, titulo), cuatro_listas(titulo, filas, media), ruleta(), codigos(filas),
+  conexiones(nodos, enlaces), ficha_mundo(items)
+  (pegatinas: mg_tes.pegatina · pantallas: mg_wow.pantalla · mapas: mg_mapa tema «gaming»)
 """
 import math
 
@@ -562,4 +564,185 @@ def cadena(titulo, pasos, final, ancho=1720):
             _pegar(im, _icono(ruta, 180, redondo=True), cx, cy, _reb((dt - tf) / .4) * (1 + .06 * math.sin(dt * 8)))
             _texto(d, (cx, cy + 130), txt, fuente("t", 44), ROJO, "mm", 255 * _eo((dt - tf) / .3), borde=3, color_borde=CREMA)
         return _bgra(_escala(im, _reb(dt / .45)), min(1.0, (dur - dt) / .35))
+    return fn
+
+
+# ======================================================================= MG de `bt_mundos_ranking` (30-oct-2026)
+def egg(num, titulo):
+    """Contador de Easter eggs del video: huevo azul moteado (los de Kazooie) que rebota con el número y, a su derecha,
+    «EASTER EGG» + título. Pequeño, para una esquina: no tapa el juego."""
+    ftit, fsup, fnum = fuente("t", 44), fuente("r", 26), fuente("t", 50)
+    tw = ImageDraw.Draw(Image.new("RGBA", (10, 10))).textlength(titulo, font=ftit)
+    ancho, h = int(max(430, 190 + tw + 50)), 134
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        cx, cy = M + 82, M + h / 2 + 2 * math.sin(dt * 3)
+        e = _reb(dt / .45)
+        rx, ry = 44 * e, 56 * e
+        d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), fill=(70, 132, 220, 255), outline=CREMA + (255,), width=3)
+        for a, r, s in ((.7, .55, 7), (2.3, .62, 6), (3.9, .5, 8), (5.2, .68, 5)):
+            px, py = cx + rx * r * math.cos(a), cy + ry * r * math.sin(a)
+            d.ellipse((px - s * e, py - s * e, px + s * e, py + s * e), fill=MIEL + (255,))
+        _texto(d, (cx, cy + 2), str(num), fnum, CREMA, "mm", 255 * _eo((dt - .15) / .25), borde=4, color_borde=CHOCO)
+        x0 = M + 150
+        _texto(d, (x0, M + 44), "EASTER EGG", fsup, AZUL_CLARO, "lm", 255 * _eo((dt - .2) / .3))
+        _texto(d, (x0, M + 88), titulo, ftit, MIEL, "lm", 255 * _eo((dt - .3) / .3), borde=3)
+        return _bgra(im, min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def cuatro_listas(titulo, filas, media, ancho=1180):
+    """Dónde pone cada lista a este mundo. filas = [(nombre, celdas, indice_encendido)], p. ej. ("MrDrBoi", list("12345678"), 7)
+    o ("Super Joe Bros", list("SABCDE"), 4). Cada fila se enciende en su marca; `media` sale tras la última fila."""
+    n = len(filas)
+    fila_h = 92
+    h = 128 + n * fila_h + 96
+    fn_nom, fcel, fmed = fuente("r", 33), fuente("t", 34), fuente("t", 50)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 50), titulo, fuente("t", 50), MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        filete(d, M + ancho / 2, M + 96, 300, 255 * _eo((dt - .1) / .3))
+        for k, (nom, celdas, on) in enumerate(filas):
+            y = M + 158 + k * fila_h
+            tk = _t(marcas, k, .5 + .55 * k)
+            _texto(d, (M + 60, y), nom, fn_nom, CREMA, "lm", 255 * _eo((dt - .2 - .1 * k) / .3))
+            paso = 62
+            for j, c in enumerate(celdas):
+                cx = M + 372 + j * paso + (8 - len(celdas)) * paso / 2
+                lit = j == on and dt >= tk
+                r = 28 * _reb((dt - .3 - .03 * j) / .35) * (1 + (.16 * math.sin(dt * 7) if lit else 0))
+                if r <= 0:
+                    continue
+                col = (ROJO if on >= len(celdas) - 2 else MIEL) if lit else (60, 38, 22)
+                d.polygon(_hex(cx, y, r), fill=col + (255 if lit else 190,), outline=MIEL_OSC + (255,))
+                _texto(d, (cx, y + 1), c, fcel, CHOCO if lit else (150, 124, 96), "mm", 255)
+        tm = _t(marcas, n, .6 + .55 * n)
+        if dt >= tm:
+            _texto(d, (M + ancho / 2, M + h - 58), media, fmed, CREMA, "mm", 255 * _eo((dt - tm) / .3), borde=4)
+        return _bgra(_escala(im, _reb(dt / .45)), min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def ruleta(n=1000, cols=50, ancho=1320):
+    """1000 casillas iguales que se apagan una tras otra; en la marca 0 queda UNA encendida (dorada, latiendo)."""
+    filas = n // cols
+    c = (ancho - 120) // cols
+    h = 150 + filas * c + 110
+    gano = cols * (filas // 2) + cols * 2 // 3          # la que queda: nunca en el borde
+    orden = np.random.RandomState(7).permutation(n)     # las demás se apagan en un orden fijo
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 56), "UNA PUERTA, MIL INTENTOS", fuente("t", 50), MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        tm = _t(marcas, 0, 1.6)
+        u = min(1.0, max(0.0, dt - .3) / max(.4, tm - .3))
+        apagada = np.zeros(n, bool)
+        apagada[orden[:int(u * (n - 1))]] = True
+        x0, y0 = M + 60, M + 112
+        for i in range(n):
+            if i == gano:
+                continue
+            px, py = x0 + (i % cols) * c, y0 + (i // cols) * c
+            d.rectangle((px + 2, py + 2, px + c - 3, py + c - 3), fill=(46, 30, 18, 200) if apagada[i] else (120, 92, 60, 255))
+        px, py = x0 + (gano % cols) * c, y0 + (gano // cols) * c
+        lat = 1 + .3 * math.sin(dt * 8)
+        r = c / 2 + (12 * _reb((dt - tm) / .4) * lat if dt >= tm else 0)
+        d.rectangle((px + c / 2 - r, py + c / 2 - r, px + c / 2 + r, py + c / 2 + r), fill=MIEL + (255,), outline=CREMA + (255,))
+        if dt >= tm:
+            _texto(d, (M + ancho / 2, M + h - 58), "1 de cada 1000", fuente("t", 56), CREMA, "mm", 255 * _eo((dt - tm) / .3), borde=4)
+        return _bgra(_escala(im, _reb(dt / .45)), min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def codigos(filas, ancho=1500):
+    """La Cámara de Códigos: filas = [(escrito, al_derecho, efecto)]. En la marca k un huevo golpea las letras de la fila k una a
+    una (tejas de piedra que se encienden) y luego salen la palabra al derecho y lo que hace."""
+    n = len(filas)
+    fila_h = 128
+    h = 124 + n * fila_h + 26
+    fl, fd, fe = fuente("t", 56), fuente("t", 52), fuente("r", 34)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 50), "CÁMARA DE CÓDIGOS", fuente("t", 50), MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        filete(d, M + ancho / 2, M + 96, 300, 255 * _eo((dt - .1) / .3))
+        for k, (esc, der, ef) in enumerate(filas):
+            y = M + 180 + k * fila_h
+            tk = _t(marcas, k, .5 + 1.4 * k)
+            x0 = M + 70
+            for j, c in enumerate(esc):
+                cx = x0 + j * 80
+                tj = tk + .16 * j
+                on = dt >= tj
+                r = 36 * ((1 + .25 * max(0.0, 1 - (dt - tj) / .2)) if on else 1)
+                d.rounded_rectangle((cx - r, y - r, cx + r, y + r), 10, fill=(MIEL if on else (82, 70, 58)) + (255,),
+                                    outline=(CREMA if on else (120, 104, 86)) + (255,), width=3)
+                _texto(d, (cx, y), c, fl, CHOCO if on else CREMA, "mm", 255)
+            tr = tk + .16 * len(esc) + .15
+            if dt >= tr:
+                xf = x0 + len(esc) * 80 + 14
+                _texto(d, (xf, y), "=", fd, CREMA, "lm", 255 * _eo((dt - tr) / .25))
+                _texto(d, (xf + 70, y - 22), der, fd, MIEL, "lm", 255 * _eo((dt - tr - .1) / .25), borde=3)
+                _texto(d, (xf + 70, y + 32), ef, fe, CREMA, "lm", 255 * _eo((dt - tr - .2) / .25))
+        return _bgra(_escala(im, _reb(dt / .45)), min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def conexiones(nodos, enlaces, ancho=1760, alto=900):
+    """Los mundos conectados: nodos = {clave: (ruta_img, x, y)} (fracciones) y enlaces = [(a, b, rótulo)]; cada enlace se traza
+    en su marca, de a hacia b, con bolitas miel que corren por él."""
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, alto)
+        d = ImageDraw.Draw(im)
+        pos = lambda k: (M + nodos[k][1] * ancho, M + nodos[k][2] * alto)
+        fr = fuente("r", 30)
+        for i, (a, b, txt) in enumerate(enlaces):
+            tk = _t(marcas, i, .6 + 1.1 * i)
+            ax, ay = pos(a)
+            bx, by = pos(b)
+            d.line([(ax, ay), (bx, by)], fill=(90, 70, 50, 180), width=4)
+            u = _eo((dt - tk) / .7) if dt >= tk else 0
+            if u > 0:
+                d.line([(ax, ay), (ax + (bx - ax) * u, ay + (by - ay) * u)], fill=MIEL + (255,), width=8)
+                for q in range(3):
+                    v = ((dt * .5 + q / 3) % 1) * u
+                    x, y = ax + (bx - ax) * v, ay + (by - ay) * v
+                    d.ellipse((x - 9, y - 9, x + 9, y + 9), fill=CREMA + (255,))
+                _texto(d, ((ax + bx) / 2, (ay + by) / 2 - 24), txt, fr, CREMA, "mm", 255 * _eo((dt - tk - .3) / .3), borde=3,
+                       color_borde=CHOCO)
+        for j, (k, (ruta, _x, _y)) in enumerate(nodos.items()):
+            cx, cy = pos(k)
+            ic = _jiggy(ruta, 350)
+            e = _reb((dt - .05 * j) / .4)
+            if e > 0:
+                aw, ah = (ic.width / 2 + 26) * e, (ic.height / 2 + 22) * e
+                d.rounded_rectangle((cx - aw, cy - ah, cx + aw, cy + ah), 22, fill=(30, 16, 8, 235), outline=MIEL + (255,), width=3)
+            _pegar(im, ic, cx, cy, e * (1 + .02 * math.sin(dt * 2.4 + j)))
+        return _bgra(_escala(im, _reb(dt / .45)), min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def ficha_mundo(items, ancho=None):
+    """Tira baja al presentar un mundo: items = [(ruta, etiqueta, nombre)] (JEFE / TRANSFORMACIÓN…), uno tras otro con rebote."""
+    n = len(items)
+    ancho = ancho or 90 + n * 430
+    h = 190
+    fe, fnom = fuente("r", 24), fuente("t", 38)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        for k, (ruta, et, nom) in enumerate(items):
+            x = M + 50 + k * 430
+            tk = .15 + .3 * k
+            _pegar(im, _icono(ruta, 136, redondo=True), x + 70, M + h / 2 + 3 * math.sin(dt * 2.6 + k), _reb((dt - tk) / .4))
+            _texto(d, (x + 152, M + h / 2 - 28), " ".join(et.upper()), fe, AZUL_CLARO, "lm", 255 * _eo((dt - tk) / .3))
+            _texto(d, (x + 152, M + h / 2 + 18), nom, fnom, MIEL, "lm", 255 * _eo((dt - tk - .1) / .3), borde=3)
+        return _bgra(im, min(1.0, (dur - dt) / .35))
     return fn

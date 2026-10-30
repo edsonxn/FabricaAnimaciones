@@ -551,6 +551,16 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 - **Antes de cambiar la `url` de un beat, mirar `plan_clips.py`:** un longplay de 4,5 h tiene varias fuentes casi iguales; al rehacer con otra `url` el segundo apunta fuera del video y `bajar` dice `ok` sin dejar archivo (el aviso real es `148/149 clips`).
 - **Render en segundo plano y PC suspendida:** el proceso sobrevive y sigue al despertar; el salto en los segundos del log no es un error.
 
+### Lecciones de `bt_mundos_ranking` (30-oct-2026, 170 beats, 24:22, el más largo del canal)
+- **`bajar` TRUNCA los clips con audio** (`ambiente_por` > 0): 29 de 36 salieron 2-8 s cortos y `medir_brillo` los vio como negro. Script del video `dl_amb.py` (baja video y audio por separado con corte exacto). Sin arreglar en `secuencia_yt._bajar_tramo`; si un clip con ambiente se rehace con `bajar --rehacer`, vuelve a truncarse. Comprobar DURACIÓN además de brillo.
+- **Mapas de gaming = guías oficiales escaneadas de archive.org** (PDF 600 DPI + pymupdf `get_pixmap(dpi=300)`): 9 mapas con rótulos originales, mucho mejores que el manual. Traen flechas y páginas de la guía: se ven como «mapa de la guía oficial», con ese subtítulo. Los pergaminos de manual NO traen nombres: nada de ubicar mundos ahí; las conexiones del cierre van en `mg_banjo.conexiones`.
+- **Kit `mg_banjo` ampliado:** `egg` (contador de Easter eggs en la esquina: da ritmo en un video largo; con mapa a pantalla bajarlo a y=.27 o choca con el título), `cuatro_listas`, `ruleta`, `codigos`, `conexiones`, `ficha_mundo`.
+- **Verificar en imagen ANTES de grabar** (agente con hojas, tabla de datos con el texto exacto leído): salvó 4 datos falsos (rocas fálicas, letrero de trituradoras, Jiggy partido, «a Rare date») y mejoró varios («A BEAR STOLE ME GLORY…», errata «SLIGHTY»). Lo que solo se ve en otra versión se dice en voz y lleva rótulo (`xbox()`).
+- **Whisper y nombres ingleses:** 41 de 130 frases rechazadas, todas falsas alarmas (Mr Doctor Boy, Cheeto, Hellfire). Comparar `textos.json` con `eval.json` por diferencias de palabras y fijar `CER_MAX_POR_FRASE` con la CER + .0015; `TAIL_MAX_POR_FRASE` para las que hablan hasta el final si la transcripción termina bien.
+- **Plan de clips y corrección por AGENTE (sonnet):** ~260 mil tokens cada uno fuera del hilo principal; 170 beats a la primera y 17 clips arreglados.
+- **Disco:** un video de 24 min no cabe en E: con 3 GB libres: cambiar `salida/` y `segmentos/` del video a carpetas reales en C: antes del render (quitar la junction con `cmd //c rmdir`).
+- **Flow en el navegador integrado volvió a pedir bienvenida y política de privacidad el 30-oct** (dominio nuevo `flow.google.com`). Aceptarla es del usuario: no se acepta sola. Mientras tanto, miniatura provisional por código (`miniatura_provisional.py`).
+
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
 de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.

@@ -40,6 +40,8 @@ a{color:inherit;text-decoration:none}
 .bt{height:34px;min-width:34px;padding:0 10px;border-radius:10px;border:1px solid var(--line);background:var(--panel);display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;flex:none}
 .bt:hover{border-color:var(--line2)}
 .bt.on{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+#lbBucle{cursor:pointer;user-select:none}
+#lbBucle input{margin:0;accent-color:var(--acc);cursor:pointer}
 #titulo{min-width:0;flex:1}
 #titulo b{display:block;font-size:15px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #titulo small{display:block;color:var(--mut);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -202,6 +204,7 @@ a{color:inherit;text-decoration:none}
   <a class="bt" href="/v2" title="Volver al lienzo">←</a>
   <div id="titulo"><b id="tVideo">Conectando…</b><small id="tSes"></small></div>
   <span id="modo"><i></i><span id="modoTx">—</span></span>
+  <label class="bt" id="lbBucle" title="Al llegar al final, volver a repetir las últimas acciones. Apagada: se queda en la última y espera lo nuevo"><input type="checkbox" id="chkBucle">🔁 <span class="txt">Repetir</span></label>
   <button class="bt" id="btPausa" title="Pausar (espacio)">⏸</button>
   <button class="bt" id="btVel" title="Velocidad">×1</button>
   <button class="bt" id="btVivo" title="Saltar a lo más reciente">⏭ <span class="txt">Ahora</span></button>
@@ -251,8 +254,9 @@ const hora=t=>new Date(t*1000).toLocaleTimeString("es-MX",{hour:"2-digit",minute
 // ---------------------------------------------------------- estado
 const Q=new URLSearchParams(location.search);
 const S={sesion:Q.get("sesion")||"",video:Q.get("video")||"",fija:!!Q.get("sesion"),rev:0,ev:[],idx:-1,ultimoVisto:0,
-  modo:"carga",pausa:false,vel:1,ini:0,dur:1,ctl:null,cambio:0,manual:0,pensando:false,activa:false};
-const IDLE_MS=9000;           // sin nada nuevo en este tiempo empieza la repetición en bucle
+  modo:"carga",pausa:false,vel:1,ini:0,dur:1,ctl:null,cambio:0,manual:0,pensando:false,activa:false,bucle:false};
+try{S.bucle=localStorage.getItem("vivo_bucle")==="1";}catch(e){}
+const IDLE_MS=9000;           // con «Repetir» activa: sin nada nuevo en este tiempo empieza la repetición
 const VENTANA=90;             // eventos que entran en la repetición
 const COLA_MAX=14;            // en vivo, si hay más atrasados que esto se salta a los últimos
 
@@ -397,6 +401,10 @@ function siguiente(){
   }else{
     S.idx++;
     const prim=S.ev.length-ventana().length;
+    if(S.idx>=S.ev.length&&!S.bucle){      // sin «Repetir»: se queda en la última acción y espera lo nuevo
+      S.idx=S.ev.length-1;S.modo="vivo";pintarModo();
+      return false;
+    }
     if(S.idx>=S.ev.length||S.idx<prim)S.idx=prim;
   }
   mostrar(S.ev[S.idx]);
@@ -434,7 +442,7 @@ function bucle(ahora){
     $("mbarra").style.width=(p*100).toFixed(1)+"%";
     if(S.prog>=1.12){
       const siguio=siguiente();
-      if(siguio===false&&S.modo==="vivo"&&ahora-Math.max(S.cambio,S.ini)>IDLE_MS){   // al día y sin novedades: empieza el bucle
+      if(siguio===false&&S.bucle&&S.modo==="vivo"&&ahora-Math.max(S.cambio,S.ini)>IDLE_MS){   // al día y sin novedades: empieza el bucle
         S.modo="repe";S.idx=S.ev.length-ventana().length-1;siguiente();
       }
     }
@@ -657,6 +665,8 @@ const Taller=(()=>{
 })();
 
 // ---------------------------------------------------------- controles
+$("chkBucle").checked=S.bucle;
+$("chkBucle").onchange=e=>{S.bucle=e.target.checked;try{localStorage.setItem("vivo_bucle",S.bucle?"1":"0");}catch(x){}};
 $("btPausa").onclick=()=>{S.pausa=!S.pausa;$("btPausa").textContent=S.pausa?"▶":"⏸";$("btPausa").classList.toggle("on",S.pausa);};
 $("btVel").onclick=()=>{S.vel={1:2,2:4,4:1}[S.vel];$("btVel").textContent="×"+S.vel;};
 $("btVivo").onclick=()=>{S.modo="vivo";S.idx=Math.max(-1,S.ev.length-2);S.ultimoVisto=S.ev.at(-1)?.seq||0;siguiente();};

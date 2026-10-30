@@ -830,7 +830,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "robotaller_mes1",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-30"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "arana_techo__lyria_tramo4": {
@@ -3111,7 +3118,14 @@
     "dinamica": 0.81
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "robotaller_mes1",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-30"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "doce_animales__lyria_tramo3": {
@@ -22484,6 +22498,8 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23271,6 +23287,8 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -31355,7 +31373,14 @@
     "dinamica": 0.59
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo10": {
@@ -31437,7 +31462,14 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 9,
+     "desde": 57.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo6": {
@@ -31596,7 +31628,20 @@
     "dinamica": 0.68
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 5,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo3": {
@@ -31670,7 +31715,20 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo1": {
@@ -31745,7 +31803,20 @@
     "dinamica": 0.62
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo5": {
@@ -31828,7 +31899,44 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 8,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 8,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    },
+    {
+     "video": "robotaller_mes1",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-30"
+    },
+    {
+     "video": "robotaller_mes1",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-30"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo8": {
@@ -31903,7 +32011,20 @@
     "dinamica": 0.7
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 6,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_tl_al__lyria_tramo1": {
@@ -31970,7 +32091,14 @@
     "dinamica": 0.6
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "robotaller_mes1",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-30"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "lol_worlds_2026__lyria_tramo9": {
@@ -32118,7 +32246,20 @@
     "dinamica": 0.49
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 6,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-27"
   },
   "wow_100_curiosidades_tbc_wotlk__lyria_tramo13": {
@@ -34446,7 +34587,14 @@
     "dinamica": 0.86
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "ig_lyon_worlds__lyria_tramo6": {
@@ -34739,7 +34887,20 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "t1_koi_worlds",
+     "tramo": 5,
+     "desde": 0.0,
+     "fecha": "2026-10-28"
+    },
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 8,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "ig_lyon_worlds__lyria_tramo4": {
@@ -34963,7 +35124,14 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "cfo_kc_jugadas",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-29"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "cfo_kc_worlds__lyria_tramo6": {
@@ -35437,7 +35605,2122 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-28"
+  },
+  "t1_koi_worlds__lyria_tramo5": {
+   "id": "t1_koi_worlds__lyria_tramo5",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo5.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo5.mp3",
+   "md5": "37c694ce0fbe2ebf18e274b086b0c8c5",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 5,
+   "escenas": [
+    "draft2",
+    "jugada5",
+    "jugada5_rep"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 114.27,
+    "rms_db": -14.3,
+    "tempo": 117.5,
+    "brillo_hz": 2345,
+    "energia": [
+     0.87,
+     0.94,
+     0.93,
+     0.94,
+     0.86,
+     0.95,
+     0.92,
+     0.91,
+     1.0,
+     0.98,
+     0.89,
+     0.75
+    ],
+    "huecos": [],
+    "dinamica": 0.25
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "t1_koi_worlds__lyria_tramo4": {
+   "id": "t1_koi_worlds__lyria_tramo4",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo4.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo4.mp3",
+   "md5": "e2916d0a9a38d55eefc51ce0412e2e7d",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 4,
+   "escenas": [
+    "jugada4",
+    "jugada4_rep",
+    "curva1"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:21 (142 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal pulse for analysis, a big hit around the middle, then a lighter recap groove.\n\n[0:00 - 1:51] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:51 - 2:21] Section 2: Intensity 5/10. upbeat recap groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 111,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 111,
+     "t1": 141,
+     "intensidad": 5,
+     "desc": "upbeat recap groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 140.62,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2069,
+    "energia": [
+     0.5,
+     0.73,
+     0.82,
+     0.96,
+     0.98,
+     0.76,
+     0.96,
+     1.0,
+     0.35,
+     0.66,
+     0.96,
+     0.41
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "t1_koi_worlds__lyria_tramo1": {
+   "id": "t1_koi_worlds__lyria_tramo1",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo1.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo1.mp3",
+   "md5": "fccb37f64d7059cc0e11e64487a39d75",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "juego",
+    "camino",
+    "draft1"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:15 (135 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit. Driving pulse, then settle under the explanation. End steady.\n\n[0:00 - 0:50] Section 1: Intensity 7/10. cold open, dramatic hit then driving pulse, sense of shock\n[0:50 - 2:15] Section 2: Intensity 4/10. steady informative groove, light arpeggios, building curiosity",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 7,
+     "desc": "cold open, dramatic hit then driving pulse, sense of shock"
+    },
+    {
+     "t0": 50,
+     "t1": 135,
+     "intensidad": 4,
+     "desc": "steady informative groove, light arpeggios, building curiosity"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 137.67,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1117,
+    "energia": [
+     0.83,
+     0.9,
+     1.0,
+     1.0,
+     0.81,
+     0.85,
+     0.89,
+     0.89,
+     0.92,
+     0.97,
+     0.74,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.62
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3"
+   ]
+  },
+  "t1_koi_worlds__lyria_tramo3": {
+   "id": "t1_koi_worlds__lyria_tramo3",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo3.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo3.mp3",
+   "md5": "98e31c61f09164f6d51ff42c623cf72a",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 3,
+   "escenas": [
+    "jugada2_rep",
+    "jugada3",
+    "jugada3_rep"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:08 (129 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Anticipation, then analysis bed with rising tension and a triumphant swell near the end.\n\n[0:00 - 0:28] Section 1: Intensity 6/10. anticipation for a heavyweight clash, low brass synths\n[0:28 - 2:08] Section 2: Intensity 7/10. analysis bed with rising tension and a triumphant swell at the comeback",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 28,
+     "intensidad": 6,
+     "desc": "anticipation for a heavyweight clash, low brass synths"
+    },
+    {
+     "t0": 28,
+     "t1": 128,
+     "intensidad": 7,
+     "desc": "analysis bed with rising tension and a triumphant swell at the comeback"
+    }
+   ],
+   "intensidad": [
+    6,
+    7
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "metales",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 130.82,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 2158,
+    "energia": [
+     0.33,
+     0.64,
+     0.88,
+     0.91,
+     0.93,
+     0.85,
+     0.92,
+     0.92,
+     0.94,
+     1.0,
+     0.54,
+     0.32
+    ],
+    "huecos": [],
+    "dinamica": 0.68
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3"
+   ]
+  },
+  "t1_koi_worlds__lyria_tramo6": {
+   "id": "t1_koi_worlds__lyria_tramo6",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo6.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo6.mp3",
+   "md5": "a08b90aacaba290c43e49d2fd33aac3d",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 6,
+   "escenas": [
+    "jugada6",
+    "jugada6_rep",
+    "jugada7"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo7 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:41 (161 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Confident analysis pulse with a climax, then darker serious drums.\n\n[0:00 - 1:31] Section 1: Intensity 7/10. analysis bed, cool confident pulse, climax\n[1:31 - 2:41] Section 2: Intensity 6/10. elimination day, darker serious drums",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 91,
+     "intensidad": 7,
+     "desc": "analysis bed, cool confident pulse, climax"
+    },
+    {
+     "t0": 91,
+     "t1": 161,
+     "intensidad": 6,
+     "desc": "elimination day, darker serious drums"
+    }
+   ],
+   "intensidad": [
+    7,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 160.42,
+    "rms_db": -14.4,
+    "tempo": 63.0,
+    "brillo_hz": 2288,
+    "energia": [
+     0.73,
+     0.8,
+     0.76,
+     0.97,
+     0.8,
+     0.85,
+     0.65,
+     0.92,
+     0.94,
+     0.93,
+     1.0,
+     0.51
+    ],
+    "huecos": [],
+    "dinamica": 0.49
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3"
+   ]
+  },
+  "t1_koi_worlds__lyria_tramo2": {
+   "id": "t1_koi_worlds__lyria_tramo2",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo2.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo2.mp3",
+   "md5": "72a850767a1a8de4ddf345a6e0f3a472",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 2,
+   "escenas": [
+    "jugada1",
+    "jugada2"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Recap groove, build stakes, analysis bed exploding into a climax at the end.\n\n[0:00 - 0:52] Section 1: Intensity 5/10. bouncy recap groove\n[0:52 - 1:11] Section 2: Intensity 6/10. high stakes build-up\n[1:11 - 2:50] Section 3: Intensity 8/10. analysis bed, tension rising to an explosive climax",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 52,
+     "intensidad": 5,
+     "desc": "bouncy recap groove"
+    },
+    {
+     "t0": 52,
+     "t1": 71,
+     "intensidad": 6,
+     "desc": "high stakes build-up"
+    },
+    {
+     "t0": 71,
+     "t1": 170,
+     "intensidad": 8,
+     "desc": "analysis bed, tension rising to an explosive climax"
+    }
+   ],
+   "intensidad": [
+    5,
+    6,
+    8
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 169.69,
+    "rms_db": -14.6,
+    "tempo": 123.0,
+    "brillo_hz": 2781,
+    "energia": [
+     0.69,
+     0.92,
+     0.93,
+     0.82,
+     0.76,
+     0.75,
+     0.83,
+     0.76,
+     0.95,
+     0.97,
+     1.0,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3"
+   ]
+  },
+  "t1_koi_worlds__lyria_tramo7": {
+   "id": "t1_koi_worlds__lyria_tramo7",
+   "video": "t1_koi_worlds",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\t1_koi_worlds\\audio\\lyria_tramo7.mp3",
+   "archivo": "t1_koi_worlds__lyria_tramo7.mp3",
+   "md5": "9e16458cff295ff21a8747b3714fac57",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "T1 vs KOI: las mejores jugadas analizadas | Worlds 2026",
+   "tramo": 7,
+   "escenas": [
+    "jugada7_rep",
+    "claves",
+    "numeros",
+    "sigue",
+    "cierre"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo8 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:17 (137 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Patient tension, a bittersweet final hit, then a light curious groove.\n\n[0:00 - 1:44] Section 1: Intensity 7/10. analysis bed, patient tension, a final bittersweet hit\n[1:44 - 2:17] Section 2: Intensity 4/10. light curious groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 104,
+     "intensidad": 7,
+     "desc": "analysis bed, patient tension, a final bittersweet hit"
+    },
+    {
+     "t0": 104,
+     "t1": 137,
+     "intensidad": 4,
+     "desc": "light curious groove"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 136.15,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 1892,
+    "energia": [
+     0.93,
+     0.93,
+     0.85,
+     0.3,
+     0.67,
+     0.75,
+     0.76,
+     0.35,
+     0.69,
+     0.97,
+     1.0,
+     0.37
+    ],
+    "huecos": [],
+    "dinamica": 0.7
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3"
+   ]
+  },
+  "wow_primera_semana__lyria_tramo13": {
+   "id": "wow_primera_semana__lyria_tramo13",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo13.wav",
+   "archivo": "wow_primera_semana__lyria_tramo13.mp3",
+   "md5": "bfe121516cc90876162b3fd7cfbf3119",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 13,
+   "escenas": [
+    "cierre"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 31.63,
+    "rms_db": -21.7,
+    "tempo": 89.1,
+    "brillo_hz": 1388,
+    "energia": [
+     0.57,
+     0.51,
+     0.56,
+     0.68,
+     0.62,
+     0.78,
+     0.71,
+     0.58,
+     0.99,
+     0.88,
+     0.54,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.49
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo12": {
+   "id": "wow_primera_semana__lyria_tramo12",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo12.wav",
+   "archivo": "wow_primera_semana__lyria_tramo12.mp3",
+   "md5": "1c3b985d6cfcb84b4db56418f9e85798",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 12,
+   "escenas": [
+    "anuncio"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nTierras de la Peste del Este",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 41.0,
+    "rms_db": -23.7,
+    "tempo": 60.1,
+    "brillo_hz": 655,
+    "energia": [
+     0.32,
+     0.36,
+     0.32,
+     0.61,
+     0.45,
+     0.95,
+     0.82,
+     0.38,
+     0.65,
+     1.0,
+     0.44,
+     0.46
+    ],
+    "huecos": [],
+    "dinamica": 0.68
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo3": {
+   "id": "wow_primera_semana__lyria_tramo3",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_primera_semana__lyria_tramo3.mp3",
+   "md5": "f9b9b328fd05a14015f4e0d7a719a9a4",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 3,
+   "escenas": [
+    "c08"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDurotar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 66.0,
+    "rms_db": -24.5,
+    "tempo": 161.5,
+    "brillo_hz": 806,
+    "energia": [
+     0.65,
+     1.0,
+     0.49,
+     0.38,
+     0.77,
+     0.99,
+     0.86,
+     0.59,
+     0.3,
+     0.52,
+     0.98,
+     0.89
+    ],
+    "huecos": [],
+    "dinamica": 0.7
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo4": {
+   "id": "wow_primera_semana__lyria_tramo4",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_primera_semana__lyria_tramo4.mp3",
+   "md5": "346d5f4a35dc456dc88c6bcfaa0a8e1b",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 4,
+   "escenas": [
+    "overgear"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDurotar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 61.0,
+    "rms_db": -25.3,
+    "tempo": 99.4,
+    "brillo_hz": 1252,
+    "energia": [
+     0.54,
+     0.25,
+     0.27,
+     0.5,
+     0.35,
+     0.45,
+     0.52,
+     0.86,
+     1.0,
+     0.66,
+     0.21,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo10": {
+   "id": "wow_primera_semana__lyria_tramo10",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_primera_semana__lyria_tramo10.mp3",
+   "md5": "d5f01ed0080fe78b983115e4b6543168",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 10,
+   "escenas": [
+    "c02"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nUn'Goro",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 71.0,
+    "rms_db": -25.4,
+    "tempo": 60.1,
+    "brillo_hz": 886,
+    "energia": [
+     0.29,
+     0.1,
+     0.37,
+     0.83,
+     0.64,
+     0.6,
+     0.61,
+     0.66,
+     0.7,
+     0.58,
+     1.0,
+     0.56
+    ],
+    "huecos": [],
+    "dinamica": 0.9
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo11": {
+   "id": "wow_primera_semana__lyria_tramo11",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_primera_semana__lyria_tramo11.mp3",
+   "md5": "145e217fa6506bae73c6fa3277e5c142",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 11,
+   "escenas": [
+    "c01"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDun Morogh",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 66.0,
+    "rms_db": -23.9,
+    "tempo": 143.6,
+    "brillo_hz": 775,
+    "energia": [
+     0.23,
+     0.25,
+     0.14,
+     1.0,
+     0.41,
+     0.51,
+     0.48,
+     0.36,
+     0.36,
+     0.44,
+     0.57,
+     0.53
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo2": {
+   "id": "wow_primera_semana__lyria_tramo2",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_primera_semana__lyria_tramo2.mp3",
+   "md5": "65b9edbb143ec2a22849b41a4b86249a",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 2,
+   "escenas": [
+    "c09"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDun Morogh",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 81.0,
+    "rms_db": -25.8,
+    "tempo": 68.0,
+    "brillo_hz": 1092,
+    "energia": [
+     0.46,
+     0.38,
+     0.6,
+     1.0,
+     0.72,
+     0.65,
+     0.34,
+     0.2,
+     0.13,
+     0.13,
+     0.15,
+     0.32
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo1": {
+   "id": "wow_primera_semana__lyria_tramo1",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_primera_semana__lyria_tramo1.mp3",
+   "md5": "d4fc2df43f609d646ae5f9f4f5e88092",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "c10"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 108.5,
+    "rms_db": -22.5,
+    "tempo": 80.7,
+    "brillo_hz": 1112,
+    "energia": [
+     0.94,
+     1.0,
+     0.88,
+     0.95,
+     0.65,
+     0.81,
+     0.86,
+     0.71,
+     0.65,
+     0.41,
+     0.53,
+     0.68
+    ],
+    "huecos": [],
+    "dinamica": 0.59
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo5": {
+   "id": "wow_primera_semana__lyria_tramo5",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_primera_semana__lyria_tramo5.mp3",
+   "md5": "c5f2baec3f7b57a774c38fda0165db45",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 5,
+   "escenas": [
+    "gracias",
+    "c07"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nFeralas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 83.5,
+    "rms_db": -27.2,
+    "tempo": 136.0,
+    "brillo_hz": 1307,
+    "energia": [
+     0.43,
+     0.99,
+     1.0,
+     0.9,
+     0.91,
+     0.91,
+     0.78,
+     0.67,
+     0.56,
+     0.42,
+     0.33,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo6": {
+   "id": "wow_primera_semana__lyria_tramo6",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_primera_semana__lyria_tramo6.mp3",
+   "md5": "6f526b382a9d7fa1b849dfcece8a5a24",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 6,
+   "escenas": [
+    "c06"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDun Morogh",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 81.0,
+    "rms_db": -23.1,
+    "tempo": 117.5,
+    "brillo_hz": 1581,
+    "energia": [
+     0.39,
+     0.42,
+     0.3,
+     0.06,
+     0.05,
+     0.33,
+     0.33,
+     0.64,
+     0.47,
+     1.0,
+     0.24,
+     0.28
+    ],
+    "huecos": [],
+    "dinamica": 0.95
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo9": {
+   "id": "wow_primera_semana__lyria_tramo9",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_primera_semana__lyria_tramo9.mp3",
+   "md5": "caea84257da56de8043ef37ff61e8a47",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 9,
+   "escenas": [
+    "c03"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nFeralas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 73.5,
+    "rms_db": -20.1,
+    "tempo": 136.0,
+    "brillo_hz": 2003,
+    "energia": [
+     1.0,
+     0.85,
+     0.73,
+     0.74,
+     0.44,
+     0.26,
+     0.58,
+     0.65,
+     0.63,
+     0.5,
+     0.78,
+     0.64
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo7": {
+   "id": "wow_primera_semana__lyria_tramo7",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_primera_semana__lyria_tramo7.mp3",
+   "md5": "8f664317a829d8bcf50f25cba441ae93",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 7,
+   "escenas": [
+    "c05"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDurotar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 78.5,
+    "rms_db": -26.6,
+    "tempo": 95.7,
+    "brillo_hz": 972,
+    "energia": [
+     0.66,
+     0.64,
+     0.63,
+     0.69,
+     0.64,
+     0.92,
+     0.65,
+     0.41,
+     0.18,
+     0.62,
+     1.0,
+     0.6
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "wow_primera_semana__lyria_tramo8": {
+   "id": "wow_primera_semana__lyria_tramo8",
+   "video": "wow_primera_semana",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_primera_semana\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_primera_semana__lyria_tramo8.mp3",
+   "md5": "49fae18e9b2202c57836884babf6de51",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "tramo": 8,
+   "escenas": [
+    "c04"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nUn'Goro",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 78.5,
+    "rms_db": -21.8,
+    "tempo": 71.8,
+    "brillo_hz": 407,
+    "energia": [
+     0.32,
+     0.49,
+     0.57,
+     0.59,
+     0.72,
+     0.93,
+     0.77,
+     1.0,
+     0.84,
+     0.88,
+     0.82,
+     0.51
+    ],
+    "huecos": [],
+    "dinamica": 0.68
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-28"
+  },
+  "cfo_kc_jugadas__antes_lyria_tramo1": {
+   "id": "cfo_kc_jugadas__antes_lyria_tramo1",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo1.mp3",
+   "archivo": "cfo_kc_jugadas__antes_lyria_tramo1.mp3",
+   "md5": "a28202e30031da8ce830a1d93aa6baaf",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "juego",
+    "draft1"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Uneasy analysis tension that suddenly collapses, then a sober afterglow.\n\n[0:00 - 1:16] Section 1: Intensity 6/10. analysis bed, uneasy tension, a sudden collapse\n[1:16 - 1:38] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "analysis bed, uneasy tension, a sudden collapse"
+    },
+    {
+     "t0": 76,
+     "t1": 98,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    }
+   ],
+   "intensidad": [
+    6,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 85.71,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 1858,
+    "energia": [
+     0.14,
+     0.42,
+     0.8,
+     0.9,
+     0.88,
+     0.95,
+     0.85,
+     1.0,
+     0.97,
+     0.97,
+     0.99,
+     0.27
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": true,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "cfo_kc_jugadas__lyria_tramo3": {
+   "id": "cfo_kc_jugadas__lyria_tramo3",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo3.mp3",
+   "archivo": "cfo_kc_jugadas__lyria_tramo3.mp3",
+   "md5": "7af91d03ac9914c0edc9df315f46558b",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 3,
+   "escenas": [
+    "jugada3",
+    "jugada3_rep"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:16 (76 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Continue the groove, turn darker and tense toward the end. End on a suspended note.\n\n[0:00 - 0:37] Section 1: Intensity 5/10. hopeful underdog groove, rising synths\n[0:37 - 1:16] Section 2: Intensity 6/10. ominous low drones, tension builds toward a fight",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 37,
+     "intensidad": 5,
+     "desc": "hopeful underdog groove, rising synths"
+    },
+    {
+     "t0": 37,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "ominous low drones, tension builds toward a fight"
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "drone",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "esperanza",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 98.46,
+    "rms_db": -14.4,
+    "tempo": 123.0,
+    "brillo_hz": 1850,
+    "energia": [
+     0.94,
+     0.83,
+     0.99,
+     0.95,
+     0.97,
+     0.83,
+     0.83,
+     0.86,
+     0.99,
+     0.92,
+     1.0,
+     0.41
+    ],
+    "huecos": [],
+    "dinamica": 0.59
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "cfo_kc_jugadas__lyria_tramo2": {
+   "id": "cfo_kc_jugadas__lyria_tramo2",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo2.mp3",
+   "archivo": "cfo_kc_jugadas__lyria_tramo2.mp3",
+   "md5": "3e070fee422465c06731d2f4f2500bc0",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 2,
+   "escenas": [
+    "jugada1",
+    "jugada2"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:21 (142 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal pulse for analysis, a big hit around the middle, then a lighter recap groove.\n\n[0:00 - 1:51] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:51 - 2:21] Section 2: Intensity 5/10. upbeat recap groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 111,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 111,
+     "t1": 141,
+     "intensidad": 5,
+     "desc": "upbeat recap groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 112.09,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2168,
+    "energia": [
+     0.47,
+     0.56,
+     1.0,
+     0.75,
+     0.98,
+     0.96,
+     0.83,
+     0.86,
+     0.96,
+     1.0,
+     0.39,
+     0.3
+    ],
+    "huecos": [],
+    "dinamica": 0.7
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "cfo_kc_jugadas__lyria_tramo1": {
+   "id": "cfo_kc_jugadas__lyria_tramo1",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo1.mp3",
+   "archivo": "cfo_kc_jugadas__lyria_tramo1.mp3",
+   "md5": "c4756c01e27e7d3e634cf9c9d5f6beac",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "juego",
+    "draft1"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Uneasy analysis tension that suddenly collapses, then a sober afterglow.\n\n[0:00 - 1:16] Section 1: Intensity 6/10. analysis bed, uneasy tension, a sudden collapse\n[1:16 - 1:38] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "analysis bed, uneasy tension, a sudden collapse"
+    },
+    {
+     "t0": 76,
+     "t1": 98,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    }
+   ],
+   "intensidad": [
+    6,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 100.08,
+    "rms_db": -14.5,
+    "tempo": 184.6,
+    "brillo_hz": 1535,
+    "energia": [
+     0.99,
+     0.9,
+     1.0,
+     0.86,
+     0.39,
+     0.35,
+     0.36,
+     0.67,
+     0.78,
+     0.82,
+     0.77,
+     0.41
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "cfo_kc_jugadas__antes_lyria_tramo8": {
+   "id": "cfo_kc_jugadas__antes_lyria_tramo8",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo8.mp3",
+   "archivo": "cfo_kc_jugadas__antes_lyria_tramo8.mp3",
+   "md5": "5da00bdee0a97e143570f9a659e59ebd",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 8,
+   "escenas": [
+    "curva2",
+    "predicciones",
+    "boleta_kc",
+    "boleta_cfo"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 140.45,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 2700,
+    "energia": [
+     0.72,
+     0.85,
+     0.95,
+     1.0,
+     0.8,
+     0.74,
+     0.81,
+     0.81,
+     0.82,
+     0.85,
+     0.99,
+     0.87
+    ],
+    "huecos": [],
+    "dinamica": 0.28
+   },
+   "variante": true,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "cfo_kc_jugadas__lyria_tramo9": {
+   "id": "cfo_kc_jugadas__lyria_tramo9",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo9.mp3",
+   "archivo": "cfo_kc_jugadas__lyria_tramo9.mp3",
+   "md5": "bd39a29d9642b03d6f4b6ce8b73b2994",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 9,
+   "escenas": [
+    "numeros",
+    "sigue",
+    "cierre"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo10 (desde 57.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:45 (106 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Forward-looking anticipation, warm reflective pads, final big hit and ring out.\n\n[0:00 - 0:54] Section 1: Intensity 5/10. forward-looking anticipation, rising\n[0:54 - 1:27] Section 2: Intensity 4/10. reflective, warm synth pads\n[1:27 - 1:45] Section 3: Intensity 5/10. final big hit and ring out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 54,
+     "intensidad": 5,
+     "desc": "forward-looking anticipation, rising"
+    },
+    {
+     "t0": 54,
+     "t1": 87,
+     "intensidad": 4,
+     "desc": "reflective, warm synth pads"
+    },
+    {
+     "t0": 87,
+     "t1": 105,
+     "intensidad": 5,
+     "desc": "final big hit and ring out"
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 45.79,
+    "rms_db": -14.6,
+    "tempo": 117.5,
+    "brillo_hz": 1881,
+    "energia": [
+     0.94,
+     0.95,
+     1.0,
+     0.96,
+     0.99,
+     0.94,
+     0.95,
+     0.91,
+     0.87,
+     0.83,
+     0.56,
+     0.03
+    ],
+    "huecos": [],
+    "dinamica": 0.97
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "robotaller_mes1__antes_lyria_tramo1": {
+   "id": "robotaller_mes1__antes_lyria_tramo1",
+   "video": "robotaller_mes1",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo1.mp3",
+   "archivo": "robotaller_mes1__antes_lyria_tramo1.mp3",
+   "md5": "6e090385d92c46c6d119c679716426e7",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA y esto construí en 32 días (tú decides lo que sigue)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "contraste",
+    "quien",
+    "archivo",
+    "creado"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "BIBLIOTECA: lol_worlds_tl_al__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-30\n\nBIBLIOTECA: mods_ia_fusion__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-26\n\nModern dark electronic explainer underscore: punchy synthwave and glitch-hop, tight drums, pulsing bass arpeggios, digital textures, energetic and addictive, 120 BPM, instrumental only, no vocals.\ngancho: starts immediately with a punchy beat and a catchy synth stab, high energy hook\npuente: steady driving groove, curious and technical, arpeggios like data flowing, light percussion\nlimite: the beat drops out, dark tense bass hit and a rising sweep\nreescribir: the beat returns harder, glitchy and mechanical, building in layers\nverdad: half-time, more serious and thoughtful, sparse drums, warm pad\ncierre: big uplifting final build, full drums and bright synths, then a clean ending",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "chiptune",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "curioso",
+     "cálido",
+     "esperanza",
+     "juguetón",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 92.21,
+    "rms_db": -15.1,
+    "tempo": 123.0,
+    "brillo_hz": 1004,
+    "energia": [
+     0.39,
+     0.27,
+     0.19,
+     0.63,
+     0.67,
+     0.65,
+     0.78,
+     1.0,
+     0.93,
+     0.86,
+     0.79,
+     0.37
+    ],
+    "huecos": [],
+    "dinamica": 0.81
+   },
+   "variante": true,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "cfo_kc_jugadas__lyria_tramo8": {
+   "id": "cfo_kc_jugadas__lyria_tramo8",
+   "video": "cfo_kc_jugadas",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo8.mp3",
+   "archivo": "cfo_kc_jugadas__lyria_tramo8.mp3",
+   "md5": "9b42114e24a33ab8e682da063d6e1e11",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "CFO vs KC: las jugadas clave analizadas | Worlds 2026",
+   "tramo": 8,
+   "escenas": [
+    "curva2",
+    "predicciones",
+    "boleta_kc",
+    "boleta_cfo"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 135.65,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2280,
+    "energia": [
+     0.88,
+     0.93,
+     0.95,
+     0.91,
+     0.88,
+     0.93,
+     0.9,
+     1.0,
+     0.95,
+     0.88,
+     0.92,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "robotaller_mes1__lyria_tramo1": {
+   "id": "robotaller_mes1__lyria_tramo1",
+   "video": "robotaller_mes1",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\lyria_tramo1.mp3",
+   "archivo": "robotaller_mes1__lyria_tramo1.mp3",
+   "md5": "30cccf5bc01ced262f3175ca8be19697",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA y esto construí en 32 días (tú decides lo que sigue)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "contraste",
+    "quien",
+    "archivo",
+    "creado"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "BIBLIOTECA: lol_worlds_tl_al__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-30\n\nBIBLIOTECA: mods_ia_fusion__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-26\n\nModern dark electronic explainer underscore: punchy synthwave and glitch-hop, tight drums, pulsing bass arpeggios, digital textures, energetic and addictive, 120 BPM, instrumental only, no vocals.\ngancho: starts immediately with a punchy beat and a catchy synth stab, high energy hook\npuente: steady driving groove, curious and technical, arpeggios like data flowing, light percussion\nlimite: the beat drops out, dark tense bass hit and a rising sweep\nreescribir: the beat returns harder, glitchy and mechanical, building in layers\nverdad: half-time, more serious and thoughtful, sparse drums, warm pad\ncierre: big uplifting final build, full drums and bright synths, then a clean ending",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "chiptune",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "curioso",
+     "cálido",
+     "esperanza",
+     "juguetón",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 132.27,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2227,
+    "energia": [
+     0.67,
+     0.65,
+     0.79,
+     0.71,
+     0.4,
+     0.53,
+     1.0,
+     0.94,
+     0.92,
+     0.99,
+     0.72,
+     0.57
+    ],
+    "huecos": [],
+    "dinamica": 0.6
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
+  },
+  "robotaller_mes1__lyria_tramo2": {
+   "id": "robotaller_mes1__lyria_tramo2",
+   "video": "robotaller_mes1",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\lyria_tramo2.mp3",
+   "archivo": "robotaller_mes1__lyria_tramo2.mp3",
+   "md5": "8e0f2b6dc685aaf933c0b5911ce40f47",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA y esto construí en 32 días (tú decides lo que sigue)",
+   "tramo": 2,
+   "escenas": [
+    "como",
+    "version",
+    "fallos",
+    "relevo",
+    "junta"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "BIBLIOTECA: agotado_cortisol__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-30\n\nIntimate nocturnal ambient score for a calm science explainer drawn in white chalk lines on black with glowing neon: soft felt piano, warm analog synth pads, a faint ticking-clock texture, subtle low pulse, airy night atmosphere. Instrumental only, no vocals, never loud, always leaves space for a deep narrator voice. Total length: exactly 2:54 (174 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly on a calm sustained pad. End with a warm final chord fading to silence.\n\n[0:00 - 0:30] Section 1: Intensity 5/10. Calm focus: soft pencil-like plucks and a steady gentle piano, things being put in order.\n[0:30 - 0:53] Section 2: Intensity 5/10. Warm and flowing: liquid pads, gentle water-like textures, heat slowly fading into cool air.\n[0:53 - 1:16] Section 3: Intensity 4/10. Dimming lights: pads gradually darkening and softening, tempo slowing, amber warmth.\n[1:16 - 1:46] Section 4: Intensity 4/10. Dreamy and playful: random soft bell tones drifting, floating, slightly surreal.\n[1:46 - 2:13] Section 5: Intensity 4/10. Patient and quiet: sparse piano, a slow walk, low lamp glow, no hurry.\n[2:13 - 2:36] Section 6: Intensity 4/10. Warm resolution: the piano melody returns in a major key with soft strings, steady and confident.\n[2:36 - 2:54] Section 7: Intensity 3/10. Falling asleep: very soft pads fading out like sand settling, one last gentle warm chord.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 30,
+     "intensidad": 5,
+     "desc": "Calm focus: soft pencil-like plucks and a steady gentle piano, things being put in order."
+    },
+    {
+     "t0": 30,
+     "t1": 53,
+     "intensidad": 5,
+     "desc": "Warm and flowing: liquid pads, gentle water-like textures, heat slowly fading into cool air."
+    },
+    {
+     "t0": 53,
+     "t1": 76,
+     "intensidad": 4,
+     "desc": "Dimming lights: pads gradually darkening and softening, tempo slowing, amber warmth."
+    },
+    {
+     "t0": 76,
+     "t1": 106,
+     "intensidad": 4,
+     "desc": "Dreamy and playful: random soft bell tones drifting, floating, slightly surreal."
+    },
+    {
+     "t0": 106,
+     "t1": 133,
+     "intensidad": 4,
+     "desc": "Patient and quiet: sparse piano, a slow walk, low lamp glow, no hurry."
+    },
+    {
+     "t0": 133,
+     "t1": 156,
+     "intensidad": 4,
+     "desc": "Warm resolution: the piano melody returns in a major key with soft strings, steady and confident."
+    },
+    {
+     "t0": 156,
+     "t1": 174,
+     "intensidad": 3,
+     "desc": "Falling asleep: very soft pads fading out like sand settling, one last gentle warm chord."
+    }
+   ],
+   "intensidad": [
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "chiptune",
+     "cuerdas",
+     "percusión",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "esperanza",
+     "juguetón",
+     "oscuro",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 170.11,
+    "rms_db": -15.2,
+    "tempo": 161.5,
+    "brillo_hz": 1163,
+    "energia": [
+     0.26,
+     0.32,
+     0.84,
+     0.71,
+     0.4,
+     0.8,
+     1.0,
+     0.65,
+     1.0,
+     0.53,
+     0.39,
+     0.16
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-10-30"
   }
  },
- "actualizado": "2026-10-28 12:40"
+ "actualizado": "2026-10-30 17:01"
 }

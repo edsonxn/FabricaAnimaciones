@@ -6889,7 +6889,447 @@
    "prompt": "A volley of heavy spears whooshing and thudding into armor, then a deep gravitational hum, dark fantasy",
    "dur": 3.0,
    "canal": "runa_caida"
+  },
+  "bt_mundos_ranking__bt_correcto": {
+   "id": "bt_mundos_ranking__bt_correcto",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_correcto",
+   "archivo": "bt_mundos_ranking__bt_correcto.mp3",
+   "md5": "dc2f61d34ab1680cdf03ec66c7205e84",
+   "prompt": "",
+   "dur": 1.8,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_guhuh": {
+   "id": "bt_mundos_ranking__bt_guhuh",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_guhuh",
+   "archivo": "bt_mundos_ranking__bt_guhuh.mp3",
+   "md5": "98c57e7883a52520792fe418e10c0a25",
+   "prompt": "",
+   "dur": 0.47,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_jiggy": {
+   "id": "bt_mundos_ranking__bt_jiggy",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_jiggy",
+   "archivo": "bt_mundos_ranking__bt_jiggy.mp3",
+   "md5": "a7fee412395995049ca64e56237bd032",
+   "prompt": "",
+   "dur": 2.32,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_jinjo": {
+   "id": "bt_mundos_ranking__bt_jinjo",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_jinjo",
+   "archivo": "bt_mundos_ranking__bt_jinjo.mp3",
+   "md5": "41d2f05491159a299495a7e737e60623",
+   "prompt": "",
+   "dur": 3.06,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_nota": {
+   "id": "bt_mundos_ranking__bt_nota",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_nota",
+   "archivo": "bt_mundos_ranking__bt_nota.mp3",
+   "md5": "6645e19782cd98f59ab0d389acf0408a",
+   "prompt": "",
+   "dur": 1.09,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_panal": {
+   "id": "bt_mundos_ranking__bt_panal",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_panal",
+   "archivo": "bt_mundos_ranking__bt_panal.mp3",
+   "md5": "7f37a2baa7d608b6e83e0d261360a62d",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_panal_skill": {
+   "id": "bt_mundos_ranking__bt_panal_skill",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_panal_skill",
+   "archivo": "bt_mundos_ranking__bt_panal_skill.mp3",
+   "md5": "fd8f1baa12430e80087fd2f4d65668a4",
+   "prompt": "",
+   "dur": 0.75,
+   "canal": "cronicas_gaming"
+  },
+  "bt_mundos_ranking__bt_pluma": {
+   "id": "bt_mundos_ranking__bt_pluma",
+   "video": "bt_mundos_ranking",
+   "nombre": "bt_pluma",
+   "archivo": "bt_mundos_ranking__bt_pluma.mp3",
+   "md5": "3f26b0dd34ad9a2bd910c0ef2e9253d6",
+   "prompt": "",
+   "dur": 1.89,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_1up": {
+   "id": "mario64_secretos__m64_1up",
+   "video": "mario64_secretos",
+   "nombre": "m64_1up",
+   "archivo": "mario64_secretos__m64_1up.mp3",
+   "md5": "43c8b6f9e543c9fb02268cab63473bc0",
+   "prompt": "",
+   "dur": 0.95,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_aparece": {
+   "id": "mario64_secretos__m64_aparece",
+   "video": "mario64_secretos",
+   "nombre": "m64_aparece",
+   "archivo": "mario64_secretos__m64_aparece.mp3",
+   "md5": "e18743658ceb76a6cef1cab36d8e4d9d",
+   "prompt": "",
+   "dur": 4.7,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_boo": {
+   "id": "mario64_secretos__m64_boo",
+   "video": "mario64_secretos",
+   "nombre": "m64_boo",
+   "archivo": "mario64_secretos__m64_boo.mp3",
+   "md5": "9fc6a2d21b30eed59af9b3bd84bde20d",
+   "prompt": "",
+   "dur": 2.5,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_bowser_risa": {
+   "id": "mario64_secretos__m64_bowser_risa",
+   "video": "mario64_secretos",
+   "nombre": "m64_bowser_risa",
+   "archivo": "mario64_secretos__m64_bowser_risa.mp3",
+   "md5": "42908bbdd16f33460c37b1b61b50d5e1",
+   "prompt": "",
+   "dur": 4.45,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_cuadro": {
+   "id": "mario64_secretos__m64_cuadro",
+   "video": "mario64_secretos",
+   "nombre": "m64_cuadro",
+   "archivo": "mario64_secretos__m64_cuadro.mp3",
+   "md5": "614146ae94e7af7f9eef95337423ad4b",
+   "prompt": "",
+   "dur": 2.21,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_estrella": {
+   "id": "mario64_secretos__m64_estrella",
+   "video": "mario64_secretos",
+   "nombre": "m64_estrella",
+   "archivo": "mario64_secretos__m64_estrella.mp3",
+   "md5": "d73c72c78b64a0b48879f121b655978c",
+   "prompt": "",
+   "dur": 8.96,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_herewego": {
+   "id": "mario64_secretos__m64_herewego",
+   "video": "mario64_secretos",
+   "nombre": "m64_herewego",
+   "archivo": "mario64_secretos__m64_herewego.mp3",
+   "md5": "34472fa8b695c831c29989dd9bef8d4e",
+   "prompt": "",
+   "dur": 1.33,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_mammamia": {
+   "id": "mario64_secretos__m64_mammamia",
+   "video": "mario64_secretos",
+   "nombre": "m64_mammamia",
+   "archivo": "mario64_secretos__m64_mammamia.mp3",
+   "md5": "79cff77174a03b96f4f64dde9635cf8f",
+   "prompt": "",
+   "dur": 0.91,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_moneda": {
+   "id": "mario64_secretos__m64_moneda",
+   "video": "mario64_secretos",
+   "nombre": "m64_moneda",
+   "archivo": "mario64_secretos__m64_moneda.mp3",
+   "md5": "bb2e76616f9eb27382a4f373f071980f",
+   "prompt": "",
+   "dur": 0.7,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_pausa": {
+   "id": "mario64_secretos__m64_pausa",
+   "video": "mario64_secretos",
+   "nombre": "m64_pausa",
+   "archivo": "mario64_secretos__m64_pausa.mp3",
+   "md5": "5629e747ccf01abdc931af1f3fbf0725",
+   "prompt": "",
+   "dur": 0.64,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_puerta": {
+   "id": "mario64_secretos__m64_puerta",
+   "video": "mario64_secretos",
+   "nombre": "m64_puerta",
+   "archivo": "mario64_secretos__m64_puerta.mp3",
+   "md5": "3f01eca7d677d8cefb0c836b1d2f84f4",
+   "prompt": "",
+   "dur": 3.6,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_solucion": {
+   "id": "mario64_secretos__m64_solucion",
+   "video": "mario64_secretos",
+   "nombre": "m64_solucion",
+   "archivo": "mario64_secretos__m64_solucion.mp3",
+   "md5": "21f292cd7e3de8e12f5545544b96b96b",
+   "prompt": "",
+   "dur": 2.49,
+   "canal": "cronicas_gaming"
+  },
+  "mario64_secretos__m64_yahoo": {
+   "id": "mario64_secretos__m64_yahoo",
+   "video": "mario64_secretos",
+   "nombre": "m64_yahoo",
+   "archivo": "mario64_secretos__m64_yahoo.mp3",
+   "md5": "d0c088dbc5365e71a3288f8f6c183009",
+   "prompt": "",
+   "dur": 4.53,
+   "canal": "cronicas_gaming"
+  },
+  "robotaller_mes1__brillo": {
+   "id": "robotaller_mes1__brillo",
+   "video": "robotaller_mes1",
+   "nombre": "brillo",
+   "archivo": "robotaller_mes1__brillo.mp3",
+   "md5": "3b7851c1d360cb25b7a6fde7414507b6",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__corte": {
+   "id": "robotaller_mes1__corte",
+   "video": "robotaller_mes1",
+   "nombre": "corte",
+   "archivo": "robotaller_mes1__corte.mp3",
+   "md5": "17c458bfcdfce1239c91bc445151ed7a",
+   "prompt": "Electronic power down, a small robot shutting off abruptly with a descending blip",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__desliza": {
+   "id": "robotaller_mes1__desliza",
+   "video": "robotaller_mes1",
+   "nombre": "desliza",
+   "archivo": "robotaller_mes1__desliza.mp3",
+   "md5": "808f335f89846a07b394b3ca75cc2966",
+   "prompt": "Soft quick swipe of a screen sliding up, short and clean",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__desliza2": {
+   "id": "robotaller_mes1__desliza2",
+   "video": "robotaller_mes1",
+   "nombre": "desliza2",
+   "archivo": "robotaller_mes1__desliza2.mp3",
+   "md5": "c58aaf38b3c646b5b9def2a4a76bc840",
+   "prompt": "Light paper-like slide with a tiny click at the end, short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__disco": {
+   "id": "robotaller_mes1__disco",
+   "video": "robotaller_mes1",
+   "nombre": "disco",
+   "archivo": "robotaller_mes1__disco.mp3",
+   "md5": "c3095ae029b242707d81624e148679ae",
+   "prompt": "Failing hard drive clicking and grinding, mechanical ticking, close up",
+   "dur": 3.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__encendido": {
+   "id": "robotaller_mes1__encendido",
+   "video": "robotaller_mes1",
+   "nombre": "encendido",
+   "archivo": "robotaller_mes1__encendido.mp3",
+   "md5": "dc504926ab3ad114d957ec8ddf372804",
+   "prompt": "Retro computer power on: relay click, rising hum and a soft start-up beep",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__fallo": {
+   "id": "robotaller_mes1__fallo",
+   "video": "robotaller_mes1",
+   "nombre": "fallo",
+   "archivo": "robotaller_mes1__fallo.mp3",
+   "md5": "ced8154242c51c3dc3ae1897d055317d",
+   "prompt": "Short digital error buzz, comic robot failure beep, dry",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__golpe": {
+   "id": "robotaller_mes1__golpe",
+   "video": "robotaller_mes1",
+   "nombre": "golpe",
+   "archivo": "robotaller_mes1__golpe.mp3",
+   "md5": "574a8cc39b9cf111459a2541b8f59e93",
+   "prompt": "Soft cartoon metallic clank of a small robot, dry",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__jefe": {
+   "id": "robotaller_mes1__jefe",
+   "video": "robotaller_mes1",
+   "nombre": "jefe",
+   "archivo": "robotaller_mes1__jefe.mp3",
+   "md5": "12ea3a8b4b7298eb95e5cb9532a10eb9",
+   "prompt": "Small cartoon pop as a paper cutout character jumps into frame, short and dry",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__latigo": {
+   "id": "robotaller_mes1__latigo",
+   "video": "robotaller_mes1",
+   "nombre": "latigo",
+   "archivo": "robotaller_mes1__latigo.mp3",
+   "md5": "ab3e39320fcebb88d43c8f21b80387ce",
+   "prompt": "Fast whip pan whoosh, airy and short, no reverb",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__latigo2": {
+   "id": "robotaller_mes1__latigo2",
+   "video": "robotaller_mes1",
+   "nombre": "latigo2",
+   "archivo": "robotaller_mes1__latigo2.mp3",
+   "md5": "348e4eb0a7177e74684212e1905c781d",
+   "prompt": "Quick cloth swish whoosh passing the camera, dry and snappy",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__llaves": {
+   "id": "robotaller_mes1__llaves",
+   "video": "robotaller_mes1",
+   "nombre": "llaves",
+   "archivo": "robotaller_mes1__llaves.mp3",
+   "md5": "ecde2a4e1c43d9f60ba6abe7ff50b9cb",
+   "prompt": "Heavy ring of metal keys falling and bonking a small metal robot on the head, cartoon clonk, keys jingling as they bounce on the floor",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__logro": {
+   "id": "robotaller_mes1__logro",
+   "video": "robotaller_mes1",
+   "nombre": "logro",
+   "archivo": "robotaller_mes1__logro.mp3",
+   "md5": "b5e24d27cac34b14a5706e5d82f7f1bb",
+   "prompt": "Cheerful retro video game achievement chime, bright",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__monitor": {
+   "id": "robotaller_mes1__monitor",
+   "video": "robotaller_mes1",
+   "nombre": "monitor",
+   "archivo": "robotaller_mes1__monitor.mp3",
+   "md5": "b7ba3a9c96aa4bcaba1191718db32c2d",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__sube": {
+   "id": "robotaller_mes1__sube",
+   "video": "robotaller_mes1",
+   "nombre": "sube",
+   "archivo": "robotaller_mes1__sube.mp3",
+   "md5": "b113b8c9171cf55273264927e20644f0",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__tic": {
+   "id": "robotaller_mes1__tic",
+   "video": "robotaller_mes1",
+   "nombre": "tic",
+   "archivo": "robotaller_mes1__tic.mp3",
+   "md5": "b48d236151dd0093acdcc8a692c57249",
+   "prompt": "Short digital data glitch burst, tiny stutter, dry",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__zum": {
+   "id": "robotaller_mes1__zum",
+   "video": "robotaller_mes1",
+   "nombre": "zum",
+   "archivo": "robotaller_mes1__zum.mp3",
+   "md5": "382ab813daf6c2264435600dfa582ab3",
+   "prompt": "Quick zoom-in whoosh rising in pitch, short digital swell",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_mes1__zum2": {
+   "id": "robotaller_mes1__zum2",
+   "video": "robotaller_mes1",
+   "nombre": "zum2",
+   "archivo": "robotaller_mes1__zum2.mp3",
+   "md5": "82fe07e4502094c5b2bda318dabcf2ff",
+   "prompt": "Short reversed swoosh rushing into a soft thump, digital",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "tes_secretos_40__lugar_descubierto": {
+   "id": "tes_secretos_40__lugar_descubierto",
+   "video": "tes_secretos_40",
+   "nombre": "lugar_descubierto",
+   "archivo": "tes_secretos_40__lugar_descubierto.mp3",
+   "md5": "af5452e723f7631221f8d8eca790c983",
+   "prompt": "",
+   "dur": 5.99,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_secretos_40__mision_completada": {
+   "id": "tes_secretos_40__mision_completada",
+   "video": "tes_secretos_40",
+   "nombre": "mision_completada",
+   "archivo": "tes_secretos_40__mision_completada.mp3",
+   "md5": "22f57c272aae7a4401ccfd63aee883eb",
+   "prompt": "",
+   "dur": 4.37,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_secretos_40__mision_iniciada": {
+   "id": "tes_secretos_40__mision_iniciada",
+   "video": "tes_secretos_40",
+   "nombre": "mision_iniciada",
+   "archivo": "tes_secretos_40__mision_iniciada.mp3",
+   "md5": "ffd2c8b0bffe15a036784fa84b6c6b25",
+   "prompt": "",
+   "dur": 4.37,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_secretos_40__monedas": {
+   "id": "tes_secretos_40__monedas",
+   "video": "tes_secretos_40",
+   "nombre": "monedas",
+   "archivo": "tes_secretos_40__monedas.mp3",
+   "md5": "9714d0b51c7087d75267ed4fc75781c3",
+   "prompt": "",
+   "dur": 0.44,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_secretos_40__subir_nivel": {
+   "id": "tes_secretos_40__subir_nivel",
+   "video": "tes_secretos_40",
+   "nombre": "subir_nivel",
+   "archivo": "tes_secretos_40__subir_nivel.mp3",
+   "md5": "1f8f63f076196aaa46fe3c72a709f1f8",
+   "prompt": "",
+   "dur": 5.98,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-10-29 07:49"
+ "actualizado": "2026-10-30 17:02"
 }

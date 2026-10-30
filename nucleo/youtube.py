@@ -249,6 +249,22 @@ def _meta(carpeta):
     return json.load(open(os.path.join(carpeta, "youtube.json"), encoding="utf-8"))
 
 
+def _cfg_canal(cid):
+    return next((c for c in (json.load(open(p, encoding="utf-8")) for p in glob.glob(os.path.join(CANALES, "*.json")))
+                 if isinstance(c, dict) and c.get("canal_id") == cid), {})
+
+
+def _con_campana(m, cid):
+    """Campaña de suscripción (el usuario, 30-oct-2026): «campana_subs» en canales/<alias>.json mete tras el primer párrafo de
+    la descripción una línea con el enlace que abre el aviso de suscribirse. Ver docs/estilo_secuencia_yt.md § CAMPAÑA."""
+    c = _cfg_canal(cid).get("campana_subs")
+    if not c or "sub_confirmation" in m["descripcion"]:
+        return m
+    intro, _, resto = m["descripcion"].partition("\n\n")
+    linea = f"{c['linea']}: https://www.youtube.com/channel/{cid}?sub_confirmation=1"
+    return dict(m, descripcion=f"{intro}\n\n{linea}" + (f"\n\n{resto}" if resto else ""))
+
+
 def _snippet(m, previo=None):
     s = dict(previo or {})
     s.update(title=m["titulo"], description=m["descripcion"], tags=m.get("etiquetas", []),
@@ -293,9 +309,9 @@ def miniatura_y_subtitulos(cid, vid, carpeta, m):
 
 def aplicar(carpeta, cid, vid):
     """Actualiza título, descripción, etiquetas, categoría e idioma de un video existente (no cambia su visibilidad)."""
-    m = _meta(carpeta)
+    m = _con_campana(_meta(carpeta), cid)
     v = api(cid, "GET", "/videos", params=dict(part="snippet,status", id=vid))["items"][0]
-    st = {k: v["status"][k] for k in ("privacyStatus", "embeddable", "license", "publicStatsViewable", "publishAt")
+    st = {k: v["status"][k] for k in ("privacyStatus", "embeddable", "license", "publicStatsViewable", "publishAt", "containsSyntheticMedia")
           if k in v["status"]}
     st["selfDeclaredMadeForKids"] = bool(m.get("para_ninos", False))
     api(cid, "PUT", "/videos", params=dict(part="snippet,status"),
@@ -341,6 +357,7 @@ def metricas(cid, alias=None, dias=28):
     out["paises"] = _reporte(cid, desde, hasta, metrics="views,averageViewPercentage", dimensions="country",
                              sort="-views", maxResults=10)
     out["edad_genero"] = _reporte(cid, desde, hasta, metrics="viewerPercentage", dimensions="ageGroup,gender")
+    out["suscritos"] = _reporte(cid, desde, hasta, metrics="views,averageViewPercentage", dimensions="subscribedStatus")
     # por video: datos públicos (Data API) + analytics y curva de retención de cada uno
     pl = ch["contentDetails"]["relatedPlaylists"]["uploads"]
     items = api(cid, "GET", "/playlistItems", params=dict(part="contentDetails", playlistId=pl, maxResults=15)).get("items", [])
@@ -367,7 +384,7 @@ def metricas(cid, alias=None, dias=28):
     print(f"== {out['canal']}  suscriptores={s.get('subscriberCount')}  vistas={s.get('viewCount')}  videos={s.get('videoCount')}")
     for nombre in ("totales_ventana", "totales_historicos"):
         print(f"-- {nombre}: {out[nombre][0] if out[nombre] else 'sin datos'}")
-    for nombre in ("trafico", "busquedas", "dispositivos", "paises", "edad_genero"):
+    for nombre in ("trafico", "busquedas", "dispositivos", "paises", "edad_genero", "suscritos"):
         filas = out[nombre]
         print(f"-- {nombre}: " + ("sin datos (canal pequeño o sin vistas en la ventana)" if not filas else
                                   "; ".join(" ".join(str(x) for x in f.values()) for f in filas[:10])))
@@ -394,30 +411,45 @@ def _separacion_h(cid):
     return 48.0
 
 
-def comprobar_separacion(cid, cuando=None, vid=None, forzar=False):
+SEP_SHORT_LARGO_H = 12   # Short frente a largo: los Shorts no cuentan para el hueco (el usuario, 12-oct-2026)
+
+
+def _es_short(v):
+    """Un video de la API es Short si su título lleva #Shorts o dura ≤ 3 min."""
+    import re
+    if "#shorts" in v["snippet"]["title"].lower():
+        return True
+    m = re.fullmatch(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", (v.get("contentDetails") or {}).get("duration", ""))
+    return bool(m) and int(m[1] or 0) * 3600 + int(m[2] or 0) * 60 + int(m[3] or 0) <= 180
+
+
+def comprobar_separacion(cid, cuando=None, vid=None, forzar=False, short=False):
     """REGLA (7-oct-2026, tras publicar 3 videos de Wild Next Door el mismo día): un canal nunca recibe dos videos
     públicos o programados con menos de su separación mínima. Se detiene si `cuando` (ISO UTC; ahora si falta)
-    choca con otro video; `forzar` solo cuando el usuario lo pidió expresamente para ese video."""
+    choca con otro video; `forzar` solo cuando el usuario lo pidió expresamente para ese video.
+    Short frente a largo (21-oct-2026): basta SEP_SHORT_LARGO_H, así un Short cabe entre dos largos del ciclo."""
     import datetime as dt
 
     def _f(s):
         return dt.datetime.fromisoformat(s[:19] + "+00:00")
     t = _f(cuando) if cuando else dt.datetime.now(dt.timezone.utc)
-    sep = _separacion_h(cid)
+    sep_canal = _separacion_h(cid)
     up = api(cid, "GET", "/channels", params=dict(part="contentDetails", id=cid))["items"][0]
     pl = up["contentDetails"]["relatedPlaylists"]["uploads"]
     items = api(cid, "GET", "/playlistItems", params=dict(part="contentDetails", playlistId=pl, maxResults=50)).get("items", [])
     ids = [i["contentDetails"]["videoId"] for i in items if i["contentDetails"]["videoId"] != vid]
     choques = []
     if ids:
-        for v in api(cid, "GET", "/videos", params=dict(part="snippet,status", id=",".join(ids))).get("items", []):
+        for v in api(cid, "GET", "/videos", params=dict(part="snippet,status,contentDetails", id=",".join(ids))).get("items", []):
             st = v["status"]
             otro = st.get("publishAt") or (v["snippet"].get("publishedAt") if st["privacyStatus"] == "public" else None)
+            sep = sep_canal if _es_short(v) == short else SEP_SHORT_LARGO_H
             if otro and abs((t - _f(otro)).total_seconds()) < sep * 3600:
                 choques.append(f"  {v['id']}  {'programado' if st.get('publishAt') else 'público'} {otro}  {v['snippet']['title']}")
     if not choques:
         return
-    msg = (f"El canal ya tiene video(s) a menos de {sep:g} h de {t.strftime('%Y-%m-%d %H:%M')} UTC:\n" + "\n".join(choques))
+    msg = (f"El canal ya tiene video(s) demasiado cerca de {t.strftime('%Y-%m-%d %H:%M')} UTC (separación {sep_canal:g} h; "
+           f"Short frente a largo {SEP_SHORT_LARGO_H} h):\n" + "\n".join(choques))
     if forzar:
         print("AVISO (--forzar): " + msg)
         return
@@ -427,10 +459,10 @@ def comprobar_separacion(cid, cuando=None, vid=None, forzar=False):
 
 def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None, forzar=False):
     """Hace público (o no listado / privado) un video ya subido, o lo programa con publicar=ISO (UTC)."""
+    v = api(cid, "GET", "/videos", params=dict(part="snippet,status,contentDetails", id=vid))["items"][0]
     if publicar or privacidad == "public":
-        comprobar_separacion(cid, publicar, vid, forzar)
-    v = api(cid, "GET", "/videos", params=dict(part="status", id=vid))["items"][0]
-    st = {k: v["status"][k] for k in ("embeddable", "license", "publicStatsViewable", "selfDeclaredMadeForKids")
+        comprobar_separacion(cid, publicar, vid, forzar, short=_es_short(v))
+    st = {k: v["status"][k] for k in ("embeddable", "license", "publicStatsViewable", "selfDeclaredMadeForKids", "containsSyntheticMedia")
           if k in v["status"]}
     st.setdefault("selfDeclaredMadeForKids", v["status"].get("madeForKids", False))
     st["privacyStatus"] = "private" if publicar else privacidad
@@ -442,14 +474,16 @@ def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None, forzar=Fal
 
 
 def subir(carpeta, cid, privacidad="private", publicar=None, forzar=False):
+    m = _con_campana(_meta(carpeta), cid)
     if publicar or privacidad == "public":
-        comprobar_separacion(cid, publicar, None, forzar)
-    m = _meta(carpeta)
+        comprobar_separacion(cid, publicar, None, forzar, short="#shorts" in m["titulo"].lower())
     video = glob.glob(os.path.join(carpeta, "salida", "*_MASTER.mp4"))[0]
     status = dict(privacyStatus="private" if publicar else privacidad, selfDeclaredMadeForKids=bool(m.get("para_ninos")),
                   embeddable=True, publicStatsViewable=True)
     if publicar:
         status["publishAt"] = publicar
+    if "contenido_sintetico" in m:      # declaración de contenido alterado o sintético (voz clonada, narrador IA)
+        status["containsSyntheticMedia"] = bool(m["contenido_sintetico"])
     tam = os.path.getsize(video)
     ini = requests.post(UPLOAD + "/videos", params=dict(uploadType="resumable", part="snippet,status"),
                         headers={"Authorization": "Bearer " + access_token(cid),
@@ -475,6 +509,15 @@ def subir(carpeta, cid, privacidad="private", publicar=None, forzar=False):
     print(f"video subido: https://youtu.be/{vid} ({status['privacyStatus']}"
           + (f", se publica {publicar}" if publicar else "") + ")")
     miniatura_y_subtitulos(cid, vid, carpeta, m)
+    print("Regla (13-oct-2026): registra el video en canales/<alias>.json → publicados y BITACORA, y actualiza el panel de "
+          "canales: python fab.py canales --actualizar")
+    # lo que la API no hace se hace en Studio con el navegador integrado (el usuario, 21-oct-2026; docs/publicacion.md)
+    cfg = _cfg_canal(cid)
+    pend =(["«Vídeo relacionado» = su largo (cuando el largo ya sea público)"] if "#shorts" in m["titulo"].lower() else []) + (
+        ["Monetización: anuncios activados + cuestionario de idoneidad"] if cfg.get("monetizado") else [])
+    if pend:
+        print(f"PENDIENTE EN STUDIO (navegador integrado, canal {cfg.get('nombre', cid)}): https://studio.youtube.com/video/{vid}/edit\n  - "
+              + "\n  - ".join(pend))
     return vid
 
 

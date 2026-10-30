@@ -48,7 +48,7 @@ Siempre tapados: dinero, claves, correo, dirección del panel remoto, Studio, y 
 Voz Token: ElevenLabs `I1n8B4pOly0qmOu46LFX`, turbo, corchetes. Cifras: `python nucleo/parte_semanal.py [desde] [hasta]`. Video en C:, no en E:. Revisión: primeros 5 videos con visto bueno expreso; no se sube sin él.
 
 ## Miniatura
-Flow, Nano Banana 2.1, 16:9, x2, con Token y la foto de El Jefe como ingredientes. Cifra real gigante (lo que el título no dice), El Jefe serio con los brazos cruzados a la izquierda y Token apenado a la derecha, en un taller oscuro con monitores. Salió bien a la primera, 2/2. Prompt: `videos/robotaller_mes1/prompt_miniatura.md`.
+Flow, Nano Banana 2.1, 16:9, x2, con Token y la foto de El Jefe como ingredientes. Cifra real gigante (lo que el título no dice), **escrita igual que la dice la voz** (el usuario pidió corregir «1,293» a «1,300»), El Jefe serio con los brazos cruzados a la izquierda y Token apenado a la derecha, en un taller oscuro con monitores. Salió bien a la primera, 2/2. Prompt: `videos/robotaller_mes1/prompt_miniatura.md`.
 
 ## Subida
 Canal con narrador IA y voz clonada: `"contenido_sintetico": true` en `youtube.json` y aviso en la descripción (narra una IA, voz clonada con permiso del dueño). `yt subir` lo manda en `status.containsSyntheticMedia`. **El GET de la API no devuelve ese campo: se comprueba en Studio, «Mostrar más» → «Contenido alterado» = Sí.** Primero `descripcion.txt` (la lee el filtro) y de ahí `youtube.json`.

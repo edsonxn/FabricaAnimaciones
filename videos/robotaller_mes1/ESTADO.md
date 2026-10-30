@@ -37,7 +37,7 @@ Propuesta para el usuario al entregar: serie de documentales de su trayectoria. 
 
 ## Aprobado por el usuario (30-oct-2026)
 El usuario vio el MASTER de 4:50 y escribió «Aprobado»: es el visto bueno expreso de este video. El texto gris «clic lo abre en Studio» en la pestaña Canales se queda.
-Cierre hecho el 30-oct: miniatura Flow «1,293 ERRORES» (salida/miniatura.jpg; la otra, miniatura_b.jpg), descripcion.txt + youtube.json con filtro limpio, `TaNvpZ-wpao` en privado y programado (2026-10-31T16:00:00Z: el horario de ese viernes ya había pasado y se usó la alternativa del canal). Contenido sintético: «Contenido alterado» = Sí, visto en Studio.
+Cierre hecho el 30-oct: miniatura Flow «1,300 ERRORES», corregida porque la voz y el rótulo dicen mil trescientas (salida/miniatura.jpg; descartadas: miniatura_b.jpg y miniatura_1293_descartada.jpg), descripcion.txt + youtube.json con filtro limpio, `TaNvpZ-wpao` en privado y programado (2026-10-31T16:00:00Z: el horario de ese viernes ya había pasado y se usó la alternativa del canal). Contenido sintético: «Contenido alterado» = Sí, visto en Studio.
 **Lección:** la animación recreada aburrió y las grabaciones reales con cámara convencieron. En un formato nuevo, enseñar antes unos segundos de la base visual, no el video entero.
 
 ## Hecho

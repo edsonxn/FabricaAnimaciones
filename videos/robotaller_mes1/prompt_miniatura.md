@@ -3,6 +3,7 @@
 Chip: Imagen · 16:9 · Nano Banana 2.1 · x2. Ingredientes pegados en el navegador integrado con `ClipboardEvent('paste')`:
 Token (cuadro de medios/token.mp4) y la foto de El Jefe (propios/jefe_limpio.png; NO va a git).
 Texto: lo que el título no dice (el título ya dice «32 días»): la cifra real de fallos del gancho. Nada de los canales protegidos.
+**Corrección del 30-oct: la miniatura final dice «1,300 ERRORES», como la voz y el rótulo del video; 1,293 era la cifra exacta de los registros.** Se pegó la original como ingrediente, se pidió cambiar solo el número y se injertó solo la zona de los dígitos sobre la original.
 
 ## Prompt A — «1,293 ERRORES»
 

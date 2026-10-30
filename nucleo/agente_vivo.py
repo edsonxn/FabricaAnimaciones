@@ -34,7 +34,9 @@ HORAS = 12                             # sesiones que se listan
 ACTIVA_S = 120                         # sin escribir en este tiempo, la sesión ya no cuenta como «en vivo»
 COLA_BYTES = 40_000_000                # al abrir una sesión se lee solo su final (con imágenes pesan decenas de MB)
 MAX_EVENTOS = 500
-PRIMERA = 160                          # eventos que se mandan al abrir la página (la ventana de la repetición)
+PRIMERA = 160                          # eventos del principal que se mandan al abrir la página (la ventana de la repetición)
+MAX_EV_AYUD = 200                      # cada ayudante guarda los suyos aparte: uno que hace cientos no echa al principal
+PRIMERA_AYUD = 60                      # y de cada uno se mandan estos al abrir
 MAX_IMAGENES = 200                     # imágenes por sesión en la caché (reducidas a ANCHO_IMG, ~50 KB cada una)
 ANCHO_IMG = 960
 MAX_LINEAS = 70                        # código o comando por evento
@@ -91,6 +93,24 @@ def _recortar(texto, lineas=MAX_LINEAS, col=MAX_COL):
     return "\n".join(filas), sobran
 
 
+_MD_VALLA = re.compile(r"(?m)^[ \t]*```[\w-]*[ \t]*$\n?")
+_MD_ENLACE = re.compile(r"!?\[([^\]\n]{0,300})\]\([^)\n]{0,600}\)")
+_MD_NEGRITA = re.compile(r"(?<![\w*])(\*\*|__)(?=\S)([^\n]{1,300}?)(?<=\S)\1(?![\w*])")
+_MD_CURSIVA = re.compile(r"(?<![\w*])\*(?=[^\s*])([^*\n]{1,300}?)(?<=[^\s*])\*(?![\w*])")
+_MD_CODIGO = re.compile(r"`+([^`\n]{0,300})`+")
+_MD_TITULO = re.compile(r"(?m)^[ \t]{0,3}#{1,6}[ \t]+")
+
+
+def sin_markdown(texto):
+    """Lo que dice el agente, sin marcas: enlaces `[texto](#local_…)` → texto; `**`, `*`, backticks, vallas y títulos fuera."""
+    t = _MD_VALLA.sub("", texto or "")
+    t = _MD_ENLACE.sub(r"\1", t)
+    t = _MD_NEGRITA.sub(r"\2", t)
+    t = _MD_CURSIVA.sub(r"\1", t)
+    t = _MD_CODIGO.sub(r"\1", t)
+    return _MD_TITULO.sub("", t)
+
+
 def _corto(texto, n=240):
     t = " ".join((texto or "").split())
     return t[:n] + ("…" if len(t) > n else "")
@@ -98,7 +118,7 @@ def _corto(texto, n=240):
 
 # ---------------------------------------------------------------- de herramienta a evento
 ESTACIONES = ["guion", "voz", "sonido", "imagenes", "clips", "animacion", "render", "revision", "subida"]
-_FAB = re.compile(r"fab\.py\s+([a-z0-9_]+)\s+([a-z_]+)")
+_FAB = re.compile(r"""fab\.py["']?\s+([a-z0-9_]+)\s+([a-z_]+)""")
 _VIDEO = re.compile(r"videos[\\/]+([a-z0-9][a-z0-9_]*)[\\/]+")
 _FAB_ESTACION = {"voz": "voz", "seleccionar": "voz", "tiempo": "voz", "musica": "sonido", "sfx": "sonido", "mezcla": "sonido",
                  "ambiente": "sonido", "reajustar": "sonido", "video": "render", "final": "render", "todo": "render", "verificar": "revision",
@@ -107,15 +127,13 @@ _FAB_ESTACION = {"voz": "voz", "seleccionar": "voz", "tiempo": "voz", "musica": 
                  "busquedas": "imagenes", "fuentes": "imagenes", "bajar": "clips", "miniatura": "imagenes"}
 
 
-def _video_de(*textos):
-    for t in textos:
-        for v in _VIDEO.findall(t or ""):
-            if not v.startswith("_"):
-                return v
-        m = _FAB.search(t or "")
-        if m and os.path.isdir(os.path.join(VIDEOS, m.group(1))):
-            return m.group(1)
-    return None
+# De quién es una sesión: solo cuenta lo que PRODUCE el video. Leer, buscar, mencionarlo o `fab.py <v> estado` no
+_FAB_PRODUCE = set(_FAB_ESTACION) - {"verificar", "comprobar"}
+_FAB_NUEVO = re.compile(r"""fab\.py["']?\s+(?:nuevo|yt\s+subir)\s+([a-z0-9_]+)""")
+
+
+def _es_video(v):
+    return bool(v) and not v.startswith("_") and os.path.isdir(os.path.join(VIDEOS, v))
 
 
 # Solo cuenta lo que el comando EJECUTA: en un `grep`, un commit o un heredoc las palabras «lyria» o «render» no son trabajo en esa estación
@@ -143,6 +161,35 @@ _ANIMACION = re.compile(r"^(efectos|escenas?|esc_\w+|escena_base|mundos?(_\w+)?|
                         r"|dibujos|fondos|plano|secuencia\w*)\.py$")
 
 
+def _lo_que_corre(cmd):
+    """Los `python …` que el comando ejecuta de verdad, sin heredocs ni `python -c`."""
+    return " ".join(_CORRE.findall(_PY_C.sub(" ", _HEREDOC.sub(" ", (cmd or "").lower()))))
+
+
+def _videos_producidos(nombre, ent):
+    """Los videos que esta herramienta produce: Write/Edit dentro de videos/<v>/, o `fab.py <v> <etapa>` de producción."""
+    ent = ent if isinstance(ent, dict) else {}
+    if nombre in ("Write", "Edit"):
+        return [v for v in _VIDEO.findall(ent.get("file_path") or "")[:1] if _es_video(v)]
+    if nombre in ("Bash", "PowerShell"):
+        corre = _lo_que_corre(ent.get("command"))
+        return [v for v in [m.group(1) for m in _FAB.finditer(corre) if m.group(2) in _FAB_PRODUCE] + _FAB_NUEVO.findall(corre) if _es_video(v)]
+    return []
+
+
+def _video_del_titulo(titulo):
+    """El video que nombra el título de la sesión («Continúa bt_mundos_ranking — verificar y voz»), si nombra alguno."""
+    t = (titulo or "").lower()
+    try:
+        nombres = os.listdir(VIDEOS)
+    except OSError:
+        return None
+    for v in sorted(nombres, key=len, reverse=True):
+        if len(v) >= 4 and not v.startswith("_") and v in t and re.search(rf"(?<![a-z0-9_]){re.escape(v)}(?![a-z0-9_])", t):
+            return v
+    return None
+
+
 def _estacion_ffmpeg(limpio):
     tramo = next(s for s in _TRAMOS.split(limpio) if _FFMPEG.search(s))
     ext = (re.findall(r"\.([a-z0-9]{2,4})\b", tramo) or [""])[-1]    # la salida va al final
@@ -151,7 +198,7 @@ def _estacion_ffmpeg(limpio):
 
 def _estacion_cmd(cmd, desc=""):
     limpio = _PY_C.sub(" ", _HEREDOC.sub(" ", cmd.lower()))
-    corre = " ".join(_CORRE.findall(limpio))
+    corre = _lo_que_corre(cmd)
     m = _FAB.search(corre)
     if m and m.group(2) in _FAB_ESTACION:
         return _FAB_ESTACION[m.group(2)]
@@ -214,14 +261,14 @@ def _evento_herramienta(nombre, ent):
         if sensible(ruta):
             return dict(tipo="privado", titulo="Archivo privado", detalle="contenido oculto")
         if base.lower().endswith(EXT_IMG):
-            return dict(tipo="imagen", titulo=f"Mira {base}", ruta=_ruta_corta(ruta), video=_video_de(ruta), estacion="revision")
-        return dict(tipo="leer", titulo=f"Lee {base}", ruta=_ruta_corta(ruta), video=_video_de(ruta))
+            return dict(tipo="imagen", titulo=f"Mira {base}", ruta=_ruta_corta(ruta), estacion="revision")
+        return dict(tipo="leer", titulo=f"Lee {base}", ruta=_ruta_corta(ruta))
     if nombre == "Write":
         ruta = ent.get("file_path") or ""
         if sensible(ruta):
             return dict(tipo="privado", titulo="Archivo privado", detalle="contenido oculto")
         codigo, sobran = _recortar(tapar(ent.get("content") or ""))
-        return dict(tipo="codigo", titulo=f"Escribe {os.path.basename(ruta)}", ruta=_ruta_corta(ruta), video=_video_de(ruta),
+        return dict(tipo="codigo", titulo=f"Escribe {os.path.basename(ruta)}", ruta=_ruta_corta(ruta),
                     estacion=_estacion_archivo(ruta), lineas=[["+", x] for x in codigo.split("\n")], sobran=sobran,
                     nuevas=(ent.get("content") or "").count("\n") + 1, quitadas=0)
     if nombre == "Edit":
@@ -229,7 +276,7 @@ def _evento_herramienta(nombre, ent):
         if sensible(ruta):
             return dict(tipo="privado", titulo="Archivo privado", detalle="contenido oculto")
         filas, sobran = _diff(ent.get("old_string"), ent.get("new_string"))
-        return dict(tipo="codigo", titulo=f"Edita {os.path.basename(ruta)}", ruta=_ruta_corta(ruta), video=_video_de(ruta),
+        return dict(tipo="codigo", titulo=f"Edita {os.path.basename(ruta)}", ruta=_ruta_corta(ruta),
                     estacion=_estacion_archivo(ruta), lineas=filas, sobran=sobran,
                     nuevas=sum(1 for s, _ in filas if s == "+"), quitadas=sum(1 for s, _ in filas if s == "-"))
     if nombre in ("Bash", "PowerShell"):
@@ -238,10 +285,10 @@ def _evento_herramienta(nombre, ent):
             return dict(tipo="privado", titulo="Comando con datos privados", detalle=_corto(tapar(ent.get("description") or ""), 120))
         texto, sobran = _recortar(tapar(cmd), 24)
         return dict(tipo="comando", titulo=_corto(tapar(ent.get("description") or "") or tapar(cmd), 110), comando=texto,
-                    sobran=sobran, video=_video_de(cmd), estacion=_estacion_cmd(cmd, ent.get("description")))
+                    sobran=sobran, estacion=_estacion_cmd(cmd, ent.get("description")))
     if nombre in ("Grep", "Glob"):
         return dict(tipo="buscar", titulo=f"Busca «{_corto(tapar(ent.get('pattern') or ''), 70)}»",
-                    ruta=_ruta_corta(ent.get("path") or ""), video=_video_de(ent.get("path")))
+                    ruta=_ruta_corta(ent.get("path") or ""))
     if nombre == "Agent":
         return dict(tipo="ayudante", titulo=_corto(tapar(ent.get("description") or "Ayudante"), 90))
     if nombre == "Artifact":
@@ -329,6 +376,12 @@ def _usuario_limpio(texto):
     return t.strip()
 
 
+# Entran como mensaje de usuario, pero no los escribió él
+_AJENOS = (("Background (from the session that started this one)", "Encargo de la sesión que la lanzó"),
+           ("Another Claude session sent a message", "Mensaje de otra sesión"),
+           ("This session is being continued from a previous conversation", "Resumen de la sesión anterior"))
+
+
 def _epoch(iso):
     try:
         return datetime.fromisoformat((iso or "").replace("Z", "+00:00")).timestamp()
@@ -379,7 +432,10 @@ class _Ayudante:
         self.arch = _Archivo(ruta, COLA_AYUD)
         self.abiertos = {}
         self.cuenta = collections.Counter()
+        self.eventos = collections.deque(maxlen=MAX_EV_AYUD)
         self.ultima = ""
+        self.accion = ""                   # tipo del último evento: lo que su mini está haciendo de verdad
+        self.host = ""
         self.t = 0.0
         self.desc = ""
         try:
@@ -417,7 +473,8 @@ class Sesion:
         self.plan = []
         self.titulo = ""
         self.estacion = None
-        self.conteo = collections.Counter()
+        self.produce = collections.Counter()    # video -> herramientas que lo produjeron (ver `_videos_producidos`)
+        self.produce_t = {}                # video -> última vez que se produjo
         self.ultimo_t = 0.0
         self.pensando = False
         self.host = ""
@@ -488,25 +545,37 @@ class Sesion:
             return None
         return d if d.get("type") in ("assistant", "user") else None   # hay líneas `api-request-blob`, sin hora
 
+    def _evidencia(self, nombre, ent, t):
+        for v in _videos_producidos(nombre, ent):
+            self.produce[v] += 1
+            self.produce_t[v] = t
+
     def _linea_ayudante(self, a, t, d):
-        """Todo cuenta para el mini robot; a la línea de tiempo solo entra la investigación (un ayudante hace cientos de acciones)."""
+        """Cada acción va a la línea del ayudante, aparte de la del principal (`a.eventos`): la página las intercala por `seq`."""
         a.t = max(a.t, t)
         cont = (d.get("message") or {}).get("content")
         for b in cont if isinstance(cont, list) else []:
             if not isinstance(b, dict):
                 continue
             if b.get("type") == "tool_use":
-                nombre = b.get("name") or ""
+                nombre, ent = b.get("name") or "", b.get("input")
                 if nombre in _CUENTA:
                     a.cuenta[_CUENTA[nombre]] += 1
-                ev = _evento_herramienta(nombre, b.get("input"))
-                if not ev:
+                self._evidencia(nombre, ent, t)
+                ev = _evento_herramienta(nombre, ent)
+                if not ev or ev["tipo"] == "ayudante":
                     continue
+                if ev["tipo"] == "navegador":
+                    a.host = ev.pop("host") or a.host
+                    ev["titulo"] = f"{ev.pop('verbo')} {a.host or 'el navegador'}"
+                    ev.pop("url")
                 a.ultima = ev.get("titulo") or a.ultima
-                if ev["tipo"] in ("busqueda", "pagina"):
-                    ev.update(de=a.id, quien=a.desc)
-                    self._poner(ev, t)
-                    a.abiertos[b.get("id")] = ev
+                a.accion = ev["tipo"]
+                ev.update(de=a.id, quien=a.desc)
+                self._poner(ev, t, a)
+                a.abiertos[b.get("id")] = ev
+                if len(a.abiertos) > 200:
+                    a.abiertos.pop(next(iter(a.abiertos)))
             elif b.get("type") == "tool_result":
                 ev = a.abiertos.pop(b.get("tool_use_id"), None)
                 if ev is not None:
@@ -522,7 +591,7 @@ class Sesion:
             except OSError:
                 continue
             if ahora - mt < MAX_ULTIMOS_S:
-                filas.append(dict(id=a.id, tipo=a.tipo, desc=a.desc, activo=ahora - mt < ACTIVA_S, ultima=a.ultima, t=a.t, **a.cuenta))
+                filas.append(dict(id=a.id, tipo=a.tipo, desc=a.desc, activo=ahora - mt < ACTIVA_S, ultima=a.ultima, accion=a.accion, t=a.t, **a.cuenta))
         try:
             reciente = ahora - os.path.getmtime(self.ruta) < 1800  # sin la sesión viva nadie avisaría de su fin
         except OSError:
@@ -533,6 +602,19 @@ class Sesion:
             elif reciente:
                 filas.append(dict(id=k[-12:], tipo=f["tipo"], desc=f["desc"], activo=True, ultima=f["desc"], t=f["t"], fondo=True))
         return filas
+
+    def equipo(self):
+        """Todos los ayudantes con acciones en la línea, aunque ya hayan terminado: el selector del historial los necesita."""
+        ahora = time.time()
+        filas = []
+        for a in list(self.ayud.values()):
+            if a.eventos:
+                try:
+                    activo = ahora - os.path.getmtime(a.arch.ruta) < ACTIVA_S
+                except OSError:
+                    activo = False
+                filas.append(dict(id=a.id, tipo=a.tipo, desc=a.desc, activo=activo, n=len(a.eventos), t=a.t))
+        return sorted(filas, key=lambda x: -x["t"])
 
     def _fin_fondo(self, texto):
         for k in re.findall(r"<tool-use-id>([\w-]+)</tool-use-id>", texto or ""):
@@ -554,7 +636,7 @@ class Sesion:
             self._fin_fondo(cont)
             texto = _usuario_limpio(cont)
             if texto and not d.get("isMeta"):
-                self._poner(dict(tipo="usuario", titulo="El usuario", detalle=_corto(tapar(texto), 400)), t)
+                self._mensaje(texto, t)
             return
         if not isinstance(cont, list):
             return
@@ -569,14 +651,21 @@ class Sesion:
                 self._fin_fondo(b.get("text"))
                 texto = "" if d.get("isMeta") else _usuario_limpio(b.get("text"))
                 if texto:
-                    self._poner(dict(tipo="usuario", titulo="El usuario", detalle=_corto(tapar(texto), 400)), t)
+                    self._mensaje(texto, t)
+
+    def _mensaje(self, texto, t):
+        for marca, titulo in _AJENOS:
+            if texto.startswith(marca):
+                resto = texto[len(marca):].lstrip(":. \n")
+                return self._poner(dict(tipo="encargo", titulo=titulo, detalle=_corto(tapar(sin_markdown(resto)), 400)), t)
+        self._poner(dict(tipo="usuario", titulo="El usuario", detalle=_corto(tapar(sin_markdown(texto)), 400)), t)
 
     def _asistente(self, b, t):
         tipo = b.get("type")
         if tipo == "text":
             texto = (b.get("text") or "").strip()
             if texto:
-                self._poner(dict(tipo="habla", titulo="Explica", detalle=_corto(tapar(texto), 420)), t)
+                self._poner(dict(tipo="habla", titulo="Explica", detalle=_corto(tapar(sin_markdown(texto)), 420)), t)
         elif tipo == "thinking":
             self.pensando = True
         elif tipo == "tool_use":
@@ -584,7 +673,8 @@ class Sesion:
             if nombre == "mcp__ccd_turn__update_plan":
                 return self._plan(ent or {}, t)
             if nombre == "mcp__ccd_turn__wrap_up":
-                return self._poner(dict(tipo="cierre", titulo="Cierra el tramo", detalle=_corto(tapar((ent or {}).get("recap") or ""), 320)), t)
+                return self._poner(dict(tipo="cierre", titulo="Cierra el tramo", detalle=_corto(tapar(sin_markdown((ent or {}).get("recap"))), 320)), t)
+            self._evidencia(nombre, ent, t)
             ev = _evento_herramienta(nombre, ent)
             if ev and ev["tipo"] == "navegador":      # los clics no traen dirección: siguen en el último sitio abierto
                 self.host = ev.pop("host") or self.host
@@ -656,7 +746,7 @@ class Sesion:
             if texto.startswith(("The server returned HTTP", "Error")):
                 ev["fallo"] = True
             ev["pag_titulo"] = self.titulos.get(ev["url"]) or _titulo_url(ev["url"])
-            ev["extracto"] = _corto(texto.replace("**", ""), 420)
+            ev["extracto"] = _corto(sin_markdown(texto), 420)
             ev["detalle"] = ev["pag_titulo"]
 
     def _guardar(self, datos, seq):
@@ -685,22 +775,32 @@ class Sesion:
                 except OSError:
                     pass
 
-    def _poner(self, ev, t):
+    def _poner(self, ev, t, ayudante=None):
         self.seq += 1
         self.rev += 1
         ev.update(seq=self.seq, rev=self.rev, t=t)
-        if ev.get("video"):
-            self.conteo[ev["video"]] += 1
-        if not ev.get("de"):                               # el principal: sin estación no se arrastra la anterior
+        if not ayudante:                                   # el principal: sin estación no se arrastra la anterior
             self.estacion = ev.get("estacion")
         ev["en"] = self.estacion
         if ev["tipo"] in ("busqueda", "pagina"):
             self.cuenta[ev["tipo"]] += 1
-        self.eventos.append(ev)
+        (ayudante.eventos if ayudante else self.eventos).append(ev)
+
+    def lista(self, desde=0):
+        """Lo que hay que mandar, por orden: lo nuevo desde la revisión `desde`, o al abrir el final de cada línea por separado.
+        desde > rev: el panel se reinició y volvió a leer la sesión; se manda todo otra vez."""
+        with self.lock:
+            lineas = [self.eventos] + [a.eventos for a in self.ayud.values()]
+            if 0 < desde <= self.rev:
+                filas = [e for ln in lineas for e in ln if e["rev"] > desde]
+            else:
+                filas = list(self.eventos)[-PRIMERA:] + [e for a in self.ayud.values() for e in list(a.eventos)[-PRIMERA_AYUD:]]
+        return sorted(filas, key=lambda e: e["seq"])
 
     @property
     def video(self):
-        return self.conteo.most_common(1)[0][0] if self.conteo else None
+        """El video de esta sesión: el que más produjo o, si aún no produjo nada, el que nombra su título. Si no, ninguno."""
+        return self.produce.most_common(1)[0][0] if self.produce else _video_del_titulo(self.titulo)
 
 
 _SES = {}
@@ -749,7 +849,8 @@ def sesiones():
             continue
         s = _sesion(os.path.basename(ruta)[:-6])
         if s and s.seq:
-            filas.append(dict(id=s.id, titulo=tapar(s.titulo)[:70], video=s.video, t=mt, activa=ahora - mt < ACTIVA_S, eventos=s.seq))
+            v = s.video
+            filas.append(dict(id=s.id, titulo=tapar(s.titulo)[:70], video=v, t=mt, prod=s.produce_t.get(v) or mt, activa=ahora - mt < ACTIVA_S, eventos=s.seq))
     filas.sort(key=lambda x: -x["t"])
     _LISTA.update(t=ahora, v=filas)
     _limpiar_cache()
@@ -758,11 +859,14 @@ def sesiones():
 
 def eventos(sesion="", video="", desde=0):
     """{sesion, video, titulo, activa, pensando, plan, estacion, rev, eventos} con lo nuevo o cambiado desde la revisión `desde`.
-    Sin sesión sigue la más reciente del video (o la más reciente con video): el corte a 180 mil abre otra y hay que pasar a ella."""
+    Sin sesión sigue a la que produjo ese video más recientemente (o a la más reciente con video): el corte a 180 mil abre otra
+    y hay que pasar a ella. Una sesión que solo lo leyó o lo mencionó no es de ese video."""
     if not sesion:
         lista = sesiones()
-        elegida = next((x for x in lista if x["video"] == video), None) if video else None
-        elegida = elegida or next((x for x in lista if x["video"] and not video), None) or (lista[0] if lista and not video else None)
+        if video:
+            elegida = max((x for x in lista if x["video"] == video), key=lambda x: x["prod"], default=None)
+        else:
+            elegida = next((x for x in lista if x["video"]), None) or (lista[0] if lista else None)
         sesion = elegida["id"] if elegida else ""
     s = _sesion(sesion)
     if not s:
@@ -771,11 +875,10 @@ def eventos(sesion="", video="", desde=0):
         mt = os.path.getmtime(s.ruta)
     except OSError:
         mt = 0
-    # desde > rev: el panel se reinició y volvió a leer la sesión; se manda todo otra vez
-    nuevos = [e for e in s.eventos if e["rev"] > desde] if 0 < desde <= s.rev else list(s.eventos)[-PRIMERA:]
-    return dict(sesion=s.id, video=video or s.video, titulo=tapar(s.titulo)[:70], activa=time.time() - mt < ACTIVA_S,
+    nuevos = s.lista(desde)
+    return dict(sesion=s.id, video=s.video, titulo=tapar(s.titulo)[:70], activa=time.time() - mt < ACTIVA_S,
                 pensando=s.pensando, plan=s.plan, estacion=s.estacion, rev=s.rev, ultimo=s.ultimo_t, eventos=nuevos,
-                ayudantes=s.ayudantes(), web=dict(busquedas=s.cuenta["busqueda"], paginas=s.cuenta["pagina"]))
+                ayudantes=s.ayudantes(), equipo=s.equipo(), web=dict(busquedas=s.cuenta["busqueda"], paginas=s.cuenta["pagina"]))
 
 
 def imagen(sesion, nombre):
@@ -797,3 +900,4 @@ if __name__ == "__main__":
     for e in r["eventos"][-14:]:
         print(e["seq"], e["tipo"], e.get("en"), "|", e["titulo"][:80], "| img" if e.get("img") else "")
     assert tapar("key=sk-abcdefghijklmnop1234 AIzaSyA1234567890123456789012345678901234 pepe@gmail.com") .count("••••") >= 3
+    assert sin_markdown("[La sesión](#local_05cc) deja **listo** `fab.py` y 2*3*4") == "La sesión deja listo fab.py y 2*3*4"

@@ -892,6 +892,72 @@ def ficha_jugador(foto, nombre, logo, numero, stats, color="oro", sub=None, W_=1
     return fn
 
 
+def boleta(foto, nombre, logo, color, sub, filas, W_=1400, H_=600):
+    """Boleta de un jugador (29-oct-2026, cfo_kc_jugadas): panel de vidrio con la FOTO a la izquierda, nombre, escudo + `sub`
+    y filas (ok, texto): ok=True → sello verde ✓ (acierto), False → sello rojo ✗ (error), None → punto dorado (dato). La fila i
+    entra en la marca i con el sello que cae y rebota. Respira en 3D como la ficha."""
+    k = ("boleta", foto, nombre, tuple(filas), color)
+    n = len(filas)
+    pw, ph = 1010, 160 + 82 * n
+    px, py = W_ - pw - 30, max(20, (H_ - ph) // 2)
+    filas_y = [py + 200 + i * 82 for i in range(n)]
+    x0 = px + 300
+    if k not in _cache:
+        panel, P = _panel(pw, ph + 30, color, sesgo=14)
+        base = Image.new("RGBA", (W_, H_), (0, 0, 0, 0))
+        base.alpha_composite(panel, (px - P, py - P))
+        d = ImageDraw.Draw(base)
+        _texto(d, (x0, py + 62), nombre.upper(), fuente("Bold Condensed", 92), (255, 255, 255), "lm", track=2)
+        if logo:
+            lg = _img(logo, alto=44, ancho=44)
+            base.alpha_composite(lg, (x0, py + 112))
+        if sub:
+            _texto(d, (x0 + 58, py + 134), sub.upper(), fuente("SemiBold Condensed", 30), ORO_C, "lm", track=2)
+        ft = fuente("SemiBold Condensed", 36)
+        renglones = []
+        for ok, txt in filas:
+            r = Image.new("RGBA", (pw - 330, 70), (0, 0, 0, 0))
+            dr = ImageDraw.Draw(r)
+            col = (64, 214, 120) if ok else (236, 72, 72) if ok is False else ORO
+            dr.ellipse((4, 7, 60, 63), fill=col + (255,))
+            if ok:                                                    # la fuente no trae ✓ ni ✗: se dibujan
+                dr.line([(18, 36), (29, 48), (47, 22)], fill=NOCHE + (255,), width=7)
+            elif ok is False:
+                dr.line([(20, 21), (44, 49)], fill=NOCHE + (255,), width=7)
+                dr.line([(44, 21), (20, 49)], fill=NOCHE + (255,), width=7)
+            else:
+                dr.ellipse((25, 28, 39, 42), fill=NOCHE + (255,))
+            _texto(dr, (80, 36), txt, ft, (236, 240, 248), "lm")
+            renglones.append(_np(r))
+        foto_i = _base_pegatina(foto, 440, borde=8)
+        _cache[k] = (_np(base), renglones, _np(foto_i))
+    base, renglones, foto_i = _cache[k]
+
+    def fn(dt, dur, marcas):
+        out = _vacio(W_, H_)
+        if dt <= 0:
+            return out
+        u = _eo(dt / .45)
+        cw = int(px - 30 + (W_ - px + 30) * u)
+        out[:, :cw] = base[:, :cw]
+        for i, y in enumerate(filas_y):
+            tk = _mk(marcas, i, .7 + .6 * i)
+            ur = _eo((dt - tk) / .4)
+            if ur <= 0:
+                continue
+            _sobre(out, renglones[i], int(x0 - 10 + 40 * (1 - ur)), y - 35, clamp((dt - tk) / .25))
+        s = _pop(dt - .1, .5)
+        if s > .02:
+            fl = 5 * math.sin(dt * 1.6)
+            _centro(out, foto_i, 30 + foto_i.shape[1] * .42, H_ - foto_i.shape[0] / 2 - 10 + fl + 60 * (1 - min(1, s)),
+                    min(1.0, s) * (1 + .015 * math.sin(dt * 2.4)))
+        out = _brillo_barrido(out, (dt - .5) / .7)
+        ang = 6 * (1 - _eo(dt / .6)) * 3 + 2.2 * math.sin(dt * 1.2)
+        return _perspectiva(out, ang)
+
+    return fn
+
+
 def ranking(titulo, filas, ancho=1180, fila=104):
     """Ranking de equipos: filas = [(logo, nombre, dato, sub, color), ...]; la fila k entra en la marca k con su número de
     puesto en un rombo dorado que rebota; `dato` (récord) a la derecha; la última encendida late."""

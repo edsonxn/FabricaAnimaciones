@@ -25,6 +25,7 @@ import tempfile
 import threading
 import time
 from datetime import datetime
+from urllib.parse import unquote
 
 CARPETA = os.path.join(os.path.expanduser("~"), ".claude", "projects", "C--FabricaAnimaciones")
 VIDEOS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "videos")
@@ -38,6 +39,13 @@ MAX_IMAGENES = 200                     # imágenes por sesión en la caché (red
 ANCHO_IMG = 960
 MAX_LINEAS = 70                        # código o comando por evento
 MAX_COL = 170
+HORAS_AYUD = 6                         # ayudantes que se leen: su archivo se escribió en estas horas
+MAX_AYUD = 12                          # y como mucho estos (los más recientes): hay transcritos de 300 MB
+COLA_AYUD = 8_000_000                  # de cada ayudante se lee solo su final
+LINEA_AYUD = 2_000_000                 # sus líneas más largas son imágenes: no se usan
+AYUD_CADA = 2                          # segundos entre revisiones de la carpeta de ayudantes
+FONDO_MAX_S = 3 * 3600                 # un comando en segundo plano sin aviso de fin se da por muerto
+MAX_ULTIMOS_S = 600                    # ayudantes ya terminados que aún se mandan a la página
 
 EXT_IMG = (".jpg", ".jpeg", ".png", ".webp", ".gif")
 
@@ -93,7 +101,7 @@ ESTACIONES = ["guion", "voz", "sonido", "imagenes", "clips", "animacion", "rende
 _FAB = re.compile(r"fab\.py\s+([a-z0-9_]+)\s+([a-z_]+)")
 _VIDEO = re.compile(r"videos[\\/]+([a-z0-9][a-z0-9_]*)[\\/]+")
 _FAB_ESTACION = {"voz": "voz", "seleccionar": "voz", "tiempo": "voz", "musica": "sonido", "sfx": "sonido", "mezcla": "sonido",
-                 "ambiente": "sonido", "video": "render", "final": "render", "todo": "render", "verificar": "revision",
+                 "ambiente": "sonido", "reajustar": "sonido", "video": "render", "final": "render", "todo": "render", "verificar": "revision",
                  "escena": "animacion", "comprobar": "animacion", "fx": "animacion", "montaje": "animacion", "prueba": "animacion",
                  "beats": "guion", "prompts": "imagenes", "servir": "imagenes", "ingesta": "imagenes", "medios": "imagenes",
                  "busquedas": "imagenes", "fuentes": "imagenes", "bajar": "clips", "miniatura": "imagenes"}
@@ -110,20 +118,63 @@ def _video_de(*textos):
     return None
 
 
-def _estacion_cmd(cmd):
-    m = _FAB.search(cmd)
+# Solo cuenta lo que el comando EJECUTA: en un `grep`, un commit o un heredoc las palabras «lyria» o «render» no son trabajo en esa estación
+_CORRE = re.compile(r"(?:^|[\s;&|(])(?:python3?|py)(?:\.exe)?\s+([^\n;|&]+)")
+_HEREDOC = re.compile(r"<<-?\s*['\"]?(\w+)['\"]?.*?^\s*\1\s*$", re.S | re.M)
+_PY_C = re.compile(r"""-c\s+(?:"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*')""", re.S)
+_TRAMOS = re.compile(r"[;|\n]|&&")
+_SONIDO = re.compile(r"(?<![a-z])(ost|sfx|lyria|demucs|musica|mezcla|sonidos?)(?![a-z])")
+_CLIPS = re.compile(r"(?<![a-z])clips?(?![a-z])")
+_RENDER = re.compile(r"""(^|[\s"'\\/])render\w*\.py\b|-m\s+secuencia\s+video\b""")
+_YTDLP = re.compile(r"""(^|[\s;&|("'\\/])yt[-_]dlp(\.exe)?["']?\s""")
+_YTDLP_MIRA = re.compile(r"--print\b|--flat-playlist|--dump-json|\s-j\b|--simulate")
+_YTDLP_AUDIO = re.compile(r"\s-x\b|--extract-audio|--audio-format|(?<!\+)bestaudio")
+_FFMPEG = re.compile(r"""(^|[\s"'\\/])ffmpeg(\.exe)?["']?\s""")
+_DEMUCS = re.compile(r"(^|\s)demucs\s")
+_BAJA = re.compile(r"\s*(baj|descarg|busc|download)")      # la `description`: «Baja la banda sonora…» (el comando no siempre lo dice)
+_BAJA_CLIPS = re.compile(r"\b(clips?|gameplay)\b")
+_BAJA_SONIDO = re.compile(r"\b(ost|banda sonora|sfx|efectos? de sonido|m[úu]sica|audio|pistas?|tracks?)\b")
+_STUDIO_EDITA = re.compile(r"\bsub[ei]|upload|public|programa|guard|save|miniatura|thumbnail|visibilidad|monetiz|relacionado|pantalla final|tarjeta", re.I)
+_EXT_AUDIO = ("wav", "mp3", "m4a", "ogg", "flac", "opus")
+_EXT_IMG = ("jpg", "jpeg", "png", "webp", "gif")
+# Código de animación real; el resto (descargas, pruebas, parches) es auxiliar y no tiene estación
+_ANIMACION = re.compile(r"^(efectos|escenas?|esc_\w+|escena_base|mundos?(_\w+)?|t\d+\w*|coreo\w*|props?\d*|obj_\w+|trans|look|mapa|sellos|\w+_3d"
+                        r"|mg(_\w+)?|kz_\w+|noir\w*|toon\w*|terror_\w+|grabado\w*|sh_\w+|crono_\w+|docu\w*|motor|pegaflow|boceto|guache"
+                        r"|dibujos|fondos|plano|secuencia\w*)\.py$")
+
+
+def _estacion_ffmpeg(limpio):
+    tramo = next(s for s in _TRAMOS.split(limpio) if _FFMPEG.search(s))
+    ext = (re.findall(r"\.([a-z0-9]{2,4})\b", tramo) or [""])[-1]    # la salida va al final
+    return "sonido" if ext in _EXT_AUDIO else None if ext in _EXT_IMG else "render"
+
+
+def _estacion_cmd(cmd, desc=""):
+    limpio = _PY_C.sub(" ", _HEREDOC.sub(" ", cmd.lower()))
+    corre = " ".join(_CORRE.findall(limpio))
+    m = _FAB.search(corre)
     if m and m.group(2) in _FAB_ESTACION:
         return _FAB_ESTACION[m.group(2)]
-    c = cmd.lower()
-    if "yt subir" in c or "fab.py yt " in c or "pagina.py" in c:
+    if "fab.py" in corre:                                  # avisar, estado, yt comentarios…: no son ninguna estación
+        return "subida" if re.search(r"fab\.py\s+yt\s+(subir|aplicar|publicar)", corre) else "sonido" if "fab.py biblioteca" in corre else None
+    if re.search(r"pagina\.py\b.*\bprogramar\b", corre):   # el resto de pagina.py (calendario, aprobar…) no publica nada
         return "subida"
-    if "yt-dlp" in c or "yt_dlp" in c:
+    if "pagina.py" in corre:
+        return None
+    d = (desc or "").lower()
+    if _BAJA.match(d) and _BAJA_CLIPS.search(d):
         return "clips"
-    if "lyria" in c or "demucs" in c or "armar_musica" in c:
+    if _BAJA.match(d) and _BAJA_SONIDO.search(d):
         return "sonido"
-    if "ffmpeg" in c or "render" in c:
-        return "render"
-    return None
+    if _YTDLP.search(limpio):
+        return None if _YTDLP_MIRA.search(limpio) else "sonido" if _YTDLP_AUDIO.search(limpio) else "clips"
+    if _FFMPEG.search(limpio):
+        return _estacion_ffmpeg(limpio)
+    if _SONIDO.search(corre) or _DEMUCS.search(limpio):
+        return "sonido"
+    if _CLIPS.search(corre):
+        return "clips"
+    return "render" if _RENDER.search(corre) else None
 
 
 def _estacion_archivo(ruta):
@@ -135,7 +186,7 @@ def _estacion_archivo(ruta):
         return "sonido"
     if "/flow/" in r or "/piezas/" in r or "prompts" in base:
         return "imagenes"
-    if base.endswith(".py") and ("/videos/" in r or "/nucleo/" in r):
+    if _ANIMACION.match(base) and ("/videos/" in r or "/nucleo/" in r):
         return "animacion"
     return None
 
@@ -187,7 +238,7 @@ def _evento_herramienta(nombre, ent):
             return dict(tipo="privado", titulo="Comando con datos privados", detalle=_corto(tapar(ent.get("description") or ""), 120))
         texto, sobran = _recortar(tapar(cmd), 24)
         return dict(tipo="comando", titulo=_corto(tapar(ent.get("description") or "") or tapar(cmd), 110), comando=texto,
-                    sobran=sobran, video=_video_de(cmd), estacion=_estacion_cmd(cmd))
+                    sobran=sobran, video=_video_de(cmd), estacion=_estacion_cmd(cmd, ent.get("description")))
     if nombre in ("Grep", "Glob"):
         return dict(tipo="buscar", titulo=f"Busca «{_corto(tapar(ent.get('pattern') or ''), 70)}»",
                     ruta=_ruta_corta(ent.get("path") or ""), video=_video_de(ent.get("path")))
@@ -195,6 +246,12 @@ def _evento_herramienta(nombre, ent):
         return dict(tipo="ayudante", titulo=_corto(tapar(ent.get("description") or "Ayudante"), 90))
     if nombre == "Artifact":
         return dict(tipo="leer", titulo="Publica una página")
+    if nombre == "WebSearch":
+        q = tapar(ent.get("query") or "")
+        return dict(tipo="busqueda", titulo=f"Busca en la web «{_corto(q, 80)}»", query=_corto(q, 160))
+    if nombre == "WebFetch":
+        url = tapar(ent.get("url") or "")
+        return dict(tipo="pagina", titulo=f"Lee {_sitio(url)}", sitio=_sitio(url), url=url[:200])
     if "__Claude_Browser__" in nombre or "__claude-in-chrome__" in nombre:
         corto = nombre.rsplit("__", 1)[-1]
         if corto in ("tabs_context", "tabs_context_mcp", "read_console_messages", "read_network_requests", "resize_window")                 or ent.get("action") == "wait":
@@ -207,8 +264,37 @@ def _evento_herramienta(nombre, ent):
         else:
             detalle = _corto(tapar(ent.get("action_summary") or ent.get("text") or ent.get("query") or ""), 200)
         host = re.sub(r"^https?://", "", url).split("/")[0][:60]
-        return dict(tipo="navegador", verbo=_NAV.get(corto, "Usa"), host=host, detalle=detalle)
+        return dict(tipo="navegador", verbo=_NAV.get(corto, "Usa"), host=host, detalle=detalle, url=url)
     return None
+
+
+def _estacion_navegador(host, ev):
+    if "labs.google" in host:
+        return "imagenes"
+    if "studio.youtube" in host and ("/videos/upload" in ev["url"] or (ev["verbo"] != "Lee" and _STUDIO_EDITA.search(ev["detalle"]))):
+        return "subida"                                    # mirar Studio no es subir
+    return None
+
+
+def _sitio(url):
+    return re.sub(r"^https?://(www\.)?", "", url or "").split("/")[0][:60]
+
+
+def _titulo_url(url):
+    cola = unquote(re.sub(r"[?#].*$", "", url or "").rstrip("/").rsplit("/", 1)[-1])
+    return re.sub(r"[-_]+", " ", cola)[:110]
+
+
+def _enlaces(texto):
+    """[(título, url)] de lo que devuelve WebSearch: «Links: [{title, url}…]», a veces en varios bloques."""
+    filas = {}
+    for m in re.finditer(r"Links: (\[.*?\])\s*(?:\n|$)", texto or ""):
+        try:
+            for x in json.loads(m.group(1)):
+                filas.setdefault(x.get("url"), x.get("title") or "")
+        except (ValueError, AttributeError):
+            pass
+    return [(t, u) for u, t in filas.items() if u]
 
 
 def _ruta_corta(ruta):
@@ -237,7 +323,7 @@ def _imagen_de(cont):
 
 def _usuario_limpio(texto):
     """El mensaje del usuario, sin los bloques que añade la app."""
-    t = re.sub(r"<(system-reminder|local-command[\w-]*|command-[\w-]+|ide_[\w-]+|side-sessions-event|ci-monitor-event)\b.*?</\1>", "",
+    t = re.sub(r"<(system-reminder|local-command[\w-]*|command-[\w-]+|ide_[\w-]+|side-sessions-event|ci-monitor-event|task-notification)\b.*?</\1>", "",
                texto or "", flags=re.S)
     t = re.sub(r"<pasted_content.*?</pasted_content>", "[texto pegado]", t, flags=re.S)
     return t.strip()
@@ -251,10 +337,79 @@ def _epoch(iso):
 
 
 # ---------------------------------------------------------------- lectura incremental de una sesión
+class _Archivo:
+    """Un .jsonl que crece: da solo las líneas completas nuevas (la última puede estar a medio escribir)."""
+
+    def __init__(self, ruta, cola):
+        self.ruta, self.cola = ruta, cola
+        self.pos = 0
+        self.resto = b""
+
+    def nuevas(self):
+        try:
+            tam = os.path.getsize(self.ruta)
+        except OSError:
+            return []
+        if tam == self.pos:
+            return []
+        with open(self.ruta, "rb") as f:
+            if self.pos == 0 and tam > self.cola:
+                f.seek(tam - self.cola)
+                f.readline()               # la primera línea queda partida
+            else:
+                f.seek(self.pos)
+            datos = f.read()
+            self.pos = f.tell()
+        lineas = (self.resto + datos).split(b"\n")
+        self.resto = lineas.pop()
+        return lineas
+
+
+_CUENTA = {"WebSearch": "busquedas", "WebFetch": "paginas", "Read": "lecturas", "Grep": "lecturas", "Glob": "lecturas",
+           "Write": "escrituras", "Edit": "escrituras", "Bash": "comandos", "PowerShell": "comandos"}
+_REVISA = re.compile(r"verific|revis|comprob|audit|review|check", re.I)
+_FONDO_ESTACION = {"render": "rodador", "voz": "cantor", "imagenes": "pintor", "clips": "cargador"}
+
+
+class _Ayudante:
+    """Un subagente: su propio archivo en <sesion>/subagents/. Sus tool_use_id quedan en su propio `abiertos`."""
+
+    def __init__(self, id_, ruta):
+        self.id = id_
+        self.arch = _Archivo(ruta, COLA_AYUD)
+        self.abiertos = {}
+        self.cuenta = collections.Counter()
+        self.ultima = ""
+        self.t = 0.0
+        self.desc = ""
+        try:
+            with open(ruta[:-6] + ".meta.json", encoding="utf-8") as f:
+                self.desc = tapar(str(json.load(f).get("description") or ""))[:70]
+        except (OSError, ValueError, AttributeError):
+            pass
+
+    @property
+    def tipo(self):
+        c = self.cuenta
+        web = c["busquedas"] + c["paginas"]
+        if web >= 3 and web >= c["lecturas"] + c["escrituras"]:
+            return "investigador"
+        if _REVISA.search(self.desc):
+            return "inspector"
+        if web:
+            return "investigador"
+        return "obrero" if c["escrituras"] >= 3 and c["escrituras"] * 3 >= c["lecturas"] else "explorador"
+
+
 class Sesion:
     def __init__(self, id_, ruta):
         self.id, self.ruta = id_, ruta
-        self.pos = 0
+        self.arch = _Archivo(ruta, COLA_BYTES)
+        self.ayud = {}                     # id -> _Ayudante
+        self.ayud_t = 0.0
+        self.fondo = {}                    # tool_use_id -> comando en segundo plano sin aviso de fin
+        self.titulos = {}                  # url -> título visto en una búsqueda
+        self.cuenta = collections.Counter()
         self.seq = 0
         self.rev = 0                       # sube con cada evento nuevo o completado (la imagen llega después de la llamada)
         self.eventos = collections.deque(maxlen=MAX_EVENTOS)
@@ -267,47 +422,123 @@ class Sesion:
         self.pensando = False
         self.host = ""
         self.n_img = 0
-        self.resto = b""
         self.lock = threading.Lock()
 
     def actualizar(self):
         with self.lock:
-            try:
-                tam = os.path.getsize(self.ruta)
-            except OSError:
-                return
-            if tam == self.pos:
-                return
-            with open(self.ruta, "rb") as f:
-                if self.pos == 0 and tam > COLA_BYTES:
-                    f.seek(tam - COLA_BYTES)
-                    f.readline()               # la primera línea queda partida
+            lote = []                          # el principal y sus ayudantes entran por hora en la misma línea de tiempo
+            for ln in self.arch.nuevas():
+                d = self._leer(ln)
+                if d:
+                    lote.append((_epoch(d.get("timestamp")), d, None))
+            for a in self._ayudantes_al_dia():
+                for ln in a.arch.nuevas():
+                    d = self._leer_ayudante(ln)
+                    if d:
+                        lote.append((_epoch(d.get("timestamp")), d, a))
+            lote.sort(key=lambda x: x[0])
+            for t, d, a in lote:
+                if a:
+                    self._linea_ayudante(a, t, d)
                 else:
-                    f.seek(self.pos)
-                datos = f.read()
-                self.pos = f.tell()
-            lineas = (self.resto + datos).split(b"\n")
-            self.resto = lineas.pop()          # lo último puede estar a medio escribir
-            for ln in lineas:
-                self._linea(ln)
+                    self._linea(t, d)
 
-    def _linea(self, ln):
+    def _ayudantes_al_dia(self):
+        ahora = time.time()
+        if ahora - self.ayud_t < AYUD_CADA:
+            return []
+        self.ayud_t = ahora
+        hallados = []
+        try:
+            for x in os.scandir(os.path.join(self.ruta[:-6], "subagents")):
+                if x.name.startswith("agent-") and x.name.endswith(".jsonl"):
+                    mt = x.stat().st_mtime
+                    if ahora - mt < HORAS_AYUD * 3600:
+                        hallados.append((mt, x.name[6:-6], x.path))
+        except OSError:
+            return []
+        hallados.sort(reverse=True)
+        for _, id_, ruta in hallados[:MAX_AYUD]:
+            if id_ not in self.ayud:
+                self.ayud[id_] = _Ayudante(id_, ruta)
+        return [self.ayud[id_] for _, id_, _ in hallados[:MAX_AYUD]]
+
+    def _leer(self, ln):
         # las líneas con imágenes pesan MB: se descartan rápido las que no interesan
         if b'"customTitle"' in ln[:300]:
             try:
                 self.titulo = json.loads(ln).get("customTitle") or self.titulo
             except ValueError:
                 pass
-            return
+            return None
         if b'"type":"assistant"' not in ln and b'"type":"user"' not in ln:
-            return
+            return None
         try:
             d = json.loads(ln)
         except ValueError:
-            return
-        if d.get("type") not in ("assistant", "user") or d.get("isSidechain"):
-            return
-        t = _epoch(d.get("timestamp"))
+            return None
+        return d if d.get("type") in ("assistant", "user") and not d.get("isSidechain") else None
+
+    def _leer_ayudante(self, ln):
+        if len(ln) > LINEA_AYUD or (b'"tool_use"' not in ln and b'"tool_result"' not in ln):
+            return None
+        try:
+            d = json.loads(ln)
+        except ValueError:
+            return None
+        return d if d.get("type") in ("assistant", "user") else None   # hay líneas `api-request-blob`, sin hora
+
+    def _linea_ayudante(self, a, t, d):
+        """Todo cuenta para el mini robot; a la línea de tiempo solo entra la investigación (un ayudante hace cientos de acciones)."""
+        a.t = max(a.t, t)
+        cont = (d.get("message") or {}).get("content")
+        for b in cont if isinstance(cont, list) else []:
+            if not isinstance(b, dict):
+                continue
+            if b.get("type") == "tool_use":
+                nombre = b.get("name") or ""
+                if nombre in _CUENTA:
+                    a.cuenta[_CUENTA[nombre]] += 1
+                ev = _evento_herramienta(nombre, b.get("input"))
+                if not ev:
+                    continue
+                a.ultima = ev.get("titulo") or a.ultima
+                if ev["tipo"] in ("busqueda", "pagina"):
+                    ev.update(de=a.id, quien=a.desc)
+                    self._poner(ev, t)
+                    a.abiertos[b.get("id")] = ev
+            elif b.get("type") == "tool_result":
+                ev = a.abiertos.pop(b.get("tool_use_id"), None)
+                if ev is not None:
+                    self._resultado(ev, b)
+
+    def ayudantes(self):
+        """Los ayudantes y comandos de fondo con trabajo real detrás, más los que acaban de terminar (la página los ve despedirse)."""
+        ahora = time.time()
+        filas = []
+        for a in list(self.ayud.values()):
+            try:
+                mt = os.path.getmtime(a.arch.ruta)
+            except OSError:
+                continue
+            if ahora - mt < MAX_ULTIMOS_S:
+                filas.append(dict(id=a.id, tipo=a.tipo, desc=a.desc, activo=ahora - mt < ACTIVA_S, ultima=a.ultima, t=a.t, **a.cuenta))
+        try:
+            reciente = ahora - os.path.getmtime(self.ruta) < 1800  # sin la sesión viva nadie avisaría de su fin
+        except OSError:
+            reciente = False
+        for k, f in list(self.fondo.items()):
+            if ahora - f["t"] > FONDO_MAX_S:
+                del self.fondo[k]
+            elif reciente:
+                filas.append(dict(id=k[-12:], tipo=f["tipo"], desc=f["desc"], activo=True, ultima=f["desc"], t=f["t"], fondo=True))
+        return filas
+
+    def _fin_fondo(self, texto):
+        for k in re.findall(r"<tool-use-id>([\w-]+)</tool-use-id>", texto or ""):
+            self.fondo.pop(k, None)
+
+    def _linea(self, t, d):
         self.ultimo_t = max(self.ultimo_t, t)
         cont = (d.get("message") or {}).get("content")
         if d["type"] == "user":
@@ -320,6 +551,7 @@ class Sesion:
 
     def _usuario(self, cont, t, d):
         if isinstance(cont, str):
+            self._fin_fondo(cont)
             texto = _usuario_limpio(cont)
             if texto and not d.get("isMeta"):
                 self._poner(dict(tipo="usuario", titulo="El usuario", detalle=_corto(tapar(texto), 400)), t)
@@ -333,8 +565,9 @@ class Sesion:
                 ev = self.abiertos.pop(b.get("tool_use_id"), None)
                 if ev is not None:
                     self._resultado(ev, b)
-            elif b.get("type") == "text" and not d.get("isMeta"):
-                texto = _usuario_limpio(b.get("text"))
+            elif b.get("type") == "text":
+                self._fin_fondo(b.get("text"))
+                texto = "" if d.get("isMeta") else _usuario_limpio(b.get("text"))
                 if texto:
                     self._poner(dict(tipo="usuario", titulo="El usuario", detalle=_corto(tapar(texto), 400)), t)
 
@@ -355,13 +588,22 @@ class Sesion:
             ev = _evento_herramienta(nombre, ent)
             if ev and ev["tipo"] == "navegador":      # los clics no traen dirección: siguen en el último sitio abierto
                 self.host = ev.pop("host") or self.host
+                ev["estacion"] = _estacion_navegador(self.host, ev)
                 ev["titulo"] = f"{ev.pop('verbo')} {self.host or 'el navegador'}"
-                ev["estacion"] = "imagenes" if "labs.google" in self.host else "subida" if "studio.youtube" in self.host else None
+                ev.pop("url")
             if ev:
                 self._poner(ev, t)
+                if ev["tipo"] == "comando" and (ent or {}).get("run_in_background"):
+                    self._a_fondo(b.get("id"), ev, t)
                 self.abiertos[b.get("id")] = ev
                 if len(self.abiertos) > 200:
                     self.abiertos.pop(next(iter(self.abiertos)))
+
+    def _a_fondo(self, id_, ev, t):
+        est = ev.get("estacion")
+        tipo = _FONDO_ESTACION.get(est) or ("cargador" if est == "sonido" and _BAJA.match(ev["titulo"].lower()) else None)
+        if tipo:
+            self.fondo[id_] = dict(tipo=tipo, desc=_corto(ev["titulo"], 70), t=t)
 
     def _plan(self, ent, t):
         if ent.get("items"):
@@ -404,6 +646,18 @@ class Sesion:
             ev["salida"] = _recortar("\n".join(filas[-10:]), 10, 140)[0]
         elif ev["tipo"] == "buscar" and texto:
             ev["detalle"] = f"{sum(1 for x in texto.split(chr(10)) if x.strip())} resultados"
+        elif ev["tipo"] == "busqueda":
+            filas = _enlaces(_texto_resultado(cont))
+            for titulo, url in filas:
+                self.titulos[tapar(url)] = tapar(titulo)[:110]
+            ev["detalle"] = f"{len(filas)} resultados"
+            ev["resultados"] = [dict(titulo=tapar(ti)[:110], sitio=_sitio(tapar(u))) for ti, u in filas[:7]]
+        elif ev["tipo"] == "pagina":
+            if texto.startswith(("The server returned HTTP", "Error")):
+                ev["fallo"] = True
+            ev["pag_titulo"] = self.titulos.get(ev["url"]) or _titulo_url(ev["url"])
+            ev["extracto"] = _corto(texto.replace("**", ""), 420)
+            ev["detalle"] = ev["pag_titulo"]
 
     def _guardar(self, datos, seq):
         """Guarda la imagen reducida en la caché; devuelve su nombre (None si no se pudo)."""
@@ -437,9 +691,11 @@ class Sesion:
         ev.update(seq=self.seq, rev=self.rev, t=t)
         if ev.get("video"):
             self.conteo[ev["video"]] += 1
-        if ev.get("estacion"):
-            self.estacion = ev["estacion"]
+        if not ev.get("de"):                               # el principal: sin estación no se arrastra la anterior
+            self.estacion = ev.get("estacion")
         ev["en"] = self.estacion
+        if ev["tipo"] in ("busqueda", "pagina"):
+            self.cuenta[ev["tipo"]] += 1
         self.eventos.append(ev)
 
     @property
@@ -518,7 +774,8 @@ def eventos(sesion="", video="", desde=0):
     # desde > rev: el panel se reinició y volvió a leer la sesión; se manda todo otra vez
     nuevos = [e for e in s.eventos if e["rev"] > desde] if 0 < desde <= s.rev else list(s.eventos)[-PRIMERA:]
     return dict(sesion=s.id, video=video or s.video, titulo=tapar(s.titulo)[:70], activa=time.time() - mt < ACTIVA_S,
-                pensando=s.pensando, plan=s.plan, estacion=s.estacion, rev=s.rev, ultimo=s.ultimo_t, eventos=nuevos)
+                pensando=s.pensando, plan=s.plan, estacion=s.estacion, rev=s.rev, ultimo=s.ultimo_t, eventos=nuevos,
+                ayudantes=s.ayudantes(), web=dict(busquedas=s.cuenta["busqueda"], paginas=s.cuenta["pagina"]))
 
 
 def imagen(sesion, nombre):

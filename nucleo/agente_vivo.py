@@ -47,6 +47,8 @@ MAX_AYUD = 12                          # y como mucho estos (los más recientes)
 COLA_AYUD = 8_000_000                  # de cada ayudante se lee solo su final
 LINEA_AYUD = 2_000_000                 # sus líneas más largas son imágenes: no se usan
 AYUD_CADA = 2                          # segundos entre revisiones de la carpeta de ayudantes
+CORTE_TOKENS = int(os.environ.get("FAB_CORTE_CONTEXTO", "180000"))    # el mismo umbral de hook_contexto.py: tokens de TRABAJO
+BASE_TOKENS = 100_000                  # base de una sesión de la que ya no se ve la primera llamada (ver `_Archivo.cola`)
 FONDO_MAX_S = 3 * 3600                 # un comando en segundo plano sin aviso de fin se da por muerto
 MAX_ULTIMOS_S = 600                    # ayudantes ya terminados que aún se mandan a la página
 
@@ -419,6 +421,7 @@ class _Archivo:
         return lineas
 
 
+_CONTINUA = re.compile(r"contin[uú]a", re.I)
 _CUENTA = {"WebSearch": "busquedas", "WebFetch": "paginas", "Read": "lecturas", "Grep": "lecturas", "Glob": "lecturas",
            "Write": "escrituras", "Edit": "escrituras", "Bash": "comandos", "PowerShell": "comandos"}
 _REVISA = re.compile(r"verific|revis|comprob|audit|review|check", re.I)
@@ -467,6 +470,12 @@ class Sesion:
         self.fondo = {}                    # tool_use_id -> comando en segundo plano sin aviso de fin
         self.titulos = {}                  # url -> título visto en una búsqueda
         self.cuenta = collections.Counter()
+        self.stats = collections.Counter()   # lo que suma experiencia (`progreso`)
+        self.ctx = 0                       # tokens de contexto de la última llamada del hilo principal
+        self.ctx_base = 0                  # los de la primera: el corte a 180 mil cuenta por encima de esta base
+        self.pregunta = ""                 # lo que el agente le preguntó al usuario y sigue sin respuesta
+        self.pregunta_t = 0.0
+        self.pregunta_id = None
         self.seq = 0
         self.rev = 0                       # sube con cada evento nuevo o completado (la imagen llega después de la llamada)
         self.eventos = collections.deque(maxlen=MAX_EVENTOS)
@@ -628,9 +637,24 @@ class Sesion:
             self._usuario(cont, t, d)
         elif isinstance(cont, list):
             self.pensando = False
+            self._contexto(d)
             for b in cont:
                 if isinstance(b, dict):
                     self._asistente(b, t)
+
+    def _contexto(self, d):
+        u = (d.get("message") or {}).get("usage") or {}
+        total = u.get("input_tokens", 0) + u.get("cache_creation_input_tokens", 0) + u.get("cache_read_input_tokens", 0)
+        if total:                          # los mensajes sintéticos (error, interrupción) traen uso 0
+            self.ctx = total
+            if not self.ctx_base:
+                self.ctx_base = BASE_TOKENS if self.arch.pos > self.arch.cola else total
+
+    def contexto(self):
+        return dict(trabajo=max(0, self.ctx - self.ctx_base), umbral=CORTE_TOKENS, total=self.ctx) if self.ctx else None
+
+    def _pregunta(self, texto, t, id_=None):
+        self.pregunta, self.pregunta_t, self.pregunta_id = _corto(tapar(sin_markdown(texto)), 110), t, id_
 
     def _usuario(self, cont, t, d):
         if isinstance(cont, str):
@@ -645,6 +669,8 @@ class Sesion:
             if not isinstance(b, dict):
                 continue
             if b.get("type") == "tool_result":
+                if b.get("tool_use_id") == self.pregunta_id:
+                    self._pregunta("", 0)
                 ev = self.abiertos.pop(b.get("tool_use_id"), None)
                 if ev is not None:
                     self._resultado(ev, b)
@@ -655,6 +681,7 @@ class Sesion:
                     self._mensaje(texto, t)
 
     def _mensaje(self, texto, t):
+        self._pregunta("", 0)
         for marca, titulo in _AJENOS:
             if texto.startswith(marca):
                 resto = texto[len(marca):].lstrip(":. \n")
@@ -674,7 +701,17 @@ class Sesion:
             if nombre == "mcp__ccd_turn__update_plan":
                 return self._plan(ent or {}, t)
             if nombre == "mcp__ccd_turn__wrap_up":
+                if (ent or {}).get("ask"):
+                    self._pregunta(ent["ask"], t)
                 return self._poner(dict(tipo="cierre", titulo="Cierra el tramo", detalle=_corto(tapar(sin_markdown((ent or {}).get("recap"))), 320)), t)
+            self._pregunta("", 0)              # siguió trabajando: lo que preguntó ya no espera
+            if nombre == "AskUserQuestion":
+                pr = ((ent or {}).get("questions") or [{}])[0]
+                self._pregunta(pr.get("question") or "Tiene una pregunta", t, b.get("id"))
+            elif nombre == "ExitPlanMode":
+                self._pregunta("Revisa el plan", t, b.get("id"))
+            elif nombre.endswith("__hand_off_to_session") or (nombre.endswith("__start_session") and _CONTINUA.search(str((ent or {}).get("prompt") or (ent or {}).get("title")))):
+                return self._poner(dict(tipo="relevo", titulo="Pasa la estafeta a otra sesión", detalle=_corto(tapar(sin_markdown((ent or {}).get("title") or "")), 120)), t)
             self._evidencia(nombre, ent, t)
             ev = _evento_herramienta(nombre, ent)
             if ev and ev["tipo"] == "navegador":      # los clics no traen dirección: siguen en el último sitio abierto
@@ -729,6 +766,7 @@ class Sesion:
         texto = tapar(_texto_resultado(cont))
         if b.get("is_error"):
             ev["fallo"] = True
+            self.stats["fallos"] += 1
         if ev["tipo"] == "leer" and texto:
             texto = re.sub(r"(?m)^\s*\d+\t", "", texto)
             ev["extracto"] = _recortar(texto, 18, 120)[0]
@@ -785,6 +823,10 @@ class Sesion:
         ev["en"] = self.estacion
         if ev["tipo"] in ("busqueda", "pagina"):
             self.cuenta[ev["tipo"]] += 1
+        self.stats["acciones"] += 1
+        self.stats[ev["tipo"]] += 1
+        if ev["tipo"] == "comando" and ev.get("estacion") in ("render", "subida", "voz"):
+            self.stats[ev["estacion"]] += 1
         (ayudante.eventos if ayudante else self.eventos).append(ev)
 
     def lista(self, desde=0):
@@ -960,6 +1002,7 @@ def sesiones():
         if s and s.seq:
             v = s.video
             filas.append(dict(id=s.id, titulo=tapar(s.titulo)[:70], video=v, t=mt, prod=s.produce_t.get(v) or mt, activa=ahora - mt < ACTIVA_S, eventos=s.seq))
+            _anota_progreso(s)
     filas.sort(key=lambda x: -x["t"])
     _LISTA.update(t=ahora, v=filas)
     _limpiar_cache()
@@ -987,7 +1030,136 @@ def eventos(sesion="", video="", desde=0):
     nuevos = s.lista(desde)
     return dict(sesion=s.id, video=s.video, titulo=tapar(s.titulo)[:70], activa=time.time() - mt < ACTIVA_S,
                 pensando=s.pensando, plan=s.plan, estacion=s.estacion, rev=s.rev, ultimo=s.ultimo_t, eventos=nuevos,
-                ayudantes=s.ayudantes(), equipo=s.equipo(), web=dict(busquedas=s.cuenta["busqueda"], paginas=s.cuenta["pagina"]))
+                ayudantes=s.ayudantes(), equipo=s.equipo(), web=dict(busquedas=s.cuenta["busqueda"], paginas=s.cuenta["pagina"]),
+                contexto=s.contexto(), pregunta=s.pregunta, pregunta_t=s.pregunta_t)
+
+
+# ---------------------------------------------------------- la experiencia del robot: por sesión y con `max`, así releer no suma dos veces
+PROGRESO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "datos", "uso_panel", "vivo_progreso.json")
+_PROG = {"d": None, "t": 0.0, "sucio": False}
+
+
+def _anota_progreso(s):
+    if _PROG["d"] is None:
+        try:
+            with open(PROGRESO, encoding="utf-8") as f:
+                _PROG["d"] = json.load(f)
+        except (OSError, ValueError):
+            _PROG["d"] = {}
+    fila = _PROG["d"].setdefault(s.id, {})
+    for k, v in s.stats.items():
+        if v > fila.get(k, 0):
+            fila[k] = v
+            _PROG["sucio"] = True
+    if _PROG["sucio"] and time.time() - _PROG["t"] > 60:
+        _PROG.update(t=time.time(), sucio=False)
+        try:
+            os.makedirs(os.path.dirname(PROGRESO), exist_ok=True)
+            with open(PROGRESO + ".tmp", "w", encoding="utf-8") as f:
+                json.dump(_PROG["d"], f)
+            os.replace(PROGRESO + ".tmp", PROGRESO)
+        except OSError:
+            pass
+
+
+def progreso():
+    """Lo acumulado en todas las sesiones que ha visto el panel (no es retroactivo: no se releen los transcritos viejos)."""
+    total = collections.Counter()
+    for fila in (_PROG["d"] or {}).values():
+        total.update(fila)
+    return dict(total, sesiones=len(_PROG["d"] or {}))
+
+
+# ---------------------------------------------------------- el mundo del taller: lo que hay alrededor del video
+_CANALES = os.path.join(os.path.dirname(VIDEOS), "canales")
+_MUNDO = {}
+_ALIAS = {"cronicas_de_warcraft": "cronicas_warcraft", "cronicas_de_tamriel": "cronicas_tamriel"}
+_QUEJA = re.compile(r"\b(ia|ai|voz|voces|robot\w*|error\w*|errad\w*|falso|mentira\w*|se dice|se pronuncia|pronuncia\w*)\b", re.I)
+
+
+def _json(ruta, defecto=None):
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return defecto
+
+
+def _hoy_iso():
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def _fecha_corta(iso):
+    t = _epoch(iso)
+    if not t:
+        return (iso or "")[:10]
+    dias, meses = "lun mar mié jue vie sáb dom".split(), "ene feb mar abr may jun jul ago sep oct nov dic".split()
+    x = time.localtime(t)
+    return f"{dias[x.tm_wday]} {x.tm_mday}-{meses[x.tm_mon - 1]}"
+
+
+def _archivos(carpeta, ext, n):
+    """Los `n` archivos más nuevos de `videos/<v>/<carpeta>`, de cada extensión pedida, como rutas relativas al video."""
+    try:
+        filas = [(x.stat().st_mtime, x.name) for x in os.scandir(carpeta) if x.is_file() and x.name.lower().endswith(ext) and not x.name.startswith("_")]
+    except OSError:
+        return []
+    return [nom for _, nom in sorted(filas, reverse=True)[:n]]
+
+
+def _vistas(alias):
+    """id -> vistas, de las métricas más recientes del canal."""
+    fs = sorted(glob.glob(os.path.join(_CANALES, "metricas", alias + "_*.json")))
+    d = _json(fs[-1], {}) if fs else {}
+    return {v.get("id"): int((v.get("stats") or {}).get("viewCount") or 0) for v in d.get("videos") or []}, d
+
+
+def mundo(video, alias, portadas):
+    """Trofeos, ofrenda, buzón, noticiero y material real del video. Solo lee archivos locales; se recalcula cada 30 s."""
+    alias = _ALIAS.get(alias, alias)
+    clave = (video, alias)
+    if time.time() - _MUNDO.get(clave, (0, None))[0] < 30:
+        return _MUNDO[clave][1]
+    r = dict(canal=alias, trofeos=[], ofrenda=[], comentarios=[], noticias=[], piezas=[], voz=[], master=None)
+    hoy = _hoy_iso()
+    canales = {os.path.basename(f)[:-5]: _json(f, {}) for f in glob.glob(os.path.join(_CANALES, "*.json"))}
+    c = canales.get(alias) or {}
+    r["nombre"] = c.get("nombre")
+    vistas, met = _vistas(alias) if alias else ({}, {})
+    for p in reversed((c.get("publicados") or [])[-12:]):
+        if len(r["trofeos"]) >= 8 or not p.get("id"):
+            continue
+        pro = p.get("programado") or ""
+        r["trofeos"].append(dict(video=p.get("video"), id=p["id"], titulo=tapar(p.get("titulo") or "")[:90], rel=(portadas.get(p.get("video")) or {}).get("r"),
+                                 vistas=vistas.get(p["id"]), programado=_fecha_corta(pro) if pro > hoy else "", short=bool(p.get("short"))))
+    for a, d in canales.items():                       # la ofrenda: los videos que se retiraron, de todos los canales
+        for p in d.get("retirados") or []:
+            if isinstance(p, dict) and p.get("titulo"):
+                r["ofrenda"].append(dict(titulo=tapar(p["titulo"])[:90], video=p.get("video"), rel=(portadas.get(p.get("video")) or {}).get("r"), canal=d.get("nombre") or a))
+    prox = sorted(((p.get("programado"), p.get("titulo"), d.get("nombre") or a) for a, d in canales.items() for p in d.get("publicados") or []
+                   if isinstance(p, dict) and (p.get("programado") or "") > hoy), key=lambda x: x[0])
+    r["noticias"] = [f"{canal}: «{tapar(ti or '')[:70]}» se estrena el {_fecha_corta(f)}" for f, ti, canal in prox[:4]]
+    tot = ((met.get("totales_ventana") or [{}]) or [{}])[0]
+    if tot.get("views") is not None and met.get("ventana_dias"):
+        r["noticias"].append(f"{c.get('nombre') or alias}: {tot['views']:,} vistas en {met['ventana_dias']} días".replace(",", " "))
+    subs = (met.get("estadisticas") or {}).get("subscriberCount")
+    if subs:
+        r["noticias"].append(f"{c.get('nombre') or alias}: {int(subs):,} suscriptores".replace(",", " "))
+    com = _json(os.path.join(_CANALES, "comentarios", alias + ".json"), {}) or {}
+    filas = sorted((x for x in com.get("comentarios") or [] if x.get("texto")), key=lambda x: -(x.get("likes") or 0))[:30]
+    r["comentarios"] = [dict(autor=x.get("autor"), texto=_corto(tapar(x["texto"]), 200), likes=x.get("likes") or 0, video=tapar(x.get("titulo") or "")[:60],
+                             queja=bool(_QUEJA.search(x["texto"]))) for x in filas]
+    if video and _es_video(video):
+        car = os.path.join(VIDEOS, video)
+        for sub in ("medios", "pegatinas", "miniatura_flow"):
+            r["piezas"] += [f"{sub}/{n}" for n in _archivos(os.path.join(car, sub), (".jpg", ".jpeg", ".png", ".webp"), 6)]
+        r["voz"] = [f"voz/final/{n}" for n in _archivos(os.path.join(car, "voz", "final"), (".wav", ".mp3"), 30)]
+        master = next(iter(sorted(glob.glob(os.path.join(car, "salida", "*_MASTER.mp4")), key=os.path.getmtime, reverse=True)), None)
+        if master:
+            r["master"] = dict(rel="salida/" + os.path.basename(master), t=os.path.getmtime(master))
+    r["progreso"] = progreso()
+    _MUNDO[clave] = (time.time(), r)
+    return r
 
 
 def imagen(sesion, nombre):

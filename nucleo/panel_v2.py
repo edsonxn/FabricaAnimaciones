@@ -652,6 +652,10 @@ def get(h, ruta):
         return _json(h, r)
     if ruta == "/api/v2/agente/sesiones":
         return _json(h, _vivo().sesiones())
+    if ruta == "/v2/vivo/extras.js":
+        return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_extras.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
+    if ruta == "/api/v2/vivo/mundo":
+        return _json(h, _vivo().mundo(arg("video"), arg("canal"), portadas()))
     if ruta.startswith("/v2/vivo/img/"):
         partes = ruta[len("/v2/vivo/img/"):].split("/")
         real = _vivo().imagen(*partes) if len(partes) == 2 else None

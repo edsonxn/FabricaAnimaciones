@@ -102,6 +102,13 @@
       "programado": "2026-11-07T18:08:00Z",
       "formato": "lista_25_misiones_imperdibles_secuencia_yt",
       "nota": "29-oct: resubido con 15 mapas y pantalla final; xnOdTqaZWrM (versión vieja) queda privado sin programar"
+    },
+    {
+      "video": "tes_secretos_40",
+      "id": "nlMINAT_6UI",
+      "titulo": "Los 40 SECRETOS de Skyrim que nadie te contó",
+      "programado": "2026-11-11T18:08:00Z",
+      "formato": "lista_40_secretos_secuencia_yt"
     }
   ],
   "ideas": {
@@ -124,5 +131,13 @@
     ]
   },
   "estado": "primer video hecho en la Fábrica: tes_misiones_daedricas (14-oct-2026), motor SECUENCIA YT + Chatterbox Sarcastica",
-  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_tamriel.mp4"
+  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_tamriel.mp4",
+  "campana_subs": {
+    "desde": "2026-10-30",
+    "metas": [
+      7000,
+      10000
+    ],
+    "linea": "Suscríbete a Crónicas de Tamriel para no perderte la siguiente lista"
+  }
 }

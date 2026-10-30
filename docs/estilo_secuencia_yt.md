@@ -308,6 +308,17 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
     siempre con ffprobe que la duración del stream de VIDEO del MASTER incluya la pantalla final. Aquí: 3 negros de 1-2,3 s al final/inicio de clips
     (013, 018, 065) que ni la hoja de clips ni `fx hoja` vieron; rehechos con la misma url y `desde` + 40 s.
 
+- **Lecciones de `tes_secretos_40` (30-oct-2026, «Los 40 SECRETOS», 17:22 de voz, 121 beats):**
+  - **Ritmo real de `Sarcastica`: 2,6-2,7 palabras/s.** 18 min ≈ 2 700 palabras; 40 puestos ≈ 60 palabras cada uno. El primer guion salió de 3 483 (21:40): contar palabras ANTES de la voz.
+  - La voz fue mucho más rápida de lo calculado (292 tomas en ~45 min con la GPU libre).
+  - **4 MG nuevos en `mg_tes`**: `nombre` (un nombre que se parte y confiesa su significado), `cordura` (diario que se desquicia, barra sin cifras y sello), `informe` (expediente con barras negras que se retiran en cada marca, sello) y `aguante` (barra al mínimo, ataques y cuenta atrás).
+  - **Anclas: «Número treinta» casa con «Número treinta y ocho»**: el aviso del 30 salió en el 38. Usa un trozo que no sea prefijo de otro número.
+  - **Clips: 44 + 11 + 5 + 3 rehechos.** Lo que cerró las últimas vueltas fue `{url, desde}` de un longplay limpio (Loopy Longplays `JV3tKszygTU`); aun así caen menús de forja, inventario y libros: mirar el rehecho. `fx hoja` se genera antes de los últimos rehechos: esos no salen en ella.
+  - **YouTube limita la descripción a 5 000 BYTES**: 4 962 caracteres con acentos dan `invalidDescription`. Quédate en ~4 600.
+  - **Banco de SFX reales en `nucleo/datos/sfx_juego/skyrim/`** (`_bajar.py`: misión, subir de nivel, lugar descubierto, monedas), en ~16 momentos clave y no en cada puesto, para no repetir.
+  - **Flow pide aceptar «Rights to use this image» al pegar ingredientes en un proyecto nuevo**: es aceptar condiciones, hay que pedir el sí del usuario en el chat.
+  - Disco: con E: dañado, `nuevo` igual crea junctions a E:; quitarlas al crear el video (`rmdir` y carpeta real en C:).
+
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los
 elementos visuales que ya tienes**; son agregados para que el espectador vea mejor la curiosidad». Regla: cada personaje, criatura,
@@ -739,6 +750,39 @@ Que el público se sienta tomado en cuenta. Tres momentos:
    III.C.3); el riesgo es el filtro de spam: sin respuestas idénticas, sin enlaces ni «suscríbete». Las preguntas de «¿la voz es
    IA?» las decide el usuario: nunca mentir. Corazones y fijar comentario: solo en Studio (la API no lo hace).
 Plastitube y Runa Caída necesitan reconectar el token (`yt conectar`) para leer comentarios (403 de permisos, 27-oct).
+
+## CAMPAÑA DE SUSCRIPCIÓN (el usuario, 30-oct-2026: Runa Caída y Crónicas de Tamriel, todo video nuevo)
+«Tenemos poquitos suscriptores, hay que subirlos». Hasta hoy NINGÚN guion lo pedía. Datos a 90 días (`yt metricas`):
+| | Subs | Vistas de NO suscritos | Subs ganados por 1 000 vistas | Audiencia al 80 % / al final |
+|---|---|---|---|---|
+| Runa Caída | 305 | **97,4 %** (3 de cada 100 suscritos) | 8,8 | ~50 % / ~20 % |
+| Crónicas de Tamriel | 6 420 | **86,3 %** (14 de cada 100 suscritos) | 2,7 | ~48 % / ~20 % |
+Pista (muestra pequeña): los largos narrativos convierten más que las listas de 8: Miquella 20:15 = 10,2 por 1 000 frente a Ranni
+3,6; «15 TEORÍAS» 25:47 = 8,1 frente a 0,4-2,5 de las listas de ~11 min.
+Metas públicas (en `campana_subs` de `canales/<alias>.json`): Runa **500 → 1 000** (1 000 es el umbral de monetización, junto con
+4 000 h; lleva 1 913 h en 90 días y no está monetizado), Tamriel **7 000 → 10 000**.
+1. **Dónde:** antes del último puesto (Runa, 5 puestos) o de los 2-3 últimos (Tamriel), hacia el 70-80 %: ahí sigue el doble de
+   audiencia que al final y la promesa del n.º 1 retiene. Nunca en el gancho. Segundo toque de UNA frase en el cierre, junto a la
+   pregunta para comentarios.
+2. **Qué dice la voz (6-10 s, 2-3 frases, en el tono del canal):** la cifra real del momento («de cada cien que ven este canal,
+   solo tres están suscritos»), la meta y que todos los comentarios se leen (encaja con los de agradecimiento). Sacar la cifra de la
+   línea `suscritos` de `yt metricas <alias> 90` el día del guion. Redacción distinta en cada video; nada de «dale like y
+   suscríbete» genérico. Ejemplos: Runa: «Antes del número uno, un dato que duele: de cada cien que ven esto, tres están suscritos.
+   Queremos llegar a quinientos. Si llevas cinco atrocidades aguantando, esta es la más pequeña del video.» Tamriel: «De cada cien
+   que ven este canal, catorce están suscritos. Los otros ochenta y seis entran, se llevan todo y se van, como en una tienda de
+   Carrera Blanca. Queremos llegar a siete mil.»
+3. **Qué sale en pantalla (encima del gameplay, sin parar el video):** interfaz del juego, nunca un botón rojo de plantilla.
+   Runa: `E.cien("De cada 100 que ven Runa Caída", 3, ("Solo 3 están suscritos", 2))` + `E.mensaje(["Intenta suscribirte."])` +
+   `E.puesto("Siguiente objetivo", "500 suscriptores")`. Tamriel: `T.rejilla("De cada 100 que ven este canal", 100, 14, ("Solo 14
+   están suscritos", 2))` + `T.mision("Misión nueva", "Suscríbete a Crónicas de Tamriel")` + `T.mision("Siguiente objetivo", "7 000
+   suscriptores")`. Marcas de `cien`/`rejilla`: aparecer, encender, remate. Sin repetir el mismo montaje en dos videos seguidos.
+4. **Descripción, automático:** `yt subir` y `yt aplicar` meten tras el primer párrafo la línea de `campana_subs` con el enlace
+   `?sub_confirmation=1` (abre el aviso de suscribirse). No escribirla en `youtube.json`. Al cumplir la campaña se quita el campo.
+5. **Medir a los 7 días y anotar en `canales/formula/<alias>.md`:** subs por 1 000 vistas frente a la base (8,8 y 2,7) y caída de
+   retención en el tramo. Objetivo: Runa ≥ 12, Tamriel ≥ 5. Si la curva cae más de 3 puntos en el tramo, acortarlo; si tras 3 videos
+   los subs por 1 000 no suben, cambiar UNA variable (lugar o texto).
+6. **Límites:** cifras siempre reales, sin sub4sub, sin sorteos ni recompensas por suscribirse, sin prometer temas que el usuario no
+   haya decidido. En las respuestas a comentarios sigue sin pedirse (filtro de spam, § COMENTARIOS).
 
 ## Pendiente del estilo
 «Cambiar clip» desde el bloque del Montaje; dos apoyos a la vez en el mismo instante (hoy se pueden, pero se enciman).

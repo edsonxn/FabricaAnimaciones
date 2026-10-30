@@ -1875,3 +1875,146 @@ def fragmentos(titulo, padre, objeto, hijos, bono=None, remate=None, ancho=1600)
         _remate(d, M, ancho, h, remate, dt, mk)
         return _salida(im, dt)
     return fn
+
+
+def nombre(titulo, retrato, partes, remate=None, ancho=1560):
+    """Un nombre que se parte y confiesa lo que significa. partes = [(trozo, significado, i_marca)]: el nombre entra junto, se
+    separa en su primera marca y bajo cada trozo cae su significado; el último, en rojo. Primer uso: Paar-Thur-Nax."""
+    RW, RH = 280, 360
+    h = 110 + 420 + (80 if remate else 20)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        _pega(im, _retrato(retrato, RW, RH), M + 40, M + 125, a0)
+        _marco(d, M + 40, M + 125, RW, RH, HUESO, 200 * a0, 2)
+        x0, w = M + 370, ancho - 410
+        n = len(partes)
+        f = fuente("Bold Condensed", 112)
+        f2 = fuente("SemiBold Condensed", 46)
+        anchos = [d.textlength(p[0].upper(), font=f) for p in partes]
+        xj = x0 + w / 2 - sum(anchos) / 2
+        s = _eo((dt - mk[partes[0][2]]) / .8)
+        for i, (trozo, sig, k) in enumerate(partes):
+            junto = xj + sum(anchos[:i]) + anchos[i] / 2
+            x = junto + (x0 + w * (i + .5) / n - junto) * s
+            u = _eo((dt - mk[k] - .35) / .45)
+            color = SANGRE if i == n - 1 and u > 0 else HUESO
+            _texto(d, (x, M + 215), trozo.upper(), f, color, "mm", 255 * a0)
+            if u > 0:
+                d.line([(x, M + 285), (x, M + 285 + 46 * u)], fill=ORO + (int(210 * u),), width=2)
+                for j, sub in enumerate(_partir(d, sig, f2, w / n - 16)):
+                    _texto(d, (x, M + 372 + 54 * j), sub, f2, color, "mm", 255 * u)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def cordura(titulo, retrato, paginas, final=None, ancho=1600):
+    """Un diario que se desquicia. paginas = [(línea, i_marca)]: cada línea entra más roja y tiembla más que la anterior, y la
+    barra de cordura baja a la vez (sin cifras) · final = (texto, i): sello rojo que la deja a cero. Primer uso: Cicerón."""
+    RW, RH = 260, 330
+    n = len(paginas)
+    h = max(110 + 92 * n + 110, 110 + RH + 200)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        _pega(im, _retrato(retrato, RW, RH), M + 40, M + 120, a0)
+        _marco(d, M + 40, M + 120, RW, RH, HUESO, 200 * a0, 2)
+        hecho = sum(_eo((dt - mk[k]) / .6) for _, k in paginas) / (n + 1)
+        if final:
+            hecho += _eo((dt - mk[final[1]]) / .6) / (n + 1)
+        by = M + 120 + RH + 56
+        _texto(d, (M + 40, by - 24), "CORDURA", fuente("SemiBold Condensed", 28), HUESO, "lm", 230 * a0, track=4)
+        d.rectangle([M + 40, by, M + 40 + RW, by + 22], outline=HUESO + (int(170 * a0),), width=2)
+        rest = max(0.0, 1 - hecho)
+        if rest > 0:
+            d.rectangle([M + 43, by + 3, M + 43 + (RW - 6) * rest, by + 19], fill=(SANGRE if rest < .4 else ORO) + (int(240 * a0),))
+        f = fuente("SemiBold Condensed", 46)
+        for j, (ln, k) in enumerate(paginas):
+            u = _eo((dt - mk[k]) / .45)
+            if u <= 0:
+                continue
+            nv = j / max(1, n - 1)
+            color = tuple(int(a + (b - a) * nv) for a, b in zip(HUESO, SANGRE))
+            am = 9 * nv ** 2
+            x = M + 350 + am * math.sin(dt * 23 + j * 2.1)
+            y = M + 150 + 92 * j + am * .5 * math.sin(dt * 31 + j)
+            if nv > .55:
+                _texto(d, (x + 5 * nv, y + 3), ln, f, SANGRE, "lm", 90 * u)
+            _texto(d, (x, y), ln, f, color, "lm", 255 * u)
+        if final and dt >= mk[final[1]]:
+            _sello(im, M + ancho * .62, M + h - 44, final[0].upper(), min(1.0, (dt - mk[final[1]]) / .6), tam=50, giro=-3)
+        return _salida(im, dt)
+    return fn
+
+
+def informe(titulo, sujeto, campos, sello=None, remate=None, ancho=1560):
+    """Expediente clasificado: cada dato empieza tachado con una barra negra que se retira en su marca. sujeto = (ruta, nombre) ·
+    campos = [(etiqueta, valor, i_marca)] · sello = (texto, i). Primer uso: los informes thalmor de Ulfric y Esbern."""
+    RW, RH = 280, 350
+    n = len(campos)
+    h = max(110 + 112 * n + 40, 110 + RH + 90) + (70 if remate else 10)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        _pega(im, _retrato(sujeto[0], RW, RH), M + 40, M + 120, a0)
+        _marco(d, M + 40, M + 120, RW, RH, HUESO, 200 * a0, 2)
+        _texto(d, (M + 40 + RW / 2, M + 120 + RH + 32), sujeto[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * a0, track=3)
+        fe, fv = fuente("SemiBold Condensed", 28), fuente("SemiBold Condensed", 42)
+        x, w = M + 360, ancho - 410
+        for j, (et, val, k) in enumerate(campos):
+            y = M + 130 + 112 * j
+            _texto(d, (x, y), et.upper(), fe, ORO, "la", 235 * a0, track=4)
+            lineas = _partir(d, val, fv, w)[:2]
+            for q, ln in enumerate(lineas):
+                _texto(d, (x, y + 34 + 46 * q), ln, fv, HUESO, "la", 255 * a0)
+            u = _eo((dt - mk[k]) / .5)
+            if u < 1:
+                x1 = x + w
+                d.rectangle([x + (w + 8) * u - 4, y + 38, x1 + 4, y + 36 + 46 * len(lineas)], fill=(9, 8, 8, int(250 * a0)))
+        if sello and dt >= mk[sello[1]]:
+            _sello(im, M + ancho * .66, h - (150 if remate else 90), sello[0].upper(), min(1.0, (dt - mk[sello[1]]) / .6), tam=62, giro=-7)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def aguante(titulo, comida, minutos, remate=None, ancho=1500):
+    """La barra de aguante vacía que nunca llega a cero: late al mínimo, cada ataque poderoso la vacía y la comida la devuelve,
+    mientras corre la cuenta atrás. comida = (ruta, nombre) · remate = (texto, i). Primer uso: la sopa de verduras."""
+    h = 110 + 330 + (80 if remate else 20)
+    VERDE = (86, 170, 104)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo(dt / .4)
+        ic = _libre(comida[0], 250, 230)
+        _pega(im, ic, M + 50 + (250 - ic.width) / 2, M + 125, a0)
+        _texto(d, (M + 175, M + 385), comida[1].upper(), fuente("SemiBold Condensed", 30), HUESO, "mm", 255 * a0, track=3)
+        x, y, w = M + 370, M + 215, ancho - 440
+        t0 = mk[0]
+        ciclo = ((dt - t0) % 1.3) / 1.3 if dt >= t0 else 1.0
+        nivel = .012 + .05 * min(1.0, ciclo / .8)
+        _texto(d, (x, y - 34), "AGUANTE", fuente("SemiBold Condensed", 32), HUESO, "lm", 240 * a0, track=5)
+        d.rectangle([x, y, x + w, y + 34], outline=HUESO + (int(190 * a0),), width=2)
+        d.rectangle([x + 3, y + 3, x + 3 + (w - 6) * nivel, y + 31], fill=VERDE + (int(255 * a0),))
+        if dt >= t0 and ciclo < .34:
+            _texto(d, (x + w / 2, y + 86), "ATAQUE PODEROSO", fuente("Bold Condensed", 66), SANGRE, "mm",
+                   255 * (1 - ciclo / .34), track=4)
+        fr = max(0.0, 1 - max(0.0, dt - t0) / max(.1, dur - t0 - .6))
+        seg = int(round(minutos * 60 * fr))
+        _texto(d, (x + w, y - 40), f"{seg // 60:02d}:{seg % 60:02d}", fuente("Bold Condensed", 62), ORO, "rm", 255 * a0, track=2)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn

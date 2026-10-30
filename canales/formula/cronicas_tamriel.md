@@ -30,3 +30,18 @@
   «habla más calmada», «¿voz IA?» y «acento España/Latino» → se reportan al usuario, no se cambia la voz. Sugerencia: @Gamer-Legend-1G
   pide la lista de mods gráficos (0 ♥, guardada). Pocos comentarios de elogio con ♥: se reutilizan los más concretos de hace 1-2 meses.
 - **A vigilar:** si 22 min retiene (% visto ≥ 35) con 25 puestos, los largos de 20+ min son el formato del canal.
+
+## Campaña de suscripción (el usuario, 30-oct-2026)
+- **Base a 90 días:** 6 420 subs, 2,7 subs por 1 000 vistas, 86,3 % de las vistas son de no suscritos. Ningún video lo había pedido.
+- **Plan:** tramo de 6-10 s antes de los 2-3 últimos puestos + frase en el cierre, meta 7 000 → 10 000. Reglas en `docs/estilo_secuencia_yt.md` § CAMPAÑA.
+- **Primer video:** `tes_secretos_40` si llega a tiempo (voz ya grabada); si no, el siguiente. Objetivo: ≥ 5 subs por 1 000 sin caer más de 3 puntos en el tramo.
+- **Pista:** «15 TEORÍAS» (25:47) gana 8,1 subs por 1 000 frente a 0,4-2,5 de las listas de ~11 min: mirar si los largos convierten mejor.
+
+## Conclusión del 30-oct-2026 (video `tes_secretos_40`, 18 min pedidos por el usuario)
+- **Lo propio:** 6 420 subs, 71 852 vistas en 28 d, mediana de largos 2 255. «15 misiones NUNCA» ×10,7; «15 cosas INÚTILES» 10 979 (< 7 días).
+- **Fuera (60 días):** Choa «60 Useless Skyrim Facts» ×86 (33 min), Syrric «3h de curiosidades» ×4,6, JustMeegz builds ×21-23.
+- **Decisión:** el usuario eligió «40 SECRETOS» entre 3 (los otros: «10 builds más ROTAS» y Paarthurnax). Misma lista larga, cambia el tema. ~25 s por secreto.
+- **Comentarios (365 d):** @Knox8386 pidió Paarthurnax villano → n.º 1 (con «según las Cuchillas»: UESP no recoge atrocidades concretas). @stazmadness3910 (♥16, Clarividencia)
+  y el error de los martillos de `tes_armas_poderosas` se corrigen en voz (n.º 29). Quejas de datos → todo verificado en UESP. «Nazeem sí pisa el palacio»: UESP dice que no.
+  «¿Voz IA?» y acento → se reporta al usuario. 5 agradecimientos nuevos sin repetir.
+- **A vigilar:** si 17:42 y 25 s por puesto retienen más que las 25 misiones de 23 min (% visto ≥ 35), el formato de curiosidades es el siguiente filón. Quedan en reserva «10 builds» y unos 8 secretos más en `videos/tes_secretos_40/_investigacion_*.md`.

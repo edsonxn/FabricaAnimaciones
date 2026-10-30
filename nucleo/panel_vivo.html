@@ -212,7 +212,7 @@ a{color:inherit;text-decoration:none}
   #lado{display:contents}
   #plan{max-height:none}
   #feed{max-height:40vh;flex:none}
-  #taller{height:238px}
+  #taller{height:334px}
   .lupa{width:104px;height:104px}
   .codigo{font-size:11px}
   .lin .n{width:30px;padding-right:7px}
@@ -871,15 +871,17 @@ const Taller=(()=>{
   const MIN_MS=1500;                     // cada acción se queda al menos esto ya en su sitio: si no, el robot solo caminaría
   const MAX_MS=3000;                     // tope por si camina muy lento (render a toda CPU, ~1 cuadro/s)
   const DESCANSO=.5/(ESTACIONES.length+1);   // primer puesto del taller, fuera de las estaciones
-  let W=0,H=0,K=1,PCH=0,dpr=1,robotX=DESCANSO,meta=DESCANSO,paso=0,idx=-1,dir=1,parts=[],pal={},pend=null,A={nom:"quieto",ini:0,e:null},llego=0,ahora=0,sue=0,tiempos={};
+  let W=0,H=0,K=1,PCH=0,TH=0,dpr=1,robotX=DESCANSO,meta=DESCANSO,paso=0,idx=-1,dir=1,parts=[],pal={},pend=null,A={nom:"quieto",ini:0,e:null},llego=0,ahora=0,sue=0,tiempos={};
   const leerPal=()=>{for(const k of ["--muro","--muro2","--suelo","--mesa","--txt","--mut","--faint","--acc","--ok","--run","--warn","--pink","--panel"])pal[k]=css(k);};
   function medida(){
     dpr=Math.min(2,devicePixelRatio||1);
-    W=cv.clientWidth;H=cv.clientHeight;PCH=Math.round(Math.max(84,Math.min(108,H*.31)));K=(H-PCH)/150;cv.width=W*dpr;cv.height=H*dpr;leerPal();   // arriba, el gabinete; debajo, el taller
+    W=cv.clientWidth;H=cv.clientHeight;PCH=Math.round(Math.max(84,Math.min(108,H*.31)));TH=W<=900?96:0;K=(H-PCH-TH)/150;cv.width=W*dpr;cv.height=H*dpr;leerPal();   // arriba, el gabinete; debajo, el taller
   }
   addEventListener("resize",medida);
   matchMedia("(prefers-color-scheme:dark)").addEventListener("change",medida);
-  const X=i=>(i+1.5)/(ESTACIONES.length+1);
+  const AN=()=>W>900?.88:1;              // ancho del taller: en pantalla ancha, a la derecha vive Torre; en lo angosto, en un carril abajo
+  const DES=()=>DESCANSO*AN();
+  const X=i=>(i+1.5)/(ESTACIONES.length+1)*AN();
 
   // ---- primitivas
   const camino=(x,y,w,h,r)=>{g.beginPath();g.roundRect(x,y,w,h,r);};
@@ -1223,6 +1225,14 @@ const Taller=(()=>{
       return {cara:"triste",lagrima:true,incl:Math.sin(T*2)*.05+.1,brD:[13,-13],brI:[-13,-13],luz:ROJO,sube:-1,
         frente(){letra("!",24,-64+Math.sin(T*6)*2,18,ROJO);}};
     },
+    porrapc(T,s){
+      const h=Math.abs(Math.sin(T*7))*9;
+      return {cara:"feliz",boca:.5,sube:h,brD:[20,-50+Math.sin(T*14)*5],brI:[-20,-50-Math.sin(T*14)*5],
+        frente(){for(const q of [-1,1])for(let i=0;i<6;i++){const a=i*1.05+T*5,x=q*20+Math.cos(a)*6,y=-52-q*Math.sin(T*14)*5+Math.sin(a)*6;circ(x,y,2.6,i%2?AMAR:ROSA);}}};
+    },
+    mirapc(T){
+      return {cara:"wow",mira:3,incl:.05,brD:[20,-27],brI:[9,-40+Math.sin(T*5)*2]};
+    },
     // ---- reacciones a lo que pasa en la PC. `tope` = la altura del gabinete en sus unidades: el mini es más chico. Todo teatro: el letrero dice lo real
     abanico(T,s,tope=-108){
       const a=Math.sin(T*16);
@@ -1506,7 +1516,7 @@ const Taller=(()=>{
     const est=estacionDe(nom,e),i=ESTACIONES.findIndex(x=>x[0]===est);
     idx=i;
     const atras=nom==="rueda"?0:32*K/Math.max(W,1);
-    meta=i>=0?Math.max(.03,X(i)-atras):esAct(nom)?xAct():DESCANSO;
+    meta=i>=0?Math.max(.03,X(i)-atras):esAct(nom)?xAct():DES();
     if(!callado)Son.accion(nom);
   }
   const ir=e=>{
@@ -1525,8 +1535,8 @@ const Taller=(()=>{
   const ES_ACT=new Set(ACTIVIDADES),esAct=n=>ES_ACT.has(n)&&n!=="preguntar";
   const LIBRE_MS=1500,TERMINADA_S=20*60;
   const ESPERA_ETAPA={musica:"Esperando la música",sfx:"Esperando los efectos",mezcla:"Esperando la mezcla",subida:"Esperando la subida"};
-  let bolsa=[],actHasta=0,proxAct=0,ultAct="",ultProc=-1e9,libreDesde=0;
-  const xAct=()=>Math.max(DESCANSO,48*K/Math.max(W,1));     // en lo angosto se separa del borde para que quepa la utilería
+  let ultMira=-1e9,bolsa=[],actHasta=0,proxAct=0,ultAct="",ultProc=-1e9,libreDesde=0;
+  const xAct=()=>Math.max(DES(),48*K/Math.max(W,1));     // en lo angosto se separa del borde para que quepa la utilería
   const finZona=()=>xAct()+102*K/Math.max(W,1);             // hasta aquí llega la utilería: ningún mini se queda debajo
   function baraja(){
     const b=[...ACTIVIDADES];
@@ -1536,13 +1546,18 @@ const Taller=(()=>{
   }
   function sigueActividad(t){
     const fin=[...minis.values()].find(m=>m.fin&&!m.ida&&!m.duerme);
-    if(fin){A={nom:"quieto",ini:t,e:null};actHasta=0;meta=DESCANSO;return escena("entrega",fin);}   // terminó un ayudante: eso es real, va primero
+    if(fin){A={nom:"quieto",ini:t,e:null};actHasta=0;meta=DES();return escena("entrega",fin);}   // terminó un ayudante: eso es real, va primero
     if(t<actHasta)return;                // sigue la que toca
     if(A.nom!=="quieto"){poner("quieto",null,true);meta=xAct();proxAct=t+1200+Math.random()*600;return;}   // transición breve
     if(t<proxAct)return;
-    const urge=PZ.filter(p=>p.k!=="red"&&p.v!=null&&p.v>=95).sort((a,b)=>b.v-a.v)[0];
+    if(trabajaPC()&&t-ultMira>50000){    // la PC trabaja y él está libre: la mira, le echa porras o le da aire. El letrero dice su tarea real
+      ultMira=t;actHasta=t+8000;const n=["porrapc","mirapc","abanico"][Math.floor(Math.random()*3)];
+      poner(n,null,true);A.act=true;A.txt=letreroPC();if(W>900)meta=AN()-.035;Son.rx("rxUf");
+      return;
+    }
+    const urge=PZ.filter(p=>p.k!=="red"&&p.u!=null&&p.u>=95).sort((a,b)=>b.u-a.u)[0];
     if(urge&&t-ultAire>120000){          // una actividad más: le echa aire o la apaga; el letrero dice la cifra real
-      ultAire=t;actHasta=t+9000;poner(Math.random()<.5?"abanico":"extintor",null,true);A.act=true;A.txt=`${urge.nom} al ${pct(urge.v)} %`;meta=Math.max(.04,Math.min(.97,(urge.x+urge.bw/2)/W));Son.rx("pcFan");
+      ultAire=t;actHasta=t+9000;poner(Math.random()<.5?"abanico":"extintor",null,true);A.act=true;A.txt=`${urge.nom} al ${pct(urge.u)} %${urge.io?" de actividad":""}`;meta=Math.max(.04,Math.min(.97*AN(),(urge.x+urge.bw/2)/W));Son.rx("pcFan");
       return;
     }
     const pr=procesoPose();              // si corre un proceso, de vez en cuando va a ver cómo va: eso sí es real
@@ -1585,7 +1600,7 @@ const Taller=(()=>{
   function crear(f,dormido){
     const n=[...minis.values()].filter(x=>x.tipo===f.tipo).length;
     const dur=(i=>.095+i*.028)(minis.size);
-    const slot=dormido?dur:Math.min(.96,TM[f.tipo].x+n*.03);
+    const slot=dormido?dur:Math.min(.96,TM[f.tipo].x+n*.03)*AN();
     const m={id:f.id,tipo:f.tipo,desc:f.desc||"",activo:!!f.activo,x:dormido?slot:SALIDA,meta:slot,slot,dir:1,fase:Math.random()*6,duerme:!!dormido,visto:ahora};
     minis.set(f.id,m);return m;
   }
@@ -1620,7 +1635,7 @@ const Taller=(()=>{
     if(Esc.m){Esc.m.oye=Esc.m.grita=Esc.m.oculto=Esc.m.choca=false;}
     Esc=null;
     if(ESCENA_POSES.has(A.nom)||(A.nom==="lupa"&&idx<0))A={nom:"quieto",ini:ahora,e:null};
-    meta=DESCANSO;
+    meta=DES();
   }
   function escena(tipo,m){Esc={tipo,m,ini:ahora};if(tipo==="pregunta")ultPreg=ahora;if(tipo==="entrega")m.carga=m.tipo==="cargador"?"rollo":"papeles";}
   function lanzaEscena(t){               // solo con el principal parado: si un ayudante acaba de terminar, entrega su trabajo
@@ -1651,7 +1666,7 @@ const Taller=(()=>{
         if(E.nube){E.nube=0;m.oculto=false;peloHasta=t+9000;m.pelo=t+9000;act("manos");m.choca=true;}
       }else finEsc();
     }else if(E.tipo==="entrega"){
-      m.meta=Math.min(.96,Math.max(robotX,.03)+.055);
+      m.meta=Math.min(.96*AN(),Math.max(robotX,.03)+.055);
       if(!E.llego){
         if(Math.abs(m.x-m.meta)<.004){E.llego=t;act("chocar");m.choca=true;m.carga=null;Son.mini("choca",tono);}
         else if(f>9000){m.ida=true;m.meta=SALIDA;finEsc();}
@@ -1804,8 +1819,8 @@ const Taller=(()=>{
   const pz=k=>PZ.find(p=>p.k===k);
   const pc={t:-1e9,r:null,sinRed:0,temps:[],vista:false};
   const RED_REF=12.5;                    // 100 Mbps = 100 % en la escala de ánimo de la red: la API no da la capacidad del enlace
-  function cara(cx,cy,r,e,T){
-    const c=e.ala>.5?"#7a0c20":TINTA,oy=-r*.14,ox=r*.44,o=r*.34;
+  function cara(cx,cy,r,e,T,col){
+    const c=col||(e.ala>.5?"#7a0c20":TINTA),oy=-r*.14,ox=r*.44,o=r*.34;
     for(const s of [-1,1]){
       const x=cx+s*ox,y=cy+oy;
       if(e.ala>.5){g.beginPath();for(let i=0;i<16;i++){const a=i*.62+T*9*s,q=i/15*o*1.2;g.lineTo(x+Math.cos(a)*q,y+Math.sin(a)*q);}g.strokeStyle=c;g.lineWidth=1.1;g.stroke();}
@@ -1869,12 +1884,14 @@ const Taller=(()=>{
     const rc=Math.min(sw*.62,h*.22);circ(x+w/2,y0+sh*.5,rc*1.1,"#eef0f6");cara(x+w/2,y0+sh*.5,rc,e,T);
   }
   function piezaDisco(p,x,y,w,h,e,T){
-    const r=Math.min(w*.42,h*.42),cx=x+w/2,cy=y+h*.44,fr=(p.s||0)/100,io=pc.r?.io,act=io?(io.disco_lee||0)+(io.disco_esc||0):0;
+    const r=Math.min(w*.42,h*.42)*.92,cx=x+w/2,cy=y+h*.44,fr=(p.v||0)/100,act=p.io?p.io.act:0,gordo=1+.18*fr;   // lleno = un poco más ancho, nunca más caliente
+    g.save();g.translate(cx,cy);g.scale(gordo,1);g.translate(-cx,-cy);
     caja(cx-r*1.14,cy-r*1.14,r*2.28,r*2.28,3,"#2a3044");circ(cx,cy,r,"#c9cedb");
-    aro(cx,cy,r*.82,fr>.9?"#ff5d73":AZUL,r*.26,-1.57,-1.57+fr*6.28);
+    aro(cx,cy,r*.82,fr>.9?AMAR:AZUL,r*.26,-1.57,-1.57+fr*6.28);
     g.save();g.translate(cx,cy);g.rotate(p.a);raya(r*.3,0,r*.96,0,"#ffffffcc",1.2);raya(-r*.3,0,-r*.96,0,"#ffffff77",1);g.restore();
     circ(cx,cy,r*.56,"#eef0f6");cara(cx,cy+r*.03,r*.5,e,T);
-    circ(cx+r*1.0,cy+r*1.0,1.7,act>.05&&Math.sin(T*(6+Math.min(act,40)))>0?VERDE:"#3c4259");
+    circ(cx+r*1.0,cy+r*1.0,1.7,act>1&&Math.sin(T*(6+act*.3))>0?VERDE:"#3c4259");
+    g.restore();
   }
   function piezaRed(p,x,y,w,h,e,T){
     const a=y+h*.3,b=y+h*.56,lx=x+2,rx=x+w-2,io=pc.r?.io,mb=io?(io.red_baja||0)+(io.red_sube||0):0;
@@ -1899,21 +1916,21 @@ const Taller=(()=>{
     const tot=PZ.reduce((a,p)=>a+p.w,0),fin=PCH<92?10:12;let cx=ix+3;
     const vivo=ahora-pc.t<15000;
     for(const p of PZ){
-      const pw=(iw-6)*p.w/tot,en=vivo&&p.v!=null;
-      p.s+=((en?p.v:0)-p.s)*(1-Math.exp(-dt/900));
-      p.a+=dt*(.0006+(en?p.s/100:0)*.03);
-      const e=en?animo(p.s):{sue:0,sud:0,ago:0,ala:0},tb=e.ago*1.1+e.ala*.9,sx=Math.sin(T*38+p.w)*tb,sy=Math.cos(T*43)*tb*.6;
+      const pw=(iw-6)*p.w/tot,en=vivo&&p.v!=null,mov=en&&p.u!=null;
+      p.s+=((mov?p.u:0)-p.s)*(1-Math.exp(-dt/900));
+      p.a+=dt*(.0006+(mov?p.s/100:0)*.03);
+      const e=mov?animo(p.s):{sue:0,sud:0,ago:0,ala:0},tb=e.ago*1.1+e.ala*.9,sx=Math.sin(T*38+p.w)*tb,sy=Math.cos(T*43)*tb*.6;
       p.x=cx+2;p.y=iy+2;p.bw=pw-4;p.bh=ih-4;
       g.save();g.translate(sx,sy);
       caja(p.x+1,p.y+2,p.bw,p.bh-fin+2,3,"rgba(0,0,0,.35)");
-      if(!en)g.globalAlpha=.3;
-      DIBUJA[p.k](p,p.x,p.y,p.bw,p.bh-fin,en?e:{sue:1,sud:0,ago:0,ala:0},T);
+      if(!mov)g.globalAlpha=.3;
+      DIBUJA[p.k](p,p.x,p.y,p.bw,p.bh-fin,mov?e:{sue:1,sud:0,ago:0,ala:0},T);
       g.globalAlpha=1;
-      if(en)efectos(p,e,T);
+      if(mov)efectos(p,e,T);
       g.restore();
       const et=en?(p.k==="red"?(p.mb<10?coma(p.mb):Math.round(p.mb))+" MB/s":pct(p.v)+" %"):"—";
       g.font=`700 ${W<520?9:Math.max(9.5,fin-1.5)}px "Segoe UI",system-ui,sans-serif`;g.textAlign="center";g.textBaseline="middle";
-      g.fillStyle=en&&p.v>=85?"#ffb3bf":"#e9ebf3";g.fillText(`${p.nom} ${et}`,p.x+p.bw/2,p.y+p.bh-fin/2+1);g.textBaseline="alphabetic";
+      g.fillStyle=mov&&p.u>=85?"#ffb3bf":"#e9ebf3";g.fillText(`${p.nom} ${et}`,p.x+p.bw/2,p.y+p.bh-fin/2+1);g.textBaseline="alphabetic";
       cx+=pw;
     }
     g.restore();
@@ -1933,7 +1950,8 @@ const Taller=(()=>{
     if(p.k==="gpu")return `${(r.gpu.nombre||"GPU").replace("NVIDIA GeForce ","")} ${Math.round(p.v)} % · ${r.gpu.mem} de ${r.gpu.mem_total} MB${r.gpu.temp!=null?` · ${r.gpu.temp} °C`:""}`;
     if(p.k==="ram")return `RAM ${coma(r.ram.usado_gb)} de ${coma(r.ram.total_gb)} GB (${Math.round(p.v)} %)`;
     if(p.k==="red")return `Red ↓ ${coma(r.io.red_baja,2)} ↑ ${coma(r.io.red_sube,2)} MB/s`;
-    const d=(r.discos||[]).find(x=>x.unidad===p.nom);return `${p.nom} ${Math.round(p.v)} % · ${coma(d.libre_gb)} GB libres de ${d.total_gb}`;
+    const d=(r.discos||[]).find(x=>x.unidad===p.nom),io=p.io;
+    return `${p.nom} ${pct(p.v)} % · ${coma(d.libre_gb)} GB libres de ${d.total_gb} · ${io?`lee ${coma(io.lee)}, escribe ${coma(io.esc)} MB/s · actividad ${Math.round(io.act)} %`:"sin dato de actividad"}`;
   }
   const piezaEn=x=>PZ.find(p=>x>=p.x&&x<=p.x+p.bw);
 
@@ -1961,11 +1979,12 @@ const Taller=(()=>{
     const mb=io.red_baja==null?null:(io.red_baja||0)+(io.red_sube||0);
     const vals={cpu:r.cpu?.uso,gpu:r.gpu?.uso,ram:r.ram?.pct,c:dis("C:")?.pct,e:dis("E:")?.pct,red:mb==null?null:Math.min(100,mb/RED_REF*100)};
     for(const p of PZ){
-      const nv=vals[p.k]??null,antes=p.v;p.v=nv;p.mb=mb||0;
-      if(nv==null)continue;
+      const nv=vals[p.k]??null,antes=p.u,dq=p.k==="c"||p.k==="e"?(r.io_discos||{})[p.nom]||null:undefined;p.v=nv;p.mb=mb||0;
+      p.io=dq||null;p.u=dq===undefined?nv:(dq?dq.act:null);   // p.v es la cifra; p.u, lo que mueve el ánimo: en un disco, su lectura y escritura
+      if(p.u==null)continue;
       if(antes!=null&&pc.vista){
-        if(nv>=95&&antes<95&&t-(p.sonT||-1e9)>45000){p.sonT=t;Son.rx("pcAlarma");}
-        else if(nv>=85&&antes<85&&t-(p.sonT||-1e9)>45000){p.sonT=t;Son.rx("pcFan");}
+        if(p.u>=95&&antes<95&&t-(p.sonT||-1e9)>45000){p.sonT=t;Son.rx("pcAlarma");}
+        else if(p.u>=85&&antes<85&&t-(p.sonT||-1e9)>45000){p.sonT=t;Son.rx("pcFan");}
       }
       if(p.k!=="red"&&p.k!=="c"&&p.k!=="e"){if(nv>=85)p.alto=true;else if(p.alto&&nv<60){p.alto=false;quiere("normal",p,`${p.nom} de vuelta al ${Math.round(nv)} %`);}}
     }
@@ -1981,13 +2000,14 @@ const Taller=(()=>{
     if(C.v!=null&&C.v>=90)quiere("disco",C,`C: al ${pct(C.v)} %`,true);
     if(mb!=null&&mb<.01){pc.sinRed=pc.sinRed||t;if(t-pc.sinRed>60000)quiere("red",pz("red"),"Sin tráfico de red",true);}else pc.sinRed=0;
     pc.vista=true;
+    if(r.tarea!==undefined)datosTarea(r.tarea);
     if(prev<0&&!cola)ultRx.disco=ultRx.disco||0;
   }
   function lanzaRx(t){
     const c=RX[cola.tipo],lib=!pend&&!Esc&&principalAlDia()&&!A.e;
     const ms=enEscena().filter(m=>!m.duerme&&!m.fin);
     if(!lib&&!ms.length){if(t-cola.t>20000)cola=null;return;}
-    const x=cola.p?cola.p.x+cola.p.bw/2:0,xr=Math.max(.04,Math.min(.97,x/W));
+    const x=cola.p?cola.p.x+cola.p.bw/2:0,xr=Math.max(.04,Math.min(.97*AN(),x/W));
     Rx={tipo:cola.tipo,p:cola.p,ini:t,fin:t+c.dur,x:xr,ms:[]};
     ultRx[cola.tipo]=t;Son.rx(c.son);
     if(lib){
@@ -2002,8 +2022,8 @@ const Taller=(()=>{
     if(!Rx)return;
     const c=RX[Rx.tipo];
     for(const m of Rx.ms){
-      if(m.rx==="correr")m.meta=Math.max(.03,Math.min(.97,m.slot+Math.sin(t/330+m.rxI)*.05));
-      else if(c.aPieza)m.meta=Math.max(.03,Math.min(.97,Rx.x+(m.rxI+1)*.05*(Rx.x>.5?-1:1)));
+      if(m.rx==="correr")m.meta=Math.max(.03,Math.min(.97*AN(),m.slot+Math.sin(t/330+m.rxI)*.05));
+      else if(c.aPieza)m.meta=Math.max(.03,Math.min(.97*AN(),Rx.x+(m.rxI+1)*.05*(Rx.x>.5?-1:1)));
     }
     if(t>Rx.fin){for(const m of Rx.ms){m.rx=null;m.meta=m.slot;}Rx=null;}
   }
@@ -2019,6 +2039,131 @@ const Taller=(()=>{
       if(os>0){g.fillStyle=`rgba(4,5,12,${os.toFixed(2)})`;g.fillRect(0,0,W,H);}
       if(f<1800)for(let i=0;i<5;i++){const a=i*1.26+T*12;raya(x,PCH-8,x+Math.cos(a)*(10+Math.sin(T*30+i)*9),PCH-8+Math.sin(a)*(10+Math.sin(T*30+i)*9),"#ffe98a",2);}
     }
+  }
+
+  // ---- Torre: la PC hecha personaje, distinta de los robots. Hace animada la tarea real que `tarea_pc` clasificó en el servidor. Ella no crea minis ni estorba al principal
+  const AZ="#3f8fd8",TXT="#fffaf0";
+  const peli=(x,y,w,h)=>{caja(x,y,w,h,1,"#1b2030");for(let i=0;i<w/5-.5;i++){caja(x+1.4+i*5,y+1,2.4,1.5,.3,"#d7dbe6");caja(x+1.4+i*5,y+h-2.5,2.4,1.5,.3,"#d7dbe6");}};
+  const foto=(x,y,s,c)=>{caja(x,y,s,s*.78,1,c);marco(x,y,s,s*.78,1,TINTA,1);circ(x+s*.3,y+s*.25,s*.1,"#fff8");};
+  const cajita=(x,y,s)=>{caja(x,y,s,s*.8,1.5,"#a97a4f");marco(x,y,s,s*.8,1.5,"#7f5a38",1);raya(x+s/2,y,x+s/2,y+s*.8,"#7f5a38",1.2);};
+  const chispas=(x,y,T,c=AMAR)=>{for(let i=0;i<4;i++){const f=(T*2+i*.25)%1;raya(x+Math.cos(i*1.6+1)*f*20,y-Math.abs(Math.sin(i*1.6+1))*f*20,x+Math.cos(i*1.6+1)*(f*20+4),y-Math.abs(Math.sin(i*1.6+1))*(f*20+4),c,1.6);}};
+  const TAREAS={
+    render:[
+      {n:"amasar",f(T){const a=Math.sin(T*6)*9;return {brD:[42+a,-26],brI:[28+a,-26],incl:a*.004,atras(){caja(24,-17,56,17,1.5,MADERA);peli(28,-22,48,8);},frente(){caja(26+a,-32,26,8,4,"#e0c79a");}};}},
+      {n:"carretilla",f(T){const p=Math.sin(T*10)*5;return {pies:[p,-p],incl:.1,brD:[26,-26],brI:[24,-23],frente(){raya(22,-27,40,-12,MADERA,2.6);caja(38,-25,32,14,2,"#a97a4f");foto(40,-37,13,AZUL);foto(53,-35,12,ROJO);circ(60,-6,6.5,TINTA);g.save();g.translate(60,-6);g.rotate(T*8);raya(-6,0,6,0,"#aab",1.5);g.restore();}};}},
+      {n:"yunque",f(T){const c=Math.abs(Math.sin(T*6));return {brD:[38,-28-c*22],brI:[-20,-22],frente(){g.beginPath();g.moveTo(32,-26);g.lineTo(74,-26);g.lineTo(66,-18);g.lineTo(58,-18);g.lineTo(60,-6);g.lineTo(44,-6);g.lineTo(46,-18);g.lineTo(38,-18);g.closePath();g.fillStyle="#5a6480";g.fill();caja(40,-6,24,6,1,"#454d66");foto(44,-35,20,c<.3?"#ffb15a":"#ff7a2b");g.save();g.translate(38,-28-c*22);g.rotate(.9-c*1.2);caja(-1.5,-14,3,16,1,MADERA);caja(-7,-19,16,7,1.5,"#8791ad");g.restore();if(c<.3)chispas(54,-36,T);}};}},
+      {n:"horno",f(T){const a=(Math.sin(T*1.6)+1)/2;return {brD:[30,-24],brI:[26,-20],atras(){caja(30,-58,46,58,3,"#6f7892");marco(30,-58,46,58,3,TINTA,1.2);caja(35,-52,36,24,2,"#2a1a12");for(let i=0;i<3;i++)elip(43+i*10,-34-Math.abs(Math.sin(T*9+i))*6,4,8,i%2?AMAR:"#ff7a2b");caja(36,-18,34,3,1,"#3c4259");},frente(){const x=34-(1-a)*10;caja(x+a*8,-30,34,3,1,"#aab");foto(x+a*8+7,-41,17,a>.5?"#ffb15a":"#c98a3a");}};}},
+    ],
+    revisar:[
+      {n:"contraluz",f(T){const d=Math.sin(T*1.4)*6;return {brD:[34+d,-46],brI:[28+d,-40],atras(){caja(58,-68,16,10,2,AMAR);raya(66,-58,66,0,"#6f7892",2.6);for(let i=0;i<3;i++)raya(66,-58,44+i*10,-34,"#ffe98a55",4);},frente(){peli(26+d,-52,38,18);caja(36+d,-48,10,10,.5,"#ffe98a88");}};}},
+      {n:"comparar",f(T){const b=(T%1.8)<.9;return {brD:[34,-34],brI:[30,-26],atras(){foto(30,-44,24,AZUL);foto(56,-44,24,"#5b9bd8");},frente(){letra(b?"=":"≠",55,-22,16,b?VERDE:ROJO);}};}},
+      {n:"lupa",f(T){const x=46+Math.sin(T*2)*18;return {brD:[x-8,-22],brI:[-20,-22],frente(){peli(24,-18,52,14);aro(x,-22,11,"#c79a35",3);circ(x,-22,9.4,"#bfe6ff66");raya(x-8,-16,x-14,-8,MADERA,3);}};}},
+    ],
+    voz:[
+      {n:"partitura",f(T){return {boca:.3+.5*Math.abs(Math.sin(T*5)),brD:[28,-34+Math.sin(T*8)*6],brI:[-20,-24],atras(){raya(50,-34,50,0,"#6f7892",2.6);raya(50,0,42,3,"#6f7892",2);raya(50,0,58,3,"#6f7892",2);},frente(){caja(32,-58,36,26,1,TXT);for(let i=0;i<4;i++)raya(35,-53+i*5,65,-53+i*5,"#7f89a6",1);for(let i=0;i<4;i++)circ(39+i*7,-52+(i*2%4)*4,1.6,TINTA);letra("♪",24,-64-(T*14%14),11,ROSA);}};}},
+      {n:"gargaras",f(T){const a=(T%3)/3,alto=a<.6;return {boca:alto?.7:0,incl:alto?-.14:0,brD:[24,alto?-58:-30],brI:[-20,-24],frente(){const y=alto?-66:-38;caja(19,y,11,15,2,"#bfe6ff88");marco(19,y,11,15,2,"#fff",1);caja(20,y+6,9,8,1,AZ);if(alto)for(let i=0;i<4;i++){const f=(T*2+i/4)%1;aro(6+i*5,-66-f*12,1.8,"#bfe6ff",1);}}};}},
+      {n:"espejo",f(T){const a=Math.sin(T*3);return {boca:.2+.5*Math.abs(a),brD:[28,-32+a*5],brI:[-20,-30-a*5],atras(){elip(54,-40,17,27,"#7f5a38");elip(54,-40,14,24,"#bfe6ff");raya(44,-54,50,-46,"#fff",2);raya(54,-13,48,0,"#7f5a38",2.6);raya(54,-13,60,0,"#7f5a38",2.6);}};}},
+    ],
+    mezcla:[
+      {n:"consola",f(T){return {brD:[34,-24],brI:[52,-24],atras(){g.beginPath();g.moveTo(24,-18);g.lineTo(78,-18);g.lineTo(72,-30);g.lineTo(30,-30);g.closePath();g.fillStyle="#39415a";g.fill();caja(24,-18,54,18,1.5,"#2a3044");for(let i=0;i<6;i++){const y=-14+Math.sin(T*3+i*1.4)*3-1;raya(29+i*9,-16,29+i*9,-3,"#6f7892",1.4);caja(26+i*9,y+4,6,3.4,1,COLORES[i]);}}};}},
+      {n:"espagueti",f(T){const t=Math.sin(T*4)*3;return {brD:[34,-52],brI:[28,-50],atras(){caja(36,-20,40,20,3,"#8791ad");marco(36,-20,40,20,3,TINTA,1.2);elip(56,-20,20,4,"#5a6480");},frente(){for(let i=0;i<4;i++){g.beginPath();g.moveTo(32,-52);g.bezierCurveTo(38+i*5,-40+t,44+i*5,-34-t,44+i*7,-20);g.strokeStyle=COLORES[i];g.lineWidth=2.4;g.stroke();}}};}},
+      {n:"perillas",f(T){const a=Math.sin(T*2.4)*1.1;return {brD:[38,-36],brI:[-20,-22],atras(){caja(26,-60,50,60,2,"#39415a");for(let i=0;i<4;i++)caja(31,-54+i*6,40*(.4+.5*Math.abs(Math.sin(T*5+i))),3.4,1,i%2?VERDE:AMAR);},frente(){for(let i=0;i<2;i++){g.save();g.translate(38+i*24,-20);g.rotate(a*(i?-1:1));circ(0,0,9,"#d7dbe6");raya(0,0,0,-8,ROJO,2.4);g.restore();}}};}},
+    ],
+    transcribir:[
+      {n:"maquina",f(T){const n=Math.floor(T*2.6)%7,g2=Math.sin(T*18)*2;return {brD:[42,-22+g2],brI:[58,-22-g2],atras(){caja(36,-60+n*.5,34,34,.8,TXT);for(let i=0;i<n;i++)raya(39,-56+i*4.5,39+14+((i*7)%14),-56+i*4.5,"#7f89a6",1.3);},frente(){caja(30,-26,46,12,2,"#2a3044");caja(26,-16,54,16,3,"#39415a");for(let i=0;i<8;i++)circ(33+i*6,-10-(i%2)*4,1.8,"#d7dbe6");}};}},
+      {n:"dictado",f(T){return {gorro:1,brD:[36,-18+Math.sin(T*9)],brI:[-20,-24],atras(){for(let i=0;i<3;i++){const f=(T*.9+i/3)%1;g.globalAlpha=1-f;aro(26,-44,4+f*24,AZUL,1.4,-.8,.8);g.globalAlpha=1;}},frente(){caja(28,-22,34,22,1,TXT);for(let i=0;i<Math.floor(T*2)%4+1;i++)raya(31,-17+i*4.5,57,-17+i*4.5,"#7f89a6",1.3);}};}},
+      {n:"tira",f(T){const k=(T*.5)%1;return {boca:.5,brD:[26,-44],brI:[-20,-24],frente(){const a=30+k*18;caja(26,-50,a,14,1,TXT);for(let i=0;i<a/8-1;i++)raya(30+i*8,-46,35+i*8,-46,"#7f89a6",1.4),raya(30+i*8,-41,33+i*8,-41,"#7f89a6",1.4);circ(26+a,-43,7.5,"#e0c79a");circ(26+a,-43,2.4,"#a97a4f");}};}},
+    ],
+    descargas:[
+      {n:"pesca nube",f(T){const k=(T%3)/3,y=-58+k*38;return {brD:[28,-40],brI:[22,-34],frente(){for(const [x,r] of [[46,11],[59,14],[72,10]])circ(x,-74,r,"#d7dbe6");raya(24,-40,50,-62,MADERA,2.4);raya(50,-62,58,y,"#fff",1);foto(52,y,13,AZUL);letra("↓",64,y+5,9,VERDE);}};}},
+      {n:"cinta",f(T){const d=(T*20)%20;return {brD:[30,-26],brI:[26,-22],atras(){caja(26,-14,52,6,3,"#39415a");for(let i=0;i<5;i++)circ(31+i*11,-11,2,"#8791ad");raya(32,-8,30,0,"#6f7892",2.4);raya(72,-8,74,0,"#6f7892",2.4);for(let i=0;i<3;i++)cajita(72-((i*20+d)%46),-25,12);}};}},
+      {n:"cesta",f(T){const k=(T*.8)%1;return {brD:[34,-24],brI:[26,-24],frente(){foto(40+Math.sin(T*2)*6,-72+k*46,12,VERDE);g.beginPath();g.moveTo(26,-24);g.lineTo(62,-24);g.lineTo(56,-4);g.lineTo(32,-4);g.closePath();g.fillStyle="#b2803f";g.fill();g.strokeStyle="#8a5f2b";g.lineWidth=1.3;g.stroke();for(let i=1;i<4;i++)raya(26+i*9,-24,30+i*7,-4,"#8a5f2b",1);}};}},
+    ],
+    ia:[
+      {n:"pesas",f(T,s,I){const c=Math.abs(Math.sin(T*2.4)),h=-32-c*38;return {pies:[-4,4],brD:[28,h],brI:[-28,h],frente(){raya(-42,h,42,h,"#8791ad",3.4);for(const q of [-1,1]){caja(q*38-4,h-14,8,28,1.5,VERDE);caja(q*30-2.6,h-10,5.2,20,1.5,"#39415a");}}};}},
+      {n:"carrera",f(T){const p=Math.sin(T*16)*8,d=(T*30)%12;return {pies:[p,-p],sube:Math.abs(p)*.3+4,incl:.08,brD:[26,-30+p*.5],brI:[-26,-30-p*.5],atras(){caja(-34,-6,82,6,3,"#39415a");for(let i=0;i<8;i++)caja(-34+((i*12+d)%82),-6,5,6,.6,"#8791ad");raya(44,-5,50,-44,"#6f7892",3);caja(42,-50,20,9,2,VERDE);},frente(){g.globalAlpha=.5+.4*Math.sin(T*9);circ(0,-30,30,VERDE+"55");g.globalAlpha=1;}};}},
+      {n:"cerebro",f(T){return {cara:"foco",brD:[24,-46],brI:[-24,-46],sube:1,frente(){g.save();g.translate(50,44);circ(0,-86,17,ROSA);circ(-11,-82,11,ROSA);circ(11,-82,11,ROSA);for(let i=0;i<2;i++){g.save();g.translate(-8+i*16,-84);g.rotate(i?-T*4:T*4);for(let b=0;b<6;b++){g.rotate(1.047);caja(-1.4,-8.6,2.8,3.4,.5,"#8791ad");}circ(0,0,5.4,"#8791ad");circ(0,0,2.2,ROSA);g.restore();}g.restore();raya(22,-50,36,-44,"#fff9",1.2);}};}},
+    ],
+    subida:[
+      {n:"empaqueta",f(T){const a=(T%2)/2;return {brD:[32+a*36,-30],brI:[-20,-24],frente(){cajita(30,-30,40);caja(30,-23,a*40,5,0,AMAR);circ(30+a*40,-20,4,"#d7dbe6");letra("▲",50,-8,10,"#7f5a38");}};}},
+      {n:"estiba",f(T){const n=1+Math.floor(T*1.1)%4;return {brD:[34,-22-n*8],brI:[28,-22-n*8],frente(){for(let i=0;i<n;i++)cajita(44+(i%2)*2,-14-i*12,16);}};}},
+      {n:"cohete",f(T){const k=(T%3)/3,y=k>.5?(k-.5)*2*(-50):0;return {brD:[32,-30],brI:[-20,-24],frente(){g.save();g.translate(56,y);g.beginPath();g.moveTo(0,-46);g.quadraticCurveTo(13,-26,10,-12);g.lineTo(-10,-12);g.quadraticCurveTo(-13,-26,0,-46);g.closePath();g.fillStyle=TXT;g.fill();g.strokeStyle=TINTA;g.lineWidth=1.2;g.stroke();circ(0,-28,4,AZUL);elip(0,-6,5,8+Math.sin(T*30)*2,"#ff7a2b");g.restore();}};}},
+    ],
+    comprimir:[
+      {n:"uvas",f(T){const p=Math.sin(T*9)*7;return {pies:[p,-p],sube:Math.abs(p)*.5+6,dx:44,brD:[24,-38],brI:[-24,-38],atras(){caja(20,-20,50,20,3,"#7f5a38");for(let i=0;i<6;i++)circ(26+i*8,-20-(i%2)*2,4.5,LILA);raya(20,-13,70,-13,"#5a3e28",1.5);},frente(){caja(70,-10,16,4,1,"#7f5a38");circ(82,-3,3,LILA);}};}},
+      {n:"exprimir",f(T){const c=(Math.sin(T*3)+1)/2,w=28-c*16;return {brD:[42-w/2,-34],brI:[42+w/2,-34],frente(){peli(42-w/2,-44,w,20);for(let i=0;i<3;i++){const f=(T*1.8+i/3)%1;circ(42,-22+f*14,1.8,AZUL);}caja(34,-10,16,10,1,"#bfe6ff88");marco(34,-10,16,10,1,"#fff",1);}};}},
+      {n:"prensa",f(T){const c=(Math.sin(T*3.2)+1)/2,h=8+c*20;return {brD:[44,-58+c*12],brI:[-20,-24],atras(){raya(30,0,30,-66,"#6f7892",4);raya(72,0,72,-66,"#6f7892",4);raya(26,-66,76,-66,"#6f7892",4);},frente(){caja(32,-58+c*12,38,8,1,"#8791ad");foto(36,-h,30,AZUL);g.save();g.restore();}};}},
+    ],
+    libre:[
+      {n:"cafe",f(T){const b=(T%4)<1.2;return {cara:b?"sue":"bien",brD:[b?12:26,b?-46:-28],brI:[-20,-22],sube:0,frente(){const x=b?10:26,y=b?-52:-34;caja(x,y,13,13,3,TXT);aro(x+13,y+6,3.4,TXT,2,-1.5,1.5);humo(x+6,y-3,T);}};}},
+      {n:"salvapantallas",f(T){return {cara:"pant",sube:-3,brD:[22,-20],brI:[-22,-20]};}},
+      {n:"siesta",f(T){const r=Math.sin(T*1.3);if((T%2.6)<.05)parts.push({x:tx()+24*tq,y:ty()-74*tq,vx:6,vy:-16,v:1,c:LILA,txt:"z"});return {cara:"sue",incl:.05+r*.012,brD:[20,-18],brI:[-20,-18]};}},
+      {n:"estira",f(T){const a=(Math.sin(T*1.4)+1)/2;return {cara:a>.6?"bien":"sue",sube:a*4,brD:[14+a*12,-48-a*22],brI:[-14-a*12,-48-a*22]};}},
+    ],
+    generica:[
+      {n:"manivela",f(T){const a=T*5,hx=44+Math.cos(a)*9,hy=-28+Math.sin(a)*9;return {brD:[hx,hy],brI:[-20,-24],atras(){caja(30,-44,40,44,2,"#6f7892");marco(30,-44,40,44,2,TINTA,1.2);letra("?",50,-28,20,AMAR);},frente(){raya(44,-28,hx,hy,TINTA,2.6);circ(44,-28,3,"#d7dbe6");}};}},
+      {n:"engranes",f(T){return {brD:[26,-30],brI:[-20,-24],frente(){for(const [x,y,r,q] of [[42,-30,11,1],[62,-20,9,-1.2]]){g.save();g.translate(x,y);g.rotate(T*2.4*q);for(let b=0;b<8;b++){g.rotate(.785);caja(-2,-r-3,4,5,.8,"#8791ad");}circ(0,0,r,"#8791ad");circ(0,0,r*.35,"#39415a");g.restore();}}};}},
+      {n:"palanca",f(T){const c=Math.sin(T*3)*.5;return {brD:[34+Math.sin(c)*24,-34+Math.abs(c)*6],brI:[-20,-24],frente(){caja(28,-10,44,10,2,"#6f7892");for(let i=0;i<4;i++)circ(35+i*10,-5,2,Math.sin(T*5+i)>0?VERDE:"#3c4259");g.save();g.translate(50,-10);g.rotate(c);raya(0,0,0,-28,"#d7dbe6",3);circ(0,-30,4.5,ROJO);g.restore();}};}},
+    ],
+  };
+  const humo=(x,y,T)=>{for(let i=0;i<2;i++){const f=(T*.7+i/2)%1;g.globalAlpha=.8*(1-f);raya(x-1,y-f*12,x+1,y-f*12-4,"#fff",1.4);g.globalAlpha=1;}};
+  const TIPOS_PC={render:"render",revisar:"revisión",voz:"voz",mezcla:"mezcla",transcribir:"transcripción",descargas:"descarga",ia:"IA",subida:"subida",comprimir:"compresión",libre:"",generica:"tarea"};
+  const SON_TAREA={render:"rueda",revisar:"lupa",voz:"grabar",mezcla:"dj",transcribir:"teclear",descargas:"claqueta",ia:"pesas",subida:"subir",comprimir:"pcFan",generica:"boton"};
+  const To={tipo:"libre",dato:null,nuevo:"libre",v:null,vIni:0,vDur:10000,fase:0,a:0,son:-1e9,fija:null};
+  const zona=()=>W<=900?{x:W*.2,y:H-15,e:Math.min(1,(TH-16)/88)}:{x:(AN()+(1-AN())*.26)*W,y:sue+3*K,e:Math.min(K,(1-AN())*W/104)};
+  const tx=()=>zona().x,ty=()=>zona().y;let tq=1;
+  function datosTarea(d){                // necesita dos muestras iguales: una lectura suelta no cambia de oficio
+    To.dato=d||null;const n=d?d.tipo:"libre";
+    if(n===To.tipo)To.nuevo=n;
+    else if(n===To.nuevo){To.tipo=n;To.v=null;if(n!=="libre"&&ahora-To.son>20000&&SON_TAREA[n]){To.son=ahora;Son.rx(SON_TAREA[n]);}}
+    else To.nuevo=n;
+  }
+  const trabajaPC=()=>To.tipo!=="libre"&&ahora-pc.t<15000;
+  function letreroPC(){
+    const d=To.dato;if(ahora-pc.t>15000)return "";
+    if(!d||To.tipo==="libre")return "PC sin tareas";
+    const c=d.cpu||0,gp=d.gpu||0,cifra=gp>c?`GPU ${Math.round(gp)} %`:`CPU ${Math.round(c)} %`;
+    return `${d.nombre||TIPOS_PC[To.tipo]} · ${cifra}`;
+  }
+  function dibujaTorre(t,dt){
+    const z=zona(),T0=t/1000,L=TAREAS[To.tipo],d=To.dato;tq=z.e;
+    if(W<=900){g.fillStyle=pal["--muro2"];g.fillRect(0,H-TH,W,TH-12);g.fillStyle=pal["--suelo"];g.fillRect(0,H-22,W,22);}
+    else{g.fillStyle="rgba(0,0,0,.14)";g.fillRect(AN()*W+4,PCH+4,W-AN()*W-8,sue+4*K-PCH-4);caja(AN()*W+6,sue+2*K,W-AN()*W-12,6*K,3,pal["--mesa"]);}
+    const I=!d||ahora-pc.t>15000?0:Math.max(0,Math.min(1,Math.max(d.cpu||0,d.gpu||0)/100));
+    To.fase+=dt/1000*(.7+I*1.5);To.a+=dt*(.001+I*.03);
+    if(!To.v||!L.includes(To.v)||t-To.vIni>To.vDur){const o=L.filter(v=>v!==To.v);To.v=To.fija||o[Math.floor(Math.random()*o.length)]||L[0];To.vIni=t;To.vDur=9000+Math.random()*3000;}
+    const P=To.v.f(To.fase,(t-To.vIni)/1000,I),e=animo(I*100);
+    g.fillStyle="rgba(0,0,0,.22)";g.beginPath();g.ellipse(z.x,z.y+1,24*z.e,4*z.e,0,0,7);g.fill();
+    g.save();g.translate(z.x,z.y);g.scale(z.e,z.e);
+    if(P.atras)P.atras();
+    cuerpoTorre(P,e,T0,I);
+    if(P.frente)P.frente();
+    g.restore();
+    rotulo(letreroPC(),W<=900?W*.62:z.x+(W-z.x)*.1,W<=900?H-TH+3:sue-96*K);
+  }
+  function cuerpoTorre(P,e,T,I){
+    const [a,b]=P.pies||[0,0],A0="#39415a",sac=Math.sin(T*40)*e.ago*.9;
+    g.save();g.translate((P.dx||0)+sac,-(P.sube||0));g.rotate(P.incl||0);
+    g.beginPath();g.moveTo(-20,-14);g.bezierCurveTo(-34,-14+Math.sin(T*3)*4,-30,-2,-44,-3);g.strokeStyle=TINTA;g.lineWidth=2.6;g.lineCap="round";g.stroke();caja(-52,-7,9,7,1.5,"#d7dbe6");raya(-52,-5,-55,-5,"#d7dbe6",1.4);raya(-52,-2,-55,-2,"#d7dbe6",1.4);
+    for(const [x,q] of [[-11,a],[11,b]]){raya(x,-11,x+q,-3,TINTA,3.8);caja(x+q-5,-4.5,12,4.5,2.2,TINTA);}
+    brazo(-20,-40,P.brI||[-24,-20]);
+    caja(-22,-72,46,62,5,"#1f2433");caja(-22,-72,41,62,5,A0);marco(-22,-72,41,62,5,"#6f7892",1.4);
+    if(e.ago>.02){g.globalAlpha=e.ago*.35;caja(-22,-72,41,62,5,"#ff2b45");g.globalAlpha=1;}
+    caja(-18,-68,33,25,3.5,"#0b0e16");marco(-18,-68,33,25,3.5,"#7f89a6",1);
+    const cx=-1.5,cy=-55.5;
+    if(P.cara==="pant"){const q=2.4+T;const bx=cx-10+((Math.abs(((q*7)%40)-20))),by=cy-6+Math.abs(((q*5)%24)-12);caja(bx-3,by-2,7,4.6,1,COLORES[Math.floor(q)%6]);}
+    else if(P.cara==="foco"){cara(cx,cy,9.5,{sue:0,sud:1,ago:0,ala:0},T,OJO);}
+    else if(P.cara==="sue")cara(cx,cy,9.5,{sue:1,sud:0,ago:0,ala:0},T,OJO);
+    else if(P.cara==="bien")cara(cx,cy,9.5,{sue:0,sud:0,ago:0,ala:0},T,OJO);
+    else cara(cx,cy,9.5,e,T,OJO);
+    if(P.boca&&P.cara!=="pant")elip(cx,cy+5.5,2.8,1.2+P.boca*3,ROSA);
+    for(let i=0;i<2;i++){const fx=-11+i*19,fy=-30;circ(fx,fy,8.2,"#10131b");aro(fx,fy,8.2,"#6f7892",1);g.save();g.translate(fx,fy);g.rotate(To.a+i);for(let k=0;k<5;k++){g.rotate(1.257);elip(4.4,0,3.8,1.6,"#b9c2d9",.5);}g.restore();}
+    circ(-14,-16,1.7,I>.02?VERDE:"#3c4259");caja(-8,-17,18,2,1,"#2a3044");
+    if(e.sud>.02)for(const s of [-1,1]){const f=(T*1.1+(s+1)*.3)%1;g.globalAlpha=e.sud*(1-f);elip(-1+s*16,-74+f*16,1.8,2.8,AZUL);g.globalAlpha=1;}
+    if(e.ago>.02)for(let i=0;i<3;i++){const f=(T*.8+i/3)%1;g.globalAlpha=e.ago*.6*(1-f);raya(-12+i*10,-74-f*10,-10+i*10,-80-f*10,"#fff",1.4);g.globalAlpha=1;}
+    if(e.ala>.02)for(let i=0;i<3;i++){const f=(T*.6+i/3)%1;g.globalAlpha=e.ala*.6*(1-f);circ(-10+i*9,-76-f*10,3+f*4,"#9aa0ae");g.globalAlpha=1;}
+    brazo(19,-40,P.brD||[24,-20]);
+    g.restore();
   }
   function nube(xpx,t){                  // pelea de caricatura: polvo, estrellas y un brazo y un pie que asoman
     const T=t/1000,y=sue-24*K;
@@ -2046,7 +2191,7 @@ const Taller=(()=>{
     g.fillStyle=pal["--muro2"];
     for(let i=0;i<10;i++){const x=(i+.5)/10*W;camino(x-34*K,PCH+4,68*K,(suelo-PCH)*.5,8);g.fill();}
     g.fillStyle=pal["--suelo"];g.fillRect(0,suelo,W,H-suelo);
-    const by=H-15;
+    const by=H-TH-15;
     g.fillStyle=pal["--mesa"];g.fillRect(0,by,W,10);
     g.fillStyle=pal["--muro2"];
     const des=(t*.03)%36;
@@ -2054,7 +2199,7 @@ const Taller=(()=>{
     for(let x=-120+(t*.03)%120;x<W;x+=120){g.fillStyle=pal["--acc"];g.globalAlpha=.6;camino(x,by-9,16,10,2);g.fill();g.globalAlpha=1;}
   }
   function rincon(t){                    // el descanso: tapete, cojín, planta y una taza que humea; nunca se ilumina
-    const n=ESTACIONES.length+1,x=DESCANSO*W,base=sue,e=Math.min(K,W/n/38);
+    const n=ESTACIONES.length+1,x=DES()*W,base=sue,e=Math.min(K,W*AN()/n/38);
     elip(x,base+4*K,24*e,5*e,pal["--muro2"]);
     caja(x+9*e,base-11*e,12*e,13*e,3*e,pal["--mesa"]);
     raya(x+15*e,base-11*e,x+15*e,base-22*e,VERDE,2*e);
@@ -2068,7 +2213,7 @@ const Taller=(()=>{
     if(W>=520)g.fillText("Descanso",x,base+15*K);
   }
   function estacion(i,t,enAccion){
-    const n=ESTACIONES.length+1,x=X(i)*W,base=sue,act=i===idx,e=Math.min(K,W/n/38),w=46*e;
+    const n=ESTACIONES.length+1,x=X(i)*W,base=sue,act=i===idx,e=Math.min(K,W*AN()/n/38),w=46*e;
     if(act){
       const gr=g.createRadialGradient(x,base-30*K,4,x,base-30*K,70*K);
       gr.addColorStop(0,pal["--acc"]+"55");gr.addColorStop(1,pal["--acc"]+"00");g.fillStyle=gr;g.fillRect(x-74*K,base-104*K,148*K,116*K);
@@ -2104,7 +2249,7 @@ const Taller=(()=>{
   function pinta(t,dt){
     if(!W)medida();
     if(!W||!H)return;
-    ahora=t;sue=PCH+(H-PCH)*.72;
+    ahora=t;sue=PCH+(H-PCH-TH)*.72;
     g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,W,H);
     if(pend&&Esc&&pend.e)finEsc();          // llegó trabajo real: se acaba el teatro
     if(pend&&pend.e&&(A.act||esAct(A.nom)||A.nom==="quieto")){ultReal=t;poner(pend.nom,pend.e);}   // y las actividades y reacciones se cortan al instante
@@ -2124,12 +2269,12 @@ const Taller=(()=>{
     const dif=meta-robotX,anda=Math.abs(dif)>.003;
     if(anda){robotX+=Math.sign(dif)*Math.min(Math.abs(dif),dt*.00042*(1+Math.min(3,Math.abs(dif)*9)));dir=dif>0?1:-1;paso+=dt*.016;llego=0;}
     else{robotX=meta;dir=1;if(!llego)llego=t;}
-    fondo(t);gabinete(t,dt);rincon(t);
+    fondo(t);gabinete(t,dt);rincon(t);dibujaTorre(t,dt);
     const conProp=!anda&&!!EST_ACCION[A.nom];
     for(let i=0;i<ESTACIONES.length;i++)estacion(i,t,conProp);
     if(W<900&&esAct(A.nom)&&!anda){      // en lo angosto la utilería tapa estaciones que no se usan: un velo las aparta
       const x0=X(0)*W-34*K,x1=finZona()*W+6*K;
-      if(x1>x0){g.globalAlpha=.88;g.fillStyle=pal["--muro"];g.fillRect(x0,PCH,x1-x0,sue+6*K-PCH);g.fillStyle=pal["--suelo"];g.fillRect(x0,sue+6*K,x1-x0,H-15-sue-6*K);g.globalAlpha=1;}
+      if(x1>x0){g.globalAlpha=.88;g.fillStyle=pal["--muro"];g.fillRect(x0,PCH,x1-x0,sue+6*K-PCH);g.fillStyle=pal["--suelo"];g.fillRect(x0,sue+6*K,x1-x0,H-TH-15-sue-6*K);g.globalAlpha=1;}
     }
     pasaMinis(t,dt,anda);
     const vis=visibles();
@@ -2165,7 +2310,7 @@ const Taller=(()=>{
     const r=cv.getBoundingClientRect(),py=ev.clientY-r.top,p=py<PCH?piezaEn(ev.clientX-r.left):null;
     if(p){tip={p,hasta:ahora+6000};return;}   // en el gabinete, el detalle de la pieza; abajo sigue la gracia del robot
     poner(VARIAS[Math.floor(Math.random()*VARIAS.length)]);A.ini+=1800;actHasta=ahora+3500;});   // la gracia dura más que una acción normal
-  return {ir,pinta,poner,POSES,sync,escena,TM,VM,ACTIVIDADES,minis:()=>minis,finEsc,reposo,datosPC,piezas:()=>PZ,quiere,limpiaRx:()=>{ultRx={};cola=null;pc.sinRed=0;pc.temps=[];},estado:()=>({rx:Rx&&Rx.tipo,letrero,nom:A.nom,x:robotX,meta,estacion:ESTACIONES[idx]?.[0]||null,esc:Esc&&Esc.tipo})};
+  return {ir,pinta,poner,POSES,sync,escena,TM,VM,ACTIVIDADES,minis:()=>minis,finEsc,reposo,datosPC,piezas:()=>PZ,quiere,TAREAS,datosTarea,torre:To,limpiaRx:()=>{ultRx={};cola=null;pc.sinRed=0;pc.temps=[];},estado:()=>({rx:Rx&&Rx.tipo,letrero,nom:A.nom,x:robotX,meta,estacion:ESTACIONES[idx]?.[0]||null,esc:Esc&&Esc.tipo})};
 })();
 
 // ---------------------------------------------------------- la PC: cifras reales, nunca con la pestaña oculta

@@ -292,6 +292,10 @@ def _muestrear():
                 d["error_procesos"] = str(e)
             c["t_proc"] = ahora
         d["procesos"], d["otros"], d["n_python"], d["n_ffmpeg"] = c["proc"]
+        vivo = _vivo()
+        d["io_discos"] = vivo.tasas_discos(c)
+        d["tarea"] = vivo.tarea_pc(d)                    # la clasifica con `cmd`, que de aquí no sale: el panel remoto da a internet
+        d["procesos"] = [vivo.proceso_publico(tr) for tr in d["procesos"]]
     if d["gpu"]:
         quien = {}
         for tr in d.get("procesos") or []:

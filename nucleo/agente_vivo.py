@@ -21,6 +21,7 @@ import json
 import os
 import re
 import shutil
+import struct
 import tempfile
 import threading
 import time
@@ -801,6 +802,114 @@ class Sesion:
     def video(self):
         """El video de esta sesión: el que más produjo o, si aún no produjo nada, el que nombra su título. Si no, ninguno."""
         return self.produce.most_common(1)[0][0] if self.produce else _video_del_titulo(self.titulo)
+
+
+# ---------------------------------------------------------- qué hace la PC: la tarea real, clasificada aquí para que `cmd` no salga por la API
+TAREA_MIN_CPU = 2.5                    # % del total: por debajo es vigilancia, no tarea
+_NO_TAREA = re.compile(r"Panel de la f[aá]brica|panel_remoto|monitor_server|esperar_respuestas|enviar_lote|baileys|server\.js|^node$", re.I)
+_TIPOS_TAREA = (("subida", re.compile(r"fab\.py yt (subir|aplicar|publicar)|pagina\.py.*programar|\bupload", re.I)),
+                ("comprimir", re.compile(r"comprim|compress|libx265|hevc", re.I)),
+                ("revisar", re.compile(r"medir_brillo|verificar|comprobar|revis[ae]|hoja_", re.I)),
+                ("voz", re.compile(r"chatterbox|applio|rvc|tts_|fab\.py (voz|seleccionar)", re.I)),
+                ("transcribir", re.compile(r"whisper|transcrib|fab\.py tiempo", re.I)),
+                ("mezcla", re.compile(r"mezcla|demucs|armar_musica|armar_ost|lyria|fab\.py (musica|sfx|ambiente)", re.I)),
+                ("descargas", re.compile(r"yt[-_]dlp|fab\.py bajar|descarg", re.I)),
+                ("ia", re.compile(r"tactica|\bwan\b|comfy|flux|torch", re.I)),
+                ("render", re.compile(r"ffmpeg|secuencia|render|fab\.py (video|final|todo|fx|montaje|escena|prueba)", re.I)))
+
+
+def tarea_pc(d):
+    """{tipo, nombre, video, cpu, gpu} de lo que más carga la PC ahora, con solo lo que puede salir a internet.
+    Un proceso que no se reconoce es `generica`, sin inventar qué hace; sin procesos con carga, `libre`."""
+    try:
+        gpu = d.get("gpu") or {}
+        en_gpu = {g.get("pid") for g in gpu.get("procesos") or []}
+        cpu_pc, gpu_pc = (d.get("cpu") or {}).get("uso") or 0, gpu.get("uso") or 0
+        mejor, puntos = None, 0.0
+        for tr in d.get("procesos") or []:
+            texto = " ".join([tr.get("rol") or "", tr.get("cmd") or ""] + [h.get("rol") or "" for h in tr.get("hijos") or []])
+            if _NO_TAREA.search(tr.get("rol") or ""):
+                continue
+            usa_gpu = bool(en_gpu & ({tr.get("pid")} | {h.get("pid") for h in tr.get("hijos") or []}))
+            p = max(tr.get("cpu_total") or 0, gpu_pc if usa_gpu else 0)
+            if p >= TAREA_MIN_CPU and p > puntos:
+                mejor, puntos = (tr, texto, usa_gpu), p
+        if not mejor:
+            if max(cpu_pc, gpu_pc) >= 60:
+                return dict(tipo="generica", nombre="Otros programas", video=None, cpu=cpu_pc, gpu=gpu_pc)
+            return dict(tipo="libre", nombre="", video=None, cpu=cpu_pc, gpu=gpu_pc)
+        tr, texto, usa_gpu = mejor
+        tipo = next((k for k, rx in _TIPOS_TAREA if rx.search(texto)), "ia" if usa_gpu and gpu_pc >= 30 else "generica")
+        nombre = _corto(tapar(tr.get("rol") or tr.get("nombre") or "proceso"), 34)
+        return dict(tipo=tipo, nombre=nombre, video=tr.get("video"), cpu=cpu_pc, gpu=gpu_pc)
+    except Exception:                      # noqa: BLE001  (una tarea mal leída no debe parar el muestreo)
+        return None
+
+
+def proceso_publico(tr):
+    """Un trabajo tal como sale por /api/v2/sistema: sin `cmd`, que puede llevar claves, y con `rol` tapado."""
+    d = {k: v for k, v in tr.items() if k != "cmd"}
+    d["rol"] = tapar(d.get("rol") or "")
+    d["hijos"] = [dict(h, rol=tapar(h.get("rol") or "")) for h in tr.get("hijos") or []]
+    return d
+
+
+# ---------------------------------------------------------- actividad por disco: el tiempo ocupado que da Windows, en 100 ns
+def _ioctl(ruta, codigo, tam):
+    import ctypes
+    from ctypes import wintypes
+    k = ctypes.WinDLL("kernel32", use_last_error=True)
+    k.CreateFileW.restype = wintypes.HANDLE
+    k.CreateFileW.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, wintypes.LPVOID, wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE]
+    k.DeviceIoControl.argtypes = [wintypes.HANDLE, wintypes.DWORD, wintypes.LPVOID, wintypes.DWORD, wintypes.LPVOID, wintypes.DWORD,
+                                  ctypes.POINTER(wintypes.DWORD), wintypes.LPVOID]
+    k.CloseHandle.argtypes = [wintypes.HANDLE]
+    h = k.CreateFileW(ruta, 0, 3, None, 3, 0, None)
+    if h in (None, wintypes.HANDLE(-1).value):
+        return None
+    try:
+        b = ctypes.create_string_buffer(tam)
+        n = wintypes.DWORD()
+        return b.raw if k.DeviceIoControl(h, codigo, None, 0, b, tam, ctypes.byref(n), None) else None
+    finally:
+        k.CloseHandle(h)
+
+
+def _disco_de(unidad):
+    """El PhysicalDrive de una unidad, o None si no se puede decir con certeza (varios discos, unidad virtual)."""
+    b = _ioctl("\\\\.\\" + unidad, 0x00560000, 256)            # IOCTL_VOLUME_GET_VOLUME_DISK_EXTENTS
+    if not b:
+        return None
+    return struct.unpack_from("<I", b, 8)[0] if struct.unpack_from("<I", b, 0)[0] == 1 else None
+
+
+def tasas_discos(c):
+    """{unidad: {lee, esc, act}} en MB/s y % de tiempo ocupado desde la lectura anterior. Lo que no se pueda medir no sale."""
+    try:
+        if os.name != "nt":
+            return {}
+        ahora = time.time()
+        m = c.get("disco_mapa")
+        if not m or ahora - m[0] > 600:
+            m = c["disco_mapa"] = (ahora, {u: _disco_de(u) for u in ("C:", "E:")})
+        antes, nuevo, out = c.get("disco_perf") or {}, {}, {}
+        for u, n in m[1].items():
+            b = None if n is None else _ioctl(f"\\\\.\\PhysicalDrive{n}", 0x00070020, 256)   # IOCTL_DISK_PERFORMANCE
+            if not b:
+                continue
+            leidos, escritos, _, _, ocioso = struct.unpack_from("<qqqqq", b, 0)
+            reloj = struct.unpack_from("<q", b, 56)[0]
+            nuevo[n] = (leidos, escritos, ocioso, reloj)
+            q = antes.get(n)
+            if q and reloj > q[3]:
+                dt = reloj - q[3]                              # 100 ns
+                s = dt / 1e7
+                out[u] = dict(lee=round((leidos - q[0]) / s / 1048576, 1), esc=round((escritos - q[1]) / s / 1048576, 1),
+                              act=round(min(100.0, max(0.0, 100 * (1 - (ocioso - q[2]) / dt))), 1))
+        c["disco_perf"] = nuevo
+        return out
+    except Exception:                      # noqa: BLE001  (sin esta cifra el disco sale apagado, no se inventa)
+        return {}
 
 
 _SES = {}

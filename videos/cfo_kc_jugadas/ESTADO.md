@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: Crónicas de ligoleyen (UCXU8DV4QJ24yhwXmrR_eLhw; subida por Studio en el navegador, NO está en la API) · publicar hoy jue 29-oct-2026 por la noche (serie CFO-KC, Bo3, empezó 14:00 CDMX)
 - estilo: análisis táctico como `t1_koi_worlds` (secuencia_yt + VOD + telestrador `mg_tactica` + `mg_lol` + mesas/capas 3D) → doc: docs/estilo_analisis_tactico.md
-- etapa: ✅ MASTER LISTO 29-oct 18:12 (17:30, salida/cfo_kc_jugadas_MASTER.mp4 + .srt); falta subir por Studio
-- siguiente: guion.py (G1) → al terminar la serie: datos_g2/g3 → voz → jugadas/3D → render → subida (ver «En curso»)
+- etapa: ✅ SUBIDO por Studio y PROGRAMADO jue 29-oct-2026 20:00 CDMX · https://youtu.be/6wVhlBKp5yA (MASTER 17:30) con miniatura «LAS JUGADAS CLAVE» (sin spoiler), 18 etiquetas, «no para niños», IA «No», anuncios + mid-roll, idoneidad «Nada de lo anterior» (adecuado para anuncios), sin problemas de derechos; .srt: ver «siguiente»
+- siguiente: subir salida/cfo_kc_jugadas.srt en Studio (Subtítulos → Subir archivo → Con marcas de tiempo; el selector lo elige el usuario) → cierre: lecciones en docs/estilo_analisis_tactico.md
 
 ## Sesiones (plan de tramos · «continúa el video cfo_kc_jugadas» retoma aquí · protocolo docs/sesiones.md)
 - alias: CFO vs KC de hoy, análisis CFO KC, partido de KC
@@ -13,7 +13,13 @@
 |---|---|---|---|
 | 1 | investigación G1 + guion de la G1 + estructura para G2/G3 | ◐ parcial | 29-oct 14:50-15:40 feed/VOD/desfase/Whisper/fuentes; 15:50 K medido + datos_g1.md; falta guion.py (corte por contexto) |
 | 2 | G2 + guion + voz + tiempos | ◐ parcial | 29-oct 16:15-16:45 (sesión 3, cortada por contexto): guion, voz 85/85, tiempo 1039 s, beats 121 |
-| 3 | efectos.py (jugadas con pausas/3D, boleta) → capas 3D → render_par → vivos_audio → mezcla → final → verificar → Studio | ◐ MASTER listo, falta Studio | 29-oct 17:00-18:05 (sesión 5, cortada por contexto): correcciones G2 + voz, medios, efectos.py, boleta, capas 3D, música 7/8 |
+| 3 | efectos.py (jugadas con pausas/3D, boleta) → capas 3D → render_par → vivos_audio → mezcla → final → verificar → Studio | ✅ 29-oct | 17:00-18:12 (sesión 5): correcciones G2 + voz, medios, efectos.py, boleta, capas 3D, MASTER 17:30 · 18:25-18:50 (sesión 6): Studio → https://youtu.be/6wVhlBKp5yA programado 20:00 CDMX |
+
+## Lecciones de la subida (29-oct, sesión 6)
+- NO usar window.open desde Studio en el navegador integrado: abre en la MISMA pestaña, saca a Studio de la página y corta la subida
+  (se reanudó al volver a elegir el archivo: mismo borrador y mismo id). Studio tampoco carga 127.0.0.1 (fetch, img ni iframe: CSP).
+  Miniatura y .srt: que el usuario los elija en el selector (2 clics); interceptar el input de archivo lo bloquea el modo automático.
+- Escape en «Detalles» CIERRA el diálogo (las etiquetas escritas sin chip se pierden): escribirlas con coma y Enter. La visibilidad viene en «Oculto»: abrir «Programar».
 
 ## Decisiones (el usuario, 29-oct-2026)
 - «análisis de las mejores jugadas y los movimientos más inteligentes, las mejores predicciones… escenas 3D con pausas, flechas,

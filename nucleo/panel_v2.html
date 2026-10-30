@@ -204,6 +204,7 @@ body.sin-lado #vista{left:0}
 .bp:hover{border-color:var(--line2);background:var(--hover)}
 .bp small{color:var(--mut)}
 .bp.prim{background:var(--txt);color:var(--bg);border-color:var(--txt)}
+a.bp{color:var(--txt);text-decoration:none}
 .portada{position:relative;margin:0 14px;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--panel2);cursor:pointer}
 .portada img,.portada video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 .portada.vert img,.portada.vert video{object-fit:contain}
@@ -453,6 +454,7 @@ dl.meta dd{margin:0;overflow-wrap:anywhere}
     <button class="bt" data-pop="av" id="bt-av" title="Avisos por voz">🔔 <span class="cuenta" id="n-av" style="display:none">0</span></button>
     <button class="bt" data-acc="estilos" id="bt-est" title="Muestra en el lienzo un video de ejemplo por cada estilo de la fábrica">🎨 <span class="txt">Estilos</span></button>
     <button class="bt" data-acc="canales" title="Calendario y estadísticas de los canales">📅 <span class="txt">Canales</span></button>
+    <a class="bt" href="/v2/vivo" title="Lo que el agente hace ahora, animado: imágenes que mira, código que escribe, comandos y etapas">🤖 <span class="txt">En vivo</span></a>
     <a class="bt" href="/" title="El panel de siempre (tarjetas)">▤ <span class="txt">Clásico</span></a>
     <button class="bt ico" data-acc="tema" title="Cambiar tema claro/oscuro">◐</button>
   </div>
@@ -872,6 +874,7 @@ function pieHTML(p,ab,enTablero){            // enTablero: sin «abrir», que en
   const b=(acc,txt,tit,extra="",cls="")=>`<button class="bp ${cls}" data-acc="${acc}" data-v="${esc(p.nombre)}" title="${esc(tit)}"${extra}>${txt}</button>`;
   let h=enTablero?"":b("abrir",ab?"⤡ Contraer":"⤢ Abrir tablero","Abre en el lienzo todo lo producido: guion y voz, imágenes y clips, audio, pruebas y entrega","",ab?"":"prim");
   if(p.master)h+=b("master","▶ Video","Reproducir salida/"+p.master);
+  h+=`<a class="bp" href="/v2/vivo?video=${encodeURIComponent(p.nombre)}" title="Lo que el agente hace en este video, animado">🤖 En vivo</a>`;
   const mj=(p.secuencia&&p.secuencia.total)?`${p.secuencia.hechos}/${p.secuencia.total}`:(p.montaje&&p.montaje.total)?`${p.montaje.hechos}/${p.montaje.total}`:null;
   if(mj)h+=b("montaje",`🎞 Montaje <small>${mj}</small>`,"Línea de tiempo con voz y música (el Montaje del panel)");
   if(p.etapas.tiempo&&p.etapas.tiempo.estado==="listo"&&!p.secuencia)h+=b("previa","🔍 Vista previa","Cuadros exactos del motor del render final, escenas fluidas y clips");

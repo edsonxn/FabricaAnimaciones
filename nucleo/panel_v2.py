@@ -594,6 +594,39 @@ def revelar(nombre, rel):
 
 
 # ======================================================================== rutas (las llama panel.Manejador)
+def _vivo():
+    """El lector del agente (agente_vivo.py), recargado si cambió, como este módulo: no exige reiniciar el panel."""
+    import importlib
+    import agente_vivo as m
+    t = os.path.getmtime(m.__file__)
+    c = _compartido()
+    if c.get("vivo_t") not in (None, t):
+        m = importlib.reload(m)
+    c["vivo_t"] = t
+    return m
+
+
+_VIVO = {"t": 0.0}
+
+
+def proyecto_vivo(nombre):
+    """Etapas del video para /v2/vivo: del último estado calculado, sin pedir otro escaneo más de una vez cada 20 s."""
+    if not nombre:
+        return None
+    if time.time() - _VIVO["t"] > 20:
+        _VIVO["t"] = time.time()
+        estado_rapido()
+    v = P._est.get("v") or {}
+    p = next((x for x in v.get("proyectos") or [] if x.get("nombre") == nombre), None)
+    if not p:
+        return None
+    E = p.get("etapas") or {}
+    return dict(titulo=p.get("titulo") or nombre, canal=p.get("canal"), progreso=p.get("progreso") or 0, etapa_actual=p.get("etapa_actual"),
+                etapas=[dict(id=e["id"], nombre=e["nombre"], estado=(E.get(e["id"]) or {}).get("estado"),
+                             progreso=(E.get(e["id"]) or {}).get("progreso") or 0, detalle=(E.get(e["id"]) or {}).get("detalle") or "")
+                        for e in v.get("etapas") or [] if e["id"] in E])
+
+
 def _json(h, d, cache="no-store"):
     h._enviar(200, json.dumps(d, ensure_ascii=False).encode("utf-8"), "application/json; charset=utf-8", cache=cache)
 
@@ -603,6 +636,24 @@ def get(h, ruta):
     arg = lambda k, d="": (q.get(k) or [d])[0]                       # noqa: E731
     if ruta in ("/v2", "/v2/", "/v2/index.html"):
         return h._enviar(200, open(HTML, "rb").read(), "text/html; charset=utf-8")
+    if ruta.rstrip("/") == "/v2/vivo":
+        return h._enviar(200, open(os.path.join(AQUI, "panel_vivo.html"), "rb").read(), "text/html; charset=utf-8", cache="no-cache")
+    if ruta == "/api/v2/agente":
+        try:
+            desde = int(arg("desde", "0"))
+        except ValueError:
+            desde = 0
+        r = _vivo().eventos(arg("sesion"), arg("video"), desde)
+        r["proyecto"] = proyecto_vivo(r.get("video"))
+        return _json(h, r)
+    if ruta == "/api/v2/agente/sesiones":
+        return _json(h, _vivo().sesiones())
+    if ruta.startswith("/v2/vivo/img/"):
+        partes = ruta[len("/v2/vivo/img/"):].split("/")
+        real = _vivo().imagen(*partes) if len(partes) == 2 else None
+        if not real:
+            return h._enviar(404, b"", "text/plain")
+        return h._enviar(200, open(real, "rb").read(), "image/jpeg", cache="max-age=86400")
     if ruta == "/api/v2/sistema":
         return _json(h, sistema())
     if ruta == "/api/v2/estado":

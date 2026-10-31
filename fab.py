@@ -40,6 +40,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 NUCLEO = os.path.join(RAIZ, "nucleo")
@@ -214,6 +215,38 @@ def pesados_a_e(video):
     print(f"Carpetas pesadas ({', '.join(PESADAS)}) en {os.path.join(MP.DESTINO, 'videos', video)}")
 
 
+TALLER = "http://127.0.0.1:8765"
+
+
+def asegurar_taller():
+    """El usuario (31-oct-2026): al empezar o continuar un video, el Robotaller (/v2/vivo) tiene que estar activo.
+    Si el panel no responde lo arranca desacoplado (sobrevive a la sesión; nunca se detiene) y abre el taller."""
+    from urllib.request import urlopen
+
+    def vivo():
+        try:
+            urlopen(TALLER + "/v2/vivo", timeout=3).close()
+            return True
+        except Exception:
+            return False
+
+    if vivo():
+        print(f"Robotaller activo: {TALLER}/v2/vivo", flush=True)
+        return
+    log = open(os.path.join(RAIZ, "panel_log_taller.txt"), "a", encoding="utf-8")
+    subprocess.Popen([sys.executable, os.path.join(NUCLEO, "panel.py")], cwd=RAIZ, stdout=log, stderr=log, stdin=subprocess.DEVNULL,
+                     env=dict(os.environ, PYTHONIOENCODING="utf-8"),
+                     creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP)
+    for _ in range(40):
+        time.sleep(0.5)
+        if vivo():
+            import webbrowser
+            webbrowser.open(TALLER + "/v2/vivo")
+            print(f"Robotaller encendido: {TALLER}/v2/vivo", flush=True)
+            return
+    print("(aviso) el panel no respondió en 20 s; mira panel_log_taller.txt o lánzalo con: python fab.py panel --abrir")
+
+
 def main():
     a = sys.argv[1:]
     if not a or a[0] in ("-h", "--help", "ayuda"):
@@ -226,6 +259,8 @@ def main():
     if a[0] in ("estado", "continuar"):
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         args = a[1:] if a[0] == "estado" else ["continuar", *a[1:]]
+        if a[0] == "continuar":
+            asegurar_taller()
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "estado.py"), *args], cwd=RAIZ, env=env).returncode)
     if a[0] == "avisar":              # aviso por voz autónomo (Chatterbox + bocinas), sin servidor ni puerto 3000
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
@@ -270,6 +305,7 @@ def main():
         shutil.copytree(os.path.join(VIDEOS, "_plantilla_yt" if "--yt" in a else "_plantilla_secuencia" if "--secuencia" in a else "_plantilla"), destino,
                         ignore=shutil.ignore_patterns("__pycache__"))
         pesados_a_e(a[1])
+        asegurar_taller()
         print(f"Creado {destino}. Edita guion.py y ESTADO.md y luego: python fab.py {a[1]} todo")
         print("Regla (13-oct-2026): actualiza el panel de canales ahora y al terminar el video: python fab.py canales --actualizar")
         return

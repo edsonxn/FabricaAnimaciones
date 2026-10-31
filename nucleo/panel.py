@@ -113,7 +113,7 @@ def _refrescar_sistema():
              "Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | Select-Object ProcessId,ParentProcessId,CommandLine,"
              "@{n='T';e={[int64]([datetimeoffset]$_.CreationDate).ToUnixTimeSeconds()}} "      # T = epoch de arranque
              "| ConvertTo-Json -Compress"], capture_output=True, text=True, timeout=15, encoding="utf-8",
-            errors="replace")
+            errors="replace", creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         d = json.loads(r.stdout) if r.stdout.strip() else []
         procs = [d] if isinstance(d, dict) else d
     except Exception:
@@ -121,7 +121,8 @@ def _refrescar_sistema():
     gpu = None
     try:
         r = subprocess.run(["nvidia-smi", "--query-gpu=utilization.gpu,memory.used,memory.total",
-                            "--format=csv,noheader,nounits"], capture_output=True, text=True, timeout=8)
+                            "--format=csv,noheader,nounits"], capture_output=True, text=True, timeout=8,
+                           creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         u, m, tot = [float(x) for x in r.stdout.strip().split("\n")[0].split(",")]
         gpu = dict(uso=u, mem=m, mem_total=tot)
     except Exception:

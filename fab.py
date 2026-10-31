@@ -236,7 +236,7 @@ def asegurar_taller():
     log = open(os.path.join(RAIZ, "panel_log_taller.txt"), "a", encoding="utf-8")
     subprocess.Popen([sys.executable, os.path.join(NUCLEO, "panel.py")], cwd=RAIZ, stdout=log, stderr=log, stdin=subprocess.DEVNULL,
                      env=dict(os.environ, PYTHONIOENCODING="utf-8"),
-                     creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP)
+                     creationflags=subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP)   # consola oculta: sus hijos la heredan, sin ventanas
     for _ in range(40):
         time.sleep(0.5)
         if vivo():

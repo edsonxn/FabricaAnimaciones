@@ -5,6 +5,17 @@
 Pipeline propio (Python, todo local) que produce videos animados 2D procedurales con narración (Chatterbox), música y efectos
 sintetizados y sincronizados. El usuario habla español: responde en español. Usa rutas absolutas o `python fab.py ...` desde `C:\FabricaAnimaciones`.
 
+## REGLA DE ORO (el usuario, 30-oct-2026; TODOS los canales)
+Aprobó `videos/tes_secretos_40/` («la edición quedó perfecta, el guion perfecto, la burla perfecta») y pidió aplicarlo en todos los demás
+canales. Lista completa de capas: `docs/estilo_secuencia_yt.md` § «REGLA DE ORO Y LISTA DE CONTROL». Cómo se traduce fuera de SECUENCIA YT:
+- **Las reglas suman:** cada canal conserva su fórmula y todo lo pedido antes; lo nuevo va encima (Cronopapel sigue con ≥ 3 fotos reales/min, Warcraft con Overgear, Wild Next Door con su foto real por animal).
+- **Lo que dice la voz se ve:** en Flow o dibujado por código, la escena enseña lo que se nombra, con foto o medio real donde el estilo lo use (Bitácora, Cronopapel, LogIA, Wild Next Door).
+- **Nada ajeno al tema:** ninguna imagen, clip o mapa de otro lugar, época, animal o juego.
+- **Gráficos desde el gancho:** MG, mapas o diagramas propios del guion repartidos por todo el video, con el kit del estilo; no reciclar escenas.
+- **Presentaciones variadas:** personajes, animales y objetos con varios tamaños, posiciones y estilos; `nucleo/peg_estilos.py` sirve donde el motor use `efectos.py`; en los demás, una variante propia del kit.
+- **Comentarios:** leerlos antes de cada video (`fab.py yt comentarios <canal>`), enseñar agradecimientos y contestar una crítica exagerada con burla disfrazada. Si el tema es una tragedia real o el tono no lo aguanta, se omite la burla. El detalle y los límites están en § COMENTARIOS del doc de arriba.
+- **Chequeo:** `fab.py <v> chequeo` en todo motor con `efectos.py`.
+
 ## RETOMAR UN VIDEO EN UNA CONVERSACIÓN NUEVA (hazlo así, ahorra contexto)
 1. `python fab.py estado` → tabla de todos los videos (canal, estilo, etapa, qué falta). `python fab.py estado <video>` → su `ESTADO.md`.
    Si el usuario dice «continúa el video X»: `python fab.py continuar X` (videos en tramos, regla de abajo).
@@ -104,7 +115,7 @@ Origen: «La Independencia de México, completa» se subió con mapas que eran m
 ## ARRANQUE RÁPIDO de un video DIBUJADO POR CÓDIGO (no repitas la exploración; 7-oct-2026)
 - **Vertical:** `FORMATO = "vertical"` en guion.py → `motor.W, H = 1080, 1920`. Ritmo de Short: `GAP = 0.16`.
 - **Escena que dibuja el cuadro entero:** una clase `Mundo(Escena)` con `render(self, lz, t)` que devuelve float32 HxWx3 en 0..1, `CLASES = {id: Mundo}` y `TRANSICIONES = [("continua", 0.5)] * (n_escenas - 1)` en guion.py (si no, el núcleo mete sus propias transiciones). `ESTILO_VISUAL = "documental"` para motion graphics propios.
-- **Voz ElevenLabs:** `VOZ = dict(motor="elevenlabs", voice_id=..., modelo="eleven_v4", referencia="<mp3>", tomas=1, stability=0.5)` + corchetes de actuación en las frases (regla global de arriba). Voces y saldo: `python videos/mods_ia_fusion/_voces.py`; la referencia sale gratis de la muestra pública: `python videos/mods_ia_fusion/_ref_voz.py <voice_id> ref.mp3`. Si `seleccionar` dice REGENERAR: `voz --seeds 5 --solo <key>`.
+- **Voz ElevenLabs:** `VOZ = dict(motor="elevenlabs", voice_id=..., modelo="eleven_v4_turbo", referencia="<mp3>", tomas=1, stability=0.5)` + corchetes de actuación en las frases (regla global de arriba). Voces y saldo: `python videos/mods_ia_fusion/_voces.py`; la referencia sale gratis de la muestra pública: `python videos/mods_ia_fusion/_ref_voz.py <voice_id> ref.mp3`. Si `seleccionar` dice REGENERAR: `voz --seeds 5 --solo <key>`.
 - **SFX de ElevenLabs fuera del motor secuencia:** copiar `videos/mods_ia_fusion/fx_audio.py` (escribe `audio/fx.wav`, que `mezcla` suma). Empezar con `MEZCLA["fx"] = -17`; revisar que la relación voz/fondo que imprime `mezcla` sea ≥ ~11 dB.
 - **Música Lyria:** `LYRIA = dict(estilo=..., escenas={id: (descripción, intensidad)})` en guion.py; desde la carpeta del video, con `$env:PYTHONPATH = "<carpeta del video>;C:\FabricaAnimaciones\nucleo"`: `python ..\..\nucleo\lyria.py --n 1` y luego `--usar 1`.
 - **Anclas por palabra sin instancia de escena:** `pix.ww(escena, frase, "palabra")` lee `timeline.json` directamente.

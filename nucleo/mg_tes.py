@@ -259,7 +259,7 @@ def rejilla(titulo, n=100, encendidas=2, remate=None, cols=20, ancho=1180):
     filas_ = math.ceil(n / cols)
     w_rej = cols * T + (cols - 1) * G
     h = 110 + filas_ * (T + G) + (96 if remate else 30)
-    rojas = {int(round((k + .5) * n / encendidas + 7)) % n for k in range(encendidas)}
+    rojas = set(range(n)) if encendidas >= n else {int(round((k + .5) * n / encendidas + 7)) % n for k in range(encendidas)}
 
     def fn(dt, dur, marcas):
         im, M = _humo(ancho, h, titulo)
@@ -1152,7 +1152,7 @@ def compraventa(titulo, objeto, pasos, remate=None, ancho=1700):
 def _num(v):
     """1980 -> «1 980» (separador de miles con espacio, como el resto del canal)."""
     if isinstance(v, float) and not v.is_integer() and abs(v) < 100:
-        return f"{v:.1f}".replace(".", ",")
+        return f"{v:.3f}".rstrip("0").replace(".", ",")   # 1,045 sin redondear: 1,08 y 1,03 no pueden salir iguales
     return f"{int(round(v)):,}".replace(",", " ")
 
 
@@ -1743,10 +1743,11 @@ def inversion(titulo, socio, pagos, nota=None, despierta=None, remate=None, anch
     return fn
 
 
-def versiones(titulo, izq, der, veredicto=None, remate=None, ancho=1760):
+def versiones(titulo, izq, der, veredicto=None, remate=None, ancho=1760, pie="PRUEBAS: 0"):
     """Dos versiones de la misma historia, enfrentadas. izq/der = (ruta, nombre, [líneas], i_marca): la tarjeta entra en su marca
     y sus líneas aparecen una tras otra (0,7 s); debajo, «PRUEBAS: 0» · veredicto = (texto, i_marca): sello rojo cruzado sobre
-    las dos (p. ej. «SIN PRUEBAS») · remate = (texto, i). Primer uso: Saadia contra los alik'r (ninguna versión se demuestra)."""
+    las dos (p. ej. «SIN PRUEBAS») · remate = (texto, i) · pie = línea bajo cada tarjeta (None = sin ella).
+    Primer uso: Saadia contra los alik'r (ninguna versión se demuestra)."""
     RW, RH = 250, 310
     h = 110 + 520 + (70 if remate else 10)
     HUECO = 130                                                 # hueco central para el «VS» y el sello
@@ -1768,8 +1769,9 @@ def versiones(titulo, izq, der, veredicto=None, remate=None, ancho=1760):
             for sub in _partir(d, "— " + ln, f, w - RW - 40):
                 _texto(d, (tx, ty + 54 * k), sub, f, HUESO, "la", 255 * ul)
                 k += 1
-        _texto(d, (tx, M + 120 + RH - 10), "PRUEBAS: 0", fuente("Bold Condensed", 40), SANGRE, "lm",
-               255 * _eo((dt - mk[i] - .6 - .7 * len(lineas)) / .4), track=3)
+        if pie:
+            _texto(d, (tx, M + 120 + RH - 10), pie, fuente("Bold Condensed", 40), SANGRE, "lm",
+                   255 * _eo((dt - mk[i] - .6 - .7 * len(lineas)) / .4), track=3)
 
     def fn(dt, dur, marcas):
         mk = list(marcas) + [99] * 6
@@ -2016,5 +2018,258 @@ def aguante(titulo, comida, minutos, remate=None, ancho=1500):
         seg = int(round(minutos * 60 * fr))
         _texto(d, (x + w, y - 40), f"{seg // 60:02d}:{seg % 60:02d}", fuente("Bold Condensed", 62), ORO, "rm", 255 * a0, track=2)
         _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+# ======================================================================= MG nuevos de `tes_secretos_40` rehecho (30-oct-2026)
+def barra_vida(titulo, seguro, peligro, ancho=1400):
+    """Dos barras de salud que se acaban: la que el juego protege y la que no. seguro/peligro = (nombre, texto final).
+    marca 0: el efecto seguro se apaga y deja un punto · marca 1: entra la bendición · marca 2: se apaga y la barra llega a cero."""
+    h = 110 + 390
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x, w = M + 90, ancho - 180
+        for k, (nombre, final) in enumerate((seguro, peligro)):
+            y = M + 170 + k * 170
+            t0 = mk[0] if k == 0 else mk[2]
+            a = _eo(dt / .4) if k == 0 else _eo((dt - mk[1]) / .35)
+            if a <= .01:
+                continue
+            u = _eo((dt - t0) / .9)
+            nivel = (.26 + (.008 - .26) * u) if k == 0 else (.2 * (1 - u))
+            _texto(d, (x, y - 34), nombre.upper(), fuente("SemiBold Condensed", 36), HUESO, "lm", 245 * a, track=4)
+            d.rectangle([x, y, x + w, y + 40], outline=HUESO + (int(190 * a),), width=2)
+            if nivel > .001:
+                d.rectangle([x + 3, y + 3, x + 3 + (w - 6) * nivel, y + 37], fill=(176, 36, 30, int(255 * a)))
+            if u > .75:
+                c = ORO if k == 0 else SANGRE
+                _texto(d, (x + w, y - 34), final.upper(), fuente("Bold Condensed", 46), c, "rm", 255 * _eo((u - .75) / .25), track=3)
+        return _salida(im, dt)
+    return fn
+
+
+def deteccion(titulo, retrato, vida, muerte, ancho=1320):
+    """El mismo retrato visto con dos hechizos. vida/muerte = (nombre del hechizo, resultado). marca 0: Detectar vida no la ve
+    (figura gris) · marca 1: Detectar muerte la ve (figura que arde en rojo)."""
+    import peg_estilos as PE
+    h = 110 + 560
+    FW, FH = 330, 460
+    fig = PE.recorte(retrato)
+    fig = fig.crop((0, 0, fig.width, int(fig.height * .72)))
+    k = min(FW / fig.width, FH / fig.height)
+    fig = fig.resize((int(fig.width * k), int(fig.height * k)), Image.LANCZOS)
+    L = fig.convert("L")
+    gris = Image.merge("RGBA", (*Image.merge("RGB", (L, L, L)).point(lambda v: int(v * .55)).split(), fig.getchannel("A")))
+    M0 = 40
+    aura = Image.new("RGBA", (fig.width + 2 * M0, fig.height + 2 * M0), (0, 0, 0, 0))
+    m = Image.new("L", aura.size, 0)
+    m.paste(fig.getchannel("A"), (M0, M0))
+    aura.paste(SANGRE + (255,), mask=m.filter(ImageFilter.MaxFilter(13)).filter(ImageFilter.GaussianBlur(18)))
+    rojo = Image.merge("RGBA", (L.point(lambda v: min(255, int(v * 1.5) + 60)), L.point(lambda v: int(v * .4)), L.point(lambda v: int(v * .35)),
+                                fig.getchannel("A")))
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 3
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        for j, (cx, (hechizo, res)) in enumerate(((M + ancho * .27, vida), (M + ancho * .73, muerte))):
+            a = _eo((dt - mk[j]) / .4)
+            if a <= .01:
+                continue
+            x, y = int(cx - fig.width / 2), M + 120
+            if j == 1:
+                lat = .72 + .28 * math.sin(dt * 5)
+                _pega(im, aura, x - M0, y - M0, a * lat)
+                _pega(im, rojo, x, y, a)
+            else:
+                _pega(im, gris, x, y, a * .8)
+            d = ImageDraw.Draw(im)
+            _texto(d, (cx, M + 610), hechizo.upper(), fuente("Condensed", 34), HUESO, "mm", 240 * a, track=3)
+            _texto(d, (cx, M + 652), res.upper(), fuente("Bold Condensed", 42), SANGRE if j else GRIS, "mm", 255 * a, track=3)
+        return _salida(im, dt)
+    return fn
+
+
+def semana(titulo, ideas, tachada=None, ancho=1640):
+    """Siete días de plazo y lo que salió de ellos. ideas = [(texto, ruta|None, i_marca)] · tachada = (texto, i_marca): lo que se
+    quedó fuera. Primer uso: la semana libre de Bethesda."""
+    cols = 3
+    CW, CH = 480, 214
+    filas_ = math.ceil((len(ideas) + (1 if tachada else 0)) / cols)
+    h = 110 + 74 + filas_ * (CH + 18) + 20
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 8
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        u = _eo(dt / 1.0)
+        for k in range(7):                                    # los siete días se llenan de corrido
+            x = M + ancho / 2 + (k - 3) * 92
+            on = u * 7 > k
+            d.rounded_rectangle((x - 36, M + 112, x + 36, M + 166), 8, outline=HUESO + (190,), width=2, fill=(ORO + (60,)) if on else None)
+            _texto(d, (x, M + 139), "LMXJVSD"[k], fuente("SemiBold Condensed", 30), HUESO, "mm", 240)
+        todo = list(ideas) + ([(tachada[0], None, tachada[1])] if tachada else [])
+        for k, (texto, ruta, i) in enumerate(todo):
+            a = _eo((dt - mk[i]) / .35)
+            if a <= .01:
+                continue
+            x = M + (ancho - cols * CW - (cols - 1) * 18) / 2 + k % cols * (CW + 18)
+            y = M + 184 + k // cols * (CH + 18)
+            d.rounded_rectangle((x, y, x + CW, y + CH), 14, fill=(14, 13, 12, int(190 * a)), outline=HUESO + (int(120 * a),), width=2)
+            if ruta:
+                ic = _libre(ruta, 190, 180)
+                _pega(im, ic, x + 12 + (190 - ic.width) / 2, y + (CH - ic.height) / 2, a)
+                d = ImageDraw.Draw(im)
+            tx = x + (214 if ruta else 20)
+            lin = _partir(d, texto.upper(), fuente("Bold Condensed", 40), CW - (tx - x) - 16)
+            for j, ln in enumerate(lin):
+                _texto(d, (tx, y + CH / 2 + (j - (len(lin) - 1) / 2) * 46), ln, fuente("Bold Condensed", 40), HUESO, "lm", 255 * a, track=1)
+            if tachada and k == len(todo) - 1:
+                _tacha(d, x + 10, y + 10, CW - 20, CH - 20, _eo((dt - mk[i] - .3) / .35))
+        return _salida(im, dt)
+    return fn
+
+
+def estrellas(titulo, constelaciones, ancho=1400):
+    """Cielo nocturno que se dibuja solo. constelaciones = [(nombre, [(x, y)...] en 0..1, [(a, b)...] líneas, i_marca)]."""
+    import random
+    h = 110 + 560
+    rnd = random.Random(21)
+    polvo = [(rnd.random(), rnd.random(), rnd.uniform(1, 2.6), rnd.uniform(0, 6.28)) for _ in range(170)]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        X, Y, W, H = M + 60, M + 112, ancho - 120, 530
+        a0 = _eo(dt / .5)
+        for x, y, r, f in polvo:
+            br = int((110 + 90 * math.sin(dt * 2 + f)) * a0)
+            px, py = X + x * W, Y + y * H
+            d.ellipse((px - r, py - r, px + r, py + r), fill=(205, 212, 232, max(0, br)))
+        for nombre, pts, lineas, i in constelaciones:
+            u = _eo((dt - mk[i]) / .9)
+            if u <= .01:
+                continue
+            P = [(X + a * W, Y + b * H) for a, b in pts]
+            for k, (a, b) in enumerate(lineas):
+                v = min(1.0, max(0.0, u * len(lineas) - k))
+                if v > 0:
+                    d.line((P[a], (P[a][0] + (P[b][0] - P[a][0]) * v, P[a][1] + (P[b][1] - P[a][1]) * v)), fill=ORO + (235,), width=3)
+            for px, py in P:
+                d.ellipse((px - 7, py - 7, px + 7, py + 7), fill=BLANCO + (int(255 * u),))
+            cx = sum(p[0] for p in P) / len(P)
+            _texto(d, (cx, max(p[1] for p in P) + 42), nombre.upper(), fuente("Bold Condensed", 46), HUESO, "mm", 255 * u, track=4)
+        return _salida(im, dt)
+    return fn
+
+
+def soldados(titulo, n, remate=None, cols=20, ancho=1400):
+    """n siluetas en formación. marca 0: aparecen · marca 1: caen en ola y se apagan en rojo. Primer uso: el pozo de Forel."""
+    T = 56
+    filas_ = math.ceil(n / cols)
+    h = 110 + filas_ * (T + 18) + (100 if remate else 30)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0 = M + (ancho - cols * (T + 6)) / 2
+        for k in range(n):
+            a = _eo((dt - mk[0] - k * .012) / .25)
+            if a <= .01:
+                continue
+            c = k % cols
+            u = _eo((dt - mk[1] - k * .035) / .35)
+            col = tuple(int(HUESO[j] + (SANGRE[j] - HUESO[j]) * u) for j in range(3))
+            _silueta(d, x0 + c * (T + 6), M + 112 + k // cols * (T + 18) + u * 12, T, col, (245 - 150 * u) * a)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def cronologia(titulo, hitos, ancho=1500):
+    """Línea de tiempo sobria. hitos = [(fecha, texto, i_marca)]; el último queda dorado. Primer uso: Erik West (sin sarcasmo)."""
+    h = 110 + 300
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 8
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, x1, y = M + 130, M + ancho - 130, M + 240
+        paso = (x1 - x0) / max(1, len(hitos) - 1)
+        u = _eo(dt / .5)
+        d.line((x0, y, x0 + (x1 - x0) * u, y), fill=HUESO + (170,), width=3)
+        for k, (fecha, texto, i) in enumerate(hitos):
+            a = _eo((dt - mk[i]) / .4)
+            if a <= .01:
+                continue
+            x = x0 + k * paso
+            ult = k == len(hitos) - 1
+            d.ellipse((x - 11, y - 11, x + 11, y + 11), fill=(ORO if ult else HUESO) + (int(255 * a),))
+            _texto(d, (x, y - 60), fecha, fuente("Bold Condensed", 58), ORO if ult else HUESO, "mm", 255 * a, track=2)
+            for j, ln in enumerate(_partir(d, texto, fuente("Condensed", 34), paso - 24)):
+                _texto(d, (x, y + 50 + j * 40), ln, fuente("Condensed", 34), HUESO, "mm", 240 * a)
+        return _salida(im, dt)
+    return fn
+
+
+def vela(titulo, antes, despues, ancho=1000):
+    """Figura encapuchada a oscuras. marca 0: una vela se acerca y la luz le destapa la cara · marca 1: ojos rojos, colmillos y
+    el rótulo cambia de `antes` a `despues` con sello. Primer uso: el sacerdote de «Sangre inmortal»."""
+    h = 110 + 500
+    C = 900
+    yy, xx = np.mgrid[0:C, 0:C]
+    g = np.clip(1 - np.hypot(xx - C / 2, yy - C / 2) / (C / 2), 0, 1) ** 1.8
+    luz = np.zeros((C, C, 4), np.uint8)
+    luz[..., :3] = (255, 176, 92)
+    luz[..., 3] = (g * 200).astype(np.uint8)
+    luz = Image.fromarray(luz, "RGBA")
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 3
+        im, M = _humo(ancho, h, titulo)
+        cx, cy = M + ancho / 2, M + 300
+        u = _eo((dt - mk[0]) / 1.3)
+        v = _eo((dt - mk[1]) / .22)
+        vx, vy = cx + 300 - 195 * u, cy + 170 - 120 * u + 5 * math.sin(dt * 2.2)
+        capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(capa)
+        k = .14 + .86 * u                                     # cuánta luz recibe la figura
+        tela = tuple(int(c * k) for c in (64, 50, 44))
+        d.polygon([(cx - 230, M + 590), (cx - 150, cy + 30), (cx - 104, cy - 120), (cx, cy - 190), (cx + 104, cy - 120),
+                   (cx + 150, cy + 30), (cx + 230, M + 590)], fill=tela + (255,))
+        d.ellipse((cx - 112, cy - 150, cx + 112, cy + 90), fill=tuple(int(c * k * .45) for c in (64, 50, 44)) + (255,))
+        piel = tuple(int(c * k) for c in (176, 136, 112))
+        d.ellipse((cx - 72, cy - 112, cx + 72, cy + 72), fill=piel + (255,))
+        d.ellipse((cx - 44, cy - 28, cx - 12, cy - 12), fill=(20, 14, 12, 255))
+        d.ellipse((cx + 12, cy - 28, cx + 44, cy - 12), fill=(20, 14, 12, 255))
+        d.line((cx - 26, cy + 34, cx + 26, cy + 34), fill=(32, 20, 18, 255), width=4)
+        if v > 0:
+            for s in (-1, 1):
+                ex = cx + s * 28
+                d.ellipse((ex - 12, cy - 28, ex + 12, cy - 12), fill=(236, 34, 24, int(255 * v)))
+                d.polygon([(cx + s * 8, cy + 36), (cx + s * 20, cy + 36), (cx + s * 14, cy + 36 + 26 * v)], fill=BLANCO + (255,))
+        for x0, x1 in ((vx - 13, vx + 13),):                  # la vela
+            d.rectangle((x0, vy, x1, vy + 170), fill=(226, 214, 186, 255))
+            d.polygon([(vx, vy - 54 - 7 * math.sin(dt * 9)), (vx - 13, vy - 12), (vx + 13, vy - 12)], fill=(255, 208, 110, 255))
+        im.alpha_composite(capa)
+        r = int(340 + 150 * u + 10 * math.sin(dt * 7))
+        hal = luz.resize((r * 2, r * 2), Image.BILINEAR)
+        ax, ay = int(vx - r), int(vy - 30 - r)
+        sx, sy = max(0, -ax), max(0, -ay)
+        ex, ey = min(hal.width, sx + im.width - max(0, ax)), min(hal.height, sy + im.height - max(0, ay))
+        hal = hal.crop((sx, sy, ex, ey))
+        a = np.array(hal)
+        a[..., 3] = (a[..., 3] * .42 * np.array(im)[max(0, ay):max(0, ay) + a.shape[0], max(0, ax):max(0, ax) + a.shape[1], 3].astype(np.float32) / 255).astype(np.uint8)
+        im.alpha_composite(Image.fromarray(a, "RGBA"), (max(0, ax), max(0, ay)))
+        d = ImageDraw.Draw(im)
+        _texto(d, (cx - 250, M + 530), (despues if v > .5 else antes).upper(), fuente("Bold Condensed", 58), SANGRE if v > .5 else HUESO, "mm", 255, track=4)
+        if v > 0:
+            _sello(im, cx + 250, M + 220, "VAMPIRO", v)
         return _salida(im, dt)
     return fn

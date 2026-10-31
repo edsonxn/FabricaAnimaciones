@@ -1,99 +1,138 @@
 {
-"amuleto_talos": "Amulet of Talos (Skyrim)",
-"brand_shei": "Brand-Shei",
-"sopa": "Vegetable Soup",
-"pocion_arqueria": "Potion of True Shot",
-"cascaron": "Soul Husk",
-"alto_elfo": "Altmer (Skyrim)",
-"bretona": "Bretons (Skyrim)",
-"khajiit": "Khajiit (Skyrim)",
-"garra": "Hagraven Claw",
-"ojo_sable": "Eye of Sabre Cat",
-"corazon_daedra": {
-"archivo": "Daedra_heart.png"
-},
-"estrella_azura": "Azura's Star (Skyrim)",
-"anillo_namira": {
-"archivo": "Ring_of_Namira.png"
-},
-"mamut": "Mammoth (Skyrim)",
-"flecha_enana": "Dwarven Arrow (Skyrim)",
-"amuleto_arkay": "Amulet of Arkay (Skyrim)",
-"gigante": "Giant (Skyrim)",
-"vaca": "Cow (Skyrim)",
-"margret": "Margret",
-"tullius": {
-"url": "https://images.uesp.net/1/13/SR-npc-General_Tullius.jpg"
-},
-"bolund": "Bolund",
-"galathil": "Galathil",
-"martillo_largo": "The Longhammer",
-"volendrung": "Volendrung (Skyrim)",
-"clarividencia": "Clairvoyance (Skyrim)",
-"lydia": {
-"archivo": "Lydia.png"
-},
-"sybille": "Sybille Stentor",
-"ahtar": "Ahtar",
-"riekling": {
-"archivo": "Riekling_(Dragonborn).png"
-},
-"arvak": "Arvak",
-"senor_vampiro": "Vampire Lord",
-"karan_diario": "Karan's Journal",
-"capilla_mara": {
-"archivo": "Shrine_of_Mara.png"
-},
-"pergamino": "Elder Scroll (Dragon)",
-"auriel": "Auriel's Bow",
-"neloth": "Neloth",
-"falx": "General Falx Carius",
-"ildari": "Ildari Sarothril",
-"skooma": "Redwater Skooma",
-"phinis": "Phinis Gestor",
-"movarth": "Movarth Piquine",
-"sangre_inmortal": {
-"archivo": "Immortal_Blood,_Part_1_1_of_2.png"
-},
-"alain": "Alain Dufont",
-"paarthurnax": {
-"url": "https://images.uesp.net/1/1f/SR-creature-Paarthurnax.jpg"
-},
-"urag": "Urag gro-Shub",
-"tomo_falmer": "Ancient Falmer Tome",
-"alduin": {
-"url": "https://images.uesp.net/5/54/SR-creature-Alduin.jpg"
-},
-"arngeir": "Arngeir",
-"runil": "Runil",
-"diario_skorm": "Skorm Snow-Strider's Journal",
-"restos_habd": "Habd's Remains",
-"segador": {
-"archivo": "Chaurus_Reaper.png"
-},
-"jurgen": "Jurgen Windcaller",
-"esbern": {
-"archivo": "Esbern_(Skyrim).png"
-},
-"delphine": {
-"archivo": "Delphine_Riverwood.png"
-},
-"ulfric": {
-"url": "https://images.uesp.net/6/6e/SR-npc-Ulfric_Stormcloak.jpg"
-},
-"elenwen": {
-"archivo": "Elenwen.png"
-},
-"erik": {
-"url": "https://images.uesp.net/f/fe/SR-npc-Erik_the_Slayer.jpg"
-},
-"mralki": "Mralki",
-"anillo_madesi": "Madesi's Silver Ring",
-"cicero": "Cicero",
-"madre_noche": "Night Mother (Skyrim)",
-"meridia": "Meridia",
-"bufon": "Jester's Clothes",
-"castlevania2": {
-"url": "https://static.wikia.nocookie.net/castlevania/images/e/e8/Castlevania_II_-_Simon%27s_Quest_%28gamebox%29.jpg/revision/latest/scale-to-width-down/511?cb=20141221051334"
-}
+ "amuleto_talos": "Amulet of Talos (Skyrim)",
+ "brand_shei": "Brand-Shei",
+ "sopa": "Vegetable Soup",
+ "pocion_arqueria": "Potion of True Shot",
+ "cascaron": "Soul Husk",
+ "alto_elfo": "Altmer (Skyrim)",
+ "bretona": "Bretons (Skyrim)",
+ "khajiit": "Khajiit (Skyrim)",
+ "garra": "Hagraven Claw",
+ "ojo_sable": "Eye of Sabre Cat",
+ "corazon_daedra": {
+  "archivo": "Daedra_heart.png"
+ },
+ "estrella_azura": "Azura's Star (Skyrim)",
+ "anillo_namira": {
+  "archivo": "Ring_of_Namira.png"
+ },
+ "mamut": "Mammoth (Skyrim)",
+ "flecha_enana": "Dwarven Arrow (Skyrim)",
+ "amuleto_arkay": "Amulet of Arkay (Skyrim)",
+ "gigante": "Giant (Skyrim)",
+ "vaca": "Cow (Skyrim)",
+ "margret": "Margret",
+ "tullius": {
+  "url": "https://images.uesp.net/1/13/SR-npc-General_Tullius.jpg"
+ },
+ "bolund": "Bolund",
+ "galathil": "Galathil",
+ "martillo_largo": "The Longhammer",
+ "volendrung": "Volendrung (Skyrim)",
+ "clarividencia": "Clairvoyance (Skyrim)",
+ "lydia": {
+  "archivo": "Lydia.png"
+ },
+ "sybille": "Sybille Stentor",
+ "ahtar": "Ahtar",
+ "riekling": {
+  "archivo": "Riekling_(Dragonborn).png"
+ },
+ "arvak": "Arvak",
+ "senor_vampiro": "Vampire Lord",
+ "karan_diario": "Karan's Journal",
+ "capilla_mara": {
+  "archivo": "Shrine_of_Mara.png"
+ },
+ "pergamino": "Elder Scroll (Dragon)",
+ "auriel": "Auriel's Bow",
+ "neloth": "Neloth",
+ "falx": "General Falx Carius",
+ "ildari": "Ildari Sarothril",
+ "skooma": "Redwater Skooma",
+ "phinis": "Phinis Gestor",
+ "movarth": "Movarth Piquine",
+ "sangre_inmortal": {
+  "archivo": "Immortal_Blood,_Part_1_1_of_2.png"
+ },
+ "alain": "Alain Dufont",
+ "paarthurnax": {
+  "url": "https://images.uesp.net/1/1f/SR-creature-Paarthurnax.jpg"
+ },
+ "urag": "Urag gro-Shub",
+ "tomo_falmer": "Ancient Falmer Tome",
+ "alduin": {
+  "url": "https://images.uesp.net/5/54/SR-creature-Alduin.jpg"
+ },
+ "arngeir": "Arngeir",
+ "runil": "Runil",
+ "diario_skorm": "Skorm Snow-Strider's Journal",
+ "restos_habd": "Habd's Remains",
+ "segador": {
+  "archivo": "Chaurus_Reaper.png"
+ },
+ "jurgen": "Jurgen Windcaller",
+ "esbern": {
+  "archivo": "Esbern_(Skyrim).png"
+ },
+ "delphine": {
+  "archivo": "Delphine_Riverwood.png"
+ },
+ "ulfric": {
+  "url": "https://images.uesp.net/6/6e/SR-npc-Ulfric_Stormcloak.jpg"
+ },
+ "elenwen": {
+  "archivo": "Elenwen.png"
+ },
+ "erik": {
+  "url": "https://images.uesp.net/f/fe/SR-npc-Erik_the_Slayer.jpg"
+ },
+ "mralki": "Mralki",
+ "anillo_madesi": "Madesi's Silver Ring",
+ "cicero": "Cicero",
+ "madre_noche": "Night Mother (Skyrim)",
+ "meridia": "Meridia",
+ "bufon": "Jester's Clothes",
+ "castlevania2": {
+  "url": "https://static.wikia.nocookie.net/castlevania/images/e/e8/Castlevania_II_-_Simon%27s_Quest_%28gamebox%29.jpg/revision/latest/scale-to-width-down/511?cb=20141221051334"
+ },
+ "torre_skyrim": {
+  "archivo": "White-Gold Tower (Skyrim).png"
+ },
+ "montana_roja": {
+  "archivo": "Red-Mountain (Solstheim).jpg"
+ },
+ "nave_extrana": {
+  "archivo": "Strange Vessel.png"
+ },
+ "ramati": {
+  "archivo": "Ramati.png"
+ },
+ "madre_noche_ob": {
+  "archivo": "Night Mother Oblivion.png"
+ },
+ "runil_b": {
+  "archivo": "Runil1.jpg"
+ },
+ "torre_uesp": {
+  "url": "https://images.uesp.net/0/0c/SR-place-White_Gold_Tower.jpg"
+ },
+ "martinet": {
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Charles_Martinet_by_Gage_Skidmore_2_%28cropped%29.jpg"
+ },
+ "alisanne": {
+  "archivo": "Alisanne Dupre Card Art.png"
+ },
+ "garnag": {
+  "archivo": "Garnag, Dark Adherent card art.png"
+ },
+ "trius": {
+  "archivo": "Trius.png"
+ },
+ "sala_falkreath": {
+  "archivo": "HODFalkreath.png"
+ },
+ "fuerte_dunstad": {
+  "archivo": "Fort Dunstad.png"
+ }
 }

@@ -49,12 +49,13 @@ FONETICA = {
     "Make-A-Wish": "Méik a Uísh", "Brand-Shei": "Brand Shéi", "Brandyl": "Brándil", "Lymdrenn Tenvanni": "Límdren Tenváni",
     "Tel Vos": "Tel Bos", "Bravil": "Brávil", "Alisanne Dupre": "Alisán Dupré", "Garnag": "Gárnag", "Cheydinhal": "Chéidinal",
     "Rasha": "Rásha", "Paar": "Par", "Thur": "Zur", "Nax": "Naks",
+    "@jhonfeddiszabalamoreno9056": "Jon Féddis", "@lukelsue4430": "Lúkel Su", "kyrim": "Kírim",
 }
 
 # Transcripciones (se rellenan tras leer cada una en `seleccionar`)
 # 30-oct: transcripciones leídas una a una; casi todas son nombres que Whisper escribe distinto (Falkreath→Falkris, Arkay→Arcade…).
 # p30_2: fuera s2/s3 («gaza», «glaza»). p12_1 y p17_4: «absorbes su» y «llevas sus» se unen en las 4 tomas; se aceptan.
-CER_MAX_POR_FRASE = {'p30_2': .021, 'p17_4': .06, 'p12_1': .042, 'p39_2': 0.002, 'p37_0': 0.038, 'p37_2': 0.073, 'p35_1': 0.002, 'p34_1': 0.037, 'p32_1': 0.015, 'p30_0': 0.021, 'p29_1': 0.045, 'p29_2': 0.051, 'p29_3': 0.025, 'p28_1': 0.01, 'p26_1': 0.034, 'p23_1': 0.015, 'p20_1': 0.049, 'p20_2': 0.01, 'p19_1': 0.019, 'p18_1': 0.002, 'p17_1': 0.021, 'p17_3': 0.047, 'p16_1': 0.039, 'p16_2': 0.029, 'p13_1': 0.021, 'p11_0': 0.045, 'p10_0': 0.062, 'p9_1': 0.015, 'p9_2': 0.031, 'p8_3': 0.017, 'p5_0': 0.022, 'p5_2': 0.042, 'p4_1': 0.039, 'p4_2': 0.01, 'p3_2': 0.023, 'p1_0': 0.036, 'p1_1': 0.021, 'cierre_1': 0.002}
+CER_MAX_POR_FRASE = {'cr1_0': .027, 'cr1_1': .016, 'cr2_0': .054, 'p30_2': .021, 'p17_4': .06, 'p12_1': .042, 'p39_2': 0.002, 'p37_0': 0.038, 'p37_2': 0.073, 'p35_1': 0.002, 'p34_1': 0.037, 'p32_1': 0.015, 'p30_0': 0.021, 'p29_1': 0.045, 'p29_2': 0.051, 'p29_3': 0.025, 'p28_1': 0.01, 'p26_1': 0.034, 'p23_1': 0.015, 'p20_1': 0.049, 'p20_2': 0.01, 'p19_1': 0.019, 'p18_1': 0.002, 'p17_1': 0.021, 'p17_3': 0.047, 'p16_1': 0.039, 'p16_2': 0.029, 'p13_1': 0.021, 'p11_0': 0.045, 'p10_0': 0.062, 'p9_1': 0.015, 'p9_2': 0.031, 'p8_3': 0.017, 'p5_0': 0.022, 'p5_2': 0.042, 'p4_1': 0.039, 'p4_2': 0.01, 'p3_2': 0.023, 'p1_0': 0.036, 'p1_1': 0.021, 'cierre_1': 0.002}
 GAP_MAX_POR_FRASE = {'p39_2': 0.77, 'p35_1': 0.55, 'p34_1': 0.56, 'p29_3': 0.54, 'p20_1': 0.54, 'p20_2': 0.73, 'p18_1': 0.78, 'p13_1': 0.65, 'p10_0': 0.69, 'p5_2': 0.68, 'p1_0': 0.63, 'cierre_1': 0.54}
 TAIL_MAX_POR_FRASE = {'p35_1': 0.54, 'p29_3': 0.58, 'p28_1': 0.51, 'p10_0': 0.57, 'p4_2': 0.61, 'p1_0': 0.37, 'p1_1': 0.72, 'cierre_1': 0.57}   # CER ~0: acaban hablando
 
@@ -65,7 +66,7 @@ SECUENCIA = dict(
     transicion="slideleft", # el clip nuevo empuja al anterior
     fundido=0.35,
     ambiente=0.0,           # solo imagen; el sonido del juego va en ambiente_por (regla 26-oct-2026)
-    ambiente_por={},
+    ambiente_por={"scene-016": .7, "scene-022": .7, "scene-023": .7, "scene-059": .6, "scene-062": .6, "scene-096": .6, "scene-115": .6, "scene-118": .7},   # rugidos, gigante, lucha (regla 26-oct)
     recorte_por={},
     yt=dict(sufijo="Skyrim", min_s=90, max_min=240, alto=1080,
             evitar_canales=["BLUxCHEESE", "TIMENG", "The Glitch Report", "Swezz Cheese", "Barrett Knives",
@@ -161,6 +162,10 @@ ESCENAS = [
         "Sybille Stentor dice haber visto ir y venir a varios jarls, y sigue joven. Detectar vida no la marca. Detectar muerte, sí.",
         "El verdugo cuenta que a veces baja a la cárcel a por voluntarios. Y ella misma te encarga limpiar un nido de vampiros.",
     ]},
+    {"id": "cr1", "frases": [
+        "Una pausa, que nos han descubierto. @jhonfeddiszabalamoreno9056 nos escribió que se nota que kyrim no es lo nuestro.",
+        "Y tiene toda la razón. De kyrim no sabemos nada. Nosotros solo hablamos de Skyrim.",
+    ]},
     {"id": "p25", "frases": [
         "En el veinticinco, la nave de los rieklings.",
         "En Solstheim, los rieklings acampan alrededor de una nave volcada, con el interior boca abajo y cubierto de pinturas.",
@@ -252,6 +257,10 @@ ESCENAS = [
         "Nadie te lo cuenta. Encuentras a Ramati muerta, la cena en el suelo, y bajo una cama, una mochila con una carta de Mani a su hermana.",
         "Y los restos del padre están dentro del segador de chaurus más grande del lugar. Si los subes al brasero del faro, lo dejas descansar.",
     ]},
+    {"id": "cr2", "frases": [
+        "Y esta va con cariño. @lukelsue4430 nos dijo que no somos dignos de Skyrim, y que no entendimos nada.",
+        "Lo aceptamos. Seguimos esperando a que nos llamen los Barbas Grises. Mientras tanto, te contamos ocho secretos más.",
+    ]},
     {"id": "p8", "frases": [
         "Número ocho. Los Barbas Grises nacieron de una humillación.",
         "La orden existe porque los nórdicos perdieron en la Montaña Roja. Jurgen Llamador del Viento meditó siete años, y concluyó que la Voz se había usado con arrogancia.",
@@ -263,6 +272,11 @@ ESCENAS = [
         "En su informe sobre Esbern reconocen que no entienden la vuelta de los dragones. Y que el viejito paranoico de la Ratonera nunca fue un simple archivero.",
         "Al funcionario que lo descartó por viejo, lo mandaron a Alinor a ser reeducado.",
         "Y el informe de Delphine dice que esquivó tres atentados, y que en uno mató a todo el equipo de asesinos.",
+    ]},
+    {"id": "camp", "frases": [
+        "Antes de los últimos seis, un dato. De cada cien que ven este canal, catorce están suscritos.",
+        "Los otros ochenta y seis entran, se llevan todo y se van, como en cualquier casa de Skyrim. Queremos llegar a siete mil.",
+        "Si llevas treinta y cuatro secretos aguantando, suscribirte es lo menos que puedes hacer.",
     ]},
     {"id": "p6", "frases": [
         "Número seis. Ulfric cree que entregó la Ciudad Imperial.",
@@ -306,5 +320,6 @@ ESCENAS = [
         "Esa es mi lista. Cuarenta secretos, de una poción mal programada, al dragón en el que confiaste.",
         "Y antes de irnos. @franciscobarqueromunoz1218 nos dio las gracias por el video. Gracias a ti. Leemos todos los comentarios, los que nos felicitan y los que nos corrigen, y los tenemos en cuenta para mejorar.",
         "Y ahora te toca a ti. ¿Cuántos de estos cuarenta sabías? Si tienes uno mejor, déjalo en los comentarios.",
+        "Y si este video te sirvió, suscríbete. Vamos por los siete mil, y prometemos no entrar a tu casa sin permiso.",
     ]},
 ]

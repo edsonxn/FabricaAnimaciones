@@ -24,20 +24,20 @@ SECCIONES = [
     ((117.3, 197.3), [("tundra", 0)]),   # 36-33
     ((197.3, 298.7), [("towers_and_shadows", 0)]),   # 32-29, intriga
     ((298.7, 360.0), [("frostfall", 0)]),   # 28-26
-    ((360.0, 424.0), [("masser", 0)]),   # 25-23
-    ((424.0, 496.0), [("distant_horizons", 0)]),   # 22-20
-    ((496.0, 570.7), [("silent_footsteps", 0)]),   # 19-17, sombrío
-    ((570.7, 637.3), [("night_without_stars", 0)]),   # 16-14
-    ((637.3, 704.0), [("a_winters_tale", 0)]),   # 13-11
-    ((704.0, 762.7), [("awake", 0)]),   # 10-9, terror
-    ((762.7, 792.0), [("seven_thousand_steps", 0)]),   # 8 Barbas Grises
-    ((792.0, 842.7), [("before_the_storm", 0)]),   # 7-6 thalmor
-    ((842.7, 874.7), [("wind_guide_you", 0)]),   # 5 Erik, sin sarcasmo
-    ((874.7, 904.0), [("from_past_to_present", 0)]),   # 4 Brand-Shei
-    ((904.0, 930.7), [("caught_off_guard", 0)]),   # 3 el ataúd
-    ((930.7, 965.3), [("the_city_gates", 0)]),   # 2 Cicerón
-    ((965.3, 1013.3), [("dragonborn", 0)]),   # 1 Paarthurnax
-    ((1013.3, None), [("unbroken_road", 120)]),   # cierre: vuelve el tema del gancho
+    ((360.0, 440.0), [("masser", 0)]),   # cr1 y 25-23
+    ((440.0, 512.0), [("distant_horizons", 0)]),   # 22-20
+    ((512.0, 586.7), [("silent_footsteps", 0)]),   # 19-17, sombrío
+    ((586.7, 653.3), [("night_without_stars", 0)]),   # 16-14
+    ((653.3, 720.0), [("a_winters_tale", 0)]),   # 13-11
+    ((720.0, 778.7), [("awake", 0)]),   # 10-9, terror
+    ((778.7, 824.0), [("seven_thousand_steps", 0)]),   # cr2 y 8 Barbas Grises
+    ((824.0, 896.0), [("before_the_storm", 0)]),   # 7, campaña y 6 thalmor
+    ((896.0, 928.0), [("wind_guide_you", 0)]),   # 5 Erik, sin sarcasmo
+    ((928.0, 957.3), [("from_past_to_present", 0)]),   # 4 Brand-Shei
+    ((957.3, 984.0), [("caught_off_guard", 0)]),   # 3 el ataúd
+    ((984.0, 1018.7), [("the_city_gates", 0)]),   # 2 Cicerón
+    ((1018.7, 1066.7), [("dragonborn", 0)]),   # 1 Paarthurnax
+    ((1066.7, None), [("unbroken_road", 120)]),   # cierre: vuelve el tema del gancho
 ]
 
 

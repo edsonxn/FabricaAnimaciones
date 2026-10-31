@@ -2,6 +2,11 @@
 
 _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 
+## Origen de `Sarcastica.mp3` (encontrado el 30-oct-2026)
+Es **Johnny - Mocking, Sarcastic and Rich**, ElevenLabs `HMCmDsbKeaSZp5LMOYKR`, en las cuentas 1 y 2 (la 3 no la tiene). Similitud de timbre
+0,958 entre 2 415 voces; la siguiente, 0,86. Prueba con corchetes: `videos/tes_secretos_40/prueba_voz_eleven/` (Eleven y Chatterbox con las
+mismas frases). Así se identifica cualquier otra voz: `resemblyzer` contra las muestras gratis de `/v1/voices`, `/v1/history` y `/v1/shared-voices`.
+
 ## REGLA: voz de ElevenLabs = CORCHETES de actuación (el usuario, 7-oct-2026; vale para TODOS los canales)
 Siempre que un video use ElevenLabs, el guion lleva **etiquetas entre corchetes** que le dan ánimo y sentimiento a la voz según lo que
 se narra. Ejemplo que mandó el usuario: `[thoughtful] Anselmo llevaba quince años abriendo la puerta… [short pause] Nadie sabía su

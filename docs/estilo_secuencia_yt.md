@@ -3,6 +3,38 @@
 Creado el 13-oct-2026 en la mudanza desde `C:\googleimagenes` (`docs/migracion_googleimagenes.md`).
 Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beats y armado de siempre).
 
+## REGLA DE ORO Y LISTA DE CONTROL (el usuario, 30-oct-2026; leer ANTES de escribir `efectos.py`)
+`videos/tes_secretos_40/` es el nivel mínimo: el usuario lo aprobó con «la edición quedó perfecta, el guion perfecto, la burla perfecta» y
+pidió aplicarlo en todos los demás canales. Vale para Warcraft, Tamriel, Runa y Gaming con su kit y su interfaz; los canales con otro
+motor aplican las mismas ideas con el suyo (`docs/reglas_globales_completas.md` § «REGLA DE ORO»).
+
+**Las reglas SUMAN, nunca sustituyen.** Lo que perdió la primera versión de ese video fue justo eso: al añadir mapas bajaron las fichas
+de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido nuevo se añade encima de esta lista:
+
+| Capa | Mínimo | Cómo |
+|---|---|---|
+| Clip por beat | Enseña lo que dice la voz, del MISMO juego | `fuentes.json`, hojas `medios`; un clip de otro juego no se tolera ni 1 s |
+| Lo que dice la voz se VE | Lugar, persona u objeto nombrado: imagen real en ese momento | Clip, `pant()` o pegatina; «se ve X» = X en pantalla (Torre Blanca, no un lago) |
+| Fichas de interfaz | ≥ la mediana del canal (`chequeo`) | Translúcidas, con la interfaz del juego |
+| MG | Desde el gancho y repartidos, sin huecos de minutos; nuevos para ESTE guion | Kit `mg_wow`/`mg_tes`/`mg_er`/`mg_gaming`; más si el guion lo permite |
+| Mapas con ruta | ≥ mitad de los puestos en listas de misiones; siempre que se hable de dónde | § MAPAS REALES CON RUTA |
+| Pegatinas | Cada nombre real; ≥ 1 de cada 3 en estilo no estándar | Abajo |
+| Comentarios | ≥ 4 agradecimientos + 1-2 críticas con burla disfrazada | § COMENTARIOS, puntos 2b y 2c |
+| Sonido del juego | OST oficial, `ambiente_por`, SFX del mismo juego | § Sonido original |
+| Campaña de suscripción (Runa, Tamriel) | 6-10 s hacia el 70-80 % | § CAMPAÑA DE SUSCRIPCIÓN |
+
+**Medición de referencia** (`tes_secretos_40`, por minuto): fichas 1,7 · MG 1,4 · mapas 0,7 · pegatinas 3,1 · comentarios 0,5.
+
+**Pegatinas variadas (`nucleo/peg_estilos.py`, temas `tes`, `wow`, `er`, `gaming`):** `silueta` = personaje SIN fondo a media pantalla con
+la cara bien visible y el video corriendo detrás (colocar con `pos_silueta`); `reliquia` = objeto sobre círculo de runas; `banda` = tira
+de cine con los ojos; `camafeo` = medallón para menciones rápidas; `legajo` = expediente; `abanico` = cartas al enumerar. Cambia también
+tamaño, posición y giro de las normales, y diseña estilos nuevos: no debe sentirse que todas son iguales. Para silueta usa un fotograma
+nítido ≥ 1000 px; si rembg arrastra a otro personaje, recorta antes. Código de ejemplo: `videos/tes_secretos_40/efectos.py`.
+
+**Antes de renderizar:** `python fab.py <v> chequeo` (también corre solo antes de `video`; nunca bloquea). Da la densidad contra la
+mediana del canal, lo que la voz nombra sin apoyo (`previews/chequeo_narracion.md`) y los clips de otro juego. Es una pista de texto: lo
+que marca se mira a mano.
+
 ## Flujo
 ```
 python fab.py nuevo <v> --yt          plantilla videos/_plantilla_yt (VOZ Applio Remy, SECUENCIA fuente="yt", LYRIA épica)
@@ -737,15 +769,32 @@ Que el público se sienta tomado en cuenta. Tres momentos:
    pidió el corcel de Xoroth…») y en pantalla sale el comentario REAL: `python fab.py yt comentario <v> <canal> <id>` dibuja la
    tarjeta (modo oscuro de YouTube: avatar, @usuario, «hace N días», texto, 👍) en `videos/<v>/pegatinas/com_<id>.png`, y en
    `efectos.py`: `peg(en, "com_<id>", "", tam=760, x=.30, y=.30)`, 3-5 s. 1-3 por video, en el gancho o al abrir el puesto que pidió.
-   Nunca inventar ni retocar el texto (solo cortar con «…», máx. 5 líneas); nunca un comentario para ridiculizar a nadie;
-   nada de datos personales más allá del @usuario y su avatar públicos.
+   Nunca inventar ni retocar el texto (solo cortar con «…», máx. 5 líneas); nada de datos personales más allá del @usuario y
+   su avatar públicos. Lo único que se contesta con guasa son las críticas del punto 2c, con sus límites.
 2b. **Comentarios de AGRADECIMIENTO (el usuario, 28-oct-2026; los 4 canales):** cuando el guion lo permita, enseñar capturas
    de los MEJORES comentarios que agradecen y valoran el trabajo del canal: **al menos 4 por video, repartidos** (en pausas
    naturales: antes de un puesto, tras el patrocinio, en el cierre), con la misma tarjeta `yt comentario` → `com_<id>`. Si un
    video tiene muchos buenos, juntar VARIOS en una sola escena (3-5 tarjetas escalonadas) y la voz agradece a todos. La voz
    recuerda que **todos los comentarios se leen y se toman en cuenta para seguir mejorando**. Elegir por ♥ y por lo concreto
    del elogio (no «buen video» a secas); no repetir el mismo comentario en dos videos del canal.
-3. **Contestar:** borrador de respuestas con el tono del canal → el usuario lo aprueba → envío por la API espaciado 25-60 s
+2c. **Comentarios que CRITICAN: contestar a su nivel, con burla disfrazada (el usuario, 30-oct-2026; los 4 canales):** además de
+   los de agradecimiento, «uno que otro» crítico: **1 por video, 2 como mucho**, y no en todos si no hay uno bueno. La meta es que
+   quien lo vea se ría y **se sienta de nuestro equipo**.
+   - **Tono:** por fuera amable, agradecido, casi servicial; la burla va por debajo y nunca se declara. Sirven el elogio
+     envenenado, el sarcasmo seco, darle la razón hasta el absurdo y agradecerle lo que no quiso decir. La voz lo suelta con
+     calma, sin enojo: si suena a pleito, perdimos. Cada canal con su voz y su lenguaje (un chiste de Elden Ring en Runa, etc.).
+   - **Cuáles:** críticas exageradas, sin razón, de sabelotodo o de «ya no es lo que era». **Una queja JUSTA no se contesta así:
+     se corrige** (punto 1). Si el dato que señala es cierto, no se le puede dar guasa.
+   - **Ejemplos de tono (inventados, solo para el registro):** a «esto lo sabe cualquiera» → «Felicidades. Para el resto de los
+     mortales hicimos este video.»; a «este canal ya no es lo que era» → «Tiene razón. Antes éramos menos.»
+   - **Cómo sale:** tarjeta real `yt comentario` → `com_<id>` (`peg(...)`, 4-6 s), la voz la lee (o la resume) y remata en una o dos
+     frases; un silencio corto antes del remate ayuda. Va en una pausa natural, nunca en plena revelación de un puesto. Queda
+     anotado en la línea «Comentarios» del `ESTADO.md` y se le menciona al usuario al avisar del MASTER, para que lo vea.
+   - **Límites:** se burla del COMENTARIO, no de la persona: nada de insultos ni groserías, físico, familia, origen, religión,
+     identidad ni inteligencia a secas. Nada contra quien parezca menor de edad. Sin pedir a la gente que vaya a contestarle
+     (YouTube sanciona el acoso dirigido). No repetir a la misma persona. Si al leerlo da lástima el otro, se pasó: bajarlo. El
+     texto del comentario sigue sin inventarse ni retocarse, y la guasa nunca puede mentir sobre si la voz es IA (punto 3).
+3. **Contestar:** borrador de respuestas con el tono del canal (las críticas, con el tono de 2c) → el usuario lo aprueba → envío por la API espaciado 25-60 s
    (`comments.insert`, 50 unidades c/u). Permitido por las Developer Policies si el usuario aprueba cada respuesta (III.I.2,
    III.C.3); el riesgo es el filtro de spam: sin respuestas idénticas, sin enlaces ni «suscríbete». Las preguntas de «¿la voz es
    IA?» las decide el usuario: nunca mentir. Corazones y fijar comentario: solo en Studio (la API no lo hace).

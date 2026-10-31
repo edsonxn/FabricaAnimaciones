@@ -2,6 +2,7 @@
 """Lanzador de la Fábrica de Animaciones.
 
   python fab.py estado [<video>]                estado de todos los videos / ESTADO.md de uno (para retomar en una conversación nueva)
+  python fab.py continuar [<texto>]             «continúa el video …»: qué TRAMO sigue (videos hechos en varias sesiones; docs/sesiones.md)
   python fab.py nuevo <video>                   crea videos/<video> desde videos/_plantilla
   python fab.py nuevo <video> --secuencia       igual, pero con el motor SECUENCIA (clips e imágenes de Google Flow; docs/estilo_secuencia_flow.md)
   python fab.py nuevo <video> --yt              motor SECUENCIA YT: gameplay de YouTube por beat (Warcraft; docs/estilo_secuencia_yt.md)
@@ -24,10 +25,14 @@
   python fab.py <video> limpiar [--previews]    borra segmentos/ del render (y previews/ con --previews) al aprobar el video
   python fab.py limpiar --publicados [--borrar] libera disco: videos y mezclas .wav de los ya públicos en YouTube (conserva proyecto y voz)
   python fab.py panel [--puerto 8765] [--abrir] panel web con el avance de todos los proyectos (nucleo/panel.py)
+  python fab.py panel --remoto [--tunel cloudflared] [estado|parar]  el lienzo desde el celular: puerta con clave + túnel (imprime el enlace)
   python fab.py estudio [--puerto 8790] [--abrir]  ESTUDIO: interfaz sencilla (comercial) para videos de 60 s (estudio/servidor.py)
   python fab.py estadisticas [--actualizar]     panel general de estadísticas de todos los canales (nucleo/estadisticas.py)
+  python fab.py buenosdias [--actualizar]       «Buenos días»: tablero del día para el plan de acción (docs/buenos_dias.md)
   python fab.py canales [--actualizar]          inicio de día: qué canal se queda antes sin video programado
   python fab.py ideas [<canal>] [--actualizar]  siguiente video CON DATOS: lo tuyo vs. lo que rompió la media en el nicho (nucleo/ideas.py)
+  python fab.py biblioteca buscar|sugerir|usar|ver|catalogar|sfx …   música de Lyria y SFX ya hechos, para reutilizar (docs/musica_biblioteca.md)
+  python fab.py compartir [--destino D] [--subir <url .git>]   copia SIN tus canales (motor + estilos + ejemplos) para otra persona
   python fab.py api                       regenera API.md
 """
 import json
@@ -47,13 +52,16 @@ ETAPAS = {
     "estilos": ["-m", "muestra_estilos"], "catalogo": ["-m", "catalogo"], "verificar": ["-m", "verificar"],
     "comprobar": ["-m", "comprobar"], "miniatura": ["-m", "miniatura"],
     # motor SECUENCIA (nucleo/secuencia.py): su `video` también sale de ahí cuando guion.py dice MOTOR = "secuencia"
-    "beats": ["-m", "secuencia", "beats"], "prompts": ["-m", "secuencia", "prompts"],
+    "beats": ["-m", "secuencia", "beats"], "reajustar": ["-m", "secuencia", "reajustar"], "prompts": ["-m", "secuencia", "prompts"],
     "ingesta": ["-m", "secuencia", "ingesta"], "medios": ["-m", "secuencia", "medios"],
     "ambiente": ["-m", "secuencia", "ambiente"], "servir": ["-m", "secuencia", "servir"],
     # motor SECUENCIA YT (nucleo/secuencia_yt.py): gameplay de YouTube por beat (Crónicas de Warcraft)
     "busquedas": ["-m", "secuencia_yt", "busquedas"], "bajar": ["-m", "secuencia_yt", "bajar"],
-    "fuentes": ["-m", "secuencia_yt", "fuentes"],
+    "fuentes": ["-m", "secuencia_yt", "fuentes"], "chequeo": ["-m", "chequeo_yt"],   # capas por minuto y narración ↔ imagen
     "fx": ["-m", "secuencia_fx"],   # capa de efectos del motor secuencia (efectos.py): SFX de ElevenLabs -> audio/fx.wav; `fx hoja`
+    "montaje": ["-m", "montaje_codigo"],   # videos por código: borradores 640x360 por escena para el 🎞 Montaje del panel
+    "vivo": ["-m", "vivo"],         # imágenes vivas (parallax + recorte animado): caché medios/capas/, candidatos y hoja vivo_NN
+    "apoyos": ["-m", "apoyos"],     # efectos.py APOYOS -> apoyos/*.png (tooltips Wowhead, tarjetas, capturas) + hoja fx
 }
 
 
@@ -123,14 +131,36 @@ def correr(video, etapa, extra):
     if _m:
         env["FAB_FPS"] = _m.group(1)          # fps del video (por defecto 30)
     cmd = [sys.executable] + ETAPAS[etapa] + list(extra)
+    if etapa == "video":
+        _parcial = os.path.join(carpeta, "segmentos", "parcial.json")
+        if "--hasta" in extra:                 # render PARCIAL (el principio, para verlo antes de hacer el resto): nucleo/render_parcial.py
+            cmd = [sys.executable, "-m", "render_parcial", "video"] + list(extra)
+        elif os.path.exists(_parcial):         # render completo: ya no hay tope
+            os.remove(_parcial)
+    _g = open(os.path.join(carpeta, "guion.py"), encoding="utf-8").read()
+    if etapa == "musica" and _re.search(r"^LYRIA\s*=", _g, _re.M) and "--procedural" not in extra:
+        # la música es Lyria (regla 12-oct): `musica` NO debe pisar audio/musica.wav con la procedural
+        if not _re.search(r"^\s*tramos\s*=", _g, _re.M):
+            print(f"[{video}] musica: el guion tiene LYRIA sin `tramos`: genera con `python ../../nucleo/lyria.py --n 2` y "
+                  f"`--usar N` desde la carpeta del video (la procedural solo con --procedural).")
+            return
+        cmd = [sys.executable, os.path.join(NUCLEO, "lyria_tramos.py"), "todo"]
+    elif etapa == "musica":
+        extra = [a for a in extra if a != "--procedural"]
+        cmd = [sys.executable] + ETAPAS[etapa] + list(extra)
     if _re.search(r'^MOTOR\s*=\s*"secuencia"', open(os.path.join(carpeta, "guion.py"), encoding="utf-8").read(), _re.M):
         if etapa == "video":
             cmd = [sys.executable, "-m", "secuencia", "video"] + list(extra)
-        elif etapa in ("comprobar", "escena", "prueba"):
+            if not extra and _re.search(r'fuente\s*=\s*"yt"', open(os.path.join(carpeta, "guion.py"), encoding="utf-8").read()):
+                subprocess.run([sys.executable, "-m", "chequeo_yt"], cwd=carpeta, env=env)   # solo avisa (30-oct-2026)
+        elif etapa in ("comprobar", "escena", "prueba", "montaje"):
             print(f"[{video}] {etapa}: no aplica al motor secuencia (revisa con `medios` y `video --tramo a-b`)")
             return
     print(f"\n=== [{video}] {etapa} ===", flush=True)
-    if etapa in ETAPAS_GPU_VOZ:
+    # sin GPU no hay cola (19-oct-2026): la voz de ElevenLabs es una API, y `seleccionar` con FAB_WHISPER_CPU=1 evalúa en CPU
+    sin_gpu = bool((etapa == "voz" and _re.search(r'motor\s*=\s*"elevenlabs"', _g))
+                   or (etapa == "seleccionar" and os.environ.get("FAB_WHISPER_CPU")))
+    if etapa in ETAPAS_GPU_VOZ and not sin_gpu:
         with _CandadoVoz(f"{video} {etapa}"):
             r = subprocess.run(cmd, cwd=carpeta, env=env)
     else:
@@ -193,11 +223,18 @@ def main():
         env = dict(os.environ, PYTHONPATH=NUCLEO, PYTHONIOENCODING="utf-8")
         subprocess.run([sys.executable, "-m", "api_doc"], cwd=RAIZ, env=env, check=True)
         return
-    if a[0] == "estado":
+    if a[0] in ("estado", "continuar"):
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
-        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "estado.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+        args = a[1:] if a[0] == "estado" else ["continuar", *a[1:]]
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "estado.py"), *args], cwd=RAIZ, env=env).returncode)
+    if a[0] == "avisar":              # aviso por voz autónomo (Chatterbox + bocinas), sin servidor ni puerto 3000
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "avisar.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "panel":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        if "--remoto" in a:          # el lienzo desde el celular: puerta con clave + túnel (nucleo/panel_remoto.py)
+            resto = [x for x in a[1:] if x != "--remoto"]
+            sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "panel_remoto.py"), *resto], cwd=RAIZ, env=env).returncode)
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "panel.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "estudio":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
@@ -208,9 +245,18 @@ def main():
     if a[0] == "canales":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "estadisticas.py"), "calendario", *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "buenosdias":
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "buenosdias.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "ideas":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "ideas.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "biblioteca":          # música de Lyria y SFX ya pagados, con etiquetas, para reutilizar (docs/musica_biblioteca.md)
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "musica_biblioteca.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "compartir":           # copia sin tus canales para otra persona (nucleo/compartir.py; compartir/ = su CLAUDE.md y LEEME)
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "compartir.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "yt":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "youtube.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
@@ -225,6 +271,7 @@ def main():
                         ignore=shutil.ignore_patterns("__pycache__"))
         pesados_a_e(a[1])
         print(f"Creado {destino}. Edita guion.py y ESTADO.md y luego: python fab.py {a[1]} todo")
+        print("Regla (13-oct-2026): actualiza el panel de canales ahora y al terminar el video: python fab.py canales --actualizar")
         return
     video, etapa, extra = a[0], a[1], a[2:]
     if etapa == "todo":

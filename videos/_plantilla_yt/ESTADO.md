@@ -17,6 +17,8 @@
 
 ## Decisiones del episodio (preguntadas al usuario al empezar)
 - duración total: · puestos de la lista: · vía de Overgear (M+/raids/PvP/leveling):
+- Runa/Tamriel: campaña de suscripción en el guion (cifra real, meta, ~75 %): docs/estilo_secuencia_yt.md § CAMPAÑA
+- REGLA DE ORO: leer docs/estilo_secuencia_yt.md § REGLA DE ORO antes de `efectos.py` (todas las capas suman); `fab.py <v> chequeo` antes de renderizar
 
 ## En curso (checkpoint por si la cuenta se agota: docs/sesiones.md §6; bórralo al cerrar el tramo)
 - (qué estás haciendo · archivos que tocas · qué falta · comando largo lanzado y hora)
@@ -41,5 +43,5 @@ python fab.py <video> medios          hojas previews/medios_NN.jpg (MÍRALAS)
 - ...
 
 ## Cierre (regla del 12-oct-2026)
-- [ ] subido, miniatura, programado y registrado (`canales/<alias>.json`, BITACORA)
+- [ ] subido y PROGRAMADO en el hueco del canal sin preguntar (regla 20-oct), miniatura y registrado (`canales/<alias>.json`, BITACORA)
 - [ ] HALLAZGOS y mejoras documentados en el manual/estilo (ver CLAUDE.md «CIERRE DE VIDEO»)

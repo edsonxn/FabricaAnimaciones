@@ -22,7 +22,8 @@ import mg_tes as T
 TEMAS = {"tes": dict(luz=T.ORO, texto=T.HUESO, rojo=T.SANGRE, papel=(214, 194, 150), tinta=(58, 40, 24)),
          "wow": dict(luz=(255, 205, 90), texto=(244, 236, 220), rojo=(196, 40, 52), papel=(222, 200, 150), tinta=(58, 40, 24)),
          "er": dict(luz=(214, 186, 120), texto=(232, 226, 210), rojo=(196, 40, 52), papel=(206, 196, 168), tinta=(46, 32, 20)),
-         "gaming": dict(luz=(255, 214, 64), texto=(248, 248, 248), rojo=(224, 48, 56), papel=(232, 222, 190), tinta=(40, 36, 60))}
+         "gaming": dict(luz=(255, 214, 64), texto=(248, 248, 248), rojo=(224, 48, 56), papel=(232, 222, 190), tinta=(40, 36, 60)),
+         "spyro": dict(luz=(250, 190, 40), texto=(240, 222, 86), rojo=(226, 54, 88), papel=(206, 214, 232), tinta=(22, 34, 56))}
 _rec = {}
 
 

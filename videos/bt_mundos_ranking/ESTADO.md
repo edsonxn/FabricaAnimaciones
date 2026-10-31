@@ -29,7 +29,7 @@
 - `audio/ost/` 34 pistas (nombres en `preparar_base.py`). `sfx/bt_*.mp3` 8 sonidos del juego; `sfx/_bruto/` voces de Banjo y Kazooie y «All Sound Effects» de ThumbsUpMaster.
 
 ## Falta
-- [ ] Miniatura de Flow: está puesta la PROVISIONAL por código (`miniatura_provisional.py`). Flow pide aceptar su política de privacidad en el navegador integrado; con el visto bueno del usuario: `prompt_miniatura.md` → cambiar `salida/miniatura.jpg` → aplicar en YouTube.
+- [ ] Miniatura de Flow: sigue la PROVISIONAL por código (`miniatura_provisional.py`). La política de privacidad de Flow ya está aceptada (30-oct), pero al pegar los ingredientes Flow pide además «Rights to use this image» con «I agree» (declarar que se tienen los derechos de lo subido): cancelado, espera decisión del usuario. Proyecto creado: flow.google.com/project/6a86b8a7-dfef-4571-9303-ae4a897f117a, modo Nano Banana 2.1 x2 sin Agent; collage = Banjo_transparent + KazooieTooie1 + Jiggy_HD de la wiki. Después: `prompt_miniatura.md` → `salida/miniatura.jpg` → aplicar en YouTube a BJbfYAkNOc0. El aviso «Opt-in» de Flow no está aprobado.
 - [ ] Al aprobar: `python fab.py bt_mundos_ranking limpiar`. `salida/` y `segmentos/` son carpetas reales en C: (E: lleno, 3,3 GB libres): mover a E: cuando haya sitio.
 
 ## Cómo retomar (comandos)
@@ -47,3 +47,6 @@ python fab.py bt_mundos_ranking medios          hojas previews/medios_NN.jpg (M�
 ## Cierre (regla del 12-oct-2026)
 - [x] subido y PROGRAMADO en el hueco del canal sin preguntar (regla 20-oct), miniatura provisional y registrado (`canales/<alias>.json`, BITACORA)
 - [x] HALLAZGOS y mejoras documentados en docs/estilo_secuencia_yt.md § «Lecciones de bt_mundos_ranking»
+
+## Aviso 31-oct-2026 (error de spyro2)
+- Un `dl_amb.py` copiado a spyro2 con la ruta de este video reescribió 33 clips de `medios/` entre las 10:27 y las 10:45, con el `busquedas.json` y `beats.json` de ESTE video (mismos segundos, con corte exacto y pista de audio): scene-008, 016, 022, 023, 044, 045, 046, 054, 055, 056, 058, 060, 061, 062, 073, 074, 075, 077, 091, 092, 093, 094, 100, 101, 102, 103, 105, 124, 126, 127, 128, 129, 130. El MASTER del 30-oct NO se tocó. Si este video se re-renderiza, comprobar esos 33 clips antes.

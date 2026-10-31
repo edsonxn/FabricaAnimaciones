@@ -348,7 +348,7 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   - **Clips: 44 + 11 + 5 + 3 rehechos.** Lo que cerró las últimas vueltas fue `{url, desde}` de un longplay limpio (Loopy Longplays `JV3tKszygTU`); aun así caen menús de forja, inventario y libros: mirar el rehecho. `fx hoja` se genera antes de los últimos rehechos: esos no salen en ella.
   - **YouTube limita la descripción a 5 000 BYTES**: 4 962 caracteres con acentos dan `invalidDescription`. Quédate en ~4 600.
   - **Banco de SFX reales en `nucleo/datos/sfx_juego/skyrim/`** (`_bajar.py`: misión, subir de nivel, lugar descubierto, monedas), en ~16 momentos clave y no en cada puesto, para no repetir.
-  - **Flow pide aceptar «Rights to use this image» al pegar ingredientes en un proyecto nuevo**: es aceptar condiciones, hay que pedir el sí del usuario en el chat.
+  - **Flow pide aceptar «Rights to use this image» al pegar ingredientes en un proyecto nuevo: se acepta SIEMPRE con «I agree», sin preguntar (el usuario, 31-oct-2026: «siempre acepta eso de flow»; autorización permanente para todos los canales).** Solo cubre ese aviso: cualquier otra condición, política, cuenta o permiso nuevo de Flow se le sigue preguntando al usuario.
   - Disco: con E: dañado, `nuevo` igual crea junctions a E:; quitarlas al crear el video (`rmdir` y carpeta real en C:).
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
@@ -603,6 +603,15 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 - **Plan de clips y corrección por AGENTE (sonnet):** ~260 mil tokens cada uno fuera del hilo principal; 170 beats a la primera y 17 clips arreglados.
 - **Disco:** un video de 24 min no cabe en E: con 3 GB libres: cambiar `salida/` y `segmentos/` del video a carpetas reales en C: antes del render (quitar la junction con `cmd //c rmdir`).
 - **Flow en el navegador integrado volvió a pedir bienvenida y política de privacidad el 30-oct** (dominio nuevo `flow.google.com`). Aceptarla es del usuario: no se acepta sola. Mientras tanto, miniatura provisional por código (`miniatura_provisional.py`).
+
+### Lecciones de `spyro2` (31-oct-2026, 174 beats, 24:52, primer video de PS1 del canal)
+- **Kit `nucleo/mg_spyro.py`** (cuadro de diálogo translúcido, gemas que giran, cifras doradas del HUD) con 22 MG; tema `spyro` en `mg_mapa` y en `peg_estilos`. `secreto()` = rótulo + contador `hud` de esquina «N/30» todo el secreto: da ritmo en 25 min y no cuenta como MG (nombre «aviso …»).
+- **Capturas 1080p por URL directa** (`videos/spyro2/capturas.py`): `yt-dlp -g` + `ffmpeg -ss` da cualquier cuadro de un longplay sin bajarlo. El primer pedido a una URL recién firmada da 403: reintentar con 2 s de pausa. 33 capturas sirvieron para pegatinas, MG y personajes sin arte en la wiki (Brother Ned, Fisher, Murgen).
+- **Solo existe un mapa real (la lámina de Avalar):** se reutiliza en ventana con la foto del nivel en cada mundo. Mapas de nivel no hay en ninguna fuente, así que no se inventan.
+- **Cámara web de la única fuente de un dato** (prototipo, glitch): se tapa con una pegatina en esa esquina (`_tapa` en efectos.py) en vez de perder el dato. Mirar las hojas de los videos de fans antes: el agente no siempre lo descarta.
+- **Copiar un script de otro video:** nunca dejar su ruta absoluta. `dl_amb.py` llevaba `AQ` fijo a bt_mundos_ranking y reescribió 33 clips de ese video; ya usa su propia carpeta. Además, en heredocs del Bash de esta PC `\\` se colapsa: para tocar rutas de Windows usar la herramienta Edit, no `sed` ni un heredoc. Comprobar con `grep` antes de lanzar.
+- **`medios/` también es junction a E:** en videos nuevos, aunque no salga en `nuevo`; `du` da 0. Antes de un render largo mirar con `dir /AL` qué vive en cada disco.
+- **Disco:** render de 24:52 = 1,1 GB + MASTER 1,2 GB + `salida/` y `segmentos/` en C:; bastan ~6 GB libres, no 12 como decía la cuenta vieja (47 min de render a 12 procesos).
 
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos

@@ -19,6 +19,7 @@ Cada juego tiene su TEMA (trazo, marcadores, letra y título como en su propia i
   "majora"  (Majora's Mask) puntos rosa, rombo amarillo de las púas en la meta, letra del diálogo N64 sobre humo; título serifa.
   "mario64" (Super Mario 64) ruta de monedas doradas que brotan con rebote; meta = la Estrella de poder con ojos y destello; nombres
             en Arial Rounded blanco sobre humo negro (como los diálogos del juego); título con contorno grueso.
+  "spyro"   (Spyro 2) ruta de gemas doradas; marcadores = gemas verde/azul, meta = gema dorada con halo; Palatino amarillo sobre humo.
 Para otro juego de Crónicas del gaming: copiar un tema de TEMAS y cambiar colores/letras a la interfaz de ESE juego.
 
 Uso desde videos/<v>/efectos.py (FX `pantalla` si cubre el cuadro, `mg` si va en ventana):
@@ -103,6 +104,10 @@ TEMAS = {
     "mario64": dict(trazo="bolitas", color=(255, 214, 0), borde=(176, 96, 0), grueso=10, letra=("ARLRDBD.TTF", 40, None),
                     texto=(250, 250, 248), contorno=None, titulo=("ARLRDBD.TTF", 84, None), subt=("ARLRDBD.TTF", 38, None),
                     tinte=(1.0, 1.0, 1.0, 0.0), fondo=(10, 30, 60)),
+    # Spyro 2 (spyro2, 30-oct-2026): ruta de GEMAS doradas, meta = gema dorada grande con halo; Palatino amarillo del diálogo.
+    "spyro": dict(trazo="bolitas", color=(250, 190, 40), borde=(150, 88, 14), grueso=10, letra=("palab.ttf", 42, None),
+                  texto=(240, 222, 86), contorno=None, titulo=("palab.ttf", 88, None), subt=("palabi.ttf", 40, None),
+                  tinte=(1.0, 1.0, 1.0, 0.0), fondo=(34, 18, 66)),
 }
 
 
@@ -247,6 +252,13 @@ def _marcador(tema, tipo):
                 d.ellipse((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=T["borde"])
                 d.ellipse((c - r, c - r, c + r, c + r), fill=T["color"])
                 d.rectangle((c - 3, c - r * .55, c + 3, c + r * .55), fill=(255, 246, 170))
+        elif tema == "spyro":
+            import mg_spyro as SP
+            col = {"meta": "dorada", "peligro": "roja", "inicio": "verde"}.get(tipo, "azul")
+            if tipo == "meta":
+                im.alpha_composite(_halo(34, (255, 230, 120), 160), (int(c - 68), int(c - 68)))
+            g = SP.gema(92 if tipo == "meta" else 58, col, .35)
+            im.alpha_composite(g, (int(c - g.width / 2), int(c - g.height / 2)))
         elif tema == "zelda":
             col = (214, 44, 32) if tipo == "peligro" else T["color"]
             if tipo == "meta":                              # triángulo dorado
@@ -280,7 +292,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora", "mario64"):    # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64", "spyro"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))
@@ -325,6 +337,8 @@ def _titulo(tema, titulo, sub):
             _escribe(d, cx - tw / 2, y, s, f, T["color"], stroke=8, stroke_color=T["borde"])
         elif tema == "mario64":
             _escribe(d, cx - tw / 2, y, s, f, (255, 255, 255), stroke=7, stroke_color=(20, 12, 6))
+        elif tema == "spyro":
+            _escribe(d, cx - tw / 2, y, s, f, (250, 190, 40), stroke=6, stroke_color=(30, 12, 2))
         else:
             _escribe(d, cx - tw / 2, y, s, f, T["color"] if tema in ("er", "zelda") else T["texto"], track=track)
             ly = y + tam * .62                               # filetes que se desvanecen hacia fuera (rombo al centro en tes)
@@ -339,7 +353,7 @@ def _titulo(tema, titulo, sub):
                           fill=(250, 206, 60) if tema == "majora" else T["color"])
         if sub:
             col = (255, 255, 255) if tema == "wow" else T["texto"]
-            st = (0, 0, 0) if tema in ("wow", "gaming", "mario64") else None
+            st = (0, 0, 0) if tema in ("wow", "gaming", "mario64", "spyro") else None
             d.text((cx, y + tam * .62 + tam * .45 + 6), sub, font=fs, fill=col, anchor="mm", stroke_width=3 if st else 0, stroke_fill=st)
         return _bgra(im)
     return _cache(("tit", tema, titulo, sub), hacer)

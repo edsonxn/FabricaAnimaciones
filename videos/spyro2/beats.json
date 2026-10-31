@@ -1,0 +1,1394 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.653,
+  "tipo": "video",
+  "texto": "En Spyro 2 hay una moneda dorada con la cara de un hombre real. Y casi nadie sabe quién es.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.653,
+  "t1": 17.598,
+  "tipo": "video",
+  "texto": "Hay un monje que le pide a un dragón matar a un yeti, mientras el texto en pantalla dice otra cosa. Hay un libro de monstruos que nunca llegaron al juego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.598,
+  "t1": 25.835,
+  "tipo": "video",
+  "texto": "y solo se abre si superas todos los retos escondidos. Y dentro del disco había otro juego escondido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.835,
+  "t1": 34.2,
+  "tipo": "video",
+  "texto": "Bastaba con saber qué botones apretar. Spyro 2 salió en noviembre de 1999 en la primera PlayStation.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.2,
+  "t1": 40.013,
+  "tipo": "video",
+  "texto": "Y veintisiete años después, sigue siendo para muchos el mejor de la saga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 40.013,
+  "t1": 51.625,
+  "tipo": "video",
+  "texto": "Hoy te cuento cómo se hizo, por qué el mismo juego tiene tres nombres distintos, y los 30 secretos que seguramente ignoraste. Empecemos por el principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.625,
+  "t1": 58.326,
+  "tipo": "video",
+  "texto": "Un estudio de Burbank, California, llamado Insomniac Games, y su fundador, Ted Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.326,
+  "t1": 68.944,
+  "tipo": "video",
+  "texto": "En 1998 lanzaron Spyro the Dragon, un dragón morado pequeño, con mala actitud, en un mundo que parecía no terminarse nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.944,
+  "t1": 80.045,
+  "tipo": "video",
+  "texto": "Eso venía de un motor de Alex Hastings que cambiaba el detalle de los objetos según la distancia. Lo cercano se veía nítido, y lo lejano se simplificaba sin que lo notaras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 80.045,
+  "t1": 86.025,
+  "tipo": "video",
+  "texto": "Era el juego perfecto para demostrar lo que podía hacer la PlayStation. Pero tenía un problema:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.025,
+  "t1": 94.777,
+  "tipo": "video",
+  "texto": "casi todo consistía en recoger cosas. Según el documental de Reliable Rhubarb, la secuela empezó justo al terminar el primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.777,
+  "t1": 101.613,
+  "tipo": "video",
+  "texto": "Se llamaba, simplemente, Spyro II. Y la meta la resumió Ted Price en una frase:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.613,
+  "t1": 112.904,
+  "tipo": "video",
+  "texto": "más reto, más profundidad y más variedad. En el E3 de 1999 lo enseñaron al mundo. Ya no era un dragón que corría recogiendo gemas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.904,
+  "t1": 120.714,
+  "tipo": "video",
+  "texto": "Ahora tenía un mundo lleno de gente que le pedía favores. La historia arranca con un plan muy sencillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.714,
+  "t1": 128.857,
+  "tipo": "video",
+  "texto": "Spyro y Sparx están hartos de la lluvia y quieren irse de vacaciones a Dragon Shores. Se meten al portal y, claro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.857,
+  "t1": 137.375,
+  "tipo": "video",
+  "texto": "no llegan a la playa. Aparecen en Avalar, un mundo nuevo, invadido por un hechicero enano con muy mal carácter.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.375,
+  "t1": 147.104,
+  "tipo": "video",
+  "texto": "Ese es Ripto. Y va acompañado de Crush y Gulp, dos criaturas enormes que parecen sacadas de un concurso de quién rompe más cosas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 147.104,
+  "t1": 156.502,
+  "tipo": "video",
+  "texto": "Lo que cambió fue todo lo demás. Ahora había tres mundos principales: Summer Forest, Autumn Plains y Winter Tundra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 156.502,
+  "t1": 163.842,
+  "tipo": "video",
+  "texto": "Cada nivel tiene un talismán y varias orbes. El talismán es la historia, y las orbes son retos aparte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.842,
+  "t1": 172.204,
+  "tipo": "video",
+  "texto": "Hay sesenta y cuatro orbes y diez mil gemas. Spyro aprendió a nadar, a trepar escaleras y a dar cabezazos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.204,
+  "t1": 179.179,
+  "tipo": "video",
+  "texto": "Lo de nadar ya estaba planeado para el primer juego, pero se cayó por falta de tiempo. Y estaban los pilones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 179.179,
+  "t1": 190.642,
+  "tipo": "video",
+  "texto": "Cada enemigo derrotado suelta una partícula de espíritu, y al juntar las suficientes te dan un poder temporal: la supercarga, la supercongelación o el supervuelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.642,
+  "t1": 198.492,
+  "tipo": "video",
+  "texto": "Hay fans con una teoría oscura sobre esto. Si las orbes y los pilones funcionan con los espíritus de criaturas derrotadas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.492,
+  "t1": 204.469,
+  "tipo": "video",
+  "texto": "entonces los buenos de Avalar tienen bastante que explicar. Y aparecieron Hunter,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 204.469,
+  "t1": 214.431,
+  "tipo": "video",
+  "texto": "un guepardo que se cree más listo de lo que es, y Elora, una fauna que sí lo es. También Moneybags, un oso que te cobra por pasar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.431,
+  "t1": 220.43,
+  "tipo": "video",
+  "texto": "por aprender y casi por respirar. La inflación hecha personaje.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 220.43,
+  "t1": 229.963,
+  "tipo": "video",
+  "texto": "Y luego está lo que hace que este juego se sienta como se siente. La música. La compuso Stewart Copeland, el baterista de The Police.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 229.963,
+  "t1": 240.313,
+  "tipo": "video",
+  "texto": "Fue uno de los primeros músicos de rock contratados para hacer un videojuego. Y no se limitaba a mandar canciones. Le daban trucos para pasearse por cada nivel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.313,
+  "t1": 246.799,
+  "tipo": "video",
+  "texto": "lo jugaba, y componía sobre lo que sentía ahí. Por eso cada nivel suena a un sitio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 246.799,
+  "t1": 259.211,
+  "tipo": "video",
+  "texto": "Summer Forest suena a verano, y Scorch suena a desierto, aunque Copeland nunca estuviera ahí. Oliver Wade, por su parte, montó las escenas de entrada y salida de cada nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.211,
+  "t1": 265.21,
+  "tipo": "video",
+  "texto": "Según el documental, sin storyboard. Cada nivel tiene su propio mini cuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.21,
+  "t1": 273.409,
+  "tipo": "video",
+  "texto": "Pequeños dramas de gente rara con problemas absurdos, y tú llegas a arreglarlo a fuego. Había otro truco de magia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 273.409,
+  "t1": 282.059,
+  "tipo": "video",
+  "texto": "El youtuber Shesez, de Boundary Break, sacó la cámara de su sitio y mostró cómo los portales disimulan la carga de cada nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.059,
+  "t1": 292.93,
+  "tipo": "video",
+  "texto": "Y según el mismo documental, hubo una cosa que no les dio tiempo de hacer: probar los minijuegos con jugadores de verdad. Ya vamos a llegar a eso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.93,
+  "t1": 301.202,
+  "tipo": "video",
+  "texto": "Spyro 2 salió el 2 de noviembre de 1999 en Estados Unidos, con el nombre de Ripto's Rage.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.202,
+  "t1": 309.142,
+  "tipo": "video",
+  "texto": "Y aquí empieza lo raro. En Europa se llamó Gateway to Glimmer. En España, En busca de los talismanes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.142,
+  "t1": 317.204,
+  "tipo": "video",
+  "texto": "Y en Japón, Spyro equis Sparx: Tondemo Tours. ¿Por qué tantos nombres? Nadie lo tiene claro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.204,
+  "t1": 323.974,
+  "tipo": "video",
+  "texto": "He encontrado tres explicaciones, y no coinciden. Lo único seguro es que el cambio fue tardío.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 323.974,
+  "t1": 334.267,
+  "tipo": "video",
+  "texto": "Una versión europea del 15 de septiembre todavía llevaba el logo de Ripto's Rage. Japón, además, se llevó un extra. Con la PocketStation,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.267,
+  "t1": 343.754,
+  "tipo": "video",
+  "texto": "esa tarjeta de memoria con pantalla, podías desbloquear Sparx Adventure, un minijuego para criar a tu libélula. La crítica lo recibió muy bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.754,
+  "t1": 352.718,
+  "tipo": "video",
+  "texto": "IGN le puso 8,8 y GameSpot 8,6. Y GameRankings lo dejó en un 87 por ciento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.718,
+  "t1": 358.968,
+  "tipo": "video",
+  "texto": "Para diciembre de 1999 ya había vendido un millón de copias solo en Estados Unidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 358.968,
+  "t1": 369.22,
+  "tipo": "video",
+  "texto": "Y con los años superó los tres millones cuatrocientos mil en todo el mundo. Pero lo mejor de este juego no está en las cifras. Está escondido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.22,
+  "t1": 375.255,
+  "tipo": "video",
+  "texto": "Así que vamos con los 30 secretos, del treinta al uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 375.255,
+  "t1": 385.331,
+  "tipo": "video",
+  "texto": "Número treinta. Dos niveles, una sola canción. Idol Springs y Fracture Hills están en mundos distintos y no se parecen en nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.331,
+  "t1": 394.556,
+  "tipo": "video",
+  "texto": "Pero usan exactamente el mismo tema musical. Fíjate la próxima vez. El remake sí los separó con dos mezclas distintas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.556,
+  "t1": 401.689,
+  "tipo": "video",
+  "texto": "Se ve que alguien sí se dio cuenta. Número veintinueve. El dragón cabezón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 401.689,
+  "t1": 412.338,
+  "tipo": "video",
+  "texto": "Pausa el juego y aprieta arriba cuatro veces, R1 cuatro veces, y círculo. Y a Spyro le sale una cabeza gigante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.338,
+  "t1": 422.387,
+  "tipo": "video",
+  "texto": "No sirve para nada, y por eso mismo es perfecto. Número veintiocho. El truco que ya estaba en el prototipo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.387,
+  "t1": 428.984,
+  "tipo": "video",
+  "texto": "Si en la pausa haces círculo cuatro veces y cuadrado, obtienes todas las habilidades del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 428.984,
+  "t1": 437.224,
+  "tipo": "video",
+  "texto": "Y no parece un regalo para los jugadores. Ese mismo código ya estaba en el prototipo de agosto de 1999.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.224,
+  "t1": 445.362,
+  "tipo": "video",
+  "texto": "En el de julio era otro: triángulo cuatro veces y círculo. Todo apunta a una herramienta del equipo que se quedó dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 445.362,
+  "t1": 455.43,
+  "tipo": "video",
+  "texto": "Ese prototipo incluso tenía un código para ver los créditos. Al usarlo, el juego se colgaba, porque los créditos todavía no existían.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.43,
+  "t1": 464.548,
+  "tipo": "video",
+  "texto": "Número veintisiete. Moneybags, traficante de armas. Todos recordamos a Moneybags cobrando por abrir portales y puentes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.548,
+  "t1": 469.177,
+  "tipo": "video",
+  "texto": "Lo que casi nadie lee es lo que dice mientras te cobra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 469.177,
+  "t1": 478.257,
+  "tipo": "video",
+  "texto": "En Autumn Plains, al abrirte el portal de Zephyr, se queja de que los pájaros de ahí nunca le pagaron las bombas y los barriles de TNT.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 478.257,
+  "t1": 490.021,
+  "tipo": "video",
+  "texto": "Eso es. El oso le vende explosivos a un bando de la guerra que tú vienes a resolver. Y más adelante, el propio Ripto presume de que lo convenció para venderle unas bombas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.021,
+  "t1": 497.501,
+  "tipo": "video",
+  "texto": "Y lo que gana lo tiene bien planeado. Habla de comprarse un condominio en Hurricos, dice que tiene casa en Aquaria Towers,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.501,
+  "t1": 507.086,
+  "tipo": "video",
+  "texto": "y hasta quiere abrir un puesto de hamburguesas de lagarto en Skelos. Tampoco es que lo disimule. Al abrirte el portal de Shady Oasis se despide diciendo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.086,
+  "t1": 514.573,
+  "tipo": "video",
+  "texto": "salúdame a Ripto si lo ves. Número veintiséis. El hockey nació en la oficina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.573,
+  "t1": 525.079,
+  "tipo": "video",
+  "texto": "En Colossus, un monje te reta a un hockey uno contra uno: cinco goles antes que un patinador rojo. Y eso no estaba en el diseño original del nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.079,
+  "t1": 532.93,
+  "tipo": "video",
+  "texto": "Salió de los partidos de hockey que jugaba el propio equipo. Les gustó tanto que acabó dentro del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.93,
+  "t1": 539.74,
+  "tipo": "video",
+  "texto": "Número veinticinco. Elora, la centauro que no cupo. Según lo que contó Oliver Wade,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 539.74,
+  "t1": 547.391,
+  "tipo": "video",
+  "texto": "Elora se iba a diseñar como una centauro. Pero un cuerpo de caballo pedía demasiados polígonos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 547.391,
+  "t1": 557.917,
+  "tipo": "video",
+  "texto": "Así que se quedó en fauna, con dos patas. Y su nombre salió de reordenar letras de Caroline, por Carolina Trujillo, del equipo de Insomniac.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.917,
+  "t1": 565.972,
+  "tipo": "video",
+  "texto": "Número veinticuatro. Las alas mal puestas. En el primer juego, las alas de Spyro estaban mal hechas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 565.972,
+  "t1": 573.993,
+  "tipo": "video",
+  "texto": "Las costillas le salían de donde no debían. Craig Stitt, uno de sus artistas, las corrigió para esta secuela.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 573.993,
+  "t1": 584.551,
+  "tipo": "video",
+  "texto": "Sí, alguien se puso a estudiar la anatomía de un dragón morado que no existe. Número veintitrés. Bob Esponja hace de Spyro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.551,
+  "t1": 592.663,
+  "tipo": "video",
+  "texto": "En este juego cambió la voz del protagonista. Sale Carlos Alazraqui, y entra Tom Kenny, la voz de Bob Esponja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.663,
+  "t1": 600.283,
+  "tipo": "video",
+  "texto": "Y según la wiki de la saga, también hace al Profesor y a los Electrolls de Hurricos. Los créditos no dicen quién es quién,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 600.283,
+  "t1": 610.245,
+  "tipo": "video",
+  "texto": "pero escúchalos bien, porque el parecido es sospechoso. Número veintidós. Un solo actor para los dos bandos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.245,
+  "t1": 616.54,
+  "tipo": "video",
+  "texto": "Según esa misma wiki, Gregg Berger pone la voz de Ripto, y también la de Hunter.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 616.54,
+  "t1": 627.759,
+  "tipo": "video",
+  "texto": "O sea que, cuando el villano y tu aliado discuten, es un solo señor hablando consigo mismo. Una especie de terapia con presupuesto de Sony.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 627.759,
+  "t1": 634.941,
+  "tipo": "video",
+  "texto": "Número veintiuno. El almuerzo de Gulp. En la primera cinemática, Gulp se traga el cetro de Ripto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 634.941,
+  "t1": 643.259,
+  "tipo": "video",
+  "texto": "Lo ves pasar. Y Ripto le grita: imbécil, te comiste mi cetro. Y ahí está el detalle que nadie mira.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.259,
+  "t1": 651.379,
+  "tipo": "video",
+  "texto": "Cuando vuelves a verlo, en la escena en que le da de comer a Gulp, Ripto ya no lleva cetro. Y solo después de vencer a Gulp dice:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 651.379,
+  "t1": 662.195,
+  "tipo": "video",
+  "texto": "esto es justo lo que necesito para un cetro nuevo. El juego no se olvidó. Número veinte. La cantante que Europa nunca oyó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 662.195,
+  "t1": 667.822,
+  "tipo": "video",
+  "texto": "En Ripto's Arena, la versión americana lleva una voz de ópera sobre la música.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 667.822,
+  "t1": 678.501,
+  "tipo": "video",
+  "texto": "Y en la versión europea, la quitaron. Escucha la diferencia. Es, según el canal Calcom, el único nivel del juego con música distinta entre las dos regiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 678.501,
+  "t1": 687.029,
+  "tipo": "video",
+  "texto": "Y no he encontrado ninguna explicación oficial. Número diecinueve. La música de las demos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.029,
+  "t1": 693.417,
+  "tipo": "video",
+  "texto": "Sunny Beach y Skelos Badlands tienen una versión más larga, que sonaba en la demo del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 693.417,
+  "t1": 701.716,
+  "tipo": "video",
+  "texto": "Es un regalo para los oídos que casi nadie escuchó, porque el juego final la recortó. Y los prototipos guardan más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 701.716,
+  "t1": 712.93,
+  "tipo": "video",
+  "texto": "Hay temas de minijuegos que nunca se usaron, para Skelos Badlands, Sunny Beach y Hurricos, y una versión temprana de la música de Crystal Glacier.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 712.93,
+  "t1": 719.774,
+  "tipo": "video",
+  "texto": "Número dieciocho. Los jinetes amish de delfines. Sí, leíste bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 719.774,
+  "t1": 727.578,
+  "tipo": "video",
+  "texto": "Chad Dezern contó en el documental que en Aquaria Towers iba a haber jinetes amish montados en delfines.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 727.578,
+  "t1": 738.581,
+  "tipo": "video",
+  "texto": "Se quedaron en caballitos de mar, que en comparación son lo más normal del mundo. Y la parte de arriba del nivel venía de un mundo submarino pensado para el primer Spyro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.581,
+  "t1": 746.777,
+  "tipo": "video",
+  "texto": "Nada se tira, todo se reutiliza. Número diecisiete. El volcán de papel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.777,
+  "t1": 753.961,
+  "tipo": "video",
+  "texto": "Según contó Michael John, Magma Cone se presentó en papel cuadriculado, con un volcán hecho de papel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 753.961,
+  "t1": 764.95,
+  "tipo": "video",
+  "texto": "Así se hacían los niveles en 1999. Con tijeras y mucha imaginación. Skelos Badlands, por cierto, fue el primer nivel creado para el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.95,
+  "t1": 772.04,
+  "tipo": "video",
+  "texto": "Lo hizo Craig Stitt. Número dieciséis. Los problemas con la vagoneta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.04,
+  "t1": 780.012,
+  "tipo": "video",
+  "texto": "Todos los que jugaron esto lo saben. Breeze Harbor, cincuenta engranajes, y una vagoneta que no perdona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.012,
+  "t1": 789.682,
+  "tipo": "video",
+  "texto": "Y si vuelves a hablarle a Fisher, el que te mandó ahí, te suelta: Trouble with the trolley, eh? ¿Problemas con la vagoneta? Como si no lo supiera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.682,
+  "t1": 798.03,
+  "tipo": "video",
+  "texto": "Según el documental, pudo salir así de cruel por ser una adición de última hora. Y porque nunca se probó con usuarios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 798.03,
+  "t1": 805.43,
+  "tipo": "video",
+  "texto": "Si de niño lloraste aquí, no eras malo. Es que nadie lo probó antes que tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 805.43,
+  "t1": 816.79,
+  "tipo": "video",
+  "texto": "Número quince. Los niveles se llamaban de otra forma. Durante el desarrollo, Glimmer se llamó Sparkle, e Idol Springs fue Colossus Springs.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 816.79,
+  "t1": 823.65,
+  "tipo": "video",
+  "texto": "Sunny Beach era Aquaria Beach. Breeze Harbor, Zephyr Harbor. Y Cloud Temples,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 823.65,
+  "t1": 832.643,
+  "tipo": "video",
+  "texto": "Mystic City. Iban por parejas, para que dos niveles sonaran del mismo sitio. Scorch Dunes y Scorch Oasis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 832.643,
+  "t1": 842.93,
+  "tipo": "video",
+  "texto": "Metropolis Acres y Metropolis Spires. Luego alguien decidió separarlos, y los nombres cambiaron casi todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 842.93,
+  "t1": 850.058,
+  "tipo": "video",
+  "texto": "Número catorce. El nombre que se les olvidó cambiar. Lo mejor es que dejaron restos en el juego final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.058,
+  "t1": 857.827,
+  "tipo": "video",
+  "texto": "En Zephyr, el soldado Romeo, al reunirse con Juliet, habla de irse de luna de miel a Colossus Springs.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 857.827,
+  "t1": 866.38,
+  "tipo": "video",
+  "texto": "Ese lugar no existe. Es el nombre viejo de Idol Springs. Y en Cloud Temples, el mago Murgen te da un recuerdo",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 866.38,
+  "t1": 874.497,
+  "tipo": "video",
+  "texto": "de la tienda de regalos de Mystic City, el nombre viejo de ese nivel. Hasta en Crystal Glacier, Widgie, un constructor de hielo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 874.497,
+  "t1": 885.43,
+  "tipo": "video",
+  "texto": "dice que su jefe tiene las entradas para el hockey de Colossus Valley. Sí, otra vez Colossus. Y tú ibas ahí, sin enterarte de nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.43,
+  "t1": 891.662,
+  "tipo": "video",
+  "texto": "Número trece. Lo dejamos listo para noviembre. Según Hidden Palace,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 891.662,
+  "t1": 901.92,
+  "tipo": "video",
+  "texto": "en el prototipo de julio de 1999, Moneybags le dice al jugador que Canyon Speedway sigue en obras y debería estar listo para noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 901.92,
+  "t1": 907.737,
+  "tipo": "video",
+  "texto": "El oso hablándote como un jefe de obra. Y el juego salía justo en noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 907.737,
+  "t1": 917.93,
+  "tipo": "video",
+  "texto": "En esa versión, varios niveles de Winter Tundra ni siquiera tenían salida. Y el juego te decía: usa el menú de pausa si quieres irte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.93,
+  "t1": 925.452,
+  "tipo": "video",
+  "texto": "Número doce. Las gemas que no daban la cuenta. El juego final tiene diez mil gemas exactas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 925.452,
+  "t1": 936.667,
+  "tipo": "video",
+  "texto": "Pero el prototipo de agosto, según Hidden Palace, tenía nueve mil novecientas noventa y una. Zephyr traía una de más, y a Robotica Farms le faltaban varias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 936.667,
+  "t1": 941.303,
+  "tipo": "video",
+  "texto": "Y había sesenta y cinco orbes en lugar de sesenta y cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 941.303,
+  "t1": 951.228,
+  "tipo": "video",
+  "texto": "Hasta el 100 % de un juego es algo que alguien tuvo que cuadrar a mano. Número once. El juego sin final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 951.228,
+  "t1": 961.823,
+  "tipo": "video",
+  "texto": "En el prototipo de julio de 1999, Ripto's Arena ni siquiera existía. A cuatro meses de salir, el juego no tenía su último nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 961.823,
+  "t1": 969.183,
+  "tipo": "video",
+  "texto": "En esa misma versión, el marcador del hockey usaba discos rojos y azules en lugar de las cabezas. Y en Summer Forest,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 969.183,
+  "t1": 979.6,
+  "tipo": "video",
+  "texto": "el que te explicaba la cámara era el Profesor, un trabajo que luego se quedó Hunter. Número diez. Elora iba a contarlo todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 979.6,
+  "t1": 986.1,
+  "tipo": "video",
+  "texto": "En el prototipo de agosto de 1999, las escenas de los niveles llevan un diálogo extra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 986.1,
+  "t1": 994.486,
+  "tipo": "video",
+  "texto": "Elora le explica a Spyro qué pasa en cada sitio. Cada lugar tenía su historia completa, con voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 994.486,
+  "t1": 1002.546,
+  "tipo": "video",
+  "texto": "Hurricos, por ejemplo, era el hogar de los Electrolls, los científicos que dan energía a Avalar, hasta que Ripto mandó robarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1002.546,
+  "t1": 1009.42,
+  "tipo": "video",
+  "texto": "Y los Water Workers de Aquaria Towers vaciaron unas cuevas y levantaron fábricas encima del coral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1009.42,
+  "t1": 1020.644,
+  "tipo": "video",
+  "texto": "También te aclaraba que lo que hacen los caballitos de mar es asustarse unos a otros hasta sacarse las burbujas. Un dato vital que nos perdimos. Y todo eso se borró.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1020.644,
+  "t1": 1029.137,
+  "tipo": "video",
+  "texto": "Ese diálogo no existe en la versión que jugaste. Número nueve. La guerra que empezó Ripto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1029.137,
+  "t1": 1037.269,
+  "tipo": "video",
+  "texto": "En Breeze Harbor y Zephyr, dos pueblos se acusan de haber empezado la guerra: los Land Blubbers y los Breeze Builders.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1037.269,
+  "t1": 1046.274,
+  "tipo": "video",
+  "texto": "Y tú ayudas a los dos, porque Spyro es el mercenario más honesto de Avalar. En el juego final parece una pelea sin villano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1046.274,
+  "t1": 1057.93,
+  "tipo": "video",
+  "texto": "Pero ese diálogo cortado de Elora lo explica. Se llevaban bien hasta que llegó Ripto, y ella sospecha que los enfrentó para conquistar Avalar con menos trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1057.93,
+  "t1": 1064.053,
+  "tipo": "video",
+  "texto": "Número ocho. Kill the yeti. En Colossus, un monje, Brother Ned,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1064.053,
+  "t1": 1071.044,
+  "tipo": "video",
+  "texto": "te pide que te ocupes del yeti. Si lees el cuadro de texto, dice: torch, quémalo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1071.044,
+  "t1": 1080.3,
+  "tipo": "video",
+  "texto": "Pero escucha lo que dice en voz alta. Dice kill, mátalo. Un monje vegetariano, por cierto, porque lo aclara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1080.3,
+  "t1": 1088.91,
+  "tipo": "video",
+  "texto": "El audio y el texto no coinciden, y todo apunta a una censura a medias. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1088.91,
+  "t1": 1098.901,
+  "tipo": "video",
+  "texto": "El cumpleaños de Hunter. Antes de la mazmorra de Crush, una cinemática cuenta cómo llegó Ripto. El Profesor estaba probando su superportal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1098.901,
+  "t1": 1106.283,
+  "tipo": "video",
+  "texto": "y solo le faltaban unas coordenadas. Y Hunter suelta: ¿qué tal veintidós, cuatro, siete, cinco?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1106.283,
+  "t1": 1113.71,
+  "tipo": "video",
+  "texto": "Es mi cumpleaños. El Profesor intentó pararlo, pero ya era tarde. Por ese portal entró Ripto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1113.71,
+  "t1": 1122.879,
+  "tipo": "video",
+  "texto": "Una guerra entera por usar tu cumpleaños como clave. Nunca nadie ha explicado mejor la seguridad informática.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1122.879,
+  "t1": 1130.312,
+  "tipo": "video",
+  "texto": "Número seis. Ripto sale de Spyro. El logo japonés del juego dice Spyro en katakana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1130.312,
+  "t1": 1141.21,
+  "tipo": "video",
+  "texto": "Los artistas lo miraban y les parecía que decía, en letras latinas, Ripto. Y así se quedó. El gran enemigo de Spyro es, literalmente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1141.21,
+  "t1": 1148.207,
+  "tipo": "video",
+  "texto": "su propio nombre mal leído. Lo publicó la revista oficial de PlayStation en 1999.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1148.207,
+  "t1": 1159.815,
+  "tipo": "video",
+  "texto": "Y aquí está el logo, por si quieres intentar leerlo. Wade, según el documental, lo dibujó pequeño a propósito, para que contrastara con el enorme Gnasty Gnorc del primer juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1159.815,
+  "t1": 1166.22,
+  "tipo": "video",
+  "texto": "Y lo sacó casi a la primera, con un solo cuernito en la cabeza. Número cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1166.22,
+  "t1": 1175.121,
+  "tipo": "video",
+  "texto": "El salto que nadie programó. Salta, y justo en lo más alto, aprieta cuadrado. Si lo haces en el momento exacto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1175.121,
+  "t1": 1183.648,
+  "tipo": "video",
+  "texto": "Spyro se eleva todavía más. Es el glitch del doble salto. Con él cruzas el puente de Glimmer sin pagarle a Moneybags,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1183.648,
+  "t1": 1192.377,
+  "tipo": "video",
+  "texto": "que es lo más satisfactorio de todo el juego. Y con práctica te saltas casi todo el nivel, sin saludar a nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1192.377,
+  "t1": 1202.897,
+  "tipo": "video",
+  "texto": "No funciona ni en el primer juego ni en el tercero, así que es exclusivo de este. Muy pocos errores se sienten tan parecidos a una venganza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1202.897,
+  "t1": 1211.967,
+  "tipo": "video",
+  "texto": "Número cuatro. Los dos niveles malditos. La versión europea llevaba una protección anticopia llamada LibCrypt.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1211.967,
+  "t1": 1219.307,
+  "tipo": "video",
+  "texto": "Según el documental, con una copia pirata el juego funcionaba bien hasta entrar a Colossus o a Idol Springs.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1219.307,
+  "t1": 1226.712,
+  "tipo": "video",
+  "texto": "Ahí la pantalla se quedaba en negro. Ahora viene lo raro. En 2007 el juego salió en la PlayStation",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1226.712,
+  "t1": 1235.076,
+  "tipo": "video",
+  "texto": "Network europea, y lo retiraron en menos de una semana. ¿Por qué? Porque había dos niveles que no cargaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1235.076,
+  "t1": 1245.647,
+  "tipo": "video",
+  "texto": "Colossus e Idol Springs. Nadie ha confirmado que las dos cosas estén relacionadas, así que esto es solo una coincidencia muy sospechosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1245.647,
+  "t1": 1250.43,
+  "tipo": "video",
+  "texto": "En 2012 volvió, ya con la versión americana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1250.43,
+  "t1": 1260.99,
+  "tipo": "video",
+  "texto": "Número tres. Crash escondido dentro de Spyro. Cuando sale la pantalla de inicio, mantén L1 y R2, y aprieta cuadrado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1260.99,
+  "t1": 1267.474,
+  "tipo": "video",
+  "texto": "Se abre una demo de Crash Team Racing, con la pista Papu's Pyramid. Y al revés también.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1267.474,
+  "t1": 1278.366,
+  "tipo": "video",
+  "texto": "Crash Team Racing esconde una demo de Spyro 2, con Colossus y Magma Cone, y un aviso: a la venta en noviembre de 1999.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1278.366,
+  "t1": 1285.186,
+  "tipo": "video",
+  "texto": "Las dos mascotas de PlayStation, cada una dentro del disco de la otra. Y en aquella época, sin internet,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1285.186,
+  "t1": 1295.341,
+  "tipo": "video",
+  "texto": "solo lo sabías si alguien te lo contaba en el recreo. Número dos. El libro de los monstruos que nunca existieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1295.341,
+  "t1": 1304.154,
+  "tipo": "video",
+  "texto": "El juego tiene dieciséis puntos de habilidad escondidos, y nunca te dice dónde están. Aterrizar en un ídolo en Idol Springs.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1304.154,
+  "t1": 1313.358,
+  "tipo": "video",
+  "texto": "Todos los molinos de Hurricos. Golpear a Ripto en Gulp's Overlook. Si juntas suficientes, se abren los epílogos en la guía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1313.358,
+  "t1": 1322.441,
+  "tipo": "video",
+  "texto": "Son pequeñas historias de lo que pasó después con cada personaje. Gulp, por ejemplo, acaba en un zoológico para monstruos maltratados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1322.441,
+  "t1": 1330.011,
+  "tipo": "video",
+  "texto": "Y si los juntas todos, llega un libro: Faunus Mortas. Un catálogo de diez criaturas extintas de Avalar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1330.011,
+  "t1": 1337.745,
+  "tipo": "video",
+  "texto": "escrito por Basil el Explorador. Son enemigos que se quedaron fuera del juego. Un gato con orejas de murciélago,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1337.745,
+  "t1": 1348.055,
+  "tipo": "video",
+  "texto": "un robot con pala, un armadillo azul, un troll con un puño de piedra llamado Mister Fistus, y una cosita con orejas grandes llamada Wuss.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1348.055,
+  "t1": 1355.43,
+  "tipo": "video",
+  "texto": "Los dejaron ahí, como una tumba cariñosa para los diseños que no sobrevivieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1355.43,
+  "t1": 1365.018,
+  "tipo": "video",
+  "texto": "Número uno. La cara de la moneda. En Mystic Marsh, el Profesor pierde su lápiz, y te toca hacer una cadena de cambios absurda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1365.018,
+  "t1": 1373.722,
+  "tipo": "video",
+  "texto": "Un huevo por una semilla, la semilla por un patito de goma, el patito por un nabo, y el nabo por una moneda dorada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1373.722,
+  "t1": 1380.101,
+  "tipo": "video",
+  "texto": "Si acercas la cámara a esa moneda, verás una cara en relieve. No es de ningún personaje.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1380.101,
+  "t1": 1386.926,
+  "tipo": "video",
+  "texto": "Es Dan Johnson, de Insomniac Games. Sus compañeros lo metieron en el juego como una broma interna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1386.926,
+  "t1": 1398.16,
+  "tipo": "video",
+  "texto": "Y la broma siguió. Su cara volvió a aparecer en Spyro 3, en carteles de Se busca, y luego en Ratchet & Clank. Dan Johnson murió en diciembre de 2006,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1398.16,
+  "t1": 1406.753,
+  "tipo": "video",
+  "texto": "con treinta y dos años. Ratchet & Clank: Size Matters se le dedicó. El remake cambió esa cara por otro símbolo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1406.753,
+  "t1": 1415.752,
+  "tipo": "video",
+  "texto": "Así que, si quieres verlo a él, tienes que volver a esta versión. Veintisiete años después, todavía hay gente que se acerca a esa moneda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1415.752,
+  "t1": 1421.989,
+  "tipo": "video",
+  "texto": "No por el talismán. Por él. Spyro 2 sigue vivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1421.989,
+  "t1": 1433.465,
+  "tipo": "video",
+  "texto": "En 2018 volvió con Reignited Trilogy, y Toys for Bob lo rehízo casi a ciegas, porque Insomniac ya no pudo darle ni el código ni los archivos originales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1433.465,
+  "t1": 1441.545,
+  "tipo": "video",
+  "texto": "Tuvieron que crear una herramienta propia, Spyro-scope, para mirar la geometría de los juegos de PlayStation y copiarla con cuidado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1441.545,
+  "t1": 1449.912,
+  "tipo": "video",
+  "texto": "Y aun así, varios de los secretos que acabas de ver se perdieron por el camino. Y en junio de este año llegó la noticia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1449.912,
+  "t1": 1459.596,
+  "tipo": "video",
+  "texto": "Spyro: A Realm Beyond, el primer juego completamente nuevo de la saga en dieciocho años, previsto para la primavera de 2027.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1459.596,
+  "t1": 1465.666,
+  "tipo": "video",
+  "texto": "Tom Kenny vuelve a ser Spyro. Pero Stewart Copeland ya confirmó que él no estará.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1465.666,
+  "t1": 1476.012,
+  "tipo": "video",
+  "texto": "Así que parte de esa magia se queda aquí, en 1999. Ahora dime tú. ¿Pudiste con la vagoneta, o la dejaste para siempre?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1476.012,
+  "t1": 1484.361,
+  "tipo": "video",
+  "texto": "Te leo en los comentarios, porque leemos todos y nos sirven para mejorar. Y si te gustó este viaje, suscríbete a Crónicas del gaming.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1484.361,
+  "t1": 1492.5,
+  "tipo": "video",
+  "texto": "Nos vemos en el siguiente video. Y págale a Moneybags, antes de que te lo cobre él.",
+  "clip_s": 8
+ }
+]

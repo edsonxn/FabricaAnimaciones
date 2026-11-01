@@ -5,7 +5,10 @@ reflejar lo que dice la narración»). No renderiza ni gasta nada; solo avisa, n
   2. NARRACIÓN ↔ IMAGEN: frases que nombran algo o prometen algo visible y que ni el clip ni un efecto enseñan.
   3. CLIP DE OTRO JUEGO: títulos de fuentes.json sin el nombre del juego o con el de otro (habría cazado «Sinh, the Slumbering
      Dragon», Dark Souls II, en tes_secretos_40); los «(fijado a mano)» salen como revisar.
+  4. SONIDO NOMBRADO (el usuario, 31-oct-2026, todos los canales): frases que nombran un sonido («escucha la diferencia», una
+     música, una voz, un grito) sin audio del clip alto ni pausa de la voz para oírlo, y «leíste bien» donde se oye.
        python fab.py <v> chequeo        (también corre solo antes de `video`; salida completa en previews/chequeo_narracion.md)
+       python -m chequeo_yt sonidos     solo el punto 4; corre solo antes de `voz` en todo video (sin timeline: solo el texto)
 Receta: docs/estilo_secuencia_yt.md § LISTA DE CONTROL. La pista es de texto: lo que marca se revisa a mano, no es un veredicto.
 """
 
@@ -24,6 +27,13 @@ UMBRAL = .75                                                    # por debajo del
 N_REF = 6
 PROMETE = re.compile(r"\b(se ve|se ven|se alcanza a ver|alcanzas a ver|puedes ver|podrás ver|verás|mira|miren|fíjate|fijate|"
                      r"aquí está|ahí está|aparece|aparecen|como ves|así se ve|esta es|este es)\b", re.I)
+
+
+SUENA = re.compile(r"(escuch\w*|\bsuena[ns]?\b|sonid\w*|m[uú]sica\w*|canci[oó]n\w*|\boye[sn]?\b|\bo[ií]r\b|o[ií]do\w*|o[ií]ste|"
+                   r"\bgrit\w*|melod[ií]\w*|tema musical|silb\w*|ruido\w*|\bvoz de\b|\bcon voz\b|en voz alta|[oó]pera\b)", re.I)
+LEER = re.compile(r"\b(le[ií]ste|leyeron)\b", re.I)   # quien ve el video la OYE: «sí, oíste bien»
+AUDIBLE = .8      # ambiente_por desde el que el sonido del clip ES el punto
+PAUSA = 1.5       # s de voz callada tras la frase para oírlo
 
 
 OTROS = re.compile(r"(dark souls|elden ring|sekiro|bloodborne|witcher|baldur|dragon age|dragon's dogma|dragons dogma|fallout|starfield|"
@@ -180,11 +190,66 @@ def otro_juego():
         print("  a mano: " + " ".join(k[6:] for k in a_mano))
 
 
+def sonidos():
+    """Frases que nombran un sonido y no dejan oírlo. Con timeline: audio del clip (ambiente_por) y pausa de voz tras la frase;
+    sin timeline (antes de `voz`): solo el texto, para decidir `post` y `ambiente_por` antes de cortar los beats."""
+    try:
+        import guion
+    except Exception:
+        return
+    amb = ((getattr(guion, "SECUENCIA", {}) or {}).get("ambiente_por") or {})
+    if os.path.exists("timeline.json") and os.path.exists("beats.json"):
+        tl = json.load(open("timeline.json", encoding="utf-8"))
+        frases = [(fr["t0"], fr["t1"], fr["texto"]) for e in tl["escenas"] for fr in e["frases"]]
+        bs = json.load(open("beats.json", encoding="utf-8"))
+    else:
+        frases = [(None, None, re.sub(r"\[[^\]]*\]\s*", "", tx)) for e in getattr(guion, "ESCENAS", [])
+                  for tx in e.get("frases", []) if isinstance(tx, str)]
+        bs = []
+    sin_oir, leer, total = [], [], 0
+    for i, (ini, fin, tx) in enumerate(frases):
+        if LEER.search(tx):
+            leer.append((ini, tx))
+        if not SUENA.search(tx):
+            continue
+        total += 1
+        if ini is None:
+            sin_oir.append((None, "", tx, "decidir post + ambiente_por"))
+            continue
+        # el sonido puede ir en el beat de la frase o en el que sigue justo después
+        ids = [b["id"] for b in bs if b["t0"] <= (ini + fin) / 2 <= b["t1"] or b["t0"] <= fin + .5 <= b["t1"]]
+        alto = max((amb.get(k, 0) for k in ids), default=0)
+        pausa = (frases[i + 1][0] - fin) if i + 1 < len(frases) else 99
+        if alto < AUDIBLE or pausa < PAUSA:
+            falta = []
+            if alto < AUDIBLE:
+                falta.append(f"audio del clip {alto:.1f}" if alto else "sin audio del clip")
+            if pausa < PAUSA:
+                falta.append(f"voz callada {pausa:.1f} s")
+            sin_oir.append((ini, ids[0] if ids else "", tx, " · ".join(falta)))
+    if not total and not leer:
+        return
+    print(f"SONIDO NOMBRADO: {total} frases nombran un sonido; {len(sin_oir)} no dejan oírlo "
+          f"(≥ {AUDIBLE} de ambiente_por y ≥ {PAUSA} s de voz callada) · {len(leer)} «leíste» donde se oye")
+    for ini, b, tx, falta in sin_oir:
+        t = f"{int(ini // 60)}:{int(ini % 60):02d} {b} " if ini is not None else ""
+        print(f"  ⚠ {t}[{falta}]: {tx[:100]}")
+    for ini, tx in leer:
+        t = f"{int(ini // 60)}:{int(ini % 60):02d} " if ini is not None else ""
+        print(f"  ⚠ {t}«leíste» → «oíste»: {tx[:100]}")
+    if sin_oir:
+        print("  regla: docs/estilo_secuencia_yt.md § Sonido original → «Si la voz nombra un sonido»")
+
+
 def main():
+    if sys.argv[1:] == ["sonidos"]:
+        sonidos()
+        return
     carpeta = os.getcwd()
     densidad(carpeta)
     narracion(carpeta)
     otro_juego()
+    sonidos()
     print("Lista completa de capas: docs/estilo_secuencia_yt.md § LISTA DE CONTROL")
 
 

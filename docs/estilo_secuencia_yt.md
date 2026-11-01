@@ -663,8 +663,11 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
     frase para no prometerlo.
   - **Verbos para quien OYE el video:** «sí, oíste bien», nunca «sí, leíste bien» (el espectador escucha la narración; «lees» solo
     para un texto que de verdad está en pantalla y es el punto, como el cuadro de diálogo del monje en `spyro2`).
-  - **Antes de la voz:** `grep -iE "escuch|suena|sonid|música|canci|oye|oír|oído|grit|melod|voz de|leíste"` sobre el guion; cada
-    resultado tiene su `post` + `ambiente_por` o se reescribe. Antes de renderizar, se oye cada uno en la mezcla.
+  - **Aviso automático (`nucleo/chequeo_yt.py`, `sonidos`):** corre solo antes de `voz` en TODO video (con el texto del guion:
+    lista las frases para decidir `post` + `ambiente_por` y los «leíste») y dentro de `chequeo`/antes de `video` (con timeline:
+    marca cada frase cuyo beat o el siguiente no llega a `ambiente_por` 0,8 o que no deja ≥ 1,5 s de voz callada). A mano:
+    `python -m chequeo_yt sonidos` desde la carpeta del video. Es pista de texto: «escuchar una disculpa» (figurado) sale y se
+    ignora. En `spyro2` marcó las 16 frases de su tramo 5. Antes de renderizar, se oye cada una en la mezcla.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;

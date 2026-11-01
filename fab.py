@@ -157,6 +157,8 @@ def correr(video, etapa, extra):
         elif etapa in ("comprobar", "escena", "prueba", "montaje"):
             print(f"[{video}] {etapa}: no aplica al motor secuencia (revisa con `medios` y `video --tramo a-b`)")
             return
+    if etapa == "voz" and not extra:
+        subprocess.run([sys.executable, "-m", "chequeo_yt", "sonidos"], cwd=carpeta, env=env)   # solo avisa (31-oct-2026)
     print(f"\n=== [{video}] {etapa} ===", flush=True)
     # sin GPU no hay cola (19-oct-2026): la voz de ElevenLabs es una API, y `seleccionar` con FAB_WHISPER_CPU=1 evalúa en CPU
     sin_gpu = bool((etapa == "voz" and _re.search(r'motor\s*=\s*"elevenlabs"', _g))

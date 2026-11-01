@@ -1,0 +1,207 @@
+{
+ "archmage malin": {
+  "model": 2968,
+  "nombre": "Archmage Malin",
+  "npc": 2708
+ },
+ "argent sentry": {
+  "model": 16147,
+  "nombre": "Argent Sentry",
+  "npc": 16378
+ },
+ "auctioneer jaxon": {
+  "model": 15594,
+  "nombre": "Auctioneer Jaxon",
+  "npc": 15659
+ },
+ "baron revilgaz": {
+  "model": 7167,
+  "nombre": "Baron Revilgaz",
+  "npc": 2496
+ },
+ "bloodlord mandokir": {
+  "model": 11288,
+  "nombre": "Bloodlord Mandokir",
+  "npc": 11382
+ },
+ "booty bay bruiser": {
+  "model": 7102,
+  "nombre": "Booty Bay Bruiser",
+  "npc": 4624
+ },
+ "brother paxton": {
+  "model": 3253,
+  "nombre": "Brother Paxton",
+  "npc": 951
+ },
+ "donova snowden": {
+  "model": 8949,
+  "nombre": "Donova Snowden",
+  "npc": 9298
+ },
+ "dungar longdrink": {
+  "model": 5128,
+  "nombre": "Dungar Longdrink",
+  "npc": 352
+ },
+ "flesh eater": {
+  "model": 987,
+  "nombre": "Flesh Eater",
+  "npc": 3
+ },
+ "frostsaber stalker": {
+  "model": 11445,
+  "nombre": "Frostsaber Stalker",
+  "npc": 7432
+ },
+ "ghoul ravener": {
+  "model": 10626,
+  "nombre": "Ghoul Ravener",
+  "npc": 10406
+ },
+ "gurubashi axe thrower": {
+  "model": 11074,
+  "nombre": "Gurubashi Axe Thrower",
+  "npc": 11350
+ },
+ "gurubashi berserker": {
+  "model": 14832,
+  "nombre": "Gurubashi Berserker",
+  "npc": 11352
+ },
+ "hakkar": {
+  "model": 15295,
+  "nombre": "Hakkar",
+  "npc": 14834
+ },
+ "hakkari priest": {
+  "model": 11758,
+  "nombre": "Hakkari Priest",
+  "npc": 11830
+ },
+ "high priest venoxis": {
+  "model": 15217,
+  "nombre": "High Priest Venoxis",
+  "npc": 14507
+ },
+ "high priestess jeklik": {
+  "model": 15219,
+  "nombre": "High Priestess Jeklik",
+  "npc": 14517
+ },
+ "high tinker mekkatorque": {
+  "model": 7006,
+  "nombre": "High Tinker Mekkatorque",
+  "npc": 7937
+ },
+ "innkeeper farley": {
+  "model": 1291,
+  "nombre": "Innkeeper Farley",
+  "npc": 295
+ },
+ "ironforge guard": {
+  "model": 3524,
+  "nombre": "Ironforge Guard",
+  "npc": 5595
+ },
+ "ironforge mountaineer": {
+  "model": 1598,
+  "nombre": "Ironforge Mountaineer",
+  "npc": 727
+ },
+ "king magni bronzebeard": {
+  "model": 3597,
+  "nombre": "King Magni Bronzebeard",
+  "npc": 2784
+ },
+ "kor'kron elite": {
+  "model": 14360,
+  "nombre": "Kor'kron Elite",
+  "npc": 14304
+ },
+ "kul tiras sailor": {
+  "model": 3734,
+  "nombre": "Kul Tiras Sailor",
+  "npc": 3128
+ },
+ "lord maxwell tyrosus": {
+  "model": 10469,
+  "nombre": "Lord Maxwell Tyrosus",
+  "npc": 11034
+ },
+ "marshal dughan": {
+  "model": 1985,
+  "nombre": "Marshal Dughan",
+  "npc": 240
+ },
+ "orgrimmar grunt": {
+  "model": 4259,
+  "nombre": "Orgrimmar Grunt",
+  "npc": 3296
+ },
+ "plague spreader": {
+  "model": 519,
+  "nombre": "Plague Spreader",
+  "npc": 604
+ },
+ "rattlegore": {
+  "model": 12073,
+  "nombre": "Rattlegore",
+  "npc": 11622
+ },
+ "razzashi raptor": {
+  "model": 2571,
+  "nombre": "Razzashi Raptor",
+  "npc": 14821
+ },
+ "rotted one": {
+  "model": 137,
+  "nombre": "Rotted One",
+  "npc": 948
+ },
+ "skeletal warrior": {
+  "model": 200,
+  "nombre": "Skeletal Warrior",
+  "npc": 48
+ },
+ "spirit healer": {
+  "model": 5233,
+  "nombre": "Spirit Healer",
+  "npc": 6491
+ },
+ "stormwind city guard": {
+  "model": 3167,
+  "nombre": "Stormwind City Guard",
+  "npc": 68
+ },
+ "stranglethorn tiger": {
+  "model": 320,
+  "nombre": "Stranglethorn Tiger",
+  "npc": 682
+ },
+ "thalgus thunderfist": {
+  "model": 7120,
+  "nombre": "Thalgus Thunderfist",
+  "npc": 7976
+ },
+ "thrall": {
+  "model": 4527,
+  "nombre": "Thrall",
+  "npc": 4949
+ },
+ "timber wolf": {
+  "model": 604,
+  "nombre": "Timber Wolf",
+  "npc": 69
+ },
+ "tirion fordring": {
+  "model": 9477,
+  "nombre": "Tirion Fordring",
+  "npc": 1855
+ },
+ "zulian tiger": {
+  "model": 11031,
+  "nombre": "Zulian Tiger",
+  "npc": 11361
+ }
+}

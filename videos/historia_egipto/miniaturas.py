@@ -1,201 +1,105 @@
 # -*- coding: utf-8 -*-
-"""Miniaturas oficiales de Cronopapel para «La historia de Egipto en 5 minutos».
-Generadas como cuadros nativos del motor (Boceto + Guache + Mapa de relieve).
-"""
-import math
-import os
-import sys
+"""Miniaturas de Cronopapel para «La historia de Egipto en 5 minutos» (v2, 12-oct-2026), hechas con el motor del video.
+Fondo = el mapa del propio video (relieve real, valle verde, el Egipto unificado en oro) sin actores; encima, pegatinas grandes
+(máscara de Tutankamón, Cleopatra, Ramsés, pirámides y esfinge) y el texto en Impact.  Uso: python fab.py historia_egipto miniatura
+(o ./run.sh -c "import miniaturas as m; ..."). Copiado de historia_espana/miniaturas.py."""
 import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 import boceto as B
-from boceto import Dib, R, circ, elip, linea
-import mapa as M
-import obj_a as A
-import obj_b as Bb
-import obj_c as C
-from core import estampar
+import escenas as E
+import obj_eg1 as E1
+import obj_eg2 as E2
 from motor import H, W
-from obj_base import forma, rayita, rect, personaje_egipcio, _rotar
 
-M.cargar()
-
-T = 0.37
-WOB = 0.0
-
-CREMA = (246, 236, 208)
-GRIS_CL = (206, 208, 216)
-ROJO_CH = (200, 66, 60)
-ORO_EGIPTO = (226, 175, 52)
+T_MAPA = 31.0           # 3100 a. C.: el Egipto unificado (oro) con el Delta y el valle, cámara sobre Menfis
+_FONDO = {}
 
 
-def cronometro(aguja=0.0):
-    """Cronómetro sticker de Cronopapel."""
-    ops = forma(circ(0, 0, 100, n=42), CREMA, 6.4, peso=0.8, sp=11) + forma(rect(-18, -128, 18, -100, 4), GRIS_CL, 5, sp=6) + [B.T(linea((58, -84), (84, -108)), 7, peso=0.03)]
-    for i in range(12):
-        a = i * math.pi / 6
-        ops.append(rayita(84 * math.cos(a), 84 * math.sin(a), 94 * math.cos(a), 94 * math.sin(a), 4.2))
-    ops += [B.T(_rotar(linea((0, 0), (0, -70)), aguja, 0, 0), 6, peso=0.02), R(circ(0, 0, 8, n=10), ROJO_CH, peso=0.01, sp=3)]
-    return Dib(ops)
+def _fondo(t=T_MAPA, oscurecer=0.85):
+    """Mapa del video en el instante t, sin actores, sellos ni contador (la hoja de fondo `hf` de Mundo.render)."""
+    if t not in _FONDO:
+        m = E.Mundo(E.TL["escenas"][0], 0)
+        m.render(None, t)
+        _FONDO[t] = np.clip(np.array(m.hf.componer(), dtype=np.float32), 0, 1)
+    img = _FONDO[t].copy()
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    vi = 1.0 - 0.38 * np.clip(np.hypot((xx - W * 0.55) / (W * 0.62), (yy - H * 0.5) / (H * 0.62)) - 0.45, 0, 1)
+    return np.clip(img * oscurecer * vi[..., None], 0, 1)
 
 
-def render_texto_pegatina(linea1, linea2=None, px1=205, px2=155,
-                          col1=(255, 255, 255), col2=(255, 226, 30),
-                          rot=-3.0, sw1=12, sw2=10):
+def _texto(linea1, linea2, px1, px2, col1=(255, 255, 255), col2=(255, 226, 30), rot=-3.0, sw=11):
     f1 = ImageFont.truetype("C:/Windows/Fonts/impact.ttf", px1)
-    f2 = ImageFont.truetype("C:/Windows/Fonts/impact.ttf", px2) if linea2 else None
-    
-    bb1 = f1.getbbox(linea1)
-    w1, h1 = bb1[2] - bb1[0], bb1[3] - bb1[1]
-    
-    if linea2:
-        bb2 = f2.getbbox(linea2)
-        w2, h2 = bb2[2] - bb2[0], bb2[3] - bb2[1]
-    else:
-        w2, h2 = 0, 0
-        
-    pad = int(max(px1, px2 or 0) * 0.3)
-    max_w = max(w1, w2)
-    tot_w = max_w + pad * 2
-    inter = int(px1 * 0.12) if linea2 else 0
-    tot_h = h1 + (h2 + inter if linea2 else 0) + pad * 2
-    
-    im_mask = Image.new("L", (tot_w, tot_h), 0)
-    d_mask = ImageDraw.Draw(im_mask)
-    x1 = pad + (max_w - w1) // 2 - bb1[0]
-    y1 = pad - bb1[1]
-    d_mask.text((x1, y1), linea1, font=f1, fill=255, stroke_width=sw1 + 10, stroke_fill=255)
-    
-    if linea2:
-        x2 = pad + (max_w - w2) // 2 - bb2[0]
-        y2 = y1 + h1 + inter
-        d_mask.text((x2, y2), linea2, font=f2, fill=255, stroke_width=sw2 + 10, stroke_fill=255)
-        
-    im_rgb = Image.new("RGBA", (tot_w, tot_h), (0, 0, 0, 0))
-    d_rgb = ImageDraw.Draw(im_rgb)
-    d_rgb.text((x1, y1), linea1, font=f1, fill=(28, 26, 30, 255), stroke_width=sw1 + 6, stroke_fill=(28, 26, 30, 255))
-    d_rgb.text((x1, y1), linea1, font=f1, fill=col1 + (255,), stroke_width=sw1, stroke_fill=(28, 26, 30, 255))
-    
-    if linea2:
-        d_rgb.text((x2, y2), linea2, font=f2, fill=(28, 26, 30, 255), stroke_width=sw2 + 6, stroke_fill=(28, 26, 30, 255))
-        d_rgb.text((x2, y2), linea2, font=f2, fill=col2 + (255,), stroke_width=sw2, stroke_fill=(28, 26, 30, 255))
-        
-    if rot != 0:
-        im_mask = im_mask.rotate(-rot, resample=Image.BICUBIC, expand=True)
-        im_rgb = im_rgb.rotate(-rot, resample=Image.BICUBIC, expand=True)
-        
-    arr_mask = np.asarray(im_mask)
-    arr_rgb = np.asarray(im_rgb)
-    
+    f2 = ImageFont.truetype("C:/Windows/Fonts/impact.ttf", px2)
+    b1, b2 = f1.getbbox(linea1), f2.getbbox(linea2)
+    w1, h1, w2, h2 = b1[2] - b1[0], b1[3] - b1[1], b2[2] - b2[0], b2[3] - b2[1]
+    pad, inter = int(max(px1, px2) * 0.3), int(px1 * 0.14)
+    tw, th = max(w1, w2) + pad * 2, h1 + h2 + inter + pad * 2
+    masc, rgb = Image.new("L", (tw, th), 0), Image.new("RGBA", (tw, th), (0, 0, 0, 0))
+    dm, dr = ImageDraw.Draw(masc), ImageDraw.Draw(rgb)
+    p1 = (pad - b1[0], pad - b1[1])
+    p2 = (pad - b2[0], pad - b2[1] + h1 + inter)
+    for p, txt, f, col in ((p1, linea1, f1, col1), (p2, linea2, f2, col2)):
+        dm.text(p, txt, font=f, fill=255, stroke_width=sw + 10, stroke_fill=255)
+        dr.text((p[0] + 7, p[1] + 9), txt, font=f, fill=(20, 18, 22, 255), stroke_width=sw, stroke_fill=(20, 18, 22, 255))   # sombra
+        dr.text(p, txt, font=f, fill=col + (255,), stroke_width=sw, stroke_fill=(28, 26, 30, 255))
+    masc, rgb = masc.rotate(-rot, resample=Image.BICUBIC, expand=True), rgb.rotate(-rot, resample=Image.BICUBIC, expand=True)
     k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (19, 19))
-    peg_mask = cv2.dilate((arr_mask > 20).astype(np.uint8) * 255, k)
-    return arr_rgb, peg_mask
+    return np.asarray(rgb), cv2.dilate((np.asarray(masc) > 20).astype(np.uint8) * 255, k)
 
 
-def estampar_texto_miniatura(h, arr_rgb, peg_mask, cx, cy):
-    th, tw = peg_mask.shape
-    xx = int(round(cx - tw / 2))
-    yy = int(round(cy - th / 2))
-    h.peg_mascara(peg_mask, xx, yy)
-    xa, ya = max(0, xx), max(0, yy)
-    xb, yb = min(W, xx + tw), min(H, yy + th)
-    if xb > xa and yb > ya:
-        sub_rgb = arr_rgb[ya - yy:yb - yy, xa - xx:xb - xx]
-        alpha = sub_rgb[..., 3].astype(np.float32) / 255.0
-        if not hasattr(h, "_textos_overlay"):
-            h._textos_overlay = []
-        h._textos_overlay.append((xa, ya, xb, yb, sub_rgb[..., :3], alpha))
+def _pegar_texto(h, capas, arr, masc, x0, y0):
+    """Texto con su borde de pegatina; (x0, y0) = esquina superior izquierda."""
+    th, tw = masc.shape
+    h.peg_mascara(masc, x0, y0)
+    xa, ya, xb, yb = max(0, x0), max(0, y0), min(W, x0 + tw), min(H, y0 + th)
+    sub = arr[ya - y0:yb - y0, xa - x0:xb - x0]
+    capas.append((xa, ya, xb, yb, sub[..., :3].astype(np.float32) / 255.0, sub[..., 3:4].astype(np.float32) / 255.0))
 
 
-def componer_miniatura(h):
-    base = np.clip(h.componer(), 0, 1)
-    if hasattr(h, "_textos_overlay"):
-        for xa, ya, xb, yb, rgb, alpha in h._textos_overlay:
-            col_f = rgb.astype(np.float32) / 255.0
-            a = alpha[..., None]
-            base[ya:yb, xa:xb] = base[ya:yb, xa:xb] * (1.0 - a) + col_f * a
-    return base
+def _componer(h, capas):
+    out = np.clip(h.componer(), 0, 1)
+    for xa, ya, xb, yb, col, a in capas:
+        out[ya:yb, xa:xb] = out[ya:yb, xa:xb] * (1 - a) + col * a
+    return out
+
+
+def _dib(h, d, x, y, s, rot=0.0, flip=False, sem=1):
+    d.dibujar(h, x, y, s, rot, flip, 1.0, 0, sem, peg=True)
+
+
+def _base(l1, l2, px1, px2):
+    h = B.Hoja()
+    h.limpiar()
+    h.fondo = _fondo()
+    capas = []
+    _dib(h, E2.piramides_guiza(), 330, 1050, 1.05, 0.0, sem=2)
+    _dib(h, E2.esfinge(), 520, 1060, 0.62, 0.0, sem=3)
+    _dib(h, E1.ramses(0, "serio", "pschent"), 900, 1050, 1.25, -0.03, sem=4)
+    _dib(h, E1.cleopatra(0, "guiño"), 1180, 1050, 1.2, 0.03, sem=5)
+    _dib(h, E2.mascara_tut(), 1620, 1050, 2.2, 0.03, sem=6)
+    arr, masc = _texto(l1, l2, px1, px2)
+    _pegar_texto(h, capas, arr, masc, 30, 20)
+    return _componer(h, capas)
 
 
 def milenario(lz=None):
-    """Variante 1: 5.000 AÑOS / EN 5 MINUTOS.
-    Valle del Nilo verde con el mar, Gran Pirámide, Faraón con nemes y cetro, cartucho real y cronómetro."""
-    h = B.Hoja()
-    h.limpiar()
-    
-    cam = M.Cam()
-    cam.fijar(31.2, 28.2, 2.30, 0.0)
-    img = M.fondo_base()
-    M.pintar_tierra(img, cam, fase=0)
-    
-    # Resaltar territorio histórico de Egipto en oro antiguo
-    if "unificado" in M.CAMPOS:
-        S_unif = cam.proyectar(M.CAMPOS["unificado"])
-        M.pintar(img, S_unif, ORO_EGIPTO, alfa=0.92, fase=0, sombra=0.18)
-        
-    M.pintar_nilo(img, cam, fase=0)
-    h.fondo = img
-    
-    # Gran Pirámide de Guiza en el horizonte
-    pir = A.gran_piramide_guiza()
-    pir.dibujar(h, 1060, 360, s=1.1, rot=0.0, peg=True, fase_=0)
-    
-    # Cartucho real / jeroglífico en la parte superior central
-    cart = A.cartucho_real()
-    cart.dibujar(h, 1370, 240, s=1.05, rot=-0.05, peg=True, fase_=0)
-    
-    # Cronómetro 5 min
-    cr = cronometro(aguja=math.radians(115))
-    cr.dibujar(h, 1750, 240, s=1.3, rot=0.06, peg=True, fase_=0)
-    
-    # Faraón divino en primer plano con expresión de asombro
-    far = personaje_egipcio(tipo="faraon", corona="nemes", mirada=-1.0, cetro=True, cara="asombro")
-    far.dibujar(h, 1530, 1020, s=2.80, rot=0.02, peg=True, fase_=0)
-    
-    # Texto
-    arr, peg = render_texto_pegatina("5.000 AÑOS", "EN 5 MINUTOS", px1=205, px2=155,
-                                    col1=(255, 255, 255), col2=(255, 226, 30), rot=-3.0)
-    estampar_texto_miniatura(h, arr, peg, 580, 285)
-    return componer_miniatura(h)
+    """5.000 AÑOS / EN 5 MINUTOS."""
+    return _base("5.000 AÑOS", "EN 5 MINUTOS", 200, 150)
 
 
-def faraones(lz=None):
-    """Variante 2: FARAONES / EN 5 MINUTOS."""
-    h = B.Hoja()
-    h.limpiar()
-    
-    cam = M.Cam()
-    cam.fijar(31.2, 28.2, 2.30, 0.0)
-    img = M.fondo_base()
-    M.pintar_tierra(img, cam, fase=0)
-    
-    if "unificado" in M.CAMPOS:
-        S_unif = cam.proyectar(M.CAMPOS["unificado"])
-        M.pintar(img, S_unif, ORO_EGIPTO, alfa=0.92, fase=0, sombra=0.18)
-        
-    M.pintar_nilo(img, cam, fase=0)
-    h.fondo = img
-    
-    pir = A.gran_piramide_guiza()
-    pir.dibujar(h, 1060, 360, s=1.1, rot=0.0, peg=True, fase_=0)
-    
-    cart = A.cartucho_real()
-    cart.dibujar(h, 1370, 240, s=1.05, rot=-0.05, peg=True, fase_=0)
-    
-    cr = cronometro(aguja=math.radians(115))
-    cr.dibujar(h, 1750, 240, s=1.3, rot=0.06, peg=True, fase_=0)
-    
-    far = personaje_egipcio(tipo="faraon", corona="pschent", mirada=-1.0, cetro=True, cara="asombro")
-    far.dibujar(h, 1530, 1020, s=2.80, rot=0.02, peg=True, fase_=0)
-    
-    arr, peg = render_texto_pegatina("FARAONES", "EN 5 MINUTOS", px1=205, px2=155,
-                                    col1=(255, 255, 255), col2=(255, 226, 30), rot=-3.0)
-    estampar_texto_miniatura(h, arr, peg, 580, 285)
-    return componer_miniatura(h)
+def egipto(lz=None):
+    """EGIPTO / EN 5 MINUTOS."""
+    return _base("EGIPTO", "EN 5 MINUTOS", 250, 150)
 
 
-VARIANTES = {
-    "milenario": milenario,
-    "faraones": faraones,
-}
+VARIANTES = {"milenario": milenario, "egipto": egipto}
+
+
+if __name__ == "__main__":
+    import sys
+    for n in (sys.argv[1:] or list(VARIANTES)):
+        im = VARIANTES[n]()
+        cv2.imwrite(f"salida/historia_egipto_5min_mini_{n}.jpg", (np.clip(im, 0, 1)[..., ::-1] * 255).astype(np.uint8), [cv2.IMWRITE_JPEG_QUALITY, 92])
+        print("salida/historia_egipto_5min_mini_" + n + ".jpg")

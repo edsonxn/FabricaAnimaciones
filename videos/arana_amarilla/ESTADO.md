@@ -3,6 +3,7 @@
 - canal: wild_next_door (EN INGLÉS) · PROGRAMADO sáb 24-oct-2026 16:05 UTC (https://youtu.be/Oq0Tbhz8x0g, privado hasta la fecha)
 - estilo: secuencia_flow (dibujo animado de Flow: 7 clips al inicio + imágenes) → docs/manual_wild_next_door.md · ejemplo: videos/arana_techo/
 - etapa: PROGRAMADO (subido 22-oct con miniatura y .srt; registrado en canales/wild_next_door.json y BITACORA)
+- ✅ **PÚBLICO** desde el sáb 24-oct 10:05 CDMX · https://youtu.be/Oq0Tbhz8x0g (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: el 31-oct medir (`yt videos` + `yt metricas wild_next_door 90`) y llenar su fila en `canales/formula/wild_next_door.md`; luego `python fab.py arana_amarilla limpiar`
 
 ## Sesiones (plan de tramos · «continúa el video arana amarilla» retoma aquí · protocolo docs/sesiones.md)

@@ -48,7 +48,7 @@ def _pie(lz, iso, x, y, z, texto, color, t, t0, t1, px=40, dy=-70, cola="abajo")
 
 # ------------------------------------------------------------------------------------------------ A. el cañón y la altura
 def cam_a(t):
-    return K(t, [(T_A, (160, 180, 0, 0.66)), (t_fondo, (190, 190, 0, 0.74)), (T_B, (200, 200, 0, 0.82))])
+    return K(t, [(T_A, (250, 215, 0, 0.7)), (t_fondo, (265, 225, 0, 0.78)), (T_B, (275, 235, 0, 0.86))])
 
 
 @shot(T_A, bg=lambda t: PA.cielo(0.0), post=[acabado], ent=("fundido", 0.5))
@@ -85,7 +85,7 @@ def a_canon(lz, t):
 
 # ------------------------------------------------------------------------------------------------ B. la sierra y el río
 def cam_b(t):
-    return K(t, [(T_B, (200, 200, 0, 0.82)), (t_morones + 0.2, (-10, 150, 0, 0.9)), (t_rio, (330, 80, 0, 0.9)), (t_cerros + 0.2, (400, 360, 0, 0.9))])
+    return K(t, [(T_B, (275, 235, 0, 0.86)), (t_morones + 0.2, (30, 150, 0, 0.95)), (t_rio, (330, 90, 0, 0.95)), (t_cerros + 0.2, (400, 360, 0, 0.95))])
 
 
 @shot(T_B, bg=lambda t: PA.cielo(0.0), post=[acabado], ent=("fundido", 0.5))

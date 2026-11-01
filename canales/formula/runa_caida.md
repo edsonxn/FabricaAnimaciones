@@ -55,3 +55,8 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
   5 de agradecimiento) y que corrige en voz la queja de pronunciación («Micuela» → «Miquela»).
 - Subido el 29-oct-2026 (https://youtu.be/Uuj8Bw45-fs), programado jue 5-nov 10:00 CDMX (96 h tras Melina).
 - Comparar a los 7 días con Miquella/Melina (~20 min) y Ranni: vistas, % visto (¿aguanta 24 min?), y si bajan las quejas de la voz.
+
+## Campaña de suscripción (el usuario, 30-oct-2026)
+- **Base a 90 días:** 305 subs, 8,8 subs por 1 000 vistas, 97,4 % de las vistas son de no suscritos, 1 913 h. Ningún video lo había pedido.
+- **Plan:** tramo de 6-10 s antes del puesto 1 + frase en el cierre, meta 500 → 1 000. Reglas en `docs/estilo_secuencia_yt.md` § CAMPAÑA.
+- **Primer video:** el siguiente que se escriba (Melina y Radahn ya están renderizados). Objetivo: ≥ 12 subs por 1 000 sin caer más de 3 puntos en el tramo.

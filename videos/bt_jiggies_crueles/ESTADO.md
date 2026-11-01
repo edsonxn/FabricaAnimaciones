@@ -3,6 +3,7 @@
 - canal: cronicas_gaming · PROGRAMADO mar 27-oct-2026 18:00 CDMX (ciclo bajado a 3 días por el usuario el 23-oct)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + fichas + MG `nucleo/mg_gaming.py` + mapas con ruta) · voz ElevenLabs Hope · música = OST OFICIAL de Banjo-Tooie (regla 23-oct, no Lyria) → doc: docs/estilo_secuencia_yt.md
 - etapa: ✅ SUBIDO en privado y PROGRAMADO 2026-10-28T00:00:00Z: https://youtu.be/qLBP3ce4AC4 (11:30, miniatura Flow)
+- ✅ **PÚBLICO** desde el mar 27-oct 18:00 CDMX · https://youtu.be/qLBP3ce4AC4 (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: registro a 7 días en canales/formula/cronicas_gaming.md (~3-nov) · al aprobar: `fab.py bt_jiggies_crueles limpiar` · `biblioteca sfx catalogar`
 
 ## Sesiones (plan de tramos · «continúa el video bt_jiggies_crueles» retoma aquí · protocolo docs/sesiones.md)

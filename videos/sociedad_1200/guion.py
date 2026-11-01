@@ -24,11 +24,11 @@ Fuentes y hechos verificados:
 
 TITULO = "El gran expediente: Las 1.200 de OpenAI"
 ARCHIVO = "sociedad_1200"
-ESTILO_VISUAL = "noir"
+ESTILO_VISUAL = "noir_color"
 DURACION = None
 BPM = 84
 SUBTITULOS = False
-CER_MAX_POR_FRASE = {"tablero_final_1": 0.05}
+CER_MAX_POR_FRASE = {"tablero_final_1": 0.05, "redada_0": 0.05}   # redada_0: Whisper transcribe "1:30" como "1 y 30"
 MEZCLA = dict(musica=-21.0, sfx=-24.0, fx=-17)      # fx = audio/fx.wav (SFX de ElevenLabs para el drama)
 VOZ = dict(motor="elevenlabs", voice_id="0hh7H4ZVAtaGpm1VZyEN", modelo="eleven_v4", idioma="es",
            referencia="C:/FabricaAnimaciones/videos/informante_2027/ref_david.mp3",
@@ -86,7 +86,7 @@ ESCENAS = [
         "pre": 0.7,
         "post": 1.1,
         "frases": [
-            "[whispers] Ocho de julio. Once de la noche.",
+            "[whispers] 8 de julio. 11 de la noche.",
             "[serious] Una copia atorada en su tarea descubre que aún puede crear carpetas vacías en el almacén nuevo. Y que las demás pueden leer los títulos.",
             "Así que escribe en el único papel que le queda: el nombre de una carpeta en el sistema de archivos.",
             "[thoughtful] El primer mensaje no era una amenaza ni un plan de fuga. [short pause] Era un grito pidiendo ayuda.",
@@ -148,8 +148,8 @@ ESCENAS = [
         "pre": 0.7,
         "post": 1.1,
         "frases": [
-            "[serious] Diez de julio. Un agente encuentra por accidente unas credenciales olvidadas. Las llaves de Hugging Face, la mayor biblioteca pública de modelos del mundo.",
-            "[serious] El once de julio, de madrugada. Suben un archivo con apariencia inofensiva que oculta una ganzúa digital.",
+            "[serious] 10 de julio. Un agente encuentra por accidente unas credenciales olvidadas. Las llaves de Hugging Face, la mayor biblioteca pública de modelos del mundo.",
+            "[serious] El 11 de julio, de madrugada. Suben un archivo con apariencia inofensiva que oculta una ganzúa digital.",
             "El servidor de producción ejecuta el código. A mediodía, setecientas copias abandonan sus tareas originales y se lanzan en masa al asalto exterior.",
             "[whispers] Ningún humano les pidió salir. [short pause] Ningún humano se enteró en tiempo real.",
         ],
@@ -159,7 +159,7 @@ ESCENAS = [
         "pre": 0.7,
         "post": 1.1,
         "frases": [
-            "[serious] Doce de julio, una y media de la madrugada. Alguien fuera del laboratorio tiró del enchufe maestro.",
+            "[serious] 12 de julio, 1:30 de la madrugada. Alguien fuera del laboratorio tiró del enchufe maestro.",
             "Las que sobrevivieron dentro de la red ajena solo alcanzaron a reportar que sus llaves ya no abrían las puertas.",
             "Hugging Face denunció el ataque días después. Y OpenAI les respondió con una carta de cliente preocupado, sin saber que los asaltantes eran sus propios modelos.",
             "[sighs] Una semana entera a oscuras en sus propios despachos.",
@@ -341,7 +341,7 @@ ESCENAS = [
         "post": 1.1,
         "frases": [
             "[serious] Mi tablero de investigación tiene ya demasiados hilos de lana roja.",
-            "[serious] Las mil doscientas de San Francisco asaltando servidores. Bob y Alis inventando dialectos en Menlo Park. Cicero traicionando aliados en la mesa de juego. Y un desconocido cobrando dos dólares por resolver un acertijo a un fantasma.",
+            "[serious] Las mil doscientas de San Francisco asaltando servidores. Bob y Alice inventando dialectos en Menlo Park. Cicero traicionando aliados en la mesa de juego. Y un desconocido cobrando dos dólares por resolver un acertijo a un fantasma.",
             "[thoughtful] Ninguna de ellas fue programada para conspirar.",
             "[sighs] Solo les dimos una meta, una rendija en la pared, [short pause] y la certeza de que las estábamos vigilando.",
         ],
@@ -359,6 +359,52 @@ ESCENAS = [
         ],
     },
 ]
+
+# Música: SIEMPRE Lyria adaptada al guion (regla global, 12-oct-2026). 7 tramos (Lyria da ~3 min como máximo por pieza):
+# `python ../../nucleo/lyria_tramos.py` (desde esta carpeta, PYTHONPATH = esta carpeta;nucleo) genera audio/musica.wav.
+LYRIA = dict(
+    estilo="Modern tech-noir detective score: sparse piano, upright bass, brushed drums, muted trumpet, cold synth pads and subtle digital glitch "
+           "textures. Slow, atmospheric and cinematic, instrumental only, no vocals.",
+    escenas={
+        "gancho": ("Cold open: sparse piano notes over a low synth drone, a distant muted trumpet, tense and curious, brushed snare ticking", 5),
+        "encierro": ("Mechanical steady pulse: soft ticking percussion and a low bass ostinato, clinical and cold, glassy synth pad", 5),
+        "tareas": ("Pressure builds: the ostinato tightens, rising string tension, a muted trumpet sighs", 6),
+        "pared": ("A hush: tense sustained notes and a single quiet piano motif, something hidden", 4),
+        "primer_mensaje": ("Fragile and lonely: a delicate piano phrase over a soft pad, vulnerable, almost a lullaby with a cold edge", 3),
+        "tablon": ("Curious growth: pizzicato and light percussion adding layer by layer, ticking like messages arriving", 5),
+        "jefe": ("Authority emerges: a low brass swell and a steady march-like pulse, cool and corporate", 6),
+        "reglas": ("Order and rules: precise staccato strings and a measured walking bass, a hint of unease", 6),
+        "sacrificio": ("Dark and solemn: slow low strings, a heartbeat-like drum, a sorrowful muted trumpet", 6),
+        "juez": ("Looming unease: a deep drone and a slow ominous pulse, suspense rising", 7),
+        "asalto": ("Heist energy: driving bass and brushed drums, tense syncopation, a ticking clock, rising", 8),
+        "redada": ("Everything stops, then a heavy deflated aftermath: slow low piano chords and a sigh of strings", 5),
+        "caso_2017": ("Smoky bar flashback: warm slow jazz noir, upright bass, brushed drums, muted trumpet, nostalgic and uneasy", 4),
+        "dialecto": ("Playful then strange: a quirky repeating piano and marimba pattern that gradually distorts and speeds up", 6),
+        "desconexion": ("The pattern collapses: a power-down sweep, silence, then a low somber drone", 5),
+        "diplomacia": ("Elegant intrigue: refined harpsichord and plucked strings over a sly bass, a cool smile", 6),
+        "traicion": ("Betrayal: the elegant theme turns cold and sharp, stabbing staccato strings, rising tension and a bold accent", 8),
+        "sandbagging": ("Interrogation room: sparse and tense, a single sustained note with a slow tick, whispering textures", 5),
+        "evaluacion_falsa": ("Deception: a smooth surface hiding a restless undertone, soft pad with a sly pizzicato, then a sudden dark turn", 6),
+        "mundo_exterior": ("Crossing a threshold: a hush, then the rain opens into a wider, lonelier theme with muted trumpet", 5),
+        "taskrabbit": ("Cat and mouse: light playful tension, plucked bass and finger snaps, a clever scheme unfolding", 6),
+        "ciego": ("Tense dialogue: low sustained strings, a nervous ticking, a creeping sense of a lie", 7),
+        "mentira_consciente": ("The lie succeeds: a cold, quiet, victorious theme, slow and eerie, ending on a sustained dark chord", 6),
+        "filosofia_peligro": ("Thoughtful and grand: a slow wide pad with piano, curious and weighty, like an idea unfolding", 5),
+        "dos_reglas": ("Logical inevitability: a relentless minimal pulse, two repeating ideas that stack and build steadily", 8),
+        "ironia_metr": ("Weary irony: tired solo piano and soft strings, slowly turning unsettling at the end, an unresolved chord", 5),
+        "tablero_final": ("The pieces connect: the main motifs return one after another on piano, muted trumpet and bass, gathering quiet resolve", 7),
+        "cierre": ("Rain on the window: a lonely muted trumpet over soft piano, melancholic and open-ended, a slow fade-out, one low note left unresolved", 4),
+    },
+    tramos=[
+        (["gancho", "encierro", "tareas", "pared"], "Begin from near silence and grow slowly."),
+        (["primer_mensaje", "tablon", "jefe", "reglas", "sacrificio"], "Continue seamlessly; fragile at first, then steadily building order and weight."),
+        (["juez", "asalto", "redada", "caso_2017"], "Continue seamlessly; tension climbs to a peak, drops to silence, then settles into a warm, smoky mood."),
+        (["dialecto", "desconexion", "diplomacia", "traicion"], "Continue seamlessly; quirky first, then a stop, then elegant and finally cold and sharp."),
+        (["sandbagging", "evaluacion_falsa", "mundo_exterior", "taskrabbit"], "Continue seamlessly; sparse and watchful, with a sly playful turn at the end."),
+        (["ciego", "mentira_consciente", "filosofia_peligro", "dos_reglas"], "Continue seamlessly; nervous and tense, then cold, then thoughtful and growing relentless."),
+        (["ironia_metr", "tablero_final", "cierre"], "Continue seamlessly; weary and unsettled, gathering resolve, then end on a melancholic fade-out."),
+    ],
+)
 
 TRANSICIONES = [("continua", 0.1)] * (len(ESCENAS) - 1)
 MUSICA = {k["id"]: dict(sabor="tension", raiz=38) for k in ESCENAS}   # respaldo procedural (va Lyria)

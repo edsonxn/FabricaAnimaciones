@@ -1,6 +1,6 @@
 # <Título del video> — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: cronicas_warcraft · <fecha meta de publicación>
+- canal: <alias> · <fecha meta de publicación>
 - estilo: secuencia_yt (gameplay de YouTube por beat + apoyos + 3 MG + Overgear) → doc: docs/estilo_secuencia_yt.md
 - etapa: <guion | voz | beats | busquedas | bajar n/N | armado | música | verificado | subido | publicado>
 - siguiente: <el paso exacto que sigue, con comando>

@@ -38,12 +38,15 @@ ORDEN = ["kuriox", "edsonxn", "pieza_oculta", "bitacora_perdida", "cronopapel", 
 MET_DIA = "views,estimatedMinutesWatched,subscribersGained,subscribersLost,likes,comments,shares"
 
 
-def alias_conocidos():
-    """Alias de canales/<alias>.json que tienen canal_id, en el orden fijo de color."""
+def alias_conocidos(con_suspendidos=False):
+    """Alias de canales/<alias>.json que tienen canal_id, en el orden fijo de color. Los que llevan `"suspendido"`
+    (el usuario los pausó, p. ej. Edsonxn el 21-oct-2026) no salen en el calendario, las estadísticas ni
+    `canales --actualizar`, salvo con `con_suspendidos=True`."""
     vistos = []
     for ruta in sorted(glob.glob(os.path.join(yt.CANALES, "*.json"))):
         try:
-            if json.load(open(ruta, encoding="utf-8")).get("canal_id"):
+            d = json.load(open(ruta, encoding="utf-8"))
+            if d.get("canal_id") and (con_suspendidos or not d.get("suspendido")):
                 vistos.append(os.path.splitext(os.path.basename(ruta))[0])
         except Exception:
             pass
@@ -85,6 +88,15 @@ def actualizar(alias):
     out["dias"] = [[d["day"], d["views"], d["estimatedMinutesWatched"], d["subscribersGained"], d["subscribersLost"],
                     d["likes"], d["comments"], d["shares"]] for d in dias]
 
+    # misma serie, solo la parte de Shorts (el panel resta para obtener los largos)
+    cortos = yt._reporte(cid, (hoy - dt.timedelta(days=DIAS_SERIE)).isoformat(), hasta, metrics=MET_DIA,
+                         dimensions="day,creatorContentType", filters="creatorContentType==shorts", sort="day")
+    if cortos and "error" in cortos[0]:
+        out["avisos"].append("Analytics (Shorts): " + cortos[0]["error"])
+        cortos = []
+    out["dias_s"] = [[d["day"], d["views"], d["estimatedMinutesWatched"], d["subscribersGained"], d["subscribersLost"],
+                      d["likes"], d["comments"], d["shares"]] for d in cortos]
+
     # vistas de cada video dentro de cada periodo (para que la tabla de videos obedezca el filtro de periodo)
     por_periodo = {}
     for p in PERIODOS:
@@ -124,9 +136,11 @@ def actualizar(alias):
         for v, r in zip(dudosos, ex.map(lambda v: _es_short(v["id"]), dudosos)):
             v["short"] = r
     for v in videos:
-        if v["dur"] > 180:
+        if "#shorts" in v["titulo"].lower():        # nuestros Shorts siempre lo llevan; vale también para los programados
+            v["short"] = True
+        elif v["dur"] > 180:
             v["short"] = False
-        elif v["short"] is None:
+        elif v["short"] is None and v["dur"] > 0:      # dur 0 = YouTube aún lo procesa: sin decidir (cuenta como largo)
             v["short"] = v["dur"] <= 60
     out["videos"] = videos
     os.makedirs(DATOS, exist_ok=True)
@@ -167,10 +181,25 @@ def nivel(dias):
 
 
 def calendario(d, cfg, ahora=None):
-    """Cobertura del canal: `vacio` = primer hueco del ciclo SIN video (último programado, o último público, + ciclo)."""
+    """Cobertura del canal: `vacio` = primer hueco del ciclo SIN video LARGO (último programado, o último público, + ciclo). Los Shorts no cuentan."""
     ahora = ahora or dt.datetime.now(dt.timezone.utc)
     ciclo = ciclo_dias(cfg)
-    con_fecha = [v for v in d.get("videos", []) if v.get("fecha") and v["estado"] in ("public", "programado")]
+    # Los Shorts no cuentan para la cobertura (el usuario, 12-oct y 21-oct-2026: «son extras»): solo videos largos.
+    # Short = marcado por YouTube, o con #Shorts en el título, o registrado `"short": true` en publicados (un Short
+    # programado de 60-180 s o aún en proceso (dur 0) no lo detecta la duración)
+    reg_short = {x["id"] for x in cfg.get("publicados", []) if x.get("id") and x.get("short")}
+    largos = [v for v in d.get("videos", []) if not (v.get("short") or v["id"] in reg_short
+                                                       or "#shorts" in (v.get("titulo") or "").lower())]
+    # Lo subido/programado después de la última lectura de YouTube (o con la cuota agotada) cuenta igual si ya está
+    # registrado en canales/<alias>.json → publicados (regla del usuario, 13-oct-2026: el panel se actualiza al empezar y
+    # al terminar cada video)
+    vistos = {v["id"] for v in d.get("videos", [])}
+    for x in cfg.get("publicados", []):
+        f = x.get("programado") or x.get("publicado")
+        if x.get("id") and x["id"] not in vistos and f and not x.get("short") and "#shorts" not in (x.get("titulo") or "").lower():
+            largos.append(dict(id=x["id"], titulo=x.get("titulo", x.get("video", "")), fecha=f,
+                               estado="programado" if x.get("programado") else "public", registro=True))
+    con_fecha = [v for v in largos if v.get("fecha") and v["estado"] in ("public", "programado")]
     prog = sorted((v for v in con_fecha if v["estado"] == "programado" and _f(v["fecha"]) > ahora), key=lambda v: v["fecha"])
     salidos = sorted((v for v in con_fecha if _f(v["fecha"]) <= ahora), key=lambda v: v["fecha"])
     base = _f(prog[-1]["fecha"]) if prog else _f(salidos[-1]["fecha"]) if salidos else ahora - dt.timedelta(days=ciclo)
@@ -183,7 +212,7 @@ def calendario(d, cfg, ahora=None):
         return dict(id=v["id"], titulo=v["titulo"], fecha=v["fecha"], short=bool(v.get("short")))
     return dict(ciclo=ciclo, vacio=vacio.strftime("%Y-%m-%dT%H:%M:%SZ"), dias=round((vacio - ahora).total_seconds() / 86400, 1),
                 programados=[corto(v) for v in prog], ultimo=corto(salidos[-1]) if salidos else None,
-                sin_fecha=[corto(v) for v in d.get("videos", []) if v["estado"] == "private" and (v.get("fecha") or "") > mes
+                sin_fecha=[corto(v) for v in largos if v["estado"] == "private" and (v.get("fecha") or "") > mes
                            and v["id"] not in no_van])
 
 
@@ -195,7 +224,9 @@ def en_produccion(proyectos=None):
             proyectos = panel.estado()["proyectos"]
         out = {}
         for p in proyectos:
-            if p.get("canal") and not (p.get("publicado") or p.get("archivado") or p.get("oculto") or p.get("error")):
+            # los Shorts (verticales) son extras: no cuentan como «en producción» del calendario (el usuario, 21-oct-2026)
+            if p.get("canal") and p.get("formato") != "vertical" and not (
+                    p.get("publicado") or p.get("archivado") or p.get("oculto") or p.get("error")):
                 out.setdefault(p["canal"], []).append(dict(video=p["nombre"], titulo=p.get("titulo") or p["nombre"],
                                                            progreso=round(min(1, p.get("progreso") or 0), 2), etapa=p.get("etapa_actual")))
         return out
@@ -205,11 +236,12 @@ def en_produccion(proyectos=None):
 
 def datos_panel(proyectos=None):
     canales, prod = [], en_produccion(proyectos)
-    for i, alias in enumerate(alias_conocidos()):
+    orden = alias_conocidos(con_suspendidos=True)    # el color sale de la lista completa: suspender uno no recolorea a los demás
+    for alias in alias_conocidos():
         ruta = os.path.join(DATOS, alias + ".json")
         if os.path.isfile(ruta):
             d = json.load(open(ruta, encoding="utf-8"))
-            d["color"] = i % 8
+            d["color"] = orden.index(alias) % 8
             d["cal"] = calendario(d, json.load(open(os.path.join(yt.CANALES, alias + ".json"), encoding="utf-8")))
             d["prod"] = sorted(prod.get(alias, []), key=lambda x: -x["progreso"])
             canales.append(d)

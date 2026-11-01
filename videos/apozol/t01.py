@@ -98,9 +98,12 @@ def b_nombres(lz, t):
         lz.degradado(izq, (60, 150, 230), (18, 52, 140), (0, 0), (0, H), capa=0)
         U.bokeh(lz, t, seed=11, n=12, colores=((130, 226, 240), (255, 255, 255), (90, 160, 255)), alfa=0.30, area=(0, 0, xm, H))
         U.chispas(lz, t, n=12, seed=4, area=(0, 0, 1100, H))
-        M1.agua_con_espuma(lz, -20, W + 40, 700, t, k=pk(t, t_esp - 0.3, 0.6), seed=3)
+        M1.agua_con_espuma(lz, -20, W + 40, 700, t, k=pk(t, T_B + 0.25, 0.6), seed=3)
         k = pk(t, t_uno + 0.1, 0.5)
         M1.gota(lz, 470, 460, 120, t, k=k)
+    for i in range(7):                                                  # gotas flotando en toda la pantalla antes de la mitad cálida
+        ka = pk(t, T_B + 0.1 + 0.12 * i, 0.5) * (1 - smooth(prog(t, t_otro - 0.3, t_otro + 0.5)))
+        M1.gota(lz, 1080 + 130 * i + 30 * math.sin(i * 1.9), 380 + 90 * (i % 3) + 24 * math.sin(t * 1.3 + i), 20 + 12 * h01(5, i), t, k=ka, alfa=0.85, seed=i)
     # mitad derecha: en el agua caliente (cálido), se destapa al decir «el otro»
     der = [(xm + 70, -10), (W + 10, -10), (W + 10, H + 10), (xm - 70, H + 10)]
     with lz.recorte(der):
@@ -163,7 +166,7 @@ def _medallon(lz, t, i, x, y, r, t0, bg0, bg1, k):
 def c_montaje(lz, t):
     U.bokeh(lz, t, seed=15, n=12, colores=((255, 150, 44), (236, 70, 140), (122, 90, 255), (90, 210, 190)), alfa=0.35)
     for i, (x, nom, t0, c0, c1) in enumerate(MEDS):
-        k = pk(t, t0 - 0.25, 0.5)
+        k = pk(t, min(t0 - 0.25, T_C + 0.3 + 0.55 * i), 0.5)
         _medallon(lz, t, i, x, 520, 190, t0, c0, c1, k)
         ka = U.pop(t, t0) * U.salida(t, T_D - 0.2)
         if ka > 0.01:
@@ -178,7 +181,7 @@ def c_montaje(lz, t):
 
 
 # ------------------------------------------------------------------------------------------------ D. título
-@shot(T_D, bg=lambda t: PA.cielo(0.0), post=[acabado, lambda img, t: post_fundido_negro(img, t, T1(E1) - 0.7, T1(E1) - 0.02)], ent=("fundido", 0.6))
+@shot(T_D, bg=lambda t: PA.cielo(0.0), post=[acabado], ent=("fundido", 0.6))
 def d_titulo(lz, t):
     cx = 22.0 * (t - T_D)
     PA.sol(lz, 1500, 250, 70, t, 0.0)

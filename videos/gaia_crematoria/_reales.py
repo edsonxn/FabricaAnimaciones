@@ -33,6 +33,14 @@ FOTOS = {
     # lugares
     "naxxramas": ((0.08, 0, 0.92, 0.78), 520), "capilla": ((0, 0, 1, 1), 520), "monasterio": ((0, 0, 1, 1), 520),
     "stratholme": ((0, 0, 1, 1), 520), "acherus": ((0, 0, 1, 0.92), 520), "torre_taelan": ((0, 0, 1, 1), 520),
+    # 7a (29-oct): lugares del acto 1, la posada de Costasur (cuadros de yt 2Ya2f-WKBr4, 480p) y más personajes
+    "costasur": ((0, 0.06, 1, 1), 560), "costasur_ayuntamiento": ((0, 0, 1, 1), 450), "remol": ((0, 0.08, 1, 1), 560),
+    "andorhal": ((0, 0, 1, 1), 560), "vega_amparo": ((0, 0, 1, 1), 560), "mardenholde": ((0, 0, 1, 1), 450),
+    "gran_forja": ((0, 0, 1, 1), 560), "forjaz": ((0, 0, 1, 1), 560), "cumbre_roca_negra": ((0.05, 0.10, 0.85, 1), 560),
+    "posada_fuera": ((0.12, 0, 1, 1), 480), "posada_dentro": ((0, 0, 1, 1), 480), "posada_chimenea": ((0, 0, 0.92, 1), 480),
+    "posada_salon": ((0, 0, 1, 1), 480), "posada_cuarto": ((0.12, 0, 0.88, 1), 480), "posada_entrada": ((0, 0, 0.9, 1), 480),
+    "kelthuzad_humano": ((0, 0, 1, 0.9), 640), "renault_comandante": ((0, 0, 1, 0.92), 640), "isillien_joven": ((0, 0, 1, 0.9), 640),
+    "dathrohan_comic": ((0, 0, 1, 1), 389),
     # armas (modelos del juego)
     "crematoria": ((0, 0, 1, 1), 300), "crematoria_corrupta": ((0, 0, 1, 1), 320), "agonia_escarcha": ((0, 0, 1, 1), 640),
 }
@@ -49,7 +57,7 @@ MEDALLON = {
 }
 # capturas muy oscuras del juego
 GAMMA = {"magni": 0.75, "renfray": 0.7, "rey_exanime": 0.75, "balnazzar": 0.8, "alexandros_espiritu": 0.8, "orbaz": 0.8,
-         "zabra": 0.8, "koltira": 0.85, "thassarian": 0.85, "renault": 0.85, "darion": 0.9, "alexandros": 0.85}
+         "cumbre_roca_negra": 0.55, "zabra": 0.8, "koltira": 0.85, "thassarian": 0.85, "renault": 0.85, "darion": 0.9, "alexandros": 0.85}
 
 
 def abrir(slug):

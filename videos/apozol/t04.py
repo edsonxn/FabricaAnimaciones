@@ -77,7 +77,7 @@ def a_estalla(lz, t):
     MD.etiqueta(lz, cam, "nochistlan", "Nochistlán", t, T_A + 0.5, px=30, dy=34, dx=70)
     MD.etiqueta(lz, cam, "tlaltenango", "Tlaltenango", t, T_A + 0.7, px=30, dy=-56, dx=0)
     for k, (lug, dt) in enumerate((("juchipila", 0.0), ("nochistlan", 0.35), ("tlaltenango", 0.7), ("apozol", 0.15))):
-        MD.onda(lz, cam, lug, t, t_estallar + dt, dur=2.6, r_deg=0.9, n=3, ancho=6.0, periodo=0.45, alfa=0.9, color=(255, 90, 80))
+        MD.onda(lz, cam, lug, t, t_estallar + dt, dur=2.6, r_deg=0.7, n=2, ancho=5.0, periodo=0.55, alfa=0.55, color=(255, 90, 80))
     k = U.pop(t, T_A + 0.2)
     if k > 0.01:
         U.fecha_lugar(lz, t, T_A + 0.2, T_B - 0.2, "Cañón de Juchipila", "1540")
@@ -217,8 +217,8 @@ def f_santiago(lz, t):
     if k > 0.01:
         U.haces_luz(lz, 960, 330, t, n=7, largo=1500, color=(255, 236, 170), alfa=0.09 * k, ancho=0.05)
         lz.halo(960, 330, 340 * k, (255, 240, 190), alfa=0.55 * k, dureza=1.1, capa=0)
-        yb = 400 + 16 * math.sin(t * 1.4)
-        M4.caballo2d(lz, 960, yb, 34 * k, t, ph=t * 3.2, galope=0.3, color=(246, 242, 236), crin=(214, 210, 214), mirar=-1,
+        yb = 470 + 14 * math.sin(t * 1.4)
+        M4.caballo2d(lz, 960, yb, 25 * k, t, ph=t * 3.2, galope=0.3, color=(246, 242, 236), crin=(214, 210, 214), mirar=-1,
                      jinete=dict(K2.TIPOS["capitan"], tocado="sombrero_ala", ropa=(60, 90, 160), ropa2=(240, 220, 120)), jinete_seed=77, capa=2)
     kl = U.pop(t, t_leyenda) * U.salida(t, T_G - 0.2)
     if kl > 0.01:
@@ -255,7 +255,7 @@ def g_cae(lz, t):
 
 
 # ------------------------------------------------------------------------------------------------ H. la tradición: el vacío
-@shot(T_H, bg=lambda t: bg_grad((60, 22, 70), (236, 120, 92), mid=(170, 60, 96), ym=0.6), post=[acabado, lambda img, t: post_fundido_negro(img, t, T1(E4) - 0.6, T1(E4) - 0.02)], ent=("fundido", 0.7))
+@shot(T_H, bg=lambda t: bg_grad((60, 22, 70), (236, 120, 92), mid=(170, 60, 96), ym=0.6), post=[acabado], ent=("fundido", 0.7))
 def h_vacio(lz, t):
     lz.halo(1500, 700, 520, (255, 190, 120), alfa=0.35, dureza=1.1, capa=0)
     M4.borde_vacio(lz, t)

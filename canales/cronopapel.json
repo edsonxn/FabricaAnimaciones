@@ -57,9 +57,11 @@
       "id": "CqSg_v6pFjQ",
       "titulo": "Historia de Irán en 5 minutos",
       "subido": "2026-09-30T22:00:00Z",
-      "visibilidad": "programado",
-      "nota": "miniatura IA; programado dom 18-oct 14:00 CDMX (reprogramado el 12-oct; verificado en YouTube el 17-oct)",
-      "publicar": "2026-10-18T20:00:00Z"
+      "visibilidad": "public",
+      "nota": "miniatura IA; programado dom 18-oct 14:00 CDMX (reprogramado el 12-oct; verificado en YouTube el 17-oct); 23-oct-2026: reprogramado en Studio al 26-oct (intercambió fecha con México)",
+      "publicar": "2026-10-26T20:00:00Z",
+      "programado": "2026-10-26T20:00:00Z",
+      "publicado": "2026-10-26T20:00:14Z"
     },
     {
       "video": "historia_japon",
@@ -76,9 +78,10 @@
       "id": "R1LQTkRiwzI",
       "titulo": "Historia de Egipto en 5 minutos",
       "subido": "2026-10-12T00:00:00Z",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "nota": "v2 (relieve real, ~150 dibujos); miniatura por código y .srt; programado jue 22-oct 14:00 CDMX (reprogramado el 12-oct; verificado en YouTube el 17-oct). La v1 (3V_C7ZEj5is) la borra el usuario en Studio.",
-      "publicar": "2026-10-22T20:00:00Z"
+      "publicar": "2026-10-22T20:00:00Z",
+      "publicado": "2026-10-22"
     },
     {
       "video": "historia_espana",
@@ -95,11 +98,12 @@
       "id": "BZd71Z5BIrk",
       "titulo": "Historia de México en 5 minutos",
       "subido": "2026-10-17T19:28:33Z",
-      "visibilidad": "programado",
-      "nota": "relieve real ETOPO1 + 78 dibujos + música Lyria 3 Pro en 3 partes; miniatura por código y .srt cargados; PROGRAMADO lun 26-oct 14:00 CDMX (20:00 UTC) el 17-oct-2026, hueco del ciclo de 4 días tras Egipto (jue 22-oct)",
+      "visibilidad": "public",
+      "nota": "relieve real ETOPO1 + 78 dibujos + música Lyria 3 Pro en 3 partes; miniatura por código y .srt cargados; PROGRAMADO lun 26-oct 14:00 CDMX (20:00 UTC) el 17-oct-2026, hueco del ciclo de 4 días tras Egipto (jue 22-oct); salió antes de lo programado (18-oct en vez de 26-oct): intercambió fecha con Irán",
       "formato": "historia_pais_5m",
       "prueba": "pais_audiencia_mx",
-      "publicar": "2026-10-26T20:00:00Z"
+      "publicar": "2026-10-18T20:00:00Z",
+      "publicado": "2026-10-18"
     },
     {
       "video": "historia_eeuu",
@@ -138,12 +142,13 @@
       "id": "OfGVLuL490w",
       "titulo": "La historia de Tequisquiapan en 3 minutos #Shorts",
       "subido": "2026-10-22",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-24T16:00:00Z",
       "short": true,
       "formato": "short_vertical_3min_pueblo_bajio_pegatinas_flow_voz_eleven",
       "prueba": "primer Short vertical de 3 min de un pueblo del Bajío (sorteo), con Google Maps en la descripción y la frase en la narración",
-      "nota": "mapa vertical de Querétaro 700 px/°, 8 hojas Flow, 19 fotos de Commons, música de la biblioteca (no_vuelve + la_sena; Lyria API sin saldo); .srt pendiente por cuota"
+      "nota": "mapa vertical de Querétaro 700 px/°, 8 hojas Flow, 19 fotos de Commons, música de la biblioteca (no_vuelve + la_sena; Lyria API sin saldo); .srt pendiente por cuota",
+      "publicado": "2026-10-24T16:00:19Z"
     }
   ],
   "ideas": {

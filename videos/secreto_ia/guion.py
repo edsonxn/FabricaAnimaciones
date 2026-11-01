@@ -26,11 +26,13 @@ Hechos y fuentes (verificados el 8-oct-2026):
 
 TITULO = "¿Puede una IA guardar un secreto?"
 ARCHIVO = "secreto_ia"
-ESTILO_VISUAL = "noir"
+# 21-oct-2026 (el usuario): la animación de Gemini (`_gemini/`) estaba «mal hecha y fea» → se REHACE con PEGATINA FLOW en look noir:
+# Flow pinta escenarios y hojas en tinta y aguada B/N (FICHA abajo), el código los anima (nucleo/pegaflow.py). Guion y voz se conservan.
+ESTILO_VISUAL = "pegatina_flow"
 DURACION = None
 BPM = 84
 SUBTITULOS = False
-MEZCLA = dict(musica=-21.0, sfx=-24.0, fx=-17)      # fx = audio/fx.wav (SFX de ElevenLabs para el drama, fx_audio.py)
+MEZCLA = dict(musica=-21.0, sfx=-23.0, fx=-17)      # fx = audio/fx.wav (SFX propios de sfx/*.mp3 colocados por escenas.py)
 VOZ = dict(motor="elevenlabs", voice_id="0hh7H4ZVAtaGpm1VZyEN", modelo="eleven_v4", idioma="es",
            referencia="C:/FabricaAnimaciones/videos/informante_2027/ref_david.mp3",
            tomas=1, stability=0.5)
@@ -99,6 +101,34 @@ ESCENAS = [
 ]
 
 TRANSICIONES = [("continua", 0.1)] * (len(ESCENAS) - 1)
-MUSICA = {k["id"]: dict(sabor="tension", raiz=38) for k in ESCENAS}   # respaldo procedural (va Lyria)
+MUSICA = {}
+
+LYRIA = dict(
+    estilo=("Dark film noir score for an animated detective documentary about artificial intelligence that hides secrets: smoky muted "
+            "trumpet, slow upright bass, sparse late-night piano, soft brushed snare, tense low strings, rain-soaked atmosphere, a cold "
+            "hint of electronic hum. Restrained and mysterious, melodies kept low so a narrator can speak over it. No vocals, no pop."),
+    escenas={
+        "gancho": ("Rainy night in a detective's office: lonely piano and muted trumpet, a mystery begins.", 4),
+        "puerta": ("Opening the first case file: walking bass, ticking tension, something hidden behind a back door.", 6),
+        "interrogatorio": ("Interrogation room: low pulsing strings, cold electronic hum, a calm voice that lies; suspense builds.", 7),
+        "fingir": ("A performance on an empty stage: uneasy waltz-like piano, a sad trumpet, unsettling and intimate.", 7),
+        "cierre": ("Case left open: the main noir theme returns slowly, unresolved, fading into rain.", 5),
+    },
+    tramos=[
+        (["gancho", "puerta"], "Begin softly with rain-like piano; slowly add bass and tension; end on an unresolved held note."),
+        (["interrogatorio"], "Begin from a cold pulse; suspense grows steadily; end on a sudden quiet."),
+        (["fingir", "cierre"], "Begin intimate and uneasy; build to a dark swell, then return to the main noir theme and fade out unresolved."),
+    ],
+)
+
+# Ficha común de Flow (pegatina Flow en look NOIR de LogIA): novela gráfica de cine negro en tinta y aguada, SOLO blanco y negro.
+# Las caras «de porcelana» y los papeles van GRIS PÁLIDO, no blanco puro (el blanco puro se pierde al recortar del fondo blanco).
+FICHA = dict(
+    estilo=("Hand-drawn film noir graphic novel illustration in black ink and grey ink wash on textured paper, strictly black and white "
+            "(monochrome, no colour at all), bold confident ink outlines, dramatic chiaroscuro with deep black shadows and hard light, "
+            "venetian-blind shadow stripes, wet reflections and cigarette-smoke haze, 1940s detective atmosphere mixed with modern "
+            "computer technology, detailed and atmospheric, clean shapes ready for cut-out animation, strong depth"),
+    cierre=" No text, no letters, no numbers, no watermark.",
+)
 # Ritmo dramático: pausas entre frases y aire entre escenas (las transiciones de tinta viven ahí)
 GAP = 0.5

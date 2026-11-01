@@ -1,0 +1,164 @@
+{
+ "modo": "mesa",
+ "de": 1082.74,
+ "a": 1088.34,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_g2hl_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Kanavi": {
+   "jugador": "Kanavi",
+   "campeon": "JarvanIV",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.44,
+     0.285
+    ]
+   ],
+   "de": 1083.14,
+   "sale": 1087.34
+  },
+  "Zeka": {
+   "jugador": "Zeka",
+   "campeon": "Swain",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Swain.png",
+   "puntos": [
+    [
+     0,
+     0.345,
+     0.635
+    ]
+   ],
+   "de": 1083.22,
+   "sale": 1087.34
+  },
+  "Zeus": {
+   "jugador": "Zeus",
+   "campeon": "Ambessa",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Ambessa.png",
+   "puntos": [
+    [
+     0,
+     0.455,
+     0.665
+    ]
+   ],
+   "de": 1083.3,
+   "sale": 1087.34
+  }
+ },
+ "camara": [
+  [
+   1082.74,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1083.09,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1084.532,
+   -18,
+   36,
+   50,
+   0.42,
+   0.47
+  ],
+  [
+   1086.212,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.47
+  ],
+  [
+   1087.4399999999998,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1088.34,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "r_kan",
+   "pts": [
+    [
+     0.2341,
+     0.1658
+    ],
+    [
+     0.4071,
+     0.1904
+    ],
+    [
+     0.44,
+     0.285
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.9,
+   "alto": 1.5,
+   "grosor": 1.2,
+   "en": 1086.02,
+   "sale": 1087.34
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.345,
+   "v": 0.635,
+   "alto": 0,
+   "texto": "ZEKA",
+   "sub": "SWAIN · DEFINITIVA",
+   "color": "azul",
+   "dx": -170,
+   "dy": 40,
+   "de": 1083.62,
+   "a": 1087.34
+  },
+  {
+   "u": 0.44,
+   "v": 0.285,
+   "alto": 0,
+   "texto": "KANAVI",
+   "sub": "LLEGA POR ARRIBA",
+   "color": "azul",
+   "dx": 170,
+   "dy": -50,
+   "de": 1086.02,
+   "a": 1087.34
+  }
+ ]
+}

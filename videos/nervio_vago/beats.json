@@ -1,0 +1,870 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.352,
+  "tipo": "video",
+  "texto": "Te toca hablar frente a todos. El corazón te golpea el pecho, te sudan las manos, y la voz empieza a temblar.",
+  "clip_s": 10,
+  "t_medio": 4.44,
+  "texto_a": "Te toca hablar frente a todos. El corazón te golpea el pecho,",
+  "texto_b": "te sudan las manos, y la voz empieza a temblar."
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.352,
+  "t1": 19.567,
+  "tipo": "video",
+  "texto": "Alguien te dice: respira hondo. Y tú piensas: qué consejo tan inútil. Pero no lo es. Ese consejo jala un cable que llevas dentro desde que naciste.",
+  "clip_s": 10,
+  "t_medio": 14.222,
+  "texto_a": "Alguien te dice: respira hondo. Y tú piensas: qué consejo tan inútil.",
+  "texto_b": "Pero no lo es. Ese consejo jala un cable que llevas dentro desde que naciste."
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.567,
+  "t1": 31.973,
+  "tipo": "video",
+  "texto": "Un cable que baja de tu cerebro hasta tu panza, y que frena tu corazón miles de veces al día. Se llama nervio vago. Y en internet lo venden como el botón mágico contra la ansiedad.",
+  "clip_s": 10,
+  "t_medio": 25.556,
+  "texto_a": "Un cable que baja de tu cerebro hasta tu panza, y que frena tu corazón miles de veces al día.",
+  "texto_b": "Se llama nervio vago. Y en internet lo venden como el botón mágico contra la ansiedad."
+ },
+ {
+  "id": "scene-004",
+  "t0": 31.973,
+  "t1": 38.773,
+  "tipo": "video",
+  "texto": "Hoy vamos a ver qué es de verdad, cómo se descubrió gracias a un sueño, qué pasa cuando falla, qué es mito,",
+  "clip_s": 10,
+  "t_medio": 35.393,
+  "texto_a": "Hoy vamos a ver qué es de verdad, cómo se descubrió gracias",
+  "texto_b": "a un sueño, qué pasa cuando falla, qué es mito,"
+ },
+ {
+  "id": "scene-005",
+  "t0": 38.773,
+  "t1": 48.863,
+  "tipo": "video",
+  "texto": "y cinco formas de entrenarlo que sí tienen ciencia. Empecemos por el mapa. El nervio vago nace en el tronco del cerebro,",
+  "clip_s": 10,
+  "t_medio": 43.763,
+  "texto_a": "y cinco formas de entrenarlo que sí tienen ciencia.",
+  "texto_b": "Empecemos por el mapa. El nervio vago nace en el tronco del cerebro,"
+ },
+ {
+  "id": "scene-006",
+  "t0": 48.863,
+  "t1": 58.726,
+  "tipo": "video",
+  "texto": "justo donde el cerebro se une con la médula, detrás de la nuca. Sale del cráneo, baja por el cuello junto a las grandes arterias, y se va ramificando.",
+  "clip_s": 10,
+  "t_medio": 52.997,
+  "texto_a": "justo donde el cerebro se une con la médula, detrás de la nuca.",
+  "texto_b": "Sale del cráneo, baja por el cuello junto a las grandes arterias, y se va ramificando."
+ },
+ {
+  "id": "scene-007",
+  "t0": 58.726,
+  "t1": 69.321,
+  "tipo": "video",
+  "texto": "Toca la garganta y las cuerdas vocales. Envuelve el corazón. Se mete en los pulmones. Y abraza el estómago, el hígado, y buena parte del intestino.",
+  "clip_s": 10,
+  "t_medio": 64.486,
+  "texto_a": "Toca la garganta y las cuerdas vocales. Envuelve el corazón. Se mete en los pulmones.",
+  "texto_b": "Y abraza el estómago, el hígado, y buena parte del intestino."
+ },
+ {
+  "id": "scene-008",
+  "t0": 69.321,
+  "t1": 73.161,
+  "tipo": "imagen",
+  "texto": "Por eso se llama así. Vago viene del latín, y significa"
+ },
+ {
+  "id": "scene-009",
+  "t0": 73.161,
+  "t1": 77.69,
+  "tipo": "imagen",
+  "texto": "errante, el que vagabundea. Y en realidad no es uno."
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.69,
+  "t1": 82.92,
+  "tipo": "imagen",
+  "texto": "Son dos, uno por cada lado del cuerpo, como dos cables paralelos."
+ },
+ {
+  "id": "scene-011",
+  "t0": 82.92,
+  "t1": 85.42,
+  "tipo": "imagen",
+  "texto": "Es la pieza central de lo que llamamos el sistema"
+ },
+ {
+  "id": "scene-012",
+  "t0": 85.42,
+  "t1": 89.609,
+  "tipo": "imagen",
+  "texto": "parasimpático: el modo de descansar y digerir."
+ },
+ {
+  "id": "scene-013",
+  "t0": 89.609,
+  "t1": 94.297,
+  "tipo": "imagen",
+  "texto": "Si la alarma del estrés es el acelerador, el vago es el freno."
+ },
+ {
+  "id": "scene-014",
+  "t0": 94.297,
+  "t1": 98.727,
+  "tipo": "imagen",
+  "texto": "Pero lo más sorprendente es hacia dónde viaja la información."
+ },
+ {
+  "id": "scene-015",
+  "t0": 98.727,
+  "t1": 101.387,
+  "tipo": "imagen",
+  "texto": "Unas 8 de cada 10 fibras del vago no"
+ },
+ {
+  "id": "scene-016",
+  "t0": 101.387,
+  "t1": 105.687,
+  "tipo": "imagen",
+  "texto": "bajan órdenes. Suben noticias del cuerpo: cómo late el corazón,"
+ },
+ {
+  "id": "scene-017",
+  "t0": 105.687,
+  "t1": 108.992,
+  "tipo": "imagen",
+  "texto": "cómo está la panza, cuánto aire entra."
+ },
+ {
+  "id": "scene-018",
+  "t0": 108.992,
+  "t1": 113.492,
+  "tipo": "imagen",
+  "texto": "Tu cerebro escucha a tu cuerpo mucho más de lo que le habla. Y eso va a ser"
+ },
+ {
+  "id": "scene-019",
+  "t0": 113.492,
+  "t1": 117.097,
+  "tipo": "imagen",
+  "texto": "clave para todo lo demás."
+ },
+ {
+  "id": "scene-020",
+  "t0": 117.097,
+  "t1": 121.337,
+  "tipo": "imagen",
+  "texto": "Ahora, la historia de cómo se descubrió que este nervio habla."
+ },
+ {
+  "id": "scene-021",
+  "t0": 121.337,
+  "t1": 124.101,
+  "tipo": "imagen",
+  "texto": "Y empieza con un sueño."
+ },
+ {
+  "id": "scene-022",
+  "t0": 124.101,
+  "t1": 128.991,
+  "tipo": "imagen",
+  "texto": "Austria, 1921. La noche antes del domingo de Pascua,"
+ },
+ {
+  "id": "scene-023",
+  "t0": 128.991,
+  "t1": 133.457,
+  "tipo": "imagen",
+  "texto": "el farmacólogo Otto Loewi despierta de madrugada con una idea."
+ },
+ {
+  "id": "scene-024",
+  "t0": 133.457,
+  "t1": 136.697,
+  "tipo": "imagen",
+  "texto": "La apunta en un papelito y se vuelve a dormir."
+ },
+ {
+  "id": "scene-025",
+  "t0": 136.697,
+  "t1": 140.897,
+  "tipo": "imagen",
+  "texto": "En la mañana, no entiende su propia letra."
+ },
+ {
+  "id": "scene-026",
+  "t0": 140.897,
+  "t1": 145.947,
+  "tipo": "imagen",
+  "texto": "Pasa el día desesperado. Y a la noche siguiente, a las 3 de la mañana,"
+ },
+ {
+  "id": "scene-027",
+  "t0": 145.947,
+  "t1": 149.307,
+  "tipo": "imagen",
+  "texto": "la idea regresa. Esta vez no se arriesga."
+ },
+ {
+  "id": "scene-028",
+  "t0": 149.307,
+  "t1": 152.477,
+  "tipo": "imagen",
+  "texto": "Se levanta y se va directo al laboratorio."
+ },
+ {
+  "id": "scene-029",
+  "t0": 152.477,
+  "t1": 156.787,
+  "tipo": "imagen",
+  "texto": "Toma dos corazones de rana, que siguen latiendo dentro de un líquido salado."
+ },
+ {
+  "id": "scene-030",
+  "t0": 156.787,
+  "t1": 160.129,
+  "tipo": "imagen",
+  "texto": "Al primero le deja conectado su nervio vago."
+ },
+ {
+  "id": "scene-031",
+  "t0": 160.129,
+  "t1": 166.79,
+  "tipo": "imagen",
+  "texto": "Estimula ese nervio con electricidad, y el corazón late más lento. Hasta ahí, nada nuevo."
+ },
+ {
+  "id": "scene-032",
+  "t0": 166.79,
+  "t1": 169.55,
+  "tipo": "imagen",
+  "texto": "Luego toma el líquido que bañaba ese primer corazón,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 169.55,
+  "t1": 173.725,
+  "tipo": "imagen",
+  "texto": "y lo pasa al segundo, uno que no tiene ningún nervio."
+ },
+ {
+  "id": "scene-034",
+  "t0": 173.725,
+  "t1": 176.625,
+  "tipo": "imagen",
+  "texto": "Y el segundo corazón también se frena."
+ },
+ {
+  "id": "scene-035",
+  "t0": 176.625,
+  "t1": 182.885,
+  "tipo": "imagen",
+  "texto": "El nervio había soltado algo en el líquido. Una sustancia química que llevaba el mensaje de frenar."
+ },
+ {
+  "id": "scene-036",
+  "t0": 182.885,
+  "t1": 185.495,
+  "tipo": "imagen",
+  "texto": "Loewi la llamó la sustancia del vago."
+ },
+ {
+  "id": "scene-037",
+  "t0": 185.495,
+  "t1": 188.745,
+  "tipo": "imagen",
+  "texto": "Hoy la conocemos como acetilcolina."
+ },
+ {
+  "id": "scene-038",
+  "t0": 188.745,
+  "t1": 193.885,
+  "tipo": "imagen",
+  "texto": "Fue la primera prueba de que los nervios se comunican con químicos. Y en 1936"
+ },
+ {
+  "id": "scene-039",
+  "t0": 193.885,
+  "t1": 196.868,
+  "tipo": "imagen",
+  "texto": "le dio el premio Nobel."
+ },
+ {
+  "id": "scene-040",
+  "t0": 196.868,
+  "t1": 200.859,
+  "tipo": "imagen",
+  "texto": "Esa misma sustancia está frenando tu corazón ahora mismo."
+ },
+ {
+  "id": "scene-041",
+  "t0": 200.859,
+  "t1": 205.679,
+  "tipo": "imagen",
+  "texto": "Tu corazón tiene su propio marcapasos. Si lo dejaras solo, sin nervios,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 205.679,
+  "t1": 208.509,
+  "tipo": "imagen",
+  "texto": "latiría unas 100 veces por minuto."
+ },
+ {
+  "id": "scene-043",
+  "t0": 208.509,
+  "t1": 215.052,
+  "tipo": "imagen",
+  "texto": "Si estás sentado con 60 o 70, es porque el vago tiene el pie en el freno, todo el tiempo."
+ },
+ {
+  "id": "scene-044",
+  "t0": 215.052,
+  "t1": 217.572,
+  "tipo": "imagen",
+  "texto": "Y ese freno se mueve con tu respiración."
+ },
+ {
+  "id": "scene-045",
+  "t0": 217.572,
+  "t1": 221.252,
+  "tipo": "imagen",
+  "texto": "Cuando tomas aire, el vago afloja y el corazón acelera."
+ },
+ {
+  "id": "scene-046",
+  "t0": 221.252,
+  "t1": 225.619,
+  "tipo": "imagen",
+  "texto": "Cuando lo sueltas, vuelve a pisar, y el corazón va más lento."
+ },
+ {
+  "id": "scene-047",
+  "t0": 225.619,
+  "t1": 228.989,
+  "tipo": "imagen",
+  "texto": "Por eso un corazón sano no late como un metrónomo."
+ },
+ {
+  "id": "scene-048",
+  "t0": 228.989,
+  "t1": 233.418,
+  "tipo": "imagen",
+  "texto": "Cambia un poquito entre latido y latido. A ese cambio se le llama"
+ },
+ {
+  "id": "scene-049",
+  "t0": 233.418,
+  "t1": 237.918,
+  "tipo": "imagen",
+  "texto": "variabilidad de la frecuencia cardiaca. Y es la forma más usada de medir"
+ },
+ {
+  "id": "scene-050",
+  "t0": 237.918,
+  "t1": 241.841,
+  "tipo": "imagen",
+  "texto": "qué tan ágil está tu freno, lo que se llama tono vagal."
+ },
+ {
+  "id": "scene-051",
+  "t0": 241.841,
+  "t1": 247.001,
+  "tipo": "imagen",
+  "texto": "Mucha variabilidad en reposo suele ir con un freno ágil, que pisa y suelta rápido."
+ },
+ {
+  "id": "scene-052",
+  "t0": 247.001,
+  "t1": 250.966,
+  "tipo": "imagen",
+  "texto": "Poca variabilidad, con un cuerpo que se quedó en alerta."
+ },
+ {
+  "id": "scene-053",
+  "t0": 250.966,
+  "t1": 256.749,
+  "tipo": "imagen",
+  "texto": "Muchos relojes inteligentes ya la miden, y te la muestran por las mañanas. ¿Y qué es lo que la baja?"
+ },
+ {
+  "id": "scene-054",
+  "t0": 256.749,
+  "t1": 261.449,
+  "tipo": "imagen",
+  "texto": "Lo de siempre: el estrés que no se apaga, dormir poco, no moverse,"
+ },
+ {
+  "id": "scene-055",
+  "t0": 261.449,
+  "t1": 266.974,
+  "tipo": "imagen",
+  "texto": "y el alcohol. Ahora, qué pasa cuando el freno falla."
+ },
+ {
+  "id": "scene-056",
+  "t0": 266.974,
+  "t1": 271.014,
+  "tipo": "imagen",
+  "texto": "Si el freno está flojo, la alarma se queda encendida más de lo necesario."
+ },
+ {
+  "id": "scene-057",
+  "t0": 271.014,
+  "t1": 278.559,
+  "tipo": "imagen",
+  "texto": "El corazón tarda en bajar después de un susto, la digestión se vuelve pesada, y cuesta desconectarse de noche."
+ },
+ {
+  "id": "scene-058",
+  "t0": 278.559,
+  "t1": 282.159,
+  "tipo": "imagen",
+  "texto": "Pero también puede pasar lo contrario: un frenazo."
+ },
+ {
+  "id": "scene-059",
+  "t0": 282.159,
+  "t1": 286.929,
+  "tipo": "imagen",
+  "texto": "Hay gente que ve sangre, o una aguja, y se desmaya. No es debilidad."
+ },
+ {
+  "id": "scene-060",
+  "t0": 286.929,
+  "t1": 292.779,
+  "tipo": "imagen",
+  "texto": "Es el vago. Primero sube la alarma. Y de golpe, el freno se pisa con todo:"
+ },
+ {
+  "id": "scene-061",
+  "t0": 292.779,
+  "t1": 296.659,
+  "tipo": "imagen",
+  "texto": "el corazón baja, los vasos se abren, la presión cae,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 296.659,
+  "t1": 302.103,
+  "tipo": "imagen",
+  "texto": "y al cerebro le llega menos sangre por unos segundos. Se llama síncope vasovagal,"
+ },
+ {
+  "id": "scene-063",
+  "t0": 302.103,
+  "t1": 306.207,
+  "tipo": "imagen",
+  "texto": "y es la causa más común de desmayo. Si sientes que viene,"
+ },
+ {
+  "id": "scene-064",
+  "t0": 306.207,
+  "t1": 311.647,
+  "tipo": "imagen",
+  "texto": "acuéstate y sube las piernas antes de caerte. Y si te desmayas sin una razón clara,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 311.647,
+  "t1": 316.99,
+  "tipo": "imagen",
+  "texto": "o haciendo ejercicio, eso sí hay que revisarlo con un médico."
+ },
+ {
+  "id": "scene-066",
+  "t0": 316.99,
+  "t1": 322.045,
+  "tipo": "imagen",
+  "texto": "Y el vago guardaba otro secreto, que se descubrió apenas en el año 2000."
+ },
+ {
+  "id": "scene-067",
+  "t0": 322.045,
+  "t1": 327.045,
+  "tipo": "imagen",
+  "texto": "En un laboratorio de Nueva York, el equipo del neurocirujano Kevin Tracey estimuló"
+ },
+ {
+  "id": "scene-068",
+  "t0": 327.045,
+  "t1": 331.728,
+  "tipo": "imagen",
+  "texto": "el nervio vago de unas ratas con una inflamación masiva en todo el cuerpo."
+ },
+ {
+  "id": "scene-069",
+  "t0": 331.728,
+  "t1": 336.967,
+  "tipo": "imagen",
+  "texto": "Y la inflamación bajó. El nervio le había ordenado al sistema inmune que se calmara."
+ },
+ {
+  "id": "scene-070",
+  "t0": 336.967,
+  "t1": 341.587,
+  "tipo": "imagen",
+  "texto": "Lo llamaron el reflejo inflamatorio. El vago no solo frena el corazón:"
+ },
+ {
+  "id": "scene-071",
+  "t0": 341.587,
+  "t1": 347.131,
+  "tipo": "imagen",
+  "texto": "también le baja el volumen a la inflamación. En 2016 lo probaron en personas con"
+ },
+ {
+  "id": "scene-072",
+  "t0": 347.131,
+  "t1": 351.791,
+  "tipo": "imagen",
+  "texto": "artritis reumatoide, con un pequeño implante que estimula el vago desde el cuello."
+ },
+ {
+  "id": "scene-073",
+  "t0": 351.791,
+  "t1": 357.355,
+  "tipo": "imagen",
+  "texto": "Muchos mejoraron. Y en 2025, Estados Unidos aprobó el primer implante"
+ },
+ {
+  "id": "scene-074",
+  "t0": 357.355,
+  "t1": 362.259,
+  "tipo": "imagen",
+  "texto": "de este tipo para esa enfermedad. Desde los años noventa ya se usan implantes en"
+ },
+ {
+  "id": "scene-075",
+  "t0": 362.259,
+  "t1": 368.735,
+  "tipo": "imagen",
+  "texto": "el vago para algunos tipos de epilepsia, y después, para depresiones que no responden a otros tratamientos."
+ },
+ {
+  "id": "scene-076",
+  "t0": 368.735,
+  "t1": 372.275,
+  "tipo": "imagen",
+  "texto": "Es decir: estimular este nervio es medicina real."
+ },
+ {
+  "id": "scene-077",
+  "t0": 372.275,
+  "t1": 376.992,
+  "tipo": "imagen",
+  "texto": "Pero con un aparato y un cirujano, no con un truco."
+ },
+ {
+  "id": "scene-078",
+  "t0": 376.992,
+  "t1": 382.966,
+  "tipo": "imagen",
+  "texto": "Y aquí entra internet. Busca nervio vago en redes y vas a encontrar de todo:"
+ },
+ {
+  "id": "scene-079",
+  "t0": 382.966,
+  "t1": 386.856,
+  "tipo": "imagen",
+  "texto": "masajes en la oreja que curan la ansiedad, golpecitos en el pecho,"
+ },
+ {
+  "id": "scene-080",
+  "t0": 386.856,
+  "t1": 392.089,
+  "tipo": "imagen",
+  "texto": "un truco de 30 segundos que reinicia tu sistema nervioso. Seamos claros."
+ },
+ {
+  "id": "scene-081",
+  "t0": 392.089,
+  "t1": 396.529,
+  "tipo": "imagen",
+  "texto": "No hay botón de reinicio. Tu freno no se arregla en 30 segundos,"
+ },
+ {
+  "id": "scene-082",
+  "t0": 396.529,
+  "t1": 403.095,
+  "tipo": "imagen",
+  "texto": "igual que un músculo no se hace fuerte con una sola sentadilla. Hay estimuladores eléctricos que se ponen en la oreja,"
+ },
+ {
+  "id": "scene-083",
+  "t0": 403.095,
+  "t1": 407.817,
+  "tipo": "imagen",
+  "texto": "y se están investigando, pero los resultados todavía son mixtos."
+ },
+ {
+  "id": "scene-084",
+  "t0": 407.817,
+  "t1": 412.837,
+  "tipo": "imagen",
+  "texto": "Lo que sí tiene datos es más aburrido, y funciona mejor: cosas pequeñas,"
+ },
+ {
+  "id": "scene-085",
+  "t0": 412.837,
+  "t1": 417.097,
+  "tipo": "imagen",
+  "texto": "repetidas, que entrenan el freno día a día."
+ },
+ {
+  "id": "scene-086",
+  "t0": 417.097,
+  "t1": 422.499,
+  "tipo": "imagen",
+  "texto": "Aquí van cinco. Uno: exhala más largo de lo que inhalas."
+ },
+ {
+  "id": "scene-087",
+  "t0": 422.499,
+  "t1": 427.139,
+  "tipo": "imagen",
+  "texto": "¿Recuerdas que el freno se pisa al soltar el aire? Pues alarga esa parte."
+ },
+ {
+  "id": "scene-088",
+  "t0": 427.139,
+  "t1": 431.552,
+  "tipo": "imagen",
+  "texto": "Toma aire en 4 tiempos, y suéltalo en 6, o en 8."
+ },
+ {
+  "id": "scene-089",
+  "t0": 431.552,
+  "t1": 439.032,
+  "tipo": "imagen",
+  "texto": "Cerca de 6 respiraciones por minuto, el corazón y la respiración entran en sintonía, y la variabilidad sube al máximo."
+ },
+ {
+  "id": "scene-090",
+  "t0": 439.032,
+  "t1": 443.151,
+  "tipo": "imagen",
+  "texto": "Con 5 minutos al día ya estás entrenando el freno."
+ },
+ {
+  "id": "scene-091",
+  "t0": 443.151,
+  "t1": 446.893,
+  "tipo": "imagen",
+  "texto": "Dos: frío en el cuello. En 2018,"
+ },
+ {
+  "id": "scene-092",
+  "t0": 446.893,
+  "t1": 453.113,
+  "tipo": "imagen",
+  "texto": "en la Universidad de Luxemburgo, pusieron frío en pulsos cortos sobre un lado del cuello de voluntarios sanos,"
+ },
+ {
+  "id": "scene-093",
+  "t0": 453.113,
+  "t1": 457.161,
+  "tipo": "imagen",
+  "texto": "más o menos por donde pasa el vago. Comparado con no hacer nada,"
+ },
+ {
+  "id": "scene-094",
+  "t0": 457.161,
+  "t1": 463.15,
+  "tipo": "imagen",
+  "texto": "el corazón bajó, y la variabilidad subió. Una toalla fría en el cuello o en la cara,"
+ },
+ {
+  "id": "scene-095",
+  "t0": 463.15,
+  "t1": 467.83,
+  "tipo": "imagen",
+  "texto": "en un mal momento, es un freno rápido. Nunca hielo directo en la piel,"
+ },
+ {
+  "id": "scene-096",
+  "t0": 467.83,
+  "t1": 473.327,
+  "tipo": "imagen",
+  "texto": "y si tienes problemas del corazón, pregunta antes. Tres: canta."
+ },
+ {
+  "id": "scene-097",
+  "t0": 473.327,
+  "t1": 476.987,
+  "tipo": "imagen",
+  "texto": "El vago mueve los músculos de la garganta y de las cuerdas vocales."
+ },
+ {
+  "id": "scene-098",
+  "t0": 476.987,
+  "t1": 484.182,
+  "tipo": "imagen",
+  "texto": "Y cantar te obliga a algo que casi nunca haces: soltar el aire muy, muy despacio."
+ },
+ {
+  "id": "scene-099",
+  "t0": 484.182,
+  "t1": 487.982,
+  "tipo": "imagen",
+  "texto": "En 2013, en Suecia, midieron el corazón de jóvenes de"
+ },
+ {
+  "id": "scene-100",
+  "t0": 487.982,
+  "t1": 493.512,
+  "tipo": "imagen",
+  "texto": "18 años cantando juntos. Con frases largas y lentas, la variabilidad subía,"
+ },
+ {
+  "id": "scene-101",
+  "t0": 493.512,
+  "t1": 497.956,
+  "tipo": "imagen",
+  "texto": "y sus corazones empezaban a acelerar y frenar casi al mismo tiempo."
+ },
+ {
+  "id": "scene-102",
+  "t0": 497.956,
+  "t1": 503.265,
+  "tipo": "imagen",
+  "texto": "En la regadera, en el coche, con la radio. Tararear también cuenta."
+ },
+ {
+  "id": "scene-103",
+  "t0": 503.265,
+  "t1": 508.577,
+  "tipo": "imagen",
+  "texto": "Cuatro: muévete. Los corredores de fondo tienen el pulso en reposo muy bajo,"
+ },
+ {
+  "id": "scene-104",
+  "t0": 508.577,
+  "t1": 514.781,
+  "tipo": "imagen",
+  "texto": "a veces de 50 o menos. Parte de ese secreto es un freno vagal entrenado."
+ },
+ {
+  "id": "scene-105",
+  "t0": 514.781,
+  "t1": 518.241,
+  "tipo": "imagen",
+  "texto": "No hace falta un maratón. Caminar rápido, nadar,"
+ },
+ {
+  "id": "scene-106",
+  "t0": 518.241,
+  "t1": 522.451,
+  "tipo": "imagen",
+  "texto": "bailar, casi todos los días. Eso, junto con dormir bien,"
+ },
+ {
+  "id": "scene-107",
+  "t0": 522.451,
+  "t1": 528.431,
+  "tipo": "imagen",
+  "texto": "es lo que más sube la variabilidad a largo plazo. Y cinco: la gente."
+ },
+ {
+  "id": "scene-108",
+  "t0": 528.431,
+  "t1": 533.281,
+  "tipo": "imagen",
+  "texto": "Recuerda que el vago sube noticias del cuerpo al cerebro. Una charla tranquila,"
+ },
+ {
+  "id": "scene-109",
+  "t0": 533.281,
+  "t1": 539.45,
+  "tipo": "imagen",
+  "texto": "una risa, la voz de alguien de confianza: tu cuerpo las lee como señal de que estás a salvo."
+ },
+ {
+  "id": "scene-110",
+  "t0": 539.45,
+  "t1": 542.57,
+  "tipo": "imagen",
+  "texto": "En 2013, en la Universidad de Carolina del Norte,"
+ },
+ {
+  "id": "scene-111",
+  "t0": 542.57,
+  "t1": 549.908,
+  "tipo": "imagen",
+  "texto": "un estudio encontró que las personas que se sentían más conectadas con otros en su día a día mejoraban su tono vagal."
+ },
+ {
+  "id": "scene-112",
+  "t0": 549.908,
+  "t1": 554.128,
+  "tipo": "imagen",
+  "texto": "Y con un freno más ágil, les resultaba más fácil volver a conectar."
+ },
+ {
+  "id": "scene-113",
+  "t0": 554.128,
+  "t1": 558.978,
+  "tipo": "imagen",
+  "texto": "Una espiral que sube. Todavía se discute, pero la idea es preciosa:"
+ },
+ {
+  "id": "scene-114",
+  "t0": 558.978,
+  "t1": 563.747,
+  "tipo": "imagen",
+  "texto": "cuidarte también es juntarte."
+ },
+ {
+  "id": "scene-115",
+  "t0": 563.747,
+  "t1": 567.807,
+  "tipo": "imagen",
+  "texto": "Así que la próxima vez que te toque hablar frente a todos, y alguien te diga"
+ },
+ {
+  "id": "scene-116",
+  "t0": 567.807,
+  "t1": 573.334,
+  "tipo": "imagen",
+  "texto": "respira hondo… hazle caso. Pero a tu manera. Poco aire para entrar."
+ },
+ {
+  "id": "scene-117",
+  "t0": 573.334,
+  "t1": 578.864,
+  "tipo": "imagen",
+  "texto": "Mucho tiempo para salir. Tu corazón va a bajar un poquito con cada exhalación."
+ },
+ {
+  "id": "scene-118",
+  "t0": 578.864,
+  "t1": 585.151,
+  "tipo": "imagen",
+  "texto": "Porque ahí dentro, del cerebro a la panza, hay un cable que frena por ti miles de veces al día."
+ },
+ {
+  "id": "scene-119",
+  "t0": 585.151,
+  "t1": 587.911,
+  "tipo": "imagen",
+  "texto": "El freno siempre estuvo ahí."
+ },
+ {
+  "id": "scene-120",
+  "t0": 587.911,
+  "t1": 593.3333,
+  "tipo": "imagen",
+  "texto": "Solo había que saber dónde pisarlo."
+ }
+]

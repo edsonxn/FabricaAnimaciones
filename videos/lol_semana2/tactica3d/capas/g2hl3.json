@@ -1,0 +1,124 @@
+{
+ "modo": "video",
+ "de": 1004.144,
+ "a": 1009.173,
+ "anillos": [
+  {
+   "u": 0.305,
+   "v": 0.42,
+   "r": 0.023958333333333335,
+   "color": "azul",
+   "en": 1004.244,
+   "sale": 1009.173
+  },
+  {
+   "u": 0.465,
+   "v": 0.68,
+   "r": 0.023958333333333335,
+   "color": "rojo",
+   "en": 1004.444,
+   "sale": 1009.173
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f2",
+   "pts": [
+    [
+     0.2627,
+     0.2695
+    ],
+    [
+     0.3595,
+     0.3938
+    ],
+    [
+     0.465,
+     0.68
+    ]
+   ],
+   "color": "rojo",
+   "en": 1004.644,
+   "dur": 1.0,
+   "sale": 1009.173,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  },
+  {
+   "id": "f3",
+   "pts": [
+    [
+     0.1327,
+     0.1145
+    ],
+    [
+     0.305,
+     0.42
+    ]
+   ],
+   "color": "azul",
+   "en": 1004.844,
+   "dur": 1.0,
+   "sale": 1009.173,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.305,
+   "v": 0.42,
+   "r": 0.013177083333333336,
+   "color": "azul",
+   "en": 1004.344,
+   "sale": 1009.173,
+   "alto": 7
+  },
+  {
+   "u": 0.465,
+   "v": 0.68,
+   "r": 0.013177083333333336,
+   "color": "rojo",
+   "en": 1004.544,
+   "sale": 1009.173,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 1004.394,
+   "a": 1009.173,
+   "u": 0.305,
+   "v": 0.42,
+   "alto": 0,
+   "texto": "BROKENBLADE",
+   "sub": "~15 %",
+   "color": "azul",
+   "dx": -75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Olaf.png"
+  },
+  {
+   "de": 1004.5939999999999,
+   "a": 1009.173,
+   "u": 0.465,
+   "v": 0.68,
+   "alto": 0,
+   "texto": "ZEUS",
+   "sub": "~25 %",
+   "color": "rojo",
+   "dx": 75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/KSante.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [],
+ "fondo": "/videos/lol_semana2/tactica3d/capas/g2hl3_fondo.jpg",
+ "_huella": "5f4eff0bb83c"
+}

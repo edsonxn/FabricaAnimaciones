@@ -1,0 +1,169 @@
+{
+ "modo": "mesa",
+ "de": 1584.47,
+ "a": 1590.4,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_loly3_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Curse": {
+   "jugador": "Curse",
+   "campeon": "Chogath",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Chogath.png",
+   "puntos": [
+    [
+     0,
+     0.46,
+     0.45
+    ]
+   ],
+   "de": 1584.87,
+   "sale": 1589.4
+  },
+  "Feisty": {
+   "jugador": "Feisty",
+   "campeon": "Ryze",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Ryze.png",
+   "puntos": [
+    [
+     0,
+     0.31,
+     0.44
+    ]
+   ],
+   "de": 1584.95,
+   "sale": 1589.4
+  },
+  "Berserker": {
+   "jugador": "Berserker",
+   "campeon": "Lucian",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Lucian.png",
+   "puntos": [
+    [
+     0,
+     0.27,
+     0.65
+    ]
+   ],
+   "de": 1585.03,
+   "sale": 1589.4
+  },
+  "Isles": {
+   "jugador": "Isles",
+   "campeon": "Milio",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Milio.png",
+   "puntos": [
+    [
+     0,
+     0.135,
+     0.66
+    ]
+   ],
+   "de": 1585.11,
+   "sale": 1589.4
+  },
+  "Dhokla": {
+   "jugador": "Dhokla",
+   "campeon": "KSante",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/KSante.png",
+   "puntos": [
+    [
+     0,
+     0.36,
+     0.7
+    ]
+   ],
+   "de": 1585.19,
+   "sale": 1589.4
+  }
+ },
+ "camara": [
+  [
+   1584.47,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1584.82,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1586.3676,
+   -18,
+   36,
+   50,
+   0.34,
+   0.55
+  ],
+  [
+   1588.1466,
+   14,
+   40,
+   47.5,
+   0.34,
+   0.55
+  ],
+  [
+   1589.5,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1590.4,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "etiquetas": [
+  {
+   "u": 0.45,
+   "v": 0.42,
+   "alto": 0,
+   "texto": "ACKERMAN",
+   "sub": "SEGÚN LOS NARRADORES, YA A SALVO",
+   "color": "rojo",
+   "dx": 190,
+   "dy": -60,
+   "de": 1585.17,
+   "a": 1589.4
+  },
+  {
+   "u": 0.36,
+   "v": 0.68,
+   "alto": 0,
+   "texto": "LYON",
+   "sub": "LO ESTÁ ESPERANDO",
+   "color": "azul",
+   "dx": -30,
+   "dy": 80,
+   "de": 1588.25,
+   "a": 1589.4
+  }
+ ]
+}

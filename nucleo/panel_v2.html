@@ -2,10 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#151821">
 <title>Lienzo · Fábrica de Animaciones</title>
 <meta name="ui-version" content="v2-lienzo">
-<script>try{const t=localStorage.getItem("t");if(t)document.documentElement.dataset.tema=t;}catch(e){}</script>
+<script>try{const t=localStorage.getItem("t");if(t)document.documentElement.dataset.tema=t;}catch(e){}
+// remoto = por el túnel (celular fuera de casa); táctil = el dedo manda (sin ratón ni rueda)
+if(!/^(127\.0\.0\.1|localhost|\[::1\])$/.test(location.hostname))document.documentElement.classList.add("remoto");
+if(matchMedia("(hover:none),(pointer:coarse)").matches)document.documentElement.classList.add("tactil");</script>
 <style>
 /* Panel v2 «Lienzo» (21-oct-2026). Backend: nucleo/panel_v2.py. Misma clave de tema que el panel clásico (localStorage.t). */
 :root{
@@ -194,6 +198,9 @@ body.sin-lado #vista{left:0}
 .tab.abierto .etapas i.en_curso{color:#fff}
 .etapas i.atencion{background:var(--warn)}
 .etapas i.omitido{background:transparent;border:1px dashed var(--line2)}
+.etapas i.oir{cursor:pointer}.etapas i.oir:hover{outline:2px solid var(--acc);outline-offset:1px}
+.n-cab .oir-todo{flex:none;font:inherit;font-size:11.5px;font-weight:650;padding:3px 9px;border-radius:999px;border:1px solid var(--acc);background:color-mix(in srgb,var(--acc) 18%,var(--panel));color:var(--txt);cursor:pointer}
+.n-cab .oir-todo:hover{background:color-mix(in srgb,var(--acc) 35%,var(--panel))}
 @keyframes latido{50%{opacity:.55}}
 .vivo{margin:0 14px 10px;padding:8px 10px;border-radius:11px;background:color-mix(in srgb,var(--run) 11%,var(--panel));font-size:12.5px;line-height:1.35}
 .tab.abierto .vivo{margin:0 18px 10px}
@@ -238,7 +245,9 @@ a.bp{color:var(--txt);text-decoration:none}
 .pl:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
 .nodo.plegado>:not(.n-cab){display:none}
 .nodo.plegado>.n-cab{border-bottom:0}
-.col.plegada>.nodo{display:none}
+.col.plegada>.nodo,.col.plegada>.pilas{display:none}
+.pilas{display:flex;gap:14px;align-items:flex-start}
+.pila{display:flex;flex-direction:column;gap:14px}
 .col.plegada>h4{color:var(--faint)}
 .scroll{overflow:auto;overscroll-behavior:contain}
 .sel-n{outline:2px solid var(--acc);outline-offset:1px}
@@ -442,6 +451,61 @@ dl.meta dd{margin:0;overflow-wrap:anywhere}
   #minimapa{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- celular y pantallas táctiles (21-oct-2026: el usuario lo abre por ngrok fuera de casa; nucleo/panel_remoto.py) */
+html,body{overscroll-behavior:none}
+#lista,.i-cuerpo,.pop,.cajon-cuerpo{overscroll-behavior:contain}
+#barra,#lado,#insp,.pop,#cajon,.c-cab{touch-action:pan-x pan-y}
+#barra>.bt{flex:none}         /* el pellizco solo acerca el lienzo, no la página */
+#velo{position:fixed;inset:var(--top) 0 0 0;background:rgba(6,8,14,.45);z-index:29;display:none}
+/* por el túnel, «mostrar en carpeta» abriría el Explorador en la PC de casa: fuera */
+html.remoto [data-acc="carpeta"],html.remoto [data-acc="revelar"],html.remoto [data-acc="caja-revelar"]{display:none}
+html.tactil .ayuda{display:flex;left:10px;right:10px;top:10px;bottom:auto;transform:none;max-width:none}
+@media (max-width:900px){body:not(.sin-lado) #velo{display:block}}
+@media (hover:none),(pointer:coarse){
+  #bt-rueda{display:none}
+  .ctl button{height:40px;min-width:40px}
+  .mini{height:34px;padding:0 11px}
+  .bp{height:36px;padding:0 12px}
+  .mp{width:28px;height:28px;font-size:11px}
+  .fr{grid-template-columns:30px 1fr}
+  .pl{width:28px;height:28px}
+  .c-nav{width:40px;height:56px;background:rgba(255,255,255,.14)}
+  #q,.sel-f,select.mini{font-size:16px}                                   /* < 16 px y el iPhone hace zoom al escribir */
+}
+@media (max-width:640px){
+  :root{--top:94px}
+  #barra{padding:5px 8px;gap:6px}
+  .marca>span:last-child{display:none}
+  .acciones{gap:4px}
+  .bt{height:36px;padding:0 9px;font-size:12.5px}
+  .bt.ico{width:36px}
+  .m{height:34px;padding:0 8px;font-size:12px}
+  #lado{width:min(88vw,340px)}
+  /* el detalle sube desde abajo como hoja; el lienzo sigue visible arriba */
+  #insp{top:auto;left:0;right:0;width:auto;height:min(68dvh,640px);border-left:0;border-top:1px solid var(--line);border-radius:18px 18px 0 0;
+    transform:translateY(105%);padding-bottom:env(safe-area-inset-bottom)}
+  body.con-insp #insp{transform:none}
+  .i-cab{position:relative;padding-top:20px}
+  .i-cab::before{content:"";position:absolute;left:50%;top:7px;width:40px;height:4px;border-radius:4px;background:var(--line2);transform:translateX(-50%)}
+  .pop{left:8px!important;right:8px;width:auto;top:calc(var(--top) + 4px);max-height:calc(100dvh - var(--top) - 16px)}
+  .ctl{left:10px;bottom:calc(10px + env(safe-area-inset-bottom))}
+  #rep{bottom:calc(64px + env(safe-area-inset-bottom));width:calc(100% - 20px)}
+  .c-cab{flex-wrap:wrap;gap:6px;padding:8px 10px}
+  .c-cab b{flex:1 0 100%;font-size:13px}
+  .c-medio{padding:0 0 10px}
+  #cajon{width:100vw}
+  .cajon-cuerpo{padding:0}
+  .av{grid-template-columns:42px 1fr auto auto}
+}
+/* celular acostado: una sola fila arriba (las métricas se deslizan de lado) */
+@media (max-height:520px) and (max-width:1000px){
+  :root{--top:50px}
+  #barra{flex-wrap:nowrap;padding:0 8px}
+  #met{order:0;flex:1 1 auto}
+  .marca{display:none}
+  #insp{height:auto;top:var(--top)}
+}
 </style>
 </head>
 <body>
@@ -471,6 +535,7 @@ dl.meta dd{margin:0;overflow-wrap:anywhere}
   <div id="lista"><div class="vacio">Cargando…</div></div>
   <div class="lado-pie"><button class="mini" data-acc="todo">⤢ Ver todo</button><button class="mini" data-acc="contraer">Contraer tableros</button><button class="mini" data-acc="reordenar" title="Vuelve a ordenar: lo que está en curso primero">↻ Reordenar</button></div>
 </aside>
+<div id="velo"></div>
 
 <main id="vista" aria-label="Lienzo">
   <div id="mundo"></div>
@@ -532,6 +597,8 @@ const visible=p=>!p.oculto||activo(p);                                  // lo oc
 const FILTRA={trabajo:p=>activo(p)||!p.oculto&&p.progreso<1,activos:activo,   // «En trabajo» (por defecto) = activos + sin terminar; los activos van primero
 pend:p=>visible(p)&&!activo(p)&&p.progreso<1,listos:p=>visible(p)&&!activo(p)&&p.progreso>=1,todos:visible,ocultos:p=>p.oculto};
 const SIN_ESTILO="(sin estilo)";
+const REMOTO=document.documentElement.classList.contains("remoto"),TACTIL=document.documentElement.classList.contains("tactil");
+const CLASICO=REMOTO?"/?clasico":"/";                                  // por la puerta, «/» lleva al lienzo
 
 // ====================================================== estado
 const S={D:null,SIS:null,POR:{},GAL:null,rec:{},abiertos:new Set(LS.get("v2ab",[])),filtro:({curso:"trabajo",todos:"trabajo"})[LS.get("v2f","trabajo")]||LS.get("v2f","trabajo"),fCanal:LS.get("v2fc",""),fEstilo:LS.get("v2fe",""),q:"",
@@ -585,7 +652,7 @@ function irA(n,abrirInsp=true){
   const z=c.w>1200?clamp(Math.min((anchoUtil()-80)/c.w,1),.42,1):Math.max(V.z,.85);
   const w=anchoUtil(),h=vista.clientHeight;
   volar(c.w*z>w-60?28-c.x*z:w/2-(c.x+c.w/2)*z,c.h*z>h-60?28-c.y*z:h/2-(c.y+c.h/2)*z,z);   // si no cabe: desde su esquina (título y guion a la vista)
-  if(abrirInsp&&!n.startsWith("est:"))seleccionar({tipo:"proy",v:n});
+  if(abrirInsp&&!n.startsWith("est:")&&window.innerWidth>640)seleccionar({tipo:"proy",v:n});   // en el celular la hoja taparía el tablero: se abre al tocarlo
 }
 
 // arrastrar para moverse (y pellizco con dos dedos)
@@ -596,6 +663,7 @@ const enBarra=e=>{const s=e.target.closest(".scroll,.pistas");if(!s||s.scrollHei
 vista.addEventListener("pointerdown",e=>{
   if(e.button===2||e.target.closest(NO_ARRASTRE)||enBarra(e))return;
   if(e.pointerType==="mouse")e.preventDefault();                       // sin esto el navegador empieza a seleccionar texto al arrastrar
+  else{const sc=e.target.closest(".scroll,.pistas");if(sc&&sc.scrollHeight>sc.clientHeight+1&&!punteros.size)return;}   // dedo en una lista: la desliza el navegador
   punteros.set(e.pointerId,{x:e.clientX,y:e.clientY});
   if(punteros.size===1)arr={x0:e.clientX,y0:e.clientY,vx:V.x,vy:V.y,movio:false,id:e.pointerId};
   if(punteros.size===2){const [a,b]=[...punteros.values()];pinza={d:Math.hypot(a.x-b.x,a.y-b.y),z:V.z};arr=null;}
@@ -610,7 +678,15 @@ vista.addEventListener("pointermove",e=>{
   if(!arr.movio&&Math.hypot(dx,dy)>4){arr.movio=true;vista.classList.add("arrastrando");try{getSelection().removeAllRanges();vista.setPointerCapture(e.pointerId)}catch(_){}}
   if(arr.movio){V.x=arr.vx+dx;V.y=arr.vy+dy;aplicarVista();}
 });
+// doble toque con el dedo = doble clic (Safari no lo emite y Chrome no siempre con touch-action:none)
+let ultToque={t:0,x:0,y:0};
+function toque(e){
+  const ahora=performance.now();
+  if(ahora-ultToque.t<330&&Math.hypot(e.clientX-ultToque.x,e.clientY-ultToque.y)<32){ultToque.t=0;S.dblTactil=ahora;clearTimeout(S.tToque);dobleClic(e.target);return;}
+  ultToque={t:ahora,x:e.clientX,y:e.clientY};
+}
 function soltar(e){
+  if(e.type==="pointerup"&&e.pointerType!=="mouse"&&arr&&arr.id===e.pointerId&&!arr.movio&&punteros.size===1)toque(e);
   punteros.delete(e.pointerId);if(punteros.size<2)pinza=null;
   if(arr&&arr.id===e.pointerId){if(arr.movio){S.sinClic=true;setTimeout(()=>S.sinClic=false,0);}vista.classList.remove("arrastrando");arr=null;}
 }
@@ -812,6 +888,7 @@ function moverEtiquetas(){
 }
 // medio y lejos: el título completo y el estado al pasar el ratón por un tablero
 vista.addEventListener("mousemove",e=>{
+  if(TACTIL)return;
   const t=V.z<ZOOM_ROTULOS&&!arr&&e.target.closest&&e.target.closest(".tab");   // en el nivel medio los títulos van recortados
   if(!t){if(TIP.style.display!=="none")TIP.style.display="none";return;}
   const n=t.dataset.n;
@@ -844,9 +921,28 @@ function pintarTab(n){
     const cu=$(".tab-cuerpo",el),scr=$$(".scroll,.pistas",cu).map(s=>s.scrollTop);
     el._fc=fc;cu.innerHTML=ab?cuerpoHTML(p):portadaHTML(p);
     $$(".scroll,.pistas",cu).forEach((s,i)=>{if(scr[i])s.scrollTop=scr[i];});
-    observar(cu);marcarPistas();marcarSel();cambio=true;
+    observar(cu);marcarPistas();marcarSel();apilar(cu);cambio=true;
   }
   return cambio;
+}
+// columna con tope de alto (el usuario, 22-oct: «se hace muy largo por las columnas largas»): si sus secciones pasan de
+// ALTO_COL se reparten en pilas lado a lado, parejas, en el mismo orden (arriba→abajo y luego a la derecha)
+const ALTO_COL=1300,HUECO=14;
+function apilar(cu){
+  for(const col of $$(".col",cu)){
+    const vieja=$(":scope>.pilas",col),ns=$$(":scope>.nodo,:scope>.pilas>.pila>.nodo",col);
+    if(vieja){ns.forEach(n=>col.appendChild(n));vieja.remove();}          // mover en el mismo tick no corta un video que suena
+    if(col.classList.contains("plegada")||ns.length<2)continue;
+    const hs=ns.map(n=>n.offsetHeight),tot=hs.reduce((a,h)=>a+h+HUECO,-HUECO);
+    if(!tot||tot<=ALTO_COL)continue;
+    const meta=Math.max(tot/Math.ceil(tot/ALTO_COL),...hs),pilas=document.createElement("div");pilas.className="pilas";
+    let pila=null,h=0;
+    ns.forEach((n,i)=>{
+      if(!pila||(h&&h+hs[i]/2>meta)){pila=document.createElement("div");pila.className="pila";pilas.appendChild(pila);h=0;}
+      pila.appendChild(n);h+=hs[i]+HUECO;
+    });
+    col.appendChild(pilas);
+  }
 }
 function anillo(p,run){const r=17,c=2*Math.PI*r;
   return `<div class="anillo ${run?"run":""}"><svg width="42" height="42" viewBox="0 0 42 42"><circle class="f" cx="21" cy="21" r="${r}"/><circle class="v" cx="21" cy="21" r="${r}" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}"/></svg><b>${Math.round(p*100)}%</b></div>`;}
@@ -857,7 +953,8 @@ function supHTML(p,ab){                 // {cab, et, vivo}
     p.formato==="vertical"?"<span>vertical</span>":"",p.duracion?`<span>${mmss(p.duracion)}</span>`:"",p.publicado?`<span class="pub">en YouTube</span>`:"",
     p.actividad?`<span>${hace(p.actividad)}</span>`:""].join("");
   const et=S.D.etapas.map(x=>{const e=p.etapas[x.id];if(!e)return "";
-    return `<i class="${e.estado}" title="${esc(nomEt(p,x))}: ${esc(e.detalle||e.estado)}">${ab?esc(nomEt(p,x)):""}</i>`;}).join("");
+    const oir=ab&&(x.id==="voz"||x.id==="seleccion")&&(e.estado==="listo"||e.estado==="parcial");   // el usuario, 21-oct: «no veo la pestaña de voz»
+    return `<i class="${e.estado}${oir?" oir":""}"${oir?` data-acc="oir-todo" data-v="${esc(p.nombre)}"`:""} title="${esc(nomEt(p,x))}: ${esc(e.detalle||e.estado)}${oir?" · clic: escuchar toda la voz":""}">${ab?esc(nomEt(p,x)):""}</i>`;}).join("");
   const ins=run?`<div class="insignia"><i></i><span class="ins-t">${esc(((S.D.etapas.find(x=>x.id===p.etapa_actual)||{}).nombre||p.etapa_actual).toUpperCase())} · </span>${Math.round(((p.etapas[p.etapa_actual]||{}).progreso||0)*100)} %</div>`:"";
   return {cab:`${ins}<div class="tab-cab" data-proy="${esc(p.nombre)}">${tgHTML(p,ab)}<div class="tab-tit"><b>${esc(p.titulo)}</b><small>${sub}</small></div>${anillo(p.progreso||0,run)}</div>`,
     et:`<div class="etapas">${et}</div>`,vivo:run?vivoHTML(p):""};
@@ -925,11 +1022,12 @@ function cuerpoHTML(p){
 const plg=k=>S.plegados.has(k);
 const btPl=(k,nombre)=>`<button class="pl" data-plegar="${esc(k)}" title="${plg(k)?"Expandir":"Contraer"} «${esc(nombre)}» en todos los tableros">${plg(k)?"▸":"▾"}</button>`;
 const nodoAt=(k,cls,extra="")=>`class="nodo ${cls}${plg(k)?" plegado":""}" data-pleg="${esc(k)}"${extra}`;
-const cabNodo=(k,nombre,cuenta,nota="",titulo="")=>`<div class="n-cab" data-plegar="${esc(k)}"${titulo?` title="${esc(titulo)}"`:""}>${btPl(k,nombre)}<span class="nn">${esc(nombre)}${nota?` <small>· ${esc(nota)}</small>`:""}</span><span class="nc">${esc(cuenta)}</span></div>`;
+const cabNodo=(k,nombre,cuenta,nota="",titulo="",boton="")=>`<div class="n-cab" data-plegar="${esc(k)}"${titulo?` title="${esc(titulo)}"`:""}>${btPl(k,nombre)}<span class="nn">${esc(nombre)}${nota?` <small>· ${esc(nota)}</small>`:""}</span>${boton}<span class="nc">${esc(cuenta)}</span></div>`;
 function plegar(k){
   const on=!S.plegados.has(k);on?S.plegados.add(k):S.plegados.delete(k);LS.set("v2pleg",[...S.plegados]);
   $$(`[data-pleg="${CSS.escape(k)}"]`).forEach(n=>n.classList.toggle(k.startsWith("col:")?"plegada":"plegado",on));   // en el sitio: no corta un video que suena
   $$(`button.pl[data-plegar="${CSS.escape(k)}"]`).forEach(b=>{b.textContent=on?"▸":"▾";b.title=b.title.replace(/^(Contraer|Expandir)/,on?"Expandir":"Contraer");});
+  $$(".tab.abierto .tab-cuerpo").forEach(apilar);                        // una sección plegada cambia los altos
   maquetar();
 }
 const actuacion=t=>esc(t).replace(/\[([^\]]{1,40})\]/g,'<span class="act">[$1]</span>');
@@ -938,7 +1036,8 @@ function guionNodo(v,G){
   const h=G.escenas.map(e=>`<div class="esc"><div class="esc-cab"><b>${esc(e.id)}</b><span>${e.t0!=null?mmss(e.t0)+"–"+mmss(e.t1):""}</span></div>${e.frases.map(f=>{nf++;if(f.voz)nv++;
     return f.voz?`<p class="fr" data-pista="${esc(v)}|voz/final/${esc(f.key)}.wav|0" data-titulo="${esc(f.texto.slice(0,80))}"><button class="mp" data-play-pista title="Escuchar la toma elegida">▶</button><span>${actuacion(f.texto)}</span></p>`
       :`<p class="fr"><span class="mp no" title="Sin toma de voz elegida">·</span><span>${actuacion(f.texto)}</span></p>`;}).join("")}</div>`).join("");
-  return `<div ${nodoAt("guion","n-guion")}>${cabNodo("guion","Guion",`${nf} frases · ${nv} con voz`)}<div class="scroll">${h}</div></div>`;
+  const todo=nv?`<button class="oir-todo" data-oir-todo="${esc(v)}" title="Escuchar toda la narración de corrido, frase tras frase (funciona aunque el guion esté plegado)">▶ Escuchar todo</button>`:"";
+  return `<div ${nodoAt("guion","n-guion")}>${cabNodo("guion","Guion",`${nf} frases · ${nv} con voz`,"","",todo)}<div class="scroll">${h}</div></div>`;
 }
 function md(s){
   const L=esc(s).split("\n");let out="",ul=false;
@@ -1011,16 +1110,37 @@ function alternarTablero(v,abrir){
 }
 function enVista(n){const c=S.cajas.find(c=>c.n===n);if(!c)return false;
   const x0=-V.x/V.z,y0=-V.y/V.z,x1=x0+vista.clientWidth/V.z,y1=y0+vista.clientHeight/V.z;return c.x<x1&&c.x+c.w>x0&&c.y<y1&&c.y+c.h>y0;}
+// un tablero abierto cuyo video avanzó (actividad o etapas nuevas) se relee al momento, sin esperar al refresco de 8 s
+function avanceAbiertos(D){
+  if(document.hidden)return;S.actAb=S.actAb||{};
+  for(const p of D.proyectos){if(!S.abiertos.has(p.nombre))continue;
+    const f=[p.actividad,p.etapa_actual,JSON.stringify(p.etapas)].join("|");
+    if(S.actAb[p.nombre]!==undefined&&S.actAb[p.nombre]!==f&&TABS.has(p.nombre)&&enVista(p.nombre))cargarRec(p.nombre);
+    S.actAb[p.nombre]=f;}
+}
 function refrescarAbiertos(){if(document.hidden)return;for(const v of S.abiertos)if(TABS.has(v)&&enVista(v))cargarRec(v);}
 
 // ====================================================== audio (un solo reproductor para todo el lienzo)
 const AU={el:new Audio(),k:null,titulo:""};AU.el.preload="auto";
-function tocarPista(k,titulo){
+function tocarPista(k,titulo,deCola){
+  if(!deCola&&AU.cola&&!AU.cola.ks.includes(k))AU.cola=null;            // otra pista: se acaba el «escuchar todo»
   if(AU.k===k){AU.el.paused?AU.el.play().catch(()=>{}):AU.el.pause();return;}
   const [v,r,b]=k.split("|");AU.k=k;AU.titulo=titulo||r.split("/").pop();AU.v=v;
   AU.el.src=uOir(v,r,+b||0);AU.el.play().catch(()=>{});
   $("#rep").classList.add("on");$("#rep-n").textContent=AU.titulo;marcarPistas();
+  if(AU.cola){const i=AU.cola.ks.indexOf(k);$("#rep-n").textContent=`Voz ${i+1}/${AU.cola.ks.length} · ${AU.titulo}`;
+    const el=$(`[data-pista="${CSS.escape(k)}"]`,TABS.get(v)),sc=el&&el.closest(".scroll");   // la frase que suena, a la vista
+    if(sc&&sc.offsetParent){const d=(el.getBoundingClientRect().top-sc.getBoundingClientRect().top)/V.z;sc.scrollTop+=d-40;}}
 }
+// «▶ Escuchar todo» (botón del Guion o chip Voz/Selección del tablero abierto): las tomas elegidas de corrido
+function oirTodo(v){
+  if(AU.cola&&AU.cola.v===v){AU.el.paused?AU.el.play().catch(()=>{}):AU.el.pause();return;}
+  const fr=$$(".n-guion .fr[data-pista]",TABS.get(v));if(!fr.length)return;
+  AU.cola={v,ks:fr.map(f=>f.dataset.pista),ts:fr.map(f=>f.dataset.titulo)};AU.k=null;
+  tocarPista(AU.cola.ks[0],AU.cola.ts[0],true);
+}
+AU.el.addEventListener("ended",()=>{const c=AU.cola;if(!c)return;const i=c.ks.indexOf(AU.k);
+  if(i>=0&&i<c.ks.length-1)tocarPista(c.ks[i+1],c.ts[i+1],true);else AU.cola=null;});
 function marcarPistas(){
   $$(".sonando,.pausado,.cargando-audio").forEach(el=>el.classList.remove("sonando","pausado","cargando-audio"));
   $$("[data-play-pista]").forEach(b=>{if(b.textContent!=="▶")b.textContent="▶";});
@@ -1054,6 +1174,7 @@ function reproducirEn(contenedor,url,vert){
 // vista previa al pasar el ratón por un clip
 let hov=null,hovT=0;
 mundo.addEventListener("mouseover",e=>{
+  if(TACTIL)return;
   const t=e.target.closest(".t.vid");if(!t||t===hov||V.z<.45||arr)return;
   quitarHover();hov=t;hovT=setTimeout(()=>{if(hov!==t)return;const [v,r]=t.dataset.arch.split("|");const it=S.rec[v]&&S.rec[v].idx[r];if(it&&it.b>120e6)return;
     const vd=document.createElement("video");vd.muted=true;vd.loop=true;vd.playsInline=true;vd.autoplay=true;vd.src=uArch(v,r);vd.style.cssText="position:absolute;inset:0";t.appendChild(vd);},350);
@@ -1095,7 +1216,7 @@ function pintarInsp(){
   const partes={meta:`<dl class="meta"><dt>Carpeta</dt><dd>videos/${esc(p.nombre)}</dd><dt>Canal</dt><dd>${esc(p.canal_nombre||p.canal)}</dd><dt>Estilo</dt><dd>${esc(p.estilo||"—")}</dd>
       <dt>Formato</dt><dd>${p.formato==="vertical"?"vertical 9:16":"horizontal 16:9"}${p.duracion?" · "+mmss(p.duracion):""}${p.frases?" · "+p.frases+" frases":""}</dd><dt>Avance</dt><dd>${Math.round((p.progreso||0)*100)} %${p.publicado?" · en YouTube":""}${p.oculto?" · oculto":""}</dd></dl>`,
     vivo:p.etapa_actual?vivoHTML(p).replace('class="vivo"','class="vivo" style="margin:0 0 12px"'):"",
-    acc:`${pieHTML(p,S.abiertos.has(p.nombre))}<a class="bp" href="/" title="El panel clásico tiene el detalle del render escena por escena">▤ Clásico</a>`,
+    acc:`${pieHTML(p,S.abiertos.has(p.nombre))}<a class="bp" href="${CLASICO}" title="El panel clásico tiene el detalle del render escena por escena">▤ Clásico</a>`,
     sig,et:filas,log};
   for(const k in partes)if(cu._h[k]!==partes[k]){cu._h[k]=partes[k];$(".ip-"+k,cu).innerHTML=partes[k];}   // solo lo que cambió (los botones no se reemplazan bajo el cursor)
 }
@@ -1240,14 +1361,17 @@ function sigAviso(){if(sonandoAv||!colaAv.length)return;sonandoAv=true;const el=
 // ====================================================== datos del panel
 async function cargarEstado(){
   if(S.pidiendo&&Date.now()-S.pidiendo<90000)return;                  // no apilar peticiones si el panel va lento
+  if(REMOTO&&document.hidden&&S.D)return;                               // celular con la pestaña de fondo: nada
   S.pidiendo=Date.now();
   try{
-    const D=await pedir("/api/v2/estado");S.D=D;S.ultimo=Date.now()-(D.edad||0)*1000;S.errEstado=null;encolarAvisos();
+    const R=await pedir("/api/v2/estado"+(S.D&&S.D.h?"?si="+S.D.h:""));
+    const D=R.igual&&S.D?Object.assign(S.D,{avisos:R.avisos,voz:R.voz,sistema:R.sistema,edad:R.edad}):R;S.D=D;S.ultimo=Date.now()-(D.edad||0)*1000;S.errEstado=null;encolarAvisos();
     for(const p of D.proyectos)if(p.nombre in S.ocultoLocal){if(p.oculto===S.ocultoLocal[p.nombre])delete S.ocultoLocal[p.nombre];else p.oculto=S.ocultoLocal[p.nombre];}   // «ocultar» al instante aunque el estado llegue viejo
     const ps=filtrados(),ahora=new Set(ps.map(p=>p.nombre)),antes=new Set((S.orden||[]).filter(l=>l.id!=="__est").flatMap(l=>l.ns));
     if(!S.orden||ahora.size!==antes.size||[...ahora].some(n=>!antes.has(n)))construir();
     else{let cambio=false;for(const n of TABS.keys())if(pintarTab(n))cambio=true;if(cambio)maquetar();pintarLado();}
     pintarCurso();pintarAv();if(S.sel&&S.sel.tipo==="proy")pintarInspSiCambio();
+    avanceAbiertos(D);
   }catch(e){S.errEstado=String(e.message||e);}
   S.pidiendo=0;pintarSis();
 }
@@ -1263,6 +1387,7 @@ document.addEventListener("click",e=>{
   const t=e.target;
   if(!t.closest(".pop,[data-pop]"))cerrarPops();
   if(t.closest("video,audio"))return;                                   // los controles del reproductor, tal cual
+  const ot=t.closest("[data-oir-todo]");if(ot){oirTodo(ot.dataset.oirTodo);return;}
   const pl=t.closest("[data-plegar]");if(pl){plegar(pl.dataset.plegar);return;}
   const pp=t.closest("[data-play-pista]")||t.closest(".fr[data-pista]");if(pp){const el=pp.closest("[data-pista]");tocarPista(el.dataset.pista,el.dataset.titulo);return;}
   const pv=t.closest("[data-play-video]");if(pv){const c=pv.closest("[data-pantalla]"),[v,r]=c.dataset.pantalla.split("|");reproducirEn(c,uArch(v,r));return;}
@@ -1271,23 +1396,28 @@ document.addEventListener("click",e=>{
   const ms=t.closest("[data-mas]");if(ms){const k=ms.dataset.mas,[v]=k.split("|");S.mas[k]=(S.mas[k]||16)+48;const R=S.rec[v];if(R){R.ver=(R.ver||0)+1;if(pintarTab(v))maquetar();}return;}
   if(t.closest("[data-pop]"))return;                                    // se abren al presionar (ver abajo)
   const pr=t.closest("[data-proc]");if(pr&&!t.closest("[data-ir]")){S.procAbiertos=S.procAbiertos||new Set();const id=+pr.dataset.proc;S.procAbiertos.has(id)?S.procAbiertos.delete(id):S.procAbiertos.add(id);pintarProcs();return;}
-  const ir=t.closest("[data-ir]");if(ir){cerrarPops();const n=ir.dataset.ir;if(!TABS.has(n)){S.filtro="todos";S.fCanal="";S.fEstilo="";guardarFiltros();construir();}irA(n);return;}
+  if(t.id==="velo"){accion("lado");return;}
+  const ir=t.closest("[data-ir]");if(ir){cerrarPops();if(window.innerWidth<=900&&ir.closest("#lado")&&!document.body.classList.contains("sin-lado"))accion("lado");const n=ir.dataset.ir;if(!TABS.has(n)){S.filtro="todos";S.fCanal="";S.fEstilo="";guardarFiltros();construir();}irA(n);return;}
   const f=t.closest("[data-f]");if(f){S.filtro=f.dataset.f;guardarFiltros();construir(true);return;}
   const vz=t.closest("[data-voz]");if(vz){(vz.dataset.voz==="toggle"?postJSON("/api/voz",{activo:!(S.D.voz&&S.D.voz.activo)}):postJSON("/api/probar")).then(()=>setTimeout(cargarEstado,500));return;}
   const cp=t.closest("[data-copiar]");if(cp){navigator.clipboard&&navigator.clipboard.writeText(cp.dataset.copiar);const o=cp.textContent;cp.textContent="✓ copiado";setTimeout(()=>cp.textContent=o,1200);return;}
-  const ar=t.closest("[data-arch]");if(ar){const i=ar.dataset.arch.indexOf("|");seleccionar({tipo:"arch",v:ar.dataset.arch.slice(0,i),r:ar.dataset.arch.slice(i+1)});return;}
+  const ar=t.closest("[data-arch]");if(ar){const i=ar.dataset.arch.indexOf("|");trasToque(()=>seleccionar({tipo:"arch",v:ar.dataset.arch.slice(0,i),r:ar.dataset.arch.slice(i+1)}));return;}
   const pe=t.closest(".portada[data-est]");if(pe){accion("estilo",null,pe);return;}
-  const px=t.closest("[data-proy]");if(px){seleccionar({tipo:"proy",v:px.dataset.proy});return;}
+  const px=t.closest("[data-proy]");if(px){trasToque(()=>seleccionar({tipo:"proy",v:px.dataset.proy}));return;}
   const ec=t.closest(".etq-carril");if(ec){const l=(S.orden||[]).find(l=>l.id===ec.dataset.carril);if(l){const cs=S.cajas.filter(c=>l.ns.includes(c.n));if(cs.length){const x0=Math.min(...cs.map(c=>c.x)),y0=Math.min(...cs.map(c=>c.y));encuadrar({x:x0,y:y0,w:Math.max(...cs.map(c=>c.x+c.w))-x0,h:Math.max(...cs.map(c=>c.y+c.h))-y0},40,1);}}return;}
 });
-document.addEventListener("dblclick",e=>{
-  if(e.target.closest("button"))return;                                // dos clics en un botón ya hicieron su efecto
-  const ar=e.target.closest("[data-arch]");if(ar){const i=ar.dataset.arch.indexOf("|");abrirCaja(ar.dataset.arch.slice(0,i),ar.dataset.arch.slice(i+1));return;}
-  const px=e.target.closest(".tab-cab[data-proy],.portada[data-proy]");if(px){alternarTablero(px.dataset.proy);}
-});
+// con el dedo, el toque sencillo espera por si llega el segundo (la hoja del detalle taparía lo que se toca dos veces)
+function trasToque(f){if(!TACTIL)return f();clearTimeout(S.tToque);S.tToque=setTimeout(f,340);}
+document.addEventListener("dblclick",e=>{if(!(S.dblTactil&&performance.now()-S.dblTactil<700))dobleClic(e.target);});
+function dobleClic(t){
+  if(!t.closest||t.closest("button"))return;                           // dos clics en un botón ya hicieron su efecto
+  const ar=t.closest("[data-arch]");if(ar){const i=ar.dataset.arch.indexOf("|");abrirCaja(ar.dataset.arch.slice(0,i),ar.dataset.arch.slice(i+1));return;}
+  const px=t.closest(".tab-cab[data-proy],.portada[data-proy]");if(px){alternarTablero(px.dataset.proy);}
+}
 function accion(acc,v,el){
   switch(acc){
     case "abrir":alternarTablero(v);break;
+    case "oir-todo":oirTodo(v);break;
     case "master":{
       const p=porNombre(v);if(!p||!p.master)break;const r="salida/"+p.master,tab=TABS.get(v);
       const pant=tab&&$(`[data-pantalla="${CSS.escape(v+"|"+r)}"]`,tab);
@@ -1362,6 +1492,8 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden){cargarSis
 // ====================================================== arranque
 (async function(){
   if(LS.get("v2ayuda",0))$("#ayuda").remove();
+  else if(TACTIL)$("#ayuda span").innerHTML="<b>Un dedo</b> mueve · <b>pellizca</b> para acercar · <b>toca 2 veces</b> un tablero para abrirlo · ☰ lista de videos";
+  $$('a[href="/"]').forEach(a=>a.setAttribute("href",CLASICO));
   pintarRueda();$("#bt-est").classList.toggle("on",S.verEst);
   aplicarVista();cargarSis();
   await Promise.all([cargarEstado(),cargarPortadas()]);
@@ -1370,7 +1502,8 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden){cargarSis
   const h=new URLSearchParams(location.hash.slice(1)).get("v");
   if(h&&porNombre(h)){if(!TABS.has(h)){S.filtro=porNombre(h).oculto?"ocultos":"todos";S.fCanal=S.fEstilo="";construir(true);}alternarTablero(h,true);}
   else if(PRIMERA_VEZ)encuadrarTodo();
-  setInterval(cargarEstado,3000);setInterval(cargarSis,2000);setInterval(cargarPortadas,30000);setInterval(refrescarAbiertos,8000);
+  setInterval(cargarEstado,REMOTO?8000:3000);setInterval(cargarSis,REMOTO?8000:2000);   // por el túnel, más espaciado (datos del celular y peticiones de ngrok gratis)
+  setInterval(cargarPortadas,30000);setInterval(refrescarAbiertos,REMOTO?20000:8000);   // (21-oct: estaban tras el comentario y nunca corrían: había que pulsar F5)
 })();
 </script>
 <script src="/uso.js"></script>

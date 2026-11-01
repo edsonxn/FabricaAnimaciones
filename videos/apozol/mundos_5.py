@@ -122,10 +122,10 @@ def lerp_(a, b, u):
 def archivo(lz, iso, t, legajos=1.0):
     """Sala del archivo: dos paredes con estantes llenos de legajos, mesa con vela, baúl, ventana con luz y cuadros."""
     c = I.habitacion(lz, iso, 0, 0, 300, 230, 130, piso=(150, 108, 84), pared_a=(240, 224, 190), pared_b=(226, 206, 168), friso=(140, 98, 74))
-    I.cara_rect(lz, iso, c, "y", 150, 200, 40, 100, (150, 200, 240))                     # ventana
-    I.cara_rect(lz, iso, c, "y", 146, 154, 36, 104, (120, 84, 62))
-    I.cara_rect(lz, iso, c, "y", 196, 204, 36, 104, (120, 84, 62))
-    I.cara_rect(lz, iso, c, "y", 146, 204, 66, 72, (120, 84, 62))
+    II.ventana_vista(lz, iso, c, "yi", 150, 214, 38, 108, t=t)                              # ventanal con luz de la tarde
+    II.mapa_pared(lz, iso, c, "xi", 90, 62, w=64, h=46, t=t)                                # mapa de las tierras del pueblo
+    lz.relleno(iso.pts([(150, 0, 104), (214, 0, 104), (270, 120, 0), (200, 120, 0)]), (255, 230, 160), alfa=0.16)   # haz de luz de la ventana
+    B.alfombra(lz, iso, 80, 90, 160, 100, color=(170, 56, 66), borde=(240, 200, 120))
     B.estante(lz, iso, 14, 14, 110, 14, 108)
     B.estante(lz, iso, 14, 40, 14, 130, 108)
     B.mesa(lz, iso, 150, 120, 90, 46, 28, color=(140, 96, 66))
@@ -133,6 +133,8 @@ def archivo(lz, iso, t, legajos=1.0):
     B.vela(lz, iso, 214, 130, 28, t=t, seed=2)
     B.silla(lz, iso, 118, 128, h=20, color=(120, 80, 60), dir="y")
     II.baul(lz, iso, 50, 186, w=40, d=24, h=24, color=(120, 84, 60))
+    II.reloj_pie(lz, iso, 276, 28, t=t, s=1.0)
+    II.maceta(lz, iso, 24, 206, s=1.0, t=t)
     # legajos apilados en el suelo
     for i in range(5):
         k = float(np.clip(legajos * 6 - i, 0, 1))

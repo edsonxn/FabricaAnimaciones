@@ -1,0 +1,9600 @@
+{
+ "bpm": 480.0,
+ "beat": 0.125,
+ "unidad": 4,
+ "total": 789.0,
+ "titulo": "Cuestionario de 50 preguntas: entrevista de Consejos Distritales y Municipales IEEZ 2026-2027",
+ "estilo": "documental",
+ "escenas": [
+  {
+   "id": "intro",
+   "bloque": 0,
+   "pre": 0.6,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "50 preguntas",
+    "sub": "Entrevista IEEZ · Consejos Distritales y Municipales · contesta antes de que acabe el reloj"
+   },
+   "t0": 0.0,
+   "t1": 11.0,
+   "compases": 22,
+   "frases": [
+    {
+     "key": "intro_0",
+     "texto": "Cuestionario exprés: cincuenta preguntas para tu entrevista del Instituto Electoral.",
+     "t0": 0.746,
+     "t1": 5.73,
+     "words": [
+      {
+       "w": "Cuestionario",
+       "s": 0.746,
+       "e": 1.306
+      },
+      {
+       "w": "exprés:",
+       "s": 1.306,
+       "e": 1.846
+      },
+      {
+       "w": "cincuenta",
+       "s": 1.846,
+       "e": 2.506
+      },
+      {
+       "w": "preguntas",
+       "s": 2.506,
+       "e": 3.006
+      },
+      {
+       "w": "para",
+       "s": 3.006,
+       "e": 3.446
+      },
+      {
+       "w": "tu",
+       "s": 3.446,
+       "e": 3.586
+      },
+      {
+       "w": "entrevista",
+       "s": 3.586,
+       "e": 4.166
+      },
+      {
+       "w": "del",
+       "s": 4.166,
+       "e": 4.286
+      },
+      {
+       "w": "Instituto",
+       "s": 4.286,
+       "e": 4.866
+      },
+      {
+       "w": "Electoral.",
+       "s": 4.866,
+       "e": 5.286
+      }
+     ]
+    },
+    {
+     "key": "intro_1",
+     "texto": "Cuando suene el reloj, contesta en voz alta antes de ver la respuesta.",
+     "t0": 6.22,
+     "t1": 10.38,
+     "words": [
+      {
+       "w": "Cuando",
+       "s": 6.22,
+       "e": 6.38
+      },
+      {
+       "w": "suene",
+       "s": 6.38,
+       "e": 6.76
+      },
+      {
+       "w": "el",
+       "s": 6.76,
+       "e": 6.84
+      },
+      {
+       "w": "reloj,",
+       "s": 6.84,
+       "e": 7.32
+      },
+      {
+       "w": "contesta",
+       "s": 7.34,
+       "e": 8.04
+      },
+      {
+       "w": "en",
+       "s": 8.04,
+       "e": 8.14
+      },
+      {
+       "w": "voz",
+       "s": 8.14,
+       "e": 8.26
+      },
+      {
+       "w": "alta",
+       "s": 8.26,
+       "e": 8.58
+      },
+      {
+       "w": "antes",
+       "s": 8.58,
+       "e": 9.06
+      },
+      {
+       "w": "de",
+       "s": 9.06,
+       "e": 9.26
+      },
+      {
+       "w": "ver",
+       "s": 9.26,
+       "e": 9.44
+      },
+      {
+       "w": "la",
+       "s": 9.44,
+       "e": 9.56
+      },
+      {
+       "w": "respuesta.",
+       "s": 9.56,
+       "e": 9.9
+      }
+     ]
+    }
+   ],
+   "fin_voz": 10.38,
+   "beats": 88
+  },
+  {
+   "id": "tema1",
+   "bloque": 1,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "Principios e instituciones",
+    "sub": "Tema 1 de 7"
+   },
+   "t0": 11.0,
+   "t1": 15.0,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "tema1_0",
+     "texto": "Tema uno: principios e instituciones.",
+     "t0": 11.359,
+     "t1": 14.463,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 11.359,
+       "e": 11.579
+      },
+      {
+       "w": "uno:",
+       "s": 11.689,
+       "e": 11.799
+      },
+      {
+       "w": "principios",
+       "s": 12.699,
+       "e": 13.139
+      },
+      {
+       "w": "e",
+       "s": 13.139,
+       "e": 13.179
+      },
+      {
+       "w": "instituciones.",
+       "s": 13.179,
+       "e": 13.959
+      }
+     ]
+    }
+   ],
+   "fin_voz": 14.463,
+   "beats": 32
+  },
+  {
+   "id": "p1q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuáles son los principios rectores de la función electoral?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 1,
+    "de": 50
+   },
+   "t0": 15.0,
+   "t1": 24.0,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p1q_0",
+     "texto": "Uno. ¿Cuáles son los principios rectores de la función electoral?",
+     "t0": 15.414,
+     "t1": 19.334,
+     "words": [
+      {
+       "w": "Uno.",
+       "s": 15.414,
+       "e": 15.464
+      },
+      {
+       "w": "¿Cuáles",
+       "s": 15.414,
+       "e": 16.434
+      },
+      {
+       "w": "son",
+       "s": 16.434,
+       "e": 16.574
+      },
+      {
+       "w": "los",
+       "s": 16.574,
+       "e": 16.714
+      },
+      {
+       "w": "principios",
+       "s": 16.714,
+       "e": 17.314
+      },
+      {
+       "w": "rectores",
+       "s": 17.314,
+       "e": 17.874
+      },
+      {
+       "w": "de",
+       "s": 17.874,
+       "e": 18.034
+      },
+      {
+       "w": "la",
+       "s": 18.034,
+       "e": 18.094
+      },
+      {
+       "w": "función",
+       "s": 18.094,
+       "e": 18.334
+      },
+      {
+       "w": "electoral?",
+       "s": 18.334,
+       "e": 18.794
+      }
+     ]
+    }
+   ],
+   "fin_voz": 19.334,
+   "beats": 72
+  },
+  {
+   "id": "p1a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Certeza · legalidad · independencia · imparcialidad · máxima publicidad · objetividad",
+    "fuente": "CPEUM art. 41 · Const. Zacatecas art. 38"
+   },
+   "t0": 24.0,
+   "t1": 31.5,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p1a_0",
+     "texto": "Certeza, legalidad, independencia, imparcialidad, máxima publicidad y objetividad.",
+     "t0": 24.396,
+     "t1": 30.876,
+     "words": [
+      {
+       "w": "Certeza,",
+       "s": 24.396,
+       "e": 25.016
+      },
+      {
+       "w": "legalidad,",
+       "s": 25.056,
+       "e": 25.816
+      },
+      {
+       "w": "independencia,",
+       "s": 25.996,
+       "e": 27.056
+      },
+      {
+       "w": "imparcialidad,",
+       "s": 27.156,
+       "e": 28.076
+      },
+      {
+       "w": "máxima",
+       "s": 28.256,
+       "e": 29.096
+      },
+      {
+       "w": "publicidad",
+       "s": 29.096,
+       "e": 29.676
+      },
+      {
+       "w": "y",
+       "s": 29.676,
+       "e": 29.936
+      },
+      {
+       "w": "objetividad.",
+       "s": 29.936,
+       "e": 30.456
+      }
+     ]
+    }
+   ],
+   "fin_voz": 30.876,
+   "beats": 60
+  },
+  {
+   "id": "p2q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué es el Instituto Electoral del Estado de Zacatecas?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 2,
+    "de": 50
+   },
+   "t0": 31.5,
+   "t1": 40.5,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p2q_0",
+     "texto": "Dos. ¿Qué es el Instituto Electoral del Estado de Zacatecas?",
+     "t0": 31.89,
+     "t1": 35.89,
+     "words": [
+      {
+       "w": "Dos.",
+       "s": 32.02,
+       "e": 32.15
+      },
+      {
+       "w": "¿Qué",
+       "s": 32.35,
+       "e": 32.87
+      },
+      {
+       "w": "es",
+       "s": 32.87,
+       "e": 33.01
+      },
+      {
+       "w": "el",
+       "s": 33.01,
+       "e": 33.15
+      },
+      {
+       "w": "Instituto",
+       "s": 33.15,
+       "e": 33.73
+      },
+      {
+       "w": "Electoral",
+       "s": 33.73,
+       "e": 34.19
+      },
+      {
+       "w": "del",
+       "s": 34.19,
+       "e": 34.41
+      },
+      {
+       "w": "Estado",
+       "s": 34.41,
+       "e": 34.71
+      },
+      {
+       "w": "de",
+       "s": 34.71,
+       "e": 34.97
+      },
+      {
+       "w": "Zacatecas?",
+       "s": 34.97,
+       "e": 35.55
+      }
+     ]
+    }
+   ],
+   "fin_voz": 35.89,
+   "beats": 72
+  },
+  {
+   "id": "p2a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El organismo público local electoral: permanente, con personalidad jurídica y patrimonio propios",
+    "fuente": "Ley Orgánica IEEZ art. 4"
+   },
+   "t0": 40.5,
+   "t1": 49.5,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p2a_0",
+     "texto": "Es el organismo público local electoral, permanente, con personalidad jurídica y patrimonio propios, autónomo e independiente.",
+     "t0": 40.822,
+     "t1": 49.049,
+     "words": [
+      {
+       "w": "Es",
+       "s": 40.822,
+       "e": 40.902
+      },
+      {
+       "w": "el",
+       "s": 40.902,
+       "e": 41.042
+      },
+      {
+       "w": "organismo",
+       "s": 41.042,
+       "e": 41.522
+      },
+      {
+       "w": "público",
+       "s": 41.522,
+       "e": 41.842
+      },
+      {
+       "w": "local",
+       "s": 41.842,
+       "e": 42.322
+      },
+      {
+       "w": "electoral,",
+       "s": 42.322,
+       "e": 42.702
+      },
+      {
+       "w": "permanente,",
+       "s": 43.122,
+       "e": 44.062
+      },
+      {
+       "w": "con",
+       "s": 44.062,
+       "e": 44.362
+      },
+      {
+       "w": "personalidad",
+       "s": 44.362,
+       "e": 45.022
+      },
+      {
+       "w": "jurídica",
+       "s": 45.022,
+       "e": 45.602
+      },
+      {
+       "w": "y",
+       "s": 45.602,
+       "e": 45.722
+      },
+      {
+       "w": "patrimonio",
+       "s": 45.722,
+       "e": 46.302
+      },
+      {
+       "w": "propios,",
+       "s": 46.302,
+       "e": 46.842
+      },
+      {
+       "w": "autónomo",
+       "s": 46.842,
+       "e": 47.722
+      },
+      {
+       "w": "e",
+       "s": 47.722,
+       "e": 47.922
+      },
+      {
+       "w": "independiente.",
+       "s": 47.922,
+       "e": 48.742
+      }
+     ]
+    }
+   ],
+   "fin_voz": 49.049,
+   "beats": 72
+  },
+  {
+   "id": "p3q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿A quiénes corresponde organizar las elecciones?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 3,
+    "de": 50
+   },
+   "t0": 49.5,
+   "t1": 58.0,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p3q_0",
+     "texto": "Tres. ¿A quiénes corresponde organizar las elecciones?",
+     "t0": 49.843,
+     "t1": 53.499,
+     "words": [
+      {
+       "w": "Tres.",
+       "s": 49.913,
+       "e": 49.983
+      },
+      {
+       "w": "¿A",
+       "s": 50.283,
+       "e": 50.763
+      },
+      {
+       "w": "quiénes",
+       "s": 50.763,
+       "e": 51.143
+      },
+      {
+       "w": "corresponde",
+       "s": 51.143,
+       "e": 51.843
+      },
+      {
+       "w": "organizar",
+       "s": 51.843,
+       "e": 52.423
+      },
+      {
+       "w": "las",
+       "s": 52.423,
+       "e": 52.543
+      },
+      {
+       "w": "elecciones?",
+       "s": 52.543,
+       "e": 53.083
+      }
+     ]
+    }
+   ],
+   "fin_voz": 53.499,
+   "beats": 68
+  },
+  {
+   "id": "p3a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Al INE y a los organismos públicos locales",
+    "fuente": "CPEUM art. 41, base V"
+   },
+   "t0": 58.0,
+   "t1": 63.5,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p3a_0",
+     "texto": "Es una función del Estado que realizan el INE y los organismos públicos locales.",
+     "t0": 58.324,
+     "t1": 63.044,
+     "words": [
+      {
+       "w": "Es",
+       "s": 58.324,
+       "e": 58.404
+      },
+      {
+       "w": "una",
+       "s": 58.404,
+       "e": 58.564
+      },
+      {
+       "w": "función",
+       "s": 58.564,
+       "e": 58.904
+      },
+      {
+       "w": "del",
+       "s": 58.904,
+       "e": 59.144
+      },
+      {
+       "w": "Estado",
+       "s": 59.144,
+       "e": 59.444
+      },
+      {
+       "w": "que",
+       "s": 59.444,
+       "e": 59.784
+      },
+      {
+       "w": "realizan",
+       "s": 59.784,
+       "e": 60.264
+      },
+      {
+       "w": "el",
+       "s": 60.264,
+       "e": 60.384
+      },
+      {
+       "w": "INE",
+       "s": 60.384,
+       "e": 60.744
+      },
+      {
+       "w": "y",
+       "s": 60.744,
+       "e": 60.884
+      },
+      {
+       "w": "los",
+       "s": 60.884,
+       "e": 61.044
+      },
+      {
+       "w": "organismos",
+       "s": 61.044,
+       "e": 61.704
+      },
+      {
+       "w": "públicos",
+       "s": 61.704,
+       "e": 62.224
+      },
+      {
+       "w": "locales.",
+       "s": 62.224,
+       "e": 62.764
+      }
+     ]
+    }
+   ],
+   "fin_voz": 63.044,
+   "beats": 44
+  },
+  {
+   "id": "p4q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cómo se integra el Consejo General del IEEZ?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 4,
+    "de": 50
+   },
+   "t0": 63.5,
+   "t1": 73.5,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p4q_0",
+     "texto": "Cuatro. ¿Cómo se integra el Consejo General del Instituto Electoral de Zacatecas?",
+     "t0": 63.932,
+     "t1": 68.793,
+     "words": [
+      {
+       "w": "Cuatro.",
+       "s": 64.032,
+       "e": 64.132
+      },
+      {
+       "w": "¿Cómo",
+       "s": 64.352,
+       "e": 64.932
+      },
+      {
+       "w": "se",
+       "s": 64.932,
+       "e": 65.052
+      },
+      {
+       "w": "integra",
+       "s": 65.052,
+       "e": 65.532
+      },
+      {
+       "w": "el",
+       "s": 65.532,
+       "e": 65.592
+      },
+      {
+       "w": "Consejo",
+       "s": 65.592,
+       "e": 66.052
+      },
+      {
+       "w": "General",
+       "s": 66.052,
+       "e": 66.332
+      },
+      {
+       "w": "del",
+       "s": 66.332,
+       "e": 66.632
+      },
+      {
+       "w": "Instituto",
+       "s": 66.632,
+       "e": 67.172
+      },
+      {
+       "w": "Electoral",
+       "s": 67.172,
+       "e": 67.652
+      },
+      {
+       "w": "de",
+       "s": 67.652,
+       "e": 67.812
+      },
+      {
+       "w": "Zacatecas?",
+       "s": 67.812,
+       "e": 68.392
+      }
+     ]
+    }
+   ],
+   "fin_voz": 68.793,
+   "beats": 80
+  },
+  {
+   "id": "p4a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "1 consejero presidente + 6 consejeros electorales",
+    "fuente": "Const. Zacatecas art. 38-III"
+   },
+   "t0": 73.5,
+   "t1": 79.5,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "p4a_0",
+     "texto": "Un consejero presidente y seis consejeros electorales, con voz y voto.",
+     "t0": 73.926,
+     "t1": 78.806,
+     "words": [
+      {
+       "w": "Un",
+       "s": 73.926,
+       "e": 74.006
+      },
+      {
+       "w": "consejero",
+       "s": 74.006,
+       "e": 74.506
+      },
+      {
+       "w": "presidente",
+       "s": 74.506,
+       "e": 74.786
+      },
+      {
+       "w": "y",
+       "s": 74.786,
+       "e": 75.406
+      },
+      {
+       "w": "seis",
+       "s": 75.406,
+       "e": 75.546
+      },
+      {
+       "w": "consejeros",
+       "s": 75.546,
+       "e": 76.386
+      },
+      {
+       "w": "electorales,",
+       "s": 76.386,
+       "e": 77.066
+      },
+      {
+       "w": "con",
+       "s": 77.126,
+       "e": 77.446
+      },
+      {
+       "w": "voz",
+       "s": 77.446,
+       "e": 77.766
+      },
+      {
+       "w": "y",
+       "s": 77.766,
+       "e": 78.026
+      },
+      {
+       "w": "voto.",
+       "s": 78.026,
+       "e": 78.586
+      }
+     ]
+    }
+   ],
+   "fin_voz": 78.806,
+   "beats": 48
+  },
+  {
+   "id": "p5q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuánto duran y quién designa a los consejeros del Consejo General del IEEZ?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 5,
+    "de": 50
+   },
+   "t0": 79.5,
+   "t1": 90.0,
+   "compases": 21,
+   "frases": [
+    {
+     "key": "p5q_0",
+     "texto": "Cinco. ¿Cuánto duran y quién designa a los consejeros del Consejo General del Instituto?",
+     "t0": 79.836,
+     "t1": 85.516,
+     "words": [
+      {
+       "w": "Cinco.",
+       "s": 79.996,
+       "e": 80.156
+      },
+      {
+       "w": "¿Cuánto",
+       "s": 80.556,
+       "e": 81.156
+      },
+      {
+       "w": "duran",
+       "s": 81.156,
+       "e": 81.516
+      },
+      {
+       "w": "y",
+       "s": 81.516,
+       "e": 81.716
+      },
+      {
+       "w": "quién",
+       "s": 81.716,
+       "e": 82.036
+      },
+      {
+       "w": "designa",
+       "s": 82.036,
+       "e": 82.616
+      },
+      {
+       "w": "a",
+       "s": 82.616,
+       "e": 82.676
+      },
+      {
+       "w": "los",
+       "s": 82.676,
+       "e": 82.796
+      },
+      {
+       "w": "consejeros",
+       "s": 82.796,
+       "e": 83.456
+      },
+      {
+       "w": "del",
+       "s": 83.456,
+       "e": 83.556
+      },
+      {
+       "w": "Consejo",
+       "s": 83.556,
+       "e": 84.076
+      },
+      {
+       "w": "General",
+       "s": 84.076,
+       "e": 84.356
+      },
+      {
+       "w": "del",
+       "s": 84.356,
+       "e": 84.636
+      },
+      {
+       "w": "Instituto?",
+       "s": 84.636,
+       "e": 85.256
+      }
+     ]
+    }
+   ],
+   "fin_voz": 85.516,
+   "beats": 84
+  },
+  {
+   "id": "p5a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "7 años, sin reelección · los designa el Consejo General del INE",
+    "fuente": "Const. Zacatecas art. 38-III y IV"
+   },
+   "t0": 90.0,
+   "t1": 96.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "p5a_0",
+     "texto": "Siete años, sin reelección, y los designa el Consejo General del INE.",
+     "t0": 90.402,
+     "t1": 95.362,
+     "words": [
+      {
+       "w": "Siete",
+       "s": 90.402,
+       "e": 90.702
+      },
+      {
+       "w": "años,",
+       "s": 90.702,
+       "e": 91.022
+      },
+      {
+       "w": "sin",
+       "s": 91.222,
+       "e": 91.642
+      },
+      {
+       "w": "reelección,",
+       "s": 91.642,
+       "e": 92.442
+      },
+      {
+       "w": "y",
+       "s": 92.462,
+       "e": 92.862
+      },
+      {
+       "w": "los",
+       "s": 92.862,
+       "e": 93.002
+      },
+      {
+       "w": "designa",
+       "s": 93.002,
+       "e": 93.562
+      },
+      {
+       "w": "el",
+       "s": 93.562,
+       "e": 93.722
+      },
+      {
+       "w": "Consejo",
+       "s": 93.722,
+       "e": 94.282
+      },
+      {
+       "w": "General",
+       "s": 94.282,
+       "e": 94.562
+      },
+      {
+       "w": "del",
+       "s": 94.562,
+       "e": 94.842
+      },
+      {
+       "w": "INE.",
+       "s": 94.842,
+       "e": 95.142
+      }
+     ]
+    }
+   ],
+   "fin_voz": 95.362,
+   "beats": 48
+  },
+  {
+   "id": "p6q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuáles son los órganos electorales del IEEZ?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 6,
+    "de": 50
+   },
+   "t0": 96.0,
+   "t1": 104.5,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p6q_0",
+     "texto": "Seis. ¿Cuáles son los órganos electorales del Instituto?",
+     "t0": 96.336,
+     "t1": 100.016,
+     "words": [
+      {
+       "w": "Seis.",
+       "s": 96.486,
+       "e": 96.636
+      },
+      {
+       "w": "¿Cuáles",
+       "s": 97.036,
+       "e": 97.556
+      },
+      {
+       "w": "son",
+       "s": 97.556,
+       "e": 97.716
+      },
+      {
+       "w": "los",
+       "s": 97.716,
+       "e": 97.856
+      },
+      {
+       "w": "órganos",
+       "s": 97.856,
+       "e": 98.336
+      },
+      {
+       "w": "electorales",
+       "s": 98.336,
+       "e": 98.936
+      },
+      {
+       "w": "del",
+       "s": 98.936,
+       "e": 99.096
+      },
+      {
+       "w": "Instituto?",
+       "s": 99.096,
+       "e": 99.736
+      }
+     ]
+    }
+   ],
+   "fin_voz": 100.016,
+   "beats": 68
+  },
+  {
+   "id": "p6a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Consejos distritales · consejos municipales · mesas directivas de casilla",
+    "fuente": "Ley Orgánica IEEZ art. 10"
+   },
+   "t0": 104.5,
+   "t1": 111.0,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "p6a_0",
+     "texto": "Los consejos distritales, los consejos municipales y las mesas directivas de casilla.",
+     "t0": 104.932,
+     "t1": 110.292,
+     "words": [
+      {
+       "w": "Los",
+       "s": 104.932,
+       "e": 105.032
+      },
+      {
+       "w": "consejos",
+       "s": 105.032,
+       "e": 105.492
+      },
+      {
+       "w": "distritales,",
+       "s": 105.492,
+       "e": 106.392
+      },
+      {
+       "w": "los",
+       "s": 106.392,
+       "e": 106.672
+      },
+      {
+       "w": "consejos",
+       "s": 106.672,
+       "e": 107.172
+      },
+      {
+       "w": "municipales",
+       "s": 107.172,
+       "e": 107.912
+      },
+      {
+       "w": "y",
+       "s": 107.912,
+       "e": 108.212
+      },
+      {
+       "w": "las",
+       "s": 108.212,
+       "e": 108.392
+      },
+      {
+       "w": "mesas",
+       "s": 108.392,
+       "e": 108.872
+      },
+      {
+       "w": "directivas",
+       "s": 108.872,
+       "e": 109.432
+      },
+      {
+       "w": "de",
+       "s": 109.432,
+       "e": 109.572
+      },
+      {
+       "w": "casilla.",
+       "s": 109.572,
+       "e": 109.992
+      }
+     ]
+    }
+   ],
+   "fin_voz": 110.292,
+   "beats": 52
+  },
+  {
+   "id": "p7q",
+   "bloque": 1,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo funcionan esos órganos electorales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 7,
+    "de": 50
+   },
+   "t0": 111.0,
+   "t1": 119.5,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p7q_0",
+     "texto": "Siete. ¿Cuándo funcionan esos órganos electorales?",
+     "t0": 111.366,
+     "t1": 114.947,
+     "words": [
+      {
+       "w": "Siete.",
+       "s": 111.506,
+       "e": 111.646
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 111.786,
+       "e": 112.586
+      },
+      {
+       "w": "funcionan",
+       "s": 112.586,
+       "e": 113.166
+      },
+      {
+       "w": "esos",
+       "s": 113.166,
+       "e": 113.366
+      },
+      {
+       "w": "órganos",
+       "s": 113.366,
+       "e": 113.946
+      },
+      {
+       "w": "electorales?",
+       "s": 113.946,
+       "e": 114.546
+      }
+     ]
+    }
+   ],
+   "fin_voz": 114.947,
+   "beats": 68
+  },
+  {
+   "id": "p7a",
+   "bloque": 1,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Solo durante el proceso electoral",
+    "fuente": "Ley Orgánica IEEZ art. 11"
+   },
+   "t0": 119.5,
+   "t1": 123.0,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "p7a_0",
+     "texto": "Únicamente durante el proceso electoral.",
+     "t0": 119.92,
+     "t1": 122.32,
+     "words": [
+      {
+       "w": "Únicamente",
+       "s": 119.92,
+       "e": 120.5
+      },
+      {
+       "w": "durante",
+       "s": 120.5,
+       "e": 120.84
+      },
+      {
+       "w": "el",
+       "s": 120.84,
+       "e": 121.1
+      },
+      {
+       "w": "proceso",
+       "s": 121.1,
+       "e": 121.4
+      },
+      {
+       "w": "electoral.",
+       "s": 121.4,
+       "e": 121.8
+      }
+     ]
+    }
+   ],
+   "fin_voz": 122.32,
+   "beats": 28
+  },
+  {
+   "id": "tema2",
+   "bloque": 2,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "Tu consejo",
+    "sub": "Tema 2 de 7"
+   },
+   "t0": 123.0,
+   "t1": 126.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "tema2_0",
+     "texto": "Tema dos: tu consejo.",
+     "t0": 123.394,
+     "t1": 125.381,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 123.394,
+       "e": 123.614
+      },
+      {
+       "w": "dos:",
+       "s": 123.704,
+       "e": 123.794
+      },
+      {
+       "w": "tu",
+       "s": 124.074,
+       "e": 124.514
+      },
+      {
+       "w": "consejo.",
+       "s": 124.514,
+       "e": 125.114
+      }
+     ]
+    }
+   ],
+   "fin_voz": 125.381,
+   "beats": 24
+  },
+  {
+   "id": "p8q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cómo se integra un consejo distrital o municipal?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 8,
+    "de": 50
+   },
+   "t0": 126.0,
+   "t1": 135.0,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p8q_0",
+     "texto": "Ocho. ¿Cómo se integra un consejo distrital o municipal?",
+     "t0": 126.392,
+     "t1": 130.384,
+     "words": [
+      {
+       "w": "Ocho.",
+       "s": 126.482,
+       "e": 126.572
+      },
+      {
+       "w": "¿Cómo",
+       "s": 126.872,
+       "e": 127.352
+      },
+      {
+       "w": "se",
+       "s": 127.352,
+       "e": 127.452
+      },
+      {
+       "w": "integra",
+       "s": 127.452,
+       "e": 127.992
+      },
+      {
+       "w": "un",
+       "s": 127.992,
+       "e": 128.072
+      },
+      {
+       "w": "consejo",
+       "s": 128.072,
+       "e": 128.572
+      },
+      {
+       "w": "distrital",
+       "s": 128.572,
+       "e": 129.192
+      },
+      {
+       "w": "o",
+       "s": 129.192,
+       "e": 129.432
+      },
+      {
+       "w": "municipal?",
+       "s": 129.432,
+       "e": 129.792
+      }
+     ]
+    }
+   ],
+   "fin_voz": 130.384,
+   "beats": 72
+  },
+  {
+   "id": "p8a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Presidente · secretario ejecutivo · 4 consejeros electorales con suplentes",
+    "fuente": "Ley Orgánica IEEZ art. 61"
+   },
+   "t0": 135.0,
+   "t1": 142.0,
+   "compases": 14,
+   "frases": [
+    {
+     "key": "p8a_0",
+     "texto": "Un consejero presidente, un secretario ejecutivo y cuatro consejeros electorales con sus suplentes.",
+     "t0": 135.39,
+     "t1": 141.39,
+     "words": [
+      {
+       "w": "Un",
+       "s": 135.39,
+       "e": 135.47
+      },
+      {
+       "w": "consejero",
+       "s": 135.47,
+       "e": 135.95
+      },
+      {
+       "w": "presidente,",
+       "s": 135.95,
+       "e": 136.23
+      },
+      {
+       "w": "un",
+       "s": 136.69,
+       "e": 137.05
+      },
+      {
+       "w": "secretario",
+       "s": 137.05,
+       "e": 137.59
+      },
+      {
+       "w": "ejecutivo",
+       "s": 137.59,
+       "e": 138.19
+      },
+      {
+       "w": "y",
+       "s": 138.19,
+       "e": 138.47
+      },
+      {
+       "w": "cuatro",
+       "s": 138.47,
+       "e": 138.77
+      },
+      {
+       "w": "consejeros",
+       "s": 138.77,
+       "e": 139.53
+      },
+      {
+       "w": "electorales",
+       "s": 139.53,
+       "e": 140.13
+      },
+      {
+       "w": "con",
+       "s": 140.13,
+       "e": 140.33
+      },
+      {
+       "w": "sus",
+       "s": 140.33,
+       "e": 140.51
+      },
+      {
+       "w": "suplentes.",
+       "s": 140.51,
+       "e": 140.99
+      }
+     ]
+    }
+   ],
+   "fin_voz": 141.39,
+   "beats": 56
+  },
+  {
+   "id": "p9q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Quién designa a sus integrantes y con qué votación?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 9,
+    "de": 50
+   },
+   "t0": 142.0,
+   "t1": 151.0,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p9q_0",
+     "texto": "Nueve. ¿Quién designa a sus integrantes, y con qué votación?",
+     "t0": 142.342,
+     "t1": 146.502,
+     "words": [
+      {
+       "w": "Nueve.",
+       "s": 142.502,
+       "e": 142.662
+      },
+      {
+       "w": "¿Quién",
+       "s": 142.862,
+       "e": 143.442
+      },
+      {
+       "w": "designa",
+       "s": 143.442,
+       "e": 143.922
+      },
+      {
+       "w": "a",
+       "s": 143.922,
+       "e": 143.982
+      },
+      {
+       "w": "sus",
+       "s": 143.982,
+       "e": 144.102
+      },
+      {
+       "w": "integrantes,",
+       "s": 144.102,
+       "e": 144.822
+      },
+      {
+       "w": "y",
+       "s": 144.822,
+       "e": 145.202
+      },
+      {
+       "w": "con",
+       "s": 145.202,
+       "e": 145.402
+      },
+      {
+       "w": "qué",
+       "s": 145.402,
+       "e": 145.662
+      },
+      {
+       "w": "votación?",
+       "s": 145.662,
+       "e": 146.202
+      }
+     ]
+    }
+   ],
+   "fin_voz": 146.502,
+   "beats": 72
+  },
+  {
+   "id": "p9a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El Consejo General del IEEZ, por 2/3",
+    "fuente": "Ley Orgánica IEEZ art. 61"
+   },
+   "t0": 151.0,
+   "t1": 156.5,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p9a_0",
+     "texto": "El Consejo General del Instituto, por el voto de las dos terceras partes.",
+     "t0": 151.372,
+     "t1": 155.932,
+     "words": [
+      {
+       "w": "El",
+       "s": 151.372,
+       "e": 151.452
+      },
+      {
+       "w": "Consejo",
+       "s": 151.452,
+       "e": 151.932
+      },
+      {
+       "w": "General",
+       "s": 151.932,
+       "e": 152.232
+      },
+      {
+       "w": "del",
+       "s": 152.232,
+       "e": 152.492
+      },
+      {
+       "w": "Instituto,",
+       "s": 152.492,
+       "e": 153.212
+      },
+      {
+       "w": "por",
+       "s": 153.212,
+       "e": 153.612
+      },
+      {
+       "w": "el",
+       "s": 153.612,
+       "e": 153.772
+      },
+      {
+       "w": "voto",
+       "s": 153.772,
+       "e": 154.152
+      },
+      {
+       "w": "de",
+       "s": 154.152,
+       "e": 154.192
+      },
+      {
+       "w": "las",
+       "s": 154.192,
+       "e": 154.352
+      },
+      {
+       "w": "dos",
+       "s": 154.352,
+       "e": 154.592
+      },
+      {
+       "w": "terceras",
+       "s": 154.592,
+       "e": 155.232
+      },
+      {
+       "w": "partes.",
+       "s": 155.232,
+       "e": 155.452
+      }
+     ]
+    }
+   ],
+   "fin_voz": 155.932,
+   "beats": 44
+  },
+  {
+   "id": "p10q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "En el consejo, ¿quiénes tienen solo voz?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 10,
+    "de": 50
+   },
+   "t0": 156.5,
+   "t1": 166.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p10q_0",
+     "texto": "Diez. En el consejo, ¿quiénes tienen solo voz, sin voto?",
+     "t0": 156.903,
+     "t1": 161.359,
+     "words": [
+      {
+       "w": "Diez.",
+       "s": 157.063,
+       "e": 157.223
+      },
+      {
+       "w": "En",
+       "s": 157.423,
+       "e": 157.923
+      },
+      {
+       "w": "el",
+       "s": 157.923,
+       "e": 158.023
+      },
+      {
+       "w": "consejo,",
+       "s": 158.023,
+       "e": 158.583
+      },
+      {
+       "w": "¿quiénes",
+       "s": 158.603,
+       "e": 159.223
+      },
+      {
+       "w": "tienen",
+       "s": 159.223,
+       "e": 159.403
+      },
+      {
+       "w": "solo",
+       "s": 159.403,
+       "e": 159.723
+      },
+      {
+       "w": "voz,",
+       "s": 159.723,
+       "e": 160.043
+      },
+      {
+       "w": "sin",
+       "s": 160.243,
+       "e": 160.683
+      },
+      {
+       "w": "voto?",
+       "s": 160.683,
+       "e": 161.103
+      }
+     ]
+    }
+   ],
+   "fin_voz": 161.359,
+   "beats": 76
+  },
+  {
+   "id": "p10a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El secretario y los representantes de partidos e independientes",
+    "fuente": "Ley Orgánica IEEZ art. 61"
+   },
+   "t0": 166.0,
+   "t1": 171.5,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p10a_0",
+     "texto": "El secretario y los representantes de partidos y candidaturas independientes.",
+     "t0": 166.372,
+     "t1": 170.932,
+     "words": [
+      {
+       "w": "El",
+       "s": 166.372,
+       "e": 166.472
+      },
+      {
+       "w": "secretario",
+       "s": 166.472,
+       "e": 167.152
+      },
+      {
+       "w": "y",
+       "s": 167.152,
+       "e": 167.292
+      },
+      {
+       "w": "los",
+       "s": 167.292,
+       "e": 167.452
+      },
+      {
+       "w": "representantes",
+       "s": 167.452,
+       "e": 168.252
+      },
+      {
+       "w": "de",
+       "s": 168.252,
+       "e": 168.332
+      },
+      {
+       "w": "partidos",
+       "s": 168.332,
+       "e": 168.932
+      },
+      {
+       "w": "y",
+       "s": 168.932,
+       "e": 169.052
+      },
+      {
+       "w": "candidaturas",
+       "s": 169.052,
+       "e": 169.752
+      },
+      {
+       "w": "independientes.",
+       "s": 169.752,
+       "e": 170.512
+      }
+     ]
+    }
+   ],
+   "fin_voz": 170.932,
+   "beats": 44
+  },
+  {
+   "id": "p11q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo se instalan los consejos distritales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 11,
+    "de": 50
+   },
+   "t0": 171.5,
+   "t1": 180.0,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p11q_0",
+     "texto": "Once. ¿Cuándo se instalan los consejos distritales?",
+     "t0": 171.884,
+     "t1": 175.404,
+     "words": [
+      {
+       "w": "Once.",
+       "s": 171.994,
+       "e": 172.104
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 172.304,
+       "e": 173.064
+      },
+      {
+       "w": "se",
+       "s": 173.064,
+       "e": 173.104
+      },
+      {
+       "w": "instalan",
+       "s": 173.104,
+       "e": 173.644
+      },
+      {
+       "w": "los",
+       "s": 173.644,
+       "e": 173.804
+      },
+      {
+       "w": "consejos",
+       "s": 173.804,
+       "e": 174.344
+      },
+      {
+       "w": "distritales?",
+       "s": 174.344,
+       "e": 175.124
+      }
+     ]
+    }
+   ],
+   "fin_voz": 175.404,
+   "beats": 68
+  },
+  {
+   "id": "p11a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "A más tardar en la 1.ª semana de enero del año de la elección",
+    "fuente": "Ley Orgánica IEEZ art. 64"
+   },
+   "t0": 180.0,
+   "t1": 185.0,
+   "compases": 10,
+   "frases": [
+    {
+     "key": "p11a_0",
+     "texto": "A más tardar en la primera semana de enero del año de la elección.",
+     "t0": 180.438,
+     "t1": 184.278,
+     "words": [
+      {
+       "w": "A",
+       "s": 180.438,
+       "e": 180.518
+      },
+      {
+       "w": "más",
+       "s": 180.518,
+       "e": 180.658
+      },
+      {
+       "w": "tardar",
+       "s": 180.658,
+       "e": 181.198
+      },
+      {
+       "w": "en",
+       "s": 181.198,
+       "e": 181.338
+      },
+      {
+       "w": "la",
+       "s": 181.338,
+       "e": 181.438
+      },
+      {
+       "w": "primera",
+       "s": 181.438,
+       "e": 181.758
+      },
+      {
+       "w": "semana",
+       "s": 181.758,
+       "e": 182.118
+      },
+      {
+       "w": "de",
+       "s": 182.118,
+       "e": 182.378
+      },
+      {
+       "w": "enero",
+       "s": 182.378,
+       "e": 182.798
+      },
+      {
+       "w": "del",
+       "s": 182.798,
+       "e": 182.958
+      },
+      {
+       "w": "año",
+       "s": 182.958,
+       "e": 183.198
+      },
+      {
+       "w": "de",
+       "s": 183.198,
+       "e": 183.358
+      },
+      {
+       "w": "la",
+       "s": 183.358,
+       "e": 183.438
+      },
+      {
+       "w": "elección.",
+       "s": 183.438,
+       "e": 183.878
+      }
+     ]
+    }
+   ],
+   "fin_voz": 184.278,
+   "beats": 40
+  },
+  {
+   "id": "p12q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo se instalan los consejos municipales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 12,
+    "de": 50
+   },
+   "t0": 185.0,
+   "t1": 193.5,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p12q_0",
+     "texto": "Doce. ¿Y cuándo se instalan los consejos municipales?",
+     "t0": 185.336,
+     "t1": 189.016,
+     "words": [
+      {
+       "w": "Doce.",
+       "s": 185.486,
+       "e": 185.636
+      },
+      {
+       "w": "¿Y",
+       "s": 185.796,
+       "e": 186.356
+      },
+      {
+       "w": "cuándo",
+       "s": 186.356,
+       "e": 186.796
+      },
+      {
+       "w": "se",
+       "s": 186.796,
+       "e": 186.836
+      },
+      {
+       "w": "instalan",
+       "s": 186.836,
+       "e": 187.336
+      },
+      {
+       "w": "los",
+       "s": 187.336,
+       "e": 187.496
+      },
+      {
+       "w": "consejos",
+       "s": 187.496,
+       "e": 187.996
+      },
+      {
+       "w": "municipales?",
+       "s": 187.996,
+       "e": 188.656
+      }
+     ]
+    }
+   ],
+   "fin_voz": 189.016,
+   "beats": 68
+  },
+  {
+   "id": "p12a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "En la 1.ª semana de febrero del año de la elección",
+    "fuente": "Ley Orgánica IEEZ art. 67"
+   },
+   "t0": 193.5,
+   "t1": 197.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "p12a_0",
+     "texto": "En la primera semana de febrero del año de la elección.",
+     "t0": 193.83,
+     "t1": 197.03,
+     "words": [
+      {
+       "w": "En",
+       "s": 193.83,
+       "e": 193.93
+      },
+      {
+       "w": "la",
+       "s": 193.93,
+       "e": 194.03
+      },
+      {
+       "w": "primera",
+       "s": 194.03,
+       "e": 194.31
+      },
+      {
+       "w": "semana",
+       "s": 194.31,
+       "e": 194.69
+      },
+      {
+       "w": "de",
+       "s": 194.69,
+       "e": 194.95
+      },
+      {
+       "w": "febrero",
+       "s": 194.95,
+       "e": 195.49
+      },
+      {
+       "w": "del",
+       "s": 195.49,
+       "e": 195.65
+      },
+      {
+       "w": "año",
+       "s": 195.65,
+       "e": 195.91
+      },
+      {
+       "w": "de",
+       "s": 195.91,
+       "e": 196.07
+      },
+      {
+       "w": "la",
+       "s": 196.07,
+       "e": 196.17
+      },
+      {
+       "w": "elección.",
+       "s": 196.17,
+       "e": 196.63
+      }
+     ]
+    }
+   ],
+   "fin_voz": 197.03,
+   "beats": 32
+  },
+  {
+   "id": "p13q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Con qué frecuencia sesionan los consejos distritales y municipales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 13,
+    "de": 50
+   },
+   "t0": 197.5,
+   "t1": 207.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p13q_0",
+     "texto": "Trece. ¿Con qué frecuencia sesionan los consejos distritales y municipales?",
+     "t0": 197.8,
+     "t1": 202.6,
+     "words": [
+      {
+       "w": "Trece.",
+       "s": 197.92,
+       "e": 198.04
+      },
+      {
+       "w": "¿Con",
+       "s": 198.24,
+       "e": 198.84
+      },
+      {
+       "w": "qué",
+       "s": 198.84,
+       "e": 198.96
+      },
+      {
+       "w": "frecuencia",
+       "s": 198.96,
+       "e": 199.46
+      },
+      {
+       "w": "sesionan",
+       "s": 199.46,
+       "e": 200.0
+      },
+      {
+       "w": "los",
+       "s": 200.0,
+       "e": 200.14
+      },
+      {
+       "w": "consejos",
+       "s": 200.14,
+       "e": 200.62
+      },
+      {
+       "w": "distritales",
+       "s": 200.62,
+       "e": 201.46
+      },
+      {
+       "w": "y",
+       "s": 201.46,
+       "e": 201.56
+      },
+      {
+       "w": "municipales?",
+       "s": 201.56,
+       "e": 202.24
+      }
+     ]
+    }
+   ],
+   "fin_voz": 202.6,
+   "beats": 76
+  },
+  {
+   "id": "p13a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Al menos 2 veces al mes",
+    "fuente": "Ley Orgánica IEEZ arts. 64 y 67"
+   },
+   "t0": 207.0,
+   "t1": 210.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "p13a_0",
+     "texto": "Por lo menos dos veces al mes.",
+     "t0": 207.367,
+     "t1": 209.444,
+     "words": [
+      {
+       "w": "Por",
+       "s": 207.367,
+       "e": 207.467
+      },
+      {
+       "w": "lo",
+       "s": 207.467,
+       "e": 207.567
+      },
+      {
+       "w": "menos",
+       "s": 207.567,
+       "e": 207.907
+      },
+      {
+       "w": "dos",
+       "s": 207.907,
+       "e": 208.287
+      },
+      {
+       "w": "veces",
+       "s": 208.287,
+       "e": 208.627
+      },
+      {
+       "w": "al",
+       "s": 208.627,
+       "e": 208.827
+      },
+      {
+       "w": "mes.",
+       "s": 208.827,
+       "e": 209.007
+      }
+     ]
+    }
+   ],
+   "fin_voz": 209.444,
+   "beats": 24
+  },
+  {
+   "id": "p14q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué quórum necesita el consejo para sesionar?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 14,
+    "de": 50
+   },
+   "t0": 210.0,
+   "t1": 218.5,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p14q_0",
+     "texto": "Catorce. ¿Qué quórum necesita el consejo para sesionar?",
+     "t0": 210.312,
+     "t1": 214.072,
+     "words": [
+      {
+       "w": "Catorce.",
+       "s": 210.472,
+       "e": 210.632
+      },
+      {
+       "w": "¿Qué",
+       "s": 210.892,
+       "e": 211.532
+      },
+      {
+       "w": "quórum",
+       "s": 211.532,
+       "e": 211.912
+      },
+      {
+       "w": "necesita",
+       "s": 211.912,
+       "e": 212.232
+      },
+      {
+       "w": "el",
+       "s": 212.232,
+       "e": 212.572
+      },
+      {
+       "w": "consejo",
+       "s": 212.572,
+       "e": 213.052
+      },
+      {
+       "w": "para",
+       "s": 213.052,
+       "e": 213.232
+      },
+      {
+       "w": "sesionar?",
+       "s": 213.232,
+       "e": 213.732
+      }
+     ]
+    }
+   ],
+   "fin_voz": 214.072,
+   "beats": 68
+  },
+  {
+   "id": "p14a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Mitad + 1 de quienes tienen voto, incluido el presidente",
+    "fuente": "Ley Orgánica IEEZ art. 62"
+   },
+   "t0": 218.5,
+   "t1": 224.0,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p14a_0",
+     "texto": "La mitad más uno de sus integrantes con voto, entre ellos el presidente.",
+     "t0": 218.863,
+     "t1": 223.452,
+     "words": [
+      {
+       "w": "La",
+       "s": 218.863,
+       "e": 218.983
+      },
+      {
+       "w": "mitad",
+       "s": 218.983,
+       "e": 219.223
+      },
+      {
+       "w": "más",
+       "s": 219.223,
+       "e": 219.503
+      },
+      {
+       "w": "uno",
+       "s": 219.503,
+       "e": 219.803
+      },
+      {
+       "w": "de",
+       "s": 219.803,
+       "e": 220.003
+      },
+      {
+       "w": "sus",
+       "s": 220.003,
+       "e": 220.143
+      },
+      {
+       "w": "integrantes",
+       "s": 220.143,
+       "e": 220.743
+      },
+      {
+       "w": "con",
+       "s": 220.743,
+       "e": 220.923
+      },
+      {
+       "w": "voto,",
+       "s": 220.923,
+       "e": 221.363
+      },
+      {
+       "w": "entre",
+       "s": 221.363,
+       "e": 221.863
+      },
+      {
+       "w": "ellos",
+       "s": 221.863,
+       "e": 222.223
+      },
+      {
+       "w": "el",
+       "s": 222.223,
+       "e": 222.523
+      },
+      {
+       "w": "presidente.",
+       "s": 222.523,
+       "e": 222.863
+      }
+     ]
+    }
+   ],
+   "fin_voz": 223.452,
+   "beats": 44
+  },
+  {
+   "id": "p15q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "Si no hay quórum, ¿qué pasa?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 15,
+    "de": 50
+   },
+   "t0": 224.0,
+   "t1": 231.5,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p15q_0",
+     "texto": "Quince. Si no hay quórum, ¿qué pasa?",
+     "t0": 224.324,
+     "t1": 227.044,
+     "words": [
+      {
+       "w": "Quince.",
+       "s": 224.454,
+       "e": 224.584
+      },
+      {
+       "w": "Si",
+       "s": 224.844,
+       "e": 225.244
+      },
+      {
+       "w": "no",
+       "s": 225.244,
+       "e": 225.424
+      },
+      {
+       "w": "hay",
+       "s": 225.424,
+       "e": 225.524
+      },
+      {
+       "w": "quórum,",
+       "s": 225.524,
+       "e": 225.904
+      },
+      {
+       "w": "¿qué",
+       "s": 226.024,
+       "e": 226.464
+      },
+      {
+       "w": "pasa?",
+       "s": 226.464,
+       "e": 226.664
+      }
+     ]
+    }
+   ],
+   "fin_voz": 227.044,
+   "beats": 60
+  },
+  {
+   "id": "p15a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Se sesiona dentro de las 24 horas siguientes",
+    "fuente": "Ley Orgánica IEEZ art. 62"
+   },
+   "t0": 231.5,
+   "t1": 237.0,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p15a_0",
+     "texto": "La sesión se realiza dentro de las veinticuatro horas siguientes, con quienes asistan.",
+     "t0": 231.8,
+     "t1": 236.6,
+     "words": [
+      {
+       "w": "La",
+       "s": 231.8,
+       "e": 231.9
+      },
+      {
+       "w": "sesión",
+       "s": 231.9,
+       "e": 232.34
+      },
+      {
+       "w": "se",
+       "s": 232.34,
+       "e": 232.42
+      },
+      {
+       "w": "realiza",
+       "s": 232.42,
+       "e": 232.96
+      },
+      {
+       "w": "dentro",
+       "s": 232.96,
+       "e": 233.2
+      },
+      {
+       "w": "de",
+       "s": 233.2,
+       "e": 233.36
+      },
+      {
+       "w": "las",
+       "s": 233.36,
+       "e": 233.52
+      },
+      {
+       "w": "veinticuatro",
+       "s": 233.52,
+       "e": 233.94
+      },
+      {
+       "w": "horas",
+       "s": 233.94,
+       "e": 234.48
+      },
+      {
+       "w": "siguientes,",
+       "s": 234.48,
+       "e": 235.08
+      },
+      {
+       "w": "con",
+       "s": 235.08,
+       "e": 235.44
+      },
+      {
+       "w": "quienes",
+       "s": 235.44,
+       "e": 235.72
+      },
+      {
+       "w": "asistan.",
+       "s": 235.72,
+       "e": 236.26
+      }
+     ]
+    }
+   ],
+   "fin_voz": 236.6,
+   "beats": 44
+  },
+  {
+   "id": "p16q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué pasa si hay empate en una votación del consejo?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 16,
+    "de": 50
+   },
+   "t0": 237.0,
+   "t1": 246.5,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p16q_0",
+     "texto": "Dieciséis. ¿Qué pasa si hay empate en una votación del consejo?",
+     "t0": 237.45,
+     "t1": 241.751,
+     "words": [
+      {
+       "w": "Dieciséis.",
+       "s": 237.65,
+       "e": 237.85
+      },
+      {
+       "w": "¿Qué",
+       "s": 238.45,
+       "e": 238.93
+      },
+      {
+       "w": "pasa",
+       "s": 238.93,
+       "e": 239.15
+      },
+      {
+       "w": "si",
+       "s": 239.15,
+       "e": 239.39
+      },
+      {
+       "w": "hay",
+       "s": 239.39,
+       "e": 239.55
+      },
+      {
+       "w": "empate",
+       "s": 239.55,
+       "e": 240.07
+      },
+      {
+       "w": "en",
+       "s": 240.07,
+       "e": 240.19
+      },
+      {
+       "w": "una",
+       "s": 240.19,
+       "e": 240.35
+      },
+      {
+       "w": "votación",
+       "s": 240.35,
+       "e": 240.83
+      },
+      {
+       "w": "del",
+       "s": 240.83,
+       "e": 240.97
+      },
+      {
+       "w": "consejo?",
+       "s": 240.97,
+       "e": 241.51
+      }
+     ]
+    }
+   ],
+   "fin_voz": 241.751,
+   "beats": 76
+  },
+  {
+   "id": "p16a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El presidente tiene voto de calidad",
+    "fuente": "Ley Orgánica IEEZ art. 62"
+   },
+   "t0": 246.5,
+   "t1": 250.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "p16a_0",
+     "texto": "El presidente del consejo tiene voto de calidad.",
+     "t0": 246.902,
+     "t1": 249.862,
+     "words": [
+      {
+       "w": "El",
+       "s": 246.902,
+       "e": 247.002
+      },
+      {
+       "w": "presidente",
+       "s": 247.002,
+       "e": 247.342
+      },
+      {
+       "w": "del",
+       "s": 247.342,
+       "e": 247.682
+      },
+      {
+       "w": "consejo",
+       "s": 247.682,
+       "e": 248.262
+      },
+      {
+       "w": "tiene",
+       "s": 248.262,
+       "e": 248.502
+      },
+      {
+       "w": "voto",
+       "s": 248.502,
+       "e": 249.062
+      },
+      {
+       "w": "de",
+       "s": 249.062,
+       "e": 249.082
+      },
+      {
+       "w": "calidad.",
+       "s": 249.082,
+       "e": 249.362
+      }
+     ]
+    }
+   ],
+   "fin_voz": 249.862,
+   "beats": 32
+  },
+  {
+   "id": "p17q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "Si falta el presidente a la sesión, ¿qué hacen los consejeros?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 17,
+    "de": 50
+   },
+   "t0": 250.5,
+   "t1": 260.5,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p17q_0",
+     "texto": "Diecisiete. Si falta el presidente a la sesión, ¿qué hacen los consejeros?",
+     "t0": 250.926,
+     "t1": 255.806,
+     "words": [
+      {
+       "w": "Diecisiete.",
+       "s": 251.146,
+       "e": 251.366
+      },
+      {
+       "w": "Si",
+       "s": 251.706,
+       "e": 252.266
+      },
+      {
+       "w": "falta",
+       "s": 252.266,
+       "e": 252.546
+      },
+      {
+       "w": "el",
+       "s": 252.546,
+       "e": 252.686
+      },
+      {
+       "w": "presidente",
+       "s": 252.686,
+       "e": 253.026
+      },
+      {
+       "w": "a",
+       "s": 253.026,
+       "e": 253.346
+      },
+      {
+       "w": "la",
+       "s": 253.346,
+       "e": 253.386
+      },
+      {
+       "w": "sesión,",
+       "s": 253.386,
+       "e": 253.946
+      },
+      {
+       "w": "¿qué",
+       "s": 253.966,
+       "e": 254.446
+      },
+      {
+       "w": "hacen",
+       "s": 254.446,
+       "e": 254.666
+      },
+      {
+       "w": "los",
+       "s": 254.666,
+       "e": 254.826
+      },
+      {
+       "w": "consejeros?",
+       "s": 254.826,
+       "e": 255.546
+      }
+     ]
+    }
+   ],
+   "fin_voz": 255.806,
+   "beats": 80
+  },
+  {
+   "id": "p17a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Designan entre ellos, por mayoría simple, a quien presida",
+    "fuente": "Ley Orgánica IEEZ art. 62"
+   },
+   "t0": 260.5,
+   "t1": 265.5,
+   "compases": 10,
+   "frases": [
+    {
+     "key": "p17a_0",
+     "texto": "Por mayoría simple designan entre ellos a quien presida esa sesión.",
+     "t0": 260.82,
+     "t1": 265.052,
+     "words": [
+      {
+       "w": "Por",
+       "s": 260.82,
+       "e": 260.9
+      },
+      {
+       "w": "mayoría",
+       "s": 260.9,
+       "e": 261.2
+      },
+      {
+       "w": "simple",
+       "s": 261.2,
+       "e": 261.66
+      },
+      {
+       "w": "designan",
+       "s": 261.92,
+       "e": 262.5
+      },
+      {
+       "w": "entre",
+       "s": 262.5,
+       "e": 262.66
+      },
+      {
+       "w": "ellos",
+       "s": 262.66,
+       "e": 263.04
+      },
+      {
+       "w": "a",
+       "s": 263.04,
+       "e": 263.3
+      },
+      {
+       "w": "quien",
+       "s": 263.3,
+       "e": 263.5
+      },
+      {
+       "w": "presida",
+       "s": 263.5,
+       "e": 264.1
+      },
+      {
+       "w": "esa",
+       "s": 264.1,
+       "e": 264.26
+      },
+      {
+       "w": "sesión.",
+       "s": 264.26,
+       "e": 264.74
+      }
+     ]
+    }
+   ],
+   "fin_voz": 265.052,
+   "beats": 40
+  },
+  {
+   "id": "p18q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Quién ejerce la oficialía electoral en el consejo?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 18,
+    "de": 50
+   },
+   "t0": 265.5,
+   "t1": 274.5,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p18q_0",
+     "texto": "Dieciocho. ¿Quién ejerce la oficialía electoral en el consejo?",
+     "t0": 265.914,
+     "t1": 269.834,
+     "words": [
+      {
+       "w": "Dieciocho.",
+       "s": 266.134,
+       "e": 266.354
+      },
+      {
+       "w": "¿Quién",
+       "s": 266.574,
+       "e": 267.254
+      },
+      {
+       "w": "ejerce",
+       "s": 267.254,
+       "e": 267.654
+      },
+      {
+       "w": "la",
+       "s": 267.654,
+       "e": 267.734
+      },
+      {
+       "w": "oficialía",
+       "s": 267.734,
+       "e": 268.334
+      },
+      {
+       "w": "electoral",
+       "s": 268.334,
+       "e": 268.614
+      },
+      {
+       "w": "en",
+       "s": 268.614,
+       "e": 268.994
+      },
+      {
+       "w": "el",
+       "s": 268.994,
+       "e": 269.074
+      },
+      {
+       "w": "consejo?",
+       "s": 269.074,
+       "e": 269.614
+      }
+     ]
+    }
+   ],
+   "fin_voz": 269.834,
+   "beats": 72
+  },
+  {
+   "id": "p18a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El secretario del consejo (puede delegarla por escrito)",
+    "fuente": "Ley Orgánica IEEZ arts. 66 y 69"
+   },
+   "t0": 274.5,
+   "t1": 280.0,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p18a_0",
+     "texto": "El secretario del consejo, que puede delegarla por escrito para cada caso.",
+     "t0": 274.896,
+     "t1": 279.376,
+     "words": [
+      {
+       "w": "El",
+       "s": 274.896,
+       "e": 274.976
+      },
+      {
+       "w": "secretario",
+       "s": 274.976,
+       "e": 275.556
+      },
+      {
+       "w": "del",
+       "s": 275.556,
+       "e": 275.656
+      },
+      {
+       "w": "consejo,",
+       "s": 275.656,
+       "e": 276.256
+      },
+      {
+       "w": "que",
+       "s": 276.256,
+       "e": 276.556
+      },
+      {
+       "w": "puede",
+       "s": 276.556,
+       "e": 276.816
+      },
+      {
+       "w": "delegarla",
+       "s": 276.816,
+       "e": 277.456
+      },
+      {
+       "w": "por",
+       "s": 277.456,
+       "e": 277.636
+      },
+      {
+       "w": "escrito",
+       "s": 277.636,
+       "e": 277.996
+      },
+      {
+       "w": "para",
+       "s": 277.996,
+       "e": 278.296
+      },
+      {
+       "w": "cada",
+       "s": 278.296,
+       "e": 278.616
+      },
+      {
+       "w": "caso.",
+       "s": 278.616,
+       "e": 278.936
+      }
+     ]
+    }
+   ],
+   "fin_voz": 279.376,
+   "beats": 44
+  },
+  {
+   "id": "p19q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué cómputos realiza el consejo distrital?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 19,
+    "de": 50
+   },
+   "t0": 280.0,
+   "t1": 289.0,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p19q_0",
+     "texto": "Diecinueve. ¿Qué cómputos realiza el consejo distrital?",
+     "t0": 280.438,
+     "t1": 284.278,
+     "words": [
+      {
+       "w": "Diecinueve.",
+       "s": 280.638,
+       "e": 280.838
+      },
+      {
+       "w": "¿Qué",
+       "s": 281.118,
+       "e": 281.718
+      },
+      {
+       "w": "cómputos",
+       "s": 281.718,
+       "e": 282.138
+      },
+      {
+       "w": "realiza",
+       "s": 282.138,
+       "e": 282.818
+      },
+      {
+       "w": "el",
+       "s": 282.818,
+       "e": 282.898
+      },
+      {
+       "w": "consejo",
+       "s": 282.898,
+       "e": 283.398
+      },
+      {
+       "w": "distrital?",
+       "s": 283.398,
+       "e": 283.938
+      }
+     ]
+    }
+   ],
+   "fin_voz": 284.278,
+   "beats": 72
+  },
+  {
+   "id": "p19a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Gobernador y diputados por ambos principios",
+    "fuente": "Ley Orgánica IEEZ art. 65"
+   },
+   "t0": 289.0,
+   "t1": 293.5,
+   "compases": 9,
+   "frases": [
+    {
+     "key": "p19a_0",
+     "texto": "Los de gobernador y de diputados por ambos principios.",
+     "t0": 289.408,
+     "t1": 292.848,
+     "words": [
+      {
+       "w": "Los",
+       "s": 289.408,
+       "e": 289.548
+      },
+      {
+       "w": "de",
+       "s": 289.548,
+       "e": 289.668
+      },
+      {
+       "w": "gobernador",
+       "s": 289.668,
+       "e": 290.308
+      },
+      {
+       "w": "y",
+       "s": 290.308,
+       "e": 290.548
+      },
+      {
+       "w": "de",
+       "s": 290.548,
+       "e": 290.628
+      },
+      {
+       "w": "diputados",
+       "s": 290.628,
+       "e": 291.308
+      },
+      {
+       "w": "por",
+       "s": 291.308,
+       "e": 291.528
+      },
+      {
+       "w": "ambos",
+       "s": 291.528,
+       "e": 291.808
+      },
+      {
+       "w": "principios.",
+       "s": 291.808,
+       "e": 292.548
+      }
+     ]
+    }
+   ],
+   "fin_voz": 292.848,
+   "beats": 36
+  },
+  {
+   "id": "p20q",
+   "bloque": 2,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué registros recibe el consejo municipal?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 20,
+    "de": 50
+   },
+   "t0": 293.5,
+   "t1": 302.0,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p20q_0",
+     "texto": "Veinte. ¿Qué registros recibe el consejo municipal?",
+     "t0": 293.843,
+     "t1": 297.499,
+     "words": [
+      {
+       "w": "Veinte.",
+       "s": 293.993,
+       "e": 294.143
+      },
+      {
+       "w": "¿Qué",
+       "s": 294.323,
+       "e": 294.923
+      },
+      {
+       "w": "registros",
+       "s": 294.923,
+       "e": 295.523
+      },
+      {
+       "w": "recibe",
+       "s": 295.523,
+       "e": 296.063
+      },
+      {
+       "w": "el",
+       "s": 296.063,
+       "e": 296.143
+      },
+      {
+       "w": "consejo",
+       "s": 296.143,
+       "e": 296.623
+      },
+      {
+       "w": "municipal?",
+       "s": 296.623,
+       "e": 297.223
+      }
+     ]
+    }
+   ],
+   "fin_voz": 297.499,
+   "beats": 68
+  },
+  {
+   "id": "p20a",
+   "bloque": 2,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Planillas de ayuntamiento por mayoría relativa",
+    "fuente": "Ley Orgánica IEEZ art. 68"
+   },
+   "t0": 302.0,
+   "t1": 307.5,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p20a_0",
+     "texto": "Las planillas de candidatos a integrar el ayuntamiento por mayoría relativa.",
+     "t0": 302.444,
+     "t1": 306.764,
+     "words": [
+      {
+       "w": "Las",
+       "s": 302.444,
+       "e": 302.544
+      },
+      {
+       "w": "planillas",
+       "s": 302.544,
+       "e": 303.004
+      },
+      {
+       "w": "de",
+       "s": 303.004,
+       "e": 303.124
+      },
+      {
+       "w": "candidatos",
+       "s": 303.124,
+       "e": 303.764
+      },
+      {
+       "w": "a",
+       "s": 303.764,
+       "e": 303.884
+      },
+      {
+       "w": "integrar",
+       "s": 303.884,
+       "e": 304.384
+      },
+      {
+       "w": "el",
+       "s": 304.384,
+       "e": 304.504
+      },
+      {
+       "w": "ayuntamiento",
+       "s": 304.504,
+       "e": 305.184
+      },
+      {
+       "w": "por",
+       "s": 305.184,
+       "e": 305.384
+      },
+      {
+       "w": "mayoría",
+       "s": 305.384,
+       "e": 305.744
+      },
+      {
+       "w": "relativa.",
+       "s": 305.744,
+       "e": 306.464
+      }
+     ]
+    }
+   ],
+   "fin_voz": 306.764,
+   "beats": 44
+  },
+  {
+   "id": "tema3",
+   "bloque": 3,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "INE y atribuciones especiales",
+    "sub": "Tema 3 de 7"
+   },
+   "t0": 307.5,
+   "t1": 311.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "tema3_0",
+     "texto": "Tema tres: ine y atribuciones especiales.",
+     "t0": 307.813,
+     "t1": 311.069,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 307.813,
+       "e": 308.053
+      },
+      {
+       "w": "tres:",
+       "s": 308.153,
+       "e": 308.253
+      },
+      {
+       "w": "ine",
+       "s": 308.713,
+       "e": 309.193
+      },
+      {
+       "w": "y",
+       "s": 309.193,
+       "e": 309.293
+      },
+      {
+       "w": "atribuciones",
+       "s": 309.293,
+       "e": 309.993
+      },
+      {
+       "w": "especiales.",
+       "s": 309.993,
+       "e": 310.833
+      }
+     ]
+    }
+   ],
+   "fin_voz": 311.069,
+   "beats": 32
+  },
+  {
+   "id": "p21q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿A quién corresponde la capacitación electoral y designar funcionarios de casilla?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 21,
+    "de": 50
+   },
+   "t0": 311.5,
+   "t1": 322.5,
+   "compases": 22,
+   "frases": [
+    {
+     "key": "p21q_0",
+     "texto": "Veintiuno. ¿A quién corresponde la capacitación electoral y designar a los funcionarios de casilla?",
+     "t0": 311.915,
+     "t1": 317.832,
+     "words": [
+      {
+       "w": "Veintiuno.",
+       "s": 312.115,
+       "e": 312.315
+      },
+      {
+       "w": "¿A",
+       "s": 312.515,
+       "e": 313.115
+      },
+      {
+       "w": "quién",
+       "s": 313.115,
+       "e": 313.295
+      },
+      {
+       "w": "corresponde",
+       "s": 313.295,
+       "e": 313.975
+      },
+      {
+       "w": "la",
+       "s": 313.975,
+       "e": 314.055
+      },
+      {
+       "w": "capacitación",
+       "s": 314.055,
+       "e": 314.775
+      },
+      {
+       "w": "electoral",
+       "s": 314.775,
+       "e": 315.115
+      },
+      {
+       "w": "y",
+       "s": 315.115,
+       "e": 315.615
+      },
+      {
+       "w": "designar",
+       "s": 315.615,
+       "e": 316.155
+      },
+      {
+       "w": "a",
+       "s": 316.155,
+       "e": 316.235
+      },
+      {
+       "w": "los",
+       "s": 316.235,
+       "e": 316.335
+      },
+      {
+       "w": "funcionarios",
+       "s": 316.335,
+       "e": 316.995
+      },
+      {
+       "w": "de",
+       "s": 316.995,
+       "e": 317.095
+      },
+      {
+       "w": "casilla?",
+       "s": 317.095,
+       "e": 317.515
+      }
+     ]
+    }
+   ],
+   "fin_voz": 317.832,
+   "beats": 88
+  },
+  {
+   "id": "p21a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Al INE (también en elecciones locales)",
+    "fuente": "CPEUM art. 41, base V, apartado B"
+   },
+   "t0": 322.5,
+   "t1": 326.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "p21a_0",
+     "texto": "Al INE, en elecciones federales y locales.",
+     "t0": 322.83,
+     "t1": 326.03,
+     "words": [
+      {
+       "w": "Al",
+       "s": 322.83,
+       "e": 322.95
+      },
+      {
+       "w": "INE,",
+       "s": 322.95,
+       "e": 323.39
+      },
+      {
+       "w": "en",
+       "s": 323.39,
+       "e": 323.77
+      },
+      {
+       "w": "elecciones",
+       "s": 323.77,
+       "e": 324.27
+      },
+      {
+       "w": "federales",
+       "s": 324.27,
+       "e": 325.03
+      },
+      {
+       "w": "y",
+       "s": 325.03,
+       "e": 325.15
+      },
+      {
+       "w": "locales.",
+       "s": 325.15,
+       "e": 325.75
+      }
+     ]
+    }
+   ],
+   "fin_voz": 326.03,
+   "beats": 32
+  },
+  {
+   "id": "p22q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Quién fiscaliza los recursos de partidos y candidatos?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 22,
+    "de": 50
+   },
+   "t0": 326.5,
+   "t1": 336.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p22q_0",
+     "texto": "Veintidós. ¿Quién fiscaliza los recursos de partidos y candidatos?",
+     "t0": 326.9,
+     "t1": 331.367,
+     "words": [
+      {
+       "w": "Veintidós.",
+       "s": 327.11,
+       "e": 327.32
+      },
+      {
+       "w": "¿Quién",
+       "s": 327.64,
+       "e": 328.28
+      },
+      {
+       "w": "fiscaliza",
+       "s": 328.28,
+       "e": 328.84
+      },
+      {
+       "w": "los",
+       "s": 328.84,
+       "e": 328.96
+      },
+      {
+       "w": "recursos",
+       "s": 328.96,
+       "e": 329.28
+      },
+      {
+       "w": "de",
+       "s": 329.28,
+       "e": 329.6
+      },
+      {
+       "w": "partidos",
+       "s": 329.6,
+       "e": 330.2
+      },
+      {
+       "w": "y",
+       "s": 330.2,
+       "e": 330.36
+      },
+      {
+       "w": "candidatos?",
+       "s": 330.36,
+       "e": 331.0
+      }
+     ]
+    }
+   ],
+   "fin_voz": 331.367,
+   "beats": 76
+  },
+  {
+   "id": "p22a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El Consejo General del INE",
+    "fuente": "CPEUM art. 41, base V, apartado B"
+   },
+   "t0": 336.0,
+   "t1": 339.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "p22a_0",
+     "texto": "El Consejo General del INE.",
+     "t0": 336.436,
+     "t1": 338.284,
+     "words": [
+      {
+       "w": "El",
+       "s": 336.436,
+       "e": 336.556
+      },
+      {
+       "w": "Consejo",
+       "s": 336.556,
+       "e": 337.076
+      },
+      {
+       "w": "General",
+       "s": 337.076,
+       "e": 337.356
+      },
+      {
+       "w": "del",
+       "s": 337.356,
+       "e": 337.676
+      },
+      {
+       "w": "INE.",
+       "s": 337.676,
+       "e": 338.036
+      }
+     ]
+    }
+   ],
+   "fin_voz": 338.284,
+   "beats": 24
+  },
+  {
+   "id": "p23q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "En la elección local, ¿quién imprime las boletas y produce los materiales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 23,
+    "de": 50
+   },
+   "t0": 339.0,
+   "t1": 349.5,
+   "compases": 21,
+   "frases": [
+    {
+     "key": "p23q_0",
+     "texto": "Veintitrés. En la elección local, ¿quién imprime las boletas y produce los materiales?",
+     "t0": 339.336,
+     "t1": 345.016,
+     "words": [
+      {
+       "w": "Veintitrés.",
+       "s": 339.546,
+       "e": 339.756
+      },
+      {
+       "w": "En",
+       "s": 340.076,
+       "e": 340.656
+      },
+      {
+       "w": "la",
+       "s": 340.656,
+       "e": 340.756
+      },
+      {
+       "w": "elección",
+       "s": 340.756,
+       "e": 341.176
+      },
+      {
+       "w": "local,",
+       "s": 341.176,
+       "e": 341.416
+      },
+      {
+       "w": "¿quién",
+       "s": 341.676,
+       "e": 342.176
+      },
+      {
+       "w": "imprime",
+       "s": 342.176,
+       "e": 342.576
+      },
+      {
+       "w": "las",
+       "s": 342.576,
+       "e": 342.696
+      },
+      {
+       "w": "boletas",
+       "s": 342.696,
+       "e": 343.236
+      },
+      {
+       "w": "y",
+       "s": 343.236,
+       "e": 343.456
+      },
+      {
+       "w": "produce",
+       "s": 343.456,
+       "e": 343.816
+      },
+      {
+       "w": "los",
+       "s": 343.816,
+       "e": 344.096
+      },
+      {
+       "w": "materiales?",
+       "s": 344.096,
+       "e": 344.796
+      }
+     ]
+    }
+   ],
+   "fin_voz": 345.016,
+   "beats": 84
+  },
+  {
+   "id": "p23a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El IEEZ, con los lineamientos del INE",
+    "fuente": "LGIPE art. 104 · Ley Orgánica IEEZ art. 6"
+   },
+   "t0": 349.5,
+   "t1": 354.0,
+   "compases": 9,
+   "frases": [
+    {
+     "key": "p23a_0",
+     "texto": "El Instituto local, con los lineamientos que emite el INE.",
+     "t0": 349.884,
+     "t1": 353.404,
+     "words": [
+      {
+       "w": "El",
+       "s": 349.884,
+       "e": 349.984
+      },
+      {
+       "w": "Instituto",
+       "s": 349.984,
+       "e": 350.464
+      },
+      {
+       "w": "local,",
+       "s": 350.464,
+       "e": 350.744
+      },
+      {
+       "w": "con",
+       "s": 350.944,
+       "e": 351.284
+      },
+      {
+       "w": "los",
+       "s": 351.284,
+       "e": 351.464
+      },
+      {
+       "w": "lineamientos",
+       "s": 351.464,
+       "e": 352.044
+      },
+      {
+       "w": "que",
+       "s": 352.044,
+       "e": 352.324
+      },
+      {
+       "w": "emite",
+       "s": 352.324,
+       "e": 352.704
+      },
+      {
+       "w": "el",
+       "s": 352.704,
+       "e": 352.844
+      },
+      {
+       "w": "INE.",
+       "s": 352.844,
+       "e": 353.164
+      }
+     ]
+    }
+   ],
+   "fin_voz": 353.404,
+   "beats": 36
+  },
+  {
+   "id": "p24q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué es la atracción?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 24,
+    "de": 50
+   },
+   "t0": 354.0,
+   "t1": 362.0,
+   "compases": 16,
+   "frases": [
+    {
+     "key": "p24q_0",
+     "texto": "Veinticuatro. ¿Qué es la facultad de atracción?",
+     "t0": 354.317,
+     "t1": 357.562,
+     "words": [
+      {
+       "w": "Veinticuatro.",
+       "s": 354.537,
+       "e": 354.757
+      },
+      {
+       "w": "¿Qué",
+       "s": 355.057,
+       "e": 355.656
+      },
+      {
+       "w": "es",
+       "s": 355.656,
+       "e": 355.817
+      },
+      {
+       "w": "la",
+       "s": 355.817,
+       "e": 355.957
+      },
+      {
+       "w": "facultad",
+       "s": 355.957,
+       "e": 356.617
+      },
+      {
+       "w": "de",
+       "s": 356.617,
+       "e": 356.716
+      },
+      {
+       "w": "atracción?",
+       "s": 356.716,
+       "e": 357.276
+      }
+     ]
+    }
+   ],
+   "fin_voz": 357.562,
+   "beats": 64
+  },
+  {
+   "id": "p24a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El INE atrae un asunto local por su trascendencia o para sentar criterio",
+    "fuente": "LGIPE art. 120"
+   },
+   "t0": 362.0,
+   "t1": 368.5,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "p24a_0",
+     "texto": "El INE atrae un asunto local, por su trascendencia o para sentar un criterio de interpretación.",
+     "t0": 362.337,
+     "t1": 368.014,
+     "words": [
+      {
+       "w": "El",
+       "s": 362.337,
+       "e": 362.417
+      },
+      {
+       "w": "INE",
+       "s": 362.417,
+       "e": 362.697
+      },
+      {
+       "w": "atrae",
+       "s": 362.697,
+       "e": 363.097
+      },
+      {
+       "w": "un",
+       "s": 363.097,
+       "e": 363.177
+      },
+      {
+       "w": "asunto",
+       "s": 363.177,
+       "e": 363.577
+      },
+      {
+       "w": "local,",
+       "s": 363.577,
+       "e": 363.837
+      },
+      {
+       "w": "por",
+       "s": 364.057,
+       "e": 364.417
+      },
+      {
+       "w": "su",
+       "s": 364.417,
+       "e": 364.557
+      },
+      {
+       "w": "trascendencia",
+       "s": 364.557,
+       "e": 365.377
+      },
+      {
+       "w": "o",
+       "s": 365.377,
+       "e": 365.617
+      },
+      {
+       "w": "para",
+       "s": 365.617,
+       "e": 365.917
+      },
+      {
+       "w": "sentar",
+       "s": 365.917,
+       "e": 366.257
+      },
+      {
+       "w": "un",
+       "s": 366.257,
+       "e": 366.417
+      },
+      {
+       "w": "criterio",
+       "s": 366.417,
+       "e": 366.897
+      },
+      {
+       "w": "de",
+       "s": 366.897,
+       "e": 366.957
+      },
+      {
+       "w": "interpretación.",
+       "s": 366.957,
+       "e": 367.637
+      }
+     ]
+    }
+   ],
+   "fin_voz": 368.014,
+   "beats": 52
+  },
+  {
+   "id": "p25q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué es la asunción?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 25,
+    "de": 50
+   },
+   "t0": 368.5,
+   "t1": 376.0,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p25q_0",
+     "texto": "Veinticinco. ¿Qué es la asunción?",
+     "t0": 368.812,
+     "t1": 371.572,
+     "words": [
+      {
+       "w": "Veinticinco.",
+       "s": 369.022,
+       "e": 369.232
+      },
+      {
+       "w": "¿Qué",
+       "s": 369.592,
+       "e": 370.252
+      },
+      {
+       "w": "es",
+       "s": 370.252,
+       "e": 370.432
+      },
+      {
+       "w": "la",
+       "s": 370.432,
+       "e": 370.572
+      },
+      {
+       "w": "asunción?",
+       "s": 370.572,
+       "e": 371.232
+      }
+     ]
+    }
+   ],
+   "fin_voz": 371.572,
+   "beats": 60
+  },
+  {
+   "id": "p25a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El INE asume las actividades del organismo local: total o parcial",
+    "fuente": "LGIPE arts. 120 y 123"
+   },
+   "t0": 376.0,
+   "t1": 382.5,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "p25a_0",
+     "texto": "El INE asume directamente las actividades del organismo local, de forma total o parcial.",
+     "t0": 376.36,
+     "t1": 381.96,
+     "words": [
+      {
+       "w": "El",
+       "s": 376.36,
+       "e": 376.44
+      },
+      {
+       "w": "INE",
+       "s": 376.44,
+       "e": 376.72
+      },
+      {
+       "w": "asume",
+       "s": 376.72,
+       "e": 377.1
+      },
+      {
+       "w": "directamente",
+       "s": 377.1,
+       "e": 377.52
+      },
+      {
+       "w": "las",
+       "s": 377.52,
+       "e": 378.02
+      },
+      {
+       "w": "actividades",
+       "s": 378.02,
+       "e": 378.52
+      },
+      {
+       "w": "del",
+       "s": 378.52,
+       "e": 378.84
+      },
+      {
+       "w": "organismo",
+       "s": 378.84,
+       "e": 379.3
+      },
+      {
+       "w": "local,",
+       "s": 379.3,
+       "e": 379.58
+      },
+      {
+       "w": "de",
+       "s": 379.78,
+       "e": 380.1
+      },
+      {
+       "w": "forma",
+       "s": 380.1,
+       "e": 380.36
+      },
+      {
+       "w": "total",
+       "s": 380.36,
+       "e": 380.78
+      },
+      {
+       "w": "o",
+       "s": 380.78,
+       "e": 381.1
+      },
+      {
+       "w": "parcial.",
+       "s": 381.1,
+       "e": 381.62
+      }
+     ]
+    }
+   ],
+   "fin_voz": 381.96,
+   "beats": 52
+  },
+  {
+   "id": "p26q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Qué es la delegación?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 26,
+    "de": 50
+   },
+   "t0": 382.5,
+   "t1": 390.0,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p26q_0",
+     "texto": "Veintiséis. ¿Qué es la delegación?",
+     "t0": 382.822,
+     "t1": 385.55,
+     "words": [
+      {
+       "w": "Veintiséis.",
+       "s": 383.042,
+       "e": 383.262
+      },
+      {
+       "w": "¿Qué",
+       "s": 383.622,
+       "e": 384.262
+      },
+      {
+       "w": "es",
+       "s": 384.262,
+       "e": 384.422
+      },
+      {
+       "w": "la",
+       "s": 384.422,
+       "e": 384.562
+      },
+      {
+       "w": "delegación?",
+       "s": 384.562,
+       "e": 385.242
+      }
+     ]
+    }
+   ],
+   "fin_voz": 385.55,
+   "beats": 60
+  },
+  {
+   "id": "p26a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El INE delega en el organismo local una función propia (excepcional)",
+    "fuente": "LGIPE art. 125"
+   },
+   "t0": 390.0,
+   "t1": 397.5,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p26a_0",
+     "texto": "El INE delega en el organismo local una función suya, de forma excepcional y antes de iniciar el proceso.",
+     "t0": 390.396,
+     "t1": 396.876,
+     "words": [
+      {
+       "w": "El",
+       "s": 390.396,
+       "e": 390.496
+      },
+      {
+       "w": "INE",
+       "s": 390.496,
+       "e": 390.776
+      },
+      {
+       "w": "delega",
+       "s": 390.776,
+       "e": 391.196
+      },
+      {
+       "w": "en",
+       "s": 391.196,
+       "e": 391.276
+      },
+      {
+       "w": "el",
+       "s": 391.276,
+       "e": 391.376
+      },
+      {
+       "w": "organismo",
+       "s": 391.376,
+       "e": 391.876
+      },
+      {
+       "w": "local",
+       "s": 391.876,
+       "e": 392.136
+      },
+      {
+       "w": "una",
+       "s": 392.136,
+       "e": 392.496
+      },
+      {
+       "w": "función",
+       "s": 392.496,
+       "e": 392.836
+      },
+      {
+       "w": "suya,",
+       "s": 392.836,
+       "e": 393.436
+      },
+      {
+       "w": "de",
+       "s": 393.456,
+       "e": 393.816
+      },
+      {
+       "w": "forma",
+       "s": 393.816,
+       "e": 394.036
+      },
+      {
+       "w": "excepcional",
+       "s": 394.036,
+       "e": 394.736
+      },
+      {
+       "w": "y",
+       "s": 394.736,
+       "e": 395.056
+      },
+      {
+       "w": "antes",
+       "s": 395.056,
+       "e": 395.416
+      },
+      {
+       "w": "de",
+       "s": 395.416,
+       "e": 395.596
+      },
+      {
+       "w": "iniciar",
+       "s": 395.596,
+       "e": 395.996
+      },
+      {
+       "w": "el",
+       "s": 395.996,
+       "e": 396.076
+      },
+      {
+       "w": "proceso.",
+       "s": 396.076,
+       "e": 396.356
+      }
+     ]
+    }
+   ],
+   "fin_voz": 396.876,
+   "beats": 60
+  },
+  {
+   "id": "p27q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuántos votos del Consejo General del INE requieren esas atribuciones?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 27,
+    "de": 50
+   },
+   "t0": 397.5,
+   "t1": 408.0,
+   "compases": 21,
+   "frases": [
+    {
+     "key": "p27q_0",
+     "texto": "Veintisiete. ¿Cuántos votos del Consejo General del INE requieren esas atribuciones?",
+     "t0": 397.932,
+     "t1": 403.292,
+     "words": [
+      {
+       "w": "Veintisiete.",
+       "s": 398.142,
+       "e": 398.352
+      },
+      {
+       "w": "¿Cuántos",
+       "s": 398.892,
+       "e": 399.572
+      },
+      {
+       "w": "votos",
+       "s": 399.572,
+       "e": 399.932
+      },
+      {
+       "w": "del",
+       "s": 399.932,
+       "e": 400.012
+      },
+      {
+       "w": "Consejo",
+       "s": 400.012,
+       "e": 400.512
+      },
+      {
+       "w": "General",
+       "s": 400.512,
+       "e": 400.792
+      },
+      {
+       "w": "del",
+       "s": 400.792,
+       "e": 401.072
+      },
+      {
+       "w": "INE",
+       "s": 401.072,
+       "e": 401.412
+      },
+      {
+       "w": "requieren",
+       "s": 401.412,
+       "e": 401.932
+      },
+      {
+       "w": "esas",
+       "s": 401.932,
+       "e": 402.152
+      },
+      {
+       "w": "atribuciones?",
+       "s": 402.152,
+       "e": 402.832
+      }
+     ]
+    }
+   ],
+   "fin_voz": 403.292,
+   "beats": 84
+  },
+  {
+   "id": "p27a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Al menos 8 votos",
+    "fuente": "LGIPE arts. 121, 124 y 125"
+   },
+   "t0": 408.0,
+   "t1": 410.5,
+   "compases": 5,
+   "frases": [
+    {
+     "key": "p27a_0",
+     "texto": "Al menos ocho votos.",
+     "t0": 408.312,
+     "t1": 410.072,
+     "words": [
+      {
+       "w": "Al",
+       "s": 408.312,
+       "e": 408.432
+      },
+      {
+       "w": "menos",
+       "s": 408.432,
+       "e": 408.712
+      },
+      {
+       "w": "ocho",
+       "s": 408.712,
+       "e": 409.112
+      },
+      {
+       "w": "votos.",
+       "s": 409.112,
+       "e": 409.752
+      }
+     ]
+    }
+   ],
+   "fin_voz": 410.072,
+   "beats": 20
+  },
+  {
+   "id": "p28q",
+   "bloque": 3,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Hasta cuándo puede pedirse la asunción total de una elección local?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 28,
+    "de": 50
+   },
+   "t0": 410.5,
+   "t1": 420.5,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p28q_0",
+     "texto": "Veintiocho. ¿Hasta cuándo puede pedirse la asunción total de una elección local?",
+     "t0": 410.878,
+     "t1": 415.918,
+     "words": [
+      {
+       "w": "Veintiocho.",
+       "s": 411.068,
+       "e": 411.258
+      },
+      {
+       "w": "¿Hasta",
+       "s": 411.538,
+       "e": 412.178
+      },
+      {
+       "w": "cuándo",
+       "s": 412.178,
+       "e": 412.618
+      },
+      {
+       "w": "puede",
+       "s": 412.618,
+       "e": 412.778
+      },
+      {
+       "w": "pedirse",
+       "s": 412.778,
+       "e": 413.298
+      },
+      {
+       "w": "la",
+       "s": 413.298,
+       "e": 413.458
+      },
+      {
+       "w": "asunción",
+       "s": 413.458,
+       "e": 413.918
+      },
+      {
+       "w": "total",
+       "s": 413.918,
+       "e": 414.258
+      },
+      {
+       "w": "de",
+       "s": 414.258,
+       "e": 414.578
+      },
+      {
+       "w": "una",
+       "s": 414.578,
+       "e": 414.758
+      },
+      {
+       "w": "elección",
+       "s": 414.758,
+       "e": 415.218
+      },
+      {
+       "w": "local?",
+       "s": 415.218,
+       "e": 415.458
+      }
+     ]
+    }
+   ],
+   "fin_voz": 415.918,
+   "beats": 80
+  },
+  {
+   "id": "p28a",
+   "bloque": 3,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Antes de que inicie el proceso electoral",
+    "fuente": "LGIPE art. 121"
+   },
+   "t0": 420.5,
+   "t1": 424.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "p28a_0",
+     "texto": "Solo antes de que inicie el proceso electoral local.",
+     "t0": 420.878,
+     "t1": 423.918,
+     "words": [
+      {
+       "w": "Solo",
+       "s": 420.878,
+       "e": 421.098
+      },
+      {
+       "w": "antes",
+       "s": 421.098,
+       "e": 421.438
+      },
+      {
+       "w": "de",
+       "s": 421.438,
+       "e": 421.658
+      },
+      {
+       "w": "que",
+       "s": 421.658,
+       "e": 421.758
+      },
+      {
+       "w": "inicie",
+       "s": 421.758,
+       "e": 422.198
+      },
+      {
+       "w": "el",
+       "s": 422.198,
+       "e": 422.298
+      },
+      {
+       "w": "proceso",
+       "s": 422.298,
+       "e": 422.598
+      },
+      {
+       "w": "electoral",
+       "s": 422.598,
+       "e": 422.958
+      },
+      {
+       "w": "local.",
+       "s": 422.958,
+       "e": 423.458
+      }
+     ]
+    }
+   ],
+   "fin_voz": 423.918,
+   "beats": 32
+  },
+  {
+   "id": "tema4",
+   "bloque": 4,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "Proceso electoral",
+    "sub": "Tema 4 de 7"
+   },
+   "t0": 424.5,
+   "t1": 428.0,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "tema4_0",
+     "texto": "Tema cuatro: proceso electoral.",
+     "t0": 424.872,
+     "t1": 427.432,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 424.872,
+       "e": 425.112
+      },
+      {
+       "w": "cuatro:",
+       "s": 425.212,
+       "e": 425.312
+      },
+      {
+       "w": "proceso",
+       "s": 426.072,
+       "e": 426.572
+      },
+      {
+       "w": "electoral.",
+       "s": 426.572,
+       "e": 426.732
+      }
+     ]
+    }
+   ],
+   "fin_voz": 427.432,
+   "beats": 28
+  },
+  {
+   "id": "p29q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo inicia el proceso electoral local en Zacatecas?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 29,
+    "de": 50
+   },
+   "t0": 428.0,
+   "t1": 437.5,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p29q_0",
+     "texto": "Veintinueve. ¿Cuándo inicia el proceso electoral local en Zacatecas?",
+     "t0": 428.396,
+     "t1": 432.876,
+     "words": [
+      {
+       "w": "Veintinueve.",
+       "s": 428.606,
+       "e": 428.816
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 429.176,
+       "e": 429.936
+      },
+      {
+       "w": "inicia",
+       "s": 429.936,
+       "e": 430.336
+      },
+      {
+       "w": "el",
+       "s": 430.336,
+       "e": 430.456
+      },
+      {
+       "w": "proceso",
+       "s": 430.456,
+       "e": 430.736
+      },
+      {
+       "w": "electoral",
+       "s": 430.736,
+       "e": 431.116
+      },
+      {
+       "w": "local",
+       "s": 431.116,
+       "e": 431.596
+      },
+      {
+       "w": "en",
+       "s": 431.596,
+       "e": 431.896
+      },
+      {
+       "w": "Zacatecas?",
+       "s": 431.896,
+       "e": 432.476
+      }
+     ]
+    }
+   ],
+   "fin_voz": 432.876,
+   "beats": 76
+  },
+  {
+   "id": "p29a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El 20 de noviembre del año previo a la elección",
+    "fuente": "Ley Electoral de Zacatecas art. 124"
+   },
+   "t0": 437.5,
+   "t1": 441.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "p29a_0",
+     "texto": "El veinte de noviembre del año previo a la elección.",
+     "t0": 437.902,
+     "t1": 440.862,
+     "words": [
+      {
+       "w": "El",
+       "s": 437.902,
+       "e": 438.002
+      },
+      {
+       "w": "veinte",
+       "s": 438.002,
+       "e": 438.302
+      },
+      {
+       "w": "de",
+       "s": 438.302,
+       "e": 438.462
+      },
+      {
+       "w": "noviembre",
+       "s": 438.462,
+       "e": 438.982
+      },
+      {
+       "w": "del",
+       "s": 438.982,
+       "e": 439.162
+      },
+      {
+       "w": "año",
+       "s": 439.162,
+       "e": 439.342
+      },
+      {
+       "w": "previo",
+       "s": 439.342,
+       "e": 439.902
+      },
+      {
+       "w": "a",
+       "s": 439.902,
+       "e": 439.962
+      },
+      {
+       "w": "la",
+       "s": 439.962,
+       "e": 440.022
+      },
+      {
+       "w": "elección.",
+       "s": 440.022,
+       "e": 440.482
+      }
+     ]
+    }
+   ],
+   "fin_voz": 440.862,
+   "beats": 32
+  },
+  {
+   "id": "p30q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuáles son las etapas del proceso electoral?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 30,
+    "de": 50
+   },
+   "t0": 441.5,
+   "t1": 450.0,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p30q_0",
+     "texto": "Treinta. ¿Cuáles son las etapas del proceso electoral?",
+     "t0": 441.885,
+     "t1": 445.402,
+     "words": [
+      {
+       "w": "Treinta.",
+       "s": 442.035,
+       "e": 442.185
+      },
+      {
+       "w": "¿Cuáles",
+       "s": 442.545,
+       "e": 443.165
+      },
+      {
+       "w": "son",
+       "s": 443.165,
+       "e": 443.305
+      },
+      {
+       "w": "las",
+       "s": 443.305,
+       "e": 443.445
+      },
+      {
+       "w": "etapas",
+       "s": 443.445,
+       "e": 443.965
+      },
+      {
+       "w": "del",
+       "s": 443.965,
+       "e": 444.065
+      },
+      {
+       "w": "proceso",
+       "s": 444.065,
+       "e": 444.385
+      },
+      {
+       "w": "electoral?",
+       "s": 444.385,
+       "e": 444.825
+      }
+     ]
+    }
+   ],
+   "fin_voz": 445.402,
+   "beats": 68
+  },
+  {
+   "id": "p30a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Preparación · jornada · resultados y validez · dictamen de gobernador",
+    "fuente": "Ley Electoral de Zacatecas art. 125"
+   },
+   "t0": 450.0,
+   "t1": 457.5,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p30a_0",
+     "texto": "Preparación, jornada electoral, resultados y declaraciones de validez, y dictamen de gobernador.",
+     "t0": 450.372,
+     "t1": 456.932,
+     "words": [
+      {
+       "w": "Preparación,",
+       "s": 450.372,
+       "e": 451.072
+      },
+      {
+       "w": "jornada",
+       "s": 451.092,
+       "e": 451.772
+      },
+      {
+       "w": "electoral,",
+       "s": 451.772,
+       "e": 452.112
+      },
+      {
+       "w": "resultados",
+       "s": 452.392,
+       "e": 453.012
+      },
+      {
+       "w": "y",
+       "s": 453.012,
+       "e": 453.472
+      },
+      {
+       "w": "declaraciones",
+       "s": 453.472,
+       "e": 454.132
+      },
+      {
+       "w": "de",
+       "s": 454.132,
+       "e": 454.292
+      },
+      {
+       "w": "validez,",
+       "s": 454.292,
+       "e": 454.752
+      },
+      {
+       "w": "y",
+       "s": 454.752,
+       "e": 455.272
+      },
+      {
+       "w": "dictamen",
+       "s": 455.272,
+       "e": 455.972
+      },
+      {
+       "w": "de",
+       "s": 455.972,
+       "e": 456.092
+      },
+      {
+       "w": "gobernador.",
+       "s": 456.092,
+       "e": 456.612
+      }
+     ]
+    }
+   ],
+   "fin_voz": 456.932,
+   "beats": 60
+  },
+  {
+   "id": "p31q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo empieza y cuándo termina la jornada electoral?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 31,
+    "de": 50
+   },
+   "t0": 457.5,
+   "t1": 467.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p31q_0",
+     "texto": "Treinta y uno. ¿Cuándo empieza y cuándo termina la jornada electoral?",
+     "t0": 457.896,
+     "t1": 462.376,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 458.006,
+       "e": 458.116
+      },
+      {
+       "w": "y",
+       "s": 458.116,
+       "e": 458.226
+      },
+      {
+       "w": "uno.",
+       "s": 458.226,
+       "e": 458.336
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 458.556,
+       "e": 459.356
+      },
+      {
+       "w": "empieza",
+       "s": 459.356,
+       "e": 459.576
+      },
+      {
+       "w": "y",
+       "s": 459.576,
+       "e": 460.056
+      },
+      {
+       "w": "cuándo",
+       "s": 460.056,
+       "e": 460.576
+      },
+      {
+       "w": "termina",
+       "s": 460.576,
+       "e": 461.056
+      },
+      {
+       "w": "la",
+       "s": 461.056,
+       "e": 461.156
+      },
+      {
+       "w": "jornada",
+       "s": 461.156,
+       "e": 461.616
+      },
+      {
+       "w": "electoral?",
+       "s": 461.616,
+       "e": 461.876
+      }
+     ]
+    }
+   ],
+   "fin_voz": 462.376,
+   "beats": 76
+  },
+  {
+   "id": "p31a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "8:00 h del 1.er domingo de junio → clausura de la casilla",
+    "fuente": "Ley Electoral de Zacatecas art. 127"
+   },
+   "t0": 467.0,
+   "t1": 473.5,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "p31a_0",
+     "texto": "Empieza a las ocho de la mañana del primer domingo de junio y termina con la clausura de la casilla.",
+     "t0": 467.313,
+     "t1": 473.07,
+     "words": [
+      {
+       "w": "Empieza",
+       "s": 467.313,
+       "e": 467.733
+      },
+      {
+       "w": "a",
+       "s": 467.733,
+       "e": 467.873
+      },
+      {
+       "w": "las",
+       "s": 467.873,
+       "e": 467.933
+      },
+      {
+       "w": "ocho",
+       "s": 467.933,
+       "e": 468.293
+      },
+      {
+       "w": "de",
+       "s": 468.293,
+       "e": 468.473
+      },
+      {
+       "w": "la",
+       "s": 468.473,
+       "e": 468.573
+      },
+      {
+       "w": "mañana",
+       "s": 468.573,
+       "e": 468.953
+      },
+      {
+       "w": "del",
+       "s": 468.953,
+       "e": 469.153
+      },
+      {
+       "w": "primer",
+       "s": 469.153,
+       "e": 469.453
+      },
+      {
+       "w": "domingo",
+       "s": 469.453,
+       "e": 470.033
+      },
+      {
+       "w": "de",
+       "s": 470.033,
+       "e": 470.133
+      },
+      {
+       "w": "junio",
+       "s": 470.133,
+       "e": 470.553
+      },
+      {
+       "w": "y",
+       "s": 470.553,
+       "e": 470.713
+      },
+      {
+       "w": "termina",
+       "s": 470.713,
+       "e": 471.353
+      },
+      {
+       "w": "con",
+       "s": 471.353,
+       "e": 471.493
+      },
+      {
+       "w": "la",
+       "s": 471.493,
+       "e": 471.593
+      },
+      {
+       "w": "clausura",
+       "s": 471.593,
+       "e": 472.133
+      },
+      {
+       "w": "de",
+       "s": 472.133,
+       "e": 472.213
+      },
+      {
+       "w": "la",
+       "s": 472.213,
+       "e": 472.273
+      },
+      {
+       "w": "casilla.",
+       "s": 472.273,
+       "e": 472.753
+      }
+     ]
+    }
+   ],
+   "fin_voz": 473.07,
+   "beats": 52
+  },
+  {
+   "id": "p32q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo inicia la etapa de resultados y declaraciones de validez?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 32,
+    "de": 50
+   },
+   "t0": 473.5,
+   "t1": 483.5,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p32q_0",
+     "texto": "Treinta y dos. ¿Cuándo inicia la etapa de resultados y declaraciones de validez?",
+     "t0": 473.878,
+     "t1": 478.918,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 473.973,
+       "e": 474.068
+      },
+      {
+       "w": "y",
+       "s": 474.068,
+       "e": 474.163
+      },
+      {
+       "w": "dos.",
+       "s": 474.163,
+       "e": 474.258
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 474.678,
+       "e": 475.438
+      },
+      {
+       "w": "inicia",
+       "s": 475.438,
+       "e": 475.838
+      },
+      {
+       "w": "la",
+       "s": 475.838,
+       "e": 475.918
+      },
+      {
+       "w": "etapa",
+       "s": 475.918,
+       "e": 476.278
+      },
+      {
+       "w": "de",
+       "s": 476.278,
+       "e": 476.378
+      },
+      {
+       "w": "resultados",
+       "s": 476.378,
+       "e": 476.678
+      },
+      {
+       "w": "y",
+       "s": 476.678,
+       "e": 477.258
+      },
+      {
+       "w": "declaraciones",
+       "s": 477.258,
+       "e": 477.958
+      },
+      {
+       "w": "de",
+       "s": 477.958,
+       "e": 478.098
+      },
+      {
+       "w": "validez?",
+       "s": 478.098,
+       "e": 478.478
+      }
+     ]
+    }
+   ],
+   "fin_voz": 478.918,
+   "beats": 80
+  },
+  {
+   "id": "p32a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Con la remisión de los paquetes a los consejos distritales y municipales",
+    "fuente": "Ley Electoral de Zacatecas art. 128"
+   },
+   "t0": 483.5,
+   "t1": 490.5,
+   "compases": 14,
+   "frases": [
+    {
+     "key": "p32a_0",
+     "texto": "Con la remisión de la documentación y expedientes electorales a los consejos distritales y municipales.",
+     "t0": 483.89,
+     "t1": 489.89,
+     "words": [
+      {
+       "w": "Con",
+       "s": 483.89,
+       "e": 483.99
+      },
+      {
+       "w": "la",
+       "s": 483.99,
+       "e": 484.09
+      },
+      {
+       "w": "remisión",
+       "s": 484.09,
+       "e": 484.55
+      },
+      {
+       "w": "de",
+       "s": 484.55,
+       "e": 484.69
+      },
+      {
+       "w": "la",
+       "s": 484.69,
+       "e": 484.73
+      },
+      {
+       "w": "documentación",
+       "s": 484.73,
+       "e": 485.57
+      },
+      {
+       "w": "y",
+       "s": 485.57,
+       "e": 485.73
+      },
+      {
+       "w": "expedientes",
+       "s": 485.73,
+       "e": 486.37
+      },
+      {
+       "w": "electorales",
+       "s": 486.37,
+       "e": 487.07
+      },
+      {
+       "w": "a",
+       "s": 487.07,
+       "e": 487.27
+      },
+      {
+       "w": "los",
+       "s": 487.27,
+       "e": 487.39
+      },
+      {
+       "w": "consejos",
+       "s": 487.39,
+       "e": 487.95
+      },
+      {
+       "w": "distritales",
+       "s": 487.95,
+       "e": 488.75
+      },
+      {
+       "w": "y",
+       "s": 488.75,
+       "e": 488.85
+      },
+      {
+       "w": "municipales.",
+       "s": 488.85,
+       "e": 489.55
+      }
+     ]
+    }
+   ],
+   "fin_voz": 489.89,
+   "beats": 56
+  },
+  {
+   "id": "p33q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Quién declara al gobernador electo?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 33,
+    "de": 50
+   },
+   "t0": 490.5,
+   "t1": 499.0,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p33q_0",
+     "texto": "Treinta y tres. ¿Quién declara al gobernador electo?",
+     "t0": 490.861,
+     "t1": 494.458,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 490.966,
+       "e": 491.071
+      },
+      {
+       "w": "y",
+       "s": 491.071,
+       "e": 491.176
+      },
+      {
+       "w": "tres.",
+       "s": 491.176,
+       "e": 491.281
+      },
+      {
+       "w": "¿Quién",
+       "s": 491.661,
+       "e": 492.421
+      },
+      {
+       "w": "declara",
+       "s": 492.421,
+       "e": 492.961
+      },
+      {
+       "w": "al",
+       "s": 492.961,
+       "e": 493.121
+      },
+      {
+       "w": "gobernador",
+       "s": 493.121,
+       "e": 493.681
+      },
+      {
+       "w": "electo?",
+       "s": 493.681,
+       "e": 494.181
+      }
+     ]
+    }
+   ],
+   "fin_voz": 494.458,
+   "beats": 68
+  },
+  {
+   "id": "p33a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El Tribunal de Justicia Electoral del Estado",
+    "fuente": "Ley Electoral de Zacatecas art. 129"
+   },
+   "t0": 499.0,
+   "t1": 502.5,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "p33a_0",
+     "texto": "El Tribunal de Justicia Electoral del Estado.",
+     "t0": 499.324,
+     "t1": 502.044,
+     "words": [
+      {
+       "w": "El",
+       "s": 499.324,
+       "e": 499.424
+      },
+      {
+       "w": "Tribunal",
+       "s": 499.424,
+       "e": 499.904
+      },
+      {
+       "w": "de",
+       "s": 499.904,
+       "e": 500.024
+      },
+      {
+       "w": "Justicia",
+       "s": 500.024,
+       "e": 500.604
+      },
+      {
+       "w": "Electoral",
+       "s": 500.604,
+       "e": 501.044
+      },
+      {
+       "w": "del",
+       "s": 501.044,
+       "e": 501.284
+      },
+      {
+       "w": "Estado.",
+       "s": 501.284,
+       "e": 501.564
+      }
+     ]
+    }
+   ],
+   "fin_voz": 502.044,
+   "beats": 28
+  },
+  {
+   "id": "p34q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cada cuánto se elige a diputados, ayuntamientos y gobernador?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 34,
+    "de": 50
+   },
+   "t0": 502.5,
+   "t1": 512.5,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p34q_0",
+     "texto": "Treinta y cuatro. ¿Cada cuánto se elige a diputados, ayuntamientos y gobernador?",
+     "t0": 502.836,
+     "t1": 508.017,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 502.951,
+       "e": 503.066
+      },
+      {
+       "w": "y",
+       "s": 503.066,
+       "e": 503.181
+      },
+      {
+       "w": "cuatro.",
+       "s": 503.181,
+       "e": 503.296
+      },
+      {
+       "w": "¿Cada",
+       "s": 503.616,
+       "e": 504.236
+      },
+      {
+       "w": "cuánto",
+       "s": 504.236,
+       "e": 504.736
+      },
+      {
+       "w": "se",
+       "s": 504.736,
+       "e": 504.816
+      },
+      {
+       "w": "elige",
+       "s": 504.816,
+       "e": 505.196
+      },
+      {
+       "w": "a",
+       "s": 505.196,
+       "e": 505.276
+      },
+      {
+       "w": "diputados,",
+       "s": 505.276,
+       "e": 505.936
+      },
+      {
+       "w": "ayuntamientos",
+       "s": 505.936,
+       "e": 506.836
+      },
+      {
+       "w": "y",
+       "s": 506.836,
+       "e": 507.076
+      },
+      {
+       "w": "gobernador?",
+       "s": 507.076,
+       "e": 507.676
+      }
+     ]
+    }
+   ],
+   "fin_voz": 508.017,
+   "beats": 80
+  },
+  {
+   "id": "p34a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Diputados y ayuntamientos: 3 años · gobernador: 6 años",
+    "fuente": "Ley Electoral de Zacatecas art. 30"
+   },
+   "t0": 512.5,
+   "t1": 518.0,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p34a_0",
+     "texto": "Diputados y ayuntamientos cada tres años; gobernador, cada seis.",
+     "t0": 512.8,
+     "t1": 517.6,
+     "words": [
+      {
+       "w": "Diputados",
+       "s": 512.8,
+       "e": 513.38
+      },
+      {
+       "w": "y",
+       "s": 513.38,
+       "e": 513.48
+      },
+      {
+       "w": "ayuntamientos",
+       "s": 513.48,
+       "e": 514.2
+      },
+      {
+       "w": "cada",
+       "s": 514.2,
+       "e": 514.46
+      },
+      {
+       "w": "tres",
+       "s": 514.46,
+       "e": 514.78
+      },
+      {
+       "w": "años;",
+       "s": 514.78,
+       "e": 515.16
+      },
+      {
+       "w": "gobernador,",
+       "s": 515.66,
+       "e": 516.38
+      },
+      {
+       "w": "cada",
+       "s": 516.38,
+       "e": 516.8
+      },
+      {
+       "w": "seis.",
+       "s": 516.8,
+       "e": 517.16
+      }
+     ]
+    }
+   ],
+   "fin_voz": 517.6,
+   "beats": 44
+  },
+  {
+   "id": "p35q",
+   "bloque": 4,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuántos diputados y ayuntamientos se eligen en Zacatecas?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 35,
+    "de": 50
+   },
+   "t0": 518.0,
+   "t1": 527.5,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p35q_0",
+     "texto": "Treinta y cinco. ¿Cuántos diputados y ayuntamientos se eligen en Zacatecas?",
+     "t0": 518.3,
+     "t1": 523.1,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 518.415,
+       "e": 518.53
+      },
+      {
+       "w": "y",
+       "s": 518.53,
+       "e": 518.645
+      },
+      {
+       "w": "cinco.",
+       "s": 518.645,
+       "e": 518.76
+      },
+      {
+       "w": "¿Cuántos",
+       "s": 519.24,
+       "e": 520.08
+      },
+      {
+       "w": "diputados",
+       "s": 520.08,
+       "e": 520.64
+      },
+      {
+       "w": "y",
+       "s": 520.64,
+       "e": 520.76
+      },
+      {
+       "w": "ayuntamientos",
+       "s": 520.76,
+       "e": 521.48
+      },
+      {
+       "w": "se",
+       "s": 521.48,
+       "e": 521.66
+      },
+      {
+       "w": "eligen",
+       "s": 521.66,
+       "e": 522.08
+      },
+      {
+       "w": "en",
+       "s": 522.08,
+       "e": 522.22
+      },
+      {
+       "w": "Zacatecas?",
+       "s": 522.22,
+       "e": 522.78
+      }
+     ]
+    }
+   ],
+   "fin_voz": 523.1,
+   "beats": 76
+  },
+  {
+   "id": "p35a",
+   "bloque": 4,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "18 de mayoría + 12 plurinominales · 58 ayuntamientos",
+    "fuente": "Ley Electoral de Zacatecas art. 123"
+   },
+   "t0": 527.5,
+   "t1": 534.0,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "p35a_0",
+     "texto": "Dieciocho diputados de mayoría, doce plurinominales y cincuenta y ocho ayuntamientos.",
+     "t0": 527.86,
+     "t1": 533.46,
+     "words": [
+      {
+       "w": "Dieciocho",
+       "s": 527.86,
+       "e": 528.26
+      },
+      {
+       "w": "diputados",
+       "s": 528.26,
+       "e": 528.96
+      },
+      {
+       "w": "de",
+       "s": 528.96,
+       "e": 529.02
+      },
+      {
+       "w": "mayoría,",
+       "s": 529.02,
+       "e": 529.26
+      },
+      {
+       "w": "doce",
+       "s": 529.62,
+       "e": 530.14
+      },
+      {
+       "w": "plurinominales",
+       "s": 530.14,
+       "e": 531.22
+      },
+      {
+       "w": "y",
+       "s": 531.22,
+       "e": 531.44
+      },
+      {
+       "w": "cincuenta",
+       "s": 531.44,
+       "e": 531.613
+      },
+      {
+       "w": "y",
+       "s": 531.613,
+       "e": 531.787
+      },
+      {
+       "w": "ocho",
+       "s": 531.787,
+       "e": 531.96
+      },
+      {
+       "w": "ayuntamientos.",
+       "s": 531.96,
+       "e": 533.08
+      }
+     ]
+    }
+   ],
+   "fin_voz": 533.46,
+   "beats": 52
+  },
+  {
+   "id": "tema5",
+   "bloque": 5,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "Jornada electoral",
+    "sub": "Tema 5 de 7"
+   },
+   "t0": 534.0,
+   "t1": 537.5,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "tema5_0",
+     "texto": "Tema cinco: jornada electoral.",
+     "t0": 534.372,
+     "t1": 536.932,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 534.372,
+       "e": 534.612
+      },
+      {
+       "w": "cinco:",
+       "s": 534.712,
+       "e": 534.812
+      },
+      {
+       "w": "jornada",
+       "s": 535.452,
+       "e": 535.992
+      },
+      {
+       "w": "electoral.",
+       "s": 535.992,
+       "e": 536.232
+      }
+     ]
+    }
+   ],
+   "fin_voz": 536.932,
+   "beats": 28
+  },
+  {
+   "id": "p36q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿A qué hora se presentan los funcionarios a instalar la casilla?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 36,
+    "de": 50
+   },
+   "t0": 537.5,
+   "t1": 547.5,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p36q_0",
+     "texto": "Treinta y seis. ¿A qué hora se presentan los funcionarios a instalar la casilla?",
+     "t0": 537.926,
+     "t1": 542.806,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 538.036,
+       "e": 538.146
+      },
+      {
+       "w": "y",
+       "s": 538.146,
+       "e": 538.256
+      },
+      {
+       "w": "seis.",
+       "s": 538.256,
+       "e": 538.366
+      },
+      {
+       "w": "¿A",
+       "s": 538.806,
+       "e": 539.466
+      },
+      {
+       "w": "qué",
+       "s": 539.466,
+       "e": 539.526
+      },
+      {
+       "w": "hora",
+       "s": 539.526,
+       "e": 539.786
+      },
+      {
+       "w": "se",
+       "s": 539.786,
+       "e": 539.906
+      },
+      {
+       "w": "presentan",
+       "s": 539.906,
+       "e": 540.466
+      },
+      {
+       "w": "los",
+       "s": 540.466,
+       "e": 540.566
+      },
+      {
+       "w": "funcionarios",
+       "s": 540.566,
+       "e": 541.286
+      },
+      {
+       "w": "a",
+       "s": 541.286,
+       "e": 541.466
+      },
+      {
+       "w": "instalar",
+       "s": 541.466,
+       "e": 541.926
+      },
+      {
+       "w": "la",
+       "s": 541.926,
+       "e": 542.066
+      },
+      {
+       "w": "casilla?",
+       "s": 542.066,
+       "e": 542.486
+      }
+     ]
+    }
+   ],
+   "fin_voz": 542.806,
+   "beats": 80
+  },
+  {
+   "id": "p36a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "A las 7:30 h",
+    "fuente": "LGIPE art. 273"
+   },
+   "t0": 547.5,
+   "t1": 550.5,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "p36a_0",
+     "texto": "A las siete y media de la mañana.",
+     "t0": 547.896,
+     "t1": 549.877,
+     "words": [
+      {
+       "w": "A",
+       "s": 547.896,
+       "e": 547.996
+      },
+      {
+       "w": "las",
+       "s": 547.996,
+       "e": 548.076
+      },
+      {
+       "w": "siete",
+       "s": 548.076,
+       "e": 548.376
+      },
+      {
+       "w": "y",
+       "s": 548.376,
+       "e": 548.576
+      },
+      {
+       "w": "media",
+       "s": 548.576,
+       "e": 548.876
+      },
+      {
+       "w": "de",
+       "s": 548.876,
+       "e": 549.016
+      },
+      {
+       "w": "la",
+       "s": 549.016,
+       "e": 549.116
+      },
+      {
+       "w": "mañana.",
+       "s": 549.116,
+       "e": 549.396
+      }
+     ]
+    }
+   ],
+   "fin_voz": 549.877,
+   "beats": 24
+  },
+  {
+   "id": "p37q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "8:15 h: no llegó la presidenta, pero sí el secretario. ¿Qué pasa?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 37,
+    "de": 50
+   },
+   "t0": 550.5,
+   "t1": 562.0,
+   "compases": 23,
+   "frases": [
+    {
+     "key": "p37q_0",
+     "texto": "Treinta y siete. Son las ocho y cuarto, no llegó la presidenta pero sí el secretario. ¿Qué pasa?",
+     "t0": 550.927,
+     "t1": 557.303,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 551.037,
+       "e": 551.147
+      },
+      {
+       "w": "y",
+       "s": 551.147,
+       "e": 551.257
+      },
+      {
+       "w": "siete.",
+       "s": 551.257,
+       "e": 551.367
+      },
+      {
+       "w": "Son",
+       "s": 551.847,
+       "e": 552.327
+      },
+      {
+       "w": "las",
+       "s": 552.327,
+       "e": 552.507
+      },
+      {
+       "w": "ocho",
+       "s": 552.507,
+       "e": 552.687
+      },
+      {
+       "w": "y",
+       "s": 552.687,
+       "e": 552.847
+      },
+      {
+       "w": "cuarto,",
+       "s": 552.847,
+       "e": 553.047
+      },
+      {
+       "w": "no",
+       "s": 553.307,
+       "e": 553.767
+      },
+      {
+       "w": "llegó",
+       "s": 553.767,
+       "e": 554.027
+      },
+      {
+       "w": "la",
+       "s": 554.027,
+       "e": 554.147
+      },
+      {
+       "w": "presidenta",
+       "s": 554.147,
+       "e": 554.827
+      },
+      {
+       "w": "pero",
+       "s": 554.827,
+       "e": 555.027
+      },
+      {
+       "w": "sí",
+       "s": 555.027,
+       "e": 555.247
+      },
+      {
+       "w": "el",
+       "s": 555.247,
+       "e": 555.507
+      },
+      {
+       "w": "secretario.",
+       "s": 555.507,
+       "e": 556.127
+      },
+      {
+       "w": "¿Qué",
+       "s": 556.207,
+       "e": 556.687
+      },
+      {
+       "w": "pasa?",
+       "s": 556.687,
+       "e": 556.867
+      }
+     ]
+    }
+   ],
+   "fin_voz": 557.303,
+   "beats": 92
+  },
+  {
+   "id": "p37a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El secretario asume la presidencia e integra la mesa",
+    "fuente": "LGIPE art. 274"
+   },
+   "t0": 562.0,
+   "t1": 570.5,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p37a_0",
+     "texto": "El secretario asume la presidencia e integra la mesa con propietarios, suplentes y, si faltan, electores de la fila.",
+     "t0": 562.412,
+     "t1": 569.839,
+     "words": [
+      {
+       "w": "El",
+       "s": 562.412,
+       "e": 562.492
+      },
+      {
+       "w": "secretario",
+       "s": 562.492,
+       "e": 563.092
+      },
+      {
+       "w": "asume",
+       "s": 563.092,
+       "e": 563.432
+      },
+      {
+       "w": "la",
+       "s": 563.432,
+       "e": 563.532
+      },
+      {
+       "w": "presidencia",
+       "s": 563.532,
+       "e": 564.252
+      },
+      {
+       "w": "e",
+       "s": 564.252,
+       "e": 564.392
+      },
+      {
+       "w": "integra",
+       "s": 564.392,
+       "e": 564.932
+      },
+      {
+       "w": "la",
+       "s": 564.932,
+       "e": 565.012
+      },
+      {
+       "w": "mesa",
+       "s": 565.012,
+       "e": 565.232
+      },
+      {
+       "w": "con",
+       "s": 565.232,
+       "e": 565.432
+      },
+      {
+       "w": "propietarios,",
+       "s": 565.432,
+       "e": 566.192
+      },
+      {
+       "w": "suplentes",
+       "s": 566.252,
+       "e": 567.012
+      },
+      {
+       "w": "y,",
+       "s": 567.012,
+       "e": 567.392
+      },
+      {
+       "w": "si",
+       "s": 567.472,
+       "e": 567.792
+      },
+      {
+       "w": "faltan,",
+       "s": 567.792,
+       "e": 568.272
+      },
+      {
+       "w": "electores",
+       "s": 568.292,
+       "e": 569.032
+      },
+      {
+       "w": "de",
+       "s": 569.032,
+       "e": 569.172
+      },
+      {
+       "w": "la",
+       "s": 569.172,
+       "e": 569.232
+      },
+      {
+       "w": "fila.",
+       "s": 569.232,
+       "e": 569.632
+      }
+     ]
+    }
+   ],
+   "fin_voz": 569.839,
+   "beats": 68
+  },
+  {
+   "id": "p38q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Se puede nombrar funcionario de casilla a un representante de partido?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 38,
+    "de": 50
+   },
+   "t0": 570.5,
+   "t1": 581.0,
+   "compases": 21,
+   "frases": [
+    {
+     "key": "p38q_0",
+     "texto": "Treinta y ocho. ¿Se puede nombrar funcionario de casilla a un representante de partido?",
+     "t0": 570.923,
+     "t1": 576.312,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 571.033,
+       "e": 571.143
+      },
+      {
+       "w": "y",
+       "s": 571.143,
+       "e": 571.253
+      },
+      {
+       "w": "ocho.",
+       "s": 571.253,
+       "e": 571.363
+      },
+      {
+       "w": "¿Se",
+       "s": 571.763,
+       "e": 572.303
+      },
+      {
+       "w": "puede",
+       "s": 572.303,
+       "e": 572.503
+      },
+      {
+       "w": "nombrar",
+       "s": 572.503,
+       "e": 572.963
+      },
+      {
+       "w": "funcionario",
+       "s": 572.963,
+       "e": 573.683
+      },
+      {
+       "w": "de",
+       "s": 573.683,
+       "e": 573.763
+      },
+      {
+       "w": "casilla",
+       "s": 573.763,
+       "e": 574.283
+      },
+      {
+       "w": "a",
+       "s": 574.283,
+       "e": 574.463
+      },
+      {
+       "w": "un",
+       "s": 574.463,
+       "e": 574.703
+      },
+      {
+       "w": "representante",
+       "s": 574.703,
+       "e": 575.463
+      },
+      {
+       "w": "de",
+       "s": 575.463,
+       "e": 575.563
+      },
+      {
+       "w": "partido?",
+       "s": 575.563,
+       "e": 575.823
+      }
+     ]
+    }
+   ],
+   "fin_voz": 576.312,
+   "beats": 84
+  },
+  {
+   "id": "p38a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "No, en ningún caso",
+    "fuente": "LGIPE art. 274"
+   },
+   "t0": 581.0,
+   "t1": 584.0,
+   "compases": 6,
+   "frases": [
+    {
+     "key": "p38a_0",
+     "texto": "No, en ningún caso.",
+     "t0": 581.414,
+     "t1": 583.334,
+     "words": [
+      {
+       "w": "No,",
+       "s": 581.414,
+       "e": 581.674
+      },
+      {
+       "w": "en",
+       "s": 581.674,
+       "e": 582.134
+      },
+      {
+       "w": "ningún",
+       "s": 582.134,
+       "e": 582.494
+      },
+      {
+       "w": "caso.",
+       "s": 582.494,
+       "e": 582.894
+      }
+     ]
+    }
+   ],
+   "fin_voz": 583.334,
+   "beats": 24
+  },
+  {
+   "id": "p39q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿A qué hora cierra la votación y cuándo puede ser distinto?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 39,
+    "de": 50
+   },
+   "t0": 584.0,
+   "t1": 594.0,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p39q_0",
+     "texto": "Treinta y nueve. ¿A qué hora cierra la votación, y cuándo puede ser distinto?",
+     "t0": 584.378,
+     "t1": 589.418,
+     "words": [
+      {
+       "w": "Treinta",
+       "s": 584.483,
+       "e": 584.588
+      },
+      {
+       "w": "y",
+       "s": 584.588,
+       "e": 584.693
+      },
+      {
+       "w": "nueve.",
+       "s": 584.693,
+       "e": 584.798
+      },
+      {
+       "w": "¿A",
+       "s": 585.138,
+       "e": 585.738
+      },
+      {
+       "w": "qué",
+       "s": 585.738,
+       "e": 585.858
+      },
+      {
+       "w": "hora",
+       "s": 585.858,
+       "e": 586.078
+      },
+      {
+       "w": "cierra",
+       "s": 586.078,
+       "e": 586.478
+      },
+      {
+       "w": "la",
+       "s": 586.478,
+       "e": 586.598
+      },
+      {
+       "w": "votación,",
+       "s": 586.598,
+       "e": 587.178
+      },
+      {
+       "w": "y",
+       "s": 587.178,
+       "e": 587.578
+      },
+      {
+       "w": "cuándo",
+       "s": 587.578,
+       "e": 588.178
+      },
+      {
+       "w": "puede",
+       "s": 588.178,
+       "e": 588.318
+      },
+      {
+       "w": "ser",
+       "s": 588.318,
+       "e": 588.558
+      },
+      {
+       "w": "distinto?",
+       "s": 588.558,
+       "e": 589.118
+      }
+     ]
+    }
+   ],
+   "fin_voz": 589.418,
+   "beats": 80
+  },
+  {
+   "id": "p39a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "18:00 h · después solo si hay electores formados · antes si votó toda la lista",
+    "fuente": "LGIPE art. 285"
+   },
+   "t0": 594.0,
+   "t1": 602.5,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p39a_0",
+     "texto": "A las seis de la tarde. Después, solo si hay electores formados; antes, solo si ya votó toda la lista nominal.",
+     "t0": 594.312,
+     "t1": 602.072,
+     "words": [
+      {
+       "w": "A",
+       "s": 594.312,
+       "e": 594.412
+      },
+      {
+       "w": "las",
+       "s": 594.412,
+       "e": 594.492
+      },
+      {
+       "w": "seis",
+       "s": 594.492,
+       "e": 594.732
+      },
+      {
+       "w": "de",
+       "s": 594.732,
+       "e": 594.892
+      },
+      {
+       "w": "la",
+       "s": 594.892,
+       "e": 594.972
+      },
+      {
+       "w": "tarde.",
+       "s": 594.972,
+       "e": 595.312
+      },
+      {
+       "w": "Después,",
+       "s": 595.612,
+       "e": 596.092
+      },
+      {
+       "w": "solo",
+       "s": 596.372,
+       "e": 596.812
+      },
+      {
+       "w": "si",
+       "s": 596.812,
+       "e": 597.052
+      },
+      {
+       "w": "hay",
+       "s": 597.052,
+       "e": 597.232
+      },
+      {
+       "w": "electores",
+       "s": 597.232,
+       "e": 597.692
+      },
+      {
+       "w": "formados;",
+       "s": 597.692,
+       "e": 598.232
+      },
+      {
+       "w": "antes,",
+       "s": 598.612,
+       "e": 599.092
+      },
+      {
+       "w": "solo",
+       "s": 599.312,
+       "e": 599.772
+      },
+      {
+       "w": "si",
+       "s": 599.772,
+       "e": 600.012
+      },
+      {
+       "w": "ya",
+       "s": 600.012,
+       "e": 600.232
+      },
+      {
+       "w": "votó",
+       "s": 600.232,
+       "e": 600.592
+      },
+      {
+       "w": "toda",
+       "s": 600.592,
+       "e": 600.872
+      },
+      {
+       "w": "la",
+       "s": 600.872,
+       "e": 601.092
+      },
+      {
+       "w": "lista",
+       "s": 601.092,
+       "e": 601.332
+      },
+      {
+       "w": "nominal.",
+       "s": 601.332,
+       "e": 601.572
+      }
+     ]
+    }
+   ],
+   "fin_voz": 602.072,
+   "beats": 68
+  },
+  {
+   "id": "p40q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo es nulo un voto?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 40,
+    "de": 50
+   },
+   "t0": 602.5,
+   "t1": 610.5,
+   "compases": 16,
+   "frases": [
+    {
+     "key": "p40q_0",
+     "texto": "Cuarenta. ¿Cuándo es nulo un voto?",
+     "t0": 602.943,
+     "t1": 605.767,
+     "words": [
+      {
+       "w": "Cuarenta.",
+       "s": 603.133,
+       "e": 603.323
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 603.623,
+       "e": 604.383
+      },
+      {
+       "w": "es",
+       "s": 604.383,
+       "e": 604.423
+      },
+      {
+       "w": "nulo",
+       "s": 604.423,
+       "e": 604.863
+      },
+      {
+       "w": "un",
+       "s": 604.863,
+       "e": 605.063
+      },
+      {
+       "w": "voto?",
+       "s": 605.063,
+       "e": 605.523
+      }
+     ]
+    }
+   ],
+   "fin_voz": 605.767,
+   "beats": 64
+  },
+  {
+   "id": "p40a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Boleta sin marcar · o 2 o más cuadros marcados sin coalición",
+    "fuente": "LGIPE art. 288"
+   },
+   "t0": 610.5,
+   "t1": 618.0,
+   "compases": 15,
+   "frases": [
+    {
+     "key": "p40a_0",
+     "texto": "Cuando la boleta no tiene marca, o tiene dos o más cuadros marcados sin coalición entre esos partidos.",
+     "t0": 610.85,
+     "t1": 617.482,
+     "words": [
+      {
+       "w": "Cuando",
+       "s": 610.85,
+       "e": 610.99
+      },
+      {
+       "w": "la",
+       "s": 610.99,
+       "e": 611.15
+      },
+      {
+       "w": "boleta",
+       "s": 611.15,
+       "e": 611.51
+      },
+      {
+       "w": "no",
+       "s": 611.51,
+       "e": 611.73
+      },
+      {
+       "w": "tiene",
+       "s": 611.73,
+       "e": 611.99
+      },
+      {
+       "w": "marca,",
+       "s": 611.99,
+       "e": 612.33
+      },
+      {
+       "w": "o",
+       "s": 612.33,
+       "e": 612.83
+      },
+      {
+       "w": "tiene",
+       "s": 612.83,
+       "e": 613.13
+      },
+      {
+       "w": "dos",
+       "s": 613.13,
+       "e": 613.59
+      },
+      {
+       "w": "o",
+       "s": 613.59,
+       "e": 613.85
+      },
+      {
+       "w": "más",
+       "s": 613.85,
+       "e": 614.13
+      },
+      {
+       "w": "cuadros",
+       "s": 614.13,
+       "e": 614.63
+      },
+      {
+       "w": "marcados",
+       "s": 614.63,
+       "e": 615.13
+      },
+      {
+       "w": "sin",
+       "s": 615.13,
+       "e": 615.39
+      },
+      {
+       "w": "coalición",
+       "s": 615.39,
+       "e": 615.99
+      },
+      {
+       "w": "entre",
+       "s": 615.99,
+       "e": 616.25
+      },
+      {
+       "w": "esos",
+       "s": 616.25,
+       "e": 616.51
+      },
+      {
+       "w": "partidos.",
+       "s": 616.51,
+       "e": 617.11
+      }
+     ]
+    }
+   ],
+   "fin_voz": 617.482,
+   "beats": 60
+  },
+  {
+   "id": "p41q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Quién cuenta las boletas sobrantes y cómo las inutiliza?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 41,
+    "de": 50
+   },
+   "t0": 618.0,
+   "t1": 628.0,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p41q_0",
+     "texto": "Cuarenta y uno. ¿Quién cuenta las boletas sobrantes, y cómo las inutiliza?",
+     "t0": 618.39,
+     "t1": 623.39,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 618.51,
+       "e": 618.63
+      },
+      {
+       "w": "y",
+       "s": 618.63,
+       "e": 618.75
+      },
+      {
+       "w": "uno.",
+       "s": 618.75,
+       "e": 618.87
+      },
+      {
+       "w": "¿Quién",
+       "s": 619.11,
+       "e": 619.91
+      },
+      {
+       "w": "cuenta",
+       "s": 619.91,
+       "e": 620.15
+      },
+      {
+       "w": "las",
+       "s": 620.15,
+       "e": 620.33
+      },
+      {
+       "w": "boletas",
+       "s": 620.33,
+       "e": 620.77
+      },
+      {
+       "w": "sobrantes,",
+       "s": 620.77,
+       "e": 621.33
+      },
+      {
+       "w": "y",
+       "s": 621.33,
+       "e": 621.79
+      },
+      {
+       "w": "cómo",
+       "s": 621.79,
+       "e": 622.15
+      },
+      {
+       "w": "las",
+       "s": 622.15,
+       "e": 622.41
+      },
+      {
+       "w": "inutiliza?",
+       "s": 622.41,
+       "e": 623.07
+      }
+     ]
+    }
+   ],
+   "fin_voz": 623.39,
+   "beats": 80
+  },
+  {
+   "id": "p41a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El secretario · con 2 rayas diagonales",
+    "fuente": "LGIPE art. 290"
+   },
+   "t0": 628.0,
+   "t1": 632.5,
+   "compases": 9,
+   "frases": [
+    {
+     "key": "p41a_0",
+     "texto": "El secretario de la mesa, con dos rayas diagonales de tinta.",
+     "t0": 628.312,
+     "t1": 632.072,
+     "words": [
+      {
+       "w": "El",
+       "s": 628.312,
+       "e": 628.412
+      },
+      {
+       "w": "secretario",
+       "s": 628.412,
+       "e": 628.992
+      },
+      {
+       "w": "de",
+       "s": 628.992,
+       "e": 629.072
+      },
+      {
+       "w": "la",
+       "s": 629.072,
+       "e": 629.152
+      },
+      {
+       "w": "mesa,",
+       "s": 629.152,
+       "e": 629.492
+      },
+      {
+       "w": "con",
+       "s": 629.572,
+       "e": 630.012
+      },
+      {
+       "w": "dos",
+       "s": 630.012,
+       "e": 630.292
+      },
+      {
+       "w": "rayas",
+       "s": 630.292,
+       "e": 630.772
+      },
+      {
+       "w": "diagonales",
+       "s": 630.772,
+       "e": 631.272
+      },
+      {
+       "w": "de",
+       "s": 631.272,
+       "e": 631.412
+      },
+      {
+       "w": "tinta.",
+       "s": 631.412,
+       "e": 631.772
+      }
+     ]
+    }
+   ],
+   "fin_voz": 632.072,
+   "beats": 36
+  },
+  {
+   "id": "p42q",
+   "bloque": 5,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Plazos para entregar el paquete electoral al consejo?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 42,
+    "de": 50
+   },
+   "t0": 632.5,
+   "t1": 642.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p42q_0",
+     "texto": "Cuarenta y dos. ¿Qué plazos hay para entregar el paquete electoral al consejo?",
+     "t0": 632.907,
+     "t1": 637.352,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 633.017,
+       "e": 633.127
+      },
+      {
+       "w": "y",
+       "s": 633.127,
+       "e": 633.237
+      },
+      {
+       "w": "dos.",
+       "s": 633.237,
+       "e": 633.347
+      },
+      {
+       "w": "¿Qué",
+       "s": 633.667,
+       "e": 634.287
+      },
+      {
+       "w": "plazos",
+       "s": 634.287,
+       "e": 634.627
+      },
+      {
+       "w": "hay",
+       "s": 634.627,
+       "e": 634.807
+      },
+      {
+       "w": "para",
+       "s": 634.807,
+       "e": 634.987
+      },
+      {
+       "w": "entregar",
+       "s": 634.987,
+       "e": 635.427
+      },
+      {
+       "w": "el",
+       "s": 635.427,
+       "e": 635.547
+      },
+      {
+       "w": "paquete",
+       "s": 635.547,
+       "e": 635.947
+      },
+      {
+       "w": "electoral",
+       "s": 635.947,
+       "e": 636.307
+      },
+      {
+       "w": "al",
+       "s": 636.307,
+       "e": 636.587
+      },
+      {
+       "w": "consejo?",
+       "s": 636.587,
+       "e": 637.107
+      }
+     ]
+    }
+   ],
+   "fin_voz": 637.352,
+   "beats": 76
+  },
+  {
+   "id": "p42a",
+   "bloque": 5,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Inmediato en la cabecera · 12 h urbana · 24 h rural",
+    "fuente": "LGIPE art. 299"
+   },
+   "t0": 642.0,
+   "t1": 648.5,
+   "compases": 13,
+   "frases": [
+    {
+     "key": "p42a_0",
+     "texto": "Inmediato en la cabecera, hasta doce horas si es urbana y hasta veinticuatro si es rural.",
+     "t0": 642.336,
+     "t1": 648.016,
+     "words": [
+      {
+       "w": "Inmediato",
+       "s": 642.336,
+       "e": 642.916
+      },
+      {
+       "w": "en",
+       "s": 642.916,
+       "e": 642.996
+      },
+      {
+       "w": "la",
+       "s": 642.996,
+       "e": 643.036
+      },
+      {
+       "w": "cabecera,",
+       "s": 643.036,
+       "e": 643.656
+      },
+      {
+       "w": "hasta",
+       "s": 643.696,
+       "e": 644.176
+      },
+      {
+       "w": "doce",
+       "s": 644.176,
+       "e": 644.576
+      },
+      {
+       "w": "horas",
+       "s": 644.576,
+       "e": 644.956
+      },
+      {
+       "w": "si",
+       "s": 644.956,
+       "e": 645.116
+      },
+      {
+       "w": "es",
+       "s": 645.116,
+       "e": 645.236
+      },
+      {
+       "w": "urbana",
+       "s": 645.236,
+       "e": 645.676
+      },
+      {
+       "w": "y",
+       "s": 645.676,
+       "e": 645.916
+      },
+      {
+       "w": "hasta",
+       "s": 645.916,
+       "e": 646.176
+      },
+      {
+       "w": "veinticuatro",
+       "s": 646.176,
+       "e": 646.556
+      },
+      {
+       "w": "si",
+       "s": 646.556,
+       "e": 647.156
+      },
+      {
+       "w": "es",
+       "s": 647.156,
+       "e": 647.336
+      },
+      {
+       "w": "rural.",
+       "s": 647.336,
+       "e": 647.596
+      }
+     ]
+    }
+   ],
+   "fin_voz": 648.016,
+   "beats": 52
+  },
+  {
+   "id": "tema6",
+   "bloque": 6,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "Cómputos y recuentos",
+    "sub": "Tema 6 de 7"
+   },
+   "t0": 648.5,
+   "t1": 652.5,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "tema6_0",
+     "texto": "Tema seis: cómputos y recuentos.",
+     "t0": 648.906,
+     "t1": 651.853,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 648.906,
+       "e": 649.146
+      },
+      {
+       "w": "seis:",
+       "s": 649.246,
+       "e": 649.346
+      },
+      {
+       "w": "cómputos",
+       "s": 650.046,
+       "e": 650.526
+      },
+      {
+       "w": "y",
+       "s": 650.526,
+       "e": 650.706
+      },
+      {
+       "w": "recuentos.",
+       "s": 650.706,
+       "e": 651.526
+      }
+     ]
+    }
+   ],
+   "fin_voz": 651.853,
+   "beats": 32
+  },
+  {
+   "id": "p43q",
+   "bloque": 6,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo empiezan los cómputos distritales y municipales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 43,
+    "de": 50
+   },
+   "t0": 652.5,
+   "t1": 662.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p43q_0",
+     "texto": "Cuarenta y tres. ¿Cuándo empiezan los cómputos distritales y municipales?",
+     "t0": 652.831,
+     "t1": 657.527,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 652.941,
+       "e": 653.051
+      },
+      {
+       "w": "y",
+       "s": 653.051,
+       "e": 653.161
+      },
+      {
+       "w": "tres.",
+       "s": 653.161,
+       "e": 653.271
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 653.671,
+       "e": 654.471
+      },
+      {
+       "w": "empiezan",
+       "s": 654.471,
+       "e": 654.911
+      },
+      {
+       "w": "los",
+       "s": 654.911,
+       "e": 655.031
+      },
+      {
+       "w": "cómputos",
+       "s": 655.031,
+       "e": 655.491
+      },
+      {
+       "w": "distritales",
+       "s": 655.491,
+       "e": 656.371
+      },
+      {
+       "w": "y",
+       "s": 656.371,
+       "e": 656.451
+      },
+      {
+       "w": "municipales?",
+       "s": 656.451,
+       "e": 657.131
+      }
+     ]
+    }
+   ],
+   "fin_voz": 657.527,
+   "beats": 76
+  },
+  {
+   "id": "p43a",
+   "bloque": 6,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Miércoles siguiente a la elección, 9:00 h",
+    "fuente": "Ley Electoral de Zacatecas arts. 258 y 265"
+   },
+   "t0": 662.0,
+   "t1": 666.5,
+   "compases": 9,
+   "frases": [
+    {
+     "key": "p43a_0",
+     "texto": "A las nueve de la mañana del miércoles siguiente a la elección.",
+     "t0": 662.432,
+     "t1": 665.792,
+     "words": [
+      {
+       "w": "A",
+       "s": 662.432,
+       "e": 662.532
+      },
+      {
+       "w": "las",
+       "s": 662.532,
+       "e": 662.592
+      },
+      {
+       "w": "nueve",
+       "s": 662.592,
+       "e": 662.832
+      },
+      {
+       "w": "de",
+       "s": 662.832,
+       "e": 663.012
+      },
+      {
+       "w": "la",
+       "s": 663.012,
+       "e": 663.112
+      },
+      {
+       "w": "mañana",
+       "s": 663.112,
+       "e": 663.512
+      },
+      {
+       "w": "del",
+       "s": 663.512,
+       "e": 663.732
+      },
+      {
+       "w": "miércoles",
+       "s": 663.732,
+       "e": 664.252
+      },
+      {
+       "w": "siguiente",
+       "s": 664.252,
+       "e": 664.572
+      },
+      {
+       "w": "a",
+       "s": 664.572,
+       "e": 664.912
+      },
+      {
+       "w": "la",
+       "s": 664.912,
+       "e": 664.952
+      },
+      {
+       "w": "elección.",
+       "s": 664.952,
+       "e": 665.412
+      }
+     ]
+    }
+   ],
+   "fin_voz": 665.792,
+   "beats": 36
+  },
+  {
+   "id": "p44q",
+   "bloque": 6,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿En qué orden se hacen los cómputos en el consejo distrital?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 44,
+    "de": 50
+   },
+   "t0": 666.5,
+   "t1": 676.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p44q_0",
+     "texto": "Cuarenta y cuatro. ¿En qué orden se hacen los cómputos en el consejo distrital?",
+     "t0": 666.828,
+     "t1": 671.535,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 666.943,
+       "e": 667.058
+      },
+      {
+       "w": "y",
+       "s": 667.058,
+       "e": 667.173
+      },
+      {
+       "w": "cuatro.",
+       "s": 667.173,
+       "e": 667.288
+      },
+      {
+       "w": "¿En",
+       "s": 667.748,
+       "e": 668.288
+      },
+      {
+       "w": "qué",
+       "s": 668.288,
+       "e": 668.468
+      },
+      {
+       "w": "orden",
+       "s": 668.468,
+       "e": 668.748
+      },
+      {
+       "w": "se",
+       "s": 668.748,
+       "e": 668.948
+      },
+      {
+       "w": "hacen",
+       "s": 668.948,
+       "e": 669.208
+      },
+      {
+       "w": "los",
+       "s": 669.208,
+       "e": 669.388
+      },
+      {
+       "w": "cómputos",
+       "s": 669.388,
+       "e": 669.908
+      },
+      {
+       "w": "en",
+       "s": 669.908,
+       "e": 670.108
+      },
+      {
+       "w": "el",
+       "s": 670.108,
+       "e": 670.208
+      },
+      {
+       "w": "consejo",
+       "s": 670.208,
+       "e": 670.668
+      },
+      {
+       "w": "distrital?",
+       "s": 670.668,
+       "e": 671.188
+      }
+     ]
+    }
+   ],
+   "fin_voz": 671.535,
+   "beats": 76
+  },
+  {
+   "id": "p44a",
+   "bloque": 6,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "1.º gobernador · 2.º diputados",
+    "fuente": "Ley Electoral de Zacatecas art. 258"
+   },
+   "t0": 676.0,
+   "t1": 679.5,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "p44a_0",
+     "texto": "Primero gobernador y después diputados.",
+     "t0": 676.304,
+     "t1": 679.091,
+     "words": [
+      {
+       "w": "Primero",
+       "s": 676.304,
+       "e": 676.664
+      },
+      {
+       "w": "gobernador",
+       "s": 676.664,
+       "e": 677.304
+      },
+      {
+       "w": "y",
+       "s": 677.304,
+       "e": 677.484
+      },
+      {
+       "w": "después",
+       "s": 677.484,
+       "e": 677.904
+      },
+      {
+       "w": "diputados.",
+       "s": 677.904,
+       "e": 678.704
+      }
+     ]
+    }
+   ],
+   "fin_voz": 679.091,
+   "beats": 28
+  },
+  {
+   "id": "p45q",
+   "bloque": 6,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "Menciona dos causas para volver a contar una casilla",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 45,
+    "de": 50
+   },
+   "t0": 679.5,
+   "t1": 689.0,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p45q_0",
+     "texto": "Cuarenta y cinco. Menciona dos causas para volver a contar una casilla.",
+     "t0": 679.897,
+     "t1": 684.374,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 680.022,
+       "e": 680.147
+      },
+      {
+       "w": "y",
+       "s": 680.147,
+       "e": 680.272
+      },
+      {
+       "w": "cinco.",
+       "s": 680.272,
+       "e": 680.397
+      },
+      {
+       "w": "Menciona",
+       "s": 681.197,
+       "e": 681.717
+      },
+      {
+       "w": "dos",
+       "s": 681.717,
+       "e": 681.937
+      },
+      {
+       "w": "causas",
+       "s": 681.937,
+       "e": 682.537
+      },
+      {
+       "w": "para",
+       "s": 682.537,
+       "e": 682.697
+      },
+      {
+       "w": "volver",
+       "s": 682.697,
+       "e": 682.957
+      },
+      {
+       "w": "a",
+       "s": 682.957,
+       "e": 683.157
+      },
+      {
+       "w": "contar",
+       "s": 683.157,
+       "e": 683.417
+      },
+      {
+       "w": "una",
+       "s": 683.417,
+       "e": 683.617
+      },
+      {
+       "w": "casilla.",
+       "s": 683.617,
+       "e": 684.077
+      }
+     ]
+    }
+   ],
+   "fin_voz": 684.374,
+   "beats": 76
+  },
+  {
+   "id": "p45a",
+   "bloque": 6,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Falta el acta · no coincide · errores evidentes · nulos > diferencia · todos los votos a uno",
+    "fuente": "Ley Electoral de Zacatecas art. 259"
+   },
+   "t0": 689.0,
+   "t1": 698.5,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p45a_0",
+     "texto": "Por ejemplo: falta el acta, no coincide con la del presidente, o los votos nulos superan la diferencia entre primero y segundo.",
+     "t0": 689.348,
+     "t1": 697.988,
+     "words": [
+      {
+       "w": "Por",
+       "s": 689.348,
+       "e": 689.448
+      },
+      {
+       "w": "ejemplo:",
+       "s": 689.448,
+       "e": 689.788
+      },
+      {
+       "w": "falta",
+       "s": 689.928,
+       "e": 690.588
+      },
+      {
+       "w": "el",
+       "s": 690.588,
+       "e": 690.788
+      },
+      {
+       "w": "acta,",
+       "s": 690.788,
+       "e": 691.188
+      },
+      {
+       "w": "no",
+       "s": 691.188,
+       "e": 691.628
+      },
+      {
+       "w": "coincide",
+       "s": 691.628,
+       "e": 692.188
+      },
+      {
+       "w": "con",
+       "s": 692.188,
+       "e": 692.308
+      },
+      {
+       "w": "la",
+       "s": 692.308,
+       "e": 692.428
+      },
+      {
+       "w": "del",
+       "s": 692.428,
+       "e": 692.568
+      },
+      {
+       "w": "presidente,",
+       "s": 692.568,
+       "e": 692.928
+      },
+      {
+       "w": "o",
+       "s": 693.488,
+       "e": 693.828
+      },
+      {
+       "w": "los",
+       "s": 693.828,
+       "e": 694.488
+      },
+      {
+       "w": "votos",
+       "s": 694.488,
+       "e": 694.948
+      },
+      {
+       "w": "nulos",
+       "s": 694.948,
+       "e": 695.228
+      },
+      {
+       "w": "superan",
+       "s": 695.228,
+       "e": 695.748
+      },
+      {
+       "w": "la",
+       "s": 695.748,
+       "e": 695.808
+      },
+      {
+       "w": "diferencia",
+       "s": 695.808,
+       "e": 696.208
+      },
+      {
+       "w": "entre",
+       "s": 696.208,
+       "e": 696.548
+      },
+      {
+       "w": "primero",
+       "s": 696.548,
+       "e": 696.908
+      },
+      {
+       "w": "y",
+       "s": 696.908,
+       "e": 697.228
+      },
+      {
+       "w": "segundo.",
+       "s": 697.228,
+       "e": 697.528
+      }
+     ]
+    }
+   ],
+   "fin_voz": 697.988,
+   "beats": 76
+  },
+  {
+   "id": "p46q",
+   "bloque": 6,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo procede el recuento total en el consejo?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 46,
+    "de": 50
+   },
+   "t0": 698.5,
+   "t1": 707.5,
+   "compases": 18,
+   "frases": [
+    {
+     "key": "p46q_0",
+     "texto": "Cuarenta y seis. ¿Cuándo procede el recuento total en el consejo?",
+     "t0": 698.818,
+     "t1": 703.058,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 698.943,
+       "e": 699.068
+      },
+      {
+       "w": "y",
+       "s": 699.068,
+       "e": 699.193
+      },
+      {
+       "w": "seis.",
+       "s": 699.193,
+       "e": 699.318
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 699.858,
+       "e": 700.578
+      },
+      {
+       "w": "procede",
+       "s": 700.578,
+       "e": 701.078
+      },
+      {
+       "w": "el",
+       "s": 701.078,
+       "e": 701.138
+      },
+      {
+       "w": "recuento",
+       "s": 701.138,
+       "e": 701.578
+      },
+      {
+       "w": "total",
+       "s": 701.578,
+       "e": 701.878
+      },
+      {
+       "w": "en",
+       "s": 701.878,
+       "e": 702.178
+      },
+      {
+       "w": "el",
+       "s": 702.178,
+       "e": 702.278
+      },
+      {
+       "w": "consejo?",
+       "s": 702.278,
+       "e": 702.798
+      }
+     ]
+    }
+   ],
+   "fin_voz": 703.058,
+   "beats": 72
+  },
+  {
+   "id": "p46a",
+   "bloque": 6,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "Diferencia ≤ 1 % entre 1.º y 2.º + petición expresa del 2.º lugar",
+    "fuente": "Ley Electoral de Zacatecas art. 259"
+   },
+   "t0": 707.5,
+   "t1": 715.5,
+   "compases": 16,
+   "frases": [
+    {
+     "key": "p46a_0",
+     "texto": "Si la diferencia entre primero y segundo es de un punto porcentual o menos, y lo pide el representante del segundo lugar.",
+     "t0": 707.856,
+     "t1": 714.968,
+     "words": [
+      {
+       "w": "Si",
+       "s": 707.856,
+       "e": 707.976
+      },
+      {
+       "w": "la",
+       "s": 707.976,
+       "e": 708.076
+      },
+      {
+       "w": "diferencia",
+       "s": 708.076,
+       "e": 708.496
+      },
+      {
+       "w": "entre",
+       "s": 708.496,
+       "e": 708.836
+      },
+      {
+       "w": "primero",
+       "s": 708.836,
+       "e": 709.276
+      },
+      {
+       "w": "y",
+       "s": 709.276,
+       "e": 709.416
+      },
+      {
+       "w": "segundo",
+       "s": 709.416,
+       "e": 709.696
+      },
+      {
+       "w": "es",
+       "s": 709.696,
+       "e": 710.156
+      },
+      {
+       "w": "de",
+       "s": 710.156,
+       "e": 710.336
+      },
+      {
+       "w": "un",
+       "s": 710.336,
+       "e": 710.556
+      },
+      {
+       "w": "punto",
+       "s": 710.556,
+       "e": 710.836
+      },
+      {
+       "w": "porcentual",
+       "s": 710.836,
+       "e": 711.576
+      },
+      {
+       "w": "o",
+       "s": 711.576,
+       "e": 711.696
+      },
+      {
+       "w": "menos,",
+       "s": 711.696,
+       "e": 712.016
+      },
+      {
+       "w": "y",
+       "s": 712.016,
+       "e": 712.416
+      },
+      {
+       "w": "lo",
+       "s": 712.416,
+       "e": 712.636
+      },
+      {
+       "w": "pide",
+       "s": 712.636,
+       "e": 712.956
+      },
+      {
+       "w": "el",
+       "s": 712.956,
+       "e": 713.056
+      },
+      {
+       "w": "representante",
+       "s": 713.056,
+       "e": 713.816
+      },
+      {
+       "w": "del",
+       "s": 713.816,
+       "e": 713.956
+      },
+      {
+       "w": "segundo",
+       "s": 713.956,
+       "e": 714.216
+      },
+      {
+       "w": "lugar.",
+       "s": 714.216,
+       "e": 714.576
+      }
+     ]
+    }
+   ],
+   "fin_voz": 714.968,
+   "beats": 64
+  },
+  {
+   "id": "p47q",
+   "bloque": 6,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Las casillas recontadas en el consejo pueden recontarse en el tribunal?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 47,
+    "de": 50
+   },
+   "t0": 715.5,
+   "t1": 726.0,
+   "compases": 21,
+   "frases": [
+    {
+     "key": "p47q_0",
+     "texto": "Cuarenta y siete. ¿Las casillas recontadas en el consejo pueden recontarse en el tribunal?",
+     "t0": 715.848,
+     "t1": 721.488,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 715.968,
+       "e": 716.088
+      },
+      {
+       "w": "y",
+       "s": 716.088,
+       "e": 716.208
+      },
+      {
+       "w": "siete.",
+       "s": 716.208,
+       "e": 716.328
+      },
+      {
+       "w": "¿Las",
+       "s": 716.668,
+       "e": 717.388
+      },
+      {
+       "w": "casillas",
+       "s": 717.388,
+       "e": 717.808
+      },
+      {
+       "w": "recontadas",
+       "s": 717.808,
+       "e": 718.408
+      },
+      {
+       "w": "en",
+       "s": 718.408,
+       "e": 718.628
+      },
+      {
+       "w": "el",
+       "s": 718.628,
+       "e": 718.748
+      },
+      {
+       "w": "consejo",
+       "s": 718.748,
+       "e": 719.328
+      },
+      {
+       "w": "pueden",
+       "s": 719.328,
+       "e": 719.648
+      },
+      {
+       "w": "recontarse",
+       "s": 719.648,
+       "e": 720.408
+      },
+      {
+       "w": "en",
+       "s": 720.408,
+       "e": 720.608
+      },
+      {
+       "w": "el",
+       "s": 720.608,
+       "e": 720.688
+      },
+      {
+       "w": "tribunal?",
+       "s": 720.688,
+       "e": 721.148
+      }
+     ]
+    }
+   ],
+   "fin_voz": 721.488,
+   "beats": 84
+  },
+  {
+   "id": "p47a",
+   "bloque": 6,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "No, en ningún caso",
+    "fuente": "Ley Electoral de Zacatecas art. 259"
+   },
+   "t0": 726.0,
+   "t1": 730.0,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "p47a_0",
+     "texto": "No. En ningún caso puede pedirse al tribunal.",
+     "t0": 726.33,
+     "t1": 729.53,
+     "words": [
+      {
+       "w": "No.",
+       "s": 726.33,
+       "e": 726.55
+      },
+      {
+       "w": "En",
+       "s": 726.57,
+       "e": 727.13
+      },
+      {
+       "w": "ningún",
+       "s": 727.13,
+       "e": 727.53
+      },
+      {
+       "w": "caso",
+       "s": 727.53,
+       "e": 727.85
+      },
+      {
+       "w": "puede",
+       "s": 727.85,
+       "e": 728.19
+      },
+      {
+       "w": "pedirse",
+       "s": 728.19,
+       "e": 728.67
+      },
+      {
+       "w": "al",
+       "s": 728.67,
+       "e": 728.79
+      },
+      {
+       "w": "tribunal.",
+       "s": 728.79,
+       "e": 729.21
+      }
+     ]
+    }
+   ],
+   "fin_voz": 729.53,
+   "beats": 32
+  },
+  {
+   "id": "p48q",
+   "bloque": 6,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Cuándo hace el Consejo General los cómputos estatales?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 48,
+    "de": 50
+   },
+   "t0": 730.0,
+   "t1": 739.5,
+   "compases": 19,
+   "frases": [
+    {
+     "key": "p48q_0",
+     "texto": "Cuarenta y ocho. ¿Cuándo hace el Consejo General los cómputos estatales?",
+     "t0": 730.348,
+     "t1": 734.988,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 730.463,
+       "e": 730.578
+      },
+      {
+       "w": "y",
+       "s": 730.578,
+       "e": 730.693
+      },
+      {
+       "w": "ocho.",
+       "s": 730.693,
+       "e": 730.808
+      },
+      {
+       "w": "¿Cuándo",
+       "s": 731.308,
+       "e": 732.028
+      },
+      {
+       "w": "hace",
+       "s": 732.028,
+       "e": 732.168
+      },
+      {
+       "w": "el",
+       "s": 732.168,
+       "e": 732.328
+      },
+      {
+       "w": "Consejo",
+       "s": 732.328,
+       "e": 732.808
+      },
+      {
+       "w": "General",
+       "s": 732.808,
+       "e": 733.088
+      },
+      {
+       "w": "los",
+       "s": 733.088,
+       "e": 733.448
+      },
+      {
+       "w": "cómputos",
+       "s": 733.448,
+       "e": 733.968
+      },
+      {
+       "w": "estatales?",
+       "s": 733.968,
+       "e": 734.628
+      }
+     ]
+    }
+   ],
+   "fin_voz": 734.988,
+   "beats": 76
+  },
+  {
+   "id": "p48a",
+   "bloque": 6,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El domingo siguiente a la jornada",
+    "fuente": "Ley Electoral de Zacatecas art. 271"
+   },
+   "t0": 739.5,
+   "t1": 743.0,
+   "compases": 7,
+   "frases": [
+    {
+     "key": "p48a_0",
+     "texto": "El domingo siguiente a la jornada electoral.",
+     "t0": 739.896,
+     "t1": 742.376,
+     "words": [
+      {
+       "w": "El",
+       "s": 739.896,
+       "e": 739.996
+      },
+      {
+       "w": "domingo",
+       "s": 739.996,
+       "e": 740.416
+      },
+      {
+       "w": "siguiente",
+       "s": 740.416,
+       "e": 740.676
+      },
+      {
+       "w": "a",
+       "s": 740.676,
+       "e": 741.036
+      },
+      {
+       "w": "la",
+       "s": 741.036,
+       "e": 741.076
+      },
+      {
+       "w": "jornada",
+       "s": 741.076,
+       "e": 741.576
+      },
+      {
+       "w": "electoral.",
+       "s": 741.576,
+       "e": 741.816
+      }
+     ]
+    }
+   ],
+   "fin_voz": 742.376,
+   "beats": 28
+  },
+  {
+   "id": "tema7",
+   "bloque": 7,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "Observación y resultados",
+    "sub": "Tema 7 de 7"
+   },
+   "t0": 743.0,
+   "t1": 747.0,
+   "compases": 8,
+   "frases": [
+    {
+     "key": "tema7_0",
+     "texto": "Tema siete: observación y resultados.",
+     "t0": 743.354,
+     "t1": 746.474,
+     "words": [
+      {
+       "w": "Tema",
+       "s": 743.354,
+       "e": 743.574
+      },
+      {
+       "w": "siete:",
+       "s": 743.694,
+       "e": 743.814
+      },
+      {
+       "w": "observación",
+       "s": 744.794,
+       "e": 745.234
+      },
+      {
+       "w": "y",
+       "s": 745.234,
+       "e": 745.334
+      },
+      {
+       "w": "resultados.",
+       "s": 745.334,
+       "e": 745.734
+      }
+     ]
+    }
+   ],
+   "fin_voz": 746.474,
+   "beats": 32
+  },
+  {
+   "id": "p49q",
+   "bloque": 7,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿Quién acredita a los observadores y hasta cuándo se solicita?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 49,
+    "de": 50
+   },
+   "t0": 747.0,
+   "t1": 757.0,
+   "compases": 20,
+   "frases": [
+    {
+     "key": "p49q_0",
+     "texto": "Cuarenta y nueve. ¿Quién acredita a los observadores, y hasta cuándo se solicita?",
+     "t0": 747.354,
+     "t1": 752.474,
+     "words": [
+      {
+       "w": "Cuarenta",
+       "s": 747.469,
+       "e": 747.584
+      },
+      {
+       "w": "y",
+       "s": 747.584,
+       "e": 747.699
+      },
+      {
+       "w": "nueve.",
+       "s": 747.699,
+       "e": 747.814
+      },
+      {
+       "w": "¿Quién",
+       "s": 748.134,
+       "e": 748.814
+      },
+      {
+       "w": "acredita",
+       "s": 748.814,
+       "e": 749.374
+      },
+      {
+       "w": "a",
+       "s": 749.374,
+       "e": 749.414
+      },
+      {
+       "w": "los",
+       "s": 749.414,
+       "e": 749.534
+      },
+      {
+       "w": "observadores,",
+       "s": 749.534,
+       "e": 750.254
+      },
+      {
+       "w": "y",
+       "s": 750.254,
+       "e": 750.734
+      },
+      {
+       "w": "hasta",
+       "s": 750.734,
+       "e": 750.974
+      },
+      {
+       "w": "cuándo",
+       "s": 750.974,
+       "e": 751.554
+      },
+      {
+       "w": "se",
+       "s": 751.554,
+       "e": 751.614
+      },
+      {
+       "w": "solicita?",
+       "s": 751.614,
+       "e": 752.234
+      }
+     ]
+    }
+   ],
+   "fin_voz": 752.474,
+   "beats": 80
+  },
+  {
+   "id": "p49a",
+   "bloque": 7,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "El INE · del inicio del proceso al 30 de abril",
+    "fuente": "LGIPE art. 217 · Reglamento de Elecciones art. 187"
+   },
+   "t0": 757.0,
+   "t1": 762.5,
+   "compases": 11,
+   "frases": [
+    {
+     "key": "p49a_0",
+     "texto": "El INE, y se solicita desde el inicio del proceso hasta el treinta de abril.",
+     "t0": 757.378,
+     "t1": 761.919,
+     "words": [
+      {
+       "w": "El",
+       "s": 757.378,
+       "e": 757.478
+      },
+      {
+       "w": "INE,",
+       "s": 757.478,
+       "e": 757.818
+      },
+      {
+       "w": "y",
+       "s": 757.818,
+       "e": 758.158
+      },
+      {
+       "w": "se",
+       "s": 758.158,
+       "e": 758.238
+      },
+      {
+       "w": "solicita",
+       "s": 758.238,
+       "e": 758.878
+      },
+      {
+       "w": "desde",
+       "s": 758.878,
+       "e": 759.018
+      },
+      {
+       "w": "el",
+       "s": 759.018,
+       "e": 759.198
+      },
+      {
+       "w": "inicio",
+       "s": 759.198,
+       "e": 759.598
+      },
+      {
+       "w": "del",
+       "s": 759.598,
+       "e": 759.698
+      },
+      {
+       "w": "proceso",
+       "s": 759.698,
+       "e": 760.038
+      },
+      {
+       "w": "hasta",
+       "s": 760.038,
+       "e": 760.558
+      },
+      {
+       "w": "el",
+       "s": 760.558,
+       "e": 760.758
+      },
+      {
+       "w": "treinta",
+       "s": 760.758,
+       "e": 761.018
+      },
+      {
+       "w": "de",
+       "s": 761.018,
+       "e": 761.298
+      },
+      {
+       "w": "abril.",
+       "s": 761.298,
+       "e": 761.578
+      }
+     ]
+    }
+   ],
+   "fin_voz": 761.919,
+   "beats": 44
+  },
+  {
+   "id": "p50q",
+   "bloque": 7,
+   "post": 4.4,
+   "vis": {
+    "tipo": "pregunta",
+    "texto": "¿El PREP da resultados definitivos?",
+    "caso": false,
+    "cuenta": 4.0,
+    "num": 50,
+    "de": 50
+   },
+   "t0": 762.5,
+   "t1": 771.0,
+   "compases": 17,
+   "frases": [
+    {
+     "key": "p50q_0",
+     "texto": "Cincuenta. ¿El PREP da resultados definitivos?",
+     "t0": 762.908,
+     "t1": 766.348,
+     "words": [
+      {
+       "w": "Cincuenta.",
+       "s": 763.108,
+       "e": 763.308
+      },
+      {
+       "w": "¿El",
+       "s": 763.528,
+       "e": 764.028
+      },
+      {
+       "w": "PREP",
+       "s": 764.028,
+       "e": 764.448
+      },
+      {
+       "w": "da",
+       "s": 764.448,
+       "e": 764.688
+      },
+      {
+       "w": "resultados",
+       "s": 764.688,
+       "e": 764.988
+      },
+      {
+       "w": "definitivos?",
+       "s": 764.988,
+       "e": 765.988
+      }
+     ]
+    }
+   ],
+   "fin_voz": 766.348,
+   "beats": 68
+  },
+  {
+   "id": "p50a",
+   "bloque": 7,
+   "vis": {
+    "tipo": "respuesta",
+    "texto": "No: son preliminares y solo informativos",
+    "fuente": "Ley Electoral de Zacatecas art. 256"
+   },
+   "t0": 771.0,
+   "t1": 777.0,
+   "compases": 12,
+   "frases": [
+    {
+     "key": "p50a_0",
+     "texto": "No. Sus resultados son preliminares y de carácter estrictamente informativo.",
+     "t0": 771.378,
+     "t1": 776.418,
+     "words": [
+      {
+       "w": "No.",
+       "s": 771.378,
+       "e": 771.578
+      },
+      {
+       "w": "Sus",
+       "s": 771.638,
+       "e": 772.138
+      },
+      {
+       "w": "resultados",
+       "s": 772.138,
+       "e": 772.618
+      },
+      {
+       "w": "son",
+       "s": 772.618,
+       "e": 772.958
+      },
+      {
+       "w": "preliminares",
+       "s": 772.958,
+       "e": 773.738
+      },
+      {
+       "w": "y",
+       "s": 773.738,
+       "e": 773.938
+      },
+      {
+       "w": "de",
+       "s": 773.938,
+       "e": 774.038
+      },
+      {
+       "w": "carácter",
+       "s": 774.038,
+       "e": 774.558
+      },
+      {
+       "w": "estrictamente",
+       "s": 774.558,
+       "e": 775.418
+      },
+      {
+       "w": "informativo.",
+       "s": 775.418,
+       "e": 776.098
+      }
+     ]
+    }
+   ],
+   "fin_voz": 776.418,
+   "beats": 48
+  },
+  {
+   "id": "cierre",
+   "bloque": 7,
+   "post": 2.5,
+   "vis": {
+    "tipo": "portada",
+    "titulo": "¡Mucho éxito!",
+    "sub": "Repite las que fallaste · responde con la ley que la sostiene"
+   },
+   "t0": 777.0,
+   "t1": 789.0,
+   "compases": null,
+   "frases": [
+    {
+     "key": "cierre_0",
+     "texto": "Listo: cincuenta preguntas. Repite las que fallaste, y cuando contestes, cita la ley que te respalda.",
+     "t0": 777.46,
+     "t1": 784.1,
+     "words": [
+      {
+       "w": "Listo:",
+       "s": 777.46,
+       "e": 777.78
+      },
+      {
+       "w": "cincuenta",
+       "s": 777.86,
+       "e": 778.46
+      },
+      {
+       "w": "preguntas.",
+       "s": 778.46,
+       "e": 778.94
+      },
+      {
+       "w": "Repite",
+       "s": 779.44,
+       "e": 780.08
+      },
+      {
+       "w": "las",
+       "s": 780.08,
+       "e": 780.16
+      },
+      {
+       "w": "que",
+       "s": 780.16,
+       "e": 780.3
+      },
+      {
+       "w": "fallaste,",
+       "s": 780.3,
+       "e": 780.76
+      },
+      {
+       "w": "y",
+       "s": 780.76,
+       "e": 781.2
+      },
+      {
+       "w": "cuando",
+       "s": 781.2,
+       "e": 781.4
+      },
+      {
+       "w": "contestes,",
+       "s": 781.4,
+       "e": 782.14
+      },
+      {
+       "w": "cita",
+       "s": 782.14,
+       "e": 782.72
+      },
+      {
+       "w": "la",
+       "s": 782.72,
+       "e": 782.82
+      },
+      {
+       "w": "ley",
+       "s": 782.82,
+       "e": 783.04
+      },
+      {
+       "w": "que",
+       "s": 783.04,
+       "e": 783.22
+      },
+      {
+       "w": "te",
+       "s": 783.22,
+       "e": 783.34
+      },
+      {
+       "w": "respalda.",
+       "s": 783.34,
+       "e": 783.88
+      }
+     ]
+    },
+    {
+     "key": "cierre_1",
+     "texto": "Mucho éxito en tu entrevista.",
+     "t0": 784.42,
+     "t1": 786.476,
+     "words": [
+      {
+       "w": "Mucho",
+       "s": 784.42,
+       "e": 784.9
+      },
+      {
+       "w": "éxito",
+       "s": 784.9,
+       "e": 785.4
+      },
+      {
+       "w": "en",
+       "s": 785.4,
+       "e": 785.5
+      },
+      {
+       "w": "tu",
+       "s": 785.5,
+       "e": 785.54
+      },
+      {
+       "w": "entrevista.",
+       "s": 785.54,
+       "e": 786.14
+      }
+     ]
+    }
+   ],
+   "fin_voz": 786.476,
+   "beats": null
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 11.0,
+   "t0": 10.74,
+   "t1": 11.14,
+   "tipo": "continua",
+   "de": "intro",
+   "a": "tema1"
+  },
+  {
+   "t": 15.0,
+   "t0": 14.74,
+   "t1": 15.14,
+   "tipo": "continua",
+   "de": "tema1",
+   "a": "p1q"
+  },
+  {
+   "t": 24.0,
+   "t0": 23.74,
+   "t1": 24.14,
+   "tipo": "continua",
+   "de": "p1q",
+   "a": "p1a"
+  },
+  {
+   "t": 31.5,
+   "t0": 31.24,
+   "t1": 31.64,
+   "tipo": "continua",
+   "de": "p1a",
+   "a": "p2q"
+  },
+  {
+   "t": 40.5,
+   "t0": 40.24,
+   "t1": 40.64,
+   "tipo": "continua",
+   "de": "p2q",
+   "a": "p2a"
+  },
+  {
+   "t": 49.5,
+   "t0": 49.24,
+   "t1": 49.64,
+   "tipo": "continua",
+   "de": "p2a",
+   "a": "p3q"
+  },
+  {
+   "t": 58.0,
+   "t0": 57.74,
+   "t1": 58.14,
+   "tipo": "continua",
+   "de": "p3q",
+   "a": "p3a"
+  },
+  {
+   "t": 63.5,
+   "t0": 63.24,
+   "t1": 63.64,
+   "tipo": "continua",
+   "de": "p3a",
+   "a": "p4q"
+  },
+  {
+   "t": 73.5,
+   "t0": 73.24,
+   "t1": 73.64,
+   "tipo": "continua",
+   "de": "p4q",
+   "a": "p4a"
+  },
+  {
+   "t": 79.5,
+   "t0": 79.24,
+   "t1": 79.64,
+   "tipo": "continua",
+   "de": "p4a",
+   "a": "p5q"
+  },
+  {
+   "t": 90.0,
+   "t0": 89.74,
+   "t1": 90.14,
+   "tipo": "continua",
+   "de": "p5q",
+   "a": "p5a"
+  },
+  {
+   "t": 96.0,
+   "t0": 95.74,
+   "t1": 96.14,
+   "tipo": "continua",
+   "de": "p5a",
+   "a": "p6q"
+  },
+  {
+   "t": 104.5,
+   "t0": 104.24,
+   "t1": 104.64,
+   "tipo": "continua",
+   "de": "p6q",
+   "a": "p6a"
+  },
+  {
+   "t": 111.0,
+   "t0": 110.74,
+   "t1": 111.14,
+   "tipo": "continua",
+   "de": "p6a",
+   "a": "p7q"
+  },
+  {
+   "t": 119.5,
+   "t0": 119.24,
+   "t1": 119.64,
+   "tipo": "continua",
+   "de": "p7q",
+   "a": "p7a"
+  },
+  {
+   "t": 123.0,
+   "t0": 122.74,
+   "t1": 123.14,
+   "tipo": "continua",
+   "de": "p7a",
+   "a": "tema2"
+  },
+  {
+   "t": 126.0,
+   "t0": 125.74,
+   "t1": 126.14,
+   "tipo": "continua",
+   "de": "tema2",
+   "a": "p8q"
+  },
+  {
+   "t": 135.0,
+   "t0": 134.74,
+   "t1": 135.14,
+   "tipo": "continua",
+   "de": "p8q",
+   "a": "p8a"
+  },
+  {
+   "t": 142.0,
+   "t0": 141.74,
+   "t1": 142.14,
+   "tipo": "continua",
+   "de": "p8a",
+   "a": "p9q"
+  },
+  {
+   "t": 151.0,
+   "t0": 150.74,
+   "t1": 151.14,
+   "tipo": "continua",
+   "de": "p9q",
+   "a": "p9a"
+  },
+  {
+   "t": 156.5,
+   "t0": 156.24,
+   "t1": 156.64,
+   "tipo": "continua",
+   "de": "p9a",
+   "a": "p10q"
+  },
+  {
+   "t": 166.0,
+   "t0": 165.74,
+   "t1": 166.14,
+   "tipo": "continua",
+   "de": "p10q",
+   "a": "p10a"
+  },
+  {
+   "t": 171.5,
+   "t0": 171.24,
+   "t1": 171.64,
+   "tipo": "continua",
+   "de": "p10a",
+   "a": "p11q"
+  },
+  {
+   "t": 180.0,
+   "t0": 179.74,
+   "t1": 180.14,
+   "tipo": "continua",
+   "de": "p11q",
+   "a": "p11a"
+  },
+  {
+   "t": 185.0,
+   "t0": 184.74,
+   "t1": 185.14,
+   "tipo": "continua",
+   "de": "p11a",
+   "a": "p12q"
+  },
+  {
+   "t": 193.5,
+   "t0": 193.24,
+   "t1": 193.64,
+   "tipo": "continua",
+   "de": "p12q",
+   "a": "p12a"
+  },
+  {
+   "t": 197.5,
+   "t0": 197.24,
+   "t1": 197.64,
+   "tipo": "continua",
+   "de": "p12a",
+   "a": "p13q"
+  },
+  {
+   "t": 207.0,
+   "t0": 206.74,
+   "t1": 207.14,
+   "tipo": "continua",
+   "de": "p13q",
+   "a": "p13a"
+  },
+  {
+   "t": 210.0,
+   "t0": 209.74,
+   "t1": 210.14,
+   "tipo": "continua",
+   "de": "p13a",
+   "a": "p14q"
+  },
+  {
+   "t": 218.5,
+   "t0": 218.24,
+   "t1": 218.64,
+   "tipo": "continua",
+   "de": "p14q",
+   "a": "p14a"
+  },
+  {
+   "t": 224.0,
+   "t0": 223.74,
+   "t1": 224.14,
+   "tipo": "continua",
+   "de": "p14a",
+   "a": "p15q"
+  },
+  {
+   "t": 231.5,
+   "t0": 231.24,
+   "t1": 231.64,
+   "tipo": "continua",
+   "de": "p15q",
+   "a": "p15a"
+  },
+  {
+   "t": 237.0,
+   "t0": 236.74,
+   "t1": 237.14,
+   "tipo": "continua",
+   "de": "p15a",
+   "a": "p16q"
+  },
+  {
+   "t": 246.5,
+   "t0": 246.24,
+   "t1": 246.64,
+   "tipo": "continua",
+   "de": "p16q",
+   "a": "p16a"
+  },
+  {
+   "t": 250.5,
+   "t0": 250.24,
+   "t1": 250.64,
+   "tipo": "continua",
+   "de": "p16a",
+   "a": "p17q"
+  },
+  {
+   "t": 260.5,
+   "t0": 260.24,
+   "t1": 260.64,
+   "tipo": "continua",
+   "de": "p17q",
+   "a": "p17a"
+  },
+  {
+   "t": 265.5,
+   "t0": 265.24,
+   "t1": 265.64,
+   "tipo": "continua",
+   "de": "p17a",
+   "a": "p18q"
+  },
+  {
+   "t": 274.5,
+   "t0": 274.24,
+   "t1": 274.64,
+   "tipo": "continua",
+   "de": "p18q",
+   "a": "p18a"
+  },
+  {
+   "t": 280.0,
+   "t0": 279.74,
+   "t1": 280.14,
+   "tipo": "continua",
+   "de": "p18a",
+   "a": "p19q"
+  },
+  {
+   "t": 289.0,
+   "t0": 288.74,
+   "t1": 289.14,
+   "tipo": "continua",
+   "de": "p19q",
+   "a": "p19a"
+  },
+  {
+   "t": 293.5,
+   "t0": 293.24,
+   "t1": 293.64,
+   "tipo": "continua",
+   "de": "p19a",
+   "a": "p20q"
+  },
+  {
+   "t": 302.0,
+   "t0": 301.74,
+   "t1": 302.14,
+   "tipo": "continua",
+   "de": "p20q",
+   "a": "p20a"
+  },
+  {
+   "t": 307.5,
+   "t0": 307.24,
+   "t1": 307.64,
+   "tipo": "continua",
+   "de": "p20a",
+   "a": "tema3"
+  },
+  {
+   "t": 311.5,
+   "t0": 311.24,
+   "t1": 311.64,
+   "tipo": "continua",
+   "de": "tema3",
+   "a": "p21q"
+  },
+  {
+   "t": 322.5,
+   "t0": 322.24,
+   "t1": 322.64,
+   "tipo": "continua",
+   "de": "p21q",
+   "a": "p21a"
+  },
+  {
+   "t": 326.5,
+   "t0": 326.24,
+   "t1": 326.64,
+   "tipo": "continua",
+   "de": "p21a",
+   "a": "p22q"
+  },
+  {
+   "t": 336.0,
+   "t0": 335.74,
+   "t1": 336.14,
+   "tipo": "continua",
+   "de": "p22q",
+   "a": "p22a"
+  },
+  {
+   "t": 339.0,
+   "t0": 338.74,
+   "t1": 339.14,
+   "tipo": "continua",
+   "de": "p22a",
+   "a": "p23q"
+  },
+  {
+   "t": 349.5,
+   "t0": 349.24,
+   "t1": 349.64,
+   "tipo": "continua",
+   "de": "p23q",
+   "a": "p23a"
+  },
+  {
+   "t": 354.0,
+   "t0": 353.74,
+   "t1": 354.14,
+   "tipo": "continua",
+   "de": "p23a",
+   "a": "p24q"
+  },
+  {
+   "t": 362.0,
+   "t0": 361.74,
+   "t1": 362.14,
+   "tipo": "continua",
+   "de": "p24q",
+   "a": "p24a"
+  },
+  {
+   "t": 368.5,
+   "t0": 368.24,
+   "t1": 368.64,
+   "tipo": "continua",
+   "de": "p24a",
+   "a": "p25q"
+  },
+  {
+   "t": 376.0,
+   "t0": 375.74,
+   "t1": 376.14,
+   "tipo": "continua",
+   "de": "p25q",
+   "a": "p25a"
+  },
+  {
+   "t": 382.5,
+   "t0": 382.24,
+   "t1": 382.64,
+   "tipo": "continua",
+   "de": "p25a",
+   "a": "p26q"
+  },
+  {
+   "t": 390.0,
+   "t0": 389.74,
+   "t1": 390.14,
+   "tipo": "continua",
+   "de": "p26q",
+   "a": "p26a"
+  },
+  {
+   "t": 397.5,
+   "t0": 397.24,
+   "t1": 397.64,
+   "tipo": "continua",
+   "de": "p26a",
+   "a": "p27q"
+  },
+  {
+   "t": 408.0,
+   "t0": 407.74,
+   "t1": 408.14,
+   "tipo": "continua",
+   "de": "p27q",
+   "a": "p27a"
+  },
+  {
+   "t": 410.5,
+   "t0": 410.24,
+   "t1": 410.64,
+   "tipo": "continua",
+   "de": "p27a",
+   "a": "p28q"
+  },
+  {
+   "t": 420.5,
+   "t0": 420.24,
+   "t1": 420.64,
+   "tipo": "continua",
+   "de": "p28q",
+   "a": "p28a"
+  },
+  {
+   "t": 424.5,
+   "t0": 424.24,
+   "t1": 424.64,
+   "tipo": "continua",
+   "de": "p28a",
+   "a": "tema4"
+  },
+  {
+   "t": 428.0,
+   "t0": 427.74,
+   "t1": 428.14,
+   "tipo": "continua",
+   "de": "tema4",
+   "a": "p29q"
+  },
+  {
+   "t": 437.5,
+   "t0": 437.24,
+   "t1": 437.64,
+   "tipo": "continua",
+   "de": "p29q",
+   "a": "p29a"
+  },
+  {
+   "t": 441.5,
+   "t0": 441.24,
+   "t1": 441.64,
+   "tipo": "continua",
+   "de": "p29a",
+   "a": "p30q"
+  },
+  {
+   "t": 450.0,
+   "t0": 449.74,
+   "t1": 450.14,
+   "tipo": "continua",
+   "de": "p30q",
+   "a": "p30a"
+  },
+  {
+   "t": 457.5,
+   "t0": 457.24,
+   "t1": 457.64,
+   "tipo": "continua",
+   "de": "p30a",
+   "a": "p31q"
+  },
+  {
+   "t": 467.0,
+   "t0": 466.74,
+   "t1": 467.14,
+   "tipo": "continua",
+   "de": "p31q",
+   "a": "p31a"
+  },
+  {
+   "t": 473.5,
+   "t0": 473.24,
+   "t1": 473.64,
+   "tipo": "continua",
+   "de": "p31a",
+   "a": "p32q"
+  },
+  {
+   "t": 483.5,
+   "t0": 483.24,
+   "t1": 483.64,
+   "tipo": "continua",
+   "de": "p32q",
+   "a": "p32a"
+  },
+  {
+   "t": 490.5,
+   "t0": 490.24,
+   "t1": 490.64,
+   "tipo": "continua",
+   "de": "p32a",
+   "a": "p33q"
+  },
+  {
+   "t": 499.0,
+   "t0": 498.74,
+   "t1": 499.14,
+   "tipo": "continua",
+   "de": "p33q",
+   "a": "p33a"
+  },
+  {
+   "t": 502.5,
+   "t0": 502.24,
+   "t1": 502.64,
+   "tipo": "continua",
+   "de": "p33a",
+   "a": "p34q"
+  },
+  {
+   "t": 512.5,
+   "t0": 512.24,
+   "t1": 512.64,
+   "tipo": "continua",
+   "de": "p34q",
+   "a": "p34a"
+  },
+  {
+   "t": 518.0,
+   "t0": 517.74,
+   "t1": 518.14,
+   "tipo": "continua",
+   "de": "p34a",
+   "a": "p35q"
+  },
+  {
+   "t": 527.5,
+   "t0": 527.24,
+   "t1": 527.64,
+   "tipo": "continua",
+   "de": "p35q",
+   "a": "p35a"
+  },
+  {
+   "t": 534.0,
+   "t0": 533.74,
+   "t1": 534.14,
+   "tipo": "continua",
+   "de": "p35a",
+   "a": "tema5"
+  },
+  {
+   "t": 537.5,
+   "t0": 537.24,
+   "t1": 537.64,
+   "tipo": "continua",
+   "de": "tema5",
+   "a": "p36q"
+  },
+  {
+   "t": 547.5,
+   "t0": 547.24,
+   "t1": 547.64,
+   "tipo": "continua",
+   "de": "p36q",
+   "a": "p36a"
+  },
+  {
+   "t": 550.5,
+   "t0": 550.24,
+   "t1": 550.64,
+   "tipo": "continua",
+   "de": "p36a",
+   "a": "p37q"
+  },
+  {
+   "t": 562.0,
+   "t0": 561.74,
+   "t1": 562.14,
+   "tipo": "continua",
+   "de": "p37q",
+   "a": "p37a"
+  },
+  {
+   "t": 570.5,
+   "t0": 570.24,
+   "t1": 570.64,
+   "tipo": "continua",
+   "de": "p37a",
+   "a": "p38q"
+  },
+  {
+   "t": 581.0,
+   "t0": 580.74,
+   "t1": 581.14,
+   "tipo": "continua",
+   "de": "p38q",
+   "a": "p38a"
+  },
+  {
+   "t": 584.0,
+   "t0": 583.74,
+   "t1": 584.14,
+   "tipo": "continua",
+   "de": "p38a",
+   "a": "p39q"
+  },
+  {
+   "t": 594.0,
+   "t0": 593.74,
+   "t1": 594.14,
+   "tipo": "continua",
+   "de": "p39q",
+   "a": "p39a"
+  },
+  {
+   "t": 602.5,
+   "t0": 602.24,
+   "t1": 602.64,
+   "tipo": "continua",
+   "de": "p39a",
+   "a": "p40q"
+  },
+  {
+   "t": 610.5,
+   "t0": 610.24,
+   "t1": 610.64,
+   "tipo": "continua",
+   "de": "p40q",
+   "a": "p40a"
+  },
+  {
+   "t": 618.0,
+   "t0": 617.74,
+   "t1": 618.14,
+   "tipo": "continua",
+   "de": "p40a",
+   "a": "p41q"
+  },
+  {
+   "t": 628.0,
+   "t0": 627.74,
+   "t1": 628.14,
+   "tipo": "continua",
+   "de": "p41q",
+   "a": "p41a"
+  },
+  {
+   "t": 632.5,
+   "t0": 632.24,
+   "t1": 632.64,
+   "tipo": "continua",
+   "de": "p41a",
+   "a": "p42q"
+  },
+  {
+   "t": 642.0,
+   "t0": 641.74,
+   "t1": 642.14,
+   "tipo": "continua",
+   "de": "p42q",
+   "a": "p42a"
+  },
+  {
+   "t": 648.5,
+   "t0": 648.24,
+   "t1": 648.64,
+   "tipo": "continua",
+   "de": "p42a",
+   "a": "tema6"
+  },
+  {
+   "t": 652.5,
+   "t0": 652.24,
+   "t1": 652.64,
+   "tipo": "continua",
+   "de": "tema6",
+   "a": "p43q"
+  },
+  {
+   "t": 662.0,
+   "t0": 661.74,
+   "t1": 662.14,
+   "tipo": "continua",
+   "de": "p43q",
+   "a": "p43a"
+  },
+  {
+   "t": 666.5,
+   "t0": 666.24,
+   "t1": 666.64,
+   "tipo": "continua",
+   "de": "p43a",
+   "a": "p44q"
+  },
+  {
+   "t": 676.0,
+   "t0": 675.74,
+   "t1": 676.14,
+   "tipo": "continua",
+   "de": "p44q",
+   "a": "p44a"
+  },
+  {
+   "t": 679.5,
+   "t0": 679.24,
+   "t1": 679.64,
+   "tipo": "continua",
+   "de": "p44a",
+   "a": "p45q"
+  },
+  {
+   "t": 689.0,
+   "t0": 688.74,
+   "t1": 689.14,
+   "tipo": "continua",
+   "de": "p45q",
+   "a": "p45a"
+  },
+  {
+   "t": 698.5,
+   "t0": 698.24,
+   "t1": 698.64,
+   "tipo": "continua",
+   "de": "p45a",
+   "a": "p46q"
+  },
+  {
+   "t": 707.5,
+   "t0": 707.24,
+   "t1": 707.64,
+   "tipo": "continua",
+   "de": "p46q",
+   "a": "p46a"
+  },
+  {
+   "t": 715.5,
+   "t0": 715.24,
+   "t1": 715.64,
+   "tipo": "continua",
+   "de": "p46a",
+   "a": "p47q"
+  },
+  {
+   "t": 726.0,
+   "t0": 725.74,
+   "t1": 726.14,
+   "tipo": "continua",
+   "de": "p47q",
+   "a": "p47a"
+  },
+  {
+   "t": 730.0,
+   "t0": 729.74,
+   "t1": 730.14,
+   "tipo": "continua",
+   "de": "p47a",
+   "a": "p48q"
+  },
+  {
+   "t": 739.5,
+   "t0": 739.24,
+   "t1": 739.64,
+   "tipo": "continua",
+   "de": "p48q",
+   "a": "p48a"
+  },
+  {
+   "t": 743.0,
+   "t0": 742.74,
+   "t1": 743.14,
+   "tipo": "continua",
+   "de": "p48a",
+   "a": "tema7"
+  },
+  {
+   "t": 747.0,
+   "t0": 746.74,
+   "t1": 747.14,
+   "tipo": "continua",
+   "de": "tema7",
+   "a": "p49q"
+  },
+  {
+   "t": 757.0,
+   "t0": 756.74,
+   "t1": 757.14,
+   "tipo": "continua",
+   "de": "p49q",
+   "a": "p49a"
+  },
+  {
+   "t": 762.5,
+   "t0": 762.24,
+   "t1": 762.64,
+   "tipo": "continua",
+   "de": "p49a",
+   "a": "p50q"
+  },
+  {
+   "t": 771.0,
+   "t0": 770.74,
+   "t1": 771.14,
+   "tipo": "continua",
+   "de": "p50q",
+   "a": "p50a"
+  },
+  {
+   "t": 777.0,
+   "t0": 776.74,
+   "t1": 777.14,
+   "tipo": "continua",
+   "de": "p50a",
+   "a": "cierre"
+  }
+ ]
+}

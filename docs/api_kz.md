@@ -14,6 +14,38 @@ Formato: `def nombre(args)` — primera línea del docstring. Busca con grep; ab
 - `def contador_atras(lz, x, y, valor, px=120, color=(255, 255, 255), k=1.0, alfa=1.0, fuente_='geo_x')` — Cifra grande centrada (entero) con sombra suave; el que llama anima `valor` (p. ej. 2026 -> 1541 con e_inout).
 - `def medallon_tiempo(lz, x, y, r, t, hitos, actual=0.0, color_borde=(255, 200, 70), ancho=900, y_linea=None, alfa=1.0)` — Línea de tiempo horizontal con hitos [(etiqueta, ...)] y un medallón circular que se desliza al hito `actual` (fracción 0..n-1).
 
+## nucleo/kz_espacio.py — BAÚL ESPACIAL Kurzgesagt (12-oct-2026, nacido en `videos/dos_lunas/`): lunas con cráteres, asteroides, lunas que se
+
+- `def cuerpo_rocoso(lz, x, y, r, tipo='luna', seed=0, ang_luz=math.pi * 1.25, luz=1.0, rot=0.0, sombra=-0.15, alfa=1.0, tinte=None, fase=None)` — Luna / planeta enano / asteroide grande: disco con mares, cráteres (con borde de luz) que giran con `rot`, y 2 tonos de
+- `def roca(lz, x, y, r, seed=0, rot=0.0, tipo='ceniza', ang_luz=math.pi * 1.25, luz=1.0, alargada=1.35)` — Asteroide / luna-patata (Fobos, el visitante que pasa): polígono irregular con sombra y cráteres. Misma luz que `cuerpo_rocoso`.
+- `def terminador_gran(x, y, r, ang_luz)` — Media luna de sombra (lado opuesto a la luz) para recortar sobre formas irregulares.
+- `def luna_rota(lz, x, y, r, estira, ang, t, seed=0, tipo='luna', rompe=0.0, ang_luz=math.pi * 1.25)` — Luna estirada por la marea hacia el planeta (`ang` = dirección del planeta). estira 0..1: elipse alargada con grietas de
+- `def luna_dos_caras(lz, x, y, r, rot=0.0, ang_luz=math.pi * 1.25, alfa=1.0, panqueque=0.0, seed=1, sombra=-0.55)` — La Luna con sus DOS caras: `rot`=0 enseña la visible (lisa, con grandes mares oscuros) y `rot`=pi la oculta (llena de cráteres,
+- `def planeta_gas(lz, x, y, r, t=0.0, paleta='jupiter', seed=0, luz=1.0, ang_luz=math.pi * 1.25, tormenta=True, tilt=-0.2)` — Gigante gaseoso genérico con bandas que ondulan. paleta: clave de GIGANTES o lista de 4 colores.
+- `def anillo(lz, x, y, r_in, r_out, tilt=-0.25, incl=0.3, mitad=1, col=(226, 204, 150), alfa=1.0, bandas=3)` — Anillo continuo de un planeta. mitad=0: la mitad de ATRÁS (dibújala antes del planeta); mitad=1: la de ADELANTE (después).
+- `def anillo_escombros(lz, x, y, r_in, r_out, t, n=120, seed=0, incl=0.3, tilt=-0.25, mitad=1, col=(176, 168, 190), tam=7.0, vel=1.0, brillo=0.0)` — Anillo de pedazos de roca que giran (ω ∝ ρ^-1,5, Kepler). mitad=0 atrás / 1 adelante (como `anillo`). brillo 0..1 añade
+- `def lluvia_rocas(lz, t, cx, cy, R, n=26, seed=0, ciclo=1.6, largo=1.0)` — Rocas que caen en línea recta hacia el centro del planeta (cx, cy, radio R) con cola incandescente al entrar.
+- `def pos_orbita(cx, cy, rx, ry=None, tilt=0.0, ang=0.0)` — Punto de una órbita elíptica (centro, semiejes, giro) para el ángulo `ang` (rad). ry=None -> círculo.
+- `def orbita(lz, cx, cy, rx, ry=None, tilt=0.0, color=(150, 170, 235), ancho=3.0, alfa=0.7, dash=True, frac=1.0, fase=0.0, capa=None)` — Órbita elíptica. dash: línea discontinua que 'corre' con `fase` (px); frac<1 la dibuja solo en parte (se traza).
+- `def estela(lz, cx, cy, rx, ry, tilt, ang, color=(190, 205, 255), largo=1.1, ancho=11.0, sentido=1, n=22)` — Cola luminosa que se desvanece detrás de un cuerpo que va por la órbita (en `ang`), hacia atrás `largo` rad.
+- `def esfera_hill(lz, x, y, r, t, color=(120, 160, 255), alfa=1.0)` — Esfera de Hill / zona de influencia: disco translúcido con borde discontinuo que respira y destellos en el borde.
+- `def punto_lagrange(lz, x, y, nombre, t, s=1.0, color=(255, 214, 90), alfa=1.0, rotulo=True, lado=1)` — Marca de punto de equilibrio (L4/L5...): rombo que pulsa con halo y su nombre.
+- `def triangulo_equilibrio(lz, a, b, c, t, color=(255, 214, 90), alfa=1.0, frac=1.0)` — Triángulo equilátero punteado Tierra–Luna–L4/L5 (a, b, c son puntos (x, y)).
+- `def abultamiento_marea(lz, x, y, r, lunas, amp=0.22, color=(76, 164, 246), alfa=0.95)` — Capa de agua de la Tierra deformada por una o varias lunas: lunas = [(ang, fuerza)] (ang = dirección a la luna, fuerza 0..1+).
+- `def tierra_marea(lz, x, y, r, t, lunas, rot=0.0, luz=1.0, ang_luz=math.pi, amp=0.2)` — La Tierra con su agua deformada hacia/contra cada luna (ver `abultamiento_marea`).
+- `def flecha(lz, p0, p1, color=(255, 255, 255), ancho=5.0, frac=1.0, alfa=1.0, cabeza=None, capa=None)` — Flecha de p0 a p1 (se dibuja hasta `frac`). La cabeza mide `cabeza` px (por defecto 3.2×ancho).
+- `def flechas_marea(lz, x, y, r, ang, fuerza=1.0, color=(255, 214, 90), t=0.0)` — Par de flechas del tirón de marea (lado cercano más fuerte, lado lejano más débil) hacia la luna en la dirección `ang`.
+- `def regla(lz, p0, p1, texto, color=(255, 255, 255), px=34, alfa=1.0, frac=1.0, lado=1, fondo=None)` — Cota de distancia con topes en los extremos y pastilla con el texto a la mitad (ej. «384 400 km»).
+- `def etiqueta(lz, x, y, texto, dx=80.0, dy=-70.0, px=34, color=(255, 255, 255), fondo=None, alfa=1.0, frac=1.0)` — Rótulo con línea de llamada desde un cuerpo en (x, y): pastilla en (x+dx, y+dy).
+- `def fondo_espacio(t, brillo=1.0, dx=0.0, dy=0.0, tono=0)` — Fondo de espacio (degradado noche->violeta + nebulosa + estrellas titilantes con paralaje dx/dy en px).
+- `def nebulosa(lz, x, y, r, color=(160, 90, 220), seed=0, alfa=0.5, capa=0)` — Nube de gas de color propia (varios halos desplazados). Úsala sobre el fondo, antes de los cuerpos.
+- `def destello(lz, x, y, r, t, color=(255, 255, 255), alfa=1.0, capa=2)` — Estrella de 4 puntas que centellea (para brillos, descubrimientos, remates).
+- `def fantasma(lz, x, y, r, t, alfa=1.0)` — Cuerpo hipotético: disco translúcido con contorno punteado que corre.
+- `def marca_x(lz, x, y, s=1.0, k=1.0, color=(255, 90, 110))` — ✗ roja (entra con rebote: k es la escala).
+- `def bez2(p0, p1, p2, u)` — Bézier cuadrática (p. ej. aproximación de un asteroide hasta el periapsis antes de pasar a `kepler`).
+- `def kepler(a, e, w, M)` — Posición relativa al foco para la anomalía media M (periapsis en el ángulo w; sentido horario en pantalla).
+- `def trail(lz, f, t, dur=0.5, n=12, color=(255, 255, 255), ancho=7.0)` — Estela de un objeto cuya posición en pantalla es f(tt), afinándose hacia atrás. f debe valer también para tiempos
+
 ## nucleo/kz_gente_iso.py — Personas y animales diminutos del mundo isométrico (estilo Kurzgesagt): carteles en pantalla con 3/4 de frente o de espalda, caminata con balanceo y rebote,
 
 - `def persona(lz, iso, x, y, t=0.0, tipo='campesino', dir=(1.0, 0.0), vel=0.0, seed=0, piel=None, h=34.0, accion=None, z=0.0, tp=0.0, rop=None, sombra=True, alfa=1.0, carga=None, cara=None)` — Persona de h unidades de mundo en (x, y). dir = hacia dónde mira/camina (mundo); vel = ritmo de la caminata (0 = parada). accion: None|'saluda'|'vitorea'|'trabaja'|'reza'|'pelea'|'habla'|'carga'|'cae'.

@@ -1,0 +1,39 @@
+01 base_sin_etiquetas   eleven_v4_turbo  st=0.5  7.44s 2.82 pal/s  costo 21 (cuenta 2)
+    Nadie volvió a ver a la niña. Pero cada noche, a la misma hora, alguien encendía una vela en la ventana.
+02 base_creativa_st0    eleven_v4_turbo  st=0.0  8.16s 2.57 pal/s  costo 24 (cuenta 2)
+    Nadie volvió a ver a la niña. [short pause] Pero cada noche, a la misma hora, alguien encendía una vela en la ventana.
+03 base_natural_st05    eleven_v4_turbo  st=0.5  8.16s 2.57 pal/s  costo 24 (cuenta 2)
+    Nadie volvió a ver a la niña. [short pause] Pero cada noche, a la misma hora, alguien encendía una vela en la ventana.
+04 base_robusta_st1     eleven_v4_turbo  st=1.0  8.16s 2.57 pal/s  costo 24 (cuenta 2)
+    Nadie volvió a ver a la niña. [short pause] Pero cada noche, a la misma hora, alguien encendía una vela en la ventana.
+05 base_v4_completo     eleven_v4        st=0.5  8.16s 2.57 pal/s  costo 47 (cuenta 2)
+    Nadie volvió a ver a la niña. [short pause] Pero cada noche, a la misma hora, alguien encendía una vela en la ventana.
+06 whispers             eleven_v4_turbo  st=0.5  5.36s 2.05 pal/s  costo 17 (cuenta 2)
+    [whispers] Y entonces, en el sótano, algo respondió. [short pause] Con su misma voz.
+07 sighs                eleven_v4_turbo  st=0.5  6.80s 1.91 pal/s  costo 18 (cuenta 2)
+    [sighs] Su madre la esperó durante once años. [short pause] Nunca cerró la puerta con llave.
+08 sad                  eleven_v4_turbo  st=0.5  6.00s 2.33 pal/s  costo 18 (cuenta 2)
+    [sad] Lo último que le dijo fue «vuelvo antes de que oscurezca». [short pause] Y no volvió.
+09 softly               eleven_v4_turbo  st=0.5  5.76s 2.78 pal/s  costo 18 (cuenta 2)
+    [softly] «No tengas miedo», le dijo la anciana. «El bosque solo se lleva a los que corren.»
+10 thoughtful           eleven_v4_turbo  st=0.5  6.72s 2.53 pal/s  costo 23 (cuenta 2)
+    [thoughtful] Hay leyendas que nacen de una mentira. [short pause] Y otras que nacen de algo que nadie quiso contar.
+11 curious              eleven_v4_turbo  st=0.5  5.28s 3.22 pal/s  costo 18 (cuenta 2)
+    [curious] ¿Por qué un pueblo entero dejaría la mesa servida… y se iría a mitad de la cena?
+12 serious              eleven_v4_turbo  st=0.5  7.84s 2.17 pal/s  costo 23 (cuenta 2)
+    [serious] En 1347 llegaron doce barcos al puerto de Mesina. [short pause] En la mayoría ya no quedaba nadie vivo.
+13 nervous              eleven_v4_turbo  st=0.5  7.04s 2.13 pal/s  costo 23 (cuenta 2)
+    [nervous] Los guardias contaron a los prisioneros otra vez. [short pause] Eran trece. Esa mañana habían sido doce.
+14 excited              eleven_v4_turbo  st=0.5  5.92s 2.36 pal/s  costo 18 (cuenta 2)
+    [excited] ¡Y ahí estaba! Después de doscientos años, la ciudad perdida seguía bajo la arena.
+15 laughs               eleven_v4_turbo  st=0.5  6.64s 2.86 pal/s  costo 22 (cuenta 2)
+    [laughs] Claro que el rey no le creyó. [short pause] Nadie le cree a un cocinero que dice haber visto un dragón.
+16 sarcastic            eleven_v4_turbo  st=0.5  6.32s 2.53 pal/s  costo 20 (cuenta 2)
+    [sarcastic] Un plan perfecto: esconder el tesoro en el único lugar que todo el reino estaba vigilando.
+17 angry_shouting       eleven_v4_turbo  st=0.5  4.88s 2.25 pal/s  costo 16 (cuenta 2)
+    El capitán subió a la muralla. [shouting] «¡Nadie abandona esta puerta! ¡Nadie!»
+18 crying               eleven_v4_turbo  st=0.5  6.96s 1.87 pal/s  costo 19 (cuenta 2)
+    [crying] «Perdóname», escribió en la última página. «Perdóname por no haber llegado a tiempo.»
+19 mezcla_parrafo       eleven_v4_turbo  st=0.5 14.64s 2.73 pal/s  costo 50 (cuenta 2)
+    [thoughtful] Era un pueblo pequeño, de los que en un mapa ni siquiera notarías. [short pause] Tenía un pozo, una herrería y una niña que cantaba cada tarde. [sighs] Hasta que una tarde, dejó de cantar. [whispers] Y el pozo empezó a hacerlo por ella.
+total 443 créditos

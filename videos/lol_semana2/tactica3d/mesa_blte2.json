@@ -1,0 +1,258 @@
+{
+ "modo": "mesa",
+ "de": 723.44,
+ "a": 730.96,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_blte2_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Viper": {
+   "jugador": "Viper",
+   "campeon": "Ashe",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Ashe.png",
+   "puntos": [
+    [
+     0,
+     0.5,
+     0.685
+    ]
+   ],
+   "de": 723.84,
+   "sale": 729.96
+  },
+  "ON": {
+   "jugador": "ON",
+   "campeon": "Seraphine",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Seraphine.png",
+   "puntos": [
+    [
+     0,
+     0.525,
+     0.55
+    ]
+   ],
+   "de": 723.92,
+   "sale": 729.96
+  },
+  "Knight": {
+   "jugador": "Knight",
+   "campeon": "Leblanc",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Leblanc.png",
+   "puntos": [
+    [
+     0,
+     0.43,
+     0.415
+    ]
+   ],
+   "de": 724.0,
+   "sale": 729.96
+  },
+  "Bin": {
+   "jugador": "Bin",
+   "campeon": "KSante",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/KSante.png",
+   "puntos": [
+    [
+     0,
+     0.3,
+     0.46
+    ]
+   ],
+   "de": 724.08,
+   "sale": 729.96
+  },
+  "369": {
+   "jugador": "369",
+   "campeon": "Aatrox",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Aatrox.png",
+   "puntos": [
+    [
+     0,
+     0.607,
+     0.568
+    ]
+   ],
+   "de": 724.16,
+   "sale": 729.96
+  },
+  "JackeyLove": {
+   "jugador": "JackeyLove",
+   "campeon": "Lucian",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Lucian.png",
+   "puntos": [
+    [
+     0,
+     0.248,
+     0.443
+    ]
+   ],
+   "de": 724.24,
+   "sale": 729.96
+  },
+  "Zhuo": {
+   "jugador": "Zhuo",
+   "campeon": "Milio",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Milio.png",
+   "puntos": [
+    [
+     0,
+     0.28,
+     0.27
+    ]
+   ],
+   "de": 724.32,
+   "sale": 729.96
+  }
+ },
+ "camara": [
+  [
+   723.44,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   723.7900000000001,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   725.8464,
+   -18,
+   36,
+   50,
+   0.42,
+   0.5
+  ],
+  [
+   728.1024,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.5
+  ],
+  [
+   730.0600000000001,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   730.96,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "r_jl",
+   "pts": [
+    [
+     0.3398,
+     0.4044
+    ],
+    [
+     0.248,
+     0.443
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 1.5,
+   "grosor": 1.2,
+   "en": 724.24,
+   "sale": 729.96
+  },
+  {
+   "id": "r_bin",
+   "pts": [
+    [
+     0.3768,
+     0.4854
+    ],
+    [
+     0.3,
+     0.46
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.9,
+   "alto": 1.5,
+   "grosor": 1.2,
+   "en": 724.64,
+   "sale": 729.96
+  },
+  {
+   "id": "r_vip",
+   "pts": [
+    [
+     0.5978,
+     0.6804
+    ],
+    [
+     0.5,
+     0.685
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.9,
+   "alto": 1.5,
+   "grosor": 1.2,
+   "en": 726.44,
+   "sale": 729.96
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.3,
+   "v": 0.46,
+   "alto": 0,
+   "texto": "BIN Y XUN",
+   "sub": "TRAS JACKEYLOVE",
+   "color": "azul",
+   "dx": -170,
+   "dy": 60,
+   "de": 724.84,
+   "a": 729.96
+  },
+  {
+   "u": 0.607,
+   "v": 0.568,
+   "alto": 0,
+   "texto": "369, TIAN Y CREME",
+   "sub": "SOBRE VIPER Y ON",
+   "color": "rojo",
+   "dx": -90,
+   "dy": 130,
+   "de": 726.55,
+   "a": 729.96
+  }
+ ]
+}

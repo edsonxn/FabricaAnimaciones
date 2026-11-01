@@ -1,0 +1,842 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.352,
+  "tipo": "video",
+  "texto": "Hoy, a las dos de la tarde, uno de estos dos equipos se despide del Mundial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.352,
+  "t1": 18.272,
+  "tipo": "video",
+  "texto": "De un lado, CTBC Flying Oyster, de Taiwán: el equipo que el año pasado le ganó a T1… y ese T1 terminó campeón del mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.272,
+  "t1": 27.814,
+  "tipo": "video",
+  "texto": "Del otro, Karmine Corp: un club que fundaron dos streamers en Francia en 2020, que llena estadios… y que juega su primer Mundial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.814,
+  "t1": 33.194,
+  "tipo": "video",
+  "texto": "Y no es la primera vez que se ven. En 2025 cada uno le ganó una serie al otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.194,
+  "t1": 42.42,
+  "tipo": "video",
+  "texto": "Hoy es el desempate… y el que pierda, se va a casa. Si nunca los has visto jugar, en quince minutos te los presento: su historia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.42,
+  "t1": 52.994,
+  "tipo": "video",
+  "texto": "sus jugadores, cuatro jugadas analizadas pausa por pausa, con la ruta de cada jugador… y los cinco duelos que van a decidir el partido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.994,
+  "t1": 59.634,
+  "tipo": "video",
+  "texto": "Primero, lo que está en juego. En la fase suiza del Mundial, con tres victorias pasas a cuartos de final;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.634,
+  "t1": 70.04,
+  "tipo": "video",
+  "texto": "con tres derrotas, te vas. CFO y Karmine llegan con una victoria y dos derrotas. El que pierda hoy suma la tercera y queda eliminado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.04,
+  "t1": 75.959,
+  "tipo": "video",
+  "texto": "El que gane sigue vivo, dos y dos, y el sábado juega otra serie a muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 75.959,
+  "t1": 85.589,
+  "tipo": "video",
+  "texto": "La serie es al mejor de tres, con Fearless Draft: un campeón que ya se usó no se puede volver a elegir. Y CFO, por mejor sembrado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.589,
+  "t1": 93.74,
+  "tipo": "video",
+  "texto": "tiene la primera selección en la partida uno. Empecemos por CTBC Flying Oyster.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.74,
+  "t1": 100.752,
+  "tipo": "video",
+  "texto": "Su dueño es CTBC, un banco de Taiwán que también tiene equipos de béisbol y de básquetbol.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 100.752,
+  "t1": 110.36,
+  "tipo": "video",
+  "texto": "Y el nombre tiene truco: en chino, «ostra voladora» suena casi igual que «family». Y el lema del banco es «We are family».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.36,
+  "t1": 120.001,
+  "tipo": "video",
+  "texto": "El equipo nació en 2022, y de esa primera alineación solo queda uno: Rest, en la línea superior. Su gran año fue 2025.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.001,
+  "t1": 130.421,
+  "tipo": "video",
+  "texto": "Ganó las tres etapas de la liga del Pacífico, en el MSI tuvo a T1 a una partida de caer… y en el Mundial le ganó a T1 y llegó a cuartos de final:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.421,
+  "t1": 134.898,
+  "tipo": "video",
+  "texto": "el primer equipo de Asia-Pacífico en lograrlo en diez años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 134.898,
+  "t1": 145.955,
+  "tipo": "video",
+  "texto": "Y ese T1 al que le ganó… terminó campeón del mundo. Pero 2026 empezó al revés. En las dos primeras etapas, CFO cayó",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.955,
+  "t1": 154.854,
+  "tipo": "video",
+  "texto": "en la primera ronda de los playoffs, y se quedó fuera del MSI. En abril cambió al medio y al soporte: llegaron el coreano POUT y Kino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.854,
+  "t1": 162.658,
+  "tipo": "video",
+  "texto": "Y con ellos el equipo revivió: subcampeón de la tercera etapa, y boleto al Mundial. Hoy juegan Rest arriba;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.658,
+  "t1": 173.021,
+  "tipo": "video",
+  "texto": "Shad0w, un jungla italiano que pasó por Europa y por China; POUT en el medio; Kino de soporte; y el capitán y estrella, Doggo, el tirador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.021,
+  "t1": 179.503,
+  "tipo": "video",
+  "texto": "En Texas arrancó ganándole a Team Liquid. Después perdió con Movistar KOI y con T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 179.503,
+  "t1": 189.003,
+  "tipo": "video",
+  "texto": "Y en esas partidas está todo lo que tienes que saber de CFO: cómo gana… y cómo pierde. Esta es la pelea que le dio su única victoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.003,
+  "t1": 207.13,
+  "tipo": "video",
+  "texto": "Mírala primero tal como se vio en vivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 207.13,
+  "t1": 210.99,
+  "tipo": "video",
+  "texto": "Ahora, rebobinemos. Minuto treinta y cuatro. Liquid",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 210.99,
+  "t1": 216.78,
+  "tipo": "video",
+  "texto": "gana diez a cinco en asesinatos… pero CFO tiene cuatro dragones y el alma de montaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.78,
+  "t1": 222.046,
+  "tipo": "video",
+  "texto": "Y aparece el dragón ancestral: el que lo tome, tiene la partida en la mano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.046,
+  "t1": 232.583,
+  "tipo": "video",
+  "texto": "Pausa. Mira a Shad0w, con Qiyana: rodeó el foso del dragón por detrás, y espera en la oscuridad. Su equipo, de frente; él, por la espalda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.583,
+  "t1": 240.023,
+  "tipo": "video",
+  "texto": "Liquid entra con CoreJJ, su soporte, para abrir la pelea… pero el combo no sale. Y Shad0w le cae por detrás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.023,
+  "t1": 248.502,
+  "tipo": "video",
+  "texto": "CoreJJ, fuera. Pausa otra vez. Cinco contra cuatro, y CFO empieza el dragón. Mira el reparto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.502,
+  "t1": 255.977,
+  "tipo": "video",
+  "texto": "Rest y Shad0w, dentro del foso, pegándole al ancestral. Doggo, Kino y POUT, de muro en la entrada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 255.977,
+  "t1": 266.533,
+  "tipo": "video",
+  "texto": "Josedeodo, el jungla de Liquid, espera a un lado para robar el dragón. Y el trabajo de Kino es uno solo: taparle el paso con el cuerpo y sacarlo del foso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.533,
+  "t1": 277.126,
+  "tipo": "video",
+  "texto": "Y lo hace: Kino lo levanta, Doggo le cae encima y Rest acaba con Josedeodo. Liquid se cobra a Shad0w… pero Quid llega tarde, y POUT lo borra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 277.126,
+  "t1": 281.886,
+  "tipo": "video",
+  "texto": "¡El dragón ancestral es de CFO! Y medio minuto después, también el",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 281.886,
+  "t1": 292.266,
+  "tipo": "video",
+  "texto": "Barón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.266,
+  "t1": 301.946,
+  "tipo": "video",
+  "texto": "Mírala otra vez, con la ruta de cada jugador. Shad0w llegó antes que nadie al objetivo, puso su guardia de control… y desde ahí cazó a CoreJJ.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.946,
+  "t1": 309.101,
+  "tipo": "video",
+  "texto": "Todo lo demás salió de esa posición. Esa es la lección de CFO: no gana por matar más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.101,
+  "t1": 316.661,
+  "tipo": "video",
+  "texto": "Iba perdiendo diez a cinco… y ganó con objetivos y posición. Dos minutos después, Rest, el veterano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.661,
+  "t1": 324.237,
+  "tipo": "video",
+  "texto": "cerraba la partida con un triple. Los números de CFO en este Mundial:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 324.237,
+  "t1": 334.429,
+  "tipo": "video",
+  "texto": "Doggo es el que más daño hace de su equipo, por mucho. Kino está en casi nueve de cada diez asesinatos, y Shad0w, en ocho de cada diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.429,
+  "t1": 343.533,
+  "tipo": "video",
+  "texto": "Pero el problema de CFO está en otra columna: veinticinco asesinatos… y cuarenta y cuatro muertes en tres partidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.533,
+  "t1": 361.039,
+  "tipo": "video",
+  "texto": "Y contra T1 se vio por qué.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 361.039,
+  "t1": 364.559,
+  "tipo": "video",
+  "texto": "Rebobinemos. Primero, Doggo, con Kai'Sa, en",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 364.559,
+  "t1": 370.979,
+  "tipo": "video",
+  "texto": "el minuto ocho: Doran, el top de T1, sin Destello y sin visión… y Doggo lo caza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.979,
+  "t1": 377.585,
+  "tipo": "video",
+  "texto": "Un minuto después, otra vez. Minuto veinticuatro. CFO va dos mil de oro arriba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.585,
+  "t1": 387.216,
+  "tipo": "video",
+  "texto": "con cuatro torres. Los narradores decían que CFO estaba jugando increíblemente bien… y que T1 limpiaba la visión para forzar una pelea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.216,
+  "t1": 395.196,
+  "tipo": "video",
+  "texto": "Pausa. Aquí está la regla de oro de CFO: proteger a Doggo. Es el que más oro tiene, y T1 lo sabe:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.196,
+  "t1": 402.06,
+  "tipo": "video",
+  "texto": "si lo atrapa, se acaba la pelea. Pausa otra vez. Mira el medio: Kino da un paso al frente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 402.06,
+  "t1": 414.042,
+  "tipo": "video",
+  "texto": "hacia Keria… y Doran viene por el flanco, sin que nadie lo vea. Keria conecta el primer control, Doran y Faker caen encima… y Doggo muere en el primer segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 414.042,
+  "t1": 420.522,
+  "tipo": "video",
+  "texto": "Sin su tirador, CFO se derrumba: cinco muertes en once segundos. T1 toma el Barón…",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.522,
+  "t1": 431.883,
+  "tipo": "video",
+  "texto": "y gana la partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.883,
+  "t1": 438.203,
+  "tipo": "video",
+  "texto": "Esa es la grieta de CFO: cuando va ganando, a mitad de partida, pierde la pelea grande.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.203,
+  "t1": 446.104,
+  "tipo": "video",
+  "texto": "Contra KOI le pasó igual: tomó el Barón… y perdió a cuatro jugadores en la pelea siguiente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 446.104,
+  "t1": 455.144,
+  "tipo": "video",
+  "texto": "Ahora, Karmine Corp. Y esta historia empieza en Twitch. En 2020, dos streamers, el francés Kameto y Kotei,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.144,
+  "t1": 463.122,
+  "tipo": "video",
+  "texto": "fundaron un equipo para la liga francesa. Meses después pasó a llamarse Karmine Corp. Y se volvió un fenómeno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.122,
+  "t1": 472.536,
+  "tipo": "video",
+  "texto": "Ganó cuatro veces el EU Masters, la segunda división europea, más que nadie… y hasta el presidente de Francia, Emmanuel Macron, los felicitó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.536,
+  "t1": 479.696,
+  "tipo": "video",
+  "texto": "Su afición se llama el Blue Wall, y anima como en un estadio de fútbol. En 2023 y en 2024,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 479.696,
+  "t1": 489.487,
+  "tipo": "video",
+  "texto": "sus eventos llenaron una arena de París con veintiocho mil personas. En 2025 se convirtió en el primer club francés en ganar la LEC,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 489.487,
+  "t1": 498.471,
+  "tipo": "video",
+  "texto": "la liga europea. Y este año, por fin, llegó a su primer Mundial. Su 2026 fue el año del casi:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.471,
+  "t1": 507.051,
+  "tipo": "video",
+  "texto": "dos finales de la LEC perdidas tres a dos contra G2, la final de la Esports World Cup después de eliminar a T1… y en verano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.051,
+  "t1": 514.171,
+  "tipo": "video",
+  "texto": "nueve victorias sin derrota en la fase regular, para terminar terceros. La plantilla: Canna, coreano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.171,
+  "t1": 524.531,
+  "tipo": "video",
+  "texto": "excompañero de Faker en T1; Yike, el jungla sueco que ganó cuatro ligas con G2; kyeahoo en el medio; Busio, el soporte estadounidense;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.531,
+  "t1": 530.606,
+  "tipo": "video",
+  "texto": "y la estrella: Caliste, francés, de veinte años, el MVP del verano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 530.606,
+  "t1": 542.077,
+  "tipo": "video",
+  "texto": "Al Mundial llegó por la puerta más estrecha, el Play-In. Perdió su primera partida uno a veinte contra Cloud9, estuvo dos veces a una derrota de quedar fuera… y remontó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 542.077,
+  "t1": 547.817,
+  "tipo": "video",
+  "texto": "Ya en Texas, en su primer partido, aplastó a Anyone's Legend, el número uno de China.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 547.817,
+  "t1": 556.787,
+  "tipo": "video",
+  "texto": "Después perdió con LYON y con Bilibili Gaming. Y la pelea contra el número uno de China es la mejor carta de presentación de Karmine.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 556.787,
+  "t1": 572.675,
+  "tipo": "video",
+  "texto": "Mírala en vivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 572.675,
+  "t1": 577.945,
+  "tipo": "video",
+  "texto": "Rebobinemos. Minuto veinticuatro. Todo parejo: dos asesinatos por lado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.945,
+  "t1": 582.316,
+  "tipo": "video",
+  "texto": "dos dragones por lado, y el oro casi empatado. Pausa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 582.316,
+  "t1": 591.497,
+  "tipo": "video",
+  "texto": "El objetivo de Karmine es Kael, el soporte de Anyone's Legend, con Neeko. Busio entra con Destello… pero no conecta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 591.497,
+  "t1": 600.825,
+  "tipo": "video",
+  "texto": "Yike, el jungla, se mete demasiado profundo… y cae primero. En ese momento, la pelea pinta para Anyone's Legend.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 600.825,
+  "t1": 610.73,
+  "tipo": "video",
+  "texto": "Pausa. Pero mira la definitiva de Busio, con Renata: compra el tiempo justo. Y el combo de Yike, antes de caer, dejó a todos con poca vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.73,
+  "t1": 617.188,
+  "tipo": "video",
+  "texto": "Y entonces Canna, con Jax, se mete hasta la retaguardia rival, donde están los que pegan de lejos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.188,
+  "t1": 623.538,
+  "tipo": "video",
+  "texto": "Tarzan… Kael… Shanks… kyeahoo atrapa a Breathe con su Onda de choque… ¡y cuádruple para Canna!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 623.538,
+  "t1": 634.635,
+  "tipo": "video",
+  "texto": "Cinco por uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 634.635,
+  "t1": 643.315,
+  "tipo": "video",
+  "texto": "La ruta de cada uno lo explica: Karmine perdió a su jungla en el primer segundo… y aun así ganó, porque cada uno siguió con su trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.315,
+  "t1": 650.907,
+  "tipo": "video",
+  "texto": "Dos minutos después, el Barón; al final, la victoria. Los números de Karmine, sumando el Play-In:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 650.907,
+  "t1": 660.686,
+  "tipo": "video",
+  "texto": "Caliste lleva sesenta asesinatos en catorce partidas, y el mejor KDA de su equipo. Busio está en siete de cada diez asesinatos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 660.686,
+  "t1": 667.451,
+  "tipo": "video",
+  "texto": "Y Yike ha jugado Lee Sin cinco veces: con Fearless, en cuanto lo saque, no lo podrá repetir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 667.451,
+  "t1": 670.991,
+  "tipo": "video",
+  "texto": "Pero a la estrella se le ve mejor en la partida más difícil de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 670.991,
+  "t1": 686.13,
+  "tipo": "video",
+  "texto": "su año.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.13,
+  "t1": 694.733,
+  "tipo": "video",
+  "texto": "Play-In, cuarta partida contra Cloud9. Si Karmine pierde, se queda sin Mundial. Rebobinemos. Minuto treinta y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 694.733,
+  "t1": 703.74,
+  "tipo": "video",
+  "texto": "seis. Karmine va casi ocho mil de oro arriba, con cuatro dragones y un Barón. Pero Cloud9 atrapa primero a kyeahoo y a Busio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 703.74,
+  "t1": 713.884,
+  "tipo": "video",
+  "texto": "Pausa. Con dos menos, cualquier error manda a Karmine a casa. Mira a Caliste, con Xayah: no huye. Se queda… y pelea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.884,
+  "t1": 721.886,
+  "tipo": "video",
+  "texto": "Caliste mata a Tactical… a Vulcan… Yike a Loki… y Caliste a Blaber. ¡Karmine gana la pelea con dos menos!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 721.886,
+  "t1": 728.814,
+  "tipo": "video",
+  "texto": "Pausa. Con Cloud9 sin jugadores en pie, Karmine va directo al dragón ancestral… y lo toma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 728.814,
+  "t1": 737.694,
+  "tipo": "video",
+  "texto": "Y con el ancestral, a la base: Caliste borra a tres en tres segundos, Canna remata a Loki… ¡ace, y nexo! Karmine fuerza la quinta partida,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 737.694,
+  "t1": 748.266,
+  "tipo": "video",
+  "texto": "y la gana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 748.266,
+  "t1": 755.626,
+  "tipo": "video",
+  "texto": "Caliste hizo seis asesinatos en el último minuto y cuarto. Esa es la amenaza de Karmine: si la pelea se alarga,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.626,
+  "t1": 764.025,
+  "tipo": "video",
+  "texto": "su tirador la termina. Ahora, los cinco duelos de hoy, posición por posición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.025,
+  "t1": 772.185,
+  "tipo": "video",
+  "texto": "Arriba: Rest contra Canna. Rest es el veterano de CFO, y su arma de siempre es Rumble. Canna,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.185,
+  "t1": 779.271,
+  "tipo": "video",
+  "texto": "el excompañero de Faker, fue el MVP contra el número uno de China. En la jungla: Shad0w contra",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 779.271,
+  "t1": 788.715,
+  "tipo": "video",
+  "texto": "Yike. Shad0w siempre busca el flanco y está en ocho de cada diez asesinatos de su equipo; Yike es el que abre las peleas de Karmine.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 788.715,
+  "t1": 799.153,
+  "tipo": "video",
+  "texto": "En el medio: POUT contra kyeahoo. Los dos, coreanos, y los dos recién llegados: POUT a CFO en abril, y kyeahoo a Karmine en enero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.153,
+  "t1": 806.813,
+  "tipo": "video",
+  "texto": "Abajo, el duelo de estrellas: Doggo contra Caliste. El capitán que más daño hace en CFO… contra el francés",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 806.813,
+  "t1": 815.161,
+  "tipo": "video",
+  "texto": "de veinte años con sesenta asesinatos en el torneo. Y en soporte: Kino contra Busio. Kino, el que tiene que proteger",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 815.161,
+  "t1": 825.196,
+  "tipo": "video",
+  "texto": "a Doggo; Busio, el que engancha a los rivales para que entre todo Karmine. ¿Y el partido de hoy? Tres claves para verlo como un experto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 825.196,
+  "t1": 832.906,
+  "tipo": "video",
+  "texto": "Uno: la pelea de mitad de partida. Los dos han tirado ventajas ahí: CFO contra T1 y contra KOI;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 832.906,
+  "t1": 841.535,
+  "tipo": "video",
+  "texto": "Karmine contra LYON, cuando iba casi cinco mil de oro arriba en el minuto veintidós. El que no se tropiece en esa pelea, gana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 841.535,
+  "t1": 850.495,
+  "tipo": "video",
+  "texto": "Dos: los objetivos. CFO ganó su única partida con el alma y el ancestral; Karmine salvó su serie a muerte con el ancestral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.495,
+  "t1": 857.422,
+  "tipo": "video",
+  "texto": "Mira quién llega primero al dragón. Tres: Fearless. Rest con Rumble, Yike con Lee Sin:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 857.422,
+  "t1": 866.178,
+  "tipo": "video",
+  "texto": "sus campeones favoritos solo se pueden usar una vez. El que gaste su mejor carta en la primera partida puede quedarse sin ella en la tercera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 866.178,
+  "t1": 874.598,
+  "tipo": "video",
+  "texto": "Y un dato: en el First Stand de 2025, CFO ganó dos a cero en grupos, y Karmine se vengó tres a dos en la semifinal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 874.598,
+  "t1": 882.099,
+  "tipo": "video",
+  "texto": "Hoy es el desempate. Así que prepárate: hoy, a las dos de la tarde, hora del centro de México,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 882.099,
+  "t1": 890.29,
+  "tipo": "video",
+  "texto": "CTBC Flying Oyster contra Karmine Corp, al mejor de tres. Y a las cinco, TES contra BLG.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 890.29,
+  "t1": 901.0909,
+  "tipo": "video",
+  "texto": "¿Tú con quién vas? ¿Con la ostra voladora de Taiwán… o con el muro azul de Francia? Déjalo en los comentarios. Nos vemos en el partido.",
+  "clip_s": 8
+ }
+]

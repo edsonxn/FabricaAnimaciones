@@ -1,0 +1,186 @@
+{
+ "modo": "video",
+ "de": 181.808,
+ "a": 189.648,
+ "anillos": [
+  {
+   "u": 0.3,
+   "v": 0.425,
+   "r": 0.026041666666666668,
+   "color": "azul",
+   "en": 181.808,
+   "sale": 189.648
+  },
+  {
+   "u": 0.53,
+   "v": 0.51,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 183.848,
+   "sale": 189.648
+  },
+  {
+   "u": 0.5,
+   "v": 0.6,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 184.048,
+   "sale": 189.648
+  },
+  {
+   "u": 0.42,
+   "v": 0.66,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 184.24800000000002,
+   "sale": 189.648
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f1",
+   "pts": [
+    [
+     0.31,
+     0.425
+    ],
+    [
+     0.37,
+     0.48
+    ],
+    [
+     0.42,
+     0.54
+    ]
+   ],
+   "color": "azul",
+   "en": 182.208,
+   "dur": 0.7,
+   "sale": 189.648,
+   "guion": true,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.3,
+   "v": 0.425,
+   "r": 0.014322916666666668,
+   "color": "azul",
+   "en": 181.908,
+   "sale": 189.648,
+   "alto": 7
+  },
+  {
+   "u": 0.53,
+   "v": 0.51,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 183.948,
+   "sale": 189.648,
+   "alto": 7
+  },
+  {
+   "u": 0.5,
+   "v": 0.6,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 184.148,
+   "sale": 189.648,
+   "alto": 7
+  },
+  {
+   "u": 0.42,
+   "v": 0.66,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 184.348,
+   "sale": 189.648,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 181.958,
+   "a": 189.648,
+   "u": 0.3,
+   "v": 0.425,
+   "alto": 0,
+   "texto": "ONER",
+   "sub": "JARVAN IV",
+   "color": "azul",
+   "dx": -79.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/JarvanIV.png"
+  },
+  {
+   "de": 182.698,
+   "a": 189.648,
+   "flecha": "f1",
+   "texto": "SOLO",
+   "color": "azul",
+   "dx": 0,
+   "dy": 50,
+   "tam": 28
+  },
+  {
+   "de": 183.99800000000002,
+   "a": 189.648,
+   "u": 0.53,
+   "v": 0.51,
+   "alto": 0,
+   "texto": "ALVARO",
+   "sub": null,
+   "color": "rojo",
+   "dx": 68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Seraphine.png"
+  },
+  {
+   "de": 184.198,
+   "a": 189.648,
+   "u": 0.5,
+   "v": 0.6,
+   "alto": 0,
+   "texto": "SUPA",
+   "sub": null,
+   "color": "rojo",
+   "dx": 68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Ezreal.png"
+  },
+  {
+   "de": 184.39800000000002,
+   "a": 189.648,
+   "u": 0.42,
+   "v": 0.66,
+   "alto": 0,
+   "texto": "ELYOYA",
+   "sub": null,
+   "color": "rojo",
+   "dx": -68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/XinZhao.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [
+  {
+   "de": 186.648,
+   "a": 189.648,
+   "texto": "LA CARNADA",
+   "sub": "ASÍ LA LLAMARON LOS NARRADORES",
+   "color": "amarillo",
+   "y": 272.40000000000003,
+   "tam": 40
+  }
+ ],
+ "fondo": "/videos/lol_semana2/tactica3d/capas/t1ko_a_fondo.jpg",
+ "_huella": "9dccff12b3f3"
+}

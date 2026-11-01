@@ -1,0 +1,70 @@
+{
+  "desde": "2026-10-30",
+  "hasta": "2026-11-01",
+  "sesiones": 36,
+  "ayudantes": 29,
+  "dias_activos": 3,
+  "mensajes_del_jefe": 125,
+  "tokens_salida": 5887013,
+  "acciones": 7161,
+  "comandos": 2616,
+  "ediciones": 734,
+  "investigacion": 295,
+  "fallos": 159,
+  "dia_mas_activo": [
+    "2026-10-30",
+    3579
+  ],
+  "herramientas": [
+    [
+      "Bash",
+      2212
+    ],
+    [
+      "Read",
+      1645
+    ],
+    [
+      "PowerShell",
+      404
+    ],
+    [
+      "Write",
+      375
+    ],
+    [
+      "Edit",
+      359
+    ],
+    [
+      "Grep",
+      281
+    ],
+    [
+      "mcp__Claude_Browser__computer",
+      265
+    ],
+    [
+      "mcp__ccd_turn__update_plan",
+      259
+    ],
+    [
+      "mcp__Claude_Browser__javascript_tool",
+      244
+    ],
+    [
+      "WebFetch",
+      170
+    ],
+    [
+      "WebSearch",
+      125
+    ],
+    [
+      "mcp__ccd_turn__wrap_up",
+      112
+    ]
+  ],
+  "commits": 21,
+  "modulos_python": 149
+}

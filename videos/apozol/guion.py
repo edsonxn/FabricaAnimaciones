@@ -92,12 +92,10 @@ ESCENAS = [
         "La Purísima levantó sus primeras construcciones entre los siglos diecisiete y dieciocho, y tuvo su mejor momento con la caña de azúcar, en tiempos del Porfiriato.",
         "En San José de la Labor, la casa grande quedó terminada en mil setecientos setenta y cinco.",
         "El jugo de la caña se hervía hasta volverse piloncillo, y todavía hoy se hace a mano.",
-        "Aquellos muros siguen en pie, y la casa grande de San José de la Labor funciona como hotel desde mil novecientos noventa y siete.",
     ]},
     {"id": "hoy", "post": 1.2, "frases": [
         "En mil ochocientos sesenta y tres, durante el gobierno de Jesús González Ortega, Apozol alcanzó la categoría de municipalidad.",
         "Y en mil novecientos dieciocho, al terminar la Revolución, quedó constituido como municipio libre.",
-        "De este pueblo fue Leopoldo Estrada Borja, nacido en mil ochocientos ochenta y uno, que llegó a ministro de la Suprema Corte de Justicia.",
         "Hoy, en la cabecera viven unas dos mil seiscientas personas, y en todo el municipio, unas seis mil.",
         "En el jardín principal, junto al templo, un laurel enorme da sombra a los vecinos, y un monumento recuerda a Benito Juárez.",
         "Cada año, en la fiesta del Señor de la Ascensión, el pueblo se llena de música, caballos y fuegos artificiales.",

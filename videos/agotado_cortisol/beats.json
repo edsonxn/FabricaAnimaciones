@@ -1,0 +1,492 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.006,
+  "tipo": "video",
+  "texto": "Las 11 de la noche. Llevas todo el día agotado, y por fin te arrastras a la cama.",
+  "clip_s": 10,
+  "t_medio": 4.396,
+  "texto_a": "Las 11 de la noche. Llevas todo el día agotado,",
+  "texto_b": "y por fin te arrastras a la cama."
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.006,
+  "t1": 19.986,
+  "tipo": "video",
+  "texto": "Apagas la luz, cierras los ojos… y tu cabeza se enciende. La junta de mañana. Lo que dijiste hace tres años. Ese mensaje que no contestaste.",
+  "clip_s": 10,
+  "t_medio": 13.553,
+  "texto_a": "Apagas la luz, cierras los ojos… y tu cabeza se enciende.",
+  "texto_b": "La junta de mañana. Lo que dijiste hace tres años. Ese mensaje que no contestaste."
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.986,
+  "t1": 31.944,
+  "tipo": "video",
+  "texto": "No estás roto. Dentro de ti hay dos relojes, y uno se quedó con el acelerador pisado. El primero es un reloj de arena químico. Se llama adenosina.",
+  "clip_s": 10,
+  "t_medio": 27.097,
+  "texto_a": "No estás roto. Dentro de ti hay dos relojes, y uno se quedó con el acelerador pisado.",
+  "texto_b": "El primero es un reloj de arena químico. Se llama adenosina."
+ },
+ {
+  "id": "scene-004",
+  "t0": 31.944,
+  "t1": 39.258,
+  "tipo": "video",
+  "texto": "Cada hora que pasas despierto, tus neuronas queman energía y dejan este residuo, que se acumula como arena.",
+  "clip_s": 10,
+  "t_medio": 35.704,
+  "texto_a": "Cada hora que pasas despierto, tus neuronas queman energía y",
+  "texto_b": "dejan este residuo, que se acumula como arena."
+ },
+ {
+  "id": "scene-005",
+  "t0": 39.258,
+  "t1": 49.902,
+  "tipo": "video",
+  "texto": "Cuanta más adenosina, más te pesan los párpados. Eso es el cansancio. La cafeína tapa esos receptores. Y tarda unas 5 horas en bajar a la mitad:",
+  "clip_s": 10,
+  "t_medio": 44.902,
+  "texto_a": "Cuanta más adenosina, más te pesan los párpados. Eso es el cansancio.",
+  "texto_b": "La cafeína tapa esos receptores. Y tarda unas 5 horas en bajar a la mitad:"
+ },
+ {
+  "id": "scene-006",
+  "t0": 49.902,
+  "t1": 61.384,
+  "tipo": "video",
+  "texto": "el café de las 4 sigue a medias a las 9. El segundo reloj vive detrás de tus ojos: el núcleo supraquiasmático, más chico que un grano de arroz.",
+  "clip_s": 10,
+  "t_medio": 56.517,
+  "texto_a": "el café de las 4 sigue a medias a las 9. El segundo reloj vive detrás de tus ojos:",
+  "texto_b": "el núcleo supraquiasmático, más chico que un grano de arroz."
+ },
+ {
+  "id": "scene-007",
+  "t0": 61.384,
+  "t1": 70.47,
+  "tipo": "video",
+  "texto": "Lee la luz. Y cuando oscurece, ordena soltar melatonina, la señal química de que ya es de noche.",
+  "clip_s": 10,
+  "t_medio": 65.404,
+  "texto_a": "Lee la luz. Y cuando oscurece, ordena soltar melatonina,",
+  "texto_b": "la señal química de que ya es de noche."
+ },
+ {
+  "id": "scene-008",
+  "t0": 70.47,
+  "t1": 74.593,
+  "tipo": "imagen",
+  "texto": "Y aquí entra el villano de la historia: el cortisol."
+ },
+ {
+  "id": "scene-009",
+  "t0": 74.593,
+  "t1": 78.353,
+  "tipo": "imagen",
+  "texto": "Es la hormona del arranque. Sube en la mañana para despertarte,"
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.353,
+  "t1": 82.668,
+  "tipo": "imagen",
+  "texto": "y debería caer a su punto más bajo cerca de la medianoche."
+ },
+ {
+  "id": "scene-011",
+  "t0": 82.668,
+  "t1": 86.288,
+  "tipo": "imagen",
+  "texto": "Pero con un estrés que no se acaba, el sistema de alarma sigue"
+ },
+ {
+  "id": "scene-012",
+  "t0": 86.288,
+  "t1": 90.335,
+  "tipo": "imagen",
+  "texto": "mandando cortisol de noche. Y el cortisol y la melatonina se"
+ },
+ {
+  "id": "scene-013",
+  "t0": 90.335,
+  "t1": 95.854,
+  "tipo": "imagen",
+  "texto": "llevan como un sube y baja: mientras uno sigue arriba, al otro le cuesta subir."
+ },
+ {
+  "id": "scene-014",
+  "t0": 95.854,
+  "t1": 98.974,
+  "tipo": "imagen",
+  "texto": "El resultado: el reloj de arena,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 98.974,
+  "t1": 103.543,
+  "tipo": "imagen",
+  "texto": "lleno. Pero la alarma, encendida."
+ },
+ {
+  "id": "scene-016",
+  "t0": 103.543,
+  "t1": 106.941,
+  "tipo": "imagen",
+  "texto": "¿Y por qué justo en la cama te asaltan los pendientes?"
+ },
+ {
+  "id": "scene-017",
+  "t0": 106.941,
+  "t1": 110.541,
+  "tipo": "imagen",
+  "texto": "En 1927, la psicóloga Bluma Zeigarnik"
+ },
+ {
+  "id": "scene-018",
+  "t0": 110.541,
+  "t1": 114.938,
+  "tipo": "imagen",
+  "texto": "notó que recordamos mejor las tareas interrumpidas que las terminadas."
+ },
+ {
+  "id": "scene-019",
+  "t0": 114.938,
+  "t1": 118.488,
+  "tipo": "imagen",
+  "texto": "De día, el ruido las tapa. En el silencio de la noche,"
+ },
+ {
+  "id": "scene-020",
+  "t0": 118.488,
+  "t1": 123.763,
+  "tipo": "imagen",
+  "texto": "el cerebro abre todas las pestañas pendientes para no olvidarlas."
+ },
+ {
+  "id": "scene-021",
+  "t0": 123.763,
+  "t1": 126.523,
+  "tipo": "imagen",
+  "texto": "La buena noticia: no hay que forzar el sueño."
+ },
+ {
+  "id": "scene-022",
+  "t0": 126.523,
+  "t1": 130.592,
+  "tipo": "imagen",
+  "texto": "Hay que bajar la alarma y dejar que la arena haga lo suyo."
+ },
+ {
+  "id": "scene-023",
+  "t0": 130.592,
+  "t1": 134.052,
+  "tipo": "imagen",
+  "texto": "Aquí van 5 formas. Y la primera te toma solo 5"
+ },
+ {
+  "id": "scene-024",
+  "t0": 134.052,
+  "t1": 137.857,
+  "tipo": "imagen",
+  "texto": "minutos. Uno."
+ },
+ {
+  "id": "scene-025",
+  "t0": 137.857,
+  "t1": 142.556,
+  "tipo": "imagen",
+  "texto": "Saca los pendientes de tu cabeza. Antes de acostarte, escribe en papel"
+ },
+ {
+  "id": "scene-026",
+  "t0": 142.556,
+  "t1": 146.209,
+  "tipo": "imagen",
+  "texto": "todo lo que tienes que hacer mañana. Con detalle."
+ },
+ {
+  "id": "scene-027",
+  "t0": 146.209,
+  "t1": 150.569,
+  "tipo": "imagen",
+  "texto": "En 2018, en la Universidad de Baylor, un grupo escribió su lista de"
+ },
+ {
+  "id": "scene-028",
+  "t0": 150.569,
+  "t1": 153.745,
+  "tipo": "imagen",
+  "texto": "pendientes 5 minutos antes de dormir."
+ },
+ {
+  "id": "scene-029",
+  "t0": 153.745,
+  "t1": 158.745,
+  "tipo": "imagen",
+  "texto": "Se durmieron unos 9 minutos más rápido que quienes anotaron lo que ya habían terminado."
+ },
+ {
+  "id": "scene-030",
+  "t0": 158.745,
+  "t1": 162.002,
+  "tipo": "imagen",
+  "texto": "Y entre más detallada la lista, mejor."
+ },
+ {
+  "id": "scene-031",
+  "t0": 162.002,
+  "t1": 167.069,
+  "tipo": "imagen",
+  "texto": "Al cerebro le basta con saber que la pestaña quedó guardada."
+ },
+ {
+  "id": "scene-032",
+  "t0": 167.069,
+  "t1": 170.467,
+  "tipo": "imagen",
+  "texto": "Dos. Agua caliente, una hora antes."
+ },
+ {
+  "id": "scene-033",
+  "t0": 170.467,
+  "t1": 175.675,
+  "tipo": "imagen",
+  "texto": "Para dormirte, la temperatura del centro de tu cuerpo tiene que bajar casi un grado."
+ },
+ {
+  "id": "scene-034",
+  "t0": 175.675,
+  "t1": 179.105,
+  "tipo": "imagen",
+  "texto": "Una ducha caliente, una o dos horas antes de acostarte,"
+ },
+ {
+  "id": "scene-035",
+  "t0": 179.105,
+  "t1": 182.128,
+  "tipo": "imagen",
+  "texto": "manda la sangre a las manos y a los pies."
+ },
+ {
+  "id": "scene-036",
+  "t0": 182.128,
+  "t1": 185.978,
+  "tipo": "imagen",
+  "texto": "Por ahí se escapa el calor, y el centro del cuerpo se enfría a tiempo."
+ },
+ {
+  "id": "scene-037",
+  "t0": 185.978,
+  "t1": 190.51,
+  "tipo": "imagen",
+  "texto": "En promedio, te duermes unos 10 minutos antes."
+ },
+ {
+  "id": "scene-038",
+  "t0": 190.51,
+  "t1": 193.271,
+  "tipo": "imagen",
+  "texto": "Tres. Apaga la luz de arriba."
+ },
+ {
+  "id": "scene-039",
+  "t0": 193.271,
+  "t1": 198.957,
+  "tipo": "imagen",
+  "texto": "Tu reloj interno no sabe de focos: la luz fuerte le dice que todavía es de día."
+ },
+ {
+  "id": "scene-040",
+  "t0": 198.957,
+  "t1": 202.737,
+  "tipo": "imagen",
+  "texto": "En un estudio de Harvard de 2011, la luz normal de una sala"
+ },
+ {
+  "id": "scene-041",
+  "t0": 202.737,
+  "t1": 207.366,
+  "tipo": "imagen",
+  "texto": "antes de dormir le recortó a la melatonina cerca de 90 minutos."
+ },
+ {
+  "id": "scene-042",
+  "t0": 207.366,
+  "t1": 210.606,
+  "tipo": "imagen",
+  "texto": "La última hora, usa lámparas bajas y cálidas,"
+ },
+ {
+  "id": "scene-043",
+  "t0": 210.606,
+  "t1": 214.563,
+  "tipo": "imagen",
+  "texto": "y aleja el celular de tu cara. Cuatro."
+ },
+ {
+  "id": "scene-044",
+  "t0": 214.563,
+  "t1": 219.427,
+  "tipo": "imagen",
+  "texto": "Baraja tus pensamientos. Ya en la cama, elige una palabra cualquiera."
+ },
+ {
+  "id": "scene-045",
+  "t0": 219.427,
+  "t1": 222.014,
+  "tipo": "imagen",
+  "texto": "Por ejemplo: pan."
+ },
+ {
+  "id": "scene-046",
+  "t0": 222.014,
+  "t1": 227.024,
+  "tipo": "imagen",
+  "texto": "Con la primera letra, imagina cosas sin relación: una pera, un perro,"
+ },
+ {
+  "id": "scene-047",
+  "t0": 227.024,
+  "t1": 230.633,
+  "tipo": "imagen",
+  "texto": "un paraguas, un piano. Sin prisa."
+ },
+ {
+  "id": "scene-048",
+  "t0": 230.633,
+  "t1": 233.84,
+  "tipo": "imagen",
+  "texto": "Cuando te aburras, pasa a la siguiente letra."
+ },
+ {
+  "id": "scene-049",
+  "t0": 233.84,
+  "t1": 237.78,
+  "tipo": "imagen",
+  "texto": "Imita el pensamiento desordenado de cuando ya te estás quedando dormido."
+ },
+ {
+  "id": "scene-050",
+  "t0": 237.78,
+  "t1": 243.933,
+  "tipo": "imagen",
+  "texto": "Hay poca investigación todavía, pero a mucha gente le funciona."
+ },
+ {
+  "id": "scene-051",
+  "t0": 243.933,
+  "t1": 247.073,
+  "tipo": "imagen",
+  "texto": "Cinco. Si en unos 20 minutos no te duermes,"
+ },
+ {
+  "id": "scene-052",
+  "t0": 247.073,
+  "t1": 250.635,
+  "tipo": "imagen",
+  "texto": "levántate. Suena al revés, pero la cama"
+ },
+ {
+  "id": "scene-053",
+  "t0": 250.635,
+  "t1": 254.59,
+  "tipo": "imagen",
+  "texto": "tiene que significar dormir, no pelear con la almohada."
+ },
+ {
+  "id": "scene-054",
+  "t0": 254.59,
+  "t1": 258.71,
+  "tipo": "imagen",
+  "texto": "Ve a otro cuarto con luz tenue, haz algo aburrido, y regresa"
+ },
+ {
+  "id": "scene-055",
+  "t0": 258.71,
+  "t1": 261.116,
+  "tipo": "imagen",
+  "texto": "solo cuando te pesen los ojos."
+ },
+ {
+  "id": "scene-056",
+  "t0": 261.116,
+  "t1": 266.946,
+  "tipo": "imagen",
+  "texto": "Es parte de la terapia cognitivo conductual para el insomnio: el tratamiento que los médicos recomiendan primero,"
+ },
+ {
+  "id": "scene-057",
+  "t0": 266.946,
+  "t1": 270.43,
+  "tipo": "imagen",
+  "texto": "antes que las pastillas."
+ },
+ {
+  "id": "scene-058",
+  "t0": 270.43,
+  "t1": 274.595,
+  "tipo": "imagen",
+  "texto": "El combo para esta noche. Ducha caliente una hora antes."
+ },
+ {
+  "id": "scene-059",
+  "t0": 274.595,
+  "t1": 279.426,
+  "tipo": "imagen",
+  "texto": "Luces bajas. Y 5 minutos con la lista de mañana en papel."
+ },
+ {
+  "id": "scene-060",
+  "t0": 279.426,
+  "t1": 282.346,
+  "tipo": "imagen",
+  "texto": "Si en la cama la mente arranca, baraja letras."
+ },
+ {
+  "id": "scene-061",
+  "t0": 282.346,
+  "t1": 287.018,
+  "tipo": "imagen",
+  "texto": "Y si a los 20 minutos sigues despierto, levántate sin pelear."
+ },
+ {
+  "id": "scene-062",
+  "t0": 287.018,
+  "t1": 289.918,
+  "tipo": "imagen",
+  "texto": "Y si te pasa casi todas las noches durante meses,"
+ },
+ {
+  "id": "scene-063",
+  "t0": 289.918,
+  "t1": 293.855,
+  "tipo": "imagen",
+  "texto": "vale la pena hablarlo con un médico."
+ },
+ {
+  "id": "scene-064",
+  "t0": 293.855,
+  "t1": 298.715,
+  "tipo": "imagen",
+  "texto": "Las 11 de la noche. Apagas la luz y cierras los ojos."
+ },
+ {
+  "id": "scene-065",
+  "t0": 298.715,
+  "t1": 304.052,
+  "tipo": "imagen",
+  "texto": "Los pendientes están en el papel. La alarma, apagada. Y esta vez,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 304.052,
+  "t1": 310.8333,
+  "tipo": "imagen",
+  "texto": "el único reloj que corre… es el de arena."
+ }
+]

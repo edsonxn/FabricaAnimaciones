@@ -40,9 +40,10 @@
       "video": "bichos_invierno",
       "id": "AYmaIJedCPc",
       "titulo": "Where Do All the Bugs Go in Winter?",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-15T16:00:00Z",
-      "formato": "temporada"
+      "formato": "temporada",
+      "publicado": "2026-10-15"
     },
     {
       "video": "arana_techo",
@@ -57,9 +58,10 @@
       "video": "arana_techo",
       "id": "gG2REwAK54Q",
       "titulo": "Never Kill the Spider in Your Ceiling Corner. It Hunts Black Widows",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-18T16:00:00Z",
-      "formato": "never_kill"
+      "formato": "never_kill",
+      "publicado": "2026-10-18"
     },
     {
       "video": "cinco_bichos",
@@ -75,43 +77,47 @@
       "video": "doce_animales",
       "id": "fRiMIprIcM8",
       "titulo": "12 Animals You Should NEVER Kill Around Your House (And 2 You Should)",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "never_kill_lista",
       "prueba": "lista 12+2 de ANIMALES del patio, 14:25, 66 s de clips, fotos reales, imágenes vivas",
       "subido": "2026-10-19",
       "nota": "programado por orden del usuario (pidió 21-oct 16:00 UTC; 16:01 para cumplir 72 h tras arana_techo, publicado 18-oct 16:00:39). La v1 kDsjeEwoLMA (sin imágenes vivas por un bug del motor) la borra el usuario en Studio",
-      "programado": "2026-10-21T16:01:00Z"
+      "programado": "2026-10-21T16:01:00Z",
+      "publicado": "2026-10-21"
     },
     {
       "video": "arana_amarilla",
       "id": "Oq0Tbhz8x0g",
       "titulo": "Never Kill the Big Yellow Spider in Your Garden",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "never_kill",
       "prueba": "vuelta al never_kill de UN bicho; lugar = jardín + leyenda «writing spider»; 8:50, 70 s de clips, 6 fotos reales, imágenes vivas",
       "subido": "2026-10-22",
       "programado": "2026-10-24T16:05:00Z",
-      "nota": "16:05 UTC para cumplir las 72 h tras doce_animales (público 21-oct 16:01:10)"
+      "nota": "16:05 UTC para cumplir las 72 h tras doce_animales (público 21-oct 16:01:10)",
+      "publicado": "2026-10-24T16:05:38Z"
     },
     {
       "video": "arana_escusado",
       "id": "WQu7K19q7u8",
       "titulo": "What Happens to a Spider You Flush Down the Toilet?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-10-26T16:05:00Z",
-      "prueba": "FÓRMULA NUEVA 22-oct: pregunta «What Happens…», 4:19, todo imagen, miniatura persona+acción «STILL ALIVE?» (B «NOW WHAT?»), Short aparte"
+      "prueba": "FÓRMULA NUEVA 22-oct: pregunta «What Happens…», 4:19, todo imagen, miniatura persona+acción «STILL ALIVE?» (B «NOW WHAT?»), Short aparte",
+      "publicado": "2026-10-26T16:05:22Z"
     },
     {
       "video": "arana_escusado_short",
       "id": "EjcARSU5Kwc",
       "titulo": "What Happens to a Spider You Flush? #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "subido": "2026-10-22",
       "programado": "2026-10-27T04:05:00Z",
-      "nota": "Short de arana_escusado; «Vídeo relacionado» = WQu7K19q7u8 en Studio cuando el largo sea público"
+      "nota": "Short de arana_escusado; «Vídeo relacionado» = WQu7K19q7u8 en Studio cuando el largo sea público",
+      "publicado": "2026-10-27T04:05:01Z"
     },
     {
       "video": "mariquitas_casa",
@@ -271,5 +277,11 @@
       "animal"
     ]
   },
-  "prioridad": "22-oct-2026, el usuario: CANAL PRIORITARIO. Analizar al menos UNA VEZ AL DÍA tendencia propia (yt metricas) + lo que funciona fuera (vidiq outliers del nicho) y aplicar mejoras al siguiente video; resultado en canales/formula/wild_next_door.md § Registro."
+  "prioridad": "22-oct-2026, el usuario: CANAL PRIORITARIO. Analizar al menos UNA VEZ AL DÍA tendencia propia (yt metricas) + lo que funciona fuera (vidiq outliers del nicho) y aplicar mejoras al siguiente video; resultado en canales/formula/wild_next_door.md § Registro.",
+  "arte": {
+    "perfil": "canales/arte/wild_next_door_perfil.png",
+    "banner": "canales/arte/wild_next_door_banner.jpg",
+    "aplicado": "2026-10-29",
+    "nota": "Flow (Nano Banana 2.1): araña de ojos saltones sobre amarillo + casa en corte con un bicho por cuarto y «What really happens to the bugs in your house»; reemplaza zorro/atardecer (viejos: *_viejo.jpg)"
+  }
 }

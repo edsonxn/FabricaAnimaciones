@@ -1,0 +1,810 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.926,
+  "tipo": "video",
+  "texto": "Piensa en lo último que te dolió. Una muela, una herida, una fiebre. Hoy vas a la farmacia, tomas una pastilla, y en dos días estás como nuevo.",
+  "clip_s": 10,
+  "t_medio": 5.251,
+  "texto_a": "Piensa en lo último que te dolió. Una muela, una herida, una fiebre.",
+  "texto_b": "Hoy vas a la farmacia, tomas una pastilla, y en dos días estás como nuevo."
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.926,
+  "t1": 19.168,
+  "tipo": "video",
+  "texto": "Ahora imagina ese mismo dolor hace treinta mil años. Sin farmacia. Sin doctor. Sin anestesia. Sin saber siquiera que las bacterias existen.",
+  "clip_s": 10,
+  "t_medio": 15.066,
+  "texto_a": "Ahora imagina ese mismo dolor hace treinta mil años. Sin farmacia. Sin doctor.",
+  "texto_b": "Sin anestesia. Sin saber siquiera que las bacterias existen."
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.168,
+  "t1": 27.418,
+  "tipo": "video",
+  "texto": "Seguro has escuchado que los humanos de esa época morían a los treinta años, porque no había medicina. Pero entonces hay una pregunta incómoda.",
+  "clip_s": 10,
+  "t_medio": 23.018,
+  "texto_a": "Seguro has escuchado que los humanos de esa época morían a los treinta años,",
+  "texto_b": "porque no había medicina. Pero entonces hay una pregunta incómoda."
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.418,
+  "t1": 36.522,
+  "tipo": "video",
+  "texto": "Tú estás vivo. Y eso significa que todos tus ancestros sobrevivieron. Todos. Sin una sola excepción. Durante trescientos mil años.",
+  "clip_s": 10,
+  "t_medio": 32.229,
+  "texto_a": "Tú estás vivo. Y eso significa que todos tus ancestros sobrevivieron.",
+  "texto_b": "Todos. Sin una sola excepción. Durante trescientos mil años."
+ },
+ {
+  "id": "scene-005",
+  "t0": 36.522,
+  "t1": 49.489,
+  "tipo": "video",
+  "texto": "Sobrevivieron a huesos rotos, infecciones, parásitos y partos complicados. Y sin una sola pastilla. ¿Cómo lo hicieron? En este video vas a conocer cuatro historias reales, descubiertas por arqueólogos.",
+  "clip_s": 10,
+  "t_medio": 43.249,
+  "texto_a": "Sobrevivieron a huesos rotos, infecciones, parásitos y partos complicados. Y sin una sola pastilla.",
+  "texto_b": "¿Cómo lo hicieron? En este video vas a conocer cuatro historias reales, descubiertas por arqueólogos."
+ },
+ {
+  "id": "scene-006",
+  "t0": 49.489,
+  "t1": 57.781,
+  "tipo": "video",
+  "texto": "Una de ellas cambió lo que la ciencia creía sobre quién inventó la cirugía. Pero antes, vamos a desmontar ese mito de los treinta años.",
+  "clip_s": 10,
+  "t_medio": 53.767,
+  "texto_a": "Una de ellas cambió lo que la ciencia creía sobre quién inventó la cirugía.",
+  "texto_b": "Pero antes, vamos a desmontar ese mito de los treinta años."
+ },
+ {
+  "id": "scene-007",
+  "t0": 57.781,
+  "t1": 62.156,
+  "tipo": "imagen",
+  "texto": "Primero, el mito. ¿De verdad la gente moría a los treinta años?"
+ },
+ {
+  "id": "scene-008",
+  "t0": 62.156,
+  "t1": 67.281,
+  "tipo": "imagen",
+  "texto": "No exactamente. Ese número sale de un promedio, y los promedios engañan."
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.281,
+  "t1": 71.221,
+  "tipo": "imagen",
+  "texto": "En los grupos de cazadores recolectores que se han estudiado, la esperanza"
+ },
+ {
+  "id": "scene-010",
+  "t0": 71.221,
+  "t1": 74.25,
+  "tipo": "imagen",
+  "texto": "de vida al nacer era de treinta o cuarenta años."
+ },
+ {
+  "id": "scene-011",
+  "t0": 74.25,
+  "t1": 80.422,
+  "tipo": "imagen",
+  "texto": "Pero eso pasaba porque morían muchísimos bebés y niños. Cuatro de cada diez no llegaban a los quince años."
+ },
+ {
+  "id": "scene-012",
+  "t0": 80.422,
+  "t1": 83.351,
+  "tipo": "imagen",
+  "texto": "Esas muertes tempranas bajan el promedio de todos."
+ },
+ {
+  "id": "scene-013",
+  "t0": 83.351,
+  "t1": 88.907,
+  "tipo": "imagen",
+  "texto": "En cambio, quien llegaba a los quince tenía muy buenas probabilidades de vivir muchos años más."
+ },
+ {
+  "id": "scene-014",
+  "t0": 88.907,
+  "t1": 91.447,
+  "tipo": "imagen",
+  "texto": "En esos grupos, la edad en que más adultos"
+ },
+ {
+  "id": "scene-015",
+  "t0": 91.447,
+  "t1": 95.33,
+  "tipo": "imagen",
+  "texto": "morían estaba entre los sesenta y ocho y los setenta y ocho años."
+ },
+ {
+  "id": "scene-016",
+  "t0": 95.33,
+  "t1": 100.639,
+  "tipo": "imagen",
+  "texto": "No eran inmortales. Pero tampoco eran jóvenes condenados. Sabían arreglárselas."
+ },
+ {
+  "id": "scene-017",
+  "t0": 100.639,
+  "t1": 103.63,
+  "tipo": "imagen",
+  "texto": "Y su primera botica estaba en el bosque."
+ },
+ {
+  "id": "scene-018",
+  "t0": 103.63,
+  "t1": 108.433,
+  "tipo": "imagen",
+  "texto": "Primera historia. Una cueva en el norte de España, llamada El Sidrón."
+ },
+ {
+  "id": "scene-019",
+  "t0": 108.433,
+  "t1": 112.816,
+  "tipo": "imagen",
+  "texto": "Hace casi cincuenta mil años vivía ahí un grupo de neandertales."
+ },
+ {
+  "id": "scene-020",
+  "t0": 112.816,
+  "t1": 115.646,
+  "tipo": "imagen",
+  "texto": "Los científicos analizaron el sarro de sus dientes,"
+ },
+ {
+  "id": "scene-021",
+  "t0": 115.646,
+  "t1": 118.333,
+  "tipo": "imagen",
+  "texto": "esa capa dura que el dentista te quita."
+ },
+ {
+  "id": "scene-022",
+  "t0": 118.333,
+  "t1": 123.597,
+  "tipo": "imagen",
+  "texto": "Ahí quedan atrapados restos de todo lo que alguien masticó. Un joven tenía un absceso en la mandíbula,"
+ },
+ {
+  "id": "scene-023",
+  "t0": 123.597,
+  "t1": 127.831,
+  "tipo": "imagen",
+  "texto": "una infección dolorosísima, y además un parásito en el estómago."
+ },
+ {
+  "id": "scene-024",
+  "t0": 127.831,
+  "t1": 131.851,
+  "tipo": "imagen",
+  "texto": "En su sarro apareció ADN de álamo, un árbol que contiene ácido"
+ },
+ {
+  "id": "scene-025",
+  "t0": 131.851,
+  "t1": 134.884,
+  "tipo": "imagen",
+  "texto": "salicílico, el ingrediente base de la aspirina."
+ },
+ {
+  "id": "scene-026",
+  "t0": 134.884,
+  "t1": 139.857,
+  "tipo": "imagen",
+  "texto": "Y también un moho llamado Penicillium, el mismo hongo del que sale la penicilina."
+ },
+ {
+  "id": "scene-027",
+  "t0": 139.857,
+  "t1": 144.275,
+  "tipo": "imagen",
+  "texto": "Los otros neandertales de la cueva no tenían ni una cosa ni la otra."
+ },
+ {
+  "id": "scene-028",
+  "t0": 144.275,
+  "t1": 148.535,
+  "tipo": "imagen",
+  "texto": "Los investigadores son cautelosos, porque no pueden demostrar que fuera un remedio."
+ },
+ {
+  "id": "scene-029",
+  "t0": 148.535,
+  "t1": 152.472,
+  "tipo": "imagen",
+  "texto": "Pero el álamo no es comida, y ese joven estaba enfermo."
+ },
+ {
+  "id": "scene-030",
+  "t0": 152.472,
+  "t1": 155.392,
+  "tipo": "imagen",
+  "texto": "Y esto no es solo cosa nuestra. En dos mil veintidós,"
+ },
+ {
+  "id": "scene-031",
+  "t0": 155.392,
+  "t1": 160.976,
+  "tipo": "imagen",
+  "texto": "unos científicos vieron a un orangután de Sumatra llamado Rakus con una herida abierta en la cara."
+ },
+ {
+  "id": "scene-032",
+  "t0": 160.976,
+  "t1": 163.576,
+  "tipo": "imagen",
+  "texto": "Masticó hojas de una liana que calma la inflamación,"
+ },
+ {
+  "id": "scene-033",
+  "t0": 163.576,
+  "t1": 166.636,
+  "tipo": "imagen",
+  "texto": "y se las puso sobre la herida como una pasta."
+ },
+ {
+  "id": "scene-034",
+  "t0": 166.636,
+  "t1": 171.859,
+  "tipo": "imagen",
+  "texto": "La herida se cerró en menos de una semana, sin infectarse. Fue la primera vez que se vio a un"
+ },
+ {
+  "id": "scene-035",
+  "t0": 171.859,
+  "t1": 175.899,
+  "tipo": "imagen",
+  "texto": "animal salvaje curarse así. Quizá esa habilidad es más vieja que nuestra"
+ },
+ {
+  "id": "scene-036",
+  "t0": 175.899,
+  "t1": 180.04,
+  "tipo": "imagen",
+  "texto": "especie. Y hay otro botiquín, mucho más famoso,"
+ },
+ {
+  "id": "scene-037",
+  "t0": 180.04,
+  "t1": 183.545,
+  "tipo": "imagen",
+  "texto": "que aguantó cinco mil trescientos años congelado."
+ },
+ {
+  "id": "scene-038",
+  "t0": 183.545,
+  "t1": 188.005,
+  "tipo": "imagen",
+  "texto": "En mil novecientos noventa y uno, unos excursionistas encontraron en"
+ },
+ {
+  "id": "scene-039",
+  "t0": 188.005,
+  "t1": 191.104,
+  "tipo": "imagen",
+  "texto": "los Alpes el cuerpo de un hombre momificado por el hielo."
+ },
+ {
+  "id": "scene-040",
+  "t0": 191.104,
+  "t1": 197.12,
+  "tipo": "imagen",
+  "texto": "Lo llamaron el Hombre de Hielo. Y entre sus cosas llevaba trozos de un hongo que crece en los abedules."
+ },
+ {
+  "id": "scene-041",
+  "t0": 197.12,
+  "t1": 200.08,
+  "tipo": "imagen",
+  "texto": "Su cuerpo tenía parásitos intestinales, y ese"
+ },
+ {
+  "id": "scene-042",
+  "t0": 200.08,
+  "t1": 203.264,
+  "tipo": "imagen",
+  "texto": "hongo se ha usado en la medicina popular contra ellos."
+ },
+ {
+  "id": "scene-043",
+  "t0": 203.264,
+  "t1": 209.617,
+  "tipo": "imagen",
+  "texto": "Los científicos creen que quizá lo cargaba como remedio, aunque ese mismo hongo también sirve para encender fuego."
+ },
+ {
+  "id": "scene-044",
+  "t0": 209.617,
+  "t1": 212.297,
+  "tipo": "imagen",
+  "texto": "Además tenía tatuajes en las rodillas y en la espalda,"
+ },
+ {
+  "id": "scene-045",
+  "t0": 212.297,
+  "t1": 215.897,
+  "tipo": "imagen",
+  "texto": "justo donde le dolían las articulaciones. ¿Una terapia?"
+ },
+ {
+  "id": "scene-046",
+  "t0": 215.897,
+  "t1": 219.85,
+  "tipo": "imagen",
+  "texto": "Nadie lo sabe. Segunda historia."
+ },
+ {
+  "id": "scene-047",
+  "t0": 219.85,
+  "t1": 224.601,
+  "tipo": "imagen",
+  "texto": "Las muelas. Hoy un dolor de muelas te manda corriendo con el dentista."
+ },
+ {
+  "id": "scene-048",
+  "t0": 224.601,
+  "t1": 228.693,
+  "tipo": "imagen",
+  "texto": "Hace catorce mil años no había dentistas. O eso creíamos."
+ },
+ {
+  "id": "scene-049",
+  "t0": 228.693,
+  "t1": 232.193,
+  "tipo": "imagen",
+  "texto": "En una cueva de Italia, llamada Riparo Villabruna, apareció la muela"
+ },
+ {
+  "id": "scene-050",
+  "t0": 232.193,
+  "t1": 235.708,
+  "tipo": "imagen",
+  "texto": "de un joven de unos veinticinco años. Tenía una caries enorme."
+ },
+ {
+  "id": "scene-051",
+  "t0": 235.708,
+  "t1": 238.876,
+  "tipo": "imagen",
+  "texto": "Y alrededor de ella, rayones diminutos."
+ },
+ {
+  "id": "scene-052",
+  "t0": 238.876,
+  "t1": 244.416,
+  "tipo": "imagen",
+  "texto": "Los investigadores los repitieron en el laboratorio y concluyeron que alguien rascó y limpió esa caries con puntas"
+ },
+ {
+  "id": "scene-053",
+  "t0": 244.416,
+  "t1": 247.338,
+  "tipo": "imagen",
+  "texto": "de piedra afilada, cuando él todavía estaba vivo."
+ },
+ {
+  "id": "scene-054",
+  "t0": 247.338,
+  "t1": 253.636,
+  "tipo": "imagen",
+  "texto": "Es el tratamiento dental más antiguo que se conoce. Un dentista de la Edad de Hielo, con un pedazo de pedernal."
+ },
+ {
+  "id": "scene-055",
+  "t0": 253.636,
+  "t1": 256.086,
+  "tipo": "imagen",
+  "texto": "Mucho después, hace seis mil quinientos años,"
+ },
+ {
+  "id": "scene-056",
+  "t0": 256.086,
+  "t1": 261.309,
+  "tipo": "imagen",
+  "texto": "en lo que hoy es Eslovenia, alguien rellenó la grieta de un colmillo con cera de abeja."
+ },
+ {
+  "id": "scene-057",
+  "t0": 261.309,
+  "t1": 264.389,
+  "tipo": "imagen",
+  "texto": "Si lo hicieron cuando la persona estaba viva, sería el relleno dental"
+ },
+ {
+  "id": "scene-058",
+  "t0": 264.389,
+  "t1": 268.284,
+  "tipo": "imagen",
+  "texto": "más antiguo del mundo, quizá para aliviar el dolor al masticar."
+ },
+ {
+  "id": "scene-059",
+  "t0": 268.284,
+  "t1": 274.03,
+  "tipo": "imagen",
+  "texto": "Nadie sabía qué era una caries. Pero sabían que el dolor se podía calmar."
+ },
+ {
+  "id": "scene-060",
+  "t0": 274.03,
+  "t1": 276.37,
+  "tipo": "imagen",
+  "texto": "Tercera historia. La más impresionante,"
+ },
+ {
+  "id": "scene-061",
+  "t0": 276.37,
+  "t1": 280.186,
+  "tipo": "imagen",
+  "texto": "o la más aterradora. Hace miles de años, en muchas partes del mundo,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 280.186,
+  "t1": 285.874,
+  "tipo": "imagen",
+  "texto": "a algunas personas les hacían un agujero en el cráneo. Los arqueólogos lo llaman trepanación."
+ },
+ {
+  "id": "scene-063",
+  "t0": 285.874,
+  "t1": 288.534,
+  "tipo": "imagen",
+  "texto": "Y lo sorprendente es que muchos de esos cráneos muestran"
+ },
+ {
+  "id": "scene-064",
+  "t0": 288.534,
+  "t1": 293.789,
+  "tipo": "imagen",
+  "texto": "hueso nuevo creciendo alrededor del agujero. Es decir, la persona siguió viviendo."
+ },
+ {
+  "id": "scene-065",
+  "t0": 293.789,
+  "t1": 297.409,
+  "tipo": "imagen",
+  "texto": "En la costa sur de Perú, hace unos dos mil cuatrocientos años,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 297.409,
+  "t1": 300.591,
+  "tipo": "imagen",
+  "texto": "sobrevivían cuatro de cada diez pacientes."
+ },
+ {
+  "id": "scene-067",
+  "t0": 300.591,
+  "t1": 305.411,
+  "tipo": "imagen",
+  "texto": "Pero con los siglos los cirujanos fueron perfeccionando la técnica. En la época inca,"
+ },
+ {
+  "id": "scene-068",
+  "t0": 305.411,
+  "t1": 310.988,
+  "tipo": "imagen",
+  "texto": "sobrevivían más de siete de cada diez. Para comparar, en la Guerra Civil de Estados Unidos,"
+ },
+ {
+  "id": "scene-069",
+  "t0": 310.988,
+  "t1": 316.376,
+  "tipo": "imagen",
+  "texto": "hace unos ciento sesenta años, moría más o menos la mitad de los soldados operados del cráneo."
+ },
+ {
+  "id": "scene-070",
+  "t0": 316.376,
+  "t1": 320.796,
+  "tipo": "imagen",
+  "texto": "Sin microscopios y sin conocer los gérmenes, aquellos cirujanos de los Andes"
+ },
+ {
+  "id": "scene-071",
+  "t0": 320.796,
+  "t1": 325.532,
+  "tipo": "imagen",
+  "texto": "lograron mejores resultados. Los expertos creen que lo hacían sobre todo para tratar"
+ },
+ {
+  "id": "scene-072",
+  "t0": 325.532,
+  "t1": 331.63,
+  "tipo": "imagen",
+  "texto": "fracturas del cráneo tras golpes en combate, aunque quizá también por dolores o por rituales."
+ },
+ {
+  "id": "scene-073",
+  "t0": 331.63,
+  "t1": 337.045,
+  "tipo": "imagen",
+  "texto": "Pero la medicina más poderosa de la prehistoria quizá no fue una planta ni un cuchillo."
+ },
+ {
+  "id": "scene-074",
+  "t0": 337.045,
+  "t1": 340.683,
+  "tipo": "imagen",
+  "texto": "Fue algo mucho más simple. Que alguien cuidara de ti."
+ },
+ {
+  "id": "scene-075",
+  "t0": 340.683,
+  "t1": 345.725,
+  "tipo": "imagen",
+  "texto": "En una cueva del norte de Irak se encontró el esqueleto de un neandertal con heridas terribles."
+ },
+ {
+  "id": "scene-076",
+  "t0": 345.725,
+  "t1": 350.965,
+  "tipo": "imagen",
+  "texto": "Había recibido un golpe fuerte en la cara, tenía un brazo derecho dañado, una pierna lesionada y"
+ },
+ {
+  "id": "scene-077",
+  "t0": 350.965,
+  "t1": 355.13,
+  "tipo": "imagen",
+  "texto": "probablemente oía muy mal. Con esas heridas no podía cazar ni correr."
+ },
+ {
+  "id": "scene-078",
+  "t0": 355.13,
+  "t1": 359.702,
+  "tipo": "imagen",
+  "texto": "Y aun así llegó a los cuarenta o cincuenta años, que entonces era mucho."
+ },
+ {
+  "id": "scene-079",
+  "t0": 359.702,
+  "t1": 365.85,
+  "tipo": "imagen",
+  "texto": "Los investigadores creen que no habría sobrevivido solo. Su grupo lo alimentó y lo cuidó durante años."
+ },
+ {
+  "id": "scene-080",
+  "t0": 365.85,
+  "t1": 369.87,
+  "tipo": "imagen",
+  "texto": "Y hay un caso todavía más antiguo. En Dmanisi, en Georgia,"
+ },
+ {
+  "id": "scene-081",
+  "t0": 369.87,
+  "t1": 373.964,
+  "tipo": "imagen",
+  "texto": "hay un cráneo de hace un millón setecientos setenta mil años."
+ },
+ {
+  "id": "scene-082",
+  "t0": 373.964,
+  "t1": 380.307,
+  "tipo": "imagen",
+  "texto": "Pertenecía a alguien que había perdido casi todos los dientes años antes de morir. Solo le quedaba uno."
+ },
+ {
+  "id": "scene-083",
+  "t0": 380.307,
+  "t1": 386.616,
+  "tipo": "imagen",
+  "texto": "Así no podía masticar carne dura ni raíces. Probablemente alguien le ayudó, ablandando la comida."
+ },
+ {
+  "id": "scene-084",
+  "t0": 386.616,
+  "t1": 391.016,
+  "tipo": "imagen",
+  "texto": "O sea que cuidar a un enfermo no es un invento moderno. Es más viejo que nuestra"
+ },
+ {
+  "id": "scene-085",
+  "t0": 391.016,
+  "t1": 395.57,
+  "tipo": "imagen",
+  "texto": "propia especie. Y ahora, la cuarta historia."
+ },
+ {
+  "id": "scene-086",
+  "t0": 395.57,
+  "t1": 400.814,
+  "tipo": "imagen",
+  "texto": "La que cambió la ciencia. Estamos en dos mil veinte, en una cueva de la selva de Borneo,"
+ },
+ {
+  "id": "scene-087",
+  "t0": 400.814,
+  "t1": 406.18,
+  "tipo": "imagen",
+  "texto": "en Indonesia, llamada Liang Tebo. Un equipo de arqueólogos excava una tumba"
+ },
+ {
+  "id": "scene-088",
+  "t0": 406.18,
+  "t1": 410.98,
+  "tipo": "imagen",
+  "texto": "de hace más de treinta y un mil años. Dentro hay el esqueleto de un adulto joven."
+ },
+ {
+  "id": "scene-089",
+  "t0": 410.98,
+  "t1": 414.892,
+  "tipo": "imagen",
+  "texto": "Y le falta algo. Su pierna izquierda termina por debajo de la rodilla."
+ },
+ {
+  "id": "scene-090",
+  "t0": 414.892,
+  "t1": 422.54,
+  "tipo": "imagen",
+  "texto": "Y los huesos acaban en un corte limpio, ya cicatrizado. Según los científicos, no fue un accidente ni la mordida de un animal."
+ },
+ {
+  "id": "scene-091",
+  "t0": 422.54,
+  "t1": 426.589,
+  "tipo": "imagen",
+  "texto": "Fue un corte hecho a propósito, con una herramienta de piedra afilada."
+ },
+ {
+  "id": "scene-092",
+  "t0": 426.589,
+  "t1": 431.834,
+  "tipo": "imagen",
+  "texto": "Esa persona fue operada cuando era un niño. Y la herida sanó sin infección."
+ },
+ {
+  "id": "scene-093",
+  "t0": 431.834,
+  "t1": 436.134,
+  "tipo": "imagen",
+  "texto": "Y sobrevivió. Vivió entre seis y nueve años más, moviéndose por una"
+ },
+ {
+  "id": "scene-094",
+  "t0": 436.134,
+  "t1": 439.458,
+  "tipo": "imagen",
+  "texto": "selva llena de pendientes y ríos, con una sola pierna."
+ },
+ {
+  "id": "scene-095",
+  "t0": 439.458,
+  "t1": 445.118,
+  "tipo": "imagen",
+  "texto": "Hasta ese día se pensaba que la cirugía había aparecido con la agricultura, hace unos siete mil años."
+ },
+ {
+  "id": "scene-096",
+  "t0": 445.118,
+  "t1": 451.28,
+  "tipo": "imagen",
+  "texto": "Este hallazgo la adelantó veinticuatro mil años. Y lo hizo un grupo de cazadores recolectores, sin hospitales."
+ },
+ {
+  "id": "scene-097",
+  "t0": 451.28,
+  "t1": 455.98,
+  "tipo": "imagen",
+  "texto": "Para sobrevivir a una operación así hay que conocer la anatomía, cortar con cuidado,"
+ },
+ {
+  "id": "scene-098",
+  "t0": 455.98,
+  "t1": 461.465,
+  "tipo": "imagen",
+  "texto": "parar la sangre y evitar la infección. Y después, alguien tuvo que cuidar al niño durante meses,"
+ },
+ {
+  "id": "scene-099",
+  "t0": 461.465,
+  "t1": 468.248,
+  "tipo": "imagen",
+  "texto": "y ayudarlo a caminar durante años. Cuando murió, lo enterraron en esa misma cueva."
+ },
+ {
+  "id": "scene-100",
+  "t0": 468.248,
+  "t1": 471.82,
+  "tipo": "imagen",
+  "texto": "Entonces, ¿en qué se parece tu botiquín al de ellos?"
+ },
+ {
+  "id": "scene-101",
+  "t0": 471.82,
+  "t1": 477.531,
+  "tipo": "imagen",
+  "texto": "La aspirina nació de la corteza del sauce, un árbol que se usa para el dolor desde hace miles de años."
+ },
+ {
+  "id": "scene-102",
+  "t0": 477.531,
+  "t1": 482.575,
+  "tipo": "imagen",
+  "texto": "La penicilina, el primer antibiótico, salió de un moho, en mil novecientos veintiocho."
+ },
+ {
+  "id": "scene-103",
+  "t0": 482.575,
+  "t1": 485.811,
+  "tipo": "imagen",
+  "texto": "La miel se sigue usando hoy para tratar algunas heridas."
+ },
+ {
+  "id": "scene-104",
+  "t0": 485.811,
+  "t1": 492.961,
+  "tipo": "imagen",
+  "texto": "Nuestros ancestros no tenían laboratorios. Tenían miles de años de pruebas, errores y gente que se contaba lo que funcionaba."
+ },
+ {
+  "id": "scene-105",
+  "t0": 492.961,
+  "t1": 497.111,
+  "tipo": "imagen",
+  "texto": "Pero no los imites. Ellos también se envenenaban, se infectaban y se morían."
+ },
+ {
+  "id": "scene-106",
+  "t0": 497.111,
+  "t1": 500.134,
+  "tipo": "imagen",
+  "texto": "Si algo te duele de verdad, ve con un médico."
+ },
+ {
+  "id": "scene-107",
+  "t0": 500.134,
+  "t1": 506.797,
+  "tipo": "imagen",
+  "texto": "No sobrevivieron por ser más fuertes. Sobrevivieron aprendiendo, y cuidándose unos a otros."
+ },
+ {
+  "id": "scene-108",
+  "t0": 506.797,
+  "t1": 510.5,
+  "tipo": "imagen",
+  "texto": "Así que la próxima vez que tomes una pastilla, detente un segundo."
+ },
+ {
+  "id": "scene-109",
+  "t0": 510.5,
+  "t1": 516.44,
+  "tipo": "imagen",
+  "texto": "Detrás de ella hay un neandertal masticando corteza, un dentista de la Edad de Hielo con un pedazo de pedernal,"
+ },
+ {
+  "id": "scene-110",
+  "t0": 516.44,
+  "t1": 522.524,
+  "tipo": "imagen",
+  "texto": "y un niño en Borneo al que todo un grupo ayudó a caminar. Tú no eres el primero en sobrevivir a un dolor."
+ },
+ {
+  "id": "scene-111",
+  "t0": 522.524,
+  "t1": 526.84,
+  "tipo": "imagen",
+  "texto": "Eres el último eslabón de una cadena de supervivientes que nunca se rindió."
+ },
+ {
+  "id": "scene-112",
+  "t0": 526.84,
+  "t1": 531.6,
+  "tipo": "imagen",
+  "texto": "Eres un Homo sapiens. Con wifi."
+ }
+]

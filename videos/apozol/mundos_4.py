@@ -223,7 +223,7 @@ def inset_tres(lz, x, y, R, t, t_juch, t_mix, t_apozol, k=1.0, alfa=1.0):
                     P.casa(lz, px + ox * kk, py + oy * kk, 0.48 * sc * kk, calor=0.4)
     lz.trazo(ring, (255, 206, 72), 12.0, cerrado=True, afinar=False, temblor=0.0, capa=2)
     lz.trazo(ring, (255, 244, 200), 3.0, cerrado=True, afinar=False, temblor=0.0, capa=2)
-    for nom, (px, py), t0, col, px_ in (("Juchipila", (x - 30, y + 0.62 * R + 30), t_juch, U.COL["morado"], 34), ("peñol del Mixtón", (x + 4, y + 58), t_mix, U.COL["rojo"], 34),
+    for nom, (px, py), t0, col, px_ in (("Juchipila", (x - 30, y + 0.62 * R + 30), t_juch, U.COL["morado"], 34), ("peñol del Mixtón", (x + 4, y + 82), t_mix, U.COL["rojo"], 32),
                                         ("Apozol", (x + 60, y - 0.62 * R - 30), t_apozol, U.COL["naranja"], 34)):
         kk = U.pop(t, t0 + 0.1)
         if kk > 0.01:

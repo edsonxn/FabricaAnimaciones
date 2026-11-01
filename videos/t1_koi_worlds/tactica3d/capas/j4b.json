@@ -1,0 +1,228 @@
+{
+ "modo": "video",
+ "de": 458.158,
+ "a": 465.466,
+ "anillos": [
+  {
+   "u": 0.625,
+   "v": 0.77,
+   "r": 0.027083333333333334,
+   "color": "azul",
+   "en": 458.25800000000004,
+   "sale": 465.466
+  },
+  {
+   "u": 0.44,
+   "v": 0.58,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 460.678,
+   "sale": 465.466
+  },
+  {
+   "u": 0.23,
+   "v": 0.74,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 460.878,
+   "sale": 465.466
+  },
+  {
+   "u": 0.37,
+   "v": 0.51,
+   "r": 0.01875,
+   "color": "azul",
+   "en": 461.038,
+   "sale": 465.466
+  },
+  {
+   "u": 0.34,
+   "v": 0.45,
+   "r": 0.01875,
+   "color": "azul",
+   "en": 461.238,
+   "sale": 465.466
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f2",
+   "pts": [
+    [
+     0.62,
+     0.75
+    ],
+    [
+     0.53,
+     0.67
+    ],
+    [
+     0.45,
+     0.6
+    ]
+   ],
+   "color": "azul",
+   "en": 459.378,
+   "dur": 0.7,
+   "sale": 465.466,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.12,
+     0.52
+    ],
+    [
+     0.32,
+     0.52
+    ],
+    [
+     0.32,
+     0.68
+    ],
+    [
+     0.12,
+     0.68
+    ]
+   ],
+   "color": "amarillo",
+   "en": 462.118,
+   "sale": 465.466,
+   "alfa": 0.12
+  }
+ ],
+ "pilares": [
+  {
+   "u": 0.625,
+   "v": 0.77,
+   "r": 0.014895833333333336,
+   "color": "azul",
+   "en": 458.35800000000006,
+   "sale": 465.466,
+   "alto": 7
+  },
+  {
+   "u": 0.44,
+   "v": 0.58,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 460.778,
+   "sale": 465.466,
+   "alto": 7
+  },
+  {
+   "u": 0.23,
+   "v": 0.74,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 460.978,
+   "sale": 465.466,
+   "alto": 7
+  },
+  {
+   "u": 0.37,
+   "v": 0.51,
+   "r": 0.0103125,
+   "color": "azul",
+   "en": 461.13800000000003,
+   "sale": 465.466,
+   "alto": 7
+  },
+  {
+   "u": 0.34,
+   "v": 0.45,
+   "r": 0.0103125,
+   "color": "azul",
+   "en": 461.338,
+   "sale": 465.466,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 458.408,
+   "a": 465.466,
+   "u": 0.625,
+   "v": 0.77,
+   "alto": 0,
+   "texto": "DORAN",
+   "sub": "SE LANZA CON TODO",
+   "color": "azul",
+   "dx": 80.80000000000001,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Ambessa.png"
+  },
+  {
+   "de": 460.828,
+   "a": 465.466,
+   "u": 0.44,
+   "v": 0.58,
+   "alto": 0,
+   "texto": "ALVARO",
+   "sub": null,
+   "color": "rojo",
+   "dx": -70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Alistar.png"
+  },
+  {
+   "de": 461.02799999999996,
+   "a": 465.466,
+   "u": 0.23,
+   "v": 0.74,
+   "alto": 0,
+   "texto": "ELYOYA",
+   "sub": null,
+   "color": "rojo",
+   "dx": 70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Qiyana.png"
+  },
+  {
+   "de": 461.188,
+   "a": 465.466,
+   "u": 0.37,
+   "v": 0.51,
+   "alto": 0,
+   "texto": "KERIA",
+   "sub": null,
+   "color": "azul",
+   "dx": -66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Nautilus.png"
+  },
+  {
+   "de": 461.388,
+   "a": 465.466,
+   "u": 0.34,
+   "v": 0.45,
+   "alto": 0,
+   "texto": "PEYZ",
+   "sub": null,
+   "color": "azul",
+   "dx": -66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Xayah.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 458.358,
+   "a": 465.466,
+   "k": 0.4
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/t1_koi_worlds/tactica3d/capas/j4b_fondo.jpg",
+ "_huella": "33127279d4be"
+}

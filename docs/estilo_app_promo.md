@@ -38,7 +38,7 @@ sincronizados → cuestionario → «Creando sus misiones…» → cierre con lo
   final de la frase.
 
 ## 4. Audio
-- Diálogo de dos voces ElevenLabs `eleven_v4`: narradora en `VOZ`, la otra en `VOZ_POR_FRASE` (su `sim` sale baja: normal).
+- Diálogo de dos voces ElevenLabs `eleven_v4_turbo`: narradora en `VOZ`, la otra en `VOZ_POR_FRASE` (su `sim` sale baja: normal).
 - Duración: el núcleo cuantiza escenas a compases. Con Lyria (no usa el BPM) poner `BPM = 480` cuantiza a 0,5 s y márgenes
   `pre/post` cortos: 56 s → 46,6 s sin tocar la voz.
 - SFX de ElevenLabs suaves de interfaz (pop, ding, chime, swish), con variantes de los frecuentes (`check_1/2/3`, `xp_1/2`,

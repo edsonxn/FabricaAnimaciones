@@ -1,0 +1,410 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.256,
+  "tipo": "video",
+  "texto": "En Leyndell, la Capital Real, hay una estatua dorada de un hombre de pelo largo, y a sus pies un mensaje que dice que solo la regresión revela secretos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.256,
+  "t1": 17.191,
+  "tipo": "video",
+  "texto": "Le lanzas el milagro de la Ley de Regresión, la estatua cambia de cara, y aparece otra frase.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.191,
+  "t1": 25.824,
+  "tipo": "video",
+  "texto": "Dice que Radagon es Márika. El rey consorte de las Tierras Intermedias, el marido de la reina, era la reina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.824,
+  "t1": 35.739,
+  "tipo": "video",
+  "texto": "Y aunque suene a lo más gordo que podía esconder, ni siquiera es lo más cruel que hizo. Así que hoy van las cinco peores atrocidades de Radagon que ignoraste,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.739,
+  "t1": 45.43,
+  "tipo": "video",
+  "texto": "porque entre tanto jefe con espadas del tamaño de un camión, el pelirrojo tranquilo de la Orden Áurea se salió con la suya.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.43,
+  "t1": 50.823,
+  "tipo": "video",
+  "texto": "Número cinco. Antes de ser rey, Radagon fue un invasor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.823,
+  "t1": 60.369,
+  "tipo": "video",
+  "texto": "Llegó a Liurnia de los Lagos al frente de un ejército dorado para someter a la familia real de Caria, y en el campo de batalla se encontró con su reina, Rennala.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.369,
+  "t1": 67.725,
+  "tipo": "video",
+  "texto": "Un monumento de esa primera guerra lo presume sin ninguna pena: la gloria de Radagon arde roja como su pelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.725,
+  "t1": 79.06,
+  "tipo": "video",
+  "texto": "Y luego, según cuenta Miriel, el pastor de los votos, Radagon se arrepintió de sus agresiones territoriales y le juró amor a Rennala, recién lavado con rocío celestial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 79.06,
+  "t1": 88.869,
+  "tipo": "video",
+  "texto": "Invades el reino de alguien, te das un baño a mitad de la guerra y le propones matrimonio a la dueña. Es la forma más cara de conseguir pareja de la que yo tenga noticia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 88.869,
+  "t1": 95.589,
+  "tipo": "video",
+  "texto": "Lo que casi nadie conecta es lo del pelo, porque la Trenza roja de gigante dice que todos los gigantes tienen el pelo rojo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 95.589,
+  "t1": 103.561,
+  "tipo": "video",
+  "texto": "y que Radagon despreciaba el suyo. Quizá era una maldición de su especie, remata el objeto, y ahí lo deja,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.561,
+  "t1": 112.833,
+  "tipo": "video",
+  "texto": "como quien suelta un chisme y se va. El hombre odiaba su propio pelo, y aun así se lo heredó a su hijo Radahn, furioso y llameante,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.833,
+  "t1": 122.576,
+  "tipo": "video",
+  "texto": "según el casco del propio Radahn. Bajamos al cuatro con un arma que a lo mejor tú vendiste sin leer la descripción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 122.576,
+  "t1": 130.156,
+  "tipo": "video",
+  "texto": "En una cueva perdida de los campos nevados, un malnacido con armadura de cruzado te suelta el Espadón de la Orden Áurea,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.156,
+  "t1": 141.199,
+  "tipo": "video",
+  "texto": "una espada hecha de luz con la forma del mismísimo Círculo de Elden. La forjó el propio Radagon, ya como rey consorte, para presumir los principios de la Orden Áurea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 141.199,
+  "t1": 150.276,
+  "tipo": "video",
+  "texto": "Pero la descripción guarda una línea al final que lo delata todo: hay señales de que antes fue el espadón que le dejó su primera esposa, Rennala.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 150.276,
+  "t1": 158.29,
+  "tipo": "video",
+  "texto": "Su PRIMERA esposa. Agarró el regalo de la mujer que dejó atrás y lo rehizo como trofeo de su matrimonio nuevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 158.29,
+  "t1": 165.5,
+  "tipo": "video",
+  "texto": "Es como llevar el anillo de tu ex al joyero para que le graben el nombre de la nueva, y luego lucirlo en la boda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 165.5,
+  "t1": 174.43,
+  "tipo": "video",
+  "texto": "Yo la cargué en el inventario como veinte horas, golpeando lobos con ella, sin saber que traía encima un divorcio completo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 174.43,
+  "t1": 181.927,
+  "tipo": "video",
+  "texto": "Hasta aquí, Radagon parece un marido terrible con mala suerte en el pelo. Lo que sigue ya toca a sus hijos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.927,
+  "t1": 191.712,
+  "tipo": "video",
+  "texto": "Número tres, los gemelos. Malenia y Miquella son hijos de Márika y de Radagon, y el recuerdo de la diosa de la putrefacción lo resume con una frase que da escalofríos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 191.712,
+  "t1": 200.055,
+  "tipo": "video",
+  "texto": "los dos son hijos de un solo dios. Uno quedó maldito con la infancia eterna. La otra llevaba la putrefacción por dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 200.055,
+  "t1": 208.376,
+  "tipo": "video",
+  "texto": "Un solo dios. Si Radagon es Márika, esos gemelos no tienen papá y mamá, tienen a la misma persona dos veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 208.376,
+  "t1": 216.629,
+  "tipo": "video",
+  "texto": "La Gran Runa de Malenia dice que debió ser la más sagrada de todas. Debió. Radagon le regaló al pequeño Miquella sus Anillos de luz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.629,
+  "t1": 224.799,
+  "tipo": "video",
+  "texto": "un milagro de la Orden Áurea, para que creciera en la fe de papá. Y la descripción de ese mismo milagro lo remata:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.799,
+  "t1": 231.253,
+  "tipo": "video",
+  "texto": "Miquella abandonó esa fe, porque no podía hacer nada contra la putrefacción maldita de su hermana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.253,
+  "t1": 243.71,
+  "tipo": "video",
+  "texto": "El dios que vino a poner orden en el mundo no pudo ni curar a su propia hija, y le tocó a un niño eterno buscar la solución por su cuenta. Ya en el podio, el dos es la estatua del principio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 243.71,
+  "t1": 252.43,
+  "tipo": "video",
+  "texto": "y aquí se me rompió la cabeza la primera vez que lo entendí. Mientras Márika estaba casada con Godfrey, el primer Señor del Círculo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 252.43,
+  "t1": 260.122,
+  "tipo": "video",
+  "texto": "el mismo Radagon estaba casado con Rennala en Liurnia. Cuando Godfrey fue exiliado, Radagon dejó Liurnia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 260.122,
+  "t1": 268.418,
+  "tipo": "video",
+  "texto": "volvió a la capital del Árbol Áureo y se convirtió en el segundo marido de la reina. O sea, la reina se casó consigo misma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 268.418,
+  "t1": 276.069,
+  "tipo": "video",
+  "texto": "Y durante siglos toda la corte le aplaudió la boda. Yo pensaba que eran dos amantes que se fueron fundiendo con el tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.069,
+  "t1": 288.497,
+  "tipo": "video",
+  "texto": "Bueno, no, lo pensé como dos años, hasta que leí la descripción del martillo de Márika. Con ese martillo la reina rompió el Círculo de Elden, y con ese mismo martillo Radagon intentó repararlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 288.497,
+  "t1": 295.155,
+  "tipo": "video",
+  "texto": "La misma persona, rompiendo y arreglando a la vez, porque las dos mitades no comparten la misma voluntad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 295.155,
+  "t1": 303.43,
+  "tipo": "video",
+  "texto": "Es pelearte contigo mismo por el control de la tele, solo que la tele es la realidad, y la casa entera se quedó sin luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 303.43,
+  "t1": 312.408,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno, el que más duele, y el que casi todos ignoramos por estar esquivando lunas. En la Gran Biblioteca de Raya Lucaria,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 312.408,
+  "t1": 321.573,
+  "tipo": "video",
+  "texto": "la reina Rennala sigue sentada en el centro, rodeada de alumnos que la protegen, abrazando un huevo de ámbar como si fuera un bebé.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 321.573,
+  "t1": 330.638,
+  "tipo": "video",
+  "texto": "Según Gideon Ofnir, el omnisciente, ese huevo fue un regalo de Radagon. Es lo que le dejó al irse. Un huevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 330.638,
+  "t1": 338.084,
+  "tipo": "video",
+  "texto": "Radagon dejó a Rennala para volver a la capital, y con ella se quedaron sus hijos, entre ellos Radahn y Ranni.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 338.084,
+  "t1": 345.326,
+  "tipo": "video",
+  "texto": "Las ropas de la reina lo cuentan así: cuando Rennala perdió a su marido, su corazón se fue con él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.326,
+  "t1": 355.358,
+  "tipo": "video",
+  "texto": "Y entonces, los de la academia se dieron cuenta de que Rennala, al final, no era ninguna campeona. Desde entonces usa ese huevo para hacer renacer a quien se lo pida,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 355.358,
+  "t1": 363.588,
+  "tipo": "video",
+  "texto": "y la Gran Runa de los no nacidos lo dice sin anestesia: todos los que renacen de Rennala son frágiles y de vida corta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 363.588,
+  "t1": 372.469,
+  "tipo": "video",
+  "texto": "Imperfectos, cada uno de ellos. Y por si fuera poco, en los pasillos de esa misma academia ronda un lobo gigante y rojo que lanza hechizos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 372.469,
+  "t1": 381.443,
+  "tipo": "video",
+  "texto": "Se llama Lobo rojo de Radagon. El tipo se fue, y dejó a su perro cuidando la casa de la ex. Mi postura es simple.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 381.443,
+  "t1": 389.181,
+  "tipo": "video",
+  "texto": "Invadir un reino es horrible, pero eso por lo menos sale en los mapas. Lo de Rennala es dejarla viva y hecha pedazos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 389.181,
+  "t1": 399.356,
+  "tipo": "video",
+  "texto": "abrazando lo único que le dejaste, para siempre, sabiendo dónde está. Un huevo. Le dejó un huevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 399.356,
+  "t1": 408.306,
+  "tipo": "video",
+  "texto": "Esa es la lista. Radagon tiene fama de jefe final elegante, de pelo bonito y martillo dorado, y casi nadie lo pone en la misma frase que Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 408.306,
+  "t1": 416.292,
+  "tipo": "video",
+  "texto": "Pues son la misma frase. Ahora la pregunta incómoda, y quiero saber tu respuesta: cuál de las dos mitades fue peor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 416.292,
+  "t1": 426.501,
+  "tipo": "video",
+  "texto": "la que rompió el mundo o la que dejó a una reina abrazando un huevo. Y si quieres ver lo que hizo la otra mitad, tienes que ver el video de las cinco peores atrocidades de Márika,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 426.501,
+  "t1": 431.926,
+  "tipo": "video",
+  "texto": "que ya está en el canal. Es la misma persona, así que cuenta como segunda parte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.926,
+  "t1": 442.5,
+  "tipo": "video",
+  "texto": "La próxima vez que alguien te regale un huevo al despedirse, no lo abraces durante siglos. Hazte unos huevos revueltos y sigue con tu vida.",
+  "clip_s": 8
+ }
+]

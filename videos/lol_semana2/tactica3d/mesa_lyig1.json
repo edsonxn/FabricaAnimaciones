@@ -1,0 +1,225 @@
+{
+ "modo": "mesa",
+ "de": 328.83,
+ "a": 337.28,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_lyig1_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Dhokla": {
+   "jugador": "Dhokla",
+   "campeon": "Olaf",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Olaf.png",
+   "puntos": [
+    [
+     0,
+     0.3,
+     0.46
+    ]
+   ],
+   "de": 329.23,
+   "sale": 336.28
+  },
+  "Meiko": {
+   "jugador": "Meiko",
+   "campeon": "Nautilus",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Nautilus.png",
+   "puntos": [
+    [
+     0,
+     0.38,
+     0.475
+    ]
+   ],
+   "de": 329.31,
+   "sale": 336.28
+  },
+  "JiaQi": {
+   "jugador": "JiaQi",
+   "campeon": "Jhin",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Jhin.png",
+   "puntos": [
+    [
+     0,
+     0.365,
+     0.585
+    ]
+   ],
+   "de": 329.39,
+   "sale": 336.28
+  },
+  "Rookie": {
+   "jugador": "Rookie",
+   "campeon": "Annie",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Annie.png",
+   "puntos": [
+    [
+     0,
+     0.515,
+     0.635
+    ]
+   ],
+   "de": 329.47,
+   "sale": 336.28
+  },
+  "Wei": {
+   "jugador": "Wei",
+   "campeon": "LeeSin",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/LeeSin.png",
+   "puntos": [
+    [
+     0,
+     0.34,
+     0.745
+    ]
+   ],
+   "de": 329.55,
+   "sale": 336.28
+  },
+  "Isles": {
+   "jugador": "Isles",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.53,
+     0.33
+    ]
+   ],
+   "de": 329.63,
+   "sale": 336.28
+  },
+  "Saint": {
+   "jugador": "Saint",
+   "campeon": "Taliyah",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Taliyah.png",
+   "puntos": [
+    [
+     0,
+     0.77,
+     0.275
+    ]
+   ],
+   "de": 329.71,
+   "sale": 336.28
+  }
+ },
+ "camara": [
+  [
+   328.83,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   329.18,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   331.534,
+   -18,
+   36,
+   50,
+   0.42,
+   0.5
+  ],
+  [
+   334.06899999999996,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.5
+  ],
+  [
+   336.38,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   337.28,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "isles",
+   "pts": [
+    [
+     0.53,
+     0.33
+    ],
+    [
+     0.4475,
+     0.4575
+    ],
+    [
+     0.365,
+     0.585
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.8,
+   "guion": true,
+   "alto": 2.5,
+   "grosor": 1.4,
+   "en": 335.68,
+   "sale": 336.28
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.3,
+   "v": 0.46,
+   "alto": 0,
+   "texto": "DHOKLA",
+   "sub": "POR LA IZQUIERDA",
+   "color": "rojo",
+   "dx": -170,
+   "dy": -40,
+   "de": 330.95,
+   "a": 336.28
+  },
+  {
+   "u": 0.53,
+   "v": 0.33,
+   "alto": 0,
+   "texto": "ISLES",
+   "sub": "ALISTAR",
+   "color": "rojo",
+   "dx": 170,
+   "dy": -50,
+   "de": 333.91,
+   "a": 336.28
+  }
+ ]
+}

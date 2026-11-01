@@ -17,7 +17,7 @@ import math
 import numpy as np
 
 import noir as N
-import props as PR
+import comun as PR
 from motor import H, W, clamp01, e_out, smooth
 from noir import gris
 from noir_pers import avance_paso, cadera_paso, pierna_paso

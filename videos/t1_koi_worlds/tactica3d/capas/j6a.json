@@ -1,0 +1,129 @@
+{
+ "modo": "video",
+ "de": 701.231,
+ "a": 715.362,
+ "anillos": [
+  {
+   "u": 0.58,
+   "v": 0.64,
+   "r": 0.021875,
+   "color": "rojo",
+   "en": 706.931,
+   "sale": 715.362
+  },
+  {
+   "u": 0.33,
+   "v": 0.41,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 707.1310000000001,
+   "sale": 715.362
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f2",
+   "pts": [
+    [
+     0.505,
+     0.8
+    ],
+    [
+     0.49,
+     0.66
+    ],
+    [
+     0.46,
+     0.52
+    ]
+   ],
+   "color": "azul",
+   "en": 705.291,
+   "dur": 0.8,
+   "sale": 715.362,
+   "guion": false,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.58,
+   "v": 0.64,
+   "r": 0.01203125,
+   "color": "rojo",
+   "en": 707.0310000000001,
+   "sale": 715.362,
+   "alto": 7
+  },
+  {
+   "u": 0.33,
+   "v": 0.41,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 707.2310000000001,
+   "sale": 715.362,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 707.081,
+   "a": 715.362,
+   "u": 0.58,
+   "v": 0.64,
+   "alto": 0,
+   "texto": "JOJOPYUN",
+   "sub": null,
+   "color": "rojo",
+   "dx": 71.80000000000001,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Viktor.png"
+  },
+  {
+   "de": 707.2810000000001,
+   "a": 715.362,
+   "u": 0.33,
+   "v": 0.41,
+   "alto": 0,
+   "texto": "ELYOYA",
+   "sub": null,
+   "color": "rojo",
+   "dx": -70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/XinZhao.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 701.431,
+   "a": 715.362,
+   "k": 0.4
+  }
+ ],
+ "carteles": [
+  {
+   "de": 703.031,
+   "a": 715.362,
+   "texto": "FAKER · ORIANNA",
+   "sub": "POR EL FLANCO",
+   "color": "azul",
+   "y": 747.6,
+   "tam": 36
+  },
+  {
+   "de": 708.33,
+   "a": 715.362,
+   "texto": "SUPA · EZREAL",
+   "sub": "SIN PEGAR LIBRE",
+   "color": "rojo",
+   "y": 110.4,
+   "tam": 36
+  }
+ ],
+ "fondo": "/videos/t1_koi_worlds/tactica3d/capas/j6a_fondo.jpg",
+ "_huella": "f8d08088b688"
+}

@@ -40,6 +40,10 @@ desktop.ini
 # Avisos por voz del panel (caché de audio y configuración local)
 panel_avisos/
 panel_config.json
+# panel remoto (clave de acceso y registros: nunca a git)
+panel_remoto.json
+panel_remoto*.log
+panel_salida.log
 respaldos_pruebas/
 voz_gpu.lock
 
@@ -79,4 +83,12 @@ videos/*/_*.log
 # logs
 panel_log*.txt
 videos/_*.txt
+
+# Bitácora de uso del panel (comportamiento personal; la analiza el skill analizar-uso-panel)
+nucleo/datos/uso_panel/
 canales/comentarios/
+
+# app del teléfono: APK construido y llave de firma (28-oct-2026)
+nucleo/app_movil/fabrica.apk
+nucleo/app_movil/android/fabrica.keystore
+videos/*/.continuacion.json

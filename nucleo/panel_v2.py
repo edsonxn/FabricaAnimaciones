@@ -9,7 +9,8 @@ Solo lee, salvo las miniaturas (previews/_v2/), el audio liviano para el navegad
 
   /v2                          la página
   /api/v2/sistema              CPU, RAM, discos, E/S, red, GPU y procesos de la fábrica (agrupados por trabajo)
-  /api/v2/estado               el estado de /api/estado al instante (el último calculado; el siguiente, en segundo plano)
+  /api/v2/estado[?si=huella]   el estado de /api/estado al instante (el último calculado; el siguiente, en segundo plano),
+                               sin secuencia.beats; con ?si= y sin cambios, solo {igual, avisos, voz, sistema, edad}
   /api/v2/portadas             portada de cada proyecto (miniatura de YouTube > MASTER > hoja > última prueba > medio)
   /api/v2/recursos?video=X     todo lo producido de un video, agrupado por carpeta y por columna del tablero
   /api/v2/guion?video=X        escenas y frases (con su toma elegida en voz/final), ESTADO.md y youtube.json
@@ -17,6 +18,8 @@ Solo lee, salvo las miniaturas (previews/_v2/), el audio liviano para el navegad
   /v2/mini/<v>/<ruta>?w=320    miniatura cacheada (cuadro del clip o imagen reducida; PNG si tiene transparencia)
   /v2/oir/<v>/<ruta>           .wav grande -> .m4a liviano cacheado (música/mezclas float32 de cientos de MB)
   POST /api/v2/revelar         {video, ruta}: abre el Explorador con ese archivo seleccionado
+  /v2/movil · /v2/aldea · /v2/juego   app del teléfono (28-oct-2026): panel de estatus, la Aldea (RTS) y la Fábrica 3D
+  /v2/app/<archivo>            sus archivos sueltos (manifest, service worker, iconos, APK)
 """
 import hashlib
 import json
@@ -36,6 +39,11 @@ except ImportError:                    # sin psutil el lienzo funciona igual, so
 P = None                               # panel.py en marcha (lo asigna panel._v2)
 AQUI = os.path.dirname(os.path.abspath(__file__))
 HTML = os.path.join(AQUI, "panel_v2.html")
+APP = os.path.join(AQUI, "app_movil")
+APP_PAGINAS = {"/v2/movil": "panel.html", "/v2/juego": "juego.html", "/v2/aldea": "aldea.html"}
+APP_TIPOS = {".html": "text/html; charset=utf-8", ".js": "application/javascript; charset=utf-8", ".json": "application/json",
+             ".webmanifest": "application/manifest+json", ".png": "image/png", ".svg": "image/svg+xml",
+             ".apk": "application/vnd.android.package-archive"}
 SIN_VENTANA = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 EXT_VID = (".mp4", ".webm", ".mov", ".m4v")
@@ -335,26 +343,45 @@ def sistema():
 
 
 # ======================================================================== estado de los proyectos al instante
-def estado_rapido():
+_LIGERO = {"v": None, "d": None, "h": ""}
+
+
+def _ligero(v):
+    """(estado sin lo que el lienzo no lee, huella). `secuencia.beats` era el 72 % de los ~800 KB que el lienzo pedía cada
+    3 s (21-oct, desde el celular por ngrok: ~1 GB por hora). La huella cubre proyectos y etapas: si el lienzo ya la tiene
+    (`?si=`), solo viajan avisos, voz y edad."""
+    if _LIGERO["v"] is v:
+        return _LIGERO["d"], _LIGERO["h"]
+    ps = [dict(p, secuencia={k: x for k, x in p["secuencia"].items() if k != "beats"}) if isinstance(p.get("secuencia"), dict) else p
+          for p in v.get("proyectos") or []]
+    d = dict(v, proyectos=ps)
+    h = hashlib.sha1(json.dumps([ps, v.get("etapas")], ensure_ascii=False, sort_keys=True, default=str).encode("utf-8")).hexdigest()[:16]
+    _LIGERO.update(v=v, d=d, h=h)
+    return d, h
+
+
+def estado_rapido(si=""):
     """El último estado del panel YA calculado, al instante, y el siguiente se calcula en segundo plano (una sola vez a la
     vez): con la CPU al 100 % por un render, escanear los ~90 videos llegó a tardar 4 minutos y el lienzo esperaba en
-    blanco. Solo la primera lectura (sin nada calculado) hace esperar."""
+    blanco. Solo la primera lectura (sin nada calculado) hace esperar. Con `si` = la huella que el lienzo ya tiene y nada
+    cambió, devuelve solo {igual, avisos, voz, sistema, edad} (unos cientos de bytes)."""
     c = _compartido()
     v = P._est.get("v")
     if v is None:
-        d = dict(P.estado_cache())
-    else:
-        if time.time() - P._est.get("t", 0) > 2.5:
-            with c["cerrojo"]:
-                h = c.get("hilo_est")
-                if not (h and h.is_alive()):
-                    c["hilo_est"] = threading.Thread(target=P.estado_cache, daemon=True, name="lienzo-estado")
-                    c["hilo_est"].start()
-        d = dict(v)
-    d["avisos"] = P.LOC.recientes() if P.LOC else []
-    d["voz"] = P.LOC.info() if P.LOC else dict(activo=False, destino="bocinas", modelo="inactivo", cola=0, voz="")
-    d["edad"] = round(time.time() - P._est.get("t", time.time()), 1)
-    return d
+        v = P.estado_cache()
+    elif time.time() - P._est.get("t", 0) > 2.5:
+        with c["cerrojo"]:
+            h = c.get("hilo_est")
+            if not (h and h.is_alive()):
+                c["hilo_est"] = threading.Thread(target=P.estado_cache, daemon=True, name="lienzo-estado")
+                c["hilo_est"].start()
+    d, huella = _ligero(v)
+    extra = dict(h=huella, sistema=v.get("sistema"), edad=round(time.time() - P._est.get("t", time.time()), 1),
+                 avisos=P.LOC.recientes() if P.LOC else [],
+                 voz=P.LOC.info() if P.LOC else dict(activo=False, destino="bocinas", modelo="inactivo", cola=0, voz=""))
+    if si and si == huella:
+        return dict(extra, igual=True)
+    return dict(d, **extra)
 
 
 # ======================================================================== portadas y recursos
@@ -418,7 +445,7 @@ def _columna(grupo, items):
 
 
 def recursos(nombre):
-    car = P._car_video(nombre)
+    car = _car(nombre)
     if not car:
         return dict(error="video desconocido")
     grupos, firma = [], 0.0
@@ -465,7 +492,7 @@ def recursos(nombre):
 
 
 def guion(nombre):
-    car = P._car_video(nombre)
+    car = _car(nombre)
     if not car:
         return dict(error="video desconocido")
     g = P.parsear_guion(os.path.join(car, "guion.py"))
@@ -497,9 +524,18 @@ def guion(nombre):
 
 
 # ======================================================================== archivos, miniaturas y audio liviano
+def _car(nombre):
+    """Carpeta real de videos/<nombre>, aunque sea un junction a otro disco (videos_desde_C, 24-oct-2026). Igual que
+    panel._car_video, pero aquí para que valga sin reiniciar el panel (este módulo se recarga solo)."""
+    if not nombre or nombre in (".", "..") or any(c in nombre for c in "/\\:"):
+        return None
+    enlace = os.path.join(P.VIDEOS, nombre)
+    return os.path.realpath(enlace) if os.path.isfile(os.path.join(enlace, "guion.py")) else None
+
+
 def _real(nombre, rel):
     """Ruta real de <video>/<rel> si es un archivo permitido dentro del video (vale si la subcarpeta es un junction)."""
-    car = P._car_video(nombre)
+    car = _car(nombre)
     partes = [x for x in (rel or "").replace("\\", "/").split("/") if x]
     if not car or not partes or any(x in (".", "..") or ":" in x for x in partes) or not _tipo(partes[-1]):
         return None
@@ -587,7 +623,7 @@ def oir(nombre, rel):
 
 
 def revelar(nombre, rel):
-    real = _real(nombre, rel) if rel else P._car_video(nombre)
+    real = _real(nombre, rel) if rel else _car(nombre)
     if not real:
         raise ValueError("archivo desconocido")
     if os.path.isdir(real):
@@ -613,6 +649,19 @@ def _vivo():
 _VIVO = {"t": 0.0}
 
 
+def _canal_vivo(nombre, canal):
+    """El canal para el uniforme de /v2/vivo. Crónicas de ligoleyen no tiene canales/<alias>.json (se sube a mano por Studio),
+    así que para el panel sus videos son «experimento»; aquí se reconoce por la línea «- canal:» de su ESTADO.md, solo para En vivo."""
+    if canal != "experimento":
+        return canal
+    try:
+        with open(os.path.join(P.VIDEOS, nombre, "ESTADO.md"), encoding="utf-8", errors="replace") as f:
+            m = re.search(r"(?im)^-\s*canal:.*", f.read(1500))
+    except OSError:
+        return canal
+    return "cronicas_ligoleyen" if m and "ligoleyen" in m.group(0).lower() else canal
+
+
 def proyecto_vivo(nombre):
     """Etapas del video para /v2/vivo: del último estado calculado, sin pedir otro escaneo más de una vez cada 20 s."""
     if not nombre:
@@ -625,7 +674,7 @@ def proyecto_vivo(nombre):
     if not p:
         return None
     E = p.get("etapas") or {}
-    return dict(titulo=p.get("titulo") or nombre, canal=p.get("canal"), progreso=p.get("progreso") or 0, etapa_actual=p.get("etapa_actual"),
+    return dict(titulo=p.get("titulo") or nombre, canal=_canal_vivo(nombre, p.get("canal")), progreso=p.get("progreso") or 0, etapa_actual=p.get("etapa_actual"),
                 etapas=[dict(id=e["id"], nombre=e["nombre"], estado=(E.get(e["id"]) or {}).get("estado"),
                              progreso=(E.get(e["id"]) or {}).get("progreso") or 0, detalle=(E.get(e["id"]) or {}).get("detalle") or "")
                         for e in v.get("etapas") or [] if e["id"] in E])
@@ -651,9 +700,13 @@ def get(h, ruta):
         r["proyecto"] = proyecto_vivo(r.get("video"))
         return _json(h, r)
     if ruta == "/api/v2/agente/sesiones":
-        return _json(h, _vivo().sesiones())
+        return _json(h, [dict(x, canal=(proyecto_vivo(x.get("video")) or {}).get("canal")) for x in _vivo().sesiones()])
     if ruta == "/v2/vivo/extras.js":
         return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_extras.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
+    if ruta == "/v2/vivo/poses.js":   # el kit de variantes graciosas de cada acción (1-nov-2026)
+        return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_poses.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
+    if ruta == "/v2/vivo/movil.js":
+        return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_movil.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
     if ruta == "/api/v2/vivo/mundo":
         return _json(h, _vivo().mundo(arg("video"), arg("canal"), portadas()))
     if ruta.startswith("/v2/vivo/img/"):
@@ -662,10 +715,21 @@ def get(h, ruta):
         if not real:
             return h._enviar(404, b"", "text/plain")
         return h._enviar(200, open(real, "rb").read(), "image/jpeg", cache="max-age=86400")
+    if ruta.rstrip("/") in APP_PAGINAS or ruta.startswith("/v2/app/"):
+        nombre = APP_PAGINAS.get(ruta.rstrip("/")) or ruta[len("/v2/app/"):]
+        real = os.path.join(APP, nombre)
+        if nombre == "three.module.min.js":                      # el mismo three.js r160 del análisis táctico
+            real = os.path.join(AQUI, "tactica3d", "vendor", nombre)
+        ext = os.path.splitext(nombre)[1].lower()
+        if not re.match(r"^[A-Za-z0-9_.-]+$", nombre) or ext not in APP_TIPOS or not os.path.isfile(real):
+            return h._enviar(404, b"", "text/plain")
+        if ext == ".apk":
+            return P._servir_rango(h, real, APP_TIPOS[ext])
+        return h._enviar(200, open(real, "rb").read(), APP_TIPOS[ext], cache="no-cache")
     if ruta == "/api/v2/sistema":
         return _json(h, sistema())
     if ruta == "/api/v2/estado":
-        return _json(h, estado_rapido())
+        return _json(h, estado_rapido(arg("si")))
     if ruta == "/api/v2/portadas":
         return _json(h, portadas())
     if ruta == "/api/v2/recursos":

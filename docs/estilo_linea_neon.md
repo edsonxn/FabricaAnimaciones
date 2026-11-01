@@ -29,7 +29,7 @@ cierre «no color other than white lines and yellow neon». Nombrar en cada prom
 - Rótulos: `dict(texto=..., en="palabras", dur=1.6, tam=140, color="blanco", y=.5)`.
 
 ## Voz
-ElevenLabs `eleven_v4` con corchetes. Primera voz usada: **Alejandro Durán — Warm, Deep** (`sKgg4MPUDBy69X7iv3fA`, biblioteca
+ElevenLabs `eleven_v4_turbo` (por defecto desde el 26-oct-2026) con corchetes. Primera voz usada: **Alejandro Durán — Warm, Deep** (`sKgg4MPUDBy69X7iv3fA`, biblioteca
 pública, latinoamericano grave con ronquera leve), tono de divulgación calmada.
 
 ## Miniatura (Flow, Nano Banana 2.1 con el texto dentro; 3 videos del canal)

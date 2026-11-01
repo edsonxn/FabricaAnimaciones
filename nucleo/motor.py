@@ -37,6 +37,10 @@ FUENTES = {
     "vox_s": "~/AppData/Local/Microsoft/Windows/Fonts/Montserrat-SemiBold.ttf|C:/Windows/Fonts/seguisb.ttf",
     "vox_serif": "~/AppData/Local/Microsoft/Windows/Fonts/Baskervville-BoldItalic.ttf|C:/Windows/Fonts/georgiaz.ttf",
     "geo_x": "~/AppData/Local/Microsoft/Windows/Fonts/Poppins-ExtraBold.ttf|C:/Windows/Fonts/seguibl.ttf",
+    # rotulación de miniaturas: gruesa y llamativa (el usuario, 17-oct-2026: Poppins «no es tan llamativo»)
+    "mini_luckiest": "~/AppData/Local/Microsoft/Windows/Fonts/LuckiestGuy-Regular.ttf|C:/Windows/Fonts/impact.ttf",
+    "mini_gotham": "~/AppData/Local/Microsoft/Windows/Fonts/Gotham Black.otf|C:/Windows/Fonts/impact.ttf",
+    "mini_impact": "C:/Windows/Fonts/impact.ttf",
 }
 
 NEGRO = (20, 16, 24)

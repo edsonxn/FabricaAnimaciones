@@ -207,7 +207,7 @@ if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListen
     </div>
     <p class="cal-lead" id="cal-lead"></p>
     <div id="cal"></div>
-    <p class="note">Cada punto es un video programado (pasa el ratón; clic lo abre en Studio; cuadrado = Short). La barra llega hasta el primer hueco del ciclo que ya no tiene video: último programado —o último publicado— más el ciclo del canal. Urgente = faltan 3 días o menos; pronto = 7 o menos. Clic en un canal para ver su detalle.</p>
+    <p class="note">Cada punto es un video LARGO programado (pasa el ratón; clic lo abre en Studio); los Shorts no cuentan aquí. La barra llega hasta el primer hueco del ciclo que ya no tiene video largo: último programado —o último publicado— más el ciclo del canal. Urgente = faltan 3 días o menos; pronto = 7 o menos. Clic en un canal para ver su detalle.</p>
   </section>
 
   <section class="kpis" id="kpis" aria-label="Totales del periodo"></section>
@@ -215,6 +215,11 @@ if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListen
   <section class="card">
     <div class="card-h">
       <h2 id="chart-title">Vistas por día</h2>
+      <select id="tipodia" aria-label="Largos o Shorts">
+        <option value="todo">Largos y Shorts</option>
+        <option value="largo">Solo videos largos</option>
+        <option value="short">Solo Shorts</option>
+      </select>
       <select id="metrica" aria-label="Qué medir">
         <option value="1">Vistas</option>
         <option value="2">Horas de reproducción</option>
@@ -223,6 +228,7 @@ if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListen
     </div>
     <div class="chart" id="chart"></div>
     <div class="legend" id="legend"></div>
+    <p class="note" id="aviso-tipo" hidden><b>Falta el desglose Largos/Shorts de algún canal:</b> actualiza los datos (botón «Actualizar datos» o <code>python fab.py estadisticas --actualizar</code>); mientras tanto esos canales cuentan todo como largos. Este filtro también aplica a los totales de arriba y a la tabla de canales.</p>
     <p class="note">YouTube Analytics llega con 2–3 días de retraso: los últimos días de la gráfica pueden estar incompletos.</p>
   </section>
 
@@ -248,7 +254,7 @@ if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListen
 <script>
 const DATA = __DATA__;
 const C = DATA.canales;
-const S = {periodo: 28, on: new Set(C.map(c => c.alias)), metrica: 1, limite: 25};
+const S = {periodo: 28, on: new Set(C.map(c => c.alias)), metrica: 1, limite: 25, tipo: 'todo'};
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const n = x => Math.round(x).toLocaleString('es-MX');
@@ -260,10 +266,18 @@ const addDias = (iso, k) => { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDa
 const dur = s => s >= 3600 ? `${Math.floor(s / 3600)}:${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}` : `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 
 // Serie diaria por canal: {fecha: [_, vistas, minutos, subsGanados, subsPerdidos, likes, coment, compart]}
-C.forEach(c => { c.mapa = Object.fromEntries(c.dias.map(d => [d[0], d])); });
+// Analytics solo da el total y la parte de Shorts (dias_s); los largos = total − Shorts.
+const SIN_CORTOS = C.some(c => c.dias.length && !(c.dias_s || []).length);
+C.forEach(c => {
+  const todo = Object.fromEntries(c.dias.map(d => [d[0], d])), short = Object.fromEntries((c.dias_s || []).map(d => [d[0], d]));
+  const largo = {};
+  for (const f in todo) { const t = todo[f], s = short[f]; largo[f] = s ? t.map((x, i) => i ? Math.max(0, x - s[i]) : x) : t; }
+  c.m = {todo, short, largo};
+});
+const serie = c => c.m[S.tipo];
 const FIN = C.reduce((m, c) => c.dias.length && c.dias[c.dias.length - 1][0] > m ? c.dias[c.dias.length - 1][0] : m, '2000-01-01');
 const rango = (fin, dias) => Array.from({length: dias}, (_, i) => addDias(fin, i - dias + 1));
-const suma = (c, fechas, k) => fechas.reduce((t, f) => t + (c.mapa[f] ? c.mapa[f][k] : 0), 0);
+const suma = (c, fechas, k) => { const m = serie(c); return fechas.reduce((t, f) => t + (m[f] ? m[f][k] : 0), 0); };
 const activos = () => C.filter(c => S.on.has(c.alias));
 
 function delta(act, ant) {
@@ -306,8 +320,8 @@ function escalaBonita(max) {
 function pintaGrafica() {
   const cs = activos(), fechas = rango(FIN, S.periodo), k = S.metrica, div = k === 2 ? 60 : 1;
   const nombre = {1: 'Vistas', 2: 'Horas de reproducción', 3: 'Suscriptores ganados'}[k];
-  $('chart-title').textContent = `${nombre} por día`;
-  const filas = fechas.map(f => cs.map(c => (c.mapa[f] ? c.mapa[f][k] : 0) / div));
+  $('chart-title').textContent = `${nombre} por día` + (S.tipo === 'largo' ? ' · videos largos' : S.tipo === 'short' ? ' · Shorts' : '');
+  const filas = fechas.map(f => cs.map(c => (serie(c)[f] ? serie(c)[f][k] : 0) / div));
   const [tope, paso] = escalaBonita(Math.max(...filas.map(r => r.reduce((a, b) => a + b, 0))));
   const W = 1180, H = 300, L = 46, R = 8, T = 10, B = 24, pw = W - L - R, ph = H - T - B, bw = pw / fechas.length, gap = Math.min(4, bw * 0.22);
   let s = '';
@@ -495,6 +509,10 @@ $('chips').onclick = e => {
 };
 $('t-canales').onclick = e => { const r = e.target.closest('tr[data-a]'); if (r) { S.on = new Set([r.dataset.a]); S.limite = 25; todo(); scrollTo({top: 0, behavior: 'smooth'}); } };
 $('metrica').onchange = e => { S.metrica = +e.target.value; pintaGrafica(); };
+$('tipodia').onchange = e => {
+  S.tipo = e.target.value; pintaKpis(); pintaGrafica(); pintaCanales();
+  $('aviso-tipo').hidden = !(SIN_CORTOS && S.tipo !== 'todo');
+};
 ['q', 'tipo', 'estado', 'orden'].forEach(id => $(id).addEventListener('input', () => { S.limite = 25; pintaVideos(); }));
 $('more').onclick = () => { S.limite += 50; pintaVideos(); };
 todo();

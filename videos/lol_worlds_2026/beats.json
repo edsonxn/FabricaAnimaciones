@@ -1,0 +1,1234 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.914,
+  "tipo": "video",
+  "texto": "Llegaron a Texas como campeones de China… y se fueron sin ganar una sola partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.914,
+  "t1": 16.294,
+  "tipo": "video",
+  "texto": "Anyone's Legend, el primer sembrado del LPL, eliminado cero a tres en la fase suiza del Mundial 2026.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.294,
+  "t1": 26.675,
+  "tipo": "video",
+  "texto": "Y el último golpe se lo dio un equipo de Norteamérica. Pero esa no fue la única sorpresa. En cuatro días vimos a China perder sus cuatro partidas del arranque,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.675,
+  "t1": 35.843,
+  "tipo": "video",
+  "texto": "el primer pentakill del torneo, una remontada imposible contra T1… y a un equipo de Estados Unidos quitándole una partida al mejor de Corea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.843,
+  "t1": 42.463,
+  "tipo": "video",
+  "texto": "Si no has visto nada, tranquilo. En los próximos veinte minutos te pongo al día con todo: las mejores jugadas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.463,
+  "t1": 50.712,
+  "tipo": "video",
+  "texto": "analizadas pausa por pausa, los mejores jugadores, los mejores equipos… y lo que viene esta semana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.712,
+  "t1": 59.739,
+  "tipo": "video",
+  "texto": "Primero, cómo funciona este Mundial, porque el formato lo explica casi todo. Son diecinueve equipos. Cuatro empezaron en Los Ángeles,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.739,
+  "t1": 67.903,
+  "tipo": "video",
+  "texto": "en el play-in, y solo uno sobrevivió. Los otros dieciséis se juegan todo en la fase suiza, en Allen, Texas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.903,
+  "t1": 77.846,
+  "tipo": "video",
+  "texto": "La regla es simple: tres victorias y estás en cuartos de final. Tres derrotas y te vas a casa. En cada ronda te toca un rival con tu mismo récord.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.846,
+  "t1": 85.666,
+  "tipo": "video",
+  "texto": "Las primeras rondas se juegan a una sola partida, sin margen de error… y cuando hay algo en juego, el pase o la eliminación,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.666,
+  "t1": 92.083,
+  "tipo": "video",
+  "texto": "se juega al mejor de tres. Y hay una regla que lo cambia todo: el Fearless Draft.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 92.083,
+  "t1": 101.729,
+  "tipo": "video",
+  "texto": "Dentro de una serie, un campeón que ya se usó no se puede volver a elegir. Nadie puede esconderse en sus favoritos. Ocho equipos pasan a cuartos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.729,
+  "t1": 111.823,
+  "tipo": "video",
+  "texto": "La final es el 14 de noviembre, en el Barclays Center de Nueva York. El lema de este año es «Este es nuestro momento», y el himno, Know My Name,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.823,
+  "t1": 119.35,
+  "tipo": "video",
+  "texto": "de True Damage, viene con un video sobre la carrera de Faker. Y antes de empezar hubo un minuto de silencio por Cyanide,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.35,
+  "t1": 129.058,
+  "tipo": "video",
+  "texto": "campeón del primer Mundial, en 2011, con Fnatic. Y ahí quiere llegar T1, el campeón de 2023, 2024 y 2025,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.058,
+  "t1": 135.803,
+  "tipo": "video",
+  "texto": "que va por algo que nadie ha hecho jamás: su cuarto título seguido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 135.803,
+  "t1": 146.271,
+  "tipo": "video",
+  "texto": "Todo empezó el 15 de octubre en Los Ángeles. Karmine Corp, el tercer equipo de Europa, jugando el primer Mundial de su historia, casi se queda en la primera puerta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.271,
+  "t1": 153.481,
+  "tipo": "video",
+  "texto": "necesitó las cinco partidas para ganarle 3 a 2 a Cloud9 KIA. Después ya no soltó ni una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.481,
+  "t1": 164.875,
+  "tipo": "video",
+  "texto": "3 a 0 a MVK… y otra vez 3 a 0 a MVK en la serie final por el boleto. Cloud9 KIA, FURIA y MVK se quedaron en el camino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.875,
+  "t1": 174.994,
+  "tipo": "video",
+  "texto": "Y Karmine Corp viajó a Texas con un premio envenenado: estrenarse contra el campeón de China.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 174.994,
+  "t1": 182.195,
+  "tipo": "video",
+  "texto": "23 de octubre. Día uno de la fase suiza. Y China se despierta con una pesadilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 182.195,
+  "t1": 187.775,
+  "tipo": "video",
+  "texto": "Gen.G le gana a Invictus Gaming. Hanwha Life le gana a Top Esports.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 187.775,
+  "t1": 196.457,
+  "tipo": "video",
+  "texto": "Movistar KOI le gana a Bilibili Gaming en una partida apretadísima. Y Karmine Corp… aplasta a Anyone's Legend.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.457,
+  "t1": 205.026,
+  "tipo": "video",
+  "texto": "Cuatro equipos chinos, cuatro derrotas. Nunca había pasado que el LPL no ganara ni una partida en la primera ronda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.026,
+  "t1": 209.726,
+  "tipo": "video",
+  "texto": "Y la pelea que lo resume todo está en esa última partida. Vamos a verla de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 209.726,
+  "t1": 263.766,
+  "tipo": "video",
+  "texto": "cerca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 263.766,
+  "t1": 267.446,
+  "tipo": "video",
+  "texto": "AL busca la pelea. Y tiene con qué: Olaf,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 267.446,
+  "t1": 271.066,
+  "tipo": "video",
+  "texto": "Nocturne, Akali y Miss Fortune. Una composición",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 271.066,
+  "t1": 274.658,
+  "tipo": "video",
+  "texto": "hecha para entrar de frente. Pausa. Mira a",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 274.658,
+  "t1": 278.508,
+  "tipo": "video",
+  "texto": "Busio. Juega Renata, y su definitiva hace algo cruel:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 278.508,
+  "t1": 282.269,
+  "tipo": "video",
+  "texto": "los enemigos que toca… se atacan entre ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 282.269,
+  "t1": 285.869,
+  "tipo": "video",
+  "texto": "La ola de Renata cae encima de AL. Kyeahoo conecta",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 285.869,
+  "t1": 289.409,
+  "tipo": "video",
+  "texto": "la onda de choque de Orianna, Yike los encierra con la definitiva",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 289.409,
+  "t1": 294.147,
+  "tipo": "video",
+  "texto": "de Jarvan… y AL queda atrapado, peleándose consigo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 294.147,
+  "t1": 300.958,
+  "tipo": "video",
+  "texto": "Ahí entra Canna. Con Jax, por detrás, directo a la línea de atrás, donde están los que hacen el daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.958,
+  "t1": 306.26,
+  "tipo": "video",
+  "texto": "¡Cuádruple asesinato para Canna! Karmine Corp gana la pelea cuatro por uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 306.26,
+  "t1": 317.607,
+  "tipo": "video",
+  "texto": "Después llega el Barón, la partida… y el cuarto nexo chino que cae en las cuatro primeras partidas del Mundial. La lección: AL no perdió por falta de nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.607,
+  "t1": 326.318,
+  "tipo": "video",
+  "texto": "Perdió por pelear justo donde Karmine Corp lo estaba esperando. Ese mismo día, CTBC Flying Oyster,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.318,
+  "t1": 334.443,
+  "tipo": "video",
+  "texto": "de Taiwán, sorprende a Team Liquid con una gran partida de Shadow en la jungla. LYON le da a Norteamérica su primera victoria,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.443,
+  "t1": 344.093,
+  "tipo": "video",
+  "texto": "y el estadio de Allen explota. T1 debuta con Faker en LeBlanc y despacha a Los Grandes, de Brasil, en veinticuatro minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.093,
+  "t1": 350.603,
+  "tipo": "video",
+  "texto": "Y Dplus KIA voltea una partida que iba perdiendo contra G2. Guarda ese nombre: Dplus KIA.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 350.603,
+  "t1": 358.725,
+  "tipo": "video",
+  "texto": "Va a aparecer mucho en este video. 24 de octubre. Día dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 358.725,
+  "t1": 366.919,
+  "tipo": "video",
+  "texto": "Y el partido que todos marcaron en el calendario: Dplus KIA contra T1, los dos con una victoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 366.919,
+  "t1": 377.364,
+  "tipo": "video",
+  "texto": "Durante buena parte de la partida, T1 parecía tener la medida de DK: Faker con Anivia controlando el centro, Peyz castigando desde lejos con Caitlyn.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.364,
+  "t1": 433.878,
+  "tipo": "video",
+  "texto": "Hasta el dragón Anciano. Míralo primero en vivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 433.878,
+  "t1": 437.458,
+  "tipo": "video",
+  "texto": "T1 atrapa a Lucid, el jungla de DK, y empieza",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 437.458,
+  "t1": 441.249,
+  "tipo": "video",
+  "texto": "a tirar el Anciano. Pausa. Sin su jungla, DK",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 441.249,
+  "t1": 445.029,
+  "tipo": "video",
+  "texto": "no tiene Castigo: no puede robar el dragón. Si T1",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 445.029,
+  "t1": 448.689,
+  "tipo": "video",
+  "texto": "lo termina, con el bufo del Anciano la partida prácticamente se",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 448.689,
+  "t1": 452.456,
+  "tipo": "video",
+  "texto": "acaba. DK tiene una sola salida: pelear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 452.456,
+  "t1": 456.127,
+  "tipo": "video",
+  "texto": "Ya. Con un jugador menos. Career, con",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 456.127,
+  "t1": 459.967,
+  "tipo": "video",
+  "texto": "Renata, se lanza con Destello al centro de T1. Smash",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 459.967,
+  "t1": 463.757,
+  "tipo": "video",
+  "texto": "usa la definitiva de Kalista para recogerlo y volver a lanzarlo…",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 463.757,
+  "t1": 467.364,
+  "tipo": "video",
+  "texto": "y T1 sale volando. ¡Y DK voltea",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 467.364,
+  "t1": 472.937,
+  "tipo": "video",
+  "texto": "la pelea entera! ¡De la nada, con uno menos, DK reduce a cenizas a T1!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.937,
+  "t1": 482.602,
+  "tipo": "video",
+  "texto": "Una pelea. Eso fue todo. DK se pone dos a cero… y T1, el tricampeón, conoce su primera derrota del Mundial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 482.602,
+  "t1": 490.287,
+  "tipo": "video",
+  "texto": "Ese día también: Gen.G le gana a Hanwha Life en el clásico coreano, con Canyon imparable en la jungla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.287,
+  "t1": 497.247,
+  "tipo": "video",
+  "texto": "SkewMond firma una partida enorme con Lee Sin, y G2 aplasta a Los Grandes, veintiuno a nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.247,
+  "t1": 504.7,
+  "tipo": "video",
+  "texto": "Rookie y TheShy, los veteranos que hicieron campeón a Invictus en 2018, le ganan a Team Secret Whales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 504.7,
+  "t1": 513.663,
+  "tipo": "video",
+  "texto": "LYON vence a Karmine Corp, y Norteamérica se pone dos a cero. Y Anyone's Legend pierde otra vez, ahora contra Top Esports.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 513.663,
+  "t1": 523.825,
+  "tipo": "video",
+  "texto": "El campeón de China ya está contra la pared: cero a dos. Así queda la tabla tras dos días. Con dos a cero: Gen.G, Dplus KIA,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 523.825,
+  "t1": 531.265,
+  "tipo": "video",
+  "texto": "Movistar KOI… y LYON. Con cero a dos, a una derrota de irse: Anyone's Legend, Team Liquid,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 531.265,
+  "t1": 539.975,
+  "tipo": "video",
+  "texto": "Los Grandes y Team Secret Whales. 25 de octubre. Día tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 539.975,
+  "t1": 549.211,
+  "tipo": "video",
+  "texto": "Hoy se reparten los primeros boletos a cuartos: los que van dos a cero juegan al mejor de tres. Dplus KIA contra Movistar KOI.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.211,
+  "t1": 606.312,
+  "tipo": "video",
+  "texto": "Y en la primera partida llega el momento del torneo hasta ahora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 606.312,
+  "t1": 609.992,
+  "tipo": "video",
+  "texto": "KOI acababa de ganar una pelea y se acercaba en el marcador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 609.992,
+  "t1": 614.133,
+  "tipo": "video",
+  "texto": "Pero Jojopyun, con Anivia, da un paso de más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 614.133,
+  "t1": 617.933,
+  "tipo": "video",
+  "texto": "Pausa. Mira la distancia: Jojopyun está adelantado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 617.933,
+  "t1": 621.573,
+  "tipo": "video",
+  "texto": "lejos de su equipo… y Career, con Nautilus, tiene el",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 621.573,
+  "t1": 625.101,
+  "tipo": "video",
+  "texto": "ancla lista. El ancla conecta. Anivia cae",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 625.101,
+  "t1": 628.758,
+  "tipo": "video",
+  "texto": "primero, y DK se mete hasta la línea de atrás de KOI.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 628.758,
+  "t1": 632.238,
+  "tipo": "video",
+  "texto": "Ahora mira a Smash. Su Kai'Sa espera a que KOI gaste",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 632.238,
+  "t1": 635.758,
+  "tipo": "video",
+  "texto": "todo… y entonces entra. Supa cae. El",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 635.758,
+  "t1": 639.243,
+  "tipo": "video",
+  "texto": "Agotamiento que le lanzan no sirve de nada. ¡Triple!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 639.243,
+  "t1": 645.698,
+  "tipo": "video",
+  "texto": "¡Cuádruple! ¡Y pentakill para Smash! El primer y único pentakill del Mundial hasta ahora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 645.698,
+  "t1": 652.894,
+  "tipo": "video",
+  "texto": "DK gana la serie dos a cero y se convierte en el primer equipo clasificado a cuartos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.894,
+  "t1": 656.754,
+  "tipo": "video",
+  "texto": "Y en la otra serie… LYON le hace a Gen.G lo que nadie",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 656.754,
+  "t1": 711.039,
+  "tipo": "video",
+  "texto": "esperaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 711.039,
+  "t1": 714.559,
+  "tipo": "video",
+  "texto": "Primera partida. Gen.G viene acumulando dragones;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 714.559,
+  "t1": 718.207,
+  "tipo": "video",
+  "texto": "es su plan de siempre. Pausa. LYON acaba",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 718.207,
+  "t1": 722.127,
+  "tipo": "video",
+  "texto": "de quedarse con el Barón en la cara de Gen.G, con la Kalista de Berserker.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 722.127,
+  "t1": 726.055,
+  "tipo": "video",
+  "texto": "Y ahora mira a Inspired, con Xin Zhao. Inspired",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 726.055,
+  "t1": 730.075,
+  "tipo": "video",
+  "texto": "se mete con Xin Zhao al centro del equipo coreano, sin dudar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 730.075,
+  "t1": 733.788,
+  "tipo": "video",
+  "texto": "Busca a uno solo: Chovy. ¡Chovy cae!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 733.788,
+  "t1": 737.308,
+  "tipo": "video",
+  "texto": "¡Y LYON gana la pelea! El estadio de Texas no lo",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 737.308,
+  "t1": 741.128,
+  "tipo": "video",
+  "texto": "puede creer: Norteamérica le gana una partida al primer sembrado",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 741.128,
+  "t1": 746.981,
+  "tipo": "video",
+  "texto": "de Corea. Pero Gen.G es Gen.G. Ajusta, gana la segunda y la tercera,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.981,
+  "t1": 753.257,
+  "tipo": "video",
+  "texto": "y se clasifica tres a cero. LYON cae, pero con la cabeza en alto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 753.257,
+  "t1": 759.537,
+  "tipo": "video",
+  "texto": "Los que iban uno a uno se jugaron todo a una sola partida. Y ahí apareció un viejo",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 759.537,
+  "t1": 813.493,
+  "tipo": "video",
+  "texto": "conocido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 813.493,
+  "t1": 817.033,
+  "tipo": "video",
+  "texto": "Invictus contra Hanwha Life. Invictus va arriba",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 817.033,
+  "t1": 820.633,
+  "tipo": "video",
+  "texto": "en oro, pero Hanwha acaba de asegurar el alma del dragón",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 820.633,
+  "t1": 824.157,
+  "tipo": "video",
+  "texto": "Infernal y sigue viva. Pausa. Mira dónde",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 824.157,
+  "t1": 827.617,
+  "tipo": "video",
+  "texto": "está Rookie: con Annie, detrás de su equipo, esperando",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 827.617,
+  "t1": 831.21,
+  "tipo": "video",
+  "texto": "a que Hanwha gaste sus herramientas. Gumayusi se queda",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 831.21,
+  "t1": 834.69,
+  "tipo": "video",
+  "texto": "sin salida. Rookie lo remata. Y en el tres contra tres",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 834.69,
+  "t1": 838.17,
+  "tipo": "video",
+  "texto": "que queda, la transformación de Lulu deja a Olaf sin poder",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 838.17,
+  "t1": 842.645,
+  "tipo": "video",
+  "texto": "hacer nada. ¡Triple para Rookie… y cuádruple!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 842.645,
+  "t1": 848.895,
+  "tipo": "video",
+  "texto": "Invictus gana. El equipo que perdió el primer día ahora va dos a uno, a una serie de cuartos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 848.895,
+  "t1": 858.248,
+  "tipo": "video",
+  "texto": "Y Top Esports también gana, contra G2. 26 de octubre. Día cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.248,
+  "t1": 867.551,
+  "tipo": "video",
+  "texto": "El más cruel, porque los que van cero a dos se juegan la vida. Primero, T1. Contra CTBC arma la pelea perfecta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 867.551,
+  "t1": 876.021,
+  "tipo": "video",
+  "texto": "atrapa a Doggo, el tirador que estaba cargando a su equipo, y no deja a nadie de pie. Partida terminada en veintisiete minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 876.021,
+  "t1": 882.168,
+  "tipo": "video",
+  "texto": "Bilibili, con Knight en gran forma, le gana a Karmine Corp con una pelea de cinco por cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 882.168,
+  "t1": 890.022,
+  "tipo": "video",
+  "texto": "Los Grandes remonta otra vez, ahora contra Team Secret Whales. Dos a cero, y los de Vietnam se van a casa sin ganar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 890.022,
+  "t1": 900.433,
+  "tipo": "video",
+  "texto": "Y la última serie del día… es la que le da título a este video. Team Liquid contra Anyone's Legend. Los dos, cero a dos. El que pierda, se va.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 900.433,
+  "t1": 908.893,
+  "tipo": "video",
+  "texto": "Recuerda quién es AL: en septiembre ganó la liga china, 3 a 1 a Bilibili en la final. En la transmisión llamaron a Tarzan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 908.893,
+  "t1": 918.676,
+  "tipo": "video",
+  "texto": "su jungla, uno de los mejores del mundo. Nadie los veía cayendo aquí. Liquid gana la primera con una Camille de Morgan que se come la línea de atrás de AL.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 918.676,
+  "t1": 974.837,
+  "tipo": "video",
+  "texto": "Y en la segunda, llega el Barón que lo decide todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 974.837,
+  "t1": 978.497,
+  "tipo": "video",
+  "texto": "Minuto 40. Liquid pierde en asesinatos, 11",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 978.497,
+  "t1": 982.427,
+  "tipo": "video",
+  "texto": "a 17… pero va arriba en oro y en torres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 982.427,
+  "t1": 986.167,
+  "tipo": "video",
+  "texto": "Toma el tercer dragón y le quita a AL el alma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 986.167,
+  "t1": 990.187,
+  "tipo": "video",
+  "texto": "Pausa. Mira arriba: una oleada de Liquid empuja",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 990.187,
+  "t1": 994.403,
+  "tipo": "video",
+  "texto": "sola hacia el inhibidor, y Morgan se teletransporta para presionar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 994.403,
+  "t1": 998.043,
+  "tipo": "video",
+  "texto": "AL tiene que elegir: defender su base o perseguir",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 998.043,
+  "t1": 1001.573,
+  "tipo": "video",
+  "texto": "a Liquid. No puede hacer las dos cosas. Y mientras duda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 1001.573,
+  "t1": 1005.193,
+  "tipo": "video",
+  "texto": "Liquid se queda con toda la visión del lado de arriba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 1005.193,
+  "t1": 1008.953,
+  "tipo": "video",
+  "texto": "Liquid empieza el Barón. El Nocturne de AL entra",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1008.953,
+  "t1": 1014.74,
+  "tipo": "video",
+  "texto": "buscando el robo… ¡Pero Josedeodo no falla el castigo! ¡Barón para Liquid!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1014.74,
+  "t1": 1020.69,
+  "tipo": "video",
+  "texto": "Minutos después, Liquid termina la partida. Anyone's Legend, campeón de China,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1020.69,
+  "t1": 1028.266,
+  "tipo": "video",
+  "texto": "se despide cero a tres. Sin ganar una sola partida. El favorito cayó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1028.266,
+  "t1": 1039.02,
+  "tipo": "video",
+  "texto": "Antes de los nombres, un dato del juego. Con el Fearless Draft, los equipos no pueden repetir campeones en una serie… y aun así, hay uno que nadie suelta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1039.02,
+  "t1": 1049.086,
+  "tipo": "video",
+  "texto": "Lee Sin apareció en doce de las veintinueve partidas de la fase suiza. Detrás vienen Orianna, Renata, Alistar y Nocturne, con diez cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1049.086,
+  "t1": 1055.006,
+  "tipo": "video",
+  "texto": "Y fíjate en Renata: estuvo en las dos peleas que acabamos de ver, la de Karmine Corp y la de DK.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1055.006,
+  "t1": 1061.094,
+  "tipo": "video",
+  "texto": "Este Mundial se está ganando con peleas en equipo, no con duelos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1061.094,
+  "t1": 1069.894,
+  "tipo": "video",
+  "texto": "Ahora sí. Los cinco jugadores que más han brillado, con los números de gol.gg. Número cinco: Knight, de Bilibili.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1069.894,
+  "t1": 1081.319,
+  "tipo": "video",
+  "texto": "En sus primeras tres partidas participó en casi nueve de cada diez asesinatos de su equipo, y hace más del treinta por ciento de su daño. Si Bilibili llega lejos, será por él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1081.319,
+  "t1": 1088.749,
+  "tipo": "video",
+  "texto": "Número cuatro: Rookie, de Invictus. Ocho años después de ser campeón del mundo, sigue decidiendo partidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1088.749,
+  "t1": 1098.479,
+  "tipo": "video",
+  "texto": "Su cuádruple con Annie sacó a Invictus del hoyo. Número tres: Canyon, de Gen.G. Cinco partidas, un KDA de 10,5,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1098.479,
+  "t1": 1105.453,
+  "tipo": "video",
+  "texto": "y presente en ocho de cada diez asesinatos de su equipo. Gen.G pelea donde Canyon decide.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1105.453,
+  "t1": 1116.998,
+  "tipo": "video",
+  "texto": "Número dos: ShowMaker, de DK. El veterano sigue siendo el cerebro: hace el treinta por ciento del daño de su equipo y muere, en promedio, una vez por partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1116.998,
+  "t1": 1125.698,
+  "tipo": "video",
+  "texto": "Y número uno: Smash. Cuatro partidas, cuatro victorias, un KDA de 10,7… y el único pentakill del torneo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1125.698,
+  "t1": 1131.015,
+  "tipo": "video",
+  "texto": "Es el tirador del momento. Menciones honoríficas: Keria y Faker,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1131.015,
+  "t1": 1140.839,
+  "tipo": "video",
+  "texto": "que tienen a T1 a una serie de cuartos, y SkewMond, que con Lee Sin hizo la mejor partida de G2. ¿Y los equipos?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1140.839,
+  "t1": 1149.542,
+  "tipo": "video",
+  "texto": "Este es mi ranking después de cuatro días. Primero, Gen.G. Tres a cero, la mejor diferencia de oro por minuto del torneo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1149.542,
+  "t1": 1158.147,
+  "tipo": "video",
+  "texto": "y el dueño de los dragones: se llevó ocho de cada diez. Perdió una partida contra LYON… y la convirtió en una lección.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1158.147,
+  "t1": 1165.957,
+  "tipo": "video",
+  "texto": "Segundo, Dplus KIA. Tres a cero sin perder una sola partida: cuatro de cuatro. Remontó contra G2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1165.957,
+  "t1": 1175.169,
+  "tipo": "video",
+  "texto": "le ganó a T1 con una sola pelea y tiene al tirador más en forma del Mundial. Tercero, T1. Solo ha perdido contra DK,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1175.169,
+  "t1": 1183.448,
+  "tipo": "video",
+  "texto": "y el tricampeón sabe ganar cuando importa. Pero en la ronda cuatro se juega el pase. Cuarto, Invictus Gaming.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1183.448,
+  "t1": 1191.95,
+  "tipo": "video",
+  "texto": "Empezó perdiendo y ganó dos seguidas, con Rookie y TheShy jugando como en 2018. Y la sorpresa: LYON.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1191.95,
+  "t1": 1199.237,
+  "tipo": "video",
+  "texto": "Dos victorias y una partida robada a Gen.G. Norteamérica no se veía así de bien en mucho tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1199.237,
+  "t1": 1208.297,
+  "tipo": "video",
+  "texto": "¿China? Tres equipos siguen vivos con dos a uno: Invictus, Top Esports y Bilibili. Pero el campeón ya no está. Y Europa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1208.297,
+  "t1": 1216.003,
+  "tipo": "video",
+  "texto": "Movistar KOI respira con dos a uno, mientras G2 y Karmine Corp están contra la pared.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1216.003,
+  "t1": 1227.064,
+  "tipo": "video",
+  "texto": "¿Qué viene? El 28 de octubre arranca la ronda cuatro, todo al mejor de tres. Los que van dos a uno juegan por el pase a cuartos: Movistar KOI contra T1,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1227.064,
+  "t1": 1235.752,
+  "tipo": "video",
+  "texto": "Invictus contra LYON, y Top Esports contra Bilibili, en un duelo chino. Los que van uno a dos juegan por no irse a casa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1235.752,
+  "t1": 1242.789,
+  "tipo": "video",
+  "texto": "Karmine Corp contra CTBC, Team Liquid contra Los Grandes, y Hanwha Life contra G2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1242.789,
+  "t1": 1250.769,
+  "tipo": "video",
+  "texto": "La ronda cinco es el 31 de octubre, y ahí sabremos los ocho de cuartos. Cuartos del 3 al 6 de noviembre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1250.769,
+  "t1": 1260.202,
+  "tipo": "video",
+  "texto": "semifinales el 7 y el 8 en Texas… y la final, el 14, en Nueva York. Si tienes que ver una sola serie, que sea T1 contra KOI.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1260.202,
+  "t1": 1270.548,
+  "tipo": "video",
+  "texto": "Si T1 cae, su camino al cuarto título se complica. Y Hanwha Life, uno de los gigantes de Corea, podría irse en la fase suiza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1270.548,
+  "t1": 1279.155,
+  "tipo": "video",
+  "texto": "Tres cosas que nos dejan estos cuatro días. Una: Corea manda. Gen.G y DK son los únicos invictos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1279.155,
+  "t1": 1287.538,
+  "tipo": "video",
+  "texto": "y T1 sigue vivo. Dos: China está en crisis. Perdió sus cuatro partidas del primer día y a su campeón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1287.538,
+  "t1": 1296.574,
+  "tipo": "video",
+  "texto": "aunque todavía le quedan tres equipos con vida. Y tres: Occidente llegó con hambre. LYON le quitó una partida a Gen.G,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1296.574,
+  "t1": 1303.011,
+  "tipo": "video",
+  "texto": "Movistar KOI le ganó a Bilibili, y Team Liquid eliminó al campeón de China.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1303.011,
+  "t1": 1311.951,
+  "tipo": "video",
+  "texto": "Así va el Mundial. El campeón de China, fuera. Corea, con dos equipos invictos. Y T1, a una serie de seguir soñando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1311.951,
+  "t1": 1321.0909,
+  "tipo": "video",
+  "texto": "¿Quién crees que levanta la Copa del Invocador en Nueva York? Déjamelo en los comentarios… y nos vemos en cuartos.",
+  "clip_s": 8
+ }
+]

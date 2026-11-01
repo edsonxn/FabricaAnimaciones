@@ -113,6 +113,8 @@ def _oro(txt, px):
 
 
 def texto_oro(lz, txt, X, Y, px, op=1.0, izq=False):
+    if not txt:
+        return
     spr = _oro(txt, px)
     x = X if izq else X - spr.w / 2
     D.pegar(lz, spr, np.array([[1, 0, x], [0, 1, Y - spr.h / 2], [0, 0, 1]], np.float64), op)
@@ -289,11 +291,67 @@ def placa(lz, t, per, t0, t1):
     texto_oro(lz, NOMBRES[per], X + 92, Y, 40, op=o, izq=True)
 
 
-def real(lz, t, slug, t_in, t_out, lado="der", alto=0.42):
-    X = W * (0.80 if lado == "der" else 0.20)
-    pega(lz, f"reales/{slug}", X, H * 0.42, H * alto, t, t_in, t_out, rot=-4.0 if lado == "der" else 4.0)
-    texto_oro(lz, NOMBRE_REAL.get(slug, ""), X, H * 0.42 + H * alto * 0.56, 34, op=clamp01((t - t_in - 0.3) * 3)
+def real(lz, t, slug, t_in, t_out, lado="der", alto=0.42, x=None, y=0.42, rot=None, nombre=None):
+    """Foto real del juego en marco de papel; x, y en fracciones de pantalla (por defecto a un lado)."""
+    X = W * (x if x is not None else (0.80 if lado == "der" else 0.20))
+    rot = rot if rot is not None else (-4.0 if lado == "der" else 4.0)
+    pega(lz, f"reales/{slug}", X, H * y, H * alto, t, t_in, t_out, rot=rot)
+    texto_oro(lz, NOMBRE_REAL.get(slug, "") if nombre is None else nombre, X, H * y + H * alto * 0.56, 34, op=clamp01((t - t_in - 0.3) * 3)
               * (1 - smooth(prog(t, t_out, t_out + 0.35))))
+
+
+# ------------------------------------------------------------------ clips REALES del juego (yt-dlp, ≤ 8 s, en clips/<nombre>.mp4)
+# nombre → (rótulo, crédito del canal de YouTube). Fuentes: medios/clips/creditos.txt y medios/costasur/ (2Ya2f-WKBr4).
+CLIPS = {"posada_fuera": ("La posada de Costasur", "Wowprecatarchive"),
+         "posada_chimenea": ("La posada, por dentro", "Wowprecatarchive"),
+         "posada_escalera": ("La escalera de la posada", "Wowprecatarchive"),
+         "gran_forja": ("La Gran Forja de Forjaz", "Hazin221"),
+         "vega_amparo": ("Vega del Amparo", "TheWarcraftAtlas"),
+         "stratholme": ("Stratholme", "Thraex")}
+_CAPS = {}
+
+
+def _cuadro_clip(nombre, tt):
+    """Cuadro RGB del clip en el segundo tt (se queda en el último cuadro al acabarse); lectura secuencial cacheada por proceso."""
+    c = _CAPS.get(nombre)
+    if c is None:
+        cap = cv2.VideoCapture(f"clips/{nombre}.mp4")
+        c = _CAPS[nombre] = [cap, max(1, int(cap.get(cv2.CAP_PROP_FRAME_COUNT))), cap.get(cv2.CAP_PROP_FPS) or 30.0, -2, None]
+    cap, n, fps, pos, ult = c
+    i = min(n - 1, max(0, int(tt * fps)))
+    if i == pos and ult is not None:
+        return ult
+    if i != pos + 1:
+        cap.set(cv2.CAP_PROP_POS_FRAMES, i)
+    ok, f = cap.read()
+    if not ok:
+        return ult if ult is not None else np.zeros((720, 1280, 3), np.uint8)
+    c[3], c[4] = i, cv2.cvtColor(f, cv2.COLOR_BGR2RGB)
+    return c[4]
+
+
+def clip_real(lz, t, nombre, t_in, t_out, x=0.78, y=0.32, alto=0.36, rot=-3.0, vel=1.0):
+    """Clip real del juego que se reproduce dentro de un marco de papel (como las fotos reales), con su rótulo y crédito."""
+    if t < t_in or t > t_out + 0.4:
+        return
+    u = PF.entra(t, t_in, 0.45)
+    o = clamp01(u * 4) * (1.0 - smooth(prog(t, t_out, t_out + 0.35)))
+    if o <= 0.01:
+        return
+    f = _cuadro_clip(nombre, (t - t_in) * vel)
+    hp = int(H * alto)
+    wp = int(f.shape[1] * hp / f.shape[0])
+    b = 12
+    pap = np.empty((hp + 2 * b, wp + 2 * b, 3), np.uint8)
+    pap[:] = (246, 236, 212)
+    pap[b:b + hp, b:b + wp] = cv2.resize(f, (wp, hp), interpolation=cv2.INTER_AREA)
+    spr = D.Sprite(pap)
+    X, Y = W * x, H * y + 4 * math.sin(1.3 * t + t_in)
+    D.pegar(lz, spr, D.poner(spr.w, spr.h, X, Y, s=0.6 + 0.4 * u, rz=rot + (1 - u) * 10 + 0.8 * math.sin(1.1 * t)), o)
+    rot_txt, cred = CLIPS.get(nombre, ("", ""))
+    ot = o * clamp01((t - t_in - 0.3) * 3)
+    texto_oro(lz, rot_txt, X, Y + spr.h * 0.5 + 30, 34, op=ot)
+    texto_oro(lz, f"en el juego · video: {cred} (YouTube)", X, Y + spr.h * 0.5 + 66, 20, op=ot * 0.9)
 
 
 NOMBRE_REAL = {"alexandros": "Alto Señor Mograine", "alexandros_vivo": "Alexandros Mograine", "renault": "Comandante Mograine",
@@ -308,7 +366,13 @@ NOMBRE_REAL = {"alexandros": "Alto Señor Mograine", "alexandros_vivo": "Alexand
                "capilla": "Capilla de la Esperanza de la Luz", "monasterio": "Monasterio Escarlata", "stratholme": "Stratholme",
                "acherus": "Acherus: El Bastión de Ébano", "torre_taelan": "Torre de Taelan", "crematoria": "Crematoria",
                "crematoria_corrupta": "Crematoria corrupta", "agonia_escarcha": "Agonía de Escarcha",
-               "alexandros_espiritu": "Espíritu de Mograine"}
+               "alexandros_espiritu": "Espíritu de Mograine", "costasur": "Costasur", "costasur_ayuntamiento": "Costasur",
+               "remol": "Rémol", "andorhal": "Andorhal", "vega_amparo": "Vega del Amparo", "mardenholde": "Fortaleza de Mardenholde",
+               "gran_forja": "La Gran Forja", "forjaz": "Forjaz", "cumbre_roca_negra": "Cumbre de Roca Negra",
+               "posada_fuera": "Posada de Costasur", "posada_dentro": "Posada de Costasur", "posada_chimenea": "Posada de Costasur",
+               "posada_salon": "Posada de Costasur", "posada_cuarto": "Posada de Costasur", "posada_entrada": "Posada de Costasur",
+               "kelthuzad_humano": "Kel'Thuzad", "renault_comandante": "Renault Mograine", "isillien_joven": "Isillien",
+               "dathrohan_comic": "Saidan Dathrohan"}
 NOMBRE_ICONO = {"crematoria": "Crematoria", "crematoria_corrupta": "Crematoria corrupta", "martillo_taelan": "Martillo de Taelan",
                 "simbolo_honor": "Símbolo de Honor perdido", "cuadro": "Del amor y la familia", "obsequio": "Obsequio de Tirion",
                 "fragmento_alma": "Fragmento de alma de Alexandros", "marca_fordring": "Marca de Fordring"}
@@ -400,10 +464,16 @@ def dibuja_toma(lz, s, t):
         AMBIENTES[amb](lz, t, s)
     if s.get("tinte"):
         tinte(lz, *s["tinte"])
-    for r in s.get("real", []):                             # (slug, (key, pref) | None, lado)
+    for r in s.get("real", []):                             # (slug, (key, pref) | None | s desde t0, lado[, {x, y, alto, rot, dur}])
         slug, cuando = r[0], r[1]
-        ti = tk(*cuando) if cuando else s["t0"] + 0.4
-        real(lz, t, slug, ti, min(ti + 4.2, s["t1"] - 0.3), r[2] if len(r) > 2 else "der")
+        op = dict(r[3]) if len(r) > 3 else {}
+        ti = tk(*cuando) if isinstance(cuando, tuple) else s["t0"] + (0.4 if cuando is None else cuando)
+        real(lz, t, slug, ti, min(ti + op.pop("dur", 4.2), s["t1"] - 0.3), r[2] if len(r) > 2 else "der", **op)
+    for c in s.get("clip", []):                             # (nombre, (key, pref) | None | s desde t0[, {x, y, alto, rot, vel, dur}])
+        nombre, cuando = c[0], c[1]
+        op = dict(c[2]) if len(c) > 2 else {}
+        ti = tk(*cuando) if isinstance(cuando, tuple) else s["t0"] + (0.4 if cuando is None else cuando)
+        clip_real(lz, t, nombre, ti, min(ti + op.pop("dur", 6.5), s["t1"] - 0.3), **op)
     for ic in s.get("ico", []):
         slug, cuando = ic
         ti = tk(*cuando) if cuando else s["t0"] + 0.4

@@ -39,6 +39,7 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
                                                  se rompen, el cielo gira y cae una estrella
   balanza(izq, der, pesos, remate)               balanza de pruebas que se inclina por marca; al final vuelve al centro
   espejo(padre, hijo, papel_padre, papel_hijo, idolo)   el padre y el hijo acaban en el mismo papel; el ídolo se tacha
+  cien(titulo, encendidos, remate)               100 estrellas apagadas; se encienden N (campaña de suscripción, 30-oct-2026)
 """
 import math
 
@@ -1269,6 +1270,39 @@ def muerte_suelta(nombres, titulo="La Runa de la Muerte", remate="Indiscriminada
 
 
 # ------------------------------------------------------------------ er_radahn_atrocidades (28-oct-2026)
+def cien(titulo, encendidos, remate=None, w=1240):
+    """100 estrellas apagadas que aparecen en barrido desde la marca 0; en la marca 1 se encienden `encendidos`, repartidas;
+    remate = (texto, i_marca) en ámbar abajo. Para «de cada 100 que ven el canal, solo N…» (mismo uso que mg_tes.rejilla)."""
+    n, cols, P = 100, 20, 56
+    h = 150 + 5 * P + (100 if remate else 30)
+    vivas = {int(round((k + .5) * n / encendidos + 7)) % n for k in range(encendidos)}
+    ftit, fr = fuente("r", 40), fuente("i", 64)
+
+    def fn(dt, dur, marcas):
+        t0 = marcas[0] if marcas else .3
+        t1 = marcas[1] if len(marcas) > 1 else t0 + 2
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        x0, y0 = M + (w - (cols - 1) * P) / 2, M + 135
+        txt = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dd = ImageDraw.Draw(txt)
+        for i in range(n):
+            r, c = divmod(i, cols)
+            u = _eo((dt - t0 - (r + c) * .025) / .25)
+            v = _eo((dt - t1) / .35) if i in vivas else 0
+            _estrella(d, x0 + c * P, y0 + r * P, 17, GRIS, 140 * u * (1 - v))
+            _estrella(dd, x0 + c * P, y0 + r * P, 17 + 5 * v, ORO, 255 * v)
+        im.alpha_composite(_brillo(txt, 10, 1.6))
+        if remate and len(marcas) > remate[1] and dt >= marcas[remate[1]]:
+            a = 255 * _eo((dt - marcas[remate[1]]) / .4)
+            _texto(ImageDraw.Draw(im), (M + w / 2, M + h - 56), remate[0], fr, AMBAR, "mm", a)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
 def _lanza(d, x0, y0, x1, y1, color, a, ancho=5):
     """Asta de (x0,y0) a la punta (x1,y1), con punta triangular."""
     if a <= 0:

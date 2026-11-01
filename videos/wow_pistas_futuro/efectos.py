@@ -22,6 +22,10 @@ FUNDIDO = {}
 FX = [
     # ---- patrocinio Overgear, campaña 2: coaching de WoW Forever, vía bandas, con el kit «WoW - Forever (nov)» (28-oct-2026):
     # logo de esquina todo el anuncio, par de USP, tarjeta de coaching, reseñas reales (croma ROJO) y packshot «PLAY BETTER FOREVER»
+    # fondo oficial de marca (Alice, 29-oct; SIEMPRE en todo video con Overgear, el usuario 1-nov): cuadro entero
+    # DEBAJO de reseñas, packshot y código (va antes en la lista para quedar debajo)
+    dict(tipo="video", ruta=OG + "background\Background.mp4", bucle=True, de="Como en Forever el equipo no caduca", a=("Número cinco", 0),
+         entra=.3, nombre="og fondo marca"),
     dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True, de="preparado está Overgear",
          a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="te explica por voz", dur=3.0, sale=.25,

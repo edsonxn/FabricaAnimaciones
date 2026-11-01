@@ -31379,6 +31379,12 @@
      "tramo": 3,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 8,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-27"
@@ -31468,6 +31474,12 @@
      "tramo": 9,
      "desde": 57.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-27"
@@ -31727,6 +31739,12 @@
      "tramo": 2,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 5,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-27"
@@ -31815,6 +31833,12 @@
      "tramo": 4,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 14,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-27"
@@ -32023,6 +32047,12 @@
      "tramo": 6,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 13,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-27"
@@ -34593,6 +34623,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 10,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-28"
@@ -34662,7 +34698,14 @@
     "dinamica": 0.64
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 6,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "ig_lyon_worlds__lyria_tramo2": {
@@ -34813,7 +34856,14 @@
     "dinamica": 0.62
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "ig_lyon_worlds__lyria_tramo3": {
@@ -34899,6 +34949,12 @@
      "tramo": 8,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35051,7 +35107,14 @@
     "dinamica": 0.86
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 15,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "cfo_kc_worlds__lyria_tramo4": {
@@ -35130,6 +35193,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_semana2",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35214,7 +35283,14 @@
     "dinamica": 0.89
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 11,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "cfo_kc_worlds__lyria_tramo7": {
@@ -35372,7 +35448,14 @@
     "dinamica": 0.8
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 9,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "cfo_kc_worlds__lyria_tramo5": {
@@ -35678,7 +35761,14 @@
     "dinamica": 0.25
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 12,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-28"
   },
   "t1_koi_worlds__lyria_tramo4": {
@@ -37152,7 +37242,14 @@
     "dinamica": 0.7
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_semana2",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-10-31"
+    }
+   ],
    "catalogado": "2026-10-30"
   },
   "cfo_kc_jugadas__lyria_tramo1": {

@@ -3,6 +3,7 @@
 - canal: pieza_oculta · <fecha meta de publicación>
 - estilo: secuencia_flow (plastilina, clips e imágenes de Google Flow) → doc de estilo: docs/estilo_secuencia_flow.md
 - etapa: <guion | voz | beats | prompts n/N | flow n/N | armado | música | verificado | subido | publicado>
+- ✅ **PÚBLICO** desde el lun 26-oct 22:05 CDMX · https://youtu.be/EjcARSU5Kwc (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: <el paso exacto que sigue, con comando>
 
 

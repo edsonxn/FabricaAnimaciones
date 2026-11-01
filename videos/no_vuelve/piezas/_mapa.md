@@ -1,0 +1,18 @@
+# Mapa de piezas (21-oct-2026; de `previews/_indices.jpg` — confirmar la orientación en cada PNG, la miniatura engaña)
+- abrazo_hoja: 00 sentados en el escalón (cabeza en su hombro) · 01 abrazo de pie · 02 sentados, mano en la mejilla
+- diego14_hoja: 00 banca + audífono (trae la banca) · 01 lee el cel celoso · 02 puñetazo a la pared (trae un trozo de pared) · 03 flores amarillas, culpable · 04 congelado, flores colgando
+- diego14b_hoja: 00 arrodillado con muñecas · 01 llora, se limpia · 02 sentado en escalón, cabeza abajo · 03 toca la puerta (trae la puerta) · 04 brazo abajo «de la mano»
+- diego8_hoja: 00 silla, tarea · 01 mira la puerta asustado · 02 algodón de azúcar · 03 mano arriba «de la mano del papá» · 04 abraza las rodillas · 05 corre
+- duo_mesa_hoja (Diego 8 + Xime 3, le tapa las orejas): 00 tararea · 01 asustados miran arriba · 02 beso en la cabeza · 03 dormidos
+- fer_hoja: 00 banca + audífono · 01 mira el cel incómoda · 02 se tapa la cara · 03 brazos cruzados · 04 de espaldas se va · 05 ríe
+- gente_hoja: 00 algodonero · 01 compañero · 02 compañeras · 03 orientadora · 04 abuela de rebozo · 05 trompetista · 06 (verificar)
+- gondolas_hoja: 00 roja, papá señala · 01 roja, Diego recargado · 02 turquesa, Xime brazos arriba · 03 turquesa, miran lejos
+- lupe_hoja: 00 la REPISA suelta · 01 tortillas · 02 apaga el radio · 03 se tapa la cara · 04 flores rojas · 05 ofrece plato
+- lupe_b_hoja: 00 escalón llorando · 01 camina con bolsas · 02 cel al oído · 03 abrazando (trae al niño) · 04 sonríe, mano en el pecho
+- papa_hoja: 00 ríe y señala · 01 sentado a la mesa · 02 grita · 03 flores y pan · 04 brazos abiertos · 05 llaves, ceño
+- xime3_hoja: 00 dibuja · 01 muñeca del brazo · 02 abraza una pierna (trae la pierna) · 03 brazos arriba · 04 dormida
+- xime9_hoja: 00 juega con muñecas · 01 pregunta mirando arriba · 02 abraza muñeca · 03 abrazo (trae a la abuela) · 04 saluda
+- naturaleza: 00 jacaranda · 01 bugambilia · 02 macetas · 03 limonero · 04 perro dormido · 05 zacate · 06 huizache · 07 poste · 08 nube rosa · 09 palomilla
+- utileria_casa (20; el plato roto salió en esquirlas sueltas): platos 00 naranja · 07 talavera · 11 verde · 17 sol · 18 (verificar); 01 radio · 02 pan · 03 maleta · 04-05 esquirlas · 06 ramo rojo · 08-09 muñeco(s) · 10 muñeca · 12 celular · 13-15 piernas · 16 bolsa del mercado · 19 ramo amarillo
+- utileria_feria (15): góndolas vacías 00 roja · 01 turquesa · 02 amarilla · 03 verde · 05-07 · 10 naranja; 04 patas en A · 08-09 foquitos · 11 puesto · 12 estrella · 13 globos · 14 caballito
+- ciclos (`ciclo_NN.png`): diego14_camina, papa_camina, lupe_camina (con bolsa), xime9_camina (con muñeca), fer_camina = 8 · paloma_vuelo = 6 · rueda = 1 (sin góndolas ni patas)

@@ -13,7 +13,7 @@
 |---|---|---|---|
 | 1 | guion (13 planos, biblia de la serie), prompts; personajes Flow; clips 1-4 → revisión del usuario | ✅ 23-oct | 7 personajes con voz, clips 1-4 aprobados |
 | 2 | clips 5-13 + repeticiones | ✅ 23-oct | sin repeticiones |
-| 3 | música (Flow Music), SFX, rótulos, mezcla, render, MASTER, publicar en FB | ✅ 23-oct | https://www.facebook.com/reel/4105030019626908/ |
+| 3 | música (Flow Music), SFX, rótulos, mezcla, render, MASTER, publicar en FB | ✅ 23-oct | https://www.facebook.com/reel/1266763678961150/ (remezclado; el viejo 4105030019626908 queda para borrar a mano) |
 
 ## Decisiones (el usuario, 23-oct-2026)
 - novela NUEVA de muchos capítulos (eligió «La heredera del rancho» de 3 premisas) · cap. 1 ≈ 2 min · vertical 9:16
@@ -49,7 +49,7 @@
   0-103 s + fundido 3 s + 138-164 s (126 s). Siguiente: mezcla → video → final → revisión → publicar.
 
 - ✅ ~11:20 MASTER salida/la_heredera_del_rancho_cap1_MASTER.mp4 (1080x1920, 126 s, −14,2 LUFS; diálogo completo por Whisper)
-  → PUBLICADO en «Lágrimas y Venganza» (tipo video, fb_id 4105030019626908): https://www.facebook.com/reel/4105030019626908/
+  → PUBLICADO en «Lágrimas y Venganza» (tipo video, fb_id 1266763678961150, remezclado 23-oct): https://www.facebook.com/reel/1266763678961150/
 
 ## Lecciones de este video (solo lo no obvio)
 - **ORDEN en SIN_VOZ con diálogo: `video` ANTES de `mezcla`.** El render escribe audio/ambiente.wav (el sonido de los clips);

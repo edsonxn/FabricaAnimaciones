@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bájate de la rueda</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-400.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-600.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-800.woff2) format("woff2")}
+@font-face{font-family:Poppins;font-weight:900;src:url(fonts/poppins-900.woff2) format("woff2")}
+@font-face{font-family:Bask;font-weight:700;src:url(fonts/baskervville-bold.ttf) format("truetype")}
+@font-face{font-family:Bask;font-weight:700;font-style:italic;src:url(fonts/baskervville-bolditalic.ttf) format("truetype")}
+:root{--papel:#f4eedf;--papel2:#ebe2cc;--tinta:#2a1d14;--rojo:#c8322a;--verde:#2f8a4a;--dorado:#f2b45a;--guinda:#7a1f2b;--noche:#0d1424;
+  --amarillo:#f2c230;--naranja:#e9772b}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#07090f;overflow:hidden;font-family:Poppins,"Segoe UI",system-ui,sans-serif;color:var(--tinta);cursor:default;user-select:none}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center;overflow:hidden;background:#000}
+
+/* ---------- escenario: fondo de Flow con empuje lento, profundidad de campo y viñeta ---------- */
+.slide{position:absolute;inset:0;display:none;overflow:hidden}
+.slide.active{display:block}
+.fondo{position:absolute;inset:-4%;background-size:cover;background-position:center;transition:filter 1.2s ease,opacity 1.5s ease}
+.slide.active .fondo{animation:kb 34s ease-in-out infinite alternate}
+.fondo.kb2{animation-name:kb2!important}
+@keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.09) translate(-1.6%,1%)}}
+@keyframes kb2{from{transform:scale(1.08) translate(1.5%,-.8%)}to{transform:scale(1) translate(-.5%,.5%)}}
+.fondo.foco{filter:blur(3px) brightness(.78) saturate(.95)}
+.vineta{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(0,0,0,.42) 100%)}
+.grano{position:absolute;inset:0;pointer-events:none;opacity:.10;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+#fx{position:absolute;inset:0;width:1920px;height:1080px;pointer-events:none}
+
+/* ---------- pegatinas (las mismas piezas recortadas del corto, con su borde de papel) ---------- */
+.peg{position:absolute;transform-origin:50% 100%;opacity:0;
+  filter:drop-shadow(4px 0 0 var(--papel)) drop-shadow(-4px 0 0 var(--papel)) drop-shadow(0 4px 0 var(--papel)) drop-shadow(0 -4px 0 var(--papel)) drop-shadow(7px 10px 7px rgba(0,0,0,.38))}
+.peg img{display:block;height:100%;transform-origin:50% 100%;animation:respira 3.1s ease-in-out infinite;animation-delay:var(--fa,0s);filter:var(--tono,none)}
+.peg.voltea img{transform:scaleX(-1);animation-name:respiraV}
+.peg::before{content:"";position:absolute;left:12%;right:12%;bottom:-2.2%;height:6%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.42),transparent);filter:blur(2px)}
+.peg.flota::before,.peg.vuela::before,.peg.mece::before{display:none}
+.slide.active .peg.vuela{animation:vuelo 17s linear infinite;animation-delay:var(--d,0s)}
+@keyframes vuelo{0%{opacity:1;transform:translate(-300px,0)}50%{transform:translate(1100px,-40px)}100%{opacity:1;transform:translate(2400px,10px)}}
+.slide.active .peg{animation:pegar .6s cubic-bezier(.2,1.6,.4,1) both;animation-delay:var(--d,.2s)}
+.slide.active .peg[data-s]:not(.on){animation:none;opacity:0}
+.peg.flota img{animation:flota 4.2s ease-in-out infinite;animation-delay:var(--fa,0s)}
+@keyframes pegar{0%{opacity:0;transform:scale(.55) rotate(9deg)}60%{opacity:1;transform:scale(1.06) rotate(-1deg)}100%{opacity:1;transform:scale(1) rotate(var(--r,0deg))}}
+@keyframes respira{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.013)}}
+@keyframes respiraV{0%,100%{transform:scaleX(-1) scaleY(1)}50%{transform:scaleX(-1) scaleY(1.013)}}
+@keyframes flota{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+.mece img{animation:mece 3.4s ease-in-out infinite!important;transform-origin:50% 0}
+@keyframes mece{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+.noche{--tono:brightness(.66) saturate(.75) contrast(1.05)}
+.foquito{--tono:brightness(.85) sepia(.25) saturate(1.1)}
+.dorado{--tono:sepia(.16) saturate(1.08)}
+
+/* ---------- texto: tiras de papel pegadas en la escena (la misma letra de los rótulos del corto) ---------- */
+[data-s]{opacity:0;transform:translateY(40px) scale(.96) rotate(var(--r,0deg));transition:opacity .45s ease,transform .7s cubic-bezier(.2,1.5,.4,1)}
+[data-s].on{opacity:1;transform:rotate(var(--r,0deg))}
+.tira{display:inline-block;position:relative;background:var(--papel);color:var(--tinta);font-family:Bask,Georgia,serif;font-weight:700;
+  padding:.16em .55em .2em;line-height:1.08;box-shadow:7px 11px 16px rgba(0,0,0,.42);transform:rotate(var(--r,-1.5deg));
+  background-image:linear-gradient(170deg,rgba(255,255,255,.35),rgba(0,0,0,.04) 70%);white-space:nowrap}
+.tira::before{content:"";position:absolute;left:50%;top:-14px;width:110px;height:30px;margin-left:-55px;background:rgba(255,248,220,.55);
+  transform:rotate(-4deg);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.tira.sin::before{display:none}
+.nota{position:relative;background:var(--papel);color:var(--tinta);padding:30px 40px 34px;box-shadow:8px 12px 18px rgba(0,0,0,.42);
+  font-size:38px;line-height:1.28;transform:rotate(var(--r,0deg));background-image:linear-gradient(175deg,rgba(255,255,255,.4),rgba(0,0,0,.05))}
+.nota::before{content:"";position:absolute;left:50%;top:-15px;width:120px;height:30px;margin-left:-60px;background:rgba(255,248,220,.6);transform:rotate(3deg)}
+.nota b{font-weight:800}
+.nota .peque{font-size:28px;color:#5d4b3b}
+.rojo{color:var(--rojo)}.verde{color:var(--verde)}.guinda{color:var(--guinda)}
+.abs{position:absolute}
+.col{display:flex;flex-direction:column;gap:30px}
+.pill{display:inline-block;padding:14px 34px;border-radius:999px;font-weight:800;font-size:34px;background:var(--papel);color:var(--tinta);box-shadow:5px 8px 14px rgba(0,0,0,.4)}
+
+/* ---------- el celular con el chat (el «No vuelve a pasar» que abre y cierra el taller) ---------- */
+.cel{position:absolute;width:470px;height:900px;border-radius:58px;background:#17171b;padding:20px;box-shadow:18px 26px 40px rgba(0,0,0,.55),inset 0 0 0 3px #2c2c33}
+.cel .pan{position:relative;width:100%;height:100%;border-radius:42px;background:#e9dfd3;overflow:hidden;font-family:Poppins,sans-serif;
+  background-image:radial-gradient(rgba(120,90,60,.07) 1.5px,transparent 1.6px);background-size:22px 22px}
+.cel .bar{height:96px;background:#2d5a4e;display:flex;align-items:center;gap:16px;padding:26px 24px 0;color:#fff}
+.cel .bar .av{width:48px;height:48px;border-radius:50%;background:#9bb3ab;flex:none}
+.cel .bar b{font-size:24px;display:block}.cel .bar span{font-size:16px;opacity:.75}
+.cel .hilo{position:absolute;left:0;right:0;top:96px;bottom:84px;padding:16px 18px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;overflow:hidden}
+.cel .dia{align-self:center;font-size:16px;background:#d9ecf2;color:#46606a;padding:5px 14px;border-radius:10px;margin:6px 0}
+.cel .m{position:relative;max-width:82%;padding:12px 18px 22px;border-radius:16px;font-size:24px;line-height:1.28;color:#1d1d22;box-shadow:0 1px 1px rgba(0,0,0,.12)}
+.cel .m.el{align-self:flex-start;background:#fff;border-top-left-radius:4px}
+.cel .m.yo{align-self:flex-end;background:#d4f5c4;border-top-right-radius:4px}
+.cel .m i.h{position:absolute;right:12px;bottom:4px;font-style:normal;font-size:13px;color:#8a8a92}
+.cel .m img{display:block;width:230px;margin:2px 0 8px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+.cel .caja{position:absolute;left:14px;right:80px;bottom:16px;height:56px;border-radius:30px;background:#fff;font-size:20px;color:#9696a0;padding:14px 22px}
+.cel .env{position:absolute;right:14px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#2d8a6e}
+.cel .env::after{content:"";position:absolute;left:22px;top:17px;border-left:17px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.cel.vibra{animation:vibra .09s linear 9}
+@keyframes vibra{0%,100%{transform:translate(0,0) rotate(var(--r,0deg))}25%{transform:translate(-6px,2px) rotate(calc(var(--r,0deg) - 1deg))}75%{transform:translate(6px,-2px) rotate(calc(var(--r,0deg) + 1deg))}}
+.marca{position:absolute;inset:-8px -12px;border:5px solid var(--rojo);border-radius:22px;transform:rotate(-1.5deg) scale(.7);opacity:0;transition:all .45s cubic-bezier(.2,1.6,.4,1);pointer-events:none}
+.m.mk .marca{opacity:1;transform:rotate(-1.5deg) scale(1)}
+.n-marca{position:absolute;right:-26px;top:-18px;padding:4px 12px;border-radius:999px;background:var(--rojo);color:#fff;font-size:17px;font-weight:800;white-space:nowrap;opacity:0;transition:opacity .3s .2s;z-index:2}
+.m.mk .n-marca{opacity:1}
+.m.el .n-marca{right:auto;left:62%}
+
+/* ---------- la rueda de la fortuna (la misma pieza de Flow que gira en el corto) ---------- */
+.rueda{position:absolute}
+.rueda .patas{position:absolute;left:8%;width:84%;top:50%;height:62%;object-fit:fill;filter:drop-shadow(6px 10px 8px rgba(0,0,0,.4))}
+.rueda .aro{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(6px 10px 8px rgba(0,0,0,.4))}
+.rueda .gon{position:absolute;transform-origin:50% 0;transition:filter .5s,opacity .5s}
+.rueda .gon img{display:block;height:100%;filter:drop-shadow(3px 0 0 var(--papel)) drop-shadow(-3px 0 0 var(--papel)) drop-shadow(0 3px 0 var(--papel)) drop-shadow(5px 8px 6px rgba(0,0,0,.4))}
+.rueda .gon .et{position:absolute;left:50%;top:104%;transform:translateX(-50%) rotate(-2deg);font-family:Bask,serif;font-weight:700;font-size:34px;white-space:nowrap;
+  background:var(--papel);padding:2px 16px;box-shadow:4px 6px 10px rgba(0,0,0,.4)}
+.rueda .gon.apaga{filter:brightness(.45) saturate(.4);opacity:.75}
+.rueda .gon.luz{filter:drop-shadow(0 0 26px rgba(255,214,120,.95))}
+.fase{position:absolute;left:90px;top:250px;width:760px}
+.fase .nota{font-size:34px}
+.fase h3{font-family:Bask,serif;font-size:66px;line-height:1;margin-bottom:12px}
+
+/* ---------- el violentómetro (IPN, 2009) ---------- */
+.vm{position:absolute;width:150px;border-radius:16px;overflow:hidden;box-shadow:10px 14px 22px rgba(0,0,0,.5);
+  background:linear-gradient(to top,#f6d43a 0%,#f2c230 30%,#f29b2a 42%,#e9772b 64%,#d8432a 76%,#b8202a 100%)}
+.vm::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to top,transparent 0 24px,rgba(42,29,20,.45) 24px 26px)}
+.vmn{position:absolute;display:flex;align-items:center;gap:20px}
+.vmn .nota{font-size:31px;padding:20px 30px 22px}
+.flecha{position:absolute;height:6px;background:var(--tinta);border-radius:3px}
+.chip{position:absolute;display:flex;align-items:center;gap:14px}
+.chip .pill{font-size:26px;padding:10px 24px}
+
+/* ---------- piezas de cada diapositiva ---------- */
+.titulo{font-size:118px;letter-spacing:-.01em}
+.sello{position:absolute;padding:10px 30px;border:8px solid;border-radius:14px;font-family:Bask,serif;font-weight:700;font-size:86px;transform:rotate(-10deg) scale(2.4);opacity:0;transition:all .38s cubic-bezier(.3,1.5,.5,1);background:rgba(244,238,223,.92)}
+.sello.on{opacity:1;transform:rotate(-10deg) scale(1)}
+.sello.amor{color:var(--verde);border-color:var(--verde)}.sello.control{color:var(--rojo);border-color:var(--rojo)}
+.parpado{position:absolute;left:-5%;right:-5%;height:56%;background:#030305;transition:transform 2.4s cubic-bezier(.6,0,.3,1);filter:blur(18px);pointer-events:none}
+.parpado.arr{top:-6%;transform:translateY(-100%);border-radius:0 0 50% 50%}
+.parpado.aba{bottom:-6%;transform:translateY(100%);border-radius:50% 50% 0 0}
+.cierra .parpado.arr{transform:translateY(-12%)}.cierra .parpado.aba{transform:translateY(12%)}
+.fuera{display:none!important}
+.silueta{position:absolute;left:50%;bottom:16%;height:62%;transform:translateX(-50%);opacity:0;
+  filter:brightness(0) drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)}
+.slide.active .apaga{animation:apaga 6s ease-in forwards}
+.slide.active .silueta{animation:aparece 3s ease 6.5s forwards}
+@keyframes apaga{to{filter:brightness(0)}}
+@keyframes aparece{to{opacity:.95}}
+.reloj{font-family:Bask,serif;font-size:96px;color:var(--papel);text-shadow:0 4px 18px #000}
+.logos{display:flex;gap:26px;align-items:center}
+.logos img{height:110px;background:#fff;padding:8px;box-shadow:5px 8px 12px rgba(0,0,0,.4)}
+.tarjeta{position:absolute;left:840px;top:250px;width:760px}
+.tarjeta .nota{font-size:46px;line-height:1.25;min-height:250px;display:flex;align-items:center}
+.tarjeta .nota>span{display:block}
+
+/* ---------- interfaz ---------- */
+#bar{position:absolute;left:0;bottom:0;height:7px;background:var(--dorado);transition:width .5s;z-index:9}
+#hint{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);font-size:24px;color:rgba(255,255,255,.75);background:rgba(0,0,0,.45);padding:10px 26px;border-radius:999px;transition:opacity .6s;z-index:9}
+#notes{position:absolute;right:30px;top:30px;width:620px;background:rgba(12,10,8,.9);color:#f4eedf;border-radius:18px;padding:26px 30px;font-size:24px;line-height:1.4;display:none;z-index:10}
+#notes.on{display:block}
+#notes h4{font-size:18px;letter-spacing:.18em;color:var(--dorado);margin-bottom:10px}
+aside.notes{display:none}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1 · EL MENSAJE -->
+  <section class="slide noche" id="s-mensaje" data-steps="1" data-fx="nada">
+    <div class="fondo foco" style="background-image:url(img/cocina_noche.jpg)"></div>
+    <div class="cel" id="cel1" style="left:700px;top:100px;--r:-3deg;transform:rotate(-3deg)"></div>
+    <div class="abs" style="left:1250px;top:430px"><div class="tira" data-s="1" style="font-size:84px;--r:3deg">¿Lo<br>perdonarías?</div></div>
+    <aside class="notes">Arranca SIN presentarte. Deja que lo lean en silencio. Nadie contesta en voz alta: «Guárdenla. Volvemos a este mensaje al final».</aside>
+  </section>
+
+  <!-- 2 · TÍTULO -->
+  <section class="slide noche" id="s-titulo" data-steps="0" data-fx="estrellas">
+    <div class="fondo kb2" style="background-image:url(img/feria_noche.jpg)"></div>
+    <div class="rueda" data-rueda="6" data-v="7" style="left:1080px;top:110px;width:800px;height:800px"></div>
+    <div class="peg mece" style="left:4%;top:-2%;height:18%;--d:.1s"><img src="img/p_utileria_feria_09.png"></div>
+    <div class="peg mece" style="left:31%;top:-3%;height:15%;--d:.25s"><img src="img/p_utileria_feria_09.png"></div>
+    <div class="abs" style="left:80px;top:300px">
+      <div class="tira titulo" style="--r:-2deg">BÁJATE<br>DE LA RUEDA</div><br>
+      <div class="tira sin" style="font-size:44px;margin-top:40px;--r:1.2deg;font-style:italic">El círculo de la violencia:<br>cómo funciona, cómo darte cuenta y cómo salir</div>
+    </div>
+    <div class="abs logos" style="left:90px;bottom:60px">
+      <img src="img/logo_gobierno_jalpa.jpg"><img src="img/logo_imm_jalpa.jpg"><img src="img/logo_secretaria_mujeres.jpg"><img src="img/logo_centro_libre_jalpa.jpg">
+    </div>
+    <aside class="notes">Preséntate aquí. «No vengo a regañar a nadie. Vengo a enseñarles a ver una rueda que casi nadie ve, aunque esté girando en su propia casa o en su propio celular.»</aside>
+  </section>
+
+  <!-- 3 · TRES PREGUNTAS -->
+  <section class="slide" id="s-preguntas" data-steps="3" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/corredor_secu.jpg)"></div>
+    <div class="peg" style="left:72%;bottom:6%;height:46%;--d:.3s;--fa:-1s"><img src="img/p_gente_hoja_01.png"></div>
+    <div class="peg voltea" style="left:83%;bottom:5%;height:48%;--d:.45s"><img src="img/p_gente_hoja_02.png"></div>
+    <div class="peg" id="camina3" style="left:-20%;bottom:3%;height:52%;--d:0s"><img src="img/c_diego14_camina_00.png"></div>
+    <div class="abs col" style="left:110px;top:110px;gap:40px">
+      <div class="tira" data-s="1" style="font-size:76px;--r:-1.5deg">¿Cómo funciona la rueda?</div>
+      <div class="tira" data-s="2" style="font-size:76px;--r:1deg;margin-left:60px">¿Cómo me doy cuenta si estoy dentro?</div>
+      <div class="tira" data-s="3" style="font-size:76px;--r:-1deg"><span class="guinda">¿Cómo me bajo?</span></div>
+    </div>
+    <aside class="notes">30 segundos. Son la promesa del taller: «Al final vas a poder contestar estas tres, para ti o para alguien que quieras».</aside>
+  </section>
+
+  <!-- 4 · OJOS CERRADOS -->
+  <section class="slide dorado" id="s-ojos" data-steps="3" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/jardin_tarde.jpg)"></div>
+    <div class="parpado arr"></div><div class="parpado aba"></div>
+    <div class="abs" style="left:0;right:0;top:110px;text-align:center"><div class="tira" style="font-size:64px;--r:-1deg;white-space:normal">Cierren los ojos.<br>Levanten la mano si conocen a alguien que…</div></div>
+    <div class="abs col" style="left:280px;right:280px;top:420px;align-items:center">
+      <div class="nota" data-s="1" style="--r:-1deg">…le revisa el celular a su novia o novio <b>«porque la quiere»</b>.</div>
+      <div class="nota" data-s="2" style="--r:1deg">…dejó de ver a sus amigos <b>porque su pareja se enoja</b>.</div>
+      <div class="nota" data-s="3" style="--r:-.6deg">…vive en una casa donde hay días en que <b>todos hablan bajito</b>.</div>
+    </div>
+    <aside class="notes">«Conocen a alguien»: así nadie se expone. Quien facilita levanta la mano primero. Después de la tercera: «Pueden abrir los ojos. Si levantaste la mano, no estás solo: es más común de lo que parece». (ENDIREH 2021: en Zacatecas, 69 de cada 100 mujeres de 15 a 24 años ya vivieron algún tipo de violencia.)</aside>
+  </section>
+
+  <!-- 5 · ¿AMOR O CONTROL? -->
+  <section class="slide dorado" id="s-control" data-steps="12" data-fx="polvo">
+    <div class="fondo foco" style="background-image:url(img/jardin_tarde.jpg)"></div>
+    <div class="peg" style="left:5%;bottom:4%;height:50%;--d:.3s"><img src="img/p_diego14b_hoja_04.png"></div>
+    <div class="peg" style="left:21%;bottom:4%;height:48%;--d:.45s;--fa:-1.2s"><img src="img/p_fer_hoja_05.png"></div>
+    <div class="abs" style="left:110px;top:70px"><div class="tira" style="font-size:84px;--r:-2deg">¿Amor o control?</div></div>
+    <div class="abs pill" style="left:1500px;top:90px" id="cuenta5">1 / 6</div>
+    <div class="abs" style="left:110px;top:240px"><div class="nota" style="--r:1deg;font-size:36px;padding:22px 32px"><b class="verde">DE PIE</b> = amor<br><b class="rojo">SENTADOS</b> = control</div></div>
+    <div class="tarjeta"><div class="nota" id="frase5" style="--r:-1deg"></div>
+      <div class="nota" id="porque5" style="--r:1deg;font-size:32px;margin-top:34px;opacity:0;transition:opacity .4s"></div></div>
+    <div class="sello" id="sello5" style="left:1180px;top:770px"></div>
+    <aside class="notes">Un clic muestra la frase y todos votan con el cuerpo: de pie = amor, sentados = control. Otro clic da la respuesta. Son CAPCIOSAS a propósito: la 2 y la 4 parecen frías y son amor; la 1, la 3 y la 5 parecen cariño y son control. Si el salón se divide, pregunta por qué a uno de cada lado antes de revelarla. La idea: el control casi nunca se ve feo, se ve como cariño. No se discute la vida de nadie: solo la frase.</aside>
+  </section>
+
+  <!-- 6 · CARTA AL NIÑO O LA NIÑA DE DEBAJO DE LA MESA -->
+  <section class="slide foquito" id="s-carta" data-steps="2" data-fx="nada" data-musica=".35">
+    <div class="fondo" style="background-image:url(img/bajo_mesa.jpg)"></div>
+    <div class="peg" style="left:16%;bottom:6%;height:52%;--d:.4s"><img src="img/p_duo_mesa_hoja_02.png"></div>
+    <div class="abs" style="left:0;right:0;top:60px;text-align:center"><div class="tira" style="font-size:76px;--r:-1.5deg">Una carta para alguien de 8 años</div></div>
+    <div class="abs" style="left:1000px;top:290px;width:800px"><div class="nota" data-s="1" style="--r:1.5deg;font-size:38px">Hay niños y niñas que se esconden <b>debajo de la mesa</b> cuando en su casa empieza la tormenta.<br><br>Escríbele a uno de ellos. ¿Qué le dirías?<br><span class="peque">Nadie la va a leer: es tuya.</span></div></div>
+    <div class="abs reloj" id="reloj" data-s="2" style="left:1240px;top:800px">3:00</div>
+    <aside class="notes">3 minutos con una canción de cuna bajita (se enciende sola; M la apaga). El reloj arranca en el segundo clic. No se recogen. Para quien fue ese niño o esa niña, escribirle le sirve: es hablarle a su propio yo de 8 años sin decirlo en voz alta.</aside>
+  </section>
+
+  <!-- 7 · PREGUNTAS PARA PENSAR -->
+  <section class="slide noche" id="s-personajes" data-steps="3" data-fx="estrellas">
+    <div class="fondo" style="background-image:url(img/patio_noche.jpg)"></div>
+    <div class="peg" style="left:58%;bottom:5%;height:58%;--d:.3s"><img src="img/p_abrazo_hoja_00.png"></div>
+    <div class="abs col" style="left:90px;top:90px;width:900px;gap:40px">
+      <div class="tira" data-s="1" style="font-size:56px;--r:-1.5deg">¿Por qué alguien que lastima<br>promete «no vuelve a pasar»?</div>
+      <div class="tira" data-s="2" style="font-size:56px;--r:1deg">¿Por qué es tan difícil<br>salir de una relación así?</div>
+      <div class="tira" data-s="3" style="font-size:56px;--r:-1deg">Si creciste viendo violencia,<br><span class="guinda">¿estás condenado a repetirla?</span></div>
+    </div>
+    <aside class="notes">Se habla en general («alguien», «una pareja»), nunca de la vida de nadie del salón. 1: casi siempre el perdón es sincero en el momento, y por eso engancha. 2: miedo, culpa, esperanza de que cambie, «es que lo quiero», no tener a dónde ir. 3: NO. Lo que viste en casa es un riesgo, no un destino; lo que rompe la rueda es darse cuenta, decirlo y pedir ayuda.</aside>
+  </section>
+
+  <!-- 11 · LA RUEDA (CNDH: círculo o espiral de la violencia) -->
+  <section class="slide noche" id="s-rueda" data-steps="5" data-fx="estrellas">
+    <div class="fondo foco" style="background-image:url(img/feria_noche.jpg)"></div>
+    <div class="rueda" id="rueda11" data-rueda="4" data-v="5" data-fases="1" style="left:1010px;top:150px;width:760px;height:760px"></div>
+    <div class="abs" style="left:90px;top:70px"><div class="tira" style="font-size:80px;--r:-1.5deg">Así gira la rueda</div></div>
+    <div class="fase" id="fase11"></div>
+    <aside class="notes">Una fase por clic. Pide un ejemplo de cada fase al salón (en el noviazgo y en una casa): TENSIÓN = silencios, celos, «¿con quién estabas?», todos caminan de puntitas; EXPLOSIÓN = gritos, golpes, romper cosas; ARREPENTIMIENTO = «perdóname, no vuelve a pasar», «es que me provocaste»; LUNA DE MIEL = flores, regalos, salir a pasear. Último clic: «Cada vuelta, más rápida y más fuerte». Fuente: CNDH («círculo o espiral de la violencia») y Poder Judicial de Jalisco.</aside>
+  </section>
+
+  <!-- 12 · EL VIOLENTÓMETRO -->
+  <section class="slide" id="s-violento" data-steps="6" data-fx="polvo">
+    <div class="fondo foco kb2" style="background-image:url(img/corredor_secu.jpg)"></div>
+    <div class="abs" style="left:90px;top:60px"><div class="tira" style="font-size:76px;--r:-1.5deg">El violentómetro</div></div>
+    <div class="vm" style="left:840px;top:180px;height:820px"></div>
+    <div class="vmn" data-s="1" style="left:1030px;top:740px"><div class="nota" style="--r:-1deg;border-left:18px solid var(--amarillo)"><b>¡Ten cuidado! ¡La violencia aumentará!</b><br><span class="peque">bromas que lastiman · chantaje · ley del hielo · celos · revisar el cel · controlar con quién sales</span></div></div>
+    <div class="vmn" data-s="2" style="left:1030px;top:460px"><div class="nota" style="--r:1deg;border-left:18px solid var(--naranja)"><b>¡Reacciona! ¡No te dejes destruir!</b><br><span class="peque">golpear «jugando» · empujar · jalonear · cachetear · patear · encerrar · romper tus cosas</span></div></div>
+    <div class="vmn" data-s="3" style="left:1030px;top:200px"><div class="nota" style="--r:-.8deg;border-left:18px solid var(--rojo)"><b>¡Necesitas ayuda profesional!</b><br><span class="peque">amenazar con objetos o armas · amenazar de muerte · forzar a tener relaciones sexuales · abuso sexual · violación</span></div></div>
+    <div class="chip" data-s="4" style="right:1095px;top:810px"><div class="pill">te revisa el cel «porque te quiere»</div><div class="flecha" style="position:static;width:50px"></div></div>
+    <div class="chip" data-s="5" style="right:1095px;top:520px"><div class="pill">golpea la pared o rompe tus cosas</div><div class="flecha" style="position:static;width:50px"></div></div>
+    <div class="chip" data-s="6" style="right:1095px;top:250px"><div class="pill">«si me dejas, me mato… o te mato»</div><div class="flecha" style="position:static;width:50px"></div></div>
+    <div class="abs" style="left:90px;top:960px;font-size:22px;color:#f4eedf;text-shadow:0 2px 6px #000">Violentómetro: Unidad Politécnica de Gestión con Perspectiva de Género, IPN (2009)</div>
+    <aside class="notes">Abajo empieza «chiquito» y por eso no se ve. Lo amarillo NO es «normal»: es donde la rueda empieza a girar. Son los tres niveles del violentómetro del IPN: amarillo, naranja y rojo. En los últimos clics, un ejemplo por nivel: revisar el cel (amarillo), golpear la pared junto a ti (naranja: intimidar es violencia aunque no te toque), amenazar con matarse o matarte (rojo: ayuda profesional ya, 911).</aside>
+  </section>
+
+  <!-- 13 · LA FRASE DEL TALLER -->
+  <section class="slide dorado" id="s-frase" data-steps="2" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/cocina_manana.jpg)"></div>
+    <div class="peg flota" style="left:84%;top:58%;height:16%;--d:.4s;--r:-8deg"><img src="img/p_utileria_casa_05.png"></div>
+    <div class="abs" style="left:60px;right:60px;top:170px;text-align:center"><div class="tira" style="font-size:92px;--r:-1.5deg">SI YA TE LO PROMETIÓ DOS VECES,<br><span class="rojo">YA ESTÁS EN LA RUEDA.</span></div></div>
+    <div class="abs" style="left:0;right:0;top:600px;text-align:center"><div class="nota" data-s="1" style="--r:1deg;font-size:44px;display:inline-block">Y si <b>tú</b> ya lo prometiste dos veces…<br><b class="guinda">tú la estás girando.</b></div></div>
+    <div class="abs" style="left:0;right:0;top:880px;text-align:center"><div class="tira sin" data-s="2" style="font-size:46px;--r:-1deg;font-style:italic">No escuches lo que promete: mira lo que hace.</div></div>
+    <aside class="notes">Conecta con el chat del principio: la segunda promesa es la señal. Pide que alguien la repita con sus propias palabras. La segunda línea es para los que podrían estar girándola: decirlo no es acusar, es darles una salida.</aside>
+  </section>
+
+  <!-- 14 · CÓMO ME DOY CUENTA -->
+  <section class="slide" id="s-senales" data-steps="5" data-fx="polvo">
+    <div class="fondo kb2" style="background-image:url(img/casa_fer.jpg)"></div>
+    <div class="peg" style="left:4%;bottom:4%;height:56%;--d:.3s"><img src="img/p_fer_hoja_03.png"></div>
+    <div class="abs" style="left:600px;top:60px"><div class="tira" style="font-size:72px;--r:1.5deg">¿Cómo me doy cuenta si estoy dentro?</div></div>
+    <div class="abs col" style="left:640px;top:230px;gap:22px">
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:36px"><b class="rojo">1</b> · Te revisa el cel o te pide tus contraseñas</div>
+      <div class="nota" data-s="2" style="--r:.8deg;font-size:36px"><b class="rojo">2</b> · Decide con quién te juntas o cómo te vistes</div>
+      <div class="nota" data-s="3" style="--r:-.5deg;font-size:36px"><b class="rojo">3</b> · Te cela y te dice que <b>es amor</b></div>
+      <div class="nota" data-s="4" style="--r:1deg;font-size:36px"><b class="rojo">4</b> · Te da miedo <b>cómo se va a poner</b></div>
+      <div class="nota" data-s="5" style="--r:-1deg;font-size:36px"><b class="rojo">5</b> · Pide perdón con regalos… <b>y vuelve a pasar</b></div>
+    </div>
+    <aside class="notes">Una por clic. Al terminar: «Si caminas de puntitas, no es amor». Vale para novios, para amigos y para la casa. No aceptar la segunda promesa es bajarse a tiempo.</aside>
+  </section>
+
+  <!-- 15 · SI EL QUE GIRA LA RUEDA ERES TÚ -->
+  <section class="slide" id="s-girar" data-steps="5" data-fx="polvo">
+    <div class="fondo" style="background-image:url(img/orientacion.jpg)"></div>
+    <div class="peg" style="left:70%;bottom:4%;height:58%;--d:.3s"><img src="img/p_diego14b_hoja_03.png"></div>
+    <div class="abs" style="left:90px;top:60px"><div class="tira" style="font-size:72px;--r:-1.5deg">Si el que gira la rueda eres tú</div></div>
+    <div class="abs col" style="left:110px;top:230px;gap:22px;width:1150px">
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:36px">Conoce tus señales: calor en la cara, puños, pecho apretado</div>
+      <div class="nota" data-s="2" style="--r:.8deg;font-size:36px">Sal antes de explotar: <b>«ahorita regreso»</b> (y regresa ya en calma)</div>
+      <div class="nota" data-s="3" style="--r:-.5deg;font-size:36px">Nunca a la pared, nunca a la persona</div>
+      <div class="nota" data-s="4" style="--r:1deg;font-size:36px">Dilo y pide ayuda: <b>orientación</b>, un adulto de confianza</div>
+      <div class="nota" data-s="5" style="--r:-1deg;font-size:36px"><b class="guinda">Lo que viste en tu casa no es tu destino.</b></div>
+    </div>
+    <aside class="notes">Para los chicos sobre todo, sin señalar a nadie. Pedir ayuda por el propio enojo es de valientes: tocar la puerta de orientación es una salida real. Programas como Fourth R (alumnos de 14-15 años) bajaron la violencia en el noviazgo, sobre todo en chicos.</aside>
+  </section>
+
+  <!-- 16 · SI VES QUE ALGUIEN ESTÁ EN LA RUEDA -->
+  <section class="slide dorado" id="s-testigo" data-steps="5" data-fx="polvo">
+    <div class="fondo kb2" style="background-image:url(img/feria_atardecer.jpg)"></div>
+    <div class="peg" style="left:4%;bottom:4%;height:48%;--d:.3s"><img src="img/p_gente_hoja_02.png"></div>
+    <div class="peg" style="left:18%;bottom:4%;height:50%;--d:.45s;--fa:-1s"><img src="img/p_fer_hoja_05.png"></div>
+    <div class="abs" style="left:580px;top:60px"><div class="tira" style="font-size:68px;--r:1.5deg">Si ves que alguien está en la rueda</div></div>
+    <div class="abs col" style="left:640px;top:220px;gap:22px">
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:36px">No te burles ni lo difundas</div>
+      <div class="nota" data-s="2" style="--r:.8deg;font-size:36px">Acércate: <b>«¿Estás bien?»</b></div>
+      <div class="nota" data-s="3" style="--r:-.5deg;font-size:36px">Escucha sin juzgar ni regañar</div>
+      <div class="nota" data-s="4" style="--r:1deg;font-size:36px">Acompáñale con un adulto de confianza</div>
+      <div class="nota" data-s="5" style="--r:-1deg;font-size:40px"><b class="guinda">No es chisme: es cuidar.</b></div>
+    </div>
+    <aside class="notes">Los amigos son el primer lugar al que se pide ayuda (ENVINOV 2007: 1 de cada 3 jóvenes con violencia en el noviazgo se lo contó primero a un amigo). Por eso cada uno de ellos puede ser quien detenga una rueda.</aside>
+  </section>
+
+  <!-- 17 · A QUIÉN ACUDIR -->
+  <section class="slide dorado" id="s-acudir" data-steps="6" data-fx="polvo">
+    <div class="fondo foco" style="background-image:url(img/calle_amanecer.jpg)"></div>
+    <div class="abs" style="left:120px;top:60px"><div class="tira" style="font-size:80px;--r:-1.5deg">A quién acudir</div></div>
+    <div class="abs col" style="left:140px;top:230px;gap:20px;width:1180px">
+      <div class="nota" data-s="1" style="--r:-1deg;font-size:36px">Orientación de tu escuela</div>
+      <div class="nota" data-s="2" style="--r:.8deg;font-size:36px">Instituto Municipal de las Mujeres de Jalpa · DIF municipal</div>
+      <div class="nota" data-s="3" style="--r:-.6deg;font-size:36px"><b>079</b>, opción 1 · Línea de las Mujeres · gratis, 24 horas</div>
+      <div class="nota" data-s="4" style="--r:1deg;font-size:36px"><b>Línea de la Vida 800 911 2000</b> · gratis, 24 horas</div>
+      <div class="nota" data-s="5" style="--r:-1deg;font-size:36px">Secretaría de las Mujeres de Zacatecas · <b>492 924 0892</b></div>
+      <div class="nota" data-s="6" style="--r:1deg;font-size:36px"><b class="rojo">911</b> · si alguien está en peligro ahora</div>
+    </div>
+    <div class="peg" style="left:79%;bottom:4%;height:48%;--d:.35s"><img src="img/p_lupe_b_hoja_01.png"></div>
+    <div class="peg" style="left:72%;bottom:4%;height:34%;--d:.5s;--fa:-.8s"><img src="img/p_xime9_hoja_02.png"></div>
+    <aside class="notes">Pon el teléfono del Instituto Municipal de las Mujeres de Jalpa (no está publicado en línea). Ten la ruta de canalización de la escuela a la mano. Números verificados el 21-oct-2026: 079 opción 1 (Línea de las Mujeres, federal), Línea de la Vida 800 911 2000, SEMUJER Zacatecas 492 924 0892 (L-V 8:30-16:00; guardia 492 173 8314).</aside>
+  </section>
+
+  <!-- 18 · CIERRE -->
+  <section class="slide noche" id="s-cierre" data-steps="7" data-fx="nada">
+    <div class="fondo foco" id="cierre1" style="background-image:url(img/cocina_noche.jpg)"></div>
+    <div class="fondo kb2 dorado" id="cierre2" style="background-image:url(img/feria_alta_atardecer.jpg);opacity:0"></div>
+    <div class="cel" id="cel18" style="left:700px;top:100px;--r:-3deg;transform:rotate(-3deg);transition:opacity .8s"></div>
+    <div class="abs" id="mismo" style="left:1250px;top:330px;opacity:0;transition:opacity .6s"><div class="tira" style="font-size:62px;--r:2deg">Mismo mensaje.<br><span class="guinda">Ahora ya sabes leerlo.</span></div></div>
+    <div class="peg dorado" id="diegofin" style="left:36%;bottom:4%;height:66%;display:none"><img src="img/p_gondolas_hoja_03.png"></div>
+    <div class="abs" id="final" style="left:0;right:0;top:70px;text-align:center;opacity:0;transition:opacity 1.2s">
+      <div class="tira" style="font-size:84px;--r:-1.5deg">La rueda no se para sola.</div><br>
+      <div class="tira sin" style="font-size:56px;margin-top:26px;--r:1deg;font-style:italic">Alguien se tiene que bajar.</div>
+    </div>
+    <aside class="notes">Regresa al mensaje del principio: ahora se ve toda la conversación. Un clic por señal. Luego «Mismo mensaje. Ahora ya sabes leerlo». Último clic: dos hermanos arriba de la rueda, al atardecer. Baja la voz y deja la imagen en pantalla. Cierra con: «Que con ustedes no vuelva a pasar».</aside>
+  </section>
+
+  <canvas id="fx" width="1920" height="1080"></canvas>
+  <div class="vineta"></div><div class="grano"></div>
+  <div id="bar"></div>
+  <div id="hint">→ avanzar · ← regresar · F pantalla completa · N notas · M sonido</div>
+  <div id="notes"><h4>NOTAS PARA QUIEN FACILITA</h4><div id="notestxt"></div></div>
+</div>
+
+<audio id="musica" src="audio/musica_cuna.mp3" loop preload="auto"></audio>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const stage=$('#stage');
+const ruta=n=>(window.IMG&&window.IMG[n])||'img/'+n;     // empaquetar.py llena window.IMG con los cuadros que se cambian por código
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${k})`}
+addEventListener('resize',fit);fit();
+
+/* ---------- el chat: «No vuelve a pasar» (el mismo mensaje abre y cierra el taller) ---------- */
+const FLOR=`<img src="${ruta('p_utileria_casa_06.png')}">`;
+const CHAT_CORTO=[['dia','HOY'],['el',FLOR+'Perdóname. No vuelve a pasar ❤️','9:47 p. m.',0]];
+const CHAT_TODO=[['dia','VIERNES'],['el','¿Dónde estás? Mándame foto','6:12 p. m.',1,'te vigila'],['yo','En casa de Ana, haciendo la tarea','6:20 p. m.'],
+  ['el','¿Y por qué tardaste 8 minutos en contestar?','6:20 p. m.',2,'celos'],['el','Si me quisieras no le hablarías a ese','6:21 p. m.',3,'chantaje'],
+  ['el','Perdóname. No vuelve a pasar ❤️','11:02 p. m.',4,'1.ª vez'],['dia','HOY'],['el',FLOR+'Perdóname. No vuelve a pasar ❤️','9:47 p. m.',5,'2.ª vez = la rueda']];
+function chat(el,msgs){
+  el.innerHTML=`<div class="pan"><div class="bar"><div class="av"></div><div><b>Mi amor ❤️</b><span>en línea</span></div></div><div class="hilo">${
+    msgs.map(([k,t,h,s,et])=>k==='dia'?`<div class="dia">${t}</div>`:
+      `<div class="m ${k}" data-sig="${s||0}">${t}<i class="h">${h}</i><i class="marca"></i>${et?`<i class="n-marca">${et}</i>`:''}</div>`).join('')
+  }</div><div class="caja">Mensaje</div><div class="env"></div></div>`}
+chat($('#cel1'),CHAT_CORTO);chat($('#cel18'),CHAT_TODO);
+function marcar(cel,n){$$('.m',cel).forEach(m=>m.classList.toggle('mk',+m.dataset.sig>0&&+m.dataset.sig<=n))}
+
+/* ---------- ¿amor o control? ---------- */
+const FRASES=[      // a propósito capciosas: lo que parece amor a veces es control, y al revés (21-oct, pedido del usuario)
+ {t:'Te escribe <b>«buenos días, mi amor»</b> todos los días… y se pone triste si no le contestas rápido.',k:'control',w:'El detalle es bonito. Lo que pesa es la cuenta: si tienes que contestar rápido <b>para que no se ponga mal</b>, ya te está controlando.'},
+ {t:'Se enoja, te dice <b>«necesito un rato»</b>, se va… y al otro día te busca para hablarlo.',k:'amor',w:'Parece frío, pero es sano: <b>se calmó antes de hablar</b> y no te dejó con la ley del hielo.'},
+ {t:'Te dice que tus amigas <b>te tienen envidia</b> y que nadie te entiende como él o ella.',k:'control',w:'Suena a cuidarte, pero te va <b>dejando sin amigos</b>: así empieza el aislamiento.'},
+ {t:'No quiere ir contigo a la fiesta, pero te dice <b>«ve tú y diviértete»</b>.',k:'amor',w:'Parece que no le importas. En realidad <b>respeta que tengas tu vida</b> sin vigilarte.'},
+ {t:'Te pide que no subas esa foto porque <b>«se te ve mucho»</b>… y te lo pide bonito, con cariño.',k:'control',w:'Aunque lo pida con cariño, <b>está decidiendo sobre tu cuerpo</b> y tu forma de vestir.'},
+ {t:'Nunca te ha gritado ni pegado, pero cuando se enoja <b>deja de hablarte días</b>, hasta que tú le pides perdón.',k:'control',w:'La ley del hielo también es violencia: <b>te castiga con su silencio</b> y te hace sentir culpable.'}];
+
+/* ---------- la rueda de la fortuna (la pieza de Flow gira; las góndolas cuelgan derechas) ---------- */
+const FASES=[
+ {e:'TENSIÓN',c:'#f2c230',t:'Se pone de malas, silencios, celos, «¿con quién estabas?». <b>Todos caminan de puntitas.</b>'},
+ {e:'EXPLOSIÓN',c:'#c8322a',t:'Gritos, insultos, empujones, golpes, romper cosas, <b>el golpe a la pared</b>.'},
+ {e:'ARREPENTIMIENTO',c:'#7a1f2b',t:'«Perdóname», <b>«no vuelve a pasar»</b>, «es que tú me provocaste».'},
+ {e:'LUNA DE MIEL',c:'#2f8a4a',t:'Flores, regalos, la feria: <b>todo bonito</b>… hasta que vuelve a subir la tensión.'}];
+const GON=['00','01','02','03','05','06'];   // góndolas vacías de utileria_feria (04 = las patas en A)
+const ruedas=$$('[data-rueda]').map(el=>{
+  const n=+el.dataset.rueda,w=el.offsetWidth||parseInt(el.style.width);
+  el.innerHTML=`<img class="patas" src="${ruta('p_utileria_feria_04.png')}"><img class="aro" src="${ruta('p_rueda_00.png')}">`;
+  const g=[];for(let k=0;k<n;k++){const d=document.createElement('div');d.className='gon';d.style.height=(w*(n<=4?.20:.15))+'px';
+    d.innerHTML=`<img src="${ruta('p_utileria_feria_'+GON[k%GON.length]+'.png')}">`+(el.dataset.fases?`<span class="et" style="color:${FASES[k].c}">${FASES[k].e}</span>`:'');el.appendChild(d);g.push(d)}
+  return {el,g,n,w,a:0,v:+el.dataset.v||6,vObj:+el.dataset.v||6}});
+let tPrev=0;
+(function gira(t){const dt=Math.min(.05,(t-tPrev)/1000);tPrev=t;
+  for(const R of ruedas){if(!R.el.closest('.slide.active'))continue;R.v+=(R.vObj-R.v)*Math.min(1,dt*1.5);R.a+=R.v*dt;
+    R.el.querySelector('.aro').style.transform=`rotate(${R.a}deg)`;const r=R.w*.44,c=R.w/2;
+    R.g.forEach((d,k)=>{const ang=(R.a+360*k/R.n-90)*Math.PI/180,x=c+r*Math.cos(ang),y=c+r*Math.sin(ang),gw=d.offsetWidth||R.w*.15;
+      d.style.left=(x-gw/2)+'px';d.style.top=y+'px';d.style.transform=`rotate(${2.5*Math.sin(t/700+k)}deg)`})}
+  requestAnimationFrame(gira)})(0);
+function fase(k){const R=ruedas.find(R=>R.el.id==='rueda11'),f=$('#fase11');
+  R.g.forEach((d,i)=>{d.classList.toggle('apaga',k>0&&k<=4&&i!==k-1);d.classList.toggle('luz',k>0&&k<=4&&i===k-1)});
+  R.vObj=k>=5?28:5;
+  if(k===0){f.innerHTML='';return}
+  if(k>=5){f.innerHTML=`<div class="nota" style="--r:-1deg;font-size:44px"><b>Cada vuelta,<br><span class="rojo">más rápida y más fuerte.</span></b><br><span class="peque">Con el tiempo el «perdón» se acorta… y la tormenta crece.</span></div>`;return}
+  const F=FASES[k-1];f.innerHTML=`<h3 style="color:${F.c};text-shadow:0 3px 0 #f4eedf,0 6px 14px rgba(0,0,0,.6)">${k} · ${F.e}</h3><div class="nota" style="--r:${k%2?-1:1}deg">${F.t}</div>`}
+
+/* ---------- Diego caminando (el mismo ciclo del corto) ---------- */
+let walkT=null;
+function camina(el,dur=11000){const img=el.firstChild;let i=0;clearInterval(walkT);el.style.transition='none';el.style.left='-20%';void el.offsetWidth;
+  el.style.transition=`left ${dur}ms linear`;el.style.left='112%';walkT=setInterval(()=>{i=(i+1)%8;img.src=ruta(`c_diego14_camina_0${i}.png`)},115)}
+
+/* ---------- partículas: polvo y estrellas ---------- */
+const cv=$('#fx'),cx=cv.getContext('2d');let FX='nada';
+const P=Array.from({length:80},()=>({x:Math.random()*1920,y:Math.random()*1080,r:1+Math.random()*3,v:.12+Math.random()*.4,a:.1+Math.random()*.3,p:Math.random()*6}));
+const E=Array.from({length:120},()=>({x:Math.random()*1920,y:Math.random()*330,r:.8+Math.random()*1.8,p:Math.random()*6,w:.6+Math.random()*1.6}));
+(function loop(t){cx.clearRect(0,0,1920,1080);
+ if(FX==='polvo'){cx.fillStyle='#fff6dd';for(const d of P){d.y-=d.v;d.x+=Math.sin(t/1800+d.p)*.3;if(d.y<-10){d.y=1090;d.x=Math.random()*1920}
+   cx.globalAlpha=d.a*(.6+.4*Math.sin(t/900+d.p));cx.beginPath();cx.arc(d.x,d.y,d.r,0,7);cx.fill()}}
+ if(FX==='estrellas'){cx.fillStyle='#e8efff';for(const s of E){cx.globalAlpha=.25+.6*Math.pow(.5+.5*Math.sin(t/600*s.w+s.p),2);cx.beginPath();cx.arc(s.x,s.y,s.r,0,7);cx.fill()}}
+ cx.globalAlpha=1;requestAnimationFrame(loop)})(0);
+
+/* ---------- sonido ---------- */
+let AC=null,muted=false;
+function ac(){if(muted)return null;if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)()}catch(e){return null}}if(AC.state==='suspended')AC.resume();return AC}
+function tone(f0,f1,dur,type='sine',vol=.18,delay=0){const a=ac();if(!a)return;const t=a.currentTime+delay,o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(Math.max(f1,1),t+dur);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g).connect(a.destination);o.start(t);o.stop(t+dur+.05)}
+function noise(dur,vol=.15,f=900,delay=0,q=1){const a=ac();if(!a)return;const t=a.currentTime+delay,b=a.createBuffer(1,a.sampleRate*dur,a.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);const s=a.createBufferSource(),g=a.createGain(),fl=a.createBiquadFilter();fl.type='bandpass';fl.Q.value=q;fl.frequency.setValueAtTime(f,t);s.buffer=b;g.gain.value=vol;s.connect(fl).connect(g).connect(a.destination);s.start(t)}
+const S={papel:()=>noise(.16,.22,2400,0,.7),pop:()=>tone(520,880,.12,'triangle',.14),whoosh:()=>noise(.4,.12,600),
+ thud:()=>{tone(120,40,.4,'sine',.45);noise(.1,.18,200)},chime:()=>{[523,659,784,1047].forEach((f,i)=>tone(f,f,.9,'sine',.10,i*.09))},
+ vibra:()=>{for(let i=0;i<2;i++)tone(150,150,.38,'square',.05,i*.55)},sello:()=>{tone(90,40,.25,'sine',.5);noise(.08,.25,300)},
+ bien:()=>{tone(660,660,.12,'triangle',.14);tone(990,990,.3,'triangle',.14,.11)},mal:()=>tone(220,110,.35,'sawtooth',.10),
+ msg:()=>{tone(880,880,.08,'sine',.12);tone(1320,1320,.12,'sine',.10,.09)}};
+const mus=$('#musica');
+let musT=null;
+function musica(vol){clearInterval(musT);vol=muted?0:(+vol||0);   // la canción de cuna sigue entre láminas y solo cambia de volumen
+  if(vol>0&&mus.paused){mus.volume=0;mus.play().catch(()=>{})}
+  musT=setInterval(()=>{const v=mus.volume,d=vol-v;if(Math.abs(d)<.015){mus.volume=vol;if(vol===0)mus.pause();clearInterval(musT);return}mus.volume=Math.max(0,Math.min(1,v+Math.sign(d)*.012))},100)}
+
+/* ---------- motor ---------- */
+const slides=$$('.slide');let cur=0,step=0,timers=[],reloj=null;
+const later=(f,ms)=>timers.push(setTimeout(f,ms));
+const hooks={
+ 's-mensaje':(s,f)=>{const c=$('#cel1');if(s===0&&f){c.style.opacity=0;later(()=>{c.style.transition='opacity .5s';c.style.opacity=1;c.classList.remove('vibra');void c.offsetWidth;c.classList.add('vibra');S.vibra();later(S.msg,700)},900)}else c.style.opacity=1;if(s===1&&f)S.papel()},
+ 's-titulo':(s,f)=>{if(f){later(S.papel,300);later(S.chime,900)}},
+ 's-preguntas':(s,f)=>{if(s===0)camina($('#camina3'));if(f&&s>0)S.papel()},
+ 's-ojos':(s,f)=>{$('#s-ojos').classList.toggle('cierra',true);if(f&&s>0)S.pop()},
+ 's-control':(s,f)=>{const i=Math.min(5,Math.floor(Math.max(0,s-1)/2)),rev=s>0&&(s%2===0),F=FRASES[s===0?0:i],fr=$('#frase5'),se=$('#sello5'),w=$('#porque5');
+   fr.innerHTML='<span>'+F.t+'</span>';fr.parentNode.style.opacity=s===0?0:1;$('#cuenta5').textContent=(s===0?1:i+1)+' / 6';
+   se.className='sello '+F.k+(rev?' on':'');se.textContent=F.k==='amor'?'AMOR':'CONTROL';w.innerHTML='<span>'+F.w+'</span>';w.style.opacity=rev?1:0;
+   if(f){if(rev){S.sello();(F.k==='amor'?S.bien:S.mal)()}else if(s>0)S.papel()}},
+ 's-carta':(s,f)=>{if(s===2&&f){let n=180;clearInterval(reloj);const el=$('#reloj');reloj=setInterval(()=>{n--;el.textContent=Math.floor(n/60)+':'+String(n%60).padStart(2,'0');if(n<=0){clearInterval(reloj);S.chime()}},1000)}},
+ 's-personajes':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-rueda':(s,f)=>{fase(s);if(f&&s>0&&s<5)S.pop();if(f&&s===5)S.whoosh()},
+ 's-violento':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-frase':(s,f)=>{if(f&&s===0)later(S.thud,500);if(f&&s>0)S.papel()},
+ 's-senales':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-girar':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-testigo':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-acudir':(s,f)=>{if(f&&s>0)S.papel()},
+ 's-cierre':(s,f)=>{marcar($('#cel18'),Math.min(s,5));const fin=s>=7;$('#mismo').style.opacity=s===6?1:0;$('#cel18').style.opacity=fin?0:1;
+   $('#cierre2').style.opacity=fin?1:0;$('#cierre1').style.opacity=fin?0:1;$('#diegofin').style.display=fin?'block':'none';$('#final').style.opacity=fin?1:0;
+   if(f){if(s>=1&&s<=5)S.pop();if(s===6)S.thud();if(s===7)S.chime()}}
+};
+function render(fwd,newSlide){
+  timers.forEach(clearTimeout);timers=[];
+  const sl=slides[cur];
+  if(newSlide){clearInterval(reloj);clearInterval(walkT);slides.forEach(x=>x.classList.remove('active','cierra'));void sl.offsetWidth;sl.classList.add('active');
+    FX=sl.dataset.fx||'nada';const fs=$$('.fondo',sl);fs.length?fs[fs.length-1].after(cv):sl.prepend(cv);   // partículas DETRÁS de pegatinas y papeles
+    musica(sl.dataset.musica);if(sl.id==='s-carta'){$('#reloj').textContent='3:00'}}
+  $$('[data-s]',sl).forEach(e=>e.classList.toggle('on',+e.dataset.s<=step));
+  $$('[data-hasta]',sl).forEach(e=>e.classList.toggle('fuera',step>+e.dataset.hasta));   // pose que se va al cambiar
+  const h=hooks[sl.id];if(h)h(step,fwd);
+  if(fwd&&newSlide)S.whoosh();
+  $('#bar').style.width=(100*(cur+(step/(+sl.dataset.steps+1)))/slides.length)+'%';
+  $('#notestxt').textContent=$('.notes',sl)?.textContent||'';
+  try{history.replaceState(null,'','#'+(cur+1))}catch(e){}
+}
+function next(){const n=+slides[cur].dataset.steps;if(step<n){step++;render(true,false)}else if(cur<slides.length-1){cur++;step=0;render(true,true)}}
+function prev(){if(step>0){step--;render(false,false)}else if(cur>0){cur--;step=+slides[cur].dataset.steps;render(false,true)}}
+function go(i){cur=Math.max(0,Math.min(slides.length-1,i));step=0;render(true,true)}
+addEventListener('keydown',e=>{$('#hint').style.opacity=0;
+  if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();next()}
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();prev()}
+  else if(e.key==='Home')go(0);else if(e.key==='End')go(slides.length-1)
+  else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+  else if(e.key==='n'||e.key==='N')$('#notes').classList.toggle('on')
+  else if(e.key==='m'||e.key==='M'){muted=!muted;musica(slides[cur].dataset.musica)
+    $('#hint').textContent=muted?'Sonido apagado':'Sonido encendido';$('#hint').style.opacity=1;setTimeout(()=>$('#hint').style.opacity=0,1500)}});
+addEventListener('click',e=>{$('#hint').style.opacity=0;(e.clientX<innerWidth*.25)?prev():next()});
+window.__deck={go,next,prev,set:(i,s)=>{cur=i;step=s;render(false,true)}};
+const [h0,p0]=location.hash.slice(1).split('.').map(x=>parseInt(x));cur=h0>0&&h0<=slides.length?h0-1:0;   // #diapositiva.paso
+step=p0>0?Math.min(p0,+slides[cur].dataset.steps):0;render(false,true);
+})();
+</script>
+</body>
+</html>

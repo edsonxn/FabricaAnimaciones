@@ -1,0 +1,170 @@
+{
+ "modo": "video",
+ "de": 383.836,
+ "a": 388.136,
+ "anillos": [
+  {
+   "u": 0.3,
+   "v": 0.275,
+   "r": 0.023958333333333335,
+   "color": "azul",
+   "en": 383.836,
+   "sale": 388.136
+  },
+  {
+   "u": 0.41,
+   "v": 0.63,
+   "r": 0.023958333333333335,
+   "color": "rojo",
+   "en": 385.696,
+   "sale": 388.136
+  },
+  {
+   "u": 0.25,
+   "v": 0.535,
+   "r": 0.020833333333333332,
+   "color": "azul",
+   "en": 387.316,
+   "sale": 388.136
+  },
+  {
+   "u": 0.2,
+   "v": 0.745,
+   "r": 0.019791666666666666,
+   "color": "azul",
+   "en": 387.616,
+   "sale": 388.136
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f1",
+   "pts": [
+    [
+     0.3,
+     0.275
+    ],
+    [
+     0.3631,
+     0.305
+    ],
+    [
+     0.3955,
+     0.381
+    ],
+    [
+     0.3801,
+     0.4239
+    ]
+   ],
+   "color": "azul",
+   "en": 384.356,
+   "dur": 0.7,
+   "sale": 388.136,
+   "guion": true,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.3,
+   "v": 0.275,
+   "r": 0.013177083333333336,
+   "color": "azul",
+   "en": 383.93600000000004,
+   "sale": 388.136,
+   "alto": 7
+  },
+  {
+   "u": 0.41,
+   "v": 0.63,
+   "r": 0.013177083333333336,
+   "color": "rojo",
+   "en": 385.79600000000005,
+   "sale": 388.136,
+   "alto": 7
+  },
+  {
+   "u": 0.25,
+   "v": 0.535,
+   "r": 0.011458333333333334,
+   "color": "azul",
+   "en": 387.416,
+   "sale": 388.136,
+   "alto": 7
+  },
+  {
+   "u": 0.2,
+   "v": 0.745,
+   "r": 0.010885416666666667,
+   "color": "azul",
+   "en": 387.716,
+   "sale": 388.136,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 383.986,
+   "a": 388.136,
+   "u": 0.3,
+   "v": 0.275,
+   "alto": 0,
+   "texto": "INSPIRED",
+   "sub": "XIN ZHAO",
+   "color": "azul",
+   "dx": 75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/XinZhao.png"
+  },
+  {
+   "de": 385.846,
+   "a": 388.136,
+   "u": 0.41,
+   "v": 0.63,
+   "alto": 0,
+   "texto": "MEIKO Y JIAQI",
+   "sub": null,
+   "color": "rojo",
+   "dx": 75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Lux.png"
+  },
+  {
+   "de": 387.46599999999995,
+   "a": 388.136,
+   "u": 0.25,
+   "v": 0.535,
+   "alto": 0,
+   "texto": "BERSERKER",
+   "sub": null,
+   "color": "azul",
+   "dx": -70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Lucian.png"
+  },
+  {
+   "de": 387.76599999999996,
+   "a": 388.136,
+   "u": 0.2,
+   "v": 0.745,
+   "alto": 0,
+   "texto": "ISLES",
+   "sub": null,
+   "color": "azul",
+   "dx": -68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Milio.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [],
+ "fondo": "/videos/lol_semana2/tactica3d/capas/lyig2a_fondo.jpg",
+ "_huella": "710b1bb63ce5"
+}

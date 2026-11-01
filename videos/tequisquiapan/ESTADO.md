@@ -3,6 +3,7 @@
 - canal: cronopapel · **PROGRAMADO sáb 24-oct-2026 10:00 CDMX** (https://youtu.be/OfGVLuL490w, publishAt 2026-10-24T16:00:00Z, #Shorts) · Facebook «Historias Perdidas de México» PUBLICADO 22-oct (fb 1587120085964812)
 - estilo: boceto → doc de estilo: docs/estilo_boceto_guache_mapa.md § «Variante VERTICAL con mapa (tequisquiapan)» · kit de videos/historia_aguascalientes/
 - etapa: subido (privado programado) + Facebook publicado · falta el .srt en YouTube (cuota agotada el 22-oct)
+- ✅ **PÚBLICO** desde el sáb 24-oct 10:00 CDMX · https://youtu.be/OfGVLuL490w (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: `python fab.py yt aplicar tequisquiapan cronopapel OfGVLuL490w` (sube el .srt) · cuando salga un largo de Cronopapel público, «Vídeo relacionado» del Short en Studio · a los 7 días medir y anotar en canales/formula/cronopapel.md · al aprobar: `fab.py tequisquiapan limpiar`
 
 ## Sesiones (plan de tramos · «continúa el video tequisquiapan» retoma aquí · protocolo docs/sesiones.md)

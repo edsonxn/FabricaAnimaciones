@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Núcleo de «La historia de Irán en 5 minutos»: tiempos, cámara, territorios (con fractura), actores (pegatinas de boceto),
+"""Núcleo de «La historia de Egipto en 5 minutos» (kit v2 copiado de historia_espana): tiempos, cámara, territorios (con fractura), actores (pegatinas de boceto),
 rutas sobre el mapa, sellos, rótulos manuscritos y subtítulos. La coreografía vive en `escenas.py`."""
 import math
 import types
@@ -17,7 +17,7 @@ from motor import H, W, e_back, e_in, e_inout, e_out, lerp, prog, smooth
 
 _ESC = {e["id"]: e for e in TL["escenas"]}
 TOTAL = TL["total"]
-ZREF = 1.25
+ZREF = 2.5                      # zoom de referencia (Egipto: z = 2,5 ≈ el valle del Nilo entero): ahí los dibujos geo-anclados miden s
 
 
 def T(eid, texto, **kw):
@@ -49,7 +49,8 @@ def kf(t, claves, ease=e_inout):
 # ------------------------------------------------------------------ cámara
 class CamPath:
     """Camino de cámara por claves (t, lon, lat, zoom[, rot]) con interpolación suave (PCHIP) y una deriva lenta:
-    la cámara nunca se queda quieta."""
+    la cámara nunca se queda quieta. La longitud se interpola «desenvuelta» (M.U): de Iberia a Filipinas cruza América y el Pacífico.
+    zoom = px de pantalla por px de la rejilla "eu" (vale para las dos rejillas)."""
 
     def __init__(self, claves):
         claves = sorted(claves, key=lambda c: c[0])
@@ -58,21 +59,29 @@ class CamPath:
             if ts[i] <= ts[i - 1]:
                 ts[i] = ts[i - 1] + 1e-3
         self.ts = ts
-        self.f = PchipInterpolator(ts, np.array([[c[1], c[2], math.log(c[3]), c[4] if len(c) > 4 else 0.0] for c in claves], float), axis=0)
+        self.f = PchipInterpolator(ts, np.array([[float(M.U(c[1])), c[2], math.log(c[3]), c[4] if len(c) > 4 else 0.0] for c in claves], float), axis=0)
         self.cam = M.Cam()
 
     def estado(self, t, deriva=1.0):
         v = self.f(min(max(t, self.ts[0]), self.ts[-1]))
         z = math.exp(v[2])
-        lon = v[0] + deriva * 0.22 * math.sin(t * 0.43) / z
-        lat = v[1] + deriva * 0.14 * math.sin(t * 0.31 + 1.0) / z
-        z = z * (1 + deriva * 0.010 * math.sin(t * 0.7))
-        # que la cámara nunca se salga del mapa (fuera de la rejilla no hay tierra ni mar pintados)
-        hw = (W / 2) / (z * M.KX * M.PXLAT) + 0.3
-        hh = (H / 2) / (z * M.PXLAT) + 0.3
-        lon = min(max(lon, M.LON0 + hw), M.LON1 - hw) if 2 * hw < M.LON1 - M.LON0 else (M.LON0 + M.LON1) / 2
-        lat = min(max(lat, M.LAT1 + hh), M.LAT0 - hh) if 2 * hh < M.LAT0 - M.LAT1 else (M.LAT0 + M.LAT1) / 2
-        return lon, lat, z, v[3] + deriva * 0.006 * math.sin(t * 0.37)
+        u = v[0] + deriva * 0.30 * math.sin(t * 0.43) / z
+        lat = v[1] + deriva * 0.20 * math.sin(t * 0.31 + 1.0) / z
+        z = z * (1 + deriva * 0.012 * math.sin(t * 0.7))
+        # que la cámara nunca se salga de la rejilla activa (fuera no hay tierra ni mar pintados)
+        rej = M.ACT
+        zn = z * M.PXDEG_REF / rej.pxdeg
+        hw = (W / 2) / (zn * rej.pxdeg) + 0.05
+        lo_n = float(rej.nat(float(M.desU(u))))
+        if 2 * hw < rej.lon1 - rej.lon0:
+            lo_n = min(max(lo_n, rej.lon0 + hw), rej.lon1 - hw)
+        else:
+            lo_n = (rej.lon0 + rej.lon1) / 2
+        y = float(M.ymerc(lat))
+        hh = (H / 2) / (zn * rej.pxdeg) + 0.05
+        y0, y1 = float(M.ymerc(rej.lat1)), float(M.ymerc(rej.lat0))
+        y = min(max(y, y0 + hh), y1 - hh) if 2 * hh < y1 - y0 else (y0 + y1) / 2
+        return float(M.desU(lo_n)), float(M.inv_ymerc(y)), z, v[3] + deriva * 0.006 * math.sin(t * 0.37)
 
     def cam_en(self, t, deriva=1.0):
         self.cam.fijar(*self.estado(t, deriva))
@@ -80,12 +89,12 @@ class CamPath:
 
 
 # ------------------------------------------------------------------ territorios
-BIG = 150.0
+BIG = 320                       # «lejos» (int16, 1/8 px): 40 px de la rejilla (Egipto: franjas finas del valle; con 200 px no aparecían hasta el final)
 
 
 class Territorio:
-    """Sucesión de formas y colores del imperio: claves dict(t, campo, color, dur). El campo es el nombre de un campo de M.CAMPOS
-    (o None = nada); entre claves se interpolan los campos de distancia, así el imperio crece, se encoge o se reparte sin saltos."""
+    """Sucesión de formas y colores de UNA capa: claves dict(t, campo, color, dur). El campo es el nombre de un campo de M.CAMPOS
+    (o None = nada); entre claves se interpolan los campos de distancia, así el reino crece, se encoge o se reparte sin saltos."""
 
     def __init__(self, claves):
         self.k = sorted(claves, key=lambda c: c["t"])
@@ -119,15 +128,20 @@ class Fractura:
     """Ventana en la que el territorio se parte en celdas (estados, reinos, caudillos), se separan y se vuelven a unir.
     t0→t1 se abre, t1→t2 se mantiene, t2→t3 se cierra. colores = por celda (o función (t, i) -> color)."""
 
-    def __init__(self, celdas, t0, t1, t2, t3, colores=None, gap=24.0, deriva=46.0, nervio=1.0, semilla=1):
+    def __init__(self, celdas, t0, t1, t2, t3, colores=None, gap=24.0, deriva=46.0, nervio=1.0, semilla=1, capa=0, fijas=(), rej="eu"):
         self.celdas, self.t = celdas, (t0, t1, t2, t3)
         self.colores = colores
         self.gap, self.deriva, self.nervio = gap, deriva, nervio
-        n = len(M.CELDAS[celdas])
+        self.capa, self.rej = capa, rej
+        n = len(M.CELDAS_SEMILLAS.get(celdas, M.CELDAS_PAISES.get(celdas, [])))
         rng = np.random.default_rng(semilla)
         ang = rng.uniform(0, 2 * math.pi, n)
         self.dir = np.stack([np.cos(ang), np.sin(ang)], 1)
         self.fase = rng.uniform(0, 6.28, n)
+        self.fijas = np.zeros(n, bool)
+        for i in fijas:
+            self.fijas[i] = True
+            self.dir[i] = 0.0
 
     def g(self, t):
         t0, t1, t2, t3 = self.t
@@ -153,7 +167,7 @@ from numba import njit, prange            # noqa: E402
 
 
 @njit(parallel=True, fastmath=True, cache=True)
-def _celdas_nb(img, S, idx, borde, cols, ox, oy, gap, nz, pincel, grano, alfa, sombra, amp, y0, y1, x0, x1):
+def _celdas_nb(img, S, idx, borde, cols, ox, oy, gap, nz, pincel, grano, alfa, sombra, amp, luz, kluz, y0, y1, x0, x1):
     h, w = S.shape
     K = cols.shape[0]
     for y in prange(y0, y1):
@@ -183,7 +197,7 @@ def _celdas_nb(img, S, idx, borde, cols, ox, oy, gap, nz, pincel, grano, alfa, s
             if a > 1.0:
                 a = 1.0
             a *= alfa
-            d = -s * (1.0 / 26.0)
+            d = -s * (1.0 / 60.0)
             if d < 0.0:
                 d = 0.0
             if d > 1.0:
@@ -192,7 +206,7 @@ def _celdas_nb(img, S, idx, borde, cols, ox, oy, gap, nz, pincel, grano, alfa, s
             if d < 1.0:
                 sx = x - int(ox[got])
                 sy = y - int(oy[got])
-                gx = (S[sy, sx + 1] - gap * 0.0) - S[sy, sx - 1]
+                gx = S[sy, sx + 1] - S[sy, sx - 1]
                 gy = S[sy + 1, sx] - S[sy - 1, sx]
                 gx += (-(borde[sy, sx + 1] - borde[sy, sx - 1]))
                 gy += (-(borde[sy + 1, sx] - borde[sy - 1, sx]))
@@ -203,38 +217,41 @@ def _celdas_nb(img, S, idx, borde, cols, ox, oy, gap, nz, pincel, grano, alfa, s
                     lum -= sombra * sh * band
                 else:
                     lum -= 0.10 * sh * band
-            k = lum * (1.0 + 1.2 * pincel[y, x])
+            k = lum * (1.0 + 1.2 * pincel[y, x]) * (1.0 + kluz * luz[y, x])
             for ch in range(3):
                 pig = cols[got, ch] * k * grano[y, x, ch]
                 img[y, x, ch] = img[y, x, ch] * (1.0 - a) + pig * a
 
 
-def pintar_celdas(img, cam, S_campo, fr, t, g, fase=0, colores_fin=None):
-    """Pinta el territorio partido en celdas con separación g (0..1)."""
+def pintar_celdas(img, cam, S_campo, fr, t, g, fase=0, colores_fin=None, luz=None):
+    """Pinta el territorio partido en celdas con separación g (0..1). Todo en px de pantalla. Devuelve S (pantalla)."""
     idx_f, borde_f = M.celdas(fr.celdas)
     S = cam.proyectar(S_campo)
     idx = cv2.warpAffine(idx_f, cam.M, (W, H), flags=cv2.INTER_NEAREST, borderMode=cv2.BORDER_CONSTANT, borderValue=255)
     borde = cam.proyectar(borde_f, 0.0)
-    n = len(M.CELDAS[fr.celdas])
+    n = len(fr.dir)
     cols = np.array([np.array(fr.color(t, i, None), np.float32) / 255.0 for i in range(n)], np.float32)
     if colores_fin is not None:                       # al cerrar, los colores tienden al color del imperio
         cf = np.array(colores_fin, np.float32) / 255.0
-        w = 1 - g
-        cols = cols * (1 - w * 0.0) * g + cf[None, :] * w * 1.0 + cols * (1 - g) * 0.0
+        cols = cols * g + cf[None, :] * (1 - g)
     ox = np.zeros(n, np.float32)
     oy = np.zeros(n, np.float32)
+    k = (cam.z / 2.5) ** 0.5
     for i in range(n):
+        if fr.fijas[i]:
+            continue
         j = fr.nervio * 7.0 * math.sin(t * 3.1 + fr.fase[i]) * g
-        ox[i] = (fr.dir[i, 0] * fr.deriva * g + j) * cam.z ** 0.5
-        oy[i] = (fr.dir[i, 1] * fr.deriva * g + 0.7 * j) * cam.z ** 0.5
-    r = M._roi(S, 70)
+        ox[i] = (fr.dir[i, 0] * fr.deriva * g + j) * k
+        oy[i] = (fr.dir[i, 1] * fr.deriva * g + 0.7 * j) * k
+    r = M._roi(S, 90)
     if r is None:
-        return
-    M._celdas_nb = _celdas_nb
-    _celdas_nb(img, S, idx, borde, cols, ox, oy, np.float32(fr.gap * g * cam.z ** 0.5), M.RUIDO[fase % 3], M.PINCEL, M.GRANO, np.float32(1.0),
-               np.float32(0.24), np.float32(1.5), r[0], r[1], r[2], r[3])
+        return S
+    _celdas_nb(img, S, idx, borde, cols, ox, oy, np.float32(fr.gap * g * k), M.RUIDO[fase % 3], M.PINCEL, M.GRANO, np.float32(1.0),
+               np.float32(0.24), np.float32(4.0), M._CERO if luz is None else luz, np.float32(0.0 if luz is None else 0.34), r[0], r[1], r[2], r[3])
+    return S
 
 
+# ------------------------------------------------------------------ rutas y trazos sobre el mapa
 # ------------------------------------------------------------------ rutas y trazos sobre el mapa
 def _acumular(P):
     seg = np.hypot(*np.diff(P, axis=0).T)
@@ -305,22 +322,49 @@ def linea_punteada(h, P, t, dash=30.0, hueco=22.0, ancho=5.0, seed=0, fs=0, frac
         k += 1
 
 
-def contornos_tinta(h, S, fs, semilla=0, ancho=5.0, minimo=90):
-    """Contorno de tinta (a mano alzada, que hierve) de la forma de pantalla S (negativo dentro)."""
+def contornos_tinta(h, S, fs, semilla=0, ancho=5.0, minimo=90, v=255):
+    """Contorno de tinta (a mano alzada, que hierve) de la forma de pantalla S (negativo dentro). Los tramos pegados al borde de la
+    pantalla no se dibujan (no son frontera: es solo donde termina el cuadro)."""
     m = (S[::2, ::2] < 0).astype(np.uint8)
-    if m.max() == 0:
+    if m.max() == 0 or v <= 0:
         return
+    hh, ww = m.shape
     cs, _ = cv2.findContours(m, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
     for k, c in enumerate(cs):
         if len(c) * 2 < minimo:
             continue
-        P = cv2.approxPolyDP(c, 1.3, True).reshape(-1, 2).astype(float) * 2
-        if len(P) < 4:
+        P = c.reshape(-1, 2)
+        borde = (P[:, 0] <= 1) | (P[:, 1] <= 1) | (P[:, 0] >= ww - 2) | (P[:, 1] >= hh - 2)
+        if borde.all():
             continue
-        P = np.vstack([P, P[:1]])
-        h.trazo(P, ancho, semilla + k * 13, fs, 1.0, amp=1.6)
+        if not borde.any():
+            Q = cv2.approxPolyDP(c, 1.3, True).reshape(-1, 2).astype(float) * 2
+            if len(Q) >= 4:
+                h.trazo(np.vstack([Q, Q[:1]]), ancho, semilla + k * 13, fs, 1.0, amp=1.6, v=v)
+            continue
+        # partir en tramos que no tocan el borde (empezando justo en un punto de borde)
+        i0 = int(np.argmax(borde))
+        P = np.roll(P, -i0, 0)
+        b = np.roll(borde, -i0)
+        tramos, cur = [], []
+        for p, eb in zip(P, b):
+            if eb:
+                if len(cur) > 3:
+                    tramos.append(np.array(cur))
+                cur = []
+            else:
+                cur.append(p)
+        if len(cur) > 3:
+            tramos.append(np.array(cur))
+        for j, T_ in enumerate(tramos):
+            if len(T_) * 2 < 24:
+                continue
+            Q = cv2.approxPolyDP(T_.reshape(-1, 1, 2).astype(np.int32), 1.3, False).reshape(-1, 2).astype(float) * 2
+            if len(Q) >= 2:
+                h.trazo(Q, ancho, semilla + k * 13 + j, fs, 1.0, amp=1.6, v=v)
 
 
+# ------------------------------------------------------------------ texto, sellos
 # ------------------------------------------------------------------ texto, sellos
 def _mascara_texto(txt, px=64):
     """Como B.mascara_texto, pero con margen superior para que no se corte la tilde de las mayúsculas (Á, Í, Ó…)."""
@@ -349,7 +393,7 @@ def rotulo(h, txt, x, y, px, u, fs, v=255, tv=0.0, peg=True, inclinar=0.0):
     h.pegar_mascara(m, xx, yy, cols=cols, v=v)
 
 
-_FUENTE_CJK = "C:/Windows/Fonts/msyhbd.ttc"   # sellos con un kanji
+_FUENTE_CJK = "C:/Windows/Fonts/georgiab.ttf"   # letras de sello (los emblemas dibujados están en sellos.py)
 
 
 @lru_cache(maxsize=64)

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Hoja de contacto de una escena con tiempos LOCALES (s desde el inicio de la escena):
-    python videos/ia_noir/_prueba.py sala 0.2 1.2 2.4        -> previews/p_sala.jpg (3 columnas, 360x640) + previews/p_sala_<u>.png (completo)
-    python videos/ia_noir/_prueba.py sala 2.9..3.4:0.1       -> rango u0..u1 con paso (cuadros consecutivos a 1/3 de tamaño)
+    python videos/sociedad_1200/_prueba.py sala 0.2 1.2 2.4        -> previews/p_sala.jpg (3 columnas, 360x640) + previews/p_sala_<u>.png (completo)
+    python videos/sociedad_1200/_prueba.py sala 2.9..3.4:0.1       -> rango u0..u1 con paso (cuadros consecutivos a 1/3 de tamaño)
     opciones: --solo-hoja (no guarda los PNG completos)  --cols 6"""
 import json
 import os

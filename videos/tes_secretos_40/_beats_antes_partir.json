@@ -1,0 +1,970 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.422,
+  "tipo": "video",
+  "texto": "@ericmarticorena3842 nos dejó este comentario. Que en tantos años de jugar, no sabía que se podía mejorar un amuleto de Talos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.422,
+  "t1": 17.234,
+  "tipo": "video",
+  "texto": "Y ese es justo el problema de Skyrim. Llevas años jugándolo, y te sigue escondiendo cosas. Una cárcel donde peleabas por tu libertad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.234,
+  "t1": 24.861,
+  "tipo": "video",
+  "texto": "Un vendedor de Riften con pasado de novela. Y una sopa de cinco monedas que te da doce minutos de ataques poderosos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 24.861,
+  "t1": 34.112,
+  "tipo": "video",
+  "texto": "Hoy te traigo cuarenta secretos, todos comprobados, y con sus fuentes en la descripción. Y quédate hasta el final, porque el número uno es sobre alguien en quien confías.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.112,
+  "t1": 40.975,
+  "tipo": "video",
+  "texto": "Y a lo mejor no deberías. Número cuarenta. La poción del arquero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 40.975,
+  "t1": 49.631,
+  "tipo": "video",
+  "texto": "La poción de Reforzar arquería dice que mejora los arcos. Pero por un error, sube el daño de todas las armas, y hasta el de los puños.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 49.631,
+  "t1": 59.097,
+  "tipo": "video",
+  "texto": "Y en una letrina del Fuerte Dunstad hay una de estas pociones, al lado del retrete. Es un chiste de los desarrolladores sobre apuntar bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.097,
+  "t1": 70.248,
+  "tipo": "video",
+  "texto": "En el treinta y nueve, las vacas del más allá. En el Recordatorio de las Almas hay un alma haciendo de granjero. Labra una parcela con catorce cascarones plantados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.248,
+  "t1": 77.763,
+  "tipo": "video",
+  "texto": "Y a su lado pastan dos almas de vaca. Nadie explica qué hacen ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.763,
+  "t1": 84.442,
+  "tipo": "video",
+  "texto": "Número treinta y ocho. Tu raza decide lo rápido que corres. La velocidad depende de la altura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.442,
+  "t1": 94.3,
+  "tipo": "video",
+  "texto": "Los altos elfos son los más rápidos, y las bretonas y las khajiit, las más lentas. Probablemente sea por las animaciones. Sin este ajuste,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.3,
+  "t1": 102.166,
+  "tipo": "video",
+  "texto": "algunos parecerían hacer el moonwalk. En el treinta y siete, Castlevania.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 102.166,
+  "t1": 109.759,
+  "tipo": "video",
+  "texto": "En el Castillo de Volkihar hay una vitrina con una garra, un ojo, un corazón, una caja torácica y un anillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.759,
+  "t1": 122.194,
+  "tipo": "video",
+  "texto": "Son las partes de Drácula que Simon Belmont reúne en Castlevania dos. En la casa de los vampiros. Muy fino. Número treinta y seis. Los guardias te leen la mochila.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 122.194,
+  "t1": 129.367,
+  "tipo": "video",
+  "texto": "Con la Estrella de Azura basta con cargarla, y el guardia te lo comenta. Con el Anillo de Namira se quejan de tu aliento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.367,
+  "t1": 137.564,
+  "tipo": "video",
+  "texto": "Y si eres hombre lobo, te notan pelo en las orejas y olor a perro mojado. En el treinta y cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.564,
+  "t1": 145.486,
+  "tipo": "video",
+  "texto": "el mamut congelado. Al oeste de Saarthal, sin marcador en el mapa, hay un mamut atrapado en un bloque de hielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.486,
+  "t1": 155.097,
+  "tipo": "video",
+  "texto": "Lleva clavadas cinco flechas enanas y un virote de balista dwemer. Alguien lo estaba cazando. ¿Quién? El juego no lo dice.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.097,
+  "t1": 163.326,
+  "tipo": "video",
+  "texto": "Número treinta y cuatro. Rezar a Arkay te puede matar. Cuando se acaba un efecto de Reforzar salud, el juego te deja con un punto de vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.326,
+  "t1": 171.682,
+  "tipo": "video",
+  "texto": "La Bendición de Arkay no. Son veinticinco de salud durante ocho horas. Y si te quedan menos de veinticinco cuando termina, mueres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.682,
+  "t1": 180.781,
+  "tipo": "video",
+  "texto": "El dios de la muerte, cobrando al contado. En el treinta y tres, el gigante que pudo ser tu aliado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.781,
+  "t1": 187.655,
+  "tipo": "video",
+  "texto": "Se cortó una misión con un gigante, Goldar. Tu trabajo era llevarle una vaca pintada como ofrenda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 187.655,
+  "t1": 197.763,
+  "tipo": "video",
+  "texto": "Al terminar, todos los gigantes del mundo serían tus aliados. Y Goldar llama a las vacas fabricantes de leche débil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.763,
+  "t1": 207.927,
+  "tipo": "video",
+  "texto": "Número treinta y dos. La turista de Markarth. Tu primera escena en Markarth es un atentado contra Margret, una mujer que compra un colgante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.927,
+  "t1": 215.187,
+  "tipo": "video",
+  "texto": "Si la salvas y la convences en la posada, confiesa que es agente del general Tullius. Si tardas, muere delante de ti,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.187,
+  "t1": 222.486,
+  "tipo": "video",
+  "texto": "y solo te queda su diario. En el treinta y uno, la sopa de verduras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.486,
+  "t1": 233.675,
+  "tipo": "video",
+  "texto": "Con un solo punto de aguante ya puedes lanzar un ataque poderoso. Y el daño no depende del aguante que te quede. La sopa de verduras te devuelve un punto por segundo durante doce minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 233.675,
+  "t1": 240.239,
+  "tipo": "video",
+  "texto": "O sea, nunca llegas a cero, y encadenas ataques sin parar. Por cinco monedas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.239,
+  "t1": 248.391,
+  "tipo": "video",
+  "texto": "Antes de seguir. @Senpai.13 nos dijo que el video le pareció muy genial, y que no hiciéramos caso a los comentarios pedorros. Gracias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.391,
+  "t1": 260.536,
+  "tipo": "video",
+  "texto": "Número treinta. Hacerte vampiro te cambia de raza. Para el juego, un vampiro es otra raza distinta. Si eres nórdico y te conviertes, Bolund, en Falkreath, te habla como a un extranjero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 260.536,
+  "t1": 267.066,
+  "tipo": "video",
+  "texto": "Y Galathil, la que te cambia la cara, se niega. Dice que solo trabaja con los vivos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.066,
+  "t1": 276.386,
+  "tipo": "video",
+  "texto": "En el veintinueve, un error nuestro. En el video de las armas dijimos que todos los martillos de guerra tienen velocidad cero coma seis. Y no es verdad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.386,
+  "t1": 286.648,
+  "tipo": "video",
+  "texto": "En el Retiro del Mentiroso, un cadáver sujeta el Martillo largo. Velocidad cero coma ocho. A herrería máxima, hace más daño por segundo que Volendrung.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 286.648,
+  "t1": 293.048,
+  "tipo": "video",
+  "texto": "Y ya que corregimos. @stazmadness3910 nos dijo que Clarividencia le sirve en las mazmorras dwemer,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.048,
+  "t1": 303.033,
+  "tipo": "video",
+  "texto": "porque la brújula no dice por dónde caminar. Razón no le falta. Número veintiocho. El hombre que sigue esperando un barco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 303.033,
+  "t1": 310.473,
+  "tipo": "video",
+  "texto": "En la costa de Hibernalia hay un campamento vacío, y una nota. Trius le escribe a Shelly que su barco debió llegar hace semanas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.473,
+  "t1": 320.43,
+  "tipo": "video",
+  "texto": "y que acampó ahí para verla pasar. Él no aparece nunca. Y justo al norte, bajo el agua, están los pecios de la Zanja del Peregrino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.43,
+  "t1": 328.143,
+  "tipo": "video",
+  "texto": "En el veintisiete, tu seguidor es mejor ladrón que tú. Si le mandas abrir una cerradura y acepta, lo consigue siempre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 328.143,
+  "t1": 339.097,
+  "tipo": "video",
+  "texto": "por difícil que sea, y sin gastar ganzúas. Y lleva escondidos un arco de caza y doce flechas de hierro que no salen en su inventario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 339.097,
+  "t1": 344.755,
+  "tipo": "video",
+  "texto": "Número veintiséis. La maga de la corte de Soledad. Sybille Stentor dice haber",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.755,
+  "t1": 351.965,
+  "tipo": "video",
+  "texto": "visto ir y venir a varios jarls, y sigue joven. Detectar vida no la marca. Detectar muerte, sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.965,
+  "t1": 376.43,
+  "tipo": "video",
+  "texto": "El verdugo cuenta que a veces baja a la cárcel a por voluntarios. Y ella misma te encarga limpiar un nido de vampiros. Una pausa, que nos han descubierto. @jhonfeddiszabalamoreno9056 nos escribió que se nota que kyrim no es lo nuestro. Y tiene toda la razón. De kyrim no sabemos nada. Nosotros solo hablamos de Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 376.43,
+  "t1": 388.306,
+  "tipo": "video",
+  "texto": "En el veinticinco, la nave de los rieklings. En Solstheim, los rieklings acampan alrededor de una nave volcada, con el interior boca abajo y cubierto de pinturas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 388.306,
+  "t1": 397.579,
+  "tipo": "video",
+  "texto": "En Bloodmoon, la expansión de Morrowind, ya había un dirigible estrellado en esa isla. Todo indica que es el mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 397.579,
+  "t1": 402.067,
+  "tipo": "video",
+  "texto": "Número veinticuatro. La semana libre que creó las expansiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 402.067,
+  "t1": 412.611,
+  "tipo": "video",
+  "texto": "En dos mil once, Bethesda dio a sus desarrolladores una semana para crear lo que quisieran. De ahí salieron los rieklings, Arvak, el Señor de los vampiros, la adopción,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 412.611,
+  "t1": 422.28,
+  "tipo": "video",
+  "texto": "y construir tu casa. Y se quedó fuera un mayordomo esqueleto. Que yo habría contratado. En el veintitrés, la capilla que aparece sola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 422.28,
+  "t1": 427.987,
+  "tipo": "video",
+  "texto": "Cerca del Viejo Hroldan está el campamento donde murieron Karan y Talvur mientras se fugaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 427.987,
+  "t1": 440.43,
+  "tipo": "video",
+  "texto": "Algún tiempo después de descubrirlo, el campamento desaparece, y en su sitio hay una capilla de Mara, con el diario de Karan al lado. El mundo cambia solo, y casi nadie vuelve para verlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 440.43,
+  "t1": 445.597,
+  "tipo": "video",
+  "texto": "Número veintidós. El Pergamino Antiguo esconde nuestras estrellas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 445.597,
+  "t1": 455.952,
+  "tipo": "video",
+  "texto": "Su fondo no es inventado. Es un mapa estelar real del polo sur de la Tierra, con Escorpio y la Cruz del Sur. Y leerlo te borra todos tus efectos activos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 455.952,
+  "t1": 465.762,
+  "tipo": "video",
+  "texto": "Si tenías el sol apagado con el Arco de Auriel, el sol vuelve. En el veintiuno, desde Skyrim se ve Morrowind.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 465.762,
+  "t1": 473.042,
+  "tipo": "video",
+  "texto": "Desde la azotea del Archimago, en el Colegio de Hibernalia, más allá de la frontera este, se ve Morrowind.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 473.042,
+  "t1": 480.43,
+  "tipo": "video",
+  "texto": "Y al sur, en un día despejado y a mucha altura, se alcanza a ver la Torre Blanca y Dorada de Cyrodiil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 480.43,
+  "t1": 489.789,
+  "tipo": "video",
+  "texto": "Otra pausa. @AnormalProject nos dijo que a veces la música no encaja con lo que se narra, pero que fuera de eso, excelente. Apuntado, y gracias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 489.789,
+  "t1": 498.008,
+  "tipo": "video",
+  "texto": "Número veinte. Neloth ya era un cretino en Morrowind. Es el mismo personaje, maestro de la Casa Telvanni.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 498.008,
+  "t1": 505.073,
+  "tipo": "video",
+  "texto": "Allí le gustaba secuestrar a las hijas de los consejeros Redoran, y una misión te mandaba matarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 505.073,
+  "t1": 516.32,
+  "tipo": "video",
+  "texto": "Sobrevivió. Y hoy te dice con desdén que eres muy joven para acordarte del Nerevarino. En el diecinueve, el capitán que no se quedó muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 516.32,
+  "t1": 525.004,
+  "tipo": "video",
+  "texto": "En el Fuerte Polilla Helada está Falx Cario, un personaje de Bloodmoon que murió hace unos doscientos años, por los escombros de la Montaña Roja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 525.004,
+  "t1": 533.751,
+  "tipo": "video",
+  "texto": "Ildari lo reanimó con un corazón de piedra. Y tras muchas semanas, se levantó, conservó su voluntad, e intentó matarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 533.751,
+  "t1": 542.613,
+  "tipo": "video",
+  "texto": "Número dieciocho. El local de skooma que es una granja de sangre. La Guarida de Aguas Rojas, cerca de Riften, parece una casucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 542.613,
+  "t1": 551.551,
+  "tipo": "video",
+  "texto": "Bajo una trampilla, hay un local donde te venden skooma. Si bebes la muestra gratis, despiertas encerrado en una sala llena de vampiros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 551.551,
+  "t1": 559.193,
+  "tipo": "video",
+  "texto": "Todo el negocio es una tapadera. En el diecisiete, los cuatro aprendices que nadie buscó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 559.193,
+  "t1": 567.251,
+  "tipo": "video",
+  "texto": "Phinis Gestor menciona a cuatro aprendices desaparecidos. Y sus cadáveres existen, repartidos por la comarca de Hibernalia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 567.251,
+  "t1": 576.488,
+  "tipo": "video",
+  "texto": "Yisra está calcinada en la playa, y las llamas todavía queman a quien las pisa. Rundi yace entre runas de escarcha. Borvir, con tres flechas en la espalda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 576.488,
+  "t1": 586.908,
+  "tipo": "video",
+  "texto": "E Ilas-Tei aparece rodeado de skeevers muertos, con un pergamino de Furia al lado. La misión se cortó. Si le llevas sus objetos a Phinis, no pasa nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 586.908,
+  "t1": 591.681,
+  "tipo": "video",
+  "texto": "Número dieciséis. El héroe del libro es el jefe que mataste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 591.681,
+  "t1": 600.651,
+  "tipo": "video",
+  "texto": "Sangre inmortal es un libro que ya estaba en Oblivion. Movarth Piquine caza vampiros por toda Tamriel, con los consejos de un sacerdote.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 600.651,
+  "t1": 611.097,
+  "tipo": "video",
+  "texto": "Al final, el sacerdote acerca la vela a su cara. El sacerdote era el vampiro. Y el señor vampiro de la cueva de Morthal es ese mismo Movarth.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 611.097,
+  "t1": 619.686,
+  "tipo": "video",
+  "texto": "En el quince, la arena de Ventalia. Ventalia iba a tener una arena con su propia cárcel. Si te encerraban, peleabas ante el público,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 619.686,
+  "t1": 629.272,
+  "tipo": "video",
+  "texto": "y si ganabas, salías libre. Se cortó, pero el recinto sigue en los archivos. Un edificio sin entrada, rodeado de espectadores mudos que debían vitorear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 629.272,
+  "t1": 636.728,
+  "tipo": "video",
+  "texto": "Nunca les programaron cómo. Número catorce. El gran maestro tiene ficha de novato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 636.728,
+  "t1": 644.674,
+  "tipo": "video",
+  "texto": "En los datos del juego, Paarthurnax es nivel diez, con novecientos cinco de salud. Lo mismo que el dragón más básico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 644.674,
+  "t1": 653.763,
+  "tipo": "video",
+  "texto": "Y en inglés lo interpreta Charles Martinet, la voz de Super Mario. Acuérdate de este dragón, porque va a volver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 653.763,
+  "t1": 663.03,
+  "tipo": "video",
+  "texto": "En el trece, los libros que nadie lee. En el Valle Olvidado hay cuatro libros en alfabeto falmer. Urag gro-Shub te paga mil monedas por cada uno,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 663.03,
+  "t1": 671.325,
+  "tipo": "video",
+  "texto": "y te da una copia traducida. Cuentan los últimos días de los elfos de las nieves. Y el Diario de Mirtil Angoth acaba con él ilusionado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 671.325,
+  "t1": 678.823,
+  "tipo": "video",
+  "texto": "cuando su pueblo decide pedir ayuda a los dwemer. Ya sabes cómo acabó eso. Número doce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 678.823,
+  "t1": 687.453,
+  "tipo": "video",
+  "texto": "Nunca absorbiste el alma de Alduin. Al matarlo no absorbes su alma. Si vuelves a Alto Hrothgar, Arngeir te explica que Alduin es único,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 687.453,
+  "t1": 696.619,
+  "tipo": "video",
+  "texto": "y que quizá se le permita volver al final de los tiempos. O sea, quizá no lo mataste. Quizá solo lo aplazaste. Felicidades por salvar el mundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 696.619,
+  "t1": 704.354,
+  "tipo": "video",
+  "texto": "de momento. En el once, el cura de Falkreath. Runil, el anciano sacerdote,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 704.354,
+  "t1": 715.686,
+  "tipo": "video",
+  "texto": "admite que muchos murieron por sus manos y su magia en la Gran Guerra. En su diario anota un sueño. Una sombra enorme, un rugido, y un desconocido que se le acerca durante un funeral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 715.686,
+  "t1": 720.43,
+  "tipo": "video",
+  "texto": "Y todo apunta a que ese desconocido eres tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 720.43,
+  "t1": 730.339,
+  "tipo": "video",
+  "texto": "Y aquí, dos más. @OFSUAREZL nos dijo, tremendo video, sigue así. Y a @daybengamers8298 le encantan estos videos. Gracias, de verdad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 730.339,
+  "t1": 739.485,
+  "tipo": "video",
+  "texto": "Número diez. El pozo de la Hueste de Forel. Las tropas de Skorm Caminante de la Nieve tiraron la puerta, y encontraron a todo el culto muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 739.485,
+  "t1": 747.829,
+  "tipo": "video",
+  "texto": "Pero habían dejado cubos ya llenos, junto a un pozo envenenado. Al día siguiente, cuarenta soldados bebieron antes de que pudieran pararlos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 747.829,
+  "t1": 755.66,
+  "tipo": "video",
+  "texto": "Y ese pozo es justo el que tú tienes que bajar. En el nueve, el faro que se tragó a una familia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 755.66,
+  "t1": 765.392,
+  "tipo": "video",
+  "texto": "Una familia redguard compró el Faro del Flujo Helado. Y los falmer abrieron un agujero en el sótano. Nadie te lo cuenta. Encuentras a Ramati muerta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 765.392,
+  "t1": 774.835,
+  "tipo": "video",
+  "texto": "la cena en el suelo, y bajo una cama, una mochila con una carta de Mani a su hermana. Y los restos del padre están dentro del segador de chaurus más grande del lugar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 774.835,
+  "t1": 799.462,
+  "tipo": "video",
+  "texto": "Si los subes al brasero del faro, lo dejas descansar. Y esta va con cariño. @lukelsue4430 nos dijo que no somos dignos de Skyrim, y que no entendimos nada. Lo aceptamos. Seguimos esperando a que nos llamen los Barbas Grises. Mientras tanto, te contamos ocho secretos más. Número ocho. Los Barbas Grises nacieron de una humillación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 799.462,
+  "t1": 809.411,
+  "tipo": "video",
+  "texto": "La orden existe porque los nórdicos perdieron en la Montaña Roja. Jurgen Llamador del Viento meditó siete años, y concluyó que la Voz se había usado con arrogancia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 809.411,
+  "t1": 817.776,
+  "tipo": "video",
+  "texto": "Cuando lo dijo, diecisiete lo atacaron a la vez. Y se dice que él se tragó sus gritos durante tres días, hasta que cayeron agotados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 817.776,
+  "t1": 824.43,
+  "tipo": "video",
+  "texto": "Está grabado en las tablillas de Alto Hrothgar. Las que tienes delante, y nunca lees.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 824.43,
+  "t1": 832.721,
+  "tipo": "video",
+  "texto": "En el siete, lo que dicen los archivos thalmor. En su informe sobre Esbern reconocen que no entienden la vuelta de los dragones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 832.721,
+  "t1": 843.57,
+  "tipo": "video",
+  "texto": "Y que el viejito paranoico de la Ratonera nunca fue un simple archivero. Al funcionario que lo descartó por viejo, lo mandaron a Alinor a ser reeducado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 843.57,
+  "t1": 872.43,
+  "tipo": "video",
+  "texto": "Y el informe de Delphine dice que esquivó tres atentados, y que en uno mató a todo el equipo de asesinos. Antes de los últimos seis, un dato. De cada cien que ven este canal, catorce están suscritos. Los otros ochenta y seis entran, se llevan todo y se van, como en cualquier casa de Skyrim. Queremos llegar a siete mil. Si llevas treinta y cuatro secretos aguantando, suscribirte es lo menos que puedes hacer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 872.43,
+  "t1": 882.805,
+  "tipo": "video",
+  "texto": "Número seis. Ulfric cree que entregó la Ciudad Imperial. Los thalmor lo capturaron en la Gran Guerra, y le hicieron creer que lo que confesó fue clave para tomar la ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 882.805,
+  "t1": 890.522,
+  "tipo": "video",
+  "texto": "La ciudad ya había caído. Luego lo dejaron escapar. Su informe dice que quieren la guerra civil estancada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 890.522,
+  "t1": 896.202,
+  "tipo": "video",
+  "texto": "Y el que presume de libertad, en sus papeles, figura como un recurso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 896.202,
+  "t1": 908.762,
+  "tipo": "video",
+  "texto": "En el cinco, y aquí voy a hablar en serio. Erik el Asesino existió. El granjero de Paraje de Rorik que sueña con ser aventurero está inspirado en Erik West, un fan de The Elder Scrolls.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 908.762,
+  "t1": 916.946,
+  "tipo": "video",
+  "texto": "Le diagnosticaron un sarcoma de Ewing en dos mil nueve. Make-A-Wish lo llevó a Bethesda, y crearon un personaje con su nombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 916.946,
+  "t1": 921.897,
+  "tipo": "video",
+  "texto": "Murió el once de mayo de dos mil once, seis meses antes de que saliera Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 921.897,
+  "t1": 931.327,
+  "tipo": "video",
+  "texto": "Cada vez que convences a su padre de dejarlo marchar, le das a ese chico la aventura que quería. Número cuatro. El vendedor de Riften.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 931.327,
+  "t1": 941.418,
+  "tipo": "video",
+  "texto": "Brand-Shei es un elfo oscuro con nombre argoniano, porque lo adoptó una familia de la Ciénaga Negra. En el naufragio del Orgullo de Tel Vos hay un diario de su padre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 941.418,
+  "t1": 947.88,
+  "tipo": "video",
+  "texto": "Lymdrenn Tenvanni, escrito en un sótano durante la invasión argoniana. Lo llama su único heredero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 947.88,
+  "t1": 957.763,
+  "tipo": "video",
+  "texto": "O sea, lo criaron los del pueblo que arrasó su casa. Y en el Gremio de Ladrones, tú le metes un anillo en el bolsillo para mandarlo a la cárcel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 957.763,
+  "t1": 967.045,
+  "tipo": "video",
+  "texto": "En el tres, el ataúd del carro. En Oblivion, la Madre Noche estaba en una cripta bajo una estatua de Bravil. Según el diario de Cicerón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 967.045,
+  "t1": 977.6,
+  "tipo": "video",
+  "texto": "la estatua quedó destruida. Asaltaron la cripta, la Oyente Alisanne Dupre murió quemada viva, y Garnag huyó malherido con el ataúd hasta Cheydinhal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 977.6,
+  "t1": 984.43,
+  "tipo": "video",
+  "texto": "Es el mismo ataúd del carro con la rueda rota. Trece años huyendo de la caída de la Hermandad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 984.43,
+  "t1": 992.479,
+  "tipo": "video",
+  "texto": "Número dos. Cicerón no nació loco. Sus diarios empiezan con un asesino cuerdo y metódico. Lo nombran Guardián de la Madre Noche,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 992.479,
+  "t1": 1000.335,
+  "tipo": "video",
+  "texto": "y le conceden un último trabajo. Matar a un bufón. Escribe cómo se rio y se rio, hasta que dejó de reír.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 1000.335,
+  "t1": 1008.721,
+  "tipo": "video",
+  "texto": "Lava el cadáver de la Madre Noche cada semana. Ella nunca le habla. Y meses después, empieza a oír la risa de aquel bufón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 1008.721,
+  "t1": 1018.901,
+  "tipo": "video",
+  "texto": "Acaba escribiendo que el alma del bufón entró en él, y que Cicerón el hombre ha muerto. El bufón que te hace tanta gracia es su última víctima.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 1018.901,
+  "t1": 1029.088,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. @Knox8386 nos escribió que tras muchísimos años de jugar, se fijó en el lore. Y que Paarthurnax, como dragón, también es un villano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 1029.088,
+  "t1": 1035.648,
+  "tipo": "video",
+  "texto": "Lo comprobamos. Su nombre se separa en tres palabras del idioma de los dragones. Paar, Thur, Nax.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 1035.648,
+  "t1": 1044.707,
+  "tipo": "video",
+  "texto": "Ambición, Señor supremo, Crueldad. Según las Cuchillas, fue la mano derecha de Alduin, con atrocidades que se recuerdan miles de años después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 1044.707,
+  "t1": 1052.404,
+  "tipo": "video",
+  "texto": "Y lo cazaron durante siglos. Y lo más fuerte lo dice él. Que hacen bien en no fiarse. Que los dragones se crearon para dominar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 1052.404,
+  "t1": 1061.575,
+  "tipo": "video",
+  "texto": "Y que no pasa un día sin sentir la tentación de volver a su naturaleza. Por eso es el número uno. Los demás secretos están escondidos en libros y en cuevas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1061.575,
+  "t1": 1069.646,
+  "tipo": "video",
+  "texto": "Este te lo dijo a la cara, en la cima del mundo. Y tú le diste las gracias. Esa es mi lista. Cuarenta secretos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1069.646,
+  "t1": 1078.187,
+  "tipo": "video",
+  "texto": "de una poción mal programada, al dragón en el que confiaste. Y antes de irnos. @franciscobarqueromunoz1218 nos dio las gracias por el video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1078.187,
+  "t1": 1087.916,
+  "tipo": "video",
+  "texto": "Gracias a ti. Leemos todos los comentarios, los que nos felicitan y los que nos corrigen, y los tenemos en cuenta para mejorar. Y ahora te toca a ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1087.916,
+  "t1": 1103.3333,
+  "tipo": "video",
+  "texto": "¿Cuántos de estos cuarenta sabías? Si tienes uno mejor, déjalo en los comentarios. Y si este video te sirvió, suscríbete. Vamos por los siete mil, y prometemos no entrar a tu casa sin permiso.",
+  "clip_s": 8
+ }
+]

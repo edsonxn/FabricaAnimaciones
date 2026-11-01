@@ -1,0 +1,160 @@
+{
+ "modo": "video",
+ "de": 589.78,
+ "a": 597.527,
+ "anillos": [
+  {
+   "u": 0.175,
+   "v": 0.56,
+   "r": 0.023958333333333335,
+   "color": "azul",
+   "en": 591.48,
+   "sale": 597.527
+  },
+  {
+   "u": 0.43,
+   "v": 0.57,
+   "r": 0.023958333333333335,
+   "color": "rojo",
+   "en": 591.78,
+   "sale": 597.527
+  },
+  {
+   "u": 0.43,
+   "v": 0.39,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 592.08,
+   "sale": 597.527
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f6",
+   "pts": [
+    [
+     0.95,
+     0.7
+    ],
+    [
+     0.8,
+     0.66
+    ],
+    [
+     0.62,
+     0.6
+    ]
+   ],
+   "color": "rojo",
+   "en": 596.42,
+   "dur": 0.7,
+   "sale": 597.527,
+   "guion": true,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.175,
+   "v": 0.56,
+   "r": 0.013177083333333336,
+   "color": "azul",
+   "en": 591.58,
+   "sale": 597.527,
+   "alto": 7
+  },
+  {
+   "u": 0.43,
+   "v": 0.57,
+   "r": 0.013177083333333336,
+   "color": "rojo",
+   "en": 591.88,
+   "sale": 597.527,
+   "alto": 7
+  },
+  {
+   "u": 0.43,
+   "v": 0.39,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 592.1800000000001,
+   "sale": 597.527,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 591.63,
+   "a": 597.527,
+   "u": 0.175,
+   "v": 0.56,
+   "alto": 0,
+   "texto": "DOGGO",
+   "sub": "Y KINO",
+   "color": "azul",
+   "dx": 75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/cfo_kc_jugadas/iconos/Caitlyn.png"
+  },
+  {
+   "de": 591.93,
+   "a": 597.527,
+   "u": 0.43,
+   "v": 0.57,
+   "alto": 0,
+   "texto": "BUSIO",
+   "sub": "SE ADELANTA",
+   "color": "rojo",
+   "dx": 75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/cfo_kc_jugadas/iconos/Lulu.png"
+  },
+  {
+   "de": 592.23,
+   "a": 597.527,
+   "u": 0.43,
+   "v": 0.39,
+   "alto": 0,
+   "texto": "KYEAHOO",
+   "sub": null,
+   "color": "rojo",
+   "dx": 70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/cfo_kc_jugadas/iconos/Viktor.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 589.98,
+   "a": 597.527,
+   "k": 0.35
+  }
+ ],
+ "carteles": [
+  {
+   "de": 593.96,
+   "a": 597.527,
+   "texto": "CFO: +4,8K",
+   "sub": null,
+   "color": "amarillo",
+   "y": 294.0,
+   "tam": 36
+  },
+  {
+   "de": 596.42,
+   "a": 597.527,
+   "texto": "CANNA LLEGA",
+   "sub": "POR LA RETAGUARDIA",
+   "color": "amarillo",
+   "y": 639.6,
+   "tam": 36
+  }
+ ],
+ "fondo": "/videos/cfo_kc_jugadas/tactica3d/capas/j7a_fondo.jpg",
+ "_huella": "ebf9aae71369"
+}

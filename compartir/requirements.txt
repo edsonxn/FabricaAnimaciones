@@ -1,0 +1,22 @@
+# Fábrica de Animaciones — Python 3.10 (64 bits). Instalación: ver LEEME.md
+# PyTorch con CUDA va aparte y PRIMERO (GPU NVIDIA):
+#   pip install torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+numpy
+scipy
+pillow
+opencv-python
+soundfile
+librosa
+pyloudnorm
+numba
+rapidfuzz
+psutil
+requests
+faster-whisper
+transformers
+speechbrain
+edge-tts
+rembg
+transparent-background
+playwright
+yt-dlp

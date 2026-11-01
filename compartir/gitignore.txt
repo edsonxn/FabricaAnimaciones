@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------- TUYO (nunca se sube ni lo pisa un git pull)
+# Tus canales, tus videos y tu diario: este repo solo trae el motor y los estilos.
+canales/*
+!canales/LEEME.md
+!canales/plantilla_canal.json.ejemplo
+videos/*
+!videos/_plantilla/
+!videos/_plantilla_secuencia/
+!videos/_plantilla_yt/
+BITACORA.md
+docs/mis_reglas.md
+CLAUDE.local.md
+.env
+
+# ---------------------------------------------------------------- pesados / regenerables
+*.mp4
+*.wav
+*.mp3
+proyecto/
+modelos/
+previews/
+ejemplos/*/voz/
+ejemplos/*/audio/
+ejemplos/*/segmentos/
+ejemplos/*/salida/
+ejemplos/*/previews/
+ejemplos/*/clips/
+ejemplos/*/medios*/
+ejemplos/*/imagenes/
+
+# ---------------------------------------------------------------- Python / sistema / panel
+__pycache__/
+*.pyc
+Thumbs.db
+desktop.ini
+panel_avisos/
+panel_config.json
+panel_remoto.json
+panel_remoto*.log
+panel_salida.log
+panel_log*.txt
+voz_gpu.lock
+nucleo/datos/uso_panel/
+.claude/worktrees/
+.claude/settings.local.json

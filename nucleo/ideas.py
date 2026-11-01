@@ -284,7 +284,7 @@ def main():
     if not pos:
         return lista()
     alias = pos[0]
-    if alias not in es.alias_conocidos():
+    if alias not in es.alias_conocidos(con_suspendidos=True):     # pedido a mano, un canal suspendido también vale
         sys.exit(f"Canal desconocido '{alias}'. Opciones: {', '.join(es.alias_conocidos())}")
     dias = int(a[a.index("--dias") + 1]) if "--dias" in a else None
     ruta = os.path.join(IDEAS, alias + ".json")

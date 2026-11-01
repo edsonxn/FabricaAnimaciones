@@ -1,0 +1,746 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.188,
+  "tipo": "video",
+  "texto": "Durante veintiséis años, dentro de cada cartucho de Banjo-Tooie, hubo un modo de juego completo que nadie podía jugar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.188,
+  "t1": 19.606,
+  "tipo": "video",
+  "texto": "Un fantasma con cuernos que se mete dentro de los enemigos, para que tu amigo te persiga con ellos. Programado, probado a medias, y escondido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.606,
+  "t1": 28.334,
+  "tipo": "video",
+  "texto": "Y el treinta de octubre, por fin, se va a poder jugar de forma oficial. Pero no es el único secreto que se guardó este juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 28.334,
+  "t1": 37.824,
+  "tipo": "video",
+  "texto": "Banjo-Tooie es la secuela que mató a un personaje en la primera escena, que escondió cartuchos vivos, y que dejó una promesa sin cumplir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 37.824,
+  "t1": 50.43,
+  "tipo": "video",
+  "texto": "Así que hoy te cuento cómo se hizo, la historia más oscura que Rare le dio a un oso y a un pájaro, y los diez secretos de Banjo-Tooie que seguramente ignoraste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 50.43,
+  "t1": 55.41,
+  "tipo": "video",
+  "texto": "A finales de los noventa, el estudio británico Rare era la joya de Nintendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 55.41,
+  "t1": 67.445,
+  "tipo": "video",
+  "texto": "Había hecho Donkey Kong Country, GoldenEye, y en mil novecientos noventa y ocho, Banjo-Kazooie. Un oso con pantalones cortos y una pájara gruñona que vive en su mochila,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 67.445,
+  "t1": 75.461,
+  "tipo": "video",
+  "texto": "contra una bruja que habla siempre en verso. El juego fue un éxito, y terminaba con una amenaza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 75.461,
+  "t1": 85.581,
+  "tipo": "video",
+  "texto": "Gruntilda, aplastada bajo una roca, gritaba que volvería en Banjo-Tooie. Y no era la única pista. Si conseguías los cien Jiggies,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 85.581,
+  "t1": 95.077,
+  "tipo": "video",
+  "texto": "Mumbo te enseñaba fotos de objetos escondidos que no se podían alcanzar. Huevos de colores y una llave de hielo, guardados para la secuela.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 95.077,
+  "t1": 107.93,
+  "tipo": "video",
+  "texto": "Hasta el nombre era un chiste. Tooie suena a two, que en inglés es dos, y rima con Kazooie. La secuela tuvo nombre antes de tener juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 107.93,
+  "t1": 114.29,
+  "tipo": "video",
+  "texto": "El equipo empezó a trabajar en junio de mil novecientos noventa y ocho, justo cuando salía el primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 114.29,
+  "t1": 124.627,
+  "tipo": "video",
+  "texto": "Al frente del diseño estaba Gregg Mayles, con su hermano Steve en los personajes, Chris Sutherland en la programación, y Grant Kirkhope otra vez en la música.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 124.627,
+  "t1": 136.187,
+  "tipo": "video",
+  "texto": "Y tenían una obsesión inesperada. Chris Sutherland contó que cuatro o cinco del equipo jugaban GoldenEye a la hora de la comida, todos los días, durante un par de años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 136.187,
+  "t1": 146.625,
+  "tipo": "video",
+  "texto": "Eso se nota. En Banjo-Tooie puedes agarrar a Kazooie del cuello y disparar huevos en primera persona, como si fuera una ametralladora con plumas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 146.625,
+  "t1": 156.236,
+  "tipo": "video",
+  "texto": "La otra gran idea era separar al dúo, cada uno con sus movimientos, en mundos el doble de grandes que los del primero y conectados entre sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 156.236,
+  "t1": 165.096,
+  "tipo": "video",
+  "texto": "Grant Kirkhope tuvo el doble de memoria para la música, y mezclaba dos pistas a la vez para que cambiara sin cortes de una zona a otra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 165.096,
+  "t1": 174.496,
+  "tipo": "video",
+  "texto": "La idea de Rare era sacarlo a finales de mil novecientos noventa y nueve. No llegó. Salió en Norteamérica el veinte de noviembre del dos mil,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 174.496,
+  "t1": 183.656,
+  "tipo": "video",
+  "texto": "con un nueve punto seis en GameSpot y el premio al mejor juego de plataformas del año. Y una curiosidad reciente. En diciembre de dos mil veinticinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 183.656,
+  "t1": 193.256,
+  "tipo": "video",
+  "texto": "Gregg Mayles publicó el fax con el que Nintendo Japón aprobó el juego, con una nota que decía splendid game y un pulgar arriba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 193.256,
+  "t1": 202.93,
+  "tipo": "video",
+  "texto": "Internet se lo creyó. Era Miyamoto aplaudiendo a Banjo-Tooie. Hasta que Mayles confesó que esa nota la había escrito él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 202.93,
+  "t1": 212.885,
+  "tipo": "video",
+  "texto": "Ahora, la historia. Y aquí Rare hizo algo que nadie esperaba de un juego con un oso de peluche en la portada. Han pasado dos años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 212.885,
+  "t1": 225.136,
+  "tipo": "video",
+  "texto": "Es de noche, hay tormenta, y Banjo, Kazooie, Mumbo y Bottles, el topo que les enseñaba los movimientos, juegan al póker. Kazooie hace trampa todo el rato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 225.136,
+  "t1": 234.536,
+  "tipo": "video",
+  "texto": "Mientras tanto, las hermanas de Gruntilda, Mingella y Blobbelda, llegan en una perforadora gigante, la Hag 1, y rompen la roca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 234.536,
+  "t1": 243.095,
+  "tipo": "video",
+  "texto": "Pero a la bruja ya no le queda carne, solo un esqueleto con túnica. Furiosa, carga un hechizo contra la casa de Banjo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 243.095,
+  "t1": 251.837,
+  "tipo": "video",
+  "texto": "Todos salen corriendo, menos Bottles, que cree que es otra broma de Kazooie, se queda sentado, y la casa explota con él dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 251.837,
+  "t1": 263.728,
+  "tipo": "video",
+  "texto": "A la mañana siguiente lo ven arrastrarse fuera de los escombros, y morir. Su fantasma se queda en la montaña. Gregg Mayles lo admitió veinte años después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 263.728,
+  "t1": 274.885,
+  "tipo": "video",
+  "texto": "El tono más oscuro fue a propósito. No querían repetir el primer juego, querían sorprender. Y la cosa empeora. Las hermanas tienen una máquina, el B.O.B.,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 274.885,
+  "t1": 281.746,
+  "tipo": "video",
+  "texto": "que absorbe la fuerza vital de lo que toca. Con esa energía, la bruja recuperaría su cuerpo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 281.746,
+  "t1": 291.144,
+  "tipo": "video",
+  "texto": "La prueban con el rey de los Jinjos, King Jingaling, y lo dejan convertido en zombi. El plan es exprimir así la isla entera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 291.144,
+  "t1": 302.325,
+  "tipo": "video",
+  "texto": "Y el juego está lleno de detalles que casi nadie vio. Vamos con ellos. Número diez. La bruja que tuvo que dejar de rimar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 302.325,
+  "t1": 312.938,
+  "tipo": "video",
+  "texto": "En el primer juego, Gruntilda hablaba siempre en verso. Era su seña de identidad. En Banjo-Tooie empieza rimando, y de pronto deja de hacerlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 312.938,
+  "t1": 321.978,
+  "tipo": "video",
+  "texto": "No es un descuido de los guionistas. Sus hermanas le pusieron una condición para ayudarla. O dejaba las rimas, o no había cuerpo nuevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 321.978,
+  "t1": 330.448,
+  "tipo": "video",
+  "texto": "Les ponía de los nervios. Lo gracioso es que, cuando las hermanas ya no están, sigue hablando normal hasta el final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 330.448,
+  "t1": 339.629,
+  "tipo": "video",
+  "texto": "No volvió a rimar hasta Nuts and Bolts, ocho años después. En el nueve, los trucos. La bruja se vengó de Cheato,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 339.629,
+  "t1": 348.834,
+  "tipo": "video",
+  "texto": "el libro de hechizos que le chivaba trucos al jugador, arrancándole las páginas. Por cada cinco páginas que le devuelves, Cheato te da un código,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 348.834,
+  "t1": 354.352,
+  "tipo": "video",
+  "texto": "y los códigos se escriben pisando letras en una sala del templo de Mayahem.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 354.352,
+  "t1": 366.631,
+  "tipo": "video",
+  "texto": "Pero hay un secreto. Casi todos funcionan aunque Cheato no te los haya dado, si escribes primero la palabra cheato y después el código al revés. Y hay uno que viene en forma de acertijo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 366.631,
+  "t1": 380.43,
+  "tipo": "video",
+  "texto": "Un cartel detrás del templo de Jiggywiggy dice: un contenedor de huevos, seguido de Jingaling. Nido y rey. Nestking, y tienes huevos y plumas infinitos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 380.43,
+  "t1": 390.102,
+  "tipo": "video",
+  "texto": "Número ocho, y este es de los más raros. Entre la montaña del principio y la aldea de los Jinjos hay tres enemigos muy especiales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 390.102,
+  "t1": 399.476,
+  "tipo": "video",
+  "texto": "Son cartuchos de Banjo-Kazooie. Cartuchos de Nintendo 64, vivos, que van dando saltitos felices por la zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 399.476,
+  "t1": 408.772,
+  "tipo": "video",
+  "texto": "Están escondidos detrás de una cascada, tras una rejilla que hay que volar con granadas, y en una cueva a la que se llega colgado de una grieta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 408.772,
+  "t1": 419.49,
+  "tipo": "video",
+  "texto": "Si les pegas, sueltan su premio. Dos huevos de colores y una llave de hielo. Los mismos objetos que Mumbo enseñaba en las fotos del primer juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 419.49,
+  "t1": 426.99,
+  "tipo": "video",
+  "texto": "Es un chiste que solo se entiende con el secreto número dos. Esos objetos tenían que viajar desde el cartucho del primer juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 426.99,
+  "t1": 440.43,
+  "tipo": "video",
+  "texto": "Como no pudieron, los de Rare metieron el cartucho dentro del juego. Y como remate, son los únicos enemigos de todo el juego que no sueltan miel al morir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 440.43,
+  "t1": 447.356,
+  "tipo": "video",
+  "texto": "En el siete, una tragedia que casi nadie notó. La de los Jinjos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 447.356,
+  "t1": 457.176,
+  "tipo": "video",
+  "texto": "En Banjo-Tooie hay cuarenta y cinco Jinjos repartidos en nueve familias de colores. La blanca tiene un miembro, la naranja dos, la amarilla tres,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 457.176,
+  "t1": 466.971,
+  "tipo": "video",
+  "texto": "y así hasta la negra, que tiene nueve. Pero en la aldea hay una décima casa, destrozada. Es la de la familia gris.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 466.971,
+  "t1": 480.208,
+  "tipo": "video",
+  "texto": "La Hag 1 le pasó por encima camino del castillo, y no hay supervivientes. Los fans echaron la cuenta: si cada familia tiene uno más que la de antes, los grises eran diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 480.208,
+  "t1": 487.908,
+  "tipo": "video",
+  "texto": "Y dentro de los datos del juego, los fans encontraron una casa gris completa, sin destruir, con una etiqueta que dice,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 487.908,
+  "t1": 500.127,
+  "tipo": "video",
+  "texto": "más o menos, esto no debería estar aquí. Número seis. Kazooie puede convertirse en dragón. Y casi nadie lo consiguió sin una guía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 500.127,
+  "t1": 504.607,
+  "tipo": "video",
+  "texto": "Primero necesitas la llave de hielo, la que suelta uno de esos cartuchos vivos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 504.607,
+  "t1": 514.265,
+  "tipo": "video",
+  "texto": "Luego, un movimiento de buceo que se aprende en Jolly Roger's Lagoon. Con él rompes una roca con la cara de Kazooie en una cueva de Glitter Gulch",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 514.265,
+  "t1": 524.341,
+  "tipo": "video",
+  "texto": "Mine, y llegas a la zona helada de Hailfire Peaks, donde espera una caja fuerte de hielo. Dentro está el Mega-Glowbo. Se lo llevas a Humba Wumba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 524.341,
+  "t1": 532.286,
+  "tipo": "video",
+  "texto": "la chamana rival de Mumbo, y Kazooie sale convertida en dragón, escupiendo fuego y con huevos de fuego infinitos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 532.286,
+  "t1": 546.799,
+  "tipo": "video",
+  "texto": "Un premio enorme, escondido detrás de tres mundos distintos. Y todo nació de una función que nunca llegó a existir. En el cinco, el mundo que se quedó a medias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 546.799,
+  "t1": 555.911,
+  "tipo": "video",
+  "texto": "Banjo-Kazooie tenía cien Jiggies. Banjo-Tooie tiene noventa. Y esos diez que faltan tienen explicación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 555.911,
+  "t1": 568.84,
+  "tipo": "video",
+  "texto": "Cauldron Keep, el castillo de las brujas, iba a ser un mundo completo, con sus propios desafíos y sus diez piezas. Según Gregg Mayles, el tiempo no alcanzó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 568.84,
+  "t1": 575.12,
+  "tipo": "video",
+  "texto": "Se quedó en lo que conoces. Una última pelea con Klungo, un concurso, y el combate final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 575.12,
+  "t1": 587.158,
+  "tipo": "video",
+  "texto": "Y para construirlo se aprovechó lo que había de otro mundo de castillo que también se descartó. Número cuatro. El concurso de la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 587.158,
+  "t1": 596.862,
+  "tipo": "video",
+  "texto": "Antes del combate final, Gruntilda te mete en un programa de preguntas, el Tower of Tragedy. Y contra ti juegan sus propias hermanas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 596.862,
+  "t1": 606.394,
+  "tipo": "video",
+  "texto": "Sobre cada concursante cuelga una pesa de una tonelada. Al final de cada ronda, el que tiene menos puntos queda aplastado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 606.394,
+  "t1": 614.606,
+  "tipo": "video",
+  "texto": "Así que la bruja termina eliminando a Mingella y a Blobbelda en su propio concurso, las mismas que la sacaron de debajo de la roca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 614.606,
+  "t1": 622.556,
+  "tipo": "video",
+  "texto": "Y un detalle para el número uno. En ese concurso, mientras piensas la respuesta, puede asomar el icono de un Bottles con cuernos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 622.556,
+  "t1": 632.088,
+  "tipo": "video",
+  "texto": "Es el único rastro visible de un modo que fue cortado. En el tres, la promesa que nunca se cumplió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 632.088,
+  "t1": 644.347,
+  "tipo": "video",
+  "texto": "Al final del juego, a Gruntilda solo le queda la cabeza. Banjo y Kazooie la usan de pelota en lo alto del castillo, y ella jura venganza en la siguiente entrega, Banjo-Threeie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 644.347,
+  "t1": 653.627,
+  "tipo": "video",
+  "texto": "Ese juego nunca llegó como se prometió. En dos mil dos, Microsoft compró Rare por trescientos setenta y cinco millones de dólares,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 653.627,
+  "t1": 663.815,
+  "tipo": "video",
+  "texto": "y Banjo-Tooie se quedó como el último Banjo que publicó Nintendo. La siguiente aventura tardó ocho años. Fue Nuts and Bolts, en Xbox,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 663.815,
+  "t1": 671.694,
+  "tipo": "video",
+  "texto": "un juego de construir vehículos, donde la bruja es justo eso, una cabeza metida en un cuerpo de robot.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 671.694,
+  "t1": 685.43,
+  "tipo": "video",
+  "texto": "Banjo regresó a una consola de Nintendo en dos mil diecinueve, como luchador de Super Smash Bros. Ultimate. Y Banjo-Tooie volvió en octubre de dos mil veinticuatro, a Nintendo Switch Online.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 685.43,
+  "t1": 692.525,
+  "tipo": "video",
+  "texto": "Número dos. El misterio que obsesionó a los fans durante años. Stop 'n' Swop.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 692.525,
+  "t1": 701.906,
+  "tipo": "video",
+  "texto": "Encendías Banjo-Kazooie, conseguías uno de esos huevos secretos, apagabas la consola, y en unos segundos metías el cartucho de Banjo-Tooie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 701.906,
+  "t1": 713.478,
+  "tipo": "video",
+  "texto": "La Nintendo 64 tenía un defecto. Su memoria tardaba un poco en borrarse al apagarla, y en esos segundos el segundo juego podía leer lo que había dejado el primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 713.478,
+  "t1": 721.338,
+  "tipo": "video",
+  "texto": "Pero Nintendo le pidió a Rare que lo quitara. Temía que cambiar cartuchos así dañara las consolas, y las revisiones nuevas de la Nintendo",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 721.338,
+  "t1": 731.937,
+  "tipo": "video",
+  "texto": "64 borraban la memoria más rápido. El truco podía dejar de funcionar. Pero el primer juego ya estaba en las tiendas, con sus huevos escondidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 731.937,
+  "t1": 742.566,
+  "tipo": "video",
+  "texto": "Un grupo de fans, el Rare Witch Project, encontró códigos para llegar hasta ellos, y al recogerlos aparecía un menú nuevo que nunca sirvió para nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 742.566,
+  "t1": 749.236,
+  "tipo": "video",
+  "texto": "Por eso Banjo-Tooie usa solo tres huevos y la llave, metidos en esos cartuchos vivos del número ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 749.236,
+  "t1": 760.43,
+  "tipo": "video",
+  "texto": "Y en diciembre de dos mil veinticinco, Gregg Mayles enseñó el documento original. Se llamaba Coldswap, y la cadena también iba a pasar por Donkey Kong sesenta y cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 760.43,
+  "t1": 772.93,
+  "tipo": "video",
+  "texto": "Stop 'n' Swop funcionó por fin en dos mil nueve, cuando los dos juegos llegaron a Xbox Live Arcade. Diez años tarde, y sin tener que cambiar de cartucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 772.93,
+  "t1": 782.42,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. El modo de juego que pasó veintiséis años escondido. Bottles' Revenge, la venganza de Bottles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 782.42,
+  "t1": 789.926,
+  "tipo": "video",
+  "texto": "¿Recuerdas que Bottles muere al principio? Rare imaginó que su fantasma no se lo tomaba nada bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 789.926,
+  "t1": 802.124,
+  "tipo": "video",
+  "texto": "En este modo, Bottles se vuelve un demonio con cuernos, te sigue por el mundo y se mete dentro del enemigo más cercano. Y ese enemigo lo maneja un segundo jugador, con otro mando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 802.124,
+  "t1": 810.014,
+  "tipo": "video",
+  "texto": "Si tu amigo te gana con ese enemigo, se cambian los papeles. Ahora él es Banjo, y tú eres el demonio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 810.014,
+  "t1": 822.2,
+  "tipo": "video",
+  "texto": "Rare quería que pudiera poseer incluso a los jefes. Cuando lo cortaron, el único jefe que se podía controlar era Old King Coal, el rey de carbón de Glitter Gulch Mine.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 822.2,
+  "t1": 834.06,
+  "tipo": "video",
+  "texto": "No hubo tiempo de pulirlo, y lo apagaron. Pero no lo borraron. Siguió dentro de cada cartucho, y durante años solo se pudo ver con un GameShark o en un emulador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 834.06,
+  "t1": 839.447,
+  "tipo": "video",
+  "texto": "La idea, de hecho, acabó en Perfect Dark. Y ahora viene lo bueno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 839.447,
+  "t1": 851.177,
+  "tipo": "video",
+  "texto": "El treinta de octubre sale el Banjo-Kazooie Double Pack para Evercade, hecho junto a Rare con el código original, y trae, por primera vez de forma oficial, Bottles' Revenge.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 851.177,
+  "t1": 862.967,
+  "tipo": "video",
+  "texto": "Veintiséis años después, el topo que murió en la primera escena por fin se va a poder vengar. Y su víctima favorita, seguramente, va a ser Kazooie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 862.967,
+  "t1": 870.277,
+  "tipo": "video",
+  "texto": "Esos son los diez secretos de Banjo-Tooie. Un fantasma vengativo, un concurso con pesas de una tonelada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 870.277,
+  "t1": 880.502,
+  "tipo": "video",
+  "texto": "una familia que nadie vio, y unos cartuchos que corren por el monte. Es la secuela que se atrevió a ser más grande, más rara y más oscura que el original,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 880.502,
+  "t1": 887.682,
+  "tipo": "video",
+  "texto": "en la última Navidad en la que Banjo fue de Nintendo. ¿Tú sabías que Bottles tenía su propio modo de venganza?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 887.682,
+  "t1": 896.349,
+  "tipo": "video",
+  "texto": "¿O llegaste a ver a Kazooie convertida en dragón? Cuéntamelo en los comentarios. Y si quieres que hagamos lo mismo con Banjo-Kazooie, el primero,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 896.349,
+  "t1": 906.25,
+  "tipo": "video",
+  "texto": "o con otro clásico de la Nintendo 64, déjalo también abajo. Nos vemos en la próxima crónica.",
+  "clip_s": 8
+ }
+]

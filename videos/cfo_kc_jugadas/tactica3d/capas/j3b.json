@@ -1,0 +1,145 @@
+{
+ "modo": "video",
+ "de": 246.961,
+ "a": 255.731,
+ "anillos": [
+  {
+   "u": 0.6,
+   "v": 0.408,
+   "r": 0.023958333333333335,
+   "color": "rojo",
+   "en": 249.101,
+   "sale": 255.731
+  },
+  {
+   "u": 0.537,
+   "v": 0.372,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 249.501,
+   "sale": 255.731
+  },
+  {
+   "u": 0.553,
+   "v": 0.218,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 249.801,
+   "sale": 255.731
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f3",
+   "pts": [
+    [
+     0.537,
+     0.372
+    ],
+    [
+     0.49,
+     0.29
+    ],
+    [
+     0.44,
+     0.21
+    ]
+   ],
+   "color": "rojo",
+   "en": 251.021,
+   "dur": 0.7,
+   "sale": 255.731,
+   "guion": true,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.6,
+   "v": 0.408,
+   "r": 0.013177083333333336,
+   "color": "rojo",
+   "en": 249.201,
+   "sale": 255.731,
+   "alto": 7
+  },
+  {
+   "u": 0.537,
+   "v": 0.372,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 249.601,
+   "sale": 255.731,
+   "alto": 7
+  },
+  {
+   "u": 0.553,
+   "v": 0.218,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 249.90099999999998,
+   "sale": 255.731,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 249.251,
+   "a": 255.731,
+   "u": 0.6,
+   "v": 0.408,
+   "alto": 0,
+   "texto": "DOGGO",
+   "sub": "SIN SU PRIMER OBJETO",
+   "color": "rojo",
+   "dx": 75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/cfo_kc_jugadas/iconos/Kaisa.png"
+  },
+  {
+   "de": 249.651,
+   "a": 255.731,
+   "u": 0.537,
+   "v": 0.372,
+   "alto": 0,
+   "texto": "SHAD0W",
+   "sub": null,
+   "color": "rojo",
+   "dx": -70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/cfo_kc_jugadas/iconos/JarvanIV.png"
+  },
+  {
+   "de": 249.951,
+   "a": 255.731,
+   "u": 0.553,
+   "v": 0.218,
+   "alto": 0,
+   "texto": "KINO",
+   "sub": "DEFINITIVA GASTADA",
+   "color": "rojo",
+   "dx": 70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/cfo_kc_jugadas/iconos/Alistar.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [
+  {
+   "de": 254.581,
+   "a": 255.731,
+   "texto": "NO PEGA",
+   "sub": null,
+   "color": "amarillo",
+   "y": 564.0,
+   "tam": 36
+  }
+ ],
+ "fondo": "/videos/cfo_kc_jugadas/tactica3d/capas/j3b_fondo.jpg",
+ "_huella": "56498dd1a0af"
+}

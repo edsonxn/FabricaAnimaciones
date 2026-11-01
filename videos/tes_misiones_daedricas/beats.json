@@ -1,0 +1,610 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.406,
+  "tipo": "video",
+  "texto": "Hay un altar en las montañas, al noreste de Ventalia, donde una sacerdotisa te pide con toda calma que traigas a tu compañero de viaje y lo subas a una piedra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.406,
+  "t1": 19.294,
+  "tipo": "video",
+  "texto": "Y luego que lo mates. Ese compañero te siguió por media Skyrim cargando tu botín y metiéndose contigo en cada cueva llena de draugr.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.294,
+  "t1": 25.348,
+  "tipo": "video",
+  "texto": "La recompensa por tanta lealtad es una piedra manchada de sangre y una armadura nueva para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.348,
+  "t1": 34.848,
+  "tipo": "video",
+  "texto": "Ese altar no es el único. Skyrim está lleno de príncipes daédricos que te ofrecen poder a cambio de algo, y ese algo casi siempre es la vida de otra persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.848,
+  "t1": 43.097,
+  "tipo": "video",
+  "texto": "Así que hoy van las ocho misiones daédricas que NUNCA deberías hacer, de la que solo te quita la dignidad a la que te quita a los amigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.097,
+  "t1": 52.399,
+  "tipo": "video",
+  "texto": "Número ocho. Empezamos con un perro que habla. Se llama Barbas, te lo encuentras en el camino al suroeste de Falkreath, y su dueño es Clavicus Vile,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.399,
+  "t1": 59.684,
+  "tipo": "video",
+  "texto": "el príncipe de los tratos y los deseos con letra pequeña. Los dos se pelearon, y Barbas te pide que los reconcilies.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.684,
+  "t1": 70.67,
+  "tipo": "video",
+  "texto": "Suena tierno. Hasta que llegas al santuario y el príncipe te ofrece elegir: o le entregas el hacha que fuiste a buscar, o usas esa misma hacha para matar al perro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.67,
+  "t1": 76.17,
+  "tipo": "video",
+  "texto": "Ojo, que el propio Clavicus admite que gran parte de su poder vive dentro de Barbas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.17,
+  "t1": 86.874,
+  "tipo": "video",
+  "texto": "Sin el perro, dice, no sería más poderoso que tú. Si eliges bien, te llevas la Máscara de Clavicus Vile, que te deja los precios un veinte por ciento mejores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.874,
+  "t1": 93.545,
+  "tipo": "video",
+  "texto": "Un príncipe daédrico, un ser eterno de Oblivion, y su gran regalo es un cupón de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.545,
+  "t1": 104.43,
+  "tipo": "video",
+  "texto": "Yo la primera vez maté al perro por no leer el diálogo, porque elegí la opción de arriba como elijo todo en la vida. Todavía me acuerdo cada vez que veo un perro en Carrera Blanca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 104.43,
+  "t1": 109.497,
+  "tipo": "video",
+  "texto": "En el siete aparece el único aficionado a los museos de toda la provincia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.497,
+  "t1": 120.338,
+  "tipo": "video",
+  "texto": "Silus Vesuius tiene en su casa un museo dedicado al Alba Mítica, el culto que casi destruye el mundo en Oblivion, y te da la visita guiada él mismo, encantado de tener público.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.338,
+  "t1": 128.658,
+  "tipo": "video",
+  "texto": "Te pide recuperar los tres fragmentos de la Navaja de Mehrunes. Uno lo guarda una cuerva bruja en lo alto de una roca, y otro lo tiene un tal Jorgen en Morthal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.658,
+  "t1": 137.867,
+  "tipo": "video",
+  "texto": "que no lo suelta por las buenas. Llegas al santuario con el muchacho emocionadísimo, y Mehrunes Dagon pone una condición para reparar la navaja:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.867,
+  "t1": 146.76,
+  "tipo": "video",
+  "texto": "que mates a Silus. Silus, en pánico, te ofrece quinientas monedas de oro por su vida. Quinientas. Es la mitad de lo que cuesta un caballo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.76,
+  "t1": 154.153,
+  "tipo": "video",
+  "texto": "Si lo perdonas, huye con la hoja rota mientras te atacan los drémoras. Si no, te quedas con la navaja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.153,
+  "t1": 161.406,
+  "tipo": "video",
+  "texto": "Y la navaja mata al instante con una probabilidad de más o menos dos por ciento. Dos golpes de cada cien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 161.406,
+  "t1": 172.219,
+  "tipo": "video",
+  "texto": "Mataste a tu único fan de los museos por un arma que funciona cuando quiere, como la impresora de la oficina. Número seis, y aquí la cosa ya no tiene nada de gracioso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.219,
+  "t1": 180.199,
+  "tipo": "video",
+  "texto": "En la cárcel de Falkreath hay un hombre llamado Sinding. Es un hombre lobo, y lo encerraron por matar a Lavinia, una niña de nueve años,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.199,
+  "t1": 190.937,
+  "tipo": "video",
+  "texto": "hija de unos granjeros. Él jura que fue culpa de un anillo que le robó a Hircine, el príncipe de la caza. Hircine lo maldijo, y el anillo lo transformaba justo en el peor momento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.937,
+  "t1": 199.238,
+  "tipo": "video",
+  "texto": "Te da el anillo, se escapa, y Hircine te manda a una cueva entre Falkreath y Carrera Blanca para que lo caces y le arranques la piel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 199.238,
+  "t1": 206.864,
+  "tipo": "video",
+  "texto": "Si obedeces, te llevas la Piel del Salvador, una armadura ligera con quince de resistencia a la magia y cincuenta al veneno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.864,
+  "t1": 213.166,
+  "tipo": "video",
+  "texto": "Una armadura hecha, LITERALMENTE, de otro señor. Y si te pones el anillo maldito antes de terminar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 213.166,
+  "t1": 220.242,
+  "tipo": "video",
+  "texto": "siendo hombre lobo, cada hora tienes una posibilidad entre diez de transformarte al aire libre, y no te lo puedes quitar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 220.242,
+  "t1": 231.132,
+  "tipo": "video",
+  "texto": "Vas tranquilo por el mercado de Carrera Blanca y de pronto eres el problema de todos los guardias. Mi postura es simple. Sinding mató a una niña, pero arrancarle la piel para hacerte un",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.132,
+  "t1": 241.386,
+  "tipo": "video",
+  "texto": "chaleco tampoco te deja en el bando de los buenos. Bajando al cinco, y subiendo la incomodidad, está Vaermina, la señora de las pesadillas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.386,
+  "t1": 249.086,
+  "tipo": "video",
+  "texto": "En un pueblo costero del norte nadie duerme bien. Un sacerdote de Mara llamado Erandur te pide ayuda para acabar con las pesadillas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.086,
+  "t1": 256.948,
+  "tipo": "video",
+  "texto": "que salen de un templo abandonado sobre los acantilados. Por el camino descubres su secreto. Erandur antes se llamaba Cassimir,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 256.948,
+  "t1": 263.706,
+  "tipo": "video",
+  "texto": "era sacerdote de Vaermina, y huyó cuando los orcos atacaron el templo, dejando ahí dentro a sus compañeros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 263.706,
+  "t1": 271.528,
+  "tipo": "video",
+  "texto": "Años después, por pura vergüenza, se hizo sacerdote de Mara. Es el único personaje de esta lista que intenta arreglar lo que hizo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 271.528,
+  "t1": 285.624,
+  "tipo": "video",
+  "texto": "Y justo cuando va a destruir la Calavera de la Corrupción, Vaermina te susurra que lo mates y te la quedes. La calavera es un bastón que pega veinte de daño, y hasta cincuenta si antes le robas los sueños a alguien que está dormido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 285.624,
+  "t1": 291.004,
+  "tipo": "video",
+  "texto": "O sea, un arma que funciona mejor si entras de noche a casas ajenas a mirar cómo duerme la gente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.004,
+  "t1": 301.811,
+  "tipo": "video",
+  "texto": "Muy de Skyrim, la verdad. Si lo perdonas, Erandur se ofrece a acompañarte. Un sacerdote arrepentido que te cura las heridas, contra un palo que da pesadillas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.811,
+  "t1": 309.763,
+  "tipo": "video",
+  "texto": "Elegir el palo es de las peores decisiones del juego, y te lo dice alguien que tiene cuarenta quesos guardados en un cofre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.763,
+  "t1": 318.037,
+  "tipo": "video",
+  "texto": "Ahora sí, entramos en la parte donde Skyrim deja de pedir permiso. En Markarth hay una casa abandonada junto a la puerta principal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.037,
+  "t1": 324.379,
+  "tipo": "video",
+  "texto": "Un vigilante de Stendarr llamado Tyranus te pide que entres con él a investigar. Muy valiente, el señor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 324.379,
+  "t1": 331.986,
+  "tipo": "video",
+  "texto": "Dentro, los muebles empiezan a flotar, una voz te habla, y Tyranus termina atacándote. No hay manera de salvarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 331.986,
+  "t1": 341.866,
+  "tipo": "video",
+  "texto": "Esa voz es Molag Bal, el príncipe de la dominación, y te encarga liberar a Logrolf, un sacerdote de Boethiah que tienen prisionero los renegados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 341.866,
+  "t1": 351.137,
+  "tipo": "video",
+  "texto": "Lo rescatas, lo llevas al altar, y Molag Bal te ordena golpearlo hasta que se rinda. Cuando se muere, Molag Bal lo revive. Y le vuelves a pegar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.137,
+  "t1": 360.441,
+  "tipo": "video",
+  "texto": "Lo más perturbador es un detalle técnico. Como esa muerte está dentro del guion, el juego no la cuenta como asesinato y nadie pone precio a tu cabeza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.441,
+  "t1": 367.253,
+  "tipo": "video",
+  "texto": "Para Skyrim, apalear a un sacerdote encadenado es papeleo. El premio es la Maza de Molag Bal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.253,
+  "t1": 375.618,
+  "tipo": "video",
+  "texto": "que en cada golpe quita veinticinco de aguante y veinticinco de magia, y atrapa el alma durante tres segundos. Te la vas a quedar, eso seguro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 375.618,
+  "t1": 385.282,
+  "tipo": "video",
+  "texto": "Bueno, yo me la quedé, y la usé muchísimo, pero no lo cuento con orgullo. Quedan tres, y en las tres el juego cambia de víctima.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.282,
+  "t1": 393.856,
+  "tipo": "video",
+  "texto": "Ya no es un desconocido. Es alguien a quien acabas de ayudar. Número tres. En el Salón de los Muertos de Markarth, el hermano Verulus,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.856,
+  "t1": 400.368,
+  "tipo": "video",
+  "texto": "sacerdote de Arkay, te pide que averigües quién anda rondando las criptas. Ahí conoces a Eola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 400.368,
+  "t1": 411.748,
+  "tipo": "video",
+  "texto": "Eola es encantadora y caníbal, y te invita a unirte al culto de Namira, la señora de la podredumbre. El plan consiste en llevar a Verulus engañado a una cueva al este de la ciudad,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 411.748,
+  "t1": 421.088,
+  "tipo": "video",
+  "texto": "dormirlo sobre un altar, matarlo, y comértelo delante de todos los invitados. A Verulus. Al que le acabas de hacer un favor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.088,
+  "t1": 430.628,
+  "tipo": "video",
+  "texto": "La recompensa es el Anillo de Namira. Cincuenta puntos más de aguante, y cada vez que comes un cadáver ganas salud extra y regeneración durante cinco minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.628,
+  "t1": 437.986,
+  "tipo": "video",
+  "texto": "Cinco minutos. Te comiste a un sacerdote por cinco minutos de vida extra. Ni el peor menú del día te cobra tan caro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.986,
+  "t1": 443.097,
+  "tipo": "video",
+  "texto": "¿Tú te lo comiste? No hace falta que contestes. El juego lo sabe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 443.097,
+  "t1": 453.659,
+  "tipo": "video",
+  "texto": "Ya en el podio, el número dos ocurre en el lugar más seguro de toda la provincia, el palacio del jarl de Carrera Blanca. El jarl Balgruuf está preocupado por su hijo menor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 453.659,
+  "t1": 463.44,
+  "tipo": "video",
+  "texto": "Nelkir, un niño que se pasa el día hablando de una voz que le susurra detrás de una puerta cerrada en el sótano. La voz es Mephala, la tejedora de mentiras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.44,
+  "t1": 471.921,
+  "tipo": "video",
+  "texto": "Abres la puerta, y dentro te espera una espada, la Hoja de Ébano. Al principio la hoja te devuelve diez puntos de vida por golpe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 471.921,
+  "t1": 480.216,
+  "tipo": "video",
+  "texto": "Para que llegue a treinta, tienes que usarla para matar a gente que te aprecia. Cada dos amigos asesinados, suben cuatro puntos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.216,
+  "t1": 488.884,
+  "tipo": "video",
+  "texto": "En total son diez traiciones. Diez. Diez personas que te saludaban por la calle o te llamaban amigo, a cambio de veinte puntos más por espadazo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 488.884,
+  "t1": 497.927,
+  "tipo": "video",
+  "texto": "Y Mephala te comenta cada muerte, como si narrara un partido. Lo que casi nadie sabe es que en los archivos del juego quedaron restos de un plan descartado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.927,
+  "t1": 503.23,
+  "tipo": "video",
+  "texto": "donde los hijos de Balgruuf lo mataban y su hermano Hrongar se quedaba con el trono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 503.23,
+  "t1": 513.379,
+  "tipo": "video",
+  "texto": "El niño raro del sótano iba a ser, de verdad, el villano. Yo siempre lo sospeché. Y llegamos al número uno. El altar del principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 513.379,
+  "t1": 521.159,
+  "tipo": "video",
+  "texto": "El Sacellum de Boethiah está en las montañas al noreste de Ventalia, y la misión pide nivel treinta para empezar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 521.159,
+  "t1": 530.141,
+  "tipo": "video",
+  "texto": "La sacerdotisa te explica la regla sin rodeos: trae a alguien que te siga, súbelo al Pilar del Sacrificio y mátalo. No vale cualquiera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 530.141,
+  "t1": 539.166,
+  "tipo": "video",
+  "texto": "Los seguidores esenciales no activan el pilar. Tiene que ser alguien que de verdad se pueda morir. Lydia. El mercenario que contrataste en la taberna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 539.166,
+  "t1": 549.34,
+  "tipo": "video",
+  "texto": "Y, según cuenta la comunidad, hasta tu pareja, si la llevas de acompañante. Lo matas, y en ese instante los fieles de Boethiah se lanzan a pelear entre ellos hasta que queda uno solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.34,
+  "t1": 555.798,
+  "tipo": "video",
+  "texto": "Boethiah se mete en el cuerpo del ganador y te habla con su boca. Después te manda a matar a su campeón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 555.798,
+  "t1": 566.743,
+  "tipo": "video",
+  "texto": "al noroeste de Falkreath, y te quedas con su cota de ébano. Ahoga el ruido de tus pasos, y le hace cinco puntos de daño de veneno cada segundo a quien se te acerque.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.743,
+  "t1": 575.238,
+  "tipo": "video",
+  "texto": "Una armadura que envenena a los que se acercan, regalada por matar al que más cerca estuvo de ti. Bethesda no es sutil, pero es coherente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.238,
+  "t1": 581.608,
+  "tipo": "video",
+  "texto": "Y el dato que más me impresionó. En los archivos del juego sigue existiendo una segunda parte, nunca terminada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 581.608,
+  "t1": 590.397,
+  "tipo": "video",
+  "texto": "en la que Boethiah te mandaba asesinar a Elisif la Bella, la jarl de Soledad. Yo creía que la habían quitado por ser demasiado oscura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 590.397,
+  "t1": 599.75,
+  "tipo": "video",
+  "texto": "Investigando, resulta que nadie sabe muy bien por qué se quedó a medias. A lo mejor alguien en el estudio dijo que ya era suficiente. Por eso está en el número uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.75,
+  "t1": 608.46,
+  "tipo": "video",
+  "texto": "No por el premio, que está bien, sino por lo que te pide. Que la persona que confió en ti suba a la piedra por su propio pie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 608.46,
+  "t1": 617.197,
+  "tipo": "video",
+  "texto": "Esa es mi lista. Las ocho son grandes misiones, y ninguna se puede hacer con la conciencia tranquila, que es justo lo que las vuelve inolvidables.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.197,
+  "t1": 627.022,
+  "tipo": "video",
+  "texto": "Seguro que alguien habría puesto a Sheogorath, pero en su misión lo único que sufre de verdad es tu paciencia. Si tú habrías cambiado el orden, me interesa saber cuál subirías.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 627.022,
+  "t1": 633.502,
+  "tipo": "video",
+  "texto": "Y si te quedaste con ganas de saber quiénes son todos estos príncipes y cuál de ellos manda más, tienes que ver el video de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 633.502,
+  "t1": 642.625,
+  "tipo": "video",
+  "texto": "los ocho Príncipes Daédricos más poderosos de Skyrim, que ya está en el canal. La próxima vez que alguien te invite a subir a una piedra bonita en lo alto de una montaña,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 642.625,
+  "t1": 650.6667,
+  "tipo": "video",
+  "texto": "dile que te duelen las rodillas. Te va a salvar la vida, y de paso las rodillas.",
+  "clip_s": 8
+ }
+]

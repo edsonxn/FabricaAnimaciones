@@ -75,6 +75,14 @@ ESTILOS = {
         sombra=0.0, textura_trazo=0.0, brillo_neon=0.0, grano=0.0, vineta=False,
         texto_fijo=True, subs_propios=True,
         fondos=dict(titulo=("liso", {}), antes=("liso", {}), hoy=("liso", {}), libre=("liso", {}))),
+    "pegatina_flow": dict(
+        descripcion="Recortes animados con piezas de Flow: escenarios pintados (parallax por profundidad) y hojas de personajes, "
+                    "ciclos de caminar y utilería de Nano Banana recortadas como pegatinas que se mueven por código "
+                    "(usar con nucleo/pegaflow.py; la clase Mundo devuelve el cuadro completo; docs/estilo_pegatina_flow.md).",
+        tinta=(20, 16, 14), relleno=None, wob=0.0, sticker=False, borde_sticker=None, grosor_sticker=13,
+        sombra=0.0, textura_trazo=0.0, brillo_neon=0.0, grano=0.0, vineta=False,
+        texto_fijo=True, subs_propios=True,
+        fondos=dict(titulo=("liso", {}), antes=("liso", {}), hoy=("liso", {}), libre=("liso", {}))),
     "kurzgesagt": dict(
         descripcion="Vector plano tipo Kurzgesagt: sin contornos ni temblor, colores vivos, degradados y halos "
                     "sobre fondos espaciales oscuros (usar con nucleo/plano.py).",
@@ -98,6 +106,14 @@ ESTILOS = {
         descripcion="Cine negro en tinta y aguada (novela gráfica vintage): SOLO blanco y negro de alto contraste, claroscuro, "
                     "lluvia, niebla, humo, sombras de persiana; tinta que se redibuja a 12 dibujos/s sobre papel (usar con "
                     "nucleo/noir.py sobre nucleo/toon.py; cada escena devuelve el cuadro completo).",
+        tinta=(12, 12, 12), relleno=None, wob=0.0, sticker=False, borde_sticker=None, grosor_sticker=13,
+        sombra=0.0, textura_trazo=0.0, brillo_neon=0.0, grano=0.0, vineta=False,
+        texto_fijo=True, subs_propios=True,
+        fondos=dict(titulo=("liso", {}), antes=("liso", {}), hoy=("liso", {}), libre=("liso", {}))),
+    "noir_color": dict(
+        descripcion="Neo-noir apagado (docs/estilo_noir_color.md): la esencia del noir en tinta y aguada con color oscuro y "
+                    "desaturado (sodio ámbar contra luna azul acero, un acento de neón o lámpara por plano; paletas sodio, bourbon "
+                    "y medianoche, una por toma) (usar con nucleo/noir_color.py; cada escena devuelve el cuadro completo).",
         tinta=(12, 12, 12), relleno=None, wob=0.0, sticker=False, borde_sticker=None, grosor_sticker=13,
         sombra=0.0, textura_trazo=0.0, brillo_neon=0.0, grano=0.0, vineta=False,
         texto_fijo=True, subs_propios=True,

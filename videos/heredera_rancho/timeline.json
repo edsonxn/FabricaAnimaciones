@@ -1,0 +1,109 @@
+{
+ "bpm": 80.0,
+ "beat": 0.75,
+ "unidad": 4,
+ "total": 126.0,
+ "titulo": "La heredera del rancho · Capítulo 1",
+ "estilo": "secuencia_flow",
+ "sin_voz": true,
+ "anclada": false,
+ "escenas": [
+  {
+   "id": "gancho",
+   "compases": 3,
+   "t0": 0.0,
+   "t1": 9.0,
+   "frases": [],
+   "fin_voz": 0.0,
+   "beats": 12
+  },
+  {
+   "id": "testamento",
+   "compases": 10,
+   "t0": 9.0,
+   "t1": 39.0,
+   "frases": [],
+   "fin_voz": 9.0,
+   "beats": 40
+  },
+  {
+   "id": "humillacion",
+   "compases": 10,
+   "t0": 39.0,
+   "t1": 69.0,
+   "frases": [],
+   "fin_voz": 39.0,
+   "beats": 40
+  },
+  {
+   "id": "despedida",
+   "compases": 6,
+   "t0": 69.0,
+   "t1": 87.0,
+   "frases": [],
+   "fin_voz": 69.0,
+   "beats": 24
+  },
+  {
+   "id": "conspiracion",
+   "compases": 4,
+   "t0": 87.0,
+   "t1": 99.0,
+   "frases": [],
+   "fin_voz": 87.0,
+   "beats": 16
+  },
+  {
+   "id": "revelacion",
+   "compases": 9,
+   "t0": 99.0,
+   "t1": 126.0,
+   "frases": [],
+   "fin_voz": 99.0,
+   "beats": 36,
+   "fin_musica": 123.75
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 9.0,
+   "t0": 8.95,
+   "t1": 9.05,
+   "tipo": "continua",
+   "de": "gancho",
+   "a": "testamento"
+  },
+  {
+   "t": 39.0,
+   "t0": 38.95,
+   "t1": 39.05,
+   "tipo": "continua",
+   "de": "testamento",
+   "a": "humillacion"
+  },
+  {
+   "t": 69.0,
+   "t0": 68.95,
+   "t1": 69.05,
+   "tipo": "continua",
+   "de": "humillacion",
+   "a": "despedida"
+  },
+  {
+   "t": 87.0,
+   "t0": 86.95,
+   "t1": 87.05,
+   "tipo": "continua",
+   "de": "despedida",
+   "a": "conspiracion"
+  },
+  {
+   "t": 99.0,
+   "t0": 98.95,
+   "t1": 99.05,
+   "tipo": "continua",
+   "de": "conspiracion",
+   "a": "revelacion"
+  }
+ ]
+}

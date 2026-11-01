@@ -18,6 +18,15 @@
   },
   "publicados": [
     {
+      "video": "zacatecas_vox",
+      "id": "NwBYB1s0Q3w",
+      "titulo": "Zacatecas 1546: así se vivía en la fiebre de plata",
+      "subido": "2026-09-29T15:18:52Z",
+      "visibilidad": "public",
+      "publicado": "2026-09-29T15:18:52Z",
+      "nota": "3:01, vertical (vox). Faltaba en el registro; detectado 11-oct-2026."
+    },
+    {
       "video": "teotihuacan",
       "id": "riVJpyvvRgg",
       "titulo": "Teotihuacán: la ciudad que se quedó sin nombre",
@@ -37,34 +46,70 @@
       "id": "f4Ipx5rLdmQ",
       "titulo": "Independencia de México: la historia completa",
       "subido": "2026-10-01T02:30:00Z",
-      "visibilidad": "private",
-      "nota": "v2 con defectos. NO publicar; reemplazada por la v5 (dPk9bs6dX0Q). Se puede borrar desde Studio."
+      "visibilidad": "borrado",
+      "nota": "v2 con defectos. NO publicar; reemplazada por la v5 (dPk9bs6dX0Q). Se puede borrar desde Studio. BORRADO en Studio por el usuario (detectado 11-oct-2026)."
     },
     {
       "video": "independencia_mx",
       "id": "1lq_vl0VTGQ",
       "titulo": "Independencia de México: la historia completa",
       "subido": "2026-10-02T23:00:00Z",
-      "visibilidad": "private",
-      "nota": "v3. NO publicar; reemplazada por la v5 (dPk9bs6dX0Q). Se puede borrar desde Studio."
+      "visibilidad": "borrado",
+      "nota": "v3. NO publicar; reemplazada por la v5 (dPk9bs6dX0Q). Se puede borrar desde Studio. BORRADO en Studio por el usuario (detectado 11-oct-2026)."
     },
     {
       "video": "independencia_mx",
       "id": "dPk9bs6dX0Q",
       "titulo": "Independencia de México: la historia completa",
       "subido": "2026-10-06T19:20:00Z",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "programado": "2026-10-10T18:00:00Z",
-      "nota": "v5 (retratos reales, mar y rótulos corregidos, 2 parches del 6-oct), 10:50, miniatura IA de Flow «11 AÑOS DE GUERRA», .srt. Programado sáb 10-oct 12:00 CDMX."
+      "nota": "v5 (retratos reales, mar y rótulos corregidos, 2 parches del 6-oct), 10:50, miniatura IA de Flow «11 AÑOS DE GUERRA», .srt. Programado sáb 10-oct 12:00 CDMX.",
+      "publicado": "2026-10-10T18:00:25Z"
     },
     {
       "video": "juchipila",
       "id": "UHZ9sXW0D1g",
       "titulo": "Juchipila: el pueblo de las flores y la guerra",
       "subido": "2026-10-11T22:30:00Z",
+      "visibilidad": "public",
+      "nota": "Subido con defectos conocidos (REVISION_MASTER.md). Público desde jue 15-oct 14:00 CDMX (verificado en YouTube el 17-oct-2026).",
+      "programado": "2026-10-15T20:00:00Z",
+      "publicado": "2026-10-15T20:00:32Z"
+    },
+    {
+      "video": "apozol",
+      "id": "W_Lznwd9o8k",
+      "titulo": "Apozol: el pueblo de los dos nombres de agua",
+      "subido": "2026-10-12T04:31:18Z",
+      "visibilidad": "public",
+      "nota": "4:07, serie de pueblos de la carretera 54 (2.º tras Juchipila). Miniatura Flow «DOS NOMBRES DE AGUA», .srt y capítulos subidos. Programado lun 19-oct 14:00 CDMX (fecha real en YouTube, verificada el 13-oct-2026; ciclo de 5 días desde Juchipila).",
+      "programado": "2026-10-19T20:00:00Z",
+      "publicar": "2026-10-19T20:00:00Z",
+      "publicado": "2026-10-19"
+    },
+    {
+      "video": "jalpa",
+      "id": "Ae7B03_QMDw",
+      "titulo": "Jalpa: el pueblo que echó a su encomendero",
+      "subido": "2026-10-20T20:29:12Z",
+      "visibilidad": "public",
+      "nota": "3:23, serie de pueblos de la carretera 54 (3.º tras Juchipila y Apozol). ESTILO NUEVO «pegatina Flow» y fórmula de UN suceso con personajes (Petacatl echa a su encomendero). Miniatura Flow «JALPA / ¡FUERA, ENCOMENDERO!», .srt y capítulos subidos. Programado sáb 24-oct 14:00 CDMX.",
+      "formato": "pueblo carretera 54 · pegatina Flow · un suceso con personajes · ~3,5 min",
+      "programado": "2026-10-24T20:00:00Z",
+      "publicar": "2026-10-24T20:00:00Z",
+      "publicado": "2026-10-24T20:00:01Z"
+    },
+    {
+      "video": "caxcan_mixton",
+      "id": "H3B9BIiN33E",
+      "titulo": "La Guerra del Mixtón, contada por un caxcán",
+      "subido": "2026-10-22T05:47:57Z",
       "visibilidad": "private",
-      "nota": "Subido con defectos conocidos (REVISION_MASTER.md). Programado jue 15-oct 14:00 CDMX.",
-      "programado": "2026-10-15T20:00:00Z"
+      "nota": "18:00, novela animada de la Guerra del Mixtón (1525-1541) narrada por un padre caxcán + bando español y Valladolid 1555. Proyecto sin canal; el usuario eligió Bitácora Perdida el 21-oct. Miniatura Flow «MAÑANA SUBEN», .srt y 17 capítulos. Programado jue 29-oct 14:00 CDMX (ciclo de 5 días tras Jalpa).",
+      "formato": "novela animada larga · pegatina Flow cinematográfica · narrador-personaje + diálogos (20 voces) · ~18 min",
+      "programado": "2026-10-29T20:00:00Z",
+      "publicar": "2026-10-29T20:00:00Z"
     }
   ],
   "ideas": {

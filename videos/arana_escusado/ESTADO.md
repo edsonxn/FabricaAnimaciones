@@ -3,6 +3,7 @@
 - canal: wild_next_door (EN INGLÉS) · hueco lun 26-oct-2026 16:05 UTC (10:05 CDMX); su Short `arana_escusado_short` 27-oct 04:05 UTC
 - estilo: secuencia_flow todo imagen (0 puntos) → docs/manual_wild_next_door.md · fórmula NUEVA «What Happens If…» (canales/formula/wild_next_door.md)
 - etapa: PROGRAMADO lun 26-oct-2026 16:05 UTC (https://youtu.be/WQu7K19q7u8, privado hasta la fecha); Short PROGRAMADO 27-oct 04:05 UTC (https://youtu.be/EjcARSU5Kwc)
+- ✅ **PÚBLICO** desde el lun 26-oct 10:05; su Short EjcARSU5Kwc público desde el lun 26-oct 22:05 CDMX · https://youtu.be/WQu7K19q7u8 (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: el 26-oct (ya público) poner en Studio el «Vídeo relacionado» del Short = WQu7K19q7u8 y activar la prueba A/B de miniatura (salida/miniatura_b.jpg); medir el 2-nov
 
 ## Sesiones (plan de tramos · «continúa el video arana escusado» retoma aquí · protocolo docs/sesiones.md)

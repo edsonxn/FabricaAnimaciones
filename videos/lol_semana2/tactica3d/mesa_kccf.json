@@ -1,0 +1,175 @@
+{
+ "modo": "mesa",
+ "de": 512.36,
+ "a": 521.21,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_kccf_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Doggo": {
+   "jugador": "Doggo",
+   "campeon": "Caitlyn",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Caitlyn.png",
+   "puntos": [
+    [
+     0,
+     0.175,
+     0.56
+    ]
+   ],
+   "de": 512.76,
+   "sale": 520.21
+  },
+  "Busio": {
+   "jugador": "Busio",
+   "campeon": "Lulu",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.43,
+     0.57
+    ]
+   ],
+   "de": 512.84,
+   "sale": 520.21
+  },
+  "kyeahoo": {
+   "jugador": "kyeahoo",
+   "campeon": "Viktor",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Viktor.png",
+   "puntos": [
+    [
+     0,
+     0.43,
+     0.39
+    ]
+   ],
+   "de": 512.92,
+   "sale": 520.21
+  }
+ },
+ "camara": [
+  [
+   512.36,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   512.71,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   515.192,
+   -18,
+   36,
+   50,
+   0.5,
+   0.55
+  ],
+  [
+   517.847,
+   14,
+   40,
+   47.5,
+   0.5,
+   0.55
+  ],
+  [
+   520.3100000000001,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   521.21,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "canna",
+   "pts": [
+    [
+     0.95,
+     0.7
+    ],
+    [
+     0.8,
+     0.66
+    ],
+    [
+     0.62,
+     0.6
+    ]
+   ],
+   "color": "rojo",
+   "dur": 1.0,
+   "guion": true,
+   "alto": 2.5,
+   "grosor": 1.5,
+   "en": 517.66,
+   "sale": 520.21
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.43,
+   "v": 0.57,
+   "alto": 0,
+   "texto": "BUSIO",
+   "sub": "SE ADELANTA",
+   "color": "rojo",
+   "dx": -170,
+   "dy": 40,
+   "de": 513.06,
+   "a": 520.21
+  },
+  {
+   "u": 0.175,
+   "v": 0.56,
+   "alto": 0,
+   "texto": "CFO",
+   "sub": "LO ESPERA",
+   "color": "azul",
+   "dx": 170,
+   "dy": -60,
+   "de": 516.12,
+   "a": 520.21
+  },
+  {
+   "flecha": "canna",
+   "texto": "CANNA · CAMILLE",
+   "sub": "POR LA RETAGUARDIA",
+   "color": "rojo",
+   "dx": -30,
+   "dy": -70,
+   "de": 518.16,
+   "a": 520.21
+  }
+ ]
+}

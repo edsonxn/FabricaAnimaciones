@@ -33,8 +33,14 @@ try:
     import guion as _g
     _TAIL_POR_FRASE = dict(getattr(_g, "TAIL_MAX_POR_FRASE", {}))
     _CER_POR_FRASE = dict(getattr(_g, "CER_MAX_POR_FRASE", {}))   # nombres propios que Whisper escribe distinto (Geoffrey -> Jeffrey)
+    _IDIOMA_LIBRE = set(getattr(_g, "IDIOMA_LIBRE", []))           # frases oídas y aceptadas aunque Whisper dude del idioma
+    _GAP_POR_FRASE = dict(getattr(_g, "GAP_MAX_POR_FRASE", {}))    # pausa larga a propósito tras un punto («…nada. La era…»)
 except Exception:
-    _TAIL_POR_FRASE, _CER_POR_FRASE = {}, {}
+    _TAIL_POR_FRASE, _CER_POR_FRASE, _IDIOMA_LIBRE, _GAP_POR_FRASE = {}, {}, set(), {}
+# Applio (Edge TTS multilingüe) puede leer una frase entera con acento de otro idioma (13-oct-2026: «Oficialmente.» en
+# portugués, «Guarda ese dato.» en italiano): Whisper sin idioma forzado; p(idioma del guion) < P_IDIOMA_MIN = se reescribe
+P_IDIOMA_MIN = 0.90
+MIRAR_IDIOMA = config.VOZ.get("motor") == "applio"
 # ElevenLabs entrega la toma recortada justo al acabar la voz y no alucina colas: el filtro de cola (pensado para Chatterbox) no aplica
 if config.VOZ.get("motor") == "elevenlabs":
     TAIL_MAX = 1.0
@@ -46,10 +52,16 @@ elif config.VOZ.get("motor") == "applio":   # Edge TTS + RVC tampoco alucina col
 os.makedirs("voz/final", exist_ok=True)
 evals = json.load(open("voz/eval.json", encoding="utf-8")) if os.path.exists("voz/eval.json") else {}
 
-wm = WhisperModel("large-v3", device="cuda", compute_type="float16")
-spk = SpeakerSim(config.VOZ["referencia"])
+# FAB_WHISPER_CPU=1: evaluar en CPU cuando otra sesión ocupa la GPU con Chatterbox (voz de ElevenLabs/Applio, 19-oct-2026)
+_CPU = bool(os.environ.get("FAB_WHISPER_CPU"))
+wm = WhisperModel("large-v3", device="cpu" if _CPU else "cuda", compute_type="int8" if _CPU else "float16")
+spk = SpeakerSim(config.VOZ["referencia"], device="cpu" if _CPU else "cuda")
 IDIOMA = config.VOZ["idioma"]
 textos = {f"{e['id']}_{i}": t for e in config.ESCENAS for i, t in enumerate(e["frases"])}
+# con FONETICA (Applio) Whisper puede escribir la grafía real o la fonética: vale la que menos errores dé
+_fon = {k: re.sub(r"\s*\[[A-Za-z][A-Za-z' -]*\]\s*", " ", t).strip() for k, t in config.FRASES_TTS.items()}
+def cer_frase(key, hyp):
+    return min(cer(textos[key], hyp), cer(_fon[key], hyp)) if key in _fon else cer(textos[key], hyp)
 
 # ---------- 1) evaluar candidatos ----------
 for path in sorted(glob.glob("voz/cands/*.wav")):
@@ -60,14 +72,17 @@ for path in sorted(glob.glob("voz/cands/*.wav")):
     y, sr = librosa.load(path, sr=None)
     segs, _ = wm.transcribe(path, language=IDIOMA, beam_size=5, vad_filter=False)
     hyp = " ".join(s.text for s in segs).strip()
-    evals[name] = dict(key=key, hyp=hyp, cer=cer(textos[key], hyp), sim=spk.sim(y, sr),
+    evals[name] = dict(key=key, hyp=hyp, cer=cer_frase(key, hyp), sim=spk.sim(y, sr),
                        dur=len(y) / sr, **artefactos(y, sr))
+    if MIRAR_IDIOMA:   # solo la detección de idioma (los segmentos no se decodifican)
+        _, info = wm.transcribe(path, language=None, beam_size=1)
+        evals[name]["p_idioma"] = round(dict(info.all_language_probs or []).get(IDIOMA, 0.0), 3)
     json.dump(evals, open("voz/eval.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 # la CER se recalcula desde la transcripción guardada (así una mejora de qa.normaliza aplica a tomas viejas)
 for m in evals.values():
     if m["key"] in textos:
-        m["cer"] = cer(textos[m["key"]], m["hyp"])
+        m["cer"] = cer_frase(m["key"], m["hyp"])
 
 # ---------- 2) elegir ----------
 elegidas, fallan = {}, []
@@ -79,11 +94,17 @@ for key in textos:
     med = float(np.median([m["dur"] for _, m in cands]))
     tmax = _TAIL_POR_FRASE.get(key, TAIL_MAX)
     cmax = _CER_POR_FRASE.get(key, CER_MAX)
+    gmax = _GAP_POR_FRASE.get(key, GAP_MAX)
     ok = [(n, m) for n, m in cands
-          if m["cer"] <= cmax and m["gap_max"] <= GAP_MAX and m["tail_ratio"] <= tmax
-          and m["peak"] <= PEAK_MAX]
+          if m["cer"] <= cmax and m["gap_max"] <= gmax and m["tail_ratio"] <= tmax
+          and m["peak"] <= PEAK_MAX
+          and (key in _IDIOMA_LIBRE or m.get("p_idioma", 1.0) >= P_IDIOMA_MIN)]
     if not ok:
         fallan.append(key)
+        otro = [m for _, m in cands if m.get("p_idioma", 1.0) < P_IDIOMA_MIN]
+        if otro and key not in _IDIOMA_LIBRE:
+            print(f"{key}: suena a OTRO IDIOMA (p({IDIOMA}) = {otro[0]['p_idioma']:.2f}): reescribe la frase (más larga, sin "
+                  f"palabras en inglés: FONETICA) o, si al oírla está bien, IDIOMA_LIBRE = [\"{key}\"] en guion.py")
         continue
 
     def score(m):
@@ -142,7 +163,14 @@ def alinear(texto, words):
 
 meter = pyln.Meter(SR_OUT)
 palabras = {}
+# misma toma ya limpiada y alineada en una pasada anterior: se reutiliza (19-oct-2026: realinear 86 frases en CPU eran ~40 min)
+_prev = json.load(open("voz/palabras.json", encoding="utf-8")) if os.path.exists("voz/palabras.json") else {}
 for key, (n, m) in elegidas.items():
+    _fin = f"voz/final/{key}.wav"
+    if (_prev.get(key, {}).get("take") == n and os.path.exists(_fin)
+            and os.path.getmtime(_fin) >= os.path.getmtime(f"voz/cands/{n}")):
+        palabras[key] = _prev[key]
+        continue
     y, sr = librosa.load(f"voz/cands/{n}", sr=None)
     y = librosa.resample(y, orig_sr=sr, target_sr=SR_OUT, res_type="soxr_vhq")
     # recorte de silencios: 40 ms antes, 120 ms después
@@ -150,7 +178,20 @@ for key, (n, m) in elegidas.items():
     a = max(0, iv[0][0] - int(0.04 * SR_OUT))
     b = min(len(y), iv[-1][1] + int(0.12 * SR_OUT))
     y = y[a:b].astype(np.float64)
+    y_entera = y.copy()
     y, mudo = silenciar_arranque(y, SR_OUT)           # sonido suelto antes de la 1.ª palabra (Whisper no lo ve)
+    if mudo:
+        # una 1.ª palabra corta seguida de pausa («Hoy, Jalisco…», historia_jalisco 22-oct-2026) parece un sonido suelto:
+        # si sin ese bloque Whisper ya no oye la primera palabra del guion, no se silencia
+        _p0 = normaliza(textos[key]).split()[:1]
+        _tmp = f"voz/final/_{key}_prueba.wav"
+        sf.write(_tmp, y.astype(np.float32), SR_OUT, subtype="FLOAT")
+        _s, _ = wm.transcribe(_tmp, language=IDIOMA, beam_size=5)
+        _h = normaliza(" ".join(s_.text for s_ in _s)).split()[:1]
+        os.remove(_tmp)
+        if _p0 and _h != _p0:
+            y, mudo = y_entera, 0.0
+            print(f"{key}: el bloque inicial era la primera palabra («{_p0[0]}»): no se silencia")
     if mudo:
         print(f"{key}: silenciado un sonido de {mudo:.2f} s antes de la primera palabra")
     fi, fo = int(0.006 * SR_OUT), int(0.05 * SR_OUT)

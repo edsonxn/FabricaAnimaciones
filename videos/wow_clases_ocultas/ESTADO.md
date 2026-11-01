@@ -72,3 +72,6 @@ python fab.py wow_clases_ocultas fx | fx montaje   audio de efectos | tramos par
 28-oct-2026 ✅ creativo del código de Alice (`medios/_overgear/CRONICAS10_forever.mp4`, -10 % CRONICAS10, rótulo en verde con croma; entra 2,5 s antes de «CRONICAS10») + kit Forever → fx, mezcla, render, final, verificar (CER como el 27-oct) → subido en privado SIN fecha: https://youtu.be/2hdnW7T5dl8. La voz no cambió: ya decía «diez por ciento». Fechas de Overgear: 1, 4, 5, 7 y 9-nov.
 
 31-oct-2026 ✅ PROGRAMADO sáb 7-nov-2026 09:00 CDMX (fecha de Overgear elegida por el usuario): https://youtu.be/2hdnW7T5dl8. Pendiente en Studio: monetización + video relacionado.
+
+## En curso (1-nov)
+- ◐ Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.

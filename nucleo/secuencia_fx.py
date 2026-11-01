@@ -405,6 +405,8 @@ class Capa:
         if id(d) not in self._vids:
             if not os.path.exists(d["ruta"]):
                 raise SystemExit(f"efectos.py: falta el video {d['ruta']}")
+            while len(self._vids) >= 8:                # tope (31-oct-2026): con 200 FX `video` abiertos el render se quedaba sin memoria
+                self._vids.pop(next(iter(self._vids))).cap.release()      # el más viejo; si vuelve a hacer falta, se reabre y reposiciona
             self._vids[id(d)] = _VideoFx(d["ruta"], d.get("desde", 0.0), d.get("vel", 1.0), d.get("bucle", False))
         return self._vids[id(d)]
 

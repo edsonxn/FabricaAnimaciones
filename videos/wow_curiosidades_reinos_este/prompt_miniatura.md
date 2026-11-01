@@ -1,0 +1,24 @@
+# Miniatura de «62 curiosidades de los Reinos del Este» (Flow + ingredientes reales, 18-oct-2026)
+
+Regla del canal: Flow COMBINANDO capturas REALES del juego (memoria «miniaturas Warcraft = ingredientes reales»); texto
+pintado por Nano Banana (memoria «miniaturas por canal»); logo real de Forever con PIL abajo a la izquierda.
+
+Ingredientes (`miniatura_ing/`):
+1. `1_cluck_paramos.jpg` — scene-202 (t=2 s): Páramos de Poniente, gallina y ventana real de la misión CLUCK! (curiosidad n.º 2).
+2. `2_espada_monasterio.jpg` — scene-205 (t=2 s): espadón en el Monasterio Escarlata con vitrales en llamas (n.º 1, la Ashbringer).
+Descartados: `3_malown.png` (no se lee como cartero no-muerto) y `4_ashbringer.png` (icono con marco circular).
+
+## Prompt
+
+YouTube thumbnail, 16:9. Combine image 1 and image 2, two real World of Warcraft screenshots, without redrawing them: keep both looking exactly like real in-game screenshots with the original game graphics. Image 2, the warrior holding a huge sword inside a dark monastery with burning stained-glass windows, fills the right half, zoomed in so the sword blade is big and glows with holy golden light, the brightest element in the image. Image 1, the golden farm field with the small white chicken and the real quest window titled CLUCK!, fills the left half, zoomed in so the white chicken is bigger and clearly visible, with the real quest window kept legible above it. A diagonal jagged split between the two halves with a thin golden glow. Big bold title text in the upper center: "62" huge in white with a thick black outline, and right under it the word "CURIOSIDADES" in bright yellow with a thick black outline, chunky fantasy game font, perfectly spelled. Remove the interface clutter at the edges (action bars, minimap, chat). Dramatic cinematic contrast, slight vignette, keep the bottom-left corner fairly dark and empty for a logo, nothing important in the bottom-right corner. No watermark, no border.
+
+## Variaciones con menos carga visual (19-oct-2026)
+El usuario: la v1 tiene «mucha carga visual» (dos mitades + ventana de misión con texto). Regla nueva: UN solo protagonista, fondo desenfocado, solo «62 CURIOSIDADES» a la izquierda, logo de Forever (250 px) abajo a la izquierda.
+- `salida/miniatura_v3_gallina.jpg` ← `miniatura_flow/mini_gallina_v1.png`; ingredientes `miniatura_ing/v3/gallina_campo.jpg` (recorte sin la ventana) + `pegatinas/gallina.png`
+- `salida/miniatura_v4_espada.jpg` ← `miniatura_flow/mini_espada_v2.png`; ingrediente `miniatura_ing/2_espada_monasterio.jpg`
+
+### Prompt gallina
+YouTube thumbnail, 16:9, SIMPLE and CLEAN with very little visual clutter, one single subject. Use image 1, a real World of Warcraft screenshot of a golden farm field, as the background, softly blurred and slightly darkened, keeping the original game graphics. Take the white chicken from image 2, the real World of Warcraft chicken model, and place it HUGE in the right half of the frame in close-up, sharp, filling almost the full height, looking curiously at the viewer, with a soft golden rim light. Above the chicken's head, a single big glowing yellow exclamation mark quest marker exactly like the World of Warcraft quest giver icon. Remove everything else: no people, no interface, no windows, no green name text, no chat. Big bold title text on the left third: "62" huge in white with a thick black outline, and right under it the word "CURIOSIDADES" in bright yellow #FFE21E with a thick black outline, chunky fantasy game font, perfectly spelled, no other words. Lots of calm empty space, strong contrast, slight vignette, keep the bottom-left corner fairly dark and empty for a logo. No watermark, no border, no extra text.
+
+### Prompt espada
+YouTube thumbnail, 16:9, SIMPLE and CLEAN with very little visual clutter, one single subject. Use image 1, a real World of Warcraft screenshot inside the Scarlet Monastery with burning stained-glass windows, keeping the original game graphics without redrawing them. Remove the warrior: only the huge two-handed sword remains, standing upright stuck into the stone floor in the right half of the frame, big and sharp, its blade glowing with holy golden light, the single brightest element in the image, a few floating golden sparks. The rest of the room is dark and quiet, the windows dimmed and softly blurred so nothing competes with the sword. Remove all interface. Big bold title text on the left third over the dark area: "62" huge in white with a thick black outline, and right under it the word "CURIOSIDADES" in bright yellow #FFE21E with a thick black outline, chunky fantasy game font, perfectly spelled, no other words. Lots of calm dark empty space, strong contrast, slight vignette, keep the bottom-left corner dark and empty for a logo. No watermark, no border, no extra text.

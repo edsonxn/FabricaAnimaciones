@@ -1,0 +1,618 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.061,
+  "tipo": "video",
+  "texto": "Trece de septiembre, en plena BlizzCon. Un diseñador de Blizzard toma el micrófono y les pide a los jugadores que vayan a morirse a propósito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.061,
+  "t1": 15.357,
+  "tipo": "video",
+  "texto": "Les dice que en la beta hagan una carrera de cadáveres hasta la puerta de Grim Batol, al este de Los Humedales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.357,
+  "t1": 27.951,
+  "tipo": "video",
+  "texto": "Y que, si llegan, tal vez noten muchos más dragones rojos de los que debería haber fuera de esa montaña. No enseñó ninguna diapositiva ni dio una fecha, y después siguió hablando como quien no ha dicho nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.951,
+  "t1": 34.471,
+  "tipo": "video",
+  "texto": "World of Warcraft Forever sale el cuatro de noviembre, y Blizzard ya está dejando migajas de lo que viene después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.471,
+  "t1": 41.235,
+  "tipo": "video",
+  "texto": "Algunas las soltó en un escenario, otras están tapiadas en mitad del mapa y otras salieron de los archivos de la beta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 41.235,
+  "t1": 51.394,
+  "tipo": "video",
+  "texto": "Estas son las ocho pistas que Blizzard ya dejó sobre el futuro de World of Warcraft Forever, de la más tímida a la más descarada. Aviso rápido: casi nada de esto está confirmado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.394,
+  "t1": 60.49,
+  "tipo": "video",
+  "texto": "así que trátalo como lo que es, un montón de puertas cerradas con luz por debajo. Número ocho. El calendario oficial,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.49,
+  "t1": 71.169,
+  "tipo": "video",
+  "texto": "que es la única pista con membrete y la que menos gente leyó. El nueve de diciembre abren las primeras bandas, que son Barrow Deeps, la Cima Hyjal y la Guarida de Onyxia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 71.169,
+  "t1": 76.919,
+  "tipo": "video",
+  "texto": "Hasta ahí llega lo que todo el mundo sabe, y lo interesante viene en la letra pequeña de la hoja de ruta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.919,
+  "t1": 84.941,
+  "tipo": "video",
+  "texto": "Para la primavera de dos mil veintisiete promete dos bandas nuevas, dos mazmorras, una zona nueva y una cadena de misiones legendaria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.941,
+  "t1": 96.692,
+  "tipo": "video",
+  "texto": "Y para el verano anuncia otra banda nueva y el regreso de una banda icónica renovada. No dice cuál es esa banda icónica, y Blizzard lo dejó en blanco como si no fuéramos a pasar ocho meses discutiéndolo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 96.692,
+  "t1": 102.901,
+  "tipo": "video",
+  "texto": "Tampoco descartaron una clase nueva, porque cuando les preguntaron dijeron que la idea no está fuera de la mesa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 102.901,
+  "t1": 115.43,
+  "tipo": "video",
+  "texto": "Está en el último lugar porque aquí no hay que escarbar nada, solo hay que leer. Pero guárdate dos cosas, la zona nueva y el legendario, porque el resto de la lista intenta adivinar a qué se refieren.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 115.43,
+  "t1": 120.666,
+  "tipo": "video",
+  "texto": "Número siete. El agujero de Azshara, que Blizzard admitió en voz alta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.666,
+  "t1": 129.95,
+  "tipo": "video",
+  "texto": "El que habló fue Josh Greenfield, diseñador sénior del juego, el mismo del micrófono de hace un momento. Contó que Azshara recibe muchas misiones nuevas en Forever,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.95,
+  "t1": 137.317,
+  "tipo": "video",
+  "texto": "y luego soltó la frase que importa. Dijo que quizá hay un hueco del tamaño de un cráter en el contenido de esa zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.317,
+  "t1": 148.945,
+  "tipo": "video",
+  "texto": "Y remató preguntándose si tal vez, en algún momento, lo van a rellenar. Si jugaste Classic conoces ese cráter, porque está en mitad del mapa y nunca tuvo absolutamente nada adentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 148.945,
+  "t1": 154.362,
+  "tipo": "video",
+  "texto": "Son veintidós años con un hoyo en el suelo, y ahora resulta que era un espacio reservado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.362,
+  "t1": 161.278,
+  "tipo": "video",
+  "texto": "Greenfield no dijo si será una mazmorra, una banda o un campo de batalla, y cada frase la envolvió en un quizá.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 161.278,
+  "t1": 172.904,
+  "tipo": "video",
+  "texto": "Yo solo digo que nadie menciona un cráter vacío en un escenario por hacer conversación. Número seis. Los portales de mazmorra que están tapiados a plena vista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.904,
+  "t1": 181.199,
+  "tipo": "video",
+  "texto": "Los jugadores de la beta llevan semanas encontrando entradas de instancia que no llevan a ningún lado. Hay una en Los Baldíos, junto a Bael Modan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.199,
+  "t1": 191.406,
+  "tipo": "video",
+  "texto": "y otra en Sierra Espolón, en el Risco Cortaviento. Hay una más en las montañas del sur de Los Humedales, y otra en las Tierras Altas de Arathi que todavía nadie ubica bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 191.406,
+  "t1": 197.782,
+  "tipo": "video",
+  "texto": "La quinta está en Farhold Keep, dentro de la zona nueva de Riverglades, y baja por debajo de la fortaleza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.782,
+  "t1": 207.401,
+  "tipo": "video",
+  "texto": "Y la sexta es la vieja conocida de Ventormenta, el portal sellado que lleva ahí desde el juego original. Blizzard ya había dicho que quiere mazmorras para todos los rangos de nivel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.401,
+  "t1": 219.259,
+  "tipo": "video",
+  "texto": "así que estas puertas son, casi seguro, las que tiene a medio construir. La teoría más repetida es que Bael Modan será algo parecido a Uldaman y que la de Sierra Espolón será de la Ventura y Compañía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 219.259,
+  "t1": 226.233,
+  "tipo": "video",
+  "texto": "Un creador llamado Uncas las fue visitando una por una, y sospecha que hay más portales escondidos que nadie ha encontrado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 226.233,
+  "t1": 232.801,
+  "tipo": "video",
+  "texto": "Es la única obra del mundo donde primero ponen la puerta y ya luego, si eso, el edificio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.801,
+  "t1": 242.613,
+  "tipo": "video",
+  "texto": "Ahora, casi todo lo que viene en esta lista apunta a bandas, y las bandas no perdonan al que llega sin saber qué hacer. Y si mientras llega Forever sigues jugando la expansión actual,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 242.613,
+  "t1": 250.868,
+  "tipo": "video",
+  "texto": "para eso está Overgear, que patrocina este video. Lo que me gusta es su modo self-play. Juegas tú, en tu propia cuenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.868,
+  "t1": 258.9,
+  "tipo": "video",
+  "texto": "acompañado por jugadores profesionales. Entras a la banda con ellos, aprendes los jefes y nadie más toca tu personaje.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.9,
+  "t1": 268.112,
+  "tipo": "video",
+  "texto": "Además ya se están preparando para el lanzamiento de World of Warcraft Forever del cuatro de noviembre. El enlace está en la descripción, y hay un código para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 268.112,
+  "t1": 276.296,
+  "tipo": "video",
+  "texto": "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento. Número cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.296,
+  "t1": 286.43,
+  "tipo": "video",
+  "texto": "Las dos mazmorras que ya están dentro de los archivos del juego. Aquí ya no hablamos de puertas, hablamos de lo que hay detrás, porque alguien abrió los archivos de la beta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 286.43,
+  "t1": 292.732,
+  "tipo": "video",
+  "texto": "Un usuario de los foros encontró ahí una entrada para las Criptas de Karazhan, con once jefes ya listados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.732,
+  "t1": 299.515,
+  "tipo": "video",
+  "texto": "Si te suena es porque esa mazmorra existió en la Temporada de Descubrimiento, así que traerla de vuelta es casi un trámite.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.515,
+  "t1": 310.376,
+  "tipo": "video",
+  "texto": "La segunda es más rara, porque se llama Manor Mistmantle y aparece como mazmorra de cinco jugadores, todavía sin jefes. Es la mansión del Bosque del Ocaso, la de la historia de Stalvan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.376,
+  "t1": 320.107,
+  "tipo": "video",
+  "texto": "ese tutor al que el despecho le salió carísimo a todos los demás. Once jefes para una cripta es mucha gente enterrada, incluso para los estándares de Karazhan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.107,
+  "t1": 326.958,
+  "tipo": "video",
+  "texto": "Ojo, que esto sale de una sola publicación en un foro, y que algo esté en los archivos no significa que llegue al juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.958,
+  "t1": 339.088,
+  "tipo": "video",
+  "texto": "Pero tampoco conozco a nadie que le ponga once jefes a una mazmorra que piensa tirar a la basura. Quedan cuatro puestos, y a partir de aquí las pistas ya no son puertas sueltas, son lugares enteros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 339.088,
+  "t1": 345.151,
+  "tipo": "video",
+  "texto": "Número cuatro. Las Cavernas del Tiempo, que tienen cuatro portales y ninguno funciona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.151,
+  "t1": 351.528,
+  "tipo": "video",
+  "texto": "En el juego original las Cavernas eran una cueva cerrada en Tanaris, con un dragón en la puerta y nada que hacer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.528,
+  "t1": 365.616,
+  "tipo": "video",
+  "texto": "En la beta de Forever, algunos jugadores consiguieron colarse con un fallo y adentro encontraron cuatro portales de instancia apagados. En los foros identifican dos de ellos, que serían las Antiguas Laderas de Trabalomas y La Ciénaga Negra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 365.616,
+  "t1": 370.49,
+  "tipo": "video",
+  "texto": "De los otros dos no se sabe nada, y esos son precisamente los que importan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.49,
+  "t1": 380.452,
+  "tipo": "video",
+  "texto": "Porque Forever se presenta como una línea temporal alternativa, y eso le da permiso a Blizzard de contar lo que nunca nos dejó jugar. Uncas sueña con la guerra entre los trols y los aqir,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 380.452,
+  "t1": 389.952,
+  "tipo": "video",
+  "texto": "o con la caída de Ventormenta del primer Warcraft. Eso ya es un deseo y no una pista, pero cuatro portales construidos y apagados sí son una pista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 389.952,
+  "t1": 397.808,
+  "tipo": "video",
+  "texto": "Blizzard dejó una mazmorra de viajes en el tiempo para más adelante, y hay que reconocer que el chiste está bien pensado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 397.808,
+  "t1": 403.819,
+  "tipo": "video",
+  "texto": "Número tres. El legendario que Blizzard escondió y que los mineros de datos encontraron igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.819,
+  "t1": 416.449,
+  "tipo": "video",
+  "texto": "La hoja de ruta solo dice cadena de misiones legendaria, primavera de dos mil veintisiete, y de ahí no pasa. Blizzard cifró las estadísticas del objeto, pero se le quedaron sueltos los textos de las misiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 416.449,
+  "t1": 423.767,
+  "tipo": "video",
+  "texto": "Lo primero que apareció fue un ritual que se hace con ayuda del Círculo Cenarion y que deja una mejora llamada éxito del ritual legendario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 423.767,
+  "t1": 431.234,
+  "tipo": "video",
+  "texto": "Después salió una criatura, un Stormwraith, ligada a Sylvestris Dusksong, que aparece como jefe de la Cima Hyjal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.234,
+  "t1": 437.624,
+  "tipo": "video",
+  "texto": "Los textos hablan de cargar una rama con el poder de esa criatura, y todo apunta a que es una rama de Nordrassil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.624,
+  "t1": 450.243,
+  "tipo": "video",
+  "texto": "Serían tres etapas, con paradas en los túmulos de Claro de la Luna y un acertijo de pilones en el Cráter de Un'Goro. Y la última pieza es un mapa para un solo jugador que se llama Archimonde's Fall, la caída de Archimonde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 450.243,
+  "t1": 457.278,
+  "tipo": "video",
+  "texto": "O sea que el final de tu legendario podrías ser tú, sin nadie más, frente al demonio que casi se come el Árbol del Mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.278,
+  "t1": 466.948,
+  "tipo": "video",
+  "texto": "La teoría de moda es que será un arma solo para sanadores, y eso sí es pura especulación de la comunidad. Si se cumple, los sanadores van a tener por fin algo que presumir,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 466.948,
+  "t1": 475.777,
+  "tipo": "video",
+  "texto": "además de la culpa cuando muere el tanque. Número dos. Grim Batol, la puerta que lleva cerrada desde dos mil cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.777,
+  "t1": 484.86,
+  "tipo": "video",
+  "texto": "Es la fortaleza de los enanos Martillo Salvaje que acabó en manos de los orcos Faucedraco. Ahí tuvieron presa a Alexstrasza, la reina de los dragones rojos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 484.86,
+  "t1": 494.745,
+  "tipo": "video",
+  "texto": "para criar monturas de guerra con sus hijos. En el juego original llegabas a la puerta, veías un par de dragones y te ibas a tu casa, porque no había nada más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 494.745,
+  "t1": 501.105,
+  "tipo": "video",
+  "texto": "Por eso importa lo de la BlizzCon, porque Greenfield no eligió un sitio cualquiera cuando mandó a todos a morir ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 501.105,
+  "t1": 507.614,
+  "tipo": "video",
+  "texto": "Dijo, palabra por palabra, que habría una presencia de dragones rojos mucho mayor fuera de la montaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.614,
+  "t1": 519.087,
+  "tipo": "video",
+  "texto": "Uncas hizo el viaje, cuenta que le costó más de media hora de carreras de cadáveres, y encontró la entrada llena de dragones. Según él, la mayoría lleva el título de guardia real, y un guardia real,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 519.087,
+  "t1": 529.969,
+  "tipo": "video",
+  "texto": "por definición, está cuidando a alguien de la realeza. Si Alexstrasza sigue ahí adentro en esta línea temporal, la pregunta incómoda es si vamos a rescatarla o a pelear contra ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 529.969,
+  "t1": 537.752,
+  "tipo": "video",
+  "texto": "Blizzard no ha confirmado ni mazmorra ni banda, pero es la única pista de esta lista que te pidieron ir a ver en persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 537.752,
+  "t1": 543.237,
+  "tipo": "video",
+  "texto": "Número uno. Gilneas, el reino que ya está construido detrás de la muralla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 543.237,
+  "t1": 553.245,
+  "tipo": "video",
+  "texto": "En el juego original, la Muralla de Cringris era una puerta gigante al sur del Bosque de Argénteos que no se abría nunca. En los archivos de la beta de Forever hay tres registros de zona nuevos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 553.245,
+  "t1": 564.06,
+  "tipo": "video",
+  "texto": "que son Ruinas de Gilneas, Ciudad de Gilneas y Gilneas a secas. Ninguno tiene música ni rango de nivel, que es justo como se ve un contenido construido y todavía apagado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 564.06,
+  "t1": 570.356,
+  "tipo": "video",
+  "texto": "También hay un campo de batalla llamado Batalla por Gilneas, y su descripción habla de la muralla derrumbándose.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 570.356,
+  "t1": 579.445,
+  "tipo": "video",
+  "texto": "Y no son solo nombres en una tabla, porque el veintiocho de septiembre el creador Esfand publicó un video desde adentro. Lo invocaron al otro lado y se encontró los canales,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 579.445,
+  "t1": 590.507,
+  "tipo": "video",
+  "texto": "la arquitectura gótica y hasta una criatura parada en un tejado. La ciudad está ahí, con sus calles y sus edificios, esperando detrás de una puerta que oficialmente no existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 590.507,
+  "t1": 596.638,
+  "tipo": "video",
+  "texto": "Uncas intentó llegar nadando desde Los Humedales, y cuenta que un tiburón lo mató antes de tocar la orilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 596.638,
+  "t1": 604.988,
+  "tipo": "video",
+  "texto": "Blizzard puso un tiburón de seguridad, y eso es tener mucho que esconder. Lo que nadie sabe es para qué la quieren, si será zona para subir de nivel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 604.988,
+  "t1": 615.029,
+  "tipo": "video",
+  "texto": "una actualización grande o solo el decorado del campo de batalla. Y hay una pregunta mejor, porque en esta línea temporal la maldición huargen quizá todavía se puede detener.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 615.029,
+  "t1": 620.54,
+  "tipo": "video",
+  "texto": "Blizzard no ha dicho una sola palabra sobre Gilneas, y aun así construyó la ciudad entera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 620.54,
+  "t1": 631.817,
+  "tipo": "video",
+  "texto": "Yo no levanto una ciudad con canales para usarla de fondo de pantalla. Mi veredicto es que el mapa de Forever está lleno de puertas, y Blizzard dejó casi todas entreabiertas a propósito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 631.817,
+  "t1": 637.786,
+  "tipo": "video",
+  "texto": "Si tuviera que apostar, la zona nueva de primavera es Gilneas y el legendario pasa por la Cima Hyjal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 637.786,
+  "t1": 649.34,
+  "tipo": "video",
+  "texto": "La banda icónica del verano no me atrevo a adivinarla, y eso que llevo todo el video adivinando. Dime en los comentarios cuál crees que es, y si encontraste otro portal tapiado, con más razón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 649.34,
+  "t1": 656.355,
+  "tipo": "video",
+  "texto": "Si quieres seguir escarbando, en el canal ya tienes el video de las clases y profesiones ocultas de World of Warcraft Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 656.355,
+  "t1": 665.625,
+  "tipo": "video",
+  "texto": "Al final, lo único que separa a Blizzard de anunciar todo esto es una diapositiva, y prefirieron poner un tiburón.",
+  "clip_s": 8
+ }
+]

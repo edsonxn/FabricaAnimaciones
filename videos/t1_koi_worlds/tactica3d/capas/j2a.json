@@ -1,0 +1,213 @@
+{
+ "modo": "video",
+ "de": 227.531,
+ "a": 245.044,
+ "anillos": [
+  {
+   "u": 0.455,
+   "v": 0.47,
+   "r": 0.027083333333333334,
+   "color": "azul",
+   "en": 228.871,
+   "sale": 245.044
+  },
+  {
+   "u": 0.51,
+   "v": 0.23,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 231.171,
+   "sale": 245.044
+  },
+  {
+   "u": 0.46,
+   "v": 0.55,
+   "r": 0.01875,
+   "color": "azul",
+   "en": 242.569,
+   "sale": 245.044
+  },
+  {
+   "u": 0.565,
+   "v": 0.66,
+   "r": 0.01875,
+   "color": "azul",
+   "en": 242.76899999999998,
+   "sale": 245.044
+  },
+  {
+   "u": 0.575,
+   "v": 0.74,
+   "r": 0.01875,
+   "color": "azul",
+   "en": 242.969,
+   "sale": 245.044
+  }
+ ],
+ "flechas": [
+  {
+   "id": "f3",
+   "pts": [
+    [
+     0.455,
+     0.45
+    ],
+    [
+     0.48,
+     0.34
+    ],
+    [
+     0.505,
+     0.26
+    ]
+   ],
+   "color": "azul",
+   "en": 230.571,
+   "dur": 0.7,
+   "sale": 245.044,
+   "guion": true,
+   "alto": 2.6,
+   "grosor": 0.75
+  }
+ ],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.455,
+   "v": 0.47,
+   "r": 0.014895833333333336,
+   "color": "azul",
+   "en": 228.971,
+   "sale": 245.044,
+   "alto": 7
+  },
+  {
+   "u": 0.51,
+   "v": 0.23,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 231.271,
+   "sale": 245.044,
+   "alto": 7
+  },
+  {
+   "u": 0.46,
+   "v": 0.55,
+   "r": 0.0103125,
+   "color": "azul",
+   "en": 242.66899999999998,
+   "sale": 245.044,
+   "alto": 7
+  },
+  {
+   "u": 0.565,
+   "v": 0.66,
+   "r": 0.0103125,
+   "color": "azul",
+   "en": 242.86899999999997,
+   "sale": 245.044,
+   "alto": 7
+  },
+  {
+   "u": 0.575,
+   "v": 0.74,
+   "r": 0.0103125,
+   "color": "azul",
+   "en": 243.069,
+   "sale": 245.044,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 229.02100000000002,
+   "a": 245.044,
+   "u": 0.455,
+   "v": 0.47,
+   "alto": 0,
+   "texto": "DORAN",
+   "sub": "AMBESSA",
+   "color": "azul",
+   "dx": -80.80000000000001,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Ambessa.png"
+  },
+  {
+   "de": 231.321,
+   "a": 245.044,
+   "u": 0.51,
+   "v": 0.23,
+   "alto": 0,
+   "texto": "ALVARO",
+   "sub": "SOPORTE DE KOI",
+   "color": "rojo",
+   "dx": 70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Alistar.png"
+  },
+  {
+   "de": 231.061,
+   "a": 245.044,
+   "flecha": "f3",
+   "texto": "ENTRA",
+   "color": "azul",
+   "dx": -110,
+   "dy": 0,
+   "tam": 28
+  },
+  {
+   "de": 242.719,
+   "a": 245.044,
+   "u": 0.46,
+   "v": 0.55,
+   "alto": 0,
+   "texto": "FAKER",
+   "sub": null,
+   "color": "azul",
+   "dx": -66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Syndra.png"
+  },
+  {
+   "de": 242.91899999999998,
+   "a": 245.044,
+   "u": 0.565,
+   "v": 0.66,
+   "alto": 0,
+   "texto": "KERIA",
+   "sub": null,
+   "color": "azul",
+   "dx": 66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Nautilus.png"
+  },
+  {
+   "de": 243.119,
+   "a": 245.044,
+   "u": 0.575,
+   "v": 0.74,
+   "alto": 0,
+   "texto": "PEYZ",
+   "sub": null,
+   "color": "azul",
+   "dx": 66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/t1_koi_worlds/iconos/Xayah.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 227.731,
+   "a": 245.044,
+   "k": 0.4
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/t1_koi_worlds/tactica3d/capas/j2a_fondo.jpg",
+ "_huella": "42f257c34440"
+}

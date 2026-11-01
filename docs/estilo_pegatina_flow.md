@@ -54,7 +54,24 @@ Kit: `nucleo/pegaflow.py` · ESTILO_VISUAL = `"pegatina_flow"` (registrado en `n
   scroll y juntar todas las `img[src*=flow-content]` con su posición (`window.__all`), ordenar por (y, x), INVERTIR (lo nuevo sale arriba)
   → índice k = prompt k//2, variante k%2 → «N uuid expires firma» → `python nucleo/flow_integrado.py bajar <v>` (stdin; el BOM de la
   tubería de PowerShell ya se ignora) → renombrar `scene-NNN.jpg` a `<clave>_a|b.jpg`.
-- **2K (2752x1536, gratis) NO**: menú → Descargar → 2K abre «Guardar como» de Windows POR imagen y el usuario no quiere aceptarlas.
+- **Ingredientes (referencias de estilo/objeto), 22-oct-2026:** (a) **lo más simple (el usuario): Ctrl+V** de una imagen en el
+  campo del prompt de Flow la agrega como ingrediente, sin abrir archivo. Desde Claude: copiar al portapapeles con PowerShell
+  (`Add-Type -A System.Windows.Forms; [Windows.Forms.Clipboard]::SetImage([Drawing.Image]::FromFile('<ruta>'))`, en STA) y pulsar
+  `ctrl+v` con el foco en `.ProseMirror`. (b) En Chrome (Claude in Chrome): gancho a `HTMLInputElement.prototype.click` para
+  que el `input[type=file]` de «Subir archivo multimedia» no abra el cuadro de Windows → `file_upload` sobre él → clic en la fila
+  del recurso → «Añadir a petición». En el navegador integrado el botón abre el cuadro «Abrir» de Windows y no se puede manejar.
+  **El ingrediente se QUITA tras cada envío**: volver a añadirlo antes de cada prompt (`img[alt="Imagen del ingrediente"]` = 0).
+- **REGLA (el usuario, 21-oct-2026): HOJAS de pegatinas en 2K; ESCENARIOS en 1K** (en los fondos no se nota). 1K de todo primero
+  (URLs firmadas + `flow_integrado.py bajar`; la extensión de Chrome corta el «=» final de la firma: añadirlo) para la hoja de
+  contacto y elegir variante; luego 2K solo de las hojas elegidas.
+- **2K = en el CHROME del usuario (decisión del usuario, 21-oct-2026; `videos/secreto_ia/`).** El navegador integrado no tiene ajuste
+  de autodescarga (cada 2K abre «Guardar como») y mandar el blob a un servidor local desde la página lo bloquea el control de
+  seguridad: no insistir. Configuración que deja el usuario en Chrome: Configuración > Descargas > «Preguntar dónde guardar cada
+  archivo antes de descargarlo» APAGADO, y la primera vez que Flow baje varias, «Permitir» descargas múltiples para labs.google.
+  Flujo: Flow en Chrome (Claude in Chrome, sesión de Google del usuario) → menú de cada imagen → Descargar → 2K → caen en
+  `%USERPROFILE%\Downloads` → moverlas a `imagenes/` / `hojas/` del video por orden de descarga (nombre/hora) y renombrar a `<clave>_a|b`.
+  El 1K del integrado sigue valiendo para pruebas rápidas.
+- (histórico) **2K en el navegador integrado NO**: menú → Descargar → 2K abre «Guardar como» de Windows POR imagen y el usuario no quiere aceptarlas.
   El 2K llega como base64 dentro de la respuesta `batchexecute` (rpc `SPrCad`) y la página fuerza la descarga de un blob: no hay URL
   para curl. Un gancho sobre `HTMLAnchorElement.prototype.click` (blob → no descargar) quita las ventanas, pero el archivo no sale del
   navegador. Decisión del usuario: 1K (1376x768); para hojas sobra; los fondos con zoom > 1,25 se ven algo blandos.
@@ -180,6 +197,26 @@ Kit: `nucleo/pegaflow.py` · ESTILO_VISUAL = `"pegatina_flow"` (registrado en `n
   (`videos/asteroide_invisible/prompt_miniatura.md`). El texto complementa al título, no lo repite.
 - Rigor del MASTER: los negros intencionales («Todavía» = corte a negro 1,9 s) se comprueban con `blackdetect` y deben durar < 2 s.
 
+## 7a. Noir de LogIA (`videos/secreto_ia/`, 21-oct-2026: rehecho tras la versión «fea» de Gemini)
+- FICHA «novela gráfica de cine negro en tinta y aguada, SOLO B/N, claroscuro, persianas, lluvia, 1940s + tecnología moderna»: 16
+  fondos y 8 hojas coherentes al primer intento. Caras de porcelana y papeles en GRIS PÁLIDO (el blanco puro se pierde al recortar).
+- La IA como personaje = androide de traje con cara de porcelana sin boca: se lee al instante y da poses (sentada, careta en la
+  mano, escribiendo, escondiendo algo bajo la alfombra). Su SOMBRA en la pared haciendo otra cosa (`_silueta()`, sobre un foco de
+  luz: en pared oscura no se ve) = «lo que dice no coincide con lo que hace».
+- MG de papel por código en `escenas.py` (reutilizables): `hoja()` = la hoja de Flow con texto a máquina (Courier Bold) que se
+  teclea DENTRO del papel; `sello()` de tinta con golpe (claro sobre fondo oscuro); `rot()` tira con Impact; `bocadillo()`; `grande()`
+  cifra blanca; `foto()` = medio REAL clavado (1.ª página de los papers de arXiv con PyMuPDF, retrato de Commons); `tiza()` sobre la
+  pizarra pintada; `apaga_brillos()` (los monitores pintados se apagan); `datos()` entre racks; `lluvia()`, `motas()`, `polillas()`.
+- Final en B/N puro: luminancia tras `PF.acabado(calido=0)`. Impact no tiene «≈» (sale un cuadro) ni Baskervville «→»: usar texto.
+- `PF.T` quita «¿» de las palabras: anclar con «puede», no «¿puede».
+- (rigor del MASTER, 21-oct) Encuadre que pasa del borde inferior del fondo = zigzag de `BORDER_REFLECT` en la franja de abajo (se
+  nota en tablones y alfombras): con zoom z, que el centro cumpla `c_y + 0,5/z ≤ 1` (y `c_y − 0,5/z ≥ 0`). Un personaje alto en un
+  plano cerrado pierde la cabeza: bajar `frac` hasta que entre entero. Al cambiar de personaje en la misma toma, el que sale se
+  desvanece ANTES de que entre el otro (si no, se ve un fantasma encimado).
+- Render en cola detrás del de otra sesión: `videos/secreto_ia/_render_en_cola.ps1` (proceso aparte con `FAB_ESPERAR=<pids>`,
+  log en `previews/`, aviso por voz al terminar). Para pausarlo: detener la cola y todo su árbol de procesos, borrar los
+  `seg_*.tmp.mp4` a medias y relanzar; los segmentos terminados se reutilizan.
+
 ## 7b. Drama íntimo en un pueblo real (taller «La seña», `videos/la_sena/`, 20-oct-2026)
 - FICHA «libro ilustrado mexicano contemporáneo» + detalles concretos del lugar en CADA fondo (block sin enjarre, varillas, tinacos,
   lámina, las dos torres del santuario, la carretera 54) = nada «gringo» al primer intento (32 fondos).
@@ -194,6 +231,18 @@ Kit: `nucleo/pegaflow.py` · ESTILO_VISUAL = `"pegatina_flow"` (registrado en `n
   diapositiva previa al corto = su primer cuadro (`render_mundo`), la siguiente = el último. `empaquetar.py` → un solo HTML con
   todo en base64 (corto a 720p y 2 Mbps; a 1080p crf 25 el grano daba 299 MB). `#diap.paso` en la URL para revisar.
 - Silencio total del negro final: también en `audio/fx.wav` (`SILENCIO` en `fx_audio.py`), no solo en la música.
+
+## 7c. Segundo corto del taller («No vuelve a pasar», `videos/no_vuelve/`, 21-oct-2026)
+- 38 prompts x2 en el integrado a la primera (76/76, 0 puntos, ~12 min); el recorrido de scroll junta las 76 con `Expires` en pares
+  crecientes (comprobación de orden). Escenarios en `imagenes/`, hojas en `hojas/`, sin prefijo numérico.
+- **Máquina armada por código** (la rueda de la fortuna): pedir a Flow la pieza SOLA (rueda sin góndolas ni patas) + utilería suelta
+  (patas en A, góndolas vacías de colores) + una hoja de góndolas CON gente; el código las cuelga del aro (ancla arriba, se mecen) y
+  la gira. Tono propio cálido para lo que tiene luz propia (con el tono nocturno azul la rueda salía lila).
+- **Objetos que viajan con la metáfora**: el ramo, el pan, el radio y el plato roto dentro de las góndolas de la rueda simbólica.
+- **Objetos que cuentan el tiempo**: los platos de barro colgados por código en los clavitos PINTADOS (pedir «a row of EMPTY nails»
+  en el prompt del escenario y medir las cabezas con un recorte ampliado): uno menos en cada escena.
+- Pieza con su mesa: sentarla en la cabecera de la mesa pintada y restaurar el fondo en el rectángulo de la mesa bajo la cubierta.
+- Hoja de control rápida: `python _hoja.py previews/x.jpg [t …]` (un cuadro a mitad de cada toma si no se dan tiempos).
 
 ## 8. Lore oscuro de Warcraft (Crónicas de Warcraft, `videos/wow_darrowshire/`, 20-oct-2026)
 - FICHA «cuento oscuro pintado a mano con proporciones de Warcraft» (gris ceniza + verde de peste + azul de luna, UN acento de vela)
@@ -255,3 +304,74 @@ Kit: `nucleo/pegaflow.py` · ESTILO_VISUAL = `"pegatina_flow"` (registrado en `n
 - Arreglo tras el render completo: editar escenas.py → `cache_escenas.conservar(car, range(0, N), firma_codigo(car, nucleo))` →
   `video --rehacer t0-t1 …` → `final`. Render cortado a medias: borrar los `seg_XXXX.mp4.tmp.mp4` y relanzar `video` (reutiliza
   los hechos). 13:30 de este formato = ~45 min de render con 12 procesos (~16 s por segmento de 3 s).
+- **REVISIÓN DEL USUARIO A «LA CREMATORIA»** (Gaia Eterna, `videos/gaia_crematoria/`, 29-oct-2026), regla fija para los próximos
+  videos de historias contadas, lo vio en el avance de 7,9 min:
+  1. **Mapas sin pixelar:** nunca ampliar un mapa del juego más que su resolución. Tope de zoom **2x** sobre la fuente (más lejos si
+     se ve granulado); si hace falta acercarse más, conseguir el mapa a más resolución en lugar de estirarlo.
+  2. **Fotos REALES del juego** siempre que el guion lo permita, también para LUGARES (no solo personajes), y **más personajes**
+     como pegatinas reales: cada personaje y lugar nombrado lleva su captura real (`_reales.py`), además de la animación de Flow.
+  3. **Escenas que ocurren en el juego** (misiones, cinemáticas, lugares visitables; p. ej. la **posada de Costasur**): varias
+     capturas reales de ese lugar y momento junto a la animación, como pegatinas o un plano a pantalla completa.
+  4. **Clips reales con yt-dlp** de esas escenas del juego cuando el guion lo permita (gameplay o cinemática de la misión; ≤ 8 s por
+     clip, con crédito, encuadrados como pantalla dentro de la escena o como inserto), además de las fotos.
+  5. **Pegatina en la ruta del mapa:** cuando una unidad o un personaje se mueve en el mapa, una pegatina PEQUEÑA con la imagen real
+     del juego de quien se mueve (uno o varios) avanza sobre la ruta junto con la línea (en `mg_mapa`/`mg_wow.ruta`, la punta de la
+     ruta lleva la imagen, no solo el trazo).
+  6. **Pegatina cortada = fallo del recorte, no de la toma:** si un personaje sale SIEMPRE cortado por un borde recto (el hijo de
+     brazos cruzados, desde su primera aparición), rehacer su recorte de la hoja (`pegaflow.py recortar … hoja=N`) una vez y se
+     arregla en todas sus tomas. Antes de las escenas, revisar `_indice.jpg` buscando bordes rectos en cada pieza.
+  8. **REAL antes que Flow (el usuario, 29-oct):** si existe imagen real del personaje del juego, la pegatina es ESA, no la de
+     Flow. Las poses o ciclos que el juego no trae se piden a Flow **con la imagen real del personaje como ingrediente** (Ctrl+V en
+     el campo del prompt, memoria `flow-ingredientes-ctrl-v`), y lo mismo con los LUGARES: la Crematoria, Stratholme, la Capilla…
+     con su captura real como ingrediente. Cuantos más elementos reales (personajes, lugares, objetos, iconos), mejor.
+  9. **Más escenas de DIÁLOGO (para los próximos videos):** no todo narrado. Repartir el guion entre narradora y escenas en las
+     que los personajes hablan entre sí (plano/contraplano, `VOZ_POR_FRASE` con la voz de cada uno y corchetes de actuación), con
+     las bocas y poses de las hojas, como las «escenas largas» de `novela_altar` (memoria `novela-no-trailer`).
+  7. **Video largo (40+ min): enseñar primero el ACTO 1 (~10 min) renderizado** con audio completo y esperar el visto bueno antes del
+     render completo; cada sesión de corrección, un solo frente (el corte de contexto de 180 mil saltó dos veces en este tramo).
+
+## 8b. Película histórica larga (`videos/caxcan_mixton/`, «El llamado del Mixtón», 18 min, 21-oct-2026)
+- **18 min en UNA sesión** (plan MAX): 89 prompts x2 en un lote (0 errores), 155 tomas escritas por actos (prefijo de 2-3 letras
+  por escena) y revisadas con `_vivo.py hoja` (12 cuadros por hoja, un cuadro al 62 % de cada toma: `_muestras.py t0 t1` da los
+  tiempos y la comprobación AST). `_tiempos.py esc…` = inicio/fin de cada frase para planear una imagen por frase.
+- **Orden del lote**: `paquete` envía las claves en orden ALFABÉTICO de `prompts.json` → `_repartir.py` (N = k+1, prompt k//2,
+  variante k%2). `_elegir.py` cambia a la `b` las hojas cuya `a` salió en 2 filas / encimada; `_marcos.py` quita marcos de papel.
+- **Ciclos sin la palabra clave**: `c09_zopilote` y `c11_tameme` no salieron como ciclo (el nombre no llevaba «aleteo/camina»):
+  copiar la hoja como `<clave>_aleteo_a.jpg` / `_camina_a.jpg` y recortar con `=N`. Ciclos rotos (picas partidas, fardo cortado): títeres de la hoja de poses.
+- **Whisper y los nombres** (Ollin → Olin/Ogin/Ojin, Nochistlán → Nochislán, «nos herraron» → «nos cerraron», «Tensa» susurrado →
+  «Pensa»): `CER_MAX_POR_FRASE` / `GAP_MAX_POR_FRASE` (pausas `[short pause]`) / `TAIL_MAX_POR_FRASE` tras comprobar la cola
+  (ElevenLabs no deja silencio: la última palabra cae en el 8 % final y se apaga limpia) — NO regenerar: no gasta créditos.
+- **Viento procedural estirado = ruido fuerte** (el usuario: «en algunas partes el viento se escucha muy fuerte»): `s_viento`
+  es una ráfaga de ~1 s; con `dur=13-41` queda un siseo continuo en los medios sobre la voz. Ambientes largos = GRABADOS de la
+  biblioteca (`sfx usar la_sena__alba / la_sena__grillos / wow_tres_noches__viento`) en bucle con fundido cruzado y la misma
+  sonoridad: `escenas.AMB` → `_fx_ambiente.py` → `audio/fx.wav`. El `viento` procedural solo en golpes cortos (≤ 7 s, vol ≤ 0,25).
+- **Visiones en el humo** (lo que cuentan los mercaderes: jinete, armadura, arcabuz): `vision()` = la pieza teñida de brasa,
+  difuminada (σ 2) y SUMADA como diferencia sobre el cuadro, con humo que la atraviesa; opaca se lee como un jinete real en el paisaje.
+- **Bailes en círculo**: `ronda()` (mitad de atrás antes de la hoguera, mitad de delante después; tamaño por perspectiva).
+- **Nada de escenario vacío ni en lo trágico**: el «se arrojaron a la barranca» = tres siluetas al borde que se DESVANECEN
+  (sin mostrar la caída); la plaza de hoy = antepasados translúcidos (op 0,55); el Mixtón de hoy = Ollin anciano de espaldas en primer plano.
+- PowerShell: `R` es alias de `Invoke-History` (una función `R` no se define); un `.ps1` sin BOM con acentos se lee como ANSI y
+  falla al parsear: scripts de lanzamiento sin acentos, y reemplazos masivos con un `.py` (cuenta exacta de cada `old`).
+
+## 9. Divulgación con mascota (Sapiens con Wifi, `videos/frio_extremo/`, 21-oct-2026)
+- **11:51 de pegatina Flow en UNA sesión** (plan MAX): 37 escenarios x2 + 18 hojas en un solo lote (55 prompts, 0 puntos, sin
+  errores), ~95 tomas en `escenas.py` escritas en 3 tandas (archivo `_tandaN.py` + inserción antes de «composición»: los comandos de
+  > 8 KB fallan en la terminal), revisadas con `_vivo.py hoja` (12 cuadros por hoja) antes del render.
+- **Pasar un video ya grabado a este estilo**: el guion se recortó de 15 a 11 min quitando frases ENTERAS y `_remap_voz.py`
+  reasignó las tomas viejas a las claves nuevas por TEXTO idéntico (voz/cands + eval.json): 129 de 130 frases sin regenerar.
+- **Piezas blancas** (bloques de nieve, iglú, vaho): hoja «on a plain flat medium-grey background» → recorte perfecto (en blanco se pierden).
+- **Recolector de Flow**: el scroll virtual necesita ~700 ms por paso de 370 px (con 280 ms solo juntó 8 de 110); en 3 llamadas
+  de `__scan(a, b)` de 14 000 px cada una (< 45 s por llamada).
+- **Rejilla de colocación**: `videos/frio_extremo/_rejilla.py salida.jpg fondo1 fondo2 …` (2 columnas, 10x10) = coordenadas de
+  fogatas, puertas, mapa y suelo libre sin adivinar.
+- **Frío por código** (en `escenas.py` del video, reutilizable): `nieve()` en 2 profundidades (`viento` > 1 = ventisca en rayas),
+  `escarcha()` desde los bordes (la 1.ª versión con umbral sobre ruido salió en manchas tipo compresión: usar distancia al borde ×
+  ruido de baja frecuencia y potencia 1,5), `aliento()` (pieza de vaho periódica), `tirita()` (temblor), cota, tachón rojo, hélice
+  de ADN, burbujas de aire, flechas de aire frío/tibio con partículas sobre el corte del iglú, ruta animada sobre el mapa pintado
+  (`ruta_mapa`), cúpula que se arma bloque a bloque.
+- **NUNCA llamar una toma como un módulo**: `def cv2(lz, t)` (escena «cuevas») tapó `import cv2` y rompió todas las tomas.
+  Prefijos de 3 letras (`cav1`) y la comprobación AST de nombres repetidos antes de renderizar.
+- Mascota protagonista: la misma hoja de poses sirve de hilo (frío en la sala moderna → ventisca → sabana → mapa → casa de hoy) y
+  a pantalla grande para los MG del cuerpo (brillo rojo en corazón/cerebro, azul en manos; zoom a la mano moviendo el ancla).
+- Miniatura de la serie en Flow con el trazo del video y la fórmula previa del canal (2 palabras rojas + mascota + flecha al
+  objeto): `videos/frio_extremo/prompt_miniatura.md`, 4/4 bien a la primera.

@@ -72,6 +72,21 @@ img = h.acabado(t, niebla=dict(dens=0.26))
   por cuadro con la CPU libre (×10 si hay otro render en marcha).
 - Personajes de cuerpo entero: el codo con `flex=1` siempre (si no, el brazo colgando dobla hacia arriba).
 
+## Lecciones del segundo video completo («El gran expediente: Las 1.200», `videos/sociedad_1200/`, 12-oct-2026; 15:47, 28 escenas)
+- **Tech-noir** (LogIA): el protagonista visual es LA COPIA (`reparto.py`: reo de overol con número y CABEZA DE MONITOR cuya pantalla es su
+  cara: `Copia.perfil/frente/cabeza`, expresiones neutro·feliz·triste·astuto·miedo·sorpresa·linea·error·carga·pregunta·texto·alarma);
+  humanos con `noir_pers.Figura/Frontal/Detective/Busto`; kit propio `props_s.py` (candado, captcha, chat, tarjeta+hilo, sobre, mano…),
+  `comun.py` (banda/cinta/cartel/ambiente/temblor/chispas), `basen.py` (BaseNoir con `armar/sonidos`), `kit27.py`.
+- Lugares: 6 módulos `mundos_N.py` (≈ 60 lugares pintados con `Lienzo` + piezas de `mundos_base`); mapa de Europa con relieve ETOPO1 +
+  Natural Earth (`mundos_4.mapa_europa`); calle en perspectiva `mundos_5.calle_lluvia`; ficha real de Altman/Delangue/LeCun/Bostrom.
+- Flujo de trabajo por tramos: `_lote.py <escena> --fr 0.5,0.9 --procs 4` (un cuadro por toma → hoja) + `_cuadro.py` (tamaño completo);
+  anclas por palabra `self.w("palabra")` y `self.plano(t, fn, tr=…, pal=…)`; una toma cada 3-5 s con cámara siempre en movimiento.
+- **`NC.pegar(..., oscuro=k)` es GANANCIA** (k>1 aclara). Muros a tono ≤ 0,2 con `piedra` salen negros junto a las emisivas (parecen
+  recortes de papel): muros 0,25-0,35. Las `banda` abajo tapan los pies: en tomas de pies, arriba (y=120).
+- Música: SIEMPRE Lyria (`LYRIA` en guion.py con `tramos=[…]`, `nucleo/lyria_tramos.py`); voz ElevenLabs con escritura normal (cifras, no «once»).
+- Render: reutiliza segmentos de la vista previa (`cache_escenas`): tras cambiar guion/timeline/código hay que `conservar` los vigentes y
+  borrar los de las escenas cuyo timing cambió (si no, `depurar` descarta todos).
+
 ## Pruebas
 - `python videos/prueba_noir_color/prueba.py hoja 2 9 14 26` · `paletas 9` (sodio/bourbon/medianoche lado a lado) · `video --procs 6 --paleta sodio`
 - `python videos/prueba_noir_feudal/prueba.py hoja 2 9 14 26` · `paletas 9` (antorcha/pergamino) · `video --procs 6 --paleta antorcha`

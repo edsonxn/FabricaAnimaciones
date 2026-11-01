@@ -204,7 +204,7 @@ LYRIA = dict(
              "Keep it as a bed under dialogue; end on the final sting.")],
 )
 
-MEZCLA = dict(musica=-22.0)   # la música va bajo el diálogo de los clips
+MEZCLA = dict(musica=-25.0)   # cama bajo el diálogo; mezcla.py la agacha 12 dB cuando hablan (novela, 23-oct)
 TRANSICIONES = [("corte", 0.0)] * 5
 MUSICA = {"gancho": dict(sabor="tension"), "susto": dict(sabor="tension"), "revelacion": dict(sabor="tension")}
 

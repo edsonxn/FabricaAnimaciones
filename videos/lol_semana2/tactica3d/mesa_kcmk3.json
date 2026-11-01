@@ -1,0 +1,187 @@
+{
+ "modo": "mesa",
+ "de": 1194.53,
+ "a": 1202.73,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_kcmk3_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Busio": {
+   "jugador": "Busio",
+   "campeon": "Seraphine",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Seraphine.png",
+   "puntos": [
+    [
+     0,
+     0.335,
+     0.31
+    ]
+   ],
+   "de": 1194.93,
+   "sale": 1201.73
+  },
+  "Yike": {
+   "jugador": "Yike",
+   "campeon": "MonkeyKing",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/MonkeyKing.png",
+   "puntos": [
+    [
+     0,
+     0.52,
+     0.27
+    ]
+   ],
+   "de": 1195.01,
+   "sale": 1201.73
+  },
+  "Elyoya": {
+   "jugador": "Elyoya",
+   "campeon": "Sejuani",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Sejuani.png",
+   "puntos": [
+    [
+     0,
+     0.54,
+     0.58
+    ]
+   ],
+   "de": 1195.09,
+   "sale": 1201.73
+  },
+  "Supa": {
+   "jugador": "Supa",
+   "campeon": "Zeri",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Zeri.png",
+   "puntos": [
+    [
+     0,
+     0.65,
+     0.76
+    ]
+   ],
+   "de": 1195.17,
+   "sale": 1201.73
+  }
+ },
+ "camara": [
+  [
+   1194.53,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1194.8799999999999,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1197.154,
+   -18,
+   36,
+   50,
+   0.45,
+   0.45
+  ],
+  [
+   1199.614,
+   14,
+   40,
+   47.5,
+   0.45,
+   0.45
+  ],
+  [
+   1201.83,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1202.73,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "r_myrwn",
+   "pts": [
+    [
+     0.3909,
+     0.6189
+    ],
+    [
+     0.4237,
+     0.2787
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 1.5,
+   "grosor": 1.2,
+   "en": 1199.27,
+   "sale": 1201.73
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.37,
+   "v": 0.43,
+   "alto": 0,
+   "texto": "CALISTE",
+   "sub": "ATURDIDO",
+   "color": "azul",
+   "dx": -180,
+   "dy": 30,
+   "de": 1195.13,
+   "a": 1201.73
+  },
+  {
+   "u": 0.47,
+   "v": 0.33,
+   "alto": 0,
+   "texto": "EL ANCIANO",
+   "sub": "14 366 DE VIDA",
+   "color": "amarillo",
+   "dx": 120,
+   "dy": -90,
+   "de": 1195.43,
+   "a": 1201.73
+  },
+  {
+   "u": 0.4,
+   "v": 0.62,
+   "alto": 0,
+   "texto": "MYRWN · CAMILLE",
+   "sub": "POR LA IZQUIERDA",
+   "color": "rojo",
+   "dx": -190,
+   "dy": 50,
+   "de": 1199.27,
+   "a": 1201.73
+  }
+ ]
+}

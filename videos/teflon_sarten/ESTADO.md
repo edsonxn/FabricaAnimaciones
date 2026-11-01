@@ -3,6 +3,7 @@
 - canal: pieza_oculta (Plastitube) · PROGRAMADO mar 3-nov-2026 13:00 CDMX (https://youtu.be/bQj_Ip4dhEo; publishAt 2026-11-03T19:00:00Z; sigue el ciclo semanal de martes)
 - estilo: secuencia_flow (plastilina, SOLO imágenes de Google Flow) → docs/estilo_secuencia_flow.md · ejemplo: videos/ciempies_casa/
 - etapa: SUBIDO EN PRIVADO el 7-oct-2026 → https://youtu.be/bQj_Ip4dhEo (aprobado por el usuario; miniatura «¿Y EL GAS?» de Flow; alternativa en previews/mini_b.jpg); sin fecha de publicación
+- ✅ **PÚBLICO** desde el dom 25-oct 13:00 (el registro de abajo que dice 3-nov está viejo) CDMX · https://youtu.be/bQj_Ip4dhEo (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: el usuario decide fecha (ocupados 13, 20 y 27-oct 19:00 UTC) → `python fab.py yt publicar pieza_oculta bQj_Ip4dhEo private --programar <fecha>Z`; subir el .srt a mano en Studio o reconectar el canal (`python fab.py yt conectar`: el token no tiene permiso de subtítulos)
 
 ## Decisiones del episodio

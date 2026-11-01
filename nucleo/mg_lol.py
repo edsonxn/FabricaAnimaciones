@@ -27,6 +27,9 @@ recortado) y arte de campeones (Data Dragon). Cero datos inventados: todo sale d
   calendario(titulo, hitos)                          línea de fechas; la última (la final) con halo
   barras(titulo, items, total)                       picks de campeones: barra por marca, «12 de 29»
   duelo(a, b, titulo, filas)                         cara a cara por posición: dos fotos y barras que crecen desde el centro
+  tablero_suizo(titulo, columnas, logos, estados)    16 escudos por récord que VUELAN de columna en cada marca (31-oct-2026)
+  premio(categoria, foto, nombre, logo, datos)       lo mejor / lo peor de la semana: rayos, foto, datos por marca, sello
+  llave(titulo, cruces)                              cuartos → semifinales → final: los cruces entran por marca y las líneas se trazan
 """
 import math
 import os
@@ -1270,5 +1273,235 @@ def duelo(a, b, titulo, filas, W_=1760, H_=700):
         out = _brillo_barrido(out, (dt - .5) / .8)
         ang = 4 * (1 - _eo(dt / .6)) * 3 + 1.6 * math.sin(dt * 1.1)
         return _perspectiva(out, ang)
+
+    return fn
+
+
+def _ficha_hex(logo, t, color, gris=False):
+    """Escudo hexagonal con el logo: pieza de `tablero_suizo`."""
+    im = Image.new("RGBA", (t, t), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    c = _c(color)
+    r = t / 2 - 3
+    pts = [(t / 2 + r * math.cos(math.radians(60 * k - 90)), t / 2 + r * math.sin(math.radians(60 * k - 90))) for k in range(6)]
+    d.polygon(pts, fill=NOCHE + (238,))
+    d.line(pts + pts[:1], fill=c + (255,), width=4, joint="curve")
+    lg = _img(logo, alto=int(t * .6), ancho=int(t * .6), gris=gris)
+    if gris:
+        lg.putalpha(lg.getchannel("A").point(lambda a: int(a * .6)))
+    im.alpha_composite(lg, ((t - lg.width) // 2, (t - lg.height) // 2))
+    return _np(im)
+
+
+def tablero_suizo(titulo, columnas, logos, estados, W_=1800, H_=900, t=152):
+    """Mesa de la fase suiza con escudos que se MUEVEN. columnas = [(encabezado, color)]; logos = {código: ruta};
+    estados = [[[código, ...] por columna] ...]. En la marca k cada escudo que cambió de columna vuela en arco hasta su sitio del
+    estado k + 1, uno tras otro (0,16 s), y al aterrizar da un anillo de luz. Los de la columna roja se apagan."""
+    n = len(columnas)
+    cab = 74
+    cw = (W_ - 40) / n
+    y0, paso = cab + 150, t + 16
+    k = ("suizo", titulo, tuple(c[0] for c in columnas), str(estados))
+    if k not in _cache:
+        cabs = []
+        for enc, col in columnas:
+            hd, P = _panel(int(cw - 24), 76, col, alfa=240)
+            _texto(ImageDraw.Draw(hd), (P + (cw - 24) / 2, P + 40), enc.upper(), fuente("Bold Condensed", 46),
+                   _c(col) if col != "oro" else ORO_C, "mm", track=2)
+            cabs.append(_np(hd))
+        fichas = {}
+        for cod, ruta in logos.items():
+            fichas[cod] = {c: _ficha_hex(ruta, t, columnas[c][1], gris=columnas[c][1] == "rojo") for c in range(n)}
+        _cache[k] = (cabs, fichas)
+    cabs, fichas = _cache[k]
+
+    def sitio(c, i):
+        return 20 + cw * c + cw / 2 + (i % 2 - .5) * (t + 12), y0 + (i // 2) * paso + t / 2
+
+    pos = [{cod: (c, i) for c, lista in enumerate(st) for i, cod in enumerate(lista)} for st in estados]
+    cabe = _cabecera(titulo, W_)
+
+    def fn(dt, dur, marcas):
+        out = _vacio(W_, H_)
+        uc = _eo(dt / .35)
+        if uc > 0:
+            _sobre(out, cabe, int(-60 * (1 - uc)), 0, uc)
+        for c, hd in enumerate(cabs):
+            u = _eo((dt - .1 - .07 * c) / .4)
+            if u > 0:
+                _sobre(out, hd, int(20 + cw * c + 2), cab + 30 + int(40 * (1 - u)), u)
+        vuelos = []
+        for cod in logos:
+            if cod not in pos[0]:
+                continue
+            c0, i0 = pos[0][cod]
+            x, y = sitio(c0, i0)
+            col, esc, aterriza = c0, _pop(dt - .3 - .025 * (c0 * 8 + i0), .4), None
+            for e in range(1, len(pos)):
+                c1, i1 = pos[e][cod]
+                c_ant, i_ant = pos[e - 1][cod]
+                if (c1, i1) == (c_ant, i_ant):
+                    continue
+                mov = [q for q in logos if pos[e][q] != pos[e - 1][q]]
+                tk = _mk(marcas, e - 1, 1.5 + 3 * (e - 1)) + .16 * mov.index(cod)
+                u = (dt - tk) / .7
+                if u <= 0:
+                    break
+                xa, ya = sitio(c_ant, i_ant)
+                xb, yb = sitio(c1, i1)
+                if u >= 1:
+                    x, y, col = xb, yb, c1
+                    if 0 < dt - tk - .7 < .5:
+                        aterriza = (dt - tk - .7) / .5
+                    continue
+                v = _eio(u)
+                xv = xa + (xb - xa) * v
+                yv = ya + (yb - ya) * v - math.sin(math.pi * v) * (90 + abs(xb - xa) * .12)
+                vuelos.append((xv, yv, fichas[cod][c1 if v > .5 else c_ant], 1 + .22 * math.sin(math.pi * v)))
+                x = None
+                break
+            if x is None or esc <= .02:
+                continue
+            _centro(out, fichas[cod][col], x, y, min(1.25, esc), clamp(esc * 2))
+            if aterriza is not None:
+                cc = _c(columnas[col][1])
+                ov = out.copy()
+                cv2.circle(ov, (int(x), int(y)), int(t * (.5 + .5 * aterriza)), cc[::-1] + (255,), 5, cv2.LINE_AA)
+                out = cv2.addWeighted(ov, 1 - aterriza, out, aterriza, 0)
+        for x, y, fi, esc in vuelos:                       # lo que vuela va por encima de todo
+            _centro(out, fi, x, y, esc)
+        return out
+
+    return fn
+
+
+def premio(categoria, foto, nombre, logo, datos, color="oro", sub=None, sello=None, gris=False, W_=1560, H_=800):
+    """Lo mejor / lo peor de la semana. Rayos que giran detrás de la foto, chip de categoría, nombre enorme y `datos` (líneas de
+    texto) que entran por marca; el `sello` cae en la marca siguiente a la última línea."""
+    k = ("premio", categoria, nombre, tuple(datos), color)
+    fw = 620
+    if k not in _cache:
+        panel, P = _panel(W_ - fw + 60, 470, color, sesgo=12)
+        pn = Image.new("RGBA", panel.size, (0, 0, 0, 0))
+        pn.alpha_composite(panel)
+        dd = ImageDraw.Draw(pn)
+        x = P + 60
+        if logo:
+            lg = _img(logo, alto=86, ancho=86)
+            pn.alpha_composite(lg, (x, P + 34))
+            x += 106
+        _texto(dd, (x, P + 76), nombre.upper(), fuente("Bold Condensed", 96), (255, 255, 255), "lm", track=2)
+        if sub:
+            _texto(dd, (P + 60, P + 150), sub.upper(), fuente("SemiBold Condensed", 36), ORO_C, "lm", track=2)
+        lineas = []
+        for s in datos:
+            li = Image.new("RGBA", (W_ - fw - 40, 66), (0, 0, 0, 0))
+            dl = ImageDraw.Draw(li)
+            dl.polygon([(4, 18), (24, 33), (4, 48)], fill=_c(color) + (255,))
+            _texto(dl, (40, 33), s, fuente("SemiBold Condensed", 42), (240, 243, 250), "lm")
+            lineas.append(_np(li))
+        cabc = Image.new("RGBA", (W_, 96), (0, 0, 0, 0))
+        dc = ImageDraw.Draw(cabc)
+        fc = fuente("Bold Condensed", 58)
+        tw = _ancho(categoria.upper(), fc, 4)
+        dc.polygon([(30, 8), (72 + tw, 8), (98 + tw, 86), (30, 86)], fill=_c(color) + (255,))
+        _texto(dc, (50, 48), categoria.upper(), fc, NOCHE, "lm", sombra=False, track=4)
+        _cache[k] = (_np(pn), lineas, _np(cabc), _np(_base_pegatina(foto, 640, borde=9, gris=gris)))
+    pn, lineas, cabc, fo = _cache[k]
+    c = _c(color)
+    cx, cy = fw * .46, H_ * .56
+
+    def fn(dt, dur, marcas):
+        out = np.zeros((H_, W_, 4), np.uint8)
+        if dt <= 0:
+            return out
+        R_ = 900 * _eo(dt / .5)
+        for j in range(14):
+            a0 = dt * .22 + j * math.pi / 7
+            p = np.array([[cx, cy], [cx + R_ * math.cos(a0), cy + R_ * math.sin(a0)],
+                          [cx + R_ * math.cos(a0 + .13), cy + R_ * math.sin(a0 + .13)]], np.int32)
+            cv2.fillConvexPoly(out, p, c[::-1] + (46,), cv2.LINE_AA)
+        up = _eo((dt - .2) / .45)
+        if up > 0:
+            _sobre(out, pn, int(fw - 80 + 90 * (1 - up)), 200, up)
+        uc = _eo((dt - .1) / .35)
+        if uc > 0:
+            _sobre(out, cabc, int(-80 * (1 - uc)), 40, uc)
+        s = _pop(dt - .25, .5)
+        if s > .02:
+            _centro(out, fo, cx, cy + 90 * (1 - min(1, s)) + 5 * math.sin(dt * 1.5), min(1.0, s))
+        for i, li in enumerate(lineas):
+            tk = _mk(marcas, i, .8 + .7 * i)
+            u = _eo((dt - tk) / .35)
+            if u > 0:
+                _sobre(out, li, int(fw + 10 + 40 * (1 - u)), 412 + i * 72, u)
+        if sello:
+            tk = _mk(marcas, len(lineas), .9 + .7 * len(lineas))
+            u = clamp((dt - tk) / .3)
+            if u > 0:
+                _sello(out, sello, W_ - 300, 300, u, _c(color if color != "oro" else "amarillo"), tam=74)
+        out = _brillo_barrido(out, (dt - .5) / .8)
+        return _perspectiva(out, 1.5 * math.sin(dt * .9))
+
+    return fn
+
+
+def llave(titulo, cruces, final="FINAL · 14 NOV", W_=1820, H_=880):
+    """Cuadro final. cruces = 4 × (logo_a, nombre_a, logo_b, nombre_b, fecha): los dos primeros a la izquierda, los otros dos a
+    la derecha; entran por marca, las líneas se trazan hacia el centro y la final late con su halo."""
+    k = ("llave", titulo, str([(c[1], c[3]) for c in cruces]))
+    pw, ph = 560, 176
+    sitios = [(30, 140), (30, 520), (W_ - pw - 30, 140), (W_ - pw - 30, 520)]
+    if k not in _cache:
+        pz = []
+        for la, na, lb, nb, fecha in cruces:
+            pn, P = _panel(pw - 20, ph - 20, "oro", alfa=232)
+            d = ImageDraw.Draw(pn)
+            for j, (lg, nm) in enumerate(((la, na), (lb, nb))):
+                y = P + 18 + j * 66
+                if lg:
+                    pn.alpha_composite(_img(lg, alto=56, ancho=56), (P + 26, y))
+                _texto(d, (P + 100, y + 28), nm.upper(), fuente("Bold Condensed", 46), (255, 255, 255), "lm", track=1)
+            _texto(d, (P + pw - 50, P + (ph - 20) / 2), fecha.upper(), fuente("SemiBold Condensed", 32), ORO_C, "rm", track=1)
+            pz.append(_np(pn))
+        f, P = _panel(420, 150, "amarillo", alfa=245)
+        _texto(ImageDraw.Draw(f), (P + 210, P + 76), final.upper(), fuente("Bold Condensed", 56), _c("amarillo"), "mm", track=2)
+        _cache[k] = (pz, _np(f))
+    pz, fin = _cache[k]
+    cabe = _cabecera(titulo, W_)
+    cxf, cyf = W_ / 2, 440
+
+    def fn(dt, dur, marcas):
+        out = _vacio(W_, H_)
+        uc = _eo(dt / .35)
+        if uc > 0:
+            _sobre(out, cabe, int(-60 * (1 - uc)), 0, uc)
+        for i, pn in enumerate(pz):
+            tk = _mk(marcas, i, .4 + .9 * i)
+            u = _eo((dt - tk) / .4)
+            if u <= 0:
+                continue
+            x, y = sitios[i]
+            izq = i < 2
+            _sobre(out, pn, int(x + (-70 if izq else 70) * (1 - u)), y, u)
+            ul = clamp((dt - tk - .35) / .6)
+            if ul > 0:
+                ya = y + ph / 2
+                xm = cxf + (-300 if izq else 300)
+                pts = [(x + pw - 20 if izq else x, ya), (xm, ya), (xm, cyf), (cxf + (-210 if izq else 210), cyf)]
+                largos = [abs(pts[j + 1][0] - pts[j][0]) + abs(pts[j + 1][1] - pts[j][1]) for j in range(3)]
+                resto = sum(largos) * ul
+                for j in range(3):
+                    v = min(1.0, resto / largos[j]) if largos[j] else 0
+                    if v <= 0:
+                        break
+                    p1 = (pts[j][0] + (pts[j + 1][0] - pts[j][0]) * v, pts[j][1] + (pts[j + 1][1] - pts[j][1]) * v)
+                    cv2.line(out, (int(pts[j][0]), int(pts[j][1])), (int(p1[0]), int(p1[1])), ORO[::-1] + (255,), 5, cv2.LINE_AA)
+                    resto -= largos[j]
+        tk = _mk(marcas, len(pz), .6 + .9 * len(pz))
+        s = _pop(dt - tk, .5)
+        if s > .02:
+            _centro(out, fin, cxf, cyf, min(1.0, s) * (1 + .018 * math.sin((dt - tk) * 3.2)))
+        return out
 
     return fn

@@ -1,0 +1,182 @@
+{
+ "modo": "video",
+ "de": 1534.65,
+ "a": 1540.667,
+ "anillos": [
+  {
+   "u": 0.345,
+   "v": 0.39,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 1534.95,
+   "sale": 1540.667
+  },
+  {
+   "u": 0.29,
+   "v": 0.56,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 1535.1000000000001,
+   "sale": 1540.667
+  },
+  {
+   "u": 0.21,
+   "v": 0.6,
+   "r": 0.021875,
+   "color": "rojo",
+   "en": 1535.25,
+   "sale": 1540.667
+  },
+  {
+   "u": 0.46,
+   "v": 0.59,
+   "r": 0.020833333333333332,
+   "color": "azul",
+   "en": 1535.4,
+   "sale": 1540.667
+  },
+  {
+   "u": 0.55,
+   "v": 0.6,
+   "r": 0.01875,
+   "color": "azul",
+   "en": 1535.5500000000002,
+   "sale": 1540.667
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.345,
+   "v": 0.39,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 1535.05,
+   "sale": 1540.667,
+   "alto": 7
+  },
+  {
+   "u": 0.29,
+   "v": 0.56,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 1535.2,
+   "sale": 1540.667,
+   "alto": 7
+  },
+  {
+   "u": 0.21,
+   "v": 0.6,
+   "r": 0.01203125,
+   "color": "rojo",
+   "en": 1535.35,
+   "sale": 1540.667,
+   "alto": 7
+  },
+  {
+   "u": 0.46,
+   "v": 0.59,
+   "r": 0.011458333333333334,
+   "color": "azul",
+   "en": 1535.5,
+   "sale": 1540.667,
+   "alto": 7
+  },
+  {
+   "u": 0.55,
+   "v": 0.6,
+   "r": 0.0103125,
+   "color": "azul",
+   "en": 1535.65,
+   "sale": 1540.667,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 1535.1000000000001,
+   "a": 1540.667,
+   "u": 0.345,
+   "v": 0.39,
+   "alto": 0,
+   "texto": "FEISTY",
+   "sub": null,
+   "color": "rojo",
+   "dx": -68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Ryze.png"
+  },
+  {
+   "de": 1535.2500000000002,
+   "a": 1540.667,
+   "u": 0.29,
+   "v": 0.56,
+   "alto": 0,
+   "texto": "ACKERMAN",
+   "sub": null,
+   "color": "rojo",
+   "dx": -68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Renata.png"
+  },
+  {
+   "de": 1535.4,
+   "a": 1540.667,
+   "u": 0.21,
+   "v": 0.6,
+   "alto": 0,
+   "texto": "CURSE",
+   "sub": null,
+   "color": "rojo",
+   "dx": -71.80000000000001,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Chogath.png"
+  },
+  {
+   "de": 1535.5500000000002,
+   "a": 1540.667,
+   "u": 0.46,
+   "v": 0.59,
+   "alto": 0,
+   "texto": "DHOKLA",
+   "sub": null,
+   "color": "azul",
+   "dx": 70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/KSante.png"
+  },
+  {
+   "de": 1535.7000000000003,
+   "a": 1540.667,
+   "u": 0.55,
+   "v": 0.6,
+   "alto": 0,
+   "texto": "ISLES",
+   "sub": null,
+   "color": "azul",
+   "dx": 66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Milio.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [
+  {
+   "de": 1534.75,
+   "a": 1540.667,
+   "texto": "BERSERKER, ADELANTADO",
+   "sub": "«UN ERROR GRAVÍSIMO»",
+   "color": "azul",
+   "y": 240.0,
+   "tam": 36
+  }
+ ],
+ "fondo": "/videos/lol_semana2/tactica3d/capas/loly2a_fondo.jpg",
+ "_huella": "8f81248afd7e"
+}

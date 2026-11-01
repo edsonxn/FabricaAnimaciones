@@ -1,0 +1,866 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.844,
+  "tipo": "video",
+  "texto": "Esta tarde, T1 y Movistar KOI se jugaron un boleto a los cuartos de final del Mundial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.844,
+  "t1": 18.384,
+  "tipo": "video",
+  "texto": "Y fue una serie con de todo: un arranque que nadie esperaba, un dragón robado en el peor momento… y una pelea que lo decidió todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.384,
+  "t1": 28.994,
+  "tipo": "video",
+  "texto": "Hoy analizamos las mejores jugadas de la serie, pausa por pausa: dónde estaba cada jugador, qué quería hacer… y por qué salió como salió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 28.994,
+  "t1": 34.814,
+  "tipo": "video",
+  "texto": "Primero, lo que estaba en juego. En la fase suiza, con tres victorias pasas a cuartos;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.814,
+  "t1": 43.821,
+  "tipo": "video",
+  "texto": "con tres derrotas, te vas a casa. T1 y KOI llegaban con dos victorias y una derrota, y las dos derrotas, contra el mismo equipo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.821,
+  "t1": 51.0,
+  "tipo": "video",
+  "texto": "Dplus KIA. El que ganara hoy, a cuartos de final. Al mejor de tres, con Fearless Draft:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.0,
+  "t1": 58.557,
+  "tipo": "video",
+  "texto": "un campeón que ya se usó en la serie no se puede volver a elegir. Cómo llegaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.557,
+  "t1": 70.474,
+  "tipo": "video",
+  "texto": "T1, el campeón de los últimos tres Mundiales, va por algo que nadie ha hecho: el cuarto seguido. Debutó despachando a Los Grandes, de Brasil, en veinticuatro minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.474,
+  "t1": 76.014,
+  "tipo": "video",
+  "texto": "Después perdió con Dplus KIA, en una pelea por el dragón ancestral que se le volteó de la nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.014,
+  "t1": 85.802,
+  "tipo": "video",
+  "texto": "Y se recuperó ganándole a CTBC Flying Oyster. KOI, el equipo español de Ibai y Piqué, arrancó ganándole a Bilibili Gaming en una",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.802,
+  "t1": 95.046,
+  "tipo": "video",
+  "texto": "partida apretadísima, y después a CTBC Flying Oyster, diecinueve a siete. Pero a KOI también lo frenó Dplus KIA:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 95.046,
+  "t1": 102.114,
+  "tipo": "video",
+  "texto": "dos a cero, con un pentakill de Smash en la primera partida. Partida uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 102.114,
+  "t1": 112.869,
+  "tipo": "video",
+  "texto": "T1, del lado azul: Doran con Ambessa, Oner con Lee Sin, Faker con Syndra, Peyz con Xayah y Keria con Nautilus.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.869,
+  "t1": 118.969,
+  "tipo": "video",
+  "texto": "KOI, del lado rojo: Myrwn con Gnar, Elyoya con Qiyana, Jojopyun con Akali,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 118.969,
+  "t1": 141.464,
+  "tipo": "video",
+  "texto": "Supa con Kai'Sa y Alvaro con Alistar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 141.464,
+  "t1": 145.204,
+  "tipo": "video",
+  "texto": "Rebobinemos al principio. Minuto cinco. Jojopyun,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 145.204,
+  "t1": 149.647,
+  "tipo": "video",
+  "texto": "con Akali, ya le había quemado el Destello a Faker un poco antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 149.647,
+  "t1": 155.047,
+  "tipo": "video",
+  "texto": "Pausa. Faker está en el río, sin Destello… y por abajo viene Alvaro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.047,
+  "t1": 163.63,
+  "tipo": "video",
+  "texto": "el soporte de KOI, desde la jungla. Nadie en T1 lo ve venir. Lo acorralan entre los dos… y primera sangre para KOI:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.63,
+  "t1": 171.792,
+  "tipo": "video",
+  "texto": "Jojopyun sobre Faker. Sin Destello, como dijeron los narradores, ya no había nada que hacer. Minuto ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.792,
+  "t1": 180.782,
+  "tipo": "video",
+  "texto": "Pausa otra vez. Ahora el que entra es Elyoya, con Qiyana, a la jungla de T1… donde T1 no tiene ni una guardia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.782,
+  "t1": 189.515,
+  "tipo": "video",
+  "texto": "Con el combo de Alistar y Qiyana derriten a Oner… y seis segundos después cae Peyz. ¡Tres a cero para KOI, y mil setecientos de oro arriba!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.515,
+  "t1": 193.955,
+  "tipo": "video",
+  "texto": "Ese era el plan de KOI: castigar cada rincón del mapa sin visión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 193.955,
+  "t1": 216.494,
+  "tipo": "video",
+  "texto": "Y le estaba saliendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 216.494,
+  "t1": 219.974,
+  "tipo": "video",
+  "texto": "Rebobinemos. Minuto veintiuno. T1 ya se",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 219.974,
+  "t1": 225.214,
+  "tipo": "video",
+  "texto": "había recuperado: siete asesinatos contra seis. Pero el oro sigue siendo de KOI,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.214,
+  "t1": 231.731,
+  "tipo": "video",
+  "texto": "por apenas doscientos. Pausa. Mira a Doran, con Ambessa: se lanza sobre Alvaro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.731,
+  "t1": 240.789,
+  "tipo": "video",
+  "texto": "el soporte de KOI. Esa entrada es la que abre todo. Ambessa es un campeón hecho para eso: entra, aguanta el golpe y sale.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.789,
+  "t1": 249.204,
+  "tipo": "video",
+  "texto": "Y detrás de Doran, su equipo está listo para seguirlo. Faker remata a Alvaro… pero KOI tenía una carta guardada:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.204,
+  "t1": 257.128,
+  "tipo": "video",
+  "texto": "Jojopyun usa su Teleportación y aparece en la pelea. Pausa otra vez. Jojopyun y Myrwn se van sobre Faker,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.128,
+  "t1": 265.955,
+  "tipo": "video",
+  "texto": "y Faker cae. Pero mira a Doran: en ese mismo segundo, se cobra a Jojopyun. Y desde ahí, todo es de T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.955,
+  "t1": 272.533,
+  "tipo": "video",
+  "texto": "Oner remata a Elyoya, que llegó tarde a la pelea, y Doran caza a Supa. Cinco por uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 272.533,
+  "t1": 278.193,
+  "tipo": "video",
+  "texto": "T1 va directo al Barón… lo asegura con mil cuatrocientos de vida… ¡y de regalo, dos asesinatos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 278.193,
+  "t1": 292.266,
+  "tipo": "video",
+  "texto": "más!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.266,
+  "t1": 299.186,
+  "tipo": "video",
+  "texto": "Mírala otra vez. Doran entra primero, se come todo el daño… y no muere. En cincuenta segundos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.186,
+  "t1": 307.86,
+  "tipo": "video",
+  "texto": "T1 pasa de ir doscientos abajo a tres mil doscientos arriba. Cuatro minutos después, la ventaja ya era de casi seis mil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 307.86,
+  "t1": 329.13,
+  "tipo": "video",
+  "texto": "La partida parecía cerrada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 329.13,
+  "t1": 332.95,
+  "tipo": "video",
+  "texto": "Pero esta partida tenía otra vuelta. Minuto treinta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 332.95,
+  "t1": 337.98,
+  "tipo": "video",
+  "texto": "T1 va tres mil cuatrocientos arriba, con tres dragones. Si toma el cuarto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.98,
+  "t1": 343.604,
+  "tipo": "video",
+  "texto": "se queda con el alma. Pausa. T1 está en el foso del dragón infernal…",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.604,
+  "t1": 353.9,
+  "tipo": "video",
+  "texto": "y Myrwn, con Gnar, espera el momento exacto para robarlo. ¡Y se lo roba! Myrwn se queda con el dragón… y no hay alma para T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 353.9,
+  "t1": 362.944,
+  "tipo": "video",
+  "texto": "Pausa. Ahora mira la pelea. Alvaro conecta su control sobre Faker, y Myrwn se transforma en Mega Gnar y deja servido a medio equipo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.944,
+  "t1": 368.924,
+  "tipo": "video",
+  "texto": "Y mira a Supa, con Kai'Sa: nadie de T1 llega hasta él. Los narradores lo dijeron:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 368.924,
+  "t1": 377.542,
+  "tipo": "video",
+  "texto": "lo dejaron libre. Supa hace un doble: Oner y Peyz. Myrwn remata a Keria. Tres por uno para KOI.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.542,
+  "t1": 384.482,
+  "tipo": "video",
+  "texto": "Y medio minuto después, KOI toma su Barón. Con él tira tres torres… y la ventaja de T1 se esfuma:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 384.482,
+  "t1": 396.994,
+  "tipo": "video",
+  "texto": "ahora es KOI el que va dos mil arriba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 396.994,
+  "t1": 404.754,
+  "tipo": "video",
+  "texto": "Mírala en cámara lenta. El dragón está a tres mil de vida, T1 lo está tirando… y el último golpe es de Myrwn.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.754,
+  "t1": 431.312,
+  "tipo": "video",
+  "texto": "Ese robo le dio a KOI la pelea, y después el Barón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 431.312,
+  "t1": 434.912,
+  "tipo": "video",
+  "texto": "Rebobinemos. Minuto treinta y nueve. KOI va mil quinientos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 434.912,
+  "t1": 438.732,
+  "tipo": "video",
+  "texto": "arriba… y aparece otra vez el dragón. Si",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 438.732,
+  "t1": 442.671,
+  "tipo": "video",
+  "texto": "T1 lo toma, alma. Pausa. Los narradores",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 442.671,
+  "t1": 449.142,
+  "tipo": "video",
+  "texto": "lo dijeron: si esta pelea termina en exterminio, se acaba la partida. Mira dónde está cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 449.142,
+  "t1": 456.838,
+  "tipo": "video",
+  "texto": "Y un detalle: el Barón de KOI ya se había terminado. KOI tiene más oro… pero ya no tiene ese empujón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 456.838,
+  "t1": 465.346,
+  "tipo": "video",
+  "texto": "Pausa otra vez. Doran se lanza con todo, antes de que KOI se acomode. El mismo jugador que abrió la pelea del minuto veintiuno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.346,
+  "t1": 472.491,
+  "tipo": "video",
+  "texto": "Doran mata a Supa… y en el siguiente segundo, T1 asegura el dragón. ¡Alma para T1!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.491,
+  "t1": 481.732,
+  "tipo": "video",
+  "texto": "Faker atrapa a Jojopyun, Peyz a Alvaro, Doran a Elyoya… y Oner caza al último, Myrwn. Cinco por cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.732,
+  "t1": 486.092,
+  "tipo": "video",
+  "texto": "Sin nadie de KOI en pie, T1 entra a la base… ¡y cae el nexo!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 486.092,
+  "t1": 501.614,
+  "tipo": "video",
+  "texto": "Uno a cero para T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 501.614,
+  "t1": 506.684,
+  "tipo": "video",
+  "texto": "Mírala otra vez. Doran terminó la partida con seis asesinatos y cero muertes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.684,
+  "t1": 514.767,
+  "tipo": "video",
+  "texto": "Y las dos peleas que decidieron la partida las abrió él. KOI hizo casi todo bien: el arranque, el robo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.767,
+  "t1": 522.185,
+  "tipo": "video",
+  "texto": "el Barón. Pero perdió las dos peleas grandes… y contra T1, eso no perdona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 522.185,
+  "t1": 532.405,
+  "tipo": "video",
+  "texto": "Así se ve la partida uno en oro: KOI arriba mil setecientos en el minuto nueve. T1 arriba casi seis mil en el veintiséis. KOI otra vez arriba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.405,
+  "t1": 538.87,
+  "tipo": "video",
+  "texto": "dos mil, en el treinta y siete… Y la pelea del alma, que lo voltea todo en cuarenta segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 538.87,
+  "t1": 549.909,
+  "tipo": "video",
+  "texto": "Tres vueltas de marcador en una sola partida. Partida dos. Por el Fearless, ninguno de esos diez campeones se puede repetir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.909,
+  "t1": 559.685,
+  "tipo": "video",
+  "texto": "T1 vuelve al lado azul: Doran con Gwen, Oner con Jarvan Cuarto, Faker con Orianna, Peyz con Jhin y Keria con Karma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.685,
+  "t1": 566.325,
+  "tipo": "video",
+  "texto": "KOI: Myrwn con Ornn, Elyoya con Xin Zhao, Jojopyun con Viktor, Supa con",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.325,
+  "t1": 586.585,
+  "tipo": "video",
+  "texto": "Ezreal y Alvaro con Seraphine.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 586.585,
+  "t1": 590.225,
+  "tipo": "video",
+  "texto": "Rebobinemos. Minuto ocho. Doran ya le sacaba",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 590.225,
+  "t1": 594.565,
+  "tipo": "video",
+  "texto": "treinta súbditos y un nivel a Myrwn… y Peyz lo había matado",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.565,
+  "t1": 601.218,
+  "tipo": "video",
+  "texto": "bajo su propia torre. Pausa. KOI acaba de tomar las larvas… y Elyoya, con Xin Zhao,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 601.218,
+  "t1": 608.991,
+  "tipo": "video",
+  "texto": "se mete a robar en la jungla de T1. Alvaro va a su lado, y se confían. Keria y Doran le caen encima.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 608.991,
+  "t1": 617.775,
+  "tipo": "video",
+  "texto": "Doran remata a Elyoya. Pausa otra vez. Alvaro intenta escapar por el río… pero Keria, con Karma, lo alcanza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.775,
+  "t1": 627.731,
+  "tipo": "video",
+  "texto": "Segundo asesinato. Supa quema su Destello para salvarse… y Doran lo caza igual. ¡Tres por cero, y tres mil de oro antes del minuto diez!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 627.731,
+  "t1": 633.331,
+  "tipo": "video",
+  "texto": "Los narradores lo dijeron en ese momento: la partida ya estaba más o menos cocinada para",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 633.331,
+  "t1": 643.322,
+  "tipo": "video",
+  "texto": "T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.322,
+  "t1": 651.282,
+  "tipo": "video",
+  "texto": "Otra vez, en cámara lenta. Elyoya entró a robar, Alvaro lo siguió… y ninguno de los dos salió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 651.282,
+  "t1": 674.481,
+  "tipo": "video",
+  "texto": "Tres muertes en diecisiete segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 674.481,
+  "t1": 678.081,
+  "tipo": "video",
+  "texto": "Minuto diecinueve. T1 va cinco mil seiscientos arriba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 678.081,
+  "t1": 682.221,
+  "tipo": "video",
+  "texto": "y aparece el dragón infernal. T1 lo empieza… y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 682.221,
+  "t1": 687.735,
+  "tipo": "video",
+  "texto": "KOI espera la Teleportación de Myrwn. Pausa. Mira a Oner, con Jarvan Cuarto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.735,
+  "t1": 694.436,
+  "tipo": "video",
+  "texto": "se lanza hacia adelante, solo… y queda en mala posición. Es la carnada perfecta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 694.436,
+  "t1": 703.461,
+  "tipo": "video",
+  "texto": "KOI muerde: Alvaro lanza su definitiva, Jojopyun entra… y todos van por Oner. Pausa otra vez. Pero mira a Faker,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 703.461,
+  "t1": 711.46,
+  "tipo": "video",
+  "texto": "con Orianna: viene por el flanco, por donde nadie lo espera. Y mira a Supa: el foco de T1 también va sobre él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 711.46,
+  "t1": 720.782,
+  "tipo": "video",
+  "texto": "Con Ezreal, no puede pegar libre ni un segundo. Oner atrapa a Jojopyun, Doran a Supa, Keria a Alvaro, Peyz a Elyoya… ¡y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.782,
+  "t1": 727.193,
+  "tipo": "video",
+  "texto": "Faker cierra con Myrwn! Exterminio. Y Oner, el que iba a morir, sobrevive.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 727.193,
+  "t1": 732.873,
+  "tipo": "video",
+  "texto": "T1 se queda con el dragón… y un minuto después, la ventaja ya pasa de los diez mil",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 732.873,
+  "t1": 746.022,
+  "tipo": "video",
+  "texto": "de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.022,
+  "t1": 752.302,
+  "tipo": "video",
+  "texto": "Mírala otra vez. KOI fue a por la carnada… y la carnada era Oner. Cinco muertes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 752.302,
+  "t1": 770.87,
+  "tipo": "video",
+  "texto": "y ninguna de T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 770.87,
+  "t1": 775.61,
+  "tipo": "video",
+  "texto": "Minuto veinticinco. T1 tiene tres dragones y espera el alma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 775.61,
+  "t1": 780.86,
+  "tipo": "video",
+  "texto": "Faker conecta su Onda de choque, Doran entra con todo… y otro exterminio:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.86,
+  "t1": 789.952,
+  "tipo": "video",
+  "texto": "cinco por uno. Solo cae Oner, otra vez el que entra primero. El resto de KOI, como dijeron los narradores, explota.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.952,
+  "t1": 797.352,
+  "tipo": "video",
+  "texto": "T1 ni siquiera espera el alma: va directo a la base… y cae el nexo. ¡T1 gana dos a cero y está en los cuartos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.352,
+  "t1": 807.171,
+  "tipo": "video",
+  "texto": "de final!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.171,
+  "t1": 816.572,
+  "tipo": "video",
+  "texto": "Mírala otra vez. Faker termina con un doble, Peyz cierra el exterminio… y KOI ya no se vuelve a levantar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 816.572,
+  "t1": 823.628,
+  "tipo": "video",
+  "texto": "¿Qué decidió la serie? Tres claves. Uno: Doran. Abrió las dos peleas que decidieron la primera",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 823.628,
+  "t1": 830.224,
+  "tipo": "video",
+  "texto": "partida… y en toda la serie no murió ni una vez. Dos: las peleas grandes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 830.224,
+  "t1": 840.399,
+  "tipo": "video",
+  "texto": "KOI ganó el arranque y robó el dragón del alma, pero las peleas de cinco contra cinco que valían un Barón, un alma o la partida… fueron de T1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.399,
+  "t1": 849.659,
+  "tipo": "video",
+  "texto": "Tres: la jungla. En la primera partida, KOI castigó la jungla de T1 sin guardias. En la segunda, fue Elyoya el que se metió a robar",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 849.659,
+  "t1": 858.981,
+  "tipo": "video",
+  "texto": "a la jungla de T1… y lo pagó caro. Los números de la serie. El dato más loco es de Doran, el top de T1:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.981,
+  "t1": 865.161,
+  "tipo": "video",
+  "texto": "diez asesinatos, trece asistencias… y cero muertes en las dos partidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 865.161,
+  "t1": 873.744,
+  "tipo": "video",
+  "texto": "Keria estuvo en treinta asistencias, y Peyz, con Jhin, terminó la segunda partida con ocho asesinatos y una sola muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 873.744,
+  "t1": 884.366,
+  "tipo": "video",
+  "texto": "Y en la segunda partida, KOI no derribó ni una torre ni tomó un solo dragón. T1 terminó con más de doce mil de oro de ventaja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 884.366,
+  "t1": 892.885,
+  "tipo": "video",
+  "texto": "¿Y ahora? T1 queda tres y uno, y espera rival para los cuartos de final, al mejor de cinco, del tres al seis de noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 892.885,
+  "t1": 903.168,
+  "tipo": "video",
+  "texto": "En el sorteo, los que terminan tres y uno se cruzan entre sí. Y T1 va por algo que nadie ha hecho jamás: su cuarto título mundial seguido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 903.168,
+  "t1": 909.818,
+  "tipo": "video",
+  "texto": "KOI queda dos y dos. No está eliminado: el sábado treinta y uno juega la quinta ronda, a muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 909.818,
+  "t1": 917.069,
+  "tipo": "video",
+  "texto": "Si gana, a cuartos; si pierde, a casa. ¿Cuál fue para ti la mejor jugada de la serie?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.069,
+  "t1": 926.7273,
+  "tipo": "video",
+  "texto": "¿Y tú crees que este T1 puede ganar su cuarto Mundial seguido? Déjalo en los comentarios. Nos vemos en los cuartos.",
+  "clip_s": 8
+ }
+]

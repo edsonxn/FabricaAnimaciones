@@ -115,6 +115,10 @@ FX = [
                           (*kal(55.5, 65), "Guarida de Onyxia", "40 jugadores", F("onyxia"))],
          ("Y hablando de llegar a tiempo", -.3), ("hay apenas cinco semanas|fin", .2),
          ["abren Barrow Deeps", "Hyjal Summit y la", "la Guarida de Onyxia"], "9 DE DICIEMBRE", "abren las bandas", zmax=1.7),
+    # fondo oficial de marca (Alice, 29-oct: «necesitamos usar otro fondo», Drive «Background/Background.mp4»): cuadro entero
+    # DEBAJO de logo, tarjetas, reseñas, packshot y código (va primero en la lista)
+    dict(tipo="video", ruta=OG + "background\\Background.mp4", bucle=True, de="los vicios de las primeras", a="scene-036",
+         entra=.3, nombre="og fondo marca"),
     dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True,
          de="Para eso está Overgear", a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,

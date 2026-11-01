@@ -86,6 +86,10 @@ FX = [
     peg("llegaron a intervenir", "gm", "Maestros de juego", dur=3.6, x=.36, tam=360),
     # =========================================================== Overgear campaña 2 con el kit «WoW - Forever (nov)» (28-oct-2026): logo de
     # esquina todo el anuncio, par de USP, tarjeta de coaching, reseñas reales (croma ROJO) y packshot «PLAY BETTER FOREVER»
+    # fondo oficial de marca (Alice, 29-oct; SIEMPRE en todo video con Overgear, el usuario 1-nov): cuadro entero
+    # DEBAJO de reseñas, packshot y código (va antes en la lista para quedar debajo)
+    dict(tipo="video", ruta=OG + "background\Background.mp4", bucle=True, de="tú eliges, y pagas", a="scene-035",
+         entra=.3, nombre="og fondo marca"),
     dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True,
          de="Este video lo patrocina Overgear", a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,

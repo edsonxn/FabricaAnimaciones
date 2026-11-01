@@ -1,44 +1,62 @@
 # -*- coding: utf-8 -*-
-"""Hoja de varias escenas a la vez: python _lote.py esc1 esc2 ... [--n 8]  -> previews/lote.jpg (n cuadros repartidos por escena,
-uno a mitad de cada tramo; 480x270 cada uno, una fila por escena). Imprime los errores sin detenerse."""
-import json, os, sys, time, traceback
+"""Hoja de prueba de varias escenas: por cada plano, cuadros a `fr` de su duración (por defecto 0.5) -> previews/lote_<k>.jpg
+(4 columnas, 480x270) y los PNG completos en previews/l_<escena>_<t>.png.
+    python videos/sociedad_1200/_lote.py [escena ...] [--fr 0.3,0.8] [--procs 3]"""
+import json
+import os
+import sys
+import time
+
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path[:0] = [AQUI, os.path.join(AQUI, "..", "..", "nucleo")]
 os.chdir(AQUI)
+
 import cv2
 import numpy as np
-import escenas as S
 
 TL = json.load(open("timeline.json", encoding="utf-8"))
-n = int(sys.argv[sys.argv.index("--n") + 1]) if "--n" in sys.argv else 8
-ids = [a for a in sys.argv[1:] if not a.startswith("--") and not a.isdigit()]
-filas = []
-for eid in ids:
+IDS = [e["id"] for e in TL["escenas"]]
+
+
+def _uno(arg):
+    eid, t = arg
+    import escenas as S
     d = [e for e in TL["escenas"] if e["id"] == eid][0]
-    try:
-        esc = S.CLASES[eid](d, [e["id"] for e in TL["escenas"]].index(eid))
-    except Exception:
-        traceback.print_exc(); continue
-    dur = d["t1"] - d["t0"]
-    fila = []
-    for k in range(n):
-        u = dur * (k + 0.5) / n
-        try:
-            t0 = time.time()
-            img = esc.render(None, d["t0"] + u)
-            dt = time.time() - t0
-            im = (np.clip(img, 0, 1) * 255).astype(np.uint8)
-        except Exception:
-            print("ERROR", eid, round(u, 2)); traceback.print_exc()
-            im = np.zeros((1080, 1920, 3), np.uint8); dt = 0
-        sm = cv2.resize(im, (480, 270), interpolation=cv2.INTER_AREA)
-        for col, gr in (((0, 0, 0), 3), ((255, 255, 255), 1)):
-            cv2.putText(sm, f"{eid} u={u:.1f} {dt * 1000:.0f}ms", (6, 262), cv2.FONT_HERSHEY_SIMPLEX, 0.45, col, gr, cv2.LINE_AA)
-        fila.append(sm)
-    filas.append(np.vstack([np.hstack(fila[i:i + 4]) for i in range(0, len(fila), 4)]))
-if filas:
-    w = max(f.shape[1] for f in filas)
-    hoja = np.vstack(filas)
-    for k in range(0, len(filas), 2):
-        cv2.imwrite(f"previews/lote_{k // 2}.jpg", cv2.cvtColor(np.vstack(filas[k:k + 2]), cv2.COLOR_RGB2BGR), [cv2.IMWRITE_JPEG_QUALITY, 88])
-print("ok", len(filas))
+    esc = S.CLASES[eid](d, IDS.index(eid))
+    t0 = time.time()
+    im = (np.clip(esc.render(None, t), 0, 1) * 255).astype(np.uint8)
+    cv2.imwrite(f"previews/l_{eid}_{t:06.2f}.png", cv2.cvtColor(im, cv2.COLOR_RGB2BGR))
+    sm = cv2.resize(im, (480, 270), interpolation=cv2.INTER_AREA)
+    for c, g in (((0, 0, 0), 3), ((255, 255, 255), 1)):
+        cv2.putText(sm, f"{eid} {t:.1f} ({time.time() - t0:.0f}s)", (6, 262), cv2.FONT_HERSHEY_SIMPLEX, 0.45, c, g, cv2.LINE_AA)
+    return sm
+
+
+if __name__ == "__main__":
+    a = sys.argv[1:]
+    fr = [0.5]
+    procs = 3
+    if "--fr" in a:
+        fr = [float(x) for x in a[a.index("--fr") + 1].split(",")]
+    if "--procs" in a:
+        procs = int(a[a.index("--procs") + 1])
+    ids = [x for x in a if x in IDS] or IDS
+    import escenas as S
+    trabajos = []
+    for eid in ids:
+        d = [e for e in TL["escenas"] if e["id"] == eid][0]
+        esc = S.CLASES[eid](d, IDS.index(eid))
+        ts = [p.t0 for p in esc.planos] + [d["t1"]]
+        for i in range(len(esc.planos)):
+            for f in fr:
+                trabajos.append((eid, ts[i] + (ts[i + 1] - ts[i]) * f))
+    from multiprocessing import Pool
+    with Pool(procs) as pool:
+        tiles = pool.map(_uno, trabajos)
+    while len(tiles) % 4:
+        tiles.append(np.zeros_like(tiles[0]))
+    filas = [np.hstack(tiles[i:i + 4]) for i in range(0, len(tiles), 4)]
+    for k in range(0, len(filas), 6):
+        cv2.imwrite(f"previews/lote_{k // 6}.jpg", cv2.cvtColor(np.vstack(filas[k:k + 6]), cv2.COLOR_RGB2BGR),
+                    [cv2.IMWRITE_JPEG_QUALITY, 90])
+    print(len(trabajos), "cuadros ->", (len(filas) + 5) // 6, "hojas previews/lote_*.jpg")

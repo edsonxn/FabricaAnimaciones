@@ -1,0 +1,19 @@
+# Hechos verificados — historia_jalisco (22-oct-2026, búsqueda web con fuentes INAH/UdeG/IIEG/UNESCO/INEGI)
+- Xalisco: xalli+ixtli+co, «en la superficie de arena»; se escribió Xalisco hasta ~1836 (EcuRed).
+- Guachimontones (Teuchitlán): pirámides circulares; ocupación ~350 a. C.–500 d. C. (Weigand); usar «hace unos 2 000 años». Tumbas de tiro en Jal/Col/Nay.
+- Guerra del Salitre purépechas vs Sayula/Zapotlán, 1480-1510 (SGG Jalisco).
+- Tonalá: la Cihualpilli Tzapotzinco; combate el 25-mar-1530. Pueblos: caxcanes, tecuexes, cocas, wixárikas (coras sobre todo en Nayarit).
+- Nuño de Guzmán dic-1529–1531; Nueva Galicia (cédula 1531), capital Compostela.
+- Guadalajara: 5-ene-1532 Nochistlán (Juan de Oñate según IIEG), Tonalá 1533, Tlacotán 1535, Atemajac 14-feb-1542.
+- Mixtón 1540-42; Alvarado: caballo encima 24-jun-1541, muere 4-jul-1541; Mendoza con 30 000-60 000 aliados indígenas.
+- Audiencia 1548 (Compostela) → Guadalajara 1560; Catedral 1561-1618. Real Universidad inaugurada 3-nov-1792. Cuervo licencia 1795.
+- Hospicio Cabañas: 1805, Tolsá; Orozco 1936-39; UNESCO 1997.
+- Torres en Guadalajara 11-nov-1810; Hidalgo 26-nov; abolición 6-dic-1810 (bando previo 29-nov); Despertador Americano 20-dic-1810.
+- Puente de Calderón 17-ene-1811: Calleja ~6 000 vs 80 000-100 000 (cifras de época); explota un carro de municiones.
+- 16-jun-1823 Estado Libre de Jalisco; constitución 18-nov-1824; Prisciliano Sánchez gobernador 24-ene-1825; «cuna del federalismo».
+- 14-mar-1858 (algunas fuentes 13) Juárez y Guillermo Prieto «los valientes no asesinan» (versión más difundida).
+- Ferrocarril a Guadalajara 15-may-1888. Cristiada 1926-29, arreglos 21-jun-1929; Los Altos.
+- Mariachi UNESCO 2011 (Cocula «cuna»); Paisaje agavero UNESCO 2006.
+- Explosiones 22-abr-1992 Analco/Reforma: 206-212 muertos → «más de doscientos».
+- Mundiales 1970 y 1986 en el Estadio Jalisco; 2026: 4 partidos en el Estadio Guadalajara (Akron), entre ellos México 1-0 Corea (18-jun-2026).
+- INEGI 2020: 8 348 151 hab., tercer estado más poblado; 125 municipios. «Silicon Valley mexicano» = apodo periodístico.

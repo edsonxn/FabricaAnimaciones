@@ -35,7 +35,7 @@
 
 ## Falta
 - [ ] métricas a los 7 días · [ ] `python fab.py tes_armas_poderosas limpiar` cuando salga público (borra también _MASTER_v2_respaldo)
-- [ ] cortes de anuncios intermedios: Studio pedía esperar al procesado SD (anuncios ya activados y cuestionario enviado)
+- [x] anuncios intermedios (mid-roll automáticos) activados en Studio tras el procesado SD (23-oct); anuncios «Comprobando»
 
 ## Cómo retomar (comandos)
 ```

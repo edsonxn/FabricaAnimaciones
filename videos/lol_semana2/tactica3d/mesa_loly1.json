@@ -1,0 +1,202 @@
+{
+ "modo": "mesa",
+ "de": 1446.94,
+ "a": 1455.62,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_loly1_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Berserker": {
+   "jugador": "Berserker",
+   "campeon": "Yunara",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Yunara.png",
+   "puntos": [
+    [
+     0,
+     0.66,
+     0.4
+    ]
+   ],
+   "de": 1447.34,
+   "sale": 1454.62
+  },
+  "Feisty": {
+   "jugador": "Feisty",
+   "campeon": "Leblanc",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Leblanc.png",
+   "puntos": [
+    [
+     0,
+     0.645,
+     0.31
+    ]
+   ],
+   "de": 1447.42,
+   "sale": 1454.62
+  },
+  "Ackerman": {
+   "jugador": "Ackerman",
+   "campeon": "Karma",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Karma.png",
+   "puntos": [
+    [
+     0,
+     0.535,
+     0.345
+    ]
+   ],
+   "de": 1447.5,
+   "sale": 1454.62
+  },
+  "Inspired": {
+   "jugador": "Inspired",
+   "campeon": "LeeSin",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/LeeSin.png",
+   "puntos": [
+    [
+     0,
+     0.475,
+     0.57
+    ]
+   ],
+   "de": 1447.58,
+   "sale": 1454.62
+  },
+  "Isles": {
+   "jugador": "Isles",
+   "campeon": "Lulu",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.63,
+     0.6
+    ]
+   ],
+   "de": 1447.66,
+   "sale": 1454.62
+  }
+ },
+ "camara": [
+  [
+   1446.94,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1447.29,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1449.7176,
+   -18,
+   36,
+   50,
+   0.6,
+   0.45
+  ],
+  [
+   1452.3216,
+   14,
+   40,
+   47.5,
+   0.6,
+   0.45
+  ],
+  [
+   1454.7199999999998,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   1455.62,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "r_bers1",
+   "pts": [
+    [
+     0.7949,
+     0.5719
+    ],
+    [
+     0.66,
+     0.4
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 1.5,
+   "grosor": 1.2,
+   "en": 1447.74,
+   "sale": 1454.62
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.745,
+   "v": 0.45,
+   "alto": 0,
+   "texto": "CURSE",
+   "sub": "3 % DE VIDA",
+   "color": "azul",
+   "dx": 170,
+   "dy": 30,
+   "de": 1447.64,
+   "a": 1454.62
+  },
+  {
+   "u": 0.63,
+   "v": 0.6,
+   "alto": 0,
+   "texto": "ISLES",
+   "sub": "ATURDIDO",
+   "color": "rojo",
+   "dx": 170,
+   "dy": 70,
+   "de": 1450.02,
+   "a": 1454.62
+  },
+  {
+   "u": 0.66,
+   "v": 0.4,
+   "alto": 0,
+   "texto": "BERSERKER",
+   "sub": "SOLO CONTRA TODOS",
+   "color": "rojo",
+   "dx": -200,
+   "dy": -90,
+   "de": 1452.88,
+   "a": 1454.62
+  }
+ ]
+}

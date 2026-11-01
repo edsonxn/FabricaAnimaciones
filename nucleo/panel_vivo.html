@@ -205,22 +205,92 @@ a{color:inherit;text-decoration:none}
 
 #vacio{position:absolute;inset:0;display:none;place-items:center;text-align:center;color:var(--mut);padding:24px;background:var(--panel)}
 
-@media (max-width:900px){
-  body{overflow:auto;height:auto;min-height:100%}
-  #cuerpo{grid-template-columns:minmax(0,1fr);flex:none}
-  #monitor{height:62vh;min-height:340px}
-  #lado{display:contents}
+#tabsM,#btMas,#menuM{display:none}
+/* teléfono (30-oct-2026): una sola pantalla sin desplazar; los controles los acomoda panel_vivo_movil.js */
+@media (max-width:900px),(max-height:500px){
+  html,body{height:100%;height:100dvh;overscroll-behavior:none}
+  body{overflow:hidden;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);-webkit-tap-highlight-color:transparent}
+  #cab{padding:6px 10px;gap:8px}
+  #titulo b{font-size:14px}
+  #titulo small{font-size:11px}
+  #modo{height:26px;padding:0 9px;font-size:11px}
+  #ses{padding:5px 10px;gap:5px}
+  .chip{height:26px;max-width:210px}
+  #etapas{padding:6px 10px 2px}
+  #etaInfo{padding:2px 10px 4px;font-size:11px}
+  #taller{height:clamp(250px,42dvh,340px);touch-action:manipulation}
+  #tabsM{display:flex;gap:4px;padding:6px 10px 0;flex:none}
+  .tabM{flex:1;height:32px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--mut);font-size:12.5px;font-weight:600;white-space:nowrap}
+  .tabM.on{background:var(--acc);border-color:var(--acc);color:#fff}
+  #cuerpo{display:block;position:relative;flex:1;min-height:0;padding:6px 10px}
+  #monitor{height:100%}
+  #mcab{padding:6px 10px}
+  #lado{display:none;position:absolute;inset:6px 10px;background:var(--bg);gap:6px;overflow-y:auto;overscroll-behavior:contain}
+  #lado>*{flex:none}
+  body[data-tab="hist"] #feed{flex:1 1 0;min-height:0}
+  body[data-tab="hist"] #lado,body[data-tab="plan"] #lado{display:flex}
+  body[data-tab="hist"] #cifras,body[data-tab="hist"] #plan,body[data-tab="hist"] #juego,body[data-tab="plan"] #filtro,body[data-tab="plan"] #feed{display:none}
   #plan{max-height:none}
-  #feed{max-height:40vh;flex:none}
-  #taller{height:334px}
+  .ev{padding:6px;font-size:13px}
+  #pie{gap:6px;padding:0 10px 8px}
+  #linea{height:34px}
+  #btMas{display:inline-flex;font-size:18px}
+  #menuM{position:fixed;z-index:30;right:calc(10px + env(safe-area-inset-right));bottom:calc(52px + env(safe-area-inset-bottom));padding:8px;border-radius:14px;background:var(--panel);border:1px solid var(--line2);box-shadow:0 10px 34px rgba(0,0,0,.4);flex-direction:column;gap:6px}
+  #menuM.abierto{display:flex}
+  #menuM .bt{justify-content:flex-start;width:100%;height:38px}
+  #menuM .bt .txt{display:inline}
+  .bt .txt,#modo .n{display:none}
   .lupa{width:104px;height:104px}
   .codigo{font-size:11px}
   .lin .n{width:30px;padding-right:7px}
-  .bt .txt,#modo .n{display:none}
-  #cab{flex-wrap:wrap}
-  #titulo{order:9;flex-basis:100%}
-  #modo{margin-right:auto}
+  .burbuja{font-size:15px;padding:12px 14px}
+  .centro{padding:12px}
 }
+/* teléfono acostado: el taller a la izquierda y las pestañas a la derecha */
+@media (max-height:500px) and (orientation:landscape){
+  body{display:grid;grid-template-columns:minmax(0,54%) minmax(0,1fr);grid-template-rows:auto auto auto minmax(0,1fr) auto}
+  #cab,#etapas{grid-column:1/-1}
+  #cab{padding-block:4px}
+  #ses,#etaInfo{display:none}
+  #etapas{padding-bottom:4px}
+  #taller{grid-column:1;grid-row:3/6;width:100%;height:auto;align-self:stretch;contain:size;border-block:0;border-right:1px solid var(--line)}
+  #tabsM{grid-column:2;grid-row:3}
+  #cuerpo{grid-column:2;grid-row:4}
+  #pie{grid-column:2;grid-row:5}
+}
+/* edificio en escritorio (31-oct-2026): el lienzo al centro con todo el alto; a los lados, el monitor y el lateral */
+@media (min-width:901px) and (min-height:501px){
+  body.edif{--izq:clamp(250px,19vw,340px);--der:clamp(240px,17vw,320px);display:grid;grid-template-columns:var(--izq) minmax(0,1fr) var(--der);grid-template-rows:auto auto auto minmax(0,1fr) auto;column-gap:10px}
+  body.edif #cab,body.edif #pie{grid-column:1/-1}
+  body.edif #ses{grid-column:1/3;grid-row:2/4;align-self:center;border-bottom:0;padding:6px 0 6px 12px}
+  body.edif #etapas{grid-column:3;grid-row:2;padding:8px 12px 2px 0}
+  body.edif #etaInfo{grid-column:3;grid-row:3;padding:0 12px 4px 0;font-size:11px}
+  body.edif #cuerpo{display:contents}
+  body.edif #monitor{grid-column:1;grid-row:4;margin-left:12px}
+  body.edif #taller{grid-column:2;grid-row:4;width:100%;height:auto;align-self:stretch;contain:size;border:1px solid var(--line);border-radius:14px}
+  body.edif #lado{grid-column:3;grid-row:4;overflow-y:auto;overscroll-behavior:contain;margin-right:12px;scrollbar-width:thin}
+  body.edif #lado>*{flex:none}
+  body.edif #plan{max-height:26%}
+  body.edif #feed{flex:1 0 180px}
+  body.edif #pie{padding-top:8px}
+  body.edif .codigo,body.edif .doc{font-size:11.5px}
+  body.edif .lin .n{width:30px;padding-right:7px}
+  body.edif .doc{padding:12px 14px}
+  body.edif .centro{padding:12px}
+  body.edif .burbuja{font-size:14px;padding:12px 14px}
+  body.edif .web{padding:12px}
+  body.edif .web h4{font-size:15px}
+  body.edif .web .ex{font-size:13px}
+  body.edif .web .barra{font-size:13px;padding:7px 11px}
+  body.edif .grande .gr{font-size:44px}
+  body.edif .grande p{font-size:14px}
+  body.edif .lupa{width:84px;height:84px}
+  body.edif .visor{cursor:zoom-in}
+  #imgGrande{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:3vh 3vw;background:rgba(3,4,8,.92);cursor:zoom-out}
+  #imgGrande img{max-width:100%;max-height:94vh;border-radius:8px}
+}
+/* pantalla completa (31-oct-2026): el lienzo tapa todo pero el resto sigue maquetado, porque la TV del edificio lee del monitor */
+body.cine #taller{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;z-index:40;border:0;border-radius:0;contain:none}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 </style>
 </head>
@@ -230,6 +300,7 @@ a{color:inherit;text-decoration:none}
   <div id="titulo"><b id="tVideo">Conectando…</b><small id="tSes"></small></div>
   <span id="modo"><i></i><span id="modoTx">—</span></span>
   <label class="bt cas" title="Sonidos del robot en cada acción"><input type="checkbox" id="chkSon">🔊 <span class="txt">Sonido</span></label>
+  <label class="bt cas"><input type="checkbox" id="chkNar">🎙 <span class="txt">Narrador</span></label>
   <label class="bt cas" title="Al llegar al final, volver a repetir las últimas acciones. Apagada: se queda en la última y espera lo nuevo"><input type="checkbox" id="chkBucle">🔁 <span class="txt">Repetir</span></label>
   <button class="bt" id="btPausa" title="Pausar (espacio)">⏸</button>
   <button class="bt" id="btVel" title="Velocidad">×1</button>
@@ -285,10 +356,11 @@ const hora=t=>new Date(t*1000).toLocaleTimeString("es-MX",{hour:"2-digit",minute
 // ---------------------------------------------------------- estado
 const Q=new URLSearchParams(location.search);
 const S={sesion:Q.get("sesion")||"",video:Q.get("video")||"",fija:!!Q.get("sesion"),rev:0,ev:[],idx:-1,ultimoVisto:0,
-  modo:"carga",pausa:false,vel:1,ini:0,dur:1,ctl:null,cambio:0,manual:0,pensando:false,activa:false,bucle:false,filtro:"todos",eq:new Map()};
+  gen:0,modo:"carga",pausa:false,vel:1,ini:0,dur:1,ctl:null,cambio:0,manual:0,pensando:false,activa:false,bucle:false,filtro:"todos",eq:new Map()};
 try{S.bucle=localStorage.getItem("vivo_bucle")==="1";}catch(e){}
 const IDLE_MS=9000;           // con «Repetir» activa: sin nada nuevo en este tiempo empieza la repetición
 const VENTANA=90;             // eventos que entran en la repetición
+const TRAMO=3;                // al elegir una sesión solo se reproducen sus últimas acciones: desde la antepenúltima
 const COLA_MAX=14;            // en vivo, si hay más atrasados que esto se salta a los últimos
 const COLA_AY=6;              // lo mismo con un ayudante: hace cientos de acciones
 const TOPE_PRIN=500,TOPE_AY=220;   // la página guarda por separado lo del principal y lo de cada ayudante
@@ -305,15 +377,16 @@ async function pedir(){
   const u=new URLSearchParams({desde:S.rev});
   if(S.fija)u.set("sesion",S.sesion);    // si no, el servidor sigue a la sesión más reciente (el corte a 180 mil abre otra)
   if(S.video)u.set("video",S.video);
+  const gen=S.gen;
   try{
     const r=await (await fetch("/api/v2/agente?"+u)).json();
-    recibir(r);
+    if(gen===S.gen)recibir(r);    // lo pedido antes de cambiar de sesión ya no vale
   }catch(e){}
 }
 function recibir(r){
   if(!r.sesion){$("vacio").style.display=S.ev.length?"none":"grid";$("tVideo").textContent=S.video||"Sin sesiones";return;}
   $("vacio").style.display="none";
-  if(r.sesion!==S.sesion&&S.sesion&&S.rev){window.Extras?.cambioSesion();reiniciar();S.sesion=r.sesion;return pedir();}
+  if(r.sesion!==S.sesion&&S.sesion&&S.rev){if(!Taller.Flo.on)window.Extras?.cambioSesion();reiniciar();S.sesion=r.sesion;return pedir();}
   S.sesion=r.sesion;
   const porSeq=new Map(S.ev.map(e=>[e.seq,e]));
   let nuevos=0;
@@ -334,7 +407,7 @@ function recibir(r){
     if(S.modo==="repe"&&S.cambio>S.manual)siguiente();     // llegó algo nuevo: se corta la repetición sin esperar
   }
   pintarCab(r);pintarPlan(r.plan||[]);pintarEtapas(r.proyecto);pintarFiltro();pintarCifras();pintarFeed();pintarLinea();
-  if(S.modo==="carga"&&S.ev.length){S.modo="repe";S.idx=inicioVentana()-1;S.ultimoVisto=S.ev.at(-1).seq;siguiente();}
+  if(S.modo==="carga")S.ev.length?irTramo():$("mcuerpo").innerHTML="";
 }
 function podar(){                        // un ayudante nunca echa al principal, ni a otro ayudante
   if(S.ev.length<=TOPE_PRIN)return;
@@ -345,24 +418,31 @@ function podar(){                        // un ayudante nunca echa al principal,
   }
   S.ev=fila.reverse();S.idx=cur?S.ev.indexOf(cur):-1;
 }
-function reiniciar(){S.ev=[];S.rev=0;S.idx=-1;S.modo="carga";S.ultimoVisto=0;S.ctl=null;S.filtro="todos";$("mcuerpo").innerHTML="";}
+function reiniciar(){S.ev=[];S.rev=0;S.idx=-1;S.modo="carga";S.ultimoVisto=0;S.ctl=null;S.filtro="todos";S.gen++;}
 async function pedirSesiones(){
   if(document.hidden)return;
   try{
     const l=await (await fetch("/api/v2/agente/sesiones")).json();
     const lista=[];const vistos=new Set();
     for(const s of l){const k=s.video||s.id;if(vistos.has(k))continue;vistos.add(k);lista.push(s);}
-    $("ses").innerHTML=lista.map(s=>{
+    const edif=document.body.classList.contains("edif");
+    if(edif)Taller.fabrica(lista);
+    $("ses").innerHTML=(edif?`<button class="chip fab ${Taller.Flo.on?"on":""}" data-fab="1" title="Todas las sesiones a la vez en el mismo edificio">🏢 Toda la fábrica</button>`:"")+lista.map(s=>{
       const on=S.fija?s.id===S.sesion:(S.video?s.video===S.video:s.id===S.sesion);
       return `<button class="chip ${on?"on":""} ${s.activa?"act":""}" data-id="${esc(s.id)}" data-v="${esc(s.video||"")}" title="${esc(s.titulo)}"><i></i>${esc(s.video||s.titulo||"Sesión")}</button>`;
     }).join("");
   }catch(e){}
 }
+function abreSesion(id,video){
+  S.video=video||"";S.fija=!video;S.sesion=id;reiniciar();
+  const u=new URL(location);u.search=S.video?"?video="+encodeURIComponent(S.video):"?sesion="+S.sesion;history.replaceState(0,"",u);
+  if(Taller.Flo.on)Taller.enfoca();      // en la fábrica entera el edificio sigue igual: cambian la cámara, la TV y los paneles
+  pedir();pedirSesiones();
+}
 $("ses").onclick=e=>{
   const b=e.target.closest(".chip");if(!b)return;
-  S.video=b.dataset.v;S.fija=!b.dataset.v;S.sesion=b.dataset.id;reiniciar();
-  const u=new URL(location);u.search=S.video?"?video="+encodeURIComponent(S.video):"?sesion="+S.sesion;history.replaceState(0,"",u);
-  pedir();pedirSesiones();
+  if(b.dataset.fab){Taller.ponFabrica(!Taller.Flo.on);return pedirSesiones();}
+  abreSesion(b.dataset.id,b.dataset.v);
 };
 
 // ---------------------------------------------------------- cabecera, plan, etapas, cifras
@@ -410,9 +490,14 @@ $("filtro").onclick=e=>{
   S.filtro=b.dataset.id;pintarFiltro();pintarCifras();pintarFeed();pintarLinea();
   irAhora();                             // el monitor pasa enseguida a lo último de quien elegiste
 };
+const ensenable=e=>pasa(e)&&(!e.de||S.filtro===e.de||S.eq.get(e.de)?.activo);
+function irTramo(){                      // al elegir una sesión, nueva o ya vista: de golpe a lo último, sin recorrer su historia
+  const v=S.ev.filter(ensenable),e=v.at(-TRAMO)||v[0]||S.ev.at(-1);
+  S.modo="vivo";S.idx=S.ev.indexOf(e);mostrar(e);
+}
 function irAhora(){                      // lo más reciente que se puede enseñar con el selector actual
   let i=S.ev.length-1;
-  while(i>=0&&!(pasa(S.ev[i])&&(!S.ev[i].de||S.filtro===S.ev[i].de||S.eq.get(S.ev[i].de)?.activo)))i--;
+  while(i>=0&&!ensenable(S.ev[i]))i--;
   if(i<0)return;
   S.modo="vivo";S.idx=i;S.ultimoVisto=S.ev.at(-1).seq;mostrar(S.ev[i]);
 }
@@ -624,6 +709,10 @@ const PANT={
     }
     el.innerHTML=`<div class="visor"><div class="marco"><img alt=""><div class="barrido"></div><div class="lupa"></div></div></div>`;
     const img=el.querySelector("img"),lupa=el.querySelector(".lupa"),barr=el.querySelector(".barrido");
+    if(document.body.classList.contains("edif")&&innerWidth>900){   // la columna es angosta: un clic la enseña grande, sobre todo el edificio
+      el.title="Clic para verla grande";
+      el.onclick=()=>{const v=document.createElement("div");v.id="imgGrande";v.title="Clic para cerrar";v.append(Object.assign(new Image(),{src:img.src,alt:""}));v.onclick=()=>v.remove();document.body.append(v);};
+    }
     const url=`/v2/vivo/img/${S.sesion}/${e.img}`;img.src=url;
     const Z=2.6;
     img.style.maxHeight=(el.clientHeight-24)+"px";
@@ -641,7 +730,7 @@ const PANT={
   },
   navegador(el,e){
     const host=(e.titulo||"").split(" ").pop();
-    el.innerHTML=`<div class="nav"><div class="navbar"><i></i><i></i><i></i><span>${esc(host)}</span></div><div class="navvista">${e.img?`<img alt="" src="/v2/vivo/img/${S.sesion}/${e.img}">`:`<div class="sinimg"><span class="gr">🌐</span></div>`}<svg class="cursor" viewBox="0 0 24 24"><path d="M4 2l15 12-7 1 4 7-3 1-4-7-5 5z" fill="#fff" stroke="#000" stroke-width="1.4"/></svg><div class="onda"></div></div>${e.detalle?`<div class="navtexto">${esc(e.detalle)}</div>`:""}</div>`;
+    el.innerHTML=`<div class="nav"><div class="navbar"><i></i><i></i><i></i><span>${esc(host)}</span></div><div class="navvista">${e.img?`<img alt="" src="/v2/vivo/img/${S.sesion}/${e.img}">`:`<div class="sinimg"><span class="gr">🌐</span>${esc(e.titulo||host)}</div>`}<svg class="cursor" viewBox="0 0 24 24"><path d="M4 2l15 12-7 1 4 7-3 1-4-7-5 5z" fill="#fff" stroke="#000" stroke-width="1.4"/></svg><div class="onda"></div></div>${e.detalle?`<div class="navtexto">${esc(e.detalle)}</div>`:""}</div>`;
     const vis=el.querySelector(".navvista"),cur=el.querySelector(".cursor"),onda=el.querySelector(".onda");
     const a=[.2+Math.random()*.2,.25+Math.random()*.2],b=[.55+Math.random()*.3,.4+Math.random()*.4];
     let clic=false;
@@ -798,6 +887,7 @@ const Son=(()=>{
     selfie(t){bip(t,1800,1800,.05,.22,"square");sopla(t+.07,.04,3200,2200,.7,1);sopla(t+.16,.04,2200,3200,.5,1);notas(t+.32,[880,1319],.07,.22);},
   };
   return {
+    baja(si){if(salida)salida.gain.setTargetAtTime(si?.08:.24,ctx.currentTime,.15);},
     activar(si){on=si;if(si){abrir();nuevoBus();R.hola(ctx.currentTime+.04);}else if(ctx)nuevoBus();},
     despertar(){if(on)abrir();},       // el navegador exige un toque antes de sonar si la casilla ya venía marcada
     accion(nom){
@@ -871,21 +961,88 @@ const Taller=(()=>{
   const MADERA="#b27c50",TINTA="#2b3048",CABEZA="#f5f7ff",VISOR="#171b2b",OJO="#7df3e1",ROSA="#ff8fbf",ROJO="#ff5d73",AMAR="#ffd166",AZUL="#5bc0ff",VERDE="#5fe0a0",LILA="#b388ff";
   const COLORES=[ROJO,AMAR,AZUL,VERDE,ROSA,LILA];
   const MIN_MS=1500;                     // cada acción se queda al menos esto ya en su sitio: si no, el robot solo caminaría
-  const MAX_MS=3000;                     // tope por si camina muy lento (render a toda CPU, ~1 cuadro/s)
+  const MAX_MS=!window.EN_VIDEO&&!/[?&]clasico\b/.test(location.search)?8000:3000;   // tope por si camina muy lento (render a toda CPU, ~1 cuadro/s); en el edificio también cuenta el viaje entre pisos
   const DESCANSO=.5/(ESTACIONES.length+1);   // primer puesto del taller, fuera de las estaciones
+  // ---- el edificio (31-oct-2026): cada piso es la franja de siempre apilada. Las x llevan el piso dentro: x = piso*10 + fracción, así lo que suma o compara posiciones sigue igual.
+  // En los videos del canal (EN_VIDEO) y con ?clasico sigue siendo una sola franja: piso 0 y las fórmulas de antes
+  const EDIF=!window.EN_VIDEO&&!/[?&]clasico\b/.test(location.search);
+  const PISOS=[{k:"maq",c:"S",n:"Sótano · Sala de máquinas",col:AZUL},{k:"pb",c:"PB",n:"Planta baja · Descanso",col:VERDE},{k:"p1",c:"1",n:"Piso 1 · Guion y voz",col:AMAR},{k:"p2",c:"2",n:"Piso 2 · Arte",col:ROSA},{k:"p3",c:"3",n:"Piso 3 · Montaje",col:LILA},{k:"az",c:"Az",n:"Azotea · Subida",col:ROJO}];
+  const LUGAR={guion:[2,.2],voz:[2,.44],sonido:[2,.66],imagenes:[3,.28],clips:[3,.58],animacion:[4,.2],render:[4,.44],revision:[4,.66],subida:[5,.42]};
+  const SALA=0,P_PB=1,ESC_A=.03,ESC_B=.095,ASC=.82,ASC_W=112,CAB_A=138,LOSA=12,TECHO=240,TIERRA=120,GAB_X=.125,GAB_W=.625,ZMAX=2.8,MUNDO_W=1500;
+  const pisoDe=v=>EDIF?Math.round(v/10):0,fr=v=>v-pisoDe(v)*10,enP=(p,f)=>EDIF?p*10+f:f;
+  const rampa=p=>p%2?[ESC_B,ESC_A]:[ESC_A,ESC_B];   // sube en zigzag: cada tramo acaba donde empieza el siguiente
+  let Yo=null;                           // quién hace la pose: lo que suelta (`em`) sale de él, no de Token
+  const Rb={x:0,dir:1,via:null,oy:null},Cab={y:P_PB,de:null,pu:0},Cam={x:0,y:0,z:1,tx:0,ty:0,tz:1,rot:0,sigue:true,listo:false,ini:0};
+  let CW=0,CH=0,pisoY=[],ALTOM=0,enMundo=false,pisoAct=-1;
+  if(EDIF)document.body.classList.add("edif");
   let W=0,H=0,K=1,PCH=0,TH=0,dpr=1,robotX=DESCANSO,meta=DESCANSO,paso=0,idx=-1,dir=1,parts=[],pal={},pend=null,A={nom:"quieto",ini:0,e:null},llego=0,ahora=0,sue=0,tiempos={};
   const Cap={fondo:null,medio:null,encima:null,atras:null,cuerpo:null,cabeza:null,clic:null,sinCajas:false,cuerpoR:null,oculto:false};   // lo que añade panel_vivo_extras.js
   let palExtra={};
   const leerPal=()=>{for(const k of ["--muro","--muro2","--suelo","--mesa","--txt","--mut","--faint","--acc","--ok","--run","--warn","--pink","--panel"])pal[k]=css(k);Object.assign(pal,palExtra);};
   function medida(){
     dpr=Math.min(2,devicePixelRatio||1);
-    W=cv.clientWidth;H=cv.clientHeight;PCH=Math.round(Math.max(84,Math.min(108,H*.31)));TH=W<=900?96:0;K=(H-PCH-TH)/150;cv.width=W*dpr;cv.height=H*dpr;leerPal();   // arriba, el gabinete; debajo, el taller
+    CW=cv.clientWidth;CH=cv.clientHeight;
+    if(EDIF){
+      W=MUNDO_W;K=1.3;PCH=108;TH=0;H=PCH+150*K;
+      let y=TECHO;pisoY=[];
+      for(let p=PISOS.length-1;p>=0;p--){if(p===SALA)y+=PCH;pisoY[p]=y-PCH;y+=H-PCH+LOSA;}   // el gabinete cuelga en la sala: ese piso es más alto
+      ALTOM=y+TIERRA;
+    }else{W=CW;H=CH;PCH=Math.round(Math.max(84,Math.min(108,H*.31)));TH=W<=900?96:0;K=(H-PCH-TH)/150;}   // arriba, el gabinete; debajo, el taller
+    cv.width=CW*dpr;cv.height=CH*dpr;leerPal();
   }
   addEventListener("resize",medida);
+  if(EDIF&&window.ResizeObserver)new ResizeObserver(()=>{if(CW)medida();}).observe(cv);   // el alto del lienzo depende de la cabecera y de las sesiones, no solo de la ventana
   matchMedia("(prefers-color-scheme:dark)").addEventListener("change",medida);
   const AN=()=>W>900?.88:1;              // ancho del taller: en pantalla ancha, a la derecha vive Torre; en lo angosto, en un carril abajo
-  const DES=()=>DESCANSO*AN();
-  const X=i=>(i+1.5)/(ESTACIONES.length+1)*AN();
+  const DES=()=>EDIF?enP(P_PB,.2):window.EN_VIDEO?.12:DESCANSO*AN();   // a 1080p el robot es grande: en un video no puede quedar cortado por el borde
+  const X=i=>{if(!EDIF)return (i+1.5)/(ESTACIONES.length+1)*AN();const [p,f]=LUGAR[ESTACIONES[i][0]];return p*10+f;};
+  const oyCab=()=>{const p=Math.floor(Cab.y),k=Cab.y-p;return pisoY[p]+((pisoY[p+1]??pisoY[p])-pisoY[p])*k;};
+  const lim=v=>{const p=pisoDe(v);return p*10+Math.max(.03,Math.min(.97*AN(),v-p*10));};
+  function viaja(E,t,dt){                // 1 = camina, 2 = espera o va en el elevador
+    const V=E.via;
+    if(V.t==="esc"){
+      const f=Math.min(1,(t-V.ini)/V.dur);
+      E.x=V.de*10+V.x0+(V.x1-V.x0)*f;E.dir=V.x1>V.x0?1:-1;E.oy=pisoY[V.de]+(pisoY[V.a]-pisoY[V.de])*f;
+      if(f>=1){E.x=V.a*10+V.x1;E.via=null;E.oy=null;}
+      return 1;
+    }
+    const s=dt/640,cab=dest=>{const d=dest-Cab.y;if(Math.abs(d)<=s){Cab.y=dest;return true;}Cab.y+=Math.sign(d)*s;return false;};
+    const ding=()=>{if(E===Rb)Son.mini("habla",1760);};
+    if(V.f===0){if(cab(V.de)){V.f=1;ding();}}
+    else if(V.f===1){Cab.pu=Math.min(1,Cab.pu+dt/300);if(Cab.pu>=1){V.f=2;V.t0=t;E.oy=pisoY[V.de];}}
+    else if(V.f===2){if(t-V.t0>240)V.f=3;}
+    else if(V.f===3){Cab.pu=Math.max(0,Cab.pu-dt/300);if(!Cab.pu)V.f=4;}
+    else if(V.f===4){if(cab(V.a)){V.f=5;ding();}E.oy=oyCab();}
+    else if(V.f===5){Cab.pu=Math.min(1,Cab.pu+dt/300);if(Cab.pu>=1){V.f=6;V.t0=t;}}
+    else if(t-V.t0>180){E.x=V.a*10+ASC;E.via=null;E.oy=null;Cab.de=null;return 1;}
+    return 2;
+  }
+  function avanza(E,meta,paso,t,dt){     // 0 = llegó, 1 = camina, 2 = espera o va en el elevador. A otro piso: un piso por la escalera; dos o más, por el elevador si está libre
+    if(E.via){
+      const V=E.via,q=pisoDe(meta);
+      if(V.t==="asc"&&V.a!==q&&V.f<=4){  // cambió de destino: el elevador se desvía, no llega hasta el piso viejo
+        if(q===V.de&&V.f<=1){E.via=null;Cab.de=null;return 1;}
+        V.a=q;
+      }
+      return viaja(E,t,dt);
+    }
+    const p=pisoDe(E.x),q=pisoDe(meta);
+    let dest=meta;
+    if(p!==q){
+      const sube=q>p,asc=Math.abs(q-p)>=2&&(!Cab.de||Cab.de===E);
+      const r=sube?rampa(p):[rampa(p-1)[1],rampa(p-1)[0]];
+      dest=p*10+(asc?ASC:r[0]);
+      if(Math.abs(dest-E.x)<=.003){
+        E.x=dest;
+        if(asc){Cab.de=E;E.via={t:"asc",f:0,de:p,a:q};}
+        else{const a=sube?p+1:p-1;E.via={t:"esc",de:p,a,ini:t,x0:r[0],x1:r[1],dur:(E===Rb?1400:1900)*(Math.min(p,a)===SALA?1.3:1)};}
+        return viaja(E,t,dt);
+      }
+    }
+    const d=dest-E.x;
+    if(Math.abs(d)>.003){E.x+=Math.sign(d)*Math.min(Math.abs(d),paso);E.dir=d>0?1:-1;return 1;}
+    E.x=dest;return 0;
+  }
 
   // ---- primitivas
   const camino=(x,y,w,h,r)=>{g.beginPath();g.roundRect(x,y,w,h,r);};
@@ -899,7 +1056,7 @@ const Taller=(()=>{
   const corazon=(x,y,r,c)=>{g.beginPath();g.moveTo(x,y+r*.9);g.bezierCurveTo(x-r*1.5,y-r*.1,x-r*.7,y-r,x,y-r*.3);g.bezierCurveTo(x+r*.7,y-r,x+r*1.5,y-r*.1,x,y+r*.9);g.fillStyle=c;g.fill();};
   const em=(ms,x,y,txt,c,vy=-26)=>{      // suelta un dibujito que sube y se apaga, cada `ms`
     const k=txt+ms;if(ahora-(tiempos[k]||0)<ms)return;tiempos[k]=ahora;
-    parts.push({x:robotX*W+x*K,y:sue+y*K,vx:(Math.random()-.5)*26*K,vy:vy*K,v:1,c,txt});
+    parts.push({x:fr(Yo?Yo.x:robotX)*W+x*K,y:sue+y*K,vx:(Math.random()-.5)*26*K,vy:vy*K,v:1,c,txt,o:EDIF?(Yo?Yo.oy??pisoY[pisoDe(Yo.x)]:oyRobot()):0});
   };
 
   // ---- el robot: cabeza grande, visor con ojos que brillan, mejillas rosas
@@ -933,20 +1090,21 @@ const Taller=(()=>{
       if(tipo==="linterna"){circ(0,-71,4,"#fff4b0");aro(0,-71,4,TINTA,1.1);}
     }
   }
-  function brazo(x,y,[mx,my]){
-    g.beginPath();g.moveTo(x,y);g.quadraticCurveTo((x+mx)/2,Math.max(y,my)+3,mx,my);g.strokeStyle=TINTA;g.lineWidth=3;g.lineCap="round";g.stroke();
-    circ(mx,my,3.4,CABEZA);aro(mx,my,3.4,TINTA,1.2);
+  function brazo(x,y,[mx,my],U){
+    g.beginPath();g.moveTo(x,y);g.quadraticCurveTo((x+mx)/2,Math.max(y,my)+3,mx,my);g.strokeStyle=U?.manga||TINTA;g.lineWidth=3;g.lineCap="round";g.stroke();
+    circ(mx,my,U?.mano||3.4,CABEZA);aro(mx,my,U?.mano||3.4,TINTA,1.2);
   }
   function figura(P,T){
     const [ai,bi]=P.pies||[0,0];
     g.save();g.translate(P.dx||0,-(P.sube||0));
     if(P.rota){g.translate(0,-22);g.rotate(P.rota);g.translate(0,22);}
     if(P.yo&&Cap.atras)Cap.atras(P,T);
-    if(P.sentado)for(const px of [-4,5]){raya(px,-11,px+13,-8,TINTA,3.6);caja(px+10,-14,5.5,8.5,2,TINTA);}
-    else for(const [px,a] of [[-6,ai],[6,bi]]){raya(px,-11,px+a,-3,TINTA,3.6);caja(px+a-4,-4.5,10,4.5,2.2,TINTA);}
-    brazo(-11,-25,P.brI||[-15,-14]);
-    caja(-13.5,-32,27,23,10,P.cuerpo||pal["--acc"]);
-    corazon(0,-21,3.4+Math.sin(T*3)*.4,"rgba(255,255,255,.85)");
+    const U=P.uni&&Cap.uni?Cap.uni(P.uni):null,pie=U?.pierna||TINTA,zap=U?.zapato||TINTA;
+    if(P.sentado)for(const px of [-4,5]){raya(px,-11,px+13,-8,pie,3.6);caja(px+10,-14,5.5,8.5,2,zap);}
+    else for(const [px,a] of [[-6,ai],[6,bi]]){raya(px,-11,px+a,-3,pie,3.6);caja(px+a-4,-4.5,10,4.5,2.2,zap);}
+    brazo(-11,-25,P.brI||[-15,-14],U);
+    caja(-13.5,-32,27,23,10,U?U.c:P.cuerpo||pal["--acc"]);
+    if(U)U.t(T);else corazon(0,-21,3.4+Math.sin(T*3)*.4,"rgba(255,255,255,.85)");
     if(P.yo&&Cap.cuerpo)Cap.cuerpo(P,T);
     g.save();g.translate(0,-30);g.rotate(P.incl||0);g.translate(0,30);
     const bu=Math.sin(T*2.6)*2;
@@ -959,12 +1117,12 @@ const Taller=(()=>{
     circ(-13.5,-34.5,P.rubor?4.5:2.8,ROSA+(P.rubor?"ee":"99"));circ(13.5,-34.5,P.rubor?4.5:2.8,ROSA+(P.rubor?"ee":"99"));
     if(P.boca)elip(0,-33.5,3.2,1.3+2.6*P.boca,"#d94a6a");
     else aro(0,-35.5,2.6,TINTA,1.4,.35,Math.PI-.35);
-    if(P.gorro)gorro(P.gorro);
-    if(P.yo&&Cap.cabeza)Cap.cabeza(P,T);
+    if(P.gorro)gorro(P.gorro);else if(U?.k)U.k(T);
+    if((P.yo||P.fiesta)&&Cap.cabeza)Cap.cabeza(P,T);
     if(P.pelo)for(const [a,b,c,d] of [[-14,-59,-20,-69],[-5,-61,-8,-73],[5,-61,9,-72],[14,-59,21,-67]])raya(a,b,c,d,TINTA,2);
     if(P.lagrima)elip(-9,-41+(T*14%10),1.6,2.2,AZUL);
     g.restore();
-    brazo(11,-25,P.brD||[15,-14]);
+    brazo(11,-25,P.brD||[15,-14],U);
     g.restore();
   }
 
@@ -1511,19 +1669,33 @@ const Taller=(()=>{
   };
 
   // ---- el taller
+  // ---- variantes (1-nov-2026): cada acción de trabajo tiene varias poses graciosas (nucleo/panel_vivo_poses.js); salen barajadas sin repetir
+  // hasta agotar la lista y, si la acción dura, cambian cada ROTA_MS. El letrero y el sonido siguen siendo los de la acción real
+  const KIT_V={},bolsasV={},ultV={},ROTA_MS=9000;
+  let fijaV=null;                        // Taller.prueba("boton_hamster"): el robot hace esa pose sin importar la acción (para revisar el kit)
+  function variaDe(nom){
+    const L=KIT_V[nom];if(!L||!L.length)return nom;
+    let b=bolsasV[nom];
+    if(!b||!b.length){
+      b=bolsasV[nom]=[nom,...L].filter(k=>POSES[k]);
+      for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}
+      if(b.length>1&&b[0]===ultV[nom])b.push(b.shift());
+    }
+    return ultV[nom]=b.shift()||nom;
+  }
   function poner(nom,e,callado){
     finEsc();
-    A={nom,ini:ahora,e:e||null};llego=0;pend=null;
+    A={nom,ini:ahora,e:e||null,v:variaDe(nom),vT:0};llego=0;pend=null;
     if(e)actHasta=proxAct=0;
     if(nom==="fallo"){
-      for(const [i,m] of enEscena().entries()){m.susto=ahora;m.meta=Math.max(.02,meta-.035*(i+1));}
+      for(const [i,m] of enEscena().entries()){m.susto=ahora;if(pisoDe(m.x)===pisoDe(meta))m.meta=Math.max(.02,meta-.035*(i+1));}
       if(S.modo==="vivo"&&e?.tipo==="comando")quiere("apagon",pz("red"),"Comando fallido");
     }
     if(nom==="fiesta")for(const m of enEscena())m.porra=ahora;
     const est=estacionDe(nom,e),i=ESTACIONES.findIndex(x=>x[0]===est);
     idx=i;
     const atras=nom==="rueda"?0:32*K/Math.max(W,1);
-    meta=i>=0?Math.max(.03,X(i)-atras):esAct(nom)?xAct():DES();
+    meta=i>=0?Math.max(.03,X(i)-atras):esAct(nom)?xAct():EDIF?meta:DES();   // en el edificio, lo que no tiene estación se hace donde esté: no baja al descanso cada vez
     if(!callado)Son.accion(nom);
   }
   const ir=e=>{
@@ -1559,12 +1731,12 @@ const Taller=(()=>{
     if(t<proxAct)return;
     if(trabajaPC()&&t-ultMira>50000){    // la PC trabaja y él está libre: la mira, le echa porras o le da aire. El letrero dice su tarea real
       ultMira=t;actHasta=t+8000;const n=["porrapc","mirapc","abanico"][Math.floor(Math.random()*3)];
-      poner(n,null,true);A.act=true;A.txt=letreroPC();if(W>900)meta=AN()-.035;Son.rx("rxUf");
+      poner(n,null,true);A.act=true;A.txt=letreroPC();if(EDIF)meta=enP(SALA,.885);else if(W>900)meta=AN()-.035;Son.rx("rxUf");
       return;
     }
     const urge=PZ.filter(p=>p.k!=="red"&&p.u!=null&&p.u>=95).sort((a,b)=>b.u-a.u)[0];
     if(urge&&t-ultAire>120000){          // una actividad más: le echa aire o la apaga; el letrero dice la cifra real
-      ultAire=t;actHasta=t+9000;poner(Math.random()<.5?"abanico":"extintor",null,true);A.act=true;A.txt=`${urge.nom} al ${pct(urge.u)} %${urge.io?" de actividad":""}`;meta=Math.max(.04,Math.min(.97*AN(),(urge.x+urge.bw/2)/W));Son.rx("pcFan");
+      ultAire=t;actHasta=t+9000;poner(Math.random()<.5?"abanico":"extintor",null,true);A.act=true;A.txt=`${urge.nom} al ${pct(urge.u)} %${urge.io?" de actividad":""}`;meta=EDIF?lim(enP(SALA,(urge.x+urge.bw/2)/W)):Math.max(.04,Math.min(.97*AN(),(urge.x+urge.bw/2)/W));Son.rx("pcFan");
       return;
     }
     const pr=procesoPose();              // si corre un proceso, de vez en cuando va a ver cómo va: eso sí es real
@@ -1587,10 +1759,10 @@ const Taller=(()=>{
 
   // ---- los mini robots: cada uno existe solo si hay trabajo real detrás. Lo que hacen entre ellos es teatro; su presencia y su tarea, no
   const TM={
-    investigador:{c:AZUL,gorro:"lentes",tono:1180,x:.1,espera:"Esperando la investigación"},
-    explorador:{c:VERDE,gorro:"linterna",tono:980,x:.3,espera:"Esperando al explorador"},
-    obrero:{c:AMAR,gorro:"casco",tono:640,x:.6,espera:"Esperando al obrero"},
-    inspector:{c:LILA,gorro:"gorra",tono:1320,x:.89,espera:"Esperando la verificación"},
+    investigador:{c:AZUL,gorro:"lentes",tono:1180,x:EDIF?enP(2,.32):.1,espera:"Esperando la investigación"},
+    explorador:{c:VERDE,gorro:"linterna",tono:980,x:EDIF?enP(3,.14):.3,espera:"Esperando al explorador"},
+    obrero:{c:AMAR,gorro:"casco",tono:640,x:EDIF?enP(4,.32):.6,espera:"Esperando al obrero"},
+    inspector:{c:LILA,gorro:"gorra",tono:1320,x:EDIF?enP(4,.56):.89,espera:"Esperando la verificación"},
     rodador:{c:ROJO,tono:540,x:X(6),espera:"Esperando el render"},
     cantor:{c:ROSA,gorro:"cascos",tono:1450,x:X(1)+.035,espera:"Esperando la voz"},
     pintor:{c:"#ff9f5a",gorro:"boina",tono:880,x:X(3)+.035,espera:"Esperando las imágenes"},
@@ -1598,20 +1770,22 @@ const Taller=(()=>{
   };
   const ETAPA_MINI={video:"rodador",final:"rodador",voz:"cantor",seleccion:"cantor",flow:"pintor"};
   const ESCENA_POSES=new Set(["preguntar","gritar","chocar","manos"]);
-  const ALTO=.6,SALIDA=-.07;
+  const ALTO=.6,SALIDA=enP(P_PB,-.07);
+  if(EDIF)robotX=meta=DES();
   let etaAnt=null,minis=new Map(),Esc=null,ultPreg=-1e9,ultPelea=-1e9,ultReal=0,peloHasta=0,aviones=[],ronquido=0;
-  const maxMinis=()=>W&&W<520?2:4;
+  const maxMinis=()=>EDIF?10:W&&W<520?2:4;
   const visibles=()=>[...minis.values()].filter(m=>!(m.tipo==="rodador"&&A.nom==="rueda")&&!(m.tipo==="cantor"&&A.nom==="grabar")&&!(m.tipo==="pintor"&&A.nom==="pintar")).slice(0,maxMinis());
   const enEscena=()=>visibles().filter(m=>!m.ida);
   const activos=()=>[...minis.values()].filter(m=>m.activo&&!m.ida);
   function crear(f,dormido){
     const n=[...minis.values()].filter(x=>x.tipo===f.tipo).length;
-    const dur=(i=>.095+i*.028)(minis.size);
-    const slot=dormido?dur:Math.min(.96,TM[f.tipo].x+n*.03)*AN();
+    const dur=(i=>EDIF?enP(P_PB,.42+i*.03):.095+i*.028)(minis.size);
+    const slot=dormido?dur:EDIF?TM[f.tipo].x+n*.035:Math.min(.96,TM[f.tipo].x+n*.03)*AN();
     const m={id:f.id,tipo:f.tipo,desc:f.desc||"",activo:!!f.activo,x:dormido?slot:SALIDA,meta:slot,slot,dir:1,fase:Math.random()*6,duerme:!!dormido,visto:ahora};
     minis.set(f.id,m);return m;
   }
   function sync(lista,etapa){            // la lista real de la API + el proceso que corre
+    if(Flo.on)return;                    // en la fábrica entera los minis van con el robot de cada sesión
     const filas=[...lista],tipo=ETAPA_MINI[etapa];
     if(etaAnt&&ETAPA_MINI[etaAnt]==="rodador"&&ETAPA_MINI[etapa]!=="rodador")quiere("rendfin",null,"Render terminado");
     etaAnt=etapa;
@@ -1631,6 +1805,7 @@ const Taller=(()=>{
     }
   }
   function delAyudante(e){
+    if(Flo.on)return;
     let m=minis.get(e.de);
     if(!m){m=crear({id:e.de,tipo:S.eq.get(e.de)?.tipo||"investigador",desc:e.quien,activo:true});m.fantasma=true;}   // repetición: ya acabó, pero esto lo hizo él
     m.visto=ahora;m.acc=e.tipo;
@@ -1656,7 +1831,7 @@ const Taller=(()=>{
       meta=Math.max(.03,m.x-.06);
       if(!E.llego){
         if(Math.abs(robotX-meta)<.004){E.llego=t;act("preguntar");m.oye=true;Son.mini("habla",tono);}
-        else if(f>6000)finEsc();
+        else if(f>(EDIF?18000:6000))finEsc();
       }else if(t-E.llego>2600){
         m.oye=false;
         if(E.pelea){const x=m;finEsc();escena("pelea",x);meta=Math.max(.03,x.x-.06);ultPelea=t;}else finEsc();
@@ -1673,10 +1848,10 @@ const Taller=(()=>{
         if(E.nube){E.nube=0;m.oculto=false;peloHasta=t+9000;m.pelo=t+9000;act("manos");m.choca=true;}
       }else finEsc();
     }else if(E.tipo==="entrega"){
-      m.meta=Math.min(.96*AN(),Math.max(robotX,.03)+.055);
+      m.meta=EDIF?lim(robotX+.055):Math.min(.96*AN(),Math.max(robotX,.03)+.055);
       if(!E.llego){
         if(Math.abs(m.x-m.meta)<.004){E.llego=t;act("chocar");m.choca=true;m.carga=null;Son.mini("choca",tono);}
-        else if(f>9000){m.ida=true;m.meta=SALIDA;finEsc();}
+        else if(f>(EDIF?26000:9000)){m.ida=true;m.meta=SALIDA;finEsc();}
       }else if(!E.fue&&t-E.llego>1300){
         E.fue=1;m.choca=false;m.ida=true;m.saluda=true;m.meta=SALIDA;
         if(m.tipo==="cargador"){act("lupa");E.hasta=t+1900;}else finEsc();
@@ -1685,7 +1860,7 @@ const Taller=(()=>{
   }
   const emM=(m,ms,y,txt,c,vy=-22,dx=0)=>{  // dx: sale de la herramienta, no de la cara
     const k=m.id+txt;if(ahora-(tiempos[k]||0)<ms)return;tiempos[k]=ahora;
-    parts.push({x:m.x*W+dx*K*ALTO*m.dir,y:sue+y*K*ALTO,vx:(Math.random()-.5)*18*K,vy:vy*K,v:1,c,txt});
+    parts.push({x:fr(m.x)*W+dx*K*ALTO*m.dir,y:sue+y*K*ALTO,vx:(Math.random()-.5)*18*K,vy:vy*K,v:1,c,txt,o:EDIF?m.oy??pisoY[pisoDe(m.x)]:0});
   };
   function pasaMinis(t,dt,corre){
     for(const m of [...minis.values()]){
@@ -1694,11 +1869,14 @@ const Taller=(()=>{
       if(m.fin&&!m.ida&&!m.duerme&&t-m.finT>120000&&!(Esc&&Esc.m===m)){m.ida=true;m.meta=SALIDA;}
       if(m.duerme&&corre&&Math.abs(robotX-m.x)<.035&&t-(m.salto||0)>4000){m.salto=t;Son.mini("salto",TM[m.tipo].tono);}
       if(!m.ida&&!m.susto&&!m.fin&&!(Esc&&Esc.m===m))m.meta=Math.max(m.slot,esAct(A.nom)?finZona()+.03:0);
-      const d=m.meta-m.x;
-      m.anda=Math.abs(d)>.003;
-      if(m.anda){m.x+=Math.sign(d)*Math.min(Math.abs(d),dt*.00034*(m.susto?2.4:1));m.dir=d>0?1:-1;}
-      else{m.x=m.meta;m.dir=Esc&&Esc.m===m?-1:1;}
-      if(m.ida&&m.x<=SALIDA+.002)minis.delete(m.id);
+      if(EDIF){const r=avanza(m,m.meta,dt*.0004*(m.susto?2.4:1),t,dt);m.anda=r===1;if(!r)m.dir=Esc&&Esc.m===m?-1:1;}
+      else{
+        const d=m.meta-m.x;
+        m.anda=Math.abs(d)>.003;
+        if(m.anda){m.x+=Math.sign(d)*Math.min(Math.abs(d),dt*.00034*(m.susto?2.4:1));m.dir=d>0?1:-1;}
+        else{m.x=m.meta;m.dir=Esc&&Esc.m===m?-1:1;}
+      }
+      if(m.ida&&!m.via&&pisoDe(m.x)===pisoDe(SALIDA)&&m.x<=SALIDA+.002)minis.delete(m.id);
     }
     aviones=aviones.filter(a=>t-a.ini<1200);
     const dormidos=visibles().filter(m=>m.duerme);
@@ -1772,7 +1950,7 @@ const Taller=(()=>{
     return m.v;
   }
   function poseMini(m,T,t){
-    const q=TM[m.tipo],b=Math.sin(T*3),P={cuerpo:q.c,gorro:q.gorro,pies:[0,0],mira:b*2};
+    const q=TM[m.tipo],b=Math.sin(T*3),P={cuerpo:q.c,gorro:q.gorro,pies:[0,0],mira:b*2,uni:EDIF?m.uni||Cap.uniSesion?.():undefined};
     if(m.pelo>t)P.pelo=true;
     if(m.rx&&Rx&&!m.anda)return {...P,...POSES[m.rx](T,(t-Rx.ini)/1000,-108/ALTO)};
     if(m.duerme){
@@ -1802,20 +1980,21 @@ const Taller=(()=>{
   function dibujaMini(m,t){
     if(m.oculto)return;
     const P=poseMini(m,t/1000+m.fase,t);
-    g.fillStyle="rgba(0,0,0,.18)";g.beginPath();g.ellipse(m.x*W,sue+4*K,11*K,2.8*K,0,0,7);g.fill();
-    g.save();g.translate(m.x*W,sue+3*K);g.scale(K*ALTO*m.dir,K*ALTO);
+    const mx=fr(m.x)*W;
+    g.fillStyle="rgba(0,0,0,.18)";g.beginPath();g.ellipse(mx,sue+4*K,11*K,2.8*K,0,0,7);g.fill();
+    g.save();g.translate(mx,sue+3*K);g.scale(K*ALTO*m.dir,K*ALTO);
     if(P.atras)P.atras();
     figura(P,t/1000+m.fase);
     if(P.frente)P.frente();
     g.restore();
     if(S.ev[S.idx]?.de===m.id&&!m.duerme){  // lo que dice el monitor lo está haciendo este
-      const y=sue-(52+Math.sin(t/220)*2)*K;g.beginPath();g.moveTo(m.x*W-5*K,y-7*K);g.lineTo(m.x*W+5*K,y-7*K);g.lineTo(m.x*W,y);g.closePath();g.fillStyle=TM[m.tipo].c;g.fill();
+      const y=sue-(52+Math.sin(t/220)*2)*K;g.beginPath();g.moveTo(mx-5*K,y-7*K);g.lineTo(mx+5*K,y-7*K);g.lineTo(mx,y);g.closePath();g.fillStyle=TM[m.tipo].c;g.fill();
     }
     if(W>=520&&m.desc&&!m.duerme){
       const txt=m.desc.length>27?m.desc.slice(0,26)+"…":m.desc;
       g.font=`500 ${Math.max(9,9.5*Math.min(K,1.2))}px "Segoe UI",system-ui,sans-serif`;g.textAlign="center";g.fillStyle=pal["--mut"];
       const a=g.measureText(txt).width/2+margen();
-      g.fillText(txt,Math.max(a,Math.min(W-a,m.x*W)),sue-61*K);
+      g.fillText(txt,Math.max(a,Math.min(W-a,mx)),sue-61*K);
     }
   }
 
@@ -2014,11 +2193,11 @@ const Taller=(()=>{
     const c=RX[cola.tipo],lib=!pend&&!Esc&&principalAlDia()&&!A.e;
     const ms=enEscena().filter(m=>!m.duerme&&!m.fin);
     if(!lib&&!ms.length){if(t-cola.t>20000)cola=null;return;}
-    const x=cola.p?cola.p.x+cola.p.bw/2:0,xr=Math.max(.04,Math.min(.97*AN(),x/W));
-    Rx={tipo:cola.tipo,p:cola.p,ini:t,fin:t+c.dur,x:xr,ms:[]};
+    const x=cola.p?cola.p.x+cola.p.bw/2:0,xr=EDIF?lim(enP(SALA,x/W)):Math.max(.04,Math.min(.97*AN(),x/W));
+    Rx={tipo:cola.tipo,p:cola.p,txt:cola.txt,ini:t,fin:t+c.dur,x:xr,ms:[]};
     ultRx[cola.tipo]=t;Son.rx(c.son);
     if(lib){
-      const nom=c.prin();poner(nom,null,true);A.act=true;A.txt=cola.txt;actHasta=t+c.dur;
+      const nom=c.prin();poner(nom,null,true);A.act=true;A.txt=cola.txt;actHasta=t+c.dur+(EDIF&&c.aPieza?5000:0);
       if(c.aPieza)meta=xr;
     }
     ms.forEach((m,i)=>{const n=c.mini(i);if(!n)return;m.rx=n;m.rxI=i;Rx.ms.push(m);});
@@ -2029,6 +2208,11 @@ const Taller=(()=>{
     if(!Rx)return;
     const c=RX[Rx.tipo];
     for(const m of Rx.ms){
+      if(EDIF){                          // en el edificio solo acude quien ya está en la sala; los demás reaccionan desde su piso
+        if(m.rx==="correr")m.meta=lim(m.slot+Math.sin(t/330+m.rxI)*.05);
+        else if(c.aPieza&&pisoDe(m.x)===SALA)m.meta=lim(Rx.x+(m.rxI+1)*.05*(fr(Rx.x)>.5?-1:1));
+        continue;
+      }
       if(m.rx==="correr")m.meta=Math.max(.03,Math.min(.97*AN(),m.slot+Math.sin(t/330+m.rxI)*.05));
       else if(c.aPieza)m.meta=Math.max(.03,Math.min(.97*AN(),Rx.x+(m.rxI+1)*.05*(Rx.x>.5?-1:1)));
     }
@@ -2036,7 +2220,7 @@ const Taller=(()=>{
   }
   function dibujaRx(t){
     if(!Rx)return;
-    const T=t/1000,f=t-Rx.ini,x=Rx.x*W;
+    const T=t/1000,f=t-Rx.ini,x=fr(Rx.x)*W;
     if(Rx.tipo==="ram")for(let i=0;i<6;i++){               // caen bloques: teatro, la RAM no pierde nada
       const k=((f/1400+i*.17)%1),px=x+Math.sin(i*2.4)*44*K,py=PCH+k*(sue-PCH);
       g.save();g.translate(px,py);g.rotate(k*4+i);caja(-6*K,-5*K,12*K,10*K,1.5,VERDE);marco(-6*K,-5*K,12*K,10*K,1.5,TINTA,1);g.restore();
@@ -2128,7 +2312,7 @@ const Taller=(()=>{
   const trabajaPC=()=>To.tipo!=="libre"&&ahora-pc.t<15000;
   function letreroPC(){
     const d=To.dato;if(ahora-pc.t>15000)return "";
-    if(!d||To.tipo==="libre")return "PC sin tareas";
+    if(!d||To.tipo==="libre")return window.EN_VIDEO?"":"PC sin tareas";
     const c=d.cpu||0,gp=d.gpu||0,cifra=gp>c?`GPU ${Math.round(gp)} %`:`CPU ${Math.round(c)} %`;
     return `${d.nombre||TIPOS_PC[To.tipo]} · ${cifra}`;
   }
@@ -2187,7 +2371,7 @@ const Taller=(()=>{
     for(let i=0;i<4;i++){const u=T*3+i*1.57;letra(i%2?"★":"✦",xpx+Math.cos(u)*30*K,y-14*K+Math.sin(u)*16*K,12*K,AMAR);}
   }
   function avionPapel(a,t){
-    const p=Math.min(1,(t-a.ini)/1100),x=(a.x+(robotX-a.x)*p)*W,y=sue-(38+Math.sin(p*Math.PI)*52)*K;
+    const p=Math.min(1,(t-a.ini)/1100),x=(fr(a.x)+(fr(robotX)-fr(a.x))*p)*W,y=sue-(38+Math.sin(p*Math.PI)*52)*K;
     g.save();g.translate(x,y);g.rotate(robotX<a.x?Math.PI+.3-p*.6:-.3+p*.6);g.scale(K,K);
     g.beginPath();g.moveTo(12,0);g.lineTo(-9,-7);g.lineTo(-4,0);g.lineTo(-9,6);g.closePath();g.fillStyle="#fffaf0";g.fill();g.strokeStyle=TINTA;g.lineWidth=1;g.stroke();
     g.restore();
@@ -2198,6 +2382,7 @@ const Taller=(()=>{
     g.fillStyle=pal["--muro2"];
     for(let i=0;i<10;i++){const x=(i+.5)/10*W;camino(x-34*K,PCH+4,68*K,(suelo-PCH)*.5,8);g.fill();}
     g.fillStyle=pal["--suelo"];g.fillRect(0,suelo,W,H-suelo);
+    if(EDIF&&pisoAct!==P_PB)return;
     const by=H-TH-15;
     g.fillStyle=pal["--mesa"];g.fillRect(0,by,W,10);
     g.fillStyle=pal["--muro2"];
@@ -2206,7 +2391,7 @@ const Taller=(()=>{
     if(!Cap.sinCajas)for(let x=-120+(t*.03)%120;x<W;x+=120){g.fillStyle=pal["--acc"];g.globalAlpha=.6;camino(x,by-9,16,10,2);g.fill();g.globalAlpha=1;}
   }
   function rincon(t){                    // el descanso: tapete, cojín, planta y una taza que humea; nunca se ilumina
-    const n=ESTACIONES.length+1,x=DES()*W,base=sue,e=Math.min(K,W*AN()/n/38);
+    const n=ESTACIONES.length+1,x=fr(DES())*W,base=sue,e=Math.min(K,W*AN()/n/38);
     elip(x,base+4*K,24*e,5*e,pal["--muro2"]);
     caja(x+9*e,base-11*e,12*e,13*e,3*e,pal["--mesa"]);
     raya(x+15*e,base-11*e,x+15*e,base-22*e,VERDE,2*e);
@@ -2217,10 +2402,10 @@ const Taller=(()=>{
     const vapor=(t/900)%1;
     g.globalAlpha=.5*(1-vapor);raya(x-16*e,base-15*e-vapor*9*e,x-15*e,base-19*e-vapor*9*e,pal["--faint"],1.5*e);g.globalAlpha=1;
     g.fillStyle=pal["--mut"];g.font=`500 ${Math.max(9,10.5*Math.min(K,1.2))}px "Segoe UI",system-ui,sans-serif`;g.textAlign="center";
-    if(W>=520)g.fillText("Descanso",x,base+15*K);
+    if(W>=520&&!EDIF)g.fillText("Descanso",x,base+15*K);
   }
   function estacion(i,t,enAccion){
-    const n=ESTACIONES.length+1,x=X(i)*W,base=sue,act=i===idx,e=Math.min(K,W*AN()/n/38),w=46*e;
+    const n=ESTACIONES.length+1,x=fr(X(i))*W,base=sue,act=Flo.foco?Flo.ocup.has(i):i===idx,e=Math.min(K,W*AN()/n/38),w=46*e;
     if(act){
       const gr=g.createRadialGradient(x,base-30*K,4,x,base-30*K,70*K);
       gr.addColorStop(0,pal["--acc"]+"55");gr.addColorStop(1,pal["--acc"]+"00");g.fillStyle=gr;g.fillRect(x-74*K,base-104*K,148*K,116*K);
@@ -2254,15 +2439,15 @@ const Taller=(()=>{
     g.fillStyle=pal["--txt"];g.textAlign="left";g.textBaseline="middle";g.fillText(txt,px+9,py+h/2+.5);g.textBaseline="alphabetic";
   }
   function pinta(t,dt){
-    if(!W)medida();
-    if(!W||!H)return;
-    ahora=t;sue=PCH+(H-PCH-TH)*.72;
-    g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,W,H);
+    if(!CW)medida();
+    if(!CW||!CH)return;
+    ahora=t;sue=PCH+(H-PCH-TH)*(EDIF?.8:.72);
+    if(!EDIF){g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,W,H);}
     if(pend&&Esc&&pend.e)finEsc();          // llegó trabajo real: se acaba el teatro
     if(pend&&pend.e&&(A.act||esAct(A.nom)||A.nom==="quieto")){ultReal=t;poner(pend.nom,pend.e);}   // y las actividades y reacciones se cortan al instante
     if(pend&&t-A.ini>MIN_MS&&(llego?t-llego>MIN_MS:t-A.ini>MAX_MS)){if(pend.e)ultReal=t;poner(pend.nom,pend.e);}
     if(A.e&&A.e.fallo&&A.nom!=="fallo")poner("fallo",A.e);
-    const libre=!Esc&&!pend&&principalAlDia();
+    const libre=!Flo.foco&&!Esc&&!pend&&principalAlDia();
     if(!libre)libreDesde=0;else if(!libreDesde)libreDesde=t;
     if(libre&&t-libreDesde>LIBRE_MS){
       const r=reposo();
@@ -2273,11 +2458,27 @@ const Taller=(()=>{
     if(!Esc&&!pend&&A.nom==="quieto"&&t-A.ini>3500)lanzaEscena(t);
     if(Esc)pasaEscena(t);
     pasaRx(t);
-    const dif=meta-robotX,anda=Math.abs(dif)>.003;
-    if(anda){robotX+=Math.sign(dif)*Math.min(Math.abs(dif),dt*.00042*(1+Math.min(3,Math.abs(dif)*9)));dir=dif>0?1:-1;paso+=dt*.016;llego=0;}
-    else{robotX=meta;dir=1;if(!llego)llego=t;}
+    const dif=meta-robotX;let anda,viaje=false;
+    if(Flo.foco){const f=Flo.foco;robotX=meta=Rb.x=f.x;Rb.oy=f.oy;Rb.via=f.via;Rb.dir=dir=f.dir;anda=!!f.anda;viaje=!!f.via;idx=-1;}
+    else if(EDIF){
+      Rb.x=robotX;Rb.dir=dir;
+      const r=avanza(Rb,meta,dt*.00042*(1+Math.min(1.4,Math.abs(dif)*6)),t,dt);
+      robotX=Rb.x;dir=Rb.dir;anda=r===1;viaje=r===2;
+      if(r){paso+=dt*.016;llego=0;}else{dir=1;if(!llego)llego=t;}
+    }else{
+      anda=Math.abs(dif)>.003;
+      if(anda){robotX+=Math.sign(dif)*Math.min(Math.abs(dif),dt*.00042*(1+Math.min(3,Math.abs(dif)*9)));dir=dif>0?1:-1;paso+=dt*.016;llego=0;}
+      else{robotX=meta;dir=1;if(!llego)llego=t;}
+    }
+    const conProp=!anda&&!viaje&&!!EST_ACCION[A.nom];
+    if(EDIF){
+      if(Cab.de&&Cab.de!==Rb&&!minis.has(Cab.de.id)&&!Flo.vivos.has(Cab.de))Cab.de=null;
+      if(!Cab.de&&Cab.pu)Cab.pu=Math.max(0,Cab.pu-dt/300);
+      pasaMinis(t,dt,anda);
+      if(Flo.m.size)pasaFlota(t,dt);
+      return pintaEdificio(t,dt,anda,viaje,conProp);
+    }
     fondo(t);if(Cap.fondo)Cap.fondo(t,dt);gabinete(t,dt);rincon(t);dibujaTorre(t,dt);
-    const conProp=!anda&&!!EST_ACCION[A.nom];
     for(let i=0;i<ESTACIONES.length;i++)estacion(i,t,conProp);
     if(W<900&&esAct(A.nom)&&!anda){      // en lo angosto la utilería tapa estaciones que no se usan: un velo las aparta
       const x0=X(0)*W-34*K,x1=finZona()*W+6*K;
@@ -2288,13 +2489,24 @@ const Taller=(()=>{
     for(const m of vis)dibujaMini(m,t);
     if(Cap.medio)Cap.medio(t,dt);
     if(minis.size>vis.length)rotulo(`+${minis.size-vis.length}`,(vis.at(-1)?.x||.5)*W+26*K,sue-46*K);
-    const x=robotX*W,T=t/1000,s=llego?(t-llego)/1000:0;
+    dibujaRobot(t,anda,false);
+    for(const a of aviones)avionPapel(a,t);
+    dibujaRx(t);
+    pasaParts(dt);dibujaParts(false);
+    letreroRobot(anda);
+    if(Cap.encima)Cap.encima(t,dt);
+  }
+  function dibujaRobot(t,anda,viaje){
+    const x=fr(robotX)*W,T=t/1000,s=llego?(t-llego)/1000:0;
     const enNube=Esc&&Esc.nube;
-    if(enNube)nube((robotX+Esc.m.x)/2*W,t);
+    if(enNube)nube((fr(robotX)+fr(Esc.m.x))/2*W,t);
     else if(!Cap.oculto){
       g.fillStyle="rgba(0,0,0,.2)";g.beginPath();g.ellipse(x,sue+4*K,17*K,4*K,0,0,7);g.fill();
-      const P=(anda?POSES.andar:POSES[A.nom]||POSES.quieto)(T,s);
+      if(!anda&&!viaje&&llego&&KIT_V[A.nom]&&t-Math.max(llego,A.vT||0)>ROTA_MS){A.v=variaDe(A.nom);A.vT=t;}
+      const sv=A.vT>llego?(t-A.vT)/1000:s,f=anda?POSES.andar:viaje?POSES.quieto:fijaV&&POSES[fijaV]||POSES[A.v]||POSES[A.nom]||POSES.quieto;
+      let P;try{P=f(T,sv);}catch(er){P=POSES.quieto(T,0);}
       P.yo=true;if(Cap.cuerpoR&&!P.cuerpo)P.cuerpo=Cap.cuerpoR;
+      if(EDIF&&Cap.uniSesion)P.uni=Cap.uniSesion();
       if(t<peloHasta)P.pelo=true;
       g.save();g.translate(x,sue+3*K);g.scale(K*dir,K);
       if(P.atras)P.atras();
@@ -2302,38 +2514,659 @@ const Taller=(()=>{
       if(P.frente)P.frente();
       g.restore();
     }
-    for(const a of aviones)avionPapel(a,t);
-    dibujaRx(t);
+  }
+  function pasaParts(dt){
     parts=parts.filter(p=>p.v>0);
+    for(const p of parts){p.x+=p.vx*dt/1000;p.y+=p.vy*dt/1000;p.v-=dt/1300;}
+  }
+  function dibujaParts(hud){
     for(const p of parts){
-      p.x+=p.vx*dt/1000;p.y+=p.vy*dt/1000;p.v-=dt/1300;
-      g.globalAlpha=Math.max(0,Math.min(1,p.v*1.6));letra(p.txt,p.x,p.y,11*K,p.c);
+      if(!!p.hud!==hud)continue;
+      g.globalAlpha=Math.max(0,Math.min(1,p.v*1.6));letra(p.txt,p.x,p.y+(p.o||0),11*K,p.c);
     }
     g.globalAlpha=1;
+  }
+  function letreroRobot(anda){
     const nomR=anda?(pend?pend.nom:A.nom):A.nom,espera=activos()[0];
-    rotulo((A.act?A.txt:ACCIONES[nomR])||(Esc&&Esc.m?TM[Esc.m.tipo].espera:espera?TM[espera.tipo].espera:ESPERA_ETAPA[S.etapaViva]||(S.activa?"":"Al día")),x,sue-(A.nom==="rueda"&&!anda?112:A.nom==="fiesta"?116:92)*K);
+    rotulo((A.act?A.txt:ACCIONES[nomR])||(Esc&&Esc.m?TM[Esc.m.tipo].espera:espera?TM[espera.tipo].espera:ESPERA_ETAPA[S.etapaViva]||(S.activa?"":"Al día")),fr(robotX)*W,sue-(A.nom==="rueda"&&!anda?112:A.nom==="fiesta"?116:92)*K);
+  }
+
+  // ---- el edificio: cada piso es la franja del taller de siempre, apilada; la cámara es del usuario (rueda y arrastre, o dos dedos y un dedo)
+  const enMarco=(oy,p,fn)=>{const a=enMundo,b=pisoAct;enMundo=true;pisoAct=p;g.save();g.translate(0,oy);fn();g.restore();enMundo=a;pisoAct=b;};
+  const enPiso=(p,fn)=>enMarco(pisoY[p],p,fn);
+  const oyRobot=()=>Rb.oy??pisoY[pisoDe(robotX)];
+  const piezaXMundo=()=>{for(const p of PZ)p.x+=GAB_X*W;};
+  const PROP={
+    guion(x,b,e){caja(x,b-104*e,70*e,104*e,2,MADERA);for(let f=0;f<3;f++){caja(x+3*e,b-(30+f*32)*e,64*e,3*e,0,"#7f5a38");for(let l=0;l<8;l++){const a=(15+(l*37+f*11)%11)*e;caja(x+(5+l*7.6)*e,b-(30+f*32)*e-a,6*e,a,1,COLORES[(l+f)%6]);}}},
+    voz(x,b,e,T){caja(x,b-112*e,84*e,112*e,3,"#39415a");for(let f=0;f<7;f++)for(let c=0;c<6;c++){g.beginPath();g.moveTo(x+(4+c*13)*e,b-(8+f*15)*e);g.lineTo(x+(10.5+c*13)*e,b-(19+f*15)*e);g.lineTo(x+(17+c*13)*e,b-(8+f*15)*e);g.closePath();g.fillStyle=(f+c)%2?"#2c3247":"#4a5370";g.fill();}caja(x+16*e,b-130*e,52*e,14*e,3,idxK()==="voz"?ROJO:"#4a2a33");letra("AL AIRE",x+42*e,b-123*e,8*e,"#fff");},
+    sonido(x,b,e,T){for(const i of [0,1]){const a=x+i*46*e;caja(a,b-96*e,38*e,96*e,4,"#232838");circ(a+19*e,b-68*e,13*e,"#10131b");aro(a+19*e,b-68*e,13*e+Math.sin(T*9+i)*1.2,"#7f89a6",2);circ(a+19*e,b-68*e,4*e,"#7f89a6");circ(a+19*e,b-28*e,18*e,"#10131b");aro(a+19*e,b-28*e,18*e-Math.sin(T*7+i)*1.4,"#7f89a6",2.4);}},
+    imagenes(x,b,e,T){raya(x+10*e,b,x+36*e,b-108*e,MADERA,5*e);raya(x+74*e,b,x+48*e,b-108*e,MADERA,5*e);raya(x+42*e,b,x+42*e,b-100*e,"#7f5a38",4*e);caja(x+2*e,b-104*e,80*e,64*e,2,"#fffaf0");marco(x+2*e,b-104*e,80*e,64*e,2,"#7f5a38",2.4);elip(x+28*e,b-70*e,16*e,18*e,ROSA);elip(x+50*e,b-78*e,18*e,12*e,AZUL);elip(x+58*e,b-58*e,12*e,9*e,AMAR);},
+    clips(x,b,e,T){for(let i=0;i<3;i++){const cx=x+(22+i*40)*e,cy=b-(i%2?70:40)*e;circ(cx,cy,19*e,"#232838");for(let a=0;a<6;a++){const u=a*1.047+T*(i%2?1:-1)*.6;circ(cx+Math.cos(u)*11*e,cy+Math.sin(u)*11*e,3.8*e,"#7f89a6");}circ(cx,cy,3.6*e,"#d7dbe6");}},
+    animacion(x,b,e){caja(x,b-112*e,96*e,74*e,3,"#fffaf0");marco(x,b-112*e,96*e,74*e,3,"#6f7892",3);for(let f=0;f<2;f++)for(let c=0;c<3;c++){marco(x+(7+c*29)*e,b-(105-f*33)*e,24*e,26*e,1,TINTA,1.2);circ(x+(14+c*29+c*2)*e,b-(94-f*33)*e,4*e,COLORES[(c+f*3)%6]);}raya(x+12*e,b-38*e,x+12*e,b,"#6f7892",4*e);raya(x+84*e,b-38*e,x+84*e,b,"#6f7892",4*e);},
+    render(x,b,e,T){for(const i of [0,1,2]){const a=x+i*33*e;caja(a,b-112*e,30*e,112*e,2,"#232838");for(let f=0;f<7;f++){caja(a+3*e,b-(107-f*15)*e,24*e,11*e,1,"#10131b");circ(a+22*e,b-(101.5-f*15)*e,1.8*e,Math.sin(T*(5+f)+i*2)>0?VERDE:"#3c4259");}}},
+    revision(x,b,e,T){caja(x,b-110*e,104*e,64*e,3,"#10131b");marco(x,b-110*e,104*e,64*e,3,"#6f7892",2.4);caja(x+6*e,b-104*e,92*e,52*e,1,"#23304a");raya(x+6*e,b-60*e,x+98*e,b-60*e,"#6f7892",1);caja(x+6*e,b-60.5*e,92*e*((T*.05)%1),2,0,ROJO);raya(x+52*e,b-46*e,x+52*e,b-8*e,"#6f7892",5*e);caja(x+32*e,b-9*e,40*e,9*e,2,"#6f7892");},
+    subida(x,b,e,T){g.save();g.translate(x+50*e,b-82*e);g.rotate(-.45);g.beginPath();g.ellipse(0,0,44*e,14*e,0,0,Math.PI);g.closePath();g.fillStyle="#d7dbe6";g.fill();g.strokeStyle="#7f89a6";g.lineWidth=2;g.stroke();raya(0,10*e,0,-22*e,"#7f89a6",3*e);circ(0,-22*e,4*e,ROJO);g.restore();raya(x+50*e,b-72*e,x+50*e,b,"#7f89a6",7*e);raya(x+50*e,b-30*e,x+26*e,b,"#7f89a6",4*e);raya(x+50*e,b-30*e,x+74*e,b,"#7f89a6",4*e);if(idxK()==="subida")for(let i=0;i<3;i++){const f=(T*.8+i/3)%1;g.globalAlpha=1-f;aro(x+36*e,b-112*e,(10+f*42)*e,AZUL,2.4,-1.5,-.2);g.globalAlpha=1;}},
+  };
+  const idxK=()=>ESTACIONES[idx]?.[0];
+  function muebles(p,t){
+    const P=PISOS[p],b=sue,T=t/1000,e=K,arr=p===SALA?0:PCH,ests=ESTACIONES.map((x,i)=>i).filter(i=>pisoDe(X(i))===p);
+    const cortes=ests.slice(1).map(i=>(fr(X(i-1))+fr(X(i)))/2);
+    for(const f of cortes){const x=f*W+26*e;caja(x-5,arr,10,b-122*e-arr,1,pal["--muro2"]);caja(x-7,b-124*e,14,5,1,pal["--mesa"]);raya(x-5,arr,x-5,b-124*e,"rgba(0,0,0,.14)",1);}
+    if(P.k!=="az")for(const f of [...ests.map(i=>fr(X(i))),...(ests.length?[]:[.3,.6])]){   // una lámpara por cuarto, encendida si ahí se trabaja; en la azotea no hay techo
+      const x=f*W+14*e,y=arr+(p===SALA?PCH:0),on=ests.length?ests.some(i=>(Flo.foco?Flo.ocup.has(i):i===idx)&&fr(X(i))===f):true;
+      raya(x,y,x,y+16*e,TINTA,1.6);g.beginPath();g.moveTo(x-13*e,y+27*e);g.lineTo(x+13*e,y+27*e);g.lineTo(x+5*e,y+16*e);g.lineTo(x-5*e,y+16*e);g.closePath();g.fillStyle="#6f7892";g.fill();
+      circ(x,y+27*e,4*e,on?"#fff3a8":"#8b8f9e");
+      if(on){const gr=g.createLinearGradient(0,y+27*e,0,b);gr.addColorStop(0,"rgba(255,243,168,.2)");gr.addColorStop(1,"rgba(255,243,168,0)");g.fillStyle=gr;g.beginPath();g.moveTo(x-12*e,y+27*e);g.lineTo(x+12*e,y+27*e);g.lineTo(x+78*e,b);g.lineTo(x-78*e,b);g.closePath();g.fill();}
+    }
+    for(const i of ests){const k=ESTACIONES[i][0],q=PROP[k];if(q)q(fr(X(i))*W+46*e,b,e,T);}
+    if(P.k==="pb"){
+      const x=.5*W,s=b;caja(x,s-34*e,132*e,24*e,8*e,"#7a5a8c");caja(x,s-58*e,132*e,30*e,9*e,"#8d6ba1");for(const c of [0,1,2])marco(x+(4+c*42)*e,s-54*e,40*e,24*e,4,"#6a4d7a",1.5);caja(x-6*e,s-44*e,16*e,34*e,6*e,"#7a5a8c");caja(x+122*e,s-44*e,16*e,34*e,6*e,"#7a5a8c");
+      const c=.715*W;caja(c,s-104*e,56*e,104*e,4,"#c9434f");caja(c+6*e,s-96*e,44*e,54*e,2,"#10131b");for(let f=0;f<3;f++)for(let n=0;n<3;n++)circ(c+(14+n*14)*e,s-(86-f*16)*e,4.6*e,COLORES[(f*3+n)%6]);caja(c+10*e,s-30*e,36*e,14*e,2,"#2a3044");
+    }
+    if(P.k==="maq"){for(let i=0;i<5;i++){const y=PCH+18+i*12;raya(0.12*W,y,.78*W,y,i%2?"#5a6480":"#454d66",3);}for(const f of [.2,.4,.6]){const x=f*W;raya(x,PCH+12,x,PCH+72,"#3a4259",6);circ(x,PCH+72,6,"#7f89a6");}}
+  }
+  function azotea(t){
+    const b=sue,e=K,T=t/1000;
+    g.fillStyle=pal["--suelo"];g.fillRect(0,b,W,H-b);g.fillStyle=pal["--mesa"];g.fillRect(0,b,W,5);
+    for(let x=0;x<=W;x+=44){raya(x,b,x,b-34,pal["--mesa"],3);}raya(0,b-34,W,b-34,pal["--mesa"],4);
+    const tx=.2*W;caja(tx,b-98*e,70*e,62*e,6,"#8d6a4a");for(let i=0;i<5;i++)raya(tx,b-(90-i*12)*e,tx+70*e,b-(90-i*12)*e,"#6a4f36",2);raya(tx+10*e,b-36*e,tx+6*e,b,"#6a4f36",5);raya(tx+60*e,b-36*e,tx+64*e,b,"#6a4f36",5);
+    const lx=.58*W;for(const f of [.1,.5,.9])raya(lx+f*280,b,lx+f*280,b-96,"#7f89a6",4);caja(lx,b-150,280,56,6,"#20242f");marco(lx,b-150,280,56,6,AMAR,3);
+    const lt="FÁBRICA";g.font='900 38px "Segoe UI",system-ui,sans-serif';g.textAlign="center";g.textBaseline="middle";for(let i=0;i<lt.length;i++){g.fillStyle=Math.sin(T*2+i*.8)>-.6?AMAR:"#6d5a24";g.fillText(lt[i],lx+40+i*33,b-121);}g.textBaseline="alphabetic";
+  }
+  function exterior(t){
+    const f=new Date(),hr=f.getHours()+f.getMinutes()/60,dia=hr>=6.5&&hr<19.5,k=(hr-6.5)/13,T=t/1000;
+    const c=!dia?["#070a1e","#1b2350"]:hr<8.5?["#7aa7d9","#f5a25d"]:hr<17.5?["#5ea9e6","#cfeaff"]:["#4b3a7a","#ff8a5c"];
+    const yS=pisoY[P_PB]+sue,gr=g.createLinearGradient(0,-200,0,yS);gr.addColorStop(0,c[0]);gr.addColorStop(1,c[1]);g.fillStyle=gr;g.fillRect(-4000,-4000,W+8000,yS+4000);
+    if(dia)circ(W*(.1+k*.8),320-Math.sin(k*Math.PI)*340,46,"#fff3a8");
+    else{circ(W*.86,80,38,"#eef2ff");circ(W*.88,70,33,c[0]);g.fillStyle="#fff";for(let i=0;i<70;i++)g.fillRect(-900+(i*97.3)%(W+1800),-180+(i*53.7)%(yS*.8),2,2);}
+    for(let i=0;i<7;i++){const x=(-300+((T*5+i*410)%(W+800)));const y=40+(i*137)%360;elip(x,y,84,22,dia?"rgba(255,255,255,.75)":"rgba(255,255,255,.08)");elip(x+40,y-14,50,20,dia?"rgba(255,255,255,.75)":"rgba(255,255,255,.08)");}
+    for(let i=-14;i<34;i++){const a=70+((i*i*29+i*53+999)%190),w=86+((i*i*7+999)%60),x=i*104;if(x>-60&&x<W+20)continue;caja(x,yS-a,w,a+4,2,dia?"#7f93ad":"#141a30");if(!dia)for(let v=0;v<7;v++)if((i*3+v)%3)caja(x+10+(v%3)*24,yS-a+12+v*16,9,9,0,"#ffd98a");}
+    g.fillStyle="#5d6b78";g.fillRect(-4000,yS,W+8000,16);g.fillStyle="#3c3a34";g.fillRect(-4000,yS+16,W+8000,ALTOM+4000);
+    g.fillStyle="#2f2d29";for(let i=0;i<60;i++){const x=-500+(i*173.7)%(W+1000),y=yS+40+(i*71.3)%(ALTOM-yS+200);elip(x,y,10+(i%4)*5,5+(i%3)*2,"#2f2d29");}
+    const xp=-108;raya(xp,yS,xp,yS-120,"#2c3247",5);raya(xp,yS-120,xp+30,yS-130,"#2c3247",4);circ(xp+32,yS-127,8,dia?"#d7dbe6":"#fff3a8");
+    const xa=W+96;caja(xa-7,yS-70,14,70,2,"#6a4a2e");circ(xa,yS-108,50,"#3f8a5a");circ(xa-34,yS-82,32,"#4f9a68");circ(xa+36,yS-84,34,"#347a4e");
+  }
+  function casco(t){                     // lo que amarra el edificio: losas, muros y la puerta de la calle
+    const arriba=pisoY[PISOS.length-2]+PCH,abajo=pisoY[SALA]+H+LOSA,M=14;
+    for(let p=0;p<PISOS.length-1;p++){const y=pisoY[p]+H;caja(-M,y,W+M*2,LOSA,0,"#4a5268");raya(-M,y,W+M,y,"rgba(255,255,255,.15)",1.5);}
+    caja(-M,arriba-LOSA,W+M*2,LOSA,0,"#4a5268");
+    caja(-M,arriba,M,abajo-arriba,0,"#3a4259");caja(W,arriba,M,abajo-arriba,0,"#3a4259");
+    for(const p of [2,3,4]){const y=pisoY[p]+PCH+42;for(const x of [-M,W]){caja(x+1,y,M-2,70,1,"#8cc4e8");caja(x+1,y+84,M-2,70,1,"#8cc4e8");}}
+    const yp=pisoY[P_PB]+sue;caja(-M-2,yp-96,M+4,96,1,"rgba(120,200,240,.55)");marco(-M-2,yp-96,M+4,96,1,"#6f7892",2);caja(-M-22,yp-114,M+44,16,3,VERDE);letra("ENTRADA",-M/2,yp-105.5,9.5,"#10131b");
+  }
+  function nucleo(t){                    // la escalera en zigzag y el cubo del elevador
+    const n=PISOS.length,suelo=p=>pisoY[p]+sue,xa=ESC_A*W,xb=ESC_B*W;
+    g.fillStyle="rgba(0,0,0,.1)";g.fillRect(xa-34,suelo(n-1),xb-xa+68,suelo(0)-suelo(n-1));
+    for(let p=0;p<n-1;p++){
+      const [x0,x1]=rampa(p),y0=suelo(p),y1=suelo(p+1),esc=14;
+      const dx=(x1-x0)*W/esc,dy=(y1-y0)/esc;
+      g.beginPath();g.moveTo(x0*W,y0+10);for(let i=0;i<esc;i++){g.lineTo(x0*W+dx*i,y0+dy*i);g.lineTo(x0*W+dx*(i+1),y0+dy*i);}g.lineTo(x1*W,y1);g.lineTo(x1*W,y1+12);g.closePath();g.fillStyle=pal["--mesa"];g.fill();
+      raya(x0*W,y0-46,x1*W,y1-46,"#7f89a6",3);for(let i=0;i<=esc;i+=3)raya(x0*W+dx*i,y0+dy*i,x0*W+dx*i,y0+dy*i-46,"#7f89a6",1.6);
+    }
+    const x=ASC*W,w=ASC_W,top=pisoY[n-1]+sue-178,fin=suelo(0)+6;
+    caja(x-w/2,top,w,fin-top,3,"#1a1e2c");marco(x-w/2,top,w,fin-top,3,"#6f7892",2.4);
+    for(const s of [-1,1])raya(x+s*w*.42,top,x+s*w*.42,fin,"#3c4259",2.4);
+    caja(x-w/2-8,top-34,w+16,36,4,"#3a4259");const a=t/400*(Cab.de?1:0);circ(x,top-16,11,"#10131b");raya(x,top-16,x+Math.cos(a)*9,top-16+Math.sin(a)*9,"#d7dbe6",2.4);
+    const cy=oyCab()+sue-CAB_A;raya(x,top,x,cy,"#7f89a6",2);
+    for(let p=0;p<n;p++){const y=suelo(p)-CAB_A-20,aqui=Math.round(Cab.y)===p&&Math.abs(Cab.y-p)<.08;caja(x-20,y,40,16,3,"#10131b");letra(PISOS[p].c,x,y+8,10.5,aqui?VERDE:"#f0c674");if(p>0)circ(x+w/2+11,suelo(p)-52,3.2,Cab.de?.via?.a===p?AMAR:"#39415a");}
+  }
+  function rotulos(){                    // van después de la escalera: si no, el barandal les pasa por encima
+    g.font='800 12.5px "Segoe UI",system-ui,sans-serif';
+    PISOS.forEach((P,p)=>{
+      const y=pisoY[p]+(p===SALA?10:PCH+8),x=ESC_A*W-22,w=g.measureText(P.n).width+20;
+      caja(x,y,w,26,6,pal["--panel"]);marco(x,y,w,26,6,P.col,2);
+      g.fillStyle=pal["--txt"];g.textAlign="left";g.textBaseline="middle";g.fillText(P.n,x+10,y+13.5);g.textBaseline="alphabetic";
+    });
+  }
+  function cabina(t,frente){             // la caja por detrás de quien va dentro; las puertas, por delante
+    const x=ASC*W,w=ASC_W-14,y=oyCab()+sue-CAB_A,h=CAB_A+4;
+    if(!frente){caja(x-w/2,y,w,h,3,"#c9cedb");caja(x-w/2+4,y+4,w-8,h-8,2,"#eef0f6");circ(x,y+10,4,"#fff3a8");caja(x-w/2,y+h-5,w,5,1,"#6f7892");return;}
+    const ab=Cab.pu*(w/2-4),a=w/2-ab;
+    g.globalAlpha=.42;for(const s of [-1,1]){const px=s<0?x-w/2:x+ab;caja(px,y+3,a,h-8,1,"#8fa3c4");}g.globalAlpha=1;
+    marco(x-w/2,y,w,h,3,"#5a6480",3);if(Cab.pu<.05)raya(x,y+3,x,y+h-5,"#5a6480",1.5);
+  }
+  const zMin=()=>Math.min(CW/(W+240),CH/ALTOM);
+  const zSigue=()=>Math.max(zMin(),Math.min(1.5,CH*.62/(H-PCH+LOSA),innerWidth>900&&innerHeight>500?CW/800:9));   // en escritorio, al menos 800 de ancho del edificio a la vista
+  const lim2=(v,a,b)=>Math.max(a,Math.min(b,v));
+  function encuadra(){
+    const vw=CW/Cam.tz,vh=CH/Cam.tz;
+    Cam.tx=vw>=W+240?W/2:lim2(Cam.tx,vw/2-120,W+120-vw/2);
+    Cam.ty=vh>=ALTOM?ALTOM/2:lim2(Cam.ty,vh/2-(Cin.on?140:0),ALTOM-vh/2);   // en pantalla completa deja cielo sobre la TV
+  }
+  // ---- modo director (31-oct-2026): la cámara se mueve sola, con planos que disparan hechos reales. Prioridad: 9 error, 8 emergencia de la PC, 7 bicho y pelea, 6 entrega, Jefe y relevo, 5 elevador, subida y pregunta, 4 anuncio, 3 llegar a una estación; sin hechos recorre el edificio
+  const TREGUA=12000,QUIETA=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  const Dir={on:false,toque:-1e9,pl:null,cola:null,cine:0,cool:{},ord:0,nomA:"",rxA:null,llegaA:0,ven:{},sacT:-1e9,asc:0};
+  try{Dir.on=EDIF&&localStorage.getItem("vivo_director")==="1";}catch(e){}
+  if(Dir.on)Cam.sigue=false;
+  const dirActivo=()=>Dir.on&&ahora-Dir.toque>TREGUA;
+  const tocaDir=()=>{Dir.toque=ahora;Dir.pl=Dir.cola=null;};
+  const ponDir=on=>{Dir.on=on;Dir.pl=Dir.cola=null;Dir.toque=-1e9;if(on)Cam.sigue=false;try{localStorage.setItem("vivo_director",on?"1":"0");}catch(e){}};
+  const curva=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2,mezcla=(a,b,k)=>a+(b-a)*k,tope=k=>Math.max(0,Math.min(1,k));
+  const pCorto=p=>PISOS[p].c==="PB"?"Planta baja":PISOS[p].n.split(" · ")[0];
+  const sTok=()=>({x:fr(robotX)*W,y:oyRobot()+sue-50*K});
+  const sMini=m=>({x:fr(m.x)*W,y:(m.oy??pisoY[pisoDe(m.x)])+sue-34*K});
+  const sDos=m=>{const a=sTok(),b=sMini(m);return {x:(a.x+b.x)/2,y:(a.y+b.y)/2};};
+  // ---- pantalla completa, TV y narrador (31-oct-2026). La TV dibuja lo que ya enseña #monitor, leído de la página: nada nuevo sale de ahí. El narrador es plantilla + voz del navegador: cero tokens y cero créditos
+  const TV={x:140,y:14,w:510,h:287},Cin={on:false,antes:false,api:false,cv:null,c:null,tvT:-1e9};
+  function ponCine(on){
+    if(on===Cin.on)return;
+    Cin.on=on;document.body.classList.toggle("cine",on);
+    const h=document.documentElement;
+    if(on){
+      Cin.antes=Dir.on;Dir.on=true;Dir.pl=Dir.cola=null;Dir.toque=-1e9;Cam.sigue=false;
+      Cin.api=false;const p=(h.requestFullscreen||h.webkitRequestFullscreen)?.call(h);
+      p?.then?.(()=>{Cin.api=true;}).catch(()=>{});   // sin la API (iPhone) se queda a toda la ventana con el CSS
+    }else{
+      if(!Cin.antes){Dir.on=false;Dir.pl=null;Cam.sigue=true;}
+      if(document.fullscreenElement)document.exitFullscreen?.().catch(()=>{});
+    }
+  }
+  if(EDIF){
+    document.addEventListener("fullscreenchange",()=>{if(!document.fullscreenElement&&Cin.on&&Cin.api)ponCine(false);});
+    addEventListener("keydown",e=>{if(e.key==="Escape"&&Cin.on)ponCine(false);});
+  }
+  function tvLineas(c,txt,ancho,max,cola){
+    const fin=[];
+    for(const par of txt.split("\n")){
+      let l="";
+      for(const p of par.split(/\s+/)){const q=l?l+" "+p:p;if(l&&c.measureText(q).width>ancho){fin.push(l);l=p;}else l=q;}
+      if(l)fin.push(l);
+    }
+    return cola?fin.slice(-max):fin.slice(0,max);
+  }
+  function tvPinta(){                    // en un canvas aparte y cada 450 ms: en cada cuadro solo se copia
+    if(!Cin.cv){Cin.cv=document.createElement("canvas");Cin.cv.width=1020;Cin.cv.height=574;Cin.c=Cin.cv.getContext("2d");}
+    const c=Cin.c,A_=1020,L_=574,el=$("mcuerpo"),col=$("monitor").style.getPropertyValue("--c")||AZUL,tt=$("mT").textContent,su=$("mS").textContent,qn=$("mquien").textContent;
+    c.textBaseline="alphabetic";c.textAlign="left";c.fillStyle="#0b0e16";c.fillRect(0,0,A_,L_);
+    c.fillStyle="#171c2b";c.fillRect(0,0,A_,88);c.fillStyle=col;c.fillRect(0,88,A_,4);
+    c.font='700 36px "Segoe UI",sans-serif';c.fillStyle="#fff";c.fillText(tt,24,44,qn?720:970);
+    c.font='500 23px "Segoe UI",sans-serif';c.fillStyle="#9aa3bb";c.fillText(su,24,74,qn?720:970);
+    if(qn){c.font='700 24px "Segoe UI",sans-serif';c.fillStyle=col;c.textAlign="right";c.fillText(qn,996,54,230);c.textAlign="left";}
+    const y0=104,alto=L_-y0-14,im=[...el.querySelectorAll(".marco img,.navvista img")].find(i=>i.complete&&i.naturalWidth),lin=[...el.querySelectorAll(".lin")];
+    if(im){const k=Math.min(992/im.naturalWidth,alto/im.naturalHeight),w=im.naturalWidth*k,h=im.naturalHeight*k;c.drawImage(im,(A_-w)/2,y0+(alto-h)/2,w,h);return;}
+    if(lin.length){
+      const n=Math.floor(alto/32),u=Math.max(0,lin.findIndex(l=>l.classList.contains("aqui"))),ini=Math.max(0,Math.min(lin.length-n,u-Math.floor(n*.6)));
+      c.font='500 23px ui-monospace,Consolas,monospace';
+      lin.slice(ini,ini+n).forEach((l,i)=>{c.fillStyle=l.classList.contains("mas")?"#7ee2b0":l.classList.contains("menos")?"#ff8fa0":"#d9dce6";c.fillText((l.querySelector(".t")?.textContent||"").slice(0,78),18,y0+26+i*32);});
+      return;
+    }
+    const term=!!el.querySelector(".term,.doc"),txt=(el.innerText||"").slice(term?-2600:0,term?undefined:2600);
+    c.font=term?'500 23px ui-monospace,Consolas,monospace':'500 29px "Segoe UI",sans-serif';c.fillStyle="#e9ebf3";
+    const paso=term?32:40,ls=tvLineas(c,txt,970,Math.floor(alto/paso),term);
+    ls.forEach((l,i)=>c.fillText(l,24,y0+(term?28:Math.max(34,(alto-ls.length*paso)/2+30))+i*paso));
+  }
+  function tvGrande(t){
+    if(t-Cin.tvT>450){Cin.tvT=t;tvPinta();}
+    const {x,y,w,h}=TV,b=pisoY[PISOS.length-1]+sue;
+    for(const f of [.2,.8]){raya(x+w*f,y+h,x+w*f,b,"#4a5268",9);raya(x+w*f-26,b,x+w*f+26,b,"#3a4259",7);}
+    caja(x-12,y-12,w+24,h+24,8,"#10131b");marco(x-12,y-12,w+24,h+24,8,"#3a4259",3);
+    g.drawImage(Cin.cv,x,y,w,h);
+    circ(x+w+2,y+h+6,2.6,Math.sin(t/300)>0?ROJO:"#5a2030");
+  }
+  const planoTV=()=>{const f=Math.min(ZMAX,CW/(TV.w+70),CH*.84/(TV.h+36));return {suj:()=>({x:TV.x+TV.w/2,y:TV.y+TV.h/2}),z0:f*.9,z1:f,min:3500,dur:6500,cool:18000,txt:()=>$("mT").textContent.slice(0,70)};};
+  const VOCES={
+    fallo:["Algo salió mal. Y nadie lo vio venir.","Un comando cae. El silencio pesa en {piso}.","Token lo intentó. Esta vez, la máquina dijo que no."],
+    rxF:["{dato}. La fábrica contiene el aliento.","En el sótano, {dato}. Las máquinas piden piedad.","{dato}. Alguien tiene que bajar. Y tiene que ser ahora."],
+    rx:["Abajo, las máquinas hablan.","En el sótano algo cambia. Torre lo sabe.","{dato}. La sala de máquinas no descansa."],
+    elev:["Las puertas se cierran. Próxima parada: {destino}.","Un robot. Un elevador. Un destino: {destino}.","Token sube la apuesta. Rumbo a {destino}."],
+    est:["{estacion}. Aquí es donde todo se decide.","En {estacion}, el trabajo no espera.","Token llega a {estacion}. No hay vuelta atrás."],
+    subida:["La azotea. El último paso antes de salir al mundo.","Lo que se hizo aquí abajo está a punto de salir.","Arriba solo queda el cielo. Y la subida."],
+    entrega:["El {mini} vuelve con el encargo. Misión cumplida.","Un apretón de manos. El trabajo del {mini} queda hecho.","El {mini} regresa. Y no viene con las manos vacías."],
+    preg:["Una pregunta. Un silencio incómodo.","Token busca respuestas. El {mini} las tiene.","Hay cosas que solo el {mini} sabe."],
+    pelea:["Esto ya no es una reunión de trabajo.","Dos robots. Una discusión. Solo uno tendrá razón.","El {mini} y Token. Era cuestión de tiempo."],
+    bug:["Un intruso en el taller. Pequeño. Peligroso.","Nadie lo invitó. Y aun así, ahí está.","Un bicho. Justo cuando todo iba bien."],
+    jefe:["Del piso tres llega una sombra. El Jefe del render ha despertado.","El render tiene un jefe. Y hoy viene a pelear."],
+    relevo:["Una sesión termina. Otra toma el relevo.","Se cierra un turno. La historia continúa."],
+    mini:["Mientras tanto, en {piso}, el {mini} sigue trabajando.","Nadie lo aplaude. El {mini} sigue en lo suyo.","Lejos de los reflectores, el {mini} no se detiene."],
+    torre:["En la oscuridad del sótano, Torre no duerme.","Abajo, Torre carga con todo."],
+    token:["En {piso}, Token sigue adelante.","Un robot. Una misión. Ningún descanso.","Token no sabe rendirse."],
+    general:["Seis pisos. Una fábrica. Y nadie duerme aquí.","Desde afuera parece un edificio más. No lo es."],
+    tv:["Atención a la pantalla. Esto está pasando ahora.","Todo se ve en la pantalla grande."],
+    robot:["Mientras tanto, en {estacion}, otra historia avanza.","No es el único. En {estacion}, otro robot hace lo suyo.","Esta fábrica no es de un solo robot."],
+    cierre:["Un trabajo termina. La fábrica respira.","Otra historia llega a su final."],
+  };
+  const Nar={on:false,ult:-1e9,frase:"",vence:0,pri:0,voz:null,ind:{}};
+  const hayVoz=()=>"speechSynthesis" in window;
+  function eligeVoz(){
+    if(!hayVoz())return null;
+    const v=speechSynthesis.getVoices().filter(x=>/^es\b|^es[-_]/i.test(x.lang));
+    Nar.voz=v.find(x=>/es[-_](MX|419|US)/i.test(x.lang))||v[0]||null;
+    return Nar.voz;
+  }
+  const pNar=p=>({maq:"el sótano",pb:"la planta baja",az:"la azotea"})[PISOS[p].k]||`el ${PISOS[p].n.split(" · ")[0].toLowerCase()}`;
+  function frase(p){
+    const k=p.k.startsWith("est")?((p.estK||ESTACIONES[idx]?.[0])==="subida"?"subida":"est"):p.k.startsWith("rx")?(p.golpe?"rxF":"rx"):p.k==="falloF"?"fallo":p.k;
+    const L=VOCES[k];if(!L)return "";
+    const d=/^[\wáéíóúÁÉÍÓÚ:. ]+ al \d[\d.,]* %$/.test(Rx?.txt||"")?Rx.txt.replace(/^C:/,"El disco C").replace(/^E:/,"El disco E"):"";
+    const lista=d?L:L.filter(x=>!x.includes("{dato}"));if(!lista.length)return "";
+    const i=Nar.ind[k]=((Nar.ind[k]??Math.floor(Math.random()*lista.length))+1)%lista.length;
+    const dest=Rb.via?.t==="asc"?pNar(Rb.via.a):"";
+    if(lista[i].includes("{destino}")&&!dest)return "";
+    return lista[i].replace("{piso}",pNar(p.piso??pisoDe(robotX))).replace("{estacion}",p.est||ESTACIONES[idx]?.[1]||"el taller").replace("{mini}",p.mini||Esc?.m?.tipo||"ayudante").replace("{dato}",d).replace("{destino}",dest).replace(/\bToken\b/,p.k==="falloF"||p.k==="estF"?"Un robot":"Token");
+  }
+  function narra(p){
+    if(!Nar.on)return;
+    const urge=p.pri>=7,hab=ahora<Nar.vence;
+    if(hab&&!(urge&&Nar.pri<7))return;
+    if(!urge&&ahora-Nar.ult<6000)return;
+    const f=frase(p);if(!f)return;
+    Nar.frase=f;Nar.pri=p.pri;Nar.vence=ahora+Math.max(3500,f.length*85);Nar.ult=Nar.vence;
+    if(!hayVoz())return;
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(f),acaba=()=>{Son.baja(false);Nar.vence=Math.min(Nar.vence,ahora+500);Nar.ult=ahora;};
+    u.lang=Nar.voz?.lang||"es-MX";if(Nar.voz)u.voice=Nar.voz;u.rate=.95;u.pitch=.82;u.onend=u.onerror=acaba;
+    Son.baja(true);speechSynthesis.speak(u);
+  }
+  function ponNarrador(on){
+    Nar.on=on;Nar.frase="";Nar.vence=0;
+    if(!on&&hayVoz()){speechSynthesis.cancel();Son.baja(false);}
+    try{localStorage.setItem("vivo_narrador",on?"1":"0");}catch(e){}
+    const c=$("chkNar");if(c)c.checked=on;
+    avisoNarrador();
+  }
+  function avisoNarrador(){
+    const l=$("chkNar")?.closest("label");if(!l)return;
+    l.title=!hayVoz()?"Este navegador no tiene voz: solo saldrán los subtítulos":eligeVoz()?`Narra las escenas del modo director con la voz «${Nar.voz.name}» del navegador`:"Este navegador no tiene voz en español: usará la que tenga, y siguen los subtítulos";
+  }
+  if(EDIF){
+    const c=$("chkNar");
+    if(c){
+      c.onchange=e=>ponNarrador(e.target.checked);
+      if(hayVoz())speechSynthesis.addEventListener?.("voiceschanged",avisoNarrador);
+      avisoNarrador();
+      try{if(localStorage.getItem("vivo_narrador")==="1")c.checked=Nar.on=true;}catch(e){}
+    }
+  }else $("chkNar")?.closest("label")?.remove();
+  function arranca(p){
+    const s=p.suj(),d=Math.hypot(s.x-Cam.x,s.y-Cam.y);
+    p.ini=ahora;p.f={x:Cam.x,y:Cam.y,z:Cam.z};
+    p.tr=p.golpe?380:Math.min(2600,Math.max(1300,900+d*1.1));   // de golpe solo las emergencias
+    p.arco=!p.golpe&&d>520?.3:0;         // en un viaje largo se abre un poco y vuelve a cerrar, como una grúa
+    p.dur=Math.max(p.dur,p.tr+1500);p.min=Math.max(p.min,p.golpe?0:p.tr+800);
+    Dir.pl=p;Dir.cola=null;
+    if(p.sac)Dir.sacT=ahora;
+    narra(p);
+  }
+  function hecho(k,pri,o){               // o: suj() = punto del mundo; z0 y z1 = zoom al empezar y al acabar; min y dur en ms; txt; golpe, sac, rot, bajo, dx, vive()
+    if((Dir.cool[k]||0)>ahora)return;
+    Dir.cool[k]=ahora+(o.cool??7000);
+    const p={k,pri,min:3500,dur:6000,...o},c=Dir.pl;
+    if(!c||(pri>=8&&pri>c.pri)||(ahora-c.ini>=c.min&&pri>=c.pri))return arranca(p);
+    if(!Dir.cola||pri>=Dir.cola.pri){p.pide=ahora;Dir.cola=p;}
+  }
+  function recorrido(){                  // sin hechos: los minis trabajando, Torre si la PC va fuerte, Token y un plano general
+    if(Cin.on&&Dir.ord%3===2){Dir.ord++;return arranca({k:"tv",pri:0,...planoTV()});}
+    if(Flo.m.size&&Dir.ord%2===0){       // en la fábrica entera, el recorrido alterna con las otras sesiones
+      const v=[...Flo.m.values()].filter(r=>!r.ida&&!r.via),R=v[Math.floor(Dir.ord/2)%(v.length||1)],bf=zSigue();Dir.ord++;
+      if(R)return arranca({k:"robot",pri:0,min:3500,dur:7000,suj:()=>sFlo(R),z0:bf*1.15,z1:bf*1.5,dx:28,est:ESTACIONES[R.idx]?.[1],vive:()=>Flo.m.has(R.id)&&!R.ida,txt:()=>`${R.nombre} · ${haceR(R)}`});
+    }
+    const b=zSigue(),c=Dir.ord++%4,tr=[...minis.values()].filter(m=>m.activo&&!m.via&&!m.ida&&!m.duerme);
+    if(c===1&&tr.length){const m=tr[Dir.ord%tr.length];return arranca({k:"mini",mini:m.tipo,pri:0,min:3500,dur:7000,suj:()=>sMini(m),z0:b*1.3,z1:b*1.6,dx:36,vive:()=>minis.has(m.id)&&!m.via,txt:`${pCorto(pisoDe(m.x))} · ${m.tipo[0].toUpperCase()+m.tipo.slice(1)} trabajando`});}
+    if(c===2&&(trabajaPC()||PZ.some(p=>p.u>=85)))return arranca({k:"torre",pri:0,min:3500,dur:7000,suj:()=>({x:W*.8,y:pisoY[SALA]+sue-110}),z0:b*1.05,z1:b*1.3,dx:-40,txt:()=>`Sala de máquinas · ${letreroPC()}`});
+    if(c===3)return arranca({k:"general",pri:0,min:3500,dur:8500,suj:()=>({x:W/2,y:ALTOM/2}),z0:zMin()*1.14,z1:zMin()*1.02,txt:()=>{const n=activos().length;return `La fábrica · ${n?`${n} ${n>1?"robots":"robot"} y Token trabajando`:"Token de guardia"}`;}});
+    arranca({k:"token",pri:0,min:3500,dur:8000,suj:sTok,z0:b*1.05,z1:b*1.4,dx:30,txt:()=>`${pCorto(pisoDe(robotX))}${letrero?` · ${letrero}`:""}`});
+  }
+  function director(t){
+    const b=zSigue(),dr=Cap.drama?.()||{};
+    if(A.nom==="fallo"&&Dir.nomA!=="fallo")hecho("fallo",9,{suj:sTok,z0:b*1.75,z1:b*2,min:2400,dur:3800,golpe:1,sac:1,rot:.035,cool:4000,txt:`${pCorto(pisoDe(robotX))} · Falló un comando`});
+    Dir.nomA=A.nom;
+    if(Rx&&Rx!==Dir.rxA){
+      const f=Rx.tipo==="susto"||Rx.tipo==="apagon",x=fr(Rx.x)*W;
+      hecho("rx"+Rx.tipo,f?8:6,{suj:()=>({x,y:pisoY[SALA]+H*.38}),z0:b*(f?1.5:1.1),z1:b*(f?1.7:1.3),min:f?2800:3500,dur:6000,golpe:f,sac:f,rot:f?-.025:0,cool:4000,txt:`Sala de máquinas · ${Rx.txt||Rx.p?.nom||"La PC reacciona"}`});
+    }
+    Dir.rxA=Rx;
+    if(Rb.via?.t==="asc"&&Rb.via.f>=1&&!Dir.asc){
+      Dir.asc=1;const a=Rb.via.a;
+      hecho("elev",5,{suj:()=>({x:ASC*W,y:oyCab()+sue-70}),z0:b*.95,z1:b*1.2,min:3000,dur:7000,bajo:.17,rot:-.02,cool:2000,vive:()=>Rb.via?.t==="asc",txt:()=>`Elevador · rumbo a ${pCorto(Rb.via?.a??a).toLowerCase()}`});
+    }
+    if(!Rb.via)Dir.asc=0;
+    if(Cin.on){const e=S.ev[S.idx];if(e&&e!==Dir.evA){Dir.evA=e;if((e.tipo==="imagen"&&e.img)||e.tipo==="usuario"||e.tipo==="cierre")hecho("tv",4,planoTV());}}
+    if(llego&&idx>=0&&t-llego<500&&A.e&&Dir.llegaA!==A.ini){
+      Dir.llegaA=A.ini;const sub=ESTACIONES[idx][0]==="subida";
+      hecho("est"+idx,sub?5:3,{suj:sTok,z0:b*(sub?.92:1.1),z1:b*(sub?1.02:1.45),dur:6500,dx:26,cool:9000,txt:`${pCorto(pisoDe(robotX))} · ${ESTACIONES[idx][1]}`});
+    }
+    if(Esc?.m){
+      const m=Esc.m,n=m.tipo;
+      if(Esc.tipo==="entrega"&&Esc.llego)hecho("entrega",6,{suj:()=>sDos(m),z0:b*1.35,z1:b*1.6,min:3000,dur:4800,cool:5000,txt:`Entrega del ${n}`});
+      if(Esc.tipo==="pregunta"&&Esc.llego)hecho("preg",5,{suj:()=>sDos(m),z0:b*1.3,z1:b*1.5,min:3000,dur:4500,cool:5000,txt:`Token le pregunta al ${n}`});
+      if(Esc.tipo==="pelea"){hecho("pelea",7,{suj:()=>sDos(m),z0:b*1.5,z1:b*1.8,min:3200,dur:6000,sac:1,rot:.03,cool:5000,txt:`Pleito con el ${n}`});if(Esc.nube&&!Esc.sacD){Esc.sacD=1;Dir.sacT=t;}}
+    }
+    if((dr.bug||0)>(Dir.ven.bug||0))hecho("bug",7,{suj:sTok,z0:b*1.5,z1:b*1.7,min:3000,dur:4600,golpe:1,sac:1,cool:5000,txt:"Un bicho en el taller"});
+    if(dr.jefe&&!Dir.ven.jefe)hecho("jefe",6,{suj:()=>({x:.74*AN()*W,y:pisoY[4]+PCH+80*K}),z0:b*1.05,z1:b*1.3,dur:6000,txt:"Piso 3 · El Jefe del render"});
+    if(dr.relevo&&!Dir.ven.relevo)hecho("relevo",6,{suj:sTok,z0:b*1.05,z1:b*1.2,min:4000,dur:7000,txt:"Cambio de turno"});
+    if(dr.aviso&&dr.aviso!==Dir.ven.aviso)hecho("aviso",4,{suj:sTok,z0:b*.82,z1:b*.72,min:3000,dur:4200,cool:3000,txt:dr.aviso});
+    Dir.ven=dr;
+    if(Dir.cola&&t-Dir.cola.pide>3000)Dir.cola=null;
+    const P=Dir.pl;
+    if(P){
+      if(P.vive&&!P.vive()&&!P.sale)P.sale=Math.max(P.ini+P.min,t+700);
+      if(Dir.cola&&t-P.ini>=P.min&&Dir.cola.pri>P.pri)arranca(Dir.cola);
+      else if(t>=(P.sale||P.ini+P.dur)){if(Dir.cola)arranca(Dir.cola);else Dir.pl=null;}
+    }
+    if(!Dir.pl)recorrido();
+  }
+  function camaraDir(t,dt){
+    director(t);
+    const P=Dir.pl,f=tope((t-P.ini)/P.dur),e=curva(tope((t-P.ini)/P.tr)),s=P.suj(),z=mezcla(P.z0,P.z1,curva(f));
+    Cam.tz=lim2(mezcla(P.f.z,z,e)*(1-P.arco*Math.sin(Math.PI*tope((t-P.ini)/P.tr))),zMin(),ZMAX);
+    Cam.tx=mezcla(P.f.x,s.x+(P.dx||0)*(f-.5),e);Cam.ty=mezcla(P.f.y,s.y-(P.bajo||0)*CH/Cam.tz,e);
+    encuadra();Cam.x=Cam.tx;Cam.y=Cam.ty;Cam.z=Cam.tz;
+    Cam.rot+=((QUIETA?0:P.rot||0)-Cam.rot)*(1-Math.exp(-dt/380));
+    const q=(t-Dir.sacT)/430;
+    if(q<1&&!QUIETA){const a=(1-q)*(1-q)*15/Cam.z;Cam.x+=Math.sin(t*.09)*a;Cam.y+=Math.cos(t*.12)*a;}
+  }
+  // ---- «Toda la fábrica» (31-oct-2026): cada sesión con su robot y su estado propio. Todas viven aquí, también la elegida, que solo es el foco: cambiar de sesión no toca a ningún robot. Token se queda sin dibujar y copia al robot enfocado, para que cámara, director y HUD lo sigan. Cada robot lee solo su fila de sesiones, así no se mezclan eventos
+  const Flo={on:false,m:new Map(),vivos:new Set(),fuera:0,tip:null,TOPE:12,lista:[],foco:null,ocup:new Set(),proc:new Map()},PARADO_S=150,GRACIA_S=300;   // terminó: 150 s y va al descanso, 300 s y sale a la calle. De 17 000 silencios reales, los de más de 5 min casi nunca esperaban un comando
+  const DES_F=[.42,.52,.32,.62,.24,.72,.37,.47,.57,.28,.67,.76],poseProc=r=>/voz|selecc|tts/.test(r)?"grabar":/mezcla|musica|sfx|ambiente/.test(r)?"dj":/bajar/.test(r)?"claqueta":"rueda";
+  try{Flo.on=EDIF&&localStorage.getItem("vivo_fabrica")==="1";}catch(e){}
+  const hazCorto=s=>{const c=String(s||"Sesión");return c.length>18?c.slice(0,17)+"…":c;};
+  const colSes=s=>{let h=7;for(const c of String(s))h=(h*31+c.charCodeAt(0))>>>0;return COLORES[h%6];};
+  const sFlo=R=>({x:fr(R.x)*W,y:(R.oy??pisoY[pisoDe(R.x)])+sue-48*K});
+  const haceR=R=>ACCIONES[R.nom]||(R.activa?"Trabajando":"En pausa");
+  function avisoFlo(R,e){                // para el director: lo importante de cualquier sesión. El robot ya va a su sitio
+    if(!dirActivo())return;
+    const b=zSigue(),p=pisoDe(R.meta),est=ESTACIONES[R.idx];
+    if(e.fallo)hecho("falloF",9,{suj:()=>sFlo(R),z0:b*1.6,z1:b*1.85,min:2400,dur:3800,golpe:1,sac:1,rot:.03,cool:4000,piso:p,txt:`${R.nombre} · Falló un comando`});
+    else if(e.tipo==="cierre")hecho("cierre",6,{suj:()=>sFlo(R),z0:b*1.2,z1:b*1.5,min:3200,dur:5000,cool:6000,txt:`${R.nombre} · Terminó`});
+    else if(est)hecho("estF",3,{suj:()=>sFlo(R),z0:b*1.1,z1:b*1.4,dur:6000,dx:24,cool:8000,est:est[1],estK:est[0],txt:`${R.nombre} · ${est[1]}`});
+  }
+  function fabrica(lista){               // llega de pedirSesiones(): un solo sondeo, ya cacheado en el servidor
+    Flo.lista=lista;if(!Flo.on)return;
+    const ya=Date.now()/1000,esFoco=s=>s.id===S.sesion||(!!S.video&&s.video===S.video),proc=s=>(!!s.video&&Flo.proc.has(s.video)),otras=lista.filter(s=>esFoco(s)||ya-s.t<GRACIA_S||s.ocupada||proc(s)).sort((a,b)=>esFoco(b)-esFoco(a)),sel=otras.slice(0,Flo.TOPE),ids=new Set(sel.map(s=>s.id));
+    Flo.fuera=Math.max(0,otras.length-Flo.TOPE);
+    for(const s of sel){
+      let R=Flo.m.get(s.id);
+      if(!R){R={id:s.id,video:s.video,nombre:hazCorto(s.video||s.titulo),col:colSes(s.id),x:esFoco(s)&&!Flo.foco?robotX:SALIDA,meta:esFoco(s)&&!Flo.foco?robotX:enP(P_PB,.3),dir:1,via:null,oy:null,paso:0,fase:Math.random()*6,nom:"quieto",idx:-1,seq:null,llego:0,ms:new Map()};Flo.m.set(s.id,R);Flo.vivos.add(R);}
+      R.uni=Cap.uniDe(s.canal||"");for(const m of R.ms.values())m.uni=R.uni;
+      R.ida=false;                       // solo la elegida se queda parada: al dejar de elegirla, sale
+      const e=s.accion||{},calla=ya-s.t>=PARADO_S,vive=!calla||s.ocupada||proc(s),nuevo=e.seq!==R.seq,gira=vive!==R.activa;
+      R.activa=vive;
+      if(nuevo||gira||!vive||(calla&&proc(s))){
+        R.nom=!vive?"cafe":calla&&proc(s)?poseProc(Flo.proc.get(s.video)):accionDe(e);R.v=variaDe(R.nom);
+        const est=vive?estacionDe(R.nom,e):null;R.idx=ESTACIONES.findIndex(x=>x[0]===est);
+        if(nuevo&&R.seq!=null&&vive)avisoFlo(R,e);
+        R.seq=e.seq;
+      }
+      const vistos=new Set();
+      for(const a of s.minis||[]){
+        if(!TM[a.tipo])continue;
+        vistos.add(a.id);
+        if(!R.ms.has(a.id)){const m={id:R.id+a.id,tipo:a.tipo,desc:"",activo:true,x:R.x,meta:R.x,slot:R.x,dir:1,fase:Math.random()*6,oy:null,via:null,visto:ahora};R.ms.set(a.id,m);Flo.vivos.add(m);}
+      }
+      for(const [k,m] of R.ms)if(!vistos.has(k)){R.ms.delete(k);Flo.vivos.delete(m);}
+    }
+    for(const R of Flo.m.values())if(!ids.has(R.id)){R.ida=true;R.activa=false;R.meta=SALIDA;}
+    const sit=new Set(),quedan=[...Flo.m.values()].filter(R=>!R.ida),lugar=R=>R.idx>=0?R.idx:"des";   // varios en una estación: al lado. Cada uno conserva su sitio: si otro se va, nadie se mueve
+    Flo.ocup.clear();
+    for(const R of quedan)if(R.sitio&&R.sitio[0]===lugar(R))sit.add(R.sitio.join());else R.sitio=null;
+    for(const R of quedan){
+      const k=lugar(R);
+      if(!R.sitio){let n=0;while(sit.has(k+","+n))n++;R.sitio=[k,n];sit.add(R.sitio.join());}
+      if(R.idx>=0){Flo.ocup.add(R.idx);R.meta=Math.max(.03,X(R.idx)-32*K/W)+(R.sitio[1]%4)*.055;}
+      else R.meta=enP(P_PB,DES_F[R.sitio[1]%DES_F.length]);
+    }
+  }
+  const focoDe=()=>Flo.m.get(S.sesion)||(S.video?[...Flo.m.values()].find(R=>R.video===S.video):null)||null;
+  function enfoca(){                     // elegir una sesión: la cámara va a su robot. Nada más
+    Flo.foco=focoDe();Flo.tip=null;
+    const R=Flo.foco;if(!R)return;
+    if(Dir.on){Dir.toque=-1e9;Dir.cola=null;const b=zSigue();arranca({k:"foco",pri:0,min:3500,dur:7000,suj:()=>sFlo(R),z0:b*1.1,z1:b*1.4,dx:24,txt:()=>`${R.nombre} · ${haceR(R)}`});}
+    else Cam.sigue=true;
+  }
+  function pasaFlota(t,dt){
+    Flo.foco=focoDe();filasLetrero(dt);
+    for(const R of Flo.m.values()){
+      const r=avanza(R,R.meta,dt*.0005,t,dt);
+      R.anda=r===1;
+      if(r){R.paso+=dt*.016;R.llego=0;}else{R.dir=1;if(!R.llego)R.llego=t;}
+      let i=0;
+      for(const m of R.ms.values()){m.meta=R.meta+.03*(++i);const q=avanza(m,m.meta,dt*.0005,t,dt);m.anda=q===1;if(!q)m.dir=1;}
+      if(R.ida&&!R.via&&pisoDe(R.x)===pisoDe(SALIDA)&&R.x<=SALIDA+.002){Flo.m.delete(R.id);Flo.vivos.delete(R);for(const m of R.ms.values())Flo.vivos.delete(m);if(Flo.tip?.R===R)Flo.tip=null;if(Flo.foco===R)Flo.foco=null;}
+    }
+  }
+  function filasLetrero(dt){              // nombres que coinciden en un piso: escalonados, para que se lean
+    const pisos=new Map();
+    g.font='700 12px "Segoe UI",system-ui,sans-serif';
+    for(const R of Flo.m.values()){const p=pisoDe(R.x);if(!pisos.has(p))pisos.set(p,[]);pisos.get(p).push(R);}
+    for(const fila of pisos.values()){
+      fila.sort((a,b)=>fr(a.x)-fr(b.x));
+      const fin=[];
+      for(const R of fila){
+        const w=g.measureText(R.nombre).width+14,ini=fr(R.x)*W-w/2;
+        let f=0;while(fin[f]!=null&&ini<fin[f]+6)f++;
+        fin[f]=ini+w;R.fy=(R.fy||0)+(f-(R.fy||0))*(1-Math.exp(-dt/140));
+      }
+    }
+  }
+  function dibujaFlota(R,t){
+    const x=fr(R.x)*W,T=t/1000+R.fase,s=R.llego?(t-R.llego)/1000:0,pa=paso,e=K*.88;
+    paso=R.paso;Yo=R;
+    let P;try{P=(R.anda?POSES.andar:R.via?POSES.quieto:POSES[R.v]||POSES[R.nom]||POSES.quieto)(T,s);}catch(er){P=POSES.quieto(T,0);}
+    g.fillStyle="rgba(0,0,0,.2)";g.beginPath();g.ellipse(x,sue+4*K,15*K,3.6*K,0,0,7);g.fill();
+    P=Object.assign({},P,{cuerpo:R.col,uni:R.uni,fiesta:true});
+    g.save();g.translate(x,sue+3*K);g.scale(e*R.dir,e);
+    if(P.atras)P.atras();
+    figura(P,T);
+    if(P.frente)P.frente();
+    g.restore();
+    paso=pa;Yo=null;
+    const fo=R===Flo.foco,tip=Flo.tip?.R===R&&ahora<Flo.tip.hasta,txt=tip?`${R.nombre} · ${Cap.uniNom(R.uni)} · ${haceR(R)}${fo?"":" · toca otra vez para enfocarla"}`:R.nombre,y=sue-104*e-(R.fy||0)*21;
+    g.font='700 12px "Segoe UI",system-ui,sans-serif';
+    const w=g.measureText(txt).width+14;
+    if((R.fy||0)>.2)raya(x,y+9,x,sue-96*e,fo?R.col:"rgba(255,255,255,.35)",1);
+    caja(x-w/2,y-9,w,18,9,fo?R.col:"rgba(12,14,22,.82)");marco(x-w/2,y-9,w,18,9,fo?"#fff":R.col,fo?2:1.4);
+    if(fo){const a=y-16+Math.sin(t/260)*2;g.beginPath();g.moveTo(x-6,a-7);g.lineTo(x+6,a-7);g.lineTo(x,a);g.closePath();g.fillStyle=R.col;g.fill();}
+    g.fillStyle=fo?"#10131b":"#fff";g.textAlign="center";g.textBaseline="middle";g.fillText(txt,x,y+.5);g.textBaseline="alphabetic";
+  }
+  function ponFabrica(on){
+    Flo.on=on;try{localStorage.setItem("vivo_fabrica",on?"1":"0");}catch(e){}
+    if(Cab.de===Rb)Cab.de=null;
+    Rb.via=null;Rb.oy=null;
+    if(on){finEsc();minis.clear();fabrica(Flo.lista);}
+    else{Flo.m.clear();Flo.vivos.clear();Flo.ocup.clear();Flo.fuera=0;Flo.tip=null;Flo.foco=null;meta=robotX;}
+  }
+  function cinta(t,dt){                  // barras de cine, viñeta y rótulo; entran y salen suaves
+    Dir.cine+=((dirActivo()&&Dir.pl?1:0)-Dir.cine)*(1-Math.exp(-dt/450));
+    const c=Dir.cine;if(c<.01)return;
+    const gr=g.createRadialGradient(CW/2,CH/2,Math.min(CW,CH)*.42,CW/2,CH/2,Math.hypot(CW,CH)*.62);
+    gr.addColorStop(0,"rgba(0,0,0,0)");gr.addColorStop(1,`rgba(0,0,0,${.55*c})`);g.fillStyle=gr;g.fillRect(0,0,CW,CH);
+    const h=Math.round(Math.max(26,CH*.075)*c);g.fillStyle="#000";g.fillRect(0,0,CW,h);g.fillRect(0,CH-h,CW,h);
+    if(ahora<Nar.vence&&Nar.frase){      // el subtítulo del narrador: también sirve si no hay sonido
+      g.font='600 17px "Segoe UI",system-ui,sans-serif';g.textAlign="center";g.textBaseline="middle";
+      const ls=tvLineas(g,Nar.frase,CW-120,2,false),yS=CH-h-14-(ls.length-1)*23;
+      ls.forEach((l,i)=>{g.lineWidth=4;g.lineJoin="round";g.strokeStyle="rgba(0,0,0,.8)";g.strokeText(l,CW/2,yS+i*23);g.fillStyle="#fff";g.fillText(l,CW/2,yS+i*23);});
+      g.textBaseline="alphabetic";
+    }
+    const P=Dir.pl,tx=P&&(typeof P.txt==="function"?P.txt():P.txt);if(!tx)return;
+    g.globalAlpha=tope(Math.min((t-P.ini)/600,((P.sale||P.ini+P.dur)-t)/500))*c;
+    g.font='600 13px "Segoe UI",system-ui,sans-serif';g.letterSpacing="1.4px";g.fillStyle="#f3efe2";g.textAlign="center";g.textBaseline="middle";
+    g.fillText(tx,CW/2,CH-h/2+.5,CW-60);g.letterSpacing="0px";g.textBaseline="alphabetic";g.globalAlpha=1;
+  }
+  function camara(dt){
+    if(dirActivo()&&Cam.listo)return camaraDir(ahora,dt);
+    Cam.rot*=Math.exp(-dt/250);
+    if(Cam.sigue||!Cam.listo){Cam.tz=zSigue();Cam.tx=fr(robotX)*W;Cam.ty=!Rb.via&&pisoDe(robotX)===SALA?pisoY[SALA]+H*.52:oyRobot()+sue-50*K;}
+    encuadra();
+    if(!Cam.listo){Cam.listo=true;Cam.x=Cam.tx;Cam.y=Cam.ty;Cam.z=Cam.tz;return;}
+    const k=1-Math.exp(-dt/(Cam.sigue?300:120));
+    Cam.x+=(Cam.tx-Cam.x)*k;Cam.y+=(Cam.ty-Cam.y)*k;Cam.z+=(Cam.tz-Cam.z)*k;
+  }
+  const aMundo=(sx,sy)=>({x:Cam.x+(sx-CW/2)/Cam.z,y:Cam.y+(sy-CH/2)/Cam.z});
+  const aPantalla=(x,y)=>({x:CW/2+(x-Cam.x)*Cam.z,y:CH/2+(y-Cam.y)*Cam.z});
+  function zoomA(sx,sy,f){
+    if(!ALTOM)return;                    // aún sin medidas: un NaN aquí dejaría la cámara rota para siempre
+    tocaDir();
+    const z=Cam.tz,n=lim2(z*f,zMin(),ZMAX),dx=sx-CW/2,dy=sy-CH/2,wx=Cam.tx+dx/z,wy=Cam.ty+dy/z;
+    Cam.sigue=false;Cam.tz=n;Cam.tx=wx-dx/n;Cam.ty=wy-dy/n;
+  }
+  const pisoCam=()=>{let m=0,d=1e9;for(let p=0;p<PISOS.length;p++){const a=Math.abs(pisoY[p]+(PCH+H)/2-Cam.y);if(a<d){d=a;m=p;}}return m;};
+  function irPiso(p){tocaDir();Cam.sigue=false;Cam.tz=Math.max(Cam.tz,zSigue());Cam.ty=pisoY[p]+(p===SALA?H*.56:(PCH+H)/2);}
+  const BT=[];
+  const tocaHud=(x,y)=>{const b=BT.find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);if(b)b.f();return !!b;};
+  const enHud=(x,y)=>BT.some(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);
+  const boton=(x,y,w,h,txt,on,f,px=12)=>{g.globalAlpha=.93;caja(x,y,w,h,7,on?pal["--acc"]:pal["--panel"]);g.globalAlpha=1;marco(x,y,w,h,7,on?pal["--acc"]:pal["--faint"],1);letra(txt,x+w/2,y+h/2+.5,px,on?"#fff":pal["--txt"]);BT.push({x,y,w,h,f});};
+  function hudEdificio(t){
+    BT.length=0;
+    const n=PISOS.length,dedo=matchMedia("(pointer:coarse)").matches,bw=dedo?38:34,h=Math.min(dedo?38:27,(CH-16-(n-1)*3)/n),act=pisoCam(),rp=Rb.via?-1:pisoDe(robotX);
+    for(let i=0;i<n;i++){
+      const p=n-1-i,y=8+i*(h+3);
+      boton(8,y,bw,h,PISOS[p].c,p===act,()=>irPiso(p),Math.min(12,h*.5));
+      if(p===rp)circ(8+bw-5,y+5,3.6,VERDE);
+      const c=visibles().filter(m=>pisoDe(m.x)===p&&!m.via).length;if(c)letra("·".repeat(Math.min(3,c)),8+7,y+h-6,14,AMAR);
+    }
+    if(Flo.fuera&&8+n*(h+3)+h<CH)boton(8,8+n*(h+3),bw,h,`+${Flo.fuera}`,false,()=>{},11);
+    if(Flo.m.size&&CW>=520&&!dirActivo()){   // la leyenda de uniformes: qué canales hay en el edificio
+      const u=[...new Set([...Flo.m.values()].map(R=>R.uni))].slice(0,7);
+      g.font='650 11px "Segoe UI",system-ui,sans-serif';g.textBaseline="middle";g.textAlign="left";
+      let lx=bw+16;const ly=CH-52;
+      for(const k of u){const nm=Cap.uniNom(k),w=g.measureText(nm).width+22;if(lx+w>CW-bw-16)break;g.globalAlpha=.9;caja(lx,ly,w,18,9,"#10131b");g.globalAlpha=1;circ(lx+9,ly+9,4.2,Cap.uniCol(k));aro(lx+9,ly+9,4.2,"#fff",.8);g.fillStyle="#fff";g.fillText(nm,lx+16,ly+9.5);lx+=w+4;}
+      g.textBaseline="alphabetic";
+    }
+    const x=CW-bw-8;
+    boton(x,8,bw,h,"+",false,()=>zoomA(CW/2,CH/2,1.45),16);
+    boton(x,8+h+3,bw,h,"−",false,()=>zoomA(CW/2,CH/2,1/1.45),16);
+    boton(x,8+(h+3)*2,bw,h,"🎯",Cam.sigue&&!Dir.on,()=>{ponDir(false);Cam.sigue=true;},13);
+    boton(x,8+(h+3)*3,bw,h,"🏢",false,()=>{ponDir(false);Cam.sigue=false;Cam.tz=zMin();Cam.tx=W/2;Cam.ty=ALTOM/2;},13);
+    boton(x,8+(h+3)*4,bw,h,"🎬",Dir.on,()=>ponDir(!Dir.on),13);
+    boton(x,8+(h+3)*5,bw,h,"⛶",Cin.on,()=>ponCine(!Cin.on),15);
+    if(Cin.on)boton(x,8+(h+3)*6,bw,h,"🎙",Nar.on,()=>ponNarrador(!Nar.on),13);
+    const txt=`${pCorto(pisoDe(robotX))}${Rb.via?" · de camino":letrero?` · ${letrero}`:""}`;
+    g.font='650 12px "Segoe UI",system-ui,sans-serif';
+    const mx=CW-bw*2-34-(CW>=520?96:0),s=g.measureText(txt).width>mx-30?txt.slice(0,Math.max(8,Math.floor((mx-30)/6.6)))+"…":txt,tw=g.measureText(s).width+32,yp=CH-30;
+    if(!dirActivo()){                    // con el director, lo que pasa lo dice su rótulo
+      g.globalAlpha=.93;caja(bw+16,yp,tw,23,11.5,pal["--panel"]);g.globalAlpha=1;marco(bw+16,yp,tw,23,11.5,pal["--faint"],1);circ(bw+28,yp+11.5,4,pal["--acc"]);
+      g.fillStyle=pal["--txt"];g.textAlign="left";g.textBaseline="middle";g.fillText(s,bw+37,yp+12);g.textBaseline="alphabetic";BT.push({x:bw+16,y:yp,w:tw,h:23,f:()=>{ponDir(false);Cam.sigue=true;}});
+    }
+    if(!Cam.ini)Cam.ini=t;
+    if(t-Cam.ini<9000){const a=dedo?"Un dedo: moverte · dos dedos: zoom":"Rueda: zoom · arrastra: moverte · doble clic: acercar";g.font='600 12px "Segoe UI",system-ui,sans-serif';const w=g.measureText(a).width+24,q=(CW-w)/2;g.globalAlpha=Math.min(1,(9000-t+Cam.ini)/800)*.9;caja(q,8,w,24,12,"#10131b");g.fillStyle="#fff";g.textAlign="center";g.textBaseline="middle";g.fillText(a,CW/2,20.5);g.textBaseline="alphabetic";g.globalAlpha=1;}
+  }
+  function pintaEdificio(t,dt,anda,viaje,conProp){
+    camara(dt);
+    g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,CW,CH);
+    const z=Cam.z,y0=Cam.y-CH/2/z-60,y1=Cam.y+CH/2/z+60;
+    g.setTransform(dpr,0,0,dpr,0,0);g.translate(CW/2,CH/2);if(Cam.rot)g.rotate(Cam.rot);g.scale(z,z);g.translate(-Cam.x,-Cam.y);
+    exterior(t);
+    PISOS.forEach((P,p)=>{
+      if(p!==SALA&&(pisoY[p]+H<y0||pisoY[p]+PCH>y1))return;
+      enPiso(p,()=>{
+        const arr=p===SALA?0:PCH;
+        g.save();g.beginPath();g.rect(0,arr,W,H-arr);g.clip();
+        if(P.k==="az")azotea(t);
+        else{fondo(t);if(Cap.fondo)Cap.fondo(t,dt);g.globalAlpha=P.k==="maq"?.2:.05;g.fillStyle=P.k==="maq"?"#000":P.col;g.fillRect(0,arr,W,sue-arr);g.globalAlpha=1;}
+        g.restore();
+        muebles(p,t);
+        if(p===SALA){const W0=W;g.save();g.translate(GAB_X*W0,0);W=GAB_W*W0;gabinete(t,dt);W=W0;g.restore();piezaXMundo();dibujaTorre(t,dt);}
+        if(p===P_PB)rincon(t);
+        for(let i=0;i<ESTACIONES.length;i++)if(pisoDe(X(i))===p)estacion(i,t,conProp);
+        if(Cap.enPiso)Cap.enPiso(P.k,t);
+      });
+    });
+    if(Cin.on)tvGrande(t);
+    nucleo(t);casco(t);rotulos();cabina(t,false);
+    const rp=Rb.via?-1:pisoDe(robotX);
+    for(const m of visibles())enMarco(m.oy??pisoY[pisoDe(m.x)],pisoDe(m.x),()=>dibujaMini(m,t));
+    for(const R of Flo.m.values()){
+      const oy=R.oy??pisoY[pisoDe(R.x)];
+      if(oy+H<y0||oy>y1)continue;
+      for(const m of R.ms.values())enMarco(m.oy??pisoY[pisoDe(m.x)],pisoDe(m.x),()=>dibujaMini(m,t));
+      enMarco(oy,pisoDe(R.x),()=>dibujaFlota(R,t));
+    }
+    enMarco(oyRobot(),pisoDe(robotX),()=>{
+      if(Cap.medio)Cap.medio(t,dt);
+      if(!Flo.foco)dibujaRobot(t,anda,viaje);
+      for(const a of aviones)if(pisoDe(a.x)===rp)avionPapel(a,t);
+    });
+    cabina(t,true);
+    enPiso(SALA,()=>dibujaRx(t));
+    pasaParts(dt);dibujaParts(false);
+    if(!Flo.foco)enMarco(oyRobot(),pisoDe(robotX),()=>letreroRobot(anda));
+    g.setTransform(dpr,0,0,dpr,0,0);
+    cinta(t,dt);
+    hudEdificio(t);
     if(Cap.encima)Cap.encima(t,dt);
+    dibujaParts(true);
   }
   const VARIAS=["pintar","grabar","dj","claqueta","teclear","escribir","lupa","subir","leer","buscar","navegar","escuchar","fiesta","tapa","amigo","pensar","libros"];
   cv.addEventListener("click",ev=>{
     Son.despertar();ahora=performance.now();
-    const r=cv.getBoundingClientRect(),py=ev.clientY-r.top,p=py<PCH?piezaEn(ev.clientX-r.left):null;
+    const r=cv.getBoundingClientRect(),sx=ev.clientX-r.left,py=ev.clientY-r.top;
+    if(EDIF){
+      if(arrastre.mov)return;
+      if(tocaHud(sx,py))return;
+      const q=aMundo(sx,py),en=q.y-pisoY[SALA],pi=en>=0&&en<PCH?piezaEn(q.x):null;
+      if(pi){tip={p:pi,hasta:ahora+6000};return;}
+      const ly=q.y-pisoY[P_PB];
+      if(Cap.clic&&ly>=PCH&&ly<=H&&Cap.clic(q.x,ly))return;
+      for(const R of Flo.m.values()){    // un robot de otra sesión: letrero, y otro toque abre esa sesión
+        const p=(R.oy??pisoY[pisoDe(R.x)])+sue;
+        if(Math.abs(q.x-fr(R.x)*W)>38*K||q.y>p+12||q.y<p-104*K)continue;
+        if(Flo.tip?.R===R&&ahora<Flo.tip.hasta){Flo.tip=null;abreSesion(R.id,R.video);}else Flo.tip={R,hasta:ahora+6000};
+        return;
+      }
+      const pie=oyRobot()+sue;
+      if(Math.abs(q.x-fr(robotX)*W)>42*K||q.y>pie+12||q.y<pie-104*K)return;   // en el edificio la gracia es tocar al robot, no cualquier parte
+      const iA=idx,mA=meta;
+      poner(VARIAS[Math.floor(Math.random()*VARIAS.length)]);meta=mA;idx=iA;A.ini+=1800;actHasta=ahora+3500;
+      return;
+    }
+    const p=py<PCH?piezaEn(sx):null;
     if(p){tip={p,hasta:ahora+6000};return;}
-    if(Cap.clic&&Cap.clic(ev.clientX-r.left,py))return;   // en el gabinete, el detalle de la pieza; abajo sigue la gracia del robot
+    if(Cap.clic&&Cap.clic(sx,py))return;   // en el gabinete, el detalle de la pieza; abajo sigue la gracia del robot
     poner(VARIAS[Math.floor(Math.random()*VARIAS.length)]);A.ini+=1800;actHasta=ahora+3500;});   // la gracia dura más que una acción normal
-  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
-  const dim=()=>({W,H,K,PCH,TH,sue,AN:AN(),by:H-TH-15,robotX,X,DES:DES(),pal,ahora,nom:A.nom,m:margen()});
+  const arrastre={mov:false,x:0,y:0},dedos=new Map();
+  if(EDIF){
+    cv.title="";cv.style.cursor="grab";cv.style.touchAction="none";
+    cv.setAttribute("aria-label","Edificio de la fábrica: rueda para acercar, arrastra para moverte; toca al robot y hace una gracia");
+    const pos=ev=>{const r=cv.getBoundingClientRect();return {x:ev.clientX-r.left,y:ev.clientY-r.top};};
+    const mueve=(dx,dy)=>{tocaDir();Cam.sigue=false;Cam.tx-=dx/Cam.z;Cam.ty-=dy/Cam.z;Cam.x=Cam.tx;Cam.y=Cam.ty;};
+    cv.addEventListener("wheel",ev=>{ev.preventDefault();const q=pos(ev);zoomA(q.x,q.y,Math.exp(-ev.deltaY*(ev.ctrlKey?.008:.0016)));},{passive:false});
+    cv.addEventListener("dblclick",ev=>{const q=pos(ev);if(!enHud(q.x,q.y))zoomA(q.x,q.y,1.7);});
+    cv.addEventListener("pointerdown",ev=>{
+      const q=pos(ev);
+      if(!dedos.size){arrastre.mov=false;arrastre.x=q.x;arrastre.y=q.y;}
+      if(enHud(q.x,q.y))return;
+      tocaDir();
+      dedos.set(ev.pointerId,q);
+      try{cv.setPointerCapture(ev.pointerId);}catch(e){}
+      cv.style.cursor="grabbing";
+    });
+    cv.addEventListener("pointermove",ev=>{
+      const a=dedos.get(ev.pointerId);if(!a)return;
+      const q=pos(ev);
+      if(dedos.size===1){
+        if(Math.hypot(q.x-arrastre.x,q.y-arrastre.y)>6)arrastre.mov=true;
+        if(arrastre.mov)mueve(q.x-a.x,q.y-a.y);
+      }else if(dedos.size===2){
+        const otro=[...dedos.entries()].find(x=>x[0]!==ev.pointerId)[1];
+        const d0=Math.hypot(a.x-otro.x,a.y-otro.y),d1=Math.hypot(q.x-otro.x,q.y-otro.y);
+        arrastre.mov=true;
+        if(d0>0)zoomA((q.x+otro.x)/2,(q.y+otro.y)/2,d1/d0);
+        mueve((q.x-a.x)/2,(q.y-a.y)/2);
+      }
+      dedos.set(ev.pointerId,q);
+    });
+    const suelta_=ev=>{dedos.delete(ev.pointerId);if(!dedos.size)cv.style.cursor="grab";};
+    cv.addEventListener("pointerup",suelta_);cv.addEventListener("pointercancel",suelta_);
+  }
+  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
+  const dim=()=>{
+    if(EDIF&&!enMundo){                  // fuera de un piso se dibuja sobre el vidrio: anuncios, cartas y la batería, cerca de donde esté el robot
+      const q=aPantalla(fr(robotX)*W,oyRobot()+sue);
+      return {W:CW,H:CH,K:Math.max(.8,Math.min(1.35,K*Cam.z)),PCH:0,TH:0,sue:Math.max(CH*.45,Math.min(CH*.88,q.y)),AN:1,by:CH-15,robotX:Math.max(.08,Math.min(.8,q.x/CW)),X,DES:0,pal,ahora,nom:A.nom,m:12,piso:null};
+    }
+    return {W,H,K,PCH,TH,sue,AN:AN(),by:H-TH-15,robotX:fr(robotX),X,DES:DES(),pal,ahora,nom:A.nom,m:margen(),piso:EDIF?PISOS[pisoAct]?.k:undefined};
+  };
   const tema=p=>{palExtra=p||{};leerPal();};
   const actividad=(nom,txt,ms)=>{actHasta=ahora+ms;poner(nom,null,true);A.act=true;A.txt=txt;};
   const libre=()=>!Esc&&!pend&&principalAlDia();
-  const suelta=(x,y,txt,c,vy=-30)=>parts.push({x,y,vx:(Math.random()-.5)*30,vy,v:1,c,txt});
-  return {prim,dim,tema,actividad,libre,suelta,Cap,ir,pinta,poner,POSES,sync,escena,TM,VM,ACTIVIDADES,minis:()=>minis,finEsc,reposo,datosPC,piezas:()=>PZ,quiere,TAREAS,datosTarea,torre:To,limpiaRx:()=>{ultRx={};cola=null;pc.sinRed=0;pc.temps=[];},estado:()=>({rx:Rx&&Rx.tipo,letrero,nom:A.nom,x:robotX,meta,estacion:ESTACIONES[idx]?.[0]||null,esc:Esc&&Esc.tipo})};
+  const suelta=(x,y,txt,c,vy=-30)=>parts.push({x,y,vx:(Math.random()-.5)*30,vy,v:1,c,txt,hud:EDIF&&!enMundo});
+  return {prim,VARIAS:KIT_V,variaDe,prueba:v=>{fijaV=v&&POSES[v]?v:null;llego=llego||ahora;return fijaV;},dim,tema,actividad,libre,suelta,Cap,ir,pinta,poner,POSES,sync,escena,TM,VM,ACTIVIDADES,minis:()=>minis,finEsc,reposo,datosPC,piezas:()=>PZ,quiere,TAREAS,datosTarea,torre:To,limpiaRx:()=>{ultRx={};cola=null;pc.sinRed=0;pc.temps=[];},estado:()=>({rx:Rx&&Rx.tipo,letrero,nom:A.nom,pose:fijaV||A.v,x:robotX,meta,estacion:ESTACIONES[idx]?.[0]||null,esc:Esc&&Esc.tipo,piso:PISOS[pisoDe(robotX)]?.k,viaje:Rb.via&&Rb.via.t,cabina:Cab.y,cam:{z:Cam.z,x:Cam.x,y:Cam.y,sigue:Cam.sigue},plano:Dir.pl&&Dir.pl.k}),irPiso,zoomA,Cam,Dir,ponDir,Cin,ponCine,Nar,ponNarrador,tvPinta,Flo,fabrica,ponFabrica,enfoca};
 })();
 
 // ---------------------------------------------------------- la PC: cifras reales, nunca con la pestaña oculta
 async function pedirPC(){
   if(document.hidden)return;
-  try{const r=await (await fetch("/api/v2/sistema")).json();if(r&&!r.cargando&&(r.edad??99)<20)Taller.datosPC(r);}catch(e){}
+  try{const r=await (await fetch("/api/v2/sistema")).json();if(r&&!r.cargando&&(r.edad??99)<20){Taller.datosPC(r);Taller.Flo.proc=new Map((r.procesos||[]).filter(p=>p.video).map(p=>[p.video,p.rol||""]));}}catch(e){}
 }
 
 // ---------------------------------------------------------- controles
@@ -2350,12 +3183,16 @@ addEventListener("keydown",e=>{if(e.code==="Space"&&e.target===document.body){e.
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){pedir();pedirSesiones();}});
 
 pedir();pedirSesiones();pedirPC();
-setInterval(pedir,2200);
-setInterval(pedirPC,3000);
-setInterval(pedirSesiones,8000);
+const REMOTO=!/^(127\.0\.0\.1|localhost|\[::1\])$/.test(location.hostname);   // por el túnel se pregunta menos: ngrok gratis tiene cupo mensual de peticiones
+setInterval(pedir,REMOTO?5000:2200);
+setInterval(pedirPC,REMOTO?8000:3000);
+setInterval(pedirSesiones,REMOTO?30000:8000);
+setInterval(()=>{if(Taller.Flo.on)pedirSesiones();},REMOTO?15000:3000);   // la fábrica entera necesita las filas más al día; con la pestaña oculta no pide nada
 setInterval(()=>{if(S.ev.length)pintarModo();},4000);
 requestAnimationFrame(bucle);
 </script>
+<script src="/v2/vivo/poses.js"></script>
 <script src="/v2/vivo/extras.js"></script>
+<script src="/v2/vivo/movil.js"></script>
 </body>
 </html>

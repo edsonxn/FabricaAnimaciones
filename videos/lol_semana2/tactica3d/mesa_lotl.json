@@ -1,0 +1,313 @@
+{
+ "modo": "mesa",
+ "de": 844.88,
+ "a": 852.8,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_lotl_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "CoreJJ": {
+   "jugador": "CoreJJ",
+   "campeon": "Lulu",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.297,
+     0.312
+    ]
+   ],
+   "de": 845.28,
+   "sale": 851.8
+  },
+  "Yeon": {
+   "jugador": "Yeon",
+   "campeon": "Yunara",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Yunara.png",
+   "puntos": [
+    [
+     0,
+     0.241,
+     0.626
+    ]
+   ],
+   "de": 845.36,
+   "sale": 851.8
+  },
+  "Ackerman": {
+   "jugador": "Ackerman",
+   "campeon": "Renata",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Renata.png",
+   "puntos": [
+    [
+     0,
+     0.322,
+     0.459
+    ]
+   ],
+   "de": 845.44,
+   "sale": 851.8
+  },
+  "Duduhh": {
+   "jugador": "Duduhh",
+   "campeon": "Kalista",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.463,
+     0.609
+    ]
+   ],
+   "de": 845.52,
+   "sale": 851.8
+  },
+  "Morgan": {
+   "jugador": "Morgan",
+   "campeon": "Gnar",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Gnar.png",
+   "puntos": [
+    [
+     0,
+     0.711,
+     0.426
+    ]
+   ],
+   "de": 845.6,
+   "sale": 851.8
+  }
+ },
+ "camara": [
+  [
+   844.88,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   845.23,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   847.4144,
+   -18,
+   36,
+   50,
+   0.38,
+   0.47
+  ],
+  [
+   849.7904,
+   14,
+   40,
+   47.5,
+   0.38,
+   0.47
+  ],
+  [
+   851.9,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   852.8,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.206,
+     0.344
+    ],
+    [
+     0.288,
+     0.327
+    ],
+    [
+     0.369,
+     0.321
+    ],
+    [
+     0.438,
+     0.31
+    ],
+    [
+     0.531,
+     0.299
+    ],
+    [
+     0.638,
+     0.26
+    ],
+    [
+     0.744,
+     0.244
+    ],
+    [
+     0.744,
+     0.254
+    ],
+    [
+     0.638,
+     0.27
+    ],
+    [
+     0.531,
+     0.309
+    ],
+    [
+     0.438,
+     0.32
+    ],
+    [
+     0.369,
+     0.331
+    ],
+    [
+     0.288,
+     0.337
+    ],
+    [
+     0.206,
+     0.354
+    ]
+   ],
+   "color": "amarillo",
+   "alfa": 0.75,
+   "alto": 1.8,
+   "en": 845.08,
+   "sale": 851.8
+  }
+ ],
+ "pilares": [
+  {
+   "u": 0.206,
+   "v": 0.349,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.13,
+   "sale": 851.8
+  },
+  {
+   "u": 0.288,
+   "v": 0.332,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.23,
+   "sale": 851.8
+  },
+  {
+   "u": 0.369,
+   "v": 0.326,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.33,
+   "sale": 851.8
+  },
+  {
+   "u": 0.438,
+   "v": 0.315,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.43,
+   "sale": 851.8
+  },
+  {
+   "u": 0.531,
+   "v": 0.304,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.53,
+   "sale": 851.8
+  },
+  {
+   "u": 0.638,
+   "v": 0.265,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.63,
+   "sale": 851.8
+  },
+  {
+   "u": 0.744,
+   "v": 0.249,
+   "r": 0.012,
+   "color": "amarillo",
+   "alto": 3.2,
+   "en": 845.73,
+   "sale": 851.8
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.438,
+   "v": 0.315,
+   "alto": 3.2,
+   "texto": "EL MURO DE TALIYAH",
+   "sub": null,
+   "color": "amarillo",
+   "dx": 0,
+   "dy": -70,
+   "de": 845.38,
+   "a": 851.8
+  },
+  {
+   "u": 0.297,
+   "v": 0.312,
+   "alto": 0,
+   "texto": "AL NORTE",
+   "sub": "COREJJ Y QUID",
+   "color": "azul",
+   "dx": -170,
+   "dy": -70,
+   "de": 845.18,
+   "a": 851.8
+  },
+  {
+   "u": 0.241,
+   "v": 0.626,
+   "alto": 0,
+   "texto": "AL SUR, DENTRO",
+   "sub": "YEON Y JOSEDEODO",
+   "color": "azul",
+   "dx": -170,
+   "dy": 60,
+   "de": 847.7,
+   "a": 851.8
+  }
+ ]
+}

@@ -39,7 +39,10 @@ GAP = 0.26
 VOZ = dict(referencia="C:/chatterbox_voices/EnglishComic.mp3", idioma="en",
            exaggeration=0.8, cfg_weight=0.3, temperature=0.8)
 
-CER_MAX_POR_FRASE = {}
+# Whisper escribe «Number 4», «6,000» y «2022» con cifras (la toma dice bien las palabras) y las colas de 5 frases largas
+# terminan hablando hasta el final (CER 0: la transcripción termina bien)
+CER_MAX_POR_FRASE = {"four_0": 0.25, "two_1": 0.1, "two_6": 0.12}
+TAIL_MAX_POR_FRASE = {"four_2": 0.6, "four_6": 0.5, "four_7": 0.8, "three_9": 0.6, "two_5": 0.8}
 
 SECUENCIA = dict(
     video_s=0,          # sin puntos de video en Flow (0 puntos el 11-oct-2026): todo imagen
@@ -100,10 +103,8 @@ LYRIA = dict(
          "Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending."),
         (["four", "three"],
          "Begin softly with a low held tone. End on a sustained chord that can flow into the next piece."),
-        (["two"],
+        (["two", "one"],
          "Begin gently with a held tone. End on a sustained calm chord that can flow into the next piece."),
-        (["one"],
-         "Begin softly with a held tone. End on a sustained chord that can flow into the next piece."),
         (["should", "outro"],
          "Begin gently with a held tone. End with a natural slow fade-out to silence."),
     ],

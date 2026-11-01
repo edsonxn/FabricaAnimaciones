@@ -7329,7 +7329,357 @@
    "prompt": "",
    "dur": 5.98,
    "canal": "cronicas_tamriel"
+  },
+  "spyro2__sp_8piezas": {
+   "id": "spyro2__sp_8piezas",
+   "video": "spyro2",
+   "nombre": "sp_8piezas",
+   "archivo": "spyro2__sp_8piezas.mp3",
+   "md5": "32d735cbd0767b9f60e40d82345faad1",
+   "prompt": "",
+   "dur": 0.81,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_agente0": {
+   "id": "spyro2__sp_agente0",
+   "video": "spyro2",
+   "nombre": "sp_agente0",
+   "archivo": "spyro2__sp_agente0.mp3",
+   "md5": "d34ff1ccd49789fe8e81e845aaaa58ad",
+   "prompt": "",
+   "dur": 0.5,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_ahogo": {
+   "id": "spyro2__sp_ahogo",
+   "video": "spyro2",
+   "nombre": "sp_ahogo",
+   "archivo": "spyro2__sp_ahogo.mp3",
+   "md5": "8506f4677e6ccf093248f080315db4f0",
+   "prompt": "",
+   "dur": 1.62,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_arcos": {
+   "id": "spyro2__sp_arcos",
+   "video": "spyro2",
+   "nombre": "sp_arcos",
+   "archivo": "spyro2__sp_arcos.mp3",
+   "md5": "f346d2dd66d1b5675522afc484f94fd8",
+   "prompt": "",
+   "dur": 3.86,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_buceo": {
+   "id": "spyro2__sp_buceo",
+   "video": "spyro2",
+   "nombre": "sp_buceo",
+   "archivo": "spyro2__sp_buceo.mp3",
+   "md5": "a8eb36330ac67f85ff48fb0715bbe3b2",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_camello": {
+   "id": "spyro2__sp_camello",
+   "video": "spyro2",
+   "nombre": "sp_camello",
+   "archivo": "spyro2__sp_camello.mp3",
+   "md5": "2d7aafb28b4d1299f19aec9a46b56215",
+   "prompt": "",
+   "dur": 2.38,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_carga": {
+   "id": "spyro2__sp_carga",
+   "video": "spyro2",
+   "nombre": "sp_carga",
+   "archivo": "spyro2__sp_carga.mp3",
+   "md5": "6ec8bebe04dfc5064006615abd6f38af",
+   "prompt": "",
+   "dur": 16.96,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_cowlek": {
+   "id": "spyro2__sp_cowlek",
+   "video": "spyro2",
+   "nombre": "sp_cowlek",
+   "archivo": "spyro2__sp_cowlek.mp3",
+   "md5": "6b788c8b908bd8d343ac5ee19b623418",
+   "prompt": "",
+   "dur": 4.41,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_crush": {
+   "id": "spyro2__sp_crush",
+   "video": "spyro2",
+   "nombre": "sp_crush",
+   "archivo": "spyro2__sp_crush.mp3",
+   "md5": "6bf21543d53e7e2d64240f15be401be7",
+   "prompt": "",
+   "dur": 1.14,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_crush_mazo": {
+   "id": "spyro2__sp_crush_mazo",
+   "video": "spyro2",
+   "nombre": "sp_crush_mazo",
+   "archivo": "spyro2__sp_crush_mazo.mp3",
+   "md5": "c304213c9f509d64e9b0b7c10471145e",
+   "prompt": "",
+   "dur": 0.33,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_elefante": {
+   "id": "spyro2__sp_elefante",
+   "video": "spyro2",
+   "nombre": "sp_elefante",
+   "archivo": "spyro2__sp_elefante.mp3",
+   "md5": "7000062db14b05ec9771dcb984b56979",
+   "prompt": "",
+   "dur": 2.15,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_estatua": {
+   "id": "spyro2__sp_estatua",
+   "video": "spyro2",
+   "nombre": "sp_estatua",
+   "archivo": "spyro2__sp_estatua.mp3",
+   "md5": "7c25f3f6fca72ef5928d2b2e330dc356",
+   "prompt": "",
+   "dur": 1.16,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_gulp": {
+   "id": "spyro2__sp_gulp",
+   "video": "spyro2",
+   "nombre": "sp_gulp",
+   "archivo": "spyro2__sp_gulp.mp3",
+   "md5": "043b77731281c3a940e3157f75d668e2",
+   "prompt": "",
+   "dur": 1.62,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_gulp_trago": {
+   "id": "spyro2__sp_gulp_trago",
+   "video": "spyro2",
+   "nombre": "sp_gulp_trago",
+   "archivo": "spyro2__sp_gulp_trago.mp3",
+   "md5": "47c35909f1efe4f589cba79377637cab",
+   "prompt": "",
+   "dur": 0.35,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_ladron": {
+   "id": "spyro2__sp_ladron",
+   "video": "spyro2",
+   "nombre": "sp_ladron",
+   "archivo": "spyro2__sp_ladron.mp3",
+   "md5": "1b2951cf7331953726e9901c82edf769",
+   "prompt": "",
+   "dur": 7.01,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_lamparas": {
+   "id": "spyro2__sp_lamparas",
+   "video": "spyro2",
+   "nombre": "sp_lamparas",
+   "archivo": "spyro2__sp_lamparas.mp3",
+   "md5": "9b74699292ff95ebbab80c4fa7f826b8",
+   "prompt": "",
+   "dur": 4.83,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_lava": {
+   "id": "spyro2__sp_lava",
+   "video": "spyro2",
+   "nombre": "sp_lava",
+   "archivo": "spyro2__sp_lava.mp3",
+   "md5": "fd355f64ea85d428864168250a322f5a",
+   "prompt": "",
+   "dur": 0.55,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_logo": {
+   "id": "spyro2__sp_logo",
+   "video": "spyro2",
+   "nombre": "sp_logo",
+   "archivo": "spyro2__sp_logo.mp3",
+   "md5": "53302ba4c05d64a3aba88164316316b5",
+   "prompt": "",
+   "dur": 0.73,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_menu": {
+   "id": "spyro2__sp_menu",
+   "video": "spyro2",
+   "nombre": "sp_menu",
+   "archivo": "spyro2__sp_menu.mp3",
+   "md5": "5943d4d6d835ef975c929e7bd42ab485",
+   "prompt": "",
+   "dur": 7.14,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_moneybags": {
+   "id": "spyro2__sp_moneybags",
+   "video": "spyro2",
+   "nombre": "sp_moneybags",
+   "archivo": "spyro2__sp_moneybags.mp3",
+   "md5": "870407c1cc2b5700d2a940a7ce4b5cde",
+   "prompt": "",
+   "dur": 1.42,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_muro": {
+   "id": "spyro2__sp_muro",
+   "video": "spyro2",
+   "nombre": "sp_muro",
+   "archivo": "spyro2__sp_muro.mp3",
+   "md5": "7b1d92154c3af674744c56738e09612a",
+   "prompt": "",
+   "dur": 1.46,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_oveja": {
+   "id": "spyro2__sp_oveja",
+   "video": "spyro2",
+   "nombre": "sp_oveja",
+   "archivo": "spyro2__sp_oveja.mp3",
+   "md5": "7898ed6b756fb0843098f017c6d7ef1c",
+   "prompt": "",
+   "dur": 4.07,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_portal": {
+   "id": "spyro2__sp_portal",
+   "video": "spyro2",
+   "nombre": "sp_portal",
+   "archivo": "spyro2__sp_portal.mp3",
+   "md5": "f5c628603994a038cd648d5a0848330b",
+   "prompt": "",
+   "dur": 0.73,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_portal_activo": {
+   "id": "spyro2__sp_portal_activo",
+   "video": "spyro2",
+   "nombre": "sp_portal_activo",
+   "archivo": "spyro2__sp_portal_activo.mp3",
+   "md5": "92e3c1b59f8b34cdeaf64ebf60adad9b",
+   "prompt": "",
+   "dur": 0.66,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_pterodactilo": {
+   "id": "spyro2__sp_pterodactilo",
+   "video": "spyro2",
+   "nombre": "sp_pterodactilo",
+   "archivo": "spyro2__sp_pterodactilo.mp3",
+   "md5": "ba0ad8d92bbb5625d98297ab454cdb1f",
+   "prompt": "",
+   "dur": 1.42,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_publico": {
+   "id": "spyro2__sp_publico",
+   "video": "spyro2",
+   "nombre": "sp_publico",
+   "archivo": "spyro2__sp_publico.mp3",
+   "md5": "f253fa3be36904ff6ef35746fbbe94c7",
+   "prompt": "",
+   "dur": 37.89,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_puno": {
+   "id": "spyro2__sp_puno",
+   "video": "spyro2",
+   "nombre": "sp_puno",
+   "archivo": "spyro2__sp_puno.mp3",
+   "md5": "9885b693dc543850165882f8dacd5f41",
+   "prompt": "",
+   "dur": 0.21,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_ripto": {
+   "id": "spyro2__sp_ripto",
+   "video": "spyro2",
+   "nombre": "sp_ripto",
+   "archivo": "spyro2__sp_ripto.mp3",
+   "md5": "039e7e480314dcd36572907d7e47d255",
+   "prompt": "",
+   "dur": 10.44,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_rocas": {
+   "id": "spyro2__sp_rocas",
+   "video": "spyro2",
+   "nombre": "sp_rocas",
+   "archivo": "spyro2__sp_rocas.mp3",
+   "md5": "1cf99d16d08af37e31e59ef671f607fa",
+   "prompt": "",
+   "dur": 4.16,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_templo": {
+   "id": "spyro2__sp_templo",
+   "video": "spyro2",
+   "nombre": "sp_templo",
+   "archivo": "spyro2__sp_templo.mp3",
+   "md5": "6e13eac29addfe39c09c110b821891b2",
+   "prompt": "",
+   "dur": 1.9,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_tiempo_fin": {
+   "id": "spyro2__sp_tiempo_fin",
+   "video": "spyro2",
+   "nombre": "sp_tiempo_fin",
+   "archivo": "spyro2__sp_tiempo_fin.mp3",
+   "md5": "622d233282d63b22b3ac72579edea5cc",
+   "prompt": "",
+   "dur": 0.62,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_tiempo_mas": {
+   "id": "spyro2__sp_tiempo_mas",
+   "video": "spyro2",
+   "nombre": "sp_tiempo_mas",
+   "archivo": "spyro2__sp_tiempo_mas.mp3",
+   "md5": "388590375d16d90a3ef097246395f624",
+   "prompt": "",
+   "dur": 0.58,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_vagoneta": {
+   "id": "spyro2__sp_vagoneta",
+   "video": "spyro2",
+   "nombre": "sp_vagoneta",
+   "archivo": "spyro2__sp_vagoneta.mp3",
+   "md5": "c8cfa073d12946a3a85e90cb010a7116",
+   "prompt": "",
+   "dur": 0.93,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_vasija": {
+   "id": "spyro2__sp_vasija",
+   "video": "spyro2",
+   "nombre": "sp_vasija",
+   "archivo": "spyro2__sp_vasija.mp3",
+   "md5": "76d2d1c6cfd9b21766e381316f7109b0",
+   "prompt": "",
+   "dur": 0.85,
+   "canal": "cronicas_gaming"
+  },
+  "spyro2__sp_yeti": {
+   "id": "spyro2__sp_yeti",
+   "video": "spyro2",
+   "nombre": "sp_yeti",
+   "archivo": "spyro2__sp_yeti.mp3",
+   "md5": "53c7165ec96e1d2f9c9d534b7fbd3ee5",
+   "prompt": "",
+   "dur": 9.23,
+   "canal": "cronicas_gaming"
   }
  },
- "actualizado": "2026-10-30 17:02"
+ "actualizado": "2026-10-31 13:28"
 }

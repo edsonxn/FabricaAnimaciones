@@ -3,6 +3,7 @@
 - canal: cronicas_tamriel · meta: hueco lun 26-oct-2026 12:07 CDMX (≥ 96 h tras misiones_nunca, 22-oct 18:07Z) · ~15 min (el usuario)
 - estilo: secuencia_yt (gameplay Skyrim por beat + MG `nucleo/mg_tes.py` + pegatinas + mapas tema `tes`) · voz Chatterbox Sarcastica → doc: docs/estilo_secuencia_yt.md § Tamriel
 - etapa: ✅ SUBIDO y PROGRAMADO lun 26-oct-2026 12:08 CDMX (2026-10-26T18:08:00Z) · https://youtu.be/uz1kE1BI4w8 · MASTER v3 (16:35) con miniatura y .srt
+- ✅ **PÚBLICO** desde el lun 26-oct 12:08 CDMX · https://youtu.be/uz1kE1BI4w8 (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: monetización en Studio (anuncios + cuestionario) PENDIENTE · `limpiar` cuando salga público
 
 ## Sesiones (plan de tramos · «continúa el video tes_cosas_inutiles» retoma aquí · protocolo docs/sesiones.md)

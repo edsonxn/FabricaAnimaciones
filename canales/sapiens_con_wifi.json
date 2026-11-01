@@ -35,7 +35,7 @@
     "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
     "frecuencia": "1-2 videos largos por semana, mismo día y hora",
     "nota": "Benchmarks 2026 (Metricool, SocialPilot, Montage, Sprout). Ajustar con Studio > Audiencia cuando haya datos.",
-    "ciclo_dias": 6
+    "ciclo_dias": 5
   },
   "publicados": [
     {
@@ -48,20 +48,48 @@
       "video": "inventos_antiguos",
       "id": "ni6FrdYvon0",
       "titulo": "7 Inventos Antiguos que Usas Todos los Días",
-      "programado": "2026-09-30T20:00:00Z"
+      "programado": "2026-09-30T20:00:00Z",
+      "visibilidad": "public",
+      "publicado": "2026-09-30T20:00:10Z"
     },
     {
       "video": "neandertales",
       "id": "mlR8vD9ABuw",
       "titulo": "Neandertales: 7 Mitos que la Ciencia Derrumbó",
-      "programado": "2026-10-07T20:00:00Z"
+      "programado": "2026-10-07T20:00:00Z",
+      "visibilidad": "public",
+      "publicado": "2026-10-07T20:00:20Z"
     },
     {
       "video": "un_dia_30mil",
       "id": "MADQ6aemfZY",
       "titulo": "Un Día en la Vida Hace 30.000 Años",
       "programado": "2026-10-14T20:00:00Z",
-      "nota": "miniatura por código «¿SOBREVIVIRÍAS? HACE 30.000 AÑOS» (miniaturas.py, variante sobrevivir) y .srt; programado mié 14-oct 14:00 CDMX"
+      "nota": "miniatura por código «¿SOBREVIVIRÍAS? HACE 30.000 AÑOS» (miniaturas.py, variante sobrevivir) y .srt; programado mié 14-oct 14:00 CDMX",
+      "visibilidad": "public",
+      "publicado": "2026-10-14"
+    },
+    {
+      "video": "sin_medicina",
+      "id": "d53XquSO440",
+      "titulo": "¿Cómo Sobrevivían los Humanos Antiguos sin Medicina?",
+      "visibilidad": "public",
+      "programado": "2026-10-18T20:00:00Z",
+      "formato": "pregunta_supervivencia",
+      "nota": "primer video con secuencia Flow (6 clips + 106 imágenes, mascota Sapi); miniatura de Flow «SIN PASTILLAS»; programado dom 18-oct 14:00 CDMX (fecha real en YouTube, verificada el 13-oct-2026)",
+      "publicar": "2026-10-18T20:00:00Z",
+      "publicado": "2026-10-18"
+    },
+    {
+      "video": "frio_extremo",
+      "id": "psl-j5NFljk",
+      "titulo": "¿Cómo Sobrevivían los Humanos Prehistóricos al Frío Extremo?",
+      "visibilidad": "public",
+      "programado": "2026-10-23T20:00:00Z",
+      "publicar": "2026-10-23T20:00:00Z",
+      "formato": "pregunta_supervivencia_pegatina",
+      "nota": "primer video del canal en estilo PEGATINA FLOW (11:51, Sapi + cazadora + inuit, MG por código); miniatura Flow «SIN CHAMARRA»; programado vie 23-oct 14:00 CDMX",
+      "publicado": "2026-10-23"
     }
   ],
   "ideas": {

@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
-"""GUION de un video del motor SECUENCIA YT (gameplay de YouTube por beat; Crónicas de Warcraft).
+"""GUION de un video del motor SECUENCIA YT (gameplay de YouTube por beat).
 Se crea con:  python fab.py nuevo <nombre> --yt      Flujo y reglas: docs/estilo_secuencia_yt.md
 
-Voz Applio (Edge TTS Remy -> RVC RemyOriginal): frases cortas (< ~200 caracteres), escritura normal.
+Voz Applio (Edge TTS Remy -> RVC RemyOriginal): frases de < ~200 caracteres y NUNCA sueltas de 1-3 palabras («Oficialmente.»,
+«Guarda ese dato.» salen con acento portugués/italiano). Todo nombre en inglés va en FONETICA (la voz base es multilingüe y
+cambia de idioma con una palabra inglesa); el guion conserva la grafía real para el .srt, el Montaje y YouTube.
 Estilo de canal «gema»: listas «Las N … de peor a mejor», chistes secos, una cita ficticia dramática por sección.
 ESCENAS = secciones del guion (en una lista: una por puesto). Aquí NO se describen imágenes: los cortes salen de
 `beats` (pausas reales de la voz, ~8,6 s) y la búsqueda de gameplay de cada beat va en busquedas.json.
-Cada video lleva el segmento Overgear (CRONICAS10) entre secciones: ver docs/migracion_googleimagenes.md.
+Cada video lleva el segmento Overgear entre secciones, NARRADO ENTERO con esta voz, código incluido («Usa el código
+CRONICAS10…»): del creativo solo se usa la imagen, nunca su audio (docs/estilo_secuencia_yt.md § Patrocinio).
+La pantalla final del canal (canales/<alias>.json «pantalla_final») la anexa `final` sola.
 """
 
 TITULO = "Título del video"
@@ -17,6 +21,13 @@ DURACION = None
 BPM = 96
 VOZ = dict(motor="applio", tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal", pitch=0, rate=0,
            idioma="es", referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav")
+# Grafía que lee el TTS (grafías del canal: C:\googleimagenes\FONETICA_CHECKLIST.md; con traducción oficial, úsala en el guion)
+FONETICA = {
+    "World of Warcraft Forever": "uórld of uárcraft Foréver", "World of Warcraft": "uórld of uárcraft", "Forever": "Foréver",
+    "Blizzard": "Blízard", "Overgear": "Óverguir", "self-play": "sélf pléi", "Classic": "Clásic", "Azeroth": "Azeróth",
+    "Battle punto net": "Bátel punto net", "Hardcore": "Jardcor", "Vanilla": "Vanila", "retail": "ritéil",
+    "Burning Crusade": "Bérnin Kruséid", "Arthas": "Ársas", "Illidan": "Ilidán", "Hyjal": "Jáyal", "CRONICAS10": "Crónicas diez",
+}
 
 SECUENCIA = dict(
     fuente="yt",
@@ -24,7 +35,8 @@ SECUENCIA = dict(
     clip_s=8.6,             # ~8,6 s por clip (ritmo del canal en el sistema viejo)
     transicion="slideleft", # el clip nuevo empuja al anterior
     fundido=0.35,           # duración de la transición
-    ambiente=0.0,           # el audio del gameplay no se usa (se bajan solo imágenes)
+    ambiente=0.0,           # por defecto solo imagen; el audio del juego va donde conviene oírlo (regla del 26-oct-2026):
+    ambiente_por={},        # {"scene-012": .7}: ese beat baja CON su audio (música del juego, gritos, SFX); la OST se aparta ahí
     yt=dict(sufijo="World of Warcraft", min_s=90, max_min=240, alto=1080,
             evitar_canales=[]),   # canales que salen con cara/overlay y ensucian el plano
 )

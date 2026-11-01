@@ -1,0 +1,1383 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.206,
+  "tipo": "video",
+  "texto": "It is eleven at night. You carry the trash out to the curb. And something in the dark hisses at you. A pale, pointy face.",
+  "clip_s": 10,
+  "t_medio": 4.723,
+  "texto_a": "It is eleven at night. You carry the trash out to the curb.",
+  "texto_b": "And something in the dark hisses at you. A pale, pointy face."
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.206,
+  "t1": 18.686,
+  "tipo": "video",
+  "texto": "Beady black eyes. A mouth full of tiny, sharp teeth. It is a possum. And your first thought is to grab the shovel. Don't.",
+  "clip_s": 10,
+  "t_medio": 13.984,
+  "texto_a": "Beady black eyes. A mouth full of tiny, sharp teeth.",
+  "texto_b": "It is a possum. And your first thought is to grab the shovel. Don't."
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.686,
+  "t1": 29.627,
+  "tipo": "video",
+  "texto": "That strange little animal is one of the best neighbors you will ever have. Around your house, right now, there are animals that look creepy, slimy, or dangerous.",
+  "clip_s": 10,
+  "t_medio": 23.566,
+  "texto_a": "That strange little animal is one of the best neighbors you will ever have.",
+  "texto_b": "Around your house, right now, there are animals that look creepy, slimy, or dangerous."
+ },
+ {
+  "id": "scene-004",
+  "t0": 29.627,
+  "t1": 38.202,
+  "tipo": "video",
+  "texto": "And they are quietly working for you, for free. Today we are counting down twelve of them. Twelve animals you should never kill.",
+  "clip_s": 10,
+  "t_medio": 33.053,
+  "texto_a": "And they are quietly working for you, for free.",
+  "texto_b": "Today we are counting down twelve of them. Twelve animals you should never kill."
+ },
+ {
+  "id": "scene-005",
+  "t0": 38.202,
+  "t1": 42.164,
+  "tipo": "imagen",
+  "texto": "And at the very end, two that, honestly, you should."
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.164,
+  "t1": 45.584,
+  "tipo": "imagen",
+  "texto": "Plus one famous number you have probably seen online."
+ },
+ {
+  "id": "scene-007",
+  "t0": 45.584,
+  "t1": 50.197,
+  "tipo": "imagen",
+  "texto": "Five thousand ticks a summer. Stay with me, because that number"
+ },
+ {
+  "id": "scene-008",
+  "t0": 50.197,
+  "t1": 54.143,
+  "tipo": "imagen",
+  "texto": "might be completely wrong. Number twelve."
+ },
+ {
+  "id": "scene-009",
+  "t0": 54.143,
+  "t1": 57.705,
+  "tipo": "imagen",
+  "texto": "The ladybug. Nobody wants to kill a ladybug."
+ },
+ {
+  "id": "scene-010",
+  "t0": 57.705,
+  "t1": 63.098,
+  "tipo": "imagen",
+  "texto": "But a lot of people spray them by accident, along with the aphids on their roses."
+ },
+ {
+  "id": "scene-011",
+  "t0": 63.098,
+  "t1": 66.338,
+  "tipo": "imagen",
+  "texto": "And that is a mistake, because a ladybug is a tiny"
+ },
+ {
+  "id": "scene-012",
+  "t0": 66.338,
+  "t1": 68.802,
+  "tipo": "imagen",
+  "texto": "tank built to eat aphids."
+ },
+ {
+  "id": "scene-013",
+  "t0": 68.802,
+  "t1": 73.033,
+  "tipo": "imagen",
+  "texto": "One ladybug can eat dozens of them in a single day, and thousands in its life."
+ },
+ {
+  "id": "scene-014",
+  "t0": 73.033,
+  "t1": 78.843,
+  "tipo": "imagen",
+  "texto": "Its babies are even hungrier. They look like tiny, spiky alligators, so people squish them,"
+ },
+ {
+  "id": "scene-015",
+  "t0": 78.843,
+  "t1": 82.203,
+  "tipo": "imagen",
+  "texto": "thinking they are pests. And if you pick one up and"
+ },
+ {
+  "id": "scene-016",
+  "t0": 82.203,
+  "t1": 85.771,
+  "tipo": "imagen",
+  "texto": "it leaves a yellow drop on your finger, that is not pee."
+ },
+ {
+  "id": "scene-017",
+  "t0": 85.771,
+  "t1": 90.679,
+  "tipo": "imagen",
+  "texto": "It is bitter blood that it squeezes out of its own knees, so that birds spit it out."
+ },
+ {
+  "id": "scene-018",
+  "t0": 90.679,
+  "t1": 93.849,
+  "tipo": "imagen",
+  "texto": "Gross. And brilliant."
+ },
+ {
+  "id": "scene-019",
+  "t0": 93.849,
+  "t1": 98.27,
+  "tipo": "imagen",
+  "texto": "Number eleven. The millipede. In the fall, you might find dozens"
+ },
+ {
+  "id": "scene-020",
+  "t0": 98.27,
+  "t1": 103.423,
+  "tipo": "imagen",
+  "texto": "of them curled up in the garage or the basement, and it feels like an invasion."
+ },
+ {
+  "id": "scene-021",
+  "t0": 103.423,
+  "t1": 106.313,
+  "tipo": "imagen",
+  "texto": "But a millipede has no venom, no stinger,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 106.313,
+  "t1": 109.598,
+  "tipo": "imagen",
+  "texto": "and its tiny jaws are too weak to hurt you."
+ },
+ {
+  "id": "scene-023",
+  "t0": 109.598,
+  "t1": 113.804,
+  "tipo": "imagen",
+  "texto": "It does not even hunt. It eats dead leaves and rotting wood."
+ },
+ {
+  "id": "scene-024",
+  "t0": 113.804,
+  "t1": 117.344,
+  "tipo": "imagen",
+  "texto": "And no, most of them do not have a thousand legs."
+ },
+ {
+  "id": "scene-025",
+  "t0": 117.344,
+  "t1": 122.125,
+  "tipo": "imagen",
+  "texto": "Most have far fewer. But in twenty twenty one, scientists in"
+ },
+ {
+  "id": "scene-026",
+  "t0": 122.125,
+  "t1": 126.079,
+  "tipo": "imagen",
+  "texto": "Australia found one with more than thirteen hundred legs."
+ },
+ {
+  "id": "scene-027",
+  "t0": 126.079,
+  "t1": 129.979,
+  "tipo": "imagen",
+  "texto": "Inside your house, it dries out and dies on its own."
+ },
+ {
+  "id": "scene-028",
+  "t0": 129.979,
+  "t1": 134.83,
+  "tipo": "imagen",
+  "texto": "Just sweep it into a dustpan and put it outside."
+ },
+ {
+  "id": "scene-029",
+  "t0": 134.83,
+  "t1": 139.457,
+  "tipo": "imagen",
+  "texto": "Number ten. The one that looks like a wasp, but is not."
+ },
+ {
+  "id": "scene-030",
+  "t0": 139.457,
+  "t1": 142.437,
+  "tipo": "imagen",
+  "texto": "You are eating lunch on the porch, and a little striped"
+ },
+ {
+  "id": "scene-031",
+  "t0": 142.437,
+  "t1": 145.498,
+  "tipo": "imagen",
+  "texto": "insect hovers right in front of your face."
+ },
+ {
+  "id": "scene-032",
+  "t0": 145.498,
+  "t1": 150.649,
+  "tipo": "imagen",
+  "texto": "Your hand goes for the fly swatter. But look closer. It is a hover fly."
+ },
+ {
+  "id": "scene-033",
+  "t0": 150.649,
+  "t1": 153.429,
+  "tipo": "imagen",
+  "texto": "It is dressed up as a wasp, but it is a fly."
+ },
+ {
+  "id": "scene-034",
+  "t0": 153.429,
+  "t1": 159.207,
+  "tipo": "imagen",
+  "texto": "It has no stinger at all. The costume is a bluff to scare off birds."
+ },
+ {
+  "id": "scene-035",
+  "t0": 159.207,
+  "t1": 162.187,
+  "tipo": "imagen",
+  "texto": "Here is how to tell. A wasp has two pairs of wings"
+ },
+ {
+  "id": "scene-036",
+  "t0": 162.187,
+  "t1": 166.658,
+  "tipo": "imagen",
+  "texto": "and long antennae. A hover fly has just one pair of wings,"
+ },
+ {
+  "id": "scene-037",
+  "t0": 166.658,
+  "t1": 171.411,
+  "tipo": "imagen",
+  "texto": "tiny antennae, and huge eyes that cover most of its head."
+ },
+ {
+  "id": "scene-038",
+  "t0": 171.411,
+  "t1": 174.271,
+  "tipo": "imagen",
+  "texto": "Adult hover flies pollinate flowers."
+ },
+ {
+  "id": "scene-039",
+  "t0": 174.271,
+  "t1": 178.231,
+  "tipo": "imagen",
+  "texto": "Their babies are small green maggots that crawl over leaves,"
+ },
+ {
+  "id": "scene-040",
+  "t0": 178.231,
+  "t1": 182.83,
+  "tipo": "imagen",
+  "texto": "eating aphids one after another."
+ },
+ {
+  "id": "scene-041",
+  "t0": 182.83,
+  "t1": 187.324,
+  "tipo": "imagen",
+  "texto": "Number nine. The black beetle that runs across the patio at night."
+ },
+ {
+  "id": "scene-042",
+  "t0": 187.324,
+  "t1": 190.444,
+  "tipo": "imagen",
+  "texto": "This is a ground beetle, and it is one of the best"
+ },
+ {
+  "id": "scene-043",
+  "t0": 190.444,
+  "t1": 193.096,
+  "tipo": "imagen",
+  "texto": "friends a gardener can have."
+ },
+ {
+  "id": "scene-044",
+  "t0": 193.096,
+  "t1": 198.556,
+  "tipo": "imagen",
+  "texto": "Ground beetles hunt at night on the soil, eating slugs, snails, caterpillars,"
+ },
+ {
+  "id": "scene-045",
+  "t0": 198.556,
+  "t1": 200.753,
+  "tipo": "imagen",
+  "texto": "and the eggs of other pests."
+ },
+ {
+  "id": "scene-046",
+  "t0": 200.753,
+  "t1": 207.484,
+  "tipo": "imagen",
+  "texto": "A lot of the cutworms that would chop your seedlings down in the dark never make it, because a ground beetle found them first."
+ },
+ {
+  "id": "scene-047",
+  "t0": 207.484,
+  "t1": 210.124,
+  "tipo": "imagen",
+  "texto": "And one kind, the bombardier beetle,"
+ },
+ {
+  "id": "scene-048",
+  "t0": 210.124,
+  "t1": 215.335,
+  "tipo": "imagen",
+  "texto": "fires a boiling hot spray out of its rear end, with a tiny pop."
+ },
+ {
+  "id": "scene-049",
+  "t0": 215.335,
+  "t1": 217.855,
+  "tipo": "imagen",
+  "texto": "If one gets inside, pick it up with a cup,"
+ },
+ {
+  "id": "scene-050",
+  "t0": 217.855,
+  "t1": 221.86,
+  "tipo": "imagen",
+  "texto": "and let it go by the garden. Number eight."
+ },
+ {
+  "id": "scene-051",
+  "t0": 221.86,
+  "t1": 227.322,
+  "tipo": "imagen",
+  "texto": "The big yellow spider in your garden. Late in summer, it shows up between the tomato plants."
+ },
+ {
+  "id": "scene-052",
+  "t0": 227.322,
+  "t1": 230.262,
+  "tipo": "imagen",
+  "texto": "A huge black and yellow spider, sitting"
+ },
+ {
+  "id": "scene-053",
+  "t0": 230.262,
+  "t1": 233.802,
+  "tipo": "imagen",
+  "texto": "head down in a giant web. It looks terrifying."
+ },
+ {
+  "id": "scene-054",
+  "t0": 233.802,
+  "t1": 238.132,
+  "tipo": "imagen",
+  "texto": "It is a yellow garden spider, and it is not dangerous to people."
+ },
+ {
+  "id": "scene-055",
+  "t0": 238.132,
+  "t1": 243.719,
+  "tipo": "imagen",
+  "texto": "It only bites if you grab it, and the bite is milder than a bee sting."
+ },
+ {
+  "id": "scene-056",
+  "t0": 243.719,
+  "t1": 246.439,
+  "tipo": "imagen",
+  "texto": "Now look at the middle of the web. There is a thick"
+ },
+ {
+  "id": "scene-057",
+  "t0": 246.439,
+  "t1": 251.166,
+  "tipo": "imagen",
+  "texto": "white zigzag going up and down. Nobody knows for sure why."
+ },
+ {
+  "id": "scene-058",
+  "t0": 251.166,
+  "t1": 254.658,
+  "tipo": "imagen",
+  "texto": "Maybe to warn birds not to fly through it."
+ },
+ {
+  "id": "scene-059",
+  "t0": 254.658,
+  "t1": 257.958,
+  "tipo": "imagen",
+  "texto": "And every night, the spider eats most of its own web,"
+ },
+ {
+  "id": "scene-060",
+  "t0": 257.958,
+  "t1": 261.59,
+  "tipo": "imagen",
+  "texto": "and builds a fresh one, often in the same spot."
+ },
+ {
+  "id": "scene-061",
+  "t0": 261.59,
+  "t1": 265.91,
+  "tipo": "imagen",
+  "texto": "In the fall, she makes a round brown egg sac, like a little paper ball,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 265.91,
+  "t1": 269.89,
+  "tipo": "imagen",
+  "texto": "and hangs it near the web. Number seven."
+ },
+ {
+  "id": "scene-063",
+  "t0": 269.89,
+  "t1": 275.356,
+  "tipo": "imagen",
+  "texto": "The dragonfly. A long time ago, people called it the devil's darning needle."
+ },
+ {
+  "id": "scene-064",
+  "t0": 275.356,
+  "t1": 279.239,
+  "tipo": "imagen",
+  "texto": "Some said it could sew your mouth shut while you slept."
+ },
+ {
+  "id": "scene-065",
+  "t0": 279.239,
+  "t1": 283.817,
+  "tipo": "imagen",
+  "texto": "It cannot. It has no stinger, and it almost never bites people."
+ },
+ {
+  "id": "scene-066",
+  "t0": 283.817,
+  "t1": 286.417,
+  "tipo": "imagen",
+  "texto": "But for a mosquito, the dragonfly really"
+ },
+ {
+  "id": "scene-067",
+  "t0": 286.417,
+  "t1": 290.528,
+  "tipo": "imagen",
+  "texto": "is a monster. It does not just chase its prey."
+ },
+ {
+  "id": "scene-068",
+  "t0": 290.528,
+  "t1": 295.57,
+  "tipo": "imagen",
+  "texto": "It predicts where the bug is going to be, and flies to that spot to meet it."
+ },
+ {
+  "id": "scene-069",
+  "t0": 295.57,
+  "t1": 298.39,
+  "tipo": "imagen",
+  "texto": "Scientists who study dragonflies say they"
+ },
+ {
+  "id": "scene-070",
+  "t0": 298.39,
+  "t1": 302.364,
+  "tipo": "imagen",
+  "texto": "catch up to ninety five percent of the prey they go after."
+ },
+ {
+  "id": "scene-071",
+  "t0": 302.364,
+  "t1": 305.95,
+  "tipo": "imagen",
+  "texto": "A lion is lucky to win one chase out of four."
+ },
+ {
+  "id": "scene-072",
+  "t0": 305.95,
+  "t1": 311.81,
+  "tipo": "imagen",
+  "texto": "And before it can even fly, a young dragonfly lives underwater in a pond, for months or even years,"
+ },
+ {
+  "id": "scene-073",
+  "t0": 311.81,
+  "t1": 315.748,
+  "tipo": "imagen",
+  "texto": "eating mosquito larvae. Number six."
+ },
+ {
+  "id": "scene-074",
+  "t0": 315.748,
+  "t1": 320.238,
+  "tipo": "imagen",
+  "texto": "The bumblebee. It is big, it is loud, and when it bumps into your window,"
+ },
+ {
+  "id": "scene-075",
+  "t0": 320.238,
+  "t1": 324.778,
+  "tipo": "imagen",
+  "texto": "it sounds furious. But bumblebees are some of the gentlest bees there are."
+ },
+ {
+  "id": "scene-076",
+  "t0": 324.778,
+  "t1": 328.256,
+  "tipo": "imagen",
+  "texto": "They only sting if you grab them, or attack their nest."
+ },
+ {
+  "id": "scene-077",
+  "t0": 328.256,
+  "t1": 334.132,
+  "tipo": "imagen",
+  "texto": "And the males cannot sting at all. They do not even have a stinger. Here is their superpower."
+ },
+ {
+  "id": "scene-078",
+  "t0": 334.132,
+  "t1": 339.553,
+  "tipo": "imagen",
+  "texto": "Tomato flowers keep their pollen locked inside, like salt in a salt shaker."
+ },
+ {
+  "id": "scene-079",
+  "t0": 339.553,
+  "t1": 342.953,
+  "tipo": "imagen",
+  "texto": "A bumblebee grabs the flower and vibrates its flight muscles"
+ },
+ {
+  "id": "scene-080",
+  "t0": 342.953,
+  "t1": 346.219,
+  "tipo": "imagen",
+  "texto": "so fast that the pollen shakes right out."
+ },
+ {
+  "id": "scene-081",
+  "t0": 346.219,
+  "t1": 350.918,
+  "tipo": "imagen",
+  "texto": "It is called buzz pollination. And honeybees cannot do it."
+ },
+ {
+  "id": "scene-082",
+  "t0": 350.918,
+  "t1": 358.03,
+  "tipo": "imagen",
+  "texto": "If you grow tomatoes, peppers, or blueberries, there is a good chance a bumblebee helped make them."
+ },
+ {
+  "id": "scene-083",
+  "t0": 358.03,
+  "t1": 360.398,
+  "tipo": "imagen",
+  "texto": "Number five. The toad."
+ },
+ {
+  "id": "scene-084",
+  "t0": 360.398,
+  "t1": 365.258,
+  "tipo": "imagen",
+  "texto": "You step outside on a rainy night, and there it is on the sidewalk."
+ },
+ {
+  "id": "scene-085",
+  "t0": 365.258,
+  "t1": 369.05,
+  "tipo": "imagen",
+  "texto": "Bumpy, brown, and staring at you."
+ },
+ {
+  "id": "scene-086",
+  "t0": 369.05,
+  "t1": 374.663,
+  "tipo": "imagen",
+  "texto": "And you probably heard this one as a kid. Touch a toad, and you get warts."
+ },
+ {
+  "id": "scene-087",
+  "t0": 374.663,
+  "t1": 377.72,
+  "tipo": "imagen",
+  "texto": "So let's settle it right now. You do not."
+ },
+ {
+  "id": "scene-088",
+  "t0": 377.72,
+  "t1": 382.576,
+  "tipo": "imagen",
+  "texto": "Warts on people come from a human virus. Toads do not carry it."
+ },
+ {
+  "id": "scene-089",
+  "t0": 382.576,
+  "t1": 388.086,
+  "tipo": "imagen",
+  "texto": "Those bumps on its skin are not warts at all. They are tiny glands."
+ },
+ {
+  "id": "scene-090",
+  "t0": 388.086,
+  "t1": 391.786,
+  "tipo": "imagen",
+  "texto": "And the two big bumps behind its eyes are its real defense."
+ },
+ {
+  "id": "scene-091",
+  "t0": 391.786,
+  "t1": 396.942,
+  "tipo": "imagen",
+  "texto": "They make a bitter poison that burns the mouth of anything that bites it."
+ },
+ {
+  "id": "scene-092",
+  "t0": 396.942,
+  "t1": 402.832,
+  "tipo": "imagen",
+  "texto": "So a toad cannot hurt you. But it can hurt your dog."
+ },
+ {
+  "id": "scene-093",
+  "t0": 402.832,
+  "t1": 405.652,
+  "tipo": "imagen",
+  "texto": "If your dog grabs a toad and starts"
+ },
+ {
+  "id": "scene-094",
+  "t0": 405.652,
+  "t1": 410.604,
+  "tipo": "imagen",
+  "texto": "drooling or pawing at its mouth, rinse its mouth with water and call the vet."
+ },
+ {
+  "id": "scene-095",
+  "t0": 410.604,
+  "t1": 415.936,
+  "tipo": "imagen",
+  "texto": "So why keep it? Because a toad eats almost anything small that moves."
+ },
+ {
+  "id": "scene-096",
+  "t0": 415.936,
+  "t1": 419.456,
+  "tipo": "imagen",
+  "texto": "Beetles, slugs, cutworms, ants, and spiders."
+ },
+ {
+  "id": "scene-097",
+  "t0": 419.456,
+  "t1": 425.146,
+  "tipo": "imagen",
+  "texto": "A single toad can eat thousands of insects in one summer."
+ },
+ {
+  "id": "scene-098",
+  "t0": 425.146,
+  "t1": 428.279,
+  "tipo": "imagen",
+  "texto": "Number four. The snake in the garden."
+ },
+ {
+  "id": "scene-099",
+  "t0": 428.279,
+  "t1": 433.718,
+  "tipo": "imagen",
+  "texto": "A long, thin snake with stripes down its back slides out from under the bushes."
+ },
+ {
+  "id": "scene-100",
+  "t0": 433.718,
+  "t1": 438.798,
+  "tipo": "imagen",
+  "texto": "But this is most likely a garter snake, one of the most common snakes in North America."
+ },
+ {
+  "id": "scene-101",
+  "t0": 438.798,
+  "t1": 441.134,
+  "tipo": "imagen",
+  "texto": "And it is harmless to people."
+ },
+ {
+  "id": "scene-102",
+  "t0": 441.134,
+  "t1": 446.714,
+  "tipo": "imagen",
+  "texto": "It eats slugs, earthworms, insects, frogs, and even small mice."
+ },
+ {
+  "id": "scene-103",
+  "t0": 446.714,
+  "t1": 450.694,
+  "tipo": "imagen",
+  "texto": "If you grab it, it might bite. And it will do something worse."
+ },
+ {
+  "id": "scene-104",
+  "t0": 450.694,
+  "t1": 454.487,
+  "tipo": "imagen",
+  "texto": "It will cover your hands with a terrible smelling musk."
+ },
+ {
+  "id": "scene-105",
+  "t0": 454.487,
+  "t1": 459.082,
+  "tipo": "imagen",
+  "texto": "That is its whole plan. Smell so bad that you let go."
+ },
+ {
+  "id": "scene-106",
+  "t0": 459.082,
+  "t1": 464.792,
+  "tipo": "imagen",
+  "texto": "Of course, not every snake is harmless. If you are not sure which one you are looking at, do not touch it."
+ },
+ {
+  "id": "scene-107",
+  "t0": 464.792,
+  "t1": 468.878,
+  "tipo": "imagen",
+  "texto": "Just give it space. It wants to get away from you even more than you"
+ },
+ {
+  "id": "scene-108",
+  "t0": 468.878,
+  "t1": 473.441,
+  "tipo": "imagen",
+  "texto": "want it gone. Number three. The bat."
+ },
+ {
+  "id": "scene-109",
+  "t0": 473.441,
+  "t1": 478.961,
+  "tipo": "imagen",
+  "texto": "At dusk, something flutters over the yard, too fast to see clearly."
+ },
+ {
+  "id": "scene-110",
+  "t0": 478.961,
+  "t1": 481.719,
+  "tipo": "imagen",
+  "texto": "Swooping, turning, diving."
+ },
+ {
+  "id": "scene-111",
+  "t0": 481.719,
+  "t1": 487.753,
+  "tipo": "imagen",
+  "texto": "It is not attacking you. It is eating. Most bats in the United States eat only insects."
+ },
+ {
+  "id": "scene-112",
+  "t0": 487.753,
+  "t1": 492.791,
+  "tipo": "imagen",
+  "texto": "Moths, beetles, and mosquitoes, caught in the air, in total darkness."
+ },
+ {
+  "id": "scene-113",
+  "t0": 492.791,
+  "t1": 496.101,
+  "tipo": "imagen",
+  "texto": "They find them by shouting, and listening for the echo."
+ },
+ {
+  "id": "scene-114",
+  "t0": 496.101,
+  "t1": 501.104,
+  "tipo": "imagen",
+  "texto": "A single little brown bat can catch hundreds of small insects in one hour."
+ },
+ {
+  "id": "scene-115",
+  "t0": 501.104,
+  "t1": 505.064,
+  "tipo": "imagen",
+  "texto": "Scientists have estimated that bats save American farmers billions of dollars"
+ },
+ {
+  "id": "scene-116",
+  "t0": 505.064,
+  "t1": 508.354,
+  "tipo": "imagen",
+  "texto": "every year, just by eating crop pests."
+ },
+ {
+  "id": "scene-117",
+  "t0": 508.354,
+  "t1": 513.912,
+  "tipo": "imagen",
+  "texto": "But here is the one rule that really matters. Never touch a bat with your bare hands."
+ },
+ {
+  "id": "scene-118",
+  "t0": 513.912,
+  "t1": 519.312,
+  "tipo": "imagen",
+  "texto": "Most bats are healthy, but in the United States, bats are the main source of rabies in people."
+ },
+ {
+  "id": "scene-119",
+  "t0": 519.312,
+  "t1": 522.893,
+  "tipo": "imagen",
+  "texto": "And you cannot tell by looking. If a bat gets inside,"
+ },
+ {
+  "id": "scene-120",
+  "t0": 522.893,
+  "t1": 527.212,
+  "tipo": "imagen",
+  "texto": "close the room, open a window, and let it fly out on its own."
+ },
+ {
+  "id": "scene-121",
+  "t0": 527.212,
+  "t1": 530.953,
+  "tipo": "imagen",
+  "texto": "And if you wake up with a bat in your bedroom, call your doctor."
+ },
+ {
+  "id": "scene-122",
+  "t0": 530.953,
+  "t1": 538.03,
+  "tipo": "imagen",
+  "texto": "Outside, just let them hunt. A bat over your yard is pest control with wings."
+ },
+ {
+  "id": "scene-123",
+  "t0": 538.03,
+  "t1": 541.973,
+  "tipo": "imagen",
+  "texto": "Number two. The little lizard on your fence."
+ },
+ {
+  "id": "scene-124",
+  "t0": 541.973,
+  "t1": 545.533,
+  "tipo": "imagen",
+  "texto": "In the western United States, it does push ups on top"
+ },
+ {
+  "id": "scene-125",
+  "t0": 545.533,
+  "t1": 549.282,
+  "tipo": "imagen",
+  "texto": "of the fence post, flashing a bright blue belly."
+ },
+ {
+  "id": "scene-126",
+  "t0": 549.282,
+  "t1": 554.444,
+  "tipo": "imagen",
+  "texto": "It is the western fence lizard. Most people just call it the blue belly."
+ },
+ {
+  "id": "scene-127",
+  "t0": 554.444,
+  "t1": 559.764,
+  "tipo": "imagen",
+  "texto": "Those push ups are a message to other males. This fence is taken."
+ },
+ {
+  "id": "scene-128",
+  "t0": 559.764,
+  "t1": 564.48,
+  "tipo": "imagen",
+  "texto": "But it has a secret that scientists discovered in the nineteen nineties."
+ },
+ {
+  "id": "scene-129",
+  "t0": 564.48,
+  "t1": 567.371,
+  "tipo": "imagen",
+  "texto": "Young ticks love to feed on these lizards."
+ },
+ {
+  "id": "scene-130",
+  "t0": 567.371,
+  "t1": 571.771,
+  "tipo": "imagen",
+  "texto": "And when a tick carrying the germ that causes Lyme disease drinks the lizard's blood,"
+ },
+ {
+  "id": "scene-131",
+  "t0": 571.771,
+  "t1": 577.295,
+  "tipo": "imagen",
+  "texto": "something in that blood kills the germ. The tick walks away clean."
+ },
+ {
+  "id": "scene-132",
+  "t0": 577.295,
+  "t1": 581.635,
+  "tipo": "imagen",
+  "texto": "Researchers think this may be one reason why Lyme disease is so much less common"
+ },
+ {
+  "id": "scene-133",
+  "t0": 581.635,
+  "t1": 584.302,
+  "tipo": "imagen",
+  "texto": "in California than in the Northeast."
+ },
+ {
+  "id": "scene-134",
+  "t0": 584.302,
+  "t1": 590.592,
+  "tipo": "imagen",
+  "texto": "So if you see a blue belly doing push ups on your fence, let it keep its post."
+ },
+ {
+  "id": "scene-135",
+  "t0": 590.592,
+  "t1": 596.06,
+  "tipo": "imagen",
+  "texto": "And now, number one. The animal from the beginning. The possum."
+ },
+ {
+  "id": "scene-136",
+  "t0": 596.06,
+  "t1": 598.35,
+  "tipo": "imagen",
+  "texto": "To be exact, the Virginia opossum."
+ },
+ {
+  "id": "scene-137",
+  "t0": 598.35,
+  "t1": 605.728,
+  "tipo": "imagen",
+  "texto": "The only marsupial in the United States and Canada. Like a kangaroo, the mother carries her babies in a pouch."
+ },
+ {
+  "id": "scene-138",
+  "t0": 605.728,
+  "t1": 609.248,
+  "tipo": "imagen",
+  "texto": "When they get too big for the pouch, they ride on her back."
+ },
+ {
+  "id": "scene-139",
+  "t0": 609.248,
+  "t1": 612.565,
+  "tipo": "imagen",
+  "texto": "Sometimes more than ten of them at once."
+ },
+ {
+  "id": "scene-140",
+  "t0": 612.565,
+  "t1": 616.385,
+  "tipo": "imagen",
+  "texto": "It has fifty teeth, more than any other land mammal in North America."
+ },
+ {
+  "id": "scene-141",
+  "t0": 616.385,
+  "t1": 621.492,
+  "tipo": "imagen",
+  "texto": "That is why the hissing looks so scary. But the hissing is mostly a bluff."
+ },
+ {
+  "id": "scene-142",
+  "t0": 621.492,
+  "t1": 626.644,
+  "tipo": "imagen",
+  "texto": "And if the bluff does not work, it does something even stranger. It faints."
+ },
+ {
+  "id": "scene-143",
+  "t0": 626.644,
+  "t1": 631.614,
+  "tipo": "imagen",
+  "texto": "It falls over, its tongue hangs out, and it gives off a smell like rotting meat."
+ },
+ {
+  "id": "scene-144",
+  "t0": 631.614,
+  "t1": 636.454,
+  "tipo": "imagen",
+  "texto": "That is where the phrase playing possum comes from. And it is not really acting."
+ },
+ {
+  "id": "scene-145",
+  "t0": 636.454,
+  "t1": 640.634,
+  "tipo": "imagen",
+  "texto": "The fear switches it off. A possum eats almost anything."
+ },
+ {
+  "id": "scene-146",
+  "t0": 640.634,
+  "t1": 644.824,
+  "tipo": "imagen",
+  "texto": "Snails, slugs, beetles, mice, rotten fruit under your trees,"
+ },
+ {
+  "id": "scene-147",
+  "t0": 644.824,
+  "t1": 648.496,
+  "tipo": "imagen",
+  "texto": "even roadkill. And it is very rarely found with rabies."
+ },
+ {
+  "id": "scene-148",
+  "t0": 648.496,
+  "t1": 652.628,
+  "tipo": "imagen",
+  "texto": "One idea is that its body runs cooler than most mammals."
+ },
+ {
+  "id": "scene-149",
+  "t0": 652.628,
+  "t1": 658.522,
+  "tipo": "imagen",
+  "texto": "Which brings us back to that famous number. Possums eat five thousand ticks every summer."
+ },
+ {
+  "id": "scene-150",
+  "t0": 658.522,
+  "t1": 661.297,
+  "tipo": "imagen",
+  "texto": "You have probably seen it on a meme."
+ },
+ {
+  "id": "scene-151",
+  "t0": 661.297,
+  "t1": 666.927,
+  "tipo": "imagen",
+  "texto": "It came from a real study in twenty oh nine. Scientists put ticks on a few possums in a lab,"
+ },
+ {
+  "id": "scene-152",
+  "t0": 666.927,
+  "t1": 672.367,
+  "tipo": "imagen",
+  "texto": "and most of the ticks disappeared. They figured the possums had groomed them off and eaten them."
+ },
+ {
+  "id": "scene-153",
+  "t0": 672.367,
+  "t1": 675.524,
+  "tipo": "imagen",
+  "texto": "Then they multiplied that out to a whole season."
+ },
+ {
+  "id": "scene-154",
+  "t0": 675.524,
+  "t1": 680.465,
+  "tipo": "imagen",
+  "texto": "And the number exploded online. But in twenty twenty one, another team"
+ },
+ {
+  "id": "scene-155",
+  "t0": 680.465,
+  "t1": 684.361,
+  "tipo": "imagen",
+  "texto": "looked inside the stomachs of thirty two wild possums."
+ },
+ {
+  "id": "scene-156",
+  "t0": 684.361,
+  "t1": 689.706,
+  "tipo": "imagen",
+  "texto": "They did not find a single tick. So, does a possum eat ticks? Maybe a few."
+ },
+ {
+  "id": "scene-157",
+  "t0": 689.706,
+  "t1": 694.126,
+  "tipo": "imagen",
+  "texto": "The honest answer is, we do not know yet. But five thousand is"
+ },
+ {
+  "id": "scene-158",
+  "t0": 694.126,
+  "t1": 699.713,
+  "tipo": "imagen",
+  "texto": "probably way too high. Either way, the possum is the night cleanup crew of your neighborhood."
+ },
+ {
+  "id": "scene-159",
+  "t0": 699.713,
+  "t1": 703.63,
+  "tipo": "imagen",
+  "texto": "Leave it alone, and it will move on in a few days."
+ },
+ {
+  "id": "scene-160",
+  "t0": 703.63,
+  "t1": 708.035,
+  "tipo": "imagen",
+  "texto": "Now, I promised you two animals that you should not let go."
+ },
+ {
+  "id": "scene-161",
+  "t0": 708.035,
+  "t1": 712.363,
+  "tipo": "imagen",
+  "texto": "The first one. The spotted lanternfly. It looks almost pretty."
+ },
+ {
+  "id": "scene-162",
+  "t0": 712.363,
+  "t1": 718.34,
+  "tipo": "imagen",
+  "texto": "Gray wings with black spots, and when it jumps, a flash of bright red underneath."
+ },
+ {
+  "id": "scene-163",
+  "t0": 718.34,
+  "t1": 720.94,
+  "tipo": "imagen",
+  "texto": "But it does not belong here. It came from Asia,"
+ },
+ {
+  "id": "scene-164",
+  "t0": 720.94,
+  "t1": 724.581,
+  "tipo": "imagen",
+  "texto": "and it was first found in Pennsylvania in twenty fourteen."
+ },
+ {
+  "id": "scene-165",
+  "t0": 724.581,
+  "t1": 731.333,
+  "tipo": "imagen",
+  "texto": "It sucks the sap of grapevines and trees, and leaves behind a sticky mess that grows black mold."
+ },
+ {
+  "id": "scene-166",
+  "t0": 731.333,
+  "t1": 735.553,
+  "tipo": "imagen",
+  "texto": "That is why officials in Pennsylvania gave a very unusual order."
+ },
+ {
+  "id": "scene-167",
+  "t0": 735.553,
+  "t1": 739.046,
+  "tipo": "imagen",
+  "texto": "Kill it. Squash it, smash it, just get rid of it."
+ },
+ {
+  "id": "scene-168",
+  "t0": 739.046,
+  "t1": 744.046,
+  "tipo": "imagen",
+  "texto": "In the fall, look for its eggs, too. They look like a smear of gray mud on trees,"
+ },
+ {
+  "id": "scene-169",
+  "t0": 744.046,
+  "t1": 749.082,
+  "tipo": "imagen",
+  "texto": "fences, and even cars. Scrape them into a bag with rubbing alcohol."
+ },
+ {
+  "id": "scene-170",
+  "t0": 749.082,
+  "t1": 752.262,
+  "tipo": "imagen",
+  "texto": "And check your car before you drive somewhere new,"
+ },
+ {
+  "id": "scene-171",
+  "t0": 752.262,
+  "t1": 756.43,
+  "tipo": "imagen",
+  "texto": "because they love to hitch a ride."
+ },
+ {
+  "id": "scene-172",
+  "t0": 756.43,
+  "t1": 763.127,
+  "tipo": "imagen",
+  "texto": "The second one. The tick. Specifically, the blacklegged tick, also called the deer tick."
+ },
+ {
+  "id": "scene-173",
+  "t0": 763.127,
+  "t1": 766.077,
+  "tipo": "imagen",
+  "texto": "The young ones are about the size of a poppy seed."
+ },
+ {
+  "id": "scene-174",
+  "t0": 766.077,
+  "t1": 769.997,
+  "tipo": "imagen",
+  "texto": "And they can carry the germ that causes Lyme disease."
+ },
+ {
+  "id": "scene-175",
+  "t0": 769.997,
+  "t1": 775.227,
+  "tipo": "imagen",
+  "texto": "If you find one stuck on your skin, do not burn it, do not smother it with nail polish,"
+ },
+ {
+  "id": "scene-176",
+  "t0": 775.227,
+  "t1": 780.291,
+  "tipo": "imagen",
+  "texto": "and do not twist it. Take fine tweezers, grab it as close to the skin as you can,"
+ },
+ {
+  "id": "scene-177",
+  "t0": 780.291,
+  "t1": 783.697,
+  "tipo": "imagen",
+  "texto": "and pull straight up, slowly and steadily."
+ },
+ {
+  "id": "scene-178",
+  "t0": 783.697,
+  "t1": 789.222,
+  "tipo": "imagen",
+  "texto": "Then drop it in rubbing alcohol, or flush it down the toilet. Never crush it with your fingers."
+ },
+ {
+  "id": "scene-179",
+  "t0": 789.222,
+  "t1": 793.062,
+  "tipo": "imagen",
+  "texto": "Wash the bite. And if you get a rash or a fever in the next few weeks,"
+ },
+ {
+  "id": "scene-180",
+  "t0": 793.062,
+  "t1": 797.342,
+  "tipo": "imagen",
+  "texto": "tell your doctor. And notice something. The blue belly lizard,"
+ },
+ {
+  "id": "scene-181",
+  "t0": 797.342,
+  "t1": 802.03,
+  "tipo": "imagen",
+  "texto": "and maybe the possum, are fighting the tick for you."
+ },
+ {
+  "id": "scene-182",
+  "t0": 802.03,
+  "t1": 807.02,
+  "tipo": "imagen",
+  "texto": "So how do you keep the helpers around? Go easy on the bug spray."
+ },
+ {
+  "id": "scene-183",
+  "t0": 807.02,
+  "t1": 812.818,
+  "tipo": "imagen",
+  "texto": "It kills the hunters along with the pests, and the pests usually come back first."
+ },
+ {
+  "id": "scene-184",
+  "t0": 812.818,
+  "t1": 817.078,
+  "tipo": "imagen",
+  "texto": "Leave a pile of leaves or a few flat rocks in one corner of the yard."
+ },
+ {
+  "id": "scene-185",
+  "t0": 817.078,
+  "t1": 820.064,
+  "tipo": "imagen",
+  "texto": "Toads, beetles, and millipedes will move in."
+ },
+ {
+  "id": "scene-186",
+  "t0": 820.064,
+  "t1": 823.764,
+  "tipo": "imagen",
+  "texto": "And when one of the small ones ends up inside, use the cup trick."
+ },
+ {
+  "id": "scene-187",
+  "t0": 823.764,
+  "t1": 828.707,
+  "tipo": "imagen",
+  "texto": "Slide a cup over it, slip a paper underneath, and carry it outside."
+ },
+ {
+  "id": "scene-188",
+  "t0": 828.707,
+  "t1": 833.087,
+  "tipo": "imagen",
+  "texto": "Bats and snakes are the exception. Those, you leave to a"
+ },
+ {
+  "id": "scene-189",
+  "t0": 833.087,
+  "t1": 838.528,
+  "tipo": "imagen",
+  "texto": "professional. So, back to that night by the trash cans."
+ },
+ {
+  "id": "scene-190",
+  "t0": 838.528,
+  "t1": 842.617,
+  "tipo": "imagen",
+  "texto": "The hiss. The teeth. The beady little eyes."
+ },
+ {
+  "id": "scene-191",
+  "t0": 842.617,
+  "t1": 847.137,
+  "tipo": "imagen",
+  "texto": "Now you know what is really standing there. A tired mother with a pouch"
+ },
+ {
+  "id": "scene-192",
+  "t0": 847.137,
+  "t1": 852.158,
+  "tipo": "imagen",
+  "texto": "full of babies, eating the snails off your sidewalk. So put the shovel down."
+ },
+ {
+  "id": "scene-193",
+  "t0": 852.158,
+  "t1": 856.379,
+  "tipo": "imagen",
+  "texto": "Go back inside. And let the night shift do its job."
+ },
+ {
+  "id": "scene-194",
+  "t0": 856.379,
+  "t1": 860.859,
+  "tipo": "imagen",
+  "texto": "If you want to meet more of the strange neighbors living around your house, subscribe."
+ },
+ {
+  "id": "scene-195",
+  "t0": 860.859,
+  "t1": 865.2,
+  "tipo": "imagen",
+  "texto": "I will see you next time."
+ }
+]

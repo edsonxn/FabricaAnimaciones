@@ -1,0 +1,116 @@
+{
+ "modo": "video",
+ "de": 643.655,
+ "a": 647.175,
+ "anillos": [
+  {
+   "u": 0.485,
+   "v": 0.44,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 644.775,
+   "sale": 647.175
+  },
+  {
+   "u": 0.394,
+   "v": 0.207,
+   "r": 0.019791666666666666,
+   "color": "rojo",
+   "en": 644.975,
+   "sale": 647.175
+  },
+  {
+   "u": 0.439,
+   "v": 0.2,
+   "r": 0.01875,
+   "color": "rojo",
+   "en": 645.175,
+   "sale": 647.175
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.485,
+   "v": 0.44,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 644.875,
+   "sale": 647.175,
+   "alto": 7
+  },
+  {
+   "u": 0.394,
+   "v": 0.207,
+   "r": 0.010885416666666667,
+   "color": "rojo",
+   "en": 645.075,
+   "sale": 647.175,
+   "alto": 7
+  },
+  {
+   "u": 0.439,
+   "v": 0.2,
+   "r": 0.0103125,
+   "color": "rojo",
+   "en": 645.275,
+   "sale": 647.175,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 644.925,
+   "a": 647.175,
+   "u": 0.485,
+   "v": 0.44,
+   "alto": 0,
+   "texto": "TIAN",
+   "sub": null,
+   "color": "rojo",
+   "dx": 68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/JarvanIV.png"
+  },
+  {
+   "de": 645.125,
+   "a": 647.175,
+   "u": 0.394,
+   "v": 0.207,
+   "alto": 0,
+   "texto": "JACKEYLOVE",
+   "sub": null,
+   "color": "rojo",
+   "dx": -68.2,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Lucian.png"
+  },
+  {
+   "de": 645.3249999999999,
+   "a": 647.175,
+   "u": 0.439,
+   "v": 0.2,
+   "alto": 0,
+   "texto": "ZHUO",
+   "sub": null,
+   "color": "rojo",
+   "dx": 66.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Milio.png"
+  }
+ ],
+ "oscurecer": [
+  {
+   "de": 643.755,
+   "a": 647.175,
+   "k": 0.3
+  }
+ ],
+ "carteles": [],
+ "fondo": "/videos/lol_semana2/tactica3d/capas/blte3a_fondo.jpg",
+ "_huella": "c00056bb6785"
+}

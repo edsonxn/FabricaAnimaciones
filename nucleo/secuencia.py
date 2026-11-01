@@ -4,6 +4,7 @@ Departamento aparte de la Fábrica (heredado del proyecto Platitube): la voz, la
 etapas de siempre; aquí solo se decide QUÉ medio va en cada instante y se arma el video.
 
   python fab.py <v> beats            timeline.json -> beats.json (cortes en pausas reales de la voz)
+  python fab.py <v> reajustar        tras rehacer voz + `tiempo`: mueve los cortes sin renumerar los beats
   python fab.py <v> prompts          valida prompts.json contra beats.json -> flow/prompts.txt + flow/escenas.json
   python fab.py <v> servir [min]     sirve flow/escenas.json a la página de Flow (para lanzar el lote sin pegar prompts)
   python fab.py <v> ingesta [carpeta] [--espera 0]   copia scene-XXX.* de Descargas/<carpeta> a medios/ hasta completar
@@ -30,9 +31,14 @@ import subprocess
 import sys
 import time
 
+if __name__ == "__main__":    # `python -m secuencia` (así lanza fab.py el render): que `import secuencia` en secuencia_fx/vivo
+    sys.modules.setdefault("secuencia", sys.modules["__main__"])   # dé ESTE módulo; si no, isinstance(act, S.Imagen) falla y
+                                                                   # las imágenes vivas y VIVO_AUTO no se aplican (19-oct-2026)
+
 DEF = dict(video_s=120.0, clip_s=8.0, img_s=4.0, rapido_hasta=300.0, img_s_lento=6.0, fundido=0.2,
            combinar=False, carpeta_descargas=None, ambiente=0.5, ambiente_por={},
-           video_calidad="360p")       # 360p cuesta menos puntos; se baja con «720p · Resolución mejorada» (gratis)
+           video_calidad="360p",       # 360p cuesta menos puntos; se baja con «720p · Resolución mejorada» (gratis)
+           dialogo=False)              # True: los clips HABLAN (novela con lipsync de Flow); no se añade SIN_DIALOGO
 SIN_DIALOGO = "Sin diálogo, sin conversación entre personajes, sin voces audibles."
 EXT_VIDEO = (".mp4", ".webm", ".mov")
 EXT_IMG = (".jpg", ".jpeg", ".png", ".webp")
@@ -130,7 +136,9 @@ def beats():
     c = cfg()
     tl = json.load(open("timeline.json", encoding="utf-8"))
     pal, total = _palabras(tl), tl["total"]
-    f_video = _frontera(pal, min(c["video_s"], total), total) if c["video_s"] > 0 else 0.0
+    if not pal:                              # SIN_VOZ (montaje con música): un beat por clip de `clips_s`, en orden
+        return _beats_mudo(c, total)
+    f_video =_frontera(pal, min(c["video_s"], total), total) if c["video_s"] > 0 else 0.0
     f_rapido = _frontera(pal, min(c["rapido_hasta"], total), total)
     f_rapido = max(f_rapido, f_video)
     zonas = [(f_video, f_rapido, c["img_s"], "imagen"), (f_rapido, total, c["img_s_lento"], "imagen")]
@@ -169,6 +177,7 @@ def beats():
         out.append(d)
     out[0]["t0"], out[-1]["t1"] = 0.0, total
     json.dump(out, open("beats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    shutil.copyfile("timeline.json", "timeline_beats.json")   # base de `reajustar`
     nv = sum(1 for x in out if x["tipo"] == "video")
     ds = [x["t1"] - x["t0"] for x in out]
     print(f"beats.json: {len(out)} beats = {nv} de video + {len(out) - nv} de imagen · total {total:.1f}s")
@@ -187,10 +196,104 @@ def beats():
     return min(ds)
 
 
+def _beats_mudo(c, total):
+    """SIN_VOZ (15-oct-2026, `wow_estofado_poniente`): sin palabras no hay pausas; cada clip de `clips_s` es un beat y el
+    texto de cada uno sale de `PLANOS` del guion (a / b) si existe. El último beat se estira hasta el final del timeline."""
+    import guion as g
+    planos = getattr(g, "PLANOS", [])
+    durs = c.get("clips_s") or [c["clip_s"]] * max(1, int(round(c["video_s"] / c["clip_s"])))
+    out, t = [], 0.0
+    for k, dur in enumerate(durs):
+        pl = planos[k] if k < len(planos) else {}
+        d = dict(id=f"scene-{k + 1:03d}", t0=round(t, 3), t1=round(t + dur, 3), tipo="video", clip_s=int(dur),
+                 texto=" ".join(x for x in (pl.get("a", ""), pl.get("b", "")) if x))
+        if c["combinar"]:
+            d.update(t_medio=round(t + dur / 2, 3), texto_a=pl.get("a", ""), texto_b=pl.get("b", ""))
+        out.append(d)
+        t += dur
+    out[-1]["t1"] = round(max(total, out[-1]["t1"]), 3)
+    json.dump(out, open("beats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    shutil.copyfile("timeline.json", "timeline_beats.json")
+    print(f"beats.json (SIN_VOZ): {len(out)} clips · total {out[-1]['t1']:.1f}s (timeline {total:.1f}s)")
+    return min(b["t1"] - b["t0"] for b in out)
+
+
+def _prompts_de_planos():
+    """Compone prompts.json desde FICHA + PLANOS del guion (plantilla de clip combinado de docs/estilo_secuencia_flow.md)."""
+    import guion as g
+    f = g.FICHA
+    out = {}
+    for k, pl in enumerate(g.PLANOS):
+        nombres = f.get("nombres", {})              # cómo se llama cada clave en el prompt (en inglés)
+        quien = "; ".join(f"{nombres.get(n, n)} is {f['personajes'][n]}" for n in pl.get("personajes", []))
+        partes = [f["estilo"] + ".", f"Setting: {pl.get('escenario', f['epoca'])}.", f"Characters: {quien}." if quien else ""]
+        if f.get("objeto") and any(w in (pl.get("a", "") + pl.get("b", "")).lower() for w in ("cauldron", "stew")):
+            partes.append(f"The cauldron is {f['objeto']}.")
+        for o in pl.get("objetos", []):             # objetos ancla con nombre: FICHA["objetos"] = {"anillo": "the ring is …"}
+            partes.append(f["objetos"][o].rstrip(".") + ".")
+        if pl.get("b"):
+            partes.append(f"Scene one, first five seconds: {pl['a']} Then {pl['transicion']}. Scene two, last five seconds: {pl['b']}")
+        else:
+            partes.append(pl["a"])
+        for quien_habla, tono, linea in pl.get("dialogo", []):   # novela: (clave, tono, línea) -> lipsync en español
+            partes.append(f'{nombres.get(quien_habla, quien_habla)} says in Mexican Spanish, {tono}: "{linea}"')
+        partes += ["Full-bleed scene that fills the entire frame edge to edge, no border, no frame, no vignette.", f["cierre"]]
+        out[f"scene-{k + 1:03d}"] = " ".join(p for p in partes if p)
+    json.dump(out, open("prompts.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    return out
+
+
 # ------------------------------------------------------------------ prompts
+def _frases_tl(tl):
+    return [(f"{e['id']}_{i}", fr) for e in tl["escenas"] for i, fr in enumerate(e["frases"])]
+
+
+def reajustar():
+    """Tras rehacer voz + `tiempo`: mueve los cortes de beats.json a los tiempos nuevos SIN renumerar (los clips, apoyos y
+    búsquedas siguen en su beat). Cada corte se ancla a la palabra que tenía delante en timeline_beats.json (el timeline
+    sobre el que se hicieron los beats); en una frase reescrita, proporcional dentro de la frase (13-oct-2026)."""
+    if not os.path.exists("timeline_beats.json"):
+        raise SystemExit("Falta timeline_beats.json (el timeline con el que se hicieron los beats): cópialo de una versión previa")
+    old = json.load(open("timeline_beats.json", encoding="utf-8"))
+    new = json.load(open("timeline.json", encoding="utf-8"))
+    bs = cargar_beats()
+    fo, fn = _frases_tl(old), dict(_frases_tl(new))
+
+    def mapear(t):
+        for k, fr in fo:
+            for j, w in enumerate(fr["words"]):
+                if w["s"] >= t - 1e-3:
+                    nf = fn.get(k)
+                    if nf is None:
+                        raise SystemExit(f"La frase {k} ya no existe: con frases borradas/insertadas en medio, `beats` de nuevo")
+                    if len(nf["words"]) == len(fr["words"]):
+                        return nf["words"][j]["s"] - (w["s"] - t)
+                    x = (w["s"] - fr["t0"]) / max(1e-3, fr["t1"] - fr["t0"])
+                    return nf["t0"] + x * (nf["t1"] - nf["t0"]) - (w["s"] - t)
+        return new["total"]
+
+    viejos = [(b["t0"], b["t1"]) for b in bs]
+    cortes = [round(mapear(b["t0"]), 3) for b in bs[1:]]
+    for i, t in enumerate(cortes):
+        bs[i]["t1"] = bs[i + 1]["t0"] = t
+    bs[0]["t0"], bs[-1]["t1"] = 0.0, new["total"]
+    if any(b["t1"] <= b["t0"] for b in bs):
+        raise SystemExit("reajuste imposible (beats de duración ≤ 0): corre `beats` de nuevo")
+    pal = [w for _, fr in _frases_tl(new) for w in fr["words"]]
+    for b, (a0, a1) in zip(bs, viejos):
+        b["texto"] = " ".join(p["w"] for p in pal if b["t0"] - 0.13 <= p["s"] < b["t1"] - 0.13)
+        if abs((b["t1"] - b["t0"]) - (a1 - a0)) > 0.4:
+            print(f"  {b['id']}: {a1 - a0:5.2f} s -> {b['t1'] - b['t0']:5.2f} s")
+    json.dump(bs, open("beats.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    shutil.copyfile("timeline.json", "timeline_beats.json")
+    print(f"beats.json reajustado: {len(bs)} beats (mismos ids) · total {new['total']:.1f}s")
+
+
 def prompts():
     c = cfg()
     bs = cargar_beats()
+    if not os.path.exists("prompts.json") and hasattr(__import__("guion"), "PLANOS"):
+        print(f"prompts.json compuesto desde FICHA + PLANOS del guion ({len(_prompts_de_planos())} clips)")
     if not os.path.exists("prompts.json"):
         json.dump({b["id"]: "" for b in bs}, open("prompts.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         raise SystemExit(f"Creé prompts.json vacío con {len(bs)} entradas: escribe un prompt por beat y vuelve a correr.")
@@ -203,7 +306,7 @@ def prompts():
     avisos, esc, lineas = [], [], []
     for b in bs:
         p = " ".join(str(pr[b["id"]]).split())
-        if b["tipo"] == "video" and "sin diálogo" not in p.lower():
+        if b["tipo"] == "video" and not c["dialogo"] and "sin diálogo" not in p.lower() and "no dialogue" not in p.lower():
             p = p.rstrip() + " " + SIN_DIALOGO
         if len(p) < 120:
             avisos.append(f"{b['id']}: prompt muy corto ({len(p)} car.), ¿lleva estilo, personaje y escenario?")
@@ -385,6 +488,10 @@ class Imagen:
 
     def cuadro(self, t):
         import cv2
+        return cv2.warpAffine(self.im, self.matriz(t), (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+
+    def matriz(self, t):
+        """Cámara en t: matriz 2x3 de la imagen ampliada (SW x SH) al cuadro (la reutiliza vivo.Vivo para sus capas)."""
         import numpy as np
         u = (t - self.t0) / self.dur                 # sin tope: durante el fundido de salida sigue moviéndose
         if self.cam:                                 # dirigida: de a=(zoom, cx, cy) a b=(zoom, cx, cy), con arranque y frenado suaves
@@ -395,8 +502,7 @@ class Imagen:
             esc = z * W / self.SW
             holg_x, holg_y = (z - 1) * W / 2, (z - 1) * H / 2
             dx, dy = -(x0 + (x1 - x0) * e) * holg_x, -(y0 + (y1 - y0) * e) * holg_y   # cx=1: encuadra el borde derecho
-            M = np.float32([[esc, 0, W / 2 - esc * self.SW / 2 + dx], [0, esc, H / 2 - esc * self.SH / 2 + dy]])
-            return cv2.warpAffine(self.im, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+            return np.float32([[esc, 0, W / 2 - esc * self.SW / 2 + dx], [0, esc, H / 2 - esc * self.SH / 2 + dy]])
         z = self.z[0] + (self.z[1] - self.z[0]) * u
         z = max(1.0, z)
         esc = z * W / self.SW * 1.0
@@ -404,8 +510,7 @@ class Imagen:
         dx = (self.d[0] + (self.d[2] - self.d[0]) * u) * holg_x * 0.9
         dy = (self.d[1] + (self.d[3] - self.d[1]) * u) * holg_y * 0.9
         dx, dy = max(-holg_x, min(holg_x, dx)), max(-holg_y, min(holg_y, dy))
-        M = np.float32([[esc, 0, W / 2 - esc * self.SW / 2 + dx], [0, esc, H / 2 - esc * self.SH / 2 + dy]])
-        return cv2.warpAffine(self.im, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT)
+        return np.float32([[esc, 0, W / 2 - esc * self.SW / 2 + dx], [0, esc, H / 2 - esc * self.SH / 2 + dy]])
 
 
 class Clip:
@@ -446,6 +551,8 @@ class Clip:
 
 
 def vel_clip(dur_clip, dur_beat):
+    if cfg().get("dialogo"):     # novela con lipsync: la voz nunca se frena ni se acelera; si sobra beat, se congela el cuadro
+        return 1.0
     return max(0.6, min(1.6, dur_clip / max(0.5, dur_beat)))
 
 
@@ -642,6 +749,20 @@ def _fuente(b, k, borrador, capa=None):
     return Clip(r, b, k) if r.lower().endswith(EXT_VIDEO) else Imagen(r, b, k, capa.camaras.get(b["id"]) if capa else None)
 
 
+PROGRESO = "salida/progreso_render.json"         # avance del render para el panel (nucleo/panel.py: info_render_secuencia)
+
+
+def _progreso(datos, **cambios):
+    """Reescribe salida/progreso_render.json (atómico: el panel lo lee mientras corre). Un fallo aquí no para el render."""
+    datos.update(cambios, ahora=time.time())
+    try:
+        with open(PROGRESO + ".tmp", "w", encoding="utf-8") as fh:
+            json.dump(datos, fh, ensure_ascii=False)
+        os.replace(PROGRESO + ".tmp", PROGRESO)
+    except OSError:
+        pass
+
+
 def video(args):
     import cv2
     c = cfg()
@@ -651,6 +772,9 @@ def video(args):
     if "--tramo" in args:
         a, b_ = args[args.index("--tramo") + 1].split("-")
         tramo = (float(a), float(b_))
+    hasta = float(args[args.index("--hasta") + 1]) if "--hasta" in args else None
+    if hasta:                                         # vista previa (fab.py <v> video --hasta 60): el principio CON audio/final.wav
+        tramo = (0.0, hasta)
     total = bs[-1]["t1"]
     f0, f1 = (0, int(round(total * FPS))) if not tramo else (int(tramo[0] * FPS), int(min(total, tramo[1]) * FPS))
     if not borrador:
@@ -659,16 +783,64 @@ def video(args):
             raise SystemExit(f"Faltan {len(faltan)} medios: {' '.join(faltan[:40])}")
     os.makedirs("salida", exist_ok=True)
     salida = "salida/video_sin_audio.mp4" if not tramo else f"salida/tramo_{int(tramo[0])}_{int(tramo[1])}.mp4"
+    if "--salida" in args:                            # vistas previas (secuencia_fx.montaje): otro destino y más chico
+        salida = args[args.index("--salida") + 1]
+    escala = ["-vf", f"scale={int(args[args.index('--ancho') + 1])}:-2"] if "--ancho" in args else []
+    preset = args[args.index("--preset") + 1] if "--preset" in args else os.environ.get("FAB_PRESET", "medium")
     ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}",
-                           "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", os.environ.get("FAB_PRESET", "medium"),
-                           "-crf", "18", "-pix_fmt", "yuv420p", "-movflags", "+faststart", salida], stdin=subprocess.PIPE)
+                           "-r", str(FPS), "-i", "-"] + escala + ["-c:v", "libx264", "-preset", preset,
+                           "-crf", "18" if not escala else "23", "-pix_fmt", "yuv420p", "-movflags", "+faststart", salida],
+                          stdin=subprocess.PIPE)
     import secuencia_fx
     capa = secuencia_fx.cargar()                      # efectos.py del video (cámara dirigida, golpes, rótulos); None = armado de siempre
     if capa:
         print(f"  con efectos.py: {len(capa.fx)} efectos, {len(capa.rot)} rótulos, {len(capa.camaras)} cámaras dirigidas", flush=True)
     fund0 = float(c["fundido"])
+    t_ini = time.time()
+    prog = None if "--salida" in args else dict(     # las vistas previas (--salida) no pisan el avance del render de verdad
+        pid=os.getpid(), inicio=t_ini, fps=FPS, f0=f0, f1=f1, frame=f0, total=total, salida=salida,
+        tramo=list(tramo) if tramo else None, nbeats=len(bs), beat=None, beat_i=None, estado="dibujando")
+    if prog:
+        _progreso(prog)
+    try:
+        _video_cuadros(c, bs, f0, f1, total, borrador, capa, fund0, cv2, ff, prog, t_ini)
+        if prog:
+            _progreso(prog, frame=f1, estado="codificando")
+        ff.stdin.close()
+        if ff.wait() != 0:
+            raise SystemExit("ffmpeg falló al codificar")
+        print(f"listo: {salida}  {os.path.getsize(salida) / 1e6:.1f} MB  en {time.time() - t_ini:.0f}s")
+        if hasta:
+            _avance(salida, hasta)
+        if not tramo:
+            if prog:
+                _progreso(prog, estado="ambiente")
+            ambiente()
+    except BaseException as e:                        # Ctrl+C, error o ffmpeg caído: el panel deja de mostrarlo «en curso»
+        if prog:
+            _progreso(prog, estado="error", error=f"{type(e).__name__}: {e}"[:300], fin=time.time())
+        raise
+    if prog:
+        _progreso(prog, estado="listo", fin=time.time())
+
+
+def _avance(mudo, hasta):
+    """Vista previa con sonido: el tramo inicial + los primeros `hasta` s de audio/final.wav (voz + Lyria + SFX + ambiente;
+    haz `fx`, `ambiente` y `mezcla` ANTES) -> salida/<video>_AVANCE.mp4. No toca el MASTER."""
+    dest = f"salida/{os.path.basename(os.getcwd())}_AVANCE.mp4"
+    if not os.path.exists("audio/final.wav"):
+        print(f"OJO: sin audio/final.wav la vista previa va MUDA ({mudo}); corre `mezcla` y repite")
+        return
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", mudo, "-i", "audio/final.wav", "-t", f"{hasta:.3f}",
+                    "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart",
+                    dest], check=True)
+    print(f"vista previa con audio: {dest}")
+
+
+def _video_cuadros(c, bs, f0, f1, total, borrador, capa, fund0, cv2, ff, prog, t_ini):
+    """Dibuja los cuadros f0..f1-1 y los manda a ffmpeg; cada ~2 s anota el avance en salida/progreso_render.json."""
     fund = fund0
-    k, act, prev, t_ini = None, None, None, time.time()
+    k, act, prev, t_prog = None, None, None, t_ini
     for f in range(f0, f1):
         t = f / FPS
         kk = next((i for i, b in enumerate(bs) if b["t0"] <= t < b["t1"]), len(bs) - 1)
@@ -693,21 +865,19 @@ def video(args):
         if capa:
             img = capa.aplicar(img, t)
         ff.stdin.write(img.tobytes())
+        if prog and time.time() - t_prog >= 2.0:
+            t_prog = time.time()
+            _progreso(prog, frame=f + 1, beat=bs[k]["id"], beat_i=k)
         if (f - f0) % (FPS * 20) == 0:
             hecho = (f - f0 + 1) / max(1, f1 - f0)
             print(f"  {t:7.1f}s / {total:.1f}s  {hecho * 100:4.0f}%  {bs[k]['id']}  ({time.time() - t_ini:.0f}s)", flush=True)
-    ff.stdin.close()
-    if ff.wait() != 0:
-        raise SystemExit("ffmpeg falló al codificar")
-    print(f"listo: {salida}  {os.path.getsize(salida) / 1e6:.1f} MB  en {time.time() - t_ini:.0f}s")
-    if not tramo:
-        ambiente()
-
 
 if __name__ == "__main__":
     orden, resto = (sys.argv[1] if len(sys.argv) > 1 else ""), sys.argv[2:]
     if orden == "beats":
         beats()
+    elif orden == "reajustar":
+        reajustar()
     elif orden == "prompts":
         prompts()
     elif orden == "ingesta":

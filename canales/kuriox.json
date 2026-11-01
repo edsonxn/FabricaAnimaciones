@@ -12,7 +12,7 @@
     ],
     "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
     "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando se analicen sus datos.",
-    "ciclo_dias": 3
+    "ciclo_dias": 4
   },
   "publicados": [
     {
@@ -34,45 +34,107 @@
       "id": "_DJUwuogxeo",
       "titulo": "Tu plátano es radiactivo #Shorts",
       "subido": "2026-10-05",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-09T00:00:00Z",
-      "nota": "Short; 8-oct 18:00 CDMX"
+      "nota": "Short; 8-oct 18:00 CDMX",
+      "publicado": "2026-10-09T00:00:02Z"
     },
     {
       "video": "luna_se_aleja",
       "id": "Ac5Xv12bllc",
       "titulo": "La Luna se está yendo #Shorts",
       "subido": "2026-10-05",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-12T00:00:00Z",
-      "nota": "Short; 11-oct 18:00 CDMX"
+      "nota": "Short; 11-oct 18:00 CDMX",
+      "publicado": "2026-10-12T00:00:11Z"
     },
     {
       "video": "peso_nube",
       "id": "xYM1mFDrmZs",
       "titulo": "¿Cuánto pesa una nube? #Shorts",
       "subido": "2026-10-05",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-15T00:00:00Z",
-      "nota": "Short; 14-oct 18:00 CDMX"
+      "nota": "Short; 14-oct 18:00 CDMX",
+      "publicado": "2026-10-15"
     },
     {
       "video": "dedos_arrugados",
       "id": "qcdEAcp9r84",
       "titulo": "¿Por qué se arrugan los dedos en el agua? #Shorts",
       "subido": "2026-10-05",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-18T00:00:00Z",
-      "nota": "Short; 17-oct 18:00 CDMX"
+      "nota": "Short; 17-oct 18:00 CDMX",
+      "publicado": "2026-10-18"
     },
     {
       "video": "cielo_azul",
       "id": "kCqZ1Bep07s",
       "titulo": "¿Por qué el cielo es azul? #Shorts",
       "subido": "2026-10-05",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-21T00:00:00Z",
-      "nota": "Short; 20-oct 18:00 CDMX"
+      "nota": "Short; 20-oct 18:00 CDMX",
+      "publicado": "2026-10-21"
+    },
+    {
+      "video": "gota_bucle",
+      "id": "bhk8EMetilA",
+      "titulo": "El viaje de la gota de agua",
+      "subido": "2026-09-30T00:09:52Z",
+      "visibilidad": "public",
+      "publicado": "2026-09-30T00:09:52Z",
+      "nota": "0:45, boceto en bucle (carpeta probable videos/gota_bucle). Faltaba en el registro; detectado 11-oct-2026."
+    },
+    {
+      "video": "dos_lunas",
+      "id": "ix2tlWFWjqM",
+      "titulo": "¿Qué pasaría si la Tierra tuviera DOS Lunas?",
+      "subido": "2026-10-13",
+      "visibilidad": "public",
+      "formato": "qué pasaría si (espacio, largo 5:50)",
+      "nota": "Kurzgesagt plano secuencia, Lyria; jue 15-oct 14:00 CDMX (aprobado por el usuario; --forzar: Short peso_nube 20 h antes)",
+      "publicar": "2026-10-15T20:00:00Z",
+      "programado": "2026-10-15T20:00:00Z",
+      "publicado": "2026-10-15"
+    },
+    {
+      "video": "oxigeno_5s",
+      "id": "3SL2RsY7FMk",
+      "titulo": "¿Qué pasaría si el OXÍGENO desapareciera 5 segundos?",
+      "subido": "2026-10-14",
+      "visibilidad": "public",
+      "formato": "qué pasaría si (cotidiano/planeta, largo 5:52, versión A/B)",
+      "nota": "Kurzgesagt plano secuencia, Lyria, Kuri; lun 19-oct 14:00 CDMX (el usuario pidió forzar: Shorts dedos_agua 20 h antes y cielo_azul 28 h después)",
+      "publicar": "2026-10-19T20:00:00Z",
+      "programado": "2026-10-19T20:00:00Z",
+      "publicado": "2026-10-19"
+    },
+    {
+      "video": "gravedad_5s",
+      "id": "q1ye9-nJPlM",
+      "titulo": "¿Qué pasaría si la GRAVEDAD desapareciera 5 segundos?",
+      "subido": "2026-10-17",
+      "visibilidad": "public",
+      "formato": "qué pasaría si (cotidiano/planeta, largo 2:30, versión A/B)",
+      "nota": "Kurzgesagt plano secuencia, Lyria, Kuri; miniatura de Flow con texto (Nano Banana 2.1); vie 23-oct 14:00 CDMX (aprobado por el usuario)",
+      "publicar": "2026-10-23T20:00:00Z",
+      "programado": "2026-10-23T20:00:00Z",
+      "publicado": "2026-10-23"
+    },
+    {
+      "video": "asteroide_invisible",
+      "id": "KQdki-Rq-2w",
+      "titulo": "¿Qué pasaría si un asteroide INVISIBLE chocara contra la Tierra?",
+      "subido": "2026-10-20",
+      "visibilidad": "public",
+      "formato": "qué pasaría si (TERROR espacial, hipótesis realista, 5:41, sin Kuri; fusión Kurzgesagt + pegatina Flow)",
+      "nota": "voz ElevenLabs HNSF1CTQmub252yhXROX con corchetes, Lyria 3 tramos; miniatura Flow «NADIE LO VIO»; programado sin preguntar por la regla del 20-oct (render terminado = subir y programar)",
+      "publicar": "2026-10-27T20:00:00Z",
+      "programado": "2026-10-27T20:00:00Z",
+      "publicado": "2026-10-27T20:00:02Z"
     }
   ],
   "ideas": {

@@ -3,6 +3,7 @@
 - canal: cronicas_warcraft · ~14 min · hueco mié 28-oct-2026 09:00 CDMX (15:00 UTC; `canales --actualizar` del 22-oct)
 - estilo: secuencia_yt (gameplay por beat + apoyos + pegatinas + pantallas + MG nuevos con MAPAS REALES; SIN Overgear) → doc: docs/estilo_secuencia_yt.md
 - etapa: ✅ SUBIDO y PROGRAMADO mié 28-oct-2026 09:00 CDMX (2xO3Wf1B4XQ) · miniatura + .srt
+- ✅ **PÚBLICO** desde el mar 27-oct 09:00 CDMX · https://youtu.be/2xO3Wf1B4XQ (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: medir a los 7 días (4-nov, día de Forever) contra Kalimdor; luego `limpiar`
 
 ## Sesiones (plan de tramos · «continúa el video objetos raros» retoma aquí · protocolo docs/sesiones.md)

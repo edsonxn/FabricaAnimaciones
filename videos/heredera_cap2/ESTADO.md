@@ -2,8 +2,9 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: página de Facebook «Lágrimas y Venganza» (`novelas_ia`; E:\PaginaFace --pagina novelas_ia) · cap. 2 de la serie
 - estilo: novela con IA = secuencia Flow realista con diálogo y lipsync → docs: docs/formato_novela_ia.md (+ videos/heredera_rancho/)
-- etapa: ✅ CAP. 2 PUBLICADO en FB (23-oct, fb_id 1485561113494147) · siguiente: capítulo 3
-- siguiente: capítulo 3 «¿Quién está en la tumba?» (nueva carpeta `heredera_cap3`; copiar guion.py; ver LA VERDAD en la biblia)
+- etapa: ✅ CAP. 2 PUBLICADO en FB (23-oct, fb_id 1115639327878996, remezclado 23-oct) · siguiente: capítulo 3
+- siguiente: capítulo 3 «¿Quién está en la tumba?» (nueva carpeta `heredera_cap3`; copiar guion.py; ver LA VERDAD en la biblia) CON LA
+  RECETA «NOVELA, NO TRÁILER» de docs/formato_novela_ia.md (reprise + 3-4 escenas largas, plano/contraplano, música por momentos)
 
 ## Sesiones (plan de tramos · «continúa el video heredera_cap2» retoma aquí · protocolo docs/sesiones.md)
 - alias: heredera cap 2, capítulo 2 de la heredera, heredera_cap2
@@ -11,7 +12,7 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | guion (13 planos, biblia ampliada), prompts; personajes nuevos; clips 1-13 | ✅ 23-oct | 1 repetición (política) |
-| 2 | música (Flow Music / biblioteca), SFX, rótulos, mezcla, render, MASTER → revisión del usuario → FB | ✅ 23-oct | https://www.facebook.com/reel/1485561113494147/ |
+| 2 | música (Flow Music / biblioteca), SFX, rótulos, mezcla, render, MASTER → revisión del usuario → FB | ✅ 23-oct | https://www.facebook.com/reel/1115639327878996/ (remezclado; el viejo 1485561113494147 queda para borrar a mano) |
 
 ## En curso (checkpoint)
 - guion.py: 13 PLANOS (122 s de clips + rótulo final = 126 s); biblia ampliada en el docstring (LA VERDAD de Carmen y la
@@ -39,6 +40,8 @@
   diálogo completo). Hojas: previews/final_hoja.jpg y previews/cada3s.jpg (sin negros, caras consistentes).
 
 ## Lecciones de este video (solo lo no obvio)
+- CRÍTICA DEL USUARIO (23-oct): música tapaba las voces (iba ~6 dB bajo el diálogo, sin ducking) y el capítulo parecía
+  tráiler (13 momentos sueltos). Mezcla arreglada en el motor y cap. 1-2 remezclados (18,8 dB); estructura nueva para el cap. 3.
 - Flow rechazó un clip por «menores de edad» con una adulta que saca ropa de una maleta: añadir «an adult woman» lo arregló.
 - Un capítulo entero (13 clips) se lanza en ~10 min automatizando la página con JS (ver checkpoint) y se baja en ~12 min.
 - Whisper sobre los clips: Flow a veces se salta parte de una línea larga (la fecha del clip 11); líneas de ≤ 12 palabras.

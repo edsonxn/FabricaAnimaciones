@@ -1,0 +1,251 @@
+{
+ "modo": "mesa",
+ "de": 647.17,
+ "a": 656.44,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_blte3_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Xun": {
+   "jugador": "Xun",
+   "campeon": "MonkeyKing",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/MonkeyKing.png",
+   "puntos": [
+    [
+     0,
+     0.107,
+     0.207
+    ]
+   ],
+   "de": 647.57,
+   "sale": 655.44
+  },
+  "Knight": {
+   "jugador": "Knight",
+   "campeon": "Leblanc",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Leblanc.png",
+   "puntos": [
+    [
+     0,
+     0.209,
+     0.466
+    ]
+   ],
+   "de": 647.65,
+   "sale": 655.44
+  },
+  "Bin": {
+   "jugador": "Bin",
+   "campeon": "KSante",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/KSante.png",
+   "puntos": [
+    [
+     0,
+     0.346,
+     0.443
+    ]
+   ],
+   "de": 647.73,
+   "sale": 655.44
+  },
+  "Viper": {
+   "jugador": "Viper",
+   "campeon": "Ashe",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Ashe.png",
+   "puntos": [
+    [
+     0,
+     0.371,
+     0.686
+    ]
+   ],
+   "de": 647.81,
+   "sale": 655.44
+  },
+  "ON": {
+   "jugador": "ON",
+   "campeon": "Seraphine",
+   "equipo": "A",
+   "icono": "/videos/lol_semana2/iconos/Seraphine.png",
+   "puntos": [
+    [
+     0,
+     0.532,
+     0.679
+    ]
+   ],
+   "de": 647.89,
+   "sale": 655.44
+  },
+  "Tian": {
+   "jugador": "Tian",
+   "campeon": "JarvanIV",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.485,
+     0.44
+    ]
+   ],
+   "de": 647.97,
+   "sale": 655.44
+  },
+  "369": {
+   "jugador": "369",
+   "campeon": "Aatrox",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Aatrox.png",
+   "puntos": [
+    [
+     0,
+     0.392,
+     0.48
+    ]
+   ],
+   "de": 648.05,
+   "sale": 655.44
+  },
+  "JackeyLove": {
+   "jugador": "JackeyLove",
+   "campeon": "Lucian",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Lucian.png",
+   "puntos": [
+    [
+     0,
+     0.394,
+     0.207
+    ]
+   ],
+   "de": 648.13,
+   "sale": 655.44
+  },
+  "Zhuo": {
+   "jugador": "Zhuo",
+   "campeon": "Milio",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Milio.png",
+   "puntos": [
+    [
+     0,
+     0.439,
+     0.2
+    ]
+   ],
+   "de": 648.21,
+   "sale": 655.44
+  }
+ },
+ "camara": [
+  [
+   647.17,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   647.52,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   650.1364,
+   -18,
+   36,
+   50,
+   0.34,
+   0.45
+  ],
+  [
+   652.9174,
+   14,
+   40,
+   47.5,
+   0.34,
+   0.45
+  ],
+  [
+   655.5400000000001,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   656.44,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "anillos": [
+  {
+   "u": 0.107,
+   "v": 0.207,
+   "r": 0.05,
+   "color": "azul",
+   "en": 648.14,
+   "sale": 655.44
+  },
+  {
+   "u": 0.209,
+   "v": 0.466,
+   "r": 0.05,
+   "color": "azul",
+   "en": 650.84,
+   "sale": 655.44
+  },
+  {
+   "u": 0.346,
+   "v": 0.443,
+   "r": 0.05,
+   "color": "azul",
+   "en": 651.96,
+   "sale": 655.44
+  },
+  {
+   "u": 0.45,
+   "v": 0.68,
+   "r": 0.11,
+   "color": "azul",
+   "en": 654.0,
+   "sale": 655.44
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.3,
+   "v": 0.44,
+   "alto": 0,
+   "texto": "CUATRO GRUPOS",
+   "sub": null,
+   "color": "amarillo",
+   "dx": 0,
+   "dy": -150,
+   "de": 647.67,
+   "a": 655.44
+  }
+ ]
+}

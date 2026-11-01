@@ -29,34 +29,38 @@
       "video": "freno_enojo",
       "id": "-zNE22UIjko",
       "titulo": "¿Por Qué LLORAS Cuando Te Enojas?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-17",
       "formato": "línea blanca + neón, explicación fisiológica + 5 técnicas, 4:33, voz Alejandro Durán",
       "programado": "2026-10-17T20:00:00Z",
       "titulo_original": "Por Qué LLORAS Cuando Te Callas el Coraje (y Cómo Evitarlo en 5 Minutos)",
-      "prueba_titulo": "2026-10-20: título corto (búsqueda literal); comparar vistas/impresiones a 7 días"
+      "prueba_titulo": "2026-10-20: título corto (búsqueda literal); comparar vistas/impresiones a 7 días",
+      "publicado": "2026-10-17",
+      "nota": "salió antes de lo programado (16:16 UTC en vez de 20:00 UTC del 17-oct)"
     },
     {
       "video": "agotado_cortisol",
       "id": "fLmNcI235FU",
       "titulo": "¿Cansado Pero No Puedes Dormir?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-17",
       "formato": "línea blanca + neón, explicación fisiológica + 5 técnicas, 5:11, voz Alejandro Durán, 7 clips + 59 imágenes",
       "prueba": "tema con señal fuera en 4 canales (cansado pero la mente no se apaga / cortisol)",
       "programado": "2026-10-19T20:00:00Z",
       "titulo_original": "Por Qué Estás AGOTADO Pero Tu Mente No Se Apaga de Noche (y Cómo Apagarla en 5 Minutos)",
-      "prueba_titulo": "2026-10-20: título corto (búsqueda literal); comparar vistas/impresiones a 7 días"
+      "prueba_titulo": "2026-10-20: título corto (búsqueda literal); comparar vistas/impresiones a 7 días",
+      "publicado": "2026-10-19"
     },
     {
       "video": "estres_cuerpo",
       "id": "rdzUobc1UAM",
       "titulo": "5 Cosas Que el ESTRÉS Le Hace a Tu Cuerpo Sin Que Te Des Cuenta (y Cómo Frenar Cada Una)",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-20",
       "formato": "línea blanca + neón, recopilatorio de 5 zonas del cuerpo con una técnica cada una, 13:22, voz Alejandro Durán, 7 clips + 145 imágenes",
       "prueba": "variable nueva pedida por el usuario: video LARGO (~13 min) que junta varios temas, frente a los de ~5 min de una emoción",
-      "programado": "2026-10-21T20:02:00Z"
+      "programado": "2026-10-21T20:02:00Z",
+      "publicado": "2026-10-21"
     },
     {
       "video": "short_suspiro",
@@ -74,44 +78,48 @@
       "video": "short_dientes",
       "id": "za1GvddkcL8",
       "titulo": "¿Tus dientes se están tocando ahora mismo? #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-21",
       "formato": "Short vertical derivado de `estres_cuerpo`: una técnica (posición de descanso de la quijada), 0:60, imágenes del largo reencuadradas 9:16, voz Alejandro Durán (tomas del largo + gancho/cierre nuevos)",
       "programado": "2026-10-25T01:00:00Z",
       "short": true,
-      "largo": "estres_cuerpo"
+      "largo": "estres_cuerpo",
+      "publicado": "2026-10-25T01:00:01Z"
     },
     {
       "video": "short_pendientes",
       "id": "NQAT0Sb-krM",
       "titulo": "¿Tu mente no se apaga de noche? Haz esto #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-21",
       "formato": "Short vertical derivado de `agotado_cortisol`: una técnica (lista de pendientes en papel, Baylor 2018), 0:59, imágenes del largo reencuadradas 9:16, voz Alejandro Durán (tomas del largo + gancho/cierre nuevos)",
       "programado": "2026-10-27T01:00:00Z",
       "short": true,
-      "largo": "agotado_cortisol"
+      "largo": "agotado_cortisol",
+      "publicado": "2026-10-27T01:00:15Z"
     },
     {
       "video": "nervio_vago",
       "id": "NzMhKv8pl6w",
       "titulo": "¿Qué Es el NERVIO VAGO y Cómo Activarlo?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-21",
       "programado": "2026-10-23T20:02:00Z",
       "formato": "línea blanca + neón, tema monográfico (nervio vago: anatomía, historia de Loewi, tono vagal, fallas, reflejo inflamatorio, mitos) + 5 técnicas, 9:53, voz Alejandro Durán, 7 clips + 113 imágenes",
-      "prueba": "duración MEDIA (~10 min) de un solo tema con señal fuera (Rebelde-Mente ×4,43), frente a ~5 min y al recopilatorio de 13 min"
+      "prueba": "duración MEDIA (~10 min) de un solo tema con señal fuera (Rebelde-Mente ×4,43), frente a ~5 min y al recopilatorio de 13 min",
+      "publicado": "2026-10-23"
     },
     {
       "video": "duelo_cuerpo",
       "id": "Mb8umuTXxf4",
       "titulo": "¿Qué Le Pasa a Tu CUERPO Cuando Muere Alguien Que Amas?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-23",
       "formato": "línea blanca + neón, fórmula nueva «¿Qué le pasa a tu CUERPO cuando…?», escalera de tiempo + 3 cosas para hoy, 5:52, voz Alejandro Durán, 9 clips + 65 imágenes",
       "prueba": "fórmula nueva del 22-oct (título-situación, 4-6 min, Short por largo) frente a los títulos-concepto de 10-13 min",
       "programado": "2026-10-25T20:05:00Z",
-      "miniatura_b": "salida/miniatura_b.jpg"
+      "miniatura_b": "salida/miniatura_b.jpg",
+      "publicado": "2026-10-25T20:05:13Z"
     },
     {
       "video": "duelo_cuerpo_short",
@@ -128,12 +136,13 @@
       "video": "despertar_3am",
       "id": "xnRw-_gBtMs",
       "titulo": "¿Por Qué Te DESPIERTAS a las 3 de la Mañana?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-23",
       "formato": "línea blanca + neón, fórmula nueva con título «¿Por Qué Te…?», la noche hora por hora + 3 cosas para volver a dormir, 5:37, voz Alejandro Durán, 9 clips + 61 imágenes",
       "prueba": "tema con señal fuerte fuera (3 AM: drkhoob 4,4 M) dentro de la fórmula nueva; sustituye a corazon_roto",
       "programado": "2026-10-27T20:05:00Z",
-      "miniatura_b": "salida/miniatura_b.jpg"
+      "miniatura_b": "salida/miniatura_b.jpg",
+      "publicado": "2026-10-27T20:05:36Z"
     },
     {
       "video": "despertar_3am_short",

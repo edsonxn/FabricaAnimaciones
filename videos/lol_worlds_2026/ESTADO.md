@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: Cronicas de ligoleyen (UCXU8DV4QJ24yhwXmrR_eLhw; el usuario, 27-oct: subido por la pestaña de Studio, NO está en la API ni en canales/*.json)
 - estilo: análisis táctico (secuencia_yt con clips del VOD + telestrador `nucleo/mg_tactica.py`) → doc: docs/estilo_analisis_tactico.md
-- etapa: v2 SUBIDA EN PRIVADO por Studio el 27-oct (https://youtu.be/0eS1M_prcaQ): monetización activada (mid-roll), «Nada de lo anterior» → adecuado para anuncios, miniatura elegida.jpg, .srt español. La v1 (lcGGYgWwZEg) ya no existe. El usuario la publica a mano.
+- etapa: v2 SUBIDA EN PRIVADO por Studio el 27-oct (https://youtu.be/0eS1M_prcaQ): monetización activada (mid-roll), «Nada de lo anterior» → adecuado para anuncios, miniatura elegida.jpg, .srt español. La v1 (lcGGYgWwZEg) ya no existe. El usuario la publica a mano. Revisión tras subir (27-oct): Privado ✓, 22:02 reproducible ✓, monetización «Comprobando» con mid-roll ✓; el .srt había quedado como BORRADOR en el editor (se pulsó «Publicar»), y la tabla de Idiomas sigue generando los automáticos: comprobar ahí que salga Español publicado. OJO para otros videos: subir el .srt en el diálogo de subida lo deja en borrador.
 - siguiente: nada de producción. Registrar el canal en canales/ si se va a usar más; ronda 4 (28-30 oct) deja viejos «queviene», «equipos» y «cierre»; al cerrar: `biblioteca catalogar` ya hecho (v1), `limpiar` cuando el usuario apruebe
 
 ## Sesiones (plan de tramos · «continúa el video lol_worlds_2026» retoma aquí · protocolo docs/sesiones.md)

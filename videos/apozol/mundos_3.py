@@ -187,7 +187,7 @@ def san_miguel(lz, x, y, s, t, alfa=1.0, capa=2):
     lz.trazo(np.array([(x - 50 * s, y - 72 * s), (x - 22 * s, y - 72 * s)]), (214, 60, 70), 6 * s, afinar=False, temblor=0.0, capa=capa)
 
 
-def saco(lz, x, y, s, color=(236, 214, 160), capa=2, alfa=1.0):
+def saco(lz, x, y, s, color=(214, 170, 96), capa=2, alfa=1.0):
     """Costal de maíz (origen en la base)."""
     lz.relleno(np.array([(x - 20 * s, y), (x + 20 * s, y), (x + 24 * s, y - 26 * s), (x + 14 * s, y - 46 * s), (x - 14 * s, y - 46 * s), (x - 24 * s, y - 26 * s)]), color, alfa=alfa, capa=capa)
     lz.relleno(np.array([(x + 4 * s, y), (x + 20 * s, y), (x + 24 * s, y - 26 * s), (x + 14 * s, y - 46 * s), (x + 4 * s, y - 46 * s)]), P.oscurecer(color, 0.18), alfa=alfa, capa=capa)

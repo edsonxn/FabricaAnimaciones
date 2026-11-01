@@ -53,3 +53,6 @@ python fab.py wow_jugadores_rompieron medios          hojas previews/medios_NN.j
 - [x] subido y PROGRAMADO mar 3-nov 09:00 CDMX (jBumLmFN600), miniatura y .srt; registrado en `canales/cronicas_warcraft.json` y BITACORA
 - [x] HALLAZGOS documentados en docs/estilo_secuencia_yt.md (MG reckoning/inmortal/expediente, § METRAJE DE ARCHIVO)
 - [ ] Studio: monetización + video relacionado de Shorts
+
+## En curso (1-nov)
+- ◐ Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.

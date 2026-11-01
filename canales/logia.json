@@ -15,9 +15,18 @@
     "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando haya datos.",
     "ciclo": "REGLA del usuario (7-oct-2026): un video cada 4 o 5 días, contados desde el último publicado.",
     "separacion_min_horas": 96,
-    "ciclo_dias": 4
+    "ciclo_dias": 6
   },
   "publicados": [
+    {
+      "video": "secreto_ia",
+      "id": "_OCS1atQpQA",
+      "titulo": "¿Puede una IA guardar un secreto?",
+      "visibilidad": "public",
+      "programado": "2026-10-24T20:00:00Z",
+      "formato": "expediente noir pegatina flow",
+      "publicado": "2026-10-24T20:00:20Z"
+    },
     {
       "video": "ia_noir",
       "id": "eZlZRGf3VC0",
@@ -36,16 +45,28 @@
       "video": "videollamada_falsa",
       "id": "SNmr4gh5PkY",
       "titulo": "Deepfake: la videollamada donde NADIE era real",
-      "visibilidad": "programado",
-      "publicar": "2026-10-10T16:00:00Z"
+      "visibilidad": "public",
+      "publicar": "2026-10-10T16:00:00Z",
+      "publicado": "2026-10-10T16:00:10Z"
     },
     {
       "video": "informante_2027",
       "id": "5D-kQtNWF4w",
       "titulo": "Qué pasará con la IA en 2027: la advertencia del que renunció a OpenAI",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-14T20:00:00Z",
-      "subido": "2026-10-08"
+      "subido": "2026-10-08",
+      "publicado": "2026-10-14"
+    },
+    {
+      "video": "sociedad_1200",
+      "id": "GMGBr5KkzTs",
+      "titulo": "1,200 IAs crearon una sociedad secreta en OpenAI",
+      "visibilidad": "public",
+      "publicar": "2026-10-18T20:00:00Z",
+      "subido": "2026-10-12",
+      "formato": "caso noir: las 1.200",
+      "publicado": "2026-10-18"
     }
   ],
   "ideas": {

@@ -16,14 +16,26 @@ import guion as _g
 ESCENAS = _g.ESCENAS
 # Etiquetas de actuación de ElevenLabs v3 («[sighs] Nadie lo sabía. [short pause] Ni yo.», docs/voz.md § Corchetes): solo las lee
 # el TTS. Aquí se separan: FRASES_TTS[clave] guarda la frase con corchetes y ESCENAS queda limpia para Whisper, timeline, .srt y escenas.
-_ETIQUETA = re.compile(r"\s*\[[A-Za-z][A-Za-z' -]*\]\s*")
+_ETIQUETA = re.compile(r"\s*\[[A-Za-z][A-Za-z' ,-]*\]\s*")   # con coma desde el 21-oct-2026: «[angry, shouting]» (no_vuelve)
 FRASES_TTS = {}
 for _e in ESCENAS:
     for _i, _f in enumerate(_e.get("frases") or []):
         if isinstance(_f, str) and _ETIQUETA.search(_f):
             FRASES_TTS[f"{_e['id']}_{_i}"] = _f
             _e["frases"][_i] = _ETIQUETA.sub(" ", _f).strip()
-IDS = [e["id"] for e in ESCENAS]
+# FONETICA = {"Overgear": "Óverguir", ...} en guion.py (Applio/Edge TTS, 13-oct-2026): la voz multilingüe cambia de idioma
+# al ver palabras en inglés; el TTS lee la grafía fonética y ESCENAS conserva la real (.srt, Montaje, apoyos, YouTube).
+FONETICA = getattr(_g, "FONETICA", {})
+if FONETICA:
+    _FON = re.compile(r"(?<![\wÁÉÍÓÚáéíóúñÑ])(" + "|".join(re.escape(k) for k in sorted(FONETICA, key=len, reverse=True))
+                      + r")(?![\wÁÉÍÓÚáéíóúñÑ])")
+    for _e in ESCENAS:
+        for _i, _f in enumerate(_e.get("frases") or []):
+            _k = f"{_e['id']}_{_i}"
+            _t = _FON.sub(lambda m: FONETICA[m.group(1)], FRASES_TTS.get(_k, _f))
+            if _t != _f:
+                FRASES_TTS[_k] = _t
+IDS =[e["id"] for e in ESCENAS]
 PRIMERA, ULTIMA = IDS[0], IDS[-1]
 TITULO = getattr(_g, "TITULO", "Video")
 ARCHIVO = getattr(_g, "ARCHIVO", None)          # nombre base de los archivos de salida (opcional)
@@ -40,6 +52,9 @@ VOZ.update(getattr(_g, "VOZ", {}))
 # niveles de mezcla (LUFS de partida de música y efectos antes del ducking); opcional en guion.py
 MEZCLA = dict(musica=-20.0, sfx=-22.0, fx=-6.0)   # fx = recorte en dB de audio/fx.wav (SFX de ElevenLabs, secuencia con efectos)
 MEZCLA.update(getattr(_g, "MEZCLA", {}))
+# Cadena de la voz en la mezcla (el usuario, 13-oct-2026, A/B en wow_pistas_futuro): "suave" para Applio (RVC ya la procesa:
+# HP 70 Hz + compresión 1,6:1, sin EQ de timbre ni reverb); "completa" para Chatterbox/ElevenLabs. guion.CADENA_VOZ la fuerza.
+CADENA_VOZ = getattr(_g, "CADENA_VOZ", None) or ("suave" if str((getattr(_g, "VOZ", None) or {}).get("motor", "")).lower() == "applio" else "completa")
 
 TRANS_DEFECTO = [("garabato", 1.0), ("mancha", 0.8), ("espiral", 0.85), ("glitch", 0.7), ("zoom", 0.9),
                  ("persianas", 0.8), ("derretir", 1.0), ("ola", 0.85), ("burbujas", 0.9), ("iris", 1.0),

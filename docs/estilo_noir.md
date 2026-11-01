@@ -28,7 +28,7 @@ sombras de persiana, textura de cómic vintage en tinta y aguada; muy dramático
 | `nucleo/tts_eleven.py` | voz ElevenLabs (`VOZ = dict(motor="elevenlabs", voice_id=…)`); clave en `canales/tokens/elevenlabs_api_key.txt` |
 
 ## Voz y sonido del canal (el usuario, 7-oct-2026; segundo video `videos/videollamada_falsa/`)
-- **Corchetes de actuación** en todo el guion (regla global, `docs/voz.md` § Corchetes) y modelo `eleven_v4`.
+- **Corchetes de actuación** en todo el guion (regla global, `docs/voz.md` § Corchetes) y modelo `eleven_v4_turbo` (por defecto desde el 26-oct-2026).
 - **Opción: más voces de ElevenLabs para interpretar personajes** (el estafador, un testigo, la víctima): `VOZ_POR_FRASE` en guion.py.
   El detective sigue siendo el narrador; los personajes dicen frases cortas en su propia voz.
 - **SFX de ElevenLabs para dar drama** (impactos, subidas, truenos, zumbidos, timbres) encima de los sintetizados de `sfx_noir.py`:
@@ -146,3 +146,16 @@ una cara a pantalla completa pierde resolución: para personas, la ficha.
   y yendo hacia delante; el pie apoyado va estirado y pegado al suelo. No inventar ciclos con senos: `noir_pers.pierna_paso` +
   `cadera_paso` (los usan `Detective` y `K.caminante`). La fase sale de la distancia: `paso = dist / avance_paso(Detective.ZANCADA, s)`
   o `fase=K.fase_paso(dist, s)`; `fase=t * algo` hace patinar los pies. Comprobar con `python videos/informante_2027/_prueba_paso.py`.
+
+## ERRORES A NO REPETIR — `secreto_ia` (hecho por Gemini, el usuario 21-oct-2026: «mal hecho, la animación está fea»)
+Lo que lo separa de `informante_2027` (la vara del canal), visto en la hoja de cuadros cada 3 s:
+- **Escenario como rectángulos grises sobre negro** (ventana = cuadro con lluvia, alfombra = caja, pasillo = marco con un cuadrito):
+  sin muebles, sin personajes, sin 3 planos de profundidad. Cada mundo necesita utilería del lugar (mesas, cables, monitores, sillas).
+- **Cero medios reales**: ni foto de los investigadores ni capturas de los papers/titulares (Anthropic, Apollo, Redwood). Viola § «MEDIOS REALES».
+- **La IA como un rectángulo blanco en un tubo con una careta sonriente de garabato**: se lee infantil. Un personaje central necesita
+  diseño con detalle (y moverse/reaccionar), no una primitiva brillante.
+- **Mismo fondo 40 s** (columna en la tarima 1:06-1:45 y otra vez 1:48-2:33) y **tomas quietas** de 6-15 s.
+- **Cuadro partido en dos** (mitad iluminada, mitad negra) que parece un fallo de render, no «dos cuartos».
+- **Texto mecanografiado con letras perdidas** («¿P EDE UNA IA G ARDAR») y renglones tapados por el degradado del foco.
+- Todo demasiado oscuro: la luz debe recortar figuras con detalle, no ocultar que no hay nada.
+- Música procedural de respaldo: el canal va con Lyria siempre.

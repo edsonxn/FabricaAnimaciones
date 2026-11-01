@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Panel · Fábrica de Animaciones</title>
+<meta name="ui-version" content="v1">
 <script>if(/[?&]embed=/.test(location.search))document.documentElement.classList.add("embebido");</script>
 <style>
 /* modo embebido (21-oct-2026): el lienzo /v2 abre aquí solo un diálogo (Montaje, Vista previa, Muestra) encima de su canvas */
@@ -238,6 +239,42 @@ h1 small{display:block;font-size:12.5px;font-weight:500;color:var(--mut);letter-
 .est .meta{display:flex;flex-wrap:wrap;gap:6px;font-size:12px;margin-top:2px}
 .est .pie{display:flex;gap:8px;align-items:center;margin-top:auto;padding-top:6px;font-size:12.5px;color:var(--mut)}
 .nota-est{margin-top:20px;color:var(--mut);font-size:13px}
+#mj{position:fixed;inset:0;background:rgba(6,8,22,.93);z-index:60;display:none;align-items:center;justify-content:center;padding:12px}
+#mj.on{display:flex}
+#mj .caja{background:var(--panel);border:1px solid var(--line);border-radius:16px;width:min(1280px,100%);max-height:100%;padding:12px 14px;display:flex;flex-direction:column;gap:8px;overflow:hidden}
+#mj .cab{display:flex;gap:10px;justify-content:space-between;align-items:center}
+#mj .cab span{color:var(--mut);font-size:12px}
+.mj-mon{position:relative;background:#000;border-radius:10px;overflow:hidden;aspect-ratio:16/9;max-height:calc(100vh - 300px);margin:0 auto;width:min(100%,calc((100vh - 300px)*16/9))}
+.mj-mon.vert{aspect-ratio:9/16;width:min(100%,calc((100vh - 300px)*9/16))}
+.mj-mon video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.mj-mon video.on{opacity:1}
+.mj-hueco{position:absolute;inset:0;display:none;place-items:center;text-align:center;color:var(--mut);font-size:15px;background:repeating-linear-gradient(45deg,#11132b,#11132b 14px,#161938 14px,#161938 28px)}
+.mj-hueco.on{display:grid}
+.mj-txt{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 10px;color:#fff;font-size:14px;line-height:1.3;text-align:center;background:linear-gradient(transparent,rgba(0,0,0,.78));pointer-events:none}
+.mj-ctl{display:flex;gap:12px;align-items:center;font-size:13px;flex-wrap:wrap}
+.mj-ctl .fu{color:var(--mut);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:120px}
+.mj-tl{position:relative;overflow-x:auto;overflow-y:hidden;border:1px solid var(--line);border-radius:10px;height:92px;flex:none;background:color-mix(in srgb,var(--line) 35%,transparent)}
+.mj-pista{position:relative;height:100%}
+.mj-b{position:absolute;top:4px;bottom:4px;border-radius:6px;border:1px solid var(--line);overflow:hidden;cursor:pointer;background:#1a1d3c center/cover no-repeat;box-sizing:border-box}
+.mj-b.falta{background:repeating-linear-gradient(45deg,transparent,transparent 6px,color-mix(in srgb,var(--warn) 22%,transparent) 6px,color-mix(in srgb,var(--warn) 22%,transparent) 12px);border-style:dashed}
+.mj-b.plan{background:repeating-linear-gradient(45deg,transparent,transparent 6px,color-mix(in srgb,var(--mut) 18%,transparent) 6px,color-mix(in srgb,var(--mut) 18%,transparent) 12px);border-style:dotted;opacity:.7}
+.mj-b.viejo{border-color:var(--warn);border-width:2px}
+.mj-b.fl{border-color:var(--ok,#3fb950);border-width:2px}
+.mj-b.act{outline:2px solid var(--run);outline-offset:-2px}
+.mj-b i{position:absolute;left:0;bottom:0;font-style:normal;font-size:10px;color:#fff;background:rgba(0,0,0,.66);padding:1px 5px;border-top-right-radius:6px}
+.mj-cab{position:absolute;top:0;bottom:0;width:2px;background:#fff;box-shadow:0 0 6px #fff;pointer-events:none;z-index:2}
+.mj-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+.mj-img.on{display:block}
+#mj-seg{z-index:1}
+.mj-ap{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.mj-ap img{position:absolute;transform:translate(-50%,-50%);animation:mjIn .35s ease-out both}
+.mj-ap img.fade{animation-name:mjFade}
+@keyframes mjIn{from{opacity:0;margin-left:9%}to{opacity:1;margin-left:0}}
+@keyframes mjFade{from{opacity:0}to{opacity:1}}
+.mj-mon .mj-txt{z-index:3}
+.mj-fxm,.mj-fxt{position:absolute;z-index:1;cursor:pointer}
+.mj-fxm{top:0;height:7px;background:#ffd100;border-radius:0 0 3px 3px;opacity:.9}
+.mj-fxt{bottom:0;height:9px;background:#a335ee;border-radius:3px 3px 0 0}
 #ev{position:fixed;inset:0;background:rgba(6,8,22,.9);z-index:60;display:none;align-items:center;justify-content:center;padding:14px}
 #ev.on{display:flex}
 #ev .caja{background:var(--panel);border:1px solid var(--line);border-radius:16px;max-width:min(1200px,100%);max-height:100%;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
@@ -284,6 +321,24 @@ h1 small{display:block;font-size:12.5px;font-weight:500;color:var(--mut);letter-
     <div class="mu-msg" id="mu-msg"></div>
     <div class="mu-grid" id="mu-grid"></div>
     <div class="vp-ayuda">Son cuadros sueltos de escenas distintas, con tiempos <b>estimados</b> (no hay voz ni «tiempo» todavía): sirven para juzgar el estilo, no la sincronía. Haz clic en un cuadro para verlo grande.</div>
+  </div>
+</div>
+
+<div id="mj" role="dialog" aria-label="Montaje">
+  <div class="caja">
+    <div class="cab"><b id="mj-tit">Montaje</b><span id="mj-info"></span><span><button class="mini" id="mj-dibujar" style="display:none" title="Dibuja a 640x360 las escenas sin borrador o con el código cambiado (python fab.py &lt;video&gt; montaje). No lo lances mientras corre la voz o el render.">🖌 Dibujar lo que falta</button> <button class="mini" id="mj-cerrar">✕ Cerrar</button></span></div>
+    <div class="mj-mon"><video class="mj-c" muted playsinline preload="auto"></video><video class="mj-c" muted playsinline preload="auto"></video>
+      <img class="mj-img" id="mj-img" alt=""><video id="mj-seg" playsinline preload="auto"></video><div class="mj-ap" id="mj-ap"></div>
+      <div class="mj-hueco" id="mj-hueco"></div><div class="mj-txt" id="mj-txt"></div></div>
+    <div class="mj-ctl"><button class="prev-btn" id="mj-play" style="margin:0">▶ Reproducir</button><b id="mj-t">0:00</b>
+      <label><input type="checkbox" id="mj-son" checked> voz</label>
+      <label title="Música (audio/musica.wav, por debajo de la voz)"><input type="checkbox" id="mj-mus" checked> música</label>
+      <label title="Texto de la narración sobre el monitor"><input type="checkbox" id="mj-sub" checked> subtítulos</label>
+      <label title="Apoyos (marcas doradas), motion graphics y patrocinio (marcas moradas). Se exportan con: python fab.py &lt;video&gt; fx montaje"><input type="checkbox" id="mj-efx" checked> efectos</label>
+      <label title="Al llegar a un beat sin clip, salta al siguiente que ya lo tiene"><input type="checkbox" id="mj-saltar"> saltar huecos</label>
+      <span class="fu" id="mj-fu"></span></div>
+    <div class="mj-tl" id="mj-tl"><div class="mj-pista" id="mj-pista"></div></div>
+    <div class="vp-ayuda" id="mj-ayuda">Cada bloque es un beat con su clip de yt-dlp; los rayados aún no bajan y se llenan solos. Clic en un bloque para saltar · espacio = reproducir/pausa · ← → = beat anterior/siguiente. Es un borrador en el navegador (sin transiciones ni efectos de sonido; la música es audio/musica.wav): el armado real sigue siendo <code>video</code>.</div>
   </div>
 </div>
 
@@ -365,7 +420,8 @@ function pasoHTML(id,nombre,e,activoP){
   if(!e)return "";
   const est=e.estado, p=Math.round((e.progreso||0)*100);
   const barra=(est==="parcial"||est==="en_curso"||est==="atencion")&&p>0&&p<100?`<div class="p" style="width:${p}%"></div>`:"";
-  return `<div class="paso ${est} ${activoP?"activo-p":""}" title="${esc(nombre)}: ${esc(e.detalle||est)}">
+  const clic=(id==="voz"||id==="seleccion")?` data-detalle="${id}" style="cursor:pointer"`:"";
+  return `<div class="paso ${est} ${activoP?"activo-p":""}"${clic} title="${esc(nombre)}: ${esc(e.detalle||est)}${clic?" · clic: ver el avance por escena":""}">
     <div class="n"><span class="ico">${ICO[est]||""}</span>${esc(nombre)}</div>
     <div class="d">${esc(e.detalle||(est==="pendiente"?"pendiente":est))}</div>${barra}</div>`;
 }
@@ -385,11 +441,11 @@ function siguiente(p){
 const hm=t=>new Date(t*1000).toLocaleTimeString("es",{hour:"2-digit",minute:"2-digit"});
 const durT=s=>{s=Math.max(0,Math.round(s));return s<90?s+" s":Math.floor(s/60)+":"+String(s%60).padStart(2,"0")+" min"};
 const rndManual=new Set();                       // tarjetas cuya lista de escenas el usuario desplazó a mano: no se auto-desplazan
-function filaEsc(p,e,lim,ed){
+function filaEsc(p,e,lim,ed,sec){
   const n=e.k1-e.k0,ico={lista:"✓",en_curso:"◐",parcial:"◐",pendiente:"○"}[e.estado];
   const cel=[...e.celdas].map(c=>`<i class="${c}"></i>`).join("");
   const st=e.estado==="lista"
-    ?(e.fluida?`<button class="mini ver" data-ver="${esc(p.nombre)}" data-t="${e.t0}" title="Abre el preview en esta escena y la monta fluida con los segmentos ya terminados (segundos, sin dibujar nada)">▶ Ver fluida</button>`
+    ?(sec?`<span>dibujada</span>`:e.fluida?`<button class="mini ver" data-ver="${esc(p.nombre)}" data-t="${e.t0}" title="Abre el preview en esta escena y la monta fluida con los segmentos ya terminados (segundos, sin dibujar nada)">▶ Ver fluida</button>`
               :`<span class="vieja" title="Está dibujada, pero el preview no la reutiliza: ${ed?`el código del render se editó por última vez a las ${hm(ed[1])} (${esc(ed[0])})`:"el código del render cambió"}; sus segmentos solo valen si están anotados con el código actual${lim?` o empezaron a dibujarse después de las ${hm(lim)} (+15 min de margen: los procesos del render pueden llevar módulos viejos)`:""}. Para verla fluida habría que dibujarla otra vez.">⚠ lista · no reutilizable</span>`)
     :`<span class="st" data-tk="esc" data-id="${esc(e.id)}" data-h="${e.hechos}" data-n="${n}">${e.hechos}/${n}</span>`;
   return `<div class="rnd-f ${e.estado}" title="${esc(e.nombre)} · ${mmss(e.t0)}–${mmss(e.t1)} · segmentos ${e.k0}–${e.k1-1}">
@@ -398,24 +454,28 @@ function filaEsc(p,e,lim,ed){
 }
 function renderHTML(p){
   const r=p.render;if(!r)return "";
-  const pc=r.total?r.hechos/r.total:0,pv=r.total?(r.hechos+r.vuelo.length)/r.total:0;
+  const sec=r.motor==="secuencia";                // motor SECUENCIA: una sola pasada, el avance es el cuadro actual (no hay segmentos)
+  const pc=sec?r.progreso:r.total?r.hechos/r.total:0,pv=sec?Math.min(1,pc+r.vuelo.length/Math.max(1,r.total)):r.total?(r.hechos+r.vuelo.length)/r.total:0;
   const act=r.escenas.filter(e=>r.ahora_en.includes(e.id));
-  const ahora=r.fase==="uniendo"?"uniendo los segmentos en el video…"
+  const ahora=sec&&r.fase==="uniendo"?(r.estado_sec==="ambiente"?"sacando el sonido ambiente de los clips…":"cerrando el mp4…")
+    :r.fase==="uniendo"?"uniendo los segmentos en el video…"
     :act.length?`dibujando ${act.length>1?"escenas":"escena"} ${act.map(e=>`${e.n}/${r.escenas.length} «${esc(e.nombre)}»`).join(" y ")}`
     :r.reusados?`retomando: salta los ${r.reusados} segmentos que ya estaban hechos y arranca los procesos… (puede tardar unos minutos)`:"preparando el render…";
   const listas=r.escenas.filter(e=>e.estado==="lista").length;
   const chips=[`Video listo <b>${mmss(r.video_s)}</b> de ${mmss(r.duracion)}`,`Escenas listas <b>${listas}/${r.escenas.length}</b>`,
     `Transcurrido <b data-tk="el"></b>`,
     r.ritmo?`Ritmo <b>1 s de video cada ${r.ritmo.toFixed(1).replace(".",",")} s</b>`:"",
-    r.seg_s?`Cada segmento ≈ <b>${Math.round(r.seg_s)} s</b> · <b>${r.procs}</b> a la vez`:r.vuelo.length?`<b>${r.vuelo.length}</b> segmentos dibujándose`:"",
-    r.reusados?`<b>${r.reusados}</b> ya estaban hechos`:"",`En disco <b>${(r.mb/1000).toFixed(2).replace(".",",")} GB</b>`].filter(Boolean);
+    sec&&r.beat?`Beat <b>${esc(r.beat)}</b> (${r.beat_i+1}/${r.nbeats})`:"",
+    sec&&r.tramo?`Tramo <b>${r.tramo[0]}–${r.tramo[1]} s</b>`:"",
+    sec?"":r.seg_s?`Cada segmento ≈ <b>${Math.round(r.seg_s)} s</b> · <b>${r.procs}</b> a la vez`:r.vuelo.length?`<b>${r.vuelo.length}</b> segmentos dibujándose`:"",
+    r.reusados?`<b>${r.reusados}</b> ya estaban hechos`:"",`En disco <b>${r.mb<1000?Math.round(r.mb)+" MB":(r.mb/1000).toFixed(2).replace(".",",")+" GB"}</b>`].filter(Boolean);
   return `<section class="rnd" data-n="${esc(p.nombre)}">
     <div class="rnd-cab"><b>Render en vivo</b><span class="rnd-ahora">${ahora}</span><span class="rnd-eta" data-tk="eta"></span></div>
     <div class="rnd-bar" title="Verde: segmentos terminados · rayas: dibujándose ahora"><i class="ok" style="width:${(pc*100).toFixed(2)}%"></i><i class="vu" style="left:${(pc*100).toFixed(2)}%;width:${((pv-pc)*100).toFixed(2)}%"></i>
-      <span>${r.hechos}/${r.total} segmentos · ${Math.round(pc*100)} %</span></div>
+      <span>${sec?`${mmss(r.video_s)}/${mmss(r.duracion)} de video`:`${r.hechos}/${r.total} segmentos`} · ${Math.round(pc*100)} %</span></div>
     <div class="rnd-num">${chips.map(c=>`<span>${c}</span>`).join("")}</div>
-    <div class="rnd-esc" data-n="${esc(p.nombre)}">${r.escenas.map(e=>filaEsc(p,e,r.limite,r.edicion)).join("")}</div>
-    <div class="rnd-ayuda"><b>▶ Ver fluida</b> aparece cuando la escena está completa: abre el preview en ella y la monta en segundos con lo ya dibujado. Cada cuadrito es un segmento de 3 s (verde = listo, parpadea = dibujándose, tenue = pendiente).</div>
+    <div class="rnd-esc" data-n="${esc(p.nombre)}">${r.escenas.map(e=>filaEsc(p,e,r.limite,r.edicion,sec)).join("")}</div>
+    <div class="rnd-ayuda">${sec?`Motor secuencia: dibuja el video de una sola pasada en <code>${esc(r.tramo?"salida/tramo_…mp4":"salida/video_sin_audio.mp4")}</code> (avance en <code>salida/progreso_render.json</code>). Cada cuadrito son 3 s de video (verde = dibujado, parpadea = dibujándose, tenue = pendiente).`:`<b>▶ Ver fluida</b> aparece cuando la escena está completa: abre el preview en ella y la monta en segundos con lo ya dibujado. Cada cuadrito es un segmento de 3 s (verde = listo, parpadea = dibujándose, tenue = pendiente).`}</div>
   </section>`;
 }
 function tickRender(){
@@ -456,6 +516,18 @@ function vozVivoHTML(p){
     <div class="rnd-ayuda">${esc(v.ayuda||"")}</div>
   </section>`;
 }
+// ---- clic en la casilla Voz / Selección: las mismas barritas, calculadas de lo que hay en disco (/api/detalle_voz)
+const DETALLE={};                                   // {video: {etapa, d}}
+function detalleHTML(p){
+  const x=DETALLE[p.nombre];if(!x||!x.d||x.d.error)return "";
+  return vozVivoHTML({nombre:p.nombre,voz_vivo:x.d}).replace('<div class="rnd-cab">',
+    `<div class="rnd-cab"><button class="mini" data-detalle-cerrar="${esc(p.nombre)}" style="float:right">✕ cerrar</button>`);
+}
+async function detalleCargar(n){
+  const x=DETALLE[n];if(!x)return;
+  try{x.d=await (await fetch(`/api/detalle_voz?video=${encodeURIComponent(n)}&etapa=${x.etapa}`)).json();}catch(e){}
+}
+setInterval(async()=>{const ns=Object.keys(DETALLE);if(!ns.length)return;await Promise.all(ns.map(detalleCargar));pinta();},4000);
 function tickVoz(){
   if(!D)return;
   const ahora=Date.now()/1000;
@@ -470,19 +542,20 @@ function tickVoz(){
   }
 }
 setInterval(tickVoz,1000);
-// ---- motor secuencia (datos de panel.py: `secuencia`): avance de Flow y un recuadro por beat
+// ---- motor secuencia (datos de panel.py: `secuencia`): avance de Flow (o de los clips de yt-dlp si `yt`) y un recuadro por beat
 function secHTML(p){
   const s=p.secuencia;if(!s||!s.total)return "";
   const pct=Math.round(100*s.hechos/s.total), v=encodeURIComponent(p.nombre);
-  const partes=[`<b>Flow ${s.hechos}/${s.total}</b>`,`${s.n_video} de video + ${s.total-s.n_video} de imagen`];
+  const partes=[`<b>${s.yt?"Clips yt-dlp":"Flow"} ${s.hechos}/${s.total}</b>`];
+  if(!s.yt)partes.push(`${s.n_video} de video + ${s.total-s.n_video} de imagen`);
   if(s.faltan_imagen)partes.push(`faltan ${s.faltan_imagen} imágenes`);
-  if(s.faltan_video)partes.push(`faltan ${s.faltan_video} clips de video`);
+  if(s.faltan_video)partes.push(`faltan ${s.faltan_video} clips`+(s.yt?"":" de video"));
   if(s.por_min)partes.push(`${s.por_min.toFixed(1)} por minuto`);
   if(s.eta_fin)partes.push(`termina ~${hm(s.eta_fin)} (${durT(s.eta_fin-Date.now()/1000)})`);
   else if(s.hechos<s.total)partes.push(s.activo?"calculando ritmo…":(s.hechos?"en pausa: no llega nada desde "+hace(s.ultimo):"sin lanzar"));
   else partes.push("completo");
   const celdas=s.beats.map(b=>`<div class="sec-b ${b.tipo==="video"?"video":""}" title="${esc(b.texto)}">
-    ${b.medio?`<img loading="lazy" src="/api/medio_mini?video=${v}&id=${b.id}&m=${b.mt}">`:`<div class="hueco">${b.prompt?"pendiente":"sin prompt"}</div>`}
+    ${b.medio?`<img loading="lazy" src="/api/medio_mini?video=${v}&id=${b.id}&m=${b.mt}">`:`<div class="hueco">${b.prompt||s.yt?"pendiente":"sin prompt"}</div>`}
     <div class="t"><b>${b.id.slice(6)}</b> ${b.tipo==="video"?"🎬 ":""}${mmss(b.t0)} · ${esc(b.texto)}</div></div>`).join("");
   return `<div class="sec ${s.activo?"vivo":""}"><div class="sec-cab">${partes.map(x=>`<span>${x}</span>`).join("")}</div>
     <div class="sec-barra"><i style="width:${pct}%"></i></div><div class="sec-grid">${celdas}</div></div>`;
@@ -490,8 +563,9 @@ function secHTML(p){
 function tarjeta(p){
   if(p.error)return `<div class="card"><div class="tit">${esc(p.nombre)}</div><div class="err">Error al leer: ${esc(p.error)}</div></div>`;
   const run=!!p.etapa_actual, ab=abiertos.has(p.nombre);
-  const pasos=D.etapas.map(et=>pasoHTML(et.id,et.nombre,p.etapas[et.id],run&&p.etapa_actual===et.id)).join("");
-  const filas=D.etapas.map(et=>{const e=p.etapas[et.id];return e?`<tr><td>${esc(et.nombre)}</td><td>${esc(e.detalle||e.estado)}${e.t?` <span style="color:var(--mut)">· ${hace(e.t)}</span>`:""}</td></tr>`:""}).join("");
+  const nomEt=et=>(et.id==="flow"&&p.secuencia&&p.secuencia.yt)?"Clips":et.nombre;          // motor yt: los medios son clips de yt-dlp, no de Flow
+  const pasos=D.etapas.map(et=>pasoHTML(et.id,nomEt(et),p.etapas[et.id],run&&p.etapa_actual===et.id)).join("");
+  const filas=D.etapas.map(et=>{const e=p.etapas[et.id];return e?`<tr><td>${esc(nomEt(et))}</td><td>${esc(e.detalle||e.estado)}${e.t?` <span style="color:var(--mut)">· ${hace(e.t)}</span>`:""}</td></tr>`:""}).join("");
   const minis=(p.miniaturas||[]).map(f=>`<a href="/media/${encodeURIComponent(p.nombre)}/salida/${encodeURIComponent(f)}" target="_blank"><img loading="lazy" src="/media/${encodeURIComponent(p.nombre)}/salida/${encodeURIComponent(f)}"></a>`).join("");
   const hojas=(p.hojas||[]).map(f=>`<a href="/media/${encodeURIComponent(p.nombre)}/previews/${f}" target="_blank">${esc(f)}</a>`).join(" · ");
   const log=(p.log&&p.log.lineas&&p.log.lineas.length)?`<h4>Última actividad · ${esc(p.log.archivo)}</h4><div class="log">${esc(p.log.lineas.join("\n"))}</div>`:"";
@@ -506,9 +580,11 @@ function tarjeta(p){
       ${anillo(p.progreso||0,run)}
     </div>
     <div class="pasos">${pasos}</div>
-    ${renderHTML(p)}${vozVivoHTML(p)}${secHTML(p)}
-    ${(p.etapas.tiempo&&p.etapas.tiempo.estado==="listo"&&!p.secuencia)?`<button class="prev-btn" data-prev="${esc(p.nombre)}">▶ Vista previa</button>`:""}
+    ${renderHTML(p)}${p.voz_vivo?vozVivoHTML(p):detalleHTML(p)}${secHTML(p)}
+    ${(p.montaje&&p.montaje.total)?`<button class="prev-btn" data-montaje="${esc(p.nombre)}" title="Línea de tiempo: el video fluido con voz y música, escena por escena, con lo que ya está dibujado">🎞 Montaje (${p.montaje.hechos}/${p.montaje.total} escenas)</button>`:""}
+    ${(p.etapas.tiempo&&p.etapas.tiempo.estado==="listo"&&!p.secuencia)?`<button class="prev-btn" data-prev="${esc(p.nombre)}" title="Cuadros exactos del motor del render final (lenta); aquí se guardan las «escenas fluidas» que reutiliza el render">🔍 Vista previa cuadro a cuadro</button>`:""}
     ${(p.etapas.escenas&&p.etapas.escenas.estado==="listo"&&!(p.etapas.tiempo&&p.etapas.tiempo.estado==="listo"))?`<button class="prev-btn muestra-btn" data-muestra="${esc(p.nombre)}" title="Dibuja 10 cuadros distintos para ver el estilo, sin necesitar voz ni «tiempo»">👁 Ver estilo (10 cuadros)</button>`:""}
+    ${(p.secuencia&&p.secuencia.total)?`<button class="prev-btn" data-montaje="${esc(p.nombre)}" title="Línea de tiempo: ve el video con la voz conforme van llegando los ${p.secuencia.yt?"clips":"medios de Flow"}">🎞 Montaje (${p.secuencia.hechos}/${p.secuencia.total} ${p.secuencia.yt?"clips":"medios"})</button>`:""}
     ${p.master?`<button class="prev-btn" data-master="${esc(p.nombre)}" data-archivo="${esc(p.master)}" title="Reproducir salida/${esc(p.master)}">🎬 Ver video</button>`:""}
     ${siguiente(p)}
     <div class="det"><div><h4>Etapas</h4><table class="tabla">${filas}</table></div>
@@ -595,6 +671,14 @@ document.addEventListener("change",e=>{
   if(e.target.id==="destino"){postJSON("/api/voz",{destino:e.target.value}).then(cargar);}
 });
 document.addEventListener("click",e=>{
+  const dc=e.target.closest("[data-detalle-cerrar]");
+  if(dc){delete DETALLE[dc.dataset.detalleCerrar];pinta();return;}
+  const dt=e.target.closest("[data-detalle]");
+  if(dt){
+    const n=dt.closest(".card").dataset.n, et=dt.dataset.detalle;
+    if(DETALLE[n]&&DETALLE[n].etapa===et){delete DETALLE[n];pinta();return;}
+    DETALLE[n]={etapa:et};detalleCargar(n).then(pinta);return;
+  }
   const oc=e.target.closest("[data-ocultar]");
   if(oc){
     const n=oc.dataset.ocultar, v=oc.dataset.valor==="1";
@@ -611,6 +695,8 @@ document.addEventListener("click",e=>{
   }
   const ve=e.target.closest("[data-ver]");
   if(ve){vpAbrir(ve.dataset.ver,parseFloat(ve.dataset.t),true);return;}          // «Ver fluida»: preview en esa escena, montándola con lo ya dibujado
+  const mjb=e.target.closest("[data-montaje]");
+  if(mjb){mjAbrir(mjb.dataset.montaje);return;}
   const pv=e.target.closest("[data-prev]");
   if(pv){vpAbrir(pv.dataset.prev);return;}
   const pl=e.target.closest("[data-play]");
@@ -643,6 +729,173 @@ const VP={v:null,base:"",q:"",info:null,onda:[],t:0,play:false,obj:null,vuelo:fa
   cache:[],modoVid:null,cacheAct:null,job:null,codigoAlDia:true,renderCompleto:false};   // modoVid: null (cuadros) | "cache" (escena guardada) | "clip"
 const $=id=>document.getElementById(id);
 const fmtT=t=>{const m=Math.floor(t/60),s=t-m*60;return m+":"+s.toFixed(2).padStart(5,"0")};
+// ====================================================== montaje (motor secuencia yt): línea de tiempo viva de clips + voz
+const MJ={v:null,d:null,firma:"",t:0,tb:0,t00:0,play:false,bi:-1,fi:-1,aud:null,cur:0,timer:0,pps:12,apk:""};
+const MJ_AYUDA_YT=$("mj-ayuda").innerHTML;
+const mjVids=()=>[...document.querySelectorAll("#mj video.mj-c")];
+const mjEsImg=b=>/\.(png|jpe?g|webp)$/.test(b.medio||"");
+try{$("mj-sub").checked=localStorage.mjSub!=="0";}catch(e){}
+const mjSub=()=>{$("mj-txt").style.display=$("mj-sub").checked?"":"none";};mjSub();
+async function mjAbrir(n){
+  mjCerrar();MJ.v=n;MJ.t=MJ.tb=0;MJ.firma="";MJ.d=null;
+  $("mj").classList.add("on");$("mj-tit").textContent="Montaje · "+n;$("mj-pista").innerHTML="";
+  await mjCargar();MJ.timer=setInterval(mjCargar,5000);
+}
+function mjCerrar(){
+  if(!MJ.v)return;mjPlay(false);clearInterval(MJ.timer);MJ.v=null;MJ.bi=MJ.fi=-1;
+  mjVids().forEach(v=>{v.pause();v.removeAttribute("src");v.load();v.dataset.id="";v.classList.remove("on");});
+  const sg=$("mj-seg");sg.pause();sg.removeAttribute("src");sg.load();sg.dataset.s="";sg.classList.remove("on");
+  if(MJ.mus){MJ.mus.pause();MJ.mus.removeAttribute("src");MJ.mus.load();MJ.mus=null;MJ.musT=null;}
+  $("mj-ap").innerHTML="";MJ.apk="";$("mj-img").classList.remove("on");
+  $("mj").classList.remove("on");
+}
+// Shorts y reels (21-oct-2026): la caja del montaje toma la forma del medio; con 16:9 fijo un video vertical se veía recortado
+document.querySelectorAll(".mj-mon img,.mj-mon video").forEach(m=>m.addEventListener(m.tagName==="IMG"?"load":"loadedmetadata",()=>{
+  const w=m.naturalWidth||m.videoWidth,h=m.naturalHeight||m.videoHeight;if(w&&h)m.closest(".mj-mon").classList.toggle("vert",h>w);}));
+async function mjCargar(){
+  const n=MJ.v;if(!n)return;
+  let d;try{d=await fetch("/api/montaje?video="+encodeURIComponent(n),{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json();});}
+  catch(e){$("mj-info").textContent="el panel aún no tiene «Montaje»: reinícialo (python fab.py panel)";return;}
+  if(MJ.v!==n||d.error)return;
+  const fx=d.fx||{};
+  const firma=d.beats.map(b=>b.mt+(b.viejo?"v":"")).join()+"|"+(fx.hecho||0),cambio=firma!==MJ.firma,antes=MJ.d&&MJ.d.beats[MJ.bi];
+  MJ.d=d;MJ.firma=firma;
+  $("mj-dibujar").style.display=d.codigo?"":"none";
+  $("mj-ayuda").innerHTML=d.codigo?`Cada bloque es una escena: verde = escena fluida de la vista previa, normal = borrador 640x360 de <code>python fab.py ${esc(n)} montaje</code>, ámbar = el código cambió desde que se dibujó (se ve lo viejo hasta rehacerla), rayado = aún sin dibujar, punteado gris = escena del guion que aún no tiene voz. ${d.mezcla?"El audio es la mezcla real (audio/final.wav: voz, música y SFX).":"El audio es la voz de voz/final/ con la música encima (aún no hay mezcla al día)."} Clic en un bloque para saltar · espacio = reproducir/pausa · ← → = escena anterior/siguiente.`:MJ_AYUDA_YT;
+  if(d.codigo){const pr=d.progreso;$("mj-info").textContent=`${d.hechos}/${d.total_beats-d.plan} escenas vistas`+(d.viejos?` · ${d.viejos} con el código cambiado`:"")
+    +(d.plan?` · ${d.plan} sin voz todavía`:"")+(pr?` · dibujando «${pr.escena}» ${Math.round(100*pr.hechos/Math.max(1,pr.total))} %`:"");}
+  else $("mj-info").textContent=`${d.hechos}/${d.total_beats} clips`+(d.hechos<d.total_beats?` · faltan ${d.total_beats-d.hechos}`+(d.activo?" · bajando…":""):" · completo")
+    +(fx.apoyos?` · ${fx.apoyos.length} apoyos · ${fx.tramos.length} tramos con efectos`+(fx.viejo?" (efectos.py cambió: vuelve a correr fx montaje)":"")
+      :fx.hay_efectos?` · efectos sin exportar: python fab.py ${n} fx montaje`:"");
+  if(!cambio)return;
+  const u=encodeURIComponent(n),px=x=>(x*MJ.pps).toFixed(1)+"px";
+  $("mj-pista").style.width=Math.ceil(d.total*MJ.pps)+"px";
+  $("mj-pista").innerHTML=d.beats.map((b,i)=>`<div class="mj-b ${b.plan?"plan":b.medio?"":"falta"}${b.viejo?" viejo":""}${b.origen==="fluida"?" fl":""}" data-mjb="${i}" title="${esc(mmss(b.t0)+" · "+b.texto+(b.fuente?"\n"+b.fuente:""))}"
+    style="left:${(b.t0*MJ.pps).toFixed(1)}px;width:${Math.max(4,(b.t1-b.t0)*MJ.pps-2).toFixed(1)}px;${d.codigo?(b.mini?`background-image:url(${b.mini}?m=${b.mt})`:""):b.medio?`background-image:url(/api/medio_mini?video=${u}&id=${b.id}&m=${b.mt})`:""}"><i>${esc(b.etq||b.id.slice(6))}</i></div>`).join("")
+    +(fx.apoyos||[]).map(a=>`<div class="mj-fxm" data-mjt="${a.de}" title="apoyo ${a.n} · ${mmss(a.de)}" style="left:${px(a.de)};width:${px(Math.max(.3,a.a-a.de))}"></div>`).join("")
+    +(fx.tramos||[]).map(s=>`<div class="mj-fxt" data-mjt="${s.de}" title="${esc(s.que+" · "+mmss(s.de))}" style="left:${px(s.de)};width:${px(s.a-s.de)}"></div>`).join("")
+    +`<div class="mj-cab" id="mj-cab"></div>`;
+  const ahora=d.beats[MJ.bi];
+  if(MJ.bi<0||(antes&&ahora&&antes.mt!==ahora.mt))mjMostrar(true);else mjMarca();     // llegó (o cambió) el clip del beat que se está viendo
+  MJ.apk="";mjFx(true);
+}
+function mjFx(forzar){                // capa de efectos: tramo compuesto (MG, videos, patrocinio) o apoyos PNG encima del clip
+  if(!MJ.d)return;
+  const fx=MJ.d.fx||{},on=$("mj-efx").checked,t=MJ.t,u=encodeURIComponent(MJ.v),seg=$("mj-seg");
+  const s=on?(fx.tramos||[]).find(x=>t>=x.de&&t<x.a):null;
+  if(s){
+    const src=`/montaje/${u}/fx/${s.archivo}?h=${fx.hecho}`;
+    if(seg.dataset.s!==src){seg.dataset.s=src;seg.src=src;forzar=true;}
+    seg.muted=!$("mj-son").checked;
+    if(!seg.classList.contains("on")){seg.classList.add("on");forzar=true;}
+    const ajusta=()=>{const q=t-s.de;try{if(forzar||Math.abs(seg.currentTime-q)>0.35)seg.currentTime=q;}catch(e){}
+      if(MJ.play&&seg.paused)seg.play().catch(()=>{});else if(!MJ.play&&!seg.paused)seg.pause();};
+    seg.readyState>=1?ajusta():seg.addEventListener("loadedmetadata",ajusta,{once:true});
+  }else if(seg.classList.contains("on")){seg.pause();seg.classList.remove("on");}
+  const act=on&&!s?(fx.apoyos||[]).filter(a=>t>=a.de&&t<a.a):[],clave=act.map(a=>a.n).join();
+  if(clave===MJ.apk)return;
+  MJ.apk=clave;const ap=$("mj-ap");
+  ap.innerHTML=act.map(a=>`<img class="${a.anim==="fade"?"fade":""}" alt="" src="/montaje/${u}/fx/${a.archivo}" data-alto="${a.alto||0}" data-ancho="${a.ancho}"
+    style="left:${a.x*100}%;top:${a.y*100}%;width:${a.ancho*100}%">`).join("");
+  ap.querySelectorAll("img").forEach(im=>im.addEventListener("load",()=>{const al=+im.dataset.alto;      // igual que el render:
+    if(al)im.style.width=Math.min(+im.dataset.ancho,al*(9/16)*im.naturalWidth/im.naturalHeight)*100+"%";},{once:true}));   // ancho, sin pasar del alto
+}
+const mjBeat=t=>{const b=MJ.d.beats;for(let i=0;i<b.length;i++)if(t<b[i].t1)return i;return b.length-1;};
+function mjMarca(){
+  const c=$("mj-cab");if(!c)return;c.style.left=(MJ.t*MJ.pps)+"px";
+  document.querySelectorAll(".mj-b.act").forEach(x=>x.classList.remove("act"));
+  const el=document.querySelector(`.mj-b[data-mjb="${MJ.bi}"]`);if(el)el.classList.add("act");
+  const tl=$("mj-tl"),x=MJ.t*MJ.pps;if(x<tl.scrollLeft+40||x>tl.scrollLeft+tl.clientWidth-80)tl.scrollLeft=Math.max(0,x-tl.clientWidth*0.3);
+  $("mj-t").textContent=mmss(MJ.t)+" / "+mmss(MJ.d.total);
+}
+function mjMostrar(forzar){          // pone en el monitor el clip del beat donde cae MJ.t (o el aviso de hueco)
+  if(!MJ.d||!MJ.d.beats.length)return;
+  const i=mjBeat(MJ.t);
+  if(i===MJ.bi&&!forzar){mjMarca();return;}
+  MJ.bi=i;const b=MJ.d.beats[i],vs=mjVids(),u=encodeURIComponent(MJ.v);
+  $("mj-txt").textContent=b.texto;
+  if(MJ.d.codigo){$("mj-fu").textContent=`Escena «${b.id}» · `+(b.plan?"guion escrito, sin voz":!b.medio?"sin dibujar":(b.origen==="fluida"?"escena fluida":"borrador 640x360")+(b.viejo?" · el código cambió (versión anterior)":""));
+    $("mj-hueco").textContent=b.medio?"":b.plan?`«${b.id}» · aún no tiene voz`:`«${b.id}» · sin dibujar: 🖌 Dibujar lo que falta`;}
+  else{$("mj-fu").textContent=b.fuente?"Fuente: "+b.fuente:(b.medio?"":"Sin clip todavía"+(b.q?" · búsqueda: "+b.q:""));
+    $("mj-hueco").textContent=b.medio?"":`Beat ${b.id.slice(6)} · clip pendiente`;}
+  $("mj-hueco").classList.toggle("on",!b.medio);
+  const id=x=>x.id+"|"+x.mt, pon=(v,x)=>{if(v.dataset.id!==id(x)){v.dataset.id=id(x);v.src=x.url?`${x.url}?m=${x.mt}`:`/montaje/${u}/clip/${x.id}?m=${x.mt}`;}};
+  const img=$("mj-img"),esImg=b.medio&&mjEsImg(b);
+  img.classList.toggle("on",!!esImg);
+  if(esImg){                          // el beat es una imagen fija (p. ej. la captura de la web de un patrocinador)
+    const s=`/montaje/${u}/clip/${b.id}?m=${b.mt}`;if(img.dataset.s!==s){img.dataset.s=s;img.src=s;}
+    vs.forEach(v=>{v.pause();v.classList.remove("on");});
+  }else if(b.medio){
+    let v=vs.find(x=>x.dataset.id===id(b));
+    if(!v){v=vs[1-MJ.cur];pon(v,b);}
+    MJ.cur=vs.indexOf(v);vs[1-MJ.cur].pause();vs[1-MJ.cur].classList.remove("on");v.classList.add("on");
+    const ajusta=()=>{if(v.dataset.id!==id(b)||MJ.bi!==i)return;
+      const vel=b.vel||Math.max(0.6,Math.min(1.6,v.duration/Math.max(0.5,b.t1-b.t0)));          // misma regla que secuencia.vel_clip
+      v.playbackRate=vel;try{v.currentTime=Math.min(Math.max(0,(MJ.t-b.t0)*vel+(b.off||0)),Math.max(0,v.duration-0.05));}catch(e){}
+      MJ.play?v.play().catch(()=>{}):v.pause();};
+    v.readyState>=1?ajusta():v.addEventListener("loadedmetadata",ajusta,{once:true});
+  }else vs.forEach(v=>{v.pause();v.classList.remove("on");});
+  const sig=MJ.d.beats.slice(i+1).find(x=>x.medio&&!mjEsImg(x));if(sig)pon(vs[b.medio&&!esImg?1-MJ.cur:0],sig);   // precarga el siguiente clip
+  mjMarca();
+}
+function mjMus(forzar){                // música del video (audio/musica.wav) en una sola pista, sincronizada con MJ.t
+  const on=MJ.play&&MJ.d&&MJ.d.musica&&(MJ.d.mezcla?$("mj-son").checked:$("mj-mus").checked);    // la mezcla ya lleva la voz
+  if(MJ.d&&MJ.d.musica&&(!MJ.mus||MJ.musT!==MJ.d.musica_t)){
+    if(MJ.mus){MJ.mus.pause();MJ.mus.removeAttribute("src");MJ.mus.load();}
+    MJ.mus=new Audio(`/montaje/${encodeURIComponent(MJ.v)}/musica/${MJ.d.musica_src||"musica"}.m4a?t=${MJ.d.musica_t}`);MJ.mus.preload="auto";MJ.mus.volume=MJ.d.mezcla?1:0.45;
+    MJ.musT=MJ.d.musica_t;forzar=true;
+  }
+  const a=MJ.mus;if(!a)return;
+  if(!on){if(!a.paused)a.pause();return;}
+  if(forzar||Math.abs(a.currentTime-MJ.t)>0.35){try{a.currentTime=MJ.t;}catch(e){}}
+  if(a.paused)a.play().catch(()=>{});
+}
+function mjVoz(){
+  const fr=MJ.d.frases,son=MJ.play&&$("mj-son").checked&&!MJ.d.mezcla;
+  const i=son?fr.findIndex(f=>f.voz&&MJ.t>=f.t0&&MJ.t<f.t1):-1;
+  if(i===MJ.fi)return;
+  if(i<0&&MJ.aud&&!MJ.aud.ended&&son)return;          // deja terminar la cola de la frase anterior
+  if(MJ.aud){MJ.aud.pause();MJ.aud=null;}
+  MJ.fi=i;if(i<0)return;
+  const f=fr[i],a=new Audio(`/montaje/${encodeURIComponent(MJ.v)}/voz/${encodeURIComponent(f.key)}.wav`);MJ.aud=a;
+  const d=MJ.t-f.t0;if(d>0.15)a.addEventListener("loadedmetadata",()=>{try{a.currentTime=d;}catch(e){}},{once:true});
+  a.play().catch(()=>{});
+}
+function mjIr(t){
+  if(!MJ.d)return;MJ.t=MJ.tb=Math.max(0,Math.min(t,MJ.d.total-0.01));MJ.t00=performance.now();
+  if(MJ.aud){MJ.aud.pause();MJ.aud=null;}MJ.fi=-1;mjMostrar(true);mjFx(true);if(MJ.play){mjVoz();mjMus(true);}
+}
+function mjPlay(on){
+  if(on&&!MJ.d)return;
+  MJ.play=on;$("mj-play").textContent=on?"⏸ Pausa":"▶ Reproducir";
+  if(on){if(MJ.t>=MJ.d.total-0.05)MJ.t=0;MJ.tb=MJ.t;MJ.t00=performance.now();mjMostrar(true);mjFx(true);mjMus(true);requestAnimationFrame(mjTick);}
+  else{mjVids().forEach(v=>v.pause());$("mj-seg").pause();if(MJ.aud){MJ.aud.pause();MJ.aud=null;}MJ.fi=-1;mjMus();}
+}
+function mjTick(){
+  if(!MJ.play||!MJ.v)return;
+  MJ.t=MJ.tb+(performance.now()-MJ.t00)/1000;
+  if(MJ.t>=MJ.d.total){MJ.t=MJ.d.total;mjPlay(false);mjMarca();return;}
+  const b=MJ.d.beats[mjBeat(MJ.t)];
+  if(!b.medio&&$("mj-saltar").checked){const s=MJ.d.beats.find(x=>x.medio&&x.t0>=b.t0);if(s){mjIr(s.t0);}else{mjPlay(false);return;}}
+  mjMostrar();mjFx();mjVoz();mjMus();requestAnimationFrame(mjTick);
+}
+$("mj").addEventListener("click",e=>{
+  if(e.target.id==="mj"||e.target.id==="mj-cerrar"){mjCerrar();return;}
+  if(e.target.id==="mj-play"){mjPlay(!MJ.play);return;}
+  if(e.target.id==="mj-dibujar"&&MJ.v){e.target.disabled=true;postJSON("/api/montaje/dibujar",{video:MJ.v}).then(x=>x.json()).then(r=>{$("mj-info").textContent=r.error||(r.ya?"ya está dibujando…":"dibujando lo que falta…");}).catch(()=>{$("mj-info").textContent="el panel aún no sabe dibujar el montaje: reinícialo";}).finally(()=>{e.target.disabled=false;});return;}
+  const m=e.target.closest("[data-mjt]");if(m&&MJ.d){mjIr(+m.dataset.mjt+0.05);return;}          // marca de apoyo o tramo con efectos
+  const b=e.target.closest("[data-mjb]");if(b&&MJ.d)mjIr(MJ.d.beats[+b.dataset.mjb].t0);
+});
+$("mj-son").addEventListener("change",()=>{if(MJ.aud){MJ.aud.pause();MJ.aud=null;}MJ.fi=-1;mjFx(true);});
+$("mj-sub").addEventListener("change",()=>{mjSub();try{localStorage.mjSub=$("mj-sub").checked?"1":"0";}catch(e){}});
+$("mj-efx").addEventListener("change",()=>{MJ.apk="";mjFx(true);});
+document.addEventListener("keydown",e=>{
+  if(!MJ.v||!MJ.d)return;
+  if(e.key==="Escape")mjCerrar();
+  else if(e.key===" "){e.preventDefault();mjPlay(!MJ.play);}
+  else if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const i=Math.max(0,Math.min(MJ.d.beats.length-1,mjBeat(MJ.t)+(e.key==="ArrowRight"?1:-1)));mjIr(MJ.d.beats[i].t0);}
+});
+
 async function vpAbrir(nombre,t,fluida){          // t: instante donde abrir; fluida: montar y reproducir la escena guardada de ese instante
   vpCerrar(true);VP.v=nombre;VP.vivo++;const mi=VP.vivo;
   if(t!=null&&!isNaN(t))VP.t=t;
@@ -666,7 +919,7 @@ async function vpArrancar(nombre,reiniciar,mi){
     vpMsg("Arrancando el motor… "+(r.segundos||0)+" s");await new Promise(z=>setTimeout(z,900));
   }
   if(!r||r.estado!=="listo"||mi!==VP.vivo)return;
-  VP.base="http://127.0.0.1:"+r.puerto;VP.q="token="+r.token;
+  VP.base=(/^(127\.0\.0\.1|localhost)$/.test(location.hostname)?"http://127.0.0.1:":"/_pv/")+r.puerto;VP.q="token="+r.token;   // por la puerta remota (panel_remoto.py), vía /_pv/<puerto>
   try{VP.info=await fetch(`${VP.base}/info?${VP.q}`).then(x=>x.json());}catch(e){vpMsg("El motor no responde: "+e);return;}
   $("vp-tit").textContent="Vista previa · "+(VP.info.titulo||nombre);VP.onda=[];
   fetch(`${VP.base}/onda?${VP.q}`).then(x=>x.json()).then(o=>{VP.onda=o;vpDibujaTL();}).catch(()=>{});
@@ -1014,5 +1267,6 @@ if(EMB_DLG){
 }else{try{if(["est","can"].includes(localStorage.getItem("pest")))pestana(localStorage.getItem("pest"));}catch(e){}}
 cargar();setInterval(cargar,3000);
 </script>
+<script src="/uso.js"></script>
 </body>
 </html>

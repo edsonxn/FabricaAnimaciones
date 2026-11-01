@@ -73,10 +73,10 @@ def a_onate(lz, t):
     _pie(lz, iso, 236 + 18 * math.sin((yc + 60) * 0.011), yc, 60, "Cristóbal de Oñate", U.COL["rojo"], t, t_crist, t_nuno + 1.2, px=44, dy=-90)
     k = U.pop(t, t_sold) * U.salida(t, T_B - 0.1)
     if k > 0.01:
-        U.llamada(lz, 480, 330, "soldados españoles", color=U.COL["rojo"], px=48, k=k, cola=None)
+        U.llamada(lz, 1180, 520, "soldados españoles", color=U.COL["rojo"], px=48, k=k, cola=None)
     k = U.pop(t, t_aliados) * U.salida(t, T_B - 0.1)
     if k > 0.01:
-        U.llamada(lz, 1400, 330, "aliados indígenas", color=U.COL["teal"], px=48, k=k, cola=None)
+        U.llamada(lz, 1600, 440, "aliados indígenas", color=U.COL["teal"], px=48, k=k, cola=None)
     snd(t_llego, "cuerno", 0.4)
     snd(t_sold, "pasos", 0.35)
     snd(t_aliados, "pasos", 0.3)
@@ -110,7 +110,7 @@ def b_encomienda(lz, t):
     # flujo de tributo (maíz y mantas) hacia el encomendero + el trabajo
     f = prog(t, t_pagar - 0.2, T_C)
     if f > 0.01:
-        lz.relleno(np.array([(760, 640), (1180, 640), (1180, 600), (1290, 690), (1180, 780), (1180, 740), (760, 740)]), (255, 255, 255), alfa=0.35, capa=1)
+        lz.relleno(np.array([(760, 640), (1180, 640), (1180, 600), (1290, 690), (1180, 780), (1180, 740), (760, 740)]), (255, 150, 50), alfa=0.6, capa=1)
         for i in range(6):
             u = (((t - t_pagar) * 0.2) + i / 6.0) % 1.0
             x = 770 + 520 * u

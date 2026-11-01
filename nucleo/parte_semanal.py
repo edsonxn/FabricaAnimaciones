@@ -5,6 +5,8 @@ Lee los transcritos de Claude Code línea por línea y solo CUENTA: nunca guarda
   python nucleo/parte_semanal.py                 todo lo que hay
   python nucleo/parte_semanal.py 2026-10-24      desde esa fecha
   python nucleo/parte_semanal.py 2026-10-24 2026-10-30
+  python nucleo/parte_semanal.py 2026-10-31 2026-10-31 --video n64_secretos   solo las sesiones de ese video
+      (sesión = la que tiene >= 7 acciones sobre el alias; sus ayudantes cuentan con ella; da también la hora de inicio y fin)
 
 Escribe canales/formula/edsonxn_parte.json. Resta la zona horaria: un día es un día en CDMX.
 """
@@ -39,14 +41,43 @@ def _es_del_usuario(d, c):
     return isinstance(c, list) and any(b.get("type") == "text" and not b.get("text", "").lstrip().startswith("<") for b in c)
 
 
-def contar(desde=None, hasta=None):
+def _del_video(ruta, video, minimo=7):
+    """La sesión trabaja en ese video si al menos `minimo` de sus acciones lo tocan (una mención suelta no basta)."""
+    if "subagents" in ruta:
+        ruta = os.path.dirname(os.path.dirname(ruta)) + ".jsonl"
+    if ruta in _CACHE:
+        return _CACHE[ruta]
+    n = 0
+    try:
+        with open(ruta, encoding="utf-8", errors="ignore") as f:
+            for linea in f:
+                if video not in linea or '"tool_use"' not in linea:
+                    continue
+                try:
+                    c = (json.loads(linea).get("message") or {}).get("content") or []
+                except ValueError:
+                    continue
+                n += sum(1 for b in c if isinstance(b, dict) and b.get("type") == "tool_use" and video in json.dumps(b.get("input", {})))
+    except OSError:
+        pass
+    _CACHE[ruta] = n >= minimo
+    return _CACHE[ruta]
+
+
+_CACHE = {}
+
+
+def contar(desde=None, hasta=None, video=None):
     t = collections.Counter()
+    horas = []
     herramientas = collections.Counter()
     dias = collections.Counter()
     vistos = set()
     sesiones = set()
     ayudantes = set()
     archivos = glob.glob(os.path.join(SESIONES, "*.jsonl")) + glob.glob(os.path.join(SESIONES, "*", "subagents", "agent-*.jsonl"))
+    if video:
+        archivos = [r for r in archivos if _del_video(r, video)]
     for ruta in archivos:
         ayudante = "subagents" in ruta
         with open(ruta, encoding="utf-8", errors="ignore") as f:
@@ -62,6 +93,7 @@ def contar(desde=None, hasta=None):
                     continue
                 msg = d.get("message") or {}
                 c = msg.get("content")
+                horas.append(d["timestamp"])
                 if d.get("type") == "assistant":
                     (ayudantes if ayudante else sesiones).add(ruta)
                     mid = msg.get("id")
@@ -86,7 +118,12 @@ def contar(desde=None, hasta=None):
                             t["fallos"] += 1
     return dict(desde=desde or min(dias, default=None), hasta=hasta or max(dias, default=None), sesiones=len(sesiones),
                 ayudantes=len(ayudantes), dias_activos=len(dias), **t, dia_mas_activo=max(dias.items(), key=lambda x: x[1], default=None),
-                herramientas=herramientas.most_common(12))
+                herramientas=herramientas.most_common(12),
+                **(dict(video=video, inicio=_hora(min(horas)), fin=_hora(max(horas))) if video and horas else {}))
+
+
+def _hora(s):
+    return (dt.datetime.fromisoformat(s.replace("Z", "+00:00")) + ZONA).strftime("%Y-%m-%d %H:%M")
 
 
 def commits(desde=None, hasta=None):
@@ -97,9 +134,16 @@ def commits(desde=None, hasta=None):
 
 
 if __name__ == "__main__":
-    desde = sys.argv[1] if len(sys.argv) > 1 else None
-    hasta = sys.argv[2] if len(sys.argv) > 2 else None
-    r = {**contar(desde, hasta), **commits(desde, hasta)}
-    with open(SALIDA, "w", encoding="utf-8") as f:
+    a = sys.argv[1:]
+    video = None
+    if "--video" in a:
+        i = a.index("--video")
+        video = a[i + 1]
+        del a[i:i + 2]
+    desde = a[0] if len(a) > 0 else None
+    hasta = a[1] if len(a) > 1 else None
+    r = {**contar(desde, hasta, video), **commits(desde, hasta)}
+    salida = SALIDA.replace(".json", f"_{video}.json") if video else SALIDA
+    with open(salida, "w", encoding="utf-8") as f:
         json.dump(r, f, ensure_ascii=False, indent=2)
     print(json.dumps(r, ensure_ascii=False, indent=2))

@@ -1,0 +1,120 @@
+{
+ "modo": "video",
+ "de": 1330.185,
+ "a": 1335.605,
+ "anillos": [
+  {
+   "u": 0.4,
+   "v": 0.48,
+   "r": 0.023958333333333335,
+   "color": "azul",
+   "en": 1330.185,
+   "sale": 1335.605
+  },
+  {
+   "u": 0.405,
+   "v": 0.34,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 1330.2849999999999,
+   "sale": 1335.605
+  },
+  {
+   "u": 0.56,
+   "v": 0.275,
+   "r": 0.020833333333333332,
+   "color": "rojo",
+   "en": 1332.065,
+   "sale": 1335.605
+  }
+ ],
+ "flechas": [],
+ "zonas": [],
+ "pilares": [
+  {
+   "u": 0.4,
+   "v": 0.48,
+   "r": 0.013177083333333336,
+   "color": "azul",
+   "en": 1330.2849999999999,
+   "sale": 1335.605,
+   "alto": 7
+  },
+  {
+   "u": 0.405,
+   "v": 0.34,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 1330.3849999999998,
+   "sale": 1335.605,
+   "alto": 7
+  },
+  {
+   "u": 0.56,
+   "v": 0.275,
+   "r": 0.011458333333333334,
+   "color": "rojo",
+   "en": 1332.165,
+   "sale": 1335.605,
+   "alto": 7
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 1330.335,
+   "a": 1335.605,
+   "u": 0.4,
+   "v": 0.48,
+   "alto": 0,
+   "texto": "CANNA",
+   "sub": "RUMBLE",
+   "color": "azul",
+   "dx": -75.4,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Rumble.png"
+  },
+  {
+   "de": 1330.435,
+   "a": 1335.605,
+   "u": 0.405,
+   "v": 0.34,
+   "alto": 0,
+   "texto": "MYRWN",
+   "sub": null,
+   "color": "rojo",
+   "dx": -70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/Ornn.png"
+  },
+  {
+   "de": 1332.2150000000001,
+   "a": 1335.605,
+   "u": 0.56,
+   "v": 0.275,
+   "alto": 0,
+   "texto": "ELYOYA",
+   "sub": null,
+   "color": "rojo",
+   "dx": 70.0,
+   "dy": -10,
+   "tam": 30,
+   "icono": "/videos/lol_semana2/iconos/LeeSin.png"
+  }
+ ],
+ "oscurecer": [],
+ "carteles": [
+  {
+   "de": 1333.725,
+   "a": 1335.605,
+   "texto": "2 CONTRA 1",
+   "sub": null,
+   "color": "rojo",
+   "y": 564.0,
+   "tam": 36
+  }
+ ],
+ "fondo": "/videos/lol_semana2/tactica3d/capas/kcmk2a_fondo.jpg",
+ "_huella": "3d765357f6eb"
+}

@@ -3,7 +3,7 @@
 - canal: cronicas_warcraft · 51:12 + pantalla final (3 071,9 s; el usuario pidió ≥ 45) · PROGRAMADO sáb 31-oct-2026 09:00 CDMX (15:00 UTC), privado hasta entonces
 - estilo: secuencia_yt (gameplay de YouTube por beat + pegatinas + pantallas + MAPAS CON RUTA por zona + MG nuevos; música = OST del juego) → doc: docs/estilo_secuencia_yt.md
 - etapa: guion ✅ · voz ✅ · 357 clips ✅ · efectos ✅ (Terrallende + Rasganorte, 18 hojas `fx` revisadas) · OST por zona + sonido original + mezcla ✅ · MASTER ✅ (51:32 con pantalla final) · subido y programado ✅ (27-oct)
-- siguiente: que el usuario lo vea antes del sáb 31-oct; Studio (video relacionado de Shorts + monetización, memoria «studio-navegador»); resultado a 7 días en `canales/formula/cronicas_warcraft.md`; al aprobar, `limpiar` (borrar `salida/parte1_hasta1722.mp4` y `salida/tramo_1706_3071.mp4`, 2,7 GB)
+- siguiente: que el usuario lo vea antes del sáb 31-oct; Studio (video relacionado de Shorts + monetización, memoria «studio-navegador»); resultado a 7 días en `canales/formula/cronicas_warcraft.md` (las partes `parte1_hasta1722.mp4` y `tramo_1706_3071.mp4` se borraron el 29-oct para liberar C:; si hay que corregir un tramo, re-render con `--tramo`)
 
 ## Sesiones (plan de tramos · «continúa el video 100 curiosidades» retoma aquí · protocolo docs/sesiones.md)
 - alias: 100 curiosidades, cien curiosidades, tbc wotlk, terrallende y rasganorte, curiosidades de burning crusade, video de 45 minutos

@@ -1,0 +1,674 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 5.97,
+  "tipo": "imagen",
+  "texto": "You are in the kitchen, pouring your morning coffee. Something small moves on the window sill."
+ },
+ {
+  "id": "scene-002",
+  "t0": 5.97,
+  "t1": 10.798,
+  "tipo": "imagen",
+  "texto": "You lean in closer. And it turns around, and looks straight at you."
+ },
+ {
+  "id": "scene-003",
+  "t0": 10.798,
+  "t1": 14.648,
+  "tipo": "imagen",
+  "texto": "Two enormous shiny eyes. Eight little legs."
+ },
+ {
+  "id": "scene-004",
+  "t0": 14.648,
+  "t1": 19.019,
+  "tipo": "imagen",
+  "texto": "And your hand is already reaching for a paper towel. Wait."
+ },
+ {
+  "id": "scene-005",
+  "t0": 19.019,
+  "t1": 25.728,
+  "tipo": "imagen",
+  "texto": "Because most of the small, creepy things in your house are not invaders. They are roommates, and they work for free."
+ },
+ {
+  "id": "scene-006",
+  "t0": 25.728,
+  "t1": 29.208,
+  "tipo": "imagen",
+  "texto": "Today, there are five bugs you should never kill."
+ },
+ {
+  "id": "scene-007",
+  "t0": 29.208,
+  "t1": 34.455,
+  "tipo": "imagen",
+  "texto": "And one that you really should. One of them has a rumor about crawling into your ear."
+ },
+ {
+  "id": "scene-008",
+  "t0": 34.455,
+  "t1": 40.192,
+  "tipo": "imagen",
+  "texto": "We will deal with that one in the middle. And number one hunts black widows."
+ },
+ {
+  "id": "scene-009",
+  "t0": 40.192,
+  "t1": 44.41,
+  "tipo": "imagen",
+  "texto": "Yes, really. Number five."
+ },
+ {
+  "id": "scene-010",
+  "t0": 44.41,
+  "t1": 49.8,
+  "tipo": "imagen",
+  "texto": "The praying mantis. You have probably seen one clinging to a window screen,"
+ },
+ {
+  "id": "scene-011",
+  "t0": 49.8,
+  "t1": 54.33,
+  "tipo": "imagen",
+  "texto": "or sitting under the porch light, like a tiny green alien."
+ },
+ {
+  "id": "scene-012",
+  "t0": 54.33,
+  "t1": 60.04,
+  "tipo": "imagen",
+  "texto": "It holds its front legs folded in front of its face, as if it is praying. It is not praying."
+ },
+ {
+  "id": "scene-013",
+  "t0": 60.04,
+  "t1": 65.169,
+  "tipo": "imagen",
+  "texto": "It is waiting. Those legs are spiked traps. When a fly wanders close,"
+ },
+ {
+  "id": "scene-014",
+  "t0": 65.169,
+  "t1": 70.251,
+  "tipo": "imagen",
+  "texto": "they snap out and grab it in a fraction of a second. Faster than you can blink."
+ },
+ {
+  "id": "scene-015",
+  "t0": 70.251,
+  "t1": 74.111,
+  "tipo": "imagen",
+  "texto": "And it hears with just one ear, in the middle of its body."
+ },
+ {
+  "id": "scene-016",
+  "t0": 74.111,
+  "t1": 80.564,
+  "tipo": "imagen",
+  "texto": "It is tuned to listen for bats. If it hears one, it dives out of the sky."
+ },
+ {
+  "id": "scene-017",
+  "t0": 80.564,
+  "t1": 84.634,
+  "tipo": "imagen",
+  "texto": "It eats flies, moths, mosquitoes, and crickets. It is not picky,"
+ },
+ {
+  "id": "scene-018",
+  "t0": 84.634,
+  "t1": 90.691,
+  "tipo": "imagen",
+  "texto": "so it sometimes grabs a helpful bug too. But it keeps the numbers down. And it cannot hurt you."
+ },
+ {
+  "id": "scene-019",
+  "t0": 90.691,
+  "t1": 94.7,
+  "tipo": "imagen",
+  "texto": "No venom, no stinger. And a winter tip."
+ },
+ {
+  "id": "scene-020",
+  "t0": 94.7,
+  "t1": 100.806,
+  "tipo": "imagen",
+  "texto": "If you find a tan, foamy looking lump on a twig or a fence, do not scrape it off."
+ },
+ {
+  "id": "scene-021",
+  "t0": 100.806,
+  "t1": 104.986,
+  "tipo": "imagen",
+  "texto": "That is a mantis egg case, with up to hundreds of babies inside,"
+ },
+ {
+  "id": "scene-022",
+  "t0": 104.986,
+  "t1": 110.668,
+  "tipo": "imagen",
+  "texto": "waiting for spring. Number four. The wolf spider."
+ },
+ {
+  "id": "scene-023",
+  "t0": 110.668,
+  "t1": 115.428,
+  "tipo": "imagen",
+  "texto": "This one looks like a monster from a movie. Big, hairy, brown,"
+ },
+ {
+  "id": "scene-024",
+  "t0": 115.428,
+  "t1": 119.6,
+  "tipo": "imagen",
+  "texto": "and it sprints across the garage floor like it owns the place."
+ },
+ {
+  "id": "scene-025",
+  "t0": 119.6,
+  "t1": 124.58,
+  "tipo": "imagen",
+  "texto": "A wolf spider does not build a web. It hunts on foot, at night, using its eyes."
+ },
+ {
+  "id": "scene-026",
+  "t0": 124.58,
+  "t1": 129.225,
+  "tipo": "imagen",
+  "texto": "It has eight of them, and two are big and sharp. Here is a fun trick."
+ },
+ {
+  "id": "scene-027",
+  "t0": 129.225,
+  "t1": 136.506,
+  "tipo": "imagen",
+  "texto": "Shine a flashlight over the lawn at night, and tiny sparkles shine back. Those are wolf spider eyes."
+ },
+ {
+  "id": "scene-028",
+  "t0": 136.506,
+  "t1": 142.457,
+  "tipo": "imagen",
+  "texto": "It chases crickets, ants, and cockroaches, so it works for you in the garage."
+ },
+ {
+  "id": "scene-029",
+  "t0": 142.457,
+  "t1": 145.687,
+  "tipo": "imagen",
+  "texto": "And the mother is amazing. When her babies hatch,"
+ },
+ {
+  "id": "scene-030",
+  "t0": 145.687,
+  "t1": 150.637,
+  "tipo": "imagen",
+  "texto": "they climb onto her back, sometimes more than a hundred of them, and she carries them"
+ },
+ {
+  "id": "scene-031",
+  "t0": 150.637,
+  "t1": 155.117,
+  "tipo": "imagen",
+  "texto": "around for a week or two. Some people mix it up with the brown recluse,"
+ },
+ {
+  "id": "scene-032",
+  "t0": 155.117,
+  "t1": 161.417,
+  "tipo": "imagen",
+  "texto": "which really can be dangerous. So count the eyes. A wolf spider has eight, in three rows."
+ },
+ {
+  "id": "scene-033",
+  "t0": 161.417,
+  "t1": 165.185,
+  "tipo": "imagen",
+  "texto": "A brown recluse has only six, in three pairs."
+ },
+ {
+  "id": "scene-034",
+  "t0": 165.185,
+  "t1": 169.345,
+  "tipo": "imagen",
+  "texto": "It bites only if you pinch it, and it feels like a bee sting at worst."
+ },
+ {
+  "id": "scene-035",
+  "t0": 169.345,
+  "t1": 175.405,
+  "tipo": "imagen",
+  "texto": "In the fall it wanders into garages, looking for somewhere warm. Use a cup and a piece of paper,"
+ },
+ {
+  "id": "scene-036",
+  "t0": 175.405,
+  "t1": 180.458,
+  "tipo": "imagen",
+  "texto": "and put it back outside. Number three. The earwig."
+ },
+ {
+  "id": "scene-037",
+  "t0": 180.458,
+  "t1": 185.903,
+  "tipo": "imagen",
+  "texto": "Yes, the one with the scary pincers. And the famous rumor. So let me answer it."
+ },
+ {
+  "id": "scene-038",
+  "t0": 185.903,
+  "t1": 191.504,
+  "tipo": "imagen",
+  "texto": "Does an earwig crawl into your ear at night, and lay eggs in your brain? No."
+ },
+ {
+  "id": "scene-039",
+  "t0": 191.504,
+  "t1": 195.506,
+  "tipo": "imagen",
+  "texto": "That is a very old myth, and it has stuck around for centuries."
+ },
+ {
+  "id": "scene-040",
+  "t0": 195.506,
+  "t1": 200.016,
+  "tipo": "imagen",
+  "texto": "Can one ever wander into an ear? Very rarely, by accident,"
+ },
+ {
+  "id": "scene-041",
+  "t0": 200.016,
+  "t1": 206.771,
+  "tipo": "imagen",
+  "texto": "like any small bug that got lost in the dark. But it does not burrow, and it does not lay eggs in your head."
+ },
+ {
+  "id": "scene-042",
+  "t0": 206.771,
+  "t1": 210.851,
+  "tipo": "imagen",
+  "texto": "Now for the part nobody expects. Earwig mothers are some of the best"
+ },
+ {
+  "id": "scene-043",
+  "t0": 210.851,
+  "t1": 216.661,
+  "tipo": "imagen",
+  "texto": "parents in the insect world. She digs a burrow, lays her eggs, and guards them for weeks."
+ },
+ {
+  "id": "scene-044",
+  "t0": 216.661,
+  "t1": 221.238,
+  "tipo": "imagen",
+  "texto": "She even licks them clean, one by one, to keep mold away."
+ },
+ {
+  "id": "scene-045",
+  "t0": 221.238,
+  "t1": 227.523,
+  "tipo": "imagen",
+  "texto": "When the babies hatch, she stays with them and brings them food until they are ready to leave."
+ },
+ {
+  "id": "scene-046",
+  "t0": 227.523,
+  "t1": 230.473,
+  "tipo": "imagen",
+  "texto": "Earwigs eat aphids, mites, and the eggs of other bugs."
+ },
+ {
+  "id": "scene-047",
+  "t0": 230.473,
+  "t1": 235.847,
+  "tipo": "imagen",
+  "texto": "In the garden, they sometimes nibble on flowers too, so outside it depends."
+ },
+ {
+  "id": "scene-048",
+  "t0": 235.847,
+  "t1": 239.707,
+  "tipo": "imagen",
+  "texto": "But inside your house, an earwig is just a lost visitor."
+ },
+ {
+  "id": "scene-049",
+  "t0": 239.707,
+  "t1": 247.63,
+  "tipo": "imagen",
+  "texto": "Indoors is too dry for it, so it will not last long anyway. Sweep it into a dustpan, and put it outside."
+ },
+ {
+  "id": "scene-050",
+  "t0": 247.63,
+  "t1": 251.79,
+  "tipo": "imagen",
+  "texto": "Number two. And yes, this is your friend from the window sill."
+ },
+ {
+  "id": "scene-051",
+  "t0": 251.79,
+  "t1": 256.7,
+  "tipo": "imagen",
+  "texto": "The jumping spider. It is the biggest family of spiders in the world."
+ },
+ {
+  "id": "scene-052",
+  "t0": 256.7,
+  "t1": 262.67,
+  "tipo": "imagen",
+  "texto": "More than six thousand kinds, about one out of every eight spiders on the planet."
+ },
+ {
+  "id": "scene-053",
+  "t0": 262.67,
+  "t1": 266.31,
+  "tipo": "imagen",
+  "texto": "It does not build a web to catch dinner. It stalks,"
+ },
+ {
+  "id": "scene-054",
+  "t0": 266.31,
+  "t1": 270.428,
+  "tipo": "imagen",
+  "texto": "like a tiny cat, and pounces. And its secret is its eyes."
+ },
+ {
+  "id": "scene-055",
+  "t0": 270.428,
+  "t1": 275.748,
+  "tipo": "imagen",
+  "texto": "It has eight, and two of them are huge. They give it the sharpest vision of any spider,"
+ },
+ {
+  "id": "scene-056",
+  "t0": 275.748,
+  "t1": 282.037,
+  "tipo": "imagen",
+  "texto": "and it can see in color. So when it turns and stares at you, it is actually looking at you."
+ },
+ {
+  "id": "scene-057",
+  "t0": 282.037,
+  "t1": 286.727,
+  "tipo": "imagen",
+  "texto": "Before every big jump, it glues a thread of silk behind it, like a safety rope."
+ },
+ {
+  "id": "scene-058",
+  "t0": 286.727,
+  "t1": 290.651,
+  "tipo": "imagen",
+  "texto": "If it misses, it just dangles, and climbs back up."
+ },
+ {
+  "id": "scene-059",
+  "t0": 290.651,
+  "t1": 296.811,
+  "tipo": "imagen",
+  "texto": "In twenty twenty two, scientists filmed baby jumping spiders sleeping, hanging from a single thread."
+ },
+ {
+  "id": "scene-060",
+  "t0": 296.811,
+  "t1": 301.234,
+  "tipo": "imagen",
+  "texto": "Their eyes moved, and their legs twitched, like dream sleep."
+ },
+ {
+  "id": "scene-061",
+  "t0": 301.234,
+  "t1": 307.498,
+  "tipo": "imagen",
+  "texto": "Nobody can say they dream. But it sure looks like it. It eats flies, mosquitoes, moths, and ants."
+ },
+ {
+  "id": "scene-062",
+  "t0": 307.498,
+  "t1": 313.289,
+  "tipo": "imagen",
+  "texto": "And its bite on people is rare, and mild. So the next time a tiny spider looks you in the eye,"
+ },
+ {
+  "id": "scene-063",
+  "t0": 313.289,
+  "t1": 318.662,
+  "tipo": "imagen",
+  "texto": "maybe give it a second chance. And now, number one."
+ },
+ {
+  "id": "scene-064",
+  "t0": 318.662,
+  "t1": 324.866,
+  "tipo": "imagen",
+  "texto": "The one that looks the most dangerous. The mud dauber. It is a long, skinny wasp,"
+ },
+ {
+  "id": "scene-065",
+  "t0": 324.866,
+  "t1": 331.763,
+  "tipo": "imagen",
+  "texto": "with a waist so thin it looks like a thread. You see it around porches, garages, and under the edge of the roof."
+ },
+ {
+  "id": "scene-066",
+  "t0": 331.763,
+  "t1": 337.463,
+  "tipo": "imagen",
+  "texto": "And you have probably seen its nest. Those lumpy tubes of dried mud, stuck to the wall,"
+ },
+ {
+  "id": "scene-067",
+  "t0": 337.463,
+  "t1": 343.398,
+  "tipo": "imagen",
+  "texto": "that look like a little set of organ pipes. Wasp. Nest. Your hand goes for the spray."
+ },
+ {
+  "id": "scene-068",
+  "t0": 343.398,
+  "t1": 349.159,
+  "tipo": "imagen",
+  "texto": "Hold on. A mud dauber is a solitary wasp. No queen, no colony,"
+ },
+ {
+  "id": "scene-069",
+  "t0": 349.159,
+  "t1": 355.362,
+  "tipo": "imagen",
+  "texto": "no giant nest to guard. That is why it almost never stings people. You would have to squeeze it,"
+ },
+ {
+  "id": "scene-070",
+  "t0": 355.362,
+  "t1": 360.971,
+  "tipo": "imagen",
+  "texto": "or step on it, to make it try. So what is it doing? Building a pantry."
+ },
+ {
+  "id": "scene-071",
+  "t0": 360.971,
+  "t1": 367.411,
+  "tipo": "imagen",
+  "texto": "The mother carries mud in her jaws, one little ball at a time, and shapes the tubes. Then she goes hunting."
+ },
+ {
+  "id": "scene-072",
+  "t0": 367.411,
+  "t1": 373.503,
+  "tipo": "imagen",
+  "texto": "For spiders. She stings each spider, which paralyzes it, and packs the little rooms full."
+ },
+ {
+  "id": "scene-073",
+  "t0": 373.503,
+  "t1": 379.547,
+  "tipo": "imagen",
+  "texto": "Then she lays one egg on a spider, and seals the room with mud. Now here is the best part."
+ },
+ {
+  "id": "scene-074",
+  "t0": 379.547,
+  "t1": 386.139,
+  "tipo": "imagen",
+  "texto": "One kind, the blue mud dauber, goes after black widows. It does not even build its own nest."
+ },
+ {
+  "id": "scene-075",
+  "t0": 386.139,
+  "t1": 392.313,
+  "tipo": "imagen",
+  "texto": "It moves into an old one, throws out the old food, and fills it with black widows."
+ },
+ {
+  "id": "scene-076",
+  "t0": 392.313,
+  "t1": 397.764,
+  "tipo": "imagen",
+  "texto": "So that ugly mud nest under your porch roof might be a black widow storage room."
+ },
+ {
+  "id": "scene-077",
+  "t0": 397.764,
+  "t1": 403.574,
+  "tipo": "imagen",
+  "texto": "But if you find a gray, paper looking nest, shaped like an umbrella, with lots of wasps crawling on it,"
+ },
+ {
+  "id": "scene-078",
+  "t0": 403.574,
+  "t1": 410.04,
+  "tipo": "imagen",
+  "texto": "that is a different story. Stay away, and call a professional. Now, the one you should kill."
+ },
+ {
+  "id": "scene-079",
+  "t0": 410.04,
+  "t1": 416.422,
+  "tipo": "imagen",
+  "texto": "The German cockroach. Everything on this list has something in common. It does not want your house."
+ },
+ {
+  "id": "scene-080",
+  "t0": 416.422,
+  "t1": 422.173,
+  "tipo": "imagen",
+  "texto": "It is passing through, or hunting something, or lost. The German cockroach is the opposite."
+ },
+ {
+  "id": "scene-081",
+  "t0": 422.173,
+  "t1": 429.285,
+  "tipo": "imagen",
+  "texto": "It moves in. And it never leaves. It is small, light brown, with two dark stripes right behind its head."
+ },
+ {
+  "id": "scene-082",
+  "t0": 429.285,
+  "t1": 433.14,
+  "tipo": "imagen",
+  "texto": "It lives in kitchens and bathrooms, near water and food."
+ },
+ {
+  "id": "scene-083",
+  "t0": 433.14,
+  "t1": 440.198,
+  "tipo": "imagen",
+  "texto": "One female carries an egg case with thirty or more eggs, and one mother can turn into hundreds of roaches in a few months."
+ },
+ {
+  "id": "scene-084",
+  "t0": 440.198,
+  "t1": 445.638,
+  "tipo": "imagen",
+  "texto": "And it is not just gross. Cockroach droppings and shed skin carry allergens."
+ },
+ {
+  "id": "scene-085",
+  "t0": 445.638,
+  "t1": 450.985,
+  "tipo": "imagen",
+  "texto": "Studies have linked them to asthma, especially in kids. Here is the clue."
+ },
+ {
+  "id": "scene-086",
+  "t0": 450.985,
+  "t1": 457.868,
+  "tipo": "imagen",
+  "texto": "Cockroaches hide by day and come out at night. So if you see one in daylight, there are usually many more hiding."
+ },
+ {
+  "id": "scene-087",
+  "t0": 457.868,
+  "t1": 464.574,
+  "tipo": "imagen",
+  "texto": "So what do you do? Skip the spray can. Sprays often just scatter them into other rooms."
+ },
+ {
+  "id": "scene-088",
+  "t0": 464.574,
+  "t1": 470.864,
+  "tipo": "imagen",
+  "texto": "Use gel bait, in the corners and cracks. Clean up crumbs and grease, fix leaks, and seal the gaps."
+ },
+ {
+  "id": "scene-089",
+  "t0": 470.864,
+  "t1": 474.412,
+  "tipo": "imagen",
+  "texto": "And if the problem keeps growing, call a professional."
+ },
+ {
+  "id": "scene-090",
+  "t0": 474.412,
+  "t1": 481.247,
+  "tipo": "imagen",
+  "texto": "That one, you have my permission. So let's go back to the kitchen. The coffee is getting cold."
+ },
+ {
+  "id": "scene-091",
+  "t0": 481.247,
+  "t1": 488.972,
+  "tipo": "imagen",
+  "texto": "And the little spider on the window sill is still there, looking at you. It is not a threat. It is a tiny roommate that eats the mosquitoes,"
+ },
+ {
+  "id": "scene-092",
+  "t0": 488.972,
+  "t1": 494.314,
+  "tipo": "imagen",
+  "texto": "and asks for nothing. So the next time something small and creepy shows up,"
+ },
+ {
+  "id": "scene-093",
+  "t0": 494.314,
+  "t1": 500.765,
+  "tipo": "imagen",
+  "texto": "ask yourself one question first. Is it moving in, or just passing through?"
+ },
+ {
+  "id": "scene-094",
+  "t0": 500.765,
+  "t1": 505.7,
+  "tipo": "imagen",
+  "texto": "If it is passing through, grab a cup and a piece of paper, and walk it outside."
+ },
+ {
+  "id": "scene-095",
+  "t0": 505.7,
+  "t1": 513.253,
+  "tipo": "imagen",
+  "texto": "And if you want to meet the spider that hunts black widows from the corner of your ceiling, that video is also on this channel."
+ },
+ {
+  "id": "scene-096",
+  "t0": 513.253,
+  "t1": 518.4,
+  "tipo": "imagen",
+  "texto": "Put the paper towel down. Let it live."
+ }
+]

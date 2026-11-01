@@ -179,7 +179,7 @@ def f_papeles(lz, t):
     U.bokeh(lz, t, seed=55, n=10, colores=((255, 200, 120), (255, 120, 140), (180, 140, 255)), alfa=0.3)
     lz.relleno(np.array([(-40, 880), (W + 40, 860), (W + 40, H + 20), (-40, H + 20)]), (74, 40, 80), capa=0)
     # a la izquierda, las flechas se rompen y se apagan
-    kf = pk(t, t_flech - 0.6, 0.5)
+    kf = pk(t, T_F + 0.2, 0.6)
     for i in range(7):
         a = -1.2 + 0.18 * i
         x = 300 + 40 * math.cos(i * 1.7)
@@ -188,7 +188,7 @@ def f_papeles(lz, t):
             M5.flecha(lz, x + 46 * i, 980 - 10 * i, a, 560 * kf, alfa=fade, color=(150, 112, 80) if i % 2 else (176, 130, 90), g=1.5)
     # a la derecha, los papeles suben
     for i in range(8):
-        k = pk(t, t_pap - 0.2 + 0.18 * i, 0.5)
+        k = pk(t, min(t_pap - 0.2, T_F + 0.5) + 0.15 * i, 0.5)
         if k > 0.01:
             x = 1300 + 170 * (i % 3) - 60
             y = 960 - 120 * (i // 3) * 1.0 - 30 * (i % 2)

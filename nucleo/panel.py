@@ -27,9 +27,11 @@ from urllib.parse import parse_qs, unquote, urlparse
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import avisos as AV
+import uso_panel as UP
 VIDEOS = os.path.join(RAIZ, "videos")
 CANALES = os.path.join(RAIZ, "canales")
 HTML = os.path.join(os.path.dirname(os.path.abspath(__file__)), "panel.html")
+USO_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "panel_uso.js")     # registrador de uso (ver uso_panel.py)
 FPS, TAM_SEG = 30, 90            # deben coincidir con motor.FPS y render.video(tam=90)
 
 ETAPAS = [
@@ -44,7 +46,7 @@ MODULOS = {"tts_gen": "voz", "tts_select": "seleccion", "linea_tiempo": "tiempo"
 ETAPA_FAB = {"voz": "voz", "seleccionar": "seleccion", "tiempo": "tiempo", "musica": "musica", "sfx": "sfx",
              "mezcla": "mezcla", "video": "video", "final": "final", "verificar": "verificar",
              "miniatura": "miniatura", "comprobar": "escenas", "escena": "escenas", "prueba": "escenas",
-             "beats": "beats", "prompts": "prompts", "servir": "flow", "ingesta": "flow", "medios": "flow", "ambiente": "video"}
+             "fx": "sfx", "beats": "beats", "prompts": "prompts", "servir": "flow", "ingesta": "flow", "medios": "flow", "bajar": "flow", "busquedas": "flow", "fuentes": "flow", "ambiente": "video"}
 
 
 # ======================================================================== utilidades
@@ -73,7 +75,7 @@ def contar(carpeta, patron=None, excluir=None):
 
 def leer_json(ruta, defecto=None):
     try:
-        with open(ruta, encoding="utf-8") as f:
+        with open(ruta, encoding="utf-8-sig") as f:      # -sig: un JSON guardado con BOM (PowerShell 5.1) no desaparece del panel
             return json.load(f)
     except Exception:
         return defecto
@@ -96,7 +98,15 @@ def parsear_guion(ruta):
             try:
                 datos[nodo.targets[0].id] = ast.literal_eval(nodo.value)
             except Exception:
-                pass
+                v = nodo.value               # VOZ = dict(motor="elevenlabs", tomas=1, ...): sin esto el panel suponía 4 tomas
+                if isinstance(v, ast.Call) and isinstance(v.func, ast.Name) and v.func.id == "dict" and not v.args:
+                    d = {}
+                    for kw in v.keywords:
+                        try:
+                            d[kw.arg] = ast.literal_eval(kw.value)
+                        except Exception:
+                            pass
+                    datos[nodo.targets[0].id] = d
     return datos
 
 
@@ -175,6 +185,17 @@ def publicados():
         for p in d.get("publicados", []) or []:
             if isinstance(p, dict) and p.get("video"):
                 out[p["video"]] = dict(p, canal=d.get("nombre") or os.path.basename(ruta)[:-5])
+    return out
+
+
+def canales_suspendidos():
+    """Alias de canales/<alias>.json con `"suspendido"` (el usuario pausó el canal): sus proyectos nacen ocultos
+    y el canal sale del filtro del panel (salvo con «Ocultos»)."""
+    out = set()
+    for ruta in glob.glob(os.path.join(CANALES, "*.json")):
+        d = leer_json(ruta, {})
+        if isinstance(d, dict) and d.get("suspendido"):
+            out.add(os.path.basename(ruta)[:-5])
     return out
 
 
@@ -643,6 +664,11 @@ def info_render(car, tl, t_proc, ahora=None):
     escenas = tl.get("escenas") or []
     if not escenas or not tl.get("total"):
         return None
+    nframes = int(round(float(tl["total"]) * FPS))
+    parcial = leer_json(os.path.join(car, "segmentos", "parcial.json"), {}) or {}     # `fab.py <v> video --hasta S` (nucleo/render_parcial.py)
+    if parcial.get("nframes"):                           # render parcial: el avance se mide solo sobre ese tramo
+        nframes = min(nframes, int(parcial["nframes"]))
+        escenas = [e for e in escenas if e["t0"] * FPS < nframes]
     ahora = ahora or time.time()
     t_ini = t_proc or ahora
     listos, vuelo = leer_segmentos(car, t_ini)
@@ -656,17 +682,94 @@ def info_render(car, tl, t_proc, ahora=None):
             edicion = [os.path.basename(ult), round(mt(ult))]
         except Exception:                                # noqa: BLE001
             aptos = limite = edicion = None
-    r = calcular_render(escenas, int(round(float(tl["total"]) * FPS)), listos, vuelo, t_ini, ahora, aptos)
+    r = calcular_render(escenas, nframes, listos, vuelo, t_ini, ahora, aptos)
+    r["parcial"] = nframes / FPS if parcial.get("nframes") else None
     r["limite"] = limite         # un segmento sin anotar solo se reutiliza si se empezó a dibujar después de esta hora
     r["edicion"] = edicion       # [archivo, epoch] de la última edición del código que decide los píxeles (la causa de los «no reutilizable»)
     return r
 
 
+def progreso_secuencia(car, procs, ahora=None):
+    """salida/progreso_render.json de un render del motor SECUENCIA si sigue vivo (lo escribe secuencia.video cada ~2 s);
+    None si no hay render en marcha. Vivo = su pid sigue entre los python en marcha o lo reescribió hace < 15 s."""
+    p = leer_json(os.path.join(car, "salida", "progreso_render.json"), None)
+    if not isinstance(p, dict) or p.get("estado") not in ("dibujando", "codificando", "ambiente"):
+        return None
+    ahora = ahora or time.time()
+    pids = {x.get("ProcessId") for x in procs or []}
+    if p.get("pid") in pids or ahora - float(p.get("ahora") or 0) < 15:
+        return p
+    return None
+
+
+def info_render_secuencia(car, tl, p, ahora=None):
+    """Avance de un render del motor SECUENCIA con la misma forma que `calcular_render`, para la tarjeta «Render en vivo».
+    secuencia.video dibuja de una sola pasada (sin segmentos en disco): el avance es el cuadro actual de su archivo de
+    progreso; los cuadritos son tramos de 3 s del video (verde = dibujado, parpadea = el que dibuja ahora)."""
+    ahora = ahora or time.time()
+    fps = int(p.get("fps") or FPS)
+    f0, f1 = int(p["f0"]), int(p["f1"])
+    fr = min(f1, max(f0, int(p.get("frame") or f0)))
+    t_ini = float(p.get("inicio") or ahora)
+    hechos_f, tot_f = fr - f0, max(1, f1 - f0)
+    vel = hechos_f / max(1e-6, float(p.get("ahora") or ahora) - t_ini) if hechos_f else 0.0    # cuadros por segundo de reloj
+    fase = "uniendo" if p.get("estado") in ("codificando", "ambiente") else "dibujando"
+    eta_fin = (ahora + (f1 - fr) / vel) if vel else (ahora if fase == "uniendo" else None)
+    total = math.ceil(tot_f / TAM_SEG)
+    k_act = (fr - f0) // TAM_SEG                         # tramo de 3 s (contado desde f0) que se está dibujando
+    escenas = [e for e in (tl.get("escenas") or []) if e["t1"] * fps > f0 and e["t0"] * fps < f1] or \
+              [dict(id="video", titulo="video completo", t0=f0 / fps, t1=f1 / fps)]
+    filas, esc_fin = [], {}
+    for i, e in enumerate(escenas):
+        i0, i1 = max(f0, int(round(e["t0"] * fps))), min(f1, int(round(e["t1"] * fps)))
+        k0 = (i0 - f0) // TAM_SEG
+        k1 = max(k0 + 1, -(-(i1 - f0) // TAM_SEG))
+        ks = range(k0, k1)
+        celdas = "".join("d" if (k + 1) * TAM_SEG + f0 <= fr else "f" if k == k_act and fase == "dibujando" else "p" for k in ks)
+        hechos = celdas.count("d")
+        estado = "lista" if fr >= i1 else "en_curso" if i0 <= fr < i1 else "pendiente"
+        if estado != "lista" and vel:
+            esc_fin[e["id"]] = ahora + (i1 - fr) / vel
+        nombre = e.get("titulo") or str(e["id"]).replace("_", " ")
+        filas.append(dict(id=e["id"], n=i + 1, nombre=nombre[:1].upper() + nombre[1:], t0=round(e["t0"], 2), t1=round(e["t1"], 2),
+                          k0=k0, k1=k1, celdas=celdas, hechos=hechos, estado=estado, fluida=False, vieja=False))
+    try:
+        mb = os.path.getsize(os.path.join(car, p.get("salida") or "")) / 1e6
+    except OSError:
+        mb = 0.0
+    video_s, dur = hechos_f / fps, tot_f / fps
+    tramo = p.get("tramo")
+    det = f"{mmss(video_s)}/{mmss(dur)} de video" + (f" (tramo {tramo[0]:g}-{tramo[1]:g} s)" if tramo else "") \
+        + (f" · {p['beat']}" if p.get("beat") else "")
+    if fase == "uniendo":
+        det += " · cerrando el mp4" if p.get("estado") == "codificando" else " · sonido ambiente de los clips"
+    elif eta_fin:
+        det += f" · ~{mmss(max(0, eta_fin - ahora))} restantes · termina {time.strftime('%H:%M', time.localtime(eta_fin))}"
+    return dict(
+        motor="secuencia", t_ini=t_ini, total=total, hechos=min(total, hechos_f // TAM_SEG), reusados=0,
+        vuelo=[k_act] if fase == "dibujando" and fr < f1 else [], procs=1, seg_s=None,
+        ritmo=round((float(p.get("ahora") or ahora) - t_ini) / video_s, 2) if video_s else None,
+        duracion=round(dur, 1), video_s=round(video_s, 1), mb=round(mb, 1), fase=fase,
+        progreso=hechos_f / tot_f, beat=p.get("beat"), beat_i=p.get("beat_i"), nbeats=p.get("nbeats"),
+        tramo=tramo, estado_sec=p.get("estado"), detalle=det,
+        ahora_en=[f["id"] for f in filas if f["estado"] == "en_curso"], escenas=filas, parcial=None, limite=None, edicion=None,
+        vivo=dict(ahora=ahora, eta_fin=eta_fin, esc_fin=esc_fin))
+
+
 # ======================================================================== análisis de un proyecto
 # ======================================================================== canal de cada proyecto (fondo de la tarjeta)
-CANALES_PANEL = [("bitacora_perdida", "Bitácora Perdida"), ("cronopapel", "Cronopapel"),
-                 ("sapiens_con_wifi", "Sapiens con Wifi"), ("kuriox", "Kuriox"), ("edsonxn", "Edsonxn"), ("logia", "LogIA"),
-                 ("wild_next_door", "Wild Next Door"), ("pieza_oculta", "Plastitube")]
+def _canales_panel():
+    """(alias, nombre) de cada canales/<alias>.json con «nombre»: un canal nuevo (Warcraft, Tamriel, Runa…) sale solo,
+    sin tocar esta lista (22-oct: la lista fija se quedó sin ellos y sus videos caían en «Experimento»)."""
+    out = []
+    for ruta in sorted(glob.glob(os.path.join(CANALES, "*.json"))):
+        d = leer_json(ruta, {})
+        if isinstance(d, dict) and d.get("nombre"):
+            out.append((os.path.basename(ruta)[:-5], d["nombre"]))
+    return out
+
+
+CANALES_PANEL = _canales_panel()
 CANAL_NOMBRES = dict(CANALES_PANEL, experimento="Experimento")
 # proyectos sin canal publicado ni mención en su guion.py (se puede fijar otro con `"canal": "<alias>"` en videos/<v>/panel.json)
 CANAL_POR_VIDEO = dict(sol_apagado="kuriox", historia_60="kuriox", zacatecas_vox="bitacora_perdida", voynich="edsonxn")
@@ -681,24 +784,33 @@ def _plano(s):
 
 def canal_de(nombre, car, pub_canal, meta):
     """Alias del canal (clave de CANAL_NOMBRES) al que pertenece el proyecto: panel.json > canal donde se publicó >
-    «Canal X» en el docstring del guion > tabla fija > «experimento»."""
+    línea «- canal:» del ESTADO.md > «Canal X» en el docstring del guion > tabla fija > «experimento»."""
     por_nombre = {_plano(n): a for a, n in CANALES_PANEL}       # «Plastitube» -> pieza_oculta (alias distinto del nombre)
-    for c in (meta.get("canal"), pub_canal):
+    # el ESTADO.md antes que el guion: un video --yt heredaba «Crónicas de Warcraft» del docstring de la plantilla (31-oct, n64_secretos)
+    estado = ""
+    try:
+        m = re.search(r"(?im)^-\s*canal:\s*`?([^\n·(`]+)", open(os.path.join(car, "ESTADO.md"), encoding="utf-8", errors="replace").read(1500))
+        estado = m.group(1) if m else ""
+    except OSError:
+        pass
+    for c in (meta.get("canal"), pub_canal, estado):
         k = _plano(c) if c else ""
         k = k if k in CANAL_NOMBRES else por_nombre.get(k)
         if k:
             return k
     try:
         cab = _plano(open(os.path.join(car, "guion.py"), encoding="utf-8", errors="replace").read(1500))
-        for alias, _ in CANALES_PANEL:
-            if alias in cab:
-                return alias
+        # el canal que se nombra PRIMERO (alias o nombre: «Crónicas de Warcraft» -> cronicas_de_warcraft), no el primero
+        # de la lista: un guion de Warcraft que cita la voz de LogIA más abajo sigue siendo de Warcraft
+        pos = [(i, alias) for alias, nom in CANALES_PANEL for i in (cab.find(alias), cab.find(_plano(nom))) if i >= 0]
+        if pos:
+            return min(pos)[1]
     except OSError:
         pass
     return CANAL_POR_VIDEO.get(nombre, "experimento")
 
 
-def analizar(nombre, activo, pub, inicios=None, procs=None):
+def analizar(nombre, activo, pub, inicios=None, procs=None, susp=()):
     car = os.path.join(VIDEOS, nombre)
     g = parsear_guion(os.path.join(car, "guion.py"))
     escenas = g.get("ESCENAS") or []
@@ -794,6 +906,9 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
     elif segs or tmp:
         info = eta_render(car)
         det = f"{segs}/{nseg_total} segmentos" + (f" (+{tmp} en curso)" if tmp else "")
+        par = leer_json(os.path.join(car, "segmentos", "parcial.json"), {}) or {}
+        if par.get("hasta"):
+            det = f"render parcial 0-{mmss(par['hasta'])}: {segs}/{math.ceil(par['nframes'] / TAM_SEG)} segmentos" + (f" (+{tmp} en curso)" if tmp else "")
         if info and info[0]:
             hechos, tot, seg_t = info
             resta = seg_t / max(hechos, 1) * max(tot - hechos, 0)
@@ -802,9 +917,11 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
     else:
         st("video", "pendiente")
 
-    sec = None
+    sec = render = None                          # render: avance real del render (por segmento y escena) mientras corre
     if g.get("MOTOR") == "secuencia":            # video hecho con clips e imágenes de Google Flow (nucleo/secuencia.py)
         sec = secuencia_info(car, tl_t)
+        sec["yt"] = g.get("ESTILO_VISUAL") == "secuencia_yt"        # clips de gameplay con yt-dlp: no hay prompts ni Flow
+        medios_txt = "clips de yt-dlp" if sec["yt"] else "medios"
         E.pop("escenas", None)
         nb = sec["total"]
         if not nb:
@@ -819,10 +936,12 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
             st("prompts", "parcial", sec["prompts"] / max(nb, 1), f"{sec['prompts']}/{nb} prompts")
         else:
             st("prompts", "pendiente")
+        if sec["yt"]:
+            E.pop("prompts", None)
         if nb and sec["hechos"] >= nb:
-            st("flow", "listo", detalle=f"{nb} medios recibidos", t=sec["ultimo"])
+            st("flow", "listo", detalle=f"{nb} {medios_txt} " + ("bajados" if sec["yt"] else "recibidos"), t=sec["ultimo"])
         elif sec["hechos"]:
-            det = f"{sec['hechos']}/{nb} medios"
+            det = f"{sec['hechos']}/{nb} {medios_txt}"
             if sec["eta_fin"]:
                 det += f" · ~{mmss(max(0, sec['eta_fin'] - time.time()))} restantes"
             st("flow", "en_curso" if sec["activo"] else "parcial", sec["hechos"] / nb, det, sec["ultimo"])
@@ -832,6 +951,32 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
             st("video", "listo", detalle="armado con secuencia", t=mt(master or os.path.join(car, "salida", "video_sin_audio.mp4")))
         else:
             st("video", "pendiente")
+        # «Efectos» del motor secuencia = audio/fx.wav (`fab.py <v> fx`, SFX de efectos.py), no audio/sfx.wav del motor dibujado
+        fx = os.path.join(car, "audio", "fx.wav")
+        efx = os.path.join(car, "efectos.py")
+        if existe(fx):
+            if existe(efx) and mt(efx) > mt(fx) + 1 and not (master and mt(master) >= mt(efx)):
+                st("sfx", "atencion", 1.0, "efectos.py cambió después de audio/fx.wav: rehacer `fx`", mt(fx))
+            else:
+                n_sfx = contar(os.path.join(car, "sfx"), r"\.mp3$")
+                st("sfx", "listo", detalle="audio/fx.wav" + (f" · {n_sfx} SFX" if n_sfx else ""), t=mt(fx))
+        elif not existe(os.path.join(car, "audio", "sfx.wav")):
+            try:
+                pistas = re.search(r"^PISTAS\s*=\s*\[(.*?)^\]", open(efx, encoding="utf-8", errors="replace").read(), re.M | re.S)
+            except OSError:
+                pistas = None
+            if pistas and re.search(r"dict\(|\{", re.sub(r"#[^\n]*", "", pistas.group(1))):   # la plantilla trae ejemplos comentados
+                st("sfx", "pendiente", detalle="efectos.py tiene PISTAS: falta `fab.py <v> fx`")
+            else:
+                E["sfx"] = dict(estado="omitido", progreso=1.0, detalle="no aplica: efectos.py sin PISTAS de sonido", t=0.0)
+        prog_sec = progreso_secuencia(car, procs)
+        if prog_sec:
+            try:
+                render = info_render_secuencia(car, tl, prog_sec)
+            except Exception:                        # noqa: BLE001  (un fallo aquí no debe tumbar el panel)
+                render = None
+            if render:
+                E["video"] = dict(estado="en_curso", progreso=render["progreso"], detalle=render["detalle"], t=time.time())
 
     if master:
         mb = os.path.getsize(master) / 1e6
@@ -860,6 +1005,8 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
 
     p = pub.get(nombre)
     if p:
+        if not p.get("programado") and p.get("publicar") and not p.get("publicado"):
+            p = dict(p, programado=p["publicar"])     # registros con la fecha en «publicar» (la mitad de canales/*.json)
         cuando = p.get("publicado") or p.get("programado") or p.get("subido") or ""
         et = "publicado" if p.get("publicado") else "programado" if p.get("programado") else             f"subido ({p.get('visibilidad', 'privado')})"
         st("subida", "listo", detalle=f"{et} {cuando[:16].replace('T', ' ')} · {p.get('canal', '')}")
@@ -881,13 +1028,14 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
 
     # etapa en curso (proceso vivo)
     en_curso = activo.get(nombre)
+    if render and not en_curso:                      # render de secuencia lanzado sin fab.py (`python -m secuencia video`)
+        en_curso = "video"
     if en_curso in E and E[en_curso]["estado"] != "listo":
         E[en_curso]["estado"] = "en_curso"
     elif en_curso in E:
         E[en_curso]["activo"] = True
 
-    render = None                                    # avance real del render (por segmento y escena) mientras corre
-    if en_curso == "video":
+    if en_curso == "video" and not sec:              # motor dibujado: el avance sale de segmentos/ (el de secuencia ya está arriba)
         try:
             render = info_render(car, tl, (inicios or {}).get(nombre))
         except Exception:                            # noqa: BLE001  (un fallo aquí no debe tumbar el panel)
@@ -924,14 +1072,20 @@ def analizar(nombre, activo, pub, inicios=None, procs=None):
     fotos = [os.path.basename(x) for x in minis][:3]
     hojas = [h for h in ("final_hoja.jpg", "hoja_render.jpg", "miniaturas.jpg") if existe(os.path.join(car, "previews", h))]
     actividad = max([mt(car)] + [v["t"] for v in E.values()] + [mt(os.path.join(car, "segmentos")), mt(os.path.join(car, "voz", "cands"))])
+    try:                                             # «editado»: solo archivos del proyecto (guion.py, ESTADO.md, efectos…); borrar o limpiar carpetas no cuenta
+        editado = max([mt(e.path) for e in os.scandir(car) if e.is_file() and e.name != "panel.json"] or [0.0])
+    except OSError:
+        editado = 0.0
     return dict(
         nombre=nombre, titulo=g.get("TITULO") or nombre, archivo=archivo, estilo=g.get("ESTILO_VISUAL", ""),
         formato=g.get("FORMATO", "horizontal"), duracion=total or g.get("DURACION"), frases=frases,
         escenas=len(escenas), progreso=prog_total, etapa_actual=en_curso, etapas=E, actividad=actividad, editado=editado,
         log=dict(archivo=log_nombre, lineas=log_lineas), miniaturas=fotos, hojas=hojas,
-        master=os.path.basename(master) if master else None, publicado=bool(p), oculto=bool(meta.get("oculto", bool(p))),   # lo que ya está en YouTube nace oculto (salvo `"oculto": false`)
- archivado=bool(meta.get("archivado")), reemplazado_por=meta.get("reemplazado_por"),
+        master=os.path.basename(master) if master else None, publicado=bool(p),
+        oculto=bool(meta.get("oculto", bool(p) or canal in susp)),   # lo ya en YouTube o de un canal suspendido nace oculto (salvo `"oculto": false`)
+        suspendido=canal in susp, archivado=bool(meta.get("archivado")), reemplazado_por=meta.get("reemplazado_por"),
         nota=meta.get("motivo"), canal=canal, canal_nombre=CANAL_NOMBRES[canal], render=render, secuencia=sec, voz_vivo=voz_vivo,
+        montaje=None if sec else montaje_resumen(car),
     )
 
 
@@ -1015,11 +1169,11 @@ def estado():
         nombres = []
     activo = etapas_en_curso(procs, set(nombres))
     inicios = {v: inicio_render(procs, v) for v, et in activo.items() if et == "video"}
-    pub = publicados()
+    pub, susp = publicados(), canales_suspendidos()
     proyectos = []
     for n in nombres:
         try:
-            proyectos.append(analizar(n, activo, pub, inicios, procs))
+            proyectos.append(analizar(n, activo, pub, inicios, procs, susp))
         except Exception as e:                       # un proyecto roto no debe tumbar el panel
             proyectos.append(dict(nombre=n, titulo=n, error=str(e), etapas={}, progreso=0, actividad=0))
     try:
@@ -1053,10 +1207,11 @@ def ocultar_proyecto(nombre, oculto):
         raise ValueError("proyecto desconocido")
     ruta = os.path.join(car, "panel.json")
     meta = leer_json(ruta, {}) or {}
+    pub = publicados()
     if oculto:
         meta["oculto"] = True
-    elif nombre in publicados():
-        meta["oculto"] = False       # ya en YouTube: se oculta solo, así que «mostrar» se guarda explícito
+    elif nombre in pub or canal_de(nombre, car, (pub.get(nombre) or {}).get("canal"), meta) in canales_suspendidos():
+        meta["oculto"] = False       # ya en YouTube o de un canal suspendido: se oculta solo, así que «mostrar» se guarda explícito
     else:
         meta.pop("oculto", None)
     with open(ruta, "w", encoding="utf-8") as f:
@@ -1065,10 +1220,6 @@ def ocultar_proyecto(nombre, oculto):
         _est["t"] = 0.0              # que el siguiente estado ya lo refleje
     return dict(video=nombre, oculto=bool(oculto))
 
-    try:                                             # «editado»: solo archivos del proyecto (guion.py, ESTADO.md, efectos…); borrar o limpiar carpetas no cuenta
-        editado = max([mt(e.path) for e in os.scandir(car) if e.is_file() and e.name != "panel.json"] or [0.0])
-    except OSError:
-        editado = 0.0
 
 def estado_completo():
     d = dict(estado_cache())
@@ -1201,6 +1352,10 @@ def servir_video(handler, ruta_rel):
     real = os.path.realpath(os.path.join(base, partes[1]))
     if not real.startswith(base + os.sep) or not real.lower().endswith(".mp4") or not existe(real):
         return handler._enviar(404, b"", "text/plain")
+    _servir_rango(handler, real, "video/mp4")
+
+
+def _servir_rango(handler, real, tipo):
     tam = os.path.getsize(real)
     ini, fin = 0, tam - 1
     m = re.match(r"bytes=(\d*)-(\d*)", handler.headers.get("Range") or "")
@@ -1219,7 +1374,7 @@ def servir_video(handler, ruta_rel):
             return
         codigo = 206
     handler.send_response(codigo)
-    handler.send_header("Content-Type", "video/mp4")
+    handler.send_header("Content-Type", tipo)
     handler.send_header("Accept-Ranges", "bytes")
     handler.send_header("Content-Length", str(fin - ini + 1))
     if codigo == 206:
@@ -1235,6 +1390,208 @@ def servir_video(handler, ruta_rel):
                 break
             handler.wfile.write(trozo)
             resto -= len(trozo)
+
+
+# ======================================================================== montaje (motor secuencia yt)
+# Línea de tiempo viva de un video de clips de yt-dlp: el navegador reproduce cada clip de medios/ en su beat, con la voz
+# de voz/final/ encima, y los huecos se van llenando conforme `bajar` deja clips. Solo lectura.
+def _car_video(nombre):
+    """Carpeta real de videos/<nombre>. Vale si es un junction a otro disco (desde el 24-oct-2026 hay videos movidos a
+    E:/FabricaAnimaciones/videos_desde_C): se valida el NOMBRE (una sola carpeta, sin rutas), no el destino del enlace."""
+    if not nombre or nombre in (".", "..") or any(c in nombre for c in "/\\:"):
+        return None
+    enlace = os.path.join(VIDEOS, nombre)
+    return os.path.realpath(enlace) if existe(os.path.join(enlace, "guion.py")) else None
+
+
+def detalle_voz(nombre, etapa):
+    """Las barritas de Voz / Selección aunque la etapa no esté corriendo (clic en su casilla del panel, 19-oct-2026):
+    las mismas filas que el «en vivo», calculadas sobre lo que hay en disco (voz/cands, eval.json, regenerar.json, voz/final)."""
+    car = _car_video(nombre)
+    if not car:
+        return dict(error="video desconocido")
+    g = parsear_guion(os.path.join(car, "guion.py"))
+    tomas = _tomas(car)
+    if etapa == "voz":
+        vz = g.get("VOZ") if isinstance(g.get("VOZ"), dict) else {}
+        n = max(1, int(vz.get("tomas") or (1 if vz.get("motor") == "elevenlabs" else 4)))
+        seeds = sorted({s for d in tomas.values() for s in d}) or list(range(1, n + 1))
+        seeds = seeds[:max(n, 1)] if vz.get("motor") != "elevenlabs" else seeds
+        d = info_voz(car, g, {"CommandLine": "--seeds " + " ".join(map(str, seeds)), "T": 1})
+        faltan = d["total"] - d["hechos"]
+        d.update(titulo="Voz · lo que hay en disco", ahora=f"faltan {faltan} tomas" if faltan else "todas las tomas generadas",
+                 eta_fin=None, chips=[c for c in d["chips"] if c[0] not in ("Transcurrido", "Ritmo", "Última")])
+    else:
+        d = info_seleccion(car, g, {"T": 1, "ProcessId": "disco"}, nombre)
+        reg = leer_json(os.path.join(car, "voz", "regenerar.json"), None)
+        ev = leer_json(os.path.join(car, "voz", "eval.json"), {}) or {}
+        sin_eval = sum(1 for k, dd in tomas.items() for s in dd if f"{k}_s{s}.wav" not in ev)
+        d.update(titulo="Selección · lo que hay en disco", eta_fin=None,
+                 ahora=(f"{sin_eval} tomas sin evaluar" if sin_eval else
+                        f"regenerar: {', '.join(reg)}" if reg else "todas las frases tienen toma elegida"))
+        fin_dir = os.path.join(car, "voz", "final")
+        n_fin = len([1 for e in os.scandir(fin_dir) if e.name.endswith(".wav")]) if os.path.isdir(fin_dir) else 0
+        d["chips"] = [["Tomas evaluadas", str(len(ev))], ["Con toma elegida", str(n_fin)],
+                      ["Para regenerar", str(len(reg or []))]]
+    d.update(t_ini=time.time(), disco=True)
+    return d
+
+
+def montaje(nombre):
+    car = _car_video(nombre)
+    if not car:
+        return dict(error="video desconocido")
+    if parsear_guion(os.path.join(car, "guion.py")).get("MOTOR") != "secuencia":
+        return montaje_codigo(car, nombre)
+    tl = leer_json(os.path.join(car, "timeline.json"), {}) or {}
+    sec = secuencia_info(car, mt(os.path.join(car, "timeline.json")))
+    fuentes = leer_json(os.path.join(car, "fuentes.json"), {}) or {}
+    for b in sec["beats"]:
+        f = fuentes.get(b["id"]) or {}
+        b["fuente"] = " · ".join(str(x) for x in (f.get("canal"), f.get("titulo")) if x)
+        b["q"] = f.get("q", "")
+    frases = [dict(key=f["key"], t0=f["t0"], t1=f["t1"], voz=existe(os.path.join(car, "voz", "final", f["key"] + ".wav")))
+              for e in tl.get("escenas", []) for f in e.get("frases", []) if f.get("key")]
+    total = tl.get("total") or (sec["beats"][-1]["t1"] if sec["beats"] else 0)
+    sec["total_beats"] = sec.pop("total")
+    # capa de efectos ya exportada por `fab.py <v> fx montaje`: apoyos (PNG encima) y tramos con MG/videos (mp4 compuesto)
+    rfx = os.path.join(car, "previews", "montaje_fx.json")
+    fx = leer_json(rfx, {}) or {}
+    fx["viejo"] = bool(fx) and mt(os.path.join(car, "efectos.py")) > mt(rfx)
+    fx["hay_efectos"] = existe(os.path.join(car, "efectos.py"))
+    mus = os.path.join(car, "audio", "musica.wav")
+    return dict(video=nombre, total=total, frases=frases, fx=fx, musica=existe(mus), musica_t=mt(mus), **sec)
+
+
+# ---- montaje de los videos dibujados por código (20-oct-2026): cada escena de timeline.json es un bloque que se reproduce
+# fluido con su «escena fluida» (previews/escena_<id>.mp4) o con el borrador de `fab.py <v> montaje` (previews/montaje/<id>.mp4)
+def _escenas_montaje(car):
+    """[(escena, archivo servido, offset en el mp4, origen)] de lo que ya se puede ver, sin calcular firmas (barato)."""
+    tl = leer_json(os.path.join(car, "timeline.json"), {}) or {}
+    fl = leer_json(os.path.join(car, "previews", "escenas.json"), {}) or {}
+    bo = leer_json(os.path.join(car, "previews", "montaje", "info.json"), {}) or {}
+    out = []
+    for e in tl.get("escenas", []):
+        f, b = fl.get(e["id"]), bo.get(e["id"])
+        if f and existe(os.path.join(car, "previews", f["mp4"])) and not (b and b.get("ts", 0) > f.get("ts", 0)
+                                                                            and existe(os.path.join(car, "previews", "montaje", e["id"] + ".mp4"))):
+            out.append((e, "fl/" + f["mp4"], max(0.0, e["t0"] - f["vt0"]), "fluida", f))
+        elif b and existe(os.path.join(car, "previews", "montaje", e["id"] + ".mp4")):
+            out.append((e, "esc/" + e["id"] + ".mp4", 0.0, "borrador", b))
+        else:
+            out.append((e, None, 0.0, None, None))
+    return tl, out
+
+
+def montaje_resumen(car):
+    if not existe(os.path.join(car, "timeline.json")):
+        return None
+    _, es = _escenas_montaje(car)
+    return dict(hechos=sum(1 for x in es if x[1]), total=len(es))
+
+
+def montaje_codigo(car, nombre):
+    tl, es = _escenas_montaje(car)
+    g = parsear_guion(os.path.join(car, "guion.py"))
+    firma, vig = None, {}
+    if CE is not None:
+        try:
+            firma = CE.firma_codigo(car, NUCLEO)
+            vig = {x["id"]: x["estado"] for x in CE.listar(car, NUCLEO)}
+        except Exception:                                # noqa: BLE001
+            firma, vig = None, {}
+    textos = {e.get("id"): " ".join(e.get("frases") or []) for e in g.get("ESCENAS") or [] if isinstance(e, dict)}
+    beats = []
+    for e, arch, off, origen, d in es:
+        viejo = False
+        if origen == "fluida":
+            viejo = vig.get(e["id"]) == "obsoleta" if firma else False
+        elif origen == "borrador":
+            viejo = (firma and d.get("firma") != firma) or d.get("t0") != e["t0"] or d.get("t1") != e["t1"]
+        mini = bool(arch)            # la del borrador; la de una escena fluida se saca de su mp4 al pedirla (servir_montaje)
+        beats.append(dict(id=e["id"], etq=e["id"], t0=e["t0"], t1=e["t1"], texto=textos.get(e["id"], ""),
+                          medio=arch or "", url=f"/montaje/{nombre}/{arch}" if arch else "", off=round(off, 3),
+                          mt=int(mt(os.path.join(car, "previews", arch.replace("esc/", "montaje/").replace("fl/", ""))))
+                          if arch else 0, origen=origen or "", viejo=bool(viejo),
+                          mini=f"/montaje/{nombre}/esc/{e['id']}.jpg" if mini else "", vel=1))
+    total = tl.get("total") or (beats[-1]["t1"] if beats else 0)
+    # escenas del guion que aún no tienen voz (no están en timeline.json): en gris, con la duración estimada por palabras
+    hay = {b["id"] for b in beats}
+    t = total
+    for e in g.get("ESCENAS") or []:
+        if isinstance(e, dict) and e.get("id") and e["id"] not in hay:
+            txt = textos.get(e["id"], "")
+            dur = max(4.0, len(txt.split()) / 2.7)
+            beats.append(dict(id=e["id"], etq=e["id"], t0=round(t, 2), t1=round(t + dur, 2), texto=txt, medio="", url="", off=0,
+                              mt=0, origen="", viejo=False, mini="", plan=True))
+            t += dur
+    frases = [dict(key=f["key"], t0=f["t0"], t1=f["t1"], voz=existe(os.path.join(car, "voz", "final", f["key"] + ".wav")))
+              for e in tl.get("escenas", []) for f in e.get("frases", []) if f.get("key")]
+    fin = os.path.join(car, "audio", "final.wav")
+    mezcla = existe(fin) and mt(fin) >= mt(os.path.join(car, "timeline.json"))     # la mezcla vale si es posterior a «tiempo»
+    mus = fin if mezcla else os.path.join(car, "audio", "musica.wav")
+    prog = leer_json(os.path.join(car, "previews", "montaje", "progreso.json"), None)
+    activo = bool(prog) and time.time() - mt(os.path.join(car, "previews", "montaje", "progreso.json")) < 300
+    hechos = sum(1 for b in beats if b["medio"])
+    return dict(video=nombre, codigo=True, total=t, total_voz=total, beats=beats, frases=frases, hechos=hechos,
+                total_beats=len(beats), viejos=sum(1 for b in beats if b["viejo"]), plan=sum(1 for b in beats if b.get("plan")),
+                activo=activo, progreso=prog if activo else None, fx={}, musica=existe(mus), musica_t=mt(mus),
+                musica_src="mezcla" if mezcla else "musica", mezcla=mezcla)
+
+
+_cerrojo_mus = threading.Lock()
+
+
+def _musica_montaje(car, fuente="musica"):
+    """audio/musica.wav (float32, cientos de MB) -> previews/montaje_musica.m4a liviana para el navegador; se rehace si cambia.
+    fuente="mezcla": audio/final.wav (voz + música + SFX) -> previews/montaje_mezcla.m4a (videos por código)."""
+    wav = os.path.join(car, "audio", "final.wav" if fuente == "mezcla" else "musica.wav")
+    m4a = os.path.join(car, "previews", f"montaje_{fuente}.m4a")
+    if not existe(wav):
+        return None
+    with _cerrojo_mus:
+        if not existe(m4a) or mt(m4a) < mt(wav):
+            os.makedirs(os.path.dirname(m4a), exist_ok=True)
+            tmp = m4a[:-4] + "_tmp.m4a"
+            r = subprocess.run([r"C:\ffmpeg\bin\ffmpeg.exe", "-y", "-loglevel", "error", "-i", wav, "-ac", "2", "-c:a", "aac",
+                                "-b:a", "128k", "-movflags", "+faststart", tmp], capture_output=True, timeout=600)
+            if r.returncode != 0 or not existe(tmp):
+                return None
+            os.replace(tmp, m4a)
+    return m4a
+
+
+def servir_montaje(handler, ruta_rel):
+    """/montaje/<video>/clip/<scene-id>  ·  /montaje/<video>/voz/<key>.wav  ·  /montaje/<video>/fx/<archivo>
+    (apoyos/*.png y previews/montaje_fx/*.mp4)  (con Range, para saltar dentro del clip)."""
+    partes = ruta_rel.split("/")
+    car = _car_video(partes[0]) if len(partes) == 3 else None
+    real = tipo = None
+    if car and partes[1] == "clip" and re.match(r"^scene-\d{3,}$", partes[2]):
+        real = _medio(car, partes[2])
+        tipo = mimetypes.guess_type(real)[0] if real else None
+    elif car and partes[1] == "voz" and re.match(r"^[\w-]+\.wav$", partes[2]):
+        real, tipo = os.path.join(car, "voz", "final", partes[2]), "audio/wav"
+    elif car and partes[1] == "musica" and partes[2] in ("musica.m4a", "mezcla.m4a"):
+        real, tipo = _musica_montaje(car, partes[2][:-4]), "audio/mp4"
+    elif car and partes[1] == "esc" and re.match(r"^[\w-]+\.(mp4|jpg)$", partes[2]):        # borradores de `fab.py <v> montaje`
+        real = os.path.join(car, "previews", "montaje", partes[2])
+        tipo = "video/mp4" if partes[2].endswith(".mp4") else "image/jpeg"
+        f = (leer_json(os.path.join(car, "previews", "escenas.json"), {}) or {}).get(partes[2][:-4])
+        if tipo == "image/jpeg" and not existe(real) and f and existe(os.path.join(car, "previews", f["mp4"])):
+            os.makedirs(os.path.dirname(real), exist_ok=True)       # miniatura de una escena fluida: su cuadro del medio
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{(f['vt1'] - f['vt0']) / 2:.2f}",
+                            "-i", os.path.join(car, "previews", f["mp4"]), "-frames:v", "1", "-vf", "scale=240:-2", "-q:v", "5",
+                            real], capture_output=True, timeout=60)
+    elif car and partes[1] == "fl" and re.match(r"^escena_[\w-]+\.mp4$", partes[2]):        # escenas fluidas de la vista previa
+        real, tipo = os.path.join(car, "previews", partes[2]), "video/mp4"
+    elif car and partes[1] == "fx" and re.match(r"^[\w-]+\.(png|mp4)$", partes[2]):
+        png = partes[2].endswith(".png")
+        real = os.path.join(car, "apoyos" if png else os.path.join("previews", "montaje_fx"), partes[2])
+        tipo = "image/png" if png else "video/mp4"
+    if not real or not existe(real):
+        return handler._enviar(404, b"", "text/plain")
+    _servir_rango(handler, real, tipo or "application/octet-stream")
 
 
 # ======================================================================== vista previa (workers)
@@ -1311,6 +1668,25 @@ def vista_previa(nombre, forzar_reinicio=False):
 
 
 # ======================================================================== muestra de estilo (sin voz ni «tiempo»)
+MONTAJES = {}                  # video -> Popen de `fab.py <v> montaje` (borradores del montaje de videos por código)
+
+
+def montaje_dibujar(nombre):
+    """Lanza `python fab.py <v> montaje` en segundo plano: dibuja a 640x360 las escenas sin borrador o con borrador viejo."""
+    car = _car_video(nombre)
+    if not car:
+        return dict(error="video desconocido")
+    proc = MONTAJES.get(nombre)
+    if proc and proc.poll() is None:
+        return dict(ok=True, ya=True)
+    os.makedirs(os.path.join(car, "previews", "montaje"), exist_ok=True)
+    log = open(os.path.join(car, "previews", "montaje", "_montaje.log"), "w", encoding="utf-8")
+    MONTAJES[nombre] = subprocess.Popen([sys.executable, os.path.join(RAIZ, "fab.py"), nombre, "montaje"], cwd=RAIZ,
+                                        env=dict(os.environ, PYTHONIOENCODING="utf-8"), stdout=log, stderr=subprocess.STDOUT,
+                                        creationflags=0x00004000 | getattr(subprocess, "CREATE_NO_WINDOW", 0))   # prioridad baja
+    return dict(ok=True)
+
+
 MUESTRAS = {}                  # video -> Popen de muestra_estilo.py
 
 
@@ -1426,6 +1802,13 @@ class Manejador(BaseHTTPRequestHandler):
         try:
             if ruta in ("/", "/index.html"):
                 self._enviar(200, open(HTML, "rb").read(), "text/html; charset=utf-8")
+            elif ruta.startswith("/propuesta/") and re.match(r"^/propuesta/panel_v\d+\.html$", ruta):      # versión nueva del panel a prueba (skill analizar-uso-panel)
+                real = os.path.join(os.path.dirname(HTML), "propuestas_panel", os.path.basename(ruta))
+                if not existe(real):
+                    return self._enviar(404, b"", "text/plain")
+                self._enviar(200, open(real, "rb").read(), "text/html; charset=utf-8")
+            elif ruta == "/uso.js":
+                self._enviar(200, open(USO_JS, "rb").read(), "application/javascript; charset=utf-8")
             elif ruta == "/api/estado":
                 self._enviar(200, json.dumps(estado_completo(), ensure_ascii=False).encode("utf-8"),
                              "application/json; charset=utf-8")
@@ -1438,6 +1821,16 @@ class Manejador(BaseHTTPRequestHandler):
                 self._enviar(200, json.dumps(CAN, ensure_ascii=False).encode("utf-8"), "application/json; charset=utf-8")
             elif ruta.startswith("/video/"):
                 servir_video(self, ruta[len("/video/"):])
+            elif ruta.startswith("/montaje/"):
+                servir_montaje(self, ruta[len("/montaje/"):])
+            elif ruta == "/api/detalle_voz":
+                q = parse_qs(urlparse(self.path).query)
+                d = detalle_voz((q.get("video") or [""])[0], (q.get("etapa") or ["voz"])[0])
+                self._enviar(200, json.dumps(d, ensure_ascii=False).encode("utf-8"), "application/json; charset=utf-8")
+            elif ruta == "/api/montaje":
+                nombre = (parse_qs(urlparse(self.path).query).get("video") or [""])[0]
+                self._enviar(200, json.dumps(montaje(nombre), ensure_ascii=False).encode("utf-8"),
+                             "application/json; charset=utf-8")
             elif ruta == "/api/preview":
                 nombre = (parse_qs(urlparse(self.path).query).get("video") or [""])[0]
                 self._enviar(200, json.dumps(vista_previa(nombre), ensure_ascii=False).encode("utf-8"),
@@ -1496,7 +1889,10 @@ class Manejador(BaseHTTPRequestHandler):
         try:
             n = int(self.headers.get("Content-Length") or 0)
             datos = json.loads(self.rfile.read(n).decode("utf-8")) if n else {}
-            if ruta == "/api/voz":
+            if ruta == "/api/uso":
+                UP.guardar(datos.get("eventos"))
+                self._enviar(204, b"", "text/plain")
+            elif ruta == "/api/voz":
                 cfg = AV.guardar_config({k: datos[k] for k in ("activo", "destino") if k in datos})
                 self._enviar(200, json.dumps(cfg).encode("utf-8"), "application/json")
             elif ruta == "/api/ocultar":
@@ -1504,6 +1900,9 @@ class Manejador(BaseHTTPRequestHandler):
                              "application/json")
             elif ruta == "/api/muestra":
                 self._enviar(200, json.dumps(muestra(str(datos.get("video", "")), lanzar=True), ensure_ascii=False).encode("utf-8"),
+                             "application/json; charset=utf-8")
+            elif ruta == "/api/montaje/dibujar":
+                self._enviar(200, json.dumps(montaje_dibujar(str(datos.get("video", ""))), ensure_ascii=False).encode("utf-8"),
                              "application/json; charset=utf-8")
             elif ruta == "/api/preview/reiniciar":
                 self._enviar(200, json.dumps(vista_previa(datos.get("video", ""), forzar_reinicio=True),

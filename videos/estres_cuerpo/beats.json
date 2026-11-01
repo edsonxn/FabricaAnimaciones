@@ -1,0 +1,1094 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 11.081,
+  "tipo": "video",
+  "texto": "Un martes cualquiera. Vas en el camión, tarde otra vez, y sientes el pecho apretado. En la oficina, la panza se te revuelve antes de la junta.",
+  "clip_s": 10,
+  "t_medio": 7.066,
+  "texto_a": "Un martes cualquiera. Vas en el camión, tarde otra vez, y sientes el pecho apretado.",
+  "texto_b": "En la oficina, la panza se te revuelve antes de la junta."
+ },
+ {
+  "id": "scene-002",
+  "t0": 11.081,
+  "t1": 22.305,
+  "tipo": "video",
+  "texto": "Por la tarde te duele la quijada, y ni sabías que llevabas horas apretando los dientes. Por momentos todo se ve raro, lejano, como si vieras tu vida desde afuera.",
+  "clip_s": 10,
+  "t_medio": 16.646,
+  "texto_a": "Por la tarde te duele la quijada, y ni sabías que llevabas horas apretando los dientes.",
+  "texto_b": "Por momentos todo se ve raro, lejano, como si vieras tu vida desde afuera."
+ },
+ {
+  "id": "scene-003",
+  "t0": 22.305,
+  "t1": 30.201,
+  "tipo": "video",
+  "texto": "Y justo cuando por fin llegan las vacaciones… te enfermas. No son cinco problemas distintos.",
+  "clip_s": 10,
+  "t_medio": 26.065,
+  "texto_a": "Y justo cuando por fin llegan las vacaciones…",
+  "texto_b": "te enfermas. No son cinco problemas distintos."
+ },
+ {
+  "id": "scene-004",
+  "t0": 30.201,
+  "t1": 43.763,
+  "tipo": "video",
+  "texto": "Es uno solo, y no vive en tu cabeza. Vive en tu cuerpo. Hoy vamos a recorrer los cinco lugares donde el estrés se esconde, qué está pasando ahí dentro, y cómo apagar cada uno.",
+  "clip_s": 10,
+  "t_medio": 35.029,
+  "texto_a": "Es uno solo, y no vive en tu cabeza. Vive en tu cuerpo.",
+  "texto_b": "Hoy vamos a recorrer los cinco lugares donde el estrés se esconde, qué está pasando ahí dentro, y cómo apagar cada uno."
+ },
+ {
+  "id": "scene-005",
+  "t0": 43.763,
+  "t1": 51.519,
+  "tipo": "video",
+  "texto": "Primero, conoce a la responsable. Dentro de tu cerebro hay una alarma del tamaño de una almendra: la amígdala.",
+  "clip_s": 10,
+  "t_medio": 46.303,
+  "texto_a": "Primero, conoce a la responsable.",
+  "texto_b": "Dentro de tu cerebro hay una alarma del tamaño de una almendra: la amígdala."
+ },
+ {
+  "id": "scene-006",
+  "t0": 51.519,
+  "t1": 62.582,
+  "tipo": "video",
+  "texto": "Cuando detecta peligro, no pregunta si es un león o un correo de tu jefe. Dispara igual. En segundos, tus glándulas suprarrenales sueltan adrenalina: el corazón acelera,",
+  "clip_s": 10,
+  "t_medio": 57.572,
+  "texto_a": "Cuando detecta peligro, no pregunta si es un león o un correo de tu jefe. Dispara igual.",
+  "texto_b": "En segundos, tus glándulas suprarrenales sueltan adrenalina: el corazón acelera,"
+ },
+ {
+  "id": "scene-007",
+  "t0": 62.582,
+  "t1": 73.041,
+  "tipo": "video",
+  "texto": "los músculos se tensan, la respiración se dispara. Y en unos minutos llega la segunda ola: el cortisol, la hormona que mantiene la alarma encendida.",
+  "clip_s": 10,
+  "t_medio": 66.448,
+  "texto_a": "los músculos se tensan, la respiración se dispara.",
+  "texto_b": "Y en unos minutos llega la segunda ola: el cortisol, la hormona que mantiene la alarma encendida."
+ },
+ {
+  "id": "scene-008",
+  "t0": 73.041,
+  "t1": 76.041,
+  "tipo": "imagen",
+  "texto": "Ese sistema es perfecto para escapar de un depredador."
+ },
+ {
+  "id": "scene-009",
+  "t0": 76.041,
+  "t1": 81.547,
+  "tipo": "imagen",
+  "texto": "Dura unos minutos y luego se apaga. El problema es que hoy el peligro no se va."
+ },
+ {
+  "id": "scene-010",
+  "t0": 81.547,
+  "t1": 84.987,
+  "tipo": "imagen",
+  "texto": "Son el tráfico, las deudas, los mensajes,"
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.987,
+  "t1": 88.803,
+  "tipo": "imagen",
+  "texto": "todos los días. Una alarma que nunca se apaga"
+ },
+ {
+  "id": "scene-012",
+  "t0": 88.803,
+  "t1": 92.743,
+  "tipo": "imagen",
+  "texto": "deja de ser una alarma. Se vuelve el ruido de fondo de tu vida,"
+ },
+ {
+  "id": "scene-013",
+  "t0": 92.743,
+  "t1": 96.189,
+  "tipo": "imagen",
+  "texto": "y tu cuerpo lo paga en lugares muy concretos."
+ },
+ {
+  "id": "scene-014",
+  "t0": 96.189,
+  "t1": 100.849,
+  "tipo": "imagen",
+  "texto": "Por suerte, tu cuerpo también tiene un freno. Un cable larguísimo que baja"
+ },
+ {
+  "id": "scene-015",
+  "t0": 100.849,
+  "t1": 104.129,
+  "tipo": "imagen",
+  "texto": "del cerebro hasta la panza: el nervio vago."
+ },
+ {
+  "id": "scene-016",
+  "t0": 104.129,
+  "t1": 108.379,
+  "tipo": "imagen",
+  "texto": "Vago viene del latín, y significa errante, vagabundo."
+ },
+ {
+  "id": "scene-017",
+  "t0": 108.379,
+  "t1": 113.089,
+  "tipo": "imagen",
+  "texto": "Porque este nervio pasea por casi todo: la garganta, el corazón,"
+ },
+ {
+  "id": "scene-018",
+  "t0": 113.089,
+  "t1": 116.683,
+  "tipo": "imagen",
+  "texto": "los pulmones, el estómago, el intestino."
+ },
+ {
+  "id": "scene-019",
+  "t0": 116.683,
+  "t1": 121.173,
+  "tipo": "imagen",
+  "texto": "Cuando la alarma acelera, el vago es el que dice: tranquilo, ya pasó."
+ },
+ {
+  "id": "scene-020",
+  "t0": 121.173,
+  "t1": 123.719,
+  "tipo": "imagen",
+  "texto": "Descansa y digiere."
+ },
+ {
+  "id": "scene-021",
+  "t0": 123.719,
+  "t1": 127.979,
+  "tipo": "imagen",
+  "texto": "Y las cinco técnicas de hoy tienen algo en común: todas jalan ese"
+ },
+ {
+  "id": "scene-022",
+  "t0": 127.979,
+  "t1": 133.361,
+  "tipo": "imagen",
+  "texto": "freno. Lugar número uno: el pecho."
+ },
+ {
+  "id": "scene-023",
+  "t0": 133.361,
+  "t1": 136.531,
+  "tipo": "imagen",
+  "texto": "Con la alarma encendida, respiras rápido y alto,"
+ },
+ {
+  "id": "scene-024",
+  "t0": 136.531,
+  "t1": 140.049,
+  "tipo": "imagen",
+  "texto": "con la parte de arriba del pecho, como si fueras a correr."
+ },
+ {
+  "id": "scene-025",
+  "t0": 140.049,
+  "t1": 144.649,
+  "tipo": "imagen",
+  "texto": "Hasta los músculos del cuello se ponen a jalar aire. Y esos músculos chiquitos"
+ },
+ {
+  "id": "scene-026",
+  "t0": 144.649,
+  "t1": 148.653,
+  "tipo": "imagen",
+  "texto": "se cansan y se acalambran. Por eso sientes el pecho cerrado,"
+ },
+ {
+  "id": "scene-027",
+  "t0": 148.653,
+  "t1": 153.4,
+  "tipo": "imagen",
+  "texto": "o que el aire no te llena, aunque tus pulmones estén perfectamente bien."
+ },
+ {
+  "id": "scene-028",
+  "t0": 153.4,
+  "t1": 156.53,
+  "tipo": "imagen",
+  "texto": "Y aquí viene la trampa: como sientes que te falta aire,"
+ },
+ {
+  "id": "scene-029",
+  "t0": 156.53,
+  "t1": 161.048,
+  "tipo": "imagen",
+  "texto": "respiras todavía más rápido. Pero en realidad te sobra."
+ },
+ {
+  "id": "scene-030",
+  "t0": 161.048,
+  "t1": 165.078,
+  "tipo": "imagen",
+  "texto": "Al respirar de más, sacas demasiado dióxido de carbono de la sangre."
+ },
+ {
+  "id": "scene-031",
+  "t0": 165.078,
+  "t1": 168.428,
+  "tipo": "imagen",
+  "texto": "Y eso provoca hormigueo en las manos, mareo,"
+ },
+ {
+  "id": "scene-032",
+  "t0": 168.428,
+  "t1": 172.316,
+  "tipo": "imagen",
+  "texto": "y más sensación de ahogo. Tu cuerpo lee esas señales como"
+ },
+ {
+  "id": "scene-033",
+  "t0": 172.316,
+  "t1": 177.851,
+  "tipo": "imagen",
+  "texto": "peligro, y la alarma sube otro escalón. Es un círculo que se alimenta solo."
+ },
+ {
+  "id": "scene-034",
+  "t0": 177.851,
+  "t1": 180.161,
+  "tipo": "imagen",
+  "texto": "Ojo: si el dolor de pecho es fuerte,"
+ },
+ {
+  "id": "scene-035",
+  "t0": 180.161,
+  "t1": 184.171,
+  "tipo": "imagen",
+  "texto": "nuevo, o viene con falta de aire, eso no es para un video."
+ },
+ {
+  "id": "scene-036",
+  "t0": 184.171,
+  "t1": 187.908,
+  "tipo": "imagen",
+  "texto": "Es para urgencias. Pero si es la opresión de siempre,"
+ },
+ {
+  "id": "scene-037",
+  "t0": 187.908,
+  "t1": 192.318,
+  "tipo": "imagen",
+  "texto": "aquí va un dato curioso: cada vez que sacas el aire, tu corazón late"
+ },
+ {
+  "id": "scene-038",
+  "t0": 192.318,
+  "t1": 196.217,
+  "tipo": "imagen",
+  "texto": "un poquito más lento. Al exhalar, el nervio vago"
+ },
+ {
+  "id": "scene-039",
+  "t0": 196.217,
+  "t1": 199.097,
+  "tipo": "imagen",
+  "texto": "pisa el freno. Al inhalar, lo suelta."
+ },
+ {
+  "id": "scene-040",
+  "t0": 199.097,
+  "t1": 205.24,
+  "tipo": "imagen",
+  "texto": "Tu respiración es el pedal. Técnica uno: el suspiro fisiológico."
+ },
+ {
+  "id": "scene-041",
+  "t0": 205.24,
+  "t1": 208.04,
+  "tipo": "imagen",
+  "texto": "Toma aire por la nariz. Y sin soltarlo,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 208.04,
+  "t1": 212.853,
+  "tipo": "imagen",
+  "texto": "toma un poquito más, otra vez por la nariz, hasta llenar del todo."
+ },
+ {
+  "id": "scene-043",
+  "t0": 212.853,
+  "t1": 215.873,
+  "tipo": "imagen",
+  "texto": "Ahora sácalo lento por la boca, largo,"
+ },
+ {
+  "id": "scene-044",
+  "t0": 215.873,
+  "t1": 220.501,
+  "tipo": "imagen",
+  "texto": "hasta vaciarte. En 2023, en la Universidad de Stanford,"
+ },
+ {
+  "id": "scene-045",
+  "t0": 220.501,
+  "t1": 224.061,
+  "tipo": "imagen",
+  "texto": "un centenar de personas practicó una respiración durante 5"
+ },
+ {
+  "id": "scene-046",
+  "t0": 224.061,
+  "t1": 226.468,
+  "tipo": "imagen",
+  "texto": "minutos al día, por un mes."
+ },
+ {
+  "id": "scene-047",
+  "t0": 226.468,
+  "t1": 230.988,
+  "tipo": "imagen",
+  "texto": "Quienes hicieron este suspiro mejoraron su ánimo más que quienes hicieron meditación,"
+ },
+ {
+  "id": "scene-048",
+  "t0": 230.988,
+  "t1": 234.676,
+  "tipo": "imagen",
+  "texto": "y su respiración en reposo se volvió más lenta."
+ },
+ {
+  "id": "scene-049",
+  "t0": 234.676,
+  "t1": 239.136,
+  "tipo": "imagen",
+  "texto": "Dos inhalaciones por la nariz. Una exhalación larga por la boca."
+ },
+ {
+  "id": "scene-050",
+  "t0": 239.136,
+  "t1": 243.803,
+  "tipo": "imagen",
+  "texto": "Con una o dos veces ya se nota."
+ },
+ {
+  "id": "scene-051",
+  "t0": 243.803,
+  "t1": 249.268,
+  "tipo": "imagen",
+  "texto": "Lugar número dos: la panza. En las paredes de tu intestino hay unos 500"
+ },
+ {
+  "id": "scene-052",
+  "t0": 249.268,
+  "t1": 254.538,
+  "tipo": "imagen",
+  "texto": "millones de neuronas. Tantas, que a veces lo llaman el segundo cerebro."
+ },
+ {
+  "id": "scene-053",
+  "t0": 254.538,
+  "t1": 259.208,
+  "tipo": "imagen",
+  "texto": "Y no solo digiere. Ahí se fabrica la mayor parte de la serotonina de tu cuerpo,"
+ },
+ {
+  "id": "scene-054",
+  "t0": 259.208,
+  "t1": 265.197,
+  "tipo": "imagen",
+  "texto": "una de las sustancias que también usa tu cerebro para el ánimo. Y está conectado directo con el primero,"
+ },
+ {
+  "id": "scene-055",
+  "t0": 265.197,
+  "t1": 271.217,
+  "tipo": "imagen",
+  "texto": "por el mismo nervio vago. Lo sorprendente es la dirección: unas 8 de cada 10"
+ },
+ {
+  "id": "scene-056",
+  "t0": 271.217,
+  "t1": 277.514,
+  "tipo": "imagen",
+  "texto": "fibras de ese nervio no bajan órdenes. Suben noticias, de la panza al cerebro."
+ },
+ {
+  "id": "scene-057",
+  "t0": 277.514,
+  "t1": 281.374,
+  "tipo": "imagen",
+  "texto": "Cuando suena la alarma, tu cuerpo decide que digerir puede esperar."
+ },
+ {
+  "id": "scene-058",
+  "t0": 281.374,
+  "t1": 287.135,
+  "tipo": "imagen",
+  "texto": "La sangre se va a los músculos de brazos y piernas. El estómago se vacía más lento,"
+ },
+ {
+  "id": "scene-059",
+  "t0": 287.135,
+  "t1": 292.825,
+  "tipo": "imagen",
+  "texto": "y por eso sientes la comida como piedra. Y el colon, en cambio, a veces se acelera."
+ },
+ {
+  "id": "scene-060",
+  "t0": 292.825,
+  "t1": 299.105,
+  "tipo": "imagen",
+  "texto": "Por eso hay gente que corre al baño antes de un examen. Las famosas mariposas no son poesía."
+ },
+ {
+  "id": "scene-061",
+  "t0": 299.105,
+  "t1": 303.574,
+  "tipo": "imagen",
+  "texto": "Es tu intestino reaccionando a la alarma. Y como las noticias suben,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 303.574,
+  "t1": 309.693,
+  "tipo": "imagen",
+  "texto": "la panza revuelta le confirma al cerebro que algo anda mal. Y la alarma suena más fuerte."
+ },
+ {
+  "id": "scene-063",
+  "t0": 309.693,
+  "t1": 315.544,
+  "tipo": "imagen",
+  "texto": "Técnica dos: respira con la panza. Pon una mano en el pecho y otra en el ombligo."
+ },
+ {
+  "id": "scene-064",
+  "t0": 315.544,
+  "t1": 320.838,
+  "tipo": "imagen",
+  "texto": "Al tomar aire, solo debe subir la mano de abajo, como un globo que se infla."
+ },
+ {
+  "id": "scene-065",
+  "t0": 320.838,
+  "t1": 325.628,
+  "tipo": "imagen",
+  "texto": "Inhala contando hasta 4, y saca el aire contando hasta 6. Así,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 325.628,
+  "t1": 331.444,
+  "tipo": "imagen",
+  "texto": "unas 6 respiraciones por minuto. El diafragma, al bajar, masajea los órganos"
+ },
+ {
+  "id": "scene-067",
+  "t0": 331.444,
+  "t1": 336.211,
+  "tipo": "imagen",
+  "texto": "y estimula el nervio vago justo donde nace la conversación con tu intestino."
+ },
+ {
+  "id": "scene-068",
+  "t0": 336.211,
+  "t1": 342.031,
+  "tipo": "imagen",
+  "texto": "Se usa en tratamientos para problemas digestivos ligados al estrés. Hazlo 5 minutos antes de comer,"
+ },
+ {
+  "id": "scene-069",
+  "t0": 342.031,
+  "t1": 347.097,
+  "tipo": "imagen",
+  "texto": "y tu panza recibe el mensaje: ya puedes trabajar."
+ },
+ {
+  "id": "scene-070",
+  "t0": 347.097,
+  "t1": 353.169,
+  "tipo": "imagen",
+  "texto": "Lugar número tres: la quijada, los hombros y el cuello. Haz una prueba ahora mismo."
+ },
+ {
+  "id": "scene-071",
+  "t0": 353.169,
+  "t1": 358.177,
+  "tipo": "imagen",
+  "texto": "¿Tus dientes se están tocando? ¿Tus hombros están cerca de tus orejas?"
+ },
+ {
+  "id": "scene-072",
+  "t0": 358.177,
+  "t1": 364.376,
+  "tipo": "imagen",
+  "texto": "Si dijiste que sí, no eres el único. La alarma prepara a tus músculos para pelear o huir."
+ },
+ {
+  "id": "scene-073",
+  "t0": 364.376,
+  "t1": 369.844,
+  "tipo": "imagen",
+  "texto": "Los deja tensos, listos, y se le olvida avisarles cuando ya pasó el peligro."
+ },
+ {
+  "id": "scene-074",
+  "t0": 369.844,
+  "t1": 375.404,
+  "tipo": "imagen",
+  "texto": "Mucha gente aprieta los dientes de día sin darse cuenta, frente a la pantalla, en el tráfico,"
+ },
+ {
+  "id": "scene-075",
+  "t0": 375.404,
+  "t1": 379.631,
+  "tipo": "imagen",
+  "texto": "leyendo un mensaje. Esa tensión sube por las sienes y la nuca."
+ },
+ {
+  "id": "scene-076",
+  "t0": 379.631,
+  "t1": 384.898,
+  "tipo": "imagen",
+  "texto": "Y se vuelve el dolor de cabeza más común del mundo: el de tipo tensional."
+ },
+ {
+  "id": "scene-077",
+  "t0": 384.898,
+  "t1": 392.178,
+  "tipo": "imagen",
+  "texto": "Y lo peor: un músculo que lleva horas tenso deja de sentirse tenso. Tu cerebro se acostumbra a la tensión,"
+ },
+ {
+  "id": "scene-078",
+  "t0": 392.178,
+  "t1": 397.348,
+  "tipo": "imagen",
+  "texto": "y la toma por normal. Técnica tres: tensa para soltar."
+ },
+ {
+  "id": "scene-079",
+  "t0": 397.348,
+  "t1": 401.888,
+  "tipo": "imagen",
+  "texto": "Se llama relajación muscular progresiva, y la inventó un médico de Chicago,"
+ },
+ {
+  "id": "scene-080",
+  "t0": 401.888,
+  "t1": 408.345,
+  "tipo": "imagen",
+  "texto": "Edmund Jacobson, hace casi cien años. Aprieta los puños con fuerza, 5 segundos."
+ },
+ {
+  "id": "scene-081",
+  "t0": 408.345,
+  "t1": 413.679,
+  "tipo": "imagen",
+  "texto": "Y suelta de golpe. Quédate 10 segundos sintiendo cómo se aflojan."
+ },
+ {
+  "id": "scene-082",
+  "t0": 413.679,
+  "t1": 419.579,
+  "tipo": "imagen",
+  "texto": "Luego los hombros: súbelos hasta las orejas, aguanta… y déjalos caer."
+ },
+ {
+  "id": "scene-083",
+  "t0": 419.579,
+  "t1": 424.633,
+  "tipo": "imagen",
+  "texto": "Después la quijada: aprieta y suelta, con la boca entreabierta."
+ },
+ {
+  "id": "scene-084",
+  "t0": 424.633,
+  "t1": 430.033,
+  "tipo": "imagen",
+  "texto": "El truco es el contraste. Al tensar a propósito, tu cerebro vuelve a notar la diferencia"
+ },
+ {
+  "id": "scene-085",
+  "t0": 430.033,
+  "t1": 435.316,
+  "tipo": "imagen",
+  "texto": "entre tenso y suelto. Y para la quijada, aprende su posición de descanso:"
+ },
+ {
+  "id": "scene-086",
+  "t0": 435.316,
+  "t1": 440.863,
+  "tipo": "imagen",
+  "texto": "labios juntos, dientes separados, y la lengua tocando suavemente el paladar."
+ },
+ {
+  "id": "scene-087",
+  "t0": 440.863,
+  "t1": 447.83,
+  "tipo": "imagen",
+  "texto": "Los dientes solo deberían tocarse para masticar y tragar. El resto del día, deberían estar separados."
+ },
+ {
+  "id": "scene-088",
+  "t0": 447.83,
+  "t1": 452.93,
+  "tipo": "imagen",
+  "texto": "Pega una nota pequeña en tu monitor o en el espejo. Cada vez que la veas, revisa:"
+ },
+ {
+  "id": "scene-089",
+  "t0": 452.93,
+  "t1": 455.754,
+  "tipo": "imagen",
+  "texto": "¿dientes separados? ¿hombros abajo?"
+ },
+ {
+  "id": "scene-090",
+  "t0": 455.754,
+  "t1": 464.143,
+  "tipo": "imagen",
+  "texto": "Y si te despiertas con la quijada adolorida o los dientes desgastados, puede que también aprietes de noche. Eso ya es para el dentista."
+ },
+ {
+  "id": "scene-091",
+  "t0": 464.143,
+  "t1": 468.263,
+  "tipo": "imagen",
+  "texto": "Un análisis de 27 estudios encontró que este tipo de entrenamiento"
+ },
+ {
+  "id": "scene-092",
+  "t0": 468.263,
+  "t1": 473.763,
+  "tipo": "imagen",
+  "texto": "baja la ansiedad de forma clara. Y solo toma unos minutos."
+ },
+ {
+  "id": "scene-093",
+  "t0": 473.763,
+  "t1": 478.403,
+  "tipo": "imagen",
+  "texto": "Lugar número cuatro. Este es el más raro, y el que más asusta:"
+ },
+ {
+  "id": "scene-094",
+  "t0": 478.403,
+  "t1": 483.926,
+  "tipo": "imagen",
+  "texto": "sentirte fuera de tu cuerpo. Ves tus manos y parecen de otra persona."
+ },
+ {
+  "id": "scene-095",
+  "t0": 483.926,
+  "t1": 490.766,
+  "tipo": "imagen",
+  "texto": "El mundo se ve plano, como detrás de un vidrio, como una película. Si te ha pasado, respira:"
+ },
+ {
+  "id": "scene-096",
+  "t0": 490.766,
+  "t1": 496.936,
+  "tipo": "imagen",
+  "texto": "tiene nombre. Se llama despersonalización, y es mucho más común de lo que crees."
+ },
+ {
+  "id": "scene-097",
+  "t0": 496.936,
+  "t1": 501.896,
+  "tipo": "imagen",
+  "texto": "Los estudios calculan que entre un cuarto y tres cuartos de la gente lo ha sentido alguna vez,"
+ },
+ {
+  "id": "scene-098",
+  "t0": 501.896,
+  "t1": 505.931,
+  "tipo": "imagen",
+  "texto": "casi siempre en épocas de mucho estrés o de poco sueño."
+ },
+ {
+  "id": "scene-099",
+  "t0": 505.931,
+  "t1": 512.191,
+  "tipo": "imagen",
+  "texto": "Una explicación es que, cuando la alarma se queda demasiado tiempo al máximo, el cerebro baja el volumen"
+ },
+ {
+  "id": "scene-100",
+  "t0": 512.191,
+  "t1": 517.809,
+  "tipo": "imagen",
+  "texto": "de las emociones y de las señales del cuerpo. Funciona como un fusible: para que no te quemes,"
+ },
+ {
+  "id": "scene-101",
+  "t0": 517.809,
+  "t1": 522.554,
+  "tipo": "imagen",
+  "texto": "desconecta un poco. Y esa desconexión se siente como estar lejos."
+ },
+ {
+  "id": "scene-102",
+  "t0": 522.554,
+  "t1": 527.792,
+  "tipo": "imagen",
+  "texto": "No es que te estés volviendo loco. Es un mecanismo de protección que se pasó de largo."
+ },
+ {
+  "id": "scene-103",
+  "t0": 527.792,
+  "t1": 533.912,
+  "tipo": "imagen",
+  "texto": "Lo que lo empeora es el miedo a la sensación misma. Te asustas de sentirte raro, la alarma sube,"
+ },
+ {
+  "id": "scene-104",
+  "t0": 533.912,
+  "t1": 539.067,
+  "tipo": "imagen",
+  "texto": "y el fusible desconecta todavía más. Por eso saber qué es ya ayuda:"
+ },
+ {
+  "id": "scene-105",
+  "t0": 539.067,
+  "t1": 545.057,
+  "tipo": "imagen",
+  "texto": "le quita gasolina a ese círculo. Técnica cuatro: agua fría en la cara."
+ },
+ {
+  "id": "scene-106",
+  "t0": 545.057,
+  "t1": 550.777,
+  "tipo": "imagen",
+  "texto": "Llena un recipiente con agua fría, o usa una toalla mojada con hielo, y ponla sobre la frente,"
+ },
+ {
+  "id": "scene-107",
+  "t0": 550.777,
+  "t1": 554.855,
+  "tipo": "imagen",
+  "texto": "los ojos y las mejillas durante unos 30 segundos."
+ },
+ {
+  "id": "scene-108",
+  "t0": 554.855,
+  "t1": 559.795,
+  "tipo": "imagen",
+  "texto": "Es el reflejo de inmersión, el mismo que tienen los delfines y las focas al sumergirse."
+ },
+ {
+  "id": "scene-109",
+  "t0": 559.795,
+  "t1": 567.889,
+  "tipo": "imagen",
+  "texto": "Los nervios de tu cara mandan la señal y el nervio vago frena el corazón. Los terapeutas lo usan para bajar una crisis en segundos."
+ },
+ {
+  "id": "scene-110",
+  "t0": 567.889,
+  "t1": 572.078,
+  "tipo": "imagen",
+  "texto": "Y el frío te devuelve, de golpe, a tu piel."
+ },
+ {
+  "id": "scene-111",
+  "t0": 572.078,
+  "t1": 577.818,
+  "tipo": "imagen",
+  "texto": "Después, ancla tus sentidos: nombra 5 cosas que ves, 4 que puedes tocar,"
+ },
+ {
+  "id": "scene-112",
+  "t0": 577.818,
+  "t1": 582.196,
+  "tipo": "imagen",
+  "texto": "3 que oyes, 2 que hueles y 1 que saboreas."
+ },
+ {
+  "id": "scene-113",
+  "t0": 582.196,
+  "t1": 588.714,
+  "tipo": "imagen",
+  "texto": "Hay poca investigación formal sobre este conteo, pero obliga al cerebro a volver a lo que tiene enfrente."
+ },
+ {
+  "id": "scene-114",
+  "t0": 588.714,
+  "t1": 594.394,
+  "tipo": "imagen",
+  "texto": "Si esa sensación no se va en semanas, o te pasa sin estrés de por medio, vale la pena contarlo"
+ },
+ {
+  "id": "scene-115",
+  "t0": 594.394,
+  "t1": 600.037,
+  "tipo": "imagen",
+  "texto": "a un profesional. Lugar número cinco. El que no se siente,"
+ },
+ {
+  "id": "scene-116",
+  "t0": 600.037,
+  "t1": 605.36,
+  "tipo": "imagen",
+  "texto": "pero se nota: tus defensas. En 1991, en Inglaterra,"
+ },
+ {
+  "id": "scene-117",
+  "t0": 605.36,
+  "t1": 609.464,
+  "tipo": "imagen",
+  "texto": "unos investigadores hicieron algo que hoy suena a película."
+ },
+ {
+  "id": "scene-118",
+  "t0": 609.464,
+  "t1": 617.887,
+  "tipo": "imagen",
+  "texto": "Reunieron a 394 voluntarios sanos, les midieron el estrés, y les pusieron en la nariz gotas con virus del resfriado."
+ },
+ {
+  "id": "scene-119",
+  "t0": 617.887,
+  "t1": 622.207,
+  "tipo": "imagen",
+  "texto": "El resultado fue como una escalera: cuanto más estrés tenía alguien,"
+ },
+ {
+  "id": "scene-120",
+  "t0": 622.207,
+  "t1": 626.676,
+  "tipo": "imagen",
+  "texto": "más probable era que se infectara y se enfermara. Una explicación:"
+ },
+ {
+  "id": "scene-121",
+  "t0": 626.676,
+  "t1": 632.736,
+  "tipo": "imagen",
+  "texto": "el cortisol en dosis cortas activa tus defensas, pero cuando se queda alto semanas y semanas,"
+ },
+ {
+  "id": "scene-122",
+  "t0": 632.736,
+  "t1": 638.32,
+  "tipo": "imagen",
+  "texto": "las desordena y las frena. Y no solo con virus. En 1995,"
+ },
+ {
+  "id": "scene-123",
+  "t0": 638.32,
+  "t1": 643.82,
+  "tipo": "imagen",
+  "texto": "en la Universidad Estatal de Ohio, Janice Kiecolt-Glaser le hizo una pequeña herida"
+ },
+ {
+  "id": "scene-124",
+  "t0": 643.82,
+  "t1": 648.654,
+  "tipo": "imagen",
+  "texto": "en el brazo a dos grupos de mujeres. Un grupo cuidaba de un familiar con demencia,"
+ },
+ {
+  "id": "scene-125",
+  "t0": 648.654,
+  "t1": 652.447,
+  "tipo": "imagen",
+  "texto": "con estrés todos los días. El otro, no."
+ },
+ {
+  "id": "scene-126",
+  "t0": 652.447,
+  "t1": 660.218,
+  "tipo": "imagen",
+  "texto": "A las cuidadoras, la misma herida les tardó 9 días más en cerrar. Casi una cuarta parte más de tiempo."
+ },
+ {
+  "id": "scene-127",
+  "t0": 660.218,
+  "t1": 665.948,
+  "tipo": "imagen",
+  "texto": "Y ese famoso resfriado de vacaciones tiene su lógica: semanas de alarma, y en cuanto aflojas,"
+ },
+ {
+  "id": "scene-128",
+  "t0": 665.948,
+  "t1": 672.097,
+  "tipo": "imagen",
+  "texto": "tus defensas ya iban cansadas. Técnica cinco: abrazos. En serio."
+ },
+ {
+  "id": "scene-129",
+  "t0": 672.097,
+  "t1": 676.157,
+  "tipo": "imagen",
+  "texto": "En 2015, en la Universidad Carnegie Mellon, Sheldon Cohen,"
+ },
+ {
+  "id": "scene-130",
+  "t0": 676.157,
+  "t1": 682.44,
+  "tipo": "imagen",
+  "texto": "uno de los autores de aquel estudio, llamó a 404 adultos durante 14 noches."
+ },
+ {
+  "id": "scene-131",
+  "t0": 682.44,
+  "t1": 687.38,
+  "tipo": "imagen",
+  "texto": "Les preguntaba si habían tenido peleas ese día, y cuántos abrazos habían recibido."
+ },
+ {
+  "id": "scene-132",
+  "t0": 687.38,
+  "t1": 691.043,
+  "tipo": "imagen",
+  "texto": "Luego, otra vez, gotas con virus."
+ },
+ {
+  "id": "scene-133",
+  "t0": 691.043,
+  "t1": 697.306,
+  "tipo": "imagen",
+  "texto": "Los que se sentían apoyados estaban más protegidos contra el riesgo de infección que traen los conflictos."
+ },
+ {
+  "id": "scene-134",
+  "t0": 697.306,
+  "t1": 703.01,
+  "tipo": "imagen",
+  "texto": "Y entre los que sí se enfermaron, los que recibían más abrazos tuvieron síntomas más leves."
+ },
+ {
+  "id": "scene-135",
+  "t0": 703.01,
+  "t1": 709.81,
+  "tipo": "imagen",
+  "texto": "El contacto con alguien de confianza le dice a tu alarma algo que ninguna pastilla le dice igual: no estás solo,"
+ },
+ {
+  "id": "scene-136",
+  "t0": 709.81,
+  "t1": 715.86,
+  "tipo": "imagen",
+  "texto": "puedes bajar la guardia. Un abrazo largo, una llamada, una comida con alguien que te quiere."
+ },
+ {
+  "id": "scene-137",
+  "t0": 715.86,
+  "t1": 720.43,
+  "tipo": "imagen",
+  "texto": "Es medicina, aunque no venga en caja."
+ },
+ {
+  "id": "scene-138",
+  "t0": 720.43,
+  "t1": 725.801,
+  "tipo": "imagen",
+  "texto": "Recapitulemos. Cinco lugares, cinco frenos. Pecho apretado:"
+ },
+ {
+  "id": "scene-139",
+  "t0": 725.801,
+  "t1": 730.896,
+  "tipo": "imagen",
+  "texto": "suspiro fisiológico, dos inhalaciones y una exhalación larga."
+ },
+ {
+  "id": "scene-140",
+  "t0": 730.896,
+  "t1": 736.907,
+  "tipo": "imagen",
+  "texto": "Panza revuelta: respira con el abdomen, 4 para entrar y 6 para salir."
+ },
+ {
+  "id": "scene-141",
+  "t0": 736.907,
+  "t1": 742.198,
+  "tipo": "imagen",
+  "texto": "Quijada y hombros: tensa y suelta, músculo por músculo."
+ },
+ {
+  "id": "scene-142",
+  "t0": 742.198,
+  "t1": 747.968,
+  "tipo": "imagen",
+  "texto": "Sensación de estar lejos: agua fría en la cara, y cinco cosas que ves."
+ },
+ {
+  "id": "scene-143",
+  "t0": 747.968,
+  "t1": 753.179,
+  "tipo": "imagen",
+  "texto": "Y para tus defensas: abrazos, compañía, alguien de confianza."
+ },
+ {
+  "id": "scene-144",
+  "t0": 753.179,
+  "t1": 758.639,
+  "tipo": "imagen",
+  "texto": "No tienes que hacerlas todas hoy. Escoge la del lugar donde más te pega el estrés, y practícala"
+ },
+ {
+  "id": "scene-145",
+  "t0": 758.639,
+  "t1": 763.553,
+  "tipo": "imagen",
+  "texto": "un minuto al día, cuando estés tranquilo. Así, cuando llegue el mal momento,"
+ },
+ {
+  "id": "scene-146",
+  "t0": 763.553,
+  "t1": 769.184,
+  "tipo": "imagen",
+  "texto": "tu cuerpo ya conoce el camino. Un freno que se practica responde más rápido."
+ },
+ {
+  "id": "scene-147",
+  "t0": 769.184,
+  "t1": 775.024,
+  "tipo": "imagen",
+  "texto": "Ninguna sustituye a un médico si algo se queda o empeora. Pero todas jalan el mismo cable:"
+ },
+ {
+  "id": "scene-148",
+  "t0": 775.024,
+  "t1": 780.432,
+  "tipo": "imagen",
+  "texto": "el freno que tu cuerpo ya trae de fábrica."
+ },
+ {
+  "id": "scene-149",
+  "t0": 780.432,
+  "t1": 787.132,
+  "tipo": "imagen",
+  "texto": "Un martes cualquiera. Vas en el camión, tarde otra vez, y sientes el pecho apretado."
+ },
+ {
+  "id": "scene-150",
+  "t0": 787.132,
+  "t1": 791.632,
+  "tipo": "imagen",
+  "texto": "Pero esta vez sabes lo que es. Tomas aire dos veces por la nariz,"
+ },
+ {
+  "id": "scene-151",
+  "t0": 791.632,
+  "t1": 795.913,
+  "tipo": "imagen",
+  "texto": "y lo sueltas despacio. La alarma sigue ahí."
+ },
+ {
+  "id": "scene-152",
+  "t0": 795.913,
+  "t1": 802.5,
+  "tipo": "imagen",
+  "texto": "Solo que ahora… tú sabes dónde está el freno."
+ }
+]

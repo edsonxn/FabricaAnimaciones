@@ -1,0 +1,22 @@
+{
+  "canal_id": "UC_PEGA_AQUI_EL_ID_DE_TU_CANAL",
+  "nombre": "Nombre visible de tu canal",
+  "estilo": "qué estilo de CLAUDE.md usa este canal (p. ej. Kurzgesagt isométrico + mapas con relieve) y con qué voz",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "14:00",
+    "utc": "20:00",
+    "dias": ["miércoles", "jueves", "viernes"],
+    "separacion_min_horas": 96,
+    "ciclo_dias": 5
+  },
+  "publicados": [],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": ["tema principal del canal", "otra búsqueda que haría tu público"],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 1000
+  }
+}

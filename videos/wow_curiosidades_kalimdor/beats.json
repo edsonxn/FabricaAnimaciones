@@ -1,0 +1,866 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.386,
+  "tipo": "video",
+  "texto": "En Kalimdor hay un goblin que revive kodos moribundos para vendérselos a una caravana, y un diablillo que te reta a perseguirlo recitando rimas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.386,
+  "t1": 17.305,
+  "tipo": "video",
+  "texto": "Y hay una puerta de los titanes en Tanaris que se quedó seis años cerrada, con un mensaje que venía a decir vuelva pronto. Todo eso está en el World of Warcraft original,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.305,
+  "t1": 25.739,
+  "tipo": "video",
+  "texto": "y vuelve el cuatro de noviembre con World of Warcraft Forever. Son treinta curiosidades en cuenta regresiva, y la número uno es la más rara de todas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.739,
+  "t1": 33.73,
+  "tipo": "video",
+  "texto": "una que tiene que ver con unos visitantes que todavía no llegan. Número treinta. En La Masacre, en Feralas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.73,
+  "t1": 43.432,
+  "tipo": "video",
+  "texto": "la llave de una puerta la tiene un diablillo que quiere jugar. Se llama Pusillín, te pregunta si quieres jugar, apestoso, y sale corriendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.432,
+  "t1": 51.458,
+  "tipo": "video",
+  "texto": "Cada vez que lo alcanzas te suelta una rima y vuelve a escapar, cuatro veces seguidas, con el grupo entero persiguiéndolo por los pasillos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.458,
+  "t1": 60.43,
+  "tipo": "video",
+  "texto": "Cuando por fin se cansa, crece de golpe y llama a cuatro diablillos de fuego. Esa llave no se entrega sin berrinche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.43,
+  "t1": 70.638,
+  "tipo": "video",
+  "texto": "Número veintinueve. En Desolace está el cementerio de los kodos, adonde estas bestias caminan cuando sienten que van a morir, como en la leyenda del cementerio de elefantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.638,
+  "t1": 77.415,
+  "tipo": "video",
+  "texto": "Y en medio de los huesos hay un goblin que vio ahí un modelo de negocio. Con un aparato que se llama, con todas sus letras,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.415,
+  "t1": 85.43,
+  "tipo": "video",
+  "texto": "kombobulador kodo, les da una descarga a los kodos moribundos, los deja domados y te pide tres para su caravana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.43,
+  "t1": 91.755,
+  "tipo": "video",
+  "texto": "Número veintiocho. En el Cráter de Un'Goro hay una gorila robot que se perdió haciendo de espía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 91.755,
+  "t1": 103.17,
+  "tipo": "video",
+  "texto": "La construyó la inventora Karna Tripirrem para infiltrarse entre los simios del cráter, con gemas por ojos para ver todo lo que ella veía. En inglés se llama A-Me 01, que se lee igual que Amy,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.17,
+  "t1": 112.816,
+  "tipo": "video",
+  "texto": "la gorila que habla por señas en Congo. Lo último que vio antes de perder contacto fue a un macho alfa corriendo hacia ella para saludarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.816,
+  "t1": 119.729,
+  "tipo": "video",
+  "texto": "Número veintisiete, y vamos con la pregunta más repetida de World of Warcraft, la de dónde está la esposa de Mankrik.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.729,
+  "t1": 125.986,
+  "tipo": "video",
+  "texto": "Mankrik es un orco de El Cruce que perdió a su esposa peleando contra los jabaespines, y te pide que la busques.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 125.986,
+  "t1": 137.322,
+  "tipo": "video",
+  "texto": "La misión no decía dónde, y el chat de Los Baldíos pasó años lleno de gente preguntando lo mismo, entre peleas sobre Metallica. La respuesta estaba al sur, junto a dos chozas, y no era buena,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.322,
+  "t1": 146.81,
+  "tipo": "video",
+  "texto": "porque lo que encuentras es su cuerpo. Número veintiséis. En una cueva junto al volcán de Un'Goro hay un goblin desmayado por el calor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.81,
+  "t1": 155.824,
+  "tipo": "video",
+  "texto": "Se llama Ringo, y su misión de escolta se llama, en inglés, A Little Help From My Friends, como la canción de los Beatles que canta Ringo Starr.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.824,
+  "t1": 165.25,
+  "tipo": "video",
+  "texto": "Y las instrucciones son de lo mejor del juego, porque dicen que si Ringo se siente débil, le des una cachetada, y si se desmaya, le eches agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 165.25,
+  "t1": 171.65,
+  "tipo": "video",
+  "texto": "Número veinticinco. Si jugaste Classic, seguro leíste en el chat la frase de alguien dijo Thunderfury,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.65,
+  "t1": 179.096,
+  "tipo": "video",
+  "texto": "la excusa para enlazar la espada legendaria más famosa del juego. Sus dos ataduras caen de Garr y del barón Geddon en el Núcleo de Magma,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 179.096,
+  "t1": 189.626,
+  "tipo": "video",
+  "texto": "pero la invocación se hace en Silithus, con el alto señor Demitrian. Ahí aparece el príncipe Thunderaan, el señor del aire al que Ragnaros se comió casi entero después de que lo traicionaran,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.626,
+  "t1": 199.437,
+  "tipo": "video",
+  "texto": "precisamente, Garr y Geddon. Número veinticuatro. La capital de la Horda tiene una secta de adoradores de demonios en el sótano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 199.437,
+  "t1": 206.712,
+  "tipo": "video",
+  "texto": "Debajo de Orgrimmar está la Sima Ígnea, donde una facción del Consejo de la Sombra vive con un demonio llamado Taragaman.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.712,
+  "t1": 214.894,
+  "tipo": "video",
+  "texto": "Y en la entrada está Neeru Hojafuego, el líder secreto del Filo Ardiente, que manda novatos ahí abajo para poner a prueba a sus aliados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.894,
+  "t1": 222.93,
+  "tipo": "video",
+  "texto": "Thrall se entera gracias a ti, manda matar a los líderes de la secta, y a Neeru lo deja seguir con su tienda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.93,
+  "t1": 229.774,
+  "tipo": "video",
+  "texto": "Número veintitrés. Las Cuevas de los Lamentos son, literalmente, la pesadilla de un druida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 229.774,
+  "t1": 240.719,
+  "tipo": "video",
+  "texto": "Naralex quiso usar el Sueño Esmeralda para devolverle a Los Baldíos el bosque que tuvieron, y la Pesadilla Esmeralda lo atrapó. Casi todos sus discípulos enloquecieron y formaron los Druidas del Colmillo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.719,
+  "t1": 250.43,
+  "tipo": "video",
+  "texto": "los jefes que te esperan dentro. Así que la primera mazmorra de muchos jugadores de la Horda es un proyecto de reforestación que salió muy mal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.43,
+  "t1": 255.843,
+  "tipo": "video",
+  "texto": "Número veintidós. Para llegar a Ragnaros necesitabas agua de Azshara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 255.843,
+  "t1": 263.773,
+  "tipo": "video",
+  "texto": "En el Núcleo de Magma hay siete runas de fuego, y sin apagarlas no aparece el mayordomo Executus, que te abre paso hasta él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 263.773,
+  "t1": 272.711,
+  "tipo": "video",
+  "texto": "Para apagarlas había que ir a unas islas de Azshara a pedirle una quintaesencia al duque Hydraxis, de los Señores del Agua, y volver cada semana a por otra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 272.711,
+  "t1": 283.51,
+  "tipo": "video",
+  "texto": "Siete runas, y una banda entera esperando a que el de los recados volviera del otro lado del continente. Número veintiuno. Al noroeste de Teldrassil,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.51,
+  "t1": 293.02,
+  "tipo": "video",
+  "texto": "más allá del mapa, hay una isla que no deberías poder pisar. Es la Isla de los Maestros de Juego, donde los GM de Blizzard entraban y salían con sus personajes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.02,
+  "t1": 300.372,
+  "tipo": "video",
+  "texto": "y lo que hay es una mansión con el modelo del cuartel de Ventormenta. Como la rodea agua sin mapa, solo se llegaba con trampas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.372,
+  "t1": 308.931,
+  "tipo": "video",
+  "texto": "y cada visita era una invitación a que Blizzard revisara tu cuenta. Número veinte. Para llamar al jefe secreto de Zul'Farrak,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.931,
+  "t1": 319.821,
+  "tipo": "video",
+  "texto": "en Tanaris, había que viajar al otro continente. Es Gahz'rilla, una hidra gigante que los trols de arena adoraban como a un semidiós, y se invocaba con un mazo muy concreto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 319.821,
+  "t1": 327.32,
+  "tipo": "video",
+  "texto": "Ese mazo se hacía en las Tierras del Interior, quitándoselo a una guardiana del altar de Zul y consagrándolo en lo alto de Jintha'Alor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.32,
+  "t1": 332.93,
+  "tipo": "video",
+  "texto": "Todo para volver al desierto y llamar a una hidra que te iba a matar de todos modos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 332.93,
+  "t1": 344.084,
+  "tipo": "video",
+  "texto": "Número diecinueve. En el Cráter de Un'Goro hay un gnomo guerrero sin memoria que es, básicamente, Link. Se llama Linken, apareció junto a una balsa rota y no recuerda quién es,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.084,
+  "t1": 351.129,
+  "tipo": "video",
+  "texto": "igual que Link al principio de Link's Awakening. Su primera misión se llama, en inglés, It's a Secret to Everybody,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.129,
+  "t1": 362.93,
+  "tipo": "video",
+  "texto": "la frase del moblin del primer Zelda, y al final te da su espada o su bumerán. Un gnomo sin interés por los inventos que va con espada y bumerán, así que Blizzard no se escondió mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.93,
+  "t1": 367.419,
+  "tipo": "video",
+  "texto": "Número dieciocho. Desolace no siempre fue un desierto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.419,
+  "t1": 377.14,
+  "tipo": "video",
+  "texto": "Era una pradera, hasta que unos chamanes tauren despertaron por error a la princesa Theradras, una elemental de tierra que le chupó la vida a la región para recuperar fuerzas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.14,
+  "t1": 385.138,
+  "tipo": "video",
+  "texto": "Zaetar, el primer hijo de Cenarius, fue a detenerla y terminó emparejado con ella, y de esa pareja nacieron los centauros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.138,
+  "t1": 394.167,
+  "tipo": "video",
+  "texto": "Unos hijos tan encantadores que mataron a su padre. Los tauren le pusieron Desolace a lo que quedó. Número diecisiete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.167,
+  "t1": 406.191,
+  "tipo": "video",
+  "texto": "La montura más sufrida de Classic estaba en Cuna del Invierno. Es el sable de escarcha, un tigre blanco solo para la Alianza, de una facción de apenas dos elfos de la noche en lo alto de una roca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 406.191,
+  "t1": 412.121,
+  "tipo": "video",
+  "texto": "Había que subir de neutral a exaltado con misiones repetibles, matando furbolgs y gigantes una y otra vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.121,
+  "t1": 420.43,
+  "tipo": "video",
+  "texto": "y al final pagar la montura. La Horda no tuvo nada parecido hasta el parche tres punto dos, con un raptor en Un'Goro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.43,
+  "t1": 428.532,
+  "tipo": "video",
+  "texto": "Número dieciséis. En la costa de Durotar, a un paso de la capital de la Horda, hay un fuerte humano que nunca aceptó la paz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 428.532,
+  "t1": 436.325,
+  "tipo": "video",
+  "texto": "Es el Fuerte de Tiragarde, que levantó el almirante Daelin Valiente, el padre de Jaina, para seguir la guerra contra los orcos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 436.325,
+  "t1": 445.91,
+  "tipo": "video",
+  "texto": "Daelin murió, pero sus tropas siguen atrincheradas en las ruinas con el teniente Benedict al mando. Mientras tanto, su hija gobierna Theramore en paz con Thrall.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 445.91,
+  "t1": 455.626,
+  "tipo": "video",
+  "texto": "Al parecer, nadie le avisó al teniente. Número quince. En La Masacre puedes terminar coronado rey de los ogros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.626,
+  "t1": 462.231,
+  "tipo": "video",
+  "texto": "Si llegas al rey Gordok dejando vivos a los demás jefes, al matarlo los ogros te proclaman su nuevo rey.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 462.231,
+  "t1": 471.732,
+  "tipo": "video",
+  "texto": "Para pasar al último guardia te pones el disfraz de ogro Gordok, y Wowpedia recomienda probar a bailar con él puesto. El premio es un cofre de tributo mejor que el botín normal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 471.732,
+  "t1": 477.81,
+  "tipo": "video",
+  "texto": "cerveza y beneficios de dos horas, porque la monarquía tiene sus ventajas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 477.81,
+  "t1": 488.68,
+  "tipo": "video",
+  "texto": "Número catorce. Las espinas gigantes del sur de Los Baldíos son los restos de un dios. Agamaggan, el Gran Jabalí, luchó contra la Legión Ardiente en la Guerra de los Ancestros,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 488.68,
+  "t1": 499.341,
+  "tipo": "video",
+  "texto": "y cayó para que Malfurion llegara al Pozo de la Eternidad. De sus restos nació el Rajacieno, el laberinto de zarzas donde viven los jabaespines, que lo adoran como a su padre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.341,
+  "t1": 505.43,
+  "tipo": "video",
+  "texto": "Así que las mazmorras de Rajacieno son, técnicamente, un cadáver muy grande.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 505.43,
+  "t1": 515.737,
+  "tipo": "video",
+  "texto": "Número trece. En Frondavil crecen unas flores que valían más que muchas piezas épicas. Son las flores cantoras, y una flor limpia le da su serenata a todo el que pase,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 515.737,
+  "t1": 525.619,
+  "tipo": "video",
+  "texto": "un beneficio de combate de los buenos. Por eso las bandas de Classic iban de flor en flor antes del Núcleo de Magma, sumando beneficios de mundo como quien llena el carrito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.619,
+  "t1": 532.93,
+  "tipo": "video",
+  "texto": "Y como se pierden al morir, había gente que hacía la banda entera con miedo a acercarse a cualquier cosa con dientes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.93,
+  "t1": 538.212,
+  "tipo": "video",
+  "texto": "Número doce. En las salinas de Las Mil Agujas había una pista de carreras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 538.212,
+  "t1": 548.867,
+  "tipo": "video",
+  "texto": "La construyeron el goblin Pozzik y el gnomo Fizzle para demostrar de una vez qué ingeniería era mejor, la goblin o la gnoma. Cada equipo tenía su coche cohete, las carreras eran diarias,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 548.867,
+  "t1": 557.692,
+  "tipo": "video",
+  "texto": "y había público de los dos bandos y apuestas. Cataclysm inundó la zona y la pista se fue al fondo, así que la pregunta se quedó, literalmente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.692,
+  "t1": 566.39,
+  "tipo": "video",
+  "texto": "bajo el agua. Número once. La tribu Lanza Negra perdió su hogar por culpa del mejor amigo de su líder.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.39,
+  "t1": 573.957,
+  "tipo": "video",
+  "texto": "Zalazane, el médico brujo y mejor amigo de Vol'jin, se volvió contra los suyos y tomó las Islas del Eco con sus maleficios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 573.957,
+  "t1": 584.173,
+  "tipo": "video",
+  "texto": "Por eso, en Classic, los trols de la Horda viven en el poblado Sen'jin, mirando unas islas que ya no son suyas. Y Zalazane siguió ahí, rodeado de trols hechizados,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.173,
+  "t1": 591.35,
+  "tipo": "video",
+  "texto": "hasta que Vol'jin juntó a toda la Horda para echarlo, ya en vísperas de Cataclysm. Número diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 591.35,
+  "t1": 599.023,
+  "tipo": "video",
+  "texto": "En Vista Eterna, en Cuna del Invierno, una goblin llamada Umi te pide ayuda para gastarles una broma a sus amigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.023,
+  "t1": 609.938,
+  "tipo": "video",
+  "texto": "Quiere fabricar un yeti mecánico, y primero te manda a cazar yetis de verdad por sus pieles. Luego te da el robot para asustar a tres amigos, en Vista Eterna, en Gadgetzan y en Un'Goro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 609.938,
+  "t1": 617.338,
+  "tipo": "video",
+  "texto": "repartidos por medio continente. De premio te quedas el yeti, que pega muy fuerte, pero si lo sacas en un pueblo neutral,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.338,
+  "t1": 628.36,
+  "tipo": "video",
+  "texto": "los guardias te atacan a ti. Número nueve. En un cañón al sur de Vallefresno, lleno de demonios, hay un monumento al que los orcos van en peregrinación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.36,
+  "t1": 635.048,
+  "tipo": "video",
+  "texto": "Ahí Grom Grito Infernal le clavó el hacha en el pecho a Mannoroth, el demonio cuya sangre había esclavizado a su pueblo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.048,
+  "t1": 643.659,
+  "tipo": "video",
+  "texto": "La explosión se llevó a los dos, y los orcos quedaron libres de la maldición de la Legión. Y los demonios menores siguen ahí, rondando el monumento,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.659,
+  "t1": 654.084,
+  "tipo": "video",
+  "texto": "como si nadie les hubiera avisado de que la guerra terminó. Número ocho. El árbol donde empiezan los elfos de la noche venía con un defecto de fábrica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 654.084,
+  "t1": 661.518,
+  "tipo": "video",
+  "texto": "Teldrassil lo plantaron Fandral Corzocelada y sus druidas sin la bendición de los Aspectos dragón, la que sí tuvo Nordrassil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 661.518,
+  "t1": 668.963,
+  "tipo": "video",
+  "texto": "Por eso era vulnerable a la Pesadilla Esmeralda, y se nota desde el nivel uno, con furbolgs enloquecidos por un musgo vil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 668.963,
+  "t1": 676.196,
+  "tipo": "video",
+  "texto": "Y el que plantó el árbol, Fandral, todavía va a salir en este video. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 676.196,
+  "t1": 685.806,
+  "tipo": "video",
+  "texto": "Cuando se abrieron las puertas de Ahn'Qiraj, en cada servidor solo un puñado de jugadores se llevó el gran premio. Todo el servidor juntó materiales para el esfuerzo de guerra,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 685.806,
+  "t1": 695.313,
+  "tipo": "video",
+  "texto": "y alguien tenía que completar la cadena del cetro, que solo sacaban las mejores hermandades. Esa persona tocaba el gong, se llevaba el título de Señor de los Escarabajos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.313,
+  "t1": 705.43,
+  "tipo": "video",
+  "texto": "y la montura del cristal resonador negro qiraji, y empezaba una guerra de diez horas. El primer servidor en lograrlo fue Medivh, en enero de dos mil seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.43,
+  "t1": 713.248,
+  "tipo": "video",
+  "texto": "Número seis. Durante todo Classic, Malfurion Tempestira está en coma, y su cuerpo descansa en Claro de la Luna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.248,
+  "t1": 720.416,
+  "tipo": "video",
+  "texto": "Tras la Tercera Guerra se fue a meditar a su túmulo, y Tyrande lo encontró ahí con el espíritu perdido en el Sueño Esmeralda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.416,
+  "t1": 728.946,
+  "tipo": "video",
+  "texto": "El Círculo Cenarion decidió no moverlo, para que a su espíritu le costara menos encontrar el camino de vuelta. Mientras tú subías de nivel en Kalimdor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 728.946,
+  "t1": 736.41,
+  "tipo": "video",
+  "texto": "el gran héroe de los elfos de la noche dormía bajo tierra, y nadie te lo contaba. Número cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 736.41,
+  "t1": 746.311,
+  "tipo": "video",
+  "texto": "En el Marjal Revolcafango vive Onyxia, y en su guarida nació el audio más famoso del juego. La hermandad europea Wipe Club grabó un intento fallido contra ella,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.311,
+  "t1": 754.856,
+  "tipo": "video",
+  "texto": "con su líder de banda, Dives, dando órdenes a gritos. Cuando las crías de dragón se les echaron encima, Dives empezó a quitar puntos de botín,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 754.856,
+  "t1": 763.265,
+  "tipo": "video",
+  "texto": "y de ahí salieron frases como fifty DKP minus, o many whelps, handle it. En dos mil seis alguien lo animó con dibujos en YouTube,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.265,
+  "t1": 773.071,
+  "tipo": "video",
+  "texto": "y desde entonces Blizzard lo ha citado varias veces. Número cuatro. Una espada de Classic se forjaba con el aliento de Onyxia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 773.071,
+  "t1": 780.199,
+  "tipo": "video",
+  "texto": "La cadena empezaba con un libro que casi nunca caía en La Masacre, un compendio para matar dragones con consejos muy raros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.199,
+  "t1": 789.125,
+  "tipo": "video",
+  "texto": "Te dice que te escondas bajo un puente y que uses curación completa con entre cinco y quince clérigos, una burla a las bandas de EverQuest, porque aquí no hay clérigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.125,
+  "t1": 797.8,
+  "tipo": "video",
+  "texto": "Luego dejabas la hoja en el suelo de la guarida para que Onyxia la quemara con su aliento, y la clavabas en su cadáver, y así nacía Quel'Serrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.8,
+  "t1": 805.534,
+  "tipo": "video",
+  "texto": "Número tres. En la Costa Oscura hay un fantasma que lleva diez mil años en unas ruinas, y un druida que te pide que la liberes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 805.534,
+  "t1": 813.229,
+  "tipo": "video",
+  "texto": "Anaia Correalba murió cuando cayó su ciudad, Ameth'Aran, en la Guerra de los Ancestros, y su espíritu se quedó atrapado allí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 813.229,
+  "t1": 820.925,
+  "tipo": "video",
+  "texto": "Su amado, el druida Cerellean Zarpablanca, no tuvo valor para hacerlo él mismo, así que desde el muelle de Auberdine te manda a ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 820.925,
+  "t1": 835.281,
+  "tipo": "video",
+  "texto": "Cuando lo haces, Anaia se le aparece una última vez para decirle que lo sigue amando y que volverán a verse. Número dos. En las Ruinas de Ahn'Qiraj, un jefe se burla del archidruida de los elfos de la noche por la muerte de su hijo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 835.281,
+  "t1": 843.114,
+  "tipo": "video",
+  "texto": "El general Rajaxx grita que Corzocelada va a suplicar por su vida igual que su cachorro de hijo, y que mil años de injusticia terminan ese día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.114,
+  "t1": 850.142,
+  "tipo": "video",
+  "texto": "Habla de Valstann, el hijo de Fandral, al que Rajaxx partió en dos delante de su padre en la Guerra de las Arenas Movedizas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.142,
+  "t1": 857.93,
+  "tipo": "video",
+  "texto": "Fandral nunca lo superó, y en Cataclysm acabó del lado de Ragnaros. Todo empezó con un grito en Silithus.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 857.93,
+  "t1": 863.93,
+  "tipo": "video",
+  "texto": "Número uno. En el sur de Tanaris hay una puerta de los titanes que estuvo seis años cerrada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 863.93,
+  "t1": 875.941,
+  "tipo": "video",
+  "texto": "Es la puerta de Uldum, y en Classic llegabas a ella con una cadena de la Liga de Expedicionarios que empieza en Uldaman, con unos discos de los titanes. Al tocar un pedestal frente a la puerta aparece un vigía de piedra de Norgannon,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 875.941,
+  "t1": 885.397,
+  "tipo": "video",
+  "texto": "que te dice que te faltan las placas de Uldum y que así no se entra. Y añade algo inquietante, que la visita de los Creadores a Azeroth ha sido reprogramada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.397,
+  "t1": 892.298,
+  "tipo": "video",
+  "texto": "La Liga te da una propina, te dice que vuelvas pronto porque Uldum te espera, y la historia se congela hasta Cataclysm.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 892.298,
+  "t1": 901.172,
+  "tipo": "video",
+  "texto": "Y para Forever, la pregunta es si esta vez alguien piensa abrir esa puerta. Y esas son las treinta curiosidades de Kalimdor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 901.172,
+  "t1": 908.725,
+  "tipo": "video",
+  "texto": "Si me quedo con una idea, es que este continente estaba lleno de promesas desde el primer día, como la puerta de Uldum o la herida de Fandral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 908.725,
+  "t1": 917.377,
+  "tipo": "video",
+  "texto": "En Forever vuelves a pisar todo esto desde nivel uno, así que dime en los comentarios cuál vas a buscar primero, y si encontraste a la esposa de Mankrik sin ayuda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.377,
+  "t1": 926.875,
+  "tipo": "video",
+  "texto": "Al final, en Kalimdor, lo más difícil no era matar a Ragnaros, era conseguir el agua para llegar hasta él.",
+  "clip_s": 8
+ }
+]

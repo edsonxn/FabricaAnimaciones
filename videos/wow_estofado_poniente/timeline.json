@@ -1,0 +1,75 @@
+{
+ "bpm": 100.0,
+ "beat": 0.6,
+ "unidad": 4,
+ "total": 72.0,
+ "titulo": "WARCRAFT (1983): El Guerrero y el Estofado de Poniente",
+ "estilo": "secuencia_flow",
+ "sin_voz": true,
+ "anclada": false,
+ "escenas": [
+  {
+   "id": "intro",
+   "compases": 1,
+   "t0": 0.0,
+   "t1": 2.4,
+   "frases": [],
+   "fin_voz": 0.0,
+   "beats": 4
+  },
+  {
+   "id": "dia",
+   "compases": 16,
+   "t0": 2.4,
+   "t1": 40.8,
+   "frases": [],
+   "fin_voz": 2.4,
+   "beats": 64
+  },
+  {
+   "id": "noche",
+   "compases": 8,
+   "t0": 40.8,
+   "t1": 60.0,
+   "frases": [],
+   "fin_voz": 40.8,
+   "beats": 32
+  },
+  {
+   "id": "cierre",
+   "compases": 5,
+   "t0": 60.0,
+   "t1": 72.0,
+   "frases": [],
+   "fin_voz": 60.0,
+   "beats": 20,
+   "fin_musica": 70.2
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 2.4,
+   "t0": 2.35,
+   "t1": 2.45,
+   "tipo": "continua",
+   "de": "intro",
+   "a": "dia"
+  },
+  {
+   "t": 40.8,
+   "t0": 40.75,
+   "t1": 40.85,
+   "tipo": "continua",
+   "de": "dia",
+   "a": "noche"
+  },
+  {
+   "t": 60.0,
+   "t0": 59.95,
+   "t1": 60.05,
+   "tipo": "continua",
+   "de": "noche",
+   "a": "cierre"
+  }
+ ]
+}

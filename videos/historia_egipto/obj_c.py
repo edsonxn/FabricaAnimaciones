@@ -1,392 +1,290 @@
 # -*- coding: utf-8 -*-
-"""Objetos del Periodo Helenístico, Islámico y Moderno de Egipto (boceto).
-Dibuja monumentos y piezas históricas: el Faro y la Biblioteca de Alejandría, Cleopatra VII,
-galera naval de Accio, Ciudadela de Saladino, jinete mameluco, la Piedra de Rosetta,
-el Canal de Suez con barco de vapor y la Presa de Asuán.
-
-Todos son `Dib`; origen en la base del objeto (x centrado, y=0 en la base).
-"""
+"""Objetos de los Qing al presente (boceto)."""
 import math
 from functools import lru_cache
 
 import numpy as np
 
-import boceto as B
-from boceto import (AMARILLO, AZUL, AZUL_CL, AZUL_OSC, BLANCO, GRIS, GRIS_CL, MARRON, NARANJA, PIEL, R, ROJO, ROSA, T, VERDE,
-                    VERDE_OSC, Dib, arco_, circ, curva, elip, linea, mano_poli, ondas)
-from obj_base import (ARENA, ARENA_OSC, AZUL_EGIPTO, BLANCO_LINO, BRONCE, CALIZA, CELESTE_NILO, GRANITO, MADERA, MADERA_OSC,
-                      NEGRO_KOHL, ORO, ORO_OSC, PIEL_CL, PIEL_EGIPCIA, ROJO_EGIPTO, ROJO_OSC, TURQUESA, VERDE_PAPIRO,
-                      cerrar, colocar, elipse, forma, pol, punto, rayita, rect, trap, trazo)
+from obj_a import colocar
+from obj_b import caballo
+from obj_base import *  # noqa: F401,F403
+from obj_base import _rotar
 
-
-# ------------------------------------------------------------------ 1. Faro de Alejandría
+# ------------------------------------------------------------------ Qing
 @lru_cache(maxsize=None)
-def faro_alejandria():
-    """El Faro de Alejandría (isla de Faros), una de las Siete Maravillas del Mundo Antiguo:
-    tres cuerpos superpuestos (cuadrado, octagonal y cilíndrico) con la hoguera perpetua y estatua de Poseidón."""
-    ops = []
-    # Escollera de piedra marina en la base
-    ops += forma(rect(-80, -12, 80, 0, 3), (170, 165, 160), 4.8, sp=6)
+def jinete_manchu(pose=0):
+    h = caballo(pose)
+    r = persona(AZUL_OSC, PIEL, "manchu", "enojo", (40, 140), pose, traje="corta", trenza=True, acc_d="espada")
+    return Dib(list(h.ops) + colocar(list(r.ops), 6, -150, 0.56))
 
-    # CUERPO 1: Torre inferior cuadrangular con muros en talud
-    P_base_izq = trap(-62, 0, -115, -68, 0, -12)
-    P_base_der = trap(0, 62, -115, 0, 68, -12)
-    ops += forma(P_base_izq, (215, 210, 202), 5.0, sp=7) # Cara en sombra
-    ops += forma(P_base_der, CALIZA, 5.0, sp=7)          # Cara en luz de mármol blanco
-    ops += [trazo((0, -115), (0, -12), w=4.5)]           # Arista vertical
-    # Ventanas saeteras verticales
-    for yv in (-35, -65, -95):
-        ops += [rayita(-30, yv - 6, -30, yv + 6, 3.2), rayita(30, yv - 6, 30, yv + 6, 3.2)]
-    # Cornisa superior con almenas y estatuas de tritones
-    ops += forma(rect(-65, -122, 65, -115, 2), CALIZA, 4.5, sp=6)
 
-    # CUERPO 2: Torre media octagonal
-    P_oct_izq = trap(-34, 0, -185, -38, 0, -122)
-    P_oct_der = trap(0, 34, -185, 0, 38, -122)
-    ops += forma(P_oct_izq, (205, 200, 192), 4.8, sp=6)
-    ops += forma(P_oct_der, CALIZA, 4.8, sp=6)
-    ops += [trazo((0, -185), (0, -122), w=4.0)]
-    ops += forma(rect(-36, -192, 36, -185, 2), CALIZA, 4.2, sp=5) # Cornisa
-
-    # CUERPO 3: Linterna cilíndrica con columnas
-    ops += forma(rect(-20, -225, 20, -192, 2), (220, 215, 205), 4.2, sp=5)
-    # Columnas de la linterna
-    for xc in (-16, -6, 6, 16):
-        ops += [rayita(xc, -225, xc, -192, 3.0)]
-
-    # HOGUERA PERPETUA Y ESPEJO DE BRONCE
-    # Fuego resplandeciente en la linterna
-    P_fuego = [(-14, -225), (-6, -242), (0, -236), (6, -248), (14, -225)]
-    ops += forma(P_fuego, (245, 140, 40), 4.0, sp=5)
-    ops += forma([(-8, -225), (0, -238), (8, -225)], ORO, 3.5, sp=4) # Núcleo ardiente
-    # Humo que sube
-    ops += [T(ondas(-10, 15, -252, 4, 12), 3.0, peso=0.04)]
-
-    # Cúpula y estatua colosal de Poseidón en la cúspide
-    ops += forma(elip(0, -228, 22, 6, 0, 1.0, 14), BRONCE, 4.0, sp=4)
-    # Estatua con tridente
-    ops += [trazo((0, -228), (0, -260), w=3.6)]
-    ops += [trazo((5, -265), (5, -245), w=2.8)] # Tridente
-
-    # Haz de luz que cruza el mar Mediterráneo
-    P_haz = [(14, -230), (160, -265), (160, -215), (14, -225)]
-    ops += [R(P_haz, (255, 245, 160), peso=0.03, sp=8)]
+@lru_cache(maxsize=None)
+def puerta_ciudad():
+    """Puerta de la muralla de Pekín con torre."""
+    ops = forma(rect(-150, -120, 150, 0, 4), (186, 170, 150), 5.6, peso=0.6, sp=10)
+    ops += forma(pol((-150, -120), (-150, -130), (150, -130), (150, -120)), (170, 154, 136), 4, sp=6)
+    ops += forma(rect(-120, -210, 120, -130, 4), ROJO_CH, 5, peso=0.5, sp=9)
+    ops += forma(pol((-150, -200), (-96, -262), (96, -262), (150, -200)), (72, 100, 110), 5.4, peso=0.5, sp=8)
+    ops += forma(rect(-40, -100, 40, 0, 36), NEGRO, 4.6, sp=5)
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 2. Biblioteca de Alejandría
 @lru_cache(maxsize=None)
-def biblioteca_alejandria():
-    """La Gran Biblioteca de Alejandría: columnata griega jónica con frontón clásico,
-    estanterías llenas de rollos de papiro y sabios debatiendo."""
-    ops = []
-    # Estilóbato de tres peldaños de mármol blanco
-    ops += forma(rect(-145, -8, 145, 0, 2), CALIZA, 4.5, sp=6)
-    ops += forma(rect(-135, -16, 135, -8, 2), (230, 225, 215), 4.2, sp=5)
-    ops += forma(rect(-125, -24, 125, -16, 2), CALIZA, 4.2, sp=5)
-
-    # Sala interior sombría con estanterías (armaria) de rollos de papiro
-    ops += forma(rect(-110, -125, 110, -24, 2), (75, 55, 45), 4.5, sp=6) # Interior madera
-    # Estantes repletos de rollos de papiro con etiquetas
-    for y_est in (-45, -70, -95, -115):
-        ops += [rayita(-100, y_est, 100, y_est, 3.2)]
-        for xr in range(-90, 95, 16):
-            ops += forma(rect(xr - 5, y_est - 16, xr + 5, y_est, 1), ARENA, 2.5, sp=3)
-
-    # Columnata monumental de mármol blanco (6 columnas jónicas)
-    col_x = [-105, -63, -21, 21, 63, 105]
-    for cx in col_x:
-        # Fuste estriado
-        ops += forma(rect(cx - 7, -135, cx + 7, -24, 2), CALIZA, 4.5, sp=6)
-        ops += [rayita(cx - 3, -132, cx - 3, -26, 2.4), rayita(cx + 3, -132, cx + 3, -26, 2.4)]
-        # Capitel con volutas
-        ops += forma(rect(cx - 12, -145, cx + 12, -135, 2), (220, 215, 205), 4.0, sp=4)
-        ops += [T(circ(cx - 9, -140, 4, n=8), 2.8), T(circ(cx + 9, -140, 4, n=8), 2.8)]
-
-    # Arquitrabe y entablamento
-    ops += forma(rect(-125, -160, 125, -145, 2), CALIZA, 4.8, sp=6)
-
-    # Frontón triangular clásico con relieve alegórico de las Musas
-    P_fronton = pol((-125, -160), (0, -205), (125, -160))
-    ops += forma(P_fronton, CALIZA, 5.0, sp=7)
-    # Tímpano interior con relieve en dorado
-    P_timpano = pol((-105, -164), (0, -198), (105, -164))
-    ops += forma(P_timpano, (215, 205, 190), 4.0, sp=5)
-    ops += [R(circ(0, -178, 9, n=12), ORO, peso=0.03, sp=3)] # Sol del saber
+def canon(f=0.0):
+    ops = forma(elip(0, -62, 100, 34, -0.12, 1.0, 26), GRIS_OSC, 5.6, peso=0.6, sp=9)
+    ops += forma(circ(-50, -28, 38, n=22), MADERA, 5, peso=0.5, sp=9) + [T(circ(-50, -28, 12, n=12), 3.6, peso=0.05)]
+    ops += forma(rect(82, -86, 118, -40, 6), GRIS_OSC, 4.6, sp=7)
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 3. Cleopatra VII en su trono
 @lru_cache(maxsize=None)
-def cleopatra_trono():
-    """Cleopatra VII Filopátor en su trono dorado: diadema real ptolemaica,
-    túnica de lino plisado, brazalete de serpiente y mirada inteligente."""
-    ops = []
-    # 1. Trono helenístico-egipcio de madera dorada con patas de león
-    P_respaldo = rect(-35, -155, 35, -50, r=6)
-    ops += forma(P_respaldo, ORO, 4.8, sp=7)
-    ops += forma(rect(-28, -145, 28, -60, 4), (195, 45, 45), 4.0, sp=5) # Cojín de terciopelo rojo
-    # Asiento y brazos con esfinges
-    ops += forma(rect(-45, -60, 45, -45, 3), ORO, 4.8, sp=6)
-    # Patas de león del trono
-    for px in (-35, 35):
-        ops += forma(trap(px - 5, px + 5, -45, px - 8, px + 8, 0), ORO, 4.2, sp=5)
-
-    # 2. Vestido de lino diáfano y túnica azul marino / púrpura real
-    P_falda = trap(-30, 30, -50, -38, 38, -5)
-    ops += forma(P_falda, BLANCO_LINO, 4.8, sp=7)
-    # Pliegues finos de la tela griega (himation)
-    for xf in (-20, -10, 0, 10, 20):
-        ops += [rayita(xf, -48, xf * 1.2, -6, 2.5)]
-
-    # 3. Torso y brazos elegantes
-    P_torso = trap(-20, 20, -110, -16, 16, -50)
-    ops += forma(P_torso, PIEL_CL, 4.6, sp=6)
-    # Collar dorado griego con piedras turquesas
-    ops += [T(arco_(0, -110, 18, 0, 180, 12), 4.0)]
-    ops += [R(arco_(0, -110, 16, 10, 170, 10), TURQUESA, peso=0.03, sp=3)]
-
-    # Brazos apoyados en los reposabrazos del trono
-    # Brazo derecho con el áspid / serpiente de oro enroscado
-    ops += forma(pol((-20, -105), (-38, -75), (-30, -55), (-22, -60), (-14, -100)), PIEL_CL, 4.0, sp=5)
-    ops += forma(pol((20, -105), (38, -75), (30, -55), (22, -60), (14, -100)), PIEL_CL, 4.0, sp=5)
-    # Brazalete de serpiente en el antebrazo
-    ops += [T(arco_(-30, -68, 6, -90, 180, 8), 3.8)]
-    ops += [R(circ(-30, -68, 6, n=8), ORO, peso=0.03, sp=3)]
-
-    # 4. Rostro noble y cabello rizado helenístico con diadema real
-    cy = -135.0
-    ops += forma(rect(-6, -118, 6, -108, 2), PIEL_CL, 4.0, sp=4) # Cuello
-    ops += forma(elip(0, cy, 18, 22, 0, 1.0, 20), PIEL_CL, 4.8, sp=6)
-
-    # Cabello recogido en moño melón (estilo ptolemaico)
-    P_pelo = [(-22, cy + 4), (-22, cy - 16), (0, cy - 25), (22, cy - 16), (22, cy + 4), (16, cy + 12), (-16, cy + 12)]
-    ops += forma(P_pelo, (55, 38, 30), 4.5, sp=6) # Cabello castaño oscuro
-
-    # Diadema de oro real con triple Uraeus
-    ops += forma(rect(-20, cy - 14, 20, cy - 8, 2), ORO, 4.2, sp=4)
-    ops += [trazo((0, cy - 14), (0, cy - 24), (3, cy - 28), w=3.0)] # Cobra frontal
-
-    # Ojos penetrantes e inteligentes
-    ops += [trazo((-10, cy - 2), (0, cy - 2), (3, cy), w=3.2)]
-    ops += [trazo((2, cy - 2), (12, cy - 2), (15, cy), w=3.2)]
-    ops += [punto(-5, cy - 2, w=5.0), punto(7, cy - 2, w=5.0)]
-    # Nariz aguileña característica de las monedas de Cleopatra
-    ops += [trazo((0, cy - 4), (4, cy + 5), (0, cy + 6), w=3.0)]
-    ops += [trazo((-4, cy + 11), (4, cy + 11), w=3.0)]
+def vapor(f=0):
+    """Buque de vapor europeo con chimeneas y humo."""
+    ops = forma(pol((-190, -80), (-150, -8), (150, -8), (210, -90)), (70, 80, 110), 5.8, peso=0.8, sp=10)
+    ops += forma(rect(-140, -150, 120, -80, 6), CREMA, 5, peso=0.5, sp=9)
+    ops += [R(rect(-110 + 44 * k, -130, -86 + 44 * k, -104, 4), CELESTE, peso=0.03, sp=4) for k in range(5)]
+    ops += [T(rect(-110 + 44 * k, -130, -86 + 44 * k, -104, 4), 3.4, peso=0.03) for k in range(5)]
+    for x in (-40, 50):
+        ops += forma(rect(x - 20, -240, x + 20, -150, 4), (60, 60, 70), 5, peso=0.3, sp=8) + forma(rect(x - 22, -250, x + 22, -232, 3), ROJO_CH, 4, sp=6)
+        ph = (f * 0.37 + x * 0.013) % 1.0
+        ops += [T(circ(x + 12 * ph + 6, -270 - 70 * ph, 18 + 26 * ph, n=16), 4 * (1 - 0.4 * ph), peso=0.06)]
+    ops += [T(ondas(-170, 190, -4, 5, 52, f * 0.9), 4.4, peso=0.12)]
+    ops += [T(linea((-190, -80), (-230, -150)), 4.4, peso=0.05)]
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 4. Galera de guerra romana (Accio)
 @lru_cache(maxsize=None)
-def galera_romana():
-    """Birreme / trirreme de guerra romano: espolón de proa (rostrum),
-    dos filas de remos, escudos scuta rojos en la borda y estandarte legionario."""
-    ops = []
-    # Casco de guerra robusto de roble
-    curva_quilla = curva([(-135, -25), (-80, -10), (0, -5), (80, -8), (145, -30)], 10)
-    curva_borda = curva([(145, -30), (80, -22), (0, -20), (-80, -22), (-135, -25)], 10)
-    casco = np.vstack([curva_quilla, curva_borda])
-    ops += forma(casco, (140, 85, 55), 5.2, sp=8)
-
-    # Espolón de bronce naval (rostrum) en la proa para embestir
-    P_espolon = pol((-135, -25), (-165, -15), (-135, -8))
-    ops += forma(P_espolon, BRONCE, 4.8, sp=6)
-
-    # Popa en voluta decorativa (aplustre)
-    ops += [trazo((140, -28), (160, -55), (150, -68), (142, -62), w=4.5)]
-
-    # Torreta de madera para arqueros y legionarios
-    ops += forma(rect(-40, -55, -10, -22, 2), MADERA_OSC, 4.2, sp=5)
-    # Estandarte imperial con águila romana
-    ops += [trazo((-25, -55), (-25, -105), w=4.0)]
-    ops += forma(rect(-25, -100, 5, -82, 1), ROJO_EGIPTO, 3.8, sp=4)
-    ops += [T(linea((-25, -100), (5, -82)), 2.8)]
-    ops += [punto(-10, -91, w=6.0)] # Emblema SPQR / Águila
-
-    # Escudos romanos (scuta) rojos y dorados alineados a lo largo de la borda
-    for xs in range(-90, 110, 22):
-        ops += forma(rect(xs - 8, -32, xs + 8, -16, 3), ROJO_EGIPTO, 3.5, sp=4)
-        ops += [R(circ(xs, -24, 3, n=8), ORO, peso=0.02, sp=2)] # Umbo dorado
-
-    # Dos bancos de remos batiendo el agua simultáneamente
-    for xr in range(-105, 120, 24):
-        # Fila superior de remos
-        ops += [trazo((xr, -20), (xr - 22, 18), w=3.4)]
-        # Fila inferior de remos
-        ops += [trazo((xr + 10, -12), (xr - 12, 24), w=3.0)]
-
-    # Espuma blanca de las olas del mar
-    ops += [T(ondas(-150, 150, 15, 6, 26), 4.2, peso=0.08)]
+def caja_te():
+    ops = forma(rect(-70, -96, 70, 0, 4), (170, 110, 70), 5.4, peso=0.5, sp=9)
+    ops += [T(linea((-70, -56), (70, -56)), 3.4, peso=0.04), T(linea((0, -96), (0, -56)), 3.4, peso=0.03)]
+    ops += forma(circ(0, -28, 20, n=16), (104, 170, 100), 4, sp=5) + [T(linea((-8, -28), (8, -28)), 3.4, peso=0.02), T(linea((0, -38), (0, -18)), 3.4, peso=0.02)]
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 5. Ciudadela de Saladino (El Cairo)
 @lru_cache(maxsize=None)
-def ciudadela_saladino():
-    """La inexpugnable Ciudadela de Saladino en las colinas de Mokattam:
-    murallas almenadas con torres redondas, y mezquita con cúpulas y minaretes esbeltos."""
-    ops = []
-    # Risco rocoso de colina
-    P_risco = trap(-155, 155, -35, -165, 165, 0)
-    ops += forma(P_risco, ARENA_OSC, 5.0, sp=7)
-
-    # Muralla medieval masiva de piedra dorada
-    P_muro = rect(-140, -95, 140, -35, r=4)
-    ops += forma(P_muro, (220, 192, 148), 5.2, sp=8)
-    # Almenas de la muralla
-    for xa in range(-135, 140, 18):
-        ops += forma(rect(xa - 6, -105, xa + 6, -95, 1), (220, 192, 148), 3.5, sp=4)
-
-    # Dos grandes torres cilíndricas de vigilancia
-    for xt in (-105, 105):
-        P_torre = trap(xt - 26, xt + 26, -125, xt - 28, xt + 28, -35)
-        ops += forma(P_torre, (210, 180, 138), 5.0, sp=7)
-        # Almenas de la torre
-        for xat in (-18, 0, 18):
-            ops += forma(rect(xt + xat - 5, -135, xt + xat + 5, -125, 1), (210, 180, 138), 3.2, sp=3)
-        # Aspilleras
-        ops += [rayita(xt, -85, xt, -65, 3.2)]
-
-    # Gran cúpula central otomana / mameluca de cobre verde
-    ops += forma(elip(0, -115, 36, 32, 0, 1.0, 26), (110, 160, 135), 5.0, sp=7)
-    ops += [trazo((0, -147), (0, -162), w=3.8)] # Aguja de la cúpula con media luna
-    ops += forma(circ(0, -162, 5, n=10), ORO, 3.2, sp=3)
-
-    # Minaretes esbeltos que se elevan hacia el cielo
-    for xm in (-45, 45):
-        ops += forma(trap(xm - 7, xm + 7, -185, xm - 9, xm + 9, -95), CALIZA, 4.2, sp=6)
-        # Balcones del almuédano
-        ops += forma(rect(xm - 11, -145, xm + 11, -138, 1), (180, 150, 110), 3.4, sp=3)
-        ops += forma(rect(xm - 10, -188, xm + 10, -182, 1), (180, 150, 110), 3.4, sp=3)
-        # Cúspide cónica del minarete con media luna
-        P_cono = pol((xm - 7, -188), (xm, -215), (xm + 7, -188))
-        ops += forma(P_cono, (110, 160, 135), 3.8, sp=4)
-        ops += forma(circ(xm, -218, 4, n=8), ORO, 2.8, sp=2)
+def caja_opio():
+    ops = forma(rect(-76, -100, 76, 0, 4), (90, 70, 80), 5.6, peso=0.5, sp=9)
+    ops += [T(linea((-76, -60), (76, -60)), 3.4, peso=0.04)]
+    # amapola
+    ops += [T(linea((0, -100), (0, -150)), 4, peso=0.04)]
+    for k in range(4):
+        a = k * math.pi / 2 + 0.4
+        ops += forma(elip(14 * math.cos(a), -168 + 14 * math.sin(a), 18, 12, a, 1.0, 12), ROJO_CH, 3.6, sp=4)
+    ops += [R(circ(0, -168, 7, n=10), NEGRO, peso=0.02, sp=3)]
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 6. Piedra de Rosetta y descifrado
 @lru_cache(maxsize=None)
-def piedra_rosetta():
-    """La Piedra de Rosetta (1798 / 1822): estela de granodiorita oscura con tres escrituras
-    (jeroglífico, demótico y griego clásico) y la lupa de Champollion descifrando un cartucho."""
-    ops = []
-    # Losa de piedra granodiorita negra con la esquina superior rota
-    P_piedra = [(-70, -155), (-60, -170), (45, -165), (70, -140), (70, 0), (-70, 0)]
-    ops += forma(P_piedra, (58, 56, 62), 5.5, sp=8) # Granodiorita oscura
+def funcionario_opio(pose=0):
+    return persona(AZUL_IMP, PIEL, "funcionario", "enojo", (150, 150), pose, traje="tunica", faja=ORO)
 
-    # REGISTRO 1: Jeroglíficos egipcios (arriba, 14 líneas fragmentadas)
-    for y1 in range(-145, -105, 10):
-        ops += [rayita(-55, y1, 55, y1, 2.2)]
-        for xj in range(-45, 50, 15):
-            ops += [punto(xj, y1 - 3, w=4.5)]
 
-    # REGISTRO 2: Escritura demótica cotidiana (centro, 32 líneas)
-    for y2 in range(-100, -55, 8):
-        ops += [rayita(-62, y2, 62, y2, 2.0)]
+@lru_cache(maxsize=None)
+def ingles(pose=0):
+    return persona(ROJO_CH, PIEL_ROSA, "bombin", "serio", (30, 60), pose, traje="corta", bigote=True, acc_d="saco", faja=NEGRO)
 
-    # REGISTRO 3: Griego clásico (abajo, 54 líneas)
-    for y3 in range(-50, -10, 8):
-        ops += [rayita(-62, y3, 62, y3, 2.0)]
 
-    # Lupa de Champollion enfocando el cartucho de 'Ptolomeo'
-    cx_lupa, cy_lupa = 25.0, -125.0
-    r_lupa = 26.0
-    # Mango de latón de la lupa
-    ops += [trazo((cx_lupa + 18, cy_lupa + 18), (cx_lupa + 55, cy_lupa + 55), w=6.5)]
-    # Marco circular dorado y lente de aumento clara
-    ops += forma(circ(cx_lupa, cy_lupa, r_lupa, n=24), (220, 235, 245), 4.8, sp=6)
-    ops += [T(circ(cx_lupa, cy_lupa, r_lupa, n=24), 5.0, peso=0.08)]
-    ops += [R(circ(cx_lupa, cy_lupa, r_lupa, n=24), ORO, peso=0.04, sp=4)]
+@lru_cache(maxsize=None)
+def isla_trozo(r=60):
+    """Trozo de mapa que una mano arranca (Hong Kong)."""
+    P = mano_poli(np.array([(-r, 0), (-r * 0.6, -r * 0.7), (0, -r), (r * 0.7, -r * 0.5), (r, 0), (r * 0.5, r * 0.6), (-r * 0.2, r * 0.8), (-r, 0)]), 3, seed=4)
+    return Dib(forma(P, (96, 134, 184), 5.2, peso=0.4, sp=8))
 
-    # Cartucho magnificado dentro de la lupa con los signos P-T-O-L-M-Y-S
-    ops += forma(rect(cx_lupa - 18, cy_lupa - 12, cx_lupa + 18, cy_lupa + 12, r=10), ORO, 3.2, sp=4)
-    ops += [punto(cx_lupa - 8, cy_lupa, w=5.0), punto(cx_lupa, cy_lupa, w=5.0), punto(cx_lupa + 8, cy_lupa, w=5.0)]
+
+@lru_cache(maxsize=None)
+def nino_emperador(pose=0):
+    d = persona(ORO, PIEL, None, "lloron" if pose else "asombro", (60, 60), pose, traje="tunica", faja=ROJO_CH, alto=0.6)
+    corona = forma(rect(-70, -110, 70, -76, 6), NEGRO, 5, sp=7) + forma(rect(-40, -76, 40, -36, 6), NEGRO, 5, sp=7)
+    corona += [R(elip(-60 + 24 * k, -28, 6, 9, n=8), ROJO_CH, peso=0.02, sp=3) for k in range(6)]
+    return Dib(list(d.ops))
+
+
+@lru_cache(maxsize=None)
+def corona_grande():
+    ops = forma(rect(-80, -60, 80, -28, 6), NEGRO, 5.4, peso=0.5, sp=8) + forma(rect(-46, -28, 46, 20, 6), NEGRO, 5.4, peso=0.5, sp=8)
+    ops += [R(elip(-66 + 22 * k, 34, 6, 10, n=8), ROJO_CH, peso=0.02, sp=3) for k in range(7)] + [rayita(-66 + 22 * k, 10, -66 + 22 * k, 26, 2.6) for k in range(7)]
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 7. Canal de Suez y barco de vapor (1869)
+# ------------------------------------------------------------------ siglo XX
 @lru_cache(maxsize=None)
-def barco_vapor_suez():
-    """El Canal de Suez recién inaugurado: canal recto entre dunas arenosas
-    y un barco de vapor del siglo XIX con chimenea humeante y rueda de paletas."""
-    ops = []
-    # Riberas arenosas del canal a ambos lados
-    P_duna_izq = trap(-150, -75, -60, -150, -95, 0)
-    P_duna_der = trap(75, 150, -60, 95, 150, 0)
-    ops += forma(P_duna_izq, ARENA, 4.8, sp=7)
-    ops += forma(P_duna_der, ARENA, 4.8, sp=7)
+def soldado_fusil(pose=0, ropa=(108, 122, 100), gorra=True):
+    return persona(ropa, PIEL, "gorra" if gorra else "casco", "enojo", (10, 120 + 10 * (pose % 2)), pose, traje="corta", acc_d="lanza")
 
-    # Agua azul del canal uniendo el Mediterráneo y el Mar Rojo
-    P_canal = trap(-85, 85, -55, -100, 100, 0)
-    ops += forma(P_canal, CELESTE_NILO, 4.8, sp=7)
 
-    # BARCO DE VAPOR DEL SIGLO XIX
-    # Casco de hierro negro
-    curva_casco = [(-65, -35), (-55, -18), (55, -18), (65, -35)]
-    P_casco = np.vstack([curva_casco, [(55, -35)], [(-65, -35)]])
-    ops += forma(curva_casco, (45, 45, 52), 5.0, sp=7)
-    # Franja blanca en la borda
-    ops += [rayita(-60, -32, 60, -32, 3.0)]
-
-    # Cubierta y camarotes de madera
-    ops += forma(rect(-40, -48, 40, -35, 2), CALIZA, 4.2, sp=5)
-
-    # Chimenea central alta inclinada
-    P_chimenea = trap(-6, 6, -85, -8, 8, -48)
-    ops += forma(P_chimenea, (215, 60, 45), 4.2, sp=5)     # Chimenea roja
-    ops += forma(rect(-6, -85, 6, -75, 1), NEGRO_KOHL, 4.0, sp=4) # Banda negra superior
-    # Penacho de humo blanco y gris
-    for yh, rad, r_h in ((-95, 0, 8), (-108, 6, 12), (-122, 16, 16)):
-        ops += forma(circ(rad, yh, r_h, n=14), (220, 222, 228), 3.2, sp=4)
-
-    # Rueda de paletas central (paddlewheel)
-    ops += forma(circ(0, -26, 15, n=16), (80, 80, 90), 4.0, sp=5)
-    ops += [R(circ(0, -26, 8, n=10), ORO_OSC, peso=0.03, sp=3)]
-    for ap in range(0, 360, 45):
-        rad_p = math.radians(ap)
-        ops += [rayita(0, -26, 14 * math.cos(rad_p), -26 + 14 * math.sin(rad_p), 2.8)]
-
-    # Mástiles de proa y popa con jarcias
-    ops += [trazo((-35, -48), (-35, -95), w=3.4), trazo((35, -48), (35, -95), w=3.4)]
-    ops += [trazo((-35, -85), (-60, -35), w=2.4), trazo((35, -85), (60, -35), w=2.4)]
+@lru_cache(maxsize=None)
+def avion():
+    ops = forma(elip(0, 0, 120, 26, 0, 1.0, 26), (196, 196, 204), 5.4, peso=0.5, sp=8)
+    ops += forma(pol((-20, -2), (40, -2), (10, -90), (-30, -90)), GRIS_CL, 4.6, sp=7) + forma(pol((-20, 4), (40, 4), (10, 80), (-30, 80)), GRIS_CL, 4.6, sp=7)
+    ops += forma(pol((-110, -4), (-80, -4), (-96, -50), (-120, -50)), GRIS_CL, 4.4, sp=6)
+    ops += [R(circ(70, -6, 16, n=12), CELESTE, peso=0.02, sp=4), R(circ(0, 0, 10, n=10), ROJO_CH, peso=0.02, sp=4)]
+    ops += [T(linea((124, -24), (124, 24)), 6, peso=0.03)]
     return Dib(ops)
 
 
-# ------------------------------------------------------------------ 8. Presa de Asuán (siglo XX)
 @lru_cache(maxsize=None)
-def presa_asuan():
-    """La Gran Presa de Asuán (Sadd el-Aali): dique colosal de granito y hormigón,
-    aliviaderos con cascadas de agua blanca y el Lago Nasser al fondo."""
+def lider(pose=0, cara="feliz"):
+    return persona((100, 112, 110), PIEL, "gorra", cara, (20, 160 if pose % 2 == 0 else 130), pose, traje="corta", faja=None, cuello=(84, 96, 96))
+
+
+@lru_cache(maxsize=None)
+def lider_nuevo(pose=0):
+    return persona(NEGRO, PIEL_OSC, "calvo", "guiño", (20, 60), pose, traje="corta", faja=None, cuello=BLANCO, alto=0.85)
+
+
+@lru_cache(maxsize=None)
+def tribuna():
+    """Puerta roja con balcón (desde donde se proclama la república)."""
+    ops = forma(rect(-220, -60, 220, 0, 3), (176, 72, 62), 5.6, peso=0.6, sp=9)
+    ops += forma(rect(-180, -150, 180, -60, 3), ROJO_CH, 5, peso=0.5, sp=9)
+    ops += forma(pol((-210, -150), (-140, -206), (140, -206), (210, -150)), ORO, 5.4, peso=0.5, sp=8)
+    ops += [R(rect(-60 + 36 * k, -130, -36 + 36 * k, -84, 18), (120, 40, 40), peso=0.02, sp=4) for k in range(4)]
+    ops += [T(rect(-60 + 36 * k, -130, -36 + 36 * k, -84, 18), 3.4, peso=0.03) for k in range(4)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def bandera():
+    ops = [T(linea((0, 20), (0, -260)), 6, peso=0.2)] + forma(rect(0, -260, 200, -140, 3), ROJO_CH, 5, peso=0.5, sp=8)
+    ops += [R(circ(40, -224, 10, n=10), AMARILLO, peso=0.02, sp=3)]
+    for k in range(4):
+        ops += [R(circ(84 + 22 * (k % 2), -240 + 20 * k, 4.5, n=8), AMARILLO, peso=0.02, sp=3)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def horno_patio():
+    ops = forma(curva([(-70, 0), (-66, -100), (-30, -150), (30, -150), (66, -100), (70, 0)], 6), (190, 120, 96), 5.6, peso=0.7, sp=9)
+    ops += forma(rect(-22, -60, 22, 0, 12), NEGRO, 4, sp=5) + [R(pol((-14, 0), (0, -36), (14, 0)), NARANJA, peso=0.02, sp=4)]
+    ops += forma(rect(-16, -200, 16, -150, 3), (170, 100, 80), 4.6, sp=7)
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def humo(f=0, n=4):
     ops = []
-    # Lago Nasser azul profundo al fondo
-    P_lago = trap(-155, 155, -115, -160, 160, -75)
-    ops += forma(P_lago, (55, 110, 175), 4.8, sp=7)
+    for k in range(n):
+        ph = (f * 0.3 + k / n) % 1.0
+        ops.append(T(circ(10 * math.sin(ph * 6 + k) , -90 * ph, 14 + 34 * ph, n=16), 4.2 * (1 - 0.5 * ph), peso=0.05))
+    return Dib(ops)
 
-    # Corona superior del dique (carretera y vía de servicio)
-    ops += forma(rect(-160, -85, 160, -75, 2), CALIZA, 4.5, sp=6)
-    ops += [rayita(-155, -80, 155, -80, 2.6)]
 
-    # Cara curva de hormigón y escollera de granito de la presa
-    P_presa = trap(-160, 160, -75, -170, 170, -20)
-    ops += forma(P_presa, (185, 180, 175), 5.2, sp=8)
+@lru_cache(maxsize=None)
+def cuenco_vacio():
+    ops = forma(arco_(0, -40, 60, 0, 180, 16).tolist() + [(-60, -40)], CREMA, 5.2, peso=0.5, sp=8)
+    ops += [T(linea((-56, -40), (56, -40)), 4.4, peso=0.04), T(linea((-20, -4), (20, -4)), 4, peso=0.02)]
+    ops += [T(linea((40, -10), (120, -70)), 5, peso=0.05), T(linea((52, -4), (130, -58)), 5, peso=0.05)]
+    return Dib(ops)
 
-    # 4 Compuertas y aliviaderos rugientes con cascadas de agua blanca
-    for xg in (-90, -30, 30, 90):
-        # Boca de la compuerta
-        ops += forma(rect(xg - 14, -65, xg + 14, -40, 2), (40, 42, 48), 4.0, sp=5)
-        # Chorro potente de agua espumosa que se precipita al Nilo
-        P_cascada = trap(xg - 12, xg + 12, -40, xg - 18, xg + 18, 0)
-        ops += forma(P_cascada, (240, 248, 255), 4.2, sp=6)
-        # Espuma turbulenta en la base
-        for xs in (-15, 0, 15):
-            ops += [R(circ(xg + xs, 2, 7, n=10), BLANCO, peso=0.04, sp=3)]
 
-    # Torres de alta tensión eléctrica a los lados
-    for xt in (-140, 140):
-        ops += [trazo((xt, -85), (xt, -145), w=3.8)]
-        ops += [trazo((xt - 12, -130), (xt + 12, -130), w=3.0)]
-        ops += [trazo((xt - 10, -115), (xt + 10, -115), w=3.0)]
-        ops += [trazo((xt - 12, -85), (xt, -145), (xt + 12, -85), w=2.6)] # Celosía
+@lru_cache(maxsize=None)
+def trigo(marchito=0.0):
+    ops = []
+    for k in range(5):
+        x = -60 + 30 * k
+        h = 150 * (1 - 0.55 * marchito)
+        curv = 26 * marchito * (1 if k % 2 else -1)
+        ops += [T(curva([(x, 0), (x + curv * 0.3, -h * 0.5), (x + curv, -h)], 5), 4.4, peso=0.06)]
+        for j in range(4):
+            ops.append(R(elip(x + curv * (1 - 0.1 * j), -h + 14 * j * (1 - 0.4 * marchito), 6, 11, math.radians(20 * (1 if j % 2 else -1)), 1.0, 8),
+                         (226, 190, 92) if marchito < 0.5 else (170, 140, 90), peso=0.02, sp=3))
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def gato(color="blanco", pose=0):
+    col = {"blanco": (250, 248, 242), "negro": (64, 58, 66)}[color]
+    tinta_ = NEGRO if color == "blanco" else (20, 20, 24)
+    ops = forma(elip(0, -60, 76, 36, 0, 1.0, 26), col, 5.2, peso=0.5, sp=8)
+    ops += forma(circ(84, -80, 30, n=22), col, 5, peso=0.3, sp=7)
+    ops += forma(pol((66, -100), (72, -134), (90, -104)), col, 4, sp=4) + forma(pol((94, -102), (110, -130), (112, -92)), col, 4, sp=4)
+    ops += [punto(90, -86, 7), punto(108, -86, 7), T(linea((98, -74), (98, -70)), 4, peso=0.02), T(linea((112, -76), (126, -80)), 3, peso=0.02), T(linea((112, -72), (126, -68)), 3, peso=0.02)]
+    p = pose % 2
+    for x, d in ((-50, 10 if p else -10), (-20, -10 if p else 10), (36, 10 if p else -10), (60, -10 if p else 10)):
+        ops += forma(pol((x - 8, -36), (x + 8, -36), (x + d + 6, 0), (x + d - 8, 0)), col, 4, sp=5)
+    ops += [T(curva([(-74, -70), (-110, -90), (-112, -140), (-90, -150)], 6), 7, peso=0.15)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def raton(pose=0):
+    ops = forma(elip(0, -24, 40, 22, 0, 1.0, 20), GRIS, 4.6, peso=0.3, sp=6) + forma(elip(40, -28, 18, 14, 0.2, 1.0, 14), GRIS, 4.4, sp=5)
+    ops += forma(circ(36, -44, 10, n=10), ROSA, 3.6, sp=4) + [punto(48, -32, 6), T(curva([(-38, -24), (-70, -36), (-84, -16), (-96, -40)], 5), 3.4, peso=0.1)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def vela(llama_=1.0):
+    ops = forma(rect(-22, -110, 22, 0, 4), CREMA, 5, peso=0.4, sp=7) + [T(linea((0, -110), (0, -126)), 4, peso=0.02)]
+    if llama_ > 0.05:
+        s = llama_
+        ops += forma(pol((-12 * s, -126), (0, -190 * s - 0), (12 * s, -126)), NARANJA, 4.4, sp=5)
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def rascacielos(h=300, w=90, c=(120, 150, 190)):
+    ops = forma(rect(-w / 2, -h, w / 2, 0, 3), c, 5.4, peso=0.6, sp=9)
+    filas = int(h / 36)
+    for j in range(filas):
+        for i in range(3):
+            x = -w / 2 + 14 + i * (w - 28) / 2.0
+            ops.append(R(rect(x - 6, -h + 16 + 36 * j, x + 6, -h + 28 + 36 * j, 1), (236, 226, 160) if (i + j) % 3 else (150, 190, 226), peso=0.01, sp=3))
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def fabrica():
+    ops = forma(rect(-150, -100, 150, 0, 4), (196, 120, 100), 5.6, peso=0.6, sp=9)
+    ops += forma(pol((-150, -100), (-150, -150), (-90, -100), (-90, -150), (-30, -100)), (176, 100, 84), 4.6, sp=7)
+    for x in (70, 112):
+        ops += forma(rect(x - 14, -230, x + 14, -100, 3), (160, 90, 76), 4.6, peso=0.3, sp=8)
+    ops += [R(rect(-120 + 52 * k, -70, -92 + 52 * k, -40, 2), (236, 226, 160), peso=0.02, sp=4) for k in range(5)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def podio():
+    ops = forma(rect(-180, -70, -60, 0, 3), (196, 196, 204), 5, peso=0.4, sp=8) + forma(rect(-60, -110, 60, 0, 3), ORO, 5.4, peso=0.5, sp=8) + forma(rect(60, -50, 180, 0, 3), (196, 140, 100), 5, peso=0.4, sp=8)
+    ops += [T(linea((-130, -44), (-110, -44)), 4, peso=0.02)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def tren_bala():
+    ops = forma(pol((-230, -20), (-230, -92), (-130, -130), (160, -130), (240, -80), (250, -20)), BLANCO, 5.6, peso=0.9, sp=10)
+    ops += [R(rect(-200 + 56 * k, -112, -160 + 56 * k, -82, 6), CELESTE, peso=0.02, sp=4) for k in range(5)]
+    ops += forma(pol((160, -130), (240, -80), (250, -20), (200, -20), (190, -60)), ROJO_CH, 4.4, sp=7)
+    ops += [T(linea((-230, -46), (250, -46)), 4.4, peso=0.1)]
+    ops += [T(linea((-200 - 26 * k, -90 + 20 * k), (-260 - 34 * k, -90 + 20 * k)), 4, peso=0.03) for k in range(3)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def cronometro(aguja=0.0):
+    ops = forma(circ(0, 0, 100, n=42), CREMA, 6.4, peso=0.8, sp=11) + forma(rect(-18, -128, 18, -100, 4), GRIS_CL, 5, sp=6) + [T(linea((58, -84), (84, -108)), 7, peso=0.03)]
+    for i in range(12):
+        a = i * math.pi / 6
+        ops.append(rayita(84 * math.cos(a), 84 * math.sin(a), 94 * math.cos(a), 94 * math.sin(a), 4.2))
+    ops += [T(_rotar(linea((0, 0), (0, -70)), aguja, 0, 0), 6, peso=0.02), R(circ(0, 0, 8, n=10), ROJO_CH, peso=0.01, sp=3)]
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def globo_dialogo():
+    P = np.vstack([arco_(104, -64, 26, -90, 0, 6), arco_(104, -6, 26, 0, 90, 6), [(-20, 20), (-52, 68), (-58, 20)],
+                   arco_(-104, -6, 26, 90, 180, 6), arco_(-104, -64, 26, 180, 270, 6)])
+    return Dib(forma(P, BLANCO, 5.4, peso=0.6, sp=9))
+
+
+@lru_cache(maxsize=None)
+def boton_suscribir():
+    ops = forma(rect(-190, -56, 190, 56, 26), ROJO_CH, 6, peso=0.7, sp=9)
+    return Dib(ops)
+
+
+@lru_cache(maxsize=None)
+def campana():
+    ops = forma(curva([(-50, 0), (-42, -80), (0, -116), (42, -80), (50, 0)], 6), ORO, 5.4, peso=0.5, sp=8) + [T(linea((-60, 0), (60, 0)), 6, peso=0.05)]
+    ops += forma(circ(0, 20, 12, n=10), ORO_OSC, 4, sp=4) + [T(linea((0, -116), (0, -134)), 5, peso=0.02)]
     return Dib(ops)

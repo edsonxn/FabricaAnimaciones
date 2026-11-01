@@ -18,8 +18,8 @@ Datos y fuentes verificadas (Britannica, Cambridge Ancient History, UNESCO, Muse
     dinastía ptolemaica (Ptolomeo I a Cleopatra VII); batalla de Accio (31 a. C.), muerte de Cleopatra (30 a. C.) y provincia romana («granero de Roma»).
   - Conquista islámica (641 d. C., Amr ibn al-As); fundación de El Cairo (969 d. C., fatimíes); Saladino (fundador de la dinastía ayubí, Ciudadela de El Cairo);
     sultanato mameluco vence a los mongoles (batalla de Ain Yalut, 1260). Dominio otomano (1517).
-  - Era moderna: expedición de Napoleón (1798) y hallazgo de la Piedra de Rosetta (descifrada por Champollion, 1822); Mehmet Alí (modernización, ~1805-1848);
-    Canal de Suez inaugurado en 1869 (Ferdinand de Lesseps, 164 km); protectorado británico (1882); independencia (1922); República (Nasser, 1952);
+  - Era moderna: expedición de Napoleón (1798) y hallazgo de la Piedra de Rosetta (1799; descifrada por Champollion, 1822; última inscripción jeroglífica conocida: Filé, 394 d. C.); Mehmet Alí (modernización, ~1805-1848);
+    Canal de Suez inaugurado en 1869 (Ferdinand de Lesseps, 164 km); protectorado británico (1882); independencia (1922); revolución de 1952 y República proclamada el 18-jun-1953 (Naguib; Nasser desde 1954);
     Presa de Asuán (1960-1970); población actual ~105 millones de habitantes.
 """
 
@@ -127,12 +127,12 @@ ESCENAS = [
     ]},
     {"id": "modernidad", "frases": [
         "En mil setecientos noventa y ocho, Napoleón desembarca con sus tropas, y sus científicos hallan la milagrosa Piedra de Rosetta.",
-        "Gracias a ella, los sabios logran descifrar por fin los jeroglíficos tras mil años de silencio.",
+        "Gracias a ella, los sabios logran descifrar por fin los jeroglíficos tras casi mil quinientos años de silencio.",
         "El gobernante Mehmet Alí moderniza las instituciones y la agricultura, sentando las bases del Egipto contemporáneo.",
         "Y en mil ochocientos sesenta y nueve, se inaugura el Canal de Suez, uniendo el mar Mediterráneo con el océano Índico y transformando las rutas del planeta.",
     ]},
     {"id": "siglo20", "frases": [
-        "Tras décadas de protectorado británico, Egipto proclama su independencia y, en mil novecientos cincuenta y dos, la República.",
+        "Tras décadas de protectorado británico, Egipto proclama su independencia y, en mil novecientos cincuenta y tres, la República.",
         "El país nacionaliza el Canal de Suez y construye la majestuosa Presa de Asuán, domesticando para siempre las crecidas del Nilo.",
         "Hoy, más de ciento cinco millones de personas viven en una nación puente entre África y Oriente Medio.",
         "Y las pirámides siguen contemplando el desierto, erguidas tras cinco mil años de historia.",

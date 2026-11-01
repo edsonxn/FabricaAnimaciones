@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Base de las escenas noir de «El caso de la máquina»: lienzo Noir compartido y montaje por PLANOS.
+"""Base de las escenas NOIR COLOR de «El gran expediente: Las 1.200 de OpenAI»: lienzo NoirColor compartido y montaje por PLANOS.
 
-Cada escena define sus planos en armar():  self.plano(t_inicio_global, fn, tr="barrido", dur=0.6)
+Cada escena define sus planos en armar():  self.plano(t_inicio_global, fn, tr="barrido", dur=0.6, pal="sodio")
 fn(h, t, u) dibuja el plano (u = t - inicio del plano) y devuelve el cuadro terminado con h.acabado(...).
+`pal` = paleta del plano (sodio · bourbon · medianoche); por defecto la PAL de la escena. Cada acto tiene su color:
+el laboratorio de las copias en medianoche, Facebook 2017 en bourbon, la calle y el despacho del detective en sodio.
 En la ventana de transición se renderizan el plano anterior y el nuevo y se mezclan con noir.transicion().
-entrada/salida = transición con la escena vecina (por defecto tinta; la escena anterior termina cubierta y esta se descubre).
 """
-import math
-
 import numpy as np
 
 from escena_base import Escena
-from motor import H, W, clamp01, e_inout, e_out, prog, smooth
 import noir as N
-from noir import Noir
+import noir_color as NC
 
 _H = None
 
@@ -21,17 +19,18 @@ _H = None
 def lienzo():
     global _H
     if _H is None:
-        _H = Noir()
+        _H = NC.NoirColor("medianoche")
     return _H
 
 
 class Plano:
-    def __init__(self, t0, fn, tr, dur, kw):
-        self.t0, self.fn, self.tr, self.dur, self.kw = t0, fn, tr, dur, kw
+    def __init__(self, t0, fn, tr, dur, pal, kw):
+        self.t0, self.fn, self.tr, self.dur, self.pal, self.kw = t0, fn, tr, dur, pal, kw
 
 
 class BaseNoir(Escena):
     TR_SALIDA = ("tinta", 0.7)    # transición HACIA la escena siguiente: se dibuja su arranque debajo y se mezclan (sin negro)
+    PAL = "medianoche"
 
     def preparar(self):
         self.planos = []
@@ -45,13 +44,14 @@ class BaseNoir(Escena):
     def sonidos(self):
         pass
 
-    def plano(self, t0, fn, tr="corte", dur=0.6, **kw):
-        self.planos.append(Plano(t0, fn, tr, dur, kw))
+    def plano(self, t0, fn, tr="corte", dur=0.6, pal=None, **kw):
+        self.planos.append(Plano(t0, fn, tr, dur, pal, kw))
 
     def _r(self, i, t):
         h = lienzo()
-        h.nuevo(t, None)
         pl = self.planos[i]
+        h.usar_paleta(pl.pal or self.PAL)
+        h.nuevo(t, None)
         return pl.fn(h, t, t - pl.t0)
 
     def render_base(self, t):
@@ -59,6 +59,7 @@ class BaseNoir(Escena):
         i = max([k for k, p in enumerate(ps) if p.t0 <= t] or [0])
         img = self._r(i, t)
         if i > 0 and t < ps[i].t0 + ps[i].dur:
+            img = img.copy()
             prev = self._r(i - 1, t)
             img = N.transicion(prev, img, (t - ps[i].t0) / ps[i].dur, ps[i].tr, sem=i, **ps[i].kw)
         return img
@@ -69,7 +70,6 @@ class BaseNoir(Escena):
             esc = S._TL["escenas"]
             ids = [e["id"] for e in esc]
             k = ids.index(self.id)
-            # .get: mientras se escriben las escenas, la siguiente puede no existir todavía
             self._sig = S.CLASES[ids[k + 1]](esc[k + 1], k + 1) if k + 1 < len(ids) and ids[k + 1] in S.CLASES else None
         return self._sig
 
@@ -78,6 +78,7 @@ class BaseNoir(Escena):
         tipo, d = self.TR_SALIDA
         sig = self.siguiente() if t > self.t1 - d else None
         if sig is not None:
+            img = img.copy()
             B = sig.render_base(t)
             img = N.transicion(img, B, (t - (self.t1 - d)) / d, tipo, sem=self.idx * 7 + 3)
         return np.clip(img, 0, 1)

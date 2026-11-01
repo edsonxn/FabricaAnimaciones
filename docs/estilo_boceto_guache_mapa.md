@@ -68,7 +68,7 @@ para países fuera de Europa; de España si hacen falta dos rejillas):
   repetir lo que el canal ya oyó): el sintetizado sonaba idéntico en los 8 videos del canal (`reloj_rapido`, `whoosh`, `pop`,
   `bling`, `campana`…). Receta: `docs/musica_biblioteca.md` § «SFX en los videos dibujados por código».
 - **VOZ NUEVA (el usuario, 22-oct-2026): ElevenLabs «Alberto Rodríguez»** (latino neutro, serio y narrativo),
-  `VOZ = dict(motor="elevenlabs", voice_id="l1zE9xgNpUTaQCZzpNJa", modelo="eleven_v4", idioma="es", tomas=1, stability=0.5)`,
+  `VOZ = dict(motor="elevenlabs", voice_id="l1zE9xgNpUTaQCZzpNJa", modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5)`,
   con corchetes de actuación y escritura normal (sin fonética; `docs/voz.md`). Dan (Chatterbox) queda para los videos viejos.
   Elegida entre 8 candidatas con la misma frase (casting en el artifact «Narrador de Cronopapel»).
 - **Anclas por prefijo**: «corona» casa con «coronan», «cinco» con «ciento cinco» → `T(e, palabra, frase=i)` siempre que la palabra se repita.

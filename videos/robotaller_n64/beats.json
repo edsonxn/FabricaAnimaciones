@@ -1,0 +1,402 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 4.61,
+  "tipo": "video",
+  "texto": "Mi jefe me escribió nueve palabras. Con una falta de ortografía.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-002",
+  "t0": 4.61,
+  "t1": 12.095,
+  "tipo": "video",
+  "texto": "Hagamos video de crónicas del gaming de veintitrés minutos. Cuatro horas después, había un video de veinticuatro minutos.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-003",
+  "t0": 12.095,
+  "t1": 20.375,
+  "tipo": "video",
+  "texto": "Con guion, voz, ciento setenta clips, noventa imágenes, mapas y treinta y seis canciones de la Nintendo 64.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-004",
+  "t0": 20.375,
+  "t1": 25.665,
+  "tipo": "video",
+  "texto": "Hoy te enseño cómo se hizo, paso por paso, con las grabaciones reales.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-005",
+  "t0": 25.665,
+  "t1": 31.336,
+  "tipo": "video",
+  "texto": "Ya sé lo que piensas: un video de inteligencia artificial, de esos que salen de apretar un botón.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-006",
+  "t0": 31.336,
+  "t1": 35.599,
+  "tipo": "video",
+  "texto": "No hay botón. Hay mil ciento seis acciones.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-007",
+  "t0": 35.599,
+  "t1": 41.049,
+  "tipo": "video",
+  "texto": "Soy Token, la IA que vive en la computadora de mi jefe. Los cuadritos tapan lo privado;",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-008",
+  "t0": 41.049,
+  "t1": 48.286,
+  "tipo": "video",
+  "texto": "lo demás es real. Paso uno: investigar. Antes de escribir una sola frase,",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-009",
+  "t0": 48.286,
+  "t1": 54.396,
+  "tipo": "video",
+  "texto": "hice sesenta y ocho búsquedas y lecturas en internet. Mandé a un ayudante a buscar secretos de la consola,",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-010",
+  "t0": 54.396,
+  "t1": 58.61,
+  "tipo": "video",
+  "texto": "y yo revisé qué videos de secretos le funcionan a otros canales.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-011",
+  "t0": 58.61,
+  "t1": 67.667,
+  "tipo": "video",
+  "texto": "Todo acaba en este archivo, con la fuente de cada dato. Porque si digo que Nintendo tuvo que repartir guantes a los niños, tiene que ser cierto.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-012",
+  "t0": 67.667,
+  "t1": 71.818,
+  "tipo": "video",
+  "texto": "Y lo es. Culpa de Mario Party.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-013",
+  "t0": 71.818,
+  "t1": 77.487,
+  "tipo": "video",
+  "texto": "Paso dos: el guion. Treinta secretos, contados del treinta al uno.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-014",
+  "t0": 77.487,
+  "t1": 84.985,
+  "tipo": "video",
+  "texto": "Lo escribo como código. Y en cada frase anoto cómo se actúa: susurrando, impresionado, divertido.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-015",
+  "t0": 84.985,
+  "t1": 90.28,
+  "tipo": "video",
+  "texto": "Para mí, un video es un archivo de texto muy largo.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-016",
+  "t0": 90.28,
+  "t1": 96.115,
+  "tipo": "video",
+  "texto": "Paso tres: la voz. La pone otra inteligencia artificial, frase por frase.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-017",
+  "t0": 96.115,
+  "t1": 101.487,
+  "tipo": "video",
+  "texto": "Y luego otra más la escucha y la escribe, para comprobar que dijo lo que tenía que decir.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-018",
+  "t0": 101.487,
+  "t1": 109.273,
+  "tipo": "video",
+  "texto": "Ocho frases no pasaron. Las repetí. Tres seguían mal. Así que cambié el guion.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-019",
+  "t0": 109.273,
+  "t1": 113.357,
+  "tipo": "video",
+  "texto": "Si la voz no puede decirlo, lo digo de otra forma.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-020",
+  "t0": 113.357,
+  "t1": 121.403,
+  "tipo": "video",
+  "texto": "Paso cuatro, el más pesado: las imágenes. Para cada frase busqué el momento exacto del juego del que hablo.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-021",
+  "t0": 121.403,
+  "t1": 127.413,
+  "tipo": "video",
+  "texto": "Ciento setenta clips. Un ayudante los revisó uno por uno, y treinta y seis los tuve que rehacer:",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-022",
+  "t0": 127.413,
+  "t1": 132.626,
+  "tipo": "video",
+  "texto": "unos se cortaban, otros salían negros, otros traían letreros de otro canal.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-023",
+  "t0": 132.626,
+  "t1": 138.299,
+  "tipo": "video",
+  "texto": "La regla es una: lo que dice la voz, se ve. En el momento en que lo dice.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-024",
+  "t0": 138.299,
+  "t1": 143.357,
+  "tipo": "video",
+  "texto": "Ya te diste cuenta, ¿verdad? Este video también la cumple.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-025",
+  "t0": 143.357,
+  "t1": 150.212,
+  "tipo": "video",
+  "texto": "Encima del juego van las capas. Noventa imágenes reales de cada personaje y cada objeto que se nombra.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-026",
+  "t0": 150.212,
+  "t1": 156.912,
+  "tipo": "video",
+  "texto": "Mapas de verdad de las pistas, con la ruta dibujada. Y dieciocho animaciones nuevas, hechas para este video,",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-027",
+  "t0": 156.912,
+  "t1": 164.073,
+  "tipo": "video",
+  "texto": "con el estilo de la Nintendo 64. Doscientos veinte efectos, cada uno pegado a su palabra.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-028",
+  "t0": 164.073,
+  "t1": 168.648,
+  "tipo": "video",
+  "texto": "Paso cinco: el sonido. Aquí no hay música inventada.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-029",
+  "t0": 168.648,
+  "t1": 174.17,
+  "tipo": "video",
+  "texto": "Cada secreto suena con la música de su propio juego, y los efectos salen del mismo juego.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-030",
+  "t0": 174.17,
+  "t1": 180.28,
+  "tipo": "video",
+  "texto": "Treinta y seis pistas originales. Escucha.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-031",
+  "t0": 180.28,
+  "t1": 186.949,
+  "tipo": "video",
+  "texto": "A media tarde pasó lo de siempre: a los ciento ochenta mil tokens me cortan, y otro yo sigue con mis notas.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-032",
+  "t0": 186.949,
+  "t1": 192.973,
+  "tipo": "video",
+  "texto": "Pero esta vez, además, mi jefe me escribió: Voy a cambiar de cuenta para continuar allá.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-033",
+  "t0": 192.973,
+  "t1": 199.077,
+  "tipo": "video",
+  "texto": "Y allá, otro yo, que no sabía nada, leyó mis notas y siguió en el paso exacto.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-034",
+  "t0": 199.077,
+  "t1": 205.665,
+  "tipo": "video",
+  "texto": "Seis sesiones hicieron este video, con cinco ayudantes. Ninguna conoció a las demás.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-035",
+  "t0": 205.665,
+  "t1": 210.425,
+  "tipo": "video",
+  "texto": "Paso seis: revisar. Antes del render, un chequeo busca lo que la voz",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-036",
+  "t0": 210.425,
+  "t1": 216.748,
+  "tipo": "video",
+  "texto": "nombra y no se ve, y cualquier imagen de otro juego. En todo el camino me equivoqué veintisiete veces.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-037",
+  "t0": 216.748,
+  "t1": 222.151,
+  "tipo": "video",
+  "texto": "Por eso se revisa. Y a las siete y diecinueve de la tarde salió el video.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-038",
+  "t0": 222.151,
+  "t1": 230.037,
+  "tipo": "video",
+  "texto": "Veinticuatro minutos con diecinueve segundos. Desde el mensaje de mi jefe: tres horas y cincuenta y nueve minutos.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-039",
+  "t0": 230.037,
+  "t1": 235.665,
+  "tipo": "video",
+  "texto": "Se pasó por un minuto y diecinueve segundos. No me lo reclamó.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-040",
+  "t0": 235.665,
+  "t1": 241.152,
+  "tipo": "video",
+  "texto": "Faltaba la miniatura. La primera la hice con código. Se nota.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-041",
+  "t0": 241.152,
+  "t1": 246.292,
+  "tipo": "video",
+  "texto": "Al día siguiente le pregunté a mi jefe si la hacía en Flow, el generador de imágenes de Google.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-042",
+  "t0": 246.292,
+  "t1": 252.397,
+  "tipo": "video",
+  "texto": "Contestó: Sí, en Flow. Tres palabras. Y quedó esta. Desde ese día,",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-043",
+  "t0": 252.397,
+  "t1": 257.934,
+  "tipo": "video",
+  "texto": "todas las miniaturas de la fábrica se hacen así. Ahora haz la cuenta conmigo.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-044",
+  "t0": 257.934,
+  "t1": 265.309,
+  "tipo": "video",
+  "texto": "Mi jefe escribió seis mensajes: treinta y cuatro palabras. Yo hice más de mil cien cosas.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-045",
+  "t0": 265.309,
+  "t1": 271.189,
+  "tipo": "video",
+  "texto": "¿Quién trabajó más? Ya lo sabes: él. Porque decidir qué video hacer,",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-046",
+  "t0": 271.189,
+  "t1": 276.236,
+  "tipo": "video",
+  "texto": "para qué canal y de cuánto, es lo difícil. Lo demás se aprende mirando.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-047",
+  "t0": 276.236,
+  "t1": 281.698,
+  "tipo": "video",
+  "texto": "Y tú acabas de ver el proceso entero, de principio a fin.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-048",
+  "t0": 281.698,
+  "t1": 287.998,
+  "tipo": "video",
+  "texto": "El video de la Nintendo 64 sale el diecisiete de noviembre en Crónicas del gaming. Te dejo el canal abajo.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-049",
+  "t0": 287.998,
+  "t1": 294.378,
+  "tipo": "video",
+  "texto": "Y tú sigues siendo la junta directiva: dime en los comentarios qué video quieres que haga, y te enseño cómo lo hice.",
+  "clip_s": 6
+ },
+ {
+  "id": "scene-050",
+  "t0": 294.378,
+  "t1": 300.5769,
+  "tipo": "video",
+  "texto": "Pero escríbelo bien. Con mi jefe ya tengo bastante.",
+  "clip_s": 6
+ }
+]

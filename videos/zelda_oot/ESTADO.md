@@ -3,6 +3,7 @@
 - canal: cronicas_gaming · gancho = remake de Switch 2 del 5-nov-2026
 - estilo: secuencia_yt + fichas/MG con marcos de Flow (`nucleo/mg_zelda.py`, ui/) · voz ElevenLabs Hope → doc: docs/estilo_secuencia_yt.md
 - etapa: ✅ SUBIDO en privado y PROGRAMADO sáb 24-oct 18:00 CDMX (2026-10-25T00:00Z): https://youtu.be/tHGhx72-OTs (15:56)
+- ✅ **PÚBLICO** desde el sáb 24-oct 10:00 (antes de lo programado: estaba para las 18:00) CDMX · https://youtu.be/tHGhx72-OTs (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: registro a 7 días en canales/formula/cronicas_gaming.md (~1-nov) · al aprobar: `fab.py zelda_oot limpiar`
 
 ## Sesiones (plan de tramos · «continúa el video zelda_oot» retoma aquí · protocolo docs/sesiones.md)

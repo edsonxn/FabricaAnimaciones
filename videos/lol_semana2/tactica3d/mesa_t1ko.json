@@ -1,0 +1,147 @@
+{
+ "modo": "mesa",
+ "de": 194.0,
+ "a": 200.63,
+ "fondo": "/videos/lol_semana2/tactica3d/mesa_t1ko_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Jojopyun": {
+   "jugador": "Jojopyun",
+   "campeon": "Viktor",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/Viktor.png",
+   "puntos": [
+    [
+     0,
+     0.58,
+     0.64
+    ]
+   ],
+   "de": 194.4,
+   "sale": 199.63
+  },
+  "Elyoya": {
+   "jugador": "Elyoya",
+   "campeon": "XinZhao",
+   "equipo": "R",
+   "icono": "/videos/lol_semana2/iconos/XinZhao.png",
+   "puntos": [
+    [
+     0,
+     0.33,
+     0.41
+    ]
+   ],
+   "de": 194.48,
+   "sale": 199.63
+  }
+ },
+ "camara": [
+  [
+   194.0,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   194.35,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   196.1216,
+   -18,
+   36,
+   50,
+   0.47,
+   0.55
+  ],
+  [
+   198.1106,
+   14,
+   40,
+   47.5,
+   0.47,
+   0.55
+  ],
+  [
+   199.73,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   200.63,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "faker",
+   "pts": [
+    [
+     0.505,
+     0.8
+    ],
+    [
+     0.49,
+     0.66
+    ],
+    [
+     0.46,
+     0.52
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.9,
+   "alto": 2.5,
+   "grosor": 1.4,
+   "en": 197.29,
+   "sale": 199.63
+  }
+ ],
+ "etiquetas": [
+  {
+   "flecha": "faker",
+   "texto": "FAKER · ORIANNA",
+   "sub": "POR EL FLANCO",
+   "color": "azul",
+   "dx": 170,
+   "dy": -30,
+   "de": 197.69,
+   "a": 199.63
+  },
+  {
+   "u": 0.33,
+   "v": 0.41,
+   "alto": 0,
+   "texto": "KOI",
+   "sub": "VAN TODOS POR ONER",
+   "color": "rojo",
+   "dx": -170,
+   "dy": -60,
+   "de": 194.8,
+   "a": 199.63
+  }
+ ]
+}

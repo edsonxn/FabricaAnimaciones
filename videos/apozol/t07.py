@@ -33,30 +33,26 @@ t_1863, t_gob, t_jesus, t_gonz, t_apoz, t_cat, t_munic = (T(E7, "ochocientos", f
                                                           T(E7, "apozol", frase=0), T(E7, "categoria", frase=0), T(E7, "municipalidad", frase=0))
 t_novec, t_diec, t_term, t_rev, t_const, t_libre = (T(E7, "novecientos", frase=1), T(E7, "dieciocho", frase=1), T(E7, "terminar", frase=1), T(E7, "revolucion", frase=1),
                                                     T(E7, "constituido", frase=1), T(E7, "libre", frase=1))
-t_pueblo, t_leop, t_estr, t_borja, t_nac, t_ochenta, t_min, t_supr, t_corte = (T(E7, "pueblo", frase=2), T(E7, "leopoldo", frase=2), T(E7, "estrada", frase=2), T(E7, "borja", frase=2),
-                                                                              T(E7, "nacido", frase=2), T(E7, "ochenta", frase=2), T(E7, "ministro", frase=2), T(E7, "suprema", frase=2),
-                                                                              T(E7, "corte", frase=2))
-t_hoy, t_cab, t_viven, t_dos, t_pers, t_munic2, t_seis = (T(E7, "hoy", frase=3), T(E7, "cabecera", frase=3), T(E7, "viven", frase=3), T(E7, "dos", frase=3), T(E7, "personas", frase=3),
-                                                         T(E7, "municipio", frase=3), T(E7, "seis", frase=3))
-t_jard, t_templo, t_laurel, t_sombra, t_monum, t_juarez = (T(E7, "jardin", frase=4), T(E7, "templo", frase=4), T(E7, "laurel", frase=4), T(E7, "sombra", frase=4),
-                                                           T(E7, "monumento", frase=4), T(E7, "juarez", frase=4))
-t_cada, t_fiesta, t_senor, t_asc, t_musica, t_cab2, t_fuegos = (T(E7, "cada", frase=5), T(E7, "fiesta", frase=5), T(E7, "senor", frase=5), T(E7, "ascension", frase=5),
-                                                               T(E7, "musica", frase=5), T(E7, "caballos", frase=5), T(E7, "fuegos", frase=5))
-t_julio, t_bailan, t_tasto, t_danza, t_recu, t_guerra = (T(E7, "julio", frase=6), T(E7, "bailan", frase=6), T(E7, "tastoanes", frase=6), T(E7, "danza", frase=6), T(E7, "recuerda", frase=6),
-                                                         T(E7, "guerra", frase=6))
-t_apoz2, t_peq, t_dosn, t_nom, t_agua, t_hist, t_corr = (T(E7, "apozol", frase=7), T(E7, "pequeno", frase=7), T(E7, "dos", frase=7), T(E7, "nombres", frase=7), T(E7, "agua", frase=7),
-                                                         T(E7, "historia", frase=7), T(E7, "corriendo", frase=7))
-t_carr, t_sigue, t_norte, t_sig, t_pueb, t_espera = (T(E7, "carretera", frase=8), T(E7, "sigue", frase=8), T(E7, "norte", frase=8), T(E7, "siguiente", frase=8), T(E7, "pueblo", frase=8),
-                                                     T(E7, "espera", frase=8))
+t_hoy, t_cab, t_viven, t_dos, t_pers, t_munic2, t_seis = (T(E7, "hoy", frase=2), T(E7, "cabecera", frase=2), T(E7, "viven", frase=2), T(E7, "dos", frase=2), T(E7, "personas", frase=2),
+                                                         T(E7, "municipio", frase=2), T(E7, "seis", frase=2))
+t_jard, t_templo, t_laurel, t_sombra, t_monum, t_juarez = (T(E7, "jardin", frase=3), T(E7, "templo", frase=3), T(E7, "laurel", frase=3), T(E7, "sombra", frase=3),
+                                                           T(E7, "monumento", frase=3), T(E7, "juarez", frase=3))
+t_cada, t_fiesta, t_senor, t_asc, t_musica, t_cab2, t_fuegos = (T(E7, "cada", frase=4), T(E7, "fiesta", frase=4), T(E7, "senor", frase=4), T(E7, "ascension", frase=4),
+                                                               T(E7, "musica", frase=4), T(E7, "caballos", frase=4), T(E7, "fuegos", frase=4))
+t_julio, t_bailan, t_tasto, t_danza, t_recu, t_guerra = (T(E7, "julio", frase=5), T(E7, "bailan", frase=5), T(E7, "tastoanes", frase=5), T(E7, "danza", frase=5), T(E7, "recuerda", frase=5),
+                                                         T(E7, "guerra", frase=5))
+t_apoz2, t_peq, t_dosn, t_nom, t_agua, t_hist, t_corr = (T(E7, "apozol", frase=6), T(E7, "pequeno", frase=6), T(E7, "dos", frase=6), T(E7, "nombres", frase=6), T(E7, "agua", frase=6),
+                                                         T(E7, "historia", frase=6), T(E7, "corriendo", frase=6))
+t_carr, t_sigue, t_norte, t_sig, t_pueb, t_espera = (T(E7, "carretera", frase=7), T(E7, "sigue", frase=7), T(E7, "norte", frase=7), T(E7, "siguiente", frase=7), T(E7, "pueblo", frase=7),
+                                                     T(E7, "espera", frase=7))
 T_A = T0(E7)
 T_B = INI(E7, 1) - 0.12
-T_C = INI(E7, 2) - 0.12
-T_D = INI(E7, 3) - 0.12
-T_E = INI(E7, 4) - 0.12
-T_F = INI(E7, 5) - 0.12
-T_G = INI(E7, 6) - 0.12
-T_H = INI(E7, 7) - 0.12
-T_I = INI(E7, 8) - 0.12
+T_D = INI(E7, 2) - 0.12
+T_E = INI(E7, 3) - 0.12
+T_F = INI(E7, 4) - 0.12
+T_G = INI(E7, 5) - 0.12
+T_H = INI(E7, 6) - 0.12
+T_I = INI(E7, 7) - 0.12
 
 
 def _iso(c):
@@ -100,26 +96,6 @@ def b_libre(lz, t):
         U.llamada(lz, W / 2, 250, "MUNICIPIO LIBRE", color=U.COL["teal"], px=84, k=k * U.repop(t, t_libre + 0.2), cola=None)
     snd(t_diec, "pop", 0.4)
     snd(t_libre, "bling", 0.4)
-
-
-# ------------------------------------------------------------------------------------------------ C. el ministro nacido aquí
-@shot(T_C, bg=lambda t: bg_grad((40, 28, 90), (150, 90, 120), mid=(90, 54, 110), ym=0.6), post=[acabado], ent=("fundido", 0.6))
-def c_ministro(lz, t):
-    U.bokeh(lz, t, seed=65, n=9, colores=((255, 200, 120), (255, 120, 140), (180, 140, 255)), alfa=0.28)
-    M7.balanza(lz, 540, 930, 2.1, t, k=pk(t, t_min - 0.2, 0.6))
-    k = U.pop(t, t_leop)
-    if k > 0.01:
-        U.llamada(lz, 1330, 260, "Leopoldo Estrada Borja", color=U.COL["naranja"], px=62, k=k * U.salida(t, T1(E7) - 20.0), cola=None)
-    k = U.pop(t, t_nac) * U.salida(t, T1(E7) - 20.0)
-    if k > 0.01:
-        P.rotulo(lz, 1330, 470, "1881", px=180, k=k, color=(255, 255, 255), alfa=min(1.0, k * 1.4))
-        U._registrar(lz, 1330, 470, 460, 200)
-        U.llamada(lz, 1330, 610, "nacido en Apozol", color=U.COL["teal"], px=48, k=k, cola=None)
-    k = U.pop(t, t_supr) * U.salida(t, T1(E7) - 20.0)
-    if k > 0.01:
-        U.llamada(lz, 1330, 740, "Suprema Corte de Justicia", color=U.COL["morado"], px=52, k=k, cola=None)
-        U.llamada(lz, 1330, 840, "ministro · 1923 – 1928", color=U.COL["oscuro"], px=44, k=k, cola=None)
-    snd(t_min, "campana", 0.3)
 
 
 # ------------------------------------------------------------------------------------------------ D. hoy: unas dos mil seiscientas personas
@@ -170,7 +146,7 @@ def e_jardin(lz, t):
 # ------------------------------------------------------------------------------------------------ F. la fiesta del Señor de la Ascensión
 @shot(T_F, bg=lambda t: bg_grad((8, 6, 30), (70, 30, 80), mid=(30, 14, 60), ym=0.65), post=[acabado], ent=("fundido", 0.7))
 def f_fiesta(lz, t):
-    coh = [((300 + 330 * i + 140 * h01(7, i)) % (W - 200) + 100, 170 + 190 * h01(8, i), 220 + 90 * h01(9, i), T_F + 0.8 + 1.5 * i) for i in range(16)]
+    coh = [((300 + 330 * i + 140 * h01(7, i)) % (W - 300) + 150, 250 + 170 * h01(8, i), 200 + 90 * h01(9, i), T_F + 0.5 + 1.3 * i) for i in range(16)]
     M7.fiesta_noche(lz, t, T_F, coh)
     # charros al galope por la calle
     for i, (x0, v, y, col) in enumerate(((-300, 380.0, 1010, (120, 76, 52)), (-900, 340.0, 1035, (60, 42, 40)))):

@@ -1,5 +1,6 @@
 # Juchipila: el lugar de las flores nobles — ESTADO
-- canal: bitacora_perdida · sin fecha (el usuario decide; ver `python fab.py canales --actualizar` para el hueco)
+- canal: bitacora_perdida · PUBLICADO (público) jue 15-oct-2026 14:00 CDMX (https://youtu.be/UHZ9sXW0D1g; verificado en YouTube el 17-oct)
+- siguiente: ver retención y métricas (`python fab.py yt metricas bitacora_perdida 28`); al cerrar, `python fab.py juchipila limpiar`
 - estilo: kurzgesagt ISOMÉTRICO + personajes 2D (`kz_pers2d`) + conceptos abstractos (`kz_abstracto`) → docs/estilo_kurzgesagt.md §A (+ «Lecciones de videos/juchipila») · ejemplo: videos/independencia_mx/
 - etapa (11-oct-2026): **las 13 escenas están escritas** (t01…t13 + mundos_a…n), revisadas con hojas de prueba y corregidas; prueba de humo de todo el video sin errores (`./run.sh _humo.py 2`). Voz y timeline listos (498,33 s).
 - 11-oct (tarde): música Lyria en 4 tramos (`LYRIA["tramos"]`, `lyria_tramos.py todo`), `sfx` (151 eventos) y `mezcla` (-14 LUFS, voz/fondo 14,6 dB) HECHOS. El usuario pidió render completo: `python fab.py juchipila video` → `final` → `verificar`; él lo ve y decide si se sube (hueco del canal: jue 15-oct) o se corrige.

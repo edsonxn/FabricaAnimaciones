@@ -185,9 +185,10 @@ def cohete(lz, x, y, R, t, t0, color=((255, 206, 72), (255, 120, 90), (120, 220,
         px = x + math.cos(a) * r
         py = y + math.sin(a) * r + 70 * u * u
         al = (1 - u) ** 1.2
-        lz.relleno(circulo(px, py, 5 * (1 - u * 0.6), 8), c, alfa=al, capa=capa)
-        lz.relleno(circulo(x + math.cos(a) * r * 0.8, y + math.sin(a) * r * 0.8 + 56 * u * u, 3, 6), P.aclarar(c, 0.3), alfa=al * 0.7, capa=capa)
-    lz.halo(x, y, R * 1.2 * (1 - u * 0.4), c, alfa=0.25 * (1 - u), dureza=1.2, capa=capa)
+        lz.relleno(circulo(px, py, 9 * (1 - u * 0.5), 10), c, alfa=al, capa=capa)
+        lz.relleno(circulo(px, py, 4.5 * (1 - u * 0.5), 8), (255, 255, 255), alfa=al * 0.9, capa=capa)
+        lz.relleno(circulo(x + math.cos(a) * r * 0.8, y + math.sin(a) * r * 0.8 + 56 * u * u, 5, 8), P.aclarar(c, 0.3), alfa=al * 0.7, capa=capa)
+    lz.halo(x, y, R * 1.3 * (1 - u * 0.4), c, alfa=0.45 * (1 - u), dureza=1.2, capa=capa)
 
 
 def multitud_silueta(lz, y, t, n=36, x0=0, x1=W, esc=1.0, color=(22, 10, 40), capa=0, seed=3, sombreros=0.4):

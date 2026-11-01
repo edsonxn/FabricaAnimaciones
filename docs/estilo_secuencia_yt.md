@@ -128,6 +128,13 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   el `"post"` de la escena `overgear` estira la escena para que la imagen del código entre con «CRONICAS10» y acabe en el
   puesto siguiente. Assets de `D:\Cronicas de Warcraft\Overgear\` copiados a
   `medios/_overgear/` (pantalla verde → `croma=True`); captura de overgear.com/games/wow como medio de un beat (el brief la exige).
+  **FONDO DE MARCA SIEMPRE (Alice 29-oct; el usuario 1-nov-2026: «es algo que quieren siempre»):** en TODO video con
+  Overgear, `medios/_overgear/background/Background.mp4` (degradado morado con partículas) a cuadro entero, en bucle, DEBAJO
+  de reseñas, packshot y código: FX `video` `nombre="og fondo marca"`, `de=` la frase de las reseñas, `a=` el mismo final que
+  «og CODIGO», puesto ANTES que los demás «og …» en la lista. Las tarjetas de coaching y de los pros siguen sobre gameplay;
+  nunca gameplay detrás del logo, reseñas, packshot ni código. Ejemplo: `videos/wow_primera_semana/efectos.py`.
+  **Además:** «incluye promoción pagada» marcado (lo hace `yt subir`/`aplicar`) y en la descripción el enlace por
+  integración que mande Alice (`overgear.s.gy/CRONICAS/N`), no el general.
 - **Cambiar la voz con los clips ya bajados**: `voz` → `seleccionar` → `tiempo` → **`reajustar`** (mueve los cortes de
   beats.json a los tiempos nuevos SIN renumerar; base: `timeline_beats.json`, que `beats` guarda) → `fx`. NUNCA `beats` de
   nuevo (renumeraría los clips). Los efectos se anclan a palabras y se mueven solos.

@@ -1,0 +1,74 @@
+﻿
+=== [asteroide_invisible] seleccionar ===
+python : 
+C:\Users\jaire\AppData\Local\Programs\Python\Python310\lib\site-packages\speechbrain\utils\parameter_transfer.py:234: 
+UserWarning: Requested Pretrainer collection using symlinks on Windows. This might not work; see `LocalStrategy` 
+documentation. Consider unsetting `collect_in` in Pretrainer to avoid symlinking altogether.
+En línea: 1 Carácter: 356
++ ... _CPU = "1"; python fab.py asteroide_invisible seleccionar *> E:\Fabri ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\jaire\...ing altogether.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+C:\Users\jaire\AppData\Local\Programs\Python\Python310\lib\site-packages\pyloudnorm\normalize.py:62: UserWarning: 
+Possible clipped samples in output.
+  warnings.warn("Possible clipped samples in output.")
+C:\Users\jaire\AppData\Local\Programs\Python\Python310\lib\site-packages\pyloudnorm\normalize.py:62: UserWarning: 
+Possible clipped samples in output.
+  warnings.warn("Possible clipped samples in output.")
+C:\Users\jaire\AppData\Local\Programs\Python\Python310\lib\site-packages\pyloudnorm\normalize.py:62: UserWarning: 
+Possible clipped samples in output.
+  warnings.warn("Possible clipped samples in output.")
+C:\Users\jaire\AppData\Local\Programs\Python\Python310\lib\site-packages\pyloudnorm\normalize.py:62: UserWarning: 
+Possible clipped samples in output.
+  warnings.warn("Possible clipped samples in output.")
+46/50 frases con toma válida
+REGENERAR: gancho_2 numeros_1 numeros_2 zona_cero_3
+gancho_0       gancho_0_s1.wav        dur= 3.65s cer=0.000 sim=-0.050
+gancho_1       gancho_1_s1.wav        dur= 6.08s cer=0.000 sim=0.155
+gancho_3       gancho_3_s1.wav        dur= 7.84s cer=0.000 sim=0.133
+ciegos_0       ciegos_0_s1.wav        dur= 9.28s cer=0.000 sim=0.106
+ciegos_1       ciegos_1_s1.wav        dur= 2.35s cer=0.000 sim=0.093
+ciegos_2       ciegos_2_s1.wav        dur= 9.28s cer=0.000 sim=0.084
+ciegos_3       ciegos_3_s1.wav        dur= 5.52s cer=0.000 sim=0.102
+ciegos_4       ciegos_4_s1.wav        dur= 6.56s cer=0.000 sim=0.117
+cheliabinsk_0  cheliabinsk_0_s1.wav   dur= 8.56s cer=0.000 sim=0.164
+cheliabinsk_1  cheliabinsk_1_s1.wav   dur= 3.60s cer=0.000 sim=0.226
+cheliabinsk_2  cheliabinsk_2_s1.wav   dur= 6.62s cer=0.000 sim=0.099
+cheliabinsk_3  cheliabinsk_3_s1.wav   dur= 7.26s cer=0.000 sim=0.135
+punto_0        punto_0_s1.wav         dur= 8.32s cer=0.000 sim=0.098
+punto_1        punto_1_s1.wav         dur= 2.32s cer=0.000 sim=0.090
+punto_2        punto_2_s1.wav         dur= 4.06s cer=0.000 sim=0.096
+punto_3        punto_3_s1.wav         dur= 8.08s cer=0.000 sim=0.083
+punto_4        punto_4_s1.wav         dur= 5.76s cer=0.000 sim=0.127
+numeros_0      numeros_0_s1.wav       dur= 6.29s cer=0.000 sim=0.095
+numeros_3      numeros_3_s1.wav       dur= 6.72s cer=0.000 sim=0.169
+numeros_4      numeros_4_s1.wav       dur= 3.79s cer=0.000 sim=0.160
+alerta_0       alerta_0_s1.wav        dur= 5.60s cer=0.000 sim=0.153
+alerta_1       alerta_1_s1.wav        dur= 4.15s cer=0.000 sim=0.088
+alerta_2       alerta_2_s1.wav        dur= 8.40s cer=0.000 sim=0.072
+alerta_3       alerta_3_s1.wav        dur= 6.96s cer=0.000 sim=0.179
+alerta_4       alerta_4_s1.wav        dur= 3.92s cer=0.000 sim=0.057
+destello_0     destello_0_s1.wav      dur= 1.91s cer=0.000 sim=0.068
+destello_1     destello_1_s1.wav      dur= 7.36s cer=0.000 sim=0.154
+destello_2     destello_2_s1.wav      dur= 6.32s cer=0.000 sim=0.195
+destello_3     destello_3_s1.wav      dur= 5.28s cer=0.000 sim=0.129
+destello_4     destello_4_s1.wav      dur= 3.20s cer=0.000 sim=0.042
+silencio_0     silencio_0_s1.wav      dur= 2.11s cer=0.000 sim=0.021
+silencio_1     silencio_1_s1.wav      dur= 5.68s cer=0.000 sim=0.115
+silencio_2     silencio_2_s1.wav      dur= 5.28s cer=0.000 sim=0.102
+silencio_3     silencio_3_s1.wav      dur= 2.48s cer=0.000 sim=0.226
+silencio_4     silencio_4_s1.wav      dur= 8.53s cer=0.000 sim=0.195
+zona_cero_0    zona_cero_0_s1.wav     dur= 3.12s cer=0.000 sim=0.102
+zona_cero_1    zona_cero_1_s1.wav     dur= 6.72s cer=0.000 sim=0.086
+zona_cero_2    zona_cero_2_s1.wav     dur= 8.56s cer=0.000 sim=0.169
+zona_cero_4    zona_cero_4_s1.wav     dur= 4.16s cer=0.000 sim=0.108
+peor_0         peor_0_s1.wav          dur= 2.77s cer=0.000 sim=0.092
+peor_1         peor_1_s1.wav          dur= 8.48s cer=0.000 sim=0.115
+peor_2         peor_2_s1.wav          dur= 7.68s cer=0.000 sim=0.112
+peor_3         peor_3_s1.wav          dur= 3.60s cer=0.000 sim=0.101
+cierre_0       cierre_0_s1.wav        dur= 8.72s cer=0.000 sim=0.146
+cierre_1       cierre_1_s1.wav        dur= 7.52s cer=0.000 sim=0.106
+cierre_2       cierre_2_s1.wav        dur= 7.12s cer=0.000 sim=0.123
+Voz total: 267.6 s

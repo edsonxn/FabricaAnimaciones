@@ -33,6 +33,7 @@ VIDEOS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(tempfile.gettempdir(), "fab_vivo")
 HORAS = 12                             # sesiones que se listan
 ACTIVA_S = 120                         # sin escribir en este tiempo, la sesión ya no cuenta como «en vivo»
+ESPERA_S = 900                         # tope de un comando sin resultado: 3 de 17 000 esperas lo pasan, y son sesiones que murieron
 COLA_BYTES = 40_000_000                # al abrir una sesión se lee solo su final (con imágenes pesan decenas de MB)
 MAX_EVENTOS = 500
 PRIMERA = 160                          # eventos del principal que se mandan al abrir la página (la ventana de la repetición)
@@ -133,6 +134,10 @@ _FAB_ESTACION = {"voz": "voz", "seleccionar": "voz", "tiempo": "voz", "musica": 
 # De quién es una sesión: solo cuenta lo que PRODUCE el video. Leer, buscar, mencionarlo o `fab.py <v> estado` no
 _FAB_PRODUCE = set(_FAB_ESTACION) - {"verificar", "comprobar"}
 _FAB_NUEVO = re.compile(r"""fab\.py["']?\s+(?:nuevo|yt\s+subir)\s+([a-z0-9_]+)""")
+# Papeleo: cualquier sesión corrige el canal en `panel.json` o anota en `ESTADO.md`; eso no la hace productora de ese video
+_PAPELEO = {"panel.json", "estado.md"}
+# Mantenimiento del panel. Los kits de `nucleo/` (`mg_*`, `peg_estilos`) y `docs/estilo_*` no cuentan: se editan produciendo un video
+_SISTEMA = re.compile(r"[\\/]nucleo[\\/](panel|agente_vivo|app_movil|hook_|robotaller|estadisticas)|[\\/]docs[\\/]panel\.md$|[\\/]fab\.py$", re.I)
 
 
 def _es_video(v):
@@ -173,7 +178,10 @@ def _videos_producidos(nombre, ent):
     """Los videos que esta herramienta produce: Write/Edit dentro de videos/<v>/, o `fab.py <v> <etapa>` de producción."""
     ent = ent if isinstance(ent, dict) else {}
     if nombre in ("Write", "Edit"):
-        return [v for v in _VIDEO.findall(ent.get("file_path") or "")[:1] if _es_video(v)]
+        ruta = ent.get("file_path") or ""
+        if os.path.basename(ruta.replace("\\", "/")).lower() in _PAPELEO:
+            return []
+        return [v for v in _VIDEO.findall(ruta)[:1] if _es_video(v)]
     if nombre in ("Bash", "PowerShell"):
         corre = _lo_que_corre(ent.get("command"))
         return [v for v in [m.group(1) for m in _FAB.finditer(corre) if m.group(2) in _FAB_PRODUCE] + _FAB_NUEVO.findall(corre) if _es_video(v)]
@@ -485,6 +493,7 @@ class Sesion:
         self.estacion = None
         self.produce = collections.Counter()    # video -> herramientas que lo produjeron (ver `_videos_producidos`)
         self.produce_t = {}                # video -> última vez que se produjo
+        self.sistema = 0                   # ediciones del panel y su mantenimiento (ver `_SISTEMA`)
         self.ultimo_t = 0.0
         self.pensando = False
         self.host = ""
@@ -559,6 +568,8 @@ class Sesion:
         for v in _videos_producidos(nombre, ent):
             self.produce[v] += 1
             self.produce_t[v] = t
+        if nombre in ("Write", "Edit") and isinstance(ent, dict) and _SISTEMA.search(ent.get("file_path") or ""):
+            self.sistema += 1
 
     def _linea_ayudante(self, a, t, d):
         """Cada acción va a la línea del ayudante, aparte de la del principal (`a.eventos`): la página las intercala por `seq`."""
@@ -612,6 +623,14 @@ class Sesion:
             elif reciente:
                 filas.append(dict(id=k[-12:], tipo=f["tipo"], desc=f["desc"], activo=True, ultima=f["desc"], t=f["t"], fondo=True))
         return filas
+
+    def ocupada(self):
+        """Sigue trabajando aunque no escriba: piensa, espera un comando, tiene uno de fondo o un ayudante activo. Cada aviso caduca: `fondo` se queda pegado si la sesión muere."""
+        ahora = time.time()
+        return ((self.pensando and ahora - self.ultimo_t < ESPERA_S)
+                or any(ahora - e.get("t", 0) < ESPERA_S for e in self.abiertos.values())
+                or any(ahora - f["t"] < ESPERA_S for f in self.fondo.values())
+                or any(a.get("activo") and not a.get("fondo") for a in self.ayudantes()))
 
     def equipo(self):
         """Todos los ayudantes con acciones en la línea, aunque ya hayan terminado: el selector del historial los necesita."""
@@ -842,8 +861,9 @@ class Sesion:
 
     @property
     def video(self):
-        """El video de esta sesión: el que más produjo o, si aún no produjo nada, el que nombra su título. Si no, ninguno."""
-        return self.produce.most_common(1)[0][0] if self.produce else _video_del_titulo(self.titulo)
+        """El video de esta sesión: el que más produjo, salvo que toque más el panel que el video; si no, el que nombra su título."""
+        top = self.produce.most_common(1)
+        return top[0][0] if top and top[0][1] >= self.sistema else _video_del_titulo(self.titulo)
 
 
 # ---------------------------------------------------------- qué hace la PC: la tarea real, clasificada aquí para que `cmd` no salga por la API
@@ -985,6 +1005,13 @@ def _limpiar_cache():
             shutil.rmtree(carpeta.path, ignore_errors=True)
 
 
+def _resumen(s):
+    """Para «Toda la fábrica»: la última acción del principal y sus ayudantes activos, de lo que ya hay en memoria. Solo qué tipo de cosa hace, sin texto."""
+    e = s.eventos[-1] if s.eventos else {}
+    return dict(ocupada=s.ocupada(), accion={k: e[k] for k in ("seq", "tipo", "estacion", "fallo") if k in e},
+                minis=[dict(id=a["id"], tipo=a["tipo"]) for a in s.ayudantes() if a.get("activo")][:3])
+
+
 def sesiones():
     """Las sesiones con actividad en las últimas horas, la más reciente primero."""
     if time.time() - _LISTA["t"] < 4:
@@ -1001,7 +1028,7 @@ def sesiones():
         s = _sesion(os.path.basename(ruta)[:-6])
         if s and s.seq:
             v = s.video
-            filas.append(dict(id=s.id, titulo=tapar(s.titulo)[:70], video=v, t=mt, prod=s.produce_t.get(v) or mt, activa=ahora - mt < ACTIVA_S, eventos=s.seq))
+            filas.append(dict(id=s.id, titulo=tapar(s.titulo)[:70], video=v, t=mt, prod=s.produce_t.get(v) or mt, activa=ahora - mt < ACTIVA_S, eventos=s.seq, **_resumen(s)))
             _anota_progreso(s)
     filas.sort(key=lambda x: -x["t"])
     _LISTA.update(t=ahora, v=filas)

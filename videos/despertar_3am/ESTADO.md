@@ -3,6 +3,7 @@
 - canal: cuerpo_en_neon (Cuerpo en Neón, @cuerpoenneon) · hueco mar 27-oct-2026 14:05 CDMX (20:05 UTC)
 - estilo: secuencia Flow + efectos (línea blanca sobre negro + un elemento en neón amarillo) → doc: docs/estilo_linea_neon.md
 - etapa: SUBIDO y PROGRAMADO mar 27-oct-2026 14:05 CDMX (20:05 UTC) https://youtu.be/xnRw-_gBtMs (privado; miniatura A + .srt)
+- ✅ **PÚBLICO** desde el mar 27-oct 14:05 CDMX · https://youtu.be/xnRw-_gBtMs (verificado en YouTube el 28-oct-2026; registrado en canales y BITACORA). Siguiente paso: nada de producción; tras 7 días, `python fab.py yt metricas <alias> 90` para ver cómo rindió.
 - siguiente: Studio > prueba A/B de miniatura (B en salida/miniatura_b.jpg) · métricas a 7 días (3-nov) en canales/formula/cuerpo_en_neon.md · `limpiar` al aprobar
 
 ## Sesiones (plan de tramos · «continúa el video despertar_3am» retoma aquí · protocolo docs/sesiones.md)

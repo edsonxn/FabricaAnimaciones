@@ -56,5 +56,5 @@ python fab.py <video> medios          hojas previews/medios_NN.jpg (MÍRALAS)
 
 31-oct-2026 ✅ PROGRAMADO lun 9-nov-2026 09:00 CDMX (fecha de Overgear elegida por el usuario): https://youtu.be/Hx0eAoY4szk. Pendiente en Studio: monetización + video relacionado.
 
-## En curso (1-nov)
-- ◐ Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.
+## Cerrado (1-nov)
+- ✅ 1-nov: SUBIDO https://youtu.be/2SwLr3EGzdY (lun 9-nov 09:00 CDMX), con fondo de marca; Hx0eAoY4szk en privado sin fecha (no borrar). Antes: Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.

@@ -73,5 +73,5 @@ python fab.py wow_clases_ocultas fx | fx montaje   audio de efectos | tramos par
 
 31-oct-2026 ✅ PROGRAMADO sáb 7-nov-2026 09:00 CDMX (fecha de Overgear elegida por el usuario): https://youtu.be/2hdnW7T5dl8. Pendiente en Studio: monetización + video relacionado.
 
-## En curso (1-nov)
-- ◐ Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.
+## Cerrado (1-nov)
+- ✅ 1-nov: SUBIDO https://youtu.be/POmeaxw16n0 (sáb 7-nov 09:00 CDMX), con fondo de marca; 2hdnW7T5dl8 en privado sin fecha (no borrar). Antes: Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.

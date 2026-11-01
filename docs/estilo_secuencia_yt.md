@@ -620,6 +620,8 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 - **`bajar_pegatinas.py` con Wikipedia falla en accesorios y empresas absorbidas:** «Transfer Pak» y «Expansion Pak» redirigen a una página sin imagen y «DMA Design» a Rockstar North (sale el logo de Rockstar). Buscar en Commons (`list=search`, `srnamespace=6`) y en la wiki de fans (`gta.fandom.com` tenía el logo de DMA); los logos negros sobre alfa (CD, Digital Foundry) se ponen sobre blanco o desaparecen en el video. Mirar SIEMPRE la hoja de contacto de `pegatinas/`.
 - **Clips con `ambiente_por`:** `bajar` los trunca; los 33 salieron cortos frente a su beat y se rehicieron todos con `dl_amb.py` (video y audio con el segundo exacto). Dos beats con el MISMO clip (011 y 082) delatan una descarga equivocada: compararlos en la hoja de brillo.
 - **`ficha(a=("frase|fin", …))` puede resolverse a 0,03 s** si el ancla no se encuentra: en la lista de `fx` buscar FX de duración ~0 y pasarlos a `dur=`.
+- **Un MG nuevo debe aguantar q≈0 y q≈1:** `mg_n64.calor` tiró la capa de `fx` al 70 % (barra con y1 < y0 al entrar). Antes de `fx`, llamar cada FX en sus instantes límite (inicio, inicio+1 cuadro, fin−1 cuadro, fin): 220 FX = 5 940 llamadas en segundos, frente a una hora de `fx` perdida.
+- **`verificar` y cifras:** las frases con CER > 2 % eran todas cifras («300.000», «$199.99») o nombres en inglés escritos con `FONETICA` («Wide-Boy64» → «White Boy»). Antes de regrabar, oír la frase: si la voz está bien, no es error.
 
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos

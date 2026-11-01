@@ -108,6 +108,10 @@ TEMAS = {
     "spyro": dict(trazo="bolitas", color=(250, 190, 40), borde=(150, 88, 14), grueso=10, letra=("palab.ttf", 42, None),
                   texto=(240, 222, 86), contorno=None, titulo=("palab.ttf", 88, None), subt=("palabi.ttf", 40, None),
                   tinte=(1.0, 1.0, 1.0, 0.0), fondo=(34, 18, 66)),
+    # Nintendo 64 (n64_secretos, 31-oct-2026): ruta plateada, marcadores = el cubo de cuatro colores de mg_n64; Bahnschrift blanca.
+    "n64": dict(trazo="bolitas", color=(226, 230, 238), borde=(40, 44, 54), grueso=9, letra=("bahnschrift.ttf", 42, "SemiBold"),
+                texto=(250, 250, 248), contorno=None, titulo=("ariblk.ttf", 76, None), subt=("bahnschrift.ttf", 38, "SemiBold"),
+                tinte=(1.0, 1.0, 1.0, 0.0), fondo=(20, 22, 28)),
 }
 
 
@@ -259,6 +263,12 @@ def _marcador(tema, tipo):
                 im.alpha_composite(_halo(34, (255, 230, 120), 160), (int(c - 68), int(c - 68)))
             g = SP.gema(92 if tipo == "meta" else 58, col, .35)
             im.alpha_composite(g, (int(c - g.width / 2), int(c - g.height / 2)))
+        elif tema == "n64":
+            import mg_n64 as N64
+            if tipo == "meta":
+                im.alpha_composite(_halo(34, (255, 240, 170), 160), (int(c - 68), int(c - 68)))
+            g = N64.cubo(84 if tipo == "meta" else 54, .7)
+            im.alpha_composite(g, (int(c - g.width / 2), int(c - g.height / 2)))
         elif tema == "zelda":
             col = (214, 44, 32) if tipo == "peligro" else T["color"]
             if tipo == "meta":                              # triángulo dorado
@@ -292,7 +302,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora", "mario64", "spyro"):    # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))

@@ -19,6 +19,21 @@
   "nombre": "Baron Revilgaz",
   "npc": 2496
  },
+ "baron rivendare": {
+  "model": 10729,
+  "nombre": "Baron Rivendare",
+  "npc": 10440
+ },
+ "black dragonspawn": {
+  "model": 143,
+  "nombre": "Black Dragonspawn",
+  "npc": 7040
+ },
+ "blackrock grunt": {
+  "model": 6033,
+  "nombre": "Blackrock Grunt",
+  "npc": 440
+ },
  "bloodlord mandokir": {
   "model": 11288,
   "nombre": "Bloodlord Mandokir",
@@ -28,6 +43,11 @@
   "model": 7102,
   "nombre": "Booty Bay Bruiser",
   "npc": 4624
+ },
+ "boyle": {
+  "model": 1201,
+  "nombre": "Boyle",
+  "npc": 4612
  },
  "brother paxton": {
   "model": 3253,
@@ -134,6 +154,31 @@
   "nombre": "Marshal Dughan",
   "npc": 240
  },
+ "mountain boar": {
+  "model": 704,
+  "nombre": "Mountain Boar",
+  "npc": 1190
+ },
+ "mr. smite": {
+  "model": 2026,
+  "nombre": "Mr. Smite",
+  "npc": 646
+ },
+ "murloc forager": {
+  "model": 441,
+  "nombre": "Murloc Forager",
+  "npc": 46
+ },
+ "ogre": {
+  "model": 415,
+  "nombre": "Ogre",
+  "npc": 211
+ },
+ "onyxia": {
+  "model": 8570,
+  "nombre": "Onyxia",
+  "npc": 10184
+ },
  "orgrimmar grunt": {
   "model": 4259,
   "nombre": "Orgrimmar Grunt",
@@ -143,6 +188,11 @@
   "model": 519,
   "nombre": "Plague Spreader",
   "npc": 604
+ },
+ "ragnaros": {
+  "model": 11121,
+  "nombre": "Ragnaros",
+  "npc": 11502
  },
  "rattlegore": {
   "model": 12073,
@@ -154,10 +204,20 @@
   "nombre": "Razzashi Raptor",
   "npc": 14821
  },
+ "rhahk'zor": {
+  "model": 14403,
+  "nombre": "Rhahk'Zor",
+  "npc": 644
+ },
  "rotted one": {
   "model": 137,
   "nombre": "Rotted One",
   "npc": 948
+ },
+ "sewer beast": {
+  "model": 2850,
+  "nombre": "Sewer Beast",
+  "npc": 3581
  },
  "skeletal warrior": {
   "model": 200,

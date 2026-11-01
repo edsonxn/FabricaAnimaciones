@@ -78,3 +78,19 @@
 - Lleva también ≥ 4 comentarios de agradecimiento repartidos (regla del 28-oct, `docs/estilo_secuencia_yt.md` § 2b).
 - Tema: lista para quien empieza WoW Forever (propuestas del 28-oct: «9 clases de Forever: qué dice de ti la que elijas»
   ×7,3/×5,1 en la serie «Si juegas X»; «10 errores de novato»; «10 cosas la primera semana»).
+
+## Conclusión del 1-nov-2026 — hueco Overgear del jue 5-nov (tiene que ser de Forever)
+- Ya cubiertos en la campaña: primera semana (1), jugadores que rompieron Vanilla (4), clases ocultas (7), pistas del futuro (9).
+- **Fuera (60 días):** todo lo que gana es Forever. En español, Kadrath ×4,0 «8 Ítems con EFECTOS SECRETOS» y ×2,3 «Los Ítems
+  SECRETOS de WoW Forever»; en inglés, Nobbel ×7,6 «Forever timeline EXPLAINED» y ×6,5 «skyborne elves EXPLAINED», Bellular ×6,7/×5,8
+  (cambios y clases nuevas), Farmerfarms ×36,8/×10,8 (clase/profesión oculta = ya lo cubre el del 7-nov).
+- **Lo tuyo:** «12 objetos más RAROS de Vanilla» 6 587 en < 7 días (ya sobre la mediana de ~5 200); jugadores reales y curiosidades
+  con ALCANCE ganan; lore puro flojo (Azshara ×0,14).
+- **Comentarios (1-nov):** 15 nuevos; la queja con más ♥ sigue siendo la voz IA (♥14, ♥4, ♥3) → se reporta al usuario, no se cambia
+  sola. «2:13 Ojalá metan eso en Forever» y críticas a cambios de Forever (objetos que no se comparten) = interés en «qué cambió».
+- **Propuesta (una variable cada una):** (1) «Los 10 OBJETOS SECRETOS de WoW Forever que nadie te explica» — era Vanilla → Forever
+  sobre el formato de los 12 objetos raros (Kadrath ×4,0); (2) «12 cosas que Forever CAMBIÓ de Vanilla (y nadie te dijo)» — ángulo
+  cambios (Bellular ×6,7); (3) «Los nuevos elfos y la línea de tiempo de Forever, explicados» — lore de Forever (Nobbel ×7,6/×6,5),
+  arriesgado por el lore flojo del canal. Recomendada: (1).
+- **Decisión (el usuario, 1-nov):** (1) `wow_objetos_secretos_forever`, **~18 min**, Overgear campaña 2 con fondo de marca, OST de WoW,
+  hueco jue 5-nov 09:00 CDMX. **A vigilar a los 7 días (12-nov):** vistas vs mediana y % visto vs «12 objetos raros de Vanilla».

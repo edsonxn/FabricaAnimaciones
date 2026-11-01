@@ -1832,3 +1832,333 @@ def mudanza(titulo, canal, retrato, caja, sigue, ancho=1640):
                 _texto(d, (cx + 26, y), s, fuente("sans", 30), BLANCO, "lm", a)
         return _salida(im, dt)
     return fn
+
+
+# ------------------------------------------------------------------ 1-nov-2026, `wow_objetos_secretos_forever`
+def _caja(d, x0, y0, x1, y1, a=255, borde=ORO, r=12):
+    d.rounded_rectangle((x0, y0, x1, y1), r, fill=(6, 9, 26, int(a * .86)), outline=tuple(borde) + (int(a),), width=3)
+
+
+def ocultos(titulo, cifras, icos, revela=None, sello=None, ancho=1500):
+    """Una bolsa enorme con objetos tapados (gancho: 12 594 de 31 800). cifras = [(rótulo, valor, color), ...]: cada cifra corre en
+    su marca; con la cifra 1 un 40 % de las casillas se tapan con «?». marca len(cifras): si hay `revela` (texto), una casilla
+    tapada se destapa con destello y sale el texto; marca len(cifras)+1: `sello`."""
+    cols, fil, t_c, g = 15, 4, 66, 8
+    h = 112 + fil * (t_c + g) + 112
+    tap = [(i * 7 + (i * i) % 5) % (cols * fil) for i in range(cols * fil * 2)]
+    tap = list(dict.fromkeys(tap))[:int(cols * fil * .4)]
+    ojo = tap[len(tap) // 2]
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        n = len(cifras)
+        t = [_mk(marcas, i, .4 + i * 1.6) for i in range(n + 2)]
+        x0, y0 = M + (ancho - cols * (t_c + g) + g) / 2, M + 100
+        for i in range(cols * fil):
+            x, y = x0 + (i % cols) * (t_c + g), y0 + (i // cols) * (t_c + g)
+            _casilla(im, d, x, y, t_c, icos[i % len(icos)], dt - t[0] - i * .012)
+            if i in tap and n > 1 and dt >= t[1] + tap.index(i) * .02:
+                abierta = revela and i == ojo and dt >= t[n]
+                if not abierta:
+                    d.rounded_rectangle((x, y, x + t_c, y + t_c), 7, fill=(8, 8, 14, 245), outline=(95, 82, 45, 255), width=2)
+                    _texto(d, (x + t_c / 2, y + t_c / 2), "?", fuente("negra", 36), GRIS, "mm")
+                elif dt - t[n] < .8:
+                    fl = 1 - (dt - t[n]) / .8
+                    d.rounded_rectangle((x - 6, y - 6, x + t_c + 6, y + t_c + 6), 10, outline=ORO_T + (int(255 * fl),), width=5)
+        yc = y0 + fil * (t_c + g) + 44
+        for k, (rot, val, col) in enumerate(cifras):
+            u = dt - t[k]
+            if u <= 0:
+                continue
+            xc = M + ancho * (k + .5) / n
+            v = int(val * _eo(u / 1.0))
+            _texto(d, (xc, yc - 8), f"{v:,}".replace(",", " "), fuente("negra", 50), col, "mm", 255 * _eo(u / .3))
+            _texto(d, (xc, yc + 36), rot, fuente("sans", 24), BLANCO, "mm", 255 * _eo(u / .3))
+        if revela and dt >= t[n]:
+            _sello(im, revela, M + ancho / 2, y0 + 80, dt - t[n], VERDE, 36, ang=-4)
+        if sello and dt >= t[n + 1]:
+            _sello(im, sello, M + ancho - 280, y0 + 150, dt - t[n + 1], ROJO, 40, ang=-7)
+        return _salida(im, dt)
+    return fn
+
+
+def chat(lineas, comando, ancho=860):
+    """La ventana de chat del juego: en la marca 0 se teclea `comando` en la caja de entrada, se envía y cada línea de `lineas`
+    = [(texto, color), ...] entra en su marca (1, 2, …). Translúcida, sin panel azul: es la interfaz."""
+    fh, h = 46, 74 + 46 * max(3, len(lineas)) + 74
+
+    def fn(dt, dur, marcas):
+        M = 20
+        im = Image.new("RGBA", (ancho + 2 * M, h + 2 * M), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        d.rectangle((M, M, M + ancho, M + h - 70), fill=(0, 0, 0, 150))
+        for k, b in enumerate(("General", "Combate")):
+            d.rectangle((M + 10 + k * 130, M - 2, M + 130 + k * 130, M + 34), fill=(30, 30, 34, 225), outline=ORO + (200,))
+            _texto(d, (M + 70 + k * 130, M + 16), b, fuente("sans", 22), ORO_T, "mm")
+        t0 = _mk(marcas, 0, .3)
+        for k, (s, col) in enumerate(lineas):
+            tk = _mk(marcas, k + 1, t0 + 1.2 + k)
+            if dt >= tk:
+                _texto(d, (M + 18, M + 54 + k * fh), s, fuente("sans", 30), col, "lm", 255 * _eo((dt - tk) / .25))
+        d.rectangle((M, M + h - 58, M + ancho, M + h - 6), fill=(8, 8, 12, 225), outline=ORO + (255,), width=2)
+        u = dt - t0
+        env = _mk(marcas, 1, t0 + 1.2)
+        if 0 < u and dt < env:
+            s = comando[:int(u / .09) + 1]
+            cur = "|" if int(dt * 3) % 2 else ""
+            _texto(d, (M + 16, M + h - 32), "Decir: " + s + cur, fuente("sans", 30), BLANCO, "lm")
+        return _salida(im, dt)
+    return fn
+
+
+def duplica(titulo, ico, normal, doble, rotulo_doble, rotulo_normal, sello, ancho=1500):
+    """Un efecto que depende del sitio. normal/doble = (texto de cifra, texto de tiempo). marca 0: panel normal · 1: panel doble con
+    sus números que saltan · 2: el panel normal se apaga con `sello`."""
+    h = 400
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t = [_mk(marcas, i, .4 + i * 2) for i in range(3)]
+        for k, (dat, rot, col, ti) in enumerate(((doble, rotulo_doble, VERDE, t[1]), (normal, rotulo_normal, GRIS, t[0]))):
+            if dt < ti:
+                continue
+            u = dt - ti
+            cx = M + ancho * (.27 + .46 * k)
+            a = 255 * _eo(u / .3)
+            apaga = .42 if k == 1 and dt >= t[2] else 1
+            _caja(d, cx - 310, M + 96, cx + 310, M + h - 36, a * apaga, ORO_T if k == 0 else ORO)
+            _texto(d, (cx, M + 132), rot, fuente("sans", 27), col, "mm", a * apaga)
+            s = _pop(u, .3)
+            _texto(d, (cx - 50, M + 240), dat[0], fuente("negra", max(8, int(104 * s))), col, "mm", a * apaga)
+            _texto(d, (cx + 190, M + 240), dat[1], fuente("serif", 44), BLANCO, "mm", a * apaga)
+            _texto(d, (cx, M + 318), "todos los atributos", fuente("sans", 24), BLANCO, "mm", a * apaga)
+            d = ImageDraw.Draw(im)
+        if dt >= t[0]:
+            _pegar(im, icono(ico, 84), M + ancho / 2, M + 235, _pop(dt - t[0]))
+        if dt >= t[2]:
+            _sello(im, sello, M + ancho * .73, M + h - 82, dt - t[2], ROJO, 36, ang=-3)
+        return _salida(im, dt)
+    return fn
+
+
+def conjunto(titulo, pieza1, pieza2, bonos, totales, sello, ancho=1560):
+    """Conjunto de dos piezas. pieza = (ruta, nombre, sub). marca 0: pieza 1 · 1: pieza 2 y un hilo dorado las une · 2..: `bonos`
+    = [texto, ...], uno por marca · luego `totales` = (texto a, texto b), que corren · la última marca: sello sobre la pieza 2."""
+    h = 480
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        nb = len(bonos)
+        t = [_mk(marcas, i, .4 + i * 1.2) for i in range(nb + 4)]
+        x1, x2, cy, R = M + 200, M + 620, M + 230, 104
+        if dt >= t[1]:
+            q = _eo((dt - t[1]) / .6)
+            d.line([(x1 + R, cy), (x1 + R + (x2 - x1 - 2 * R) * q, cy)], fill=ORO_T + (255,), width=6)
+        for (ruta, nom, sub), x, ti in ((pieza1, x1, t[0]), (pieza2, x2, t[1])):
+            if dt < ti:
+                continue
+            _pegar(im, _medallon(ruta, R), x, cy, _pop(dt - ti))
+            d = ImageDraw.Draw(im)
+            a = 255 * _eo((dt - ti) / .3)
+            _texto(d, (x, cy + R + 34), nom, fuente("serif", 28), ORO_T, "mm", a)
+            _texto(d, (x, cy + R + 72), sub, fuente("sans", 24), BLANCO, "mm", a)
+        bx = M + 830
+        for k, s in enumerate(bonos):
+            if dt >= t[2 + k]:
+                _texto(d, (bx, M + 130 + k * 66), s, fuente("sans", 33), VERDE, "lm", 255 * _eo((dt - t[2 + k]) / .3))
+                d.ellipse((bx - 30, M + 120 + k * 66, bx - 12, M + 138 + k * 66), fill=VERDE + (255,))
+        if dt >= t[2 + nb]:
+            a = 255 * _eo((dt - t[2 + nb]) / .3)
+            _caja(d, bx - 30, M + 300, M + ancho - 50, M + h - 46, a, ORO_T)
+            _texto(d, (bx + 320, M + 340), totales[0], fuente("negra", 40), BLANCO, "mm", a)
+            _texto(d, (bx + 320, M + 396), totales[1], fuente("negra", 46), ROJO, "mm", 255 * _eo((dt - t[2 + nb] - .5) / .3))
+        if dt >= t[3 + nb]:
+            _sello(im, sello, x2, cy, dt - t[3 + nb], ROJO, 40, ang=-8)
+        return _salida(im, dt)
+    return fn
+
+
+def reloj_oro(titulo, ico, horas, oro, ancho=1460):
+    """Un objeto que caduca aunque no juegues. marca 0: barra de `horas` que se vacía · 1: sello DESCONECTADO y zetas: sigue
+    bajando · 2: cada vaciado cuesta `oro[0]`: la barra se rellena y el contador sube hasta `oro[1]` · 3: rótulo «al mes»."""
+    h = 360
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        t = [_mk(marcas, i, .4 + i * 1.4) for i in range(4)]
+        if dt >= t[0]:
+            _pegar(im, icono(ico, 110), M + 120, M + 190, _pop(dt - t[0]))
+            d = ImageDraw.Draw(im)
+            v = (dt - t[0]) * (.25 if dt < t[1] else .45)
+            q = 1 - (v % 1.0)
+            _barra_vida(d, M + 210, M + 130, ancho - 300, 44, q, color=(70, 150, 255))
+            _texto(d, (M + 210 + (ancho - 300) / 2, M + 152), f"{int(horas * q)} h", fuente("negra", 30), BLANCO, "mm")
+        if dt >= t[1]:
+            a = 255 * _eo((dt - t[1]) / .3)
+            _texto(d, (M + 210, M + 218), "DESCONECTADO", fuente("serif", 32), GRIS, "lm", a)
+            for k in range(3):
+                y = M + 214 - ((dt * .8 + k * .33) % 1) * 40
+                _texto(d, (M + 500 + k * 34, y), "z", fuente("negra", 30 + k * 6), BLANCO, "mm", a * .8)
+        if dt >= t[2]:
+            u = dt - t[2]
+            v = oro[0] if u < 1.1 else oro[1]
+            _texto(d, (M + ancho - 100, M + 262), f"{v} de oro", fuente("negra", 52), ORO_T, "rm", 255 * _eo(u / .3))
+        if dt >= t[3]:
+            _texto(d, (M + ancho - 100, M + 308), "al mes, juegues o no", fuente("sans", 26), ROJO, "rm", 255 * _eo((dt - t[3]) / .3))
+        return _salida(im, dt)
+    return fn
+
+
+def subasta(titulo, lotes, sello=None, cab=("OBJETO", "PRECIO"), ancho=1320):
+    """Tabla del mercado negro: lotes = [(ícono, nombre, valor, color), ...]; cada fila entra en su marca y, si valor es número,
+    el precio corre hasta él (texto: se escribe tal cual). La marca len(lotes): `sello`."""
+    fila = 72
+    h = 150 + len(lotes) * fila + 30
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, x1, y0 = M + 50, M + ancho - 50, M + 142
+        _texto(d, (x0 + 90, y0 - 26), cab[0], fuente("sans", 22), GRIS, "lm")
+        _texto(d, (x1 - 10, y0 - 26), cab[1], fuente("sans", 22), GRIS, "rm")
+        d.line([(x0, y0 - 6), (x1, y0 - 6)], fill=ORO + (150,), width=2)
+        for k, (ic, nom, val, col) in enumerate(lotes):
+            tk = _mk(marcas, k, .4 + k * .9)
+            if dt < tk:
+                continue
+            u, y = dt - tk, y0 + k * fila
+            a = 255 * _eo(u / .25)
+            off = 40 * (1 - _eo(u / .3))
+            if u < .6:
+                d.rectangle((x0, y, x1, y + fila - 6), fill=ORO_T + (int(60 * (1 - u / .6)),))
+            _pegar(im, icono(ic, 56), x0 + 36 + off, y + 32, _pop(u))
+            d = ImageDraw.Draw(im)
+            _texto(d, (x0 + 90 + off, y + 32), nom, fuente("sans", 32), col, "lm", a)
+            s = f"{int(val * _eo(u / .9))} de oro" if isinstance(val, int) else val
+            _texto(d, (x1 - 10, y + 32), s, fuente("negra", 34), ORO_T if isinstance(val, int) else GRIS, "rm", a)
+        if sello and dt >= _mk(marcas, len(lotes), 1e9):
+            _sello(im, sello, M + ancho * .52, M + h / 2 + 30, dt - marcas[len(lotes)], ROJO, 38, ang=-5)
+        return _salida(im, dt)
+    return fn
+
+
+def pizarra(palabras, traducciones, remate, ancho=1560):
+    """La pizarra del pódcast: pizarra verde oscuro con marco de madera, la frase en tiza se escribe en la marca 0
+    (`palabras` = [palabra, ...] en líneas de 3). traducciones = [(i_palabra | tupla de índices, texto), ...]: en la marca k+1 esas
+    palabras se encienden y su traducción sale debajo. La marca len(traducciones)+1: `remate` en oro a lo ancho."""
+    h = 440
+
+    def fn(dt, dur, marcas):
+        M = 26
+        im = Image.new("RGBA", (ancho + 2 * M, h + 2 * M), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        d.rounded_rectangle((M, M, M + ancho, M + h), 12, fill=(92, 58, 28, 255), outline=(40, 24, 10, 255), width=4)
+        d.rectangle((M + 22, M + 22, M + ancho - 22, M + h - 22), fill=(20, 44, 36, 250))
+        for k in range(30):                             # polvo de tiza
+            x, y = M + 30 + (k * 137) % (ancho - 60), M + 30 + (k * 83) % (h - 60)
+            d.line([(x, y), (x + 60, y + 6)], fill=(255, 255, 255, 10), width=6)
+        f = fuente("serif", 62)
+        t0 = _mk(marcas, 0, .3)
+        ancs = [d.textlength(p + " ", font=f) for p in palabras]
+        total, x = sum(ancs), 0
+        xs = []
+        for w in ancs:
+            xs.append(x)
+            x += w
+        ox = M + (ancho - total) / 2
+        n_tot = sum(len(p) for p in palabras)
+        hechas = int((dt - t0) / .05)
+        cuenta = 0
+        for k, p in enumerate(palabras):
+            q = max(0, min(len(p), hechas - cuenta))
+            cuenta += len(p)
+            lit = None
+            for i, (idx, _) in enumerate(traducciones):
+                if k in (idx if isinstance(idx, tuple) else (idx,)) and dt >= _mk(marcas, i + 1, 1e9):
+                    lit = i
+            col = ORO_T if lit is not None else (232, 236, 228)
+            _texto(d, (ox + xs[k], M + 120), p[:q], f, col, "lm")
+        for i, (idx, tr) in enumerate(traducciones):
+            ti = _mk(marcas, i + 1, 1e9)
+            if dt < ti:
+                continue
+            ids = idx if isinstance(idx, tuple) else (idx,)
+            a = 255 * _eo((dt - ti) / .3)
+            cx = ox + (xs[ids[0]] + xs[ids[-1]] + ancs[ids[-1]]) / 2
+            d.line([(cx, M + 158), (cx, M + 196)], fill=ORO_T + (int(a),), width=3)
+            _texto(d, (cx, M + 226), tr, fuente("sans", 34 if len(tr) < 20 else 28), CIAN, "mm", a)
+        tr = _mk(marcas, len(traducciones) + 1, 1e9)
+        if dt >= tr:
+            _texto(d, (M + ancho / 2, M + 340), remate, fuente("serif", 50), ORO_T, "mm", 255 * _eo((dt - tr) / .4))
+        return _salida(im, dt)
+    return fn
+
+
+def censurado(titulo, pistas, remate, ico_q="inv_misc_questionmark", ancho=1680):
+    """Tooltip de legendario con todo borrado, a la izquierda, y las pistas que se le van pegando a la derecha.
+    pistas = [(ícono, texto), ...] una por marca; la marca len(pistas): `remate` en sello."""
+    h = 560
+    fh = 66
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, y0 = M + 46, M + 110
+        d.rounded_rectangle((x0, y0, x0 + 520, y0 + 400), 10, fill=(8, 8, 16, 245), outline=NARANJA + (255,), width=3)
+        _pegar(im, icono(ico_q, 72), x0 + 56, y0 + 54, 1)
+        d = ImageDraw.Draw(im)
+        d.rectangle((x0 + 106, y0 + 34, x0 + 490, y0 + 76), fill=NARANJA + (255,))
+        lat = 200 + 55 * math.sin(dt * 4)
+        _texto(d, (x0 + 298, y0 + 55), "NOMBRE BORRADO", fuente("sans", 26), (10, 6, 0), "mm", lat)
+        for k, w in enumerate((.82, .66, .9, .58, .76, .7)):
+            y = y0 + 112 + k * 44
+            d.rectangle((x0 + 28, y, x0 + 28 + 464 * w, y + 26), fill=(70, 70, 76, 255))
+            for j in range(0, int(464 * w), 26):        # estadísticas cifradas: ruido que parpadea
+                if (j + k * 7 + int(dt * 8) * 13) % 3 == 0:
+                    d.rectangle((x0 + 28 + j, y, x0 + 40 + j, y + 26), fill=(120, 120, 130, 255))
+        px = x0 + 570
+        for k, (ic, s) in enumerate(pistas):
+            tk = _mk(marcas, k, .4 + k * .9)
+            if dt < tk:
+                continue
+            u = dt - tk
+            col, fil = k % 2, k // 2
+            x, y = px + col * 500, y0 + fil * (fh + 34)
+            _pegar(im, icono(ic, 58), x + 30, y + 30, _pop(u))
+            d = ImageDraw.Draw(im)
+            _texto(d, (x + 72, y + 30), s, fuente("sans", 26), BLANCO, "lm", 255 * _eo(u / .25))
+        if dt >= _mk(marcas, len(pistas), 1e9):
+            _sello(im, remate, M + ancho * .66, M + h - 86, dt - marcas[len(pistas)], ROJO, 40, ang=-4)
+        return _salida(im, dt)
+    return fn
+
+
+def tiempos(titulo, tramos, nota=None, ancho=1400):
+    """Una línea de tiempo que se recorre: tramos = [(texto, peso, color), ...], cada tramo se llena en su marca; la última marca,
+    `nota`."""
+    h = 300
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        tot = sum(p for _, p, _ in tramos)
+        x, x1 = M + 60, M + ancho - 60
+        y = M + 118
+        for k, (s, p, col) in enumerate(tramos):
+            w = (x1 - M - 60) * p / tot
+            d.rounded_rectangle((x + 2, y, x + w - 2, y + 58), 8, fill=(4, 6, 18, 235), outline=ORO + (200,), width=2)
+            tk = _mk(marcas, k, .4 + k * 1.3)
+            if dt >= tk:
+                q = _eo((dt - tk) / .9)
+                d.rounded_rectangle((x + 4, y + 3, x + 4 + (w - 8) * q, y + 55), 7, fill=tuple(col) + (235,))
+                _texto(d, (x + w / 2, y + 29), s, fuente("negra", 28), BLANCO, "mm", 255 * _eo((dt - tk) / .3))
+            x += w
+        tn = _mk(marcas, len(tramos), 1e9)
+        if nota and dt >= tn:
+            _texto(d, (M + ancho / 2, y + 112), nota, fuente("serif", 34), ORO_T, "mm", 255 * _eo((dt - tn) / .3))
+        return _salida(im, dt)
+    return fn

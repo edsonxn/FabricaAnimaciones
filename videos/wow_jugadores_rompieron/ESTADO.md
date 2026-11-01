@@ -1,6 +1,6 @@
 # Los 10 jugadores REALES que ROMPIERON WoW Vanilla (y qué pasará en Forever) — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: cronicas_warcraft · 13:34 · programado mar 3-nov-2026 09:00 CDMX (15:00 UTC), víspera de Forever
+- canal: cronicas_warcraft · 13:34 · programado mié 4-nov-2026 09:00 CDMX (15:00 UTC; movido del 3-nov el 31-oct para caer en fecha de Overgear)
 - estilo: secuencia_yt (gameplay por beat + apoyos + pegatinas + MG nuevos + mapas si hay ruta + Overgear campaña 2) → doc: docs/estilo_secuencia_yt.md
 - etapa: ✅ RESUBIDO (28-oct, promo Overgear kit Forever) y PROGRAMADO mar 3-nov-2026 09:00 CDMX (8okTILCdn-o) · miniatura + .srt; jBumLmFN600 en privado sin fecha
 - siguiente: (MASTER aprobado por el usuario el 27-oct, se queda programado) Studio: monetización + video relacionado; medir a los 7 días (10-nov) contra «12 Legendarios» (×2,54); luego `limpiar`

@@ -100,7 +100,13 @@ sistema viejo: pitch 0, index_rate 0.75, protect 0.5, f0 `rmvpe`. Voces RVC en `
   noviembre: 1, 4, 5, 7 y 9-nov** (5 integraciones). Hecho el mismo día: re-render de los 2 privados (2hdnW7T5dl8,
   Hx0eAoY4szk; los anteriores siguen en privado) y promo en inglés con el creativo nuevo («special discount, for one month
   only» + «ten percent off»), listo para mandar a Overgear.
+- **29-oct, corrección de Alice al promo en inglés:** «necesitamos usar otro fondo» → detrás del logo, tarjetas, reseñas,
+  packshot y código va el **fondo de marca** `Background/Background.mp4` (Drive de recursos, 20 s, degradado morado con
+  partículas; copia en `videos/wow_primera_semana/medios/_overgear/background/`; en bucle, cuadro entero, PRIMERO en la lista
+  de FX para quedar debajo), nunca un clip de gameplay. Enlace de la descripción por integración: **`https://overgear.s.gy/CRONICAS/1`**
+  para la del 1-nov (las demás fechas: pedirle el suyo si no llega). Tras este cambio no hace falta reenviar para aprobación.
 - **NUNCA decir «no compres oro» ni hablar mal de la compra de oro/boosts en un video con Overgear (el usuario, 28-oct-2026):** Overgear vende oro y servicios; en `wow_primera_semana` se cambió por datos de la montura. Tono neutro o positivo con el sector.
+- **«Incluye promoción pagada» obligatorio (31-oct-2026):** los 4 videos de noviembre estaban sin marcar; `yt subir`/`yt aplicar` lo marcan solos si la descripción dice PATROCINADO (`promocion_pagada()` en `nucleo/youtube.py`; `"promocion_pagada": false` en youtube.json lo desactiva).
 - Trato y pagos: Alice Garner (Ansvery, ag@ansvery.agency) en cronicas.warcraft@gmail.com; 75 US$/integración + 20 US$ por
   1 000 vistas (18-sep-2026); factura PayPal con los enlaces de los videos.
 

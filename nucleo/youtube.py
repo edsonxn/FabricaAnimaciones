@@ -275,7 +275,16 @@ def _snippet(m, previo=None):
     return s
 
 
+def promocion_pagada(cid, vid, m):
+    """Marca «incluye promoción pagada» (obligatorio en YouTube) si el video tiene patrocinio (31-oct-2026)."""
+    if m.get("promocion_pagada", "PATROCINADO" in m.get("descripcion", "").upper()):
+        api(cid, "PUT", "/videos", params=dict(part="paidProductPlacementDetails"),
+            json=dict(id=vid, paidProductPlacementDetails=dict(hasPaidProductPlacement=True)))
+        print("promoción pagada: marcada")
+
+
 def miniatura_y_subtitulos(cid, vid, carpeta, m):
+    promocion_pagada(cid, vid, m)
     if m.get("miniatura") and not os.path.isfile(os.path.join(carpeta, m["miniatura"])):
         print("miniatura NO aplicada: todavía no existe", m["miniatura"], "(se pone luego con 'yt aplicar')")
     elif m.get("miniatura"):

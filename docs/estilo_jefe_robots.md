@@ -44,8 +44,15 @@ Edson sale como personaje: su foto recortada (`propios/jefe_foto.webp`, sin fond
 **Gaia Eterna tampoco sale en las grabaciones (30-oct): su arte es de WoW** (`gaia_crematoria`, en la lista roja). La pestaña Canales trae sus datos dentro del HTML (`const DATA`): `grabar_real` la limpia aparte. Los eventos 101-102 de la sesión d1b5e1a2 son búsquedas de adulación: fuera de cuadro.
 Siempre tapados: dinero, claves, correo, dirección del panel remoto, Studio, y el usuario de Windows en las rutas. Las grabaciones pasan por `robotaller.enmascara`, que quita de la API lo protegido y bloquea sus imágenes, y aun así se revisan cuadro a cuadro.
 
+## Lecciones del 2.º video (`robotaller_n64`, 1-nov-2026)
+- **El tapado del usuario estuvo roto** hasta el 1-nov: `robotaller._USUARIO` tenía retrocesos (\x08) en vez de `\b` y el usuario de Windows salía en las rutas. Arreglado; antes de montar, comprobar en la API ya tapada que no queda (`enmascara` sobre `/api/v2/agente?sesion=<id>&desde=0` y buscar el usuario, correo y la lista roja). Ojo: desde Bash, `\\` en heredocs y escrituras a `nucleo/` pueden fallar sin avisar; usar Write/Edit o PowerShell.
+- **Con El Jefe en pantalla (va a la derecha) el globo del mensaje se corre a la izquierda** (`MSJ_J`), si no su cabeza tapa la frase (y la falta de ortografía).
+- Las tomas del panel son casi todo fondo oscuro: acercar al texto (z 1,5-2,1 arriba a la izquierda), nunca a z 1 entero.
+- El Montaje del panel (`/?embed=montaje`) puede grabarse en blanco: mirar su hoja; como respaldo, un fragmento del MASTER.
+- Sonido nombrado: «canciones» y «Escucha» llevan su OST real como PISTA `voz=True` (la música Lyria se agacha); «la escucha» de Whisper es falso positivo del `chequeo`.
+
 ## Producción
-Voz Token: ElevenLabs `I1n8B4pOly0qmOu46LFX`, turbo, corchetes. Cifras: `python nucleo/parte_semanal.py [desde] [hasta]`. Video en C:, no en E:. Revisión: primeros 5 videos con visto bueno expreso; no se sube sin él.
+Voz Token: ElevenLabs `I1n8B4pOly0qmOu46LFX`, turbo, corchetes (en las cuentas 2 y 3). Voz de El Jefe: cuenta 2 `GUEeiSJYQQdbv0NJ86Im` y, desde el 1-nov (cuenta 2 sin saldo hasta el 20-nov), cuenta 3 `hCU4QZdzzUliy58ezPBz`, clonada con las mismas 2 notas; solo por id. Los ids van en la línea `VOZ_POR_FRASE` de guion.py, nunca en comentarios (el filtro los marca). Cifras: `python nucleo/parte_semanal.py [desde] [hasta]`. Video en C:, no en E:. Revisión: primeros 5 videos con visto bueno expreso; no se sube sin él.
 
 ## Miniatura
 Flow, Nano Banana 2.1, 16:9, x2, con Token y la foto de El Jefe como ingredientes. Cifra real gigante (lo que el título no dice), **escrita igual que la dice la voz** (el usuario pidió corregir «1,293» a «1,300»), El Jefe serio con los brazos cruzados a la izquierda y Token apenado a la derecha, en un taller oscuro con monitores. Salió bien a la primera, 2/2. Prompt: `videos/robotaller_mes1/prompt_miniatura.md`.

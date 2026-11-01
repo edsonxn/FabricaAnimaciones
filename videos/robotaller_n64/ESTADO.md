@@ -2,11 +2,15 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: edsonxn · hueco sáb 7-nov-2026 10:00 CDMX (ciclo 7 d)
 - estilo: Jefe de Robots: grabaciones reales con cámara + Token de acento + El Jefe → doc: docs/estilo_jefe_robots.md (copiar de videos/robotaller_mes1/)
-- etapa: voz + beats (5:00) + música Lyria + casi todas las grabaciones; falta toma.py, efectos, mezcla, render
-- siguiente: terminar grabaciones → toma.py (plan_montaje.md) → efectos.py → fx, mezcla, video, final, verificar, filtro, avisar
+- etapa: aprobado + miniatura + youtube.json; falta subir (bloqueado por permisos)
+- siguiente: `yt subir … private --publicar 2026-11-07T16:00:00Z` con el OK del usuario → registrar
 
 ## En curso (1-nov-2026, 2.ª sesión — manda sobre lo de abajo)
-2.ª sesión: las 19 grabaciones hechas y miradas (montaje.mp4 negro hasta 4 s → desde 5). `toma.py` escrito (69 planos, `python toma.py revisar` limpio). Siguiente: `python toma.py token` (log `_token.log`) → hoja → montaje → partir → efectos.
+2.ª sesión: las 19 grabaciones hechas y miradas (montaje.mp4 negro hasta 4 s → desde 5). `toma.py` escrito (69 planos, `python toma.py revisar` limpio). Token grabado (medios/token.mp4). efectos.py + 15 SFX nuevos (93 créditos) + sfx/ost_yoshi.mp3 hechos; descripcion.txt escrito; filtro limpio.
+**PRIVACIDAD (1-nov):** `robotaller._USUARIO` tenía caracteres de retroceso en vez de la marca de límite de palabra y NO tapaba el usuario de Windows (se veía en voz_eleven). Arreglado en nucleo/robotaller.py; regrabando las 19 tomas del panel (`_cap5.log`). Ojo: el piloto robotaller_mes1 se grabó con el fallo: revisar. chequeo_yt.py:39-40 tiene el mismo problema (sin tocar).
+Tomas del panel regrabadas y comprobadas (API tapada: 0 apariciones del usuario en las 3 sesiones). medios/toma.mp4 (69 planos) + partir hechos; fx (72 sonidos, OST Tetris 64 en «canciones» y Yoshi Valley en «Escucha») y mezcla (−14,08 LUFS) hechos.
+**MASTER LISTO (1-nov):** `salida/robotaller_n64_MASTER.mp4` (5:00, 1080p) + `.srt`; verificar OK (CER 0,09 %, desfase 0); filtro limpio; hoja cada 10 s revisada (`previews/_master_10s.jpg`). 2.ª pasada: junta_0 = m_iwata (el Montaje del panel se regrabó en blanco), planos de investiga acercados al texto. Aviso por voz dado.
+**VISTO BUENO DEL USUARIO (1-nov, vía la sesión «Video para edsonxn»): «se ve bien haz la miniatura y subelo y programalo».** Miniatura Flow hecha (`salida/miniatura.jpg`, «9 PALABRAS», prompt_miniatura.md); youtube.json con contenido_sintetico; comentarios: 0; filtro limpio; hueco sáb 7-nov 10:00 confirmado. **FALTA SUBIR:** el clasificador de permisos bloqueó `yt subir` porque la aprobación llegó de otra sesión: hay que lanzarlo con el OK del usuario en la sesión: `python fab.py yt subir robotaller_n64 edsonxn private --publicar 2026-11-07T16:00:00Z` → Studio «Contenido alterado» = Sí → publicados + BITACORA → avisar. Después: miniatura en Flow (prompt del piloto), youtube.json desde descripcion.txt (ya escrita), revisar comentarios del canal, `yt subir … private --publicar` al hueco sáb 7-nov 10:00, `canales --actualizar`, BITACORA, commit.
 
 ### (1.ª sesión, 08:45 — corte por contexto)
 HECHO: guion aprobado (3 líneas del Jefe con su voz, visto bueno del usuario) · voz 52/52 (`guion_1` reescrita + `TAIL_MAX_POR_FRASE`), timeline 300,6 s, 50 beats ·
@@ -31,3 +35,4 @@ Ojo: los títulos de eventos llevan rutas con el usuario de Windows: revisar que
 - vista previa: MASTER completo al usuario (visto bueno expreso antes de subir: video 2 de 5)
 - leer al empezar: docs/estilo_jefe_robots.md
 - ◐ 1-nov-2026: tema, cifras, guion, voz, música, grabaciones (parcial; corte por contexto)
+- ✅ 1-nov-2026 (2.ª): grabaciones regrabadas con el tapado arreglado, toma.py, efectos, mezcla, MASTER, verificar, filtro; falta visto bueno + miniatura + subida

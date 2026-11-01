@@ -91,6 +91,7 @@ PISTAS = [
     dict(sfx="palomita", en="Y lo es", vol=.4),
     dict(sfx="error", en="Ocho frases", vol=.35),
     dict(sfx="palomita", en="Este video también la cumple", vol=.4),
+    dict(sfx="ost_tetris", en=_W["gancho_3"][-1]["e"] + .08, vol=.8, voz=True),  # «treinta y seis canciones»: se oye una (Tetris 64) en el hueco
     dict(sfx="ost_yoshi", en=ESCUCHA, vol=.9, voz=True),        # «Escucha.»: la banda sonora real, música Lyria agachada debajo
     dict(sfx="cambio", en="me cortan", vol=.5),
     dict(sfx="error", en="veintisiete veces", vol=.4),

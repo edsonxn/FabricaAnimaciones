@@ -105,18 +105,20 @@ def tok(ini, z0=1.0, c0=(.5, .5), z1=None, c1=None, tr=None):
 
 FICHA = (.13, .55)          # dónde queda Token en la toma del taller
 MSJ = (.5, .77)             # el globo del mensaje en vivo
+MSJ_J = (.6, .77)           # el globo corrido a la izquierda cuando habla El Jefe (él va a la derecha)
 FALTA = (.48, .78)          # «croncias» dentro del globo
+FALTA_J = (.56, .78)        # igual, pero corrida: con El Jefe a la derecha, «croncias» queda a la izquierda
 
 # gancho: las nueve palabras, con su falta
 tok(0, 1.45, (.18, .5), 1.25, (.2, .5), tr=("corte", 0))
 A(T("gancho_0", "nueve"), C("mensaje"), 1.2, MSJ, 2.6, MSJ, desde=.3, vel=.5, tr=("latigo", .34))
-A(T("gancho_1"), C("mensaje"), 2.6, MSJ, 3.4, FALTA, desde=2.4, vel=.3, tr=("corte", 0))
+A(T("gancho_1"), C("mensaje"), 2.6, MSJ, 3.4, FALTA_J, desde=2.4, vel=.3, tr=("corte", 0))
 A(T("gancho_2"), C("m_intro"), 1.0, (.5, .5), 1.15, (.5, .45), desde=.5, tr=("destello", .3))
 A(T("gancho_3"), C("hojas_clips"), 1.0, (.5, .5), 1.3, (.5, .4), desde=1, vel=1.4, tr=("glitch", .22))
 A(T("gancho_3", "noventa"), C("pegatinas"), 1.0, (.5, .5), 1.4, (.5, .45), desde=1, vel=1.5, tr=("latigo", .3))
 A(T("gancho_3", "mapas"), C("m_yoshi"), 1.1, (.5, .5), 1.0, (.5, .5), desde=6.5, tr=("corte", 0))
 A(T("gancho_3", "treinta"), C("m_tetris"), 1.0, (.5, .5), 1.3, (.5, .45), desde=5.2, tr=("deslizar", .3))
-A(T("gancho_4"), C("investiga"), 1.0, (.5, .5), 1.4, (.5, .45), desde=3, tr=("zoom", .4))
+A(T("gancho_4"), C("investiga"), 1.6, (.4, .2), 2.1, (.33, .14), desde=3, tr=("zoom", .4))
 # contraste
 tok(T("contraste_0"), 1.0, (.5, .5), 1.5, FICHA, tr=("destello", .28))
 A(T("contraste_1"), C("investiga"), .82, (.5, .5), 1.15, (.5, .5), desde=8, vel=3, tr=("glitch", .2))
@@ -124,9 +126,9 @@ tok(T("contraste_2"), 1.6, FICHA, 1.25, (.22, .55), tr=("latigo", .3))
 A(T("contraste_2", "cuadritos"), C("voz_eleven"), 1.4, (.3, .3), 2.6, (.2, .12), desde=3, vel=.5, tr=("zoom", .36))
 A(T("contraste_2", "real"), C("fx_hojas"), 1.0, (.5, .5), 1.25, (.5, .5), desde=2, vel=1.2, tr=("corte", 0))
 # paso 1: investigar
-A(T("investiga_0"), C("investiga"), 1.2, (.5, .5), 1.7, (.5, .4), desde=4, vel=2, tr=("deslizar", .28))
+A(T("investiga_0"), C("investiga"), 1.5, (.4, .22), 2.0, (.33, .15), desde=4, vel=2, tr=("deslizar", .28))
 A(T("investiga_1"), C("ayudante"), 1.6, (.5, .5), 1.1, (.5, .5), desde=.5, vel=.8, tr=("glitch", .22))
-A(T("investiga_1", "revise"), C("investiga"), 1.0, (.5, .5), 1.3, (.5, .4), desde=12, tr=("latigo", .3))
+A(T("investiga_1", "revise"), C("investiga"), 1.5, (.4, .25), 1.9, (.33, .16), desde=12, tr=("latigo", .3))
 A(T("investiga_2"), C("investigacion"), 1.0, (.5, .5), 1.5, (.4, .3), desde=1, tr=("zoom", .36))
 A(T("investiga_3"), C("m_guantes"), 1.0, (.5, .5), 1.2, (.5, .5), desde=2, tr=("destello", .3))
 A(T("investiga_4"), C("m_intro"), 1.25, (.6, .4), 1.0, (.5, .5), desde=1, tr=("corte", 0))
@@ -134,14 +136,14 @@ A(T("investiga_4"), C("m_intro"), 1.25, (.6, .4), 1.0, (.5, .5), desde=1, tr=("c
 A(T("guion_0"), C("escribe_guion"), 1.0, (.5, .5), 1.5, (.35, .3), desde=.5, tr=("latigo", .3))
 A(T("guion_0", "contados"), C("m_yoshi"), 1.5, (.82, .15), 1.0, (.5, .5), desde=0, tr=("glitch", .2))
 A(T("guion_1"), C("guion_n64"), 1.0, (.5, .5), 1.6, (.4, .3), desde=0, tr=("deslizar", .3))
-A(T("guion_1", "susurrando"), C("guion_n64"), 2.4, (.2, .12), 2.4, (.3, .12), desde=4, vel=.3, tr=("corte", 0))
+A(T("guion_1", "susurrando"), C("guion_n64"), 2.4, (.2, .14), 2.4, (.3, .14), desde=1.5, vel=.3, tr=("corte", 0))
 A(T("guion_2"), C("guion_n64"), 1.0, (.5, .5), .8, (.5, .5), desde=6, vel=1.5, tr=("zoom", .36))
 # paso 3: la voz
 A(T("voz_0"), C("voz_eleven"), 1.0, (.5, .5), 1.5, (.3, .3), desde=0, tr=("latigo", .3))
-A(T("voz_1"), C("whisper"), 1.0, (.5, .5), 1.4, (.45, .4), desde=1, tr=("glitch", .2))
-A(T("voz_2"), C("whisper"), 1.6, (.45, .35), 1.2, (.5, .5), desde=6, tr=("destello", .28))
+A(T("voz_1"), C("whisper"), 1.3, (.35, .2), 1.8, (.3, .12), desde=1.2, vel=.4, tr=("glitch", .2))
+A(T("voz_2"), C("whisper"), 1.6, (.25, .4), 1.9, (.22, .45), desde=6.3, vel=.3, tr=("destello", .28))
 tok(T("voz_3"), 1.2, (.3, .6), 1.6, FICHA, tr=("deslizar", .28))
-A(T("voz_3", "si"), C("whisper"), 1.0, (.5, .5), 1.4, (.5, .4), desde=11, tr=("zoom", .36))
+A(T("voz_3", "si"), C("whisper"), 1.2, (.4, .15), 1.6, (.35, .12), desde=13.5, vel=.6, tr=("zoom", .36))
 # paso 4: las imágenes
 A(T("clips_0"), C("ayudantes_clips"), 1.5, (.5, .5), 1.0, (.5, .5), desde=1, vel=.7, tr=("latigo", .3))
 A(T("clips_1"), C("hojas_clips"), 1.0, (.5, .5), 2.2, (.3, .35), desde=0, vel=.7, tr=("corte", 0))
@@ -162,7 +164,7 @@ A(T("sonido_2"), C("m_yoshi"), 1.25, (.5, .55), 1.0, (.5, .5), desde=1.2, tr=("c
 # el relevo
 A(T("relevo_0"), C("relevo_a"), 1.0, (.5, .5), 1.5, (.45, .7), desde=1, vel=.8, tr=("latigo", .3))
 tok(T("relevo_1"), 1.2, (.3, .6), 1.6, FICHA, tr=("glitch", .2))
-A(T("relevo_2"), C("cambio_cuenta"), 1.6, MSJ, 2.6, MSJ, desde=1.5, vel=.5, tr=("zoom", .36))
+A(T("relevo_2"), C("cambio_cuenta"), 1.6, MSJ, 2.6, MSJ_J, desde=1.5, vel=.5, tr=("zoom", .36))
 A(T("relevo_3"), C("cierre_a"), 1.2, (.5, .6), 1.6, (.5, .7), desde=0, tr=("deslizar", .3))
 A(T("relevo_3", "leyo"), C("relevo_b"), 1.0, (.5, .5), 1.5, (.45, .65), desde=2, tr=("corte", 0))
 A(T("relevo_4"), C("ayudantes_clips"), 1.0, (.5, .5), 1.4, (.5, .55), desde=4, vel=.8, tr=("latigo", .3))
@@ -176,9 +178,9 @@ tok(T("revisa_4"), 1.0, (.5, .5), 1.5, FICHA, tr=("corte", 0))
 # la miniatura
 A(T("miniatura_0"), C("miniaturas"), 1.0, (.5, .5), 2.1, (.26, .3), desde=5, tr=("glitch", .2))
 A(T("miniatura_1"), C("flow"), 1.0, (.5, .5), 1.4, (.5, .55), desde=0, tr=("destello", .28))
-A(T("miniatura_2"), C("si_flow"), 1.6, MSJ, 2.6, MSJ, desde=1.5, vel=.5, tr=("zoom", .36))
+A(T("miniatura_2"), C("si_flow"), 1.6, MSJ, 2.6, MSJ_J, desde=1.5, vel=.5, tr=("zoom", .36))
 A(T("miniatura_3"), C("miniaturas"), 1.0, (.5, .5), 2.1, (.74, .3), desde=5, tr=("latigo", .3))
-A(T("miniatura_3", "desde"), C("flow_imgs"), 1.0, (.5, .5), 1.3, (.5, .45), desde=1, tr=("corte", 0))
+A(T("miniatura_3", "desde"), C("flow_imgs"), 1.0, (.5, .5), 1.3, (.5, .45), desde=5.5, tr=("corte", 0))
 # la cuenta
 A(T("cuenta_0"), C("cuenta"), 1.0, (.5, .5), 1.6, (.27, .45), desde=2, tr=("deslizar", .3))
 A(T("cuenta_1"), C("cuenta"), 1.6, (.27, .45), 1.6, (.73, .45), desde=2, tr=("corte", 0))
@@ -186,7 +188,7 @@ A(T("cuenta_2"), C("cuenta"), 1.6, (.73, .45), 1.0, (.5, .5), desde=2, tr=("cort
 A(T("cuenta_2", "decidir"), C("mensaje"), 1.5, MSJ, 2.4, MSJ, desde=2.2, vel=.3, tr=("glitch", .22))
 A(T("cuenta_3"), C("investiga"), 1.0, (.5, .5), .8, (.5, .5), desde=1, vel=3, tr=("zoom", .4))
 # la junta directiva
-A(T("junta_0"), C("montaje"), 1.0, (.5, .5), 1.4, (.5, .45), desde=5, tr=("latigo", .3))
+A(T("junta_0"), C("m_iwata"), 1.0, (.5, .5), 1.25, (.5, .45), desde=0, tr=("latigo", .3))     # el Montaje del panel salió en blanco al regrabarlo
 tok(T("junta_1"), 1.0, (.5, .5), 1.5, FICHA, tr=("deslizar", .28))
 A(T("junta_2"), C("mensaje"), 2.4, MSJ, 3.4, FALTA, desde=2.4, vel=.3, tr=("glitch", .2))
 

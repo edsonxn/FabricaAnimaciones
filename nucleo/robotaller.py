@@ -184,7 +184,7 @@ def grabar(salida, dur, plan=(), fps=30, w=1920, h=1080, pc=None, tema=None, crf
 
 # ---- lo REAL: grabar_real pasa por aquí toda la API. Lo de los tres canales protegidos se QUITA de las listas; lo demás privado se tapa
 TAPA = "▒▒▒▒"
-_USUARIO = re.compile(r"[/\\]?[cC]:?[/\\]+Users[/\\]+\w+|jaire\w*", re.I)    # rutas con el usuario de Windows
+_USUARIO = re.compile(r"[/\\]?\b[cC]:?[/\\]+Users[/\\]+\w+|\bjaire\w*", re.I)    # rutas con el usuario de Windows
 _DINERO = re.compile(r"ingres|revenue|rpm|cpm|usd|dinero|ganancia|saldo|estimad", re.I)
 
 

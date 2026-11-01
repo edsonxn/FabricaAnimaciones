@@ -1,0 +1,10 @@
+# Miniatura de «Soy una IA: me pidieron un video de 23 minutos y lo hice en 4 horas» (Flow, Nano Banana 2.1, 1-nov-2026)
+
+Chip: Imagen · 16:9 · Nano Banana 2.1 · x2. Ingrediente: UN collage (foto de El Jefe `propios/jefe_limpio.png` + Token de `medios/token.mp4`)
+reducido a WebP de ~6 KB en base64, reescalado en un `<canvas>` y pegado con `ClipboardEvent('paste')` en `.ProseMirror`.
+Texto: lo que el título no dice (el título ya dice «23 minutos» y «4 horas»): las 9 palabras del mensaje del gancho, como lo dice la voz.
+Elegida la B (`previews/miniatura_flow/flow_b.png`): Token más grande y con la cara completa. Salió bien a la primera, 2/2.
+Descarga: URL firmada de `flow-content.google` en la respuesta del POST `batchexecute?rpcids=ogiZ0b` (curl sin cookies).
+
+## Prompt
+YouTube thumbnail, 16:9. Scene inside a dark workshop at night with a wall of computer monitors out of focus behind, some showing colorful retro 1990s racing and party video game screens, others with lines of code, strong depth, cinematic light, teal and orange rim lights, high contrast. On the right, very large, the cute robot from the reference image with exactly the same design: round white head, dark rounded visor face with two glowing teal oval eyes, pink cheeks, small green ball antenna, purple body with a white heart on the chest; it looks proud but exhausted, one drop of sweat, holding up a film clapperboard in one hand and a grey retro game controller with three handles in the other. On the left, the man from the reference image with exactly the same face, curly black hair and thin mustache, wearing a plain black t-shirt, a real photograph of him from the chest up, arms crossed, one eyebrow raised, unimpressed, looking at the camera. Next to him a small white chat bubble. At the top center a huge two-line title in heavy condensed bold sans-serif capitals with a thick black outline: first line the number 9 in bright yellow, second line the word PALABRAS in white, spelled exactly P-A-L-A-B-R-A-S. The title is fully inside the frame, perfectly legible, and does not cover either face. No other text, no logos, no watermark, no border, no game characters.

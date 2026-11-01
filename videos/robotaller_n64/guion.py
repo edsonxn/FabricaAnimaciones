@@ -32,8 +32,8 @@ SECUENCIA = dict(video_s=9999, clip_s=6, video_calidad="360p", combinar=False, i
                  fundido=0, ambiente=0, ambiente_por={})
 
 # El Jefe: su voz clonada «Edson». Solo frases suyas REALES, copiadas de sus mensajes de ese día.
-# 1-nov: la cuenta 2 (GUEeiSJYQQdbv0NJ86Im) quedó sin saldo hasta el 20-nov; con permiso del usuario se clonó en la cuenta 3 con las mismas 2 notas
-# (hCU4QZdzzUliy58ezPBz) y se añadió ahí la voz de Token (mismo id).
+# 1-nov: la cuenta 2 (voz «El Jefe» original) quedó sin saldo hasta el 20-nov; con permiso del usuario se clonó en la cuenta 3 con las mismas 2 notas
+# (el id nuevo es el de VOZ_POR_FRASE) y se añadió ahí la voz de Token (mismo id).
 JEFE_CON_VOZ = True
 JEFE = ("gancho_1", "relevo_2", "miniatura_2")
 VOZ_POR_FRASE = dict.fromkeys(JEFE, "hCU4QZdzzUliy58ezPBz") if JEFE_CON_VOZ else {}

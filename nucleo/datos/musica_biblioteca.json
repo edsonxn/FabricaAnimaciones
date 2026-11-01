@@ -22500,6 +22500,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23287,6 +23288,7 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -35923,6 +35925,7 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3"
    ]
   },
@@ -36003,6 +36006,7 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3"
    ]
   },
@@ -36082,6 +36086,7 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3"
    ]
   },
@@ -36168,6 +36173,8 @@
    "catalogado": "2026-10-28",
    "copias": [
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3"
    ]
   },
@@ -36249,7 +36256,9 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
-    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3"
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3"
    ]
   },
   "wow_primera_semana__lyria_tramo13": {
@@ -37817,7 +37826,1312 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-10-30"
+  },
+  "lol_semana2__lyria_tramo10": {
+   "id": "lol_semana2__lyria_tramo10",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo10.mp3",
+   "archivo": "lol_semana2__lyria_tramo10.mp3",
+   "md5": "f7feb98164ce00c9f44a8f367b01e69e",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 10,
+   "escenas": [
+    "kcmk_j2",
+    "kcmk_peor",
+    "kcmk_mvp"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:22 (83 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit, driving pulse, then settle under the explanation.\n\n[0:00 - 0:45] Section 1: Intensity 7/10. cold open, dramatic hit then driving pulse, rivalry tension\n[0:45 - 1:22] Section 2: Intensity 4/10. steady informative groove, light arpeggios, stakes rising",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 7,
+     "desc": "cold open, dramatic hit then driving pulse, rivalry tension"
+    },
+    {
+     "t0": 45,
+     "t1": 82,
+     "intensidad": 4,
+     "desc": "steady informative groove, light arpeggios, stakes rising"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 93.45,
+    "rms_db": -14.3,
+    "tempo": 117.5,
+    "brillo_hz": 1916,
+    "energia": [
+     0.15,
+     0.48,
+     0.87,
+     0.91,
+     0.91,
+     0.94,
+     0.91,
+     0.99,
+     0.98,
+     1.0,
+     0.75,
+     0.9
+    ],
+    "huecos": [],
+    "dinamica": 0.85
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo1": {
+   "id": "lol_semana2__lyria_tramo1",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo1.mp3",
+   "archivo": "lol_semana2__lyria_tramo1.mp3",
+   "md5": "ee2675a112be8d1e2c25ea95a9694d36",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "correcciones",
+    "donde",
+    "t1ko_res"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:04 (124 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Rising underdog energy, then a tense analysis bed with a triumphant swell.\n\n[0:00 - 0:45] Section 1: Intensity 6/10. rising underdog anthem energy\n[0:45 - 2:04] Section 2: Intensity 7/10. analysis bed, tense, then a triumphant swell",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 6,
+     "desc": "rising underdog anthem energy"
+    },
+    {
+     "t0": 45,
+     "t1": 124,
+     "intensidad": 7,
+     "desc": "analysis bed, tense, then a triumphant swell"
+    }
+   ],
+   "intensidad": [
+    6,
+    7
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 128.36,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1926,
+    "energia": [
+     0.68,
+     0.68,
+     0.73,
+     0.87,
+     0.76,
+     0.74,
+     0.76,
+     0.59,
+     0.91,
+     1.0,
+     0.78,
+     0.77
+    ],
+    "huecos": [],
+    "dinamica": 0.41
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo11": {
+   "id": "lol_semana2__lyria_tramo11",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo11.mp3",
+   "archivo": "lol_semana2__lyria_tramo11.mp3",
+   "md5": "6c7ad31738afea7f886e4dc049a8b44f",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 11,
+   "escenas": [
+    "loly_res",
+    "loly_j1",
+    "loly_base"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo6 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:53 (113 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Tense analysis bed exploding into a triumphant swell, then a bright confident groove.\n\n[0:00 - 1:07] Section 1: Intensity 7/10. analysis bed, tense, then an explosive triumphant swell\n[1:07 - 1:29] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve\n[1:29 - 1:53] Section 3: Intensity 5/10. confident stat-card groove, brighter",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 67,
+     "intensidad": 7,
+     "desc": "analysis bed, tense, then an explosive triumphant swell"
+    },
+    {
+     "t0": 67,
+     "t1": 89,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    },
+    {
+     "t0": 89,
+     "t1": 113,
+     "intensidad": 5,
+     "desc": "confident stat-card groove, brighter"
+    }
+   ],
+   "intensidad": [
+    7,
+    3,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 115.17,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 2058,
+    "energia": [
+     0.86,
+     0.89,
+     0.95,
+     0.63,
+     0.95,
+     1.0,
+     0.71,
+     0.11,
+     0.7,
+     0.9,
+     0.93,
+     0.56
+    ],
+    "huecos": [],
+    "dinamica": 0.89
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo14": {
+   "id": "lol_semana2__lyria_tramo14",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo14.mp3",
+   "archivo": "lol_semana2__lyria_tramo14.mp3",
+   "md5": "539018e21ae3695609ecf8533ac8bf19",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 14,
+   "escenas": [
+    "tabla5",
+    "sem_jug",
+    "sem_eq"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:15 (135 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit. Driving pulse, then settle under the explanation. End steady.\n\n[0:00 - 0:50] Section 1: Intensity 7/10. cold open, dramatic hit then driving pulse, sense of shock\n[0:50 - 2:15] Section 2: Intensity 4/10. steady informative groove, light arpeggios, building curiosity",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 7,
+     "desc": "cold open, dramatic hit then driving pulse, sense of shock"
+    },
+    {
+     "t0": 50,
+     "t1": 135,
+     "intensidad": 4,
+     "desc": "steady informative groove, light arpeggios, building curiosity"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 72.82,
+    "rms_db": -14.1,
+    "tempo": 123.0,
+    "brillo_hz": 1197,
+    "energia": [
+     0.62,
+     0.98,
+     0.92,
+     0.71,
+     1.0,
+     0.93,
+     0.87,
+     0.94,
+     0.7,
+     0.8,
+     0.78,
+     0.62
+    ],
+    "huecos": [],
+    "dinamica": 0.38
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo15": {
+   "id": "lol_semana2__lyria_tramo15",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo15.mp3",
+   "archivo": "lol_semana2__lyria_tramo15.mp3",
+   "md5": "d8ae6624ebb988aa001bfc3eb794f0e2",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 15,
+   "escenas": [
+    "sem_peor",
+    "llave",
+    "sem_com"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:29 (89 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit, elimination-match tension, driving pulse, then settle under the explanation.\n\n[0:00 - 0:52] Section 1: Intensity 7/10. cold open, elimination-match tension, dramatic hit then driving pulse\n[0:52 - 1:29] Section 2: Intensity 4/10. steady informative groove, stakes rising, do-or-die feeling",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 52,
+     "intensidad": 7,
+     "desc": "cold open, elimination-match tension, dramatic hit then driving pulse"
+    },
+    {
+     "t0": 52,
+     "t1": 89,
+     "intensidad": 4,
+     "desc": "steady informative groove, stakes rising, do-or-die feeling"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 87.67,
+    "rms_db": -14.5,
+    "tempo": 80.7,
+    "brillo_hz": 1935,
+    "energia": [
+     0.4,
+     0.56,
+     0.93,
+     0.9,
+     0.71,
+     0.68,
+     0.84,
+     1.0,
+     0.97,
+     0.87,
+     0.58,
+     0.14
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo12": {
+   "id": "lol_semana2__lyria_tramo12",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo12.mp3",
+   "archivo": "lol_semana2__lyria_tramo12.mp3",
+   "md5": "aeec3cc81a15f19f355d249410164f52",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 12,
+   "escenas": [
+    "loly_j2",
+    "loly_j3",
+    "loly_fin"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: t1_koi_worlds__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-10-31\n\nBIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 114.27,
+    "rms_db": -14.3,
+    "tempo": 117.5,
+    "brillo_hz": 2347,
+    "energia": [
+     0.87,
+     0.94,
+     0.93,
+     0.94,
+     0.86,
+     0.95,
+     0.92,
+     0.91,
+     1.0,
+     0.98,
+     0.89,
+     0.75
+    ],
+    "huecos": [],
+    "dinamica": 0.25
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo2": {
+   "id": "lol_semana2__lyria_tramo2",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo2.mp3",
+   "archivo": "lol_semana2__lyria_tramo2.mp3",
+   "md5": "10825fca6727700bffaa69af5af9c018",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 2,
+   "escenas": [
+    "t1ko_g1",
+    "t1ko_j",
+    "t1ko_rep",
+    "t1ko_peor"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_jugadas__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-31\n\nBIBLIOTECA: lol_worlds_2026__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-29\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:21 (142 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal pulse for analysis, a big hit around the middle, then a lighter recap groove.\n\n[0:00 - 1:51] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:51 - 2:21] Section 2: Intensity 5/10. upbeat recap groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 111,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 111,
+     "t1": 141,
+     "intensidad": 5,
+     "desc": "upbeat recap groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 161.09,
+    "rms_db": -14.1,
+    "tempo": 117.5,
+    "brillo_hz": 2066,
+    "energia": [
+     0.51,
+     0.85,
+     0.83,
+     0.98,
+     0.82,
+     1.0,
+     0.97,
+     0.35,
+     0.77,
+     0.96,
+     1.0,
+     0.83
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo3": {
+   "id": "lol_semana2__lyria_tramo3",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo3.mp3",
+   "archivo": "lol_semana2__lyria_tramo3.mp3",
+   "md5": "f653d9aebae6b9d1920d503cb208b8d3",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 3,
+   "escenas": [
+    "lyig_res",
+    "lyig_j1",
+    "lyig_j2"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 154.55,
+    "rms_db": -14.4,
+    "tempo": 117.5,
+    "brillo_hz": 2353,
+    "energia": [
+     0.89,
+     0.95,
+     0.96,
+     0.89,
+     0.94,
+     0.93,
+     1.0,
+     0.96,
+     0.91,
+     0.88,
+     0.76,
+     0.9
+    ],
+    "huecos": [],
+    "dinamica": 0.24
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo4": {
+   "id": "lol_semana2__lyria_tramo4",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo4.mp3",
+   "archivo": "lol_semana2__lyria_tramo4.mp3",
+   "md5": "2af15a5f153c060934b8d486b8d1cdfc",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 4,
+   "escenas": [
+    "lyig_peor",
+    "kccf_res",
+    "kccf_j",
+    "kccf_peor"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Uneasy analysis tension that suddenly collapses, then a sober afterglow.\n\n[0:00 - 1:16] Section 1: Intensity 6/10. analysis bed, uneasy tension, a sudden collapse\n[1:16 - 1:38] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "analysis bed, uneasy tension, a sudden collapse"
+    },
+    {
+     "t0": 76,
+     "t1": 98,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    }
+   ],
+   "intensidad": [
+    6,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 167.64,
+    "rms_db": -14.7,
+    "tempo": 60.1,
+    "brillo_hz": 1535,
+    "energia": [
+     1.0,
+     0.95,
+     0.53,
+     0.35,
+     0.57,
+     0.85,
+     0.77,
+     0.72,
+     0.36,
+     0.5,
+     0.74,
+     0.82
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo5": {
+   "id": "lol_semana2__lyria_tramo5",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo5.mp3",
+   "archivo": "lol_semana2__lyria_tramo5.mp3",
+   "md5": "fd6af9c362b667adb70cd30708e416d6",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 5,
+   "escenas": [
+    "blte_res",
+    "blte_peor",
+    "blte_j"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:21 (142 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal pulse for analysis, a big hit around the middle, then a lighter recap groove.\n\n[0:00 - 1:51] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:51 - 2:21] Section 2: Intensity 5/10. upbeat recap groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 111,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 111,
+     "t1": 141,
+     "intensidad": 5,
+     "desc": "upbeat recap groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 178.55,
+    "rms_db": -14.2,
+    "tempo": 117.5,
+    "brillo_hz": 2025,
+    "energia": [
+     0.51,
+     0.89,
+     0.83,
+     0.97,
+     0.81,
+     1.0,
+     0.53,
+     0.67,
+     0.87,
+     0.72,
+     0.98,
+     0.81
+    ],
+    "huecos": [],
+    "dinamica": 0.49
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo6": {
+   "id": "lol_semana2__lyria_tramo6",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo6.mp3",
+   "archivo": "lol_semana2__lyria_tramo6.mp3",
+   "md5": "839d40b77cd600bb9469c19abb84001d",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 6,
+   "escenas": [
+    "blte_fin",
+    "lotl_res",
+    "lotl_j",
+    "lotl_rep"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo6 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Patient suspense building to a heroic explosive climax, then a triumphant afterglow.\n\n[0:00 - 1:38] Section 1: Intensity 8/10. analysis bed, patient suspense, heroic explosive climax",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 8,
+     "desc": "analysis bed, patient suspense, heroic explosive climax"
+    }
+   ],
+   "intensidad": [
+    8
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 126.18,
+    "rms_db": -14.7,
+    "tempo": 129.2,
+    "brillo_hz": 2753,
+    "energia": [
+     0.65,
+     0.76,
+     0.88,
+     0.86,
+     0.62,
+     0.93,
+     0.92,
+     1.0,
+     0.99,
+     0.73,
+     0.87,
+     0.63
+    ],
+    "huecos": [],
+    "dinamica": 0.38
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo7": {
+   "id": "lol_semana2__lyria_tramo7",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo7.mp3",
+   "archivo": "lol_semana2__lyria_tramo7.mp3",
+   "md5": "d7aad9d9b210bdee47288f7d1c4f689c",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 7,
+   "escenas": [
+    "lotl_peor",
+    "lotl_j2",
+    "lotl_fin",
+    "g2hl_res",
+    "g2hl_peor"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo10 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:45 (106 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Forward-looking anticipation, warm reflective pads, final big hit and ring out.\n\n[0:00 - 0:54] Section 1: Intensity 5/10. forward-looking anticipation, rising\n[0:54 - 1:27] Section 2: Intensity 4/10. reflective, warm synth pads\n[1:27 - 1:45] Section 3: Intensity 5/10. final big hit and ring out",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 54,
+     "intensidad": 5,
+     "desc": "forward-looking anticipation, rising"
+    },
+    {
+     "t0": 54,
+     "t1": 87,
+     "intensidad": 4,
+     "desc": "reflective, warm synth pads"
+    },
+    {
+     "t0": 87,
+     "t1": 105,
+     "intensidad": 5,
+     "desc": "final big hit and ring out"
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 134.91,
+    "rms_db": -14.4,
+    "tempo": 117.5,
+    "brillo_hz": 1618,
+    "energia": [
+     0.86,
+     0.87,
+     0.9,
+     0.87,
+     0.89,
+     0.96,
+     1.0,
+     0.9,
+     0.75,
+     0.88,
+     0.84,
+     0.93
+    ],
+    "huecos": [],
+    "dinamica": 0.25
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo8": {
+   "id": "lol_semana2__lyria_tramo8",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo8.mp3",
+   "archivo": "lol_semana2__lyria_tramo8.mp3",
+   "md5": "3631e811ac578aefe688ff4518716cda",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 8,
+   "escenas": [
+    "g2hl_j2",
+    "g2hl_j",
+    "tabla4"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:16 (76 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Continue the groove, turn darker and tense toward the end. End on a suspended note.\n\n[0:00 - 0:37] Section 1: Intensity 5/10. hopeful underdog groove, rising synths\n[0:37 - 1:16] Section 2: Intensity 6/10. ominous low drones, tension builds toward a fight",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 37,
+     "intensidad": 5,
+     "desc": "hopeful underdog groove, rising synths"
+    },
+    {
+     "t0": 37,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "ominous low drones, tension builds toward a fight"
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "drone",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "esperanza",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 134.91,
+    "rms_db": -14.3,
+    "tempo": 123.0,
+    "brillo_hz": 1887,
+    "energia": [
+     0.95,
+     0.88,
+     0.97,
+     0.97,
+     0.79,
+     0.88,
+     1.0,
+     0.95,
+     0.85,
+     0.92,
+     0.89,
+     0.82
+    ],
+    "huecos": [],
+    "dinamica": 0.21
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "lol_semana2__lyria_tramo9": {
+   "id": "lol_semana2__lyria_tramo9",
+   "video": "lol_semana2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo9.mp3",
+   "archivo": "lol_semana2__lyria_tramo9.mp3",
+   "md5": "967d495233c876bfef05fc47ba0930d7",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Worlds 2026: TODO lo que pasó en la semana decisiva",
+   "tramo": 9,
+   "escenas": [
+    "kcmk_res",
+    "kcmk_j3",
+    "kcmk_j1"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:34 (155 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:31] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:31 - 2:08] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve\n[2:08 - 2:34] Section 3: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 91,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 91,
+     "t1": 128,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    },
+    {
+     "t0": 128,
+     "t1": 154,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    3,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 156.03,
+    "rms_db": -14.5,
+    "tempo": 123.0,
+    "brillo_hz": 1605,
+    "energia": [
+     0.61,
+     0.82,
+     0.93,
+     0.99,
+     1.0,
+     0.97,
+     0.21,
+     0.83,
+     0.88,
+     0.84,
+     0.81,
+     0.2
+    ],
+    "huecos": [],
+    "dinamica": 0.8
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "robotaller_n64__lyria_tramo1": {
+   "id": "robotaller_n64__lyria_tramo1",
+   "video": "robotaller_n64",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_n64\\audio\\lyria_tramo1.mp3",
+   "archivo": "robotaller_n64__lyria_tramo1.mp3",
+   "md5": "8e6890def7e1d52af1089af5a51481b0",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA: me pidieron un video de 23 minutos y lo hice en 4 horas (así se hace)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "contraste",
+    "investiga",
+    "guion",
+    "voz",
+    "clips"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator. Total length: exactly 2:23 (143 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. del mensaje a los clips\n\n[0:00 - 0:25] Section 1: Intensity 2/10. Sly and quick: a ticking clock motif over plucky arpeggios, something big about to be built.\n[0:25 - 0:43] Section 2: Intensity 2/10. Confident, the groove settles.\n[0:43 - 1:11] Section 3: Intensity 2/10. Curious detective groove: light pizzicato synths, typing-like percussion.\n[1:11 - 1:30] Section 4: Intensity 2/10. Focused and steady: a simple melodic loop, writing in a quiet room.\n[1:30 - 1:53] Section 5: Intensity 2/10. Lighter: soft pads, a hint of comedy when something fails.\n[1:53 - 2:23] Section 6: Intensity 3/10. Assembly line: steady rhythmic clicks and a cheerful synth motif.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 2,
+     "desc": "Sly and quick: a ticking clock motif over plucky arpeggios, something big about to be built."
+    },
+    {
+     "t0": 25,
+     "t1": 43,
+     "intensidad": 2,
+     "desc": "Confident, the groove settles."
+    },
+    {
+     "t0": 43,
+     "t1": 71,
+     "intensidad": 2,
+     "desc": "Curious detective groove: light pizzicato synths, typing-like percussion."
+    },
+    {
+     "t0": 71,
+     "t1": 90,
+     "intensidad": 2,
+     "desc": "Focused and steady: a simple melodic loop, writing in a quiet room."
+    },
+    {
+     "t0": 90,
+     "t1": 113,
+     "intensidad": 2,
+     "desc": "Lighter: soft pads, a hint of comedy when something fails."
+    },
+    {
+     "t0": 113,
+     "t1": 143,
+     "intensidad": 3,
+     "desc": "Assembly line: steady rhythmic clicks and a cheerful synth motif."
+    }
+   ],
+   "intensidad": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "chiptune",
+     "percusión",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio"
+    ],
+    "genero": [
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 143.2,
+    "rms_db": -14.6,
+    "tempo": 123.0,
+    "brillo_hz": 1480,
+    "energia": [
+     0.22,
+     0.46,
+     0.78,
+     0.48,
+     0.7,
+     0.61,
+     0.85,
+     0.86,
+     0.24,
+     1.0,
+     0.94,
+     0.69
+    ],
+    "huecos": [],
+    "dinamica": 0.78
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
+  },
+  "robotaller_n64__lyria_tramo2": {
+   "id": "robotaller_n64__lyria_tramo2",
+   "video": "robotaller_n64",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_n64\\audio\\lyria_tramo2.mp3",
+   "archivo": "robotaller_n64__lyria_tramo2.mp3",
+   "md5": "c2183e12c48baec9aa7aa783014b1c60",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA: me pidieron un video de 23 minutos y lo hice en 4 horas (así se hace)",
+   "tramo": 2,
+   "escenas": [
+    "capas",
+    "sonido",
+    "relevo",
+    "revisa",
+    "miniatura",
+    "cuenta",
+    "junta"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator. Total length: exactly 2:37 (158 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. de las capas al corte\n\n[0:00 - 0:20] Section 1: Intensity 3/10. Building up: layers stack, sparkling arpeggios.\n[0:20 - 0:36] Section 2: Intensity 1/10. Almost nothing: a soft pad that steps aside.\n[0:36 - 1:02] Section 3: Intensity 2/10. Strange and thoughtful: slow pulse, ticking.\n[1:02 - 1:32] Section 4: Intensity 2/10. Tension then release: a rising build that resolves in a bright chord.\n[1:32 - 1:53] Section 5: Intensity 2/10. Dry comedy, then a bright reveal.\n[1:53 - 2:18] Section 6: Intensity 2/10. Warm and confident: the main motif returns.\n[2:18 - 2:37] Section 7: Intensity 2/10. Catchy full groove, ending abruptly.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 20,
+     "intensidad": 3,
+     "desc": "Building up: layers stack, sparkling arpeggios."
+    },
+    {
+     "t0": 20,
+     "t1": 36,
+     "intensidad": 1,
+     "desc": "Almost nothing: a soft pad that steps aside."
+    },
+    {
+     "t0": 36,
+     "t1": 62,
+     "intensidad": 2,
+     "desc": "Strange and thoughtful: slow pulse, ticking."
+    },
+    {
+     "t0": 62,
+     "t1": 92,
+     "intensidad": 2,
+     "desc": "Tension then release: a rising build that resolves in a bright chord."
+    },
+    {
+     "t0": 92,
+     "t1": 113,
+     "intensidad": 2,
+     "desc": "Dry comedy, then a bright reveal."
+    },
+    {
+     "t0": 113,
+     "t1": 138,
+     "intensidad": 2,
+     "desc": "Warm and confident: the main motif returns."
+    },
+    {
+     "t0": 138,
+     "t1": 157,
+     "intensidad": 2,
+     "desc": "Catchy full groove, ending abruptly."
+    }
+   ],
+   "intensidad": [
+    3,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "chiptune",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 155.66,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 1286,
+    "energia": [
+     0.16,
+     0.55,
+     0.67,
+     0.99,
+     1.0,
+     0.74,
+     0.95,
+     0.49,
+     0.4,
+     0.71,
+     0.69,
+     0.86
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-01"
   }
  },
- "actualizado": "2026-10-30 17:01"
+ "actualizado": "2026-11-01 09:34"
 }

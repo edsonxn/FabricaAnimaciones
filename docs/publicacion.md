@@ -122,7 +122,11 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
 - **Crónicas del gaming** (`cronicas_gaming`, terror CRT): arranca el 13-oct-2026 con un video cada 4 días a las 18:00 CDMX
   (00:00 UTC del día siguiente; terror = tráfico de noche), por pedido del usuario el ciclo y por criterio la hora.
 
-8. Miniatura: `videos/<nombre>/miniaturas.py` con `VARIANTES = {nombre: fn(lz) -> fondo}` (ejemplo en
+**MINIATURAS = FLOW EN TODOS LOS CANALES (el usuario, 1-nov-2026: «las miniaturas siempre van con flow en todos los canales»).**
+   Claude la genera en Flow (navegador integrado, Nano Banana 2.1, x2, texto dentro, ingredientes reales pegados) con el estilo
+   de cada canal; prompt en `videos/<v>/prompt_miniatura.md`. La de código (punto 8) es SOLO respaldo provisional para no frenar
+   una subida: antes de la fecha de publicación se cambia por la de Flow con `yt aplicar` (ej. `n64_secretos`).
+8. (Respaldo provisional) Miniatura por código: `videos/<nombre>/miniaturas.py` con `VARIANTES = {nombre: fn(lz) -> fondo}` (ejemplo en
    `videos/40mil_anos/miniaturas.py`) → `python fab.py <nombre> miniatura` → `salida/*_mini_<variante>.jpg`
    (1280x720) y `previews/miniaturas.jpg` (MÍRALA: incluye la vista a tamaño de celular). En el nicho funciona:
    personaje grande con cara de sorpresa, 1-3 palabras enormes amarillas con contorno negro, alto contraste.

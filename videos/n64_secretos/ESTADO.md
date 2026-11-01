@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_gaming · hueco mar 17-nov-2026 18:00 CDMX (ciclo 3 d; confirmar con `canales --actualizar`)
 - estilo: secuencia_yt (Crónicas del gaming) → doc: docs/estilo_secuencia_yt.md § «REGLA DE ORO», § «Crónicas del gaming», § SONIDO ORIGINAL y § MAPAS REALES
-- etapa: ✅ SUBIDO privado y PROGRAMADO mar 17-nov-2026 18:00 CDMX (https://youtu.be/mw2-4rNFs50) con miniatura provisional y .srt; registrado y documentado
-- siguiente: opcional: miniatura de Flow (receta `videos/spyro2/prompt_miniatura.md`) y `yt aplicar n64_secretos cronicas_gaming mw2-4rNFs50`; al aprobarlo, `python fab.py n64_secretos limpiar`
+- etapa: ✅ SUBIDO privado y PROGRAMADO mar 17-nov-2026 18:00 CDMX (https://youtu.be/mw2-4rNFs50) con miniatura de Flow «REPARTIÓ GUANTES» (1-nov) y .srt; registrado y documentado
+- siguiente: al aprobarlo, `python fab.py n64_secretos limpiar`
 
 
 ## Sesiones (plan de tramos · «continúa el video n64_secretos» retoma aquí · protocolo docs/sesiones.md)
@@ -31,7 +31,7 @@
 - Tramos 1-4 completos (31-oct): ver la tabla de Sesiones.
 
 ## Falta
-- [ ] (opcional) miniatura de Flow en lugar de la provisional por código.
+- [x] Miniatura de Flow aplicada el 1-nov (`prompt_miniatura.md`; la de código queda en `salida/miniatura_codigo.jpg`).
 
 ## Cómo retomar (comandos)
 ```

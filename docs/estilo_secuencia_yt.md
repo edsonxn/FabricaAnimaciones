@@ -21,6 +21,7 @@ de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido
 | Pegatinas | Cada nombre real; ≥ 1 de cada 3 en estilo no estándar | Abajo |
 | Comentarios | ≥ 4 agradecimientos + 1-2 críticas con burla disfrazada | § COMENTARIOS, puntos 2b y 2c |
 | Sonido del juego | OST oficial, `ambiente_por`, SFX del mismo juego | § Sonido original |
+| Lo que la voz dice que SUENA se OYE | Cada «escucha…», música, voz o grito nombrado: su tramo audible con la voz callada | § Sonido original, «Si la voz nombra un sonido» |
 | Campaña de suscripción (Runa, Tamriel) | 6-10 s hacia el 70-80 % | § CAMPAÑA DE SUSCRIPCIÓN |
 
 **Medición de referencia** (`tes_secretos_40`, por minuto): fichas 1,7 · MG 1,4 · mapas 0,7 · pegatinas 3,1 · comentarios 0,5.
@@ -613,6 +614,13 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 - **`medios/` también es junction a E:** en videos nuevos, aunque no salga en `nuevo`; `du` da 0. Antes de un render largo mirar con `dir /AL` qué vive en cada disco.
 - **Disco:** render de 24:52 = 1,1 GB + MASTER 1,2 GB + `salida/` y `segmentos/` en C:; bastan ~6 GB libres, no 12 como decía la cuenta vieja (47 min de render a 12 procesos).
 
+### Lecciones de `n64_secretos` (31-oct-2026, 170 beats, 24:19, primer video de CONSOLA del canal)
+- **Kit `nucleo/mg_n64.py`** (pizarra de grafito translúcida con la tira de cuatro colores, cubo del logo, Bahnschrift) con 18 MG propios; tema `n64` en `mg_mapa` (ruta plateada, cubos como marcadores) y en `peg_estilos`. Un tema nuevo de `mg_mapa` necesita entrar en la lista de `_etiqueta` (banda de humo) o pedirá `caja`/`filo` y fallará con `KeyError`.
+- **Rutas de mapa a mano, nunca a ojo sobre la hoja:** las de Yoshi Valley salieron por encima de la roca. Receta: rejilla con coordenadas en fracción sobre el mapa entero y luego dos o tres zooms con rejilla fina de la zona; trazar el camino real (qué conecta con qué) y dibujar la polilínea sobre el mapa ANTES de `fx hoja`. Las listas de puntos van con nombre en `efectos.py` (`_VUELTA_LARGA`, `_ATAJO`, `_TRAMO_FINAL`, `_SALIDA`) para que dos rutas compartan tramos.
+- **`bajar_pegatinas.py` con Wikipedia falla en accesorios y empresas absorbidas:** «Transfer Pak» y «Expansion Pak» redirigen a una página sin imagen y «DMA Design» a Rockstar North (sale el logo de Rockstar). Buscar en Commons (`list=search`, `srnamespace=6`) y en la wiki de fans (`gta.fandom.com` tenía el logo de DMA); los logos negros sobre alfa (CD, Digital Foundry) se ponen sobre blanco o desaparecen en el video. Mirar SIEMPRE la hoja de contacto de `pegatinas/`.
+- **Clips con `ambiente_por`:** `bajar` los trunca; los 33 salieron cortos frente a su beat y se rehicieron todos con `dl_amb.py` (video y audio con el segundo exacto). Dos beats con el MISMO clip (011 y 082) delatan una descarga equivocada: compararlos en la hoja de brillo.
+- **`ficha(a=("frase|fin", …))` puede resolverse a 0,03 s** si el ancla no se encuentra: en la lista de `fx` buscar FX de duración ~0 y pasarlos a `dur=`.
+
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
 de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.
@@ -643,6 +651,20 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   Elegir por el TÍTULO del clip: «Music Video», «LIVE», «No Commentary», cinemáticas; las guías casi siempre llevan narrador.
 - **Pausas para oírlo:** el guion solo admite `post` por ESCENA y añadirlo re-corta TODOS los beats (85 en vez de 84, otros
   límites): decidirlo ANTES de `beats`/plan de clips, nunca después.
+- **SI LA VOZ NOMBRA UN SONIDO, EL ESPECTADOR LO OYE (el usuario, 31-oct-2026, TODOS los canales; visto en `spyro2` y antes):**
+  «cuando el narrador hace referencia a un sonido o invita a escuchar, es imprescindible que pongas un tramo del sonido, música, lo
+  que sea… no importa que el narrador se quede callado». Toda frase que hable de un sonido («escucha la diferencia», «cada nivel
+  suena a…», «usan el mismo tema musical», «la voz de Ripto», «le grita…», «la música de las demos», una canción, un grito, un
+  ruido) lleva ESE sonido audible en ese momento: no basta el clip con `ambiente_por` bajo la voz si la voz lo tapa.
+  - **Cómo:** al escribir el guion se marca la frase y se le da su tramo **con la voz callada**: `post` de 2-6 s en esa escena (se
+    decide ANTES de `beats`, ver arriba), con el audio del clip a 0,9-1,0 y la OST apartada; comparaciones («la versión americana /
+    la europea») = los dos tramos seguidos, cada uno con su rótulo. Música de un nivel que se nombra = esa pista de la OST sube en
+    ese beat (no la del puesto). Voz de un actor = una línea suya del juego. Si no existe audio real de ese sonido, se reescribe la
+    frase para no prometerlo.
+  - **Verbos para quien OYE el video:** «sí, oíste bien», nunca «sí, leíste bien» (el espectador escucha la narración; «lees» solo
+    para un texto que de verdad está en pantalla y es el punto, como el cuadro de diálogo del monje en `spyro2`).
+  - **Antes de la voz:** `grep -iE "escuch|suena|sonid|música|canci|oye|oír|oído|grit|melod|voz de|leíste"` sobre el guion; cada
+    resultado tiene su `post` + `ambiente_por` o se reescribe. Antes de renderizar, se oye cada uno en la mezcla.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;

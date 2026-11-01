@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_gaming · hueco sáb 14-nov-2026 18:00 CDMX (ciclo 3 d; confirmar con `canales --actualizar`)
 - estilo: secuencia_yt (Crónicas del gaming) → doc: docs/estilo_secuencia_yt.md § «Crónicas del gaming» y § SONIDO ORIGINAL
-- etapa: SUBIDO y programado (https://youtu.be/BOELChGqqTg)
-- siguiente: nada; medir a 7 días de publicarse
+- etapa: SUBIDO y programado (https://youtu.be/BOELChGqqTg) · ◐ CORRECCIÓN DE SONIDO pendiente (tramo 5)
+- siguiente: tramo 5 = que se OIGA lo que la voz nombra (lista en «## Falta»); antes del 14-nov
 
 
 ## Sesiones (plan de tramos · «continúa el video spyro2» retoma aquí · protocolo docs/sesiones.md)
@@ -16,6 +16,7 @@
 | 2 | voz, tiempo, beats, plan de clips, bajar, medios | ✅ 31-oct | 174/174 clips; 39 con sonido original |
 | 3 | efectos, música, sfx, ambiente, mezcla | ✅ 31-oct | 232 FX; -14,2 LUFS; voz 11,6 dB sobre el resto |
 | 4 | render, final, verificar, miniatura, subir, programar, avisar, documentar | ✅ 31-oct | MASTER 24:52, 1,2 GB; programado sáb 14-nov 18:00 CDMX |
+| 5 | corrección: sonidos nombrados que no se oyen (pedido del usuario 31-oct) | ◐ pendiente | regla nueva § «Si la voz nombra un sonido»; lista en «## Falta» |
 
 ## Decisiones del episodio (el usuario, 30-oct-2026)
 - 24 minutos. Elegido entre 3: **historia + secretos** (no ranking de niveles ni documental). Formato: `historia_y_30_secretos_secuencia_yt`.
@@ -32,7 +33,9 @@
 - `python fab.py nuevo spyro2 --yt`, ideas, comentarios y panel de canales.
 
 ## Falta
-- [x] Todo lo de la tabla de tramos.
+- [ ] **Tramo 5 (el usuario, 31-oct):** que se OIGA, con la voz callada 2-6 s, cada sonido nombrado (mm:ss del MASTER): **079 11:07 «Escucha la diferencia»** (ópera americana vs europea de Ripto's Arena: los 2 tramos, el peor caso, sin audio) · 078-083 11:02-11:52 música de las demos y temas sin usar · 027-030 3:40-4:13 Copeland, «Summer Forest suena a verano, Scorch a desierto» (esas pistas) · 045-046 6:15 mismo tema en Idol Springs y Fracture Hills (ya AMB, que se distinga) · 069 9:44 Tom Kenny y 072 10:10 Gregg Berger (una línea de cada uno) · 075 10:34 grito de Ripto y 126 17:51 «escucha… dice kill» (ya AMB: comprobar que se entienda) · 116 16:26 Elora «con voz».
+- [ ] 084 11:52 «Sí, leíste bien» → **«Sí, oíste bien»** (regenerar esa frase con la voz Hope).
+- [ ] Cómo: insertos en el montaje (pausas `post` re-cortan todos los beats) → nuevo MASTER; YouTube no deja cambiar el archivo: subir el nuevo al MISMO hueco y quitar el viejo (BOELChGqqTg) con visto bueno del usuario.
 
 ## Cómo retomar (comandos)
 ```

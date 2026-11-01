@@ -1,9 +1,9 @@
 # Así se hace por dentro: un video de 24 min en 4 horas (Edsonxn, 2.º video) — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: edsonxn · hueco sáb 7-nov-2026 10:00 CDMX (ciclo 7 d)
+- canal: edsonxn · PROGRAMADO sáb 7-nov-2026 10:00 CDMX: https://youtu.be/ALhXMUAc_RI
 - estilo: Jefe de Robots: grabaciones reales con cámara + Token de acento + El Jefe → doc: docs/estilo_jefe_robots.md (copiar de videos/robotaller_mes1/)
-- etapa: aprobado + miniatura + youtube.json; falta subir (bloqueado por permisos)
-- siguiente: `yt subir … private --publicar 2026-11-07T16:00:00Z` con el OK del usuario → registrar
+- etapa: SUBIDO en privado y programado (1-nov), registrado en canales/edsonxn.json y BITACORA
+- siguiente: comprobar en Studio «Contenido alterado» = Sí; medir a 7 días (retención, suscriptores, comentarios)
 
 ## En curso (1-nov-2026, 2.ª sesión — manda sobre lo de abajo)
 2.ª sesión: las 19 grabaciones hechas y miradas (montaje.mp4 negro hasta 4 s → desde 5). `toma.py` escrito (69 planos, `python toma.py revisar` limpio). Token grabado (medios/token.mp4). efectos.py + 15 SFX nuevos (93 créditos) + sfx/ost_yoshi.mp3 hechos; descripcion.txt escrito; filtro limpio.

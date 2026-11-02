@@ -76,7 +76,7 @@ usuario prefiere el original de ElevenLabs para los dos canales. Elegida entre 8
   llevan su propio puntero de cuenta: Johnny sigue en la 1). En la plantilla: `VOZ_POR_FRASE = {...: VOZ_REMY_ELEVEN}`.
 - **Primer video de Warcraft con Johnny = video del cambio de voz, con TRES voces** (el usuario, 2-nov-2026):
   1. ABRE con la mini discusión de las tres (Johnny, la de siempre con Applio y Remy Eleven): explican el cambio y piden
-     comentar cuál de las tres prefieren. Borrador (~65 s, 10 frases): `canales/voces_prueba/warcraft_cambio_voz/`
+     comentar cuál de las tres prefieren. **APROBADO tal cual por el usuario el 2-nov («Así queda»).** Borrador (~65 s, 10 frases): `canales/voces_prueba/warcraft_cambio_voz/`
      (`guion.py` con `VOZ_POR_FRASE`; tomas en `voz/cands/`, se copian al `voz/cands/` del video si el texto no cambia;
      `borrador_cambio_voz.mp3`). La versión de dos voces aprobada antes quedó en `_aprobado_2voces/`.
   2. Durante el video la narración **cambia AL MENOS 2 VECES entre Remy Eleven y Johnny** (p. ej. Johnny → un tramo de

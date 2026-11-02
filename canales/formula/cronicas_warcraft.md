@@ -99,5 +99,5 @@
 - **El próximo video de Warcraft es el del cambio de voz, con TRES voces:** abre con la mini discusión (Johnny de ElevenLabs,
   la de siempre con Applio real y Remy Eleven = clon de Applio en ElevenLabs), pide comentar cuál de las tres prefieren, y
   durante el video la narración cambia AL MENOS 2 veces entre Remy Eleven y Johnny (por secciones, con ficha de quién narra).
-  Borrador: `canales/voces_prueba/warcraft_cambio_voz/`; receta y saldo: docs/voz.md § «Warcraft y Tamriel = JOHNNY».
+  Borrador APROBADO tal cual el 2-nov: `canales/voces_prueba/warcraft_cambio_voz/`; receta y saldo: docs/voz.md § «Warcraft y Tamriel = JOHNNY».
 - A los 7 días: `yt comentarios cronicas_warcraft` → contar votos por voz y decírselo al usuario (la voz no se cambia sola).

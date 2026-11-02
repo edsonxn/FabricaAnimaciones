@@ -7,10 +7,11 @@ salió Sarcastica.mp3 de Chatterbox), eleven_v4_turbo con corchetes de actuació
 [deadpan], [sighs], [mischievously], [short pause]…). SIN [whispers] ni [excited] («quitemos whisper o muy emocionado»;
 VOZ["sin_etiquetas"] los quita aunque se cuelen). Escritura normal: el inglés sale nativo; FONETICA solo para lo que se oiga
 mal. Johnny es de la biblioteca: funciona por id en cualquier cuenta (la 1 tiene el saldo).
-La voz VIEJA de Warcraft (Applio Remy) existe como clon de ElevenLabs en las cuentas 2 y 3 (VOZ["por_cuenta"]): se usa en
-VOZ_POR_FRASE = {"<escena>_<i>": VOZ_VIEJA} para el segmento del cambio de voz (docs/voz.md § «Johnny»).
-Si un canal vuelve a Applio: VOZ = dict(motor="applio", tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal",
-pitch=0, rate=0, idioma="es", referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav") + FONETICA de todo nombre inglés.
+La voz VIEJA de Warcraft (Applio: Edge TTS Remy + RVC RemyOriginal) puede decir frases sueltas en un video de ElevenLabs:
+VOZ_POR_FRASE = {"<escena>_<i>": "applio"} → tts_gen las genera con VOZ_APPLIO (sin corchetes, con FONETICA_APPLIO); se usa
+en el segmento del cambio de voz (docs/voz.md § «Johnny»). Applio: frases de < ~200 caracteres y nunca de 1-3 palabras.
+Si un canal vuelve a Applio entero: VOZ = dict(motor="applio", **VOZ_APPLIO, idioma="es",
+referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav") y FONETICA = FONETICA_APPLIO.
 Estilo de canal «gema»: listas «Las N … de peor a mejor», chistes secos, una cita ficticia dramática por sección.
 ESCENAS = secciones del guion (en una lista: una por puesto). Aquí NO se describen imágenes: los cortes salen de
 `beats` (pausas reales de la voz, ~8,6 s) y la búsqueda de gameplay de cada beat va en busquedas.json.
@@ -25,13 +26,19 @@ MOTOR = "secuencia"
 ESTILO_VISUAL = "secuencia_yt"
 DURACION = None
 BPM = 96
-VOZ_VIEJA = "sm2N86ydG2QhV8LIVa9b"   # clon de la voz Applio de Warcraft (solo cuentas 2 y 3; id de cada una en por_cuenta)
 VOZ = dict(motor="elevenlabs", voice_id="HMCmDsbKeaSZp5LMOYKR", modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5,
-           sin_etiquetas=("whisper", "excit"), por_cuenta={2: "Syrb04Gbt8V9UQZNUAmw", 3: VOZ_VIEJA},
-           referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
-# VOZ_POR_FRASE = {"cambio_voz_0": VOZ_VIEJA, ...}   # solo en el video que presenta el cambio de voz
+           sin_etiquetas=("whisper", "excit"), referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
 # ElevenLabs dice el inglés nativo: aquí solo lo que se oiga mal (oírlo antes de añadir)
 FONETICA = {"CRONICAS10": "Crónicas diez"}
+# La voz de siempre de Warcraft, para VOZ_POR_FRASE = {"cambio_voz_1": "applio", ...} (solo en el video del cambio de voz)
+VOZ_APPLIO = dict(tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal", pitch=0, rate=0)
+# Grafía que lee Applio (grafías del canal: C:\googleimagenes\FONETICA_CHECKLIST.md)
+FONETICA_APPLIO = {
+    "World of Warcraft Forever": "uórld of uárcraft Foréver", "World of Warcraft": "uórld of uárcraft", "Forever": "Foréver",
+    "Blizzard": "Blízard", "Overgear": "Óverguir", "self-play": "sélf pléi", "Classic": "Clásic", "Azeroth": "Azeróth",
+    "Battle punto net": "Bátel punto net", "Hardcore": "Jardcor", "Vanilla": "Vanila", "retail": "ritéil",
+    "Burning Crusade": "Bérnin Kruséid", "Arthas": "Ársas", "Illidan": "Ilidán", "Hyjal": "Jáyal", "CRONICAS10": "Crónicas diez",
+}
 
 SECUENCIA = dict(
     fuente="yt",

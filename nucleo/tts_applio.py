@@ -14,6 +14,7 @@ frases en UN proceso con el python de Applio (carga el modelo una vez): nucleo/a
 import asyncio
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -44,9 +45,15 @@ def ruta_pth(rvc):
     return os.path.join(APPLIO, "logs", "VOCES", rvc if rvc.endswith(".pth") else rvc + ".pth")
 
 
-def generar(frases, seeds, solo, out):
+def generar(frases, seeds, solo, out, voz=None):
+    """voz: parámetros de Applio cuando el narrador del video es OTRO motor (guion.VOZ_APPLIO, frases de VOZ_POR_FRASE
+    = "applio"); entonces se aplica FONETICA_APPLIO de guion.py, porque la FONETICA del video es la del narrador."""
     import config
-    v = config.VOZ
+    v = voz or config.VOZ
+    fon = {}
+    if voz:
+        import guion
+        fon = getattr(guion, "FONETICA_APPLIO", {})
     seed = seeds[0] if seeds else 1
     trabajos = []
     for esc, idx, texto in frases:
@@ -55,7 +62,11 @@ def generar(frases, seeds, solo, out):
             continue
         path = os.path.abspath(f"{out}/{key}_s{seed}.wav")
         if not os.path.exists(path):
-            trabajos.append(dict(key=key, texto=config.FRASES_TTS.get(key, texto), salida=path))
+            # sin etiquetas [..] de ElevenLabs: Edge TTS las leería en voz alta
+            t = re.sub(r"\s*\[[A-Za-z][A-Za-z' -]*\]\s*", " ", config.FRASES_TTS.get(key, texto)).strip()
+            for k in sorted(fon, key=len, reverse=True):
+                t = re.sub(r"(?<![\wÁÉÍÓÚáéíóúñÑ])" + re.escape(k) + r"(?![\wÁÉÍÓÚáéíóúñÑ])", fon[k], t)
+            trabajos.append(dict(key=key, texto=t, salida=path))
     if not trabajos:
         print("Applio: nada pendiente")
         return

@@ -37,7 +37,15 @@ if cambiadas:
 json.dump(actuales, open("voz/textos.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 if config.VOZ.get("motor") == "elevenlabs":
     import tts_eleven
-    tts_eleven.generar(todas_las_frases(), args.seeds, args.solo, OUT)
+    # VOZ_POR_FRASE = {"cambio_voz_1": "applio"}: esas frases las dice la voz Applio (VOZ_APPLIO de guion.py), p. ej. la voz
+    # vieja de Warcraft discutiendo con la nueva (2-nov-2026); las demás, ElevenLabs
+    import guion
+    por_frase = getattr(guion, "VOZ_POR_FRASE", {})
+    con_applio = [f for f in todas_las_frases() if por_frase.get(f"{f[0]}_{f[1]}") == "applio"]
+    if con_applio:
+        import tts_applio
+        tts_applio.generar(con_applio, args.seeds, args.solo, OUT, voz=guion.VOZ_APPLIO)
+    tts_eleven.generar([f for f in todas_las_frases() if f not in con_applio], args.seeds, args.solo, OUT)
     raise SystemExit
 if config.VOZ.get("motor") == "applio":
     import tts_applio

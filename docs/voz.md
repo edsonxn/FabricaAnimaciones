@@ -66,15 +66,19 @@ usuario prefiere el original de ElevenLabs para los dos canales. Elegida entre 8
   al revisar (en Tamriel, oír los nombres daédricos antes de copiar la tabla vieja de Chatterbox).
 - Johnny es de la biblioteca compartida: se usa por id desde cualquier cuenta sin añadirlo (probado 2-nov).
 - Videos ya hechos (Applio o Chatterbox) se quedan como están: no cambiar la voz a media obra.
-- **La voz VIEJA de Warcraft** (Applio Remy + RVC) existe como clon instantáneo, hecho con 152 s de `voz/final` de
-  `wow_objetos_secretos_forever`: cuenta 3 `sm2N86ydG2QhV8LIVa9b`, cuenta 2 `Syrb04Gbt8V9UQZNUAmw` (cada cuenta le da otro
-  id; la 1 es «payg», `paid_plan_required`). `VOZ["por_cuenta"]` pone el id de cada cuenta y esas frases llevan su propio
-  puntero de cuenta: el narrador sigue en la 1. Uso: `VOZ_POR_FRASE = {"cambio_voz_1": VOZ_VIEJA, ...}`.
-- **Primer video de Warcraft con Johnny: ABRE con el cambio de voz** (el usuario): mini discusión entre la voz de siempre y la
-  nueva, explicando el cambio y pidiendo que comenten cuál prefieren; después todo sigue con Johnny. Borrador oído por el
-  usuario: `canales/voces_prueba/warcraft_cambio_voz/` (`guion.py` con las 7 frases y `VOZ_POR_FRASE`; tomas en `voz/`, se
-  copian a `voz/cands/` del video si el texto no cambia; `borrador_cambio_voz.mp3`). En pantalla: las dos voces con cara o
-  ficha propia (lo que dice la voz se ve). A los 7 días, leer qué voz prefiere la gente en los comentarios.
+- **La voz VIEJA de Warcraft es Applio DE VERDAD** (el usuario: «la voz vieja tiene que ser de applio»): en un video de
+  ElevenLabs, `VOZ_POR_FRASE = {"cambio_voz_1": "applio", ...}` → `tts_gen.py` genera esas frases con `tts_applio` usando
+  `VOZ_APPLIO` y `FONETICA_APPLIO` de guion.py (ya en la plantilla), sin corchetes; las demás, ElevenLabs. Reglas de Applio en
+  esas frases: < ~200 caracteres, nunca de 1-3 palabras, nombres ingleses en `FONETICA_APPLIO`. La mezcla del video usa la
+  cadena de ElevenLabs para todo: oír que la voz vieja no quede más fuerte o más opaca que Johnny.
+- Existe además un clon instantáneo de la voz Applio en ElevenLabs (cuenta 3 `sm2N86ydG2QhV8LIVa9b`, cuenta 2
+  `Syrb04Gbt8V9UQZNUAmw`; la 1 es «payg», `paid_plan_required`), con `VOZ["por_cuenta"]` en `tts_eleven`. NO se usa para la
+  voz vieja; queda solo por si el usuario lo pide.
+- **Primer video de Warcraft con Johnny: ABRE con el cambio de voz** (el usuario): mini discusión entre la voz de siempre
+  (Applio) y la nueva, explicando el cambio y pidiendo que comenten cuál prefieren; después todo sigue con Johnny. Borrador:
+  `canales/voces_prueba/warcraft_cambio_voz/` (`guion.py` con las 7 frases y `VOZ_POR_FRASE`; tomas en `voz/cands/`, se copian
+  a `voz/cands/` del video si el texto no cambia; `borrador_cambio_voz.mp3`). En pantalla: las dos voces con cara o ficha
+  propia (lo que dice la voz se ve). A los 7 días, leer qué voz prefiere la gente en los comentarios.
 
 ## REGLA: mezcla de Applio = cadena «suave» (el usuario, 13-oct-2026)
 El Montaje del panel reproduce la voz cruda (~-20 LUFS) y el MASTER la pasaba por la cadena de Chatterbox/ElevenLabs

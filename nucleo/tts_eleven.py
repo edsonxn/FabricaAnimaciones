@@ -13,9 +13,10 @@ Registro de créditos gastados: voz/eleven_log.json.
 Voz con actuación (docs/voz.md § «Corchetes»): modelo="eleven_v4_turbo" (POR DEFECTO desde el 26-oct-2026: mitad de créditos que
 eleven_v4; ver modelo()) y etiquetas en inglés dentro de las frases del guion,
 p. ej. "[sighs] Nadie lo sabía. [short pause] Ni yo."; config.py las quita para todo lo demás (Whisper, timeline, .srt).
-Voz CLONADA en varias cuentas (2-nov-2026, la voz vieja de Crónicas de Warcraft): cada cuenta le da otro voice_id al mismo
-clon → VOZ["por_cuenta"] = {2: "<id en la 2>", 3: "<id en la 3>"}; post() pone el id de la cuenta en uso y salta las que no
-lo tienen. Sirve como narrador o en VOZ_POR_FRASE (lleva su propio puntero de cuenta: no saca al narrador de la cuenta 1).
+Voz CLONADA en varias cuentas (2-nov-2026; p. ej. el clon de la voz Applio de Warcraft, docs/voz.md): cada cuenta le da otro
+voice_id al mismo clon → VOZ["por_cuenta"] = {2: "<id en la 2>", 3: "<id en la 3>"}; post() pone el id de la cuenta en uso y
+salta las que no lo tienen. Sirve como narrador o en VOZ_POR_FRASE (lleva su propio puntero de cuenta: no saca al narrador
+de la cuenta 1). VOZ_POR_FRASE = "applio" no pasa por aquí: lo genera tts_applio (tts_gen.py).
 Etiquetas que NO van con una voz: VOZ["sin_etiquetas"] = ("whisper", "excit") → se quita toda [..] que contenga ese texto.
 """
 import io
@@ -77,7 +78,7 @@ def post(ruta, **kw):
     cs = cuentas()
     clones = (config.VOZ.get("por_cuenta") or {}) if config else {}
     # el mismo clon tiene otro voice_id en cada cuenta: sus frases llevan su PROPIO puntero de cuenta, para que una frase con
-    # la voz vieja (VOZ_POR_FRASE, en las cuentas 2-3) no arrastre al narrador fuera de la cuenta 1
+    # un clon (VOZ_POR_FRASE, en las cuentas 2-3) no arrastre al narrador fuera de la cuenta 1
     vid = next((v for v in clones.values() if v in ruta), None)
     i = _activa_clon if vid else _activa
     while True:

@@ -71,14 +71,21 @@ usuario prefiere el original de ElevenLabs para los dos canales. Elegida entre 8
   `VOZ_APPLIO` y `FONETICA_APPLIO` de guion.py (ya en la plantilla), sin corchetes; las demás, ElevenLabs. Reglas de Applio en
   esas frases: < ~200 caracteres, nunca de 1-3 palabras, nombres ingleses en `FONETICA_APPLIO`. La mezcla del video usa la
   cadena de ElevenLabs para todo: oír que la voz vieja no quede más fuerte o más opaca que Johnny.
-- Existe además un clon instantáneo de la voz Applio en ElevenLabs (cuenta 3 `sm2N86ydG2QhV8LIVa9b`, cuenta 2
-  `Syrb04Gbt8V9UQZNUAmw`; la 1 es «payg», `paid_plan_required`), con `VOZ["por_cuenta"]` en `tts_eleven`. NO se usa para la
-  voz vieja; queda solo por si el usuario lo pide.
-- **Primer video de Warcraft con Johnny: ABRE con el cambio de voz** (el usuario): mini discusión entre la voz de siempre
-  (Applio) y la nueva, explicando el cambio y pidiendo que comenten cuál prefieren; después todo sigue con Johnny. **Texto APROBADO por el usuario el 2-nov («Así queda»): usarlo tal cual.** Borrador:
-  `canales/voces_prueba/warcraft_cambio_voz/` (`guion.py` con las 7 frases y `VOZ_POR_FRASE`; tomas en `voz/cands/`, se copian
-  a `voz/cands/` del video si el texto no cambia; `borrador_cambio_voz.mp3`). En pantalla: las dos voces con cara o ficha
-  propia (lo que dice la voz se ve). A los 7 días, leer qué voz prefiere la gente en los comentarios.
+- **Remy Eleven** = clon instantáneo de la voz Applio en ElevenLabs (cuenta 3 `sm2N86ydG2QhV8LIVa9b`, cuenta 2
+  `Syrb04Gbt8V9UQZNUAmw`; la 1 es «payg», `paid_plan_required`), con corchetes; `VOZ["por_cuenta"]` en `tts_eleven` (sus frases
+  llevan su propio puntero de cuenta: Johnny sigue en la 1). En la plantilla: `VOZ_POR_FRASE = {...: VOZ_REMY_ELEVEN}`.
+- **Primer video de Warcraft con Johnny = video del cambio de voz, con TRES voces** (el usuario, 2-nov-2026):
+  1. ABRE con la mini discusión de las tres (Johnny, la de siempre con Applio y Remy Eleven): explican el cambio y piden
+     comentar cuál de las tres prefieren. Borrador (~65 s, 10 frases): `canales/voces_prueba/warcraft_cambio_voz/`
+     (`guion.py` con `VOZ_POR_FRASE`; tomas en `voz/cands/`, se copian al `voz/cands/` del video si el texto no cambia;
+     `borrador_cambio_voz.mp3`). La versión de dos voces aprobada antes quedó en `_aprobado_2voces/`.
+  2. Durante el video la narración **cambia AL MENOS 2 VECES entre Remy Eleven y Johnny** (p. ej. Johnny → un tramo de
+     puestos con Remy Eleven → Johnny → otro tramo con Remy Eleven → Johnny en el cierre), por secciones enteras, no a media
+     frase: `VOZ_POR_FRASE` con todas las frases de esas escenas. En pantalla, una ficha pequeña de quién narra en cada
+     cambio (lo que dice la voz se ve; la discusión anunció «por turnos»).
+  3. Saldo: Remy Eleven solo cobra de la cuenta 3 (~1 270 créditos el 2-nov, la 2 casi vacía) ≈ 6 000 caracteres de turbo
+     en total; repartir sus tramos dentro de eso o recargar la 3 antes de `voz`.
+  4. A los 7 días, contar en los comentarios cuál de las tres prefiere la gente y decírselo al usuario.
 
 ## REGLA: mezcla de Applio = cadena «suave» (el usuario, 13-oct-2026)
 El Montaje del panel reproduce la voz cruda (~-20 LUFS) y el MASTER la pasaba por la cadena de Chatterbox/ElevenLabs

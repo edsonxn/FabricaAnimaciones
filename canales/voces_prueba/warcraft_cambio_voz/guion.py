@@ -7,9 +7,10 @@ salió Sarcastica.mp3 de Chatterbox), eleven_v4_turbo con corchetes de actuació
 [deadpan], [sighs], [mischievously], [short pause]…). SIN [whispers] ni [excited] («quitemos whisper o muy emocionado»;
 VOZ["sin_etiquetas"] los quita aunque se cuelen). Escritura normal: el inglés sale nativo; FONETICA solo para lo que se oiga
 mal. Johnny es de la biblioteca: funciona por id en cualquier cuenta (la 1 tiene el saldo).
-La voz VIEJA de Warcraft (Applio: Edge TTS Remy + RVC RemyOriginal) puede decir frases sueltas en un video de ElevenLabs:
-VOZ_POR_FRASE = {"<escena>_<i>": "applio"} → tts_gen las genera con VOZ_APPLIO (sin corchetes, con FONETICA_APPLIO); se usa
-en el segmento del cambio de voz (docs/voz.md § «Johnny»). Applio: frases de < ~200 caracteres y nunca de 1-3 palabras.
+Tres voces para el video del cambio de voz (docs/voz.md § «Johnny»): Johnny (narrador), la de siempre con Applio (Edge TTS
+Remy + RVC RemyOriginal: VOZ_POR_FRASE = "applio" → tts_gen la genera con VOZ_APPLIO, sin corchetes, con FONETICA_APPLIO;
+frases de < ~200 caracteres y nunca de 1-3 palabras) y Remy Eleven (el clon de esa voz en ElevenLabs, con corchetes:
+VOZ_POR_FRASE = VOZ_REMY_ELEVEN; solo cuentas 2 y 3, cuidar su saldo).
 Si un canal vuelve a Applio entero: VOZ = dict(motor="applio", **VOZ_APPLIO, idioma="es",
 referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav") y FONETICA = FONETICA_APPLIO.
 Estilo de canal «gema»: listas «Las N … de peor a mejor», chistes secos, una cita ficticia dramática por sección.
@@ -20,17 +21,20 @@ CRONICAS10…»): del creativo solo se usa la imagen, nunca su audio (docs/estil
 La pantalla final del canal (canales/<alias>.json «pantalla_final») la anexa `final` sola.
 """
 
-TITULO = "Borrador: segmento del cambio de voz (Warcraft, 2-nov-2026)"
+TITULO = "Borrador: segmento del cambio de voz a TRES voces (Warcraft, 2-nov-2026)"
 # ARCHIVO = "nombre_base_de_salida"
 MOTOR = "secuencia"
 ESTILO_VISUAL = "secuencia_yt"
 DURACION = None
 BPM = 96
+VOZ_REMY_ELEVEN = "sm2N86ydG2QhV8LIVa9b"   # clon en ElevenLabs de la voz Applio (cuentas 2 y 3; id de cada una en por_cuenta)
 VOZ = dict(motor="elevenlabs", voice_id="HMCmDsbKeaSZp5LMOYKR", modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5,
-           sin_etiquetas=("whisper", "excit"), referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
+           sin_etiquetas=("whisper", "excit"), por_cuenta={2: "Syrb04Gbt8V9UQZNUAmw", 3: VOZ_REMY_ELEVEN},
+           referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
 # ElevenLabs dice el inglés nativo: aquí solo lo que se oiga mal (oírlo antes de añadir)
 FONETICA = {"CRONICAS10": "Crónicas diez"}
-# La voz de siempre de Warcraft, para VOZ_POR_FRASE = {"cambio_voz_1": "applio", ...} (solo en el video del cambio de voz)
+# Video del cambio de voz (2-nov-2026): VOZ_POR_FRASE = {"cambio_voz_1": "applio", "cambio_voz_4": VOZ_REMY_ELEVEN, ...};
+# las secciones narradas por Remy Eleven también van ahí, frase a frase (dict comprehension por escena)
 VOZ_APPLIO = dict(tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal", pitch=0, rate=0)
 # Grafía que lee Applio (grafías del canal: C:\googleimagenes\FONETICA_CHECKLIST.md)
 FONETICA_APPLIO = {
@@ -60,17 +64,23 @@ LYRIA = dict(
         # "intro": ("adventurous and curious, light percussion", 4),
     })
 
-VOZ_POR_FRASE = {f"cambio_voz_{i}": "applio" for i in (1, 3, 5)}   # la voz de siempre (Applio); las demás, Johnny
+# J = Johnny (narrador, ElevenLabs) · A = la de siempre (Applio real) · R = Remy Eleven (clon de Applio en ElevenLabs)
+VOZ_POR_FRASE = {**{f"cambio_voz_{i}": "applio" for i in (1, 3, 5, 8)}, **{f"cambio_voz_{i}": VOZ_REMY_ELEVEN for i in (4, 7)}}
 
 ESCENAS = [
     {"id": "cambio_voz", "pre": 0.3, "frases": [
-        "[amused] Antes de empezar, sí, oíste bien: esta no es la voz de siempre.",
-        "No, no lo es. Llevo años narrando este canal, y ahora resulta que me mandan a la banca.",
-        "[sarcastic] Nadie te manda a la banca. [short pause] Solo te damos unas vacaciones… indefinidas.",
-        "Unas vacaciones. Claro. Como las de Illidan: diez mil años encerrado.",
-        "[serious] La idea es que la narración suene más natural y con más actuación. [short pause] Pero este canal es de "
-        "ustedes, así que ustedes deciden.",
-        "Escriban en los comentarios cuál voz prefieren, la de siempre o la nueva. Y piénsenlo bien, que yo leo todos.",
-        "[amused] Todos se leen, eso es verdad. [short pause] Y ahora sí, empezamos.",
+        "[amused] Antes de empezar, sí, oíste bien: esta no es la voz de siempre.",                                    # J
+        "No, no lo es. Llevo años narrando este canal, y ahora resulta que me mandan a la banca.",                       # A
+        "[sarcastic] Nadie te manda a la banca. [short pause] Solo te damos unas vacaciones… indefinidas.",              # J
+        "Unas vacaciones. Claro. Como las de Illidan: diez mil años encerrado.",                                         # A
+        "[amused] Tranquilos los dos. [short pause] Yo soy la voz de siempre, pero con un poco más de actuación. "
+        "[sarcastic] La versión mejorada, digamos.",                                                                     # R
+        "Eso de la versión mejorada lo dicen todos los parches, y luego hay que esperar el siguiente para arreglarlo.",  # A
+        "[serious] La idea es que la narración suene más natural y con más actuación. [short pause] Así que hoy el "
+        "video lo narramos él y yo, por turnos.",                                                                        # J
+        "[mischievously] Escuchen bien cada cambio, [short pause] y escriban en los comentarios cuál de las tres "
+        "voces prefieren.",                                                                                              # R
+        "Y piénsenlo bien, que yo leo todos los comentarios.",                                                           # A
+        "[amused] Todos se leen, eso es verdad. [short pause] Y ahora sí, empezamos.",                                   # J
     ]},
 ]

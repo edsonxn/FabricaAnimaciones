@@ -7,9 +7,10 @@ salió Sarcastica.mp3 de Chatterbox), eleven_v4_turbo con corchetes de actuació
 [deadpan], [sighs], [mischievously], [short pause]…). SIN [whispers] ni [excited] («quitemos whisper o muy emocionado»;
 VOZ["sin_etiquetas"] los quita aunque se cuelen). Escritura normal: el inglés sale nativo; FONETICA solo para lo que se oiga
 mal. Johnny es de la biblioteca: funciona por id en cualquier cuenta (la 1 tiene el saldo).
-La voz VIEJA de Warcraft (Applio: Edge TTS Remy + RVC RemyOriginal) puede decir frases sueltas en un video de ElevenLabs:
-VOZ_POR_FRASE = {"<escena>_<i>": "applio"} → tts_gen las genera con VOZ_APPLIO (sin corchetes, con FONETICA_APPLIO); se usa
-en el segmento del cambio de voz (docs/voz.md § «Johnny»). Applio: frases de < ~200 caracteres y nunca de 1-3 palabras.
+Tres voces para el video del cambio de voz (docs/voz.md § «Johnny»): Johnny (narrador), la de siempre con Applio (Edge TTS
+Remy + RVC RemyOriginal: VOZ_POR_FRASE = "applio" → tts_gen la genera con VOZ_APPLIO, sin corchetes, con FONETICA_APPLIO;
+frases de < ~200 caracteres y nunca de 1-3 palabras) y Remy Eleven (el clon de esa voz en ElevenLabs, con corchetes:
+VOZ_POR_FRASE = VOZ_REMY_ELEVEN; solo cuentas 2 y 3, cuidar su saldo).
 Si un canal vuelve a Applio entero: VOZ = dict(motor="applio", **VOZ_APPLIO, idioma="es",
 referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav") y FONETICA = FONETICA_APPLIO.
 Estilo de canal «gema»: listas «Las N … de peor a mejor», chistes secos, una cita ficticia dramática por sección.
@@ -26,11 +27,14 @@ MOTOR = "secuencia"
 ESTILO_VISUAL = "secuencia_yt"
 DURACION = None
 BPM = 96
+VOZ_REMY_ELEVEN = "sm2N86ydG2QhV8LIVa9b"   # clon en ElevenLabs de la voz Applio (cuentas 2 y 3; id de cada una en por_cuenta)
 VOZ = dict(motor="elevenlabs", voice_id="HMCmDsbKeaSZp5LMOYKR", modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5,
-           sin_etiquetas=("whisper", "excit"), referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
+           sin_etiquetas=("whisper", "excit"), por_cuenta={2: "Syrb04Gbt8V9UQZNUAmw", 3: VOZ_REMY_ELEVEN},
+           referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
 # ElevenLabs dice el inglés nativo: aquí solo lo que se oiga mal (oírlo antes de añadir)
 FONETICA = {"CRONICAS10": "Crónicas diez"}
-# La voz de siempre de Warcraft, para VOZ_POR_FRASE = {"cambio_voz_1": "applio", ...} (solo en el video del cambio de voz)
+# Video del cambio de voz (2-nov-2026): VOZ_POR_FRASE = {"cambio_voz_1": "applio", "cambio_voz_4": VOZ_REMY_ELEVEN, ...};
+# las secciones narradas por Remy Eleven también van ahí, frase a frase (dict comprehension por escena)
 VOZ_APPLIO = dict(tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal", pitch=0, rate=0)
 # Grafía que lee Applio (grafías del canal: C:\googleimagenes\FONETICA_CHECKLIST.md)
 FONETICA_APPLIO = {

@@ -96,8 +96,8 @@
   hueco jue 5-nov 09:00 CDMX. **A vigilar a los 7 días (12-nov):** vistas vs mediana y % visto vs «12 objetos raros de Vanilla».
 
 ## Cambio de voz (el usuario, 2-nov-2026)
-- **El próximo video de Warcraft ABRE con la mini discusión del cambio de voz** (voz de siempre = Applio real, `VOZ_POR_FRASE` = "applio",
-  vs Johnny de ElevenLabs), explica el cambio y pide comentar cuál prefieren; luego todo con Johnny. Texto y tomas APROBADOS por el usuario el 2-nov («Así queda»):
-  `canales/voces_prueba/warcraft_cambio_voz/` (docs/voz.md § «Warcraft y Tamriel = JOHNNY»).
-- A los 7 días: `yt comentarios cronicas_warcraft` → contar votos por voz; si la gente prefiere la de siempre, decírselo al
-  usuario (la voz no se cambia sola).
+- **El próximo video de Warcraft es el del cambio de voz, con TRES voces:** abre con la mini discusión (Johnny de ElevenLabs,
+  la de siempre con Applio real y Remy Eleven = clon de Applio en ElevenLabs), pide comentar cuál de las tres prefieren, y
+  durante el video la narración cambia AL MENOS 2 veces entre Remy Eleven y Johnny (por secciones, con ficha de quién narra).
+  Borrador: `canales/voces_prueba/warcraft_cambio_voz/`; receta y saldo: docs/voz.md § «Warcraft y Tamriel = JOHNNY».
+- A los 7 días: `yt comentarios cronicas_warcraft` → contar votos por voz y decírselo al usuario (la voz no se cambia sola).

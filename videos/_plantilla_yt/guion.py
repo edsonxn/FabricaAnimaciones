@@ -2,12 +2,14 @@
 """GUION de un video del motor SECUENCIA YT (gameplay de YouTube por beat).
 Se crea con:  python fab.py nuevo <nombre> --yt      Flujo y reglas: docs/estilo_secuencia_yt.md
 
-Voz desde el 2-nov-2026: el CLON en ElevenLabs de la voz Applio del canal (Remy + RVC RemyOriginal), eleven_v4_turbo con
-corchetes de actuación ([amused], [sarcastic], [laughs softly], [deadpan], [sighs], [short pause]…). SIN [whispers] ni
-[excited] (el usuario: «quitemos whisper o muy emocionado»; VOZ["sin_etiquetas"] los quita aunque se cuelen). Escritura
-normal: «World of Warcraft», «Blizzard» y «Forever» salen bien sin FONETICA; solo va ahí lo que se oiga mal.
-El clon vive en las cuentas 2 y 3 de ElevenLabs con otro id en cada una (VOZ["por_cuenta"]); la 1 no puede clonar.
-Si el canal vuelve a Applio: VOZ = dict(motor="applio", tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal",
+Voz desde el 2-nov-2026 (el usuario, para Warcraft Y Tamriel): JOHNNY de ElevenLabs (HMCmDsbKeaSZp5LMOYKR, la voz de la que
+salió Sarcastica.mp3 de Chatterbox), eleven_v4_turbo con corchetes de actuación ([amused], [sarcastic], [laughs softly],
+[deadpan], [sighs], [mischievously], [short pause]…). SIN [whispers] ni [excited] («quitemos whisper o muy emocionado»;
+VOZ["sin_etiquetas"] los quita aunque se cuelen). Escritura normal: el inglés sale nativo; FONETICA solo para lo que se oiga
+mal. Johnny es de la biblioteca: funciona por id en cualquier cuenta (la 1 tiene el saldo).
+La voz VIEJA de Warcraft (Applio Remy) existe como clon de ElevenLabs en las cuentas 2 y 3 (VOZ["por_cuenta"]): se usa en
+VOZ_POR_FRASE = {"<escena>_<i>": VOZ_VIEJA} para el segmento del cambio de voz (docs/voz.md § «Johnny»).
+Si un canal vuelve a Applio: VOZ = dict(motor="applio", tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal",
 pitch=0, rate=0, idioma="es", referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav") + FONETICA de todo nombre inglés.
 Estilo de canal «gema»: listas «Las N … de peor a mejor», chistes secos, una cita ficticia dramática por sección.
 ESCENAS = secciones del guion (en una lista: una por puesto). Aquí NO se describen imágenes: los cortes salen de
@@ -23,9 +25,11 @@ MOTOR = "secuencia"
 ESTILO_VISUAL = "secuencia_yt"
 DURACION = None
 BPM = 96
-VOZ = dict(motor="elevenlabs", voice_id="sm2N86ydG2QhV8LIVa9b", por_cuenta={2: "Syrb04Gbt8V9UQZNUAmw", 3: "sm2N86ydG2QhV8LIVa9b"},
-           modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5, sin_etiquetas=("whisper", "excit"),
-           referencia=r"C:\chatterbox_voices\CronicasWarcraft_eleven.mp3")
+VOZ_VIEJA = "sm2N86ydG2QhV8LIVa9b"   # clon de la voz Applio de Warcraft (solo cuentas 2 y 3; id de cada una en por_cuenta)
+VOZ = dict(motor="elevenlabs", voice_id="HMCmDsbKeaSZp5LMOYKR", modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5,
+           sin_etiquetas=("whisper", "excit"), por_cuenta={2: "Syrb04Gbt8V9UQZNUAmw", 3: VOZ_VIEJA},
+           referencia=r"C:\chatterbox_voices\Sarcastica.mp3")
+# VOZ_POR_FRASE = {"cambio_voz_0": VOZ_VIEJA, ...}   # solo en el video que presenta el cambio de voz
 # ElevenLabs dice el inglés nativo: aquí solo lo que se oiga mal (oírlo antes de añadir)
 FONETICA = {"CRONICAS10": "Crónicas diez"}
 

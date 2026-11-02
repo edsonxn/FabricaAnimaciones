@@ -13,8 +13,9 @@ Registro de créditos gastados: voz/eleven_log.json.
 Voz con actuación (docs/voz.md § «Corchetes»): modelo="eleven_v4_turbo" (POR DEFECTO desde el 26-oct-2026: mitad de créditos que
 eleven_v4; ver modelo()) y etiquetas en inglés dentro de las frases del guion,
 p. ej. "[sighs] Nadie lo sabía. [short pause] Ni yo."; config.py las quita para todo lo demás (Whisper, timeline, .srt).
-Voz CLONADA en varias cuentas (2-nov-2026, Crónicas de Warcraft): cada cuenta le da otro voice_id al mismo clon →
-VOZ["por_cuenta"] = {2: "<id en la 2>", 3: "<id en la 3>"}; post() pone el id de la cuenta en uso y salta las que no lo tienen.
+Voz CLONADA en varias cuentas (2-nov-2026, la voz vieja de Crónicas de Warcraft): cada cuenta le da otro voice_id al mismo
+clon → VOZ["por_cuenta"] = {2: "<id en la 2>", 3: "<id en la 3>"}; post() pone el id de la cuenta en uso y salta las que no
+lo tienen. Sirve como narrador o en VOZ_POR_FRASE (lleva su propio puntero de cuenta: no saca al narrador de la cuenta 1).
 Etiquetas que NO van con una voz: VOZ["sin_etiquetas"] = ("whisper", "excit") → se quita toda [..] que contenga ese texto.
 """
 import io
@@ -37,6 +38,7 @@ TOKENS = os.path.join(RAIZ, "canales", "tokens")
 CLAVE = os.path.join(TOKENS, "elevenlabs_api_key.txt")   # cuenta 1; respaldo: elevenlabs_api_key_2.txt, _3.txt…
 URL = "https://api.elevenlabs.io/v1"
 _activa = 0   # índice en cuentas() de la cuenta en uso; post() pasa a la siguiente cuando esta se queda sin saldo
+_activa_clon = 0   # lo mismo para las frases con una voz de VOZ["por_cuenta"]
 
 
 def cuentas():
@@ -71,32 +73,37 @@ def saldos():
 def post(ruta, **kw):
     """POST a ElevenLabs con la cuenta activa: reintenta 429/5xx y, si la cuenta se queda sin saldo o la rechaza (401/402),
     sigue con la siguiente cuenta de respaldo. Devuelve la última respuesta (200 o el error que ya no tiene salida)."""
-    global _activa
+    global _activa, _activa_clon
     cs = cuentas()
     clones = (config.VOZ.get("por_cuenta") or {}) if config else {}
+    # el mismo clon tiene otro voice_id en cada cuenta: sus frases llevan su PROPIO puntero de cuenta, para que una frase con
+    # la voz vieja (VOZ_POR_FRASE, en las cuentas 2-3) no arrastre al narrador fuera de la cuenta 1
+    vid = next((v for v in clones.values() if v in ruta), None)
+    i = _activa_clon if vid else _activa
     while True:
-        n, k = cs[_activa]
-        if clones:   # el mismo clon tiene otro voice_id en cada cuenta; la cuenta que no lo tiene se salta
-            vid = next((v for v in clones.values() if v in ruta), None)
-            if vid and n not in clones:
-                if _activa + 1 < len(cs):
-                    _activa += 1
-                    continue
-                raise SystemExit(f"ElevenLabs: ninguna cuenta restante tiene el clon (VOZ['por_cuenta'] = {clones})")
-            if vid:
-                ruta = ruta.replace(vid, clones[n])
+        n, k = cs[i]
+        if vid and n not in clones:   # esta cuenta no tiene el clon: se salta sin pedir nada
+            if i + 1 < len(cs):
+                i += 1
+                continue
+            raise SystemExit(f"ElevenLabs: ninguna cuenta restante tiene el clon (VOZ['por_cuenta'] = {clones})")
+        url = ruta.replace(vid, clones[n]) if vid else ruta
         for intento in range(4):
-            r = requests.post(f"{URL}/{ruta}", headers={"xi-api-key": k}, **kw)
+            r = requests.post(f"{URL}/{url}", headers={"xi-api-key": k}, **kw)
             if r.status_code not in (429, 500, 502, 503):
                 break
             time.sleep(4 * (intento + 1))
         # 404 voice_not_found: una voz CLONADA solo vive en la cuenta donde se creó (la narradora de Gaia Eterna, en la 2)
         sin_voz = r.status_code in (400, 404) and "voice_not_found" in r.text
-        if (r.status_code in (401, 402) or sin_voz) and _activa + 1 < len(cs):
-            _activa += 1
+        if (r.status_code in (401, 402) or sin_voz) and i + 1 < len(cs):
+            i += 1
             print(f"ElevenLabs: la cuenta {n} ya no puede ({r.status_code}: {r.text[:150]}); sigo con la cuenta "
-                  f"{cs[_activa][0]}", flush=True)
+                  f"{cs[i][0]}", flush=True)
             continue
+        if vid:
+            _activa_clon = i
+        else:
+            _activa = i
         return r
 
 
@@ -189,7 +196,7 @@ def generar(frases, seeds, solo, out):
     tasa = TASA.get(mod, 0.40)   # créditos por carácter de ese modelo (medidos con character-cost)
     sal = saldos()
     clones = config.VOZ.get("por_cuenta") or {}
-    if clones:   # voz clonada: solo cuentan las cuentas que tienen el clon
+    if config.VOZ["voice_id"] in clones.values():   # el NARRADOR es el clon: solo cuentan las cuentas que lo tienen
         sal = [(n, s if n in clones else 0) for n, s in sal]
     disp = sum(s for _, s in sal if s)
     _activa = next((i for i, (_, s) in enumerate(sal) if s), 0)   # empieza por la primera cuenta con saldo
@@ -211,7 +218,8 @@ def generar(frases, seeds, solo, out):
             y, sr = librosa.load(io.BytesIO(mp3), sr=None, mono=True)
             sf.write(path, y, sr)
             gasto += costo
-            log.append(dict(key=key, seed=seed, chars=len(texto), costo=costo, cuenta=cuentas()[_activa][0], modelo=mod,
+            cta = cuentas()[_activa_clon if voz_de(key) in clones.values() else _activa][0]
+            log.append(dict(key=key, seed=seed, chars=len(texto), costo=costo, cuenta=cta, modelo=mod,
                             t=time.strftime("%Y-%m-%d %H:%M")))
             print(path, round(len(y) / sr, 2), f"costo {costo}", flush=True)
     finally:   # el registro se guarda aunque todas las cuentas se queden sin saldo a media ronda

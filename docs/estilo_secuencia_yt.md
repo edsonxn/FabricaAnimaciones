@@ -38,7 +38,7 @@ que marca se mira a mano.
 
 ## Flujo
 ```
-python fab.py nuevo <v> --yt          plantilla videos/_plantilla_yt (VOZ = clon ElevenLabs de Remy, 2-nov-2026; SECUENCIA fuente="yt", LYRIA épica)
+python fab.py nuevo <v> --yt          plantilla videos/_plantilla_yt (VOZ = Johnny de ElevenLabs, 2-nov-2026; SECUENCIA fuente="yt", LYRIA épica)
 python fab.py <v> voz | seleccionar | tiempo
 python fab.py <v> beats               cortes en pausas reales, ~8,6 s (clip_s)
 python fab.py <v> busquedas           crea busquedas.json vacío y lista los beats; Claude escribe una búsqueda por beat; repetir valida
@@ -87,8 +87,9 @@ Velocidad medida: 4 clips en 37 s con `-j 4` (≈ 100 clips de un video de 15 mi
 - Sin audio: se baja solo la imagen (`ambiente=0`).
 
 ## Voz Applio: fonética (el usuario, 13-oct-2026)
-**Desde el 2-nov-2026 los videos NUEVOS de Warcraft usan el clon de esta voz en ElevenLabs** con corchetes (sin `[whispers]`
-ni `[excited]`) y escritura normal: `docs/voz.md` § «Crónicas de Warcraft = su voz CLONADA». Lo de abajo vale para Applio.
+**Desde el 2-nov-2026 los videos NUEVOS de Warcraft y Tamriel usan JOHNNY de ElevenLabs** con corchetes (sin `[whispers]`
+ni `[excited]`) y escritura normal; el primero de Warcraft abre con la mini discusión del cambio de voz: `docs/voz.md`
+§ «Warcraft y Tamriel = JOHNNY». Lo de abajo vale para Applio.
 La voz base (`fr-FR-RemyMultilingualNeural`) es multilingüe: una palabra en inglés le hace cambiar de idioma/acento
 («Overgear» como se escribe, frases en otro idioma). Regla: **todo nombre en inglés sin traducción oficial va en
 `FONETICA`** de guion.py (`"Overgear": "Óverguir"`, `"Forever": "Foréver"`, `"Blizzard": "Blízard"`, `"self-play": "sélf pléi"`,
@@ -200,6 +201,8 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
 - `bajar` se cayó una vez con `WinError 32` (clip abierto por el Montaje del panel): repetir `bajar` completa lo que falte.
 
 ## Crónicas de Tamriel con este motor (primer video `tes_misiones_daedricas`, 13/14-oct-2026)
+- **Desde el 2-nov-2026 la voz es JOHNNY de ElevenLabs, el original de `Sarcastica.mp3`** (la VOZ de la plantilla; `docs/voz.md`
+  § «Warcraft y Tamriel = JOHNNY»). Hasta entonces:
 - **Misma fórmula que Warcraft, voz Chatterbox `Sarcastica.mp3`** (`VOZ = dict(referencia=".../Sarcastica.mp3", idioma="es",
   exaggeration=.6, cfg_weight=.35, temperature=.75)`), `FONETICA` para los nombres (Boethiah → Boétia, Hircine → Írsin,
   Skyrim → Eskáirim…), `sufijo="Skyrim"`, sin patrocinio. Guion con la «gema» (memoria de googleimagenes).

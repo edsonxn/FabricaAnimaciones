@@ -94,3 +94,10 @@
   arriesgado por el lore flojo del canal. Recomendada: (1).
 - **Decisión (el usuario, 1-nov):** (1) `wow_objetos_secretos_forever`, **~18 min**, Overgear campaña 2 con fondo de marca, OST de WoW,
   hueco jue 5-nov 09:00 CDMX. **A vigilar a los 7 días (12-nov):** vistas vs mediana y % visto vs «12 objetos raros de Vanilla».
+
+## Cambio de voz (el usuario, 2-nov-2026)
+- **El próximo video de Warcraft ABRE con la mini discusión del cambio de voz** (voz de siempre = clon de Applio vs Johnny de
+  ElevenLabs), explica el cambio y pide comentar cuál prefieren; luego todo con Johnny. Borrador:
+  `canales/voces_prueba/warcraft_cambio_voz/` (docs/voz.md § «Warcraft y Tamriel = JOHNNY»).
+- A los 7 días: `yt comentarios cronicas_warcraft` → contar votos por voz; si la gente prefiere la de siempre, decírselo al
+  usuario (la voz no se cambia sola).

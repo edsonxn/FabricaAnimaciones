@@ -97,7 +97,7 @@
 
 ## Cambio de voz (el usuario, 2-nov-2026)
 - **El próximo video de Warcraft ABRE con la mini discusión del cambio de voz** (voz de siempre = Applio real, `VOZ_POR_FRASE` = "applio",
-  vs Johnny de ElevenLabs), explica el cambio y pide comentar cuál prefieren; luego todo con Johnny. Borrador:
+  vs Johnny de ElevenLabs), explica el cambio y pide comentar cuál prefieren; luego todo con Johnny. Texto y tomas APROBADOS por el usuario el 2-nov («Así queda»):
   `canales/voces_prueba/warcraft_cambio_voz/` (docs/voz.md § «Warcraft y Tamriel = JOHNNY»).
 - A los 7 días: `yt comentarios cronicas_warcraft` → contar votos por voz; si la gente prefiere la de siempre, decírselo al
   usuario (la voz no se cambia sola).

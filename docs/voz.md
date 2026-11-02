@@ -75,7 +75,7 @@ usuario prefiere el original de ElevenLabs para los dos canales. Elegida entre 8
   `Syrb04Gbt8V9UQZNUAmw`; la 1 es «payg», `paid_plan_required`), con `VOZ["por_cuenta"]` en `tts_eleven`. NO se usa para la
   voz vieja; queda solo por si el usuario lo pide.
 - **Primer video de Warcraft con Johnny: ABRE con el cambio de voz** (el usuario): mini discusión entre la voz de siempre
-  (Applio) y la nueva, explicando el cambio y pidiendo que comenten cuál prefieren; después todo sigue con Johnny. Borrador:
+  (Applio) y la nueva, explicando el cambio y pidiendo que comenten cuál prefieren; después todo sigue con Johnny. **Texto APROBADO por el usuario el 2-nov («Así queda»): usarlo tal cual.** Borrador:
   `canales/voces_prueba/warcraft_cambio_voz/` (`guion.py` con las 7 frases y `VOZ_POR_FRASE`; tomas en `voz/cands/`, se copian
   a `voz/cands/` del video si el texto no cambia; `borrador_cambio_voz.mp3`). En pantalla: las dos voces con cara o ficha
   propia (lo que dice la voz se ve). A los 7 días, leer qué voz prefiere la gente en los comentarios.

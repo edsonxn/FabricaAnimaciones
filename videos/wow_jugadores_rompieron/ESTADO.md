@@ -56,3 +56,7 @@ python fab.py wow_jugadores_rompieron medios          hojas previews/medios_NN.j
 
 ## Cerrado (1-nov)
 - ✅ 1-nov: SUBIDO https://youtu.be/k-L3qDNiI9s (mié 4-nov 09:00 CDMX), con fondo de marca; 8okTILCdn-o en privado sin fecha (no borrar). Antes: Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.
+
+## Cerrado (2-nov)
+- ✅ 2-nov: correo de Alice → logo de esquina BLANCO `white-og-small-logo.mp4` (en `medios/_overgear/forever/`, efectos.py cambiado) y enlace `overgear.s.gy/CRONICAS/3` en youtube.json (HECHO). Nueva fecha: jue 5-nov 09:00 CDMX (antes 4-nov; cambio del usuario 2-nov). Render en cola (fx → video → final, log en el scratchpad de la sesión). Sigue: hoja del tramo og → `yt subir wow_jugadores_rompieron cronicas_warcraft private --publicar <fecha> --forzar` → la versión vieja a privado sin fecha → registrar id.
+- ✅ 2-nov: RESUBIDO https://youtu.be/a-ED73Lgy5A (jue 5-nov 09:00 CDMX); k-L3qDNiI9s en privado sin fecha (no borrar). Pendiente en Studio: monetización + video relacionado de Shorts.

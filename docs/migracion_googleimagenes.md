@@ -105,6 +105,11 @@ sistema viejo: pitch 0, index_rate 0.75, protect 0.5, f0 `rmvpe`. Voces RVC en `
   partículas; copia en `videos/wow_primera_semana/medios/_overgear/background/`; en bucle, cuadro entero, PRIMERO en la lista
   de FX para quedar debajo), nunca un clip de gameplay. Enlace de la descripción por integración: **`https://overgear.s.gy/CRONICAS/1`**
   para la del 1-nov (las demás fechas: pedirle el suyo si no llega). Tras este cambio no hace falta reenviar para aprobación.
+- **2-nov, segunda corrección de Alice: logo de esquina BLANCO.** `logo-light-bg-small_wow-forever.mp4` ya no está en Drive;
+  en su lugar va `white-og-small-logo.mp4` (subcarpeta «WoW - Forever (nov)/Logo», mismo formato: 1920x1080, 25 fps, 12 s,
+  croma verde, misma posición; copia en `D:\Cronicas de Warcraft\Overgear\Forever\`). Aplicado a los 4 videos de noviembre
+  (re-render del tramo og y resubida). Enlaces por integración: 1-nov `/CRONICAS/1`, 4-nov `/2`, 5-nov `/3`, 7-nov `/4`,
+  9-nov `/5` (el enlace va con la FECHA, no con el video: si se intercambian fechas, se intercambian enlaces).
 - **NUNCA decir «no compres oro» ni hablar mal de la compra de oro/boosts en un video con Overgear (el usuario, 28-oct-2026):** Overgear vende oro y servicios; en `wow_primera_semana` se cambió por datos de la montura. Tono neutro o positivo con el sector.
 - **«Incluye promoción pagada» obligatorio (31-oct-2026):** los 4 videos de noviembre estaban sin marcar; `yt subir`/`yt aplicar` lo marcan solos si la descripción dice PATROCINADO (`promocion_pagada()` en `nucleo/youtube.py`; `"promocion_pagada": false` en youtube.json lo desactiva).
 - Trato y pagos: Alice Garner (Ansvery, ag@ansvery.agency) en cronicas.warcraft@gmail.com; 75 US$/integración + 20 US$ por

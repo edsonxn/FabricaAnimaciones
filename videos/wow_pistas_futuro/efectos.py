@@ -26,7 +26,7 @@ FX = [
     # DEBAJO de reseñas, packshot y código (va antes en la lista para quedar debajo)
     dict(tipo="video", ruta=OG + "background\Background.mp4", bucle=True, de="Como en Forever el equipo no caduca", a=("Número cinco", 0),
          entra=.3, nombre="og fondo marca"),
-    dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True, de="preparado está Overgear",
+    dict(tipo="video", ruta=OGF + "white-og-small-logo.mp4", croma=True, bucle=True, de="preparado está Overgear",
          a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="te explica por voz", dur=3.0, sale=.25,
          nombre="og pros"),

@@ -27,7 +27,7 @@ FX = [
     # DEBAJO de reseñas, packshot y código (va antes en la lista para quedar debajo)
     dict(tipo="video", ruta=OG + "background\Background.mp4", bucle=True, de="tú eliges", a="scene-029",
          entra=.3, nombre="og fondo marca"),
-    dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True, de="Para eso está Overgear",
+    dict(tipo="video", ruta=OGF + "white-og-small-logo.mp4", croma=True, bucle=True, de="Para eso está Overgear",
          a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25,
          nombre="og pros"),

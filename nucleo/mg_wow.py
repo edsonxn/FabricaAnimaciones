@@ -609,6 +609,13 @@ def _foto(fuente_img, alto=280, giro=0.0):
         lienzo = Image.new("RGBA", (alto, alto), (8, 10, 26, 255))
         lienzo.alpha_composite(im, (12, 12))
         im = lienzo
+    elif str(fuente_img).startswith("ficha:"):   # ficha de objeto (apoyos wowhead/tarjeta) ENTERA, sin recortar: para objetos
+        im = Image.open(fuente_img[6:]).convert("RGBA")   # cuyo ícono no se entiende solo (Página quemada, 2-nov-2026)
+        e = min(440 / im.width, alto / im.height)
+        im = im.resize((max(2, int(im.width * e)), max(2, int(im.height * e))), Image.LANCZOS)
+        fondo = Image.new("RGBA", (im.width + 20, im.height + 20), (8, 10, 26, 255))
+        fondo.alpha_composite(im, (10, 10))
+        im = fondo
     else:
         im = Image.open(fuente_img).convert("RGBA")
         w0 = int(alto * .8)

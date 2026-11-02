@@ -75,3 +75,7 @@ python fab.py wow_clases_ocultas fx | fx montaje   audio de efectos | tramos par
 
 ## Cerrado (1-nov)
 - ✅ 1-nov: SUBIDO https://youtu.be/POmeaxw16n0 (sáb 7-nov 09:00 CDMX), con fondo de marca; 2hdnW7T5dl8 en privado sin fecha (no borrar). Antes: Fondo de marca de Overgear (SIEMPRE, el usuario 1-nov): FX «og fondo marca» añadido a efectos.py + Background.mp4 copiado. Sigue: `fx` → `video --rehacer <tramo og>` → `final` → hoja del tramo → `yt subir <v> cronicas_warcraft private --publicar <misma fecha> --forzar` → la versión vieja a privado sin fecha (`yt publicar … private`) → registrar id nuevo.
+
+## Cerrado (2-nov)
+- ✅ 2-nov: correo de Alice → logo de esquina BLANCO `white-og-small-logo.mp4` (en `medios/_overgear/forever/`, efectos.py cambiado) y enlace `overgear.s.gy/CRONICAS/4` en youtube.json (HECHO). Nueva fecha: sáb 7-nov 09:00 CDMX. Render en cola (fx → video → final, log en el scratchpad de la sesión). Sigue: hoja del tramo og → `yt subir wow_clases_ocultas cronicas_warcraft private --publicar <fecha> --forzar` → la versión vieja a privado sin fecha → registrar id.
+- ✅ 2-nov: RESUBIDO https://youtu.be/8hNPy07Bu4A (sáb 7-nov 09:00 CDMX); POmeaxw16n0 en privado sin fecha (no borrar). Pendiente en Studio: monetización + video relacionado de Shorts.

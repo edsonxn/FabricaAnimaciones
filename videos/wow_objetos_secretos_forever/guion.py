@@ -92,7 +92,7 @@ ESCENAS = [
         "También un mercado negro que vende loto negro, una llave que nadie sabe qué abre y un legendario con el nombre borrado.",
         "Como nos escribió un espectador, casi veinte años después siguen quedando cosas por descubrir en este juego.",
         "Hoy te traigo los quince objetos secretos de World of Warcraft Forever que nadie te explica, del quince al uno.",
-        "Todo esto salió en la beta, así que algún número puede cambiar ahora que el juego ya abrió, pero el secreto sigue ahí.",
+        "Todo esto salió en la beta, así que algún número puede cambiar ahora que el juego sale hoy, pero el secreto sigue ahí.",
     ]},
     {"id": "c15", "frases": [
         "Número quince. La Delicia de descarrioaleta sabrosa, el pescado que no te quita el hambre: te cambia la cara.",
@@ -288,7 +288,7 @@ ESCENAS = [
     {"id": "cierre", "frases": [
         "Y esos son los quince objetos secretos de World of Warcraft Forever que nadie te explica.",
         "Un hacha que mina, una banana que entiende de bosques, un mercado negro, una llave sin puerta y un legendario sin nombre.",
-        "Ahora cuéntame en los comentarios: ¿qué secreto vas a ir a buscar primero, ahora que el juego ya abrió?",
+        "Ahora cuéntame en los comentarios: ¿qué secreto vas a ir a buscar primero, ahora que el juego sale hoy?",
         "Y si encuentras algo que no salió aquí, déjalo abajo: todos los comentarios se leen, y el tuyo puede ser el próximo video.",
         "Nos vemos en la próxima crónica, y nos vemos en Azeroth.",
     ]},

@@ -114,7 +114,7 @@ FX = [
     rel("Número quince", "delicia", "Delicia de descarrioaleta sabrosa", "receta nueva · Alianza"),
     donde("reinos_este_eses", [(.54, .69, "Montañas Crestagrana")], ("las Montañas Crestagrana", -.4), ("ochenta y cinco de Cocina|fin", .6),
           ["las Montañas Crestagrana"], "Montañas Crestagrana", x=.30),
-    cam("la hermana de la Delicia", "delicia", "La hermana de Los Baldíos", dur=4.4),
+    cam("la hermana de la Delicia", "delicia", "La hermana de Los Baldíos", dur=4.4, foco=(.5, .5, 1.0)),   # icono entero
     peg("te convertía en un múrloc", "murloc", "Múrloc", dur=3.4, x=.13, tam=360),
     peg("o en un ogro", "ogro", "Ogro", dur=3.0, x=.31, tam=360),
     gran("ahora te convierte en un orco", "grunido", "Orco ninja… o pirata", dur=4.0, x=.25, tam=540),
@@ -148,7 +148,7 @@ FX = [
     gran("Está pescando un cocodrilo", "sewer_beast", "Está pescando", dur=3.0, x=.74, tam=620),
     # =========================================================== Overgear campaña 2: kit «WoW - Forever (nov)» + fondo de marca SIEMPRE
     dict(tipo="video", ruta=OG + r"background\Background.mp4", bucle=True, de="tú eliges, y pagas", a="scene-037", entra=.3, nombre="og fondo marca"),
-    dict(tipo="video", ruta=OGF + "logo-light-bg-small_wow-forever.mp4", croma=True, bucle=True,
+    dict(tipo="video", ruta=OGF + "white-og-small-logo.mp4", croma=True, bucle=True,
          de="Este video lo patrocina Overgear", a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25, nombre="og pros"),
     dict(tipo="video", ruta=OGF + "cards-1-coaching_green-screen_wow-forever.mp4", croma=True, en="Talentos, rotación", dur=4.0, sale=.25, nombre="og coaching"),
@@ -216,7 +216,7 @@ FX = [
     donde("reinos_este_eses", [(.57, .08, "Stratholme")], ("él hizo Stratholme solo", -.4), ("para conseguirla|fin", .4), ["él hizo Stratholme"], "Stratholme", x=.30),
     # =========================================================== 4 Llave de piedra
     rel("Número cuatro", "llave", "Llave de piedra", "nadie sabe qué abre"),
-    mapa("reinos_este_eses", [(50.5, 35, "Muralla de Thoradin", "la Página quemada", F("pagina")), (47, 29.5, "Entrañas", "el libro entre escombros", F("fragmento")),
+    mapa("reinos_este_eses", [(50.5, 35, "Muralla de Thoradin", "la Página quemada", "ficha:" + os.path.join(_D, "apoyos", "wowhead_5e4a2c4875.png")), (47, 29.5, "Entrañas", "el libro entre escombros", F("fragmento")),
                               (49, 62, "Montaña Roca Negra", "el saco vigilado", F("grunido"))],
          ("Todo empieza en la Muralla", -.2), ("La página te manda|fin", 5.0), ["Todo empieza en la Muralla", "entrada trasera de Entrañas"], "LA PISTA DE LA LLAVE", "Reinos del Este", zmax=1.9),
     mapa("azeroth_eses", [(*ek(49, 62), "Montaña Roca Negra"), (*ek(56, 83), "El Portal Oscuro"), (*kal(49, 80), "Cresta de la Pluma de Fuego", "cráter de Un'Goro")],

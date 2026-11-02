@@ -81,6 +81,10 @@ def _rotulo(ancho, nombre, sub, tema, tam=86):
     im = Image.new("RGBA", (ancho, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(im)
     f, fs = T.fuente("Bold Condensed", tam), T.fuente("Condensed", 36)
+    cabe = ancho * .90                                     # nombre largo: se encoge, nunca se sale del lienzo («BALDÍ», 2-nov)
+    largo = T._ancho_track(d, nombre.upper(), f, 4)
+    if largo > cabe:
+        f = T.fuente("Bold Condensed", max(20, int(tam * cabe / largo)))
     T._texto(d, (ancho / 2, tam * .62), nombre.upper(), f, t["texto"], "mm", track=4)
     T.separador(d, ancho / 2, tam * 1.22, min(ancho * .42, 190), color=t["luz"])
     if sub:
@@ -162,13 +166,48 @@ def _anillo(C, r, tema, n=26, semilla=7):
     return im.resize((C, C), Image.LANCZOS)
 
 
+def recorte_fallido(im):
+    """True si rembg se comió el objeto: pasa con los ICONOS de objeto (ilustración cuadrada a sangre, sin fondo que quitar).
+    Con menos del 17 % de píxeles opacos en su caja el medallón sale vacío (wow_objetos_secretos_forever, 2-nov-2026)."""
+    a = np.array(im.getchannel("A"))
+    return (a > 200).mean() < .17
+
+
+def _icono(ruta, lado, tema):
+    """El icono ENTERO con esquinas redondeadas, bisel oscuro y filo de luz del tema (marco de icono de MMO)."""
+    t = TEMAS[tema]
+    im = Image.open(ruta).convert("RGB")
+    q = min(im.size)
+    im = im.crop(((im.width - q) // 2, (im.height - q) // 2, (im.width - q) // 2 + q, (im.height - q) // 2 + q))
+    m, b = int(lado * .07), max(4, int(lado * .035))
+    dentro = lado - 2 * b
+    foto = im.resize((dentro, dentro), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 60, 2)).convert("RGBA")
+    sombra = np.zeros((dentro, dentro, 4), np.uint8)       # viñeta interior: hunde el icono en el marco
+    yy, xx = np.mgrid[0:dentro, 0:dentro]
+    borde = np.minimum.reduce([xx, yy, dentro - 1 - xx, dentro - 1 - yy]) / (dentro * .14)
+    sombra[..., 3] = (np.clip(1 - borde, 0, 1) ** 1.6 * 150).astype(np.uint8)
+    foto.alpha_composite(Image.fromarray(sombra, "RGBA"))
+    mascara = Image.new("L", (dentro, dentro), 0)
+    ImageDraw.Draw(mascara).rounded_rectangle((0, 0, dentro - 1, dentro - 1), m, fill=255)
+    out = Image.new("RGBA", (lado, lado), (0, 0, 0, 0))
+    d = ImageDraw.Draw(out)
+    d.rounded_rectangle((0, 0, lado - 1, lado - 1), m + b, fill=(10, 8, 6, 255))
+    d.rounded_rectangle((1, 1, lado - 2, lado - 2), m + b, outline=t["luz"] + (255,), width=max(2, b // 2))
+    out.paste(foto, (b, b), mascara)
+    return out
+
+
 def reliquia(ruta, nombre=None, sub=None, tam=620, tema="tes"):
-    """Objeto sin fondo que flota sobre un círculo de runas que gira, con rayos y chispas."""
+    """Objeto sin fondo que flota sobre un círculo de runas que gira, con rayos y chispas.
+    Si el recorte falla (iconos de objeto), flota el icono entero en su marco: nunca un medallón vacío."""
     t = TEMAS[tema]
     obj = recorte(ruta)
-    lado = int(tam * .70)
-    k = lado / max(obj.size)
-    obj = obj.resize((max(2, int(obj.width * k)), max(2, int(obj.height * k))), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 60, 2))
+    if recorte_fallido(obj):
+        obj = _icono(ruta, int(tam * .60), tema)           # cabe entero dentro del anillo (diagonal < diámetro)
+    else:
+        lado = int(tam * .70)
+        k = lado / max(obj.size)
+        obj = obj.resize((max(2, int(obj.width * k)), max(2, int(obj.height * k))), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 60, 2))
     C = tam + 90
     anillo = _anillo(C, tam * .46, tema)
     glow = Image.new("RGBA", (C, C), (0, 0, 0, 0))
@@ -274,7 +313,10 @@ def camafeo(ruta, nombre=None, tam=300, foco=(.5, .2, 2.0), tema="tes"):
     """Medallón redondo con anillo de runas que gira despacio; entra girando. Para menciones rápidas."""
     t = TEMAS[tema]
     C = tam + 70
-    foto = _encuadre(Image.open(ruta).convert("RGB"), foco, 1, 1).resize((tam, tam), Image.LANCZOS)
+    im = Image.open(ruta).convert("RGB")
+    zmax = max(1.0, min(im.size) * 1.25 / tam)             # el zoom nunca amplía el recorte más de 1,25x (icono borroso, 2-nov)
+    foco = (foco[0], foco[1], min(foco[2], zmax))
+    foto = _encuadre(im, foco, 1, 1).resize((tam, tam), Image.LANCZOS)
     m = Image.new("L", (tam * 2, tam * 2), 0)
     ImageDraw.Draw(m).ellipse((0, 0, tam * 2 - 1, tam * 2 - 1), fill=255)
     cara = foto.convert("RGBA")

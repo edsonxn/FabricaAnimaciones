@@ -3,7 +3,7 @@
 - canal: cronicas_warcraft · jue 5-nov-2026 09:00 CDMX (hueco de la campaña Overgear; Forever sale el 4-nov)
 - estilo: secuencia_yt (gameplay de YouTube por beat + apoyos + MG + pegatinas + mapas con ruta + Overgear) → doc: docs/estilo_secuencia_yt.md
 - etapa: SUBIDO y PROGRAMADO jue 5-nov-2026 09:00 CDMX: https://youtu.be/_XPiWlcNjfE (17:38, promoción pagada marcada)
-- siguiente: enlace s.gy de Alice → `yt aplicar`; anuncios + cuestionario de idoneidad en Studio; medir a 7 días
+- siguiente: enlace s.gy de Alice → `yt aplicar`; anuncios + cuestionario de idoneidad en Studio los hace el usuario (2-nov); medir a 7 días
 
 ## Sesiones (plan de tramos · «continúa el video objetos secretos» retoma aquí · protocolo docs/sesiones.md)
 - alias: objetos secretos, objetos secretos de Forever, el del 5-nov
@@ -54,3 +54,8 @@
 ## Cierre (regla del 12-oct-2026)
 - [x] subido y PROGRAMADO jue 5-nov 09:00 CDMX, miniatura Flow y registrado (`canales/cronicas_warcraft.json`, BITACORA)
 - [x] HALLAZGOS documentados en manual/estilo
+
+## Cerrado (2-nov)
+- ✅ 2-nov: correo de Alice → logo de esquina BLANCO `white-og-small-logo.mp4` (en `medios/_overgear/forever/`, efectos.py cambiado) y enlace `overgear.s.gy/CRONICAS/2` en youtube.json (HECHO). Nueva fecha: mié 4-nov 09:00 CDMX (antes 5-nov; cambio del usuario 2-nov). Además 2 frases de voz cambiadas («ahora que el juego sale hoy», intro_6 y cierre_2) → voz/seleccionar/tiempo/reajustar hechos; mezcla + render COMPLETO. Render en cola (fx → video → final, log en el scratchpad de la sesión). Sigue: hoja del tramo og → `yt subir wow_objetos_secretos_forever cronicas_warcraft private --publicar <fecha> --forzar` → la versión vieja a privado sin fecha → registrar id.
+- ✅ 2-nov (revisión del usuario): las 14 `reliquia` salían VACÍAS (rembg se comía los íconos) y el camafeo de la Delicia borroso con el nombre cortado → arreglado en el kit (`peg_estilos`: ícono en marco, zoom ≤ 1,25x, rótulo que encoge); foto del mapa de la Muralla de Thoradin = ficha real de Wowhead de la Página quemada (`apoyos/wowhead_5e4a2c4875.png`). Render COMPLETO en cola tras los otros 3 (log `rehacer_objetos.log` en el scratchpad de la sesión).
+- ✅ 2-nov: RESUBIDO https://youtu.be/C9cxHxcagOI (mié 4-nov 09:00 CDMX); _XPiWlcNjfE en privado sin fecha (no borrar). Pendiente en Studio: monetización + video relacionado de Shorts.

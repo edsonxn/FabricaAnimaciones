@@ -2,9 +2,13 @@
 """GUION de un video del motor SECUENCIA YT (gameplay de YouTube por beat).
 Se crea con:  python fab.py nuevo <nombre> --yt      Flujo y reglas: docs/estilo_secuencia_yt.md
 
-Voz Applio (Edge TTS Remy -> RVC RemyOriginal): frases de < ~200 caracteres y NUNCA sueltas de 1-3 palabras («Oficialmente.»,
-«Guarda ese dato.» salen con acento portugués/italiano). Todo nombre en inglés va en FONETICA (la voz base es multilingüe y
-cambia de idioma con una palabra inglesa); el guion conserva la grafía real para el .srt, el Montaje y YouTube.
+Voz desde el 2-nov-2026: el CLON en ElevenLabs de la voz Applio del canal (Remy + RVC RemyOriginal), eleven_v4_turbo con
+corchetes de actuación ([amused], [sarcastic], [laughs softly], [deadpan], [sighs], [short pause]…). SIN [whispers] ni
+[excited] (el usuario: «quitemos whisper o muy emocionado»; VOZ["sin_etiquetas"] los quita aunque se cuelen). Escritura
+normal: «World of Warcraft», «Blizzard» y «Forever» salen bien sin FONETICA; solo va ahí lo que se oiga mal.
+El clon vive en las cuentas 2 y 3 de ElevenLabs con otro id en cada una (VOZ["por_cuenta"]); la 1 no puede clonar.
+Si el canal vuelve a Applio: VOZ = dict(motor="applio", tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal",
+pitch=0, rate=0, idioma="es", referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav") + FONETICA de todo nombre inglés.
 Estilo de canal «gema»: listas «Las N … de peor a mejor», chistes secos, una cita ficticia dramática por sección.
 ESCENAS = secciones del guion (en una lista: una por puesto). Aquí NO se describen imágenes: los cortes salen de
 `beats` (pausas reales de la voz, ~8,6 s) y la búsqueda de gameplay de cada beat va en busquedas.json.
@@ -19,15 +23,11 @@ MOTOR = "secuencia"
 ESTILO_VISUAL = "secuencia_yt"
 DURACION = None
 BPM = 96
-VOZ = dict(motor="applio", tts_voice="fr-FR-RemyMultilingualNeural", rvc="RemyOriginal", pitch=0, rate=0,
-           idioma="es", referencia=r"C:\chatterbox_voices\RemyOriginal_applio.wav")
-# Grafía que lee el TTS (grafías del canal: C:\googleimagenes\FONETICA_CHECKLIST.md; con traducción oficial, úsala en el guion)
-FONETICA = {
-    "World of Warcraft Forever": "uórld of uárcraft Foréver", "World of Warcraft": "uórld of uárcraft", "Forever": "Foréver",
-    "Blizzard": "Blízard", "Overgear": "Óverguir", "self-play": "sélf pléi", "Classic": "Clásic", "Azeroth": "Azeróth",
-    "Battle punto net": "Bátel punto net", "Hardcore": "Jardcor", "Vanilla": "Vanila", "retail": "ritéil",
-    "Burning Crusade": "Bérnin Kruséid", "Arthas": "Ársas", "Illidan": "Ilidán", "Hyjal": "Jáyal", "CRONICAS10": "Crónicas diez",
-}
+VOZ = dict(motor="elevenlabs", voice_id="sm2N86ydG2QhV8LIVa9b", por_cuenta={2: "Syrb04Gbt8V9UQZNUAmw", 3: "sm2N86ydG2QhV8LIVa9b"},
+           modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5, sin_etiquetas=("whisper", "excit"),
+           referencia=r"C:\chatterbox_voices\CronicasWarcraft_eleven.mp3")
+# ElevenLabs dice el inglés nativo: aquí solo lo que se oiga mal (oírlo antes de añadir)
+FONETICA = {"CRONICAS10": "Crónicas diez"}
 
 SECUENCIA = dict(
     fuente="yt",

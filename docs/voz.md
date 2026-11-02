@@ -53,6 +53,20 @@ apellido. [sighs] Para los vecinos…`. Primer video hecho así: `videos/videoll
   generados con ElevenLabs y anclados a las palabras (`fx_audio.py` del video → `audio/fx.wav`, que `mezcla` suma; ver CLAUDE.md
   «ARRANQUE RÁPIDO»).
 
+## REGLA: Crónicas de Warcraft = su voz CLONADA en ElevenLabs (el usuario, 2-nov-2026)
+El usuario oyó el A/B (`canales/voces_prueba/warcraft_eleven/comparacion_AB.mp3`): «suena bien», y la dejó como voz de los
+videos nuevos del canal, **sin `[whispers]` ni `[excited]`** («quitemos whisper o muy emocionado»). Sí van `[amused]`,
+`[sarcastic]`, `[laughs softly]`, `[deadpan]`, `[sighs]`, `[mischievously]`, `[short pause]`.
+- Clon instantáneo hecho con 152 s de `voz/final` de `wow_objetos_secretos_forever` (Applio Remy + RVC RemyOriginal).
+  Un clon vive solo en la cuenta donde se crea y cada cuenta le da OTRO id: cuenta 3 `sm2N86ydG2QhV8LIVa9b`, cuenta 2
+  `Syrb04Gbt8V9UQZNUAmw`; la cuenta 1 es «payg» y no puede clonar (`paid_plan_required`). `VOZ["por_cuenta"]` hace que
+  `tts_eleven.post()` use el id de cada cuenta y salte la 1; `VOZ["sin_etiquetas"]` quita las etiquetas vetadas.
+- Ya está en `videos/_plantilla_yt/guion.py` (`nuevo <v> --yt`). Tamriel y Runa copian la plantilla y cambian su VOZ.
+- Escritura normal: «World of Warcraft», «Blizzard», «Forever» salen bien sin `FONETICA` (Whisper, 2-nov).
+- Ojo con el saldo: un video de 15 min ≈ 13 000 caracteres ≈ 2 600 créditos con turbo, y la cuenta 1 (la de más saldo) no
+  sirve para el clon. `python nucleo/tts_eleven.py` antes de `voz`.
+- Los videos ya hechos con Applio se quedan con Applio (no cambiar la voz a media obra).
+
 ## REGLA: mezcla de Applio = cadena «suave» (el usuario, 13-oct-2026)
 El Montaje del panel reproduce la voz cruda (~-20 LUFS) y el MASTER la pasaba por la cadena de Chatterbox/ElevenLabs
 (-2 dB 280 Hz, +2 dB 3,5 kHz, compresor 3:1 +3 dB, reverb 5 %, todo a -14 LUFS): «se escucha diferente, más fuerte». En el A/B

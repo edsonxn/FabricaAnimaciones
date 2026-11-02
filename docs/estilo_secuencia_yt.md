@@ -29,7 +29,7 @@ de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido
 **Pegatinas variadas (`nucleo/peg_estilos.py`, temas `tes`, `wow`, `er`, `gaming`):** `silueta` = personaje SIN fondo a media pantalla con
 la cara bien visible y el video corriendo detrás (colocar con `pos_silueta`); `reliquia` = objeto sobre círculo de runas; `banda` = tira
 de cine con los ojos; `camafeo` = medallón para menciones rápidas; `legajo` = expediente; `abanico` = cartas al enumerar. Cambia también
-tamaño, posición y giro de las normales, y diseña estilos nuevos: no debe sentirse que todas son iguales. Para silueta usa un fotograma
+tamaño, posición y giro de las normales, y diseña estilos nuevos: no debe sentirse que todas son iguales. **Iconos de objeto (2-nov-2026, `wow_objetos_secretos_forever`: medallones VACÍOS):** rembg se come los íconos de Wowhead (ilustración cuadrada a sangre): `reliquia` detecta el recorte fallido (`recorte_fallido`, < 17 % opaco) y hace flotar el ícono ENTERO en marco de MMO; `camafeo` ya no amplía más de 1,25x (para íconos, `foco=(.5, .5, 1.0)`); los nombres largos se encogen. Si el ícono por sí solo no se entiende (Página quemada = retazos de cuero), en el mapa va su FICHA real de Wowhead: punto `(x, y, nombre, sub, "ficha:" + ruta del apoyo wowhead)` (`mg_wow._foto`). Mira SIEMPRE la hoja de pegatinas con los recortes (`pegatinas/_rec/`) antes de renderizar. Para silueta usa un fotograma
 nítido ≥ 1000 px; si rembg arrastra a otro personaje, recorta antes. Código de ejemplo: `videos/tes_secretos_40/efectos.py`.
 
 **Antes de renderizar:** `python fab.py <v> chequeo` (también corre solo antes de `video`; nunca bloquea). Da la densidad contra la
@@ -38,7 +38,7 @@ que marca se mira a mano.
 
 ## Flujo
 ```
-python fab.py nuevo <v> --yt          plantilla videos/_plantilla_yt (VOZ Applio Remy, SECUENCIA fuente="yt", LYRIA épica)
+python fab.py nuevo <v> --yt          plantilla videos/_plantilla_yt (VOZ = clon ElevenLabs de Remy, 2-nov-2026; SECUENCIA fuente="yt", LYRIA épica)
 python fab.py <v> voz | seleccionar | tiempo
 python fab.py <v> beats               cortes en pausas reales, ~8,6 s (clip_s)
 python fab.py <v> busquedas           crea busquedas.json vacío y lista los beats; Claude escribe una búsqueda por beat; repetir valida
@@ -87,6 +87,8 @@ Velocidad medida: 4 clips en 37 s con `-j 4` (≈ 100 clips de un video de 15 mi
 - Sin audio: se baja solo la imagen (`ambiente=0`).
 
 ## Voz Applio: fonética (el usuario, 13-oct-2026)
+**Desde el 2-nov-2026 los videos NUEVOS de Warcraft usan el clon de esta voz en ElevenLabs** con corchetes (sin `[whispers]`
+ni `[excited]`) y escritura normal: `docs/voz.md` § «Crónicas de Warcraft = su voz CLONADA». Lo de abajo vale para Applio.
 La voz base (`fr-FR-RemyMultilingualNeural`) es multilingüe: una palabra en inglés le hace cambiar de idioma/acento
 («Overgear» como se escribe, frases en otro idioma). Regla: **todo nombre en inglés sin traducción oficial va en
 `FONETICA`** de guion.py (`"Overgear": "Óverguir"`, `"Forever": "Foréver"`, `"Blizzard": "Blízard"`, `"self-play": "sélf pléi"`,

@@ -2,7 +2,7 @@
   "monetizado": true,
   "canal_id": "UCjzJdQdD2vCpw1jHCqiQeFw",
   "nombre": "Crónicas de Warcraft",
-  "estilo": "CANAL N.º 1 (el más importante). Secuencia de clips de gameplay de YouTube (yt-dlp) cortados por frase de Whisper + ~30 apoyos (tooltips Wowhead/tarjetas) + 3 motion graphics + PEGATINAS CONSTANTES (regla fija del usuario, 18-oct-2026: cada personaje, criatura, objeto o prenda que nombre la voz sale con su imagen real como pegatina animada, ADEMÁS de clips y tarjetas; receta docs/estilo_secuencia_yt.md § PEGATINAS); voz Applio (Edge Remy + RVC RemyOriginal); guion estilo «gema» (humor seco, cita ficticia dramática). Patrocinio Overgear activo (código CRONICAS10). Migrando desde C:\\googleimagenes: docs/migracion_googleimagenes.md",
+  "estilo": "CANAL N.º 1 (el más importante). Secuencia de clips de gameplay de YouTube (yt-dlp) cortados por frase de Whisper + ~30 apoyos (tooltips Wowhead/tarjetas) + 3 motion graphics + PEGATINAS CONSTANTES (regla fija del usuario, 18-oct-2026: cada personaje, criatura, objeto o prenda que nombre la voz sale con su imagen real como pegatina animada, ADEMÁS de clips y tarjetas; receta docs/estilo_secuencia_yt.md § PEGATINAS); voz: desde el 2-nov-2026 el CLON en ElevenLabs de la voz Applio (Remy + RVC RemyOriginal), eleven_v4_turbo con corchetes, sin [whispers] ni [excited] (docs/voz.md); antes Applio; guion estilo «gema» (humor seco, cita ficticia dramática). Patrocinio Overgear activo (código CRONICAS10). Migrando desde C:\\googleimagenes: docs/migracion_googleimagenes.md",
   "horario": {
     "zona": "America/Mexico_City",
     "hora_local": "09:00",

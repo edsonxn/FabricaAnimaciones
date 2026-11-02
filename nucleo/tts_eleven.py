@@ -13,10 +13,14 @@ Registro de créditos gastados: voz/eleven_log.json.
 Voz con actuación (docs/voz.md § «Corchetes»): modelo="eleven_v4_turbo" (POR DEFECTO desde el 26-oct-2026: mitad de créditos que
 eleven_v4; ver modelo()) y etiquetas en inglés dentro de las frases del guion,
 p. ej. "[sighs] Nadie lo sabía. [short pause] Ni yo."; config.py las quita para todo lo demás (Whisper, timeline, .srt).
+Voz CLONADA en varias cuentas (2-nov-2026, Crónicas de Warcraft): cada cuenta le da otro voice_id al mismo clon →
+VOZ["por_cuenta"] = {2: "<id en la 2>", 3: "<id en la 3>"}; post() pone el id de la cuenta en uso y salta las que no lo tienen.
+Etiquetas que NO van con una voz: VOZ["sin_etiquetas"] = ("whisper", "excit") → se quita toda [..] que contenga ese texto.
 """
 import io
 import json
 import os
+import re
 import time
 
 import librosa
@@ -69,8 +73,18 @@ def post(ruta, **kw):
     sigue con la siguiente cuenta de respaldo. Devuelve la última respuesta (200 o el error que ya no tiene salida)."""
     global _activa
     cs = cuentas()
+    clones = (config.VOZ.get("por_cuenta") or {}) if config else {}
     while True:
         n, k = cs[_activa]
+        if clones:   # el mismo clon tiene otro voice_id en cada cuenta; la cuenta que no lo tiene se salta
+            vid = next((v for v in clones.values() if v in ruta), None)
+            if vid and n not in clones:
+                if _activa + 1 < len(cs):
+                    _activa += 1
+                    continue
+                raise SystemExit(f"ElevenLabs: ninguna cuenta restante tiene el clon (VOZ['por_cuenta'] = {clones})")
+            if vid:
+                ruta = ruta.replace(vid, clones[n])
         for intento in range(4):
             r = requests.post(f"{URL}/{ruta}", headers={"xi-api-key": k}, **kw)
             if r.status_code not in (429, 500, 502, 503):
@@ -118,6 +132,17 @@ def voz_de(key):
     return getattr(guion, "VOZ_POR_FRASE", {}).get(key) or config.VOZ["voice_id"]
 
 
+def sin_etiquetas(texto):
+    """Quita las etiquetas que esta voz no lleva (VOZ["sin_etiquetas"]: trozos de texto, p. ej. "whisper" quita [whispers])."""
+    malas = config.VOZ.get("sin_etiquetas") or ()
+    if not malas:
+        return texto
+    limpio = re.sub(r"\[([^\]]+)\]\s*", lambda m: "" if any(x in m.group(1).lower() for x in malas) else m.group(0), texto)
+    if limpio != texto:
+        print(f"  (etiquetas quitadas por VOZ['sin_etiquetas']: {texto[:60]}…)", flush=True)
+    return limpio.strip()
+
+
 def tts(texto, seed, prev="", sig="", voice_id=None):
     v = config.VOZ
     if es_v3():
@@ -163,6 +188,9 @@ def generar(frases, seeds, solo, out):
     mod = modelo()
     tasa = TASA.get(mod, 0.40)   # créditos por carácter de ese modelo (medidos con character-cost)
     sal = saldos()
+    clones = config.VOZ.get("por_cuenta") or {}
+    if clones:   # voz clonada: solo cuentan las cuentas que tienen el clon
+        sal = [(n, s if n in clones else 0) for n, s in sal]
     disp = sum(s for _, s in sal if s)
     _activa = next((i for i, (_, s) in enumerate(sal) if s), 0)   # empieza por la primera cuenta con saldo
     if mod != config.VOZ.get("modelo"):
@@ -178,7 +206,7 @@ def generar(frases, seeds, solo, out):
             prev = " ".join(textos[max(0, n - 2):n])
             sig = textos[n + 1] if n + 1 < len(textos) else ""
             if es_v3():
-                texto = config.FRASES_TTS.get(key, texto)   # con las etiquetas [..] que config quitó del guion
+                texto = sin_etiquetas(config.FRASES_TTS.get(key, texto))   # con las etiquetas [..] que config quitó del guion
             mp3, costo = tts(texto, seed, prev, sig, voice_id=voz_de(key))
             y, sr = librosa.load(io.BytesIO(mp3), sr=None, mono=True)
             sf.write(path, y, sr)

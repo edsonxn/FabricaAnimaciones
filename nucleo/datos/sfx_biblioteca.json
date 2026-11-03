@@ -8209,7 +8209,627 @@
    "prompt": "Fast burst of typing on a laptop keyboard, eight quick keystrokes, close and dry",
    "dur": 2.0,
    "canal": "edsonxn"
+  },
+  "wow_objetos_secretos_forever__mision_aceptada": {
+   "id": "wow_objetos_secretos_forever__mision_aceptada",
+   "video": "wow_objetos_secretos_forever",
+   "nombre": "mision_aceptada",
+   "archivo": "wow_objetos_secretos_forever__mision_aceptada.mp3",
+   "md5": "51fc83046642464ff46bc396b2d4c4af",
+   "prompt": "",
+   "dur": 1.52,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_objetos_secretos_forever__mision_completada": {
+   "id": "wow_objetos_secretos_forever__mision_completada",
+   "video": "wow_objetos_secretos_forever",
+   "nombre": "mision_completada",
+   "archivo": "wow_objetos_secretos_forever__mision_completada.mp3",
+   "md5": "b23fa83b49a3213b377eec2fda0337b7",
+   "prompt": "",
+   "dur": 5.28,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_objetos_secretos_forever__subasta": {
+   "id": "wow_objetos_secretos_forever__subasta",
+   "video": "wow_objetos_secretos_forever",
+   "nombre": "subasta",
+   "archivo": "wow_objetos_secretos_forever__subasta.mp3",
+   "md5": "dbfaa09563807be8f99dfbc42cade3f8",
+   "prompt": "",
+   "dur": 1.84,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_objetos_secretos_forever__subir_nivel": {
+   "id": "wow_objetos_secretos_forever__subir_nivel",
+   "video": "wow_objetos_secretos_forever",
+   "nombre": "subir_nivel",
+   "archivo": "wow_objetos_secretos_forever__subir_nivel.mp3",
+   "md5": "c523e2c5d059a2f85cf1618558fd31bb",
+   "prompt": "",
+   "dur": 3.82,
+   "canal": "cronicas_warcraft"
+  },
+  "cod_mw4_secretos__cod_fallida": {
+   "id": "cod_mw4_secretos__cod_fallida",
+   "video": "cod_mw4_secretos",
+   "nombre": "cod_fallida",
+   "archivo": "cod_mw4_secretos__cod_fallida.mp3",
+   "md5": "a3548e0ed9eab6515ddc54c0b746fd6a",
+   "prompt": "",
+   "dur": 0.45,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__cod_logro": {
+   "id": "cod_mw4_secretos__cod_logro",
+   "video": "cod_mw4_secretos",
+   "nombre": "cod_logro",
+   "archivo": "cod_mw4_secretos__cod_logro.mp3",
+   "md5": "7df11b6f13857ca1d6e4a73c2965eba0",
+   "prompt": "",
+   "dur": 5.72,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__cod_radio": {
+   "id": "cod_mw4_secretos__cod_radio",
+   "video": "cod_mw4_secretos",
+   "nombre": "cod_radio",
+   "archivo": "cod_mw4_secretos__cod_radio.mp3",
+   "md5": "dba29c95992c2598441587913906c8fe",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__cod_sello": {
+   "id": "cod_mw4_secretos__cod_sello",
+   "video": "cod_mw4_secretos",
+   "nombre": "cod_sello",
+   "archivo": "cod_mw4_secretos__cod_sello.mp3",
+   "md5": "52156f02e906f194d128f92e252ab2ce",
+   "prompt": "",
+   "dur": 4.46,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_bravo6": {
+   "id": "cod_mw4_secretos__s_bravo6",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_bravo6",
+   "archivo": "cod_mw4_secretos__s_bravo6.mp3",
+   "md5": "01970eb6103b07e8e084d5a082cef13a",
+   "prompt": "",
+   "dur": 2.14,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_broken": {
+   "id": "cod_mw4_secretos__s_broken",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_broken",
+   "archivo": "cod_mw4_secretos__s_broken.mp3",
+   "md5": "5f5c500cbe897c7de703a9d3cc8d57b6",
+   "prompt": "",
+   "dur": 3.43,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_cod4": {
+   "id": "cod_mw4_secretos__s_cod4",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_cod4",
+   "archivo": "cod_mw4_secretos__s_cod4.mp3",
+   "md5": "981bec1b960a35ef4637b2673acbd0b3",
+   "prompt": "",
+   "dur": 6.5,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_postcreditos": {
+   "id": "cod_mw4_secretos__s_postcreditos",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_postcreditos",
+   "archivo": "cod_mw4_secretos__s_postcreditos.mp3",
+   "md5": "b3f7e81be8b15d3bcdb2ec886b2a20c6",
+   "prompt": "",
+   "dur": 6.53,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_spidey": {
+   "id": "cod_mw4_secretos__s_spidey",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_spidey",
+   "archivo": "cod_mw4_secretos__s_spidey.mp3",
+   "md5": "83f9852bd650976eecebd133f7646102",
+   "prompt": "",
+   "dur": 1.97,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_warpig": {
+   "id": "cod_mw4_secretos__s_warpig",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_warpig",
+   "archivo": "cod_mw4_secretos__s_warpig.mp3",
+   "md5": "540fe763d01274ef39be38008ecbb143",
+   "prompt": "",
+   "dur": 4.73,
+   "canal": "cronicas_cod"
+  },
+  "cod_mw4_secretos__s_watcher": {
+   "id": "cod_mw4_secretos__s_watcher",
+   "video": "cod_mw4_secretos",
+   "nombre": "s_watcher",
+   "archivo": "cod_mw4_secretos__s_watcher.mp3",
+   "md5": "d10a9292e55156c81ae8da490008b84c",
+   "prompt": "",
+   "dur": 1.54,
+   "canal": "cronicas_cod"
+  },
+  "pokemon_rojo_azul__pk_a": {
+   "id": "pokemon_rojo_azul__pk_a",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_a",
+   "archivo": "pokemon_rojo_azul__pk_a.mp3",
+   "md5": "b3b5292646952064c86b9d10b3fd8eec",
+   "prompt": "",
+   "dur": 0.55,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_barco": {
+   "id": "pokemon_rojo_azul__pk_barco",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_barco",
+   "archivo": "pokemon_rojo_azul__pk_barco.mp3",
+   "md5": "4138b18d530f2545c91723ecaa53751e",
+   "prompt": "",
+   "dur": 2.25,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_captura": {
+   "id": "pokemon_rojo_azul__pk_captura",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_captura",
+   "archivo": "pokemon_rojo_azul__pk_captura.mp3",
+   "md5": "0f4fb057695228d19c5e1fe3ab2cb5a9",
+   "prompt": "",
+   "dur": 2.82,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_choque": {
+   "id": "pokemon_rojo_azul__pk_choque",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_choque",
+   "archivo": "pokemon_rojo_azul__pk_choque.mp3",
+   "md5": "b11168e0fded1054c79b3b6075325731",
+   "prompt": "",
+   "dur": 1.74,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_compra": {
+   "id": "pokemon_rojo_azul__pk_compra",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_compra",
+   "archivo": "pokemon_rojo_azul__pk_compra.mp3",
+   "md5": "4be1a55d30531d38604c69c17b67f3fd",
+   "prompt": "",
+   "dur": 1.17,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_corte": {
+   "id": "pokemon_rojo_azul__pk_corte",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_corte",
+   "archivo": "pokemon_rojo_azul__pk_corte.mp3",
+   "md5": "3843e698be34b46c5e87f75bec357efb",
+   "prompt": "",
+   "dur": 1.21,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_curar": {
+   "id": "pokemon_rojo_azul__pk_curar",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_curar",
+   "archivo": "pokemon_rojo_azul__pk_curar.mp3",
+   "md5": "c0d7f3cfbdf56904ceeb5b92b71bbf39",
+   "prompt": "",
+   "dur": 2.45,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_error": {
+   "id": "pokemon_rojo_azul__pk_error",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_error",
+   "archivo": "pokemon_rojo_azul__pk_error.mp3",
+   "md5": "4e9eb3aa72a8dbb7111ce66dd8464d8f",
+   "prompt": "",
+   "dur": 1.09,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_fallo": {
+   "id": "pokemon_rojo_azul__pk_fallo",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_fallo",
+   "archivo": "pokemon_rojo_azul__pk_fallo.mp3",
+   "md5": "46ed73f796ce9f60357fcdf99482eeeb",
+   "prompt": "",
+   "dur": 0.73,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_fuerza": {
+   "id": "pokemon_rojo_azul__pk_fuerza",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_fuerza",
+   "archivo": "pokemon_rojo_azul__pk_fuerza.mp3",
+   "md5": "3d8c1a8d0c49e0cd6b876ceaaca515e4",
+   "prompt": "",
+   "dur": 1.42,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_alakazam": {
+   "id": "pokemon_rojo_azul__pk_grito_alakazam",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_alakazam",
+   "archivo": "pokemon_rojo_azul__pk_grito_alakazam.mp3",
+   "md5": "40161dbb4027c2efd1e596e52099b7ab",
+   "prompt": "",
+   "dur": 2.03,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_arcanine": {
+   "id": "pokemon_rojo_azul__pk_grito_arcanine",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_arcanine",
+   "archivo": "pokemon_rojo_azul__pk_grito_arcanine.mp3",
+   "md5": "9812891dc5bd4898a301400ab369eaed",
+   "prompt": "",
+   "dur": 1.33,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_bulbasaur": {
+   "id": "pokemon_rojo_azul__pk_grito_bulbasaur",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_bulbasaur",
+   "archivo": "pokemon_rojo_azul__pk_grito_bulbasaur.mp3",
+   "md5": "1c350d1d194c09c6707d063e765eef34",
+   "prompt": "",
+   "dur": 0.98,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_charmander": {
+   "id": "pokemon_rojo_azul__pk_grito_charmander",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_charmander",
+   "archivo": "pokemon_rojo_azul__pk_grito_charmander.mp3",
+   "md5": "4bb6061e62c9e5adbb57e496c8e02d23",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_clefairy": {
+   "id": "pokemon_rojo_azul__pk_grito_clefairy",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_clefairy",
+   "archivo": "pokemon_rojo_azul__pk_grito_clefairy.mp3",
+   "md5": "397f181caea65ad02158e86c321be224",
+   "prompt": "",
+   "dur": 0.87,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_ditto": {
+   "id": "pokemon_rojo_azul__pk_grito_ditto",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_ditto",
+   "archivo": "pokemon_rojo_azul__pk_grito_ditto.mp3",
+   "md5": "199792b575bd84e8c20970a6002b4eb9",
+   "prompt": "",
+   "dur": 0.87,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_dragonite": {
+   "id": "pokemon_rojo_azul__pk_grito_dragonite",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_dragonite",
+   "archivo": "pokemon_rojo_azul__pk_grito_dragonite.mp3",
+   "md5": "518a085686c9b4cf0b78015c6b05da18",
+   "prompt": "",
+   "dur": 1.25,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_exeggutor": {
+   "id": "pokemon_rojo_azul__pk_grito_exeggutor",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_exeggutor",
+   "archivo": "pokemon_rojo_azul__pk_grito_exeggutor.mp3",
+   "md5": "6f871a67df5d97f90e6f743d04caecf4",
+   "prompt": "",
+   "dur": 1.77,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_gastly": {
+   "id": "pokemon_rojo_azul__pk_grito_gastly",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_gastly",
+   "archivo": "pokemon_rojo_azul__pk_grito_gastly.mp3",
+   "md5": "8474145b4b25e11e2b7641753e60edb0",
+   "prompt": "",
+   "dur": 1.4,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_gengar": {
+   "id": "pokemon_rojo_azul__pk_grito_gengar",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_gengar",
+   "archivo": "pokemon_rojo_azul__pk_grito_gengar.mp3",
+   "md5": "cee389e0a68e598df49775895fb57f41",
+   "prompt": "",
+   "dur": 1.03,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_gyarados": {
+   "id": "pokemon_rojo_azul__pk_grito_gyarados",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_gyarados",
+   "archivo": "pokemon_rojo_azul__pk_grito_gyarados.mp3",
+   "md5": "e6bd109301f93d0540298cab16e4eb40",
+   "prompt": "",
+   "dur": 1.3,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_jynx": {
+   "id": "pokemon_rojo_azul__pk_grito_jynx",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_jynx",
+   "archivo": "pokemon_rojo_azul__pk_grito_jynx.mp3",
+   "md5": "d193d7272dcc24dfbab2e56087d6ef18",
+   "prompt": "",
+   "dur": 2.64,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_mew": {
+   "id": "pokemon_rojo_azul__pk_grito_mew",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_mew",
+   "archivo": "pokemon_rojo_azul__pk_grito_mew.mp3",
+   "md5": "0c65b70308366895ea0678bce34f4364",
+   "prompt": "",
+   "dur": 1.8,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_mewtwo": {
+   "id": "pokemon_rojo_azul__pk_grito_mewtwo",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_mewtwo",
+   "archivo": "pokemon_rojo_azul__pk_grito_mewtwo.mp3",
+   "md5": "16ff7475cf1b60d16b167b5d699e441e",
+   "prompt": "",
+   "dur": 1.9,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_pikachu": {
+   "id": "pokemon_rojo_azul__pk_grito_pikachu",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_pikachu",
+   "archivo": "pokemon_rojo_azul__pk_grito_pikachu.mp3",
+   "md5": "f39b61821fae6c5269218e3b97f3b0ed",
+   "prompt": "",
+   "dur": 1.13,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_raichu": {
+   "id": "pokemon_rojo_azul__pk_grito_raichu",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_raichu",
+   "archivo": "pokemon_rojo_azul__pk_grito_raichu.mp3",
+   "md5": "94f7d0db07c8e74e09c62d9a20793a4d",
+   "prompt": "",
+   "dur": 1.47,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_rhydon": {
+   "id": "pokemon_rojo_azul__pk_grito_rhydon",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_rhydon",
+   "archivo": "pokemon_rojo_azul__pk_grito_rhydon.mp3",
+   "md5": "37e66877a4cdb9ea773e2788ddf0d6e2",
+   "prompt": "",
+   "dur": 1.3,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_squirtle": {
+   "id": "pokemon_rojo_azul__pk_grito_squirtle",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_squirtle",
+   "archivo": "pokemon_rojo_azul__pk_grito_squirtle.mp3",
+   "md5": "cd43de354f6d1550465fa7ea040c2a2f",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_tauros": {
+   "id": "pokemon_rojo_azul__pk_grito_tauros",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_tauros",
+   "archivo": "pokemon_rojo_azul__pk_grito_tauros.mp3",
+   "md5": "c21468b5b0e2876aa187ec023010e026",
+   "prompt": "",
+   "dur": 1.17,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_grito_victreebel": {
+   "id": "pokemon_rojo_azul__pk_grito_victreebel",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_grito_victreebel",
+   "archivo": "pokemon_rojo_azul__pk_grito_victreebel.mp3",
+   "md5": "7be16c1f32d85346419e9fc45922a66f",
+   "prompt": "",
+   "dur": 1.27,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_guardar": {
+   "id": "pokemon_rojo_azul__pk_guardar",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_guardar",
+   "archivo": "pokemon_rojo_azul__pk_guardar.mp3",
+   "md5": "303c47c5e617c43faab7bd875e459575",
+   "prompt": "",
+   "dur": 0.87,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_huir": {
+   "id": "pokemon_rojo_azul__pk_huir",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_huir",
+   "archivo": "pokemon_rojo_azul__pk_huir.mp3",
+   "md5": "3f140bf44fe29b79df2869001a5fa579",
+   "prompt": "",
+   "dur": 1.18,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_intento": {
+   "id": "pokemon_rojo_azul__pk_intento",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_intento",
+   "archivo": "pokemon_rojo_azul__pk_intento.mp3",
+   "md5": "c45d5844e4d4fda5bf003672e83b40aa",
+   "prompt": "",
+   "dur": 1.61,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_lanzar": {
+   "id": "pokemon_rojo_azul__pk_lanzar",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_lanzar",
+   "archivo": "pokemon_rojo_azul__pk_lanzar.mp3",
+   "md5": "28f5b39baa3b45405c6ba18580230e1c",
+   "prompt": "",
+   "dur": 0.71,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_nivel": {
+   "id": "pokemon_rojo_azul__pk_nivel",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_nivel",
+   "archivo": "pokemon_rojo_azul__pk_nivel.mp3",
+   "md5": "6b3dc9f92e10d8b6e55ab6f53f14bbc9",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_objeto": {
+   "id": "pokemon_rojo_azul__pk_objeto",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_objeto",
+   "archivo": "pokemon_rojo_azul__pk_objeto.mp3",
+   "md5": "29aebf04e6c94dd350620a166251b488",
+   "prompt": "",
+   "dur": 1.41,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_pc": {
+   "id": "pokemon_rojo_azul__pk_pc",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_pc",
+   "archivo": "pokemon_rojo_azul__pk_pc.mp3",
+   "md5": "bba7fc1558525d4aef3cf13140a1b71b",
+   "prompt": "",
+   "dur": 1.63,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_pc_entra": {
+   "id": "pokemon_rojo_azul__pk_pc_entra",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_pc_entra",
+   "archivo": "pokemon_rojo_azul__pk_pc_entra.mp3",
+   "md5": "29187f2e9f42a1d9a7923b134808e6c6",
+   "prompt": "",
+   "dur": 0.93,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_pc_sale": {
+   "id": "pokemon_rojo_azul__pk_pc_sale",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_pc_sale",
+   "archivo": "pokemon_rojo_azul__pk_pc_sale.mp3",
+   "md5": "27bdf0a90c36576057143c7be242ee00",
+   "prompt": "",
+   "dur": 0.94,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_pokedex": {
+   "id": "pokemon_rojo_azul__pk_pokedex",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_pokedex",
+   "archivo": "pokemon_rojo_azul__pk_pokedex.mp3",
+   "md5": "26f090bbadb73084b70ffc8aed15f6cd",
+   "prompt": "",
+   "dur": 1.23,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_pokedex2": {
+   "id": "pokemon_rojo_azul__pk_pokedex2",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_pokedex2",
+   "archivo": "pokemon_rojo_azul__pk_pokedex2.mp3",
+   "md5": "1352f57029195ea5df13df3e737a130b",
+   "prompt": "",
+   "dur": 2.51,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_puerta": {
+   "id": "pokemon_rojo_azul__pk_puerta",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_puerta",
+   "archivo": "pokemon_rojo_azul__pk_puerta.mp3",
+   "md5": "16175ff87ac347ae11f430875b061d5e",
+   "prompt": "",
+   "dur": 1.32,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_start": {
+   "id": "pokemon_rojo_azul__pk_start",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_start",
+   "archivo": "pokemon_rojo_azul__pk_start.mp3",
+   "md5": "821ba909b17c2736917406ebbbe4449f",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_teleport": {
+   "id": "pokemon_rojo_azul__pk_teleport",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_teleport",
+   "archivo": "pokemon_rojo_azul__pk_teleport.mp3",
+   "md5": "0c9fbce6b817b1b537d82e142c9c4023",
+   "prompt": "",
+   "dur": 3.43,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_veneno": {
+   "id": "pokemon_rojo_azul__pk_veneno",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_veneno",
+   "archivo": "pokemon_rojo_azul__pk_veneno.mp3",
+   "md5": "da0866e603d8fde9e93633676c82e2b6",
+   "prompt": "",
+   "dur": 0.99,
+   "canal": "cronicas_gaming"
+  },
+  "pokemon_rojo_azul__pk_vuelo": {
+   "id": "pokemon_rojo_azul__pk_vuelo",
+   "video": "pokemon_rojo_azul",
+   "nombre": "pk_vuelo",
+   "archivo": "pokemon_rojo_azul__pk_vuelo.mp3",
+   "md5": "a5a843b3819c75e0471f65d4078a6b51",
+   "prompt": "",
+   "dur": 2.26,
+   "canal": "cronicas_gaming"
+  },
+  "tes_sentinel_teaser__grito": {
+   "id": "tes_sentinel_teaser__grito",
+   "video": "tes_sentinel_teaser",
+   "nombre": "grito",
+   "archivo": "tes_sentinel_teaser__grito.mp3",
+   "md5": "cf8755a43383ff577965e04092381840",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-11-01 09:34"
+ "actualizado": "2026-11-03 14:52"
 }

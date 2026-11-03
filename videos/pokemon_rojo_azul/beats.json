@@ -1,0 +1,874 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.839,
+  "tipo": "video",
+  "texto": "Hay un Pokémon que se metió en el juego a escondidas, en el último hueco que quedaba en el cartucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.839,
+  "t1": 14.335,
+  "tipo": "video",
+  "texto": "Hay otro que Nintendo te pedía no tocar, porque podía borrarte la partida. Y medio mundo lo buscó igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 14.335,
+  "t1": 25.547,
+  "tipo": "video",
+  "texto": "Y hay un combate entero contra el Profesor Oak que está programado en el juego, y que nadie podía jugar. Pokémon cumplió treinta años el veintisiete de febrero de 2026.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.547,
+  "t1": 32.919,
+  "tipo": "video",
+  "texto": "Ese mismo día, Rojo Fuego y Verde Hoja llegaron a Switch, y se anunció la décima generación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 32.919,
+  "t1": 45.321,
+  "tipo": "video",
+  "texto": "Así que hoy volvemos al principio. Cómo nació Pokémon Rojo y Azul, cómo casi arruina a sus creadores, y los veinte secretos que seguramente ignoraste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.321,
+  "t1": 51.341,
+  "tipo": "video",
+  "texto": "Todo empieza con un niño que cazaba insectos. Satoshi Tajiri creció en las afueras de Tokio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.341,
+  "t1": 60.057,
+  "tipo": "video",
+  "texto": "y se pasaba las tardes atrapando bichos en los charcos y los bosques. Pero la ciudad creció. Los campos se llenaron de casas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.057,
+  "t1": 68.877,
+  "tipo": "video",
+  "texto": "y los insectos desaparecieron. Años después, Tajiri fundó Game Freak, que empezó como una revista hecha a mano sobre videojuegos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.877,
+  "t1": 77.139,
+  "tipo": "video",
+  "texto": "junto al dibujante Ken Sugimori. Y un día vio el cable link del Game Boy, el cable que unía dos consolas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.139,
+  "t1": 85.536,
+  "tipo": "video",
+  "texto": "Se imaginó a sus bichos pasando por ese cable, de una pantalla a otra. La idea de intercambiar le venía de una frustración.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.536,
+  "t1": 92.93,
+  "tipo": "video",
+  "texto": "En Dragon Quest Dos no podías pasarle un objeto a un amigo. Con ese cable, sí se podría.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 92.93,
+  "t1": 102.49,
+  "tipo": "video",
+  "texto": "En 1990 le presentó el proyecto a Nintendo. Muchos no lo entendieron, pero Shigeru Miyamoto vio algo, y le dio una idea clave:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 102.49,
+  "t1": 110.997,
+  "tipo": "video",
+  "texto": "hacer dos versiones, cada una con Pokémon distintos. Así, para completarlo, tenías que hablar con otros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.997,
+  "t1": 118.107,
+  "tipo": "video",
+  "texto": "El juego no se acababa en tu Game Boy. Se iba a llamar Capsule Monsters, monstruos de cápsula.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 118.107,
+  "t1": 128.669,
+  "tipo": "video",
+  "texto": "Las Poké Balls salieron de las cápsulas de monstruos de la serie Ultraseven. Pero el nombre estaba registrado, y tras varios intentos quedó en Pocket Monsters.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.669,
+  "t1": 140.053,
+  "tipo": "video",
+  "texto": "El desarrollo duró seis años. A veces no había dinero ni para pagar los sueldos. Cinco personas se fueron, y Tajiri dejó de cobrar y vivía de lo que le daba su padre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 140.053,
+  "t1": 147.93,
+  "tipo": "video",
+  "texto": "Lo salvó otra empresa, Creatures, que puso dinero a cambio de un tercio de los derechos de Pokémon.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 147.93,
+  "t1": 153.73,
+  "tipo": "video",
+  "texto": "Pocket Monsters Rojo y Verde salió en Japón el veintisiete de febrero de 1996.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.73,
+  "t1": 162.901,
+  "tipo": "video",
+  "texto": "En una consola que ya tenía siete años. Empezó despacio. Pero se fue contando de boca en boca, de patio en patio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.901,
+  "t1": 171.744,
+  "tipo": "video",
+  "texto": "y acabó vendiendo más de diez millones de copias solo en Japón. A América llegó como Rojo y Azul en septiembre de 1998,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.744,
+  "t1": 180.363,
+  "tipo": "video",
+  "texto": "y a Europa en octubre de 1999. Más de treinta y un millones de copias en el mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.363,
+  "t1": 188.363,
+  "tipo": "video",
+  "texto": "La historia la conoces. Sales de Pueblo Paleta, eliges a Bulbasaur, Charmander o Squirtle, y te propones dos cosas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.363,
+  "t1": 197.142,
+  "tipo": "video",
+  "texto": "ganar las ocho medallas y llenar la Pokédex. Ciento cincuenta y uno, decía la caja. Aunque, como vas a ver,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.142,
+  "t1": 207.699,
+  "tipo": "video",
+  "texto": "eso nunca fue del todo verdad. Vamos con los secretos. Número veinte. Te pusiste el nombre del creador sin saberlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.699,
+  "t1": 216.34,
+  "tipo": "video",
+  "texto": "En el Rojo japonés, uno de los nombres que te proponía el juego para el protagonista era Satoshi. Y para tu rival, Shigeru.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.34,
+  "t1": 223.1,
+  "tipo": "video",
+  "texto": "Satoshi, por Satoshi Tajiri. Shigeru, por Shigeru Miyamoto, el padrino del proyecto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.1,
+  "t1": 232.187,
+  "tipo": "video",
+  "texto": "En la versión Verde, los nombres iban al revés. Por eso en el anime japonés Ash se llama Satoshi, y Gary se llama Shigeru.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.187,
+  "t1": 241.159,
+  "tipo": "video",
+  "texto": "Un creador y su maestro, peleando en cada partida. En el diecinueve, la oficina escondida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.159,
+  "t1": 247.359,
+  "tipo": "video",
+  "texto": "En Ciudad Azulona, en el último piso de la Mansión Azulona, hay un cuarto lleno de gente trabajando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 247.359,
+  "t1": 255.879,
+  "tipo": "video",
+  "texto": "Es Game Freak, los que hicieron el juego. Ahí puedes hablar con el programador, con el grafista, y con el diseñador del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 255.879,
+  "t1": 265.43,
+  "tipo": "video",
+  "texto": "Y si completas la Pokédex, ese diseñador te imprime un diploma. Para muchos fue el único premio de cientos de horas de juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.43,
+  "t1": 274.507,
+  "tipo": "video",
+  "texto": "Número dieciocho. El primer Pokémon no fue Bulbasaur. Bulbasaur es el número uno de la Pokédex. Pero dentro del código,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.507,
+  "t1": 281.689,
+  "tipo": "video",
+  "texto": "cada Pokémon tiene otro número, uno interno. Y el número uno de ese código es Rhydon.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 281.689,
+  "t1": 290.252,
+  "tipo": "video",
+  "texto": "Según Ken Sugimori, fue el primer Pokémon que se diseñó. Por eso Rhydon aparece por todas partes cuando el juego se rompe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 290.252,
+  "t1": 299.728,
+  "tipo": "video",
+  "texto": "Muchos Pokémon con glitch se convierten en Rhydon al capturarlos. En el diecisiete, los treinta y nueve Pokémon que se borraron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.728,
+  "t1": 309.091,
+  "tipo": "video",
+  "texto": "Según Shigeki Morimoto, uno de los programadores, el juego iba a tener ciento noventa Pokémon. Treinta y nueve se quedaron por el camino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.091,
+  "t1": 316.971,
+  "tipo": "video",
+  "texto": "Sus huecos siguen ahí, vacíos, dentro del código. Tanto, que el último Pokémon de la lista interna, Victreebel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.971,
+  "t1": 327.93,
+  "tipo": "video",
+  "texto": "está en la posición ciento noventa. Uno de los borrados era Gorochu, la evolución de Raichu. Tres décadas después, todavía no existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.93,
+  "t1": 332.403,
+  "tipo": "video",
+  "texto": "Número dieciséis. Pikachu empezó siendo un dulce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 332.403,
+  "t1": 342.76,
+  "tipo": "video",
+  "texto": "Lo dibujó Atsuko Nishida, de Game Freak. Según contó ella misma, la primera idea era un daifuku, un pastelito japonés redondo y blandito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.76,
+  "t1": 352.55,
+  "tipo": "video",
+  "texto": "Luego lo convirtió en algo parecido a una ardilla, porque en esa época estaba obsesionada con las ardillas. Y Sugimori le dio la forma final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.55,
+  "t1": 362.93,
+  "tipo": "video",
+  "texto": "Y hay una historia que se repite mucho: que la mascota iba a ser Clefairy. Algunos reportajes lo cuentan, pero nadie lo ha confirmado del todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.93,
+  "t1": 367.629,
+  "tipo": "video",
+  "texto": "En el quince, el camión más famoso de los videojuegos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.629,
+  "t1": 377.505,
+  "tipo": "video",
+  "texto": "Junto al barco S.S. Anne, en Ciudad Carmín, hay un camión. Solo se puede llegar a él con trucos, y no tiene ninguna razón para estar ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.505,
+  "t1": 385.534,
+  "tipo": "video",
+  "texto": "Así que en los patios nació el rumor: si usabas Fuerza en el camión, debajo aparecía Mew. Era mentira.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.534,
+  "t1": 394.444,
+  "tipo": "video",
+  "texto": "Debajo no había nada. Pero el rumor fue tan grande, que en Rojo Fuego y Verde Hoja, Game Freak escondió algo debajo del camión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.444,
+  "t1": 401.677,
+  "tipo": "video",
+  "texto": "Una Galleta Lava. Número catorce. El dragón que hacía trampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 401.677,
+  "t1": 410.885,
+  "tipo": "video",
+  "texto": "Lance, el último del Alto Mando, el maestro de los dragones, saca al final a su Dragonite. Y ese Dragonite usa Barrera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 410.885,
+  "t1": 419.36,
+  "tipo": "video",
+  "texto": "Un ataque que Dragonite no puede aprender de ninguna manera. Era el jefe, así que se lo permitieron. Tú, en cambio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.36,
+  "t1": 427.427,
+  "tipo": "video",
+  "texto": "nunca pudiste enseñárselo al tuyo. En el trece, el ataque que hacía justo lo contrario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 427.427,
+  "t1": 436.931,
+  "tipo": "video",
+  "texto": "Foco Energía prometía subir la probabilidad de dar un golpe crítico. Pero por un error de programación, la dividía entre cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 436.931,
+  "t1": 446.554,
+  "tipo": "video",
+  "texto": "Y había otro fallo escondido. Los ataques con cien por ciento de precisión podían fallar. Una vez de cada doscientas cincuenta y seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 446.554,
+  "t1": 455.401,
+  "tipo": "video",
+  "texto": "Así que si alguna vez fallaste un ataque seguro en el peor momento, no era mala suerte. Era el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.401,
+  "t1": 463.859,
+  "tipo": "video",
+  "texto": "Número doce. Por qué los Pokémon psíquicos eran invencibles. En Rojo y Azul, el tipo Psíquico arrasaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.859,
+  "t1": 472.54,
+  "tipo": "video",
+  "texto": "Casi nada le hacía daño de verdad. La respuesta estaba en un error. El tipo Fantasma tenía que ser súper eficaz contra el Psíquico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.54,
+  "t1": 481.287,
+  "tipo": "video",
+  "texto": "Pero en la tabla quedó al revés, y no le hacía nada. Y encima el único ataque Fantasma que hacía daño de verdad era Lengüetazo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.287,
+  "t1": 487.93,
+  "tipo": "video",
+  "texto": "Así que Alakazam y Mewtwo reinaron sin rival hasta la siguiente generación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 487.93,
+  "t1": 495.955,
+  "tipo": "video",
+  "texto": "En el once, el combate contra el Profesor Oak. Dentro del juego hay un entrenador que nunca llegas a enfrentar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 495.955,
+  "t1": 506.164,
+  "tipo": "video",
+  "texto": "Usa el nombre y el dibujo del Profesor Oak. Y tiene equipo. Tauros, Exeggutor, Arcanine y Gyarados, entre el nivel sesenta y seis y el setenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.164,
+  "t1": 513.692,
+  "tipo": "video",
+  "texto": "más el inicial que tú no elegiste. Un equipo a la altura del campeón. No tiene ni una línea de diálogo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 513.692,
+  "t1": 525.204,
+  "tipo": "video",
+  "texto": "y solo se puede pelear con trucos o glitches. El jefe final que nunca fue. Número diez. El Azul que jugaste no era el Azul original.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.204,
+  "t1": 532.764,
+  "tipo": "video",
+  "texto": "En Japón no hubo Rojo y Azul. Hubo Rojo y Verde. Y meses después, en octubre de 1996,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.764,
+  "t1": 538.94,
+  "tipo": "video",
+  "texto": "salió una edición Azul que solo se podía pedir por correo, con la revista CoroCoro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 538.94,
+  "t1": 547.164,
+  "tipo": "video",
+  "texto": "Esa edición Azul traía gráficos nuevos y errores corregidos. Y fue la base de las versiones que llegaron al resto del mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 547.164,
+  "t1": 557.443,
+  "tipo": "video",
+  "texto": "Tu Rojo y tu Azul eran, por dentro, el Azul japonés. En el nueve, los Pokémon musculosos que casi tuviste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.443,
+  "t1": 566.328,
+  "tipo": "video",
+  "texto": "Traducir el juego fue tan difícil, que hubo que reprogramarlo desde cero. El código original era demasiado frágil para tocarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.328,
+  "t1": 576.035,
+  "tipo": "video",
+  "texto": "Y el equipo de Nintendo en América propuso algo más. Rediseñar a los Pokémon, para que se vieran más fuertes y musculosos para el público americano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.035,
+  "t1": 585.43,
+  "tipo": "video",
+  "texto": "Hiroshi Yamauchi, el presidente de Nintendo, dijo que no. Y gracias a eso, tu Pikachu sigue siendo redondito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.43,
+  "t1": 592.274,
+  "tipo": "video",
+  "texto": "Número ocho. El Pokémon que cambió de color. Jynx, el Pokémon de hielo con forma humana,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.274,
+  "t1": 600.074,
+  "tipo": "video",
+  "texto": "tenía la cara negra y los labios gruesos. En el año 2000, la escritora Carole Boston Weatherford publicó",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 600.074,
+  "t1": 609.894,
+  "tipo": "video",
+  "texto": "un ensayo diciendo que recordaba a las caricaturas racistas de antes. Nintendo la repintó. En Oro y Plata de América su cara ya salía morada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 609.894,
+  "t1": 615.369,
+  "tipo": "video",
+  "texto": "Y en las reediciones de Amarillo para la consola virtual, también.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 615.369,
+  "t1": 623.217,
+  "tipo": "video",
+  "texto": "En el siete, la leyenda de Pueblo Lavanda. En 2010 empezó a circular por internet una historia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 623.217,
+  "t1": 633.71,
+  "tipo": "video",
+  "texto": "Que la música de Pueblo Lavanda tenía frecuencias que solo oían los niños. Y que en Japón les había causado dolores de cabeza y cosas peores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 633.71,
+  "t1": 641.812,
+  "tipo": "video",
+  "texto": "Todo era inventado. Es una creepypasta, una historia de terror escrita para internet. No hay ningún caso real.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 641.812,
+  "t1": 647.952,
+  "tipo": "video",
+  "texto": "Pero si alguna vez entraste en ese pueblo, sabes por qué la gente se la creyó. Esta es su",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 647.952,
+  "t1": 659.702,
+  "tipo": "video",
+  "texto": "música. Número seis. ¿Ditto es un Mew que salió mal?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 659.702,
+  "t1": 668.256,
+  "tipo": "video",
+  "texto": "Es una teoría de fans, no algo oficial. Pero tiene sus pistas. Ditto y Mew comparten el mismo color rosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 668.256,
+  "t1": 677.43,
+  "tipo": "video",
+  "texto": "Los dos pueden usar Transformación. Y en la Cueva Celeste, la guarida de Mewtwo, el clon de Mew, aparecen Dittos salvajes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 677.43,
+  "t1": 686.33,
+  "tipo": "video",
+  "texto": "La idea es que los científicos intentaron clonar a Mew, y Ditto fue el resultado de los intentos fallidos. Game Freak nunca lo ha dicho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.33,
+  "t1": 695.03,
+  "tipo": "video",
+  "texto": "Pero tampoco lo ha negado. En el cinco, el Pokémon que podía borrarte la partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.03,
+  "t1": 703.607,
+  "tipo": "video",
+  "texto": "Hablas con el viejo de Ciudad Verde, el que te enseña a capturar. Vuelas a Isla Canela. Y surfeas pegado a la costa del este.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 703.607,
+  "t1": 712.83,
+  "tipo": "video",
+  "texto": "Ahí aparece una figura rota, hecha de cuadros. Se llama MissingNo, de missing number. Un número que falta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 712.83,
+  "t1": 718.75,
+  "tipo": "video",
+  "texto": "Y te hacía un regalo. Multiplicaba el objeto que tenías en el sexto lugar de tu mochila.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 718.75,
+  "t1": 726.441,
+  "tipo": "video",
+  "texto": "Miles de niños lo usaron para tener cien Caramelos Raros o Bolas Maestras. En mayo de 1999,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 726.441,
+  "t1": 737.804,
+  "tipo": "video",
+  "texto": "Nintendo Power avisó que cualquier contacto con él podía borrar tu partida. Y, claro, eso solo hizo que más gente lo buscara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 737.804,
+  "t1": 748.25,
+  "tipo": "video",
+  "texto": "Número cuatro. El rumor de Mew que resultó ser verdad. Durante años, oficialmente solo podías conseguir a Mew en un evento de Nintendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 748.25,
+  "t1": 755.79,
+  "tipo": "video",
+  "texto": "Pero en 2003, siete años después, los jugadores descubrieron un glitch que lo hacía aparecer en tu propia partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.79,
+  "t1": 760.57,
+  "tipo": "video",
+  "texto": "Con un truco de dos entrenadores y una huida en el momento justo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 760.57,
+  "t1": 770.43,
+  "tipo": "video",
+  "texto": "Así que, después de tantos rumores falsos, uno sí acabó siendo cierto. Mew estuvo en tu cartucho desde el primer día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 770.43,
+  "t1": 778.58,
+  "tipo": "video",
+  "texto": "En el tres, el concurso que salvó a Pokémon. Los primeros meses, Pokémon vendía, pero no era un fenómeno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 778.58,
+  "t1": 788.869,
+  "tipo": "video",
+  "texto": "Entonces la revista CoroCoro anunció algo nunca visto: un Pokémon que no salía en el juego, y que regalarían a veinte lectores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 788.869,
+  "t1": 797.158,
+  "tipo": "video",
+  "texto": "Llegaron unas setenta y ocho mil cartas. Por veinte Mew. Satoru Iwata, que luego fue presidente de Nintendo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.158,
+  "t1": 805.43,
+  "tipo": "video",
+  "texto": "lo contaba así: según él, ese anuncio fue el momento en que las cosas dieron la vuelta para Pokémon.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 805.43,
+  "t1": 813.493,
+  "tipo": "video",
+  "texto": "Número dos. El Pokémon que se coló en el cartucho. Mew no estaba en los planes. Cuando el juego estaba terminado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 813.493,
+  "t1": 822.996,
+  "tipo": "video",
+  "texto": "a los programadores les habían dicho que no tocaran ni un solo bit más. Pero al quitar las herramientas de depuración, según contó Shigeki Morimoto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 822.996,
+  "t1": 829.644,
+  "tipo": "video",
+  "texto": "quedó un hueco de unos trescientos bytes. Y él metió ahí a Mew, casi como una broma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 829.644,
+  "t1": 840.085,
+  "tipo": "video",
+  "texto": "Ni siquiera Tsunekazu Ishihara, uno de los jefes del proyecto, estaba muy contento cuando se enteró. Y esa travesura, en un hueco de trescientos bytes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.085,
+  "t1": 850.487,
+  "tipo": "video",
+  "texto": "acabó siendo el Pokémon más buscado de la historia. Y llegamos al número uno. El juego que casi no sale.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.487,
+  "t1": 856.547,
+  "tipo": "video",
+  "texto": "Durante seis años, Game Freak estuvo a punto de cerrar. Mientras Tajiri terminaba Pokémon,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 856.547,
+  "t1": 865.533,
+  "tipo": "video",
+  "texto": "el equipo hacía otros juegos por encargo para poder pagar las facturas. Cinco personas se fueron cuando supieron cómo estaban las cuentas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 865.533,
+  "t1": 872.915,
+  "tipo": "video",
+  "texto": "Y Tajiri seguía trabajando sin sueldo, jornadas larguísimas, con su padre pagándole la comida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 872.915,
+  "t1": 880.14,
+  "tipo": "video",
+  "texto": "Cuando por fin salió, el Game Boy ya parecía una consola del pasado. Nadie esperaba gran cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 880.14,
+  "t1": 892.975,
+  "tipo": "video",
+  "texto": "Hoy Pokémon es la franquicia que más dinero ha ganado en la historia del entretenimiento. Y empezó con un niño que se quedó sin insectos que atrapar, y decidió meterlos en una pantalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 892.975,
+  "t1": 902.374,
+  "tipo": "video",
+  "texto": "Treinta años después, aquí seguimos. Rojo Fuego y Verde Hoja ya están en Switch, y la décima generación llega en 2027.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 902.374,
+  "t1": 907.734,
+  "tipo": "video",
+  "texto": "Y como siempre, leemos todos los comentarios, y los tomamos en cuenta para el siguiente video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 907.734,
+  "t1": 918.389,
+  "tipo": "video",
+  "texto": "En el video de Banjo-Tooie, Riuma nos contó que solo pudo disfrutar el primer Banjo. Riuma, hoy también tocaba un primero: el primer Pokémon.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 918.389,
+  "t1": 925.041,
+  "tipo": "video",
+  "texto": "Ahora dime tú. ¿Cuál fue tu primer Pokémon? ¿Y llegaste a encontrarte a MissingNo? Te leo abajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 925.041,
+  "t1": 934.375,
+  "tipo": "video",
+  "texto": "Y si te gustó este viaje a Kanto, suscríbete a Crónicas del gaming. Nos vemos en la siguiente crónica.",
+  "clip_s": 8
+ }
+]

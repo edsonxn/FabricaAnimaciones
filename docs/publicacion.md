@@ -148,7 +148,10 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
    **Ingredientes en el navegador integrado (27-oct-2026):** bloquea `http://127.0.0.1` (ERR_BLOCKED_BY_CLIENT: no sirve un servidor
    local de imágenes), pero `i.ytimg.com/vi/<id>/maxresdefault.jpg` y upload.wikimedia.org tienen CORS abierto: `fetch` → `File` →
    `ClipboardEvent('paste')` en `.ProseMirror`. La miniatura oficial de un tráiler del juego es un ingrediente real de primera
-   (`videos/wow_100_curiosidades_tbc_wotlk/prompt_miniatura.md`, 2/2 bien). Sin URL pública, una imagen de ~4 KB (256 px, WebP) cabe como
+   (`videos/wow_100_curiosidades_tbc_wotlk/prompt_miniatura.md`, 2/2 bien). **Un ingrediente por llamada (3-nov-2026):** varios
+   `paste` en un mismo bucle solo adjuntan el primero; pegar uno, esperar ~5 s y pegar el siguiente. Las portadas y sprites
+   «fair use» de en.wikipedia no salen en `pageimages`: usar `generator=images&prop=imageinfo` (`pokemon_rojo_azul`, 2/2 bien).
+   La URL firmada `flow-content.google/image/…` también está en el `src` de los `<img>` del proyecto (curl sin cookies). Sin URL pública, una imagen de ~4 KB (256 px, WebP) cabe como
    base64 en `javascript_tool`; el canvas la reescala antes de pegarla (`robotaller_mes1`, 30-oct-2026).
    **Bajar la imagen (30-oct-2026):** los `<img>` de Flow ya son `flow.google.com/asb/…` y sin cookies devuelven HTML. La URL firmada
    `flow-content.google/image/<id>?Expires…&Signature…` viene en la respuesta del POST `batchexecute` con `rpcids=ogiZ0b`

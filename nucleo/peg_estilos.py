@@ -24,7 +24,8 @@ TEMAS = {"tes": dict(luz=T.ORO, texto=T.HUESO, rojo=T.SANGRE, papel=(214, 194, 1
          "er": dict(luz=(214, 186, 120), texto=(232, 226, 210), rojo=(196, 40, 52), papel=(206, 196, 168), tinta=(46, 32, 20)),
          "gaming": dict(luz=(255, 214, 64), texto=(248, 248, 248), rojo=(224, 48, 56), papel=(232, 222, 190), tinta=(40, 36, 60)),
          "spyro": dict(luz=(250, 190, 40), texto=(240, 222, 86), rojo=(226, 54, 88), papel=(206, 214, 232), tinta=(22, 34, 56)),
-         "n64": dict(luz=(250, 200, 24), texto=(250, 250, 248), rojo=(226, 38, 48), papel=(214, 216, 222), tinta=(24, 26, 32))}
+         "n64": dict(luz=(250, 200, 24), texto=(250, 250, 248), rojo=(226, 38, 48), papel=(214, 216, 222), tinta=(24, 26, 32)),
+         "cod": dict(luz=(246, 190, 52), texto=(244, 244, 238), rojo=(226, 54, 46), papel=(200, 196, 178), tinta=(20, 24, 26))}
 _rec = {}
 
 
@@ -119,6 +120,8 @@ def silueta(ruta, nombre=None, sub=None, alto=880, encuadre=(0.0, 1.0), lado="iz
     W, H = base.width + (500 if rot else 0), base.height
     xfig = 0 if lado == "izq" else W - base.width
     xrot = base.width - 90 if lado == "izq" else 30
+    if W > 1920:   # figura muy ancha (cara de cerca): el lienzo se sale de pantalla; el rótulo se queda dentro (2-nov, Graves)
+        xrot = min(xrot, 1920 - 600) if lado == "izq" else W - 1920 + 40
     dentro = 1 if lado == "izq" else -1
 
     def fn(dt, dur, marcas):

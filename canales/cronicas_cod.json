@@ -1,0 +1,97 @@
+{
+  "canal_id": "UCDQNcXrbVHkxUBHTCDQnD9w",
+  "nombre": "Expediente 141",
+  "estilo": "Call of Duty en español (alta 2-nov-2026, objetivo: patrocinio de Overgear). Fórmula de Warcraft/Tamriel = motor SECUENCIA YT (gameplay por beat con yt-dlp) + pegatinas reales + fichas translúcidas con la interfaz de CoD + MG nuevos por guion + mapas reales con ruta + sonido original del juego + OST oficial. Ejes con datos: listas de lo ELIMINADO/secretos de Zombies, personajes y villanos explicados, recopilaciones largas «para dormir». Voz: Damián de ElevenLabs (BPwS5yO6aXvwg8auqNwS, biblioteca, eleven_v4_turbo con corchetes, tono de sargento), elegida por el usuario el 2-nov-2026. Ver canales/formula/cronicas_cod.md",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "18:00",
+    "utc": "00:00",
+    "ciclo_dias": 3,
+    "separacion_min_horas": 72,
+    "nota": "Provisional (sin datos propios): ciclo de 3 días ≈ 2 videos por semana para arrancar; 18:00 CDMX = 00:00 UTC (MX 18:00, CO 19:00, AR 21:00), como Crónicas del gaming. AJUSTABLE por Claude con datos: docs/publicacion.md § «Frecuencia y hora».",
+    "historial": [
+      {
+        "fecha": "2026-11-02",
+        "ciclo_dias": 3,
+        "hora_local": "18:00",
+        "motivo": "alta del canal; ritmo de arranque de 2 por semana por criterio, sin datos propios"
+      }
+    ]
+  },
+  "publicados": [
+    {
+      "video": "cod_mw4_secretos",
+      "id": "agTIwVlWD1I",
+      "titulo": "Los 25 SECRETOS que Modern Warfare 4 te escondió",
+      "programado": "2026-11-04T00:00:00Z",
+      "estado": "programado",
+      "formato": "lista de 25 secretos (cuenta regresiva), 16:44, SECUENCIA YT, voz Damián"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "secretos call of duty zombies",
+      "curiosidades call of duty",
+      "lore call of duty zombies explicado",
+      "easter eggs call of duty",
+      "black ops 7 secretos",
+      "historia de call of duty",
+      "que paso con price call of duty",
+      "contenido eliminado call of duty"
+    ],
+    "competidores": [
+      "UCC-lDoUkeQatuPdBzWURV7A",
+      "UCfZLWn1f5U4yeBFYzpXe_1A",
+      "UCD8Rqla16BQ2wqzQ_lG42ng",
+      "UC1UkMXr8lTHXdpKeE0ha83Q"
+    ],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "call of duty",
+      "cod",
+      "zombies",
+      "black ops",
+      "warzone",
+      "modern warfare",
+      "price",
+      "makarov",
+      "easter egg",
+      "secreto",
+      "curiosidad",
+      "historia",
+      "lore",
+      "eliminado"
+    ]
+  },
+  "estado": "2-nov-2026: canal nuevo de Call of Duty, renombrado de «GTA IV DLSS 5» a «Expediente 141» (@Expediente141); banner, descripción, palabras clave, idioma es-419 y país MX aplicados; foto de perfil = canales/arte/expediente141/LOGO_800.jpg (la sube el usuario en Studio). 1.er video: cod_mw4_secretos.",
+  "descripcion": "Expediente 141: los archivos clasificados de Call of Duty, en español.\n\nSecretos que los desarrolladores escondieron a plena vista, contenido eliminado, easter eggs de Zombies, y la historia completa de Price, Soap, Ghost, Makarov y todos los que dispararon primero y preguntaron después. Cada video es una investigación: clips del juego, mapas reales y su música y sonidos originales.\n\nNuevo expediente cada semana. Suscríbete y activa la campana para no perderte ninguno.\n\nCanal de fans, sin relación oficial con Activision ni con los estudios de Call of Duty.",
+  "palabras_clave": [
+    "call of duty",
+    "call of duty en español",
+    "modern warfare 4",
+    "mw4",
+    "black ops 7",
+    "cod zombies",
+    "secretos call of duty",
+    "easter eggs call of duty",
+    "lore call of duty",
+    "capitan price",
+    "historia de call of duty",
+    "curiosidades videojuegos",
+    "expediente 141"
+  ],
+  "idioma": "es-419",
+  "pais": "MX",
+  "banner": "canales/arte/expediente141/BANNER_2560x1440.jpg",
+  "logo": "canales/arte/expediente141/LOGO_800.jpg",
+  "handle": "@Expediente141",
+  "voz": {
+    "motor": "elevenlabs",
+    "voice_id": "BPwS5yO6aXvwg8auqNwS",
+    "nombre": "Damián - Deep, Rich & Resonant",
+    "pruebas": "canales/voces_prueba/cod_mw4/"
+  }
+}

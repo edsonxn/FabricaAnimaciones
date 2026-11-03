@@ -1,0 +1,67 @@
+import json
+CE = "https://youtu.be/ZOxTN7cmPzg"     # Captain Eggcellent, 25 Easter Eggs (narrado en inglés: solo imagen)
+TWA = "https://youtu.be/PijkhLoNBiI"    # ThatWasAwesome, 20 Dev Jokes
+INK = "https://youtu.be/ViJ6PJqh5As"    # Inkslasher, secretos de la campaña
+ICE = "https://youtu.be/OMjaaua6-Dg"    # ICE KING, decisiones
+u = lambda url, d: {"url": url, "desde": d}
+B = {
+    1: ["Modern Warfare 4 reveal trailer", "Modern Warfare 4 launch trailer"],
+    2: u(CE, 221), 3: u(CE, 163),
+    4: ["Modern Warfare 4 campaign no commentary", "Modern Warfare 4 gameplay"],
+    5: ["Out in the Cold mission no commentary", "Modern Warfare 4 New York mission"],
+    6: u(TWA, 163), 7: u(TWA, 185), 8: u(TWA, 222),
+    9: ["Out in the Cold Makarov chase", "Modern Warfare 4 Makarov"],
+    10: u(INK, 1040), 11: u(INK, 1058), 12: u(INK, 1072),
+    13: u(CE, 945), 14: ["DMZ Hajan River Heights", "Modern Warfare 4 DMZ gameplay no commentary"],
+    15: ["Modern Warfare 4 DMZ gameplay no commentary", "MW4 DMZ extraction"],
+    16: ["Modern Warfare 4 smoke grenade", "Modern Warfare 4 graphics details"],
+    17: ["Modern Warfare 4 mud weapon", "Modern Warfare 4 realism gameplay"],
+    18: ["Modern Warfare 4 campaign gameplay no commentary", "Modern Warfare 4 realism"],
+    19: u(TWA, 772), 20: u(TWA, 788), 21: u(TWA, 1241),
+    22: ["Modern Warfare 4 Greater Good mission", "Modern Warfare 4 final mission"],
+    23: u(CE, 864), 24: u(CE, 882), 25: u(CE, 918),
+    26: u(ICE, 60), 27: u(TWA, 278), 28: u(TWA, 296),
+    29: u(CE, 732), 30: u(CE, 745), 31: u(CE, 758),
+    32: u(ICE, 92), 33: u(ICE, 108), 34: u(ICE, 128), 35: u(ICE, 146),
+    36: u(TWA, 31), 37: u(TWA, 58), 38: u(TWA, 96), 39: u(TWA, 376), 40: u(TWA, 1081),
+    41: u(TWA, 649), 42: u(TWA, 668), 43: u(TWA, 700),
+    44: u(CE, 243), 45: u(CE, 256), 46: u(CE, 274),
+    47: u(CE, 507), 48: u(CE, 518), 49: u(CE, 530), 50: u(CE, 543),
+    51: ["Stranded mission no commentary", "Modern Warfare 4 North Korea snow"],
+    52: u(CE, 47), 53: u(CE, 63), 54: u(CE, 85),
+    55: ["Mayhem mission no commentary", "Modern Warfare 4 first mission"],
+    56: ["Modern Warfare 4 Soap", "Modern Warfare 4 Task Force 141"],
+    57: ["Traffic mission Paris no commentary", "Modern Warfare 4 Paris"],
+    58: ["Modern Warfare 4 snow city", "Modern Warfare 4 Rajin"],
+    59: ["Modern Warfare 4 Task Force 141", "Modern Warfare 4 Price Ghost Gaz"],
+    60: u(CE, 832), 61: ["Cachette 3D printer", "Cachette multiplayer gameplay"],
+    62: ["Cachette multiplayer gameplay", "Modern Warfare 4 multiplayer gameplay"],
+    63: ["Modern Warfare 4 DMZ 3D printer", "Modern Warfare 4 DMZ FOB"],
+    64: u(TWA, 982), 65: u(TWA, 996), 66: u(TWA, 1010), 67: u(TWA, 1162), 68: u(TWA, 1176),
+    69: u(CE, 620), 70: u(CE, 634), 71: ["Escape mission Ghost no commentary", "Modern Warfare 4 Ghost"],
+    72: u(ICE, 300), 73: u(ICE, 204), 74: u(ICE, 425), 75: u(ICE, 398),
+    76: u(CE, 312), 77: u(TWA, 489), 78: u(TWA, 510), 79: ["Traffic mission Paris no commentary", "Modern Warfare 4 Paris"],
+    80: u(CE, 679), 81: u(CE, 693), 82: u(TWA, 1031), 83: ["Escape mission no commentary", "Modern Warfare 4 Price Ghost escape"],
+    84: ["Out in the Cold rooftops", "Modern Warfare 4 New York rooftops"], 85: u(CE, 160), 86: u(CE, 168),
+    87: ["Out in the Cold Makarov chase", "Modern Warfare 4 Makarov"],
+    88: u(CE, 205), 89: u(CE, 212), 90: u(CE, 219),
+    91: ["Following Orders mission no commentary", "Modern Warfare 4 North Korean village"],
+    92: u(CE, 507),
+    93: ["Modern Warfare 4 ending", "Modern Warfare 4 Greater Good"],
+    94: u(CE, 361), 95: u(INK, 222), 96: u(CE, 368), 97: u(CE, 425), 98: u(CE, 440), 99: u(CE, 452),
+    100: u(INK, 356), 101: u(CE, 572), 102: u(INK, 690), 103: u(CE, 588), 104: u(INK, 710),
+    105: u(INK, 1298), 106: u(INK, 1312), 107: ["Modern Warfare 4 post credits scene", "Modern Warfare 4 Laswell"],
+    108: ["Modern Warfare 4 post credits scene", "Modern Warfare 4 ending cutscene"],
+    109: ["Modern Warfare 4 Price ending", "Modern Warfare 4 frozen lake"],
+    110: ["Modern Warfare 4 ending", "Modern Warfare 4 Price death"],
+    111: ["Modern Warfare 4 credits", "Modern Warfare 4 ending cutscene"],
+    112: ["Modern Warfare 4 Task Force 141", "Modern Warfare 4 Price Ghost"],
+    113: u(INK, 272), 114: u(INK, 286),
+    115: ["Modern Warfare 4 DMZ", "Modern Warfare 4 Watcher"],
+    116: ["Modern Warfare 4 campaign gameplay no commentary", "Modern Warfare 4 gameplay"],
+    117: u(CE, 950),
+}
+out = {f"scene-{k:03d}": v for k, v in sorted(B.items())}
+assert len(out) == 117
+json.dump(out, open("C:/FabricaAnimaciones/videos/cod_mw4_secretos/busquedas.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("ok", len(out))

@@ -682,6 +682,14 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
     marca cada frase cuyo beat o el siguiente no llega a `ambiente_por` 0,8 o que no deja ≥ 1,5 s de voz callada). A mano:
     `python -m chequeo_yt sonidos` desde la carpeta del video. Es pista de texto: «escuchar una disculpa» (figurado) sale y se
     ignora. En `spyro2` marcó las 16 frases de su tramo 5. Antes de renderizar, se oye cada una en la mezcla.
+  - **Variante con PISTAS `voz=True` (2-nov-2026, `cod_mw4_secretos`):** si el sonido no está en el clip del beat (una línea de
+    otro video, la música de otro juego), se corta a `sfx/s_<n>.mp3` y va en `PISTAS` con `voz=True, vol=1.0` anclado a
+    «…|fin», con un hueco de voz ≥ duración del corte (medirlo en timeline.json). El aviso automático no cuenta estas pistas:
+    sus avisos son falsos positivos. **Dos trampas que costaron un hilo:** (1) los cortes del hilo anterior salieron EN SILENCIO
+    (−91 dB) sin que nada fallara: medir siempre `ffmpeg -af volumedetect` de cada `s_*.mp3` y el nivel de `audio/fx_voz.wav` en
+    [ancla, ancla+dur] (debe rondar −20 dB, no −180). (2) `yt-dlp --download-sections` de audio empieza 6-10 s ANTES de lo pedido:
+    no cortar por segundo fijo; alinear la envolvente (RMS cada 10 ms) del tramo verificado por Whisper con la descarga en alta
+    calidad (correlación 1,00 = punto exacto) y normalizar el corte a −18 LUFS.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;

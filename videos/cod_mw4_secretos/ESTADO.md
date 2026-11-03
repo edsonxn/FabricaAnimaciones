@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_cod = «Expediente 141» (1.er video del canal) · meta: en cuanto esté (canal URGENTE, sin videos)
 - estilo: secuencia_yt (gameplay de YouTube por beat + pegatinas + MG + mapas + sonido original + OST de MW4) → doc: docs/estilo_secuencia_yt.md
-- etapa: REHECHO y SUBIDO (3-nov): https://youtu.be/T95SAXHHl10 privado, sale 3-nov 18:00 CDMX (2026-11-04T00:00Z); el viejo agTIwVlWD1I quedó privado sin fecha, NO borrado (espera el OK del usuario)
+- etapa: REHECHO y SUBIDO (3-nov): https://youtu.be/T95SAXHHl10 privado, sale 3-nov 18:00 CDMX (2026-11-04T00:00Z); el viejo agTIwVlWD1I BORRADO de YouTube el 3-nov con el OK del usuario
 - siguiente: medir a 7 días (% visto ≥ 35, vistas/día); Shorts de 2-3 puestos; `limpiar` y `biblioteca sfx catalogar` al aprobar. Antes: beats → busquedas.json → bajar → medios (voz y tiempo HECHOS: 16:44) → piloto del 1.er minuto (el usuario: terminar TODO el video en esta sesión, pero antes enseñarle el 1.er minuto)
 
 ## Sesiones (plan de tramos · «continúa el video <alias>» retoma aquí · protocolo docs/sesiones.md)

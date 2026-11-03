@@ -1,8 +1,8 @@
 {
- "scene-001": [
-  "Modern Warfare 4 reveal trailer",
-  "Modern Warfare 4 launch trailer"
- ],
+ "scene-001": {
+  "url": "https://youtu.be/jLbst85USN8",
+  "desde": 39.2
+ },
  "scene-002": {
   "url": "https://youtu.be/ZOxTN7cmPzg",
   "desde": 221
@@ -15,10 +15,10 @@
   "Modern Warfare 4 campaign no commentary",
   "Modern Warfare 4 gameplay"
  ],
- "scene-005": [
-  "Out in the Cold mission no commentary",
-  "Modern Warfare 4 New York mission"
- ],
+ "scene-005": {
+  "url": "https://youtu.be/fl0DKIJV030",
+  "desde": 999.4
+ },
  "scene-006": {
   "url": "https://youtu.be/PijkhLoNBiI",
   "desde": 163

@@ -573,3 +573,99 @@ def pegatina(ruta, titulo=None, tam=360, giro=-5.0):
         out[8 + fl:8 + fl + a.shape[0]] = a
         return out
     return fn
+
+
+# ------------------------------------------------------------------ 3-nov-2026: MG nuevos (el usuario: «faltan animaciones»)
+def objetivo(texto, sub=None, cabecera="OBJETIVO ACTUALIZADO", completo=False, w=820):
+    """Aviso de OBJETIVO de la campaña: rombo ámbar que late, cabecera en mono, el objetivo en condensada y una casilla
+    que se MARCA en la primera marca (o a los 70 % si no hay marcas) y pasa a «OBJETIVO COMPLETADO»."""
+    h = 150 if sub else 118
+    fc = fuente("mb", 22)
+    ft = ajustar(texto.upper(), "b", 44, w - 170, peso="Bold Condensed")
+    fs = ajustar(sub, "b", 28, w - 170, peso="Light Condensed") if sub else None
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, M=30, alfa=.66)
+        d = ImageDraw.Draw(im)
+        hecho = completo or dt >= (marcas[0] if marcas else dur * .7)
+        cx, cy = M + 56, M + 58
+        r = 24 * _reb((dt - .05) / .4) * (1 + .08 * math.sin(dt * 7))
+        col = VERDE if hecho else AMBAR
+        d.polygon([(cx, cy - r), (cx + r, cy), (cx, cy + r), (cx - r, cy)], outline=col + (255,), width=4)
+        d.polygon([(cx, cy - r * .45), (cx + r * .45, cy), (cx, cy + r * .45), (cx - r * .45, cy)], fill=col + (255,))
+        x = M + 110
+        cab = "OBJETIVO COMPLETADO" if hecho and not completo else cabecera
+        vis = cab[:int(max(0, (dt - .1) * 60))]
+        _txt(d, (x, M + 28), vis, fc, col, "lm", 255, track=2)
+        _txt(d, (x, M + 70), texto.upper(), ft, BLANCO, "lm", 255 * _eo((dt - .25) / .3))
+        if fs:
+            _txt(d, (x, M + 114), sub, fs, HUESO, "lm", 230 * _eo((dt - .4) / .3))
+        bx = M + w - 60                                           # casilla que se marca
+        d.rectangle((bx - 18, cy - 18, bx + 18, cy + 18), outline=BLANCO + (220,), width=3)
+        if hecho:
+            k = _eo(((dt - (marcas[0] if marcas else dur * .7)) if not completo else dt) / .25)
+            pts = [(bx - 12, cy), (bx - 3, cy + 10), (bx + 14, cy - 12)]
+            d.line(pts[:2] if k < .5 else pts, fill=VERDE + (255,), width=5)
+        u = _eo(dt / .3)
+        out = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        out.alpha_composite(im, (int(-90 * (1 - u)), 0))
+        return _bgra(out, min(u, (dur - dt) / .35))
+    return fn
+
+
+def marcador(nombre, metros=40, sub=None):
+    """Marcador de objetivo flotando SOBRE algo del clip (la tele, la impresora, la caja): rombo ámbar con halo que sube
+    y baja, nombre encima y la distancia que BAJA hasta llegar («12 m» → «0 m»). Ponerlo con x/y sobre el objeto."""
+    fn_ = ajustar(nombre.upper(), "b", 40, 520, peso="Bold Condensed")
+    fd = fuente("mb", 28)
+    fs = ajustar(sub, "b", 26, 520, peso="Light Condensed") if sub else None
+    W, H = 600, 330
+
+    def fn(dt, dur, marcas):
+        im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        a = 255 * min(_eo(dt / .25), max(0.0, (dur - dt) / .3))
+        cx, cy = W / 2, 200 + 8 * math.sin(dt * 3.2)
+        r = 30 * _reb(dt / .45)
+        for k in range(4, 0, -1):                                # halo
+            rr = r + k * 7 + 6 * ((dt * 1.6) % 1)
+            d.polygon([(cx, cy - rr), (cx + rr, cy), (cx, cy + rr), (cx - rr, cy)], outline=AMBAR + (int(a * .12 * k),), width=2)
+        d.polygon([(cx, cy - r), (cx + r, cy), (cx, cy + r), (cx - r, cy)], fill=AMBAR + (int(a),))
+        d.polygon([(cx, cy - r * .5), (cx + r * .5, cy), (cx, cy + r * .5), (cx - r * .5, cy)], fill=OSCURO + (int(a),))
+        _txt(d, (cx, cy - 78), nombre.upper(), fn_, BLANCO, "mm", a, track=1)
+        m = max(0, int(round(metros * (1 - _eo(dt / max(.5, dur * .75))))))
+        _txt(d, (cx, cy + 58), f"{m} m", fd, AMBAR, "mm", a)
+        if fs:
+            _txt(d, (cx, cy + 96), sub, fs, HUESO, "mm", a * .9)
+        return _bgra(im, 1.0)
+    return fn
+
+
+def contador(valor, unidad="", titulo="", desde=0, decimales=0, w=760):
+    """Cifra GRANDE que rueda de `desde` a `valor` (19 AÑOS, 0,5 S, 2007…) con el título en mono encima y la unidad en
+    ámbar; panel de cristal con escuadras. La cifra se asienta con un pequeño rebote."""
+    h = 250
+    ft = fuente("mb", 26)
+    fv = fuente("b", 150, "Bold Condensed")
+    fu = fuente("b", 64, "SemiBold Condensed")
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.6)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220 * _eo(dt / .3))
+        if titulo:
+            vis = titulo.upper()[:int(max(0, (dt - .05) * 60))]
+            _txt(d, (M + w / 2, M + 36), vis, ft, AMBAR, "mm", 255, track=3)
+        k = _eo((dt - .15) / .9)
+        v = desde + (valor - desde) * k
+        s = f"{v:.{decimales}f}".replace(".", ",")
+        sc = 1 + .12 * max(0.0, 1 - abs(dt - 1.05) / .18) if k >= 1 else 1.0
+        f = fuente("b", int(150 * sc), "Bold Condensed")
+        anchov = d.textlength(s, font=f)
+        anchou = d.textlength(" " + unidad, font=fu) if unidad else 0
+        x0 = M + (w - anchov - anchou) / 2
+        _txt(d, (x0, M + 150), s, f, BLANCO, "lm", 255)
+        if unidad:
+            _txt(d, (x0 + anchov + d.textlength(" ", font=fu), M + 168), unidad, fu, AMBAR, "lm", 255 * _eo((dt - .3) / .3))
+        return _salida(im, dt, dur)
+    return fn

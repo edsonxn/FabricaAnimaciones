@@ -24,6 +24,11 @@ WIKI = {
     "infinity_ward": "Infinity Ward", "activision": "Activision",
     "stephen_barton": "Stephen Barton", "gregson_williams": "Harry Gregson-Williams", "mads": "Mads Mikkelsen",
     "invader": "Invader (artist)",
+    # 3-nov-2026: más pegatinas para llenar los tramos vacíos (el usuario: «faltan animaciones y pegatinas»)
+    "gta6": "Grand Theft Auto VI", "pitfall": "Pitfall!", "famas": "FAMAS", "pripyat": "Pripyat", "impresora3d": "3D printing",
+    "fideos": "Instant noodles", "pato_goma": "Rubber duck", "spiderman": "Spider-Man", "reddit": "Reddit", "mumbai": "Mumbai",
+    "nueva_york": "New York City", "paris": "Paris", "pyongyang": "Pyongyang", "corea_norte_mapa": "North Korea",
+    "matrix": "The Matrix", "humo": "Smoke grenade", "zombies_cod": "Call of Duty: Zombies",
 }
 # slug: página de callofduty.fandom.com
 FANDOM = {
@@ -31,6 +36,14 @@ FANDOM = {
     "graves": "Phillip Graves", "laswell": "Kate Laswell", "shepherd": "Herschel Shepherd", "zakhaev": "Imran Zakhaev",
     "macmillan": "MacMillan", "riley_perro": "Riley", "griffin": "Griffin", "wallcroft": "Wallcroft",
     "mystery_box": "Mystery Box", "press_f": "Press F to Pay Respects", "war_pig": "War Pig",
+    # 3-nov-2026: pantallas de misión de MW4 (pageimage = SelectScreen), personajes, armas y mapas
+    "m_atrapados": "Stranded", "m_huida": "Escape (Modern Warfare 4)", "m_trafico": "Traffic (Modern Warfare 4)",
+    "m_ordenes": "Following Orders", "m_contraataque": "Counter Attack", "m_hiredgun": "Hired Gun", "m_decap": "Decapitation",
+    "m_final": "Greater Good", "m_nuevayork": "Out in the Cold", "m_bombay": "Gone Dark", "m_mayhem": "Mayhem (level)",
+    "dunn": "Joseph Dunn", "ri": "Ri Ju-Young", "lider": "Ri Seung-Ho", "chow": "Cho \"Chow\" Han", "arquero": "The Archer",
+    "patriot": "Patriot XMR", "cachette": "Cachette", "hajin_logo": "Hajin (map)", "dmz": "DMZ/Modern Warfare 4",
+    "mw4_key": "Call of Duty: Modern Warfare 4", "war_pig_tanque": "War Pig (tank)", "jackson": "Paul Jackson", "ak74u": "AK-74u",
+    "chapas": "Dog Tags", "ost_cod4": "War Pig (soundtrack)", "park": "Park Hyun-Jun", "shaw": "Shaw (Modern Warfare 4)",
 }
 
 

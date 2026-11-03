@@ -80,10 +80,13 @@ LYRIA = None   # canal de videojuego: OST oficial de MW4 (Stephen Barton / Jason
 ESCENAS = [
     {"id": "intro", "pre": 0.3, "frases": [
         "[serious] Expediente ciento cuarenta y uno. Clasificación: secreto. Asunto: Modern Warfare 4.",
-        "Le disparas a un cuadro en Corea del Norte, y tu propio compañero te ejecuta.",
+        # 3-nov-2026 (el usuario: «el gancho se siente vacío»): cada frase nombra algo que SE VE (pegatina, MG o clip cada 2-3 s)
+        "Un pato de goma armado con un cuchillo. Un bol de fideos que te activa el sentido arácnido. Y una impresora 3D que escupe armas.",
+        "Le disparas al retrato del Líder Supremo en Corea del Norte, y tu propio compañero te ejecuta.",
         "Te asomas a una tele en Nueva York, y alguien está jugando GTA seis. [deadpan] Sí. Antes que tú.",
-        "Infinity Ward escondió todo esto en el último capítulo de la saga, que salió hace apenas unas semanas.",
-        "Hoy abrimos veinticinco secretos. Todos comprobados, y con sus fuentes en la descripción.",
+        "Price, Ghost, Gaz, y hasta Soap, que ni siquiera sale en el juego: todos esconden algo.",
+        "Infinity Ward lo metió todo en el último capítulo de la saga, que salió el veintitrés de octubre.",
+        "Veinticinco secretos. Todos comprobados, con sus fuentes en la descripción.",
         "Y el número uno no se ve. Se oye. [short pause] Así que quédate hasta el final, soldado.",
     ]},
     {"id": "p25", "frases": [
@@ -275,5 +278,5 @@ ESCENAS = [
 
 # Nombres que Whisper escribe distinto (GTA VI, Hadgen, Warcroft, McTavish, Cachet, Mugs1213, Shepard, Rhee, Pripyat, Gas): la voz
 # está bien; se aceptan con CER mayor. Revisadas al oído las que no (p20_0, p02_0, p01_0, p02c_0 se regeneraron).
-CER_MAX_POR_FRASE = {k: 0.10 for k in ("intro_2", "p23_1", "p17_3", "p15_1", "p11_1", "p11_2", "p10_0", "p10_1", "p10_3",
+CER_MAX_POR_FRASE = {k: 0.10 for k in ("intro_3", "p23_1", "p17_3", "p15_1", "p11_1", "p11_2", "p10_0", "p10_1", "p10_3",
                                          "p09_2", "p07_0", "p05_0", "p04_0", "p04_2", "p02_1", "p02b_1", "p02c_3", "p02_0")}

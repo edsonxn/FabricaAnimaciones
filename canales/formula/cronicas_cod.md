@@ -19,3 +19,4 @@
 - **Frecuencia y hora (provisional):** ciclo 3 días, 18:00 CDMX; se ajusta con datos tras los primeros 3 videos.
 - **Nombre y voz (2-nov):** «Expediente 141» (@Expediente141); voz Damián de ElevenLabs (`BPwS5yO6aXvwg8auqNwS`), tono de sargento. **Pendiente:** kit de interfaz de CoD (`nucleo/mg_cod.py`).
 - **A vigilar:** % visto ≥ 35 y vistas/día de los primeros 3 largos; qué eje gana (secretos vs personajes).
+- **Lección del 1.er video (3-nov, corrección del usuario):** el guion se escribe para INVOCAR IMAGEN (cada frase nombra algo visible) y el gancho del primer minuto va saturado de MG y pegatinas (elemento nuevo cada 2-3 s, cortes rápidos con otros clips). Ningún tramo > 4 s con el clip solo; meta ≥ 5 MG y ≥ 5 pegatinas/min. Detalle: `docs/estilo_secuencia_yt.md` § REGLA DE ORO «SIN TRAMOS VACÍOS».

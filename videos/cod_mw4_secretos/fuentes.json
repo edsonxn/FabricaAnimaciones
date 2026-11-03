@@ -2000,13 +2000,6 @@
    }
   ]
  },
- "scene-001": {
-  "video": "jLbst85USN8",
-  "desde": 39.2,
-  "titulo": "Call of Duty: Modern Warfare 4 | Reveal Trailer",
-  "canal": "Call of Duty and InfinityWard",
-  "q": "Modern Warfare 4 reveal trailer Call of Duty Modern Warfare 4"
- },
  "scene-004": {
   "video": "DJ3FVsFzT10",
   "desde": 5004.9,
@@ -2034,13 +2027,6 @@
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
- },
- "scene-005": {
-  "video": "fl0DKIJV030",
-  "desde": 999.4,
-  "titulo": "CALL OF DUTY MODERN WARFARE 4 Campaign Gameplay Walkthrough FULL DEMO (4K 60FPS) No Commentary",
-  "canal": "Shirrako",
-  "q": "Out in the Cold mission no commentary Call of Duty Modern Warfare 4"
  },
  "_rechazados": {
   "scene-002": [
@@ -2080,6 +2066,12 @@
   ],
   "scene-066": [
    "PijkhLoNBiI"
+  ],
+  "scene-001": [
+   "jLbst85USN8"
+  ],
+  "scene-005": [
+   "fl0DKIJV030"
   ]
  },
  "scene-002": {
@@ -2855,6 +2847,20 @@
  "scene-066": {
   "video": "DZBpDJ2I0T0",
   "desde": 1758.3,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-001": {
+  "video": "jLbst85USN8",
+  "desde": 39.2,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-005": {
+  "video": "fl0DKIJV030",
+  "desde": 999.4,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""

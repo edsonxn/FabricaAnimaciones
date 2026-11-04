@@ -8,8 +8,8 @@ avisos, fichas y pegatinas del kit de Tamriel, no un estilo genérico). Voz por 
 es-MX), nada de ElevenLabs para no gastar créditos.
 
 ```
-python fab.py envivo [canal] [--tema "…"] [--modelo haiku|sonnet] [--voz Raul] [--abrir]
-  pantalla (OBS: fuente de navegador, ?auto=1): http://127.0.0.1:8790/     control: http://127.0.0.1:8790/control
+python fab.py envivo [canal] [--tema "…"] [--modelo sonnet|haiku] [--voz Raul] [--cada-min 3] [--chat-youtube <id>] [--abrir]
+  pantalla (OBS: fuente de navegador): http://127.0.0.1:8790/?auto=1     panel: http://127.0.0.1:8790/admin   (simple: /control)
 ```
 En el panel de vista previa: `.claude/launch.json` → «envivo».
 
@@ -50,10 +50,59 @@ precargado viejo pasa a relleno, el viejo sigue sonando sin hueco y el nuevo ent
   (Paarthurnax en Alto Hrothgar; «en Skyrim no se pueden domar dragones», cuando Dragonborn deja montarlos; Numinex/Numidium)
   y se despedía a mitad del directo. → **sonnet por defecto**, haiku de respaldo. Ojo: gasta más plan (~1 llamada por bloque).
 
+## Costos (medido el 4-nov-2026 con `claude -p --output-format json`)
+Todo corre con la **suscripción MAX** (`claude -p`): no hay factura aparte, pero cada llamada gasta del límite semanal del
+plan. La cifra en US$ es lo que costaría lo mismo pagado por API (sirve para comparar y para vigilar el plan).
+
+| Pieza | Qué usa | Por llamada (medido) | Por hora de directo |
+|---|---|---|---|
+| Guion de bloque (6 frases, ~45 s de voz) | sonnet | 13-16 s · ~0,065 US$ (≈ 14 000 tokens de entrada fijos del CLI + ~2 000 del guion; ~1 000 de salida) | ~80-90 llamadas ≈ **5,2-5,9 US$** |
+| Respuesta al chat (1-2 comentarios) | sonnet | 12-14 s · ~0,063 US$ | chat moderado ~15 ≈ **0,9 US$**; muy activo ~40 ≈ 2,5 US$ |
+| Clasificar comentarios (tanda de hasta 25) | haiku | 6-10 s · ~0,0025 US$ | moderado ~60 tandas ≈ **0,15 US$**; muy activo ~360 ≈ 0,9 US$ |
+| (alternativa) guion con haiku | haiku | 26-28 s · ~0,005 US$ | ≈ 0,45 US$, pero lore flojo (ver «Medido») |
+| Voz | Windows OneCore Raúl | 0 | **0** |
+| Imágenes y clips | disco del canal + wiki Fandom | 0 | **0** |
+| Chat de YouTube (`--chat-youtube`) | API de YouTube (cuota gratis de 10 000 u./día) | 5 unidades por lectura | 0 US$ · ~1 200 u./h (≈ 8 h al día) |
+| ElevenLabs, Flow, Lyria | no se usan | 0 | **0** |
+
+**Total equivalente:** con sonnet ≈ **6-8 US$ por hora** de directo (casi todo es el guion); con haiku ≈ 0,6-1,5 US$/h.
+En dinero real: **0** extra; el gasto es límite del plan MAX. Medir en la primera prueba de 1 h con `get_usage` (antes y
+después) cuánto % semanal se come una hora.
+Para bajarlo: cada llamada cuesta casi lo mismo pase lo que pase (~14 000 tokens fijos del CLI; `--system-prompt` corto
+apenas lo baja: 0,071 → 0,065), así que **bloques más largos = menos llamadas** (10 frases ≈ −40 % por minuto). Lo que
+no conviene: más guionistas en paralelo de los necesarios ni subir el búfer (los cambios de tema tiran bloques ya pagados).
+
+## Chat y panel de administración (el usuario, 4-nov-2026, tarde)
+«Que la IA interactúe con los comentarios… cada pocos minutos vea lo que más se pide (del tema; lo que no, se descarta) y
+cambie el tema; que muestre en pantalla los que considere buenos; un panel para ver los comentarios en tiempo real,
+proponer tema y comentar como espectador.»
+- **Panel `/admin`** (lo abre `--abrir`): chat en vivo con la etiqueta de la IA por comentario (pedido · pregunta ·
+  agradecimiento · crítica · comentario · fuera · spam · tóxico, el tema normalizado y la nota), botones por comentario
+  (mostrar · fijar · que lo conteste · ocultar), caja para **comentar como espectador** con votos rápidos 1/2/3 y una
+  **ráfaga de prueba** (8 comentarios variados), pantalla espejo (`/?monitor=1`: sigue lo que está al aire sin pedir bloques
+  ni sonar), tema (cambiar ya / proponer para el próximo corte), **cuenta atrás del corte**, ranking de lo más pedido,
+  cada cuántos minutos y mínimo de pedidos, votación, pausa, guionista y registro.
+- `chat.py`: los comentarios entran por `POST /api/comentario` (panel) o por `FuenteYouTube` (`--chat-youtube <id del
+  video>`, APAGADA por defecto: `liveChatMessages.list` = 5 unidades, mínimo 15 s entre lecturas ≈ 1 200 u./h, tope 6 000).
+  «1/2/3» con la votación activa = voto directo. Un hilo clasifica en tandas con **haiku** (~5-8 s por tanda). Cada
+  `--cada-min` (3 por defecto) se cuenta la ventana: si un tema llega al mínimo de pedidos (2), cambia el tema
+  (origen «chat», conserva 1 bloque) y **el puente nombra a quienes lo pidieron**; si no, manda la propuesta del panel o sigue.
+- **Respuestas al chat:** un guionista extra escribe un bloque corto `r###` (1-2 comentarios + 1 frase de vuelta al tema,
+  8-17 s) que se cuela al frente de la cola: suena justo después del bloque al aire. Reglas de CLAUDE.md § COMENTARIOS:
+  agradecer y recordar que se leen todos; crítica exagerada = burla disfrazada (del comentario, nunca de la persona); los
+  pedidos no se contestan uno a uno. Un cambio de tema NO tira las respuestas ya escritas.
+- **Pantalla:** el comentario que contesta la voz sale como tarjeta tipo YouTube oscuro (como `comentarios.tarjeta`) con
+  rótulo del kit («PREGUNTA DEL CHAT», «CRÍTICA DEL CHAT»…), a la izquierda; las pegatinas se van a la derecha. La IA enseña
+  sola los comentarios buenos (uno cada ≥ 20 s, 8 s, nunca encima de una ficha). Fijado = tarjeta chica bajo «EN VIVO».
+- **OBS:** fuente de navegador `http://127.0.0.1:8790/?auto=1`, 1920×1080, «Controlar audio vía OBS» activado. El panel va
+  en otro monitor o en el teléfono (misma red: cambiar `127.0.0.1` por la IP de la PC requeriría `--host 0.0.0.0`, pendiente).
+- Probado de punta a punta (4-nov): ráfaga → 5 contestados por su nombre en 8-17 s cada bloque → corte a los 1,5 min con 3
+  pedidos → «Gracias a @Kiara_Lore y @Ulfric_Fan por pedir el cambio…». Spam y GTA 6 descartados.
+  Lore: alguna respuesta mete un dato dudoso («nirnroot carmesí en cuevas de Cuarzo Rojo»; está en Blackreach): vigilar.
+
 ## En curso / pendiente
-1. Probarlo con el usuario (OBS: fuente de navegador `http://127.0.0.1:8790/?auto=1`, 1920×1080; control en `/control`).
-2. Directo de YouTube con votos del chat: leer el chat en vivo (`liveChatMessages.list` con el `liveChatId` del directo;
-   ojo, gasta cuota) y contar «1/2/3» → `d.votar()`. Anotado en `docs/ideas_guardadas.md`.
+1. Probarlo con el usuario: `python fab.py envivo --abrir` (pantalla OBS `:8790/?auto=1` + panel `:8790/admin`).
+2. Directo de YouTube real: la lectura del chat ya está escrita (`--chat-youtube <id>`) pero sin probar contra un directo.
 3. Los subtemas en paralelo a veces se pisan (dos bloques sobre Numinex): el prompt ya pide personajes que no salgan en el
    bloque; vigilar.
 4. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.

@@ -44,6 +44,10 @@ let vidCur = 0, vidAlpha = [1, 0], vidFade = null, vidClip = ["", ""], vidPrep =
 let pegatinas = [], aviso = null, ficha = null, temaBar = { txt: "", t0: 0 };
 let estado = { votacion: false, opciones: [], votos: {} };
 let nPeg = Math.floor(Math.random() * 8), anuncioVisto = Date.now() / 1000;
+// comentarios del chat: «carta» grande (la que contesta la voz, o la que enseña la IA / el panel) y la fijada
+let carta = null, cartaSale = null, cartaPend = null, cartaVista = "";
+// ?monitor=1: espejo para el panel /admin; no pide bloques ni suena (sigue lo que está al aire en la pantalla de OBS)
+const MONITOR = new URLSearchParams(location.search).has("monitor");
 const cacheImg = new Map();
 
 // ---------------- texto al estilo mg_tes._texto: sombra dura 2 px + espaciado ----------------
@@ -112,7 +116,7 @@ async function pedirSiguiente() {
 }
 function precargar(s) {
   for (const f of s.frases) {
-    if (f.audio) { f._audio = new Audio(f.audio); f._audio.preload = "auto"; }
+    if (f.audio && !MONITOR) { f._audio = new Audio(f.audio); f._audio.preload = "auto"; }
     if (f.peg) { f.peg.estilo = elegirEstilo(f.peg); pegatinaLista(f.peg); }
   }
 }
@@ -258,7 +262,7 @@ function empezarBloque() {
   enPuente = false;
   seg = siguiente; siguiente = null; idx = -1;
   if (vigente(seg)) relleno = null;
-  if (seg.puente) ponerAviso(seg.origen === "votación" ? "El chat decidió" : "Nuevo tema", seg.tema, 4.5, SANGRE);
+  if (seg.puente) ponerAviso(seg.origen === "votación" ? "El chat decidió" : seg.origen === "chat" ? "Lo pidió el chat" : "Nuevo tema", seg.tema, 4.5, SANGRE);
   else ponerAviso("En vivo · " + (seg.tema || ""), seg.titulo, 3.8);
   if (temaBar.txt !== seg.tema) temaBar = { txt: seg.tema, t0: ahora() };
   siguienteFrase();
@@ -267,16 +271,18 @@ const vigente = s => !s || s.conservado || (s.ver || 0) >= (estado.tema_ver || 0
 function guardarRelleno() { if (siguiente && !vigente(siguiente)) { if (!relleno) relleno = siguiente; siguiente = null; } }
 function siguienteFrase() {
   clearTimeout(finFraseTimer);
-  guardarRelleno();
+  if (!MONITOR) guardarRelleno();
   if (seg && siguiente && (siguiente.ver || 0) > (seg.ver || 0)) return empezarBloque();   // ya está el bloque del tema nuevo
   idx++;
   if (!seg || idx >= seg.frases.length) {
+    if (MONITOR) return;
     if (!siguiente && relleno) { siguiente = relleno; relleno = null; }   // aún no está el tema nuevo: sigue el viejo
     if (siguiente) return empezarBloque();
     enPuente = true; pedirSiguiente(); return;
   }
   const f = seg.frases[idx];
-  fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: seg.id, frase: idx }) }).catch(() => {});
+  if (f.com) ponerCarta(f.com, (f.dur || 5) + 0.6, true);              // la voz contesta este comentario: sale en pantalla
+  if (!MONITOR) fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: seg.id, frase: idx }) }).catch(() => {});
   // ficha de inventario (arriba a la derecha)
   if (ficha) ficha.tOut = ahora();
   const fichaNueva = f.ficha ? { ...f.ficha, t0: ahora() + 0.3, tOut: null } : null;
@@ -290,11 +296,13 @@ function siguienteFrase() {
       let L = f.peg.estilo === "grande" ? { x: nLugar % 2 ? 0.76 : 0.24, y: 1.0, h: 0.92, grande: true } : LUGARES[nLugar % LUGARES.length];
       nLugar++;
       if ((f.ficha || estado.votacion) && L.x > 0.5) L = { ...L, x: 1 - L.x };   // no encima de la ficha ni de la votación
+      if ((f.com || cartaVisible()) && L.x < 0.5) L = { ...L, x: 1 - L.x };          // ni encima del comentario del chat
       pegatinas.push({ url: f.peg.url, o: pegatinaLista(f.peg), L, t0: ahora(), tOut: null, rot: L.grande ? 0 : rnd(-6, 6), lado: L.x > 0.5 ? 1 : -1, fase: rnd(0, 6), nombre: (f.peg.nombre || "").toUpperCase() });
     }
   }
   if (f.rotulo) ponerAviso(seg.tema, f.rotulo, Math.max(3.2, (f.dur || 4) - 0.4));
   if (f.clip) ponerClip(f.clip);
+  if (MONITOR) return;                                                  // el espejo no suena ni lleva el reloj
   // voz
   const dur = f.dur || 4;
   audio = f._audio || (f.audio ? new Audio(f.audio) : null);
@@ -324,14 +332,20 @@ async function leerEstado() {
   try { estado = await (await fetch("/api/estado")).json(); } catch (e) {}
   // cambio de tema: lo precargado del tema viejo pasa a relleno (suena si el nuevo aún no está) y se pide ya el nuevo;
   // en cuanto llega, se salta a él en el próximo cambio de frase
-  guardarRelleno();
-  if (arrancado && seg && (seg.ver || 0) < (estado.tema_ver || 0) && !siguiente) pedirSiguiente();
+  if (!MONITOR) {
+    guardarRelleno();
+    if (arrancado && seg && (seg.ver || 0) < (estado.tema_ver || 0) && !siguiente) pedirSiguiente();
+  } else espejo();
+  const cm = estado.com_mostrar;                      // comentario que enseña la IA o el panel
+  if (cm && cm.id + cm.t !== cartaVista) { cartaVista = cm.id + cm.t; if (Date.now() / 1000 - cm.t < 30) cartaPend = cm; }
+  if (!cm && carta && !carta.voz) quitarCarta();
   const an = estado.anuncio;
   if (an && an.t > anuncioVisto) {
     if (an.origen === "votación") ponerAviso("El chat eligió · en un momento", an.tema, 5, SANGRE);
+    if (an.origen === "chat") ponerAviso("El chat lo pidió · en un momento", an.tema, 5, SANGRE);
     anuncioVisto = an.t;
   }
-  setTimeout(leerEstado, 1500);
+  setTimeout(leerEstado, MONITOR ? 600 : 1500);
 }
 
 // ---------------- dibujo ----------------
@@ -474,6 +488,84 @@ function dibujarHUD(t) {
   }
 }
 
+// ---------------- espejo del panel ----------------
+let espejoPidiendo = false;
+async function espejo() {
+  const a = estado.al_aire;
+  if (!a || espejoPidiendo) return;
+  if (!seg || seg.id !== a.id) {
+    espejoPidiendo = true;
+    try { const r = await fetch("/api/bloque/" + a.id); if (r.ok) { const b = await r.json(); precargar(b); seg = b; idx = -1; temaBar.txt !== b.tema && (temaBar = { txt: b.tema, t0: ahora() }); } }
+    catch (e) {} finally { espejoPidiendo = false; }
+    if (!seg || seg.id !== a.id) return;
+  }
+  if (a.idx >= 0 && a.idx !== idx) { idx = a.idx - 1; siguienteFrase(); }
+}
+
+// ---------------- comentarios del chat en pantalla (tarjeta tipo YouTube oscuro, como comentarios.tarjeta) ----------------
+const ETI_COM = { pregunta: "PREGUNTA DEL CHAT", agradecimiento: "EL CHAT DICE", critica: "CRÍTICA DEL CHAT", pedido: "EL CHAT PIDE" };
+function ponerCarta(c, dur, voz = false) {
+  if (carta && carta.c.id === c.id) { carta.dur = Math.max(carta.dur, ahora() - carta.t0 + dur); carta.voz = carta.voz || voz; return; }
+  if (carta) cartaSale = { ...carta, tOut: ahora() };
+  carta = { c, t0: ahora(), dur, voz };
+}
+function quitarCarta() { if (carta) { cartaSale = { ...carta, tOut: ahora() }; carta = null; } }
+function cartaVisible() { return !!carta && ahora() - carta.t0 < carta.dur; }
+function colorAutor(n) { let h = 0; for (const ch of n) h = (h * 31 + ch.charCodeAt(0)) % 360; return `hsl(${h},45%,42%)`; }
+function partirLineas(s, font, ancho, max) {
+  ctx.save(); ctx.font = font;
+  const out = []; let act = "";
+  for (const w of s.split(/\s+/)) {
+    const prueba = act ? act + " " + w : w;
+    if (ctx.measureText(prueba).width > ancho && act) { out.push(act); act = w; } else act = prueba;
+  }
+  if (act) out.push(act);
+  ctx.restore();
+  if (out.length > max) { out.length = max; out[max - 1] = out[max - 1].replace(/[\s.,;]+$/, "") + "…"; }
+  return out;
+}
+function tarjetaCom(c, x, y, ancho, a, k = 1) {          // k = escala (la fijada va más chica)
+  const fT = `400 ${36 * k}px "Segoe UI", Roboto, sans-serif`, fN = `600 ${32 * k}px "Segoe UI", Roboto, sans-serif`;
+  const av = 84 * k, pad = 30 * k, tx = x + pad + av + 24 * k, lin = partirLineas(c.texto || "", fT, ancho - (tx - x) - pad, k < 1 ? 2 : 4);
+  const h = pad * 2 + 46 * k + lin.length * 48 * k;
+  ctx.save(); ctx.globalAlpha = a;
+  ctx.shadowColor = "rgba(0,0,0,0.6)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 10;
+  ctx.fillStyle = "rgba(15,15,15,0.9)"; ctx.beginPath(); ctx.roundRect(x, y, ancho, h, 26 * k); ctx.fill();
+  ctx.shadowColor = "transparent"; ctx.strokeStyle = "rgba(255,255,255,0.16)"; ctx.lineWidth = 2; ctx.stroke();
+  ctx.fillStyle = colorAutor(c.autor || "?"); ctx.beginPath(); ctx.arc(x + pad + av / 2, y + pad + av / 2, av / 2, 0, 7); ctx.fill();
+  ctx.fillStyle = "#fff"; ctx.font = `600 ${42 * k}px "Segoe UI", sans-serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+  ctx.fillText((c.autor || "?").replace(/^@/, "").charAt(0).toUpperCase(), x + pad + av / 2, y + pad + av / 2 + 2);
+  ctx.textAlign = "left"; ctx.font = fN; ctx.fillStyle = "rgb(241,241,241)";
+  const nombre = "@" + (c.autor || "").replace(/^@/, ""); ctx.fillText(nombre, tx, y + pad + 18 * k);
+  ctx.font = `400 ${26 * k}px "Segoe UI", sans-serif`; ctx.fillStyle = "rgb(170,170,170)";
+  ctx.fillText("en el chat · ahora", tx + ctx.measureText(nombre).width * (32 / 26) + 18 * k, y + pad + 20 * k);
+  ctx.font = fT; ctx.fillStyle = "rgb(241,241,241)";
+  lin.forEach((l, i) => ctx.fillText(l, tx, y + pad + 70 * k + i * 48 * k));
+  ctx.restore();
+  return h;
+}
+function dibujarCarta(o, t) {
+  const dt = t - o.t0, sal = o.tOut ? ease((t - o.tOut) / 0.35) : 0;
+  if (sal >= 1) return false;
+  const a = ease(dt / 0.35) * (1 - sal), dx = (1 - pop(dt, 0.5)) * -120 - sal * 160;
+  const x = 60 + dx, y = H * (estado.com_fijado ? 0.42 : 0.30), ancho = 800;   // con un comentario fijado arriba, más abajo
+  dibujarHumo(x - 30, y - 90, ancho + 60, 120, a, 0.55);
+  texto(ETI_COM[o.c.tipo] || "DESDE EL CHAT", x + 8, y - 34, 600, 28, o.voz ? ORO : GRIS, "left", a, 6);
+  tarjetaCom(o.c, x, y, ancho, a);
+  return true;
+}
+function dibujarCartas(t) {
+  if (cartaPend && !(ficha && !ficha.tOut) && !(carta && carta.voz)) { ponerCarta(cartaPend, cartaPend.dur || 8); cartaPend = null; }
+  if (carta && t - carta.t0 > carta.dur) quitarCarta();
+  if (cartaSale && !dibujarCarta(cartaSale, t)) cartaSale = null;
+  if (carta) dibujarCarta(carta, t);
+  const fj = estado.com_fijado;                       // fijado desde el panel: chico, bajo el «EN VIVO»
+  if (fj) {
+    texto("FIJADO", 52, 158, 600, 22, ORO, "left", 1, 6);
+    tarjetaCom(fj, 40, 176, 560, 0.95, 0.66);
+  }
+}
+
 function dibujarPuente(t) {
   if (!enPuente && seg) return;
   ctx.save(); ctx.fillStyle = "rgba(4,4,6,0.55)"; ctx.fillRect(0, 0, W, H); ctx.restore();
@@ -501,10 +593,11 @@ function cuadro() {
   ctx.drawImage(vineta, 0, 0);
   dibujarPegatinas(t);
   dibujarFicha(t);
+  dibujarCartas(t);
   dibujarAviso(t);
   dibujarHUD(t);
   dibujarPuente(t);
-  if (ost) {                                          // la OST baja bajo la voz
+  if (ost && !MONITOR) {                              // la OST baja bajo la voz
     const habla = audio && !audio.paused && !audio.ended, meta = !arrancado ? 0 : habla ? 0.12 : 0.3;
     ostVol += (meta - ostVol) * 0.04; ost.volume = Math.max(0, Math.min(1, ostVol));
   }
@@ -516,12 +609,13 @@ async function arrancar() {
   if (arrancado) return; arrancado = true;
   document.getElementById("arranque").remove();
   try { await document.fonts.load(F(600, 40)); } catch (e) {}
+  if (MONITOR) return;
   arrancarOST();
   enPuente = true;
   pedirSiguiente();
 }
 document.getElementById("arranque").addEventListener("click", arrancar);
-if (new URLSearchParams(location.search).has("auto")) arrancar();
+if (new URLSearchParams(location.search).has("auto") || MONITOR) arrancar();
 document.fonts.load(F(600, 40)).catch(() => {});
 leerEstado();
 requestAnimationFrame(cuadro);

@@ -22,7 +22,7 @@ PROMPT = """Eres el guionista EN VIVO de un directo de YouTube del canal «{cana
 El directo no se acaba: cada vez escribes SOLO el siguiente bloque, que se narra justo después del anterior.
 
 TEMA ACTUAL: {tema}
-{transicion}{enfoque}
+{transicion}{enfoque}{chat}
 LO QUE YA SE DIJO EN EL DIRECTO (PROHIBIDO repetir datos, personajes u objetos de esta lista: cada bloque trae cosas NUEVAS
 del tema; continúa el hilo con lo siguiente):
 {historial}
@@ -48,8 +48,24 @@ Escribe el bloque siguiente en español latino:
 - "opciones": 3 temas cortos (máx. 6 palabras) para que el chat vote qué viene después, relacionados pero distintos.
 
 Responde SOLO con JSON válido, sin texto antes ni después (omite las claves que irían en null):
-{{"titulo": "título corto del bloque", "frases": [{{"texto": "...", "pegatina": null, "buscar": null, "clip": null, "etiqueta": null, "rotulo": null, "ficha": null}}],
+{{"titulo": "título corto del bloque", "frases": [{{"texto": "...", "pegatina": null, "buscar": null, "clip": null, "etiqueta": null, "rotulo": null, "ficha": null, "comentario": null}}],
  "resumen": "una línea con lo que se contó", "proximos": ["...", "..."], "opciones": ["...", "...", "..."]}}"""
+
+
+CHAT = """
+ESTE BLOQUE CONTESTA AL CHAT EN VIVO (comentarios reales de espectadores; nunca cambies ni inventes lo que dijeron):
+{lista}
+- Dedica UNA frase a cada comentario: nombra a la persona («Oye, Vane…» o «@Vane pregunta…», el nombre tal cual) y
+  contéstale de verdad. En esa frase pon "comentario": "<su id>" (el comentario sale en pantalla mientras lo dices) y no
+  pongas pegatina ni buscar en esa frase.
+- Agradecimiento: agradece con calidez y recuerda que todos los comentarios se leen y se toman en cuenta.
+- Pregunta: contéstala con un dato real de lore; si no lo sabes seguro, dilo de forma general.
+- NUNCA inventes lugares, objetos ni secretos para rellenar: la última frase usa algo REAL y conocido del juego.
+- Crítica exagerada o sin razón: contéstala con burla disfrazada, amable por fuera y con sarcasmo por debajo, para que el
+  chat se ría; búrlate del comentario, NUNCA de la persona (sin insultos ni nada personal). Crítica justa: reconócela.
+- Pedido de tema: di que se toma nota y que el chat decide cada pocos minutos.
+- La última frase vuelve al tema actual con naturalidad, con su imagen.
+"""
 
 
 def _claude():
@@ -57,19 +73,29 @@ def _claude():
 
 
 def escribir(cfg, tema, historial, catalogo, transicion_de=None, modelo="sonnet", n_frases=6, carpeta=None, vigente=None,
-             enfoque=None, paralelo=()):
+             enfoque=None, paralelo=(), comentarios=()):
     trans = ""
+    pedido_por = ()
+    if isinstance(transicion_de, tuple):
+        transicion_de, pedido_por = transicion_de
     if transicion_de:
         trans = (f"¡CAMBIO DE TEMA EN VIVO! Veníamos hablando de «{transicion_de}» y ahora toca «{tema}». "
                  "La primera frase hace el puente con naturalidad (el chat / quien dirige pidió el cambio) y luego entra de lleno al tema nuevo.\n")
+    if pedido_por:
+        trans += ("Este tema lo PIDIÓ EL CHAT: " + ", ".join("@" + a for a in pedido_por)
+                  + ". En la primera frase nómbralos (como mucho tres) y dales las gracias por pedirlo.\n")
     enf = ""
     if enfoque:
         enf = f"ESTE BLOQUE se centra en: {enfoque}. Enlázalo con naturalidad con lo anterior (sin anunciar «ahora toca»).\n"
     if paralelo:
         enf += "EN PARALELO otros guionistas escriben los bloques sobre: " + "; ".join(paralelo) + ". NO toques esos asuntos.\n"
+    chat = ""
+    if comentarios:
+        chat = (CHAT.format(lista="\n".join(f'- id {c["id"]} · @{c["autor"]} ({c.get("tipo") or "comentario"}): «{c["texto"]}»'
+                                              for c in comentarios), n=len(comentarios)))
     prompt = PROMPT.format(canal=cfg["nombre"], juego=cfg["juego"], estilo=cfg["estilo"], tema=tema, transicion=trans,
                            historial="\n".join(f"- {h}" for h in historial[-8:]) or "- (es el arranque del directo: saluda breve y entra al tema)",
-                           catalogo=catalogo, n_frases=n_frases, enfoque=enf)
+                           catalogo=catalogo, n_frases=n_frases, enfoque=enf, chat=chat)
     carpeta = carpeta or os.path.join(AQUI, "_sesiones", "_claude")
     os.makedirs(carpeta, exist_ok=True)
     mcp = os.path.join(carpeta, "mcp_vacio.json")

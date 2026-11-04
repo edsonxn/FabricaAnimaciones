@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel del directo</title>
+<style>
+  :root { --fondo: #14100b; --caja: #1f1810; --linea: #3a2d1c; --texto: #f2e6c8; --suave: #b5a37a; --oro: #e8c776; --rojo: #e5483c; --verde: #9be39b; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--fondo); color: var(--texto); font: 14px/1.4 system-ui, "Segoe UI", sans-serif; display: flex; flex-direction: column; }
+  header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--linea); flex-wrap: wrap; }
+  header h1 { font-size: 15px; margin: 0; display: flex; align-items: center; gap: 8px; letter-spacing: .05em; }
+  header h1 i { width: 10px; height: 10px; border-radius: 50%; background: var(--rojo); animation: p 1.2s infinite; }
+  @keyframes p { 50% { opacity: .3; } }
+  main { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(340px, 1fr) minmax(480px, 1.45fr) minmax(320px, .95fr); gap: 12px; padding: 12px; }
+  .col { min-height: 0; display: flex; flex-direction: column; gap: 10px; overflow: auto; }
+  .caja { background: var(--caja); border: 1px solid var(--linea); border-radius: 10px; padding: 10px 12px; }
+  .eti { color: var(--suave); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; display: flex; justify-content: space-between; gap: 8px; }
+  .tema { font-size: 17px; font-weight: 700; color: var(--oro); }
+  .frase { opacity: .9; margin-top: 6px; font-style: italic; min-height: 2.8em; }
+  form { display: flex; gap: 6px; }
+  input[type=text], input[type=number] { min-width: 0; background: #0e0b07; color: var(--texto); border: 1px solid var(--linea); border-radius: 8px; padding: 9px; font-size: 14px; }
+  input[type=text] { flex: 1; }
+  input[type=number] { width: 70px; }
+  button { background: var(--oro); color: #1a1209; border: 0; border-radius: 8px; padding: 8px 11px; font-weight: 700; cursor: pointer; font-size: 13px; white-space: nowrap; }
+  button.sec { background: #2c2216; color: var(--texto); border: 1px solid var(--linea); }
+  button.mini { padding: 3px 7px; font-size: 11px; font-weight: 600; background: #2c2216; color: var(--texto); border: 1px solid var(--linea); }
+  button.mini.on { background: var(--oro); color: #1a1209; }
+  button:active { transform: translateY(1px); }
+  .fila { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .chip { font-size: 12px; padding: 3px 8px; border-radius: 99px; background: #2c2216; color: var(--suave); }
+  .chip.ok { color: var(--verde); } .chip.mal { color: #ff9b8f; }
+  pre { margin: 0; white-space: pre-wrap; font: 11px/1.45 ui-monospace, Consolas, monospace; color: var(--suave); max-height: 220px; overflow: auto; }
+  label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  select { background: #0e0b07; color: var(--texto); border: 1px solid var(--linea); border-radius: 6px; padding: 4px; }
+  /* chat */
+  #chat { flex: 1; min-height: 240px; overflow: auto; display: flex; flex-direction: column; gap: 6px; padding-right: 4px; }
+  .com { border: 1px solid var(--linea); border-radius: 8px; padding: 7px 9px; background: #18120c; }
+  .com.oculto { opacity: .4; }
+  .com.descartado { opacity: .55; }
+  .com .cab { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 12px; }
+  .com .aut { font-weight: 700; color: var(--oro); }
+  .com .txt { margin: 3px 0 4px; font-size: 14px; word-wrap: break-word; }
+  .com .nota { font-size: 11px; color: var(--suave); }
+  .com .acc { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .t { font-size: 10px; padding: 1px 6px; border-radius: 99px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+  .t-pedido { background: #3d2f12; color: var(--oro); } .t-pregunta { background: #12303d; color: #8fd3f0; }
+  .t-agradecimiento { background: #173b19; color: var(--verde); } .t-critica { background: #3d1d12; color: #ffb38f; }
+  .t-comentario { background: #2c2216; color: var(--suave); } .t-voto { background: #2d1b3d; color: #d1a8ff; }
+  .t-fuera, .t-spam { background: #222; color: #999; } .t-toxico { background: #4a1010; color: #ff8f8f; }
+  .t-nuevo { background: transparent; border: 1px dashed var(--linea); color: var(--suave); }
+  .est { font-size: 10px; color: var(--suave); margin-left: auto; }
+  /* pantalla espejo */
+  .monitor { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; border: 1px solid var(--linea); }
+  .monitor iframe { position: absolute; top: 0; left: 0; width: 1920px; height: 1080px; border: 0; transform-origin: 0 0; }
+  .cuenta { font: 700 34px/1 system-ui, sans-serif; color: var(--oro); font-variant-numeric: tabular-nums; }
+  .rank { display: grid; gap: 5px; }
+  .rank div { display: grid; grid-template-columns: 1fr auto; gap: 6px; font-size: 13px; position: relative; padding: 3px 6px; border-radius: 6px; overflow: hidden; }
+  .rank div i { position: absolute; inset: 0 auto 0 0; background: rgba(232,199,118,.16); z-index: 0; }
+  .rank div span, .rank div b { position: relative; }
+  .ops { display: grid; gap: 6px; }
+  .op { display: flex; gap: 6px; align-items: center; } .op span { flex: 1; } .op b { color: var(--oro); min-width: 24px; text-align: right; }
+  @media (max-width: 1100px) {                        /* una columna (ventana estrecha o teléfono): todo en flujo normal */
+    html, body { height: auto; } main { display: flex; flex-direction: column; }
+    .col { overflow: visible; } .col > .caja { flex: none !important; } #chat { flex: none; height: 46vh; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1><i></i> PANEL DEL DIRECTO</h1>
+  <span id="canal" class="chip"></span>
+  <span class="chip" id="bufer"></span><span class="chip" id="estado"></span><span class="chip" id="tmedio"></span>
+  <span style="flex:1"></span>
+  <a class="chip" href="/?auto=1" target="_blank" style="text-decoration:none">pantalla para OBS ↗</a>
+  <a class="chip" href="/control" target="_blank" style="text-decoration:none">ventanita simple ↗</a>
+</header>
+<main>
+  <!-- 1 · CHAT -->
+  <section class="col">
+    <div class="caja" style="flex:1;display:flex;flex-direction:column;min-height:0">
+      <div class="eti"><span>Chat en vivo · etiqueta de la IA</span><span id="clasif"></span></div>
+      <div id="chat"></div>
+    </div>
+    <div class="caja">
+      <div class="eti">Comentar como espectador</div>
+      <form id="fc">
+        <input id="autor" type="text" placeholder="nombre" style="flex:0 0 120px" autocomplete="off">
+        <input id="texto" type="text" placeholder="escribe como si fueras del chat…" autocomplete="off">
+        <button>Enviar</button>
+      </form>
+      <div class="fila" style="margin-top:6px">
+        <button class="mini" data-voto="1">1</button><button class="mini" data-voto="2">2</button><button class="mini" data-voto="3">3</button>
+        <span class="chip">votos rápidos (cuentan si la votación está activa)</span>
+        <button class="sec" id="rafaga" style="margin-left:auto">Ráfaga de prueba</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · PANTALLA -->
+  <section class="col">
+    <div class="monitor" id="monitor"><iframe id="espejo" src="/?monitor=1" title="pantalla al aire"></iframe></div>
+    <div class="caja">
+      <div class="eti"><span>Al aire</span><span id="bloque"></span></div>
+      <div class="tema" id="tema">—</div>
+      <div class="frase" id="frase"></div>
+    </div>
+    <div class="caja">
+      <div class="eti">Tema</div>
+      <form id="ft"><input id="nuevo" type="text" placeholder="p. ej. Los dragones que no son de Alduin" autocomplete="off">
+        <button type="submit" name="ya">Cambiar ya</button><button type="button" class="sec" id="proponer">Proponer</button></form>
+      <div class="eti" style="margin-top:10px"><span>Sugerencias del bloque al aire (clic = cambiar ya)</span><span id="prop"></span></div>
+      <div class="ops" id="sug"></div>
+    </div>
+    <div class="caja"><div class="eti">Registro</div><pre id="log"></pre></div>
+  </section>
+
+  <!-- 3 · EL CHAT DECIDE -->
+  <section class="col">
+    <div class="caja">
+      <div class="eti">El chat decide el tema</div>
+      <div class="fila" style="justify-content:space-between">
+        <div><div class="cuenta" id="cuenta">--:--</div><div class="chip" style="margin-top:6px" id="cuentaEti">hasta el próximo corte</div></div>
+        <button id="decidir">Decidir ahora</button>
+      </div>
+      <div class="fila" style="margin-top:10px">
+        <label>cada <input type="number" id="cada" min="0.5" max="30" step="0.5"> min</label>
+        <label>mínimo <input type="number" id="minp" min="1" max="20" step="1"> pedidos</label>
+      </div>
+      <div class="eti" style="margin-top:10px">Lo más pedido en esta ventana</div>
+      <div class="rank" id="rank"></div>
+      <div class="eti" style="margin-top:10px">Últimas decisiones</div>
+      <pre id="decis" style="max-height:120px"></pre>
+    </div>
+    <div class="caja">
+      <div class="fila"><label><input type="checkbox" id="votacion"> Votación 1 / 2 / 3 en pantalla</label></div>
+      <div class="eti" style="margin-top:8px">Votos (los «1/2/3» del chat cuentan solos; gana al cerrar el bloque)</div>
+      <div class="ops" id="votos"></div>
+    </div>
+    <div class="caja">
+      <div class="eti">En pantalla</div>
+      <div class="fila"><span class="chip" id="enpant">—</span><button class="mini" id="quitar">quitar</button></div>
+      <div class="fila" style="margin-top:6px"><span class="chip" id="fijado">sin comentario fijado</span></div>
+    </div>
+    <div class="caja fila">
+      <button class="sec" id="pausa">Pausar producción</button>
+      <label>Guionista <select id="modelo"><option>sonnet</option><option>haiku</option></select></label>
+    </div>
+  </section>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const post = (u, b) => fetch(u, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(b) });
+let e = {}, ch = {}, alFondo = true;
+try { $("autor").value = localStorage.getItem("envivo_autor") || "Edson"; } catch (x) { $("autor").value = "Edson"; }
+
+// --- comentar como espectador
+function comentar(autor, texto) { return post("/api/comentario", { autor, texto }); }
+$("fc").onsubmit = ev => {
+  ev.preventDefault(); const a = $("autor").value.trim() || "Espectador", t = $("texto").value.trim();
+  if (!t) return; try { localStorage.setItem("envivo_autor", a); } catch (x) {}
+  comentar(a, t); $("texto").value = ""; alFondo = true;
+};
+document.querySelectorAll("[data-voto]").forEach(b => b.onclick = () => comentar($("autor").value.trim() || "Espectador", b.dataset.voto));
+const RAFAGA = [
+  ["Kiara_Lore", "hablen de los dragones de Skyrim porfa, los que no son de Alduin"],
+  ["DovahMex", "yo también quiero dragones!! Paarthurnax y Odahviing"],
+  ["Mauri_88", "¿Por qué Paarthurnax ayudó a los humanos si era dragón?"],
+  ["LaGordaDeSolitude", "gracias por estos directos, los veo mientras trabajo y son lo mejor"],
+  ["hater3000", "este narrador es peor que un draugr dormido, 0 emoción"],
+  ["PromoGamer", "sigan mi canal de free fire y gana premios www.promo.example"],
+  ["Ulfric_Fan", "dragones de skyrim ya!!!"],
+  ["Fede", "¿alguien sabe si va a salir GTA 6 este año?"],
+];
+$("rafaga").onclick = async () => { for (const [a, t] of RAFAGA) { await comentar(a, t); await new Promise(r => setTimeout(r, 350)); } alFondo = true; };
+
+// --- tema
+$("ft").onsubmit = ev => { ev.preventDefault(); const t = $("nuevo").value.trim(); if (t) { post("/api/tema", { tema: t }); $("nuevo").value = ""; } };
+$("proponer").onclick = () => { const t = $("nuevo").value.trim(); post("/api/chat/ajuste", { propuesta: t }); $("nuevo").value = ""; };
+$("decidir").onclick = () => post("/api/chat/ajuste", { decidir: true });
+$("cada").onchange = () => post("/api/chat/ajuste", { cada_min: +$("cada").value });
+$("minp").onchange = () => post("/api/chat/ajuste", { min_pedidos: +$("minp").value });
+$("votacion").onchange = () => post("/api/ajuste", { votacion: $("votacion").checked });
+$("pausa").onclick = () => post("/api/ajuste", { pausado: !e.pausado });
+$("modelo").onchange = () => post("/api/ajuste", { modelo: $("modelo").value });
+$("quitar").onclick = () => post("/api/chat/ajuste", { quitar_mostrar: true });
+
+function lista(cont, ops, boton, votos) {
+  const firma = JSON.stringify([ops, votos]);
+  if (cont.dataset.f === firma) return; cont.dataset.f = firma;
+  cont.innerHTML = "";
+  ops.forEach((o, i) => {
+    const d = document.createElement("div"); d.className = "op";
+    const s = document.createElement("span"); s.textContent = (votos ? (i + 1) + " · " : "") + o; d.appendChild(s);
+    if (votos) { const b = document.createElement("b"); b.textContent = votos[o] || 0; d.appendChild(b); }
+    const bt = document.createElement("button"); bt.className = "sec"; bt.textContent = boton; d.appendChild(bt);
+    bt.onclick = () => votos ? post("/api/votar", { opcion: o }) : post("/api/tema", { tema: o });
+    cont.appendChild(d);
+  });
+}
+
+// --- chat
+const ESTADOS = { nuevo: "", mostrado: "en pantalla", "en guion": "la IA lo contesta…", contestado: "contestado ✓", oculto: "oculto" };
+function pintarChat() {
+  const caja = $("chat"), firma = JSON.stringify([ch.comentarios, ch.fijado && ch.fijado.id]);
+  if (caja.dataset.f === firma) return; caja.dataset.f = firma;
+  const abajo = alFondo || caja.scrollHeight - caja.scrollTop - caja.clientHeight < 40;
+  caja.innerHTML = "";
+  for (const c of ch.comentarios || []) {
+    const d = document.createElement("div");
+    const malo = ["fuera", "spam", "toxico"].includes(c.tipo);
+    d.className = "com" + (c.estado === "oculto" ? " oculto" : malo ? " descartado" : "");
+    const cab = document.createElement("div"); cab.className = "cab";
+    const a = document.createElement("span"); a.className = "aut"; a.textContent = "@" + c.autor; cab.appendChild(a);
+    const t = document.createElement("span"); t.className = "t t-" + (c.tipo || "nuevo"); t.textContent = c.tipo || "leyendo…"; cab.appendChild(t);
+    if (c.tema) { const tm = document.createElement("span"); tm.className = "chip"; tm.textContent = "→ " + c.tema; cab.appendChild(tm); }
+    if (c.contestar && c.estado !== "contestado") { const k = document.createElement("span"); k.className = "chip ok"; k.textContent = "a contestar"; cab.appendChild(k); }
+    const es = document.createElement("span"); es.className = "est"; es.textContent = ESTADOS[c.estado] || c.estado; cab.appendChild(es);
+    d.appendChild(cab);
+    const tx = document.createElement("div"); tx.className = "txt"; tx.textContent = c.texto; d.appendChild(tx);
+    if (c.nota) { const n = document.createElement("div"); n.className = "nota"; n.textContent = "IA: " + c.nota; d.appendChild(n); }
+    if (c.tipo !== "voto") {
+      const acc = document.createElement("div"); acc.className = "acc";
+      for (const [que, txt] of [["mostrar", "mostrar"], ["fijar", ch.fijado && ch.fijado.id === c.id ? "desfijar" : "fijar"], ["contestar", "que lo conteste"], ["ocultar", "ocultar"]]) {
+        const b = document.createElement("button"); b.className = "mini" + (que === "fijar" && ch.fijado && ch.fijado.id === c.id ? " on" : "");
+        b.textContent = txt; b.onclick = () => post("/api/chat/accion", { id: c.id, que }); acc.appendChild(b);
+      }
+      d.appendChild(acc);
+    }
+    caja.appendChild(d);
+  }
+  if (abajo) caja.scrollTop = caja.scrollHeight;
+  alFondo = false;
+}
+function mmss(s) { s = Math.max(0, Math.round(s)); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); }
+function pintarDecide() {
+  $("cuenta").textContent = mmss(ch.proximo_corte - Date.now() / 1000);
+  if (document.activeElement !== $("cada")) $("cada").value = ch.cada_min;
+  if (document.activeElement !== $("minp")) $("minp").value = ch.min_pedidos;
+  const rk = ch.ranking || [], max = rk.length ? rk[0][1] : 1, r = $("rank");
+  const firma = JSON.stringify([rk, ch.min_pedidos]);
+  if (r.dataset.f !== firma) {
+    r.dataset.f = firma; r.innerHTML = rk.length ? "" : '<span class="chip">nadie ha pedido un tema todavía</span>';
+    for (const [tema, n] of rk) {
+      const d = document.createElement("div"), i = document.createElement("i"), s = document.createElement("span"), b = document.createElement("b");
+      i.style.width = (100 * n / max) + "%"; s.textContent = tema; b.textContent = n + (n >= ch.min_pedidos ? " ✓" : "");
+      d.append(i, s, b); r.appendChild(d);
+    }
+  }
+  $("cuentaEti").textContent = rk.length && rk[0][1] >= ch.min_pedidos ? `ganaría «${rk[0][0]}»` : ch.propuesta ? `si el chat no pide nada: «${ch.propuesta}»` : "hasta el próximo corte";
+  $("prop").textContent = ch.propuesta ? "propuesto: " + ch.propuesta : "";
+  $("decis").textContent = (ch.decisiones || []).slice().reverse().map(d => new Date(d.t * 1000).toTimeString().slice(0, 5) + "  " + (d.tema ? "→ " + d.tema + " (" + d.motivo + ")" : d.motivo)).join("\n");
+  $("clasif").textContent = ch.clasificando ? "la IA está leyendo…" : "";
+  $("enpant").textContent = ch.mostrar && Date.now() / 1000 - ch.mostrar.t < ch.mostrar.dur + 1 ? "@" + ch.mostrar.autor + ": " + ch.mostrar.texto.slice(0, 60) : "ningún comentario ahora";
+  $("fijado").textContent = ch.fijado ? "fijado: @" + ch.fijado.autor + ": " + ch.fijado.texto.slice(0, 50) : "sin comentario fijado";
+}
+
+async function leer() {
+  try {
+    [e, ch] = await Promise.all([fetch("/api/estado").then(r => r.json()), fetch("/api/chat").then(r => r.json())]);
+    $("canal").textContent = e.canal;
+    $("tema").textContent = e.al_aire ? e.al_aire.tema : e.tema;
+    if (e.al_aire && e.al_aire.tema !== e.tema) $("tema").textContent += "  →  " + e.tema;
+    $("frase").textContent = e.al_aire ? "«" + e.al_aire.frase + "»" : "esperando el primer bloque…";
+    $("bloque").textContent = e.al_aire ? e.al_aire.id + " · " + e.al_aire.titulo : "";
+    $("bufer").textContent = `búfer: ${e.bufer.length} bloque(s) · ${e.bufer_s} s`;
+    $("bufer").className = "chip " + (e.bufer.length ? "ok" : "mal");
+    $("estado").textContent = e.pausado ? "PAUSADO" : e.estado;
+    $("tmedio").textContent = e.tiempo_medio ? `≈ ${e.tiempo_medio} s por bloque` : "";
+    $("votacion").checked = e.votacion;
+    $("pausa").textContent = e.pausado ? "Reanudar producción" : "Pausar producción";
+    $("modelo").value = e.modelo;
+    lista($("sug"), e.opciones, "Ir", null);
+    lista($("votos"), e.opciones, "+1", e.votos);
+    $("log").textContent = e.log.slice().reverse().join("\n");
+    pintarChat(); pintarDecide();
+  } catch (err) { $("estado").textContent = "sin conexión"; }
+  setTimeout(leer, 1000);
+}
+function escalar() { const m = $("monitor"); $("espejo").style.transform = `scale(${m.clientWidth / 1920})`; }
+addEventListener("resize", escalar); escalar();
+leer();
+</script>
+</body>
+</html>

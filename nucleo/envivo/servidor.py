@@ -28,7 +28,7 @@ from flask import Flask, abort, jsonify, request, send_file, send_from_directory
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(AQUI))
-from envivo import director, voz                           # noqa: E402
+from envivo import chat as chat_mod, director, voz         # noqa: E402
 from envivo.biblioteca import CANALES, VIDEOS, Biblioteca  # noqa: E402
 
 BUFER = 2           # bloques listos por delante del que está al aire: más = menos riesgo de hueco, más tarda un cambio de tema
@@ -54,6 +54,10 @@ class Directo:
         self.tiempos = deque(maxlen=10)
         self.seq, self.en_curso, self.listos = 0, {}, {}
         self.enfoques, self.enfoques_ver, self.vers_abiertas = deque(), 0, set()
+        self.pedido_por = []              # autores del chat que pidieron el tema actual (para el puente)
+        self.en_resp = {}                 # bloques cortos que contestan al chat: van al frente de la cola
+        self.bloques = {}                 # id → bloque (para la pantalla espejo del panel)
+        self.chat = chat_mod.Chat(self)
         self._apunta(f"biblioteca: {len(self.bib.pegatinas)} pegatinas, {len(self.bib.clips)} clips, {len(self.bib.ost)} pistas de OST")
         threading.Thread(target=self._productor, daemon=True).start()
 
@@ -73,9 +77,12 @@ class Directo:
             for s in self.cola[:conservar]:
                 s["conservado"] = True                  # la pantalla no lo descarta aunque sea del tema viejo
             quedan = max(conservar, 1)
-            tirados = [s["id"] for s in self.cola[quedan:]]
+            # las respuestas al chat ya escritas se quedan (ya marcaron sus comentarios como contestados)
+            tirados = [s["id"] for s in self.cola[quedan:] if not s.get("respuesta")]
+            for s in self.cola[quedan:]:
+                s["conservado"] = s.get("conservado") or s.get("respuesta")
             self.historial = [h for h in self.historial if h[0] not in tirados]
-            del self.cola[quedan:]
+            self.cola[quedan:] = [s for s in self.cola[quedan:] if s.get("respuesta")]
             self.tema, self.tema_ver = tema, self.tema_ver + 1
             self.anuncio = {"tema": tema, "origen": origen, "t": time.time()}
             self.cv.notify_all()
@@ -111,14 +118,27 @@ class Directo:
     def _productor(self):
         while True:
             with self.cv:
-                while not self._puede_despachar():
+                while not (self._puede_despachar() or self._puede_responder()):
                     self.cv.wait(timeout=1)
                 tema, ver = self.tema, self.tema_ver
+                if self._puede_responder():
+                    coms = self.chat.para_contestar(2)
+                    if coms:
+                        self.seq += 1
+                        job = {"seq": self.seq, "tema": tema, "ver": ver, "enfoque": None, "t0": time.time(), "coms": coms}
+                        self.en_resp[self.seq] = job
+                        hist = [h[1] for h in self.historial]
+                        threading.Thread(target=self._responder, args=(job, hist), daemon=True).start()
+                        continue
+                    if not self._puede_despachar():
+                        continue
                 if self.enfoques_ver != ver:
                     self.enfoques, self.enfoques_ver = deque(), ver
                 primero = not any(j["ver"] == ver for j in self.en_curso.values()) and ver not in self.vers_abiertas
                 enfoque = self.enfoques.popleft() if self.enfoques else None
                 puente = self.ultimo_tema if primero and self.ultimo_tema and self.ultimo_tema != tema else None
+                if puente and self.anuncio and self.anuncio.get("origen") == "chat" and self.pedido_por:
+                    puente = (puente, self.pedido_por)
                 self.vers_abiertas.add(ver)
                 paralelo = [j["enfoque"] or j["tema"] for j in self.en_curso.values() if j["ver"] == ver]
                 hist = [h[1] for h in self.historial]
@@ -129,6 +149,39 @@ class Directo:
             # tras un cambio de tema, el primer bloque es corto: el giro llega antes
             n_frases = 4 if primero else 6
             threading.Thread(target=self._trabajo, args=(job, puente, hist, paralelo, n_frases), daemon=True).start()
+
+    def _puede_responder(self):
+        """Hay comentarios que contestar y ningún bloque de respuesta en marcha (y el directo ya arrancó)."""
+        return (not self.pausado and not self.en_resp and self.ultimo_tema is not None
+                and any(c["contestar"] and c["estado"] in ("nuevo", "mostrado") for c in self.chat.comentarios))
+
+    def _responder(self, job, hist):
+        """Bloque corto (2-3 frases) que contesta al chat y vuelve al tema; se cuela al frente de la cola."""
+        seg = None
+        try:
+            seg = self._producir(job["tema"], None, hist, job["ver"], n_frases=len(job["coms"]) + 1, sid=f"r{job['seq']:03d}",
+                                 comentarios=job["coms"])
+        except Exception as e:
+            self._apunta(f"error al contestar el chat: {e!r}")
+        with self.cv:
+            self.en_resp.pop(job["seq"], None)
+            if seg and seg["ver"] == self.tema_ver:
+                seg["titulo"], seg["respuesta"] = "Leyendo el chat", True
+                i = 0
+                while i < len(self.cola) and (self.cola[i].get("conservado") or self.cola[i].get("respuesta")):
+                    i += 1
+                self.cola.insert(i, seg)
+                self.bloques[seg["id"]] = seg
+                self._guardar(seg)
+                self._apunta(f"chat: contestados {', '.join('@' + c['autor'] for c in job['coms'])} en {seg['id']} "
+                             f"({time.time() - job['t0']:.0f} s; sale tras el bloque al aire)")
+            else:
+                self.chat.devolver(job["coms"])
+            self.cv.notify_all()
+
+    def _guardar(self, seg):
+        with open(os.path.join(self.carpeta, "guion.jsonl"), "a", encoding="utf-8") as f:
+            f.write(json.dumps(seg, ensure_ascii=False) + "\n")
 
     def _puede_despachar(self):
         if self.pausado or len(self.en_curso) >= GUIONISTAS:
@@ -175,20 +228,22 @@ class Directo:
                 self._apunta(f"bloque «{seg['titulo']}» descartado (cambió el tema mientras se escribía)")
                 continue
             self.cola.append(seg)
+            self.bloques[seg["id"]] = seg
+            for k in list(self.bloques)[:-40]:
+                del self.bloques[k]
             nombrado = ", ".join(dict.fromkeys((f["peg"] or {}).get("nombre", "") for f in seg["frases"] if f["peg"]))
             self.historial.append((seg["id"], f"[{seg['tema']}] {seg.get('resumen', '')} (ya enseñado: {nombrado})"))
             self.ultimo_tema = seg["tema"]
-            with open(os.path.join(self.carpeta, "guion.jsonl"), "a", encoding="utf-8") as f:
-                f.write(json.dumps(seg, ensure_ascii=False) + "\n")
+            self._guardar(seg)
 
-    def _producir(self, tema, puente, hist, ver=None, enfoque=None, paralelo=(), n_frases=6, sid="b000"):
+    def _producir(self, tema, puente, hist, ver=None, enfoque=None, paralelo=(), n_frases=6, sid="b000", comentarios=()):
         pegs, clips = self.bib.candidatos(tema + (" " + enfoque if enfoque else ""))
         catalogo = self.bib.texto_catalogo(pegs, clips)
         t0 = time.time()
         d, crudo = director.escribir(self.cfg, tema, hist, catalogo, transicion_de=puente, modelo=self.modelo,
                                      carpeta=os.path.join(AQUI, "_sesiones", "_claude"),
                                      vigente=lambda: ver is None or ver == self.tema_ver,
-                                     enfoque=enfoque, paralelo=paralelo, n_frases=n_frases)
+                                     enfoque=enfoque, paralelo=paralelo, n_frases=n_frases, comentarios=comentarios)
         if crudo == "cancelado":
             self._apunta("escritura cortada: cambió el tema")
             return None
@@ -197,6 +252,7 @@ class Directo:
             return None
         t_guion = time.time() - t0
         frases = d["frases"][:7]
+        coms = {c["id"]: c for c in comentarios}
         with cf.ThreadPoolExecutor(6) as ex:
             f_voz = ex.submit(voz.sintetizar, [f["texto"] for f in frases], self.carpeta, sid, self.voz, self.velocidad)
             f_web = {i: ex.submit(self.bib.buscar_web, f.get("buscar") or f.get("etiqueta"))     # respaldo: la etiqueta
@@ -222,13 +278,16 @@ class Directo:
             salida.append({"texto": f["texto"], "dur": dur, "audio": "/s/" + os.path.basename(wav) if wav else None,
                            "peg": peg, "clip": f"/cv/{clip}.mp4" if clip else None,
                            "rotulo": (f.get("rotulo") or None),
-                           "ficha": f["ficha"] if isinstance(f.get("ficha"), dict) and f["ficha"].get("nombre") else None})
+                           "ficha": f["ficha"] if isinstance(f.get("ficha"), dict) and f["ficha"].get("nombre") else None,
+                           "com": coms.get(f.get("comentario"))})   # el comentario sale en pantalla mientras la voz lo contesta
+            if f.get("comentario") in coms:
+                self.chat.contestado(f["comentario"])
             total += dur + 0.25
         self._apunta(f"{sid}: guion {t_guion:.0f} s · {sum(1 for s in salida if s['peg'])}/{len(salida)} con imagen")
         return {"id": sid, "tema": tema, "titulo": d.get("titulo") or tema, "resumen": d.get("resumen", ""),
                 "opciones": [o for o in d.get("opciones", []) if isinstance(o, str)][:3], "frases": salida,
                 "proximos": [o for o in d.get("proximos", []) if isinstance(o, str)][:2],
-                "dur": total, "puente": bool(puente), "ver": ver, "origen": (self.anuncio or {}).get("origen") if puente else None}
+                "dur": total, "puente": bool(puente), "ver": ver, "coms": list(comentarios), "origen": (self.anuncio or {}).get("origen") if puente else None}
 
     def estado_json(self):
         with self.cv:
@@ -237,7 +296,9 @@ class Directo:
                     "bufer_s": round(sum(s["dur"] for s in self.cola)), "estado": self.estado, "pausado": self.pausado,
                     "votacion": self.votacion, "opciones": self.opciones, "votos": self.votos,
                     "al_aire": {"id": al["id"], "titulo": al["titulo"], "tema": al["tema"],
+                                "idx": self.frase_al_aire,
                                 "frase": al["frases"][self.frase_al_aire]["texto"] if al and 0 <= self.frase_al_aire < len(al["frases"]) else ""} if al else None,
+                    "com_mostrar": self.chat.mostrar, "com_fijado": self.chat.fijado, "proximo_corte": self.chat.proximo_corte,
                     "tiempo_medio": round(sum(self.tiempos) / len(self.tiempos), 1) if self.tiempos else None,
                     "modelo": self.modelo, "anuncio": self.anuncio, "log": list(self.log)[-14:]}
 
@@ -252,6 +313,47 @@ def crear_app(d):
     @app.get("/control")
     def control():
         return send_from_directory(AQUI, "control.html")
+
+    @app.get("/admin")
+    def admin():
+        return send_from_directory(AQUI, "admin.html")
+
+    @app.post("/api/comentario")
+    def api_comentario():
+        j = request.get_json(silent=True) or {}
+        c = d.chat.recibir(j.get("autor"), j.get("texto"), "panel")
+        return jsonify(ok=bool(c), id=c and c["id"])
+
+    @app.get("/api/chat")
+    def api_chat():
+        return jsonify(d.chat.estado_json())
+
+    @app.post("/api/chat/accion")
+    def api_chat_accion():
+        j = request.get_json(silent=True) or {}
+        return jsonify(ok=d.chat.accion(j.get("id"), j.get("que")))
+
+    @app.post("/api/chat/ajuste")
+    def api_chat_ajuste():
+        j = request.get_json(silent=True) or {}
+        ch = d.chat
+        if "cada_min" in j:
+            ch.cada_min = max(0.5, min(30.0, float(j["cada_min"])))
+            ch.proximo_corte = min(ch.proximo_corte, time.time() + ch.cada_min * 60)
+        if "min_pedidos" in j:
+            ch.min_pedidos = max(1, int(j["min_pedidos"]))
+        if "propuesta" in j:
+            ch.propuesta = (j["propuesta"] or "").strip()[:120] or None
+        if j.get("decidir"):
+            ch.decidir_ya()
+        if j.get("quitar_mostrar"):
+            ch.mostrar = None
+        return jsonify(ok=True)
+
+    @app.get("/api/bloque/<bid>")
+    def api_bloque(bid):                            # la pantalla espejo del panel (no consume bloques)
+        s = d.bloques.get(bid)
+        return jsonify(s) if s else ("", 404)
 
     @app.get("/api/siguiente")
     def api_siguiente():
@@ -340,10 +442,10 @@ def abrir(puerto):
     import webbrowser
     webbrowser.open(f"http://127.0.0.1:{puerto}/")
     edge = shutil.which("msedge") or r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
-    if os.path.exists(edge):                     # la ventanita de control, como app pequeña
-        subprocess.Popen([edge, f"--app=http://127.0.0.1:{puerto}/control", "--window-size=440,820"])
+    if os.path.exists(edge):                     # el panel de administración, como app
+        subprocess.Popen([edge, f"--app=http://127.0.0.1:{puerto}/admin", "--window-size=1500,920"])
     else:
-        webbrowser.open(f"http://127.0.0.1:{puerto}/control")
+        webbrowser.open(f"http://127.0.0.1:{puerto}/admin")
 
 
 def main():
@@ -354,10 +456,17 @@ def main():
     ap.add_argument("--voz", default="Raul", help="voz OneCore de Windows: Raul, Sabina (es-MX), Pablo, Helena, Laura (es-ES)")
     ap.add_argument("--velocidad", type=int, default=1, help="-10..10")
     ap.add_argument("--puerto", type=int, default=int(os.environ.get("PORT", 8790)))
-    ap.add_argument("--abrir", action="store_true", help="abre la pantalla y la ventanita de control")
+    ap.add_argument("--abrir", action="store_true", help="abre la pantalla y el panel de administración")
+    ap.add_argument("--cada-min", type=float, default=3.0, help="cada cuántos minutos el chat puede cambiar el tema")
+    ap.add_argument("--chat-youtube", metavar="VIDEO_ID", help="lee el chat del directo de YouTube (gasta cuota: 5 u. por lectura)")
     a = ap.parse_args()
     d = Directo(a.canal, a.tema, a.modelo, a.voz, a.velocidad)
-    print(f"EN VIVO · {d.cfg['nombre']} · tema «{d.tema}»\n  pantalla: http://127.0.0.1:{a.puerto}/\n  control:  http://127.0.0.1:{a.puerto}/control", flush=True)
+    d.chat.cada_min = a.cada_min
+    d.chat.proximo_corte = time.time() + a.cada_min * 60
+    if a.chat_youtube:
+        chat_mod.FuenteYouTube(d.chat, a.canal, a.chat_youtube)
+    print(f"EN VIVO · {d.cfg['nombre']} · tema «{d.tema}»\n  pantalla (OBS): http://127.0.0.1:{a.puerto}/?auto=1\n"
+          f"  panel:          http://127.0.0.1:{a.puerto}/admin   (ventanita simple: /control)", flush=True)
     if a.abrir:
         threading.Timer(1.0, abrir, args=(a.puerto,)).start()
     import logging

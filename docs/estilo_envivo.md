@@ -65,6 +65,20 @@ plan. La cifra en US$ es lo que costaría lo mismo pagado por API (sirve para co
 | Chat de YouTube (`--chat-youtube`) | API de YouTube (cuota gratis de 10 000 u./día) | 5 unidades por lectura | 0 US$ · ~1 200 u./h (≈ 8 h al día) |
 | ElevenLabs, Flow, Lyria | no se usan | 0 | **0** |
 
+| (alternativa) voz ElevenLabs `eleven_v4_turbo` | API de ElevenLabs (créditos) | ~0,2 créditos por carácter (cuentas Starter) · 0,04 US$ por 1 000 caracteres | **~54 000 caracteres ≈ 10 800 créditos ≈ 2,2 US$**; con cambios de tema cada 3 min (bloques ya hablados que se tiran) ≈ 13 000-15 000 créditos ≈ **2,6-3 US$** |
+
+**ElevenLabs en el directo (calculado el 4-nov-2026, sin llamadas de pago):** los 117 bloques reales de `_sesiones/2026*/guion.jsonl`
+= 71 266 caracteres en 4 248 s de voz de Windows = **16,8 caracteres por segundo** (≈ 60 000 por hora con Raúl). ElevenLabs habla
+más despacio (narración real ≈ 900 caracteres/min, `docs/apis.md`), así que una hora de directo pide **~54 000 caracteres**. Con
+turbo (0,2 créditos/carácter en las Starter) ≈ **10 800 créditos por hora**, + 20-40 % si el chat cambia el tema cada 3 min
+(cada corte tira 1-2 bloques ya sintetizados): **~13 000-15 000 créditos/h**. Saldos de hoy (`python nucleo/tts_eleven.py`):
+cuenta 1 = 0, cuenta 2 = 25 711, cuenta 3 = 1 195 → **~1,8-2,5 h de directo en total, y la cuenta 2 es la de los clones**
+(narradora de Gaia, El Jefe, Remy Eleven) y de las voces de los videos: un directo de 2 h la dejaría vacía. En dinero (mismo
+precio en pago por uso y planes: 0,04 US$ por 1 000 caracteres de turbo) ≈ **2,2-3 US$ por hora**; un plan Starter (6 US$,
+150 000 caracteres) da **~2,5-3 h** al mes; Creator (22 US$, 550 000) ~**9-10 h**; 1 h diaria ≈ 1 600 000-1 800 000
+caracteres/mes ≈ **65-90 US$/mes**. Si se hace: sintetizar con ElevenLabs solo el bloque que va a sonar (no el búfer entero)
+para no pagar los que se tiran, y su caché por texto no sirve (nunca se repite una frase).
+
 **Total equivalente:** con sonnet ≈ **6-8 US$ por hora** de directo (casi todo es el guion); con haiku ≈ 0,6-1,5 US$/h.
 En dinero real: **0** extra; el gasto es límite del plan MAX. Medir en la primera prueba de 1 h con `get_usage` (antes y
 después) cuánto % semanal se come una hora.
@@ -101,8 +115,10 @@ proponer tema y comentar como espectador.»
   Lore: alguna respuesta mete un dato dudoso («nirnroot carmesí en cuevas de Cuarzo Rojo»; está en Blackreach): vigilar.
 
 ## En curso / pendiente
+**Pausado por el usuario (4-nov-2026, noche).** Comentarios + panel `/admin`: PROBADO de punta a punta en el navegador (ráfaga de 8 comentarios → clasificación con haiku, spam y GTA 6 descartados → 5 contestados por su nombre en bloques `r###` → corte a los 1,5 min con 3 pedidos y puente con los nombres; mostrar, fijar y espejo `/?monitor=1` verificados con capturas) y commiteado (`2107675`). Falta: probarlo con el usuario, el chat de un directo real de YouTube (`--chat-youtube`, sin probar), verlo a 1500 px de ancho (solo se vio el diseño de una columna) y la sesión «envivo-voces» (ElevenLabs/Chatterbox), también en pausa.
 1. Probarlo con el usuario: `python fab.py envivo --abrir` (pantalla OBS `:8790/?auto=1` + panel `:8790/admin`).
-2. Directo de YouTube real: la lectura del chat ya está escrita (`--chat-youtube <id>`) pero sin probar contra un directo.
-3. Los subtemas en paralelo a veces se pisan (dos bloques sobre Numinex): el prompt ya pide personajes que no salgan en el
+2. (el usuario, 4-nov noche) Costo con ElevenLabs en vez de la voz de Windows (caracteres por hora desde `guion.jsonl`, créditos de las 3 cuentas) y probar Chatterbox en tiempo real: ¿sintetiza un bloque más rápido de lo que dura, sin pausas?
+3. Directo de YouTube real: la lectura del chat ya está escrita (`--chat-youtube <id>`) pero sin probar contra un directo.
+4. Los subtemas en paralelo a veces se pisan (dos bloques sobre Numinex): el prompt ya pide personajes que no salgan en el
    bloque; vigilar.
-4. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.
+5. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.

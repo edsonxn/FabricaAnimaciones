@@ -8829,7 +8829,77 @@
    "prompt": "",
    "dur": 6.0,
    "canal": "cronicas_tamriel"
+  },
+  "cod_mandela__s_115": {
+   "id": "cod_mandela__s_115",
+   "video": "cod_mandela",
+   "nombre": "s_115",
+   "archivo": "cod_mandela__s_115.mp3",
+   "md5": "6f7800165c6f46cdc6b5c299f7f64cae",
+   "prompt": "",
+   "dur": 5.8,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela__s_bravo6": {
+   "id": "cod_mandela__s_bravo6",
+   "video": "cod_mandela",
+   "nombre": "s_bravo6",
+   "archivo": "cod_mandela__s_bravo6.mp3",
+   "md5": "a84ab2a8239146b92abcf70f0fc9d787",
+   "prompt": "",
+   "dur": 3.95,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela__s_brazo": {
+   "id": "cod_mandela__s_brazo",
+   "video": "cod_mandela",
+   "nombre": "s_brazo",
+   "archivo": "cod_mandela__s_brazo.mp3",
+   "md5": "68d17795bffb17413dcd058fe099c56a",
+   "prompt": "",
+   "dur": 2.6,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela__s_jingle": {
+   "id": "cod_mandela__s_jingle",
+   "video": "cod_mandela",
+   "nombre": "s_jingle",
+   "archivo": "cod_mandela__s_jingle.mp3",
+   "md5": "d7e6afb13c8b1a226f17221af4c066c6",
+   "prompt": "",
+   "dur": 4.7,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela__s_numbers": {
+   "id": "cod_mandela__s_numbers",
+   "video": "cod_mandela",
+   "nombre": "s_numbers",
+   "archivo": "cod_mandela__s_numbers.mp3",
+   "md5": "9238e0568e61277bdae6945aca0ac640",
+   "prompt": "",
+   "dur": 2.6,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela__s_ramirez": {
+   "id": "cod_mandela__s_ramirez",
+   "video": "cod_mandela",
+   "nombre": "s_ramirez",
+   "archivo": "cod_mandela__s_ramirez.mp3",
+   "md5": "fd51d0f34f6675317f8c2433728737c7",
+   "prompt": "",
+   "dur": 8.2,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela__s_shepherd": {
+   "id": "cod_mandela__s_shepherd",
+   "video": "cod_mandela",
+   "nombre": "s_shepherd",
+   "archivo": "cod_mandela__s_shepherd.mp3",
+   "md5": "1a3be62044847cff7bbfe40d3091fa7d",
+   "prompt": "",
+   "dur": 4.7,
+   "canal": "cronicas_cod"
   }
  },
- "actualizado": "2026-11-03 14:52"
+ "actualizado": "2026-11-04 10:36"
 }

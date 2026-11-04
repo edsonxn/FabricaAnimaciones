@@ -125,6 +125,24 @@ a{color:inherit;text-decoration:none}
 .marco{position:relative;display:inline-block;max-width:100%;max-height:100%;line-height:0}
 .marco img{max-width:100%;max-height:100%;display:block;border-radius:6px}
 .visor{--h:100%}
+/* vista visual (4-nov-2026, el usuario: «me gustaría ver cómo se va montando todo lo visual»): el monitor deja el texto y enseña solo imágenes */
+.montaje{position:absolute;inset:0;display:flex;flex-direction:column;background:#0a0c11}
+.montaje .escena{position:relative;flex:1;min-height:0;overflow:hidden}
+.montaje .escena .visor{background:transparent}
+.montaje .kb{position:absolute;inset:0;display:grid;place-items:center;padding:12px}
+.montaje .kb img{max-width:100%;max-height:100%;border-radius:6px;animation:kb 14s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07) translate(-1%,-1%)}}
+.montaje .chip{position:absolute;left:10px;right:10px;bottom:8px;display:flex;align-items:center;gap:7px;padding:5px 10px;border-radius:999px;background:rgba(10,12,17,.78);backdrop-filter:blur(4px);color:#dfe3ee;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border:1px solid color-mix(in srgb,var(--c) 60%,transparent)}
+.montaje .chip span{overflow:hidden;text-overflow:ellipsis}
+.montaje .nada{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--mut);font-size:13px;padding:20px}
+.montaje .nada .gr{display:block;font-size:52px;margin-bottom:8px}
+.montaje .tira{flex:none;max-height:42%;overflow-y:auto;scrollbar-width:thin;display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:4px;padding:6px;border-top:1px solid var(--line);background:var(--panel)}
+.montaje .tira img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px;cursor:pointer;opacity:.82;outline:2px solid transparent;transition:opacity .2s,outline-color .2s}
+.montaje .tira img:hover{opacity:1}
+.montaje .tira img.on{opacity:1;outline-color:var(--c)}
+.montaje .tira img.nueva{animation:pega .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pega{from{transform:scale(.2) rotate(-8deg);opacity:0}to{transform:none;opacity:1}}
+.montaje .cuenta{grid-column:1/-1;font-size:10.5px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase}
 .lupa{position:absolute;width:150px;height:150px;border-radius:50%;border:4px solid #fff;box-shadow:0 8px 28px rgba(0,0,0,.55),inset 0 0 0 2px rgba(0,0,0,.35);background-repeat:no-repeat;pointer-events:none}
 .lupa::after{content:"";position:absolute;width:62px;height:11px;background:#fff;border-radius:9px;left:calc(100% - 12px);top:calc(100% - 4px);transform:rotate(45deg);transform-origin:0 50%}
 .barrido{position:absolute;left:0;right:0;height:2px;background:var(--ok);box-shadow:0 0 14px 3px color-mix(in srgb,var(--ok) 60%,transparent);pointer-events:none}
@@ -261,6 +279,7 @@ a{color:inherit;text-decoration:none}
 /* edificio en escritorio (31-oct-2026): el lienzo al centro con todo el alto; a los lados, el monitor y el lateral */
 @media (min-width:901px) and (min-height:501px){
   body.edif{--izq:clamp(250px,19vw,340px);--der:clamp(240px,17vw,320px);display:grid;grid-template-columns:var(--izq) minmax(0,1fr) var(--der);grid-template-rows:auto auto auto minmax(0,1fr) auto;column-gap:10px}
+  body.edif.visual{--izq:clamp(320px,27vw,520px)}
   body.edif #cab,body.edif #pie{grid-column:1/-1}
   body.edif #ses{grid-column:1/3;grid-row:2/4;align-self:center;border-bottom:0;padding:6px 0 6px 12px}
   body.edif #etapas{grid-column:3;grid-row:2;padding:8px 12px 2px 0}
@@ -301,6 +320,7 @@ body.cine #taller{position:fixed!important;inset:0!important;width:100vw!importa
   <span id="modo"><i></i><span id="modoTx">—</span></span>
   <label class="bt cas" title="Sonidos del robot en cada acción"><input type="checkbox" id="chkSon">🔊 <span class="txt">Sonido</span></label>
   <label class="bt cas"><input type="checkbox" id="chkNar">🎙 <span class="txt">Narrador</span></label>
+  <label class="bt cas" title="Vista visual: el panel izquierdo enseña solo las imágenes y cómo se va montando el video. Apagada: la vista normal con texto y código"><input type="checkbox" id="chkVis">🖼 <span class="txt">Visual</span></label>
   <label class="bt cas" title="Al llegar al final, volver a repetir las últimas acciones. Apagada: se queda en la última y espera lo nuevo"><input type="checkbox" id="chkBucle">🔁 <span class="txt">Repetir</span></label>
   <button class="bt" id="btPausa" title="Pausar (espacio)">⏸</button>
   <button class="bt" id="btVel" title="Velocidad">×1</button>
@@ -608,7 +628,7 @@ function mostrar(e){
   $("mhora").textContent=hora(e.t);
   const c=$("mcuerpo");c.innerHTML="";
   const p=document.createElement("div");p.className="pant";c.appendChild(p);
-  S.ctl=(PANT[e.tipo]||PANT.habla)(p,e);
+  S.ctl=(S.visual?montaje:(PANT[e.tipo]||PANT.habla))(p,e);
   S.ini=performance.now();S.dur=duracion(e);S.prog=0;
   Taller.ir(e);
   marcarActual();
@@ -618,6 +638,22 @@ function pintarModo(){
   const el=$("modo");el.className=S.modo==="vivo"?"vivo":S.modo==="repe"?"repe":"";
   $("modoTx").innerHTML=S.modo==="vivo"?(S.activa?"EN VIVO":"AL DÍA"):S.modo==="repe"?`REPETICIÓN<span class="n"> · ${ventana().length} acciones</span>`:"—";
   $("btVivo").style.visibility=S.modo==="vivo"?"hidden":"";
+}
+// vista visual: arriba la imagen más reciente (con lupa si es la acción actual), abajo el mosaico de todo lo visto en la sesión
+function montaje(el,e){
+  const hasta=S.ev.indexOf(e),imgs=S.ev.slice(0,hasta<0?S.ev.length:hasta+1).filter(x=>x.img);
+  const ult=imgs[imgs.length-1],t=TIPOS[e.tipo]||TIPOS.habla;
+  el.innerHTML=`<div class="montaje"><div class="escena"></div><div class="tira"></div></div>`;
+  const esc_=el.querySelector(".escena"),tira=el.querySelector(".tira");
+  if(imgs.length){
+    tira.innerHTML=`<div class="cuenta">${imgs.length} imagen${imgs.length>1?"es":""} en la sesión</div>`+imgs.map(x=>`<img loading="lazy" data-seq="${x.seq}" class="${x===e?"nueva on":""}" title="${esc(x.titulo||"")}" src="/v2/vivo/img/${S.sesion}/${x.img}" alt="">`).join("");
+    tira.onclick=ev=>{const b=ev.target.closest("img");if(b)irA(+b.dataset.seq);};
+    requestAnimationFrame(()=>{tira.scrollTop=tira.scrollHeight;});
+  }else tira.remove();
+  if(e.img)return PANT.imagen(esc_,e);
+  if(ult)esc_.innerHTML=`<div class="kb"><img alt="" src="/v2/vivo/img/${S.sesion}/${ult.img}"></div><div class="chip"><b>${t.ic}</b><span>${esc(e.tipo==="habla"||e.tipo==="usuario"?t.nom:(e.titulo||t.nom))}</span></div>`;
+  else esc_.innerHTML=`<div class="nada"><div><span class="gr">${t.ic}</span>Aún no hay imágenes en esta sesión.<br><small>${esc(e.titulo||t.nom)}</small></div></div>`;
+  return ()=>{};
 }
 let previo=performance.now();
 function bucle(ahora){
@@ -3200,6 +3236,9 @@ try{$("chkSon").checked=localStorage.getItem("vivo_sonido")==="1";}catch(e){}
 if($("chkSon").checked)Son.activar(true);
 $("chkSon").onchange=e=>{Son.activar(e.target.checked);try{localStorage.setItem("vivo_sonido",e.target.checked?"1":"0");}catch(x){}};
 addEventListener("pointerdown",()=>Son.despertar());
+try{S.visual=localStorage.getItem("vivo_visual")==="1";}catch(e){}
+$("chkVis").checked=!!S.visual;document.body.classList.toggle("visual",!!S.visual);
+$("chkVis").onchange=e=>{S.visual=e.target.checked;document.body.classList.toggle("visual",S.visual);try{localStorage.setItem("vivo_visual",S.visual?"1":"0");}catch(x){}const ev=S.ev[S.idx];if(ev)mostrar(ev);};
 $("chkBucle").checked=S.bucle;
 $("chkBucle").onchange=e=>{S.bucle=e.target.checked;try{localStorage.setItem("vivo_bucle",S.bucle?"1":"0");}catch(x){}};
 $("btPausa").onclick=()=>{S.pausa=!S.pausa;$("btPausa").textContent=S.pausa?"▶":"⏸";$("btPausa").classList.toggle("on",S.pausa);};

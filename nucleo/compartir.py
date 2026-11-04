@@ -33,7 +33,7 @@ EJEMPLOS = [
     "neandertales", "un_dia_30mil", "voynich", "informante_2027", "secreto_ia", "jalpa", "bichos_invierno", "arana_techo",
     "wow_curiosidades_kalimdor", "er_radagon_atrocidades", "tes_misiones_daedricas", "banjo_tooie", "majora_mask", "freno_enojo",
     "guason_fumado", "sociedad_1200", "got_joffrey", "mods_ia_fusion", "terror_ben_drowned", "gota_bucle", "pelea_meme",
-    "gato_cobarde", "wow_tres_noches", "lol_worlds_2026",
+    "gato_cobarde", "wow_tres_noches", "lol_worlds_2026", "ballena_estomago",
 ]
 NO_EN_EJEMPLO = {"ESTADO.md", "youtube.json"}           # publicación y diario del canal
 
@@ -41,7 +41,7 @@ DOCS = [
     "api_kz.md", "apis.md", "flujo_produccion.md", "musica_biblioteca.md", "panel.md", "publicacion.md", "sesiones.md",
     "voz.md",
 ] + [f"estilo_{e}.md" for e in (
-    "analisis_tactico", "boceto_gota", "boceto_guache_mapa", "cartoon90", "documental", "grabado_peste", "guache_meme", "kurzgesagt",
+    "acuarela_pincel", "analisis_tactico", "boceto_gota", "boceto_guache_mapa", "cartoon90", "documental", "grabado_peste", "guache_meme", "kurzgesagt",
     "linea_neon", "noir", "noir_color", "pegatina_flow", "rayosx_tecno", "secuencia_flow", "secuencia_fx", "secuencia_yt",
     "terror_crt")]
 

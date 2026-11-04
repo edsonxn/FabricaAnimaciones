@@ -32,6 +32,7 @@ te dé una regla nueva («desde ahora…»), anótala ahí con fecha (no en este
 | Noir a color / feudal | `noir_color` / `noir_feudal` | `ejemplos/sociedad_1200/`, `ejemplos/got_joffrey/` | `docs/estilo_noir_color.md` |
 | Rayos X tecno (vertical) | `documental` | `ejemplos/mods_ia_fusion/` | `docs/estilo_rayosx_tecno.md` |
 | Terror CRT (cuarto oscuro, gameplay dentro de una tele) | `documental` | `ejemplos/terror_ben_drowned/` | `docs/estilo_terror_crt.md` |
+| Acuarela pintada a mano (papel, lavados con borde húmedo, tinta que hierve, chibi, SFX sintetizados) | `documental` (kit `acuarela.py` del ejemplo) | `ejemplos/ballena_estomago/` | `docs/estilo_acuarela_pincel.md` |
 | Grabado de peste (tinta y buril en espacio 3D) | `documental` | `ejemplos/wow_tres_noches/` | `docs/estilo_grabado_peste.md` |
 | Boceto en bucle | `boceto` | `ejemplos/gota_bucle/` | `docs/estilo_boceto_gota.md` |
 | Guache / meme | `guache` | `ejemplos/pelea_meme/` | `docs/estilo_guache_meme.md` |

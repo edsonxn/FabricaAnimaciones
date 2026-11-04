@@ -23,10 +23,24 @@
       "video": "cod_mw4_secretos",
       "id": "T95SAXHHl10",
       "titulo": "Los 25 SECRETOS que Modern Warfare 4 te escondió",
-      "programado": "2026-11-04T00:00:00Z",
-      "estado": "programado",
+      "subido": "2026-11-03",
+      "programado_original": "2026-11-04T00:00:00Z",
+      "visibilidad": "public",
+      "publicado": "2026-11-03T20:29:14Z",
+      "estado": "publicado",
+      "nota": "salió antes de lo programado: el usuario lo publicó a mano el 3-nov 14:29 CDMX (estaba para las 18:00); la métrica usa la fecha real",
       "formato": "lista de 25 secretos (cuenta regresiva), 16:59, SECUENCIA YT, voz Damián; gancho saturado de MG y pegatinas",
       "reemplaza": "agTIwVlWD1I (versión del 2-nov con tramos vacíos; borrada de YouTube el 3-nov con el OK del usuario)"
+    },
+    {
+      "video": "cod_mandela",
+      "id": "XL3MZ4Oj7Ko",
+      "titulo": "Los 20 EFECTOS MANDELA más raros de Call of Duty",
+      "subido": "2026-11-03",
+      "visibilidad": "private",
+      "programado": "2026-11-07T00:00:00Z",
+      "formato": "lista de 20 efectos Mandela (cuenta regresiva), 14:20, SECUENCIA YT, voz Damián; misma fórmula que MW4 cambiando el tema",
+      "nota": "referencia Fellow ×41,6 (MUHIbSFqEyg); 7 sonidos nombrados audibles; miniatura Flow «EFECTO MANDELA / NUNCA PASÓ»"
     }
   ],
   "ideas": {

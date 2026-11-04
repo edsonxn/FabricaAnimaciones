@@ -1,0 +1,802 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.721,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Asunto: tu memoria. En dos mil veintiuno, un jugador profesional juró que este letrero amarillo de Standoff era nuevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.721,
+  "t1": 18.841,
+  "tipo": "video",
+  "texto": "Y miles le creyeron. La perk más famosa de Zombies tenía otro nombre, escrito en su propia botella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.841,
+  "t1": 25.711,
+  "tipo": "video",
+  "texto": "Medio internet pulsó F para presentar respetos. Y si jugabas en consola, nunca viste esa letra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.711,
+  "t1": 34.511,
+  "tipo": "video",
+  "texto": "Y el sargento Foley le gritó a Ramírez cientos de órdenes. Pero nunca la que todos citan. Veinte efectos Mandela de Call of Duty:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.511,
+  "t1": 43.031,
+  "tipo": "video",
+  "texto": "cosas que recuerdas con total seguridad, y que el propio juego dice que nunca pasaron. Todo comprobado, con el juego en pantalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.031,
+  "t1": 50.43,
+  "tipo": "video",
+  "texto": "Y el número uno es una frase del Capitán Price. Una que juras haber oído jugando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.43,
+  "t1": 61.084,
+  "tipo": "video",
+  "texto": "Número veinte. El Pack-a-Punch del manicomio. Verrückt, el manicomio de World at War, de dos mil ocho. El mapa donde debutó Juggernog.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.084,
+  "t1": 69.198,
+  "tipo": "video",
+  "texto": "Mucha gente recuerda haber mejorado sus armas ahí, en la sala de la luz. Pero en Verrückt no había Pack-a-Punch.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.198,
+  "t1": 78.618,
+  "tipo": "video",
+  "texto": "La máquina llegó dos mapas después, en Der Riese, la fábrica de los teletransportadores. Si mejoraste un arma en el manicomio, no fue el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.618,
+  "t1": 86.672,
+  "tipo": "video",
+  "texto": "Fue tu cerebro, haciéndole Pack-a-Punch a tus recuerdos. Y la primera arma que todos metieron en esa máquina fue la Ray Gun,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.672,
+  "t1": 92.93,
+  "tipo": "video",
+  "texto": "que salía convertida en la Porter's X2, de rayos rojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 92.93,
+  "t1": 106.173,
+  "tipo": "video",
+  "texto": "En el diecinueve, la máquina de Double Tap de Origins. Origins, Black Ops 2, dos mil trece: la Primera Guerra Mundial, robots gigantes y barro hasta las rodillas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 106.173,
+  "t1": 112.073,
+  "tipo": "video",
+  "texto": "Seis generadores, cuatro bastones elementales, y robots gigantes que te pisan si te descuidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.073,
+  "t1": 119.635,
+  "tipo": "video",
+  "texto": "Y muchos juran que compraban Double Tap en su máquina, junto a las demás. Esa máquina no existe en Origins.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.635,
+  "t1": 128.655,
+  "tipo": "video",
+  "texto": "Double Tap solo salía de Der Wunderfizz, la máquina que te da una perk al azar. Y la confusión tiene culpable: en Revelations, de Black Ops 3,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.655,
+  "t1": 138.894,
+  "tipo": "video",
+  "texto": "hay una zona que imita a Origins. Y ahí sí hay máquina de Double Tap. Número dieciocho. Las dos cajas del faro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.894,
+  "t1": 145.607,
+  "tipo": "video",
+  "texto": "Call of the Dead, el mapa de George Romero, con un barco encallado en el hielo y un faro al fondo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.607,
+  "t1": 154.519,
+  "tipo": "video",
+  "texto": "Hay quien recuerda dos cajas misteriosas juntas, arriba del faro. Arriba hay una sola. La otra está cerca, en la zona del faro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.519,
+  "t1": 164.671,
+  "tipo": "video",
+  "texto": "encima de PhD Flopper. Dos cajas a pocos metros, y tu memoria las metió en el mismo cuarto. Y en ese mapa hasta los personajes eran actores de verdad:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.671,
+  "t1": 170.417,
+  "tipo": "video",
+  "texto": "Sarah Michelle Gellar, Danny Trejo, Michael Rooker y Robert Englund.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.417,
+  "t1": 180.196,
+  "tipo": "video",
+  "texto": "En el diecisiete, ¿quién mató a Ghost? Modern Warfare 2, dos mil nueve, misión Cabos sueltos. Ghost y Roach llegan a la pista,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.196,
+  "t1": 189.524,
+  "tipo": "video",
+  "texto": "heridos, con el disco duro de Makárov. La respuesta rápida es Makárov. Y no. El que dispara es el general Shepherd,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.524,
+  "t1": 197.93,
+  "tipo": "video",
+  "texto": "su propio comandante. Y lo dice así.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.93,
+  "t1": 207.351,
+  "tipo": "video",
+  "texto": "Un cabo suelto menos. Los rocían con gasolina y les prenden fuego. Y el traidor era el mismo que daba las órdenes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.351,
+  "t1": 215.43,
+  "tipo": "video",
+  "texto": "Price y Soap lo persiguen hasta Afganistán. Y es Soap quien acaba clavándole un cuchillo en el ojo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.43,
+  "t1": 225.36,
+  "tipo": "video",
+  "texto": "Número dieciséis. Zombies en la Wii. Muchos recuerdan jugar Nacht der Untoten en la Wii, apuntando a la pantalla con el mando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.36,
+  "t1": 231.845,
+  "tipo": "video",
+  "texto": "Pero World at War de Wii no tenía modo Zombies. Ni Nacht, ni ningún otro mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.845,
+  "t1": 240.145,
+  "tipo": "video",
+  "texto": "Los zombis llegaron a la Wii con Black Ops, en dos mil diez, con Kino der Toten, el teatro nazi, y el mando de la Wii como pistola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.145,
+  "t1": 249.205,
+  "tipo": "video",
+  "texto": "El mando era el mismo. El juego, no. En el quince, el logro que nunca te dieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.205,
+  "t1": 258.42,
+  "tipo": "video",
+  "texto": "Shadows of Evil, Black Ops 3, dos mil quince: una ciudad de los años cuarenta, cuatro desconocidos y el Hombre Sombra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.42,
+  "t1": 266.994,
+  "tipo": "video",
+  "texto": "El mago Nero, la bailarina Jessica, el detective Jack y el boxeador Floyd, en una ciudad infestada de monstruos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.994,
+  "t1": 275.149,
+  "tipo": "video",
+  "texto": "Casi todos los mapas premian el Easter egg principal con un logro. Y muchos recuerdan haber ganado el de este. No existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.149,
+  "t1": 284.919,
+  "tipo": "video",
+  "texto": "El logro El principio del fin te lo dan a mitad de camino, al completar los rituales. Terminar el Easter egg entero da experiencia y una tarjeta de visita.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.919,
+  "t1": 291.7,
+  "tipo": "video",
+  "texto": "Y nada más. Número catorce. El brazo de Zakhaev.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.7,
+  "t1": 302.59,
+  "tipo": "video",
+  "texto": "CoD 4, dos mil siete, Prípiat. El teniente Price, joven y camuflado, dispara el tiro más famoso de la saga contra Imran Zakhaev.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.59,
+  "t1": 310.31,
+  "tipo": "video",
+  "texto": "Con un Barrett del calibre cincuenta, a más de un kilómetro, MacMillan te pide corregir por el viento y hasta por el efecto Coriolis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.31,
+  "t1": 320.43,
+  "tipo": "video",
+  "texto": "Si crees que ahí murió, el propio juego te corrige en ese momento. Escucha a MacMillan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.43,
+  "t1": 326.587,
+  "tipo": "video",
+  "texto": "Le vuela el brazo. Zakhaev sobrevive quince años, con una prótesis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.587,
+  "t1": 337.842,
+  "tipo": "video",
+  "texto": "Y al final, en el puente, no lo mata Price. Price, herido en el suelo, le desliza su pistola a Soap. Y es Soap quien lo remata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.842,
+  "t1": 343.271,
+  "tipo": "video",
+  "texto": "En el trece, ¿quién pregunta por los números? Black Ops, dos mil diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.271,
+  "t1": 355.322,
+  "tipo": "video",
+  "texto": "Alex Mason, atado a una silla, en un cuarto lleno de pantallas. Y una voz que no deja de preguntar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 355.322,
+  "t1": 362.104,
+  "tipo": "video",
+  "texto": "Mucha gente pone esa frase en boca de Reznov, o de Dragovich. Pero es la voz del interrogador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.104,
+  "t1": 369.844,
+  "tipo": "video",
+  "texto": "Y al final descubres quién es: Jason Hudson, de la CIA, con Weaver al lado. Los números los transmitía Dragovich.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.844,
+  "t1": 379.159,
+  "tipo": "video",
+  "texto": "El que los pedía era de tu propio bando. Y ya que estamos: Reznov, el que te acompaña media campaña, murió en la fuga de Vorkutá.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.159,
+  "t1": 387.266,
+  "tipo": "video",
+  "texto": "Todo lo demás, estaba en tu cabeza. Número doce. Black Ops 2 no inventó los finales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.266,
+  "t1": 397.435,
+  "tipo": "video",
+  "texto": "Black Ops 2 se recuerda como el primer Call of Duty con decisiones que cambian la historia. Pero cuatro años antes, World at War ya te obligaba a elegir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 397.435,
+  "t1": 406.825,
+  "tipo": "video",
+  "texto": "Okinawa, el castillo de Shuri, misión Breaking Point. Unos soldados japoneses fingen rendirse y se lanzan sobre Roebuck y Polonsky.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 406.825,
+  "t1": 412.11,
+  "tipo": "video",
+  "texto": "Solo puedes salvar a uno. El que no salvas, muere.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.11,
+  "t1": 422.724,
+  "tipo": "video",
+  "texto": "Sin cinemática que lo arregle. Y un detalle cruel: al terminar el nivel, las chapas que te dan son las de Roebuck. Aunque lo hayas salvado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.724,
+  "t1": 430.062,
+  "tipo": "video",
+  "texto": "En el once, las misiones perdidas de World at War. Hay jugadores que recuerdan misiones de World at War que no",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.062,
+  "t1": 436.959,
+  "tipo": "video",
+  "texto": "salen en ningún video de la campaña. Un entrenamiento disparando a muñecos. Un tramo en tren.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 436.959,
+  "t1": 447.809,
+  "tipo": "video",
+  "texto": "No están locos. Jugaron otro juego. En PlayStation 2 salió World at War: Final Fronts, con su propia campaña y sus propias misiones. Lo hizo otro estudio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.809,
+  "t1": 455.528,
+  "tipo": "video",
+  "texto": "Rebellion, y salió el mismo año, en dos mil ocho. Mismo nombre, misma guerra, otra campaña entera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.528,
+  "t1": 463.875,
+  "tipo": "video",
+  "texto": "El efecto Mandela con mejor coartada de toda la lista. Número diez. Las botas doradas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.875,
+  "t1": 474.116,
+  "tipo": "video",
+  "texto": "Volvemos al barro de Origins. Con la pala puedes cavar montones de tierra y sacar de todo: armas, potenciadores, y premios dorados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 474.116,
+  "t1": 481.956,
+  "tipo": "video",
+  "texto": "Muchos recuerdan unas botas doradas para correr por el lodo. No existen. Lo único dorado que sale es la pala dorada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.956,
+  "t1": 489.481,
+  "tipo": "video",
+  "texto": "y el casco dorado. La pala se gana a fuerza de cavar. Y con ella, si tienes suerte, sale el casco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 489.481,
+  "t1": 499.13,
+  "tipo": "video",
+  "texto": "Para el barro, lo que había era Stamin-Up. Y paciencia. En el nueve, Evanescence en Zombies.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.13,
+  "t1": 506.349,
+  "tipo": "video",
+  "texto": "Hay quien recuerda que Bring Me to Life sonaba como Easter egg en Kino der Toten, o en algún mapa de Black Ops.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.349,
+  "t1": 515.096,
+  "tipo": "video",
+  "texto": "Nunca estuvo. Ni en un mapa, ni en un tráiler. Venía de los montajes de YouTube de dos mil diez, que la ponían encima de las partidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 515.096,
+  "t1": 527.93,
+  "tipo": "video",
+  "texto": "La canción real de Kino der Toten es esta. Ciento quince, de Elena Siegman.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 527.93,
+  "t1": 534.097,
+  "tipo": "video",
+  "texto": "Número ocho. Menéndez en llamas. Black Ops 2, el final malo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 534.097,
+  "t1": 541.141,
+  "tipo": "video",
+  "texto": "Raúl Menéndez, el villano, llega a la tumba de su hermana Josefina. Mucha gente recuerda verlo arder,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.141,
+  "t1": 550.374,
+  "tipo": "video",
+  "texto": "retorciéndose sobre la tumba, con el cementerio entero en llamas. Se prende fuego, sí. Pero la imagen corta a negro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.374,
+  "t1": 557.93,
+  "tipo": "video",
+  "texto": "Se oye, y no se ve. La escena gráfica que recuerdas, tu cabeza la rellenó sola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.93,
+  "t1": 568.219,
+  "tipo": "video",
+  "texto": "En el siete, la perk gratis de la Luna. Moon, el último mapa de Black Ops, de dos mil once. En el biodomo hay plataformas de salto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 568.219,
+  "t1": 575.719,
+  "tipo": "video",
+  "texto": "Muchos juran que, si saltabas perfecto, te tocaba una perk gratis. No hay nada de eso: ni en el mapa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.719,
+  "t1": 584.641,
+  "tipo": "video",
+  "texto": "ni en las guías, ni en el código. Lo más probable es la QED, la granada cuántica, que a veces suelta una perk al azar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.641,
+  "t1": 594.701,
+  "tipo": "video",
+  "texto": "Y tu memoria se la regaló a las plataformas. Lo que sí es real en Moon: al final del Easter egg, tres misiles salen disparados hacia la Tierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.701,
+  "t1": 601.588,
+  "tipo": "video",
+  "texto": "Y le dan. Número seis. Mira bien la portada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 601.588,
+  "t1": 610.456,
+  "tipo": "video",
+  "texto": "La portada de Black Ops 2: un soldado en la sombra, con una pistola junto a la cara. Ahora mira abajo. En la otra mano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.456,
+  "t1": 618.646,
+  "tipo": "video",
+  "texto": "casi tapado por la oscuridad, lleva un cuchillo. Casi nadie lo recuerda. Y la de Black Ops, la de dos mil diez:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.646,
+  "t1": 629.2,
+  "tipo": "video",
+  "texto": "el soldado no lleva una pistola. Lleva dos, una en cada mano. En el cinco: ¡Ramírez, haz de todo!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 629.2,
+  "t1": 637.46,
+  "tipo": "video",
+  "texto": "Modern Warfare 2, la invasión de Virginia, en Burger Town. El sargento Foley no deja de darle órdenes al soldado Ramírez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 637.46,
+  "t1": 647.685,
+  "tipo": "video",
+  "texto": "Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 647.685,
+  "t1": 653.988,
+  "tipo": "video",
+  "texto": "Órdenes, una tras otra. Pero Ramírez, haz de todo, no la dice nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.988,
+  "t1": 660.051,
+  "tipo": "video",
+  "texto": "Nació en noviembre de dos mil nueve, en un meme de internet, el mismo mes que salió el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 660.051,
+  "t1": 670.702,
+  "tipo": "video",
+  "texto": "Y diecisiete años después, sigue siendo la orden más famosa de toda la saga. Una orden que nadie dio. Número cuatro. Pulsa F.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.702,
+  "t1": 680.532,
+  "tipo": "video",
+  "texto": "Advanced Warfare, dos mil catorce. El funeral del soldado Will Irons. Y el letrero que se volvió meme: Press F to pay respects.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 680.532,
+  "t1": 689.092,
+  "tipo": "video",
+  "texto": "Medio internet pulsó F. Pero esa F solo salía en PC. En PlayStation y Xbox el letrero decía otra cosa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 689.092,
+  "t1": 698.302,
+  "tipo": "video",
+  "texto": "mantén el botón para presentar respetos. O sea: millones de jugadores de consola recuerdan una tecla que nunca vieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.302,
+  "t1": 705.7,
+  "tipo": "video",
+  "texto": "F. En el tres, la botella de Juggernog. La perk más famosa de Zombies:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.7,
+  "t1": 709.84,
+  "tipo": "video",
+  "texto": "más vida, por dos mil quinientos puntos. Y con su propia",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 709.84,
+  "t1": 722.26,
+  "tipo": "video",
+  "texto": "canción. En la máquina dice Jugger-Nog. Pero el logo de World at War y la",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.26,
+  "t1": 727.884,
+  "tipo": "video",
+  "texto": "etiqueta de las botellas de Black Ops decían otra cosa: Juggernaut Soda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 727.884,
+  "t1": 740.43,
+  "tipo": "video",
+  "texto": "En Black Ops 2 la corrigieron, y desde entonces la etiqueta dice Jugger-Nog: con ene, o, ge. La bebiste cientos de veces. Y nunca leíste la etiqueta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.43,
+  "t1": 749.865,
+  "tipo": "video",
+  "texto": "Número dos. El letrero de Standoff. Julio de dos mil veintiuno. Standoff, el mapa de Black Ops 2, ya está en Cold War.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 749.865,
+  "t1": 757.977,
+  "tipo": "video",
+  "texto": "Llega una actualización, y un jugador profesional, iLLeY, publica: no puedo creer que acaban de poner este letrero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 757.977,
+  "t1": 764.192,
+  "tipo": "video",
+  "texto": "Miles le dieron la razón. Juraban que en Black Ops 2 ese letrero amarillo no existía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.192,
+  "t1": 772.4,
+  "tipo": "video",
+  "texto": "Pero este es un video de Standoff subido en dos mil quince. Seis años antes. Y ahí está el letrero, en su poste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.4,
+  "t1": 782.914,
+  "tipo": "video",
+  "texto": "El mapa de Cold War salió sin él, y una actualización lo devolvió. El letrero no era nuevo. Lo nuevo era que por fin lo mirabas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 782.914,
+  "t1": 789.027,
+  "tipo": "video",
+  "texto": "Y el número uno. La frase de Price. Modern Warfare, dos mil diecinueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.027,
+  "t1": 799.768,
+  "tipo": "video",
+  "texto": "Si hay una frase del Price moderno, es esta. Bravo Seis, a oscuras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.768,
+  "t1": 809.427,
+  "tipo": "video",
+  "texto": "La recuerdas en la campaña, con las gafas de visión nocturna, entrando a la casa. Pero es del tráiler de presentación, de mayo de dos mil diecinueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 809.427,
+  "t1": 817.876,
+  "tipo": "video",
+  "texto": "En la campaña, en la misión de la casa, Price solo dice: Bravo seis, al primer piso. Bravo seis, al segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.876,
+  "t1": 826.485,
+  "tipo": "video",
+  "texto": "Y en la misión que se llama, literalmente, Going Dark, tampoco está. Price solo dice que usarán la oscuridad para cubrirse.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 826.485,
+  "t1": 834.493,
+  "tipo": "video",
+  "texto": "La frase más famosa del Price moderno, nunca la dijo jugando. Solo en un tráiler. Expediente cerrado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.493,
+  "t1": 843.813,
+  "tipo": "video",
+  "texto": "Y ahora, la pregunta: ¿cuál de los veinte te hizo dudar de tu memoria? Dímelo en los comentarios. Yo apuesto por el letrero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.813,
+  "t1": 850.913,
+  "tipo": "video",
+  "texto": "En el canal ya tienes el expediente de los veinticinco secretos de Modern Warfare 4. Y si quieres el siguiente, suscríbete:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.913,
+  "t1": 860.0,
+  "tipo": "video",
+  "texto": "aquí abrimos los archivos de Call of Duty que nadie te contó, en español. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

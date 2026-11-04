@@ -820,6 +820,10 @@ const Son=(()=>{
     salto(t,f){bip(t,f*.6,f*1.5,.14,.4);},
     ronca(t){sopla(t,.8,170,300,.4,1);},
     avion(t){sopla(t,.5,800,2300,.3,.8);},
+    uy(t,f){bip(t,f*1.4,f*.45,.38,.34,"triangle");},              // los del muñeco de trapo: cae, golpe, se levanta, baila
+    plaf(t){sopla(t,.1,900,260,.9,.8);bip(t,150,55,.14,.5,"triangle");},
+    upa(t,f){bip(t,f*.7,f*1.15,.09,.3);bip(t+.13,f*1.15,f*1.7,.12,.3);},
+    baile(t,f){[1,1.25,1.5,2,1.5,2.5].forEach((k,i)=>bip(t+i*.11,f*k,f*k,.1,.22,"square"));},
   };
   const notas=(t,fs,d=.11,v=.4,tipo="triangle")=>{fs.forEach((f,i)=>bip(t+i*d,f,f,d*1.5,v,tipo));return t+fs.length*d;};
   const R={
@@ -1018,6 +1022,7 @@ const Taller=(()=>{
     return 2;
   }
   function avanza(E,meta,paso,t,dt){     // 0 = llegó, 1 = camina, 2 = espera o va en el elevador. A otro piso: un piso por la escalera; dos o más, por el elevador si está libre
+    if(E.trapo)return 2;                 // es un muñeco de trapo (panel_vivo_ragdoll.js): la física lo mueve, no el camino
     if(E.via){
       const V=E.via,q=pisoDe(meta);
       if(V.t==="asc"&&V.a!==q&&V.f<=4){  // cambió de destino: el elevador se desvía, no llega hasta el piso viejo
@@ -1979,6 +1984,7 @@ const Taller=(()=>{
   }
   function dibujaMini(m,t){
     if(m.oculto)return;
+    if(m.trapo&&Cap.trapo)return Cap.trapo(m,t);
     const P=poseMini(m,t/1000+m.fase,t);
     const mx=fr(m.x)*W;
     g.fillStyle="rgba(0,0,0,.18)";g.beginPath();g.ellipse(mx,sue+4*K,11*K,2.8*K,0,0,7);g.fill();
@@ -2463,7 +2469,7 @@ const Taller=(()=>{
     else if(EDIF){
       Rb.x=robotX;Rb.dir=dir;
       const r=avanza(Rb,meta,dt*.00042*(1+Math.min(1.4,Math.abs(dif)*6)),t,dt);
-      robotX=Rb.x;dir=Rb.dir;anda=r===1;viaje=r===2;
+      robotX=Rb.x;dir=Rb.dir;anda=r===1;viaje=r===2;Rb.anda=anda;
       if(r){paso+=dt*.016;llego=0;}else{dir=1;if(!llego)llego=t;}
     }else{
       anda=Math.abs(dif)>.003;
@@ -2500,6 +2506,7 @@ const Taller=(()=>{
     const x=fr(robotX)*W,T=t/1000,s=llego?(t-llego)/1000:0;
     const enNube=Esc&&Esc.nube;
     if(enNube)nube((fr(robotX)+fr(Esc.m.x))/2*W,t);
+    else if(Rb.trapo&&Cap.trapo&&!Cap.oculto)Cap.trapo(Rb,t);
     else if(!Cap.oculto){
       g.fillStyle="rgba(0,0,0,.2)";g.beginPath();g.ellipse(x,sue+4*K,17*K,4*K,0,0,7);g.fill();
       if(!anda&&!viaje&&llego&&KIT_V[A.nom]&&t-Math.max(llego,A.vT||0)>ROTA_MS){A.v=variaDe(A.nom);A.vT=t;}
@@ -2724,6 +2731,8 @@ const Taller=(()=>{
     tv:["Atención a la pantalla. Esto está pasando ahora.","Todo se ve en la pantalla grande."],
     robot:["Mientras tanto, en {estacion}, otra historia avanza.","No es el único. En {estacion}, otro robot hace lo suyo.","Esta fábrica no es de un solo robot."],
     cierre:["Un trabajo termina. La fábrica respira.","Otra historia llega a su final."],
+    trapo:["Un paso en falso. La gravedad no perdona.","Nadie vio venir el suelo.","En {piso}, alguien acaba de conocer el piso. De cara.","La física también trabaja aquí. Y no avisa."],
+    manos:["Dos robots. Una sola coreografía.","Entre tanto trabajo, un baile.","Nadie lo pidió. Pero bailan."],
   };
   const Nar={on:false,ult:-1e9,frase:"",vence:0,pri:0,voz:null,ind:{}};
   const hayVoz=()=>"speechSynthesis" in window;
@@ -2944,11 +2953,14 @@ const Taller=(()=>{
     let P;try{P=(R.anda?POSES.andar:R.via?POSES.quieto:POSES[R.v]||POSES[R.nom]||POSES.quieto)(T,s);}catch(er){P=POSES.quieto(T,0);}
     g.fillStyle="rgba(0,0,0,.2)";g.beginPath();g.ellipse(x,sue+4*K,15*K,3.6*K,0,0,7);g.fill();
     P=Object.assign({},P,{cuerpo:R.col,uni:R.uni,fiesta:true});
-    g.save();g.translate(x,sue+3*K);g.scale(e*R.dir,e);
-    if(P.atras)P.atras();
-    figura(P,T);
-    if(P.frente)P.frente();
-    g.restore();
+    if(R.trapo&&Cap.trapo)Cap.trapo(R,t);
+    else{
+      g.save();g.translate(x,sue+3*K);g.scale(e*R.dir,e);
+      if(P.atras)P.atras();
+      figura(P,T);
+      if(P.frente)P.frente();
+      g.restore();
+    }
     paso=pa;Yo=null;
     const fo=R===Flo.foco,tip=Flo.tip?.R===R&&ahora<Flo.tip.hasta,txt=tip?`${R.nombre} · ${Cap.uniNom(R.uni)} · ${haceR(R)}${fo?"":" · toca otra vez para enfocarla"}`:R.nombre,y=sue-104*e-(R.fy||0)*21;
     g.font='700 12px "Segoe UI",system-ui,sans-serif';
@@ -2986,6 +2998,8 @@ const Taller=(()=>{
     if(dirActivo()&&Cam.listo)return camaraDir(ahora,dt);
     Cam.rot*=Math.exp(-dt/250);
     if(Cam.sigue||!Cam.listo){Cam.tz=zSigue();Cam.tx=fr(robotX)*W;Cam.ty=!Rb.via&&pisoDe(robotX)===SALA?pisoY[SALA]+H*.52:oyRobot()+sue-50*K;}
+    const fo=Cam.sigue&&Cam.listo&&Cap.foco?Cap.foco():null;   // un robot se cayó (panel_vivo_ragdoll.js): la cámara va con él mientras dura
+    if(fo){Cam.tx=fo.x;Cam.ty=fo.y;Cam.tz=lim2(fo.z,zMin(),ZMAX);}
     encuadra();
     if(!Cam.listo){Cam.listo=true;Cam.x=Cam.tx;Cam.y=Cam.ty;Cam.z=Cam.tz;return;}
     const k=1-Math.exp(-dt/(Cam.sigue?300:120));
@@ -3041,6 +3055,7 @@ const Taller=(()=>{
     if(t-Cam.ini<9000){const a=dedo?"Un dedo: moverte · dos dedos: zoom":"Rueda: zoom · arrastra: moverte · doble clic: acercar";g.font='600 12px "Segoe UI",system-ui,sans-serif';const w=g.measureText(a).width+24,q=(CW-w)/2;g.globalAlpha=Math.min(1,(9000-t+Cam.ini)/800)*.9;caja(q,8,w,24,12,"#10131b");g.fillStyle="#fff";g.textAlign="center";g.textBaseline="middle";g.fillText(a,CW/2,20.5);g.textBaseline="alphabetic";g.globalAlpha=1;}
   }
   function pintaEdificio(t,dt,anda,viaje,conProp){
+    if(Cap.trapoPaso)Cap.trapoPaso(t,dt);
     camara(dt);
     g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,CW,CH);
     const z=Cam.z,y0=Cam.y-CH/2/z-60,y1=Cam.y+CH/2/z+60;
@@ -3095,6 +3110,7 @@ const Taller=(()=>{
       if(tocaHud(sx,py))return;
       const q=aMundo(sx,py),en=q.y-pisoY[SALA],pi=en>=0&&en<PCH?piezaEn(q.x):null;
       if(pi){tip={p:pi,hasta:ahora+6000};return;}
+      if(Cap.toqueTrapo&&Cap.toqueTrapo(q.x,q.y))return;   // tocar un muñeco de trapo lo empuja
       const ly=q.y-pisoY[P_PB];
       if(Cap.clic&&ly>=PCH&&ly<=H&&Cap.clic(q.x,ly))return;
       for(const R of Flo.m.values()){    // un robot de otra sesión: letrero, y otro toque abre esa sesión
@@ -3148,7 +3164,17 @@ const Taller=(()=>{
     const suelta_=ev=>{dedos.delete(ev.pointerId);if(!dedos.size)cv.style.cursor="grab";};
     cv.addEventListener("pointerup",suelta_);cv.addEventListener("pointercancel",suelta_);
   }
-  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
+  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,ojos,gorro,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
+  // para el muñeco de trapo (panel_vivo_ragdoll.js): quién puede caerse ahora, dónde está su piso y cómo devolverle el control
+  const entidades=()=>{
+    const L=[],mi=m=>({E:m,nom:"el "+m.tipo,esc:ALTO,cuerpo:TM[m.tipo].c,gorro:TM[m.tipo].gorro,uni:EDIF?m.uni||Cap.uniSesion?.():undefined,tono:TM[m.tipo].tono,anda:!!m.anda});
+    if(!Flo.foco&&!Cap.oculto&&!(Esc&&!Rb.trapo))L.push({E:Rb,nom:"Token",esc:1,cuerpo:Cap.cuerpoR||pal["--acc"],uni:EDIF&&Cap.uniSesion?Cap.uniSesion():undefined,tono:900,anda:!!Rb.anda,token:true});
+    if(Flo.on)for(const R of Flo.m.values()){if(R.ida)continue;L.push({E:R,nom:R.nombre,esc:.88,cuerpo:R.col,uni:R.uni,tono:900,anda:!!R.anda});for(const m of R.ms.values())L.push(mi(m));}
+    else for(const m of visibles())if(!m.oculto&&!m.duerme&&!(Esc&&Esc.m===m&&!m.trapo))L.push(mi(m));
+    return L;
+  };
+  const mundo=()=>({W,K,sue,EDIF,ahora,zSigue:EDIF&&CW?zSigue():1,ubica:E=>{if(E===Rb&&!Flo.foco)E.x=robotX;const p=pisoDe(E.x);return {px:fr(E.x)*W,piso:p,oy:EDIF?E.oy??pisoY[p]:0,lo:.03*W,hi:.97*AN()*W};}});
+  const ponX=(E,px,piso,d)=>{const x=lim(enP(piso,px/W));E.x=x;if(d)E.dir=d;if(E===Rb){robotX=x;if(d)dir=d;}};
   const dim=()=>{
     if(EDIF&&!enMundo){                  // fuera de un piso se dibuja sobre el vidrio: anuncios, cartas y la batería, cerca de donde esté el robot
       const q=aPantalla(fr(robotX)*W,oyRobot()+sue);
@@ -3160,7 +3186,7 @@ const Taller=(()=>{
   const actividad=(nom,txt,ms)=>{actHasta=ahora+ms;poner(nom,null,true);A.act=true;A.txt=txt;};
   const libre=()=>!Esc&&!pend&&principalAlDia();
   const suelta=(x,y,txt,c,vy=-30)=>parts.push({x,y,vx:(Math.random()-.5)*30,vy,v:1,c,txt,hud:EDIF&&!enMundo});
-  return {prim,VARIAS:KIT_V,variaDe,prueba:v=>{fijaV=v&&POSES[v]?v:null;llego=llego||ahora;return fijaV;},dim,tema,actividad,libre,suelta,Cap,ir,pinta,poner,POSES,sync,escena,TM,VM,ACTIVIDADES,minis:()=>minis,finEsc,reposo,datosPC,piezas:()=>PZ,quiere,TAREAS,datosTarea,torre:To,limpiaRx:()=>{ultRx={};cola=null;pc.sinRed=0;pc.temps=[];},estado:()=>({rx:Rx&&Rx.tipo,letrero,nom:A.nom,pose:fijaV||A.v,x:robotX,meta,estacion:ESTACIONES[idx]?.[0]||null,esc:Esc&&Esc.tipo,piso:PISOS[pisoDe(robotX)]?.k,viaje:Rb.via&&Rb.via.t,cabina:Cab.y,cam:{z:Cam.z,x:Cam.x,y:Cam.y,sigue:Cam.sigue},plano:Dir.pl&&Dir.pl.k}),irPiso,zoomA,Cam,Dir,ponDir,Cin,ponCine,Nar,ponNarrador,tvPinta,Flo,fabrica,ponFabrica,enfoca};
+  return {prim,VARIAS:KIT_V,variaDe,prueba:v=>{fijaV=v&&POSES[v]?v:null;llego=llego||ahora;return fijaV;},dim,tema,actividad,libre,suelta,Cap,ir,pinta,poner,POSES,sync,escena,TM,VM,ACTIVIDADES,minis:()=>minis,finEsc,reposo,datosPC,piezas:()=>PZ,quiere,TAREAS,datosTarea,torre:To,limpiaRx:()=>{ultRx={};cola=null;pc.sinRed=0;pc.temps=[];},estado:()=>({rx:Rx&&Rx.tipo,letrero,nom:A.nom,pose:fijaV||A.v,x:robotX,meta,estacion:ESTACIONES[idx]?.[0]||null,esc:Esc&&Esc.tipo,piso:PISOS[pisoDe(robotX)]?.k,viaje:Rb.via&&Rb.via.t,cabina:Cab.y,cam:{z:Cam.z,x:Cam.x,y:Cam.y,sigue:Cam.sigue},plano:Dir.pl&&Dir.pl.k}),irPiso,zoomA,Cam,Dir,ponDir,Cin,ponCine,Nar,ponNarrador,tvPinta,Flo,fabrica,ponFabrica,enfoca,entidades,mundo,ponX,hecho,dirActivo};
 })();
 
 // ---------------------------------------------------------- la PC: cifras reales, nunca con la pestaña oculta
@@ -3194,6 +3220,7 @@ requestAnimationFrame(bucle);
 <script src="/v2/vivo/poses.js"></script>
 <script src="/v2/vivo/extras.js"></script>
 <script src="/v2/vivo/avance.js"></script>
+<script src="/v2/vivo/ragdoll.js"></script>
 <script src="/v2/vivo/movil.js"></script>
 </body>
 </html>

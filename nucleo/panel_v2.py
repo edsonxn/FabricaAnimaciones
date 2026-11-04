@@ -707,6 +707,8 @@ def get(h, ruta):
         return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_poses.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
     if ruta == "/v2/vivo/avance.js":  # el % de render, voz y demás tareas largas con 15 animaciones al azar (3-nov-2026)
         return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_avance.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
+    if ruta == "/v2/vivo/ragdoll.js":  # los robots se caen, se agarran de manos y pies y la cámara los sigue (3-nov-2026)
+        return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_ragdoll.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
     if ruta == "/v2/vivo/movil.js":
         return h._enviar(200, open(os.path.join(AQUI, "panel_vivo_movil.js"), "rb").read(), "text/javascript; charset=utf-8", cache="no-cache")
     if ruta == "/api/v2/vivo/mundo":

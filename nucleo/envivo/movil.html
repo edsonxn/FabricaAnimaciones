@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a09">
+<title>En vivo · control remoto</title>
+<style>
+  @font-face { font-family: "Bahn"; src: url(fuente/bahnschrift.ttf); font-weight: 300 700; font-stretch: 75% 100%; }
+  :root {
+    --fondo: #0b0a09; --panel: #16130f; --panel2: #1f1b16; --linea: #2e2820; --hueso: #ece6d6; --gris: #968f84;
+    --sangre: #c4261e; --oro: #d6ba78; --verde: #6fae6a; --azul: #6c9bd2;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; background: var(--fondo); color: var(--hueso); font: 15px/1.35 "Bahn", "Segoe UI", Roboto, system-ui, sans-serif; }
+  body { padding: env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom)); }
+  header { position: sticky; top: 0; z-index: 5; background: linear-gradient(#0b0a09 70%, #0b0a0900); padding: 10px 16px 14px; }
+  .fila { display: flex; align-items: center; gap: 8px; }
+  .vivo { font-weight: 700; letter-spacing: .14em; font-size: 12px; color: var(--sangre); display: flex; align-items: center; gap: 6px; }
+  .vivo i { width: 9px; height: 9px; border-radius: 50%; background: var(--sangre); animation: late 1.4s infinite; }
+  .vivo.pausa { color: var(--oro); } .vivo.pausa i { background: var(--oro); animation: none; }
+  .vivo.caido { color: var(--gris); } .vivo.caido i { background: var(--gris); animation: none; }
+  @keyframes late { 50% { opacity: .25; } }
+  .tema { font-size: 21px; font-weight: 700; font-stretch: 80%; text-transform: uppercase; letter-spacing: .03em; margin-top: 4px; }
+  .sub { color: var(--gris); font-size: 13px; }
+  main { padding: 0 16px; display: grid; gap: 12px; }
+  .tarjeta { background: var(--panel); border: 1px solid var(--linea); border-radius: 14px; padding: 12px; }
+  .tarjeta h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: .16em; color: var(--gris); font-weight: 600; text-transform: uppercase; }
+  .aire { display: grid; grid-template-columns: 78px 1fr; gap: 10px; align-items: start; }
+  .aire img { width: 78px; height: 78px; object-fit: contain; background: var(--panel2); border-radius: 10px; }
+  .aire .frase { font-size: 15px; }
+  .bufer { display: flex; gap: 4px; margin-top: 10px; height: 8px; }
+  .bufer span { flex: 0 0 auto; border-radius: 4px; background: var(--hueso); opacity: .85; }
+  .bufer span.r { background: var(--azul); } .bufer span.p { background: var(--sangre); } .bufer span.v { opacity: .3; }
+  input, select, button, textarea { font: inherit; color: inherit; }
+  input[type=text], textarea { width: 100%; background: var(--panel2); border: 1px solid var(--linea); border-radius: 10px; padding: 11px 12px; outline: none; }
+  input[type=text]:focus, textarea:focus { border-color: var(--oro); }
+  button { background: var(--panel2); border: 1px solid var(--linea); border-radius: 10px; padding: 10px 12px; min-height: 42px; cursor: pointer; }
+  button:active { transform: scale(.97); }
+  button.prim { background: var(--sangre); border-color: var(--sangre); color: #fff; font-weight: 700; }
+  button.oro { background: var(--oro); border-color: var(--oro); color: #1b160f; font-weight: 700; }
+  button.on { border-color: var(--oro); color: var(--oro); }
+  .botones { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .chip { font-size: 13px; padding: 6px 10px; min-height: 0; border-radius: 20px; }
+  .chat { display: grid; gap: 6px; max-height: 46vh; overflow-y: auto; overscroll-behavior: contain; }
+  .com { background: var(--panel2); border-radius: 10px; padding: 8px 10px; }
+  .com b { color: var(--oro); font-weight: 600; } .com.yo b { color: var(--azul); }
+  .com .et { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); margin-left: 6px; }
+  .com .acc { display: flex; gap: 6px; margin-top: 6px; } .com .acc button { min-height: 32px; padding: 4px 8px; font-size: 12px; }
+  .com.oculto { opacity: .4; }
+  .rango { display: grid; grid-template-columns: 74px 1fr 46px; align-items: center; gap: 8px; margin: 6px 0; }
+  .rango input { width: 100%; accent-color: var(--oro); }
+  .rango output { text-align: right; font-variant-numeric: tabular-nums; }
+  .lat { font-size: 13px; color: var(--gris); margin-top: 6px; }
+  .lat b { color: var(--hueso); }
+  nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: #0b0a09f2; border-top: 1px solid var(--linea);
+        padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+  nav .fila input { flex: 1; }
+  .oculta { display: none !important; }
+  .aviso { position: fixed; left: 16px; right: 16px; bottom: calc(84px + env(safe-area-inset-bottom)); z-index: 7; background: var(--oro);
+           color: #1b160f; border-radius: 10px; padding: 10px 12px; font-weight: 600; transition: opacity .3s; opacity: 0; pointer-events: none; }
+  .aviso.ver { opacity: 1; }
+  .log { font: 12px/1.35 ui-monospace, Consolas, monospace; color: var(--gris); white-space: pre-wrap; max-height: 30vh; overflow-y: auto; }
+  details summary { cursor: pointer; color: var(--gris); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<header>
+  <div class="fila" style="justify-content: space-between">
+    <div class="vivo" id="vivo"><i></i><span id="vivoTxt">EN VIVO</span></div>
+    <div class="sub" id="canal"></div>
+  </div>
+  <div class="tema" id="tema">—</div>
+  <div class="sub" id="estadoTxt"></div>
+</header>
+
+<main>
+  <section class="tarjeta">
+    <h2>Al aire</h2>
+    <div class="aire">
+      <img id="peg" alt="">
+      <div><div class="sub" id="bloque"></div><div class="frase" id="frase">Conectando…</div></div>
+    </div>
+    <div class="bufer" id="bufer" title="búfer"></div>
+    <div class="sub" id="buferTxt" style="margin-top:6px"></div>
+  </section>
+
+  <section class="tarjeta">
+    <h2>Tema</h2>
+    <input type="text" id="temaNuevo" placeholder="Tema nuevo (p. ej. «Los dragones de Skyrim»)" maxlength="120" enterkeyhint="go">
+    <div class="botones" style="margin-top:8px">
+      <button class="prim" id="cambiarYa">Cambiar ya</button>
+      <button id="proponer">Para el próximo corte</button>
+    </div>
+    <div class="chips" id="ranking"></div>
+    <div class="sub" id="corte" style="margin-top:6px"></div>
+  </section>
+
+  <section class="tarjeta">
+    <h2>Chat en vivo</h2>
+    <div class="chat" id="chat"></div>
+  </section>
+
+  <section class="tarjeta">
+    <h2>Latencia del cambio de tema</h2>
+    <div class="rango"><span>Mínimo</span><input type="range" id="latMin" min="0" max="30" step="1"><output id="latMinV"></output></div>
+    <div class="rango"><span>Máximo</span><input type="range" id="latMax" min="1" max="60" step="1"><output id="latMaxV"></output></div>
+    <div class="sub">La frase puente no corta la que suena antes del mínimo; al llegar al máximo la corta y entra el tema nuevo.</div>
+    <div class="botones" style="margin-top:8px"><button id="puente">Frase puente: sí</button></div>
+    <div class="lat" id="latencias"></div>
+  </section>
+
+  <section class="tarjeta">
+    <h2>Controles</h2>
+    <div class="botones">
+      <button id="pausa">⏸ Pausa</button>
+      <button id="votacion">Votación: no</button>
+      <select id="modelo" style="background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px">
+        <option value="sonnet">Guionista: sonnet</option><option value="haiku">Guionista: haiku</option>
+      </select>
+    </div>
+    <div class="chips" id="opciones"></div>
+    <div class="rango" style="margin-top:10px"><span>Corte chat</span><input type="range" id="cadaMin" min="1" max="15" step="0.5"><output id="cadaMinV"></output></div>
+    <div class="rango"><span>Pedidos</span><input type="range" id="minPed" min="1" max="10" step="1"><output id="minPedV"></output></div>
+  </section>
+
+  <section class="tarjeta">
+    <details><summary>Registro</summary><div class="log" id="log"></div></details>
+  </section>
+</main>
+
+<nav>
+  <div class="fila">
+    <input type="text" id="autor" placeholder="Tu nombre" maxlength="30" style="flex:0 0 30%">
+    <input type="text" id="texto" placeholder="Comenta como espectador…" maxlength="200" enterkeyhint="send">
+  </div>
+  <div class="fila"><button class="oro" id="enviar">Enviar</button><button id="sugerir" title="Sugerir el texto como tema">💡</button></div>
+</nav>
+<div class="aviso" id="aviso"></div>
+
+<script>
+// funciona igual en la PC (http://127.0.0.1:8790/movil) que por la puerta del panel remoto (…/envivo/movil)
+const BASE = location.pathname.replace(/movil\/?$/, "");
+const $ = id => document.getElementById(id);
+const api = (u, b) => fetch(BASE + u, b === undefined ? { cache: "no-store" } :
+  { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(b) });
+const url = u => u ? BASE + u.replace(/^\//, "") : "";
+const esc = s => (s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+let E = {}, C = {}, tocando = false, misIds = new Set();
+const guarda = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+const lee = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+$("autor").value = lee("envivo_autor") || "";
+
+function aviso(t) { const a = $("aviso"); a.textContent = t; a.classList.add("ver"); clearTimeout(a._t); a._t = setTimeout(() => a.classList.remove("ver"), 2200); }
+
+async function leer() {
+  try {
+    const [e, c] = await Promise.all([api("api/estado").then(r => r.json()), api("api/chat").then(r => r.json())]);
+    E = e; C = c; pintar(); $("vivo").classList.remove("caido");
+  } catch (err) { $("vivo").className = "vivo caido"; $("vivoTxt").textContent = "SIN CONEXIÓN"; }
+  setTimeout(leer, document.hidden ? 5000 : 1500);
+}
+
+function pintar() {
+  $("vivo").className = "vivo" + (E.pausado ? " pausa" : "");
+  $("vivoTxt").textContent = E.pausado ? "EN PAUSA" : "EN VIVO";
+  $("canal").textContent = E.canal || "";
+  $("tema").textContent = E.tema || "—";
+  $("estadoTxt").textContent = `${E.estado || ""} · ${E.modelo || ""} · voz ${E.voz || ""}` + (E.voz_factor ? ` (${E.voz_factor}×)` : "");
+  const a = E.al_aire;
+  $("bloque").textContent = a ? `${a.titulo} · frase ${a.idx + 1}` : "esperando el primer bloque";
+  $("frase").textContent = a ? a.frase || "…" : "…";
+  const src = url(E.peg_al_aire);
+  if (src && $("peg").dataset.src !== src) { $("peg").src = src; $("peg").dataset.src = src; }
+  if (!src) { $("peg").removeAttribute("src"); $("peg").dataset.src = ""; }
+  // búfer: un segmento por bloque, ancho ∝ duración (azul = respuesta al chat, rojo = frase puente, tenue = tema viejo)
+  const b = E.bufer_det || [], tot = Math.max(60, b.reduce((s, x) => s + x.dur, 0));
+  $("bufer").innerHTML = b.map(x => `<span class="${x.inmediato ? "p" : x.respuesta ? "r" : ""}${(x.ver || 0) < E.tema_ver && !x.respuesta ? " v" : ""}" style="width:${Math.max(3, x.dur / tot * 100)}%"></span>`).join("");
+  $("buferTxt").textContent = `Búfer ${E.bufer_s || 0} s · ${b.length} bloque(s) · escribiendo ${E.en_curso || 0} de ${E.guionistas || 2}` + (E.tiempo_medio ? ` · ~${E.tiempo_medio} s por bloque` : "");
+  // tema
+  const rk = C.ranking || [];
+  $("ranking").innerHTML = rk.slice(0, 6).map(([t, n]) => `<button class="chip" data-tema="${esc(t)}">${esc(t)} · ${n}</button>`).join("");
+  const falta = Math.max(0, Math.round((C.proximo_corte || 0) - Date.now() / 1000));
+  $("corte").textContent = `Próximo corte del chat en ${Math.floor(falta / 60)}:${String(falta % 60).padStart(2, "0")}` + (C.propuesta ? ` · propuesta: «${C.propuesta}»` : "");
+  // latencia
+  if (!tocando) {
+    $("latMin").value = E.lat_min; $("latMax").value = E.lat_max;
+    $("cadaMin").value = C.cada_min; $("minPed").value = C.min_pedidos;
+  }
+  $("latMinV").textContent = $("latMin").value + " s"; $("latMaxV").textContent = $("latMax").value + " s";
+  $("cadaMinV").textContent = $("cadaMin").value + " min"; $("minPedV").textContent = $("minPed").value;
+  $("puente").textContent = "Frase puente: " + (E.puente_inmediato ? "sí" : "no"); $("puente").classList.toggle("on", !!E.puente_inmediato);
+  const L = E.latencias || [];
+  $("latencias").innerHTML = L.length ? "Últimos cambios: " + L.slice(-4).reverse().map(x =>
+    `<b>${x.puente != null ? x.puente + " s" : "—"}</b> puente / <b>${x.bloque} s</b> bloque`).join(" · ") : "Aún no hay cambios medidos.";
+  // controles
+  $("pausa").textContent = E.pausado ? "▶ Seguir" : "⏸ Pausa"; $("pausa").classList.toggle("on", !!E.pausado);
+  $("votacion").textContent = "Votación: " + (E.votacion ? "sí" : "no"); $("votacion").classList.toggle("on", !!E.votacion);
+  if (document.activeElement !== $("modelo")) $("modelo").value = E.modelo || "sonnet";
+  $("opciones").innerHTML = E.votacion ? (E.opciones || []).map((o, i) => `<button class="chip" data-voto="${esc(o)}">${i + 1}. ${esc(o)} · ${(E.votos || {})[o] || 0}</button>`).join("") : "";
+  // chat (lo más nuevo abajo, sin mover el scroll si el usuario está leyendo arriba)
+  const caja = $("chat"), alFondo = caja.scrollHeight - caja.scrollTop - caja.clientHeight < 40;
+  caja.innerHTML = (C.comentarios || []).slice(-40).map(c => `
+    <div class="com${c.estado === "oculto" ? " oculto" : ""}${misIds.has(c.id) ? " yo" : ""}">
+      <b>${esc(c.autor)}</b><span class="et">${esc(c.tipo || (C.clasificando ? "…" : ""))}${c.tema ? " · " + esc(c.tema) : ""}${c.estado && c.estado !== "nuevo" ? " · " + esc(c.estado) : ""}</span>
+      <div>${esc(c.texto)}</div>
+      <div class="acc"><button data-acc="mostrar" data-id="${c.id}">Mostrar</button><button data-acc="contestar" data-id="${c.id}">Que lo conteste</button>
+      <button data-acc="fijar" data-id="${c.id}">Fijar</button><button data-acc="ocultar" data-id="${c.id}">Ocultar</button></div>
+    </div>`).join("");
+  if (alFondo) caja.scrollTop = caja.scrollHeight;
+  $("log").textContent = (E.log || []).slice().reverse().join("\n");
+}
+
+async function cambiar(ya) {
+  const t = $("temaNuevo").value.trim(); if (!t) return aviso("Escribe un tema");
+  if (ya) await api("api/tema", { tema: t }); else await api("api/chat/ajuste", { propuesta: t });
+  $("temaNuevo").value = ""; aviso(ya ? "Tema cambiado: " + t : "Propuesto para el próximo corte"); leerPronto();
+}
+async function comentar(sugerir) {
+  let t = $("texto").value.trim(); if (!t) return;
+  const autor = ($("autor").value.trim() || "Espectador").slice(0, 30); guarda("envivo_autor", autor);
+  if (sugerir) t = "Propongo tema: " + t;
+  const r = await (await api("api/comentario", { autor, texto: t })).json();
+  if (r.id) misIds.add(r.id);
+  $("texto").value = ""; aviso(sugerir ? "Tema sugerido como espectador" : "Comentario enviado"); leerPronto();
+}
+let pronto = null; const leerPronto = () => { clearTimeout(pronto); pronto = setTimeout(() => api("api/estado").then(r => r.json()).then(e => { E = e; pintar(); }), 300); };
+
+$("cambiarYa").onclick = () => cambiar(true);
+$("proponer").onclick = () => cambiar(false);
+$("temaNuevo").onkeydown = e => { if (e.key === "Enter") cambiar(true); };
+$("enviar").onclick = () => comentar(false);
+$("sugerir").onclick = () => comentar(true);
+$("texto").onkeydown = e => { if (e.key === "Enter") comentar(false); };
+$("pausa").onclick = () => api("api/ajuste", { pausado: !E.pausado }).then(leerPronto);
+$("votacion").onclick = () => api("api/ajuste", { votacion: !E.votacion }).then(leerPronto);
+$("modelo").onchange = e => api("api/ajuste", { modelo: e.target.value }).then(() => aviso("Guionista: " + e.target.value));
+$("puente").onclick = () => api("api/ajuste", { puente: !E.puente_inmediato }).then(leerPronto);
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.tema) { $("temaNuevo").value = b.dataset.tema; $("temaNuevo").focus(); }
+  if (b.dataset.voto) api("api/votar", { opcion: b.dataset.voto }).then(() => aviso("Voto: " + b.dataset.voto));
+  if (b.dataset.acc) api("api/chat/accion", { id: b.dataset.id, que: b.dataset.acc }).then(() => aviso(b.textContent));
+});
+for (const [id, campo, ruta] of [["latMin", "lat_min", "api/ajuste"], ["latMax", "lat_max", "api/ajuste"], ["cadaMin", "cada_min", "api/chat/ajuste"], ["minPed", "min_pedidos", "api/chat/ajuste"]]) {
+  const el = $(id);
+  el.oninput = () => { tocando = true; pintar(); };
+  el.onchange = async () => { await api(ruta, { [campo]: Number(el.value) }); tocando = false; leerPronto(); };
+}
+leer();
+</script>
+</body>
+</html>

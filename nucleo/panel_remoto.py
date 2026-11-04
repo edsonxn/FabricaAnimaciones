@@ -49,7 +49,9 @@ COOKIE = "fab_llave"
 ATAJOS = {"/m": "/v2/movil", "/movil": "/v2/movil", "/juego": "/v2/aldea", "/aldea": "/v2/aldea", "/fabrica3d": "/v2/juego", "/vivo": "/v2/vivo"}
 # sin clave: lo que el navegador pide sin cookie para instalar la app (manifest, iconos, service worker, three.js)
 PUBLICO = re.compile(r"^/v2/app/[A-Za-z0-9_.-]+\.(png|webmanifest|js|json)$")
-DOMINIO_EXTRAS = {"panel": "/m", "juego": "/juego", "vivo": "/v2/vivo"}   # carpetas del dominio además de la principal -> ruta del túnel
+DOMINIO_EXTRAS = {"panel": "/m", "juego": "/juego", "vivo": "/v2/vivo",    # carpetas del dominio además de la principal -> ruta del túnel
+                  "envivo": "/envivo/movil"}
+ENVIVO = 8790                          # el directo (`fab.py envivo`): su control remoto va por /envivo/… con la misma clave
 SALTO = {"connection", "keep-alive", "proxy-authenticate", "proxy-authorization", "te", "trailers", "transfer-encoding",
          "upgrade", "host", "content-length", "accept-encoding", "cookie", "server", "date"}
 COMPRIMIBLE = ("text/", "application/json", "application/javascript", "image/svg+xml")
@@ -198,9 +200,14 @@ class Puerta(BaseHTTPRequestHandler):
         if ruta.rstrip("/") in ATAJOS and self._con_llave():
             return self._reenviar(panel_puerto(), ATAJOS[ruta.rstrip("/")] + (f"?{u.query}" if u.query else ""))
         if not self._con_llave():
-            if ruta.startswith(("/api/", "/v2/", "/_pv/", "/video/", "/media/", "/montaje/", "/audio/")) or self.command != "GET":
+            if ruta.startswith(("/api/", "/v2/", "/_pv/", "/video/", "/media/", "/montaje/", "/audio/", "/envivo/")) or self.command != "GET":
                 return self._enviar(401, b'{"error":"sin clave: abre /entrar"}', "application/json")
             return self._pagina_entrar(ir=self.path if ruta not in ("/", "/entrar") else "/v2")
+        if ruta == "/envivo" or ruta.startswith("/envivo/"):     # control remoto del EN VIVO (nucleo/envivo/movil.html)
+            resto = ruta[len("/envivo"):]
+            if resto in ("", "/"):
+                resto = "/movil"
+            return self._reenviar(ENVIVO, resto + (f"?{u.query}" if u.query else ""))
         m = re.match(r"^/_pv/(\d{2,5})(/.*)$", ruta)
         if m:
             p = int(m.group(1))
@@ -229,6 +236,8 @@ class Puerta(BaseHTTPRequestHandler):
             c.request(self.command, ruta, body=cuerpo, headers=cab)
             r = c.getresponse()
         except ConnectionRefusedError:
+            if puerto == ENVIVO:
+                return self._enviar(502, "El directo no está corriendo. En la PC: python fab.py envivo".encode("utf-8"), "text/plain; charset=utf-8")
             if reintento and puerto in PANELES:
                 return self._reenviar(panel_puerto(forzar=True), ruta, False) if cuerpo is None else \
                     self._enviar(502, "El panel no responde (¿se cerró?). En la PC: python fab.py panel".encode("utf-8"), "text/plain; charset=utf-8")

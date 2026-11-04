@@ -29,7 +29,7 @@ from flask import Flask, abort, jsonify, request, send_file, send_from_directory
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(AQUI))
 from envivo import chat as chat_mod, director, voz         # noqa: E402
-from envivo.biblioteca import CANALES, VIDEOS, Biblioteca  # noqa: E402
+from envivo.biblioteca import CANALES, VIDEOS, Biblioteca, palabras  # noqa: E402
 
 BUFER = 2           # bloques listos por delante del que está al aire: más = menos riesgo de hueco, más tarda un cambio de tema
 GUIONISTAS = 2      # llamadas a `claude -p` a la vez (cada una ~8 s de arranque + ~3 s por frase)
@@ -61,6 +61,11 @@ class Directo:
         self.pedido_por = []              # autores del chat que pidieron el tema actual (para el puente)
         self.en_resp = {}                 # bloques cortos que contestan al chat: van al frente de la cola
         self.bloques = {}                 # id → bloque (para la pantalla espejo del panel)
+        # latencia del cambio de tema (el usuario, 4-nov noche): una frase puente sale al aire entre lat_min y lat_max s
+        # después del cambio (la pantalla no corta la frase en curso antes del mínimo; al llegar al máximo la corta)
+        self.puente_inmediato, self.lat_min, self.lat_max = True, 3.0, 8.0
+        self.cambios = {}                 # tema_ver → {"t", "tema", "origen", "puente": s, "bloque": s} (latencia real medida)
+        self.latencias = deque(maxlen=12)
         self.chat = chat_mod.Chat(self)
         self._apunta(f"biblioteca: {len(self.bib.pegatinas)} pegatinas, {len(self.bib.clips)} clips, {len(self.bib.ost)} pistas de OST")
         if self.motor_voz is not voz:                # el modelo se carga antes del primer bloque (~20-40 s)
@@ -81,7 +86,10 @@ class Directo:
         tema = (tema or "").strip()[:120]
         if not tema:
             return
+        if self.puente_inmediato:
+            conservar = 0                               # la frase puente tapa el hueco: nada del tema viejo por delante
         with self.cv:
+            self.cola = [s for s in self.cola if not s.get("inmediato")]     # el puente de un cambio anterior ya no vale
             for s in self.cola[:conservar]:
                 s["conservado"] = True                  # la pantalla no lo descarta aunque sea del tema viejo
             quedan = max(conservar, 1)
@@ -93,8 +101,66 @@ class Directo:
             self.cola[quedan:] = [s for s in self.cola[quedan:] if s.get("respuesta")]
             self.tema, self.tema_ver = tema, self.tema_ver + 1
             self.anuncio = {"tema": tema, "origen": origen, "t": time.time()}
+            self.cambios[self.tema_ver] = {"t": time.time(), "tema": tema, "origen": origen}
+            ver = self.tema_ver
             self.cv.notify_all()
         self._apunta(f"TEMA NUEVO ({origen}): {tema}" + (f" · se tiraron {len(tirados)} bloques del búfer" if tirados else ""))
+        if self.puente_inmediato:
+            threading.Thread(target=self._puente, args=(tema, ver, origen), daemon=True).start()
+
+    PUENTES = {
+        "control": ["¡Cambio de rumbo! Ahora vamos con {t}.", "Giro de guion: hablemos de {t}.", "Nuevo tema en el directo: {t}."],
+        "panel": ["¡Cambio de rumbo! Ahora vamos con {t}.", "Giro de guion: hablemos de {t}."],
+        "chat": ["El chat manda: ahora, {t}.", "Lo pidió el chat, y aquí se obedece: {t}.", "Pedido del chat: vamos con {t}."],
+        "votación": ["Ganó la votación: {t}.", "El chat votó y decidió: {t}."],
+    }
+
+    def _puente(self, tema, ver, origen):
+        """Frase corta que anuncia el tema nuevo en ~1-3 s (sin Claude): tapa la espera mientras se escribe el bloque."""
+        try:
+            t0 = time.time()
+            texto = random.choice(self.PUENTES.get(origen, self.PUENTES["control"])).format(t=tema)
+            if origen == "chat" and self.pedido_por:
+                texto += " Gracias, " + " y ".join(self.pedido_por[:2]) + "."
+            sid = f"p{ver:03d}"
+            extra = {} if self.motor_voz is voz else {"vigente": lambda: ver == self.tema_ver}
+            (wav, dur), = self.motor_voz.sintetizar([texto], self.carpeta, sid, self.voz, self.velocidad, **extra)
+            pegs, clips = self.bib.candidatos(tema)
+            peg = None
+            for clave in list(pegs)[:1]:
+                v, slug = clave.split("/", 1)
+                e = self.bib.pegatinas[clave]
+                if not palabras(tema) & e["pal"]:           # sin parecido, mejor sin imagen que una equivocada
+                    break
+                peg = {"url": f"/pv/{v}/{slug}.png", "rec": f"/pv/{v}/_rec/{slug}.png" if e["rec"] else None, "nombre": tema}
+            clip = list(clips)[0] if clips else self.bib.clip_para(tema)
+            seg = {"id": sid, "tema": tema, "titulo": tema, "resumen": "frase puente del cambio de tema", "opciones": [],
+                   "frases": [{"texto": texto, "dur": dur, "audio": "/s/" + os.path.basename(wav) if wav else None, "peg": peg,
+                               "clip": f"/cv/{clip}.mp4" if clip else None, "rotulo": None, "ficha": None, "com": None}],
+                   "proximos": [], "dur": dur + 0.25, "puente": True, "inmediato": True, "ver": ver, "coms": [], "origen": origen}
+            with self.cv:
+                if ver != self.tema_ver:
+                    return
+                self.cola.insert(0, seg)
+                self.bloques[sid] = seg
+                self.cv.notify_all()
+            self._apunta(f"{sid}: frase puente lista en {time.time() - t0:.1f} s ({dur:.1f} s de voz)")
+        except Exception as e:
+            self._apunta(f"frase puente falló: {e!r}")
+
+    def al_aire_medir(self, seg, dt_pantalla=None):
+        """Latencia real: del cambio de tema a la frase puente y al primer bloque escrito, al salir al aire."""
+        c = self.cambios.get(seg.get("ver"))
+        if not c or seg.get("respuesta"):
+            return
+        que = "puente" if seg.get("inmediato") else "bloque"
+        if que in c:
+            return
+        c[que] = round(time.time() - c["t"], 1)
+        self._apunta(f"LATENCIA {que}: {c[que]} s desde el cambio a «{c['tema']}» ({c['origen']})"
+                     + (f" · la pantalla lo vio hace {dt_pantalla} s" if isinstance(dt_pantalla, (int, float)) and dt_pantalla < 600 else ""))
+        if "bloque" in c:
+            self.latencias.append({"tema": c["tema"], "origen": c["origen"], "puente": c.get("puente"), "bloque": c["bloque"]})
 
     def votar(self, opcion):
         with self.cv:
@@ -116,7 +182,8 @@ class Directo:
                 return {"espera": True, "tema": self.tema, "anuncio": self.anuncio, "estado": self.estado}
             seg = self.cola.pop(0)
             self.al_aire, self.frase_al_aire = seg, 0
-            self.opciones, self.votos = list(seg.get("opciones", [])), {}
+            if not seg.get("inmediato"):
+                self.opciones, self.votos = list(seg.get("opciones", [])), {}
             self.cv.notify_all()
         return seg
 
@@ -311,11 +378,36 @@ class Directo:
                     "com_mostrar": self.chat.mostrar, "com_fijado": self.chat.fijado, "proximo_corte": self.chat.proximo_corte,
                     "tiempo_medio": round(sum(self.tiempos) / len(self.tiempos), 1) if self.tiempos else None,
                     "modelo": self.modelo, "anuncio": self.anuncio, "voz": self.voz,
+                    "puente_inmediato": self.puente_inmediato, "lat_min": self.lat_min, "lat_max": self.lat_max,
+                    "latencias": list(self.latencias), "guionistas": GUIONISTAS, "en_curso": len(self.en_curso),
+                    "bufer_det": [{"titulo": s["titulo"], "dur": round(s["dur"]), "ver": s.get("ver"), "respuesta": bool(s.get("respuesta")),
+                                   "inmediato": bool(s.get("inmediato"))} for s in self.cola],
+                    "peg_al_aire": ((al["frases"][self.frase_al_aire].get("peg") or {}).get("url")
+                                    if al and 0 <= self.frase_al_aire < len(al["frases"]) else None),
                     "voz_factor": round(self.motor_voz.factor(), 2) if getattr(self.motor_voz, "factor", None) and self.motor_voz.factor() else None, "log": list(self.log)[-14:]}
+
+
+# desde la red de la casa (la tele) solo se puede VER: la pantalla, sus medios y lo que ella pide. Los controles y el chat
+# solo desde esta PC (y desde la puerta con clave del panel remoto, que reenvía desde 127.0.0.1).
+SOLO_VER_POST = {"/api/progreso"}
 
 
 def crear_app(d):
     app = Flask(__name__, static_folder=None)
+
+    @app.before_request
+    def _solo_ver_desde_la_red():
+        if request.remote_addr in ("127.0.0.1", "::1"):
+            return None
+        if request.method == "GET" and request.path not in ("/admin", "/control", "/movil"):
+            return None
+        if request.method == "POST" and request.path in SOLO_VER_POST:
+            return None
+        abort(403)
+
+    @app.get("/movil")
+    def movil():                                    # el control remoto del teléfono (por la puerta: /envivo/movil)
+        return send_from_directory(AQUI, "movil.html")
 
     @app.get("/")
     def pantalla():
@@ -400,6 +492,13 @@ def crear_app(d):
                 d.pausado = bool(j["pausado"])
             if j.get("modelo") in ("haiku", "sonnet", "opus"):
                 d.modelo = j["modelo"]
+            if "puente" in j:
+                d.puente_inmediato = bool(j["puente"])
+            if "lat_min" in j:
+                d.lat_min = max(0.0, min(60.0, float(j["lat_min"])))
+                d.lat_max = max(d.lat_max, d.lat_min)
+            if "lat_max" in j:
+                d.lat_max = max(d.lat_min, min(90.0, float(j["lat_max"])))
             d.cv.notify_all()
         return jsonify(ok=True)
 
@@ -408,6 +507,8 @@ def crear_app(d):
         j = request.get_json(silent=True) or {}
         if d.al_aire and j.get("id") == d.al_aire["id"]:
             d.frase_al_aire = int(j.get("frase", 0))
+            if d.frase_al_aire == 0:
+                d.al_aire_medir(d.al_aire, j.get("dt"))
         return jsonify(ok=True)
 
     def _seguro(base, rel):
@@ -465,12 +566,14 @@ def main():
     ap.add_argument("--tema", default=None)
     ap.add_argument("--modelo", default="sonnet", help="sonnet (por defecto: mejor lore y sarcasmo, 12-17 s por bloque) | haiku (respaldo)")
     ap.add_argument("--voz", default="Raul", help="voz OneCore de Windows: Raul, Sabina (es-MX), Pablo, Helena, Laura (es-ES) "
-                                                  "| chatterbox:<voz de C:\chatterbox_voices> (GPU, la del canal: chatterbox:Sarcastica)")
+                                                  "| chatterbox:<voz de C:\\chatterbox_voices> (GPU, la del canal: chatterbox:Sarcastica)")
     ap.add_argument("--velocidad", type=int, default=1, help="-10..10")
     ap.add_argument("--puerto", type=int, default=int(os.environ.get("PORT", 8790)))
     ap.add_argument("--abrir", action="store_true", help="abre la pantalla y el panel de administración")
     ap.add_argument("--cada-min", type=float, default=3.0, help="cada cuántos minutos el chat puede cambiar el tema")
     ap.add_argument("--chat-youtube", metavar="VIDEO_ID", help="lee el chat del directo de YouTube (gasta cuota: 5 u. por lectura)")
+    ap.add_argument("--tele", action="store_true", help="manda la pantalla al Google TV (Puente TV) y abre el servidor a la red de la casa "
+                                                       "(desde la red solo se ve; los controles, desde la PC o el teléfono por la puerta)")
     a = ap.parse_args()
     d = Directo(a.canal, a.tema, a.modelo, a.voz, a.velocidad)
     d.chat.cada_min = a.cada_min
@@ -483,7 +586,21 @@ def main():
         threading.Timer(1.0, abrir, args=(a.puerto,)).start()
     import logging
     logging.getLogger("werkzeug").setLevel(logging.ERROR)     # sin una línea por cada petición
-    crear_app(d).run(host="127.0.0.1", port=a.puerto, threaded=True, use_reloader=False)
+    host = "127.0.0.1"
+    if a.tele:
+        sys.path.insert(0, os.path.dirname(AQUI))
+        import tele as tele_mod
+
+        def a_la_tele():
+            try:
+                url = f"http://{tele_mod.ip_hacia_tele()}:{a.puerto}/?auto=1"
+                tele_mod.web(url)
+                d._apunta(f"pantalla enviada a la tele: {url}")
+            except (SystemExit, Exception) as e:
+                d._apunta(f"la tele no la recibió: {e}")
+        host = "0.0.0.0"
+        threading.Timer(2.0, a_la_tele).start()
+    crear_app(d).run(host=host, port=a.puerto, threaded=True, use_reloader=False)
 
 
 if __name__ == "__main__":

@@ -39,6 +39,9 @@ const F = (estilo, px) => `${estilo} condensed ${px}px Bahn, Bahnschrift, sans-s
 // ---------------- estado ----------------
 let seg = null, idx = -1, siguiente = null, pidiendo = false, enPuente = false, esperaInfo = null;
 let relleno = null;   // bloque del tema viejo que suena mientras se escribe el nuevo (sin pantalla de espera)
+// latencia del cambio de tema (4-nov noche): lo nuevo (la frase puente) no entra antes de lat_min s y, si la frase vieja
+// sigue sonando a los lat_max s, se corta con un fundido corto
+let cambioT = -1e9, verVisto = null, cortando = false;
 let audio = null, finFraseTimer = null, arrancado = false;
 let vidCur = 0, vidAlpha = [1, 0], vidFade = null, vidClip = ["", ""], vidPrep = [null, null], clipPendiente = false;
 let pegatinas = [], aviso = null, ficha = null, temaBar = { txt: "", t0: 0 };
@@ -260,9 +263,11 @@ function clipSiguiente() {
 function ponerAviso(arriba, titulo, dur, color = HUESO) { aviso = { arriba: (arriba || "").toUpperCase(), titulo: (titulo || "").toUpperCase(), t0: ahora(), dur, color }; }
 function empezarBloque() {
   enPuente = false;
+  const prev = seg;
   seg = siguiente; siguiente = null; idx = -1;
   if (vigente(seg)) relleno = null;
-  if (seg.puente) ponerAviso(seg.origen === "votación" ? "El chat decidió" : seg.origen === "chat" ? "Lo pidió el chat" : "Nuevo tema", seg.tema, 4.5, SANGRE);
+  const yaAnunciado = prev && prev.inmediato && prev.ver === seg.ver;    // la frase puente ya puso el aviso del tema nuevo
+  if (seg.puente && !yaAnunciado) ponerAviso(seg.origen === "votación" ? "El chat decidió" : seg.origen === "chat" ? "Lo pidió el chat" : "Nuevo tema", seg.tema, 4.5, SANGRE);
   else ponerAviso("En vivo · " + (seg.tema || ""), seg.titulo, 3.8);
   if (temaBar.txt !== seg.tema) temaBar = { txt: seg.tema, t0: ahora() };
   siguienteFrase();
@@ -272,7 +277,7 @@ function guardarRelleno() { if (siguiente && !vigente(siguiente)) { if (!relleno
 function siguienteFrase() {
   clearTimeout(finFraseTimer);
   if (!MONITOR) guardarRelleno();
-  if (seg && siguiente && (siguiente.ver || 0) > (seg.ver || 0)) return empezarBloque();   // ya está el bloque del tema nuevo
+  if (seg && siguiente && (siguiente.ver || 0) > (seg.ver || 0) && ahora() - cambioT >= (estado.lat_min || 0)) return empezarBloque();   // ya está el tema nuevo
   idx++;
   if (!seg || idx >= seg.frases.length) {
     if (MONITOR) return;
@@ -282,7 +287,7 @@ function siguienteFrase() {
   }
   const f = seg.frases[idx];
   if (f.com) ponerCarta(f.com, (f.dur || 5) + 0.6, true);              // la voz contesta este comentario: sale en pantalla
-  if (!MONITOR) fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: seg.id, frase: idx }) }).catch(() => {});
+  if (!MONITOR) fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: seg.id, frase: idx, dt: Math.round((ahora() - cambioT) * 10) / 10 }) }).catch(() => {});
   // ficha de inventario (arriba a la derecha)
   if (ficha) ficha.tOut = ahora();
   const fichaNueva = f.ficha ? { ...f.ficha, t0: ahora() + 0.3, tOut: null } : null;
@@ -330,6 +335,8 @@ async function arrancarOST() {
 // ---------------- estado del control (votación, avisos del chat) ----------------
 async function leerEstado() {
   try { estado = await (await fetch("/api/estado")).json(); } catch (e) {}
+  if (verVisto !== null && (estado.tema_ver || 0) > verVisto) cambioT = ahora();
+  if (estado.tema_ver !== undefined) verVisto = estado.tema_ver;
   // cambio de tema: lo precargado del tema viejo pasa a relleno (suena si el nuevo aún no está) y se pide ya el nuevo;
   // en cuanto llega, se salta a él en el próximo cambio de frase
   if (!MONITOR) {
@@ -345,7 +352,7 @@ async function leerEstado() {
     if (an.origen === "chat") ponerAviso("El chat lo pidió · en un momento", an.tema, 5, SANGRE);
     anuncioVisto = an.t;
   }
-  setTimeout(leerEstado, MONITOR ? 600 : 1500);
+  setTimeout(leerEstado, MONITOR ? 600 : 1000);
 }
 
 // ---------------- dibujo ----------------
@@ -604,6 +611,20 @@ function cuadro() {
   const v = vids[vidCur]; if (v.duration && v.currentTime > v.duration - 0.3) v.currentTime = 0.2;   // clip corto: vuelve a empezar
   requestAnimationFrame(cuadro);
 }
+
+// al llegar al máximo, la frase vieja se corta (fundido de 0,3 s) y entra lo nuevo
+setInterval(() => {
+  if (MONITOR || cortando || !seg || !siguiente || (siguiente.ver || 0) <= (seg.ver || 0)) return;
+  if (ahora() - cambioT < Math.max(estado.lat_max || 8, estado.lat_min || 0)) return;
+  cortando = true;
+  const a = audio, v0 = a ? a.volume : 1;
+  let k = 0;
+  const paso = setInterval(() => {
+    k++;
+    if (a) a.volume = Math.max(0, v0 * (1 - k / 6));
+    if (k >= 6) { clearInterval(paso); if (a) { a.onended = null; a.pause(); } cortando = false; siguienteFrase(); }
+  }, 50);
+}, 200);
 
 async function arrancar() {
   if (arrancado) return; arrancado = true;

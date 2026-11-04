@@ -8,7 +8,7 @@ avisos, fichas y pegatinas del kit de Tamriel, no un estilo genérico). Voz por 
 es-MX), nada de ElevenLabs para no gastar créditos.
 
 ```
-python fab.py envivo [canal] [--tema "…"] [--modelo sonnet|haiku] [--voz Raul] [--cada-min 3] [--chat-youtube <id>] [--abrir]
+python fab.py envivo [canal] [--tele] [--tema "…"] [--modelo sonnet|haiku] [--voz Raul|chatterbox:Sarcastica] [--cada-min 3] [--chat-youtube <id>] [--abrir]
   pantalla (OBS: fuente de navegador): http://127.0.0.1:8790/?auto=1     panel: http://127.0.0.1:8790/admin   (simple: /control)
 ```
 En el panel de vista previa: `.claude/launch.json` → «envivo».
@@ -149,6 +149,46 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
 4. Los subtemas en paralelo a veces se pisan (dos bloques sobre Numinex): el prompt ya pide personajes que no salgan en el
    bloque; vigilar.
 5. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.
+
+## Tele, control remoto del teléfono y frase puente (4-nov-2026, noche; probado de punta a punta)
+`python fab.py envivo --tele` (preview «envivo-tele») = el directo en el Google TV con audio + la app del teléfono. Lo que se hizo:
+- `servidor.py`: frase puente inmediata (`_puente`, bloque `p###` `inmediato` al frente de la cola, voz del motor activo,
+  sin Claude), `lat_min`/`lat_max`/`puente` en `/api/ajuste` y `/api/estado` (+ `latencias`, `bufer_det`, `peg_al_aire`,
+  `en_curso`), latencia REAL medida al salir al aire (`al_aire_medir`, registro «LATENCIA puente/bloque»), `--tele` (0.0.0.0 +
+  manda `http://<ip>:8790/?auto=1` a la tele), desde la red solo GET de pantalla + `POST /api/progreso` (403 al resto),
+  ruta `/movil`. Arreglada la barra de `--voz` (`C:\\chatterbox_voices`).
+- `pantalla.html`: no salta a lo nuevo antes de `lat_min`; a `lat_max` corta la frase vieja (fundido 0,3 s); el bloque
+  completo no repite el aviso de la frase puente; estado cada 1 s.
+- `movil.html` (NUEVO): control remoto del teléfono (al aire + pegatina, búfer en barras, tema ya / próximo corte, ranking,
+  chat en vivo con acciones, comentar y 💡 sugerir como espectador, latencia mín/máx, frase puente sí/no, pausa, votación,
+  guionista, corte del chat, registro). Rutas relativas: sirve en `:8790/movil` y por la puerta en `/envivo/movil`.
+- `nucleo/panel_remoto.py` (la puerta): `/envivo/…` → 127.0.0.1:8790 con la misma clave; carpeta de dominio `envivo/`
+  (`clicknbusiness.com.mx/envivo/`). FALTA relanzar la puerta (matar `puerta_pid` de `panel_remoto.json` y
+  `python nucleo/panel_remoto.py iniciar --republicar`).
+- `nucleo/tele.py`: `web(url)`, `cerrar_web()`, `ip_hacia_tele()`.
+- **Puente TV** (`D:\PuenteTV\tv`, Tablero.kt + PuenteService.kt): `POST /web {"url"}` abre la página a pantalla completa en el
+  WebView del tablero (sin tocar el tablero guardado), `POST /web/cerrar`. APK compilada y copiada; la tele ya tiene la
+  1.261104.1730. (APK anterior en el scratchpad de la sesión.)
+**Probado (4-nov, 17:33-17:39):** la tele abrió `http://192.168.0.237:8790/?auto=1` sola y fue avanzando frases y bloques
+(búfer 86-133 s); desde la red, `POST /api/tema` = 403 y `GET /api/estado` = 200. **Latencia real** (registro «LATENCIA»,
+`latencias` en `/api/estado` y en la app):
+
+| Ajuste | Frase puente lista | Puente al aire | Bloque nuevo al aire |
+|---|---|---|---|
+| antes (sin puente) | — | — | 15-27 s |
+| mín 3 s · máx 8 s | 0,8 s | **7,1 s** | **11,0 s** |
+| mín 0 · máx 2 s | 0,7 s | 5,6 s (página vieja en caché) | 16,4 s |
+| mín 0 · máx 2 s (repetido) | 0,8 s | **3,6 s** | **11,1 s** |
+
+El puente sale ~1,5 s después del máximo (sondeo del estado cada 1 s + fundido de 0,3 s + cargar el audio en el Chromecast).
+El bloque completo tarda lo que tarda sonnet (10-16 s); la frase puente dura 3-4 s, así que entre ella y el bloque puede
+sonar el relleno del tema viejo unos segundos. **Por defecto: mín 3 s, máx 8 s** (no corta frases casi nunca); para
+reaccionar rápido, mín 0 y máx 2-3 en la app.
+- **App fuera de casa:** por la puerta con la misma clave del panel: `clicknbusiness.com.mx/envivo/` → túnel → `/envivo/movil`
+  (probado por el túnel ngrok: sin clave 401; con clave, app + estado + comentario). En casa también `:8790/movil` en la PC.
+- **Ojo:** `POST /web/cerrar` cerró la conexión sin respuesta (la tele siguió contestando): comprobar que cierre; si no, Atrás.
+- No se vio la tele en persona: falta que el usuario confirme que se oye y que el WebView del Chromecast va fluido.
+- Pendiente: mandarle la app «por rayo» (preguntar qué es) y, en la 1.ª prueba larga, medir el % del plan MAX en su chat.
 
 ## Pedido del usuario (4-nov-2026, noche) — pendiente
 - **RECORDAR en la PRIMERA prueba:** medir el % de uso del plan MAX con el medidor de su chat (claude.ai, uso de la sesión de

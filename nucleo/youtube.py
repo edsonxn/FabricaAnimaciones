@@ -27,6 +27,7 @@ import http.server
 import json
 import os
 import sys
+import re
 import threading
 import time
 import urllib.parse
@@ -277,7 +278,9 @@ def _snippet(m, previo=None):
 
 def promocion_pagada(cid, vid, m):
     """Marca «incluye promoción pagada» (obligatorio en YouTube) si el video tiene patrocinio (31-oct-2026)."""
-    if m.get("promocion_pagada", "PATROCINADO" in m.get("descripcion", "").upper()):
+    # «no está patrocinado ni avalado» (aviso de marca, lego_carpintero 4-nov) NO cuenta como patrocinio
+    desc = re.sub(r"NO\s+(ESTÁ\s+|ES\s+)?PATROCINADO", "", m.get("descripcion", "").upper())
+    if m.get("promocion_pagada", "PATROCINADO" in desc):
         api(cid, "PUT", "/videos", params=dict(part="paidProductPlacementDetails"),
             json=dict(id=vid, paidProductPlacementDetails=dict(hasPaidProductPlacement=True)))
         print("promoción pagada: marcada")

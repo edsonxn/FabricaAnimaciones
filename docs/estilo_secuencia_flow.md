@@ -330,6 +330,17 @@ dos personajes frente a frente, un objeto en mano como una lupa o un matamoscas)
   encuadre en dos beats seguidos).
 - Tiempos: guion + investigación 35 min; voz 40 min; 80 imágenes + 12 clips ≈ 50 min; render 11 min; subida 4 min.
 
+## Hallazgos de `lego_carpintero` (3/4-nov-2026, tanda #3; 3 min de clips + capa de pegatinas; 4 sesiones)
+- **3 min en clips = 18 combinados de 10 s** (126 puntos): 9 de 18 traían letterbox (64-84 px) → `recorte_por` medido con
+  `cropdetect`; 1 con voz inventada («Heck») → `ambiente_por` 0. El cuadro de los 5 s suele caer en la transición del clip combinado:
+  para comprobar qué clip es cuál, compara con el prompt entero (primer y segundo momento), no solo con un cuadro.
+- **Capa de pegatinas por zonas (pedido del usuario):** ligera sobre los clips (~1 cada 30-40 s, 1/3-1/2 de pantalla) y densa sobre
+  las imágenes (41 efectos + 14 rótulos + 8 vivos en 9 min), con el kit `nucleo/mg_plasti.py` (línea de incendios, contador, ladrillos).
+- **Filtro de Flow:** «a plasticine boy and girl kneeling» bloqueado → rehacer la escena sin niños (objetos que cuenten lo mismo).
+- **Aviso de marca en la descripción** («no está patrocinado ni avalado por…»): `yt subir` lo tomaba como patrocinio y marcaba
+  «promoción pagada»; arreglado el 4-nov en `nucleo/youtube.py`.
+- Tiempos: render 21 min para 9:13 (vivos + parallax); Lyria 5 tramos ≈ 3 min; mezcla + final + verificar 5 min; subida 4 min.
+
 ## Pendiente del departamento
 - Probar con puntos: clip en 360p + descarga mejorada por el puente, y un clip combinado de 10 s con transición.
 - `flowscrap` 0.14.6 ya reconoce «No tienes saldo suficiente» (requiere recargar la extensión).

@@ -1,0 +1,732 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.23,
+  "tipo": "video",
+  "texto": "Cada segundo, en el mundo se fabrican más de mil cien piezas de LEGO. Y todo empezó con un carpintero de pueblo que lo perdió todo, no una vez, sino una y otra vez.",
+  "clip_s": 10,
+  "t_medio": 4.845,
+  "texto_a": "Cada segundo, en el mundo se fabrican más de mil cien piezas de LEGO.",
+  "texto_b": "Y todo empezó con un carpintero de pueblo que lo perdió todo, no una vez, sino una y otra vez."
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.23,
+  "t1": 20.73,
+  "tipo": "video",
+  "texto": "Se le quemó el taller con su casa adentro. Se quedó sin clientes, sin empleados, y sin su esposa. Su propia familia le prestó dinero con una condición: que dejara de hacer juguetes.",
+  "clip_s": 10,
+  "t_medio": 16.122,
+  "texto_a": "Se le quemó el taller con su casa adentro. Se quedó sin clientes, sin empleados, y sin su esposa.",
+  "texto_b": "Su propia familia le prestó dinero con una condición: que dejara de hacer juguetes."
+ },
+ {
+  "id": "scene-003",
+  "t0": 20.73,
+  "t1": 29.036,
+  "tipo": "video",
+  "texto": "Él dijo que no. Esta es una historia de tres incendios. De un pato de madera que tuvo que regresar de la estación del tren.",
+  "clip_s": 10,
+  "t_medio": 25.349,
+  "texto_a": "Él dijo que no. Esta es una historia de tres incendios.",
+  "texto_b": "De un pato de madera que tuvo que regresar de la estación del tren."
+ },
+ {
+  "id": "scene-004",
+  "t0": 29.036,
+  "t1": 37.985,
+  "tipo": "video",
+  "texto": "De unos ladrillos de plástico que las tiendas devolvían en cajas. Y de una idea que casi nadie entendió, hasta que cambió la forma de jugar del planeta.",
+  "clip_s": 10,
+  "t_medio": 33.401,
+  "texto_a": "De unos ladrillos de plástico que las tiendas devolvían en cajas.",
+  "texto_b": "Y de una idea que casi nadie entendió, hasta que cambió la forma de jugar del planeta."
+ },
+ {
+  "id": "scene-005",
+  "t0": 37.985,
+  "t1": 50.993,
+  "tipo": "video",
+  "texto": "Esta es la historia de LEGO, y de Ole Kirk Christiansen. Nace en mil ochocientos noventa y uno, en un pueblito del campo de Dinamarca. Es uno de trece hermanos, en una familia muy pobre.",
+  "clip_s": 10,
+  "t_medio": 42.93,
+  "texto_a": "Esta es la historia de LEGO, y de Ole Kirk Christiansen.",
+  "texto_b": "Nace en mil ochocientos noventa y uno, en un pueblito del campo de Dinamarca. Es uno de trece hermanos, en una familia muy pobre."
+ },
+ {
+  "id": "scene-006",
+  "t0": 50.993,
+  "t1": 59.731,
+  "tipo": "video",
+  "texto": "A los catorce años entra como aprendiz de carpintero, con su hermano mayor. Aprende a cortar, a cepillar y a ensamblar sin un solo clavo de más.",
+  "clip_s": 10,
+  "t_medio": 55.601,
+  "texto_a": "A los catorce años entra como aprendiz de carpintero, con su hermano mayor.",
+  "texto_b": "Aprende a cortar, a cepillar y a ensamblar sin un solo clavo de más."
+ },
+ {
+  "id": "scene-007",
+  "t0": 59.731,
+  "t1": 70.264,
+  "tipo": "video",
+  "texto": "Después hace el servicio militar, y estudia en una escuela técnica. En mil novecientos dieciséis junta sus ahorros y compra un taller en Billund, un pueblo rodeado de granjas.",
+  "clip_s": 10,
+  "t_medio": 64.011,
+  "texto_a": "Después hace el servicio militar, y estudia en una escuela técnica.",
+  "texto_b": "En mil novecientos dieciséis junta sus ahorros y compra un taller en Billund, un pueblo rodeado de granjas."
+ },
+ {
+  "id": "scene-008",
+  "t0": 70.264,
+  "t1": 77.259,
+  "tipo": "video",
+  "texto": "Ese mismo año se casa con Kirstine. Hace casas, puertas, ventanas y muebles para los granjeros de la zona.",
+  "clip_s": 10,
+  "t_medio": 72.811,
+  "texto_a": "Ese mismo año se casa con Kirstine.",
+  "texto_b": "Hace casas, puertas, ventanas y muebles para los granjeros de la zona."
+ },
+ {
+  "id": "scene-009",
+  "t0": 77.259,
+  "t1": 90.738,
+  "tipo": "video",
+  "texto": "Tiene cuatro hijos, un taller lleno de trabajo, y un futuro que parece seguro. Hasta un día de mil novecientos veinticuatro. Dos de sus hijos, todavía niños, intentan encender una máquina para calentar pegamento.",
+  "clip_s": 10,
+  "t_medio": 82.892,
+  "texto_a": "Tiene cuatro hijos, un taller lleno de trabajo, y un futuro que parece seguro.",
+  "texto_b": "Hasta un día de mil novecientos veinticuatro. Dos de sus hijos, todavía niños, intentan encender una máquina para calentar pegamento."
+ },
+ {
+  "id": "scene-010",
+  "t0": 90.738,
+  "t1": 99.942,
+  "tipo": "video",
+  "texto": "Una chispa cae sobre las virutas de madera. En minutos, el fuego se come el taller entero. Y con el taller, se quema también la casa de la familia.",
+  "clip_s": 10,
+  "t_medio": 96.601,
+  "texto_a": "Una chispa cae sobre las virutas de madera. En minutos, el fuego se come el taller entero.",
+  "texto_b": "Y con el taller, se quema también la casa de la familia."
+ },
+ {
+  "id": "scene-011",
+  "t0": 99.942,
+  "t1": 110.43,
+  "tipo": "video",
+  "texto": "Ole Kirk mira las cenizas, y decide hacer lo único que sabe: volver a construir. Levanta un taller más grande que el anterior, y una casa nueva.",
+  "clip_s": 10,
+  "t_medio": 105.497,
+  "texto_a": "Ole Kirk mira las cenizas, y decide hacer lo único que sabe: volver a construir.",
+  "texto_b": "Levanta un taller más grande que el anterior, y una casa nueva."
+ },
+ {
+  "id": "scene-012",
+  "t0": 110.43,
+  "t1": 119.507,
+  "tipo": "video",
+  "texto": "Pero en los años treinta llega la Gran Depresión. Los precios del campo se desploman, y los granjeros ya no tienen con qué pagar una mesa o una puerta.",
+  "clip_s": 10,
+  "t_medio": 115.218,
+  "texto_a": "Pero en los años treinta llega la Gran Depresión. Los precios del campo se desploman,",
+  "texto_b": "y los granjeros ya no tienen con qué pagar una mesa o una puerta."
+ },
+ {
+  "id": "scene-013",
+  "t0": 119.507,
+  "t1": 130.952,
+  "tipo": "video",
+  "texto": "El trabajo se acaba. Ole Kirk despide a sus empleados, uno por uno, hasta el último. Y en mil novecientos treinta y dos, cuando parece que no puede ir peor, muere su esposa Kirstine.",
+  "clip_s": 10,
+  "t_medio": 125.089,
+  "texto_a": "El trabajo se acaba. Ole Kirk despide a sus empleados, uno por uno, hasta el último.",
+  "texto_b": "Y en mil novecientos treinta y dos, cuando parece que no puede ir peor, muere su esposa Kirstine."
+ },
+ {
+  "id": "scene-014",
+  "t0": 130.952,
+  "t1": 138.012,
+  "tipo": "video",
+  "texto": "Se queda solo, con cuatro hijos y un taller vacío. Entonces se le ocurre algo pequeño.",
+  "clip_s": 10,
+  "t_medio": 135.43,
+  "texto_a": "Se queda solo, con cuatro hijos y un taller vacío.",
+  "texto_b": "Entonces se le ocurre algo pequeño."
+ },
+ {
+  "id": "scene-015",
+  "t0": 138.012,
+  "t1": 148.835,
+  "tipo": "video",
+  "texto": "Con los restos de madera empieza a hacer juguetes baratos: animales, carritos, figuras con ruedas. Si la gente no puede comprar una mesa, quizá pueda comprarle un juguete a sus hijos.",
+  "clip_s": 10,
+  "t_medio": 143.904,
+  "texto_a": "Con los restos de madera empieza a hacer juguetes baratos: animales, carritos, figuras con ruedas.",
+  "texto_b": "Si la gente no puede comprar una mesa, quizá pueda comprarle un juguete a sus hijos."
+ },
+ {
+  "id": "scene-016",
+  "t0": 148.835,
+  "t1": 157.051,
+  "tipo": "video",
+  "texto": "Para sobrevivir, sus hermanos le prestan dinero. Pero le ponen una condición: que deje esos juguetes y vuelva a la carpintería seria.",
+  "clip_s": 10,
+  "t_medio": 152.033,
+  "texto_a": "Para sobrevivir, sus hermanos le prestan dinero.",
+  "texto_b": "Pero le ponen una condición: que deje esos juguetes y vuelva a la carpintería seria."
+ },
+ {
+  "id": "scene-017",
+  "t0": 157.051,
+  "t1": 167.344,
+  "tipo": "video",
+  "texto": "Ole Kirk se niega. En mil novecientos treinta y cuatro le pone nombre a su pequeña empresa. Junta dos palabras danesas, leg godt, que significan juega bien.",
+  "clip_s": 10,
+  "t_medio": 163.009,
+  "texto_a": "Ole Kirk se niega. En mil novecientos treinta y cuatro le pone nombre a su pequeña empresa.",
+  "texto_b": "Junta dos palabras danesas, leg godt, que significan juega bien."
+ },
+ {
+  "id": "scene-018",
+  "t0": 167.344,
+  "t1": 177.541,
+  "tipo": "video",
+  "texto": "Y de esas dos palabras sale el nombre de su marca: LEGO. Años después, alguien les hizo notar una coincidencia: en latín, lego quiere decir yo junto, o yo armo.",
+  "clip_s": 10,
+  "t_medio": 171.161,
+  "texto_a": "Y de esas dos palabras sale el nombre de su marca: LEGO.",
+  "texto_b": "Años después, alguien les hizo notar una coincidencia: en latín, lego quiere decir yo junto, o yo armo."
+ },
+ {
+  "id": "scene-019",
+  "t0": 177.541,
+  "t1": 182.839,
+  "tipo": "imagen",
+  "texto": "Ole Kirk no lo sabía. Todavía no fabricaba nada que se armara."
+ },
+ {
+  "id": "scene-020",
+  "t0": 182.839,
+  "t1": 185.639,
+  "tipo": "imagen",
+  "texto": "Su juguete estrella es un pato de madera con ruedas,"
+ },
+ {
+  "id": "scene-021",
+  "t0": 185.639,
+  "t1": 190.009,
+  "tipo": "imagen",
+  "texto": "que se jala con una cuerda. Cada pato lleva tres capas de barniz."
+ },
+ {
+  "id": "scene-022",
+  "t0": 190.009,
+  "t1": 193.829,
+  "tipo": "imagen",
+  "texto": "Un día, su hijo Godtfred, que ayuda en el taller desde los doce años,"
+ },
+ {
+  "id": "scene-023",
+  "t0": 193.829,
+  "t1": 197.711,
+  "tipo": "imagen",
+  "texto": "decide ahorrar. A un pedido grande le da solo dos capas,"
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.711,
+  "t1": 201.334,
+  "tipo": "imagen",
+  "texto": "y lo manda a la estación del tren. Cuando su padre se entera,"
+ },
+ {
+  "id": "scene-025",
+  "t0": 201.334,
+  "t1": 205.584,
+  "tipo": "imagen",
+  "texto": "le ordena ir a la estación, recoger todos los patos, darles la"
+ },
+ {
+  "id": "scene-026",
+  "t0": 205.584,
+  "t1": 209.855,
+  "tipo": "imagen",
+  "texto": "tercera capa, y volver a mandarlos. Su hijo nunca lo olvidó."
+ },
+ {
+  "id": "scene-027",
+  "t0": 209.855,
+  "t1": 214.91,
+  "tipo": "imagen",
+  "texto": "Con su propia mano talló en madera el lema de su padre: solo lo mejor es suficientemente bueno."
+ },
+ {
+  "id": "scene-028",
+  "t0": 214.91,
+  "t1": 217.87,
+  "tipo": "imagen",
+  "texto": "Y lo colgó en las paredes del taller."
+ },
+ {
+  "id": "scene-029",
+  "t0": 217.87,
+  "t1": 221.44,
+  "tipo": "imagen",
+  "texto": "En mil novecientos cuarenta y dos, en plena Segunda Guerra Mundial,"
+ },
+ {
+  "id": "scene-030",
+  "t0": 221.44,
+  "t1": 225.408,
+  "tipo": "imagen",
+  "texto": "un cortocircuito incendia la fábrica. Se queman los juguetes,"
+ },
+ {
+  "id": "scene-031",
+  "t0": 225.408,
+  "t1": 230.31,
+  "tipo": "imagen",
+  "texto": "la madera, y hasta los planos de cada modelo. Es el segundo incendio."
+ },
+ {
+  "id": "scene-032",
+  "t0": 230.31,
+  "t1": 233.37,
+  "tipo": "imagen",
+  "texto": "Ole Kirk tiene cincuenta y un años, y otra vez empieza"
+ },
+ {
+  "id": "scene-033",
+  "t0": 233.37,
+  "t1": 237.33,
+  "tipo": "imagen",
+  "texto": "desde el suelo. Después de la guerra, aparece un material nuevo"
+ },
+ {
+  "id": "scene-034",
+  "t0": 237.33,
+  "t1": 241.782,
+  "tipo": "imagen",
+  "texto": "que casi nadie toma en serio: el plástico. En mil novecientos cuarenta y siete,"
+ },
+ {
+  "id": "scene-035",
+  "t0": 241.782,
+  "t1": 245.111,
+  "tipo": "imagen",
+  "texto": "Ole Kirk hace la apuesta más loca de su vida."
+ },
+ {
+  "id": "scene-036",
+  "t0": 245.111,
+  "t1": 250.143,
+  "tipo": "imagen",
+  "texto": "Compra una máquina para moldear plástico, la primera de una juguetera en toda Dinamarca."
+ },
+ {
+  "id": "scene-037",
+  "t0": 250.143,
+  "t1": 254.234,
+  "tipo": "imagen",
+  "texto": "Le cuesta más del doble de lo que la empresa había ganado el año anterior."
+ },
+ {
+  "id": "scene-038",
+  "t0": 254.234,
+  "t1": 257.714,
+  "tipo": "imagen",
+  "texto": "Ese mismo año llegan a sus manos unos ladrillos de plástico ingleses,"
+ },
+ {
+  "id": "scene-039",
+  "t0": 257.714,
+  "t1": 260.242,
+  "tipo": "imagen",
+  "texto": "de una marca llamada Kiddicraft."
+ },
+ {
+  "id": "scene-040",
+  "t0": 260.242,
+  "t1": 266.358,
+  "tipo": "imagen",
+  "texto": "Los inventó un juguetero llamado Hilary Page, y tienen unos botones arriba para encajar uno sobre otro."
+ },
+ {
+  "id": "scene-041",
+  "t0": 266.358,
+  "t1": 269.958,
+  "tipo": "imagen",
+  "texto": "En mil novecientos cuarenta y nueve, LEGO saca sus propios ladrillos,"
+ },
+ {
+  "id": "scene-042",
+  "t0": 269.958,
+  "t1": 272.84,
+  "tipo": "imagen",
+  "texto": "muy parecidos a esos."
+ },
+ {
+  "id": "scene-043",
+  "t0": 272.84,
+  "t1": 278.915,
+  "tipo": "imagen",
+  "texto": "Y son un fracaso. Las tiendas no los quieren. Muchos envíos regresan a la fábrica sin venderse."
+ },
+ {
+  "id": "scene-044",
+  "t0": 278.915,
+  "t1": 281.535,
+  "tipo": "imagen",
+  "texto": "Una revista danesa de juguetes asegura"
+ },
+ {
+  "id": "scene-045",
+  "t0": 281.535,
+  "t1": 284.402,
+  "tipo": "imagen",
+  "texto": "que el plástico nunca va a reemplazar a la madera."
+ },
+ {
+  "id": "scene-046",
+  "t0": 284.402,
+  "t1": 289.472,
+  "tipo": "imagen",
+  "texto": "Los ladrillos encajan, pero se zafan con facilidad. Las torres se caen."
+ },
+ {
+  "id": "scene-047",
+  "t0": 289.472,
+  "t1": 292.627,
+  "tipo": "imagen",
+  "texto": "Para muchos, es un capricho de un viejo carpintero."
+ },
+ {
+  "id": "scene-048",
+  "t0": 292.627,
+  "t1": 297.358,
+  "tipo": "imagen",
+  "texto": "Entonces, ¿cómo pasa un juguete que nadie quería a estar en casi todas las casas del mundo?"
+ },
+ {
+  "id": "scene-049",
+  "t0": 297.358,
+  "t1": 302.913,
+  "tipo": "imagen",
+  "texto": "La respuesta no salió de la fábrica. Salió de una conversación en un viaje."
+ },
+ {
+  "id": "scene-050",
+  "t0": 302.913,
+  "t1": 307.408,
+  "tipo": "imagen",
+  "texto": "La respuesta llega en mil novecientos cincuenta y cuatro, en un viaje a Inglaterra."
+ },
+ {
+  "id": "scene-051",
+  "t0": 307.408,
+  "t1": 313.611,
+  "tipo": "imagen",
+  "texto": "Godtfred, ya convertido en subdirector, conversa con el comprador de juguetes de una gran tienda de Copenhague."
+ },
+ {
+  "id": "scene-052",
+  "t0": 313.611,
+  "t1": 318.174,
+  "tipo": "imagen",
+  "texto": "El hombre le dice algo que se le queda clavado: a los juguetes les falta un sistema."
+ },
+ {
+  "id": "scene-053",
+  "t0": 318.174,
+  "t1": 325.923,
+  "tipo": "imagen",
+  "texto": "Cada juguete se compra, se usa, y se olvida. Godtfred piensa: ¿y si cada pieza sirviera con todas las demás?"
+ },
+ {
+  "id": "scene-054",
+  "t0": 325.923,
+  "t1": 329.545,
+  "tipo": "imagen",
+  "texto": "¿Y si cada caja nueva hiciera más grande lo que el niño ya tiene?"
+ },
+ {
+  "id": "scene-055",
+  "t0": 329.545,
+  "t1": 335.18,
+  "tipo": "imagen",
+  "texto": "En mil novecientos cincuenta y cinco presentan el Sistema de Juego, con un plan de ciudad para construir."
+ },
+ {
+  "id": "scene-056",
+  "t0": 335.18,
+  "t1": 341.61,
+  "tipo": "imagen",
+  "texto": "Por primera vez, los ladrillos no son un juguete. Son un mundo. Pero falta un detalle:"
+ },
+ {
+  "id": "scene-057",
+  "t0": 341.61,
+  "t1": 347.267,
+  "tipo": "imagen",
+  "texto": "que no se zafen. La solución es meter unos tubos huecos por dentro de cada ladrillo."
+ },
+ {
+  "id": "scene-058",
+  "t0": 347.267,
+  "t1": 352.589,
+  "tipo": "imagen",
+  "texto": "Los botones de arriba quedan apretados entre esos tubos, y las piezas se agarran con fuerza."
+ },
+ {
+  "id": "scene-059",
+  "t0": 352.589,
+  "t1": 357.167,
+  "tipo": "imagen",
+  "texto": "El veintiocho de enero de mil novecientos cincuenta y ocho registran la patente."
+ },
+ {
+  "id": "scene-060",
+  "t0": 357.167,
+  "t1": 363.824,
+  "tipo": "imagen",
+  "texto": "Ese es el ladrillo que sigue encajando hoy con uno de hace casi setenta años. Ole Kirk llega a verlo."
+ },
+ {
+  "id": "scene-061",
+  "t0": 363.824,
+  "t1": 369.404,
+  "tipo": "imagen",
+  "texto": "Pero seis semanas después, en marzo de mil novecientos cincuenta y ocho, muere de un ataque al corazón,"
+ },
+ {
+  "id": "scene-062",
+  "t0": 369.404,
+  "t1": 375.668,
+  "tipo": "imagen",
+  "texto": "a los sesenta y seis años. ¿Y el inglés que inventó los primeros ladrillos?"
+ },
+ {
+  "id": "scene-063",
+  "t0": 375.668,
+  "t1": 379.849,
+  "tipo": "imagen",
+  "texto": "Hilary Page no vio nada de esto. Su empresa se hundía en deudas,"
+ },
+ {
+  "id": "scene-064",
+  "t0": 379.849,
+  "t1": 385.027,
+  "tipo": "imagen",
+  "texto": "y murió en mil novecientos cincuenta y siete, convencido de que había fracasado."
+ },
+ {
+  "id": "scene-065",
+  "t0": 385.027,
+  "t1": 390.716,
+  "tipo": "imagen",
+  "texto": "Su viuda contó después que él nunca supo lo que LEGO haría con su idea. En mil novecientos ochenta y uno,"
+ },
+ {
+  "id": "scene-066",
+  "t0": 390.716,
+  "t1": 397.377,
+  "tipo": "imagen",
+  "texto": "LEGO les compró a sus herederos los derechos que quedaban. Y todavía faltaba un incendio."
+ },
+ {
+  "id": "scene-067",
+  "t0": 397.377,
+  "t1": 404.032,
+  "tipo": "imagen",
+  "texto": "En febrero de mil novecientos sesenta, el fuego destruye el almacén donde LEGO guardaba sus juguetes de madera."
+ },
+ {
+  "id": "scene-068",
+  "t0": 404.032,
+  "t1": 408.114,
+  "tipo": "imagen",
+  "texto": "Al día siguiente, Godtfred toma la decisión más dura de la familia."
+ },
+ {
+  "id": "scene-069",
+  "t0": 408.114,
+  "t1": 413.702,
+  "tipo": "imagen",
+  "texto": "LEGO deja la madera para siempre. Solo ladrillos de plástico. Dos de sus hermanos no están de acuerdo,"
+ },
+ {
+  "id": "scene-070",
+  "t0": 413.702,
+  "t1": 421.138,
+  "tipo": "imagen",
+  "texto": "y se van de la empresa. El taller donde empezó todo, el de los patos y las tres capas de barniz, se acaba ahí."
+ },
+ {
+  "id": "scene-071",
+  "t0": 421.138,
+  "t1": 425.43,
+  "tipo": "imagen",
+  "texto": "Godtfred les compra su parte, y se queda solo al frente."
+ },
+ {
+  "id": "scene-072",
+  "t0": 425.43,
+  "t1": 430.738,
+  "tipo": "imagen",
+  "texto": "Y en Billund pasa algo raro: miles de turistas empiezan a llegar a la fábrica."
+ },
+ {
+  "id": "scene-073",
+  "t0": 430.738,
+  "t1": 435.295,
+  "tipo": "imagen",
+  "texto": "Quieren ver de dónde salen los ladrillos. Así que en mil novecientos sesenta y ocho,"
+ },
+ {
+  "id": "scene-074",
+  "t0": 435.295,
+  "t1": 443.099,
+  "tipo": "imagen",
+  "texto": "en ese mismo pueblo de granjas, abre Legoland. Un parque con ciudades, barcos y aviones, todos hechos de ladrillos."
+ },
+ {
+  "id": "scene-075",
+  "t0": 443.099,
+  "t1": 447.219,
+  "tipo": "imagen",
+  "texto": "El pueblo donde un carpintero no podía vender ni una mesa, se vuelve famoso en"
+ },
+ {
+  "id": "scene-076",
+  "t0": 447.219,
+  "t1": 452.97,
+  "tipo": "imagen",
+  "texto": "todo el mundo por sus juguetes. En mil novecientos setenta y ocho llegan"
+ },
+ {
+  "id": "scene-077",
+  "t0": 452.97,
+  "t1": 458.52,
+  "tipo": "imagen",
+  "texto": "los muñequitos de plástico, las minifiguras. Pero la historia de perderlo todo se repite."
+ },
+ {
+  "id": "scene-078",
+  "t0": 458.52,
+  "t1": 464.807,
+  "tipo": "imagen",
+  "texto": "En dos mil cuatro, la empresa pierde tanto dinero que su propio director dice después que estuvo casi en quiebra."
+ },
+ {
+  "id": "scene-079",
+  "t0": 464.807,
+  "t1": 469.127,
+  "tipo": "imagen",
+  "texto": "El nieto del carpintero, que la dirigía, deja el puesto, y por primera vez LEGO"
+ },
+ {
+  "id": "scene-080",
+  "t0": 469.127,
+  "t1": 475.369,
+  "tipo": "imagen",
+  "texto": "queda en manos de alguien de fuera de la familia. Venden los parques, recortan, y vuelven a lo básico:"
+ },
+ {
+  "id": "scene-081",
+  "t0": 475.369,
+  "t1": 481.753,
+  "tipo": "imagen",
+  "texto": "el ladrillo. Al año siguiente, ya vuelve a ganar dinero. Se levanta, como su fundador."
+ },
+ {
+  "id": "scene-082",
+  "t0": 481.753,
+  "t1": 487.504,
+  "tipo": "imagen",
+  "texto": "Hoy es la juguetera más grande del mundo. Fabrica unos treinta y seis mil millones de piezas al año."
+ },
+ {
+  "id": "scene-083",
+  "t0": 487.504,
+  "t1": 491.374,
+  "tipo": "imagen",
+  "texto": "Y con solo seis ladrillos de dos por cuatro se pueden armar más de novecientos"
+ },
+ {
+  "id": "scene-084",
+  "t0": 491.374,
+  "t1": 495.43,
+  "tipo": "imagen",
+  "texto": "quince millones de combinaciones distintas."
+ },
+ {
+  "id": "scene-085",
+  "t0": 495.43,
+  "t1": 503.211,
+  "tipo": "imagen",
+  "texto": "Y una buena parte de esos ladrillos se hace muy cerca de aquí. Desde dos mil ocho, LEGO tiene una fábrica en Nuevo León, junto a Monterrey."
+ },
+ {
+  "id": "scene-086",
+  "t0": 503.211,
+  "t1": 508.677,
+  "tipo": "imagen",
+  "texto": "Hoy es la fábrica más grande de LEGO en todo el mundo, con más de siete mil trabajadores."
+ },
+ {
+  "id": "scene-087",
+  "t0": 508.677,
+  "t1": 513.977,
+  "tipo": "imagen",
+  "texto": "Solo en dos mil veinticinco, de ahí salieron más de ciento cuarenta y nueve millones de cajas."
+ },
+ {
+  "id": "scene-088",
+  "t0": 513.977,
+  "t1": 519.217,
+  "tipo": "imagen",
+  "texto": "Y en septiembre de dos mil veintiséis, la empresa anunció cuatrocientos millones de dólares más"
+ },
+ {
+  "id": "scene-089",
+  "t0": 519.217,
+  "t1": 523.836,
+  "tipo": "imagen",
+  "texto": "para hacerla todavía más grande. Así que, si tienes un LEGO en casa,"
+ },
+ {
+  "id": "scene-090",
+  "t0": 523.836,
+  "t1": 530.482,
+  "tipo": "imagen",
+  "texto": "es posible que lo hayan armado manos mexicanas. Todo empezó con un carpintero que se quedó sin taller,"
+ },
+ {
+  "id": "scene-091",
+  "t0": 530.482,
+  "t1": 534.741,
+  "tipo": "imagen",
+  "texto": "sin clientes y sin esposa. Que vio arder su trabajo tres veces."
+ },
+ {
+  "id": "scene-092",
+  "t0": 534.741,
+  "t1": 541.546,
+  "tipo": "imagen",
+  "texto": "Y que, cuando su familia le pidió que dejara los juguetes, dijo que no. Ahora te pregunto a ti: después del segundo incendio,"
+ },
+ {
+  "id": "scene-093",
+  "t0": 541.546,
+  "t1": 547.227,
+  "tipo": "imagen",
+  "texto": "¿tú habrías seguido, o habrías vuelto a hacer muebles? Cuéntamelo en los comentarios."
+ },
+ {
+  "id": "scene-094",
+  "t0": 547.227,
+  "t1": 552.5,
+  "tipo": "imagen",
+  "texto": "Y si te gustan las historias de las cosas que tienes en casa, suscríbete a Plastitube."
+ }
+]

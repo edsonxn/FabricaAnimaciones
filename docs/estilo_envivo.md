@@ -114,11 +114,50 @@ proponer tema y comentar como espectador.»
   pedidos → «Gracias a @Kiara_Lore y @Ulfric_Fan por pedir el cambio…». Spam y GTA 6 descartados.
   Lore: alguna respuesta mete un dato dudoso («nirnroot carmesí en cuevas de Cuarzo Rojo»; está en Blackreach): vigilar.
 
+## Voz con Chatterbox (medido el 4-nov-2026, RTX 4060, voz `Sarcastica` = la de Tamriel antes de Johnny)
+`python fab.py envivo --voz chatterbox:Sarcastica` (cualquier archivo de `C:\chatterbox_voices`; preview «envivo-chatterbox», puerto
+8791). `nucleo/envivo/voz_chatterbox.py`: mismo contrato que `voz.py` (un .wav por frase + duración), modelo cargado UNA vez
+en el servidor (~48 s, ~3-4 GB de VRAM), GPU con candado, FONETICA unida de los `videos/tes_*/guion.py` (323 palabras; la del
+video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · temp 0,75). `/api/estado` da `voz_factor`.
+- **Tal cual NO alcanza:** factor **1,065** (segundos de síntesis por segundo de audio; 24 frases reales, 1,01-1,19). Un
+  bloque de 6 frases (~46 s) tarda ~49-55 s; con 2 guionistas a la vez la GPU hace cola: 101 s de audio en 106 s. El búfer
+  se vaciaría ~4 min por hora. Trocear por frase NO lo arregla (solo adelanta la 1.ª frase, lista a ~9 s): es ritmo, no espera.
+- **Dónde se va el tiempo:** T3 (el autorregresivo, Llama de 30 capas, 25 pasos = 1 s de audio) 85 %; s3gen 15 %; marca de
+  agua ~0. T3 va a ~26 pasos/s con la GPU al 13 %: lo frena lanzar cientos de kernels pequeños por paso, no el cálculo.
+  fp16/bf16 lo EMPEORAN (1,13-1,30); TF32 igual. Triton/torch.compile no hay en Windows.
+- **Arreglo: `nucleo/envivo/chatterbox_grafo.py`** captura el paso de decodificación de T3 en un **CUDA Graph** con caché
+  estática (1 600 posiciones, se captura una vez y vale para todas las frases). **Mismo audio exacto** (Whisper transcribe
+  igual, mismas duraciones, misma semilla) y **factor 0,74** (0,72-0,79): 45 s de audio en ~33 s. Si el grafo falla, vuelve
+  solo al bucle original. Medido también dentro del servidor con Flask y los guionistas: **0,75-0,78**.
+- Con 0,75 la GPU da ~1,3 s de audio por segundo: alcanza para el directo con ~30 % de margen (incluidas las respuestas al
+  chat), pero sin mucho más. Un bloque de un tema viejo deja de ocupar la GPU en cuanto cambia el tema (`vigente`); las
+  respuestas al chat (`r###`) no se cortan.
+- **Prueba en el navegador (17:13-17:15, cortada por pausa del usuario):** modelo listo, 1.er bloque (4 frases) al aire a
+  los ~26 s de pedirlo. No llegó a verse el paso al 2.º bloque. **Riesgo visto en la traza:** el búfer siguió en 0 durante
+  el 1.er bloque porque los 2 bloques siguientes se sintetizan A LA VEZ frase a frase (el candado los intercala) y ambos
+  terminan tarde (~66 s de GPU) → probable hueco de ~30-40 s al arrancar. Pendiente: que el candado dé prioridad al bloque
+  con `seq` más bajo (el que sale antes), y entonces repetir la traza 10 min con un cambio de tema y una ráfaga de chat.
+
 ## En curso / pendiente
 **Pausado por el usuario (4-nov-2026, noche).** Comentarios + panel `/admin`: PROBADO de punta a punta en el navegador (ráfaga de 8 comentarios → clasificación con haiku, spam y GTA 6 descartados → 5 contestados por su nombre en bloques `r###` → corte a los 1,5 min con 3 pedidos y puente con los nombres; mostrar, fijar y espejo `/?monitor=1` verificados con capturas) y commiteado (`2107675`). Falta: probarlo con el usuario, el chat de un directo real de YouTube (`--chat-youtube`, sin probar), verlo a 1500 px de ancho (solo se vio el diseño de una columna) y la sesión «envivo-voces» (ElevenLabs/Chatterbox), también en pausa.
 1. Probarlo con el usuario: `python fab.py envivo --abrir` (pantalla OBS `:8790/?auto=1` + panel `:8790/admin`).
-2. (el usuario, 4-nov noche) Costo con ElevenLabs en vez de la voz de Windows (caracteres por hora desde `guion.jsonl`, créditos de las 3 cuentas) y probar Chatterbox en tiempo real: ¿sintetiza un bloque más rápido de lo que dura, sin pausas?
+2. (el usuario, 4-nov noche) ElevenLabs: calculado (fila en «Costos»: ~2,2-3 US$/h, los saldos dan ~2 h). Chatterbox: con
+   CUDA Graph va a 0,75× (§ «Voz con Chatterbox»); **PAUSADO por el usuario a mitad de la prueba**: falta la prioridad del
+   candado por `seq`, la traza de 10 min sin huecos y el commit (`voz_chatterbox.py`, `chatterbox_grafo.py`, `servidor.py`,
+   este doc, preview «envivo-chatterbox» en `.claude/launch.json`).
 3. Directo de YouTube real: la lectura del chat ya está escrita (`--chat-youtube <id>`) pero sin probar contra un directo.
 4. Los subtemas en paralelo a veces se pisan (dos bloques sobre Numinex): el prompt ya pide personajes que no salgan en el
    bloque; vigilar.
 5. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.
+
+## Pedido del usuario (4-nov-2026, noche) — pendiente
+- **RECORDAR en la PRIMERA prueba:** medir el % de uso del plan MAX con el medidor de su chat (claude.ai, uso de la sesión de
+  5 h y semanal): anotar antes y después de 15-30 min de directo y extrapolar a 1 h. Tomar como referencia la sesión de 5 h.
+- El directo NO necesita una conversación abierta: `fab.py envivo` es un servidor de Python que llama solo a `claude -p` (la
+  sesión iniciada de Claude Code en la PC, misma suscripción y mismos límites). Basta con la terminal abierta.
+- **Tele:** que el directo se pueda ver para las pruebas en el Google TV con Puente TV (`fab.py tele`, `docs/tele.md`).
+- **App del teléfono «control remoto»** (se la mandan «por rayo»: confirmar con él qué es «rayo» si no está claro): controles
+  importantes (pausa, tema, votación, guionista, búfer), **comentar y sugerir temas como espectador en tiempo real**, y
+  **latencia del cambio de tema regulable con mínimo y máximo** desde el teléfono.
+- Latencia medida hoy: cambio de tema → bloque nuevo al aire en **15-27 s** (sonnet 15 s). Idea para bajarla: frase puente
+  inmediata («¡el chat manda: ahora X!») con voz de Windows en ~2-3 s, mientras se escribe el bloque completo.

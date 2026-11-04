@@ -39,6 +39,10 @@ class Directo:
     def __init__(self, canal, tema, modelo, voz_nombre, velocidad):
         self.canal, self.cfg = canal, CANALES[canal]
         self.modelo, self.voz, self.velocidad = modelo, voz_nombre, velocidad
+        self.motor_voz = voz
+        if voz_nombre.lower().startswith("chatterbox"):     # --voz chatterbox:Sarcastica = la voz del canal en la GPU (voz_chatterbox.py)
+            from envivo import voz_chatterbox
+            self.motor_voz, self.voz = voz_chatterbox, (voz_nombre.split(":", 1)[1] if ":" in voz_nombre else "Sarcastica")
         self.carpeta = os.path.join(AQUI, "_sesiones", time.strftime("%Y%m%d_%H%M%S"))
         os.makedirs(self.carpeta, exist_ok=True)
         self.bib = Biblioteca(canal, os.path.join(AQUI, "_cache", canal))
@@ -59,6 +63,10 @@ class Directo:
         self.bloques = {}                 # id → bloque (para la pantalla espejo del panel)
         self.chat = chat_mod.Chat(self)
         self._apunta(f"biblioteca: {len(self.bib.pegatinas)} pegatinas, {len(self.bib.clips)} clips, {len(self.bib.ost)} pistas de OST")
+        if self.motor_voz is not voz:                # el modelo se carga antes del primer bloque (~20-40 s)
+            t0 = time.time()
+            self.motor_voz.preparar(self.voz, canal)
+            self._apunta(f"voz Chatterbox «{self.voz}» lista en {time.time() - t0:.0f} s ({len(self.motor_voz._fonetica)} palabras de FONETICA)")
         threading.Thread(target=self._productor, daemon=True).start()
 
     def _apunta(self, txt):
@@ -254,7 +262,8 @@ class Directo:
         frases = d["frases"][:7]
         coms = {c["id"]: c for c in comentarios}
         with cf.ThreadPoolExecutor(6) as ex:
-            f_voz = ex.submit(voz.sintetizar, [f["texto"] for f in frases], self.carpeta, sid, self.voz, self.velocidad)
+            extra = {} if self.motor_voz is voz or sid.startswith("r") else {"vigente": lambda: ver is None or ver == self.tema_ver}
+            f_voz = ex.submit(self.motor_voz.sintetizar, [f["texto"] for f in frases], self.carpeta, sid, self.voz, self.velocidad, **extra)
             f_web = {i: ex.submit(self.bib.buscar_web, f.get("buscar") or f.get("etiqueta"))     # respaldo: la etiqueta
                      for i, f in enumerate(frases) if f.get("pegatina") not in self.bib.pegatinas and (f.get("buscar") or f.get("etiqueta"))}
             audios = f_voz.result()
@@ -283,7 +292,8 @@ class Directo:
             if f.get("comentario") in coms:
                 self.chat.contestado(f["comentario"])
             total += dur + 0.25
-        self._apunta(f"{sid}: guion {t_guion:.0f} s · {sum(1 for s in salida if s['peg'])}/{len(salida)} con imagen")
+        t_voz = time.time() - t0 - t_guion
+        self._apunta(f"{sid}: guion {t_guion:.0f} s · voz {t_voz:.0f} s para {total:.0f} s · {sum(1 for s in salida if s['peg'])}/{len(salida)} con imagen")
         return {"id": sid, "tema": tema, "titulo": d.get("titulo") or tema, "resumen": d.get("resumen", ""),
                 "opciones": [o for o in d.get("opciones", []) if isinstance(o, str)][:3], "frases": salida,
                 "proximos": [o for o in d.get("proximos", []) if isinstance(o, str)][:2],
@@ -300,7 +310,8 @@ class Directo:
                                 "frase": al["frases"][self.frase_al_aire]["texto"] if al and 0 <= self.frase_al_aire < len(al["frases"]) else ""} if al else None,
                     "com_mostrar": self.chat.mostrar, "com_fijado": self.chat.fijado, "proximo_corte": self.chat.proximo_corte,
                     "tiempo_medio": round(sum(self.tiempos) / len(self.tiempos), 1) if self.tiempos else None,
-                    "modelo": self.modelo, "anuncio": self.anuncio, "log": list(self.log)[-14:]}
+                    "modelo": self.modelo, "anuncio": self.anuncio, "voz": self.voz,
+                    "voz_factor": round(self.motor_voz.factor(), 2) if getattr(self.motor_voz, "factor", None) and self.motor_voz.factor() else None, "log": list(self.log)[-14:]}
 
 
 def crear_app(d):
@@ -453,7 +464,8 @@ def main():
     ap.add_argument("canal", nargs="?", default="cronicas_tamriel", choices=sorted(CANALES))
     ap.add_argument("--tema", default=None)
     ap.add_argument("--modelo", default="sonnet", help="sonnet (por defecto: mejor lore y sarcasmo, 12-17 s por bloque) | haiku (respaldo)")
-    ap.add_argument("--voz", default="Raul", help="voz OneCore de Windows: Raul, Sabina (es-MX), Pablo, Helena, Laura (es-ES)")
+    ap.add_argument("--voz", default="Raul", help="voz OneCore de Windows: Raul, Sabina (es-MX), Pablo, Helena, Laura (es-ES) "
+                                                  "| chatterbox:<voz de C:\chatterbox_voices> (GPU, la del canal: chatterbox:Sarcastica)")
     ap.add_argument("--velocidad", type=int, default=1, help="-10..10")
     ap.add_argument("--puerto", type=int, default=int(os.environ.get("PORT", 8790)))
     ap.add_argument("--abrir", action="store_true", help="abre la pantalla y el panel de administración")

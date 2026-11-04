@@ -4,41 +4,88 @@
     {
       "name": "taller-la-sena",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8771", "--directory", "C:\\FabricaAnimaciones\\videos\\la_sena\\taller"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8771",
+        "--directory",
+        "C:\\FabricaAnimaciones\\videos\\la_sena\\taller"
+      ],
       "port": 8771
     },
     {
       "name": "taller-no-vuelve",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8772", "--directory", "C:\\FabricaAnimaciones\\videos\\no_vuelve\\taller"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8772",
+        "--directory",
+        "C:\\FabricaAnimaciones\\videos\\no_vuelve\\taller"
+      ],
       "port": 8772
     },
     {
       "name": "casting-crematoria",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8773", "--directory", "C:\\FabricaAnimaciones\\videos\\gaia_crematoria"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8773",
+        "--directory",
+        "C:\\FabricaAnimaciones\\videos\\gaia_crematoria"
+      ],
       "port": 8773
     },
     {
       "name": "lienzo-8766",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["nucleo/panel.py", "--puerto", "8766", "--sin-voz"],
+      "runtimeArgs": [
+        "nucleo/panel.py",
+        "--puerto",
+        "8766",
+        "--sin-voz"
+      ],
       "port": 8766,
       "url": "http://127.0.0.1:8766"
     },
     {
       "name": "panel-compartido",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["E:\\FabricaCompartida\\nucleo\\panel.py", "--puerto", "8799", "--sin-voz"],
+      "runtimeArgs": [
+        "E:\\FabricaCompartida\\nucleo\\panel.py",
+        "--puerto",
+        "8799",
+        "--sin-voz"
+      ],
       "port": 8799,
       "url": "http://127.0.0.1:8799"
     },
     {
       "name": "envivo",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["fab.py", "envivo", "cronicas_tamriel"],
+      "runtimeArgs": [
+        "fab.py",
+        "envivo",
+        "cronicas_tamriel"
+      ],
       "port": 8790,
       "url": "http://127.0.0.1:8790"
+    },
+    {
+      "name": "envivo-chatterbox",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "fab.py",
+        "envivo",
+        "cronicas_tamriel",
+        "--voz",
+        "chatterbox:Sarcastica",
+        "--puerto",
+        "8791"
+      ],
+      "port": 8791,
+      "url": "http://127.0.0.1:8791"
     }
   ]
 }

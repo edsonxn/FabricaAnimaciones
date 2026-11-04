@@ -24,6 +24,7 @@
   python fab.py <video> todo                    voz→seleccionar→tiempo→musica→sfx→mezcla→video→final
   python fab.py <video> limpiar [--previews]    borra segmentos/ del render (y previews/ con --previews) al aprobar el video
   python fab.py limpiar --publicados [--borrar] libera disco: videos y mezclas .wav de los ya públicos en YouTube (conserva proyecto y voz)
+  python fab.py envivo [canal] [--tema "…"] [--modelo sonnet|haiku] [--abrir]  DIRECTO generado en tiempo real: pantalla :8790/ + ventanita /control
   python fab.py panel [--puerto 8765] [--abrir] panel web con el avance de todos los proyectos (nucleo/panel.py)
   python fab.py panel --remoto [--tunel cloudflared] [estado|parar]  el lienzo desde el celular: puerta con clave + túnel (imprime el enlace)
   python fab.py estudio [--puerto 8790] [--abrir]  ESTUDIO: interfaz sencilla (comercial) para videos de 60 s (estudio/servidor.py)
@@ -267,6 +268,9 @@ def main():
     if a[0] == "avisar":              # aviso por voz autónomo (Chatterbox + bocinas), sin servidor ni puerto 3000
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "avisar.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "envivo":              # directo que se genera y se edita en tiempo real; cambia de tema al vuelo (docs/estilo_envivo.md)
+        env = dict(os.environ, PYTHONIOENCODING="utf-8")
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "envivo", "servidor.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "panel":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         if "--remoto" in a:          # el lienzo desde el celular: puerta con clave + túnel (nucleo/panel_remoto.py)

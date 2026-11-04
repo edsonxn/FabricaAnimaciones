@@ -68,7 +68,7 @@ Reels de Facebook «Que pasa en Juchipila»: secuencia con efectos VERTICAL (`jc
 Vertical: `FORMATO = "vertical"` (1080x1920, `GAP = 0.16`). Escena que dibuja el cuadro entero: `Mundo(Escena)` con `render(self, lz, t)` → float32 HxWx3 0..1, `CLASES`, `TRANSICIONES = [("continua", 0.5)] * (n-1)`, `ESTILO_VISUAL = "documental"`. Voz ElevenLabs, SFX fuera del motor, Lyria, `pix.ww`, video real con yt-dlp: ejemplo completo `videos/mods_ia_fusion/` y `docs/estilo_rayosx_tecno.md` (grep, no lectura entera).
 
 ## Índice de docs (solo cuando haga falta)
-`docs/flujo_produccion.md` (núcleo, etapas, render, disco) · `docs/voz.md` (leer ANTES de `voz`) · `docs/apis.md` (qué API para qué y saldos) · `docs/musica_biblioteca.md` · `docs/publicacion.md` · `docs/sesiones.md` · `docs/estudio.md` (Estudio comercial, `fab.py estudio --abrir`) · `docs/panel.md` · `docs/estilo_*.md` · `BITACORA.md` (calendario; historial en `docs/historial.md`) · `docs/reglas_globales_completas.md`.
+`docs/flujo_produccion.md` (núcleo, etapas, render, disco) · `docs/estilo_envivo.md` (**EN VIVO**: directo generado y editado en tiempo real, Tamriel; 4-nov-2026) · `docs/voz.md` (leer ANTES de `voz`) · `docs/apis.md` (qué API para qué y saldos) · `docs/musica_biblioteca.md` · `docs/publicacion.md` · `docs/sesiones.md` · `docs/estudio.md` (Estudio comercial, `fab.py estudio --abrir`) · `docs/panel.md` · `docs/estilo_*.md` · `BITACORA.md` (calendario; historial en `docs/historial.md`) · `docs/reglas_globales_completas.md`.
 
 ## Comandos esenciales
 ```
@@ -81,6 +81,7 @@ python fab.py <v> video --hasta <s> | --rehacer 270-280   luego `final`; antes d
 python fab.py nuevo <v> [--secuencia]  |  <v> fx [--seco|hoja]  |  <v> limpiar (al aprobar)
 python fab.py limpiar --publicados [--borrar]   disco: borra videos y mezclas .wav de los YA públicos (conserva proyecto, imágenes, Lyria y voz; registro en E:\FabricaAnimaciones\_limpieza_publicados.txt; 22-oct)
 python fab.py yt canales | metricas <alias> 90 | videos <canal> | subir <v> <canal> private | aplicar | publicar
+python fab.py envivo [canal] [--tema "…"] [--modelo sonnet|haiku]   DIRECTO que se genera solo (clips, pegatinas, fichas del kit del canal, voz de Windows) y cambia de tema al vuelo: pantalla :8790/?auto=1 (OBS) + ventanita :8790/control (4-nov-2026; docs/estilo_envivo.md)
 python fab.py panel --abrir   (NUNCA detenerlo ni matarlo con los python; lanza renders siempre con fab.py) · lienzo v2 (canvas con todo lo producido + CPU/RAM/GPU/procesos): /v2 o `--lienzo` (docs/panel.md) · lo que hace el agente, animado en bucle: /v2/vivo[?video=<v>]
 python fab.py compartir [--subir <url .git>]   copia SIN tus canales para otra persona (motor + estilos + código de 28 ejemplos) en E:\FabricaCompartida; nombres de canal → etiquetas neutras, revisa fugas antes de subir; su CLAUDE.md/LEEME en `compartir/` (22-oct). Si mejoras un estilo o añades uno nuevo, añade su ejemplo a `EJEMPLOS`/`DOCS` de `nucleo/compartir.py` y su fila a `compartir/CLAUDE.md`
 python fab.py panel --remoto   el lienzo en el celular fuera de casa: puerta con clave + túnel ngrok; dirección fija https://clicknbusiness.com.mx/fabrica/ (`--tunel cloudflared`, `estado`, `parar`; docs/panel.md § «Panel remoto»)

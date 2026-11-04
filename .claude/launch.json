@@ -32,6 +32,13 @@
       "runtimeArgs": ["E:\\FabricaCompartida\\nucleo\\panel.py", "--puerto", "8799", "--sin-voz"],
       "port": 8799,
       "url": "http://127.0.0.1:8799"
+    },
+    {
+      "name": "envivo",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["fab.py", "envivo", "cronicas_tamriel"],
+      "port": 8790,
+      "url": "http://127.0.0.1:8790"
     }
   ]
 }

@@ -92,3 +92,7 @@ canales/comentarios/
 nucleo/app_movil/fabrica.apk
 nucleo/app_movil/android/fabrica.keystore
 videos/*/.continuacion.json
+
+# en vivo: audio y caché de cada directo
+nucleo/envivo/_sesiones/
+nucleo/envivo/_cache/

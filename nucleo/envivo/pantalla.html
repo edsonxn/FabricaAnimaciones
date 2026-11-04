@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>En vivo</title>
+<style>
+  /* La letra del kit de Crónicas de Tamriel (nucleo/mg_tes.py): Bahnschrift Condensed, lo más parecido a la Futura Condensed de Skyrim */
+  @font-face { font-family: "Bahn"; src: url(/fuente/bahnschrift.ttf); font-weight: 300 700; font-stretch: 75% 100%; }
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  canvas { position: absolute; inset: 0; margin: auto; width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; display: block; }
+  video { display: none; }
+  #arranque { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; flex-direction: column;
+    background: radial-gradient(circle at 50% 45%, #1b1b1d 0%, #060608 70%); color: #ece6d6; font-family: Bahn, sans-serif;
+    font-stretch: 75%; cursor: pointer; z-index: 5; letter-spacing: .18em; }
+  #arranque b { font-size: 44px; font-weight: 600; }
+  #arranque span { margin-top: 14px; font-size: 16px; color: #96928a; letter-spacing: .12em; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<video id="v0" muted playsinline preload="auto"></video>
+<video id="v1" muted playsinline preload="auto"></video>
+<div id="arranque"><b>EMPEZAR EL DIRECTO</b><span>CLIC PARA ACTIVAR EL SONIDO · EN OBS USA ?AUTO=1</span></div>
+<script>
+"use strict";
+const W = 1920, H = 1080;
+const cv = document.getElementById("c"), ctx = cv.getContext("2d");
+const vids = [document.getElementById("v0"), document.getElementById("v1")];
+// colores de mg_tes.py / peg_estilos.TEMAS["tes"]
+const HUESO = "rgb(236,230,214)", GRIS = "rgb(150,146,138)", SANGRE = "rgb(196,38,30)", ORO = "rgb(214,186,120)";
+const PAPEL = "rgb(214,194,150)", TINTA = "rgb(58,40,24)", BLANCO_P = "rgb(250,247,238)";
+const ahora = () => performance.now() / 1000;
+const ease = t => 1 - Math.pow(1 - Math.min(Math.max(t, 0), 1), 3);
+const pop = (dt, dur = 0.35) => { if (dt <= 0) return 0; const u = dt / dur; return u >= 1.6 ? 1 : 1 - Math.exp(-6 * u) * Math.cos(9 * u); };
+const rnd = (a, b) => a + Math.random() * (b - a);
+const F = (estilo, px) => `${estilo} condensed ${px}px Bahn, Bahnschrift, sans-serif`;   // 400 Condensed, 600 SemiBold, 700 Bold
+
+// ---------------- estado ----------------
+let seg = null, idx = -1, siguiente = null, pidiendo = false, enPuente = false, esperaInfo = null;
+let relleno = null;   // bloque del tema viejo que suena mientras se escribe el nuevo (sin pantalla de espera)
+let audio = null, finFraseTimer = null, arrancado = false;
+let vidCur = 0, vidAlpha = [1, 0], vidFade = null, vidClip = ["", ""], vidPrep = [null, null], clipPendiente = false;
+let pegatinas = [], aviso = null, ficha = null, temaBar = { txt: "", t0: 0 };
+let estado = { votacion: false, opciones: [], votos: {} };
+let nPeg = Math.floor(Math.random() * 8), anuncioVisto = Date.now() / 1000;
+const cacheImg = new Map();
+
+// ---------------- texto al estilo mg_tes._texto: sombra dura 2 px + espaciado ----------------
+function texto(s, x, y, estilo, px, color, align = "center", alpha = 1, track = 0, maxW) {
+  if (alpha <= 0) return;
+  ctx.save();
+  ctx.font = F(estilo, px); ctx.textAlign = align; ctx.textBaseline = "middle"; ctx.letterSpacing = track + "px";
+  ctx.globalAlpha = alpha * 0.85; ctx.fillStyle = "#000"; ctx.fillText(s, x + 2, y + 2, maxW);
+  ctx.globalAlpha = alpha; ctx.fillStyle = color; ctx.fillText(s, x, y, maxW);
+  ctx.restore();
+}
+function anchoTexto(s, estilo, px, track = 0) {
+  ctx.save(); ctx.font = F(estilo, px); ctx.letterSpacing = track + "px"; const w = ctx.measureText(s).width; ctx.restore(); return w;
+}
+// separador de los menús: línea que se desvanece hacia los extremos, rombo al centro
+function separador(cx, y, medio, alpha = 1, rombo = true) {
+  ctx.save();
+  for (const s of [-1, 1]) {
+    const g = ctx.createLinearGradient(cx + s * 8, 0, cx + s * (8 + medio), 0);
+    g.addColorStop(0, `rgba(236,230,214,${0.9 * alpha})`); g.addColorStop(1, "rgba(236,230,214,0)");
+    ctx.fillStyle = g; ctx.fillRect(Math.min(cx + s * 8, cx + s * (8 + medio)), y - 1, medio, 2);
+  }
+  if (rombo) {
+    ctx.globalAlpha = alpha;
+    ctx.beginPath(); ctx.moveTo(cx - 7, y); ctx.lineTo(cx, y - 7); ctx.lineTo(cx + 7, y); ctx.lineTo(cx, y + 7); ctx.closePath();
+    ctx.fillStyle = "rgba(0,0,0,0.63)"; ctx.fill(); ctx.strokeStyle = HUESO; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx - 3, y); ctx.lineTo(cx, y - 3); ctx.lineTo(cx + 3, y); ctx.lineTo(cx, y + 3); ctx.closePath();
+    ctx.fillStyle = HUESO; ctx.fill();
+  }
+  ctx.restore();
+}
+// panel de humo negro con bordes difuminados (mg_tes._humo), precalculado por tamaño
+const cacheHumo = new Map();
+function dibujarHumo(x, y, w, h, alpha = 1, fuerza = 0.8) {
+  const k = `${Math.round(w)}x${Math.round(h)}x${fuerza}`;
+  if (!cacheHumo.has(k)) {
+    const M = 70, c = document.createElement("canvas"); c.width = Math.round(w) + 2 * M; c.height = Math.round(h) + 2 * M;
+    const g = c.getContext("2d"); g.filter = "blur(26px)"; g.fillStyle = `rgba(6,6,8,${fuerza})`;
+    g.beginPath(); g.roundRect(M + 10, M + 10, w - 20, h - 20, 40); g.fill();
+    cacheHumo.set(k, { c, M });
+  }
+  if (alpha <= 0) return;
+  const { c, M } = cacheHumo.get(k); ctx.save(); ctx.globalAlpha = alpha; ctx.drawImage(c, x - M, y - M); ctx.restore();
+}
+
+// ---------------- red ----------------
+async function pedirSiguiente() {
+  if (pidiendo || siguiente) return;
+  pidiendo = true;
+  try {
+    while (true) {
+      let r;
+      try { r = await (await fetch("/api/siguiente?espera=15")).json(); }
+      catch (e) { await new Promise(s => setTimeout(s, 1500)); continue; }
+      if (r.espera) { esperaInfo = r; continue; }
+      if (!vigente(r)) {                                 // del tema viejo: solo de relleno mientras llega el nuevo
+        if (!relleno) { relleno = r; precargar(r); }
+        if (enPuente && relleno) { siguiente = relleno; relleno = null; empezarBloque(); }
+        continue;
+      }
+      siguiente = r; esperaInfo = null; precargar(r);
+      if (enPuente) empezarBloque();
+      break;
+    }
+  } finally { pidiendo = false; }
+}
+function precargar(s) {
+  for (const f of s.frases) {
+    if (f.audio) { f._audio = new Audio(f.audio); f._audio.preload = "auto"; }
+    if (f.peg) { f.peg.estilo = elegirEstilo(f.peg); pegatinaLista(f.peg); }
+  }
+}
+
+// ---------------- pegatinas (mg_tes.pegatina + nucleo/peg_estilos.py) ----------------
+// carta: foto con marco blanco y su rótulo · silueta: recorte con contorno blanco · camafeo: medallón con anillo de runas
+// legajo: expediente de pergamino con retrato en sepia · grande: personaje sin fondo a media pantalla saliendo del borde
+const ESTILOS_FOTO = ["carta", "camafeo", "carta", "legajo"];
+function elegirEstilo(p) {
+  nPeg++;
+  if (p.rec && nPeg % 2 === 0) return "grande";
+  return p.rec ? "silueta" : ESTILOS_FOTO[nPeg % ESTILOS_FOTO.length];
+}
+function pegatinaLista(p) {
+  const clave = p.url + "|" + p.estilo;
+  if (cacheImg.has(clave)) return cacheImg.get(clave);
+  const o = { listo: false, can: null };
+  cacheImg.set(clave, o);
+  const im = new Image();
+  im.onload = () => { try { o.can = construir(im, p); o.listo = true; } catch (e) { console.error(e); } };
+  im.src = (p.estilo === "grande" || p.estilo === "silueta") && p.rec ? p.rec : p.url;
+  return o;
+}
+function recortar(im) {           // ¿tiene fondo transparente? -> recorte a su caja (como mg_tes._base_pegatina)
+  const c = document.createElement("canvas"); c.width = im.width; c.height = im.height;
+  const g = c.getContext("2d", { willReadFrequently: true }); g.drawImage(im, 0, 0);
+  const d = g.getImageData(0, 0, c.width, c.height).data;
+  let vacios = 0, n = 0, x0 = c.width, y0 = c.height, x1 = 0, y1 = 0;
+  for (let y = 0; y < c.height; y += 2) for (let x = 0; x < c.width; x += 2) {
+    n++;
+    if (d[(y * c.width + x) * 4 + 3] < 10) vacios++; else { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+  }
+  if (vacios / n <= 0.12 || x1 <= x0) return { img: c, transparente: false };
+  const r = document.createElement("canvas"); r.width = x1 - x0 + 2; r.height = y1 - y0 + 2;
+  r.getContext("2d").drawImage(c, -x0, -y0);
+  return { img: r, transparente: true };
+}
+function escalar(img, tam) {
+  const e = tam / Math.max(img.width, img.height), c = document.createElement("canvas");
+  c.width = Math.max(2, Math.round(img.width * e)); c.height = Math.max(2, Math.round(img.height * e));
+  c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); return c;
+}
+function contornoBlanco(img, borde) {
+  const tin = document.createElement("canvas"); tin.width = img.width; tin.height = img.height;
+  const t = tin.getContext("2d"); t.drawImage(img, 0, 0); t.globalCompositeOperation = "source-in"; t.fillStyle = BLANCO_P; t.fillRect(0, 0, img.width, img.height);
+  const P = borde * 2, c = document.createElement("canvas"); c.width = img.width + 2 * P; c.height = img.height + 2 * P;
+  const g = c.getContext("2d");
+  for (let a = 0; a < 28; a++) { const r = a / 28 * Math.PI * 2; g.drawImage(tin, P + Math.cos(r) * borde, P + Math.sin(r) * borde); }
+  g.drawImage(img, P, P); return c;
+}
+function rotuloBlanco(g, cx, y, txt, px) {     // pestaña blanca con el nombre en tinta oscura (las pegatinas del canal)
+  g.save(); g.font = F(700, px); g.letterSpacing = "2px";
+  const w = Math.min(g.measureText(txt).width + 40, 900);
+  g.fillStyle = BLANCO_P; g.beginPath(); g.roundRect(cx - w / 2, y, w, px + 22, 10); g.fill();
+  g.fillStyle = "rgb(24,22,20)"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(txt, cx, y + (px + 22) / 2 + 1, 860);
+  g.restore();
+}
+function construir(im, p) {
+  const nombre = (p.nombre || "").toUpperCase();
+  const { img, transparente } = recortar(im);
+  if (p.estilo === "grande") return escalar(img, 1000);
+  if (p.estilo === "silueta" || (transparente && p.estilo !== "camafeo")) {
+    const s = contornoBlanco(escalar(img, 640), 11);
+    const c = document.createElement("canvas"); c.width = Math.max(s.width, 420); c.height = s.height + 70;
+    const g = c.getContext("2d"); g.drawImage(s, (c.width - s.width) / 2, 0);
+    if (nombre) rotuloBlanco(g, c.width / 2, s.height - 28, nombre, 30);
+    return c;
+  }
+  if (p.estilo === "camafeo") {
+    const R = 230, c = document.createElement("canvas"); c.width = 2 * R + 80; c.height = 2 * R + 140;
+    const g = c.getContext("2d"), cx = c.width / 2, cy = R + 40;
+    g.save(); g.beginPath(); g.arc(cx, cy, R - 18, 0, 7); g.clip();
+    const e = Math.max((2 * R) / img.width, (2 * R) / img.height); g.drawImage(img, cx - img.width * e / 2, cy - img.height * e / 2, img.width * e, img.height * e);
+    g.restore();
+    g.strokeStyle = ORO; g.lineWidth = 6; g.beginPath(); g.arc(cx, cy, R - 14, 0, 7); g.stroke();
+    g.strokeStyle = HUESO; g.lineWidth = 2; g.beginPath(); g.arc(cx, cy, R + 4, 0, 7); g.stroke();
+    for (let i = 0; i < 36; i++) { const a = i / 36 * Math.PI * 2, r0 = R - 4, r1 = R + (i % 3 ? 0 : 12);
+      g.beginPath(); g.moveTo(cx + Math.cos(a) * r0, cy + Math.sin(a) * r0); g.lineTo(cx + Math.cos(a) * r1, cy + Math.sin(a) * r1); g.stroke(); }
+    g.font = F(700, 40); g.letterSpacing = "3px"; g.textAlign = "center"; g.textBaseline = "middle";
+    g.fillStyle = "rgba(0,0,0,.85)"; g.fillText(nombre, cx + 2, cy + R + 52, c.width - 20); g.fillStyle = HUESO; g.fillText(nombre, cx, cy + R + 50, c.width - 20);
+    return c;
+  }
+  if (p.estilo === "legajo") {
+    const foto = escalar(img, 470), w = foto.width + 90, h = foto.height + 190;
+    const c = document.createElement("canvas"); c.width = w; c.height = h; const g = c.getContext("2d");
+    g.fillStyle = PAPEL; g.beginPath(); g.moveTo(0, 6);                      // borde rasgado
+    for (let x = 0; x <= w; x += 18) g.lineTo(x, rnd(0, 9)); for (let y = 0; y <= h; y += 18) g.lineTo(w - rnd(0, 7), y);
+    for (let x = w; x >= 0; x -= 18) g.lineTo(x, h - rnd(0, 9)); for (let y = h; y >= 0; y -= 18) g.lineTo(rnd(0, 7), y); g.fill();
+    const gr = g.createRadialGradient(w / 2, h / 2, h * 0.2, w / 2, h / 2, h * 0.75); gr.addColorStop(0, "rgba(0,0,0,0)"); gr.addColorStop(1, "rgba(90,60,30,.35)");
+    g.fillStyle = gr; g.fillRect(0, 0, w, h);
+    g.filter = "sepia(0.85) contrast(1.05)"; g.drawImage(foto, 45, 45); g.filter = "none";
+    g.strokeStyle = TINTA; g.lineWidth = 3; g.strokeRect(45, 45, foto.width, foto.height);
+    g.font = F(700, 46); g.letterSpacing = "2px"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillStyle = TINTA;
+    g.fillText(nombre, w / 2, foto.height + 95, w - 40);
+    g.fillStyle = "rgba(58,40,24,.5)"; g.fillRect(w * 0.2, foto.height + 130, w * 0.6, 2);
+    return c;
+  }
+  // carta: foto con esquinas redondeadas, marco blanco y la pestaña con el nombre
+  const foto = escalar(img, 560), b = 14, c = document.createElement("canvas");
+  c.width = foto.width + 2 * b; c.height = foto.height + 2 * b + 60; const g = c.getContext("2d");
+  g.fillStyle = BLANCO_P; g.beginPath(); g.roundRect(0, 0, c.width, foto.height + 2 * b, 2 * b); g.fill();
+  g.save(); g.beginPath(); g.roundRect(b, b, foto.width, foto.height, b); g.clip(); g.drawImage(foto, b, b); g.restore();
+  if (nombre) rotuloBlanco(g, c.width / 2, foto.height + b - 6, nombre, 30);
+  return c;
+}
+// dónde va (varía tamaño y posición; la ficha ocupa arriba a la derecha)
+// (nada por debajo de ~0,83 H: ahí van la barra del tema y la votación)
+const LUGARES = [{ x: 0.17, y: 0.56, h: 0.50 }, { x: 0.80, y: 0.55, h: 0.54 }, { x: 0.24, y: 0.50, h: 0.64 }, { x: 0.20, y: 0.60, h: 0.42 }, { x: 0.78, y: 0.60, h: 0.42 }];
+let nLugar = Math.floor(Math.random() * 5);
+
+// ---------------- clips de fondo (dos <video> que se funden) ----------------
+function prepararClip(i, url) {
+  const v = vids[i];
+  if (vidClip[i] === url) return vidPrep[i];
+  vidClip[i] = url;
+  vidPrep[i] = new Promise(res => {
+    const listo = () => { v.removeEventListener("loadedmetadata", alMeta); res(); };
+    const alMeta = () => { const d = v.duration || 8; v.currentTime = d > 9 ? rnd(0.5, d - 8) : 0.2; v.addEventListener("seeked", listo, { once: true }); };
+    v.addEventListener("loadedmetadata", alMeta);
+    v.src = url; v.load();
+    setTimeout(res, 2500);
+  });
+  return vidPrep[i];
+}
+async function ponerClip(url) {
+  if (!url || vidClip[vidCur] === url || clipPendiente) return;
+  clipPendiente = true;
+  const otro = 1 - vidCur;
+  try {
+    await prepararClip(otro, url);
+    try { await vids[otro].play(); } catch (e) {}
+    vidFade = { de: vidCur, a: otro, t0: ahora() }; vidCur = otro;
+  } finally { clipPendiente = false; }
+}
+function clipSiguiente() {
+  if (seg && idx + 1 < seg.frases.length) return seg.frases[idx + 1].clip;
+  return siguiente ? siguiente.frases[0].clip : null;
+}
+
+// ---------------- reproducción ----------------
+function ponerAviso(arriba, titulo, dur, color = HUESO) { aviso = { arriba: (arriba || "").toUpperCase(), titulo: (titulo || "").toUpperCase(), t0: ahora(), dur, color }; }
+function empezarBloque() {
+  enPuente = false;
+  seg = siguiente; siguiente = null; idx = -1;
+  if (vigente(seg)) relleno = null;
+  if (seg.puente) ponerAviso(seg.origen === "votación" ? "El chat decidió" : "Nuevo tema", seg.tema, 4.5, SANGRE);
+  else ponerAviso("En vivo · " + (seg.tema || ""), seg.titulo, 3.8);
+  if (temaBar.txt !== seg.tema) temaBar = { txt: seg.tema, t0: ahora() };
+  siguienteFrase();
+}
+const vigente = s => !s || s.conservado || (s.ver || 0) >= (estado.tema_ver || 0);
+function guardarRelleno() { if (siguiente && !vigente(siguiente)) { if (!relleno) relleno = siguiente; siguiente = null; } }
+function siguienteFrase() {
+  clearTimeout(finFraseTimer);
+  guardarRelleno();
+  if (seg && siguiente && (siguiente.ver || 0) > (seg.ver || 0)) return empezarBloque();   // ya está el bloque del tema nuevo
+  idx++;
+  if (!seg || idx >= seg.frases.length) {
+    if (!siguiente && relleno) { siguiente = relleno; relleno = null; }   // aún no está el tema nuevo: sigue el viejo
+    if (siguiente) return empezarBloque();
+    enPuente = true; pedirSiguiente(); return;
+  }
+  const f = seg.frases[idx];
+  fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id: seg.id, frase: idx }) }).catch(() => {});
+  // ficha de inventario (arriba a la derecha)
+  if (ficha) ficha.tOut = ahora();
+  const fichaNueva = f.ficha ? { ...f.ficha, t0: ahora() + 0.3, tOut: null } : null;
+  if (fichaNueva) setTimeout(() => { ficha = fichaNueva; }, ficha ? 380 : 0); else if (!ficha) ficha = null;
+  // pegatina
+  const actual = pegatinas.find(p => !p.tOut);
+  if (!(f.peg && actual && actual.url === f.peg.url)) {
+    pegatinas.forEach(p => { if (!p.tOut) p.tOut = ahora(); });
+    if (f.peg) {
+      if (!f.peg.estilo) f.peg.estilo = elegirEstilo(f.peg);
+      let L = f.peg.estilo === "grande" ? { x: nLugar % 2 ? 0.76 : 0.24, y: 1.0, h: 0.92, grande: true } : LUGARES[nLugar % LUGARES.length];
+      nLugar++;
+      if ((f.ficha || estado.votacion) && L.x > 0.5) L = { ...L, x: 1 - L.x };   // no encima de la ficha ni de la votación
+      pegatinas.push({ url: f.peg.url, o: pegatinaLista(f.peg), L, t0: ahora(), tOut: null, rot: L.grande ? 0 : rnd(-6, 6), lado: L.x > 0.5 ? 1 : -1, fase: rnd(0, 6), nombre: (f.peg.nombre || "").toUpperCase() });
+    }
+  }
+  if (f.rotulo) ponerAviso(seg.tema, f.rotulo, Math.max(3.2, (f.dur || 4) - 0.4));
+  if (f.clip) ponerClip(f.clip);
+  // voz
+  const dur = f.dur || 4;
+  audio = f._audio || (f.audio ? new Audio(f.audio) : null);
+  if (audio) {
+    audio.onended = () => { clearTimeout(finFraseTimer); finFraseTimer = setTimeout(siguienteFrase, 250); };
+    audio.play().catch(() => { clearTimeout(finFraseTimer); finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 250); });
+    finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 2500);       // por si «ended» no llega
+  } else finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 250);
+  // pedir el bloque que sigue cuando quedan menos de ~9 s de este
+  let resta = 0; for (let k = idx; k < seg.frases.length; k++) resta += (seg.frases[k].dur || 4) + 0.25;
+  if (resta < 9) pedirSiguiente();
+  setTimeout(() => { const c = clipSiguiente(); if (c && !clipPendiente && !vidFade) prepararClip(1 - vidCur, c); }, 1200);
+}
+
+// ---------------- música (OST del juego) con «ducking» bajo la voz ----------------
+let ost = null, ostLista = [], ostI = 0, ostVol = 0;
+async function arrancarOST() {
+  try { ostLista = await (await fetch("/api/ost")).json(); } catch (e) { ostLista = []; }
+  if (!ostLista.length) return;
+  ost = new Audio(); ost.volume = 0;
+  ost.onended = () => { ostI = (ostI + 1) % ostLista.length; ost.src = ostLista[ostI]; ost.play().catch(() => {}); };
+  ost.src = ostLista[0]; ost.play().catch(() => {});
+}
+
+// ---------------- estado del control (votación, avisos del chat) ----------------
+async function leerEstado() {
+  try { estado = await (await fetch("/api/estado")).json(); } catch (e) {}
+  // cambio de tema: lo precargado del tema viejo pasa a relleno (suena si el nuevo aún no está) y se pide ya el nuevo;
+  // en cuanto llega, se salta a él en el próximo cambio de frase
+  guardarRelleno();
+  if (arrancado && seg && (seg.ver || 0) < (estado.tema_ver || 0) && !siguiente) pedirSiguiente();
+  const an = estado.anuncio;
+  if (an && an.t > anuncioVisto) {
+    if (an.origen === "votación") ponerAviso("El chat eligió · en un momento", an.tema, 5, SANGRE);
+    anuncioVisto = an.t;
+  }
+  setTimeout(leerEstado, 1500);
+}
+
+// ---------------- dibujo ----------------
+const vineta = (() => {
+  const c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const r = g.createRadialGradient(W / 2, H / 2, H * 0.45, W / 2, H / 2, H * 1.05);
+  r.addColorStop(0, "rgba(0,0,0,0)"); r.addColorStop(1, "rgba(0,0,0,0.45)");
+  g.fillStyle = r; g.fillRect(0, 0, W, H); return c;
+})();
+
+function dibujarVideo(v, alpha, t) {
+  if (!v.videoWidth || alpha <= 0) return;
+  const z = 1.03 + 0.02 * Math.sin(t * 0.07);
+  const esc = Math.max(W / v.videoWidth, H / v.videoHeight) * z, w = v.videoWidth * esc, h = v.videoHeight * esc;
+  ctx.globalAlpha = alpha; ctx.drawImage(v, (W - w) / 2, (H - h) / 2, w, h); ctx.globalAlpha = 1;
+}
+
+function dibujarPegatinas(t) {
+  pegatinas = pegatinas.filter(p => !p.tOut || t - p.tOut < 0.45);
+  for (const p of pegatinas) {
+    if (!p.o.listo) continue;
+    const c = p.o.can, L = p.L;
+    const ent = pop(t - p.t0, 0.45), sal = p.tOut ? ease((t - p.tOut) / 0.35) : 0;
+    let hh = H * L.h, ww = hh * c.width / c.height;
+    if (ww > W * 0.46) { ww = W * 0.46; hh = ww * c.height / c.width; }
+    if (L.grande) {                       // sale del borde inferior y sube; el nombre al lado en humo
+      const y = H - hh * ease((t - p.t0) / 0.7) + sal * hh * 0.6 + Math.sin(t * 0.8 + p.fase) * 4;
+      const x = W * L.x - ww / 2;
+      ctx.save(); ctx.globalAlpha = 1 - sal; ctx.shadowColor = "rgba(0,0,0,0.7)"; ctx.shadowBlur = 50;
+      ctx.drawImage(c, x, Math.max(y, H - hh + 30), ww, hh); ctx.restore();
+      if (p.nombre) {
+        const a = ease((t - p.t0 - 0.5) / 0.4) * (1 - sal), al = L.x > 0.5 ? "right" : "left", nx = al === "right" ? x - 30 : x + ww + 30;
+        const tw = Math.min(anchoTexto(p.nombre, 600, 58, 4), 600);
+        dibujarHumo(al === "right" ? nx - tw - 40 : nx - 40, H * 0.62 - 60, tw + 80, 120, a, 0.7);
+        texto(p.nombre, nx, H * 0.62, 600, 58, HUESO, al, a, 4, 600);
+      }
+      continue;
+    }
+    const s = 0.4 + 0.6 * ent, bob = Math.sin(t * 1.4 + p.fase) * 6;
+    const cx = Math.min(Math.max(W * L.x, ww / 2 + 50), W - ww / 2 - 50);   // fotos anchas: que no se salgan del cuadro
+    const x = cx + p.lado * sal * 240, y = H * L.y + bob;
+    ctx.save();
+    ctx.globalAlpha = Math.min(1, (t - p.t0) * 5) * (1 - sal);
+    ctx.translate(x, y); ctx.rotate((p.rot + Math.sin(t * 0.9 + p.fase) * 1.0) * Math.PI / 180); ctx.scale(s, s);
+    ctx.shadowColor = "rgba(0,0,0,0.55)"; ctx.shadowBlur = 24; ctx.shadowOffsetX = 6; ctx.shadowOffsetY = 12;
+    ctx.drawImage(c, -ww / 2, -hh / 2, ww, hh);
+    ctx.restore();
+  }
+}
+
+// aviso de misión (mg_tes.mision): rótulo chico gris espaciado entre separadores + título que entra cerrando el espaciado
+function dibujarAviso(t) {
+  if (!aviso) return;
+  const dt = t - aviso.t0; if (dt > aviso.dur) { aviso = null; return; }
+  const a = ease(dt / 0.5) * (1 - ease((dt - aviso.dur + 0.4) / 0.4)), cx = W / 2, y = 112;
+  dibujarHumo(cx - W * 0.3, y - 60, W * 0.6, 180, a, 0.6);
+  texto(aviso.arriba, cx, y, 400, 30, GRIS, "center", a, 6, 1000);
+  const mitad = Math.min(anchoTexto(aviso.arriba, 400, 30, 6), 1000) / 2;
+  ctx.save();
+  for (const s of [-1, 1]) {
+    const x0 = cx + s * (mitad + 24), g = ctx.createLinearGradient(x0, 0, x0 + s * 240, 0);
+    g.addColorStop(0, `rgba(236,230,214,${0.9 * a})`); g.addColorStop(1, "rgba(236,230,214,0)");
+    ctx.fillStyle = g; ctx.fillRect(Math.min(x0, x0 + s * 240), y - 1, 240, 2);
+  }
+  ctx.restore();
+  const tr = 4 + 26 * (1 - ease(dt / 0.9));
+  texto(aviso.titulo, cx, y + 72, 600, 66, aviso.color, "center", a, tr, 1500);
+}
+
+// ficha de inventario (mg_tes.objeto): categoría gris, nombre, separador con rombo y el dato con negritas
+function dibujarFicha(t) {
+  if (!ficha) return;
+  const dt = t - ficha.t0; if (dt < 0) return;
+  const sal = ficha.tOut ? ease((t - ficha.tOut) / 0.35) : 0; if (sal >= 1) { ficha = null; return; }
+  const a = ease(dt / 0.35) * (1 - sal), s = pop(dt, 0.45);
+  const ancho = 720, cx = W * 0.76, cy = H * 0.36, lineas = partirNegritas(ficha.texto || "", 34, ancho - 90);
+  const h = 190 + lineas.length * 46, y0 = cy - h / 2;
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(0.85 + 0.15 * s, 0.85 + 0.15 * s); ctx.translate(-cx, -cy);
+  dibujarHumo(cx - ancho / 2, y0, ancho, h, a, 0.85);
+  if (ficha.arriba) texto(ficha.arriba.toUpperCase(), cx, y0 + 48, 400, 26, GRIS, "center", a, 4, ancho - 60);
+  texto((ficha.nombre || "").toUpperCase(), cx, y0 + 92, 600, 50, HUESO, "center", a, 2, ancho - 60);
+  separador(cx, y0 + 132, ancho * 0.36, a);
+  lineas.forEach((l, i) => {
+    const tot = l.reduce((s2, [w, b]) => s2 + anchoTexto(w, b ? 700 : 400, 34), 0);
+    let x = cx - tot / 2; const y = y0 + 172 + i * 46;
+    for (const [w, b] of l) { texto(w, x, y, b ? 700 : 400, 34, b ? HUESO : "rgb(214,208,192)", "left", a); x += anchoTexto(w, b ? 700 : 400, 34); }
+  });
+  ctx.restore();
+}
+function partirNegritas(s, px, ancho) {     // «texto con **negritas**» -> líneas de [palabra, negrita]
+  const trozos = []; let negra = false;
+  for (const parte of s.split("**")) {
+    for (const w of parte.split(/\s+/).filter(Boolean)) {
+      if (/^[,.;:!?)»]/.test(w) && trozos.length) trozos[trozos.length - 1][0] = trozos[trozos.length - 1][0].trimEnd();   // «Ysgramor**,» sin espacio
+      trozos.push([w + " ", negra]);
+    }
+    negra = !negra;
+  }
+  const out = []; let linea = [], an = 0;
+  for (const tr of trozos) { const w = anchoTexto(tr[0], tr[1] ? 700 : 400, px); if (an + w > ancho && linea.length) { out.push(linea); linea = []; an = 0; } linea.push(tr); an += w; }
+  if (linea.length) out.push(linea); return out.slice(0, 4);
+}
+
+function dibujarHUD(t) {
+  // EN VIVO, arriba a la izquierda
+  const pulso = 0.55 + 0.45 * Math.sin(t * 4), canal = (estado.canal || "").toUpperCase();
+  const tv = anchoTexto("EN VIVO", 700, 30, 4), tw = anchoTexto(canal, 400, 26, 4);
+  dibujarHumo(36, 30, tv + tw + 150, 92, 1, 0.95);
+  ctx.fillStyle = `rgba(196,38,30,${pulso})`; ctx.beginPath(); ctx.arc(84, 75, 10, 0, 7); ctx.fill();
+  texto("EN VIVO", 106, 76, 700, 30, HUESO, "left", 1, 4);
+  ctx.fillStyle = "rgba(236,230,214,.5)"; ctx.fillRect(106 + tv + 14, 62, 2, 28);
+  texto(canal, 106 + tv + 32, 76, 400, 26, GRIS, "left", 1, 4);
+  // tema del directo, abajo a la izquierda
+  if (temaBar.txt) {
+    const e = ease((t - temaBar.t0) / 0.8), txt = temaBar.txt.toUpperCase();
+    const w = Math.min(anchoTexto(txt, 600, 42, 3), 1000) + 100, x = 40, y = H - 160;
+    dibujarHumo(x, y, w, 120, e, 0.75);
+    texto("TEMA DEL DIRECTO", x + 50, y + 40, 400, 24, GRIS, "left", e, 5);
+    texto(txt, x + 50, y + 80, 600, 42, HUESO, "left", e, 3, 1000);
+    const g = ctx.createLinearGradient(x + 50, 0, x + 50 + (w - 80) * e, 0); g.addColorStop(0, "rgba(236,230,214,.85)"); g.addColorStop(1, "rgba(236,230,214,0)");
+    ctx.fillStyle = g; ctx.fillRect(x + 50, y + 106, (w - 80) * e, 2);
+  }
+  // votación, abajo a la derecha
+  if (estado.votacion && estado.opciones && estado.opciones.length) {
+    const ops = estado.opciones, tot = Object.values(estado.votos || {}).reduce((a, b) => a + b, 0);
+    const ancho = 600, h = 150 + ops.length * 78, x = W - 40 - ancho, y = H - 60 - h, cx = x + ancho / 2;
+    const lider = tot ? ops.reduce((m, o) => ((estado.votos[o] || 0) > (estado.votos[m] || 0) ? o : m), ops[0]) : null;
+    dibujarHumo(x, y, ancho, h, 1, 0.85);
+    texto("¿QUÉ SIGUE?", cx, y + 48, 600, 40, HUESO, "center", 1, 5);
+    separador(cx, y + 84, ancho * 0.36);
+    texto("VOTA EN EL CHAT", cx, y + 112, 400, 22, GRIS, "center", 1, 5);
+    ops.forEach((o, i) => {
+      const yy = y + 160 + i * 78, n = (estado.votos || {})[o] || 0, fr = tot ? n / tot : 0;
+      texto(String(i + 1), x + 56, yy, 700, 36, ORO, "center");
+      texto(o.toUpperCase(), x + 88, yy - 4, o === lider ? 600 : 400, 30, HUESO, "left", 1, 1, ancho - 210);
+      texto(tot ? Math.round(fr * 100) + "%" : "", x + ancho - 50, yy - 4, 700, 30, o === lider ? SANGRE : GRIS, "right");
+      ctx.fillStyle = "rgba(236,230,214,0.18)"; ctx.fillRect(x + 88, yy + 24, ancho - 150, 4);
+      ctx.fillStyle = o === lider ? SANGRE : HUESO; ctx.fillRect(x + 88, yy + 24, (ancho - 150) * fr, 4);
+    });
+  }
+}
+
+function dibujarPuente(t) {
+  if (!enPuente && seg) return;
+  ctx.save(); ctx.fillStyle = "rgba(4,4,6,0.55)"; ctx.fillRect(0, 0, W, H); ctx.restore();
+  const an = esperaInfo && esperaInfo.anuncio, reciente = an && (Date.now() / 1000 - an.t < 90);
+  const arriba = !seg ? "PREPARANDO EL DIRECTO" : reciente ? (an.origen === "votación" ? "EL CHAT DECIDIÓ" : "CAMBIO DE TEMA") : "UN MOMENTO";
+  const tema = ((esperaInfo && esperaInfo.tema) || estado.tema || "").toUpperCase(), cy = H * 0.46;
+  dibujarHumo(W * 0.2, cy - 110, W * 0.6, 260, 1, 0.85);
+  texto(arriba, W / 2, cy - 40, 400, 34, GRIS, "center", 1, 6);
+  separador(W / 2, cy, 360);
+  texto(tema, W / 2, cy + 56, 600, 64, HUESO, "center", 1, 4, W * 0.55);
+  ctx.save(); ctx.translate(W / 2, cy + 130); ctx.rotate(t * 2); ctx.strokeStyle = HUESO; ctx.lineWidth = 2;   // rombo que gira mientras se escribe
+  ctx.strokeRect(-9, -9, 18, 18); ctx.restore();
+}
+
+function cuadro() {
+  const t = ahora();
+  ctx.fillStyle = "#060608"; ctx.fillRect(0, 0, W, H);
+  if (vidFade) {
+    const k = ease((t - vidFade.t0) / 0.6);
+    vidAlpha[vidFade.a] = k; vidAlpha[vidFade.de] = 1 - k;
+    if (k >= 1) { vids[vidFade.de].pause(); vidFade = null; }
+  }
+  dibujarVideo(vids[1 - vidCur], vidAlpha[1 - vidCur], t);
+  dibujarVideo(vids[vidCur], vidFade ? vidAlpha[vidCur] : 1, t);
+  ctx.drawImage(vineta, 0, 0);
+  dibujarPegatinas(t);
+  dibujarFicha(t);
+  dibujarAviso(t);
+  dibujarHUD(t);
+  dibujarPuente(t);
+  if (ost) {                                          // la OST baja bajo la voz
+    const habla = audio && !audio.paused && !audio.ended, meta = !arrancado ? 0 : habla ? 0.12 : 0.3;
+    ostVol += (meta - ostVol) * 0.04; ost.volume = Math.max(0, Math.min(1, ostVol));
+  }
+  const v = vids[vidCur]; if (v.duration && v.currentTime > v.duration - 0.3) v.currentTime = 0.2;   // clip corto: vuelve a empezar
+  requestAnimationFrame(cuadro);
+}
+
+async function arrancar() {
+  if (arrancado) return; arrancado = true;
+  document.getElementById("arranque").remove();
+  try { await document.fonts.load(F(600, 40)); } catch (e) {}
+  arrancarOST();
+  enPuente = true;
+  pedirSiguiente();
+}
+document.getElementById("arranque").addEventListener("click", arrancar);
+if (new URLSearchParams(location.search).has("auto")) arrancar();
+document.fonts.load(F(600, 40)).catch(() => {});
+leerEstado();
+requestAnimationFrame(cuadro);
+</script>
+</body>
+</html>

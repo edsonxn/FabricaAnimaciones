@@ -58,3 +58,20 @@ del usuario: animación procedural, cada cuadro dibujado por código, con el est
   En el navegador integrado `computer type` SÍ escribe en el `.ProseMirror` aunque la captura tarde en mostrarlo: no repetir con
   `execCommand('insertText')` sin mirar antes `innerText.length` (se duplica el prompt).
 - Dos Shorts del mismo canal: `yt subir` exige 48 h entre ellos (12 h solo frente a un largo).
+
+## Lecciones del 3.er video (`videos/ia_como_ve/`, 4-nov-2026, LARGO horizontal 10:36, 11 planos a-k)
+- Horizontal 1920x1080 con el mismo kit: personajes a escala 1,5-2,5 y al menos dos focos por cuadro (personaje + objeto/rótulo);
+  una mitad vacía > 2 s se nota mucho más que en vertical. Repaso de hoja por plano: casi siempre había 1-3 s vacíos al inicio de
+  cada tramo (antes de la palabra ancla): adelantar la entrada a la frase anterior o poner un elemento puente.
+- Utilería compartida del video en un módulo propio (`iconos_ia.py`: torre de pisos, perillas, piezas, perro/lobo/panda, gpu,
+  trofeo, `foto_cosa()` con `lienzo`), y un `sonidos_ia_<tramo>.py` por bloque de planos: los comandos/heredocs > 8 KB fallan en
+  Windows.
+- `rotulo` con tamaño `int(px * e)` llega a 0 en la primera fracción del `e_back` y PIL revienta el render: el kit ya fuerza
+  `px = max(2, int(px))`.
+- Muchas piezas pequeñas (rompecabezas 7×5) con `pegar` = 35 warps de cuadro completo → 4,4 s/cuadro; pegado por recorte
+  (`plano_h._poner`) → 0,9 s/cuadro.
+- Una oreja suelta se lee como sombrero de bruja/señal: enseñar la cara entera con la pieza marcada (círculo amarillo).
+- Retratos reales (`retrato()` + `camafeo()`) de cada persona nombrada; la figura real de un artículo, en `pegar` con crédito.
+- Render largo: con ~6 GB libres, 5+ procesos acaban en `cv2 OutOfMemoryError` (no lo atrapa el supervisor): `video --procs 3`.
+- Música: Lyria API sin saldo (402) → 5 piezas de la biblioteca de canales con otro público (tramos ≤ 175 s en `LYRIA["tramos"]`).
+- Miniatura 16:9: cuadro del video como WebP 240x135 (6,5 KB) → canvas 1280x720 → `ClipboardEvent('paste')`; salió 2/2 bien.

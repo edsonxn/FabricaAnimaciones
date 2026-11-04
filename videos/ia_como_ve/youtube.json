@@ -1,0 +1,28 @@
+{
+  "titulo": "¿Cómo VE una Inteligencia Artificial? (lo que pasa dentro de su cabeza)",
+  "titulos_alternativos": [
+    "La IA NUNCA ha visto un gato… y aun así lo reconoce. ¿Cómo?",
+    "Así VE una IA tu foto: píxeles, filtros y millones de perillas"
+  ],
+  "descripcion": "Le enseñas una foto a una inteligencia artificial y en menos de un segundo te dice «un gato naranja dormido sobre un teclado». Pero la IA no tiene ojos y nunca ha visto un gato. Entonces, ¿cómo lo sabe? Nos metemos dentro de la cabeza de Kuri, neurona por neurona: los píxeles que se vuelven números, el experimento de 1959 con el cerebro de un gato, los filtros que encuentran bordes, la torre de pisos que arma formas, partes y objetos, cómo aprende girando millones de perillas (retropropagación), ImageNet y AlexNet, los parches y la atención, el mapa donde imágenes y palabras viven juntas… y los trucos que todavía la engañan.\n\n⏱️ CAPÍTULOS\n0:00 ¿Cómo lo sabe?\n0:35 Píxeles: lo que de verdad le llega\n1:35 1959: el cerebro de un gato\n2:24 La neurona artificial y los filtros\n3:35 Apilar: la torre de pisos\n4:40 Cómo aprende: retropropagación\n5:54 ImageNet y AlexNet\n7:00 Parches y atención\n8:05 De números a palabras\n9:13 Los trucos que la engañan\n9:54 El viaje completo\n\n📚 FUENTES\n• Hubel y Wiesel, J. Physiol. 148, 574 (1959), doi:10.1113/jphysiol.1959.sp006308 (neuronas que responden a líneas con una inclinación; Nobel 1981)\n• Fukushima, Biol. Cybern. 36, 193 (1980), doi:10.1007/BF00344251 (neocognitrón)\n• LeCun y otros, Neural Computation 1, 541 (1989), doi:10.1162/neco.1989.1.4.541 (códigos postales escritos a mano)\n• Rumelhart, Hinton y Williams, Nature 323, 533 (1986), doi:10.1038/323533a0 (retropropagación)\n• Deng y otros (Fei-Fei Li), CVPR 2009, doi:10.1109/CVPR.2009.5206848 (ImageNet)\n• Krizhevsky, Sutskever y Hinton, CACM 60(6) (2017), doi:10.1145/3065386 (AlexNet, error top-5 15,3 %)\n• Zeiler y Fergus, ECCV 2014, doi:10.1007/978-3-319-10590-1_53 (lo que ve cada piso)\n• He y otros, CVPR 2016, doi:10.1109/CVPR.2016.90 (ResNet, 3,57 %)\n• Dosovitskiy y otros, «An Image is Worth 16x16 Words» (2020), arXiv:2010.11929\n• Radford y otros, «CLIP» (2021), arXiv:2103.00020 (400 millones de pares imagen-texto)\n• Ribeiro, Singh y Guestrin, «Why Should I Trust You?» (2016), arXiv:1602.04938 (husky contra lobo)\n• Goodfellow, Shlens y Szegedy (2014), arXiv:1412.6572 (panda → gibón 99,3 %)\n\n🖼️ FOTOS REALES (pasadas a acuarela)\n• David Hubel: Wikimedia Commons «DHUBEL.jpg», Joey cantod, CC BY-SA 4.0\n• Torsten Wiesel: Wikimedia Commons «Torsten Wiesel-7Nov2006.jpg», Festival della Scienza, CC BY-SA 2.0\n• Registro de Hubel y Wiesel: Wikimedia Commons «Hubel+wiesel.jpg», Jimmierock, CC BY-SA 3.0\n• Yann LeCun: Wikimedia Commons «Yann LeCun - 2018 (cropped).jpg», Jérémy Barande, CC BY-SA 2.0\n• Fei-Fei Li: Wikimedia Commons «Fei-Fei Li at AI for Good 2017.jpg», ITU Pictures, CC BY 2.0\n\nAnimación en acuarela pintada cuadro a cuadro por código; efectos de sonido sintetizados.\n\n¿Qué otra cabeza quieres que abramos? Cuéntamelo en los comentarios y suscríbete a Kuriox.\n\n#Ciencia #InteligenciaArtificial #Kuriox",
+  "etiquetas": [
+    "cómo ve una inteligencia artificial",
+    "cómo funciona la inteligencia artificial",
+    "redes neuronales explicadas",
+    "visión por computadora",
+    "cómo reconoce imágenes una IA",
+    "retropropagación",
+    "ImageNet",
+    "AlexNet",
+    "transformers de visión",
+    "CLIP",
+    "ciencia animada",
+    "kuriox"
+  ],
+  "categoria": 27,
+  "idioma": "es",
+  "idioma_audio": "es",
+  "para_ninos": false,
+  "contenido_sintetico": true,
+  "miniatura": "salida/ia_como_ve_mini_flow.jpg"
+}

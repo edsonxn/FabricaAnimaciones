@@ -53,7 +53,8 @@ integrado y gestiona todos los canales. Tras cada `yt subir`, en Studio:
   solo ve los videos del canal activo. Lo fiable: `studio.youtube.com/channel/<canal_id>/videos` y desde ahí abrir el video.
 - **Short → «Vídeo relacionado» = su largo** (Detalles > columna derecha > lápiz > elegir > Guardar). Solo ofrece videos YA PÚBLICOS
   y el campo no aparece hasta que YouTube termina de procesar el Short: si el largo sale más tarde, se pone cuando salga (anotarlo en
-  «siguiente» del `ESTADO.md`). La Data API no tiene este campo.
+  «siguiente» del `ESTADO.md`). La Data API no tiene este campo. **3-nov-2026 (`sopa_short`):** con el Short aún privado/programado
+  Studio deja elegir el largo y «Guardar» se apaga, pero al recargar vuelve a «Ninguno»: ponerlo cuando el SHORT ya sea público.
 - **Canales monetizados (`"monetizado": true` en `canales/<alias>.json`; al 21-oct: Crónicas de Warcraft y Crónicas de Tamriel):
   pestaña «Monetización» del video → Anuncios **Activado** + todos los tipos de anuncio (pre/mid/post-roll; mid-rolls automáticos
   en videos ≥ 8 min) y el **cuestionario de idoneidad para anunciantes** respondido con verdad → Guardar. La API no lo expone.

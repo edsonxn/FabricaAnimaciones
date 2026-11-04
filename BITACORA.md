@@ -254,3 +254,4 @@ Al terminar un video o sesión: actualiza `videos/<v>/ESTADO.md` (etapa + siguie
 
 - 3-nov-2026 · Crónicas de Tamriel: «Los 15 SECRETOS del teaser de The Elder Scrolls VI: Sentinel» (`tes_sentinel_teaser`, 22:18; siete voces de ElevenLabs que compiten + el Humano tras el Telón, votación en comentarios) SUBIDO PRIVADO sin fecha para revisión del usuario: https://youtu.be/TM5ivAWiF0o
 - 3-nov-2026: Expediente 141 (`cronicas_cod`) — 2.º video «Los 20 EFECTOS MANDELA más raros de Call of Duty» (14:20) subido privado y programado para el vie 6-nov 18:00 CDMX: https://youtu.be/XL3MZ4Oj7Ko
+- 3-nov-2026 · **Plastitube** Short `sopa_short` «La Sopa Instantánea Nació Mirando a su Esposa Freír TEMPURA #Shorts» (48 s) subido en privado y PROGRAMADO mié 4-nov 19:00 CDMX (HOSUWAa-L4k). Pendiente en Studio: «Vídeo relacionado» = iJ7QsuU1nUA y el .srt a mano.

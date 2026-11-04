@@ -1,0 +1,47 @@
+# bt_50_secretos — plan de clips A (beats 001-086) y verificación en cuadro
+
+Fuente principal: serie Ninbanyan «Banjo-Tooie NSO 100 %» (1080p60, widescreen, sin narrador). **Partes nuevas respecto a bt_mundos_ranking:**
+P43 `nYp4R7uiguw` (Cauldron Keep, Gatehouse, Tower of Tragedy, créditos) y P44 `UhOTPmJTqq8` (final: Hag 1, escena final, título). Más P19 `0oEvo3BB6Ls`
+y P40 `YbdR6D3TueM` (ya estaban en el mapa). **Fuente especial:** Censored Gaming «How Banjo-Tooie Is Changed In Japan» `feFsFAWJznY`
+(1080p, 154 s; lleva marca pequeña «CENSORED GAMING» abajo a la derecha y el rótulo «Japanese/English Version» arriba; se usa en beats 001 y 064).
+Cuadros y hojas en `ver_a/` (360p; `hd_*` son cuadros a 1080p). Cache compartida: `E:\FabricaAnimaciones\videos\bt_50_secretos\cache360\`.
+Los diálogos del juego salen letra a letra; lo leído va en MAYÚSCULAS como aparece.
+
+## Verificación en cuadro (las 4 del encargo corregido)
+
+| Dato (escena, beats) | Estado | Texto exacto leído / qué se ve | id · segundo | Archivo en `ver_a/` |
+|---|---|---|---|---|
+| **s46 · 019-021** Letrero «Cauldron Keep Secret Exit» a la derecha de la entrada | ✅ | Letrero de peligro amarillo y negro: **«CAULDRON KEEP / SECRET EXIT»**, a la DERECHA del marco de la puerta por la que se entra (con el altar dorado al lado, HUD «90» Jiggies). Después de 4 s el cuadro de transición y el título de zona «CAULDRON KEEP» al entrar. | P43 `nYp4R7uiguw` s638-642 (nítido s640) | `P43_secret.jpg`, `P43_509.jpg` |
+| **s39 · 040-042** Hag 1 con matrícula «G B» y motor V10 + pregunta del concurso | ⚠ **cierto con matiz** | **Matrícula amarilla de formato británico que dice «HAG 1»**, y junto a ella un **óvalo blanco con «GB»** (la pegatina de país). No hay una matrícula con «G B» a secas. Texto de Grunty en la pelea (leído en el cuadro): **«FEEL THE POWER OF THAT V10 BEAS(T)»** ✅ (aparece con «Oh yes! Feel the…» y luego «Crank the drill up!»). La **pregunta de la matrícula del concurso no salió** en la partida de Ninbanyan (las preguntas son aleatorias: vi ~25 y ninguna era esa); queda solo en la wiki. | P44 `UhOTPmJTqq8` s764-768 (matrícula, de espaldas) y s1133-1138 (V10; la placa «HAG 1 · GB» vuelve a verse) | `P44_plate.jpg`, `W4.jpg`, `P44_706.jpg` |
+| **s33 · 060-061** «Eekum Bokum» escrito en los costados de los Mumbo Pads | ✅ | En el borde del Mumbo Pad (disco dorado octogonal con la cara de Mumbo) se lee con cuadro a 1080p **«EEKUM · BOKUM»** (letras grabadas en el lateral, solo legibles de cerca). Mumbo hace el hechizo justo después: rótulo **«SUNLIGHT / OXYGENATED WATER»**. El canto de fútbol («Come and have a go…») y que la voz sea de Kirkhope NO se pueden comprobar en cuadro (créditos: «Grant 'Old King Coal' Kirkhope» sí sale como miembro del equipo, P43 s1794): no decirlo como hecho visto. | P17 `VxRt5CIZ43Q` s1115-1117 (pad con texto), s1122 (rótulo del hechizo) | `hd_mumbo_pad.jpg`, `hd_P17_1112_sheet.jpg`, `P17_mp.jpg` |
+| **s29 · 072-074** Tower of Tragedy: aplauden a las hermanas, abuchean a Banjo, «estoy rodeada de imbéciles», «víctimas… eh, concursantes» | ⚠ parcial | ✅ **«NOW LET'S MEET TONIGHT'S / VICTIMS, ERR… I MEAN CONTESTANTS, SHA[LL WE?]»** (literal, s969-972), seguido de «On the right we have… my gorgeous, slim… / my lovely, err… shapely sister». ✅ Cartel luminoso **«APPLAUSE»** sobre el escenario (s1072, s1268, s1453). ❌ **No salió** en esta partida: «I'm surrounded by morons» (sin respuesta correcta nadie) ni los abucheos a Banjo; las reacciones de Grunty que SÍ se leen son «WHAT UTTER STUPIDITY…» (s1076), «DUNCE.» (s1458), «A LUCKY GUESS.», «YOU KNOW-IT-ALL.», «I'LL ACCEPT THAT». La cita de Scar y los abucheos quedan solo en la wiki. | P43 `nYp4R7uiguw` s969-972 (victims), s1072/1268/1453 (APPLAUSE), s1076/1458 | `V1.jpg`, `V2.jpg`, `B1.jpg`, `P43_app.jpg` |
+
+### Frases propuestas (solo si el coordinador quiere que la voz sea 100 % visible)
+- **041 (s39)**, misma longitud: «lleva detrás una matrícula británica, HAG 1, con el óvalo GB de Gran Bretaña, el país de Rare. En la pelea final, Grunty presume de motor:» (sustituye «una matrícula con las letras G y B»). El resto de 042 es cierto.
+- **073 (s29)**, solo si se quiere evitar lo no visto: «Si fallas, Grunty suelta: ¡qué estupidez!, o te llama zoquete, y presenta así a los concursantes: conozcamos a las víctimas de esta noche… eh, quiero decir, concursantes.» (la línea de los imbéciles/Scar y los abucheos es de la wiki; mantenerla es decir «según la wiki», no «se oye»).
+- **060 (s33)**: cierto como está; añadir que está «grabado en el borde del disco dorado» ayuda a que se vea (se enseña a 1080p con zoom).
+
+### Hallazgos extra útiles para la voz y los MG
+- Sabreman (034, beats 057-059): el verso del delfín lo dice **dormido**: **«ZZZ… PERHAPS I'LL RIDE ON A DOLPHIN…»** (P37 s662-665, leído completo, en su tienda del lado de lava sobre una alfombra verde). Antes de eso, al entregar el Jiggy: «MY EQUIPMENT! IT'S JUST AS I LEFT IT ALL THOSE YEARS… YOU MAY HAVE IT, KIND SIR. IT'S A FINE GOLDEN JIGSAW PIECE». La palabra «divaga» sirve; «sueña/murmura dormido» es más exacta.
+- Gatehouse (s42, 031-033): texto leído: «[…] KAZOOIE, THERE DOESN'T APPEAR TO BE ANYONE IN HERE…» → «OH, YES THERE IS. THE MUSIC'S CHANGED. EVERY TIME THAT HAPPENS, WE ALWAYS END UP IN A FIGHT…» → Klungo «YARRRRR! KLUNGO MUSST DEFEND MISSTRESSS GRUNTY CASS[TLE]» (cae del techo s770-772). Cierto como está en el guion.
+- Final (002): el ojo sale en cuadro: Banjo dice «**…DON'T THINK HER EYE JUST FELL OUT!**» (s1956) y una bola blanca rueda por el suelo (s1952-1956); la patada es s1948-1952 («TAKE THAT, WITCH!» s1932). El final inglés es P44 s1920-1966.
+- Pareja inglés/japonés (001): Censored Gaming `feFsFAWJznY` s26-31.6 muestra en pantalla dividida la cabeza (izq.) y el saco azul con lazo rosa (der.); s20-26 trae el logo japonés «Banjo and Kazooie's Great Adventure 2» (064).
+- Créditos de P43 (cada tarjeta dura ~8 s con ~3 s de negro entre una y otra): «THE BANJO-TOOIE TEAM… **GRANT 'OLD KING COAL' KIRKHOPE**» s1789-1797 (081); «…STEVE 'BLOBBELDA' MAYLES / DAVID 'DILBERTA' PASHUTE / ANDY 'JOLLY ROGER' POLLINGTON» s1810.5-1818.5 (062); «RARE TESTING TEAM…» s1845.5 (075) y s1881 (076). Dato nuevo: en créditos Kirkhope aparece como «Old King Coal» (apodo del equipo), útil para beats 029/046 si se quiere.
+
+## Plan de clips: resumen por beat (la lista completa con segundos está en `plan_a.json`)
+Fuentes usadas: P43 ×21, P44 ×10, P03 ×9, P02 ×8, P01 ×5, P10 ×5, P17 ×5, P18 ×4, P40 ×4, P15 ×4, P37 ×3, CG ×2, P09 ×2, P34 ×2, P19 ×1, P07 ×1.
+`ambiente` (17 beats): 018 0.9 (Atlantis bajo el agua); 032 0.8 y 033 0.7 (cambio de música/Klungo); 041 0.5 y 042 0.7 (Hag 1 y su motor); 055 0.6 y 056 0.9 (música de Isle O' Hags);
+058 0.5 (Sabreman); 061 0.7 (conjuro de Mumbo); 069 0.8 y 070 0.8 (lección de Jamjars); 072/073/074 0.5 (concurso: público y Grunty); 078 0.8 y 079 0.9 (tema de la Hag 1); 080 0.7 (voz de Jamjars). Ninguno en XBLA ni en Censored Gaming.
+Todos los tramos [desde, desde + t1−t0 + 0.5] pasaron la medición de brillo (media < 14 cada 0.3 s) en 360p; los tres avisos que quedan son marginales (001 negro a 8.7 s del clip; 020 transición a 7.8 s; 081 negro a 8.4 s: los tres justo después de la duración del beat). Los créditos exigen `desde` exacto (tarjeta de 8.0 s, sin margen).
+
+### Beats dudosos (no enseñan al 100 % lo que dice la voz)
+- **003** «montaña que Rare jura accidental»: no hay toma aérea (ni en esta serie ni en bt_mundos_ranking); se muestra solo Lord Woo Fak Fak. Pegatina/MG del dibujo de Mayles según la ficha S03.
+- **013-015** «egg head / egg ass / Smash»: en N64 no encontré a Kazooie disparando huevos hacia atrás; 013-014 son la lección de Egg Aim y tiros en primera persona al cráneo de Mayahem; 015 es un plano de relleno de Isle O' Hags. La parte de Smash Ultimate debe ir como pegatina/MG (no hay clip de otro juego).
+- **028-029-030** concurso de la revista: no hay clip de la revista; se enseñan los tres personajes: Chris P. Bacon («ACTUALLY, IT'S CHRIS P. BACO[N]», P19 s118), Old King Coal en su caldera (P09 s1486) y Bullion Bill («KLONDYKE BILL», P07 s234). Lo de la revista va en pegatina.
+- **034-036** contorno de Isle O' Hags: solo hay paisaje de Jinjo Village; la superposición con el icono de vida es MG (el mapa de la isla, no el clip).
+- **062, 075, 076, 081** créditos reales de P43: la tarjeta dura 8.0 s con ~3 s de negro a cada lado; el `desde` debe ser exacto (1810.5, 1845.5, 1881.0, 1789.0) y `bajar` corta por keyframe, así que conviene medir el brillo del clip real; 081 (8.2 s) no tiene margen.
+- **065-067** castillo recortado: solo se ven los restos (exterior metálico, foso magenta, tuberías); cripta/armadura/habichuela no existen en el juego final: pegatinas de los dibujos de Mayles.
+- **007** el fantasma de Bottles: el cuadro enseña el texto «…UNDER THIS RATHER WEIGHTY BOULDER» y el pez/fantasma abajo-izquierda; basta para «fantasma de Bottles».
+- **023** pósters de Juno y Vela: el póster (silueta oscura de cuerpo entero sobre la puerta) se ve borroso a 360p; no se pudo confirmar que sea Juno/Vela (la wiki los da por ✅).
+- **078-079** tema de la Hag 1: el clip trae el juego (música + Grunty hablando) y una pregunta del concurso en pantalla; la música oficial está en la OST del canal, usar `ambiente` con mesura.
+- **083-085** y **086**: tomas de relleno de Isle O' Hags (no hay nada que enseñar); 086 es el tutorial real del warp pad («THIS IS A W[ARP PAD]…» P03 s1255-1262).

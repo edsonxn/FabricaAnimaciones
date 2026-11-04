@@ -1,0 +1,604 @@
+{
+ "scene-001": {
+  "fuente": "CG",
+  "id": "feFsFAWJznY",
+  "desde": 23.0,
+  "ambiente": null,
+  "nota": "Censored Gaming: logo japonés y luego pantalla dividida, cabeza (versión inglesa) contra saco (japonesa)"
+ },
+ "scene-002": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 1946.0,
+  "ambiente": null,
+  "nota": "final: Banjo patea la cabeza de Grunty ('Take that, witch!') y sale rodando el ojo"
+ },
+ "scene-003": {
+  "fuente": "P18",
+  "id": "3OiDVU9YnyI",
+  "desde": 331.0,
+  "ambiente": null,
+  "nota": "Lord Woo Fak Fak: cartel del jefe y su cara de rape abisal"
+ },
+ "scene-004": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 350.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: Jiggywiggy's Temple dorado y la aldea desde lejos"
+ },
+ "scene-005": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 2008.0,
+  "ambiente": null,
+  "nota": "pantalla de título Banjo-Tooie (©2000 Nintendo/Rare) al final del juego"
+ },
+ "scene-006": {
+  "fuente": "P01",
+  "id": "ezvZQneGzTo",
+  "desde": 1058.0,
+  "ambiente": null,
+  "nota": "Spiral Mountain: Banjo corriendo por el campo de cultivo"
+ },
+ "scene-007": {
+  "fuente": "P01",
+  "id": "ezvZQneGzTo",
+  "desde": 996.0,
+  "ambiente": null,
+  "nota": "Spiral Mountain: el fantasma de Bottles ('weighty boulder, please get rid of…')"
+ },
+ "scene-008": {
+  "fuente": "P01",
+  "id": "ezvZQneGzTo",
+  "desde": 1118.0,
+  "ambiente": null,
+  "nota": "Spiral Mountain: Banjo y Kazooie junto a los tocones"
+ },
+ "scene-009": {
+  "fuente": "P01",
+  "id": "ezvZQneGzTo",
+  "desde": 1238.0,
+  "ambiente": null,
+  "nota": "Spiral Mountain: Banjo con Kazooie corriendo y saltando"
+ },
+ "scene-010": {
+  "fuente": "P09",
+  "id": "XA5Q0rWYKaY",
+  "desde": 1272.0,
+  "ambiente": null,
+  "nota": "estación de Glitter Gulch con Chuffy y el letrero de la estación"
+ },
+ "scene-011": {
+  "fuente": "P34",
+  "id": "bNezbjXd27c",
+  "desde": 595.0,
+  "ambiente": null,
+  "nota": "Hailfire Peaks (lado de lava): título sobre el mar de lava"
+ },
+ "scene-012": {
+  "fuente": "P34",
+  "id": "bNezbjXd27c",
+  "desde": 540.0,
+  "ambiente": null,
+  "nota": "Chuffy detenido en la estación sobre la lava"
+ },
+ "scene-013": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 1170.0,
+  "ambiente": null,
+  "nota": "primera persona: Banjo-Kazooie apunta huevos con la mira en el estatua"
+ },
+ "scene-014": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 1226.0,
+  "ambiente": null,
+  "nota": "primera persona: huevos disparados al cráneo de piedra (cuenta de huevos baja)"
+ },
+ "scene-015": {
+  "fuente": "P10",
+  "id": "kM9ruHky3ng",
+  "desde": 1180.0,
+  "ambiente": null,
+  "nota": "Banjo corriendo por el camino de Spiral Mountain/Isle O' Hags"
+ },
+ "scene-016": {
+  "fuente": "P18",
+  "id": "3OiDVU9YnyI",
+  "desde": 12.0,
+  "ambiente": null,
+  "nota": "Atlantis: ruinas sumergidas, pez globo y columnas"
+ },
+ "scene-017": {
+  "fuente": "P18",
+  "id": "3OiDVU9YnyI",
+  "desde": 44.0,
+  "ambiente": null,
+  "nota": "Atlantis: ruinas sumergidas con columnas"
+ },
+ "scene-018": {
+  "fuente": "P18",
+  "id": "3OiDVU9YnyI",
+  "desde": 88.0,
+  "ambiente": 0.9,
+  "nota": "Atlantis: plataforma de la ciudad hundida (suena su música)"
+ },
+ "scene-019": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 631.5,
+  "ambiente": null,
+  "nota": "Cauldron Keep: la plataforma verde, el letrero 'CAULDRON KEEP SECRET EXIT' a la derecha de la puerta"
+ },
+ "scene-020": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 636.0,
+  "ambiente": null,
+  "nota": "Cauldron Keep: puerta con el letrero 'Secret Exit' a su lado"
+ },
+ "scene-021": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 648.0,
+  "ambiente": null,
+  "nota": "Cauldron Keep: Banjo entra por el pasillo, título de zona"
+ },
+ "scene-022": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 1473.0,
+  "ambiente": null,
+  "nota": "casa de Bottles: Speccy con gorra, y póster en la pared"
+ },
+ "scene-023": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 1412.0,
+  "ambiente": null,
+  "nota": "casa de Bottles: Banjo y Kazooie con el póster oscuro sobre la puerta (Juno/Vela)"
+ },
+ "scene-024": {
+  "fuente": "P40",
+  "id": "YbdR6D3TueM",
+  "desde": 334.0,
+  "ambiente": null,
+  "nota": "Banjo solo con mochila azul saltando en la cueva"
+ },
+ "scene-025": {
+  "fuente": "P40",
+  "id": "YbdR6D3TueM",
+  "desde": 346.0,
+  "ambiente": null,
+  "nota": "Banjo solo con mochila azul, en las plataformas"
+ },
+ "scene-026": {
+  "fuente": "P40",
+  "id": "YbdR6D3TueM",
+  "desde": 360.0,
+  "ambiente": null,
+  "nota": "Banjo solo con mochila azul ante la roca roja"
+ },
+ "scene-027": {
+  "fuente": "P40",
+  "id": "YbdR6D3TueM",
+  "desde": 369.0,
+  "ambiente": null,
+  "nota": "Banjo solo agachado con la mochila (chispas)"
+ },
+ "scene-028": {
+  "fuente": "P19",
+  "id": "0oEvo3BB6Ls",
+  "desde": 114.0,
+  "ambiente": null,
+  "nota": "Chris P. Bacon en su jaula: 'Actually, it's Chris P. Bacon'"
+ },
+ "scene-029": {
+  "fuente": "P09",
+  "id": "XA5Q0rWYKaY",
+  "desde": 1486.0,
+  "ambiente": null,
+  "nota": "Old King Coal, el jefe de carbón en su caldera de lava"
+ },
+ "scene-030": {
+  "fuente": "P07",
+  "id": "5Cmj9VrrfTU",
+  "desde": 234.0,
+  "ambiente": null,
+  "nota": "Bullion Bill en su cabaña de Glitter Gulch Mine"
+ },
+ "scene-031": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 752.0,
+  "ambiente": null,
+  "nota": "The Gatehouse: Banjo y el título; Banjo dice que no hay nadie"
+ },
+ "scene-032": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 758.5,
+  "ambiente": 0.8,
+  "nota": "Gatehouse: 'Oh yes there is. The music's changed…' (música cambia)"
+ },
+ "scene-033": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 770.5,
+  "ambiente": 0.7,
+  "nota": "Gatehouse: Klungo cae del techo, título de Klungo"
+ },
+ "scene-034": {
+  "fuente": "P10",
+  "id": "kM9ruHky3ng",
+  "desde": 1289.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: Jinjo Village y torre"
+ },
+ "scene-035": {
+  "fuente": "P10",
+  "id": "kM9ruHky3ng",
+  "desde": 1337.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: casas azules y moradas de los Jinjos"
+ },
+ "scene-036": {
+  "fuente": "P10",
+  "id": "kM9ruHky3ng",
+  "desde": 1373.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: sendero entre casas"
+ },
+ "scene-037": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 117.0,
+  "ambiente": null,
+  "nota": "Wooded Hollow: Heggy y su cobertizo"
+ },
+ "scene-038": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 143.0,
+  "ambiente": null,
+  "nota": "Wooded Hollow: Heggy y su gallinero, Kazooie"
+ },
+ "scene-039": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 156.0,
+  "ambiente": null,
+  "nota": "Wooded Hollow: el huevo amarillo en el nido"
+ },
+ "scene-040": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 804.0,
+  "ambiente": null,
+  "nota": "Hag 1 de frente (la perforadora)"
+ },
+ "scene-041": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 762.0,
+  "ambiente": 0.5,
+  "nota": "Hag 1 desde atrás con matrícula HAG 1 y óvalo GB"
+ },
+ "scene-042": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 1133.0,
+  "ambiente": 0.7,
+  "nota": "Grunty: 'Feel the power of that V10 beast'"
+ },
+ "scene-043": {
+  "fuente": "P15",
+  "id": "nSW5HYUc0v4",
+  "desde": 311.0,
+  "ambiente": null,
+  "nota": "Witchyworld: título de zona y entrada"
+ },
+ "scene-044": {
+  "fuente": "P15",
+  "id": "nSW5HYUc0v4",
+  "desde": 395.0,
+  "ambiente": null,
+  "nota": "Witchyworld: el rótulo luminoso del Saucer of Peril"
+ },
+ "scene-045": {
+  "fuente": "P15",
+  "id": "nSW5HYUc0v4",
+  "desde": 440.0,
+  "ambiente": null,
+  "nota": "Witchyworld: Banjo en el platillo, cuenta atrás de la mira"
+ },
+ "scene-046": {
+  "fuente": "P15",
+  "id": "nSW5HYUc0v4",
+  "desde": 521.0,
+  "ambiente": null,
+  "nota": "Saucer of Peril: recorrido del platillo"
+ },
+ "scene-047": {
+  "fuente": "P17",
+  "id": "VxRt5CIZ43Q",
+  "desde": 803.0,
+  "ambiente": null,
+  "nota": "Pawno sobre el mostrador"
+ },
+ "scene-048": {
+  "fuente": "P17",
+  "id": "VxRt5CIZ43Q",
+  "desde": 750.5,
+  "ambiente": null,
+  "nota": "Pawno's Emporium: título y Banjo entra a la tienda"
+ },
+ "scene-049": {
+  "fuente": "P17",
+  "id": "VxRt5CIZ43Q",
+  "desde": 819.0,
+  "ambiente": null,
+  "nota": "Pawno con Banjo y Kazooie al mostrador"
+ },
+ "scene-050": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1056.0,
+  "ambiente": null,
+  "nota": "Tower of Tragedy: el rótulo del concurso"
+ },
+ "scene-051": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1344.0,
+  "ambiente": null,
+  "nota": "Tower of Tragedy: pregunta con tres respuestas (Pawnbroker de Jolly Roger's)"
+ },
+ "scene-052": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1092.0,
+  "ambiente": null,
+  "nota": "Tower of Tragedy: pregunta con lista de respuestas"
+ },
+ "scene-053": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1146.0,
+  "ambiente": null,
+  "nota": "Tower of Tragedy: pregunta (Grunty Industries) con respuestas"
+ },
+ "scene-054": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 250.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: plaza de Jinjo Village"
+ },
+ "scene-055": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 300.0,
+  "ambiente": 0.6,
+  "nota": "Isle O' Hags: camino de la aldea"
+ },
+ "scene-056": {
+  "fuente": "P10",
+  "id": "kM9ruHky3ng",
+  "desde": 1253.0,
+  "ambiente": 0.9,
+  "nota": "Isle O' Hags: camino de arena (suena su música)"
+ },
+ "scene-057": {
+  "fuente": "P37",
+  "id": "AQ7Ewsl2k4I",
+  "desde": 630.0,
+  "ambiente": null,
+  "nota": "Sabreman en su tienda sobre la lava"
+ },
+ "scene-058": {
+  "fuente": "P37",
+  "id": "AQ7Ewsl2k4I",
+  "desde": 658.0,
+  "ambiente": 0.5,
+  "nota": "Sabreman dormido: 'ZZZ… perhaps I'll ride on a dolphin'"
+ },
+ "scene-059": {
+  "fuente": "P37",
+  "id": "AQ7Ewsl2k4I",
+  "desde": 663.5,
+  "ambiente": null,
+  "nota": "lava y la tienda de Sabreman"
+ },
+ "scene-060": {
+  "fuente": "P17",
+  "id": "VxRt5CIZ43Q",
+  "desde": 1111.0,
+  "ambiente": null,
+  "nota": "el Mumbo Pad con 'EEKUM BOKUM' en su costado, Mumbo se acerca"
+ },
+ "scene-061": {
+  "fuente": "P17",
+  "id": "VxRt5CIZ43Q",
+  "desde": 1122.0,
+  "ambiente": 0.7,
+  "nota": "Mumbo lanza el hechizo: 'Eekum Bokum' (se oye) y el sol"
+ },
+ "scene-062": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1810.5,
+  "ambiente": null,
+  "nota": "créditos: The Banjo-Tooie Team (Mayles, Pashute, Pollington)"
+ },
+ "scene-063": {
+  "fuente": "P01",
+  "id": "ezvZQneGzTo",
+  "desde": 88.0,
+  "ambiente": null,
+  "nota": "pantalla de título Banjo-Tooie ©2000 Nintendo/Rare"
+ },
+ "scene-064": {
+  "fuente": "CG",
+  "id": "feFsFAWJznY",
+  "desde": 20.0,
+  "ambiente": null,
+  "nota": "Censored Gaming: logo japonés 'Banjo and Kazooie's Great Adventure 2'"
+ },
+ "scene-065": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 398.6,
+  "ambiente": null,
+  "nota": "Banjo ante el título CAULDRON KEEP, exterior verde metálico"
+ },
+ "scene-066": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 677.0,
+  "ambiente": null,
+  "nota": "Cauldron Keep: foso magenta y borde del castillo"
+ },
+ "scene-067": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 593.0,
+  "ambiente": null,
+  "nota": "Cauldron Keep: tubería gris y suelo naranja"
+ },
+ "scene-068": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 706.0,
+  "ambiente": null,
+  "nota": "Cauldron Keep: reja láser y foso de ácido morado"
+ },
+ "scene-069": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 1145.0,
+  "ambiente": 0.8,
+  "nota": "Jamjars: lección Egg Aim con iconos de botones (Z, A)"
+ },
+ "scene-070": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 1103.5,
+  "ambiente": 0.8,
+  "nota": "Jamjars: 'special moves…' lección con texto"
+ },
+ "scene-071": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 928.0,
+  "ambiente": null,
+  "nota": "Tower of Tragedy: la sala del concurso"
+ },
+ "scene-072": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1262.0,
+  "ambiente": 0.5,
+  "nota": "Tower of Tragedy: pregunta y cartel APPLAUSE"
+ },
+ "scene-073": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 962.0,
+  "ambiente": 0.5,
+  "nota": "Grunty: 'Now let's meet tonight's victims, err… I mean contestants'"
+ },
+ "scene-074": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 971.5,
+  "ambiente": 0.5,
+  "nota": "Grunty presenta a los concursantes (Klungo y las hermanas)"
+ },
+ "scene-075": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1845.5,
+  "ambiente": null,
+  "nota": "créditos: Rare testing team"
+ },
+ "scene-076": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1881.0,
+  "ambiente": null,
+  "nota": "créditos: Rare testing team (2)"
+ },
+ "scene-077": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 714.0,
+  "ambiente": null,
+  "nota": "Banjo y Kazooie en lo alto de la torre: 'doesn't it seem strange…'"
+ },
+ "scene-078": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 886.0,
+  "ambiente": 0.8,
+  "nota": "jefe final Hag 1: Kazooie dispara en primera persona (suena su tema)"
+ },
+ "scene-079": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 1010.0,
+  "ambiente": 0.9,
+  "nota": "jefe final Hag 1: Banjo corre (suena el tema de la Hag 1)"
+ },
+ "scene-080": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 1077.0,
+  "ambiente": 0.7,
+  "nota": "Jamjars con su voz de sargento"
+ },
+ "scene-081": {
+  "fuente": "P43",
+  "id": "nYp4R7uiguw",
+  "desde": 1789.0,
+  "ambiente": null,
+  "nota": "créditos: Grant 'Old King Coal' Kirkhope"
+ },
+ "scene-082": {
+  "fuente": "P44",
+  "id": "UhOTPmJTqq8",
+  "desde": 1806.0,
+  "ambiente": null,
+  "nota": "Jamjars con Banjo y Kazooie en casa de Bottles"
+ },
+ "scene-083": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 475.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: casa de Jinjo verde"
+ },
+ "scene-084": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 450.0,
+  "ambiente": null,
+  "nota": "Isle O' Hags: Banjo en la sala con el suelo de glifos"
+ },
+ "scene-085": {
+  "fuente": "P02",
+  "id": "mCeQj7py8g4",
+  "desde": 600.0,
+  "ambiente": null,
+  "nota": "rey Jingaling en su palacio"
+ },
+ "scene-086": {
+  "fuente": "P03",
+  "id": "5PjYuSAZBJQ",
+  "desde": 1252.0,
+  "ambiente": null,
+  "nota": "warp pad: Kazooie explica 'this is a warp pad…'"
+ }
+}

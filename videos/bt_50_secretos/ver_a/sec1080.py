@@ -1,0 +1,11 @@
+# python sec1080.py PNN t0 dur -> cuadros 1/seg en ver_a/hd_PNN_<t0>_NN.jpg (descarga solo ese tramo a 1080p)
+import sys,subprocess,os,glob
+ids=dict(l.split() for l in open(r"C:\Users\jaire\AppData\Local\Temp\claude\C--FabricaAnimaciones\0e220f8f-881b-4085-a513-7e5850844f54\scratchpad\ids.txt") if l.strip())
+p,t0,d=sys.argv[1],float(sys.argv[2]),float(sys.argv[3])
+here=os.path.dirname(os.path.abspath(__file__))
+tmp=os.path.join(r"C:\Users\jaire\AppData\Local\Temp\claude\C--FabricaAnimaciones\0e220f8f-881b-4085-a513-7e5850844f54\scratchpad",f"sec_{p}_{int(t0)}.mp4")
+if os.path.exists(tmp): os.remove(tmp)
+r=subprocess.run(["yt-dlp","--no-warnings","-f","bv*[height<=1080][height>=720]","--download-sections",f"*{t0}-{t0+d}","--force-keyframes-at-cuts","-o",tmp,"--",ids[p]],capture_output=True,text=True)
+print(r.stderr[-300:])
+subprocess.run(["ffmpeg","-y","-v","error","-i",tmp,"-vf","fps=2","-q:v","3",os.path.join(here,f"hd_{p}_{int(t0)}_%02d.jpg")])
+print(sorted(glob.glob(os.path.join(here,f"hd_{p}_{int(t0)}_*.jpg")))[:3])

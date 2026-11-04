@@ -1,0 +1,2829 @@
+{
+ "FUENTES": {
+  "P01": "ezvZQneGzTo",
+  "P02": "mCeQj7py8g4",
+  "P03": "5PjYuSAZBJQ",
+  "P04": "XyEok8nI5tA",
+  "P05": "YNyPK0cCfsM",
+  "P07": "5Cmj9VrrfTU",
+  "P08": "tgC5omjQgG8",
+  "P09": "XA5Q0rWYKaY",
+  "P10": "kM9ruHky3ng",
+  "P11": "FTD7c-BfDI4",
+  "P15": "nSW5HYUc0v4",
+  "P17": "VxRt5CIZ43Q",
+  "P18": "3OiDVU9YnyI",
+  "P20": "cgQjeEjlscc",
+  "P21": "0Q1upbZH0vs",
+  "P22": "apQeJq_a1c8",
+  "P23": "pnXRfbIyMw0",
+  "P24": "jtcsZvsw16I",
+  "P25": "lqZOLOE_h8A",
+  "P27": "-5xyL3uwvUM",
+  "P29": "a03FCil1wEI",
+  "P33": "t-DIdt_HztE",
+  "P34": "bNezbjXd27c",
+  "P37": "AQ7Ewsl2k4I",
+  "P38": "xPQ5vjLKxLc",
+  "P39": "MKpzMtyZOK0",
+  "P42": "7Gzu82cUN4I",
+  "P43": "nYp4R7uiguw",
+  "P44": "UhOTPmJTqq8",
+  "XBLA": "bcpt_BIyYsk",
+  "XBLA_TOT": "HPvvSJ8gTaU",
+  "SACO": "feFsFAWJznY",
+  "FALCON100": "vesydnvsHEo",
+  "FALCON_ANY": "DCkUTe_LIDU",
+  "JAMJARS_TAPA": "5YFszI5v-2k",
+  "DREAM": "XItTPJox9CU",
+  "DOS_BANJOS": "b7iGKxVuD9M",
+  "GI_SIN_TREN": "TZCGRAAInmg",
+  "SPACEWORLD": "zSLa5M8juyw",
+  "BK_LAIR": "XXnTS2hRWBY",
+  "SMASH_HUEVOS": "bw6h7xAb0pw",
+  "SMASH_FINAL": "sURaafANZ3o"
+ },
+ "frases": {
+  "intro_0": [
+   [
+    "SACO",
+    68,
+    "japonés: el saco azul/rosa cae y Banjo lo sostiene (70-71); recortar la etiqueta «Japanese Version» de arriba; NO usar 0-10 s (anuncio VPN)",
+    "JP"
+   ],
+   [
+    "SACO",
+    104,
+    "occidental: la cabeza de Grunty rueda (104-105) y el ojo cae (107); etiqueta «English Version»",
+    "OJO"
+   ],
+   [
+    "P44",
+    1950,
+    "versión occidental NSO: Banjo patea la cabeza de Grunty en la azotea (1950-1956)",
+    ""
+   ]
+  ],
+  "intro_1": [
+   [
+    "P18",
+    433,
+    "Lord Woo Fak Fak: pez abisal con linterna (jefe con huesos de más)",
+    ""
+   ],
+   [
+    "P22",
+    750,
+    "Terrydactyland: rótulo de zona sobre el camino (el «accidente» de la montaña)",
+    "OJO"
+   ],
+   [
+    "P01",
+    75,
+    "título Banjo-Tooie de NSO limpio (para la frase del cartucho; el chip no sale en gameplay: MG)",
+    ""
+   ]
+  ],
+  "intro_2": [
+   [
+    "P10",
+    1035,
+    "vista aérea de Isle O' Hags (cielo verde) para «creías que no quedaba nada»",
+    ""
+   ],
+   [
+    "P02",
+    1110,
+    "Jinjo Village: «Blue Jinjo Family House» (el hub de los Jiggies crueles)",
+    ""
+   ],
+   [
+    "P43",
+    650,
+    "rótulo «Cauldron Keep» al entrar (el mundo que casi no se ve)",
+    ""
+   ]
+  ],
+  "intro_3": [
+   [
+    "P01",
+    100,
+    "título Banjo-Tooie con Klungo asomando (75-110, sin menús)",
+    ""
+   ],
+   [
+    "P02",
+    230,
+    "rótulo «Isle O' Hags (Jinjo Village)» con Banjo corriendo",
+    ""
+   ],
+   [
+    "P10",
+    1335,
+    "las casas de colores de Jinjo Village en fila",
+    ""
+   ]
+  ],
+  "s50_0": [
+   [
+    "P01",
+    985,
+    "Spiral Mountain: el fantasma de Bottles flota junto a Banjo («Can't you see I am decaying down there?»)",
+    ""
+   ],
+   [
+    "P01",
+    1045,
+    "menú del fantasma de Bottles «Which ability would you like: Basic Movements» (1045-1055)",
+    ""
+   ],
+   [
+    "P01",
+    1075,
+    "Banjo y Kazooie corriendo por Spiral Mountain (tocones, topera) tras el menú",
+    ""
+   ]
+  ],
+  "s50_1": [
+   [
+    "P01",
+    740,
+    "fantasma de Bottles brillando en el pueblo («It's worse than that…», 740-755)",
+    ""
+   ],
+   [
+    "P01",
+    1165,
+    "vuelo de Kazooie sobre Spiral Mountain (cielo azul)",
+    ""
+   ],
+   [
+    "P01",
+    1135,
+    "Banjo junto a tocones, aprendiendo movimientos",
+    ""
+   ]
+  ],
+  "s49_0": [
+   [
+    "P09",
+    1000,
+    "estación de Glitter Gulch Mine con vagones y farol (Banjo llegando)",
+    ""
+   ],
+   [
+    "P09",
+    1120,
+    "rótulo «Inside Chuffy's Wagon» dentro del vagón de Chuffy",
+    ""
+   ],
+   [
+    "P34",
+    540,
+    "Chuffy en la estación de Hailfire Peaks con luz (catálogo anterior; sin ver 8 s)",
+    "OJO"
+   ],
+   [
+    "P09",
+    1380,
+    "Old King Coal en la sombra de la caldera («Hurrr»), cuando el tren responde",
+    "AUDIO"
+   ]
+  ],
+  "s49_1": [
+   [
+    "P09",
+    1260,
+    "Chuffy el tren iluminado de verde delante de Banjo (spell Levitate)",
+    ""
+   ],
+   [
+    "P09",
+    1240,
+    "rótulo «Levitate / Chuffy the Train»",
+    ""
+   ],
+   [
+    "P34",
+    570,
+    "Chuffy visto de cerca en la estación de lava (catálogo anterior)",
+    "OJO"
+   ]
+  ],
+  "s48_0": [
+   [
+    "P04",
+    144,
+    "Kazooie en primera persona con huevos verdes y marcador (Breegull Blaster; 144-360)",
+    ""
+   ],
+   [
+    "P04",
+    60,
+    "Jamjars y Kazooie en el silo, rótulo «Breegull Blaster» («Here's a move», 60-72)",
+    ""
+   ],
+   [
+    "SMASH_HUEVOS",
+    77,
+    "Smash Ultimate: Banjo y Kazooie disparan huevos (77-92); etiqueta de texto arriba",
+    "SMASH"
+   ]
+  ],
+  "s48_1": [
+   [
+    "SMASH_HUEVOS",
+    92,
+    "Smash Ultimate: ráfaga trasera de huevos con humo (el «huevo del trasero»)",
+    "SMASH"
+   ],
+   [
+    "SMASH_HUEVOS",
+    119,
+    "Smash Ultimate: Breegull Blaster mantenido (119-125)",
+    "SMASH"
+   ],
+   [
+    "SMASH_FINAL",
+    4,
+    "Smash Ultimate: Final Smash «The Mighty Jinjonator» (4-9)",
+    "SMASH"
+   ]
+  ],
+  "s47_0": [
+   [
+    "P18",
+    40,
+    "Atlantis: columnas y ruinas verdes bajo el agua, Banjo nadando (40-60)",
+    "AUDIO"
+   ],
+   [
+    "P18",
+    10,
+    "Atlantis: pez erizo y ruinas (10-20)",
+    "AUDIO"
+   ],
+   [
+    "P18",
+    140,
+    "Atlantis: cofres con luz verde (140-150)",
+    "AUDIO"
+   ]
+  ],
+  "s47_1": [
+   [
+    "P18",
+    100,
+    "Atlantis: pasillos de ruinas con Banjo nadando (100-110), voz callada",
+    "AUDIO"
+   ],
+   [
+    "P18",
+    60,
+    "Atlantis: Banjo sobre la plataforma de ruinas (60)",
+    "AUDIO"
+   ],
+   [
+    "P18",
+    190,
+    "Atlantis: fondo marino con Kazooie (190), a punto del rótulo Sea Bottom",
+    "AUDIO"
+   ]
+  ],
+  "s46_0": [
+   [
+    "P43",
+    639,
+    "LETRERO LEÍDO: hazard amarillo-negro «CAULDRON KEEP / SECRET EXIT» a la derecha del hueco de entrada, junto al pilar de Jiggy (639-642)",
+    ""
+   ],
+   [
+    "P43",
+    648,
+    "rótulo «Cauldron Keep» sobre el túnel de entrada",
+    ""
+   ],
+   [
+    "P43",
+    636,
+    "Banjo cruzando la plataforma verde hacia la entrada (636)",
+    ""
+   ]
+  ],
+  "s46_1": [
+   [
+    "P43",
+    642,
+    "Banjo entra por el hueco metálico (puerta trasera), pilar de Jiggy al lado",
+    ""
+   ],
+   [
+    "P43",
+    657,
+    "foso de ácido morado alrededor de la torre (657-678)",
+    ""
+   ],
+   [
+    "P43",
+    666,
+    "Banjo en los pads de la plataforma verde con el foso detrás",
+    ""
+   ]
+  ],
+  "s45_0": [
+   [
+    "P02",
+    1490,
+    "Speccy (hijo de Bottles) con su gorra y un avión de juguete (1490-1500)",
+    ""
+   ],
+   [
+    "P02",
+    1470,
+    "Kazooie saluda a Speccy en la casa de Bottles («Hi, Speccy»)",
+    ""
+   ],
+   [
+    "XBLA",
+    310,
+    "XBLA (catálogo anterior): casa de Bottles/Isle en Xbox, para decir que la gorra siguió",
+    "XBLA"
+   ]
+  ],
+  "s45_1": [
+   [
+    "P02",
+    1525,
+    "póster con piernas y logo de Rare en la casa de Bottles (primer plano, 1520-1535)",
+    ""
+   ],
+   [
+    "P02",
+    1415,
+    "póster a la derecha del cuadro mientras Banjo habla con Bottles (1410-1420)",
+    ""
+   ],
+   [
+    "P02",
+    1350,
+    "interior de la casa: cuadro de Mrs. Bottles y cama (1350)",
+    ""
+   ]
+  ],
+  "s45_2": [
+   [
+    "P02",
+    1430,
+    "Goggles y el peluche en la misma casa (para no dejar la casa sin imagen)",
+    ""
+   ],
+   [
+    "P02",
+    1290,
+    "Mrs. Bottles «Hello there, Ban…» (1290-1310)",
+    ""
+   ],
+   [
+    "XBLA",
+    310,
+    "XBLA: la misma casa/Isle en la versión de Xbox",
+    "XBLA"
+   ]
+  ],
+  "s44_0": [
+   [
+    "P34",
+    180,
+    "Jamjars con Banjo de espaldas con mochila azul-verde (180-195); no es el Shack Pack",
+    "HUECO"
+   ],
+   [
+    "P43",
+    1620,
+    "pregunta del concurso «Holding… and pressing… Snack Pack / Sack Pack / Shack Pack» (1620)",
+    "OJO"
+   ],
+   [
+    "P07",
+    360,
+    "Jamjars en silo con Kazooie (para el viaje)",
+    ""
+   ]
+  ],
+  "s44_1": [
+   [
+    "P34",
+    195,
+    "Banjo con mochila (195): el cambio de mochila no se aprecia a 1080p; MG o cámara lenta propia",
+    "HUECO"
+   ],
+   [
+    "P43",
+    1620,
+    "mismo rótulo de pregunta de mochilas",
+    "OJO"
+   ]
+  ],
+  "s43_0": [
+   [
+    "P07",
+    240,
+    "Bullion Bill (zorro con sombrero) hablando en Prospector's Hut (240-260)",
+    ""
+   ],
+   [
+    "P09",
+    1420,
+    "Old King Coal, cara de lava («Who dares enter Old King Coal's Bo…», 1420-1440)",
+    ""
+   ],
+   [
+    "P01",
+    420,
+    "Grunty y Brentilda (para «la revista dejó bautizar personajes»: sin imagen mejor)",
+    "OJO"
+   ]
+  ],
+  "s43_1": [
+   [
+    "P09",
+    1440,
+    "Old King Coal en su caldera (1440)",
+    ""
+   ],
+   [
+    "P07",
+    220,
+    "rótulo «Prospector's Hut» con Banjo (220)",
+    ""
+   ],
+   [
+    "P07",
+    280,
+    "interior de la cabaña de Bullion Bill (280-300)",
+    ""
+   ]
+  ],
+  "s42_0": [
+   [
+    "P43",
+    745,
+    "Banjo y Kazooie llegando al Gatehouse (rótulo «The Gatehouse» a los 755)",
+    ""
+   ],
+   [
+    "P43",
+    755,
+    "rótulo «The Gatehouse» con la sala azul de luces",
+    "AUDIO"
+   ],
+   [
+    "P43",
+    725,
+    "Banjo con una hoja de Jiggy en el suelo antes del Gatehouse",
+    ""
+   ]
+  ],
+  "s42_1": [
+   [
+    "P43",
+    770,
+    "Klungo cae por el agujero del techo («Yarrrr», 770-780): cambio a música de jefe",
+    "AUDIO"
+   ],
+   [
+    "P43",
+    785,
+    "Klungo en primer plano «Lotsss hasss learnt new…»",
+    ""
+   ],
+   [
+    "P43",
+    815,
+    "pelea con Klungo en su burbuja (815-830)",
+    ""
+   ]
+  ],
+  "s41_0": [
+   [
+    "P10",
+    1035,
+    "vista aérea de Isle O' Hags con sus cuevas (cielo verde)",
+    ""
+   ],
+   [
+    "P01",
+    1165,
+    "Kazooie volando sobre la isla (cielo azul)",
+    ""
+   ],
+   [
+    "P02",
+    230,
+    "rótulo «Isle O' Hags (Jinjo Village)»",
+    ""
+   ]
+  ],
+  "s41_1": [
+   [
+    "P33",
+    640,
+    "rótulo «Isle O' Hags (Wasteland)» (640)",
+    ""
+   ],
+   [
+    "P43",
+    515,
+    "rótulo «Isle O' Hags (Wooded Hollow)» (515-530)",
+    ""
+   ],
+   [
+    "P38",
+    1085,
+    "rótulo «Gruntilda's Lair (Entrance)» (1085)",
+    ""
+   ]
+  ],
+  "s40_0": [
+   [
+    "P03",
+    120,
+    "rótulo «Heggy's Egg Shed» con Heggy la gallina azul (120-140)",
+    ""
+   ],
+   [
+    "P03",
+    150,
+    "huevo amarillo en un nido del gallinero con Banjo (150-180)",
+    ""
+   ],
+   [
+    "P04",
+    60,
+    "Breegull Blaster/Jamjars (para el huevo del Bash; no es el Bash)",
+    "OJO"
+   ]
+  ],
+  "s40_1": [
+   [
+    "P03",
+    250,
+    "Heggy «Cluck! Go find special e[ggs]» (250)",
+    ""
+   ],
+   [
+    "P03",
+    215,
+    "huevo amarillo en el nido (210-240, evita el menú de 190-205 y 225-235)",
+    "OJO"
+   ],
+   [
+    "P03",
+    100,
+    "huevos azules en la entrada de Wooded Hollow («…table eggs may be found», 100-110)",
+    ""
+   ]
+  ],
+  "s39_0": [
+   [
+    "P44",
+    766,
+    "PLACA LEÍDA: matrícula amarilla «HAG 1» con óvalo «GB», luces rojas (762-770, trasera de la Hag 1)",
+    ""
+   ],
+   [
+    "P44",
+    754,
+    "rótulo «Hag 1 – Monstrous Mechanical Mud-Muncher»",
+    ""
+   ],
+   [
+    "P44",
+    758,
+    "Hag 1 de lado, luces y orugas",
+    ""
+   ]
+  ],
+  "s39_1": [
+   [
+    "P44",
+    786,
+    "Grunty en el podio «After two years… revenge time!» (782-790)",
+    ""
+   ],
+   [
+    "P44",
+    818,
+    "Grunty con las tarjetas «Answer correctly and maybe I'll go a little slee[p]» (818-830)",
+    ""
+   ],
+   [
+    "P44",
+    900,
+    "Hag 1 de frente «How do I switch them all on?» (900)",
+    ""
+   ]
+  ],
+  "s38_0": [
+   [
+    "P15",
+    625,
+    "rótulo «Witchyworld – Saucer of Peril Ride» (625) con la cabina del platillo",
+    ""
+   ],
+   [
+    "P15",
+    425,
+    "plataforma octogonal del platillo con Banjo (425)",
+    ""
+   ],
+   [
+    "P43",
+    1770,
+    "créditos del juego «The Banjo-Tooie Team…» (1770-1790): solo si la voz nombra al equipo",
+    "OJO"
+   ]
+  ],
+  "s38_1": [
+   [
+    "P15",
+    505,
+    "dentro del platillo, vista en primera persona disparando a blancos (505-605)",
+    ""
+   ],
+   [
+    "P15",
+    545,
+    "el parque de noche con luces desde el platillo (545)",
+    ""
+   ],
+   [
+    "P15",
+    685,
+    "Kazooie junto al platillo rosa (685)",
+    ""
+   ]
+  ],
+  "s37_0": [
+   [
+    "P17",
+    805,
+    "Pawno de cerca, sombrero y chaleco «Greetings, frie[nd]» (805)",
+    ""
+   ],
+   [
+    "P17",
+    745,
+    "fachada del «Pawno's Emporium» (745)",
+    ""
+   ],
+   [
+    "P17",
+    985,
+    "Pawno tras el mostrador (985-1015)",
+    ""
+   ]
+  ],
+  "s37_1": [
+   [
+    "P17",
+    820,
+    "Pawno tras el mostrador «…I reckon 20» (820)",
+    ""
+   ],
+   [
+    "P17",
+    1015,
+    "Pawno cuenta monedas (1015)",
+    ""
+   ],
+   [
+    "P17",
+    910,
+    "Jamjars/pedido de dinero en Jolly Roger's (910)",
+    "OJO"
+   ]
+  ],
+  "s36_0": [
+   [
+    "P43",
+    1012,
+    "pregunta de la bruja N64 en pantalla («Which of these is an area in Grunty Industries?») como ejemplo del examen",
+    ""
+   ],
+   [
+    "P43",
+    1112,
+    "logo «Tower of Tragedy» (1112)",
+    ""
+   ],
+   [
+    "XBLA_TOT",
+    366,
+    "XBLA: pregunta «Which fridge magnet was farthest right?» (366-370)",
+    "XBLA"
+   ]
+  ],
+  "s36_1": [
+   [
+    "XBLA_TOT",
+    360,
+    "XBLA: refrigerador con pegatinas BK/BT/Rare (358-364) del mismo concurso",
+    "XBLA"
+   ],
+   [
+    "P43",
+    1252,
+    "pregunta N64 con tres opciones (1252)",
+    ""
+   ],
+   [
+    "P43",
+    1432,
+    "pregunta N64 «Canary Mary / The Prospector / Guffo» (1432)",
+    ""
+   ]
+  ],
+  "s35_0": [
+   [
+    "P38",
+    1085,
+    "rótulo «Gruntilda's Lair (Entrance)»: entrada de la guarida en Isle O' Hags, con su música (1085-1100)",
+    "AUDIO"
+   ],
+   [
+    "P02",
+    1070,
+    "Banjo llegando a Jinjo Village (1070): música de la isla de fondo",
+    "AUDIO"
+   ],
+   [
+    "BK_LAIR",
+    3472,
+    "BK: entrada de Grunty's Lair del primer juego (3472-3480)",
+    "BK"
+   ]
+  ],
+  "s35_1": [
+   [
+    "BK_LAIR",
+    3544,
+    "BK: sala principal de Grunty's Lair (3544-3570) con su música",
+    "BK AUDIO"
+   ],
+   [
+    "P10",
+    1285,
+    "Isle O' Hags: Banjo ante las casas de Jinjo Village (1285)",
+    "AUDIO"
+   ],
+   [
+    "P38",
+    1165,
+    "Isle O' Hags: camino hacia Jinjo Village (1165)",
+    "AUDIO"
+   ]
+  ],
+  "s34_0": [
+   [
+    "P37",
+    496,
+    "Sabreman descongelado en la nieve (496-526)",
+    ""
+   ],
+   [
+    "P37",
+    631,
+    "Banjo y Sabreman en su tienda de lava (628-644)",
+    ""
+   ],
+   [
+    "P37",
+    571,
+    "Sabreman caminando por la nieve (571)",
+    ""
+   ]
+  ],
+  "s34_1": [
+   [
+    "P37",
+    664,
+    "TEXTO LEÍDO: Sabreman dormido «ZZZ… perhaps I'll ride on a do[lphin?]» (664)",
+    ""
+   ],
+   [
+    "P37",
+    652,
+    "su tienda verde sobre la plataforma de lava (652-672)",
+    ""
+   ],
+   [
+    "SPACEWORLD",
+    0,
+    "demo GameCube (la consola «Dolphin»), si se quiere el guiño",
+    "GC OJO"
+   ]
+  ],
+  "s33_0": [
+   [
+    "P03",
+    884,
+    "LETRERO LEÍDO: borde del Mumbo Pad «…KUM · BOKUM» (Eekum Bokum, 884-900, la «E» inicial tapada por la perspectiva)",
+    "AUDIO"
+   ],
+   [
+    "P03",
+    860,
+    "estatua dorada de Mumbo sobre pedestal y el disco morado al lado (860)",
+    ""
+   ],
+   [
+    "P09",
+    1240,
+    "rótulo del hechizo «Levitate»: Mumbo conjurando sobre Chuffy (1240-1260)",
+    "AUDIO"
+   ]
+  ],
+  "s33_1": [
+   [
+    "P03",
+    1328,
+    "Mumbo habla desde su calavera «…so built new skull, Mumbo» (1328)",
+    ""
+   ],
+   [
+    "P03",
+    1400,
+    "Mumbo de pie con su bastón (1400)",
+    ""
+   ],
+   [
+    "P03",
+    1316,
+    "Mumbo en su trono de la calavera (1316)",
+    ""
+   ]
+  ],
+  "s32_0": [
+   [
+    "P01",
+    75,
+    "título «Banjo-Tooie © 2000 Nintendo/Rare» limpio (75-110)",
+    ""
+   ],
+   [
+    "P44",
+    2000,
+    "mismo título al final de la parte (2000-2030)",
+    ""
+   ],
+   [
+    "P01",
+    125,
+    "tormenta sobre Spiral Mountain (125-160)",
+    ""
+   ]
+  ],
+  "s32_1": [
+   [
+    "FALCON_ANY",
+    30,
+    "juego en japonés (texto JP en pantalla), recortar el panel izq. con crop=1440:1080:480:0",
+    "JP"
+   ],
+   [
+    "P01",
+    100,
+    "título NSO con Klungo (100)",
+    ""
+   ],
+   [
+    "P44",
+    2020,
+    "título con Klungo asomando (2020)",
+    ""
+   ]
+  ],
+  "s31_0": [
+   [
+    "P43",
+    680,
+    "foso de ácido morado y torre verde de Cauldron Keep (680-700)",
+    ""
+   ],
+   [
+    "P43",
+    710,
+    "Banjo en la cornisa de la torre sobre el foso (710)",
+    ""
+   ],
+   [
+    "P43",
+    635,
+    "muros verdes de Cauldron Keep (635)",
+    ""
+   ]
+  ],
+  "s31_1": [
+   [
+    "P43",
+    657,
+    "foso de ácido morado (657-678)",
+    ""
+   ],
+   [
+    "P43",
+    740,
+    "torre con reja metálica sobre el foso (740)",
+    ""
+   ],
+   [
+    "P43",
+    755,
+    "interior del Gatehouse (755): lo que queda del castillo grande",
+    ""
+   ]
+  ],
+  "s30_0": [
+   [
+    "P03",
+    1100,
+    "Jamjars en el silo: «So you'll be wanting t'learn…» (1080-1160)",
+    "AUDIO"
+   ],
+   [
+    "P04",
+    60,
+    "Jamjars y Kazooie: «Breegull Blaster – Here's a move» (60-72)",
+    "AUDIO"
+   ],
+   [
+    "P34",
+    180,
+    "Jamjars «That'll be all» con botón rojo (180-195)",
+    "AUDIO"
+   ]
+  ],
+  "s30_1": [
+   [
+    "P07",
+    360,
+    "Jamjars con el botón verde y Kazooie (360)",
+    ""
+   ],
+   [
+    "P11",
+    350,
+    "Jamjars en silo con luces de Witchyworld (350)",
+    ""
+   ],
+   [
+    "P03",
+    1140,
+    "Jamjars «I see you've got enoug[h]» (1140)",
+    ""
+   ]
+  ],
+  "s29_0": [
+   [
+    "P43",
+    932,
+    "inicio del concurso: Grunty en el podio y Banjo en el pedestal (932-950)",
+    "AUDIO"
+   ],
+   [
+    "P43",
+    992,
+    "«Some loser bear» sobre Banjo con el marcador (992)",
+    "AUDIO"
+   ],
+   [
+    "P43",
+    1152,
+    "Banjo y una hermana de Grunty junto al podio (1152)",
+    ""
+   ]
+  ],
+  "s29_1": [
+   [
+    "P43",
+    972,
+    "TEXTO LEÍDO: «…ms, err… I mean contestant's, shall…» (972)",
+    ""
+   ],
+   [
+    "P43",
+    952,
+    "Grunty presentando puntos «with 1 point being awarded if it was a…» (952)",
+    ""
+   ],
+   [
+    "P43",
+    1192,
+    "las pesas de una tonelada del concurso (1192-1212)",
+    ""
+   ]
+  ],
+  "s28_0": [
+   [
+    "P01",
+    1060,
+    "Spiral Mountain (mientras la voz habla de la música): sin toma específica; DK64/Perfect Dark van como pegatina estática",
+    "HUECO"
+   ],
+   [
+    "P44",
+    90,
+    "fiesta de los Jinjos «Thanks, guys» (90)",
+    ""
+   ],
+   [
+    "P02",
+    1070,
+    "Banjo entra en Jinjo Village (1070)",
+    ""
+   ]
+  ],
+  "s28_1": [
+   [
+    "P29",
+    1050,
+    "caja «Deliver to Twycross, England» (1050-1054, catálogo anterior, leída ✅)",
+    ""
+   ],
+   [
+    "P27",
+    610,
+    "caja «Defective Goods» con Banjo (610)",
+    ""
+   ],
+   [
+    "P27",
+    650,
+    "letrero «Waste Disposal Plant» (650)",
+    ""
+   ]
+  ],
+  "s27_0": [
+   [
+    "P44",
+    754,
+    "rótulo Hag 1 y primera fase del jefe (754-790) con su tema",
+    "AUDIO"
+   ],
+   [
+    "P44",
+    1140,
+    "la Hag 1 con faros azules en plena pelea (1140)",
+    "AUDIO"
+   ],
+   [
+    "P44",
+    1380,
+    "taladro de frente con faros azules (1380)",
+    "AUDIO"
+   ]
+  ],
+  "s27_1": [
+   [
+    "P44",
+    1420,
+    "pelea contra la Hag 1 (1420), tema sonando",
+    "AUDIO"
+   ],
+   [
+    "P44",
+    1460,
+    "taladro y faros (1460)",
+    "AUDIO"
+   ],
+   [
+    "P44",
+    1580,
+    "Kazooie contra la Hag 1 antes de la explosión (1580)",
+    "AUDIO"
+   ]
+  ],
+  "s26_0": [
+   [
+    "P03",
+    1080,
+    "Jamjars en el silo «My brother! How's the…» (1080)",
+    ""
+   ],
+   [
+    "P07",
+    360,
+    "Jamjars con el botón verde (360)",
+    ""
+   ],
+   [
+    "P04",
+    72,
+    "Jamjars lección (72)",
+    ""
+   ]
+  ],
+  "s26_1": [
+   [
+    "P02",
+    600,
+    "rey Jingaling con corona y diálogo (catálogo anterior, P02 s600)",
+    "OJO"
+   ],
+   [
+    "P03",
+    1328,
+    "Mumbo habla (1328)",
+    ""
+   ],
+   [
+    "P02",
+    1110,
+    "Jinjo Village: casas Jinjo (1110)",
+    ""
+   ]
+  ],
+  "mitad_0": [
+   [
+    "P44",
+    90,
+    "fiesta de los Jinjos «Thanks, guys» (90)",
+    ""
+   ],
+   [
+    "P44",
+    1810,
+    "banner «Well done Banjo & Kazooie» en la fiesta (1800-1820)",
+    ""
+   ],
+   [
+    "P02",
+    1290,
+    "Mrs. Bottles saludando (1290)",
+    ""
+   ]
+  ],
+  "mitad_1": [
+   [
+    "P44",
+    1840,
+    "Jamjars y Banjo hablando en la fiesta (1840-1850)",
+    ""
+   ],
+   [
+    "P44",
+    1860,
+    "Mumbo, Humba y Klungo dormido en la fiesta (1860-1870)",
+    ""
+   ],
+   [
+    "P10",
+    1285,
+    "Isle O' Hags: Banjo ante las casas (1285)",
+    ""
+   ]
+  ],
+  "s25_0": [
+   [
+    "P03",
+    1256,
+    "TEXTO LEÍDO: «This is a warp pad» con Banjo sobre el pad y destellos (1256-1268)",
+    ""
+   ],
+   [
+    "P11",
+    25,
+    "Banjo sobre un pad azul circular (25)",
+    ""
+   ],
+   [
+    "P43",
+    663,
+    "Banjo en los pads azul y rojo de la plataforma (663-666)",
+    ""
+   ]
+  ],
+  "s25_1": [
+   [
+    "P03",
+    1268,
+    "Banjo junto al warp pad (1268)",
+    ""
+   ],
+   [
+    "P43",
+    654,
+    "dos pads sobre la plataforma verde (654)",
+    ""
+   ],
+   [
+    "P11",
+    50,
+    "Templo de Jiggywiggy con la estatua (50): referencia de «inspiración de Zelda» sin otro juego",
+    "OJO"
+   ]
+  ],
+  "s24_0": [
+   [
+    "P21",
+    159,
+    "Kazooie dragón verde (sobre Banjo) lanza fuego en Isle O' Hags (159-171)",
+    ""
+   ],
+   [
+    "P21",
+    165,
+    "Banjo corre con el dragón a la espalda; sombra bajo ellos (165)",
+    ""
+   ],
+   [
+    "P21",
+    140,
+    "diálogo «Dragon, burn many b…» con el retrato de Kazooie (140)",
+    ""
+   ]
+  ],
+  "s24_1": [
+   [
+    "P21",
+    169,
+    "el dragón escupe fuego (169)",
+    ""
+   ],
+   [
+    "P44",
+    1930,
+    "Banjo y la Kazooie normal en la azotea (1930): la escena final con la Kazooie de siempre",
+    ""
+   ],
+   [
+    "P21",
+    100,
+    "Humba/Wumba «You have the legendary Mega-G[lowbo]» (100)",
+    "OJO"
+   ]
+  ],
+  "s23_0": [
+   [
+    "P43",
+    1540,
+    "pregunta «…in the name Banjo-Tooie?» con «Less than 10 / 11 / More than 9» (1540)",
+    ""
+   ],
+   [
+    "P43",
+    1012,
+    "pregunta «Which of these is an area in Grunty Industries?» (1012)",
+    ""
+   ],
+   [
+    "P43",
+    1550,
+    "pregunta «Who lives in Jinjo Village?» (1550)",
+    ""
+   ]
+  ],
+  "s23_1": [
+   [
+    "P43",
+    1092,
+    "pregunta con respuestas de broma «Superstash Deluxe / Booty Grabber Pro / Swagboy Supreme» (1092)",
+    ""
+   ],
+   [
+    "P43",
+    1252,
+    "«Merry Maggie / Jamjars / Captain Blubber» (1252)",
+    ""
+   ],
+   [
+    "P43",
+    1620,
+    "«Snack Pack / Sack Pack / Shack Pack» (1620)",
+    ""
+   ]
+  ],
+  "s22_0": [
+   [
+    "P33",
+    461,
+    "pie gigante del Stomponadon con garras sobre el nido (461-470)",
+    ""
+   ],
+   [
+    "P33",
+    541,
+    "polvo y garra de la pisada (541-548)",
+    ""
+   ],
+   [
+    "P33",
+    490,
+    "nube de polvo del pie (490)",
+    ""
+   ]
+  ],
+  "s22_1": [
+   [
+    "DREAM",
+    50,
+    "Dream (SNES, ampliado): la pata gigante del dinosaurio aplasta al protagonista (50-51)",
+    "DREAM"
+   ],
+   [
+    "DREAM",
+    80,
+    "segunda pisada del dinosaurio (80-81)",
+    "DREAM"
+   ],
+   [
+    "DREAM",
+    86,
+    "tercera pisada (86)",
+    "DREAM"
+   ]
+  ],
+  "s21_0": [
+   [
+    "P02",
+    1390,
+    "Goggles con el peluche de Donkey Kong (1390-1430, 1430 a 720p limpio)",
+    ""
+   ],
+   [
+    "P02",
+    1430,
+    "primer plano de Goggles y el peluche (1430)",
+    ""
+   ],
+   [
+    "P02",
+    1350,
+    "interior de la casa de Bottles (1350)",
+    ""
+   ]
+  ],
+  "s21_1": [
+   [
+    "P02",
+    1410,
+    "puerta y póster de la casa de Bottles con Banjo (1410)",
+    ""
+   ],
+   [
+    "P43",
+    1092,
+    "opciones del concurso (para «un gorila adorable»: no es esa pregunta, ver HUECO)",
+    "HUECO"
+   ],
+   [
+    "P02",
+    1510,
+    "Kazooie «…already know that!» en la casa (1510)",
+    ""
+   ]
+  ],
+  "s20_0": [
+   [
+    "P11",
+    50,
+    "rótulo «Jiggywiggy's Temple» con la estatua (50)",
+    ""
+   ],
+   [
+    "P10",
+    1085,
+    "Cheato «My first cheat is…» y menú de códigos (1085-1110)",
+    ""
+   ],
+   [
+    "P21",
+    200,
+    "rótulo «Jiggywiggy's Temple» (200)",
+    ""
+   ]
+  ],
+  "s20_1": [
+   [
+    "P21",
+    220,
+    "rompecabezas de Jiggywiggy: cuadro rojo y mano (220-300)",
+    ""
+   ],
+   [
+    "P11",
+    75,
+    "rompecabezas de Jiggywiggy (75-100)",
+    ""
+   ],
+   [
+    "P38",
+    1225,
+    "rompecabezas con Banjo (1225-1285)",
+    ""
+   ]
+  ],
+  "s19_0": [
+   [
+    "P01",
+    500,
+    "Grunty y su gato «Have… so back to our cas[tle]» (500-515)",
+    ""
+   ],
+   [
+    "P01",
+    420,
+    "Grunty y Brentilda «Get you out your sisters» (420-432)",
+    ""
+   ],
+   [
+    "P44",
+    786,
+    "Grunty en el podio, ya sin rimar (786)",
+    ""
+   ]
+  ],
+  "s19_1": [
+   [
+    "P44",
+    1721,
+    "Grunty en su tanque «Okay, numbskulls, time for the biggest…» (1721-1739)",
+    ""
+   ],
+   [
+    "P43",
+    1680,
+    "Grunty con las manos en la cintura tras el concurso (1680)",
+    ""
+   ],
+   [
+    "P01",
+    530,
+    "Grunty junto a Mingella y Brentilda (530)",
+    ""
+   ]
+  ],
+  "s18_0": [
+   [
+    "P02",
+    1130,
+    "Jinjo Village: «Purple Jinjo Family House» (para los Jinjos): NO hay clip de Minjo",
+    "HUECO"
+   ],
+   [
+    "P10",
+    1360,
+    "casa Jinjo azul (1360)",
+    ""
+   ],
+   [
+    "P02",
+    1150,
+    "casa Jinjo naranja (1150)",
+    ""
+   ]
+  ],
+  "s18_1": [
+   [
+    "P10",
+    1335,
+    "casas Jinjo de colores (1335): el Jinjo musculoso solo existe como pegatina de TCRF/wiki",
+    "HUECO"
+   ],
+   [
+    "P02",
+    1110,
+    "«Blue Jinjo Family House» (1110)",
+    ""
+   ]
+  ],
+  "s18_2": [
+   [
+    "P02",
+    1070,
+    "Banjo en Jinjo Village (1070): sin Minjo en clip; MG/pegatina",
+    "HUECO"
+   ],
+   [
+    "P10",
+    1285,
+    "Banjo ante las casas Jinjo (1285)",
+    ""
+   ]
+  ],
+  "s17_0": [
+   [
+    "P18",
+    343,
+    "Lord Woo Fak Fak con su barra de vida (343)",
+    ""
+   ],
+   [
+    "P18",
+    358,
+    "el pez «Pathetically around on…» (358)",
+    ""
+   ],
+   [
+    "P18",
+    433,
+    "pez con la linterna y Kazooie (433)",
+    ""
+   ]
+  ],
+  "s17_1": [
+   [
+    "P18",
+    478,
+    "boca roja con dientes (478-493)",
+    ""
+   ],
+   [
+    "P18",
+    568,
+    "explosión de huevo contra el pez (568)",
+    ""
+   ],
+   [
+    "P18",
+    613,
+    "pez de lado con huevos (613-628)",
+    ""
+   ]
+  ],
+  "s17_2": [
+   [
+    "P18",
+    688,
+    "TEXTO LEÍDO: «Time I opened my eyes to see what I'm doing!» (688)",
+    ""
+   ],
+   [
+    "P18",
+    538,
+    "pez pasando por la cámara (538)",
+    ""
+   ],
+   [
+    "P18",
+    628,
+    "el pez moviéndose (628)",
+    ""
+   ]
+  ],
+  "s16_0": [
+   [
+    "P27",
+    1162,
+    "Loggo, el váter parlante «Hey there, Banjo» (1162-1176)",
+    ""
+   ],
+   [
+    "P27",
+    1180,
+    "Banjo (con el dragón) ante Loggo «I really need unblocking» (1180-1190)",
+    ""
+   ],
+   [
+    "P27",
+    1204,
+    "Banjo desatasca a Loggo «Yep, I can feel a movement in my U-bend!» (1204)",
+    ""
+   ]
+  ],
+  "s16_1": [
+   [
+    "P27",
+    1216,
+    "«It's a Cheato book page!» (1216)",
+    ""
+   ],
+   [
+    "P27",
+    1038,
+    "puerta del baño con icono de persona en Workers' Quarters (1038)",
+    ""
+   ],
+   [
+    "XBLA",
+    300,
+    "XBLA (catálogo): para la línea de «ese italiano famoso»: no hay clip de esa línea",
+    "XBLA HUECO"
+   ]
+  ],
+  "s15_0": [
+   [
+    "P02",
+    1110,
+    "«Blue Jinjo Family House» (1110)",
+    ""
+   ],
+   [
+    "P02",
+    1130,
+    "«Purple Jinjo Family House» (1130)",
+    ""
+   ],
+   [
+    "P10",
+    1285,
+    "las casas de Jinjo Village (1285)",
+    ""
+   ]
+  ],
+  "s15_1": [
+   [
+    "FALCON100",
+    5060,
+    "speedrun 100 % de Falcon, juego japonés (5060; recortar panel con crop=1440:1080:480:0)",
+    "JP"
+   ],
+   [
+    "P10",
+    1335,
+    "las casas Jinjo de colores (1335)",
+    ""
+   ],
+   [
+    "P10",
+    1360,
+    "casa azul Jinjo (1360)",
+    ""
+   ]
+  ],
+  "s14_0": [
+   [
+    "P01",
+    186,
+    "intro: Mumbo, Banjo, Kazooie y Bottles jugando al póker (186-232)",
+    "AUDIO"
+   ],
+   [
+    "P01",
+    296,
+    "la Hag 1 emerge entre las rocas (296-310)",
+    "AUDIO"
+   ],
+   [
+    "P01",
+    650,
+    "la Hag 1 por el portal verde (650-665)",
+    "AUDIO"
+   ]
+  ],
+  "s14_1": [
+   [
+    "P01",
+    100,
+    "pantalla de título de NSO (100-110): no se ve la demo acelerada",
+    "HUECO"
+   ],
+   [
+    "P01",
+    75,
+    "título NSO (75)",
+    ""
+   ],
+   [
+    "P01",
+    130,
+    "escena de tormenta tras el título (130)",
+    ""
+   ]
+  ],
+  "s13_0": [
+   [
+    "P01",
+    420,
+    "Grunty y Brentilda en la intro (420-432)",
+    ""
+   ],
+   [
+    "P01",
+    475,
+    "Brentilda y esqueleto de Mingella «No, no, no, this can…» (475)",
+    ""
+   ],
+   [
+    "P01",
+    530,
+    "Grunty, Mingella y Brentilda «Hassle, I'll» (530)",
+    ""
+   ]
+  ],
+  "s13_1": [
+   [
+    "P01",
+    560,
+    "Bottles y la mesa de póker otra vez (560)",
+    ""
+   ],
+   [
+    "P01",
+    695,
+    "Banjo y los suyos ante la casa destruida «Well, at least everyone got out safely» (695-710)",
+    ""
+   ],
+   [
+    "P01",
+    725,
+    "Banjo ante la cueva morada (725)",
+    ""
+   ]
+  ],
+  "s12_0": [
+   [
+    "P02",
+    50,
+    "RÓTULO LEÍDO: «Klungo – Minion with a Mission» (50)",
+    ""
+   ],
+   [
+    "P21",
+    460,
+    "RÓTULO LEÍDO: «Klungo – Revenge-Seeking Minion» (460)",
+    ""
+   ],
+   [
+    "P43",
+    875,
+    "rótulo «Cauldron Keep» y Klungo «Future prosss…» (875)",
+    ""
+   ]
+  ],
+  "s12_1": [
+   [
+    "P43",
+    860,
+    "Klungo «Ssniff! Klungo getsss lesss and…» (860)",
+    ""
+   ],
+   [
+    "P43",
+    845,
+    "Klungo derrotado en el suelo (845)",
+    ""
+   ],
+   [
+    "P43",
+    785,
+    "Klungo en primer plano (785)",
+    ""
+   ]
+  ],
+  "s12_2": [
+   [
+    "P43",
+    800,
+    "Klungo en el Gatehouse (800): Nuts & Bolts es otro juego: pegatina/MG, no clip",
+    "HUECO"
+   ],
+   [
+    "P02",
+    80,
+    "Klungo en su primera pelea (80)",
+    ""
+   ],
+   [
+    "P21",
+    540,
+    "Klungo en su segunda pelea (540)",
+    ""
+   ]
+  ],
+  "s11_0": [
+   [
+    "P01",
+    281,
+    "Mumbo ante cortinas azul-amarillo en la mesa de póker (280-284)",
+    ""
+   ],
+   [
+    "P01",
+    286,
+    "Banjo ante la mesa, cuadro y reloj de cuco (286-290)",
+    ""
+   ],
+   [
+    "P01",
+    376,
+    "Banjo con las cartas, cortinas y pez de colores (372-380)",
+    ""
+   ]
+  ],
+  "s11_1": [
+   [
+    "P01",
+    396,
+    "Banjo ante las pilas de fichas, cortinas al fondo (396)",
+    ""
+   ],
+   [
+    "P01",
+    408,
+    "Mumbo se va hacia la ventana (408)",
+    ""
+   ],
+   [
+    "P01",
+    214,
+    "Mumbo y Banjo con las fichas, papel azul a la derecha (214)",
+    ""
+   ]
+  ],
+  "s10_0": [
+   [
+    "P27",
+    370,
+    "exterior de ladrillo de Grunty Industries (370)",
+    ""
+   ],
+   [
+    "P27",
+    530,
+    "interior de ladrillo con tuberías y cajas (530)",
+    ""
+   ],
+   [
+    "P27",
+    610,
+    "caja «Defective Goods» con Banjo (610)",
+    ""
+   ]
+  ],
+  "s10_1": [
+   [
+    "P27",
+    570,
+    "pasarelas con cajas «Defective Goods» (570)",
+    ""
+   ],
+   [
+    "P27",
+    770,
+    "puerta de metal con cartel (770)",
+    ""
+   ],
+   [
+    "P27",
+    930,
+    "elevador con cartel y signos «?» (930)",
+    ""
+   ]
+  ],
+  "s10_2": [
+   [
+    "P27",
+    650,
+    "letrero «Waste Disposal Plant» (650)",
+    ""
+   ],
+   [
+    "P27",
+    1038,
+    "puerta del baño en Workers' Quarters (1038)",
+    ""
+   ],
+   [
+    "P27",
+    1126,
+    "refrigerador con el logo R de Rare (1126)",
+    ""
+   ]
+  ],
+  "s09_0": [
+   [
+    "P17",
+    198,
+    "cerdo rosa con pelota de playa y calzón azul, 1080p (198-205): TRES BRAZOS NO SE VEN, solo dos",
+    "OJO"
+   ],
+   [
+    "P17",
+    425,
+    "cerdo rosa con flotador de serpiente verde «Thanks, giant te…» (425-430)",
+    "OJO"
+   ],
+   [
+    "P17",
+    500,
+    "el cerdo en el flotador junto a Banjo (500)",
+    "OJO"
+   ]
+  ],
+  "s09_1": [
+   [
+    "P17",
+    215,
+    "el cerdo habla «Well, I didn't w…» (215)",
+    "OJO"
+   ],
+   [
+    "P17",
+    275,
+    "camino de arena de la laguna (275)",
+    ""
+   ],
+   [
+    "P17",
+    25,
+    "«Jolly's» y la laguna (25)",
+    ""
+   ]
+  ],
+  "s08_0": [
+   [
+    "P42",
+    325,
+    "Bee Banjo vuela solo lejos de Cloud Cuckooland (325-350)",
+    ""
+   ],
+   [
+    "P42",
+    75,
+    "islas flotantes de Cloud Cuckooland desde el aire (75)",
+    ""
+   ],
+   [
+    "P42",
+    225,
+    "islas y plataformas de CCL (225)",
+    ""
+   ]
+  ],
+  "s08_1": [
+   [
+    "P42",
+    400,
+    "islas de CCL desde el aire con Bee Banjo (400)",
+    ""
+   ],
+   [
+    "P42",
+    300,
+    "isla con tallo y Bee Banjo (300)",
+    ""
+   ],
+   [
+    "P39",
+    30,
+    "isla de pasto verde de CCL con nubes (catálogo anterior)",
+    "OJO"
+   ]
+  ],
+  "s07_0": [
+   [
+    "FALCON100",
+    5200,
+    "Falcon, récord 100 % 4:10:46 (5200; crop=1440:1080:480:0)",
+    "JP"
+   ],
+   [
+    "FALCON100",
+    6060,
+    "Falcon con la pistola de huevos (6060)",
+    "JP"
+   ],
+   [
+    "FALCON100",
+    4060,
+    "Falcon (4060)",
+    "JP"
+   ]
+  ],
+  "s07_1": [
+   [
+    "FALCON_ANY",
+    140,
+    "Falcon, any% 25:49 (140; crop)",
+    "JP"
+   ],
+   [
+    "FALCON_ANY",
+    250,
+    "Falcon any% (250)",
+    "JP"
+   ],
+   [
+    "FALCON_ANY",
+    470,
+    "Falcon any% (470)",
+    "JP"
+   ]
+  ],
+  "s06_0": [
+   [
+    "P04",
+    144,
+    "Kazooie en primera persona con huevos (para el huevo bomba; NO hay toma del Clockwork Kazooie)",
+    "HUECO"
+   ],
+   [
+    "P27",
+    177,
+    "entrada de Grunty Industries con la estación (177-210)",
+    ""
+   ]
+  ],
+  "s06_1": [
+   [
+    "GI_SIN_TREN",
+    1,
+    "TAS: Banjo en plataforma de GI sin el tren (1-3; 9 s: ante la entrada; el clip dura 9 s con cortes 4-8)",
+    "OJO"
+   ],
+   [
+    "DOS_BANJOS",
+    58,
+    "los dos Banjos juntos en el iglú de Boggy (58-72)",
+    ""
+   ],
+   [
+    "P27",
+    370,
+    "exterior de GI, por donde se entra normalmente (370)",
+    ""
+   ]
+  ],
+  "s05_0": [
+   [
+    "JAMJARS_TAPA",
+    6,
+    "Jamjars sale despedido y la tapa le golpea (golpe 10-10,5 s; el clip dura 12 s: solo 6 s desde el seg. 6)",
+    "OJO"
+   ],
+   [
+    "P03",
+    1080,
+    "silo normal de Jamjars (1080)",
+    ""
+   ],
+   [
+    "P07",
+    360,
+    "silo de Jamjars en Glitter Gulch (360)",
+    ""
+   ]
+  ],
+  "s05_1": [
+   [
+    "JAMJARS_TAPA",
+    7,
+    "«Dismissed», salida del silo y golpe (7-12)",
+    "OJO"
+   ],
+   [
+    "P03",
+    1100,
+    "Jamjars en el silo (1100)",
+    ""
+   ],
+   [
+    "P11",
+    350,
+    "silo de Jamjars en Witchyworld (350)",
+    ""
+   ]
+  ],
+  "s05_2": [
+   [
+    "JAMJARS_TAPA",
+    10,
+    "la tapa golpea la cabeza (10-10,5)",
+    "OJO"
+   ],
+   [
+    "P04",
+    72,
+    "Jamjars lección (72)",
+    ""
+   ],
+   [
+    "P34",
+    195,
+    "Jamjars «That'll be all» (195)",
+    ""
+   ]
+  ],
+  "s04_0": [
+   [
+    "P44",
+    1962,
+    "TEXTO LEÍDO: Grunty (la cabeza) «Just you wait until Banjo-Thr[eeie]» (1962-1964)",
+    ""
+   ],
+   [
+    "P44",
+    1960,
+    "«You'll be sorr[y]» (1960)",
+    ""
+   ],
+   [
+    "P44",
+    1944,
+    "Jamjars antes de la patada (1944-1950)",
+    ""
+   ]
+  ],
+  "s04_1": [
+   [
+    "SPACEWORLD",
+    0,
+    "demo de GameCube Spaceworld 2000: Mumbo (0), Kazooie (3), enemigos (5-11); calidad VHS; marca Kikizo abajo",
+    "GC OJO"
+   ],
+   [
+    "SPACEWORLD",
+    5,
+    "enjambre de bichos rodeando (5-6)",
+    "GC OJO"
+   ]
+  ],
+  "s04_2": [
+   [
+    "SPACEWORLD",
+    7,
+    "multitud de enemigos en cueva (7-11); Gobi y Alphette NO se identifican en la cinta",
+    "GC OJO"
+   ],
+   [
+    "P20",
+    71,
+    "alienígenas «No. We're Alph[a]…» «Gammo. We're als[o]…» (58-106): sirven para presentar a Gobi y Alphette",
+    ""
+   ],
+   [
+    "P34",
+    1050,
+    "Gobi el camello (catálogo anterior, P34 s1050)",
+    "OJO"
+   ]
+  ],
+  "s03_0": [
+   [
+    "P01",
+    75,
+    "título NSO limpio (75): el chip y el letrero «No controller» solo como MG",
+    "HUECO"
+   ],
+   [
+    "P01",
+    100,
+    "título con Klungo (100)",
+    ""
+   ]
+  ],
+  "s03_1": [
+   [
+    "P01",
+    130,
+    "tormenta sobre Spiral Mountain (130): letrero «No controller» solo como MG",
+    "HUECO"
+   ]
+  ],
+  "s03_2": [
+   [
+    "P43",
+    1012,
+    "pregunta del examen de la bruja (1012)",
+    ""
+   ],
+   [
+    "P43",
+    932,
+    "inicio del concurso (932)",
+    ""
+   ]
+  ],
+  "s02_0": [
+   [
+    "P03",
+    1232,
+    "cráneo de Mumbo con ojos naranjas de MAYAHEM (1232): NO es el de Terrydactyland",
+    "OJO"
+   ],
+   [
+    "P22",
+    750,
+    "rótulo «Terrydactyland» (750)",
+    "OJO"
+   ],
+   [
+    "P25",
+    880,
+    "rótulo «Terrydactyland» y cueva (880)",
+    "OJO"
+   ]
+  ],
+  "s02_1": [
+   [
+    "P25",
+    760,
+    "Banjo en cueva roja de Terrydactyland (760): NO hay toma aérea del cráneo; pegatina del dibujo de Mayles",
+    "HUECO"
+   ],
+   [
+    "P23",
+    30,
+    "entrada tipo concha en cueva de Terrydactyland (catálogo anterior)",
+    "OJO"
+   ]
+  ],
+  "s02_2": [
+   [
+    "P22",
+    60,
+    "roca agrietada con Banjo (catálogo anterior)",
+    "OJO"
+   ],
+   [
+    "P25",
+    360,
+    "pared de cueva con Banjo (360)",
+    ""
+   ]
+  ],
+  "s01_0": [
+   [
+    "P44",
+    1950,
+    "NSO: Banjo patea la cabeza de Grunty (1950-1956), versión de N64/NSO",
+    ""
+   ],
+   [
+    "SACO",
+    68,
+    "japonés: el saco cae (68-71), cortar etiqueta",
+    "JP"
+   ],
+   [
+    "SACO",
+    104,
+    "occidental: la cabeza rueda (104-107)",
+    ""
+   ]
+  ],
+  "s01_1": [
+   [
+    "SACO",
+    71,
+    "japonés: el ojo en el suelo junto al saco (71-72)",
+    "JP"
+   ],
+   [
+    "SACO",
+    107,
+    "occidental: el ojo en el suelo (107-110)",
+    ""
+   ],
+   [
+    "P44",
+    1954,
+    "NSO: texto «Ooh, I think he[r eye…]» (1954)",
+    ""
+   ]
+  ],
+  "s01_2": [
+   [
+    "P44",
+    1954,
+    "versión N64/NSO: la cabeza patada (1954)",
+    ""
+   ],
+   [
+    "P44",
+    1900,
+    "Banjo en casa de Bottles tras el final (1900)",
+    ""
+   ],
+   [
+    "P44",
+    1930,
+    "Banjo y Kazooie en la azotea (1930)",
+    ""
+   ]
+  ],
+  "cierre_0": [
+   [
+    "P44",
+    1800,
+    "fiesta «Well done Banjo & Kazooie» (1800)",
+    ""
+   ],
+   [
+    "P44",
+    1850,
+    "Jamjars, Mumbo y Banjo (1850)",
+    ""
+   ],
+   [
+    "P02",
+    1070,
+    "Banjo en Jinjo Village (1070)",
+    ""
+   ]
+  ],
+  "cierre_1": [
+   [
+    "P44",
+    1974,
+    "«The End» con fuegos artificiales (1972-1977; NO pasar de 1977: overlay «Subscribe to my channel»)",
+    "OJO"
+   ],
+   [
+    "P01",
+    75,
+    "título NSO (75)",
+    ""
+   ],
+   [
+    "P02",
+    230,
+    "rótulo «Isle O' Hags» (230)",
+    ""
+   ]
+  ]
+ },
+ "sugerida": {
+  "intro_0": [
+   "SACO",
+   68
+  ],
+  "intro_1": [
+   "P18",
+   433
+  ],
+  "intro_2": [
+   "P10",
+   1035
+  ],
+  "intro_3": [
+   "P01",
+   100
+  ],
+  "s50_0": [
+   "P01",
+   985
+  ],
+  "s50_1": [
+   "P01",
+   740
+  ],
+  "s49_0": [
+   "P09",
+   1000
+  ],
+  "s49_1": [
+   "P09",
+   1260
+  ],
+  "s48_0": [
+   "P04",
+   144
+  ],
+  "s48_1": [
+   "SMASH_HUEVOS",
+   92
+  ],
+  "s47_0": [
+   "P18",
+   40
+  ],
+  "s47_1": [
+   "P18",
+   100
+  ],
+  "s46_0": [
+   "P43",
+   639
+  ],
+  "s46_1": [
+   "P43",
+   657
+  ],
+  "s45_0": [
+   "P02",
+   1490
+  ],
+  "s45_1": [
+   "P02",
+   1525
+  ],
+  "s45_2": [
+   "P02",
+   1430
+  ],
+  "s44_0": [
+   "P43",
+   1620
+  ],
+  "s44_1": [
+   "P43",
+   1620
+  ],
+  "s43_0": [
+   "P07",
+   240
+  ],
+  "s43_1": [
+   "P09",
+   1440
+  ],
+  "s42_0": [
+   "P43",
+   745
+  ],
+  "s42_1": [
+   "P43",
+   770
+  ],
+  "s41_0": [
+   "P01",
+   1165
+  ],
+  "s41_1": [
+   "P33",
+   640
+  ],
+  "s40_0": [
+   "P03",
+   120
+  ],
+  "s40_1": [
+   "P03",
+   250
+  ],
+  "s39_0": [
+   "P44",
+   766
+  ],
+  "s39_1": [
+   "P44",
+   786
+  ],
+  "s38_0": [
+   "P15",
+   625
+  ],
+  "s38_1": [
+   "P15",
+   505
+  ],
+  "s37_0": [
+   "P17",
+   805
+  ],
+  "s37_1": [
+   "P17",
+   820
+  ],
+  "s36_0": [
+   "P43",
+   1012
+  ],
+  "s36_1": [
+   "XBLA_TOT",
+   360
+  ],
+  "s35_0": [
+   "P38",
+   1085
+  ],
+  "s35_1": [
+   "BK_LAIR",
+   3544
+  ],
+  "s34_0": [
+   "P37",
+   496
+  ],
+  "s34_1": [
+   "P37",
+   664
+  ],
+  "s33_0": [
+   "P03",
+   884
+  ],
+  "s33_1": [
+   "P03",
+   1328
+  ],
+  "s32_0": [
+   "P01",
+   75
+  ],
+  "s32_1": [
+   "FALCON_ANY",
+   30
+  ],
+  "s31_0": [
+   "P43",
+   710
+  ],
+  "s31_1": [
+   "P43",
+   657
+  ],
+  "s30_0": [
+   "P03",
+   1100
+  ],
+  "s30_1": [
+   "P07",
+   360
+  ],
+  "s29_0": [
+   "P43",
+   932
+  ],
+  "s29_1": [
+   "P43",
+   972
+  ],
+  "s28_0": [
+   "P44",
+   90
+  ],
+  "s28_1": [
+   "P29",
+   1050
+  ],
+  "s27_0": [
+   "P44",
+   1140
+  ],
+  "s27_1": [
+   "P44",
+   1420
+  ],
+  "s26_0": [
+   "P04",
+   72
+  ],
+  "s26_1": [
+   "P02",
+   600
+  ],
+  "mitad_0": [
+   "P44",
+   1810
+  ],
+  "mitad_1": [
+   "P44",
+   1840
+  ],
+  "s25_0": [
+   "P03",
+   1256
+  ],
+  "s25_1": [
+   "P03",
+   1268
+  ],
+  "s24_0": [
+   "P21",
+   159
+  ],
+  "s24_1": [
+   "P21",
+   169
+  ],
+  "s23_0": [
+   "P43",
+   1540
+  ],
+  "s23_1": [
+   "P43",
+   1092
+  ],
+  "s22_0": [
+   "P33",
+   461
+  ],
+  "s22_1": [
+   "DREAM",
+   50
+  ],
+  "s21_0": [
+   "P02",
+   1390
+  ],
+  "s21_1": [
+   "P02",
+   1410
+  ],
+  "s20_0": [
+   "P11",
+   50
+  ],
+  "s20_1": [
+   "P21",
+   220
+  ],
+  "s19_0": [
+   "P01",
+   500
+  ],
+  "s19_1": [
+   "P44",
+   1721
+  ],
+  "s18_0": [
+   "P10",
+   1360
+  ],
+  "s18_1": [
+   "P02",
+   1110
+  ],
+  "s18_2": [
+   "P10",
+   1285
+  ],
+  "s17_0": [
+   "P18",
+   343
+  ],
+  "s17_1": [
+   "P18",
+   478
+  ],
+  "s17_2": [
+   "P18",
+   688
+  ],
+  "s16_0": [
+   "P27",
+   1162
+  ],
+  "s16_1": [
+   "P27",
+   1216
+  ],
+  "s15_0": [
+   "P02",
+   1110
+  ],
+  "s15_1": [
+   "FALCON100",
+   5060
+  ],
+  "s14_0": [
+   "P01",
+   186
+  ],
+  "s14_1": [
+   "P01",
+   130
+  ],
+  "s13_0": [
+   "P01",
+   420
+  ],
+  "s13_1": [
+   "P01",
+   560
+  ],
+  "s12_0": [
+   "P02",
+   50
+  ],
+  "s12_1": [
+   "P43",
+   860
+  ],
+  "s12_2": [
+   "P02",
+   80
+  ],
+  "s11_0": [
+   "P01",
+   281
+  ],
+  "s11_1": [
+   "P01",
+   214
+  ],
+  "s10_0": [
+   "P27",
+   370
+  ],
+  "s10_1": [
+   "P27",
+   570
+  ],
+  "s10_2": [
+   "P27",
+   650
+  ],
+  "s09_0": [
+   "P17",
+   198
+  ],
+  "s09_1": [
+   "P17",
+   215
+  ],
+  "s08_0": [
+   "P42",
+   325
+  ],
+  "s08_1": [
+   "P42",
+   400
+  ],
+  "s07_0": [
+   "FALCON100",
+   5200
+  ],
+  "s07_1": [
+   "FALCON_ANY",
+   140
+  ],
+  "s06_0": [
+   "P27",
+   177
+  ],
+  "s06_1": [
+   "GI_SIN_TREN",
+   1
+  ],
+  "s05_0": [
+   "JAMJARS_TAPA",
+   6
+  ],
+  "s05_1": [
+   "P11",
+   350
+  ],
+  "s05_2": [
+   "P34",
+   195
+  ],
+  "s04_0": [
+   "P44",
+   1962
+  ],
+  "s04_1": [
+   "SPACEWORLD",
+   0
+  ],
+  "s04_2": [
+   "P20",
+   71
+  ],
+  "s03_0": [
+   "P01",
+   100
+  ],
+  "s03_1": [
+   "P01",
+   130
+  ],
+  "s03_2": [
+   "P43",
+   1012
+  ],
+  "s02_0": [
+   "P22",
+   750
+  ],
+  "s02_1": [
+   "P23",
+   30
+  ],
+  "s02_2": [
+   "P22",
+   60
+  ],
+  "s01_0": [
+   "SACO",
+   104
+  ],
+  "s01_1": [
+   "SACO",
+   71
+  ],
+  "s01_2": [
+   "P44",
+   1900
+  ],
+  "cierre_0": [
+   "P02",
+   1070
+  ],
+  "cierre_1": [
+   "P02",
+   230
+  ]
+ },
+ "notas": {
+  "recorte": "P01 de 0 a 878 s es 4:3 con marco NSO: recorte ~0.144 por lado; de 878 s en adelante es widescreen sin marco. El resto de la serie Ninbanyan es widescreen sin marco",
+  "overlay": "Ninbanyan mete a veces un cartel «Subscribe to my channel… thanks pals!» arriba a la derecha (visto en P27 ~450 s y P44 desde 1978 s): medir cada clip",
+  "marcas": "AUDIO=oír el juego; XBLA/BK/SMASH/DREAM/JP/GC=otra versión u otro juego (decirlo y rotular); OJO=riesgo; HUECO=sin toma buena",
+  "verificacion": "cada segundo fue visto en un cuadro de hojas propias a 360p (texto clave a 1080p); los 8,6 s siguientes NO están verificados cuadro a cuadro: pasar medir_brillo antes del render",
+  "FALCON/Japonés": "FALCON100/FALCON_ANY traen panel de splits a la izquierda: crop=1440:1080:480:0"
+ }
+}

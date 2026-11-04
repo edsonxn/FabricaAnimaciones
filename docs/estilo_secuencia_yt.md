@@ -637,6 +637,21 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 - **Un MG nuevo debe aguantar q≈0 y q≈1:** `mg_n64.calor` tiró la capa de `fx` al 70 % (barra con y1 < y0 al entrar). Antes de `fx`, llamar cada FX en sus instantes límite (inicio, inicio+1 cuadro, fin−1 cuadro, fin): 220 FX = 5 940 llamadas en segundos, frente a una hora de `fx` perdida.
 - **`verificar` y cifras:** las frases con CER > 2 % eran todas cifras («300.000», «$199.99») o nombres en inglés escritos con `FONETICA` («Wide-Boy64» → «White Boy»). Antes de regrabar, oír la frase: si la voz está bien, no es error.
 
+### Lecciones de `bt_50_secretos` (3-nov-2026, 173 beats, 24:49, «Los 50 SECRETOS de Banjo-Tooie»)
+- **Si regrabas frases DESPUÉS de planear clips, los cortes de beats cambian** (aquí desde el beat 040 por 3 frases): no rehagas el plan;
+  `plan_clips.py` guarda `beats_plan.json` (los beats sobre los que se planeó) y `remapear()` alinea las palabras con difflib: cada beat
+  nuevo toma el clip del viejo donde cae su primera palabra, con `desde` corrido lo proporcional. Luego `FIJO` para los que no cuadren.
+- **Negros dentro de los clips → `AJUSTE` de `desde` en plan_clips.py** tras `medir_brillo.py` (cartelas de créditos de 8,7 s entre
+  negros: si el beat es más largo, recortar el clip a mano con `ffmpeg -ss` y dejar que `vel_clip` lo estire un poco).
+- **Marcas de agua de otros canales y paneles (LiveSplit, «Capture taken») → `recorte_por` en tupla (izq, arriba, der, abajo)**; 4:3 con
+  barras dentro de 16:9 = `(.125, 0, .125, 0)`. Mirar SIEMPRE las hojas de `medios` por esto.
+- **`_huecos.py`** (en la carpeta del video): lista los tramos > 4 s sin pegatina/MG/pantalla/rótulo (los avisos no cuentan). Aquí 15
+  huecos → 0 con 17 camafeos/abanicos/versus. Tras cada tanda nueva, `_bordes.py` otra vez (los rótulos NO los revisa: míralos en la hoja).
+- **`fx` también pinta el Montaje del panel** (todos los tramos a 960 px, > 15 min en un video de 25): si el usuario solo verá el MASTER,
+  `fx --sin-montaje`, y `mezcla` DESPUÉS de que exista `audio/fx.wav`.
+- **`video --rehacer` no existe en el motor secuencia** (rinde TODO y pisa `salida/video_sin_audio.mp4`): para corregir un tramo, `video --tramo a-b --salida salida/_t.mp4` y empalmarlo sobre el MASTER con ffmpeg `trim` por cuadros (`start_frame`) + `-map 0:a -c:a copy`.
+- La promesa «te lo enseño encima del mapa» no tenía imagen: buscar en el guion «te lo enseño / mira / fíjate» y comprobar que hay MG.
+
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
 de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.

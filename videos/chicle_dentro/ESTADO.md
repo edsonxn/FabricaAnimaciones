@@ -14,7 +14,7 @@
 | 1 | guion + voz + kit + planos a-g + SFX + música + mezcla + render + subida | ✅ 5-nov | MASTER 6:05 (98 segmentos en 20 min con 4 procesos), subido privado y PROGRAMADO lun 9-nov 14:00 CDMX: https://youtu.be/Kfo-P8LgrPg (miniatura Flow aplicada) |
 
 ## Etapa
-- ✅ CERRADO 5-nov: subido y programado (lun 9-nov 14:00 CDMX). Pendiente solo `python fab.py chicle_dentro limpiar` cuando el usuario lo apruebe.
+- ✅ CERRADO 5-nov: subido y programado (lun 9-nov 14:00 CDMX). MASTER mandado a la tele (`fab.py tele video chicle_dentro master`, 11:30, desde la sesión principal). Pendiente solo `python fab.py chicle_dentro limpiar` cuando el usuario lo apruebe.
 - Música: corn_flakes__lyria_tramo1 (Plastitube), polilla_foco__lyria_tramo1 (WND), sin_medicina__lyria_tramo2 (Sapiens): públicos distintos al de Kuriox.
 
 ## Datos y fuentes

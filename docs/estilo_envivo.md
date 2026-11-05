@@ -167,17 +167,17 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
    - La voz se resolvía al SALIR de la cola: si se apagaba la discusión o entraba otra voz antes, todas las frases pasaban
      a la voz nueva.
 
-   Arreglo:  (sin acentos ni «el/la», acepta «Jose», «Mari Carmen», «Hope (ElevenLabs)») fija la 
+   Arreglo: `_clave_de_nombre` (sin acentos ni «el/la», acepta «Jose», «Mari Carmen», «Hope (ElevenLabs)») fija la `clave`
    de cada frase al ESCRIBIR el bloque. Un relevo o un cambio de discusión solo afecta a las frases que no llevan voz. Un
-   nombre que no se reconoce queda apuntado en la bitácora.  guarda la lista de claves para no volver a
+   nombre que no se reconoce queda apuntado en la bitácora. `voz_hecha` guarda la lista de claves para no volver a
    sintetizar lo ya hecho.
-2. **«A veces se queda congelado el video de fondo»**: el **vigilante** de  revisa cada 0,4 s si el
-    del clip al aire avanza.
-   - A los 0,8 s quieto:  otra vez.
+2. **«A veces se queda congelado el video de fondo»**: el **vigilante** de `pantalla.html` revisa cada 0,4 s si el
+   `currentTime` del clip al aire avanza.
+   - A los 0,8 s quieto: `play()` otra vez.
    - A los 2 s: cambia a un clip del DISCO distinto (el de la frase, el siguiente o uno de los 30 ya vistos). El enlace de
-     YouTube trabado entra en  y no se vuelve a usar.
+     YouTube trabado entra en `ytMalos` y no se vuelve a usar.
    - El servidor apunta «VIGILANTE: … → clip del disco (van N)».
-3. **«Al cambiar de tema se corta la plática de tajo»**. Antes, a los  (8 s) la frase en curso se cortaba con un
+3. **«Al cambiar de tema se corta la plática de tajo»**. Antes, a los `lat_max` (8 s) la frase en curso se cortaba con un
    fundido de 0,3 s. Ahora:
    - La frase en curso **siempre se termina** y luego entra la frase puente.
    - Solo una frase a la que, pasado el máximo, aún le queden más de 15 s se recorta, con un fundido de 1,5 s.

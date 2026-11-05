@@ -450,3 +450,10 @@ del escritorio y el micrófono globales y pone la clave en el servicio. `salir [
 pasa la emisión a «en vivo»; `publico` la hace pública ya al aire (con `containsSyntheticMedia`); `terminar` la cierra y
 para OBS; `estado` lo resume. La fuente de OBS ES la pantalla del directo: la tele, solo en espejo (`/?monitor=1`). El chat
 y los espectadores: INICIAR con `chat_youtube` = el `video_id` de ese json. Primera emisión: `gBR4XfioDsc` (Tamriel).
+
+**Audio cortado en OBS (5-nov-2026, prueba privada `gBR4XfioDsc`):** la fuente de NAVEGADOR de OBS metía ~7 cortes por segundo
+en el audio («como radio que pierde señal»), incluso con una página que solo tocaba la voz y con audio a 48 kHz (la voz original:
+0 cortes; latencia baja de YouTube descartada: búfer de 4,7 s). Solución: la pantalla va en una **ventana de Edge** con perfil
+propio (`_cache/edge_obs`), a pantalla completa en la 2.ª pantalla, y OBS la toma con captura de ventana + captura de audio de
+aplicación → **0 cortes** con el directo completo. `directo_yt.py obs` lo arma (y quita la fuente de navegador). Emisiones
+nuevas con latencia normal.

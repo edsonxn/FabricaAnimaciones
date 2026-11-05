@@ -33,6 +33,21 @@ CACHE = os.path.join(AQUI, "_cache", "directo_yt.json")
 OBS_EXE = r"C:\Program Files\obs-studio\bin\64bit\obs64.exe"
 OBS_CFG = os.path.join(os.environ.get("APPDATA", ""), "obs-studio", "plugin_config", "obs-websocket", "config.json")
 ESCENA, FUENTE = "EN VIVO", "Pantalla EN VIVO"
+VENTANA, AUDIO, TITULO_VENTANA = "Ventana EN VIVO", "Audio EN VIVO", "En vivo"
+EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+PERFIL_EDGE = os.path.join(AQUI, "_cache", "edge_obs")
+
+
+def abrir_ventana(url):
+    """Edge en modo app con perfil propio, a pantalla completa en la 2.ª pantalla (x = -1920): 1920x1080 exactos, sin
+    barra (Windows no deja una ventana con marco más alta que la pantalla). F11 la saca de pantalla completa."""
+    if subprocess.run(["tasklist", "/v", "/fi", "imagename eq msedge.exe"], capture_output=True, text=True,
+                      errors="ignore").stdout.count(TITULO_VENTANA) == 0:
+        subprocess.Popen([EDGE, f"--user-data-dir={PERFIL_EDGE}", "--no-first-run", "--autoplay-policy=no-user-gesture-required",
+                          "--disable-background-timer-throttling", "--disable-renderer-backgrounding",
+                          "--disable-backgrounding-occluded-windows", f"--app={url}",
+                          "--window-position=-1920,0", "--window-size=1920,1080", "--start-fullscreen"])
+        time.sleep(4)
 INGESTA = "rtmp://a.rtmp.youtube.com/live2"
 
 TITULOS = {
@@ -74,7 +89,7 @@ def crear_emision(canal, titulo=None):
     b = yt.api(cid, "POST", "/liveBroadcasts", params={"part": "snippet,status,contentDetails"}, json={
         "snippet": {"title": titulo or TITULOS.get(canal, "EN VIVO"), "description": DESCRIPCION, "scheduledStartTime": ahora},
         "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False},
-        "contentDetails": {"enableAutoStart": False, "enableAutoStop": True, "enableDvr": True, "latencyPreference": "low",
+        "contentDetails": {"enableAutoStart": False, "enableAutoStop": True, "enableDvr": True, "latencyPreference": "normal",   # «low» acelera y corta el audio en el reproductor (prueba del 5-nov)
                            "monitorStream": {"enableMonitorStream": False}}})
     yt.api(cid, "POST", "/liveBroadcasts/bind", params={"id": b["id"], "part": "id,contentDetails", "streamId": d["stream_id"]})
     d.update({"video_id": b["id"], "titulo": b["snippet"]["title"], "creado": ahora, "privacidad": "private"})
@@ -128,14 +143,28 @@ def configurar_obs(d, puerto=8790):
         raise SystemExit("OBS no termina de arrancar")
     if ESCENA not in escenas:
         c.create_scene(ESCENA)
+    # La pantalla va en una VENTANA DE EDGE aparte, no en la fuente de navegador de OBS: el audio de esa fuente salía
+    # cortado (~7 cortes por segundo, «como radio que pierde señal») aunque la página solo tocara la voz; capturado de la
+    # ventana de Edge, 0 cortes (medido el 5-nov-2026). OBS toma la imagen (captura de ventana) y el audio (captura de
+    # audio de aplicación) de esa ventana. Edge con perfil propio: no se mezcla con el navegador del usuario.
     url = f"http://127.0.0.1:{puerto}/?auto=1"
-    ajustes = {"url": url, "width": 1920, "height": 1080, "fps": 30, "reroute_audio": True, "shutdown": False,
-               "restart_when_active": False, "css": "body { background: #000; margin: 0; overflow: hidden; }"}
+    abrir_ventana(url)
     entradas = [i["inputName"] for i in c.get_input_list().inputs]
-    if FUENTE in entradas:
-        c.set_input_settings(FUENTE, ajustes, True)
-    else:
-        c.create_input(ESCENA, FUENTE, "browser_source", ajustes, True)
+    if FUENTE in entradas:                                    # la fuente de navegador vieja también consumía bloques
+        c.remove_input(FUENTE)
+    ventana = f"{TITULO_VENTANA}:Chrome_WidgetWin_1:msedge.exe"
+    for nombre, tipo, aj in ((VENTANA, "window_capture", {"window": ventana, "priority": 0, "method": 2, "cursor": False, "client_area": True}),
+                             (AUDIO, "wasapi_process_output_capture", {"window": ventana, "priority": 0})):
+        if nombre in entradas:
+            c.set_input_settings(nombre, aj, True)
+        else:
+            c.create_input(ESCENA, nombre, tipo, aj, True)
+    time.sleep(1)
+    for it in c.get_scene_item_list(ESCENA).scene_items:      # la ventana, al lienzo 1920x1080 (si quedara barra, se recorta)
+        if it["sourceName"] == VENTANA:
+            alto = c.get_scene_item_transform(ESCENA, it["sceneItemId"]).scene_item_transform.get("sourceHeight") or 1080
+            c.set_scene_item_transform(ESCENA, it["sceneItemId"], {"positionX": 0, "positionY": 0, "cropTop": int(max(0, alto - 1080)), "boundsType": "OBS_BOUNDS_STRETCH",
+                                                                    "boundsWidth": 1920, "boundsHeight": 1080, "boundsAlignment": 0})
     c.set_current_program_scene(ESCENA)
     especiales = c.get_special_inputs()                       # micrófono y audio del escritorio: callados
     for k in ("desktop1", "desktop2", "mic1", "mic2", "mic3", "mic4"):

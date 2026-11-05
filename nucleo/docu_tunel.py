@@ -3,7 +3,12 @@
 (pegatinas reales, fotos, camafeos, rótulos) delante de cada lámina y la cámara viaja por el túnel: casi siempre hacia el fondo, a veces
 a un lado, arriba o abajo. Nada periódico: el movimiento sale de las posiciones de las capas.
 
-Unidades: la lámina mide 1 de ancho; a distancia D0 = 1 ocupa el 86 % del ancho de pantalla."""
+Unidades: la lámina mide 1 de ancho; a distancia D0 = 1 ocupa el 86 % del ancho de pantalla.
+
+Kit del documental de personaje antiguo (docs/estilo_docu_antiguo.md), nacido en videos/ramses_ii/ (ejemplo completo de uso:
+`_capas()`, `render_mundo` y la captura de texto `con_texto`/`_TXT` de su escenas.py, para que ningún rótulo quede tapado por capas).
+Uso: `import docu_tunel as TU; tun = TU.Tunel(laminas, capas, 1.4); img = tun.render(t, fondo)`; láminas como `(img, txt)` para
+que el texto se pinte encima de todo. Cada video su propio recorrido por capítulo (regla del kit: `A.firma` única)."""
 import functools
 import math
 

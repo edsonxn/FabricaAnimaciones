@@ -59,7 +59,7 @@ elementos y múltiples capas de otros elementos.» Mínimo por toma:
   narra, cada una en su profundidad, y la cámara viaja por ese túnel: casi siempre hacia el fondo (hacia atrás), pero a veces hacia un lado, hacia
   arriba o hacia abajo. Es un espacio 3D continuo que se va llenando, no un fundido entre tomas. Nada repetitivo: cada capa distinta.
 
-- Implementación (ramses_ii v4): `videos/ramses_ii/tunel.py` (`Tunel(laminas, capas, viaje)`, sprites `spr_png/spr_foto/spr_camafeo/spr_texto`);
+- Implementación (ramses_ii v4): **`nucleo/docu_tunel.py`** (en el kit desde el 5-nov-2026; antes `videos/ramses_ii/tunel.py`) (`Tunel(laminas, capas, viaje)`, sprites `spr_png/spr_foto/spr_camafeo/spr_texto`);
   posiciones de capa en fracción de media pantalla vista desde su lámina; se recortan al cuadro salvo cuando la cámara las atraviesa.
   Si funciona, subirlo al kit (`nucleo/`). Render con `--procs 4` (más procesos = sin memoria).
 
@@ -88,7 +88,7 @@ elementos y múltiples capas de otros elementos.» Mínimo por toma:
 - `liquido` va ANTES del `camafeo` (nace por debajo del aro).
 
 ## Lecciones del video completo (`videos/ramses_ii/`, 4/5-nov-2026)
-- **Túnel de capas en TODO el video** (`videos/ramses_ii/tunel.py`, `Tunel(laminas, capas, viaje)`): cada capítulo con su RECORRIDO propio
+- **Túnel de capas en TODO el video** (`import docu_tunel as TU` → `TU.Tunel(laminas, capas, viaje)`; láminas como `(img, txt)` para que el texto vaya ENCIMA de todas las capas: `con_texto`/`_TXT` en `videos/ramses_ii/escenas.py`): cada capítulo con su RECORRIDO propio
   (zigzag, recto y hondo, subida, izquierda, caída, espiral…), registrado con `A.firma("tunel_<cap>")`; +0,6 de z extra al cambiar de capítulo.
   Fundido a negro de 2 s al final.
 - **Rótulos sueltos de capa caducan a los 5 s** (`Tunel.txt_desde`/`txt_dura`): sin eso, en el minuto 6 se amontonan.

@@ -1669,7 +1669,7 @@ def _cuadro(i, t):
 
 
 # ------------------------------------------------------------------ TÚNEL DE CAPAS (avance v4, el usuario 4-nov-2026)
-import tunel as TU
+import docu_tunel as TU                                            # kit: nucleo/docu_tunel.py (antes videos/ramses_ii/tunel.py)
 
 A.firma("tunel_gancho", "túnel del gancho: láminas que se alejan hacia el fondo alternando derecha, izquierda y arriba; en cada frase entran "
         "pegatinas reales, fotos, camafeos y rótulos delante de la lámina; la cámara los atraviesa")

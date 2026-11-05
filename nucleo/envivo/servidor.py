@@ -387,9 +387,43 @@ class Directo:
                     "voz_factor": round(self.motor_voz.factor(), 2) if getattr(self.motor_voz, "factor", None) and self.motor_voz.factor() else None, "log": list(self.log)[-14:]}
 
 
-# desde la red de la casa (la tele) solo se puede VER: la pantalla, sus medios y lo que ella pide. Los controles y el chat
-# solo desde esta PC (y desde la puerta con clave del panel remoto, que reenvía desde 127.0.0.1).
+# desde la red de la casa (la tele) solo se puede VER: la pantalla, sus medios y lo que ella pide. Los controles y el chat,
+# desde esta PC, desde la puerta con clave del panel remoto (reenvía desde 127.0.0.1) y desde la APP del teléfono en la wifi
+# con el CÓDIGO de 4 cifras que enseña la tele al arrancar (cabecera X-Codigo; se guarda en el teléfono).
 SOLO_VER_POST = {"/api/progreso"}
+PUERTO_UDP = 8792      # la app del teléfono pregunta «ENVIVO?» por broadcast y la PC contesta «ENVIVO1|<puerto>|<canal>»
+
+
+def codigo_movil():
+    ruta = os.path.join(AQUI, "_cache", "codigo_movil.txt")
+    try:
+        c = open(ruta, encoding="utf-8").read().strip()
+        if len(c) == 4 and c.isdigit():
+            return c
+    except OSError:
+        pass
+    os.makedirs(os.path.dirname(ruta), exist_ok=True)
+    c = f"{random.SystemRandom().randrange(10000):04d}"
+    open(ruta, "w", encoding="utf-8").write(c)
+    return c
+
+
+CODIGO = codigo_movil()
+
+
+def responder_udp(puerto, nombre):
+    """La app del teléfono encuentra la PC sola en la wifi (como Puente TV): sin IP fija ni túnel."""
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    s.bind(("0.0.0.0", PUERTO_UDP))
+    while True:
+        try:
+            datos, de = s.recvfrom(256)
+            if datos.strip() == b"ENVIVO?":
+                s.sendto(f"ENVIVO1|{puerto}|{nombre}".encode("utf-8"), de)
+        except OSError:
+            time.sleep(1)
 
 
 def crear_app(d):
@@ -399,15 +433,37 @@ def crear_app(d):
     def _solo_ver_desde_la_red():
         if request.remote_addr in ("127.0.0.1", "::1"):
             return None
-        if request.method == "GET" and request.path not in ("/admin", "/control", "/movil"):
+        if request.headers.get("X-Codigo") == CODIGO:          # la app del teléfono emparejada
+            return None
+        if request.method == "GET" and request.path not in ("/admin", "/control", "/api/chat"):
             return None
         if request.method == "POST" and request.path in SOLO_VER_POST:
             return None
         abort(403)
 
     @app.get("/movil")
-    def movil():                                    # el control remoto del teléfono (por la puerta: /envivo/movil)
+    def movil():                                    # el control remoto del teléfono (APK en la wifi; por la puerta: /envivo/movil)
         return send_from_directory(AQUI, "movil.html")
+
+    @app.post("/api/tele")
+    def api_tele():                                 # poner o quitar el directo en el Google TV desde el teléfono
+        accion = (request.get_json(silent=True) or {}).get("accion")
+        sys.path.insert(0, os.path.dirname(AQUI))
+        import tele as tele_mod
+        try:
+            if accion == "quitar":
+                try:
+                    tele_mod.cerrar_web()
+                except Exception:
+                    pass                            # la tele corta la conexión al cerrar la ventana: no es error
+                d._apunta("directo quitado de la tele")
+            else:
+                url = f"http://{tele_mod.ip_hacia_tele()}:{request.host.split(':')[-1]}/?auto=1&codigo={CODIGO}"
+                tele_mod.web(url)
+                d._apunta(f"directo puesto en la tele: {url.split('&')[0]}")
+            return jsonify(ok=True)
+        except (SystemExit, Exception) as e:
+            return jsonify(ok=False, error=str(e)[:200])
 
     @app.get("/")
     def pantalla():
@@ -586,19 +642,21 @@ def main():
         threading.Timer(1.0, abrir, args=(a.puerto,)).start()
     import logging
     logging.getLogger("werkzeug").setLevel(logging.ERROR)     # sin una línea por cada petición
-    host = "127.0.0.1"
+    # siempre en la red de la casa: la tele mira y la app del teléfono controla con el código (desde la red, nada más)
+    host = "0.0.0.0"
+    threading.Thread(target=responder_udp, args=(a.puerto, d.cfg["nombre"]), daemon=True).start()
+    print(f"  app del teléfono (wifi de la casa): código {CODIGO}", flush=True)
     if a.tele:
         sys.path.insert(0, os.path.dirname(AQUI))
         import tele as tele_mod
 
         def a_la_tele():
             try:
-                url = f"http://{tele_mod.ip_hacia_tele()}:{a.puerto}/?auto=1"
+                url = f"http://{tele_mod.ip_hacia_tele()}:{a.puerto}/?auto=1&codigo={CODIGO}"
                 tele_mod.web(url)
-                d._apunta(f"pantalla enviada a la tele: {url}")
+                d._apunta(f"pantalla enviada a la tele: {url.split('&')[0]}")
             except (SystemExit, Exception) as e:
                 d._apunta(f"la tele no la recibió: {e}")
-        host = "0.0.0.0"
         threading.Timer(2.0, a_la_tele).start()
     crear_app(d).run(host=host, port=a.puerto, threaded=True, use_reloader=False)
 

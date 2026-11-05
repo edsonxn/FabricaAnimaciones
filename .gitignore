@@ -93,6 +93,13 @@ nucleo/app_movil/fabrica.apk
 nucleo/app_movil/android/fabrica.keystore
 videos/*/.continuacion.json
 
+# la tele (IP de la casa y respuestas del usuario)
+nucleo/datos/tele.json
+nucleo/datos/tele_respuestas.jsonl
+
 # en vivo: audio y caché de cada directo
 nucleo/envivo/_sesiones/
 nucleo/envivo/_cache/
+
+# APK del control remoto del EN VIVO (se construye con nucleo/envivo/android/construir_apk.py)
+nucleo/envivo/android/*.apk

@@ -150,6 +150,21 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
    bloque; vigilar.
 5. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.
 
+## APK «En vivo»: control de las pruebas desde el teléfono, SOLO en la wifi (el usuario, 4-nov-2026, noche)
+«No hace falta ngrok: voy a estar en la red local… es un control para manipular el stream en las pruebas.»
+- `python nucleo/envivo/android/construir_apk.py` → `nucleo/envivo/android/envivo.apk` (57 KB, fuera de git; misma receta
+  y llave que la app de la Fábrica). Se manda por **Rayo**: `"D:/Rayo/pc/publish/Rayo.exe" "<ruta del .apk>"`.
+- La app (`MainActivity.java`, paquete `mx.clicknbusiness.envivo`) busca la PC por UDP (`ENVIVO?` → puerto **8792**,
+  contesta `ENVIVO1|8790|<canal>`) o usa la última IP que sirvió (o se escribe a mano) y abre `http://PC:8790/movil` en un WebView.
+- El servidor escucha SIEMPRE en la red de la casa (`0.0.0.0`). Desde la red solo se ve; **controla quien manda el código**
+  de 4 cifras (cabecera `X-Codigo`): fijo en `nucleo/envivo/_cache/codigo_movil.txt`, lo imprime la consola y lo enseña la
+  tele abajo a la izquierda los primeros 40 s. La página lo pide en cuanto un control da 403 y lo guarda en el teléfono.
+- Botones nuevos: **📺 A la tele / ✕ Quitar de la tele** (`POST /api/tele`). Lanzar el servidor sigue siendo en la PC
+  (`python fab.py envivo --tele`); la ruta `/envivo/` de la puerta remota queda como respaldo, pero no hace falta.
+- Probado desde la PC por la red (no desde el POCO): UDP contesta; sin código 403; con código, tema y comentario 200.
+  **Falta que el usuario la abra en el teléfono**: si no encuentra la PC, el firewall de Windows puede estar bloqueando el
+  UDP 8792 (escribir la IP de la PC en la app, 192.168.0.237, y se recuerda).
+
 ## Tele, control remoto del teléfono y frase puente (4-nov-2026, noche; probado de punta a punta)
 `python fab.py envivo --tele` (preview «envivo-tele») = el directo en el Google TV con audio + la app del teléfono. Lo que se hizo:
 - `servidor.py`: frase puente inmediata (`_puente`, bloque `p###` `inmediato` al frente de la cola, voz del motor activo,

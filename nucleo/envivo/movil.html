@@ -58,6 +58,8 @@
         padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1fr auto; gap: 8px; }
   nav .fila input { flex: 1; }
   .oculta { display: none !important; }
+  .emparejar { position: fixed; inset: 0; z-index: 9; background: #000c; display: none; align-items: center; padding: 16px; }
+  .emparejar.ver { display: flex; } .emparejar .tarjeta { width: 100%; }
   .aviso { position: fixed; left: 16px; right: 16px; bottom: calc(84px + env(safe-area-inset-bottom)); z-index: 7; background: var(--oro);
            color: #1b160f; border-radius: 10px; padding: 10px 12px; font-weight: 600; transition: opacity .3s; opacity: 0; pointer-events: none; }
   .aviso.ver { opacity: 1; }
@@ -114,6 +116,8 @@
   <section class="tarjeta">
     <h2>Controles</h2>
     <div class="botones">
+      <button id="teleVer">📺 A la tele</button>
+      <button id="teleQuitar">✕ Quitar de la tele</button>
       <button id="pausa">⏸ Pausa</button>
       <button id="votacion">Votación: no</button>
       <select id="modelo" style="background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px">
@@ -138,13 +142,34 @@
   <div class="fila"><button class="oro" id="enviar">Enviar</button><button id="sugerir" title="Sugerir el texto como tema">💡</button></div>
 </nav>
 <div class="aviso" id="aviso"></div>
+<div class="emparejar" id="emparejar">
+  <div class="tarjeta">
+    <h2>Emparejar con la PC</h2>
+    <div class="sub" style="margin-bottom:10px">Escribe el código de 4 cifras que sale en la tele abajo a la izquierda al
+      arrancar el directo (o en la consola de <code>python fab.py envivo</code>).</div>
+    <input type="text" id="codigo" inputmode="numeric" maxlength="4" placeholder="0000" style="font-size:28px;letter-spacing:.4em;text-align:center">
+    <button class="oro" id="guardarCodigo" style="width:100%;margin-top:10px">Guardar</button>
+  </div>
+</div>
 
 <script>
 // funciona igual en la PC (http://127.0.0.1:8790/movil) que por la puerta del panel remoto (…/envivo/movil)
 const BASE = location.pathname.replace(/movil\/?$/, "");
 const $ = id => document.getElementById(id);
-const api = (u, b) => fetch(BASE + u, b === undefined ? { cache: "no-store" } :
-  { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(b) });
+// en la wifi de la casa (la APK) los controles piden el código de 4 cifras que enseña la tele al arrancar el directo
+const codigo = () => { try { return localStorage.getItem("envivo_codigo") || ""; } catch (e) { return ""; } };
+const api = (u, b) => fetch(BASE + u, b === undefined ? { cache: "no-store", headers: { "X-Codigo": codigo() } } :
+  { method: "POST", headers: { "Content-Type": "application/json", "X-Codigo": codigo() }, body: JSON.stringify(b) })
+  .then(r => { if (r.status === 403) pedirCodigo(); return r; });
+function pedirCodigo() {
+  if ($("emparejar").classList.contains("ver")) return;
+  $("emparejar").classList.add("ver"); setTimeout(() => $("codigo").focus(), 100);
+}
+function guardarCodigo() {
+  const c = $("codigo").value.replace(/\D/g, "").slice(0, 4); if (c.length !== 4) return aviso("Son 4 cifras");
+  try { localStorage.setItem("envivo_codigo", c); } catch (e) {}
+  $("emparejar").classList.remove("ver"); aviso("Código guardado"); leerPronto();
+}
 const url = u => u ? BASE + u.replace(/^\//, "") : "";
 const esc = s => (s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 let E = {}, C = {}, tocando = false, misIds = new Set();
@@ -156,8 +181,8 @@ function aviso(t) { const a = $("aviso"); a.textContent = t; a.classList.add("ve
 
 async function leer() {
   try {
-    const [e, c] = await Promise.all([api("api/estado").then(r => r.json()), api("api/chat").then(r => r.json())]);
-    E = e; C = c; pintar(); $("vivo").classList.remove("caido");
+    const [e, c] = await Promise.all([api("api/estado").then(r => r.json()), api("api/chat").then(r => r.ok ? r.json() : {})]);
+    E = e; C = c.comentarios ? c : C; pintar(); $("vivo").classList.remove("caido");
   } catch (err) { $("vivo").className = "vivo caido"; $("vivoTxt").textContent = "SIN CONEXIÓN"; }
   setTimeout(leer, document.hidden ? 5000 : 1500);
 }
@@ -233,6 +258,10 @@ $("temaNuevo").onkeydown = e => { if (e.key === "Enter") cambiar(true); };
 $("enviar").onclick = () => comentar(false);
 $("sugerir").onclick = () => comentar(true);
 $("texto").onkeydown = e => { if (e.key === "Enter") comentar(false); };
+$("teleVer").onclick = () => api("api/tele", { accion: "ver" }).then(r => r.json()).then(j => aviso(j.ok ? "Directo en la tele" : "La tele no contesta: " + (j.error || "")));
+$("teleQuitar").onclick = () => api("api/tele", { accion: "quitar" }).then(() => aviso("Quitado de la tele"));
+$("guardarCodigo").onclick = guardarCodigo;
+$("codigo").onkeydown = e => { if (e.key === "Enter") guardarCodigo(); };
 $("pausa").onclick = () => api("api/ajuste", { pausado: !E.pausado }).then(leerPronto);
 $("votacion").onclick = () => api("api/ajuste", { votacion: !E.votacion }).then(leerPronto);
 $("modelo").onchange = e => api("api/ajuste", { modelo: e.target.value }).then(() => aviso("Guionista: " + e.target.value));

@@ -868,7 +868,7 @@ class Directo:
             vivas = {k: v for k, v in getattr(self, "pantallas", {}).items() if time.time() - v["t"] < 8}   # la pantalla avisa cada 1 s
             return {"publico": self.publico_json(), "encendido": self.encendido, "cortes": self.cortes, "n_hechos": self.n_hechos, "n_sonados": self.n_sonados, "inicio_t": self.inicio_t, "fin_t": self.fin_t,
                     "pantallas": [{"pid": k, "ip": v["ip"], "hace": round(time.time() - v["t"])} for k, v in vivas.items()],
-                    "modelo_actual": self.modelo,
+                    "modelo_actual": self.modelo, "directo_yt": directo_yt_id(), "yt_conectado": getattr(self, "fuente_yt_vid", None),
                     "canal": self.cfg["nombre"], "tema": self.tema, "tema_ver": self.tema_ver, "bufer": [s["titulo"] for s in self.cola],
                     "bufer_s": round(sum(s["dur"] for s in self.cola)), "estado": self.estado, "pausado": self.pausado,
                     "votacion": self.votacion, "opciones": self.opciones, "votos": self.votos,
@@ -896,6 +896,15 @@ class Directo:
 # con el CÓDIGO de 4 cifras que enseña la tele al arrancar (cabecera X-Codigo; se guarda en el teléfono).
 SOLO_VER_POST = {"/api/progreso"}
 PUERTO_UDP = 8792      # la app del teléfono pregunta «ENVIVO?» por broadcast y la PC contesta «ENVIVO1|<puerto>|<canal>»
+
+
+def directo_yt_id():
+    """El video_id de la emisión preparada por directo_yt.py (sin tocar la clave que también guarda ese json)."""
+    try:
+        with open(os.path.join(AQUI, "_cache", "directo_yt.json"), encoding="utf-8") as f:
+            return (json.load(f).get("video_id") or "").strip() or None
+    except Exception:
+        return None
 
 
 def codigo_movil():
@@ -971,7 +980,14 @@ def crear_app(d):
                 d._apunta("directo quitado de la tele" + (" (comprobado: ya no pide nada)" if sigue is False else
                                                            " — ¡la tele SIGUE pidiendo bloques!" if sigue else " (sin comprobar)"))
                 return jsonify(ok=True, cerrada=sigue is False, sigue=bool(sigue))
-            modo = "monitor=1" if (request.get_json(silent=True) or {}).get("modo") == "espejo" else "auto=1"
+            pedido = (request.get_json(silent=True) or {}).get("modo")
+            try:
+                ip_tv = tele_mod.tele()[0]
+            except (SystemExit, Exception):
+                ip_tv = None
+            otras = [v for v in getattr(d, "pantallas", {}).values() if time.time() - v["t"] < 8 and v["ip"] != ip_tv]
+            # si ya hay otra pantalla viva (OBS), la tele va de ESPEJO salvo que se pida «aire» expresamente
+            modo = "monitor=1" if pedido == "espejo" or (otras and pedido != "aire") else "auto=1"
             url = f"http://{tele_mod.ip_hacia_tele()}:{request.host.split(':')[-1]}/?{modo}&codigo={CODIGO}&v={int(time.time())}"
             tele_mod.web(url)
             d._apunta(f"directo puesto en la tele{' (espejo)' if modo == 'monitor=1' else ''}: {url.split('&')[0]}")
@@ -1070,6 +1086,8 @@ def crear_app(d):
         acc = j.get("accion")
         if acc == "iniciar":
             vid = re.sub(r".*(?:v=|youtu\.be/|/live/)", "", (j.get("chat_youtube") or "").strip()).split("&")[0][:20]
+            if not vid:                              # sin otro: el directo preparado por directo_yt.py (_cache/directo_yt.json)
+                vid = directo_yt_id() or ""
             if vid and getattr(d, "fuente_yt_vid", None) != vid:   # el directo de YouTube: chat + espectadores (modo sin público)
                 if getattr(d, "fuente_yt", None):
                     d.fuente_yt.activa = False

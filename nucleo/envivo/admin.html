@@ -194,6 +194,7 @@ let e = {}, ch = {}, alFondo = true;
 const ENC = { apagado: ["APAGADO", "#2c2216", "var(--suave)"], arrancando: ["ARRANCANDO…", "#3a2d10", "var(--oro)"],
               en_vivo: ["● EN VIVO", "#3a1010", "var(--rojo)"], cerrando: ["CERRANDO: despedida", "#3a2d10", "var(--oro)"] };
 function pintarPublico(e) {
+  if (e.directo_yt) $("iYT").placeholder = `directo de YouTube: ${e.yt_conectado ? "conectado " + e.yt_conectado : "se usará " + e.directo_yt + " (el preparado)"}`;
   const p = e.publico || {}; if (!p.modo) return;
   const esp = p.espectadores === null || p.espectadores === undefined ? "¿?" : p.espectadores;
   $("pubModo").textContent = (p.modo === "callado" ? "🔇 CALLADO" : "🔊 DESPIERTO") + ` · ${esp} espectador(es)` +
@@ -246,7 +247,7 @@ $("bIniciar").onclick = async () => {
   if (v.startsWith("eleven:") && !confirm("Esta voz gasta créditos de ElevenLabs (~13 000 por hora). ¿Iniciar con ella?")) return;
   await post("/api/directo", { accion: "iniciar", tema: $("iTema").value.trim() || null, voz: v, modelo: $("iModelo").value,
                                chat_youtube: $("iYT").value.trim() || null });
-  if ($("iTele").checked) await post("/api/tele", { accion: "poner", modo: otraPantalla("la tele") });
+  if ($("iTele").checked) await post("/api/tele", { accion: "poner" });
   setTimeout(leer, 400);
 };
 $("bDetener").onclick = async () => {
@@ -259,7 +260,7 @@ $("bDetenerYa").onclick = async () => {
 };
 $("bAbrir").onclick = () => window.open(otraPantalla("la pestaña") === "espejo" ? "/?monitor=1" : "/?auto=1", "_blank");
 $("bTele").onclick = async () => {
-  const r = await (await post("/api/tele", { accion: "poner", modo: otraPantalla("la tele") })).json().catch(() => ({}));
+  const r = await (await post("/api/tele", { accion: "poner" })).json().catch(() => ({}));   // con OBS vivo, la tele va de espejo sola
   if (r && r.ok === false) alert("La tele no la recibió: " + (r.error || "?"));
 };
 $("bTeleQuitar").onclick = async () => {

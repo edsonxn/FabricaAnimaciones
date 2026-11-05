@@ -222,12 +222,19 @@ function pintarDirecto() {
   $("mDetenerYa").disabled = E.encendido === "apagado";
   for (const id of ["mIniciar", "mDetener", "mDetenerYa"]) $(id).style.opacity = $(id).disabled ? 0.4 : 1;
 }
+// El WebView de la APK no enseña confirm(): lo da por cancelado y el botón no hacía nada (5-nov). Confirmación con un 2.º toque.
+const toques = {};
+function seguro(id, txt) {
+  const ahora = Date.now();
+  if (toques[id] && ahora - toques[id] < 3500) { toques[id] = 0; return true; }
+  toques[id] = ahora; aviso(txt + " · toca otra vez para confirmar"); return false;
+}
 $("mIniciar").onclick = () => {
-  if ((E.voz_clave || "").startsWith("eleven:") && !confirm("La voz actual es de ElevenLabs y gasta créditos. ¿Iniciar con ella?")) return;
+  if ((E.voz_clave || "").startsWith("eleven:") && !seguro("ini", "Voz de ElevenLabs: gasta créditos")) return;
   api("api/directo", { accion: "iniciar", voz: E.voz_clave }).then(() => { aviso("Iniciando el directo"); leerPronto(); });
 };
-$("mDetener").onclick = () => confirm("¿Detener con despedida?") && api("api/directo", { accion: "detener" }).then(() => { aviso("Cerrando con despedida"); leerPronto(); });
-$("mDetenerYa").onclick = () => confirm("¿Cortar en seco, sin despedida?") && api("api/directo", { accion: "detener_ya" }).then(() => { aviso("Detenido"); leerPronto(); });
+$("mDetener").onclick = () => seguro("det", "Detener con despedida") && api("api/directo", { accion: "detener" }).then(() => { aviso("Cerrando con despedida"); leerPronto(); });
+$("mDetenerYa").onclick = () => seguro("ya", "Cortar en seco, sin despedida") && api("api/directo", { accion: "detener_ya" }).then(() => { aviso("Detenido"); leerPronto(); });
 function pintar() {
   pintarDirecto();
   $("vivo").className = "vivo" + (E.pausado ? " pausa" : "");

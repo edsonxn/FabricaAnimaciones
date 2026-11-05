@@ -75,6 +75,11 @@ let relleno = null;   // bloque del tema viejo que suena mientras se escribe el 
 // sigue sonando a los lat_max s, se corta con un fundido corto
 let cambioT = -1e9, verVisto = null, cortando = false;
 let audio = null, finFraseTimer = null, arrancado = false;
+const MUDO = new URLSearchParams(location.search).has("mudo");   // pruebas: la pestaña no suena (no se mezcla con el directo)
+const vocesVivas = new Set();                         // todo Audio de voz que se puso a sonar (para callarlos)
+function callarVoces(salvo) {
+  for (const a of vocesVivas) if (a !== salvo) { a.onended = null; try { a.pause(); } catch (e) {} vocesVivas.delete(a); }
+}
 let vidCur = 0, vidAlpha = [1, 0], vidFade = null, vidClip = ["", ""], vidPrep = [null, null], clipPendiente = false;
 const ytMalos = new Set(), clipsDisco = [];          // enlaces de YouTube que se trabaron · clips del disco ya vistos (respaldo)
 let pegatinas = [], aviso = null, ficha = null, temaBar = { txt: "", t0: 0 };
@@ -410,11 +415,23 @@ function siguienteFrase() {
   if (MONITOR) return;                                                  // el espejo no suena ni lleva el reloj
   // voz
   const dur = f.dur || 4;
-  audio = f._audio || (f.audio ? new Audio(f.audio) : null);
-  if (audio) {
-    audio.onended = () => { clearTimeout(finFraseTimer); finFraseTimer = setTimeout(siguienteFrase, 250); };
-    audio.play().catch(() => { clearTimeout(finFraseTimer); finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 250); });
-    finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 2500);       // por si «ended» no llega
+  // NUNCA dos voces a la vez (5-nov: «se escuchaba doble la voz de Johnny y la de Windows»): la frase anterior se calla y
+  // se suelta antes de empezar esta; sus eventos ya no mueven la cola; y el reloj de respaldo no salta mientras la voz
+  // siga sonando (con la ventana minimizada los timers y el audio se desfasan)
+  callarVoces();
+  const este = f._audio || (f.audio ? new Audio(f.audio) : null);
+  audio = este;
+  if (este) {
+    vocesVivas.add(este);
+    if (MUDO) este.muted = true;
+    este.onended = () => { if (audio !== este) return; clearTimeout(finFraseTimer); finFraseTimer = setTimeout(siguienteFrase, 250); };
+    este.play().catch(() => { if (audio !== este) return; clearTimeout(finFraseTimer); finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 250); });
+    const respaldo = () => {                          // por si «ended» no llega
+      if (audio !== este) return;
+      if (!este.paused && !este.ended && (!este.duration || este.currentTime < este.duration - 0.3)) { finFraseTimer = setTimeout(respaldo, 1000); return; }
+      siguienteFrase();
+    };
+    finFraseTimer = setTimeout(respaldo, dur * 1000 + 2500);
   } else finFraseTimer = setTimeout(siguienteFrase, dur * 1000 + 250);
   // pedir el bloque que sigue cuando quedan menos de ~9 s de este
   let resta = 0; for (let k = idx; k < seg.frases.length; k++) resta += (seg.frases[k].dur || 4) + 0.25;
@@ -427,7 +444,7 @@ let ost = null, ostLista = [], ostI = 0, ostVol = 0;
 async function arrancarOST() {
   try { ostLista = await (await fetch("/api/ost")).json(); } catch (e) { ostLista = []; }
   if (!ostLista.length) return;
-  ost = new Audio(); ost.volume = 0;
+  ost = new Audio(); ost.volume = 0; ost.muted = MUDO;
   ost.onended = () => { ostI = (ostI + 1) % ostLista.length; ost.src = ostLista[ostI]; ost.play().catch(() => {}); };
   ost.src = ostLista[0]; ost.play().catch(() => {});
 }

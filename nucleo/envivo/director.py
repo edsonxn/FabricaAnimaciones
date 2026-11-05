@@ -73,7 +73,7 @@ def _claude():
 
 
 def escribir(cfg, tema, historial, catalogo, transicion_de=None, modelo="sonnet", n_frases=6, carpeta=None, vigente=None,
-             enfoque=None, paralelo=(), comentarios=()):
+             enfoque=None, paralelo=(), comentarios=(), formato=None):
     trans = ""
     pedido_por = ()
     if isinstance(transicion_de, tuple):
@@ -89,6 +89,8 @@ def escribir(cfg, tema, historial, catalogo, transicion_de=None, modelo="sonnet"
         enf = f"ESTE BLOQUE se centra en: {enfoque}. Enlázalo con naturalidad con lo anterior (sin anunciar «ahora toca»).\n"
     if paralelo:
         enf += "EN PARALELO otros guionistas escriben los bloques sobre: " + "; ".join(paralelo) + ". NO toques esos asuntos.\n"
+    if formato:                                       # p. ej. la discusión entre voces (servidor.Directo.discusion)
+        enf += formato + "\n"
     chat = ""
     if comentarios:
         chat = (CHAT.format(lista="\n".join(f'- id {c["id"]} · @{c["autor"]} ({c.get("tipo") or "comentario"}): «{c["texto"]}»'

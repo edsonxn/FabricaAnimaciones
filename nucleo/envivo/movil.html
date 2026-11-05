@@ -106,6 +106,17 @@
   </section>
 
   <section class="tarjeta">
+    <h2>Voz del narrador</h2>
+    <select id="vozSel" style="width:100%;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:11px"></select>
+    <div class="sub" id="vozInfo" style="margin-top:6px"></div>
+    <div class="botones" style="margin-top:8px"><button id="autoRel">Relevo automático: no</button></div>
+    <div class="rango"><span>Cada</span><input type="range" id="autoMin" min="1" max="20" step="1"><output id="autoMinV"></output></div>
+    <div class="fila" style="margin-top:8px"><select id="disA" style="flex:1;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px"></select>
+      <select id="disB" style="flex:1;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px"></select></div>
+    <div class="botones" style="margin-top:8px"><button id="discutir">Discusión: no</button></div>
+  </section>
+
+  <section class="tarjeta">
     <h2>Latencia del cambio de tema</h2>
     <div class="rango"><span>Mínimo</span><input type="range" id="latMin" min="0" max="30" step="1"><output id="latMinV"></output></div>
     <div class="rango"><span>Máximo</span><input type="range" id="latMax" min="1" max="60" step="1"><output id="latMaxV"></output></div>
@@ -204,6 +215,7 @@ function pintar() {
   // búfer: un segmento por bloque, ancho ∝ duración (azul = respuesta al chat, rojo = frase puente, tenue = tema viejo)
   const b = E.bufer_det || [], tot = Math.max(60, b.reduce((s, x) => s + x.dur, 0));
   $("bufer").innerHTML = b.map(x => `<span class="${x.inmediato ? "p" : x.respuesta ? "r" : ""}${(x.ver || 0) < E.tema_ver && !x.respuesta ? " v" : ""}" style="width:${Math.max(3, x.dur / tot * 100)}%"></span>`).join("");
+  pintarVoz();
   const ca = E.clip_al_aire;
   $("clipTxt").textContent = ca ? (ca.fuente === "yt" ? `▶ YouTube: ${ca.titulo}${ca.canal ? " · " + ca.canal : ""}` : `💾 Disco: ${ca.titulo}`) : "";
   $("yt").textContent = "▶ YouTube en vivo: " + (E.yt_activo ? "sí" : "no"); $("yt").classList.toggle("on", !!E.yt_activo);
@@ -263,6 +275,28 @@ $("temaNuevo").onkeydown = e => { if (e.key === "Enter") cambiar(true); };
 $("enviar").onclick = () => comentar(false);
 $("sugerir").onclick = () => comentar(true);
 $("texto").onkeydown = e => { if (e.key === "Enter") comentar(false); };
+const nombreVoz = c => { const [t, n] = (c || "").split(":"); return t === "windows" ? "Windows · " + (n === "Raul" ? "Raúl" : n) : t === "chatterbox" ? "Chatterbox · " + n : n + " · ElevenLabs"; };
+function pintarVoz() {
+  const vs = E.voces || [], opts = vs.map(c => `<option value="${esc(c)}">${esc(nombreVoz(c))}</option>`).join("");
+  for (const id of ["vozSel", "disA", "disB"]) if (document.activeElement !== $(id) && $(id).dataset.n !== opts) { $(id).innerHTML = opts; $(id).dataset.n = opts; }
+  if (document.activeElement !== $("vozSel")) $("vozSel").value = E.voz_clave || "";
+  const el = E.eleven || {}, min = Math.round((E.voz_lleva_s || 0) / 60);
+  $("vozInfo").textContent = `Narra ${nombreVoz(E.voz_clave)} desde hace ${min} min · ElevenLabs: ${el.saldo ?? "?"} créditos (~${el.horas ?? "?"} h)` +
+    (el.poco ? " · ⚠ queda poco: el azar y el chat solo eligen voces gratis" : "") + (el.sin_saldo ? " · sin saldo: voz de Windows" : "");
+  $("autoRel").textContent = "Relevo automático: " + (E.auto_relevo ? "sí" : "no"); $("autoRel").classList.toggle("on", !!E.auto_relevo);
+  if (!tocando) $("autoMin").value = E.auto_min; $("autoMinV").textContent = $("autoMin").value + " min";
+  const d = E.discusion || [];
+  $("discutir").textContent = "Discusión: " + (d.length ? d.map(nombreVoz).map(s => s.split(" · ")[0]).join(" vs ") : "no"); $("discutir").classList.toggle("on", d.length > 1);
+}
+$("vozSel").onchange = e => api("api/ajuste", { voz: e.target.value }).then(() => aviso("Relevo: entra " + nombreVoz(e.target.value)));
+$("autoRel").onclick = () => api("api/ajuste", { auto_relevo: !E.auto_relevo }).then(leerPronto);
+$("autoMin").oninput = () => { tocando = true; pintar(); };
+$("autoMin").onchange = async () => { await api("api/ajuste", { auto_min: Number($("autoMin").value) }); tocando = false; leerPronto(); };
+$("discutir").onclick = () => {
+  const d = (E.discusion || []).length ? [] : [$("disA").value, $("disB").value];
+  if (d.length && d[0] === d[1]) return aviso("Elige dos voces distintas");
+  api("api/ajuste", { discusion: d }).then(() => aviso(d.length ? "Discusión en el próximo bloque" : "Sin discusión"));
+};
 $("yt").onclick = () => api("api/ajuste", { yt: !E.yt_activo }).then(leerPronto);
 $("teleVer").onclick = () => api("api/tele", { accion: "ver" }).then(r => r.json()).then(j => aviso(j.ok ? "Directo en la tele" : "La tele no contesta: " + (j.error || "")));
 $("teleQuitar").onclick = () => api("api/tele", { accion: "quitar" }).then(() => aviso("Quitado de la tele"));

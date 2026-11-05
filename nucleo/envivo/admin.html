@@ -137,6 +137,9 @@
       <div class="fila"><label><input type="checkbox" id="votacion"> Votación 1 / 2 / 3 en pantalla</label></div>
       <div class="fila"><label><input type="checkbox" id="ytvivo"> Clips de YouTube en vivo (enlace directo, sin descargar)</label></div>
       <div class="fila" id="clipaire" style="opacity:.75"></div>
+      <div class="fila"><label>Voz <select id="vozSel"></select></label> <span id="vozInfo" style="opacity:.75"></span></div>
+      <div class="fila"><label><input type="checkbox" id="autoRel"> Relevo automático cada <input type="number" id="autoMin" min="1" max="60" style="width:4em"> min</label></div>
+      <div class="fila"><label>Discusión <select id="disA"></select> vs <select id="disB"></select></label> <button class="sec" id="discutir">Discutir / parar</button></div>
       <div class="eti" style="margin-top:8px">Votos (los «1/2/3» del chat cuentan solos; gana al cerrar el bloque)</div>
       <div class="ops" id="votos"></div>
     </div>
@@ -185,6 +188,11 @@ $("decidir").onclick = () => post("/api/chat/ajuste", { decidir: true });
 $("cada").onchange = () => post("/api/chat/ajuste", { cada_min: +$("cada").value });
 $("minp").onchange = () => post("/api/chat/ajuste", { min_pedidos: +$("minp").value });
 $("votacion").onchange = () => post("/api/ajuste", { votacion: $("votacion").checked });
+const nombreVoz = c => { const [t, n] = (c || "").split(":"); return t === "windows" ? "Windows · Raúl" : t === "chatterbox" ? "Chatterbox · " + n : n + " · ElevenLabs"; };
+$("vozSel").onchange = () => post("/api/ajuste", { voz: $("vozSel").value });
+$("autoRel").onchange = () => post("/api/ajuste", { auto_relevo: $("autoRel").checked });
+$("autoMin").onchange = () => post("/api/ajuste", { auto_min: Number($("autoMin").value) });
+$("discutir").onclick = () => post("/api/ajuste", { discusion: window._disc && window._disc.length ? [] : [$("disA").value, $("disB").value] });
 $("ytvivo").onchange = () => post("/api/ajuste", { yt: $("ytvivo").checked });
 $("pausa").onclick = () => post("/api/ajuste", { pausado: !e.pausado });
 $("modelo").onchange = () => post("/api/ajuste", { modelo: $("modelo").value });
@@ -274,6 +282,13 @@ async function leer() {
     $("tmedio").textContent = e.tiempo_medio ? `≈ ${e.tiempo_medio} s por bloque` : "";
     $("votacion").checked = e.votacion;
     $("ytvivo").checked = !!e.yt_activo;
+    const vo = (e.voces || []).map(c => `<option value="${c}">${nombreVoz(c)}</option>`).join("");
+    for (const id of ["vozSel", "disA", "disB"]) if (document.activeElement !== $(id) && $(id).dataset.n !== vo) { $(id).innerHTML = vo; $(id).dataset.n = vo; }
+    if (document.activeElement !== $("vozSel")) $("vozSel").value = e.voz_clave;
+    const el = e.eleven || {};
+    $("vozInfo").textContent = `narra desde hace ${Math.round((e.voz_lleva_s || 0) / 60)} min · ElevenLabs ${el.saldo ?? "?"} créditos (~${el.horas ?? "?"} h)` + (el.poco ? " ⚠ poco saldo" : "");
+    $("autoRel").checked = !!e.auto_relevo; if (document.activeElement !== $("autoMin")) $("autoMin").value = e.auto_min;
+    window._disc = e.discusion;
     const ca = e.clip_al_aire;
     $("clipaire").textContent = ca ? (ca.fuente === "yt" ? "Al aire: ▶ YouTube · " + ca.titulo + (ca.canal ? " · " + ca.canal : "") : "Al aire: 💾 disco · " + ca.titulo) : "";
     $("pausa").textContent = e.pausado ? "Reanudar producción" : "Pausar producción";

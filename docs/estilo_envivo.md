@@ -138,6 +138,28 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
   terminan tarde (~66 s de GPU) → probable hueco de ~30-40 s al arrancar. Pendiente: que el candado dé prioridad al bloque
   con `seq` más bajo (el que sale antes), y entonces repetir la traza 10 min con un cambio de tema y una ráfaga de chat.
 
+## Voces: ElevenLabs, relevo visible y discusión (4-nov-2026, noche; parte del pedido 1 de la cola)
+- **Las 7 voces** (biblioteca compartida de ElevenLabs, ya usadas en `tes_dwemer_desaparicion`): Johnny (actual), Edoardo, Hope,
+  José, Mario, MariCarmen y el Profeta, en `voz_eleven.VOCES`. «El Humano tras el Telón» es el clon del usuario (cuentas 2 y 3):
+  no entra como narrador. Valen en la cuenta 2 o 3 (la 1 está en 0; `tts_eleven.post` salta sola).
+- `voz_eleven.py`: misma firma que `voz.py`, `eleven_v4_turbo`, PCM 24 kHz → .wav, 4 frases en paralelo, sin
+  `[whispers]`/`[excited]`/`[shouts]`; si falla o no hay saldo, esa frase sale con Windows. Gasto medido: **0,2 créditos por
+  carácter**; un bloque de ~700 caracteres ≈ 140 créditos y **5,7-6 s** de síntesis.
+- **Voz justo antes de sonar** (Windows y ElevenLabs): el bloque se escribe sin voz y se sintetiza al salir de la cola
+  (`_voz_al_salir`): no se paga lo que se tira al cambiar de tema, y un cambio de voz alcanza también al búfer. Chatterbox
+  (lento) sigue sintetizando al producir.
+- **Relevo** (`cambiar_voz`; `/api/ajuste {"voz": "eleven:Hope"}`): bloque `v…` al frente de la cola, la vieja se despide y
+  la nueva se presenta; la pantalla pone la placa «NARRA · NOMBRE» (abajo a la izquierda, sobre la barra del tema), la vieja
+  sale, la nueva entra y late, con la cinta «RELEVO DE NARRADOR». Probado: **al aire a los 11 s** (al acabar la frase en curso).
+- **Relevo automático** (`auto_relevo`, `auto_min` = 5): pasado ese tiempo entra otra voz al azar, sin repetir; con poco
+  saldo (< 3 000) solo voces gratis. **Discusión** (`/api/ajuste {"discusion": ["eleven:Johnny", "eleven:Hope"]}`): el
+  director escribe un intercambio con `"voz"` por frase; probado (bloque b006 con Hope y Johnny), pero entra ~3 min después
+  porque el búfer ya estaba escrito. Selector, saldo, relevo automático y discusión en `/admin` y en la app del teléfono.
+- Prueba del 4-nov (20:30): 736 créditos en total. Saldo de ElevenLabs a la vista en `/api/estado` (`eleven`).
+- Falta: que el chat elija la voz (etiqueta «pedido de voz» en `chat.py`, contarla en el corte, la voz nueva nombra a quien la
+  pidió, voz en la votación de vez en cuando, interruptor y tiempo mínimo entre cambios); que la discusión entre antes
+  (rehacer el búfer al activarla); 3 voces; verlo en la tele (sigue sin abrir la página desde las 20:07).
+
 ## Pedidos del usuario EN COLA (4-nov-2026, noche; en este orden, cada uno con su commit, doc y `fab.py tele aviso`)
 1. **Voces de ElevenLabs desde el panel**: «poder elegir 1 de las 7 voces que hemos usado en el canal, y cuando cambie de voz
    que la antigua voz releve el mando y la nueva lo tome… e incluso puedan discutir entre ellas».

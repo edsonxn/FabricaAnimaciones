@@ -79,6 +79,16 @@
 
 <main>
   <section class="tarjeta">
+    <h2>Directo · <span id="encTxt">…</span></h2>
+    <div class="botones">
+      <button id="mIniciar">▶ Iniciar</button>
+      <button id="mDetener">■ Detener (despedida)</button>
+      <button id="mDetenerYa">✕ Detener ya</button>
+    </div>
+    <div class="sub">Arranca con el tema, la voz y el guionista actuales (se eligen abajo). Detener: suena lo que ya estaba y cierra con una despedida.</div>
+  </section>
+
+  <section class="tarjeta">
     <h2>Al aire</h2>
     <div class="aire">
       <img id="peg" alt="">
@@ -200,7 +210,22 @@ async function leer() {
   setTimeout(leer, document.hidden ? 5000 : 1500);
 }
 
+const ENC_M = { apagado: "apagado", arrancando: "arrancando…", en_vivo: "● EN VIVO", cerrando: "cerrando: despedida" };
+function pintarDirecto() {
+  $("encTxt").textContent = ENC_M[E.encendido] || E.encendido || "?";
+  $("mIniciar").disabled = E.encendido !== "apagado";
+  $("mDetener").disabled = !(E.encendido === "en_vivo" || E.encendido === "arrancando");
+  $("mDetenerYa").disabled = E.encendido === "apagado";
+  for (const id of ["mIniciar", "mDetener", "mDetenerYa"]) $(id).style.opacity = $(id).disabled ? 0.4 : 1;
+}
+$("mIniciar").onclick = () => {
+  if ((E.voz_clave || "").startsWith("eleven:") && !confirm("La voz actual es de ElevenLabs y gasta créditos. ¿Iniciar con ella?")) return;
+  api("api/directo", { accion: "iniciar", voz: E.voz_clave }).then(() => { aviso("Iniciando el directo"); leerPronto(); });
+};
+$("mDetener").onclick = () => confirm("¿Detener con despedida?") && api("api/directo", { accion: "detener" }).then(() => { aviso("Cerrando con despedida"); leerPronto(); });
+$("mDetenerYa").onclick = () => confirm("¿Cortar en seco, sin despedida?") && api("api/directo", { accion: "detener_ya" }).then(() => { aviso("Detenido"); leerPronto(); });
 function pintar() {
+  pintarDirecto();
   $("vivo").className = "vivo" + (E.pausado ? " pausa" : "");
   $("vivoTxt").textContent = E.pausado ? "EN PAUSA" : "EN VIVO";
   $("canal").textContent = E.canal || "";

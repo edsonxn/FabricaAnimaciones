@@ -160,6 +160,59 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
   pidió, voz en la votación de vez en cuando, interruptor y tiempo mínimo entre cambios); que la discusión entre antes
   (rehacer el búfer al activarla); 3 voces; verlo en la tele (sigue sin abrir la página desde las 20:07).
 
+## INICIAR y DETENER desde el panel (el usuario, 4-nov-2026, noche)
+Palabras del usuario: «el panel siempre debe estar activo y desde ahí poder iniciar y detener todo; cuando detenga todo se
+deja de escribir guion y generar voz, solo lanza una última de despedida… y deja reproduciendo lo que ya estaba generado».
+Añadidos: «un botón para abrir la transmisión en una pestaña» y «un botón para enviar a la tv».
+- **`fab.py envivo` arranca el servidor APAGADO**: panel, pantalla, app del teléfono y UDP encendidos y en `0.0.0.0` desde
+  el principio. Sin guionista, sin voz y sin gasto; la pantalla enseña la portada «EL DIRECTO EMPIEZA PRONTO» con el primer
+  tema. Con `--iniciar` arranca el directo como antes; las configuraciones `envivo-tele*` y `envivo-chatterbox` de
+  `launch.json` ya lo llevan, y la `envivo` a secas es el panel apagado.
+- Estados (`Directo.encendido`, en `/api/estado`):
+  - `apagado`;
+  - `arrancando`: carga la voz (Chatterbox, ~20-40 s);
+  - `en_vivo`;
+  - `cerrando`.
+- `POST /api/directo {"accion": "iniciar", "tema", "voz", "modelo"}`. Cada INICIAR es una sesión nueva: carpeta
+  `_sesiones/<fecha>`, cola y memoria limpias. Un cambio de tema mientras está apagado queda como el tema del próximo
+  INICIAR.
+- **DETENER** (`"detener"`):
+  - El productor deja de despachar, y lo que se estaba escribiendo se cancela y se tira.
+  - Suena lo que ya estaba en la cola (la voz se sintetiza al salir, así que solo se paga lo que se oye).
+  - Al final va un bloque de **DESPEDIDA**: el director recibe `Directo.DESPEDIDA`, que levanta la regla de «nunca te
+    despidas» y le pide cerrar el tema, dar las gracias, pedir la suscripción y el tema del próximo directo. Si falla, va
+    `DESPEDIDA_RESPALDO`.
+  - Cuando la despedida ya sonó y la pantalla pide más, el directo pasa a `apagado`. La pantalla pone la cartela «FIN DEL
+    DIRECTO · GRACIAS POR ACOMPAÑARNOS · SUSCRÍBETE Y DEJA EN EL CHAT EL TEMA DEL PRÓXIMO» (12 s, kit de Tamriel) y luego la
+    portada.
+  - Mientras cierra, el chat no cambia el tema, no hay votación ni relevo automático, y los bloques de respuesta al chat se
+    tiran.
+- **DETENER YA** (`"detener_ya"`): corta en seco. La pantalla ve que `cortes` subió, calla la voz, quita pegatinas y placa
+  y vuelve a la portada.
+- **/admin**: barra arriba con el estado, tema, voz (las de ElevenLabs llevan «(gasta)» y piden confirmación), guionista,
+  «y a la tele», ▶ INICIAR, ■ DETENER (con despedida), ✕ DETENER YA, ↗ Abrir transmisión, 📺 Mandar a la tele y ✕ Quitar
+  de la tele, y cuántas pantallas hay al aire. **App del teléfono**: tarjeta «Directo» con Iniciar, Detener y Detener ya
+  (arranca con la voz, el tema y el guionista actuales).
+- **Dos pantallas se reparten los bloques**:
+  - Cada pantalla `?auto=1` se identifica con un `pid` en `/api/siguiente` y `/api/estado`, y el panel lista las que
+    avisaron en los últimos 8 s (avisan cada 1 s) (`pantallas`).
+  - «Abrir transmisión» y «Mandar a la tele» avisan si ya hay una y ofrecen abrir la nueva como ESPEJO (`/?monitor=1`, no
+    consume bloques).
+  - `/api/tele {"accion": "poner", "modo": "espejo"}` manda el espejo a la tele.
+- **Quitar de la tele**: Puente TV hace `finish()` de `TableroActivity` y su `onDestroy` destruye el WebView, lo que corta
+  su JS. El servidor lo COMPRUEBA: si a los 4 s la IP de la tele sigue llamando a `/api/estado`, responde `sigue: true` y el
+  panel pide cerrarla con Atrás.
+- Probado el 4-nov con la voz de Windows y haiku:
+  - portada apagado;
+  - INICIAR («Los dwemer», b001 hecho en 23 s);
+  - DETENER: se cancelaron las 2 escrituras en curso, la despedida se escribió y sonó, la cartela salió y quedó en
+    `apagado`;
+  - DETENER YA.
+
+  **Falta probar**: en la tele, «Mandar» y «Quitar» con la comprobación, el aviso de dos pantallas y la despedida con
+  ElevenLabs.
+- La skill global `envivo` todavía no existe (pedido 3 de la cola): cuando se haga, que use `/api/directo`.
+
 ## Arreglos tras la prueba con ElevenLabs (el usuario, 4-nov-2026, noche)
 1. **«Frases que debía decir el Profeta las dijo Johnny»**. Había dos causas:
    - La voz se buscaba por las 5 primeras letras del nombre, así que «Profeta» no coincidía con «el Profeta» y caía en la

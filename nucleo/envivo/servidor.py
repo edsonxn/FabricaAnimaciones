@@ -78,15 +78,113 @@ class Directo:
         self.clip_al_aire = None                    # {"fuente": "yt"|"disco", "titulo", "canal"}: lo informa la pantalla
         self.chat = chat_mod.Chat(self)
         self._apunta(f"biblioteca: {len(self.bib.pegatinas)} pegatinas, {len(self.bib.clips)} clips, {len(self.bib.ost)} pistas de OST")
-        if self.motor_voz is not voz:                # el modelo se carga antes del primer bloque (~20-40 s)
+        # INICIAR / DETENER desde el panel (el usuario, 4-nov noche): el servidor queda siempre encendido; el directo está
+        # «apagado» (sin guionista, sin voz, sin gasto: la pantalla enseña la portada), «en_vivo» o «cerrando» (ya no se
+        # escribe nada: suena lo que estaba en la cola y al final la DESPEDIDA; luego vuelve a «apagado»)
+        self.encendido, self.cortes, self.inicio_t, self.fin_t = "apagado", 0, None, None
+        self.estado = "apagado"
+        self.despedida_fuera = False
+        threading.Thread(target=self._vigila_relevo, daemon=True).start()
+        threading.Thread(target=self._productor, daemon=True).start()
+
+    def _preparar_voz(self):
+        if self.motor_voz is not voz:                # Chatterbox carga el modelo antes del primer bloque (~20-40 s)
             t0 = time.time()
-            self.motor_voz.preparar(self.voz, canal)
+            self.motor_voz.preparar(self.voz, self.canal)
             fon = getattr(self.motor_voz, "_fonetica", None)   # voz_eleven no la tiene (arrancar con --voz eleven:X)
             self._apunta(f"voz «{self.voz}» lista en {time.time() - t0:.0f} s"
                          + (f" ({len(fon)} palabras de FONETICA)" if fon is not None else ""))
+
+    def iniciar(self, tema=None, voz_nombre=None, modelo=None):
+        """INICIAR: sesión nueva (carpeta, cola y memoria limpias), voz elegida, y el productor se pone a escribir."""
+        with self.cv:
+            if self.encendido != "apagado":
+                return False
+            self.encendido = "arrancando"
+            self.cv.notify_all()
+        try:
+            if modelo in ("sonnet", "haiku"):
+                self.modelo = modelo
+            if voz_nombre:
+                clave = self._clave_voz(voz_nombre)
+                self.motor_voz, self.voz, _ = self._motor(clave)
+                self.voz_clave = clave
+            self.carpeta = os.path.join(AQUI, "_sesiones", time.strftime("%Y%m%d_%H%M%S"))
+            os.makedirs(self.carpeta, exist_ok=True)
+            self._preparar_voz()
+        except Exception as e:
+            with self.cv:
+                self.encendido = "apagado"
+            self._apunta(f"no arrancó: {e!r}")
+            return False
+        with self.cv:
+            self.tema = (tema or "").strip()[:120] or self.tema or self.cfg["tema_inicial"]
+            self.tema_ver += 1                       # lo que quedara de una sesión anterior ya no vale
+            self.cola, self.historial, self.listos = [], [], {}
+            self.enfoques, self.enfoques_ver, self.vers_abiertas = deque(), self.tema_ver, set()
+            self.ultimo_tema, self.anuncio, self.pedido_por, self.discusion = None, None, [], []
+            self.al_aire, self.frase_al_aire, self.opciones, self.votos = None, -1, [], {}
+            self.voz_desde = self.inicio_t = time.time()
+            self.fin_t, self.despedida_fuera, self.pausado = None, False, False
+            self.encendido, self.estado = "en_vivo", "arrancando"
+            self.cv.notify_all()
+        self.chat.proximo_corte = time.time() + self.chat.cada_min * 60
         self.yt.pedir(self.tema)
-        threading.Thread(target=self._vigila_relevo, daemon=True).start()
-        threading.Thread(target=self._productor, daemon=True).start()
+        self._apunta(f"▶ DIRECTO INICIADO · tema «{self.tema}» · voz {self._motor(self.voz_clave)[2]} · {self.modelo}")
+        return True
+
+    DESPEDIDA = ("FORMATO: ESTE ES EL ÚLTIMO BLOQUE: el directo SE ACABA AQUÍ. Ignora la regla de no despedirte: cierra lo que se "
+                 "estaba contando sin dejar nada abierto, da las gracias al chat por acompañar, pide que se suscriban y que "
+                 "dejen en el chat qué tema quieren para el próximo directo, y despídete con el humor del canal. Sin preguntas "
+                 "nuevas ni ganchos hacia lo que viene. \"proximos\" y \"opciones\" vacíos.")
+    DESPEDIDA_RESPALDO = ["Y con esto, chat, cerramos por hoy. Gracias de verdad por quedarse hasta el final.",
+                          "Si les gustó, suscríbanse, que de cada cien que ven esto muy pocos lo están, y dejen en el chat qué tema quieren para el próximo directo.",
+                          "Aquí se queda Tamriel, igual de peligrosa que siempre. Nos vemos en el próximo directo."]
+
+    def detener(self, despedida=True):
+        """DETENER: no se escribe ni se sintetiza nada nuevo; suena lo que ya estaba en la cola y al final una despedida.
+        DETENER YA (despedida=False): corta en seco, la pantalla vuelve a la portada."""
+        with self.cv:
+            if self.encendido not in ("en_vivo", "arrancando") and not (not despedida and self.encendido == "cerrando"):
+                return False
+            if not despedida:
+                self.encendido, self.cortes, self.fin_t = "apagado", self.cortes + 1, time.time()
+                self.cola, self.listos, self.al_aire, self.votacion = [], {}, None, False
+                self.tema_ver += 1                   # lo que se esté escribiendo se tira (y el director lo cancela)
+                self.estado = "apagado"
+                self.cv.notify_all()
+                self._apunta("■ DETENIDO YA (sin despedida)")
+                return True
+            self.encendido, self.votacion, self.estado = "cerrando", False, "cerrando: escribiendo la despedida"
+            self.cola = [s for s in self.cola if not s.get("inmediato")]
+            ver, hist = self.tema_ver, [h[1] for h in self.historial]
+            self.cv.notify_all()
+        self._apunta(f"■ DETENER: suenan {len(self.cola)} bloques ya escritos y luego la despedida")
+        threading.Thread(target=self._despedida, args=(ver, hist), daemon=True).start()
+        return True
+
+    def _despedida(self, ver, hist):
+        seg = None
+        try:
+            seg = self._producir(self.tema, None, hist, ver, n_frases=4, sid=f"fin{int(time.time()) % 10000:04d}",
+                                 formato=self.DESPEDIDA, cierre=True)
+        except Exception as e:
+            self._apunta(f"la despedida no se escribió ({e!r}): va la de respaldo")
+        if not seg or not seg.get("frases"):
+            frases = [{"texto": t, "dur": max(1.5, len(t) / 15.0), "audio": None, "peg": None, "clip": None, "rotulo": None,
+                       "ficha": None, "com": None} for t in self.DESPEDIDA_RESPALDO]
+            seg = {"id": f"fin{int(time.time()) % 10000:04d}", "tema": self.tema, "titulo": "Despedida", "resumen": "cierre",
+                   "opciones": [], "frases": frases, "proximos": [], "dur": sum(f["dur"] + 0.25 for f in frases), "ver": ver,
+                   "coms": [], "voz_hecha": None}
+        seg.update(despedida=True, conservado=True, opciones=[], proximos=[], titulo="Despedida")
+        with self.cv:
+            if self.encendido != "cerrando":
+                return
+            self.cola.append(seg)
+            self.bloques[seg["id"]] = seg
+            self.estado = "cerrando: la despedida está en la cola"
+            self.cv.notify_all()
+        self._apunta(f"{seg['id']}: despedida lista, al final de la cola")
 
     def _apunta(self, txt):
         self.log.append(time.strftime("%H:%M:%S ") + txt)
@@ -99,6 +197,11 @@ class Directo:
         nuevo aún no está y lo deja a media frase en cuanto llega (el primer bloque nuevo tarda ~25 s en escribirse)."""
         tema = (tema or "").strip()[:120]
         if not tema:
+            return
+        if self.encendido == "apagado":              # apagado: queda como el tema con que arrancará el próximo INICIAR
+            self.tema = tema
+            return
+        if self.encendido == "cerrando":             # cerrando: ya no se cambia de tema
             return
         if self.puente_inmediato:
             conservar = 0                               # la frase puente tapa el hueco: nada del tema viejo por delante
@@ -327,7 +430,7 @@ class Directo:
     def _vigila_relevo(self):
         while True:
             time.sleep(10)
-            if self.auto_relevo and not self.discusion and time.time() - self.voz_desde > self.auto_min * 60:
+            if self.encendido == "en_vivo" and self.auto_relevo and not self.discusion and time.time() - self.voz_desde > self.auto_min * 60:
                 otras = [v for v in self._voces_libres() if v != self.voz_clave]
                 if otras:
                     self.cambiar_voz(random.choice(otras), "automático")
@@ -362,7 +465,16 @@ class Directo:
 
     def siguiente(self, espera=20.0):
         """La pantalla pide el próximo bloque. Antes cuenta la votación (si está activa y hubo votos)."""
-        if self.votacion and self.votos:
+        if self.encendido == "apagado":
+            time.sleep(min(espera, 2.0))
+            return {"espera": True, "apagado": True, "tema": self.tema, "anuncio": None, "estado": "apagado"}
+        if self.encendido == "cerrando" and self.despedida_fuera and not self.cola:
+            with self.cv:                            # la despedida ya salió y no queda nada: se acabó el directo
+                self.encendido, self.fin_t, self.estado = "apagado", time.time(), "apagado"
+                self.cv.notify_all()
+            self._apunta("■ DIRECTO TERMINADO (despedida al aire)")
+            return {"espera": True, "apagado": True, "fin": True, "tema": self.tema, "anuncio": None, "estado": "apagado"}
+        if self.votacion and self.votos and self.encendido == "en_vivo":
             ganador = max(self.votos, key=self.votos.get)
             self.votos = {}
             if ganador != self.tema:
@@ -376,6 +488,8 @@ class Directo:
             seg = self.cola.pop(0)
         self._voz_al_salir(seg)
         with self.cv:
+            if seg.get("despedida"):
+                self.despedida_fuera = True
             self.al_aire, self.frase_al_aire = seg, 0
             if not seg.get("inmediato"):
                 self.opciones, self.votos = list(seg.get("opciones", [])), {}
@@ -422,7 +536,7 @@ class Directo:
 
     def _puede_responder(self):
         """Hay comentarios que contestar y ningún bloque de respuesta en marcha (y el directo ya arrancó)."""
-        return (not self.pausado and not self.en_resp and self.ultimo_tema is not None
+        return (self.encendido == "en_vivo" and not self.pausado and not self.en_resp and self.ultimo_tema is not None
                 and any(c["contestar"] and c["estado"] in ("nuevo", "mostrado") for c in self.chat.comentarios))
 
     def _responder(self, job, hist):
@@ -435,7 +549,7 @@ class Directo:
             self._apunta(f"error al contestar el chat: {e!r}")
         with self.cv:
             self.en_resp.pop(job["seq"], None)
-            if seg and seg["ver"] == self.tema_ver:
+            if seg and seg["ver"] == self.tema_ver and self.encendido == "en_vivo":
                 seg["titulo"], seg["respuesta"] = "Leyendo el chat", True
                 i = 0
                 while i < len(self.cola) and (self.cola[i].get("conservado") or self.cola[i].get("respuesta")):
@@ -454,7 +568,7 @@ class Directo:
             f.write(json.dumps(seg, ensure_ascii=False) + "\n")
 
     def _puede_despachar(self):
-        if self.pausado or len(self.en_curso) >= GUIONISTAS:
+        if self.encendido != "en_vivo" or self.pausado or len(self.en_curso) >= GUIONISTAS:
             return False
         vigentes = [j for j in self.en_curso.values() if j["ver"] == self.tema_ver]
         if len(self.cola) + len(vigentes) >= BUFER + 1:
@@ -472,13 +586,17 @@ class Directo:
             time.sleep(2)
         with self.cv:
             self.en_curso.pop(job["seq"], None)
+            if seg and self.encendido != "en_vivo":
+                self._apunta(f"bloque «{seg['titulo']}» descartado (el directo se detuvo)")
+                seg = None
             if seg and job["ver"] == self.tema_ver and self.enfoques_ver == job["ver"]:
                 for p in seg.get("proximos", []):
                     if len(self.enfoques) < 4:
                         self.enfoques.append(p)
             self.listos[job["seq"]] = seg
             self._entregar()
-            self.estado = f"escribiendo {len(self.en_curso)} ({self.modelo})" if self.en_curso else "listo"
+            if self.encendido == "en_vivo":
+                self.estado = f"escribiendo {len(self.en_curso)} ({self.modelo})" if self.en_curso else "listo"
             self.cv.notify_all()
         if seg:
             self.tiempos.append(time.time() - job["t0"])
@@ -506,15 +624,17 @@ class Directo:
             self.ultimo_tema = seg["tema"]
             self._guardar(seg)
 
-    def _producir(self, tema, puente, hist, ver=None, enfoque=None, paralelo=(), n_frases=6, sid="b000", comentarios=()):
+    def _producir(self, tema, puente, hist, ver=None, enfoque=None, paralelo=(), n_frases=6, sid="b000", comentarios=(),
+                  formato=None, cierre=False):
         pegs, clips = self.bib.candidatos(tema + (" " + enfoque if enfoque else ""))
         catalogo = self.bib.texto_catalogo(pegs, clips)
         t0 = time.time()
         d, crudo = director.escribir(self.cfg, tema, hist, catalogo, transicion_de=puente, modelo=self.modelo,
                                      carpeta=os.path.join(AQUI, "_sesiones", "_claude"),
-                                     vigente=lambda: ver is None or ver == self.tema_ver,
+                                     vigente=lambda: (ver is None or ver == self.tema_ver)
+                                     and self.encendido == ("cerrando" if cierre else "en_vivo"),
                                      enfoque=enfoque, paralelo=paralelo, n_frases=n_frases, comentarios=comentarios,
-                                     formato=self._formato_discusion())
+                                     formato="\n".join(x for x in (self._formato_discusion(), formato) if x) or None)
         if crudo == "cancelado":
             self._apunta("escritura cortada: cambió el tema")
             return None
@@ -576,7 +696,11 @@ class Directo:
     def estado_json(self):
         with self.cv:
             al = self.al_aire
-            return {"canal": self.cfg["nombre"], "tema": self.tema, "tema_ver": self.tema_ver, "bufer": [s["titulo"] for s in self.cola],
+            vivas = {k: v for k, v in getattr(self, "pantallas", {}).items() if time.time() - v["t"] < 8}   # la pantalla avisa cada 1 s
+            return {"encendido": self.encendido, "cortes": self.cortes, "inicio_t": self.inicio_t, "fin_t": self.fin_t,
+                    "pantallas": [{"pid": k, "ip": v["ip"], "hace": round(time.time() - v["t"])} for k, v in vivas.items()],
+                    "modelo_actual": self.modelo,
+                    "canal": self.cfg["nombre"], "tema": self.tema, "tema_ver": self.tema_ver, "bufer": [s["titulo"] for s in self.cola],
                     "bufer_s": round(sum(s["dur"] for s in self.cola)), "estado": self.estado, "pausado": self.pausado,
                     "votacion": self.votacion, "opciones": self.opciones, "votos": self.votos,
                     "al_aire": {"id": al["id"], "titulo": al["titulo"], "tema": al["tema"],
@@ -663,15 +787,25 @@ def crear_app(d):
         import tele as tele_mod
         try:
             if accion == "quitar":
+                t_cierre = time.time()
                 try:
                     tele_mod.cerrar_web()
                 except Exception:
                     pass                            # la tele corta la conexión al cerrar la ventana: no es error
-                d._apunta("directo quitado de la tele")
-            else:
-                url = f"http://{tele_mod.ip_hacia_tele()}:{request.host.split(':')[-1]}/?auto=1&codigo={CODIGO}&v={int(time.time())}"
-                tele_mod.web(url)
-                d._apunta(f"directo puesto en la tele: {url.split('&')[0]}")
+                # ¿de verdad se cerró? la pantalla de la tele avisa cada 1 s (/api/estado?pid=…): si a los 4 s sigue, no
+                try:
+                    ip_tv = tele_mod.tele()[0]
+                except (SystemExit, Exception):
+                    ip_tv = None
+                time.sleep(4)
+                sigue = any(v["ip"] == ip_tv and v["t"] > t_cierre + 2 for v in getattr(d, "pantallas", {}).values()) if ip_tv else None
+                d._apunta("directo quitado de la tele" + (" (comprobado: ya no pide nada)" if sigue is False else
+                                                           " — ¡la tele SIGUE pidiendo bloques!" if sigue else " (sin comprobar)"))
+                return jsonify(ok=True, cerrada=sigue is False, sigue=bool(sigue))
+            modo = "monitor=1" if (request.get_json(silent=True) or {}).get("modo") == "espejo" else "auto=1"
+            url = f"http://{tele_mod.ip_hacia_tele()}:{request.host.split(':')[-1]}/?{modo}&codigo={CODIGO}&v={int(time.time())}"
+            tele_mod.web(url)
+            d._apunta(f"directo puesto en la tele{' (espejo)' if modo == 'monitor=1' else ''}: {url.split('&')[0]}")
             return jsonify(ok=True)
         except (SystemExit, Exception) as e:
             return jsonify(ok=False, error=str(e)[:200])
@@ -733,10 +867,32 @@ def crear_app(d):
 
     @app.get("/api/siguiente")
     def api_siguiente():
+        _pantalla_viva()
         return jsonify(d.siguiente(float(request.args.get("espera", 20))))
+
+    def _pantalla_viva():                           # qué pantallas consumen bloques (dos a la vez se los reparten)
+        pid = (request.args.get("pid") or "")[:24]
+        if pid:
+            if not hasattr(d, "pantallas"):
+                d.pantallas = {}
+            d.pantallas[pid] = {"t": time.time(), "ip": request.remote_addr}
+
+    @app.post("/api/directo")
+    def api_directo():                              # INICIAR / DETENER (con despedida) / DETENER YA, desde /admin o el teléfono
+        j = request.get_json(silent=True) or {}
+        acc = j.get("accion")
+        if acc == "iniciar":
+            if d.encendido != "apagado":
+                return jsonify(ok=False, error=f"el directo ya está {d.encendido}")
+            threading.Thread(target=d.iniciar, args=(j.get("tema"), j.get("voz"), j.get("modelo")), daemon=True).start()
+            return jsonify(ok=True)
+        if acc in ("detener", "detener_ya"):
+            return jsonify(ok=d.detener(despedida=acc == "detener"), encendido=d.encendido)
+        return jsonify(ok=False, error="acción desconocida")
 
     @app.get("/api/estado")
     def api_estado():
+        _pantalla_viva()
         return jsonify(d.estado_json())
 
     @app.get("/api/ost")
@@ -866,6 +1022,8 @@ def main():
     ap.add_argument("--abrir", action="store_true", help="abre la pantalla y el panel de administración")
     ap.add_argument("--cada-min", type=float, default=3.0, help="cada cuántos minutos el chat puede cambiar el tema")
     ap.add_argument("--chat-youtube", metavar="VIDEO_ID", help="lee el chat del directo de YouTube (gasta cuota: 5 u. por lectura)")
+    ap.add_argument("--iniciar", action="store_true", help="arranca el directo ya (sin esto el servidor queda APAGADO: se inicia "
+                                                          "y se detiene desde /admin o la app del teléfono)")
     ap.add_argument("--tele", action="store_true", help="manda la pantalla al Google TV (Puente TV) y abre el servidor a la red de la casa "
                                                        "(desde la red solo se ve; los controles, desde la PC o el teléfono por la puerta)")
     a = ap.parse_args()
@@ -896,6 +1054,10 @@ def main():
             except (SystemExit, Exception) as e:
                 d._apunta(f"la tele no la recibió: {e}")
         threading.Timer(2.0, a_la_tele).start()
+    if a.iniciar:
+        threading.Thread(target=d.iniciar, args=(a.tema,), daemon=True).start()
+    else:
+        print("  directo APAGADO: INICIAR desde el panel (/admin) o la app del teléfono", flush=True)
     crear_app(d).run(host=host, port=a.puerto, threaded=True, use_reloader=False)
 
 

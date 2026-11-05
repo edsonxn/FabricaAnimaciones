@@ -82,7 +82,8 @@
         "--voz",
         "chatterbox:Sarcastica",
         "--puerto",
-        "8791"
+        "8791",
+        "--iniciar"
       ],
       "port": 8791,
       "url": "http://127.0.0.1:8791"
@@ -94,7 +95,8 @@
         "fab.py",
         "envivo",
         "cronicas_tamriel",
-        "--tele"
+        "--tele",
+        "--iniciar"
       ],
       "port": 8790,
       "url": "http://127.0.0.1:8790"
@@ -108,7 +110,8 @@
         "cronicas_tamriel",
         "--tele",
         "--voz",
-        "eleven:Johnny"
+        "eleven:Johnny",
+        "--iniciar"
       ],
       "port": 8790,
       "url": "http://127.0.0.1:8790"

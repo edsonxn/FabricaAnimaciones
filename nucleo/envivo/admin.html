@@ -76,6 +76,22 @@
   <a class="chip" href="/?auto=1" target="_blank" style="text-decoration:none">pantalla para OBS ↗</a>
   <a class="chip" href="/control" target="_blank" style="text-decoration:none">ventanita simple ↗</a>
 </header>
+<!-- INICIAR / DETENER (el usuario, 4-nov noche): el panel siempre activo; el directo se enciende y se apaga desde aquí -->
+<div id="barra" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--linea);background:#191209">
+  <span class="chip" id="encendido" style="font-weight:700">…</span>
+  <input id="iTema" type="text" placeholder="tema con que arranca (vacío = el actual)" style="flex:1 1 220px;min-width:180px" autocomplete="off">
+  <select id="iVoz" title="voz con que arranca"></select>
+  <select id="iModelo" title="guionista"><option value="sonnet">sonnet</option><option value="haiku">haiku</option></select>
+  <label class="chip" style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="iTele"> y a la tele</label>
+  <button id="bIniciar">▶ INICIAR</button>
+  <button id="bDetener" class="sec" title="deja de escribir y de generar voz; suena lo que ya estaba y cierra con una despedida">■ DETENER (con despedida)</button>
+  <button id="bDetenerYa" class="sec" style="border-color:var(--rojo);color:var(--rojo)" title="corta en seco, sin despedida">✕ DETENER YA</button>
+  <span style="width:1px;height:22px;background:var(--linea)"></span>
+  <button id="bAbrir" class="sec">↗ Abrir transmisión</button>
+  <button id="bTele" class="sec">📺 Mandar a la tele</button>
+  <button id="bTeleQuitar" class="sec">✕ Quitar de la tele</button>
+  <span class="chip" id="pantallas"></span>
+</div>
 <main>
   <!-- 1 · CHAT -->
   <section class="col">
@@ -158,8 +174,58 @@
 <script>
 const $ = id => document.getElementById(id);
 const post = (u, b) => fetch(u, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(b) });
+
 let e = {}, ch = {}, alFondo = true;
-try { $("autor").value = localStorage.getItem("envivo_autor") || "Edson"; } catch (x) { $("autor").value = "Edson"; }
+// --- INICIAR / DETENER y la transmisión ---
+const ENC = { apagado: ["APAGADO", "#2c2216", "var(--suave)"], arrancando: ["ARRANCANDO…", "#3a2d10", "var(--oro)"],
+              en_vivo: ["● EN VIVO", "#3a1010", "var(--rojo)"], cerrando: ["CERRANDO: despedida", "#3a2d10", "var(--oro)"] };
+function pintarDirecto(e) {
+  const [txt, bg, col] = ENC[e.encendido] || [e.encendido || "?", "#2c2216", "var(--suave)"];
+  const el = $("encendido"); el.textContent = txt; el.style.background = bg; el.style.color = col;
+  const ap = e.encendido === "apagado";
+  $("bIniciar").disabled = !ap; $("bDetener").disabled = !(e.encendido === "en_vivo" || e.encendido === "arrancando");
+  $("bDetenerYa").disabled = ap;
+  for (const id of ["bIniciar", "bDetener", "bDetenerYa"]) $(id).style.opacity = $(id).disabled ? 0.4 : 1;
+  const vo = (e.voces || []).map(c => `<option value="${c}">${nombreVoz(c)}${c.startsWith("eleven:") ? " (gasta)" : ""}</option>`).join("");
+  if (document.activeElement !== $("iVoz") && $("iVoz").dataset.n !== vo) { $("iVoz").innerHTML = vo; $("iVoz").dataset.n = vo; $("iVoz").value = e.voz_clave; }
+  if (document.activeElement !== $("iModelo") && !$("iModelo").dataset.toc) $("iModelo").value = e.modelo_actual || "sonnet";
+  const ps = e.pantallas || [];
+  $("pantallas").textContent = ps.length ? `${ps.length} pantalla(s) al aire: ${ps.map(p => p.ip === "127.0.0.1" ? "esta PC" : p.ip).join(", ")}` : "ninguna pantalla al aire";
+  $("pantallas").className = "chip " + (ps.length === 1 ? "ok" : ps.length > 1 ? "mal" : "");
+}
+// dos pantallas consumiendo /api/siguiente se reparten los bloques: se avisa y se ofrece abrir la nueva como espejo
+function otraPantalla(donde) {
+  const ps = (e && e.pantallas) || [];
+  if (!ps.length) return "aire";
+  const quien = ps.map(p => p.ip === "127.0.0.1" ? "esta PC" : p.ip).join(", ");
+  return confirm(`Ya hay ${ps.length} pantalla(s) al aire (${quien}). Dos pantallas se reparten los bloques y cada una oye la mitad.\n\n` +
+                 `Aceptar = abrir ${donde} como ESPEJO (solo mira, no consume bloques).\nCancelar = abrirla al aire igual.`) ? "espejo" : "aire";
+}
+$("iModelo").onchange = () => { $("iModelo").dataset.toc = 1; };
+$("bIniciar").onclick = async () => {
+  const v = $("iVoz").value;
+  if (v.startsWith("eleven:") && !confirm("Esta voz gasta créditos de ElevenLabs (~13 000 por hora). ¿Iniciar con ella?")) return;
+  await post("/api/directo", { accion: "iniciar", tema: $("iTema").value.trim() || null, voz: v, modelo: $("iModelo").value });
+  if ($("iTele").checked) await post("/api/tele", { accion: "poner", modo: otraPantalla("la tele") });
+  setTimeout(leer, 400);
+};
+$("bDetener").onclick = async () => {
+  if (!confirm("DETENER: ya no se escribe guion ni se genera voz; suena lo que ya estaba en la cola y cierra con una despedida. ¿Seguro?")) return;
+  await post("/api/directo", { accion: "detener" }); setTimeout(leer, 300);
+};
+$("bDetenerYa").onclick = async () => {
+  if (!confirm("DETENER YA: corta en seco, sin despedida. ¿Seguro?")) return;
+  await post("/api/directo", { accion: "detener_ya" }); setTimeout(leer, 300);
+};
+$("bAbrir").onclick = () => window.open(otraPantalla("la pestaña") === "espejo" ? "/?monitor=1" : "/?auto=1", "_blank");
+$("bTele").onclick = async () => {
+  const r = await (await post("/api/tele", { accion: "poner", modo: otraPantalla("la tele") })).json().catch(() => ({}));
+  if (r && r.ok === false) alert("La tele no la recibió: " + (r.error || "?"));
+};
+$("bTeleQuitar").onclick = async () => {
+  const r = await (await post("/api/tele", { accion: "quitar" })).json().catch(() => ({}));
+  alert(r && r.cerrada ? "Quitada de la tele." : "Se mandó cerrar, pero la tele " + (r && r.sigue ? "SIGUE pidiendo bloques: ciérrala con Atrás en el control." : "no confirmó (mira la tele)."));
+};try { $("autor").value = localStorage.getItem("envivo_autor") || "Edson"; } catch (x) { $("autor").value = "Edson"; }
 
 // --- comentar como espectador
 function comentar(autor, texto) { return post("/api/comentario", { autor, texto }); }
@@ -272,6 +338,7 @@ async function leer() {
   try {
     [e, ch] = await Promise.all([fetch("/api/estado").then(r => r.json()), fetch("/api/chat").then(r => r.json())]);
     $("canal").textContent = e.canal;
+    pintarDirecto(e);
     $("tema").textContent = e.al_aire ? e.al_aire.tema : e.tema;
     if (e.al_aire && e.al_aire.tema !== e.tema) $("tema").textContent += "  →  " + e.tema;
     $("frase").textContent = e.al_aire ? "«" + e.al_aire.frase + "»" : "esperando el primer bloque…";

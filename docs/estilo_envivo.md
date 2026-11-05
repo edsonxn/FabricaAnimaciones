@@ -457,3 +457,9 @@ en el audio («como radio que pierde señal»), incluso con una página que solo
 propio (`_cache/edge_obs`), a pantalla completa en la 2.ª pantalla, y OBS la toma con captura de ventana + captura de audio de
 aplicación → **0 cortes** con el directo completo. `directo_yt.py obs` lo arma (y quita la fuente de navegador). Emisiones
 nuevas con latencia normal.
+
+**Ventana escondida y muda en las bocinas (5-nov-2026):** minimizada, la ventana de Edge sale NEGRA en OBS; silenciada en el
+mezclador de Windows, OBS también la capta muda. Por eso `directo_yt.py obs` la abre normal y `ventana_fuera.py` la manda FUERA
+de las pantallas (x = -20000, área de 1920x1080 exactos; `ventana_fuera.py traer` la trae), y la pantalla lleva
+`?salida=CABLE%20Input`: la voz y la música van al cable virtual de VB-Audio (`setSinkId`, Edge con
+`--use-fake-ui-for-media-stream`) y no a las bocinas; la captura de audio de aplicación de OBS las toma igual (0 cortes).

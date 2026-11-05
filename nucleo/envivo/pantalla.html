@@ -4,6 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>En vivo</title>
+<script>
+// ?salida=<parte del nombre>: la voz y la música suenan en ESA salida de audio (p. ej. «CABLE Input», el cable virtual) y no
+// en las bocinas; OBS las capta igual con la captura de audio de aplicación (el usuario, 5-nov: oír solo el directo real).
+// Edge lo permite sin preguntar con --use-fake-ui-for-media-stream (lo pone directo_yt.abrir_ventana).
+(function () {
+  const q = new URLSearchParams(location.search).get("salida");
+  if (!q || !navigator.mediaDevices || !HTMLMediaElement.prototype.setSinkId) return;
+  let sink = null;
+  const listo = (async () => {
+    try {
+      const s = await navigator.mediaDevices.getUserMedia({ audio: true }).catch(() => null);   // para ver los nombres
+      if (s) s.getTracks().forEach(t => t.stop());
+      const d = (await navigator.mediaDevices.enumerateDevices())
+        .find(d => d.kind === "audiooutput" && d.label.toLowerCase().includes(q.toLowerCase()));
+      sink = d ? d.deviceId : null;
+      console.log("salida de audio:", d ? d.label : "no encontrada, bocinas");
+    } catch (e) { console.log("salida de audio:", e); }
+  })();
+  const play0 = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () {
+    const el = this;
+    return listo.then(() => sink && el.sinkId !== sink ? el.setSinkId(sink).catch(() => {}) : null).then(() => play0.call(el));
+  };
+})();
+</script>
 <style>
   /* La letra del kit de Crónicas de Tamriel (nucleo/mg_tes.py): Bahnschrift Condensed, lo más parecido a la Futura Condensed de Skyrim */
   @font-face { font-family: "Bahn"; src: url(/fuente/bahnschrift.ttf); font-weight: 300 700; font-stretch: 75% 100%; }

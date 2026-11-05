@@ -26,6 +26,7 @@ import sys
 import time
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, AQUI)
 sys.path.insert(0, os.path.dirname(AQUI))
 import youtube as yt  # noqa: E402
 
@@ -39,15 +40,22 @@ PERFIL_EDGE = os.path.join(AQUI, "_cache", "edge_obs")
 
 
 def abrir_ventana(url):
-    """Edge en modo app con perfil propio, a pantalla completa en la 2.ª pantalla (x = -1920): 1920x1080 exactos, sin
-    barra (Windows no deja una ventana con marco más alta que la pantalla). F11 la saca de pantalla completa."""
+    """Edge en modo app con perfil propio, escondida FUERA de las pantallas (x = -20000) con un área de
+    1920x1080 exactos: OBS la capta sin que estorbe. `ventana_fuera.py traer` la trae para verla; nunca minimizarla."""
     if subprocess.run(["tasklist", "/v", "/fi", "imagename eq msedge.exe"], capture_output=True, text=True,
                       errors="ignore").stdout.count(TITULO_VENTANA) == 0:
         subprocess.Popen([EDGE, f"--user-data-dir={PERFIL_EDGE}", "--no-first-run", "--autoplay-policy=no-user-gesture-required",
                           "--disable-background-timer-throttling", "--disable-renderer-backgrounding",
                           "--disable-backgrounding-occluded-windows", f"--app={url}",
-                          "--window-position=-1920,0", "--window-size=1920,1080", "--start-fullscreen"])
+                          "--use-fake-ui-for-media-stream", "--window-position=0,0", "--window-size=1920,1080"])
         time.sleep(4)
+    import ventana_fuera                                       # fuera de la vista, sin minimizar (minimizada = negro)
+    for _ in range(10):
+        if ventana_fuera.ventanas():
+            for h in ventana_fuera.ventanas():
+                ventana_fuera.colocar(h, -20000, 0)
+            break
+        time.sleep(1)
 INGESTA = "rtmp://a.rtmp.youtube.com/live2"
 
 TITULOS = {
@@ -147,7 +155,7 @@ def configurar_obs(d, puerto=8790):
     # cortado (~7 cortes por segundo, «como radio que pierde señal») aunque la página solo tocara la voz; capturado de la
     # ventana de Edge, 0 cortes (medido el 5-nov-2026). OBS toma la imagen (captura de ventana) y el audio (captura de
     # audio de aplicación) de esa ventana. Edge con perfil propio: no se mezcla con el navegador del usuario.
-    url = f"http://127.0.0.1:{puerto}/?auto=1"
+    url = f"http://127.0.0.1:{puerto}/?auto=1&salida=CABLE%20Input"   # el sonido al cable virtual: no suena en las bocinas
     abrir_ventana(url)
     entradas = [i["inputName"] for i in c.get_input_list().inputs]
     if FUENTE in entradas:                                    # la fuente de navegador vieja también consumía bloques

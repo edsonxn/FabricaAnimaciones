@@ -255,7 +255,7 @@ function pintar() {
   const ca = E.clip_al_aire;
   $("clipTxt").textContent = ca ? (ca.fuente === "yt" ? `▶ YouTube: ${ca.titulo}${ca.canal ? " · " + ca.canal : ""}` : `💾 Disco: ${ca.titulo}`) : "";
   $("yt").textContent = "▶ YouTube en vivo: " + (E.yt_activo ? "sí" : "no"); $("yt").classList.toggle("on", !!E.yt_activo);
-  $("buferTxt").textContent = `Búfer ${E.bufer_s || 0} s · ${b.length} bloque(s) · escribiendo ${E.en_curso || 0} de ${E.guionistas || 2}` + (E.tiempo_medio ? ` · ~${E.tiempo_medio} s por bloque` : "");
+  $("buferTxt").textContent = `Generados ${E.n_hechos || 0} · al aire ${E.n_sonados || 0} · búfer ${E.bufer_s || 0} s · ${b.length} bloque(s) · escribiendo ${E.en_curso || 0} de ${E.guionistas || 2}` + (E.tiempo_medio ? ` · ~${E.tiempo_medio} s por bloque` : "");
   // tema
   const rk = C.ranking || [];
   $("ranking").innerHTML = rk.slice(0, 6).map(([t, n]) => `<button class="chip" data-tema="${esc(t)}">${esc(t)} · ${n}</button>`).join("");

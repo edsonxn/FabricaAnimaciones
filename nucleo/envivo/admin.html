@@ -343,7 +343,7 @@ async function leer() {
     if (e.al_aire && e.al_aire.tema !== e.tema) $("tema").textContent += "  →  " + e.tema;
     $("frase").textContent = e.al_aire ? "«" + e.al_aire.frase + "»" : "esperando el primer bloque…";
     $("bloque").textContent = e.al_aire ? e.al_aire.id + " · " + e.al_aire.titulo : "";
-    $("bufer").textContent = `búfer: ${e.bufer.length} bloque(s) · ${e.bufer_s} s`;
+    $("bufer").textContent = `bloques generados: ${e.n_hechos || 0} · al aire: ${e.n_sonados || 0} · búfer: ${e.bufer.length} bloque(s) · ${e.bufer_s} s`;
     $("bufer").className = "chip " + (e.bufer.length ? "ok" : "mal");
     $("estado").textContent = e.pausado ? "PAUSADO" : e.estado;
     $("tmedio").textContent = e.tiempo_medio ? `≈ ${e.tiempo_medio} s por bloque` : "";

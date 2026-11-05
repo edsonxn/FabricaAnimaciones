@@ -57,6 +57,7 @@ class Directo:
         self.anuncio = None
         self.log = deque(maxlen=60)
         self.tiempos = deque(maxlen=10)
+        self.n_hechos, self.n_sonados = 0, 0      # bloques generados y salidos al aire en esta sesión (el usuario, 5-nov)
         self.seq, self.en_curso, self.listos = 0, {}, {}
         self.enfoques, self.enfoques_ver, self.vers_abiertas = deque(), 0, set()
         self.pedido_por = []              # autores del chat que pidieron el tema actual (para el puente)
@@ -124,6 +125,7 @@ class Directo:
             self.enfoques, self.enfoques_ver, self.vers_abiertas = deque(), self.tema_ver, set()
             self.ultimo_tema, self.anuncio, self.pedido_por, self.discusion = None, None, [], []
             self.al_aire, self.frase_al_aire, self.opciones, self.votos = None, -1, [], {}
+            self.n_hechos, self.n_sonados = 0, 0
             self.voz_desde = self.inicio_t = time.time()
             self.fin_t, self.despedida_fuera, self.pausado = None, False, False
             self.encendido, self.estado = "en_vivo", "arrancando"
@@ -491,6 +493,7 @@ class Directo:
             if seg.get("despedida"):
                 self.despedida_fuera = True
             self.al_aire, self.frase_al_aire = seg, 0
+            self.n_sonados += 1
             if not seg.get("inmediato"):
                 self.opciones, self.votos = list(seg.get("opciones", [])), {}
             self.cv.notify_all()
@@ -599,6 +602,7 @@ class Directo:
                 self.estado = f"escribiendo {len(self.en_curso)} ({self.modelo})" if self.en_curso else "listo"
             self.cv.notify_all()
         if seg:
+            self.n_hechos += 1
             self.tiempos.append(time.time() - job["t0"])
             self._apunta(f"listo {seg['id']} «{seg['titulo']}» ({seg['dur']:.0f} s de voz, hecho en {time.time() - job['t0']:.0f} s"
                          + (f", enfoque «{job['enfoque']}»" if job["enfoque"] else "") + ")")
@@ -697,7 +701,7 @@ class Directo:
         with self.cv:
             al = self.al_aire
             vivas = {k: v for k, v in getattr(self, "pantallas", {}).items() if time.time() - v["t"] < 8}   # la pantalla avisa cada 1 s
-            return {"encendido": self.encendido, "cortes": self.cortes, "inicio_t": self.inicio_t, "fin_t": self.fin_t,
+            return {"encendido": self.encendido, "cortes": self.cortes, "n_hechos": self.n_hechos, "n_sonados": self.n_sonados, "inicio_t": self.inicio_t, "fin_t": self.fin_t,
                     "pantallas": [{"pid": k, "ip": v["ip"], "hace": round(time.time() - v["t"])} for k, v in vivas.items()],
                     "modelo_actual": self.modelo,
                     "canal": self.cfg["nombre"], "tema": self.tema, "tema_ver": self.tema_ver, "bufer": [s["titulo"] for s in self.cola],

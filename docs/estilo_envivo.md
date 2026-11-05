@@ -51,6 +51,12 @@ precargado viejo pasa a relleno, el viejo sigue sonando sin hueco y el nuevo ent
   y se despedía a mitad del directo. → **sonnet por defecto**, haiku de respaldo. Ojo: gasta más plan (~1 llamada por bloque).
 
 ## Costos (medido el 4-nov-2026 con `claude -p --output-format json`)
+
+**Prueba REAL de 10 min (5-nov-2026, 08:11-08:20, sonnet, 2 guionistas, ElevenLabs el Profeta → Johnny, tele + app del teléfono):**
+14 bloques + la despedida en 9,5 min. **ElevenLabs: 1 824 créditos** (15 372 → 13 548) ≈ **11 500 créditos/h**, dentro de lo
+calculado. **Plan MAX: semanal 42 % → 42 %** (menos de 1 punto); **ventana de 5 h: 2 % → 9 %** en ~20 min de reloj, pero esa cifra
+incluye la sesión de Claude Code que dirigía la prueba (Opus con ~190 mil tokens de contexto por turno), así que el directo solo gasta
+bastante menos. Para aislarlo: medir otra vez sin ninguna sesión trabajando al mismo tiempo.
 Todo corre con la **suscripción MAX** (`claude -p`): no hay factura aparte, pero cada llamada gasta del límite semanal del
 plan. La cifra en US$ es lo que costaría lo mismo pagado por API (sirve para comparar y para vigilar el plan).
 

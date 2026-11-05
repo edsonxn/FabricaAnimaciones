@@ -23,8 +23,12 @@
   @keyframes late { 50% { opacity: .25; } }
   .tema { font-size: 21px; font-weight: 700; font-stretch: 80%; text-transform: uppercase; letter-spacing: .03em; margin-top: 4px; }
   .sub { color: var(--gris); font-size: 13px; }
-  main { padding: 0 16px; display: grid; gap: 12px; }
-  .tarjeta { background: var(--panel); border: 1px solid var(--linea); border-radius: 14px; padding: 12px; }
+  /* columna única que no crece con el contenido (5-nov: en el teléfono la página se salía y había scroll horizontal) */
+  main { padding: 0 16px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  html, body { max-width: 100%; overflow-x: hidden; }
+  main > *, .tarjeta > * { min-width: 0; }
+  select, input, textarea { max-width: 100%; }
+  .tarjeta { min-width: 0; overflow-wrap: anywhere; background: var(--panel); border: 1px solid var(--linea); border-radius: 14px; padding: 12px; }
   .tarjeta h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: .16em; color: var(--gris); font-weight: 600; text-transform: uppercase; }
   .aire { display: grid; grid-template-columns: 78px 1fr; gap: 10px; align-items: start; }
   .aire img { width: 78px; height: 78px; object-fit: contain; background: var(--panel2); border-radius: 10px; }
@@ -121,8 +125,8 @@
     <div class="sub" id="vozInfo" style="margin-top:6px"></div>
     <div class="botones" style="margin-top:8px"><button id="autoRel">Relevo automático: no</button></div>
     <div class="rango"><span>Cada</span><input type="range" id="autoMin" min="1" max="20" step="1"><output id="autoMinV"></output></div>
-    <div class="fila" style="margin-top:8px"><select id="disA" style="flex:1;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px"></select>
-      <select id="disB" style="flex:1;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px"></select></div>
+    <div class="fila" style="margin-top:8px"><select id="disA" style="flex:1;min-width:0;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px"></select>
+      <select id="disB" style="flex:1;min-width:0;background:var(--panel2);border:1px solid var(--linea);border-radius:10px;padding:10px"></select></div>
     <div class="botones" style="margin-top:8px"><button id="discutir">Discusión: no</button></div>
   </section>
 

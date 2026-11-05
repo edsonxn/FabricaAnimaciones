@@ -40,7 +40,10 @@ def area(h):
     return r.right - r.left, r.bottom - r.top
 
 
-def colocar(h, x, y, w=1920, alto=1080):
+BARRA = 31   # Edge en modo app dibuja su barra de título DENTRO del área de cliente: la página queda debajo (OBS la recorta)
+
+
+def colocar(h, x, y, w=1920, alto=1080 + BARRA):
     if u.IsIconic(h):
         u.ShowWindow(h, 9)                               # SW_RESTORE
     ve, vc = wt.RECT(), wt.RECT()

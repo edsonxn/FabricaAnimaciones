@@ -47,7 +47,7 @@ def abrir_ventana(url):
         subprocess.Popen([EDGE, f"--user-data-dir={PERFIL_EDGE}", "--no-first-run", "--autoplay-policy=no-user-gesture-required",
                           "--disable-background-timer-throttling", "--disable-renderer-backgrounding",
                           "--disable-backgrounding-occluded-windows", f"--app={url}",
-                          "--use-fake-ui-for-media-stream", "--window-position=0,0", "--window-size=1920,1080"])
+                          "--use-fake-ui-for-media-stream", "--test-type", "--window-position=0,0", "--window-size=1920,1080"])
         time.sleep(4)
     import ventana_fuera                                       # fuera de la vista, sin minimizar (minimizada = negro)
     for _ in range(10):
@@ -167,11 +167,15 @@ def configurar_obs(d, puerto=8790):
             c.set_input_settings(nombre, aj, True)
         else:
             c.create_input(ESCENA, nombre, tipo, aj, True)
+    import ventana_fuera
     time.sleep(1)
     for it in c.get_scene_item_list(ESCENA).scene_items:      # la ventana, al lienzo 1920x1080 (si quedara barra, se recorta)
         if it["sourceName"] == VENTANA:
-            alto = c.get_scene_item_transform(ESCENA, it["sceneItemId"]).scene_item_transform.get("sourceHeight") or 1080
-            c.set_scene_item_transform(ESCENA, it["sceneItemId"], {"positionX": 0, "positionY": 0, "cropTop": int(max(0, alto - 1080)), "boundsType": "OBS_BOUNDS_STRETCH",
+            t = c.get_scene_item_transform(ESCENA, it["sceneItemId"]).scene_item_transform
+            ancho, alto = t.get("sourceWidth") or 1920, t.get("sourceHeight") or 1080
+            borde = int(max(0, ancho - 1920) // 2)            # Edge dibuja su barra de título dentro de la ventana: solo la página
+            c.set_scene_item_transform(ESCENA, it["sceneItemId"], {"positionX": 0, "positionY": 0, "cropLeft": borde, "cropRight": borde,
+                                                                    "cropBottom": 0, "cropTop": ventana_fuera.BARRA, "boundsType": "OBS_BOUNDS_STRETCH",
                                                                     "boundsWidth": 1920, "boundsHeight": 1080, "boundsAlignment": 0})
     c.set_current_program_scene(ESCENA)
     especiales = c.get_special_inputs()                       # micrófono y audio del escritorio: callados

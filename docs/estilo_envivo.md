@@ -392,3 +392,12 @@ reaccionar rápido, mín 0 y máx 2-3 en la app.
   **latencia del cambio de tema regulable con mínimo y máximo** desde el teléfono.
 - Latencia medida hoy: cambio de tema → bloque nuevo al aire en **15-27 s** (sonnet 15 s). Idea para bajarla: frase puente
   inmediata («¡el chat manda: ahora X!») con voz de Windows en ~2-3 s, mientras se escribe el bloque completo.
+
+## Directo de YouTube desde la PC: emisión + OBS por código (5-nov-2026)
+`python nucleo/envivo/directo_yt.py preparar [canal]` crea la emisión **PRIVADA** del canal por la API (flujo reutilizable,
+clave guardada en `_cache/directo_yt.json`, nunca impresa), abre OBS si está cerrado y por obs-websocket arma la escena
+«EN VIVO» con la fuente de navegador `http://127.0.0.1:8790/?auto=1` (1920x1080, audio dentro de OBS), silencia el audio
+del escritorio y el micrófono globales y pone la clave en el servicio. `salir [--publico]` arranca OBS, espera la señal y
+pasa la emisión a «en vivo»; `publico` la hace pública ya al aire (con `containsSyntheticMedia`); `terminar` la cierra y
+para OBS; `estado` lo resume. La fuente de OBS ES la pantalla del directo: la tele, solo en espejo (`/?monitor=1`). El chat
+y los espectadores: INICIAR con `chat_youtube` = el `video_id` de ese json. Primera emisión: `gBR4XfioDsc` (Tamriel).

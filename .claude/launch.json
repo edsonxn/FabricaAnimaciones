@@ -98,6 +98,20 @@
       ],
       "port": 8790,
       "url": "http://127.0.0.1:8790"
+    },
+    {
+      "name": "envivo-tele-eleven",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "fab.py",
+        "envivo",
+        "cronicas_tamriel",
+        "--tele",
+        "--voz",
+        "eleven:Johnny"
+      ],
+      "port": 8790,
+      "url": "http://127.0.0.1:8790"
     }
   ]
 }

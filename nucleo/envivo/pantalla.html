@@ -76,6 +76,7 @@ let relleno = null;   // bloque del tema viejo que suena mientras se escribe el 
 let cambioT = -1e9, verVisto = null, cortando = false;
 let audio = null, finFraseTimer = null, arrancado = false;
 let vidCur = 0, vidAlpha = [1, 0], vidFade = null, vidClip = ["", ""], vidPrep = [null, null], clipPendiente = false;
+const ytMalos = new Set(), clipsDisco = [];          // enlaces de YouTube que se trabaron · clips del disco ya vistos (respaldo)
 let pegatinas = [], aviso = null, ficha = null, temaBar = { txt: "", t0: 0 };
 let estado = { votacion: false, opciones: [], votos: {} };
 let nPeg = Math.floor(Math.random() * 8), anuncioVisto = Date.now() / 1000;
@@ -296,8 +297,9 @@ function avisaClip(fuente, titulo, canal) {
   fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ id: seg.id, frase: idx, clip: { fuente, titulo, canal } }) }).catch(() => {});
 }
-async function ponerClip(url, yt) {
-  if (yt && yt.url && vidClip[vidCur] !== yt.url && !clipPendiente) {
+async function ponerClip(url, yt, forzar) {
+  if (url && !clipsDisco.includes(url)) { clipsDisco.push(url); if (clipsDisco.length > 30) clipsDisco.shift(); }
+  if (yt && yt.url && !ytMalos.has(yt.url) && vidClip[vidCur] !== yt.url && !clipPendiente) {
     clipPendiente = true;
     const otro = 1 - vidCur;
     try {
@@ -310,16 +312,41 @@ async function ponerClip(url, yt) {
       vidClip[otro] = null; vidPrep[otro] = null;            // no cargó: el del disco, sin que se note
     } finally { clipPendiente = false; }
   }
-  if (!url || vidClip[vidCur] === url || clipPendiente) return;
+  if (!url || (vidClip[vidCur] === url && !forzar) || clipPendiente) return;
   clipPendiente = true;
   const otro = 1 - vidCur;
   try {
+    if (forzar) { vidClip[otro] = null; vidPrep[otro] = null; }
     await prepararClip(otro, url);
     try { await vids[otro].play(); } catch (e) {}
     vidFade = { de: vidCur, a: otro, t0: ahora() }; vidCur = otro;
     avisaClip("disco", url.split("/").slice(-2).join("/"), "");
   } finally { clipPendiente = false; }
 }
+// VIGILANTE del fondo (el usuario, 4-nov: «a veces se queda congelado el video de fondo»): si el clip al aire no avanza
+// (enlace de YouTube caducado o cortado, búfer vacío, play() rechazado), a los 0,8 s se le da play otra vez y a los 2 s
+// se cambia a un clip del DISCO distinto (el enlace trabado no se vuelve a usar).
+let vigT = -1, vigDesde = 0, vigIntentos = 0;
+setInterval(() => {
+  if (document.hidden || vidFade || clipPendiente) { vigDesde = 0; return; }
+  const v = vids[vidCur], ct = v.currentTime;
+  if (!vidClip[vidCur]) return;
+  if (Math.abs(ct - vigT) > 0.05) { vigT = ct; vigDesde = 0; vigIntentos = 0; return; }
+  const ya = performance.now() / 1000;
+  if (!vigDesde) { vigDesde = ya; return; }
+  const quieto = ya - vigDesde;
+  if (quieto > 0.8 && vigIntentos === 0) { vigIntentos = 1; v.play().catch(() => {}); }
+  if (quieto > 2) {
+    const trabado = vidClip[vidCur], esYT = /googlevideo|^https?:/.test(trabado || "") && !(trabado || "").startsWith(location.origin);
+    if (esYT) ytMalos.add(trabado);
+    const actual = seg && seg.frases[idx] ? seg.frases[idx].clip : null;
+    const opciones = [actual, clipSiguiente(), ...clipsDisco.slice().reverse()].filter(u => u && u !== trabado);
+    const otroUrl = opciones[0] || trabado;           // sin otro: recarga el mismo en el otro <video>
+    vigDesde = 0; vigT = -1;
+    console.warn("fondo congelado " + quieto.toFixed(1) + " s (" + (esYT ? "YouTube" : "disco") + "): cambio a " + otroUrl);
+    if (otroUrl) { ponerClip(otroUrl, null, true); avisaClip("rescate", "fondo congelado: " + (esYT ? "YouTube" : "disco"), ""); }
+  }
+}, 400);
 function clipSiguiente() {
   if (seg && idx + 1 < seg.frases.length) return seg.frases[idx + 1].clip;
   return siguiente ? siguiente.frases[0].clip : null;
@@ -686,17 +713,23 @@ function cuadro() {
   requestAnimationFrame(cuadro);
 }
 
-// al llegar al máximo, la frase vieja se corta (fundido de 0,3 s) y entra lo nuevo
+// cambio de tema SIN cortar de tajo (el usuario, 4-nov): la frase en curso SIEMPRE se termina; al acabar, siguienteFrase()
+// pone la frase puente y luego el tema nuevo. Solo si una frase es tan larga que a los lat_max s aún le quedan > 15 s (raro:
+// las frases duran 4-12 s), se baja con un fundido largo de 1,5 s.
 setInterval(() => {
   if (MONITOR || cortando || !seg || !siguiente || (siguiente.ver || 0) <= (seg.ver || 0)) return;
   if (ahora() - cambioT < Math.max(estado.lat_max || 8, estado.lat_min || 0)) return;
+  const a = audio;
+  if (!a || a.paused || a.ended) return;              // entre frases ya entra solo
+  const queda = (a.duration || 0) - a.currentTime;
+  if (!(queda > 15)) return;                         // le queda poco: se termina entera
   cortando = true;
-  const a = audio, v0 = a ? a.volume : 1;
+  const v0 = a.volume;
   let k = 0;
   const paso = setInterval(() => {
     k++;
-    if (a) a.volume = Math.max(0, v0 * (1 - k / 6));
-    if (k >= 6) { clearInterval(paso); if (a) { a.onended = null; a.pause(); } cortando = false; siguienteFrase(); }
+    a.volume = Math.max(0, v0 * (1 - k / 30));
+    if (k >= 30) { clearInterval(paso); a.onended = null; a.pause(); cortando = false; siguienteFrase(); }
   }, 50);
 }, 200);
 

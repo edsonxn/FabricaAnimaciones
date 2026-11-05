@@ -120,7 +120,7 @@
     <h2>Latencia del cambio de tema</h2>
     <div class="rango"><span>Mínimo</span><input type="range" id="latMin" min="0" max="30" step="1"><output id="latMinV"></output></div>
     <div class="rango"><span>Máximo</span><input type="range" id="latMax" min="1" max="60" step="1"><output id="latMaxV"></output></div>
-    <div class="sub">La frase puente no corta la que suena antes del mínimo; al llegar al máximo la corta y entra el tema nuevo.</div>
+    <div class="sub">La frase que suena siempre se termina; después entra la frase puente (no antes del mínimo). Pasado el máximo solo se recorta, con fundido, una frase a la que aún le queden más de 15 s.</div>
     <div class="botones" style="margin-top:8px"><button id="puente">Frase puente: sí</button></div>
     <div class="lat" id="latencias"></div>
   </section>

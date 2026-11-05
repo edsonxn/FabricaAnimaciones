@@ -160,6 +160,34 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
   pidió, voz en la votación de vez en cuando, interruptor y tiempo mínimo entre cambios); que la discusión entre antes
   (rehacer el búfer al activarla); 3 voces; verlo en la tele (sigue sin abrir la página desde las 20:07).
 
+## Arreglos tras la prueba con ElevenLabs (el usuario, 4-nov-2026, noche)
+1. **«Frases que debía decir el Profeta las dijo Johnny»**. Había dos causas:
+   - La voz se buscaba por las 5 primeras letras del nombre, así que «Profeta» no coincidía con «el Profeta» y caía en la
+     voz vigente.
+   - La voz se resolvía al SALIR de la cola: si se apagaba la discusión o entraba otra voz antes, todas las frases pasaban
+     a la voz nueva.
+
+   Arreglo:  (sin acentos ni «el/la», acepta «Jose», «Mari Carmen», «Hope (ElevenLabs)») fija la 
+   de cada frase al ESCRIBIR el bloque. Un relevo o un cambio de discusión solo afecta a las frases que no llevan voz. Un
+   nombre que no se reconoce queda apuntado en la bitácora.  guarda la lista de claves para no volver a
+   sintetizar lo ya hecho.
+2. **«A veces se queda congelado el video de fondo»**: el **vigilante** de  revisa cada 0,4 s si el
+    del clip al aire avanza.
+   - A los 0,8 s quieto:  otra vez.
+   - A los 2 s: cambia a un clip del DISCO distinto (el de la frase, el siguiente o uno de los 30 ya vistos). El enlace de
+     YouTube trabado entra en  y no se vuelve a usar.
+   - El servidor apunta «VIGILANTE: … → clip del disco (van N)».
+3. **«Al cambiar de tema se corta la plática de tajo»**. Antes, a los  (8 s) la frase en curso se cortaba con un
+   fundido de 0,3 s. Ahora:
+   - La frase en curso **siempre se termina** y luego entra la frase puente.
+   - Solo una frase a la que, pasado el máximo, aún le queden más de 15 s se recorta, con un fundido de 1,5 s.
+   - Las frases puente ya no son un «¡Cambio de rumbo!» seco: cierran el tema anterior por su nombre y enlazan con el
+     nuevo («Bueno, y dejando {a} por aquí, que da para otro día…», «Un momento, que el chat manda. Dejamos {a}…»).
+   - Falta un analizador de nivel para cortar en una pausa: se descartó porque, con el AudioContext suspendido, puede dejar
+     la voz muda en la tele.
+- Probado con piezas sueltas: reparto de voces en un bloque simulado y sintaxis del JS. **Falta probar** en un directo real
+  con ElevenLabs y en la tele (vigilante con un enlace de YouTube que caduque, y oír que el cambio de tema ya no corta).
+
 ## Pedidos del usuario EN COLA (4-nov-2026, noche; en este orden, cada uno con su commit, doc y `fab.py tele aviso`)
 1. **Voces de ElevenLabs desde el panel**: «poder elegir 1 de las 7 voces que hemos usado en el canal, y cuando cambie de voz
    que la antigua voz releve el mando y la nueva lo tome… e incluso puedan discutir entre ellas».

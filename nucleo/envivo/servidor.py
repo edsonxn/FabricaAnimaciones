@@ -63,7 +63,7 @@ class Directo:
         self.en_resp = {}                 # bloques cortos que contestan al chat: van al frente de la cola
         self.bloques = {}                 # id → bloque (para la pantalla espejo del panel)
         # latencia del cambio de tema (el usuario, 4-nov noche): una frase puente sale al aire entre lat_min y lat_max s
-        # después del cambio (la pantalla no corta la frase en curso antes del mínimo; al llegar al máximo la corta)
+        # después del cambio; la frase en curso SIEMPRE se termina (solo una de > 15 s restantes pasado el máximo se recorta)
         self.puente_inmediato, self.lat_min, self.lat_max = True, 3.0, 8.0
         self.cambios = {}                 # tema_ver → {"t", "tema", "origen", "puente": s, "bloque": s} (latencia real medida)
         self.latencias = deque(maxlen=12)
@@ -81,7 +81,9 @@ class Directo:
         if self.motor_voz is not voz:                # el modelo se carga antes del primer bloque (~20-40 s)
             t0 = time.time()
             self.motor_voz.preparar(self.voz, canal)
-            self._apunta(f"voz Chatterbox «{self.voz}» lista en {time.time() - t0:.0f} s ({len(self.motor_voz._fonetica)} palabras de FONETICA)")
+            fon = getattr(self.motor_voz, "_fonetica", None)   # voz_eleven no la tiene (arrancar con --voz eleven:X)
+            self._apunta(f"voz «{self.voz}» lista en {time.time() - t0:.0f} s"
+                         + (f" ({len(fon)} palabras de FONETICA)" if fon is not None else ""))
         self.yt.pedir(self.tema)
         threading.Thread(target=self._vigila_relevo, daemon=True).start()
         threading.Thread(target=self._productor, daemon=True).start()
@@ -111,6 +113,7 @@ class Directo:
                 s["conservado"] = s.get("conservado") or s.get("respuesta")
             self.historial = [h for h in self.historial if h[0] not in tirados]
             self.cola[quedan:] = [s for s in self.cola[quedan:] if s.get("respuesta")]
+            anterior = self.tema
             self.tema, self.tema_ver = tema, self.tema_ver + 1
             self.anuncio = {"tema": tema, "origen": origen, "t": time.time()}
             self.cambios[self.tema_ver] = {"t": time.time(), "tema": tema, "origen": origen}
@@ -119,20 +122,31 @@ class Directo:
         self._apunta(f"TEMA NUEVO ({origen}): {tema}" + (f" · se tiraron {len(tirados)} bloques del búfer" if tirados else ""))
         self.yt.pedir(tema)
         if self.puente_inmediato:
-            threading.Thread(target=self._puente, args=(tema, ver, origen), daemon=True).start()
+            threading.Thread(target=self._puente, args=(tema, ver, origen, anterior), daemon=True).start()
 
+    # frase puente (el usuario, 4-nov: «debe transicionar naturalmente al nuevo tema, no cortar de tajo»): cierra lo anterior
+    # con una muletilla de conversación y ENLAZA con el tema nuevo; suena DESPUÉS de que acabe la frase en curso
     PUENTES = {
-        "control": ["¡Cambio de rumbo! Ahora vamos con {t}.", "Giro de guion: hablemos de {t}.", "Nuevo tema en el directo: {t}."],
-        "panel": ["¡Cambio de rumbo! Ahora vamos con {t}.", "Giro de guion: hablemos de {t}."],
-        "chat": ["El chat manda: ahora, {t}.", "Lo pidió el chat, y aquí se obedece: {t}.", "Pedido del chat: vamos con {t}."],
-        "votación": ["Ganó la votación: {t}.", "El chat votó y decidió: {t}."],
+        "control": ["Bueno, y dejando {a} por aquí, que da para otro día, vamos con algo que también tiene miga: {t}.",
+                    "Y ya que estamos en Tamriel, cambiemos de rincón. Hablemos de {t}.",
+                    "Vale, {a} ya dio lo suyo. Ahora, otra historia que les va a gustar: {t}."],
+        "panel": ["Bueno, y dejando {a} por aquí, que da para otro día, vamos con algo que también tiene miga: {t}.",
+                  "Vale, {a} ya dio lo suyo. Ahora, otra historia que les va a gustar: {t}."],
+        "chat": ["Y antes de seguir con {a}, el chat me está pidiendo otra cosa, y aquí se le hace caso: {t}.",
+                 "Un momento, que el chat manda. Dejamos {a} y nos vamos a {t}.",
+                 "Vale, vale, ya leí el chat. Cerramos {a} aquí y vamos con lo que piden: {t}."],
+        "votación": ["Y con esto cerramos {a}, porque la votación ya tiene ganador: {t}.",
+                     "Bueno, el chat votó y fue claro. Dejamos {a} y seguimos con {t}."],
     }
 
-    def _puente(self, tema, ver, origen):
+    def _puente(self, tema, ver, origen, anterior=None):
         """Frase corta que anuncia el tema nuevo en ~1-3 s (sin Claude): tapa la espera mientras se escribe el bloque."""
         try:
             t0 = time.time()
-            texto = random.choice(self.PUENTES.get(origen, self.PUENTES["control"])).format(t=tema)
+            a = (anterior or "").strip() or "esto"
+            if len(a) > 60 or a.lower() == tema.lower():
+                a = "esto"
+            texto = random.choice(self.PUENTES.get(origen, self.PUENTES["control"])).format(t=tema, a=a)
             if origen == "chat" and self.pedido_por:
                 texto += " Gracias, " + " y ".join(self.pedido_por[:2]) + "."
             sid = f"p{ver:03d}"
@@ -218,13 +232,36 @@ class Directo:
                 "humor del canal: se llevan la contraria, se interrumpen y se pican (sin insultos). Cada frase lleva \"voz\" "
                 "con el nombre EXACTO de quien la dice (" + ", ".join(nombres) + ") y se alternan.")
 
-    def _voz_de_frase(self, f):
-        """La clave de voz de una frase: la de la discusión si el director la puso, si no la actual."""
-        quien = f.get("vozde")
-        if quien:
-            for c in self.discusion or []:
-                if self._motor(c)[2].lower().startswith(str(quien).lower()[:5]):
+    @staticmethod
+    def _norm_nombre(t):
+        import unicodedata
+        t = unicodedata.normalize("NFD", str(t or "").lower())
+        t = "".join(ch for ch in t if unicodedata.category(ch) != "Mn")
+        t = re.sub(r"\(.*?\)|elevenlabs|chatterbox|windows|[^a-z ]", " ", t)
+        return re.sub(r"\b(el|la|los|las|don|dona)\b", " ", t).split()
+
+    def _clave_de_nombre(self, quien):
+        """«Profeta», «el profeta», «José», «Jose», «Mari Carmen» → su clave. Primero las voces de la discusión, luego todas."""
+        q = "".join(self._norm_nombre(quien))
+        if not q:
+            return None
+        for grupo in (list(self.discusion or []), self.voces_disponibles()):
+            for c in grupo:
+                n = "".join(self._norm_nombre(self._motor(c)[2]))
+                if n and (n == q or n.startswith(q) or q.startswith(n)):
                     return c
+        return None
+
+    def _voz_de_frase(self, f):
+        """La clave de voz de una frase. Se fija al ESCRIBIR el bloque (`clave`): un cambio de voz o de discusión a media cola
+        no reasigna las frases que el director ya repartió; solo las que no llevan voz siguen a la voz vigente."""
+        if f.get("clave"):
+            return f["clave"]
+        if f.get("vozde"):
+            c = self._clave_de_nombre(f["vozde"])
+            if c:
+                f["clave"] = c
+                return c
         return self.voz_clave
 
     def _voz_al_salir(self, seg):
@@ -232,7 +269,7 @@ class Directo:
         if seg.get("inmediato") or seg.get("relevo"):
             return
         claves = [self._voz_de_frase(f) for f in seg["frases"]]
-        if seg.get("voz_hecha") == self.voz_clave and len(set(claves)) == 1:
+        if seg.get("voz_hecha") == claves:
             return
         t0 = time.time()
         por_motor = {}
@@ -248,7 +285,7 @@ class Directo:
                 f = seg["frases"][i]
                 f["audio"], f["dur"], f["narra"] = ("/s/" + os.path.basename(wav)) if wav else None, dur, self._motor(c)[2]
         seg["dur"] = sum(f["dur"] + 0.25 for f in seg["frases"])
-        seg["voz_hecha"] = self.voz_clave
+        seg["voz_hecha"] = claves
         self._apunta(f"{seg['id']}: voz {', '.join(sorted(set(self._motor(c)[2] for c in claves)))} en {time.time() - t0:.1f} s"
                      f" ({sum(len(f['texto']) for f in seg['frases'])} caracteres)")
 
@@ -513,7 +550,10 @@ class Directo:
                 self.bib.usar_clip(clip)
             if f.get("pegatina") in self.bib.pegatinas:
                 self.bib.peg_usadas.append(f["pegatina"])
-            salida.append({"texto": f["texto"], "dur": dur, "vozde": f.get("voz"), "audio": "/s/" + os.path.basename(wav) if wav else None,
+            clave = self._clave_de_nombre(f.get("voz")) if f.get("voz") else None
+            if f.get("voz") and not clave:
+                self._apunta(f"{sid}: voz «{f.get('voz')}» sin reconocer en la frase {i + 1}: va con la vigente")
+            salida.append({"texto": f["texto"], "dur": dur, "vozde": f.get("voz"), "clave": clave, "audio": "/s/" + os.path.basename(wav) if wav else None,
                            "peg": peg, "clip": f"/cv/{clip}.mp4" if clip else None,
                            "rotulo": (f.get("rotulo") or None),
                            "ficha": f["ficha"] if isinstance(f.get("ficha"), dict) and f["ficha"].get("nombre") else None,
@@ -528,7 +568,7 @@ class Directo:
                 f["yt"] = self.yt.dar(tema)
         t_voz = time.time() - t0 - t_guion
         self._apunta(f"{sid}: guion {t_guion:.0f} s · voz {t_voz:.0f} s para {total:.0f} s · {sum(1 for s in salida if s['peg'])}/{len(salida)} con imagen")
-        return {"id": sid, "voz_hecha": None if f_voz is None else self.voz_clave, "tema": tema, "titulo": d.get("titulo") or tema, "resumen": d.get("resumen", ""),
+        return {"id": sid, "voz_hecha": None if f_voz is None else [self.voz_clave] * len(salida), "tema": tema, "titulo": d.get("titulo") or tema, "resumen": d.get("resumen", ""),
                 "opciones": [o for o in d.get("opciones", []) if isinstance(o, str)][:3], "frases": salida,
                 "proximos": [o for o in d.get("proximos", []) if isinstance(o, str)][:2],
                 "dur": total, "puente": bool(puente), "ver": ver, "coms": list(comentarios), "origen": (self.anuncio or {}).get("origen") if puente else None}
@@ -756,7 +796,10 @@ def crear_app(d):
             d.frase_al_aire = int(j.get("frase", 0))
             if d.frase_al_aire == 0 and "clip" not in j:
                 d.al_aire_medir(d.al_aire, j.get("dt"))
-        if isinstance(j.get("clip"), dict):         # qué clip está al aire (YouTube o disco)
+        if isinstance(j.get("clip"), dict) and j["clip"].get("fuente") == "rescate":   # el vigilante de la pantalla
+            d.rescates = getattr(d, "rescates", 0) + 1
+            d._apunta(f"VIGILANTE: {j['clip'].get('titulo', '')[:80]} → clip del disco (van {d.rescates})")
+        elif isinstance(j.get("clip"), dict):       # qué clip está al aire (YouTube o disco)
             d.clip_al_aire = {k: str(j["clip"].get(k, ""))[:120] for k in ("fuente", "titulo", "canal")}
             if d.clip_al_aire["fuente"] == "yt" and d.al_aire:
                 d.yt.al_aire(d.al_aire.get("tema"))

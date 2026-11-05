@@ -140,8 +140,10 @@ async function pedirSiguiente() {
   try {
     while (true) {
       let r;
-      try { r = await (await fetch("/api/siguiente?espera=15&pid=" + PID)).json(); }
+      try { r = await (await fetch("/api/siguiente?espera=15&pid=" + PID)).json(); ultimoPoll = Date.now(); }
       catch (e) { await new Promise(s => setTimeout(s, 1500)); continue; }
+      if (!r || typeof r !== "object") continue;
+      if (!r.espera && !Array.isArray(r.frases)) { console.warn("bloque raro", r); continue; }
       if (r.espera) { esperaInfo = r; if (r.fin) finPendiente = true; continue; }
       if (!vigente(r)) {                                 // del tema viejo: solo de relleno mientras llega el nuevo
         if (!relleno) { relleno = r; precargar(r); }
@@ -431,7 +433,29 @@ async function arrancarOST() {
 }
 
 // ---------------- estado del control (votación, avisos del chat) ----------------
+// el sondeo NUNCA se muere (5-nov: tras DETENER YA / fin la pantalla dejó de pedir y OBS dio negro ~2 min al reINICIAR):
+// leerEstado se reprograma pase lo que pase, y un vigilante relanza el long-poll o, como último recurso, recarga la página
+let ultimoEstado = Date.now(), ultimoPoll = Date.now(), esperandoDesde = null;
 async function leerEstado() {
+  try { await leerEstado0(); } catch (e) { console.error("leerEstado", e); }
+  ultimoEstado = Date.now();
+  setTimeout(leerEstado, MONITOR ? 600 : 1000);
+}
+setInterval(() => {
+  if (Date.now() - ultimoEstado > 8000) { ultimoEstado = Date.now(); leerEstado(); }      // la cadena se cortó: relanzarla
+  if (MONITOR || !arrancado) return;
+  const esperando = (enPuente || !seg) && !(audio && !audio.paused && !audio.ended);
+  if (esperando && siguiente && vigente(siguiente)) { empezarBloque(); return; }           // ya había bloque y nadie lo puso
+  if (esperando && !siguiente && !pidiendo) pedirSiguiente();                              // el long-poll se murió: otro
+  // red de seguridad: en vivo, esperando y sin una sola respuesta de /api/siguiente en 45 s → recargar
+  if (esperando && estado.encendido === "en_vivo") {
+    if (esperandoDesde === null) esperandoDesde = Date.now();
+    if (Date.now() - ultimoPoll > 45000 && Date.now() - esperandoDesde > 45000) {
+      console.warn("sin respuesta de /api/siguiente en 45 s estando en vivo: recargo"); location.reload();
+    }
+  } else esperandoDesde = null;
+}, 2000);
+async function leerEstado0() {
   try { estado = await (await fetch("/api/estado" + (MONITOR || !arrancado ? "" : "?pid=" + PID))).json(); } catch (e) {}
   if (verVisto !== null && (estado.tema_ver || 0) > verVisto) cambioT = ahora();
   if (estado.tema_ver !== undefined) verVisto = estado.tema_ver;
@@ -461,7 +485,6 @@ async function leerEstado() {
     if (an.origen === "chat") ponerAviso("El chat lo pidió · en un momento", an.tema, 5, SANGRE);
     anuncioVisto = an.t;
   }
-  setTimeout(leerEstado, MONITOR ? 600 : 1000);
 }
 
 // ---------------- dibujo ----------------

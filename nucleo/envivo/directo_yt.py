@@ -175,7 +175,10 @@ def configurar_obs(d, puerto=8790):
         c.set_video_settings(30, 1, 1920, 1080, 1920, 1080)
     except Exception:
         pass                                                   # con la salida activa no se puede: se queda como estaba
-    c.set_stream_service_settings("rtmp_custom", {"server": INGESTA, "key": d["clave"]})
+    try:
+        c.set_stream_service_settings("rtmp_custom", {"server": INGESTA, "key": d["clave"]})
+    except Exception:
+        pass                                                   # transmitiendo no se puede cambiar: ya está puesta
     return url
 
 

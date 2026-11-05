@@ -188,12 +188,14 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
    `python fab.py envivo cmd <tema|anuncio|mostrar|comentar|pausa|voz|votacion|estado|parar>` (desde 127.0.0.1 sin código),
    **skill global** `~/.claude/skills/envivo/SKILL.md` (comprueba `/api/estado` antes; si no corre, lo dice), «Anuncio» y
    «Mostrar» en el panel y la app. Probar desde otra terminal con la tele y medir cuánto tardan.
-4. **Donaciones de YouTube con prioridad**: leer `superChatEvent`/`superStickerEvent`/`newSponsorEvent`/`memberMilestoneChatEvent`
-   en `FuenteYouTube`, montos a MXN; un Super Chat con tema del juego cambia el tema en el bloque siguiente (gana el mayor
+4. **Donaciones de YouTube con prioridad** (**4-nov-2026: el usuario YA activó en Crónicas de Tamriel Super Chat, Super Stickers,
+   Super Thanks y Regalos** en Studio > Ingresos > Supers y regalos; aún sin ninguno recibido; en `nucleo/envivo` todavía no hay
+   código de donaciones): leer `superChatEvent`/`superStickerEvent`/`newSponsorEvent`/`memberMilestoneChatEvent`/
+   `membershipGiftingEvent` de `liveChatMessages.list` (`amountDisplayString`, `userComment`) en `FuenteYouTube`, montos a MXN; un Super Chat con tema del juego cambia el tema en el bloque siguiente (gana el mayor
    monto; cuenta como varios votos con tope); tarjeta especial del color del nivel, el narrador lo lee y agradece; nada
    tóxico ni fuera de reglas, texto sin retocar; si se hace el cambio de voz por chat, quien dona también elige voz;
    «donación simulada» en `/admin`, app y `fab.py envivo cmd donar`; registro en `_sesiones/<fecha>/donaciones.jsonl` y
-   total en el panel; escribir que hace falta el canal monetizado con Super Chat activado.
+   total en el panel. Lo que no se pueda probar sin un directo real queda anotado como «falta probar».
 5. Pendientes de lo anterior: afinar la búsqueda de YouTube y medir con 480p; ver por qué la tele dejó de abrir la página;
    candado de GPU por `seq` en Chatterbox.
 

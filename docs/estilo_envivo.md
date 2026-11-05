@@ -150,6 +150,34 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
    bloque; vigilar.
 5. Voz: OneCore Raúl por ahora; si el directo funciona, valorar una voz del canal.
 
+## Clips de YouTube en vivo, sin descargar (el usuario, 4-nov-2026, noche)
+«¿Se puede no bajar y solo reproducir y pasarlos al stream?» → `nucleo/envivo/yt_vivo.py` (`ClipsYT`):
+- Al cambiar de tema (y cada 20 min con el mismo) en segundo plano: haiku traduce el tema a una búsqueda en inglés →
+  `yt-dlp "ytsearch8:skyrim <búsqueda> gameplay no commentary" --flat-playlist -j` (solo metadatos, ~2 s) → filtro (≥ 2 min,
+  fuera tráiler/reacción/review/top/#shorts) → haiku elige 3 por título → `yt-dlp -g -f "bv*[height<=480][vcodec^=avc1]/18"`
+  (enlace directo de googlevideo, solo video, ~4 s cada uno; caduca en ~6 h y va atado a la IP pública de la casa: se renueva
+  pasadas 3 h). Cada clip se usa en cuanto llega su enlace y se mete también en los bloques que ya esperan en el búfer.
+- Tope de **12 llamadas a yt-dlp por minuto** y caché en memoria por tema; si YouTube frena (429 / «Sign in»), 2 min sin pedir.
+- Pantalla: una de cada dos frases lleva `yt` además del clip del disco; `prepararYT` arranca en un punto al azar entre el 10 y
+  el 85 % y, si no carga en 4 s o da error, entra el clip del disco sin que se note. `drawImage` de un video de otro dominio
+  funciona (no se leen píxeles del canvas principal). La pantalla informa qué clip está al aire (`clip_al_aire`).
+- Interruptor «Clips de YouTube en vivo» en `/admin` y «▶ YouTube en vivo» en la app (`/api/ajuste {"yt"}`), con la
+  fuente del clip al aire (▶ YouTube título · canal / 💾 disco).
+- **Probado en la tele (20:05-20:08):** clips de YouTube del tema («Skyrim | Part 31 | Stomping 2 Giants», «Giants and
+  Mammoths!») intercalados con los del disco, sin pantalla negra. **Latencia del cambio al primer clip de YouTube: 76,6 s**
+  (búsqueda 61 s por el tope de 6/min de entonces + esperar a la frase par del bloque siguiente). Con el tope a 12 y el clip
+  usable en cuanto llega su enlace, la búsqueda bajó a 51 s (sin medir al aire: ver abajo).
+- Problemas vistos: (1) con 720p la tele tardó ~28 s en enterarse del cambio de tema (el Chromecast se satura decodificando y
+  dibujando en el canvas) → 480p; falta medirlo. (2) haiku eligió mal en una búsqueda («Los dragones y sus gritos» → hombre
+  lobo en Riften, Skyrim VR): mejorar la búsqueda (sin traducir, o «<juego> <tema> gameplay» con palabras clave del tema) y
+  exigir que el título nombre algo del tema. (3) Tras varios reinicios del servidor la tele dejó de abrir la página (Puente TV
+  contestaba; ni cerrar y reabrir con `/api/tele` sirvió): quizá Android no deja abrir la ventana desde segundo plano si la
+  tele está en otra app. Las páginas ahora se sirven con `no-store` y la dirección lleva `&v=` (la tele usaba un
+  `pantalla.html` viejo en caché).
+- **RIESGO:** en un directo REAL de YouTube, el gameplay de otros canales puede activar reclamos de derechos de autor
+  (Content ID) y bloquear o cortar el directo. Para las pruebas en la tele no importa; para emitir, mejor clips propios
+  del disco o gameplay grabado por nosotros.
+
 ## APK «En vivo»: control de las pruebas desde el teléfono, SOLO en la wifi (el usuario, 4-nov-2026, noche)
 «No hace falta ngrok: voy a estar en la red local… es un control para manipular el stream en las pruebas.»
 - `python nucleo/envivo/android/construir_apk.py` → `nucleo/envivo/android/envivo.apk` (57 KB, fuera de git; misma receta

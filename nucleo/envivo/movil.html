@@ -85,6 +85,7 @@
       <div><div class="sub" id="bloque"></div><div class="frase" id="frase">Conectando…</div></div>
     </div>
     <div class="bufer" id="bufer" title="búfer"></div>
+    <div class="sub" id="clipTxt" style="margin-top:8px"></div>
     <div class="sub" id="buferTxt" style="margin-top:6px"></div>
   </section>
 
@@ -116,6 +117,7 @@
   <section class="tarjeta">
     <h2>Controles</h2>
     <div class="botones">
+      <button id="yt">▶ YouTube en vivo: sí</button>
       <button id="teleVer">📺 A la tele</button>
       <button id="teleQuitar">✕ Quitar de la tele</button>
       <button id="pausa">⏸ Pausa</button>
@@ -202,6 +204,9 @@ function pintar() {
   // búfer: un segmento por bloque, ancho ∝ duración (azul = respuesta al chat, rojo = frase puente, tenue = tema viejo)
   const b = E.bufer_det || [], tot = Math.max(60, b.reduce((s, x) => s + x.dur, 0));
   $("bufer").innerHTML = b.map(x => `<span class="${x.inmediato ? "p" : x.respuesta ? "r" : ""}${(x.ver || 0) < E.tema_ver && !x.respuesta ? " v" : ""}" style="width:${Math.max(3, x.dur / tot * 100)}%"></span>`).join("");
+  const ca = E.clip_al_aire;
+  $("clipTxt").textContent = ca ? (ca.fuente === "yt" ? `▶ YouTube: ${ca.titulo}${ca.canal ? " · " + ca.canal : ""}` : `💾 Disco: ${ca.titulo}`) : "";
+  $("yt").textContent = "▶ YouTube en vivo: " + (E.yt_activo ? "sí" : "no"); $("yt").classList.toggle("on", !!E.yt_activo);
   $("buferTxt").textContent = `Búfer ${E.bufer_s || 0} s · ${b.length} bloque(s) · escribiendo ${E.en_curso || 0} de ${E.guionistas || 2}` + (E.tiempo_medio ? ` · ~${E.tiempo_medio} s por bloque` : "");
   // tema
   const rk = C.ranking || [];
@@ -258,6 +263,7 @@ $("temaNuevo").onkeydown = e => { if (e.key === "Enter") cambiar(true); };
 $("enviar").onclick = () => comentar(false);
 $("sugerir").onclick = () => comentar(true);
 $("texto").onkeydown = e => { if (e.key === "Enter") comentar(false); };
+$("yt").onclick = () => api("api/ajuste", { yt: !E.yt_activo }).then(leerPronto);
 $("teleVer").onclick = () => api("api/tele", { accion: "ver" }).then(r => r.json()).then(j => aviso(j.ok ? "Directo en la tele" : "La tele no contesta: " + (j.error || "")));
 $("teleQuitar").onclick = () => api("api/tele", { accion: "quitar" }).then(() => aviso("Quitado de la tele"));
 $("guardarCodigo").onclick = guardarCodigo;

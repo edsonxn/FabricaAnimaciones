@@ -135,6 +135,8 @@
     </div>
     <div class="caja">
       <div class="fila"><label><input type="checkbox" id="votacion"> Votación 1 / 2 / 3 en pantalla</label></div>
+      <div class="fila"><label><input type="checkbox" id="ytvivo"> Clips de YouTube en vivo (enlace directo, sin descargar)</label></div>
+      <div class="fila" id="clipaire" style="opacity:.75"></div>
       <div class="eti" style="margin-top:8px">Votos (los «1/2/3» del chat cuentan solos; gana al cerrar el bloque)</div>
       <div class="ops" id="votos"></div>
     </div>
@@ -183,6 +185,7 @@ $("decidir").onclick = () => post("/api/chat/ajuste", { decidir: true });
 $("cada").onchange = () => post("/api/chat/ajuste", { cada_min: +$("cada").value });
 $("minp").onchange = () => post("/api/chat/ajuste", { min_pedidos: +$("minp").value });
 $("votacion").onchange = () => post("/api/ajuste", { votacion: $("votacion").checked });
+$("ytvivo").onchange = () => post("/api/ajuste", { yt: $("ytvivo").checked });
 $("pausa").onclick = () => post("/api/ajuste", { pausado: !e.pausado });
 $("modelo").onchange = () => post("/api/ajuste", { modelo: $("modelo").value });
 $("quitar").onclick = () => post("/api/chat/ajuste", { quitar_mostrar: true });
@@ -270,6 +273,9 @@ async function leer() {
     $("estado").textContent = e.pausado ? "PAUSADO" : e.estado;
     $("tmedio").textContent = e.tiempo_medio ? `≈ ${e.tiempo_medio} s por bloque` : "";
     $("votacion").checked = e.votacion;
+    $("ytvivo").checked = !!e.yt_activo;
+    const ca = e.clip_al_aire;
+    $("clipaire").textContent = ca ? (ca.fuente === "yt" ? "Al aire: ▶ YouTube · " + ca.titulo + (ca.canal ? " · " + ca.canal : "") : "Al aire: 💾 disco · " + ca.titulo) : "";
     $("pausa").textContent = e.pausado ? "Reanudar producción" : "Pausar producción";
     $("modelo").value = e.modelo;
     lista($("sug"), e.opciones, "Ir", null);

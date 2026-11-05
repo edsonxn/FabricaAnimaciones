@@ -29,6 +29,7 @@ from flask import Flask, abort, jsonify, request, send_file, send_from_directory
 AQUI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(AQUI))
 from envivo import chat as chat_mod, director, voz         # noqa: E402
+from envivo.yt_vivo import ClipsYT                          # noqa: E402
 from envivo.biblioteca import CANALES, VIDEOS, Biblioteca, palabras  # noqa: E402
 
 BUFER = 2           # bloques listos por delante del que está al aire: más = menos riesgo de hueco, más tarda un cambio de tema
@@ -66,12 +67,15 @@ class Directo:
         self.puente_inmediato, self.lat_min, self.lat_max = True, 3.0, 8.0
         self.cambios = {}                 # tema_ver → {"t", "tema", "origen", "puente": s, "bloque": s} (latencia real medida)
         self.latencias = deque(maxlen=12)
+        self.yt = ClipsYT(apunta=self._apunta, al_llegar=self._yt_llego)   # gameplay de YouTube en vivo (yt_vivo.py)
+        self.clip_al_aire = None                    # {"fuente": "yt"|"disco", "titulo", "canal"}: lo informa la pantalla
         self.chat = chat_mod.Chat(self)
         self._apunta(f"biblioteca: {len(self.bib.pegatinas)} pegatinas, {len(self.bib.clips)} clips, {len(self.bib.ost)} pistas de OST")
         if self.motor_voz is not voz:                # el modelo se carga antes del primer bloque (~20-40 s)
             t0 = time.time()
             self.motor_voz.preparar(self.voz, canal)
             self._apunta(f"voz Chatterbox «{self.voz}» lista en {time.time() - t0:.0f} s ({len(self.motor_voz._fonetica)} palabras de FONETICA)")
+        self.yt.pedir(self.tema)
         threading.Thread(target=self._productor, daemon=True).start()
 
     def _apunta(self, txt):
@@ -105,6 +109,7 @@ class Directo:
             ver = self.tema_ver
             self.cv.notify_all()
         self._apunta(f"TEMA NUEVO ({origen}): {tema}" + (f" · se tiraron {len(tirados)} bloques del búfer" if tirados else ""))
+        self.yt.pedir(tema)
         if self.puente_inmediato:
             threading.Thread(target=self._puente, args=(tema, ver, origen), daemon=True).start()
 
@@ -147,6 +152,15 @@ class Directo:
             self._apunta(f"{sid}: frase puente lista en {time.time() - t0:.1f} s ({dur:.1f} s de voz)")
         except Exception as e:
             self._apunta(f"frase puente falló: {e!r}")
+
+    def _yt_llego(self, tema):
+        """Los clips de YouTube llegaron (~20-30 s tras el cambio): se meten en los bloques del tema que ya esperan."""
+        with self.cv:
+            for s in self.cola:
+                if s.get("tema") == tema:
+                    for i, f in enumerate(s["frases"]):
+                        if i % 2 == 0 and not f.get("yt"):
+                            f["yt"] = self.yt.dar(tema)
 
     def al_aire_medir(self, seg, dt_pantalla=None):
         """Latencia real: del cambio de tema a la frase puente y al primer bloque escrito, al salir al aire."""
@@ -359,6 +373,11 @@ class Directo:
             if f.get("comentario") in coms:
                 self.chat.contestado(f["comentario"])
             total += dur + 0.25
+        # gameplay de YouTube del tema en una de cada dos frases (la pantalla cae al clip del disco si no carga en 4 s)
+        self.yt.pedir(tema)
+        for i, f in enumerate(salida):
+            if i % 2 == 0:
+                f["yt"] = self.yt.dar(tema)
         t_voz = time.time() - t0 - t_guion
         self._apunta(f"{sid}: guion {t_guion:.0f} s · voz {t_voz:.0f} s para {total:.0f} s · {sum(1 for s in salida if s['peg'])}/{len(salida)} con imagen")
         return {"id": sid, "tema": tema, "titulo": d.get("titulo") or tema, "resumen": d.get("resumen", ""),
@@ -378,6 +397,7 @@ class Directo:
                     "com_mostrar": self.chat.mostrar, "com_fijado": self.chat.fijado, "proximo_corte": self.chat.proximo_corte,
                     "tiempo_medio": round(sum(self.tiempos) / len(self.tiempos), 1) if self.tiempos else None,
                     "modelo": self.modelo, "anuncio": self.anuncio, "voz": self.voz,
+                    "yt_activo": self.yt.activo, "clip_al_aire": self.clip_al_aire,
                     "puente_inmediato": self.puente_inmediato, "lat_min": self.lat_min, "lat_max": self.lat_max,
                     "latencias": list(self.latencias), "guionistas": GUIONISTAS, "en_curso": len(self.en_curso),
                     "bufer_det": [{"titulo": s["titulo"], "dur": round(s["dur"]), "ver": s.get("ver"), "respuesta": bool(s.get("respuesta")),
@@ -458,12 +478,18 @@ def crear_app(d):
                     pass                            # la tele corta la conexión al cerrar la ventana: no es error
                 d._apunta("directo quitado de la tele")
             else:
-                url = f"http://{tele_mod.ip_hacia_tele()}:{request.host.split(':')[-1]}/?auto=1&codigo={CODIGO}"
+                url = f"http://{tele_mod.ip_hacia_tele()}:{request.host.split(':')[-1]}/?auto=1&codigo={CODIGO}&v={int(time.time())}"
                 tele_mod.web(url)
                 d._apunta(f"directo puesto en la tele: {url.split('&')[0]}")
             return jsonify(ok=True)
         except (SystemExit, Exception) as e:
             return jsonify(ok=False, error=str(e)[:200])
+
+    @app.after_request
+    def _sin_cache(r):                              # la tele guardaba el pantalla.html viejo: las páginas nunca en caché
+        if request.path in ("/", "/movil", "/admin", "/control"):
+            r.headers["Cache-Control"] = "no-store"
+        return r
 
     @app.get("/")
     def pantalla():
@@ -550,6 +576,10 @@ def crear_app(d):
                 d.modelo = j["modelo"]
             if "puente" in j:
                 d.puente_inmediato = bool(j["puente"])
+            if "yt" in j:
+                d.yt.activo = bool(j["yt"])
+                if d.yt.activo:
+                    d.yt.pedir(d.tema)
             if "lat_min" in j:
                 d.lat_min = max(0.0, min(60.0, float(j["lat_min"])))
                 d.lat_max = max(d.lat_max, d.lat_min)
@@ -563,8 +593,12 @@ def crear_app(d):
         j = request.get_json(silent=True) or {}
         if d.al_aire and j.get("id") == d.al_aire["id"]:
             d.frase_al_aire = int(j.get("frase", 0))
-            if d.frase_al_aire == 0:
+            if d.frase_al_aire == 0 and "clip" not in j:
                 d.al_aire_medir(d.al_aire, j.get("dt"))
+        if isinstance(j.get("clip"), dict):         # qué clip está al aire (YouTube o disco)
+            d.clip_al_aire = {k: str(j["clip"].get(k, ""))[:120] for k in ("fuente", "titulo", "canal")}
+            if d.clip_al_aire["fuente"] == "yt" and d.al_aire:
+                d.yt.al_aire(d.al_aire.get("tema"))
         return jsonify(ok=True)
 
     def _seguro(base, rel):
@@ -652,7 +686,7 @@ def main():
 
         def a_la_tele():
             try:
-                url = f"http://{tele_mod.ip_hacia_tele()}:{a.puerto}/?auto=1&codigo={CODIGO}"
+                url = f"http://{tele_mod.ip_hacia_tele()}:{a.puerto}/?auto=1&codigo={CODIGO}&v={int(time.time())}"
                 tele_mod.web(url)
                 d._apunta(f"pantalla enviada a la tele: {url.split('&')[0]}")
             except (SystemExit, Exception) as e:

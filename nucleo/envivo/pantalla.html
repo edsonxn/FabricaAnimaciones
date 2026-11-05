@@ -245,7 +245,40 @@ function prepararClip(i, url) {
   });
   return vidPrep[i];
 }
-async function ponerClip(url) {
+// gameplay de YouTube por enlace directo (yt_vivo.py): arranca en un punto al azar (10-85 %); si no carga en 4 s, el del disco
+function prepararYT(i, yt) {
+  const v = vids[i];
+  vidClip[i] = yt.url;
+  return new Promise(res => {
+    let fin = false;
+    const acaba = ok => { if (fin) return; fin = true; v.removeEventListener("error", mal); res(ok); };
+    const mal = () => acaba(false);
+    v.addEventListener("error", mal, { once: true });
+    v.addEventListener("loadedmetadata", () => { v.currentTime = yt.desde || (v.duration || 300) * 0.4;
+      v.addEventListener("seeked", () => acaba(true), { once: true }); }, { once: true });
+    v.src = yt.url; v.load();
+    setTimeout(() => acaba(false), 4000);
+  });
+}
+function avisaClip(fuente, titulo, canal) {
+  if (MONITOR || !seg) return;
+  fetch("/api/progreso", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id: seg.id, frase: idx, clip: { fuente, titulo, canal } }) }).catch(() => {});
+}
+async function ponerClip(url, yt) {
+  if (yt && yt.url && vidClip[vidCur] !== yt.url && !clipPendiente) {
+    clipPendiente = true;
+    const otro = 1 - vidCur;
+    try {
+      if (await prepararYT(otro, yt)) {
+        try { await vids[otro].play(); } catch (e) {}
+        vidFade = { de: vidCur, a: otro, t0: ahora() }; vidCur = otro;
+        avisaClip("yt", yt.titulo, yt.canal);
+        return;
+      }
+      vidClip[otro] = null; vidPrep[otro] = null;            // no cargó: el del disco, sin que se note
+    } finally { clipPendiente = false; }
+  }
   if (!url || vidClip[vidCur] === url || clipPendiente) return;
   clipPendiente = true;
   const otro = 1 - vidCur;
@@ -253,6 +286,7 @@ async function ponerClip(url) {
     await prepararClip(otro, url);
     try { await vids[otro].play(); } catch (e) {}
     vidFade = { de: vidCur, a: otro, t0: ahora() }; vidCur = otro;
+    avisaClip("disco", url.split("/").slice(-2).join("/"), "");
   } finally { clipPendiente = false; }
 }
 function clipSiguiente() {
@@ -307,7 +341,7 @@ function siguienteFrase() {
     }
   }
   if (f.rotulo) ponerAviso(seg.tema, f.rotulo, Math.max(3.2, (f.dur || 4) - 0.4));
-  if (f.clip) ponerClip(f.clip);
+  if (f.clip || f.yt) ponerClip(f.clip, f.yt);
   if (MONITOR) return;                                                  // el espejo no suena ni lleva el reloj
   // voz
   const dur = f.dur || 4;

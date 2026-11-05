@@ -1,0 +1,7 @@
+# Miniatura de «¿Qué pasó con los DWEMER?» (Flow, Nano Banana 2.1, 4-nov-2026, s3)
+Estilo PROPIO de Tamriel (`videos/tes_misiones_daedricas/prompt_miniatura.md`, `tes_sentinel_teaser`): pergamino + título blanco + píldoras.
+Ingredientes (pegado sintético): 1 miniatura del canal «8 dragones» (i.ytimg.com fKPDEaOYMxQ, composición), 2 centurión dwemer
+REAL de la wiki de Fandom (Dwemer_centurion.jpg).
+
+Prompt:
+YouTube thumbnail, 16:9, exactly the same layout, style and typography as image 1: an old aged parchment map background, warm brown and gold tones. On the left, huge bold white sans-serif text with a thick black outline in two lines: "DWEMER". Under it, a rounded bright yellow pill label with bold black text: "¿QUÉ LES PASÓ?" (spelled exactly Q-U-É with an acute accent on the E, and P-A-S-Ó with an acute accent on the final O, with opening and closing question marks). Under that, a smaller rounded black pill label with bold white text: "SKYRIM". On the right, the giant bronze Dwarven Centurion robot from image 2, faithful to image 2 (brass armor plates, glowing eyes, steam), standing in a dark underground Dwemer ruin with copper pipes, half of its body dissolving into glowing golden ash and sparks drifting away, as if vanishing; dramatic warm backlight, its glowing eyes are the brightest element. High contrast, crisp, readable at small size. Spell the text exactly: "DWEMER", "¿QUÉ LES PASÓ?", "SKYRIM". No other text, no watermark, no border.

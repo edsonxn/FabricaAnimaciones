@@ -25,6 +25,8 @@ de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido
 | Sonido del juego | OST oficial, `ambiente_por`, SFX del mismo juego | § Sonido original |
 | Lo que la voz dice que SUENA se OYE | Cada «escucha…», música, voz o grito nombrado: su tramo audible con la voz callada | § Sonido original, «Si la voz nombra un sonido» |
 | Campaña de suscripción (Runa, Tamriel) | 6-10 s hacia el 70-80 % | § CAMPAÑA DE SUSCRIPCIÓN |
+| Nada se sale del cuadro ni se encima (el usuario, 3-nov-2026, `tes_sentinel_teaser`: cifras de `contadores` cortadas por el borde derecho, una ficha tapando el título del intro) | Todo MG, ficha y pegatina con margen ≥ 4 % en su punto MÁS ancho; dos gráficos a la vez nunca se tapan | `python _bordes.py` (copiar de `videos/tes_sentinel_teaser/`) ANTES de renderizar: 0 encimados; con `x=.76` un `contadores` de `ancho=1100` se sale: x ≤ .70 o ancho menor |
+| Clip de otro TEMA (el usuario, regla 3) | Ni memes con escenas de series o películas | `video-meme` de búsqueda (p. ej. «When Stormcloak fans learn…» metía a un actor de Breaking Bad): mirar `previews/final_hoja.jpg` y rehacer |
 
 **Medición de referencia** (`tes_secretos_40`, por minuto): fichas 1,7 · MG 1,4 · mapas 0,7 · pegatinas 3,1 · comentarios 0,5.
 
@@ -365,6 +367,26 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   - **Banco de SFX reales en `nucleo/datos/sfx_juego/skyrim/`** (`_bajar.py`: misión, subir de nivel, lugar descubierto, monedas), en ~16 momentos clave y no en cada puesto, para no repetir.
   - **Flow pide aceptar «Rights to use this image» al pegar ingredientes en un proyecto nuevo: se acepta SIEMPRE con «I agree», sin preguntar (el usuario, 31-oct-2026: «siempre acepta eso de flow»; autorización permanente para todos los canales).** Solo cubre ese aviso: cualquier otra condición, política, cuenta o permiso nuevo de Flow se le sigue preguntando al usuario.
   - Disco: con E: dañado, `nuevo` igual crea junctions a E:; quitarlas al crear el video (`rmdir` y carpeta real en C:).
+
+### Lecciones de `tes_dwemer_desaparicion` (4-nov-2026, 191 beats, 27:43, siete voces ronda 2)
+- **«Voz total» de `seleccionar` MIENTE si hay frases en `voz/regenerar.json`:** solo suma las tomas válidas. Con ElevenLabs y nombres de lore,
+  Whisper rechazó 67 tomas buenas («Gellivor», «Vivek», «arroba…») y la voz parecía de 18:00 cuando medía 25:40; se amplió el guion para
+  nada (48 frases, 1 300 créditos tirados). ANTES de juzgar la duración: abrir `regenerar.json`, leer la hipótesis de cada toma en
+  `voz/eval.json` y poner `CER_MAX_POR_FRASE` (cer + 0,004) y `TAIL_MAX_POR_FRASE` (con ElevenLabs `tail_ratio` > 1 no es error) en guion.py.
+- **Anclas: el motor toma la PRIMERA aparición, sin mayúsculas ni tildes.** «Leído de una nota» casó con «Lo has leído de una nota» de
+  otra escena y la papeleta de votación duró 0,03 s; «Alftand, al suroeste de Hibernalia» casó con la lista de entradas de Blackreach.
+  Antes de `fx hoja`, buscar con un script las anclas que casan > 1 vez, las marcas que caen antes de `de` y los FX de < 1 s; arreglar con `#2`.
+- **Firmas de `mg_tes` que se escriben mal:** `cadena(titulo, [(texto, ruta|None)])`, `receta(titulo, [(ruta, nombre)], (ruta, nombre), efecto)`,
+  `ruleta(titulo, [(etiqueta, color)], paradas)`. `fx --seco` NO las ejecuta: llamar cada `fn` a 3 tiempos antes de `_bordes.py`.
+- **`_desencimar.py`** (en la carpeta del video): lee `previews/bordes.txt` y escribe `_ajustes.json` (acorta el gráfico chico que entró antes,
+  retrasa o quita el que entró después); efectos.py lo aplica al final por índice. 38 encimados → 0 en dos pasadas.
+- **Clips: 39 de 191 rehechos (20 %).** Memes que cuela la búsqueda: Rick y Morty, «Dagoth Ur be like», lucha libre, una marioneta, una
+  VTuber (Neuro-Sama) con su avatar encima, ilustraciones de canales de lore, gente real. Lo más rápido para la 2.ª vuelta: `--url` de un
+  video LIMPIO ya bajado (Loopy Longplays, Anarion Graphics, Morrowind Modding Showcases) con otro `--desde`. Ojo: un `--desde` mayor
+  que el video deja un `.mp4` de 261 bytes y `bajar` dice «ok».
+- **Calendario:** `canales` da el hueco por ciclo (3 d), pero `yt subir` aplica `separacion_min_horas` (96 h) y lo detiene: el hueco real es
+  el último programado + 96 h.
+- **Studio:** muestra «Plastitube» como canal activo, pero `studio.youtube.com/video/<id>/monetization` abre el video bien.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los
@@ -826,6 +848,8 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   sin ids; en bucles, `< /dev/null`.
 
 ## COMENTARIOS de la gente (el usuario, 27-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
+**SOLO COMENTARIOS RECIENTES EN PANTALLA (el usuario, 3-nov-2026, `tes_sentinel_teaser`: «pusiste un comentario de hace 8 meses… solo comentarios recientes máximo 1 semana y media»):** toda captura de comentario (agradecimiento, crítica o el que pidió el tema) tiene ≤ 10 días el día que se hace el video; `nucleo/comentarios.py` (`MAX_DIAS = 10`) se niega a hacer la pegatina de uno más viejo. Si no hay ≥ 4 agradecimientos recientes, se ponen los que haya; nunca se rellena con viejos. Lo viejo puede inspirar el guion (una corrección, un tema), pero no sale en pantalla.
+
 Que el público se sienta tomado en cuenta. Tres momentos:
 1. **ANTES DE CADA VIDEO (el usuario, 28-oct-2026), al proponer tema:** `python fab.py yt comentarios <canal> [dias]` →
    `canales/comentarios/<alias>.json` (fuera de git; recuerda qué ya se vio) y en pantalla tres listas por ♥:

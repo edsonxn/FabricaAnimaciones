@@ -1456,7 +1456,15 @@
    "md5": "ab1c4a9bed1833fa3c82d42028a2302e",
    "prompt": "Electric neon tube buzzing and flickering on, short crackle then steady low hum",
    "dur": 3.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "neon_enciende_2",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "estres_cuerpo__punos": {
    "id": "estres_cuerpo__punos",
@@ -2309,6 +2317,12 @@
      "canal": "",
      "nombre": "golpe",
      "fecha": "2026-10-26"
+    },
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "golpe_grave_3",
+     "fecha": "2026-11-04"
     }
    ]
   },
@@ -2830,7 +2844,15 @@
    "md5": "46fb28e6fed7e555e82cf8341713fc3f",
    "prompt": "Deep low horror impact boom, sub bass hit with a long dark reverberant tail, cinematic",
    "dur": 3.0,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "golpe_grave_1",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "sonic_exe__goteo": {
    "id": "sonic_exe__goteo",
@@ -3066,7 +3088,15 @@
    "md5": "29f9ffd7d351f09be25cc10daebf0815",
    "prompt": "Deep low horror impact boom, sub bass hit with a long dark reverberant tail, cinematic",
    "dur": 3.0,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "golpe_grave_2",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "terror_ben_drowned__latido": {
    "id": "terror_ben_drowned__latido",
@@ -3086,7 +3116,15 @@
    "md5": "ce706a710ec6bf907845df0f055de258",
    "prompt": "Heavy stone scraping slowly on a wooden floor, low rumble, horror",
    "dur": 2.48,
-   "canal": "sin"
+   "canal": "sin",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "piedra_arrastre_1",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "terror_ben_drowned__ping": {
    "id": "terror_ben_drowned__ping",
@@ -3696,7 +3734,15 @@
    "md5": "4a13297fe02d0e999edf9244464ea6e1",
    "prompt": "A candle flame being snuffed out, short hiss and a puff of smoke",
    "dur": 1.0,
-   "canal": "cronicas_warcraft"
+   "canal": "cronicas_warcraft",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "vela_apaga_1",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "wow_tres_noches__ataque": {
    "id": "wow_tres_noches__ataque",
@@ -4114,7 +4160,15 @@
    "md5": "722e253513e1e20cbb666c2076af1fea",
    "prompt": "Quill pen scratching quickly on parchment, writing",
    "dur": 3.0,
-   "canal": "cronicas_warcraft"
+   "canal": "cronicas_warcraft",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "pluma_papel",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "wow_tres_noches__portal": {
    "id": "wow_tres_noches__portal",
@@ -4244,7 +4298,15 @@
    "md5": "cbec80b50bf23ee751cac5dab3c85f2d",
    "prompt": "Deep dark drone rumble inside an ancient stone temple, ominous low hum",
    "dur": 6.0,
-   "canal": "cronicas_warcraft"
+   "canal": "cronicas_warcraft",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "aire_tumba",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "wow_tres_noches__tictac": {
    "id": "wow_tres_noches__tictac",
@@ -5868,7 +5930,15 @@
    "md5": "6bdc04addcbf1c5763eb7aa9b937612b",
    "prompt": "Old neon sign flickering on with a soft electric tick and a warm low buzz",
    "dur": 3.0,
-   "canal": "cuerpo_en_neon"
+   "canal": "cuerpo_en_neon",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "neon_enciende_1",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "duelo_cuerpo__niebla": {
    "id": "duelo_cuerpo__niebla",
@@ -6758,7 +6828,15 @@
    "md5": "a02a5ec8847da3be8eb473d37c258186",
    "prompt": "A heavy wax seal stamped hard onto thick parchment, deep thud, a cracking wax snap",
    "dur": 2.0,
-   "canal": "runa_caida"
+   "canal": "runa_caida",
+   "usos": [
+    {
+     "video": "ramses_ii",
+     "canal": "bitacora_perdida",
+     "nombre": "sello_cera",
+     "fecha": "2026-11-04"
+    }
+   ]
   },
   "er_melina_atrocidades__silbido": {
    "id": "er_melina_atrocidades__silbido",
@@ -8899,7 +8977,237 @@
    "prompt": "",
    "dur": 4.7,
    "canal": "cronicas_cod"
+  },
+  "ramses_ii__antorchas_1": {
+   "id": "ramses_ii__antorchas_1",
+   "video": "ramses_ii",
+   "nombre": "antorchas_1",
+   "archivo": "ramses_ii__antorchas_1.mp3",
+   "md5": "0cdfb709f35c26ad0f00465c5d0f030d",
+   "prompt": "",
+   "dur": 3.48,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__antorchas_2": {
+   "id": "ramses_ii__antorchas_2",
+   "video": "ramses_ii",
+   "nombre": "antorchas_2",
+   "archivo": "ramses_ii__antorchas_2.mp3",
+   "md5": "cfc303468a38f900c8142bb0d896eab0",
+   "prompt": "",
+   "dur": 3.48,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__botas_firmes": {
+   "id": "ramses_ii__botas_firmes",
+   "video": "ramses_ii",
+   "nombre": "botas_firmes",
+   "archivo": "ramses_ii__botas_firmes.mp3",
+   "md5": "7bd182fa67d2df3858fbccc46f6158dd",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__jet_aterriza": {
+   "id": "ramses_ii__jet_aterriza",
+   "video": "ramses_ii",
+   "nombre": "jet_aterriza",
+   "archivo": "ramses_ii__jet_aterriza.mp3",
+   "md5": "c428b913bc07df97847fff999fc69dab",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__linterna_archivo": {
+   "id": "ramses_ii__linterna_archivo",
+   "video": "ramses_ii",
+   "nombre": "linterna_archivo",
+   "archivo": "ramses_ii__linterna_archivo.mp3",
+   "md5": "cd7e64eb076acc52c4e4dad6616189f9",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__piedra_arrastre_2": {
+   "id": "ramses_ii__piedra_arrastre_2",
+   "video": "ramses_ii",
+   "nombre": "piedra_arrastre_2",
+   "archivo": "ramses_ii__piedra_arrastre_2.mp3",
+   "md5": "faa00c15b71499677fa607ce6c6d172a",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__viento_desierto": {
+   "id": "ramses_ii__viento_desierto",
+   "video": "ramses_ii",
+   "nombre": "viento_desierto",
+   "archivo": "ramses_ii__viento_desierto.mp3",
+   "md5": "eac175f7d2ff5353ed9313e6612301fd",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__whoosh_suave_1": {
+   "id": "ramses_ii__whoosh_suave_1",
+   "video": "ramses_ii",
+   "nombre": "whoosh_suave_1",
+   "archivo": "ramses_ii__whoosh_suave_1.mp3",
+   "md5": "9fdb5740d06b91706d3b94a12d680e8d",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__whoosh_suave_2": {
+   "id": "ramses_ii__whoosh_suave_2",
+   "video": "ramses_ii",
+   "nombre": "whoosh_suave_2",
+   "archivo": "ramses_ii__whoosh_suave_2.mp3",
+   "md5": "c71e8478ee5014ab2822dfd458a36af2",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__whoosh_suave_3": {
+   "id": "ramses_ii__whoosh_suave_3",
+   "video": "ramses_ii",
+   "nombre": "whoosh_suave_3",
+   "archivo": "ramses_ii__whoosh_suave_3.mp3",
+   "md5": "11008a36aa8e397ddf3601c854fbda06",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__agua_sube": {
+   "id": "ramses_ii__agua_sube",
+   "video": "ramses_ii",
+   "nombre": "agua_sube",
+   "archivo": "ramses_ii__agua_sube.mp3",
+   "md5": "5cd418ee29d493b671c7c2ea5d7d1b23",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__carros_carga_1": {
+   "id": "ramses_ii__carros_carga_1",
+   "video": "ramses_ii",
+   "nombre": "carros_carga_1",
+   "archivo": "ramses_ii__carros_carga_1.mp3",
+   "md5": "8debdf4e39efcdda54e9a511217e9b61",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__carros_carga_2": {
+   "id": "ramses_ii__carros_carga_2",
+   "video": "ramses_ii",
+   "nombre": "carros_carga_2",
+   "archivo": "ramses_ii__carros_carga_2.mp3",
+   "md5": "35912a003eadebc393a0ef51903a1d0b",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__cincel_piedra_1": {
+   "id": "ramses_ii__cincel_piedra_1",
+   "video": "ramses_ii",
+   "nombre": "cincel_piedra_1",
+   "archivo": "ramses_ii__cincel_piedra_1.mp3",
+   "md5": "9b5e6b1ced7a406fdd30c8dcb85db48a",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__cincel_piedra_2": {
+   "id": "ramses_ii__cincel_piedra_2",
+   "video": "ramses_ii",
+   "nombre": "cincel_piedra_2",
+   "archivo": "ramses_ii__cincel_piedra_2.mp3",
+   "md5": "64bf0d1f3478f6b26ecee7d206c07ae2",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__cuerdas_tension": {
+   "id": "ramses_ii__cuerdas_tension",
+   "video": "ramses_ii",
+   "nombre": "cuerdas_tension",
+   "archivo": "ramses_ii__cuerdas_tension.mp3",
+   "md5": "21789653cc68dc1bc39b8c12c11f1ad1",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__fuegos_artificiales": {
+   "id": "ramses_ii__fuegos_artificiales",
+   "video": "ramses_ii",
+   "nombre": "fuegos_artificiales",
+   "archivo": "ramses_ii__fuegos_artificiales.mp3",
+   "md5": "2a5f35f17414d760ece3a01940effe19",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__laboratorio_zumbido": {
+   "id": "ramses_ii__laboratorio_zumbido",
+   "video": "ramses_ii",
+   "nombre": "laboratorio_zumbido",
+   "archivo": "ramses_ii__laboratorio_zumbido.mp3",
+   "md5": "3fe4438540511f2f345e987dbc044630",
+   "prompt": "",
+   "dur": 3.48,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__sierra_piedra": {
+   "id": "ramses_ii__sierra_piedra",
+   "video": "ramses_ii",
+   "nombre": "sierra_piedra",
+   "archivo": "ramses_ii__sierra_piedra.mp3",
+   "md5": "f9fd9e29cefa4c1bfce8a6789e011b5e",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__tablilla_arcilla": {
+   "id": "ramses_ii__tablilla_arcilla",
+   "video": "ramses_ii",
+   "nombre": "tablilla_arcilla",
+   "archivo": "ramses_ii__tablilla_arcilla.mp3",
+   "md5": "d23fd0df6b998be4f547b32540446eb3",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__tambor_guerra_1": {
+   "id": "ramses_ii__tambor_guerra_1",
+   "video": "ramses_ii",
+   "nombre": "tambor_guerra_1",
+   "archivo": "ramses_ii__tambor_guerra_1.mp3",
+   "md5": "fff725b06944492232b95475746ea801",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__tambor_guerra_2": {
+   "id": "ramses_ii__tambor_guerra_2",
+   "video": "ramses_ii",
+   "nombre": "tambor_guerra_2",
+   "archivo": "ramses_ii__tambor_guerra_2.mp3",
+   "md5": "f5343daee3531aea36982f9d111bae56",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "bitacora_perdida"
+  },
+  "ramses_ii__vela_apaga_2": {
+   "id": "ramses_ii__vela_apaga_2",
+   "video": "ramses_ii",
+   "nombre": "vela_apaga_2",
+   "archivo": "ramses_ii__vela_apaga_2.mp3",
+   "md5": "70bdb3bfdc6430de8bdcd1cada0fafcd",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "bitacora_perdida"
   }
  },
- "actualizado": "2026-11-04 10:36"
+ "actualizado": "2026-11-04 22:34"
 }

@@ -600,7 +600,14 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "ia_como_ve",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-04"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "apozol__lyria_tramo2": {
@@ -2866,7 +2873,14 @@
     "dinamica": 0.44
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "ia_como_ve",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-04"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "cinco_bichos__lyria_tramo4": {
@@ -14015,7 +14029,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "ia_como_ve",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-04"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "sin_medicina__lyria_tramo2": {
@@ -22504,6 +22525,9 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23291,6 +23315,9 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -24436,7 +24463,14 @@
     "dinamica": 0.76
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "ia_como_ve",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-04"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "arana_amarilla__lyria_tramo1": {
@@ -28010,7 +28044,14 @@
     "dinamica": 0.7
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "ia_como_ve",
+     "tramo": 5,
+     "desde": 0.0,
+     "fecha": "2026-11-04"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "telarana_rota__lyria_tramo2": {
@@ -35935,6 +35976,9 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3"
    ]
   },
@@ -36019,6 +36063,9 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3"
    ]
   },
@@ -36098,6 +36145,9 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
@@ -36196,6 +36246,12 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3"
    ]
   },
@@ -36285,7 +36341,13 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
-    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3"
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3"
    ]
   },
   "wow_primera_semana__lyria_tramo13": {
@@ -40924,7 +40986,805 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-11-04"
+  },
+  "ia_como_ve__lyria_tramo1": {
+   "id": "ia_como_ve__lyria_tramo1",
+   "video": "ia_como_ve",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ia_como_ve\\audio\\lyria_tramo1.mp3",
+   "archivo": "ia_como_ve__lyria_tramo1.mp3",
+   "md5": "cbca26e0b2399fef8a6bc1eb5b8c6bbe",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Cómo VE una Inteligencia Artificial? (lo que pasa dentro de su cabeza)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "pixeles",
+    "gato"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings and a few soft synth pads for the 'inside the machine' parts; curious, wonder-filled, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: arana_techo__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-04\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about a tiny house spider: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:16 (137 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:50] Section 1: Intensity 3/10. Late-night quiet: a single low bassoon note, sparse ticking pizzicato, a small mysterious celesta figure, then a bright twist.\n[0:50 - 1:28] Section 2: Intensity 4/10. Light and inquisitive: marimba ostinato starts, upright bass walks gently, a sense of introducing a character.\n[1:28 - 2:16] Section 3: Intensity 4/10. Delicate and intricate: celesta and harp-like pizzicato weaving patterns, curious and a little sneaky.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 3,
+     "desc": "Late-night quiet: a single low bassoon note, sparse ticking pizzicato, a small mysterious celesta figure, then a bright twist."
+    },
+    {
+     "t0": 50,
+     "t1": 88,
+     "intensidad": 4,
+     "desc": "Light and inquisitive: marimba ostinato starts, upright bass walks gently, a sense of introducing a character."
+    },
+    {
+     "t0": 88,
+     "t1": 136,
+     "intensidad": 4,
+     "desc": "Delicate and intricate: celesta and harp-like pizzicato weaving patterns, curious and a little sneaky."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 133.88,
+    "rms_db": -15.4,
+    "tempo": 117.5,
+    "brillo_hz": 825,
+    "energia": [
+     0.35,
+     0.38,
+     0.49,
+     0.65,
+     0.72,
+     0.73,
+     0.79,
+     0.81,
+     0.82,
+     1.0,
+     0.64,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ia_como_ve__lyria_tramo2": {
+   "id": "ia_como_ve__lyria_tramo2",
+   "video": "ia_como_ve",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ia_como_ve\\audio\\lyria_tramo2.mp3",
+   "archivo": "ia_como_ve__lyria_tramo2.mp3",
+   "md5": "be58af1f94e26071687f5ca2de136710",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Cómo VE una Inteligencia Artificial? (lo que pasa dentro de su cabeza)",
+   "tramo": 2,
+   "escenas": [
+    "neurona",
+    "capas"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings and a few soft synth pads for the 'inside the machine' parts; curious, wonder-filled, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: cinco_bichos__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-04\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about small house bugs: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:19 (139 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:09] Section 1: Intensity 5/10. Sneaky night prowl: soft walking upright bass, muted marimba, a spooky-but-silly feeling that turns tender for the mother.\n[1:09 - 2:19] Section 2: Intensity 4/10. Mock-serious rumor: bassoon and low strings with a wink, then a warm tender felt piano for the devoted mother.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 69,
+     "intensidad": 5,
+     "desc": "Sneaky night prowl: soft walking upright bass, muted marimba, a spooky-but-silly feeling that turns tender for the mother."
+    },
+    {
+     "t0": 69,
+     "t1": 139,
+     "intensidad": 4,
+     "desc": "Mock-serious rumor: bassoon and low strings with a wink, then a warm tender felt piano for the devoted mother."
+    }
+   ],
+   "intensidad": [
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 137.77,
+    "rms_db": -14.8,
+    "tempo": 117.5,
+    "brillo_hz": 984,
+    "energia": [
+     0.57,
+     0.56,
+     0.65,
+     0.78,
+     0.84,
+     0.6,
+     0.68,
+     0.8,
+     0.86,
+     0.88,
+     1.0,
+     0.65
+    ],
+    "huecos": [],
+    "dinamica": 0.44
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ia_como_ve__lyria_tramo3": {
+   "id": "ia_como_ve__lyria_tramo3",
+   "video": "ia_como_ve",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ia_como_ve\\audio\\lyria_tramo3.mp3",
+   "archivo": "ia_como_ve__lyria_tramo3.mp3",
+   "md5": "6c82ac7395700f92de9e6248c1d19eb3",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Cómo VE una Inteligencia Artificial? (lo que pasa dentro de su cabeza)",
+   "tramo": 3,
+   "escenas": [
+    "aprender",
+    "imagenet"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings and a few soft synth pads for the 'inside the machine' parts; curious, wonder-filled, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: arana_amarilla__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-04\n\nPlayful, sunny nature documentary score for a hand-drawn cartoon about a big garden spider: pizzicato strings, marimba, acoustic guitar, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Warm, curious and a little mischievous, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:31 (151 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 0:50] Section 1: Intensity 6/10. Quick comic action: a sudden pizzicato burst, spinning marimba runs, then a satisfied little cadence.\n[0:50 - 2:07] Section 2: Intensity 4/10. Spooky campfire tale turned playful mystery: a low clarinet legend melody, then curious questioning celesta.\n[2:07 - 2:31] Section 3: Intensity 6/10. Wobbly and funny: trembling tremolo strings and bouncing marimba, then a quick drop.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 6,
+     "desc": "Quick comic action: a sudden pizzicato burst, spinning marimba runs, then a satisfied little cadence."
+    },
+    {
+     "t0": 50,
+     "t1": 127,
+     "intensidad": 4,
+     "desc": "Spooky campfire tale turned playful mystery: a low clarinet legend melody, then curious questioning celesta."
+    },
+    {
+     "t0": 127,
+     "t1": 151,
+     "intensidad": 6,
+     "desc": "Wobbly and funny: trembling tremolo strings and bouncing marimba, then a quick drop."
+    }
+   ],
+   "intensidad": [
+    6,
+    4,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 149.89,
+    "rms_db": -14.9,
+    "tempo": 117.5,
+    "brillo_hz": 959,
+    "energia": [
+     0.7,
+     0.87,
+     1.0,
+     0.82,
+     0.57,
+     0.73,
+     0.69,
+     0.71,
+     0.77,
+     0.84,
+     0.59,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ia_como_ve__lyria_tramo4": {
+   "id": "ia_como_ve__lyria_tramo4",
+   "video": "ia_como_ve",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ia_como_ve\\audio\\lyria_tramo4.mp3",
+   "archivo": "ia_como_ve__lyria_tramo4.mp3",
+   "md5": "fee1f366f4e8a4f1aba369e35eb7a767",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Cómo VE una Inteligencia Artificial? (lo que pasa dentro de su cabeza)",
+   "tramo": 4,
+   "escenas": [
+    "parches",
+    "palabras"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings and a few soft synth pads for the 'inside the machine' parts; curious, wonder-filled, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: sin_medicina__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-11-04\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:18 (138 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 1:14] Section 1: Intensity 5/10. Quiet mystery growing into awe: sparse flute and soft low drums, a patient build to one luminous, moving moment, then a calm human warmth.\n[1:14 - 1:52] Section 2: Intensity 3/10. Clear and friendly modern groove: light pizzicato and piano, marimba, a gentle smile in the music.\n[1:52 - 2:18] Section 3: Intensity 3/10. Return to the opening theme, now warm and resolved: celesta, felt piano and flute, a smile, then a calm slow fade.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 5,
+     "desc": "Quiet mystery growing into awe: sparse flute and soft low drums, a patient build to one luminous, moving moment, then a calm human warmth."
+    },
+    {
+     "t0": 74,
+     "t1": 112,
+     "intensidad": 3,
+     "desc": "Clear and friendly modern groove: light pizzicato and piano, marimba, a gentle smile in the music."
+    },
+    {
+     "t0": 112,
+     "t1": 138,
+     "intensidad": 3,
+     "desc": "Return to the opening theme, now warm and resolved: celesta, felt piano and flute, a smile, then a calm slow fade."
+    }
+   ],
+   "intensidad": [
+    5,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "juguetón",
+     "misterio",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 134.97,
+    "rms_db": -14.8,
+    "tempo": 117.5,
+    "brillo_hz": 896,
+    "energia": [
+     0.39,
+     0.5,
+     0.6,
+     0.6,
+     0.72,
+     0.78,
+     0.69,
+     0.68,
+     1.0,
+     0.92,
+     0.37,
+     0.16
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ia_como_ve__lyria_tramo5": {
+   "id": "ia_como_ve__lyria_tramo5",
+   "video": "ia_como_ve",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ia_como_ve\\audio\\lyria_tramo5.mp3",
+   "archivo": "ia_como_ve__lyria_tramo5.mp3",
+   "md5": "d4376f9051cf76696a1c5b85cdc65e3b",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Cómo VE una Inteligencia Artificial? (lo que pasa dentro de su cabeza)",
+   "tramo": 5,
+   "escenas": [
+    "trucos",
+    "cierre"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings and a few soft synth pads for the 'inside the machine' parts; curious, wonder-filled, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: telarana_rota__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-04\n\nBIBLIOTECA: frio_extremo__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival in the Ice Age: wooden flute, marimba, soft hand drums, pizzicato strings, celesta, glassy bowed vibraphone for the cold, felt piano and upright bass. Playful and human, with moments of wonder and coziness. Never epic, never horror, no modern electronics. Total length: exactly 1:25 (85 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained warm chord that can flow into the next piece.\n\n[0:00 - 1:25] Section 1: Intensity 4/10. Warmth arriving: crackling-feel hand drums, warm flute melody over pizzicato, glowing and hopeful.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 85,
+     "intensidad": 4,
+     "desc": "Warmth arriving: crackling-feel hand drums, warm flute melody over pizzicato, glowing and hopeful."
+    }
+   ],
+   "intensidad": [
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "esperanza",
+     "frío",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 85.55,
+    "rms_db": -14.7,
+    "tempo": 161.5,
+    "brillo_hz": 1073,
+    "energia": [
+     0.38,
+     0.36,
+     0.3,
+     0.7,
+     0.99,
+     1.0,
+     0.96,
+     0.9,
+     0.87,
+     0.94,
+     0.96,
+     0.47
+    ],
+    "huecos": [],
+    "dinamica": 0.7
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ramses_ii__lyria_tramo1": {
+   "id": "ramses_ii__lyria_tramo1",
+   "video": "ramses_ii",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ramses_ii\\audio\\lyria_tramo1.mp3",
+   "archivo": "ramses_ii__lyria_tramo1.mp3",
+   "md5": "6b26f81f15faf27640457f9b3d137eaf",
+   "canal": "bitacora_perdida",
+   "estilo_video": "documental",
+   "titulo_video": "Ramsés II: el faraón que se fabricó a sí mismo",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "nieto"
+   ],
+   "estilo": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator.",
+   "prompt": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator. Total length: exactly 2:00 (120 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a low drone. End on a sustained grave tone that can cross-fade.\n\n[0:00 - 0:53] Section 1: Intensity 5/10. Cold open: low drone, a single frame drum hit, airport night ambience feeling, slow mysterious build.\n[0:53 - 2:00] Section 2: Intensity 6/10. Origins: soft oud and ney over low strings, a solemn dynastic theme slowly rising.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 53,
+     "intensidad": 5,
+     "desc": "Cold open: low drone, a single frame drum hit, airport night ambience feeling, slow mysterious build."
+    },
+    {
+     "t0": 53,
+     "t1": 120,
+     "intensidad": 6,
+     "desc": "Origins: soft oud and ney over low strings, a solemn dynastic theme slowly rising."
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "coro",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "laúd",
+     "percusión",
+     "piano"
+    ],
+    "animo": [
+     "frío",
+     "misterio",
+     "oscuro",
+     "solemne"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 118.41,
+    "rms_db": -15.3,
+    "tempo": 161.5,
+    "brillo_hz": 817,
+    "energia": [
+     0.48,
+     0.59,
+     0.56,
+     0.82,
+     0.8,
+     0.74,
+     0.92,
+     0.84,
+     0.95,
+     1.0,
+     0.87,
+     0.19
+    ],
+    "huecos": [],
+    "dinamica": 0.81
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ramses_ii__lyria_tramo2": {
+   "id": "ramses_ii__lyria_tramo2",
+   "video": "ramses_ii",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ramses_ii\\audio\\lyria_tramo2.mp3",
+   "archivo": "ramses_ii__lyria_tramo2.mp3",
+   "md5": "5e3aa4fecfae64c8c14eabfefe9b4129",
+   "canal": "bitacora_perdida",
+   "estilo_video": "documental",
+   "titulo_video": "Ramsés II: el faraón que se fabricó a sí mismo",
+   "tramo": 2,
+   "escenas": [
+    "kadesh",
+    "tratado"
+   ],
+   "estilo": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator.",
+   "prompt": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator. Total length: exactly 2:40 (160 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Start from the held tone, build to war drums, collapse into silence, resolve into a calm stately theme.\n\n[0:00 - 1:46] Section 1: Intensity 6/10. War: pounding war drums, tense ostinato strings, chaos, then a hollow empty silence for the stalemate.\n[1:46 - 2:40] Section 2: Intensity 5/10. Peace: calm noble strings and a warm horn, diplomatic and stately.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 106,
+     "intensidad": 6,
+     "desc": "War: pounding war drums, tense ostinato strings, chaos, then a hollow empty silence for the stalemate."
+    },
+    {
+     "t0": 106,
+     "t1": 160,
+     "intensidad": 5,
+     "desc": "Peace: calm noble strings and a warm horn, diplomatic and stately."
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "laúd",
+     "percusión",
+     "piano",
+     "tambores tribales"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "misterio",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 159.63,
+    "rms_db": -15.0,
+    "tempo": 107.7,
+    "brillo_hz": 843,
+    "energia": [
+     0.48,
+     0.59,
+     0.66,
+     0.63,
+     0.78,
+     0.91,
+     1.0,
+     0.63,
+     0.52,
+     0.61,
+     0.59,
+     0.49
+    ],
+    "huecos": [],
+    "dinamica": 0.52
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ramses_ii__lyria_tramo3": {
+   "id": "ramses_ii__lyria_tramo3",
+   "video": "ramses_ii",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ramses_ii\\audio\\lyria_tramo3.mp3",
+   "archivo": "ramses_ii__lyria_tramo3.mp3",
+   "md5": "665153c1d649dd7db8d9fbd84bc7a343",
+   "canal": "bitacora_perdida",
+   "estilo_video": "documental",
+   "titulo_video": "Ramsés II: el faraón que se fabricó a sí mismo",
+   "tramo": 3,
+   "escenas": [
+    "constructor",
+    "familia"
+   ],
+   "estilo": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator.",
+   "prompt": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator. Total length: exactly 2:29 (149 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Start majestic and slow, end in a quiet mournful lament.\n\n[0:00 - 1:06] Section 1: Intensity 6/10. Monuments: majestic slow brass and choir, the sun rising inside a temple, awe.\n[1:06 - 2:29] Section 2: Intensity 6/10. Family and loss: intimate oud, mournful cello, a funeral lament for lost sons.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 66,
+     "intensidad": 6,
+     "desc": "Monuments: majestic slow brass and choir, the sun rising inside a temple, awe."
+    },
+    {
+     "t0": 66,
+     "t1": 149,
+     "intensidad": 6,
+     "desc": "Family and loss: intimate oud, mournful cello, a funeral lament for lost sons."
+    }
+   ],
+   "intensidad": [
+    6,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "coro",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "laúd",
+     "metales",
+     "percusión",
+     "piano"
+    ],
+    "animo": [
+     "misterio",
+     "oscuro",
+     "solemne",
+     "tierno",
+     "triste",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental"
+    ]
+   },
+   "medidas": {
+    "dur": 147.93,
+    "rms_db": -15.1,
+    "tempo": 80.7,
+    "brillo_hz": 836,
+    "energia": [
+     0.44,
+     0.5,
+     0.84,
+     0.79,
+     1.0,
+     0.95,
+     1.0,
+     0.77,
+     0.75,
+     0.76,
+     0.71,
+     0.26
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
+  },
+  "ramses_ii__lyria_tramo4": {
+   "id": "ramses_ii__lyria_tramo4",
+   "video": "ramses_ii",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\ramses_ii\\audio\\lyria_tramo4.mp3",
+   "archivo": "ramses_ii__lyria_tramo4.mp3",
+   "md5": "575d20cb1452ec8306eb4440967e0217",
+   "canal": "bitacora_perdida",
+   "estilo_video": "documental",
+   "titulo_video": "Ramsés II: el faraón que se fabricó a sí mismo",
+   "tramo": 4,
+   "escenas": [
+    "escondite",
+    "ozymandias",
+    "cierre"
+   ],
+   "estilo": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator.",
+   "prompt": "Dark cinematic documentary score about an ancient Egyptian pharaoh: low strings, deep drones, frame drums, oud and ney flute, distant choir, sparse piano. Slow, grave and mysterious like a true-crime history documentary; melodies kept low under a narrator. Total length: exactly 2:26 (147 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Start dark and secretive, open into lonely desert air, finish with a grand processional and a final held note.\n\n[0:00 - 0:32] Section 1: Intensity 4/10. Hidden mummies: dark suspense, creeping low strings, secret cave.\n[0:32 - 1:49] Section 2: Intensity 6/10. Ozymandias: lonely desert wind, a solo voice, then a rising rescue theme for Abu Simbel.\n[1:49 - 2:26] Section 3: Intensity 5/10. Golden parade and epilogue: a grand processional theme fading into a single held note.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 32,
+     "intensidad": 4,
+     "desc": "Hidden mummies: dark suspense, creeping low strings, secret cave."
+    },
+    {
+     "t0": 32,
+     "t1": 109,
+     "intensidad": 6,
+     "desc": "Ozymandias: lonely desert wind, a solo voice, then a rising rescue theme for Abu Simbel."
+    },
+    {
+     "t0": 109,
+     "t1": 146,
+     "intensidad": 5,
+     "desc": "Golden parade and epilogue: a grand processional theme fading into a single held note."
+    }
+   ],
+   "intensidad": [
+    4,
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "coro",
+     "cuerdas",
+     "drone",
+     "flauta",
+     "laúd",
+     "percusión",
+     "piano"
+    ],
+    "animo": [
+     "misterio",
+     "oscuro",
+     "tenso",
+     "triste",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "oriental",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 147.1,
+    "rms_db": -15.1,
+    "tempo": 161.5,
+    "brillo_hz": 893,
+    "energia": [
+     0.47,
+     0.51,
+     0.54,
+     0.72,
+     0.66,
+     0.71,
+     0.72,
+     0.74,
+     0.81,
+     1.0,
+     0.96,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-04"
   }
  },
- "actualizado": "2026-11-04 10:35"
+ "actualizado": "2026-11-04 22:35"
 }

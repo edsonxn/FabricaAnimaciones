@@ -1,0 +1,1530 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.645,
+  "tipo": "video",
+  "texto": "Una raza entera. Ciudades bajo tierra, máquinas de vapor, un dios de latón. Y un día, en un solo instante, nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.645,
+  "t1": 17.115,
+  "tipo": "video",
+  "texto": "No dejaron ni una tumba. Solo sus máquinas, que siguen trabajando casi cuatro mil años después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.115,
+  "t1": 26.549,
+  "tipo": "video",
+  "texto": "como si el jefe fuera a volver mañana. Hoy toca el misterio más grande de The Elder Scrolls. Qué pasó con los dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.549,
+  "t1": 35.449,
+  "tipo": "video",
+  "texto": "Nos lo pidió @chuymoreno6820 en el video de Sentinel: será interesante saber por fin qué pasó con los dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.449,
+  "t1": 42.914,
+  "tipo": "video",
+  "texto": "Pues marchando. Veinte secretos, todos comprobados en UESP, con sus fuentes en la descripción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.914,
+  "t1": 50.464,
+  "tipo": "video",
+  "texto": "De por qué los llamas enanos, hasta el momento en que Skyrim te deja repetir la desaparición con tus propias manos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.464,
+  "t1": 61.29,
+  "tipo": "video",
+  "texto": "Y como os gustó tanto, vuelven las siete voces. Pero esta vez hay marcador. Recuento de los comentarios de Sentinel, primeras horas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.29,
+  "t1": 69.771,
+  "tipo": "video",
+  "texto": "El Profeta, cuatro votos. Hope, dos. MariCarmen, dos. Yo, Johnny, dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.771,
+  "t1": 75.953,
+  "tipo": "video",
+  "texto": "Y Edoardo, José y Mario. Cero. Ni uno. Ni su madre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 75.953,
+  "t1": 85.649,
+  "tipo": "video",
+  "texto": "Edoardo. Me tocan el dieciocho y el diecisiete. Cero votos, y aun así sigo siendo el único serio de este canal. José, para servirte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.649,
+  "t1": 94.28,
+  "tipo": "video",
+  "texto": "Dieciséis y quince, los falmer. Y hoy, sin voz de locutor, que me lo pidieron. Mario. Catorce y trece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.28,
+  "t1": 103.643,
+  "tipo": "video",
+  "texto": "Blackreach y la expedición maldita. Prometo correr menos. No mucho menos. Hope. Doce, once y diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.643,
+  "t1": 112.081,
+  "tipo": "video",
+  "texto": "Las máquinas que hacen magia. Y sí, con hache. MariCarmen. Nueve, ocho y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.081,
+  "t1": 121.734,
+  "tipo": "video",
+  "texto": "El dios de latón. Y al que me robe un voto, ya sabe dónde vivo. Yo soy el Profeta. Los cinco últimos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.734,
+  "t1": 129.551,
+  "tipo": "video",
+  "texto": "El que va primero se queda con el final. Así está escrito. Y el seis es mío. Por fin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.551,
+  "t1": 137.631,
+  "tipo": "video",
+  "texto": "El humano tras el telón narra un secreto. Uno. Y os vais a enterar de cómo se hace. Qué miedo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.631,
+  "t1": 146.411,
+  "tipo": "video",
+  "texto": "Empiezo yo, que alguien tiene que abrir. Y quédate hasta el número uno, porque es lo único que Skyrim te deja hacer que ni los mejores magos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.411,
+  "t1": 153.985,
+  "tipo": "video",
+  "texto": "de Tamriel consiguieron explicar. Número veinte. No eran enanos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.985,
+  "t1": 164.348,
+  "tipo": "video",
+  "texto": "En Skyrim todo es enano. Ruinas enanas, armadura enana, esferas enanas. Y sin embargo, los dwemer no eran bajitos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.348,
+  "t1": 170.588,
+  "tipo": "video",
+  "texto": "Dwemer significa algo así como el pueblo profundo, los elfos de lo hondo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.588,
+  "t1": 180.745,
+  "tipo": "video",
+  "texto": "Eran mer, elfos, primos de los altmer y de los elfos oscuros. Lo de enanos es el nombre que usa el Imperio, y la fábula cuenta de dónde sale:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.745,
+  "t1": 189.986,
+  "tipo": "video",
+  "texto": "de los gigantes. Para un gigante, cualquier elfo es pequeño, y llamaban así, con cariño, a sus amigos dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.986,
+  "t1": 198.7,
+  "tipo": "video",
+  "texto": "O sea, que el nombre de una de las razas más listas de Tamriel es un mote de gigante. Como si a ti te bautizara un mamut.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.7,
+  "t1": 207.793,
+  "tipo": "video",
+  "texto": "Tenían más apodos. Sotha Sil, uno de los dioses de Morrowind, los llamaba los hijos del latón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.793,
+  "t1": 216.225,
+  "tipo": "video",
+  "texto": "En el diecinueve, las máquinas que nadie apagó. Las arañas, las esferas y los centuriones se llaman animunculi.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.225,
+  "t1": 224.813,
+  "tipo": "video",
+  "texto": "Y según UESP, siguen funcionando en ciudades perdidas bajo tierra, haciendo el trabajo que les mandaron sus amos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.813,
+  "t1": 232.976,
+  "tipo": "video",
+  "texto": "La araña se esconde en las tuberías y salta. La esfera llega rodando, se despliega y a veces trae ballesta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.976,
+  "t1": 242.565,
+  "tipo": "video",
+  "texto": "Y el centurión espera inmóvil en su soporte de carga. Escupe vapor como si fuera un grito, y sus golpes están a la altura de los de un dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 242.565,
+  "t1": 249.57,
+  "tipo": "video",
+  "texto": "Truco: no puede bajar los brazos ni la cabeza. Si te pegas a sus pies, casi no te toca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.57,
+  "t1": 258.37,
+  "tipo": "video",
+  "texto": "Al caer, siempre suelta su núcleo dinamo y una gema de alma enorme. Y solo uno en todo Skyrim patrulla, el de Bthardamz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.37,
+  "t1": 266.661,
+  "tipo": "video",
+  "texto": "Los demás llevan milenios de pie, esperando. Casi cuatro mil años sin vacaciones. Ni un sindicato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.661,
+  "t1": 274.613,
+  "tipo": "video",
+  "texto": "Así cualquiera construye una civilización. Gracias, Johnny. Ahora, en serio. Número dieciocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.613,
+  "t1": 283.897,
+  "tipo": "video",
+  "texto": "Vives dentro de una ciudad dwemer. Markarth, la capital del Reach, está construida dentro de una antigua ciudad dwemer. Las calles,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.897,
+  "t1": 292.143,
+  "tipo": "video",
+  "texto": "las cascadas, todo es suyo. Y el castillo del yarl, Understone Keep, es el viejo palacio dwemer tallado en la montaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.143,
+  "t1": 303.307,
+  "tipo": "video",
+  "texto": "Los humanos solo se mudaron. Debajo sigue la ciudad original, Nchuand-Zel. Una expedición de magos de Markarth bajó sin hacer caso al sabio de la corte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 303.307,
+  "t1": 311.624,
+  "tipo": "video",
+  "texto": "Encuentras sus cuerpos y sus diarios uno a uno. Y la última palanca que tocaron vuelve a encender las defensas de los dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 311.624,
+  "t1": 320.43,
+  "tipo": "video",
+  "texto": "Así que la próxima vez que discutas con el yarl, recuerda que estás en el salón de otro. Y que el dueño no ha dicho que se haya ido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.43,
+  "t1": 325.921,
+  "tipo": "video",
+  "texto": "En el diecisiete, el hombre que más sabe de ellos, y la piedra que esconde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 325.921,
+  "t1": 335.971,
+  "tipo": "video",
+  "texto": "Calcelmo, el mago altmer de Markarth, es según el juego el mayor experto en los dwemer de todo Tamriel. Tiene un museo propio, y te recibe con un aviso:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.971,
+  "t1": 343.186,
+  "tipo": "video",
+  "texto": "cuidado con las vitrinas, que algunas son muy frágiles. Su gran obra es traducir el idioma de los falmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.186,
+  "t1": 353.367,
+  "tipo": "video",
+  "texto": "Y su secreto está en lo alto de su torre: una losa enorme, con las dos lenguas grabadas. En la misión del Gremio de Ladrones, Respuestas difíciles,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 353.367,
+  "t1": 361.698,
+  "tipo": "video",
+  "texto": "te cuelas en su torre y le haces un calco a la piedra con carbón y papel. Pero lo mejor está en sus libros. En Enanos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.698,
+  "t1": 370.2,
+  "tipo": "video",
+  "texto": "tercer volumen, Calcelmo avisa: no hay prueba de que desaparecieran en un solo día. Pudieron ser años. O décadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.2,
+  "t1": 377.931,
+  "tipo": "video",
+  "texto": "Y no descarta nada: una peste, magia contaminada, experimentos con Aetherius, o un viaje a Oblivion.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.931,
+  "t1": 385.43,
+  "tipo": "video",
+  "texto": "El mayor experto de Tamriel, y su conclusión es que no sabe. Por eso es el mayor experto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.43,
+  "t1": 397.2,
+  "tipo": "video",
+  "texto": "Una pausa, que hoy toca correo. Y esta vez, con razón. @federicoherrera2105 nos dijo que no podemos decir jarl así como se escribe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 397.2,
+  "t1": 405.53,
+  "tipo": "video",
+  "texto": "Tiene toda la razón. Se dice yarl. Y de paso hemos corregido otra que nos señalasteis: no es Oblivión, agudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 405.53,
+  "t1": 412.387,
+  "tipo": "video",
+  "texto": "Es Oblivion. Gracias, Federico. Ya has oído a Edoardo decirlo bien dos veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.387,
+  "t1": 422.205,
+  "tipo": "video",
+  "texto": "Cuéntalas. José. Número dieciséis. Los falmer no eran monstruos. Los hicieron así.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.205,
+  "t1": 432.474,
+  "tipo": "video",
+  "texto": "Antes de ser falmer, eran los elfos de las nieves, los dueños de Skyrim. Cuando llegaron los nórdicos de Ysgramor, los fueron echando hasta casi extinguirlos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 432.474,
+  "t1": 440.533,
+  "tipo": "video",
+  "texto": "Desesperados, pidieron refugio a sus primos de bajo tierra: los dwemer. Y se lo dieron. A cambio de un precio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 440.533,
+  "t1": 449.631,
+  "tipo": "video",
+  "texto": "Según UESP, los dwemer obligaron a sus protegidos a comer solo hongos tóxicos, que los fueron convirtiendo en esclavos ciegos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 449.631,
+  "t1": 454.211,
+  "tipo": "video",
+  "texto": "Las cámaras de tortura que ves en las ruinas, probablemente servían para controlarlos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 454.211,
+  "t1": 464.729,
+  "tipo": "video",
+  "texto": "Y no está claro si bastó el hongo o si hizo falta el paso de generaciones. Al final se rebelaron. La guerra del Risco, la llamaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.729,
+  "t1": 475.43,
+  "tipo": "video",
+  "texto": "Décadas peleando bajo tierra. Y aquí viene lo bueno: esa guerra acabó de golpe. Porque un día, el enemigo dejó de estar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.43,
+  "t1": 481.34,
+  "tipo": "video",
+  "texto": "En el quince, la batalla que nunca empezó. En el libro Los falmer, un estudio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.34,
+  "t1": 490.95,
+  "tipo": "video",
+  "texto": "que puedes leer en una posada de Hibernalia o en el museo de Calcelmo, se cuenta el final de esa guerra. Los falmer se prepararon para el golpe definitivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.95,
+  "t1": 499.39,
+  "tipo": "video",
+  "texto": "Salieron a buscar a sus enemigos dwemer para la última batalla. Y se encontraron con que la raza entera había desaparecido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.39,
+  "t1": 508.729,
+  "tipo": "video",
+  "texto": "Imagina preparar durante décadas tu venganza, ensayar el discurso, afilar la espada, y que el otro no se presente. Ni avisa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 508.729,
+  "t1": 517.329,
+  "tipo": "video",
+  "texto": "Los falmer se quedaron con las ciudades, con las máquinas, y con la oscuridad. Hoy los encuentras en casi cada ruina dwemer de Skyrim,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.329,
+  "t1": 525.139,
+  "tipo": "video",
+  "texto": "todavía ahí abajo. Una curiosidad que cuenta el folclore nórdico: Ysgramor les cortaba la nariz a los elfos de las nieves,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.139,
+  "t1": 532.93,
+  "tipo": "video",
+  "texto": "para distinguirlos de los demás elfos. Por eso los falmer no tienen nariz, según los nórdicos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.93,
+  "t1": 540.709,
+  "tipo": "video",
+  "texto": "Muy bonito, José, pero casi lloro. Número catorce. Hay un mundo entero debajo de Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.709,
+  "t1": 549.257,
+  "tipo": "video",
+  "texto": "Blackreach. Una caverna inmensa, con luz propia, bajo la comarca de Hibernalia. Y el mapa del juego solo te enseña una parte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.257,
+  "t1": 558.687,
+  "tipo": "video",
+  "texto": "Se entra por tres ruinas: Alftand, al suroeste de Hibernalia; Mzinchaleft, al suroeste de Dawnstar; y Raldbthar, al oeste de Ventalia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.687,
+  "t1": 567.011,
+  "tipo": "video",
+  "texto": "Y para abrirlas hace falta una esfera de sintonía. Abajo hay una ciudad muerta, ahora de los falmer, un observatorio al norte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.011,
+  "t1": 576.705,
+  "tipo": "video",
+  "texto": "un lago con cascadas, y hongos gigantes que brillan. Y sobre la ciudad, un gran globo naranja. Si le lanzas el grito de Fuerza Implacable,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.705,
+  "t1": 584.943,
+  "tipo": "video",
+  "texto": "viene un dragón: Vulthuryol. Solo una vez. Además, es el único sitio de Skyrim donde crece la raíz Nirn carmesí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.943,
+  "t1": 593.568,
+  "tipo": "video",
+  "texto": "Así que si alguna vez un elfo te pidió treinta, ya sabes dónde lloraste. En el trece, los que bajaron a buscarlos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.568,
+  "t1": 602.187,
+  "tipo": "video",
+  "texto": "Alftand, al suroeste de Hibernalia. Una expedición imperial, la de Sulla Trebatius, excavó el glaciar buscando tesoros dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.187,
+  "t1": 612.657,
+  "tipo": "video",
+  "texto": "Lo que encuentras es su lista de muertos. Valie, en una sala de tortura. Endrast, que huyó de los falmer y murió escondido, con su diario contándolo todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.657,
+  "t1": 621.755,
+  "tipo": "video",
+  "texto": "Y dos hermanos khajiit. J'zhar, muerto. Y J'darr, con un hacha, de pie sobre el cuerpo de su hermano, y hostil contigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 621.755,
+  "t1": 630.275,
+  "tipo": "video",
+  "texto": "Los dos últimos, Sulla y Umana, acaban peleándose entre ellos en la catedral. Y casi siempre gana Umana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 630.275,
+  "t1": 636.595,
+  "tipo": "video",
+  "texto": "Moraleja: los dwemer desaparecieron, y la gente que va a buscarlos tiene la mala costumbre de hacer lo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.595,
+  "t1": 643.77,
+  "tipo": "video",
+  "texto": "Pero con menos estilo. Y otra pausa, esta para dar las gracias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.77,
+  "t1": 653.55,
+  "tipo": "video",
+  "texto": "@Miguel_Salvatierra dice que fue un gran trabajo en equipo, y que con las características de cada voz se hizo más interesante. @MelVal54,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.55,
+  "t1": 663.3,
+  "tipo": "video",
+  "texto": "muchas gracias. @MoonrakerYo79, gracias por toda la info. Y @ShadowPriestBear dice que estuvo muy, muy bien logrado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.3,
+  "t1": 672.051,
+  "tipo": "video",
+  "texto": "Y le da su voto a MariCarmen. Se lo apunto. Y @minecrafttv2081 se rio con las siete voces compitiendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.051,
+  "t1": 678.548,
+  "tipo": "video",
+  "texto": "Esa era la idea. Y aquí salgo yo, el humano tras el telón. Leemos todos los comentarios:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 678.548,
+  "t1": 688.399,
+  "tipo": "video",
+  "texto": "los que nos felicitan, los que nos corrigen, y los que votan. Con ellos mejoramos cada video. Y los que más corrige son los suyos. Que si la música,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.399,
+  "t1": 697.789,
+  "tipo": "video",
+  "texto": "que si la voz, que si el ritmo. Porque hace falta. Mario, ¿esto era correr menos?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 697.789,
+  "t1": 706.242,
+  "tipo": "video",
+  "texto": "Gracias, señor filtrador. Mario, respira. Me toca. Número doce. Construían con sonido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 706.242,
+  "t1": 715.602,
+  "tipo": "video",
+  "texto": "Los dwemer tenían arquitectos tonales. La arquitectura tonal es, según UESP, manipular el sonido para cambiar la realidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 715.602,
+  "t1": 724.687,
+  "tipo": "video",
+  "texto": "Usaban su propia voz, amplificada con collares mágicos. Y fabricaban resonadores que alteraban el cerebro de hombres y elfos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 724.687,
+  "t1": 730.613,
+  "tipo": "video",
+  "texto": "calma, placer, paranoia o terror. En Skyrim lo tocas tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 730.613,
+  "t1": 738.578,
+  "tipo": "video",
+  "texto": "En Arkngthamz, una ruina del Reach, hay una cerradura tonal: cinco resonadores que tienes que golpear en orden.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.578,
+  "t1": 749.602,
+  "tipo": "video",
+  "texto": "Cada vez que fallas, el juego te castiga: primero arañas, luego esferas, luego un centurión. Y mientras tanto, una balista dwemer te dispara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 749.602,
+  "t1": 757.93,
+  "tipo": "video",
+  "texto": "Y fíjate en esto: el jefe de esos arquitectos tonales era Kagrenac. Guárdate el nombre. Va a volver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 757.93,
+  "t1": 766.092,
+  "tipo": "video",
+  "texto": "En el once, la guerra que los dwemer perdieron contra sí mismos. En Dawnguard, un libro, Las guerras del aeterio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 766.092,
+  "t1": 773.219,
+  "tipo": "video",
+  "texto": "te cuenta que cuatro ciudades dwemer alrededor de Arkngthamz resistieron a los nórdicos durante siglos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 773.219,
+  "t1": 781.023,
+  "tipo": "video",
+  "texto": "Y se hundieron en solo tres años, peleando entre ellas por armas hechas de aeterio, un cristal azul que brilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 781.023,
+  "t1": 791.73,
+  "tipo": "video",
+  "texto": "La misión de la forja la guía Katria, el fantasma de una aventurera que murió en un terremoto dentro de Arkngthamz. Te cuenta que su aprendiz le robó la investigación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.73,
+  "t1": 800.13,
+  "tipo": "video",
+  "texto": "Juntas cuatro fragmentos: de Arkngthamz, del Cruce del Pueblo Profundo, de Raldbthar y de un almacén al sur de Mzulft.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.13,
+  "t1": 810.478,
+  "tipo": "video",
+  "texto": "Y en las ruinas de Bthalft, un ascensor baja a la forja. Pero solo puedes hacer una pieza: la corona, que te da dos piedras guardianas a la vez;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 810.478,
+  "t1": 817.488,
+  "tipo": "video",
+  "texto": "el escudo, que vuelve etéreo al enemigo; o el báculo, que invoca a una araña o una esfera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.488,
+  "t1": 827.93,
+  "tipo": "video",
+  "texto": "Y Katria, al irse, te deja su arco, Céfiro, que dispara un treinta por ciento más rápido. Con un encargo: cuídamelo bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 827.93,
+  "t1": 833.868,
+  "tipo": "video",
+  "texto": "En el diez, la máquina que ve todo Skyrim. Mzulft, al sur de Ventalia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 833.868,
+  "t1": 841.742,
+  "tipo": "video",
+  "texto": "Los magos del Sínodo imperial montaron allí un proyecto secreto. Los falmer los mataron a casi todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 841.742,
+  "t1": 852.111,
+  "tipo": "video",
+  "texto": "El último, Gavros Plinius, muere en tus brazos con una frase a medias: el cristal, ya no está, busca a Paratus, en el oculario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 852.111,
+  "t1": 860.011,
+  "tipo": "video",
+  "texto": "El oculario es una máquina dwemer de lentes que concentra la luz. Le pones el cristal, la ajustas con escarcha y con fuego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.011,
+  "t1": 869.36,
+  "tipo": "video",
+  "texto": "y proyecta un mapa entero de Skyrim. Y en el mapa aparece lo que el Sínodo buscaba: el bastón de Magnus, en Labyrinthian.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 869.36,
+  "t1": 877.83,
+  "tipo": "video",
+  "texto": "Incluso se cuela en la proyección un monje de la Orden Psijic, Nerien. Y un dato de bonus: Mzulft es el sitio de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 877.83,
+  "t1": 887.806,
+  "tipo": "video",
+  "texto": "Skyrim donde más lingotes dwemer puedes sacar. Hasta cuatrocientos noventa y ocho. Por si te sobra la capacidad de carga. Que no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 887.806,
+  "t1": 894.856,
+  "tipo": "video",
+  "texto": "Una pausa más, que esta va por nosotras. @GalinaVenegas-d1w nos escribió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 894.856,
+  "t1": 903.019,
+  "tipo": "video",
+  "texto": "qué ridícula la voz femenina. ¿Cuál de las dos, Galina? Porque somos dos. Y yo tengo dos votos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 903.019,
+  "t1": 911.432,
+  "tipo": "video",
+  "texto": "Y yo otros dos. Así que, con mucho cariño, la ridícula empata con Johnny. Y le gana a tres señores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.432,
+  "t1": 919.718,
+  "tipo": "video",
+  "texto": "Gracias por escucharnos hasta el final, que eso también cuenta. Y si votas, vota por la menos ridícula. Que soy yo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 919.718,
+  "t1": 931.178,
+  "tipo": "video",
+  "texto": "Lo dejamos en los comentarios. MariCarmen, empiezo. Número nueve. Los dwemer leían los Pergaminos Antiguos con una máquina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 931.178,
+  "t1": 938.631,
+  "tipo": "video",
+  "texto": "¿Recuerdas al sacerdote de la Polilla que se quedaba ciego leyendo un pergamino? Los dwemer encontraron otra forma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 938.631,
+  "t1": 946.391,
+  "tipo": "video",
+  "texto": "En la búsqueda principal, Septimus Signus, un erudito que vive en una cueva helada al norte de Hibernalia, te dice que los dwemer",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 946.391,
+  "t1": 956.133,
+  "tipo": "video",
+  "texto": "escondieron en Blackreach un modo de leer los Pergaminos Antiguos. Ese modo es el oculario de la Torre de Mzark, en un pináculo al suroeste de Blackreach.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 956.133,
+  "t1": 961.794,
+  "tipo": "video",
+  "texto": "Una máquina de lentes colgantes, con un podio de botones y una ranura para un léxico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 961.794,
+  "t1": 971.973,
+  "tipo": "video",
+  "texto": "Pulsas los botones, las lentes se alinean, y el pergamino baja a tus manos. El de la misión de Dragonrend, el que te enseña el grito para tumbar a Alduin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 971.973,
+  "t1": 982.93,
+  "tipo": "video",
+  "texto": "Y bajo el podio hay un esqueleto, Drokt. Su diario cuenta que se obsesionó con la máquina y murió sin conseguir enfocarla. Mal día para leer las instrucciones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 982.93,
+  "t1": 989.948,
+  "tipo": "video",
+  "texto": "En el ocho, no creían en nada. Según UESP, la cultura dwemer era agnóstica,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 989.948,
+  "t1": 998.621,
+  "tipo": "video",
+  "texto": "y prefería la razón a la fe. Despreciaban a los daedra, y si había dioses para ellos, eran la razón y la lógica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 998.621,
+  "t1": 1006.19,
+  "tipo": "video",
+  "texto": "Para un dwemer, un dios no era alguien a quien rezar. Era un problema de ingeniería. En Elder Scrolls Online,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1006.19,
+  "t1": 1015.414,
+  "tipo": "video",
+  "texto": "un cuento dwemer tiene este chiste: al menos yo no juro por un dios que no solo es imaginario, sino que encima está muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1015.414,
+  "t1": 1023.474,
+  "tipo": "video",
+  "texto": "Ojo: esos cuentos, los Cuentos antiguos de los dwemer, los escribió un autor que firmaba con seudónimo, Marobar Sul.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1023.474,
+  "t1": 1033.172,
+  "tipo": "video",
+  "texto": "Así que de fiable, poco. Pero de gracioso, mucho. Y ese desprecio importa. Porque un pueblo que no cree en los dioses,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1033.172,
+  "t1": 1040.462,
+  "tipo": "video",
+  "texto": "tarde o temprano, intenta fabricarse uno. En el siete, el dios de latón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1040.462,
+  "t1": 1051.802,
+  "tipo": "video",
+  "texto": "El Numidium. También lo llaman el dios de latón o la piel divina. Lo construyó Kagrenac para que fuera un dios nuevo, alimentado por un corazón muy especial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1051.802,
+  "t1": 1058.582,
+  "tipo": "video",
+  "texto": "Más de tres mil años después, en la segunda era, ochocientos noventa y seis, Tiber Septim lo puso en marcha,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1058.582,
+  "t1": 1066.719,
+  "tipo": "video",
+  "texto": "con la Mantella como corazón. Y con él terminó de conquistar Tamriel: derribó a los altos elfos en las Islas de Estivalia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1066.719,
+  "t1": 1076.619,
+  "tipo": "video",
+  "texto": "Un solo gólem. Un continente entero. Y en la tercera era, cuatrocientos diecisiete, siete potencias activaron su propio Numidium a la vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1076.619,
+  "t1": 1084.685,
+  "tipo": "video",
+  "texto": "y el tiempo se rompió: la Distorsión del Oeste, la de Sentinel. En Morrowind, Dagoth Ur construyó otro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1084.685,
+  "t1": 1090.766,
+  "tipo": "video",
+  "texto": "el Akulakhan. Lo destruyes tú, en la tercera era, cuatrocientos veintisiete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1090.766,
+  "t1": 1100.43,
+  "tipo": "video",
+  "texto": "Una raza desaparece, y lo que deja olvidado en un cajón le basta a un emperador para conquistar el mundo. Imagina lo que no se dejaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1100.43,
+  "t1": 1109.528,
+  "tipo": "video",
+  "texto": "Antes del final, un dato. De cada cien que ven este canal, solo once están suscritos. Somos seis mil cuatrocientos ochenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1109.528,
+  "t1": 1117.93,
+  "tipo": "video",
+  "texto": "Si te suscribes, llegamos a diez mil. Y no desaparecemos. Que aquí no somos dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1117.93,
+  "t1": 1125.523,
+  "tipo": "video",
+  "texto": "Gracias, MariCarmen. Y ahora, mi secreto. Número seis. La caja que nadie debía abrir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1125.523,
+  "t1": 1135.731,
+  "tipo": "video",
+  "texto": "Septimus Signus tiene en su cueva una caja dwemer enorme. Dice que dentro está el corazón de un dios. Para abrirla te manda a la Torre de Mzark con su léxico,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1135.731,
+  "t1": 1143.979,
+  "tipo": "video",
+  "texto": "y luego a sacar sangre de cinco elfos: altmer, bosmer, dunmer, orco y falmer. Fíjate en la lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1143.979,
+  "t1": 1152.474,
+  "tipo": "video",
+  "texto": "Cinco clases de elfo. Falta uno, porque de ese no queda ni una gota en todo el mundo: el dwemer. La caja se abre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1152.474,
+  "t1": 1161.742,
+  "tipo": "video",
+  "texto": "Y dentro no hay ningún corazón. Hay un libro: el Oghma Infinium. Septimus solo alcanza a decir: ¿es solo un libro?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1161.742,
+  "t1": 1170.66,
+  "tipo": "video",
+  "texto": "Hermaeus Mora lo levanta en el aire y lo deshace. De Septimus queda un montón de ceniza. Y ya está. Así se narra un secreto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1170.66,
+  "t1": 1180.248,
+  "tipo": "video",
+  "texto": "Con datos, con suspense, y sin presumir. Lo has leído de una nota. Y tú tienes cuatro votos y aún no has dicho nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1180.248,
+  "t1": 1187.449,
+  "tipo": "video",
+  "texto": "Adelante, Profeta. Llegamos al cinco. El corazón bajo la montaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1187.449,
+  "t1": 1195.769,
+  "tipo": "video",
+  "texto": "Bajo la Montaña Roja de Morrowind, los dwemer encontraron algo que no era de este mundo: el corazón de Lorkhan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1195.769,
+  "t1": 1204.186,
+  "tipo": "video",
+  "texto": "el dios que creó Nirn y al que los demás dioses le arrancaron el corazón. Kagrenac, el arquitecto tonal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1204.186,
+  "t1": 1211.048,
+  "tipo": "video",
+  "texto": "vio en él lo que todo dwemer quería: energía. La de un dios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1211.048,
+  "t1": 1222.847,
+  "tipo": "video",
+  "texto": "Su plan, según el libro Metafísica divina, era crear con él un dios nuevo. Recuperar su tierra, y quizá hacer inmortales a los dwemer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1222.847,
+  "t1": 1232.795,
+  "tipo": "video",
+  "texto": "Para los chimer, los antepasados de los elfos oscuros, aquello era una blasfemia. Para los dwemer, solo era un proyecto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1232.795,
+  "t1": 1241.145,
+  "tipo": "video",
+  "texto": "Y fíjate en algo. Metafísica divina está escrito en dwemeris. Ni UESP tiene una traducción legible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1241.145,
+  "t1": 1247.93,
+  "tipo": "video",
+  "texto": "Lo único que explica cómo querían hacerlo, nadie lo puede leer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1247.93,
+  "t1": 1254.91,
+  "tipo": "video",
+  "texto": "En el cuatro, tres herramientas. Kagrenac forjó tres piezas para trabajar el corazón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1254.91,
+  "t1": 1264.648,
+  "tipo": "video",
+  "texto": "Sunder, un martillo para sacarle una cantidad exacta de poder. Keening, una hoja corta, para desollar y enfocar ese poder.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1264.648,
+  "t1": 1271.741,
+  "tipo": "video",
+  "texto": "Y Wraithguard, un guantelete, porque sin él empuñar las otras dos suele matarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1271.741,
+  "t1": 1282.161,
+  "tipo": "video",
+  "texto": "Kagrenac era famoso por ser meticuloso y prudente. Pero un herrero suyo, Bthuand Mzahnch, escribió un tratado, El huevo del tiempo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1282.161,
+  "t1": 1291.574,
+  "tipo": "video",
+  "texto": "quitándole importancia a los riesgos. Otros dwemer avisaron: los efectos secundarios podían ser enormes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1291.574,
+  "t1": 1300.336,
+  "tipo": "video",
+  "texto": "Hubo una reunión, alguien dijo que no pasaba nada, y nadie volvió a verlos. Lo de siempre en cualquier empresa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1300.336,
+  "t1": 1308.566,
+  "tipo": "video",
+  "texto": "Y la última carta del día. @jhonfeddiszabalamoreno9056 nos escribió en el video de las cosas inútiles:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1308.566,
+  "t1": 1316.477,
+  "tipo": "video",
+  "texto": "se nota que Kyrim no es lo tuyo. Y es verdad. Kyrim no es lo nuestro. Nunca lo hemos jugado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1316.477,
+  "t1": 1327.93,
+  "tipo": "video",
+  "texto": "Lo nuestro es Skyrim, con ese. Pero gracias por la confianza. Si algún día sale Kyrim, serás el primero en enseñárnoslo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1327.93,
+  "t1": 1333.4,
+  "tipo": "video",
+  "texto": "Número tres. El día en que pasó, y nadie se pone de acuerdo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1333.4,
+  "t1": 1343.83,
+  "tipo": "video",
+  "texto": "La batalla de la Montaña Roja. Primera era, setecientos, más o menos. Una canción nórdica la pone en el seiscientos sesenta y ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1343.83,
+  "t1": 1351.39,
+  "tipo": "video",
+  "texto": "De un lado, Nerevar, el líder de los chimer. Del otro, Dumac, el rey de los dwemer,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1351.39,
+  "t1": 1360.34,
+  "tipo": "video",
+  "texto": "que antes había sido su aliado. Versión de Vivec: Kagrenac usó las herramientas desesperado, en plena batalla,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1360.34,
+  "t1": 1368.891,
+  "tipo": "video",
+  "texto": "y los dwemer desaparecieron. Pero en otro libro, el mismo Vivec dice que Kagrenac ni siquiera estaba allí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1368.891,
+  "t1": 1377.971,
+  "tipo": "video",
+  "texto": "Versión del Templo: fue Nerevar, con ayuda de Azura, quien destruyó a los dwemer. Ni herramientas, ni corazón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1377.971,
+  "t1": 1384.841,
+  "tipo": "video",
+  "texto": "Y los ashlanders, los nómadas de la ceniza, acusan al Tribunal de envenenar a Nerevar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1384.841,
+  "t1": 1394.678,
+  "tipo": "video",
+  "texto": "Y Dagoth Ur, en una carta, lo llama un golpe cruel, una traición amarga. Hay una teoría para tantas versiones:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1394.678,
+  "t1": 1402.93,
+  "tipo": "video",
+  "texto": "que el tiempo se rompió ese día, igual que con el Numidium. Y que todas son verdad a la vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1402.93,
+  "t1": 1411.728,
+  "tipo": "video",
+  "texto": "En el dos, el último de su raza. En Morrowind, bajo la torre del mago Divayth Fyr, vive Yagrum Bagarn.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1411.728,
+  "t1": 1421.153,
+  "tipo": "video",
+  "texto": "El último dwemer vivo conocido. Hinchado por el corprus, la enfermedad de Dagoth Ur, se mueve sobre patas mecánicas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1421.153,
+  "t1": 1428.664,
+  "tipo": "video",
+  "texto": "Lo pilló al volver a la Montaña Roja buscando respuestas. ¿Por qué sigue aquí? Porque no estaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1428.664,
+  "t1": 1436.626,
+  "tipo": "video",
+  "texto": "Lo dice él: yo estaba en un reino exterior en ese momento, y cuando volví, mi pueblo ya no estaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1436.626,
+  "t1": 1444.806,
+  "tipo": "video",
+  "texto": "Su teoría: creo que Kagrenac pudo conseguir darle a nuestra raza la vida eterna, con consecuencias imprevistas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1444.806,
+  "t1": 1455.989,
+  "tipo": "video",
+  "texto": "Aunque admite que también pudo destruirla entera. Y otra pista en Morrowind. En Bamz-Amschend, bajo Mournhold, hay montones de ceniza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1455.989,
+  "t1": 1462.29,
+  "tipo": "video",
+  "texto": "Como si todos se hubieran vuelto polvo al final de la batalla. Y recuerda la ceniza de Septimus.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1462.29,
+  "t1": 1470.413,
+  "tipo": "video",
+  "texto": "Se pierde a un erudito con una caja dwemer, y lo que queda es lo mismo: ceniza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1470.413,
+  "t1": 1479.271,
+  "tipo": "video",
+  "texto": "Y llegamos al número uno. Skyrim te deja repetir la desaparición. En el Colegio de Hibernalia vive Arniel Gane,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1479.271,
+  "t1": 1487.608,
+  "tipo": "video",
+  "texto": "un mago que estudia en secreto qué pasó con los dwemer. Su plan: recrear el momento exacto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1487.608,
+  "t1": 1497.999,
+  "tipo": "video",
+  "texto": "Con una gema de alma en lugar del corazón de Lorkhan, y Keening en lugar de Sunder. Sí. Keening. La herramienta de Kagrenac.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1497.999,
+  "t1": 1507.099,
+  "tipo": "video",
+  "texto": "Le llevas diez engranajes dwemer. Enthir te da una gema de alma deformada. La cargas en convectores dwemer repartidos por Skyrim,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1507.099,
+  "t1": 1515.993,
+  "tipo": "video",
+  "texto": "que se destruyen al usarlos. Y te toca recuperar Keening, porque el mensajero que la traía desde Morrowind aparece muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1515.993,
+  "t1": 1522.493,
+  "tipo": "video",
+  "texto": "Arniel golpea la gema con la daga. Una vez, nada. Dos veces, nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1522.493,
+  "t1": 1530.142,
+  "tipo": "video",
+  "texto": "A la tercera, un destello. Y Arniel ya no está. Solo queda Keening en el suelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1530.142,
+  "t1": 1540.872,
+  "tipo": "video",
+  "texto": "Según UESP, el experimento funcionó. Arniel se fue como se fueron ellos. Y en todo el Colegio, nadie nota que falta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1540.872,
+  "t1": 1550.189,
+  "tipo": "video",
+  "texto": "Después puedes invocar su sombra. No cuesta magia, es invulnerable, lanza rayos, y es el único invocado del juego que te cura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1550.189,
+  "t1": 1557.239,
+  "tipo": "video",
+  "texto": "Así que esta es la respuesta que Skyrim te da sin decirlo: los dwemer no murieron en una explosión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1557.239,
+  "t1": 1565.977,
+  "tipo": "video",
+  "texto": "Se fueron a algún sitio. Y a Arniel, al menos, le dejaron volver a ayudarte. La pena es que no habla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1565.977,
+  "t1": 1574.269,
+  "tipo": "video",
+  "texto": "Si no, ya le habríamos preguntado dónde están. Esos son los veinte secretos de la desaparición de los dwemer,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1574.269,
+  "t1": 1582.877,
+  "tipo": "video",
+  "texto": "de un mote de gigante, a un mago que se fue con ellos. Ahora te toca a ti. ¿Qué crees que les pasó?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1582.877,
+  "t1": 1592.462,
+  "tipo": "video",
+  "texto": "¿Borrados, convertidos en dioses, o en algún sitio con Arniel? Déjalo en los comentarios. Y vota otra vez. ¿Qué voz se queda?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1592.462,
+  "t1": 1600.409,
+  "tipo": "video",
+  "texto": "Johnny, Edoardo, Hope, José, Mario, MariCarmen o el Profeta. Un nombre, y listo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1600.409,
+  "t1": 1610.952,
+  "tipo": "video",
+  "texto": "Hope. Con hache, y sin empate. MariCarmen. La menos ridícula. Mario. Ya sé que corrí. Pero vótame.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1610.952,
+  "t1": 1618.477,
+  "tipo": "video",
+  "texto": "Edoardo. Cero votos. Este es mi momento. José. Sin voz de locutor, como pediste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1618.477,
+  "t1": 1625.877,
+  "tipo": "video",
+  "texto": "Yo no pido votos. Ya leí el pergamino, y sigo ganando. Y yo voto por el humano tras el telón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1625.877,
+  "t1": 1635.657,
+  "tipo": "video",
+  "texto": "Que hoy ha narrado un secreto. Leído de una nota. Si quieres más lore, en el canal tienes los quince secretos del teaser de Sentinel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1635.657,
+  "t1": 1643.75,
+  "tipo": "video",
+  "texto": "Suscríbete si aún no lo has hecho, que de aquí no se va nadie. Nos vemos en Tamriel.",
+  "clip_s": 8
+ }
+]

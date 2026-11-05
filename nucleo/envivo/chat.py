@@ -79,6 +79,10 @@ class Chat:
             self.comentarios.append(c)
             self.por_id[c["id"]] = c
             del self.comentarios[:-500]
+        try:                                         # llegó alguien: si el directo estaba callado, despierta y lo saluda
+            self.d.actividad(autor, fuente)
+        except Exception as e:
+            self.d._apunta(f"chat: error al avisar actividad {e!r}")
         return c
 
     # --- acciones del panel -----------------------------------------------------------------------
@@ -247,12 +251,33 @@ class FuenteYouTube:
     """
     MIN_S, TOPE = 15, 6000
 
+    ESPECTADORES_S = 60                              # videos.list = 1 unidad: 60 por hora
+
     def __init__(self, chat, canal, video_id):
         import youtube as yt
         self.yt, self.chat, self.vid = yt, chat, video_id
         self.cid = yt.resolver_canal(canal)
         self.gastado, self.activa = 0, True
         threading.Thread(target=self._bucle, daemon=True).start()
+        threading.Thread(target=self._espectadores, daemon=True).start()
+
+    def _espectadores(self):
+        """Espectadores concurrentes del directo (modo sin público, 5-nov): `liveStreamingDetails.concurrentViewers`."""
+        while self.activa and self.gastado < self.TOPE:
+            try:
+                r = self.yt.api(self.cid, "GET", "/videos", params={"part": "liveStreamingDetails", "id": self.vid})
+                self.gastado += 1
+                det = (r.get("items") or [{}])[0].get("liveStreamingDetails") or {}
+                if "concurrentViewers" in det:
+                    n = int(det["concurrentViewers"])
+                    if n != self.chat.d.espectadores_yt:
+                        self.chat.d._apunta(f"YouTube: {n} espectador(es) ahora")
+                    self.chat.d.espectadores_yt = n
+                elif det.get("actualEndTime"):
+                    self.chat.d.espectadores_yt = 0
+            except Exception as e:
+                self.chat.d._apunta(f"YouTube espectadores: error {e!r}")
+            time.sleep(self.ESPECTADORES_S)
 
     def _bucle(self):
         r = self.yt.api(self.cid, "GET", "/videos", params={"part": "liveStreamingDetails", "id": self.vid})

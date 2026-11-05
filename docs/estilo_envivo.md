@@ -166,6 +166,55 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
   pidió, voz en la votación de vez en cuando, interruptor y tiempo mínimo entre cambios); que la discusión entre antes
   (rehacer el búfer al activarla); 3 voces; verlo en la tele (sigue sin abrir la página desde las 20:07).
 
+## MODO SIN PÚBLICO: callado cuando no hay gente (el usuario, 5-nov-2026)
+Palabras del usuario: «mientras no haya gente no se gasten tokens de elevenlabs, que esté callado y de vez en cuando solo se
+genere un bloque real, y en cuanto llegue gente que el narrador los salude y les explique la dinámica de que deben comentar
+sobre el tema que quieren escuchar».
+- **Modos** (`Directo.publico`, en `/api/estado` → `publico`):
+  - `despierto` = el directo normal.
+  - `callado` = sin guionista continuo y sin voz. La pantalla sigue viva:
+    - clips del tema cada 12 s y pegatinas del tema cada 8 s (`callado_media`);
+    - la OST;
+    - el rótulo «Comenta el tema que quieres escuchar» cada 30 s;
+    - la cartela abajo «COMENTA EN EL CHAT EL TEMA QUE QUIERES ESCUCHAR · TEMA AHORA: …».
+
+    Cada `callado_cada_min` (6 por defecto) entra UN bloque real con voz, para que quien llegue por un clip no encuentre
+    algo muerto. Ese bloque usa la voz vigente o, con `voz_callado = windows`, la de Windows (gratis).
+- **Quién hay**:
+  - Espectadores concurrentes del directo de YouTube (`FuenteYouTube._espectadores`: `videos.list
+    liveStreamingDetails.concurrentViewers`, 1 unidad por minuto). Se activa con `--chat-youtube <id>` o con el campo
+    «enlace o ID del directo de YouTube» al INICIAR.
+  - Cada comentario que entra (`Chat.recibir` → `Directo.actividad`).
+  - Sin YouTube: «espectadores simulados» en `/admin`, o los botones de la app (🔇 No hay gente / 🔊 Hay gente).
+- **Sin gente** = espectadores ≤ `umbral` (1 por defecto, para no contar al usuario).
+  - Si se INICIA sin gente, arranca callado con un bloque al momento.
+  - Despierto, pasa a callado cuando lleva `vuelve_min` (3) sin gente y sin comentarios; al callar se tira el búfer
+    (salvo despedida o lo conservado).
+- **Llega gente** (sube de `umbral` o alguien comenta): DESPIERTA.
+  - El guionista escribe un bloque de BIENVENIDA (`_saludo`) que va al frente de la cola: saluda por su nombre a quien
+    comentó y explica la dinámica (comentar el tema de Skyrim o Tamriel que quieren escuchar, el chat decide cada
+    `cada_min` minutos, aquí se contesta a quien comenta) y enlaza con el tema actual. Si falla, va uno de respaldo.
+  - Mientras se escribe, la pantalla dice «¡LLEGÓ GENTE! UN MOMENTO…».
+  - **La voz del narrador por votación no se menciona**: todavía no existe (pedido 1 de la cola). Cuando exista, hay que
+    añadirla al saludo.
+- **Controles**:
+  - `/admin`: segunda barra con el modo y los espectadores, 🔇 Callar, 🔊 Despertar + saludo, automático, espectadores
+    simulados, umbral, minutos entre bloques, minutos para volver a callar, voz del modo callado, ID del directo de
+    YouTube y el gasto por modo.
+  - App: «No hay gente» y «Hay gente» en la tarjeta Directo.
+  - API: `POST /api/publico {"forzar", "auto", "sim", "umbral", "cada_min", "vuelve_min", "voz_callado"}`.
+- **Probado el 5-nov** con la voz de Windows, haiku y espectadores simulados en 0:
+  - arranca callado con un bloque, y la pantalla callada se ve viva;
+  - un comentario de «DovahPepe» lo despierta y el saludo lo nombra y explica la dinámica;
+  - el saludo sale ANTES que los bloques normales (`siguiente` los retiene mientras `saludando`);
+  - a los 30 s sin nadie vuelve a callar y tira lo que se escribía.
+
+  **Falta**:
+  - medir la latencia del saludo: en la segunda prueba tardó ~2 min con 3 llamadas a haiku a la vez;
+  - probarlo con un directo real de YouTube (`concurrentViewers`) y con ElevenLabs.
+- **Registro del gasto por modo** (`publico.gasto`): minutos, bloques escritos (= llamadas al guionista) y créditos de
+  ElevenLabs en callado y en despierto.
+
 ## INICIAR y DETENER desde el panel (el usuario, 4-nov-2026, noche)
 Palabras del usuario: «el panel siempre debe estar activo y desde ahí poder iniciar y detener todo; cuando detenga todo se
 deja de escribir guion y generar voz, solo lanza una última de despedida… y deja reproduciendo lo que ya estaba generado».

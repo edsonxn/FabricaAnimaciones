@@ -78,6 +78,15 @@ class Directo:
         self.yt = ClipsYT(apunta=self._apunta, al_llegar=self._yt_llego)   # gameplay de YouTube en vivo (yt_vivo.py)
         self.clip_al_aire = None                    # {"fuente": "yt"|"disco", "titulo", "canal"}: lo informa la pantalla
         self.chat = chat_mod.Chat(self)
+        # público (5-nov): «despierto» = directo normal; «callado» = sin gente: sin guionista continuo ni voz, la pantalla
+        # sigue viva (clips, OST, pegatinas, «comenta el tema que quieres escuchar») y 1 bloque real cada callado_cada_min
+        self.publico, self.publico_auto, self.umbral = "despierto", True, 1        # ≤ umbral espectadores = no hay gente
+        self.callado_cada_min, self.callado_voz, self.vuelve_min = 6.0, "vigente", 3.0
+        self.espectadores_yt, self.espectadores_sim = None, None
+        self.ultima_actividad, self.callado_ultimo, self.saludando, self.callado_media = 0.0, 0.0, False, None
+        self.gasto_modo = {m: {"min": 0.0, "bloques": 0, "creditos": 0} for m in ("callado", "despierto")}
+        self.modo_desde, self._cred_desde = time.time(), 0
+        threading.Thread(target=self._vigila_publico, daemon=True).start()
         self._apunta(f"biblioteca: {len(self.bib.pegatinas)} pegatinas, {len(self.bib.clips)} clips, {len(self.bib.ost)} pistas de OST")
         # INICIAR / DETENER desde el panel (el usuario, 4-nov noche): el servidor queda siempre encendido; el directo está
         # «apagado» (sin guionista, sin voz, sin gasto: la pantalla enseña la portada), «en_vivo» o «cerrando» (ya no se
@@ -129,9 +138,23 @@ class Directo:
             self.voz_desde = self.inicio_t = time.time()
             self.fin_t, self.despedida_fuera, self.pausado = None, False, False
             self.encendido, self.estado = "en_vivo", "arrancando"
+            self.publico, self.saludando, self.ultima_actividad = "despierto", False, time.time()
+            self.gasto_modo = {m: {"min": 0.0, "bloques": 0, "creditos": 0} for m in ("callado", "despierto")}
+            self.modo_desde = time.time()
+            try:
+                from envivo import voz_eleven
+                self._cred_desde = voz_eleven.gastado["creditos"]
+            except Exception:
+                self._cred_desde = 0
+            esp = self.espectadores()
+            if self.publico_auto and esp is not None and esp <= self.umbral:   # se arranca sin nadie: callado, con 1 bloque ya
+                self.publico, self.callado_ultimo = "callado", 0.0
             self.cv.notify_all()
         self.chat.proximo_corte = time.time() + self.chat.cada_min * 60
         self.yt.pedir(self.tema)
+        if self.publico == "callado":
+            self._media_callada()
+            self._apunta("🔇 arranca CALLADO (no hay gente): 1 bloque ya y luego cada " f"{self.callado_cada_min:g} min")
         self._apunta(f"▶ DIRECTO INICIADO · tema «{self.tema}» · voz {self._motor(self.voz_clave)[2]} · {self.modelo}")
         return True
 
@@ -226,6 +249,8 @@ class Directo:
             self.cv.notify_all()
         self._apunta(f"TEMA NUEVO ({origen}): {tema}" + (f" · se tiraron {len(tirados)} bloques del búfer" if tirados else ""))
         self.yt.pedir(tema)
+        if self.publico == "callado":
+            self._media_callada()
         if self.puente_inmediato:
             threading.Thread(target=self._puente, args=(tema, ver, origen, anterior), daemon=True).start()
 
@@ -374,6 +399,8 @@ class Directo:
         if seg.get("inmediato") or seg.get("relevo"):
             return
         claves = [self._voz_de_frase(f) for f in seg["frases"]]
+        if seg.get("callado") and self.callado_voz == "windows":   # el bloque «de vez en cuando» sin gente, con la voz gratis
+            claves = ["windows:Raul"] * len(claves)
         if seg.get("voz_hecha") == claves:
             return
         t0 = time.time()
@@ -429,6 +456,130 @@ class Directo:
         self._apunta(f"RELEVO ({origen}): {nv} → {nn}")
         return True
 
+    # --- público: modo CALLADO sin gente (el usuario, 5-nov) -------------------------------------------------------------
+    # «mientras no haya gente no se gasten tokens de elevenlabs, que esté callado y de vez en cuando solo se genere un bloque
+    # real; en cuanto llegue gente, que el narrador los salude y les explique la dinámica»
+    def espectadores(self):
+        return self.espectadores_sim if self.espectadores_sim is not None else self.espectadores_yt
+
+    def _cuenta_modo(self):
+        """Cierra el tramo del modo actual en el registro (minutos, bloques escritos, créditos de ElevenLabs)."""
+        from envivo import voz_eleven
+        g = self.gasto_modo[self.publico]
+        g["min"] += (time.time() - self.modo_desde) / 60
+        g["creditos"] += voz_eleven.gastado["creditos"] - self._cred_desde
+        self._cred_desde, self.modo_desde = voz_eleven.gastado["creditos"], time.time()
+
+    def _media_callada(self):
+        pegs, clips = self.bib.candidatos(self.tema, n_peg=12, n_clip=10)
+        lp = []
+        for k in pegs[:10]:
+            v, slug = k.split("/", 1)
+            e = self.bib.pegatinas[k]
+            lp.append({"url": f"/pv/{v}/{slug}.png", "rec": f"/pv/{v}/_rec/{slug}.png" if e["rec"] else None,
+                       "nombre": re.sub(r"\s*\(.*?\)", "", e["desc"] or "") or slug.replace("_", " ")})
+        self.callado_media = {"tema": self.tema, "pegs": lp, "clips": [f"/cv/{c}.mp4" for c in clips[:10]]}
+
+    def poner_callado(self, motivo="sin gente"):
+        with self.cv:
+            if self.publico == "callado" or self.encendido != "en_vivo":
+                return False
+            self._cuenta_modo()
+            self.publico = "callado"
+            tirados = [x["id"] for x in self.cola if not (x.get("conservado") or x.get("despedida"))]
+            self.cola = [x for x in self.cola if x.get("conservado") or x.get("despedida")]
+            self.callado_ultimo = time.time()        # el primer bloque «de vez en cuando» llega a los callado_cada_min
+            self.cv.notify_all()
+        self._media_callada()
+        self._apunta(f"🔇 MODO CALLADO ({motivo}): sin guionista ni voz; 1 bloque cada {self.callado_cada_min:g} min"
+                     + (f" · se tiraron {len(tirados)} bloques del búfer" if tirados else ""))
+        return True
+
+    def despertar(self, motivo="llegó gente", autores=()):
+        if not self.callado_media or self.callado_media.get("tema") != self.tema:
+            self._media_callada()                    # la pantalla sigue con clips y pegatinas mientras se escribe el saludo
+        with self.cv:
+            if self.publico == "despierto" or self.encendido != "en_vivo":
+                return False
+            self._cuenta_modo()
+            self.publico, self.saludando = "despierto", True
+            self.ultima_actividad = time.time()
+            self.cv.notify_all()
+        self._apunta(f"🔊 DESPIERTO ({motivo}): saludo + dinámica y vuelve el modo normal")
+        threading.Thread(target=self._saludo, args=(list(autores),), daemon=True).start()
+        return True
+
+    def actividad(self, autor, fuente):
+        """Llega un comentario (YouTube o el panel): cuenta como gente; si estaba callado, despierta y la saluda."""
+        self.ultima_actividad = time.time()
+        if self.publico == "callado" and self.publico_auto and self.encendido == "en_vivo":
+            self.despertar(f"comentó {autor}", [autor])
+
+    def _saludo(self, autores):
+        nombres = [a for a in dict.fromkeys(autores) if a and a.lower() not in ("espectador", "anónimo")][:3]
+        quien = (" (acaba de escribir en el chat " + " y ".join(nombres) + ": salúdalo por su nombre)") if nombres else ""
+        formato = ("FORMATO: acaba de llegar gente al directo" + quien + ". Ignora la regla de no volver a saludar: este bloque "
+                   "SALUDA con el humor del canal a quien llega (primera frase) y EXPLICA LA DINÁMICA sin prisa en la segunda y la "
+                   "tercera, con frases naturales y sin leer una lista: "
+                   f"que comenten en el chat el tema de {self.cfg['juego']} que quieren escuchar, que cada "
+                   f"{self.chat.cada_min:g} minutos el chat decide el tema y que aquí se contesta a quien comenta. "
+                   f"Termina enlazando con el tema actual ({self.tema}), que sigue.")
+        seg = None
+        with self.cv:
+            ver, hist = self.tema_ver, [h[1] for h in self.historial]
+        try:
+            seg = self._producir(self.tema, None, hist, ver, n_frases=4, sid=f"h{int(time.time()) % 10000:04d}", formato=formato)
+        except Exception as e:
+            self._apunta(f"el saludo no se escribió ({e!r}): va el de respaldo")
+        if not seg or not seg.get("frases"):
+            hola = ("¡Hola, " + " y ".join(nombres) + "!" if nombres else "¡Hola, bienvenidos al directo!")
+            textos = [hola + " Qué bueno que llegaron, que esto ya parecía una cripta nórdica.",
+                      f"Así funciona: escriban en el chat el tema de {self.cfg['juego']} que quieren escuchar, y cada "
+                      f"{self.chat.cada_min:g} minutos el chat decide de qué hablamos.",
+                      f"Y mientras tanto, seguimos con {self.tema}."]
+            frases = [{"texto": t, "dur": max(1.5, len(t) / 15.0), "audio": None, "peg": None, "clip": None, "rotulo": None,
+                       "ficha": None, "com": None} for t in textos]
+            seg = {"id": f"h{int(time.time()) % 10000:04d}", "tema": self.tema, "titulo": "Bienvenida", "resumen": "saludo",
+                   "opciones": [], "frases": frases, "proximos": [], "dur": sum(f["dur"] + 0.25 for f in frases), "ver": ver,
+                   "coms": [], "voz_hecha": None}
+        seg.update(conservado=True, saludo=True, titulo="Bienvenida")
+        with self.cv:
+            self.saludando = False
+            if self.encendido != "en_vivo":
+                return
+            self.cola.insert(0, seg)
+            self.bloques[seg["id"]] = seg
+            self.cv.notify_all()
+        self._apunta(f"{seg['id']}: saludo listo al frente de la cola")
+
+    def _vigila_publico(self):
+        while True:
+            time.sleep(5)
+            if self.encendido != "en_vivo" or not self.publico_auto:
+                continue
+            esp = self.espectadores()
+            if esp is None:                          # sin directo de YouTube ni simulación: solo los comentarios y el panel
+                continue
+            if self.publico == "callado" and esp > self.umbral:
+                self.despertar(f"{esp} espectadores")
+            elif (self.publico == "despierto" and esp <= self.umbral and not self.saludando
+                  and time.time() - max(self.ultima_actividad, self.modo_desde) > self.vuelve_min * 60):
+                self.poner_callado(f"{esp} espectador(es) y nadie comenta desde hace {self.vuelve_min:g} min")
+
+    def publico_json(self):
+        from envivo import voz_eleven
+        g = {m: dict(v) for m, v in self.gasto_modo.items()}
+        g[self.publico]["min"] += (time.time() - self.modo_desde) / 60
+        g[self.publico]["creditos"] += voz_eleven.gastado["creditos"] - self._cred_desde
+        for v in g.values():
+            v["min"] = round(v["min"], 1)
+        return {"modo": self.publico, "auto": self.publico_auto, "espectadores": self.espectadores(),
+                "espectadores_yt": self.espectadores_yt, "sim": self.espectadores_sim, "umbral": self.umbral,
+                "cada_min": self.callado_cada_min, "voz_callado": self.callado_voz, "vuelve_min": self.vuelve_min,
+                "saludando": self.saludando, "gasto": g, "media": self.callado_media if (self.publico == "callado" or self.saludando) else None,
+                "proximo_s": max(0, round(self.callado_ultimo + self.callado_cada_min * 60 - time.time()))
+                if self.publico == "callado" else None}
+
     def _vigila_relevo(self):
         while True:
             time.sleep(10)
@@ -482,10 +633,12 @@ class Directo:
             if ganador != self.tema:
                 self.cambiar_tema(ganador, origen="votación", conservar=1)
         fin = time.time() + espera
+        # mientras se escribe el saludo de quien llegó, lo normal espera: primero la bienvenida (modo sin público, 5-nov)
+        retener = lambda: self.saludando and not any(x.get("saludo") or x.get("despedida") for x in self.cola[:1])
         with self.cv:
-            while not self.cola and time.time() < fin:
+            while (not self.cola or retener()) and time.time() < fin:
                 self.cv.wait(timeout=0.5)
-            if not self.cola:
+            if not self.cola or retener():
                 return {"espera": True, "tema": self.tema, "anuncio": self.anuncio, "estado": self.estado}
             seg = self.cola.pop(0)
         self._voz_al_salir(seg)
@@ -530,7 +683,11 @@ class Directo:
                 paralelo = [j["enfoque"] or j["tema"] for j in self.en_curso.values() if j["ver"] == ver]
                 hist = [h[1] for h in self.historial]
                 self.seq += 1
-                job = {"seq": self.seq, "tema": tema, "ver": ver, "enfoque": enfoque, "t0": time.time()}
+                job = {"seq": self.seq, "tema": tema, "ver": ver, "enfoque": enfoque, "t0": time.time(),
+                       "callado": self.publico == "callado"}
+                self.gasto_modo[self.publico]["bloques"] += 1
+                if job["callado"]:
+                    self.callado_ultimo = time.time()
                 self.en_curso[self.seq] = job
                 self.estado = f"escribiendo {len(self.en_curso)} ({self.modelo})"
             # tras un cambio de tema, el primer bloque es corto: el giro llega antes
@@ -573,6 +730,9 @@ class Directo:
     def _puede_despachar(self):
         if self.encendido != "en_vivo" or self.pausado or len(self.en_curso) >= GUIONISTAS:
             return False
+        if self.publico == "callado":                # sin gente: UN bloque real cada callado_cada_min, nada en paralelo
+            return (not self.en_curso and not self.cola and not self.en_resp
+                    and time.time() - self.callado_ultimo >= self.callado_cada_min * 60)
         vigentes = [j for j in self.en_curso.values() if j["ver"] == self.tema_ver]
         if len(self.cola) + len(vigentes) >= BUFER + 1:
             return False
@@ -592,6 +752,11 @@ class Directo:
             if seg and self.encendido != "en_vivo":
                 self._apunta(f"bloque «{seg['titulo']}» descartado (el directo se detuvo)")
                 seg = None
+            if seg and self.publico == "callado" and not job.get("callado"):
+                self._apunta(f"bloque «{seg['titulo']}» descartado (se quedó sin gente: modo callado)")
+                seg = None
+            if seg and job.get("callado"):
+                seg["callado"] = True
             if seg and job["ver"] == self.tema_ver and self.enfoques_ver == job["ver"]:
                 for p in seg.get("proximos", []):
                     if len(self.enfoques) < 4:
@@ -701,7 +866,7 @@ class Directo:
         with self.cv:
             al = self.al_aire
             vivas = {k: v for k, v in getattr(self, "pantallas", {}).items() if time.time() - v["t"] < 8}   # la pantalla avisa cada 1 s
-            return {"encendido": self.encendido, "cortes": self.cortes, "n_hechos": self.n_hechos, "n_sonados": self.n_sonados, "inicio_t": self.inicio_t, "fin_t": self.fin_t,
+            return {"publico": self.publico_json(), "encendido": self.encendido, "cortes": self.cortes, "n_hechos": self.n_hechos, "n_sonados": self.n_sonados, "inicio_t": self.inicio_t, "fin_t": self.fin_t,
                     "pantallas": [{"pid": k, "ip": v["ip"], "hace": round(time.time() - v["t"])} for k, v in vivas.items()],
                     "modelo_actual": self.modelo,
                     "canal": self.cfg["nombre"], "tema": self.tema, "tema_ver": self.tema_ver, "bufer": [s["titulo"] for s in self.cola],
@@ -881,11 +1046,35 @@ def crear_app(d):
                 d.pantallas = {}
             d.pantallas[pid] = {"t": time.time(), "ip": request.remote_addr}
 
+    @app.post("/api/publico")
+    def api_publico():                              # modo sin público: forzar, automático, simulación y ajustes
+        j = request.get_json(silent=True) or {}
+        if "auto" in j:
+            d.publico_auto = bool(j["auto"])
+        if "sim" in j:
+            d.espectadores_sim = None if j["sim"] in (None, "") else max(0, int(j["sim"]))
+        for k, campo, lo, hi in (("umbral", "umbral", 0, 50), ("cada_min", "callado_cada_min", 1, 30), ("vuelve_min", "vuelve_min", 0.5, 30)):
+            if k in j:
+                setattr(d, campo, min(hi, max(lo, float(j[k]))))
+        if j.get("voz_callado") in ("vigente", "windows"):
+            d.callado_voz = j["voz_callado"]
+        if j.get("forzar") == "callado":
+            d.poner_callado("forzado desde el panel")
+        elif j.get("forzar") == "despierto":
+            d.despertar("forzado desde el panel")
+        return jsonify(ok=True, publico=d.publico_json())
+
     @app.post("/api/directo")
     def api_directo():                              # INICIAR / DETENER (con despedida) / DETENER YA, desde /admin o el teléfono
         j = request.get_json(silent=True) or {}
         acc = j.get("accion")
         if acc == "iniciar":
+            vid = re.sub(r".*(?:v=|youtu\.be/|/live/)", "", (j.get("chat_youtube") or "").strip()).split("&")[0][:20]
+            if vid and getattr(d, "fuente_yt_vid", None) != vid:   # el directo de YouTube: chat + espectadores (modo sin público)
+                if getattr(d, "fuente_yt", None):
+                    d.fuente_yt.activa = False
+                d.fuente_yt, d.fuente_yt_vid = chat_mod.FuenteYouTube(d.chat, d.canal, vid), vid
+                d._apunta(f"chat y espectadores del directo de YouTube {vid}")
             if d.encendido != "apagado":
                 return jsonify(ok=False, error=f"el directo ya está {d.encendido}")
             threading.Thread(target=d.iniciar, args=(j.get("tema"), j.get("voz"), j.get("modelo")), daemon=True).start()
@@ -1035,7 +1224,7 @@ def main():
     d.chat.cada_min = a.cada_min
     d.chat.proximo_corte = time.time() + a.cada_min * 60
     if a.chat_youtube:
-        chat_mod.FuenteYouTube(d.chat, a.canal, a.chat_youtube)
+        d.fuente_yt, d.fuente_yt_vid = chat_mod.FuenteYouTube(d.chat, a.canal, a.chat_youtube), a.chat_youtube
     print(f"EN VIVO · {d.cfg['nombre']} · tema «{d.tema}»\n  pantalla (OBS): http://127.0.0.1:{a.puerto}/?auto=1\n"
           f"  panel:          http://127.0.0.1:{a.puerto}/admin   (ventanita simple: /control)", flush=True)
     if a.abrir:

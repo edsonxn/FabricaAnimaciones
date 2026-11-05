@@ -92,6 +92,20 @@
   <button id="bTeleQuitar" class="sec">✕ Quitar de la tele</button>
   <span class="chip" id="pantallas"></span>
 </div>
+<!-- MODO SIN PÚBLICO (5-nov): sin gente = callado (sin guionista continuo ni voz; 1 bloque real cada N min) -->
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 14px;border-bottom:1px solid var(--linea);background:#161009">
+  <span class="chip" id="pubModo" style="font-weight:700">…</span>
+  <button id="pCallar" class="sec">🔇 Callar (sin gente)</button>
+  <button id="pDespertar" class="sec">🔊 Despertar + saludo</button>
+  <label class="chip" style="display:flex;gap:5px;align-items:center"><input type="checkbox" id="pAuto"> automático</label>
+  <label class="chip">espectadores simulados <input id="pSim" type="number" min="0" style="width:4em" placeholder="—"></label>
+  <label class="chip">sin gente si ≤ <input id="pUmbral" type="number" min="0" style="width:3em"></label>
+  <label class="chip">1 bloque cada <input id="pCada" type="number" min="1" max="30" style="width:3.5em"> min</label>
+  <label class="chip">vuelve a callar tras <input id="pVuelve" type="number" min="0.5" step="0.5" style="width:3.5em"> min</label>
+  <label class="chip">voz callado <select id="pVoz"><option value="vigente">la vigente</option><option value="windows">Windows (gratis)</option></select></label>
+  <input id="iYT" type="text" placeholder="enlace o ID del directo de YouTube (chat + espectadores)" style="flex:1 1 240px" autocomplete="off">
+  <span class="chip" id="pubGasto"></span>
+</div>
 <main>
   <!-- 1 · CHAT -->
   <section class="col">
@@ -179,7 +193,32 @@ let e = {}, ch = {}, alFondo = true;
 // --- INICIAR / DETENER y la transmisión ---
 const ENC = { apagado: ["APAGADO", "#2c2216", "var(--suave)"], arrancando: ["ARRANCANDO…", "#3a2d10", "var(--oro)"],
               en_vivo: ["● EN VIVO", "#3a1010", "var(--rojo)"], cerrando: ["CERRANDO: despedida", "#3a2d10", "var(--oro)"] };
+function pintarPublico(e) {
+  const p = e.publico || {}; if (!p.modo) return;
+  const esp = p.espectadores === null || p.espectadores === undefined ? "¿?" : p.espectadores;
+  $("pubModo").textContent = (p.modo === "callado" ? "🔇 CALLADO" : "🔊 DESPIERTO") + ` · ${esp} espectador(es)` +
+    (p.sim !== null && p.sim !== undefined ? " (simulados)" : p.espectadores_yt !== null && p.espectadores_yt !== undefined ? " (YouTube)" : "") +
+    (p.modo === "callado" && p.proximo_s !== null ? ` · próximo bloque en ${Math.ceil(p.proximo_s / 60)} min` : "") + (p.saludando ? " · escribiendo el saludo" : "");
+  $("pubModo").style.color = p.modo === "callado" ? "var(--suave)" : "var(--verde)";
+  const ed = id => document.activeElement === $(id);
+  $("pAuto").checked = !!p.auto;
+  if (!ed("pSim")) $("pSim").value = p.sim ?? ""; if (!ed("pUmbral")) $("pUmbral").value = p.umbral;
+  if (!ed("pCada")) $("pCada").value = p.cada_min; if (!ed("pVuelve")) $("pVuelve").value = p.vuelve_min;
+  if (!ed("pVoz")) $("pVoz").value = p.voz_callado;
+  const g = p.gasto || {}, c = g.callado || {}, d = g.despierto || {};
+  $("pubGasto").textContent = `callado ${c.min} min · ${c.bloques} bloques · ${c.creditos} cr  |  despierto ${d.min} min · ${d.bloques} bloques · ${d.creditos} cr`;
+}
+const pub = b => post("/api/publico", b).then(() => setTimeout(leer, 300));
+$("pCallar").onclick = () => pub({ forzar: "callado" });
+$("pDespertar").onclick = () => pub({ forzar: "despierto" });
+$("pAuto").onchange = () => pub({ auto: $("pAuto").checked });
+$("pSim").onchange = () => pub({ sim: $("pSim").value === "" ? null : Number($("pSim").value) });
+$("pUmbral").onchange = () => pub({ umbral: Number($("pUmbral").value) });
+$("pCada").onchange = () => pub({ cada_min: Number($("pCada").value) });
+$("pVuelve").onchange = () => pub({ vuelve_min: Number($("pVuelve").value) });
+$("pVoz").onchange = () => pub({ voz_callado: $("pVoz").value });
 function pintarDirecto(e) {
+  pintarPublico(e);
   const [txt, bg, col] = ENC[e.encendido] || [e.encendido || "?", "#2c2216", "var(--suave)"];
   const el = $("encendido"); el.textContent = txt; el.style.background = bg; el.style.color = col;
   const ap = e.encendido === "apagado";
@@ -205,7 +244,8 @@ $("iModelo").onchange = () => { $("iModelo").dataset.toc = 1; };
 $("bIniciar").onclick = async () => {
   const v = $("iVoz").value;
   if (v.startsWith("eleven:") && !confirm("Esta voz gasta créditos de ElevenLabs (~13 000 por hora). ¿Iniciar con ella?")) return;
-  await post("/api/directo", { accion: "iniciar", tema: $("iTema").value.trim() || null, voz: v, modelo: $("iModelo").value });
+  await post("/api/directo", { accion: "iniciar", tema: $("iTema").value.trim() || null, voz: v, modelo: $("iModelo").value,
+                               chat_youtube: $("iYT").value.trim() || null });
   if ($("iTele").checked) await post("/api/tele", { accion: "poner", modo: otraPantalla("la tele") });
   setTimeout(leer, 400);
 };

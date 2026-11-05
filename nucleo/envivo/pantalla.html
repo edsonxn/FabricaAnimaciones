@@ -682,6 +682,33 @@ function dibujarCartas(t) {
   }
 }
 
+// MODO CALLADO (sin gente, 5-nov): la pantalla sigue viva sin voz: clips y pegatinas del tema que rotan, rótulos y la
+// cartela «COMENTA EN EL CHAT EL TEMA QUE QUIERES ESCUCHAR»; cada callado_cada_min entra un bloque real con voz
+const calladoVista = () => estado.encendido === "en_vivo" && estado.publico && (estado.publico.modo === "callado" || estado.publico.saludando);
+let callI = 0, callClipT = -1e9, callPegT = -1e9, callAvisoT = -1e9;
+setInterval(() => {
+  if (MONITOR || !arrancado || !calladoVista() || !(enPuente || !seg)) return;
+  const m = estado.publico.media || {}, t = ahora();
+  if ((m.clips || []).length && t - callClipT > 12) { callClipT = t; ponerClip(m.clips[callI % m.clips.length]); }
+  if ((m.pegs || []).length && t - callPegT > 8) {
+    callPegT = t;
+    const pg = m.pegs[callI % m.pegs.length];
+    callI++;
+    pegatinas.forEach(p => { if (!p.tOut) p.tOut = ahora(); });
+    if (!pg.estilo) pg.estilo = elegirEstilo(pg);
+    const L = pg.estilo === "grande" ? { x: callI % 2 ? 0.76 : 0.24, y: 1.0, h: 0.92, grande: true } : LUGARES[nLugar++ % LUGARES.length];
+    pegatinas.push({ url: pg.url, o: pegatinaLista(pg), L, t0: ahora(), tOut: null, rot: L.grande ? 0 : rnd(-6, 6), lado: L.x > 0.5 ? 1 : -1,
+                     fase: rnd(0, 6), nombre: (pg.nombre || "").toUpperCase() });
+  }
+  if (t - callAvisoT > 30) { callAvisoT = t; ponerAviso("En vivo · " + (estado.tema || ""), "Comenta el tema que quieres escuchar", 5); }
+}, 1000);
+function dibujarCallado(t) {
+  const pu = estado.publico || {}, cy = H - 190, lat = 0.55 + 0.45 * Math.sin(t * 2.4);
+  dibujarHumo(W / 2 - 520, cy - 70, 1040, 150, 0.95, 0.9);
+  texto(pu.saludando ? "¡LLEGÓ GENTE! UN MOMENTO…" : "COMENTA EN EL CHAT EL TEMA QUE QUIERES ESCUCHAR", W / 2, cy, 700, 40, HUESO, "center", 1, 4, W * 0.7);
+  texto("TEMA AHORA: " + (estado.tema || "").toUpperCase(), W / 2, cy + 44, 500, 22, GRIS, "center", 1, 5, W * 0.6);
+  ctx.save(); ctx.globalAlpha = lat; ctx.fillStyle = ORO; ctx.beginPath(); ctx.arc(W / 2 - 500, cy - 12, 7, 0, 7); ctx.fill(); ctx.restore();
+}
 function dibujarPortada(t) {
   const enCartela = t - finT < 12, cy = H * 0.44;
   ctx.save(); ctx.fillStyle = "rgba(4,4,6,0.72)"; ctx.fillRect(0, 0, W, H); ctx.restore();
@@ -710,6 +737,7 @@ function dibujarPuente(t) {
   }
   const apagado = estado.encendido === "apagado" || (esperaInfo && esperaInfo.apagado);
   if ((apagado && estado.encendido !== "en_vivo" && estado.encendido !== "arrancando") || t - finT < 12) return dibujarPortada(t);
+  if (calladoVista()) return dibujarCallado(t);
   ctx.save(); ctx.fillStyle = "rgba(4,4,6,0.55)"; ctx.fillRect(0, 0, W, H); ctx.restore();
   const an = esperaInfo && esperaInfo.anuncio, reciente = an && (Date.now() / 1000 - an.t < 90);
   const arriba = !seg ? "PREPARANDO EL DIRECTO" : reciente ? (an.origen === "votación" ? "EL CHAT DECIDIÓ" : "CAMBIO DE TEMA") : "UN MOMENTO";

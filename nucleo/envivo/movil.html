@@ -89,6 +89,11 @@
       <button id="mDetener">■ Detener (despedida)</button>
       <button id="mDetenerYa">✕ Detener ya</button>
     </div>
+    <div class="sub" id="pubTxt" style="margin-top:8px"></div>
+    <div class="botones" style="margin-top:6px">
+      <button id="mCallar">🔇 No hay gente</button>
+      <button id="mDespertar">🔊 Hay gente</button>
+    </div>
     <div class="sub">Arranca con el tema, la voz y el guionista actuales (se eligen abajo). Detener: suena lo que ya estaba y cierra con una despedida.</div>
   </section>
 
@@ -215,7 +220,16 @@ async function leer() {
 }
 
 const ENC_M = { apagado: "apagado", arrancando: "arrancando…", en_vivo: "● EN VIVO", cerrando: "cerrando: despedida" };
+function pintarPublicoM() {
+  const p = E.publico || {}; if (!p.modo) return;
+  const esp = p.espectadores ?? "¿?";
+  $("pubTxt").textContent = (p.modo === "callado" ? "🔇 Callado (sin gente)" : "🔊 Despierto") + ` · ${esp} espectador(es)` +
+    (p.modo === "callado" && p.proximo_s != null ? ` · próximo bloque en ${Math.ceil(p.proximo_s / 60)} min` : "") + (p.saludando ? " · saludando" : "");
+}
+$("mCallar").onclick = () => api("api/publico", { forzar: "callado", sim: 0 }).then(() => { aviso("Callado: sin gente"); leerPronto(); });
+$("mDespertar").onclick = () => api("api/publico", { forzar: "despierto", sim: null }).then(() => { aviso("Despierto: saludo en camino"); leerPronto(); });
 function pintarDirecto() {
+  pintarPublicoM();
   $("encTxt").textContent = ENC_M[E.encendido] || E.encendido || "?";
   $("mIniciar").disabled = E.encendido !== "apagado";
   $("mDetener").disabled = !(E.encendido === "en_vivo" || E.encendido === "arrancando");

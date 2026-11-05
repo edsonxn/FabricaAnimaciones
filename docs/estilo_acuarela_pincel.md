@@ -75,3 +75,11 @@ del usuario: animación procedural, cada cuadro dibujado por código, con el est
 - Render largo: con ~6 GB libres, 5+ procesos acaban en `cv2 OutOfMemoryError` (no lo atrapa el supervisor): `video --procs 3`.
 - Música: Lyria API sin saldo (402) → 5 piezas de la biblioteca de canales con otro público (tramos ≤ 175 s en `LYRIA["tramos"]`).
 - Miniatura 16:9: cuadro del video como WebP 240x135 (6,5 KB) → canvas 1280x720 → `ClipboardEvent('paste')`; salió 2/2 bien.
+
+## Lecciones del 4.º video (`videos/chicle_dentro/`, 5-nov-2026, LARGO horizontal 6:05, 7 planos a-g)
+- Un viaje DENTRO del cuerpo con un personaje diminuto (Kuri montado en la bolita): en cortes anatómicos y mapas el viajero se pierde;
+  poner una **LUPA** fija (círculo de papel con el viajero en grande, paredes que aprietan y rayitas de velocidad cuando baja, hilo hasta
+  su posición real): `plano_c.lupa()`. En túneles (estómago, intestinos) el viajero va a escala ≥ 1,4 y la bolita r ≥ 115.
+- Personitas grandes (`iconos_ia.personita` a escala ≥ 3) sin cara se leen como bolos: `plano_g.cara_p()` les pone ojos, cejas y boca.
+- Música sin Lyria: la biblioteca sugiere primero piezas del propio canal; elegir las de otros públicos (Plastitube, WND, Sapiens).
+- Render: 98 segmentos en 20 min con `--procs 4` y 15 GB libres (~0,3-0,9 s/cuadro).

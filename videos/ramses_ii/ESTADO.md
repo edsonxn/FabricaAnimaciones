@@ -3,7 +3,7 @@
 - canal: bitacora_perdida · hueco: el canal está ATRASADO desde el 3-nov (prioridad alta)
 - estilo: documental de personaje antiguo (kit `nucleo/docu_antiguo.py`) → docs/estilo_docu_antiguo.md · prueba: `_prueba_kit.py`
 - etapa: SUBIDO ✅ https://youtu.be/6kPyIjnHOYk privado, se publica jue 5-nov 14:00 CDMX (miniatura + .srt aplicados; publicados + BITACORA registrados)
-- siguiente: visto bueno del usuario («¿Lo subo así?», la tele estaba en no molestar) → Facebook: `cd E:\PaginaFace` · `python pagina.py --pagina historias_mx aprobar 2026-11-05_1900_historia-ramses-ii` · `programar … --ya` (borrador listo: mp4 663 MB + texto) → anotar fb_id
+- siguiente: CERRADO. Facebook «Historias Perdidas de México» publicado 5-nov (fb_id 1211758334847804). Pendiente opcional: pasar `tunel.py` al kit si el usuario lo aprueba; medir a 7 días
 
 ## Sesiones (plan de tramos · «continúa el video ramses_ii» retoma aquí)
 - alias: Ramsés, Ramsés II, el faraón, el piloto del kit nuevo
@@ -16,7 +16,7 @@
 | 2b | material: Flow (cine) + Commons + yt-dlp | ◐ parcial 4-nov | Flow y Commons del gancho+cap.1 hechos; falta Desfile 2021 (yt-dlp) y Flow de Kadesh en adelante |
 | 3 | escenas del gancho y cap. 1 (0-2 min) + vista previa al usuario | ✅ 4-nov (v2) | tras la crítica «muy lenta, parece secuencia de fotos»: `escenas.py` rehecho con capas (partículas, humo, recortes que cruzan, contadores, frisos reales que corren, flashes, rayos, cámara que se mueve); `_hoja_densidad.py` = 6 cuadros/0,5 s por toma; avance v2 en `salida/ramses_ii_AVANCE.mp4` + `previews/ramses_ii_AVANCE_720p.mp4` (21 MB) — el usuario: «mejoró mucho», pide v3 (abajo) |
 | 4 | escenas 2-9:36 (Kadesh → cierre) + Flow de Kadesh, tratado, constructor, familia, escondite, París 1976 | ✅ 4-nov (40 láminas + 94 capas + 7 recorridos de túnel; hojas `previews/_h4*.jpg`) | cada escena con `A.firma(...)` única |
-| 5 | cierre: sfx → mezcla → final → verificar → miniatura Flow → subir + Facebook Historias Perdidas | ◐ parcial 5-nov (sfx ✅, mezcla ✅ −14,1 LUFS, miniatura ✅, MASTER ✅ + parche de 6:06 (hueco oscuro en `f_hijos`), firmas registradas, biblioteca catalogada, lecciones en el doc; subido 6kPyIjnHOYk, commit hecho; falta Facebook tras el visto bueno) | `A.registrar_firmas("ramses_ii")` |
+| 5 | cierre: sfx → mezcla → final → verificar → miniatura Flow → subir + Facebook Historias Perdidas | ✅ 5-nov (sfx ✅, mezcla ✅ −14,1 LUFS, miniatura ✅, MASTER ✅ + parche de 6:06 (hueco oscuro en `f_hijos`), firmas registradas, biblioteca catalogada, lecciones en el doc; subido 6kPyIjnHOYk, Facebook 1211758334847804 ✅) | `A.registrar_firmas("ramses_ii")` |
 
 ## En curso (4-nov, 20:30) — TRAMO 5: lo que falta, EN ORDEN
 1. El render entero corre en segundo plano desde ~20:15 (`fab.py ramses_ii video --procs 4`, log `previews/_render_full.log`; ≈ 53 s por segmento →

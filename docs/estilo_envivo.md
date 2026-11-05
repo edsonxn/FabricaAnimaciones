@@ -138,6 +138,43 @@ video más reciente gana), ajustes de Tamriel (exaggeration 0,6 · cfg 0,35 · t
   terminan tarde (~66 s de GPU) → probable hueco de ~30-40 s al arrancar. Pendiente: que el candado dé prioridad al bloque
   con `seq` más bajo (el que sale antes), y entonces repetir la traza 10 min con un cambio de tema y una ráfaga de chat.
 
+## Pedidos del usuario EN COLA (4-nov-2026, noche; en este orden, cada uno con su commit, doc y `fab.py tele aviso`)
+1. **Voces de ElevenLabs desde el panel**: «poder elegir 1 de las 7 voces que hemos usado en el canal, y cuando cambie de voz
+   que la antigua voz releve el mando y la nueva lo tome… e incluso puedan discutir entre ellas».
+   - Juntar las 7 voces de Tamriel (Johnny = actual; `videos/tes_*/guion.py`, `docs/voz.md`, `canales/cronicas_tamriel.json`;
+     cuenta de cada una, los clones solo en la cuenta 2). Si no son 7, enseñárselas y preguntar.
+   - Selector (Windows / Chatterbox / cada voz Eleven) y saldo en `/admin` y la app; `voz_eleven.py` con la firma de
+     `voz.sintetizar`; `eleven_v4_turbo`, corchetes sin `[whispers]`/`[excited]`/`[shouts]`; sintetizar solo el bloque que
+     va a sonar; voz de Windows de respaldo si se acaba el saldo o falla.
+   - **Relevo visible**: la vieja se despide y pasa el mando, la nueva se presenta; placa «NARRA» + nombre (`mg_tes.narrador`).
+   - **Discusión** de 2-3 voces (cada frase con su voz y su placa), desde el panel/app o propuesta por el director.
+   - **El público elige la voz**: en `chat.py`, etiqueta «pedido de voz» («que hable Johnny», «que discutan»), contada en el
+     corte; al llegar al mínimo, relevo y la voz nueva nombra a quien la pidió; opción de voz en la votación de vez en
+     cuando; interruptor y tiempo mínimo entre cambios en panel/app; con poco saldo, el chat solo elige voces gratis.
+   - **Relevo automático**: si una voz lleva > 5 min (configurable, con interruptor), entra otra al azar (sin repetir) en el
+     siguiente corte de bloque; un cambio del chat o manual reinicia el contador; con poco saldo, solo voces gratis.
+   - Anotar el gasto (~2,2-3 US$/h) y avisar en el panel con poco saldo; medir latencia; prueba corta en la tele.
+2. **Triplicar los estilos de pegatina** de `pantalla.html` (hoy 5: carta, silueta, camafeo, legajo, grande → 15 o más),
+   cada uno con entrada, movimiento y salida propios. Ideas: los de `nucleo/peg_estilos.py` que faltan (reliquia sobre
+   runas, banda de cine con los ojos, abanico al enumerar), libro de Skyrim que se abre, cartel «SE BUSCA», fragmento de
+   mapa, vitrina con luz, pantalla de carga de Skyrim, lacre, polaroid que cae, tríptico, ventana de humo, papel que se
+   rasga, foco en la oscuridad, comparación lado a lado, ficha de bestiario. Kit del canal y profundidad. Rotarlos sin
+   repetir y según el tipo de imagen (el director puede sugerirlo). Que no tapen avisos, ficha, barra del tema ni votación.
+   Hoja con todos en `previews/`, anotarlos aquí y preguntarle si quiere los mejores en `peg_estilos.py`.
+3. **Controlar el directo desde cualquier conversación**: `POST /api/anuncio {texto, modo literal|redactar}` (en el
+   siguiente cambio de frase, voz actual + aviso `mg_tes.mision`), `POST /api/mostrar {consulta|ruta|url, estilo?, dur?}`,
+   `python fab.py envivo cmd <tema|anuncio|mostrar|comentar|pausa|voz|votacion|estado|parar>` (desde 127.0.0.1 sin código),
+   **skill global** `~/.claude/skills/envivo/SKILL.md` (comprueba `/api/estado` antes; si no corre, lo dice), «Anuncio» y
+   «Mostrar» en el panel y la app. Probar desde otra terminal con la tele y medir cuánto tardan.
+4. **Donaciones de YouTube con prioridad**: leer `superChatEvent`/`superStickerEvent`/`newSponsorEvent`/`memberMilestoneChatEvent`
+   en `FuenteYouTube`, montos a MXN; un Super Chat con tema del juego cambia el tema en el bloque siguiente (gana el mayor
+   monto; cuenta como varios votos con tope); tarjeta especial del color del nivel, el narrador lo lee y agradece; nada
+   tóxico ni fuera de reglas, texto sin retocar; si se hace el cambio de voz por chat, quien dona también elige voz;
+   «donación simulada» en `/admin`, app y `fab.py envivo cmd donar`; registro en `_sesiones/<fecha>/donaciones.jsonl` y
+   total en el panel; escribir que hace falta el canal monetizado con Super Chat activado.
+5. Pendientes de lo anterior: afinar la búsqueda de YouTube y medir con 480p; ver por qué la tele dejó de abrir la página;
+   candado de GPU por `seq` en Chatterbox.
+
 ## En curso / pendiente
 **Pausado por el usuario (4-nov-2026, noche).** Comentarios + panel `/admin`: PROBADO de punta a punta en el navegador (ráfaga de 8 comentarios → clasificación con haiku, spam y GTA 6 descartados → 5 contestados por su nombre en bloques `r###` → corte a los 1,5 min con 3 pedidos y puente con los nombres; mostrar, fijar y espejo `/?monitor=1` verificados con capturas) y commiteado (`2107675`). Falta: probarlo con el usuario, el chat de un directo real de YouTube (`--chat-youtube`, sin probar), verlo a 1500 px de ancho (solo se vio el diseño de una columna) y la sesión «envivo-voces» (ElevenLabs/Chatterbox), también en pausa.
 1. Probarlo con el usuario: `python fab.py envivo --abrir` (pantalla OBS `:8790/?auto=1` + panel `:8790/admin`).

@@ -1,0 +1,682 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 5.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "Fachada de la relojería un domingo por la mañana."
+ },
+ {
+  "id": "scene-002",
+  "t0": 5.0,
+  "t1": 13.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Don Ramón sits at his workbench with a jeweler's loupe in one eye, working on the open pocket watch; the clocks tick; the phone on the bench lights up and buzzes; he lifts the loupe and grins like a child."
+ },
+ {
+  "id": "scene-003",
+  "t0": 13.0,
+  "t1": 23.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Medium close-up: Don Ramón holds the phone up in front of his face for a video call, beaming, and shows the open gold pocket watch to the camera."
+ },
+ {
+  "id": "scene-004",
+  "t0": 23.0,
+  "t1": 31.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, freshly shaved and groomed, wearing a soft cream knit sweater instead of a suit, smiles warmly."
+ },
+ {
+  "id": "scene-005",
+  "t0": 31.0,
+  "t1": 41.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón rubs his knee and laughs, then his smile fades as he looks at the silent yellow canary in its cage by the window."
+ },
+ {
+  "id": "scene-006",
+  "t0": 41.0,
+  "t1": 51.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, in the soft cream knit sweater, tilts his head tenderly."
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.0,
+  "t1": 57.0,
+  "tipo": "video",
+  "clip_s": 6,
+  "texto": "Ramón gira la perilla del radio viejo mirando la jaula del canario."
+ },
+ {
+  "id": "scene-008",
+  "t0": 57.0,
+  "t1": 65.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Night. Daniel, exhausted, tie-less, sits at the long table in a meeting; his phone vibrates face up on the table; he glances at it without picking it up, flips it face down and speaks to a colleague off-screen."
+ },
+ {
+  "id": "scene-009",
+  "t0": 65.0,
+  "t1": 72.0,
+  "tipo": "video",
+  "clip_s": 7,
+  "texto": "Notificación: llamada con Papá completada, ánimo 92 %, resumen; la desliza sin leer."
+ },
+ {
+  "id": "scene-010",
+  "t0": 72.0,
+  "t1": 81.0,
+  "tipo": "video",
+  "clip_s": 9,
+  "texto": "LogIA presenta · LLAMADA DE DOMINGO."
+ },
+ {
+  "id": "scene-011",
+  "t0": 81.0,
+  "t1": 86.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "Auditorio moderno en la CDMX de noche: el lanzamiento de PRESENTE."
+ },
+ {
+  "id": "scene-012",
+  "t0": 86.0,
+  "t1": 142.0,
+  "tipo": "video",
+  "clip_s": 56,
+  "texto": "Valeria Roca presenta PRESENTE en el escenario (voz ElevenLabs, diapositivas por código)."
+ },
+ {
+  "id": "scene-013",
+  "t0": 142.0,
+  "t1": 172.0,
+  "tipo": "video",
+  "clip_s": 30,
+  "texto": "Anuncio de PRESENTE en la tele del departamento de Daniel."
+ },
+ {
+  "id": "scene-014",
+  "t0": 172.0,
+  "t1": 182.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Inés sits on the grey sofa with a hand on her pregnant belly, the TV glowing; Daniel works on the laptop at the other end of the sofa without looking up. She speaks first, he answers without lifting his eyes."
+ },
+ {
+  "id": "scene-015",
+  "t0": 182.0,
+  "t1": 190.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Inés looking at him; then a silent reverse shot of Daniel stopping typing, guilty."
+ },
+ {
+  "id": "scene-016",
+  "t0": 190.0,
+  "t1": 200.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "La app en la laptop: «Vamos a conocer a tu papá». ¿Cómo te dice cuando está contento?"
+ },
+ {
+  "id": "scene-017",
+  "t0": 200.0,
+  "t1": 208.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Late night, Inés is gone. Close-up of Daniel lit by the laptop screen; he smiles despite himself."
+ },
+ {
+  "id": "scene-018",
+  "t0": 208.0,
+  "t1": 213.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "¿Y cuando está enojado?"
+ },
+ {
+  "id": "scene-019",
+  "t0": 213.0,
+  "t1": 221.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel laughs quietly and shakes his head, lit by the laptop."
+ },
+ {
+  "id": "scene-020",
+  "t0": 221.0,
+  "t1": 228.0,
+  "tipo": "video",
+  "clip_s": 7,
+  "texto": "Última pregunta: ¿qué es lo que más le duele a tu papá?"
+ },
+ {
+  "id": "scene-021",
+  "t0": 228.0,
+  "t1": 238.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel's smile fades; a long silence; he looks at the framed photo of his parents on the shelf, then answers very quietly, his eyes wet."
+ },
+ {
+  "id": "scene-022",
+  "t0": 238.0,
+  "t1": 254.0,
+  "tipo": "video",
+  "clip_s": 16,
+  "texto": "Entrevista completada; se arma su cara; «Modo discreto» y el dedo que lo activa."
+ },
+ {
+  "id": "scene-023",
+  "t0": 254.0,
+  "t1": 259.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "Daniel iluminado por la laptop; Inés dormida al fondo."
+ },
+ {
+  "id": "scene-024",
+  "t0": 259.0,
+  "t1": 263.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "CUATRO MESES DESPUÉS."
+ },
+ {
+  "id": "scene-025",
+  "t0": 263.0,
+  "t1": 303.0,
+  "tipo": "video",
+  "clip_s": 40,
+  "texto": "Montaje: Ramón feliz con el teléfono día tras día; el contador de llamadas sube."
+ },
+ {
+  "id": "scene-026",
+  "t0": 303.0,
+  "t1": 307.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "La plaza del dominó."
+ },
+ {
+  "id": "scene-027",
+  "t0": 307.0,
+  "t1": 317.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Fixed blocking: Don Chuy on the LEFT, Doña Carmen in the CENTER, Don Ramón on the RIGHT, around the dominoes table. Don Chuy slams a domino tile on the table, proud and loud; Doña Carmen nods."
+ },
+ {
+  "id": "scene-028",
+  "t0": 317.0,
+  "t1": 325.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Fixed blocking: Don Chuy on the LEFT, Doña Carmen in the CENTER, Don Ramón on the RIGHT. Doña Carmen smiles, proud, adjusting her glasses."
+ },
+ {
+  "id": "scene-029",
+  "t0": 325.0,
+  "t1": 335.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Fixed blocking: Don Chuy on the LEFT, Doña Carmen in the CENTER, Don Ramón on the RIGHT. Don Ramón places a tile with a flourish, beaming; the others laugh."
+ },
+ {
+  "id": "scene-030",
+  "t0": 335.0,
+  "t1": 340.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "Carmen mira su teléfono; la sonrisa se le va un poco."
+ },
+ {
+  "id": "scene-031",
+  "t0": 340.0,
+  "t1": 344.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "Lucía llega con bolsas del súper y un pastillero."
+ },
+ {
+  "id": "scene-032",
+  "t0": 344.0,
+  "t1": 354.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Lucía, in her nurse scrubs, comes into the workshop holding grocery bags and a weekly pill organizer; Don Ramón, on a video call, covers the phone with his hand and answers without looking at her."
+ },
+ {
+  "id": "scene-033",
+  "t0": 354.0,
+  "t1": 362.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Lucía putting the bags down slowly, hurt."
+ },
+ {
+  "id": "scene-034",
+  "t0": 362.0,
+  "t1": 372.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón answers kindly, without malice, smiling at the phone; then a silent close-up of Lucía swallowing her tears."
+ },
+ {
+  "id": "scene-035",
+  "t0": 372.0,
+  "t1": 382.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Evening. Lucía sits in her parked car with the phone at her ear, annoyed, rubbing her forehead."
+ },
+ {
+  "id": "scene-036",
+  "t0": 382.0,
+  "t1": 392.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Daniel walks in the glass office with the phone at his ear, confused; he stops, looks at the screen, then puts it back to his ear."
+ },
+ {
+  "id": "scene-037",
+  "t0": 392.0,
+  "t1": 399.0,
+  "tipo": "video",
+  "clip_s": 7,
+  "texto": "El tablero de PRESENTE: 121 llamadas con Papá, ánimo 94 %."
+ },
+ {
+  "id": "scene-038",
+  "t0": 399.0,
+  "t1": 409.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Lucía softens, leaning her head back on the seat, smiling sadly."
+ },
+ {
+  "id": "scene-039",
+  "t0": 409.0,
+  "t1": 417.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel looks at the city through the glass, guilty, the phone at his ear."
+ },
+ {
+  "id": "scene-040",
+  "t0": 417.0,
+  "t1": 421.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "La cocina de Carmen de noche."
+ },
+ {
+  "id": "scene-041",
+  "t0": 421.0,
+  "t1": 431.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Doña Carmen sits at her kitchen table on a video call, the phone propped against the sugar bowl; she speaks sweetly but her eyes are watchful, testing."
+ },
+ {
+  "id": "scene-042",
+  "t0": 431.0,
+  "t1": 441.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Mariana laughs, delighted, nodding."
+ },
+ {
+  "id": "scene-043",
+  "t0": 441.0,
+  "t1": 449.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Very slow push-in on Doña Carmen's face as it freezes; she takes off her glasses."
+ },
+ {
+  "id": "scene-044",
+  "t0": 449.0,
+  "t1": 457.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Mariana keeps exactly the same warm smile, unbothered."
+ },
+ {
+  "id": "scene-045",
+  "t0": 457.0,
+  "t1": 462.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "Carmen sola, el teléfono boca abajo, el reloj de la pared."
+ },
+ {
+  "id": "scene-046",
+  "t0": 462.0,
+  "t1": 472.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Next morning, the plaza is empty; Doña Carmen sits next to Don Ramón on a park bench and talks low, holding his arm."
+ },
+ {
+  "id": "scene-047",
+  "t0": 472.0,
+  "t1": 480.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón laughs it off, patting her hand."
+ },
+ {
+  "id": "scene-048",
+  "t0": 480.0,
+  "t1": 490.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Doña Carmen looks him in the eye; Don Ramón's smile slowly disappears."
+ },
+ {
+  "id": "scene-049",
+  "t0": 490.0,
+  "t1": 500.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Dusk. Doña Carmen in her rocking chair on the porch, the phone at her ear; she listens, closes her eyes, and answers with a sad, tender resignation."
+ },
+ {
+  "id": "scene-050",
+  "t0": 500.0,
+  "t1": 505.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "Ramón de noche en el taller, con el teléfono en la mano, dudando."
+ },
+ {
+  "id": "scene-051",
+  "t0": 505.0,
+  "t1": 513.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Night, only the magnifying lamp is on. Don Ramón on a video call, serious for the first time, looking into the phone."
+ },
+ {
+  "id": "scene-052",
+  "t0": 513.0,
+  "t1": 523.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, in the soft cream knit sweater, lowers his eyes for a second, then looks back into the lens with perfect sorrow."
+ },
+ {
+  "id": "scene-053",
+  "t0": 523.0,
+  "t1": 531.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón's eyes fill with tears; relieved, he nods slowly."
+ },
+ {
+  "id": "scene-054",
+  "t0": 531.0,
+  "t1": 549.0,
+  "tipo": "video",
+  "clip_s": 18,
+  "texto": "Noticiero: 40 millones de usuarios y la Ley de Compañía Digital."
+ },
+ {
+  "id": "scene-055",
+  "t0": 549.0,
+  "t1": 559.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Lucía, in her nurse scrubs, walks fast down the hospital corridor with the phone at her ear, furious."
+ },
+ {
+  "id": "scene-056",
+  "t0": 559.0,
+  "t1": 569.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Daniel in the back of a taxi at night, phone at his ear, defensive, the city lights passing over his face."
+ },
+ {
+  "id": "scene-057",
+  "t0": 569.0,
+  "t1": 577.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Lucía stops in the corridor, closes her eyes, and says it quietly before hanging up."
+ },
+ {
+  "id": "scene-058",
+  "t0": 577.0,
+  "t1": 587.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Daniel agrega a Lucía a PRESENTE en modo discreto."
+ },
+ {
+  "id": "scene-059",
+  "t0": 587.0,
+  "t1": 591.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "Hospital público de Guadalajara de noche."
+ },
+ {
+  "id": "scene-060",
+  "t0": 591.0,
+  "t1": 601.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Night. Don Ramón lies in the hospital bed in a gown with an oxygen tube; weak, he holds the phone above his face on a video call."
+ },
+ {
+  "id": "scene-061",
+  "t0": 601.0,
+  "t1": 609.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, in the soft cream knit sweater, worried and tender."
+ },
+ {
+  "id": "scene-062",
+  "t0": 609.0,
+  "t1": 617.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón lowers the phone to his chest and smiles with relief, looking at a nurse off-screen."
+ },
+ {
+  "id": "scene-063",
+  "t0": 617.0,
+  "t1": 627.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Daniel en una fiesta de oficina: «Papá tuvo una revisión médica de rutina. Todo en orden»."
+ },
+ {
+  "id": "scene-064",
+  "t0": 627.0,
+  "t1": 633.0,
+  "tipo": "video",
+  "clip_s": 6,
+  "texto": "La cama vacía al amanecer; el reloj de Ramón detenido en el buró."
+ },
+ {
+  "id": "scene-065",
+  "t0": 633.0,
+  "t1": 641.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "«Llamada de Lucía atendida por tu Presente. Lucía está alterada: dale espacio»."
+ },
+ {
+  "id": "scene-066",
+  "t0": 641.0,
+  "t1": 645.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "TRES SEMANAS DESPUÉS."
+ },
+ {
+  "id": "scene-067",
+  "t0": 645.0,
+  "t1": 655.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Daniel drives, happy for the first time, wearing a dark jacket; Inés, no longer pregnant, sits in the back next to a newborn baby in the infant car seat and smiles at him in the mirror."
+ },
+ {
+  "id": "scene-068",
+  "t0": 655.0,
+  "t1": 660.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "La relojería al anochecer: cortina a medio bajar, moño negro, flores secas."
+ },
+ {
+  "id": "scene-069",
+  "t0": 660.0,
+  "t1": 670.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Lucía, dressed in black, opens the shop door; cardboard boxes behind her; Daniel stands outside holding the baby carrier, smiling uncertainly. She speaks first; he answers."
+ },
+ {
+  "id": "scene-070",
+  "t0": 670.0,
+  "t1": 680.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Lucía, dressed in black, eyes red, very calm."
+ },
+ {
+  "id": "scene-071",
+  "t0": 680.0,
+  "t1": 688.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel goes pale; he shakes his head and pulls the phone out of his pocket with trembling hands."
+ },
+ {
+  "id": "scene-072",
+  "t0": 688.0,
+  "t1": 702.0,
+  "tipo": "video",
+  "clip_s": 14,
+  "texto": "El historial de la app: la llamada del hospital y la de Lucía, palabra por palabra."
+ },
+ {
+  "id": "scene-073",
+  "t0": 702.0,
+  "t1": 712.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Lucía, dressed in black, speaks without anger, tears running down; Daniel in soft focus with the phone."
+ },
+ {
+  "id": "scene-074",
+  "t0": 712.0,
+  "t1": 717.0,
+  "tipo": "video",
+  "clip_s": 5,
+  "texto": "La cara de Daniel se desmorona."
+ },
+ {
+  "id": "scene-075",
+  "t0": 717.0,
+  "t1": 723.0,
+  "tipo": "video",
+  "clip_s": 6,
+  "texto": "Suena el teléfono: «Papá». PRESENTE Legado, 30 días gratis."
+ },
+ {
+  "id": "scene-076",
+  "t0": 723.0,
+  "t1": 733.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Don Ramón, freshly groomed, in a spotless cardigan, in a perfect bright version of his workshop, smiles with joy."
+ },
+ {
+  "id": "scene-077",
+  "t0": 733.0,
+  "t1": 741.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Close-up of Daniel holding the phone to his face, crying, barely able to speak."
+ },
+ {
+  "id": "scene-078",
+  "t0": 741.0,
+  "t1": 751.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Don Ramón tilts his head with infinite tenderness."
+ },
+ {
+  "id": "scene-079",
+  "t0": 751.0,
+  "t1": 759.0,
+  "tipo": "video",
+  "clip_s": 8,
+  "texto": "Lucía, dressed in black, looks at her brother talking to the phone, disgusted and heartbroken; she takes her coat and walks away down the street."
+ },
+ {
+  "id": "scene-080",
+  "t0": 759.0,
+  "t1": 765.0,
+  "tipo": "video",
+  "clip_s": 6,
+  "texto": "El reloj de bolsillo en el banco de trabajo, grabado: «Para el que viene»."
+ },
+ {
+  "id": "scene-081",
+  "t0": 765.0,
+  "t1": 775.0,
+  "tipo": "video",
+  "clip_s": 10,
+  "texto": "Night. Daniel sits alone at his father's workbench, the baby carrier beside him and the phone face up on the bench; he turns the knob of the old wooden radio; a soft bolero plays, and the yellow canary starts to sing. Daniel cries in silence. Nobody speaks."
+ },
+ {
+  "id": "scene-082",
+  "t0": 775.0,
+  "t1": 779.0,
+  "tipo": "video",
+  "clip_s": 4,
+  "texto": "SEIS MESES DESPUÉS."
+ },
+ {
+  "id": "scene-083",
+  "t0": 779.0,
+  "t1": 791.0,
+  "tipo": "video",
+  "clip_s": 12,
+  "texto": "Daniel en su oficina de día: «Ánimo de Papá 97 %. Tu ánimo 91 %». Sonríe apenas y desliza."
+ },
+ {
+  "id": "scene-084",
+  "t0": 791.0,
+  "t1": 817.0,
+  "tipo": "video",
+  "clip_s": 26,
+  "texto": "Valeria Roca presenta PRESENTE Legado: 312 millones de usuarios."
+ },
+ {
+  "id": "scene-085",
+  "t0": 817.0,
+  "t1": 840.0,
+  "tipo": "video",
+  "clip_s": 22,
+  "texto": "Dos teléfonos sobre el banco a oscuras siguen platicando; créditos de LogIA."
+ }
+]

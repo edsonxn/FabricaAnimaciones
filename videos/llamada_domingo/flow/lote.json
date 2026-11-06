@@ -1,0 +1,1000 @@
+[
+ {
+  "id": "esc_taller",
+  "kind": "esc",
+  "out": "flow/esc/taller.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_oficina",
+  "kind": "esc",
+  "out": "flow/esc/oficina.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_depto",
+  "kind": "esc",
+  "out": "flow/esc/depto.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_plaza",
+  "kind": "esc",
+  "out": "flow/esc/plaza.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_cocina",
+  "kind": "esc",
+  "out": "flow/esc/cocina.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: Doña Carmen's small old kitchen at night: a single hanging lamp over a table with an embroidered tablecloth, a sugar bowl, a clay jar, a round wall clock, saint pictures, dark window. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_porche",
+  "kind": "esc",
+  "out": "flow/esc/porche.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: the porch of Doña Carmen's colorful old house at dusk: potted geraniums, a metal rocking chair, a warm porch light. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_auto_lucia",
+  "kind": "esc",
+  "out": "flow/esc/auto_lucia.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: inside an old small hatchback car parked on a Guadalajara street in the evening: dashboard, a hospital badge hanging from the mirror, streetlights through the windshield. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_taxi",
+  "kind": "esc",
+  "out": "flow/esc/taxi.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: the back seat of a taxi at night in Mexico City: passing city lights and rain on the window. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_pasillo",
+  "kind": "esc",
+  "out": "flow/esc/pasillo.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: a hospital corridor at night in Guadalajara: pale green walls, fluorescent lights, a stretcher, a nurses' station. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_hospital",
+  "kind": "esc",
+  "out": "flow/esc/hospital.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: a public hospital room at night in Guadalajara: a single bed, a heart monitor, an oxygen tube, a curtain, a window with the dark city. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_carretera",
+  "kind": "esc",
+  "out": "flow/esc/carretera.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: inside a modern car driving on a highway to Guadalajara at sunset in December: the golden light, an infant car seat in the back. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_puerta",
+  "kind": "esc",
+  "out": "flow/esc/puerta.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_taller_perfecto",
+  "kind": "esc",
+  "out": "flow/esc/taller_perfecto.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: an idealized spotless version of an old watch-repair workshop: every antique clock perfectly aligned on a green wall, a tidy wooden workbench, soft golden perfect light, no dust at all, slightly too perfect, like a catalog. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_puerta_dia",
+  "kind": "esc",
+  "out": "flow/esc/puerta_dia.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: the front door of Don Ramón's watch-repair shop in an old Guadalajara street on a sunny Sunday: a painted sign, the metal shutter open, potted plants. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_hospital_ext",
+  "kind": "esc",
+  "out": "flow/esc/hospital_ext.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: the facade of a big public hospital in Guadalajara at night: an emergency entrance sign glowing red, an ambulance, wet asphalt. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_perfecto",
+  "kind": "esc",
+  "out": "flow/esc/perfecto.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "esc_auditorio",
+  "kind": "esc",
+  "out": "flow/esc/auditorio.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Empty establishing shot, no people: a huge modern dark auditorium in Mexico City at a tech product launch: tiered seats full of people, a giant LED screen above a minimalist stage, warm spotlights. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-001",
+  "kind": "img",
+  "out": "medios/scene-001.jpg",
+  "copia": "flow/esc/puerta_dia.jpg",
+  "ing": []
+ },
+ {
+  "id": "scene-002",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-002.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The pocket watch is an old gold pocket watch with an open engraved lid. The phone is a thin frameless glass smartphone. Don Ramón sits at his workbench with a jeweler's loupe in one eye, working on the open pocket watch; the clocks tick; the phone on the bench lights up and buzzes; he lifts the loupe and grins like a child. Don Ramón says in Mexican Spanish, delighted, to himself: \"¡Ándale! Ya sabía yo que no me ibas a fallar.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-003",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-003.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The pocket watch is an old gold pocket watch with an open engraved lid. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Medium close-up: Don Ramón holds the phone up in front of his face for a video call, beaming, and shows the open gold pocket watch to the camera. Don Ramón says in Mexican Spanish, warm, teasing: \"¿Qué pasó, Chato? Pensé que hoy no ibas a poder. Mira, te estoy arreglando el reloj del abuelo. Para el niño.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-004",
+  "kind": "llamada",
+  "d": 8,
+  "out": "medios/scene-004.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, freshly shaved and groomed, wearing a soft cream knit sweater instead of a suit, smiles warmly. Daniel says in Mexican Spanish, warm, loving: \"¿Cómo no, papá? Es domingo. ¿Y esa rodilla?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-005",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-005.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The birdcage is a small white wire birdcage with a yellow canary inside. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón rubs his knee and laughs, then his smile fades as he looks at the silent yellow canary in its cage by the window. Don Ramón says in Mexican Spanish, laughing, then softer and sad: \"Terca, como yo. Oye, el Paco ya no canta. Desde que se fue tu mamá, ya no canta.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-006",
+  "kind": "llamada",
+  "d": 10,
+  "out": "medios/scene-006.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, in the soft cream knit sweater, tilts his head tenderly. Daniel says in Mexican Spanish, gentle, reassuring: \"Ponle la estación de boleros, la que ponía mamá en las mañanas. Vas a ver que canta.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-007",
+  "kind": "img",
+  "out": "medios/scene-007.jpg",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Medium shot: Don Ramón turns the knob of the old wooden radio on the shelf with a hopeful face, looking at the silent yellow canary in its white wire cage by the window. The birdcage is a small white wire birdcage with a yellow canary inside. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-008",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-008.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:oficina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. The phone is a thin frameless glass smartphone. Night. Daniel, exhausted, tie-less, sits at the long table in a meeting; his phone vibrates face up on the table; he glances at it without picking it up, flips it face down and speaks to a colleague off-screen. Daniel says in Mexican Spanish, tired, impatient: \"No, sigue, sigue. ¿Cómo vamos con los inversionistas?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-011",
+  "kind": "img",
+  "out": "medios/scene-011.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. The glass facade of a huge modern convention center in Mexico City at night, a crowd entering, a giant warm glowing abstract circular light sculpture above the entrance, wet pavement reflecting the lights. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-014",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-014.mp4",
+  "ing": [
+   "Inés",
+   "Daniel",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Inés is a 34-year-old Mexican woman with fair olive skin, long straight dark-brown hair, seven months pregnant, an oversized beige knit sweater; Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Inés looks exactly like the Inés character reference. Daniel looks exactly like the Daniel character reference. Inés sits on the grey sofa with a hand on her pregnant belly, the TV glowing; Daniel works on the laptop at the other end of the sofa without looking up. She speaks first, he answers without lifting his eyes. Inés says in Mexican Spanish, tired, a little sad: \"¿Otra vez no le llamaste a tu papá?\" Daniel says in Mexican Spanish, distracted: \"Le llamo el domingo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-015",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-015.mp4",
+  "ing": [
+   "Inés",
+   "Daniel",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Inés is a 34-year-old Mexican woman with fair olive skin, long straight dark-brown hair, seven months pregnant, an oversized beige knit sweater; Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Inés looks exactly like the Inés character reference. Daniel looks exactly like the Daniel character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Inés looking at him; then a silent reverse shot of Daniel stopping typing, guilty. Inés says in Mexican Spanish, quiet, disappointed: \"Eso dijiste hace tres domingos, Dani.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-017",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-017.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Late night, Inés is gone. Close-up of Daniel lit by the laptop screen; he smiles despite himself. Daniel says in Mexican Spanish, softly amused: \"Chato. Me dice Chato.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-019",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-019.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel laughs quietly and shakes his head, lit by the laptop. Daniel says in Mexican Spanish, laughing quietly: \"Daniel Alejandro Ortega. Completo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-021",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-021.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel's smile fades; a long silence; he looks at the framed photo of his parents on the shelf, then answers very quietly, his eyes wet. Daniel says in Mexican Spanish, very quiet, ashamed: \"Que mi mamá se murió… y yo no llegué.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-023",
+  "kind": "img",
+  "out": "medios/scene-023.jpg",
+  "ing": [
+   "Daniel",
+   "Inés",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie; Inés is a 34-year-old Mexican woman with fair olive skin, long straight dark-brown hair, seven months pregnant, an oversized beige knit sweater. Late night, wide shot: Daniel sits alone on the grey sofa lit only by the cold glow of the laptop on his knees; behind him, out of focus, Inés sleeps on the other end of the sofa under a blanket. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-026",
+  "kind": "img",
+  "out": "medios/scene-026.jpg",
+  "copia": "flow/esc/plaza.jpg",
+  "ing": []
+ },
+ {
+  "id": "scene-027",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-027.mp4",
+  "ing": [
+   "Don Chuy",
+   "Doña Carmen",
+   "Don Ramón",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Don Chuy is a 74-year-old stout Mexican man, bald with a white horseshoe of hair, a thick grey-and-black mustache, a white guayabera shirt; Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace; Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Don Chuy looks exactly like the Don Chuy character reference. Doña Carmen looks exactly like the Doña Carmen character reference. Don Ramón looks exactly like the Don Ramón character reference. Fixed blocking: Don Chuy on the LEFT, Doña Carmen in the CENTER, Don Ramón on the RIGHT, around the dominoes table. Don Chuy slams a domino tile on the table, proud and loud; Doña Carmen nods. Don Chuy says in Mexican Spanish, loud, proud: \"¡Mi hija me habla diario, compadre! ¡Diario! Antes ni en mi cumpleaños.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-028",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-028.mp4",
+  "ing": [
+   "Doña Carmen",
+   "Don Chuy",
+   "Don Ramón",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace; Don Chuy is a 74-year-old stout Mexican man, bald with a white horseshoe of hair, a thick grey-and-black mustache, a white guayabera shirt; Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Doña Carmen looks exactly like the Doña Carmen character reference. Don Chuy looks exactly like the Don Chuy character reference. Don Ramón looks exactly like the Don Ramón character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Fixed blocking: Don Chuy on the LEFT, Doña Carmen in the CENTER, Don Ramón on the RIGHT. Doña Carmen smiles, proud, adjusting her glasses. Doña Carmen says in Mexican Spanish, proud, sweet: \"La mía también. Hasta se acuerda de mis pastillas.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-029",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-029.mp4",
+  "ing": [
+   "Don Ramón",
+   "Don Chuy",
+   "Doña Carmen",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt; Don Chuy is a 74-year-old stout Mexican man, bald with a white horseshoe of hair, a thick grey-and-black mustache, a white guayabera shirt; Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. Don Ramón looks exactly like the Don Ramón character reference. Don Chuy looks exactly like the Don Chuy character reference. Doña Carmen looks exactly like the Doña Carmen character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Fixed blocking: Don Chuy on the LEFT, Doña Carmen in the CENTER, Don Ramón on the RIGHT. Don Ramón places a tile with a flourish, beaming; the others laugh. Don Ramón says in Mexican Spanish, beaming, proud: \"El Chato me cuenta todo. Como si viviera aquí a la vuelta.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-030",
+  "kind": "img",
+  "out": "medios/scene-030.jpg",
+  "ing": [
+   "Doña Carmen",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. Medium close-up: Doña Carmen sits at the dominoes table in the plaza looking down at the phone in her hand; her smile is slowly fading into doubt. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-031",
+  "kind": "img",
+  "out": "medios/scene-031.jpg",
+  "ing": [
+   "Lucía",
+   "ESC:puerta_dia"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in an old Guadalajara street on a sunny Sunday: a painted sign, the metal shutter open, potted plants. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. Lucía, in her nurse scrubs and open grey cardigan, arrives at the open door of the watch-repair shop carrying two grocery bags and a weekly plastic pill organizer, tired but smiling. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-032",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-032.mp4",
+  "ing": [
+   "Lucía",
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan; Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The phone is a thin frameless glass smartphone. Lucía looks exactly like the Lucía character reference. Don Ramón looks exactly like the Don Ramón character reference. Lucía, in her nurse scrubs, comes into the workshop holding grocery bags and a weekly pill organizer; Don Ramón, on a video call, covers the phone with his hand and answers without looking at her. Lucía says in Mexican Spanish, cheerful, tired: \"Papá, te traje tus pastillas de la semana.\" Don Ramón says in Mexican Spanish, distracted, happy: \"Ahorita, mija. Estoy con tu hermano.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-033",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-033.mp4",
+  "ing": [
+   "Lucía",
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan; Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Lucía looks exactly like the Lucía character reference. Don Ramón looks exactly like the Don Ramón character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Lucía putting the bags down slowly, hurt. Lucía says in Mexican Spanish, hurt, quiet: \"Yo vengo cada domingo, papá. Cada domingo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-034",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-034.mp4",
+  "ing": [
+   "Don Ramón",
+   "Lucía",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt; Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. The phone is a thin frameless glass smartphone. Don Ramón looks exactly like the Don Ramón character reference. Lucía looks exactly like the Lucía character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón answers kindly, without malice, smiling at the phone; then a silent close-up of Lucía swallowing her tears. Don Ramón says in Mexican Spanish, kind, oblivious: \"Ya sé, mija. Pero tu hermano sí me escucha.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-035",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-035.mp4",
+  "ing": [
+   "Lucía",
+   "ESC:auto_lucia"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: inside an old small hatchback car parked on a Guadalajara street in the evening: dashboard, a hospital badge hanging from the mirror, streetlights through the windshield. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. The phone is a thin frameless glass smartphone. Evening. Lucía sits in her parked car with the phone at her ear, annoyed, rubbing her forehead. Lucía says in Mexican Spanish, annoyed, suspicious: \"¿Desde cuándo le hablas diario a papá?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-036",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-036.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:oficina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. The phone is a thin frameless glass smartphone. Daniel walks in the glass office with the phone at his ear, confused; he stops, looks at the screen, then puts it back to his ear. Daniel says in Mexican Spanish, confused, then covering: \"¿Diario? … Ah. Sí. Sí, le hablo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-038",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-038.mp4",
+  "ing": [
+   "Lucía",
+   "ESC:auto_lucia"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: inside an old small hatchback car parked on a Guadalajara street in the evening: dashboard, a hospital badge hanging from the mirror, streetlights through the windshield. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Lucía softens, leaning her head back on the seat, smiling sadly. Lucía says in Mexican Spanish, softer, sincere: \"Qué bueno, Dani. Te extraña mucho. Vente en Navidad, ¿sí?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-039",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-039.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:oficina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel looks at the city through the glass, guilty, the phone at his ear. Daniel says in Mexican Spanish, hesitant: \"Sí… Sí voy.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-040",
+  "kind": "img",
+  "out": "medios/scene-040.jpg",
+  "copia": "flow/esc/cocina.jpg",
+  "ing": []
+ },
+ {
+  "id": "scene-041",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-041.mp4",
+  "ing": [
+   "Doña Carmen",
+   "ESC:cocina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Doña Carmen's small old kitchen at night: a single hanging lamp over a table with an embroidered tablecloth, a sugar bowl, a clay jar, a round wall clock, saint pictures, dark window. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. The phone is a thin frameless glass smartphone. Doña Carmen sits at her kitchen table on a video call, the phone propped against the sugar bowl; she speaks sweetly but her eyes are watchful, testing. Doña Carmen says in Mexican Spanish, sweet, testing: \"Mija, ¿te acuerdas del perro que teníamos en Tepic? El Firulais.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-042",
+  "kind": "llamada",
+  "d": 10,
+  "out": "medios/scene-042.mp4",
+  "ing": [
+   "Mariana",
+   "ESC:perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. Characters: Mariana is a 38-year-old Mexican woman with fair skin, a sleek chestnut bob haircut, small pearl earrings, a white silk blouse. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Mariana laughs, delighted, nodding. Mariana says in Mexican Spanish, delighted, warm: \"¡Ay, el Firulais! ¡Cómo no, mamá! Si dormía conmigo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-043",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-043.mp4",
+  "ing": [
+   "Doña Carmen",
+   "ESC:cocina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Doña Carmen's small old kitchen at night: a single hanging lamp over a table with an embroidered tablecloth, a sugar bowl, a clay jar, a round wall clock, saint pictures, dark window. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Very slow push-in on Doña Carmen's face as it freezes; she takes off her glasses. Doña Carmen says in Mexican Spanish, barely a breath: \"Nunca tuvimos perro, Mariana.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-044",
+  "kind": "llamada",
+  "d": 8,
+  "out": "medios/scene-044.mp4",
+  "ing": [
+   "Mariana",
+   "ESC:perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. Characters: Mariana is a 38-year-old Mexican woman with fair skin, a sleek chestnut bob haircut, small pearl earrings, a white silk blouse. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Mariana keeps exactly the same warm smile, unbothered. Mariana says in Mexican Spanish, smooth, sweet: \"Ay, mamá, qué cosas dices. ¿Ya te tomaste tu pastilla?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-045",
+  "kind": "img",
+  "out": "medios/scene-045.jpg",
+  "ing": [
+   "Doña Carmen",
+   "ESC:cocina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Doña Carmen's small old kitchen at night: a single hanging lamp over a table with an embroidered tablecloth, a sugar bowl, a clay jar, a round wall clock, saint pictures, dark window. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. Night. Doña Carmen sits alone at the kitchen table under the single hanging lamp, her glasses in her hand, the phone lying face down next to the sugar bowl, the round wall clock behind her. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-046",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-046.mp4",
+  "ing": [
+   "Doña Carmen",
+   "Don Ramón",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace; Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Doña Carmen looks exactly like the Doña Carmen character reference. Don Ramón looks exactly like the Don Ramón character reference. Next morning, the plaza is empty; Doña Carmen sits next to Don Ramón on a park bench and talks low, holding his arm. Doña Carmen says in Mexican Spanish, low, urgent: \"Ramón, no son ellos. Es una aplicación. Mi hija ya me lo confesó.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-047",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-047.mp4",
+  "ing": [
+   "Don Ramón",
+   "Doña Carmen",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt; Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. Don Ramón looks exactly like the Don Ramón character reference. Doña Carmen looks exactly like the Doña Carmen character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón laughs it off, patting her hand. Don Ramón says in Mexican Spanish, amused, dismissive: \"Ay, Carmen. El Chato se acuerda de todo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-048",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-048.mp4",
+  "ing": [
+   "Doña Carmen",
+   "Don Ramón",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace; Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Doña Carmen looks exactly like the Doña Carmen character reference. Don Ramón looks exactly like the Don Ramón character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Doña Carmen looks him in the eye; Don Ramón's smile slowly disappears. Doña Carmen says in Mexican Spanish, serious, gentle: \"¿Y ya le preguntaste algo que no le haya contado a nadie?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-049",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-049.mp4",
+  "ing": [
+   "Doña Carmen",
+   "ESC:porche"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the porch of Doña Carmen's colorful old house at dusk: potted geraniums, a metal rocking chair, a warm porch light. Characters: Doña Carmen is a 69-year-old Mexican woman with short permed grey hair, round gold-rimmed glasses, a lilac blouse under a cream cardigan, a small gold medal necklace. The phone is a thin frameless glass smartphone. Dusk. Doña Carmen in her rocking chair on the porch, the phone at her ear; she listens, closes her eyes, and answers with a sad, tender resignation. Doña Carmen says in Mexican Spanish, tender, resigned: \"No, mija. No lo canceles. Que me siga hablando.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-050",
+  "kind": "img",
+  "out": "medios/scene-050.jpg",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Night, only the magnifying lamp is on: Don Ramón sits at his workbench holding the phone in both hands, looking at the dark screen, doubtful and worried. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-051",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-051.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The phone is a thin frameless glass smartphone. Night, only the magnifying lamp is on. Don Ramón on a video call, serious for the first time, looking into the phone. Don Ramón says in Mexican Spanish, serious, slow: \"Chato… ¿dónde estabas tú cuando se murió tu mamá?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-052",
+  "kind": "llamada",
+  "d": 10,
+  "out": "medios/scene-052.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, in the soft cream knit sweater, lowers his eyes for a second, then looks back into the lens with perfect sorrow. Daniel says in Mexican Spanish, sorrowful, sincere: \"En el aeropuerto, papá. No alcancé el vuelo. Y nunca te pedí perdón.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-053",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-053.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón's eyes fill with tears; relieved, he nods slowly. Don Ramón says in Mexican Spanish, moved, relieved: \"Ya, mijo. Ya pasó.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-055",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-055.mp4",
+  "ing": [
+   "Lucía",
+   "ESC:pasillo"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a hospital corridor at night in Guadalajara: pale green walls, fluorescent lights, a stretcher, a nurses' station. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. The phone is a thin frameless glass smartphone. Lucía, in her nurse scrubs, walks fast down the hospital corridor with the phone at her ear, furious. Lucía says in Mexican Spanish, furious: \"¡Es una aplicación, Daniel! Carmen me contó todo. ¡Papá habla con un robot!\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-056",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-056.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:taxi"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the back seat of a taxi at night in Mexico City: passing city lights and rain on the window. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. The phone is a thin frameless glass smartphone. Daniel in the back of a taxi at night, phone at his ear, defensive, the city lights passing over his face. Daniel says in Mexican Spanish, defensive, tired: \"¿Y qué querías? ¿Que no le hablara nadie? Está feliz, Lucía.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-057",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-057.mp4",
+  "ing": [
+   "Lucía",
+   "ESC:pasillo"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a hospital corridor at night in Guadalajara: pale green walls, fluorescent lights, a stretcher, a nurses' station. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. The phone is a thin frameless glass smartphone. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Lucía stops in the corridor, closes her eyes, and says it quietly before hanging up. Lucía says in Mexican Spanish, quiet, crushing: \"Está feliz con alguien que no existe.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-059",
+  "kind": "img",
+  "out": "medios/scene-059.jpg",
+  "copia": "flow/esc/hospital_ext.jpg",
+  "ing": []
+ },
+ {
+  "id": "scene-060",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-060.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:hospital"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a public hospital room at night in Guadalajara: a single bed, a heart monitor, an oxygen tube, a curtain, a window with the dark city. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. The phone is a thin frameless glass smartphone. Night. Don Ramón lies in the hospital bed in a gown with an oxygen tube; weak, he holds the phone above his face on a video call. Don Ramón says in Mexican Spanish, weak, hopeful: \"Chato… estoy en el hospital. Me duele el pecho. ¿Vienes?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-061",
+  "kind": "llamada",
+  "d": 8,
+  "out": "medios/scene-061.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an immaculate bright minimalist living room in soft perfect daylight: a white sofa, a green plant, white walls, everything clean and slightly too perfect, like a catalog. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Daniel, in the soft cream knit sweater, worried and tender. Daniel says in Mexican Spanish, tender, urgent: \"Ya voy, papá. Aguántame. Tomo el primer vuelo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-062",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-062.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:hospital"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a public hospital room at night in Guadalajara: a single bed, a heart monitor, an oxygen tube, a curtain, a window with the dark city. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Don Ramón lowers the phone to his chest and smiles with relief, looking at a nurse off-screen. Don Ramón says in Mexican Spanish, weak, happy: \"Ya viene mi hijo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-064",
+  "kind": "img",
+  "out": "medios/scene-064.jpg",
+  "ing": [
+   "ESC:hospital"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a public hospital room at night in Guadalajara: a single bed, a heart monitor, an oxygen tube, a curtain, a window with the dark city. Dawn light: the hospital bed is empty, the sheets pulled back, the heart monitor turned off; on the bedside table the old gold pocket watch lies open, stopped. The pocket watch is an old gold pocket watch with an open engraved lid. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-067",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-067.mp4",
+  "ing": [
+   "Daniel",
+   "Inés",
+   "ESC:carretera"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: inside a modern car driving on a highway to Guadalajara at sunset in December: the golden light, an infant car seat in the back. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie; Inés is a 34-year-old Mexican woman with fair olive skin, long straight dark-brown hair, seven months pregnant, an oversized beige knit sweater. Daniel looks exactly like the Daniel character reference. Inés looks exactly like the Inés character reference. Daniel drives, happy for the first time, wearing a dark jacket; Inés, no longer pregnant, sits in the back next to a newborn baby in the infant car seat and smiles at him in the mirror. Daniel says in Mexican Spanish, excited: \"Va a ser la sorpresa de su vida. Ni le dije que veníamos.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-068",
+  "kind": "img",
+  "out": "medios/scene-068.jpg",
+  "copia": "flow/esc/puerta.jpg",
+  "ing": []
+ },
+ {
+  "id": "scene-069",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-069.mp4",
+  "ing": [
+   "Lucía",
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan; Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Lucía looks exactly like the Lucía character reference. Daniel looks exactly like the Daniel character reference. Lucía, dressed in black, opens the shop door; cardboard boxes behind her; Daniel stands outside holding the baby carrier, smiling uncertainly. She speaks first; he answers. Lucía says in Mexican Spanish, cold, tired: \"¿Ahora sí vienes?\" Daniel says in Mexican Spanish, confused, smiling: \"¿Dónde está papá?\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-070",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-070.mp4",
+  "ing": [
+   "Lucía",
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan; Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Lucía looks exactly like the Lucía character reference. Daniel looks exactly like the Daniel character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Close-up of Lucía, dressed in black, eyes red, very calm. Lucía says in Mexican Spanish, calm, devastating: \"Lo enterramos hace tres semanas. Te hablé, Daniel. Me dijiste que no alcanzabas vuelo.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-071",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-071.mp4",
+  "ing": [
+   "Daniel",
+   "Lucía",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie; Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan. The phone is a thin frameless glass smartphone. Daniel looks exactly like the Daniel character reference. Lucía looks exactly like the Lucía character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Daniel goes pale; he shakes his head and pulls the phone out of his pocket with trembling hands. Daniel says in Mexican Spanish, stunned, stammering: \"Yo nunca… Yo no…\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-073",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-073.mp4",
+  "ing": [
+   "Lucía",
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan; Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Lucía looks exactly like the Lucía character reference. Daniel looks exactly like the Daniel character reference. Continuing the same conversation from the previous shot, same moment, same lighting, same clothes, the characters stay exactly where they were. Lucía, dressed in black, speaks without anger, tears running down; Daniel in soft focus with the phone. Lucía says in Mexican Spanish, broken, quiet: \"Te estuvo esperando toda la noche. Le decía a la enfermera: ya viene mi hijo, ya viene.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-074",
+  "kind": "img",
+  "out": "medios/scene-074.jpg",
+  "ing": [
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Close-up at dusk at the shop door: Daniel's face crumbles, eyes full of tears, mouth half open, the black mourning bow out of focus behind him. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "scene-076",
+  "kind": "llamada",
+  "d": 10,
+  "out": "medios/scene-076.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller_perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an idealized spotless version of an old watch-repair workshop: every antique clock perfectly aligned on a green wall, a tidy wooden workbench, soft golden perfect light, no dust at all, slightly too perfect, like a catalog. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Don Ramón, freshly groomed, in a spotless cardigan, in a perfect bright version of his workshop, smiles with joy. Don Ramón says in Mexican Spanish, joyful: \"¡Chato! ¿Ya llegaste? Te tengo chilaquiles.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-077",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-077.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. The phone is a thin frameless glass smartphone. Close-up of Daniel holding the phone to his face, crying, barely able to speak. Daniel says in Mexican Spanish, crying: \"Papá… perdóname.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-078",
+  "kind": "llamada",
+  "d": 10,
+  "out": "medios/scene-078.mp4",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller_perfecto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: an idealized spotless version of an old watch-repair workshop: every antique clock perfectly aligned on a green wall, a tidy wooden workbench, soft golden perfect light, no dust at all, slightly too perfect, like a catalog. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Framed as the front camera of a video call: medium close-up, the person looks straight into the lens and talks to the viewer as if to a loved one, perfectly lit, a warm flawless smile, eyes slightly too steady. Don Ramón tilts his head with infinite tenderness. Don Ramón says in Mexican Spanish, tender: \"¿Perdonarte de qué, Chato? Si tú nunca faltaste.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-079",
+  "kind": "clip",
+  "d": 8,
+  "out": "medios/scene-079.mp4",
+  "ing": [
+   "Lucía",
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Lucía is a 42-year-old Mexican woman with brown skin, shoulder-length wavy black hair with a few grey strands tied in a low ponytail, no makeup, tired kind eyes, teal nurse scrubs under an open grey cardigan; Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Lucía looks exactly like the Lucía character reference. Daniel looks exactly like the Daniel character reference. Lucía, dressed in black, looks at her brother talking to the phone, disgusted and heartbroken; she takes her coat and walks away down the street. Lucía says in Mexican Spanish, disgusted, heartbroken: \"Eso no es mi papá.\" No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "scene-080",
+  "kind": "img",
+  "out": "medios/scene-080.jpg",
+  "ing": [
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Extreme close-up on the wooden workbench: the old gold pocket watch with its lid open, polished and repaired, ticking; the inside of the lid is engraved in elegant cursive with the words «Para el que viene». The pocket watch is an old gold pocket watch with an open engraved lid. No other text, no logos, no watermark."
+ },
+ {
+  "id": "scene-081",
+  "kind": "clip",
+  "d": 10,
+  "out": "medios/scene-081.mp4",
+  "ing": [
+   "Daniel",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. The birdcage is a small white wire birdcage with a yellow canary inside. The phone is a thin frameless glass smartphone. The pocket watch is an old gold pocket watch with an open engraved lid. Night. Daniel sits alone at his father's workbench, the baby carrier beside him and the phone face up on the bench; he turns the knob of the old wooden radio; a soft bolero plays, and the yellow canary starts to sing. Daniel cries in silence. Nobody speaks. Nobody speaks: lips closed, no dialogue, no voice-over. No on-screen text, no subtitles, no captions, no logos, no watermark. Only the spoken lines written here, natural Mexican Spanish accent, no background music."
+ },
+ {
+  "id": "bg_key_sala",
+  "kind": "bg",
+  "out": "flow/bg/key_sala.jpg",
+  "ing": [
+   "ESC:auditorio"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a huge modern dark auditorium in Mexico City at a tech product launch: tiered seats full of people, a giant LED screen above a minimalist stage, warm spotlights. Wide shot from the back of a dark huge auditorium at a tech launch: thousands of people in silhouette, a giant blank warm-white LED screen above the stage, and Valeria Roca, an elegant 45-year-old Mexican woman with a sleek black low bun, a white minimalist suit and a thin headset microphone small on the stage in a spotlight. The giant screen is completely blank. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_key_valeria",
+  "kind": "bg",
+  "out": "flow/bg/key_valeria.jpg",
+  "ing": [
+   "ESC:auditorio"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a huge modern dark auditorium in Mexico City at a tech product launch: tiered seats full of people, a giant LED screen above a minimalist stage, warm spotlights. Medium shot from the side of the stage: Valeria Roca, an elegant 45-year-old Mexican woman with a sleek black low bun, a white minimalist suit and a thin headset microphone, walking calmly on the stage in a soft spotlight, gesturing with one open hand toward the audience, seen in profile, mouth closed. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_key_publico",
+  "kind": "bg",
+  "out": "flow/bg/key_publico.jpg",
+  "ing": [
+   "ESC:auditorio"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a huge modern dark auditorium in Mexico City at a tech product launch: tiered seats full of people, a giant LED screen above a minimalist stage, warm spotlights. Close shot of the audience in a dark auditorium: faces of people of different ages lit by the warm light of a giant screen, some moved, a woman touching her chest. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_key_valeria2",
+  "kind": "bg",
+  "out": "flow/bg/key_valeria2.jpg",
+  "ing": [
+   "ESC:auditorio"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a huge modern dark auditorium in Mexico City at a tech product launch: tiered seats full of people, a giant LED screen above a minimalist stage, warm spotlights. Wide shot of the stage from the audience: Valeria Roca, an elegant 45-year-old Mexican woman with a sleek black low bun, a white minimalist suit and a thin headset microphone stands alone in the center in a golden spotlight, arms open, a standing ovation in silhouette in the foreground, confetti of light. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_anu_1",
+  "kind": "bg",
+  "out": "flow/bg/anu_1.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. A bright warm commercial: a 75-year-old Mexican grandmother laughs with joy at a video call on a tablet in her sunny kitchen with colorful talavera tiles. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_anu_2",
+  "kind": "bg",
+  "out": "flow/bg/anu_2.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. A bright warm commercial: a 35-year-old Mexican man in a business suit walks fast through an airport terminal with a carry-on, relieved and smiling at his phone. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_anu_3",
+  "kind": "bg",
+  "out": "flow/bg/anu_3.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. A bright warm commercial: an elderly Mexican man on a sunny porch with a straw hat smiles proudly while talking to his phone held at arm's length for a video call. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_anu_4",
+  "kind": "bg",
+  "out": "flow/bg/anu_4.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. A bright warm commercial: a young Mexican woman in a modern office leans back in her chair and closes her eyes peacefully, a cup of coffee in her hand, the city behind the glass. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_mon_1",
+  "kind": "bg",
+  "out": "flow/bg/mon_1.jpg",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Morning: Don Ramón eats breakfast at a small table in a corner of his workshop, the phone propped against a coffee cup for a video call, laughing with his mouth open. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_mon_2",
+  "kind": "bg",
+  "out": "flow/bg/mon_2.jpg",
+  "ing": [
+   "Don Ramón",
+   "ESC:plaza"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a small shaded plaza in a Guadalajara neighborhood on a Sunday afternoon: a folding table with dominoes under big laurel trees, a white kiosk, colorful old houses, dappled warm sunlight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Afternoon in the plaza: Don Ramón proudly shows his phone screen to two neighbors at the dominoes table, beaming. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_mon_3",
+  "kind": "bg",
+  "out": "flow/bg/mon_3.jpg",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Don Ramón waters potted plants by the window of his workshop while talking happily into the phone held in his other hand, sunlight on his face. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_mon_4",
+  "kind": "bg",
+  "out": "flow/bg/mon_4.jpg",
+  "ing": [
+   "Don Ramón"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Night: Don Ramón lies in his old wooden bed in a simple bedroom with a crucifix on the wall, the phone glowing in his hands for a video call, smiling tenderly, a bedside lamp. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_mon_5",
+  "kind": "bg",
+  "out": "flow/bg/mon_5.jpg",
+  "ing": [
+   "Don Ramón",
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Characters: Don Ramón is a 71-year-old Mexican man with brown weathered skin, thick white hair combed back, a neat white mustache, reading glasses hanging on a cord around his neck, a beige knitted cardigan over a light-blue checked shirt. Don Ramón at his workbench polishes the old gold pocket watch, the phone propped in front of him on a video call, talking and gesturing with the tiny screwdriver, very happy. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_noti_1",
+  "kind": "bg",
+  "out": "flow/bg/noti_1.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. A crowded Mexico City metro car: many passengers of all ages look at their phones, some smiling at video calls, cold fluorescent light. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_noti_2",
+  "kind": "bg",
+  "out": "flow/bg/noti_2.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. A sunny residential home for the elderly in Mexico: several elderly people in armchairs each talk to a tablet with a video call, smiling, a nurse walks by. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_noti_3",
+  "kind": "bg",
+  "out": "flow/bg/noti_3.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. The plenary hall of the Mexican Senate in session, senators voting, a big electronic voting board glowing green, wide shot. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_noti_estudio",
+  "kind": "bg",
+  "out": "flow/bg/noti_estudio.jpg",
+  "ing": [],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. An empty modern TV news studio set with a sleek desk, blue and white light, a huge video wall behind the desk that is completely blank, no people. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_fiesta",
+  "kind": "bg",
+  "out": "flow/bg/fiesta.jpg",
+  "ing": [
+   "Daniel",
+   "ESC:oficina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Night, an office party in the glass startup office: colleagues laugh with drinks and balloons; in the center Daniel, smiling, holds a glass in one hand and glances at his phone in the other. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_oficina_dia",
+  "kind": "bg",
+  "out": "flow/bg/oficina_dia.jpg",
+  "ing": [
+   "Daniel",
+   "ESC:oficina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Daytime: Daniel sits alone at his desk in the glass office, sunlight, the city behind the glass, looking down at the phone in his hand with an empty, faint smile. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_telefono_puerta",
+  "kind": "bg",
+  "out": "flow/bg/telefono_puerta.jpg",
+  "ing": [
+   "Daniel",
+   "ESC:puerta"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: the front door of Don Ramón's watch-repair shop in Guadalajara at dusk in December: the metal shutter half down, a black mourning bow on the door, dry flowers on the step, neighbors' Christmas lights. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Close-up at dusk at the shop door: Daniel's trembling hand holds the thin glass phone, the screen glowing with an incoming call, his blurred tearful face behind it. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_dos_telefonos",
+  "kind": "bg",
+  "out": "flow/bg/dos_telefonos.jpg",
+  "ing": [
+   "ESC:taller"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: Don Ramón's small watch-repair workshop in an old house in Guadalajara on a Sunday morning: a wooden workbench with tiny tools, a magnifying lamp and open watch movements, dozens of antique wall clocks ticking on a green wall, a white wire birdcage with a yellow canary by the window, an old wooden radio on a shelf, a framed photo of a smiling older woman, warm tungsten light mixed with soft daylight. Night, the workshop is dark: on the wooden workbench two thin glass phones lie face up side by side, both screens glowing with video calls, the birdcage with the sleeping yellow canary behind them, the clocks on the green wall in shadow. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_mesa_junta",
+  "kind": "bg",
+  "out": "flow/bg/mesa_junta.jpg",
+  "ing": [
+   "Daniel",
+   "ESC:oficina"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a sleek glass-walled startup office on a high floor in Mexico City at night: the city lights through floor-to-ceiling windows, a long white table with laptops, a whiteboard full of graphs, cold blue LED light. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Close-up on the long white meeting table at night: a thin glass phone lies face down next to a laptop, vibrating, Daniel's tired hand resting near it. The phone is a thin frameless glass smartphone. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ },
+ {
+  "id": "bg_laptop_noche",
+  "kind": "bg",
+  "out": "flow/bg/laptop_noche.jpg",
+  "ing": [
+   "Daniel",
+   "ESC:depto"
+  ],
+  "prompt": "Cinematic 16:9 frame from a prestige near-future anthology TV drama, photorealistic live action, anamorphic 40mm lens look, shallow depth of field, muted cool teal-grey color grade with soft natural light, Mexico a few years in the future with sleek discreet technology, natural skin texture, subtle film grain, restrained naturalistic acting. Setting: a modern minimalist apartment in Mexico City at night: grey sofa, a big TV on the wall, a laptop on the coffee table, rain on the window, dim cold light from the screens, a framed photo of an older couple on a shelf. Characters: Daniel is a 37-year-old Mexican man with light-brown skin, short black hair with a fade, a short trimmed black beard, tired eyes, a slim navy suit with a white shirt and no tie. Over-the-shoulder close-up from behind the grey sofa at night: Daniel's hands on a laptop keyboard, the screen glowing white and blank, rain on the window beyond. No on-screen text, no subtitles, no captions, no logos, no watermark."
+ }
+]

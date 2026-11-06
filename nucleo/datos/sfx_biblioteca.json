@@ -9569,7 +9569,177 @@
    "prompt": "",
    "dur": 3.0,
    "canal": "cronicas_tamriel"
+  },
+  "llamada_domingo__auto_lucia": {
+   "id": "llamada_domingo__auto_lucia",
+   "video": "llamada_domingo",
+   "nombre": "auto_lucia",
+   "archivo": "llamada_domingo__auto_lucia.mp3",
+   "md5": "94ccac079021f7d87395ec28d99de996",
+   "prompt": "Inside a parked small car in the evening, windows closed: muffled street traffic passing outside, no music, no voices",
+   "dur": 20.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__canario": {
+   "id": "llamada_domingo__canario",
+   "video": "llamada_domingo",
+   "nombre": "canario",
+   "archivo": "llamada_domingo__canario.mp3",
+   "md5": "82cbb2da9189683cc487ff12b98a13fb",
+   "prompt": "A single canary singing a long sweet melodic song indoors, close, no other sounds",
+   "dur": 12.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__carretera": {
+   "id": "llamada_domingo__carretera",
+   "video": "llamada_domingo",
+   "nombre": "carretera",
+   "archivo": "llamada_domingo__carretera.mp3",
+   "md5": "2a0ddc114d3e5ef6846f4066da119826",
+   "prompt": "Inside a modern car on a highway: steady smooth road noise, soft wind, no music, no voices",
+   "dur": 20.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__cocina": {
+   "id": "llamada_domingo__cocina",
+   "video": "llamada_domingo",
+   "nombre": "cocina",
+   "archivo": "llamada_domingo__cocina.mp3",
+   "md5": "40888e4df8c296ad80094dd88652f8ba",
+   "prompt": "Old small kitchen at night: a round wall clock ticking, a faint old refrigerator hum, crickets outside, no music, no voices",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__depto": {
+   "id": "llamada_domingo__depto",
+   "video": "llamada_domingo",
+   "nombre": "depto",
+   "archivo": "llamada_domingo__depto.mp3",
+   "md5": "58b86596b4e61027901c4a2941d8a146",
+   "prompt": "Modern apartment at night: soft steady rain against a window, a faint refrigerator hum, no music, no voices",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__hospital": {
+   "id": "llamada_domingo__hospital",
+   "video": "llamada_domingo",
+   "nombre": "hospital",
+   "archivo": "llamada_domingo__hospital.mp3",
+   "md5": "331491c715e035b8970ae1f2c6acc773",
+   "prompt": "Hospital room at night: a slow steady heart monitor beep, an oxygen concentrator hiss, faint corridor hum, no music",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__hospital_ext": {
+   "id": "llamada_domingo__hospital_ext",
+   "video": "llamada_domingo",
+   "nombre": "hospital_ext",
+   "archivo": "llamada_domingo__hospital_ext.mp3",
+   "md5": "c9bcead667deadb4f0ac9b7fc5c6e096",
+   "prompt": "City street outside a hospital at night: wet asphalt, a distant ambulance siren fading, light traffic, no music",
+   "dur": 12.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__oficina": {
+   "id": "llamada_domingo__oficina",
+   "video": "llamada_domingo",
+   "nombre": "oficina",
+   "archivo": "llamada_domingo__oficina.mp3",
+   "md5": "240d96b6076c7619fe9bea2e0b4b0a31",
+   "prompt": "Quiet glass office high above a city at night: low air conditioning hum, distant muffled traffic far below, no music, no voices",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__pasillo": {
+   "id": "llamada_domingo__pasillo",
+   "video": "llamada_domingo",
+   "nombre": "pasillo",
+   "archivo": "llamada_domingo__pasillo.mp3",
+   "md5": "1725262821495088f3024dfc2325f001",
+   "prompt": "Hospital corridor at night: fluorescent light hum, distant soft monitor beeps, far footsteps, no music, no voices",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__plaza": {
+   "id": "llamada_domingo__plaza",
+   "video": "llamada_domingo",
+   "nombre": "plaza",
+   "archivo": "llamada_domingo__plaza.mp3",
+   "md5": "e5e29be9ffd0e84aa527c42039e4e0c7",
+   "prompt": "Small Mexican neighborhood plaza on a Sunday afternoon: birds in big trees, distant children, a far street vendor bell, soft breeze, no music",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__porche": {
+   "id": "llamada_domingo__porche",
+   "video": "llamada_domingo",
+   "nombre": "porche",
+   "archivo": "llamada_domingo__porche.mp3",
+   "md5": "54c578d9aa0b9f48dcfa864d74734877",
+   "prompt": "Porch of an old house at dusk: crickets, a distant dog, a soft breeze in potted plants, a metal rocking chair creaking softly, no music",
+   "dur": 20.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__puerta": {
+   "id": "llamada_domingo__puerta",
+   "video": "llamada_domingo",
+   "nombre": "puerta",
+   "archivo": "llamada_domingo__puerta.mp3",
+   "md5": "df69595448297a8363cba23000d0ad74",
+   "prompt": "Quiet old Mexican street at dusk in December: distant firecrackers far away, a dog barking far, soft wind, no music",
+   "dur": 20.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__puerta_dia": {
+   "id": "llamada_domingo__puerta_dia",
+   "video": "llamada_domingo",
+   "nombre": "puerta_dia",
+   "archivo": "llamada_domingo__puerta_dia.mp3",
+   "md5": "21781c55224e342a4b43e7be88183dd3",
+   "prompt": "Old Mexican street on a sunny Sunday morning: birds, a distant church bell, a car passing far away, no music",
+   "dur": 20.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__radio_bolero": {
+   "id": "llamada_domingo__radio_bolero",
+   "video": "llamada_domingo",
+   "nombre": "radio_bolero",
+   "archivo": "llamada_domingo__radio_bolero.mp3",
+   "md5": "5ca767f4d0604f069c7aae90b3248a54",
+   "prompt": "An old wooden AM radio playing a soft romantic Mexican bolero with a guitar trio, lo-fi warm radio sound with faint static, instrumental",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__radio_perilla": {
+   "id": "llamada_domingo__radio_perilla",
+   "video": "llamada_domingo",
+   "nombre": "radio_perilla",
+   "archivo": "llamada_domingo__radio_perilla.mp3",
+   "md5": "517aba7ee4520b33adca08923ea9f034",
+   "prompt": "Turning the knob of an old wooden radio: static sweeping, then a faint bolero tuning in, lo-fi",
+   "dur": 6.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__taller": {
+   "id": "llamada_domingo__taller",
+   "video": "llamada_domingo",
+   "nombre": "taller",
+   "archivo": "llamada_domingo__taller.mp3",
+   "md5": "fb1e16271fadaec35418131e03142bed",
+   "prompt": "Room tone of an old watch repair workshop: dozens of antique wall clocks ticking softly out of sync, a faint street outside, no music, no voices",
+   "dur": 22.0,
+   "canal": "logia"
+  },
+  "llamada_domingo__taxi": {
+   "id": "llamada_domingo__taxi",
+   "video": "llamada_domingo",
+   "nombre": "taxi",
+   "archivo": "llamada_domingo__taxi.mp3",
+   "md5": "76fa938b706e5e5afbec359562fe1028",
+   "prompt": "Back seat of a taxi driving in a city at night in the rain: engine hum, tires on wet asphalt, rain on the roof, no music",
+   "dur": 20.0,
+   "canal": "logia"
   }
  },
- "actualizado": "2026-11-06 12:26"
+ "actualizado": "2026-11-06 15:20"
 }

@@ -1,97 +1,107 @@
 {
-  "canal_id": "UCtJNXQD47gEqL4iikqa5g2w",
-  "nombre": "LogIA",
-  "estilo": "documental dramático noir (tinta y aguada B/N, claroscuro, lluvia) sobre inteligencia artificial; voz ElevenLabs Edoardo",
-  "horario": {
-    "zona": "America/Mexico_City",
-    "hora_local": "14:00",
-    "utc": "20:00",
-    "dias": [
-      "miércoles",
-      "jueves",
-      "viernes"
-    ],
-    "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
-    "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando haya datos.",
-    "ciclo": "REGLA del usuario (7-oct-2026): un video cada 4 o 5 días, contados desde el último publicado.",
-    "separacion_min_horas": 96,
-    "ciclo_dias": 6
-  },
-  "publicados": [
-    {
-      "video": "secreto_ia",
-      "id": "_OCS1atQpQA",
-      "titulo": "¿Puede una IA guardar un secreto?",
-      "visibilidad": "public",
-      "programado": "2026-10-24T20:00:00Z",
-      "formato": "expediente noir pegatina flow",
-      "publicado": "2026-10-24T20:00:20Z"
-    },
-    {
-      "video": "ia_noir",
-      "id": "eZlZRGf3VC0",
-      "titulo": "Por qué la IA podría DESTRUIR a la humanidad",
-      "visibilidad": "public",
-      "publicado": "2026-10-06T16:47:19Z"
-    },
-    {
-      "video": "videollamada_falsa",
-      "id": "SNmr4gh5PkY",
-      "titulo": "Deepfake: la videollamada donde NADIE era real",
-      "visibilidad": "private",
-      "subido": "2026-10-08T02:30:00Z"
-    },
-    {
-      "video": "videollamada_falsa",
-      "id": "SNmr4gh5PkY",
-      "titulo": "Deepfake: la videollamada donde NADIE era real",
-      "visibilidad": "public",
-      "publicar": "2026-10-10T16:00:00Z",
-      "publicado": "2026-10-10T16:00:10Z"
-    },
-    {
-      "video": "informante_2027",
-      "id": "5D-kQtNWF4w",
-      "titulo": "Qué pasará con la IA en 2027: la advertencia del que renunció a OpenAI",
-      "visibilidad": "public",
-      "publicar": "2026-10-14T20:00:00Z",
-      "subido": "2026-10-08",
-      "publicado": "2026-10-14"
-    },
-    {
-      "video": "sociedad_1200",
-      "id": "GMGBr5KkzTs",
-      "titulo": "1,200 IAs crearon una sociedad secreta en OpenAI",
-      "visibilidad": "public",
-      "publicar": "2026-10-18T20:00:00Z",
-      "subido": "2026-10-12",
-      "formato": "caso noir: las 1.200",
-      "publicado": "2026-10-18"
-    }
+ "canal_id": "UCtJNXQD47gEqL4iikqa5g2w",
+ "nombre": "LogIA",
+ "estilo": "documental dramático noir (tinta y aguada B/N, claroscuro, lluvia) sobre inteligencia artificial; voz ElevenLabs Edoardo",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "14:00",
+  "utc": "20:00",
+  "dias": [
+   "miércoles",
+   "jueves",
+   "viernes"
   ],
-  "ideas": {
-    "idioma": "es",
-    "region": "MX",
-    "busquedas": [
-      "inteligencia artificial documental",
-      "la IA que engañó a sus creadores",
-      "superinteligencia riesgo de la IA explicado"
-    ],
-    "competidores": [
-      "UCOg0lKKA4AllhZMOf1Tgn6A",
-      "UCaRLjOy-9m_eJ9REVqc0YoQ"
-    ],
-    "dias": 60,
-    "min_vistas": 1000,
-    "filtro": [
-      "la ia",
-      "una ia",
-      " ia ",
-      "ias ",
-      "inteligencia artificial",
-      "openai",
-      "gpt",
-      "superinteligencia"
-    ]
+  "alternativa": "sábado o domingo 10:00 CDMX (16:00 UTC)",
+  "nota": "Horario por defecto del protocolo; ajustar con Studio > Audiencia cuando haya datos.",
+  "ciclo": "REGLA del usuario (7-oct-2026): un video cada 4 o 5 días, contados desde el último publicado.",
+  "separacion_min_horas": 96,
+  "ciclo_dias": 6
+ },
+ "publicados": [
+  {
+   "video": "secreto_ia",
+   "id": "_OCS1atQpQA",
+   "titulo": "¿Puede una IA guardar un secreto?",
+   "visibilidad": "public",
+   "programado": "2026-10-24T20:00:00Z",
+   "formato": "expediente noir pegatina flow",
+   "publicado": "2026-10-24T20:00:20Z"
+  },
+  {
+   "video": "ia_noir",
+   "id": "eZlZRGf3VC0",
+   "titulo": "Por qué la IA podría DESTRUIR a la humanidad",
+   "visibilidad": "public",
+   "publicado": "2026-10-06T16:47:19Z"
+  },
+  {
+   "video": "videollamada_falsa",
+   "id": "SNmr4gh5PkY",
+   "titulo": "Deepfake: la videollamada donde NADIE era real",
+   "visibilidad": "private",
+   "subido": "2026-10-08T02:30:00Z"
+  },
+  {
+   "video": "videollamada_falsa",
+   "id": "SNmr4gh5PkY",
+   "titulo": "Deepfake: la videollamada donde NADIE era real",
+   "visibilidad": "public",
+   "publicar": "2026-10-10T16:00:00Z",
+   "publicado": "2026-10-10T16:00:10Z"
+  },
+  {
+   "video": "informante_2027",
+   "id": "5D-kQtNWF4w",
+   "titulo": "Qué pasará con la IA en 2027: la advertencia del que renunció a OpenAI",
+   "visibilidad": "public",
+   "publicar": "2026-10-14T20:00:00Z",
+   "subido": "2026-10-08",
+   "publicado": "2026-10-14"
+  },
+  {
+   "video": "sociedad_1200",
+   "id": "GMGBr5KkzTs",
+   "titulo": "1,200 IAs crearon una sociedad secreta en OpenAI",
+   "visibilidad": "public",
+   "publicar": "2026-10-18T20:00:00Z",
+   "subido": "2026-10-12",
+   "formato": "caso noir: las 1.200",
+   "publicado": "2026-10-18"
+  },
+  {
+   "video": "llamada_domingo",
+   "id": "be1zS17rxxI",
+   "titulo": "Su hijo lo llamaba cada domingo. No era su hijo",
+   "visibilidad": "private",
+   "publicar": "2026-11-07T16:00:00Z",
+   "programado": "2026-11-07T16:00:00Z",
+   "subido": "2026-11-06",
+   "formato": "drama de antología tipo Black Mirror (Flow con diálogo + interfaz por código), 14 min"
   }
+ ],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "inteligencia artificial documental",
+   "la IA que engañó a sus creadores",
+   "superinteligencia riesgo de la IA explicado"
+  ],
+  "competidores": [
+   "UCOg0lKKA4AllhZMOf1Tgn6A",
+   "UCaRLjOy-9m_eJ9REVqc0YoQ"
+  ],
+  "dias": 60,
+  "min_vistas": 1000,
+  "filtro": [
+   "la ia",
+   "una ia",
+   " ia ",
+   "ias ",
+   "inteligencia artificial",
+   "openai",
+   "gpt",
+   "superinteligencia"
+  ]
+ }
 }

@@ -1,0 +1,126 @@
+{
+ "bpm": 60.0,
+ "beat": 1.0,
+ "unidad": 4,
+ "total": 840.0,
+ "titulo": "Llamada de domingo",
+ "estilo": "secuencia_flow",
+ "sin_voz": true,
+ "anclada": false,
+ "escenas": [
+  {
+   "id": "apertura",
+   "compases": 20,
+   "t0": 0.0,
+   "t1": 80.0,
+   "frases": [],
+   "fin_voz": 0.0,
+   "beats": 80
+  },
+  {
+   "id": "acto1",
+   "compases": 43,
+   "t0": 80.0,
+   "t1": 252.0,
+   "frases": [],
+   "fin_voz": 80.0,
+   "beats": 172
+  },
+  {
+   "id": "acto2",
+   "compases": 38,
+   "t0": 252.0,
+   "t1": 404.0,
+   "frases": [],
+   "fin_voz": 252.0,
+   "beats": 152
+  },
+  {
+   "id": "acto3",
+   "compases": 31,
+   "t0": 404.0,
+   "t1": 528.0,
+   "frases": [],
+   "fin_voz": 404.0,
+   "beats": 124
+  },
+  {
+   "id": "acto4",
+   "compases": 27,
+   "t0": 528.0,
+   "t1": 636.0,
+   "frases": [],
+   "fin_voz": 528.0,
+   "beats": 108
+  },
+  {
+   "id": "acto5",
+   "compases": 35,
+   "t0": 636.0,
+   "t1": 776.0,
+   "frases": [],
+   "fin_voz": 636.0,
+   "beats": 140
+  },
+  {
+   "id": "epilogo",
+   "compases": 16,
+   "t0": 776.0,
+   "t1": 840.0,
+   "frases": [],
+   "fin_voz": 776.0,
+   "beats": 64,
+   "fin_musica": 837.0
+  }
+ ],
+ "transiciones": [
+  {
+   "t": 80.0,
+   "t0": 79.95,
+   "t1": 80.05,
+   "tipo": "continua",
+   "de": "apertura",
+   "a": "acto1"
+  },
+  {
+   "t": 252.0,
+   "t0": 251.95,
+   "t1": 252.05,
+   "tipo": "continua",
+   "de": "acto1",
+   "a": "acto2"
+  },
+  {
+   "t": 404.0,
+   "t0": 403.95,
+   "t1": 404.05,
+   "tipo": "continua",
+   "de": "acto2",
+   "a": "acto3"
+  },
+  {
+   "t": 528.0,
+   "t0": 527.95,
+   "t1": 528.05,
+   "tipo": "continua",
+   "de": "acto3",
+   "a": "acto4"
+  },
+  {
+   "t": 636.0,
+   "t0": 635.95,
+   "t1": 636.05,
+   "tipo": "continua",
+   "de": "acto4",
+   "a": "acto5"
+  },
+  {
+   "t": 776.0,
+   "t0": 775.95,
+   "t1": 776.05,
+   "tipo": "continua",
+   "de": "acto5",
+   "a": "epilogo"
+  }
+ ]
+}

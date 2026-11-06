@@ -2290,7 +2290,14 @@
     "dinamica": 0.89
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "llamada_domingo",
+     "tramo": 5,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "christa_pike__lyria_1": {
@@ -2368,6 +2375,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "llamada_domingo",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
     }
    ],
    "catalogado": "2026-10-21"
@@ -2442,6 +2455,12 @@
      "tramo": 2,
      "desde": 0.0,
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "llamada_domingo",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
     }
    ],
    "catalogado": "2026-10-21"
@@ -2697,7 +2716,14 @@
     "dinamica": 0.85
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "llamada_domingo",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "dedos_arrugados__lyria_1": {
@@ -10931,7 +10957,14 @@
     "dinamica": 0.96
    },
    "variante": true,
-   "usos": [],
+   "usos": [
+    {
+     "video": "llamada_domingo",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "la_sena__lyria_tramo1_b": {
@@ -11155,6 +11188,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "llamada_domingo",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
     }
    ],
    "catalogado": "2026-10-21"
@@ -22538,6 +22577,7 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23325,6 +23365,7 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -28784,7 +28825,14 @@
     "dinamica": 0.87
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "llamada_domingo",
+     "tramo": 6,
+     "desde": 0.0,
+     "fecha": "2026-11-06"
+    }
+   ],
    "catalogado": "2026-10-23"
   },
   "wow_objetos_raros__lyria_tramo10": {
@@ -29479,6 +29527,7 @@
    "usos": [],
    "catalogado": "2026-10-23",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3"
    ]
@@ -36020,6 +36069,7 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3"
    ]
   },
@@ -36100,6 +36150,7 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
@@ -36201,6 +36252,7 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3"
    ]
   },
@@ -36286,6 +36338,8 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
@@ -36405,6 +36459,8 @@
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
@@ -43167,7 +43223,594 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo1": {
+   "id": "llamada_domingo__lyria_tramo1",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo1.mp3",
+   "archivo": "llamada_domingo__lyria_tramo1.mp3",
+   "md5": "456f115a27603740cee960a7991cf97b",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 1,
+   "escenas": [
+    "apertura"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: la_sena__lyria_tramo1_corto (desde 0.0 s) — reutilizada el 2026-11-06\n\nIntimate, heartbreaking score for a short animated film about two brothers in a poor small town in a dry canyon: a gentle whistled four-note motif, warm nylon-string folk requinto guitar, soft felt piano, later a small string ensemble and cello. Tender and nostalgic, never melodramatic; lots of space so dialogue and narration sit on top. No drum kit, no pop, no electronic beats. Total length: exactly 1:18 (79 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with the whistled four-note motif. Childhood warmth, a night farewell, then the happiest sunset; end softly as the sun goes down.\n\n[0:00 - 0:30] Section 1: Intensity 4/10. Golden childhood memory: a boy whistles a simple four-note motif, answered by a warm solo guitar, light and playful.\n[0:30 - 0:44] Section 2: Intensity 3/10. Night farewell: the same motif slowed on solo guitar, crickets-like quiet, a soft low piano note, sadness.\n[0:44 - 1:18] Section 3: Intensity 5/10. Warm sunset with brothers laughing: guitar and soft piano, gentle rhythm, the happiest moment of the film.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 30,
+     "intensidad": 4,
+     "desc": "Golden childhood memory: a boy whistles a simple four-note motif, answered by a warm solo guitar, light and playful."
+    },
+    {
+     "t0": 30,
+     "t1": 44,
+     "intensidad": 3,
+     "desc": "Night farewell: the same motif slowed on solo guitar, crickets-like quiet, a soft low piano note, sadness."
+    },
+    {
+     "t0": 44,
+     "t1": 78,
+     "intensidad": 5,
+     "desc": "Warm sunset with brothers laughing: guitar and soft piano, gentle rhythm, the happiest moment of the film."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cuerdas",
+     "guitarra",
+     "piano",
+     "silbido",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "juguetón",
+     "nostálgico",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 83.0,
+    "rms_db": -14.4,
+    "tempo": 161.5,
+    "brillo_hz": 945,
+    "energia": [
+     0.18,
+     0.32,
+     0.33,
+     0.32,
+     0.46,
+     0.46,
+     0.58,
+     0.7,
+     1.0,
+     0.99,
+     0.89,
+     0.69
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo2": {
+   "id": "llamada_domingo__lyria_tramo2",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo2.mp3",
+   "archivo": "llamada_domingo__lyria_tramo2.mp3",
+   "md5": "4de1553691c2bb7b355ef858915ce7ec",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 2,
+   "escenas": [
+    "acto1"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: christa_pike__lyria_1 (desde 0.0 s) — reutilizada el 2026-11-06\n\nSomber cinematic true-crime documentary score in the style of a serious modern investigative documentary: slow low strings, sparse felt piano, a deep soft sub-bass pulse like a heartbeat, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, no vocals, never triumphant, never sentimental.\ngancho: Hook: a sparse low drone, a single slow heartbeat pulse, thin high string harmonics building dread, a held swell and a sudden silence at the end.\nquien: Quiet, bleak and human: solitary felt piano, soft low strings, cold air, a sense of a childhood lost.\ncolleen: Tender and sad: a gentle piano motif alone, warm sustained strings, a small hope that fades. Very soft.\ncrimen: Dark and tense but restrained: low pulsing bass, dissonant strings held long, no melody, dread without gore, a heavy hit at the end.\njuicio: Cold procedural weight: steady low pulse, sparse piano notes like a ticking courtroom clock, sober and factual.\ncorredor: Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still.\ndebate: Two opposing weights: two alternating low string phrases, unresolved, questioning, moral gravity, building slightly.\ncamino: Countdown tension: a quickening quiet pulse, ticking, rising strings, inevitability building step by step.\nnoche: Peak of tension and dread, restrained: very slow heartbeat bass, long cold string clusters rising, silences, a final unresolved cluster. No release.\ndespues: Aftermath: shocked emptiness, soft low drone, sparse piano, slow unsettled resolve, quietly accusatory.\nhistorial: Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural, questions accumulating, a sense of a system under scrutiny.\nprecedente: Historical and thoughtful: old-world solemn strings, slow piano, a feeling of history repeating, grave.\ncierre: Ethereal pads and a slow solitary piano, the question remains unanswered, quiet and haunting, final single note, fades to silence.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "frío",
+     "misterio",
+     "nostálgico",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "terror",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 182.54,
+    "rms_db": -15.4,
+    "tempo": 80.7,
+    "brillo_hz": 909,
+    "energia": [
+     0.81,
+     0.56,
+     0.58,
+     0.67,
+     1.0,
+     0.35,
+     0.54,
+     0.81,
+     0.69,
+     0.84,
+     0.82,
+     0.45
+    ],
+    "huecos": [
+     [
+      87.8,
+      90.0
+     ]
+    ],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo7": {
+   "id": "llamada_domingo__lyria_tramo7",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo7.mp3",
+   "archivo": "llamada_domingo__lyria_tramo7.mp3",
+   "md5": "71b4ce0ab0b1d9d5d1e4c471b6ff4fcd",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 7,
+   "escenas": [
+    "epilogo"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: la_sena__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-06\n\nIntimate, heartbreaking score for a short animated film about two brothers in a poor small town in a dry canyon: a gentle whistled four-note motif, warm nylon-string folk requinto guitar, soft felt piano, later a small string ensemble and cello. Tender and nostalgic, never melodramatic; lots of space so dialogue and narration sit on top. No drum kit, no pop, no electronic beats. Total length: exactly 0:34 (34 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. A rainy night: almost silence, only a very soft low drone for the first twenty seconds, then a fragile piano and the whistled motif on guitar at dawn, a worried farewell, ending on a held note.\n\n[0:00 - 0:34] Section 1: Intensity 2/10. Rainy night then dawn: near silence (only room tone) for the first seconds, then a fragile piano and the motif on guitar, worried farewell.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 34,
+     "intensidad": 2,
+     "desc": "Rainy night then dawn: near silence (only room tone) for the first seconds, then a fragile piano and the motif on guitar, worried farewell."
+    }
+   ],
+   "intensidad": [
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cello",
+     "cuerdas",
+     "drone",
+     "guitarra",
+     "piano",
+     "silbido",
+     "sintetizador"
+    ],
+    "animo": [
+     "cálido",
+     "nostálgico",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "folk mexicano"
+    ]
+   },
+   "medidas": {
+    "dur": 67.0,
+    "rms_db": -15.5,
+    "tempo": 61.5,
+    "brillo_hz": 724,
+    "energia": [
+     0.71,
+     0.67,
+     0.61,
+     0.64,
+     1.0,
+     0.69,
+     0.68,
+     0.81,
+     0.51,
+     0.46,
+     0.23,
+     0.0
+    ],
+    "huecos": [],
+    "dinamica": 1.0
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo4": {
+   "id": "llamada_domingo__lyria_tramo4",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo4.mp3",
+   "archivo": "llamada_domingo__lyria_tramo4.mp3",
+   "md5": "c138b7569af9a6dbaf6c091a4f08d227",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 4,
+   "escenas": [
+    "acto3"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: christa_pike__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-11-06\n\nSomber cinematic documentary score: slow low strings, sparse felt piano, a deep soft sub-bass pulse, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, never triumphant, never sentimental. Total length: exactly 2:52 (172 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with a held low tone, calm and sorrowful. End with a natural slow fade-out to silence.\n\n[0:00 - 1:02] Section 1: Intensity 5/10. Aftermath: empty and stunned, soft low drone, sparse piano, slow and unsettled.\n[1:02 - 1:42] Section 2: Intensity 4/10. Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural.\n[1:42 - 2:17] Section 3: Intensity 4/10. Reflective: old-world solemn strings, slow piano, a feeling of history repeating.\n[2:17 - 2:52] Section 4: Intensity 3/10. Ethereal pads and a slow solitary piano, the question remains open, quiet, one final note, fades to silence.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 62,
+     "intensidad": 5,
+     "desc": "Aftermath: empty and stunned, soft low drone, sparse piano, slow and unsettled."
+    },
+    {
+     "t0": 62,
+     "t1": 102,
+     "intensidad": 4,
+     "desc": "Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural."
+    },
+    {
+     "t0": 102,
+     "t1": 137,
+     "intensidad": 4,
+     "desc": "Reflective: old-world solemn strings, slow piano, a feeling of history repeating."
+    },
+    {
+     "t0": 137,
+     "t1": 172,
+     "intensidad": 3,
+     "desc": "Ethereal pads and a slow solitary piano, the question remains open, quiet, one final note, fades to silence."
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    4,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "frío",
+     "solemne",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 127.0,
+    "rms_db": -15.0,
+    "tempo": 80.7,
+    "brillo_hz": 635,
+    "energia": [
+     0.54,
+     0.58,
+     0.59,
+     0.49,
+     0.54,
+     0.65,
+     0.96,
+     0.93,
+     0.86,
+     1.0,
+     0.96,
+     0.86
+    ],
+    "huecos": [],
+    "dinamica": 0.51
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo5": {
+   "id": "llamada_domingo__lyria_tramo5",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo5.mp3",
+   "archivo": "llamada_domingo__lyria_tramo5.mp3",
+   "md5": "9ed163cd16c47cf4c4a731f9093a72af",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 5,
+   "escenas": [
+    "acto4"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: christa_pike__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-06\n\nSomber cinematic documentary score: slow low strings, sparse felt piano, a deep soft sub-bass pulse, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, never triumphant, never sentimental. Total length: exactly 2:55 (175 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from silence. End on a sparse sustained low tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:30] Section 1: Intensity 4/10. Opening: a sparse low drone, a slow heartbeat-like pulse, thin high string harmonics slowly rising, a held swell and a sudden silence at the end.\n[0:30 - 0:57] Section 2: Intensity 3/10. Quiet and bleak: solitary felt piano, soft low strings, cold air.\n[0:57 - 1:12] Section 3: Intensity 2/10. Tender and sad: a gentle piano motif alone, warm sustained strings. Very soft.\n[1:12 - 1:52] Section 4: Intensity 5/10. Dark and tense but restrained: low pulsing bass, long dissonant strings, no melody, a heavy hit at the end.\n[1:52 - 2:22] Section 5: Intensity 4/10. Cold and procedural: steady low pulse, sparse piano notes like a ticking clock, sober.\n[2:22 - 2:55] Section 6: Intensity 3/10. Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 30,
+     "intensidad": 4,
+     "desc": "Opening: a sparse low drone, a slow heartbeat-like pulse, thin high string harmonics slowly rising, a held swell and a sudden silence at the end."
+    },
+    {
+     "t0": 30,
+     "t1": 57,
+     "intensidad": 3,
+     "desc": "Quiet and bleak: solitary felt piano, soft low strings, cold air."
+    },
+    {
+     "t0": 57,
+     "t1": 72,
+     "intensidad": 2,
+     "desc": "Tender and sad: a gentle piano motif alone, warm sustained strings. Very soft."
+    },
+    {
+     "t0": 72,
+     "t1": 112,
+     "intensidad": 5,
+     "desc": "Dark and tense but restrained: low pulsing bass, long dissonant strings, no melody, a heavy hit at the end."
+    },
+    {
+     "t0": 112,
+     "t1": 142,
+     "intensidad": 4,
+     "desc": "Cold and procedural: steady low pulse, sparse piano notes like a ticking clock, sober."
+    },
+    {
+     "t0": 142,
+     "t1": 175,
+     "intensidad": 3,
+     "desc": "Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    2,
+    5,
+    4,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "frío",
+     "oscuro",
+     "tenso",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 111.0,
+    "rms_db": -15.8,
+    "tempo": 161.5,
+    "brillo_hz": 792,
+    "energia": [
+     0.42,
+     0.51,
+     0.59,
+     0.34,
+     0.61,
+     0.68,
+     0.69,
+     0.79,
+     0.82,
+     1.0,
+     0.89,
+     0.67
+    ],
+    "huecos": [
+     [
+      34.4,
+      36.0
+     ]
+    ],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo6": {
+   "id": "llamada_domingo__lyria_tramo6",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo6.mp3",
+   "archivo": "llamada_domingo__lyria_tramo6.mp3",
+   "md5": "bf95f5ae80f481bd0c895cc17f719d78",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 6,
+   "escenas": [
+    "acto5"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: duelo_cuerpo__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-06\n\nBIBLIOTECA: christa_pike__lyria_1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nSomber cinematic true-crime documentary score in the style of a serious modern investigative documentary: slow low strings, sparse felt piano, a deep soft sub-bass pulse like a heartbeat, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, no vocals, never triumphant, never sentimental.\ngancho: Hook: a sparse low drone, a single slow heartbeat pulse, thin high string harmonics building dread, a held swell and a sudden silence at the end.\nquien: Quiet, bleak and human: solitary felt piano, soft low strings, cold air, a sense of a childhood lost.\ncolleen: Tender and sad: a gentle piano motif alone, warm sustained strings, a small hope that fades. Very soft.\ncrimen: Dark and tense but restrained: low pulsing bass, dissonant strings held long, no melody, dread without gore, a heavy hit at the end.\njuicio: Cold procedural weight: steady low pulse, sparse piano notes like a ticking courtroom clock, sober and factual.\ncorredor: Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still.\ndebate: Two opposing weights: two alternating low string phrases, unresolved, questioning, moral gravity, building slightly.\ncamino: Countdown tension: a quickening quiet pulse, ticking, rising strings, inevitability building step by step.\nnoche: Peak of tension and dread, restrained: very slow heartbeat bass, long cold string clusters rising, silences, a final unresolved cluster. No release.\ndespues: Aftermath: shocked emptiness, soft low drone, sparse piano, slow unsettled resolve, quietly accusatory.\nhistorial: Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural, questions accumulating, a sense of a system under scrutiny.\nprecedente: Historical and thoughtful: old-world solemn strings, slow piano, a feeling of history repeating, grave.\ncierre: Ethereal pads and a slow solitary piano, the question remains unanswered, quiet and haunting, final single note, fades to silence.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "frío",
+     "misterio",
+     "nostálgico",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "terror",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 143.0,
+    "rms_db": -15.6,
+    "tempo": 161.5,
+    "brillo_hz": 979,
+    "energia": [
+     0.81,
+     0.7,
+     0.53,
+     0.67,
+     0.69,
+     1.0,
+     0.85,
+     0.13,
+     0.72,
+     0.86,
+     0.73,
+     0.78
+    ],
+    "huecos": [
+     [
+      87.8,
+      90.0
+     ]
+    ],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "llamada_domingo__lyria_tramo3": {
+   "id": "llamada_domingo__lyria_tramo3",
+   "video": "llamada_domingo",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\llamada_domingo\\audio\\lyria_tramo3.mp3",
+   "archivo": "llamada_domingo__lyria_tramo3.mp3",
+   "md5": "87e03b92eeafcc7168e2d28311618db6",
+   "canal": "logia",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Llamada de domingo",
+   "tramo": 3,
+   "escenas": [
+    "acto2"
+   ],
+   "estilo": "Intimate prestige TV drama score: sparse felt piano, soft string quartet, a faint warm analog synth pad, subtle ticking clock-like pulse, melancholic and tender, restrained, cinematic, no vocals, no drums",
+   "prompt": "BIBLIOTECA: christa_pike__lyria_2 (desde 0.0 s) — reutilizada el 2026-11-06\n\nSomber cinematic true-crime documentary score in the style of a serious modern investigative documentary: slow low strings, sparse felt piano, a deep soft sub-bass pulse like a heartbeat, distant ambient textures, subtle ticking clock, occasional soft impacts. No drum kit, no big orchestral melody, no vocals, never triumphant, never sentimental.\ngancho: Hook: a sparse low drone, a single slow heartbeat pulse, thin high string harmonics building dread, a held swell and a sudden silence at the end.\nquien: Quiet, bleak and human: solitary felt piano, soft low strings, cold air, a sense of a childhood lost.\ncolleen: Tender and sad: a gentle piano motif alone, warm sustained strings, a small hope that fades. Very soft.\ncrimen: Dark and tense but restrained: low pulsing bass, dissonant strings held long, no melody, dread without gore, a heavy hit at the end.\njuicio: Cold procedural weight: steady low pulse, sparse piano notes like a ticking courtroom clock, sober and factual.\ncorredor: Isolation and passing years: slow ambient drone, distant metallic textures, a single piano note echoing, bleak and still.\ndebate: Two opposing weights: two alternating low string phrases, unresolved, questioning, moral gravity, building slightly.\ncamino: Countdown tension: a quickening quiet pulse, ticking, rising strings, inevitability building step by step.\nnoche: Peak of tension and dread, restrained: very slow heartbeat bass, long cold string clusters rising, silences, a final unresolved cluster. No release.\ndespues: Aftermath: shocked emptiness, soft low drone, sparse piano, slow unsettled resolve, quietly accusatory.\nhistorial: Institutional unease: slow low strings, a ticking clock, sparse piano, cold and procedural, questions accumulating, a sense of a system under scrutiny.\nprecedente: Historical and thoughtful: old-world solemn strings, slow piano, a feeling of history repeating, grave.\ncierre: Ethereal pads and a slow solitary piano, the question remains unanswered, quiet and haunting, final single note, fades to silence.",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cuerdas",
+     "drone",
+     "piano",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "emotivo",
+     "esperanza",
+     "frío",
+     "misterio",
+     "nostálgico",
+     "oscuro",
+     "solemne",
+     "tenso",
+     "terror",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 155.0,
+    "rms_db": -15.0,
+    "tempo": 80.7,
+    "brillo_hz": 743,
+    "energia": [
+     0.49,
+     0.58,
+     0.67,
+     0.65,
+     0.64,
+     0.7,
+     1.0,
+     0.69,
+     0.71,
+     0.93,
+     0.96,
+     0.95
+    ],
+    "huecos": [],
+    "dinamica": 0.51
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
   }
  },
- "actualizado": "2026-11-06 12:25"
+ "actualizado": "2026-11-06 15:20"
 }

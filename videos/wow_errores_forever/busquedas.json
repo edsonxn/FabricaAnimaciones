@@ -1,0 +1,638 @@
+{
+ "scene-001": [
+  "WoW Forever launch day",
+  "WoW Forever trailer"
+ ],
+ "scene-002": [
+  "WoW Forever beta gameplay",
+  "WoW Forever no commentary"
+ ],
+ "scene-003": [
+  "auction house classic no commentary",
+  "Stormwind auction house"
+ ],
+ "scene-004": [
+  "WoW Forever no commentary"
+ ],
+ "scene-005": [
+  "World of Warcraft Forever cinematic trailer",
+  "WoW Forever trailer"
+ ],
+ "scene-006": {
+  "url": "https://youtu.be/lwLQEhWiIiE",
+  "desde": 2647.6
+ },
+ "scene-007": [
+  "warlock voidwalker classic leveling",
+  "warlock leveling classic"
+ ],
+ "scene-008": {
+  "url": "https://youtu.be/IJFmTqRJwds",
+  "desde": 305.7
+ },
+ "scene-009": [
+  "voidwalker dies classic",
+  "warlock pet classic"
+ ],
+ "scene-010": {
+  "url": "https://youtu.be/a5eAYFIJj68",
+  "desde": 261.8
+ },
+ "scene-011": [
+  "WoW Forever campfire",
+  "campfire classic"
+ ],
+ "scene-012": [
+  "WoW Forever camp",
+  "Arathi Highlands PvP classic"
+ ],
+ "scene-013": {
+  "url": "https://youtu.be/Z8LgcYaOi48",
+  "desde": 1305.0
+ },
+ "scene-014": [
+  "Valley of Trials no commentary",
+  "Durotar no commentary"
+ ],
+ "scene-015": [
+  "campfire cooking classic",
+  "classic camping"
+ ],
+ "scene-016": [
+  "Stormwind classic no commentary"
+ ],
+ "scene-017": [
+  "Elwynn Forest no commentary"
+ ],
+ "scene-018": {
+  "url": "https://youtu.be/Cvl3sGea_QA",
+  "desde": 87.2
+ },
+ "scene-019": {
+  "url": "https://youtu.be/Pmfif3DF8Ls",
+  "desde": 1306.8
+ },
+ "scene-020": [
+  "Undercity classic no commentary"
+ ],
+ "scene-021": [
+  "Westfall no commentary"
+ ],
+ "scene-022": [
+  "meeting stone classic",
+  "Wailing Caverns entrance"
+ ],
+ "scene-023": {
+  "url": "https://youtu.be/0Duto4lK7dk",
+  "desde": 289.8
+ },
+ "scene-024": [
+  "meeting stone classic",
+  "summoning stone classic"
+ ],
+ "scene-025": [
+  "warlock ritual of summoning classic",
+  "LFG tool classic"
+ ],
+ "scene-026": {
+  "url": "https://youtu.be/n2Wg46fwmb0",
+  "desde": 925.2
+ },
+ "scene-027": [
+  "WoW Forever settings preset",
+  "WoW Forever graphics settings"
+ ],
+ "scene-028": [
+  "WoW Forever quest map",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-029": [
+  "classic world map quest",
+  "Elwynn Forest classic"
+ ],
+ "scene-030": {
+  "url": "https://youtu.be/VxTWMv5h-JE",
+  "desde": 155.9
+ },
+ "scene-031": [
+  "WoW Forever settings",
+  "WoW Forever UI"
+ ],
+ "scene-032": [
+  "Ironforge classic no commentary"
+ ],
+ "scene-033": [
+  "WoW Forever damage meter",
+  "WoW Forever UI"
+ ],
+ "scene-034": {
+  "url": "https://youtu.be/EeA8gNAKGlg",
+  "desde": 1934.6
+ },
+ "scene-035": [
+  "WoW Forever addons",
+  "classic addons setup"
+ ],
+ "scene-036": {
+  "url": "https://youtu.be/0hsLXwHUzhs",
+  "desde": 186.5
+ },
+ "scene-037": [
+  "Questie addon classic",
+  "Details damage meter classic"
+ ],
+ "scene-038": [
+  "Stormwind inn classic",
+  "Goldshire inn"
+ ],
+ "scene-039": [
+  "Orgrimmar classic no commentary"
+ ],
+ "scene-040": {
+  "url": "https://youtu.be/9GSP70zQH00",
+  "desde": 47.0
+ },
+ "scene-041": [
+  "Hillsbrad PvP classic",
+  "world PvP classic"
+ ],
+ "scene-042": {
+  "url": "https://youtu.be/9GSP70zQH00",
+  "desde": 157.9
+ },
+ "scene-043": [
+  "world PvP classic",
+  "Southshore Tarren Mill PvP"
+ ],
+ "scene-044": {
+  "url": "https://youtu.be/sWQXbl0dZi8",
+  "desde": 507.1
+ },
+ "scene-045": {
+  "url": "https://youtu.be/a6V39HtCbV8",
+  "desde": 173.7
+ },
+ "scene-046": [
+  "zeppelin classic Orgrimmar",
+  "Orgrimmar zeppelin tower"
+ ],
+ "scene-047": {
+  "url": "https://youtu.be/Rplr6VD9E0U",
+  "desde": 438.7
+ },
+ "scene-048": [
+  "Ratchet boat classic",
+  "boat Booty Bay Ratchet"
+ ],
+ "scene-049": [
+  "zeppelin ride classic",
+  "Undercity zeppelin"
+ ],
+ "scene-050": {
+  "url": "https://youtu.be/2VKKKmadJ0k",
+  "desde": 59.0
+ },
+ "scene-051": [
+  "Wetlands no commentary",
+  "Wetlands classic alliance"
+ ],
+ "scene-052": {
+  "url": "https://youtu.be/iOA_g4Ezj6Q",
+  "desde": 32.5
+ },
+ "scene-053": [
+  "Darkshore no commentary",
+  "Tanaris no commentary"
+ ],
+ "scene-054": {
+  "url": "https://youtu.be/6Ic-gfYhBiI",
+  "desde": 27.6
+ },
+ "scene-055": [
+  "Wetlands crocolisk classic",
+  "Wetlands no commentary"
+ ],
+ "scene-056": [
+  "WoW Forever exploration",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-057": [
+  "Menethil Harbor night",
+  "boat dock classic"
+ ],
+ "scene-058": {
+  "url": "https://youtu.be/Nb0TdZBl2r8",
+  "desde": 156.3
+ },
+ "scene-059": [
+  "grinding mobs classic",
+  "classic leveling no commentary"
+ ],
+ "scene-060": [
+  "WoW Forever BlizzCon panel",
+  "WoW Forever developer interview"
+ ],
+ "scene-061": {
+  "url": "https://youtu.be/-SPLVYymtHM",
+  "desde": 786.0
+ },
+ "scene-062": [
+  "classic eating food buff",
+  "WoW Forever cooking"
+ ],
+ "scene-063": {
+  "url": "https://youtu.be/Os-AVEFmDUI",
+  "desde": 130.6
+ },
+ "scene-064": [
+  "crowded starting zone classic launch",
+  "classic launch crowded"
+ ],
+ "scene-065": [
+  "WoW Forever podcast",
+  "WoW Forever developer"
+ ],
+ "scene-066": {
+  "url": "https://youtu.be/JfsAH39NkUE",
+  "desde": 261.4
+ },
+ "scene-067": [
+  "classic group quest elite",
+  "Barrens no commentary"
+ ],
+ "scene-068": [
+  "Deadmines classic",
+  "dungeon classic no commentary"
+ ],
+ "scene-069": [
+  "Wailing Caverns classic",
+  "dungeon run classic"
+ ],
+ "scene-070": [
+  "Blackfathom Deeps classic",
+  "Blackfathom Deeps no commentary"
+ ],
+ "scene-071": [
+  "WoW Forever Ruins of Lordaeron",
+  "WoW Forever new dungeon"
+ ],
+ "scene-072": [
+  "classic quest log dungeon",
+  "Shadowfang Keep classic"
+ ],
+ "scene-073": [
+  "WoW Forever beta gameplay"
+ ],
+ "scene-074": [
+  "WoW Forever no commentary"
+ ],
+ "scene-075": {
+  "url": "https://youtu.be/UMh80-64QLc",
+  "desde": 2770.9
+ },
+ "scene-076": [
+  "WoW Forever no commentary"
+ ],
+ "scene-077": [
+  "WoW Forever no commentary"
+ ],
+ "scene-078": [
+  "mage leveling classic",
+  "classic mage gameplay"
+ ],
+ "scene-079": {
+  "url": "https://youtu.be/lwPwk02U-6A",
+  "desde": 2559.3
+ },
+ "scene-080": [
+  "classic priest gameplay",
+  "mage leveling classic"
+ ],
+ "scene-081": [
+  "WoW Forever mage gameplay",
+  "classic warlock leveling"
+ ],
+ "scene-082": [
+  "classic character gear",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-083": [
+  "WoW Forever library books",
+  "classic inn interior"
+ ],
+ "scene-084": [
+  "classic inn no commentary",
+  "Lakeshire inn"
+ ],
+ "scene-085": [
+  "Stormwind mage quarter",
+  "Undercity magic quarter"
+ ],
+ "scene-086": [
+  "Stormwind mage tower classic",
+  "WoW Forever library books"
+ ],
+ "scene-087": [
+  "Loch Modan no commentary",
+  "Westfall no commentary"
+ ],
+ "scene-088": {
+  "url": "https://youtu.be/t3FClbeBIOc",
+  "desde": 177.5
+ },
+ "scene-089": [
+  "Westfall coast no commentary",
+  "Barrens no commentary"
+ ],
+ "scene-090": [
+  "Loch Modan no commentary",
+  "Hillsbrad Foothills no commentary"
+ ],
+ "scene-091": [
+  "WoW Forever sleeping bag",
+  "classic questing"
+ ],
+ "scene-092": [
+  "classic inn rest",
+  "WoW Forever camp"
+ ],
+ "scene-093": [
+  "WoW Forever camp",
+  "Elwynn Forest no commentary"
+ ],
+ "scene-094": {
+  "url": "https://youtu.be/dIlm8YLYB58",
+  "desde": 368.4
+ },
+ "scene-095": [
+  "WoW Forever camp",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-096": [
+  "WoW Forever camp tent",
+  "WoW Forever camp"
+ ],
+ "scene-097": [
+  "campfire classic",
+  "WoW Forever camp"
+ ],
+ "scene-098": [
+  "WoW Forever legacy system",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-099": [
+  "WoW Forever legacy",
+  "WoW Forever UI"
+ ],
+ "scene-100": [
+  "WoW Forever legacy perks",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-101": [
+  "riding trainer classic",
+  "classic vendor"
+ ],
+ "scene-102": [
+  "battleground classic Warsong",
+  "dungeon classic"
+ ],
+ "scene-103": [
+  "WoW Forever legacy",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-104": [
+  "Stormwind no commentary"
+ ],
+ "scene-105": [
+  "Ironforge no commentary"
+ ],
+ "scene-106": [
+  "mining classic",
+  "herbalism classic"
+ ],
+ "scene-107": [
+  "classic professions crafting",
+  "blacksmithing classic"
+ ],
+ "scene-108": [
+  "mining herbalism classic",
+  "skinning classic"
+ ],
+ "scene-109": [
+  "classic crafting leveling",
+  "WoW Forever professions"
+ ],
+ "scene-110": [
+  "classic professions trainer",
+  "WoW Forever professions"
+ ],
+ "scene-111": [
+  "classic mount level 40",
+  "first mount classic"
+ ],
+ "scene-112": {
+  "url": "https://youtu.be/s0UgqWRk-mM",
+  "desde": 222.9
+ },
+ "scene-113": [
+  "Ratchet no commentary",
+  "warlock mount quest classic"
+ ],
+ "scene-114": [
+  "paladin mount quest classic",
+  "warlock felsteed classic"
+ ],
+ "scene-115": [
+  "riding classic mount",
+  "classic mount"
+ ],
+ "scene-116": {
+  "url": "https://youtu.be/DBXiNNGBSEQ",
+  "desde": 130.7
+ },
+ "scene-117": [
+  "class trainer classic",
+  "classic gold"
+ ],
+ "scene-118": [
+  "epic mount classic",
+  "classic epic mount"
+ ],
+ "scene-119": [
+  "classic gold",
+  "auction house classic"
+ ],
+ "scene-120": [
+  "auction house classic",
+  "Stormwind trade district"
+ ],
+ "scene-121": [
+  "Orgrimmar no commentary"
+ ],
+ "scene-122": [
+  "Undercity no commentary"
+ ],
+ "scene-123": [
+  "Icecrown Citadel Lich King",
+  "Frozen Throne"
+ ],
+ "scene-124": [
+  "WoW Forever chat",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-125": [
+  "WoW Forever settings",
+  "WoW Forever UI"
+ ],
+ "scene-126": {
+  "url": "https://youtu.be/9GSP70zQH00",
+  "desde": 200.0
+ },
+ "scene-127": [
+  "WoW Forever beta gameplay"
+ ],
+ "scene-128": [
+  "classic guild",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-129": [
+  "classic guild raid",
+  "classic guild group"
+ ],
+ "scene-130": [
+  "empty Stormwind",
+  "classic empty zone"
+ ],
+ "scene-131": [
+  "WoW Forever launch",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-132": [
+  "classic group of friends",
+  "WoW Forever no commentary"
+ ],
+ "scene-133": [
+  "WoW Forever Waylaid Crate",
+  "classic loot"
+ ],
+ "scene-134": {
+  "url": "https://youtu.be/C18yoDA0rZQ",
+  "desde": 233.2
+ },
+ "scene-135": [
+  "WoW Forever merchant favor",
+  "classic quest turn in"
+ ],
+ "scene-136": [
+  "classic vendor",
+  "classic loot"
+ ],
+ "scene-137": [
+  "WoW Forever merchant favor",
+  "WoW Forever professions"
+ ],
+ "scene-138": [
+  "WoW Forever merchant favor",
+  "WoW Forever professions"
+ ],
+ "scene-139": [
+  "WoW Forever recipes",
+  "WoW Forever professions"
+ ],
+ "scene-140": [
+  "Redridge Mountains no commentary",
+  "Crossroads Barrens no commentary"
+ ],
+ "scene-141": [
+  "WoW Forever engineering",
+  "engineering classic"
+ ],
+ "scene-142": [
+  "WoW Forever pack kodo",
+  "kodo mount classic"
+ ],
+ "scene-143": [
+  "Redridge Mountains classic",
+  "Lakeshire no commentary"
+ ],
+ "scene-144": [
+  "Crossroads Barrens classic",
+  "Barrens no commentary"
+ ],
+ "scene-145": [
+  "WoW Forever patch notes",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-146": [
+  "class trainer classic",
+  "classic action bars"
+ ],
+ "scene-147": [
+  "paladin leveling classic",
+  "rogue leveling classic"
+ ],
+ "scene-148": [
+  "classic bags",
+  "classic inventory"
+ ],
+ "scene-149": [
+  "classic spellbook",
+  "class trainer classic"
+ ],
+ "scene-150": {
+  "url": "https://youtu.be/7t_8f-H4HJg",
+  "desde": 304.9
+ },
+ "scene-151": [
+  "WoW Forever realm selection",
+  "WoW Forever character creation"
+ ],
+ "scene-152": [
+  "WoW Forever realm",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-153": {
+  "url": "https://youtu.be/lwLQEhWiIiE",
+  "desde": 910.4
+ },
+ "scene-154": [
+  "alliance vs horde classic",
+  "world PvP classic"
+ ],
+ "scene-155": [
+  "classic friends group",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-156": [
+  "WoW Forever character creation",
+  "WoW Forever beta gameplay"
+ ],
+ "scene-157": {
+  "url": "https://youtu.be/4Cu40IijcAE",
+  "desde": 1110.0
+ },
+ "scene-158": [
+  "WoW Forever trailer",
+  "World of Warcraft Forever cinematic trailer"
+ ],
+ "scene-159": [
+  "WoW Forever beta gameplay"
+ ],
+ "scene-160": {
+  "url": "https://youtu.be/wTOp82SGS-w",
+  "desde": 1090.4
+ },
+ "scene-161": [
+  "Orgrimmar no commentary"
+ ],
+ "scene-162": [
+  "Ironforge no commentary"
+ ],
+ "scene-163": [
+  "Thunder Bluff no commentary"
+ ],
+ "scene-164": {
+  "url": "https://youtu.be/XH5TrCKV8qo",
+  "desde": 15.3
+ }
+}

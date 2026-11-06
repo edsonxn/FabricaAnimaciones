@@ -344,7 +344,7 @@ window.Peligros=(()=>{
     const m=M(),K=m.K,F=m.sue+3*K;
     if(e.G&&e.G.vivo()){const c=e.G.rd.P[0];return {x:c.x,y:e.yFijo??c.y+4*K};}
     if(!e.blanco||!T_.libre(e.blanco))return null;
-    const u=m.ubica(e.blanco.E);return {x:u.px,y:e.yFijo??F-40*K*e.blanco.esc};
+    const u=m.ubica(e.blanco.E);return {x:u.px,y:e.yFijo??F-48*K*e.blanco.esc}   // al pecho (patas largas, 5-nov-2026);
   }
   function lanzado(e,vx,vy){e.st="lanzado";e.t0=ya;e.vx=vx;e.vy=vy;e.vr=azar(10,18)*(Math.random()<.5?-1:1);e.hp--;e.G=null;e.blanco=null;}
   function revienta(e){
@@ -367,7 +367,7 @@ window.Peligros=(()=>{
         e.x+=cl(e.wx-e.x,-90*K*s,90*K*s);e.by+=(e.wy-e.by)*Math.min(1,s*1.5);e.y=e.by+Math.sin(ya/300+e.fase)*6*K;
         e.rot=Math.sin(ya/400+e.fase)*.18;
         if(ya-e.t0>e.ronda&&T_.cupo())if(!apunta(e))e.t0=ya;
-        if(Math.random()<.012&&T_.cupo())for(const r of robots())if(r.u.piso===e.p&&Math.abs(r.u.px-e.x)<55*K&&Math.abs(F-45*K*r.i.esc-e.y)<65*K){   // pasa rozando: se asusta; el empujón entra a la simulación de equilibrio
+        if(Math.random()<.012&&T_.cupo())for(const r of robots())if(r.u.piso===e.p&&Math.abs(r.u.px-e.x)<55*K&&Math.abs(F-52*K*r.i.esc-e.y)<65*K){   // pasa rozando: se asusta; el empujón entra a la simulación de equilibrio
           T_.golpe(r.i,{modo:"tambalea",vx:(Math.sign(r.u.px-e.x)||1)*azar(140,240),pasos:elige([2,3]),foco:false,max:9000,dice:Math.random()<.5?elige(["¡Fuera, fuera!","¿¡Qué es eso!?","¡No me toques!"]):null,que:"se asusta"});break;}
       }
       else if(e.st==="apunta"){

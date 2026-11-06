@@ -1157,13 +1157,30 @@ const Taller=(()=>{
   // panel_vivo_ragdoll.js (Cap.vivo) las persigue con músculos, pies plantados y pasos; figura() dibuja donde la física dejó cada punto.
   // Sin cuerpo simulado (videos del canal, ?clasico, juguetes, más robots que el límite) se dibuja directo de las metas: se ve como antes.
   const rotP=(x,y,a)=>[x*Math.cos(a)-y*Math.sin(a),x*Math.sin(a)+y*Math.cos(a)];
+  // PATAS LARGAS (5-nov-2026, el usuario: «están muy chaparritos y las piernas casi ni se ven… para que se note el balanceo»): las poses y su
+  // utilería siguen escritas para el robot de siempre (cadera a 11 del suelo); la utilería y las manos crecen KP desde el suelo (los que llaman
+  // escalan atras()/frente() igual) y el tronco, de su mismo tamaño, sube EXT más: la cadera queda a 22 y la pierna (muslo + canilla de 11,
+  // rodilla con IK) se ve entera. 7 puntos como siempre: la rodilla no es un punto de la física, sale de la cadera y el pie.
+  const KP=1.15,EXT=7,MUSLO=11,CANILLA=11;
+  function alarga(L,r=0,sen=false){       // del espacio de las poses (robot de siempre) al robot de patas largas
+    const up=[Math.sin(r),-Math.cos(r)],e=sen?0:EXT,pc=[L[1][0]*KP+up[0]*e,L[1][1]*KP+up[1]*e];
+    return [[pc[0]+L[0][0]-L[1][0],pc[1]+L[0][1]-L[1][1]],pc,[pc[0]+L[2][0]-L[1][0],pc[1]+L[2][1]-L[1][1]],
+      [L[3][0]*KP,L[3][1]*KP],[L[4][0]*KP,L[4][1]*KP],[L[5][0]*KP,(L[5][1]+2.6)*KP-2.6],[L[6][0]*KP,(L[6][1]+2.6)*KP-2.6]];
+  }
   function metaPose(P){
     const [ai,bi]=P.pies||[0,0],ox=P.dx||0,oy=-(P.sube||0),r=P.rota||0,inc=P.incl||0;
     const L=[[Math.sin(inc)*20,-25-Math.cos(inc)*20],[0,-25],[0,-11],(P.brI||[-15,-14]).slice(0,2),(P.brD||[15,-14]).slice(0,2),
-      P.sentado?[6,-5]:[-6+ai,-2.6],P.sentado?[9,-5]:[6+bi,-2.6]];
+      P.sentado?[6,-2.6]:[-6+ai,-2.6],P.sentado?[12,-2.6]:[6+bi,-2.6]];   // sentado: los pies en el suelo, delante; la rodilla se dobla sola
     for(const q of L){if(r){const [x,y]=rotP(q[0],q[1]+22,r);q[0]=x;q[1]=y-22;}q[0]+=ox;q[1]+=oy;}   // como antes: rota alrededor de (0, −22) y luego se desplaza
-    return L;
+    return alarga(L,r,!!P.sentado);
   }
+  function rodilla(hx,hy,fx,fy,fw=1,L1=MUSLO,L2=CANILLA){   // IK de 2 huesos: la rodilla hacia delante (fw = +1 o −1)
+    const dx=fx-hx,dy=fy-hy,D=Math.min(Math.hypot(dx,dy)||1e-6,L1+L2-1e-3),a=(L1*L1-L2*L2+D*D)/(2*D),h=Math.sqrt(Math.max(0,L1*L1-a*a)),d0=Math.hypot(dx,dy)||1e-6;
+    const ux=dx/d0,uy=dy/d0;let nx=-uy,ny=ux;if(nx*fw<0){nx=-nx;ny=-ny;}
+    return [hx+ux*a+nx*h,hy+uy*a+ny*h];
+  }
+  function pierna(hx,hy,fx,fy,col,w,fw=1,k=1){const [kx,ky]=rodilla(hx,hy,fx,fy,fw,MUSLO*k,CANILLA*k);g.beginPath();g.moveTo(hx,hy);g.lineTo(kx,ky);g.lineTo(fx,fy);g.strokeStyle=col;g.lineWidth=w;g.lineCap="round";g.lineJoin="round";g.stroke();}
+  const conUtil=(f,e=1)=>{if(!f)return;g.save();g.scale(KP,KP);f();g.restore();};   // la utilería de la pose, al tamaño del robot nuevo
   function figura(P,T,B){
     B=B||metaPose(P);
     const [k,c,h,mi,md,pi,pd]=B;
@@ -1171,8 +1188,7 @@ const Taller=(()=>{
     const marcoT=a=>{g.save();g.translate(c[0],c[1]);g.rotate(a);g.translate(0,25);};      // el sistema de antes (pecho en (0, −25)), girado como quedó el cuerpo
     const U=P.uni&&Cap.uni?Cap.uni(P.uni):null,pie=U?.pierna||TINTA,zap=U?.zapato||TINTA;
     if(P.yo&&Cap.atras){marcoT(aT);Cap.atras(P,T);g.restore();}
-    if(P.sentado){g.save();g.translate(h[0],h[1]);g.rotate(aT);g.translate(0,11);for(const px of [-4,5]){raya(px,-11,px+13,-8,pie,3.6);caja(px+10,-14,5.5,8.5,2,zap);}g.restore();}
-    else for(const [px,f] of [[-6,pi],[6,pd]]){const [lx,ly]=rotP(px,0,aT);raya(h[0]+lx,h[1]+ly,f[0],f[1]-.4,pie,3.6);caja(f[0]-4,f[1]-1.9,10,4.5,2.2,zap);}
+    for(const [px,f] of [[-5,pi],[5,pd]]){const [lx,ly]=rotP(px,0,aT);pierna(h[0]+lx,h[1]+ly,f[0],f[1]-.4,pie,3.6);caja(f[0]-4,f[1]-1.9,10,4.5,2.2,zap);}   // muslo y canilla, rodilla hacia delante
     const hombro=sx=>{const [x,y]=rotP(sx,0,aT);return [c[0]+x,c[1]+y];};
     {const [x,y]=hombro(-11);brazo(x,y,mi,U);}
     marcoT(aT);
@@ -2057,18 +2073,18 @@ const Taller=(()=>{
     const mx=fr(m.x)*W;
     g.fillStyle="rgba(0,0,0,.18)";g.beginPath();g.ellipse(mx,sue+4*K,11*K,2.8*K,0,0,7);g.fill();
     g.save();g.translate(mx,sue+3*K);g.scale(K*ALTO*m.dir,K*ALTO);
-    if(P.atras)P.atras();
+    conUtil(P.atras);
     figura(P,t/1000+m.fase,Cap.vivo?Cap.vivo(m,P,mx,ALTO,m.dir):null);   // el cuerpo simulado (panel_vivo_ragdoll.js)
-    if(P.frente)P.frente();
+    conUtil(P.frente);
     g.restore();
     if(S.ev[S.idx]?.de===m.id&&!m.duerme){  // lo que dice el monitor lo está haciendo este
-      const y=sue-(52+Math.sin(t/220)*2)*K;g.beginPath();g.moveTo(mx-5*K,y-7*K);g.lineTo(mx+5*K,y-7*K);g.lineTo(mx,y);g.closePath();g.fillStyle=TM[m.tipo].c;g.fill();
+      const y=sue-(59+Math.sin(t/220)*2)*K;g.beginPath();g.moveTo(mx-5*K,y-7*K);g.lineTo(mx+5*K,y-7*K);g.lineTo(mx,y);g.closePath();g.fillStyle=TM[m.tipo].c;g.fill();
     }
     if(W>=520&&m.desc&&!m.duerme){
       const txt=m.desc.length>27?m.desc.slice(0,26)+"…":m.desc;
       g.font=`500 ${Math.max(9,9.5*Math.min(K,1.2))}px "Segoe UI",system-ui,sans-serif`;g.textAlign="center";g.fillStyle=pal["--mut"];
       const a=g.measureText(txt).width/2+margen();
-      g.fillText(txt,Math.max(a,Math.min(W-a,mx)),sue-61*K);
+      g.fillText(txt,Math.max(a,Math.min(W-a,mx)),sue-68*K);
     }
   }
 
@@ -2584,9 +2600,9 @@ const Taller=(()=>{
       if(EDIF&&Cap.uniSesion)P.uni=Cap.uniSesion();
       if(t<peloHasta)P.pelo=true;
       g.save();g.translate(x,sue+3*K);g.scale(K*dir,K);
-      if(P.atras)P.atras();
+      conUtil(P.atras);
       figura(P,T,Cap.vivo?Cap.vivo(Rb,P,x,1,dir):null);
-      if(P.frente)P.frente();
+      conUtil(P.frente);
       g.restore();
     }
   }
@@ -2603,7 +2619,7 @@ const Taller=(()=>{
   }
   function letreroRobot(anda){
     const nomR=anda?(pend?pend.nom:A.nom):A.nom,espera=activos()[0];
-    rotulo((A.act?A.txt:ACCIONES[nomR])||(Esc&&Esc.m?TM[Esc.m.tipo].espera:espera?TM[espera.tipo].espera:ESPERA_ETAPA[S.etapaViva]||(S.activa?"":"Al día")),fr(robotX)*W,sue-(A.nom==="rueda"&&!anda?112:A.nom==="fiesta"?116:92)*K);
+    rotulo((A.act?A.txt:ACCIONES[nomR])||(Esc&&Esc.m?TM[Esc.m.tipo].espera:espera?TM[espera.tipo].espera:ESPERA_ETAPA[S.etapaViva]||(S.activa?"":"Al día")),fr(robotX)*W,sue-(A.nom==="rueda"&&!anda?126:A.nom==="fiesta"?130:103)*K);
   }
 
   // ---- el edificio: cada piso es la franja del taller de siempre, apilada; la cámara es del usuario (rueda y arrastre, o dos dedos y un dedo)
@@ -3026,9 +3042,9 @@ const Taller=(()=>{
     if(R.trapo&&Cap.trapo)Cap.trapo(R,t);
     else{
       g.save();g.translate(x,sue+3*K);g.scale(e*R.dir,e);
-      if(P.atras)P.atras();
+      conUtil(P.atras);
       figura(P,T,Cap.vivo?Cap.vivo(R,P,x,.88,R.dir):null);
-      if(P.frente)P.frente();
+      conUtil(P.frente);
       g.restore();
     }
     paso=pa;Yo=null;
@@ -3235,7 +3251,7 @@ const Taller=(()=>{
     const suelta_=ev=>{dedos.delete(ev.pointerId);if(!dedos.size)cv.style.cursor="grab";};
     cv.addEventListener("pointerup",suelta_);cv.addEventListener("pointercancel",suelta_);
   }
-  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,metaPose,ojos,gorro,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
+  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,metaPose,alarga,rodilla,pierna,KP,ojos,gorro,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
   // para el muñeco de trapo (panel_vivo_ragdoll.js): quién puede caerse ahora, dónde está su piso y cómo devolverle el control
   const entidades=()=>{
     const L=[],mi=m=>({E:m,nom:"el "+m.tipo,esc:ALTO,cuerpo:TM[m.tipo].c,gorro:TM[m.tipo].gorro,uni:EDIF?m.uni||Cap.uniSesion?.():undefined,tono:TM[m.tipo].tono,anda:!!m.anda});

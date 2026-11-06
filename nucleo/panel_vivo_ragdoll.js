@@ -13,7 +13,7 @@
 // Probar en la consola: Trapo.prueba("tropiezo"|"resbalon"|"desmayo"|"cadena"|"domino"|"ayuda"|"pie"|"manos"); Trapo.cada(30000, 70000) = cada cuánto.
 window.Trapo=(()=>{
   if(typeof Taller==="undefined"||!Taller.entidades||window.EN_VIDEO)return null;
-  const {g,caja,marco,circ,aro,elip,raya,letra,corazon,ojos,gorro,TINTA,CABEZA,VISOR,ROSA,ROJO,AMAR,AZUL,VERDE}=Taller.prim;
+  const {g,caja,marco,circ,aro,elip,raya,letra,corazon,ojos,gorro,pierna,TINTA,CABEZA,VISOR,ROSA,ROJO,AMAR,AZUL,VERDE}=Taller.prim;
   const Cap=Taller.Cap,M=Taller.mundo;
   const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),suave=q=>{q=cl(q);return q*q*(3-2*q);},azar=(a,b)=>a+Math.random()*(b-a),elige=L=>L[Math.floor(Math.random()*L.length)];
   const suena=(n,f)=>{try{if(typeof Son!=="undefined")Son.mini(n,f);}catch(e){}};
@@ -21,14 +21,17 @@ window.Trapo=(()=>{
   // ---- el esqueleto, en unidades de figura(): pies en y = 0, y negativa hacia arriba, x hacia delante del robot
   const CAB=0,PEC=1,CAD=2,MI=3,MD=4,PI=5,PD=6;          // MI y PI = la mano y el pie de atrás; MD y PD = los de delante
   const RAD=[16,11,9,3.4,3.4,2.6,2.6],MASA=[3,4,4,.6,.6,.8,.8];
-  const PARADO=[[0,-45],[0,-25],[0,-11],[-15,-14],[15,-14],[-6,-2.6],[6,-2.6]];
-  const RODILLAS=[[9,-31],[4,-18],[-3,-9],[13,-3.4],[18,-3.4],[-12,-2.6],[-5,-2.6]];
-  const AGACHA=[[8,-38],[4,-22],[0,-11],[-13,-16],[24,-7],[-6,-2.6],[6,-2.6]];
-  const JALA=[[-7,-43],[-3,-25],[0,-11],[-15,-17],[21,-21],[-8,-2.6],[5,-2.6]];
-  const GUARDIA=[[-3,-44],[-2,-25],[0,-11],[8,-30],[16,-34],[-7,-2.6],[6,-2.6]];   // puños arriba, el peso atrás, el arma lista
-  const DUCK=[[14,-36],[4,-19],[-2,-6],[16,-12],[20,-16],[-9,-2.6],[7,-2.6]];         // se agacha: la cabeza baja todo lo que dejan los huesos
-  const TREPA=[[0,-45],[0,-25],[0,-11],[-10,-58],[10,-60],[-6,-2.6],[6,-2.6]];        // los brazos arriba, agarrado del borde
-  const HUESOS=[[CAB,PEC,20,20],[PEC,CAD,14,14],[CAB,CAD,30,34.5],[PEC,MI,7,21],[PEC,MD,7,21],[CAD,PI,6,11],[CAD,PD,6,11],[PI,PD,3,20]];
+  const AL=Taller.prim.alarga||(L=>L);   // 5-nov-2026: patas largas (cadera a 22 del suelo); las poses del trapo pasan por la misma conversión que las del taller
+  const PARADO=AL([[0,-45],[0,-25],[0,-11],[-15,-14],[15,-14],[-6,-2.6],[6,-2.6]]);
+  const RODILLAS=AL([[9,-31],[4,-18],[-3,-9],[13,-3.4],[18,-3.4],[-12,-2.6],[-5,-2.6]],0,true);
+  const AGACHA=AL([[8,-38],[4,-22],[0,-11],[-13,-16],[24,-7],[-6,-2.6],[6,-2.6]]);
+  const JALA=AL([[-7,-43],[-3,-25],[0,-11],[-15,-17],[21,-21],[-8,-2.6],[5,-2.6]]);
+  const GUARDIA=AL([[-3,-44],[-2,-25],[0,-11],[8,-30],[16,-34],[-7,-2.6],[6,-2.6]]);   // puños arriba, el peso atrás, el arma lista
+  const DUCK=AL([[14,-36],[4,-19],[-2,-6],[16,-12],[20,-16],[-9,-2.6],[7,-2.6]],0,true);         // se agacha: la cabeza baja todo lo que dejan los huesos
+  const TREPA=AL([[0,-45],[0,-25],[0,-11],[-10,-58],[10,-60],[-6,-2.6],[6,-2.6]]);        // los brazos arriba, agarrado del borde
+  const HUESOS=[[CAB,PEC,20,20],[PEC,CAD,14,14],[CAB,CAD,30,34.5],[PEC,MI,7,27],[PEC,MD,7,27],[CAD,PI,9,22],[CAD,PD,9,22],[PI,PD,3,30]];
+  const YC=PARADO[CAD][1],YP=PARADO[PEC][1],YK=PARADO[CAB][1];   // alturas de pie de cadera, pecho y cabeza
+  const LCM=30*(PARADO.reduce((a,q,i)=>a-q[1]*MASA[i],0)/MASA.reduce((a,m)=>a+m,0))/21.7;   // altura del péndulo del capture point: crece con el centro de masa (antes 30 con el centro a 21,7)
   const HZ=180,H=1/HZ;                   // paso fijo de la física: igual en una PC lenta que en una rápida
   const GRAV=820;                        // unidades/s²: un robot mide ~70 unidades, así que cae como de dibujo animado
   const GOLPES=["¡PLAF!","¡PUM!","¡PAF!","¡BONK!","¡CATAPLÁN!","¡ZAS!"];
@@ -148,7 +151,7 @@ window.Trapo=(()=>{
 
   // ---- efectos: golpes con onomatopeya, polvo, estrellitas, corazones y lo que dicen
   function fx(sh,o){sh.fx.push({t0:ya,dur:700,...o});}
-  function dice(sh,rd,txt){const h=rd.P[CAB],y=h.y-30*rd.s;fx(sh,{tipo:"dice",x:h.x,y:rd.info.token?Math.min(y,rd.F-112*M().K):y,txt,dur:1300});}   // Token lleva su letrero a 92 sobre el suelo: lo que dice va encima, no tapado
+  function dice(sh,rd,txt){const h=rd.P[CAB],y=h.y-30*rd.s;fx(sh,{tipo:"dice",x:h.x,y:rd.info.token?Math.min(y,rd.F-124*M().K):y,txt,dur:1300});}   // Token lleva su letrero a 92 sobre el suelo: lo que dice va encima, no tapado
   function golpe(rd,x,v,y,txt){
     if(ya-rd.golpeT<380)return;
     rd.golpeT=ya;const sh=rd.show,fuerte=v>420*rd.s;
@@ -228,7 +231,7 @@ window.Trapo=(()=>{
     else if(st==="camina"){            // va a pie hacia rd.meta, con su paso de muñeco: piernas alternas y un saltito
       const dx=rd.meta-rd.AX,v=115*M().K*H*rd.ticks;   // el mismo paso lento del taller (150 px/s)
       rd.d=dx>0?1:dx<0?-1:rd.d;rd.AX+=Math.sign(dx)*Math.min(Math.abs(dx),v);rd.paso+=rd.ticks*H*16;
-      const a=Math.sin(rd.paso)*7;pose(rd,PARADO,-Math.abs(Math.sin(rd.paso))*1.6);rd.T[PI][0]+=a*S*rd.d;rd.T[PD][0]-=a*S*rd.d;rd.T[MI][0]-=a*.6*S*rd.d;rd.T[MD][0]+=a*.6*S*rd.d;
+      const a=Math.sin(rd.paso)*9;pose(rd,PARADO,-Math.abs(Math.sin(rd.paso))*1.6);rd.T[PI][0]+=a*S*rd.d;rd.T[PD][0]-=a*S*rd.d;rd.T[MI][0]-=a*.6*S*rd.d;rd.T[MD][0]+=a*.6*S*rd.d;
       rd.k.fill(.95);rd.cara="normal";rd.llego=Math.abs(dx)<1;
     }
     else if(st==="agacha"||st==="sostiene"){   // le tiende la mano a otro: la mano de delante va a la suya
@@ -266,7 +269,7 @@ window.Trapo=(()=>{
       let mx=0,vx=0,mt=0;for(let i=0;i<7;i++){mx+=P[i].x*MASA[i];vx+=(P[i].x-P[i].px)*MASA[i];mt+=MASA[i];}
       mx/=mt;vx=vx/mt/H;
       const pl=Math.min(P[PI].x,P[PD].x)-3*S,pr=Math.max(P[PI].x,P[PD].x)+3*S,bc=(pl+pr)/2,bw=Math.max(5*S,(pr-pl)/2);   // la base de apoyo = donde están los pies
-      const cap=mx+vx*Math.sqrt(30/GRAV),err=cap-bc,fuera=Math.abs(err)/bw;   // capture point del péndulo invertido: x + v·√(l/g), l = 30 (altura del centro de masa)
+      const cap=mx+vx*Math.sqrt(LCM/GRAV),err=cap-bc,fuera=Math.abs(err)/bw;   // capture point del péndulo invertido: x + v·√(l/g), l = 30 (altura del centro de masa)
       // 1) controlador de pasos: si el capture point sale de la base, el pie más alejado va a donde cae el peso (una meta, no una pose)
       if(!B.paso&&fuera>1&&B.pasos<B.max&&s>.04){
         const pie=Math.abs(P[PI].x-cap)>Math.abs(P[PD].x-cap)?PI:PD;
@@ -279,7 +282,7 @@ window.Trapo=(()=>{
       for(const i of [PI,PD])if(!B.paso||B.paso.pie!==i)rd.T[i]=[P[i].x,rd.F+rd.AY-2.6*S];   // el pie de apoyo se queda donde está
       // 2) la cadera persigue el centro de la base; pecho y cabeza se inclinan contra el error (torque de cadera)
       const lean=cl(-err/(2.5*bw),-1,1),hx=(P[PI].x+P[PD].x)/2;rd.AX=hx;
-      rd.T[CAD]=[hx-lean*2*S,rd.F+rd.AY-11*S];rd.T[PEC]=[hx+lean*4*S,rd.F+rd.AY-25*S];rd.T[CAB]=[hx+lean*9*S,rd.F+rd.AY-45*S];
+      rd.T[CAD]=[hx-lean*2*S,rd.F+rd.AY+YC*S];rd.T[PEC]=[hx+lean*4*S,rd.F+rd.AY+YP*S];rd.T[CAB]=[hx+lean*11*S,rd.F+rd.AY+YK*S];
       // 3) brazos: se abren en proporción al error (momento angular contra la caída), el del lado de la velocidad más arriba
       const amp=cl(fuera,0,1.6),pc=rd.T[PEC];
       rd.T[MI]=[pc[0]-(13+5*amp)*S+lean*6*S,pc[1]-(2+10*amp)*S-Math.max(0,-vx/(60*S))*4*S];
@@ -636,7 +639,7 @@ window.Trapo=(()=>{
       const h=rd.P[CAD],vx=(h.x-h.px)/H;if(Math.abs(vx)<200*rd.s)continue;
       for(const info of L){
         if(!libre(info))continue;const u=M().ubica(info.E);
-        if(u.piso!==rd.piso||Math.abs(u.px-h.x)>(16+12*info.esc)*rd.s||h.y<rd.F-70*info.esc*M().K)continue;
+        if(u.piso!==rd.piso||Math.abs(u.px-h.x)>(16+12*info.esc)*rd.s||h.y<rd.F-82*info.esc*M().K)continue;
         rd.atropT=ya;
         const o={vx:Math.sign(vx)*azar(170,330),que:"lo atropelló un compañero",foco:false,dice:Math.random()<.5?elige(["¡Oye!","¡Fíjate!","¿¡De dónde saliste!?","¡Cuidado!"]):null};
         if(Math.random()<.7)o.modo="tambalea";else{o.vy=-azar(150,260);o.aguanta=0;}
@@ -688,9 +691,9 @@ window.Trapo=(()=>{
     const aT=Math.atan2(-(h.x-c.x),h.y-c.y),aH=Math.atan2(k.x-c.x,-(k.y-c.y));
     const sp=soporte(rd,h.x,h.y),fl=sp??sueloEn(rd,h.x),alto=cl((fl-h.y)/(30*s),0,1.5);   // la sombra cae en la mesa si está encima
     g.fillStyle=`rgba(0,0,0,${.2-alto*.08})`;g.beginPath();g.ellipse(h.x,fl+1*s,(16+6*(1-cl(alto)))*s,3.6*s,0,0,7);g.fill();
-    for(const [i,ox] of [[PI,-6],[PD,6]]){            // piernas y zapatos
+    for(const [i,ox] of [[PI,-5],[PD,5]]){            // piernas y zapatos
       const [lx,ly]=rot(ox*s*d,0,aT),f=P[i];
-      raya(h.x+lx,h.y+ly,f.x,f.y,pie,3.6*s);caja(f.x+(d>0?-4:-6)*s,f.y-1.9*s,10*s,4.5*s,2.2*s,zap);
+      pierna(h.x+lx,h.y+ly,f.x,f.y,pie,3.6*s,d,s);caja(f.x+(d>0?-4:-6)*s,f.y-1.9*s,10*s,4.5*s,2.2*s,zap);   // muslo y canilla: la rodilla hacia donde mira
     }
     const hombro=sx=>{const [x,y]=rot(sx*s*d,0,aT);return [c.x+x,c.y+y];};
     {const [x,y]=hombro(-11);brazo(x,y,P[MI],s,U);}
@@ -748,7 +751,7 @@ window.Trapo=(()=>{
   // Ligero: como mucho MAX_VIVOS cuerpos a la vez (los que se ven primero; los demás se dibujan con las metas directas) y 2 iteraciones de huesos
   // fuera de cámara en vez de 4. Medir: Trapo.costo() (ms por cuadro de la física: cuerpos vivos + escenas). Ver: Trapo.vivos().
   const MAX_VIVOS=8,VIV=new Map();
-  const HV=[[CAB,PEC,20,20],[PEC,CAD,14,14],[CAB,CAD,30,34.5],[PEC,MI,0,62],[PEC,MD,0,62],[CAD,PI,0,30],[CAD,PD,0,30]];   // las poses estiran brazos y piernas más que el trapo: solo el tronco es rígido
+  const HV=[[CAB,PEC,20,20],[PEC,CAD,14,14],[CAB,CAD,30,34.5],[PEC,MI,0,62],[PEC,MD,0,62],[CAD,PI,0,24],[CAD,PD,0,24]];   // las poses estiran brazos y piernas más que el trapo: solo el tronco es rígido
   const KV=[.32,.42,.5,.9,.9,1,1];       // fuerza de cada músculo: tronco blando (se nota la inercia), manos firmes (sostienen la utilería), pies plantados
   let cuadro=0,cost=[],costF=0;
   const anota=ms=>{costF+=ms;};
@@ -769,12 +772,12 @@ window.Trapo=(()=>{
       T[CAB][0]+=d*2.5*s;T[PEC][0]+=d*1.2*s;   // al caminar se inclina hacia delante
       if(b.sw<0){
         const atras=d*(b.pl[0]-x)<d*(b.pl[1]-x)?PI:PD;
-        if(d*(x-b.pl[atras-PI])>5*s){const o=b.pl[otro(atras)-PI];pasoPie(b,atras,cl(x+d*6*s+b.vr*.1,o-20*s,o+20*s));}
+        if(d*(x-b.pl[atras-PI])>6*s){const o=b.pl[otro(atras)-PI];pasoPie(b,atras,cl(x+d*8*s+b.vr*.08,o-22*s,o+22*s));}   // patas largas: zancada más larga, mismos 150 px/s
       }
     }else{
       b.modo="pie";
       let mx=0,vx=0,mt=0;for(let i=0;i<7;i++){mx+=P[i].x*MASA[i];vx+=(P[i].x-P[i].px)*MASA[i];mt+=MASA[i];}mx/=mt;vx=vx/mt/H;
-      const pl=Math.min(P[PI].x,P[PD].x)-3*s,pr=Math.max(P[PI].x,P[PD].x)+3*s,bc=(pl+pr)/2,bw=Math.max(5*s,(pr-pl)/2),cap=mx+vx*Math.sqrt(30/GRAV),err=cap-bc;
+      const pl=Math.min(P[PI].x,P[PD].x)-3*s,pr=Math.max(P[PI].x,P[PD].x)+3*s,bc=(pl+pr)/2,bw=Math.max(5*s,(pr-pl)/2),cap=mx+vx*Math.sqrt(LCM/GRAV),err=cap-bc;
       if(b.sw<0&&Math.abs(err)>bw+2*s){   // se le va el peso: paso de recuperación hacia el capture point
         const pie=Math.abs(P[PI].x-cap)>Math.abs(P[PD].x-cap)?PI:PD,o=P[otro(pie)].x;
         b.rec=true;b.pl=[P[PI].x,P[PD].x];pasoPie(b,pie,cl(cap+Math.sign(err)*2*s,o-22*s,o+22*s));b.recs=(b.recs||0)+1;

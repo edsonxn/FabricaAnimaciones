@@ -2,6 +2,7 @@
 """Chequeo de capas del motor SECUENCIA YT (el usuario, 30-oct-2026: «no debes sustituir una cosa con otra» y «lo que se ve debe
 reflejar lo que dice la narración»). No renderiza ni gasta nada; solo avisa, nunca bloquea.
   1. DENSIDAD: fichas, MG, mapas, pegatinas y comentarios por minuto contra la mediana de los últimos videos del canal.
+     + VARIEDAD de animación de las pegatinas (peg_anim / peg_estilos / clásica; 5-nov-2026).
   2. NARRACIÓN ↔ IMAGEN: frases que nombran algo o prometen algo visible y que ni el clip ni un efecto enseñan.
   3. CLIP DE OTRO JUEGO: títulos de fuentes.json sin el nombre del juego o con el de otro (habría cazado «Sinh, the Slumbering
      Dragon», Dark Souls II, en tes_secretos_40); los «(fijado a mano)» salen como revisar.
@@ -111,6 +112,44 @@ def densidad(carpeta):
         r = ref[c] if ref else 0
         baja = bool(ref) and r > 0 and este[c] < r * UMBRAL
         print(f"  {c:12s} {este[c]:4.1f}   canal {r:4.1f}" + (f"   ⚠ BAJÓ {100 - este[c] / r * 100:.0f} %" if baja else ""))
+
+
+def estilo_peg(d):
+    """Animación de una pegatina: «entrada+estancia+salida/marco» (peg_anim), el estilo de peg_estilos o «clásica»."""
+    fn = d.get("fn")
+    if getattr(fn, "anim", None):
+        return fn.anim
+    q = getattr(fn, "__qualname__", "") or ""
+    base = q.split(".<locals>")[0]
+    return "clásica" if base in ("pegatina", "") else base
+
+
+def variedad(carpeta):
+    """Variedad de animación de las pegatinas (el usuario, 5-nov-2026: «muchas más formas para que no se sientan repetidas»)."""
+    previo = os.getcwd()
+    try:
+        os.chdir(carpeta)
+        sys.path.insert(0, carpeta)
+        sp = importlib.util.spec_from_file_location("efectos_var", "efectos.py")
+        m = importlib.util.module_from_spec(sp)
+        sp.loader.exec_module(m)
+        pegs = sorted((d for d in getattr(m, "FX", []) if clase(d) == "pegatinas"), key=lambda d: d.get("de", d.get("en", 0)) if isinstance(d.get("de", d.get("en")), (int, float)) else 0)
+    except (Exception, SystemExit):
+        return
+    finally:
+        if carpeta in sys.path:
+            sys.path.remove(carpeta)
+        os.chdir(previo)
+    if not pegs:
+        return
+    est = [estilo_peg(d) for d in pegs]
+    entradas = [e.split("+")[0] for e in est]
+    clasicas = sum(e == "clásica" for e in est)
+    seguidas = sum(a == b for a, b in zip(entradas, entradas[1:]))
+    print(f"VARIEDAD DE PEGATINAS: {len(pegs)} · {len(set(entradas))} entradas distintas · clásicas {clasicas} · repetidas seguidas {seguidas}")
+    if clasicas > len(pegs) * .34 or seguidas > len(pegs) * .15:
+        print("  ⚠ se sienten repetidas: usa pv()/filav()/pil() (nucleo/peg_anim.py) o los estilos de peg_estilos;"
+              " docs/estilo_secuencia_yt.md § CATÁLOGO DE ANIMACIONES DE PEGATINAS")
 
 
 def nombres(frases):
@@ -247,6 +286,7 @@ def main():
         return
     carpeta = os.getcwd()
     densidad(carpeta)
+    variedad(carpeta)
     narracion(carpeta)
     otro_juego()
     sonidos()

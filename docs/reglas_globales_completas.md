@@ -12,7 +12,7 @@ canales. Lista completa de capas: `docs/estilo_secuencia_yt.md` § «REGLA DE OR
 - **Lo que dice la voz se ve:** en Flow o dibujado por código, la escena enseña lo que se nombra, con foto o medio real donde el estilo lo use (Bitácora, Cronopapel, LogIA, Wild Next Door).
 - **Nada ajeno al tema:** ninguna imagen, clip o mapa de otro lugar, época, animal o juego.
 - **Gráficos desde el gancho:** MG, mapas o diagramas propios del guion repartidos por todo el video, con el kit del estilo; no reciclar escenas.
-- **Presentaciones variadas:** personajes, animales y objetos con varios tamaños, posiciones y estilos; `nucleo/peg_estilos.py` sirve donde el motor use `efectos.py`; en los demás, una variante propia del kit.
+- **Presentaciones variadas:** personajes, animales y objetos con varios tamaños, posiciones y estilos; `nucleo/peg_estilos.py` sirve donde el motor use `efectos.py`; en los demás, una variante propia del kit. **Animaciones de presentación (5-nov-2026, todos los canales): «muchas más formas para que no se sientan repetidas» → `nucleo/peg_anim.py` (marco + entrada + estancia + salida en 3D; `pv()` de la plantilla con rotador que nunca repite dos seguidas; tabla en `docs/estilo_secuencia_yt.md` § CATÁLOGO DE ANIMACIONES DE PEGATINAS); `chequeo` mide la variedad.**
 - **Comentarios:** leerlos antes de cada video (`fab.py yt comentarios <canal>`), enseñar agradecimientos y contestar una crítica exagerada con burla disfrazada. Si el tema es una tragedia real o el tono no lo aguanta, se omite la burla. El detalle y los límites están en § COMENTARIOS del doc de arriba.
 - **Chequeo:** `fab.py <v> chequeo` en todo motor con `efectos.py`.
 

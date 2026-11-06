@@ -22,6 +22,33 @@ def peg(en, slug, titulo, dur=4.0, x=.17, y=.62, tam=400):
 # REGLA DE ORO (30-oct-2026): las reglas SUMAN, lo que dice la voz SE VE, ningún clip de otro juego, MG desde el gancho y ≥ 1 de cada 3
 # pegatinas en estilo no estándar (`nucleo/peg_estilos.py`: silueta, reliquia, banda, camafeo, legajo, abanico; temas tes/wow/er/gaming).
 # Lista: docs/estilo_secuencia_yt.md § REGLA DE ORO · ejemplo: videos/tes_secretos_40/efectos.py · `python fab.py <v> chequeo` antes de `video`.
+# CATÁLOGO DE ANIMACIONES (el usuario, 5-nov-2026, TODOS los canales: «muchas más formas para que no se sientan repetidas»):
+# usa pv() en vez de peg() para la mayoría: cada pegatina sale con otra combinación de MARCO + ENTRADA + ESTANCIA + SALIDA
+# (`nucleo/peg_anim.py`: polaroid que cae, carta que se voltea, tinta, cristal roto, tijera, ventana, ceniza, glitch…) y el
+# rotador del video NUNCA repite la misma dos veces seguidas. Fija una parte si el guion lo pide: pv(..., entrada="sello").
+# pil() = pila de fotos que se reparte con las marcas de la voz. Tabla: docs/estilo_secuencia_yt.md § CATÁLOGO DE ANIMACIONES.
+TEMA_PEG = "wow"      # colores: tes · wow · er · gaming · spyro · n64 · pokemon · cod · plasti (peg_estilos.TEMAS)
+
+
+def pv(en, slug, titulo, dur=4.0, x=.17, y=.62, tam=400, **anim):
+    import peg_anim as PA
+    fn = PA.variado(os.path.join(_PEG, slug + ".png"), titulo, tam, tema=TEMA_PEG, **anim)
+    return dict(tipo="mg", fn=fn, en=en, dur=dur, x=x, y=y, sale=.06, nombre="pegatina " + slug, ver=1.0)
+
+
+def filav(en, items, y=.64, tam=340, dur=4.6):
+    """Fila de pegatinas variadas; items = [(slug, titulo, ancla o None = la misma)]."""
+    xs = (.12, .29, .46, .63, .80)
+    return [pv(a or en, s, t, dur=dur, x=xs[i], y=y, tam=tam) for i, (s, t, a) in enumerate(items)]
+
+
+def pil(fotos, de, a, marcas, nombre, x=.50, y=.58, tam=300, marco="polaroid"):
+    """Pila de fotos que se reparte (una por marca de la voz); fotos = [(slug, etiqueta)]."""
+    import peg_anim as PA
+    return dict(tipo="mg", fn=PA.pila([(os.path.join(_PEG, s + ".png"), e) for s, e in fotos], tam, TEMA_PEG, marco), de=de, a=a,
+                marcas=list(marcas), x=x, y=y, sale=.06, nombre="pegatina pila " + nombre, ver=2.0)
+
+
 # COMENTARIO REAL de quien pidió el tema o corrigió algo (27-oct-2026): `python fab.py yt comentario <v> <canal> <id>` y
 # peg(en, "com_<id>", "", tam=760, x=.30, y=.30). Receta: docs/estilo_secuencia_yt.md § COMENTARIOS.
 

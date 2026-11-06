@@ -30,6 +30,7 @@ de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido
 
 **Medición de referencia** (`tes_secretos_40`, por minuto): fichas 1,7 · MG 1,4 · mapas 0,7 · pegatinas 3,1 · comentarios 0,5.
 
+**Animaciones de presentación variadas (el usuario, 5-nov-2026, TODOS los canales: «tienen que ser muchas más formas para que no se sienta repetidas»):** la mayoría de las pegatinas van con `pv()` / `filav()` / `pil()` de la plantilla (`nucleo/peg_anim.py`: 8 marcos × 21 entradas × 7 estancias × 18 salidas, con un rotador por video que nunca repite la misma dos veces seguidas y recorre todo el catálogo); `peg()` clásica solo de vez en cuando. Tabla en § «CATÁLOGO DE ANIMACIONES DE PEGATINAS»; `chequeo` mide la variedad.
 **Pegatinas variadas (`nucleo/peg_estilos.py`, temas `tes`, `wow`, `er`, `gaming`):** `silueta` = personaje SIN fondo a media pantalla con
 la cara bien visible y el video corriendo detrás (colocar con `pos_silueta`); `reliquia` = objeto sobre círculo de runas; `banda` = tira
 de cine con los ojos; `camafeo` = medallón para menciones rápidas; `legajo` = expediente; `abanico` = cartas al enumerar. Cambia también
@@ -387,6 +388,75 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
 - **Calendario:** `canales` da el hueco por ciclo (3 d), pero `yt subir` aplica `separacion_min_horas` (96 h) y lo detiene: el hueco real es
   el último programado + 96 h.
 - **Studio:** muestra «Plastitube» como canal activo, pero `studio.youtube.com/video/<id>/monetization` abre el video bien.
+
+## CATÁLOGO DE ANIMACIONES DE PEGATINAS (el usuario, 5-nov-2026, TODOS los canales con `efectos.py`)
+«Hay que aumentar el catálogo de animaciones de cómo se presentan las pegatinas e imágenes, tienen que ser muchas más formas para que
+no se sientan repetidas.» Kit: **`nucleo/peg_anim.py`**. Cada pegatina = **MARCO** (cómo va vestida) + **ENTRADA** (cómo aparece) +
+**ESTANCIA** (qué hace mientras está) + **SALIDA** (cómo se va); todo en 3D (perspectiva real, sombra que se separa con la altura,
+cara de atrás en los volteos): nada plano. Colores por tema de `peg_estilos.TEMAS` (`tes wow er gaming spyro n64 pokemon cod plasti`).
+Más rápido que la clásica (9-28 ms por cuadro contra 37 ms de `mg_tes.pegatina`).
+
+**Uso (plantilla `videos/_plantilla_yt/efectos.py`):** `TEMA_PEG = "er"` y luego
+`pv("palabras de la voz", "slug", "Nombre")` (mismos argumentos que `peg()`) · `filav(en, [(slug, nombre, ancla), …])` para enumerar ·
+`pil([(slug, etiqueta), …], de, a, marcas, "nombre")` = pila de fotos que se reparte con la voz. El rotador (uno por video y tema,
+determinista: el render en paralelo saca las mismas) baraja cada categoría en «bolsas»: **nunca la misma entrada, estancia, salida ni
+marco dos veces seguidas** y no repite nada hasta haber usado todo el catálogo; lo afín al tema sale antes (épico `tes/wow/er`: tinta,
+ceniza, cristal, museo, carta…; retro `gaming/n64/spyro/pokemon`: glitch, baldosas, imán, monitor…; `cod`: monitor, glitch, cortinilla,
+sello…; `plasti`: cae, sello, polaroid, remolino…). Para fijar una parte: `pv(..., entrada="sello")`, `pv(..., marco="carta",
+salida="ceniza")`. Combinación completa a mano: `PA.pegatina(ruta, nombre, tam, tema, entrada=, estancia=, salida=, marco=)`.
+Videos ya hechos con `peg()`: no se tocan (la firma y el comportamiento de `peg/grande/fila` no cambian; un `efectos.py` viejo
+copia `pv/filav/pil` y `TEMA_PEG` de la plantilla). Probar el catálogo:
+`python nucleo/peg_anim.py hoja --tema er --fondo <jpg del juego> --salida previews` (hojas con 5 tiempos por animación; MÍRALAS) ·
+`python nucleo/peg_anim.py catalogo`. `python fab.py <v> chequeo` imprime «VARIEDAD DE PEGATINAS» (entradas distintas, clásicas,
+repetidas seguidas) y avisa si más de un tercio son clásicas o se repiten.
+
+| Tipo | Nombre | Qué hace | Cuándo |
+|---|---|---|---|
+| marco | `clasico` | borde blanco de pegatina (contorno si es recorte) + píldora | la de siempre, en 3D |
+| marco | `polaroid` | foto instantánea, pie escrito a mano, cinta adhesiva | personajes, recuerdos, «este es…» |
+| marco | `carta` | carta coleccionable: filo del tema, cinta con el nombre, gema; dorso con runas | jefes, armas, objetos raros (con `volteo`) |
+| marco | `cristal` | panel de cristal ahumado translúcido con reflejo | menciones sobre gameplay vistoso |
+| marco | `rasgado` | recorte de papel con borde rasgado, foto en tono cálido | lore, documentos, historia |
+| marco | `museo` | moldura biselada + paspartú + placa de metal | reliquias, reyes, arte oficial |
+| marco | `monitor` | pantallita con barrido, esquinas de HUD y etiqueta | gaming, CoD, retro, datos |
+| marco | `aura` | SOLO recortes sin fondo: halo de luz del tema; dorso = silueta | criaturas e ítems con PNG transparente |
+| entrada | `pop` | rebote clásico girando | rápido, neutro |
+| entrada | `cae` | cae de arriba, rebota con aplastamiento y se asienta | aparición con humor |
+| entrada | `volteo` | carta que gira 180° en Y enseñando su dorso | revelación («y el culpable es…») |
+| entrada | `rasgado` | una hoja de papel la tapa y se rasga en dos | secreto que se descubre |
+| entrada | `tinta` | mancha de tinta de borde irregular que la revela | lore, épico |
+| entrada | `enfoque` | llega de un punto lejano desenfocada y se enfoca | recuerdo, «a lo lejos…» |
+| entrada | `cortinilla` | barrido diagonal con filo de luz del tema | ritmo rápido, listas |
+| entrada | `origami` | se despliega como acordeón de 4 pliegues | objetos, mapas, cartas |
+| entrada | `deslizar` | entra de lado en perspectiva; la sombra llega tarde | transición suave |
+| entrada | `ventana` | dos contraventanas del tema se abren hacia ti | «detrás de esta puerta…», lugares |
+| entrada | `bisagra` | gira sobre un borde como una puerta, rebote elástico | presentación de personaje |
+| entrada | `glitch` | pixelado, franjas, RGB separado y parpadeo hasta limpiarse | retro, bugs, contenido cortado |
+| entrada | `tijera` | unas tijeras recortan su contorno y la pegatina se despega | «recortado del juego», curiosidades |
+| entrada | `cristal` | esquirlas que vuelan a su sitio y dejan grietas brillando | golpe, traición, algo roto |
+| entrada | `iman` | llega acelerando, choca, se sacude con líneas de impacto | remate, chiste |
+| entrada | `sello` | baja de la cámara y estampa con anillo de polvo | veredicto, «confirmado» |
+| entrada | `tiras` | tiras que llegan alternando de cada lado | dinámico, retro |
+| entrada | `baldosas` | mosaico que aparece en desorden con rebote | videojuego cargando |
+| entrada | `ceniza` | se forma desde las brasas con chispas | fuego, muerte, épico |
+| entrada | `remolino` | entra girando en espiral desde un punto | magia, transformación |
+| entrada | `vuela` | llega volando de lado con giro | rápida, de paso |
+| estancia | `flota` | balanceo y flotación suaves | por defecto |
+| estancia | `inclina` | cartón que respira en 3D; el reflejo se mueve con él | objetos, cartas |
+| estancia | `kenburns` | la foto se acerca y pasea DENTRO del marco quieto | paisajes, retratos largos |
+| estancia | `brillo` | destello que barre la pegatina cada ~2,4 s | objetos raros, legendarios |
+| estancia | `lupa` | una lupa del tema recorre la imagen (x2) | «fíjate en el detalle» |
+| estancia | `quieta` | casi quieta con acercamiento lento | tono serio, tragedia |
+| estancia | `pulso` | halo de luz del tema que late detrás | poder, magia, amenaza |
+| salida | `funde` · `cae` · `vuela` · `remolino` | se desvanece · cae por gravedad girando · sale volando · se va en espiral | — |
+| salida | `volteo` · `bisagra` · `deslizar` · `origami` | gira de canto · se abre como puerta · sale de lado · se pliega | — |
+| salida | `tinta` · `cortinilla` · `ceniza` · `glitch` | se borra con tinta · barrido · se quema con brasas · interferencia | — |
+| salida | `cristal` · `rasgado` · `tiras` · `baldosas` · `ventana` · `enfoque` | estalla · se rompe en dos y caen · se reparte en tiras · se deshace en mosaico · se cierran las contraventanas · se va al fondo desenfocada | — |
+| varias | `pila` (`pil()`) | pila de fotos que se reparte en fila con las marcas de la voz y se recoge al final | enumeraciones (alternativa a `abanico`) |
+
+Estos se SUMAN a los estilos de `peg_estilos` (silueta, reliquia, banda, camafeo, legajo, abanico) y a `pant()`: la regla de oro sigue
+pidiendo tamaños, posiciones y estilos variados. Al crear una animación nueva: función `t_<nombre>` (o `es_<nombre>`) en `peg_anim.py`,
+añadirla a `ENT`/`SAL`/`EST`, a la tupla del catálogo, a la afinidad por tema si toca, a esta tabla, y mirar su fila en la hoja.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los

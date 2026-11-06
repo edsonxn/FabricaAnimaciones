@@ -1,0 +1,1354 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.1,
+  "tipo": "video",
+  "texto": "Tres jefes de Banjo-Tooie casi no existen. Uno iba a ser una roca. Otro, unos engranajes llamados The Kogs.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.1,
+  "t1": 16.142,
+  "tipo": "video",
+  "texto": "Y el tercero, una avispa gigante. Hay un tótem que se autodestruye y sigue hablando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.142,
+  "t1": 24.374,
+  "tipo": "video",
+  "texto": "Un pez que, después de morir, te pide que dejes de dispararle. Y un dragón que te confunde con el repartidor de pizza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 24.374,
+  "t1": 32.606,
+  "tipo": "video",
+  "texto": "Un rey de carbón que pierde los dos brazos y sigue diciendo que va ganando. Y un robot que se hace pasar por tu mejor amigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 32.606,
+  "t1": 43.713,
+  "tipo": "video",
+  "texto": "Ya te contamos la historia de Banjo-Tooie, sus Jiggies más crueles, sus ocho mundos y cincuenta secretos. Creías que estaba todo. Faltaban ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.713,
+  "t1": 52.93,
+  "tipo": "video",
+  "texto": "Estos son los diez jefes de Banjo-Tooie, del peor al mejor. Y el número uno ni siquiera estaba en los planes de Rare.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.93,
+  "t1": 61.671,
+  "tipo": "video",
+  "texto": "Para que no sea solo nuestra opinión, juntamos siete rankings de jugadores y creadores de contenido, y sacamos la media de cada jefe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.671,
+  "t1": 68.951,
+  "tipo": "video",
+  "texto": "Están Easy Geek, Super Joe Bros, que trae dos, la suya y la de su chat, ivanavi, Acute-Dilute,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.951,
+  "t1": 77.87,
+  "tipo": "video",
+  "texto": "MABUS y WatchMojo. Cada jefe tiene su nota en cada lista. Klungo, al que peleas tres veces, cuenta como uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.87,
+  "t1": 85.215,
+  "tipo": "video",
+  "texto": "Los dos dragones de Hailfire Peaks, también. Quedan diez. Empezamos por abajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.215,
+  "t1": 97.009,
+  "tipo": "video",
+  "texto": "Número diez. Terry, en Terrydactyland. Un pterodáctilo gigante que vive en un nido, en la cima de la montaña, y que te recibe a escupitajos mientras subes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 97.009,
+  "t1": 103.379,
+  "tipo": "video",
+  "texto": "Te acusa de robarle los huevos. Kazooie, con la delicadeza de siempre, le contesta que da igual,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.379,
+  "t1": 111.202,
+  "tipo": "video",
+  "texto": "que su especie está a punto de extinguirse. Tiene treinta de vida. Escupe desde lo alto, y no apunta a donde estás,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.202,
+  "t1": 119.597,
+  "tipo": "video",
+  "texto": "sino a donde vas a estar. Si corres en círculo, falla. Cuando se cansa, suelta en el nido unos mocos con vida,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.597,
+  "t1": 127.468,
+  "tipo": "video",
+  "texto": "los Mucoids, y se esconde bajo las nubes. Los rompes rodando, le disparas huevos, y vuelta a empezar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 127.468,
+  "t1": 137.582,
+  "tipo": "video",
+  "texto": "Por el nombre sería un pteranodon, y así lo llama la versión japonesa. Pero los pteranodon no tenían dientes. Y Terry, sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.582,
+  "t1": 146.382,
+  "tipo": "video",
+  "texto": "¿Por qué está el último? Porque cada vez que escupe, la cámara salta a una vista desde arriba y te quita el control. Las listas lo repiten:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.382,
+  "t1": 154.093,
+  "tipo": "video",
+  "texto": "el personaje es interesante, la pelea no tanto. Y aquí nos toca corregir algo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.093,
+  "t1": 163.563,
+  "tipo": "video",
+  "texto": "En nuestro ranking de mundos lo llamamos «la jefa». Según la wiki de Banjo, que cita el manual, Terry es macho, y padre soltero:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.563,
+  "t1": 169.199,
+  "tipo": "video",
+  "texto": "su esposa lo dejó antes del juego. Perdón, Terry. Ya tenías bastante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 169.199,
+  "t1": 178.885,
+  "tipo": "video",
+  "texto": "Al final, cuando descubre que tú no tenías sus huevos, se disculpa por haber sido tan bruto. Y Kazooie le contesta que ella lo disfrutó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 178.885,
+  "t1": 190.305,
+  "tipo": "video",
+  "texto": "Luego te pide que le devuelvas a sus crías. La última es tan gorda que hay que llevarla en el Taxi Pack, y Terry duda de que quepa en el nido: «¿No podrías darle con un huevo granada?».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.305,
+  "t1": 198.809,
+  "tipo": "video",
+  "texto": "Kazooie lo llama desalmado. «Es broma». En el documento de diseño de Rare, de enero de mil novecientos noventa y nueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.809,
+  "t1": 205.378,
+  "tipo": "video",
+  "texto": "Terry iba a dar vueltas volando por debajo del borde del nido mientras te atacaban los mocos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.378,
+  "t1": 214.532,
+  "tipo": "video",
+  "texto": "Y en ese primer plan, Terrydactyland no era el sexto mundo del juego. Era el primero, en el sitio que acabó ocupando Mayahem Temple.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.532,
+  "t1": 225.361,
+  "tipo": "video",
+  "texto": "Según la wiki, además, es el único jefe que no acaba destruido ni derrotado del todo: puedes volver a su nido cuando quieras, y ahí sigue.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.361,
+  "t1": 234.861,
+  "tipo": "video",
+  "texto": "Número nueve. Old King Coal, en Glitter Gulch Mine. Un rey hecho de carbón que vive dentro de la caldera del tren, Chuffy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 234.861,
+  "t1": 242.22,
+  "tipo": "video",
+  "texto": "Si intentas usar el tren antes de tiempo, la caldera te habla, y te avisa de que primero tienes que pelear con él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 242.22,
+  "t1": 248.38,
+  "tipo": "video",
+  "texto": "Tiene cincuenta de vida, la segunda cifra más alta del juego, solo por detrás del jefe final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.38,
+  "t1": 256.78,
+  "tipo": "video",
+  "texto": "Y no tiene punto débil: casi todo le hace daño. Casi. Los huevos de fuego no le hacen nada, que para eso es carbón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 256.78,
+  "t1": 266.94,
+  "tipo": "video",
+  "texto": "Los de hielo, en cambio, le quitan más. Lo mejor es cómo pierde. Primero se le cae el brazo izquierdo, y dice que no pasa nada, que tiene otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.94,
+  "t1": 275.119,
+  "tipo": "video",
+  "texto": "Luego el derecho, y dice que no necesita brazos. Luego la mitad de arriba. Y ahí ya propone sentarse a hablar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.119,
+  "t1": 281.299,
+  "tipo": "video",
+  "texto": "Mientras tanto, la caldera se calienta: el suelo se pone al rojo y el humo te ahoga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 281.299,
+  "t1": 291.632,
+  "tipo": "video",
+  "texto": "Te salvas subiéndote a los trozos grandes de su propio cuerpo, donde no te alcanza. ¿Por qué el noveno? Porque es el más fácil del juego. Subido a una plataforma,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.632,
+  "t1": 298.831,
+  "tipo": "video",
+  "texto": "no te puede tocar. Super Joe Bros le pone buena nota… por el esfuerzo. Y casi ni existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 298.831,
+  "t1": 307.99,
+  "tipo": "video",
+  "texto": "En la primera lista de mundos de Rare, el jefe de la mina era «Boss Boulder». Una roca. Su entrada también iba a ser otra:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 307.99,
+  "t1": 316.9,
+  "tipo": "video",
+  "texto": "muchos trozos de carbón juntándose, uno a uno, para formar su cuerpo. Rare se quedó con la opción B, salir del carbón de golpe,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.9,
+  "t1": 325.65,
+  "tipo": "video",
+  "texto": "porque era menos exigente para la consola. En alemán se llama Briketto Blanko, un chiste con el nombre del cantante Roberto Blanco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 325.65,
+  "t1": 334.745,
+  "tipo": "video",
+  "texto": "Y la wiki lo compara con el Caballero Negro de Monty Python, el que pierde los brazos y dice que solo es un rasguño. En Xbox 360,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.745,
+  "t1": 343.145,
+  "tipo": "video",
+  "texto": "el logro por vencerlo se llama «A Merry Old Soul», como la canción infantil del rey alegre. Él jura que no es ese rey.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.145,
+  "t1": 349.356,
+  "tipo": "video",
+  "texto": "Su pie, en cambio, sí te va a alegrar la cabeza. Y otro dato de los archivos de Rare:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 349.356,
+  "t1": 361.344,
+  "tipo": "video",
+  "texto": "probaron que un segundo jugador controlara a un jefe con el mando. Lo quitaron, porque así nadie podía ganarle. Número ocho. Targitzan, en Mayahem Temple.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.344,
+  "t1": 368.2,
+  "tipo": "video",
+  "texto": "El dios maya del tiro al blanco: un tótem que gira sobre sí mismo, cubierto de dianas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 368.2,
+  "t1": 378.356,
+  "tipo": "video",
+  "texto": "La traducción al español lo llamó Apuntzan, de apuntar. Y su título completo es todavía mejor: Despótico Dios Tótem Mareado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.356,
+  "t1": 388.717,
+  "tipo": "video",
+  "texto": "Para llegar a él necesitas veinte estatuas de jade, y el Breegull Blaster, el modo en que Kazooie se convierte en arma, porque toda la pelea es en primera persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.717,
+  "t1": 393.517,
+  "tipo": "video",
+  "texto": "Tiene dieciséis de vida: cuatro pisos, con cuatro dianas cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.517,
+  "t1": 400.633,
+  "tipo": "video",
+  "texto": "Cada piso que rompes lo hace más bajo, suelta más Moggies, y le salen más caras que escupen dardos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 400.633,
+  "t1": 411.73,
+  "tipo": "video",
+  "texto": "Cuando pierde el piso de abajo grita que ya no siente las piernas, y le ordena a sus Moggies inútiles que vayan a por ti. Las losas donde te cubres se rompen y no vuelven.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 411.73,
+  "t1": 419.147,
+  "tipo": "video",
+  "texto": "Y cuando cae el último piso, invoca su autodestrucción sagrada, y explota durante tres segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.147,
+  "t1": 432.1,
+  "tipo": "video",
+  "texto": "¿Por qué el octavo? Porque te exige dominar el apuntado en primera persona en el primer mundo. Para una de las listas es un tiro al blanco sin cerebro… con una pinta y una música increíbles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 432.1,
+  "t1": 437.34,
+  "tipo": "video",
+  "texto": "Detalle: se autodestruye. Pero si vuelves a su templo convertido en Mumbo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.34,
+  "t1": 445.827,
+  "tipo": "video",
+  "texto": "el tótem sigue ahí, diciéndote que solo pueden entrar Banjo y Kazooie. Es un dios. Morirse no le quita el trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 445.827,
+  "t1": 456.759,
+  "tipo": "video",
+  "texto": "Sus ojos son joyas, así que no tiene animación de parpadeo. Y el Jiggy que corona su cabeza no se alcanza nunca, salvo con un glitch y un Kazooie de cuerda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 456.759,
+  "t1": 465.222,
+  "tipo": "video",
+  "texto": "Años después, en Nuts and Bolts, volvió como una estatua dorada en Banjoland… que escupe balones de fútbol.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.222,
+  "t1": 471.102,
+  "tipo": "video",
+  "texto": "Antes de seguir, unos comentarios. riuma77 escribió en el video de los Jiggies:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 471.102,
+  "t1": 479.658,
+  "tipo": "video",
+  "texto": "«Qué videojuego más interesante, solo pude disfrutar del primero». Y en el de Rare dijo que es una pena que Nintendo se desligara,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 479.658,
+  "t1": 486.095,
+  "tipo": "video",
+  "texto": "porque le habría gustado ver más Banjo y más Conker en las consolas siguientes. Nos pasa igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 486.095,
+  "t1": 498.811,
+  "tipo": "video",
+  "texto": "antilopezmexicanos dejó en Majora's Mask una de las mejores lecturas del héroe del tiempo que hemos visto: que su destino terrible nunca fue la luna, sino salvar Hyrule y perderlo todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.811,
+  "t1": 505.391,
+  "tipo": "video",
+  "texto": "Y riuma77, otra vez, nos contó que nunca consiguió la máscara de la Fiera Deidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 505.391,
+  "t1": 513.821,
+  "tipo": "video",
+  "texto": "Gracias, de verdad. Todos los comentarios se leen, y muchos acaban cambiando el siguiente video. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 513.821,
+  "t1": 525.402,
+  "tipo": "video",
+  "texto": "Lord Woo Fak Fak, en Jolly Roger's Lagoon. Un pez abisal gigante que vive en el fondo del mar, en el cofre de Davy Jones, y que se queja de lo apretado que está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.402,
+  "t1": 532.542,
+  "tipo": "video",
+  "texto": "En español, Pez Linterna de Gran Autoestima. Banjo intenta salir del paso diciéndole que le traen el correo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.542,
+  "t1": 540.068,
+  "tipo": "video",
+  "texto": "No cuela. En la primera fase tiene seis forúnculos en el cuerpo, y solo puedes reventar el que parpadea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.068,
+  "t1": 549.708,
+  "tipo": "video",
+  "texto": "Él te dispara con la luz de su antena… con los ojos cerrados. En la segunda fase abre los ojos, y hay que darle tres veces en cada uno,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.708,
+  "t1": 557.874,
+  "tipo": "video",
+  "texto": "mientras te lanza burbujas que te dejan atrapado. Al caer, se despide de sus cien años de tiranía oceánica, con un final,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.874,
+  "t1": 566.713,
+  "tipo": "video",
+  "texto": "dice, nada digno. Por cierto: en la vida real, solo las hembras de este pez tienen farol. Y él es lord.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.713,
+  "t1": 577.214,
+  "tipo": "video",
+  "texto": "Y cuando revientan los forúnculos, sale sangre roja. En un juego para todas las edades. Super Joe Bros todavía se pregunta cómo consiguieron colarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.214,
+  "t1": 585.454,
+  "tipo": "video",
+  "texto": "¿Por qué el séptimo? Porque nadar y apuntar en primera persona en una sala estrecha es torpe, y cuesta no perderlo de vista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.454,
+  "t1": 591.668,
+  "tipo": "video",
+  "texto": "Convertido en submarino es más fácil, pero no todos lo saben. Lo mejor viene después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 591.668,
+  "t1": 599.128,
+  "tipo": "video",
+  "texto": "Si le sigues disparando cuando ya ganaste, protesta: «¡Deja de dispararme! Estoy muerto, y no tengo más Jiggies».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.128,
+  "t1": 608.91,
+  "tipo": "video",
+  "texto": "Si insistes, te dice que conoce a tu padre. Su tema es un arreglo dramático de la música del fondo del mar, y está en Super Smash Bros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 608.91,
+  "t1": 618.811,
+  "tipo": "video",
+  "texto": "Ultimate, en su versión original. En Japón, por cierto, se llama Rey Woohaha. Según la wiki, el rey Jingaling se va de pesca con él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.811,
+  "t1": 626.04,
+  "tipo": "video",
+  "texto": "Pero te pide que no se lo cuentes a nadie. Número seis. Klungo, el secuaz de Grunty,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.04,
+  "t1": 636.403,
+  "tipo": "video",
+  "texto": "y el único jefe al que peleas tres veces: dos en los túneles de Isle O' Hags, y la última en la entrada de Cauldron Keep, donde cae del techo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.403,
+  "t1": 642.93,
+  "tipo": "video",
+  "texto": "Escucha cómo te saluda antes de cada pelea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 642.93,
+  "t1": 651.363,
+  "tipo": "video",
+  "texto": "En cada pelea son tres golpes. Tras cada uno se protege con un escudo, te lanza pociones, y se bebe una distinta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 651.363,
+  "t1": 660.643,
+  "tipo": "video",
+  "texto": "La roja lo vuelve gigante, y salta para aplastarte. La verde lo hace invisible. Y la azul lo multiplica: dos, tres,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 660.643,
+  "t1": 668.468,
+  "tipo": "video",
+  "texto": "cuatro Klungos. El de verdad es el que se mueve el último, y tiene la nariz más clara. En Nintendo 64,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 668.468,
+  "t1": 679.191,
+  "tipo": "video",
+  "texto": "qué poción toca en cada pelea es aleatorio. En Xbox 360, en cambio, siempre van en el mismo orden: roja, verde y azul.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.191,
+  "t1": 686.391,
+  "tipo": "video",
+  "texto": "¿Por qué en medio de la tabla? Porque las tres peleas son fáciles, pero el personaje es imposible de olvidar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.391,
+  "t1": 694.244,
+  "tipo": "video",
+  "texto": "Ninguna lista lo sube ni lo baja: todas lo dejan justo aquí. Y aun así, un canal, Jiggylookback,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 694.244,
+  "t1": 703.144,
+  "tipo": "video",
+  "texto": "enfrentó a todos los jefes con estadísticas, en un todos contra todos. ¿El ganador? No fue Grunty. No fue Weldar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 703.144,
+  "t1": 711.618,
+  "tipo": "video",
+  "texto": "Fue Klungo. Inteligencia, cinco de cinco. Tras la tercera derrota se lamenta de que cada vez está menos guapo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 711.618,
+  "t1": 720.153,
+  "tipo": "video",
+  "texto": "y de que ahora la señora Klungo ya no lo querrá. Sí: existe una señora Klungo. Solo la nombra esa vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.153,
+  "t1": 730.437,
+  "tipo": "video",
+  "texto": "Y un detalle que casi nadie vio: en la escena del principio del juego hay un segundo Klungo, sin texturas, que camina hacia una roca y desaparece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 730.437,
+  "t1": 738.146,
+  "tipo": "video",
+  "texto": "Y su voz, según la wiki, son grabaciones de los Gruntlings, los secuaces pequeños de Grunty, ralentizadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.146,
+  "t1": 746.316,
+  "tipo": "video",
+  "texto": "En Xbox 360 hasta tiene logro propio: Knocked Out Klungo, por tumbarlo tres veces. Y al final de la historia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.316,
+  "t1": 755.192,
+  "tipo": "video",
+  "texto": "en la fiesta de Bottles, Klungo se come toda la comida. Se lo había ganado. Y ahora, una pregunta del público.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.192,
+  "t1": 764.554,
+  "tipo": "video",
+  "texto": "JaVik0 vio nuestro video de Majora's Mask, el que se llama «su historia y los doce secretos», y escribió: «¿Y los secretos?».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.554,
+  "t1": 771.824,
+  "tipo": "video",
+  "texto": "Excelente pregunta, JaVik0. Estaban ahí, los doce, con su número en pantalla. Pero lo entendemos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 771.824,
+  "t1": 780.781,
+  "tipo": "video",
+  "texto": "en Majora's Mask el tiempo se acaba en tres días, y a lo mejor la luna te cayó antes del primero. Hoy no hay riesgo. Estos son jefes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.781,
+  "t1": 789.145,
+  "tipo": "video",
+  "texto": "y los jefes no se esconden: te esperan al final del pasillo, con su barra de vida y todo. Vamos por la mitad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.145,
+  "t1": 796.824,
+  "tipo": "video",
+  "texto": "Abajo quedaron Terry, Old King Coal, Targitzan, Lord Woo Fak Fak y Klungo. Arriba quedan cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 796.824,
+  "t1": 805.43,
+  "tipo": "video",
+  "texto": "Y entre ellos hay dos dragones, un globo con parches, un traidor, un tanque y un soplete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 805.43,
+  "t1": 815.33,
+  "tipo": "video",
+  "texto": "Número cinco. Chilli Billi y Chilly Willy, en Hailfire Peaks. Dos dragones hermanos, de cuello larguísimo y cuerpecito ridículo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 815.33,
+  "t1": 824.464,
+  "tipo": "video",
+  "texto": "el rojo vive en el cráter del volcán, y el azul, en el lago helado de la cima. Al verte, cada uno cree que eres el repartidor de pizza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 824.464,
+  "t1": 830.717,
+  "tipo": "video",
+  "texto": "Billi había pedido una de carne picante de doce pies. Willy, una de anchoas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 830.717,
+  "t1": 840.232,
+  "tipo": "video",
+  "texto": "Kazooie le contesta al rojo con un «me temo que no, cara de verruga». Y el dragón decide que, si no hay pizza, se come a los repartidores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.232,
+  "t1": 848.972,
+  "tipo": "video",
+  "texto": "Se les hace daño con el huevo contrario: hielo al de fuego, y fuego al de hielo. Y hay que meterlo por dentro de unos cañones gigantes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 848.972,
+  "t1": 858.865,
+  "tipo": "video",
+  "texto": "que te sirven de escudo hasta que revientan. Cuando bajan los cañones, te barren con la lengua. Y el de hielo, además, puede tirarte de la plataforma:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.865,
+  "t1": 866.369,
+  "tipo": "video",
+  "texto": "muerte instantánea. Un detalle raro: no importa el orden. El primero que enfrentes tiene seis de vida,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 866.369,
+  "t1": 876.265,
+  "tipo": "video",
+  "texto": "y el segundo, doce. Y los dos juntos dan un solo Jiggy: cuando Kazooie pide un trofeo, el segundo dragón le dice que es lo único que tiene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 876.265,
+  "t1": 885.285,
+  "tipo": "video",
+  "texto": "¿Y por qué son dos? Porque Hailfire Peaks eran dos mundos. En la lista temprana de Rare había unas cuevas de hielo y una isla de lava.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.285,
+  "t1": 893.134,
+  "tipo": "video",
+  "texto": "Al fundirlas en una montaña, el jefe se duplicó. ¿Por qué el quinto? Es el puesto más dividido de todos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.134,
+  "t1": 902.863,
+  "tipo": "video",
+  "texto": "diseño genial, pelea plana y repetida. Una lista los pone entre los mejores. Otra se queja de que deberías pelear contra los dos a la vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 902.863,
+  "t1": 911.881,
+  "tipo": "video",
+  "texto": "Al irse volando, uno anuncia que va a por un par de hamburguesas de Big Al. El otro pregunta por dónde queda el autoservicio de McJiggy's.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.881,
+  "t1": 917.93,
+  "tipo": "video",
+  "texto": "Chilly Willy, por cierto, se llama igual que el pingüino de los dibujos animados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.93,
+  "t1": 926.915,
+  "tipo": "video",
+  "texto": "Número cuatro. Mr. Patch, en Witchyworld. Un dinosaurio inflable cubierto de parches, que vive dentro de la carpa del circo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 926.915,
+  "t1": 935.735,
+  "tipo": "video",
+  "texto": "En español, Señor Parche, Cosa Inflable, Extraña e Inestable. Se presenta presumiendo de lo grande y fuerte que es.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 935.735,
+  "t1": 941.151,
+  "tipo": "video",
+  "texto": "Kazooie le responde que Klungo, al principio del juego, era más grande.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 941.151,
+  "t1": 953.016,
+  "tipo": "video",
+  "texto": "Tiene doce parches, y solo los huevos granada los revientan. Tras el primero, la pelea sube al aire: vuelas, apuntas, y esquivas pelotas de playa explosivas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 953.016,
+  "t1": 961.003,
+  "tipo": "video",
+  "texto": "Y cada parche que revientas lo hace más pequeño… y más rápido. Cuando lo intentas con huevos normales, se ríe de ti:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 961.003,
+  "t1": 971.269,
+  "tipo": "video",
+  "texto": "así nunca le vas a ganar. En la revancha te pide calma, porque él no es un inflable violento. Kazooie le dice que solo es aire caliente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 971.269,
+  "t1": 977.729,
+  "tipo": "video",
+  "texto": "¿Por qué el cuarto? Es el favorito del público, pero volar y apuntar a la vez frustra a muchos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 977.729,
+  "t1": 986.653,
+  "tipo": "video",
+  "texto": "Una de las listas lo bajó, según dijo, con un nudo en el estómago. Su documento de diseño, de octubre de mil novecientos noventa y ocho,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 986.653,
+  "t1": 994.763,
+  "tipo": "video",
+  "texto": "traía otras ideas: globos teledirigidos que al reventar soltaban granadas, y un solo punto de vuelo en el centro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 994.763,
+  "t1": 1005.779,
+  "tipo": "video",
+  "texto": "Hoy hay cuatro. Y volvió años después, en Nuts and Bolts: encadenado en Nutty Acres, y en Banjoland, de metal y sin un solo parche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1005.779,
+  "t1": 1012.419,
+  "tipo": "video",
+  "texto": "Además, está en Super Smash Bros. Ultimate. Y cuando Rare cumplió treinta y cinco años, en dos mil veinte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1012.419,
+  "t1": 1022.93,
+  "tipo": "video",
+  "texto": "publicó un álbum oficial con su música. Entre sus pistas, la de Mr. Patch. Escúchala.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1022.93,
+  "t1": 1031.967,
+  "tipo": "video",
+  "texto": "Antes del podio, los que se quedaron fuera. En Banjo-Tooie, Conga ya no pelea: solo vigila la puerta de la carpa del circo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1031.967,
+  "t1": 1037.167,
+  "tipo": "video",
+  "texto": "Los Zubbas no son jefes: son un minijuego, en el que disparas convertido en abeja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1037.167,
+  "t1": 1046.073,
+  "tipo": "video",
+  "texto": "Y los Uggers son solo los secuaces que salen de la Hag 1. Y el jefe que nunca llegó. En los primeros planes de Rare,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1046.073,
+  "t1": 1054.68,
+  "tipo": "video",
+  "texto": "Cloud Cuckooland se llamaba Mushroomland, y su jefe era una avispa gigante. Ahora sí. Quedan tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1054.68,
+  "t1": 1063.896,
+  "tipo": "video",
+  "texto": "El podio. Número tres. Mingy Jongo, en Cloud Cuckooland. La traición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1063.896,
+  "t1": 1074.332,
+  "tipo": "video",
+  "texto": "En ese mundo hay dos calaveras de Mumbo. En una está tu amigo. En la otra, un robot disfrazado de él. Cuál es cuál se sortea en cada partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1074.332,
+  "t1": 1081.232,
+  "tipo": "video",
+  "texto": "Hay pistas: la falsa tiene las antorchas apagadas, y en el primer piso, un Jinjo en vez de un Minjo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1081.232,
+  "t1": 1088.186,
+  "tipo": "video",
+  "texto": "Además, el robot te saluda «Hola, Banjo», cuando el Mumbo de verdad casi siempre te llama oso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1088.186,
+  "t1": 1097.773,
+  "tipo": "video",
+  "texto": "Al acercarte, te fulmina en plena escena y te quita un panal. Si entras con uno solo, mueres antes de que empiece la pelea. Tiene ocho de vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1097.773,
+  "t1": 1107.167,
+  "tipo": "video",
+  "texto": "Te dispara magia que te persigue, desde la mitad se teletransporta, y cada golpe le arranca un trozo del disfraz y deja ver el metal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1107.167,
+  "t1": 1114.727,
+  "tipo": "video",
+  "texto": "Con el primero se lamenta: su elaborado disfraz está arruinado, y deja ver su malvada naturaleza cibernética.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1114.727,
+  "t1": 1123.335,
+  "tipo": "video",
+  "texto": "Antes ya te había avisado de que no hay escapatoria, y de que la resistencia es inútil. ¿Por qué el tercero? Por el giro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1123.335,
+  "t1": 1132.905,
+  "tipo": "video",
+  "texto": "Que el chamán que te ayuda todo el juego te dispare es el momento que más recuerda la gente. Para una de las listas, es el mejor jefe de Tooie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1132.905,
+  "t1": 1143.68,
+  "tipo": "video",
+  "texto": "Rare iba a ponerle ojos rojos con el disfraz, para insinuar que era malo, y un látigo eléctrico. Le quitó los ojos para que la sorpresa fuera el ataque.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1143.68,
+  "t1": 1151.07,
+  "tipo": "video",
+  "texto": "Según la wiki, es el único jefe del juego que muere de verdad: explota, y suelta un líquido verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1151.07,
+  "t1": 1157.79,
+  "tipo": "video",
+  "texto": "Y su música es la única que no sale de su mundo. Es el tema de Mumbo, vuelto en tu contra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1157.79,
+  "t1": 1167.14,
+  "tipo": "video",
+  "texto": "Escucha. Número dos. La Hag 1, en lo alto de Cauldron Keep.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1167.14,
+  "t1": 1174.965,
+  "tipo": "video",
+  "texto": "El tanque perforador de las hermanas, con Gruntilda al volante. Tiene cien de vida, el doble que cualquier otro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1174.965,
+  "t1": 1184.278,
+  "tipo": "video",
+  "texto": "y solo le haces daño cuando Grunty asoma la cabeza, en primera persona. Son diez fases: láseres, el doble de láseres,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1184.278,
+  "t1": 1192.298,
+  "tipo": "video",
+  "texto": "mortero, doble mortero y el taladro. A la mitad metes un Kazooie de cuerda por el tubo de escape para volar una batería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1192.298,
+  "t1": 1202.752,
+  "tipo": "video",
+  "texto": "Luego, la otra. Sin tanque, Grunty pelea con magia, manda a sus Uggers, te echa gas tóxico, y al final prepara su hechizo más fuerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1202.752,
+  "t1": 1209.268,
+  "tipo": "video",
+  "texto": "Le das con un huevo mientras lo sostiene… y se le cae. Entre fase y fase te hace preguntas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1209.268,
+  "t1": 1218.647,
+  "tipo": "video",
+  "texto": "con cinco segundos para contestar. Si aciertas, ataca más lento. Si fallas, más rápido. Y habla sin parar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1218.647,
+  "t1": 1227.729,
+  "tipo": "video",
+  "texto": "En la primera fase no encuentra el botón del láser, y pide que alguien le pase el manual. Cuando pierde las baterías, pide que llamen a una grúa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1227.729,
+  "t1": 1235.729,
+  "tipo": "video",
+  "texto": "Y en un descuido se le escapa su apellido: Gruntilda Winkybunion. En la traducción al español, Gruntilda Juanetes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1235.729,
+  "t1": 1243.718,
+  "tipo": "video",
+  "texto": "Al momento, amenaza con demandarte si se lo cuentas a alguien. Lo sentimos, Grunty. ¿Por qué no es la primera?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1243.718,
+  "t1": 1252.845,
+  "tipo": "video",
+  "texto": "Por larga. Las listas se quejan de las cámaras que te hacen mirar al lado equivocado. Pero en espectáculo, ninguna pelea del juego le gana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1252.845,
+  "t1": 1261.425,
+  "tipo": "video",
+  "texto": "Y no iba a ser así. En el plan original del castillo subías la torre peleando contra las hermanas, Mingella y Blobbelda, una por una,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1261.425,
+  "t1": 1272.025,
+  "tipo": "video",
+  "texto": "antes de llegar a Grunty en la cima. Y antes de la perforadora, en el guion temprano, las hermanas huían de Spiral Mountain en un caldero mecánico volador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1272.025,
+  "t1": 1280.525,
+  "tipo": "video",
+  "texto": "Un misterio que la wiki no sabe explicar: las huellas de la perforadora suben en vertical por las paredes de Wasteland y de Quagmire.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1280.525,
+  "t1": 1285.43,
+  "tipo": "video",
+  "texto": "La Hag 1, al parecer, también trepa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1285.43,
+  "t1": 1295.818,
+  "tipo": "video",
+  "texto": "Número uno. Weldar, en Grunty Industries. Un soplete con forma de serpiente… que casi no ve. Llegar a él ya es un jefe:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1295.818,
+  "t1": 1305.326,
+  "tipo": "video",
+  "texto": "Mumbo apaga el electroimán con su descarga, Banjo se convierte en lavadora para pulsar un interruptor, y bajas al sótano del taller de reparaciones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1305.326,
+  "t1": 1312.874,
+  "tipo": "video",
+  "texto": "Al verte, Weldar dice que se dejó las gafas. Y te pide que te acerques, porque desde ahí no te ve para pegarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1312.874,
+  "t1": 1321.929,
+  "tipo": "video",
+  "texto": "Tiene seis golpes, y todos van a la boca: un huevo de fuego, una granada o un Kazooie de cuerda, justo cuando aspira.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1321.929,
+  "t1": 1329.269,
+  "tipo": "video",
+  "texto": "Entre medias te lanza bolas de fuego azules, suelta tuercas y tornillos con patas, y salta para aplastarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1329.269,
+  "t1": 1338.353,
+  "tipo": "video",
+  "texto": "Cuando le das, se queja: «Por favor, no hagas eso. Estoy lleno de gas inflamable». Tras el tercer golpe pierde la paciencia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1338.353,
+  "t1": 1347.93,
+  "tipo": "video",
+  "texto": "busca su interruptor de emergencia, y electrifica los cables del suelo. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1347.93,
+  "t1": 1354.87,
+  "tipo": "video",
+  "texto": "¿Por qué es el número uno? Porque es difícil, pero justo: la pelea crece de verdad a mitad de camino,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1354.87,
+  "t1": 1361.978,
+  "tipo": "video",
+  "texto": "y está a la altura del mundo más enrevesado del juego. Tres de las siete listas lo ponen primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1361.978,
+  "t1": 1373.568,
+  "tipo": "video",
+  "texto": "Al perder, su cabeza sale volando, choca con una caja de alta tensión y apaga el ventilador gigante de la planta de aire, donde había escondido su Jiggy. Y se le escapa en voz alta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1373.568,
+  "t1": 1381.558,
+  "tipo": "video",
+  "texto": "¿cuándo aprenderá a callarse? Su última pregunta es si le puedes recomendar a un buen técnico de reparaciones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1381.558,
+  "t1": 1390.806,
+  "tipo": "video",
+  "texto": "Si vuelves a buscar pelea, la cabeza te pregunta si eres un oso. Kazooie le contesta que sí, y que él va directo a la planta de reciclaje.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1390.806,
+  "t1": 1398.386,
+  "tipo": "video",
+  "texto": "Y lo más bonito: en la primera lista de Rare, el jefe de la fábrica ni siquiera era él. Eran The Kogs.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1398.386,
+  "t1": 1409.333,
+  "tipo": "video",
+  "texto": "Weldar no existía… y acabó siendo el mejor. Un último detalle: si al aterrizar cae encima de un Kazooie de cuerda, el juego entero se cuelga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1409.333,
+  "t1": 1413.813,
+  "tipo": "video",
+  "texto": "Y no acabó en la basura del todo: en Nuts and Bolts, según la wiki,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1413.813,
+  "t1": 1425.781,
+  "tipo": "video",
+  "texto": "Mumbo encontró su cuerpo y lo convirtió en un lanzallamas, el Aliento de Weldar. Ese es el ranking: de Terry a Weldar, según siete listas de jugadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1425.781,
+  "t1": 1433.126,
+  "tipo": "video",
+  "texto": "¿Estás de acuerdo? ¿Mingy Jongo merecía el primero? ¿Old King Coal se merece algo mejor que el noveno?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1433.126,
+  "t1": 1440.066,
+  "tipo": "video",
+  "texto": "Déjalo en los comentarios. Los leemos todos, y como viste hoy, a veces acaban en el siguiente video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1440.066,
+  "t1": 1450.0,
+  "tipo": "video",
+  "texto": "Y si es tu primera vez en el canal, suscríbete. Quedan muchos jefes por poner en orden. Nos vemos en la próxima.",
+  "clip_s": 8
+ }
+]

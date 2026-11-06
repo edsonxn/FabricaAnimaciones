@@ -72,3 +72,18 @@ _Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 1
 - **Hipótesis:** un documental largo de estudio retiene ≥ 35 % (como banjo_tooie) pese a durar 18 min y saca más vistas por
   búsqueda («historia de Rare», «Rare Nintendo Microsoft») que los de secretos. Registro a 7 días: (pendiente, ~12-nov).
 - Comentarios al empezar (28-oct): 1 nuevo (@riuma77, ♥0, sobre Banjo-Tooie), sin quejas ni sugerencias.
+
+## 3-nov-2026 — Video de la etapa Nintendo/retro: `pokemon_rojo_azul` (hueco vie 20-nov 18:00 CDMX)
+- «Pokémon Rojo y Azul: su historia y los 20 secretos QUE IGNORASTE» (12-15 min). Elegido por el usuario entre 3
+  (Pokémon / GoldenEye 007 / Conker). Variable que cambia respecto a banjo_tooie (×2,46, el mejor largo del canal): SOLO el juego
+  (el más buscado, y deja de repetir N64 tras mario64/rare/n64_secretos). Referencia de formato: alejoRet «10 SECRETOS de JUEGOS
+  RETRO» ×83,6 (16 800 subs). Gancho: 30 años de Pokémon (2026).
+- **Hipótesis:** el mismo formato con una franquicia de mucha más demanda supera a banjo_tooie en vistas a 7 días y retiene ≥ 35 %.
+  Registro a 7 días: (pendiente, ~27-nov). Comentarios al empezar: 0 nuevos, sin quejas ni sugerencias.
+
+## 5-nov-2026 — `bt_jefes_ranking` (pedido del usuario: «otro de Banjo-Tooie, un top largo de 25 minutos»)
+- «Los 10 JEFES de Banjo-Tooie, del PEOR al MEJOR» (24:10, yL1D3oGvTJQ), programado jue 26-nov 18:00 CDMX. Elegido por el usuario entre 3
+  (jefes / 40 cambios vs Kazooie / transformaciones). Variable que cambia respecto a bt_mundos_ranking: SOLO el sujeto (jefes en vez de mundos).
+  Referencias: Easy Geek «Tier list de todos los JEFES de BANJO TOOIE» (25 k), Super Joe Bros (35 k), «All Bosses» de ProsafiaGaming (2,3 M).
+- **Hipótesis:** el ranking de jefes saca más vistas por búsqueda («Banjo Tooie bosses / jefes») que el de mundos y retiene ≥ 35 %.
+  Registro a 7 días: (pendiente, ~3-dic). Comentarios al empezar: 2 nuevos (@riuma77 Rare, @JaVik0 «Y los secretos?» → burla disfrazada).

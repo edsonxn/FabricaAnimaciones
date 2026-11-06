@@ -24,6 +24,13 @@ con rebote y nada queda quieto. CERO cifras ni nombres inventados: solo lo que e
   antipirata(n) cartucho + 0 -> 268 + «NO CONTROLLER»  ·  huesos(n, quitar) pez abisal  ·  cronometro(filas)
   fechas(hitos) sellos por región  ·  jinjos_color(n)  ·  rotulos(lineas) subtítulos de jefe  ·  memoria(lleno, pak)
   compas(bpm, compases) 6/8 al tempo
+  bt_jefes_ranking (5-nov-2026): vida_jefe(nombre, golpes, quedan, sub) barra de vida que se vacía golpe a golpe  ·
+  escalera(colocados, total) el ranking que crece (el nuevo cae con rebote)  ·  mira(texto) retícula de punto débil
+  bt_jefes_ranking, segunda tanda (5-nov-2026; previews/_mg_nuevos2.jpg): despiece(ruta, cortes, frases) el jefe pierde
+  trozos de su imagen real con la voz (Old King Coal)  ·  pociones(efectos) frascos rojo/verde/azul de Klungo  ·
+  funden(a, b, final) dos mundos que se funden en uno (dragones de Hailfire)  ·  pedido(lineas, medida) comanda de pizza  ·
+  fases(etapas) pista de panales numerados que se encienden (las 10 fases de la Hag 1)
+  luna(horas) reloj que cuenta 72:00 hacia atrás y baja la luna enfadada (broma de Majora's Mask)
   (pegatinas: mg_tes.pegatina · pantallas: mg_wow.pantalla · mapas: mg_mapa tema «gaming»)
 """
 import math
@@ -1660,5 +1667,486 @@ def compas(bpm=100, compases=2, titulo="ESCUCHA EL COMPÁS", desfase=None, ancho
             _texto(dc, (M + 170, cy + 96), f"compás {min(medida, compases)}/{compases}", fnum, AZUL_CLARO, "mm",
                    255 * _eo((dt - t0) / .3))
         im.alpha_composite(cap)
+        return _salida(im, dt, dur)
+    return fn
+
+
+# ======================================================================= MG de `bt_jefes_ranking` (5-nov-2026)
+def vida_jefe(nombre, golpes, quedan=0, sub=None, ancho=1180):
+    """La barra de vida del JEFE (en Banjo-Tooie sale arriba con su nombre), translúcida: `golpes` celdas de miel que se
+    vacían una por golpe en las marcas de la voz (o repartidas entre el 25 % y el 85 % de la duración) hasta dejar `quedan`.
+    La celda que cae destella en rojo y la barra tiembla; con la última, «¡DERROTADO!»."""
+    h = 190 if sub else 160
+    ft = _ajustar(nombre.upper(), "t", 52, ancho - 160)
+    fs, fd = fuente("r", 26), fuente("t", 40)
+    n = max(1, golpes)
+    paso = (ancho - 120) / n
+    caen = n - quedan
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        ts = [marcas[i] if marcas and i < len(marcas) else dur * (.25 + .6 * (i + 1) / max(1, caen)) for i in range(caen)]
+        golpe = max([t for t in ts if t <= dt], default=None)
+        temb = 0.0
+        if golpe is not None and dt - golpe < .35:
+            temb = 7 * (1 - (dt - golpe) / .35) * math.sin((dt - golpe) * 70)
+        y0 = M + 24
+        if sub:
+            _texto(d, (M + ancho / 2, y0 + 8), " ".join(sub.upper()), fs, AZUL_CLARO, "mm", 255 * _eo(dt / .3))
+            y0 += 30
+        _texto(d, (M + ancho / 2 + temb, y0 + 30), nombre.upper(), ft, MIEL, "mm", 255 * _eo(dt / .3), borde=4)
+        yb = y0 + 72
+        x0 = M + 60 + temb
+        cap = _vacia(im)
+        dc = ImageDraw.Draw(cap)
+        dc.rounded_rectangle((x0 - 8, yb - 6, x0 + paso * n + 8, yb + 48), 16, fill=(30, 16, 8, 210), outline=MIEL_OSC + (255,),
+                             width=3)
+        for k in range(n):
+            e = _eo((dt - .15 - .025 * k) / .3)
+            if e <= 0:
+                continue
+            orden = n - 1 - k                                 # se vacía de derecha a izquierda
+            t_caida = ts[orden] if orden < caen else None
+            a = x0 + paso * k + 3
+            b = a + (paso - 6) * e
+            if t_caida is not None and dt >= t_caida:
+                u = (dt - t_caida) / .35
+                if u < 1:
+                    dc.rounded_rectangle((a, yb, b, yb + 42), 8, fill=ROJO + (int(255 * (1 - u)),))
+                continue
+            dc.rounded_rectangle((a, yb, b, yb + 42), 8, fill=MIEL + (255,))
+            if b - a > 14:                                    # al entrar, la celda aún es más estrecha que el brillo
+                dc.rounded_rectangle((a + 4, yb + 5, b - 4, yb + 15), 5, fill=(255, 245, 200, 150))
+        im.alpha_composite(cap)
+        if caen and quedan == 0 and dt >= ts[-1] + .25:
+            _texto(d, (M + ancho - 70, y0 + 30), "¡DERROTADO!", fd, ROJO, "rm", 255 * _eo((dt - ts[-1] - .25) / .3), borde=3,
+                   color_borde=CREMA)
+        return _bgra(_escala(im, _reb(dt / .45)), min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def escalera(colocados, total, titulo="DEL PEOR AL MEJOR", tam=None):
+    """El ranking que crece: fila de `total` casillas hexagonales, del puesto `total` (izquierda, el peor) al 1 (derecha).
+    `colocados` = rutas de los retratos ya puestos, en orden desde el peor; el ÚLTIMO es el nuevo y cae con rebote y brillo.
+    Las casillas que faltan muestran «?»."""
+    if tam is None:                                       # cabe en ~1600 px (margen del 4 % a cada lado)
+        tam = int(min(86, (1600 - 80) / total - 22))
+    sep = tam + 22
+    ancho = int(80 + sep * total)
+    h = tam + 150
+    ft, fn_ = _ajustar(titulo, "t", 44, ancho - 100), fuente("t", 30)
+    nuevo = len(colocados) - 1
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 34), titulo, ft, MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        cy = M + 78 + tam / 2
+        cap = _vacia(im)
+        dc = ImageDraw.Draw(cap)
+        for k in range(total):
+            cx = M + 40 + sep * k + sep / 2
+            e = _reb((dt - .05 - .03 * k) / .35)
+            if e <= 0:
+                continue
+            r = tam * .62 * e
+            dc.polygon(_hex(cx, cy, r, 0), fill=(40, 24, 12, 190), outline=MIEL_OSC + (255,))
+            _texto(dc, (cx, cy + tam * .5 + 26), str(total - k), fn_, CREMA if k != nuevo else MIEL, "mm", 255 * e, borde=2)
+            if k >= len(colocados):
+                _texto(dc, (cx, cy + 2), "?", fuente("t", 44), (120, 90, 60), "mm", 255 * e)
+        im.alpha_composite(cap)
+        for k, ruta in enumerate(colocados):
+            cx = M + 40 + sep * k + sep / 2
+            ic = _icono(ruta, tam, redondo=True)
+            if k == nuevo:
+                u = (dt - .45) / .55
+                if u <= 0:
+                    continue
+                yy = cy - 160 * (1 - _eo(u))
+                s = _reb(u)
+                if u > 1:                                      # brillo que late
+                    d2 = ImageDraw.Draw(im)
+                    lat = .5 + .5 * math.sin(dt * 6)
+                    d2.ellipse((cx - tam * .68, cy - tam * .68, cx + tam * .68, cy + tam * .68), outline=MIEL + (int(120 + 120 * lat),),
+                               width=5)
+                _pegar(im, ic, cx, yy, s)
+            else:
+                _pegar(im, ic, cx, cy, _reb((dt - .1 - .03 * k) / .35))
+        return _bgra(im, min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def mira(texto, r=120):
+    """PUNTO DÉBIL: anillos miel que se cierran desde fuera sobre el sitio (va en x, y del clip), cruz, y la etiqueta debajo;
+    late mientras dura."""
+    ft = _ajustar(texto.upper(), "t", 40, 520)
+    W = H = int(2 * r + 340)
+
+    def fn(dt, dur, marcas):
+        im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        cx, cy = W / 2, r + 60
+        u = _eo(dt / .5)
+        lat = 1 + .06 * math.sin(dt * 7)
+        rr = r * (2.2 - 1.2 * u) * lat
+        a = int(255 * u)
+        for w, rx in ((10, rr), (4, rr * .62)):
+            d.ellipse((cx - rx, cy - rx, cx + rx, cy + rx), outline=(30, 16, 8, int(a * .6)), width=w + 6)
+            d.ellipse((cx - rx, cy - rx, cx + rx, cy + rx), outline=MIEL + (a,), width=w)
+        for s in (-1, 1):
+            d.line([(cx + s * rr * 1.25, cy), (cx + s * rr * .78, cy)], fill=MIEL + (a,), width=6)
+            d.line([(cx, cy + s * rr * 1.25), (cx, cy + s * rr * .78)], fill=MIEL + (a,), width=6)
+        d.ellipse((cx - 8, cy - 8, cx + 8, cy + 8), fill=ROJO + (a,))
+        _texto(d, (cx, cy + r * 1.3 + 50), texto.upper(), ft, CREMA, "mm", 255 * _eo((dt - .35) / .3), borde=4)
+        return _bgra(im, min(1.0, (dur - dt) / .35))
+    return fn
+
+
+# ----------------------------------------------------------------------- bt_jefes_ranking, segunda tanda (5-nov-2026)
+def _cae(dt, tk):
+    """Desplazamiento de un trozo que se suelta en tk: cae con gravedad (px) y gira (grados)."""
+    u = max(0.0, dt - tk)
+    return 1600 * u * u, 70 * u
+
+
+def despiece(ruta, cortes, frases, titulo=None, ancho=1300, alto=560):
+    """Un jefe que PIERDE PARTES (Old King Coal): su imagen REAL a la izquierda; en la marca k el trozo `cortes[k]`
+    (x0, y0, x1, y1 en fracciones de la imagen recortada a su contorno) se suelta y cae girando, la figura tiembla y a la
+    derecha entra la frase k (lo que dice al perderlo) con una X roja; la última va en miel. Sin marcas: del 20 % al 85 %."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    n = len(cortes)
+    top = 84 if titulo else 26
+    h = top + alto + 30
+    img_w = 500
+    fx = fuente("r", 38)
+    txt_w = ancho - img_w - 170
+    lineas = [_partir(tmp, "«" + f + "»", fx, txt_w) for f in frases]
+    fts = _ajustar(titulo, "t", 50, ancho - 100) if titulo else None
+    cache = {}
+
+    def prep():
+        if cache:
+            return cache
+        im = Image.open(ruta).convert("RGBA")
+        bb = im.getbbox()
+        if bb:
+            im = im.crop(bb)
+        e = min(img_w / im.width, (alto - 40) / im.height)
+        im = im.resize((max(2, int(im.width * e)), max(2, int(im.height * e))), Image.LANCZOS)
+        a = np.array(im)
+        bases, trozos = [], []
+        for (x0, y0, x1, y1) in cortes:                     # quitas acumulativas: cada trozo sale de lo que queda
+            bx = (int(x0 * im.width), int(y0 * im.height), int(x1 * im.width), int(y1 * im.height))
+            trozos.append((Image.fromarray(a[bx[1]:bx[3], bx[0]:bx[2]].copy()), bx))
+            bases.append(Image.fromarray(a.copy()))
+            a[bx[1]:bx[3], bx[0]:bx[2], 3] = 0
+        bases.append(Image.fromarray(a.copy()))
+        cache.update(bases=bases, trozos=trozos, w=im.width, h=im.height)
+        return cache
+
+    def fn(dt, dur, marcas):
+        c = prep()
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        if titulo:
+            _texto(d, (M + ancho / 2, M + 44), titulo, fts, MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        ts = [_mq(marcas, k, dur, .2 + .65 * k / max(1, n - 1)) for k in range(n)]
+        k_on = sum(1 for t in ts if dt >= t)
+        golpe = max([t for t in ts if t <= dt], default=None)
+        temb = 9 * (1 - (dt - golpe) / .4) * math.sin((dt - golpe) * 60) if golpe is not None and dt - golpe < .4 else 0
+        cx, cy = M + 60 + img_w / 2, M + top + alto / 2
+        _pegar(im, c["bases"][k_on], cx + temb, cy + 4 * math.sin(dt * 2.2), 1.0)
+        x_img, y_img = cx - c["w"] / 2, cy - c["h"] / 2
+        for k, (tro, bx) in enumerate(c["trozos"]):
+            if dt < ts[k] or dt - ts[k] > 1.2:
+                continue
+            caida, giro = _cae(dt, ts[k])
+            t2 = tro.rotate(giro * (1 if k % 2 else -1), expand=True, resample=Image.BICUBIC)
+            px = x_img + (bx[0] + bx[2]) / 2 + (1 if bx[0] > c["w"] / 3 else -1) * 120 * (dt - ts[k])
+            py = y_img + (bx[1] + bx[3]) / 2 + caida
+            _pegar(im, t2, px, py, 1.0, max(0.0, 1 - (dt - ts[k]) / 1.2))
+        d = ImageDraw.Draw(im)
+        x0 = M + img_w + 140
+        alto_txt = sum(46 * len(l) + 34 for l in lineas)
+        y = M + top + (alto - alto_txt) / 2
+        for k, lin in enumerate(lineas):
+            if dt >= ts[k]:
+                u = _eo((dt - ts[k]) / .35)
+                ultima = k == n - 1
+                _tacha(d, x0 - 50, y + 22, 18, min(1.0, (dt - ts[k]) / .3), ancho=7)
+                for j, ln in enumerate(lin):
+                    _texto(d, (x0 + 40 * (1 - u), y + 22 + 46 * j), ln, fx, MIEL if ultima else CREMA, "lm", 255 * u,
+                           borde=3 if ultima else 0)
+            y += 46 * len(lin) + 34
+        return _salida(im, dt, dur)
+    return fn
+
+
+_POCION = {"roja": (226, 52, 40), "verde": (70, 200, 80), "azul": (60, 120, 235), "amarilla": (250, 210, 50)}
+
+
+def _frasco(d, luz, cx, cy, s, col, nivel, dt, on):
+    """Frasco redondo de poción dibujado: cuerpo, cuello, corcho, líquido con brillo y burbujas que suben."""
+    R = 92 * s
+    d.ellipse((cx - R, cy - R, cx + R, cy + R), fill=(40, 26, 16, 170), outline=CREMA + (230,), width=5)
+    liq = col if on else tuple(int(v * .35) for v in col)
+    top_liq = cy + R - 2 * R * nivel
+    lado = int(2 * R) + 2
+    m = Image.new("L", (lado, lado), 0)
+    ImageDraw.Draw(m).ellipse((5, 5, lado - 6, lado - 6), fill=255)
+    cap = Image.new("RGBA", (lado, lado), (0, 0, 0, 0))
+    ImageDraw.Draw(cap).rectangle((0, max(0, int(top_liq - (cy - R))), lado, lado), fill=liq + (235,))
+    a = np.array(cap)
+    a[..., 3] = np.minimum(a[..., 3], np.array(m))
+    luz.alpha_composite(Image.fromarray(a), (int(cx - R), int(cy - R)))
+    d.rectangle((cx - 26 * s, cy - R - 58 * s, cx + 26 * s, cy - R + 8), fill=(40, 26, 16, 170), outline=CREMA + (230,), width=4)
+    d.rounded_rectangle((cx - 32 * s, cy - R - 86 * s, cx + 32 * s, cy - R - 52 * s), 8, fill=(150, 100, 56, 255),
+                        outline=CHOCO + (255,), width=3)
+    dl = ImageDraw.Draw(luz)
+    dl.ellipse((cx - R * .62, cy - R * .62, cx - R * .30, cy - R * .18), fill=(255, 255, 255, 110))
+    if on:
+        for q in range(6):
+            v = (dt * .7 + q / 6) % 1
+            bx = cx + R * .5 * math.sin(q * 2.1 + dt * 1.3)
+            by = cy + R * .8 - v * R * 1.5
+            if by > top_liq:
+                rr = (5 + 4 * (q % 3)) * s
+                dl.ellipse((bx - rr, by - rr, bx + rr, by + rr), outline=(255, 255, 255, 170), width=2)
+
+
+def pociones(efectos, titulo="LAS POCIONES DE KLUNGO", colores=("roja", "verde", "azul"), ancho=1400):
+    """Tres frascos de poción dibujados (rojo, verde, azul); en la marca k el frasco k se ilumina, salta, burbujea y
+    sale su efecto `efectos[k]` (texto corto) debajo; los demás esperan apagados. Sin marcas: 20 %, 45 %, 70 %."""
+    n = len(efectos)
+    h = 560
+    fc = fuente("r", 30)
+    paso = (ancho - 160) / n
+    ftit = _ajustar(titulo, "t", 50, ancho - 100)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        luz = _vacia(im)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 44), titulo, ftit, MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        filete(d, M + ancho / 2, M + 88, 260, 255 * _eo((dt - .1) / .3))
+        for k, (ef, cn) in enumerate(zip(efectos, colores)):
+            tk = _mq(marcas, k, dur, .2 + .25 * k)
+            on = dt >= tk
+            cx = M + 80 + paso * (k + .5)
+            salto = -40 * math.sin(math.pi * min(1.0, (dt - tk) / .45)) if on and dt - tk < .45 else 0
+            cy = M + 290 + salto + 4 * math.sin(dt * 2 + k)
+            s = _reb((dt - .1 - .1 * k) / .4)
+            if s <= 0:
+                continue
+            col = _POCION.get(cn, MIEL)
+            _frasco(d, luz, cx, cy, s, col, .62, dt, on)
+            _texto(d, (cx, M + 414), cn.upper(), fc, col if on else (120, 96, 70), "mm", 255 * s, borde=2)
+            if on:
+                u = _eo((dt - tk - .15) / .35)
+                _texto(d, (cx, M + 482 + 20 * (1 - u)), ef, _ajustar(ef, "t", 44, paso - 30), CREMA, "mm", 255 * u, borde=4)
+        im.alpha_composite(luz)
+        return _salida(im, dt, dur)
+    return fn
+
+
+def _tarjeta(ruta, w, h, texto, f, alfa=1.0):
+    """Tarjeta con la imagen real encajada, marco miel y rótulo debajo (RGBA)."""
+    c = Image.new("RGBA", (w + 20, h + 76), (0, 0, 0, 0))
+    d = ImageDraw.Draw(c)
+    d.rounded_rectangle((4, 4, w + 16, h + 16), 22, fill=(30, 16, 8, 220), outline=MIEL + (255,), width=4)
+    if ruta:
+        ic = _encajar(ruta, w - 16, h - 16)
+        c.alpha_composite(ic, (int(10 + (w - ic.width) / 2), int(10 + (h - ic.height) / 2)))
+    else:
+        d.polygon(_hex(10 + w / 2, 10 + h / 2, min(w, h) * .3), fill=MIEL + (255,))
+    _texto(d, (10 + w / 2, h + 50), texto, _ajustar(texto, "t", f.size, w), MIEL, "mm", 255, borde=3)
+    if alfa < 1:
+        a = np.array(c)
+        a[..., 3] = (a[..., 3] * max(0.0, alfa)).astype(np.uint8)
+        c = Image.fromarray(a)
+    return c
+
+
+def funden(a, b, final, titulo=None, ancho=1500):
+    """DOS MUNDOS QUE SE FUNDEN EN UNO (Hailfire Peaks): a, b = (ruta o None, rótulo); final = (ruta o None, rótulo, sub).
+    Marca 0: entra `a` por la izquierda; marca 1: `b` por la derecha; marca 2: se acercan, chocan con un destello miel y
+    queda `final` en el centro con su `sub` en rojo («DOS JEFES»). Sin marcas: 15 %, 35 %, 60 %."""
+    W_, H_ = 380, 280
+    top = 86 if titulo else 26
+    h = top + H_ + 76 + 80
+    fr, fs = fuente("t", 40), fuente("t", 46)
+    fts = _ajustar(titulo, "t", 50, ancho - 100) if titulo else None
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        if titulo:
+            _texto(d, (M + ancho / 2, M + 44), titulo, fts, MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        t0, t1, t2 = (_mq(marcas, i, dur, q) for i, q in enumerate((.15, .35, .6)))
+        cy = M + top + (H_ + 76) / 2 + 6
+        u = _eo((dt - t2) / .6) if dt >= t2 else 0.0
+        sep = (ancho / 2 - 90 - W_ / 2) * (1 - u)
+        if u < 1:
+            for k, (cara, tk, lado) in enumerate(((a, t0, -1), (b, t1, 1))):
+                if dt < tk:
+                    continue
+                e = _eo((dt - tk) / .4)
+                cx = M + ancho / 2 + lado * (sep + 120 * (1 - e))
+                t = _tarjeta(cara[0], W_, H_, cara[1], fr, e * (1 - .7 * u))
+                _pegar(im, t, cx, cy + 3 * math.sin(dt * 2.4 + k), 1 - .25 * u)
+        if dt >= t2 + .6:
+            v = dt - t2 - .6
+            fl = max(0.0, 1 - v / .5)
+            if fl > 0:
+                r = 120 + 300 * (1 - fl)
+                ImageDraw.Draw(im).ellipse((M + ancho / 2 - r, cy - r, M + ancho / 2 + r, cy + r), outline=MIEL + (int(255 * fl),),
+                                           width=10)
+            _pegar(im, _tarjeta(final[0], W_ + 60, H_, final[1], fr), M + ancho / 2, cy + 3 * math.sin(dt * 2.4), _reb(v / .45))
+            if len(final) > 2 and final[2]:
+                lat = 1 + .05 * math.sin(dt * 7)
+                _texto(ImageDraw.Draw(im), (M + ancho / 2, M + h - 36), final[2], fs, ROJO, "mm", 255 * _eo((v - .3) / .3) * lat,
+                       borde=4, color_borde=CREMA)
+        return _salida(im, dt, dur)
+    return fn
+
+
+_PEPP = ((.55, .3), (.3, 1.6), (.62, 2.5), (.22, 3.6), (.5, 4.4), (.68, 5.3), (.36, 5.9), (0, 0))
+
+
+def _pizza(d, cx, cy, r, giro):
+    if r < 4:
+        return
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(214, 150, 70, 255), outline=(150, 92, 40, 255), width=8)
+    d.ellipse((cx - r * .86, cy - r * .86, cx + r * .86, cy + r * .86), fill=(222, 70, 40, 255))
+    for dist, ang in _PEPP:
+        a = ang + giro
+        px, py = cx + r * dist * math.cos(a), cy + r * dist * math.sin(a)
+        q = r * .12
+        d.ellipse((px - q, py - q, px + q, py + q), fill=(150, 30, 26, 255), outline=(110, 20, 16, 255), width=2)
+    for k in range(4):                                      # cortes de la pizza
+        a = giro + k * math.pi / 4
+        d.line([(cx - r * .86 * math.cos(a), cy - r * .86 * math.sin(a)), (cx + r * .86 * math.cos(a), cy + r * .86 * math.sin(a))],
+               fill=(150, 92, 40, 255), width=3)
+
+
+def pedido(lineas, medida=None, titulo="EL PEDIDO", ancho=1400):
+    """Comanda de pizzería (los dragones de Hailfire): una pizza dibujada gira despacio a la izquierda; a la derecha las líneas
+    del pedido [(cliente, lo que pidió)] entran en sus marcas con un panal miel; `medida` («12 PIES ≈ 3,7 M») sale bajo la
+    pizza con una regla que se estira, con la primera línea. Sin marcas: 25 %, 50 %…"""
+    h = 560
+    fcl, fpe = fuente("r", 30), fuente("t", 44)
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    tw = ancho - 690
+    partes = [_partir(tmp, p, fpe, tw) for _, p in lineas]
+    ftit = _ajustar(titulo, "t", 50, tw + 60)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        x0 = M + 620
+        _texto(d, (x0 - 30, M + 56), titulo, ftit, MIEL, "lm", 255 * _eo(dt / .3), borde=3)
+        cx, cy = M + 290, M + 230
+        _pizza(d, cx, cy, 170 * _reb(dt / .5), dt * .4)
+        t0 = _mq(marcas, 0, dur, .25)
+        if medida and dt >= t0:
+            u = _eo((dt - t0) / .5)
+            y = M + 440
+            d.line([(cx - 190 * u, y), (cx + 190 * u, y)], fill=CREMA + (255,), width=5)
+            for sx in (-1, 1):
+                d.line([(cx + sx * 190 * u, y - 14), (cx + sx * 190 * u, y + 14)], fill=CREMA + (255,), width=5)
+            _texto(d, (cx, y + 44), medida, _ajustar(medida, "t", 40, 480), MIEL, "mm", 255 * u, borde=3)
+        y = M + 150
+        for k, ((cli, _), lin) in enumerate(zip(lineas, partes)):
+            tk = _mq(marcas, k, dur, .25 + .25 * k)
+            if dt >= tk:
+                u = _eo((dt - tk) / .35)
+                _texto(d, (x0, y), " ".join(cli.upper()), fcl, AZUL_CLARO, "lm", 255 * u)
+                for j, ln in enumerate(lin):
+                    _texto(d, (x0 + 30 * (1 - u), y + 50 + 52 * j), ln, fpe, CREMA, "lm", 255 * u, borde=3)
+                d.polygon(_hex(x0 - 34, y + 50, 16 * max(0.0, _reb((dt - tk) / .4))), fill=MIEL + (255,))
+            y += 70 + 52 * len(lin) + 30
+        return _salida(im, dt, dur)
+    return fn
+
+
+def fases(etapas, titulo="LAS DIEZ FASES", ancho=1700):
+    """Pista de len(etapas) panales numerados unidos por un filete; en la marca k se enciende el panal k (miel; el último en
+    rojo, latiendo) y su rótulo aparece debajo o encima, alternando, para que los vecinos no choquen. Los que faltan
+    esperan en gris. Sin marcas: repartidas entre el 10 % y el 85 %."""
+    n = len(etapas)
+    h = 430
+    paso = (ancho - 140) / n
+    fl, fnum = _ajustar(max(etapas, key=len), "r", 30, 2 * paso - 30, 22), fuente("t", 38)
+    ftit = _ajustar(titulo, "t", 50, ancho - 100)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 44), titulo, ftit, MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        cy = M + 236
+        x0 = M + 70 + paso / 2
+        d.line([(x0, cy), (x0 + paso * (n - 1), cy)], fill=(90, 70, 50, 200), width=5)
+        ts = [_mq(marcas, k, dur, .1 + .75 * k / max(1, n - 1)) for k in range(n)]
+        on_n = sum(1 for t in ts if dt >= t)
+        if on_n > 1:
+            d.line([(x0, cy), (x0 + paso * (on_n - 1), cy)], fill=MIEL + (255,), width=9)
+        for k, et in enumerate(etapas):
+            cx = x0 + paso * k
+            e = _reb((dt - .1 - .03 * k) / .35)
+            if e <= 0:
+                continue
+            on = dt >= ts[k]
+            ultimo = k == n - 1
+            lat = 1 + (.12 * math.sin(dt * 7) if on and ultimo else 0)
+            pop = 1 + (.25 * max(0.0, 1 - (dt - ts[k]) / .3) if on else 0)
+            r = min(46, paso * .36) * e * lat * pop
+            col = (ROJO if ultimo else MIEL) if on else (60, 40, 24)
+            d.polygon(_hex(cx, cy, r), fill=col + (255 if on else 200,), outline=MIEL_OSC + (255,))
+            _texto(d, (cx, cy + 2), str(k + 1), fnum, CHOCO if on else (150, 124, 96), "mm", 255 * min(1.0, e))
+            if on:
+                u = _eo((dt - ts[k]) / .3)
+                arriba = k % 2 == 1
+                lin = _partir(d, et, fl, 2 * paso - 30)[:2]
+                for j, ln in enumerate(lin):
+                    yy = cy - 82 - 34 * (len(lin) - 1 - j) if arriba else cy + 82 + 34 * j
+                    _texto(d, (cx, yy), ln, fl, CREMA, "mm", 255 * u, borde=2)
+        return _salida(im, dt, dur)
+    return fn
+
+
+def luna(horas=72, titulo="TRES DÍAS", remate="¡LA LUNA!", ancho=1100):
+    """Broma de Majora's Mask: un reloj que cuenta hacia atrás `horas`:00 a toda prisa; en la marca 0 (o al 60 %) llega a
+    cero, una luna dibujada con cara enfadada baja desde arriba, el reloj tiembla y sale `remate` en rojo."""
+    h = 520
+    ft = _ajustar(titulo, "t", 50, ancho - 100)
+
+    def fn(dt, dur, marcas):
+        im, M = humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + ancho / 2, M + 44), titulo, ft, MIEL, "mm", 255 * _eo(dt / .3), borde=3)
+        tc = _mq(marcas, 0, dur, .6)
+        u = min(1.0, max(0.0, (dt - .3) / max(.4, tc - .3)))
+        resto = horas * (1 - u)
+        hh, mm = int(resto), int((resto % 1) * 60)
+        cero = dt >= tc
+        temb = 6 * math.sin(dt * 55) * max(0.0, 1 - (dt - tc) / .6) if cero else 0
+        cx, cy = M + 300 + temb, M + 290
+        _reloj(d, cx, cy, 150 * max(.2, _reb(dt / .45)), 1 - u, f"{hh:02d}:{mm:02d}", rojo=cero or resto < horas * .15)
+        if cero:
+            v = _eo((dt - tc) / .7)
+            lx, ly, r = M + ancho - 290, M + 120 + 170 * v, 150
+            col = (226, 214, 160)
+            d.ellipse((lx - r, ly - r, lx + r, ly + r), fill=col + (255,), outline=(150, 132, 90, 255), width=5)
+            for ox, oy, rr in ((-60, 60, 22), (70, 70, 16), (40, -90, 14)):
+                d.ellipse((lx + ox - rr, ly + oy - rr, lx + ox + rr, ly + oy + rr), fill=(190, 176, 120, 255))
+            for s in (-1, 1):                                 # ojos enfadados y ceño
+                ex, ey = lx + s * 52, ly - 22
+                d.ellipse((ex - 24, ey - 18, ex + 24, ey + 18), fill=(255, 250, 230, 255), outline=(60, 40, 20, 255), width=3)
+                d.ellipse((ex - 9, ey - 9, ex + 9, ey + 9), fill=(200, 40, 30, 255))
+                d.line([(ex - s * 30, ey - 40), (ex + s * 26, ey - 26)], fill=(60, 40, 20, 255), width=7)
+            d.arc((lx - 50, ly + 30, lx + 50, ly + 90), 200, 340, fill=(60, 40, 20, 255), width=6)
+            _texto(d, (M + ancho - 290, M + h - 46), remate, fuente("t", 54), ROJO, "mm", 255 * _eo((dt - tc - .4) / .3), borde=4,
+                   color_borde=CREMA)
         return _salida(im, dt, dur)
     return fn

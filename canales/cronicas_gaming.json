@@ -1,207 +1,218 @@
 {
-  "canal_id": "UCJpxLWrreWjuTffcjUgDi5Q",
-  "nombre": "Crónicas del gaming",
-  "estilo": "Nintendo/retro (VUELVE el 19-oct-2026 por decisión del usuario; el terror CRT del 13-oct queda como especial): fórmula de Warcraft/Tamriel/Runa = motor SECUENCIA YT (gameplay por beat) + pegatinas reales + fichas + MG nuevos por guion (kit nucleo/mg_gaming.py, estilo N64), voz Chatterbox Sarcastica; docs/estilo_secuencia_yt.md § Crónicas del gaming",
-  "horario": {
-    "zona": "America/Mexico_City",
+ "canal_id": "UCJpxLWrreWjuTffcjUgDi5Q",
+ "nombre": "Crónicas del gaming",
+ "estilo": "Nintendo/retro (VUELVE el 19-oct-2026 por decisión del usuario; el terror CRT del 13-oct queda como especial): fórmula de Warcraft/Tamriel/Runa = motor SECUENCIA YT (gameplay por beat) + pegatinas reales + fichas + MG nuevos por guion (kit nucleo/mg_gaming.py, estilo N64), voz Chatterbox Sarcastica; docs/estilo_secuencia_yt.md § Crónicas del gaming",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "18:00",
+  "utc": "00:00",
+  "ciclo_dias": 3,
+  "separacion_min_horas": 72,
+  "nota": "Ciclo de 3 días desde el 23-oct-2026 (el usuario lo bajó de 4-5 a 3 y pidió reacomodar lo programado). Hora 18:00 CDMX = 00:00 UTC del día siguiente (cubre MX 18:00, CO 19:00, AR 21:00). AJUSTABLE por Claude con datos: ver docs/publicacion.md § «Frecuencia y hora».",
+  "historial": [
+   {
+    "fecha": "2026-10-13",
+    "ciclo_dias": 4,
     "hora_local": "18:00",
-    "utc": "00:00",
+    "motivo": "inicio del canal de terror; ciclo pedido por el usuario, hora por criterio (sin datos propios todavía)"
+   },
+   {
+    "fecha": "2026-10-23",
     "ciclo_dias": 3,
-    "separacion_min_horas": 72,
-    "nota": "Ciclo de 3 días desde el 23-oct-2026 (el usuario lo bajó de 4-5 a 3 y pidió reacomodar lo programado). Hora 18:00 CDMX = 00:00 UTC del día siguiente (cubre MX 18:00, CO 19:00, AR 21:00). AJUSTABLE por Claude con datos: ver docs/publicacion.md § «Frecuencia y hora».",
-    "historial": [
-      {
-        "fecha": "2026-10-13",
-        "ciclo_dias": 4,
-        "hora_local": "18:00",
-        "motivo": "inicio del canal de terror; ciclo pedido por el usuario, hora por criterio (sin datos propios todavía)"
-      },
-      {
-        "fecha": "2026-10-23",
-        "ciclo_dias": 3,
-        "hora_local": "18:00",
-        "motivo": "el usuario bajó el ciclo a 3 días; separación mínima 72 h; zelda_oot se queda el 24-oct (el hueco del 23 ya había pasado) y bt_jiggies_crueles pasa al 27-oct"
-      }
-    ]
-  },
-  "publicados": [
-    {
-      "video": "sonic_exe",
-      "id": "RrucyrC_1e8",
-      "titulo": "Sonic.exe: el CD maldito que nunca existió",
-      "subido": "2026-10-13",
-      "visibilidad": "public",
-      "formato": "creepypasta desmontado (terror CRT monitor de PC, largo 3:45)",
-      "nota": "primer video del canal de terror; ElevenLabs David, Lyria, miniatura Flow (Nano Banana 2.1 con texto); mié 14-oct 18:00 CDMX (aprobado por el usuario el 13-oct)",
-      "publicar": "2026-10-15T00:00:00Z",
-      "programado": "2026-10-15T00:00:00Z",
-      "publicado": "2026-10-15"
-    },
-    {
-      "video": "banjo_tooie",
-      "id": "HxURLhWv1Vs",
-      "titulo": "Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE",
-      "subido": "2026-10-20",
-      "visibilidad": "public",
-      "publicado": "2026-10-20T14:00:00Z",
-      "formato": "historia_y_10_secretos_secuencia_yt",
-      "nota": "resubido con voz ElevenLabs Hope (la Chatterbox decía mal Tooie/Kazooie; el 1.er upload zJkKmdBzlpE quedó privado, en `retirados`); 15:07; publicado al momento a pedido del usuario el 20-oct; sin .srt subido"
-    },
-    {
-      "video": "zelda_oot",
-      "id": "tHGhx72-OTs",
-      "titulo": "Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE",
-      "subido": "2026-10-22",
-      "visibilidad": "public",
-      "programado": "2026-10-25T00:00:00Z",
-      "formato": "historia_y_12_secretos_secuencia_yt",
-      "nota": "15:56, voz ElevenLabs Hope; gancho = remake de Switch 2 (5-nov-2026); fichas/MG con marcos de Flow (mg_zelda); miniatura Flow con ingredientes reales; salió antes de lo programado (estaba para el 25-oct 00:00 UTC)",
-      "publicado": "2026-10-24T16:00:20Z"
-    },
-    {
-      "video": "bt_jiggies_crueles",
-      "id": "qLBP3ce4AC4",
-      "titulo": "Los 10 Jiggies más CRUELES de Banjo-Tooie",
-      "subido": "2026-10-23",
-      "visibilidad": "public",
-      "programado": "2026-10-28T00:00:00Z",
-      "formato": "ranking_10_secuencia_yt",
-      "nota": "11:30, voz ElevenLabs Hope, OST oficial de Banjo-Tooie, kit translúcido mg_banjo; subido para el 29-oct y adelantado al 27-oct por el nuevo ciclo de 3 días",
-      "publicado": "2026-10-28T00:00:04Z"
-    },
-    {
-      "video": "majora_mask",
-      "id": "EFWqji6rqIg",
-      "titulo": "Zelda Majora's Mask: su historia y los 12 secretos QUE IGNORASTE",
-      "subido": "2026-10-24",
-      "visibilidad": "private",
-      "programado": "2026-10-31T00:00:00Z",
-      "formato": "historia_y_12_secretos_secuencia_yt",
-      "nota": "15:20, voz ElevenLabs Hope; OST oficial de N64; fichas TRANSLÚCIDAS con la interfaz de Majora (mg_majora); 2 mapas reales con ruta; gancho = banda sonora en Nintendo Music + remake de Ocarina (5-nov); aprobado por el usuario"
-    },
-    {
-      "video": "oot_remake_cambios",
-      "id": "1wDyy-FJrBg",
-      "titulo": "Zelda Ocarina of Time REMAKE: los 15 CAMBIOS frente al ORIGINAL de N64",
-      "subido": "2026-10-27",
-      "visibilidad": "private",
-      "programado": "2026-11-03T00:00:00Z",
-      "formato": "ranking_15_cambios_remake_vs_original_secuencia_yt",
-      "nota": "12:06, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 21 clips; comparativas N64/Switch 2 en ventana; gancho = sale el 5-nov; miniatura Flow antes/después con ingredientes reales"
-    },
-    {
-      "video": "rare_auge_caida",
-      "id": "QJzL9XpVLeE",
-      "titulo": "Rare: el estudio que Nintendo DEJÓ IR",
-      "subido": "2026-10-28",
-      "visibilidad": "private",
-      "programado": "2026-11-06T00:00:00Z",
-      "formato": "historia_de_estudio_capitulos_secuencia_yt",
-      "nota": "18:00, 8 capítulos, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial por época + sonido original en 8 clips; kit nuevo mg_rare (acciones, reparto, éxodo, torres, apuesta, eras); cierre con el memorando de Xbox del 22-sep-2026 (Rare bajo Activision); miniatura Flow «NINTENDO LO DEJÓ IR» con ingredientes reales; 28-oct resubido (antes RwkNXgEnqsU, borrado) por Content ID de «Oven-Fresh Day» (Viva Piñata) en 14:20-15:32: esa sección pasa a Clickclock Wood (Banjo-Kazooie)"
-    },
-    {
-      "video": "mario64_secretos",
-      "id": "-pXDdmgtvPQ",
-      "titulo": "Super Mario 64: su historia y los 20 secretos QUE IGNORASTE",
-      "subido": "2026-10-30",
-      "visibilidad": "private",
-      "programado": "2026-11-09T00:00:00Z",
-      "formato": "historia_y_20_secretos_secuencia_yt",
-      "nota": "21:24, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 13 clips; kit mg_mario64 (diálogo translúcido, selección de estrella, HUD); 9 mapas con ruta (VGMaps); 34 SFX del juego; gancho = 30 años + placa Eternal Star (oct-2026); aprobado por el usuario el 30-oct"
-    },
-    {
-      "video": "bt_mundos_ranking",
-      "id": "BJbfYAkNOc0",
-      "titulo": "Los 8 mundos de Banjo-Tooie, del PEOR al MEJOR",
-      "subido": "2026-10-30",
-      "visibilidad": "private",
-      "programado": "2026-11-12T00:00:00Z",
-      "formato": "ranking_mundos_eastereggs_secuencia_yt",
-      "nota": "24:22, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 36 clips; 170 clips (serie NSO + 6 de XBLA con rótulo); 31 Easter eggs verificados en imagen; mapas de la Guía oficial de Nintendo; miniatura PROVISIONAL por código (Flow pide aceptar política)."
-    },
-    {
-      "video": "spyro2",
-      "id": "BOELChGqqTg",
-      "titulo": "Spyro 2: su historia y los 30 secretos QUE IGNORASTE",
-      "subido": "2026-10-31",
-      "visibilidad": "private",
-      "programado": "2026-11-15T00:00:00Z",
-      "formato": "historia_y_30_secretos_secuencia_yt",
-      "nota": "24:52, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 39 clips; 174 clips; 30 secretos verificados en imagen; kit mg_spyro; lámina real de Avalar; miniatura de Flow «VENDIÓ BOMBAS A RIPTO»."
-    },
-    {
-      "video": "n64_secretos",
-      "id": "mw2-4rNFs50",
-      "titulo": "Los 30 SECRETOS de la Nintendo 64 QUE IGNORASTE",
-      "subido": "2026-10-31",
-      "visibilidad": "private",
-      "programado": "2026-11-18T00:00:00Z",
-      "formato": "historia_y_30_secretos_secuencia_yt",
-      "nota": "24:19, primer video de CONSOLA del canal; voz ElevenLabs Hope (eleven_v4_turbo); OST por secreto + sonido original en 37 clips; 170 clips; kit mg_n64 con 18 MG propios; 2 mapas de Yoshi Valley con ruta; miniatura de Flow «REPARTIÓ GUANTES» (Mario + mando real + carátula de Mario Party)."
-    },
-    {
-      "video": "pokemon_rojo_azul",
-      "id": "7B0KBuT4WEg",
-      "titulo": "Pokémon Rojo y Azul: su historia y los 20 secretos QUE IGNORASTE",
-      "subido": "2026-11-03",
-      "visibilidad": "private",
-      "programado": "2026-11-21T00:00:00Z",
-      "formato": "historia_y_20_secretos_secuencia_yt",
-      "nota": "15:34, primer Pokémon del canal (30 años de la saga); voz ElevenLabs Hope (eleven_v4_turbo); OST de Game Boy (35 pistas) + 59 SFX del juego; kit nuevo mg_pokemon (fichas Game Boy); 228 efectos; mapas de Kanto con ruta; miniatura de Flow «20 SECRETOS» (Game Boy con MissingNo + Mew + portadas reales)."
-    },
-    {
-      "video": "bt_50_secretos",
-      "id": "waVn1g8VltA",
-      "titulo": "Los 50 SECRETOS de Banjo-Tooie QUE IGNORASTE",
-      "subido": "2026-11-03",
-      "visibilidad": "private",
-      "programado": "2026-11-24T00:00:00Z",
-      "formato": "lista_50_secretos_secuencia_yt",
-      "nota": "24:49, el 4.º de Banjo-Tooie (cambia solo el número de secretos 10 → 50 respecto a banjo_tooie); voz ElevenLabs Hope; OST del juego + SFX bt_*; MG nuevos en mg_banjo (secreto/contador, versus, concurso, antipirata, huesos, cronómetro, fechas, jinjos_color, rótulos, memoria, compás); 337 efectos, 0 huecos > 4 s; 5 mapas; miniatura Flow «EN JAPÓN / OTRO FINAL»."
-    }
-  ],
-  "ideas": {
-    "idioma": "es",
-    "region": "MX",
-    "busquedas": [
-      "secretos de videojuegos nintendo 64",
-      "curiosidades banjo kazooie",
-      "historia de rare videojuegos",
-      "secretos zelda ocarina of time",
-      "curiosidades nintendo 64",
-      "contenido cortado videojuegos",
-      "secretos que ignoraste videojuego"
-    ],
-    "competidores": [],
-    "dias": 60,
-    "min_vistas": 1000,
-    "filtro": [
-      "nintendo",
-      "n64",
-      "64",
-      "zelda",
-      "mario",
-      "banjo",
-      "rare",
-      "secreto",
-      "curiosidad",
-      "historia",
-      "cortado",
-      "juego"
-    ]
-  },
-  "estado": "19-oct-2026: vuelve a Nintendo/retro con la fórmula SECUENCIA YT; primer video banjo_tooie. Antes: terror CRT (13-oct, sonic_exe) y, hasta el 13-oct, 146 videos de Nintendo/Zelda que pasaron a PRIVADO (respaldo canales/metricas/ocultados_cronicas_gaming_2026-10-13.json)",
-  "retirados": [
-    {
-      "video": "banjo_tooie",
-      "id": "zJkKmdBzlpE",
-      "titulo": "Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE",
-      "subido": "2026-10-19",
-      "visibilidad": "privado",
-      "formato": "historia_y_10_secretos_secuencia_yt",
-      "nota": "primer video de la vuelta a Nintendo (SECUENCIA YT, voz Chatterbox Sarcastica, 13:22, miniatura Flow con ingredientes reales); programado a pedido del usuario el 19-oct; sin pantalla final (el canal no tiene) ni subtítulos subidos",
-      "retirado": "2026-10-19",
-      "motivo": "el usuario lo pasó a privado para corregir la voz (Tooie/Kazooie mal dichos) y resubirlo con voz ElevenLabs Hope"
-    }
+    "hora_local": "18:00",
+    "motivo": "el usuario bajó el ciclo a 3 días; separación mínima 72 h; zelda_oot se queda el 24-oct (el hueco del 23 ya había pasado) y bt_jiggies_crueles pasa al 27-oct"
+   }
   ]
+ },
+ "publicados": [
+  {
+   "video": "sonic_exe",
+   "id": "RrucyrC_1e8",
+   "titulo": "Sonic.exe: el CD maldito que nunca existió",
+   "subido": "2026-10-13",
+   "visibilidad": "public",
+   "formato": "creepypasta desmontado (terror CRT monitor de PC, largo 3:45)",
+   "nota": "primer video del canal de terror; ElevenLabs David, Lyria, miniatura Flow (Nano Banana 2.1 con texto); mié 14-oct 18:00 CDMX (aprobado por el usuario el 13-oct)",
+   "publicar": "2026-10-15T00:00:00Z",
+   "programado": "2026-10-15T00:00:00Z",
+   "publicado": "2026-10-15"
+  },
+  {
+   "video": "banjo_tooie",
+   "id": "HxURLhWv1Vs",
+   "titulo": "Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE",
+   "subido": "2026-10-20",
+   "visibilidad": "public",
+   "publicado": "2026-10-20T14:00:00Z",
+   "formato": "historia_y_10_secretos_secuencia_yt",
+   "nota": "resubido con voz ElevenLabs Hope (la Chatterbox decía mal Tooie/Kazooie; el 1.er upload zJkKmdBzlpE quedó privado, en `retirados`); 15:07; publicado al momento a pedido del usuario el 20-oct; sin .srt subido"
+  },
+  {
+   "video": "zelda_oot",
+   "id": "tHGhx72-OTs",
+   "titulo": "Zelda Ocarina of Time: su historia y los 12 secretos QUE IGNORASTE",
+   "subido": "2026-10-22",
+   "visibilidad": "public",
+   "programado": "2026-10-25T00:00:00Z",
+   "formato": "historia_y_12_secretos_secuencia_yt",
+   "nota": "15:56, voz ElevenLabs Hope; gancho = remake de Switch 2 (5-nov-2026); fichas/MG con marcos de Flow (mg_zelda); miniatura Flow con ingredientes reales; salió antes de lo programado (estaba para el 25-oct 00:00 UTC)",
+   "publicado": "2026-10-24T16:00:20Z"
+  },
+  {
+   "video": "bt_jiggies_crueles",
+   "id": "qLBP3ce4AC4",
+   "titulo": "Los 10 Jiggies más CRUELES de Banjo-Tooie",
+   "subido": "2026-10-23",
+   "visibilidad": "public",
+   "programado": "2026-10-28T00:00:00Z",
+   "formato": "ranking_10_secuencia_yt",
+   "nota": "11:30, voz ElevenLabs Hope, OST oficial de Banjo-Tooie, kit translúcido mg_banjo; subido para el 29-oct y adelantado al 27-oct por el nuevo ciclo de 3 días",
+   "publicado": "2026-10-28T00:00:04Z"
+  },
+  {
+   "video": "majora_mask",
+   "id": "EFWqji6rqIg",
+   "titulo": "Zelda Majora's Mask: su historia y los 12 secretos QUE IGNORASTE",
+   "subido": "2026-10-24",
+   "visibilidad": "private",
+   "programado": "2026-10-31T00:00:00Z",
+   "formato": "historia_y_12_secretos_secuencia_yt",
+   "nota": "15:20, voz ElevenLabs Hope; OST oficial de N64; fichas TRANSLÚCIDAS con la interfaz de Majora (mg_majora); 2 mapas reales con ruta; gancho = banda sonora en Nintendo Music + remake de Ocarina (5-nov); aprobado por el usuario"
+  },
+  {
+   "video": "oot_remake_cambios",
+   "id": "1wDyy-FJrBg",
+   "titulo": "Zelda Ocarina of Time REMAKE: los 15 CAMBIOS frente al ORIGINAL de N64",
+   "subido": "2026-10-27",
+   "visibilidad": "private",
+   "programado": "2026-11-03T00:00:00Z",
+   "formato": "ranking_15_cambios_remake_vs_original_secuencia_yt",
+   "nota": "12:06, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 21 clips; comparativas N64/Switch 2 en ventana; gancho = sale el 5-nov; miniatura Flow antes/después con ingredientes reales"
+  },
+  {
+   "video": "rare_auge_caida",
+   "id": "QJzL9XpVLeE",
+   "titulo": "Rare: el estudio que Nintendo DEJÓ IR",
+   "subido": "2026-10-28",
+   "visibilidad": "private",
+   "programado": "2026-11-06T00:00:00Z",
+   "formato": "historia_de_estudio_capitulos_secuencia_yt",
+   "nota": "18:00, 8 capítulos, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial por época + sonido original en 8 clips; kit nuevo mg_rare (acciones, reparto, éxodo, torres, apuesta, eras); cierre con el memorando de Xbox del 22-sep-2026 (Rare bajo Activision); miniatura Flow «NINTENDO LO DEJÓ IR» con ingredientes reales; 28-oct resubido (antes RwkNXgEnqsU, borrado) por Content ID de «Oven-Fresh Day» (Viva Piñata) en 14:20-15:32: esa sección pasa a Clickclock Wood (Banjo-Kazooie)"
+  },
+  {
+   "video": "mario64_secretos",
+   "id": "-pXDdmgtvPQ",
+   "titulo": "Super Mario 64: su historia y los 20 secretos QUE IGNORASTE",
+   "subido": "2026-10-30",
+   "visibilidad": "private",
+   "programado": "2026-11-09T00:00:00Z",
+   "formato": "historia_y_20_secretos_secuencia_yt",
+   "nota": "21:24, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 13 clips; kit mg_mario64 (diálogo translúcido, selección de estrella, HUD); 9 mapas con ruta (VGMaps); 34 SFX del juego; gancho = 30 años + placa Eternal Star (oct-2026); aprobado por el usuario el 30-oct"
+  },
+  {
+   "video": "bt_mundos_ranking",
+   "id": "BJbfYAkNOc0",
+   "titulo": "Los 8 mundos de Banjo-Tooie, del PEOR al MEJOR",
+   "subido": "2026-10-30",
+   "visibilidad": "private",
+   "programado": "2026-11-12T00:00:00Z",
+   "formato": "ranking_mundos_eastereggs_secuencia_yt",
+   "nota": "24:22, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 36 clips; 170 clips (serie NSO + 6 de XBLA con rótulo); 31 Easter eggs verificados en imagen; mapas de la Guía oficial de Nintendo; miniatura PROVISIONAL por código (Flow pide aceptar política)."
+  },
+  {
+   "video": "spyro2",
+   "id": "BOELChGqqTg",
+   "titulo": "Spyro 2: su historia y los 30 secretos QUE IGNORASTE",
+   "subido": "2026-10-31",
+   "visibilidad": "private",
+   "programado": "2026-11-15T00:00:00Z",
+   "formato": "historia_y_30_secretos_secuencia_yt",
+   "nota": "24:52, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 39 clips; 174 clips; 30 secretos verificados en imagen; kit mg_spyro; lámina real de Avalar; miniatura de Flow «VENDIÓ BOMBAS A RIPTO»."
+  },
+  {
+   "video": "n64_secretos",
+   "id": "mw2-4rNFs50",
+   "titulo": "Los 30 SECRETOS de la Nintendo 64 QUE IGNORASTE",
+   "subido": "2026-10-31",
+   "visibilidad": "private",
+   "programado": "2026-11-18T00:00:00Z",
+   "formato": "historia_y_30_secretos_secuencia_yt",
+   "nota": "24:19, primer video de CONSOLA del canal; voz ElevenLabs Hope (eleven_v4_turbo); OST por secreto + sonido original en 37 clips; 170 clips; kit mg_n64 con 18 MG propios; 2 mapas de Yoshi Valley con ruta; miniatura de Flow «REPARTIÓ GUANTES» (Mario + mando real + carátula de Mario Party)."
+  },
+  {
+   "video": "pokemon_rojo_azul",
+   "id": "7B0KBuT4WEg",
+   "titulo": "Pokémon Rojo y Azul: su historia y los 20 secretos QUE IGNORASTE",
+   "subido": "2026-11-03",
+   "visibilidad": "private",
+   "programado": "2026-11-21T00:00:00Z",
+   "formato": "historia_y_20_secretos_secuencia_yt",
+   "nota": "15:34, primer Pokémon del canal (30 años de la saga); voz ElevenLabs Hope (eleven_v4_turbo); OST de Game Boy (35 pistas) + 59 SFX del juego; kit nuevo mg_pokemon (fichas Game Boy); 228 efectos; mapas de Kanto con ruta; miniatura de Flow «20 SECRETOS» (Game Boy con MissingNo + Mew + portadas reales)."
+  },
+  {
+   "video": "bt_50_secretos",
+   "id": "waVn1g8VltA",
+   "titulo": "Los 50 SECRETOS de Banjo-Tooie QUE IGNORASTE",
+   "subido": "2026-11-03",
+   "visibilidad": "private",
+   "programado": "2026-11-24T00:00:00Z",
+   "formato": "lista_50_secretos_secuencia_yt",
+   "nota": "24:49, el 4.º de Banjo-Tooie (cambia solo el número de secretos 10 → 50 respecto a banjo_tooie); voz ElevenLabs Hope; OST del juego + SFX bt_*; MG nuevos en mg_banjo (secreto/contador, versus, concurso, antipirata, huesos, cronómetro, fechas, jinjos_color, rótulos, memoria, compás); 337 efectos, 0 huecos > 4 s; 5 mapas; miniatura Flow «EN JAPÓN / OTRO FINAL»."
+  },
+  {
+   "video": "bt_jefes_ranking",
+   "id": "yL1D3oGvTJQ",
+   "titulo": "Los 10 JEFES de Banjo-Tooie, del PEOR al MEJOR",
+   "subido": "2026-11-06",
+   "visibilidad": "private",
+   "programado": "2026-11-27T00:00:00Z",
+   "formato": "ranking_jefes_secuencia_yt",
+   "prueba": "sujeto: jefes en vez de mundos (mismo ranking de ~25 min que bt_mundos_ranking)",
+   "nota": "24:10, el 5.º de Banjo-Tooie; ranking = media de 7 listas; voz Hope; OST con el tema de cada jefe; 363 FX (5,8 pegatinas/min); 10 recreaciones de Flow (regla del 5-nov); promesas.md (147)"
+  }
+ ],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "secretos de videojuegos nintendo 64",
+   "curiosidades banjo kazooie",
+   "historia de rare videojuegos",
+   "secretos zelda ocarina of time",
+   "curiosidades nintendo 64",
+   "contenido cortado videojuegos",
+   "secretos que ignoraste videojuego"
+  ],
+  "competidores": [],
+  "dias": 60,
+  "min_vistas": 1000,
+  "filtro": [
+   "nintendo",
+   "n64",
+   "64",
+   "zelda",
+   "mario",
+   "banjo",
+   "rare",
+   "secreto",
+   "curiosidad",
+   "historia",
+   "cortado",
+   "juego"
+  ]
+ },
+ "estado": "19-oct-2026: vuelve a Nintendo/retro con la fórmula SECUENCIA YT; primer video banjo_tooie. Antes: terror CRT (13-oct, sonic_exe) y, hasta el 13-oct, 146 videos de Nintendo/Zelda que pasaron a PRIVADO (respaldo canales/metricas/ocultados_cronicas_gaming_2026-10-13.json)",
+ "retirados": [
+  {
+   "video": "banjo_tooie",
+   "id": "zJkKmdBzlpE",
+   "titulo": "Banjo-Tooie: su historia y los 10 secretos QUE IGNORASTE",
+   "subido": "2026-10-19",
+   "visibilidad": "privado",
+   "formato": "historia_y_10_secretos_secuencia_yt",
+   "nota": "primer video de la vuelta a Nintendo (SECUENCIA YT, voz Chatterbox Sarcastica, 13:22, miniatura Flow con ingredientes reales); programado a pedido del usuario el 19-oct; sin pantalla final (el canal no tiene) ni subtítulos subidos",
+   "retirado": "2026-10-19",
+   "motivo": "el usuario lo pasó a privado para corregir la voz (Tooie/Kazooie mal dichos) y resubirlo con voz ElevenLabs Hope"
+  }
+ ]
 }

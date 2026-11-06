@@ -30,13 +30,7 @@ Para ahorrar tokens, un video largo o denso se hace en varias conversaciones. Pr
   o alias y dice qué TRAMO sigue y qué leer (solo eso). Haz ese tramo y al terminar CIÉRRALO en la sección «## Sesiones» de su
   `ESTADO.md` (✅ fecha + nota, o ◐ parcial), actualiza «etapa/siguiente» y despídete con la frase exacta para la próxima
   conversación: «continúa el video <alias>». Sin texto, `fab.py continuar` lista los videos con tramos pendientes.
-- **Video nuevo:** antes de producir, estima cuántas sesiones conviene según duración y complejidad (tabla de
-  `docs/sesiones.md`: Short = 1; Flow = 1-2; dibujado denso ≈ 2-3 min por sesión + 1 de guion/voz + 1 de cierre) y
-  **pregunta al usuario cuántas quiere** (AskUserQuestion, tu recomendación primero). Escribe el plan en «## Sesiones» del
-  `ESTADO.md` (las plantillas ya la traen) con `alias` y «leer al empezar». En videos dibujados, deja además una guía del kit en
-  una página y el plan de tomas (ejemplo: `videos/sociedad_1200/GUIA_ESCENAS.md` y `PLAN_TOMAS.md`).
-
-- **VER EL PRINCIPIO ANTES DE SEGUIR (el usuario, 12-oct-2026):** al proponer el plan de sesiones pregunta también si quiere ver el primer minuto / los 2 primeros / cada tramo renderizado antes de seguir con las demás escenas (anótalo en `- vista previa:` de «## Sesiones»). Render parcial: `python fab.py <v> video --hasta <s>` → `salida/<v>_AVANCE.mp4`, con barritas en el panel; detalle en `docs/sesiones.md` § 2b. Lánzalo SIEMPRE con `fab.py` (si no, el panel no ve el render).
+- **Video nuevo = UNA sesión, directo al MASTER (el usuario, 5-nov-2026; sustituye la regla de tramos del 12-oct y la de «ver el principio» del 12/13-oct, obsoletas con el plan MAX):** si no dice otra cosa al empezar, el video se hace entero en esta sesión hasta el MASTER, sin proponer plan de sesiones ni preguntar por un avance parcial. Duración: la decide Claude según el canal si el usuario no la dice. Solo se pregunta lo que no esté claro en el mensaje (p. ej. el canal). Si el usuario pide tramos o un avance, `docs/sesiones.md` § 2 y § 2b (avance siempre con audio completo, lanzado con `fab.py`).
 
 ## INICIO DE DÍA: ¿QUÉ CANAL SE QUEDA SIN VIDEO? (8-oct-2026)
 Si el usuario pregunta qué toca hoy o qué canal urge: `python fab.py canales --actualizar` (lee YouTube, solo lectura, ~15 s) → tabla ordenada por el primer hueco del ciclo SIN video (último programado o publicado + ciclo del canal), con lo que hay en producción. Sin `--actualizar` usa los datos guardados. **Los Shorts NO cuentan para el hueco (el usuario, 12-oct-2026): solo videos largos.** Responde con el canal más urgente y propón el siguiente video. Lo mismo, interactivo, en la pestaña **«Canales»** del panel (`python fab.py panel --abrir`): filtros, detalle por canal, botón «Actualizar datos» y ciclo editable (`horario.ciclo_dias` de `canales/<alias>.json`; si falta: `separacion_min_horas`/24, y si no, 7).
@@ -92,6 +86,27 @@ Origen: se hicieron públicos 3 videos de Wild Next Door el mismo día y hubo qu
 - Un video por canal a la vez, espaciados según `horario.separacion_min_horas` de `canales/<alias>.json` (48 h por defecto). **Ciclos fijados por el usuario (7-oct-2026): Wild Next Door uno cada 3 días (16:00 UTC); LogIA uno cada 4-5 días desde el último publicado; Plastitube semanal, martes 19:00 UTC.**
 - Lote de varios videos listos = todos en PRIVADO y programados en huecos sucesivos, enseñando antes el calendario al usuario. «Súbelos/publícalos» sobre un lote no significa «todos hoy».
 - Antes de publicar o programar: `python fab.py yt videos <canal>` y BITACORA. El código se detiene si hay choque (`comprobar_separacion`); `--forzar` solo si el usuario pidió expresamente esa excepción. Detalle: `docs/publicacion.md`.
+
+## REGLA GLOBAL: PROMESAS VISUALES, COMPROBADAS ANTES DEL RENDER (el usuario, 5-nov-2026, TODOS los canales y TODOS los motores)
+«Hay ocasiones donde el guion menciona algo que se debe ver y no sale en video ni imagen […] debes asegurarte de que se vea lo que
+dice el guion.» (Ejemplo: `bt_50_secretos`, puesto 2, la formación de rocas vista desde arriba que nunca salió.) Vale para secuencia YT,
+Flow, pegatina Flow, Kurzgesagt, noir, doodle, boceto-guache, línea neón, acuarela, Jefe de Robots y cualquier otro estilo:
+1. Antes del render, `promesas.md` en la carpeta del video: una fila por frase que describe algo concreto que el espectador debería ver
+   (forma, letrero, objeto, lugar, personaje haciendo algo, sonido nombrado), con su segundo y CÓMO se ve (clip, escena dibujada,
+   pegatina, foto real, Flow).
+2. Un cuadro de cada promesa en `previews/promesas_NN.jpg` (de la hoja de `fx`, de `escena`, del montaje o del MASTER) y MIRARLA.
+3. Lo que no se ve se arregla (otro clip o segundo, captura, pegatina, dibujo en la escena, o Flow con ingredientes reales, regla de
+   abajo) o la frase se reescribe ANTES de la voz. Ningún video se entrega con una promesa sin imagen.
+Receta detallada (secuencia YT): `docs/estilo_secuencia_yt.md` § «PROMESAS VISUALES».
+
+## REGLA GLOBAL: LO QUE NO EXISTE SE GENERA EN FLOW COMO CAPTURA REAL (el usuario, 5-nov-2026, TODOS los canales)
+Si la voz nombra algo que se debería ver y no hay imagen ni clip real (contenido cortado o beta, escenarios o personajes sin arte,
+ideas de documentos de diseño, versiones nunca terminadas), Claude lo genera en Flow con ingredientes reales del juego o del tema para
+que parezca una captura real con su estilo gráfico, marcado como recreación (nunca presentado como auténtico; personas reales nunca).
+Receta completa: `docs/estilo_secuencia_yt.md` § «Lo que no existe: Flow con ingredientes del juego». En canales que no son de
+videojuegos, lo mismo con ingredientes reales del tema (foto del lugar, del objeto, de la época) y su estilo visual.
+Ampliada el mismo día: también pegatinas, mapas, fondos o lo que sea, cuando no haya material o para ENRIQUECER el video (mapas con
+la geografía real conocida, marcados como ilustración).
 
 ## REGLA GLOBAL: RIGOR CON LA CALIDAD Y EL DETALLE, SIEMPRE (el usuario, 30-sep-2026)
 Origen: «La Independencia de México, completa» se subió con mapas que eran manchas verdes, el mismo desierto vacío en casi todas las escenas, figuras mal dibujadas, tomas sin nada y un cuadro negro. **No se repite.**

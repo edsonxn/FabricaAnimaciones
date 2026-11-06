@@ -17,6 +17,7 @@ de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido
 |---|---|---|
 | Clip por beat | Enseña lo que dice la voz, del MISMO juego | `fuentes.json`, hojas `medios`; un clip de otro juego no se tolera ni 1 s |
 | Lo que dice la voz se VE | Lugar, persona u objeto nombrado: imagen real en ese momento | Clip, `pant()` o pegatina; «se ve X» = X en pantalla (Torre Blanca, no un lago) |
+| **Lo que no existe o no se encuentra (el usuario, 5-nov-2026)** | Si no hay imagen ni clip real (cortado, beta, sin arte, nunca terminado), se GENERA en Flow como captura real del juego | Receta abajo, § «Lo que no existe: Flow con ingredientes del juego» |
 | Fichas de interfaz | ≥ la mediana del canal (`chequeo`) | Translúcidas, con la interfaz del juego |
 | MG | Desde el gancho y repartidos, sin huecos de minutos; nuevos para ESTE guion | Kit `mg_wow`/`mg_tes`/`mg_er`/`mg_gaming`; más si el guion lo permite |
 | Mapas con ruta | ≥ mitad de los puestos en listas de misiones; siempre que se hable de dónde | § MAPAS REALES CON RUTA |
@@ -40,6 +41,40 @@ nítido ≥ 1000 px; si rembg arrastra a otro personaje, recorta antes. Código 
 **Antes de renderizar:** `python fab.py <v> chequeo` (también corre solo antes de `video`; nunca bloquea). Da la densidad contra la
 mediana del canal, lo que la voz nombra sin apoyo (`previews/chequeo_narracion.md`) y los clips de otro juego. Es una pista de texto: lo
 que marca se mira a mano.
+
+### Lo que no existe: Flow con ingredientes del juego (el usuario, 5-nov-2026, TODOS los canales)
+«Cuando tengas que mostrar una imagen o vídeo que no exista o no encuentres, genérala con Flow usando como ingredientes ejemplos
+del juego, para que salga como foto real del juego, respetando el estilo gráfico.» Casos: contenido cortado o beta (la torre de
+la bruja que nunca se terminó, el Jinjo musculoso de `bt_50_secretos`, que se quedaron sin imagen), personajes o escenarios sin
+arte en ninguna wiki, ideas de documentos de diseño (un jefe que iba a ser una roca), versiones prototipo.
+1. **Antes**, buscar de verdad (wiki por API, Commons, TCRF/archive.org, YouTube con `ytsearch`). Solo si no hay nada, Flow.
+2. **Ingredientes reales** (Ctrl+V en el campo del prompt, `flow-ingredientes-ctrl-v`): 2-3 capturas del juego del mismo sitio o
+   personaje (cuadros 1080p con `yt-dlp -g` + `ffmpeg -ss`, renders de la wiki) para que copie la paleta, las texturas y la
+   resolución. Nano Banana 2.1, 16:9, x2.
+3. **Prompt**: «in-game screenshot of <juego> (<consola, año>), <qué se ve>, same low-poly models and textures, same camera and
+   lighting as the reference images, no text, no UI overlays, no watermark». N64 = polígonos y texturas de N64, nunca ilustración
+   ni render moderno. Para beta: «unfinished beta/prototype build look» si ayuda.
+4. **Honestidad**: lo generado NO se presenta como captura auténtica. Lo cortado/beta lleva en su ficha o rótulo una marca chica
+   («RECREACIÓN» / «ASÍ PUDO VERSE»), y la voz no dice «esta es la imagen real». Personas reales nunca se generan.
+5. **Uso**: `pant()` a pantalla completa o pegatina/banda en el momento en que la voz lo nombra; guardar en `pegatinas/flow_<slug>.png`
+   y anotar en `pegatinas/_fuentes.txt` «Flow, recreación con ingredientes: …». Mirar el resultado antes de usarlo (sin manos raras,
+   sin texto inventado, sin otro juego).
+6. Vale igual para clips (Flow video, `docs/estilo_secuencia_flow.md`) cuando lo que falta es una acción y no una imagen fija.
+### PROMESAS VISUALES: comprobación obligatoria antes del render (el usuario, 5-nov-2026)
+«Hay ocasiones donde el guion menciona algo que se debe ver y no sale en video ni imagen, como el puesto 2 de los 50 secretos de Banjo
+(la formación de rocas de Terrydactyland vista desde arriba): debes asegurarte de que se vea lo que dice el guion.»
+1. Tras escribir `efectos.py`, hacer `promesas.md` en la carpeta del video: una fila por frase que describe algo concreto que el
+   espectador debería estar viendo (una forma, un letrero, un objeto, un personaje haciendo algo, «vista desde arriba», «junto a…»,
+   «escucha…»), con el segundo del timeline y CÓMO se ve (clip `scene-NNN` + segundo de la fuente, pegatina, `pant()`, Flow).
+2. Sacar un cuadro de cada promesa (de los medios + capa de fx, o del MASTER) en una hoja `previews/promesas_NN.jpg` y MIRARLA.
+3. Lo que no se ve: otro segundo del clip, una captura (`yt-dlp -g` + `ffmpeg -ss`), pegatina o Flow con ingredientes (sección
+   anterior). Si ni así, se reescribe la frase ANTES de la voz. Nunca se entrega una promesa sin imagen.
+
+7. **Ampliada (el usuario, 5-nov-2026): «si necesitas generar pegatinas o mapas o lo que sea, también puedes apoyarte de Flow cuando
+   no encuentres material o quieras enriquecer».** Flow vale también para ENRIQUECER aunque haya material: pegatinas con más calidad
+   (render limpio del personaje desde una captura borrosa), mapas ilustrados de zonas que la guía no cubre (vista aérea del sitio
+   con el estilo del juego, con la geografía REAL conocida: nunca posiciones inventadas; rótulo «mapa ilustrado»), fondos y escenas
+   de apoyo. Siempre con ingredientes reales y respetando el estilo gráfico del juego o del canal.
 
 ## Flujo
 ```
@@ -790,6 +825,13 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   `fx --sin-montaje`, y `mezcla` DESPUÉS de que exista `audio/fx.wav`.
 - **`video --rehacer` no existe en el motor secuencia** (rinde TODO y pisa `salida/video_sin_audio.mp4`): para corregir un tramo, `video --tramo a-b --salida salida/_t.mp4` y empalmarlo sobre el MASTER con ffmpeg `trim` por cuadros (`start_frame`) + `-map 0:a -c:a copy`.
 - La promesa «te lo enseño encima del mapa» no tenía imagen: buscar en el guion «te lo enseño / mira / fíjate» y comprobar que hay MG.
+
+### Lecciones de `bt_jefes_ranking` (6-nov-2026, 169 beats, 24:10, «Los 10 JEFES de Banjo-Tooie»)
+- **Ranking de consenso**: media de 7 listas reales (escala 1-10, desempate por cuántas lo ponen último), tabla en `investigacion_jefes.md`; la voz lo cuenta en el método y cada puesto dice «por qué está aquí» con lo que repiten las listas.
+- **MG nuevos en `mg_banjo`**: `vida_jefe` (barra que se vacía golpe a golpe), `escalera` (el ranking que crece, el nuevo cae con rebote), `mira` (punto débil), `despiece`, `pociones`, `pedido`, `funden`, `fases`, `luna`.
+- **Música por puesto = el tema «Vs.» de cada jefe** (Video-Game OST HQ: vs_coal, vs_woo, vs_weldar bajados aparte); «Escúchala» sobre la OST con `SUBE_DB` en el `post`.
+- **Recreaciones Flow** (regla del 5-nov) con helper `recre()` en efectos.py: pantalla completa + ficha + marca «RECREACIÓN»; y `promesas.md` antes del render (147 promesas, 18 arregladas).
+- 25 min con Hope ≈ 3 650 palabras. `_bordes.py` suelta memoria por FX (MemoryError con 300+ FX).
 
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos

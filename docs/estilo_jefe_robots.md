@@ -42,7 +42,13 @@ Edson sale como personaje: su foto recortada (`propios/jefe_foto.webp`, sin fond
 **PROTEGIDOS (el usuario, 30-oct; ni nombre, ni imagen, ni logo): Crónicas de Warcraft, Crónicas de Tamriel y Runa Caída.** También lo que los delata: alias `wow_*`, `tes_*`, `er_*`, títulos, miniaturas, pegatinas, gameplay o interfaz de WoW, Skyrim y Elden Ring, sus cifras de suscriptores, y el patrocinador con su código.
 **PERMITIDOS: todos los demás.** Crónicas del gaming, Cronopapel y Bitácora Perdida se muestran y se mencionan; de Crónicas del gaming se dice que sus videos los hace la IA.
 **Gaia Eterna tampoco sale en las grabaciones (30-oct): su arte es de WoW** (`gaia_crematoria`, en la lista roja). La pestaña Canales trae sus datos dentro del HTML (`const DATA`): `grabar_real` la limpia aparte. Los eventos 101-102 de la sesión d1b5e1a2 son búsquedas de adulación: fuera de cuadro.
+**El carro del usuario, sin modelo ni año (el usuario, 5-nov-2026: «que no se muestra qué vehículo es, solamente que es para mi vehículo»):** ni en la voz, ni en rótulos, ni en pantalla (mensajes, nombres de paquete, APK). Se dice «su carro»; la app del escáner se llama «el escáner del carro». En `robotaller_4apps` el `PRIVADO` de `capturas.py` tapa modelo, año, «4 puertas», cilindrada y el nombre de la app.
 Siempre tapados: dinero, claves, correo, dirección del panel remoto, Studio, y el usuario de Windows en las rutas. Las grabaciones pasan por `robotaller.enmascara`, que quita de la API lo protegido y bloquea sus imágenes, y aun así se revisan cuadro a cuadro.
+
+## Lecciones del 3.er video (`robotaller_4apps`, 5-nov-2026)
+- **`montaje_real` se quedaba sin memoria con 25 grabaciones de 2400 px** (cada `VideoCapture` abierto pesa): ahora deja abiertas 8 como máximo y cierra las menos recientes.
+- Los globos largos del Robotaller no caben con z > 1,8; con El Jefe en pantalla, quitar la ventanita de Token de ese plano (`ventana=False`) o pasar al Jefe a la izquierda (`lado="i"`) si su frase queda a la derecha del globo.
+- La cámara no puede subir el globo (está pegado abajo, `_encuadre` recorta dentro del cuadro): para esquivar al Jefe, correr el encuadre a la derecha (`c=(1.0, .77)`).
 
 ## Lecciones del 2.º video (`robotaller_n64`, 1-nov-2026)
 - **El tapado del usuario estuvo roto** hasta el 1-nov: `robotaller._USUARIO` tenía retrocesos (\x08) en vez de `\b` y el usuario de Windows salía en las rutas. Arreglado; antes de montar, comprobar en la API ya tapada que no queda (`enmascara` sobre `/api/v2/agente?sesion=<id>&desde=0` y buscar el usuario, correo y la lista roja). Ojo: desde Bash, `\\` en heredocs y escrituras a `nucleo/` pueden fallar sin avisar; usar Write/Edit o PowerShell.

@@ -982,8 +982,11 @@ def _sesion(id_):
     if not re.match(r"^[A-Za-z0-9-]{8,64}$", id_ or ""):
         return None
     ruta = os.path.join(CARPETA, id_ + ".jsonl")
-    if not os.path.isfile(ruta):
-        return None
+    if not os.path.isfile(ruta):        # una sesión de otro proyecto (p. ej. D:\Escaner) se repite por su id, sin entrar en la lista
+        otras = glob.glob(os.path.join(os.path.dirname(CARPETA), "*", id_ + ".jsonl"))
+        if not otras:
+            return None
+        ruta = otras[0]
     with _LOCK:
         s = _SES.get(id_)
         if s is None:

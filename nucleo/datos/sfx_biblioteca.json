@@ -1207,6 +1207,12 @@
      "canal": "ninguno",
      "nombre": "whoosh_b",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "euphoria_robots",
+     "canal": "edsonxn",
+     "nombre": "zas_1",
+     "fecha": "2026-11-05"
     }
    ]
   },
@@ -1812,7 +1818,15 @@
    "md5": "63efd517d40b42009a47af06e8e9ca24",
    "prompt": "Single cartoon boing spring jump",
    "dur": 1.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "euphoria_robots",
+     "canal": "edsonxn",
+     "nombre": "boing",
+     "fecha": "2026-11-05"
+    }
+   ]
   },
   "guason_fumado__coro": {
    "id": "guason_fumado__coro",
@@ -2806,7 +2820,15 @@
    "md5": "3bb469566af8b7d8604456f89081bc4f",
    "prompt": "Short harsh old computer error beep, dry, small speaker",
    "dur": 0.6,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "euphoria_robots",
+     "canal": "edsonxn",
+     "nombre": "error",
+     "fecha": "2026-11-05"
+    }
+   ]
   },
   "sonic_exe__estatica": {
    "id": "sonic_exe__estatica",
@@ -9207,7 +9229,347 @@
    "prompt": "",
    "dur": 1.48,
    "canal": "bitacora_perdida"
+  },
+  "robotaller_4apps__tele_1136": {
+   "id": "robotaller_4apps__tele_1136",
+   "video": "robotaller_4apps",
+   "nombre": "tele_1136",
+   "archivo": "robotaller_4apps__tele_1136.mp3",
+   "md5": "55a6269f2d114b8831e536118f9bfbeb",
+   "prompt": "",
+   "dur": 2.24,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__tele_1235": {
+   "id": "robotaller_4apps__tele_1235",
+   "video": "robotaller_4apps",
+   "nombre": "tele_1235",
+   "archivo": "robotaller_4apps__tele_1235.mp3",
+   "md5": "c5f3a309f792f5a5c6a93cd2650b78d6",
+   "prompt": "",
+   "dur": 3.92,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__tele_1255": {
+   "id": "robotaller_4apps__tele_1255",
+   "video": "robotaller_4apps",
+   "nombre": "tele_1255",
+   "archivo": "robotaller_4apps__tele_1255.mp3",
+   "md5": "2ed32babf8e7abba70566c793626a5f3",
+   "prompt": "",
+   "dur": 6.4,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__acierto": {
+   "id": "euphoria_robots__acierto",
+   "video": "euphoria_robots",
+   "nombre": "acierto",
+   "archivo": "euphoria_robots__acierto.mp3",
+   "md5": "c1517353dfa4f5465c1c6526eb3b493d",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__chanclazo": {
+   "id": "euphoria_robots__chanclazo",
+   "video": "euphoria_robots",
+   "nombre": "chanclazo",
+   "archivo": "euphoria_robots__chanclazo.mp3",
+   "md5": "4e5612639b04f33125503c84c0621b9c",
+   "prompt": "",
+   "dur": 0.68,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__clang_1": {
+   "id": "euphoria_robots__clang_1",
+   "video": "euphoria_robots",
+   "nombre": "clang_1",
+   "archivo": "euphoria_robots__clang_1.mp3",
+   "md5": "f6f3fd9c056ce4e8d5f6f1c8ef5e7949",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__clang_2": {
+   "id": "euphoria_robots__clang_2",
+   "video": "euphoria_robots",
+   "nombre": "clang_2",
+   "archivo": "euphoria_robots__clang_2.mp3",
+   "md5": "3dc69b5da8a90a992d10254e6af97873",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__escaneo": {
+   "id": "euphoria_robots__escaneo",
+   "video": "euphoria_robots",
+   "nombre": "escaneo",
+   "archivo": "euphoria_robots__escaneo.mp3",
+   "md5": "29cc8c6155ef8f8c132e973a8755389e",
+   "prompt": "",
+   "dur": 1.6,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__paso": {
+   "id": "euphoria_robots__paso",
+   "video": "euphoria_robots",
+   "nombre": "paso",
+   "archivo": "euphoria_robots__paso.mp3",
+   "md5": "6dd13f06b97847f087e1b2fe0ec38629",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__plaf_1": {
+   "id": "euphoria_robots__plaf_1",
+   "video": "euphoria_robots",
+   "nombre": "plaf_1",
+   "archivo": "euphoria_robots__plaf_1.mp3",
+   "md5": "3221a28de44a66e5cb9061ab4289fcaf",
+   "prompt": "",
+   "dur": 0.88,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__plaf_2": {
+   "id": "euphoria_robots__plaf_2",
+   "video": "euphoria_robots",
+   "nombre": "plaf_2",
+   "archivo": "euphoria_robots__plaf_2.mp3",
+   "md5": "b9cc5c8cef6077accb7651c7d9c183cc",
+   "prompt": "",
+   "dur": 0.88,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__zas_2": {
+   "id": "euphoria_robots__zas_2",
+   "video": "euphoria_robots",
+   "nombre": "zas_2",
+   "archivo": "euphoria_robots__zas_2.mp3",
+   "md5": "a21e9f62e0341d35f79551dcf9bfd310",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__zas_3": {
+   "id": "euphoria_robots__zas_3",
+   "video": "euphoria_robots",
+   "nombre": "zas_3",
+   "archivo": "euphoria_robots__zas_3.mp3",
+   "md5": "92ae6ca499f9abcca9dd68a94bf7d85b",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "edsonxn"
+  },
+  "euphoria_robots__zas_4": {
+   "id": "euphoria_robots__zas_4",
+   "video": "euphoria_robots",
+   "nombre": "zas_4",
+   "archivo": "euphoria_robots__zas_4.mp3",
+   "md5": "4eebe6d48bef988072f47f6fa7f912ab",
+   "prompt": "",
+   "dur": 0.6,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__aplauso": {
+   "id": "robotaller_4apps__aplauso",
+   "video": "robotaller_4apps",
+   "nombre": "aplauso",
+   "archivo": "robotaller_4apps__aplauso.mp3",
+   "md5": "9ab7cdb94d4fda5d67b151af2b9028bd",
+   "prompt": "Short burst of enthusiastic small crowd applause with a whistle",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__bloop_fallo": {
+   "id": "robotaller_4apps__bloop_fallo",
+   "video": "robotaller_4apps",
+   "nombre": "bloop_fallo",
+   "archivo": "robotaller_4apps__bloop_fallo.mp3",
+   "md5": "6bba6a3d3099ef7c37f7239f2490d8a7",
+   "prompt": "Short descending synth bloop, gentle comic failure sound, dry",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__brillo": {
+   "id": "robotaller_4apps__brillo",
+   "video": "robotaller_4apps",
+   "nombre": "brillo",
+   "archivo": "robotaller_4apps__brillo.mp3",
+   "md5": "e696e8fa7b53128952ba2b1fdb59453e",
+   "prompt": "Soft magical shimmer swell, very short, bright",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__chasquido": {
+   "id": "robotaller_4apps__chasquido",
+   "video": "robotaller_4apps",
+   "nombre": "chasquido",
+   "archivo": "robotaller_4apps__chasquido.mp3",
+   "md5": "7469db58db2595d7abcfa910b997b3c8",
+   "prompt": "Small electric zap, quick lightning crackle, short and crisp",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__cronometro": {
+   "id": "robotaller_4apps__cronometro",
+   "video": "robotaller_4apps",
+   "nombre": "cronometro",
+   "archivo": "robotaller_4apps__cronometro.mp3",
+   "md5": "edb5d3e7a9e2bf5b4ff3916b27e2d72c",
+   "prompt": "Mechanical stopwatch ticking fast for two seconds, then a single click",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__desliza": {
+   "id": "robotaller_4apps__desliza",
+   "video": "robotaller_4apps",
+   "nombre": "desliza",
+   "archivo": "robotaller_4apps__desliza.mp3",
+   "md5": "8f171745caa654814128cb90c4aefd8f",
+   "prompt": "Sheet of paper sliding fast across a wooden table, short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__desliza2": {
+   "id": "robotaller_4apps__desliza2",
+   "video": "robotaller_4apps",
+   "nombre": "desliza2",
+   "archivo": "robotaller_4apps__desliza2.mp3",
+   "md5": "72fec6e3e4c1a295fa4f66e2fd1d23b8",
+   "prompt": "Soft interface card swipe whoosh, very short and clean",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__estatica": {
+   "id": "robotaller_4apps__estatica",
+   "video": "robotaller_4apps",
+   "nombre": "estatica",
+   "archivo": "robotaller_4apps__estatica.mp3",
+   "md5": "e0d1f635081324f3083b04b45a3402a9",
+   "prompt": "Brief digital glitch stutter, bitcrushed, very short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__jefe_sale": {
+   "id": "robotaller_4apps__jefe_sale",
+   "video": "robotaller_4apps",
+   "nombre": "jefe_sale",
+   "archivo": "robotaller_4apps__jefe_sale.mp3",
+   "md5": "be95a71204fea5b779cee42bf6bc461c",
+   "prompt": "Spring-loaded cardboard figure popping up with a comic wobble, short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__lupa": {
+   "id": "robotaller_4apps__lupa",
+   "video": "robotaller_4apps",
+   "nombre": "lupa",
+   "archivo": "robotaller_4apps__lupa.mp3",
+   "md5": "e8896da69451d540b58ae5bb42e130a1",
+   "prompt": "Short sci-fi zoom-in blip rising in pitch, ending in a tiny click",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__lupa2": {
+   "id": "robotaller_4apps__lupa2",
+   "video": "robotaller_4apps",
+   "nombre": "lupa2",
+   "archivo": "robotaller_4apps__lupa2.mp3",
+   "md5": "3aac43d2cd2b15b9fff7b8dbc915a254",
+   "prompt": "Quick airy rising swell into a soft digital pop",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__moneda": {
+   "id": "robotaller_4apps__moneda",
+   "video": "robotaller_4apps",
+   "nombre": "moneda",
+   "archivo": "robotaller_4apps__moneda.mp3",
+   "md5": "421dbf88b1f3ebd702b1d2de9489febc",
+   "prompt": "Bright arcade coin pickup with a short sparkle tail",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__motor_viejo": {
+   "id": "robotaller_4apps__motor_viejo",
+   "video": "robotaller_4apps",
+   "nombre": "motor_viejo",
+   "archivo": "robotaller_4apps__motor_viejo.mp3",
+   "md5": "419ba0da465c1378a70f367600580254",
+   "prompt": "Old car engine cranking twice and starting, then a short idle, close and dry",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__notifica": {
+   "id": "robotaller_4apps__notifica",
+   "video": "robotaller_4apps",
+   "nombre": "notifica",
+   "archivo": "robotaller_4apps__notifica.mp3",
+   "md5": "a8d339617954cbc670f07795e9ebbde4",
+   "prompt": "Smartphone notification double chime, clean modern, short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__ronquido": {
+   "id": "robotaller_4apps__ronquido",
+   "video": "robotaller_4apps",
+   "nombre": "ronquido",
+   "archivo": "robotaller_4apps__ronquido.mp3",
+   "md5": "63e34f0cb6f4a9e2ff117c373852fbc4",
+   "prompt": "Cartoon snore, one comic inhale and a whistling exhale",
+   "dur": 2.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__silbido": {
+   "id": "robotaller_4apps__silbido",
+   "video": "robotaller_4apps",
+   "nombre": "silbido",
+   "archivo": "robotaller_4apps__silbido.mp3",
+   "md5": "f17b726d7fcdf857ef3f4d5d78ec0a02",
+   "prompt": "Fast whip whoosh through the air, very short, crisp",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__silbido2": {
+   "id": "robotaller_4apps__silbido2",
+   "video": "robotaller_4apps",
+   "nombre": "silbido2",
+   "archivo": "robotaller_4apps__silbido2.mp3",
+   "md5": "4d038896d42c7b52783a7003cd3f9e44",
+   "prompt": "Short swish of a thin stick cutting air, bright, very short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__tecleo_rapido": {
+   "id": "robotaller_4apps__tecleo_rapido",
+   "video": "robotaller_4apps",
+   "nombre": "tecleo_rapido",
+   "archivo": "robotaller_4apps__tecleo_rapido.mp3",
+   "md5": "894b9a9fc46b9c5e057c09238261d657",
+   "prompt": "Quick flurry of soft mechanical keyboard typing, six keystrokes, dry",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "robotaller_4apps__tele_enciende": {
+   "id": "robotaller_4apps__tele_enciende",
+   "video": "robotaller_4apps",
+   "nombre": "tele_enciende",
+   "archivo": "robotaller_4apps__tele_enciende.mp3",
+   "md5": "19ee618162f619913a8e1668f077baa6",
+   "prompt": "Old television switching on, soft click and a rising electric hum, short",
+   "dur": 1.0,
+   "canal": "edsonxn"
+  },
+  "tes_seres_poderosos__madre_noche": {
+   "id": "tes_seres_poderosos__madre_noche",
+   "video": "tes_seres_poderosos",
+   "nombre": "madre_noche",
+   "archivo": "tes_seres_poderosos__madre_noche.mp3",
+   "md5": "6cac3c0c9139dd9fc20d988667b077f1",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-11-04 22:34"
+ "actualizado": "2026-11-06 12:26"
 }

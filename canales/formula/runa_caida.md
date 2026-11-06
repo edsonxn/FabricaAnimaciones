@@ -60,3 +60,13 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
 - **Base a 90 días:** 305 subs, 8,8 subs por 1 000 vistas, 97,4 % de las vistas son de no suscritos, 1 913 h. Ningún video lo había pedido.
 - **Plan:** tramo de 6-10 s antes del puesto 1 + frase en el cierre, meta 500 → 1 000. Reglas en `docs/estilo_secuencia_yt.md` § CAMPAÑA.
 - **Primer video:** el siguiente que se escriba (Melina y Radahn ya están renderizados). Objetivo: ≥ 12 subs por 1 000 sin caer más de 3 puntos en el tramo.
+
+## «Las 5 peores atrocidades de Morgott QUE IGNORASTE» (`er_morgott_atrocidades`, 5/6-nov-2026, elegido por el usuario de 4)
+- Tema pedido dos veces por @ConkerLord22 (28-oct y 5-nov). Variable cambiada: el SUJETO → Morgott (el villano «leal», giro: el
+  guardián que todos compadecen es el peor). Duración ≥ 20 min pedida por el usuario: 21:07. Descartados: Mohg, Godfrey, Rennala
+  (Godfrey/Godwyn, Rennala y la Llama Frenética siguen pedidos en comentarios → candidatos).
+- Primer video con el ciclo de 3 días. Subido el 6-nov-2026 (https://youtu.be/fMBEJI5FjaY), programado dom 8-nov 10:00 CDMX.
+- La voz IA sigue con ~4 quejas (@pablofernandez893 ♥7, @manuelramos7867, @thegoyco93, @huevason): reportado al usuario, no se cambia
+  sola. La crítica de @manuelramos7867 se contesta en el cierre con burla disfrazada.
+- Comparar a los 7 días con Radahn (24 min) y Miquella/Melina (20 min): vistas, % visto, subs por 1 000 (campaña: 3 de 100 → meta 500).
+

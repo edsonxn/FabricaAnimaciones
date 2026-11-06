@@ -1010,6 +1010,20 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.
+- **`er_morgott_atrocidades` (5/6-nov-2026, 21:07, 145 beats, 167 FX, UNA sesión, tema pedido por @ConkerLord22):** MG nuevos en
+  `mg_er`: `dos_nombres(a, b, remate)` (dos fichas que se funden: Margit = Morgott), `pila(etiquetas, remate)` (capas de cuerpos que
+  se apilan una por marca bajo el Árbol), `subsuelo(arriba, abajo, sello, remate)` (corte de la ciudad: corte dorado arriba, los
+  encerrados abajo con su sello), `trono_vacio(nombres, remate)` (cada nombre se tacha a los 0,8 s; la última marca enreda el trono
+  de espinas) y `cadena(eslabones, preso, amo, remate)` (eslabones que atan al preso a su amo; «el mejor soldado del sistema que lo
+  odiaba»). `_brillo` necesita `float()` en el radio (GaussianBlur con `np.float64` truena). **Voz**: `--seeds 1 2` (con 4 semillas,
+  107 frases ≈ 5 h); 107/107 válidas fijando `*_MAX_POR_FRASE` con `_revisar_voz.py --umbrales` (mejor toma + diff de palabras: solo
+  1 error real); «Morgoth», «Mog», «Miquela» en Whisper son la pronunciación BUENA. **Anclas**: `_anclas.py` (stubs de los kits)
+  también caza MARCAS de MG fuera del tramo del FX (las marcas se resuelven a la 1.ª aparición global → `«texto#n»`): 30 arregladas
+  antes del render. **Pegatinas**: `peg()` con `PA.variado` (menos `com_*`) quita el aviso «se sienten repetidas» de `chequeo`; la
+  densidad de `chequeo` solo cuenta `peg()` clásico (1,6/min) aunque con silueta/reliquia/camafeo/legajo/abanico haya ~70.
+  Títulos de `puesto` > ~22 letras se salen de la banda. Render 3 677 s (61 min) para 20:47. `_bordes.py` da MemoryError en 21 min con
+  poca RAM libre (saltado). **Tele** (6-nov): la app cortó la subida (`ConnectionResetError` 10054) con el MASTER de 1,5 GB (al 50 %) Y con
+  una copia 720p de 423 MB, 3 intentos: no es el tamaño, es Puente TV (revisar la app/espacio de la tele).
 
 ## COMENTARIOS de la gente (el usuario, 27-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 **SOLO COMENTARIOS RECIENTES EN PANTALLA (el usuario, 3-nov-2026, `tes_sentinel_teaser`: «pusiste un comentario de hace 8 meses… solo comentarios recientes máximo 1 semana y media»):** toda captura de comentario (agradecimiento, crítica o el que pidió el tema) tiene ≤ 10 días el día que se hace el video; `nucleo/comentarios.py` (`MAX_DIAS = 10`) se niega a hacer la pegatina de uno más viejo. Si no hay ≥ 4 agradecimientos recientes, se ponen los que haya; nunca se rellena con viejos. Lo viejo puede inspirar el guion (una corrección, un tema), pero no sale en pantalla.

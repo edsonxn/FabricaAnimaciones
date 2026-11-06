@@ -14136,6 +14136,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "chicle_dentro",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-05"
     }
    ],
    "catalogado": "2026-10-21"
@@ -22528,6 +22534,10 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23315,6 +23325,9 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -24566,7 +24579,14 @@
     "dinamica": 0.58
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "euphoria_robots",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-05"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "zelda_oot__lyria_tramo2": {
@@ -27881,6 +27901,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-23"
+    },
+    {
+     "video": "chicle_dentro",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-05"
     }
    ],
    "catalogado": "2026-10-22"
@@ -29451,7 +29477,11 @@
    },
    "variante": false,
    "usos": [],
-   "catalogado": "2026-10-23"
+   "catalogado": "2026-10-23",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3"
+   ]
   },
   "despertar_3am__lyria_tramo2": {
    "id": "despertar_3am__lyria_tramo2",
@@ -29909,7 +29939,14 @@
     "dinamica": 0.69
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "chicle_dentro",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-05"
+    }
+   ],
    "catalogado": "2026-10-23"
   },
   "corn_flakes__lyria_tramo2": {
@@ -35979,6 +36016,10 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3"
    ]
   },
@@ -36066,6 +36107,10 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3"
    ]
   },
@@ -36145,6 +36190,10 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
@@ -36252,6 +36301,12 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3"
    ]
   },
@@ -36344,6 +36399,12 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
@@ -39101,7 +39162,14 @@
     "dinamica": 0.78
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "robotaller_4apps",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-05"
+    }
+   ],
    "catalogado": "2026-11-01"
   },
   "robotaller_n64__lyria_tramo2": {
@@ -39218,7 +39286,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "robotaller_4apps",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-05"
+    }
+   ],
    "catalogado": "2026-11-01"
   },
   "ballena_estomago__lyria_tramo1": {
@@ -41784,7 +41859,1315 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-11-04"
+  },
+  "chicle_dentro__lyria_tramo1": {
+   "id": "chicle_dentro__lyria_tramo1",
+   "video": "chicle_dentro",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo1.mp3",
+   "archivo": "chicle_dentro__lyria_tramo1.mp3",
+   "md5": "7a625aa7dd935257ad27c8cf939e4763",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Qué pasa DENTRO de tu cuerpo si te tragas un chicle? (el mito de los 7 años)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "origen"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings, a squishy bass clarinet for the inside-the-body parts; curious, playful, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: corn_flakes__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-05\n\nWarm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 2:02 (122 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:22] Section 1: Intensity 3/10. A single questioning felt piano figure over a low held clarinet, curious and a little ironic. Almost empty.\n[0:22 - 0:42] Section 2: Intensity 4/10. A gentle marimba pulse begins, upright bass enters, the feeling of a family story about to unfold.\n[0:42 - 1:25] Section 3: Intensity 4/10. Orderly, slightly stiff routine: steady walking bass, tidy pizzicato, a polite old-fashioned waltz feeling.\n[1:25 - 2:02] Section 4: Intensity 4/10. Light comic trial and error: clumsy bassoon-like clarinet, plucked strings, small stumbles and a crunchy little stop.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 22,
+     "intensidad": 3,
+     "desc": "A single questioning felt piano figure over a low held clarinet, curious and a little ironic. Almost empty."
+    },
+    {
+     "t0": 22,
+     "t1": 42,
+     "intensidad": 4,
+     "desc": "A gentle marimba pulse begins, upright bass enters, the feeling of a family story about to unfold."
+    },
+    {
+     "t0": 42,
+     "t1": 85,
+     "intensidad": 4,
+     "desc": "Orderly, slightly stiff routine: steady walking bass, tidy pizzicato, a polite old-fashioned waltz feeling."
+    },
+    {
+     "t0": 85,
+     "t1": 122,
+     "intensidad": 4,
+     "desc": "Light comic trial and error: clumsy bassoon-like clarinet, plucked strings, small stumbles and a crunchy little stop."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 119.2,
+    "rms_db": -14.6,
+    "tempo": 184.6,
+    "brillo_hz": 1049,
+    "energia": [
+     0.34,
+     0.46,
+     0.45,
+     0.42,
+     0.67,
+     0.77,
+     0.8,
+     0.78,
+     0.89,
+     1.0,
+     0.95,
+     0.31
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-05"
+  },
+  "chicle_dentro__lyria_tramo3": {
+   "id": "chicle_dentro__lyria_tramo3",
+   "video": "chicle_dentro",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo3.mp3",
+   "archivo": "chicle_dentro__lyria_tramo3.mp3",
+   "md5": "4e7b51675bf207efb026dbdaaa836b78",
+   "canal": "kuriox",
+   "estilo_video": "documental",
+   "titulo_video": "¿Qué pasa DENTRO de tu cuerpo si te tragas un chicle? (el mito de los 7 años)",
+   "tramo": 3,
+   "escenas": [
+    "intestino",
+    "peligro",
+    "cierre"
+   ],
+   "estilo": "Gentle hand-made animated documentary score: soft felt piano, warm celesta, music box, marimba, light pizzicato strings, a squishy bass clarinet for the inside-the-body parts; curious, playful, watercolour storybook feel. Sparse melody low in the mix so a narrator can speak over it. Instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: sin_medicina__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-05\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:14] Section 1: Intensity 4/10. Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan.\n[1:14 - 1:55] Section 2: Intensity 3/10. Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato.\n[1:55 - 2:50] Section 3: Intensity 4/10. Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 4,
+     "desc": "Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan."
+    },
+    {
+     "t0": 74,
+     "t1": 115,
+     "intensidad": 3,
+     "desc": "Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato."
+    },
+    {
+     "t0": 115,
+     "t1": 170,
+     "intensidad": 4,
+     "desc": "Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 170.76,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 818,
+    "energia": [
+     0.68,
+     0.67,
+     0.81,
+     0.87,
+     1.0,
+     0.75,
+     0.71,
+     0.69,
+     0.61,
+     0.66,
+     0.79,
+     0.48
+    ],
+    "huecos": [],
+    "dinamica": 0.52
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-05"
+  },
+  "robotaller_4apps__lyria_tramo2": {
+   "id": "robotaller_4apps__lyria_tramo2",
+   "video": "robotaller_4apps",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_4apps\\audio\\lyria_tramo2.mp3",
+   "archivo": "robotaller_4apps__lyria_tramo2.mp3",
+   "md5": "b6b0e90a4e9a5c615be159ab1cc94a90",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA: mi jefe me pidió 4 apps y las hice en menos de 24 horas",
+   "tramo": 2,
+   "escenas": [
+    "rayo",
+    "puente",
+    "tele",
+    "cuenta",
+    "junta"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "BIBLIOTECA: robotaller_n64__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-05\n\nPlayful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator. Total length: exactly 2:37 (158 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. de las capas al corte\n\n[0:00 - 0:20] Section 1: Intensity 3/10. Building up: layers stack, sparkling arpeggios.\n[0:20 - 0:36] Section 2: Intensity 1/10. Almost nothing: a soft pad that steps aside.\n[0:36 - 1:02] Section 3: Intensity 2/10. Strange and thoughtful: slow pulse, ticking.\n[1:02 - 1:32] Section 4: Intensity 2/10. Tension then release: a rising build that resolves in a bright chord.\n[1:32 - 1:53] Section 5: Intensity 2/10. Dry comedy, then a bright reveal.\n[1:53 - 2:18] Section 6: Intensity 2/10. Warm and confident: the main motif returns.\n[2:18 - 2:37] Section 7: Intensity 2/10. Catchy full groove, ending abruptly.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 20,
+     "intensidad": 3,
+     "desc": "Building up: layers stack, sparkling arpeggios."
+    },
+    {
+     "t0": 20,
+     "t1": 36,
+     "intensidad": 1,
+     "desc": "Almost nothing: a soft pad that steps aside."
+    },
+    {
+     "t0": 36,
+     "t1": 62,
+     "intensidad": 2,
+     "desc": "Strange and thoughtful: slow pulse, ticking."
+    },
+    {
+     "t0": 62,
+     "t1": 92,
+     "intensidad": 2,
+     "desc": "Tension then release: a rising build that resolves in a bright chord."
+    },
+    {
+     "t0": 92,
+     "t1": 113,
+     "intensidad": 2,
+     "desc": "Dry comedy, then a bright reveal."
+    },
+    {
+     "t0": 113,
+     "t1": 138,
+     "intensidad": 2,
+     "desc": "Warm and confident: the main motif returns."
+    },
+    {
+     "t0": 138,
+     "t1": 157,
+     "intensidad": 2,
+     "desc": "Catchy full groove, ending abruptly."
+    }
+   ],
+   "intensidad": [
+    3,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "chiptune",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 155.66,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 1286,
+    "energia": [
+     0.16,
+     0.55,
+     0.67,
+     0.99,
+     1.0,
+     0.74,
+     0.95,
+     0.49,
+     0.4,
+     0.71,
+     0.69,
+     0.86
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-05"
+  },
+  "euphoria_robots__lyria_tramo1": {
+   "id": "euphoria_robots__lyria_tramo1",
+   "video": "euphoria_robots",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\euphoria_robots\\audio\\lyria_tramo1.mp3",
+   "archivo": "euphoria_robots__lyria_tramo1.mp3",
+   "md5": "807ed01bc060dd46d045c5e0e0d548dd",
+   "canal": "edsonxn",
+   "estilo_video": "kurzgesagt",
+   "titulo_video": "Soy una IA y le enseñé a mis robots a caerse (sin una sola animación)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "pedido",
+    "problema",
+    "verlet",
+    "musculos",
+    "equilibrio",
+    "mundo",
+    "errores",
+    "cierre"
+   ],
+   "estilo": "Playful, curious electronic score for a witty robot explaining physics: plucky synths, soft glitch percussion, springy bass, light marimba. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "BIBLIOTECA: arana_amarilla__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-05\n\nPlayful, sunny nature documentary score for a hand-drawn cartoon about a big garden spider: pizzicato strings, marimba, acoustic guitar, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Warm, curious and a little mischievous, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:52 (173 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending.\n\n[0:00 - 1:09] Section 1: Intensity 3/10. Bright summer morning, birds implied by flute trills, then a sudden comic freeze and a small mysterious celesta figure.\n[1:09 - 1:57] Section 2: Intensity 4/10. Light and inquisitive: marimba ostinato starts, upright bass walks gently, introducing a big character.\n[1:57 - 2:52] Section 3: Intensity 4/10. Delicate and precise: celesta and harp-like pizzicato building a pattern, round and repeating like a wheel.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 69,
+     "intensidad": 3,
+     "desc": "Bright summer morning, birds implied by flute trills, then a sudden comic freeze and a small mysterious celesta figure."
+    },
+    {
+     "t0": 69,
+     "t1": 117,
+     "intensidad": 4,
+     "desc": "Light and inquisitive: marimba ostinato starts, upright bass walks gently, introducing a big character."
+    },
+    {
+     "t0": 117,
+     "t1": 172,
+     "intensidad": 4,
+     "desc": "Delicate and precise: celesta and harp-like pizzicato building a pattern, round and repeating like a wheel."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "electrónica",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 171.62,
+    "rms_db": -15.1,
+    "tempo": 161.5,
+    "brillo_hz": 910,
+    "energia": [
+     0.68,
+     0.47,
+     0.73,
+     0.59,
+     0.8,
+     0.95,
+     1.0,
+     0.98,
+     0.42,
+     0.45,
+     0.77,
+     0.49
+    ],
+    "huecos": [],
+    "dinamica": 0.58
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "robotaller_4apps__lyria_tramo1": {
+   "id": "robotaller_4apps__lyria_tramo1",
+   "video": "robotaller_4apps",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\robotaller_4apps\\audio\\lyria_tramo1.mp3",
+   "archivo": "robotaller_4apps__lyria_tramo1.mp3",
+   "md5": "6d3efabeda72ef6d669b7aa3383f07cb",
+   "canal": "edsonxn",
+   "estilo_video": "secuencia_flow",
+   "titulo_video": "Soy una IA: mi jefe me pidió 4 apps y las hice en menos de 24 horas",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "contraste",
+    "altima",
+    "micwifi"
+   ],
+   "estilo": "Playful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator.",
+   "prompt": "BIBLIOTECA: robotaller_n64__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-05\n\nPlayful modern chiptune and light electronic groove for a witty robot narrator: plucky synths, soft glitch percussion, warm bass, curious and mischievous. Instrumental only, no vocals, never loud, always leaves space for the narrator. Total length: exactly 2:23 (143 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. del mensaje a los clips\n\n[0:00 - 0:25] Section 1: Intensity 2/10. Sly and quick: a ticking clock motif over plucky arpeggios, something big about to be built.\n[0:25 - 0:43] Section 2: Intensity 2/10. Confident, the groove settles.\n[0:43 - 1:11] Section 3: Intensity 2/10. Curious detective groove: light pizzicato synths, typing-like percussion.\n[1:11 - 1:30] Section 4: Intensity 2/10. Focused and steady: a simple melodic loop, writing in a quiet room.\n[1:30 - 1:53] Section 5: Intensity 2/10. Lighter: soft pads, a hint of comedy when something fails.\n[1:53 - 2:23] Section 6: Intensity 3/10. Assembly line: steady rhythmic clicks and a cheerful synth motif.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 2,
+     "desc": "Sly and quick: a ticking clock motif over plucky arpeggios, something big about to be built."
+    },
+    {
+     "t0": 25,
+     "t1": 43,
+     "intensidad": 2,
+     "desc": "Confident, the groove settles."
+    },
+    {
+     "t0": 43,
+     "t1": 71,
+     "intensidad": 2,
+     "desc": "Curious detective groove: light pizzicato synths, typing-like percussion."
+    },
+    {
+     "t0": 71,
+     "t1": 90,
+     "intensidad": 2,
+     "desc": "Focused and steady: a simple melodic loop, writing in a quiet room."
+    },
+    {
+     "t0": 90,
+     "t1": 113,
+     "intensidad": 2,
+     "desc": "Lighter: soft pads, a hint of comedy when something fails."
+    },
+    {
+     "t0": 113,
+     "t1": 143,
+     "intensidad": 3,
+     "desc": "Assembly line: steady rhythmic clicks and a cheerful synth motif."
+    }
+   ],
+   "intensidad": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "chiptune",
+     "percusión",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio"
+    ],
+    "genero": [
+     "electrónica",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 143.2,
+    "rms_db": -14.6,
+    "tempo": 123.0,
+    "brillo_hz": 1480,
+    "energia": [
+     0.22,
+     0.46,
+     0.78,
+     0.48,
+     0.7,
+     0.61,
+     0.85,
+     0.86,
+     0.24,
+     1.0,
+     0.94,
+     0.69
+    ],
+    "huecos": [],
+    "dinamica": 0.78
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo13": {
+   "id": "wow_errores_forever__lyria_tramo13",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo13.wav",
+   "archivo": "wow_errores_forever__lyria_tramo13.mp3",
+   "md5": "e181e631f087aafec9839cd21e6bb316",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 13,
+   "escenas": [
+    "cierre"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 62.25,
+    "rms_db": -22.7,
+    "tempo": 89.1,
+    "brillo_hz": 1309,
+    "energia": [
+     0.48,
+     0.63,
+     0.67,
+     0.65,
+     0.69,
+     0.78,
+     0.93,
+     0.95,
+     0.87,
+     0.9,
+     0.21,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo12": {
+   "id": "wow_errores_forever__lyria_tramo12",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo12.wav",
+   "archivo": "wow_errores_forever__lyria_tramo12.mp3",
+   "md5": "dfa5c0e59f99fe2e57e5b14c32e1f3c4",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 12,
+   "escenas": [
+    "c01"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nNúcleo de Magma",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 68.5,
+    "rms_db": -22.9,
+    "tempo": 76.0,
+    "brillo_hz": 731,
+    "energia": [
+     1.0,
+     0.85,
+     0.87,
+     0.24,
+     0.61,
+     0.8,
+     0.88,
+     0.85,
+     0.82,
+     0.9,
+     0.41,
+     0.72
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo1": {
+   "id": "wow_errores_forever__lyria_tramo1",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_errores_forever__lyria_tramo1.mp3",
+   "md5": "ffc758b98ca3203c5d92e6a11a20c81c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "c25"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 91.0,
+    "rms_db": -22.1,
+    "tempo": 80.7,
+    "brillo_hz": 1078,
+    "energia": [
+     0.84,
+     1.0,
+     0.81,
+     0.85,
+     0.77,
+     0.55,
+     0.75,
+     0.87,
+     0.66,
+     0.68,
+     0.44,
+     0.36
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo11": {
+   "id": "wow_errores_forever__lyria_tramo11",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_errores_forever__lyria_tramo11.mp3",
+   "md5": "f576034483bc7816d110d2b9730b15ca",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 11,
+   "escenas": [
+    "c03",
+    "c02"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nCima del Trueno",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 113.5,
+    "rms_db": -21.7,
+    "tempo": 129.2,
+    "brillo_hz": 930,
+    "energia": [
+     0.66,
+     0.83,
+     0.98,
+     1.0,
+     0.48,
+     0.37,
+     0.54,
+     0.42,
+     0.52,
+     0.76,
+     0.8,
+     0.84
+    ],
+    "huecos": [],
+    "dinamica": 0.63
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo6": {
+   "id": "wow_errores_forever__lyria_tramo6",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_errores_forever__lyria_tramo6.mp3",
+   "md5": "9cbc44e9b098c6b4ac10af63b28dab53",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 6,
+   "escenas": [
+    "overgear"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDun Morogh",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 51.0,
+    "rms_db": -24.0,
+    "tempo": 129.2,
+    "brillo_hz": 934,
+    "energia": [
+     0.35,
+     0.54,
+     0.36,
+     0.33,
+     0.85,
+     1.0,
+     0.82,
+     0.58,
+     0.65,
+     0.49,
+     0.32,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo10": {
+   "id": "wow_errores_forever__lyria_tramo10",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_errores_forever__lyria_tramo10.mp3",
+   "md5": "e2db07b103ffd9c41d91e376aeca32e1",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 10,
+   "escenas": [
+    "c06",
+    "c05",
+    "c04"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nFeralas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 126.0,
+    "rms_db": -22.8,
+    "tempo": 136.0,
+    "brillo_hz": 1503,
+    "energia": [
+     0.3,
+     0.54,
+     0.48,
+     0.46,
+     0.38,
+     0.32,
+     0.22,
+     0.13,
+     1.0,
+     0.87,
+     0.45,
+     0.4
+    ],
+    "huecos": [],
+    "dinamica": 0.87
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo3": {
+   "id": "wow_errores_forever__lyria_tramo3",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_errores_forever__lyria_tramo3.mp3",
+   "md5": "522b526c62929dd2eeb2b9617f8a4aea",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 3,
+   "escenas": [
+    "c22",
+    "c21",
+    "gracias1"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nVentormenta",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 126.0,
+    "rms_db": -24.7,
+    "tempo": 80.7,
+    "brillo_hz": 1280,
+    "energia": [
+     1.0,
+     0.66,
+     0.49,
+     0.54,
+     0.41,
+     0.28,
+     0.66,
+     0.62,
+     0.59,
+     0.48,
+     0.59,
+     0.33
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo4": {
+   "id": "wow_errores_forever__lyria_tramo4",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_errores_forever__lyria_tramo4.mp3",
+   "md5": "7953e2963023d64b12d48db21029f594",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 4,
+   "escenas": [
+    "c20",
+    "c19",
+    "c18",
+    "burla1"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDarnassus",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 143.5,
+    "rms_db": -24.2,
+    "tempo": 95.7,
+    "brillo_hz": 713,
+    "energia": [
+     0.61,
+     0.62,
+     0.7,
+     0.34,
+     0.84,
+     0.6,
+     0.54,
+     0.84,
+     1.0,
+     0.82,
+     0.62,
+     0.75
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo2": {
+   "id": "wow_errores_forever__lyria_tramo2",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_errores_forever__lyria_tramo2.mp3",
+   "md5": "b381b5caac4b34a6f525e93c13b5ed33",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 2,
+   "escenas": [
+    "c24",
+    "voces",
+    "c23"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nOrgrimmar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "oscuro",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 138.5,
+    "rms_db": -23.1,
+    "tempo": 129.2,
+    "brillo_hz": 639,
+    "energia": [
+     0.62,
+     0.55,
+     0.09,
+     0.29,
+     0.36,
+     0.38,
+     0.32,
+     0.19,
+     0.64,
+     1.0,
+     0.95,
+     0.87
+    ],
+    "huecos": [],
+    "dinamica": 0.91
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo7": {
+   "id": "wow_errores_forever__lyria_tramo7",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_errores_forever__lyria_tramo7.mp3",
+   "md5": "3f83736b2cc9c89c8f223139511be887",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 7,
+   "escenas": [
+    "c14",
+    "c13"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nEntrañas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 83.5,
+    "rms_db": -21.8,
+    "tempo": 112.3,
+    "brillo_hz": 889,
+    "energia": [
+     0.55,
+     0.97,
+     1.0,
+     0.33,
+     0.67,
+     0.5,
+     0.57,
+     0.55,
+     0.75,
+     0.75,
+     0.59,
+     0.36
+    ],
+    "huecos": [],
+    "dinamica": 0.67
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo5": {
+   "id": "wow_errores_forever__lyria_tramo5",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_errores_forever__lyria_tramo5.mp3",
+   "md5": "5684a03a6c4c019d17c503c1e2be8a0d",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 5,
+   "escenas": [
+    "c17",
+    "c16",
+    "c15"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDurotar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 133.5,
+    "rms_db": -24.9,
+    "tempo": 92.3,
+    "brillo_hz": 1016,
+    "energia": [
+     0.67,
+     0.36,
+     0.71,
+     0.6,
+     0.34,
+     0.77,
+     0.38,
+     0.43,
+     0.48,
+     1.0,
+     0.47,
+     0.45
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo8": {
+   "id": "wow_errores_forever__lyria_tramo8",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_errores_forever__lyria_tramo8.mp3",
+   "md5": "d49ee4bc30aa63d997dc96f16e746af1",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 8,
+   "escenas": [
+    "c12",
+    "c11",
+    "c10",
+    "gracias2"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nDun Morogh",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 158.5,
+    "rms_db": -24.2,
+    "tempo": 117.5,
+    "brillo_hz": 1323,
+    "energia": [
+     0.13,
+     0.18,
+     0.53,
+     0.43,
+     0.08,
+     0.64,
+     1.0,
+     0.71,
+     0.39,
+     0.59,
+     0.69,
+     0.46
+    ],
+    "huecos": [],
+    "dinamica": 0.92
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
+  },
+  "wow_errores_forever__lyria_tramo9": {
+   "id": "wow_errores_forever__lyria_tramo9",
+   "video": "wow_errores_forever",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_forever\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_errores_forever__lyria_tramo9.mp3",
+   "md5": "382dcdbcdac84ee0bcacd88683b8c81f",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "tramo": 9,
+   "escenas": [
+    "c09",
+    "c08",
+    "c07",
+    "burla2"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack: warm horns, low strings, frame drums, choir pads, instrumental only, no vocals, steady and unobtrusive under narration.\nForjaz",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "cornos",
+     "coro",
+     "cuerdas",
+     "percusión"
+    ],
+    "animo": [
+     "cálido",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 156.0,
+    "rms_db": -24.1,
+    "tempo": 123.0,
+    "brillo_hz": 1177,
+    "energia": [
+     0.61,
+     0.63,
+     0.55,
+     1.0,
+     0.95,
+     0.83,
+     0.49,
+     0.44,
+     0.59,
+     0.81,
+     0.36,
+     0.44
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-06"
   }
  },
- "actualizado": "2026-11-04 22:35"
+ "actualizado": "2026-11-06 12:25"
 }

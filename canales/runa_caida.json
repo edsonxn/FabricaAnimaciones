@@ -6,9 +6,9 @@
   "zona": "America/Mexico_City",
   "hora_local": "10:00",
   "utc": "16:00",
-  "ciclo_dias": 4,
-  "separacion_min_horas": 90,
-  "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (22-sep, 5-oct). Provisional hasta analizar el canal.",
+  "ciclo_dias": 3,
+  "separacion_min_horas": 66,
+  "nota": "Ciclo de 3 días pedido por el usuario el 5-nov-2026 (videos de 20 min mínimo). Separación 66 h para que quepa el ciclo con margen para publicaciones manuales.",
   "historial": [
    {
     "fecha": "2026-10-13",
@@ -22,10 +22,28 @@
     "hora_local": "10:00",
     "separacion_min_horas": 90,
     "motivo": "el usuario publicó Ranni a mano a las 11:03 CDMX; con 96 h el siguiente ciclo de 4 días a las 10:00 no cabía (95 h). 90 h deja margen para publicaciones manuales sin mover la hora del canal"
+   },
+   {
+    "fecha": "2026-11-05",
+    "ciclo_dias": 3,
+    "hora_local": "10:00",
+    "separacion_min_horas": 66,
+    "motivo": "el usuario: «bajar la frecuencia de publicación a 3 días»; siguientes videos de 20 min mínimo. 66 h (antes 90) para que el ciclo de 72 h no choque con la separación mínima"
    }
   ]
  },
  "publicados": [
+  {
+   "video": "er_morgott_atrocidades",
+   "id": "fMBEJI5FjaY",
+   "titulo": "Las 5 peores atrocidades de Morgott QUE IGNORASTE",
+   "subido": "2026-11-06",
+   "visibilidad": "programado",
+   "publicar": "2026-11-08T16:00:00Z",
+   "duracion": "PT21M7S",
+   "formato": "atrocidades_5_largo: sujeto Morgott (pedido por @ConkerLord22), 21:07, OST oficial, voz Faraon, 11 comentarios reales, campaña de suscripción 3 de 100 → meta 500",
+   "nota": "miniatura Flow aplicada; .srt sin cargar (token sin force-ssl): subirlo a mano en Studio; PENDIENTE en Studio: monetización y video relacionado"
+  },
   {
    "video": "er_radahn_atrocidades",
    "id": "Uuj8Bw45-fs",
@@ -126,7 +144,10 @@
  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\runa_caida.mp4",
  "campana_subs": {
   "desde": "2026-10-30",
-  "metas": [500, 1000],
+  "metas": [
+   500,
+   1000
+  ],
   "linea": "Suscríbete a Runa Caída para no perderte la siguiente atrocidad"
  }
 }

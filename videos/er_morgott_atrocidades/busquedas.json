@@ -1,0 +1,727 @@
+{
+ "scene-001": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 120,
+  "_frase": "intro_0"
+ },
+ "scene-002": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 104,
+  "_frase": "intro_1"
+ },
+ "scene-003": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 192,
+  "_frase": "intro_2"
+ },
+ "scene-004": {
+  "url": "https://youtu.be/bTtDqzGXoac",
+  "desde": 57,
+  "_frase": "intro_2"
+ },
+ "scene-005": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 384,
+  "_frase": "intro_3"
+ },
+ "scene-006": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 38,
+  "_frase": "intro_4"
+ },
+ "scene-007": {
+  "url": "https://youtu.be/1FUXwrUbAFk",
+  "desde": 16,
+  "_frase": "intro_4"
+ },
+ "scene-008": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 192,
+  "_frase": "intro_5"
+ },
+ "scene-009": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 128,
+  "_frase": "intro_6"
+ },
+ "scene-010": {
+  "url": "https://youtu.be/fDgyRWUne7g",
+  "desde": 222,
+  "_frase": "intro_7"
+ },
+ "scene-011": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 3,
+  "_frase": "p5_1"
+ },
+ "scene-012": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 96,
+  "_frase": "p5_1"
+ },
+ "scene-013": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 236,
+  "_frase": "p5_2"
+ },
+ "scene-014": {
+  "url": "https://youtu.be/gNNFokXwZrY",
+  "desde": 48,
+  "_frase": "p5_3"
+ },
+ "scene-015": {
+  "url": "https://youtu.be/gNNFokXwZrY",
+  "desde": 96,
+  "_frase": "p5_3"
+ },
+ "scene-016": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 72,
+  "_frase": "p5_4"
+ },
+ "scene-017": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 150,
+  "_frase": "p5_5"
+ },
+ "scene-018": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 144,
+  "_frase": "p5_6"
+ },
+ "scene-019": {
+  "url": "https://youtu.be/OS5zDzVp4JA",
+  "desde": 52,
+  "_frase": "p5_7"
+ },
+ "scene-020": {
+  "url": "https://youtu.be/eG7fOBSQMes",
+  "desde": 10236,
+  "_frase": "p5_7"
+ },
+ "scene-021": {
+  "url": "https://youtu.be/OS5zDzVp4JA",
+  "desde": 112,
+  "_frase": "p5_8"
+ },
+ "scene-022": {
+  "url": "https://youtu.be/OS5zDzVp4JA",
+  "desde": 196,
+  "_frase": "p5_9"
+ },
+ "scene-023": {
+  "url": "https://youtu.be/eG7fOBSQMes",
+  "desde": 10380,
+  "_frase": "p5_9"
+ },
+ "scene-024": {
+  "url": "https://youtu.be/uksE4fse8Ag",
+  "desde": 12,
+  "_frase": "p5b_0"
+ },
+ "scene-025": {
+  "url": "https://youtu.be/uksE4fse8Ag",
+  "desde": 64,
+  "_frase": "p5b_1"
+ },
+ "scene-026": {
+  "url": "https://youtu.be/uksE4fse8Ag",
+  "desde": 120,
+  "_frase": "p5b_1"
+ },
+ "scene-027": {
+  "url": "https://youtu.be/VhY4e2TbWxI",
+  "desde": 281,
+  "_frase": "p5b_2"
+ },
+ "scene-028": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 642,
+  "_frase": "p5b_3"
+ },
+ "scene-029": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 216,
+  "_frase": "p5b_3"
+ },
+ "scene-030": {
+  "url": "https://youtu.be/Huip3TdEOdU",
+  "desde": 2465,
+  "_frase": "p5b_4"
+ },
+ "scene-031": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 88,
+  "_frase": "p5b_5"
+ },
+ "scene-032": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 38,
+  "_frase": "p5b_6"
+ },
+ "scene-033": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 60,
+  "_frase": "p5b_6"
+ },
+ "scene-034": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 24,
+  "_frase": "p5b_7"
+ },
+ "scene-035": {
+  "url": "https://youtu.be/K_03kFqWfqs",
+  "desde": 94,
+  "_frase": "p4_1"
+ },
+ "scene-036": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 210,
+  "_frase": "p4_1"
+ },
+ "scene-037": {
+  "url": "https://youtu.be/8D_h_1cNz28",
+  "desde": 75,
+  "_frase": "p4_2"
+ },
+ "scene-038": {
+  "url": "https://youtu.be/VhY4e2TbWxI",
+  "desde": 281,
+  "_frase": "p4_3"
+ },
+ "scene-039": {
+  "url": "https://youtu.be/Mb6AObyIH5Y",
+  "desde": 1900,
+  "_frase": "p4_3"
+ },
+ "scene-040": {
+  "url": "https://youtu.be/Mb6AObyIH5Y",
+  "desde": 1980,
+  "_frase": "p4_4"
+ },
+ "scene-041": {
+  "url": "https://youtu.be/Mb6AObyIH5Y",
+  "desde": 1940,
+  "_frase": "p4_5"
+ },
+ "scene-042": {
+  "url": "https://youtu.be/Mb6AObyIH5Y",
+  "desde": 2000,
+  "_frase": "p4_5"
+ },
+ "scene-043": {
+  "url": "https://youtu.be/ZLeMXEjnetA",
+  "desde": 20,
+  "_frase": "p4_6"
+ },
+ "scene-044": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 720,
+  "_frase": "p4_7"
+ },
+ "scene-045": {
+  "url": "https://youtu.be/uksE4fse8Ag",
+  "desde": 184,
+  "_frase": "p4_7"
+ },
+ "scene-046": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 210,
+  "_frase": "p4_8"
+ },
+ "scene-047": {
+  "url": "https://youtu.be/7BnZhJg91RQ",
+  "desde": 78,
+  "_frase": "p4b_0"
+ },
+ "scene-048": {
+  "url": "https://youtu.be/K_03kFqWfqs",
+  "desde": 123,
+  "_frase": "p4b_0"
+ },
+ "scene-049": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 176,
+  "_frase": "p4b_1"
+ },
+ "scene-050": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 136,
+  "_frase": "p4b_2"
+ },
+ "scene-051": {
+  "url": "https://youtu.be/E7LBpBZbO_A",
+  "desde": 26,
+  "_frase": "p4b_3"
+ },
+ "scene-052": {
+  "url": "https://youtu.be/5cUBWqUPbeQ",
+  "desde": 12,
+  "_frase": "p4b_3"
+ },
+ "scene-053": {
+  "url": "https://youtu.be/5cUBWqUPbeQ",
+  "desde": 40,
+  "_frase": "p4b_4"
+ },
+ "scene-054": {
+  "url": "https://youtu.be/5cUBWqUPbeQ",
+  "desde": 140,
+  "_frase": "p4b_4"
+ },
+ "scene-055": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 200,
+  "_frase": "p4b_5"
+ },
+ "scene-056": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 100,
+  "_frase": "p4b_6"
+ },
+ "scene-057": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 408,
+  "_frase": "p4b_7"
+ },
+ "scene-058": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 84,
+  "_frase": "p4b_7"
+ },
+ "scene-059": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 112,
+  "_frase": "p3_0"
+ },
+ "scene-060": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 848,
+  "_frase": "p3_1"
+ },
+ "scene-061": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 136,
+  "_frase": "p3_2"
+ },
+ "scene-062": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 192,
+  "_frase": "p3_2"
+ },
+ "scene-063": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 1310,
+  "_frase": "p3_3"
+ },
+ "scene-064": {
+  "url": "https://youtu.be/-sQJjMvMjV0",
+  "desde": 30,
+  "_frase": "p3_5"
+ },
+ "scene-065": {
+  "url": "https://youtu.be/K5IGCHNOU4s",
+  "desde": 6,
+  "_frase": "p3_5"
+ },
+ "scene-066": {
+  "url": "https://youtu.be/-sQJjMvMjV0",
+  "desde": 9,
+  "_frase": "p3_6"
+ },
+ "scene-067": {
+  "url": "https://youtu.be/Mqi-s6M7xw8",
+  "desde": 100,
+  "_frase": "p3_7"
+ },
+ "scene-068": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 232,
+  "_frase": "p3_7"
+ },
+ "scene-069": {
+  "url": "https://youtu.be/wLhfEIgjvFY",
+  "desde": 2,
+  "_frase": "p3b_0"
+ },
+ "scene-070": {
+  "url": "https://youtu.be/qMPd4uoSsV0",
+  "desde": 8,
+  "_frase": "p3b_1"
+ },
+ "scene-071": {
+  "url": "https://youtu.be/qMPd4uoSsV0",
+  "desde": 52,
+  "_frase": "p3b_1"
+ },
+ "scene-072": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 24,
+  "_frase": "p3b_2"
+ },
+ "scene-073": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 1250,
+  "_frase": "p3b_3"
+ },
+ "scene-074": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 1600,
+  "_frase": "p3b_3"
+ },
+ "scene-075": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 8,
+  "_frase": "p3b_4"
+ },
+ "scene-076": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 176,
+  "_frase": "p3b_5"
+ },
+ "scene-077": {
+  "url": "https://youtu.be/Mqi-s6M7xw8",
+  "desde": 136,
+  "_frase": "p3b_5"
+ },
+ "scene-078": {
+  "url": "https://youtu.be/oUr7EEeBZYk",
+  "desde": 18,
+  "_frase": "p3b_6"
+ },
+ "scene-079": {
+  "url": "https://youtu.be/pecrcqqbrNE",
+  "desde": 14,
+  "_frase": "p3b_7"
+ },
+ "scene-080": {
+  "url": "https://youtu.be/OXsgjONaFbw",
+  "desde": 106,
+  "_frase": "p3b_8"
+ },
+ "scene-081": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 640,
+  "_frase": "p3b_9"
+ },
+ "scene-082": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 686,
+  "_frase": "p3b_10"
+ },
+ "scene-083": {
+  "url": "https://youtu.be/K_03kFqWfqs",
+  "desde": 94,
+  "_frase": "p3b_10"
+ },
+ "scene-084": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 56,
+  "_frase": "p2_1"
+ },
+ "scene-085": {
+  "url": "https://youtu.be/PjsA-1jRC98",
+  "desde": 128,
+  "_frase": "p2_2"
+ },
+ "scene-086": {
+  "url": "https://youtu.be/gNNFokXwZrY",
+  "desde": 96,
+  "_frase": "p2_2"
+ },
+ "scene-087": {
+  "url": "https://youtu.be/j2pqoZYSy7E",
+  "desde": 280,
+  "_frase": "p2_3"
+ },
+ "scene-088": {
+  "url": "https://youtu.be/3h5IIdRbqGc",
+  "desde": 66,
+  "_frase": "p2_4"
+ },
+ "scene-089": {
+  "url": "https://youtu.be/3h5IIdRbqGc",
+  "desde": 84,
+  "_frase": "p2_4"
+ },
+ "scene-090": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 300,
+  "_frase": "p2_5"
+ },
+ "scene-091": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 230,
+  "_frase": "p2_5"
+ },
+ "scene-092": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 330,
+  "_frase": "p2_6"
+ },
+ "scene-093": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 284,
+  "_frase": "p2_7"
+ },
+ "scene-094": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 372,
+  "_frase": "p2b_0"
+ },
+ "scene-095": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 430,
+  "_frase": "p2b_1"
+ },
+ "scene-096": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 624,
+  "_frase": "p2b_1"
+ },
+ "scene-097": {
+  "url": "https://youtu.be/uksE4fse8Ag",
+  "desde": 148,
+  "_frase": "p2b_3"
+ },
+ "scene-098": {
+  "url": "https://youtu.be/OS5zDzVp4JA",
+  "desde": 224,
+  "_frase": "p2b_3"
+ },
+ "scene-099": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 664,
+  "_frase": "p2b_4"
+ },
+ "scene-100": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 432,
+  "_frase": "p2b_4"
+ },
+ "scene-101": {
+  "url": "https://youtu.be/Mb6AObyIH5Y",
+  "desde": 1980,
+  "_frase": "p2b_5"
+ },
+ "scene-102": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 42,
+  "_frase": "p2b_5"
+ },
+ "scene-103": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 1480,
+  "_frase": "p2b_7"
+ },
+ "scene-104": {
+  "url": "https://youtu.be/bTtDqzGXoac",
+  "desde": 63,
+  "_frase": "p2b_7"
+ },
+ "scene-105": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 1240,
+  "_frase": "p2b_8"
+ },
+ "scene-106": {
+  "url": "https://youtu.be/fDgyRWUne7g",
+  "desde": 108,
+  "_frase": "p1_1"
+ },
+ "scene-107": {
+  "url": "https://youtu.be/eG7fOBSQMes",
+  "desde": 15506,
+  "_frase": "p1_1"
+ },
+ "scene-108": {
+  "url": "https://youtu.be/fDgyRWUne7g",
+  "desde": 314,
+  "_frase": "p1_2"
+ },
+ "scene-109": {
+  "url": "https://youtu.be/fDgyRWUne7g",
+  "desde": 322,
+  "_frase": "p1_3"
+ },
+ "scene-110": {
+  "url": "https://youtu.be/sMykzevAVTU",
+  "desde": 0,
+  "_frase": "p1_4"
+ },
+ "scene-111": {
+  "url": "https://youtu.be/Mqi-s6M7xw8",
+  "desde": 58,
+  "_frase": "p1_5"
+ },
+ "scene-112": {
+  "url": "https://youtu.be/Mqi-s6M7xw8",
+  "desde": 160,
+  "_frase": "p1_5"
+ },
+ "scene-113": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 244,
+  "_frase": "p1_6"
+ },
+ "scene-114": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 258,
+  "_frase": "p1_6"
+ },
+ "scene-115": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 264,
+  "_frase": "p1_7"
+ },
+ "scene-116": {
+  "url": "https://youtu.be/3h5IIdRbqGc",
+  "desde": 84,
+  "_frase": "p1_8"
+ },
+ "scene-117": {
+  "url": "https://youtu.be/3h5IIdRbqGc",
+  "desde": 120,
+  "_frase": "p1_8"
+ },
+ "scene-118": {
+  "url": "https://youtu.be/3h5IIdRbqGc",
+  "desde": 18,
+  "_frase": "p1_8"
+ },
+ "scene-119": {
+  "url": "https://youtu.be/znTaPxOF9tM",
+  "desde": 65,
+  "_frase": "p1b_0"
+ },
+ "scene-120": {
+  "url": "https://youtu.be/PIkKbrSHF8o",
+  "desde": 44,
+  "_frase": "p1b_1"
+ },
+ "scene-121": {
+  "url": "https://youtu.be/wBp1Br0773o",
+  "desde": 720,
+  "_frase": "p1b_2"
+ },
+ "scene-122": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 200,
+  "_frase": "p1b_2"
+ },
+ "scene-123": {
+  "url": "https://youtu.be/QjakOuLJlpw",
+  "desde": 960,
+  "_frase": "p1b_3"
+ },
+ "scene-124": {
+  "url": "https://youtu.be/uksE4fse8Ag",
+  "desde": 100,
+  "_frase": "p1b_4"
+ },
+ "scene-125": {
+  "url": "https://youtu.be/5SmdOEom4oo",
+  "desde": 120,
+  "_frase": "p1b_4"
+ },
+ "scene-126": {
+  "url": "https://youtu.be/K_03kFqWfqs",
+  "desde": 123,
+  "_frase": "p1b_5"
+ },
+ "scene-127": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 396,
+  "_frase": "p1b_6"
+ },
+ "scene-128": {
+  "url": "https://youtu.be/0NXs2RvWdxA",
+  "desde": 410,
+  "_frase": "p1b_6"
+ },
+ "scene-129": {
+  "url": "https://youtu.be/rTz4PyJYphw",
+  "desde": 516,
+  "_frase": "p1b_7"
+ },
+ "scene-130": {
+  "url": "https://youtu.be/E7LBpBZbO_A",
+  "desde": 12,
+  "_frase": "p1b_7"
+ },
+ "scene-131": {
+  "url": "https://youtu.be/rTz4PyJYphw",
+  "desde": 527,
+  "_frase": "p1b_8"
+ },
+ "scene-132": {
+  "url": "https://youtu.be/E7LBpBZbO_A",
+  "desde": 120,
+  "_frase": "p1b_9"
+ },
+ "scene-133": {
+  "url": "https://youtu.be/aw0k-em6sZs",
+  "desde": 540,
+  "_frase": "cierre_0"
+ },
+ "scene-134": {
+  "url": "https://youtu.be/OS5zDzVp4JA",
+  "desde": 164,
+  "_frase": "cierre_0"
+ },
+ "scene-135": {
+  "url": "https://youtu.be/L4zVRGHc1yQ",
+  "desde": 686,
+  "_frase": "cierre_1"
+ },
+ "scene-136": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 214,
+  "_frase": "cierre_2"
+ },
+ "scene-137": {
+  "url": "https://youtu.be/bTtDqzGXoac",
+  "desde": 39,
+  "_frase": "cierre_2"
+ },
+ "scene-138": {
+  "url": "https://youtu.be/gKUiD8bSF2o",
+  "desde": 1100,
+  "_frase": "cierre_3"
+ },
+ "scene-139": {
+  "url": "https://youtu.be/j2pqoZYSy7E",
+  "desde": 750,
+  "_frase": "cierre_4"
+ },
+ "scene-140": {
+  "url": "https://youtu.be/8D_h_1cNz28",
+  "desde": 270,
+  "_frase": "cierre_4"
+ },
+ "scene-141": {
+  "url": "https://youtu.be/5cUBWqUPbeQ",
+  "desde": 84,
+  "_frase": "cierre_5"
+ },
+ "scene-142": {
+  "url": "https://youtu.be/dxyVbyZmTjY",
+  "desde": 300,
+  "_frase": "cierre_6"
+ },
+ "scene-143": {
+  "url": "https://youtu.be/znTaPxOF9tM",
+  "desde": 153,
+  "_frase": "cierre_7"
+ },
+ "scene-144": {
+  "url": "https://youtu.be/Cc6o9P9Vj-Y",
+  "desde": 80,
+  "_frase": "cierre_7"
+ },
+ "scene-145": {
+  "url": "https://youtu.be/fDgyRWUne7g",
+  "desde": 228,
+  "_frase": "cierre_8"
+ }
+}

@@ -194,6 +194,9 @@ def tarjeta(c, salida, ancho=1000, max_lineas=5):
     return salida
 
 
+MAX_DIAS = 10   # semana y media: comentario más viejo que esto no sale en pantalla (el usuario, 3-nov-2026)
+
+
 def pegatina(video, canal, id_com):
     """Busca el comentario en canales/comentarios/<alias>.json (o lo pide a la API) y deja la pegatina en el video."""
     cid = yt.resolver_canal(canal)
@@ -207,5 +210,13 @@ def pegatina(video, canal, id_com):
         s = it[0]["snippet"]
         c = dict(id=id_com, autor=s["authorDisplayName"], avatar=s.get("authorProfileImageUrl"), fecha=s["publishedAt"][:10],
                  likes=s.get("likeCount", 0), texto=s["textDisplay"])
+    dias = (dt.date.today() - dt.date.fromisoformat(c["fecha"])).days
+    if dias > MAX_DIAS:     # el usuario, 3-nov-2026: en pantalla solo comentarios recientes, como mucho semana y media
+        sys.exit(f"El comentario {id_com} es de hace {dias} días (> {MAX_DIAS}): en pantalla solo van comentarios recientes. Elige otro.")
+    # el usuario, 5-nov-2026: ningún comentario (crítica ni agradecimiento) se enseña dos veces
+    ya = [d for d in os.listdir(os.path.join(yt.RAIZ, "videos")) if d != video
+          and os.path.isfile(os.path.join(yt.RAIZ, "videos", d, "pegatinas", f"com_{id_com}.png"))]
+    if ya:
+        sys.exit(f"El comentario {id_com} ya se enseñó en {', '.join(ya)}: no se repite. Elige otro.")
     sal = tarjeta(c, os.path.join(yt.RAIZ, "videos", video, "pegatinas", f"com_{id_com}.png"))
     print(f"pegatina -> {sal}\n  en efectos.py: peg(<seg>, \"com_{id_com}\", \"\", tam=760, x=.30, y=.30)")

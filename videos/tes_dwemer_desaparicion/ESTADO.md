@@ -54,3 +54,4 @@
 - 20 % de clips rehechos (memes, VTuber, menús): 2.ª vuelta con `--url` de videos limpios ya bajados.
 - Studio: monetización «Activada» y cuestionario enviado (Violencia 1.ª, Desagradable 1.ª); queda «Comprobando» hasta que YouTube procese la SD. Video relacionado de Shorts: no aplica (es un largo).
 - Comentarios para contestar: pendiente de borrador si el usuario lo pide.
+- (5-nov, el usuario) Se repitió la crítica «kyrim» (@jhonfeddiszabalamoreno9056, ya contestada en `tes_secretos_40`) y un agradecimiento (`UgwNcSsvmI…`, ya en `tes_cosas_nunca`). No se corrige este video; regla nueva: ningún comentario se enseña dos veces (`docs/estilo_secuencia_yt.md` § COMENTARIOS; `yt comentario` lo rechaza).

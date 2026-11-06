@@ -49,6 +49,48 @@ def pil(fotos, de, a, marcas, nombre, x=.50, y=.58, tam=300, marco="polaroid"):
                 marcas=list(marcas), x=x, y=y, sale=.06, nombre="pegatina pila " + nombre, ver=2.0)
 
 
+# VARIAS IMÁGENES A LA VEZ (el usuario, 5-nov-2026, TODOS los canales: «nuevas formas de presentar pegatinas, imágenes y
+# mapas»): `nucleo/presenta.py`. Cuando la voz ORDENA (tier list, podio), COMPARA (versus), ENUMERA (carrusel, muro) o
+# RELACIONA (tablero con hilo rojo). Una marca de la voz por imagen; fondo transparente (el clip sigue debajo).
+# fotos = [(slug, "Nombre")]; tier: items = [(slug, "Nombre", "S")]. Tabla: docs/estilo_secuencia_yt.md § PRESENTACIONES.
+def _pres(fn, de, a, marcas, nombre):
+    return dict(tipo="mg", fn=fn, de=de, a=a, marcas=list(marcas), x=.5, y=.5, sale=.06, nombre=nombre, ver=4.0)
+
+
+def _f(fotos):
+    return [(os.path.join(_PEG, s + ".png"), n) for s, n in fotos]
+
+
+def tier(items, de, a, marcas, titulo=None, filas=("S", "A", "B", "C", "D")):
+    import presenta as PR
+    return _pres(PR.tierlist([(os.path.join(_PEG, s + ".png"), n, f) for s, n, f in items], filas, titulo, TEMA_PEG), de, a, marcas, "tier list")
+
+
+def carr(fotos, de, a, marcas, titulo=None, marco="carta"):
+    import presenta as PR
+    return _pres(PR.carrusel(_f(fotos), tema=TEMA_PEG, marco=marco, titulo=titulo), de, a, marcas, "carrusel")
+
+
+def tabl(fotos, hilos, de, a, marcas, titulo=None):
+    import presenta as PR
+    return _pres(PR.tablero(_f(fotos), hilos, titulo, TEMA_PEG), de, a, marcas, "tablero")
+
+
+def vs(a_, b_, de, a, marcas, ganador=None, titulo=None):
+    import presenta as PR
+    return _pres(PR.versus(_f([a_])[0], _f([b_])[0], ganador, TEMA_PEG, titulo), de, a, marcas, "versus")
+
+
+def podi(tres, de, a, marcas, titulo=None):
+    import presenta as PR
+    return _pres(PR.podio(_f(tres), titulo, TEMA_PEG), de, a, marcas, "podio")
+
+
+def muro(fotos, de, a, marcas, destaca=None, titulo=None):
+    import presenta as PR
+    return _pres(PR.muro(_f(fotos), tema=TEMA_PEG, destaca=destaca, titulo=titulo), de, a, marcas, "muro")
+
+
 # COMENTARIO REAL de quien pidió el tema o corrigió algo (27-oct-2026): `python fab.py yt comentario <v> <canal> <id>` y
 # peg(en, "com_<id>", "", tam=760, x=.30, y=.30). Receta: docs/estilo_secuencia_yt.md § COMENTARIOS.
 
@@ -81,7 +123,18 @@ _MAP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mapas")
 TEMA_MAPA = "wow"
 
 
+# Ampliación 5-nov-2026: entrada="desenrolla"|"pliegue"|"mesa"|"foco" (cómo aparece el mapa; rota entre mapas del video),
+# territorios=[dict(poli=[(x, y), …], nombre=…, en=j)] (región que se extiende) y tipo "poder" en un punto (ondas).
 def mapa(slug, puntos, de, a, marcas, titulo=None, sub=None, ventana=False, x=.70, y=.42, tema=None, **kw):
+    import mg_mapa as MP
+    if kw.get("entrada"):
+        fx = mapa.__wrapped__(slug, puntos, de, a, marcas, titulo, sub, ventana, x, y, tema, **kw)
+        fx["entra"] = fx["sale"] = .05
+        return fx
+    return mapa.__wrapped__(slug, puntos, de, a, marcas, titulo, sub, ventana, x, y, tema, **kw)
+
+
+def _mapa_fx(slug, puntos, de, a, marcas, titulo=None, sub=None, ventana=False, x=.70, y=.42, tema=None, **kw):
     import mg_mapa as MP
     ruta = next((os.path.join(_MAP, slug + e) for e in (".jpg", ".png") if os.path.exists(os.path.join(_MAP, slug + e))),
                 os.path.join(_MAP, slug + ".jpg"))
@@ -89,6 +142,9 @@ def mapa(slug, puntos, de, a, marcas, titulo=None, sub=None, ventana=False, x=.7
     if ventana:
         return dict(tipo="mg", fn=fn, de=de, a=a, marcas=marcas, x=x, y=y, sale=.35, nombre="mapa " + slug, ver=3.0)
     return dict(tipo="pantalla", fn=fn, de=de, a=a, marcas=marcas, entra=.5, sale=.5, nombre="mapa " + slug, ver=4.0)
+
+
+mapa.__wrapped__ = _mapa_fx
 
 
 CAMARA = {

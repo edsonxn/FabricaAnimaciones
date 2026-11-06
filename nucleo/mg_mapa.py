@@ -48,6 +48,13 @@ Probar SIEMPRE con la hoja ANTES de `fx`: `MP.hoja(fn, dur, marcas, salida)` (2x
   largo con solo inicio y meta: traza=99 = se dibuja durante todo el tramo). La cámara no sale de la imagen ni amplía el
   original más de `amp_max` (2,0 px de salida por px del mapa; el mínimo es lo que haga falta para llenar la pantalla): con un
   mapa chico (los de Wowhead Classic miden 1024 px) y dos puntos juntos, antes llegaba a 13x y se veía pixelado (29-oct-2026).
+  AMPLIACIÓN 5-nov-2026 (el usuario: «nuevas formas de presentar… los mapas también»):
+  entrada="desenrolla" | "pliegue" | "mesa" | "foco": cómo APARECE (y se va) el mapa: pergamino que se desenrolla con su
+    rodillo, acordeón de 4 paneles, mesa de guerra tumbada que se levanta hacia la cámara, círculo de luz que se abre desde
+    el punto de inicio. Fuera del mapa queda transparente: se ve el clip (en el FX usa entra=.05, sale=.05).
+  territorios=[dict(poli=[(x, y), …], nombre="Reino", en=j, color=(r, g, b))]: región (fracción de la imagen) que se
+    extiende desde su centro cuando la voz llega al lugar j, relleno translúcido + borde que late + su nombre.
+  tipo "poder" en un punto: marcador de meta con ondas que salen sin parar (dónde vive/actúa un ser poderoso).
   viajeros=[ruta .png/.jpg, ...]: quien se MUEVE por la ruta (personajes, unidades) va en ella como pegatina redonda pequeña
   con su imagen REAL del juego, en la punta del trazo (varios, en fila detrás); regla del usuario, 29-oct-2026.
 """
@@ -112,6 +119,11 @@ TEMAS = {
     "n64": dict(trazo="bolitas", color=(226, 230, 238), borde=(40, 44, 54), grueso=9, letra=("bahnschrift.ttf", 42, "SemiBold"),
                 texto=(250, 250, 248), contorno=None, titulo=("ariblk.ttf", 76, None), subt=("bahnschrift.ttf", 38, "SemiBold"),
                 tinte=(1.0, 1.0, 1.0, 0.0), fondo=(20, 22, 28)),
+    # Pokémon Rojo/Azul (pokemon_rojo_azul, 3-nov-2026): ruta de bolitas ROJAS de Poké Ball con borde negro, marcadores = la Poké Ball
+    # de píxel de mg_pokemon; nombres en Verdana negrita sobre humo verde oscuro del Game Boy.
+    "pokemon": dict(trazo="bolitas", color=(232, 56, 48), borde=(16, 24, 16), grueso=9, letra=("verdanab.ttf", 40, None),
+                    texto=(248, 248, 232), contorno=None, titulo=("verdanab.ttf", 78, None), subt=("verdanab.ttf", 34, None),
+                    tinte=(1.0, 1.0, 1.0, 0.0), fondo=(15, 56, 15)),
 }
 
 
@@ -269,6 +281,12 @@ def _marcador(tema, tipo):
                 im.alpha_composite(_halo(34, (255, 240, 170), 160), (int(c - 68), int(c - 68)))
             g = N64.cubo(84 if tipo == "meta" else 54, .7)
             im.alpha_composite(g, (int(c - g.width / 2), int(c - g.height / 2)))
+        elif tema == "pokemon":
+            import mg_pokemon as PK
+            if tipo == "meta":
+                im.alpha_composite(_halo(34, (255, 230, 120), 160), (int(c - 68), int(c - 68)))
+            g = PK.pokeball(80 if tipo == "meta" else 48, gris=(tipo == "peligro"))
+            im.alpha_composite(g, (int(c - g.width / 2), int(c - g.height / 2)))
         elif tema == "zelda":
             col = (214, 44, 32) if tipo == "peligro" else T["color"]
             if tipo == "meta":                              # triángulo dorado
@@ -302,7 +320,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64"):    # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))
@@ -437,8 +455,11 @@ def _medalla(fuente_img, d, color):
 
 
 def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="pantalla", ancho=1100, alto=None,
-          margen=.16, zoom=1.05, ajuste=.30, traza=1.7, amp_max=2.0, viajeros=None, W=1920, H=1080):
+          margen=.16, zoom=1.05, ajuste=.30, traza=1.7, amp_max=2.0, viajeros=None, W=1920, H=1080, entrada=None,
+          territorios=None):
     T = TEMAS[tema]
+    if entrada and entrada not in ENTRADAS_MAPA:
+        raise ValueError("mg_mapa: entrada «%s» no existe; hay: %s" % (entrada, ", ".join(ENTRADAS_MAPA)))
     im = Image.open(ruta).convert("RGB")
     if recorte:
         x0, y0, x1, y1 = recorte
@@ -561,6 +582,28 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             p = np.asarray(p, np.float64)
             return np.stack([p[..., 0] * s + M[0, 2], p[..., 1] * s + M[1, 2]], -1)
 
+        # TERRITORIOS (5-nov-2026): región que se extiende desde su centro con relleno translúcido y borde que late
+        for tr in (territorios or ()):
+            j_ = tr.get("en", 0)
+            ta = mk[min(j_, len(mk) - 1)] + tr.get("retraso", 0.0)
+            v = _eo((dt - ta) / .8)
+            if v <= .01:
+                continue
+            pb = np.array(tr["poli"], np.float64) * [im.width * k, im.height * k]
+            cen = pb.mean(0)
+            pp = a_vista(cen + (pb - cen) * (.15 + .85 * v))
+            base = tr.get("color") or (T["color"] if min(T["color"]) < 170 else (200, 64, 46))   # tema claro (tes): rojo de reino
+            col = tuple(int(c) for c in base[::-1])
+            o = f.copy()
+            cv2.fillPoly(o, [np.round(pp * 4).astype(np.int32)], col, cv2.LINE_AA, 2)
+            cv2.addWeighted(o, .3 * v, f, 1 - .3 * v, 0, dst=f)
+            o = f.copy()
+            cv2.polylines(o, [np.round(pp * 4).astype(np.int32)], True, col, 5, cv2.LINE_AA, 2)
+            al = v * (.65 + .3 * math.sin(dt * 3 + j_))
+            cv2.addWeighted(o, al, f, 1 - al, 0, dst=f)
+            if tr.get("nombre"):
+                cx_, cy_ = a_vista(cen)
+                _pegar(f, _etiqueta(tema, tr["nombre"], "paso"), cx_, cy_, _eo((dt - ta - .3) / .4), 1.0)
         pv = a_vista(hecho)
         _trazo(f, pv, tema, T, dt, largo * s)
         # título que tapa un lugar ya alcanzado (lugar en el borde norte del mapa y sin margen para bajar la cámara): se
@@ -596,7 +639,14 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
                 continue
             x, y = a_vista(pts_b[i])
             e = _pop(dt - mk[j], .45)
-            spr = _marcador(tema, tipo)
+            if tipo == "poder":                             # ondas de poder que salen sin parar (5-nov-2026)
+                for q in range(3):
+                    fase = ((dt - mk[j]) * .55 + q / 3) % 1
+                    o = f.copy()
+                    cv2.circle(o, (int(x), int(y)), int(20 + 150 * fase), tuple(int(c) for c in T["color"][::-1]), 3, cv2.LINE_AA)
+                    al = (1 - fase) * .85 * _eo((dt - mk[j]) / .4)
+                    cv2.addWeighted(o, al, f, 1 - al, 0, dst=f)
+            spr = _marcador(tema, "meta" if tipo == "poder" else tipo)
             dy = 0
             if tipo == "meta" and tema in ("tes", "gaming"):
                 dy = -6 * abs(math.sin(dt * 2.6)) if tema == "gaming" else 5 * math.sin(dt * 2.2)
@@ -608,7 +658,7 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
                     cv2.circle(o, (int(x), int(y)), int(18 + 60 * fase), tuple(int(c) for c in col), 4, cv2.LINE_AA)
                     cv2.addWeighted(o, 1 - fase, f, fase, 0, dst=f)
             _pegar(f, spr, x, y + dy, 1.0, e)
-            et = _etiqueta(tema, nombre, tipo)
+            et = _etiqueta(tema, nombre, "meta" if tipo == "poder" else tipo)
             eh, ew = et.shape[:2]
             arriba = 84 if (tipo == "meta" and tema == "tes") else (66 if tema == "gaming" else 46)
             elegido = None
@@ -666,16 +716,97 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             esc = esc_t * (1 + .04 * (1 - e))
             _pegar(f, tt0, VW / 2, y_t + tt0.shape[0] * esc / 2, e * op_t, esc)
         if ventana:
-            e = _pop(dt, .5)
+            e = _pop(dt, .5) if not entrada else 1.0
             out = np.dstack([f, alfa_v])
             # filete del tema por dentro del borde difuminado
             cv2.rectangle(out, (int(VW * .035), int(VH * .05)), (int(VW * .965), int(VH * .95)),
                           tuple(int(c) for c in T["color"][::-1]) + (150,), 2, cv2.LINE_AA)
             if e < .999:
                 out = cv2.resize(out, (max(2, int(VW * e)), max(2, int(VH * e))), interpolation=cv2.INTER_LINEAR)
-            return out
-        return np.dstack([f, np.full((VH, VW), 255, np.uint8)])
+        else:
+            out = np.dstack([f, np.full((VH, VW), 255, np.uint8)])
+        if entrada:
+            out = _presenta(out, entrada, dt, dur, T, a_vista(pts_b[lug[0][0]]))
+        return out
     return fn
+
+
+# ------------------------------------------------------------------ cómo APARECE (y se va) el mapa (5-nov-2026)
+ENTRADAS_MAPA = ("desenrolla", "pliegue", "mesa", "foco")
+_PAPEL = (150, 194, 214)          # BGR del rodillo de pergamino
+
+
+def _presenta(out, entrada, dt, dur, T, origen, te=1.1, ts=.6):
+    """Entrada y salida del mapa entero. desenrolla = se abre de arriba abajo como pergamino con su rodillo; pliegue = se
+    despliega en 4 paneles de acordeón; mesa = empieza tumbado como mesa de guerra y se levanta hacia la cámara; foco = un
+    círculo de luz se abre desde el punto de inicio. Fuera del mapa queda transparente (se ve el clip)."""
+    if dt < te:
+        u = _eo(dt / te)
+    elif dt > dur - ts:
+        u = 1 - (1 - (dur - dt) / ts) ** 2
+    else:
+        return out
+    u = max(0.0, min(1.0, u))
+    if u >= .999:
+        return out
+    VH, VW = out.shape[:2]
+    if entrada == "desenrolla":
+        Y = int(u * VH)
+        o = np.zeros_like(out)
+        o[:Y] = out[:Y]
+        r = max(10, int(VH * .03))
+        y0, y1 = max(0, Y - r), min(VH, Y + r)
+        if y1 - y0 > 2:
+            v = np.sin(np.linspace(0, math.pi, y1 - y0))[:, None, None]
+            rod = np.zeros((y1 - y0, VW, 4), np.uint8)
+            rod[..., :3] = np.clip(np.float32(_PAPEL)[None, None, :] * (.45 + .65 * v), 0, 255).astype(np.uint8)
+            rod[..., 3] = 255
+            rod[:, :int(VW * .012)], rod[:, -int(VW * .012):] = (40, 52, 70, 255), (40, 52, 70, 255)
+            o[y0:y1] = rod
+        return o
+    if entrada == "pliegue":
+        n = 4
+        th = (1 - u) * math.radians(84)
+        pw = VW / n
+        tot = VW * math.cos(th)
+        o = np.zeros_like(out)
+        x = (VW - tot) / 2
+        for i in range(n):
+            sw = max(1, int(round(pw * math.cos(th))))
+            sub = out[:, int(i * pw):int((i + 1) * pw)]
+            sh = 1 - (.45 if i % 2 else .12) * math.sin(th)
+            enc = (VH * (1 - .06 * math.sin(th) * (i % 2 == 0)))
+            sub = cv2.resize(sub, (sw, max(2, int(enc))), interpolation=cv2.INTER_LINEAR)
+            sub = sub.astype(np.float32)
+            sub[..., :3] *= sh
+            yy = (VH - sub.shape[0]) // 2
+            x0 = int(x)
+            x1 = min(VW, x0 + sw)
+            o[yy:yy + sub.shape[0], x0:x1] = sub[:, :x1 - x0].astype(np.uint8)
+            x += pw * math.cos(th)
+        return o
+    if entrada == "mesa":
+        k = 1 - u
+        src = np.float32([[0, 0], [VW, 0], [VW, VH], [0, VH]])
+        dst = np.float32([[VW * .3 * k, VH * .55 * k], [VW - VW * .3 * k, VH * .55 * k], [VW + VW * .08 * k, VH], [-VW * .08 * k, VH]])
+        o = cv2.warpPerspective(out, cv2.getPerspectiveTransform(src, dst), (VW, VH), flags=cv2.INTER_LINEAR,
+                                borderMode=cv2.BORDER_CONSTANT, borderValue=0)
+        o[..., :3] = (o[..., :3] * (1 - .35 * k)).astype(np.uint8)
+        return o
+    if entrada == "foco":
+        cx, cy = float(origen[0]), float(origen[1])
+        R = u * math.hypot(max(cx, VW - cx), max(cy, VH - cy)) * 1.05
+        yy, xx = np.ogrid[0:VH, 0:VW]
+        d = np.sqrt((xx - cx) ** 2 + (yy - cy) ** 2)
+        m = np.clip((R - d) / 40, 0, 1)
+        o = out.copy()
+        o[..., 3] = (o[..., 3] * m).astype(np.uint8)
+        anillo = np.exp(-((d - R + 20) / 14) ** 2) * (1 - u * .5)
+        col = np.float32(T["color"][::-1])
+        o[..., :3] = np.clip(o[..., :3] + anillo[..., None] * col, 0, 255).astype(np.uint8)
+        o[..., 3] = np.maximum(o[..., 3], (anillo * 255).astype(np.uint8))
+        return o
+    return out
 
 
 def _trazo(f, pv, tema, T, dt, largo_px):

@@ -10,7 +10,9 @@ va). Todo se dibuja en 3D (homografías de cv2 con perspectiva, sombra dinámica
   estancias flota inclina kenburns brillo lupa quieta pulso
   salidas   funde cae volteo rasgado tinta enfoque cortinilla origami deslizar ventana bisagra glitch cristal tiras baldosas
             ceniza remolino vuela
-  + pila(fotos)  pila de fotos que se reparte en fila
+  + AMPLIACIÓN 5-nov-2026 (`nucleo/peg_anim_mas.py`, se registra sola): marcos pergamino vitral naipe estampilla · entradas y
+    salidas persiana portal escaner desenrolla aplasta · estancias orbita vela balanceo
+  + pila(fotos)  pila de fotos que se reparte en fila · presentaciones de VARIAS imágenes: `nucleo/presenta.py`
 VARIADO SIN REPETIR: `variado(ruta, titulo, tam, tema)` reparte las combinaciones con un rotador por video (bolsas barajadas con
 afinidad por tema: nunca la misma entrada/salida/marco dos veces seguidas y recorre todo el catálogo antes de repetir).
 Uso en efectos.py: helper `pv()` de videos/_plantilla_yt/efectos.py. Colores: peg_estilos.TEMAS (tes wow er gaming spyro n64
@@ -1797,6 +1799,13 @@ def _img_prueba(recorte=False):
     if recorte:
         return None
     raise SystemExit("peg_anim hoja: pasa --img ruta.png")
+
+
+# ampliación del 5-nov-2026 (marcos pergamino/vitral/naipe/estampilla, entradas persiana/portal/escaner/desenrolla/aplasta,
+# estancias orbita/vela/balanceo): se registra aquí para que el rotador y la hoja las usen sin tocar efectos.py
+import sys as _sys  # noqa: E402
+import peg_anim_mas as _MAS  # noqa: E402
+_MAS.registra(_sys.modules[__name__])
 
 
 if __name__ == "__main__":

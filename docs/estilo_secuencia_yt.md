@@ -454,9 +454,56 @@ repetidas seguidas) y avisa si más de un tercio son clásicas o se repiten.
 | salida | `cristal` · `rasgado` · `tiras` · `baldosas` · `ventana` · `enfoque` | estalla · se rompe en dos y caen · se reparte en tiras · se deshace en mosaico · se cierran las contraventanas · se va al fondo desenfocada | — |
 | varias | `pila` (`pil()`) | pila de fotos que se reparte en fila con las marcas de la voz y se recoge al final | enumeraciones (alternativa a `abanico`) |
 
+**Ampliación del 5-nov-2026** (el usuario: «amplíalo todavía más»; `nucleo/peg_anim_mas.py`, se registra sola en `peg_anim` y el
+rotador ya la reparte: nada que tocar en `efectos.py`). Catálogo: 12 marcos × 26 entradas × 10 estancias × 23 salidas.
+
+| Tipo | Nombre | Qué hace | Cuándo |
+|---|---|---|---|
+| marco | `pergamino` | hoja con rodillo arriba y abajo y pomos; foto entintada en el papel; título en serifa | lore, profecías, textos antiguos, Pergaminos Antiguos |
+| marco | `vitral` | vidriera en arco gótico: plomos que parten la foto en vidrios de colores, halo del tema | dioses, santos, Aedra/Daedra, templos |
+| marco | `naipe` | carta coleccionable vertical: barra con el nombre, gema, ventana y 5 estrellas de rareza | rankings, «poder de…», objetos legendarios |
+| marco | `estampilla` | sello postal dentado con valor en la esquina y matasellos ondulado encima | lugares, viajes, «enviado desde…», curiosidades |
+| entrada/salida | `persiana` | lamas 3D que giran sobre su eje, escalonadas | ritmo de lista, CoD, retro |
+| entrada/salida | `portal` | iris circular que se abre desde el centro con anillo de luz del tema | magia, Oblivion, invocación, teletransporte |
+| entrada/salida | `escaner` | barrido de luz de arriba abajo con filas que tiemblan | datos, análisis, «escaneamos a…» |
+| entrada/salida | `desenrolla` | se desenrolla de arriba abajo con el rodillo a la vista | documentos, lore, mapas pequeños |
+| entrada/salida | `aplasta` | cae estirada, se aplasta y rebota (dibujo animado) | humor, burlas, Plastitube |
+| estancia | `orbita` | gira despacio en 3D enseñando el canto | objetos, armas, reliquias |
+| estancia | `vela` | luz de vela que parpadea, cálida | misterio, tragedia, criptas |
+| estancia | `balanceo` | colgada de un clavo, se mece como péndulo | «se busca», carteles, pruebas |
+
+## PRESENTACIONES DE VARIAS IMÁGENES (el usuario, 5-nov-2026, TODOS los canales)
+Kit **`nucleo/presenta.py`**: cuando la voz ORDENA, COMPARA, ENUMERA o RELACIONA, en vez de una pegatina suelta tras otra. Cada una es
+un FX `mg` de cuadro entero con fondo transparente (el clip sigue debajo), una marca de la voz por imagen, marcos de `peg_anim` y
+colores del tema. Helpers de la plantilla (`fotos = [(slug, "Nombre")]`):
+
+| Helper | Kit | Qué hace | Cuándo |
+|---|---|---|---|
+| `tier(items, de, a, marcas, titulo)` items = `[(slug, nombre, "S")]` | `tierlist` | tabla S/A/B/C/D; cada retrato sale GRANDE al centro con su nombre (~1 s) y vuela a su fila | rankings, «quién es más fuerte», debates de las voces |
+| `carr(fotos, de, a, marcas, titulo)` | `carrusel` | anillo 3D de cartas que gira hasta traer al frente la que nombra la voz | «los 6 candidatos», facciones, familias |
+| `tabl(fotos, hilos, de, a, marcas, titulo)` hilos = `[(i, j)]` | `tablero` | corcho de investigación: fotos clavadas con chincheta y el hilo rojo que las une | teorías, conspiraciones, quién se relaciona con quién |
+| `vs(a, b, de, a, marcas, ganador)` | `versus` | pantalla partida en diagonal, cada lado entra de golpe, rayo y «VS»; 3.ª marca: el perdedor se apaga a gris | duelos, «A contra B», comparar dos versiones |
+| `podi(tres, de, a, marcas, titulo)` tres = 1.º, 2.º, 3.º | `podio` | bloques que suben del suelo (3.º → 2.º → 1.º), cartas que caen encima, rayos al ganador | cierre de un top, el top 3 |
+| `muro(fotos, de, a, marcas, destaca)` | `muro` | fichas boca abajo que se voltean una a una; `destaca` saca una al frente | «todos estos…», recuento, la sorpresa |
+
+Probar: `python nucleo/presenta.py hoja --tema tes [--img a.png b.png …] [--fondo <jpg>]` (hoja 2×3 por presentación; MÍRALA).
+**Máx. 1 de cada por video** y nunca dos seguidas del mismo tipo; se SUMAN a pegatinas, MG y mapas (no los sustituyen).
+
+## MAPAS: nuevas formas de presentarlos (el usuario, 5-nov-2026; `nucleo/mg_mapa.py`, helper `mapa()`)
+- `entrada="desenrolla" | "pliegue" | "mesa" | "foco"`: cómo APARECE (y se va) el mapa. Pergamino que se desenrolla con su rodillo ·
+  acordeón de 4 paneles · mesa de guerra tumbada que se levanta hacia la cámara · círculo de luz que se abre desde el punto de inicio.
+  Fuera del mapa queda transparente (el clip se ve). **Rotarlas: cada mapa del video con una entrada distinta** (el helper pone
+  entra/sale a .05 para que no se pise con el fundido).
+- `territorios=[dict(poli=[(x, y), …], nombre="Eastmarch", en=j)]`: región (fracción de la imagen, misma `rejilla`) que se extiende
+  desde su centro cuando la ruta llega al lugar j; relleno translúcido + borde que late + nombre. Tema claro (`tes`): rojo de reino.
+  Para reinos, dominios daédricos, zonas de guerra, «todo esto era suyo».
+- Punto con tipo `"poder"`: marcador de meta con ondas que salen sin parar (dónde vive o actúa un ser poderoso).
+- Prueba: `MP.hoja(MP.mapa(ruta, puntos, tema, entrada="mesa", territorios=[…]), dur, marcas, salida)` como siempre (MÍRALA).
+
 Estos se SUMAN a los estilos de `peg_estilos` (silueta, reliquia, banda, camafeo, legajo, abanico) y a `pant()`: la regla de oro sigue
-pidiendo tamaños, posiciones y estilos variados. Al crear una animación nueva: función `t_<nombre>` (o `es_<nombre>`) en `peg_anim.py`,
-añadirla a `ENT`/`SAL`/`EST`, a la tupla del catálogo, a la afinidad por tema si toca, a esta tabla, y mirar su fila en la hoja.
+pidiendo tamaños, posiciones y estilos variados. Al crear una animación nueva: función `t_<nombre>` (o `es_<nombre>`) en
+`peg_anim_mas.py` (o `peg_anim.py`), añadirla a `ENT`/`EST`/`MARCOS` de ese módulo, a la afinidad por tema si toca, a esta tabla, y
+mirar su fila en la hoja. Una presentación múltiple nueva: función en `presenta.py` + helper en la plantilla + fila arriba.
 
 ## PEGATINAS en todo video de este motor (Tamriel 17-oct; Warcraft 18-oct-2026, `wow_curiosidades_reinos_este`)
 El usuario: «cuando hables de objetos y personajes, ropa etc, busca imágenes de eso y ponlos como pegatinas **sin quitar los

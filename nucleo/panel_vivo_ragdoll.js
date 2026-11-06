@@ -32,9 +32,90 @@ window.Trapo=(()=>{
   const GOLPES=["¡PLAF!","¡PUM!","¡PAF!","¡BONK!","¡CATAPLÁN!","¡ZAS!"];
   const ARMAS=["llave","escoba","chancla","periodico","sarten","martillo"];
 
-  let Shs=[],prox=0,cadaMs=[18000,40000],ya=0,ultFoco=-1e9,hoyo=null;
+  let Shs=[],prox=0,cadaMs=[18000,40000],ya=0,ultFoco=-1e9,hoyo=null,cols=null;
   const MAX_ESC=4;
   const enUso=E=>Shs.some(sh=>sh.rds.some(rd=>rd.E===E));
+  // ---- los muebles (5-nov-2026): colisionadores por piso que pone panel_vivo_peligros.js con Trapo.ponCols(piso → lista), en px del piso.
+  // plat = plataforma de un solo sentido (también inclinada = rampa: mesas, repisas, escalera); seg = tubo o barandal sólido (r = grosor);
+  // circ = lámpara (c.on(vx,vy) la columpia); caja = caja sólida. asa:true = se puede agarrar; f:"asa" = solo para agarrarse (pasamanos).
+  const colsDe=p=>{try{return cols?cols(p)||[]:[];}catch(e){return [];}};
+  const NOCOL=new Set(["camina","baila","trepa","salta"]);   // lo que va con guion (caminar a otro, bailar, trepar, brincar) no choca con muebles
+  function bbC(c){if(!c.bb){const r=c.r||0;c.bb=c.f==="circ"?[c.x-r,c.y-r,c.x+r,c.y+r]:[Math.min(c.x0,c.x1)-r,Math.min(c.y0,c.y1)-r,Math.max(c.x0,c.x1)+r,Math.max(c.y0,c.y1)+r];}return c.bb;}
+  function encima(rd,c){                 // ¿el cuerpo toca la caja del mueble? (al nacer: lo que ya tenía encima no lo expulsa de golpe)
+    const b=c.f==="circ"?[c.x-c.r,c.y-c.r,c.x+c.r,c.y+c.r]:bbC(c);
+    for(const p of rd.P)if(p.x+p.r>b[0]-3&&p.x-p.r<b[2]+3&&p.y+p.r>b[1]-3&&p.y-p.r<b[3]+3)return true;
+    return false;
+  }
+  const ignora=rd=>new Set(colsDe(rd.piso).filter(c=>c.f!=="asa"&&encima(rd,c)).map(c=>c.id));
+  function contacto(rd,i,p,nx,ny,pen,c){ // empuja fuera del mueble; rebote y rozamiento según el mueble, golpe si venía rápido
+    p.x+=nx*pen;p.y+=ny*pen;
+    let vx=p.x-p.px,vy=p.y-p.py;const vn=vx*nx+vy*ny;
+    if(vn>=0)return;
+    const sp=-vn/H;
+    if(i<=CAD&&sp>230*rd.s&&rd.k[i]<.5)golpe(rd,p.x,sp,p.y+p.r+(ny<-.5?0:30*rd.s),c.txt);
+    if(c.on&&sp>40*rd.s)c.on(-vn*nx/H*MASA[i]/4,-vn*ny/H*MASA[i]/4);
+    const rb=c.rb??.15,fr=rd.k[i]>.5?.5:(c.fr??.12);
+    const tx=(vx-vn*nx)*(1-fr),ty=(vy-vn*ny)*(1-fr);
+    vx=tx-vn*rb*nx;vy=ty-vn*rb*ny;p.px=p.x-vx;p.py=p.y-vy;
+  }
+  function choca(rd,i,p,C){
+    for(const c of C){
+      if(c.f==="asa"||(rd.ign&&rd.ign.has(c.id)))continue;
+      const b=bbC(c);if(p.x+p.r<b[0]||p.x-p.r>b[2]||p.y+p.r<b[1]||p.y-p.r>b[3])continue;
+      if(c.f==="plat"){                  // un solo sentido: solo si venía por encima de la línea
+        const dx=c.x1-c.x0,dy=c.y1-c.y0,L2=dx*dx+dy*dy,t=((p.x-c.x0)*dx+(p.y-c.y0)*dy)/L2;if(t<0||t>1)continue;
+        const L=Math.sqrt(L2);let nx=dy/L,ny=-dx/L;if(ny>0){nx=-nx;ny=-ny;}
+        const sd=(p.x-c.x0)*nx+(p.y-c.y0)*ny,sp=(p.px-c.x0)*nx+(p.py-c.y0)*ny;
+        if(sd<p.r&&sp>=p.r-2.2)contacto(rd,i,p,nx,ny,p.r-sd,c);
+      }else if(c.f==="caja"){
+        const l=p.x+p.r-c.x0,r=c.x1-(p.x-p.r),u=p.y+p.r-c.y0,d=c.y1-(p.y-p.r),m=Math.min(l,r,u,d);if(m<=0)continue;
+        if(m===u)contacto(rd,i,p,0,-1,u,c);else if(m===l)contacto(rd,i,p,-1,0,l,c);else if(m===r)contacto(rd,i,p,1,0,r,c);else contacto(rd,i,p,0,1,d,c);
+      }else{                             // seg y circ: cápsula
+        let qx=c.x,qy=c.y;
+        if(c.f==="seg"){const dx=c.x1-c.x0,dy=c.y1-c.y0,t=cl(((p.x-c.x0)*dx+(p.y-c.y0)*dy)/(dx*dx+dy*dy||1));qx=c.x0+dx*t;qy=c.y0+dy*t;}
+        const ex=p.x-qx,ey=p.y-qy,d=Math.hypot(ex,ey),R=p.r+(c.r||0);if(d>=R)continue;
+        const nx=d>1e-6?ex/d:0,ny=d>1e-6?ey/d:-1;contacto(rd,i,p,nx,ny,R-d,c);
+      }
+    }
+  }
+  function soporte(rd,x,y){              // la plataforma más alta que hay bajo (x, y): para levantarse encima de la mesa y no en el piso
+    let best=null;
+    for(const c of colsDe(rd.piso)){
+      if(c.f!=="plat"&&c.f!=="caja"&&!(c.f==="seg"&&Math.abs(c.y1-c.y0)<2))continue;   // también un tubo horizontal: se pone de pie encima
+      const x0=Math.min(c.x0,c.x1),x1=Math.max(c.x0,c.x1);if(x<x0+4*rd.s||x>x1-4*rd.s)continue;
+      const yy=c.f==="caja"?c.y0:c.f==="seg"?c.y0-(c.r||0):c.y0+(c.y1-c.y0)*(x-c.x0)/(c.x1-c.x0);
+      if(yy>=y-6*rd.s&&yy<rd.F-6*rd.s&&(best===null||yy<best))best=yy;
+    }
+    return best;
+  }
+  function puntoAsa(c,x,y){              // el punto del mueble más cercano a la mano
+    if(c.f==="circ"){const dx=x-c.x,dy=y-c.y,d=Math.hypot(dx,dy)||1;return {x:c.x+dx/d*c.r,y:c.y+dy/d*c.r};}
+    const y0=c.f==="caja"?c.y0:c.y0,y1=c.f==="caja"?c.y0:c.y1,dx=c.x1-c.x0,dy=y1-y0,t=cl(((x-c.x0)*dx+(y-y0)*dy)/(dx*dx+dy*dy||1));
+    return {x:c.x0+dx*t,y:y0+dy*t-(c.f==="seg"?c.r||0:0)};
+  }
+  function buscaAsa(rd){                 // lo más cercano que se puede agarrar al caer: un mueble, un barandal u otro robot de otra escena
+    let best=null;const S=rd.s,R=40*S;
+    for(const i of [MI,MD]){
+      const h=rd.P[i];
+      for(const c of colsDe(rd.piso)){
+        if(!c.asa&&c.f!=="asa")continue;const b=bbC(c);if(h.x<b[0]-R||h.x>b[2]+R||h.y<b[1]-R||h.y>b[3]+R)continue;
+        const q=puntoAsa(c,h.x,h.y),d=Math.hypot(q.x-h.x,q.y-h.y);
+        if(d<R&&(!best||d<best.d))best={i,d,x:q.x,y:q.y,c};
+      }
+      for(const sh of Shs)if(sh!==rd.show)for(const o of sh.rds){
+        if(o.piso!==rd.piso)continue;
+        for(const j of [MI,MD,PEC]){const q=o.P[j],d=Math.hypot(q.x-h.x,q.y-h.y);if(d<R&&(!best||d<best.d))best={i,d,x:q.x,y:q.y,o,j};}
+      }
+    }
+    return best;
+  }
+  function agarra(rd,q){
+    const S=rd.s;
+    if(q.o)rd.fijo={i:q.i,o:q.o,j:q.j,L:2.5*S,hasta:ya+azar(500,1300)};
+    else{const c=q.c,ox=q.x-(c.x??0),oy=q.y-(c.y??0);rd.fijo={i:q.i,c,pt:c.f==="circ"?()=>({x:c.x+ox,y:c.y+oy}):()=>({x:q.x,y:q.y}),L:1.5*S,hasta:ya+azar(450,1600)};}
+    rd.agarrar=false;
+    if(Math.random()<.45)dice(rd.show,rd,q.o?elige(["¡No me sueltes!","¡Agárrame!","¡Tú vienes conmigo!"]):elige(["¡Me agarro!","¡Aguanta, aguanta!","¡Te tengo, mueble!","¡No me suelto!"]));
+  }
 
   // ---- un muñeco: nace con la pose de parado donde está el robot y con el control que tenía
   function nace(info,show,alto=0){
@@ -43,7 +124,7 @@ window.Trapo=(()=>{
     if(!(s>0&&isFinite(u.px)&&isFinite(F)&&isFinite(u.oy)))return null;   // el taller aún no se ha medido
     const rd={E,info,s,d,F,P,x0:u.px,piso:u.piso,oy:u.oy,lo:u.lo,hi:u.hi,techo:m.PCH?m.PCH+1:-1e9,AX:u.px,AY:0,k:new Array(7).fill(1),T:PARADO.map(()=>[0,0]),
       cara:"normal",boca:0,st:"quieto",st0:ya,show,golpeT:-1e9,fase:Math.random()*6,paso:0,bu:0,dSuelo:azar(900,1700),arma:null};
-    E.trapo=rd;show.rds.push(rd);pose(rd,PARADO);
+    E.trapo=rd;show.rds.push(rd);pose(rd,PARADO);rd.ign=ignora(rd);rd.ignT=ya;rd.fijo=null;rd.bal=null;
     if(info.anda)for(const p of P)p.px-=d*150*s*H;   // venía caminando: lleva su impulso
     return rd;
   }
@@ -60,7 +141,7 @@ window.Trapo=(()=>{
   const manoCerca=(rd,q)=>dist(rd.P[MI],q)<dist(rd.P[MD],q)?MI:MD;
   const liga=(sh,a,i,b,j,L)=>{sh.links.push({a,i,b,j,L});};
   const hoyoEn=(rd,x)=>hoyo?hoyo(rd.piso,x):null;          // {a, b, d}: un hoyo abierto en ese piso, en px del piso
-  const sueloEn=(rd,x)=>{const h=hoyoEn(rd,x);return rd.F+(h?h.d:0);};
+  const sueloEn=(rd,x)=>{const h=hoyoEn(rd,x);return rd.F+(h?(h.trampa?60*rd.s:h.d):0);};   // la trampilla no tiene fondo: para la sombra y los reflejos, un suelo cercano
   const enPozo=rd=>{const h=hoyoEn(rd,rd.P[CAD].x);return h&&rd.P[CAD].y>rd.F+4*rd.s?h:null;};
 
   // ---- efectos: golpes con onomatopeya, polvo, estrellitas, corazones y lo que dicen
@@ -70,6 +151,7 @@ window.Trapo=(()=>{
     if(ya-rd.golpeT<380)return;
     rd.golpeT=ya;const sh=rd.show,fuerte=v>420*rd.s;
     suena(txt==="¡BONK!"?"bonk":"plaf",rd.info.tono);
+    if(txt==="¡CLANG!")suena("clang");
     if(fuerte||!sh.unGolpe||txt){fx(sh,{tipo:"txt",x,y:(y??rd.F)-38*rd.s,txt:txt||elige(GOLPES),dur:900});sh.unGolpe=true;sh.sac=ya;}
     const yp=y??rd.F;
     for(let i=0;i<5;i++)fx(sh,{tipo:"polvo",x:x+azar(-10,10)*rd.s,y:yp-2*rd.s,vx:azar(-40,40)*rd.s,vy:azar(-30,-8)*rd.s,dur:azar(450,800)});
@@ -91,12 +173,25 @@ window.Trapo=(()=>{
       if(rd.alcanza){const q=rd.alcanza();rd.T[MD]=[q.x,q.y];rd.T[MI]=[q.x,q.y];rd.k[MD]=.45;rd.k[MI]=.2;}
       else if(rd.reflejo==="suelo"&&s<1){rd.T[MI]=[h.x+dd*20*S,fl-3*S];rd.T[MD]=[h.x+dd*27*S,fl-3*S];rd.k[MI]=rd.k[MD]=.16;}
       else if(rd.reflejo==="aletea"&&s<1.4){const c=rd.P[PEC];rd.T[MI]=[c.x-(12+Math.sin(s*31)*5)*S,c.y-(13+Math.sin(s*23)*4)*S];rd.T[MD]=[c.x+(12+Math.sin(s*27+1)*5)*S,c.y-(13+Math.sin(s*29+2)*4)*S];rd.k[MI]=rd.k[MD]=.12;}   // manos arriba al alcance del brazo (≤ 21 desde el pecho): un blanco fuera de alcance lo impulsaba solo hacia arriba
-      if((s>.6&&quieto(rd))||s>2.6)ir(rd,"suelo");
+      else if(rd.reflejo==="cabeza"&&s<1.8){const c=rd.P[CAB],a=Math.atan2(c.y-rd.P[PEC].y,c.x-rd.P[PEC].x);   // se protege la cabeza: una mano a cada lado del casco
+        rd.T[MI]=[c.x+Math.cos(a+1.6)*13*S,c.y+Math.sin(a+1.6)*13*S];rd.T[MD]=[c.x+Math.cos(a-1.6)*13*S,c.y+Math.sin(a-1.6)*13*S];rd.k[MI]=rd.k[MD]=.3;rd.cara="apretado";rd.boca=0;}
+      if(rd.agarrar===undefined)rd.agarrar=Math.random()<.6;   // Euphoria: al caer busca de qué agarrarse (mueble, barandal, otro robot)
+      if(rd.fijo){
+        const F0=rd.fijo,hm=rd.P[F0.i],q=F0.o?F0.o.P[F0.j]:F0.pt();
+        if(ya>F0.hasta||Math.hypot(q.x-hm.x,q.y-hm.y)>9*S||(F0.o&&!Shs.includes(F0.o.show))){rd.fijo=null;rd.soltoT=ya;if(Math.random()<.35)dice(rd.show,rd,elige(["¡Me resbalo!","¡Uy!","Ya no aguanto…","¡Adióóós!"]));}
+        else{rd.cara="apretado";rd.boca=0;}
+      }else if(rd.agarrar&&!rd.alcanza&&s>.08&&s<1.7&&ya-(rd.soltoT||-1e9)>900){
+        const q=buscaAsa(rd);
+        if(q){if(q.d<6*S)agarra(rd,q);else if(q.d<28*S){rd.T[q.i]=[q.x,q.y];rd.k[q.i]=.2;}}
+      }
+      if(!rd.fijo&&((s>.6&&quieto(rd))||s>2.6))ir(rd,"suelo");
     }
     else if(st==="suelo"){
       rd.k.fill(0);rd.cara=rd.dormido?"dormido":s<.7?"apretado":"triste";
       if(rd.estira){const q=rd.estira(),i=manoCerca(rd,q);rd.T[i]=[q.x,q.y];rd.k[i]=.25;}
-      if(!rd.espera&&s*1000>rd.dSuelo*(rd.dormido?1.6:1))levanta(rd);
+      const P0=enPozo(rd);
+      if(P0&&P0.trampa){for(const p of rd.P){p.px-=cl((P0.a+P0.b)/2-p.x,-1,1)*40*S*H;}ir(rd,"cae");}   // atorado en el borde de la trampilla: se escurre hacia el hueco
+      else if(!rd.espera&&s*1000>rd.dSuelo*(rd.dormido?1.6:1))levanta(rd);
     }
     else if(st==="rodillas"){
       pose(rd,RODILLAS);rd.k.fill(.04+.42*suave(s/.5));rd.cara="enfocado";
@@ -117,7 +212,15 @@ window.Trapo=(()=>{
     else if(st==="listo"){             // se sacude y sigue como si nada
       pose(rd,PARADO);const a=Math.sin(s*20)*3.5*S*(1-cl(s/.7));rd.T[CAB][0]+=a;rd.k.fill(1);rd.cara=s<.35?"normal":"feliz";
       if(!rd.dijo&&s>.15){rd.dijo=true;if(Math.random()<.5)dice(rd.show,rd,elige(["No pasó nada.","Lo planeé.","¡Estoy bien!","Ups.","Nadie vio eso."]));}
-      if(s>.75)rd.fin=true;
+      if(s>.75){
+        if(rd.AY<-4*S){                // quedó encima de un mueble: se baja de un brinco por la orilla más cercana
+          const c=colsDe(rd.piso).filter(c=>(c.f==="plat"||c.f==="caja"||c.f==="seg")&&rd.AX>=Math.min(c.x0,c.x1)-2&&rd.AX<=Math.max(c.x0,c.x1)+2),
+            x0=c.length?Math.min(...c.map(c=>Math.min(c.x0,c.x1))):rd.AX,x1=c.length?Math.max(...c.map(c=>Math.max(c.x0,c.x1))):rd.AX,
+            dd=rd.AX-x0<x1-rd.AX?-1:1,ob=(dd<0?x0-14*S:x1+14*S);
+          rd.salto={h:16*S,dx:cl(ob,rd.lo+10*S,rd.hi-10*S)-rd.AX,dur:.5,x0:rd.AX,y0:rd.AY};rd.d=dd;rd.dijo=true;suena("salto",rd.info.tono);ir(rd,"salta");
+          if(Math.random()<.4)dice(rd.show,rd,elige(["¡Abajo!","Con permiso.","¿Quién me subió aquí?","Bajando…"]));
+        }else rd.fin=true;
+      }
     }
     else if(st==="camina"){            // va a pie hacia rd.meta, con su paso de muñeco: piernas alternas y un saltito
       const dx=rd.meta-rd.AX,v=230*M().K*H*rd.ticks;
@@ -155,23 +258,57 @@ window.Trapo=(()=>{
       pose(rd,DUCK);rd.k.fill(1);rd.cara="wow";rd.boca=.7;
       if(s>.65)ir(rd,rd.tras||"guardia");
     }
+    else if(st==="tambalea"){          // Euphoria: equilibrio activo. El centro de masa contra la base de los pies; si se sale, paso de recuperación
+      const B=rd.bal,P=rd.P;               // hacia donde se cae, el torso se inclina al revés y los brazos se abren; si no alcanza, se cae
+      let mx=0,vx=0,mt=0;for(let i=0;i<7;i++){mx+=P[i].x*MASA[i];vx+=(P[i].x-P[i].px)*MASA[i];mt+=MASA[i];}
+      mx/=mt;vx=vx/mt/H;
+      const c=mx-rd.AX,cap=c+vx*.2,base=7*S,fuera=Math.abs(cap)/base;   // «capture point»: dónde quedaría el peso si no hace nada
+      if(B.paso){const q=cl((ya-B.paso.t0)/170);rd.AX=B.paso.x0+B.paso.dx*suave(q);if(q>=1){B.paso=null;suena("paso",rd.info.tono);}}
+      else if(fuera>1&&B.pasos<B.max&&s>.05){B.paso={t0:ya,x0:rd.AX,dx:cl(cap*1.1,-24*S,24*S),pie:Math.sign(cap)===rd.d?PD:PI,quedo:null};B.pasos++;
+        const j=B.paso.pie===PI?PD:PI;B.paso.quedo=[P[j].x,rd.F+PARADO[j][1]*S+rd.AY];}
+      pose(rd,PARADO);
+      if(B.paso){const q=cl((ya-B.paso.t0)/170);rd.T[B.paso.pie][1]-=8*S*Math.sin(q*Math.PI);rd.T[B.paso.pie===PI?PD:PI]=B.paso.quedo;}
+      const lean=cl(-cap/(2.5*base),-1,1),pc=rd.T[PEC],w=s*(12+rd.fase),amp=cl(fuera,0,1.4);
+      rd.T[CAB][0]+=lean*8*S;rd.T[PEC][0]+=lean*3.5*S;rd.T[CAD][0]-=lean*2*S;
+      rd.T[MI]=[pc[0]-(14+3*amp)*S+Math.sin(w)*4*S*amp,pc[1]-(3+9*amp)*S-Math.cos(w*1.3)*5*S*amp];   // los brazos abiertos, como molinos si va muy mal
+      rd.T[MD]=[pc[0]+(14+3*amp)*S+Math.sin(w+2)*4*S*amp,pc[1]-(3+9*amp)*S-Math.cos(w*1.3+1.4)*5*S*amp];
+      const gan=suave(s/1.2);rd.k.fill(.025+.6*gan);rd.k[PI]=rd.k[PD]=.9;rd.k[MI]=rd.k[MD]=.3;if(B.paso)rd.k[B.paso.pie]=.55;
+      rd.cara=fuera>.8?"wow":"apretado";rd.boca=fuera>.8?.55:0;
+      if(Math.abs(c)>3.2*base||(B.pasos>=B.max&&!B.paso&&fuera>1.5)||s>3.2||hoyoEn(rd,rd.AX)){   // no alcanzó: ahora sí se cae, hacia donde iba el peso
+        const dd=Math.sign(cap)||rd.d;rd.caeDir=dd;rd.k.fill(0);rd.reflejo=elige(["suelo","suelo","cabeza","aletea"]);
+        empuja(rd,CAB,dd*120+(P[CAB].x-P[CAB].px)/H/S,(P[CAB].y-P[CAB].py)/H/S);empuja(rd,PEC,dd*80+(P[PEC].x-P[PEC].px)/H/S,0);
+        if(!rd.dormido)suena("uy",rd.info.tono);rd.bal=null;ir(rd,"cae");
+      }
+      else if(!B.paso&&fuera<.55&&s>.35){B.ok+=rd.ticks*H;if(B.ok>.3){rd.bal=null;rd.dijo=Math.random()<.65;if(rd.dijo)dice(rd.show,rd,elige(["¡Uf, casi!","Equilibrio perfecto.","No me caí. Nadie diga nada.","Todo bajo control.","¡Ni me moví!","Ups… ¡pero no!"]));ir(rd,"listo");}}
+      else B.ok=0;
+    }
     else if(st==="salta"){             // brinco de verdad (barril, caja, acantilado corto): sube, encoge las piernas y cae de pie
       const J=rd.salto,q=cl(s/J.dur);
-      rd.AX=J.x0+J.dx*q;rd.AY=-J.h*Math.sin(q*Math.PI);
+      rd.AX=J.x0+J.dx*q;rd.AY=(J.y0||0)*(1-q*q)-J.h*Math.sin(q*Math.PI);
       pose(rd,PARADO);const enc=Math.sin(q*Math.PI);rd.T[PI][1]-=8*S*enc;rd.T[PD][1]-=10*S*enc;rd.T[PI][0]-=3*S*rd.d*enc;rd.T[MI][1]-=14*S*enc;rd.T[MD][1]-=18*S*enc;
       rd.k.fill(1);rd.cara=q<.5?"wow":"feliz";
       if(q>=1){rd.AY=0;ir(rd,"listo");if(!rd.dijo&&Math.random()<.55){rd.dijo=true;dice(rd.show,rd,elige(["¡Ja!","Fácil.","¡Hop!","¿Eso es todo?","Ni me tocó."]));}}
     }
   }
   function levanta(rd){                  // se levanta hacia donde quedó la cabeza: primero de rodillas, luego de pie. En un hoyo, después trepa
-    const h=rd.P[CAD],c=rd.P[CAB],P0=enPozo(rd);
-    rd.d=c.x>=h.x?1:-1;rd.alcanza=rd.estira=null;rd.dormido=false;
+    const h=rd.P[CAD],c=rd.P[CAB],P0x=enPozo(rd),P0=P0x&&!P0x.trampa?P0x:null;
+    rd.d=c.x>=h.x?1:-1;rd.alcanza=rd.estira=null;rd.dormido=false;rd.fijo=null;rd.bal=null;
+    const sp=P0?null:soporte(rd,h.x,h.y);  // cayó encima de una mesa, una caja o la rampa: se levanta ahí arriba
     if(P0){rd.pozo=P0;rd.AY=P0.d;rd.AX=cl(h.x,P0.a+10*rd.s,P0.b-10*rd.s);rd.sale=rd.sale||rd.caeDir||rd.d;}
-    else{rd.pozo=null;rd.AY=0;rd.AX=cl(h.x,rd.lo+10*rd.s,rd.hi-10*rd.s);}
+    else{rd.pozo=null;rd.AY=sp!==null&&rd.F-sp<150*rd.s?sp-rd.F:0;rd.AX=cl(h.x,rd.lo+10*rd.s,rd.hi-10*rd.s);}
     suena("upa",rd.info.tono);ir(rd,"rodillas");
   }
+  function tambalea(rd,vx,o={}){         // un golpe leve: no se cae de una vez, primero pelea por el equilibrio (y a veces gana)
+    const dd=Math.sign(vx)||rd.d;
+    rd.bal={pasos:0,ok:0,paso:null,max:o.pasos??elige([1,2,2,3,3,4])};rd.fijo=null;rd.caeDir=dd;
+    rd.k.fill(.025);rd.k[PI]=rd.k[PD]=.9;
+    empujaTodo(rd,[[vx*1.15,-25],[vx,-12],[vx*.5,0],[vx*1.2,-30],[vx*1.2,-30],[0,0],[0,0]]);
+    suena("uy",(rd.info.tono||900)*1.3);ir(rd,"tambalea");
+  }
+  const dePie=rd=>["quieto","listo","guardia","batea","esquiva","tambalea","camina","sostiene","agacha","jala"].includes(rd.st);
   function cae(rd,modo,dd=rd.d){         // el tropiezo de verdad: músculos a cero y un empujón según cómo se cae
-    rd.caeDir=dd;rd.k.fill(0);
+    if(modo==="tropiezo"&&!rd.trip&&Math.random()<.45&&dePie(rd)){rd.trip=true;tambalea(rd,dd*azar(170,260),{pasos:elige([1,2,3])});return;}   // tropezar no siempre es caer: unos pasitos y a veces se salva
+    rd.caeDir=dd;rd.k.fill(0);rd.bal=null;
     if(modo==="tropiezo"){rd.reflejo="suelo";empujaTodo(rd,[[dd*240,-110],[dd*175,-90],[dd*60,-60],[dd*210,-150],[dd*210,-150],[-dd*90,-40],[-dd*90,-40]]);}
     else if(modo==="resbalon"){rd.reflejo="aletea";empujaTodo(rd,[[-dd*130,-20],[-dd*40,-40],[dd*90,-170],[-dd*60,-260],[dd*60,-260],[dd*330,-270],[dd*300,-250]]);}
     else if(modo==="suave"){rd.reflejo="suelo";empujaTodo(rd,[[dd*120,-40],[dd*80,-30],[dd*20,-10],[dd*90,-40],[dd*90,-40],[0,0],[0,0]]);}
@@ -180,7 +317,8 @@ window.Trapo=(()=>{
     ir(rd,"cae");
   }
   function lanzaRd(rd,vx,vy,o={}){       // un golpe con dirección (barril, enemigo, resorte, viento): lo de arriba sale más rápido, así da la vuelta
-    rd.caeDir=Math.sign(vx)||rd.d;rd.k.fill(0);rd.reflejo=o.reflejo!==undefined?o.reflejo:elige(["suelo","aletea","aletea",null]);
+    if(!o.aplasta&&o.aguanta!==0&&Math.abs(vx)<380&&vy>-300&&dePie(rd)&&rd.st!=="tambalea"&&Math.random()<(o.aguanta??.6)){tambalea(rd,vx*.8);return;}   // un golpe leve se aguanta
+    rd.caeDir=Math.sign(vx)||rd.d;rd.k.fill(0);rd.bal=null;rd.fijo=null;rd.agarrar=undefined;rd.reflejo=o.reflejo!==undefined?o.reflejo:elige(["suelo","aletea","aletea","cabeza",null]);
     const giro=o.giro??1;
     rd.P.forEach((p,i)=>{const hf=-PARADO[i][1]/45;empuja(rd,i,vx*(1+giro*(hf-.5)*.9)*azar(.85,1.15),vy*azar(.88,1.12)*(i>=PI?.82:1)+(o.aplasta&&i===CAB?vy*.4:0));});
     if(!rd.dormido)suena("uy",rd.info.tono);
@@ -190,7 +328,7 @@ window.Trapo=(()=>{
 
   // ---- las escenas: quién participa, cómo empieza y qué pasa entre ellos
   const TXT={tropiezo:n=>`${n} se tropezó`,resbalon:n=>`${n} se resbaló`,desmayo:n=>`${n} se quedó dormido de pie`,
-    cadena:(n,o)=>`${o} atrapó a ${n}`,domino:(n,o)=>`${n} se llevó a ${o}`,ayuda:(n,o)=>`${o} ayuda a ${n}`,pie:(n,o)=>`${n} le agarró el pie a ${o}`,manos:(n,o)=>`${n} y ${o} · a bailar`};
+    tambalea:n=>`${n} pierde el equilibrio`,choque:(n,o)=>`${n} chocó con ${o}`,cadena:(n,o)=>`${o} atrapó a ${n}`,domino:(n,o)=>`${n} se llevó a ${o}`,ayuda:(n,o)=>`${o} ayuda a ${n}`,pie:(n,o)=>`${n} le agarró el pie a ${o}`,manos:(n,o)=>`${n} y ${o} · a bailar`};
   const Nom=x=>x.nom[0].toUpperCase()+x.nom.slice(1);
   const nuevaSh=(tipo,o={})=>({tipo,rds:[],links:[],fx:[],ini:ya,sac:-1e9,foco:false,zoom:o.zoom||1.85,bT:0,acc:0,lento:1,lentoT:-1e9,max:o.max||16000,quiet:!!o.quiet});
   function activa(sh,txt,o={}){           // la escena entra al taller; la cámara solo la sigue si no hay otra y se ve o toca
@@ -208,6 +346,8 @@ window.Trapo=(()=>{
     if(!A||(b&&!B)){for(const rd of sh.rds)rd.E.trapo=null;return null;}
     if(B){const dd=A.P[CAD].x<=B.P[CAD].x?1:-1;encara(A,dd);encara(B,-dd);}
     if(tipo==="tropiezo"||tipo==="resbalon"||tipo==="desmayo")cae(A,tipo);
+    else if(tipo==="tambalea")tambalea(A,(Math.random()<.5?-1:1)*azar(160,340));
+    else if(tipo==="choque"){A.meta=B.AX;ir(A,"camina");A.prisa=true;}
     else if(tipo==="cadena"||tipo==="domino"){
       cae(A,"tropiezo",A.d);A.reflejo=null;A.alcanza=()=>B.P[MD];
       B.agarra=()=>A.P[MD];ir(B,"sostiene");
@@ -256,6 +396,15 @@ window.Trapo=(()=>{
       if(sh.tipo==="ayuda"&&A.st==="listo"&&B.st==="jala"){sh.links=[];ir(B,"listo");B.dijo=true;fx(sh,{tipo:"corazon",x:(A.P[CAB].x+B.P[CAB].x)/2,y:A.P[CAB].y-24*A.s,dur:1400});}
       if(B.st==="quieto"&&f>6)A.espera=false;
     }
+    else if(sh.tipo==="choque"){        // va distraído y se estrella con el otro: los dos pelean por el equilibrio
+      if(A.st==="camina"&&Math.abs(A.AX-B.AX)<24*A.s){
+        const d=Math.sign(B.AX-A.AX)||A.d;golpe(B,(A.AX+B.AX)/2,300*A.s,B.F,"¡PUM!");
+        tambalea(B,d*azar(230,380));tambalea(A,-d*azar(120,220));
+        if(Math.random()<.6)dice(sh,B,elige(["¡Fíjate!","¿¡Y tú de dónde saliste!?","¡Mi café!","¡Oye!"]));
+      }
+      else if(A.st==="camina"&&f>6){ir(A,"listo");ir(B,"listo");}
+      if(A.st==="quieto"&&B.st==="quieto"&&f>1){A.fin=B.fin=true;}
+    }
     else if(sh.tipo==="manos"){
       if(A.st==="camina"&&B.st==="camina"&&A.llego&&B.llego){
         A.d=B.AX>=A.AX?1:-1;B.d=-A.d;A.AX0=A.AX;B.AX0=B.AX;sh.bT=ya;liga(sh,A,MD,B,MD,3*A.s);ir(A,"baila");ir(B,"baila");suena("baile",1100);
@@ -291,7 +440,8 @@ window.Trapo=(()=>{
 
   // ---- la física: Verlet a paso fijo con músculos, huesos, agarres, suelo con hoyos, paredes y techo
   function fisica(sh,n){
-    const L=sh.rds;
+    const L=sh.rds,Mm=M();
+    let C=L.map(rd=>colsDe(rd.piso));
     for(let it=0;it<n;it++){
       for(const rd of L){
         const G=GRAV*rd.s*H*H;
@@ -301,9 +451,14 @@ window.Trapo=(()=>{
       for(let r=0;r<4;r++){
         for(const rd of L)for(const [a,b,lo,hi] of HUESOS)hueso(rd.P[a],rd.P[b],lo*rd.s,hi*rd.s);
         for(const l of sh.links)hueso(l.a.P[l.i],l.b.P[l.j],0,l.L);
+        for(const rd of L)if(rd.fijo){    // agarrado: de un mueble (punto fijo, pesa infinito) o de otro robot (se reparten el tirón)
+          const F0=rd.fijo,hm=rd.P[F0.i];
+          if(F0.o)hueso(hm,F0.o.P[F0.j],0,F0.L);
+          else{const q=F0.pt(),dx=q.x-hm.x,dy=q.y-hm.y,d=Math.hypot(dx,dy);if(d>F0.L){const f=1-F0.L/d;hm.x+=dx*f;hm.y+=dy*f;if(F0.c.on&&r===3)F0.c.on((hm.x-hm.px)/H*.3,(hm.y-hm.py)/H*.3);}}
+        }
       }
-      for(const rd of L)for(let i=0;i<7;i++){
-        const p=rd.P[i];
+      for(let ri=0;ri<L.length;ri++)for(let i=0;i<7;i++){
+        const rd=L[ri],p=rd.P[i];
         const P0=hoyo?hoyo(rd.piso,p.px):null,dentro=P0&&p.py+p.r>rd.F+1;   // venía por debajo del suelo: está en el hoyo, sus paredes lo detienen
         if(dentro){
           if(p.x-p.r<P0.a){if(i<=CAD&&Math.abs(p.x-p.px)/H>260*rd.s)golpe(rd,P0.a,Math.abs(p.x-p.px)/H,p.y);p.x=P0.a+p.r;p.px=p.x;}
@@ -316,15 +471,31 @@ window.Trapo=(()=>{
           p.y=fl-p.r;p.py=p.y+Math.max(0,v)*H*.18;   // casi sin rebote
           p.px+=(p.x-p.px)*(rd.k[i]>.5?.5:.14);                         // rozamiento: los pies parados no patinan
         }
-        if(p.y-p.r<rd.techo){             // el techo: el que sale volando se da en la cabeza
+        if(p.y-p.r<rd.techo&&!(rd.sinTecho&&ya<rd.sinTecho.hasta&&p.x>rd.sinTecho.a&&p.x<rd.sinTecho.b)){   // el techo: el que sale volando se da en la cabeza (salvo por la trampilla por la que acaba de caer)
           const v=(p.y-p.py)/H;
           if(i<=CAD&&v<-260*rd.s)golpe(rd,p.x,-v,rd.techo+46*rd.s,"¡BONK!");
           p.y=rd.techo+p.r;p.py=p.y+v*.3*H;
         }
         if(p.x-p.r<rd.lo){if(i<=CAD&&(p.px-p.x)/H>320*rd.s)golpe(rd,rd.lo,(p.px-p.x)/H,p.y);p.x=rd.lo+p.r;p.px=p.x;}
         if(p.x+p.r>rd.hi){if(i<=CAD&&(p.x-p.px)/H>320*rd.s)golpe(rd,rd.hi,(p.x-p.px)/H,p.y);p.x=rd.hi-p.r;p.px=p.x;}
+        if(C[ri].length&&!NOCOL.has(rd.st))choca(rd,i,p,C[ri]);
       }
+      for(let ri=0;ri<L.length;ri++)if(L[ri].P[CAD].y>Mm.H&&bajaPiso(L[ri],Mm))C[ri]=colsDe(L[ri].piso);
     }
+  }
+  function bajaPiso(rd,m){               // cayó por la trampilla: pasa al piso de abajo (sus 7 puntos cambian de marco) y ahí sigue rebotando
+    const p=rd.piso;if(p<=0)return false;
+    const paso=m.pisoY(p-1)-m.pisoY(p);if(!(rd.P[CAD].y>paso+m.PCH+10*rd.s))return false;
+    const P0=hoyo?hoyo(p,rd.P[CAD].x):null,a=P0?P0.a:rd.P[CAD].x-30*rd.s,b=P0?P0.b:rd.P[CAD].x+30*rd.s;
+    for(const q of rd.P){q.y-=paso;q.py-=paso;}
+    for(const t of rd.T)t[1]-=paso;
+    rd.piso=p-1;rd.oy=m.pisoY(p-1);rd.sinTecho={a:a-10*rd.s,b:b+10*rd.s,hasta:ya+1600};rd.st0=ya;rd.ign=new Set();rd.fijo=null;rd.pozo=null;rd.AY=0;
+    rd.bajo=(rd.bajo||0)+1;
+    const sh=rd.show;sh.links=sh.links.filter(l=>l.a!==rd&&l.b!==rd);sh.max=Math.max(sh.max,ya-sh.ini+14000);
+    Taller.ponX(rd.E,rd.P[CAD].x,rd.piso,rd.d);rd.E.oy=null;
+    if(rd.st!=="cae"){rd.k.fill(0);ir(rd,"cae");}
+    if(Math.random()<.55)dice(sh,rd,elige(["¡Piso de abajo!","¿¡Por qué hay una trampilla!?","¡Aaaaah!","¡Atajo!","¡Ahí voy!"]));
+    return true;
   }
   function hueso(a,b,lo,hi){
     const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1e-6,L=d<lo?lo:d>hi?hi:d;
@@ -340,6 +511,8 @@ window.Trapo=(()=>{
     const op=[],cerca=pares.filter(p=>p.d>18*m.K&&p.d<70*m.K),medio=pares.filter(p=>p.d>40*m.K&&p.d<360*m.K),quietos=pares.filter(p=>!p.a.anda&&!p.b.anda&&p.d>30*m.K&&p.d<300*m.K);
     const andan=ok.filter(x=>x.anda);
     if(andan.length){op.push(["tropiezo",3,()=>[elige(andan)]]);op.push(["resbalon",2,()=>[elige(andan)]]);}
+    if(ok.length)op.push(["tambalea",3,()=>[elige(ok)]]);
+    if(medio.length)op.push(["choque",2,()=>{const p=elige(medio);return [p.a,p.b];}]);
     if(ok.length)op.push(["desmayo",1,()=>[elige(ok.filter(x=>!x.anda).length?ok.filter(x=>!x.anda):ok)]]);
     if(cerca.length){op.push(["cadena",3,()=>{const p=elige(cerca);return [p.a,p.b];}]);op.push(["domino",2,()=>{const p=elige(cerca);return [p.a,p.b];}]);}
     if(medio.length){op.push(["ayuda",3,()=>{const p=elige(medio);return [p.a,p.b];}]);op.push(["pie",2,()=>{const p=elige(medio);return [p.a,p.b];}]);}
@@ -347,7 +520,7 @@ window.Trapo=(()=>{
     if(!ok.length)return null;
     if(tipo){                           // a prueba: si no hay pareja cerca, la que se pueda
       const o=op.find(x=>x[0]===tipo);if(o)return [o[0],...o[2]()];
-      if(["tropiezo","resbalon","desmayo"].includes(tipo))return [tipo,elige(ok)];
+      if(["tropiezo","resbalon","desmayo","tambalea"].includes(tipo))return [tipo,elige(ok)];
       if(ok.length>1){const a=ok[0],b=ok.find(x=>x!==a&&u.get(x).piso===u.get(a).piso);if(b)return [tipo,a,b];}
       return ["tropiezo",elige(ok)];
     }
@@ -371,11 +544,53 @@ window.Trapo=(()=>{
       if(sh.dirige)sh.dirige(sh);else dirige(sh);
       if(n)fisica(sh,n);
       for(const rd of sh.rds)if(rd.P.some(p=>!isFinite(p.x+p.y+p.px+p.py))){rd.AX=rd.x0;rd.AY=0;rd.pozo=null;pose(rd,PARADO);rd.P.forEach((p,i)=>{p.x=p.px=rd.T[i][0];p.y=p.py=rd.T[i][1];});rd.fin=true;}   // si la física se rompe: de pie en su sitio y fuera
-      for(const rd of sh.rds){const c=rd.P[CAB];rd.bu+=((cl(-(c.x-c.px)/H/rd.s*.012,-4,4))-rd.bu)*.2;}
+      for(const rd of sh.rds){const c=rd.P[CAB];rd.bu+=((cl(-(c.x-c.px)/H/rd.s*.012,-4,4))-rd.bu)*.2;
+        if(rd.ign&&rd.ign.size&&ya-rd.ignT>250){rd.ignT=ya;const C=colsDe(rd.piso);for(const id of [...rd.ign]){const c=C.find(c=>c.id===id);if(!c||!encima(rd,c))rd.ign.delete(id);}}}   // lo que tenía encima al nacer vuelve a chocar en cuanto se separa
       sh.fx=sh.fx.filter(f=>ya-f.t0<f.dur);
       if(sh.rds.every(rd=>rd.fin))termina(sh);
     }
+    try{cruza();atropella(L);}catch(e){console.warn("trapo",e);}
   };
+  // ---- Euphoria entre escenas: los muñecos de escenas distintas chocan entre sí, y el que sale volando tumba (o hace tambalear) al que está de pie
+  const GRANDES=[CAB,PEC,CAD];
+  function cruza(){
+    if(Shs.length<2)return;
+    const R=[];for(const sh of Shs)for(const rd of sh.rds)R.push(rd);
+    for(let a=0;a<R.length;a++)for(let b=a+1;b<R.length;b++){
+      const A=R[a],B=R[b];if(A.show===B.show||A.piso!==B.piso||Math.abs(A.P[CAD].x-B.P[CAD].x)>80*A.s)continue;
+      let fuerte=0,nx0=0;
+      for(const i of GRANDES)for(const j of GRANDES){
+        const p=A.P[i],q=B.P[j],dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy),R0=p.r+q.r;
+        if(d>=R0||d<1e-6)continue;
+        const nx=dx/d,ny=dy/d,pen=R0-d,wa=p.w/(p.w+q.w),wb=1-wa;
+        p.x-=nx*pen*wa;p.y-=ny*pen*wa;q.x+=nx*pen*wb;q.y+=ny*pen*wb;
+        const rv=((q.x-q.px)-(p.x-p.px))*nx+((q.y-q.py)-(p.y-p.py))*ny;
+        if(rv<0){const J=-rv*1.3;p.px+=nx*J*wa;p.py+=ny*J*wa;q.px-=nx*J*wb;q.py-=ny*J*wb;const v=-rv/H;if(v>fuerte){fuerte=v;nx0=nx;}}
+      }
+      if(fuerte>170*A.s){
+        golpe(A,(A.P[PEC].x+B.P[PEC].x)/2,fuerte,Math.min(A.P[PEC].y,B.P[PEC].y)+30*A.s,fuerte>380*A.s?"¡CHOCAN!":null);
+        for(const [X,sg] of [[A,-1],[B,1]])if(dePie(X)&&X.st!=="tambalea"&&ya-X.st0>200){
+          if(fuerte<420*X.s&&Math.random()<.7)tambalea(X,sg*nx0*fuerte*.55/X.s);else lanzaRd(X,sg*nx0*fuerte*.7/X.s,-azar(120,240),{aguanta:0});
+        }
+      }
+    }
+  }
+  function atropella(L){                 // uno que vuela contra uno que trabaja (sin escena): lo empuja y entra al juego
+    if(Shs.length>=MAX_ESC)return;
+    for(const sh of Shs)for(const rd of sh.rds){
+      if(rd.st!=="cae"||ya-(rd.atropT||-1e9)<600)continue;
+      const h=rd.P[CAD],vx=(h.x-h.px)/H;if(Math.abs(vx)<200*rd.s)continue;
+      for(const info of L){
+        if(!libre(info))continue;const u=M().ubica(info.E);
+        if(u.piso!==rd.piso||Math.abs(u.px-h.x)>(16+12*info.esc)*rd.s||h.y<rd.F-70*info.esc*M().K)continue;
+        rd.atropT=ya;
+        const o={vx:Math.sign(vx)*azar(170,330),que:"lo atropelló un compañero",foco:false,dice:Math.random()<.5?elige(["¡Oye!","¡Fíjate!","¿¡De dónde saliste!?","¡Cuidado!"]):null};
+        if(Math.random()<.7)o.modo="tambalea";else{o.vy=-azar(150,260);o.aguanta=0;}
+        if(golpeAPI(info,o)){for(const p of rd.P){p.px+=(p.x-p.px)*.4;}golpe(rd,h.x,Math.abs(vx),h.y+30*rd.s,"¡PUM!");}
+        return;
+      }
+    }
+  }
   Cap.foco=()=>{                         // la cámara (si va siguiendo) se queda con la caída que tiene el foco; con el director, lo lleva su plano
     const sh=Shs.find(x=>x.foco);if(!sh)return null;
     const c=centro(sh);if(!c)return null;
@@ -417,7 +632,7 @@ window.Trapo=(()=>{
     const pie=U?.pierna||TINTA,zap=U?.zapato||TINTA,cuerpo=U?U.c:info.cuerpo;
     const k=P[CAB],c=P[PEC],h=P[CAD];
     const aT=Math.atan2(-(h.x-c.x),h.y-c.y),aH=Math.atan2(k.x-c.x,-(k.y-c.y));
-    const fl=sueloEn(rd,h.x),alto=cl((fl-h.y)/(30*s),0,1.5);
+    const sp=soporte(rd,h.x,h.y),fl=sp??sueloEn(rd,h.x),alto=cl((fl-h.y)/(30*s),0,1.5);   // la sombra cae en la mesa si está encima
     g.fillStyle=`rgba(0,0,0,${.2-alto*.08})`;g.beginPath();g.ellipse(h.x,fl+1*s,(16+6*(1-cl(alto)))*s,3.6*s,0,0,7);g.fill();
     for(const [i,ox] of [[PI,-6],[PD,6]]){            // piernas y zapatos
       const [lx,ly]=rot(ox*s*d,0,aT),f=P[i];
@@ -482,7 +697,7 @@ window.Trapo=(()=>{
     if(o.txt)fx(sh,{tipo:"txt",x:rd.P[CAB].x,y:rd.P[CAB].y-12*rd.s,txt:o.txt,dur:1000,col:o.col});
     if(o.dice)dice(sh,rd,o.dice);
     if(o.sale)rd.sale=o.sale;
-    if(o.modo)cae(rd,o.modo,Math.sign(o.vx||0)||rd.d);else lanzaRd(rd,o.vx||0,o.vy||0,o);
+    if(o.modo==='tambalea')tambalea(rd,o.vx||0,o);else if(o.modo)cae(rd,o.modo,Math.sign(o.vx||0)||rd.d);else lanzaRd(rd,o.vx||0,o.vy||0,o);
     if(o.alQuitar)rd.alQuitar=o.alQuitar;
     abre(r,o,o.titulo||`${Nom(info)} · ${o.que||"¡golpe!"}`);
     return {rd,sh};
@@ -523,6 +738,7 @@ window.Trapo=(()=>{
     libre,ocupado:E=>!!E.trapo||enUso(E),cupo:()=>Shs.length<MAX_ESC,
     golpe:golpeAPI,salta:saltaAPI,guardia:guardiaAPI,
     ponHoyo:f=>{hoyo=f;},
+    ponCols:f=>{cols=f;},soporte:(piso,x,y)=>soporte({piso,s:M().K,F:M().sue+3*M().K},x,y),
     enHoyo:(piso,a,b)=>Shs.some(sh=>sh.rds.some(rd=>rd.piso===piso&&rd.P.some(p=>p.x>a-4&&p.x<b+4&&p.y+p.r>rd.F+1))),   // alguien está dentro: el puente no se repone
     escenas:()=>Shs,
   };

@@ -464,6 +464,7 @@ $("ses").onclick=e=>{
   if(b.dataset.fab){Taller.ponFabrica(!Taller.Flo.on);return pedirSesiones();}
   abreSesion(b.dataset.id,b.dataset.v);
 };
+  if(b.dataset.cnb)return window.open(`http://${location.hostname}:8744/edificio`,"_blank","noopener");
 
 // ---------------------------------------------------------- cabecera, plan, etapas, cifras
 function pintarCab(r){
@@ -870,6 +871,9 @@ const Son=(()=>{
   };
   const notas=(t,fs,d=.11,v=.4,tipo="triangle")=>{fs.forEach((f,i)=>bip(t+i*d,f,f,d*1.5,v,tipo));return t+fs.length*d;};
   const R={
+    paso(t,f){sopla(t,.04,700,300,.35,1);bip(t,f*.18,f*.12,.05,.18,"triangle");},   // los muebles y el equilibrio (5-nov-2026): paso de recuperación,
+    clac(t){bip(t,260,120,.06,.4,"square");sopla(t+.05,.18,400,140,.5,.8);},          // la trampilla que se abre,
+    clang(t){bip(t,880,860,.25,.28,"triangle");bip(t,1320,1290,.18,.16,"sine");},      // un tubo o una lámpara de metal
     hola(t){const u=parlo(t,3,900);bip(u,1100,1900,.16,.4);},
     libros(t){for(let i=0;i<3;i++)sopla(t+i*.46,.13,2500,3900,.24,1.5);bip(t+1.45,520,780,.09,.22);},
     preguntar(t){const u=parlo(t,2,820,.34);bip(u,700,1250,.13,.3);},
@@ -2607,9 +2611,11 @@ const Taller=(()=>{
       raya(x,y,x,y+16*e,TINTA,1.6);g.beginPath();g.moveTo(x-13*e,y+27*e);g.lineTo(x+13*e,y+27*e);g.lineTo(x+5*e,y+16*e);g.lineTo(x-5*e,y+16*e);g.closePath();g.fillStyle="#6f7892";g.fill();
       circ(x,y+27*e,4*e,on?"#fff3a8":"#8b8f9e");
       if(on){const gr=g.createLinearGradient(0,y+27*e,0,b);gr.addColorStop(0,"rgba(255,243,168,.2)");gr.addColorStop(1,"rgba(255,243,168,0)");g.fillStyle=gr;g.beginPath();g.moveTo(x-12*e,y+27*e);g.lineTo(x+12*e,y+27*e);g.lineTo(x+78*e,b);g.lineTo(x-78*e,b);g.closePath();g.fill();}
+      const sw=Cap.lampara?Cap.lampara(p,x,y,e):0;g.save();if(sw){g.translate(x,y);g.rotate(-sw);g.translate(-x,-y);}   // se columpia si un muñeco de trapo la golpea (panel_vivo_peligros.js)
     }
     for(const i of ests){const k=ESTACIONES[i][0],q=PROP[k];if(q)q(fr(X(i))*W+46*e,b,e,T);}
     if(P.k==="pb"){
+      g.restore();
       const x=.5*W,s=b;caja(x,s-34*e,132*e,24*e,8*e,"#7a5a8c");caja(x,s-58*e,132*e,30*e,9*e,"#8d6ba1");for(const c of [0,1,2])marco(x+(4+c*42)*e,s-54*e,40*e,24*e,4,"#6a4d7a",1.5);caja(x-6*e,s-44*e,16*e,34*e,6*e,"#7a5a8c");caja(x+122*e,s-44*e,16*e,34*e,6*e,"#7a5a8c");
       const c=.715*W;caja(c,s-104*e,56*e,104*e,4,"#c9434f");caja(c+6*e,s-96*e,44*e,54*e,2,"#10131b");for(let f=0;f<3;f++)for(let n=0;n<3;n++)circ(c+(14+n*14)*e,s-(86-f*16)*e,4.6*e,COLORES[(f*3+n)%6]);caja(c+10*e,s-30*e,36*e,14*e,2,"#2a3044");
     }

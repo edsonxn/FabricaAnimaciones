@@ -31,13 +31,84 @@ window.Peligros=(()=>{
     az:{n:"Hueco entre azoteas",fondo:["#1d2a4a","#070b18"],roca:"#5d6b78",puente:"tablon",cont:"cielo",resbala:"charco",rueda:"barril",cae:"maceta",viento:"viento",
       hoyos:[{a:.27,b:.31,t:"brinco"},{a:.62,b:.69,t:"puente"}]},
   };
+  // 5-nov-2026: una TRAMPILLA por piso (salvo el sótano): una tapa con remaches que a veces se abre bajo quien la pisa; se cae al piso de abajo
+  // y por el camino se pega con lo que hay debajo (lámpara, tubo, mesa). Las x no caen nunca sobre estaciones, hoyos, escalera ni elevador.
+  const TRAMPA={pb:[.762,.795],p1:[.29,.324],p2:[.757,.79],p3:[.12,.154],az:[.555,.588]};
+  for(const k in TRAMPA)ESC[k].hoyos.push({a:TRAMPA[k][0],b:TRAMPA[k][1],t:"trampa"});
   const HOY=K_.map(k=>ESC[k].hoyos.map(h=>({...h,roto:false,rotoT:-1e9,repara:0,ang:0,va:0,carga:[]})));
   const prof=()=>{const m=M();return Math.max(20,m.H-6-(m.sue+3*m.K));};
   const lim=()=>{const W=M().W;return [.03*W,.97*.88*W];};
   const abierto=h=>h.t==="brinco"||h.roto;
-  const hoyoEn=(p,x)=>{const L=HOY[p];if(!L)return null;const W=M().W;for(const h of L){if(!abierto(h))continue;const a=h.a*W,b=h.b*W;if(x>a&&x<b)return {a,b,d:prof()};}return null;};
+  const hoyoEn=(p,x)=>{const L=HOY[p];if(!L)return null;const W=M().W;for(const h of L){if(!abierto(h))continue;const a=h.a*W,b=h.b*W;if(x>a&&x<b)return h.t==="trampa"?{a,b,d:1000,trampa:true}:{a,b,d:prof()};}return null;};
   T_.ponHoyo(hoyoEn);
-  const sueloObj=(p,x)=>{const m=M(),F=m.sue+3*m.K,h=hoyoEn(p,x);return h?F+h.d:F;};
+  const sueloObj=(p,x)=>{const m=M(),F=m.sue+3*m.K,h=hoyoEn(p,x);return h?F+Math.min(h.d,prof()+40):F;};
+
+  // ---- los MUEBLES (5-nov-2026, el usuario: «pon más muebles y cosas donde el ragdoll se golpee, que no sea todo piso plano»): cada uno se dibuja
+  // detrás de los robots y le pasa al muñeco sus colisionadores (Trapo.ponCols). x en fracciones del ancho, alturas en K sobre el suelo.
+  // dib:false = ya lo dibuja panel_vivo.html (tubos del sótano, sofá, maquinita, mesa de la azotea): aquí solo choca.
+  const MUE={
+    maq:[{k:"tubo",a:.12,b:.78,yc:66,r:1.6,dib:false},{k:"rampa",a:.385,b:.425,h:30},{k:"cajas",a:.425,n:3},{k:"lampara",x:.47,L:30},{k:"mesa",a:.70,b:.77,h:38,cosa:"caja"}],
+    pb:[{k:"sofa",a:.5,dib:false},{k:"maquinita",a:.715,dib:false},{k:"mesa",a:.275,b:.335,h:40,cosa:"taza"},{k:"cajas",a:.625,n:2}],
+    p1:[{k:"cajas",a:.11,n:3},{k:"estante",a:.105,b:.17,h:88},{k:"tubo",a:.765,b:.8,yc:34,r:5}],
+    p2:[{k:"tubo",a:.1,b:.14,yc:42,r:5},{k:"mesa",a:.135,b:.17,h:36,cosa:"botes"},{k:"rampa",a:.488,b:.51,h:30},{k:"cajas",a:.51,n:2}],
+    p3:[{k:"andamio",a:.29,b:.33,h:62},{k:"lampara",x:.565,L:28},{k:"mesa",a:.572,b:.622,h:38,cosa:"rollo"}],
+    az:[{k:"mesaAz",dib:false},{k:"cajas",a:.35,n:3},{k:"rampa",a:.72,b:.765,h:30},{k:"cajas",a:.765,n:1}],
+  };
+  const LAMP=K_.map(()=>[]);let COLS=null,colsKey="";
+  function lampara(p,x,y,L,r,dib){       // una lámpara colgante: péndulo que se columpia cuando la golpean o alguien se cuelga
+    const l={p,x,y,L,r,ang:0,va:0,dib};
+    l.c={f:"circ",x,y:y+L,r,id:`lamp${p}_${Math.round(x)}`,asa:true,rb:.35,fr:.05,txt:"¡CLANG!",on:(vx,vy)=>{const vt=vx*Math.cos(l.ang)-vy*Math.sin(l.ang);l.va=cl(l.va+vt/l.L*.5,-7,7);}};
+    LAMP[p].push(l);COLS=null;return l;
+  }
+  function construye(){                  // los colisionadores fijos de cada piso, en px del piso (se rehacen si cambia la medida del taller)
+    const m=M(),W=m.W,K=m.K,F=m.sue+3*K,key=`${W}|${K}|${m.sue}|${m.PCH}`;
+    if(COLS&&key===colsKey)return COLS;
+    if(key!==colsKey){for(const L of LAMP)for(let i=L.length-1;i>=0;i--)if(!L[i].dib)L.splice(i,1);colsKey=key;}
+    COLS=K_.map(()=>[]);let n=0;const id=()=>"m"+(n++);
+    K_.forEach((k,p)=>{
+      const C=COLS[p];
+      for(const o of MUE[k]){
+        if(o.k==="mesa"){const a=o.a*W,b=o.b*W,y=F-o.h*K;C.push({f:"plat",x0:a,y0:y,x1:b,y1:y,id:id(),asa:true,rb:.2});for(const x of [a+7*K,b-7*K])C.push({f:"seg",x0:x,y0:y+6*K,x1:x,y1:F-3*K,r:1.8*K,id:id()});}
+        else if(o.k==="estante"){const y=F-o.h*K;C.push({f:"plat",x0:o.a*W,y0:y,x1:o.b*W,y1:y,id:id(),asa:true,rb:.15});}
+        else if(o.k==="cajas"){const t=30*K,a=o.a*W;for(const [cx,cy] of [[0,0],[1,0],[.5,1]].slice(0,o.n))C.push({f:"caja",x0:a+cx*t,y0:F-(cy+1)*t,x1:a+cx*t+t,y1:F-cy*t,id:id(),asa:true,rb:.12});}
+        else if(o.k==="rampa"){C.push({f:"plat",x0:o.a*W,y0:F-2*K,x1:o.b*W,y1:F-o.h*K,id:id(),rb:.1,fr:.02});}
+        else if(o.k==="tubo"){const y=m.PCH+o.yc*K*(o.dib===false?1/K:1);C.push({f:"seg",x0:o.a*W,y0:y,x1:o.b*W,y1:y,r:o.r*K,id:id(),asa:true,rb:.3,txt:"¡CLANG!"});}
+        else if(o.k==="andamio"){const a=o.a*W,b=o.b*W,y=F-o.h*K;C.push({f:"plat",x0:a,y0:y,x1:b,y1:y,id:id(),asa:true,rb:.25});for(const x of [a+4*K,b-4*K])C.push({f:"seg",x0:x,y0:y+5*K,x1:x,y1:F-3*K,r:1.6*K,id:id()});}
+        else if(o.k==="lampara"){if(!LAMP[p].some(l=>Math.abs(l.x-o.x*W)<2))lampara(p,o.x*W,m.PCH,o.L*K,10*K,false);}
+        else if(o.k==="sofa"){const x=o.a*W,s=m.sue;C.push({f:"plat",x0:x,y0:s-34*K,x1:x+132*K,y1:s-34*K,id:id(),rb:.6,fr:.2});for(const ax of [x-6*K,x+122*K])C.push({f:"caja",x0:ax,y0:s-44*K,x1:ax+16*K,y1:F,id:id(),asa:true,rb:.4});}
+        else if(o.k==="maquinita"){const x=o.a*W;C.push({f:"caja",x0:x,y0:m.sue-104*K,x1:x+56*K,y1:F,id:id(),asa:true,rb:.15});}
+        else if(o.k==="mesaAz"){const x=.2*W;C.push({f:"plat",x0:x,y0:m.sue-98*K,x1:x+70*K,y1:m.sue-98*K,id:id(),asa:true,rb:.2});}
+      }
+      if(p<K_.length-1){                 // la escalera que sube desde este piso: rampa de un solo sentido (rueda por ella) y su pasamanos para agarrarse
+        const [f0,f1]=p%2?[.095,.03]:[.03,.095],paso=m.pisoY(p)-m.pisoY(p+1),x0=f0*W,x1=f1*W,y0=m.sue,y1=m.sue-paso,tm=(y0-(m.PCH+16))/(y0-y1);   // ESC_A/ESC_B y rampa() de panel_vivo.html
+        const xe=x0+(x1-x0)*tm,ye=y0+(y1-y0)*tm,[ax,ay,bx,by]=x0<xe?[x0,y0,xe,ye]:[xe,ye,x0,y0];
+        C.push({f:"plat",x0:ax,y0:ay,x1:bx,y1:by,id:id(),rb:.08,fr:.03});
+        C.push({f:"asa",x0:ax,y0:ay-46,x1:bx,y1:by-46,id:id()});
+      }
+      if(k==="az")C.push({f:"asa",x0:.03*W,y0:m.sue-34,x1:.97*.88*W,y1:m.sue-34,id:id()});   // el barandal de la azotea
+    });
+    return COLS;
+  }
+  const colsCache=K_.map(()=>({v:null,n:-1}));
+  T_.ponCols&&T_.ponCols(p=>{
+    const B=construye()[p];if(!B)return [];const c=colsCache[p];
+    if(c.n!==LAMP[p].length||c.base!==B){c.v=B.concat(LAMP[p].map(l=>l.c));c.n=LAMP[p].length;c.base=B;}
+    return c.v;
+  });
+  Cap.lampara=(k,x,y,e)=>{               // las lámparas que ya dibuja panel_vivo.html (una por cuarto): se registran al pintarse y devuelven su ángulo
+    const p=typeof k==="number"?k:K_.indexOf(k);if(p<0)return 0;
+    let l=LAMP[p].find(l=>Math.abs(l.x-x)<2);
+    if(!l)l=lampara(p,x,y,21*e,11*e,true);
+    return l.ang;
+  };
+  function pasaMue(dt){
+    const s=Math.min(dt,50)/1000,g0=900*M().K;
+    for(const L of LAMP)for(const l of L){
+      for(let k=0;k<3;k++){l.va+=(-g0/l.L*Math.sin(l.ang)-1.3*l.va)*s/3;l.ang=cl(l.ang+l.va*s/3,-1.25,1.25);}
+      if(Math.abs(l.ang)<.002&&Math.abs(l.va)<.002){l.ang=0;l.va=0;}
+      l.c.x=l.x+Math.sin(l.ang)*l.L;l.c.y=l.y+Math.cos(l.ang)*l.L;l.c.bb=null;
+    }
+  }
 
   // ---- textos que saltan (los de los enemigos y obstáculos; los de los robots los pone el muñeco)
   const txts=[];
@@ -61,13 +132,23 @@ window.Peligros=(()=>{
   const salto=new Map();let tablas=[];
   function caerHoyo(info,d,txt,alto=0){
     info.E.oy=null;
-    T_.golpe(info,{vx:d*azar(50,120),vy:-azar(0,90),alto,reflejo:"aletea",sale:d,dice:txt,que:"¡al hoyo!",giro:.6,lejos:.4,cool:5000});
+    T_.golpe(info,{vx:d*azar(50,120),vy:-azar(0,90),alto,reflejo:"aletea",sale:d,dice:txt,que:"¡al hoyo!",giro:.6,lejos:.4,cool:5000,aguanta:0});
   }
   function romper(h,p,quien,d){
     const W=M().W,a=h.a*W,b=h.b*W;
     h.roto=true;h.rotoT=ya;h.ang=0;h.va=0;h.repara=0;suena("crack");pop(p,(a+b)/2,M().sue-60*M().K,"¡CRACK!",ROJO,1100);
     for(const r of robots())if(r.u.piso===p&&r.u.px>a&&r.u.px<b)caerHoyo(r.i,r.i.E.dir<0?-1:1,elige(["¡Nooo!","¿Y el piso?","¡Ayudaaa!"]));
     if(quien&&!quien.E.trapo)caerHoyo(quien,d,elige(["¡CRAAACK!","¡Esto no estaba en el plan!","¡Mamááá!","Ups…"]));
+  }
+  function caeTrampa(info,d,txt){
+    info.E.oy=null;
+    T_.golpe(info,{vx:d*azar(5,30),vy:-azar(20,80),reflejo:elige(["cabeza","aletea","aletea",null]),dice:txt,que:"¡trampilla!",giro:.4,lejos:.45,cool:4000,aguanta:0,max:26000});
+  }
+  function abreTrampa(h,p,quien,d){
+    const W=M().W,K=M().K,a=h.a*W,b=h.b*W;
+    h.roto=true;h.rotoT=ya;h.ang=0;h.va=.08;suena("clac");pop(p,(a+b)/2,M().sue-60*K,elige(["¡CLAC!","¡TRAMPILLA!","¡Ups!"]),ROJO,1100);
+    for(const r of robots())if(r.u.piso===p&&r.u.px>a&&r.u.px<b&&r.i!==quien)caeTrampa(r.i,r.i.E.dir<0?-1:1,elige(["¡Nooo!","¿Y el piso?"]));
+    if(quien&&!quien.E.trapo)caeTrampa(quien,d,elige(["¡Aaaah!","¿¡Una trampilla!?","¡Esto no estaba en el plano!","¡Mamááá!",null]));
   }
   function andar(){
     const m=M(),W=m.W,K=m.K,vistos=new Set();
@@ -79,7 +160,13 @@ window.Peligros=(()=>{
       const h=hs.find(q=>px>q.a*W-mg&&px<q.b*W+mg);if(!h)continue;
       const a=h.a*W,b=h.b*W,base=m.pisoY(u.piso),q=(px-a)/(b-a);
       vistos.add(E);
-      let st=salto.get(E);if(!st||st.h!==h){st={h,falla:Math.random()<.24,rompe:Math.random()<.16,q0:azar(.3,.7),alto:(b-a)*.6+22*K*info.esc};salto.set(E,st);}
+      let st=salto.get(E);if(!st||st.h!==h){st={h,falla:Math.random()<.24,rompe:Math.random()<.16,abre:Math.random()<.35,q0:azar(.3,.7),alto:(b-a)*.6+22*K*info.esc};salto.set(E,st);}
+      if(h.t==="trampa"){               // la tapa aguanta… casi siempre. Abierta, el que pasa se cae (no hay tablón improvisado)
+        E.oy=null;
+        if(!h.roto&&info.anda&&st.abre&&q>.3&&q<.7&&ya-h.rotoT>6000&&T_.cupo()){salto.delete(E);abreTrampa(h,u.piso,info,d);}
+        else if(h.roto&&info.anda&&q>.15&&q<.85&&T_.cupo()){salto.delete(E);caeTrampa(info,d,elige(["¿¡Otra vez!?","¡El hoyo sigue ahí!","No vi el letrero… porque no hay."]));}
+        continue;
+      }
       if(!abierto(h)){                  // puente entero: se dobla bajo el que pasa y a veces truena
         if(q>0&&q<1){
           const sag=(h.t==="puente"?(ESC[K_[u.piso]].puente==="cuerdas"?9:ESC[K_[u.piso]].puente==="pelicula"?5:2.5):0)*K*Math.sin(q*Math.PI);
@@ -98,6 +185,12 @@ window.Peligros=(()=>{
     for(const [E,s] of salto)if(!vistos.has(E)){if(!E.via&&!E.trapo)E.oy=null;salto.delete(E);}
     for(let p=0;p<HOY.length;p++)for(const h of HOY[p]){   // los puentes rotos se balancean y, cuando ya nadie está abajo, se reponen
       if(!h.roto)continue;
+      if(h.t==="trampa"){              // la tapa cuelga de su bisagra; a los 4 s sin nadie dentro, se cierra sola
+        if(!h.repara){h.va+=(1.45-h.ang)*.05-h.va*.12;h.ang+=h.va;}
+        if(!h.repara&&ya-h.rotoT>4000&&!T_.enHoyo(p,h.a*W,h.b*W))h.repara=ya;
+        if(h.repara){h.ang=1.45*(1-cl((ya-h.repara)/350));if(ya-h.repara>350){h.roto=false;h.repara=0;h.ang=0;suena("clac");}}
+        continue;
+      }
       h.va+=(1.25-h.ang)*.02-h.va*.06;h.ang+=h.va;
       if(!h.repara&&ya-h.rotoT>7500&&!T_.enHoyo(p,h.a*W,h.b*W))h.repara=ya;
       if(h.repara&&ya-h.repara>700){h.roto=false;h.repara=0;suena("upa",1300);pop(p,(h.a+h.b)/2*W,M().sue-50*K,elige(["Puente nuevo","¡Reparado!","Ahora sí aguanta"]),VERDE,1000,false);}
@@ -409,6 +502,82 @@ window.Peligros=(()=>{
     g.font=`700 ${Math.max(8,9*K)}px "Segoe UI",system-ui,sans-serif`;g.textAlign="center";g.fillStyle="rgba(255,255,255,.75)";
     g.fillText(h.t==="brinco"?"¡SALTA!":E.n,(h.a+h.b)/2*W,y+(m.H-m.sue)*.55);
   }
+  // ---- los muebles y las trampillas, dibujados (detrás de los robots)
+  function dibujaMueble(p,o,t){
+    const m=M(),W=m.W,K=m.K,F=m.sue+3*K,T=t/1000;
+    if(o.k==="mesa"){
+      const a=o.a*W,b=o.b*W,y=F-o.h*K;
+      for(const x of [a+7*K,b-7*K])raya(x,y+5*K,x,F-1,"#7f5a38",3.4*K);
+      raya(a+7*K,y+(F-y)*.62,b-7*K,y+(F-y)*.62,"#7f5a38",1.8*K);
+      caja(a,y,b-a,6*K,2*K,"#a97a4f");raya(a+3*K,y+1.8*K,b-3*K,y+1.8*K,"#c9a070",1.2);marco(a,y,b-a,6*K,2*K,TINTA,1.2);
+      const cx=a+(b-a)*.62;
+      if(o.cosa==="taza"){caja(cx-5*K,y-11*K,10*K,11*K,2*K,"#f2efe4");aro(cx+6*K,y-6*K,3*K,"#f2efe4",1.6*K,-1.4,1.4);for(let i=0;i<2;i++){const f=(T*.6+i*.5)%1;g.globalAlpha=.5*(1-f);raya(cx-2*K+i*4*K,y-13*K-f*12*K,cx-1*K+i*4*K+Math.sin(T*3+i)*2*K,y-17*K-f*12*K,"#fff",1.4);g.globalAlpha=1;}}
+      else if(o.cosa==="caja"){caja(cx-14*K,y-12*K,28*K,12*K,2*K,ROJO);caja(cx-6*K,y-16*K,12*K,4*K,1.5*K,"#8e2d36");raya(cx-14*K,y-7*K,cx+14*K,y-7*K,"#8e2d36",1.2);}
+      else if(o.cosa==="botes"){[ROSA,AZUL,AMAR].forEach((c,i)=>{const x=a+(b-a)*(.25+i*.25);caja(x-5*K,y-12*K,10*K,12*K,1.5*K,"#d7dbe6");caja(x-5*K,y-7*K,10*K,4*K,0,c);});}
+      else if(o.cosa==="rollo"){circ(cx,y-11*K,11*K,"#232838");for(let q=0;q<6;q++){const u=q*1.047+T*.4;circ(cx+Math.cos(u)*6*K,y-11*K+Math.sin(u)*6*K,2*K,"#7f89a6");}circ(cx,y-11*K,2*K,"#d7dbe6");}
+    }
+    else if(o.k==="estante"){
+      const a=o.a*W,b=o.b*W,y=F-o.h*K,w=b-a;
+      for(const x of [a+6*K,b-6*K]){g.beginPath();g.moveTo(x-4*K,y+5*K);g.lineTo(x+4*K,y+5*K);g.lineTo(x-4*K,y+14*K);g.closePath();g.fillStyle="#6a4f36";g.fill();}
+      const COL=[ROJO,AZUL,AMAR,VERDE,ROSA,LILA];let x=a+4*K,i=0;
+      while(x<b-12*K){const bw=(5+(i*7)%4)*K,bh=(14+(i*11)%9)*K;caja(x,y-bh,bw,bh,1,COL[(i*5+p)%6]);raya(x+1,y-bh+3*K,x+bw-1,y-bh+3*K,"rgba(255,255,255,.5)",1);x+=bw+1;i++;if(i===4)x+=8*K;}
+      caja(b-12*K,y-12*K,9*K,12*K,3*K,"rgba(160,210,255,.55)");
+      caja(a,y,w,5*K,1.5,"#8d6a4a");marco(a,y,w,5*K,1.5,TINTA,1);
+    }
+    else if(o.k==="cajas"){
+      const t=30*K,a=o.a*W;
+      [[0,0],[1,0],[.5,1]].slice(0,o.n).forEach(([cx,cy],i)=>{
+        const x=a+cx*t,y=F-(cy+1)*t;caja(x,y,t,t,2,i%2?"#bf8f58":"#c99a62");marco(x,y,t,t,2,"#8a6538",1.4);caja(x+t*.42,y,t*.16,t,0,"#e3c48e");
+        if(i===0)letra("FRÁGIL",x+t*.5,y+t*.72,5.6*K,"#7a3b2a");else{raya(x+t*.22,y+t*.62,x+t*.22,y+t*.36,"#7a3b2a",1.4);raya(x+t*.22,y+t*.36,x+t*.16,y+t*.44,"#7a3b2a",1.4);raya(x+t*.22,y+t*.36,x+t*.28,y+t*.44,"#7a3b2a",1.4);}
+      });
+    }
+    else if(o.k==="rampa"){
+      const x0=o.a*W,y0=F-2*K,x1=o.b*W,y1=F-o.h*K,L=Math.hypot(x1-x0,y1-y0);
+      g.save();g.translate(x0,y0);g.rotate(Math.atan2(y1-y0,x1-x0));caja(0,-1*K,L,6*K,2*K,"#b98a5c");marco(0,-1*K,L,6*K,2*K,TINTA,1.1);
+      for(let q=6*K;q<L-4*K;q+=11*K)raya(q,0,q,4*K,"#8d6a4a",1);g.restore();
+    }
+    else if(o.k==="tubo"){
+      const a=o.a*W,b=o.b*W,y=m.PCH+o.yc*K,r=o.r*K;
+      raya(a,y,b,y,"#596480",r*2);raya(a,y-r*.45,b,y-r*.45,"#8a95b2",r*.5);
+      for(let x=a+20*K;x<b-8*K;x+=46*K){caja(x-2.5*K,y-r-2*K,5*K,r*2+4*K,1,"#3a4259");}
+      caja(a-3*K,y-r-3*K,6*K,r*2+6*K,1.5,"#3a4259");caja(b-3*K,y-r-3*K,6*K,r*2+6*K,1.5,"#3a4259");
+      if(Math.sin(T*1.7+a)>.75){g.globalAlpha=.5;for(let i=0;i<3;i++)circ(a+(b-a)*.7+i*3*K,y-r-4*K-i*5*K,(2+i)*K,"#e8ecf5");g.globalAlpha=1;}   // a veces suelta vapor
+    }
+    else if(o.k==="andamio"){
+      const a=o.a*W,b=o.b*W,y=F-o.h*K;
+      for(const x of [a+4*K,b-4*K])raya(x,y+4*K,x,F-1,"#7f89a6",3*K);
+      raya(a+4*K,y+6*K,b-4*K,F-3*K,"#9aa3b8",1.4);raya(b-4*K,y+6*K,a+4*K,F-3*K,"#9aa3b8",1.4);
+      caja(a,y,b-a,6*K,1.5,"#a97a4f");marco(a,y,b-a,6*K,1.5,TINTA,1.1);
+      g.save();g.beginPath();g.rect(a,y+6*K,b-a,3*K);g.clip();for(let x=a;x<b;x+=8*K){g.beginPath();g.moveTo(x,y+6*K);g.lineTo(x+4*K,y+6*K);g.lineTo(x+1*K,y+9*K);g.lineTo(x-3*K,y+9*K);g.closePath();g.fillStyle=AMAR;g.fill();}g.restore();
+      caja(a+(b-a)*.3,y-9*K,12*K,9*K,1,"#596480");   // una cubeta de herramientas
+    }
+  }
+  function dibujaLampara(l){             // las que pone este archivo (las de los cuartos las dibuja panel_vivo.html con el mismo ángulo)
+    const K=M().K;g.save();g.translate(l.x,l.y);g.rotate(-l.ang);
+    raya(0,0,0,l.L-8*K,TINTA,1.6);
+    g.beginPath();g.moveTo(-12*K,l.L+4*K);g.lineTo(12*K,l.L+4*K);g.lineTo(5*K,l.L-8*K);g.lineTo(-5*K,l.L-8*K);g.closePath();g.fillStyle="#7f89a6";g.fill();g.strokeStyle=TINTA;g.lineWidth=1.2;g.stroke();
+    circ(0,l.L+4*K,4*K,"#fff3a8");
+    const gr=g.createRadialGradient(0,l.L+6*K,2,0,l.L+6*K,46*K);gr.addColorStop(0,"rgba(255,243,168,.28)");gr.addColorStop(1,"rgba(255,243,168,0)");g.fillStyle=gr;g.fillRect(-46*K,l.L-30*K,92*K,90*K);
+    g.restore();
+  }
+  function dibujaTrampa(p,h){            // en el suelo: tapa con remaches; abierta, el tiro oscuro y la tapa colgando de su bisagra
+    const m=M(),W=m.W,K=m.K,a=h.a*W,b=h.b*W,w=b-a,y=m.sue;
+    if(h.roto){
+      const gr=g.createLinearGradient(0,y,0,m.H);gr.addColorStop(0,"#10131b");gr.addColorStop(1,"#05070b");g.fillStyle=gr;g.fillRect(a,y,w,m.H-y);
+      caja(a-2,y,3,m.H-y,0,"#3a4259");caja(b-1,y,3,m.H-y,0,"#3a4259");
+      g.save();g.translate(a,y+1);g.rotate(h.ang);caja(0,-1,w,4.5*K,1,"#6b7590");for(const f of [.15,.85])circ(w*f,1.2*K,1.1*K,"#3a4259");g.restore();
+    }else{
+      caja(a,y-1,w,4.5*K,1,"#6b7590");marco(a,y-1,w,4.5*K,1,"#3a4259",1.2);
+      for(const f of [.12,.38,.62,.88])circ(a+w*f,y+1.2*K,1.1*K,"#3a4259");
+      caja(a-3*K,y-1,4*K,4.5*K,1,"#3a4259");   // la bisagra
+    }
+  }
+  function dibujaEscotilla(p,h){         // en el techo del piso de abajo: el marco de la trampilla de arriba; si está abierta, el hueco
+    const m=M(),W=m.W,K=m.K,a=h.a*W,b=h.b*W,w=b-a,y=m.PCH;
+    caja(a-4*K,y-1,w+8*K,5*K,1,"#3a4259");
+    if(HOY[p+1].find(x=>x===h).roto){caja(a,y-1,w,6*K,0,"#05070b");g.globalAlpha=.5;for(let i=0;i<4;i++){const f=(ya/700+i*.25)%1;circ(a+w*((i*.37+.2)%1),y+4*K+f*40*K,1.4*K,"#c9cedb");}g.globalAlpha=1;}
+    else for(const f of [.2,.8])circ(a+w*f,y+1.5*K,1.1*K,"#7f89a6");
+  }
   function tablon(o){const m=M(),K=m.K;caja(o.x-22*K*o.s,m.sue-1,44*K*o.s,5*K,1.5,"#a97a4f");raya(o.x-20*K*o.s,m.sue+1.4*K,o.x+20*K*o.s,m.sue+1.4*K,"#7f5a38",1);}
   function dibujaSuelo(o){
     const K=M().K,T=ya/1000;
@@ -509,7 +678,7 @@ window.Peligros=(()=>{
     ya=t;const d=Math.min(dt||16,50);
     try{
       for(const i of Taller.entidades())if(i.E.trapo)calma.set(i.E,t);
-      andar();pasaObs(d);pasaEnem(d);
+      andar();pasaObs(d);pasaEnem(d);pasaMue(d);
       if(!prox)prox=t+2500;
       if(t>=prox){prox=t+azar(...cadaMs);if(T_.cupo())dispara();}
     }catch(e){console.warn("peligros",e);}
@@ -519,7 +688,10 @@ window.Peligros=(()=>{
     prevPiso&&prevPiso(k,t);
     const p=K_.indexOf(k);if(p<0)return;
     try{
-      for(let i=0;i<HOY[p].length;i++){const h=HOY[p][i];dibujaHoyo(p,h,i,t);letrero(p,h,t);if(h.t==="puente")dibujaPuente(p,h,t);}
+      for(const o of MUE[k])if(o.dib!==false)dibujaMueble(p,o,t);
+      for(const l of LAMP[p])if(!l.dib)dibujaLampara(l);
+      if(HOY[p+1])for(const h of HOY[p+1])if(h.t==="trampa")dibujaEscotilla(p,h);
+      for(let i=0;i<HOY[p].length;i++){const h=HOY[p][i];if(h.t==="trampa"){dibujaTrampa(p,h);continue;}dibujaHoyo(p,h,i,t);letrero(p,h,t);if(h.t==="puente")dibujaPuente(p,h,t);}
       for(const o of tablas)if(o.p===p)tablon(o);
       for(const o of obs)if(o.p===p)dibujaSuelo(o);
     }catch(e){console.warn("peligros",e);}
@@ -527,6 +699,7 @@ window.Peligros=(()=>{
   Cap.sobre=(k,p,t,dt)=>{
     prevSobre&&prevSobre(k,p,t,dt);
     try{
+      for(const h of HOY[p]||[])if(h.t==="trampa"&&h.roto&&p>0){const m=M(),W=m.W;g.globalAlpha=.75;caja(h.a*W,m.H,(h.b-h.a)*W,12,0,"#05070b");g.globalAlpha=1;}   // el hueco que atraviesa la losa
       for(const o of obs)if(o.p===p)dibujaAire(o);
       for(const e of enem)if(e.p===p)dibujaEnemigo(e,t);
       dibujaParts(p);
@@ -549,6 +722,21 @@ window.Peligros=(()=>{
         if(tipo==="puente"){h.rotoT=-1e9;romper(h,p,r.i,1);}else caerHoyo(r.i,1,"¡Aaaah!");
         return tipo+" en "+ESC[K_[p]].n;
       }
+      if(tipo==="trampa"){               // lleva a un robot libre a una trampilla al azar y la abre bajo sus pies
+        const r=eligeR(robots());if(!r)return "nadie libre";
+        const ps=HOY.map((L,i)=>L.some(h=>h.t==="trampa")?i:-1).filter(i=>i>=0),p=r.u.piso>0&&ps.includes(r.u.piso)?r.u.piso:elige(ps),h=HOY[p].find(h=>h.t==="trampa"),W=M().W;
+        r.i.E.via=null;r.i.E.oy=null;h.rotoT=-1e9;h.roto=false;Taller.ponX(r.i.E,(h.a+h.b)/2*W,p,1);abreTrampa(h,p,r.i,1);
+        return "trampa en "+ESC[K_[p]].n;
+      }
+      if(tipo==="mueble"){               // lo lanza contra un mueble de su piso
+        const r=eligeR(robots());if(!r)return "nadie libre";
+        const C=construye()[r.u.piso].filter(c=>c.f!=="asa"),c=C.length?elige(C):null;if(!c)return "no hay muebles en ese piso";
+        const cx=c.f==="circ"?c.x:(c.x0+c.x1)/2,d=Math.random()<.5?-1:1,[lo,hi]=lim(),x=cl(cx-d*90*M().K,lo+30,hi-30);
+        r.i.E.via=null;r.i.E.oy=null;Taller.ponX(r.i.E,x,r.u.piso,d);
+        T_.golpe(r.i,{vx:Math.sign(cx-x)*azar(300,480),vy:-azar(380,620),aguanta:0,reflejo:elige(["aletea","cabeza","suelo"]),txt:"¡ALLÁ VOY!",que:"contra los muebles",lejos:.6});
+        return "mueble en "+ESC[K_[r.u.piso]].n;
+      }
+      if(tipo==="empujon"){const r=eligeR(robots());if(!r)return "nadie libre";return T_.golpe(r.i,{modo:"tambalea",vx:(Math.random()<.5?-1:1)*azar(200,360),que:"pierde el equilibrio"})?"empujon":"no se pudo";}
       return dispara(tipo,true)?tipo:"no se pudo (¿nadie libre?)";
     },
     cada:(a,b)=>{cadaMs=[a,b??a];prox=ya+a;return cadaMs;},

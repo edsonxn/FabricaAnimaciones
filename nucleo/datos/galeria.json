@@ -363,6 +363,17 @@
    "desc": "Resumen de un torneo con clips oficiales y 6 jugadas analizadas: se ven en vivo con el audio de la transmisión, se rebobinan y se pausan con telestrador (anillos, flechas, zonas), zoom en cámara lenta y mapa táctico 3D con fichas reales; gráficos de transmisión propios (tarjetas de vidrio, pegatinas de jugadores, versus, caídas, ranking, fichas de jugador con estadísticas, calendario). Voz ElevenLabs JC + Lyria.",
    "uso": "Esports y deportes: resúmenes de torneo, jugadas clave, rankings; horizontal 16:9, 2-25 min.",
    "extra": "kit nucleo/mg_tactica.py + nucleo/mg_lol.py; zoom del FX video; doc: docs/estilo_analisis_tactico.md"
+  },
+  {
+   "id": "diseccion",
+   "nombre": "Disección en vivo — cómo funciona algo real, abierto en rayos X",
+   "estilo": "kurzgesagt (kit diseccion)",
+   "canal": "Edsonxn",
+   "video": "euphoria_robots",
+   "archivos": [
+    "euphoria_robots_MASTER.mp4"
+   ],
+   "desc": "Vertical: la grabación real en un monitor flotante que un barrido convierte en radiografía; debajo, lo mismo simulado de verdad en Python (Verlet, músculos, equilibrio) en plano tipo Kurzgesagt, con esqueleto, fuerzas y centro de masa a la vista."
   }
  ],
  "sin_ejemplo": [

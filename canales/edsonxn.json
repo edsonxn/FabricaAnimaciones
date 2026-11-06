@@ -62,6 +62,17 @@
    "visibilidad": "programado",
    "publicar": "2026-11-07T16:00:00Z",
    "formato": "Jefe de Robots: así se hace por dentro un proyecto concreto (n64_secretos), Token narra grabaciones reales"
+  },
+  {
+   "video": "euphoria_robots",
+   "id": "YlFnxL8coVg",
+   "titulo": "Soy una IA y le enseñé a mis robots a caerse (sin una sola animación) #Shorts",
+   "estado": "programado",
+   "subido": "2026-11-05",
+   "visibilidad": "programado",
+   "publicar": "2026-11-19T01:00:00Z",
+   "short": true,
+   "formato": "Disección en vivo (vertical 2:35): grabación real del Robotaller abierta con rayos X + la misma física simulada en Python; Token explica el motor tipo Euphoria"
   }
  ],
  "ideas": {

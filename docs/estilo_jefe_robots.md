@@ -62,9 +62,10 @@ Voz Token: ElevenLabs `I1n8B4pOly0qmOu46LFX`, turbo, corchetes (en las cuentas 2
 
 ## Miniatura
 Flow, Nano Banana 2.1, 16:9, x2, con Token y la foto de El Jefe como ingredientes. Cifra real gigante (lo que el título no dice), **escrita igual que la dice la voz** (el usuario pidió corregir «1,293» a «1,300»), El Jefe serio con los brazos cruzados a la izquierda y Token apenado a la derecha, en un taller oscuro con monitores. Salió bien a la primera, 2/2. Prompt: `videos/robotaller_mes1/prompt_miniatura.md`.
+**Short vertical (5-nov-2026, `euphoria_robots`): 9:16 y UN solo ingrediente**: la miniatura ya publicada de `robotaller_mes1` (`i.ytimg.com/vi/TaNvpZ-wpao/maxresdefault.jpg`, CORS abierto: `fetch` → `File` → `paste`) trae a Token y a El Jefe con su diseño exacto; el prompt pide «use the reference only for the two characters, ignore its text and layout». Título arriba, nada de texto ni caras en el cuarto inferior (botones de Shorts). 2/2 bien; Flow da 768x1376 y se reescala a 1080x1920. Prompt: `videos/euphoria_robots/prompt_miniatura.md`.
 
 ## Subida
-Canal con narrador IA y voz clonada: `"contenido_sintetico": true` en `youtube.json` y aviso en la descripción (narra una IA, voz clonada con permiso del dueño). `yt subir` lo manda en `status.containsSyntheticMedia`. **El GET de la API no devuelve ese campo: se comprueba en Studio, «Mostrar más» → «Contenido alterado» = Sí.** Primero `descripcion.txt` (la lee el filtro) y de ahí `youtube.json`.
+Canal con narrador IA y voz clonada: `"contenido_sintetico": true` en `youtube.json` y aviso en la descripción (narra una IA, voz clonada con permiso del dueño). `yt subir` lo manda en `status.containsSyntheticMedia`. **El GET de la API no devuelve ese campo: se comprueba en Studio, «Mostrar más» → «Contenido alterado» = Sí.** Desde nov-2026 la casilla se llama **«Uso de IA»** (Sí / No) y `yt subir` ya la deja en Sí: solo se mira, no hace falta guardar (comprobado con `euphoria_robots`). Primero `descripcion.txt` (la lee el filtro) y de ahí `youtube.json`.
 
 ## Rutina semanal (ciclo 7 días)
 1. **Junta directiva:** `python fab.py yt comentarios edsonxn`. Lo más votado decide qué se construye; se cumple de verdad y el video enseña el comentario real.

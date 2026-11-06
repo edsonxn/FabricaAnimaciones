@@ -429,6 +429,21 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   el último programado + 96 h.
 - **Studio:** muestra «Plastitube» como canal activo, pero `studio.youtube.com/video/<id>/monetization` abre el video bien.
 
+### Lecciones de `tes_seres_poderosos` (6-nov-2026, 172 beats, 24:40, «Los 20 seres más PODEROSOS», siete voces ronda 3)
+- **`_ajustes.json` va POR ÍNDICE de FX:** quitar o comentar un FX a mitad de `efectos.py` (aquí una pegatina por la regla de identidad)
+  corre todos los índices de después y los ajustes caen en otros gráficos: de 0 encimados a 11. Al quitar un FX: o se cambia en su sitio
+  (otra imagen, misma posición en la lista), o `mv _ajustes.json _ajustes_viejo.json` y se rehace `_bordes.py` → `_desencimar.py` → `_bordes.py`.
+- **`nucleo/efectos.py` existe:** un script propio que importe `secuencia_fx` con `nucleo` antes que la carpeta del video en `sys.path`
+  carga ESE efectos.py y los cuadros salen sin ningún gráfico. Siempre `sys.path.insert(0, carpeta_del_video)` al final.
+  `videos/tes_seres_poderosos/_promesas.py` (cuadros reales de las PROMESAS VISUALES con su capa) y `_peg_check.py` (hoja de identidad:
+  cada pegatina con la frase de efectos.py que la llama) sirven tal cual en cualquier video de este motor.
+- **Mapas largos tapan promesas:** el mapa de la Crisis de Oblivion duraba hasta «pisando el Distrito del Templo» y tapaba a Dagon gigante
+  («un gigante de cuatro brazos»). Que el mapa acabe al nombrar el lugar (`"…|fin"`) y el clip enseñe al ser que la voz describe.
+- **Render de 24 min con otras sesiones renderizando a la vez murió por memoria al 85 % (mp4 sin moov, inservible):** renderizar por tramos en procesos separados (`video --tramo 0-500`, …) y `ffmpeg -f concat -c copy`; ver `videos/tes_seres_poderosos/_render_tramos.sh`.
+- **`armar_musica_ost.py` con 24 min tarda > 10 min:** en segundo plano con `python -u` (con `timeout 600` lo mata a medias sin escribir nada).
+- **Rehechos de clips: unos 55 de 172 (≈ 1 de cada 3) en seis vueltas;** lo que más sale mal en Morrowind/Daggerfall son menús, diálogos, inventarios y
+  libros abiertos (el longplay sin cortes los tiene a cada rato): mirar los dos cuadros de la hoja y probar otro `--desde` del mismo video.
+
 ## CATÁLOGO DE ANIMACIONES DE PEGATINAS (el usuario, 5-nov-2026, TODOS los canales con `efectos.py`)
 «Hay que aumentar el catálogo de animaciones de cómo se presentan las pegatinas e imágenes, tienen que ser muchas más formas para que
 no se sientan repetidas.» Kit: **`nucleo/peg_anim.py`**. Cada pegatina = **MARCO** (cómo va vestida) + **ENTRADA** (cómo aparece) +

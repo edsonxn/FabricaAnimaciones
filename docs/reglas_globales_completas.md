@@ -87,6 +87,19 @@ Origen: se hicieron públicos 3 videos de Wild Next Door el mismo día y hubo qu
 - Lote de varios videos listos = todos en PRIVADO y programados en huecos sucesivos, enseñando antes el calendario al usuario. «Súbelos/publícalos» sobre un lote no significa «todos hoy».
 - Antes de publicar o programar: `python fab.py yt videos <canal>` y BITACORA. El código se detiene si hay choque (`comprobar_separacion`); `--forzar` solo si el usuario pidió expresamente esa excepción. Detalle: `docs/publicacion.md`.
 
+## REGLA GLOBAL: CADA IMAGEN ES DE LO QUE SE NOMBRA (el usuario, 6-nov-2026, TODOS los canales)
+«Ahí te equivocaste, pusiste la foto del osito y no de los gatos […] Ya había visto ese error en otro video. Documenta una regla para
+que siempre te fijes bien en esos detalles, que no pongas una imagen que no corresponde a lo que estás hablando.» Caso: `bt_jefes_ranking`,
+«suelta más Moggies» (los guerreros tigre de Mayahem Temple, página «Moggy (Enemy)» de la wiki) con la foto de Moggy, el osito polar hijo
+de Boggy (página «Moggy»). La búsqueda por nombre de `bajar_pegatinas.py` toma la primera coincidencia: no basta.
+1. **Al bajar:** comprobar la página de ORIGEN de cada imagen (infobox: especie, mundo, juego; páginas «(Enemy)», «(character)»,
+   desambiguación) y que coincide con lo que dice la voz EN ESE CONTEXTO. Guardar en `pegatinas/_fuentes.txt` la página, no solo el archivo.
+2. **Antes del render:** hoja `previews/pegatinas_check.jpg` con CADA imagen usada en efectos.py (pegatinas, iconos de MG, fotos de mapa)
+   y, debajo, la frase de la voz que la llama; mirarla entera a mano. Cuidado especial con homónimos, plurales/grupos («Moggies» = enemigos),
+   versiones de otro juego de la saga, el arte de otra entrega y personajes que se parecen.
+3. Lo que no corresponda: rehacer la descarga con la página correcta (o captura del clip, o Flow con ingredientes reales). Nunca una
+   imagen «parecida». Es parte de las PROMESAS VISUALES (abajo).
+
 ## REGLA GLOBAL: PROMESAS VISUALES, COMPROBADAS ANTES DEL RENDER (el usuario, 5-nov-2026, TODOS los canales y TODOS los motores)
 «Hay ocasiones donde el guion menciona algo que se debe ver y no sale en video ni imagen […] debes asegurarte de que se vea lo que
 dice el guion.» (Ejemplo: `bt_50_secretos`, puesto 2, la formación de rocas vista desde arriba que nunca salió.) Vale para secuencia YT,

@@ -60,6 +60,11 @@ arte en ninguna wiki, ideas de documentos de diseño (un jefe que iba a ser una 
    y anotar en `pegatinas/_fuentes.txt` «Flow, recreación con ingredientes: …». Mirar el resultado antes de usarlo (sin manos raras,
    sin texto inventado, sin otro juego).
 6. Vale igual para clips (Flow video, `docs/estilo_secuencia_flow.md`) cuando lo que falta es una acción y no una imagen fija.
+### CADA IMAGEN ES DE LO QUE SE NOMBRA (el usuario, 6-nov-2026)
+«Moggies» (guerreros tigre de Targitzan, wiki «Moggy (Enemy)») salió con la foto de Moggy, el osito hijo de Boggy. Antes del render:
+hoja `previews/pegatinas_check.jpg` (cada imagen de efectos.py + la frase que la llama) mirada a mano, y la página de origen de cada
+descarga comprobada (infobox: especie, mundo, juego). Detalle y pasos: `docs/reglas_globales_completas.md` § «CADA IMAGEN ES DE LO QUE SE NOMBRA».
+
 ### PROMESAS VISUALES: comprobación obligatoria antes del render (el usuario, 5-nov-2026)
 «Hay ocasiones donde el guion menciona algo que se debe ver y no sale en video ni imagen, como el puesto 2 de los 50 secretos de Banjo
 (la formación de rocas de Terrydactyland vista desde arriba): debes asegurarte de que se vea lo que dice el guion.»

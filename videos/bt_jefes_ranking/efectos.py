@@ -219,7 +219,7 @@ _MT_RUTA = [(.255, .91, "Inicio", "inicio"), (.245, .72), (.31, .50), (.385, .35
             (.56, .69), (.52, .60, "Templo de Targitzan", "meta", "templo_targitzan")]
 _JRL_RUTA = [(.32, .04, "Inicio", "inicio"), (.35, .18), (.41, .30), (.50, .52, "El muelle", "paso"), (.57, .77, "Fondo del mar", "meta", "lord_woo")]
 _CCL_RUTA = [(.80, .65, "Inicio", "inicio"), (.69, .61), (.63, .60), (.655, .39, "Calavera 1", "meta", "mumbo_skull"), (.45, .48),
-             (.245, .53, "Calavera 2", "meta", "mumbo_skull")]
+             (.245, .53, "Calavera 2", "meta", "mumbo_skull_rojo")]   # 6-nov: las calaveras REALES de CCL (azul / roja), no la de Mayahem
 _GI_RUTA = [(.235, .83, "Inicio", "inicio"), (.30, .76), (.39, .63, "Puerta", "paso"), (.47, .70), (.54, .62, "La fábrica", "meta", "weldar")]
 
 FX = [
@@ -240,7 +240,7 @@ FX = [
     ficha("y sigue diciendo que va ganando", "Sin brazos", "…y *va ganando*", dur=2.0, x=.72, y=.40, ancho=600),
     vs("Y un robot que se hace pasar", ("por tu mejor amigo|fin", .8), ["Y un robot que se hace", "por tu mejor amigo", ("por tu mejor amigo|fin", .2)],
        ("MUMBO", "Tu amigo", "mumbo"), ("MINGY JONGO", "Un robot", "mingy_jongo"), titulo="¿Cuál es cuál?", marca="IMPOSTOR"),
-    pil([("caja_bt", "Su historia"), ("jiggy", "Jiggies crueles"), ("titulo_ww", "Ocho mundos"), ("logo_bt_jp", "50 secretos")],
+    pil([("caja_bt", "Su historia"), ("jiggy", "Jiggies crueles"), ("isla_mapa", "Ocho mundos"), ("logo_bt_jp", "50 secretos")],   # 6-nov: los 8 mundos, no solo Witchyworld
         de="Ya te contamos la historia", a=("Creías que estaba todo|fin", 0),
         marcas=["la historia de Banjo-Tooie", "sus Jiggies más crueles", "sus ocho mundos", "y cincuenta secretos"], nombre="videos anteriores"),
     mg(B.escalera([], 10), "Faltaban ellos", ("del peor al mejor|fin", 0), [], "escalera vacía", y=.50),
@@ -418,7 +418,7 @@ FX = [
 
     # ================================================================ 6 · KLUNGO
     cam(("el único jefe al que peleas", 1.0), "klungo", "Klungo ×3", x=.15, y=.30, tam=260, dur=3.6),
-    aba([("spiral_tooie", "Túnel 1"), ("wasteland", "Túnel 2"), ("gatehouse", "The Gatehouse")], de="dos en los túneles",
+    aba([("tunel_klungo1", "Túnel 1"), ("tunel_klungo2", "Túnel 2"), ("gatehouse", "The Gatehouse")], de="dos en los túneles",   # 6-nov: los Digger Tunnels reales
         a=("donde cae del techo|fin", .8), marcas=["dos en los túneles", "de Isle O' Hags", "la última en la entrada"], nombre="peleas Klungo", x=.70),
     pv("donde cae del techo", "cap_klungo_cae", "Cae del techo", dur=3.6, x=.26, y=.58, tam=440),   # promesas.md #70 (Prosafia @1718,5)
     ficha(("antes de cada pelea|fin", .3), "Klungo", "Su *saludo*", sub="Escucha", dur=3.0, x=.5, y=.84, ancho=520),
@@ -641,7 +641,7 @@ FX = [
     rel("cae encima de un Kazooie", "clockwork", "Kazooie de cuerda", dur=3.6, x=.26, y=.56, tam=440),
     ficha("el juego entero se cuelga", "Glitch", "El juego *entero* se cuelga", dur=2.6, x=.72, y=.42, ancho=600),
     cad("Y no acabó en la basura", ("el Aliento de Weldar|fin", .8), ["no acabó en la basura", "Mumbo encontró su cuerpo", "el Aliento de Weldar"],
-        "NUTS & BOLTS", [("weldar", "En la basura"), ("mumbo", "Mumbo lo encuentra")], ("weldar_breath", "«Aliento de Weldar»")),
+        "NUTS & BOLTS", [("weldar", "En la basura"), ("mumbo_nyb", "Mumbo lo encuentra")], ("weldar_breath", "«Aliento de Weldar»")),   # 6-nov: Mumbo de N&B
     pv(("el Aliento de Weldar", .2), "weldar_breath", "El Aliento de Weldar", dur=3.4, x=.50, y=.80, tam=380),   # promesas.md #146
     cam("en Nuts and Bolts, según", "nuts_bolts", "Nuts & Bolts", x=.88, y=.19, tam=220, dur=3.0),
 

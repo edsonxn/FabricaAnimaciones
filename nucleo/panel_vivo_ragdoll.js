@@ -125,7 +125,7 @@ window.Trapo=(()=>{
     const rd={E,info,s,d,F,P,x0:u.px,piso:u.piso,oy:u.oy,lo:u.lo,hi:u.hi,techo:m.PCH?m.PCH+1:-1e9,AX:u.px,AY:0,k:new Array(7).fill(1),T:PARADO.map(()=>[0,0]),
       cara:"normal",boca:0,st:"quieto",st0:ya,show,golpeT:-1e9,fase:Math.random()*6,paso:0,bu:0,dSuelo:azar(900,1700),arma:null};
     E.trapo=rd;show.rds.push(rd);pose(rd,PARADO);rd.ign=ignora(rd);rd.ignT=ya;rd.fijo=null;rd.bal=null;
-    if(info.anda)for(const p of P)p.px-=d*150*s*H;   // venía caminando: lleva su impulso
+    if(info.anda)for(const p of P)p.px-=d*115*s*H;   // venía caminando: lleva su impulso (150 px/s, la VEL del taller)
     return rd;
   }
   const ir=(rd,st)=>{rd.st=st;rd.st0=ya;};
@@ -224,7 +224,7 @@ window.Trapo=(()=>{
       }
     }
     else if(st==="camina"){            // va a pie hacia rd.meta, con su paso de muñeco: piernas alternas y un saltito
-      const dx=rd.meta-rd.AX,v=230*M().K*H*rd.ticks;
+      const dx=rd.meta-rd.AX,v=115*M().K*H*rd.ticks;   // el mismo paso lento del taller (150 px/s)
       rd.d=dx>0?1:dx<0?-1:rd.d;rd.AX+=Math.sign(dx)*Math.min(Math.abs(dx),v);rd.paso+=rd.ticks*H*16;
       const a=Math.sin(rd.paso)*7;pose(rd,PARADO,-Math.abs(Math.sin(rd.paso))*1.6);rd.T[PI][0]+=a*S*rd.d;rd.T[PD][0]-=a*S*rd.d;rd.T[MI][0]-=a*.6*S*rd.d;rd.T[MD][0]+=a*.6*S*rd.d;
       rd.k.fill(.95);rd.cara="normal";rd.llego=Math.abs(dx)<1;

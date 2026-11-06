@@ -4,6 +4,9 @@
 // El letrero y el sonido siguen siendo los de la acción REAL: solo cambia el teatro. Coordenadas: x hacia delante del robot, y negativa hacia arriba,
 // pies en y = 0, cabeza de -61 a -29; la utilería entre x -60 y +84. s = segundos desde que empezó la pose.
 // Añadir una: pon("<acción>", {nombre(T,s){return {...};}}) → POSES["<acción>_<nombre>"]. Probar en la consola: Taller.prueba("boton_hamster").
+// 5-nov-2026: una pose NO es un dibujo, son METAS para los músculos. brD/brI (manos), pies, sube, dx, rota e incl los convierte
+// Taller.prim.metaPose en 7 puntos (cabeza, pecho, cadera, manos, pies) que el cuerpo simulado persigue (Cap.vivo en panel_vivo_ragdoll.js):
+// los pies de apoyo se quedan plantados, el tronco tiene inercia y figura() dibuja donde la física dejó cada punto. atras()/frente() siguen siendo utilería.
 (()=>{
   if(typeof Taller==="undefined"||!Taller.VARIAS)return;
   const {g,caja,marco,circ,aro,elip,raya,letra,camino,em,humito,MADERA,TINTA,CABEZA,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES}=Taller.prim;

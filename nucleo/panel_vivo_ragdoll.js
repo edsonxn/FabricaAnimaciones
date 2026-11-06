@@ -8,6 +8,8 @@
 // a la vez (la cámara solo sigue una), hoyos con paredes de los que se sale trepando, techo con «¡BONK!», guardia con arma, golpe, esquiva y salto.
 // Los peligros los pone panel_vivo_peligros.js con Trapo.golpe / Trapo.guardia / Trapo.salta / Trapo.ponHoyo.
 // Es teatro: no cambia la acción real, el letrero ni la estación; al acabar, el robot sigue desde donde quedó. Solo en el edificio, nunca en EN_VIDEO.
+// 5-nov-2026: fuera de las escenas el cuerpo también es este muñeco, siempre en física (Cap.vivo, «EL CUERPO SIEMPRE SIMULADO» más abajo):
+// la escena nace con sus 7 puntos y su velocidad, y al terminar el cuerpo vivo sigue desde donde quedó el trapo.
 // Probar en la consola: Trapo.prueba("tropiezo"|"resbalon"|"desmayo"|"cadena"|"domino"|"ayuda"|"pie"|"manos"); Trapo.cada(30000, 70000) = cada cuánto.
 window.Trapo=(()=>{
   if(typeof Taller==="undefined"||!Taller.entidades||window.EN_VIDEO)return null;
@@ -125,7 +127,7 @@ window.Trapo=(()=>{
     const rd={E,info,s,d,F,P,x0:u.px,piso:u.piso,oy:u.oy,lo:u.lo,hi:u.hi,techo:m.PCH?m.PCH+1:-1e9,AX:u.px,AY:0,k:new Array(7).fill(1),T:PARADO.map(()=>[0,0]),
       cara:"normal",boca:0,st:"quieto",st0:ya,show,golpeT:-1e9,fase:Math.random()*6,paso:0,bu:0,dSuelo:azar(900,1700),arma:null};
     E.trapo=rd;show.rds.push(rd);pose(rd,PARADO);rd.ign=ignora(rd);rd.ignT=ya;rd.fijo=null;rd.bal=null;
-    if(info.anda)for(const p of P)p.px-=d*115*s*H;   // venía caminando: lleva su impulso (150 px/s, la VEL del taller)
+    if(!adopta(rd)&&info.anda)for(const p of P)p.px-=d*115*s*H;   // nace con el cuerpo vivo (sus 7 puntos y su velocidad); si no tenía, venía caminando: lleva su impulso (150 px/s, la VEL del taller)
     return rd;
   }
   const ir=(rd,st)=>{rd.st=st;rd.st0=ya;};
@@ -448,7 +450,7 @@ window.Trapo=(()=>{
       rd.E.trapo=null;
       let x=rd.P[CAD].x;x=isFinite(x)?x:rd.x0;
       const P0=hoyoEn(rd,x);if(P0)x=(rd.sale||rd.d)>0?P0.b+14*rd.s:P0.a-14*rd.s;   // nunca se queda flotando sobre un hoyo
-      Taller.ponX(rd.E,cl(x,rd.lo,rd.hi),rd.piso,rd.d);
+      Taller.ponX(rd.E,cl(x,rd.lo,rd.hi),rd.piso,rd.d);devuelve(rd);
       if(rd.alQuitar)try{rd.alQuitar();}catch(e){}
     }
     const i=Shs.indexOf(sh);if(i>=0)Shs.splice(i,1);
@@ -548,7 +550,12 @@ window.Trapo=(()=>{
   function lanza(L,tipo){const c=candidatos(L,tipo);return !!(c&&escena(c[0],c[1],c[2]));}
 
   Cap.trapoPaso=(t,dt)=>{
+    cost.push(costF);if(cost.length>900)cost.splice(0,300);costF=0;   // lo del cuadro anterior: cuerpos vivos + escenas
+    const t0=performance.now();try{pasoTrapo(t,dt);}finally{anota(performance.now()-t0);}
+  };
+  function pasoTrapo(t,dt){
     ya=t;
+    for(const [E,b] of VIV)if(t-b.usoT>1500)VIV.delete(E);   // ya no se pinta (se fue, se durmió, otro piso sin cámara): suelta su cuerpo
     const L=Taller.entidades(),vivos=new Set(L.map(x=>x.E));
     for(const sh of [...Shs])if(sh.rds.some(rd=>!vivos.has(rd.E))||ya-sh.ini>sh.max)termina(sh);   // alguien se fue (o algo se atoró): vuelven a la normalidad
     if(!prox)prox=t+azar(14000,26000);
@@ -568,7 +575,7 @@ window.Trapo=(()=>{
       if(sh.rds.every(rd=>rd.fin))termina(sh);
     }
     try{cruza();atropella(L);euforia(L);}catch(e){console.warn("trapo",e);}
-  };
+  }
   // ---- «como el peatón de GTA IV» (el usuario, 5-nov-2026): el equilibrio se activa solo, sin cámara. Al caminar, a veces un tropezón (un
   // impulso hacia delante que entra a la simulación); si uno que camina pasa rozando a otro, el rozado recibe el empujón (y a veces los dos).
   let proxEu=0;const roce=new Map();
@@ -728,6 +735,112 @@ window.Trapo=(()=>{
   }
   Cap.trapo=(E,t)=>{const rd=E.trapo;if(!rd)return;dibuja(rd,t/1000+rd.fase);if(rd.show.rds[rd.show.rds.length-1]===rd)efectos(rd.show);};
 
+  // ---- EL CUERPO SIEMPRE SIMULADO (5-nov-2026, el usuario: «como Euphoria, donde no hay animación sino simulación»). Fuera de las escenas de
+  // trapo, cada robot (Token, minis, robots de otras sesiones) también es su muñeco de 7 puntos, con los músculos altos: la pose de cada acción
+  // (POSES / panel_vivo_poses.js) ya no se dibuja, se convierte en METAS (Taller.prim.metaPose) que los músculos persiguen; encima van los
+  // controladores: (1) PIES PLANTADOS: un pie de apoyo no se mueve de donde pisó; al caminar, cuando el pie de atrás queda 5 unidades detrás de la
+  // cadera, da un paso hacia una meta delante (cadera + 6 + velocidad·0,1 s, máx. 20 del otro pie), se levanta según lo que le falta y se planta
+  // al tocar suelo; (2) EQUILIBRIO: de pie, si el capture point (centro de masa + velocidad·√(30/820)) sale de la base de los pies, paso de
+  // recuperación hacia donde cae el peso (al frenar, al empujarlo la pose); luego pasitos para volver a la postura de la pose; (3) INERCIA: torso,
+  // cabeza y manos son resortes amortiguados (ζ ≈ 0,5), así que al arrancar, frenar o girar el cuerpo se queda atrás y se acomoda solo.
+  // Al empezar una escena de trapo, el muñeco NACE con estos mismos 7 puntos y su velocidad (nace() → adopta), y al terminar el cuerpo vivo sigue
+  // desde donde quedó el trapo (termina() → devuelve): caminar, tropezar, empujones y roces son un solo cuerpo continuo.
+  // Ligero: como mucho MAX_VIVOS cuerpos a la vez (los que se ven primero; los demás se dibujan con las metas directas) y 2 iteraciones de huesos
+  // fuera de cámara en vez de 4. Medir: Trapo.costo() (ms por cuadro de la física: cuerpos vivos + escenas). Ver: Trapo.vivos().
+  const MAX_VIVOS=8,VIV=new Map();
+  const HV=[[CAB,PEC,20,20],[PEC,CAD,14,14],[CAB,CAD,30,34.5],[PEC,MI,0,62],[PEC,MD,0,62],[CAD,PI,0,30],[CAD,PD,0,30]];   // las poses estiran brazos y piernas más que el trapo: solo el tronco es rígido
+  const KV=[.32,.42,.5,.9,.9,1,1];       // fuerza de cada músculo: tronco blando (se nota la inercia), manos firmes (sostienen la utilería), pies plantados
+  let cuadro=0,cost=[],costF=0;
+  const anota=ms=>{costF+=ms;};
+  function vivoNuevo(E,L,x,F,s,d,t,piso){
+    const P=L.map(([lx,ly],i)=>{const X=x+lx*s*d,Y=F+ly*s;return {x:X,y:Y,px:X,py:Y,r:RAD[i]*s,w:1/MASA[i]};});
+    return {E,P,T:L.map(()=>[0,0]),x0:x,t,s,d,F,piso,vr:0,pl:[P[PI].x,P[PD].x],sw:-1,goal:0,swT:0,rec:false,modo:"",acc:0,vis:true,usoT:t};
+  }
+  function espejo(b,x){for(const p of b.P){const vx=p.x-p.px;p.x=2*x-p.x;p.px=p.x+vx;}b.pl=b.pl.map(q=>2*x-q);if(b.sw>=0)b.goal=2*x-b.goal;}
+  function pasoPie(b,i,meta){b.sw=i;b.goal=meta;b.swT=b.t;}
+  function controla(b,L,x,anda,t){       // metas de los 7 puntos: la pose + pies plantados + equilibrio
+    const {s,d,F,P}=b,T=b.T,K=b.k||(b.k=new Array(7));
+    for(let i=0;i<7;i++){T[i][0]=x+L[i][0]*s*d;T[i][1]=F+L[i][1]*s;K[i]=KV[i];}
+    const suelo=L[PI][1]>-7&&L[PD][1]>-7;   // con sentado, rota fuerte o los pies en el aire la pose manda sola
+    if(!suelo){b.sw=-1;b.rec=false;b.pl=[P[PI].x,P[PD].x];b.modo="pose";return;}
+    const pies=[PI,PD],otro=i=>i===PI?PD:PI;
+    if(anda){
+      b.modo="anda";b.rec=true;
+      T[CAB][0]+=d*2.5*s;T[PEC][0]+=d*1.2*s;   // al caminar se inclina hacia delante
+      if(b.sw<0){
+        const atras=d*(b.pl[0]-x)<d*(b.pl[1]-x)?PI:PD;
+        if(d*(x-b.pl[atras-PI])>5*s){const o=b.pl[otro(atras)-PI];pasoPie(b,atras,cl(x+d*6*s+b.vr*.1,o-20*s,o+20*s));}
+      }
+    }else{
+      b.modo="pie";
+      let mx=0,vx=0,mt=0;for(let i=0;i<7;i++){mx+=P[i].x*MASA[i];vx+=(P[i].x-P[i].px)*MASA[i];mt+=MASA[i];}mx/=mt;vx=vx/mt/H;
+      const pl=Math.min(P[PI].x,P[PD].x)-3*s,pr=Math.max(P[PI].x,P[PD].x)+3*s,bc=(pl+pr)/2,bw=Math.max(5*s,(pr-pl)/2),cap=mx+vx*Math.sqrt(30/GRAV),err=cap-bc;
+      if(b.sw<0&&Math.abs(err)>bw+2*s){   // se le va el peso: paso de recuperación hacia el capture point
+        const pie=Math.abs(P[PI].x-cap)>Math.abs(P[PD].x-cap)?PI:PD,o=P[otro(pie)].x;
+        b.rec=true;b.pl=[P[PI].x,P[PD].x];pasoPie(b,pie,cl(cap+Math.sign(err)*2*s,o-22*s,o+22*s));b.recs=(b.recs||0)+1;
+      }else if(b.rec&&b.sw<0){            // ya está estable: pasitos hasta la postura que pide la pose, y después la pose manda
+        let lejos=-1,dm=2.5*s;for(const i of pies){const dd=Math.abs(b.pl[i-PI]-T[i][0]);if(dd>dm){dm=dd;lejos=i;}}
+        if(lejos>=0&&Math.abs(vx)<60*s)pasoPie(b,lejos,T[lejos][0]);else if(lejos<0)b.rec=false;
+      }
+      if(!b.rec){b.pl=[P[PI].x,P[PD].x];return;}
+    }
+    for(const i of pies){                // apoyo: el pie se queda donde pisó; vuelo: hacia su meta, levantado según lo que le falta
+      if(b.sw===i){
+        const pf=P[i],falta=b.goal-pf.x;T[i]=[b.goal,F-2.6*s-Math.min(6*s,Math.abs(falta)*.5)];K[i]=.9;
+        if((Math.abs(falta)<1.5*s&&pf.y>F-4.5*s)||t-b.swT>380){b.pl[i-PI]=pf.x;b.sw=-1;}
+      }else{T[i]=[b.pl[i-PI],F-2.6*s];K[i]=1;}
+    }
+    if(b.sw>=0){const q=cl(Math.abs(b.goal-P[b.sw].x)/(10*s));for(const i of [CAB,PEC,CAD])T[i][1]-=1.4*s*q;}   // la cadera sube un poco en cada zancada
+  }
+  function fisicaVivo(b,n){
+    const s=b.s,F=b.F,G=GRAV*s*H*H,P=b.P,nr=b.vis?4:2;
+    for(let it=0;it<n;it++){
+      for(const p of P){const vx=(p.x-p.px)*.996,vy=(p.y-p.py)*.996;p.px=p.x;p.py=p.y;p.x+=vx;p.y+=vy+G;}
+      for(let i=0;i<7;i++){const k=b.k[i],p=P[i],c=1-Math.exp(-H*42*k),dm=Math.min(.6,Math.sqrt(c));p.x+=(b.T[i][0]-p.x)*c;p.y+=(b.T[i][1]-p.y)*c;p.px+=(p.x-p.px)*dm;p.py+=(p.y-p.py)*dm;}   // resorte amortiguado (ζ ≈ 0,5)
+      for(let r=0;r<nr;r++)for(const [a,c,lo,hi] of HV)hueso(P[a],P[c],lo*s,hi*s);
+      for(let i=0;i<7;i++){const p=P[i];if(p.y+p.r>F){p.y=F-p.r;p.py=p.y;p.px+=(p.x-p.px)*(i>=PI?.6:.2);}}
+    }
+  }
+  Cap.vivo=(E,Pz,x,esc,dd)=>{             // lo llama el taller justo antes de figura(): devuelve los 7 puntos en unidades de figura, o null
+    const t0=performance.now();
+    try{
+      const m=M();if(!m.EDIF||!m.W||E.trapo||!Taller.prim.metaPose)return null;
+      const s=m.K*esc,d=dd<0?-1:1,F=m.sue+3*m.K,t=m.ahora;if(!(s>0&&isFinite(x)&&isFinite(F)))return null;
+      let b=VIV.get(E);
+      if(b&&b.t===t&&Math.abs(x-b.x0)>1)return null;   // el mismo robot pintado otra vez en otro sitio en este cuadro: dibujo directo
+      const L=Taller.prim.metaPose(Pz),u=m.ubica(E);
+      if(b&&(Math.abs(x-b.x0)>40*s||Math.abs(s-b.s)>.01||b.piso!==u.piso&&!E.via||t-b.usoT>400)){VIV.delete(E);b=null;}   // salto de sitio, otro tamaño u olvidado: empieza de nuevo
+      if(!b){
+        let lento=null;const vis0=!m.visto||m.visto(x,u.oy+F-30*s,-40);
+        if(VIV.size>=MAX_VIVOS){if(!vis0)return null;for(const o of VIV.values())if(!o.vis&&(!lento||o.usoT<lento.usoT))lento=o;if(!lento)return null;VIV.delete(lento.E);}   // lleno: un visible le quita el cuerpo a uno fuera de cámara
+        b=vivoNuevo(E,L,x,F,s,d,t,u.piso);VIV.set(E,b);
+      }
+      if(d!==b.d){espejo(b,x);b.d=d;}
+      const dt=Math.min(50,t-b.t);b.t=t;b.usoT=t;b.piso=u.piso;
+      if(dt>0)b.vr+=((x-b.x0)/(dt/1000)-b.vr)*.35;b.x0=x;
+      if(t-(b.visT||0)>400){b.visT=t;b.vis=!m.visto||m.visto(x,u.oy+F-30*s,-80);}
+      controla(b,L,x,!!E.anda&&Math.abs(b.vr)>15*s,t);
+      b.acc+=dt/1000;const n=Math.min(9,Math.floor(b.acc*HZ));b.acc-=n*H;
+      if(n)fisicaVivo(b,n);
+      if(b.P.some(p=>!isFinite(p.x+p.y+p.px+p.py))){VIV.delete(E);return null;}
+      return b.P.map(p=>[(p.x-x)/(s*d),(p.y-F)/s]);
+    }catch(e){console.warn("cuerpo vivo",e);VIV.delete(E);return null;}
+    finally{anota(performance.now()-t0);}
+  };
+  function adopta(rd){                   // el muñeco de la escena nace con el cuerpo vivo (posición y velocidad), no con una pose de parado
+    const b=VIV.get(rd.E);if(!b||ya-b.usoT>250||b.piso!==rd.piso||Math.abs(b.s-rd.s)>.01)return false;
+    if(b.d!==rd.d)espejo(b,rd.AX);
+    rd.P.forEach((p,i)=>{const q=b.P[i];p.x=q.x;p.y=q.y;p.px=q.px;p.py=q.py;});
+    for(let r=0;r<6;r++)for(const [a,c,lo,hi] of HUESOS){   // a los límites del trapo (brazos de 21, piernas de 11) sin meterle velocidad
+      const A=rd.P[a],B=rd.P[c],ax=A.x,ay=A.y,bx=B.x,by=B.y;hueso(A,B,lo*rd.s,hi*rd.s);A.px+=A.x-ax;A.py+=A.y-ay;B.px+=B.x-bx;B.py+=B.y-by;
+    }
+    VIV.delete(rd.E);return true;
+  }
+  function devuelve(rd){                 // al terminar la escena, el cuerpo vivo sigue desde donde quedó el trapo
+    const x=rd.P[CAD].x,b={E:rd.E,P:rd.P.map(p=>({...p})),T:rd.P.map(()=>[0,0]),x0:x,t:ya,s:rd.s,d:rd.d,F:rd.F,piso:rd.piso,vr:0,pl:[rd.P[PI].x,rd.P[PD].x],sw:-1,goal:0,swT:0,rec:true,modo:"",acc:0,vis:true,usoT:ya};
+    if(rd.P.every(p=>isFinite(p.x+p.y+p.px+p.py)))VIV.set(rd.E,b);
+  }
+
   // ---- lo que usan los peligros (panel_vivo_peligros.js): un robot, una escena propia; la escena sabe cuándo se acaba
   function solo(info,tipo,o={}){
     if(!info||!libre(info)||Shs.length>=MAX_ESC)return null;
@@ -789,5 +902,7 @@ window.Trapo=(()=>{
     ponCols:f=>{cols=f;},soporte:(piso,x,y)=>soporte({piso,s:M().K,F:M().sue+3*M().K},x,y),
     enHoyo:(piso,a,b)=>Shs.some(sh=>sh.rds.some(rd=>rd.piso===piso&&rd.P.some(p=>p.x>a-4&&p.x<b+4&&p.y+p.r>rd.F+1))),   // alguien está dentro: el puente no se repone
     escenas:()=>Shs,
+    vivos:()=>[...VIV.values()].map(b=>({quien:b.E.nombre||b.E.tipo||(b.E.id??"Token"),modo:b.modo,vis:b.vis,paso:b.sw>=0,recup:b.recs||0,v:Math.round(b.vr)})),
+    costo:()=>{const a=cost.slice(-600).filter(x=>x>0).sort((x,y)=>x-y),q=f=>a.length?+a[Math.min(a.length-1,Math.floor(a.length*f))].toFixed(3):0;return {cuadros:a.length,mediana_ms:q(.5),p95_ms:q(.95),max_ms:q(1),cuerpos:VIV.size,escenas:Shs.length};},
   };
 })();

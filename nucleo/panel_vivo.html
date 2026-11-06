@@ -447,7 +447,10 @@ async function pedirSesiones(){
     for(const s of l){const k=s.video||s.id;if(vistos.has(k))continue;vistos.add(k);lista.push(s);}
     const edif=document.body.classList.contains("edif");
     if(edif)Taller.fabrica(lista);
-    $("ses").innerHTML=(edif?`<button class="chip fab ${Taller.Flo.on?"on":""}" data-fab="1" title="Todas las sesiones a la vez en el mismo edificio">🏢 Toda la fábrica</button>`:"")+lista.map(s=>{
+    // El Edificio de Ventas de CNB (C:\CNB, monitor 8744). Solo desde la propia PC: allá /edificio redirige con la clave,
+    // que nunca se escribe aquí (este panel también sale a internet por el panel remoto).
+    const cnb=/^(127\.0\.0\.1|localhost|\[::1\])$/.test(location.hostname)?`<button class="chip" data-cnb="1" title="Edificio de Ventas de CNB, en vivo (monitor 8744)">🏢 Ventas CNB</button>`:"";
+    $("ses").innerHTML=cnb+(edif?`<button class="chip fab ${Taller.Flo.on?"on":""}" data-fab="1" title="Todas las sesiones a la vez en el mismo edificio">🏢 Toda la fábrica</button>`:"")+lista.map(s=>{
       const on=S.fija?s.id===S.sesion:(S.video?s.video===S.video:s.id===S.sesion);
       return `<button class="chip ${on?"on":""} ${s.activa?"act":""}" data-id="${esc(s.id)}" data-v="${esc(s.video||"")}" title="${esc(s.titulo)}"><i></i>${esc(s.video||s.titulo||"Sesión")}</button>`;
     }).join("");
@@ -461,10 +464,10 @@ function abreSesion(id,video){
 }
 $("ses").onclick=e=>{
   const b=e.target.closest(".chip");if(!b)return;
+  if(b.dataset.cnb)return window.open(`http://${location.hostname}:8744/edificio`,"_blank","noopener");
   if(b.dataset.fab){Taller.ponFabrica(!Taller.Flo.on);return pedirSesiones();}
   abreSesion(b.dataset.id,b.dataset.v);
 };
-  if(b.dataset.cnb)return window.open(`http://${location.hostname}:8744/edificio`,"_blank","noopener");
 
 // ---------------------------------------------------------- cabecera, plan, etapas, cifras
 function pintarCab(r){
@@ -868,12 +871,12 @@ const Son=(()=>{
     crack(t){for(let i=0;i<4;i++)sopla(t+i*.045,.05,3200-i*500,900,.7,1.4);bip(t,140,60,.2,.35,"triangle");},
     rueda(t){for(let i=0;i<4;i++)bip(t+i*.09,110,90,.08,.22,"triangle");},
     pop(t){sopla(t,.07,4000,1200,.8,.8);bip(t,900,1800,.06,.3);bip(t+.06,1300,2600,.08,.25);},
-  };
-  const notas=(t,fs,d=.11,v=.4,tipo="triangle")=>{fs.forEach((f,i)=>bip(t+i*d,f,f,d*1.5,v,tipo));return t+fs.length*d;};
-  const R={
     paso(t,f){sopla(t,.04,700,300,.35,1);bip(t,f*.18,f*.12,.05,.18,"triangle");},   // los muebles y el equilibrio (5-nov-2026): paso de recuperación,
     clac(t){bip(t,260,120,.06,.4,"square");sopla(t+.05,.18,400,140,.5,.8);},          // la trampilla que se abre,
     clang(t){bip(t,880,860,.25,.28,"triangle");bip(t,1320,1290,.18,.16,"sine");},      // un tubo o una lámpara de metal
+  };
+  const notas=(t,fs,d=.11,v=.4,tipo="triangle")=>{fs.forEach((f,i)=>bip(t+i*d,f,f,d*1.5,v,tipo));return t+fs.length*d;};
+  const R={
     hola(t){const u=parlo(t,3,900);bip(u,1100,1900,.16,.4);},
     libros(t){for(let i=0;i<3;i++)sopla(t+i*.46,.13,2500,3900,.24,1.5);bip(t+1.45,520,780,.09,.22);},
     preguntar(t){const u=parlo(t,2,820,.34);bip(u,700,1250,.13,.3);},
@@ -1048,11 +1051,11 @@ const Taller=(()=>{
   const DES=()=>EDIF?enP(P_PB,.2):window.EN_VIDEO?.12:DESCANSO*AN();   // a 1080p el robot es grande: en un video no puede quedar cortado por el borde
   const X=i=>{if(!EDIF)return (i+1.5)/(ESTACIONES.length+1)*AN();const [p,f]=LUGAR[ESTACIONES[i][0]];return p*10+f;};
   const oyCab=()=>{const p=Math.floor(Cab.y),k=Cab.y-p;return pisoY[p]+((pisoY[p+1]??pisoY[p])-pisoY[p])*k;};
+  const VEL=150,ESC_VEL=110;            // 5-nov-2026 (el usuario: «a veces corren muy rápido… deben moverse lentos para que se note el motor de Euphoria»): px/s del mundo, iguales para todos y sin acelerones; en la escalera, px/s a lo largo del tramo
+  const pasoE=dt=>dt*VEL/(W||MUNDO_W)/1000;   // en fracción del piso por cuadro
   const lim=v=>{const p=pisoDe(v);return p*10+Math.max(.03,Math.min(.97*AN(),v-p*10));};
   function viaja(E,t,dt){                // 1 = camina, 2 = espera o va en el elevador
     const V=E.via;
-  const VEL=150,ESC_VEL=110;            // 5-nov-2026 (el usuario: «a veces corren muy rápido… deben moverse lentos para que se note el motor de Euphoria»): px/s del mundo, iguales para todos y sin acelerones; en la escalera, px/s a lo largo del tramo
-  const pasoE=dt=>dt*VEL/(W||MUNDO_W)/1000;   // en fracción del piso por cuadro
     if(V.t==="esc"){
       const f=Math.min(1,(t-V.ini)/V.dur);
       E.x=V.de*10+V.x0+(V.x1-V.x0)*f;E.dir=V.x1>V.x0?1:-1;E.oy=pisoY[V.de]+(pisoY[V.a]-pisoY[V.de])*f;
@@ -1148,19 +1151,36 @@ const Taller=(()=>{
     g.beginPath();g.moveTo(x,y);g.quadraticCurveTo((x+mx)/2,Math.max(y,my)+3,mx,my);g.strokeStyle=U?.manga||TINTA;g.lineWidth=3;g.lineCap="round";g.stroke();
     circ(mx,my,U?.mano||3.4,CABEZA);aro(mx,my,U?.mano||3.4,TINTA,1.2);
   }
-  function figura(P,T){
-    const [ai,bi]=P.pies||[0,0];
-    g.save();g.translate(P.dx||0,-(P.sube||0));
-    if(P.rota){g.translate(0,-22);g.rotate(P.rota);g.translate(0,22);}
-    if(P.yo&&Cap.atras)Cap.atras(P,T);
+  // 5-nov-2026 (el usuario: «como Euphoria, donde no hay animación sino simulación»): el robot se dibuja SIEMPRE desde sus 7 puntos
+  // (cabeza, pecho, cadera, mano de atrás, mano de delante, pie de atrás, pie de delante; las mismas unidades que el muñeco de trapo).
+  // Una pose ya no es un dibujo: metaPose() la convierte en las METAS de esos 7 puntos, y en el edificio el cuerpo simulado de
+  // panel_vivo_ragdoll.js (Cap.vivo) las persigue con músculos, pies plantados y pasos; figura() dibuja donde la física dejó cada punto.
+  // Sin cuerpo simulado (videos del canal, ?clasico, juguetes, más robots que el límite) se dibuja directo de las metas: se ve como antes.
+  const rotP=(x,y,a)=>[x*Math.cos(a)-y*Math.sin(a),x*Math.sin(a)+y*Math.cos(a)];
+  function metaPose(P){
+    const [ai,bi]=P.pies||[0,0],ox=P.dx||0,oy=-(P.sube||0),r=P.rota||0,inc=P.incl||0;
+    const L=[[Math.sin(inc)*20,-25-Math.cos(inc)*20],[0,-25],[0,-11],(P.brI||[-15,-14]).slice(0,2),(P.brD||[15,-14]).slice(0,2),
+      P.sentado?[6,-5]:[-6+ai,-2.6],P.sentado?[9,-5]:[6+bi,-2.6]];
+    for(const q of L){if(r){const [x,y]=rotP(q[0],q[1]+22,r);q[0]=x;q[1]=y-22;}q[0]+=ox;q[1]+=oy;}   // como antes: rota alrededor de (0, −22) y luego se desplaza
+    return L;
+  }
+  function figura(P,T,B){
+    B=B||metaPose(P);
+    const [k,c,h,mi,md,pi,pd]=B;
+    const aT=Math.atan2(-(h[0]-c[0]),h[1]-c[1]),aH=Math.atan2(k[0]-c[0],-(k[1]-c[1]));   // inclinación del torso (pecho → cadera) y de la cabeza (pecho → cabeza)
+    const marcoT=a=>{g.save();g.translate(c[0],c[1]);g.rotate(a);g.translate(0,25);};      // el sistema de antes (pecho en (0, −25)), girado como quedó el cuerpo
     const U=P.uni&&Cap.uni?Cap.uni(P.uni):null,pie=U?.pierna||TINTA,zap=U?.zapato||TINTA;
-    if(P.sentado)for(const px of [-4,5]){raya(px,-11,px+13,-8,pie,3.6);caja(px+10,-14,5.5,8.5,2,zap);}
-    else for(const [px,a] of [[-6,ai],[6,bi]]){raya(px,-11,px+a,-3,pie,3.6);caja(px+a-4,-4.5,10,4.5,2.2,zap);}
-    brazo(-11,-25,P.brI||[-15,-14],U);
+    if(P.yo&&Cap.atras){marcoT(aT);Cap.atras(P,T);g.restore();}
+    if(P.sentado){g.save();g.translate(h[0],h[1]);g.rotate(aT);g.translate(0,11);for(const px of [-4,5]){raya(px,-11,px+13,-8,pie,3.6);caja(px+10,-14,5.5,8.5,2,zap);}g.restore();}
+    else for(const [px,f] of [[-6,pi],[6,pd]]){const [lx,ly]=rotP(px,0,aT);raya(h[0]+lx,h[1]+ly,f[0],f[1]-.4,pie,3.6);caja(f[0]-4,f[1]-1.9,10,4.5,2.2,zap);}
+    const hombro=sx=>{const [x,y]=rotP(sx,0,aT);return [c[0]+x,c[1]+y];};
+    {const [x,y]=hombro(-11);brazo(x,y,mi,U);}
+    marcoT(aT);
     caja(-13.5,-32,27,23,10,U?U.c:P.cuerpo||pal["--acc"]);
     if(U)U.t(T);else corazon(0,-21,3.4+Math.sin(T*3)*.4,"rgba(255,255,255,.85)");
     if(P.yo&&Cap.cuerpo)Cap.cuerpo(P,T);
-    g.save();g.translate(0,-30);g.rotate(P.incl||0);g.translate(0,30);
+    g.restore();
+    marcoT(aH);
     const bu=Math.sin(T*2.6)*2;
     raya(0,-61,1.5+bu*.6,-69,TINTA,1.8);
     circ(1.5+bu*.6,-70,3,P.luz||(S.pensando?AMAR:VERDE));
@@ -1176,8 +1196,7 @@ const Taller=(()=>{
     if(P.pelo)for(const [a,b,c,d] of [[-14,-59,-20,-69],[-5,-61,-8,-73],[5,-61,9,-72],[14,-59,21,-67]])raya(a,b,c,d,TINTA,2);
     if(P.lagrima)elip(-9,-41+(T*14%10),1.6,2.2,AZUL);
     g.restore();
-    brazo(11,-25,P.brD||[15,-14],U);
-    g.restore();
+    {const [x,y]=hombro(11);brazo(x,y,md,U);}
   }
 
   const juguete=(x,esc,c,T,ext)=>{       // los amigos son de juguete, con llave de cuerda: no son minis, no hay trabajo detrás
@@ -2039,7 +2058,7 @@ const Taller=(()=>{
     g.fillStyle="rgba(0,0,0,.18)";g.beginPath();g.ellipse(mx,sue+4*K,11*K,2.8*K,0,0,7);g.fill();
     g.save();g.translate(mx,sue+3*K);g.scale(K*ALTO*m.dir,K*ALTO);
     if(P.atras)P.atras();
-    figura(P,t/1000+m.fase);
+    figura(P,t/1000+m.fase,Cap.vivo?Cap.vivo(m,P,mx,ALTO,m.dir):null);   // el cuerpo simulado (panel_vivo_ragdoll.js)
     if(P.frente)P.frente();
     g.restore();
     if(S.ev[S.idx]?.de===m.id&&!m.duerme){  // lo que dice el monitor lo está haciendo este
@@ -2566,7 +2585,7 @@ const Taller=(()=>{
       if(t<peloHasta)P.pelo=true;
       g.save();g.translate(x,sue+3*K);g.scale(K*dir,K);
       if(P.atras)P.atras();
-      figura(P,T);
+      figura(P,T,Cap.vivo?Cap.vivo(Rb,P,x,1,dir):null);
       if(P.frente)P.frente();
       g.restore();
     }
@@ -2610,14 +2629,14 @@ const Taller=(()=>{
     for(const f of cortes){const x=f*W+26*e;caja(x-5,arr,10,b-122*e-arr,1,pal["--muro2"]);caja(x-7,b-124*e,14,5,1,pal["--mesa"]);raya(x-5,arr,x-5,b-124*e,"rgba(0,0,0,.14)",1);}
     if(P.k!=="az")for(const f of [...ests.map(i=>fr(X(i))),...(ests.length?[]:[.3,.6])]){   // una lámpara por cuarto, encendida si ahí se trabaja; en la azotea no hay techo
       const x=f*W+14*e,y=arr+(p===SALA?PCH:0),on=ests.length?ests.some(i=>(Flo.foco?Flo.ocup.has(i):i===idx)&&fr(X(i))===f):true;
+      const sw=Cap.lampara?Cap.lampara(p,x,y,e):0;g.save();if(sw){g.translate(x,y);g.rotate(-sw);g.translate(-x,-y);}   // se columpia si un muñeco de trapo la golpea (panel_vivo_peligros.js)
       raya(x,y,x,y+16*e,TINTA,1.6);g.beginPath();g.moveTo(x-13*e,y+27*e);g.lineTo(x+13*e,y+27*e);g.lineTo(x+5*e,y+16*e);g.lineTo(x-5*e,y+16*e);g.closePath();g.fillStyle="#6f7892";g.fill();
       circ(x,y+27*e,4*e,on?"#fff3a8":"#8b8f9e");
       if(on){const gr=g.createLinearGradient(0,y+27*e,0,b);gr.addColorStop(0,"rgba(255,243,168,.2)");gr.addColorStop(1,"rgba(255,243,168,0)");g.fillStyle=gr;g.beginPath();g.moveTo(x-12*e,y+27*e);g.lineTo(x+12*e,y+27*e);g.lineTo(x+78*e,b);g.lineTo(x-78*e,b);g.closePath();g.fill();}
-      const sw=Cap.lampara?Cap.lampara(p,x,y,e):0;g.save();if(sw){g.translate(x,y);g.rotate(-sw);g.translate(-x,-y);}   // se columpia si un muñeco de trapo la golpea (panel_vivo_peligros.js)
+      g.restore();
     }
     for(const i of ests){const k=ESTACIONES[i][0],q=PROP[k];if(q)q(fr(X(i))*W+46*e,b,e,T);}
     if(P.k==="pb"){
-      g.restore();
       const x=.5*W,s=b;caja(x,s-34*e,132*e,24*e,8*e,"#7a5a8c");caja(x,s-58*e,132*e,30*e,9*e,"#8d6ba1");for(const c of [0,1,2])marco(x+(4+c*42)*e,s-54*e,40*e,24*e,4,"#6a4d7a",1.5);caja(x-6*e,s-44*e,16*e,34*e,6*e,"#7a5a8c");caja(x+122*e,s-44*e,16*e,34*e,6*e,"#7a5a8c");
       const c=.715*W;caja(c,s-104*e,56*e,104*e,4,"#c9434f");caja(c+6*e,s-96*e,44*e,54*e,2,"#10131b");for(let f=0;f<3;f++)for(let n=0;n<3;n++)circ(c+(14+n*14)*e,s-(86-f*16)*e,4.6*e,COLORES[(f*3+n)%6]);caja(c+10*e,s-30*e,36*e,14*e,2,"#2a3044");
     }
@@ -3008,7 +3027,7 @@ const Taller=(()=>{
     else{
       g.save();g.translate(x,sue+3*K);g.scale(e*R.dir,e);
       if(P.atras)P.atras();
-      figura(P,T);
+      figura(P,T,Cap.vivo?Cap.vivo(R,P,x,.88,R.dir):null);
       if(P.frente)P.frente();
       g.restore();
     }
@@ -3216,7 +3235,7 @@ const Taller=(()=>{
     const suelta_=ev=>{dedos.delete(ev.pointerId);if(!dedos.size)cv.style.cursor="grab";};
     cv.addEventListener("pointerup",suelta_);cv.addEventListener("pointercancel",suelta_);
   }
-  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,ojos,gorro,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
+  const prim={g,caja,marco,circ,aro,elip,raya,letra,corazon,camino,figura,metaPose,ojos,gorro,em,humito,MADERA,TINTA,CABEZA,VISOR,OJO,ROSA,ROJO,AMAR,AZUL,VERDE,LILA,COLORES};
   // para el muñeco de trapo (panel_vivo_ragdoll.js): quién puede caerse ahora, dónde está su piso y cómo devolverle el control
   const entidades=()=>{
     const L=[],mi=m=>({E:m,nom:"el "+m.tipo,esc:ALTO,cuerpo:TM[m.tipo].c,gorro:TM[m.tipo].gorro,uni:EDIF?m.uni||Cap.uniSesion?.():undefined,tono:TM[m.tipo].tono,anda:!!m.anda});

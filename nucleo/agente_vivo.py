@@ -1178,7 +1178,7 @@ def mundo(video, alias, portadas):
                              queja=bool(_QUEJA.search(x["texto"]))) for x in filas]
     if video and _es_video(video):
         car = os.path.join(VIDEOS, video)
-        for sub in ("medios", "pegatinas", "miniatura_flow"):
+        for sub in ("medios", "pegatinas", "miniatura_flow", "fotos_reales", "fotos", "imagenes", "flow"):   # también son los enemigos del taller (panel_vivo_peligros.js)
             r["piezas"] += [f"{sub}/{n}" for n in _archivos(os.path.join(car, sub), (".jpg", ".jpeg", ".png", ".webp"), 6)]
         r["voz"] = [f"voz/final/{n}" for n in _archivos(os.path.join(car, "voz", "final"), (".wav", ".mp3"), 30)]
         master = next(iter(sorted(glob.glob(os.path.join(car, "salida", "*_MASTER.mp4")), key=os.path.getmtime, reverse=True)), None)

@@ -860,6 +860,13 @@ const Son=(()=>{
     plaf(t){sopla(t,.1,900,260,.9,.8);bip(t,150,55,.14,.5,"triangle");},
     upa(t,f){bip(t,f*.7,f*1.15,.09,.3);bip(t+.13,f*1.15,f*1.7,.12,.3);},
     baile(t,f){[1,1.25,1.5,2,1.5,2.5].forEach((k,i)=>bip(t+i*.11,f*k,f*k,.1,.22,"square"));},
+    zas(t){sopla(t,.16,600,3200,.55,.7);},                         // los de los peligros (5-nov-2026): golpe de la llave, bonk, resorte, gruñido, puente roto, barril, revienta
+    bonk(t){bip(t,520,180,.12,.45,"square");bip(t+.02,90,50,.16,.4,"triangle");},
+    boing(t){const o=ctx.createOscillator(),a=ctx.createGain(),l=ctx.createOscillator(),lg=ctx.createGain();o.type="triangle";o.frequency.value=260;l.frequency.value=18;lg.gain.value=90;l.connect(lg);lg.connect(o.frequency);o.frequency.exponentialRampToValueAtTime(620,t+.35);a.gain.setValueAtTime(.38,t);a.gain.exponentialRampToValueAtTime(.001,t+.45);o.connect(a);a.connect(bus);o.start(t);l.start(t);o.stop(t+.47);l.stop(t+.47);},
+    grr(t,f){for(let i=0;i<3;i++)bip(t+i*.07,f*.22,f*.17,.09,.3,"sawtooth");},
+    crack(t){for(let i=0;i<4;i++)sopla(t+i*.045,.05,3200-i*500,900,.7,1.4);bip(t,140,60,.2,.35,"triangle");},
+    rueda(t){for(let i=0;i<4;i++)bip(t+i*.09,110,90,.08,.22,"triangle");},
+    pop(t){sopla(t,.07,4000,1200,.8,.8);bip(t,900,1800,.06,.3);bip(t+.06,1300,2600,.08,.25);},
   };
   const notas=(t,fs,d=.11,v=.4,tipo="triangle")=>{fs.forEach((f,i)=>bip(t+i*d,f,f,d*1.5,v,tipo));return t+fs.length*d;};
   const R={
@@ -1008,7 +1015,7 @@ const Taller=(()=>{
   const EDIF=!window.EN_VIDEO&&!/[?&]clasico\b/.test(location.search);
   const PISOS=[{k:"maq",c:"S",n:"Sótano · Sala de máquinas",col:AZUL},{k:"pb",c:"PB",n:"Planta baja · Descanso",col:VERDE},{k:"p1",c:"1",n:"Piso 1 · Guion y voz",col:AMAR},{k:"p2",c:"2",n:"Piso 2 · Arte",col:ROSA},{k:"p3",c:"3",n:"Piso 3 · Montaje",col:LILA},{k:"az",c:"Az",n:"Azotea · Subida",col:ROJO}];
   const LUGAR={guion:[2,.2],voz:[2,.44],sonido:[2,.66],imagenes:[3,.28],clips:[3,.58],animacion:[4,.2],render:[4,.44],revision:[4,.66],subida:[5,.42]};
-  const SALA=0,P_PB=1,ESC_A=.03,ESC_B=.095,ASC=.82,ASC_W=112,CAB_A=138,LOSA=12,TECHO=240,TIERRA=120,GAB_X=.125,GAB_W=.625,ZMAX=2.8,MUNDO_W=1500;
+  const SALA=0,P_PB=1,ESC_A=.03,ESC_B=.095,ASC=.82,ASC_W=112,CAB_A=138,LOSA=12,TECHO=240,TIERRA=120,GAB_X=.125,GAB_W=.625,ZMAX=2.8,MUNDO_W=2400;   // 5-nov-2026: más ancho y pisos más altos para puentes, acantilados y obstáculos (panel_vivo_peligros.js)
   const pisoDe=v=>EDIF?Math.round(v/10):0,fr=v=>v-pisoDe(v)*10,enP=(p,f)=>EDIF?p*10+f:f;
   const rampa=p=>p%2?[ESC_B,ESC_A]:[ESC_A,ESC_B];   // sube en zigzag: cada tramo acaba donde empieza el siguiente
   let Yo=null;                           // quién hace la pose: lo que suelta (`em`) sale de él, no de Token
@@ -1023,7 +1030,7 @@ const Taller=(()=>{
     dpr=Math.min(2,devicePixelRatio||1);
     CW=cv.clientWidth;CH=cv.clientHeight;
     if(EDIF){
-      W=MUNDO_W;K=1.3;PCH=108;TH=0;H=PCH+150*K;
+      W=MUNDO_W;K=1.3;PCH=108;TH=0;H=PCH+190*K;
       let y=TECHO;pisoY=[];
       for(let p=PISOS.length-1;p>=0;p--){if(p===SALA)y+=PCH;pisoY[p]=y-PCH;y+=H-PCH+LOSA;}   // el gabinete cuelga en la sala: ese piso es más alto
       ALTOM=y+TIERRA;
@@ -2483,7 +2490,7 @@ const Taller=(()=>{
   function pinta(t,dt){
     if(!CW)medida();
     if(!CW||!CH)return;
-    ahora=t;sue=PCH+(H-PCH-TH)*(EDIF?.8:.72);
+    ahora=t;sue=PCH+(H-PCH-TH)*(EDIF?.74:.72);   // en el edificio el suelo es grueso: ahí se abren los hoyos y acantilados
     if(!EDIF){g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,W,H);}
     if(pend&&Esc&&pend.e)finEsc();          // llegó trabajo real: se acaba el teatro
     if(pend&&pend.e&&(A.act||esAct(A.nom)||A.nom==="quieto")){ultReal=t;poner(pend.nom,pend.e);}   // y las actividades y reacciones se cortan al instante
@@ -2669,7 +2676,7 @@ const Taller=(()=>{
     marco(x-w/2,y,w,h,3,"#5a6480",3);if(Cab.pu<.05)raya(x,y+3,x,y+h-5,"#5a6480",1.5);
   }
   const zMin=()=>Math.min(CW/(W+240),CH/ALTOM);
-  const zSigue=()=>Math.max(zMin(),Math.min(1.5,CH*.62/(H-PCH+LOSA),innerWidth>900&&innerHeight>500?CW/800:9));   // en escritorio, al menos 800 de ancho del edificio a la vista
+  const zSigue=()=>Math.max(zMin(),Math.min(1.5,CH*.7/(H-PCH+LOSA),innerWidth>900&&innerHeight>500?CW/800:9));   // en escritorio, al menos 800 de ancho del edificio a la vista
   const lim2=(v,a,b)=>Math.max(a,Math.min(b,v));
   function encuadra(){
     const vw=CW/Cam.tz,vh=CH/Cam.tz;
@@ -3128,6 +3135,7 @@ const Taller=(()=>{
       for(const a of aviones)if(pisoDe(a.x)===rp)avionPapel(a,t);
     });
     cabina(t,true);
+    if(Cap.sobre)PISOS.forEach((P,p)=>{if(pisoY[p]+H>=y0&&pisoY[p]<=y1)enPiso(p,()=>Cap.sobre(P.k,p,t,dt));});   // enemigos, cajas que caen y lo que vuela por encima de los robots (panel_vivo_peligros.js)
     enPiso(SALA,()=>dibujaRx(t));
     pasaParts(dt);dibujaParts(false);
     if(!Flo.foco)enMarco(oyRobot(),pisoDe(robotX),()=>letreroRobot(anda));
@@ -3209,8 +3217,8 @@ const Taller=(()=>{
     else for(const m of visibles())if(!m.oculto&&!m.duerme&&!(Esc&&Esc.m===m&&!m.trapo))L.push(mi(m));
     return L;
   };
-  const mundo=()=>({W,K,sue,EDIF,ahora,zSigue:EDIF&&CW?zSigue():1,ubica:E=>{if(E===Rb&&!Flo.foco)E.x=robotX;const p=pisoDe(E.x);return {px:fr(E.x)*W,piso:p,oy:EDIF?E.oy??pisoY[p]:0,lo:.03*W,hi:.97*AN()*W};}});
-  const ponX=(E,px,piso,d)=>{const x=lim(enP(piso,px/W));E.x=x;if(d)E.dir=d;if(E===Rb){robotX=x;if(d)dir=d;}};
+  const mundo=()=>({W,K,sue,EDIF,ahora,zSigue:EDIF&&CW?zSigue():1,PCH,H,pisoY:p=>EDIF?pisoY[p]:0,visto:(x,y,m=0)=>{const q=aPantalla(x,y);return q.x>-m&&q.x<CW+m&&q.y>-m&&q.y<CH+m;},ubica:E=>{if(E===Rb&&!Flo.foco)E.x=robotX;const p=pisoDe(E.x);return {px:fr(E.x)*W,piso:p,oy:EDIF?E.oy??pisoY[p]:0,lo:.03*W,hi:.97*AN()*W};}});
+  const ponX=(E,px,piso,d)=>{if(!W||!isFinite(px)||!isFinite(piso))return;const x=lim(enP(piso,px/W));E.x=x;if(d)E.dir=d;if(E===Rb){robotX=x;if(d)dir=d;}};
   const dim=()=>{
     if(EDIF&&!enMundo){                  // fuera de un piso se dibuja sobre el vidrio: anuncios, cartas y la batería, cerca de donde esté el robot
       const q=aPantalla(fr(robotX)*W,oyRobot()+sue);
@@ -3260,6 +3268,7 @@ requestAnimationFrame(bucle);
 <script src="/v2/vivo/extras.js"></script>
 <script src="/v2/vivo/avance.js"></script>
 <script src="/v2/vivo/ragdoll.js"></script>
+<script src="/v2/vivo/peligros.js"></script>
 <script src="/v2/vivo/movil.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ window.Trapo=(()=>{
   const ARMAS=["llave","escoba","chancla","periodico","sarten","martillo"];
 
   let Shs=[],prox=0,cadaMs=[18000,40000],ya=0,ultFoco=-1e9,hoyo=null,cols=null;
-  const MAX_ESC=4;
+  const MAX_ESC=6;   // 5-nov-2026: 6 (tropezones y reacciones por cercanía son escenas cortas sin cámara)
   const enUso=E=>Shs.some(sh=>sh.rds.some(rd=>rd.E===E));
   // ---- los muebles (5-nov-2026): colisionadores por piso que pone panel_vivo_peligros.js con Trapo.ponCols(piso → lista), en px del piso.
   // plat = plataforma de un solo sentido (también inclinada = rampa: mesas, repisas, escalera); seg = tubo o barandal sólido (r = grosor);
@@ -171,7 +171,8 @@ window.Trapo=(()=>{
       rd.k.fill(0);rd.cara=rd.dormido?"dormido":"wow";rd.boca=rd.dormido?0:.8;
       const h=rd.P[CAD],dd=rd.caeDir||rd.d,fl=sueloEn(rd,h.x);
       if(rd.alcanza){const q=rd.alcanza();rd.T[MD]=[q.x,q.y];rd.T[MI]=[q.x,q.y];rd.k[MD]=.45;rd.k[MI]=.2;}
-      else if(rd.reflejo==="suelo"&&s<1){rd.T[MI]=[h.x+dd*20*S,fl-3*S];rd.T[MD]=[h.x+dd*27*S,fl-3*S];rd.k[MI]=rd.k[MD]=.16;}
+      else if(rd.reflejo==="suelo"&&s<1){const c=rd.P[PEC],vy=Math.max(60*S,(c.y-c.py)/H),t=cl((fl-c.y)/vy,0,.45),ix=c.x+(c.x-c.px)/H*t;   // protegerse: las manos van al punto de impacto previsto
+        rd.T[MI]=[ix-5*S,fl-3*S];rd.T[MD]=[ix+5*S,fl-3*S];rd.k[MI]=rd.k[MD]=.16;}
       else if(rd.reflejo==="aletea"&&s<1.4){const c=rd.P[PEC];rd.T[MI]=[c.x-(12+Math.sin(s*31)*5)*S,c.y-(13+Math.sin(s*23)*4)*S];rd.T[MD]=[c.x+(12+Math.sin(s*27+1)*5)*S,c.y-(13+Math.sin(s*29+2)*4)*S];rd.k[MI]=rd.k[MD]=.12;}   // manos arriba al alcance del brazo (≤ 21 desde el pecho): un blanco fuera de alcance lo impulsaba solo hacia arriba
       else if(rd.reflejo==="cabeza"&&s<1.8){const c=rd.P[CAB],a=Math.atan2(c.y-rd.P[PEC].y,c.x-rd.P[PEC].x);   // se protege la cabeza: una mano a cada lado del casco
         rd.T[MI]=[c.x+Math.cos(a+1.6)*13*S,c.y+Math.sin(a+1.6)*13*S];rd.T[MD]=[c.x+Math.cos(a-1.6)*13*S,c.y+Math.sin(a-1.6)*13*S];rd.k[MI]=rd.k[MD]=.3;rd.cara="apretado";rd.boca=0;}
@@ -258,28 +259,42 @@ window.Trapo=(()=>{
       pose(rd,DUCK);rd.k.fill(1);rd.cara="wow";rd.boca=.7;
       if(s>.65)ir(rd,rd.tras||"guardia");
     }
-    else if(st==="tambalea"){          // Euphoria: equilibrio activo. El centro de masa contra la base de los pies; si se sale, paso de recuperación
-      const B=rd.bal,P=rd.P;               // hacia donde se cae, el torso se inclina al revés y los brazos se abren; si no alcanza, se cae
+    else if(st==="tambalea"){          // EQUILIBRIO SIMULADO (no hay clip): controladores que persiguen metas sobre el cuerpo Verlet
+      const B=rd.bal,P=rd.P;
       let mx=0,vx=0,mt=0;for(let i=0;i<7;i++){mx+=P[i].x*MASA[i];vx+=(P[i].x-P[i].px)*MASA[i];mt+=MASA[i];}
       mx/=mt;vx=vx/mt/H;
-      const c=mx-rd.AX,cap=c+vx*.2,base=7*S,fuera=Math.abs(cap)/base;   // «capture point»: dónde quedaría el peso si no hace nada
-      if(B.paso){const q=cl((ya-B.paso.t0)/170);rd.AX=B.paso.x0+B.paso.dx*suave(q);if(q>=1){B.paso=null;suena("paso",rd.info.tono);}}
-      else if(fuera>1&&B.pasos<B.max&&s>.05){B.paso={t0:ya,x0:rd.AX,dx:cl(cap*1.1,-24*S,24*S),pie:Math.sign(cap)===rd.d?PD:PI,quedo:null};B.pasos++;
-        const j=B.paso.pie===PI?PD:PI;B.paso.quedo=[P[j].x,rd.F+PARADO[j][1]*S+rd.AY];}
-      pose(rd,PARADO);
-      if(B.paso){const q=cl((ya-B.paso.t0)/170);rd.T[B.paso.pie][1]-=8*S*Math.sin(q*Math.PI);rd.T[B.paso.pie===PI?PD:PI]=B.paso.quedo;}
-      const lean=cl(-cap/(2.5*base),-1,1),pc=rd.T[PEC],w=s*(12+rd.fase),amp=cl(fuera,0,1.4);
-      rd.T[CAB][0]+=lean*8*S;rd.T[PEC][0]+=lean*3.5*S;rd.T[CAD][0]-=lean*2*S;
-      rd.T[MI]=[pc[0]-(14+3*amp)*S+Math.sin(w)*4*S*amp,pc[1]-(3+9*amp)*S-Math.cos(w*1.3)*5*S*amp];   // los brazos abiertos, como molinos si va muy mal
-      rd.T[MD]=[pc[0]+(14+3*amp)*S+Math.sin(w+2)*4*S*amp,pc[1]-(3+9*amp)*S-Math.cos(w*1.3+1.4)*5*S*amp];
-      const gan=suave(s/1.2);rd.k.fill(.025+.6*gan);rd.k[PI]=rd.k[PD]=.9;rd.k[MI]=rd.k[MD]=.3;if(B.paso)rd.k[B.paso.pie]=.55;
+      const pl=Math.min(P[PI].x,P[PD].x)-3*S,pr=Math.max(P[PI].x,P[PD].x)+3*S,bc=(pl+pr)/2,bw=Math.max(5*S,(pr-pl)/2);   // la base de apoyo = donde están los pies
+      const cap=mx+vx*Math.sqrt(30/GRAV),err=cap-bc,fuera=Math.abs(err)/bw;   // capture point del péndulo invertido: x + v·√(l/g), l = 30 (altura del centro de masa)
+      // 1) controlador de pasos: si el capture point sale de la base, el pie más alejado va a donde cae el peso (una meta, no una pose)
+      if(!B.paso&&fuera>1&&B.pasos<B.max&&s>.04){
+        const pie=Math.abs(P[PI].x-cap)>Math.abs(P[PD].x-cap)?PI:PD;
+        const otro=pie===PI?PD:PI;B.paso={pie,x:cl(cap+Math.sign(err)*2*S,P[otro].x-26*S,P[otro].x+26*S),t0:ya};B.pasos++;
+      }
+      if(B.paso){                        // el pie vuela hacia su meta; se levanta según lo que le falta (no hay curva de tiempo); al tocar suelo cerca, se planta
+        const pf=P[B.paso.pie],falta=B.paso.x-pf.x;rd.T[B.paso.pie]=[B.paso.x,rd.F+rd.AY-2.6*S-Math.min(9*S,Math.abs(falta)*.6)];
+        if((Math.abs(falta)<2*S&&pf.y>rd.F+rd.AY-4*S)||ya-B.paso.t0>500){B.paso=null;suena("paso",rd.info.tono);}
+      }
+      for(const i of [PI,PD])if(!B.paso||B.paso.pie!==i)rd.T[i]=[P[i].x,rd.F+rd.AY-2.6*S];   // el pie de apoyo se queda donde está
+      // 2) la cadera persigue el centro de la base; pecho y cabeza se inclinan contra el error (torque de cadera)
+      const lean=cl(-err/(2.5*bw),-1,1),hx=(P[PI].x+P[PD].x)/2;rd.AX=hx;
+      rd.T[CAD]=[hx-lean*2*S,rd.F+rd.AY-11*S];rd.T[PEC]=[hx+lean*4*S,rd.F+rd.AY-25*S];rd.T[CAB]=[hx+lean*9*S,rd.F+rd.AY-45*S];
+      // 3) brazos: se abren en proporción al error (momento angular contra la caída), el del lado de la velocidad más arriba
+      const amp=cl(fuera,0,1.6),pc=rd.T[PEC];
+      rd.T[MI]=[pc[0]-(13+5*amp)*S+lean*6*S,pc[1]-(2+10*amp)*S-Math.max(0,-vx/(60*S))*4*S];
+      rd.T[MD]=[pc[0]+(13+5*amp)*S+lean*6*S,pc[1]-(2+10*amp)*S-Math.max(0,vx/(60*S))*4*S];
+      // 4) agarre: si va mal, la mano busca el asidero más cercano (mueble, barandal u otro robot) y se apoya
+      if(fuera>.9&&ya>(B.apT||0)){B.apT=ya+150;const q=buscaAsa(rd);B.apoyo=q&&q.d<30*S?q:null;if(B.apoyo&&!B.dijoAp&&Math.random()<.4){B.dijoAp=true;dice(rd.show,rd,elige(["¡Me apoyo!","Permiso…","¡Sostenme!"]));}}
+      if(B.apoyo){const q=B.apoyo,pt=q.o?q.o.P[q.j]:q;rd.T[q.i]=[pt.x,pt.y];}
+      // 5) fuerza muscular según el estado: sorpresa (floja al recibir el golpe), aguantar (sube más rápido cuanto peor va), rendirse (cero)
+      B.tono=cl(B.tono+rd.ticks*H*(.5+.9*Math.min(1,fuera)),0,.7);
+      rd.k.fill(B.tono);rd.k[PI]=rd.k[PD]=.85;if(B.paso)rd.k[B.paso.pie]=.5;rd.k[MI]=rd.k[MD]=.25;if(B.apoyo)rd.k[B.apoyo.i]=.4;
       rd.cara=fuera>.8?"wow":"apretado";rd.boca=fuera>.8?.55:0;
-      if(Math.abs(c)>3.2*base||(B.pasos>=B.max&&!B.paso&&fuera>1.5)||s>3.2||hoyoEn(rd,rd.AX)){   // no alcanzó: ahora sí se cae, hacia donde iba el peso
-        const dd=Math.sign(cap)||rd.d;rd.caeDir=dd;rd.k.fill(0);rd.reflejo=elige(["suelo","suelo","cabeza","aletea"]);
-        empuja(rd,CAB,dd*120+(P[CAB].x-P[CAB].px)/H/S,(P[CAB].y-P[CAB].py)/H/S);empuja(rd,PEC,dd*80+(P[PEC].x-P[PEC].px)/H/S,0);
+      const ap=B.apoyo?1.4:1;
+      if((s>.25&&Math.abs(err)>bw+34*S*ap)||(B.pasos>=B.max&&!B.paso&&fuera>1.5*ap)||s>3.5||hoyoEn(rd,rd.AX)){   // no alcanza: se rinde a trapo y la inercia hace el resto
+        rd.caeDir=Math.sign(err)||rd.d;rd.k.fill(0);rd.reflejo=fuera>2.5?"suelo":elige(["suelo","cabeza","aletea"]);
         if(!rd.dormido)suena("uy",rd.info.tono);rd.bal=null;ir(rd,"cae");
       }
-      else if(!B.paso&&fuera<.55&&s>.35){B.ok+=rd.ticks*H;if(B.ok>.3){rd.bal=null;rd.dijo=Math.random()<.65;if(rd.dijo)dice(rd.show,rd,elige(["¡Uf, casi!","Equilibrio perfecto.","No me caí. Nadie diga nada.","Todo bajo control.","¡Ni me moví!","Ups… ¡pero no!"]));ir(rd,"listo");}}
+      else if(!B.paso&&fuera<.5&&Math.abs(vx)<25*S&&s>.3){B.ok+=rd.ticks*H;if(B.ok>.25){rd.bal=null;rd.dijo=Math.random()<.5;if(rd.dijo)dice(rd.show,rd,elige(["¡Uf, casi!","Equilibrio perfecto.","No me caí. Nadie diga nada.","Todo bajo control.","Ups… ¡pero no!"]));ir(rd,"listo");}}
       else B.ok=0;
     }
     else if(st==="salta"){             // brinco de verdad (barril, caja, acantilado corto): sube, encoge las piernas y cae de pie
@@ -300,8 +315,8 @@ window.Trapo=(()=>{
   }
   function tambalea(rd,vx,o={}){         // un golpe leve: no se cae de una vez, primero pelea por el equilibrio (y a veces gana)
     const dd=Math.sign(vx)||rd.d;
-    rd.bal={pasos:0,ok:0,paso:null,max:o.pasos??elige([1,2,2,3,3,4])};rd.fijo=null;rd.caeDir=dd;
-    rd.k.fill(.025);rd.k[PI]=rd.k[PD]=.9;
+    rd.bal={pasos:0,ok:0,paso:null,max:o.pasos??elige([1,2,2,3,3,4]),tono:.03};rd.fijo=null;rd.caeDir=dd;   // el impulso entra al cuerpo; lo demás lo deciden los controladores
+    rd.k.fill(.03);rd.k[PI]=rd.k[PD]=.85;
     empujaTodo(rd,[[vx*1.15,-25],[vx,-12],[vx*.5,0],[vx*1.2,-30],[vx*1.2,-30],[0,0],[0,0]]);
     suena("uy",(rd.info.tono||900)*1.3);ir(rd,"tambalea");
   }
@@ -317,7 +332,9 @@ window.Trapo=(()=>{
     ir(rd,"cae");
   }
   function lanzaRd(rd,vx,vy,o={}){       // un golpe con dirección (barril, enemigo, resorte, viento): lo de arriba sale más rápido, así da la vuelta
-    if(!o.aplasta&&o.aguanta!==0&&Math.abs(vx)<380&&vy>-300&&dePie(rd)&&rd.st!=="tambalea"&&Math.random()<(o.aguanta??.6)){tambalea(rd,vx*.8);return;}   // un golpe leve se aguanta
+    const fu=Math.hypot(vx,Math.min(0,vy)*.7);   // golpe graduado: leve = el equilibrio lo absorbe; medio = quizá; fuerte = trapo total protegiéndose
+    if(!o.aplasta&&o.aguanta!==0&&dePie(rd)&&rd.st!=="tambalea"&&Math.random()<(o.aguanta??(fu<260?.9:fu<480?.5:0))){tambalea(rd,vx*(fu<260?.8:.95),{pasos:fu<260?elige([2,3,3]):elige([1,1,2])});return;}
+    if(fu>=480&&o.reflejo===undefined&&Math.random()<.5)o={...o,reflejo:"cabeza"};
     rd.caeDir=Math.sign(vx)||rd.d;rd.k.fill(0);rd.bal=null;rd.fijo=null;rd.agarrar=undefined;rd.reflejo=o.reflejo!==undefined?o.reflejo:elige(["suelo","aletea","aletea","cabeza",null]);
     const giro=o.giro??1;
     rd.P.forEach((p,i)=>{const hf=-PARADO[i][1]/45;empuja(rd,i,vx*(1+giro*(hf-.5)*.9)*azar(.85,1.15),vy*azar(.88,1.12)*(i>=PI?.82:1)+(o.aplasta&&i===CAB?vy*.4:0));});
@@ -448,7 +465,7 @@ window.Trapo=(()=>{
         for(const p of rd.P){const vx=(p.x-p.px)*.996,vy=(p.y-p.py)*.996;p.px=p.x;p.py=p.y;p.x+=vx;p.y+=vy+G;}
         for(let i=0;i<7;i++){const k=rd.k[i];if(!k)continue;const p=rd.P[i],[tx,ty]=rd.T[i],c=1-Math.exp(-H*42*k);p.x+=(tx-p.x)*c;p.y+=(ty-p.y)*c;p.px+=(p.x-p.px)*k*.28;p.py+=(p.y-p.py)*k*.28;}
       }
-      for(let r=0;r<4;r++){
+      for(let r=0,nr=sh.vis===false?2:4;r<nr;r++){
         for(const rd of L)for(const [a,b,lo,hi] of HUESOS)hueso(rd.P[a],rd.P[b],lo*rd.s,hi*rd.s);
         for(const l of sh.links)hueso(l.a.P[l.i],l.b.P[l.j],0,l.L);
         for(const rd of L)if(rd.fijo){    // agarrado: de un mueble (punto fijo, pesa infinito) o de otro robot (se reparten el tirón)
@@ -540,6 +557,7 @@ window.Trapo=(()=>{
       const q=(ya-sh.lentoT)/1000;sh.lento=q<.5?Math.min(sh.lento,.4):q<.8?.4+.6*(q-.5)/.3:1;
       sh.acc+=Math.min(dt,50)/1000*sh.lento;
       const n=Math.min(9,Math.floor(sh.acc*HZ));sh.acc-=n*H;
+      if(!sh.visT||ya-sh.visT>500){sh.visT=ya;const c=centro(sh);sh.vis=!c||!M().visto||M().visto(c.x,c.y,-80);}   // fuera de cámara: mitad de iteraciones
       for(const rd of sh.rds){rd.ticks=n;vive(rd);}
       if(sh.dirige)sh.dirige(sh);else dirige(sh);
       if(n)fisica(sh,n);
@@ -549,8 +567,37 @@ window.Trapo=(()=>{
       sh.fx=sh.fx.filter(f=>ya-f.t0<f.dur);
       if(sh.rds.every(rd=>rd.fin))termina(sh);
     }
-    try{cruza();atropella(L);}catch(e){console.warn("trapo",e);}
+    try{cruza();atropella(L);euforia(L);}catch(e){console.warn("trapo",e);}
   };
+  // ---- «como el peatón de GTA IV» (el usuario, 5-nov-2026): el equilibrio se activa solo, sin cámara. Al caminar, a veces un tropezón (un
+  // impulso hacia delante que entra a la simulación); si uno que camina pasa rozando a otro, el rozado recibe el empujón (y a veces los dos).
+  let proxEu=0;const roce=new Map();
+  const TROPIEZA=["¡Uy!","¿Quién puso ese escalón?","Casi…","¡Mi pie!","Equilibrio, equilibrio…",null,null,null];
+  function euforia(L){
+    if(Shs.length>=MAX_ESC-1||!M().W)return;
+    if(!proxEu)proxEu=ya+azar(4000,8000);
+    if(ya>proxEu){
+      proxEu=ya+azar(5000,11000);
+      const an=L.filter(x=>libre(x)&&x.anda);
+      if(an.length){const a=elige(an),d=a.E.dir<0?-1:1;golpeAPI(a,{modo:"tambalea",vx:d*azar(110,230),pasos:elige([2,3,3,4]),foco:false,max:9000,dice:elige(TROPIEZA),que:"se tropezó"});return;}
+    }
+    const m=M(),ok=L.filter(libre);if(ok.length<2)return;
+    const u=new Map(ok.map(x=>[x,m.ubica(x.E)]));
+    for(const a of ok){
+      if(!a.anda)continue;const ua=u.get(a),da=a.E.dir<0?-1:1;
+      for(const b of ok){
+        if(b===a)continue;const ub=u.get(b);if(ub.piso!==ua.piso)continue;
+        const dx=ub.px-ua.px;if(Math.abs(dx)>16*m.K*(a.esc+b.esc)||Math.sign(dx)!==da)continue;
+        const key=a.nom+"|"+b.nom;if(ya-(roce.get(key)??-1e9)<15000)continue;roce.set(key,ya);
+        if(Math.random()<.45){
+          golpeAPI(b,{modo:"tambalea",vx:Math.sign(dx)*azar(140,260),pasos:elige([2,3,4]),foco:false,max:9000,dice:Math.random()<.45?elige(["¡Oye!","¡Cuidado!","Con permiso, ¿no?","¡Que me tiras!"]):null,que:"lo rozaron"});
+          if(Math.random()<.4)golpeAPI(a,{modo:"tambalea",vx:-Math.sign(dx)*azar(90,170),pasos:elige([2,3]),foco:false,max:9000,que:"chocó"});
+        }
+        return;
+      }
+    }
+  }
+
   // ---- Euphoria entre escenas: los muñecos de escenas distintas chocan entre sí, y el que sale volando tumba (o hace tambalear) al que está de pie
   const GRANDES=[CAB,PEC,CAD];
   function cruza(){
@@ -732,6 +779,7 @@ window.Trapo=(()=>{
   }
 
   return {
+    euforia:()=>{proxEu=1;return "el siguiente que camine se tropieza";},
     prueba:tipo=>{for(const sh of [...Shs])termina(sh);return lanza(Taller.entidades(),tipo||"tropiezo")?Shs[Shs.length-1].tipo:"nadie libre";},
     cada:(a,b)=>{cadaMs=[a,b??a];prox=ya+a;return cadaMs;},
     estado:()=>Shs.map(sh=>({tipo:sh.tipo,foco:sh.foco,quien:sh.rds.map(r=>`${r.info.nom}:${r.st}`),agarres:sh.links.length})),

@@ -367,6 +367,8 @@ window.Peligros=(()=>{
         e.x+=cl(e.wx-e.x,-90*K*s,90*K*s);e.by+=(e.wy-e.by)*Math.min(1,s*1.5);e.y=e.by+Math.sin(ya/300+e.fase)*6*K;
         e.rot=Math.sin(ya/400+e.fase)*.18;
         if(ya-e.t0>e.ronda&&T_.cupo())if(!apunta(e))e.t0=ya;
+        if(Math.random()<.012&&T_.cupo())for(const r of robots())if(r.u.piso===e.p&&Math.abs(r.u.px-e.x)<55*K&&Math.abs(F-45*K*r.i.esc-e.y)<65*K){   // pasa rozando: se asusta; el empujón entra a la simulación de equilibrio
+          T_.golpe(r.i,{modo:"tambalea",vx:(Math.sign(r.u.px-e.x)||1)*azar(140,240),pasos:elige([2,3]),foco:false,max:9000,dice:Math.random()<.5?elige(["¡Fuera, fuera!","¿¡Qué es eso!?","¡No me toques!"]):null,que:"se asusta"});break;}
       }
       else if(e.st==="apunta"){
         const b=blancoXY(e);if(!b){e.st="ronda";e.t0=ya;continue;}

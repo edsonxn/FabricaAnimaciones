@@ -87,3 +87,33 @@ _Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 1
   Referencias: Easy Geek «Tier list de todos los JEFES de BANJO TOOIE» (25 k), Super Joe Bros (35 k), «All Bosses» de ProsafiaGaming (2,3 M).
 - **Hipótesis:** el ranking de jefes saca más vistas por búsqueda («Banjo Tooie bosses / jefes») que el de mundos y retiene ≥ 35 %.
   Registro a 7 días: (pendiente, ~3-dic). Comentarios al empezar: 2 nuevos (@riuma77 Rare, @JaVik0 «Y los secretos?» → burla disfrazada).
+
+## 6-nov-2026 — CLAUDE TOMA EL CANAL: plan de pruebas para subir vistas (el usuario: «tu objetivo final es llegar a más vistas»)
+**Diagnóstico con datos (`yt metricas 90`, analytics por video y por semana, `ideas --actualizar` del 6-nov):**
+- El canal vive de BÚSQUEDA (1 354 de 2 261 vistas en 90 d = 60 %), luego suscriptores (658). Recomendados casi nada (79):
+  el algoritmo todavía no empuja los largos nuevos. Vistas por semana planas: ~100-300 desde julio, con y sin catálogo viejo.
+- Lo que más vistas dio en la historia del canal fueron **Shorts de curiosidad** (Doom en prueba de embarazo 18,8 k, control
+  de Mario Kart 10,7 k, Kirby nació por flojera 9,1 k; mediana 5 700) y **lore de Zelda con pregunta** («todos los Zelda en
+  orden cronológico» 16 k y +105 subs; «¿Por qué nadie encontró estos objetos de Zelda?» 6,6 k; «¿Qué fue de Navi?» 2,5 k, que
+  aún traía búsquedas «navi zelda», «saria» hasta que el catálogo pasó a privado el 13-oct). **Desde el 13-oct: 0 Shorts.**
+- Largos nuevos (SECUENCIA YT): Majora 249 en 6 d, remake 215 en 3 d (el mejor arranque), Banjo-Tooie 190 en 17 d, Ocarina 40,
+  Jiggies 38, Rare 14 en 1 d. **Zelda + actualidad > Banjo.** Retención 40-50 % en los de 11-15 min; 26 % en el de 15 min de Banjo.
+- La COLA tiene 7 largos programados hasta el 29-nov (3 de Banjo-Tooie): todo tema de actualidad esperaría 3 semanas.
+- Fuera (60 d): la ola del **remake de Ocarina** (salió el 5-nov) domina el nicho: Mundo N ×14,5 (325 k), Nintendúo ×8,6,
+  «10 cosas que Nintendo AÚN ESCONDE del remake» ×4,8; Shorts: Vandal «2 SECRETOS ELIMINADOS del remake» 289 k en 1,5 días,
+  Nintendúo «el truco más random del remake» 1,1 M; Nachotaro (126 k subs) vive de Shorts de Mario 64 «Nintendo BORRÓ…» ×3,9.
+
+**Estrategia (cada prueba cambia UNA variable y se mide a 7 días contra la mediana del canal):**
+1. **P1 · Actualidad en su pico** — `oot_remake_eliminado` «Lo que Nintendo ELIMINÓ del REMAKE de Ocarina of Time» (~10 min,
+   fórmula de oot_remake_cambios, cambia SOLO el ángulo: lo quitado tras el lanzamiento, con fuentes) y **se cuela en la cola**
+   (sale en 2-3 días, no en 3 semanas). Hipótesis: > ×3 la mediana del canal en 7 días por búsqueda («remake ocarina eliminado»).
+2. **P2 · Vuelven los Shorts** (no cuentan para el hueco): 1 Short vertical por largo, cortado del propio largo (la mejor
+   curiosidad de 30-50 s, título-pregunta), publicado 1-2 días antes que su largo y con «video relacionado» = el largo.
+   Hipótesis: mediana ≥ 1 000 vistas y +subs que los largos no dan.
+3. **P3 · Empaque corto con pregunta**: los títulos «X: su historia y los N secretos QUE IGNORASTE» son largos; probar títulos
+   ≤ 55 caracteres con verbo fuerte o pregunta («Lo que Nintendo ELIMINÓ…», «¿Por qué…?»), como los ganadores de fuera y los
+   de nuestro catálogo viejo.
+4. **P4 · Cola equilibrada**: nunca dos Banjo seguidos; Zelda/actualidad delante. Ciclo a 2 días mientras la cola tenga > 4 videos.
+5. **P5 (con visto bueno del usuario, es contenido público)**: republicar 5-8 largos viejos de lore de Zelda que seguían trayendo
+   búsquedas (Navi, Saria, carrera imposible, Gerudo, Link sin hada) para recuperar ese tráfico de cola larga.
+Registro a 7 días de cada prueba: (pendiente).

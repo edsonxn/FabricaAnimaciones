@@ -293,8 +293,9 @@ def sticks(w=1240):
 
 
 # ------------------------------------------------------------------ balance final
-def balance(si, no, w=1280):
-    """Dos columnas: CONFIRMADO (✓ verde) y SIN CONFIRMAR (? gris). Marca k = renglón k (primero los de `si`, luego `no`)."""
+def balance(si, no, w=1280, titulos=("SIN CONFIRMAR", "CONFIRMADO"), cruz=False):
+    """Dos columnas: CONFIRMADO (✓ verde) y SIN CONFIRMAR (? gris). Marca k = renglón k (primero los de `si`, luego `no`).
+    `titulos` cambia los encabezados (p. ej. ("SE QUITÓ", "SE AÑADIÓ")) y `cruz=True` pone ✕ roja en vez de ? gris."""
     filas = max(len(si), len(no))
     h = 120 + 58 * filas + 40
     base, Mg = _humo(w, h, alfa=.6)
@@ -305,8 +306,8 @@ def balance(si, no, w=1280):
         d = ImageDraw.Draw(im)
         a0 = 255 * _eo(dt / .3)
         cx1, cx2 = Mg + w * .27, Mg + w * .73
-        _txt(d, (cx1, Mg + 44), "SIN CONFIRMAR", ft, GRIS, "mm", a0, track=1)
-        _txt(d, (cx2, Mg + 44), "CONFIRMADO", ft, VERDE, "mm", a0, track=1)
+        _txt(d, (cx1, Mg + 44), titulos[0], ft, (255, 90, 90) if cruz else GRIS, "mm", a0, track=1)
+        _txt(d, (cx2, Mg + 44), titulos[1], ft, VERDE, "mm", a0, track=1)
         _filete(d, Mg + 60, Mg + w - 60, Mg + 86, a0)
         todos = [(0, t) for t in no] + [(1, t) for t in si]
         mk = list(marcas) + [dur] * (len(todos) - len(marcas))
@@ -322,8 +323,190 @@ def balance(si, no, w=1280):
             y = Mg + 124 + fila * 58 + 12 * (1 - _eo(u))
             if lado:
                 d.line([(x, y), (x + 10, y + 12), (x + 30, y - 14)], fill=VERDE + (int(a),), width=6)
+            elif cruz:
+                d.line([(x + 2, y - 12), (x + 26, y + 12)], fill=(255, 80, 80, int(a)), width=6)
+                d.line([(x + 2, y + 12), (x + 26, y - 12)], fill=(255, 80, 80, int(a)), width=6)
             else:
                 _txt(d, (x + 14, y), "?", fr, GRIS, "mm", a)
             _txt(d, (x + 48, y), t, fr, BLANCO if lado else CREMA, "lm", a)
+        return _bgra(im, min(_eo(dt / .25), (dur - dt) / .4))
+    return fn
+
+
+# ================================================================== MG de «lo que ELIMINÓ el remake» (oot_remake_eliminado, 7-nov-2026)
+ROJO_X = (255, 70, 70)
+
+
+def _cruz(d, x, y, r, a, ancho=7):
+    d.line([(x - r, y - r), (x + r, y + r)], fill=ROJO_X + (int(a),), width=ancho)
+    d.line([(x - r, y + r), (x + r, y - r)], fill=ROJO_X + (int(a),), width=ancho)
+
+
+def lista_negra(items, titulo="Eliminado del remake", w=900):
+    """Lista que se va TACHANDO: el renglón k aparece en la marca k y, 0,45 s después, una raya roja lo cruza y sale la ✕.
+    items = [(texto, ruta_icono o None)]. Para el gancho: «una granja de rupias, Master Quest, glitches…»."""
+    n = len(items)
+    h = 110 + 74 * n + 30
+    base, Mg = _humo(w, h, alfa=.6)
+    ft, fr = fuente("d", 34), fuente("d", 36)
+    icos = []
+    for _, r in items:
+        ic = None
+        if r and os.path.exists(r):
+            ic = Image.open(r).convert("RGBA")
+            ic.thumbnail((60, 60))
+        icos.append(ic)
+
+    def fn(dt, dur, marcas):
+        im = base.copy()
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .3)
+        _txt(d, (Mg + w / 2, Mg + 42), titulo.upper(), ft, (255, 110, 110), "mm", a0, track=2)
+        _filete(d, Mg + 70, Mg + w - 70, Mg + 80, a0)
+        mk = list(marcas) + [dur] * (n - len(marcas))
+        for k, (texto, _) in enumerate(items):
+            u = (dt - mk[k]) / .3
+            if u <= 0:
+                continue
+            a = 255 * _eo(u)
+            y = Mg + 128 + k * 74
+            x = Mg + 70 + 30 * (1 - _eo(u))
+            if icos[k] is not None:
+                im.alpha_composite(M._alfa(icos[k], _eo(u)), (int(x), int(y - icos[k].height / 2)))
+            xt = x + 80
+            _txt(d, (xt, y), texto, fr, BLANCO, "lm", a)
+            v = _eo((dt - mk[k] - .45) / .35)
+            if v > 0:
+                L = M._ancho(texto, fr)
+                d.line([(xt - 8, y + 2), (xt - 8 + (L + 16) * v, y + 2)], fill=ROJO_X + (235,), width=6)
+                _cruz(d, Mg + w - 70, y, 15 * _reb(v), 255 * v)
+        return _bgra(im, min(_eo(dt / .25), (dur - dt) / .4))
+    return fn
+
+
+def ranuras(nombres=("Tú", "Tu hermano", "Tu primo"), w=1000):
+    """El «Please select a file» de N64 con tres ranuras (una por nombre, entran escalonadas); en la marca 0 las dos de abajo
+    se tachan y se caen, y la primera se vuelve «PARTIDA ÚNICA / guardado automático» con el rojo de Switch."""
+    h = 430
+    base, Mg = _humo(w, h, alfa=.6)
+    ft, fr, fs = fuente("d", 34), fuente("d", 34), fuente("si", 26)
+
+    def fn(dt, dur, marcas):
+        im = base.copy()
+        d = ImageDraw.Draw(im)
+        t0 = marcas[0] if marcas else dur * .55
+        c = _eo((dt - t0) / .6)
+        a0 = 255 * _eo(dt / .3)
+        tit = "PLEASE SELECT A FILE" if c < .5 else "PARTIDA ÚNICA"
+        _txt(d, (Mg + w / 2, Mg + 42), tit, ft, AMARILLO if c < .5 else (255, 110, 110), "mm", a0 * abs(1 - 2 * c) if .2 < c < .8 else a0, track=2)
+        for k, nom in enumerate(nombres):
+            u = _eo((dt - .25 - k * .3) / .35)
+            if u <= 0:
+                continue
+            y = Mg + 120 + k * 92
+            caida = 0 if k == 0 else 160 * _eo((dt - t0 - .5 - .15 * k) / .5)
+            af = 255 * u * (1 if k == 0 else 1 - _eo((dt - t0 - .7 - .15 * k) / .4))
+            if af <= 1:
+                continue
+            x0, x1 = Mg + 120, Mg + w - 120
+            col = (40, 90, 200) if k > 0 or c < .5 else ROJO_SW
+            d.rounded_rectangle((x0, y + caida - 32, x1, y + caida + 32), 14, fill=col + (int(af * .55),),
+                                outline=CREMA + (int(af),), width=3)
+            etiqueta_ = f"FILE {k + 1}" if (k > 0 or c < .5) else "SWITCH 2"
+            _txt(d, (x0 + 26, y + caida), etiqueta_, fr, BLANCO, "lm", af)
+            texto = nom if (k > 0 or c < .5) else "Guardado automático"
+            _txt(d, (x1 - 26, y + caida), texto, fr, CREMA, "rm", af)
+            if k > 0:
+                v = _eo((dt - t0 - .1 * k) / .35)
+                if v > 0:
+                    d.line([(x0 + 10, y + caida), (x0 + 10 + (x1 - x0 - 20) * v, y + caida)], fill=ROJO_X + (int(af),), width=6)
+        _txt(d, (Mg + w / 2, Mg + h - 36), "Nintendo 64: 3 archivos" if c < .5 else "Switch 2: una sola ranura", fs, GRIS, "mm", a0)
+        return _bgra(im, min(_eo(dt / .25), (dur - dt) / .4))
+    return fn
+
+
+def _gota(d, x, y, r, col, a, hueca=False):
+    pts = [(x, y - 1.9 * r)] + [(x + r * math.cos(math.radians(a_)), y + r * math.sin(math.radians(a_))) for a_ in range(-20, 201, 10)]
+    if hueca:
+        d.line(pts + [pts[0]], fill=GRIS + (int(a),), width=4, joint="curve")
+    else:
+        d.polygon(pts, fill=tuple(col) + (int(a),), outline=BLANCO + (int(a * .8),))
+        d.ellipse((x - r * .45, y - r * .2, x - r * .1, y + r * .3), fill=(255, 255, 255, int(a * .35)))
+
+
+def sangre(pasos, titulo="La sangre de Ganondorf", w=1500):
+    """Una gota por versión, de izquierda a derecha, en la marca k: pasos = [(año, versión, color RGB o None)]; None = gota
+    HUECA tachada con «NO ESTÁ» (la escena eliminada)."""
+    n = len(pasos)
+    h = 400
+    base, Mg = _humo(w, h, alfa=.58)
+    ft, fa, fv = fuente("d", 34), fuente("s", 44), fuente("d", 28)
+
+    def fn(dt, dur, marcas):
+        im = base.copy()
+        d = ImageDraw.Draw(im)
+        _txt(d, (Mg + w / 2, Mg + 40), titulo.upper(), ft, AMARILLO, "mm", 255 * _eo(dt / .3), track=2)
+        mk = list(marcas) + [dur] * (n - len(marcas))
+        for k, (año, ver, col) in enumerate(pasos):
+            u = (dt - mk[k]) / .4
+            if u <= 0:
+                continue
+            x = Mg + 150 + k * (w - 300) / max(1, n - 1)
+            y = Mg + 185
+            s = _reb(u)
+            a = 255 * _eo(u)
+            _gota(d, x, y + 20 * (1 - _eo(u)), 46 * max(.1, s), col or GRIS, a, hueca=col is None)
+            if col is None:
+                _cruz(d, x, y - 20, 34 * _eo(u), a)
+                _txt(d, (x, y + 72), "NO ESTÁ", fv, ROJO_X, "mm", a, track=1)
+            _txt(d, (x, y + 118), año, fa, BLANCO, "mm", a)
+            _txt(d, (x, y + 160), ver, fv, CREMA, "mm", a)
+            if k:
+                xa = Mg + 150 + (k - .5) * (w - 300) / max(1, n - 1)
+                s_ = 14
+                d.polygon([(xa - s_ * .6, y - 20 - s_), (xa - s_ * .6, y - 20 + s_), (xa + s_ * .8, y - 20)], fill=VERDE + (int(a * .8),))
+        return _bgra(im, min(_eo(dt / .25), (dur - dt) / .4))
+    return fn
+
+
+def ofrendas(items, rupia=None, titulo="Ofrenda a las Grandes Hadas", antes="Antes: gratis", w=1500):
+    """Tres fuentes con su precio: la tarjeta k entra en la marca k y su número rueda de 0 al precio (con la rupia).
+    items = [(lugar, precio)]. Arriba, «Antes: gratis» tachado."""
+    n = len(items)
+    h = 400
+    base, Mg = _humo(w, h, alfa=.58)
+    ft, fn_, fl, fs = fuente("d", 34), fuente("d", 92), fuente("d", 28), fuente("si", 28)
+    ic = None
+    if rupia and os.path.exists(rupia):
+        ic = Image.open(rupia).convert("RGBA")
+        ic.thumbnail((70, 70))
+
+    def fn(dt, dur, marcas):
+        im = base.copy()
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .3)
+        _txt(d, (Mg + w / 2, Mg + 40), titulo.upper(), ft, AMARILLO, "mm", a0, track=2)
+        _txt(d, (Mg + w / 2, Mg + 86), antes, fs, GRIS, "mm", a0)
+        L = M._ancho(antes, fs)
+        v = _eo((dt - .5) / .4)
+        d.line([(Mg + w / 2 - L / 2 - 6, Mg + 88), (Mg + w / 2 - L / 2 - 6 + (L + 12) * v, Mg + 88)], fill=ROJO_X + (int(a0),), width=4)
+        mk = list(marcas) + [dur] * (n - len(marcas))
+        for k, (lugar, precio) in enumerate(items):
+            u = (dt - mk[k]) / .4
+            if u <= 0:
+                continue
+            a = 255 * _eo(u)
+            cx = Mg + w * (k + .5) / n
+            cy = Mg + 230
+            q = _eo((dt - mk[k]) / 1.0)
+            num = int(round(precio * q))
+            s = _reb(u)
+            col = (255, 110, 110) if precio >= 500 and q >= 1 else BLANCO
+            x = cx + (20 if ic else 0)
+            _txt(d, (x, cy), str(num), fn_, col, "mm", a, borde=3)
+            if ic:
+                ic2 = ic.resize((max(2, int(ic.width * s)), max(2, int(ic.height * s))), Image.BICUBIC)
+                im.alpha_composite(M._alfa(ic2, _eo(u)), (int(x - M._ancho(str(precio), fn_) / 2 - 20 - ic2.width), int(cy - ic2.height / 2)))
+            _txt(d, (cx, cy + 92), lugar, fl, CREMA, "mm", a)
         return _bgra(im, min(_eo(dt / .25), (dur - dt) / .4))
     return fn

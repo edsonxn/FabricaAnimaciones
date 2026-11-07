@@ -6,9 +6,9 @@
   "zona": "America/Mexico_City",
   "hora_local": "18:00",
   "utc": "00:00",
-  "ciclo_dias": 3,
-  "separacion_min_horas": 72,
-  "nota": "Ciclo de 3 días desde el 23-oct-2026 (el usuario lo bajó de 4-5 a 3 y pidió reacomodar lo programado). Hora 18:00 CDMX = 00:00 UTC del día siguiente (cubre MX 18:00, CO 19:00, AR 21:00). AJUSTABLE por Claude con datos: ver docs/publicacion.md § «Frecuencia y hora».",
+  "ciclo_dias": 2,
+  "separacion_min_horas": 48,
+  "nota": "Ciclo de 2 días desde el 6-nov-2026 (Claude, con datos: cola de 7 largos hasta el 29-nov y canal que vive de búsqueda; los temas de actualidad no pueden esperar 3 semanas). Volver a 3 días cuando la cola baje de 3 videos. Hora 18:00 CDMX = 00:00 UTC.",
   "historial": [
    {
     "fecha": "2026-10-13",
@@ -21,6 +21,12 @@
     "ciclo_dias": 3,
     "hora_local": "18:00",
     "motivo": "el usuario bajó el ciclo a 3 días; separación mínima 72 h; zelda_oot se queda el 24-oct (el hueco del 23 ya había pasado) y bt_jiggies_crueles pasa al 27-oct"
+   },
+   {
+    "fecha": "2026-11-06",
+    "ciclo_dias": 2,
+    "hora_local": "18:00",
+    "motivo": "Claude toma el canal para subir vistas: cola de 7 largos (3 de Banjo-Tooie) hasta el 29-nov; se cuela oot_remake_eliminado en la ola del remake y se intercalan los Banjo"
    }
   ]
  },
@@ -105,9 +111,10 @@
    "titulo": "Super Mario 64: su historia y los 20 secretos QUE IGNORASTE",
    "subido": "2026-10-30",
    "visibilidad": "private",
-   "programado": "2026-11-09T00:00:00Z",
+   "programado": "2026-11-11T00:00:00Z",
    "formato": "historia_y_20_secretos_secuencia_yt",
-   "nota": "21:24, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 13 clips; kit mg_mario64 (diálogo translúcido, selección de estrella, HUD); 9 mapas con ruta (VGMaps); 34 SFX del juego; gancho = 30 años + placa Eternal Star (oct-2026); aprobado por el usuario el 30-oct"
+   "nota": "21:24, voz ElevenLabs Hope (eleven_v4_turbo); OST oficial + sonido original de 13 clips; kit mg_mario64 (diálogo translúcido, selección de estrella, HUD); 9 mapas con ruta (VGMaps); 34 SFX del juego; gancho = 30 años + placa Eternal Star (oct-2026); aprobado por el usuario el 30-oct",
+   "programado_antes": "2026-11-09T00:00:00Z"
   },
   {
    "video": "bt_mundos_ranking",
@@ -115,9 +122,10 @@
    "titulo": "Los 8 mundos de Banjo-Tooie, del PEOR al MEJOR",
    "subido": "2026-10-30",
    "visibilidad": "private",
-   "programado": "2026-11-12T00:00:00Z",
+   "programado": "2026-11-15T00:00:00Z",
    "formato": "ranking_mundos_eastereggs_secuencia_yt",
-   "nota": "24:22, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 36 clips; 170 clips (serie NSO + 6 de XBLA con rótulo); 31 Easter eggs verificados en imagen; mapas de la Guía oficial de Nintendo; miniatura PROVISIONAL por código (Flow pide aceptar política)."
+   "nota": "24:22, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 36 clips; 170 clips (serie NSO + 6 de XBLA con rótulo); 31 Easter eggs verificados en imagen; mapas de la Guía oficial de Nintendo; miniatura PROVISIONAL por código (Flow pide aceptar política).",
+   "programado_antes": "2026-11-12T00:00:00Z"
   },
   {
    "video": "spyro2",
@@ -125,9 +133,10 @@
    "titulo": "Spyro 2: su historia y los 30 secretos QUE IGNORASTE",
    "subido": "2026-10-31",
    "visibilidad": "private",
-   "programado": "2026-11-15T00:00:00Z",
+   "programado": "2026-11-17T00:00:00Z",
    "formato": "historia_y_30_secretos_secuencia_yt",
-   "nota": "24:52, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 39 clips; 174 clips; 30 secretos verificados en imagen; kit mg_spyro; lámina real de Avalar; miniatura de Flow «VENDIÓ BOMBAS A RIPTO»."
+   "nota": "24:52, voz ElevenLabs Hope (eleven_v4_turbo); OST del juego + sonido original en 39 clips; 174 clips; 30 secretos verificados en imagen; kit mg_spyro; lámina real de Avalar; miniatura de Flow «VENDIÓ BOMBAS A RIPTO».",
+   "programado_antes": "2026-11-15T00:00:00Z"
   },
   {
    "video": "n64_secretos",
@@ -135,9 +144,10 @@
    "titulo": "Los 30 SECRETOS de la Nintendo 64 QUE IGNORASTE",
    "subido": "2026-10-31",
    "visibilidad": "private",
-   "programado": "2026-11-18T00:00:00Z",
+   "programado": "2026-11-21T00:00:00Z",
    "formato": "historia_y_30_secretos_secuencia_yt",
-   "nota": "24:19, primer video de CONSOLA del canal; voz ElevenLabs Hope (eleven_v4_turbo); OST por secreto + sonido original en 37 clips; 170 clips; kit mg_n64 con 18 MG propios; 2 mapas de Yoshi Valley con ruta; miniatura de Flow «REPARTIÓ GUANTES» (Mario + mando real + carátula de Mario Party)."
+   "nota": "24:19, primer video de CONSOLA del canal; voz ElevenLabs Hope (eleven_v4_turbo); OST por secreto + sonido original en 37 clips; 170 clips; kit mg_n64 con 18 MG propios; 2 mapas de Yoshi Valley con ruta; miniatura de Flow «REPARTIÓ GUANTES» (Mario + mando real + carátula de Mario Party).",
+   "programado_antes": "2026-11-18T00:00:00Z"
   },
   {
    "video": "pokemon_rojo_azul",
@@ -145,9 +155,10 @@
    "titulo": "Pokémon Rojo y Azul: su historia y los 20 secretos QUE IGNORASTE",
    "subido": "2026-11-03",
    "visibilidad": "private",
-   "programado": "2026-11-21T00:00:00Z",
+   "programado": "2026-11-13T00:00:00Z",
    "formato": "historia_y_20_secretos_secuencia_yt",
-   "nota": "15:34, primer Pokémon del canal (30 años de la saga); voz ElevenLabs Hope (eleven_v4_turbo); OST de Game Boy (35 pistas) + 59 SFX del juego; kit nuevo mg_pokemon (fichas Game Boy); 228 efectos; mapas de Kanto con ruta; miniatura de Flow «20 SECRETOS» (Game Boy con MissingNo + Mew + portadas reales)."
+   "nota": "15:34, primer Pokémon del canal (30 años de la saga); voz ElevenLabs Hope (eleven_v4_turbo); OST de Game Boy (35 pistas) + 59 SFX del juego; kit nuevo mg_pokemon (fichas Game Boy); 228 efectos; mapas de Kanto con ruta; miniatura de Flow «20 SECRETOS» (Game Boy con MissingNo + Mew + portadas reales).",
+   "programado_antes": "2026-11-21T00:00:00Z"
   },
   {
    "video": "bt_50_secretos",
@@ -155,9 +166,10 @@
    "titulo": "Los 50 SECRETOS de Banjo-Tooie QUE IGNORASTE",
    "subido": "2026-11-03",
    "visibilidad": "private",
-   "programado": "2026-11-24T00:00:00Z",
+   "programado": "2026-11-23T00:00:00Z",
    "formato": "lista_50_secretos_secuencia_yt",
-   "nota": "24:49, el 4.º de Banjo-Tooie (cambia solo el número de secretos 10 → 50 respecto a banjo_tooie); voz ElevenLabs Hope; OST del juego + SFX bt_*; MG nuevos en mg_banjo (secreto/contador, versus, concurso, antipirata, huesos, cronómetro, fechas, jinjos_color, rótulos, memoria, compás); 337 efectos, 0 huecos > 4 s; 5 mapas; miniatura Flow «EN JAPÓN / OTRO FINAL»."
+   "nota": "24:49, el 4.º de Banjo-Tooie (cambia solo el número de secretos 10 → 50 respecto a banjo_tooie); voz ElevenLabs Hope; OST del juego + SFX bt_*; MG nuevos en mg_banjo (secreto/contador, versus, concurso, antipirata, huesos, cronómetro, fechas, jinjos_color, rótulos, memoria, compás); 337 efectos, 0 huecos > 4 s; 5 mapas; miniatura Flow «EN JAPÓN / OTRO FINAL».",
+   "programado_antes": "2026-11-24T00:00:00Z"
   },
   {
    "video": "bt_jefes_ranking",
@@ -177,10 +189,22 @@
    "titulo": "Los 10 JEFES de Banjo-Tooie, del PEOR al MEJOR",
    "subido": "2026-11-06",
    "visibilidad": "private",
-   "programado": null,
+   "programado": "2026-11-19T00:00:00Z",
    "formato": "ranking_jefes_secuencia_yt",
    "prueba": "sujeto: jefes en vez de mundos",
-   "nota": "v2 corregida (6-nov): Moggies = guerreros tigre (antes osito Moggy), estatuas de jade, calaveras de CCL, túneles de Klungo, Mumbo de N&B, ocho mundos. Va al hueco del jue 26-nov 18:00 cuando se borre yL1D3oGvTJQ"
+   "nota": "v2 corregida (6-nov): Moggies = guerreros tigre (antes osito Moggy), estatuas de jade, calaveras de CCL, túneles de Klungo, Mumbo de N&B, ocho mundos. Va al hueco del jue 26-nov 18:00 cuando se borre yL1D3oGvTJQ",
+   "programado_antes": null
+  },
+  {
+   "video": "oot_remake_eliminado",
+   "id": "WjDK78u1ZO0",
+   "titulo": "Lo que Nintendo ELIMINÓ del REMAKE de Ocarina of Time",
+   "subido": "2026-11-07",
+   "visibilidad": "private",
+   "programado": "2026-11-09T00:00:00Z",
+   "formato": "eliminado_del_remake_secuencia_yt",
+   "prueba": "P1 actualidad en su pico (remake salió el 5-nov): mismo juego que oot_remake_cambios, cambia solo el ángulo (lo QUITADO, con fuentes) + título corto con verbo fuerte",
+   "nota": "9:46, voz Hope turbo, OST de Ocarina, 102 FX (4 MG nuevos en mg_oot), promesas 21/21, miniatura Flow «LO BORRARON». Medir a 7 días (~16-nov) contra la mediana del canal (hipótesis > ×3)."
   }
  ],
  "ideas": {

@@ -1,0 +1,546 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.394,
+  "tipo": "video",
+  "texto": "Si en 1998 te asomabas por la ventana del patio de la princesa Zelda, veías cuadros de Mario, de Peach y de Bowser.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.394,
+  "t1": 16.601,
+  "tipo": "video",
+  "texto": "En el remake de Switch 2, esos cuadros ya no están. Y Nintendo explicó por qué. No es lo único.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.601,
+  "t1": 23.61,
+  "tipo": "video",
+  "texto": "Una granja de rupias, Master Quest, glitches famosos, y hasta una escena de Ganondorf.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 23.61,
+  "t1": 34.103,
+  "tipo": "video",
+  "texto": "Así que hoy te cuento las 12 cosas que Nintendo eliminó del remake de Ocarina of Time. De la más pequeña, a la que más está dando que hablar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.103,
+  "t1": 42.955,
+  "tipo": "video",
+  "texto": "El remake salió el 5 de noviembre, solo en Nintendo Switch 2. En México cuesta 1229 pesos en versión digital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.955,
+  "t1": 53.334,
+  "tipo": "video",
+  "texto": "Lo hizo el mismo equipo de Breath of the Wild y Tears of the Kingdom, y lo rehicieron desde cero. No es el código de 1998 con gráficos nuevos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 53.334,
+  "t1": 58.474,
+  "tipo": "video",
+  "texto": "Ya tiene un 96 en Metacritic, la nota más alta de 2026.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.474,
+  "t1": 67.709,
+  "tipo": "video",
+  "texto": "El original de Nintendo 64 sigue arriba, con un 99. Y lo primero que se eliminó, lo eliminó el propio Eiji Aonuma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.709,
+  "t1": 76.869,
+  "tipo": "video",
+  "texto": "Pidió añadir puntos de teletransporte por todo Hyrule, y luego mandó quitarlos todos. Según él, al final no le convencían.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.869,
+  "t1": 86.517,
+  "tipo": "video",
+  "texto": "Si viajas de un salto, te saltas lo que hay en el camino. Pero lo que la gente está notando de verdad es otra cosa. Vamos con la lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.517,
+  "t1": 94.369,
+  "tipo": "video",
+  "texto": "Número 12. Un guiño que solo existía en la Nintendo 3DS. En el Ocarina of Time 3D de 2011,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.369,
+  "t1": 106.033,
+  "tipo": "video",
+  "texto": "había cuadros de Skyward Sword escondidos en el Rancho Lon Lon y en la Fortaleza Gerudo. En el remake se quitaron. Por la misma razón que vas a oír en el número 1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 106.033,
+  "t1": 110.393,
+  "tipo": "video",
+  "texto": "Y cuando le preguntaron si el equipo de la 3DS se iba a enojar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.393,
+  "t1": 119.65,
+  "tipo": "video",
+  "texto": "Hidemaro Fujibayashi contestó que no había rencor. En el 11, la Lupa de la Verdad cambió de forma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.65,
+  "t1": 129.39,
+  "tipo": "video",
+  "texto": "En la Nintendo 64 era una lupa con un ojo dibujado, y la sacabas del fondo del pozo de Kakariko. En el remake ya no es una lupa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.39,
+  "t1": 134.999,
+  "tipo": "video",
+  "texto": "Son unas gafas que Link se pone en la cara, con un ojo que se abre y se cierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 134.999,
+  "t1": 146.29,
+  "tipo": "video",
+  "texto": "Y algunos personajes del juego hasta le comentan a Link su nuevo aspecto. Número 10. El búho que no se callaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.29,
+  "t1": 153.021,
+  "tipo": "video",
+  "texto": "Kaepora Gaebora te soltaba un sermón larguísimo. Y al final preguntaba, ¿lo entendiste?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.021,
+  "t1": 164.404,
+  "tipo": "video",
+  "texto": "Si el cursor quedaba en no, y apretabas rápido, te repetía todo el discurso desde el principio. En el remake sus apariciones son más cortas, y ya no hay pregunta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.404,
+  "t1": 173.86,
+  "tipo": "video",
+  "texto": "Fujibayashi contó que reescribieron textos que hoy no se entienden bien. En el 9, se acabó buscar secretos a ciegas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.86,
+  "t1": 180.49,
+  "tipo": "video",
+  "texto": "En la Nintendo 64, la Piedra de la Agonía hacía vibrar el Rumble Pak cuando había un secreto cerca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.49,
+  "t1": 191.275,
+  "tipo": "video",
+  "texto": "Y muchas grutas se abrían con una bomba en un sitio sin ninguna marca. En el remake, la piedra se cambió por un broche que solo reacciona a las Skulltulas doradas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 191.275,
+  "t1": 197.591,
+  "tipo": "video",
+  "texto": "Y las grutas escondidas se marcan con flores en el suelo. Fujibayashi lo explicó así.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.591,
+  "t1": 205.916,
+  "tipo": "video",
+  "texto": "Querían que el jugador pudiera deducir qué hacer dentro del propio juego, sin una guía al lado. Y según la reseña de Eurogamer,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.916,
+  "t1": 214.315,
+  "tipo": "video",
+  "texto": "en el Bosque Perdido ya no hay que seguir la canción de Saria de oído. El tronco correcto brilla en verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.315,
+  "t1": 227.387,
+  "tipo": "video",
+  "texto": "Número 8. ¡Hey, escucha!, mucho menos. En 1998, Navi te interrumpía con esto, a cada rato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 227.387,
+  "t1": 231.947,
+  "tipo": "video",
+  "texto": "En el remake, al explorar, casi siempre te avisa con un sonido suave.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.947,
+  "t1": 241.307,
+  "tipo": "video",
+  "texto": "Y parte de sus pistas ahora las dan unas hadas repartidas por el escenario. En inglés tiene voz nueva, de la actriz Lisa Reimold.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.307,
+  "t1": 249.05,
+  "tipo": "video",
+  "texto": "Y el director, HokWai Ng, dijo que algo tan icónico como el Hey, listen, no lo querían tocar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.05,
+  "t1": 260.266,
+  "tipo": "video",
+  "texto": "Así que la frase sigue ahí. Solo que ahora te la ahorran casi siempre. En el 7, las Grandes Hadas ya no regalan nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 260.266,
+  "t1": 267.486,
+  "tipo": "video",
+  "texto": "En el original, llegabas a su fuente, tocabas la canción de Zelda, y te daban magia o un poder gratis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.486,
+  "t1": 275.096,
+  "tipo": "video",
+  "texto": "Según las guías del remake, ahora cada Gran Hada pide una ofrenda de rupias. 25 la de la Montaña de la Muerte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.096,
+  "t1": 286.256,
+  "tipo": "video",
+  "texto": "50 la del castillo, y 500 la que está junto al castillo de Ganon. Fujibayashi dice que es una forma de reverencia, como las donaciones en los templos de Japón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 286.256,
+  "t1": 294.673,
+  "tipo": "video",
+  "texto": "Una reverencia de 500 rupias. Y hay otro cambio. La clasificación del remake ya no avisa de temas sugerentes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 294.673,
+  "t1": 301.89,
+  "tipo": "video",
+  "texto": "algo que la versión de 3DS sí llevaba por la ropa de las hadas. Número 6.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.89,
+  "t1": 310.109,
+  "tipo": "video",
+  "texto": "Solo una partida. En la Nintendo 64 había tres archivos de guardado. Tú, tu hermano y tu primo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.109,
+  "t1": 317.373,
+  "tipo": "video",
+  "texto": "cada uno con su Link. En el remake hay una sola ranura, con guardado automático.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.373,
+  "t1": 329.126,
+  "tipo": "video",
+  "texto": "Y si quieres empezar de cero, pierdes la partida que tenías. Así que, si compartes la consola, que sea con alguien de confianza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 329.126,
+  "t1": 337.343,
+  "tipo": "video",
+  "texto": "En el 5, adiós a los glitches de toda la vida. En la Nintendo 64 había trucos que rompían el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.343,
+  "t1": 345.089,
+  "tipo": "video",
+  "texto": "La espada infinita, atravesar paredes por las juntas, o escapar del Bosque Kokiri sin espada ni escudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.089,
+  "t1": 351.607,
+  "tipo": "video",
+  "texto": "Hasta había quien inclinaba el cartucho con la consola encendida, para que las paredes desaparecieran.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.607,
+  "t1": 362.638,
+  "tipo": "video",
+  "texto": "Como el remake se rehízo desde cero, según los jugadores ninguno de esos trucos funciona. Y la primera speedrun publicada en Switch 2 se hizo sin un solo glitch.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.638,
+  "t1": 373.316,
+  "tipo": "video",
+  "texto": "Aunque, apenas un día después del estreno, ya están apareciendo trucos nuevos para moverse más rápido. Los speedrunners no descansan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 373.316,
+  "t1": 378.168,
+  "tipo": "video",
+  "texto": "Número 4. La granja de rupias del puente. De niño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.168,
+  "t1": 387.926,
+  "tipo": "video",
+  "texto": "en el puente levadizo de la Ciudadela, podías trepar por una de las cadenas y saltar al centro. Ahí había tres rupias rojas que no se veían.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.926,
+  "t1": 393.6,
+  "tipo": "video",
+  "texto": "60 rupias gratis, que volvían a aparecer cada vez que salías y entrabas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.6,
+  "t1": 405.161,
+  "tipo": "video",
+  "texto": "En el remake, Link resbala al intentar subir por las cadenas, y las rupias ya no existen. Nintendo no lo ha explicado. Hay quien cree que es porque ahora empiezas con una",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 405.161,
+  "t1": 413.12,
+  "tipo": "video",
+  "texto": "bolsa de 200 rupias, y ya no hace falta juntar tanto. En el 3, Master Quest.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.12,
+  "t1": 422.3,
+  "tipo": "video",
+  "texto": "Master Quest era la otra versión de Ocarina of Time, con las mazmorras rehechas y mucho más difíciles. Salió en GameCube en 2003,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.3,
+  "t1": 432.878,
+  "tipo": "video",
+  "texto": "de regalo al reservar Wind Waker. En la versión de 3DS venía incluida. Con el mundo en espejo, y los enemigos haciendo el doble de daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 432.878,
+  "t1": 438.738,
+  "tipo": "video",
+  "texto": "En el remake no hay Master Quest. Ni modo difícil, ni nueva partida con extras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.738,
+  "t1": 448.61,
+  "tipo": "video",
+  "texto": "Terminar la historia no desbloquea nada. Cuando IGN le preguntó a Aonuma, contestó que no creía que fueran a anunciar nada específico por ahora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 448.61,
+  "t1": 458.141,
+  "tipo": "video",
+  "texto": "Que en idioma Nintendo, es un tal vez. Número 2. La escena de Ganondorf.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 458.141,
+  "t1": 466.845,
+  "tipo": "video",
+  "texto": "En la primera versión de 1998, después de vencer a Ganondorf en lo alto de su torre, escupía sangre roja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 466.845,
+  "t1": 475.789,
+  "tipo": "video",
+  "texto": "Meses después, Nintendo sacó otra versión del cartucho, y la sangre pasó a ser verde. La de 3DS la dejó verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.789,
+  "t1": 481.089,
+  "tipo": "video",
+  "texto": "En el remake, según los jugadores que ya lo terminaron, ese momento no está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.089,
+  "t1": 490.865,
+  "tipo": "video",
+  "texto": "Ganondorf cae de rodillas, y habla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.865,
+  "t1": 500.236,
+  "tipo": "video",
+  "texto": "Yo, el poderoso Ganondorf, el Rey Demonio, ¿derrotado? ¿Por un niño patético? Nintendo no ha comentado nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 500.236,
+  "t1": 508.305,
+  "tipo": "video",
+  "texto": "Pero es el cambio del que más se habla en redes desde el estreno. Y lo número 1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 508.305,
+  "t1": 517.381,
+  "tipo": "video",
+  "texto": "Los cuadros de Mario. En la Nintendo 64, en el patio donde conoces a Zelda, te asomabas por las ventanas y veías cuadros de Mario,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.381,
+  "t1": 525.367,
+  "tipo": "video",
+  "texto": "Luigi, Peach, Bowser y Yoshi. Y si le disparabas a la ventana con la resortera, un guardia se asomaba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.367,
+  "t1": 535.544,
+  "tipo": "video",
+  "texto": "te regañaba, y te lanzaba una bomba. En el remake, los cuadros ya no están. En su lugar hay un tapiz que se va bordando con tu aventura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 535.544,
+  "t1": 541.944,
+  "tipo": "video",
+  "texto": "Aonuma lo explicó en Game Informer. No querían que ese momento interrumpiera la experiencia del mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.944,
+  "t1": 550.639,
+  "tipo": "video",
+  "texto": "Que un jugador nuevo no se preguntara, ¿y por qué está Yoshi aquí? Pero no todo se fue. El guardia de la bomba sigue en su sitio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.639,
+  "t1": 560.068,
+  "tipo": "video",
+  "texto": "Y el broche de Bowser que lleva Talon en el pecho, también se quedó. Así que el remake quita guiños, atajos y secretos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 560.068,
+  "t1": 569.178,
+  "tipo": "video",
+  "texto": "Y a cambio, trae voces, orquesta, el tapiz, y un coliseo para pelear otra vez con los jefes. Ahora te pregunto a ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 569.178,
+  "t1": 577.923,
+  "tipo": "video",
+  "texto": "De estas 12 cosas, ¿cuál es la que más vas a extrañar? Te leo en los comentarios. Y si quieres ver todo lo que cambió para bien,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.923,
+  "t1": 586.3043,
+  "tipo": "video",
+  "texto": "aquí tienes los 15 cambios del remake frente al original. Nos vemos en Hyrule.",
+  "clip_s": 8
+ }
+]

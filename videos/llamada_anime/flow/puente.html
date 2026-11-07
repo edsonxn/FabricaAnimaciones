@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><body>puente<script>
+const f=new URLSearchParams(location.search).get('f');
+fetch(f).then(r=>r.text()).then(s=>{window.opener.postMessage({puente:f,s},'*'); document.body.textContent='enviado '+s.length; setTimeout(()=>window.close(),500);});
+</script>

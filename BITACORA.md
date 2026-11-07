@@ -77,6 +77,7 @@ Para re-verificar contra YouTube: `python fab.py yt videos <alias>` (los privado
 | mar 27-oct 14:05 | Cuerpo en Neón | ¿Por Qué Te DESPIERTAS a las 3 de la Mañana? (`despertar_3am`, xnRw-_gBtMs) | Público |
 | jue 5-nov 14:00 | Bitácora Perdida | Ramsés II: el faraón que se fabricó a sí mismo (`ramses_ii`, 6kPyIjnHOYk; piloto del documental de personaje antiguo) | Programado (privado) · Facebook publicado 5-nov (1211758334847804) |
 | sin fecha | (prueba, sin canal) | Mostacho y el ruido de la cocina, cartoon90 (`gato_cobarde`) | El usuario renderiza escena por escena desde el panel |
+| vie 13-nov 10:00 | LogIA | No era su hijo. Era una IA \| Corto ANIME (`llamada_anime`, ZbgBSvK4bLw; remake anime del anterior, estilo «anime vivo») | Programado (privado) |
 
 
 ## 3. Estado por canal (una línea cada uno; detalle en historial.md §3-§5)

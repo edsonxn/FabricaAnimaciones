@@ -1,11 +1,10 @@
 # Llamada de domingo — REMAKE ANIME (LogIA presenta) — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
-- canal: logia (¿reemplaza al original programado sáb 7-nov 10:00 o va aparte? PREGUNTAR al usuario al tener el MASTER) · 16:9 · 14:00
+- canal: logia · APARTE del original (el usuario, 7-nov) · 16:9 · 14:00 · ✅ SUBIDO ZbgBSvK4bLw, programado vie 13-nov 10:00 CDMX
 - estilo: ANIME VIVO (nuevo, 6-nov): imágenes de Flow (0 pts) en anime seinen de película + animación limitada por código
   (`nucleo/anime_vivo.py`: bocas por la voz, parpadeos, respiración, recorte con parallax, cámara, polvo/rayos/lluvia/fluor/bloom)
 - etapa: ✅ Flow completo (A, B, E) · ✅ MASTER salida/llamada_de_domingo_anime_MASTER.mp4 (14:00, 1080p30, audio final del original intacto; 7-nov ~09:30)
-- siguiente: DECIDE EL USUARIO qué hacer con el remake (subir aparte en LogIA / guardar / cambiar algo). La tele estaba apagada
-  (código 4, aviso por voz); pregunta hecha en el chat. Opcional: rehacer los 22 planos ui con fondos anime (hoy son fotorrealistas)
+- siguiente: nada; medir a 7 días contra el original (be1zS17rxxI). Opcional: rehacer los 22 planos ui con fondos anime y `yt aplicar`
 
 ## Pedido (el usuario, 6-nov-2026)
 - «Me gustó mucho el capítulo de Black Mirror de los clones… el guion está perfecto. Remake, lo mismo, pero como no hay puntos
@@ -99,9 +98,11 @@
 |---|---|---|---|
 | 1 | estilo, kit anime_vivo, Flow A/B/E, render, MASTER | ◐ parcial | 6-nov: estilo aprobado en la tele, kit, fase A bajada, _B.js listo |
 | 2 | fase B en Flow | ◐ parcial | 6-nov: 122 imágenes bajadas, 36/61 variantes elegidas; Flow cambió (asb), disco E: colgado |
-| 3 | render de planos, MASTER | ✅ 7-nov | 56 planos en ~35 min con 4 procesos; MASTER 14:00; tele apagada → pregunta en chat |
+| 3 | render de planos, MASTER, subida | ✅ 7-nov | 56 planos en ~35 min con 4 procesos; MASTER 14:00; tele apagada → pregunta en chat; el usuario: «subirlo aparte en LogIA»; miniatura Flow (prompt_miniatura.md, 2/2 bien) |
 
 ## Lecciones
+- Miniatura del remake: misma composición que la del original redibujada en anime con 2 ingredientes (tile de Ramón con
+  «Añadir a la petición» + Daniel en base64 de 3 KB pegado): 2/2 bien a la primera. i.ytimg da 404 si el video aún es privado.
 - Planos ui reciclados del original = fotorrealistas dentro del anime (miniatura de «Papá», calle del final): en un remake de
   estilo, la interfaz se re-renderiza con los retratos y fondos nuevos, no se recorta del MASTER viejo.
 - Render en paralelo: 4 procesos con 32 GB (6 se quedó sin memoria); si el proceso muere quedan `medios/*.tmp.mp4` rotos

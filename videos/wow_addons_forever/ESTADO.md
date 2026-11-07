@@ -3,7 +3,7 @@
 - canal: cronicas_warcraft · lun 9-nov-2026 09:00 CDMX (fecha Overgear, enlace `overgear.s.gy/CRONICAS/5`)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas + Overgear con fondo de marca + grabaciones propias de OBS) → doc: docs/estilo_secuencia_yt.md
 - etapa: SUBIDO ✅ privado, se publica lun 9-nov 09:00 CDMX (https://youtu.be/W_fl3tGsZ6I) · MASTER 22:14 con los cambios del usuario en casa4
-- siguiente: Studio (monetización + cuestionario); borrar WpOLrmRm2h8 (1.ª subida, privada sin fecha) si el usuario lo aprueba; enlace de Necesidades cuando tenga proyecto (`yt aplicar`)
+- siguiente: Studio (monetización + cuestionario); enlace de Necesidades cuando tenga proyecto (`yt aplicar`)
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
 - alias: los add-ons, 20 add-ons, el del 9-nov
@@ -25,7 +25,7 @@
 - Gracia: en la grabación 5 el PNJ se llama **Remy «Dos Veces»** (como el narrador).
 
 ## Cambios del usuario tras la 1.ª subida (7-nov ~16:30)
-- casa4_4/5/7/8 reescritas y regeneradas (ElevenLabs, 123 créditos) → tiempo → `reajustar` (sin renumerar) → `_obs.py` → MG «¿QUÉ ZONA SIGUE CON VOZ?» (6 zonas, íconos achievement_zone_*), meta con Elwynn en curso, placas paypal.me/edsonxn/1USD y CurseForge Voces → re-render → subido W_fl3tGsZ6I; WpOLrmRm2h8 sin programar.
+- casa4_4/5/7/8 reescritas y regeneradas (ElevenLabs, 123 créditos) → tiempo → `reajustar` (sin renumerar) → `_obs.py` → MG «¿QUÉ ZONA SIGUE CON VOZ?» (6 zonas, íconos achievement_zone_*), meta con Elwynn en curso, placas paypal.me/edsonxn/1USD y CurseForge Voces → re-render → subido W_fl3tGsZ6I; WpOLrmRm2h8 borrada por el usuario.
 
 ## Pendiente tras subir (7-nov ~16:10, ya resuelto lo de enlaces)
 - Enlaces de PayPal.Me y CurseForge (pedidos a la sesión madre): en youtube.json → `python fab.py yt aplicar wow_addons_forever cronicas_warcraft`.

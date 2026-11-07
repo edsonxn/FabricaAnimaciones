@@ -4,6 +4,57 @@ Creado el 26-oct-2026 como prueba sin canal (`videos/lol_worlds_tl_al/`: el Bar�
 League of Legends). Pedido del usuario: «analice jugadas, repeticiones, como esos análisis de la NFL con efectos 3D,
 flechas… haciendo pausas, dibujando flechas, rutas, elementos, mapa, todo para entender la jugada».
 
+## GUÍA RÁPIDA PARA OTRO AGENTE: «estilo Crónicas de League of Legends» (7-nov-2026)
+Si te piden un video **«estilo Crónicas de League of Legends»** (también dicho «Crónicas de ligoleyen», «como los de la
+Worlds», «análisis de jugadas de LoL», «como la NFL pero de LoL»), es ESTE estilo. Lee esta guía, luego el § que toque, y
+copia el ejemplo. No inventes otro motor: es SECUENCIA YT (`ESTILO_VISUAL = "secuencia_yt"`, `MOTOR = "secuencia"`).
+
+**Qué se ve (en una frase):** el VOD real de la transmisión de LoL Esports que corre, se CONGELA, rebobina y va en cámara
+lenta mientras un telestrador dibuja anillos a los pies de los jugadores, flechas, rutas y zonas; gráficos de transmisión de
+vidrio con filo dorado (tarjetas, marcadores, tablas, fichas de jugador con foto oficial); y en la jugada más importante, la
+Grieta en 3D (three.js) con fichas de campeón que siguen sus rutas reales, o el cuadro congelado convertido en «mesa» 3D.
+Voz de comentarista en español con energía (ElevenLabs JC «Energetic News Broadcaster», `4XUsiqPDK4UACIM2BILe`, sin
+`[excited]`), música de fondo, y tramos EN VIVO donde se oye la narración original de la transmisión con la voz callada.
+
+**Tres formatos probados** (elige el que pidan; duración por defecto entre paréntesis):
+| Formato | Ejemplo a copiar | Notas |
+|---|---|---|
+| Resumen de un torneo/semana: TODAS las series, mejores jugadas, jugadores, lo peor, tabla y llave (20-30 min) | `videos/lol_semana2/` (el más completo y reciente) · `videos/lol_worlds_2026/` (el de más vistas, con la jugada en 3D `j6_3d.py`) | el formato que mejor funcionó (40 mil vistas) |
+| Previa de un partido para quien no conoce a los equipos (12-15 min) | `videos/ig_lyon_worlds/`, `videos/cfo_kc_worlds/` | § «Previa de un partido» |
+| Jugadas clave de un partido ya jugado, mismo día, sin spoiler (15-18 min) | `videos/cfo_kc_jugadas/`, `videos/t1_koi_worlds/` | § «Análisis de un partido YA JUGADO» |
+| Una sola jugada (~2 min) | `videos/lol_worlds_tl_al/` | la prueba original |
+
+**El kit (todo en el repo):**
+| Pieza | Para qué | Funciones / uso |
+|---|---|---|
+| `nucleo/mg_tactica.py` | telestrador 2D sobre el VOD congelado y tablero táctico | `pizarra` (anillo, flecha, zona, texto, foco), `tablero` (mapa girado con fichas, oleadas, TP, wards, niebla), `chip`, `rebobinar` |
+| `nucleo/mg_lol.py` | gráficos de transmisión (vidrio + filo dorado, giro 3D que respira) | `tarjeta`, `pegatina`, `resultados`, `caida`, `eliminado`, `apertura`, `versus`, `menu`, `suiza`, `tablero_suizo`, `ficha_jugador`, `boleta`, `ranking`, `tabla`, `calendario`, `barras`, `duelo`, `premio`, `llave` |
+| `nucleo/tactica3d/` | 3D con three.js local (sin CDN), render con Edge sin ventana | `render3d.py <escena.json> <salida.mp4>` (Grieta 3D con rutas, intenciones, niebla, objetivos) · `sobre_video.py <video>` (capas 3D transparentes sobre el VOD: anillos tumbados en perspectiva, columnas de luz, flechas en arco) · `capa.py` (las lee el motor) · `preparar_grieta.py` (terreno desde el minimapa oficial) |
+| FX `video` del motor secuencia | todo el cuadro sale del clip fuente | `vel=1` juega, `0` congela, `<0` rebobina, `<1` cámara lenta; `zoom=(z, cx, cy)` animado |
+| `videos/lol_semana2/efectos.py` | la «gramática» de montaje del estilo (cópiala) | `J`/`CLIP`/`TRAMO`/`SYNC` (tramos del VOD a x1), `P`/`PZ` (pausa con pizarra 2D o 3D), `REB`/`REBX` (rebobinar), `LENTA`, `MESA` (mesa 3D), `V3` (tramo del clip 3D), `RUTA` (solo puntos medidos), `VIVO` (narración original), anclas a la voz `T0`/`T1`/`W`/`NX` |
+| `videos/lol_semana2/*.py` | ayudantes del flujo | `mesas_3d.py`, `rejilla2.py` (medir pies en UN cuadro), `espaciar_voz.py` (silencios en pausas reales para los vivos), `vivos_audio.py`, `medios_locales.py`, `alargar_musica.py`, `render_par.py` (render en tramos paralelos) |
+| `videos/lol_semana2/investigacion/` | investigación con datos reales | `muertes.py`/`api.py` (feed oficial `livestats`: muertes, oro, dragones), `cortar.py` (tramo 1080p del VOD), `hojas.py`, `camaras.py` (cortes de cámara), `pausas_frase.py`, `cortes_voz.py`, `velocidades.py` (nada > x1), `voz_cuadra.py`; `datos_*.md` = formato de las notas por serie |
+
+**Flujo resumido** (cada paso tiene su § abajo):
+1. `python fab.py nuevo <v> --yt`. Investigación por serie con el feed oficial + el VOD completo (nunca el resumen) →
+   `investigacion/datos_<serie>.md` con desfase VOD = HUD + K, jugadas con reloj del HUD y quién mató a quién.
+2. Recursos: logos y fotos de jugadores (API pública de LoL Esports), arte de campeones (Data Dragon), tramos 1080p del VOD
+   en `medios/_fuente/`.
+3. Guion (`guion.py`) con `FONETICA` de equipos y jugadores en inglés («Liquid» = «Lícuid») → `voz` → `seleccionar` →
+   `tiempo` → `beats`.
+4. `efectos.py` anclado a la voz: por jugada, 4-6 pausas con 2-5 elementos, una mesa 3D y una capa 3D; la más importante
+   del video, en Grieta 3D intercalada con el VOD. Gráficos `mg_lol` grandes fuera de las jugadas, chicos en los bordes
+   dentro de ellas.
+5. Música + SFX (golpe y clic en cada pausa, rebobinado, swoosh) → `vivos_audio.py` → `mezcla` → `render_par.py` → `final`.
+
+**Reglas que NO se negocian** (vienen de las revisiones del autor; detalle en los § de abajo):
+- Cero datos inventados: cada frase sale del marcador, el kill feed, los retratos del HUD o la narración del VOD.
+- Anillos en los PIES, medidos en un cuadro a 1280 px con rejilla; rutas solo con puntos medidos dentro de la misma toma.
+- Nunca cámara rápida: la acción va a x1 o más lenta; para saltar, corte rotulado.
+- Cada tramo del VOD sigue en el cuadro exacto donde quedó la pausa; nunca cortar la voz dentro de una palabra.
+- Sin spoiler en título, miniatura y gancho cuando el partido ya se jugó; fechas por nombre de día, no «hoy/mañana».
+- Nunca 30 s seguidos de 3D: alternar VOD y 3D por frases. Nada quieto > 2 s; gancho cargado de gráficos.
+
 ## Receta
 1. **Elegir la jugada con datos**: resumen de YouTube → hojas de contacto (1 cuadro/15 s) → la secuencia decisiva.
    Los resúmenes SE SALTAN tramos (40:28 → 41:42 en el ejemplo): la jugada se corta del **VOD completo**. Con el reloj

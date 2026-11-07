@@ -93,3 +93,9 @@
 ## Cierre (regla del 12-oct-2026)
 - [x] subido por Studio (PRIVADO, lo publica el usuario), miniatura, monetización, .srt — 31-oct
 - [ ] HALLAZGOS documentados en docs/estilo_analisis_tactico.md; registrar el canal si se mantiene
+
+## Miniatura v2 (5-nov-2026, pedido del usuario)
+- La de «SOLO 8 SIGUEN» + 16 escudos rinde menos; se calca la ganadora de lol_worlds_2026 («EL FAVORITO CAYÓ», 56 mil vistas): escenario oscuro, un objeto bajo el foco, humo rojo, 2 palabras, píldora WORLDS 2026.
+- Flow (ingrediente = i.ytimg.com/vi/0eS1M_prcaQ/maxresdefault.jpg): miniatura/flow_a1..b2.png, hoja miniatura/_hoja.jpg. Elegida: **miniatura/elegida_v2.jpg** («CAYERON GIGANTES», copa intacta + coronas rotas). Prompts en prompt_miniatura.md.
+- ✅ 5-nov 22:10: el usuario dio el visto bueno y quedó CAMBIADA en Studio (PdBBfDKDN_I; «Se han guardado los cambios»). Subida desde la URL firmada de Flow con fetch + canvas 1280x720 + DataTransfer en el input[type=file] (sin tocar disco). La anterior queda en miniatura/elegida.jpg.
+- ▶ Medir a 48 h (7-nov noche): CTR e impresiones en Studio → Analytics → «Alcance», antes y después del cambio. Si sube, la fórmula limpia (1 objeto + 2 palabras) pasa a ser la de los resúmenes.

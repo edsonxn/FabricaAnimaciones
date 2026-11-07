@@ -34,6 +34,7 @@ EJEMPLOS = [
     "wow_curiosidades_kalimdor", "er_radagon_atrocidades", "tes_misiones_daedricas", "banjo_tooie", "majora_mask", "freno_enojo",
     "guason_fumado", "sociedad_1200", "got_joffrey", "mods_ia_fusion", "terror_ben_drowned", "gota_bucle", "pelea_meme",
     "gato_cobarde", "wow_tres_noches", "lol_worlds_2026", "ballena_estomago", "euphoria_robots",
+    "lol_semana2", "ig_lyon_worlds", "cfo_kc_jugadas", "lol_worlds_tl_al",          # Crónicas de League of Legends (7-nov-2026)
 ]
 NO_EN_EJEMPLO = {"ESTADO.md", "youtube.json"}           # publicación y diario del canal
 
@@ -48,7 +49,7 @@ DOCS = [
 RAIZ_SUELTOS = ["fab.py", "API.md", ".claude/settings.json", "modelos/bajar_t3.sh"]
 NO_NUCLEO = {"nucleo/estadisticas.html.bak", "nucleo/_fx_v3.txt", "nucleo/datos/musica_biblioteca.json",
              "nucleo/datos/sfx_biblioteca.json", "nucleo/compartir.py"}
-SKILLS = ["comprimir-video", "analizar-uso-panel", "actualizar-canales"]
+SKILLS = ["comprimir-video", "analizar-uso-panel", "actualizar-canales", "cronicas-lol"]
 
 # alias de canal -> alias neutro (también en rutas: nucleo/panel_fondos/<alias>.svg)
 ALIAS = {
@@ -77,7 +78,10 @@ SUSTITUCIONES = [
     (r"Qu[ée] [Pp]asa en Juchipila", "tu página de Facebook local"),
     (r"CRONICAS10", "TUCODIGO"), (r"Overgear", "Patrocinador"), (r"overgear", "patrocinador"),
     (r"jairedson5@gmail\.com", "tu-correo@ejemplo.com"), (r"jairedson5?\b", "tu-cuenta"),
-    (r"clicknbusiness\.com\.mx", "tu-dominio.com"),
+    (r"clicknbusiness\.com\.mx", "tu-dominio.com"), (r"mx\.clicknbusiness", "com.tudominio"),
+    # restos en minúsculas (listas de señales, descripciones de firmas; 7-nov-2026)
+    (r"(?i)clicknbusiness", "tudominio"), (r"(?i)cronicas10", "tucodigo"),
+    (r"(?i)runa ca[íi]da", "canal elden ring"), (r"(?i)bit[áa]cora perdida", "canal isométrico"),
     (r"E:\\\\?PaginaFace", r"C:\\TuPagina"),
     (r"\bjaire\b", "usuario"), (r"3 cuentas Pro", "varias cuentas"),
     (r"\bUC[A-Za-z0-9_-]{22}\b", "UCxxxxxxxxxxxxxxxxxxxxxx"),

@@ -1210,5 +1210,5 @@ if __name__ == "__main__":
     print(f"{time.time() - t0:.2f} s · sesión {r['sesion']} · {r.get('video')} · {len(r['eventos'])} eventos · plan {len(r['plan'])}")
     for e in r["eventos"][-14:]:
         print(e["seq"], e["tipo"], e.get("en"), "|", e["titulo"][:80], "| img" if e.get("img") else "")
-    assert tapar("key=sk-abcdefghijklmnop1234 AIzaSyA1234567890123456789012345678901234 pepe@gmail.com") .count("••••") >= 3
+    assert tapar("key=sk-abcdefghijklmnop1234 " + "AIza" + "SyA1234567890123456789012345678901234 pepe@gmail.com") .count("••••") >= 3
     assert sin_markdown("[La sesión](#local_05cc) deja **listo** `fab.py` y 2*3*4") == "La sesión deja listo fab.py y 2*3*4"

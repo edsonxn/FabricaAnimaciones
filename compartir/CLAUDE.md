@@ -33,11 +33,12 @@ te dé una regla nueva («desde ahora…»), anótala ahí con fecha (no en este
 | Rayos X tecno (vertical) | `documental` | `ejemplos/mods_ia_fusion/` | `docs/estilo_rayosx_tecno.md` |
 | Terror CRT (cuarto oscuro, gameplay dentro de una tele) | `documental` | `ejemplos/terror_ben_drowned/` | `docs/estilo_terror_crt.md` |
 | Acuarela pintada a mano (papel, lavados con borde húmedo, tinta que hierve, chibi, SFX sintetizados) | `documental` (kit `acuarela.py` del ejemplo) | `ejemplos/ballena_estomago/` | `docs/estilo_acuarela_pincel.md` |
+| Disección en vivo (vertical: grabación real en un monitor abierta con rayos X + la misma física simulada de verdad en plano tipo Kurzgesagt) | `kurzgesagt` (kit `nucleo/diseccion.py`) | `ejemplos/euphoria_robots/` | `docs/estilo_diseccion.md` |
 | Grabado de peste (tinta y buril en espacio 3D) | `documental` | `ejemplos/wow_tres_noches/` | `docs/estilo_grabado_peste.md` |
 | Boceto en bucle | `boceto` | `ejemplos/gota_bucle/` | `docs/estilo_boceto_gota.md` |
 | Guache / meme | `guache` | `ejemplos/pelea_meme/` | `docs/estilo_guache_meme.md` |
 | Cartoon 90 | `cartoon90` | `ejemplos/gato_cobarde/` | `docs/estilo_cartoon90.md` |
-| Análisis táctico de esports (VOD con pausas y telestrador + jugada clave en 3D con three.js, `nucleo/tactica3d`) | `secuencia_yt` | `ejemplos/lol_worlds_2026/` (3D: `j6_3d.py`) | `docs/estilo_analisis_tactico.md` |
+| ⭐ **Crónicas de League of Legends** = análisis táctico de esports (VOD con pausas, rebobinado y cámara lenta + telestrador `nucleo/mg_tactica.py` + gráficos de transmisión `nucleo/mg_lol.py` + jugada clave en 3D con three.js `nucleo/tactica3d`). Skill `cronicas-lol` | `secuencia_yt` | `ejemplos/lol_semana2/` (resumen semanal, el más completo) · `ejemplos/lol_worlds_2026/` (3D: `j6_3d.py`) · `ejemplos/ig_lyon_worlds/` (previa) · `ejemplos/cfo_kc_jugadas/` (jugadas clave) | `docs/estilo_analisis_tactico.md` § «GUÍA RÁPIDA PARA OTRO AGENTE» (leer primero) |
 
 **Toda lámina con profundidad** (≥ 3 planos, luz, capas), nunca paneles planos sobre un fondo: «parece página web».
 Video sin canal o estilo no dicho → pregunta (AskUserQuestion) qué estilo de la tabla quiere.
@@ -47,8 +48,8 @@ Video sin canal o estilo no dicho → pregunta (AskUserQuestion) qué estilo de 
    `{"canal": "<alias>"}` para que el panel lo ponga en su canal. Lee el doc del estilo y el ejemplo.
 2. Guion en `videos/<v>/guion.py` → `voz` → `seleccionar` → `tiempo` → escenas → `musica` → `sfx` → `mezcla` → `video` → `final` → `verificar`.
    Detalle: `docs/flujo_produccion.md`; voz: `docs/voz.md` (léelo ANTES de `voz`).
-3. Videos largos en tramos (varias sesiones): estado en `videos/<v>/ESTADO.md`; retomar con `python fab.py continuar <v>` (`docs/sesiones.md`).
-4. Pregunta si quiere ver el principio renderizado (`video --hasta <s>`), siempre con audio completo (voz + música + SFX + mezcla).
+3. Por defecto el video se hace entero en una sesión, directo al MASTER (la duración la decides tú según el canal si no te la dan); estado en `videos/<v>/ESTADO.md`; si se corta, retomar con `python fab.py continuar <v>` (`docs/sesiones.md`).
+4. Avance parcial (`video --hasta <s>`) solo si lo piden, siempre con audio completo (voz + música + SFX + mezcla).
 5. Entrega: `videos/<v>/salida/*_MASTER.mp4` (1080p) + `.srt`. Publicar: `docs/publicacion.md` (`python fab.py yt subir <v> <alias> private --publicar <ISO>`).
 
 ## Reglas de producción

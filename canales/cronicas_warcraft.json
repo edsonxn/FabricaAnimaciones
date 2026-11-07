@@ -1,234 +1,243 @@
 {
-  "monetizado": true,
-  "canal_id": "UCjzJdQdD2vCpw1jHCqiQeFw",
-  "nombre": "Crónicas de Warcraft",
-  "estilo": "CANAL N.º 1 (el más importante). Secuencia de clips de gameplay de YouTube (yt-dlp) cortados por frase de Whisper + ~30 apoyos (tooltips Wowhead/tarjetas) + 3 motion graphics + PEGATINAS CONSTANTES (regla fija del usuario, 18-oct-2026: cada personaje, criatura, objeto o prenda que nombre la voz sale con su imagen real como pegatina animada, ADEMÁS de clips y tarjetas; receta docs/estilo_secuencia_yt.md § PEGATINAS); voz: desde el 2-nov-2026 Johnny de ElevenLabs (HMCmDsbKeaSZp5LMOYKR), eleven_v4_turbo con corchetes, sin [whispers] ni [excited]; el primer video con Johnny abre con la mini discusión del cambio de voz (docs/voz.md); antes Applio (Remy + RVC RemyOriginal); guion estilo «gema» (humor seco, cita ficticia dramática). Patrocinio Overgear activo (código CRONICAS10). Migrando desde C:\\googleimagenes: docs/migracion_googleimagenes.md",
-  "horario": {
-    "zona": "America/Mexico_City",
+ "monetizado": true,
+ "canal_id": "UCjzJdQdD2vCpw1jHCqiQeFw",
+ "nombre": "Crónicas de Warcraft",
+ "estilo": "CANAL N.º 1 (el más importante). Secuencia de clips de gameplay de YouTube (yt-dlp) cortados por frase de Whisper + ~30 apoyos (tooltips Wowhead/tarjetas) + 3 motion graphics + PEGATINAS CONSTANTES (regla fija del usuario, 18-oct-2026: cada personaje, criatura, objeto o prenda que nombre la voz sale con su imagen real como pegatina animada, ADEMÁS de clips y tarjetas; receta docs/estilo_secuencia_yt.md § PEGATINAS); voz: desde el 2-nov-2026 Johnny de ElevenLabs (HMCmDsbKeaSZp5LMOYKR), eleven_v4_turbo con corchetes, sin [whispers] ni [excited]; el primer video con Johnny abre con la mini discusión del cambio de voz (docs/voz.md); antes Applio (Remy + RVC RemyOriginal); guion estilo «gema» (humor seco, cita ficticia dramática). Patrocinio Overgear activo (código CRONICAS10). Migrando desde C:\\googleimagenes: docs/migracion_googleimagenes.md",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "09:00",
+  "utc": "15:00",
+  "ciclo_dias": 3,
+  "separacion_min_horas": 44,
+  "nota": "Leído con yt-dlp el 13-oct-2026: los últimos 3 videos salieron cada 2 días exactos a las 09:00 CDMX (sistema viejo scheduleDaysAfterLast:2). AJUSTABLE por Claude con datos (docs/publicacion.md § «Frecuencia y hora»).",
+  "historial": [
+   {
+    "fecha": "2026-10-13",
+    "ciclo_dias": 2,
     "hora_local": "09:00",
-    "utc": "15:00",
+    "motivo": "se hereda la cadencia del sistema viejo al mudar el canal"
+   },
+   {
+    "fecha": "2026-10-13",
     "ciclo_dias": 3,
-    "separacion_min_horas": 44,
-    "nota": "Leído con yt-dlp el 13-oct-2026: los últimos 3 videos salieron cada 2 días exactos a las 09:00 CDMX (sistema viejo scheduleDaysAfterLast:2). AJUSTABLE por Claude con datos (docs/publicacion.md § «Frecuencia y hora»).",
-    "historial": [
-      {
-        "fecha": "2026-10-13",
-        "ciclo_dias": 2,
-        "hora_local": "09:00",
-        "motivo": "se hereda la cadencia del sistema viejo al mudar el canal"
-      },
-      {
-        "fecha": "2026-10-13",
-        "ciclo_dias": 3,
-        "hora_local": "09:00",
-        "motivo": "se confirma 09:00 CDMX con datos: vistas del día 1 a las 15:00 UTC = 4170 y 2005 vs 2167 (18:14 UTC), 1937 (20:36 UTC) y ~1100 de noche; jue 15-oct elegido por el usuario (48 h tras las razas)"
-      }
-    ]
+    "hora_local": "09:00",
+    "motivo": "se confirma 09:00 CDMX con datos: vistas del día 1 a las 15:00 UTC = 4170 y 2005 vs 2167 (18:14 UTC), 1937 (20:36 UTC) y ~1100 de noche; jue 15-oct elegido por el usuario (48 h tras las razas)"
+   }
+  ]
+ },
+ "publicados": [
+  {
+   "video": null,
+   "id": "qNuXfB386qc",
+   "titulo": "Las 9 razas de WoW Forever de PEOR a mejor",
+   "visibilidad": "public",
+   "publicado": "2026-10-13T15:00:08Z"
   },
-  "publicados": [
-    {
-      "video": null,
-      "id": "qNuXfB386qc",
-      "titulo": "Las 9 razas de WoW Forever de PEOR a mejor",
-      "visibilidad": "public",
-      "publicado": "2026-10-13T15:00:08Z"
-    },
-    {
-      "video": null,
-      "id": "g9vINR3Ttgk",
-      "titulo": "Las 10 cosas que hacen DIFICIL a WoW Forever",
-      "visibilidad": "public",
-      "publicado": "2026-10-11T15:00:17Z"
-    },
-    {
-      "video": null,
-      "id": "75HUR132Meg",
-      "titulo": "Los 12 objetos SECRETOS que tiene WoW Forever",
-      "visibilidad": "public",
-      "publicado": "2026-10-09T15:00:15Z"
-    },
-    {
-      "video": null,
-      "id": "4z79TsC_uOE",
-      "titulo": "Las 9 clases de WoW Forever de PEOR a mejor",
-      "visibilidad": "public",
-      "publicado": "2026-10-07T18:14:15Z"
-    },
-    {
-      "video": null,
-      "id": "XnuCCBpxeOE",
-      "titulo": "Las 10 cosas INMERSIVAS que tiene WoW Forever",
-      "visibilidad": "public",
-      "publicado": "2026-10-05T20:36:30Z"
-    },
-    {
-      "video": null,
-      "id": "Tnbyp27AHDU",
-      "titulo": "Las 10 cosas INMERSIVAS que tenia WoW Pandaria",
-      "visibilidad": "public",
-      "publicado": "2026-10-04T03:41:30Z"
-    },
-    {
-      "video": null,
-      "id": "UCP96gDuxPg",
-      "titulo": "Las 10 cosas de PROFESIONES que tenia WoW Vanilla",
-      "visibilidad": "public",
-      "publicado": "2026-10-01T15:00:10Z"
-    },
-    {
-      "video": "wow_clases_ocultas",
-      "id": "8hNPy07Bu4A",
-      "titulo": "Las 9 clases y profesiones OCULTAS de WoW Forever",
-      "visibilidad": "private",
-      "programado": "2026-11-12T15:00:00Z",
-      "formato": "lista cuenta regresiva 9 puestos · secuencia_yt (primer video de la Fábrica) · Overgear coaching (campaña 2)",
-      "nota": "6-nov-2026: MOVIDO al jue 12-nov 09:00 CDMX por decisión del usuario (el 7-nov lo ocupa wow_errores_forever); conserva el enlace /CRONICAS/4. 2-nov-2026: RESUBIDO con el logo de esquina BLANCO de Overgear (correo de Alice del 2-nov) + enlace overgear.s.gy/CRONICAS/4; sáb 7-nov 09:00 CDMX. POmeaxw16n0 queda en privado sin fecha (NO borrar). 1-nov-2026: RESUBIDO con el fondo de marca de Overgear (regla fija); 2hdnW7T5dl8 en privado sin fecha. 31-oct-2026: PROGRAMADO sáb 7-nov 09:00 CDMX (fecha de Overgear), elegida por el usuario. 28-oct-2026: versión nueva con el kit «WoW - Forever (nov)» y el creativo CRONICAS10_forever (-10 %) de Alice, en privado SIN fecha; la publica el usuario (fechas de Overgear: 1, 4, 5, 7 y 9-nov). Las anteriores siguen en privado: atKakPRR410, KEXk-wMhX1o. 27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (KEXk-wMhX1o) sigue en privado en el canal.",
-      "id_anterior": [
-        "2hdnW7T5dl8",
-        "atKakPRR410",
-        "KEXk-wMhX1o"
-      ]
-    },
-    {
-      "video": "wow_pistas_futuro",
-      "id": "uETB9GOW4hk",
-      "titulo": "Las 8 pistas que Blizzard YA dejó sobre lo que viene después de WoW Forever",
-      "visibilidad": "private",
-      "programado": "2026-11-09T15:00:00Z",
-      "formato": "lista cuenta regresiva 8 puestos · especulación/futuro (cambia la variable «tema» respecto a clases ocultas) · secuencia_yt · Overgear coaching bandas (campaña 2)",
-      "nota": "2-nov-2026: RESUBIDO con el logo de esquina BLANCO de Overgear (correo de Alice del 2-nov) + enlace overgear.s.gy/CRONICAS/5; lun 9-nov 09:00 CDMX. 2SwLr3EGzdY queda en privado sin fecha (NO borrar). 1-nov-2026: RESUBIDO con el fondo de marca de Overgear (regla fija); Hx0eAoY4szk en privado sin fecha. 31-oct-2026: PROGRAMADO lun 9-nov 09:00 CDMX (fecha de Overgear), elegida por el usuario. 28-oct-2026: versión nueva con el kit «WoW - Forever (nov)» y el creativo CRONICAS10_forever (-10 %) de Alice, en privado SIN fecha; la publica el usuario (fechas de Overgear: 1, 4, 5, 7 y 9-nov). Las anteriores siguen en privado: ZinI3H8kleI, vODv9Gm0tjQ. 27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (vODv9Gm0tjQ) sigue en privado en el canal.",
-      "id_anterior": [
-        "Hx0eAoY4szk",
-        "ZinI3H8kleI",
-        "vODv9Gm0tjQ"
-      ]
-    },
-    {
-      "video": "wow_tres_noches",
-      "id": "_-M5FqPQmdg",
-      "titulo": "Lo más PERTURBADOR que pasó DE VERDAD en World of Warcraft",
-      "visibilidad": "public",
-      "programado": "2026-10-16T17:00:00Z",
-      "formato": "especial de Halloween · 3 historias reales de menos a más con narradora (el Ángel de la Resurrección) y 4 jumpscares · grabado de peste dibujado + clips de época en tinta · voz ElevenLabs Lily · sin Overgear (cambia la variable «formato» respecto a las listas)",
-      "publicado": "2026-10-16"
-    },
-    {
-      "video": "wow_curiosidades_reinos_este",
-      "id": "Dv0Q-bh4Quw",
-      "titulo": "62 CURIOSIDADES de los Reinos del Este que casi nadie conoce (WoW Classic)",
-      "visibilidad": "public",
-      "programado": "2026-10-19T17:00:00Z",
-      "formato": "lista cuenta regresiva LARGA 62 puestos · ~31 min (cambia la variable «duración» respecto a las listas de 8-9) · curiosidades de Classic con gancho a Forever · secuencia_yt + Applio + pegatinas grandes + 9 pantallas completas · música original de WoW (no Lyria) · sin Overgear",
-      "nota": "programado el 18-oct-2026 por orden del usuario: lun 19-oct 11:00 CDMX",
-      "publicado": "2026-10-19"
-    },
-    {
-      "video": "wow_darrowshire",
-      "id": "paQ5FISMZzU",
-      "titulo": "La niña que sigue esperando a su padre en World of Warcraft",
-      "visibilidad": "public",
-      "programado": "2026-10-22T15:00:00Z",
-      "formato": "cuento de lore oscuro poco contado (Darrowshire / Pamela) · ~13:49 · FORMATO NUEVO pegatina Flow (Flow pinta escenarios y hojas, el código anima) + pegatinas reales de WoW + SFX del propio juego · voz ElevenLabs Lily · Lyria de terror · sin Overgear (cambia la variable «estilo/formato» respecto a las listas secuencia_yt)",
-      "nota": "subido y programado el 21-oct-2026 (regla «render terminado»): jue 22-oct 09:00 CDMX, 70 h tras curiosidades (separación mínima 44 h); miniatura y .srt aplicados con `yt aplicar`",
-      "publicado": "2026-10-22"
-    },
-    {
-      "video": "wow_curiosidades_kalimdor",
-      "id": "lE1SS7xJc_4",
-      "titulo": "30 CURIOSIDADES de Kalimdor que casi nadie conoce (WoW Classic)",
-      "visibilidad": "public",
-      "programado": "2026-10-25T15:00:00Z",
-      "publicado": "2026-10-24T17:02:25Z",
-      "formato": "lista cuenta regresiva 30 puestos · ~15:47 · curiosidades de Classic (Kalimdor) con gancho a Forever · secuencia_yt + Applio + pegatinas + 3 pantallas + 4 MG nuevos (runas, linaje, cadena, consola) · música original de WoW (no Lyria) · sin Overgear",
-      "prueba": "duración: misma fórmula que Reinos del Este (31 min) a la mitad de duración (16 min)",
-      "nota": "subido y programado el 21-oct-2026 por la regla «render terminado = subir y programar»: dom 25-oct 09:00 CDMX; el usuario lo PUBLICÓ a mano antes, el sáb 24-oct 11:02 CDMX"
-    },
-    {
-      "video": "wow_objetos_raros",
-      "id": "2xO3Wf1B4XQ",
-      "titulo": "Los 12 objetos más RAROS de WoW Vanilla (y cuáles vuelven en Forever)",
-      "visibilidad": "public",
-      "programado": "2026-10-27T15:00:00Z",
-      "formato": "lista cuenta regresiva 12 puestos · 13:59 · objetos raros de Vanilla con gancho a Forever · secuencia_yt + Applio + pegatinas + 3 pantallas + 9 MAPAS REALES con ruta y FOTOS en cada paso (mg_wow.ruta) + MG nuevos (forja ×2, sorteo) · música original de WoW (no Lyria) · sin Overgear",
-      "prueba": "tema pedido por el usuario: objetos/armas raros (eje «oculto/raro» de Kadrath ×4) con mapas reales; misma duración que Kalimdor (~14-16 min)",
-      "nota": "subido y programado el 23-oct-2026 por la regla «render terminado = subir y programar»: mié 28-oct 09:00 CDMX; ADELANTADO el 24-oct al mar 27-oct 09:00 CDMX (ciclo de 3 días tras Kalimdor, publicado antes por el usuario)",
-      "publicado": "2026-10-27T15:00:06Z"
-    },
-    {
-      "video": "wow_jugadores_rompieron",
-      "id": "a-ED73Lgy5A",
-      "titulo": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla",
-      "visibilidad": "private",
-      "programado": "2026-11-05T15:00:00Z",
-      "formato": "lista cuenta regresiva 10 puestos · 13:34 · JUGADORES REALES (eje más fuerte del canal) que rompieron Vanilla con gancho a Forever · secuencia_yt + Applio + metraje de ARCHIVO 2005-06 enmarcado + pegatinas + 3 MAPAS con ruta + MG nuevos (reckoning, inmortal, expediente) · OST de WoW · Overgear campaña 2 (coaching, CRONICAS10)",
-      "prueba": "variable que cambia respecto a «12 Legendarios Jugadores» (×2,54): ángulo «rompieron el juego» + gancho a Forever; elegido por el usuario entre 3 propuestas con datos",
-      "nota": "2-nov-2026: RESUBIDO con el logo de esquina BLANCO de Overgear (correo de Alice del 2-nov) + enlace overgear.s.gy/CRONICAS/3; jue 5-nov 09:00 CDMX (cambiado del 4 al 5 por el usuario). k-L3qDNiI9s queda en privado sin fecha (NO borrar). 1-nov-2026: RESUBIDO con el fondo de marca de Overgear (regla fija); 8okTILCdn-o en privado sin fecha. 28-oct: resubido con la promo de Overgear actualizada (kit Forever + creativo CRONICAS10_forever); jBumLmFN600 queda en privado sin fecha · 31-oct: MOVIDO del mar 3-nov al mié 4-nov 09:00 CDMX (lleva Overgear; fechas de campaña 1, 4, 5, 7 y 9-nov), por orden del usuario.",
-      "id_anterior": [
-        "8okTILCdn-o",
-        "jBumLmFN600"
-      ]
-    },
-    {
-      "video": "wow_100_curiosidades_tbc_wotlk",
-      "id": "mRQU7Uv0yiQ",
-      "titulo": "100 CURIOSIDADES y secretos de Burning Crusade y Wrath que puedes ir a ver",
-      "visibilidad": "private",
-      "programado": "2026-10-31T15:00:00Z",
-      "formato": "lista cuenta regresiva LARGA 100 puestos · 51:12 · curiosidades/easter eggs de TBC + WotLK en orden geográfico (Terrallende → Rasganorte) · secuencia_yt + Applio + pegatinas + MAPAS REALES con ruta por zona y foto en cada parada + MG nuevos (paradero, simon, franquicia, altares, cadena Bridenbrad) · OST de WoW por zona + SONIDO ORIGINAL del juego en 10 beats (E.T.C., Garrosh, Algalon…) · 23 capítulos por zona · sin Overgear",
-      "prueba": "duración: la fórmula de curiosidades (Reinos del Este 31 min, Kalimdor 16 min) llevada a 51 min y a las expansiones TBC/WotLK",
-      "nota": "subido y programado el 27-oct-2026 por la regla «render terminado = subir y programar»: sáb 31-oct 09:00 CDMX (hueco reservado entre objetos_raros 27-oct y jugadores_rompieron 3-nov)"
-    },
-    {
-      "video": "wow_primera_semana",
-      "id": "9QOPj_6twws",
-      "titulo": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
-      "visibilidad": "private",
-      "programado": "2026-11-01T16:00:00Z",
-      "formato": "lista cuenta regresiva 10 puestos · 14:56 · guía práctica para empezar WoW Forever (lanzamiento 4-nov) · secuencia_yt + Applio + 7 mapas con ruta + 15 MG (calendario, relojes, capas, experiencia, reglas, nombre, botín, contadores, mudanza) + ~46 pegatinas + 13 comentarios reales del público + ABRE la campaña Overgear de noviembre (coaching Forever, CRONICAS10) + anuncio de que las historias contadas se mudan a otro canal · OST de WoW por tramo · --forzar (24 h tras el del 31-oct, fecha de Overgear)",
-      "id_anterior": "zYCcRMQ_t2I",
-      "nota": "1-nov-2026: RESUBIDO con el fondo de marca de Overgear (corrección de Alice del 29-oct) + enlace overgear.s.gy/CRONICAS/1 + promoción pagada; publicado dom 1-nov 10:00 CDMX por orden del usuario. zYCcRMQ_t2I queda en privado sin fecha (NO borrar). "
-    },
-    {
-      "video": "wow_objetos_secretos_forever",
-      "id": "C9cxHxcagOI",
-      "titulo": "Los 15 OBJETOS SECRETOS de WoW Forever que nadie te explica",
-      "visibilidad": "private",
-      "programado": "2026-11-04T15:00:00Z",
-      "formato": "lista cuenta regresiva 15 puestos · 17:17 + pantalla final · objetos ocultos de la beta de Forever · secuencia_yt + Applio + 10 mapas con ruta + 15 MG (ocultos, chat, duplica, conjunto, reloj_oro, subasta, pizarra, censurado, tiempos) + 5 agradecimientos + 3 críticas con burla · una variable respecto a objetos raros: Vanilla → Forever",
-      "nota": "2-nov-2026: RESUBIDO para el mié 4-nov 09:00 CDMX (cambiado del 5 al 4 por el usuario) con logo de esquina BLANCO de Overgear, enlace overgear.s.gy/CRONICAS/2, 2 frases «ahora que el juego sale hoy» y medallones con el ícono visible (antes vacíos). _XPiWlcNjfE queda en privado sin fecha (NO borrar). Overgear campaña 2 con fondo de marca y promoción pagada; 24 h tras el video del 4-nov con --forzar autorizado por el usuario; falta el enlace s.gy de Alice"
-    },
-    {
-      "video": "wow_errores_forever",
-      "id": "ju5Tc0pqtbg",
-      "titulo": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
-      "visibilidad": "private",
-      "programado": "2026-11-07T15:00:00Z",
-      "formato": "lista cuenta regresiva 25 puestos · secuencia_yt · COMPETENCIA DE 8 VOCES (Remy Applio + 7 de Tamriel; votan en comentarios; voces tras 2 datos) · Overgear coaching /CRONICAS/4 · 23:47",
-      "nota": "6-nov-2026: subido y programado sáb 7-nov 09:00 CDMX (fecha Overgear). Miniatura elegida por el usuario entre 8 (op6: «25» gigante con X roja)."
-    }
+  {
+   "video": null,
+   "id": "g9vINR3Ttgk",
+   "titulo": "Las 10 cosas que hacen DIFICIL a WoW Forever",
+   "visibilidad": "public",
+   "publicado": "2026-10-11T15:00:17Z"
+  },
+  {
+   "video": null,
+   "id": "75HUR132Meg",
+   "titulo": "Los 12 objetos SECRETOS que tiene WoW Forever",
+   "visibilidad": "public",
+   "publicado": "2026-10-09T15:00:15Z"
+  },
+  {
+   "video": null,
+   "id": "4z79TsC_uOE",
+   "titulo": "Las 9 clases de WoW Forever de PEOR a mejor",
+   "visibilidad": "public",
+   "publicado": "2026-10-07T18:14:15Z"
+  },
+  {
+   "video": null,
+   "id": "XnuCCBpxeOE",
+   "titulo": "Las 10 cosas INMERSIVAS que tiene WoW Forever",
+   "visibilidad": "public",
+   "publicado": "2026-10-05T20:36:30Z"
+  },
+  {
+   "video": null,
+   "id": "Tnbyp27AHDU",
+   "titulo": "Las 10 cosas INMERSIVAS que tenia WoW Pandaria",
+   "visibilidad": "public",
+   "publicado": "2026-10-04T03:41:30Z"
+  },
+  {
+   "video": null,
+   "id": "UCP96gDuxPg",
+   "titulo": "Las 10 cosas de PROFESIONES que tenia WoW Vanilla",
+   "visibilidad": "public",
+   "publicado": "2026-10-01T15:00:10Z"
+  },
+  {
+   "video": "wow_clases_ocultas",
+   "id": "8hNPy07Bu4A",
+   "titulo": "Las 9 clases y profesiones OCULTAS de WoW Forever",
+   "visibilidad": "private",
+   "programado": "2026-11-12T15:00:00Z",
+   "formato": "lista cuenta regresiva 9 puestos · secuencia_yt (primer video de la Fábrica) · Overgear coaching (campaña 2)",
+   "nota": "6-nov-2026: MOVIDO al jue 12-nov 09:00 CDMX por decisión del usuario (el 7-nov lo ocupa wow_errores_forever); conserva el enlace /CRONICAS/4. 2-nov-2026: RESUBIDO con el logo de esquina BLANCO de Overgear (correo de Alice del 2-nov) + enlace overgear.s.gy/CRONICAS/4; sáb 7-nov 09:00 CDMX. POmeaxw16n0 queda en privado sin fecha (NO borrar). 1-nov-2026: RESUBIDO con el fondo de marca de Overgear (regla fija); 2hdnW7T5dl8 en privado sin fecha. 31-oct-2026: PROGRAMADO sáb 7-nov 09:00 CDMX (fecha de Overgear), elegida por el usuario. 28-oct-2026: versión nueva con el kit «WoW - Forever (nov)» y el creativo CRONICAS10_forever (-10 %) de Alice, en privado SIN fecha; la publica el usuario (fechas de Overgear: 1, 4, 5, 7 y 9-nov). Las anteriores siguen en privado: atKakPRR410, KEXk-wMhX1o. 27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (KEXk-wMhX1o) sigue en privado en el canal.",
+   "id_anterior": [
+    "2hdnW7T5dl8",
+    "atKakPRR410",
+    "KEXk-wMhX1o"
+   ]
+  },
+  {
+   "video": "wow_pistas_futuro",
+   "id": "uETB9GOW4hk",
+   "titulo": "Las 8 pistas que Blizzard YA dejó sobre lo que viene después de WoW Forever",
+   "visibilidad": "private",
+   "programado": "2026-11-15T15:00:00Z",
+   "formato": "lista cuenta regresiva 8 puestos · especulación/futuro (cambia la variable «tema» respecto a clases ocultas) · secuencia_yt · Overgear coaching bandas (campaña 2)",
+   "nota": "7-nov-2026: MOVIDO al dom 15-nov 09:00 CDMX por decisión del usuario (el 9-nov lo ocupa wow_addons_forever con /CRONICAS/5). 2-nov-2026: RESUBIDO con el logo de esquina BLANCO de Overgear (correo de Alice del 2-nov) + enlace overgear.s.gy/CRONICAS/5; lun 9-nov 09:00 CDMX. 2SwLr3EGzdY queda en privado sin fecha (NO borrar). 1-nov-2026: RESUBIDO con el fondo de marca de Overgear (regla fija); Hx0eAoY4szk en privado sin fecha. 31-oct-2026: PROGRAMADO lun 9-nov 09:00 CDMX (fecha de Overgear), elegida por el usuario. 28-oct-2026: versión nueva con el kit «WoW - Forever (nov)» y el creativo CRONICAS10_forever (-10 %) de Alice, en privado SIN fecha; la publica el usuario (fechas de Overgear: 1, 4, 5, 7 y 9-nov). Las anteriores siguen en privado: ZinI3H8kleI, vODv9Gm0tjQ. 27-oct-2026: versión nueva (guion adaptado a «Forever ya salió» + campaña 2 de Overgear) en privado SIN fecha; la publica el usuario después del 4-nov (y antes del 9-dic en pistas). La anterior (vODv9Gm0tjQ) sigue en privado en el canal.",
+   "id_anterior": [
+    "Hx0eAoY4szk",
+    "ZinI3H8kleI",
+    "vODv9Gm0tjQ"
+   ]
+  },
+  {
+   "video": "wow_tres_noches",
+   "id": "_-M5FqPQmdg",
+   "titulo": "Lo más PERTURBADOR que pasó DE VERDAD en World of Warcraft",
+   "visibilidad": "public",
+   "programado": "2026-10-16T17:00:00Z",
+   "formato": "especial de Halloween · 3 historias reales de menos a más con narradora (el Ángel de la Resurrección) y 4 jumpscares · grabado de peste dibujado + clips de época en tinta · voz ElevenLabs Lily · sin Overgear (cambia la variable «formato» respecto a las listas)",
+   "publicado": "2026-10-16"
+  },
+  {
+   "video": "wow_curiosidades_reinos_este",
+   "id": "Dv0Q-bh4Quw",
+   "titulo": "62 CURIOSIDADES de los Reinos del Este que casi nadie conoce (WoW Classic)",
+   "visibilidad": "public",
+   "programado": "2026-10-19T17:00:00Z",
+   "formato": "lista cuenta regresiva LARGA 62 puestos · ~31 min (cambia la variable «duración» respecto a las listas de 8-9) · curiosidades de Classic con gancho a Forever · secuencia_yt + Applio + pegatinas grandes + 9 pantallas completas · música original de WoW (no Lyria) · sin Overgear",
+   "nota": "programado el 18-oct-2026 por orden del usuario: lun 19-oct 11:00 CDMX",
+   "publicado": "2026-10-19"
+  },
+  {
+   "video": "wow_darrowshire",
+   "id": "paQ5FISMZzU",
+   "titulo": "La niña que sigue esperando a su padre en World of Warcraft",
+   "visibilidad": "public",
+   "programado": "2026-10-22T15:00:00Z",
+   "formato": "cuento de lore oscuro poco contado (Darrowshire / Pamela) · ~13:49 · FORMATO NUEVO pegatina Flow (Flow pinta escenarios y hojas, el código anima) + pegatinas reales de WoW + SFX del propio juego · voz ElevenLabs Lily · Lyria de terror · sin Overgear (cambia la variable «estilo/formato» respecto a las listas secuencia_yt)",
+   "nota": "subido y programado el 21-oct-2026 (regla «render terminado»): jue 22-oct 09:00 CDMX, 70 h tras curiosidades (separación mínima 44 h); miniatura y .srt aplicados con `yt aplicar`",
+   "publicado": "2026-10-22"
+  },
+  {
+   "video": "wow_curiosidades_kalimdor",
+   "id": "lE1SS7xJc_4",
+   "titulo": "30 CURIOSIDADES de Kalimdor que casi nadie conoce (WoW Classic)",
+   "visibilidad": "public",
+   "programado": "2026-10-25T15:00:00Z",
+   "publicado": "2026-10-24T17:02:25Z",
+   "formato": "lista cuenta regresiva 30 puestos · ~15:47 · curiosidades de Classic (Kalimdor) con gancho a Forever · secuencia_yt + Applio + pegatinas + 3 pantallas + 4 MG nuevos (runas, linaje, cadena, consola) · música original de WoW (no Lyria) · sin Overgear",
+   "prueba": "duración: misma fórmula que Reinos del Este (31 min) a la mitad de duración (16 min)",
+   "nota": "subido y programado el 21-oct-2026 por la regla «render terminado = subir y programar»: dom 25-oct 09:00 CDMX; el usuario lo PUBLICÓ a mano antes, el sáb 24-oct 11:02 CDMX"
+  },
+  {
+   "video": "wow_objetos_raros",
+   "id": "2xO3Wf1B4XQ",
+   "titulo": "Los 12 objetos más RAROS de WoW Vanilla (y cuáles vuelven en Forever)",
+   "visibilidad": "public",
+   "programado": "2026-10-27T15:00:00Z",
+   "formato": "lista cuenta regresiva 12 puestos · 13:59 · objetos raros de Vanilla con gancho a Forever · secuencia_yt + Applio + pegatinas + 3 pantallas + 9 MAPAS REALES con ruta y FOTOS en cada paso (mg_wow.ruta) + MG nuevos (forja ×2, sorteo) · música original de WoW (no Lyria) · sin Overgear",
+   "prueba": "tema pedido por el usuario: objetos/armas raros (eje «oculto/raro» de Kadrath ×4) con mapas reales; misma duración que Kalimdor (~14-16 min)",
+   "nota": "subido y programado el 23-oct-2026 por la regla «render terminado = subir y programar»: mié 28-oct 09:00 CDMX; ADELANTADO el 24-oct al mar 27-oct 09:00 CDMX (ciclo de 3 días tras Kalimdor, publicado antes por el usuario)",
+   "publicado": "2026-10-27T15:00:06Z"
+  },
+  {
+   "video": "wow_jugadores_rompieron",
+   "id": "a-ED73Lgy5A",
+   "titulo": "Los 10 jugadores REALES que ROMPIERON WoW Vanilla",
+   "visibilidad": "private",
+   "programado": "2026-11-05T15:00:00Z",
+   "formato": "lista cuenta regresiva 10 puestos · 13:34 · JUGADORES REALES (eje más fuerte del canal) que rompieron Vanilla con gancho a Forever · secuencia_yt + Applio + metraje de ARCHIVO 2005-06 enmarcado + pegatinas + 3 MAPAS con ruta + MG nuevos (reckoning, inmortal, expediente) · OST de WoW · Overgear campaña 2 (coaching, CRONICAS10)",
+   "prueba": "variable que cambia respecto a «12 Legendarios Jugadores» (×2,54): ángulo «rompieron el juego» + gancho a Forever; elegido por el usuario entre 3 propuestas con datos",
+   "nota": "2-nov-2026: RESUBIDO con el logo de esquina BLANCO de Overgear (correo de Alice del 2-nov) + enlace overgear.s.gy/CRONICAS/3; jue 5-nov 09:00 CDMX (cambiado del 4 al 5 por el usuario). k-L3qDNiI9s queda en privado sin fecha (NO borrar). 1-nov-2026: RESUBIDO con el fondo de marca de Overgear (regla fija); 8okTILCdn-o en privado sin fecha. 28-oct: resubido con la promo de Overgear actualizada (kit Forever + creativo CRONICAS10_forever); jBumLmFN600 queda en privado sin fecha · 31-oct: MOVIDO del mar 3-nov al mié 4-nov 09:00 CDMX (lleva Overgear; fechas de campaña 1, 4, 5, 7 y 9-nov), por orden del usuario.",
+   "id_anterior": [
+    "8okTILCdn-o",
+    "jBumLmFN600"
+   ]
+  },
+  {
+   "video": "wow_100_curiosidades_tbc_wotlk",
+   "id": "mRQU7Uv0yiQ",
+   "titulo": "100 CURIOSIDADES y secretos de Burning Crusade y Wrath que puedes ir a ver",
+   "visibilidad": "private",
+   "programado": "2026-10-31T15:00:00Z",
+   "formato": "lista cuenta regresiva LARGA 100 puestos · 51:12 · curiosidades/easter eggs de TBC + WotLK en orden geográfico (Terrallende → Rasganorte) · secuencia_yt + Applio + pegatinas + MAPAS REALES con ruta por zona y foto en cada parada + MG nuevos (paradero, simon, franquicia, altares, cadena Bridenbrad) · OST de WoW por zona + SONIDO ORIGINAL del juego en 10 beats (E.T.C., Garrosh, Algalon…) · 23 capítulos por zona · sin Overgear",
+   "prueba": "duración: la fórmula de curiosidades (Reinos del Este 31 min, Kalimdor 16 min) llevada a 51 min y a las expansiones TBC/WotLK",
+   "nota": "subido y programado el 27-oct-2026 por la regla «render terminado = subir y programar»: sáb 31-oct 09:00 CDMX (hueco reservado entre objetos_raros 27-oct y jugadores_rompieron 3-nov)"
+  },
+  {
+   "video": "wow_primera_semana",
+   "id": "9QOPj_6twws",
+   "titulo": "Las 10 cosas que DEBES hacer la primera semana de WoW Forever",
+   "visibilidad": "private",
+   "programado": "2026-11-01T16:00:00Z",
+   "formato": "lista cuenta regresiva 10 puestos · 14:56 · guía práctica para empezar WoW Forever (lanzamiento 4-nov) · secuencia_yt + Applio + 7 mapas con ruta + 15 MG (calendario, relojes, capas, experiencia, reglas, nombre, botín, contadores, mudanza) + ~46 pegatinas + 13 comentarios reales del público + ABRE la campaña Overgear de noviembre (coaching Forever, CRONICAS10) + anuncio de que las historias contadas se mudan a otro canal · OST de WoW por tramo · --forzar (24 h tras el del 31-oct, fecha de Overgear)",
+   "id_anterior": "zYCcRMQ_t2I",
+   "nota": "1-nov-2026: RESUBIDO con el fondo de marca de Overgear (corrección de Alice del 29-oct) + enlace overgear.s.gy/CRONICAS/1 + promoción pagada; publicado dom 1-nov 10:00 CDMX por orden del usuario. zYCcRMQ_t2I queda en privado sin fecha (NO borrar). "
+  },
+  {
+   "video": "wow_objetos_secretos_forever",
+   "id": "C9cxHxcagOI",
+   "titulo": "Los 15 OBJETOS SECRETOS de WoW Forever que nadie te explica",
+   "visibilidad": "private",
+   "programado": "2026-11-04T15:00:00Z",
+   "formato": "lista cuenta regresiva 15 puestos · 17:17 + pantalla final · objetos ocultos de la beta de Forever · secuencia_yt + Applio + 10 mapas con ruta + 15 MG (ocultos, chat, duplica, conjunto, reloj_oro, subasta, pizarra, censurado, tiempos) + 5 agradecimientos + 3 críticas con burla · una variable respecto a objetos raros: Vanilla → Forever",
+   "nota": "2-nov-2026: RESUBIDO para el mié 4-nov 09:00 CDMX (cambiado del 5 al 4 por el usuario) con logo de esquina BLANCO de Overgear, enlace overgear.s.gy/CRONICAS/2, 2 frases «ahora que el juego sale hoy» y medallones con el ícono visible (antes vacíos). _XPiWlcNjfE queda en privado sin fecha (NO borrar). Overgear campaña 2 con fondo de marca y promoción pagada; 24 h tras el video del 4-nov con --forzar autorizado por el usuario; falta el enlace s.gy de Alice"
+  },
+  {
+   "video": "wow_errores_forever",
+   "id": "ju5Tc0pqtbg",
+   "titulo": "Los 25 ERRORES que estás cometiendo en WoW Forever (y cómo arreglarlos)",
+   "visibilidad": "private",
+   "programado": "2026-11-07T15:00:00Z",
+   "formato": "lista cuenta regresiva 25 puestos · secuencia_yt · COMPETENCIA DE 8 VOCES (Remy Applio + 7 de Tamriel; votan en comentarios; voces tras 2 datos) · Overgear coaching /CRONICAS/4 · 23:47",
+   "nota": "6-nov-2026: subido y programado sáb 7-nov 09:00 CDMX (fecha Overgear). Miniatura elegida por el usuario entre 8 (op6: «25» gigante con X roja)."
+  },
+  {
+   "video": "wow_addons_forever",
+   "id": "WpOLrmRm2h8",
+   "titulo": "Los 20 ADD-ONS que necesitas en WoW Forever (y uno que hicimos nosotros)",
+   "visibilidad": "private",
+   "programado": "2026-11-09T15:00:00Z",
+   "formato": "lista cuenta regresiva 20 puestos · secuencia_yt · mini categoría INMERSIÓN con los 2 add-ons propios (Voces + Necesidades) presentados por la voz clonada del usuario sobre sus grabaciones de OBS, PayPal + CurseForge, ¿sigo? · Remy Applio · Overgear coaching /CRONICAS/5 · 22:06",
+   "nota": "7-nov-2026: subido y programado lun 9-nov 09:00 CDMX (fecha Overgear). Descripción con [ENLACE PAYPAL/CURSEFORGE PENDIENTE]: cambiar con `yt aplicar` al recibirlos."
+  }
+ ],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "wow forever",
+   "world of warcraft classic plus",
+   "wow classic secretos",
+   "lore de warcraft",
+   "wow vanilla curiosidades"
   ],
-  "ideas": {
-    "idioma": "es",
-    "region": "MX",
-    "busquedas": [
-      "wow forever",
-      "world of warcraft classic plus",
-      "wow classic secretos",
-      "lore de warcraft",
-      "wow vanilla curiosidades"
-    ],
-    "competidores": [],
-    "dias": 60,
-    "min_vistas": 2000,
-    "filtro": [
-      "wow",
-      "warcraft",
-      "azeroth",
-      "classic",
-      "forever",
-      "vanilla"
-    ]
-  },
-  "estado": "mudándose desde C:\\googleimagenes (13-oct-2026); el próximo video sale ya de la Fábrica (decisión del usuario)",
-  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_warcraft.mp4"
+  "competidores": [],
+  "dias": 60,
+  "min_vistas": 2000,
+  "filtro": [
+   "wow",
+   "warcraft",
+   "azeroth",
+   "classic",
+   "forever",
+   "vanilla"
+  ]
+ },
+ "estado": "mudándose desde C:\\googleimagenes (13-oct-2026); el próximo video sale ya de la Fábrica (decisión del usuario)",
+ "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_warcraft.mp4"
 }

@@ -2169,3 +2169,263 @@ def tiempos(titulo, tramos, nota=None, ancho=1400):
             _texto(d, (M + ancho / 2, y + 112), nota, fuente("serif", 34), ORO_T, "mm", 255 * _eo((dt - tn) / .3))
         return _salida(im, dt)
     return fn
+
+
+# ------------------------------------------------------------------ competencia de voces (wow_errores_forever, 5-nov-2026)
+def narrador(nombre, lema, n=None, de=None, ico=None, ancho=620):
+    """Placa pequeña de quién narra (videos con varias voces que compiten), como un marco de unidad de WoW: retrato redondo
+    (icono) a la izquierda, «NARRA · VOZ n DE N» en gris, el nombre en oro que entra cerrando el espaciado y el lema debajo."""
+    h = 190
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, None)
+        d = ImageDraw.Draw(im)
+        x0 = M + 30
+        if ico:
+            r = 64
+            cx, cy = x0 + r, M + h / 2
+            ic = icono(ico, 2 * r).copy()
+            mk = Image.new("L", ic.size, 0)
+            ImageDraw.Draw(mk).ellipse((0, 0, 2 * r - 1, 2 * r - 1), fill=255)
+            ic.putalpha(mk)
+            s = _pop(dt, .4)
+            if s > .05:
+                t = max(2, int(2 * r * s))
+                im.alpha_composite(ic.resize((t, t), Image.BILINEAR), (int(cx - t / 2), int(cy - t / 2)))
+            d.ellipse((cx - r - 4, cy - r - 4, cx + r + 4, cy + r + 4), outline=ORO + (255,), width=5)
+            x0 += 2 * r + 30
+        arriba = "NARRA" + (f"  ·  VOZ {n} DE {de}" if n else "")
+        _texto(d, (x0, M + 50), arriba, fuente("sans", 24), GRIS, "lm")
+        f = fuente("serif", 52)
+        tr = 22 * (1 - _eo(dt / .8))
+        x = x0
+        for ch in nombre.upper():
+            _texto(d, (x, M + 104), ch, f, ORO_T, "lm", 255 * _eo(dt / .5))
+            x += d.textlength(ch, font=f) + tr
+        _texto(d, (x0, M + 152), lema, fuente("sans", 26), (220, 215, 200), "lm", 255 * _eo((dt - .4) / .5))
+        return _salida(im, dt)
+    return fn
+
+
+def votacion(titulo, nombres, remate=None, icos=None, ancho=1240):
+    """Papeleta de la votación con marco de WoW: los nombres en dos columnas con su casilla (o icono); la marca k enciende el
+    nombre k (dorado, palomita con rebote) cuando esa voz pide el voto, en cualquier orden; los ya marcados quedan en blanco.
+    Con `remate`, la marca len(nombres) lo saca abajo."""
+    filas_ = (len(nombres) + 1) // 2
+    h = 150 + filas_ * 92 + (90 if remate else 30)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ms = list(marcas[:len(nombres)]) + [None] * max(0, len(nombres) - len(marcas))
+        on_ = [m is not None and dt >= m for m in ms]
+        activa = max((k for k in range(len(nombres)) if on_[k]), key=lambda k: ms[k], default=-1)
+        f = fuente("serif", 44)
+        for k, nom in enumerate(nombres):
+            col, fila = k // filas_, k % filas_
+            x = M + (ancho * .08 if col == 0 else ancho * .54)
+            y = M + 140 + fila * 92
+            on = on_[k]
+            c = ORO_T if k == activa else BLANCO if on else GRIS
+            if icos and icos[k]:
+                _casilla(im, d, x, y - 30, 60, icos[k], (dt - ms[k]) if on else None, apagado=not on)
+            else:
+                d.rounded_rectangle((x, y - 26, x + 52, y + 26), 7, fill=(4, 6, 18, 235), outline=(95, 82, 45, 255), width=2)
+            if on:
+                u = _pop(dt - ms[k], .35)
+                r = 20 * u
+                cx = x + 30
+                d.line([(cx - r, y), (cx - r * .3, y + r * .8), (cx + r, y - r)], fill=VERDE + (255,), width=7)
+            _texto(d, (x + 84, y), nom.upper(), f, c, "lm")
+        mr = marcas[len(nombres)] if remate and len(marcas) > len(nombres) else None
+        if mr is not None and dt >= mr:
+            _texto(d, (M + ancho / 2, M + h - 52), remate, fuente("sans", 34), BLANCO, "mm", 255 * _eo((dt - mr) / .5))
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ add-ons de Forever (wow_addons_forever, 7-nov-2026)
+def _cifra(v):
+    """215000000 -> «215 M», 192 -> «192», 94000 -> «94 mil» (como lo dice la voz)."""
+    if v >= 1e6:
+        return f"{v / 1e6:.0f} M" if v >= 1e7 else f"{v / 1e6:.1f} M".replace(".", ",")
+    if v >= 1e3:
+        return f"{v / 1e3:.0f} mil"
+    return str(int(v))
+
+
+def buscador(consulta, resultados, total, remate=None, ancho=1180):
+    """Buscador de add-ons (CurseForge) con marco de WoW: la consulta se teclea, luego las filas de resultados caen una a una
+    (casi todas con el mismo nombre) y el total corre hasta `total`. marcas: [teclea, fila1.., remate]."""
+    nf = len(resultados)
+    h = 96 + 86 + nf * 64 + (84 if remate else 24)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, None)
+        d = ImageDraw.Draw(im)
+        t0 = _mk(marcas, 0, .2)
+        y = M + 40
+        d.rounded_rectangle((M + 40, y, M + ancho - 40, y + 70), 12, fill=(4, 6, 18, 245), outline=ORO + (255,), width=3)
+        n = max(0, min(len(consulta), int((dt - t0) / .055))) if dt >= t0 else 0
+        cur = "|" if int(dt * 2.5) % 2 == 0 else ""
+        im.alpha_composite(icono("inv_misc_spyglass_02", 48), (M + 56, y + 11))
+        _texto(d, (M + 120, y + 35), consulta[:n] + cur, fuente("sans", 36), BLANCO, "lm")
+        if n >= len(consulta):
+            tt = t0 + len(consulta) * .055
+            u = _eo((dt - tt) / 1.6)
+            _texto(d, (M + ancho - 70, y + 35), f"{int(round(total * u))} RESULTADOS", fuente("negra", 32), ORO_T, "rm")
+        for k, nom in enumerate(resultados):
+            tk = _mk(marcas, k + 1, t0 + 1.2 + k * .35)
+            if dt < tk:
+                continue
+            yy = M + 140 + k * 64 - int(24 * (1 - _eo((dt - tk) / .3)))
+            a = 255 * _eo((dt - tk) / .3)
+            d.rounded_rectangle((M + 40, yy, M + ancho - 40, yy + 54), 8, fill=(10, 14, 36, int(a * .9)), outline=(95, 82, 45, int(a)), width=2)
+            if a > 30:
+                im.alpha_composite(icono("ability_warrior_defensivestance", 40), (M + 50, yy + 7))
+            _texto(d, (M + 108, yy + 27), nom, fuente("sans", 30), BLANCO, "lm", a)
+            _texto(d, (M + ancho - 64, yy + 27), "WoW Forever", fuente("sans", 24), GRIS, "rm", a)
+        mr = _mk(marcas, nf + 1, 1e9)
+        if remate and dt >= mr:
+            s = _pop(dt - mr, .35)
+            _texto(d, (M + ancho / 2, M + h - 46), remate, fuente("negra", max(8, int(44 * s))), (255, 70, 60), "mm")
+        return _salida(im, dt)
+    return fn
+
+
+def descargas(titulo, filas_, remate=None, ancho=1400):
+    """Barras de descargas en escala logarítmica: filas_ = [(ícono, nombre, valor), ...]; la fila k entra en la marca k y su
+    barra crece mientras la cifra corre («215 M», «192»). remate = (texto, i_marca) en verde."""
+    T = 64
+    af = T + 26
+    h = 96 + len(filas_) * af + (74 if remate else 16)
+    top = max(v for _, _, v in filas_)
+    vmax = math.log10(top + 1)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0, x1 = M + 470, M + ancho - 210
+        for k, (ico, nom, v) in enumerate(filas_):
+            tk = _mk(marcas, k, .4 + k * .9)
+            if dt < tk:
+                continue
+            y = M + 92 + k * af
+            a = 255 * _eo((dt - tk) / .3)
+            _casilla(im, d, M + 36, y, T, ico, dt - tk)
+            _texto(d, (M + 36 + T + 20, y + T / 2), nom, fuente("sans", 32), BLANCO, "lm", a)
+            u = _eo((dt - tk) / 1.2)
+            w = (x1 - x0) * math.log10(v + 1) / vmax * u
+            d.rounded_rectangle((x0, y + 14, x1, y + T - 14), 8, fill=(4, 6, 18, 235), outline=(95, 82, 45, 255), width=2)
+            if w > 6:
+                col = VERDE if v == top else ORO_T
+                d.rounded_rectangle((x0 + 3, y + 17, x0 + 3 + w, y + T - 17), 6, fill=tuple(col) + (235,))
+            _texto(d, (M + ancho - 40, y + T / 2), _cifra(v * u if u < 1 else v), fuente("serif", 48), ORO_T if u < 1 else BLANCO, "rm", a)
+        if remate and len(marcas) > remate[1] and dt >= marcas[remate[1]]:
+            s = _pop(dt - marcas[remate[1]], .35)
+            _texto(d, (M + ancho / 2, M + h - 42), remate[0], fuente("negra", max(8, int(44 * s))), VERDE, "mm")
+        return _salida(im, dt)
+    return fn
+
+
+def hecho_en_casa(titulo, addons, sello=None, ancho=1500):
+    """Ficha de los add-ons propios: addons = [(ícono, nombre, línea1, línea2), ...] en tarjetas lado a lado que se voltean en
+    su marca; el sello (p. ej. «GRATIS») cae en la marca len(addons)."""
+    n = len(addons)
+    h = 420
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        wc = (ancho - 80 - (n - 1) * 40) / n
+        for k, (ico, nom, l1, l2) in enumerate(addons):
+            tk = _mk(marcas, k, .3 + k * .8)
+            if dt < tk:
+                continue
+            x = M + 40 + k * (wc + 40)
+            q = _eo((dt - tk) / .45)
+            cx, half = x + wc / 2, max(2, wc / 2 * math.sin(q * math.pi / 2))
+            y0, y1 = M + 96, M + h - 40
+            d.rounded_rectangle((cx - half, y0, cx + half, y1), 14, fill=(10, 16, 44, 245), outline=ORO_T + (255,), width=3)
+            if q > .9:
+                im.alpha_composite(icono(ico, 110), (int(x + 30), int(y0 + 34)))
+                d.rounded_rectangle((x + 28, y0 + 32, x + 142, y0 + 146), 10, outline=ORO + (255,), width=3)
+                _texto(d, (x + 170, y0 + 70), nom, fuente("serif", 44), ORO_T, "lm")
+                _texto(d, (x + 170, y0 + 122), "Add-on hecho en casa", fuente("sans", 24), GRIS, "lm")
+                _texto(d, (x + 34, y0 + 196), l1, fuente("sans", 30), BLANCO, "lm")
+                _texto(d, (x + 34, y0 + 240), l2, fuente("sans", 30), (190, 230, 190), "lm")
+        if sello:
+            _sello(im, sello, M + ancho - 190, M + 96, dt - _mk(marcas, n, 1e9), VERDE, tam=52, ang=-8)
+        return _salida(im, dt)
+    return fn
+
+
+def meta(titulo, etapas, hecho, remate=None, ancho=1640):
+    """Meta colectiva por etapas (el doblaje: Villanorte → … → Azeroth entero): etapas = [(ícono, rótulo), ...]; las primeras
+    `hecho` salen ya cumplidas (palomita verde); las demás se encienden en dorado una por marca y la barra avanza; el remate,
+    en la marca siguiente."""
+    n = len(etapas)
+    h = 380
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        xs = [M + 150 + i * (ancho - 300) / (n - 1) for i in range(n)]
+        y = M + 170
+        d.rounded_rectangle((xs[0], y - 9, xs[-1], y + 9), 9, fill=(4, 6, 18, 235), outline=(95, 82, 45, 255), width=2)
+        tks = [None] * hecho + [_mk(marcas, i - hecho, 1e9) for i in range(hecho, n)]
+        on = [i < hecho or dt >= tks[i] for i in range(n)]
+        last = max(i for i in range(n) if on[i])
+        frac = xs[last] - xs[0]
+        if last >= hecho and last > 0:
+            prev = xs[last - 1] - xs[0]
+            frac = prev + (frac - prev) * _eo((dt - tks[last]) / .8)
+        if frac > 0:
+            d.rounded_rectangle((xs[0] + 2, y - 6, xs[0] + frac, y + 6), 6, fill=VERDE + (230,))
+        for i, (ico, rot) in enumerate(etapas):
+            x = xs[i]
+            if on[i]:
+                _casilla(im, d, int(x - 42), int(y - 42), 84, ico, (dt + 1) if i < hecho else dt - tks[i])
+            else:
+                _casilla(im, d, int(x - 42), int(y - 42), 84, ico, 1.0, apagado=True)
+            _texto(d, (x, y + 76), rot, fuente("sans", 28), BLANCO if on[i] else GRIS, "mm")
+            if i < hecho:
+                cx, cy, r = x + 34, y - 40, 14
+                d.ellipse((cx - 20, cy - 20, cx + 20, cy + 20), fill=(10, 60, 10, 255), outline=VERDE + (255,), width=3)
+                d.line([(cx - r * .7, cy), (cx - r * .2, cy + r * .6), (cx + r * .7, cy - r * .6)], fill=VERDE + (255,), width=5)
+        mr = _mk(marcas, n - hecho, 1e9)
+        if remate and dt >= mr:
+            s = _pop(dt - mr, .35)
+            _texto(d, (M + ancho / 2, M + h - 46), remate, fuente("negra", max(8, int(42 * s))), ORO_T, "mm")
+        return _salida(im, dt)
+    return fn
+
+
+def enlaces(titulo, items, nota=None, ancho=1240):
+    """Placa de enlaces «en la descripción»: items = [(ícono, nombre, sub), ...], uno por marca; una flecha que late apunta
+    hacia abajo (la descripción) y `nota` sale al final."""
+    h = 96 + len(items) * 112 + (80 if nota else 20)
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        for k, (ico, nom, sub) in enumerate(items):
+            tk = _mk(marcas, k, .3 + k * .7)
+            if dt < tk:
+                continue
+            y = M + 96 + k * 112
+            a = 255 * _eo((dt - tk) / .3)
+            dx = int(60 * (1 - _eo((dt - tk) / .35)))
+            d.rounded_rectangle((M + 40 + dx, y, M + ancho - 150 + dx, y + 92), 12, fill=(10, 16, 44, int(a)), outline=ORO + (int(a),), width=2)
+            _casilla(im, d, M + 54 + dx, y + 10, 72, ico, dt - tk)
+            _texto(d, (M + 150 + dx, y + 32), nom, fuente("serif", 40), ORO_T, "lm", a)
+            _texto(d, (M + 150 + dx, y + 70), sub, fuente("sans", 26), BLANCO, "lm", a)
+        if dt > .5:
+            cx, cy = M + ancho - 85, M + 150 + 14 * math.sin(dt * 5)
+            d.polygon([(cx - 34, cy), (cx + 34, cy), (cx, cy + 46)], fill=VERDE + (255,))
+            d.rectangle((cx - 13, cy - 44, cx + 13, cy), fill=VERDE + (255,))
+        mn = _mk(marcas, len(items), 1e9)
+        if nota and dt >= mn:
+            _texto(d, (M + ancho / 2, M + h - 44), nota, fuente("sans", 32), (220, 215, 200), "mm", 255 * _eo((dt - mn) / .4))
+        return _salida(im, dt)
+    return fn

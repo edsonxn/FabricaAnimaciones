@@ -1134,3 +1134,10 @@ Metas públicas (en `campana_subs` de `canales/<alias>.json`): Runa **500 → 1 
 
 ## Pendiente del estilo
 «Cambiar clip» desde el bloque del Montaje; dos apoyos a la vez en el mismo instante (hoy se pueden, pero se enciman).
+
+- **`wow_addons_forever` (7-nov-2026, 152 beats, 22:06):** (1) el `post` de una escena cae en el beat de la siguiente: el sonido nombrado
+  (PNJ con voz, narración de un add-on) va como PISTA `voz=True` con el tramo audible recortado (`sfx/oye_*.mp3`) y el clip alineado a ese
+  segundo; `ambiente_por` suena en TODO el beat, encima de la voz. (2) Videos de creadores con minuto exacto: 33 de 152 rehechos por
+  mascota de canal (We Ding Again), webcam (SignsOfKelani, Scottejaye, Bigbillygames) y cara (Bellular): usarlos solo donde una pantalla
+  o MG los tape, y si no, «<zona> no commentary». (3) Grabaciones propias de OBS = `_obs.py` (recortes con audio a `medios/` ANTES de
+  `bajar`, sin repetir tramo). (4) MG nuevos en `mg_wow`: `buscador`, `descargas` (escala logarítmica), `hecho_en_casa`, `meta`, `enlaces`.

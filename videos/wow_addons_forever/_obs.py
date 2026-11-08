@@ -24,13 +24,10 @@ PLAN = {   # sin repetir tramo de ninguna grabación (7-nov, comprobado a mano c
     "casa4": [(5, 4.0), (3, 0.0), (3, 9.0), (3, 17.0), (3, 27.0), (1, 44.0), (4, 12.0), (4, 44.0)],
 }
 # el PNJ habla desde este segundo de la grabación: el post (voz callada) se alinea ahí
-SALTA = {"scene-064"}   # 8-nov: lo arma _orcos_064() (3 grabaciones encadenadas)
+SALTA = {"scene-053"}   # 9-nov: tramo de 40 s; 053 ya es casi todo el #14 (se queda el clip remapeado)
 # 3.ª versión (Overgear al min 4, posts largos): tramo exacto por beat, sin repetir (comprobado a mano)
-EXPL = {"scene-049": (4, 32.0), "scene-050": (1, 34.0), "scene-051": (2, 4.0), "scene-052": (1, 46.0), "scene-054": (1, 21.0),
-        "scene-055": (1, 25.0), "scene-056": (2, 16.0), "scene-057": (4, 40.0), "scene-059": (5, 4.0), "scene-060": (5, 8.0),
-        "scene-061": (3, 0.0), "scene-062": (3, 6.0), "scene-063": (3, 14.0), "scene-064": (3, 24.0), "scene-065": (4, 48.0),
-        "scene-066": (1, 56.0), "scene-067": (8, 0.0), "scene-068": (4, 20.0)}
-OYE = {"casa1": (1, 4.0, "casa1_4"), "casa3": (4, 4.0, "casa3_1")}
+EXPL = {"scene-049": (2, 4.0), "scene-052": (8, 0.0)}   # 9-nov: 050 y 051 los alinea OYE (Willem / Kaltunk)
+OYE = {"casa1": (1, 8.1, "casa1_1"), "casa2": (6, 2.6, "casa2_0")}
 
 
 def main(escribir=True):
@@ -87,5 +84,3 @@ def _orcos_064():
 
 if __name__ == "__main__":
     main(escribir="--ver" not in sys.argv)
-    if "--ver" not in sys.argv:
-        _orcos_064()

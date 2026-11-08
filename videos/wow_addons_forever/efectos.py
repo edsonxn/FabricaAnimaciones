@@ -208,28 +208,15 @@ FX = [
     # =========================================================== 15 Narcissus (sustituye a Spoken: el usuario, 7-nov)
     rel("Número quince", "a_narcissus", "Narcissus", "tu personaje, como en un RPG"),
     pant("s_narcissus", ("Cambia la ventana de personaje", -.2), ("y el equipo a los lados|fin", .3)),
-    # =========================================================== CASA: los add-ons propios (sobre sus grabaciones de OBS)
+    # =========================================================== CASA (9-nov: ~40 s; el usuario: «solo 35 segundos… las voces de ambos bandos»)
     mg(M.hecho_en_casa("HECHO EN CASA", [("inv_misc_head_human_02", "Voces", "Misiones con voz en español", "Cada personaje, su voz"),
                                          ("inv_misc_food_15", "Necesidades", "Hambre, sueño, campamento", "Avisa antes de perder el bono")], "GRATIS"),
-       ("lo hicimos aquí, en casa", -.6), ("que lo presente él|fin", .3), ["lo hicimos aquí", "en casa", "Como lo hizo él"], "hecho en casa", y=.42),
-    com("alguien en los comentarios dijo", "UgzA9p2Z10TE-cp555l4AaABAg", dur=6.0, x=.32, y=.30),
-    pv("se llama Remy Dos Veces", "p_remy", "Remy «Dos Veces» · Villadorada", dur=4.6, x=.80, y=.36, tam=380, entrada="sello"),
-    pv("también las de los orcos", "p_kaltunk", "Kaltunk · Valle de los Retos", dur=5.0, x=.80, y=.36, tam=380),
-    pv("Escucha a Gornek", "p_gornek", "Gornek · Valle de los Retos", dur=4.6, x=.80, y=.36, tam=380),
-    mapa("elwynn", [(49, 38, "Villanorte", "abadía · primeras misiones", F("p_willem")), (42, 65, "Villadorada", "la posada", F("p_posada"))],
-         ("Ya están las misiones de inicio", -.2), ("en Villanorte y Villadorada|fin", .8), ["misiones de inicio de los humanos", "y Villadorada"],
-         "LO QUE YA ESTÁ DOBLADO", "Bosque de Elwynn", zmax=1.5),
-    mg(M.enlaces("EN LA DESCRIPCIÓN", [("inv_misc_coin_01", "PayPal · desde 1 dólar", "paypal.me/edsonxn/1USD")], "Nadie tiene que pagar para usarlo"),
-       ("Lo único que me frena", .2), ("Nadie tiene que pagar para usarlo|fin", .2),
-       ["enlace de PayPal", "Nadie tiene que pagar"], "paypal", y=.40),
-    mg(M.enlaces("EN LA DESCRIPCIÓN", [("trade_engineering", "CurseForge · gratis", "Voces Español WoW Forever")]),
-       ("Los dos están en CurseForge", -.2), ("también va en la descripción|fin", .6), ["Los dos están en CurseForge"], "curseforge", y=.40),
-    mg(M.meta("DOBLAR AZEROTH, ZONA POR ZONA", [("inv_misc_head_human_01", "Villanorte"), ("inv_misc_head_human_02", "Villadorada"),
-                                                ("inv_misc_head_orc_01", "Valle de los Retos"), ("achievement_zone_durotar", "Durotar"),
-                                                ("inv_misc_map_01", "Renegados"), ("inv_misc_map08", "Todo el juego")], 4,
-              "RENEGADOS EN CAMINO · POCO A POCO", ancho=1760),
-       ("Ahora estoy empezando por", -.3), ("hasta doblar todo el juego|fin", 1.2),
-       ["zonas iniciales de cada raza", "doblar todo el juego", "doblar todo el juego"], "ruta doblaje", y=.42),
+       ("algo hecho en casa", -.4), ("Que lo presente él|fin", .3), ["algo hecho en casa", "en casa", "Que lo presente él"], "hecho en casa", y=.42),
+    pv("los de la Horda", "p_kaltunk", "Kaltunk · Valle de los Retos", dur=5.0, x=.80, y=.36, tam=380),
+    pv("Es gratis", "p_necesidades", "Y también: Necesidades", dur=4.2, x=.18, y=.40, tam=360),
+    mg(M.enlaces("EN LA DESCRIPCIÓN", [("inv_misc_coin_01", "PayPal · desde 1 dólar", "paypal.me/edsonxn/1USD"),
+                                       ("trade_engineering", "CurseForge · gratis", "Voces Español WoW Forever")]),
+       ("PayPal desde un dólar", -.3), ("Dímelo en los comentarios|fin", .3), ["PayPal desde un dólar", "y CurseForge"], "enlaces", y=.40),
     # =========================================================== 14 Wayfarer
     rel("Número catorce", "a_wayfarer", "Wayfarer", "sin mapa y sin flecha"),
     pant("s_wayfarer", ("En vez de mapa, una brújula", -.2), ("en texto, como en dos mil cuatro|fin", .3)),
@@ -331,8 +318,7 @@ ROTULOS = [   # solo para énfasis (regla del 30-sep: nada de subtítulos)
     dict(texto="~200 → ~10 000", en="a unos diez mil", dur=2.6, tam=120, color="amarillo", y=.2),
     dict(texto="8,5 MILLONES", en="más de ocho millones y medio", dur=2.4, tam=130, color="amarillo", y=.2),
     dict(texto="F1", en="pulsa F uno al empezar", dur=2.0, tam=170, color="amarillo", y=.2),
-    dict(texto="REMY «DOS VECES»", en="se llama Remy Dos Veces", dur=2.6, tam=110, color="amarillo", y=.16),
-    dict(texto="¿SIGO? DÍMELO", en="dime en los comentarios si quieres", dur=3.4, tam=130, color="amarillo", y=.2),
+    dict(texto="¿SIGO? DÍMELO", en="Dímelo en los comentarios", dur=3.4, tam=130, color="amarillo", y=.2),
     dict(texto="13 MILLONES", en="trece millones de descargas", dur=2.2, tam=140, color="amarillo", y=.2),
     dict(texto="26 000 PUNTOS", en="más de veintiséis mil puntos", dur=2.4, tam=120, color="amarillo", y=.2),
     dict(texto="RITO DE PASO", en="es un rito de paso", dur=2.2, tam=140, color="rojo", y=.2),
@@ -347,13 +333,11 @@ ROTULOS = [   # solo para énfasis (regla del 30-sep: nada de subtítulos)
 SFX = {}
 # ---- SFX del JUEGO (regla 29-oct-2026; banco nucleo/datos/sfx_juego/wow/, copiado a sfx/), solo en momentos clave
 PISTAS = [dict(sfx="mision_aceptada", en=e, vol=.28) for e in ("Número veinte.", "Número quince", "Número diez", "Número cinco")]
-PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("Así que hice WoW Forever Voces", "Y esos son los veinte add-ons")]
+PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("Hice WoW Forever Voces", "Y esos son los veinte add-ons")]
 PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro. Auctionator",)]
 # SI LA VOZ NOMBRA UN SONIDO, SE OYE (31-oct): en cada post, el PNJ del add-on a nivel de voz (voz=True agacha la música)
-PISTAS += [dict(sfx="oye_kaltunk", en=("Valle de los Retos y Durotar|fin", .15), vol=1.0, voz=True),   # OBS 8-nov: Kaltunk (orco), 23,8 s
-           dict(sfx="oye_gornek", en=("Escucha a Gornek|fin", .15), vol=1.0, voz=True),   # OBS 8-nov: Gornek (orco), 10,5 s
-           dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
-           dict(sfx="oye_mortero", en=("posada de Villadorada|fin", .15), vol=1.0, voz=True),  # OBS g4 4-9 s
+PISTAS += [dict(sfx="oye_willem", en=("modo cine Escucha|fin", .15), vol=1.0, voz=True),     # OBS g1 8,1 s: Willem (humano), 4,9 s
+           dict(sfx="oye_kaltunk", en=("los de la Horda|fin", .15), vol=1.0, voz=True),       # OBS 8-nov: Kaltunk (orco), 4 s
            dict(sfx="oye_lore", en=("sus historias Escucha|fin", .2), vol=1.0, voz=True)]       # TOP 3:21 «Westfall…»
 PISTAS += [dict(sfx="subir_nivel", en=e, vol=.24) for e in ("Así que hoy te traigo", "Número uno. Questie")]
 
@@ -379,8 +363,6 @@ APOYOS = [
          icono="inv_misc_spyglass_02", lineas=["Sin interfaz, nombres ni daño", dict(t="Gráficos al máximo", c=V)])),
     dict(en="Un aviso: cambia dos de las vistas", dur=5.0, x=.72, size=.50, tarjeta=dict(titulo="Antes de instalarlo", calidad=RJ,
          icono="inv_misc_note_01", lineas=["Cambia 2 vistas de cámara", dict(t="Vuelve a guardarlas", c=V)])),
-    dict(en="El segundo se llama Necesidades", dur=6.0, x=.72, size=.50, tarjeta=dict(titulo="Necesidades", calidad="naranja",
-         icono="inv_misc_food_15", lineas=["Hambre · Sueño", "Campamento · Descanso", dict(t="Avisa antes de perder el bono", c=V)])),
     dict(en="No trae datos cargados", dur=4.8, x=.72, size=.50, tarjeta=dict(titulo="Wayfarer", calidad="amarillo", icono="inv_misc_book_09",
          lineas=["Solo aprende lo que ves", dict(t="Diario de viaje", c=V)])),
     dict(en="Team Overpowered lo resume así", dur=5.4, x=.72, size=.50, tarjeta=dict(titulo="Team Overpowered", calidad="amarillo",

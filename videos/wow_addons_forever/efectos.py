@@ -214,6 +214,7 @@ FX = [
        ("lo hicimos aquí, en casa", -.6), ("que lo presente él|fin", .3), ["lo hicimos aquí", "en casa", "Como lo hizo él"], "hecho en casa", y=.42),
     com("alguien en los comentarios dijo", "UgzA9p2Z10TE-cp555l4AaABAg", dur=6.0, x=.32, y=.30),
     pv("se llama Remy Dos Veces", "p_remy", "Remy «Dos Veces» · Villadorada", dur=4.6, x=.80, y=.36, tam=380, entrada="sello"),
+    pv("también las de los orcos", "p_kaltunk", "Kaltunk · Valle de los Retos", dur=5.0, x=.80, y=.36, tam=380),
     mapa("elwynn", [(49, 38, "Villanorte", "abadía · primeras misiones", F("p_willem")), (42, 65, "Villadorada", "la posada", F("p_posada"))],
          ("Ya están las misiones de inicio", -.2), ("en Villanorte y Villadorada|fin", .8), ["misiones de inicio de los humanos", "y Villadorada"],
          "LO QUE YA ESTÁ DOBLADO", "Bosque de Elwynn", zmax=1.5),
@@ -223,11 +224,11 @@ FX = [
     mg(M.enlaces("EN LA DESCRIPCIÓN", [("trade_engineering", "CurseForge · gratis", "Voces Español WoW Forever")]),
        ("Los dos están en CurseForge", -.2), ("también va en la descripción|fin", .6), ["Los dos están en CurseForge"], "curseforge", y=.40),
     mg(M.meta("DOBLAR AZEROTH, ZONA POR ZONA", [("inv_misc_head_human_01", "Villanorte"), ("inv_misc_head_human_02", "Villadorada"),
-                                                ("inv_misc_head_orc_01", "Orcos y renegados"), ("inv_misc_map_01", "Zonas iniciales"),
-                                                ("achievement_zone_easternkingdoms_01", "Mayor nivel"),
-                                                ("inv_misc_map08", "Todo el juego")], 2, "ORCOS Y RENEGADOS EN CAMINO · POCO A POCO", ancho=1760),
+                                                ("inv_misc_head_orc_01", "Valle de los Retos"), ("achievement_zone_durotar", "Durotar"),
+                                                ("inv_misc_map_01", "Renegados"), ("inv_misc_map08", "Todo el juego")], 4,
+              "RENEGADOS EN CAMINO · POCO A POCO", ancho=1760),
        ("Ahora estoy empezando por", -.3), ("hasta doblar todo el juego|fin", 1.2),
-       ["Ahora estoy empezando por", "zonas iniciales de cada raza", "zonas de mayor nivel", "doblar todo el juego", "doblar todo el juego"], "ruta doblaje", y=.42),
+       ["zonas iniciales de cada raza", "doblar todo el juego", "doblar todo el juego"], "ruta doblaje", y=.42),
     # =========================================================== 14 Wayfarer
     rel("Número catorce", "a_wayfarer", "Wayfarer", "sin mapa y sin flecha"),
     pant("s_wayfarer", ("En vez de mapa, una brújula", -.2), ("en texto, como en dos mil cuatro|fin", .3)),
@@ -348,7 +349,8 @@ PISTAS = [dict(sfx="mision_aceptada", en=e, vol=.28) for e in ("Número veinte."
 PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("Así que hice WoW Forever Voces", "Y esos son los veinte add-ons")]
 PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro. Auctionator",)]
 # SI LA VOZ NOMBRA UN SONIDO, SE OYE (31-oct): en cada post, el PNJ del add-on a nivel de voz (voz=True agacha la música)
-PISTAS += [dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
+PISTAS += [dict(sfx="oye_kaltunk", en=("Valle de los Retos y Durotar|fin", .15), vol=1.0, voz=True),   # OBS 8-nov: Kaltunk (orco)
+           dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
            dict(sfx="oye_mortero", en=("posada de Villadorada|fin", .15), vol=1.0, voz=True),  # OBS g4 4-9 s
            dict(sfx="oye_lore", en=("sus historias Escucha|fin", .2), vol=1.0, voz=True)]       # TOP 3:21 «Westfall…»
 PISTAS += [dict(sfx="subir_nivel", en=e, vol=.24) for e in ("Así que hoy te traigo", "Número uno. Questie")]

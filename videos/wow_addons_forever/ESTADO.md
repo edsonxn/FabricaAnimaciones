@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · lun 9-nov-2026 09:00 CDMX (fecha Overgear, enlace `overgear.s.gy/CRONICAS/5`)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas + Overgear con fondo de marca + grabaciones propias de OBS) → doc: docs/estilo_secuencia_yt.md
-- etapa: SUBIDO ✅ 4.ª versión sovEqktwRN8 (22:16), privado, se publica lun 9-nov 09:00 CDMX
-- siguiente: el usuario borra h9eNZ2dJy-Y y W_fl3tGsZ6I (privados sin fecha) · Studio: monetización + cuestionario · enlace de Necesidades cuando exista (`yt aplicar`)
+- etapa: SUBIDO ✅ 5.ª versión hbf8eoWx9N4 (22:31), privado, se publica lun 9-nov 09:00 CDMX
+- siguiente: el usuario borra sovEqktwRN8, h9eNZ2dJy-Y y W_fl3tGsZ6I (privados sin fecha) · Studio: monetización + cuestionario · enlace de Necesidades cuando exista (`yt aplicar`)
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
 - alias: los add-ons, 20 add-ons, el del 9-nov
@@ -24,6 +24,10 @@
 - `wow_pistas_futuro` (uETB9GOW4hk) MOVIDO al dom 15-nov 09:00 CDMX (7-nov, registrado en canales/cronicas_warcraft.json).
 - Comentarios (7-nov): 21 nuevos, casi todos votan la voz de siempre; ♥6 @zatherion1 elogia la voz real del usuario. Candidatos: gracias @zatherion1 @pirlo2106 @AlexAnder-z1i7l @666nibelheim666 @quemaloscalor @santislpslp1595; burla @FenrirMorningstar («las demás son kaka… Hope suena bien»).
 - Gracia: en la grabación 5 el PNJ se llama **Remy «Dos Veces»** (como el narrador).
+
+## 5.ª versión (8-nov, SUBIDA hbf8eoWx9N4)
+- casa4 partida en casa4 (0-4, post 13 s) + casa5 (5 frases; tomas renombradas casa4_5..9 → casa5_0..4, también en timeline_beats.json para `reajustar`). casa4_4: «…y también las de los orcos, en el Valle de los Retos y Durotar.» casa5_0: renegados en cuestión de días + costo → PayPal.
+- scene-064 = `_orcos_064()` en _obs.py (Razor Hill + Kaltunk hablando 13,6 s + Gornek); PISTA oye_kaltunk; pegatina p_kaltunk; ruta con Valle de los Retos ✓ y Durotar ✓ (hecho=4), renegados en camino.
 
 ## Cambios del 8-nov (HECHOS, 4.ª subida sovEqktwRN8)
 - Questie fuera del gancho (anclas «Número uno/tres/cuatro» casaban antes de su puesto: ahora «Número uno. Questie», etc.).

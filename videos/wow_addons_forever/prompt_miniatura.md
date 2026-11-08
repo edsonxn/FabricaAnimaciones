@@ -1,4 +1,4 @@
-# Miniatura (Flow, Nano Banana 2.1, 7-nov-2026) — ELEGIDA: miniatura_ing/flow/r0 + logo real de Forever (PIL, solo el logo)
+# Miniatura (Flow, 7-nov-2026) — VIGENTE: miniatura_ing/flow/v3_0 (sin Questie: el usuario no quiere spoiler del n.º 1; solo el retrato con voz de nuestro add-on, ingrediente base_willem). Anterior: r0 + logo real de Forever (PIL, solo el logo)
 Ingredientes reales: (1) `miniatura_ing/base_willem.png` (cuadro de la grabación de OBS: Villanorte, Willem hablando con el retrato de
 WoW Forever Voces), (2) `miniatura_ing/ui_questie.jpg` (captura oficial de Questie). Subidos a Flow por JS (paste de un File desde
 un servidor local, en Chrome; el navegador integrado bloquea el fetch a 127.0.0.1).

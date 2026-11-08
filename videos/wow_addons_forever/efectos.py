@@ -152,13 +152,13 @@ FX = [
        ("Si buscas un medidor", -.3), ("para hacer lo mismo|fin", .8),
        ["Si buscas un medidor", "te salen setenta resultados", "Forever Threat, ForeverThreat", "ForeverThreat, Threat Meter",
         "Threat Meter Forever", "Setenta add-ons", "para hacer lo mismo"], "buscador 70", y=.52),
-    pv("llueven add-ons", "a_openmap", "Algunos son joyas", dur=3.0, x=.18, y=.62, tam=330),
+    pv("llueven add-ons", "i_caja", "Algunos son joyas", dur=3.0, x=.18, y=.62, tam=330),
     pv("mejor ni instalarlos", "i_calavera", "Otros, mejor no", dur=2.8, x=.82, y=.62, tam=300),
     mg(M.descargas("DESCARGAS EN CURSEFORGE", [("inv_misc_questionmark", "El número 1", 215000000),
                                                ("inv_misc_questionmark", "El número 19", 192)], ("UN MILLÓN DE VECES MÁS", 1)),
        ("El número uno lleva", -.3), ("menos de doscientas|fin", .8), ["El número uno lleva", "El diecinueve, menos de"],
        "descargas gancho", y=.55),
-    carr([("a_immersion", "Inmersión"), ("a_dialogueui", "Inmersión"), ("a_spoken", "Inmersión")],
+    carr([("i_libro", "Leer el lore"), ("i_boca", "Oír a los personajes"), ("i_mapa", "Explorar sin prisa")],
          "una categoría especial", ("uno que hicimos nosotros|fin", .4), ["una categoría especial", "la de inmersión", "uno que hicimos nosotros"],
          titulo="CATEGORÍA ESPECIAL"),
     mg(M.votacion("LA VOTACIÓN DE VOCES TERMINÓ", ["Remy", "Edoardo", "José", "Mario", "Hope", "MariCarmen", "el Profeta", "el Humano"],
@@ -197,7 +197,7 @@ FX = [
     # =========================================================== INMERSIÓN
     dict(tipo="mg", fn=PE.banda(F("a_lore"), "ADD-ONS DE INMERSIÓN", "categoría especial", alto=440, tema="wow"), en=("los add-ons de inmersión", -.4),
          dur=4.0, x=.5, y=.78, sale=.3, nombre="banda inmersion", ver=1.0),
-    aba([("a_immersion", "17"), ("a_dialogueui", "16"), ("a_spoken", "15"), ("a_wayfarer", "14"), ("a_lore", "13")],
+    aba([("a_immersion", "17"), ("a_dialogueui", "16"), ("a_narcissus", "15"), ("a_wayfarer", "14"), ("a_lore", "13")],
         "estos cinco son para ti", ("una sorpresa|fin", .6), ["estos cinco", "son para ti", "Y en medio", "una sorpresa", "una sorpresa"], "inmersion"),
     # =========================================================== 17 Forever Immersion
     rel("Número diecisiete", "a_immersion", "Forever Immersion", "la interfaz que desaparece"),
@@ -205,12 +205,9 @@ FX = [
     # =========================================================== 16 Dialogue UI
     rel("Número dieciséis", "a_dialogueui", "Dialogue UI", "misiones de juego de rol"),
     pant("s_dialogueui", ("Cambia la ventana de misiones", -.2), ("al personaje que te habla|fin", .3)),
-    # =========================================================== 15 Spoken
-    rel("Número quince", "a_spoken", "Spoken", "le pone voz a todo"),
-    filav("Le pone voz a las misiones", [("i_nota", "Misiones", None), ("i_boca", "Charla", "a la charla de los personajes"),
-                                         ("i_mapa", "Historia de la zona", "a la historia de cada zona"), ("i_libro", "Libros y cartas", "y a los libros")],
-          y=.66, tam=260, dur=5.4),
-    pv("hay paquete de voces en español", "a_spoken_es", "Paquete en español latino", dur=4.2, x=.76, y=.56, tam=440),
+    # =========================================================== 15 Narcissus (sustituye a Spoken: el usuario, 7-nov)
+    rel("Número quince", "a_narcissus", "Narcissus", "tu personaje, como en un RPG"),
+    pant("s_narcissus", ("Cambia la ventana de personaje", -.2), ("y el equipo a los lados|fin", .3)),
     # =========================================================== CASA: los add-ons propios (sobre sus grabaciones de OBS)
     mg(M.hecho_en_casa("HECHO EN CASA", [("inv_misc_head_human_02", "Voces", "Misiones con voz en español", "Cada personaje, su voz"),
                                          ("inv_misc_food_15", "Necesidades", "Hambre, sueño, campamento", "Avisa antes de perder el bono")], "GRATIS"),
@@ -232,16 +229,14 @@ FX = [
     mg(M.votacion("¿QUÉ ZONA SIGUE CON VOZ?", ["Páramos de Poniente", "Montañas Crestagrana", "Bosque del Ocaso", "Dun Morogh", "Loch Modan", "Teldrassil"],
                   "VOTA EN LOS COMENTARIOS", icos=["achievement_zone_westfall_01", "achievement_zone_redridgemountains", "achievement_zone_duskwood",
                                                    "achievement_zone_dunmorogh", "achievement_zone_lochmodan", "achievement_zone_darnassus"], ancho=1760),
-       ("tú eliges", -.4), ("y vamos zona por zona|fin", 1.4),
-       ["tú eliges", "escribe en los comentarios", "qué zona quieres", "oír con voz", "y vamos zona", "zona por zona", "zona por zona"], "vota zona", y=.46),
+       ("Y después, tú eliges", -.4), ("y vamos zona por zona|fin", 1.4),
+       ["después, tú eliges", "escribe en los comentarios", "qué zona quieres", "oír con voz", "y vamos zona", "zona por zona", "zona por zona"], "vota zona", y=.46),
     # =========================================================== 14 Wayfarer
     rel("Número catorce", "a_wayfarer", "Wayfarer", "sin mapa y sin flecha"),
     pant("s_wayfarer", ("En vez de mapa, una brújula", -.2), ("en texto, como en dos mil cuatro|fin", .3)),
     pv("una brújula que te da direcciones", "i_brujula", "Brújula con palabras", dur=3.6, x=.80, y=.60, tam=320),
     # =========================================================== 13 Lore Forever
     rel("Número trece", "a_lore", "Lore Forever", "la historia de cada lugar"),
-    vs(("a_lore", "Lore Forever"), ("a_spoken", "Spoken"), ("no lo juntes con la narración", -.3), ("se te encimarían|fin", .4),
-       ["no lo juntes", "de Spoken"], titulo="NO LOS JUNTES"),
     # =========================================================== gracias 1 (4 agradecimientos + 1 en casa)
     com("Pirlo dice que nos escucha", "UgyUa4dmdJlR95dvYt94AaABAg", dur=7.0, x=.30, y=.30),
     com("Alex dice que esta voz", "UgwtWRTGWGQ9P38e5k14AaABAg", dur=4.0, x=.70, y=.30),
@@ -264,7 +259,7 @@ FX = [
     # =========================================================== 9 DialogKey
     rel("Número nueve", "a_dialogkey", "DialogKey", "el más pequeño"),
     # =========================================================== Overgear campaña 2: kit «WoW - Forever (nov)» + fondo de marca SIEMPRE
-    dict(tipo="video", ruta=OG + r"background\Background.mp4", bucle=True, de="tú eliges, y pagas", a=("Número ocho", -.1), entra=.3, nombre="og fondo marca"),
+    dict(tipo="video", ruta=OG + r"background\Background.mp4", bucle=True, de="tú eliges, y pagas", a=("Y aquí empieza la categoría especial", -.1), entra=.3, nombre="og fondo marca"),
     dict(tipo="video", ruta=OGF + "white-og-small-logo.mp4", croma=True, bucle=True,
          de="Este video lo patrocina Overgear", a="El enlace está en la descripción", entra=.3, sale=.3, nombre="og logo esquina"),
     dict(tipo="video", ruta=OGF + "2 pair_green_wow-forever.mp4", croma=True, en="un profesional verificado", dur=4.0, sale=.25, nombre="og pros"),
@@ -272,7 +267,7 @@ FX = [
     dict(tipo="video", ruta=OGF + "Reviews_v3_redscreen_march_wow-forever.mp4", croma="rojo", en="tú eliges, y pagas", dur=4.0, sale=.25, nombre="og reseñas"),
     dict(tipo="video", ruta=OGF + "packshot-text_greenscreen_wow-forever.mp4", croma=True, en="El enlace está en la descripción", a=CODIGO,
          entra=.2, nombre="og packshot", ver=2.5),
-    dict(tipo="video", ruta=CREATIVO, croma=True, de=CODIGO, a=("Número ocho", -.1), entra=.15, nombre="og CODIGO", ver=3.0),
+    dict(tipo="video", ruta=CREATIVO, croma=True, de=CODIGO, a=("Y aquí empieza la categoría especial", -.1), entra=.15, nombre="og CODIGO", ver=3.0),
     # =========================================================== 8 What's Training
     rel("Número ocho", "a_training", "What's Training", "menos viajes al instructor"),
     pant("s_training", ("Añade una pestaña al libro de hechizos", -.2), ("y cuánto cuesta|fin", .3)),
@@ -318,7 +313,7 @@ FX = [
          ("Más de doscientos quince millones", -.2), ("y el número uno|fin", .8),
          ["Más de doscientos quince", "El add-on más descargado", "y el número uno"], titulo="LOS MÁS DESCARGADOS"),
     # =========================================================== cierre
-    aba([("a_sparkles", "20"), ("a_spoken", "15"), ("a_threat", "10"), ("a_openmap", "5"), ("a_questie", "1")],
+    aba([("a_sparkles", "20"), ("a_narcissus", "15"), ("a_threat", "10"), ("a_openmap", "5"), ("a_questie", "1")],
         "Y esos son los veinte add-ons", ("el mapa de misiones de siempre|fin", .6),
         ["Y esos son los veinte", "de un brillo en el pasto", "hasta el mapa", "el mapa de misiones", "de siempre"], "cierre"),
     mg(M.enlaces("EN LA DESCRIPCIÓN", [("inv_misc_coin_01", "PayPal", "Para doblar más misiones"),
@@ -340,6 +335,7 @@ ROTULOS = [   # solo para énfasis (regla del 30-sep: nada de subtítulos)
     dict(texto="REMY «DOS VECES»", en="se llama Remy Dos Veces", dur=2.6, tam=110, color="amarillo", y=.16),
     dict(texto="¿SIGO? DÍMELO", en="dime en los comentarios si quieres", dur=3.4, tam=130, color="amarillo", y=.2),
     dict(texto="SIGUIENTE: ELWYNN", en="terminar todas las misiones del bosque", dur=2.6, tam=120, color="amarillo", y=.2),
+    dict(texto="13 MILLONES", en="trece millones de descargas", dur=2.2, tam=140, color="amarillo", y=.2),
     dict(texto="26 000 PUNTOS", en="más de veintiséis mil puntos", dur=2.4, tam=120, color="amarillo", y=.2),
     dict(texto="RITO DE PASO", en="es un rito de paso", dur=2.2, tam=140, color="rojo", y=.2),
     dict(texto="MISIÓN N.º 300", en="tu misión número trescientos", dur=2.4, tam=120, color="amarillo", y=.2),
@@ -356,10 +352,9 @@ PISTAS = [dict(sfx="mision_aceptada", en=e, vol=.28) for e in ("Número veinte."
 PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("Así que hice WoW Forever Voces", "Y esos son los veinte add-ons")]
 PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro",)]
 # SI LA VOZ NOMBRA UN SONIDO, SE OYE (31-oct): en cada post, el PNJ del add-on a nivel de voz (voz=True agacha la música)
-PISTAS += [dict(sfx="oye_spoken", en=("Escucha cómo suena|fin", .2), vol=1.0, voz=True),          # KEL 7:54, guardia con Spoken
-           dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
+PISTAS += [dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
            dict(sfx="oye_mortero", en=("posada de Villadorada|fin", .15), vol=1.0, voz=True),  # OBS g4 4-9 s
-           dict(sfx="oye_lore", en=("una de sus historias|fin", .2), vol=1.0, voz=True)]       # TOP 3:21 «Westfall…»
+           dict(sfx="oye_lore", en=("sus historias Escucha|fin", .2), vol=1.0, voz=True)]       # TOP 3:21 «Westfall…»
 PISTAS += [dict(sfx="subir_nivel", en=e, vol=.24) for e in ("Así que hoy te traigo", "Número uno. Questie")]
 
 # APOYOS: tarjetas SOLO con datos del guion (fuentes en videos/_investigacion_wow_addons_forever.md)
@@ -380,8 +375,10 @@ APOYOS = [
          icono="inv_misc_note_01", lineas=["Pulsa F1 al empezar", dict(t="Quita el zoom más agresivo", c=V)])),
     dict(en="Y si lo juntas con Forever Quest Tint", dur=5.0, x=.72, size=.50, tarjeta=dict(titulo="Forever Quest Tint", calidad="verde",
          icono="inv_misc_note_01", lineas=["Tiñe las misiones nuevas", dict(t="No se te escapa ninguna", c=V)])),
-    dict(en="Bellular lo llama el add-on más polémico", dur=5.0, x=.72, size=.50, tarjeta=dict(titulo="Bellular · el más polémico", calidad="amarillo",
-         icono="inv_misc_note_02", lineas=["Se nota que son generadas", dict(t="Tono casi perfecto", c=V)])),
+    dict(en="Trae un modo foto que esconde", dur=5.4, x=.72, size=.50, tarjeta=dict(titulo="Modo foto", calidad="verde",
+         icono="inv_misc_spyglass_02", lineas=["Sin interfaz, nombres ni daño", dict(t="Gráficos al máximo", c=V)])),
+    dict(en="Un aviso: cambia dos de las vistas", dur=5.0, x=.72, size=.50, tarjeta=dict(titulo="Antes de instalarlo", calidad=RJ,
+         icono="inv_misc_note_01", lineas=["Cambia 2 vistas de cámara", dict(t="Vuelve a guardarlas", c=V)])),
     dict(en="El segundo se llama Necesidades", dur=6.0, x=.72, size=.50, tarjeta=dict(titulo="Necesidades", calidad="naranja",
          icono="inv_misc_food_15", lineas=["Hambre · Sueño", "Campamento · Descanso", dict(t="Avisa antes de perder el bono", c=V)])),
     dict(en="No trae datos cargados", dur=4.8, x=.72, size=.50, tarjeta=dict(titulo="Wayfarer", calidad="amarillo", icono="inv_misc_book_09",

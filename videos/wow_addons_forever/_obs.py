@@ -23,7 +23,12 @@ PLAN = {   # sin repetir tramo de ninguna grabación (7-nov, comprobado a mano c
     "casa4": [(5, 4.0), (3, 0.0), (3, 9.0), (3, 17.0), (3, 27.0), (1, 44.0), (4, 12.0), (4, 44.0)],
 }
 # el PNJ habla desde este segundo de la grabación: el post (voz callada) se alinea ahí
-SALTA = {"scene-044"}
+SALTA = set()
+# 3.ª versión (Overgear al min 4, posts largos): tramo exacto por beat, sin repetir (comprobado a mano)
+EXPL = {"scene-049": (4, 32.0), "scene-050": (1, 34.0), "scene-051": (2, 4.0), "scene-052": (1, 46.0), "scene-054": (1, 21.0),
+        "scene-055": (1, 25.0), "scene-056": (2, 16.0), "scene-057": (4, 40.0), "scene-059": (5, 4.0), "scene-060": (5, 8.0),
+        "scene-061": (3, 0.0), "scene-062": (3, 6.0), "scene-063": (3, 14.0), "scene-064": (3, 24.0), "scene-065": (4, 48.0),
+        "scene-066": (1, 56.0), "scene-067": (5, 16.0), "scene-068": (4, 20.0)}
 OYE = {"casa1": (1, 4.0, "casa1_4"), "casa3": (4, 4.0, "casa3_1")}
 
 
@@ -39,7 +44,7 @@ def main(escribir=True):
             continue
         k = usados.get(e, 0)
         usados[e] = k + 1
-        g, s = PLAN[e][min(k, len(PLAN[e]) - 1)]
+        g, s = EXPL.get(b["id"]) or PLAN[e][min(k, len(PLAN[e]) - 1)]
         dur = b["t1"] - b["t0"]
         for gg, oye, clave in OYE.values():      # el post puede caer en el beat de la escena siguiente
             tpost = fin_frase.get(clave)

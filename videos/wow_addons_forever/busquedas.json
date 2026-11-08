@@ -1,24 +1,21 @@
 {
  "scene-001": [
-  "WoW Forever launch day",
-  "WoW Forever gameplay"
- ],
- "scene-002": [
-  "WoW Forever no commentary",
-  "WoW Forever gameplay"
- ],
- "scene-003": [
-  "Goldshire classic no commentary"
- ],
- "scene-004": [
   "Elwynn Forest no commentary"
  ],
- "scene-005": {
-  "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 40.0
- },
+ "scene-002": [
+  "Goldshire classic no commentary"
+ ],
+ "scene-003": [
+  "Stormwind no commentary"
+ ],
+ "scene-004": [
+  "Westfall no commentary"
+ ],
+ "scene-005": [
+  "Northshire Abbey no commentary"
+ ],
  "scene-006": [
-  "WoW Forever no commentary"
+  "Redridge Mountains no commentary"
  ],
  "scene-007": [
   "WoW Forever damage meter",
@@ -66,9 +63,10 @@
  "scene-018": [
   "WoW Forever gameplay"
  ],
- "scene-019": [
-  "WoW Forever no commentary"
- ],
+ "scene-019": {
+  "url": "https://youtu.be/UMh80-64QLc",
+  "desde": 2241.7
+ },
  "scene-020": [
   "Stormwind no commentary"
  ],
@@ -92,86 +90,91 @@
   "Elwynn Forest no commentary"
  ],
  "scene-026": [
-  "Goldshire classic no commentary"
+  "WoW Forever dungeon",
+  "dungeon classic no commentary"
  ],
  "scene-027": [
-  "Northshire Abbey no commentary"
+  "Stormwind no commentary"
  ],
- "scene-028": [
-  "Elwynn Forest no commentary"
- ],
+ "scene-028": {
+  "url": "https://youtu.be/SnEXqwAO6Is",
+  "desde": 173.9
+ },
  "scene-029": [
-  "Duskwood no commentary"
+  "dungeon classic no commentary"
  ],
  "scene-030": [
-  "Redridge Mountains no commentary"
+  "Shadowfang Keep classic"
  ],
  "scene-031": [
   "Elwynn Forest no commentary"
  ],
- "scene-032": [
+ "scene-032": {
+  "url": "https://youtu.be/2XLMEgQcHV4",
+  "desde": 2914.3
+ },
+ "scene-033": {
+  "url": "https://youtu.be/3PRjMBtIsVk",
+  "desde": 491.6
+ },
+ "scene-034": [
+  "Duskwood no commentary"
+ ],
+ "scene-035": [
+  "Redridge Mountains no commentary"
+ ],
+ "scene-036": {
+  "url": "https://youtu.be/JXDA_FWvdl8",
+  "desde": 3009.3
+ },
+ "scene-037": [
   "Loch Modan no commentary"
  ],
- "scene-033": {
+ "scene-038": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 240.0
  },
- "scene-034": {
+ "scene-039": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 252.0
  },
- "scene-035": [
-  "Northshire Abbey no commentary"
- ],
- "scene-036": {
-  "url": "https://youtu.be/1GEmk7Fci2E",
-  "desde": 264.0
- },
- "scene-037": {
-  "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 390.0
- },
- "scene-038": [
-  "Westfall classic no commentary"
- ],
- "scene-039": {
-  "url": "https://youtu.be/1GEmk7Fci2E",
-  "desde": 1107.0
- },
  "scene-040": [
-  "Darkshore no commentary"
+  "Northshire Abbey no commentary"
  ],
  "scene-041": {
   "url": "https://youtu.be/1GEmk7Fci2E",
-  "desde": 1119.0
+  "desde": 264.0
  },
  "scene-042": {
-  "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 450.0
+  "url": "https://youtu.be/E3GHdyJiHzk",
+  "desde": 390.0
  },
- "scene-043": {
-  "url": "https://www.youtube.com/watch?v=pzaHB-pB5MU",
-  "desde": 30.0
- },
- "scene-044": {
+ "scene-043": [
+  "Narcissus addon showcase",
+  "WoW character screen transmog"
+ ],
+ "scene-044": [
+  "Narcissus addon",
+  "WoW transmog showcase"
+ ],
+ "scene-045": [
+  "WoW photo mode screenshot addon",
+  "Stormwind no commentary"
+ ],
+ "scene-046": [
+  "WoW emotes showcase",
+  "Ironforge no commentary"
+ ],
+ "scene-047": [
+  "Goldshire classic no commentary"
+ ],
+ "scene-048": [
+  "Northshire Abbey no commentary"
+ ],
+ "scene-049": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 472.9
  },
- "scene-045": [
-  "WoW Forever gameplay"
- ],
- "scene-046": [
-  "WoW Forever gameplay"
- ],
- "scene-047": [
-  "WoW Forever gameplay"
- ],
- "scene-048": [
-  "WoW Forever gameplay"
- ],
- "scene-049": [
-  "WoW Forever gameplay"
- ],
  "scene-050": [
   "WoW Forever gameplay"
  ],
@@ -202,338 +205,348 @@
  "scene-059": [
   "WoW Forever gameplay"
  ],
- "scene-060": [
-  "WoW Forever gameplay"
- ],
+ "scene-060": {
+  "url": "https://www.youtube.com/watch?v=pzaHB-pB5MU",
+  "desde": 193.15
+ },
  "scene-061": [
   "WoW Forever gameplay"
  ],
  "scene-062": [
-  "Barrens no commentary"
+  "WoW Forever gameplay"
  ],
  "scene-063": [
-  "Westfall no commentary"
+  "WoW Forever gameplay"
  ],
  "scene-064": [
-  "Loch Modan no commentary"
+  "WoW Forever gameplay"
  ],
  "scene-065": [
-  "Duskwood no commentary"
+  "WoW Forever gameplay"
  ],
  "scene-066": [
-  "Barrens no commentary"
+  "WoW Forever gameplay"
  ],
  "scene-067": {
+  "url": "https://youtu.be/oX2R8unjRXU",
+  "desde": 198.5
+ },
+ "scene-068": [
+  "WoW Forever gameplay"
+ ],
+ "scene-069": [
+  "Barrens no commentary"
+ ],
+ "scene-070": [
+  "Westfall no commentary"
+ ],
+ "scene-071": [
+  "Loch Modan no commentary"
+ ],
+ "scene-072": {
+  "url": "https://youtu.be/LW1veoIJasc",
+  "desde": 1549.1
+ },
+ "scene-073": {
+  "url": "https://youtu.be/Ea4y3BLM8_M",
+  "desde": 1275.5
+ },
+ "scene-074": {
   "url": "https://www.youtube.com/watch?v=pzaHB-pB5MU",
   "desde": 142.0
  },
- "scene-068": {
+ "scene-075": {
   "url": "https://www.youtube.com/watch?v=pzaHB-pB5MU",
   "desde": 156.0
  },
- "scene-069": [
+ "scene-076": [
   "Stormwind library classic",
   "Stormwind no commentary"
  ],
- "scene-070": {
+ "scene-077": {
   "url": "https://www.youtube.com/watch?v=pzaHB-pB5MU",
   "desde": 172.0
  },
- "scene-071": [
+ "scene-078": [
   "Westfall no commentary"
  ],
- "scene-072": {
-  "url": "https://www.youtube.com/watch?v=pzaHB-pB5MU",
-  "desde": 193.15
+ "scene-079": {
+  "url": "https://youtu.be/dIlm8YLYB58",
+  "desde": 193.8
  },
- "scene-073": [
-  "Stormwind no commentary"
- ],
- "scene-074": [
-  "WoW Forever no commentary"
- ],
- "scene-075": [
-  "Goldshire classic no commentary"
- ],
- "scene-076": [
+ "scene-080": {
+  "url": "https://youtu.be/UMh80-64QLc",
+  "desde": 1063.5
+ },
+ "scene-081": {
+  "url": "https://youtu.be/2XLMEgQcHV4",
+  "desde": 1501.9
+ },
+ "scene-082": [
   "Ironforge no commentary"
  ],
- "scene-077": [
-  "WoW Forever campfire",
-  "campfire classic"
- ],
- "scene-078": [
-  "WoW Forever camp",
-  "WoW Forever campfire"
- ],
- "scene-079": [
+ "scene-083": [
   "campfire classic",
   "WoW Forever camp"
  ],
- "scene-080": [
-  "WoW Forever camp tent",
-  "WoW Forever camp"
- ],
- "scene-081": {
-  "url": "https://youtu.be/1GEmk7Fci2E",
-  "desde": 960.0
+ "scene-084": {
+  "url": "https://youtu.be/dIlm8YLYB58",
+  "desde": 298.5
  },
- "scene-082": {
+ "scene-085": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 972.0
  },
- "scene-083": {
+ "scene-086": {
+  "url": "https://youtu.be/iISO0ugzoLA",
+  "desde": 42.9
+ },
+ "scene-087": [
+  "Wailing Caverns classic"
+ ],
+ "scene-088": {
+  "url": "https://youtu.be/1GEmk7Fci2E",
+  "desde": 960.0
+ },
+ "scene-089": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 984.0
  },
- "scene-084": [
-  "mining herbalism classic",
-  "herbalism classic"
- ],
- "scene-085": [
-  "WoW Forever gameplay"
- ],
- "scene-086": [
-  "WoW Forever no commentary"
- ],
- "scene-087": [
-  "Elwynn Forest no commentary"
- ],
- "scene-088": [
-  "Deadmines classic",
-  "dungeon classic no commentary"
- ],
- "scene-089": [
-  "Wailing Caverns classic"
- ],
  "scene-090": {
-  "url": "https://www.youtube.com/watch?v=8fyZKPy6wpE",
-  "desde": 793.0
- },
- "scene-091": [
-  "Deadmines classic",
-  "dungeon classic no commentary"
- ],
- "scene-092": [
-  "Shadowfang Keep classic"
- ],
- "scene-093": {
   "url": "https://www.youtube.com/watch?v=xAGUIPWAS1I",
   "desde": 292.0
  },
- "scene-094": [
-  "classic questing no commentary"
+ "scene-091": {
+  "url": "https://youtu.be/BgZ5wT1I2lM",
+  "desde": 125.5
+ },
+ "scene-092": [
+  "WoW Forever gameplay"
  ],
- "scene-095": {
+ "scene-093": {
+  "url": "https://youtu.be/UMh80-64QLc",
+  "desde": 2205.1
+ },
+ "scene-094": [
+  "Elwynn Forest no commentary"
+ ],
+ "scene-095": [
+  "Deadmines classic",
+  "dungeon classic no commentary"
+ ],
+ "scene-096": {
+  "url": "https://youtu.be/8fyZKPy6wpE",
+  "desde": 793.0
+ },
+ "scene-097": [
+  "Deadmines classic",
+  "dungeon classic no commentary"
+ ],
+ "scene-098": [
+  "WoW Forever no commentary"
+ ],
+ "scene-099": [
+  "Shadowfang Keep classic"
+ ],
+ "scene-100": {
+  "url": "https://youtu.be/I7gOpm4p54o",
+  "desde": 1443.9
+ },
+ "scene-101": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 220.0
  },
- "scene-096": [
-  "classic quest turn in",
-  "WoW Forever gameplay"
- ],
- "scene-097": {
+ "scene-102": {
+  "url": "https://youtu.be/sjiNjGNjSTc",
+  "desde": 185.2
+ },
+ "scene-103": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 229.0
  },
- "scene-098": [
+ "scene-104": [
   "classic questing no commentary"
  ],
- "scene-099": [
-  "WoW Forever dungeon",
-  "dungeon classic no commentary"
- ],
- "scene-100": [
-  "Stormwind no commentary"
- ],
- "scene-101": [
-  "Wailing Caverns classic"
- ],
- "scene-102": [
-  "dungeon classic no commentary"
- ],
- "scene-103": [
-  "Shadowfang Keep classic"
- ],
- "scene-104": {
+ "scene-105": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 815.0
  },
- "scene-105": {
+ "scene-106": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 827.0
  },
- "scene-106": {
+ "scene-107": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 30.0
  },
- "scene-107": {
+ "scene-108": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 42.0
  },
- "scene-108": {
+ "scene-109": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 54.0
  },
- "scene-109": {
-  "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 660.0
- },
  "scene-110": {
-  "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 672.0
+  "url": "https://youtu.be/E3GHdyJiHzk",
+  "desde": 660.0
  },
  "scene-111": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 600.0
+  "desde": 672.0
  },
  "scene-112": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
-  "desde": 684.0
+  "desde": 600.0
  },
  "scene-113": {
+  "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
+  "desde": 684.0
+ },
+ "scene-114": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 865.0
  },
- "scene-114": [
+ "scene-115": [
   "WoW Forever gameplay"
  ],
- "scene-115": [
+ "scene-116": [
   "WoW Forever no commentary"
  ],
- "scene-116": [
+ "scene-117": [
   "Ironforge bank classic",
   "Ironforge no commentary"
  ],
- "scene-117": {
+ "scene-118": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 664.0
  },
- "scene-118": [
-  "classic inventory bags",
-  "Stormwind bank classic"
- ],
  "scene-119": {
-  "url": "https://youtu.be/1GEmk7Fci2E",
-  "desde": 676.0
+  "url": "https://youtu.be/7t_8f-H4HJg",
+  "desde": 426.0
  },
  "scene-120": {
   "url": "https://youtu.be/1GEmk7Fci2E",
-  "desde": 121.0
+  "desde": 676.0
  },
  "scene-121": {
   "url": "https://youtu.be/1GEmk7Fci2E",
+  "desde": 121.0
+ },
+ "scene-122": {
+  "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 133.0
  },
- "scene-122": [
+ "scene-123": [
   "WoW Forever world map",
   "Elwynn Forest no commentary"
  ],
- "scene-123": [
+ "scene-124": [
   "Wetlands no commentary"
  ],
- "scene-124": [
-  "Stranglethorn Vale no commentary"
- ],
- "scene-125": [
+ "scene-125": {
+  "url": "https://youtu.be/qzoldcagQPQ",
+  "desde": 3976.8
+ },
+ "scene-126": [
   "Ashenvale no commentary"
  ],
- "scene-126": [
+ "scene-127": [
   "Stormwind auction house"
  ],
- "scene-127": {
+ "scene-128": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 717.0
  },
- "scene-128": {
+ "scene-129": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 1080.0
  },
- "scene-129": {
+ "scene-130": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 1092.0
  },
- "scene-130": {
+ "scene-131": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 729.0
  },
- "scene-131": {
-  "url": "https://www.youtube.com/watch?v=8fyZKPy6wpE",
-  "desde": 90.0
- },
  "scene-132": {
   "url": "https://www.youtube.com/watch?v=8fyZKPy6wpE",
-  "desde": 120.0
+  "desde": 90.0
  },
  "scene-133": {
   "url": "https://www.youtube.com/watch?v=8fyZKPy6wpE",
-  "desde": 150.0
+  "desde": 120.0
  },
  "scene-134": {
   "url": "https://www.youtube.com/watch?v=8fyZKPy6wpE",
+  "desde": 150.0
+ },
+ "scene-135": {
+  "url": "https://youtu.be/8fyZKPy6wpE",
   "desde": 180.0
  },
- "scene-135": [
+ "scene-136": [
   "classic vendor no commentary"
  ],
- "scene-136": {
+ "scene-137": {
   "url": "https://www.youtube.com/watch?v=8fyZKPy6wpE",
   "desde": 240.0
  },
- "scene-137": [
+ "scene-138": [
   "Orgrimmar no commentary"
  ],
- "scene-138": [
+ "scene-139": [
   "Thunder Bluff no commentary"
  ],
- "scene-139": {
+ "scene-140": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 930.0
  },
- "scene-140": {
+ "scene-141": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 942.0
  },
- "scene-141": [
+ "scene-142": [
   "Hillsbrad Foothills no commentary"
  ],
- "scene-142": [
+ "scene-143": [
   "Elwynn Forest no commentary",
   "WoW Forever quest"
  ],
- "scene-143": {
+ "scene-144": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 912.0
  },
- "scene-144": {
+ "scene-145": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 924.0
  },
- "scene-145": {
+ "scene-146": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 90.0
  },
- "scene-146": {
+ "scene-147": {
   "url": "https://www.youtube.com/watch?v=E3GHdyJiHzk",
   "desde": 102.0
  },
- "scene-147": {
+ "scene-148": {
   "url": "https://youtu.be/1GEmk7Fci2E",
   "desde": 936.0
  },
- "scene-148": [
+ "scene-149": [
   "Stormwind no commentary"
  ],
- "scene-149": [
+ "scene-150": [
   "Elwynn Forest no commentary"
  ],
- "scene-150": [
+ "scene-151": [
   "Goldshire classic no commentary"
  ],
- "scene-151": [
+ "scene-152": [
   "WoW Forever gameplay"
  ],
- "scene-152": [
+ "scene-153": [
   "Stormwind sunset classic"
  ]
 }

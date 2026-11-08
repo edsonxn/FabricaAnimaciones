@@ -32,7 +32,7 @@ FONETICA_APPLIO = {
     "Forever Loot Sparkles": "Foréver Lut Spárkels", "Favorcraft": "Féivorcraft", "ChatGPT": "Chat yi pi tí", "Cursor": "Kérsor",
     "Warcraft Logs": "uárcraft Logs", "witchcraft": "uíchcraft", "Claude": "Clod", "Codex": "Códex",
     "Books on Map Forever": "Buks on Map Foréver", "Forever Immersion": "Foréver Imérshon", "Dialogue UI": "Dáialog iú ái",
-    "Peterodox": "Píterodox", "Forever Quest Tint": "Foréver Cuest Tint", "Spoken": "Spóuken", "Wayfarer": "Uéiferer",
+    "Peterodox": "Píterodox", "Forever Quest Tint": "Foréver Cuest Tint", "Narcissus": "Narsísus", "Wayfarer": "Uéiferer",
     "Lore Forever": "Lor Foréver", "Team Overpowered": "Tim Overpáuerd", "Happy Camper": "Jápi Cámper",
     "Campfire Tooltips": "Cámpfaier Túltips", "GatherLite": "Gáderlait", "Forever Dual Gathering": "Foréver Dúal Gádering",
     "ForeverThreat": "Foréver Zret", "Details": "Ditéils", "Tiny Threat": "Táini Zret", "WeakAuras": "Uík Óras",
@@ -44,7 +44,7 @@ FONETICA_APPLIO = {
 }
 
 # Whisper escribe distinto los nombres de add-ons (Kersforge, Questy, agro): tolerancia por frase, revisadas a mano el 7-nov
-CER_MAX_POR_FRASE = {"intro_0": 0.03, "intro_1": 0.043, "c20_3": 0.035, "c19_0": 0.035, "c19_4": 0.068, "c19_6": 0.015, "c17_3": 0.099, "c17_4": 0.046, "c16_4": 0.017, "c16_6": 0.031, "casa4_0": 0.014, "casa4_5": 0.002, "c14_0": 0.094, "c13_3": 0.032, "c13_4": 0.053, "c12_0": 0.081, "c11_0": 0.202, "c11_4": 0.022, "c10_0": 0.075, "c10_2": 0.015, "c10_3": 0.039, "c10_4": 0.033, "c10_5": 0.034, "c10_7": 0.111, "c09_4": 0.068, "overgear_2": 0.015, "c07_0": 0.056, "c07_5": 0.036, "c06_0": 0.031, "c06_4": 0.063, "c06_5": 0.047, "c05_2": 0.031, "c05_5": 0.036, "c05_6": 0.021, "c04_0": 0.085, "c04_1": 0.035, "c03_0": 0.134, "c03_3": 0.022, "c02_0": 0.08, "c02_3": 0.016, "c02_4": 0.016, "c01_0": 0.059, "c01_1": 0.026, "c01_4": 0.02, "c01_6": 0.084}
+CER_MAX_POR_FRASE = {"c15_4": 0.07, "intro_0": 0.03, "intro_1": 0.043, "c20_3": 0.035, "c19_0": 0.035, "c19_4": 0.068, "c19_6": 0.015, "c17_3": 0.099, "c17_4": 0.046, "c16_4": 0.017, "c16_6": 0.031, "casa4_0": 0.014, "casa4_5": 0.002, "c14_0": 0.094, "c13_3": 0.032, "c13_4": 0.053, "c12_0": 0.081, "c11_0": 0.202, "c11_4": 0.022, "c10_0": 0.075, "c10_2": 0.015, "c10_3": 0.039, "c10_4": 0.033, "c10_5": 0.034, "c10_7": 0.111, "c09_4": 0.068, "overgear_2": 0.015, "c07_0": 0.056, "c07_5": 0.036, "c06_0": 0.031, "c06_4": 0.063, "c06_5": 0.047, "c05_2": 0.031, "c05_5": 0.036, "c05_6": 0.021, "c04_0": 0.085, "c04_1": 0.035, "c03_0": 0.134, "c03_3": 0.022, "c02_0": 0.08, "c02_3": 0.016, "c02_4": 0.016, "c01_0": 0.059, "c01_1": 0.026, "c01_4": 0.02, "c01_6": 0.084}
 
 TAIL_MAX_POR_FRASE = {"casa4_5": 1.05}   # ElevenLabs: cola de 1,009 (la frase está completa)
 
@@ -67,12 +67,13 @@ LYRIA = dict(
     escenas={},
     tramos=[   # <= 175 s cada uno (timeline del 7-nov, 1305,6 s); música ORIGINAL de WoW: `musica_wow.py` corta un tema por tramo
         (['intro', 'serie', 'c20'], 'Legends of Azeroth'),               # 0-112      gancho, de serie, brillo
-        (['c19', 'c18'], 'Ventormenta'),                                 # 112-212    Favorcraft, libros de biblioteca
+        (['c19', 'c18', 'overgear'], 'Ventormenta'),                     # 112-260    Favorcraft, libros (Overgear: su música)
         (['inm', 'c17', 'c16', 'c15'], 'Elwynn'),                        # 212-372    inmersión
-        (['casa1', 'casa2', 'casa3', 'casa4'], 'Taberna'),               # 372-525    los nuestros (Villadorada, la posada)
+        (['casa1', 'casa2', 'casa3'], 'Taberna'),
+        (['casa4'], 'Taberna'),               # 372-525    los nuestros (Villadorada, la posada)
         (['c14', 'c13', 'gracias1'], 'Baldíos'),                         # 525-650    Wayfarer (perderse en Los Baldíos), Lore
         (['c12', 'c11', 'burla1', 'c10'], 'Vallefresno'),                # 650-800    campamento, recolección, amenaza
-        (['c09', 'overgear', 'c08'], 'Páramos'),                         # 800-932    (Overgear lleva su música propia)
+        (['c09', 'c08'], 'Páramos'),                                     # DialogKey, What's Training
         (['c07', 'gracias2', 'c06', 'c05'], 'Bosque del Ocaso'),         # 932-1078   botín, bolsas, mapa
         (['c04', 'c03', 'c02'], 'Forjaz'),                               # 1078-1212  subastas, todo en uno, Leatrix
         (['c01', 'cierre'], 'Legends of Azeroth'),                       # 1212-1306  Questie y cierre
@@ -121,6 +122,15 @@ ESCENAS = [
         "Y como dan un collar, un anillo y un arma, conviene juntarlos desde los primeros niveles.",
         "Eso sí, dice que hay treinta y ocho libros. Otros dos add-ons dicen que hay cuarenta. Ni los add-ons se ponen de acuerdo.",
     ]},
+    {"id": "overgear", "post": 2.6, "frases": [
+        "Y si los add-ons te enseñan lo que pasa, pero nadie te dice qué hacer con eso, para eso existe el patrocinador de hoy.",
+        "Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever.",
+        "Es self-play: juegas tú con tu personaje todo el tiempo, y un profesional verificado te guía por voz.",
+        "Un medidor te dice que te robaron el aggro. Un buen coach te dice por qué, y cómo no repetirlo en la siguiente mazmorra.",
+        "Talentos, rotación, mazmorras nuevas, el plan para las bandas del nueve de diciembre o duelos: tú eliges, y pagas solo las horas que necesites.",
+        "El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti.",
+        "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+    ]},
     # ================================================================ MINI CATEGORÍA: INMERSIÓN (17-13 + los nuestros)
     {"id": "inm", "frases": [
         "Y aquí empieza la categoría especial de hoy: los add-ons de inmersión.",
@@ -144,17 +154,17 @@ ESCENAS = [
         "Y además, antes de aceptar, te dice cuánta experiencia te da cada misión.",
         "Y si lo juntas con Forever Quest Tint, las misiones nuevas de Forever salen teñidas de otro color, para que no se te escape ninguna.",
     ]},
-    {"id": "c15", "post": 4.2, "frases": [
-        "Número quince. Spoken, el que le pone voz a todo.",
-        "Le pone voz a las misiones, a la charla de los personajes, a la historia de cada zona, y a los libros, cartas y notas.",
-        "Las voces están hechas con inteligencia artificial, pero ya vienen grabadas. Y nunca te lee el correo, por si te lo preguntabas.",
-        "Bellular lo llama el add-on más polémico: se nota que las voces son generadas, pero el tono es casi perfecto.",
-        "Encoge la ventana de misión a una versión mini, para que oigas la historia mientras corres. Y si recoges cinco misiones seguidas, las pone en cola.",
-        "Tiene más de un millón doscientas mil descargas, y lo mejor para nosotros: hay paquete de voces en español latino.",
-        "Las opiniones están divididas. Hay quien se encontró a un enano de Forjaz con la voz equivocada. Escucha cómo suena.",
+    {"id": "c15", "frases": [
+        "Número quince. Narcissus, tu personaje como en un juego de rol.",
+        "Cambia la ventana de personaje por una pantalla completa: tu héroe en grande, con la cámara a su alrededor, y el equipo a los lados.",
+        "Trae un modo foto que esconde la interfaz, los nombres y los textos de daño, y sube los gráficos al máximo para la captura perfecta.",
+        "También tiene panel de logros, títulos ordenados, y gestos con animaciones propias para tu personaje.",
+        "Bigbillygames también lo recomienda en su lista de add-ons de inmersión.",
+        "Ya pasa de trece millones de descargas, y tiene versión para Forever.",
+        "Un aviso: cambia dos de las vistas de cámara guardadas. Si las usas, vuelve a ponerlas después.",
     ]},
     # ---------------------------------------------------------------- LOS NUESTROS (el Humano tras el Telón presenta)
-    {"id": "casa1", "post": 6.0, "frases": [
+    {"id": "casa1", "post": 16.0, "frases": [
         "Y ahora, la sorpresa. Algo que no vas a encontrar en ninguna otra lista, porque lo hicimos aquí, en casa.",
         "Como lo hizo él, que lo presente él. Y alguien en los comentarios dijo que su voz, con un buen micrófono, sería increíble.",
         "[amused] Gracias. El micrófono todavía no lo tengo, pero traigo algo mejor.",
@@ -165,7 +175,7 @@ ESCENAS = [
         "Cuando tomas una misión, la interfaz se esconde, bajan barras negras, y la cámara gira despacio, como en una cinemática.",
         "Abajo aparece el retrato del personaje, hablando, y sigue hablando aunque cierres la ventana o te vayas caminando.",
     ]},
-    {"id": "casa3", "post": 5.0, "frases": [
+    {"id": "casa3", "post": 13.0, "frases": [
         "Mientras habla, la música y los efectos bajan, para que se entienda. Y si abres otra misión, esa voz espera su turno.",
         "Aquí, en la posada de Villadorada.",
     ]},
@@ -196,7 +206,7 @@ ESCENAS = [
         "Team Overpowered lo resume así: puedes pasar cientos de horas en Azeroth sin saber por qué importa la mitad de los sitios.",
         "Bigbillygames dice que te sumerge más que casi todo lo demás de su lista.",
         "Ya pasa de doscientas cincuenta mil descargas, y tiene paquetes de narración en español, con voz de hombre y de mujer.",
-        "Un consejo: no lo juntes con la narración de Spoken, porque las dos voces se te encimarían. Escucha una de sus historias.",
+        "Y si quieres probarlo, empieza por una de sus historias. Escucha.",
     ]},
     {"id": "gracias1", "frases": [
         "Y antes de seguir, gracias por los comentarios del video de los veinticinco errores.",
@@ -241,15 +251,6 @@ ESCENAS = [
         "Bellular lo llama el add-on de una sola función perfecto, y dice que, si solo vas a instalar uno, que sea este.",
         "Pero ojo con cuál bajas: el DialogKey original está parado desde dos mil diecinueve. El que funciona en Forever es la Numy Edition.",
         "Lleva más de doscientas mil descargas. Y en combate no funciona, así que no intentes aceptar misiones mientras te comen.",
-    ]},
-    {"id": "overgear", "post": 2.6, "frases": [
-        "Y si los add-ons te enseñan lo que pasa, pero nadie te dice qué hacer con eso, para eso existe el patrocinador de hoy.",
-        "Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever.",
-        "Es self-play: juegas tú con tu personaje todo el tiempo, y un profesional verificado te guía por voz.",
-        "Un medidor te dice que te robaron el aggro. Un buen coach te dice por qué, y cómo no repetirlo en la siguiente mazmorra.",
-        "Talentos, rotación, mazmorras nuevas, el plan para las bandas del nueve de diciembre o duelos: tú eliges, y pagas solo las horas que necesites.",
-        "El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti.",
-        "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
     ]},
     {"id": "c08", "frases": [
         "Número ocho. What's Training, el que te ahorra viajes al instructor.",

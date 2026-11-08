@@ -44,7 +44,7 @@ FONETICA_APPLIO = {
 }
 
 # Whisper escribe distinto los nombres de add-ons (Kersforge, Questy, agro): tolerancia por frase, revisadas a mano el 7-nov
-CER_MAX_POR_FRASE = {"c15_4": 0.07, "intro_0": 0.03, "intro_1": 0.043, "c20_3": 0.035, "c19_0": 0.035, "c19_4": 0.068, "c19_6": 0.015, "c17_3": 0.099, "c17_4": 0.046, "c16_4": 0.017, "c16_6": 0.031, "casa4_0": 0.014, "c14_0": 0.094, "c13_3": 0.032, "c13_4": 0.053, "c12_0": 0.081, "c11_0": 0.202, "c11_4": 0.022, "c10_0": 0.075, "c10_2": 0.015, "c10_3": 0.039, "c10_4": 0.033, "c10_5": 0.034, "c10_7": 0.111, "c09_4": 0.068, "overgear_2": 0.015, "c07_0": 0.056, "c07_5": 0.036, "c06_0": 0.031, "c06_4": 0.063, "c06_5": 0.047, "c05_2": 0.031, "c05_5": 0.036, "c05_6": 0.021, "c04_0": 0.085, "c04_1": 0.035, "c03_0": 0.134, "c03_3": 0.022, "c02_0": 0.08, "c02_3": 0.016, "c02_4": 0.016, "c01_0": 0.059, "c01_1": 0.026, "c01_4": 0.02, "c01_6": 0.084}
+CER_MAX_POR_FRASE = {"c15_4": 0.07, "casa4b_0": 0.02, "intro_0": 0.03, "intro_1": 0.043, "c20_3": 0.035, "c19_0": 0.035, "c19_4": 0.068, "c19_6": 0.015, "c17_3": 0.099, "c17_4": 0.046, "c16_4": 0.017, "c16_6": 0.031, "casa4_0": 0.014, "c14_0": 0.094, "c13_3": 0.032, "c13_4": 0.053, "c12_0": 0.081, "c11_0": 0.202, "c11_4": 0.022, "c10_0": 0.075, "c10_2": 0.015, "c10_3": 0.039, "c10_4": 0.033, "c10_5": 0.034, "c10_7": 0.111, "c09_4": 0.068, "overgear_2": 0.015, "c07_0": 0.056, "c07_5": 0.036, "c06_0": 0.031, "c06_4": 0.063, "c06_5": 0.047, "c05_2": 0.031, "c05_5": 0.036, "c05_6": 0.021, "c04_0": 0.085, "c04_1": 0.035, "c03_0": 0.134, "c03_3": 0.022, "c02_0": 0.08, "c02_3": 0.016, "c02_4": 0.016, "c01_0": 0.059, "c01_1": 0.026, "c01_4": 0.02, "c01_6": 0.084}
 
 TAIL_MAX_POR_FRASE = {"casa5_0": 1.2}   # ElevenLabs: cola de 1,009 (la frase está completa)
 
@@ -70,7 +70,7 @@ LYRIA = dict(
         (['c19', 'c18', 'overgear'], 'Ventormenta'),                     # 112-260    Favorcraft, libros (Overgear: su música)
         (['inm', 'c17', 'c16', 'c15'], 'Elwynn'),                        # 212-372    inmersión
         (['casa1', 'casa2', 'casa3'], 'Taberna'),
-        (['casa4', 'casa5'], 'Taberna'),               # 372-525    los nuestros (Villadorada, la posada)
+        (['casa4', 'casa4b', 'casa5'], 'Taberna'),               # 372-525    los nuestros (Villadorada, la posada)
         (['c14', 'c13', 'gracias1'], 'Baldíos'),                         # 525-650    Wayfarer (perderse en Los Baldíos), Lore
         (['c12', 'c11', 'burla1', 'c10'], 'Vallefresno'),                # 650-800    campamento, recolección, amenaza
         (['c09', 'c08'], 'Páramos'),                                     # DialogKey, What's Training
@@ -179,12 +179,15 @@ ESCENAS = [
         "Mientras habla, la música y los efectos bajan, para que se entienda. Y si abres otra misión, esa voz espera su turno.",
         "Aquí, en la posada de Villadorada.",
     ]},
-    {"id": "casa4", "post": 13.0, "frases": [
+    {"id": "casa4", "post": 24.2, "frases": [
         "[amused] Y sí: en Villadorada hay un personaje que se llama Remy Dos Veces. No fue idea mía. Así lo hizo Blizzard.",
         "Por fin alguien en Azeroth con un nombre decente.",
         "El segundo se llama Necesidades: barras de hambre, sueño, campamento y descanso, para no perder los bonos de experiencia de Forever.",
         "Se vacían con el tiempo de cada bono, y te avisan antes de que se acabe. Todo se ajusta desde la fogata del minimapa.",
         "Los dos son gratis, y lo van a seguir siendo. Ya están las misiones de inicio de los humanos, en Villanorte y Villadorada, y también las de los orcos, en el Valle de los Retos y Durotar.",
+    ]},
+    {"id": "casa4b", "post": 10.9, "frases": [
+        "Y no todos en el Valle de los Retos te reciben con los brazos abiertos. Escucha a Gornek.",
     ]},
     {"id": "casa5", "frases": [
         "Las de los renegados llegan en cuestión de días. Lo único que me frena es el costo, porque cada voz se paga. Así que, si te gusta, en la descripción hay un enlace de PayPal para donar, desde un dólar.",
@@ -340,7 +343,8 @@ VOCES = {"Remy": "applio", "el Humano tras el Telón": "GUEeiSJYQQdbv0NJ86Im"}
 LEMAS = {"Remy": "La voz de siempre", "el Humano tras el Telón": "El que hizo el add-on"}
 _POR_ESCENA = {"casa1": "el Humano tras el Telón", "casa2": "el Humano tras el Telón", "casa3": "el Humano tras el Telón",
                "casa4": "el Humano tras el Telón",
-               "casa5": "el Humano tras el Telón"}
+               "casa5": "el Humano tras el Telón",
+               "casa4b": "el Humano tras el Telón"}
 _POR_FRASE = {"casa1_0": "Remy", "casa1_1": "Remy", "casa4_1": "Remy", "casa5_4": "Remy", "cierre_3": "el Humano tras el Telón"}
 NARRA = {}
 for _e in ESCENAS:

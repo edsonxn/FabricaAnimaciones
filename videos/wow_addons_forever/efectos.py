@@ -215,6 +215,7 @@ FX = [
     com("alguien en los comentarios dijo", "UgzA9p2Z10TE-cp555l4AaABAg", dur=6.0, x=.32, y=.30),
     pv("se llama Remy Dos Veces", "p_remy", "Remy «Dos Veces» · Villadorada", dur=4.6, x=.80, y=.36, tam=380, entrada="sello"),
     pv("también las de los orcos", "p_kaltunk", "Kaltunk · Valle de los Retos", dur=5.0, x=.80, y=.36, tam=380),
+    pv("Escucha a Gornek", "p_gornek", "Gornek · Valle de los Retos", dur=4.6, x=.80, y=.36, tam=380),
     mapa("elwynn", [(49, 38, "Villanorte", "abadía · primeras misiones", F("p_willem")), (42, 65, "Villadorada", "la posada", F("p_posada"))],
          ("Ya están las misiones de inicio", -.2), ("en Villanorte y Villadorada|fin", .8), ["misiones de inicio de los humanos", "y Villadorada"],
          "LO QUE YA ESTÁ DOBLADO", "Bosque de Elwynn", zmax=1.5),
@@ -349,7 +350,8 @@ PISTAS = [dict(sfx="mision_aceptada", en=e, vol=.28) for e in ("Número veinte."
 PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("Así que hice WoW Forever Voces", "Y esos son los veinte add-ons")]
 PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro. Auctionator",)]
 # SI LA VOZ NOMBRA UN SONIDO, SE OYE (31-oct): en cada post, el PNJ del add-on a nivel de voz (voz=True agacha la música)
-PISTAS += [dict(sfx="oye_kaltunk", en=("Valle de los Retos y Durotar|fin", .15), vol=1.0, voz=True),   # OBS 8-nov: Kaltunk (orco)
+PISTAS += [dict(sfx="oye_kaltunk", en=("Valle de los Retos y Durotar|fin", .15), vol=1.0, voz=True),   # OBS 8-nov: Kaltunk (orco), 23,8 s
+           dict(sfx="oye_gornek", en=("Escucha a Gornek|fin", .15), vol=1.0, voz=True),   # OBS 8-nov: Gornek (orco), 10,5 s
            dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
            dict(sfx="oye_mortero", en=("posada de Villadorada|fin", .15), vol=1.0, voz=True),  # OBS g4 4-9 s
            dict(sfx="oye_lore", en=("sus historias Escucha|fin", .2), vol=1.0, voz=True)]       # TOP 3:21 «Westfall…»

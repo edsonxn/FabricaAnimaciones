@@ -215,22 +215,19 @@ FX = [
     com("alguien en los comentarios dijo", "UgzA9p2Z10TE-cp555l4AaABAg", dur=6.0, x=.32, y=.30),
     pv("se llama Remy Dos Veces", "p_remy", "Remy «Dos Veces» · Villadorada", dur=4.6, x=.80, y=.36, tam=380, entrada="sello"),
     mapa("elwynn", [(49, 38, "Villanorte", "abadía · primeras misiones", F("p_willem")), (42, 65, "Villadorada", "la posada", F("p_posada"))],
-         ("Por ahora hice las voces", -.2), ("y las de Villadorada|fin", .8), ["misiones de inicio de los humanos", "las de Villadorada"],
+         ("Ya están las misiones de inicio", -.2), ("en Villanorte y Villadorada|fin", .8), ["misiones de inicio de los humanos", "y Villadorada"],
          "LO QUE YA ESTÁ DOBLADO", "Bosque de Elwynn", zmax=1.5),
     mg(M.enlaces("EN LA DESCRIPCIÓN", [("inv_misc_coin_01", "PayPal · desde 1 dólar", "paypal.me/edsonxn/1USD")], "Nadie tiene que pagar para usarlo"),
-       ("Y ya estoy por crear", .2), ("Nadie tiene que pagar para usarlo|fin", .2),
+       ("Lo único que me frena", .2), ("Nadie tiene que pagar para usarlo|fin", .2),
        ["enlace de PayPal", "Nadie tiene que pagar"], "paypal", y=.40),
-    mg(M.meta("DOBLAR AZEROTH ENTRE TODOS", [("inv_misc_head_human_01", "Villanorte"), ("inv_misc_head_human_02", "Villadorada"),
-                                             ("achievement_zone_elwynnforest", "Elwynn · en curso"), ("inv_misc_map08", "Todo el juego")], 2, "ENTRE TODOS"),
-       ("La idea es juntar", -.2), ("Los dos están en CurseForge", -.2), ["La idea es juntar", "doblar Azeroth entero", "doblar Azeroth entero"],
-       "meta doblaje", y=.40),
     mg(M.enlaces("EN LA DESCRIPCIÓN", [("trade_engineering", "CurseForge · gratis", "Voces Español WoW Forever")]),
        ("Los dos están en CurseForge", -.2), ("también va en la descripción|fin", .6), ["Los dos están en CurseForge"], "curseforge", y=.40),
-    mg(M.votacion("¿QUÉ ZONA SIGUE CON VOZ?", ["Páramos de Poniente", "Montañas Crestagrana", "Bosque del Ocaso", "Dun Morogh", "Loch Modan", "Teldrassil"],
-                  "VOTA EN LOS COMENTARIOS", icos=["achievement_zone_westfall_01", "achievement_zone_redridgemountains", "achievement_zone_duskwood",
-                                                   "achievement_zone_dunmorogh", "achievement_zone_lochmodan", "achievement_zone_darnassus"], ancho=1760),
-       ("Y después, tú eliges", -.4), ("y vamos zona por zona|fin", 1.4),
-       ["después, tú eliges", "escribe en los comentarios", "qué zona quieres", "oír con voz", "y vamos zona", "zona por zona", "zona por zona"], "vota zona", y=.46),
+    mg(M.meta("DOBLAR AZEROTH, ZONA POR ZONA", [("inv_misc_head_human_01", "Villanorte"), ("inv_misc_head_human_02", "Villadorada"),
+                                                ("inv_misc_head_orc_01", "Orcos y renegados"), ("inv_misc_map_01", "Zonas iniciales"),
+                                                ("achievement_zone_easternkingdoms_01", "Mayor nivel"),
+                                                ("inv_misc_map08", "Todo el juego")], 2, "ORCOS Y RENEGADOS EN CAMINO · POCO A POCO", ancho=1760),
+       ("Ahora estoy empezando por", -.3), ("hasta doblar todo el juego|fin", 1.2),
+       ["Ahora estoy empezando por", "zonas iniciales de cada raza", "zonas de mayor nivel", "doblar todo el juego", "doblar todo el juego"], "ruta doblaje", y=.42),
     # =========================================================== 14 Wayfarer
     rel("Número catorce", "a_wayfarer", "Wayfarer", "sin mapa y sin flecha"),
     pant("s_wayfarer", ("En vez de mapa, una brújula", -.2), ("en texto, como en dos mil cuatro|fin", .3)),
@@ -290,11 +287,11 @@ FX = [
        ("Salió el once de octubre", -.2), ("casi setecientas mil|fin", .8), ["pasó las ciento sesenta mil", "va por casi setecientas mil"],
        "openmap", y=.56),
     # =========================================================== 4 Auctionator
-    rel("Número cuatro", "a_auctionator", "Auctionator", "subastas sin sufrir"),
+    rel("Número cuatro. Auctionator", "a_auctionator", "Auctionator", "subastas sin sufrir"),
     pant("s_auctionator", ("Listas de compra, búsqueda por recetas", -.2), ("más que la subasta|fin", .3)),
     pv("hasta los mil doscientos de oro", "i_montura", "Montura épica · 1 200 de oro", dur=4.0, x=.80, y=.60, tam=340),
     # =========================================================== 3 OneForAll
-    rel("Número tres", "a_oneforall", "OneForAll", "el todo en uno"),
+    rel("Número tres. OneForAll", "a_oneforall", "OneForAll", "el todo en uno"),
     pant("s_oneforall", ("Es un compañero todo en uno", -.2), ("en un solo add-on|fin", .3)),
     filav("un libro de biblioteca cerca", [("i_libro", "Libro cerca", None)], y=.64, tam=300, dur=3.4),
     mg(M.descargas("ONEFORALL · DESCARGAS", [("inv_misc_note_01", "3 de noviembre", 94000), ("inv_misc_coin_17", "Hoy", 590000)],
@@ -306,7 +303,7 @@ FX = [
     pant("s_leatrix", ("Unas ochenta opciones de comodidad", -.2), ("invitaciones de desconocidos, y mucho más|fin", .3)),
     filav("marca vender basura y reparar", [("i_oro", "Vender basura", None), ("i_espada", "Reparar", "y reparar")], y=.66, tam=280, dur=3.6),
     # =========================================================== 1 Questie
-    rel("Número uno", "a_questie", "Questie", "el de siempre"),
+    rel("Número uno. Questie", "a_questie", "Questie", "el de siempre"),
     pant("s_questie", ("Te enseña quién da cada misión", -.2), ("de toda su base de datos|fin", .3)),
     pant("s_questie2", ("apaga su rastreador de la derecha", -.4), ("bastante feo|fin", .4), zoom=(1.12, 1.0)),
     podi([("a_questie", "Questie · 215 M"), ("a_auctionator", "Auctionator · 205 M"), ("a_leatrix", "Leatrix Plus · 76 M")],
@@ -334,7 +331,6 @@ ROTULOS = [   # solo para énfasis (regla del 30-sep: nada de subtítulos)
     dict(texto="F1", en="pulsa F uno al empezar", dur=2.0, tam=170, color="amarillo", y=.2),
     dict(texto="REMY «DOS VECES»", en="se llama Remy Dos Veces", dur=2.6, tam=110, color="amarillo", y=.16),
     dict(texto="¿SIGO? DÍMELO", en="dime en los comentarios si quieres", dur=3.4, tam=130, color="amarillo", y=.2),
-    dict(texto="SIGUIENTE: ELWYNN", en="terminar todas las misiones del bosque", dur=2.6, tam=120, color="amarillo", y=.2),
     dict(texto="13 MILLONES", en="trece millones de descargas", dur=2.2, tam=140, color="amarillo", y=.2),
     dict(texto="26 000 PUNTOS", en="más de veintiséis mil puntos", dur=2.4, tam=120, color="amarillo", y=.2),
     dict(texto="RITO DE PASO", en="es un rito de paso", dur=2.2, tam=140, color="rojo", y=.2),
@@ -350,7 +346,7 @@ SFX = {}
 # ---- SFX del JUEGO (regla 29-oct-2026; banco nucleo/datos/sfx_juego/wow/, copiado a sfx/), solo en momentos clave
 PISTAS = [dict(sfx="mision_aceptada", en=e, vol=.28) for e in ("Número veinte.", "Número quince", "Número diez", "Número cinco")]
 PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("Así que hice WoW Forever Voces", "Y esos son los veinte add-ons")]
-PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro",)]
+PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro. Auctionator",)]
 # SI LA VOZ NOMBRA UN SONIDO, SE OYE (31-oct): en cada post, el PNJ del add-on a nivel de voz (voz=True agacha la música)
 PISTAS += [dict(sfx="oye_willem", en=("propia voz Escucha|fin", .15), vol=1.0, voz=True),  # OBS g1 4-11 s (Willem)
            dict(sfx="oye_mortero", en=("posada de Villadorada|fin", .15), vol=1.0, voz=True),  # OBS g4 4-9 s

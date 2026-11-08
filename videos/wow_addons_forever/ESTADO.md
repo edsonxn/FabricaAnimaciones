@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · lun 9-nov-2026 09:00 CDMX (fecha Overgear, enlace `overgear.s.gy/CRONICAS/5`)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas + Overgear con fondo de marca + grabaciones propias de OBS) → doc: docs/estilo_secuencia_yt.md
-- etapa: SUBIDO ✅ 3.ª versión h9eNZ2dJy-Y (22:16), privado, se publica lun 9-nov 09:00 CDMX
-- siguiente: el usuario borra W_fl3tGsZ6I (privado sin fecha) · Studio: monetización + cuestionario · enlace de Necesidades cuando exista (`yt aplicar`)
+- etapa: SUBIDO ✅ 4.ª versión sovEqktwRN8 (22:16), privado, se publica lun 9-nov 09:00 CDMX
+- siguiente: el usuario borra h9eNZ2dJy-Y y W_fl3tGsZ6I (privados sin fecha) · Studio: monetización + cuestionario · enlace de Necesidades cuando exista (`yt aplicar`)
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
 - alias: los add-ons, 20 add-ons, el del 9-nov
@@ -24,6 +24,11 @@
 - `wow_pistas_futuro` (uETB9GOW4hk) MOVIDO al dom 15-nov 09:00 CDMX (7-nov, registrado en canales/cronicas_warcraft.json).
 - Comentarios (7-nov): 21 nuevos, casi todos votan la voz de siempre; ♥6 @zatherion1 elogia la voz real del usuario. Candidatos: gracias @zatherion1 @pirlo2106 @AlexAnder-z1i7l @666nibelheim666 @quemaloscalor @santislpslp1595; burla @FenrirMorningstar («las demás son kaka… Hope suena bien»).
 - Gracia: en la grabación 5 el PNJ se llama **Remy «Dos Veces»** (como el narrador).
+
+## Cambios del 8-nov (HECHOS, 4.ª subida sovEqktwRN8)
+- Questie fuera del gancho (anclas «Número uno/tres/cuatro» casaban antes de su puesto: ahora «Número uno. Questie», etc.).
+- casa4_4: humanos ya están; orcos y renegados «llegan en cuestión de días» (el add-on aún NO los tiene: no se dice «ya están»). casa4_5: «Lo único que me frena es el costo…» → PayPal. casa4_8: anuncio de zonas iniciales de cada raza → mayor nivel → todo el juego; sin votación. MG «DOBLAR AZEROTH, ZONA POR ZONA».
+- Lección: tras cualquier cambio de orden o de frases, buscar anclas que casen 2 veces (`Número N` aparece en otros puestos: «el número tres de esta lista»).
 
 ## CAMBIOS (el usuario, 7-nov ~17:00) — HECHOS hasta música; además SIN SPOILER del n.º 1 (gancho: fuera logo de OpenMap, carrusel con íconos genéricos, clip 005 sin add-ons)
 Palabras del usuario: «La promoción de Overgear tiene que salir antes de los primeros 5 minutos, digamos que por ahí del minuto 4. Y pusiste un

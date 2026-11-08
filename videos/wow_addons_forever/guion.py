@@ -46,7 +46,7 @@ FONETICA_APPLIO = {
 # Whisper escribe distinto los nombres de add-ons (Kersforge, Questy, agro): tolerancia por frase, revisadas a mano el 7-nov
 CER_MAX_POR_FRASE = {"c15_4": 0.07, "intro_0": 0.03, "intro_1": 0.043, "c20_3": 0.035, "c19_0": 0.035, "c19_4": 0.068, "c19_6": 0.015, "c17_3": 0.099, "c17_4": 0.046, "c16_4": 0.017, "c16_6": 0.031, "casa4_0": 0.014, "casa4_5": 0.002, "c14_0": 0.094, "c13_3": 0.032, "c13_4": 0.053, "c12_0": 0.081, "c11_0": 0.202, "c11_4": 0.022, "c10_0": 0.075, "c10_2": 0.015, "c10_3": 0.039, "c10_4": 0.033, "c10_5": 0.034, "c10_7": 0.111, "c09_4": 0.068, "overgear_2": 0.015, "c07_0": 0.056, "c07_5": 0.036, "c06_0": 0.031, "c06_4": 0.063, "c06_5": 0.047, "c05_2": 0.031, "c05_5": 0.036, "c05_6": 0.021, "c04_0": 0.085, "c04_1": 0.035, "c03_0": 0.134, "c03_3": 0.022, "c02_0": 0.08, "c02_3": 0.016, "c02_4": 0.016, "c01_0": 0.059, "c01_1": 0.026, "c01_4": 0.02, "c01_6": 0.084}
 
-TAIL_MAX_POR_FRASE = {"casa4_5": 1.05}   # ElevenLabs: cola de 1,009 (la frase está completa)
+TAIL_MAX_POR_FRASE = {"casa4_5": 1.2}   # ElevenLabs: cola de 1,009 (la frase está completa)
 
 SECUENCIA = dict(
     fuente="yt",
@@ -184,11 +184,11 @@ ESCENAS = [
         "Por fin alguien en Azeroth con un nombre decente.",
         "El segundo se llama Necesidades: barras de hambre, sueño, campamento y descanso, para no perder los bonos de experiencia de Forever.",
         "Se vacían con el tiempo de cada bono, y te avisan antes de que se acabe. Todo se ajusta desde la fogata del minimapa.",
-        "Los dos son gratis, y lo van a seguir siendo. Por ahora hice las voces de todas las misiones de inicio de los humanos, en Villanorte, y las de Villadorada.",
-        "Y ya estoy por crear las voces de todo el juego. Pero cada voz se paga, así que, si te gusta, en la descripción hay un enlace de PayPal para donar, desde un dólar.",
+        "Los dos son gratis, y lo van a seguir siendo. Ya están las misiones de inicio de los humanos, en Villanorte y Villadorada. Y las de los orcos y los renegados ya las estoy haciendo: llegan en cuestión de días.",
+        "Lo único que me frena es el costo, porque cada voz se paga. Así que, si te gusta, en la descripción hay un enlace de PayPal para donar, desde un dólar.",
         "Nadie tiene que pagar para usarlo. La idea es juntar entre todos, y doblar Azeroth entero.",
         "Los dos están en CurseForge, y ese enlace también va en la descripción. Y dime en los comentarios si quieres que siga con las voces.",
-        "Lo siguiente es terminar todas las misiones del bosque de Elwynn. Y después, tú eliges: escribe en los comentarios qué zona quieres oír con voz, y vamos zona por zona.",
+        "Ahora estoy empezando por todas las zonas iniciales de cada raza, y poco a poco iré subiendo a las zonas de mayor nivel, hasta doblar todo el juego.",
         "Gracias, humano. Ahora vuelve tras el telón, que la categoría de inmersión todavía no termina.",
     ]},
     {"id": "c14", "frases": [

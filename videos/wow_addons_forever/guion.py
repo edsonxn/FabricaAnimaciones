@@ -69,7 +69,7 @@ LYRIA = dict(
         (['intro', 'serie', 'c20'], 'Legends of Azeroth'),               # 0-112      gancho, de serie, brillo
         (['c19', 'c18', 'overgear'], 'Ventormenta'),                     # 112-260    Favorcraft, libros (Overgear: su música)
         (['inm', 'c17', 'c16', 'c15'], 'Elwynn'),                        # 212-372    inmersión
-        (['casa1', 'casa2', 'casa3'], 'Taberna'),
+        (['casa1', 'casa2', 'casa2b', 'casa2c', 'casa3'], 'Taberna'),
         (['c14', 'c13', 'gracias1'], 'Baldíos'),                         # 525-650    Wayfarer (perderse en Los Baldíos), Lore
         (['c12', 'c11', 'burla1', 'c10'], 'Vallefresno'),                # 650-800    campamento, recolección, amenaza
         (['c09', 'c08'], 'Páramos'),                                     # DialogKey, What's Training
@@ -170,12 +170,22 @@ ESCENAS = [
     {"id": "casa2", "post": 4.0, "frases": [
         "Y también los de la Horda.",
     ]},
+    # 9-nov (el usuario): Spoken existe, lo probó y sus voces se le hicieron planas → comparativa audible, >= 5 s por ejemplo
+    # (grabaciones del 8-nov en E:\videos grabados: spoken1/miaddon1 = Willem, spoken3/miaddon3 = Eagan y los lobos)
+    {"id": "casa2b", "post": 26.8, "frases": [
+        "Ya sé que existe Spoken, y lo probé. Pero sus voces se me hicieron muy planas. Escucha la diferencia.",
+    ]},
+    {"id": "casa2c", "frases": [
+        "Lo que hacemos nosotros es distinto: voces únicas para cada personaje, y de la máxima calidad posible.",
+        "Eso sí: algunas voces de esta versión son pruebas y se van a reemplazar, y otras no encajan con la edad del personaje.",
+        "Ya estoy creando y asignando a cada uno una voz adecuada, de alta calidad.",
+    ]},
     {"id": "casa3", "frases": [
         "El segundo se llama Necesidades: barras de hambre, sueño, campamento y descanso, para no perder los bonos de experiencia de Forever.",
         "Se vacían con el tiempo de cada bono, y te avisan antes de que se acaben.",
         "Y todo se ajusta desde la fogata del minimapa: qué barras ves, los avisos y su tamaño.",
         "Los dos son gratis. Ya están Villanorte, Villadorada, el Valle de los Retos y Durotar, y los renegados vienen en camino.",
-        "Mi meta es darle voz a todo el juego. Pero cada voz cuesta, así que con tu donación, aunque sea de un dólar, lo consigo mucho más rápido.",
+        "Mi meta es darle voz a todo el juego. Doblar las misiones de cada zona nos cuesta unos cinco dólares. Por eso te pedimos tu donación, aunque sea de un dólar: para convertir WoW Forever en un juego con voces muy inmersivas.",
         "PayPal desde un dólar y CurseForge, en la descripción. ¿Sigo? Dímelo en los comentarios.",
         "Gracias, humano.",
     ]},
@@ -324,7 +334,8 @@ ESCENAS = [
 # --- VOCES: quién narra cada frase; lo que no sale aquí, Remy (Applio) ---
 VOCES = {"Remy": "applio", "el Humano tras el Telón": "GUEeiSJYQQdbv0NJ86Im"}
 LEMAS = {"Remy": "La voz de siempre", "el Humano tras el Telón": "El que hizo el add-on"}
-_POR_ESCENA = {"casa1": "el Humano tras el Telón", "casa2": "el Humano tras el Telón", "casa3": "el Humano tras el Telón"}
+_POR_ESCENA = {"casa1": "el Humano tras el Telón", "casa2": "el Humano tras el Telón", "casa2b": "el Humano tras el Telón",
+               "casa2c": "el Humano tras el Telón", "casa3": "el Humano tras el Telón"}
 _POR_FRASE = {"casa1_0": "Remy", "casa3_6": "Remy", "cierre_3": "el Humano tras el Telón"}
 NARRA = {}
 for _e in ESCENAS:

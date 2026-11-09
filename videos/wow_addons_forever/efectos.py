@@ -213,13 +213,23 @@ FX = [
                                          ("inv_misc_food_15", "Necesidades", "Hambre, sueño, campamento", "Avisa antes de perder el bono")], "GRATIS"),
        ("algo hecho en casa", -.4), ("Que lo presente él|fin", .3), ["algo hecho en casa", "en casa", "Que lo presente él"], "hecho en casa", y=.42),
     pv("los de la Horda", "p_kaltunk", "Kaltunk · Valle de los Retos", dur=5.0, x=.80, y=.36, tam=380),
+    # 9-nov (el usuario): Spoken existe, lo probó, voces planas → comparativa audible (>= 5 s c/u; _comparativa.py arma scene-051)
+    rel("Ya sé que existe Spoken", "a_spoken", "Spoken", "lo probé", dur=4.6, x=.76, y=.46),
+    ban(("Escucha la diferencia|fin", .35), "s_cmp_spoken", "SPOKEN", "Willem · Villanorte", dur=6.0, y=.17, tam=230),
+    ban(("Escucha la diferencia|fin", 6.65), "s_cmp_voces", "WOW FOREVER VOCES", "Willem · el nuestro", dur=7.4, y=.17, tam=230),
+    ban(("Escucha la diferencia|fin", 14.35), "s_cmp_spoken_eagan", "SPOKEN", "Eagan y los lobos", dur=5.7, y=.17, tam=230),
+    ban(("Escucha la diferencia|fin", 20.35), "s_cmp_voces_eagan", "WOW FOREVER VOCES", "Eagan · el nuestro", dur=5.6, y=.17, tam=230),
+    mg(M.hecho_en_casa("EN CAMINO", [("trade_engineering", "Voces de prueba", "Algunas se van a reemplazar", "Otras no encajan con la edad"),
+                                     ("inv_misc_head_human_02", "Voces nuevas", "Una para cada personaje", "De alta calidad")], "EN TRABAJO"),
+       ("algunas voces de esta versión", -.4), ("de alta calidad|fin", .4),
+       ["algunas voces de esta versión", "Ya estoy creando y asignando", "una voz adecuada"], "en camino", y=.40),
     pv("El segundo se llama Necesidades", "p_necesidades", "Necesidades · el panel", dur=4.0, x=.80, y=.36, tam=360),
     mg(M.meta("DOBLAR TODO EL JUEGO", [("inv_misc_head_human_01", "Villanorte"), ("inv_misc_head_human_02", "Villadorada"),
                                        ("inv_misc_head_orc_01", "Valle de los Retos"), ("achievement_zone_durotar", "Durotar"),
                                        ("inv_misc_map_01", "Renegados"), ("inv_misc_map08", "Todo el juego")], 4,
-              "CON TU DONACIÓN, MÁS RÁPIDO", ancho=1760),
-       ("Mi meta es darle voz", -.3), ("lo consigo mucho más rápido|fin", .4),
-       ["darle voz a todo el juego", "darle voz a todo el juego", "lo consigo mucho más rápido"], "meta doblaje", y=.42),
+              "UNOS 5 DÓLARES POR ZONA", ancho=1760),
+       ("Mi meta es darle voz", -.3), ("voces muy inmersivas|fin", .4),
+       ["darle voz a todo el juego", "darle voz a todo el juego", "unos cinco dólares"], "meta doblaje", y=.42),
     mg(M.enlaces("EN LA DESCRIPCIÓN", [("inv_misc_coin_01", "PayPal · desde 1 dólar", "paypal.me/edsonxn/1USD"),
                                        ("trade_engineering", "CurseForge · gratis", "Voces Español WoW Forever")]),
        ("PayPal desde un dólar", -.3), ("Dímelo en los comentarios|fin", .3), ["PayPal desde un dólar", "y CurseForge"], "enlaces", y=.40),
@@ -345,6 +355,9 @@ PISTAS += [dict(sfx="subasta", en=e, vol=.26) for e in ("Número cuatro. Auction
 PISTAS += [dict(sfx="oye_willem", en=("modo cine Escucha|fin", .15), vol=1.0, voz=True),     # OBS g1 8,1 s: Willem (humano), 4,9 s
            dict(sfx="oye_kaltunk", en=("los de la Horda|fin", .15), vol=1.0, voz=True),       # OBS 8-nov: Kaltunk (orco), 4 s
            dict(sfx="oye_lore", en=("sus historias Escucha|fin", .2), vol=1.0, voz=True)]       # TOP 3:21 «Westfall…»
+# 9-nov: comparativa Spoken vs el nuestro (mismo volumen, loudnorm en _comparativa.py; offsets = cortes de scene-051)
+PISTAS += [dict(sfx=s, en=("Escucha la diferencia|fin", o), vol=1.0, voz=True)
+           for s, o in (("cmp_spoken_willem", .3), ("cmp_mio_willem", 6.6), ("cmp_spoken_lobos", 14.3), ("cmp_mio_lobos", 20.3))]
 PISTAS += [dict(sfx="subir_nivel", en=e, vol=.24) for e in ("Así que hoy te traigo", "Número uno. Questie")]
 
 # APOYOS: tarjetas SOLO con datos del guion (fuentes en videos/_investigacion_wow_addons_forever.md)

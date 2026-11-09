@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · lun 9-nov-2026 09:00 CDMX (fecha Overgear, enlace `overgear.s.gy/CRONICAS/5`)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas + Overgear con fondo de marca + grabaciones propias de OBS) → doc: docs/estilo_secuencia_yt.md
-- etapa: SUBIDO ✅ 8.ª versión Mu-m13MiAjM (20:31), privado, se publica lun 9-nov 09:00 CDMX
-- siguiente: el usuario borra JisiVB_vMOI, EICtSXBJE-U, hbf8eoWx9N4, sovEqktwRN8, h9eNZ2dJy-Y y W_fl3tGsZ6I · Studio: monetización + cuestionario
+- etapa: SUBIDO ✅ 9.ª versión FwDDZFysCks (21:33), privado, se publica lun 9-nov 09:00 CDMX
+- siguiente: el usuario borra Mu-m13MiAjM, JisiVB_vMOI, EICtSXBJE-U, hbf8eoWx9N4, sovEqktwRN8, h9eNZ2dJy-Y y W_fl3tGsZ6I · Studio: monetización + cuestionario
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
 - alias: los add-ons, 20 add-ons, el del 9-nov
@@ -25,7 +25,14 @@
 - Comentarios (7-nov): 21 nuevos, casi todos votan la voz de siempre; ♥6 @zatherion1 elogia la voz real del usuario. Candidatos: gracias @zatherion1 @pirlo2106 @AlexAnder-z1i7l @666nibelheim666 @quemaloscalor @santislpslp1595; burla @FenrirMorningstar («las demás son kaka… Hope suena bien»).
 - Gracia: en la grabación 5 el PNJ se llama **Remy «Dos Veces»** (como el narrador).
 
-## 8.ª versión (9-nov, SUBIDA Mu-m13MiAjM)
+## 9.ª versión ✅ (subida 9-nov 08:07, FwDDZFysCks) — antes «En curso» (8-nov noche): comparativa Spoken vs WoW Forever Voces
+- El usuario: mencionar Spoken («sé que existe, lo probé, sus voces se me hicieron muy planas») + comparativa de voces, cada ejemplo ≥ 5 s, con los AUDIOS DIRECTOS de cada add-on (no la grabación); «lo que haremos: voces únicas de máxima calidad»; algunas voces actuales son pruebas y otras no encajan con la edad, está creando voces adecuadas; ~5 US$ por zona; por eso pedimos donación para un WoW Forever con voces muy inmersivas.
+- HECHO: guion (casa2b + post 26,8 · casa2c ×3 · casa3_4 nueva), voz (123 créditos), seleccionar, tiempo, `reajustar` (141 beats, 1273,1 s), `_comparativa.py` (scene-051 = Kaltunk → Willem Spoken/nuestro → lobos Spoken/nuestro → Paxton miaddon4; pistas sfx/cmp_* de 783-accept.ogg/783_desc_m.mp3 y 33-accept.ogg/33_desc.mp3 con loudnorm), `_obs.py` (salta 051), efectos (rel Spoken, 4 bandas s_cmp_*, ficha EN CAMINO, meta «UNOS 5 DÓLARES POR ZONA»), anclas 0. Respaldo de la 8.ª en `_v8/`.
+- Mu-m13MiAjM puesto en PRIVADO sin fecha (el usuario, 8-nov noche) para subir la 9.ª en su lugar.
+- HECHO también: música, apoyos, fx, chequeo (sin bloqueos nuevos), mezcla, video (1199 s), final, verificar (21:33). Revisión de cuadros: las bandas de Eagan llevaban el recorte de Willem → recortes propios `s_cmp_*_eagan`, tramo 455-468,5 re-renderizado con `video --tramo … --salida salida/_tramo_eagan.mp4` y superpuesto al MASTER con ffmpeg overlay (audio copiado). La PC se suspendió de noche a mitad del empalme: terminó a las 08:00 del 9-nov. youtube.json: capítulos recorridos (+62,5 s desde #14) + capítulo 7:15 comparativa + 5 US$/zona en la descripción.
+- Lección: un `--tramo` sobre el MASTER (overlay + nvenc) tarda como un render entero; con prisa, subir y corregir después o rehacer con `video` completo antes de dormir.
+
+## 8.ª versión (9-nov, SUBIDA Mu-m13MiAjM — ya PRIVADO sin fecha)
 - El usuario: «aumenta el tiempo para la meta de generar todas las voces y la donación, y 20 s para explicar Necesidades». casa3 = 7 frases (Necesidades ×3 sobre el panel g3, «Los dos son gratis…», «Mi meta es darle voz a todo el juego…» con la ruta DOBLAR TODO EL JUEGO, PayPal/CurseForge/¿Sigo?, Remy). Tramo ~72 s (6:50-8:02). Beats renumerados (141) y remapeados desde `_v7`.
 
 ## 7.ª versión (9-nov, JisiVB_vMOI, reemplazada)

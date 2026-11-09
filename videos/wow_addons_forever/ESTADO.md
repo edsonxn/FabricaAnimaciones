@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · lun 9-nov-2026 09:00 CDMX (fecha Overgear, enlace `overgear.s.gy/CRONICAS/5`)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas + Overgear con fondo de marca + grabaciones propias de OBS) → doc: docs/estilo_secuencia_yt.md
-- etapa: SUBIDO ✅ 7.ª versión JisiVB_vMOI (20:01), privado, se publica lun 9-nov 09:00 CDMX
-- siguiente: el usuario borra EICtSXBJE-U, hbf8eoWx9N4, sovEqktwRN8, h9eNZ2dJy-Y y W_fl3tGsZ6I · Studio: monetización + cuestionario
+- etapa: SUBIDO ✅ 8.ª versión Mu-m13MiAjM (20:31), privado, se publica lun 9-nov 09:00 CDMX
+- siguiente: el usuario borra JisiVB_vMOI, EICtSXBJE-U, hbf8eoWx9N4, sovEqktwRN8, h9eNZ2dJy-Y y W_fl3tGsZ6I · Studio: monetización + cuestionario
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
 - alias: los add-ons, 20 add-ons, el del 9-nov
@@ -25,7 +25,10 @@
 - Comentarios (7-nov): 21 nuevos, casi todos votan la voz de siempre; ♥6 @zatherion1 elogia la voz real del usuario. Candidatos: gracias @zatherion1 @pirlo2106 @AlexAnder-z1i7l @666nibelheim666 @quemaloscalor @santislpslp1595; burla @FenrirMorningstar («las demás son kaka… Hope suena bien»).
 - Gracia: en la grabación 5 el PNJ se llama **Remy «Dos Veces»** (como el narrador).
 
-## 7.ª versión (9-nov, SUBIDA JisiVB_vMOI)
+## 8.ª versión (9-nov, SUBIDA Mu-m13MiAjM)
+- El usuario: «aumenta el tiempo para la meta de generar todas las voces y la donación, y 20 s para explicar Necesidades». casa3 = 7 frases (Necesidades ×3 sobre el panel g3, «Los dos son gratis…», «Mi meta es darle voz a todo el juego…» con la ruta DOBLAR TODO EL JUEGO, PayPal/CurseForge/¿Sigo?, Remy). Tramo ~72 s (6:50-8:02). Beats renumerados (141) y remapeados desde `_v7`.
+
+## 7.ª versión (9-nov, JisiVB_vMOI, reemplazada)
 - El usuario: «se me hizo muy larga mi sección, solo 35 segundos… las voces de ambos bandos». casa1-3 reescritas (Remy abre y cierra, 4 frases del Humano), ~40 s de «Y ahora, la sorpresa» a «Gracias, humano» (las escenas se ajustan a compases): Willem (g1 8,1 s, 4,9 s) + Kaltunk (g6 2,6 s, 4 s) audibles; ficha HECHO EN CASA, pegatinas Kaltunk y Necesidades, placa PayPal + CurseForge. Beats renumerados (137) y clips remapeados desde `_v6`. Video: 20:01.
 
 ## 6.ª versión (8-nov, EICtSXBJE-U, reemplazada)

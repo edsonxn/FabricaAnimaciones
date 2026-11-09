@@ -171,7 +171,11 @@ ESCENAS = [
         "Y también los de la Horda.",
     ]},
     {"id": "casa3", "frases": [
-        "Es gratis. Ya están Villanorte, Villadorada, el Valle de los Retos y Durotar, y los renegados vienen en camino.",
+        "El segundo se llama Necesidades: barras de hambre, sueño, campamento y descanso, para no perder los bonos de experiencia de Forever.",
+        "Se vacían con el tiempo de cada bono, y te avisan antes de que se acaben.",
+        "Y todo se ajusta desde la fogata del minimapa: qué barras ves, los avisos y su tamaño.",
+        "Los dos son gratis. Ya están Villanorte, Villadorada, el Valle de los Retos y Durotar, y los renegados vienen en camino.",
+        "Mi meta es darle voz a todo el juego. Pero cada voz cuesta, así que con tu donación, aunque sea de un dólar, lo consigo mucho más rápido.",
         "PayPal desde un dólar y CurseForge, en la descripción. ¿Sigo? Dímelo en los comentarios.",
         "Gracias, humano.",
     ]},
@@ -321,7 +325,7 @@ ESCENAS = [
 VOCES = {"Remy": "applio", "el Humano tras el Telón": "GUEeiSJYQQdbv0NJ86Im"}
 LEMAS = {"Remy": "La voz de siempre", "el Humano tras el Telón": "El que hizo el add-on"}
 _POR_ESCENA = {"casa1": "el Humano tras el Telón", "casa2": "el Humano tras el Telón", "casa3": "el Humano tras el Telón"}
-_POR_FRASE = {"casa1_0": "Remy", "casa3_2": "Remy", "cierre_3": "el Humano tras el Telón"}
+_POR_FRASE = {"casa1_0": "Remy", "casa3_6": "Remy", "cierre_3": "el Humano tras el Telón"}
 NARRA = {}
 for _e in ESCENAS:
     for _i in range(len(_e["frases"])):

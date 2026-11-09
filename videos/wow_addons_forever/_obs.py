@@ -24,9 +24,9 @@ PLAN = {   # sin repetir tramo de ninguna grabación (7-nov, comprobado a mano c
     "casa4": [(5, 4.0), (3, 0.0), (3, 9.0), (3, 17.0), (3, 27.0), (1, 44.0), (4, 12.0), (4, 44.0)],
 }
 # el PNJ habla desde este segundo de la grabación: el post (voz callada) se alinea ahí
-SALTA = {"scene-053"}   # 9-nov: tramo de 40 s; 053 ya es casi todo el #14 (se queda el clip remapeado)
+SALTA = {"scene-057"}   # 057 ya es casi todo el #14 (clip remapeado)
 # 3.ª versión (Overgear al min 4, posts largos): tramo exacto por beat, sin repetir (comprobado a mano)
-EXPL = {"scene-049": (2, 4.0), "scene-052": (8, 0.0)}   # 9-nov: 050 y 051 los alinea OYE (Willem / Kaltunk)
+EXPL = {"scene-049": (2, 4.0), "scene-052": (3, 0.0), "scene-053": (3, 7.0), "scene-054": (5, 4.0), "scene-055": (8, 0.0), "scene-056": (4, 32.0)}   # 050/051 = OYE
 OYE = {"casa1": (1, 8.1, "casa1_1"), "casa2": (6, 2.6, "casa2_0")}
 
 

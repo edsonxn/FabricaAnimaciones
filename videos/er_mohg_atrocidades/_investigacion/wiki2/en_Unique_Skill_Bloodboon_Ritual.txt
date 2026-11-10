@@ -1,0 +1,51 @@
+{{Infobox Item
+<!-- Identity: -->
+  | title                       = Unique Skill: <br>Bloodboon Ritual
+  | japanese                    = 
+  | image                       = ER Icon weapon Mohgwyn's Sacred Spear.png
+  | caption                     =
+<!-- General Information: -->
+  | type                        = Unique Skill
+  | tool_type                   = 
+  | weight                      =
+  | attack_type                 = 
+  | poison_type                 = 
+  | max_held                    =
+  | max_stored                  = 
+<!-- Base stat requirements: -->
+  | fp_cost                     = - (- -)
+  | hp_cost                     = 
+  | stamina_cost                = 
+  | slots_used                  = 
+  | default_weapon              = [[Mohgwyn's Sacred Spear]]
+  <!--| move_property               = Chargeable-->
+  | combo                       = ?
+  | charge                      = ?
+  | channel                     = ?
+  | affinity                    =
+  | item_effect                 = 
+<!-- Attack counters: -->
+  | deflectable                 = ?
+  | reflectable                 = ?
+}}
+'''{{PAGENAME}}''' is a [[Skill]] in {{ER}}. It is exclusive to the [[Mohgwyn's Sacred Spear]].
+
+==Description==
+{{Description
+|EN_line1=
+
+<br>
+<br>
+
+|JP_line1=
+
+<br>
+<br>
+}}
+
+==Effect==
+
+==Notes==
+
+[[Category:Skill]]
+[[Category:Unique Skill]]

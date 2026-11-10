@@ -1,0 +1,67 @@
+{{Infobox Weapon
+| title         = Bloody Helice
+| japanese      = 血のヘリケー<br/>(Chi no Herikē)
+| image         = ER Icon weapon Bloody Helice.png
+| type          = Heavy Thrusting Sword
+| attack_type   = Standard/Pierce
+| skills        = Dynast's Finesse
+| fp_cost       =5 ( - 7) 
+| weight        = 8.0
+| buy_price     = 
+| sell_price    =200 
+
+| physical_power    = 121
+| magic_power       = 0
+| fire_power        = 0
+| lightning_power   = 0
+| holy_power        = 0
+| critical          = 100
+| physical_guarded  = 57
+| magic_guarded     = 40
+| fire_guarded      = 40
+| lightning_guarded = 40
+| holy_guarded      = 40
+| guard_boost       = 34
+| range             = 
+| sorcery_scaling   = 
+| incant_scaling    = 
+
+| str_scale     = E
+| dex_scale     = D
+| int_scale     = 
+| fai_scale     = 
+| arc_scale     =D 
+| str_req       = 16
+| dex_req       = 19
+| int_req       = 
+| fai_req       = 
+| arc_req       =17 
+| effects       =Causes blood loss buildup (55)
+}}
+'''Bloody Helice''' is a [[weapons|melee armament]] found in {{ER}}.
+
+== Description ==
+{{Description
+|EN_line1= Ominous piercing sword with a winding blade. Carried by the [[Sanguine Noble|noble servants]] of the [[Mohg, Lord of Blood|Lord of Blood]].
+|EN_line2= Designed to bore into flesh, causing severe [[blood loss]] at the wound. The extracted blood trickles gracefully down the length of the blade.
+|EN_line3= [[Unique Skill: Dynast's Finesse]]
+|EN_line4= Nimbly avoid an attack, securing some distance from foes. Follow up with a strong attack to perform a sudden lunge, and press strong attack again to perform a sweeping slice.
+|JP_line1= 螺旋の刃を持つ異形の刺剣<br/>[[Mohg, Lord of Blood|血の君主]]に[[Sanguine Noble|仕える貴族]]たちの得物
+|JP_line2= その刃は、傷口を抉り[[Blood Loss|出血]]を強い<br/>ゆっくりと美しく、その血を滴らせる
+|JP_line3= 専用戦技「王朝剣技」
+|JP_line4= 華麗に攻撃を回避し、敵と距離を取る戦技<br/>強攻撃で、一気に前進する突きに繋げられ<br/>更なる強攻撃は斬り払いとなる
+}}
+
+== Acquisition ==
+[[Writheblood Ruins]], north of the [[Second Church of Marika]] in the [[Altus Plateau]]. It will be in a chest behind the [[Sanguine Noble]] miniboss.
+
+==Notes==
+* This weapon's [[Guard Counter]]s become [[Thrusting Counterattack]]s.
+*
+
+==See Also==
+* 
+
+{{Navbox Weapons|melee}}
+
+[[ru:Кровавый винт]]

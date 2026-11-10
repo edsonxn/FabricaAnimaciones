@@ -1,0 +1,81 @@
+{{Infobox Item
+  | title =Bloody Finger
+  | japanese =血の指<br/>(Chi no Yubi)
+  | image =ER Icon Tool bloody finger.png
+  | caption =
+  
+  | type = Tool
+  | weight =
+  | attack_type =
+  | max_held = 1
+  | max_stored =
+  | fp_cost = 
+  | slots_used = 
+  | affinity = 
+  
+  | item_effect =Attempts [[invasion]] of other player's world
+  | obtained =Obtained after giving [[White Mask Varré|Varré]] the [[Lord of Blood's Favor (Soaked)|Blood-Soaked Favor]]
+  | buy_price =
+  | sell_price =
+  
+  | cookbook = 
+  | required_for = 
+  | required_items = 
+  
+  | physical_power =
+  | magic_power =
+  | fire_power =
+  | lightning_power =
+  | holy_power =
+  | critical =
+  
+  | int_req = 
+  | fai_req = 
+  | arc_req = 
+  | str_scale = 
+  | dex_scale = 
+  | int_scale = 
+  | fai_scale = 
+  | arc_scale = 
+  | passive_effects =
+}}
+
+The '''{{PAGENAME}}''' is a reusable, online-only [[Tool]] in {{ER}}.
+
+==Description==
+{{Description
+|EN_line1=Item for [[online]] play.<br/>(Can also be used from the Multiplayer menu.)
+|EN_line2=Attempts an [[invasion]] of another [[player]]'s world.<br/>If successful, your objective will be to defeat the [[Host of Fingers]] of the world to which you were summoned.
+|EN_line3=The nail of this [[finger]] is shot through with streaks of fresh, glistening [[blood]]. The finger's sickly pale skin feels nothing now, but the nail still aches with sweetest pain.
+|JP_line1=オンラインプレイ専用アイテム<br/>（マルチプレイメニューからも使用できる）
+|JP_line2=他プレイヤーの世界に侵入を試みる<br/>侵入者（血の指）として侵入し<br/>その世界の「鉤指の主」の撃破が目的となる
+|JP_line3=艶めく鮮血に、その爪を侵された指<br/>肌は異様に青ざめ、感覚を失い<br/>ただ爪だけが、甘く疼いている
+}}
+
+==Effect==
+* Activate to [[Invasion|invade]] the world of another player as a [[Bloody Finger (Invader)|Bloody Finger]], with three consumable [[Phantom Bloody Finger]]s to use in that session.
+* If the invading player has activated [[Mohg's Great Rune]], they will also receive three [[Phantom Great Rune]]s to use in that session.
+
+==Acquisition==
+'''Location''': [[Rose Church]]
+* The {{PAGENAME}} is obtained upon returning the bloodsoaked [[Lord of Blood's Favor (Soaked)|Lord of Blood's Favor]] to [[White Mask Varré]] and agreeing to become one of [[Mohg, Lord of Blood|Mohg]]'s [[Bloody Fingers]].
+
+==Notes==
+* This item can be used as many times as the player wishes.
+* A unique background song plays when the Bloody Finger invader engages the [[Host of Fingers]].
+* The practical and cosmetic effects for the [[Phantom Bloody Finger]] are the same as the [[Festering Bloody Finger]].
+
+==Gallery==
+<gallery position=center spacing=small>
+ER Icon Tool bloody finger glow.png|Menu icon of the Bloody Finger while it's searching for another world to invade.
+</gallery>
+
+==See also==
+* [[Blue Cipher Ring]]
+* [[Tarnished's Furled Finger]]
+* [[Recusant Finger]]
+
+{{Navbox Tools}}
+[[Category:Multiplayer items]]
+
+[[ru:Окровавленный палец]]

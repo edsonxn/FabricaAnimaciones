@@ -1,0 +1,71 @@
+{{Enemigo
+|titulo       = 
+|japones      = 
+|imagen       = <gallery>
+Caragusano.png|Sin capa
+Caragusano (Capa).png|Capa
+</gallery>
+|localizacion = [[Meseta Altus]]
+[[Farum Azula, la ciudad en ruinas]]
+|ps           = '''Meseta Altus''': 1.669
+'''Farum Azula''': 4.075
+|runas        = '''Meseta Altus''': 541
+'''Farum Azula''': 1.872
+|suelta       = [[Excremento con matíz dorado]]
+[[Vara sacrifical]]
+}}
+Los '''{{PAGENAME}}''' son enemigos recurrentes en ''[[Elden Ring]]''.
+
+==Descripción==
+Criaturas imponentes y demacradas con tentáculos parecidos a gusanos que sobresalen de sus rostros. Por lo general expulsan nubes de necroplaga que cubren una gran área a su alrededor. La mayoría de ellos residen en los bosques de la [[Meseta Altus]], sin embargo, también hay varios Caragusano que residen en [[Farum Azula, la ciudad en ruinas]].
+
+{{Clear}}
+==Jefe==
+<tabber>Meseta Altus=
+{{Jefe
+|titulo       = {{PAGENAME}}<br />(Árbol Áureo pequeño)
+|japones      = 
+|imagen       = Caragusano (Jefe).png
+|alias        = 
+|rol          = 
+|raza         = 
+|localizacion = [[Árbol Áureo pequeño (Meseta Altus)]]
+|estado       = 
+|parejas      = 
+|hijos        = 
+|parientes    = 
+|voz          = 
+|tipo         = ENEMIG0
+|ps           = 5.876
+|runas        = 10.000
+|suelta       = [[Lágrima de cristal carmesí derramada]]
+[[Lágrima dura moteada]]
+}}
+===Información===
+Se encuentra en el [[Árbol Áureo pequeño (Meseta Altus)|Árbol Áureo pequeño]] de la [[Meseta Altus]], rodeado por otros Caragusano más pequeños y [[Guardián|Guardianes]].
+
+===Resistencias===
+{{Resistencias2
+|posición = 80
+|veneno = 334
+|putrefacción roja = 334
+|hemorragia = 334
+|congelación = 334
+|sueño = 334
+|locura = ∞
+|necroplaga = ∞
+|-
+|estándar = 0
+|golpe = 0
+|tajo = -10
+|perforación = 0
+|magia = 0
+|fuego = 0
+|rayo = 0
+|sagrado = 40
+}}
+
+</tabber>
+
+[[Categoría:Jefes]]
+[[Categoría:Criaturas y enemigos]]

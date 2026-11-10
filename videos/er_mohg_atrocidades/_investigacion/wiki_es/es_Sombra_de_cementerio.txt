@@ -1,0 +1,169 @@
+{{Enemigo
+|titulo       = 
+|japones      = 
+|imagen       = {{PAGENAME}} (Gelmir).jpg
+|localizacion = [[Tumba del héroe de Gelmir]]
+[[Costa Cerúlea]] (''[[Shadow of the Erdtree|SotE]]'')
+|ps           = Tumba del héroe de Gelmir:
+*991
+|runas        = Tumba del héroe de Gelmir:
+*935
+|suelta       = [[Hoja de mantis]]
+}}
+La '''{{PAGENAME}}''' es un enemigo recurrente y un jefe opcional en ''[[Elden Ring]]''.
+
+==Descripción==
+Guardianes de tumbas sombríos e infestados de insectos.<ref>Descripción de la [[Hoja de mantis]].</ref> Son humanoides larguiruchos de cuello largo, torsos huecos y ojos grandes y brillantes. Cada uno tiene una criatura parecida a una araña o un cangrejo sentada sobre su cabeza, y luchan con hojas curvas emparejadas.
+
+{{Clear}}
+==Jefes==
+<tabber>Catacumbas de la necrohondonada=
+{{Jefe
+|titulo       = {{PAGENAME}}<br />(Catacumbas de la necrohondonada)
+|japones      = 
+|imagen       = {{PAGENAME}} (Catacumbas de la necrohondonada).jpg
+|alias        = 
+|rol          = 
+|raza         = 
+|localizacion = [[Península del Llanto]],
+[[Catacumbas de la necrohondonada]]
+|estado       = 
+|padres       = 
+|parejas      = 
+|hijos        = 
+|hermanos     = 
+|parientes    = 
+|voz          = 
+|tipo         = ENEMIGO
+|ps           = 781
+|runas        = 2.200
+|suelta       = [[Lhutel la decapitada]]
+}}
+===Información===
+Una sombra de cementerio encontrada en la cámara sellada al final de las [[Catacumbas de la necrohondonada]].
+
+===Resistencias===
+{{Resistencias2
+|posición = 70
+|veneno = ∞
+|putrefacción roja = ∞
+|hemorragia = ∞
+|congelación = ∞
+|sueño = ∞
+|locura = ∞
+|necroplaga = ∞
+|-
+|estándar = 10
+|golpe = 10
+|tajo = 10
+|perforación = 35
+|magia = 0
+|fuego = 0
+|rayo = 0
+|sagrado = -20
+}}
+
+----
+
+|-|Catacumbas de los Cuchillos Negros=
+{{Jefe
+|titulo       = {{PAGENAME}}<br />(Catacumbas de los Cuchillos Negros)
+|japones      = 
+|imagen       = {{PAGENAME}} (Catacumbas de los Cuchillos Negros).jpg
+|alias        = 
+|rol          = 
+|raza         = 
+|localizacion = [[Liurnia, tierra encharcada]],
+[[Catacumbas de los Cuchillos Negros]]
+|estado       = 
+|padres       = 
+|parejas      = 
+|hijos        = 
+|hermanos     = 
+|parientes    = 
+|voz          = 
+|tipo         = ENEMIGO
+|ps           = 691
+|runas        = 3.500
+|suelta       = [[Cenizas de hechicero de la doble virtud]]
+}}
+===Información===
+Una sombra de cementerio encontrada en la cámara sellada al final de las [[Catacumbas de los Cuchillos Negros]]. Durante el combate aparecerán varios esqueletos que ayudarán al jefe.
+
+===Resistencias===
+{{Resistencias2
+|posición = 70
+|veneno = ∞
+|putrefacción roja = ∞
+|hemorragia = ∞
+|congelación = ∞
+|sueño = ∞
+|locura = ∞
+|necroplaga = ∞
+|-
+|estándar = 10
+|golpe = 10
+|tajo = 10
+|perforación = 35
+|magia = 0
+|fuego = 0
+|rayo = 0
+|sagrado = -20
+}}
+
+----
+
+|-|Catacumbas de Caelid=
+{{Jefe
+|titulo       = {{PAGENAME}}<br />(Catacumbas de Caelid)
+|japones      = 
+|imagen       = {{PAGENAME}} (Catacumbas de Caelid).jpg
+|alias        = 
+|rol          = 
+|raza         = 
+|localizacion = [[Caelid]],
+[[Catacumbas de Caelid]]
+|estado       = 
+|padres       = 
+|parejas      = 
+|hijos        = 
+|hermanos     = 
+|parientes    = 
+|voz          = 
+|tipo         = ENEMIGO
+|ps           = 1.467
+|runas        = 6.800
+|suelta       = [[Cenizas de ancestro de la putrefacción]]
+}}
+===Información===
+Una sombra de cementerio encontrada en la cámara sellada al final de las [[Catacumbas de Caelid]].
+
+===Resistencias===
+{{Resistencias2
+|posición = 70
+|veneno = ∞
+|putrefacción roja = ∞
+|hemorragia = ∞
+|congelación = ∞
+|sueño = ∞
+|locura = ∞
+|necroplaga = ∞
+|-
+|estándar = 10
+|golpe = 10
+|tajo = 10
+|perforación = 35
+|magia = 0
+|fuego = 0
+|rayo = 0
+|sagrado = -20
+}}
+
+----
+
+</tabber>
+
+==Referencias==
+
+[[Categoría:Jefes]]
+[[Categoría:Criaturas y enemigos]]

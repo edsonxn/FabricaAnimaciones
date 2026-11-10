@@ -1,0 +1,66 @@
+{{Infobox Armor
+| type       = Chest
+| title      = Ansbach's Attire
+| image      = ER Icon Armor Ansbach's Attire.png
+| weight     = 5.1
+| sell_price = 500
+| altered    = Yes
+| effects    = 
+
+| physical   = 5.3
+| vs_strike  = 6.1
+| vs_slash   = 6.1
+| vs_pierce  = 4.2
+| magic      = 13.0
+| fire       = 13.0
+| lightning  = 12.6
+| holy       = 13.0
+| immunity   = 38
+| robustness = 25
+| focus      = 76
+| vitality   = 90
+| poise      = 12
+}}
+
+'''{{PAGENAME}}''' is a [[Chest Armor]] in {{ER}}<i>:</i> {{SotE}}.
+
+==Description==
+{{Description
+| EN_line1 = Attire of [[Sir Ansbach]]. The embroidered crest of the [[Pureblood Knights]] has now all but faded away.
+| EN_line2 = Slightly enhances [[Blood Oath Incantations|Blood Oath]] and [[Mohgwyn Dynasty|dynastic]] [[skills]].
+| EN_line3 = Ansbach understood that keeping his oath to his [[Mohg, Lord of Blood|old master]] was not an act of logic, nor would it bear any justice, but it was for these very reasons he was unable to let go.
+|JP=老兵アンスバッハの装束
+縫い取られた純血騎士の紋章は
+もう掠れかけている
+
+血盟の戦技と王朝の技を、僅かに強化する
+
+アンスバッハは理解していた
+古き主への忠誠に、もはや理は無く
+一片の正義も無いことを
+
+だからこそ、彼はそれを捨てられなかっ}}
+
+==Effects==
+* Boosts the power of [[Blood Oath Incantations]] and [[Mohgwyn Dynasty]] [[skills]] by '''3%'''
+* Stacks multiplicatively; the full set grants a '''14%''' bonus.
+
+==Acquisition==
+'''Location''': Varies
+* The {{PAGENAME}} is looted from [[Sir Ansbach]] after completing his quest [[Enir-Ilim]]. It may also be obtained by helping [[Needle Knight Leda]] defeat Sir Ansbach at the [[Specimen Storehouse]].
+
+==Notes==
+* Slot: [[Chest]]
+* [[Armor Adjustment|Alterable]] into [[Ansbach's Attire (Altered)]]
+* Part of the [[Ansbach's Set]]
+* Worn by [[Sir Ansbach]]
+* Sell value: {{r}} 500
+
+==See also==
+* [[Ansbach's Boots]]
+* [[Ansbach's Longbow]]
+* [[Ansbach's Manchettes]]
+* [[Obsidian Lamina]]
+* [[Wise Man's Mask]]
+
+{{Navbox Armor|chest}}

@@ -1,0 +1,81 @@
+{{Infobox Item
+  | title =Regal Omen Bairn
+  | japanese=王家の忌み水子 <br>(Ōke no Imi Mizuko)
+  | image = ER Icon Tool Regal Omen Bairn.png
+  | caption = 
+  
+  | type = Tool
+  | weight =
+  | attack_type = [[Holy]]
+  | max_held =1
+  | max_stored = 600
+  | fp_cost = 50
+  | slots_used = 
+  | affinity = 
+  
+  | item_effect =Uses FP to unleash many wraiths that chase down foes
+  | obtained = From [[Finger Reader Enia|Enia]] through the [[Remembrance of the Omen King]]
+  | trade = No
+  | buy_price = 5000
+  | sell_price =
+  
+  | cookbook = 
+  | required_for = 
+  | required_items = 
+  
+  | physical_power =
+  | magic_power =
+  | fire_power =
+  | lightning_power =
+  | holy_power =
+  | critical =
+  
+  | int_req = 
+  | fai_req = 
+  | arc_req = 
+  | str_scale = -
+  | dex_scale = -
+  | int_scale = B
+  | fai_scale = B
+  | arc_scale = -
+  | passive_effects =
+}}
+
+'''Regal Omen Bairn''' is a reusable [[tool]] in [[Elden Ring (game)|''Elden Ring'']] and a stronger, more costly alternative to the [[Omen Bairn]].
+
+== Description ==
+{{Description
+|EN_line1=Doll of a curseborn [[bairn]] from the [[Erdtree]]'s [[Golden Lineage|royal line]].
+|EN_line2=Uses [[FP]] to unleash many [[wraiths]] that chase down foes.
+|EN_line3=[[Omen]] babies born of royalty do not have their horns excised, but instead are kept [[Subterranean Shunning-Grounds|underground]], unbeknownst to anyone, <br>imprisoned for eternity.
+|EN_line4=These memorial fetishes are fashioned in secret.
+
+|JP_line1=黄金樹の王家に <br>呪われて生まれた赤子の像
+
+|JP_line2=ＦＰを消費して、追いすがる多くの呪霊を放つ
+
+|JP_line3=王家の忌み赤子は、角を切られることはない その替り、誰にも知られず、地下に捨てられ 永遠に幽閉される
+
+|JP_line4=そしてひっそりと、供養の像が作られる
+}}
+==Acquisition==
+Trade the [[Remembrance of the Omen King]], gained by defeating [[Morgott, the Omen King]], and 5000 [[Runes]] with [[Finger Reader Enia]].
+
+Alternatively, use one of the [[Wandering Mausoleums]] with a bell to duplicate one (can only obtain one per playthrough using either method).
+==Effect==
+Using this item will make the player-character brace themselves for a second before unleashing a close-ranged explosion that'll launch human-sized (or smaller) opponents away from them before sending out 10 long-ranged [[Wraith|wraith projectiles]] that'll track any target that the user was locked on to as they were ejected from their body. These wraiths travel in three groups, the first two groups being comprised of 3 projectiles each and the final having 4, each group also have their own defined travel speed, leading to three distinct rolling windows whenever the player is fighting against this tool in [[PvP]].
+
+As it deals [[Holy|Holy Damage]]; any holy-boosting equipment or spell will further increase the damage from this item.
+Each piece of the [[Omen Set]] will also increase the damage of this item by 5%, meaning wearing the full set will increase it by 20%. 
+
+==Notes==
+* The doll depicts [[Morgott, the Omen King]] and was likely made in secret by his father, [[Godfrey, First Elden Lord]].
+
+==See also==
+* [[Horned Bairn]]
+* [[Omen Bairn]]
+
+{{Navbox Tools}}
+[[Category:Tools]]
+
+[[ru:Величавое чадо знамения]]

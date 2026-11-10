@@ -1,0 +1,41 @@
+{{Infobox_Item
+| title       = Bloodflame Talons
+| japanese    = 血炎の爪痕<br>(Ketsuen no Tsumeato)
+| image       = ER Icon Spell Bloodflame Talons.png
+| type        = Incantation
+| sub_type    = blood
+| item_effect = Creates bloodflame lacerations that then explode
+| fp_cost     = 12
+| hp_cost     = 
+| slots_used  = 1
+| int_req     = 0
+| fai_req     = 13
+| arc_req     = 15
+| buy_price   = 
+| obtained    = Dropped by [[Mohg, the Omen]]
+}}
+'''Bloodflame Talons''' is an [[incantation]] [[Spells|spell]] in {{ER}}. It is one of the [[Blood Oath Incantations]].
+
+==Description==
+{{Description
+| EN_line1 = A Blood Oath incantation, granted by the [[Mohg, Lord of Blood|Lord of Blood]].
+| EN_line2 = Creates [[bloodflame]] lacerations before the caster, which explode in an instant. This incantation can be cast repeatedly.
+| EN_line3 = After dealing damage, bloodflame continues to build up onset of [[blood loss]] for a very short time.
+| JP_line1 = [[Mohg, Lord of Blood|血の君主]]の分け与える力、血盟祈祷のひとつ
+| JP_line2 = 前方に血炎の爪痕を生じ、次の瞬間に爆発する<br>連続で使用することができる
+| JP_line3 = 血炎は、ダメージを与えた後、ごく短時間の間<br>出血の状態異常を細かく蓄積する効果がある
+}}
+
+<span class="mw-customtoggle-myTable wds-button wds-is-secondary"> Show Patch Notes </span>
+{| class="article-table mw-collapsible mw-collapsed" id="mw-customcollapsible-myTable" 
+! Patch || Changes
+|-
+| 1.07 || FP cost reduced from 14 to 12.
+
+|}
+
+== Acquisition ==
+'''Guaranteed Drop:''' [[Subterranean Shunning-Grounds]]
+*Acquired from defeating [[Mohg, the Omen]] at the [[Cathedral of the Forsaken]].
+{{Navbox Spells}}
+[[ru:Когти кровавого пламени]]

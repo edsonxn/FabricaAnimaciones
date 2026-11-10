@@ -1,0 +1,70 @@
+{{Infobox_Weapon
+| title         = Varré's Bouquet
+| japanese      = ヴァレーの花束<br/>(Varē no Hanataba)
+| image         = ER Icon weapon Varre's Bouquet.png
+| type          = Hammer
+| attack_type   = Strike
+| skills        = [[Blood Tax]]
+| fp_cost       = 14
+| weight        = 2.0
+| sell_price    = 200
+
+| physical_power    = 46
+| magic_power       = 0
+| fire_power        = 0
+| lightning_power   = 0
+| holy_power        = 0
+| critical          = 100
+| physical_guarded  = 38
+| magic_guarded     = 25
+| fire_guarded      = 25
+| lightning_guarded = 25
+| holy_guarded      = 25
+| guard_boost       = 25
+| range             = 
+| sorcery_scaling   = 
+| incant_scaling    = 
+
+| str_req   = 8
+| dex_req   = 16
+| int_req   = 0
+| fai_req   = 0
+| arc_req   = 24
+| str_scale = E
+| dex_scale = D
+| int_scale = -
+| fai_scale = -
+| arc_scale = C
+| effects   = Causes [[blood loss]] buildup (65)
+}}
+
+'''Varré's Bouquet''' is a [[Hammers|Hammer]], a [[Melee Armament|melee armament]] {{in|er}}.
+
+==Description==
+{{Description
+|EN_line1= A [[steel]] [[mace]] resembling a charming bouquet of [[Bloodrose|roses]]. Each petal has a sharpened edge, leaving the roses perpetually colored with [[blood]].
+|EN_line2= This weapon reflects [[White Mask Varré]]'s manner of speech rather well, enticing in its splendor, but full of deadly consequence.
+|JP_line1= 薔薇の花束を模したメイス<br>その花弁は、すべてが鋭い刃であり<br>薔薇はいつも血に染まっている
+|JP_line2= そのあり様は、白面のヴァレーの言葉に似ている<br>大袈裟に華美だが、危険極まりない
+}}
+
+==Acquisition ==
+* [[Mohgwyn Palace]] (Dynasty Mausoleum Entrance)
+
+'''Drop''': Defeat [[White Mask Varré]] at the end of his questline.
+
+==Notes==
+* Varré's Bouquet resembles a bundle of [[Bloodrose]]s and the armor worn by [[Weapon-Bequeathed Harmonia]].
+* {{cut}} There is a [[Unused Content|cut]] variant of this weapon: [[Heavy Varré's Bouquet]].
+
+==See Also==
+* [[Bloodfiend's Sacred Spear]] {{SOTE|small}}
+* [[Flowerstone Gavel]] {{SOTE|small}}<!--another flower-themed weapon-->
+* [[Mohgwyn's Sacred Spear]]<!--blood-themed-->
+* [[Poleblade of the Bud]] {{SOTE|small}}<!--another flower-themed weapon-->
+* [[Sanguine Amaryllis]] {{SOTE|small}}<!--blood flower-->
+* [[Shadow Sunflower Blossom]] {{SOTE|small}}<!--another flower weapon-->
+
+{{Navbox Weapons|melee}}
+
+[[ru:Букет Варрэ]]

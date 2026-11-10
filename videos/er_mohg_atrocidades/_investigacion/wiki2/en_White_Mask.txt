@@ -1,0 +1,73 @@
+{{Infobox Armor
+| type       = head
+| title      = White Mask
+| image      = ER Icon Armor White Mask.png
+| weight     = 3.2
+| buy_price  = <!--n/a-->
+| sell_price = 100
+| altered    = <!--n/a-->
+| effects    = Boosts [[Attack Power]] by 10% for 20 seconds when there is {{dmg|bleed}} [[Blood Loss]] nearby.
+
+| physical   = 2.7
+| vs_slash   = 3.3
+| vs_strike  = 3.0
+| vs_pierce  = 2.7
+| magic      = 3.5
+| fire       = 3.7
+| lightning  = 3.9
+| holy       = 3.7
+| immunity   = 23
+| robustness = 18
+| focus      = 21
+| vitality   = 22
+| poise      = 5
+}}
+
+The '''White Mask''' is [[Headwear]] {{in|ER}}.
+
+==Description==
+{{Description
+| EN_line1 = [[Blood]]stained, faintly grinning mask.
+| EN_line2 = Worn by [[War Surgeon|war surgeons]] who were effectively mercy killers.
+| EN_line3 = The [[Mohg|Lord of Blood]]'s [[curse]] enlivens the wearer when bloodletting occurs. Slightly raises [[attack power]] when there is [[Blood Loss|blood loss]] nearby.
+| EN_line4 = 
+| EN_line5 = 
+| JP_line1 = 血に汚れた薄笑いの白仮面 戦場の介錯者たる、従軍医師たちの装束
+| JP_line2 = 血の君主の、呪われた血の影響で 周囲で出血状態が発生すると 僅かに攻撃力が高まる
+| JP_line3 = 
+| JP_line4 = 
+| JP_line5 = 
+}}
+
+==Effects==
+* {{dmg|bleed}} [[Blood Loss]] in the vicinity raises [[Attack Power]] by 10% for 20 seconds (6% in [[PvP]]).
+
+==Acquisition==
+'''Location''': [[Mohgwyn Palace]]
+* White Mask is dropped by one of the three [[Nameless White Mask]] invaders in [[Mohgwyn Palace]], northwest of the {{grace}} [[Palace Approach Ledge-Road]] [[Site of Grace]], in the blood-filled lake. The invader that drops it is found adjacent to the [[Giant Crow]] near the lake exit from the tunnel.
+
+==Notes==
+* Slot: [[Head]]
+* Part of the [[War Surgeon Set]], which also includes the [[War Surgeon Gown]], [[War Surgeon Gloves]], and [[War Surgeon Trousers]].
+* Worn by [[White Mask Varré]] and the [[Nameless White Mask]]s.
+* Sell value: {{r}} 100 runes
+
+==Trivia==
+* Armor ID: 680000
+* [[Game Version/1.07|Patch 1.07]] increased the {{stat|poise}} [[Poise]] from ? to 5.
+* [[Game Version/1.09|Patch 1.09]] reduced the magnitude of the effect from 10% to 6% in [[PvP]].
+* {{cut}} Short description: ''"Strange birch mask that hides one's expression"''
+* {{cut}} Known as '''Varré's White Visage''' and had a different description in {{1.00}}:
+{{Description
+| EN_line1 = Strange [[Trees|birch]] mask that hides expression.
+}}
+
+==See Also==
+* [[Blood Oath Incantations]]
+* [[Lord of Blood's Favor]]
+* [[Miséricorde]]
+* [[Varré's Bouquet]]
+
+{{Navbox Armor|head}}
+
+[[ru:Белая маска]]

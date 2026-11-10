@@ -1,0 +1,69 @@
+{{Infobox_Weapon
+| title         = Bloodfiend's Sacred Spear
+|japanese       = 血鬼の聖槍<br>(Kekki no Seisō)
+| image         = ER Icon Weapon Bloodfiend's Sacred Spear.png
+| type          = Great Spear
+| attack_type   = Standard/Pierce
+| skills        = [[Bloodfiends' Bloodboon]]
+| fp_cost       = 20 ( - 20 - 20)
+| weight        = 8
+| buy_price     = 
+| sell_price    = 200
+
+| physical_power    = 115
+| magic_power       = 0
+| fire_power        = 0
+| lightning_power   = 0
+| holy_power        = 0
+| critical          = 100
+| physical_guarded  = 40
+| magic_guarded     = 25
+| fire_guarded      = 25
+| lightning_guarded = 25
+| holy_guarded      = 25
+| guard_boost       = 30
+| incant_scaling    = 
+| range             = 
+| sorcery_scaling   = 
+
+| str_req       = 22
+| dex_req       = 12
+| int_req       = 0
+| fai_req       = 0
+| arc_req       = 13
+| str_scale = E
+| dex_scale = E
+| int_scale = -
+| fai_scale = -
+| arc_scale = C
+| effects       = Causes {{dmg|blood}} [[blood loss]] buildup (94)
+}}
+
+The '''{{PAGENAME}}''' is a [[Great Spears|Great Spear]], a [[Melee Armaments|melee armament]] {{in|se}}.
+
+==Description==
+{{Description
+ | EN_line1 = Greatspear of the [[Bloodfiend Hexer|bloodfiend hexers]]. One of the most significant implements used in their [[Blood Oath Incantations|blood rituals]].
+ | EN_line2 = Sacred spears of [[blood]] are the instruments of communion with an [[outer god]]. The [[Formless Mother |mother of truth]] desires a wound.
+ | EN_line3 = [[Unique Skill]]: [[Bloodfiends' Bloodboon]]
+ | EN_line4 = Raise the sacred spear and [[pierce]] the body of the mother of truth, creating an explosion of [[bloodflame]] in the area surrounding the target. Additional input allows for up to three follow-up attacks.
+ | JP_line1 = 血鬼の呪術師が用いる得物<br>鬼たちの血の儀式において<br>高位の祭具となる大槍
+ | JP_line2 = 血の聖槍は、外なる神と交信する<br>真実の母は、傷を望んでいるのだ
+ | JP_line3 = 専用戦技「血鬼の血授」
+ | JP_line4 = 聖槍を掲げ、真実の母の身体を刺す戦技<br>対象の周囲に血炎の爆発を生じる<br>追加入力で、三度まで連続で使用できる
+}}
+
+==Acquisition==
+Guaranteed drop from a [[Bloodfiend Hexer]] in [[Rauh Base]]. It can be found in a shallow pond to the west of [[Taylew's Ruined Forge]].
+
+==Notes==
+* 
+
+==See Also==
+* [[Bloodboon]]
+* [[Bloodfiend's Arm]]
+* [[Bloodfiend's Fork]]
+* [[Mohgwyn's Sacred Spear]]
+* [[Sanguine Amaryllis]]
+
+{{Navbox Weapons|great spear}}

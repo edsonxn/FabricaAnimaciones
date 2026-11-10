@@ -1,0 +1,219 @@
+{{Quote
+| citation = Ripple Crescent Halberd
+| text     = Weapon wielded by young Albinaurics. The blade is said to resemble a partial image of a ripple, and its attack power scales with one's arcane attribute.
+}}
+
+'''Young Albinaurics''', also known as '''{{PAGENAME}}s''', are [[Enemies]] in {{ER}}.
+
+==Overview==
+Young [[Albinaurics]] are pale, pot-bellied creatures with frog-like faces and large, vacuous, black eyes. Created by human hands, the [[arcane]] circumstances of their birth has led many to believe they live [[Impurity|impure lives]] untouched by the [[Erdtree]]'s [[grace]]. Unlike the [[Elder Albinauric|first generation]], the second generation retains the use of their legs at the cost of their ability to speak. Their improved physique allows them to wield a greater variety of weapons, which they use to fight back against the formidable sorcerers that seek to slay them.<ref>[[Albinauric Shield]]</ref> They revered the ripple and the [[Crescent Moon]].
+
+Some young Albinaurics traveled to the [[Consecrated Snowfield]] in search of [[Miquella]]'s [[Haligtree]]. They were imbued with [[holy]] energy.
+
+Others followed Miquella to the [[Mohgwyn Palace]], sprouting [[Tangled Horns|tangled horns]] and turning crimson after receiving a boon from the [[Formless Mother]] via [[Mohg]]'s accursed [[Omen]] [[blood]]. These Sanguine Albinaurics produce [[bloodthorns]] whenever they cartwheel, suggesting a link to the [[Blood Star|blood star]]. The larger Albinaurics blow into their [[Curved Great Club]]s like alpine horns, summoning the legless [[Giant Skeleton]]s like the [[Tibia Mariner]] in [[Wyndham Ruins]].
+
+==Variants==
+<tabber>
+|-|Regular=
+{{Infobox Enemy
+|title= Young Albinauric
+|image = <gallery>
+ER Albinauric w Shamshir.jpg|Shamshir
+ER Albinauric w Ripple Blade.jpg|Ripple Blade
+ER Albinauric w Spiked Club.jpg|Club
+ER Albinauric w Curved Club.jpg|Curved Club
+ER Albinauric w Curved Great Club.jpg|Great Club
+ER Albinauric w Ripple Crescent Halberd.jpg|Halberd</gallery>
+|location = [[Liurnia of the Lakes]]
+[[Mohgwyn Palace]]
+|hp= 
+Liurnia of the Lakes:
+*382
+*559 (Shielded)
+*879 (Great Club)
+Mohgwyn Palace:
+*1,190 
+|runes=
+Liurnia of the Lakes:
+*111
+*131 (Great Club)
+Mohgwyn Palace:
+*2,044
+|drops= 
+[[Albinauric Bloodclot]]<br>
+[[Dirty Chainmail]]<br>
+[[Albinauric Shield]]<br>
+[[Ripple Crescent Halberd]]<br>
+[[Curved Club]]<br>
+[[Curved Great Club]]<br>
+}}
+===Variant Description===
+Regular Albinaurics who freely roam Liurnia of the Lakes, often gathered around the ruins that dot the landscape.
+
+|-|Blessed=
+{{Infobox Enemy
+|title = Blessed Young Albinauric
+|image = <gallery>
+ER Blessed Albinauric w Shamshir.jpg|Shamshir
+ER Blessed Albinauric w Ripple Blade.jpg|Ripple Blade
+ER Blessed Albinauric w Ripple Crescent Halberd.jpg|Halberd
+ER Blessed Albinauric w Spiked Club.jpg|Club
+ER Blessed Albinauric w Curved Great Club.jpg|Great Club</gallery>
+|location = [[Consecrated Snowfield]]
+|hp= 
+Consecrated Snowfield:
+*1,161
+*1,698 (Shielded)
+*3,774 (Great Club)
+|runes=
+Consecrated Snowfield:
+*1,553
+*1,821 (Great Club)
+|drops= 
+[[Albinauric Bloodclot]]<br>
+[[Dirty Chainmail]]<br>
+[[Albinauric Shield]]<br>
+[[Ripple Crescent Halberd]]<br>
+[[Curved Club]]<br>
+[[Curved Great Club]]<br>
+}}
+Albinaurics blessed by grace, their once dim eyes now shining with a golden gift. They are capable of casting [[Discus of Light]] at foes, and are otherwise unremarkable from their regular variants.
+
+
+|-|Sanguine=
+{{Infobox Enemy
+|title = Sanguine Young Albinauric
+|image = <gallery>
+ER Red Albinauric w Shamshir.jpg|Shamshir
+ER Red Albinauric w Ripple Blade.jpg|Ripple Blade
+ER Red Albinauric w Ripple Crescent Halberd.jpg|Halberd
+ER Red Albinauric w Curved Great Club.jpg|Great Club</gallery>
+|location = [[Mohgwyn Palace]]
+|hp= 
+Mohgwyn Palace:
+*1,190 
+*1,740 (Shielded)
+*3,868 (Great Club)
+|runes=
+Mohgwyn Palace:
+*2,044
+*2,397 (Great Club)
+|drops= 
+[[Albinauric Bloodclot]]<br>
+[[Dirty Chainmail]]<br>
+[[Albinauric Shield]]<br>
+[[Ripple Crescent Halberd]]<br>
+[[Curved Club]]<br>
+[[Curved Great Club]]<br>
+}}
+===Variant Description===
+Albinaurics tainted by [[Mohg, Lord of Blood]]'s accursed blood. They roam the swamp surrounding [[Mohgwyn Palace]], ready to defend their Lord from those who would seek to stop the birth of his [[Mohgwyn Dynasty|Dynasty]]. Those that carry the [[Great Curved Club]]s are able to beckon forth [[Giant Skeleton]]s. Those that possess lighter weaponry are able to bristle sharpened [[Bloodthorns]] of accursed blood from their bodies. Either cart-wheeling into intruders and shredding them to pieces, or painfully expelling them onto their immediate vicinity.
+</tabber>
+
+==Drops==
+{| class="article-table"
+|+
+!Item
+!Drop Rate
+!Notes
+|-
+|[[Albinauric Bloodclot]]
+| 2.50%
+|
+|-
+|[[Dirty Chainmail]]
+| 1% / 1.50%
+|Dropped by those who wear it<br>
+There is currently no observable reason for differences in drop rate.
+|-
+|[[Albinauric Shield]]
+| 2%
+|Dropped by those who wield it
+|-
+|[[Ripple Crescent Halberd]]
+| 2%
+|Dropped by those who wield it
+|-
+|[[Curved Club]]
+| 2%
+|Dropped by those who wield it
+|-
+|[[Curved Great Club]]
+| 4%
+|Dropped by those who wield it
+|}
+
+==Notes==
+* Their frog faces are a reference to the leglessness of other Albinaurics (tadpoles).
+
+==Trivia==
+* ''Albinauric'' is a constructed term derived from Latin roots ''[https://en.m.wiktionary.org/wiki/albus albus]'' (pale, white) and ''[[wp:Gold|aurum]]'' (gold), suggesting an approximation of silver made from gold.
+
+==Gallery==
+<gallery position=center spacing=small>
+ER Concept Art Albinauric.png|Young Albinauric concept art
+
+ER Enemy Albinauric w Club.png|Young Albinauric (Club)
+ER Enemy Albinauric w Curved Club, Wooden Shield.png|Young Albinauric (Club & Shield)
+ER Enemy Albinauric w Curved Club, Wooden Shield 2.png|Young Albinauric (Club & Shield)
+ER Enemy Albinauric w Curved Sword, Shield, Chainmail.png|Armored Young Albinauric (Curved Sword & Shield)
+ER Enemy Albinauric w Curved Sword, Wooden Shield.png|Young Albinauric (Curved Sword & Shield)
+ER Enemy Albinauric w Ripple Blade, Shield, Chainmail.png|Armored Young Albinauric (Ripple Blade & Shield)
+ER Enemy Albinauric w Ripple Blade Wooden Shield.png|Young Albinauric (Ripple Blade & Shield)
+ER Enemy Albinauric w Ripple Halberd, Chainmail.png|Armored Young Albinauric ([[Ripple Crescent Halberd]])
+
+ER Enemy Snow Albinauric w Club.png
+ER Enemy Snow Albinauric w Club 2.png
+ER Enemy Snow Albinauric w Curved Club.png
+ER Enemy Snow Albinauric w Curved Club 2.png
+ER Enemy Snow Albinauric w Curved Sword, Chainmail.png
+ER Enemy Snow Albinauric w Curved Sword, Shield, Chainmail.png|
+ER Enemy Snow Albinauric w Ripple Blade, Chainmail.png
+ER Enemy Snow Albinauric w Ripple Blade, Shield, Chainmail.png
+ER Enemy Snow Albinauric w Ripple Halberd, Chainmail.png
+ER Enemy Snow Albinauric w Curved Great Club.png|Blessed Albinauric with Great Curved Club
+
+ER Enemy Blood Albinauric w Curved Club, Shield, Chainmail.png
+ER Enemy Blood Albinauric w Ripple Blade, Shield, Chainmail.png
+ER Enemy Blood Albinauric w Riple Halberd, Chainmail.png
+ER Enemy Blood Albinauric w Great Curved Club.png|Sanguine Albinauric with Great Curved Club
+</gallery>
+
+==Strategy Guide Description==
+{| class = " mw-collapsible mw-collapsed article-table"  style= " width:100%"
+!Elden Ring Official Strategy Guide Vol 2 - Shards of the Shattering
+|-
+| ''"These frog-like humanoids are second-generation Albinaurics, and are sufficiently distinct from first generation Elder Albinaurics and Albinauric Archers to warrant separate classification, Enemies in this class are unusually diverse, with a wide array of weapons, special attacks, weaknesses and resistances. All variants are resistant to Fire damage, particularly the Blood variants encountered at the Mohgwyn Dynasty Mausoleum; their primary weakness is Holy damage, although they are also somewhat vulnerable to Lightning. All second-generation Albinaurics are immune to Poison and resistant to Scarlet Rot, but vulnerable to Blood Loss, while all but those residing in the Consecrated Snowfield are susceptible to Frostbite."''
+
+==Albinauric (Curved Sword)==
+''"These Albinaurics wield heavy Curved Swords and may also carry a wood or metal Medium Shield. They are found mainly in the lowlands of Liurnia, where they patrol the lakes in groups with other Albinauric variants, They're capable of quick bursts of speed but are sedentary fighters otherwise, and those with shields are particularly vulnerable to Guard Breaks. Albinaurics with this loadout encountered in the Consecrated Snowfield can cast the Discus of Light Incantation, so keep an eye on them and be prepared to dodge even if you're out of reach of their melee attacks."''
+
+==Albinauric (Club) ==
+''"Club-wielding Albinaurics are somewhat more aggressive than those armed with Curved Swords, but their general combat behavior is similarly lethargic. Two-handed jumping attacks are particularly effective against them, especially with heavier weapons, but Dual-Wielding combos with armaments that cause Blood Loss will dispatch them quickly as well."''
+
+==Albinauric (Curved Club) ==
+''"Similar in behavior to those wielding ordinary clubs, this variant hits harder and tends to be a bit more aggressive than those wielding Curved Swords, but should otherwise be handled in the same manner. Note that in the Consecrated Snowfield, Albinaurics carrying this weapon are capable of casting the Discus of Light Incantation."''
+
+==Albinauric (Ripple Blade) ==
+''"Albinaurics carrying a Ripple Blade follow the same general behavior patterns as those with Curved Swords, and are also capable of an ice breath attack that causes Frostbite buildup. They may carry a wooden or metal Medium Shield, which provides them with little protection and effectively only leaves them vulnerable to Guard Breaks. They can drop their weapon, which has very powerful Arcane scaling and benefits more than nearly any other armament from consumable grease items that grant temporary status ailments to your melee attacks."''
+
+==Albinauric (Halberd)== 
+''"These Albinaurics wield (and can drop) a unique Halberd that significantly increases the range of their attacks compared to other variants. Jumping attacks are somewhat risky against them as their long reach nominally improves their anti-aerial capabilities; instead, move toward them until they swing at you, then roll forward past them and counterattack while they recover."''
+
+===Image Captions===
+''"The standard blue-gray-skinned Albinaurics are the basic and most commonly found variant in the Albinauric species. Unlike the Blood and Snow variants found in Mohgwyn Palace and Consecrated Snowfield, these Albinaurics have no special abilities, and are only varied by the weapons and armor they wield."''
+
+''"While there's minimal difference between the normal and Snow Albinaurics, Blood variants can produce spikes of blood which they can either launch as projectiles or use to weaponize their bodies with a forward rolling attack."''
+
+''"Although rare, all variants of this enemy class can used a ranged spit attack, so don't let your guard down when just outside the reach of their melee abilities."''
+
+''"The Curved Sword and Curved Club Albinauric variants encountered in the Consecrated Snowfield will occasionally cast the Discus of Light Incantation."''
+|}
+
+==References==
+{{Reflist|2}}
+{{Missing data|stats, moves, locations}}
+{{Navbox Enemies}}
+
+[[Category:Enemies]]
+[[Category:Albinaurics]]

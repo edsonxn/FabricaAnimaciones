@@ -1,0 +1,82 @@
+{{Infobox Weapon
+| title         = Rivers of Blood
+| japanese      = 屍山血河<br/>(Shizanketsuga)
+| image         = ER Icon weapon Rivers of Blood.png
+| type          = Katana
+| attack_type   = Slash / Pierce
+| skills        = Corpse Piler
+| fp_cost       = 17 ( &mdash; 9 )
+| weight        = 	6.5
+| buy_price     = 
+| sell_price    =500 
+
+| physical_power    = 76
+| magic_power       = 0
+| fire_power        = 76
+| lightning_power   = 0
+| holy_power        = 0
+| critical          = 100
+| physical_guarded  = 36
+| magic_guarded     = 26
+| fire_guarded      = 52
+| lightning_guarded = 26
+| holy_guarded      = 26
+| guard_boost       = 31
+| range             = 
+| sorcery_scaling   = 
+| incant_scaling    = 
+
+| str_scale     = E
+| dex_scale     = D
+| int_scale     = -
+| fai_scale     = -
+| arc_scale     = D
+| str_req       = 12
+| dex_req       = 18
+| int_req       = 0
+| fai_req       = 0
+| arc_req       = 20
+| effects       = Causes [[blood loss]] buildup (50)
+}}
+
+'''Rivers of Blood''' is a [[Katanas|Katana]], a [[Melee Armament|melee armament]] {{in|er}}.
+
+==Description==
+{{Description
+
+|EN_line1= Weapon of [[Okina]], swordsman from the [[Land of Reeds]]. A [[curse]]d weapon that has felled countless men.
+
+|EN_line2= When [[Mohg, Lord of Blood|Mohg, the Lord of Blood]], first felt Okina's sword, and madness, upon his flesh, he had a proposal, to offer Okina the life of a demon, whose thirst would never go unsated.
+
+|EN_line3= [[Unique Skill]]: [[Corpse Piler]]
+
+|EN_line4= Forms a blade of cursed blood for repeated, interweaving successive attacks. Follow up with an additional input for further successive attacks.
+
+|JP_line1= 葦の地の大剣客、「翁」の得物<br/>数え切れぬ人を斬った呪刀
+
+|JP_line2= 翁の剣を、狂気をその身で知ったとき<br/>血の君主モーグは、提案したという<br/>与えようぞ。渇くことのない修羅の生き様を
+
+|JP_line3= 専用戦技「死屍累々」
+
+|JP_line4= 呪われた血を刃となし<br/>交差する連撃を繰り出す戦技<br/>追加入力で、更なる連撃に繋がる
+
+}}
+
+==Acquisition==
+Defeat [[Okina]] at the [[Church of Repose]].
+
+==Trivia==
+*The weapon's Japanese name, '''''Shizanketsuga''''' (屍山血河), is a four-character idiom referring to mounds of corpses and "rivers" of blood left in the aftermath of a battle.<ref>[https://jisho.org/word/屍山血河 Jisho] entry for 屍山血河</ref>
+**Similarly, Rivers of Blood's Unique Skill is called ''Shishiruirui'' (死屍累々) in Japanese, another idiom that also refers to heaps of corpses left on a battlefield.<ref>[https://jisho.org/word/死屍累々 Jisho] entry for 死屍累々</ref>
+
+==See Also==
+* [[Rakshasa's Great Katana]]
+* [[Eleonora's Poleblade]]
+* [[Okina Mask]]
+
+== References==
+{{Reflist|2}}
+
+{{Navbox Weapons|melee}}
+
+[[ru:Реки крови]]

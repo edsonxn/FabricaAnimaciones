@@ -1,0 +1,78 @@
+{{Infobox Item
+  | title = Bloodboil Aromatic
+  | japanese = 狂熱の香薬 <br>(Kyōnetsu no Kōyaku)
+  | image =ER Icon Tool Bloodboil Aromatic.png
+  | caption =
+  
+  | type =Tool
+  | weight =
+  | attack_type = 
+  | max_held =10
+  | max_stored = 600
+  | fp_cost = 21
+  | slots_used = 
+  | affinity = 
+  
+  | item_effect = Uses FP to enter a temporary state of fervor
+  | obtained =
+  | buy_price =
+  | sell_price =
+  
+  | cookbook = 
+  | required_for = 
+  | required_items = 
+  
+  | physical_power =
+  | magic_power =
+  | fire_power =
+  | lightning_power =
+  | holy_power =
+  | critical =
+  
+  | int_req = 
+  | fai_req = 
+  | arc_req = 
+  | str_scale = 
+  | dex_scale = 
+  | int_scale = 
+  | fai_scale = 
+  | arc_scale = 
+  | passive_effects =
+}}
+
+'''{{PAGENAME}}''' is a perfume item in {{ER}}.
+
+==Description==
+{{Description
+|EN_line1=Forbidden art of depraved perfumers.<br> Craftable with a perfume bottle.
+|EN_line2=Uses FP to enter a temporary state of fervor, raising maximum attack power and stamina while also increasing damage received.
+|EN_line3="Even upon the battlefield, do you fear being wounded? Take a good look. Your limbs are frozen stiff."
+
+
+|JP_line1= 
+|JP_line2= 
+|JP_line3= 
+}}
+
+==Effects==
+* Deal 30% (20% in PvP) more Physical Damage and increase maximum [[Stamina]] by 20%, at the cost of decreasing all damage negations by 25%. 
+* Lasts for 60 seconds and counts as a Body Buff. 
+
+==Acquisition==
+Can be crafted after acquiring the [[Perfumer's Cookbook 2]] from [[The Shaded Castle]]. Head north from the '''Shaded Castle Inner Gate''' Site of Grace and climb up a ladder, then enter the dark room and take the ladder inside to a small rooftop with a body on a chair holding the item. 
+
+==Required items==
+An empty [[Perfume Bottle]] is required to craft this item, and will be returned upon its consumption. 
+* [[Altus Bloom]] x2
+* [[Budding Cave Moss]] x1
+* [[Land Octopus Ovary]] x1
+* [[Arteria Leaf]] x1
+
+==Notes==
+* A very strong damage buff for weapon users, if a bit risky due to the extra damage taken. Be aware that Arteria Leaves are rare to find and somewhat difficult to farm, and also a component for other strong consumables. 
+
+[[Category:Item]]
+[[Category:Tools]]
+[[Category:Perfumes]]
+
+[[ru:Аромат вскипания крови]]

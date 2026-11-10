@@ -1,0 +1,83 @@
+{{Enemigo
+|titulo       = 
+|japones      = 
+|imagen       = {{PAGENAME}}.png
+|localizacion = [[Liurnia, tierra encharcada]]
+[[Meseta Altus]]
+<br />[[Palacio de Mohgwyn]]
+|ps           = Liurnia:
+*1.318
+Meseta Altus:
+*1.564
+Palacio de Mohgwyn:
+*4.101
+|runas        = Liurnia:
+*470
+Meseta Altus
+*1.060
+Palacio de Mohgwyn:
+*6.062
+|suelta       = [[Rosa sangrienta]]
+}}
+El '''{{PAGENAME}}''' es un enemigo recurrente y un jefe opcional en ''[[Elden Ring]]''.
+
+==Trasfondo==
+Nobles que sirven a [[Mohg, Señor de la Sangre]]. Sirven como asesinos que emergen de charcos de sangre para atacar a sus enemigos, y como misioneros que comparten el evangelio de la sangre maldita.<ref>Descripción de la [[Capucha de noble sanguino]].</ref> Llevan elaborados diseños sobre sus hombros para indicar el rango de noble que pretenden reclamar una vez que se haya establecido la dinastía de Mohg.<ref>Descripción de la [[Armadura de noble sanguino]].</ref>
+
+{{Clear}}
+==Jefe==
+<tabber>Ruinas de Sanguifuria=
+{{Jefe
+|titulo       = {{PAGENAME}}<br />(Ruinas de Sanguifuria)
+|japones      = 
+|imagen       = {{PAGENAME}} (Ruinas de Sanguifuria).png
+|alias        = 
+|rol          = 
+|raza         = 
+|localizacion = [[Meseta Altus]],
+[[Ruinas de Sanguifuria]]
+|estado       = 
+|padres       = 
+|parejas      = 
+|hijos        = 
+|hermanos     = 
+|parientes    = 
+|voz          = 
+|tipo         = ENEMIGO
+|ps           = 3.128
+|runas        = 8.800
+|suelta       = 
+}}
+===Información===
+Un noble sanguino encontrado en el sótano de las [[Ruinas de Sanguifuria]] en la [[Meseta Altus]]. Este enemigo custodia un cofre que contiene una [[Hélice sangrienta]], el arma que empuñan todos los nobles sanguinos.
+
+===Resistencias===
+{{Resistencias2
+|posición = 65
+|veneno = 239
+|putrefacción roja = 239
+|hemorragia = 179
+|congelación = 239
+|sueño = 329
+|locura = ∞
+|necroplaga = ∞
+|-
+|estándar = 0
+|golpe = 0
+|tajo = -10
+|perforación = 0
+|magia = 20
+|fuego = 40
+|rayo = 20
+|sagrado = 20
+}}
+
+</tabber>
+
+==Notas==
+*El conjunto de noble sanguino lo suelta un noble sanguino invasor en el [[Campo sacroníveo]].
+
+==Referencias==
+
+[[Categoría:Jefes]]
+[[Categoría:Criaturas y enemigos]]

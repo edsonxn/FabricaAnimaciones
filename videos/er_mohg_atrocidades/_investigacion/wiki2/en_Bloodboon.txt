@@ -1,0 +1,42 @@
+{{Infobox_Item
+| title       = Bloodboon
+| japanese    = 血授<br>(Ketsuju)
+| image       = ER Icon Spell Bloodboon.png
+| type        = Incantation
+| sub_type    = blood
+| item_effect = Scatters bloodflame before caster to set area aflame. 
+| fp_cost     = 13
+| hp_cost     = 
+| slots_used  = 1
+| int_req     = 0
+| fai_req     = 14
+| arc_req     = 17
+| buy_price   = 
+| obtained    = Trade [[Enia]] a [[Remembrance of the Blood Lord]]
+}}
+'''Bloodboon''' is an [[incantation]] [[Spells|spell]] in {{ER}}. It is one of the [[Blood Oath Incantations]].
+
+==Description==
+{{Description
+| EN_line1 = Sacred incantation of [[Mohg, Lord of Blood]].
+| EN_line2 = Thrust arm into the body of the [[Formless Mother]], then scatter the [[bloodflame]] to set the area ablaze. This incantation can be cast while in motion.
+| EN_line3 = The mother of truth craves wounds. When Mohg stood before her, [[Subterranean Shunning-Grounds|deep underground]], his accursed blood erupted with fire, and he was besotted with the [[Omen (Lore)|defilement]] that he was born into.
+| JP_line1 = [[Mohg, Lord of Blood|血の君主モーグ]]の、聖なる祈祷
+| JP_line2 = [[Formless Mother|姿なき母]]の身体に腕を差し込み<br>その血炎を前方に撒き、炎上させる<br>足を止めずに使用できる
+| JP_line3 = 地の底で、傷を望む真実の母に見えた時<br>モーグの呪われた血は、炎となった<br>そして彼は、生まれついた穢れを愛したのだ
+}}
+
+<span class="mw-customtoggle-myTable wds-button wds-is-secondary"> Show Patch Notes </span>
+{| class="article-table mw-collapsible mw-collapsed" id="mw-customcollapsible-myTable" 
+! Patch || Changes
+|-
+| 1.07 || FP cost reduced from 15 to 13.
+
+|}
+
+== Acquisition ==
+Trade the [[Remembrance of the Blood Lord]], dropped by [[Mohg, Lord of Blood]], with [[Finger Reader Enia]].
+
+Alternatively, use one of the [[Wandering Mausoleums]] with a bell to duplicate one (can only obtain one per playthrough using either method).
+{{Navbox Spells}}
+[[ru:Подаяние крови]]

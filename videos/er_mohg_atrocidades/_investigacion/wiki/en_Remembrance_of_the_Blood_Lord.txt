@@ -1,0 +1,56 @@
+{{Infobox Item
+  | type                        = Tool
+  | sub_type                    = Remembrance
+  | title                       = Remembrance of the Blood Lord
+  | japanese                    = 血の君主の追憶<br/>(Chi no Kunshu no Tsuioku)
+  | image                       = ER Icon Remembrance of the Blood Lord.png
+  | item_effect                 = Take the power of its namesake via [[Finger Reader Enia|Finger Reader]]
+  | obtained                    = Defeat [[Mohg, Lord of Blood]]
+  | sell_price                  = 30,000
+  | max_held                    = 99
+  | max_stored                  = 600
+  | trade                       = Yes
+}}
+
+The '''{{PAGENAME}}''' is a [[Remembrance]], a type of consumable [[Tool]] in {{ER}}.
+
+==Description==
+{{Description
+ | EN_line1 = Remembrance of [[Mohg, Lord of Blood]], hewn into the [[Erdtree]].
+ | EN_line2 = The power of its namesake can be unlocked by the [[Finger Reader Enia|Finger Reader]].<br/>Alternatively, it can be used to gain a great bounty of [[runes]].
+ | EN_line3 = Wishing to raise [[Miquella]] to full [[Gods|godhood]], Mohg wished to be his consort, taking the role of [[Elden Lord|monarch]].<br/>But no matter how much of his [[Blood|bloody]] bedchamber he tried to share, he received no response from the young [[Empyrean]].
+ | EN_line4 =
+ | JP_line1 = 黄金樹に刻まれた<br/>血の君主、モーグの追憶
+ | JP_line2 = 指読みにより、主の力を得ることができる<br/>また、使用により莫大なルーンを得ることもできる
+ | JP_line3 = ミケラを神とし、自らはその伴侶として王となる<br/>そのために、血の閨をどれほど共にしようとも<br/>幼き神人は何も応えなかった
+ | JP_line4 =
+}}
+
+==Effects==
+* Consume to gain {{r}} 30,000 [[runes]]
+* Tradeable; speak with [[Finger Reader Enia]] and select "'''Receive power from remembrance'''" to gain either [[Mohgwyn's Sacred Spear]] or [[Bloodboon]].
+<gallery position="center" spacing="small" widths="125" caption="Possible Rewards:">
+ER Icon weapon Mohgwyn's Sacred Spear.png|[[Mohgwyn's Sacred Spear]]
+ER Icon Spell Bloodboon.png|[[Bloodboon]]
+</gallery>
+
+==Acquisition==
+'''Location''': [[Cocoon of the Empyrean]] ([[Mohgwyn Dynasty Mausoleum]])
+* The {{PAGENAME}} and [[Mohg's Great Rune]] are obtained upon defeating [[Mohg, Lord of Blood]] at the [[Cocoon of the Empyrean]], located atop the [[Mohgwyn Dynasty Mausoleum]] in [[Mohgwyn Palace]].
+
+==Notes==
+* Once acquired, this [[Shardbearers|Shardbearer]] Remembrance can be duplicated at any [[Wandering Mausoleum]] with a hanging bell.
+* While Remembrances can be duplicated more than once through different duplicators, their rewards may only be unlocked once per [[New Game Plus|playthrough]].
+* Max held: 99  
+* Max stored: 600  
+* Sell value: {{r}} 30,000 [[runes]]
+
+==See also==
+* [[Bloodfiend's Sacred Spear]]
+* [[Formless Mother]]
+* [[Mohg, the Omen]]
+* [[Remembrance of the Omen King]]
+
+{{Navbox Tools}}
+[[Category:Remembrances]]
+[[ru:Воспоминание о Повелителе Крови]]

@@ -1,0 +1,201 @@
+﻿===== en_Blood_Tainted_Excrement.txt
+    |EN_line1= The [[blood]]y excrement of a carnivorous [[beast]]. <br>Material used for [[crafting]] items. <br>Found in the land of the new dynasty. |EN_line2= Mixed inside with half-digested flesh are dense colonies of tiny eggs of unknown but assuredly revolting [[Formless Mother|origin]]. |EN_line3= |JP_line1= 肉食の獣の排泄物。血の混じった大便<br> アイテム製作に用いる素材のひとつ<br> 新しい王朝の地で見られる |JP_line2= 半ば未消化の血肉を含み<br> 得体の知れぬ小さなタマゴが<br> びっしりと植え付けられている |JP_line3= 
+===== en_Bloodboon.txt
+    | EN_line1 = Sacred incantation of [[Mohg, Lord of Blood]]. | EN_line2 = Thrust arm into the body of the [[Formless Mother]], then scatter the [[bloodflame]] to set the area ablaze. This incantation can be cast while in motion. | EN_line3 = The mother of truth craves wounds. When Mohg stood before her, [[Subterranean Shunning-Grounds|deep underground]], his accursed blood erupted with fire, and he was besotted with the [[Omen (Lore)|defilement]] that he was born into. | JP_line1 = [[Mohg, Lord of Blood|血の君主モーグ]]の、聖なる祈祷 | JP_line2 = [[Formless Mother|姿なき母]]の身体に腕を差し込み<br>その血炎を前方に撒き、炎上させる<br>足を止めずに使用できる | JP_line3 = 地の底で、傷を望む真実の母に見えた時<br>モーグの呪われた血は、炎となった<br>そして彼は、生まれついた穢れを愛したのだ
+===== en_Bloodboon_Ritual.txt
+    |EN_line1= <br> <br> |JP_line1= <br> <br>
+===== en_Bloodfiend_s_Sacred_Spear.txt
+    | EN_line1 = Greatspear of the [[Bloodfiend Hexer|bloodfiend hexers]]. One of the most significant implements used in their [[Blood Oath Incantations|blood rituals]]. | EN_line2 = Sacred spears of [[blood]] are the instruments of communion with an [[outer god]]. The [[Formless Mother |mother of truth]] desires a wound. | EN_line3 = [[Unique Skill]]: [[Bloodfiends' Bloodboon]] | EN_line4 = Raise the sacred spear and [[pierce]] the body of the mother of truth, creating an explosion of [[bloodflame]] in the area surrounding the target. Additional input allows for up to three follow-up attacks. | JP_line1 = 血鬼の呪術師が用いる得物<br>鬼たちの血の儀式において<br>高位の祭具となる大槍 | JP_line2 = 血の聖槍は、外なる神と交信する<br>真実の母は、傷を望んでいるのだ | JP_line3 = 専用戦技「血鬼の血授」 | JP_line4 = 聖槍を掲げ、真実の母の身体を刺す戦技<br>対象の周囲に血炎の爆発を生じる<br>追加入力で、三度まで連続で使用できる
+===== en_Dynast_s_Finesse.txt
+    | EN_line1 =Unique Skill : Dynast's Finesse | EN_line2 = Nimbly avoid an attack, securing some distance from foes. Follow up with a strong attack to perform a sudden lunge, and press strong attack again to perform a sweeping slice. | JP_line1 = | JP_line2 = 
+===== en_Purifying_Crystal_Tear.txt
+    |EN= A crystal tear formed slowly over the age where the Erdtree's bounty falls to the ground. Can be mixed in the Flask of Wonderous Physick. The resulting concoction purifies the curse from Mohg, Lord of Blood's terrifying rite of blood. |JP= 黄金樹の恵みが降り注ぐ地に<br>永き時の末に生じた、結晶の雫 「霊薬の聖杯瓶」に配合し<br>血の君主モーグの、恐るべき血の儀式<br>数え上げる呪いを浄化する
+===== en_Regal_Omen_Bairn.txt
+    |EN_line1=Doll of a curseborn [[bairn]] from the [[Erdtree]]'s [[Golden Lineage|royal line]]. |EN_line2=Uses [[FP]] to unleash many [[wraiths]] that chase down foes. |EN_line3=[[Omen]] babies born of royalty do not have their horns excised, but instead are kept [[Subterranean Shunning-Grounds|underground]], unbeknownst to anyone, <br>imprisoned for eternity. |EN_line4=These memorial fetishes are fashioned in secret. |JP_line1=黄金樹の王家に <br>呪われて生まれた赤子の像 |JP_line2=ＦＰを消費して、追いすがる多くの呪霊を放つ |JP_line3=王家の忌み赤子は、角を切られることはない その替り、誰にも知られず、地下に捨てられ 永遠に幽閉される |JP_line4=そしてひっそりと、供養の像が作られる
+===== en_Sanguine_Noble_Robe.txt
+    |EN=''Robe of dyed black cloth featuring [[gold]] embroidery. Worn by the [[Sanguine Noble|nobles]] who serve the [[Mohg, Lord of Blood|Lord of Blood]].'' ''The grand metallic pattern on the shoulder is a signifier of the noble rank they intend to claim upon the advent of the [[Mohgwyn Dynasty|new dynasty]] they are working to install.'' |JP=黒布に金の刺繍が施されたローブ 血の君主に仕える貴族たちの装束 金模様の豪奢な肩当ては 来るべき王朝における、貴族の印であるという
+===== en_Sir_Ansbach_dialogue.txt
+   | style = "text-align:left; background-color:black; color:white;" | '''English Dialogue''' &nbsp;
+   | I am Ansbach. Formerly in service to Lord Mohg.
+   | But now, like you, another soul guided by Kindly Miquella.
+   | I'm hardly the steady hand I once was. My fighting days are far behind me.
+   | Which is why I have chosen to dedicate myself to investigation.
+   | To discern Tender Miquella's ultimate purpose.
+   | I'd rather not volunteer service to a new master unless I know that I can be of use.
+   | May I request a service of you?
+   | They are akin to Tender Miquella's footprints. Or gravestones, which mark what he's left behind.
+   | If you discover any more crosses,
+   | I presume you, too, are keen to know.
+   | Just what Kind Miquella is doing here.
+   | Six crosses, identical to this one, have been discovered in these lands.
+   | If you discover any more crosses,
+   | I presume you, too, are keen to know.
+   | Just what Kind Miquella is doing here.
+   | Righteous Tarnished. What brings you here?
+   | Sir Moore is a kind and stalwart ally.
+   | He provisions our little outfit.
+   | Sir Moore traffics with the forager brood.
+   | His brethren who collect supplies from all corners of the land.
+   | No doubt they find inspiration in his many virtues.
+   | These are not your foes, Tarnished.
+   | Should you spot any forager brood, be sure to mind your manners.
+   | As suspected, Kindly Miquella has visited the lands which hold the tower.
+   | And appears intent on wholly dispossessing himself of his flesh.
+   | He must be seeking entrance to the tower of shadow.
+   | I can hardly believe it, he's divested himself of his very eye...
+   | Tender Miquella's eye is no mere morsel of flesh.
+   | It is a vessel of soaring grace. Proof of his Empyrean lineage.
+   | I wonder, does Miquella the Kind intend to sever his very birthright?
+   | His fate as a child of the Erdtree?
+   | To think there was a cross left in such a faraway place...
+   | And that deep-purple water lilies would be blooming there.
+   | This can only mean Kindly Miquella has divested himself even of that...
+   | His adoring other self, his blossom of slumber.
+   | Righteous Tarnished. I have reasoned through my findings.
+   | Concerning Kind Miquella's intentions—why he is here.
+   | The full picture is yet to coalesce,
+   | but we do know that he is bound for the tower of shadow.
+   | And that is where he intends to rise to true godhood...
+   | The tower of shadow houses a divine gateway.
+   | A well-kept secret, it was, but...
+   | The gateway was once the birthplace of a god.
+   | Kindly Miquella has discarded his Great Rune.
+   | The fog that vexed my aging faculties has been lifted.
+   | And follies better left forgotten haunt me once again.
+   | Once, in an attempt to free Lord Mohg from his enchantment,
+   | I challenged Tender Miquella, only to have my own heart rather artfully stolen.
+   | I believed that with sufficient mastery, even an Empyrean would be within reach of my blade.
+   | I could not have been more mistaken...
+   | Miquella the Kind...is a monster.
+   | Pure and radiant, he wields love to shrive clean the hearts of men.
+   | There is nothing more terrifying.
+   | Righteous Tarnished. Miquella the Kind makes my blood run cold.
+   | I am loath to admit it, but even at this very instant I wish to run very far away indeed.
+   | I am Ansbach. Formerly in service to Lord Mohg.
+   | But now, like you, another soul guided by Kindly Miquella.
+   | I'm hardly the steady hand I once was. My fighting days are far behind me.
+   | Kindly Miquella has discarded his Great Rune.
+   | The fog that vexed my aging faculties has been lifted.
+   | And follies better left forgotten haunt me once again.
+   | Once, in an attempt to free Lord Mohg from his enchantment,
+   | I challenged Tender Miquella, only to have my own heart rather artfully stolen.
+   | I believed that with sufficient mastery, even an Empyrean would be within reach of my blade.
+   | I could not have been more mistaken...
+   | Miquella the Kind...is a monster.
+   | Pure and radiant, he wields love to shrive clean the hearts of men.
+   | There is nothing more terrifying.
+   | Righteous Tarnished. It's been some time.
+   | After unburdening my soul to you, I had hoped to make a fresh start.
+   | But there was one thought I could not dislodge from my mind.
+   | So here I am, quite unable to move on.
+   | ...There was one thought I could not dislodge from my mind.
+   | After Lord Mohg's slaying at his dynastic palace,
+   | it appears his body has been absconded with.
+   | And taken straight to Kind Miquella.
+   | Surely you recall that I once served Lord Mohg as a Pureblood Knight.
+   | After failing him in every regard, and losing sight of my vows,
+   | I'd do anything to make amends, in whatever meagre way I can.
+   | What could they possibly have in mind for Lord Mohg's remains?
+   | The implications are rather...unnerving.
+   | She must be feeling the need to reaffirm her allegiance before she heads to war...
+   | A true Redmane she is, hardly troubled by the rot.
+   | But no-one is without their shortcomings...
+   | Hmm, it does make one think...
+   | Perhaps our concerns are but two sides of the same coin?
+   | Yes, yes, I should have known.
+   | Even the truth was itself mere folly.
+   | As if using Lord Mohg to gain entrance to the land of shadow were not enough,
+   | he plans to use his corpse as the vessel of his king consort.
+   | He has forsaken Lord Mohg's soul. He desires only his empty shell.
+   | I'm afraid Tender Miquella fails to grasp the humiliation implied by this act.
+   | One thing is certain. My dear lord deserved better.
+   | Righteous Tarnished. You have my gratitude.
+   | You have given me the answers I needed.
+   | But I can hardly fathom it. Such folly, unto the end.
+   | I am a warrior, but I've aged. I cannot afford to act hastily.
+   | Curse it all. I know my limits.
+   | I could spend the rest of my life honing my craft, and still that creature would be out of my blade's reach.
+   | The absolute folly of it all.
+   | Could you please give this to Freyja?
+   | Thanks to you, she, too, will have the answer she requires.
+   | Freyja possesses a youth I no longer have.
+   | This knowledge will surely stoke the flames of valour within her.
+   | Yes, I can see her barreling into the fray right now...
+   | Perhaps I shouldn't meddle in her affairs...
+   | But this is the only way I can help...
+   | She must be feeling the need to reaffirm her allegiance before she heads to war...
+   | A true Redmane she is, hardly troubled by the rot.
+   | Could you please give this to Freyja?
+   | Thanks to you, she, too, will have the answer she requires.
+   | Yes, I can see her barreling into the fray right now...
+   | I should have expected as much from Freyja!
+   | Some things simply never occur to her.
+   | Paralyzing fear. True despair.
+   | That's Freyja, through and through.
+   | Have you come to your senses?
+   | Now, there's no need for any hand-wringing.
+   | The way the world is, I'd say it's a wonder people don't lash out more often.
+   | A culling appears to be on the cards.
+   | One that won't overlook even an aging soldier as myself...
+   | You should have taken stock of your limitations.
+   | I only wanted to play my part...
+   | So, you would cull an old man such as I?
+   | You are thorough indeed, Lady Leda. I would expect nothing less.
+   | As you surmise, I do have my doubts.
+   | And will not simply lay down and die with them.
+   | By my troth, you have no such debt to this old man.
+   | Though I gladly welcome your decision.
+   | Now I might even live to see the morrow...
+   | Lady Leda, I ask you keep Kindly Miquella in your care.
+   | So, you would cull an old man such as I?
+   | You are thorough indeed, Lady Leda. I would expect nothing less.
+   | As you surmise, I do have my doubts.
+   | And will not simply lay down and die with them.
+   | So, you've taken Lady Leda's side.
+   | I'm glad she stands with an ally.
+   | The burden she might carry alone.
+   | Well, this is an unexpected victory.
+   | It seems I have my uses yet...
+   | I've utterly failed you both...
+   | Miquella the Kind, Lord Mohg...
+   | I am Ansbach of the Pureblood Knights.
+   | I stand with blade aloft, blood afire.
+   | For the dignity of my lord and master, Mohg.
+   | Righteous Tarnished. It appears that our interests have aligned.
+   | A balm upon my soul it is, that we do not meet today as enemies.
+   | Now, my blade. Watch closely.
+   | How readily the sensation returns! The runaway spirit of war!
+   | Lady Leda. Your suspicions were dead-on.
+   | In the end, I could not bury the memories.
+   | Of Lord Mohg, and our pact of blood.
+   | It will be my honour to test my blade against a Redmane.
+   | Righteous Tarnished. That was an astounding battle, to be sure.
+   | Now I suppose this leaves only one.
+   | But in truth, I cannot calm my quivering. Challenging a god is no small matter.
+   | But in truth, I cannot calm my quivering. Challenging a god is no small matter.
+   | I am afraid I underestimated the lad.
+   | Appearing frail in both body and mind, I presumed he'd be like to stumble upon the field of battle...
+   | He serves another master, but Sir Thiollier performed magnificently.
+   | Perhaps he too quivers with anticipation.
+   | Oh, something you want to get off your chest?
+   | It was you, wasn't it? Who defeated Lord Mohg.
+   | Fear not, I bear no grudge against you.
+   | His Eminence was felled in an honourable duel, and such are the risks of seeking Lordship.
+   | Besides, what right have I to complain? I blame the enchantment more than anything.
+   | Righteous Tarnished. We will have our victory.
+   | Righteous Tarnished. We will have our victory.
+   | General Radahn. A pleasure to see you, after all this time.
+   | But those remains do not belong to you.
+   | Lord Mohg will have his dignity.
+   | Righteous Tarnished. Become our new lord.
+   | A lord not for gods, but for men.
+   | style = "text-align:left; background-color:black; color:white;" | '''Japanese dialogue''' &nbsp;
+===== en_Unique_Skill_Bloodboon_Ritual.txt
+    |EN_line1= <br> <br> |JP_line1= <br> <br>
+===== en_Varré_s_Bouquet.txt
+    |EN_line1= A [[steel]] [[mace]] resembling a charming bouquet of [[Bloodrose|roses]]. Each petal has a sharpened edge, leaving the roses perpetually colored with [[blood]]. |EN_line2= This weapon reflects [[White Mask Varré]]'s manner of speech rather well, enticing in its splendor, but full of deadly consequence. |JP_line1= 薔薇の花束を模したメイス<br>その花弁は、すべてが鋭い刃であり<br>薔薇はいつも血に染まっている |JP_line2= そのあり様は、白面のヴァレーの言葉に似ている<br>大袈裟に華美だが、危険極まりない
+===== en_War_Surgeon_Gown.txt
+    |EN= ''Bloodstained white gown of the [[White Mask|war surgeons]] who were effectively mercy killers.'' ''Of the surgeons that were abducted by the [[Mohg, Lord of Blood|Lord of Blood]], none were able to tame the accursed [[blood]].'' ''None but [[White Mask Varré|Varré]], that is; though he was an exception.'' |JP= 血に薄汚れた白衣 戦場の介錯者たる、従軍医師たちの装束 血の君主に攫われた彼らは 誰も、呪われた血を受け容れることができなかった 唯一人、ヴァレーを除いて
+===== en_White_Mask.txt
+    | EN_line1 = [[Blood]]stained, faintly grinning mask. | EN_line2 = Worn by [[War Surgeon|war surgeons]] who were effectively mercy killers. | EN_line3 = The [[Mohg|Lord of Blood]]'s [[curse]] enlivens the wearer when bloodletting occurs. Slightly raises [[attack power]] when there is [[Blood Loss|blood loss]] nearby. | EN_line4 = | EN_line5 = | JP_line1 = 血に汚れた薄笑いの白仮面 戦場の介錯者たる、従軍医師たちの装束 | JP_line2 = 血の君主の、呪われた血の影響で 周囲で出血状態が発生すると 僅かに攻撃力が高まる | JP_line3 = | JP_line4 = | JP_line5 = 
+    | EN_line1 = Strange [[Trees|birch]] mask that hides expression.

@@ -1,0 +1,188 @@
+{{Infobox Enemy
+ | title                  = Bloodhound Knight
+ | aka                    = 
+ | label                  = 
+ | label2                 = 
+ | image                  = ER Bloodhound Knight.png
+ | image2                 = 
+ | caption                = 
+ | caption2               = 
+ | location               = [[Liurnia of the Lakes]]<br/>[[Caelid]]<br/>[[Gelmir Hero's Grave]]<br/>[[Volcano Manor]]
+ | hp                     = 992–1,806
+ | runes                  = 491–1,764
+ | drops                  = <!--[[Bloodhound Knight Set]]<br/>[[Bloodhound Claws]]-->
+ | poise                  = 
+ | defense                = 
+ | damage_negation        = ----
+ | negation_standard      = 
+ | negation_slash         = 
+ | negation_strike        = 
+ | negation_pierce        = 
+ | negation_magic         = 
+ | negation_fire          = 
+ | negation_lightning     = 
+ | negation_holy          = 
+ | resistance             = ----
+ | resistance_poison      = 
+ | resistance_scarlet_rot = 
+ | resistance_blood_loss  = 
+ | resistance_frostbite   = 
+ | resistance_sleep       = 
+ | resistance_madness     = 
+ | resistance_death       = 
+ | alluring               = 
+ | beastlure              = 
+ | bewitching             = 
+ | darkness               = 
+}}
+{{For|the boss at Forlorn Hound Evergaol|Bloodhound Knight Darriwil}}
+{{Quote
+ | citation = Bloodhound Knight Armor
+ | speaker  =
+ | text     = The Bloodhound Knights are trained as hunters and known to be unshakable trackers. Without the use of language, each knight chooses his own master. Once the decision has been made, the knight stays loyal for life.
+}}
+
+'''{{PAGENAME}}s''' are [[enemies]] and [[bosses]] in {{ER}}.
+
+==Overview==
+Bloodhound Knights are trained as hunters and are known to be unshakable trackers. Without language, they choose their own master whom they will stay loyal to for the rest of their life.<ref>[[Bloodhound Knight Armor]]</ref> 
+
+They wield a [[Bloodhound's Fang]] alongside a [[Bloodhound Claws|Bloodhound Claw]] that allows them to slip past an enemy's guard. They use the [[Ash of War: Bloodhound's Step]] to either move out of harm's way or to close the gap between them and their opponent quickly.
+
+Lesser variants can be found as non-respawning enemies guarding corpses in the overworld. One is found atop a wall near the gate past the [[Isolated Merchant (Academy of Raya Lucaria)|Isolated Merchant at Academy of Raya Lucaria]], another is in one of the rooms past the illusory wall in Volcano Manor, a third is guarding [[Eternal Darkness]] in [[Swamp Lookout Tower]] atop the gate wall near [[Sellia, Town of Sorcery]], and a fourth is guarding the [[Gelmir Knight Set]] inside of [[Gelmir Hero's Grave]] in a room reached by dropping onto rafters below the [[Chariot]]'s path. 
+
+==Locations==
+{{Enemy table|start}}
+{{Enemy table|row
+| zone  = [[Liurnia of the Lakes]]
+| hp    = 992
+| runes = 491
+}}
+{{Enemy table|row
+| zone  = [[Caelid]]
+| hp    = 1,053
+| runes = 701
+}}
+{{Enemy table|row
+| zone  = [[Gelmir Hero's Grave]]
+| hp    = 1,423
+| runes = 1,178
+}}
+{{Enemy table|row
+| zone  = [[Volcano Manor]]
+| hp    = 1,806
+| runes = 1,764
+}}
+{{Enemy table|end}}
+
+==Drops==
+{{Drops table|start}}
+{{Drops table|row
+| name      = [[Bloodhound Claws]]
+| drop rate = 
+| quantity  = 1
+| notes     = Once, [[Volcano Manor]]
+}}
+{{Drops table|row
+| name      = [[Bloodhound Knight Armor]]
+| drop rate = 
+| quantity  = 1
+| notes     = Once, [[Gelmir Hero's Grave]]
+}}
+{{Drops table|row
+| name      = [[Bloodhound Knight Gauntlets]]
+| drop rate = 
+| quantity  = 1
+| notes     = Once, [[Gelmir Hero's Grave]]
+}}
+{{Drops table|row
+| name      = [[Bloodhound Knight Greaves]]
+| drop rate = 
+| quantity  = 1
+| notes     = Once, [[Gelmir Hero's Grave]]
+}}
+{{Drops table|row
+| name      = [[Bloodhound Knight Helm]]
+| drop rate = 
+| quantity  = 1
+| notes     = Once, [[Gelmir Hero's Grave]]
+}}
+{{Drops table|end}}
+
+==Moveset==
+{{missing data|moveset}}<!--
+{| class="article-table mw-collapsible" style="min-width:50%;"
+! colspan="2" | Moveset
+
+|-
+| 
+| 
+
+|-
+| 
+| 
+
+|-
+| 
+| 
+
+|}-->
+
+==Bosses==
+<tabber>
+|-|Lakeside Crystal Cave=
+{{Infobox Boss
+| japanese    = 猟犬騎士 <br>(Ryōken Kishi)
+|image=ER Lakeside Crystal Cave Bloodhound Knight.png
+|location=[[Lakeside Crystal Cave]]
+|hp=1,985
+|runes=3,600
+|drops=[[Cerulean Amber Medallion]]
+}}
+==Background==
+A Bloodhound Knight was found at the [[Lakeside Crystal Cave]] exit. It appears to be guarding the location of [[Latenna the Albinauric]], forcing her to stay until the location of the [[Haligtree Secret Medallion (Right)]] has been revealed. 
+</tabber>
+
+==Notes==
+* Wears [[Bloodhound Knight Helm]], [[Bloodhound Knight Armor]], [[Bloodhound Knight Gauntlets]], and [[Bloodhound Knight Greaves]]
+* Wields [[Bloodhound's Fang]] and [[Bloodhound Claws]]
+* Uses [[Ash of War: Bloodhound's Step]]
+* The emblem on their cape is a [[wolf]]'s head surrounded by concentric [[thorns|thorned]] rings.
+
+==Gallery==
+<gallery position=center spacing=small>
+ER Concept Art Bloodhound Knight.png|Bloodhound Knight concept art
+</gallery>
+<gallery position=center spacing=small widths=125>
+ER Icon Armor Bloodhound Knight Helm.png|[[Bloodhound Knight Helm]]
+ER Icon Armor Bloodhound Knight Armor.png|[[Bloodhound Knight Armor]]
+ER Icon Armor Bloodhound Knight Gauntlets.png|[[Bloodhound Knight Gauntlets]]
+ER Icon Armor Bloodhound Knight Greaves.png|[[Bloodhound Knight Greaves]]
+
+ER Icon weapon Bloodhound Claws.png|[[Bloodhound Claws]]
+ER Icon weapon Bloodhound's Fang.png|[[Bloodhound's Fang]]
+
+ER Icon ash of war Bloodhound's Step.png|[[Ash of War: Bloodhound's Step]]
+ER Icon Ash Bloodhound Knight Floh.png|[[Bloodhound Knight Floh]]
+</gallery>
+
+==See Also==
+* [[Archer's Wolf]]
+* [[Baleful Shadow]]
+* [[Shadowbound Beast]]
+* [[Vargram the Raging Wolf]]
+
+===External Links===
+* Elden Ring Sound Design - Bloodhound Knight ([https://youtu.be/rplZuOJGJnU YouTube])
+
+==References==
+{{Reflist|2}}
+{{Navbox Enemies}}
+{{Navbox Bosses}}
+{{Missing data|stats}}
+
+[[Category:Enemies]]
+[[Category:Bosses]]
+[[Category:Bloodhound Knights]]
+
+[[ru:Рыцарь-ищейка]]

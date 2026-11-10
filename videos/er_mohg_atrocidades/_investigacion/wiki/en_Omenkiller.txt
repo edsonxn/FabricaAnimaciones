@@ -1,0 +1,221 @@
+{{Missing data|moves, stats}}{{Infobox Enemy
+ | type                   = <!--n/a-->
+ | title                  = Omenkiller
+ | japanese               = 忌み潰し<br/>(Imitsubushi)
+ | aka                    = <!--n/a-->
+ | label                  = <!--n/a-->
+ | label2                 = <!--n/a-->
+ | image                  = ER Enemy Omenkiller.png
+ | image2                 = <!--n/a-->
+ | caption                = <!--n/a-->
+ | caption2               = <!--n/a-->
+ | location               = [[Altus Plateau]]<br/>[[Leyndell, Royal Capital]]<br/>[[Volcano Manor]]<br/>[[Fort of Reprimand]]
+ | hp                     = 1,052+
+ | runes                  = 1,153+
+ | drops                  = 
+ | poise                  = 
+ | weak spot              = 
+ | strong_vs              = 
+ | weakness               = 
+ | damage_negation        = ----
+ | negation_standard      = 
+ | negation_slash         = 
+ | negation_strike        = 
+ | negation_pierce        = 
+ | negation_magic         = 
+ | negation_fire          = 
+ | negation_lightning     = 
+ | negation_holy          = 
+ | resistance             = ----
+ | resistance_poison      = 
+ | resistance_scarlet_rot = 
+ | resistance_blood_loss  = 
+ | resistance_frostbite   = 
+ | resistance_sleep       = 
+ | resistance_madness     = 
+ | resistance_death       = 
+ | alluring               = 
+ | beastlure              = 
+ | bewitching             = 
+ | darkness               = 
+ | classification = 
+ | race           = <!--[[Human]]-->
+ | role           = Hunt [[Omen]]
+ | affiliation    = [[Perfumer]]s
+ | predecessors   = [[Perfumer]]s
+ | successors     = <!--n/a-->
+ | partners       = <!--n/a-->
+ | children       = <!--n/a-->
+ | parents        = <!--n/a-->
+ | siblings       = <!--n/a-->
+ | relatives      = <!--n/a-->
+ | descendants    = <!--n/a-->
+ | ancestors      = <!--n/a-->
+}}
+{{Quote
+ | citation = Omenkiller Rollo
+ | speaker  = 
+ | text     = Once a famous perfumer, Rollo imbibed a physick to rid himself of emotion, thus enabling him to enact his nightmarish labor, hunting the Omen.
+}}
+
+'''Omenkillers''' are [[Enemies]] and optional [[Bosses]] in {{ER}}.
+
+==Overview==
+Omenkillers are stoic court [[Perfumer]]s who continue the grisly work of [[Omenkiller Rollo|Rollo]], a famed chemist of antiquity, who slaughtered accursed [[Omen]] with brutal efficiency after imbibing a [[Flask of Wondrous Physick|physick]] that stripped him of emotion.<ref>[[Omenkiller Rollo]]: ''"Spirit of Rollo, known as the first Omenkiller. Once a famous perfumer, Rollo imbibed a physick to rid himself of emotion, thus enabling him to enact his nightmarish labor, hunting the Omen."''</ref> They wear thick yellow aprons with front pouches and green masks with twisted [[horns]], carved to resemble the malevolent, smirking elder [[spirits]] that torment Omen in their nightmares.<ref>[[Omenkiller Robe]]: ''"Robe worn by the Omenkillers, butchers of twisted conscience. Its thick apron is worn in rememberance of Rollo, the progenitor of the Omenkillers and a perfumer of antiquity."''</ref><ref>[[Omensmirk Mask]]: ''"Mask with long, hideously twisted horns worn by the Omenkillers. Increases strength. Bears the smirking face of an elder, twisted in wicked delight. This visage is carved in the image of the evil spirits that haunt the Omen in their nightmares."''</ref> Their accessories include red cloth collars, golden chainlink necklaces, and brooches with overlapping rings that likely portray the [[Elden Ring (concept)|Elden Ring]]. The hideous severed horns crudely affixed to their paired great cleavers are trophies, gathered from their victims across the [[Lands Between]].<ref>[[Great Omenkiller Cleaver]]: ''"The blade of this huge, loathsome cleaver comprises a row of amputated Omen horns. Weapon of slaughter wielded by Omenkillers. The hideous horns cause blood loss, adding vibrant colors to the ongoing mayhem."''</ref> 
+
+Some Omenkillers joined the [[crusade]] against the [[hornsent]], later policing rebels at the [[Fort of Reprimand]].<!--
+
+==Characteristics==
+<!--Appearance, demeanor, abilities, gait
+
+==Background==
+<!--Lore-->
+
+==Locations==
+{{Enemy table|start}}
+{{Enemy table|row
+ | zone  = [[Wyndham Ruins]] ([[Altus Plateau]])
+ | hp    = 1,052
+ | runes = 1,153
+}}
+{{Enemy table|row
+ | zone  = [[Lower Capital Church]] ([[Leyndell, Royal Capital]])
+ | hp    = 1,507
+ | runes = 1,588
+}}
+{{Enemy table|row
+ | zone  = [[Prison Town]] ([[Volcano Manor]])
+ | hp    = 1,674
+ | runes = 1,769
+}}
+{{Enemy table|row
+ | zone  = [[Fort of Reprimand]]
+ | hp    = ?
+ | runes = ?
+}}
+{{Enemy table|end}}
+
+==Drops==
+{| class="article-table"
+|+
+!Item
+!Drop Rate
+!Notes
+|-
+|[[Great Omenkiller Cleaver]]
+|100%
+|Volcano Manor, only when first killed
+|-
+|[[Omensmirk Mask]]
+|100%
+|Leyndell, Royal Capital, only when first killed
+|-
+|[[Omenkiller Robe]]
+|100%
+|Altus Plateau, only when first killed
+|-
+|[[Omenkiller Long Gloves]]
+|100%
+|Altus Plateau, only when first killed
+|-
+|[[Omenkiller Boots]]
+|100%
+|Altus Plateau, only when first killed
+|-
+|}
+
+==Moveset==
+{| class="article-table mw-collapsible mw-collapsed"
+|+ Moveset &nbsp;
+! colspan="3" |Cleaver Slam
+|-
+|Phase
+|Slash
+|Cannot Be Parried
+|-
+| colspan="3" |They jump forward, slamming both cleavers down. This attack can be chained up to three times. Roll towards them to avoid the attack, as rolling away will likely still get you hit by the cleavers.
+|-
+! colspan="3" |Mask Flame
+|-
+|Phase
+|Slash
+|Cannot Be Parried
+|-
+| colspan="3" |They lower their cleavers and jut their head forward. A spark will come out of their mouths, followed by a conical stream of fire. Run away from them to avoid being hit by the flames.
+|-
+! colspan="3" |Mask Flame Retreat
+|-
+|Phase
+|Damage Type
+|Can Be Parried/Cannot Be Parried
+|-
+| colspan="3" |They lower their cleavers and jut their head forward. A spark will come out as they leap backwards, leaving behind a patch of fire in the ground.
+|}
+
+==Bosses==
+<tabber>
+|-|Village of the Albinaurics=
+{{Infobox Boss
+|title = Omenkiller<br>(Village of the Albinaurics)
+|japanese = 忌み潰し<br>(Imitsubushi)
+|image = ER Village of Albinaurics OK.jpg
+|position = left
+|location = [[Village of the Albinaurics]]
+|hp= 2,306
+|runes= 4,900
+|drops= [[Crucible Knot Talisman]]
+}}
+===Background===
+An Omenkiller found in the [[Village of the Albinaurics]] in [[Liurnia of the Lakes]], across the bridge from the [[Site of Grace]]. This Omenkiller appears to be responsible for the slaughter of the [[Albinaurics]] on the orders of [[Sir Gideon Ofnir, the All-Knowing]].<ref>[[Nepheli Loux, Warrior|Nepheli Loux]]: ''"I...can no longer trust in father... To think he'd order his men to enact such tragedy... Where is the justice he purports, in that?"''</ref> This Omenkiller is accompanied by three [[dog]]s. [[Nepheli Loux, Warrior]] is available as a summon for this [[boss]], provided she was spoken to at the entrance to the Village of the Albinaurics.
+
+A magic user with a guided bolt-like [[spell]] such as [[Glintstone Pebble]] has a particularly efficient tactical option for this Omenkiller: the area he is in also contains two cabins. The double-jump of [[Torrent]] can easily get you onto the lower cabin, and from there another double-jump can get you onto the roof of the taller one. From there, the Omenkiller will not be able to reach you with any of his attacks. He does often get rather close to the wall of the cabin which can be difficult for you to hit, and at longer range (usually after a fire-breath when he backs up a bit) he tends to dodge attacks, but carefully timing your shots should slowly but surely allow you to kill this enemy solo at little risk.
+|-|
+Perfumer's Grotto=
+{{Infobox Boss
+|title = Omenkiller<br>(Perfumer's Grotto)
+|japanese = 忌み潰し<br>(Imitsubushi)
+|image = ER Perfumer's Grotto OK.jpg
+|position = left
+|location = [[Perfumer's Grotto]]
+|hp= 2,306
+|runes= 8,400
+|drops= [[Great Omenkiller Cleaver]]
+}}
+===Background===
+An Omenkiller fought alongside [[Miranda the Blighted Bloom]] at the end of the [[Perfumer's Grotto]] on the [[Altus Plateau]]. 
+</tabber>
+
+==Notes==
+* At least one Omenkiller worked for [[Sir Gideon Ofnir, the All-Knowing]]. Another became one of [[Pidia]]'s [[puppets]], found in his storeroom at [[Three Sisters]].
+* The presence of Omenkillers among [[Messmer the Impaler|Messmer]]'s forces in the [[Shadow Realm]] confirms the Omen and [[Seedbed Curse]] predate [[Queen Marika]]'s attack on the [[hornsent]].
+
+==Trivia==
+* Internal Name: '''Slaughter'''
+* {{cut}} The Omenkiller was named '''Forsaken''' in {{1.00}}.
+* These enemies use the same model rigging as the [[w:c:darksouls:Capra Demon|Capra Demons]] from the first [[w:c:darksouls:Dark Souls|''Dark Souls'']] game. They have a very similar jumping slam attack. However, a Capra Demon only does one, whereas an Omenkiller would do it three times in a row. [[Stray]]s harass the player during the first encounter for both enemies in their respective games.
+
+==Gallery==
+<gallery position="center" spacing="small">
+Omenkiller concept art.jpg|Omenkiller [[Concept Art|concept art]]
+ER Enemy Omenkiller Fort of Reprimand.png|[[Fort of Reprimand]]
+ER Leyndell Royal Capital OK.jpg|Omenkiller outside [[Lower Capital Church]]
+ER Boss Omenkiller & Miranda the Blighted Bloom.png|Omenkiller and [[Miranda the Blighted Bloom]]
+ER Boss Omenkiller & Miranda the Blighted Bloom01.png
+</gallery>
+
+==See also==
+* [[Depraved Perfumer]]
+* [[Elder Lion]]
+* [[Horned Warrior]]
+* [[Miranda Blossom]]
+
+==References==
+{{Reflist|2}}
+{{Navbox Enemies}}
+{{Navbox Bosses}}
+
+[[Category:Enemies]]
+[[Category:Bosses]]
+[[Category:Factions]]
+
+[[ru:Убийца знамений]]

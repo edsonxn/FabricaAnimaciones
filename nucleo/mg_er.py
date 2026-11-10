@@ -44,6 +44,10 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
                                                  como su capa raída (er_morgott_atrocidades, 5-nov-2026)
   pila(etiquetas, remate)                        capas de cadáveres que caen sobre la muralla; el Árbol brilla encima
   subsuelo(arriba, abajo, sello, remate)         corte de la ciudad dorada y las celdas del subsuelo; el sello se estampa
+  cuenta_atras(numeros, final, sub_final, remate)  Tres/Duo/Unus: anillos rojos que se cierran sobre «Tú»; NIHIL late y vacía
+                                                 tu vida (er_mohg_atrocidades, 10-nov-2026)
+  reclutamiento(pasos, remate)                   escalera de sangre (Varré, dedo, paño, medalla); arriba, Mohg no responde
+  dinastia(cabeza, sub, filas, arriba, remate)   organigrama de la dinastía; la sangre de todas las ramas sube a la Madre Informe
   trono_vacio(nombres, remate)                   nombres que buscan el trono y se tachan; crece el muro de espinas
   cadena(eslabones, preso, amo, remate)          eslabones de la Orden al preso que se encienden en rojo por marca
 """
@@ -1883,5 +1887,163 @@ def cadena(eslabones, preso="Morgott", amo="La Orden Dorada", remate=None, titul
             t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
             _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 50), remate, fr, AMBAR, "mm", 255 * fin, sombra=False)
             im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+# ============================================================ er_mohg_atrocidades (10-nov-2026)
+def cuenta_atras(numeros=("Tres", "Duo", "Unus"), final="Nihil", sub_final="nada, en latín", titulo="El ritual de la sangre",
+                 remate="Tu herida, para la madre de la verdad", w=1500, h=700):
+    """La cuenta atrás de Mohg en latín. Marca k (< n): entra el número k y un anillo rojo se cierra un poco más alrededor del
+    «Tú» del centro. Marca n: NIHIL gigante en rojo que late tres veces y vacía tu barra de vida. Marca n+1: `remate`."""
+    ftit, fnum, fnih, fs, ftu = fuente("r", 40), fuente("r", 64), fuente("r", 150), fuente("i", 38), fuente("i", 34)
+    n = len(numeros)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 3)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, cy = M + w / 2, M + h / 2 + 40
+        u_nih = _eo((dt - mk[n]) / .35)
+        for i in range(n):
+            u = _eo((dt - mk[i]) / .6)
+            if u <= 0:
+                continue
+            r = 250 - 55 * i - 20 * u
+            al = int(a0 * (.55 + .45 * u) * (1 - .6 * u_nih))
+            d.ellipse((cx - r, cy - r * .62, cx + r, cy + r * .62), outline=ROJO + (al,), width=6)
+            ang = math.radians(-150 + 60 * i)
+            nx, ny = cx + math.cos(ang) * (r + 120), cy + math.sin(ang) * (r * .62 + 70)
+            _texto(d, (nx, ny), numeros[i].upper(), fnum, AMBAR if mk[i + 1] > dt else ORO, "mm", 255 * u * (1 - .7 * u_nih),
+                   track=4)
+        if u_nih < 1:
+            _texto(d, (cx, cy), "Tú", ftu, PERGAMINO, "mm", a0 * (1 - u_nih))
+        if u_nih > 0:
+            lat = sum(max(0.0, 1 - abs((dt - mk[n] - .25 - .7 * j) / .18)) for j in range(3))
+            capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dc = ImageDraw.Draw(capa)
+            _texto(dc, (cx, cy - 10), final.upper(), fnih, ROJO, "mm", 255 * u_nih, track=int(30 - 18 * u_nih), sombra=False)
+            im.alpha_composite(_brillo(capa, 14 + 10 * lat, 1.4 + 1.2 * lat))
+            d = ImageDraw.Draw(im)
+            _texto(d, (cx, cy + 100), sub_final, fs, GRIS, "mm", 255 * u_nih)
+            golpes = sum(1 for j in range(3) if dt - mk[n] > .25 + .7 * j)
+            vid = 1 - .3 * golpes
+            bx, by, bw = cx - 300, M + h - 70, 600
+            d.rectangle((bx, by, bx + bw, by + 14), outline=ORO_OSC + (int(200 * u_nih),), width=2)
+            d.rectangle((bx + 2, by + 2, bx + 2 + (bw - 4) * vid, by + 12), fill=(150, 30, 30, int(230 * u_nih)))
+        u_r = _eo((dt - mk[n + 1]) / .5)
+        if u_r > 0:
+            _texto(d, (cx, M + h - 120), remate, fs, PERGAMINO, "mm", 255 * u_r)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def reclutamiento(pasos, remate="Y Mohg nunca responde", titulo="El reclutamiento de Varré", w=1600, h=640):
+    """Escalera de sangre: pasos = [(nombre, sub)]. Marca k: sube el escalón k (una gota cae y lo tiñe de rojo); una línea de
+    sangre une los escalones. Marca n: arriba aparece Mohg (cabeza con cuernos) y `remate`."""
+    ftit, fn_, fs = fuente("r", 40), fuente("r", 40), fuente("i", 30)
+    n = len(pasos)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        sx = (w - 260) / max(1, n)
+        prev = None
+        for i, (nom, sub) in enumerate(pasos):
+            u = _eo((dt - mk[i]) / .5)
+            if u <= 0:
+                continue
+            x0 = M + 60 + sx * i
+            y0 = M + h - 110 - (h - 330) * i / max(1, n - 1)
+            d.rectangle((x0, y0, x0 + sx - 24, y0 + 16), fill=(30, 12, 10, int(240 * u)), outline=ORO_OSC + (int(255 * u),), width=2)
+            tinte = _eo((dt - mk[i] - .35) / .5)
+            d.rectangle((x0 + 2, y0 + 2, x0 + 2 + (sx - 28) * tinte, y0 + 14), fill=ROJO + (int(230 * u),))
+            if dt - mk[i] < .35:
+                gy = y0 - 200 + 200 * max(0.0, (dt - mk[i]) / .35)
+                d.ellipse((x0 + sx / 2 - 9, gy - 14, x0 + sx / 2 + 9, gy + 6), fill=ROJO + (230,))
+            _texto(d, (x0 + (sx - 24) / 2, y0 - 16), nom, fn_, AMBAR if mk[i + 1] > dt else ORO, "mb", 255 * u)
+            if sub:
+                _texto(d, (x0 + (sx - 24) / 2, y0 + 30), sub, fs, GRIS, "mt", 255 * u)
+            if prev:
+                _linea(d, prev, (x0 + 6, y0 + 8), u, ROJO, 255 * u, 3)
+            prev = (x0 + sx - 30, y0 + 8)
+        u_r = _eo((dt - mk[n]) / .6)
+        if u_r > 0:
+            tx, ty = M + w - 110, M + 190
+            _cuernos(d, tx, ty, 34, ROJO, 220 * u_r, 3)
+            _texto(d, (tx, ty + 56), "Mohg", fn_, ROJO, "mt", 255 * u_r)
+            if prev:
+                _linea(d, prev, (tx - 40, ty + 40), u_r, ROJO, 160 * u_r, 2)
+            _texto(d, (M + w / 2 - 80, M + 130), remate, fs, PERGAMINO, "mt", 255 * _eo((dt - mk[n] - .5) / .5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def dinastia(cabeza="Mohg", sub_cabeza="Señor de la Sangre", filas=(), arriba="La Madre Informe", sub_arriba="un dios exterior",
+             remate="Todos sangran para ella", titulo="La Dinastía Mohgwyn", w=1600, h=720):
+    """Organigrama. Marca 0: Mohg (cabeza con cuernos). Marcas 1..n: cada rama de `filas` [(nombre, sub)] cuelga de él con
+    una línea de sangre. Marca n+1: encima aparece `arriba`, una mancha sin forma que late, y la sangre de TODAS las ramas
+    sube por las líneas hasta ella. Marca n+2: `remate`."""
+    ftit, fn_, fs, fgr = fuente("r", 40), fuente("r", 34), fuente("i", 26), fuente("r", 50)
+    n = len(filas)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 4)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, cy = M + w / 2, M + 330
+        u0 = _eo((dt - mk[0]) / .5)
+        u_m = _eo((dt - mk[n + 1]) / .7)
+        sp = (w - 120) / max(1, n)
+        by = M + h - 150
+        for i, (nom, sub) in enumerate(filas):
+            u = _eo((dt - mk[i + 1]) / .5)
+            if u <= 0:
+                continue
+            x = M + 60 + sp * (i + .5)
+            _linea(d, (cx, cy + 140), (x, by - 46), u, ROJO, 200 * u, 3)
+            if u_m > 0:
+                for k in range(3):
+                    v = ((dt - mk[n + 1]) * .9 + k / 3 + i * .13) % 1
+                    px, py = x + (cx - x) * v, by - 46 + (cy + 140 - by + 46) * v
+                    d.ellipse((px - 5, py - 5, px + 5, py + 5), fill=ROJO + (int(230 * u_m),))
+            d.ellipse((x - 9, by - 54, x + 9, by - 36), fill=(14, 12, 9, int(255 * u)), outline=ROJO + (int(255 * u),), width=3)
+            lns = _partir(d, nom, fn_, sp - 16)
+            for k, ln in enumerate(lns):
+                _texto(d, (x, by - 20 + k * 38), ln, fn_, AMBAR if mk[i + 2] > dt >= mk[i + 1] else PERGAMINO, "mt", 255 * u)
+            if sub:
+                _texto(d, (x, by + 26 + 38 * (len(lns) - 1)), sub, fs, GRIS, "mt", 255 * u)
+        if u0 > 0:
+            _cuernos(d, cx, cy - 10, 40, ROJO if u_m > .5 else ORO, 255 * u0, 4)
+            _texto(d, (cx, cy + 46), cabeza, fgr, ORO, "mt", 255 * u0)
+            _texto(d, (cx, cy + 102), sub_cabeza, fs, GRIS, "mt", 255 * u0)
+        if u_m > 0:
+            lat = .5 + .5 * math.sin((dt - mk[n + 1]) * 4.2)
+            capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dc = ImageDraw.Draw(capa)
+            my = M + 150
+            for k in range(9):
+                ang = k * 0.7 + dt * (.6 + .1 * k)
+                rx, ry = cx + math.cos(ang) * 60, my + math.sin(ang * 1.3) * 18
+                rr = 28 + 10 * math.sin(dt * 2 + k)
+                dc.ellipse((rx - rr, ry - rr * .7, rx + rr, ry + rr * .7), fill=(120 + int(60 * lat), 18, 22, int(150 * u_m)))
+            im.alpha_composite(_brillo(capa, 18, 1.6))
+            d = ImageDraw.Draw(im)
+            _texto(d, (cx + 150, my - 10), arriba, fn_, ROJO, "lm", 255 * u_m)
+            _texto(d, (cx + 150, my + 28), sub_arriba, fs, GRIS, "lm", 255 * u_m)
+            _linea(d, (cx, cy - 70), (cx, my + 30), u_m, ROJO, 200 * u_m, 3)
+        u_r = _eo((dt - mk[n + 2]) / .5)
+        if u_r > 0:
+            _texto(d, (cx - 150, M + 150), remate, fs, PERGAMINO, "rm", 255 * u_r)
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

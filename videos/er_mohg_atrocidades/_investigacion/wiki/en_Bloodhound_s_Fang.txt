@@ -1,0 +1,294 @@
+{{Infobox Weapon
+| title         = Bloodhound's Fang
+| japanese      = 猟犬の長牙<br/>(Ryōken no Nagakiba)
+| image         = ER Icon weapon Bloodhound's Fang.png
+| type          = Curved Greatsword
+| attack_type   = Slash
+| skills        = Bloodhound's Finesse
+| fp_cost       = 8 ( - 12)
+| weight        =  11.5
+| buy_price     = 
+| sell_price    = 500
+
+| physical_power    = 141
+| magic_power       = 0
+| fire_power        = 0
+| lightning_power   = 0
+| holy_power        = 0
+| critical          = 100
+| physical_guarded  = 68.0
+| magic_guarded     = 36.0
+| fire_guarded      = 36.0
+| lightning_guarded = 36.0
+| holy_guarded      = 36.0
+| guard_boost       = 44
+| range             = 
+| sorcery_scaling   = 
+| incant_scaling    = 
+
+| str_scale     = D
+| dex_scale     = C
+| int_scale     = -
+| fai_scale     = -
+| arc_scale     = -
+| str_req       = 18
+| dex_req       = 17
+| int_req       = 0
+| fai_req       = 0
+| arc_req       = 0
+| effects       =Causes [[blood loss]] buildup (55)
+}}
+
+The '''Bloodhound's Fang''' is a [[Curved Greatswords|Curved Greatsword]], a [[Melee Armaments|melee armament]] {{in|ER}}.
+
+==Description==
+{{Description
+|EN_line1= Curved greatsword with a gently undulating blade wielded by [[Bloodhound Knight]]s.
+|EN_line2= A fearsome blade capable of brutal airborne attacks.
+|EN_line3= [[Unique Skill]]: [[Bloodhound's Finesse]]
+|EN_line4= [[Slash]] upwards with the Bloodhound's Fang, using the momentum of the strike to perform a backwards somersault and gain some distance from foes. Follow up with a strong attack to perform the [[Bloodhound's Step]] attack.
+|JP_line1= 緩やかに波打つ大型の曲剣<br/>猟犬騎士たちの得物
+|JP_line2= ジャンプ攻撃にも優れる強襲の剣
+|JP_line3= 専用戦技「猟犬の剣技」
+|JP_line4= 長牙を大きく斬り上げながら<br/>回転して敵との距離を取る戦技<br/>強攻撃で、猟犬のステップからの追撃を行う
+}}
+
+==Acquisition==
+*Dropped by [[Bloodhound Knight Darriwil]] in the [[Forlorn Hound Evergaol]] in Limgrave. [[Blaidd the Half-Wolf]] will direct the [[The Tarnished (Protagonist)|Tarnished]] here as part of his questline, and will be available for summoning in the Evergaol before awakening Darriwil after doing so.
+
+==Upgrading==
+{{Template:Weapon_Upgrades_Somber
+|name                 =Bloodhound's Fang
+
+|+0_atk_physical      =141
+|+0_atk_magic         =0
+|+0_atk_fire          =0
+|+0_atk_lightning     =0
+|+0_atk_holy          =0
+|+0_crit              =100
+|+0_guard_physical    =68.0
+|+0_guard_magic       =36.0
+|+0_guard_fire        =36.0
+|+0_guard_lightning   =36.0
+|+0_guard_holy        =36.0
+|+0_guard_boost       =44
+|+0_scale_str         =D
+|+0_scale_dex         =C
+|+0_scale_int         =
+|+0_scale_fth         =
+|+0_scale_arc         =
+|+0_passive           =Causes blood loss buildup (55)
+
+|+1_atk_physical      =161
+|+1_atk_magic         =0
+|+1_atk_fire          =0
+|+1_atk_lightning     =0
+|+1_atk_holy          =0
+|+1_crit              =100
+|+1_guard_physical    =68.0
+|+1_guard_magic       =36.0
+|+1_guard_fire        =36.0
+|+1_guard_lightning   =36.0
+|+1_guard_holy        =36.0
+|+1_guard_boost       =44
+|+1_scale_str         =D
+|+1_scale_dex         =C
+|+1_scale_int         =
+|+1_scale_fth         =
+|+1_scale_arc         =
+|+1_passive           =Causes blood loss buildup (55)
+|+1_runes             =640
+
+|+2_atk_physical      =181
+|+2_atk_magic         =0
+|+2_atk_fire          =0
+|+2_atk_lightning     =0
+|+2_atk_holy          =0
+|+2_crit              =100
+|+2_guard_physical    =68.0
+|+2_guard_magic       =36.0
+|+2_guard_fire        =36.0
+|+2_guard_lightning   =36.0
+|+2_guard_holy        =36.0
+|+2_guard_boost       =44
+|+2_scale_str         =D
+|+2_scale_dex         =C
+|+2_scale_int         =
+|+2_scale_fth         =
+|+2_scale_arc         =
+|+2_passive           =Causes blood loss buildup (55)
+|+2_runes             =960
+
+|+3_atk_physical      =202
+|+3_atk_magic         =0
+|+3_atk_fire          =0
+|+3_atk_lightning     =0
+|+3_atk_holy          =0
+|+3_crit              =100
+|+3_guard_physical    =68.0
+|+3_guard_magic       =36.0
+|+3_guard_fire        =36.0
+|+3_guard_lightning   =36.0
+|+3_guard_holy        =36.0
+|+3_guard_boost       =45
+|+3_scale_str         =D
+|+3_scale_dex         =C
+|+3_scale_int         =
+|+3_scale_fth         =
+|+3_scale_arc         =
+|+3_passive           =Causes blood loss buildup (55)
+|+3_runes             =1,280
+
+|+4_atk_physical      =222
+|+4_atk_magic         =0
+|+4_atk_fire          =0
+|+4_atk_lightning     =0
+|+4_atk_holy          =0
+|+4_crit              =100
+|+4_guard_physical    =68.0
+|+4_guard_magic       =36.0
+|+4_guard_fire        =36.0
+|+4_guard_lightning   =36.0
+|+4_guard_holy        =36.0
+|+4_guard_boost       =45
+|+4_scale_str         =D
+|+4_scale_dex         =C
+|+4_scale_int         =
+|+4_scale_fth         =
+|+4_scale_arc         =
+|+4_passive           =Causes blood loss buildup (55)
+|+4_runes             =1,600
+
+|+5_atk_physical      =243
+|+5_atk_magic         =0
+|+5_atk_fire          =0
+|+5_atk_lightning     =0
+|+5_atk_holy          =0
+|+5_crit              =100
+|+5_guard_physical    =68.0
+|+5_guard_magic       =36.0
+|+5_guard_fire        =36.0
+|+5_guard_lightning   =36.0
+|+5_guard_holy        =36.0
+|+5_guard_boost       =46
+|+5_scale_str         =D
+|+5_scale_dex         =C
+|+5_scale_int         =
+|+5_scale_fth         =
+|+5_scale_arc         =
+|+5_passive           =Causes blood loss buildup (55)
+|+5_runes             =1,920
+
+|+6_atk_physical      =
+|+6_atk_magic         =
+|+6_atk_fire          =
+|+6_atk_lightning     =
+|+6_atk_holy          =
+|+6_crit              =
+|+6_guard_physical    =
+|+6_guard_magic       =
+|+6_guard_fire        =
+|+6_guard_lightning   =
+|+6_guard_holy        =
+|+6_guard_boost       =
+|+6_scale_str         =
+|+6_scale_dex         =
+|+6_scale_int         =
+|+6_scale_fth         =
+|+6_scale_arc         =
+|+6_passive           =
+|+6_runes             =
+
+|+7_atk_physical      =
+|+7_atk_magic         =
+|+7_atk_fire          =
+|+7_atk_lightning     =
+|+7_atk_holy          =
+|+7_crit              =
+|+7_guard_physical    =
+|+7_guard_magic       =
+|+7_guard_fire        =
+|+7_guard_lightning   =
+|+7_guard_holy        =
+|+7_guard_boost       =
+|+7_scale_str         =
+|+7_scale_dex         =
+|+7_scale_int         =
+|+7_scale_fth         =
+|+7_scale_arc         =
+|+7_passive           =
+|+7_runes             =
+
+|+8_atk_physical      =
+|+8_atk_magic         =
+|+8_atk_fire          =
+|+8_atk_lightning     =
+|+8_atk_holy          =
+|+8_crit              =
+|+8_guard_physical    =
+|+8_guard_magic       =
+|+8_guard_fire        =
+|+8_guard_lightning   =
+|+8_guard_holy        =
+|+8_guard_boost       =
+|+8_scale_str         =
+|+8_scale_dex         =
+|+8_scale_int         =
+|+8_scale_fth         =
+|+8_scale_arc         =
+|+8_passive           =
+|+8_runes             =
+
+|+9_atk_physical      =
+|+9_atk_magic         =
+|+9_atk_fire          =
+|+9_atk_lightning     =
+|+9_atk_holy          =
+|+9_crit              =
+|+9_guard_physical    =
+|+9_guard_magic       =
+|+9_guard_fire        =
+|+9_guard_lightning   =
+|+9_guard_holy        =
+|+9_guard_boost       =
+|+9_scale_str         =
+|+9_scale_dex         =
+|+9_scale_int         =
+|+9_scale_fth         =
+|+9_scale_arc         =
+|+9_passive           =
+|+9_runes             =
+
+|+10_atk_physical      =
+|+10_atk_magic         =
+|+10_atk_fire          =
+|+10_atk_lightning     =
+|+10_atk_holy          =
+|+10_crit              =
+|+10_guard_physical    =
+|+10_guard_magic       =
+|+10_guard_fire        =
+|+10_guard_lightning   =
+|+10_guard_holy        =
+|+10_guard_boost       =
+|+10_scale_str         =
+|+10_scale_dex         =
+|+10_scale_int         =
+|+10_scale_fth         =
+|+10_scale_arc         =
+|+10_passive           =
+|+10_runes             =
+
+}}
+
+==See Also==
+* [[Ash of War: Bloodhound's Step]]
+* [[Bloodhound Knight Armor]]
+* [[Bloodhound Knight Floh]]
+* [[Bloodhound Knight Gauntlets]]
+* [[Bloodhound Knight Greaves]]
+* [[Bloodhound Knight Helm]]
+
+{{Navbox Weapons|melee}}
+
+[[ru:Клык ищейки]]

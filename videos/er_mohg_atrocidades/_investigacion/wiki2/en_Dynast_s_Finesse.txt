@@ -1,0 +1,46 @@
+{{Infobox Item
+<!-- Identity: -->
+  | title                       = Unique Skill: <br>Dynast's Finesse
+  | japanese                    = 
+  | image                       = ER Icon weapon Bloody Helice.png
+  | caption                     =
+<!-- General Information: -->
+  | type                        = Unique Skill
+  | tool_type                   = 
+  | weight                      =
+  | attack_type                 = 
+  | poison_type                 = 
+  | max_held                    =
+  | max_stored                  = 
+<!-- Base stat requirements: -->
+  | fp_cost                     = - (- -)
+  | hp_cost                     = 
+  | stamina_cost                = 
+  | slots_used                  = 
+  | default_weapon              = [[Bloody Helice]]
+  <!--| move_property               = Chargeable-->
+  | combo                       = ?
+  | charge                      = ?
+  | channel                     = ?
+  | affinity                    =
+  | item_effect                 = 
+<!-- Attack counters: -->
+  | deflectable                 = ?
+  | reflectable                 = ?
+}}
+'''{{PAGENAME}}''' is a [[Skill]] in {{ER}}. It is exclusive to the [[Bloody Helice]].
+
+==Description==
+{{Description
+| EN_line1 =Unique Skill : Dynast's Finesse
+| EN_line2 = Nimbly avoid an attack, securing some distance from foes. Follow up with a strong attack to perform a sudden lunge, and press strong attack again to perform a sweeping slice.
+| JP_line1 = 
+| JP_line2 = 
+}}
+
+==Effect==
+
+==Notes==
+
+[[Category:Skill]]
+[[Category:Unique Skill]]

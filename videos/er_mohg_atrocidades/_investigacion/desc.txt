@@ -1,0 +1,72 @@
+﻿===== en_Blood_Tax.txt
+    |EN=This Ash of War grants an armament the Blood affinity and the following skill: "Blood Tax: Blood Oath skill granted by the Lord of Blood. Twist to build power, then unleash a flurry of thrusts that rob the target of both their blood and their HP." Usable on armaments capable of thrusting (colossal weapons excepted). |JP=武器に戦技と属性を付与できる戦灰 付与戦技は以下、付与属性は「血」 戦技「血の徴収」 血の君主の分け与える力、血盟戦技のひとつ 回転から、一気に連撃の突きを繰り出し 攻撃した相手から、血と共にＨＰを奪う 刺突可能な武器に使用できる （特大を除く） |CN= |DE= |FR= |IT= |KR= |PL= |BR= |RU= |ES= |TH= |TW=
+===== en_Bloodboil_Aromatic.txt
+    |EN_line1=Forbidden art of depraved perfumers.<br> Craftable with a perfume bottle. |EN_line2=Uses FP to enter a temporary state of fervor, raising maximum attack power and stamina while also increasing damage received. |EN_line3="Even upon the battlefield, do you fear being wounded? Take a good look. Your limbs are frozen stiff." |JP_line1= |JP_line2= |JP_line3= 
+===== en_Bloodflame_Blade.txt
+    | EN_line1 = A Blood Oath incantation, granted by the [[Mohg, Lord of Blood|Lord of Blood]]. | EN_line2 = Engulfs [[Melee Armaments|armament]] held in the right hand with [[bloodflame]]. This incantation can be cast while in motion. | EN_line3 = After dealing damage, bloodflame continues to build up onset of [[blood loss]] for a very short time. | JP_line1 = [[Mohg, Lord of Blood|血の君主]]の分け与える力、血盟祈祷のひとつ | JP_line2 = 右手の武器に、血炎を纏わせる<br>足を止めずに使用できる | JP_line3 = 血炎は、ダメージを与えた後、ごく短時間の間<br>出血の状態異常を細かく蓄積する効果がある
+===== en_Bloodflame_Talons.txt
+    | EN_line1 = A Blood Oath incantation, granted by the [[Mohg, Lord of Blood|Lord of Blood]]. | EN_line2 = Creates [[bloodflame]] lacerations before the caster, which explode in an instant. This incantation can be cast repeatedly. | EN_line3 = After dealing damage, bloodflame continues to build up onset of [[blood loss]] for a very short time. | JP_line1 = [[Mohg, Lord of Blood|血の君主]]の分け与える力、血盟祈祷のひとつ | JP_line2 = 前方に血炎の爪痕を生じ、次の瞬間に爆発する<br>連続で使用することができる | JP_line3 = 血炎は、ダメージを与えた後、ごく短時間の間<br>出血の状態異常を細かく蓄積する効果がある
+===== en_Bloodhound_s_Fang.txt
+    |EN_line1= Curved greatsword with a gently undulating blade wielded by [[Bloodhound Knight]]s. |EN_line2= A fearsome blade capable of brutal airborne attacks. |EN_line3= [[Unique Skill]]: [[Bloodhound's Finesse]] |EN_line4= [[Slash]] upwards with the Bloodhound's Fang, using the momentum of the strike to perform a backwards somersault and gain some distance from foes. Follow up with a strong attack to perform the [[Bloodhound's Step]] attack. |JP_line1= 緩やかに波打つ大型の曲剣<br/>猟犬騎士たちの得物 |JP_line2= ジャンプ攻撃にも優れる強襲の剣 |JP_line3= 専用戦技「猟犬の剣技」 |JP_line4= 長牙を大きく斬り上げながら<br/>回転して敵との距離を取る戦技<br/>強攻撃で、猟犬のステップからの追撃を行う
+===== en_Bloody_Finger.txt
+    |EN_line1=Item for [[online]] play.<br/>(Can also be used from the Multiplayer menu.) |EN_line2=Attempts an [[invasion]] of another [[player]]'s world.<br/>If successful, your objective will be to defeat the [[Host of Fingers]] of the world to which you were summoned. |EN_line3=The nail of this [[finger]] is shot through with streaks of fresh, glistening [[blood]]. The finger's sickly pale skin feels nothing now, but the nail still aches with sweetest pain. |JP_line1=オンラインプレイ専用アイテム<br/>（マルチプレイメニューからも使用できる） |JP_line2=他プレイヤーの世界に侵入を試みる<br/>侵入者（血の指）として侵入し<br/>その世界の「鉤指の主」の撃破が目的となる |JP_line3=艶めく鮮血に、その爪を侵された指<br/>肌は異様に青ざめ、感覚を失い<br/>ただ爪だけが、甘く疼いている
+===== en_Bloody_Helice.txt
+    |EN_line1= Ominous piercing sword with a winding blade. Carried by the [[Sanguine Noble|noble servants]] of the [[Mohg, Lord of Blood|Lord of Blood]]. |EN_line2= Designed to bore into flesh, causing severe [[blood loss]] at the wound. The extracted blood trickles gracefully down the length of the blade. |EN_line3= [[Unique Skill: Dynast's Finesse]] |EN_line4= Nimbly avoid an attack, securing some distance from foes. Follow up with a strong attack to perform a sudden lunge, and press strong attack again to perform a sweeping slice. |JP_line1= 螺旋の刃を持つ異形の刺剣<br/>[[Mohg, Lord of Blood|血の君主]]に[[Sanguine Noble|仕える貴族]]たちの得物 |JP_line2= その刃は、傷口を抉り[[Blood Loss|出血]]を強い<br/>ゆっくりと美しく、その血を滴らせる |JP_line3= 専用戦技「王朝剣技」 |JP_line4= 華麗に攻撃を回避し、敵と距離を取る戦技<br/>強攻撃で、一気に前進する突きに繋げられ<br/>更なる強攻撃は斬り払いとなる
+===== en_Cleanrot_Knight_Finlay.txt
+    |EN_line1= [[Legendary Ashen Remains (Achievement/Trophy)|Legendary ashen remains]]. Use to summon the [[spirit]] of the [[Cleanrot Knight]] Finlay. |EN_line2= [[Finlay]] was one of the few survivors of the [[Battle of Aeonia]], who in an unimaginable act of heroism carried the [[Sleep|slumbering]] [[demigod]] [[Malenia]] all the way back to the [[Haligtree]]. She managed the feat alone, fending off all manner of foes along the way. |JP_line1= 伝説の遺灰」のひとつ<br/>貴腐の騎士、フィンレイの霊体を召喚する |JP_line2= フィンレイは、エオニアの戦いの生き残りであり<br/>眠れるマレニアを聖樹に持ち帰った英雄である<br/>彼女は、たった一人、あらゆる敵を退けながら<br/>遥かな道を歩んだのだ
+===== en_Lord_of_Blood_s_Exultation.txt
+    | EN_line1 = A talisman depicting the exultation of the [[Mohg, Lord of Blood|Lord of Blood]]. | EN_line2 = Raises [[attack power]] when [[blood loss]] occurs in the vicinity. | EN_line3 = "Render up your offerings of blood to your Lord. Drench my [[Miquella|consort's]] chamber. Slake his [[Cocoon of the Empyrean|cocoon]]'s thirst. His awakening shall herald the dawn of our [[Mohgwyn Dynasty|dynasty]]." | JP = 
+===== en_Lord_of_Blood_s_Favor.txt
+    | EN_line1 = Pure white oath-cloth given by [[White Mask Varré|Varré]]. The final trial to be anointed a [[Pureblood Knights|Knight]] of [[Mohg, Lord of Blood]]. | EN_line2 = "Soak the cloth with a [[Finger Maidens|maiden]]'s blood... The [[Blood Loss|blood]] of anyone's maiden will do. You are maidenless, after all." | JP_line1 = ヴァレーから渡された純白の誓布<br/>血の君主、モーグの騎士となる最後の試し | JP_line2 = その布を、巫女の血で染めてきてください<br/>…誰の巫女の血でも構いませんよ<br/>貴方は巫女無しなのですから
+===== en_Mohg_Lord_of_Blood_dialogue.txt
+   | You must abide alone a while.
+   | {{cut}} No one else will take you.
+   | {{cut}} Never again, I swear!
+   | To the birthplace of our dynasty!
+   | Miquella is mine and mine alone.
+   | Ahh, I can see it, as clear as day!
+   | To the nurturing chalice of Miquella the Empyrean...
+   | The rebirth of Miquella the Empyrean draws close.
+   | Stay away from my great lord!
+   | To my blood, to our coming dynasty.
+===== en_Mohg_s_Great_Rune.txt
+    | EN_line1 = The [[Great Rune]] of the shardbearer [[Mohg, Lord of Blood|Mohg]], devoid of any benediction. | EN_line2 = Seek the [[Divine Tower of East Altus]], which stands beyond the great bridge from [[Leyndell, Royal Capital|Leyndell's]] eastern ward. | JP_line1 = 破片の君主、[[Mohg, Lord of Blood|モーグ]]の大ルーン<br/>だが、恩恵の力は失われている | JP_line2 = [[Leyndell, Royal Capital|ローデイル]]東街区から、高き橋梁を渡り<br/>[[Divine Tower of East Altus|東アルターの神授塔]]に向かうがよい
+    | EN_line1 = A [[Great Rune]] of the shardbearer [[Mohg, Lord of Blood|Mohg]].<br/>Its blessing grants a blessing of blood to summoned [[Invaders|phantoms]], and imparts a [[phantom Great Rune]] upon successful [[invasion]]. | EN_line2 = Mohg and [[Morgott]] are twin brothers, and their Great Runes are naturally similar. | EN_line3 = But Mohg's rune is soaked in [[Accursed Blood|accursed blood]], from his devout love for the wretched mire that he was born into far below the earth. | JP_line1 = 破片の君主、[[Mohg, Lord of Blood|モーグ]]の大ルーン<br/>恩恵により、召喚した霊体に血の祝福を与え<br/>また侵入時に[[Phantom Great Rune|「大ルーンの幻影」]]を入手する | JP_line2 = モーグは、[[Morgott, the Omen King|モーゴット]]の双子の兄弟であり<br/>その大ルーンもまた、似通っている | JP_line3 = しかしモーグは、それを呪われた血で染めた<br/>地の底で、生まれついた穢れを愛したのだ
+===== en_Mohgwyn_s_Sacred_Spear.txt
+    | EN_line1 = Trident of [[Mohg, Lord of Blood]]. A [[Bloodfiend's Sacred Spear|sacred spear]] that will come to symbolize his [[Mohgwyn Dynasty|dynasty]]. | EN_line2 = As well as serving as a [[weapon]], it is an instrument of communion with an [[Outer God|outer god]] who bestows power upon [[Accursed Blood|accursed blood]]. The [[Formless Mother|mother of truth]] desires a wound. | EN_line3 = [[Unique Skills|Unique Skill]]: [[Bloodboon Ritual]] | EN_line4 = Raise the sacred spear and [[pierce]] the body of the [[Formless Mother]]. Stab up to three times, creating explosions of [[blood]] with each thrust. This skill will coat the armament with [[bloodflame]] for a while. | JP_line1 = 血の君主モーグの、三又の槍<br>新王朝の象徴となるべき聖槍 | JP_line2 = それは、呪われた血に力を与える<br>外なる神との交信の祭具でもある<br>真実の母は、傷を望んでいるのだ | JP_line3 = 専用戦技「血授の儀」 | JP_line4 = 聖槍を掲げ、姿なき母の身体を刺す戦技<br>三度まで刺し、刺す度に血の爆発を生じる<br>聖槍は血炎を纏い、それはしばらく継続する
+===== en_Morgott_the_Omen_King_dialogue.txt
+   | style = "text-align: left; background-color: black; color: white;" | '''English dialogue''' &nbsp;
+   | What is thy business with these thrones?
+   | The twin prodigies, Miquella and Malenia.
+   | Pillagers. Emboldened by the flame of ambition.
+   | Have it writ upon thy meagre grave:
+   | Felled by King Morgott! Last of all kings.
+   | Have it writ upon thy meagre grave:
+   | Felled by King Morgott! Last of all kings.
+   | The thrones...stained by my curse...
+   | Thy part in this shall not be forgiven.
+   | May the curse seep to thy very soul.
+   | Tarnished, thou'rt but a fool.
+   | The Erdtree wards off all who deign approach.
+   | We are... we are all forsaken.
+   | None may claim the title of Elden Lord.
+   | Thy deeds shall be met with failure, just as I.
+   | What is thy business with these thrones?
+   | The twin prodigies, Miquella and Malenia.
+   | Pillagers. Emboldened by the flame of ambition.
+   | Have it writ upon thy meagre grave:
+   | Felled by King Morgott! Last of all kings.
+   | Tarnished, thou art mistaken.
+   | The Erdtree welcometh no man.
+   | No one will be Elden Lord again.
+   | Have it writ upon thy meagre grave:
+   | Felled by King Morgott! Elden Lord!
+   | May the curse seep to thy very soul.
+   | An apt reward for thy brash ambition.
+   | style = "text-align: left; background-color: black; color: white;" | '''Japanese dialogue''' &nbsp;
+===== en_Pureblood_Knight_s_Medal.txt
+    | EN_line1 = Proof that one is a glorious [[Pureblood Knights|knight]] of the new [[Mohgwyn Dynasty|Dynasty of Mohgwyn]] that the [[Lord of Blood]] will inaugurate. | EN_line2 = Use to be granted audience with [[Mohg, Lord of Blood|Mohg]]. Only, it is not yet time. | EN_line3 = For Mohg yet [[Sleep|slumbers]] beside the [[Miquella of the Haligtree|Divinity]]. Be patient. The new dynasty is nigh. | JP_line1 = 血の君主の築かんとする新しい王朝<br/>モーグウィンの栄誉ある騎士の証 | JP_line2 = 使用することで、モーグとの謁見が叶うが<br/>今はまだその時ではない | JP_line3 = モーグはまだ、神と共に閨にいる<br/>待つが良い。王朝の開闢を
+===== en_Remembrance_of_the_Blood_Lord.txt
+    | EN_line1 = Remembrance of [[Mohg, Lord of Blood]], hewn into the [[Erdtree]]. | EN_line2 = The power of its namesake can be unlocked by the [[Finger Reader Enia|Finger Reader]].<br/>Alternatively, it can be used to gain a great bounty of [[runes]]. | EN_line3 = Wishing to raise [[Miquella]] to full [[Gods|godhood]], Mohg wished to be his consort, taking the role of [[Elden Lord|monarch]].<br/>But no matter how much of his [[Blood|bloody]] bedchamber he tried to share, he received no response from the young [[Empyrean]]. | EN_line4 = | JP_line1 = 黄金樹に刻まれた<br/>血の君主、モーグの追憶 | JP_line2 = 指読みにより、主の力を得ることができる<br/>また、使用により莫大なルーンを得ることもできる | JP_line3 = ミケラを神とし、自らはその伴侶として王となる<br/>そのために、血の閨をどれほど共にしようとも<br/>幼き神人は何も応えなかった | JP_line4 =
+===== en_Swarm_of_Flies.txt
+    | EN_line1 = A Blood Oath incantation, shared from the [[Mohg, Lord of Blood|Lord of Blood's]] power. | EN_line2 = Releases a swarm of bloodflies before the caster to assault foes. The vile swarm deals damage and builds up onset of [[blood loss]]. This incantation can be cast while in motion. | EN_line3 = The [[Mohgwyn Palace|new palace]] of the Lord of Blood lies in a swamp of festering blood, and these flies are said to spawn from [[Blood-Tainted Excrement|excrement]] in that land. | JP_line1 = [[Mohg, Lord of Blood|血の君主]]の分け与える力、血盟祈祷のひとつ | JP_line2 = 血蠅の群れを前方に放つ<br>蠅どもは敵を襲い、ダメージと共に出血を蓄積する<br>足を止めずに、またしゃがんだままでも使用できる | JP_line3 = 血の君主の[[Mohgwyn Palace|新王朝]]は、血の沼にあり<br>蠅どもは、その地の糞から湧くという

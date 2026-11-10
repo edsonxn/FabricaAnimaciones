@@ -1,0 +1,60 @@
+{{Infobox Item
+ | type         = Key Item
+ | sub_type     = Great Rune
+ | title        = Mohg's Great Rune
+ | image        = ER Icon Key Item Great Rune Mohg's.png
+ | label        = Restored
+ | image2       = ER Icon Key Item 3082.png
+ | label2       = Devoid
+ | japanese     = モーグの大ルーン <br/>(Mōgu no Dai Rūn)
+ | max_held     = 1
+ | item_effect  = Grants a blessing of blood to [[Invaders|phantoms]]
+ | obtained     = Dropped by [[Mohg, Lord of Blood]]
+}}
+
+'''Mohg's Great Rune''' is a [[Great Rune]] in {{ER}}.
+
+==Description==
+===Original===
+{{Description
+ | EN_line1 = The [[Great Rune]] of the shardbearer [[Mohg, Lord of Blood|Mohg]], devoid of any benediction.
+ | EN_line2 = Seek the [[Divine Tower of East Altus]], which stands beyond the great bridge from [[Leyndell, Royal Capital|Leyndell's]] eastern ward.
+ | JP_line1 = 破片の君主、[[Mohg, Lord of Blood|モーグ]]の大ルーン<br/>だが、恩恵の力は失われている
+ | JP_line2 = [[Leyndell, Royal Capital|ローデイル]]東街区から、高き橋梁を渡り<br/>[[Divine Tower of East Altus|東アルターの神授塔]]に向かうがよい
+}}
+
+===Restored===
+{{Description
+ | EN_line1 = A [[Great Rune]] of the shardbearer [[Mohg, Lord of Blood|Mohg]].<br/>Its blessing grants a blessing of blood to summoned [[Invaders|phantoms]], and imparts a [[phantom Great Rune]] upon successful [[invasion]].
+ | EN_line2 = Mohg and [[Morgott]] are twin brothers, and their Great Runes are naturally similar.
+ | EN_line3 = But Mohg's rune is soaked in [[Accursed Blood|accursed blood]], from his devout love for the wretched mire that he was born into far below the earth.
+ | JP_line1 = 破片の君主、[[Mohg, Lord of Blood|モーグ]]の大ルーン<br/>恩恵により、召喚した霊体に血の祝福を与え<br/>また侵入時に[[Phantom Great Rune|「大ルーンの幻影」]]を入手する
+ | JP_line2 = モーグは、[[Morgott, the Omen King|モーゴット]]の双子の兄弟であり<br/>その大ルーンもまた、似通っている
+ | JP_line3 = しかしモーグは、それを呪われた血で染めた<br/>地の底で、生まれついた穢れを愛したのだ
+}}
+
+==Effects==
+* Grants a blood blessing to summoned [[Invader]]s, enhancing their attacks with additional [[Blood Loss]] buildup.
+* Awards the player a [[Phantom Great Rune]] on successful invasions, which can be used to sacrifice HP to empower nearby enemies.
+
+==Acquisition==
+'''Location''': [[Mohgwyn Dynasty Mausoleum]]
+* Dropped by [[Mohg, Lord of Blood]] upon defeat at the [[Cocoon of the Empyrean]] in the [[Mohgwyn Palace]].
+
+==Notes==
+* Must be restored at the [[Divine Tower of East Altus]], accessible from [[Leyndell]]'s eastern section, by selecting '''Restore the power of the Great Rune'''.
+* Shares a [[Divine Towers|Divine Tower]] with [[Morgott's Great Rune]].
+
+==See also==
+* [[Bloody Fingers]]
+* [[Formless Mother]]
+* [[Mohgwyn Dynasty]]
+* [[Shardbearer Mohg (Achievement/Trophy)]]
+
+==References==
+{{Reflist|2}}
+{{Navbox Key Items}}
+[[Category:Key Items]]
+[[Category:Great Runes]]
+
+[[ru:Великая руна Мога]]

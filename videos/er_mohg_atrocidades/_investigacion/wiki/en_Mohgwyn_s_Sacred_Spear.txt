@@ -1,0 +1,77 @@
+{{Infobox_Weapon
+| title         = Mohgwyn's Sacred Spear
+| japanese      = モーグウィンの聖槍<br/>(Mōguwin no Seisō)
+| image         = ER Icon weapon Mohgwyn's Sacred Spear.png 
+| type          = Great Spear
+| attack_type   = Pierce
+| skills        = [[Unique Skill: Bloodboon Ritual|Bloodboon Ritual]]
+| fp_cost       = 20 ( - 20)
+| weight        = 10
+| buy_price     = [[Remembrance of the Blood Lord]]
+| sell_price    = 1000
+
+| physical_power    = 96
+| magic_power       = 0
+| fire_power        = 62
+| lightning_power   = 0
+| holy_power        = 0
+| critical          = 100
+| physical_guarded  = 55
+| magic_guarded     = 38
+| fire_guarded      = 38
+| lightning_guarded = 38
+| holy_guarded      = 38
+| guard_boost       = 46
+| range             = 
+| sorcery_scaling   = 
+| incant_scaling    = 
+
+| str_req   = 24
+| dex_req   = 14
+| int_req   = 0
+| fai_req   = 0
+| arc_req   = 27
+| str_scale = D
+| dex_scale = E
+| int_scale = -
+| fai_scale = -
+| arc_scale = D
+| effects   = Causes [[blood loss]] buildup (55)
+}}
+
+'''Mohgwyn's Sacred Spear''' is a [[Great Spears|Great Spear]], a [[Melee Armaments|melee armament]] {{in|er}}.
+
+==Description==
+{{Description
+| EN_line1 = Trident of [[Mohg, Lord of Blood]]. A [[Bloodfiend's Sacred Spear|sacred spear]] that will come to symbolize his [[Mohgwyn Dynasty|dynasty]].
+| EN_line2 = As well as serving as a [[weapon]], it is an instrument of communion with an [[Outer God|outer god]] who bestows power upon [[Accursed Blood|accursed blood]]. The [[Formless Mother|mother of truth]] desires a wound.
+| EN_line3 = [[Unique Skills|Unique Skill]]: [[Bloodboon Ritual]]
+| EN_line4 = Raise the sacred spear and [[pierce]] the body of the [[Formless Mother]]. Stab up to three times, creating explosions of [[blood]] with each thrust. This skill will coat the armament with [[bloodflame]] for a while.
+| JP_line1 = 血の君主モーグの、三又の槍<br>新王朝の象徴となるべき聖槍
+| JP_line2 = それは、呪われた血に力を与える<br>外なる神との交信の祭具でもある<br>真実の母は、傷を望んでいるのだ
+| JP_line3 = 専用戦技「血授の儀」
+| JP_line4 = 聖槍を掲げ、姿なき母の身体を刺す戦技<br>三度まで刺し、刺す度に血の爆発を生じる<br>聖槍は血炎を纏い、それはしばらく継続する
+}}
+
+==Effects==
+* Causes {{dmg|blood}} [[blood loss]] buildup (55)
+
+==Unique Skill==
+* [[Bloodboon Ritual]]
+
+==Acquisition==
+Trade the [[Remembrance of the Blood Lord]], dropped by [[Mohg, Lord of Blood]], with [[Finger Reader Enia]].
+
+==Notes==
+* 
+
+==See Also==
+* [[Blood Oath Incantations]]
+* [[Bloodfiend's Sacred Spear]]
+* [[Bloody Helice]]
+* [[Obsidian Lamina]]
+* [[Reduvia]]
+
+{{Navbox Weapons|great spear}}
+
+[[ru:Священное копьё Могвина]]

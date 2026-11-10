@@ -1,0 +1,33 @@
+{{Infobox_Item
+| title       = Swarm of Flies
+| japanese    = 蝿たかり <br>(Haetakari)
+| image       = ER Icon Spell Swarm of Flies.png
+| type        = Incantation
+| sub_type    = blood
+| item_effect = Releases a swarm of bloodflies before the caster 
+| fp_cost     = 14
+| hp_cost     = 
+| slots_used  = 1
+| int_req     = 0
+| fai_req     = 11
+| arc_req     = 16
+| buy_price   = 
+| obtained    = 
+}}
+'''Swarm of Flies''' is an [[incantation]] [[Spells|spell]] in {{ER}}. It is one of the [[Blood Oath Incantations]].
+
+==Description==
+{{Description
+| EN_line1 = A Blood Oath incantation, shared from the [[Mohg, Lord of Blood|Lord of Blood's]] power.
+| EN_line2 = Releases a swarm of bloodflies before the caster to assault foes. The vile swarm deals damage and builds up onset of [[blood loss]]. This incantation can be cast while in motion.
+| EN_line3 = The [[Mohgwyn Palace|new palace]] of the Lord of Blood lies in a swamp of festering blood, and these flies are said to spawn from [[Blood-Tainted Excrement|excrement]] in that land.
+| JP_line1 = [[Mohg, Lord of Blood|血の君主]]の分け与える力、血盟祈祷のひとつ
+| JP_line2 = 血蠅の群れを前方に放つ<br>蠅どもは敵を襲い、ダメージと共に出血を蓄積する<br>足を止めずに、またしゃがんだままでも使用できる
+| JP_line3 = 血の君主の[[Mohgwyn Palace|新王朝]]は、血の沼にあり<br>蠅どもは、その地の糞から湧くという
+}}
+
+== Acquisition ==
+'''Loot:''' [[Mohgwyn Palace]]
+*Located on a corpse at the end of one of the caves found in the northeastern quarter of the lake of blood.
+{{Navbox Spells}}
+[[ru:Рой мух]]

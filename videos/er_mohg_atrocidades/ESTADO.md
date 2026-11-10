@@ -16,9 +16,9 @@
 
 ## Decisiones del episodio (10-nov-2026)
 - tema: MOHG (elegido por el usuario de 3: Mohg, Rykard, Godfrey/Godwyn); duración: **23 min** (pedido del usuario)
-- **NUEVA REGLA del usuario (10-nov): «hay que pedir suscripciones antes del minuto 5»** → hecho en p5b (frase 8, ~3:30), ADEMÁS del
+- **Refuerzo SOLO de este video (el usuario, 10-nov): suscripción pedida antes del minuto 5** → hecho en p5b (frase 8, ~3:30), ADEMÁS del
   tramo de campaña hacia el 75 % (final de p2b, cifra 30 d: 3 045 de 76 050 vistas = 4 % suscritos; 651 subs → meta 1 000).
-  PENDIENTE: apuntarla en docs/estilo_secuencia_yt.md § CAMPAÑA, canales/formula/runa_caida.md y memoria (¿solo Runa o todos? preguntar al cerrar).
+  RESUELTO (10-nov): solo para este video; en general se pide en todos los videos donde Claude considere mejor.
 - Comentarios: token sin force-ssl (403) → leídos con yt-dlp (`_investigacion/*.info.json`, Morgott fMBEJI5FjaY y Radahn Uuj8Bw45-fs).
   Gancho: @zoharysakiyamablue471 ♥5 (9-nov, «mi patrón MOHG… NIHIL»), @JustinRivera-c9l ×2. Agradecimientos (5): @dany00g1 ♥5,
   @isaackbradleyfreega (p4c), @joseluisdelavegaest, @davidponsmedina7224, @Eternalack (cierre). Corrección: @jonathanvillamil985
@@ -68,5 +68,5 @@
 
 ## Lecciones de este video (solo lo no obvio)
 - Un MASTER de ~1,8 GB corta la subida a la tele (ConnectionReset al 40 %): mandar una copia 720p NVENC cq 28 con `tele revisar <v> --archivo`.
-- Regla «suscripción antes del min 5» apuntada en docs/estilo_secuencia_yt.md § CAMPAÑA y canales/formula/runa_caida.md; falta que el usuario diga si vale para todos los canales.
+- La suscripción hacia el 3:30 fue solo para este video (el usuario, 10-nov); la regla general es pedirla en todos los videos donde Claude considere mejor (docs/estilo_secuencia_yt.md § CAMPAÑA).
 - Runa Caída se reconectó con force-ssl el 10-nov: `yt comentarios runa_caida` y `yt comentario <v> runa_caida <id>` ya funcionan (el 403 era del token viejo); el .srt también sube por API (`yt aplicar`). Las 11 tarjetas de este video se hicieron antes con `_tarjetas.py` (desde yt-dlp), con los mismos datos reales.

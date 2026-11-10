@@ -57,7 +57,7 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
 - Comparar a los 7 días con Miquella/Melina (~20 min) y Ranni: vistas, % visto (¿aguanta 24 min?), y si bajan las quejas de la voz.
 
 ## Campaña de suscripción (el usuario, 30-oct-2026)
-- **10-nov-2026:** pedir la suscripción también ANTES DEL MINUTO 5 (Mohg: ~3:30), además del tramo hacia el 75 %. Medir a 7 días contra Morgott (cifra de partida 30 d: 4 de cada 100 suscritos, 660 subs).
+- **10-nov-2026 (prueba, no regla):** en Mohg se pidió la suscripción también hacia el 3:30, además del tramo del 75 %. Medir a 7 días contra Morgott (partida 30 d: 4 de cada 100 suscritos, 660 subs); si sube, repetirlo donde convenga. Dónde pedirla en cada video lo decide Claude.
 - **Base a 90 días:** 305 subs, 8,8 subs por 1 000 vistas, 97,4 % de las vistas son de no suscritos, 1 913 h. Ningún video lo había pedido.
 - **Plan:** tramo de 6-10 s antes del puesto 1 + frase en el cierre, meta 500 → 1 000. Reglas en `docs/estilo_secuencia_yt.md` § CAMPAÑA.
 - **Primer video:** el siguiente que se escriba (Melina y Radahn ya están renderizados). Objetivo: ≥ 12 subs por 1 000 sin caer más de 3 puntos en el tramo.

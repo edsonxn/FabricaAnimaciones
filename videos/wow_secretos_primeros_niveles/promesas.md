@@ -5,7 +5,7 @@ Regla del 5-nov: toda frase que describe algo que el espectador debería VER →
 | Puesto | Frase (inicio) | Cómo se ve |
 |---|---|---|
 | intro | Un brazo de Terminator… Una estatua… Un guardia muerto… | carrusel de pegatinas (antorcha, ruinas, Moonrage, Sullivan, Ezra) |
-| gaia | Escucha un pedazo | MASTER de la Crematoria con su audio (scene-014, _gaia.py) |
+| gaia | Escucha con calma este pequeño pedazo | MASTER de la Crematoria con su audio (scene-014, _gaia.py) |
 | s20 | junto al Santuario de Akir, un elfo disfrazado de sectario | clip guía 876c0cSzy04 + pegatina `zendraas` + mapa Zephras |
 | s19 | la montañera Pebblebitty / te contesta en el chat | pegatina + mapa Loch Modan + MG chat /rude (3 líneas) |
 | s18 | te convierte en un bicho… / Eekum Bokum | clips Blizzplanet y Kymilleon (hechizos de Bom'bay) + MG chat «Eekum Bokum» + versus Mumbo Jumbo |

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Clip PROPIO de la escena `gaia` (anuncio de Gaia Eterna): recortes del MASTER de la Crematoria a medios/scene-NNN.mp4,
-con su AUDIO, de la duración exacta de cada beat. El beat donde cae el `post` de 13 s («…Escucha un pedazo.») se alinea para que
+con su AUDIO, de la duración exacta de cada beat. El beat donde cae el `post` de 13 s («…Escucha con calma este pequeño pedazo.») se alinea para que
 la voz callada coincida con 24,7 s del MASTER («Esa noche, un hijo le lanzó una espada maldita…» → «…historia de la Crematoria.»).
 Además escribe sfx/oye_crematoria.mp3 (24,7-37,4 s) para la PISTA voz=True. Correr ANTES de `bajar` (bajar salta lo que existe).
   python _gaia.py   ·   python _gaia.py --ver"""
@@ -12,7 +12,7 @@ import sys
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.abspath(os.path.join("..", "gaia_crematoria", "salida", "gaia_crematoria_MASTER.mp4"))
 OYE, OYE_FIN = 24.7, 37.4
-CLAVE = "gaia_4"                    # «Tiene otra narradora, otra música y el mismo cuidado. Escucha un pedazo.»
+CLAVE = "gaia_4"                    # «Tiene otra narradora, otra música y el mismo cuidado. Escucha con calma este pequeño pedazo.»
 OTROS = [60.0, 140.0, 300.0, 420.0, 540.0, 660.0, 800.0]  # beats de `gaia` sin post: otros tramos del mismo MASTER (sin repetir)
 
 

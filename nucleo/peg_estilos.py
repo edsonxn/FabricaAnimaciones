@@ -99,7 +99,9 @@ def _rotulo(ancho, nombre, sub, tema, tam=86):
 
 def silueta(ruta, nombre=None, sub=None, alto=880, encuadre=(0.0, 1.0), lado="izq", tema="tes"):
     """Personaje SIN FONDO saliendo del borde inferior. encuadre = (arriba, abajo) en fracción del recorte (para enseñar de la
-    cintura para arriba). lado = dónde va el personaje; el nombre va del lado de dentro. Colócalo con pos_silueta()."""
+    cintura para arriba). lado = dónde va el personaje; el nombre va del lado de dentro. Colócalo con pos_silueta().
+    NO para fotos de PERSONAS REALES (el usuario, 10-nov-2026): rembg les deja alfa parcial y la cara se funde con el gameplay;
+    para ellas un marco opaco de peg_anim (museo/polaroid/carta, tam >= 600) o una pantalla."""
     t = TEMAS[tema]
     fig = recorte(ruta)
     fig = fig.crop((0, int(fig.height * encuadre[0]), fig.width, int(fig.height * encuadre[1])))

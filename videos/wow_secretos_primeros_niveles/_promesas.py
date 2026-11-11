@@ -16,7 +16,7 @@ import secuencia_fx as SF  # noqa: E402
 
 PROMESAS = [   # (frase ancla, + s, qué debería verse)
     ("Un brazo de Terminator sobre un pedestal", 1.0, "gancho: brazo Terminator"),
-    ("Escucha un pedazo", 2.0, "MASTER Crematoria con audio"),
+    ("este pequeño pedazo", 2.0, "MASTER Crematoria con audio"),
     ("Así suena Gaia Eterna", 1.0, "ficha Gaia Eterna"),
     ("Te contesta en el chat", 1.0, "chat /rude Pebblebitty"),
     ("a veces escribe en el chat: Eekum", 1.5, "Bom'bay + Eekum Bokum"),

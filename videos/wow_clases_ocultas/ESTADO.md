@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · meta: vie 16-oct-2026 09:00 CDMX (primer video de Warcraft hecho en la Fábrica)
 - estilo: secuencia_yt (gameplay de YouTube por beat + apoyos + 3 MG + Overgear) → doc: docs/estilo_secuencia_yt.md
-- etapa: SUBIDO en privado y PROGRAMADO jue 15-oct-2026 09:00 CDMX (https://youtu.be/KEXk-wMhX1o) con .srt (cargado 13-oct tras reconectar el canal)
+- etapa: SUBIDO en privado y PROGRAMADO mar 17-nov-2026 09:00 CDMX (https://youtu.be/8hNPy07Bu4A; movido el 10-nov noche por orden del usuario). Historial de fechas e ids anteriores en canales/cronicas_warcraft.json → publicados
 - siguiente: nada; versión «Forever ya salió» SUBIDA en privado SIN fecha el 27-oct (https://youtu.be/atKakPRR410); la publica el usuario después del 4-nov. Pendiente en Studio: monetización. La vieja (KEXk-wMhX1o) sigue en privado. Antes: (26-oct) cambiando el segmento a la campaña 2 de Overgear (ver fila ◐): render en curso → final → verificar → avisar al usuario → subir la versión nueva en PRIVADO sin fecha (es de reserva: la publica él) → registrar el id nuevo
 
 ## Sesiones (plan de tramos · «continúa el video <alias>» retoma aquí · protocolo docs/sesiones.md)

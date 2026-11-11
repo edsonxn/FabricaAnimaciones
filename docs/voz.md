@@ -108,6 +108,14 @@ portugués, «Guarda ese dato.» → italiano). Al revés que ElevenLabs, aquí 
 - Nada de frases de 1-3 palabras sueltas; `seleccionar` (con Applio) mide el idioma de cada toma con Whisper sin idioma
   forzado y rechaza p(es) < 0,90 con el aviso «suena a OTRO IDIOMA» (si al oírla está bien: `IDIOMA_LIBRE = ["clave"]`).
 - Edge TTS es determinista: regenerar no cambia nada; se reescribe la frase.
+- **REGLA: LA VOZ NUNCA HABLA EN OTRO IDIOMA (el usuario, 10-nov-2026, todos los canales y voces).** En `wow_secretos_primeros_niveles`
+  (ya programado) Remy leyó en inglés una oración del gancho («Un brazo de Terminator…») y «Número cinco. Kyle ha desaparecido.»:
+  estaban en `IDIOMA_LIBRE` y `seleccionar` mide la toma entera, así que una oración mala dentro de una toma larga pasa.
+  Comprobación obligatoria después de `seleccionar` y antes de `video`: **`python nucleo/idioma_voz.py <v>`** (idioma ORACIÓN POR
+  ORACIÓN, p(es) ≥ 0,80, sale con código 3 y escribe `voz/idioma.json`; `fab.py <v> chequeo` lo corre solo si falta o es viejo).
+  Arreglo: FONETICA en español para TODO nombre extranjero, también de cine/pop («Terminator» → «Terminátor»); si no basta,
+  reescribir la oración (más larga, el nombre en medio) y regenerar solo esa frase (`--solo clave`). `IDIOMA_LIBRE` ya no se usa
+  sin oír la toma, y nunca en una frase con nombre extranjero.
 
 ## Voz: problemas ya vividos y cómo evitarlos (voynich, 29-sep: la voz tardó ~1 h en vez de ~10 min)
 Antes de generar voz, revisa esta lista. Cada punto costó una ronda completa (~4 tomas x cada frase afectada).

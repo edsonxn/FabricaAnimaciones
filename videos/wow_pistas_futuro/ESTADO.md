@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · meta: dom 18-oct-2026 09:00 CDMX (hueco tras `wow_clases_ocultas` del 15-oct)
 - estilo: secuencia_yt (gameplay de YouTube por beat + apoyos + 3 MG + Overgear) → doc: docs/estilo_secuencia_yt.md
-- etapa: SUBIDO en privado y PROGRAMADO dom 18-oct-2026 09:00 CDMX (https://youtu.be/vODv9Gm0tjQ) con miniatura y .srt
+- etapa: SUBIDO en privado y PROGRAMADO vie 20-nov-2026 09:00 CDMX (https://youtu.be/uETB9GOW4hk; movido el 10-nov noche por orden del usuario). Historial de fechas e ids anteriores en canales/cronicas_warcraft.json → publicados
 - siguiente: nada; versión «Forever ya salió» SUBIDA en privado SIN fecha el 27-oct (https://youtu.be/ZinI3H8kleI); la publica el usuario después del 4-nov. Pendiente en Studio: monetización. La vieja (vODv9Gm0tjQ) sigue en privado. Antes: (26-oct) cambiando el segmento a la campaña 2 de Overgear (ver fila ◐): render en curso → final → verificar → avisar al usuario → subir la versión nueva en PRIVADO sin fecha (es de reserva: la publica él) → registrar el id nuevo
 
 

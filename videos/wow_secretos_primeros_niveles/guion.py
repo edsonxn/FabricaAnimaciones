@@ -42,13 +42,13 @@ FONETICA_APPLIO = {
     "Hearthstone": "Járzston", "Michel Koiter": "Mishél Kóiter", "Koiter": "Kóiter", "Twincruiser": "Tuín crúser",
     "Sullivan Ballou": "Súlivan Balú", "Sully Balloo": "Súli Balú", "Balloo": "Balú", "Thandol": "Tándol", "Dun Modr": "Dun Módor",
     "Moonrage": "Múnreich", "Silverlaine": "Sílverlein", "Faerleia": "Faerléia", "Morrison": "Mórrison", "Skynet": "Skáinet",
-    "Cyberdyne": "Sáiberdain", "StarCraft": "Estárcraft",
+    "Cyberdyne": "Sáiberdain", "StarCraft": "Estárcraft", "Terminator": "Terminátor",
 }
 FONETICA = FONETICA_APPLIO
 # Applio da siempre la misma toma: tolerancias revisadas a mano (10-nov, sesión 3; solo nombres propios/números)
-CER_MAX_POR_FRASE = {'s12_8': 0.021, 'gaia_4': 0.037, 'gaia2_1': 0.022, 'gaia2_2': 0.06, 's20_1': 0.021, 's19_1': 0.057, 's19_5': 0.017, 's19_7': 0.043, 's18_0': 0.046, 's18_1': 0.04, 's18_7': 0.043, 's18_8': 0.065, 's18_9': 0.015, 's17_3': 0.036, 's17_4': 0.128, 'overgear_2': 0.015, 's16_0': 0.07, 's16_1': 0.028, 's16_2': 0.03, 's16_4': 0.028, 's16_5': 0.023, 's15_1': 0.047, 's15_4': 0.018, 's15_6': 0.037, 's14_0': 0.054, 's14_1': 0.036, 's14_5': 0.02, 's14_8': 0.021, 's13_1': 0.048, 's13_4': 0.026, 's13_7': 0.047, 's12_4': 0.03, 's12_6': 0.021, 's11_3': 0.027, 's10_3': 0.025, 's10_5': 0.028, 's10_6': 0.022, 's09_2': 0.038, 's08_3': 0.028, 'gracias2_2': 0.02, 's06_2': 0.015, 's06_4': 0.022, 's06_6': 0.028, 's06_7': 0.025, 's06_8': 0.095, 's05_0': 0.037, 's05_1': 0.055, 's05_2': 0.025, 's05_3': 0.034, 's04_3': 0.019, 's04_8': 0.028, 's03_1': 0.026, 's03_4': 0.029, 's03_5': 0.021, 's03_6': 0.028, 's03_8': 0.029, 's02_7': 0.021, 's01_0': 0.084, 's01_1': 0.016, 's01_3': 0.036, 's01_6': 0.048, 's01_9': 0.034, 's01_11': 0.037, 's01_12': 0.023}
+CER_MAX_POR_FRASE = {'s12_8': 0.021, 'gaia_4': 0.037, 'gaia2_1': 0.022, 'gaia2_2': 0.06, 's20_1': 0.021, 's19_1': 0.057, 's19_5': 0.017, 's19_7': 0.043, 's18_0': 0.046, 's18_1': 0.04, 's18_7': 0.043, 's18_8': 0.065, 's18_9': 0.015, 's17_3': 0.036, 's17_4': 0.128, 'overgear_2': 0.015, 's16_0': 0.07, 's16_1': 0.028, 's16_2': 0.03, 's16_4': 0.028, 's16_5': 0.023, 's15_1': 0.047, 's15_4': 0.018, 's15_6': 0.037, 's14_0': 0.054, 's14_1': 0.036, 's14_5': 0.02, 's14_8': 0.021, 's13_1': 0.048, 's13_4': 0.026, 's13_7': 0.047, 's12_4': 0.03, 's12_6': 0.021, 's11_3': 0.027, 's10_3': 0.025, 's10_5': 0.028, 's10_6': 0.022, 's09_2': 0.038, 's08_3': 0.028, 'gracias2_2': 0.02, 's06_2': 0.015, 's06_4': 0.022, 's06_6': 0.028, 's06_7': 0.025, 's06_8': 0.095, 's05_0': 0.04, 's05_1': 0.055, 's05_2': 0.025, 's05_3': 0.034, 's04_3': 0.019, 's04_8': 0.028, 's03_1': 0.026, 's03_4': 0.029, 's03_5': 0.021, 's03_6': 0.028, 's03_8': 0.029, 's02_7': 0.021, 's01_0': 0.084, 's01_1': 0.016, 's01_3': 0.036, 's01_6': 0.048, 's01_9': 0.034, 's01_11': 0.037, 's01_12': 0.023}
 TAIL_MAX_POR_FRASE = {'s12_8': 0.50, 's20_1': 0.41, 's19_7': 0.5, 's18_8': 0.73, 's14_1': 0.58, 's12_4': 0.48, 's10_3': 0.53, 's10_5': 0.87, 's10_6': 0.43, 'gracias2_2': 0.62, 's06_2': 0.5, 's05_3': 0.55, 's04_3': 0.43, 's03_4': 0.38, 's03_5': 0.53, 's02_7': 0.52, 's01_6': 0.79, 's01_12': 0.47}
-IDIOMA_LIBRE = ["s05_0", "intro_4"]
+# IDIOMA_LIBRE quitado (REGLA 10-nov-2026: la voz nunca habla en otro idioma; nucleo/idioma_voz.py oración por oración)
 
 SECUENCIA = dict(
     fuente="yt",
@@ -89,7 +89,7 @@ ESCENAS = [
         'Uno de sus diseñadores lo dijo sin rodeos: hay cosas muy bien enterradas, y van a tardar en encontrarlas.',
         'Forever salió el cuatro de noviembre. Y en una semana, la gente ya empezó a desenterrarlas.',
         'Pero hoy no te voy a contar las misiones que todo el mundo hace. Hoy vamos a lo que nadie te indica.',
-        'Un brazo de Terminator sobre un pedestal. Una estatua con los ojos rojos. Un guardia muerto que todavía te da una misión.',
+        'En lo hondo de una montaña hay un brazo de Terminator sobre un pedestal. Una estatua con los ojos rojos. Un guardia muerto que todavía te da una misión.',
         'Un pueblo entero que cambia de noche. Una carta real de una guerra de hace más de ciento cincuenta años, en el fondo de un río.',
         'Y un par de personajes que pasas a diario, y que esconden una historia real que casi nadie conoce.',
         'Veinte secretos de los primeros niveles, del veinte al uno. Todos con fuente, y casi todos con el sitio exacto en el mapa.',
@@ -100,7 +100,7 @@ ESCENAS = [
         'Ese canal ya existe. Se llama Gaia Eterna. Y su primer gran video ya está publicado: la historia completa de la Crematoria.',
         'Cuarenta y tres minutos. Dos padres, dos hijos y una espada maldita: Alexandros, Renault, Darion, Tirion y Taelan.',
         'Y Gustavo nos lo había pedido aquí mismo, en los comentarios: la de la familia Mograine. Gustavo, ya está. Y con todo.',
-        'Tiene otra narradora, otra música y el mismo cuidado. Escucha un pedazo.',
+        'Tiene otra narradora, otra música y el mismo cuidado. Escucha con calma este pequeño pedazo.',
     ]},
     {"id": 'gaia2', "frases": [
         'Así suena Gaia Eterna. El enlace al video y al canal está en la descripción, y si te gustan las historias de lore, suscríbete allá también.',
@@ -304,7 +304,7 @@ ESCENAS = [
         'La próxima vez que cruces Los Baldíos, sube a la loma. Es el homenaje más silencioso de todo el juego.',
     ]},
     {"id": 's05', "frases": [
-        'Número cinco. Kyle ha desaparecido.',
+        'Número cinco. Un perrito llamado Kyle ha desaparecido de su casa.',
         'En Mulgore, en el Poblado Pezuña de Sangre, un tauren llamado Ahab Wheathoof perdió a su perro, Kyle.',
         'La misión te pide carne tierna de zancudo, para dársela a Kyle cuando lo encuentres corriendo por las praderas.',
         'Le das la carne, Kyle se calma, y vuelves con Ahab. Una misión sencilla, de las de antes. Mucha gente la hizo sin saber nada más.',

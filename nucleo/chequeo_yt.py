@@ -8,6 +8,8 @@ reflejar lo que dice la narración»). No renderiza ni gasta nada; solo avisa, n
      Dragon», Dark Souls II, en tes_secretos_40); los «(fijado a mano)» salen como revisar.
   4. SONIDO NOMBRADO (el usuario, 31-oct-2026, todos los canales): frases que nombran un sonido («escucha la diferencia», una
      música, una voz, un grito) sin audio del clip alto ni pausa de la voz para oírlo, y «leíste bien» donde se oye.
+  5. IDIOMA DE LA VOZ (el usuario, 10-nov-2026, REGLA: la voz nunca habla en otro idioma): lee voz/idioma.json de
+     `nucleo/idioma_voz.py` (oración por oración); si falta o es más viejo que voz/final, lo corre (Whisper en la GPU, ~5 min).
        python fab.py <v> chequeo        (también corre solo antes de `video`; salida completa en previews/chequeo_narracion.md)
        python -m chequeo_yt sonidos     solo el punto 4; corre solo antes de `voz` en todo video (sin timeline: solo el texto)
 Receta: docs/estilo_secuencia_yt.md § LISTA DE CONTROL. La pista es de texto: lo que marca se revisa a mano, no es un veredicto.
@@ -280,7 +282,37 @@ def sonidos():
         print("  regla: docs/estilo_secuencia_yt.md § Sonido original → «Si la voz nombra un sonido»")
 
 
+def idioma(carpeta):
+    """REGLA (10-nov-2026): ninguna oración de la voz en otro idioma. Corre/lee nucleo/idioma_voz.py."""
+    import subprocess
+    finales = glob.glob(os.path.join(carpeta, "voz", "final", "*.wav"))
+    if not finales:
+        return
+    j = os.path.join(carpeta, "voz", "idioma.json")
+    viejo = not os.path.exists(j) or os.path.getmtime(j) < max(os.path.getmtime(f) for f in finales)
+    print("\n== 5. IDIOMA DE LA VOZ (oración por oración) ==")
+    if viejo:
+        print("  voz/idioma.json falta o es anterior a voz/final: corriendo nucleo/idioma_voz.py …")
+        r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "idioma_voz.py"),
+                            os.path.basename(carpeta)], capture_output=True, text=True, encoding="utf-8", errors="replace")
+        print("  " + "\n  ".join((r.stdout or r.stderr).strip().splitlines()[-15:]))
+        if r.returncode == 3:
+            print("  ⚠ BLOQUEA LA ENTREGA: reescribe esas frases (FONETICA en español / oración más larga) y regenera solo esas.")
+        return
+    datos = json.load(open(j, encoding="utf-8"))
+    malas = [(k, p) for k, ps in datos.items() for p in ps if p.get("p", 1) < .80]
+    if malas:
+        for k, p in malas:
+            print(f"  ⚠ {k} {p['t0']}-{p['t1']} s p(es)={p['p']:.2f} suena a «{p['otro']}»: {p['texto'][:80]}")
+        print("  ⚠ BLOQUEA LA ENTREGA: reescribe esas frases (FONETICA en español / oración más larga) y regenera solo esas.")
+    else:
+        print(f"  OK {len(datos)} frases, todas las oraciones en español")
+
+
 def main():
+    if sys.argv[1:] == ["idioma"]:
+        idioma(os.getcwd())
+        return
     if sys.argv[1:] == ["sonidos"]:
         sonidos()
         return
@@ -290,6 +322,7 @@ def main():
     narracion(carpeta)
     otro_juego()
     sonidos()
+    idioma(carpeta)
     print("Lista completa de capas: docs/estilo_secuencia_yt.md § LISTA DE CONTROL")
 
 

@@ -99,6 +99,11 @@ de Boggy (página «Moggy»). La búsqueda por nombre de `bajar_pegatinas.py` to
    versiones de otro juego de la saga, el arte de otra entrega y personajes que se parecen.
 3. Lo que no corresponda: rehacer la descarga con la página correcta (o captura del clip, o Flow con ingredientes reales). Nunca una
    imagen «parecida». Es parte de las PROMESAS VISUALES (abajo).
+4. **Lugares también (el usuario, 10-nov-2026, `wow_secretos_primeros_niveles` ya subido):** la pegatina «Puente de Thandol» era un
+   puente COLGANTE de madera y cuerda que está cerca; el Puente de Thandol es el gigantesco de PIEDRA de los enanos entre Los Humedales y
+   Arathi. La captura de un clip «del puente» no prueba que sea ESE puente: un lugar se comprueba contra la imagen de su página
+   (Wowpedia «File:Thandol_Span.jpg», API `action=query&prop=images` si la wiki bloquea curl) y contra su descripción (material, tamaño,
+   quién lo construyó). Los clips del beat que lo nombra, igual.
 
 ## REGLA GLOBAL: PROMESAS VISUALES, COMPROBADAS ANTES DEL RENDER (el usuario, 5-nov-2026, TODOS los canales y TODOS los motores)
 «Hay ocasiones donde el guion menciona algo que se debe ver y no sale en video ni imagen […] debes asegurarte de que se vea lo que

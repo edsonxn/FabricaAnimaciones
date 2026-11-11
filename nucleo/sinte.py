@@ -5,7 +5,7 @@ import math
 
 import numpy as np
 from numba import njit
-from scipy.signal import fftconvolve, butter, sosfilt
+from scipy.signal import fftconvolve, oaconvolve, butter, sosfilt
 
 SR = 48000
 
@@ -220,9 +220,18 @@ def reverb(x, mezcla=0.25, dur=2.4, brillo=6000.0):
     if key not in _IR_CACHE:
         _IR_CACHE[key] = respuesta_reverb(dur, brillo=brillo)
     ir = _IR_CACHE[key]
-    mono = x.mean(axis=0)
-    wet = np.stack([fftconvolve(mono, ir[0])[:x.shape[1]], fftconvolve(mono, ir[1])[:x.shape[1]]])
-    return x * (1 - mezcla * 0.5) + wet * mezcla
+    mono = x.astype(np.float32).mean(axis=0)
+    # oaconvolve (por bloques): igual que fftconvolve pero sin una FFT del video entero; con 28 min a 48 kHz fftconvolve
+    # pedía varios GB y daba MemoryError (10-nov-2026, wow_secretos_primeros_niveles)
+    conv = oaconvolve if len(mono) > 20 * len(ir[0]) else fftconvolve
+    n = x.shape[1]
+    out = np.empty((2, n), np.float32)
+    for c in (0, 1):                                    # canal a canal y en float32: no duplica el búfer del video entero
+        out[c] = conv(mono, ir[c].astype(np.float32))[:n]
+    del mono
+    out *= mezcla
+    out += x * (1 - mezcla * 0.5)
+    return out
 
 
 def delay_pingpong(x, tiempo, feedback=0.4, mezcla=0.3, lp_fc=5000.0):

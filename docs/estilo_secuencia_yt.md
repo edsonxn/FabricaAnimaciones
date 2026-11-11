@@ -36,7 +36,7 @@ de ~28 a 11, el primer MG salió en 3:42 y no hubo otro hasta 13:12. Todo pedido
 la cara bien visible y el video corriendo detrás (colocar con `pos_silueta`); `reliquia` = objeto sobre círculo de runas; `banda` = tira
 de cine con los ojos; `camafeo` = medallón para menciones rápidas; `legajo` = expediente; `abanico` = cartas al enumerar. Cambia también
 tamaño, posición y giro de las normales, y diseña estilos nuevos: no debe sentirse que todas son iguales. **Iconos de objeto (2-nov-2026, `wow_objetos_secretos_forever`: medallones VACÍOS):** rembg se come los íconos de Wowhead (ilustración cuadrada a sangre): `reliquia` detecta el recorte fallido (`recorte_fallido`, < 17 % opaco) y hace flotar el ícono ENTERO en marco de MMO; `camafeo` ya no amplía más de 1,25x (para íconos, `foco=(.5, .5, 1.0)`); los nombres largos se encogen. Si el ícono por sí solo no se entiende (Página quemada = retazos de cuero), en el mapa va su FICHA real de Wowhead: punto `(x, y, nombre, sub, "ficha:" + ruta del apoyo wowhead)` (`mg_wow._foto`). Mira SIEMPRE la hoja de pegatinas con los recortes (`pegatinas/_rec/`) antes de renderizar. Para silueta usa un fotograma
-nítido ≥ 1000 px; si rembg arrastra a otro personaje, recorta antes. Código de ejemplo: `videos/tes_secretos_40/efectos.py`.
+nítido ≥ 1000 px; si rembg arrastra a otro personaje, recorta antes. **PERSONAS REALES = NUNCA TRANSLÚCIDAS (el usuario, 10-nov-2026, `wow_secretos_primeros_niveles`: la foto de Michel Koiter salió con `silueta` fundida con el gameplay y solo se leía el rótulo):** rembg sobre una foto real (persona, grabado) deja un alfa parcial y la cara se transparenta; para gente real, `pv(..., marco="museo"|"polaroid"|"carta", tam≥600)` opaco a media pantalla con la cara recortada de antemano (que el marco no la corte), o `pant()`. `silueta` solo para personajes del juego con fondo limpio. **MG de pasos (`M.cadena`) nunca con nodos que esperan marcas lejanas: si la voz recorre lugares, MAPA con ruta** (el puesto 1 del mismo video: «LA CADENA SIGUE» se quedó quieto con 2 nodos mientras la voz nombraba 6 zonas y tapaba la recreación de Flow). Código de ejemplo: `videos/tes_secretos_40/efectos.py`.
 
 **Antes de renderizar:** `python fab.py <v> chequeo` (también corre solo antes de `video`; nunca bloquea). Da la densidad contra la
 mediana del canal, lo que la voz nombra sin apoyo (`previews/chequeo_narracion.md`) y los clips de otro juego. Es una pista de texto: lo
@@ -167,6 +167,14 @@ Con traducción oficial (Wowhead es), se usa la traducción. «WoW» se escribe 
 **Nada de frases sueltas de 1-3 palabras**: «Oficialmente.» salió en portugués y «Guarda ese dato.» en italiano; se alargan
 («Al menos, eso es lo oficial.»). Comprobación: Whisper sin idioma forzado por frase (`language=None`) → toda frase con
 idioma ≠ es o p(es) < 0,95 se reescribe. Palabra que acaba frase y RVC emborrona («la Horda.» → «la orba»): moverla al medio.
+**REGLA: LA VOZ NUNCA HABLA EN OTRO IDIOMA (el usuario, 10-nov-2026, `wow_secretos_primeros_niveles` ya programado: hacia el
+segundo 30 Remy leyó en inglés «Un brazo de Terminator sobre un pedestal…»; «Número cinco. Kyle ha desaparecido.» igual).**
+`seleccionar` solo mide el idioma de la TOMA ENTERA: una oración en inglés dentro de una frase larga pasa, e `IDIOMA_LIBRE`
+dejó pasar dos sin oírlas. Desde ahora: (1) **`python nucleo/idioma_voz.py <v>`** (Whisper sin idioma forzado, ORACIÓN POR
+ORACIÓN de `voz/final`, umbral p(es) ≥ 0,80, `voz/idioma.json`) después de `seleccionar` y antes de `video`; `chequeo` lo corre
+solo (punto 5) si falta o es viejo, y un fallo BLOQUEA la entrega. (2) Arreglo: todo nombre extranjero, también los de cine
+o cultura pop («Terminator» → «Terminátor»), en `FONETICA` con grafía española; si sigue, reescribir la oración (más larga, el
+nombre en medio, no al principio). (3) **`IDIOMA_LIBRE` queda prohibido** en Applio salvo oído a mano y sin nombre extranjero.
 
 ## Lo que la revisión de la hoja tiene que cazar (los filtros no lo ven)
 Otro juego u otra expansión que no toca, texto/logos de otro canal encima, fan-art estático de videos de lore,

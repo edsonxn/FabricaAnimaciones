@@ -60,9 +60,11 @@ def ban(en, slug, nombre, sub=None, dur=4.0, x=.5, y=.78, tam=420):
                 nombre="pegatina " + slug, ver=1.0)
 
 
-def sil(en, slug, nombre, sub=None, dur=4.4, lado="izq", alto=820):
-    return dict(tipo="mg", fn=PE.silueta(F(slug), nombre, sub, alto=alto, lado=lado, tema="wow"), en=en, dur=dur,
-                x=(.24 if lado == "izq" else .76), y=.54, sale=.3, nombre="silueta " + slug, ver=1.0)
+def sil(en, slug, nombre, sub=None, dur=4.4, lado="izq", alto=820, marco="museo"):
+    # PERSONAS REALES = OPACAS (el usuario, 10-nov-2026): PE.silueta recortaba con rembg y la foto de Michel Koiter salía
+    # translúcida, fundida con el gameplay. Ahora retrato con marco opaco a media pantalla (antes PE.silueta).
+    return pv(en, slug, nombre, dur=dur, x=(.25 if lado == "izq" else .75), y=.50, tam=640,
+              marco=marco, estancia="kenburns")
 
 
 def aba(fotos, de, a, marcas, nombre, x=.31, y=.66, tam=300):
@@ -141,9 +143,12 @@ FX = [
        ["si le haces el gesto de grosero", "A veces escribe", "Otras: estás tentando", "Y la mejor"], "chat rude", y=.62, x=.30),
     # =========================================================== 18 Bom'bay
     rel("Número dieciocho. El médico brujo", "bombay_npc", "Bom'bay", "aprendiz de médico brujo"),
-    mapa("durotar", [P(56, 75, "Poblado Sen'jin", "Bom'bay · 56, 75", "bombay_npc"), P(65, 85, "Islas del Eco", "Zalazane", "zalazane")],
-         ("En Durotar, en el Poblado Sen'jin", -.2), ("de las Islas del Eco|fin", .5),
-         ["En Durotar", "la misión de Zalazane"], "DUROTAR", "Poblado Sen'jin"),
+    mapa("durotar", [P(56, 75, "Poblado Sen'jin", "Bom'bay · 56, 75", "bombay_npc")],
+         ("En Durotar, en el Poblado Sen'jin", -.2), ("Es el aprendiz del maestro Gadrin|fin", .3),
+         ["En Durotar"], "DUROTAR", "Poblado Sen'jin"),
+    mapa("durotar", [P(56, 75, "Poblado Sen'jin", "Bom'bay"), P(65, 85, "Islas del Eco", "Zalazane", "zalazane")],
+         ("Para que te hechice, antes tienes", -.2), ("de las Islas del Eco|fin", .5),
+         ["Para que te hechice", "la misión de Zalazane"], "DUROTAR", "antes: la misión de Zalazane"),
     pv("Es el aprendiz del maestro Gadrin", "gadrin", "Maestro Gadrin", dur=3.4, x=.82, y=.60, tam=320),
     mg(M.chat([("Bom'bay: Eekum Bokum!", NAR)], "/hablar"),
        ("a veces escribe en el chat: Eekum Bokum", -.6), ("Eekum Bokum|fin", 2.4), ["mientras te transforma", "Eekum Bokum"], "chat bokum", y=.62, x=.30),
@@ -188,7 +193,7 @@ FX = [
     rel("Número catorce. ¿Dónde está", "olgra", "La esposa de Mankrik", "Perdidos en la batalla"),
     mapa("baldios", [P(52.0, 31.4, "El Cruce", "Mankrik"), P(49.3, 50.4, "La esposa de Mankrik", "al sur, cruzando el puente", "olgra")],
          ("Tienes que bajar al sur del Cruce", -.3), ("mirar frente a unas chozas|fin", .3),
-         ["Tienes que bajar al sur", "Y lo que encuentras no se llama Olgra"], "LOS BALDÍOS", "nivel 14+"),
+         ["Tienes que bajar al sur", "mirar frente a unas chozas"], "LOS BALDÍOS", "nivel 14+"),
     mg(M.chat([("[General] ¿Dónde está la esposa de Mankrik?", AMAR), ("[General] ¿alguien sabe dónde está la esposa de Mankrik?", AMAR),
                ("[General] ¿DÓNDE ESTÁ LA ESPOSA DE MANKRIK?", ROJO)], "/1"),
        ("En el chat de Los Baldíos, todo el mundo", -.4), ("solo para molestar|fin", .3),
@@ -227,7 +232,7 @@ FX = [
     dict(tipo="mg", fn=PE.legajo(F("o_carta"), "Mi querida Sara…", ["No me llores muerto.", "Piensa que me fui, y espérame:", "nos volveremos a ver."],
                                  None, tema="wow"),
          en=("La carta empieza así", -.2), dur=7.0, x=.70, y=.50, sale=.3, nombre="legajo carta", ver=1.0),
-    sil("Sullivan Ballou, le escribió a su esposa", "sullivan", "Sullivan Ballou", "Ejército de la Unión · 1861", dur=6.0, lado="izq"),
+    sil("Sullivan Ballou, le escribió a su esposa", "sullivan", "Sullivan Ballou", "Ejército de la Unión · 1861", dur=6.0, lado="izq", marco="carta"),
     mg(M.cadena("LA CARTA REAL", [(F("sullivan"), "Sullivan Ballou", "14 de julio de 1861", False),
                                   (F("sullivan"), "Bull Run", "muere en la batalla", True),
                                   (F("o_carta"), "Sully Balloo", "bajo el Puente de Thandol", False)]),
@@ -272,12 +277,12 @@ FX = [
        ("Murió en marzo de dos mil cuatro", -.4), ("todavía no había salido|fin", .5),
        ["Murió en marzo", "Tenía diecinueve años", "World of Warcraft todavía no"], "vida koiter", y=.60),
     # =========================================================== 5 Kyle
-    pv("Número cinco. Kyle ha desaparecido", "kyle", "Kyle · el perro de Ahab", dur=4.4, x=.76, y=.50, tam=470),
+    pv("Número cinco. Un perrito llamado Kyle", "kyle", "Kyle · el perro de Ahab", dur=4.4, x=.76, y=.50, tam=470),
     mapa("mulgore", [P(47, 59, "Poblado Pezuña de Sangre", "Ahab Wheathoof", "ahab")],
          ("En Mulgore, en el Poblado Pezuña de Sangre", -.2), ("perdió a su perro, Kyle|fin", .6),
          ["En Mulgore"], "MULGORE", "desde nivel 5"),
     pv("La misión te pide carne tierna", "o_carne", "Carne tierna de zancudo", dur=3.6, x=.18, y=.62, tam=320),
-    sil("un niño de trece años, Ezra Chatterton", "ezra", "Ezra Chatterton", "Make-A-Wish · 2007", dur=6.0, lado="der"),
+    sil("un niño de trece años, Ezra Chatterton", "ezra", "Ezra Chatterton", "Make-A-Wish · 2007", dur=6.0, lado="der", marco="polaroid"),
     # =========================================================== 4 ¡CLOC!
     rel("Número cuatro. El huevo de gallina", "pollo", "¡CLOC!", "el secreto con el que empezó todo"),
     mg(M.chat([("Haces cloc cloc al pollo.", NAR), ("El pollo te mira raro…", BLANCO), ("Misión: ¡CLOC!", AMAR)], "/chicken"),
@@ -295,10 +300,10 @@ FX = [
                                   (F("o_antorcha"), "2 · La antorcha", "Bosque del Ocaso", False),
                                   (F("o_eluviana"), "3 · Eluvi'ana", "Ruinas de Ban'aethal", True)], ("SIN RESOLVER", 3)),
        ("Los tres primeros puestos son", -.2), ("Y todavía nadie lo ha resuelto|fin", .6),
-       ["Los tres primeros puestos", "el mismo secreto", "el primer gran secreto", "Y todavía nadie"], "cadena dawn waker", y=.58),
+       ["Los tres primeros puestos", "el mismo secreto", "Lo encontró la comunidad", "Wowhead lo llama"], "cadena dawn waker", y=.58),
     mapa("zephras", [P(42.83, 23.45, "Thendal", "Ailee Farheart · 42, 23"), P(41.7, 23.4, "Rorian", "el anillo · o el piso de arriba", "o_anillo")],
          ("Empieza en la Isla Zephras", -.2), ("mira arriba|fin", .4),
-         ["Empieza en la Isla Zephras", "La entregas a Rorian"], "ISLA ZEPHRAS", "La mayoría de edad", objeto="inv_jewelry_ring_03"),
+         ["Empieza en la Isla Zephras", "La entregas a Rorian", "en el piso de arriba"], "ISLA ZEPHRAS", "La mayoría de edad", objeto="inv_jewelry_ring_03"),
     # =========================================================== 2 antorcha
     rel("Número dos. La antorcha", "o_antorcha", "Night Watchman's Torch", "Un final desafortunado"),
     mapa("ocaso", [P(21, 32, "Colina del Cuervo", "la cima del cementerio"), P(20.9, 34.4, "20, 34"), P(17, 54, "17, 54"),
@@ -314,12 +319,25 @@ FX = [
                      P(66.25, 43.15, "hoja · sitio 3"), P(59.9, 82.2, "hoja · sitio 4", None, "o_hoja")],
          ("vuelves a la Isla Zephras, a las Ruinas", -.3), ("hay que recorrer Zephras con calma|fin", .4),
          ["a las Ruinas de Ban'aethal", "Se la llevas a Ealaane", "No tiene un lugar fijo", "en cuatro puntos distintos",
-          "hay que recorrer", "con calma"], "ISLA ZEPHRAS", "Dawn Waker · parte 1", objeto="inv_sword_draenei_05"),
-    mg(M.cadena("LA CADENA SIGUE", [(F("o_eluviana"), "Zephras", "nivel 1-12", False), (F("o_hoja"), "Costa Oscura y Brazanegra", "nivel ~22", False),
+          "hay que recorrer", "Zephras con calma"], "ISLA ZEPHRAS", "Dawn Waker · parte 1", objeto="inv_sword_draenei_05"),
+    # 10-nov (sesión 6, el usuario): el M.cadena se quedaba quieto con 2 nodos y tapaba la recreación del altonato → MAPA DEL
+    # RECORRIDO (lo que narra s01_6/s01_7) sobre Kalimdor con fronteras; puntos medidos en la rejilla de kalimdor_zonas.jpg.
+    # Zephras es zona de Forever y no sale en el mapa clásico: la ruta arranca en Costa Oscura y el subtítulo lo dice.
+    mapa("kalimdor_zonas", [P(47.5, 29, "Costa Oscura", "nagas · globo de agua (Alianza)", "o_hoja"),
+                            P(49, 42, "Vallefresno", "la cadena sigue"),
+                            P(42, 66, "Feralas", "la bóveda · nivel 40+", "shendralar"),
+                            P(61, 34, "Azshara"),
+                            P(57, 21, "Cuna del Invierno"),
+                            P(54.5, 31, "Hyjal", "el final del recorrido"),
+                            P(40.5, 40.5, "Brazanegra", "Barón Aquanis (Horda) · nivel ~22")],
+         ("Pero no termina ahí", -.2), ("del Barón Aquanis en Brazanegra|fin", .3),
+         ["por Costa Oscura", "Vallefresno", "Feralas", "Azshara", "Cuna del Invierno", "y Hyjal", "del Barón Aquanis"],
+         "EL DAWN WAKER · KALIMDOR", "después de la Isla Zephras", zmax=1.6),
+    mg(M.cadena("LA CADENA SIGUE", [(F("o_eluviana"), "Zephras", "nivel 1-12", False),
                                     (F("shendralar"), "Feralas · La Masacre", "nivel 40+", False),
-                                    (F("tortheldrin"), "Eluvi'ana y Eluvi'tor", "Tortheldrin", True)], ("NADIE LO HA TERMINADO", 4)),
-       ("Pero no termina ahí", -.2), ("Puede que sea la primera pieza|fin", .4),
-       ["Pero no termina ahí", "La segunda parte llega", "Wowhead calcula", "habla de dos espadas", "Nadie ha terminado"], "cadena sigue", y=.58),
+                                    (F("tortheldrin"), "Eluvi'ana y Eluvi'tor", "Tortheldrin", True)], ("NADIE LO HA TERMINADO", 3)),
+       ("Wowhead calcula", -.2), ("solo para los amigos de su corte|fin", .4),
+       ["Wowhead calcula", "nivel cuarenta o más", "el príncipe Tortheldrin", "habla de dos espadas"], "cadena sigue", y=.58),
     # =========================================================== cierre
     carr([("terminator", "Brazo de Terminator"), ("sullivan", "Carta de 1861"), ("ezra", "Ezra"), ("santuario", "Michel Koiter")],
          "Un brazo de Terminator, una carta", ("su santuario en Los Baldíos|fin", .3),
@@ -329,7 +347,7 @@ FX = [
     pv("en el Valle de los Reyes, hay una enana", "valle_reyes", "Valle de los Reyes", dur=3.8, x=0.18, y=.60, tam=340),
     pv("en el Poblado Sen'jin, vive", "senjin", "Poblado Sen'jin", dur=3.8, x=0.82, y=.60, tam=340),
     pv("encontrar a su esposa, Olgra", "olgra", "Olgra", dur=3.8, x=0.82, y=.60, tam=340),
-    pv("está el Puente de Thandol, un puente enano", "thandol", "Puente de Thandol", dur=3.8, x=0.82, y=.60, tam=340),
+    pv("está el Puente de Thandol, un puente enano", "thandol", "Puente de Thandol", dur=4.6, x=0.74, y=.52, tam=640),
     pv("un tauren llamado Ahab Wheathoof", "ahab", "Ahab Wheathoof", dur=3.8, x=0.82, y=.60, tam=340),
     pv("Le das la carne, Kyle se calma", "kyle", "Kyle", dur=3.8, x=0.18, y=.60, tam=340),
     pv("solo lo vende el granjero Saldean", "saldean", "Granjero Saldean", dur=3.8, x=0.82, y=.60, tam=340),
@@ -379,7 +397,7 @@ FX += [d for x in [
     carr([("s08_viktor", "Viktor el Vil"), ("s07_abandonado", "El Abandonado")], ("Dos jefes ocultos en una mazmorra", -.2),
          ("Dos jefes ocultos en una mazmorra|fin", .3), ["Dos jefes ocultos"], titulo="LOS DOS JEFES OCULTOS"),
     pant("s06_koiter_sanador", ("un sanador espiritual, que se llama Koiter", -.2), ("un sanador espiritual, que se llama Koiter|fin", .4)),
-    sil("Michel Koiter era uno de los artistas", "s06_michel_koiter", "Michel Koiter", "artista de Blizzard · 1984-2004", dur=5.0, lado="izq"),
+    sil("Michel Koiter era uno de los artistas", "s06_michel_koiter_cara", "Michel Koiter", "artista de Blizzard · 1984-2004", dur=5.0, lado="izq"),
     pant("s06_estatua_orco", ("La estatua de ese orco es una copia exacta", -.1), ("La estatua de ese orco es una copia exacta|fin", .3)),
     pant("s06_koiter_sanador", ("quien te devuelve a la vida es Koiter", -.2), ("quien te devuelve a la vida es Koiter|fin", .4)),
     pv("Raynor recoge la placa de un marine caído", "s06_placa_koiter", "StarCraft II · «M. KOITER»", dur=4.8, x=.72, y=.50, tam=620),
@@ -417,7 +435,7 @@ PISTAS = [dict(sfx="mision_aceptada", en=e, vol=.28) for e in ("Número veinte."
 PISTAS += [dict(sfx="mision_completada", en=e, vol=.22) for e in ("te ofrece una misión: ¡Cloc!", "te dan Eluvi'ana")]
 PISTAS += [dict(sfx="subir_nivel", en=e, vol=.24) for e in ("Veinte secretos de los primeros niveles", "Número uno. Eluvi'ana")]
 # SI LA VOZ NOMBRA UN SONIDO, SE OYE (31-oct): «Escucha un pedazo» = la Crematoria con su audio (voz=True agacha la música)
-PISTAS += [dict(sfx="oye_crematoria", en=("Escucha un pedazo|fin", .15), vol=1.0, voz=True)]
+PISTAS += [dict(sfx="oye_crematoria", en=("este pequeño pedazo|fin", .15), vol=1.0, voz=True)]
 
 # APOYOS: tarjetas SOLO con datos del guion (fuentes en videos/_investigacion_wow_secretos_primeros_niveles.md)
 APOYOS = [

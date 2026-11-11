@@ -1,0 +1,1586 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.36,
+  "tipo": "video",
+  "texto": "Durante la beta de World of Warcraft Forever, Blizzard hizo algo muy raro: apagó los secretos. Sobre todo, los de los primeros niveles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.36,
+  "t1": 15.949,
+  "tipo": "video",
+  "texto": "Uno de sus diseñadores lo dijo sin rodeos: hay cosas muy bien enterradas, y van a tardar en encontrarlas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.949,
+  "t1": 25.49,
+  "tipo": "video",
+  "texto": "Forever salió el cuatro de noviembre. Y en una semana, la gente ya empezó a desenterrarlas. Pero hoy no te voy a contar las misiones que todo el mundo hace.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.49,
+  "t1": 33.35,
+  "tipo": "video",
+  "texto": "Hoy vamos a lo que nadie te indica. Un brazo de Terminator escondido dentro de un puente. Una estatua con los ojos rojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.35,
+  "t1": 44.266,
+  "tipo": "video",
+  "texto": "Un guardia muerto que todavía te da una misión. Un pueblo entero que cambia de noche. Una carta real de una guerra de hace más de ciento cincuenta años, en el fondo de un río.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 44.266,
+  "t1": 50.028,
+  "tipo": "video",
+  "texto": "Y un par de personajes que pasas a diario, y que esconden una historia real que casi nadie conoce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.028,
+  "t1": 58.142,
+  "tipo": "video",
+  "texto": "Veinte secretos de los primeros niveles, del veinte al uno. Todos con fuente, y casi todos con el sitio exacto en el mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 58.142,
+  "t1": 68.755,
+  "tipo": "video",
+  "texto": "Y te aviso desde ya: algunos se encontraron hace apenas unos días, así que puede que cambien con un parche. Pero antes, una noticia. ¿Se acuerdan de Darrowshire,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.755,
+  "t1": 76.74,
+  "tipo": "video",
+  "texto": "y de Pamela, la niña que esperaba a su padre? Les dije que las historias se mudaban de canal. Ese canal ya existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.74,
+  "t1": 85.442,
+  "tipo": "video",
+  "texto": "Se llama Gaia Eterna. Y su primer gran video ya está publicado: la historia completa de la Crematoria. Cuarenta y tres minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.442,
+  "t1": 93.105,
+  "tipo": "video",
+  "texto": "Dos padres, dos hijos y una espada maldita: Alexandros, Renault, Darion, Tirion y Taelan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.105,
+  "t1": 101.74,
+  "tipo": "video",
+  "texto": "Y Gustavo nos lo había pedido aquí mismo, en los comentarios: la de la familia Mograine. Gustavo, ya está. Y con todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.74,
+  "t1": 106.16,
+  "tipo": "video",
+  "texto": "Tiene otra narradora, otra música y el mismo cuidado. Escucha",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 106.16,
+  "t1": 120.43,
+  "tipo": "video",
+  "texto": "un pedazo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.43,
+  "t1": 129.512,
+  "tipo": "video",
+  "texto": "Así suena Gaia Eterna. El enlace al video y al canal está en la descripción, y si te gustan las historias de lore, suscríbete allá también.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.512,
+  "t1": 138.53,
+  "tipo": "video",
+  "texto": "Sayho escribió que le emocionaba lo del canal de historias, y Pausa, que estaba buenísimo. Pues ya está abierto, y es para ustedes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.53,
+  "t1": 146.567,
+  "tipo": "video",
+  "texto": "Y Vikussss, que pidió la de Mor'Ladim: anotada. Allá se cuentan las historias, y aquí seguimos con los secretos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.567,
+  "t1": 156.597,
+  "tipo": "video",
+  "texto": "Ahora sí, vamos con los veinte secretos. Empezamos. Número veinte. El vendedor que desapareció.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 156.597,
+  "t1": 163.397,
+  "tipo": "video",
+  "texto": "En la Isla Zephras, la zona nueva de Forever, junto al Santuario de Akir, había un elfo disfrazado de sectario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.397,
+  "t1": 171.81,
+  "tipo": "video",
+  "texto": "Se llamaba Brother Zendraas. Estaba más o menos en cincuenta y ocho, cincuenta y dos, junto al santuario. Fácil de ver,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.81,
+  "t1": 180.722,
+  "tipo": "video",
+  "texto": "si sabías que existía. Y no era un enemigo: vendía equipo de nivel bajo a cambio de piedras de viento, la moneda que se junta en la isla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.722,
+  "t1": 188.293,
+  "tipo": "video",
+  "texto": "Un sectario que no te ataca, y que además te vende cosas, ya es raro. Por eso los que lo vieron en la beta lo recuerdan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.293,
+  "t1": 196.42,
+  "tipo": "video",
+  "texto": "Después del lanzamiento, los jugadores fueron a comprarle, y no estaba. En el foro oficial hay un hilo entero preguntando por él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.42,
+  "t1": 207.74,
+  "tipo": "video",
+  "texto": "Unos dicen que lo quitaron, otros que aparece a ciertas horas. Blizzard no ha dicho nada. Y eso, en un juego donde apagaron secretos a propósito, da para pensar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.74,
+  "t1": 215.43,
+  "tipo": "video",
+  "texto": "Si lo encuentras en tu reino, cuéntalo en los comentarios con la hora. Puede que seas el primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.43,
+  "t1": 223.363,
+  "tipo": "video",
+  "texto": "Y si encontrar secretos es divertido, llegar al sesenta sin vicios es otra historia. Para eso existe el patrocinador de hoy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.363,
+  "t1": 231.936,
+  "tipo": "video",
+  "texto": "Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever. Es self-play: juegas tú con tu personaje todo el tiempo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.936,
+  "t1": 242.861,
+  "tipo": "video",
+  "texto": "y un profesional verificado te guía por voz. Una guía te explica la clase en general. Un buen coach mira tu personaje, y te dice qué estás haciendo mal y cómo arreglarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 242.861,
+  "t1": 248.571,
+  "tipo": "video",
+  "texto": "Talentos, rotación, mazmorras nuevas, el plan para las bandas del nueve de diciembre o duelos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.571,
+  "t1": 257.445,
+  "tipo": "video",
+  "texto": "tú eliges, y pagas solo las horas que necesites. El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.445,
+  "t1": 265.43,
+  "tipo": "video",
+  "texto": "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.43,
+  "t1": 276.827,
+  "tipo": "video",
+  "texto": "Número diecinueve. La enana que no aguanta groserías. En el extremo sur de Loch Modan, en el Valle de los Reyes, hay una enana montando guardia: la montañera Pebblebitty.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.827,
+  "t1": 283.547,
+  "tipo": "video",
+  "texto": "Vigila el túnel hacia la Garganta de Fuego. En Classic, ese paso tenía una reja, y la llave te la daba ella,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.547,
+  "t1": 292.991,
+  "tipo": "video",
+  "texto": "pero solo a nivel cuarenta y tantos. Así que durante años, miles de jugadores de nivel bajo llegaron hasta ella, y se quedaron mirando una puerta cerrada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.991,
+  "t1": 300.644,
+  "tipo": "video",
+  "texto": "Y aquí está el secreto: si le haces el gesto de grosero, barra rude, no se queda callada. Te contesta en el chat.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.644,
+  "t1": 311.299,
+  "tipo": "video",
+  "texto": "A veces escribe: sigue así y te enseño modales a golpes. Otras: estás tentando a la suerte. Y la mejor: no me obligues a ponerme medieval contigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 311.299,
+  "t1": 319.475,
+  "tipo": "video",
+  "texto": "Esa frase es un guiño a Pulp Fiction, a la famosa amenaza de Marsellus Wallace. Una enana de Loch Modan citando a Tarantino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 319.475,
+  "t1": 327.93,
+  "tipo": "video",
+  "texto": "No da objeto ni experiencia. Pero cuesta un segundo, y casi nadie sabe que esa enana tiene respuestas guardadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.93,
+  "t1": 332.376,
+  "tipo": "video",
+  "texto": "Número dieciocho. El médico brujo en prácticas de Sen'jin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 332.376,
+  "t1": 343.811,
+  "tipo": "video",
+  "texto": "En Durotar, en el Poblado Sen'jin, vive un trol joven llamado Bom'bay. Es el aprendiz del maestro Gadrin. Te cuenta que hace trabajo voluntario para pagarse la escuela de médicos brujos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.811,
+  "t1": 352.296,
+  "tipo": "video",
+  "texto": "Y que, a cambio, te ayuda gratis. Pero su ayuda es un maleficio al azar. La mayoría de las veces te convierte en un bicho,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.296,
+  "t1": 360.622,
+  "tipo": "video",
+  "texto": "y lo quitas con clic derecho en el aura. Otras veces te emborracha, te vuelve fantasma, o te agranda durante cinco minutos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.622,
+  "t1": 369.681,
+  "tipo": "video",
+  "texto": "Y a veces te lanza por los aires. Ojo con eso: si la caída llega antes que el efecto de pluma, te puedes matar. Ve con la vida llena.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.681,
+  "t1": 377.481,
+  "tipo": "video",
+  "texto": "Para que te hechice, antes tienes que haber completado la misión de Zalazane, el brujo de las Islas del Eco. Y aquí viene el huevo de pascua:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.481,
+  "t1": 387.652,
+  "tipo": "video",
+  "texto": "mientras te transforma, a veces escribe en el chat: Eekum Bokum. Es el conjuro de Mumbo Jumbo, el chamán de Banjo-Kazooie. Y su nombre viene del doctor Bombay,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.652,
+  "t1": 397.93,
+  "tipo": "video",
+  "texto": "el brujo de la serie Hechizada. Y su voz es la de los médicos brujos de Warcraft tres. Puede que sea el único trol del juego que la usa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 397.93,
+  "t1": 402.591,
+  "tipo": "video",
+  "texto": "Número diecisiete. Coldrasp, el lobo que nunca existió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 402.591,
+  "t1": 410.276,
+  "tipo": "video",
+  "texto": "En el Bosque Susurrante de los Claros de Tirisfal, la zona inicial de los no-muertos, aparece un lobo espíritu raro de nivel doce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 410.276,
+  "t1": 419.364,
+  "tipo": "video",
+  "texto": "Está al oeste de los Claros, no muy lejos de donde despiertan los no-muertos. Las coordenadas que comparten son diecinueve, sesenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.364,
+  "t1": 430.861,
+  "tipo": "video",
+  "texto": "Se llama Coldrasp. Y no estaba en el juego original: es exclusivo de Forever. Llegó con la versión uno punto sesenta punto uno de Forever, así que es de lo más nuevo de esta lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.861,
+  "t1": 436.941,
+  "tipo": "video",
+  "texto": "Es azul, translúcido, como un fantasma. Y lo mejor: se puede domar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 436.941,
+  "t1": 447.126,
+  "tipo": "video",
+  "texto": "Para un cazador de nivel doce, tener un lobo espíritu como mascota es de lo más raro que puedes enseñar en una capital. Es un raro, así que no siempre está. Si lo ves,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.126,
+  "t1": 457.93,
+  "tipo": "video",
+  "texto": "no lo mates: dómalo. Y como es nuevo, ninguna guía de Classic lo menciona. Si buscas en las de siempre, no lo vas a encontrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.93,
+  "t1": 463.025,
+  "tipo": "video",
+  "texto": "Número dieciséis. Mystmane, el oso más rápido de Zephras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.025,
+  "t1": 472.449,
+  "tipo": "video",
+  "texto": "En la Isla Zephras, la zona inicial de los cielonatos, hay un oso raro de nivel trece, nuevo en Forever. Y es nuevo de verdad: en el Classic de siempre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.449,
+  "t1": 481.777,
+  "tipo": "video",
+  "texto": "ese oso no existía. La Isla Zephras entera es nueva. Las guías lo ubican en sesenta, treinta y tres, y desde ahí camina hacia el sur,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.777,
+  "t1": 491.494,
+  "tipo": "video",
+  "texto": "hasta cincuenta y nueve, treinta y siete. Mystmane es el único oso domable con ataque rápido: golpea cada un segundo y medio, en vez de cada dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.494,
+  "t1": 497.554,
+  "tipo": "video",
+  "texto": "Y además conoce Zarpazo, que pega hasta a tres enemigos a la vez. Ahora, la trampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.554,
+  "t1": 506.004,
+  "tipo": "video",
+  "texto": "Hay otro oso idéntico en la isla, Den'dralass. Mismo modelo, mismo color. Mira el nombre antes de domarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.004,
+  "t1": 514.624,
+  "tipo": "video",
+  "texto": "Y Mystmane derriba, y el derribo te corta la doma. Las guías recomiendan ir con nivel catorce o quince, y empezar la doma desde lejos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.624,
+  "t1": 523.99,
+  "tipo": "video",
+  "texto": "Reaparece cada hora y media o tres horas. Así que paciencia, y nadie te garantiza que estés solo. Número quince.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 523.99,
+  "t1": 531.521,
+  "tipo": "video",
+  "texto": "Plata de las olas. En Loch Modan, en el fondo del lago, hay una caja de herramientas de pesca abandonada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 531.521,
+  "t1": 539.408,
+  "tipo": "video",
+  "texto": "La caja está en las coordenadas cuarenta y cinco, cuarenta y tres. Y no la vas a ver desde la orilla: hay que meterse al agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 539.408,
+  "t1": 550.431,
+  "tipo": "video",
+  "texto": "Para llegar hay que bucear, y abajo nadan trillones jóvenes de más nivel. Así que entra rápido y sal más rápido. Dentro hay un pasador de pelo de plata, con dos iniciales grabadas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.431,
+  "t1": 559.294,
+  "tipo": "video",
+  "texto": "K punto D punto. Dos letras en un pasador perdido, y ninguna flecha en el mapa. Así se esconde un secreto de los buenos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.294,
+  "t1": 566.44,
+  "tipo": "video",
+  "texto": "Esas iniciales son de Khara Deepwater, que está en la orilla del lago. Y el pasador empieza una misión oculta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.44,
+  "t1": 576.815,
+  "tipo": "video",
+  "texto": "Es una misión que no aparece en ningún tablón ni te la da ningún personaje: la empieza un objeto del fondo del lago. Se la devuelves, y te da una muñequera con intelecto y espíritu.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.815,
+  "t1": 582.837,
+  "tipo": "video",
+  "texto": "Para un sacerdote o un mago de nivel bajo, vale la pena el chapuzón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 582.837,
+  "t1": 594.111,
+  "tipo": "video",
+  "texto": "Y antes de seguir, gracias por los comentarios del video de los add-ons. Ricochet escribió: Remy es todo, excelente trabajo. Y Galaxy, con muchos signos de exclamación:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.111,
+  "t1": 603.473,
+  "tipo": "video",
+  "texto": "Remy, toda la vida. Y Bajel dice que la voz de siempre es un elemento esencial del canal. Así que Remy se queda, y se queda contento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 603.473,
+  "t1": 610.43,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen, y todos se toman en cuenta para mejorar el canal. Por eso sigo aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.43,
+  "t1": 619.556,
+  "tipo": "video",
+  "texto": "Número catorce. ¿Dónde está la esposa de Mankrik? En el Cruce, en Los Baldíos, hay un orco que no descansa: Mankrik.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 619.556,
+  "t1": 626.886,
+  "tipo": "video",
+  "texto": "Los jabaespines lo atacaron, y su esposa no volvió. Su misión se recoge desde nivel catorce, y te pide algo muy simple:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.886,
+  "t1": 636.238,
+  "tipo": "video",
+  "texto": "encontrar a su esposa, Olgra. El problema es que no hay flecha, ni marca, ni nombre. Tienes que bajar al sur del Cruce, cruzar un puente,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.238,
+  "t1": 645.763,
+  "tipo": "video",
+  "texto": "y mirar frente a unas chozas. Y lo que encuentras no se llama Olgra. Es solo un cadáver tirado junto al camino, que mucha gente pasaba sin ver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 645.763,
+  "t1": 654.671,
+  "tipo": "video",
+  "texto": "Así nació el primer gran meme de World of Warcraft. En el chat de Los Baldíos, todo el mundo preguntaba lo mismo: ¿dónde está la esposa de Mankrik?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 654.671,
+  "t1": 663.691,
+  "tipo": "video",
+  "texto": "Los Baldíos abarcaban quince niveles, así que cada personaje de la Horda veía la pregunta una y otra vez. Y muchos la hacían solo para molestar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.691,
+  "t1": 668.721,
+  "tipo": "video",
+  "texto": "El chat de Los Baldíos se volvió un meme por sí mismo, y hasta hubo camisetas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 668.721,
+  "t1": 679.916,
+  "tipo": "video",
+  "texto": "Blizzard quitó la misión en Cataclysm, y Mankrik acabó enterrando a su esposa y levantándole un monumento. Incluso salió en Hearthstone. Pero en Forever, la misión original sigue ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.916,
+  "t1": 687.93,
+  "tipo": "video",
+  "texto": "Ahora ya sabes dónde buscar. No le digas a nadie, que el chat sin esa pregunta no sería lo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.93,
+  "t1": 698.017,
+  "tipo": "video",
+  "texto": "Número trece. Un orco que salió en la Crematoria. En Orgrimmar, dentro del Bastión de Grommash, junto a Thrall, hay un orco viejo: Eitrigg.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.017,
+  "t1": 705.369,
+  "tipo": "video",
+  "texto": "Casi todos pasan a su lado sin mirarlo. Pero ese orco es parte de una de las historias más importantes de Warcraft.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.369,
+  "t1": 712.809,
+  "tipo": "video",
+  "texto": "Años atrás, un paladín humano le salvó la vida, y por defenderlo lo perdió todo: sus tierras, su título y a su familia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 712.809,
+  "t1": 722.848,
+  "tipo": "video",
+  "texto": "Ese paladín era Tirion. Hoy, Eitrigg es consejero de Thrall, y está a su lado. Y la historia de cómo llegó ahí está entera en la Crematoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.848,
+  "t1": 730.191,
+  "tipo": "video",
+  "texto": "Si viste la Crematoria en Gaia Eterna, ya sabes quién es. Si no, ve a verlo y luego pasa a saludarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 730.191,
+  "t1": 739.854,
+  "tipo": "video",
+  "texto": "Y desde nivel uno, cualquier personaje de la Horda puede entrar al Bastión y quedarse frente a él. Así que la próxima vez que entres a hablar con Thrall, no pases de largo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 739.854,
+  "t1": 746.363,
+  "tipo": "video",
+  "texto": "saluda a Eitrigg. Número doce. El pueblo que cambia de noche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.363,
+  "t1": 755.887,
+  "tipo": "video",
+  "texto": "En el suroeste del Bosque de Argénteos está la Aldea Piroleña, un pueblo humano tranquilo, con su herrero, su sastre y su consejo. De día, son humanos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.887,
+  "t1": 764.881,
+  "tipo": "video",
+  "texto": "Pero cuando el reloj del servidor marca las nueve de la noche, el pueblo entero cambia. Ojo: las nueve de la hora del servidor, no de la tuya.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.881,
+  "t1": 773.954,
+  "tipo": "video",
+  "texto": "Si juegas en un reino de otro país, haz la cuenta. El anciano, el centinela, el vigía y el armero de Piroleña se convierten en huargen Moonrage,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 773.954,
+  "t1": 781.821,
+  "tipo": "video",
+  "texto": "y atacan a cualquiera, sea de la facción que sea. La culpa es del archimago Arugal. Desde el castillo que domina el pueblo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 781.821,
+  "t1": 788.745,
+  "tipo": "video",
+  "texto": "el que hoy es Colmillo Oscuro, maldijo a sus vecinos. Y la Horda tiene misiones ahí, de nivel quince.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 788.745,
+  "t1": 801.056,
+  "tipo": "video",
+  "texto": "La acechadora Faerleia te manda a emboscar al consejo del pueblo y a su alcalde, Morrison. Ahora imagina llegar de noche a hacer esa misión, y encontrarte con un pueblo lleno de huargen en lugar de humanos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.056,
+  "t1": 809.758,
+  "tipo": "video",
+  "texto": "Blizzard quitó todo esto en Cataclysm, cuando los huargen pasaron a ser una raza que puedes elegir. Pero en Forever, la maldición sigue.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 809.758,
+  "t1": 817.93,
+  "tipo": "video",
+  "texto": "Así que si pasas por Piroleña, mira la hora del servidor. A las nueve, los vecinos dejan de ser vecinos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.93,
+  "t1": 825.553,
+  "tipo": "video",
+  "texto": "Número once. Un reino entero, sellado. Al sur del Bosque de Argénteos, una zona de nivel diez a veinte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 825.553,
+  "t1": 834.156,
+  "tipo": "video",
+  "texto": "hay un muro gigantesco: el Muro de Cringris. Detrás está Gilneas, el reino que se encerró a sí mismo durante la guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.156,
+  "t1": 843.317,
+  "tipo": "video",
+  "texto": "Se llama así por Genn Cringris, el rey que prefirió encerrar a su gente antes que seguir en la Alianza. En el juego original, ese muro era solo decorado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.317,
+  "t1": 848.993,
+  "tipo": "video",
+  "texto": "Pero en Forever, Gilneas está en los archivos del juego, como una zona sellada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 848.993,
+  "t1": 862.203,
+  "tipo": "video",
+  "texto": "Y no está vacía: los que revisaron los archivos encontraron una fila de campo de batalla para diez jugadores. Todavía no se puede entrar. Pero a nivel quince ya puedes plantarte frente al muro, y pensar en lo que viene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 862.203,
+  "t1": 867.023,
+  "tipo": "video",
+  "texto": "Y para los que jugamos Cataclysm, ver ese muro cerrado otra vez tiene algo especial:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 867.023,
+  "t1": 876.796,
+  "tipo": "video",
+  "texto": "sabemos lo que hay detrás. Y ahora, una crítica de las que nos gustan. Alfredo escribió: qué asco de inteligencia artificial,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 876.796,
+  "t1": 886.639,
+  "tipo": "video",
+  "texto": "todos los comentarios son bots, internet está muerto. Alfredo, tranquilo. Ningún bot escribiría Maricarmen tío en una votación de voces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 886.639,
+  "t1": 895.874,
+  "tipo": "video",
+  "texto": "Esos son humanos, y bastante creativos. Y si internet está muerto, Alfredo, entonces tú acabas de comentar en un cementerio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 895.874,
+  "t1": 903.818,
+  "tipo": "video",
+  "texto": "Bienvenido. Aquí hay muchos secretos. Número diez. Una carta en el fondo del río.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 903.818,
+  "t1": 912.571,
+  "tipo": "video",
+  "texto": "Entre Los Humedales y las Tierras Altas de Arathi está el Puente de Thandol, un puente enano gigantesco. Los Humedales empiezan en el nivel veinte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.571,
+  "t1": 919.33,
+  "tipo": "video",
+  "texto": "Si te tiras al agua y buceas bajo el puente, encuentras un cadáver. Y con él, un sobre empapado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 919.33,
+  "t1": 928.312,
+  "tipo": "video",
+  "texto": "Es la carta de un soldado, Sully Balloo, para su esposa, Sara Balloo, que vive en Forjaz. Y empieza una misión: llevársela.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 928.312,
+  "t1": 938.244,
+  "tipo": "video",
+  "texto": "La carta empieza así: mi querida Sara. Y termina: Sara, no me llores muerto. Piensa que me fui, y espérame, porque nos volveremos a ver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 938.244,
+  "t1": 948.086,
+  "tipo": "video",
+  "texto": "Y aquí está la historia real. En julio de mil ochocientos sesenta y uno, un mayor del ejército de la Unión, Sullivan Ballou, le escribió a su esposa, Sarah.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 948.086,
+  "t1": 955.996,
+  "tipo": "video",
+  "texto": "Fue una semana antes de la primera batalla de Bull Run, en la Guerra de Secesión de Estados Unidos. Y Sullivan murió en esa batalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 955.996,
+  "t1": 963.117,
+  "tipo": "video",
+  "texto": "Su carta es una de las más famosas de esa guerra. Y Blizzard la convirtió en la carta de un enano ahogado bajo un puente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 963.117,
+  "t1": 970.543,
+  "tipo": "video",
+  "texto": "Y no es casualidad que sea un enano: los Hierro Negro y los de Forjaz llevan doscientos años enfrentados desde su propia guerra civil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 970.543,
+  "t1": 980.997,
+  "tipo": "video",
+  "texto": "La misión se quitó del juego actual en Cataclysm. En Forever sigue ahí, esperando a que alguien se moje. Número nueve. El brazo de Terminator.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 980.997,
+  "t1": 987.526,
+  "tipo": "video",
+  "texto": "Seguimos en el Puente de Thandol, pero ahora por dentro. Porque el puente es hueco, y tiene salas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 987.526,
+  "t1": 998.075,
+  "tipo": "video",
+  "texto": "Una de las misiones de Dun Modr te manda a buscar a un enano desaparecido, y te lleva por dentro del puente. En la sala donde está el cuerpo del enano, pegado a la pared, hay una vitrina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 998.075,
+  "t1": 1005.171,
+  "tipo": "video",
+  "texto": "Y dentro, un brazo mecánico. Y si te quedas mirando, de vez en cuando, el brazo se mueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1005.171,
+  "t1": 1014.828,
+  "tipo": "video",
+  "texto": "Un brazo de metal, en un juego de espadas y magia. Y nadie en el juego explica qué hace ahí. Es el brazo del primer Terminator. En Terminator dos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1014.828,
+  "t1": 1023.264,
+  "tipo": "video",
+  "texto": "ese brazo se guarda en una vitrina, en el laboratorio de la empresa que acaba creando a Skynet. Nadie te lo indica. No hay misión,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1023.264,
+  "t1": 1029.408,
+  "tipo": "video",
+  "texto": "ni texto, ni logro. Solo un brazo de robot que se mueve en una sala de un puente enano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1029.408,
+  "t1": 1040.233,
+  "tipo": "video",
+  "texto": "La mayoría de jugadores entran, encuentran al enano, y se van sin mirar la pared. Así que cuando hagas esa misión en Forever, quédate un momento en la sala. Y si el brazo se mueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1040.233,
+  "t1": 1050.106,
+  "tipo": "video",
+  "texto": "ya sabes quién vuelve. Número ocho. La chimenea de Viktor. Forever trae mazmorras nuevas, y una de ellas está sobre Entrañas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1050.106,
+  "t1": 1056.975,
+  "tipo": "video",
+  "texto": "las Ruinas de Lordaeron, para los niveles quince a veinte. Es la capital caída donde Arthas mató a su padre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1056.975,
+  "t1": 1068.699,
+  "tipo": "video",
+  "texto": "Y escondidos en sus ruinas hay dos jefes que no aparecen si no los buscas. El primero está en una casa abandonada. Una guía la ubica junto a la plaga morada, después del Barón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1068.699,
+  "t1": 1075.15,
+  "tipo": "video",
+  "texto": "Dentro, en la chimenea, hay leña tibia. Le haces clic, y empiezan las oleadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1075.15,
+  "t1": 1083.362,
+  "tipo": "video",
+  "texto": "Según esa guía, son cinco oleadas. Y al terminar, aparece Viktor el Vil, uno de los jefes secretos de la mazmorra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1083.362,
+  "t1": 1091.999,
+  "tipo": "video",
+  "texto": "Otras guías no se ponen de acuerdo en cuántas oleadas son, ni en la casa exacta. Así que, como siempre en Forever, a explorar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1091.999,
+  "t1": 1100.43,
+  "tipo": "video",
+  "texto": "Es una casa más entre muchas, así que la pista es la chimenea: si ves leña rara dentro, ya la encontraste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1100.43,
+  "t1": 1109.85,
+  "tipo": "video",
+  "texto": "Número siete. La estatua que te mira. El segundo jefe secreto de las Ruinas de Lordaeron está a la vista de todos. Y casi nadie lo ve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1109.85,
+  "t1": 1118.786,
+  "tipo": "video",
+  "texto": "La mazmorra está arriba, en las ruinas de la ciudad. Y debajo, en las cloacas, está Entrañas, la capital de los Renegados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1118.786,
+  "t1": 1127.158,
+  "tipo": "video",
+  "texto": "En una esquina del oeste de las ruinas hay una estatua con los ojos rojos, brillando. Si te acercas, llegan tres oleadas de enemigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1127.158,
+  "t1": 1136.832,
+  "tipo": "video",
+  "texto": "Y después, aparece el jefe secreto: El Abandonado. Y el nombre le queda perfecto: abandonado por todos los grupos que van con prisa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1136.832,
+  "t1": 1145.144,
+  "tipo": "video",
+  "texto": "La mayoría de grupos pasan de largo. Si tu grupo va con prisa, convéncelos. Una estatua que te mira no es decoración.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1145.144,
+  "t1": 1151.505,
+  "tipo": "video",
+  "texto": "Dos jefes ocultos en una mazmorra de nivel quince. Eso es lo que Blizzard escondió durante la beta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1151.505,
+  "t1": 1161.633,
+  "tipo": "video",
+  "texto": "Y si lo derrotas, presume: muchos grupos de Forever ni saben que existe. Y otra ronda de comentarios, porque se la ganaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1161.633,
+  "t1": 1170.61,
+  "tipo": "video",
+  "texto": "Chino, que apenas empieza en WoW, dice que estos videos son una gran guía. Bienvenido, Chino: este video es justo para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1170.61,
+  "t1": 1177.27,
+  "tipo": "video",
+  "texto": "Y Klb nos cuenta que Favorcraft, el add-on que tenía ciento noventa y dos descargas, ya va por trescientas ochenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1177.27,
+  "t1": 1186.405,
+  "tipo": "video",
+  "texto": "Gracias por recomendarlo, dice. Así que si este canal puede duplicar las descargas de un add-on, imagínate lo que pasa si compartes este video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1186.405,
+  "t1": 1194.215,
+  "tipo": "video",
+  "texto": "Todo se lee, y todo suma. Número seis. El santuario del guerrero caído.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1194.215,
+  "t1": 1201.433,
+  "tipo": "video",
+  "texto": "En Los Baldíos, en una loma al oeste del Cruce, hay un sitio que casi nadie visita, porque no hay misión que te lleve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1201.433,
+  "t1": 1212.686,
+  "tipo": "video",
+  "texto": "Se sube por la ladera del suroeste, y arriba hay un obelisco de piedra. En su base, dos letras grabadas: M K. Junto al obelisco hay una estatua de un orco con un mandoble.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1212.686,
+  "t1": 1220.56,
+  "tipo": "video",
+  "texto": "Y delante, un sanador espiritual, que se llama Koiter. Michel Koiter era uno de los artistas de Blizzard.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1220.56,
+  "t1": 1229.944,
+  "tipo": "video",
+  "texto": "Trabajaba junto a su hermano gemelo, René, y firmaban juntos como Twincruiser. Murió en marzo de dos mil cuatro, por un fallo del corazón inesperado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1229.944,
+  "t1": 1235.359,
+  "tipo": "video",
+  "texto": "Tenía diecinueve años. World of Warcraft todavía no había salido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1235.359,
+  "t1": 1248.724,
+  "tipo": "video",
+  "texto": "La estatua de ese orco es una copia exacta del personaje que Michel jugaba en la beta, Twincruiser. Y el sanador lleva su apellido. Así que si mueres en esa parte de Los Baldíos, quien te devuelve a la vida es Koiter.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1248.724,
+  "t1": 1255.244,
+  "tipo": "video",
+  "texto": "Blizzard lo volvió a recordar en StarCraft dos: tras una batalla, Raynor recoge la placa de un marine caído.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1255.244,
+  "t1": 1265.285,
+  "tipo": "video",
+  "texto": "Dice M. Koiter. La próxima vez que cruces Los Baldíos, sube a la loma. Es el homenaje más silencioso de todo el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1265.285,
+  "t1": 1275.475,
+  "tipo": "video",
+  "texto": "Número cinco. Kyle ha desaparecido. En Mulgore, en el Poblado Pezuña de Sangre, un tauren llamado Ahab Wheathoof perdió a su perro, Kyle.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1275.475,
+  "t1": 1281.793,
+  "tipo": "video",
+  "texto": "La misión te pide carne tierna de zancudo, para dársela a Kyle cuando lo encuentres corriendo por las praderas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1281.793,
+  "t1": 1291.328,
+  "tipo": "video",
+  "texto": "Le das la carne, Kyle se calma, y vuelves con Ahab. Una misión sencilla, de las de antes. Mucha gente la hizo sin saber nada más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1291.328,
+  "t1": 1300.543,
+  "tipo": "video",
+  "texto": "Y ahora, la historia de verdad. En dos mil siete, un niño de trece años, Ezra Chatterton, visitó Blizzard gracias a Make-A-Wish.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1300.543,
+  "t1": 1307.0,
+  "tipo": "video",
+  "texto": "Ezra tenía cáncer cerebral. Ayudó a diseñar esta misión, y le puso su propia voz a Ahab.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1307.0,
+  "t1": 1314.306,
+  "tipo": "video",
+  "texto": "Ezra murió poco después de su visita. Pero su misión sigue en el juego. Y ahora, también en Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1314.306,
+  "t1": 1323.26,
+  "tipo": "video",
+  "texto": "Como la misión era de Burning Crusade, no estaba en la base de Forever. Los jugadores lo pidieron en el foro oficial. Kaivax, de Blizzard,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1323.26,
+  "t1": 1332.273,
+  "tipo": "video",
+  "texto": "contestó, y Kyle volvió a Mulgore en un parche de la beta. Se recoge desde nivel cinco. Así que si juegas tauren, no te la saltes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1332.273,
+  "t1": 1341.47,
+  "tipo": "video",
+  "texto": "Es una misión de dos minutos, y la diseñó un niño que amaba este juego. Número cuatro. El huevo de gallina de los Páramos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1341.47,
+  "t1": 1349.061,
+  "tipo": "video",
+  "texto": "Este es el secreto con el que empezó todo. Busca un pollo en una granja, y hazle el gesto de la gallina, barra chicken.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1349.061,
+  "t1": 1359.586,
+  "tipo": "video",
+  "texto": "Nadie en el juego te dice que lo hagas. La forma más fácil es en la granja de los Saldean, en los Páramos de Poniente: hay pollos alrededor, y el pienso lo vende el mismo granjero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1359.586,
+  "t1": 1366.701,
+  "tipo": "video",
+  "texto": "Una vez, y otra, y otra. Hasta que el pollo te mira raro, y te ofrece una misión: ¡Cloc!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1366.701,
+  "t1": 1375.4,
+  "tipo": "video",
+  "texto": "Para cumplirla necesitas pienso especial para pollos. En la Alianza, solo lo vende el granjero Saldean, ahí mismo, en su granja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1375.4,
+  "t1": 1383.937,
+  "tipo": "video",
+  "texto": "En la Horda lo vende William Saldean, en Rémol. Los Saldean están en todas partes. Le das el pienso al pollo, y te deja un huevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1383.937,
+  "t1": 1394.187,
+  "tipo": "video",
+  "texto": "Y del huevo sale tu mascota: un pollo de los Páramos. Es de nivel uno. Un personaje recién creado puede tener su pollo antes que su primera espada decente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1394.187,
+  "t1": 1401.676,
+  "tipo": "video",
+  "texto": "Ojo: la misión del pollo dura poco. Si no la aceptas rápido, se va, y vuelves a empezar con los cloc cloc.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1401.676,
+  "t1": 1410.43,
+  "tipo": "video",
+  "texto": "Y tranquilo: los demás jugadores te van a ver raro, haciéndole cloc cloc a un pollo durante dos minutos. Vale la pena.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1410.43,
+  "t1": 1417.909,
+  "tipo": "video",
+  "texto": "Número tres. El anillo heredado de Zephras. Los tres primeros puestos son, en realidad, el mismo secreto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1417.909,
+  "t1": 1427.377,
+  "tipo": "video",
+  "texto": "el primer gran secreto de Forever, el Dawn Waker. Lo encontró la comunidad del Discord de cazadores de secretos, y Wowhead lo publicó esta semana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1427.377,
+  "t1": 1434.695,
+  "tipo": "video",
+  "texto": "Wowhead lo llama, tal cual, el primer secreto de World of Warcraft Forever. Y todavía nadie lo ha resuelto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1434.695,
+  "t1": 1444.77,
+  "tipo": "video",
+  "texto": "Empieza en la Isla Zephras, en el pueblo de Thendal. Ailee Farheart te da una misión: La mayoría de edad. Las coordenadas son cuarenta y dos, veintitrés,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1444.77,
+  "t1": 1453.325,
+  "tipo": "video",
+  "texto": "en Thendal. Y la misión es de nivel bajo: cualquier cielonato recién creado la puede hacer. La entregas a Rorian, un poco más allá,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1453.325,
+  "t1": 1461.92,
+  "tipo": "video",
+  "texto": "y te da un anillo: el Ancient Heirloom, una reliquia de familia. Y hay otra forma de conseguirlo: en el piso de arriba del edificio de al lado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1461.92,
+  "t1": 1470.156,
+  "tipo": "video",
+  "texto": "Así que, si alguien llegó antes, mira arriba. Más adelante en la cadena, ese anillo hace visibles cosas que nadie más ve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1470.156,
+  "t1": 1480.43,
+  "tipo": "video",
+  "texto": "Así que no lo vendas. Y una teoría de la comunidad lo une con la pizarra del pódcast oficial, de la que ya te hablé en el video de los objetos secretos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1480.43,
+  "t1": 1487.809,
+  "tipo": "video",
+  "texto": "Número dos. La antorcha del guardia muerto. En el Bosque del Ocaso hay un guardia de la Guardia Nocturna, muerto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1487.809,
+  "t1": 1494.821,
+  "tipo": "video",
+  "texto": "destrozado por alguna bestia. Y aunque está muerto, te ofrece una misión: Un final desafortunado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1494.821,
+  "t1": 1506.77,
+  "tipo": "video",
+  "texto": "Requiere nivel uno, es para las dos facciones, y se entrega al instante. Le quitas de la mano una antorcha apagada. El texto dice que te servirá para revelar lo que esconde la oscuridad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1506.77,
+  "t1": 1512.98,
+  "tipo": "video",
+  "texto": "Es un objeto de nivel uno, tiene treinta segundos de reutilización, y ocupa un hueco en la bolsa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1512.98,
+  "t1": 1520.711,
+  "tipo": "video",
+  "texto": "Y esa es la queja de los comentarios en Wowhead: no hay pestaña de juguetes, así que la antorcha va en la mochila, con todo lo demás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1520.711,
+  "t1": 1529.241,
+  "tipo": "video",
+  "texto": "El cuerpo no está siempre en el mismo sitio. Lo han encontrado en la cima del cementerio de la Colina del Cuervo, y en otros cinco lugares del bosque.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1529.241,
+  "t1": 1537.931,
+  "tipo": "video",
+  "texto": "Alrededor hay necrófagos de nivel veinticinco, así que con nivel bajo, entra con cuidado. Y Questie no te lo marca hasta que estás muy cerca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1537.931,
+  "t1": 1547.93,
+  "tipo": "video",
+  "texto": "La antorcha ilumina cuevas y criptas en todo el mundo, menos en posadas y capitales. Pero su verdadero uso está en una isla del cielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1547.93,
+  "t1": 1558.152,
+  "tipo": "video",
+  "texto": "Número uno. Eluvi'ana, la espada del Dawn Waker. Con el anillo puesto y la antorcha en la mano, vuelves a la Isla Zephras, a las Ruinas de Ban'aethal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1558.152,
+  "t1": 1565.086,
+  "tipo": "video",
+  "texto": "Usas la antorcha, y aparece una empuñadura antigua que antes no estaba ahí. Y con ella, una misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1565.086,
+  "t1": 1573.529,
+  "tipo": "video",
+  "texto": "Se la llevas a Ealaane, y te pide encontrar la hoja: una espada antigua de los cielonatos, en algún sitio de la isla. No tiene un lugar fijo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1573.529,
+  "t1": 1582.843,
+  "tipo": "video",
+  "texto": "La han encontrado en cuatro puntos distintos, así que hay que recorrer Zephras con calma. Y cuando la llevas, te dan Eluvi'ana, una espada de una mano,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1582.843,
+  "t1": 1589.322,
+  "tipo": "video",
+  "texto": "de calidad poco común. Todo eso, en una zona de nivel uno a doce. Pero no termina ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1589.322,
+  "t1": 1598.966,
+  "tipo": "video",
+  "texto": "La cadena sigue por Costa Oscura, Vallefresno, Feralas, Azshara, Cuna del Invierno y Hyjal. La segunda parte llega hacia el nivel veintidós:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1598.966,
+  "t1": 1607.073,
+  "tipo": "video",
+  "texto": "un globo de agua corrupto. La Alianza lo saca de los nagas de Costa Oscura, y la Horda, del Barón Aquanis en Brazanegra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1607.073,
+  "t1": 1616.752,
+  "tipo": "video",
+  "texto": "Con el anillo puesto, en la Playa de Zoram aparece un espíritu altonato. Y en Feralas hay una bóveda que solo se ve con ese anillo, para cinco jugadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1616.752,
+  "t1": 1623.983,
+  "tipo": "video",
+  "texto": "Wowhead calcula que hace falta nivel cuarenta o más para completar la cadena entera. Lo de Zephras es solo el principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1623.983,
+  "t1": 1634.537,
+  "tipo": "video",
+  "texto": "Y al final, el príncipe Tortheldrin, en La Masacre, habla de dos espadas: Eluvi'ana y Eluvi'tor. Y dice que ese secreto es solo para los amigos de su corte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1634.537,
+  "t1": 1641.081,
+  "tipo": "video",
+  "texto": "Algunos creen que al final pide reputación honorable con los Shen'dralar. Eso todavía no está confirmado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-192",
+  "t0": 1641.081,
+  "t1": 1650.509,
+  "tipo": "video",
+  "texto": "Nadie ha terminado el Dawn Waker todavía. Así que guarda esa espada poco común. Puede que sea la primera pieza de algo enorme.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-193",
+  "t0": 1650.509,
+  "t1": 1658.804,
+  "tipo": "video",
+  "texto": "Y esos son veinte secretos escondidos de los primeros niveles de World of Warcraft Forever, de un vendedor que desapareció a una espada que nadie entiende.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-194",
+  "t0": 1658.804,
+  "t1": 1667.211,
+  "tipo": "video",
+  "texto": "Un brazo de Terminator, una carta de la Guerra de Secesión, un niño que le puso voz a un tauren, y un artista que tiene su santuario en Los Baldíos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-195",
+  "t0": 1667.211,
+  "t1": 1675.122,
+  "tipo": "video",
+  "texto": "Cuéntame en los comentarios cuál no conocías, y cuál encontraste tú. Todos se leen, y los mejores salen en el próximo video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-196",
+  "t0": 1675.122,
+  "t1": 1684.29,
+  "tipo": "video",
+  "texto": "Si alguno de estos secretos cambió en tu reino, o encontraste uno que no está aquí, déjalo en los comentarios con las coordenadas. Y no olvides pasar por Gaia Eterna:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-197",
+  "t0": 1684.29,
+  "t1": 1693.673,
+  "tipo": "video",
+  "texto": "la historia de la Crematoria te está esperando, con el enlace en la descripción. Y si este video te sirvió, compártelo con ese amigo que acaba de empezar en Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-198",
+  "t0": 1693.673,
+  "t1": 1702.5,
+  "tipo": "video",
+  "texto": "Le ahorras horas. Nos vemos en la próxima crónica. Y nos vemos en Azeroth.",
+  "clip_s": 8
+ }
+]

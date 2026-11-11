@@ -74,6 +74,29 @@ descarga comprobada (infobox: especie, mundo, juego). Detalle y pasos: `docs/reg
 2. Sacar un cuadro de cada promesa (de los medios + capa de fx, o del MASTER) en una hoja `previews/promesas_NN.jpg` y MIRARLA.
 3. Lo que no se ve: otro segundo del clip, una captura (`yt-dlp -g` + `ffmpeg -ss`), pegatina o Flow con ingredientes (sección
    anterior). Si ni así, se reescribe la frase ANTES de la voz. Nunca se entrega una promesa sin imagen.
+4. **Anclas repetidas (10-nov-2026, `wow_secretos_primeros_niveles`):** `ancla()` toma la PRIMERA vez que la voz dice esas palabras;
+   el gancho suele adelantar frases de los puestos («Una estatua con los ojos rojos»), y la recreación de Flow del puesto 7 salía en el
+   segundo 30. Toda ancla de `pant()`/`pv()`/rótulo debe ser única (más palabras o `"…#2"`), y las `marcas` de MG/mapas también: tras
+   escribir `efectos.py`, recorrer `capa.fx` y avisar de toda marca con `_marcas` < 0 o > duración. Plantilla: `videos/wow_secretos_primeros_niveles/_promesas.py`
+   (promesas con cuadro real) y `_peg_check.py`.
+
+### TODO LO QUE SE NOMBRA SE MUESTRA, CON VIDEO DE PREFERENCIA (el usuario, 10-nov-2026, TODOS los canales; OBLIGATORIO en secretos y huevos de pascua)
+«Siempre lo que hables se tiene que mostrar con imágenes o videos de preferencia, sobre todo objetos, personajes o locaciones.
+En secretos y huevos de pascua nos tenemos que apoyar con videos e imágenes obligatoriamente.» Fallos en `wow_secretos_primeros_niveles`:
+el brazo de Terminator era un recorte verde borroso que no se distinguía; la caja de pesca hundida de Loch Modan y los secretos de las
+Ruinas de Lordaeron (la chimenea, los jefes ocultos) iban solo con mapa y fichas, sin enseñar el objeto ni el sitio.
+1. **El mapa NO basta.** Mapa = dónde está; además hace falta QUÉ es: el objeto en su sitio, el PNJ que habla (con su cara), la sala o
+   el rincón exacto, el paso que desbloquea el secreto (clic, gesto, objeto) y lo que pasa después (aparece el jefe, sale el mensaje).
+2. **Orden de preferencia:** (a) clip del beat que enseña ESE secreto en ese segundo (guía del propio secreto, con `desde` exacto);
+   (b) si el clip no lo enseña claro: captura a resolución completa de la guía (`yt-dlp --download-sections` a la mayor calidad +
+   `ffmpeg -ss`, recorte limpio sin rótulos del youtuber) como `pant()` a pantalla completa o pegatina GRANDE (`tam` ≥ 600, media
+   pantalla); (c) varias capturas en secuencia (`carr`/`tabl`/`vs`) cuando el secreto tiene pasos; (d) Flow con ingredientes reales
+   solo si no existe material.
+3. **Que se distinga:** una pegatina borrosa, diminuta o recortada de un cuadro de 480p no cuenta; buscar otra fuente (4K/1080p) o
+   pasar a `pant()`. Se mira en la hoja de promesas a tamaño real.
+4. La comprobación va en `promesas.md`: cada objeto, personaje y lugar nombrado = una fila, aunque la frase no diga «se ve».
+5. Las frases de la voz hablan como quien estuvo ahí («recorrí esas salas», «le hice clic»), nunca «revisé los videos» ni «uno de los
+   que lo grabó» (el usuario, 10-nov-2026).
 
 7. **Ampliada (el usuario, 5-nov-2026): «si necesitas generar pegatinas o mapas o lo que sea, también puedes apoyarte de Flow cuando
    no encuentres material o quieras enriquecer».** Flow vale también para ENRIQUECER aunque haya material: pegatinas con más calidad
@@ -1093,6 +1116,7 @@ Que el público se sienta tomado en cuenta. Tres momentos:
 Plastitube y Runa Caída necesitan reconectar el token (`yt conectar`) para leer comentarios (403 de permisos, 27-oct).
 
 ## CAMPAÑA DE SUSCRIPCIÓN (el usuario, 30-oct-2026: Runa Caída y Crónicas de Tamriel, todo video nuevo)
+- **Pedir la suscripción en TODOS los videos (el usuario, 10-nov-2026):** en cada video de cualquier canal se pide la suscripción al menos una vez; DÓNDE y cuántas veces lo decide Claude según el video (no es regla fija «antes del min 5»: eso fue solo un refuerzo de `er_mohg_atrocidades`, ~3:30, además del tramo del 75 %). Criterio: que caiga tras un momento fuerte (un dato que sorprende, el comentario de alguien, el cierre de un puesto), corto y natural, nunca en los primeros 30 s del gancho. Medir a 7 días el efecto del de Mohg contra Morgott.
 «Tenemos poquitos suscriptores, hay que subirlos». Hasta hoy NINGÚN guion lo pedía. Datos a 90 días (`yt metricas`):
 | | Subs | Vistas de NO suscritos | Subs ganados por 1 000 vistas | Audiencia al 80 % / al final |
 |---|---|---|---|---|

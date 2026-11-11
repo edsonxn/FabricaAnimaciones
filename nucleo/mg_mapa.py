@@ -124,6 +124,11 @@ TEMAS = {
     "pokemon": dict(trazo="bolitas", color=(232, 56, 48), borde=(16, 24, 16), grueso=9, letra=("verdanab.ttf", 40, None),
                     texto=(248, 248, 232), contorno=None, titulo=("verdanab.ttf", 78, None), subt=("verdanab.ttf", 34, None),
                     tinte=(1.0, 1.0, 1.0, 0.0), fondo=(15, 56, 15)),
+    # Call of Duty (cod_misterios, 10-nov-2026; Expediente 141): ruta a RAYAS ámbar de la interfaz táctica, marcadores = waypoint
+    # cuadrado con retícula (meta roja con mira), nombres en Bahnschrift condensada en mayúsculas sobre banda negra, mapa desaturado.
+    "cod": dict(trazo="rayas", color=(246, 190, 52), borde=(14, 16, 18), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
+                texto=(244, 244, 238), contorno=None, titulo=("bahnschrift.ttf", 86, "Bold Condensed"),
+                subt=("bahnschrift.ttf", 36, "SemiBold Condensed"), tinte=(.80, .84, .80, .10), fondo=(10, 12, 12)),
 }
 
 
@@ -243,6 +248,17 @@ def _marcador(tema, tipo):
                 d.polygon(pts, fill=(255, 240, 120))
             else:
                 d.ellipse((c - 9, c - 61, c + 9, c - 43), fill=(255, 250, 235))
+        elif tema == "cod":
+            col = {"meta": (226, 54, 46), "peligro": (226, 54, 46)}.get(tipo, T["color"])
+            r = 20 if tipo in ("meta", "inicio") else 15
+            im.alpha_composite(_halo(26, col, 120), (int(c - 52), int(c - 52)))
+            d.rectangle((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=(10, 12, 12, 210))
+            d.rectangle((c - r, c - r, c + r, c + r), outline=col, width=4)
+            if tipo == "meta":                              # mira: cruz que sale del cuadro
+                for a, b in (((c - r - 14, c), (c - r + 6, c)), ((c + r - 6, c), (c + r + 14, c)),
+                             ((c, c - r - 14), (c, c - r + 6)), ((c, c + r - 6), (c, c + r + 14))):
+                    d.line([a, b], fill=col, width=4)
+            d.rectangle((c - 5, c - 5, c + 5, c + 5), fill=col)
         elif tema == "majora":
             col = (255, 80, 80) if tipo == "peligro" else T["color"]
             if tipo == "meta":                              # rombo amarillo de las púas con el ojo rosa
@@ -308,7 +324,7 @@ def _etiqueta(tema, texto, tipo):
         T = TEMAS[tema]
         nom, tam, var = T["letra"]
         f = _fuente(nom, tam, var)
-        s = texto.upper() if tema in ("tes", "zelda") else texto
+        s = texto.upper() if tema in ("tes", "zelda", "cod") else texto
         track = 3 if tema == "tes" else (2 if tema == "zelda" else 0)
         dd = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
         tw = int(_track(dd, s, f, track))
@@ -320,7 +336,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon"):    # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon", "cod"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))

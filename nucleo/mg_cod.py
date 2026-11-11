@@ -669,3 +669,84 @@ def contador(valor, unidad="", titulo="", desde=0, decimales=0, w=760):
             _txt(d, (x0 + anchov + d.textlength(" ", font=fu), M + 168), unidad, fu, AMBAR, "lm", 255 * _eo((dt - .3) / .3))
         return _salida(im, dt, dur)
     return fn
+
+
+# ------------------------------------------------------------------ MG nuevos de `cod_misterios` (9-nov-2026)
+def caso(estado, titulo, sub=None, w=900):
+    """Estado del CASO de un misterio: la barra de escaneo recorre el panel («ANALIZANDO…») y se estampa el veredicto.
+    estado = "resuelto" (verde) | "sin_resolver" (ámbar) | "falso" (rojo) | "verdad" (verde); `sub` = p. ej. «Tardaron 4 años»."""
+    col, rot = {"resuelto": (VERDE, "RESUELTO"), "sin_resolver": (AMBAR, "SIN RESOLVER"), "falso": (ROJO, "FALSO"),
+                "verdad": (VERDE, "ERA VERDAD")}[estado]
+    h = 300 if sub else 250
+    ft = ajustar(titulo.upper(), "mb", 28, w - 90)
+    fv = fuente("b", 108, "Bold Condensed")
+    fs = fuente("mb", 26)
+    fa = fuente("mb", 22)
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.64)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220)
+        _txt(d, (M + 40, M + 38), "EXPEDIENTE / ESTADO DEL CASO", fa, GRIS, "lm", 230, track=2)
+        _txt(d, (M + w / 2, M + 82), titulo.upper(), ft, BLANCO, "mm", 255, track=2)
+        t_scan = .9
+        if dt < t_scan:                                       # escaneo
+            x = M + 30 + (w - 60) * _eo(dt / t_scan)
+            d.rectangle((x - 3, M + 112, x + 3, M + h - 26), fill=col + (220,))
+            d.rectangle((M + 30, M + 112, x, M + h - 26), fill=col + (26,))
+            pts = "." * (1 + int(dt * 6) % 3)
+            _txt(d, (M + w / 2, M + 172), "ANALIZANDO" + pts, fs, HUESO, "mm", 220, track=4)
+        else:
+            u = dt - t_scan
+            s = 1.6 - .6 * _eo(u / .18)
+            f = fuente("b", int(108 * s), "Bold Condensed")
+            _txt(d, (M + w / 2, M + 170), rot, f, col, "mm", 255 * _eo(u / .12), track=3)
+            if u < .25:
+                d.rectangle((M + 6, M + 6, M + w - 6, M + h - 6), outline=col + (int(200 * (1 - u / .25)),), width=6)
+            if sub:
+                vis = sub[:int(max(0, (u - .3) * 55))]
+                _txt(d, (M + w / 2, M + h - 48), vis, fs, HUESO, "mm", 235)
+        return _salida(im, dt, dur)
+    return fn
+
+
+def descifra(cifrado, claro, titulo="DESCIFRANDO", sub=None, w=None):
+    """El texto CIFRADO (Morse, números, símbolos) se convierte letra a letra en el texto CLARO: cada letra baraja caracteres
+    al azar y se fija en ámbar → blanco. Con marcas, cada marca suelta un tramo; sin ellas, ~14 letras por segundo."""
+    n = len(claro)
+    fm = fuente("mb", 46)
+    w = w or int(min(1700, max(760, _ancho(claro.upper(), fm) + 160, _ancho(cifrado, fm) + 160)))
+    h = 330 if sub else 280
+    ft = ajustar(titulo.upper(), "mb", 28, w - 90)
+    fs = fuente("mb", 24)
+    abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@%&*/-.:"
+    rng = np.random.default_rng(len(claro) * 31 + 7)
+    tabla = rng.integers(0, len(abc), size=(400, n))
+    cla = claro.upper()
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.66)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220)
+        _txt(d, (M + w / 2, M + 42), titulo.upper(), ft, AMBAR, "mm", 255, track=3)
+        _txt(d, (M + w / 2, M + 110), cifrado, fuente("mb", 34), GRIS, "mm", 230)
+        t0 = (marcas[0] if marcas else .4)
+        k = int(max(0, (dt - t0) * 14))                       # letras ya fijadas
+        out, cols = [], []
+        for i in range(n):
+            if cla[i] == " ":
+                out.append(" "); cols.append(BLANCO)
+            elif i < k:
+                out.append(cla[i]); cols.append(AMBAR if i >= k - 2 else BLANCO)
+            elif dt >= t0:
+                out.append(abc[tabla[int(dt * 24) % 400, i]]); cols.append(GRIS)
+            else:
+                out.append("_"); cols.append(GRIS)
+        x = M + (w - _ancho("".join(out), fm)) / 2
+        for c, col in zip(out, cols):
+            _txt(d, (x, M + 180), c, fm, col, "lm", 255)
+            x += _ancho(c, fm)
+        if k >= n and sub:
+            _txt(d, (M + w / 2, M + h - 44), sub, fs, VERDE, "mm", 255 * _eo((dt - t0 - n / 14) / .3), track=2)
+        return _salida(im, dt, dur)
+    return fn

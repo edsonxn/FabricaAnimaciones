@@ -1,0 +1,36 @@
+# Promesas visuales — wow_errores_30_60 (11-nov-2026)
+
+- «Pues no. Vas por el doce…» (+1.0 s) → MG curva 12 % / 88 %
+- «Barnil Jarropetra te pide…» (+1.0 s) → mapa Tuercespina + Barnil
+- «Capítulo uno: la uno…» (+2.0 s) → MG 15 páginas por capítulo
+- «es un homenaje a Ernest Hemingway…» (+1.5 s) → foto real de Hemingway
+- «ya casi no da nada…» (+0.5 s) → MG misión gris 4700 → 1100
+- «Este video lo patrocina Overgear…» (+1.0 s) → Overgear: logo + fondo de marca
+- «Marcos escribió: quién puede…» (+1.5 s) → comentario de Marcos
+- «Dolencia de resurrección durante diez…» (+1.0 s) → tarjeta Dolencia / ángel
+- «Los centros buenos de esta franja…» (+3.0 s) → carrusel Gadgetzan, Bahía, Kargath…
+- «el Baluarte, en las Tierras de la Peste…» (+1.5 s) → foto del Baluarte
+- «en el camino a Grom'gol…» (+1.0 s) → mapa Tuercespina con Grom'gol
+- «Una Blancoria corrupta te da…» (+1.5 s) → Tubérculo de blancoria
+- «Tod escribió que fue el mejor…» (+1.5 s) → comentario de Tod
+- «las Manoplas del Maestro de filos…» (+1.0 s) → Manoplas (reliquia del n.º 14)
+- «con el doctor Gregory Víctor…» (+1.0 s) → mapa Arathi + Gregory
+- «unas diez de oro…» (+1.0 s) → MG doble especialización
+- «el mineral de mitril…» (+1.0 s) → MG subasta cuero/mitril/tela
+- «Warr escribió: esto empieza…» (+1.5 s) → comentario de Warr
+- «el Devastador de Herod…» (+1.0 s) → versus Devastador / Sombrero
+- «un fantasma que solo se ve estando muerto…» (+0.5 s) → Franclorn
+- «se invoca a Gahz'rilla…» (+0.5 s) → mapa Interior con la Marra
+- «en una balsa naufragada…» (+1.0 s) → mapa Un'Goro con la balsa
+- «Las Plumas de penacho Muertobosque…» (+1.5 s) → pluma + cuentas
+- «Pero solo caen si llevas equipada…» (+1.5 s) → tarjeta Comisión del Alba
+- «El mago y el pícaro la recogen…» (+1.5 s) → mapa Azshara Xylem/Ogtinc
+- «Alberto escribió: no sé quién…» (+1.5 s) → comentario de Alberto
+- «Alcaz Island Prison…» (+1.0 s) → mapa Marjal con Alcaz
+- «Krinkle Buenacero, en Gadgetzan…» (+1.0 s) → MG cadena Llave esqueleto
+- «Riverglades es una zona nueva…» (+1.0 s) → reliquia Riverglades
+- «The Drowned City, frente a la costa…» (+1.0 s) → carrusel mazmorras nuevas
+- «exige el Amuleto de Pirodraco…» (+1.0 s) → tarjeta Amuleto
+- «rescatar al alguacil Windsor…» (+1.5 s) → Windsor
+- «no tiene el signo de misión sobre…» (+1.0 s) → mapa Kargath + Dientegore SIN «!»
+- «hay cinco semanas…» (+1.0 s) → MG calendario Onyxia

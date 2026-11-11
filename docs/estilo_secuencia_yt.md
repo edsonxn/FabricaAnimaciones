@@ -1101,7 +1101,7 @@ Que el público se sienta tomado en cuenta. Tres momentos:
    recuerda que **todos los comentarios se leen y se toman en cuenta para seguir mejorando**. Elegir por ♥ y por lo concreto
    del elogio (no «buen video» a secas); no repetir el mismo comentario en dos videos del canal.
 2c. **Comentarios que CRITICAN: contestar a su nivel, con burla disfrazada (el usuario, 30-oct-2026; los 4 canales):** además de
-   los de agradecimiento, «uno que otro» crítico: **1 por video, 2 como mucho**, y no en todos si no hay uno bueno. La meta es que
+   los de agradecimiento, «uno que otro» crítico: ~~1 por video, 2 como mucho~~ → **REGLA DEL 11-NOV-2026 (el usuario): MÍNIMO 2-3 críticas por video en todos los canales de juegos (Warcraft, Tamriel, Runa, CoD, Gaming), con sarcasmo y contraburla inteligente («hay que papearlos»): cita textual, una concesión falsa («tienes toda la razón…») y un remate que le da la vuelta con un dato o una comparación absurda; repartidas por el video (una cerca del inicio, otra a la mitad, otra hacia el final).** La meta es que
    quien lo vea se ría y **se sienta de nuestro equipo**.
    - **Tono:** por fuera amable, agradecido, casi servicial; la burla va por debajo y nunca se declara. Sirven el elogio
      envenenado, el sarcasmo seco, darle la razón hasta el absurdo y agradecerle lo que no quiso decir. La voz lo suelta con

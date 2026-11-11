@@ -101,3 +101,69 @@
   durante el video la narración cambia AL MENOS 2 veces entre Remy Eleven y Johnny (por secciones, con ficha de quién narra).
   Borrador APROBADO tal cual el 2-nov: `canales/voces_prueba/warcraft_cambio_voz/`; receta y saldo: docs/voz.md § «Warcraft y Tamriel = JOHNNY».
 - A los 7 días: `yt comentarios cronicas_warcraft` → contar votos por voz y decírselo al usuario (la voz no se cambia sola).
+
+## Conclusión del 5-nov-2026 — hueco Overgear del sáb 7-nov (Forever ya salió el 4-nov)
+- **Fuera:** sigue ganando todo lo de Forever (MadSeason ×8,0 «Everything We Know», Bellular ×6,96 / ×3,6 «Choosing a class you
+  WON'T regret», WillE ×6,2 «What's new»). Lanzamiento limpio (megaservidor) → la gente ya está subiendo de nivel: lo útil
+  para quien YA juega. Guías de fuera repiten los mismos tropiezos (servidor/ruleset fijo, profesiones tarde, vender materiales
+  con 600 recetas nuevas, sin buscador de mazmorras, hechizos que no van a la barra, raids el 9-dic).
+- **Comentarios (5-nov):** 44 nuevos; la voz IA divide (elogios ♥3/♥1 y quejas «suena a IA») → este video es el del cambio de
+  voz a tres (Johnny / Applio / Remy Eleven) y pide votar. Críticas candidatas a burla: «¿quién paga para que le digan cómo jugar?»,
+  «Coaching for forever? are u retard?» (ojo: chocan con Overgear; contestar con burla amable SIN hablar mal del coaching).
+- **Propuesta:** (1) «Los 25 ERRORES que estás cometiendo en WoW Forever» (recomendada) · (2) ruta 1-60 zona por zona · (3) 20 secretos ya hallados.
+- **Decisión (el usuario, 5-nov):** (1), **22 min**, Overgear 7-nov (`/CRONICAS/4`); `wow_clases_ocultas` se mueve al jue 12-nov 09:00.
+  Una variable respecto a «primera semana»: «cosas que debes hacer» → «errores que ya estás cometiendo» + duración 22 min.
+
+## PENDIENTE para el SIGUIENTE video nuevo (el usuario, 7-nov-2026): sección de 1-2 min con los ADD-ONS de Edson
+- **Qué:** un tramo de **1 a 2 min como máximo** (hacia el 30 %) enseñando los dos add-ons que hizo el usuario para WoW Forever y cómo funcionan,
+  sobre SU gameplay grabado con OBS. Cierra **preguntando a la gente** qué les parece y si quieren que siga con ellos, **sobre todo
+  el de las voces** → «coméntalo» (el siguiente video lee esas respuestas con `yt comentarios`).
+- **Grabaciones (3, 1080p, 7-nov 11:35-11:39):** OBS graba en `E:\videos grabados\` (no en D:): `2026-11-07 11-35-43.mp4` (68 s),
+  `11-37-50.mp4` (31 s), `11-39-04.mp4` (41 s). **Copia de seguridad en `D:\wowForeverVoces\grabaciones_obs\`** (E: falla; usar esa).
+  Mirarlas con hoja de cuadros antes de escribir el tramo, para que lo que diga la voz se vea en ese segundo (regla de oro).
+- **Add-ons** (código y LEEME en `D:\wowForeverVoces\`, enlazados en `D:\wowforever\World of Warcraft\_forever_\Interface\AddOns\`):
+  - **WoW Forever Voces (v2.0):** misiones de inicio humanas (Villanorte y Villadorada) con **voz en español, una voz distinta de
+    ElevenLabs por personaje** (166 audios), ventana con el **retrato 3D del PNJ hablando**, texto y barra de progreso; **modo cine**
+    al tomar una misión (se oculta la interfaz, barras negras, zoom lento con giro de cámara); cola de voces (Saltar / X); baja
+    música y efectos al 30 % mientras habla; botones Escuchar/Progreso en el diario y Voz en la ventana de misión; calla los
+    saludos originales de los PNJ; `/voces`.
+  - **Necesidades (v1.1):** barras inmersivas de **Hambre** (Bien alimentado), **Sueño** (Saco de dormir acogedor), **Campamento**
+    (beneficios de la tienda) y **Reserva** (exp. descansada); se vacían con el bufo y avisan antes de perderlo; botón de fogata en el
+    minimapa, panel con pestañas General/Apariencia/Bufos; `/nec`.
+- **Dónde va (el usuario, 7-nov):** hacia el **30 % del video**, NO al final (sin pisar la campaña de Overgear ni ponerlo pegado
+  a ella). La voz del canal lo presenta como «algo que hicimos nosotros». Pegatinas/MG: ficha con los dos nombres y qué hace cada
+  uno. En el tramo de Voces, dejar OÍR la voz del PNJ del add-on con el narrador callado (regla «si la voz nombra un sonido, se oye»).
+- **El add-on es GRATIS, pero por ahora trae muy pocas misiones** (solo Villadorada/Villanorte, las primeras de los humanos, como
+  prueba). **Llamado a DONAR para traducir y doblar TODO el juego entre todos:** la voz lo anuncia con claridad (gratis para
+  siempre; con las donaciones se paga la voz de todas las misiones), se puede donar **desde un mínimo** («desde 1 dólar» o lo que
+  decida el usuario), y el **enlace de donación de PayPal** va en pantalla (MG con la meta colectiva) y en la descripción.
+  Si se puede, una barra de meta («meta: doblar Elwynn → los Reinos del Este → todo el juego»).
+- **Bloquea la subida si falta:** (1) el **enlace de PayPal** (lo crea el usuario en su cuenta: PayPal.Me o botón «Donar»; Claude
+  no entra a PayPal) y (2) el **enlace de CurseForge** del add-on (elegido por el usuario el 7-nov; zips y fichas listos en
+  `D:\wowForeverVoces\curseforge\`, el usuario crea la cuenta/proyecto y sube; el enlace de PayPal va también en el botón
+  «Donate» de CurseForge). Preguntarlos al empezar el video si no están aquí. Enlaces: PayPal `https://paypal.me/edsonxn` (en pantalla `paypal.me/edsonxn/1USD`, dado el 7-nov) · CurseForge Voces `https://www.curseforge.com/wow/addons/voces-espanol-wow-forever` (7-nov, en revisión) · Necesidades _(pendiente)_.
+- **Política de add-ons de Blizzard:** el add-on debe seguir gratis y completo para todos; se pueden pedir donaciones, pero nunca
+  bloquear misiones ni funciones tras una donación, ni meter el pedido de forma molesta dentro del juego. La donación financia el
+  trabajo (voces), no «compra» el add-on.
+
+## Conclusión del 7-nov-2026 — hueco Overgear del lun 9-nov (`wow_addons_forever`)
+- **Datos:** los 25 errores arrancó fuerte (1 688 vistas en ~4 h); la búsqueda «wow forever» domina (999 de las búsquedas a 7 d).
+  Fuera: Bellular «The Addons We're Using on Day 1 of Forever» ×3,1 (~114 mil vistas/día), Farmerfarms ×8,2 (profesión oculta).
+- **Comentarios (7-nov):** la votación de voces la gana con claridad «la voz de siempre» (Remy/Applio); la voz real del usuario
+  también gustó (♥6). Queja suelta: «no entendí el sistema de legado».
+- **Decisión (el usuario, 7-nov):** «Los 20 ADD-ONS que necesitas en WoW Forever (y uno que hicimos nosotros)», ~24 min, con una
+  mini categoría de ≥ 5 add-ons de INMERSIÓN donde entran sus dos add-ons (al 30 %, con donación PayPal y CurseForge). Narra Remy
+  + la voz clonada del usuario para sus add-ons. `wow_pistas_futuro` pasa al dom 15-nov. Variable cambiada respecto a los
+  errores: «errores» → «add-ons» (misma lista larga de Forever, misma duración).
+
+## Conclusión del 10-nov-2026 — qué sigue en Forever
+- **Lo propio:** lo que gana en Forever es lo ÚTIL para quien YA juega: «25 ERRORES» 11 854 en ~3 días (lo mejor de la etapa
+  Fábrica, va camino de ×4-5), «primera semana» ×4,77 (48 % visto). Los «secretos» rinden menos: «15 objetos secretos» 6 001 en
+  5 días (~×1,2). Add-ons 2 168 en 1 día (sin madurar). Jugadores que rompieron Vanilla ×1,46.
+- **Fuera:** guías para quien juega ya: Vuxxy ×8,7 «never go broke» (oro), WillE ×6,8 guía de clase, Bellular ×3,6 elegir clase,
+  Blizzard ×2,2 «leveling past 30»; Farmerfarms ×8,2 profesión oculta (ya lo cubre `wow_clases_ocultas`, 14-nov).
+- **Comentarios:** solo la voz (gana la de siempre) y «no entendí el sistema de legado»; ningún tema pedido con ♥ para Forever.
+- **Propuesta (una variable cada una sobre «25 errores»):** (1) «Los 20 ERRORES del nivel 30 al 60 en WoW Forever» — cambia la etapa
+  (los jugadores del 4-nov ya andan en 25-35; prepara las raids del 9-dic), recomendada · (2) «20 trucos para NUNCA quedarte sin oro
+  en WoW Forever» — cambia el tema (Vuxxy ×8,7; ojo Overgear: nada contra comprar oro) · (3) «La clase que DEBES jugar en Forever
+  según cómo juegas» — Bellular ×3,6 / WillE ×6,8, pero choca con «9 clases» y con clases ocultas del 14-nov.

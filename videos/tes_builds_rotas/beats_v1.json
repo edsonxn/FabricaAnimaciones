@@ -1,0 +1,986 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 11.308,
+  "tipo": "video",
+  "texto": "Un arquero que mata dragones sin que lo vean. Un mago con la barra de magia de adorno. Un asesino que tumba a un dragón legendario de una sola puñalada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 11.308,
+  "t1": 17.258,
+  "tipo": "video",
+  "texto": "Un nigromante con un ejército sin límite, y un alquimista que, con sal y unos peces,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.258,
+  "t1": 24.834,
+  "tipo": "video",
+  "texto": "rompe el juego entero. Hoy toca lo que más se pelea en los comentarios después del lore. Las builds.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 24.834,
+  "t1": 33.268,
+  "tipo": "video",
+  "texto": "Las diez más rotas de Skyrim. Con su raza, su piedra, sus ventajas, el equipo y dónde se consigue.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.268,
+  "t1": 43.123,
+  "tipo": "video",
+  "texto": "Todo comprobado en UESP, con las fuentes en la descripción. Y aviso: dos de ellas son trampas del propio juego. Te diré cuáles.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.123,
+  "t1": 51.275,
+  "tipo": "video",
+  "texto": "Y quédate hasta el número uno, porque ya no es una build. Es borrar Skyrim. Número diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.275,
+  "t1": 61.181,
+  "tipo": "video",
+  "texto": "El Arquero Fantasma. Sí. La build que acaba haciendo todo el mundo. El noventa por ciento de los jugadores termina siendo arquero sigiloso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.181,
+  "t1": 68.312,
+  "tipo": "video",
+  "texto": "El otro diez por ciento lo niega en los comentarios. Raza: elfo del bosque, con más diez en Arquería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.312,
+  "t1": 77.892,
+  "tipo": "video",
+  "texto": "Piedra: la del Ladrón, en las piedras guardianas al suroeste de Cauce Boscoso. Y ojo, que esta es buena: la Arquería la sube la piedra del Ladrón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.892,
+  "t1": 86.82,
+  "tipo": "video",
+  "texto": "no la del Guerrero, aunque en el menú esté en combate. Las ventajas: Máxima tensión, que acaba doblando el daño del arco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.82,
+  "t1": 96.287,
+  "tipo": "video",
+  "texto": "Puntería mortífera, que triplica el ataque sigiloso con arco. Y Mano firme: al apuntar, el tiempo va a la mitad de velocidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 96.287,
+  "t1": 103.067,
+  "tipo": "video",
+  "texto": "El arco: el de hueso de dragón, de Dawnguard. Veinte de daño, el más alto del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.067,
+  "t1": 111.529,
+  "tipo": "video",
+  "texto": "Solo se forja con Herrería cien, o se le quita a un Guardián. Y si te descubren, el grito Ralentizar tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.529,
+  "t1": 121.63,
+  "tipo": "video",
+  "texto": "Con las tres palabras, el mundo va al diez por ciento durante dieciséis segundos. Tiempo de sobra para vaciar la aljaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.63,
+  "t1": 129.81,
+  "tipo": "video",
+  "texto": "Hay un libro de Arquería, Cinta dorada al mérito. Un noble presume de su cinta de arquero ante un soldado veterano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.81,
+  "t1": 139.152,
+  "tipo": "video",
+  "texto": "El soldado tira una flecha que parece perdida en el valle. Cuando el noble llega a casa, la flecha está clavada en su cinta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 139.152,
+  "t1": 145.43,
+  "tipo": "video",
+  "texto": "El buen arquero era el otro. Como en todas las partidas de Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.43,
+  "t1": 155.418,
+  "tipo": "video",
+  "texto": "Número nueve. El Carterista Envenenador. La idea es simple. No matas a nadie. Le dejas un regalito en el bolsillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.418,
+  "t1": 165.674,
+  "tipo": "video",
+  "texto": "Raza: khajiita, con más diez en Discreción. Piedra: la Sombría, al sur de Ríften: una vez al día, sesenta segundos invisible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 165.674,
+  "t1": 173.154,
+  "tipo": "video",
+  "texto": "Con la ventaja Envenenado, en Robo cuarenta, puedes meter venenos en el bolsillo de alguien. Y aquí está lo roto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.154,
+  "t1": 179.874,
+  "tipo": "video",
+  "texto": "según UESP, eso no cuenta como crimen. Ni delante de toda la plaza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 179.874,
+  "t1": 188.77,
+  "tipo": "video",
+  "texto": "Le metes tres venenos a un guardia, se los va tomando uno a uno, cae muerto en pleno mercado, y nadie te pone recompensa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.77,
+  "t1": 197.299,
+  "tipo": "video",
+  "texto": "Técnicamente no es asesinato. Es entrega a domicilio sin consentimiento. Y en Robo cien, Toque perfecto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.299,
+  "t1": 205.531,
+  "tipo": "video",
+  "texto": "robas cualquier cosa que lleven puesta. Al jefe de los bandidos le quitas la armadura y lo dejas peleando en ropa interior.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.531,
+  "t1": 214.751,
+  "tipo": "video",
+  "texto": "Bonus: en la misión de la Hermandad Oscura, puedes robarle a Astrid su armadura y su daga antes de hacer nada. Al final te dan otra daga igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.751,
+  "t1": 225.29,
+  "tipo": "video",
+  "texto": "Una para cada mano. Un momento, que hay correo. @npc_1261, con nueve likes:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.29,
+  "t1": 232.647,
+  "tipo": "video",
+  "texto": "«Desagradable el asunto de las voces, mata la inmersión, suena a porquería». Nueve likes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.647,
+  "t1": 241.772,
+  "tipo": "video",
+  "texto": "Mensaje recibido. Hoy narro yo, y de siete voces solo vienen dos, y solo de visita. Las otras cinco están bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.772,
+  "t1": 250.43,
+  "tipo": "video",
+  "texto": "Están en un menú de pausa mirando la pared. Que es justo lo que pediste: inmersión total.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.43,
+  "t1": 257.566,
+  "tipo": "video",
+  "texto": "Número ocho. El Titiritero. Esta build no pelea. Organiza peleas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.566,
+  "t1": 268.168,
+  "tipo": "video",
+  "texto": "Raza: alto elfo, con más diez en Ilusión y cincuenta de magia extra. Piedra: la del Aprendiz, en la isla del pantano al oeste de Morthal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 268.168,
+  "t1": 275.148,
+  "tipo": "video",
+  "texto": "Y aquí, un mito. La pantalla de carga dice que esa piedra duplica tu magia. Falso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.148,
+  "t1": 284.607,
+  "tipo": "video",
+  "texto": "Según UESP, solo duplica lo rápido que se recupera. Y a cambio te deja con el doble de debilidad a la magia. Las ventajas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.607,
+  "t1": 293.487,
+  "tipo": "video",
+  "texto": "Mago fraternal y Furia, que suben el nivel de enemigos que puedes controlar. Conjuros silenciosos, que hacen mudos todos tus hechizos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.487,
+  "t1": 301.621,
+  "tipo": "video",
+  "texto": "Y Señor de la mente, para que funcione hasta con no muertos y autómatas enanos. El hechizo clave es de nivel maestro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.621,
+  "t1": 311.261,
+  "tipo": "video",
+  "texto": "y lo vende Drevis Neloren en el Colegio de Hibernalia. Todo el que esté cerca, hasta nivel veinticinco, ataca a cualquiera durante sesenta segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 311.261,
+  "t1": 318.752,
+  "tipo": "video",
+  "texto": "Con las ventajas, hasta nivel cuarenta y siete. Entras en una mazmorra, lo lanzas, y te sientas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.752,
+  "t1": 327.582,
+  "tipo": "video",
+  "texto": "Un minuto de todos contra todos. Tú solo sales a recoger el botín. Mi build no hace daño. Hace terapia de grupo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.582,
+  "t1": 335.495,
+  "tipo": "video",
+  "texto": "Muy mala. Número siete. El Señor de los Vampiros, de Dawnguard.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.495,
+  "t1": 344.241,
+  "tipo": "video",
+  "texto": "Se consigue aceptando el regalo de Lord Járkon en el castillo Vólkijar. Eso sí: te alinea con su clan para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.241,
+  "t1": 354.241,
+  "tipo": "video",
+  "texto": "A nivel cuarenta y seis o más, la forma de Señor tiene doscientos cincuenta de salud extra, doscientos de magia, y una Absorción vampírica que roba salud,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 354.241,
+  "t1": 362.496,
+  "tipo": "video",
+  "texto": "magia y aguante a la vez. Puedes agarrar a un arquero del muro a distancia, levantarlo, y soltarlo por un precipicio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.496,
+  "t1": 373.279,
+  "tipo": "video",
+  "texto": "Y si te bajan la vida, te conviertes en niebla, invulnerable, y vuelves entero. Y hoy tenemos visita. MariCarmen, este dato es tuyo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 373.279,
+  "t1": 381.099,
+  "tipo": "video",
+  "texto": "Gracias, Johnny. Según UESP, si Serana te acompaña, el daño de tu Absorción vampírica baja a cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 381.099,
+  "t1": 389.48,
+  "tipo": "video",
+  "texto": "Cero. Por una condición del propio hechizo. Serana. La única novia que, literalmente, te quita el daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 389.48,
+  "t1": 396.05,
+  "tipo": "video",
+  "texto": "Me voy, que tengo un ataúd esperando. Y otro dato de UESP: en el desarrollo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 396.05,
+  "t1": 404.69,
+  "tipo": "video",
+  "texto": "la forma de Señor iba a tener tiempo límite, como el hombre lobo. Járkon llegó a grabar los diálogos. Al final, nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.69,
+  "t1": 416.349,
+  "tipo": "video",
+  "texto": "Sin límite. Número seis. El Nigromante Infinito. ¿Para qué subir de nivel, si puedes reclutar a los que ya lo hicieron?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 416.349,
+  "t1": 423.469,
+  "tipo": "video",
+  "texto": "Raza: bretón, con más diez en Conjuración. Piedra: la Ritual, al este de Carrera Blanca,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 423.469,
+  "t1": 431.769,
+  "tipo": "video",
+  "texto": "en lo alto de una atalaya con un nigromante de guardia. Una vez al día, levanta a todos los muertos cercanos hasta nivel setenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.769,
+  "t1": 441.179,
+  "tipo": "video",
+  "texto": "Gigantes y mamuts incluidos. Y aquí viene lo roto. La Corona aetérica, de Dawnguard, guarda el poder de una piedra anterior.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 441.179,
+  "t1": 448.119,
+  "tipo": "video",
+  "texto": "Llevas dos piedras a la vez. Y si te quitas la corona y te la vuelves a poner, puedes usar la Ritual otra vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 448.119,
+  "t1": 457.572,
+  "tipo": "video",
+  "texto": "UESP lo resume así: ejércitos de no muertos potencialmente ilimitados. Con Almas gemelas llevas dos invocaciones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.572,
+  "t1": 465.527,
+  "tipo": "video",
+  "texto": "y con Conjurar a un señor dremora tienes un daedra de quinientos cuarenta y cinco de salud con un mandoble del infierno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.527,
+  "t1": 475.848,
+  "tipo": "video",
+  "texto": "Y el hechizo maestro Esclavo muerto reanima para siempre a cualquier humanoide de nivel cuarenta o menos. Y el segundo invitado tiene algo que decir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.848,
+  "t1": 484.588,
+  "tipo": "video",
+  "texto": "Los muertos únicos conservan sus poderes. Úlfric Capa de la Tormenta, reanimado, sigue usando sus gritos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 484.588,
+  "t1": 491.93,
+  "tipo": "video",
+  "texto": "Contra sus propios soldados. Estaba escrito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.93,
+  "t1": 501.773,
+  "tipo": "video",
+  "texto": "Gracias, Profeta. Y ojo, que hay letra pequeña: en Legendario, tus invocaciones reciben un cuarto del daño. Igual que los enemigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 501.773,
+  "t1": 508.853,
+  "tipo": "video",
+  "texto": "Remate. El libro sobre el rey de los nigromantes, Mannimarco, rey gusano, no te sube Conjuración.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 508.853,
+  "t1": 519.388,
+  "tipo": "video",
+  "texto": "Te sube Alquimia. Bethesda, siempre coherente. Antes del top cinco. Los comentarios de esta semana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 519.388,
+  "t1": 528.155,
+  "tipo": "video",
+  "texto": "«Este canal merece más reconocimientos, veinte de diez». Lo dice La Unión Soviética, así, con mayúsculas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 528.155,
+  "t1": 535.095,
+  "tipo": "video",
+  "texto": "«Tus videos se merecen más views, son muy buenos», de @JinbeiDLuffy. «Videazo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 535.095,
+  "t1": 544.529,
+  "tipo": "video",
+  "texto": "me encantó», de @REaPEK.papulol. Y «gran trabajo en equipo», de @Miguel_Salvatierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 544.529,
+  "t1": 552.768,
+  "tipo": "video",
+  "texto": "Y @DJRaygadaVargas, que dice que, si a nosotros nos funciona, sigamos haciendo videos. Eso hacemos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 552.768,
+  "t1": 562.725,
+  "tipo": "video",
+  "texto": "Los leemos todos. Los buenos, y los que duelen. Y se toman en cuenta: uno de ellos ya se convirtió en cambio, hoy mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 562.725,
+  "t1": 570.476,
+  "tipo": "video",
+  "texto": "Número cinco. El Asesino de la Hermandad. Un dragón, una puñalada, cero testigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 570.476,
+  "t1": 577.982,
+  "tipo": "video",
+  "texto": "Raza: khajiita o elfo del bosque. Piedra: otra vez la Sombría, para acercarte invisible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.982,
+  "t1": 587.172,
+  "tipo": "video",
+  "texto": "Las ventajas: Puñalada por la espalda, que multiplica por seis los ataques sigilosos con armas de una mano. Y Hoja del asesino:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 587.172,
+  "t1": 597.189,
+  "tipo": "video",
+  "texto": "con dagas, por quince. Pero falta el regalo. Al unirte a la Hermandad Oscura, Astrid te da unos guantes que doblan el daño de esas puñaladas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 597.189,
+  "t1": 604.786,
+  "tipo": "video",
+  "texto": "Por treinta. Recursos Humanos de la Hermandad: impecables. Las cuentas de UESP:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 604.786,
+  "t1": 612.126,
+  "tipo": "video",
+  "texto": "un dragón legendario tiene cuatro mil ciento sesenta y tres de salud. Con por treinta, en dificultad Adepto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.126,
+  "t1": 622.652,
+  "tipo": "video",
+  "texto": "basta una daga que marque ciento treinta y nueve de daño. Una puñalada. Y si fallas, la Navaja de Mehrunes, de la misión daédrica Fragmentos del pasado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.652,
+  "t1": 628.37,
+  "tipo": "video",
+  "texto": "con probabilidad de matar al instante. Solo Mirák y Karstaag son inmunes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.37,
+  "t1": 638.05,
+  "tipo": "video",
+  "texto": "Y otro mito. Todos dicen que la Navaja mata uno de cada cien golpes. Falso. Por un descuido en el código, es casi el doble:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 638.05,
+  "t1": 645.931,
+  "tipo": "video",
+  "texto": "un uno coma noventa y ocho por ciento. Y el libro de Discreción, Testigo sagrado, de la habitación de Babette.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 645.931,
+  "t1": 656.441,
+  "tipo": "video",
+  "texto": "Un poeta conoce a la Madre Noche y sirve a la Hermandad. La nota del editor dice que lo asesinaron poco después de publicarlo, y que le dejaron dos piedras en los ojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 656.441,
+  "t1": 664.027,
+  "tipo": "video",
+  "texto": "Una negra y una blanca. Libro, página y todo. Lo sé, Roirek… qué horrible:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 664.027,
+  "t1": 674.064,
+  "tipo": "video",
+  "texto": "Crónicas de ChatGPT acertando. Número cuatro. El Mago Sin Coste. La barra de magia, de adorno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 674.064,
+  "t1": 681.094,
+  "tipo": "video",
+  "texto": "Raza: elfo oscuro, con más diez en Destrucción, o alto elfo. Piedra: la del Señor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 681.094,
+  "t1": 688.853,
+  "tipo": "video",
+  "texto": "al este de Morthal, con armadura y resistencia a la magia. Porque con coste cero, lo único que importa es sobrevivir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.853,
+  "t1": 699.893,
+  "tipo": "video",
+  "texto": "La regla está en UESP, literal: cuatro prendas que reducen un veinticinco por ciento el coste de Destrucción, bajan el coste a cero. Cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 699.893,
+  "t1": 708.666,
+  "tipo": "video",
+  "texto": "Y es totalmente legal. ¿Cómo se llega al veinticinco por ciento? Encantamiento cien, los cinco rangos de Encantador,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 708.666,
+  "t1": 716.011,
+  "tipo": "video",
+  "texto": "Encantador perspicaz y una gema de alma grande. En el gorro, el pecho, el collar y el anillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 716.011,
+  "t1": 727.619,
+  "tipo": "video",
+  "texto": "Con Doble destrucción e Impacto, cada hechizo a dos manos desequilibra al rival. Un dragón aterriza, y se queda tambaleándose en bucle mientras tu barra azul no se mueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 727.619,
+  "t1": 733.159,
+  "tipo": "video",
+  "texto": "Y el extra: esa reducción también vale para las armas encantadas de Destrucción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 733.159,
+  "t1": 741.093,
+  "tipo": "video",
+  "texto": "Con las cuatro prendas, una espada de escarcha tiene usos infinitos. Y un mito más, para los altos elfos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 741.093,
+  "t1": 751.223,
+  "tipo": "video",
+  "texto": "Su poder racial dice que recuperas la magia veinticinco veces más rápido. UESP lo calculó: unas nueve veces. Sigue siendo mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 751.223,
+  "t1": 759.172,
+  "tipo": "video",
+  "texto": "Pero no veinticinco. Los magos estudian años en el Colegio de Hibernalia. Tú solo necesitaste un collar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 759.172,
+  "t1": 768.821,
+  "tipo": "video",
+  "texto": "un anillo, un gorro y una túnica. Número tres. El Pararrayos. Tu bola de fuego me recarga la barra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 768.821,
+  "t1": 775.672,
+  "tipo": "video",
+  "texto": "Gracias. La absorción de hechizos es una probabilidad de anular el efecto entero y quedarte con la magia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 775.672,
+  "t1": 783.942,
+  "tipo": "video",
+  "texto": "Y según UESP, funciona contra casi todo lo que no sea un golpe físico. Incluido el aliento de dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 783.942,
+  "t1": 794.632,
+  "tipo": "video",
+  "texto": "Hay tres caminos al cien por cien. El rápido: un bretón con su poder racial, más la piedra del Atronach. Cien por cien. Durante un minuto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 794.632,
+  "t1": 801.832,
+  "tipo": "video",
+  "texto": "El permanente, de Dragonborn: piedra del Atronach, cincuenta. La ventaja Atronach, treinta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.832,
+  "t1": 810.637,
+  "tipo": "video",
+  "texto": "La túnica de Mirák, quince. Y sus guantes o sus botas, cinco más. Cien. Con cualquier raza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 810.637,
+  "t1": 820.019,
+  "tipo": "video",
+  "texto": "Mirák lleva siglos preparándose para matarte. Y te deja la ropa que te hace inmune a él. Gracias, compañero. El tercero es un error:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 820.019,
+  "t1": 830.652,
+  "tipo": "video",
+  "texto": "un vampiro cuenta como no muerto, así que la ventaja Necromago de Restauración te potencia a ti. Con el orden justo, cien por cien permanente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 830.652,
+  "t1": 837.282,
+  "tipo": "video",
+  "texto": "La letra pequeña: con tanta absorción puedes absorber tus propias invocaciones, y fallan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 837.282,
+  "t1": 845.43,
+  "tipo": "video",
+  "texto": "Pero un sacerdote dragón y un dragón atacándote a la vez no te quitan ni un punto de vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 845.43,
+  "t1": 854.941,
+  "tipo": "video",
+  "texto": "Antes del top dos, un dato. De cada cien que ven este canal, solo trece están suscritos. Somos seis mil quinientos ochenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 854.941,
+  "t1": 865.43,
+  "tipo": "video",
+  "texto": "Si te suscribes, pasamos de siete mil, camino de diez mil. Un botón. Menos esfuerzo que el bucle de alquimia que viene ahora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 865.43,
+  "t1": 872.128,
+  "tipo": "video",
+  "texto": "Número dos. El Artesano Legendario. No hay arma más rota que la que te fabricas tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 872.128,
+  "t1": 879.626,
+  "tipo": "video",
+  "texto": "Y esta no usa ningún error. Raza: orco, con más cinco en Encantamiento y en Herrería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 879.626,
+  "t1": 888.211,
+  "tipo": "video",
+  "texto": "Piedra: la del Amante, al noreste de Markarth: todas las habilidades suben un quince por ciento más rápido. El bucle legal:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 888.211,
+  "t1": 898.331,
+  "tipo": "video",
+  "texto": "con ropa de alquimia haces una poción de encantamiento. Con esa poción, encantas mejor ropa de alquimia. Y otra vez. Hasta que deja de subir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 898.331,
+  "t1": 906.27,
+  "tipo": "video",
+  "texto": "Y con todo eso, el equipo de herrería. UESP lo midió. En el juego base, sin trampas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 906.27,
+  "t1": 914.9,
+  "tipo": "video",
+  "texto": "el equipo llega a calidad veintinueve: más cincuenta y dos de daño en un arma. Con los Libros Negros de Dragonborn, calidad cuarenta y uno:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 914.9,
+  "t1": 925.352,
+  "tipo": "video",
+  "texto": "más setenta y tres. La etiqueta sigue diciendo «Legendario». El número sigue subiendo. La etiqueta, como siempre, miente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 925.352,
+  "t1": 932.937,
+  "tipo": "video",
+  "texto": "Y la armadura se queda clavada en el tope: ochenta por ciento menos de daño físico, con cualquier set.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 932.937,
+  "t1": 940.697,
+  "tipo": "video",
+  "texto": "Ahora junta esto con el asesino del cinco. Una daga de hueso de dragón templada así, por treinta en sigilo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 940.697,
+  "t1": 949.036,
+  "tipo": "video",
+  "texto": "No queda nada vivo en el juego base. Y el número uno. El Dios del Boticario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 949.036,
+  "t1": 957.31,
+  "tipo": "video",
+  "texto": "Aviso: esto es un error. El parche no oficial lo corrige desde hace años. Pero en consolas sin mods sigue ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 957.31,
+  "t1": 965.48,
+  "tipo": "video",
+  "texto": "Las pociones de Reforzar restauración potencian cualquier encantamiento de habilidad que te pongas mientras duran. Y el aumento se queda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.48,
+  "t1": 976.646,
+  "tipo": "video",
+  "texto": "Incluida tu ropa de alquimia, que hace pociones de restauración más fuertes. El procedimiento, literal de UESP: te pones la ropa de alquimia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 976.646,
+  "t1": 982.789,
+  "tipo": "video",
+  "texto": "Haces la poción. Te quitas la ropa. Te bebes la poción. Y repites.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 982.789,
+  "t1": 993.339,
+  "tipo": "video",
+  "texto": "Cada vuelta, la ropa vale más. Y la poción, más. Y la ropa, más. Hasta que la ventana de efectos marca cifras de miles de por ciento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 993.339,
+  "t1": 1001.278,
+  "tipo": "video",
+  "texto": "Los ingredientes: un montón de sal y unos peces. Los barriles del muelle de Ríften están llenos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 1001.278,
+  "t1": 1011.008,
+  "tipo": "video",
+  "texto": "Con esas cifras, Congelación, un hechizo de principiante, mata dragones. Y en Xbox One, pasar de diez mil por ciento cuelga el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1011.008,
+  "t1": 1018.017,
+  "tipo": "video",
+  "texto": "El juego se rinde antes que tú. Los Barbas Grises entrenan treinta años para dominar la Voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1018.017,
+  "t1": 1025.456,
+  "tipo": "video",
+  "texto": "Tú rompiste el universo en veinte minutos, con sal y pescado. Gracias otra vez, Profeta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1025.456,
+  "t1": 1035.462,
+  "tipo": "video",
+  "texto": "Y el libro que vigila tu mesa en el Templo Nocturnal: Mannimarco, rey gusano. El rey de los nigromantes, de ayudante de cocina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1035.462,
+  "t1": 1044.419,
+  "tipo": "video",
+  "texto": "Este es el top. Del arquero que hace todo el mundo, al alquimista que borra el juego. Ahora te toca a ti. ¿Cuál falta?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1044.419,
+  "t1": 1053.331,
+  "tipo": "video",
+  "texto": "¿La Hoja de ébano, que el juego cuenta como espada de una mano? ¿El hombre lobo? Déjalo en los comentarios: los leemos todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1053.331,
+  "t1": 1061.875,
+  "tipo": "video",
+  "texto": "Y suscríbete si aún no lo has hecho. Camino de diez mil. Nos vemos en Tamriel.",
+  "clip_s": 8
+ }
+]

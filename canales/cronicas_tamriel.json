@@ -8,7 +8,7 @@
     "hora_local": "09:15",
     "utc": "15:15",
     "ciclo_dias": 3,
-    "separacion_min_horas": 96,
+    "separacion_min_horas": 72,
     "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (26-sep, 30-sep, 10-oct). Provisional hasta analizar el canal.",
     "historial": [
       {
@@ -16,6 +16,12 @@
         "ciclo_dias": 7,
         "hora_local": "09:15",
         "motivo": "registro inicial; provisional"
+      },
+      {
+        "fecha": "2026-11-10",
+        "ciclo_dias": 3,
+        "separacion_min_horas": 72,
+        "motivo": "el usuario: publicar cada 3 dias (11, 13, 16, 19 nov)"
       }
     ]
   },
@@ -98,19 +104,20 @@
       "video": "tes_misiones_imperdibles",
       "id": "C16mqQHbK08",
       "titulo": "Las 25 misiones de Skyrim que NUNCA debes saltarte",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "programado": "2026-11-07T18:08:00Z",
       "formato": "lista_25_misiones_imperdibles_secuencia_yt",
-      "nota": "29-oct: resubido con 15 mapas y pantalla final; xnOdTqaZWrM (versión vieja) queda privado sin programar"
+      "nota": "29-oct: resubido con 15 mapas y pantalla final; xnOdTqaZWrM (versión vieja) queda privado sin programar",
+      "publicado": "2026-11-09T18:08:16Z"
     },
     {
       "video": "tes_secretos_40",
       "id": "-o9sopVzR0o",
       "titulo": "Los 40 SECRETOS de Skyrim que nadie te contó",
       "visibilidad": "private",
-      "programado": "2026-11-11T18:08:00Z",
+      "programado": "2026-11-19T18:08:00Z",
       "formato": "lista_40_secretos_secuencia_yt",
-      "nota": "31-oct: resubido rehecho (18:42, regla de oro); nlMINAT_6UI (versión vieja) queda privado sin programar, para borrar en Studio"
+      "nota": "31-oct: resubido rehecho (18:42, regla de oro); nlMINAT_6UI (versión vieja) queda privado sin programar, para borrar en Studio | 10-nov: movido al 19-nov por el usuario"
     },
     {
       "video": "tes_sentinel_teaser",
@@ -125,18 +132,29 @@
       "video": "tes_dwemer_desaparicion",
       "id": "b0iLKv6r2Tw",
       "titulo": "¿Qué pasó con los DWEMER? Los 20 secretos de su desaparición que Skyrim te esconde",
-      "programado": "2026-11-15T18:08:00Z",
+      "programado": null,
       "fecha": null,
-      "formato": "lore largo 27 min, 20 secretos, siete voces ronda 2"
+      "formato": "lore largo 27 min, 20 secretos, siete voces ronda 2",
+      "visibilidad": "public",
+      "publicado": "2026-11-06T18:08:14Z"
     },
     {
       "video": "tes_seres_poderosos",
       "id": "xCPo5bzKUv0",
       "titulo": "Los 20 seres más PODEROSOS de Tamriel",
       "visibilidad": "private",
-      "programado": "2026-11-19T18:08:00Z",
+      "programado": "2026-11-11T18:08:00Z",
       "fecha": null,
       "formato": "ranking 20 seres, lore 24:40, siete voces ronda 3 (Profeta gana Sentinel) + Humano en un dato; presentaciones (tier/vs/carrusel/muro/tablero/podio) y mapas con entrada"
+    },
+    {
+      "titulo": "Las 10 builds más ROTAS de Skyrim",
+      "id": "uMdEq4pHnqI",
+      "programado": "2026-11-13T18:08:00Z",
+      "video": "tes_builds_rotas",
+      "fecha": null,
+      "formato": "lista de 10 builds (raza+piedra+ventajas+equipo con mapa), Johnny + 2 invitados de visita, 3 críticas con contraburla",
+      "visibilidad": "private"
     }
   ],
   "ideas": {

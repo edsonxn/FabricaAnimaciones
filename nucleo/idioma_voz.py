@@ -29,7 +29,8 @@ def main():
     os.chdir(base)
     from faster_whisper import WhisperModel
     import librosa
-    wm = WhisperModel("large-v3", device="cuda", compute_type="float16")
+    _cpu = bool(os.environ.get("FAB_WHISPER_CPU"))   # como tts_select: CPU cuando otra sesión llena la GPU (11-nov-2026)
+    wm = WhisperModel("large-v3", device="cpu" if _cpu else "cuda", compute_type="int8" if _cpu else "float16")
     solo = {s for s in a.solo.split(",") if s}
     res, malas = {}, []
     for p in sorted(glob.glob("voz/final/*.wav")):

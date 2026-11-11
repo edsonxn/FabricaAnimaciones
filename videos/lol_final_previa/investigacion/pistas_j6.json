@@ -1,0 +1,1101 @@
+{
+ "Doran": {
+  "campeon": "Vayne",
+  "equipo": "azul",
+  "puntos": [
+   [
+    1903,
+    0.1,
+    0.37
+   ],
+   [
+    1906,
+    0.09,
+    0.42
+   ],
+   [
+    1909,
+    0.1,
+    0.4
+   ],
+   [
+    1912,
+    0.11,
+    0.38
+   ],
+   [
+    1915,
+    0.17,
+    0.33
+   ],
+   [
+    1918,
+    0.25,
+    0.34
+   ],
+   [
+    1921,
+    0.32,
+    0.38
+   ],
+   [
+    1930,
+    0.45,
+    0.42
+   ],
+   [
+    1934,
+    0.52,
+    0.44
+   ],
+   [
+    1937,
+    0.61,
+    0.39
+   ],
+   [
+    1939,
+    0.57,
+    0.42
+   ],
+   [
+    1941,
+    0.61,
+    0.45
+   ],
+   [
+    1943,
+    0.58,
+    0.42
+   ]
+  ],
+  "notas": "muere 32:23 (BLG Bin has slain T1 Doran!), junto a la torre exterior central roja ya caída (~.58,.42). 70 = minimapa (icono suelto); 72-73 sin medir."
+ },
+ "Oner": {
+  "campeon": "Wukong",
+  "equipo": "azul",
+  "puntos": [
+   [
+    1903,
+    0.14,
+    0.43
+   ],
+   [
+    1906,
+    0.17,
+    0.43
+   ],
+   [
+    1909,
+    0.19,
+    0.43
+   ],
+   [
+    1912,
+    0.3,
+    0.44
+   ],
+   [
+    1915,
+    0.36,
+    0.38
+   ],
+   [
+    1918,
+    0.41,
+    0.43
+   ],
+   [
+    1921,
+    0.41,
+    0.38
+   ],
+   [
+    1926,
+    0.43,
+    0.39
+   ],
+   [
+    1928,
+    0.46,
+    0.39
+   ],
+   [
+    1930,
+    0.51,
+    0.4
+   ],
+   [
+    1932,
+    0.56,
+    0.43
+   ],
+   [
+    1934,
+    0.62,
+    0.42
+   ],
+   [
+    1937,
+    0.6,
+    0.45
+   ]
+  ],
+  "notas": "inicia sobre Viper ~32:13-32:15 (narración); muere 32:18 (rótulo BLG Knight has slain T1 Oner!; marcador 13 a las 32:19). Último punto medido 32:17; lugar exacto de la muerte sin cuadro (fuera de cámara)."
+ },
+ "Faker": {
+  "campeon": "Akali",
+  "equipo": "azul",
+  "puntos": [
+   [
+    1903,
+    0.58,
+    0.81
+   ],
+   [
+    1906,
+    0.08,
+    0.93
+   ],
+   [
+    1909,
+    0.17,
+    0.83
+   ],
+   [
+    1912,
+    0.24,
+    0.73
+   ],
+   [
+    1915,
+    0.3,
+    0.64
+   ],
+   [
+    1918,
+    0.31,
+    0.54
+   ],
+   [
+    1921,
+    0.32,
+    0.47
+   ],
+   [
+    1928,
+    0.45,
+    0.37
+   ],
+   [
+    1930,
+    0.5,
+    0.34
+   ],
+   [
+    1932,
+    0.53,
+    0.36
+   ],
+   [
+    1934,
+    0.57,
+    0.39
+   ],
+   [
+    1937,
+    0.67,
+    0.39
+   ],
+   [
+    1939,
+    0.65,
+    0.33
+   ],
+   [
+    1941,
+    0.6,
+    0.36
+   ],
+   [
+    1943,
+    0.58,
+    0.41
+   ],
+   [
+    1945,
+    0.52,
+    0.39
+   ]
+  ],
+  "notas": "31:43 canalizando el regreso (anillo brillante) → 31:46 en la fuente. Persigue a Knight/ON hacia el norte 32:17-32:21; muere 32:27 (DOBLE de Knight) cerca de (.51,.40); fuera de cámara en ese instante."
+ },
+ "Peyz": {
+  "campeon": "Lucian",
+  "equipo": "azul",
+  "puntos": [
+   [
+    1903,
+    0.33,
+    0.62
+   ],
+   [
+    1906,
+    0.33,
+    0.62
+   ],
+   [
+    1909,
+    0.1,
+    0.93
+   ],
+   [
+    1912,
+    0.19,
+    0.84
+   ],
+   [
+    1915,
+    0.26,
+    0.74
+   ],
+   [
+    1918,
+    0.33,
+    0.66
+   ],
+   [
+    1921,
+    0.41,
+    0.57
+   ],
+   [
+    1928,
+    0.5,
+    0.47
+   ],
+   [
+    1930,
+    0.49,
+    0.47
+   ],
+   [
+    1934,
+    0.59,
+    0.47
+   ],
+   [
+    1937,
+    0.58,
+    0.46
+   ],
+   [
+    1939,
+    0.58,
+    0.47
+   ],
+   [
+    1943,
+    0.55,
+    0.49
+   ],
+   [
+    1945,
+    0.55,
+    0.48
+   ],
+   [
+    1947,
+    0.49,
+    0.52
+   ],
+   [
+    1952,
+    0.38,
+    0.6
+   ],
+   [
+    1957,
+    0.3,
+    0.68
+   ],
+   [
+    1960,
+    0.26,
+    0.71
+   ],
+   [
+    1966,
+    0.24,
+    0.77
+   ]
+  ],
+  "notas": "31:43-31:46 canalizando el regreso; 31:49 en la fuente. Sobrevive y se retira con Keria hacia su torre central."
+ },
+ "Keria": {
+  "campeon": "Milio",
+  "equipo": "azul",
+  "puntos": [
+   [
+    1903,
+    0.19,
+    0.86
+   ],
+   [
+    1906,
+    0.26,
+    0.77
+   ],
+   [
+    1909,
+    0.34,
+    0.69
+   ],
+   [
+    1912,
+    0.4,
+    0.62
+   ],
+   [
+    1915,
+    0.41,
+    0.57
+   ],
+   [
+    1918,
+    0.41,
+    0.58
+   ],
+   [
+    1921,
+    0.47,
+    0.53
+   ],
+   [
+    1924,
+    0.48,
+    0.53
+   ],
+   [
+    1926,
+    0.48,
+    0.51
+   ],
+   [
+    1928,
+    0.47,
+    0.48
+   ],
+   [
+    1930,
+    0.48,
+    0.47
+   ],
+   [
+    1934,
+    0.54,
+    0.47
+   ],
+   [
+    1937,
+    0.57,
+    0.42
+   ],
+   [
+    1939,
+    0.55,
+    0.45
+   ],
+   [
+    1941,
+    0.56,
+    0.44
+   ],
+   [
+    1943,
+    0.53,
+    0.48
+   ],
+   [
+    1945,
+    0.5,
+    0.48
+   ],
+   [
+    1947,
+    0.47,
+    0.48
+   ],
+   [
+    1952,
+    0.38,
+    0.59
+   ],
+   [
+    1957,
+    0.29,
+    0.66
+   ],
+   [
+    1960,
+    0.26,
+    0.68
+   ],
+   [
+    1966,
+    0.2,
+    0.72
+   ]
+  ],
+  "notas": "sobrevive; 'CHARMED' a las 32:14 (encanto de Seraphine). Se retira con Peyz."
+ },
+ "Bin": {
+  "campeon": "Renekton",
+  "equipo": "rojo",
+  "puntos": [
+   [
+    1903,
+    0.87,
+    0.61
+   ],
+   [
+    1906,
+    0.93,
+    0.63
+   ],
+   [
+    1909,
+    0.94,
+    0.65
+   ],
+   [
+    1912,
+    0.9,
+    0.62
+   ],
+   [
+    1915,
+    0.87,
+    0.61
+   ],
+   [
+    1918,
+    0.88,
+    0.61
+   ],
+   [
+    1921,
+    0.87,
+    0.61
+   ],
+   [
+    1924,
+    0.94,
+    0.08
+   ],
+   [
+    1927,
+    0.85,
+    0.2
+   ],
+   [
+    1930,
+    0.76,
+    0.26
+   ],
+   [
+    1932,
+    0.7,
+    0.31
+   ],
+   [
+    1934,
+    0.68,
+    0.33
+   ],
+   [
+    1937,
+    0.6,
+    0.4
+   ],
+   [
+    1939,
+    0.61,
+    0.42
+   ],
+   [
+    1941,
+    0.58,
+    0.42
+   ],
+   [
+    1943,
+    0.57,
+    0.42
+   ],
+   [
+    1945,
+    0.54,
+    0.41
+   ],
+   [
+    1947,
+    0.51,
+    0.41
+   ],
+   [
+    1952,
+    0.48,
+    0.57
+   ],
+   [
+    1957,
+    0.38,
+    0.63
+   ],
+   [
+    1960,
+    0.3,
+    0.68
+   ],
+   [
+    1966,
+    0.3,
+    0.7
+   ]
+  ],
+  "notas": "31:55-32:01 canaliza el regreso (anillo brillante) en el carril inferior; 32:04 en su fuente; vuelve caminando y entra a la pelea por el norte (32:17). Mata a Doran 32:23."
+ },
+ "Xun": {
+  "campeon": "Skarner",
+  "equipo": "rojo",
+  "puntos": [
+   [
+    1903,
+    0.59,
+    0.63
+   ],
+   [
+    1906,
+    0.65,
+    0.58
+   ],
+   [
+    1909,
+    0.67,
+    0.51
+   ],
+   [
+    1912,
+    0.75,
+    0.44
+   ],
+   [
+    1915,
+    0.78,
+    0.46
+   ],
+   [
+    1918,
+    0.8,
+    0.51
+   ],
+   [
+    1921,
+    0.82,
+    0.56
+   ],
+   [
+    1924,
+    0.79,
+    0.57
+   ],
+   [
+    1927,
+    0.8,
+    0.57
+   ],
+   [
+    1930,
+    0.74,
+    0.58
+   ],
+   [
+    1932,
+    0.69,
+    0.56
+   ],
+   [
+    1934,
+    0.67,
+    0.53
+   ],
+   [
+    1937,
+    0.64,
+    0.45
+   ],
+   [
+    1939,
+    0.64,
+    0.45
+   ],
+   [
+    1941,
+    0.63,
+    0.43
+   ],
+   [
+    1943,
+    0.62,
+    0.43
+   ],
+   [
+    1945,
+    0.58,
+    0.44
+   ],
+   [
+    1947,
+    0.55,
+    0.45
+   ],
+   [
+    1952,
+    0.43,
+    0.53
+   ],
+   [
+    1957,
+    0.35,
+    0.65
+   ],
+   [
+    1960,
+    0.3,
+    0.68
+   ],
+   [
+    1966,
+    0.27,
+    0.68
+   ]
+  ],
+  "notas": "llega desde el sureste de la torre exterior central roja (32:10-32:14) y se une a la pelea a las 32:17."
+ },
+ "Knight": {
+  "campeon": "Viktor",
+  "equipo": "rojo",
+  "puntos": [
+   [
+    1912,
+    0.81,
+    0.11
+   ],
+   [
+    1915,
+    0.71,
+    0.17
+   ],
+   [
+    1918,
+    0.63,
+    0.23
+   ],
+   [
+    1921,
+    0.6,
+    0.3
+   ],
+   [
+    1924,
+    0.6,
+    0.38
+   ],
+   [
+    1926,
+    0.63,
+    0.41
+   ],
+   [
+    1928,
+    0.63,
+    0.46
+   ],
+   [
+    1930,
+    0.58,
+    0.44
+   ],
+   [
+    1932,
+    0.61,
+    0.41
+   ],
+   [
+    1934,
+    0.61,
+    0.39
+   ],
+   [
+    1937,
+    0.66,
+    0.34
+   ],
+   [
+    1939,
+    0.65,
+    0.3
+   ],
+   [
+    1941,
+    0.66,
+    0.28
+   ],
+   [
+    1943,
+    0.65,
+    0.37
+   ],
+   [
+    1945,
+    0.6,
+    0.38
+   ],
+   [
+    1947,
+    0.57,
+    0.39
+   ],
+   [
+    1951,
+    0.57,
+    0.41
+   ],
+   [
+    1960,
+    0.94,
+    0.07
+   ]
+  ],
+  "notas": "no visible 31:40-31:49 (en su fuente, esquina del minimapa tapada). Mata a Oner 32:18 y a Faker 32:27 (DOUBLE KILL). 32:31-32:34 anillo brillante en el minimapa (como los regresos de 31:43-32:01); 32:40 ya en su fuente."
+ },
+ "Viper": {
+  "campeon": "Ashe",
+  "equipo": "rojo",
+  "puntos": [
+   [
+    1903,
+    0.59,
+    0.47
+   ],
+   [
+    1906,
+    0.59,
+    0.47
+   ],
+   [
+    1912,
+    0.93,
+    0.09
+   ],
+   [
+    1915,
+    0.85,
+    0.18
+   ],
+   [
+    1918,
+    0.77,
+    0.27
+   ],
+   [
+    1921,
+    0.69,
+    0.35
+   ],
+   [
+    1924,
+    0.61,
+    0.43
+   ],
+   [
+    1926,
+    0.57,
+    0.45
+   ],
+   [
+    1928,
+    0.59,
+    0.44
+   ],
+   [
+    1932,
+    0.6,
+    0.46
+   ],
+   [
+    1934,
+    0.63,
+    0.45
+   ],
+   [
+    1937,
+    0.63,
+    0.42
+   ],
+   [
+    1939,
+    0.64,
+    0.45
+   ],
+   [
+    1941,
+    0.66,
+    0.49
+   ],
+   [
+    1943,
+    0.66,
+    0.48
+   ],
+   [
+    1945,
+    0.62,
+    0.46
+   ],
+   [
+    1947,
+    0.58,
+    0.45
+   ],
+   [
+    1952,
+    0.49,
+    0.52
+   ],
+   [
+    1957,
+    0.38,
+    0.59
+   ],
+   [
+    1966,
+    0.29,
+    0.69
+   ]
+  ],
+  "notas": "31:43-31:46 canalizando el regreso; 31:52 en la fuente. 32:16-32:17 'RESURRECTING' (Ángel de la Guarda, no cuenta como muerte) en (.62,.42)."
+ },
+ "ON": {
+  "campeon": "Seraphine",
+  "equipo": "rojo",
+  "puntos": [
+   [
+    1903,
+    0.55,
+    0.52
+   ],
+   [
+    1906,
+    0.55,
+    0.52
+   ],
+   [
+    1909,
+    0.96,
+    0.06
+   ],
+   [
+    1912,
+    0.86,
+    0.19
+   ],
+   [
+    1915,
+    0.76,
+    0.26
+   ],
+   [
+    1918,
+    0.69,
+    0.35
+   ],
+   [
+    1921,
+    0.65,
+    0.44
+   ],
+   [
+    1924,
+    0.64,
+    0.46
+   ],
+   [
+    1926,
+    0.59,
+    0.46
+   ],
+   [
+    1928,
+    0.6,
+    0.45
+   ],
+   [
+    1930,
+    0.58,
+    0.43
+   ],
+   [
+    1932,
+    0.59,
+    0.4
+   ],
+   [
+    1934,
+    0.61,
+    0.4
+   ],
+   [
+    1937,
+    0.67,
+    0.34
+   ],
+   [
+    1939,
+    0.68,
+    0.31
+   ],
+   [
+    1941,
+    0.66,
+    0.33
+   ],
+   [
+    1945,
+    0.6,
+    0.4
+   ],
+   [
+    1947,
+    0.56,
+    0.41
+   ],
+   [
+    1952,
+    0.49,
+    0.52
+   ],
+   [
+    1957,
+    0.39,
+    0.59
+   ],
+   [
+    1960,
+    0.34,
+    0.63
+   ],
+   [
+    1966,
+    0.3,
+    0.68
+   ]
+  ],
+  "notas": "31:43-31:46 canalizando el regreso; 31:49 en la fuente."
+ },
+ "_meta": {
+  "partida": "Worlds 2026, semifinal BLG vs T1, partida 4 (gameId 115660540726095125); T1 azul, BLG rojo",
+  "vod": "n616F3asGf0 (es-MX); segundo_VOD = HUD + 481; fuente medios/_fuente/j6.mp4: HUD = t + 1860",
+  "minimapa": "recorte 1080p x 1640-1916, y 800-1076 (276 px); u,v = fracción, (0,0) arriba-izquierda, base azul abajo-izquierda",
+  "metodo": "31:43-32:01 y 32:31-32:46: minimapa medido a mano (rejilla 0,05 a 3x, centros con Hough). 32:04-32:28 (pelea): los iconos se enciman y los rótulos de ping los tapan, así que se midió en la VISTA PRINCIPAL (pies de cada campeón por su nombre) llevada al minimapa con el recuadro blanco de cámara medido en cada cuadro, corrección de perspectiva k=0,9-0,25*Y y dv=+0,028 (calibrado contra iconos sueltos: Keria 32:04, ON 32:01, Viper 32:04; error ~±0,02-0,03).",
+  "precision": "±0,03 fuera de la pelea; ±0,03-0,04 dentro (grupos de 3-5 campeones a <0,05)",
+  "huecos": "un jugador sin punto en un instante = no medido (fuera de cámara y encimado en el minimapa). No se interpoló nada."
+ },
+ "_muertes": [
+  {
+   "hud": "32:15",
+   "s": 1935,
+   "jugador": "Viper",
+   "nota": "Ángel de la Guarda (RESURRECTING 32:16-32:17); no es asesinato"
+  },
+  {
+   "hud": "32:18",
+   "s": 1938,
+   "jugador": "Oner",
+   "por": "Knight",
+   "rotulo": "BLG Knight has slain T1 Oner!"
+  },
+  {
+   "hud": "32:23",
+   "s": 1943,
+   "jugador": "Doran",
+   "por": "Bin",
+   "rotulo": "BLG Bin has slain T1 Doran!",
+   "lugar": [
+    0.58,
+    0.42
+   ]
+  },
+  {
+   "hud": "32:27",
+   "s": 1947,
+   "jugador": "Faker",
+   "por": "Knight",
+   "rotulo": "DOUBLE KILL! (Knight)",
+   "lugar_aprox": [
+    0.51,
+    0.4
+   ]
+  }
+ ],
+ "_objetivos": [
+  {
+   "hud": "29:17-29:20",
+   "que": "Barón Nashor para T1 (fuera del tramo de pistas; fuente j6_baron.mp4)",
+   "vida": {
+    "29:17": 4829,
+    "29:18": 2698,
+    "29:19": 1480
+   },
+   "rotulo": "Blue team has slain Baron Nashor! (29:20)",
+   "lugar": "foso del Barón; en cámara Doran, Oner, Keria y Peyz"
+  },
+  {
+   "hud": "32:00-32:20",
+   "que": "BARON POWERPLAY de T1 termina: 0:02 restantes a las 32:17 (3:00 desde 29:20)"
+  },
+  {
+   "hud": "—",
+   "que": "Dragones en el marcador durante la pelea: T1 2, BLG 3 (feed dr 2-3)"
+  }
+ ],
+ "_torres": [
+  {
+   "hud": "32:14",
+   "equipo_que_cae": "rojo",
+   "torre": "exterior del carril central de BLG",
+   "lugar": [
+    0.61,
+    0.42
+   ],
+   "rotulo": "Red turret destroyed! (32:14-32:17); T1 3→4 torres a las 32:17"
+  },
+  {
+   "hud": "32:42",
+   "equipo_que_cae": "azul",
+   "torre": "exterior del carril central de T1",
+   "lugar": [
+    0.35,
+    0.65
+   ],
+   "rotulo": "BLG 4→5 torres a las 32:42"
+  },
+  {
+   "hud": "33:10",
+   "equipo_que_cae": "azul",
+   "torre": "otra torre de T1 (BLG 5→6), sin identificar",
+   "lugar": null
+  }
+ ]
+}

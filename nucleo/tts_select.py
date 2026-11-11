@@ -54,7 +54,9 @@ evals = json.load(open("voz/eval.json", encoding="utf-8")) if os.path.exists("vo
 
 # FAB_WHISPER_CPU=1: evaluar en CPU cuando otra sesión ocupa la GPU con Chatterbox (voz de ElevenLabs/Applio, 19-oct-2026)
 _CPU = bool(os.environ.get("FAB_WHISPER_CPU"))
-wm = WhisperModel("large-v3", device="cpu" if _CPU else "cuda", compute_type="int8" if _CPU else "float16")
+# FAB_WHISPER_INT8=1: en GPU con la mitad de memoria (int8_float16) cuando Chrome/otras apps dejan < 3,5 GB libres (11-nov-2026)
+wm = WhisperModel("large-v3", device="cpu" if _CPU else "cuda",
+                  compute_type="int8" if _CPU else ("int8_float16" if os.environ.get("FAB_WHISPER_INT8") else "float16"))
 spk = SpeakerSim(config.VOZ["referencia"], device="cpu" if _CPU else "cuda")
 IDIOMA = config.VOZ["idioma"]
 textos = {f"{e['id']}_{i}": t for e in config.ESCENAS for i, t in enumerate(e["frases"])}

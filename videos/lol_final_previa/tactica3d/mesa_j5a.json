@@ -1,0 +1,363 @@
+{
+ "modo": "mesa",
+ "de": 899.39,
+ "a": 903.88,
+ "fondo": "/videos/lol_final_previa/tactica3d/mesa_j5a_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Doran": {
+   "jugador": "Doran",
+   "campeon": "Ambessa",
+   "equipo": "R",
+   "icono": "/videos/lol_final_previa/iconos/Ambessa.png",
+   "puntos": [
+    [
+     0,
+     0.365,
+     0.21
+    ]
+   ],
+   "de": 899.79,
+   "sale": 902.88
+  },
+  "Keria": {
+   "jugador": "Keria",
+   "campeon": "Karma",
+   "equipo": "R",
+   "icono": "/videos/lol_final_previa/iconos/Karma.png",
+   "puntos": [
+    [
+     0,
+     0.3,
+     0.28
+    ]
+   ],
+   "de": 899.87,
+   "sale": 902.88
+  },
+  "Peyz": {
+   "jugador": "Peyz",
+   "campeon": "Sivir",
+   "equipo": "R",
+   "icono": "/videos/lol_final_previa/iconos/Sivir.png",
+   "puntos": [
+    [
+     0,
+     0.31,
+     0.45
+    ]
+   ],
+   "de": 899.95,
+   "sale": 902.88
+  },
+  "Oner": {
+   "jugador": "Oner",
+   "campeon": "JarvanIV",
+   "equipo": "R",
+   "icono": "/videos/lol_final_previa/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.35,
+     0.5
+    ]
+   ],
+   "de": 900.03,
+   "sale": 902.88
+  },
+  "Faker": {
+   "jugador": "Faker",
+   "campeon": "Ahri",
+   "equipo": "R",
+   "icono": "/videos/lol_final_previa/iconos/Ahri.png",
+   "puntos": [
+    [
+     0,
+     0.13,
+     0.64
+    ]
+   ],
+   "de": 900.11,
+   "sale": 902.88
+  },
+  "Knight": {
+   "jugador": "Knight",
+   "campeon": "Taliyah",
+   "equipo": "A",
+   "icono": "/videos/lol_final_previa/iconos/Taliyah.png",
+   "puntos": [
+    [
+     0,
+     0.6,
+     0.15
+    ]
+   ],
+   "de": 900.19,
+   "sale": 902.88
+  },
+  "Viper": {
+   "jugador": "Viper",
+   "campeon": "Ezreal",
+   "equipo": "A",
+   "icono": "/videos/lol_final_previa/iconos/Ezreal.png",
+   "puntos": [
+    [
+     0,
+     0.52,
+     0.4
+    ]
+   ],
+   "de": 900.27,
+   "sale": 902.88
+  },
+  "Xun": {
+   "jugador": "Xun",
+   "campeon": "Pantheon",
+   "equipo": "A",
+   "icono": "/videos/lol_final_previa/iconos/Pantheon.png",
+   "puntos": [
+    [
+     0,
+     0.49,
+     0.49
+    ]
+   ],
+   "de": 900.35,
+   "sale": 902.88
+  },
+  "ON": {
+   "jugador": "ON",
+   "campeon": "Nami",
+   "equipo": "A",
+   "icono": "/videos/lol_final_previa/iconos/Nami.png",
+   "puntos": [
+    [
+     0,
+     0.59,
+     0.47
+    ]
+   ],
+   "de": 900.43,
+   "sale": 902.88
+  },
+  "Bin": {
+   "jugador": "Bin",
+   "campeon": "Gnar",
+   "equipo": "A",
+   "icono": "/videos/lol_final_previa/iconos/Gnar.png",
+   "puntos": [
+    [
+     0,
+     0.57,
+     0.64
+    ]
+   ],
+   "de": 900.51,
+   "sale": 902.88
+  }
+ },
+ "camara": [
+  [
+   899.39,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   899.6899999999999,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   900.288,
+   -95,
+   30,
+   44,
+   0.43,
+   0.43
+  ],
+  [
+   901.4105,
+   0,
+   22,
+   38,
+   0.43,
+   0.43
+  ],
+  [
+   902.533,
+   95,
+   30,
+   44,
+   0.43,
+   0.43
+  ],
+  [
+   902.98,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   903.88,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "anillos": [
+  {
+   "u": 0.36,
+   "v": 0.47,
+   "r": 0.07,
+   "color": "amarillo",
+   "en": 899.99,
+   "sale": 902.88
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.62,
+     0.48
+    ],
+    [
+     0.6166,
+     0.5325
+    ],
+    [
+     0.6066,
+     0.5799
+    ],
+    [
+     0.5911,
+     0.6175
+    ],
+    [
+     0.5716,
+     0.6417
+    ],
+    [
+     0.55,
+     0.65
+    ],
+    [
+     0.5284,
+     0.6417
+    ],
+    [
+     0.5089,
+     0.6175
+    ],
+    [
+     0.4934,
+     0.5799
+    ],
+    [
+     0.4834,
+     0.5325
+    ],
+    [
+     0.48,
+     0.48
+    ],
+    [
+     0.4834,
+     0.4275
+    ],
+    [
+     0.4934,
+     0.3801
+    ],
+    [
+     0.5089,
+     0.3425
+    ],
+    [
+     0.5284,
+     0.3183
+    ],
+    [
+     0.55,
+     0.31
+    ],
+    [
+     0.5716,
+     0.3183
+    ],
+    [
+     0.5911,
+     0.3425
+    ],
+    [
+     0.6066,
+     0.3801
+    ],
+    [
+     0.6166,
+     0.4275
+    ]
+   ],
+   "color": "azul",
+   "alfa": 0.14,
+   "en": 901.11,
+   "sale": 902.88
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.33,
+   "v": 0.36,
+   "alto": 0,
+   "texto": "T1, EN EL FOSO DEL DRAGÓN",
+   "sub": "SIN VISIÓN ALREDEDOR",
+   "color": "rojo",
+   "dx": -210,
+   "dy": -50,
+   "de": 900.19,
+   "a": 902.88
+  },
+  {
+   "u": 0.55,
+   "v": 0.48,
+   "alto": 0,
+   "texto": "BILIBILI LO ESPERA EN EL RÍO",
+   "color": "azul",
+   "dx": -40,
+   "dy": 120,
+   "de": 901.11,
+   "a": 902.88
+  },
+  {
+   "u": 0.6,
+   "v": 0.15,
+   "alto": 0,
+   "texto": "KNIGHT · TALIYAH",
+   "sub": "EL MURO",
+   "color": "azul",
+   "dx": 190,
+   "dy": -20,
+   "de": 902.28,
+   "a": 902.88
+  }
+ ]
+}

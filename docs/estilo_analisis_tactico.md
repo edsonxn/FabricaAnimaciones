@@ -217,6 +217,15 @@ de Liquid en `videos/lol_worlds_2026/` (`j6_3d.py` → `tactica3d/j6.json` → `
 - Duración: 1 760 palabras + 4 tramos en vivo salieron 13:27; recortar los `pre` en vivo (16/12/12/18 s) y una frase final de
   escena (no del medio: desplaza índices) bajó a 12:55 sin regenerar nada.
 
+## Previa de una FINAL de 23 min (11-nov-2026, `videos/lol_final_previa/`)
+- **Formas de presentar una jugada (elegidas por el usuario: 1, 2, 3, 4, 5, 6 y 8 de la hoja `previews/formas_jugadas.jpg`):** la 4 (marcador de pelea tipo NFL) y la 5 (oro en vivo) en TODAS las jugadas; el resto repartido, ≥ 2 en cada jugada en 3D. Kit nuevo `nucleo/mg_lol_pelea.py`: `marcador_pelea(izq, der, muertes, titulo)` (5 retratos por lado, se agrietan y tachan en rojo al morir, el marcador salta) y `oro_vivo(titulo, serie, claves, azul, rojo, notas)` (curva del oro cada 10 s del feed `window`). La cifra del oro se escribe SIEMPRE «+X K <equipo que va arriba>», nunca «−X K» (se lee al revés; costó un re-render).
+- **Alargar sin relleno:** 14:47 → 23:11 con 12 escenas nuevas (camino de cada finalista en el torneo, números, campeones), cada una con su clip de partida real (`r_*.mp4`) y datos del feed; nada repetido.
+- **Máquina compartida con otras sesiones:** `videos/lol_final_previa/esperar_libre.py` espera a que no haya render, 3D headless, ffmpeg largo ni Whisper de otra sesión (nunca matar los suyos); `render_par.py` con `SIMULTANEOS = 1` y N = 10 tramos (2-3 a la vez = MemoryError con 25 min de 1080p). Un tramo que falla se relanza solo (se reanuda).
+- **seleccionar con la GPU ocupada:** `FAB_WHISPER_INT8=1` (int8_float16, la mitad de VRAM). Nombres de jugadores que Whisper no reconoce → `aceptar_voz.py` (acepta la toma con CER medido + margen, sin regenerar).
+- **MINIATURA = la fórmula del canal (el usuario, 11-nov-2026: «mejor una como las que hemos usado en el canal… para que se reconozca bien»):** las siglas de los dos equipos enormes en sus colores, «vs» chico, el trofeo en el centro partido por un rayo, arena mitad de cada color y una frase amarilla abajo («¿QUIÉN PASA?», «LA PELEA CLAVE», «LA GRAN FINAL»). Nada de collages de caras de jugadores. En Flow: ingrediente = la miniatura anterior del canal (`https://i.ytimg.com/vi/<id>/maxresdefault.jpg` se puede `fetch` desde flow.google.com) + prompt «EXACTLY the same style… text X».
+- **.srt en Studio:** el hook de `HTMLInputElement.prototype.click` debe disparar `change` en un `setTimeout` (si es síncrono, Studio no lo recoge); comprobar el texto con SHA-256 contra el local antes de subirlo. Luego Editar subtítulos → Publicar.
+- **vivos_audio:** saltar las fuentes 3D y de mesa (`*_3d`, `mesa_*`): no tienen pista de audio y rompían la mezcla.
+
 ## Pendiente
 - Zoom con la pizarra transformada (hoy la pizarra se mide sobre el cuadro ya acercado).
 - Audio de los comentaristas/estadio bajo la voz en los tramos que juegan (FX `video` no lleva audio a la mezcla).

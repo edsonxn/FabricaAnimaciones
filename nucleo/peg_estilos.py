@@ -25,6 +25,7 @@ TEMAS = {"tes": dict(luz=T.ORO, texto=T.HUESO, rojo=T.SANGRE, papel=(214, 194, 1
          "gaming": dict(luz=(255, 214, 64), texto=(248, 248, 248), rojo=(224, 48, 56), papel=(232, 222, 190), tinta=(40, 36, 60)),
          "spyro": dict(luz=(250, 190, 40), texto=(240, 222, 86), rojo=(226, 54, 88), papel=(206, 214, 232), tinta=(22, 34, 56)),
          "n64": dict(luz=(250, 200, 24), texto=(250, 250, 248), rojo=(226, 38, 48), papel=(214, 216, 222), tinta=(24, 26, 32)),
+         "pokemon": dict(luz=(248, 208, 48), texto=(248, 248, 232), rojo=(232, 56, 48), papel=(224, 236, 200), tinta=(15, 56, 15)),
          "cod": dict(luz=(246, 190, 52), texto=(244, 244, 238), rojo=(226, 54, 46), papel=(200, 196, 178), tinta=(20, 24, 26)),
          "plasti": dict(luz=(255, 205, 0), texto=(250, 244, 228), rojo=(214, 32, 40), papel=(238, 228, 204), tinta=(40, 30, 24))}
 _rec = {}
@@ -84,12 +85,18 @@ def _rotulo(ancho, nombre, sub, tema, tam=86):
     d = ImageDraw.Draw(im)
     f, fs = T.fuente("Bold Condensed", tam), T.fuente("Condensed", 36)
     cabe = ancho * .90                                     # nombre largo: se encoge, nunca se sale del lienzo («BALDÍ», 2-nov)
-    largo = T._ancho_track(d, nombre.upper(), f, 4)
-    if largo > cabe:
-        f = T.fuente("Bold Condensed", max(20, int(tam * cabe / largo)))
-    T._texto(d, (ancho / 2, tam * .62), nombre.upper(), f, t["texto"], "mm", track=4)
+    track, ft = 4, tam
+    while T._ancho_track(d, nombre.upper(), f, track) > cabe and ft > 20:   # el track NO escala con la letra: se mide
+        ft -= 2                                            # en cada paso («LAS VERDES COLINAS DE TUERCESPINA» se cortaba, 11-nov)
+        track = 4 if ft > tam * .6 else 2
+        f = T.fuente("Bold Condensed", ft)
+    T._texto(d, (ancho / 2, tam * .62), nombre.upper(), f, t["texto"], "mm", track=track)
     T.separador(d, ancho / 2, tam * 1.22, min(ancho * .42, 190), color=t["luz"])
     if sub:
+        fsz = 36
+        while d.textlength(sub, font=fs) > ancho * .94 and fsz > 18:   # el subtítulo tampoco se sale (11-nov-2026)
+            fsz -= 2
+            fs = T.fuente("Condensed", fsz)
         T._texto(d, (ancho / 2, tam * 1.22 + 42), sub, fs, t["texto"], "mm")
     sombra = Image.new("RGBA", im.size, (0, 0, 0, 0))
     sombra.paste((0, 0, 0, 215), mask=im.getchannel("A").filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(12)))
@@ -184,7 +191,8 @@ def _icono(ruta, lado, tema):
     t = TEMAS[tema]
     im = Image.open(ruta).convert("RGB")
     q = min(im.size)
-    im = im.crop(((im.width - q) // 2, (im.height - q) // 2, (im.width - q) // 2 + q, (im.height - q) // 2 + q))
+    y0 = int((im.height - q) * .06) if im.height > im.width * 1.12 else (im.height - q) // 2   # alta: la cara (11-nov-2026)
+    im = im.crop(((im.width - q) // 2, y0, (im.width - q) // 2 + q, y0 + q))
     m, b = int(lado * .07), max(4, int(lado * .035))
     dentro = lado - 2 * b
     foto = im.resize((dentro, dentro), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 60, 2)).convert("RGBA")

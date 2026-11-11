@@ -4,6 +4,31 @@ Creado el 13-oct-2026 en la mudanza desde `C:\googleimagenes` (`docs/migracion_g
 Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beats y armado de siempre).
 
 ## REGLA DE ORO Y LISTA DE CONTROL (el usuario, 30-oct-2026; leer ANTES de escribir `efectos.py`)
+
+> **REGLA 11-nov-2026 (el usuario): REVISAR CADA ANIMACIÓN EN SU CUADRO FINAL ANTES DEL RENDER.** `FAB_FX_FINAL=1 python fab.py <v> fx hoja`
+> saca cada MG, mapa y pegatina justo antes de salir (todas las marcas disparadas). Errores que aparecieron en `wow_errores_30_60`:
+> (1) `mg_wow.filas` con la etiqueta debajo de las casillas (ARREGLADO en el kit: ahora mide la etiqueta); (2) MG que nunca sale
+> porque su ancla de cierre («o más», «del Alba Argenta») aparece antes en el guion → usar un trozo ÚNICO de la frase; (3) `PE.banda`
+> con un ícono de objeto (56 px) estirado = mancha borrosa → solo con imagen grande; (4) `M.tiempos` con tramos de peso 1 y texto
+> largo se corta en los bordes → pesos ≥ 6 y texto corto; (5) dos `com()` a la vez encimados → separarlos en x/y; (6) efectos de < 2 s
+> (`fx --seco`: buscar duraciones cortas); (7) ROTULO con color fuera de la paleta (`verde`) tumba el render al 98 %.
+> (8) **MAPAS: la foto o el rótulo de un punto saltaba de lado con el zoom de la cámara** (el usuario, 11-nov-2026: «primero estaba
+> del lado izquierdo del punto y ahora está arriba… se desacomodan los elementos, sobre todo con rutas»). Causa: `mg_wow.ruta` elegía el
+> hueco libre EN CADA CUADRO. ARREGLADO en el kit: cada rótulo y foto elige su lado UNA vez (cámara asentada en su paso) y lo mantiene
+> (`LADO_ROT`/`LADO_FOTO`). Al revisar mapas, mirar 3+ cuadros del mismo mapa en distintos momentos del zoom. Si otro kit de mapas
+> (`mg_mapa`, `mg_tes`, `mg_er`) coloca cosas «en el hueco libre» cuadro a cuadro, aplicarle lo mismo.
+> (9) **TARJETAS: el personaje sin cara** (el usuario, 11-nov-2026: «se le corta la cabeza… hay que confirmar que se le vea la
+> cara, lo que importa para reconocerlo», carrusel «¿Quién te la da?» con Ashlam). ARREGLADO en `peg_anim._llena` (lo usan pv, filav,
+> carrusel, versus…) y `peg_estilos` (recorte cuadrado): una foto más alta que la tarjeta se recorta por ARRIBA. Al revisar la hoja
+> final, toda tarjeta o marco con un personaje debe enseñar su CARA; si no, recortar la pegatina a mano (cara + hombros).
+> `mg_mapa` (Tamriel, Runa, Gaming) ya fija también el lado de nombres y fotos (`LADO`, cuadro de referencia 0,9 s tras su marca).
+> (10) **Rótulos largos cortados por los dos lados** («LAS VERDES COLINAS DE TUERCESPINA» en una reliquia de 340 px, la píldora de
+> «Franclorn Forjador · solo estando muerto» más ancha que su tarjeta): `peg_estilos._rotulo` encogía la letra pero no el espaciado, y
+> `peg_anim.m_clasico` tenía letra fija. ARREGLADO en el kit (mide hasta que cabe; el subtítulo también). Aun así, un nombre de 30+
+> letras en una pegatina chica queda diminuto: partirlo en nombre + subtítulo. (11) `M.tiempos` con relleno claro (amarillo) ya pone
+> el texto oscuro. (12) La franja del pie de cada miniatura de la hoja TAPA 26 px de abajo: algo pegado al borde inferior (las
+> píldoras del `versus`) parece cortado y no lo está; en caso de duda, sacar el cuadro suelto. La hoja ya cierra cada clip (antes,
+> con ~100 efectos y otro render en paralelo, se quedaba sin RAM).
 `videos/tes_secretos_40/` es el nivel mínimo: el usuario lo aprobó con «la edición quedó perfecta, el guion perfecto, la burla perfecta» y
 pidió aplicarlo en todos los demás canales. Vale para Warcraft, Tamriel, Runa y Gaming con su kit y su interfaz; los canales con otro
 motor aplican las mismas ideas con el suyo (`docs/reglas_globales_completas.md` § «REGLA DE ORO»).

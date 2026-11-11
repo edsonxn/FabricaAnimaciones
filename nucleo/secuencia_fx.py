@@ -647,6 +647,12 @@ def hoja():
     S = capa.S
     ev = [(d["de"] + min(0.12 if d["tipo"] in ("temblor", "destello") else d.get("ver", 0.7), (d["a"] - d["de"]) * .6),
            f"apoyo {d['apoyo']}" if d.get("apoyo") else d.get("nombre", d["tipo"])) for d in capa.fx]
+    if os.environ.get("FAB_FX_FINAL"):
+        # REGLA 11-nov-2026 (el usuario: «revisa cada animación que haces… están mal acomodados los cuadros»): cada MG, mapa
+        # y pegatina en su ESTADO FINAL (todas las marcas ya disparadas, justo antes de salir), donde se ven los choques de
+        # texto con casillas y lo que se sale del panel. `FAB_FX_FINAL=1 python fab.py <v> fx hoja` → previews/fx_NN.jpg
+        ev = [(max(d["de"] + .3, d["a"] - .75), "FINAL " + d.get("nombre", d["tipo"])) for d in capa.fx
+              if d["tipo"] in ("mg", "pantalla", "imagen")]
     ev += [(d["de"] + min(0.8, (d["a"] - d["de"]) * .6), d["texto"][:22]) for d in capa.rot]
     ev += [((b["t0"] + b["t1"]) / 2, "cámara") for b in capa.bs if b["id"] in capa.camaras]
     ev.sort()
@@ -656,7 +662,12 @@ def hoja():
     for t, nombre in ev:
         k = next((i for i, b in enumerate(capa.bs) if b["t0"] <= t < b["t1"]), len(capa.bs) - 1)
         b = capa.bs[k]
-        f = capa.aplicar(capa.envolver(S._fuente(b, k, True, capa), b).cuadro(t), t)
+        fuente = S._fuente(b, k, True, capa)
+        f = capa.aplicar(capa.envolver(fuente, b).cuadro(t), t)
+        cap = getattr(fuente, "cap", None)     # cerrar el clip: con ~100 efectos la hoja se quedaba sin RAM (11-nov-2026)
+        if cap is not None:
+            cap.release()
+        del fuente
         if f.shape[0] > f.shape[1]:          # Short/reel vertical: mini 9:16 (antes se aplastaba a 16:9, 21-oct-2026)
             mw, mh, cols, letra = 216, 384, 6, .42
         m = cv2.resize(f, (mw, mh), interpolation=cv2.INTER_AREA)

@@ -151,6 +151,10 @@ def es_recorte(ruta):
 def _llena(im, rec, w, h, tema, foco=(.5, .35)):
     """La imagen llenando w×h: foto a sangre (fit) o recorte sin fondo sobre un degradado oscuro del tema."""
     if not rec:
+        # REGLA 11-nov-2026 (el usuario: «en las tarjetas el personaje sale sin cara… se corta la cabeza»): si la foto es más
+        # alta que la tarjeta (personaje de cuerpo entero), el recorte se queda con la parte de ARRIBA, donde está la cara.
+        if im.height / im.width > (h / w) * 1.12:
+            foco = (foco[0], min(foco[1], .04))
         return ImageOps.fit(im.convert("RGB"), (w, h), Image.LANCZOS, centering=foco)
     t = _col(tema)
     yy, xx = np.mgrid[0:h, 0:w]
@@ -228,7 +232,7 @@ def m_clasico(im, rec, titulo, tam, tema):
     dorso.putalpha(al)
     if titulo:
         d = ImageDraw.Draw(out)
-        f = T.fuente("Bold Condensed", 34)
+        f = _texto_cabe(d, titulo.upper(), W - 60, 34)     # la píldora nunca más ancha que la tarjeta (Franclorn, 11-nov-2026)
         _pildora(d, W / 2, H - 58, titulo.upper(), f, (18, 16, 14, 235), T.HUESO + (255,), T.HUESO + (255,))
     return Carta(out, win, wm, src, dorso)
 

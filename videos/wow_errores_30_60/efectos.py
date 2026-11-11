@@ -116,11 +116,11 @@ FX = [
                  "4 084 700 puntos para llegar al 60"),
        ("Llegaste al nivel treinta", -.2), ("Y ahí es donde la gente pierde semanas|fin", .4),
        ["Pues no. Vas por el doce", "Para llegar al sesenta, más de cuatro millones", "el ochenta y ocho por ciento"], "curva 12/88", y=.55),
-    ban("Y hay otro detalle que casi nadie sabe", "o_hogar", "LA BETA ACABABA EN EL 30", "del 31 al 60, nadie lo había jugado", dur=5.0),
-    dict(tipo="mg", fn=PE.banda(F("o_pagina"), "20 ERRORES DEL 30 AL 60", "del 20 al 1 · y cómo arreglarlos", alto=380, tema="wow"),
+    ban("Y hay otro detalle que casi nadie sabe", "tuercespina", "LA BETA ACABABA EN EL 30", "del 31 al 60, nadie lo había jugado", dur=5.0),
+    dict(tipo="mg", fn=PE.banda(F("expedicion"), "20 ERRORES DEL 30 AL 60", "del 20 al 1 · y cómo arreglarlos", alto=380, tema="wow"),
          en=("Hoy te traigo veinte errores", -.2), dur=4.4, x=.5, y=.80, sale=.3, nombre="banda 20", ver=1.0),
     # =========================================================== 20 páginas
-    rel("Número veinte. Cargar veintisiete", "o_pagina", "Las verdes colinas de Tuercespina", "27 páginas · solo 15 sirven"),
+    rel("Número veinte. Cargar veintisiete", "o_pagina", "Las verdes colinas", "de Tuercespina · 15 de 27 sirven"),
     mapa("tuercespina", [P(35.6, 10.6, "Expedición de Nesingwary", "Barnil Jarropetra", "barnil"), P(27, 77, "Bahía del Botín", "subasta", "bahia")],
          ("En el norte de la Vega de Tuercespina", -.2), ("Barnil Jarropetra te pide|fin", .2),
          ["En el norte de la Vega", "Barnil Jarropetra"], "VEGA DE TUERCESPINA", "nivel 30-45"),
@@ -149,7 +149,6 @@ FX = [
     dict(tipo="video", ruta=CREATIVO, croma=True, de=CODIGO, a=("Y ya que hablamos del patrocinador", -.1), entra=.15, nombre="og CODIGO", ver=3.0),
     # =========================================================== burla0 (Marcos)
     com("Marcos escribió: quién puede", "UgyJulOqxoNMH6lpv2V4AaABAg", dur=6.0, x=.32, y=.30),
-    filav("La misma gente que paga un entrenador", [("o_manoplas", "Entrenador", None), ("o_hogar", "Profesor", None), ("o_zanahoria", "Instructor", None)], y=.70, tam=280, dur=4.4),
     # =========================================================== 18 ángel
     rel("Número dieciocho. Resucitar con el Ángel", "angel", "Ángel de la Resurrección", "Dolencia de resurrección · 10 min"),
     mapa("tanaris_eses", [P(51.6, 27.8, "Gadgetzan", "cementerio"), P(39, 21, "Zul'Farrak", "tu cadáver", "zulfarrak_peg")],
@@ -157,7 +156,7 @@ FX = [
     # =========================================================== 17 vuelos
     rel("Número diecisiete. No activar los vuelos", "o_hogar", "Piedra de hogar", "1 hora de reutilización"),
     carr([("gadgetzan_peg", "Gadgetzan"), ("bahia", "Bahía del Botín"), ("kargath", "Kargath"), ("capilla", "Capilla de la Esperanza"), ("vista_eterna", "Vista Eterna")],
-         "Los centros buenos de esta franja", ("Los centros buenos de esta franja|fin", .3),
+         "Los centros buenos de esta franja", ("la Capilla de la Esperanza de la Luz y Vista Eterna|fin", .3),
          ["Bahía del Botín", "Kargath para la Horda", "la Capilla de la Esperanza", "Vista Eterna"], titulo="DÓNDE ATAR LA PIEDRA"),
     pv("el Baluarte, en las Tierras de la Peste del Oeste", "baluarte", "El Baluarte · sin maestro de vuelo", dur=4.6, x=.72, y=.50, tam=640),
     # =========================================================== 16 JcJ
@@ -186,8 +185,8 @@ FX = [
     mg(M.contadores("DEL 40 AL 60", [("inv_misc_coin_01", "Reasignaciones de Classic", 40, None, 0), ("inv_misc_coin_01", "Doble especialización", 10, 1, 2)],
                     ("UNA SOLA COMPRA", 2)),
        ("En Forever, al nivel cuarenta, el entrenador", -.2), ("ya lo tenías resuelto|fin", .3),
-       ["unas diez de oro", "Cambiar entre las dos es gratis", "con una sola compra"], "doble spec", y=.58),
-    pv("tanquear o curar en Zul'Farrak", "zulfarrak_peg", "Zul'Farrak · nivel 44-54", dur=4.4, x=.74, y=.50, tam=620),
+       ["unas diez de oro", "Cambiar entre las dos es gratis", "con una sola compra"], "doble spec", y=.58, x=.34),
+    pv("tanquear o curar en Zul'Farrak", "zulfarrak_peg", "Zul'Farrak · nivel 44-54", dur=4.4, x=.80, y=.50, tam=520),
     # =========================================================== 11 materiales
     rel("Vamos con el número once", "o_mitril", "Mineral de mitril", "a la subasta, no al vendedor"),
     mg(M.subasta("LO QUE VENDES AL VENDEDOR", [("inv_misc_leatherscrap_08", "Cuero grueso", "subasta", VERDE), ("inv_ore_mithril_02", "Mineral de mitril", "subasta", VERDE),
@@ -225,14 +224,14 @@ FX = [
          ["Las Plumas de penacho", "se llevan a Grazle"], "FRONDAVIL", "los furbolgs Muertobosque"),
     filav("Las Plumas de penacho Muertobosque y las Cuentas", [("o_pluma", "Pluma de penacho", None), ("o_cuentas", "Cuentas de Espíritu", None)], y=.70, tam=280, dur=4.6),
     # =========================================================== gracias2
-    com("Zanafer escribió que se enteró", "UgxQndttdPhEGM-GcWZ4AaABAg", dur=4.8, x=.30, y=.30),
-    com("Y Gregory dice que el guion", "UgwT2OG4UHOgNNKY1HZ4AaABAg", dur=4.4, x=.66, y=.34),
+    com("Zanafer escribió que se enteró", "UgxQndttdPhEGM-GcWZ4AaABAg", dur=4.8, x=.28, y=.26),
+    com("Y Gregory dice que el guion", "UgwT2OG4UHOgNNKY1HZ4AaABAg", dur=4.4, x=.70, y=.66),
     com("Y Matías lo deja claro", "UgzPWIDRQMH0N0zYubR4AaABAg", dur=5.0, x=.32, y=.32),
     # =========================================================== 6 Alba Argenta
     rel("Número seis. Matar no-muertos", "o_comision", "Comisión del Alba Argenta", "sin ella, no cae ni una"),
     filav("sueltan Piedras de la Plaga", [("o_piedra_plaga", "Piedra de la Plaga", None), ("o_muestra", "Muestra de valor", None)], y=.66, tam=320, dur=5.0),
     mapa("tdp_este_eses", [P(81.5, 59.5, "Capilla de la Esperanza de la Luz", "Duque Nicolás Zverenhoff", "zverenhoff")],
-         ("Las piedras se entregan en la Capilla", -.2), ("del Alba Argenta|fin", .3), ["al duque Nicolás"], "TIERRAS DE LA PESTE DEL ESTE", "Alba Argenta"),
+         ("Las piedras se entregan en la Capilla", -.2), ("a cambio de Muestras de valor del Alba Argenta|fin", .3), ["al duque Nicolás"], "TIERRAS DE LA PESTE DEL ESTE", "Alba Argenta"),
     # =========================================================== 5 misiones de clase
     rel("Número cinco. Saltarte las misiones de clase", "templo", "Templo de Atal'Hakkar", "misiones de clase del nivel 50"),
     mapa("azshara", [P(29, 40, "Archimago Xylem", "mago y pícaro", "xylem"), P(42, 43, "Ogtinc", "cazador y sacerdote", "ogtinc")],
@@ -246,9 +245,9 @@ FX = [
     # =========================================================== 4 muro de los 50
     mg(M.contadores("CADA NIVEL DEL 50 AL 55", [(EXP, "Experiencia por nivel", 147500, None, 0), ("inv_misc_note_01", "Misiones que quedan", 0, 1, 1)],
                     ("EL MURO DE LOS 50", 2)),
-       ("En Classic, entre el cincuenta y el cincuenta y cinco", -.2), ("o más|fin", .3), ["Y cada nivel pide", "o más"], "muro 50", y=.58),
+       ("En Classic, entre el cincuenta y el cincuenta y cinco", -.2), ("puntos de experiencia o más|fin", .3), ["Y cada nivel pide", "puntos de experiencia o más"], "muro 50", y=.58),
     mapa("estepas", [P(84, 68, "Vigilia de Morgan"), P(29, 38, "Montaña Roca Negra", "mazmorras llenas de misiones", "montana")],
-         ("La salida de siempre era la Montaña Roca Negra", -.2), ("Frondavil y Cuna del Invierno|fin", .2), ["con sus mazmorras"], "LAS ESTEPAS ARDIENTES", "la salida de siempre"),
+         ("La salida de siempre era la Montaña Roca Negra", -.2), ("más Un'Goro, Frondavil y Cuna del Invierno|fin", .2), ["con sus mazmorras"], "LAS ESTEPAS ARDIENTES", "la salida de siempre"),
     mapa("marjal_eses", [P(76, 18, "Alcaz Island Prison", "nivel 48-55 · nueva", "alcaz")], ("Pero Forever añade huecos nuevos", -.2),
          ("para el cuarenta y ocho al cincuenta y cinco|fin", .3), ["Alcaz Island Prison"], "MARJAL REVOLCAFANGO", "mazmorra nueva de Forever"),
     pv("Y Blackmaw Hold, en el norte de Azshara", "blackmaw", "Blackmaw Hold · 55-60", dur=4.6, x=.72, y=.50, tam=620),
@@ -267,7 +266,7 @@ FX = [
          ("Está también Shen'dralas", -.2), ("Krol'dok Stronghold, en Riverglades|fin", .3), ["The Drowned City", "y Krol'dok"], titulo="LO NUEVO DE FOREVER"),
     # =========================================================== 1 Onyxia
     rel("Número uno. Llegar al sesenta el nueve", "o_amuleto", "Amuleto de Pirodraco", "personal · no de cuenta"),
-    mg(M.tiempos("CINCO SEMANAS PARA ONYXIA", [("4 nov · lanza Forever", 1, VERDE), ("5 semanas para subir y sintonizar", 33, AMAR), ("9 dic · abren las bandas", 1, ROJO)],
+    mg(M.tiempos("CINCO SEMANAS PARA ONYXIA", [("4 nov · Forever", 7, VERDE), ("5 semanas para subir y sintonizar", 20, AMAR), ("9 dic · bandas", 7, ROJO)],
                  "¿empezaste la sintonización?"),
        ("Del cuatro de noviembre al nueve de diciembre", -.2), ("mirando el portal|fin", .4), ["Del cuatro de noviembre", "hay cinco semanas", "El que empieza tarde"], "calendario", y=.58),
     pv("Y en medio está la más temida", "windsor", "Alguacil Windsor · si muere, se falla", dur=5.0, x=.72, y=.50, tam=640),
@@ -279,7 +278,6 @@ FX = [
     pv("la misión del Lacre de Ascensión", "o_lacre", "Lacre de Ascensión · ¿hace falta?", dur=5.0, x=.26, y=.52, tam=480),
     pv("abren las bandas. Barrow Deeps", "guarida", "Guarida de Onyxia", dur=4.6, x=.74, y=.50, tam=600),
     # =========================================================== cierre
-    pv("el primer sesenta de Forever fue un grupo", "o_hogar", "Primer 60 de Forever · ~3 días", dur=4.6, x=.74, y=.52, tam=420),
 ]
 FX = [d for x in FX for d in (x if isinstance(x, list) else [x])]
 

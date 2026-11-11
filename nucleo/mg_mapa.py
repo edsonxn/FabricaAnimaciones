@@ -550,8 +550,20 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             mk += [ini + (fin - ini) * j / max(1, resto - 1) for j in range(resto)]
         return mk
 
-    def fn(dt, dur, marcas):
+    # REGLA 11-nov-2026 (el usuario: «la imagen estaba a la izquierda del punto y luego arriba… con el zoom se desacomodan»):
+    # el hueco de cada nombre y foto se elige UNA vez, en un cuadro de referencia fijo (0,9 s después de su marca, con la
+    # cámara ya en su paso) y se conserva todo el mapa. Determinista: cualquier proceso del render elige lo mismo.
+    LADO = {}
+
+    def fn(dt, dur, marcas, _medir=False):
         mk = tiempos(dur, marcas)
+        if not _medir:
+            for j_ in range(len(lug)):
+                if dt >= mk[j_] and (("et", j_) not in LADO or (lug[j_][0] in fotos and ("foto", j_) not in LADO)):
+                    fn(min(mk[j_] + .9, dur), dur, marcas, _medir=True)
+                    LADO.setdefault(("et", j_), 0)        # si en la referencia no se vio, no se vuelve a medir cada cuadro
+                    if lug[j_][0] in fotos:
+                        LADO.setdefault(("foto", j_), 0)
         # largo de ruta dibujado: tramo k se traza en [max(mk[k-1]+.2, mk[k]-traza), mk[k]] (traza = s máx. por tramo: 1,7 en
         # misiones; un recorrido largo con solo inicio y meta, p. ej. traza=99 = se dibuja durante todo el tramo)
         largo = 0.0
@@ -678,17 +690,29 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             eh, ew = et.shape[:2]
             arriba = 84 if (tipo == "meta" and tema == "tes") else (66 if tema == "gaming" else 46)
             elegido = None
-            for evita in (ocupados + ocup_v, ocupados):     # mejor sin tapar a los viajeros; si no cabe, encima de ellos
-                for lx, ly in ((1, -1), (-1, -1), (1, 1), (-1, 1)):    # el primer hueco libre: dentro, sin título ni otro nombre
+            LADOS_ET = ((1, -1), (-1, -1), (1, 1), (-1, 1))
+            if ("et", j) in LADO:                           # lado fijo (11-nov-2026): el mismo en todo el zoom
+                k_ = LADO[("et", j)]
+                if k_ is not None:
+                    lx, ly = LADOS_ET[k_]
                     ex_, ey_ = x + lx * (ew / 2 + 6), y + (-arriba if ly < 0 else 52)
-                    r = (ex_ - ew / 2 + 50, ey_ - eh / 2 + 28, ex_ + ew / 2 - 50, ey_ + eh / 2 - 28)
-                    libre = r[0] >= 0 and r[2] <= VW and r[1] >= 0 and r[3] <= VH and not any(
-                        r[0] < q[2] and q[0] < r[2] and r[1] < q[3] and q[1] < r[3] for q in evita)
-                    if libre:
-                        elegido = (ex_, ey_, r)
+                    ex_ = min(max(ex_, ew / 2 - 44), VW - ew / 2 + 44)
+                    ey_ = min(max(ey_, eh / 2 - 22), VH - eh / 2 + 22)
+                    elegido = (ex_, ey_, (ex_ - ew / 2 + 50, ey_ - eh / 2 + 28, ex_ + ew / 2 - 50, ey_ + eh / 2 - 28))
+            else:
+                for evita in (ocupados + ocup_v, ocupados):     # mejor sin tapar a los viajeros; si no cabe, encima de ellos
+                    for k_, (lx, ly) in enumerate(LADOS_ET):    # el primer hueco libre: dentro, sin título ni otro nombre
+                        ex_, ey_ = x + lx * (ew / 2 + 6), y + (-arriba if ly < 0 else 52)
+                        r = (ex_ - ew / 2 + 50, ey_ - eh / 2 + 28, ex_ + ew / 2 - 50, ey_ + eh / 2 - 28)
+                        libre = r[0] >= 0 and r[2] <= VW and r[1] >= 0 and r[3] <= VH and not any(
+                            r[0] < q[2] and q[0] < r[2] and r[1] < q[3] and q[1] < r[3] for q in evita)
+                        if libre:
+                            elegido = (ex_, ey_, r)
+                            break
+                    if elegido:
                         break
-                if elegido:
-                    break
+                if _medir:
+                    LADO[("et", j)] = k_ if elegido else None
             if elegido:                                     # sin hueco (el lugar quedó bajo el título o fuera): sin nombre
                 ex_, ey_, r = elegido
                 ocupados.append(r)
@@ -709,19 +733,24 @@ def _mapa(ruta, puntos, tema="wow", titulo=None, sub=None, recorte=None, modo="p
             fh, fw = spr.shape[:2]
             sep = 60 if not ventana else 36
             mejor = None                                    # sin hueco libre: el que menos tapa (el título pesa el triple)
-            for cx_, cy_ in ((x, y - sep - fh / 2), (x + sep + fw / 2, y), (x - sep - fw / 2, y), (x, y + sep + fh / 2),
-                             (x + sep + fw / 2, y - fh / 2), (x - sep - fw / 2, y - fh / 2),
-                             (x + sep + fw / 2, y + fh / 2), (x - sep - fw / 2, y + fh / 2)):
+            cands = ((x, y - sep - fh / 2), (x + sep + fw / 2, y), (x - sep - fw / 2, y), (x, y + sep + fh / 2),
+                     (x + sep + fw / 2, y - fh / 2), (x - sep - fw / 2, y - fh / 2),
+                     (x + sep + fw / 2, y + fh / 2), (x - sep - fw / 2, y + fh / 2))
+            for k_, (cx_, cy_) in enumerate(cands):
+                if ("foto", j) in LADO and k_ != LADO[("foto", j)]:
+                    continue                                # lado fijo (11-nov-2026)
                 cx_ = min(max(cx_, fw / 2), VW - fw / 2)
                 cy_ = min(max(cy_, fh / 2), VH - fh / 2)
                 r = (cx_ - fw / 2, cy_ - fh / 2, cx_ + fw / 2, cy_ + fh / 2)
                 tapa = sum(max(0, min(r[2], q[2]) - max(r[0], q[0])) * max(0, min(r[3], q[3]) - max(r[1], q[1]))
                            * (3 if q is rect_t else 1) for q in ocupados)
                 if mejor is None or tapa < mejor[0]:
-                    mejor = (tapa, cx_, cy_, r)
+                    mejor = (tapa, cx_, cy_, r, k_)
                 if tapa == 0:
                     break
-            _, cx_, cy_, r = mejor
+            _, cx_, cy_, r, k_ = mejor
+            if _medir and ("foto", j) not in LADO:
+                LADO[("foto", j)] = k_
             ocupados.append(r)
             # la foto flota despacio (un mapa esperando la siguiente marca no queda quieto > 2 s: freezedetect, majora_mask)
             _pegar(f, spr, cx_, cy_ + 7 * math.sin(dt * 1.8 + j), a,

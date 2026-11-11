@@ -143,6 +143,16 @@ def filas(titulo, filas_, ancho=1240):
     T, G = 64, 12
     alto_fila = T + 18
     h = 96 + len(filas_) * alto_fila + 20
+    # 11-nov-2026 (el usuario: «está mal acomodado»): la columna de casillas empieza DESPUÉS de la etiqueta más larga
+    # (antes iba fija en x=320 y las etiquetas largas quedaban debajo de las casillas). Si no cabe, se achica la letra.
+    n_max = max(n for _, n, _ in filas_)
+    ancho_cas = n_max * (T + G) - G
+    libre = ancho - 40 - 36 - ancho_cas - 150          # margen izq · hueco · casillas · columna del número
+    _d0 = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    tam_et = 34
+    while tam_et > 20 and max(_d0.textlength(et, font=fuente("sans", tam_et)) for et, _, _ in filas_) > libre:
+        tam_et -= 2
+    x_cas = 40 + max(_d0.textlength(et, font=fuente("sans", tam_et)) for et, _, _ in filas_) + 36
 
     def fn(dt, dur, marcas):
         im, M = _base(ancho, h, titulo)
@@ -151,9 +161,9 @@ def filas(titulo, filas_, ancho=1240):
             tk = marcas[k] if k < len(marcas) else 0.6 + k * 0.8
             y = M + 92 + k * alto_fila
             lleno = dt >= tk
-            _texto(d, (M + 40, y + T / 2), et, fuente("sans", 34), BLANCO if lleno else GRIS, "lm")
+            _texto(d, (M + 40, y + T / 2), et, fuente("sans", tam_et), BLANCO if lleno else GRIS, "lm")
             for i in range(n):
-                _casilla(im, d, M + 320 + i * (T + G), y, T, icos[i % len(icos)], dt - tk - i * .06 if lleno else None)
+                _casilla(im, d, int(M + x_cas + i * (T + G)), y, T, icos[i % len(icos)], dt - tk - i * .06 if lleno else None)
             if lleno:
                 v = min(n, 1 + int((dt - tk) / .06))
                 ult = k == len(filas_) - 1
@@ -677,6 +687,59 @@ def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, obj
         hw, hh = W / s / 2, H / s / 2
         return min(max(cx, hw), bw - hw), min(max(cy, hh), bh - hh), s
 
+    n_obj0 = len(P) - 1 if ico is not None else -1
+
+    def _cands_rot(x, y, rl, off):
+        return [(x + off, y - rl.height / 2), (x - off - rl.width, y - rl.height / 2),
+                (x - rl.width / 2, y + off * .9), (x - rl.width / 2, y - off * .9 - rl.height)]
+
+    def _cands_foto(x, y, fw, fh, off):
+        return [(x - fw / 2, y - off - fh), (x + off, y - fh / 2), (x - off - fw, y - fh / 2), (x - fw / 2, y + off),
+                (x + off, y - fh - 20), (x - off - fw, y - fh - 20), (x + off, y + 20), (x - off - fw, y + 20)]
+
+    def _clamp(rx, ry, w, h, m):
+        return min(max(rx, m), W - w - m), min(max(ry, m), H - h - m)
+
+    def _choque(caja, ocup):
+        return sum(max(0, min(caja[2], o[2]) - max(caja[0], o[0])) * max(0, min(caja[3], o[3]) - max(caja[1], o[1])) for o in ocup)
+
+    def _mejor(cands, w, h, m, ocup):
+        mejor = None
+        for k, (rx, ry) in enumerate(cands):
+            rx, ry = _clamp(rx, ry, w, h, m)
+            c = _choque((rx, ry, rx + w, ry + h), ocup)
+            if mejor is None or c < mejor[0]:
+                mejor = (c, k)
+            if c == 0:
+                break
+        return mejor[1]
+
+    # REGLA 11-nov-2026 (el usuario: «la imagen primero estaba del lado izquierdo del punto y ahora está arriba… con el zoom
+    # se desacomodan los elementos»): antes el hueco de cada rótulo y foto se elegía EN CADA CUADRO y, al moverse la cámara,
+    # saltaba de lado. Ahora se elige UNA vez, con la cámara ya asentada en su paso, y se queda en ese lado todo el mapa.
+    # Es determinista (no depende del cuadro anterior), así que vale igual con el render en varios procesos.
+    LADO_ROT, LADO_FOTO = {}, {}
+    for i in range(len(P)):
+        cx_, cy_, s_ = camara(list(range(i + 1)))
+
+        def pt(p, cx_=cx_, cy_=cy_, s_=s_):
+            return W / 2 + s_ * (p[0] - cx_), H / 2 + s_ * (p[1] - cy_)
+        ocup = [(x - r, y - r, x + r, y + r) for j in range(i + 1) for x, y in [pt(P[j])] for r in [(80 if j == n_obj0 else 34)]]
+        if cart is not None:
+            ocup.append((40, 36, 60 + cart.width, 56 + cart.height))
+        for j in sorted(range(i + 1), key=lambda j: (j != n_obj0, -j)):
+            x, y = pt(P[j])
+            rl, off = rot[j], (96 if j == n_obj0 else 44)
+            cands = _cands_rot(x, y, rl, off)
+            if j not in LADO_ROT:
+                LADO_ROT[j] = _mejor(cands, rl.width, rl.height, 24, ocup)
+            rx, ry = _clamp(*cands[LADO_ROT[j]], rl.width, rl.height, 24)
+            ocup.append((rx, ry, rx + rl.width, ry + rl.height))
+        if fotos[i] is not None:
+            x, y = pt(P[i])
+            fw, fh = fotos[i].size
+            LADO_FOTO[i] = _mejor(_cands_foto(x, y, fw, fh, 110 if i == n_obj0 else 60), fw, fh, 20, ocup)
+
     def fn(dt, dur, marcas):
         tk = [_mk(marcas, i, .5 + i * 2.2) for i in range(len(P) + 1)]
         vistos = [i for i in range(len(P)) if dt >= tk[i]]
@@ -753,19 +816,8 @@ def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, obj
             ocup.append((40, 36, 60 + cart.width, 56 + cart.height))
         for i, x, y, a in sorted(rotulos, key=lambda r: (r[0] != n_obj, -r[0])):
             rl, off = rot[i], (96 if i == n_obj else 44)
-            cands = [(x + off, y - rl.height / 2), (x - off - rl.width, y - rl.height / 2),
-                     (x - rl.width / 2, y + off * .9), (x - rl.width / 2, y - off * .9 - rl.height)]
-            mejor = None
-            for rx, ry in cands:
-                rx, ry = min(max(rx, 24), W - rl.width - 24), min(max(ry, 24), H - rl.height - 24)
-                caja = (rx, ry, rx + rl.width, ry + rl.height)
-                choque = sum(max(0, min(caja[2], o[2]) - max(caja[0], o[0])) * max(0, min(caja[3], o[3]) - max(caja[1], o[1]))
-                             for o in ocup)
-                if mejor is None or choque < mejor[0]:
-                    mejor = (choque, caja)
-                if choque == 0:
-                    break
-            caja = mejor[1]
+            rx, ry = _clamp(*_cands_rot(x, y, rl, off)[LADO_ROT.get(i, 0)], rl.width, rl.height, 24)   # lado fijo (11-nov)
+            caja = (rx, ry, rx + rl.width, ry + rl.height)
             ocup.append(caja)
             _pegar(im, rl, (caja[0] + caja[2]) / 2, (caja[1] + caja[3]) / 2, 1.0, a)
         # fotos: la del paso más nuevo (y la del premio), en el hueco libre más cercano al pin; rebotan al entrar
@@ -783,19 +835,8 @@ def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, obj
             x, y = pant(P[i])
             fw, fh = ft.size
             off = 110 if i == n_obj else 60
-            cands = [(x - fw / 2, y - off - fh), (x + off, y - fh / 2), (x - off - fw, y - fh / 2), (x - fw / 2, y + off),
-                     (x + off, y - fh - 20), (x - off - fw, y - fh - 20), (x + off, y + 20), (x - off - fw, y + 20)]
-            mejor = None
-            for rx, ry in cands:
-                rx, ry = min(max(rx, 20), W - fw - 20), min(max(ry, 20), H - fh - 20)
-                caja = (rx, ry, rx + fw, ry + fh)
-                choque = sum(max(0, min(caja[2], o[2]) - max(caja[0], o[0])) * max(0, min(caja[3], o[3]) - max(caja[1], o[1]))
-                             for o in ocup)
-                if mejor is None or choque < mejor[0]:
-                    mejor = (choque, caja)
-                if choque == 0:
-                    break
-            caja = mejor[1]
+            rx, ry = _clamp(*_cands_foto(x, y, fw, fh, off)[LADO_FOTO.get(i, 0)], fw, fh, 20)   # lado fijo (11-nov)
+            caja = (rx, ry, rx + fw, ry + fh)
             ocup.append(caja)
             _pegar(im, ft, (caja[0] + caja[2]) / 2, (caja[1] + caja[3]) / 2, .55 + .45 * _pop(uu - .25, .35), a)
         if cart is not None:
@@ -2162,7 +2203,9 @@ def tiempos(titulo, tramos, nota=None, ancho=1400):
             if dt >= tk:
                 q = _eo((dt - tk) / .9)
                 d.rounded_rectangle((x + 4, y + 3, x + 4 + (w - 8) * q, y + 55), 7, fill=tuple(col) + (235,))
-                _texto(d, (x + w / 2, y + 29), s, fuente("negra", 28), BLANCO, "mm", 255 * _eo((dt - tk) / .3))
+                claro = .299 * col[0] + .587 * col[1] + .114 * col[2] > 170      # relleno claro (amarillo) = texto oscuro
+                _texto(d, (x + w / 2, y + 29), s, fuente("negra", 28), (22, 18, 10) if claro else BLANCO, "mm",
+                       255 * _eo((dt - tk) / .3))                                   # (blanco sobre amarillo no se leía, 11-nov-2026)
             x += w
         tn = _mk(marcas, len(tramos), 1e9)
         if nota and dt >= tn:

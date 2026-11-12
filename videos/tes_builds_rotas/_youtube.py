@@ -27,7 +27,7 @@ d = ("Una piedra, una raza, cuatro prendas… y el juego deja de tener dificulta
      "que hace todo el mundo al alquimista que borra el juego: el Arquero Fantasma, el Carterista Envenenador, el Titiritero, el Señor de los "
      "Vampiros, el Nigromante Infinito, el Asesino de la Hermandad, el Mago Sin Coste, el Pararrayos, el Artesano Legendario y el Dios del "
      "Boticario. Con su raza, su piedra, sus ventajas, el equipo y dónde se consigue. Cada dato comprobado en UESP." + N + N +
-     "Narra Johnny, con MariCarmen y el Profeta de visita." + N + N +
+     "Narra el Profeta, ganador de su votación; Johnny, MariCarmen y Hope se pelean desde la banca por un dato." + N + N +
      "Gracias a @launionsovietica3315, @JinbeiDLuffy, @REaPEK.papulol, @estebato2448 y @DJRaygadaVargas por comentar; y a @npc_1261, "
      "@edgarvillalobos1492 y @YetRise por el correo con críticas, que también leemos." + N + N +
      "CAPÍTULOS" + N + N.join(caps) + N + N +

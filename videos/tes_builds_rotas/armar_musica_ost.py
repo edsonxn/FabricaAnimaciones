@@ -27,24 +27,28 @@ def T(esc, dt=-2.5):
     return round(_ESC[esc] + dt, 2)
 
 
-SECCIONES = [   # tes_builds_rotas (s1, 10-nov-2026): Skyrim / Dawnguard / Dragonborn (Jeremy Soule), pistas que el canal no había usado
+SECCIONES = [   # v3 (12-nov-2026): SIN CANTO bajo la voz (audio/ost/_canto.json de nucleo/ost_canto.py; fuera Age of Oppression, coro entero)
     ((0.0, T("p10")), [("age_of_aggression", 0)]),   # gancho + tabla de builds
-    ((T("p10"), T("p9")), [("far_horizons", 0)]),   # 10 arquero
+    ((T("p10"), T("p9")), [("far_horizons", 0)]),   # 10 arquero (canto desde 150 s)
     ((T("p9"), T("cr1")), [("into_darkness", 0)]),   # 9 carterista
     ((T("cr1"), T("p8")), [("dragonsreach", 0)]),   # correo
-    ((T("p8"), T("p7")), [("ancient_stones", 0)]),   # 8 titiritero
+    ((T("p8"), T("p7")), [("the_jerall_mountains", 82)]),   # 8 titiritero (antes Ancient Stones: canto a los 65 s)
     ((T("p7"), T("p6")), [("the_gathering_storm", 0)]),   # 7 Señor de los Vampiros
-    ((T("p6"), T("ag1")), [("age_of_oppression", 0), ("death_or_sovngarde", 0)]),   # 6 nigromante
-    ((T("ag1"), T("p5")), [("dawn", 0)]),   # agradecimientos
-    ((T("p5"), T("p4")), [("tooth_and_claw", 0), ("under_an_ancient_sun", 0)]),   # 5 asesino (+ guiño)
-    ((T("p4"), T("cr2")), [("the_jerall_mountains", 0)]),   # 4 mago sin coste
+    ((T("p6"), T("ag1")), [("under_an_ancient_sun", 0)]),   # 6 nigromante (antes Age of Oppression = MÚSICA CANTADA, 7:25 de la v2)
+    ((T("ag1"), T("p5")), [("dawn", 0)]),   # agradecimientos (canto a los 65 s)
+    ((T("p5"), T("p4")), [("tooth_and_claw", 0), ("into_darkness", 100)]),   # 5 asesino (+ guiño)
+    ((T("p4"), T("cr2")), [("death_or_sovngarde", 0)]),   # 4 mago sin coste (canto desde 125 s)
     ((T("cr2"), T("p3")), [("dragonsreach", 60)]),   # crítica 2 (@edgarvillalobos1492)
-    ((T("p3"), T("campana")), [("steel_on_steel", 0)]),   # 3 pararrayos
-    ((T("campana"), T("p2")), [("solitude", 0)]),   # campaña de suscripción
+    ((T("p3"), T("campana")), [("steel_on_steel", 31), ("age_of_aggression", 0)]),   # 3 pararrayos (canto a los 25 s)
+    ((T("campana"), T("p2")), [("solitude", 0)]),   # campaña de suscripción (canto desde 30 s)
     ((T("p2"), T("cr3")), [("imperial_throne", 0)]),   # 2 artesano
     ((T("cr3"), T("p1")), [("dawn", 80)]),   # crítica 3 (@YetRise)
-    ((T("p1"), None), [("out_of_the_cold", 0), ("ancient_stones", 140)]),   # 1 boticario + cierre
+    ((T("p1"), None), [("out_of_the_cold", 0), ("imperial_throne", 0)]),   # 1 boticario + cierre
 ]
+
+
+_CJ = os.path.join("audio", "ost", "_canto.json")
+CANTO = json.load(open(_CJ, encoding="utf-8")) if os.path.exists(_CJ) else {}   # nucleo/ost_canto.py (12-nov-2026)
 
 
 def cargar(n):
@@ -85,6 +89,17 @@ def main():
             k = min(nc, len(seg), len(x))
             seg[-k:] = seg[-k:] * rampa(k, False) + x[:k] * rampa(k)
             seg = np.vstack([seg, x[k:]])
+        _usado, _resto = [], (t1 - t0 + CRUCE)
+        for n, desde in pistas:
+            d = min(_resto, len(cargar(n)) / SR - desde)
+            _usado.append((n, desde, d))
+            _resto -= d
+            if _resto <= 0:
+                break
+        for n, desde, d in _usado:
+            malas = [c for c in CANTO.get(n, []) if desde - 5 < c < desde + d]
+            if malas:
+                raise SystemExit(f"CANTO bajo la voz: {n} {desde:.0f}-{desde + d:.0f} s pisa canto en {malas} (sección {t0:.0f}-{t1:.0f})")
         seg = seg[:largo].copy()
         l = meter.integrated_loudness(seg)
         seg *= 10 ** ((LUFS - l) / 20)

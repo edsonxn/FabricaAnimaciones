@@ -19,7 +19,7 @@ PROMESAS = [   # (frase ancla, + s, qué debería verse) — tes_builds_rotas, 1
     ("con sal y unos peces", 0.8, "sal y peces"),
     ("en las piedras guardianas al suroeste", 1.0, "piedras guardianas / mapa"),
     ("Mano firme", 1.0, "camara lenta al apuntar"),
-    ("el de hueso de dragón, de Dawnguard", 0.8, "arco de hueso de dragon"),
+    ("El arco de hueso de dragón, de Dawnguard", 0.8, "arco de hueso de dragon"),
     ("el grito Ralentizar tiempo", 1.0, "grito Ralentizar tiempo"),
     ("la flecha está clavada en su cinta", 0.5, "libro Cinta dorada"),
     ("Piedra: la Sombría, al sur de Ríften", 1.0, "piedra Sombria"),

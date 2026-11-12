@@ -14,10 +14,15 @@ apellido. [sighs] Para los vecinos…`. Primer video hecho así: `videos/videoll
 - **Cómo:** en `guion.py`, `VOZ = dict(motor="elevenlabs", voice_id=…, modelo="eleven_v4_turbo", idioma="es", referencia=…, tomas=1, stability=0.5)`
   y las etiquetas dentro de las frases: `"[sighs] Esa regla murió una tarde de enero. [short pause] En Hong Kong."`.
 - **Escritura NORMAL (12-oct-2026):** con ElevenLabs no se aplican reglas fonéticas (son de Chatterbox): números en cifras («11 de julio»), nombres bien escritos («Alice»). «Once de la noche» se leyó en inglés («uans»); «11» sale bien.
-- **Etiquetas en inglés**, al inicio de la frase (tono) o en medio (pausa/gesto). Probadas: `[thoughtful]`, `[serious]`, `[curious]`,
-  `[nervous]`, `[sighs]`, `[whispers]`, `[short pause]`; otras de ElevenLabs: `[long pause]`, `[excited]`, `[sad]`, `[angry]`,
-  `[sarcastic]`, `[laughs]`, `[chuckles]`, `[exhales]`, `[shouts]`. Una o dos por frase y no en todas: que acompañen al guion
-  (suspiro antes de la mala noticia, susurro en el remate, pausa antes del dato), no que lo adornen.
+- **SIN SUSURROS NI EMOCIÓN FUERTE DE EXCITADO, EN TODOS LOS CANALES (el usuario, 2-nov-2026: «no hagamos susurros en la voz ni
+  emociones fuertes de excitado… para los demás canales también»; «no me gustan mucho los susurros»).** Nunca `[whispers]`,
+  `[excited]`, `[shouts]`, `[yells]`, `[screams]`, `[ecstatic]`, `[thrilled]`, ni escribir la frase para que se diga gritando o en
+  susurro (tampoco en las voces de personajes de `VOZ_POR_FRASE`). `tts_eleven.SIEMPRE_FUERA` las quita solas aunque se cuelen.
+  El tono lo dan la escritura, las pausas y los corchetes sobrios.
+- **Etiquetas en inglés**, al inicio de la frase (tono) o en medio (pausa/gesto). Sí: `[thoughtful]`, `[serious]`, `[curious]`,
+  `[nervous]`, `[sighs]`, `[short pause]`, `[long pause]`, `[sad]`, `[sarcastic]`, `[deadpan]`, `[amused]`, `[laughs softly]`,
+  `[chuckles]`, `[exhales]`. Una o dos por frase y no en todas: que acompañen al guion (suspiro antes de la mala noticia, pausa
+  antes del dato o del remate), no que lo adornen.
 - **El núcleo las separa solo:** `config.py` guarda la frase con corchetes en `config.FRASES_TTS[clave]` y deja `ESCENAS` limpia, así
   Whisper (CER), `timeline.json`, el `.srt`, las anclas por palabra y el panel nunca ven las etiquetas. Cambiar una etiqueta regenera
   esa frase (`voz/textos.json` guarda el texto con corchetes). Con etiquetas, `tts_select` tolera silencios internos de hasta 2,5 s.
@@ -58,8 +63,8 @@ apellido. [sighs] Para los vecinos…`. Primer video hecho así: `videos/videoll
 Sarcastic and Rich», España), `eleven_v4_turbo`. Es la voz de la que salió `Sarcastica.mp3` (la de Tamriel en Chatterbox): el
 usuario prefiere el original de ElevenLabs para los dos canales. Elegida entre 8 candidatas de la cuenta 1
 (`canales/voces_prueba/warcraft_cuenta1/`) porque la cuenta 1 (la de más saldo) no puede clonar.
-- **Sin `[whispers]` ni `[excited]`** («quitemos whisper o muy emocionado»): `VOZ["sin_etiquetas"] = ("whisper", "excit")` los
-  quita aunque se cuelen. Sí: `[amused]`, `[sarcastic]`, `[laughs softly]`, `[deadpan]`, `[sighs]`, `[mischievously]`, `[short pause]`.
+- **Sin `[whispers]` ni `[excited]`** («quitemos whisper o muy emocionado»; desde el 2-nov-2026 es regla de TODOS los canales,
+  ver § Corchetes: `tts_eleven.SIEMPRE_FUERA` los quita aunque se cuelen). Sí: `[amused]`, `[sarcastic]`, `[laughs softly]`, `[deadpan]`, `[sighs]`, `[mischievously]`, `[short pause]`.
 - Ya está en `videos/_plantilla_yt/guion.py` (`nuevo <v> --yt`); Tamriel deja la VOZ de la plantilla (antes la cambiaba a
   Chatterbox). Runa Caída sigue con Chatterbox `Faraon`.
 - Escritura normal: el inglés sale nativo («World of Warcraft», «Blizzard», «Illidan»); `FONETICA` solo para lo que se oiga mal
@@ -86,6 +91,34 @@ usuario prefiere el original de ElevenLabs para los dos canales. Elegida entre 8
   3. Saldo: Remy Eleven solo cobra de la cuenta 3 (~1 270 créditos el 2-nov, la 2 casi vacía) ≈ 6 000 caracteres de turbo
      en total; repartir sus tramos dentro de eso o recargar la 3 antes de `voz`.
   4. A los 7 días, contar en los comentarios cuál de las tres prefiere la gente y decírselo al usuario.
+
+## TAMRIEL: EL GANADOR NARRA (el usuario, 12-nov-2026, `videos/tes_builds_rotas/` v3)
+Ganó el Profeta (9 votos; Johnny, MariCarmen y Hope 2 cada uno) → `VOZ` = Profeta (plano, `sin_etiquetas` de Runa Caída) y narra
+**8 de cada 10 datos**; la «banca» se queda ~18 % de las frases vía `_POR_FRASE`, **peleándose entre ellos** dentro de la propia frase del
+dato («este dato es mío», «tú ya tuviste tu mito»), y **el Profeta se burla desde arriba** («peleen más bajo», «se dice por favor»,
+«no va a pasar»). El resultado de la votación se dice tras 1-2 datos, con `mg_tes.votacion`; placa automática en cada relevo
+(bloque v3 al final de su efectos.py). Lo de abajo (7 voces compitiendo) queda para especiales.
+
+## VARIAS VOCES QUE COMPITEN + el público vota (el usuario, 3-nov-2026, `videos/tes_sentinel_teaser/`)
+«La voz no termina de convencerme: varias voces, una narrando 2 datos cada una y compitiendo entre ellas, y que el público vote».
+- **Elegir:** muestras de 8 voces con la MISMA frase del guion (`audio/muestras_voces/_generar.py`, cuenta con más saldo, ≈ 67 créditos
+  c/u en turbo; biblioteca compartida por `GET /v1/shared-voices?language=es&gender=…`), SendUserFile y que el usuario elija. Sin las
+  voces de otros canales (Damián, Alberto, Alejandro Durán, El Faraón, Dan). Elegidas: Johnny, Edoardo, Hope, José, Mario, MariCarmen y
+  «el Profeta» (God - Deep, Powerful, `HNSF1CTQmub252yhXROX`, la favorita: más líneas).
+- **guion.py:** `VOCES` (nombre en pantalla → id), `_POR_ESCENA` + `_POR_FRASE` → `NARRA` («escena_i» → nombre) y `VOZ_POR_FRASE`.
+  Escena `voces` al principio (cada una se presenta con un pique), un pique en el primer renglón de cada relevo, y en el cierre la llamada
+  a votar con cada voz pidiendo su voto. La voz clonada del usuario va con `VOZ["por_cuenta"]` y se llama «el Humano tras el Telón»
+  (memoria `voz-clonada-el-jefe`), con 5-7 líneas en varias apariciones y las demás voces burlándose de él con cariño.
+- **Retención: la presentación de las voces NO va de entrada (el usuario, 6-nov-2026, viendo `wow_errores_forever`: «deja que el
+  narrador original presente uno o dos datos antes de presentar a las demás voces… si dura mucho la presentación, la gente se va»).**
+  Orden: gancho → la voz de siempre del canal narra 1-2 datos o puestos completos → escena `voces` CORTA (una frase por voz, unos 30 s
+  en total) → relevos. Nunca abrir con la presentación, ni alargarla con datos repetidos.
+- **Pantalla:** `mg_tes.narrador(nombre, lema, n, de)` = placa «NARRA · VOZ n DE 7» abajo a la derecha en cada presentación y relevo;
+  `mg_tes.votacion(titulo, nombres, remate)` = papeleta donde cada voz marca su casilla cuando pide el voto.
+- **Cambiar la voz de un video ya montado sin perder los clips:** antes de `voz`, apartar las tomas de las frases que cambian de voz
+  (`voz/_cands_v1/`) y copiar `beats/busquedas/fuentes` a `*_v1.json`; tras `beats`, `python _remapear.py [--de v2]` da a cada beat
+  nuevo el clip del viejo con más palabras en común (hardlinks en `medios/_v1/`), re-indexa `ambiente_por` y deja la lista de
+  huérfanos para `bajar … --rehacer`. `vid(n)` de efectos.py apunta a `medios/_v1/`. Whisper oye «Eduardo» por Edoardo: `CER_MAX_POR_FRASE`.
 
 ## REGLA: mezcla de Applio = cadena «suave» (el usuario, 13-oct-2026)
 El Montaje del panel reproduce la voz cruda (~-20 LUFS) y el MASTER la pasaba por la cadena de Chatterbox/ElevenLabs

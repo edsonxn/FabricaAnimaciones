@@ -164,7 +164,7 @@ FX = [
     pv("Un nigromante con un ejército", "esclavo_muerto", "Esclavo muerto", dur=2.4, x=.78, y=.60, tam=340, entrada="aplasta"),
     pv("con sal y unos peces", "sal", "Montón de sal", dur=2.6, x=.18, y=.58, tam=320, marco="vitral"),
     mis("Las diez más rotas de Skyrim", "Crónicas de Tamriel", "Las 10 builds más ROTAS", dur=3.4, y=.30),
-    ficha("Todo comprobado en UESP", "Fuentes", "Cada dato con su enlace de *UESP*", "En la descripción", dur=3.2),
+    ficha("Cada una, probada", "Probadas", "Cada build, *en partida*", "Fuentes en la descripción", dur=3.2),
     tier([("bosmer", "Arquero", "C"), ("khajiit", "Carterista", "C"), ("altmer", "Titiritero", "B"), ("senor_vampiro", "Vampiro", "B"),
           ("esclavo_muerto", "Nigromante", "B"), ("guantes_hermandad", "Asesino", "A"), ("tunica_miraak", "Mago sin coste", "A"),
           ("piedra_atronach", "Pararrayos", "A"), ("orc", "Artesano", "S"), ("sal", "Boticario", "S")],
@@ -186,7 +186,7 @@ FX = [
                 unidad="×", remate=("×6 por flecha", 2)),
        "Las ventajas: Máxima tensión", ("a la mitad de velocidad", .3), ["Máxima tensión", "Puntería mortífera", "Y Mano firme"],
        "multiplicador arco", y=.40),
-    rel("el de hueso de dragón, de Dawnguard", "arco_hueso_dragon", "Arco de hueso de dragón", "20 de daño · el más alto", dur=4.6, x=.74, y=.50),
+    rel("El arco de hueso de dragón, de Dawnguard", "arco_hueso_dragon", "Arco de hueso de dragón", "20 de daño · el más alto", dur=4.6, x=.74, y=.50),
     pv("se le quita a un Guardián", "guardian_keeper", "Guardián", dur=3.0, x=.20, y=.60, tam=360, marco="estampilla"),
     ficha("el grito Ralentizar tiempo", "Ralentizar tiempo", "El mundo al *10 %* durante *16 s*", "Grito · 3 palabras", dur=5.0),
     pv("Tiempo de sobra para vaciar la aljaba", "ralentizar_tiempo", "Ralentizar tiempo", dur=3.0, x=.20, y=.60, tam=340),
@@ -200,7 +200,7 @@ FX = [
          "Piedra: la Sombría", ("sesenta segundos invisible", .4), ["Piedra: la Sombría", "al sur de Ríften"], "piedra Sombría",
          entrada="pliegue"),
     ficha("con la ventaja Envenenado", "Envenenado", "Mete *venenos* en su bolsillo", "Robo 40", dur=4.0),
-    ficha("eso no cuenta como crimen", "Recompensa por tu cabeza", "*0* monedas", "Ni delante de toda la plaza", dur=4.0, rojo=True, x=.24),
+    ficha("no lo cuenta como crimen", "Recompensa por tu cabeza", "*0* monedas", "Ni delante de toda la plaza", dur=4.0, rojo=True, x=.24),
     mg(T.contadores("Guardia de Carrera Blanca", [("Venenos en el bolsillo", 3, None, 0), ("Testigos", 12, None, 0), ("Recompensa", 0, None, None)],
                     remate=("NADIE LLAMA A LOS GUARDIAS", 1)),
        "Le metes tres venenos a un guardia", ("nadie te pone recompensa", .4), ["se los va tomando", "nadie te pone recompensa"],
@@ -212,8 +212,8 @@ FX = [
 
     # ================= CORREO (crítica con burla disfrazada)
     com("Un momento, que hay correo", C_NPC, dur=7.5, x=.32, y=.34, tam=820),
-    mis("Nueve likes. Mensaje recibido", "Mensaje recibido", "Hoy: 1 narrador + 2 de visita", dur=4.0, y=.70),
-    ficha("Están en un menú de pausa", "Cinco voces", "En *pausa*, mirando la pared", "Inmersión total", dur=4.4, x=.70, y=.30),
+    mis("Nueve likes. Mensaje recibido", "Mensaje recibido", "Narra el ganador: el Profeta", dur=4.0, y=.70),
+    ficha("en la banca, peleándose", "La banca", "*Tres* voces peleando por un dato", "Johnny · MariCarmen · Hope", dur=4.4, x=.70, y=.30),
 
     # ================= 8 · TITIRITERO
     aviso("Número ocho", 8, "El Titiritero"),
@@ -222,8 +222,8 @@ FX = [
          "Piedra: la del Aprendiz", ("al oeste de Morthal", .6), ["Piedra: la del Aprendiz", "al oeste de Morthal"], "piedra Aprendiz",
          ventana=True, ancho=860, x=.70, y=.45),
     mg(T.versiones("La piedra del Aprendiz", (P("piedra_aprendiz"), "Pantalla de carga", ["Duplica tu magia"], 0),
-                   (P("altmer"), "UESP", ["Solo duplica la regeneración", "Y te deja débil a la magia"], 1), veredicto=("FALSO", 2), pie=None),
-       "Y aquí, un mito", ("el doble de debilidad", .4), ["La pantalla de carga dice", "Según UESP", "el doble de debilidad"], "mito aprendiz", y=.42),
+                   (P("altmer"), "La verdad", ["Solo duplica la regeneración", "Y te deja débil a la magia"], 1), veredicto=("FALSO", 2), pie=None),
+       "Este mito lo desmiento yo", ("el doble de debilidad", .4), ["La pantalla de carga dice", "Falso: solo duplica", "el doble de debilidad"], "mito aprendiz", y=.42),
     ficha("Mago fraternal y Furia", "Mago fraternal + Furia", "*+10* y *+12* niveles de tope", "Ilusión 40 · 70", dur=4.4),
     ficha("Y Señor de la mente", "Señor de la mente", "Hasta *no muertos* y *autómatas enanos*", "Ilusión 90", dur=4.0, x=.26),
     rel("lo vende Drevis Neloren", "drevis", "Drevis Neloren", "Colegio de Hibernalia", dur=4.0, x=.76, y=.52, tam=420),
@@ -231,7 +231,7 @@ FX = [
                  notas=[(1, "TODOS CONTRA TODOS", T.ORO, 1)], unidad=""),
        "hasta nivel veinticinco", ("Tú solo sales a recoger", .2), ["hasta nivel veinticinco", "hasta nivel cuarenta y siete"],
        "niveles titiritero", y=.44, x=.30),
-    mis("Hace terapia de grupo", "Terapia de grupo", "Muy mala", dur=3.0, y=.30),
+    mis("Hace terapia de grupo", "Terapia de grupo", "Pregúntenle a la banca", dur=3.0, y=.30),
 
     # ================= 7 · SEÑOR DE LOS VAMPIROS
     aviso("Número siete", 7, "El Señor de los Vampiros"),
@@ -244,10 +244,8 @@ FX = [
        "stats vampiro", y=.36, x=.70),
     pv("Puedes agarrar a un arquero", "senor_vampiro", "Señor de los Vampiros", dur=4.0, x=.20, y=.60, tam=400),
     ficha("te conviertes en niebla", "Forma de niebla", "*Invulnerable* mientras regeneras", "Ventaja de vampiro", dur=4.0),
-    narra("Gracias, Johnny. Según UESP", "MariCarmen", "De visita · un dato", dur=5.0),
     rel("si Serana te acompaña", "serana", "Serana", "Tu daño: 0", dur=5.0, x=.24, y=.52, tam=440),
     ficha("baja a cero", "Absorción vampírica", "Daño a la salud: *0*", "Si Serana te acompaña", dur=4.0, rojo=True),
-    narra("Y otro dato de UESP", "Johnny", "Narrador", dur=3.0),
     ficha("iba a tener tiempo límite", "Contenido cortado", "La forma de Señor tenía *tiempo límite*", "Járkon grabó el aviso", dur=4.4),
 
     # ================= 6 · NIGROMANTE INFINITO
@@ -260,15 +258,13 @@ FX = [
         ["Gigantes y mamuts"], "gigantes", x=.28),
     rel("La Corona aetérica", "corona_aeterica", "Corona aetérica", "Dos piedras a la vez", dur=4.6, x=.74, y=.50),
     mg(T.bucle("La Corona aetérica", ["Ponte la corona", "Usa la Ritual", "Quítatela", "Vuelve a ponerla"], [2, 3, 4, 99],
-               unidad=" ejércitos", remate=("Potencialmente ilimitados", 3)),
-       "Y si te quitas la corona", ("potencialmente ilimitados", .4),
-       ["Y si te quitas la corona", "puedes usar la Ritual otra vez", "UESP lo resume", "potencialmente ilimitados"], "bucle corona", y=.46),
+               unidad=" ejércitos", remate=("Sin límite", 3)),
+       "Y si te quitas la corona", ("de no muertos, sin límite", .4),
+       ["Y si te quitas la corona", "puedes usar la Ritual otra vez", "Ejércitos de no", "de no muertos, sin límite"], "bucle corona", y=.46),
     pv("Conjurar a un señor dremora", "senor_dremora", "Señor dremora · 545 de salud", dur=4.0, x=.80, y=.58, tam=400),
     ficha("Esclavo muerto", "Esclavo muerto", "Reanima *para siempre* hasta nivel *40*", "Conjuración maestra", dur=4.4),
     sil("Úlfric Capa de la Tormenta, reanimado", "ulfric", "Úlfric reanimado", "Sigue gritando", dur=5.2, lado="izq", alto=900),
-    narra("Los muertos únicos conservan", "el Profeta", "De visita · un dato", dur=4.6),
-    narra("Gracias, Profeta. Y ojo", "Johnny", "Narrador", dur=3.0),
-    ficha("en Legendario, tus invocaciones", "Letra pequeña", "En Legendario tus invocaciones reciben *×0,25*", "UESP · Damage", dur=4.4, rojo=True),
+    ficha("en Legendario, tus invocaciones", "Letra pequeña", "En Legendario tus invocaciones reciben *×0,25*", "Dificultad Legendario", dur=4.4, rojo=True),
     rel("Mannimarco, rey gusano", "libro_mannimarco", "Mannimarco, rey gusano", "Sube… Alquimia", dur=4.6, x=.76, y=.52, tam=420),
 
     # ================= AGRADECIMIENTOS (5 juntos + la voz recuerda que se leen todos)
@@ -298,8 +294,8 @@ FX = [
     aba([("miraak", "Mirák"), ("karstaag", "Karstaag")], "Solo Mirák y Karstaag", ("son inmunes", .5), ["Solo Mirák y Karstaag"],
         "inmunes", x=.28),
     mg(T.versiones("La Navaja de Mehrunes", (P("navaja_mehrunes"), "La comunidad", ["1 de cada 100 golpes"], 0),
-                   (P("navaja_mehrunes"), "El código (UESP)", ["2 de 101 = 1,98 %", "Casi el doble"], 1), veredicto=("FALSO", 2), pie=None),
-       "Y otro mito. Todos dicen", ("noventa y ocho por ciento", .4), ["Todos dicen", "Por un descuido", "noventa y ocho"], "mito navaja", y=.42),
+                   (P("navaja_mehrunes"), "El código del juego", ["2 de 101 = 1,98 %", "Casi el doble"], 1), veredicto=("FALSO", 2), pie=None),
+       "Todos dicen que la Navaja", ("noventa y ocho por ciento", .4), ["Todos dicen", "Por un descuido", "noventa y ocho"], "mito navaja", y=.42),
     pv("de la habitación de Babette", "babette", "Babette", dur=3.4, x=.80, y=.60, tam=340),
     rel("Testigo sagrado", "libro_testigo_sagrado", "Testigo sagrado", "Libro de Discreción", dur=8.6, x=.26, y=.50, tam=460),
     pv("Un poeta conoce a la Madre Noche", "madre_noche", "La Madre Noche", dur=3.6, x=.78, y=.58, tam=360, marco="vitral"),
@@ -320,15 +316,15 @@ FX = [
     ficha("Con Doble destrucción e Impacto", "Impacto", "A dos manos, *desequilibra*", "Destrucción 40", dur=4.0, x=.26),
     rel("una espada de escarcha", "escarchafilo", "Espada de escarcha", "Usos infinitos", dur=4.0, x=.76, y=.52, tam=400),
     mg(T.versiones("Aristocrático · altos elfos", (P("altmer"), "Su descripción", ["Magia ×25 más rápido"], 0),
-                   (P("altmer"), "UESP", ["≈ ×9,33", "Mucho. Pero no 25"], 1), veredicto=("FALSO", 2), pie=None),
-       "Su poder racial dice", ("Pero no veinticinco", .4), ["Su poder racial dice", "UESP lo calculó", "Pero no veinticinco"], "mito altmer", y=.42),
+                   (P("altmer"), "La cuenta real", ["≈ ×9,33", "Mucho. Pero no 25"], 1), veredicto=("FALSO", 2), pie=None),
+       "Su poder racial dice", ("Pero no veinticinco", .4), ["Su poder racial dice", "Haz la cuenta", "Pero no veinticinco"], "mito altmer", y=.42),
     pv("Los magos estudian años", "colegio_hibernalia", "Colegio de Hibernalia", dur=3.4, x=.20, y=.60, tam=400, marco="estampilla"),
 
     # ================= 3 · PARARRAYOS
     aviso("Número tres", 3, "El Pararrayos"),
     mis("Tu bola de fuego me recarga", "Absorción", "Gracias", dur=2.8, y=.30),
     ficha("Incluido el aliento de dragón", "Absorción de hechizos", "Anula el efecto *entero*. Incluido el *aliento de dragón*",
-          "UESP · Spell Absorption", dur=4.6),
+          "Todo lo que no sea físico", dur=4.6),
     mapa("skyrim.jpg", "Marca Oriental", [pt(RIFTEN, "Ríften", "inicio"), pt(ATRONACH, "Piedra del Atronach", "poder", "piedra_atronach")],
          "más la piedra del Atronach", ("Durante un minuto", .4), ["la piedra del Atronach"], "piedra Atronach",
          ventana=True, ancho=860, x=.28, y=.45),
@@ -337,8 +333,8 @@ FX = [
                                                         (None, "Guantes o botas", 5, 3, T.ORO)], unidad=" %", remate=("100 %", 4)),
        "El permanente, de Dragonborn", ("Con cualquier raza", .3),
        ["piedra del Atronach, cincuenta", "La ventaja Atronach", "La túnica de Mirák", "Y sus guantes", "Cien. Con cualquier"], "absorción", y=.42),
-    sil("Mirák lleva siglos", "miraak", "Mirák", "Te deja su ropa", dur=4.6, lado="der", alto=880),
-    ficha("El tercero es un error", "Necromago + vampiro", "*100 %* permanente", "Error · lo arregla el parche no oficial", dur=4.6, rojo=True),
+    sil("Mirák lleva siglos", "miraak", "Mirák", "Te deja su ropa", dur=4.6, lado="izq", alto=880),
+    ficha("Es un error: un vampiro", "Necromago + vampiro", "*100 %* permanente", "Error · lo arregla el parche no oficial", dur=4.6, rojo=True),
     pv("un sacerdote dragón y un dragón", "sacerdote_dragon", "Sacerdote dragón", dur=3.6, x=.20, y=.60, tam=380),
 
     # ================= CAMPAÑA
@@ -360,7 +356,7 @@ FX = [
        ["con ropa de alquimia haces", "Con esa poción", "Y otra vez", "Hasta que deja de subir"], "bucle legal", y=.46),
     mg(T.niveles("Daño extra del arma", [("Legendario normal", 20), ("Calidad 29 · juego base", 52), ("Calidad 41 · Dragonborn", 73)],
                  notas=[(2, "LA ETIQUETA MIENTE", T.SANGRE, 2)], unidad="+"),
-       "UESP lo midió", ("El número sigue subiendo", .3), ["UESP lo midió", "calidad veintinueve", "más setenta y tres"], "niveles artesano",
+       "Lo medí yo", ("El número sigue subiendo", .3), ["Lo medí yo", "calidad veintinueve", "más setenta y tres"], "niveles artesano",
        y=.44, x=.30),
     ficha("ochenta por ciento menos", "Tope de armadura", "*80 %* menos de daño físico", "567 de armadura", dur=4.4),
     vs(("arco_hueso_dragon", "El artesano"), ("guantes_hermandad", "El asesino"), "Ahora junta esto", ("No queda nada vivo", .5),
@@ -370,28 +366,26 @@ FX = [
     aviso("Y el número uno", 1, "El Dios del Boticario"),
     ficha("Aviso: esto es un error", "Exploit", "El *parche no oficial* lo corrige", "En consolas sin mods sigue ahí", dur=4.6, rojo=True),
     mg(T.bucle("Reforzar restauración", ["Ponte la ropa", "Haz la poción", "Quítate la ropa", "Bébetela"], [38, 120, 900, 10000],
-               remate=("El juego se rinde", 3)),
-       "El procedimiento, literal", ("El juego se rinde", .3),
-       ["Haces la poción", "Te quitas la ropa", "Hasta que la ventana", "pasar de diez mil"], "bucle boticario", y=.46, x=.40),
+               remate=("Miles de por ciento", 3)),
+       "El procedimiento es así", ("cifras de miles de por ciento", .8),
+       ["Haces la poción", "Te quitas la ropa", "Hasta que la ventana", "cifras de miles"], "bucle boticario", y=.46, x=.40),
     aba([("sal", "Montón de sal"), ("abecean", "Abecean Longfin")], "Los ingredientes", ("están llenos", .5),
         ["un montón de sal", "unos peces"], "ingredientes", x=.13, y=.74, tam=230),
     mapa("skyrim.jpg", "La Grieta", [pt(SOMBRIA, "Camino del sur", "inicio"), pt(RIFTEN, "Muelle de Ríften", "poder", "abecean")],
          "Los barriles del muelle", ("están llenos", .5), ["Los barriles del muelle de Ríften"], "muelle Riften", ventana=True, ancho=600,
          x=.81, y=.45),
     rel("Congelación, un hechizo de principiante", "congelacion", "Congelación", "Mata dragones", dur=4.4, x=.76, y=.52, tam=400),
-    narra("Los Barbas Grises entrenan", "el Profeta", "De visita · un dato", dur=4.4),
     pv("Los Barbas Grises", "barbas_grises", "Arngeir · Barbas Grises", dur=4.0, x=.20, y=.58, tam=380),
-    narra("Gracias otra vez, Profeta", "Johnny", "Narrador", dur=3.0),
     mapa("skyrim.jpg", "Lucero del Alba", [pt(LUCERO, "Lucero del Alba", "inicio"), pt(NOCTURNAL, "Templo Nocturnal", "poder", "templo_nocturnal")],
          "el Templo Nocturnal", ("de ayudante de cocina", .3), ["el Templo Nocturnal"], "Templo Nocturnal", ventana=True, ancho=820,
          x=.30, y=.45, entrada="foco"),
     rel("Mannimarco, rey gusano. El rey", "libro_mannimarco", "Mannimarco, rey gusano", "Ayudante de cocina", dur=4.0, x=.76, y=.52, tam=400),
 
     # ================= CIERRE
-    podi([("orc", "El Artesano"), ("sal", "El Boticario"), ("piedra_atronach", "El Pararrayos")], "Este es el top", ("al alquimista", .4),
-         ["Este es el top", "al alquimista que borra"], "El podio de las builds"),
+    podi([("orc", "El Artesano"), ("sal", "El Boticario"), ("piedra_atronach", "El Pararrayos")], "Este es el top", ("borra el juego", 1.2),
+         ["Este es el top", "Del arquero que hace", "al alquimista que borra"], "El podio de las builds"),
     pv("La Hoja de ébano", "hoja_ebano", "Hoja de ébano", dur=3.6, x=.20, y=.60, tam=380),
-    pv("¿El hombre lobo?", "hombre_lobo", "¿El hombre lobo?", dur=2.4, x=.80, y=.60, tam=320),
+    pv("una mano? ¿El hombre lobo", "hombre_lobo", "¿El hombre lobo?", dur=2.4, x=.80, y=.60, tam=320),
     mis("Déjalo en los comentarios", "Te toca", "¿Cuál falta?", dur=3.6, y=.30),
     mis("Y suscríbete", "Camino de diez mil", "Nos vemos en Tamriel", dur=4.4, y=.30),
 ]
@@ -403,15 +397,16 @@ PISTAS += [dict(sfx="lugar_descubierto", en=e, vol=.22) for e in ("Piedra: la de
                                                                   "en el castillo Vólkijar", "Piedra: la del Señor", "Piedra: la del Amante")]
 PISTAS += [dict(sfx="subir_nivel", en="Y el número uno", vol=.24), dict(sfx="mision_completada", en="Este es el top", vol=.22),
            dict(sfx="grito", en=("vaciar la aljaba.|fin", .1), vol=.85),            # «el grito Ralentizar tiempo» = se oye (silencio p10b)
-           dict(sfx="grito", en=("Estaba escrito.|fin", .1), vol=.85)]              # Úlfric reanimado grita (silencio p6b)
+           dict(sfx="grito", en=("Contra sus propios soldados.|fin", .1), vol=.85)]              # Úlfric reanimado grita (silencio p6b)
 
 # ---- EXTRA (chequeo 10-nov: fichas 1,2 → mediana 1,5 · pegatinas 2,4 → 3,0): donde la voz nombra algo sin apoyo
 EXTRA = [
-    carr(PIEDRAS, "Con su raza, su piedra", ("Todo comprobado", .1), ["su raza, su piedra", "sus ventajas", "el equipo", "dónde se consigue"],
+    carr(PIEDRAS, "Con su raza, su piedra", ("Cada una, probada", .1), ["su raza, su piedra", "sus ventajas", "el equipo", "dónde se consigue"],
          titulo="Las piedras de este top"),
-    ficha("Y Mano firme", "Mano firme", "Al apuntar, el tiempo al *50 %*", "Arquería 40 · 60", dur=4.0, x=.26),
+    # ficha Mano firme: ya va en el MG multiplicador arco
+    # ficha("Y Mano firme", "Mano firme", "Al apuntar, el tiempo al *50 %*", "Arquería 40 · 60", dur=4.0, x=.26),
     pv("en el Colegio de Hibernalia", "colegio_hibernalia", "Colegio de Hibernalia", dur=3.0, x=.20, y=.52, tam=360),
-    cam("Serana. La única novia", "serana", "Serana", dur=3.4, x=.80, y=.66),
+    cam("la única novia que", "serana", "Serana", dur=3.4, x=.80, y=.66),
     cam("Járkon llegó a grabar", "harkon", "Járkon", dur=3.4, x=.18, y=.66),
     ficha("Con Almas gemelas", "Almas gemelas", "*Dos* invocaciones a la vez", "Conjuración 100", dur=4.0, x=.26),
     pv("Y el hechizo maestro Esclavo muerto", "esclavo_muerto", "Esclavo muerto", dur=3.6, x=.20, y=.60, tam=340, marco="vitral"),
@@ -422,7 +417,7 @@ EXTRA = [
     pv("la ventaja Necromago", "senor_vampiro", "Vampiro + Necromago", dur=3.6, x=.20, y=.60, tam=360, marco="naipe"),
     ficha("Con los Libros Negros", "Buscador de hechizos", "Encantamientos *+10 %*", "Libro Negro · Dragonborn", dur=4.0, x=.70),
     ficha("Las pociones de Reforzar restauración", "Reforzar restauración", "Potencia *todo* lo que te pones", "Y el aumento se queda", dur=4.6),
-    ficha("Y en Xbox One", "Xbox One", "Más de *10.000 %*: el juego se cuelga", "UESP · Fortify Destruction", dur=4.0, rojo=True, x=.26),
+    ficha("Y en Xbox One", "Xbox One", "Más de *10.000 %*: el juego se cuelga", "Congelación mata dragones", dur=4.0, rojo=True, x=.80, y=.20),
 ]
 FX = FX + EXTRA
 
@@ -439,6 +434,39 @@ CRITICAS = [
     aba([("sal", "Sal"), ("abecean", "Pescado")], "Necesita sal y pescado", ("sal y pescado", .8), ["sal y pescado"], "sal y pescado", x=.30),
 ]
 FX = FX + CRITICAS
+# ---- v3 (el usuario, 12-nov-2026): GANÓ EL PROFETA → narra 8 de cada 10 datos y se burla desde arriba; la BANCA (Johnny, MariCarmen,
+# Hope, empate a 2 votos) se pelea por el resto. Placa en cada relevo (sale de guion.NARRA) + papeleta del resultado y del cierre.
+import re as _re  # noqa: E402
+import guion as _G  # noqa: E402
+
+_LEMA = {"el Profeta": "Ganador de la votación"}
+_robados, _prev, PLACAS = {}, None, []
+for _e in _G.ESCENAS:
+    for _i, _tx in enumerate(_e["frases"]):
+        _v = _G.NARRA[f"{_e['id']}_{_i}"]
+        if _v != _prev and _prev is not None:
+            _limpio = _re.sub(r"\[[^\]]*\]\s*", "", _tx)
+            _ancla = " ".join(_limpio.split()[:5]).rstrip(",.:;¡!¿?")
+            if _v == "el Profeta":
+                PLACAS.append(narra(_ancla, "el Profeta", _LEMA[_v], dur=2.6))
+                if _ancla.startswith("Este es el top"):
+                    PLACAS.pop()   # el podio del cierre ocupa la pantalla: sin placa
+            else:
+                _robados[_v] = _robados.get(_v, 0) + 1
+                PLACAS.append(narra(_ancla, _v, f"En la banca · dato robado n.º {_robados[_v]}", dur=3.6))
+        _prev = _v
+PLACAS += [
+    mg(T.votacion("Resultado de la votación", ["el Profeta · 9", "Johnny · 2", "MariCarmen · 2", "Hope · 2"],
+                  remate="Narra el ganador"),
+       "Ustedes votaron, y ganó", ("Es lo justo", .4),
+       ["Ustedes votaron, y ganó", "Así que narro yo", "Los tres empatados", "se pelean por las migajas", "Es lo justo"],
+       "votación resultado", y=.42),
+    mg(T.votacion("¿Quién de la banca habla más?", ["Johnny", "MariCarmen", "Hope"], remate="No va a pasar"),
+       "vota en los comentarios", ("Nos vemos en Tamriel", .2),
+       ["vota en los comentarios", "vota en los comentarios", "vota en los comentarios", "No va a pasar"], "votación banca", y=.42),
+]
+FX = FX + PLACAS
+
 import json as _json  # noqa: E402
 
 _AJ = os.path.join(_AQUI, "_ajustes.json")

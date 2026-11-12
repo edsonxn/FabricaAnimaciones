@@ -45,3 +45,27 @@
   y el error de los martillos de `tes_armas_poderosas` se corrigen en voz (n.º 29). Quejas de datos → todo verificado en UESP. «Nazeem sí pisa el palacio»: UESP dice que no.
   «¿Voz IA?» y acento → se reporta al usuario. 5 agradecimientos nuevos sin repetir.
 - **A vigilar:** si 17:42 y 25 s por puesto retienen más que las 25 misiones de 23 min (% visto ≥ 35), el formato de curiosidades es el siguiente filón. Quedan en reserva «10 builds» y unos 8 secretos más en `videos/tes_secretos_40/_investigacion_*.md`.
+
+## Conclusión del 3-nov-2026 (noticia: anuncio de The Elder Scrolls VI: Sentinel)
+- **Noticia:** hoy Bethesda reveló el nombre en el video de los 40 años de BGS (`mFu8t9735IY`, teaser `8RsG5v5teYA` en IGN): arena del desierto → Pergamino de los Antiguos con gema azul y runas →
+  logo «Sentinel» → cita de Yazar, Sacerdote de la Polilla de la Alta Reina Iradne de Hammerfell, fechada 4E 206 (5 años después de Skyrim, 4E 201). Sin fecha ni plataformas.
+  The Verge (29-oct): Hammerfell y «el primer juego sobre la historia de los Pergaminos». Verificar en UESP antes del guion (Iradne es nueva).
+- **Demanda:** IGN 121 k en horas, El Gerber 160 k (rumor; un comentario nuestro lo pone de ejemplo), TAV 34 k en español, Imperial Knowledge «What we already know» 5 k en horas.
+  Fuera (60 d): Nox's Library «What Actually Is An Elder Scroll?» 229 k (×2,7); João Augusto Short de Redguards ×5,2.
+- **Lo propio:** 6 450 subs, mediana de largos 2 259; el canal gana con Skyrim (listas «NUNCA» ×12,7) y las teorías convierten más subs (8,1/1 000).
+- **Propuesta (cambia UNA variable: el tema pasa a la noticia, se mantiene lista + Skyrim + voz Johnny):** (1) «Los 15 SECRETOS del teaser de Elder Scrolls 6: Sentinel» (recomendada,
+  urgente: el tirón dura días); (2) «Hammerfell explicado: 10 cosas antes de TES VI»; (3) «Las 10 pistas de Elder Scrolls 6 que Skyrim ya te había dado». + Short vertical del teaser.
+- **Calendario:** 7-nov `tes_misiones_imperdibles` y 11-nov `tes_secretos_40` (15 años de Skyrim) ocupan los huecos de 96 h; meter la noticia pide mover uno o `--forzar` (lo decide el usuario).
+- **Comentarios (3 nuevos):** «Puto video hecho con IA» (@alcoholikmisanthroper1934, crítica sin razón: candidata a burla disfrazada); «¿voz IA?» sigue repitiéndose → se reporta al usuario.
+
+## Guiño a Roirek: USADO en `tes_builds_rotas` (10-nov-2026)
+- Frase elegida por el usuario (p5, tras el libro «Testigo sagrado»): «Libro, página y todo. Lo sé, Roirek… qué horrible: Crónicas de ChatGPT acertando.» Correcciones del usuario: corto (~3 s), sarcástico (burla hacia nosotros que rebota en él), con su nombre, y NUNCA decir que nos dedica directos u horas (solo nos ha mencionado 1-2 veces, muy corto). Contexto completo en la memoria `roirek-y-cronicas-de-tamriel`.
+
+## Conclusión del 10-nov-2026 (video `tes_builds_rotas`, para el jue 13-nov)
+- **Lo propio:** 6 580 subs, mediana de largos 2 332. «15 misiones NUNCA» ×13,3 (48 % visto); «INÚTILES» ×5,4; daédricas ×5; armas ×3,9; el de siete voces (Sentinel) ×2,6 y 38 % visto, el más bajo.
+- **Decisión:** el usuario eligió entre 4 (builds / 15 mitos / Orden Psíquica / esposas) **«Las 10 builds más ROTAS de Skyrim»** (JustMeegz ×20-23, candidato guardado desde el 28-oct). Cambia el tema; ~15 min.
+- **Voces:** queja ♥9 @npc_1261 («las voces matan la inmersión») + ♥7 «lástima tanta AI» → el usuario eligió **Johnny + MariCarmen y el Profeta de visita (1-2 datos, sin competencia)**. A vigilar: si el % visto vuelve a ≥ 45, las siete voces quedan para especiales.
+- **Voces v3 (el usuario, 12-nov-2026):** ganó el Profeta → narra 8 de cada 10 datos y se burla desde arriba; Johnny, MariCarmen y Hope se pelean por el resto (`tes_builds_rotas` rehecho). La voz NO cita fuentes («según UESP» sonaba a que no sabemos). Medir a 7 días: quejas de voz y % visto frente a la v2 (Johnny).
+- **Calendario (el usuario):** 11 seres · 13 builds · 16 cosas_nunca · 19 secretos_40 → ciclo 3 días, separación 72 h.
+- **Sugerencias guardadas:** Orden Psíquica (@cristoferyosuhamartinezsal87), mejores esposas/os (@janival2559).
+- **Ojo:** `tes_seres_poderosos` dijo en la campaña «cuarenta y cuatro de cada cien no están suscritos»; la cifra real era ~87 % no suscritos (se confundió con el % visto). En este: «solo trece de cada cien están suscritos».

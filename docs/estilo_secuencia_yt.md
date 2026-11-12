@@ -610,7 +610,7 @@ colores del tema. Helpers de la plantilla (`fotos = [(slug, "Nombre")]`):
 | `carr(fotos, de, a, marcas, titulo)` | `carrusel` | anillo 3D de cartas que gira hasta traer al frente la que nombra la voz | «los 6 candidatos», facciones, familias |
 | `tabl(fotos, hilos, de, a, marcas, titulo)` hilos = `[(i, j)]` | `tablero` | corcho de investigación: fotos clavadas con chincheta y el hilo rojo que las une | teorías, conspiraciones, quién se relaciona con quién |
 | `vs(a, b, de, a, marcas, ganador)` | `versus` | pantalla partida en diagonal, cada lado entra de golpe, rayo y «VS»; 3.ª marca: el perdedor se apaga a gris | duelos, «A contra B», comparar dos versiones |
-| `podi(tres, de, a, marcas, titulo)` tres = 1.º, 2.º, 3.º | `podio` | bloques que suben del suelo (3.º → 2.º → 1.º), cartas que caen encima, rayos al ganador | cierre de un top, el top 3 |
+| `podi(tres, de, a, marcas, titulo)` tres = 1.º, 2.º, 3.º | `podio` | bloques que suben del suelo (3.º → 2.º → 1.º), cartas que caen encima, rayos al ganador | cierre de un top, el top 3 · **el ancla de cierre `a` NUNCA = la última marca** (en `tes_builds_rotas` v3 el 1.º entraba justo cuando el podio se iba): cierre = fin de la frase + ~1 s, y mirar el cuadro con los 3 puestos |
 | `muro(fotos, de, a, marcas, destaca)` | `muro` | fichas boca abajo que se voltean una a una; `destaca` saca una al frente | «todos estos…», recuento, la sorpresa |
 
 Probar: `python nucleo/presenta.py hoja --tema tes [--img a.png b.png …] [--fondo <jpg>]` (hoja 2×3 por presentación; MÍRALA).

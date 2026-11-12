@@ -11,7 +11,8 @@ reflejar lo que dice la narración»). No renderiza ni gasta nada; solo avisa, n
   5. IDIOMA DE LA VOZ (el usuario, 10-nov-2026, REGLA: la voz nunca habla en otro idioma): lee voz/idioma.json de
      `nucleo/idioma_voz.py` (oración por oración); si falta o es más viejo que voz/final, lo corre (Whisper en la GPU, ~5 min).
        python fab.py <v> chequeo        (también corre solo antes de `video`; salida completa en previews/chequeo_narracion.md)
-       python -m chequeo_yt sonidos     solo el punto 4; corre solo antes de `voz` en todo video (sin timeline: solo el texto)
+  6. FUENTE CITADA (el usuario, 12-nov-2026): la voz no dice «según UESP», «la wiki»…; experiencia propia o el dato a secas.
+       python -m chequeo_yt sonidos     solo los puntos 4 y 6; corre solo antes de `voz` en todo video (sin timeline: solo el texto)
 Receta: docs/estilo_secuencia_yt.md § LISTA DE CONTROL. La pista es de texto: lo que marca se revisa a mano, no es un veredicto.
 """
 
@@ -168,6 +169,10 @@ def nombres(frases):
 
 
 def narracion(carpeta):
+    # densidad()/variedad() ejecutan efectos.py de OTROS videos: alguno deja su carpeta en sys.path y `import efectos`
+    # cargaba el ajeno (10-nov-2026: «la voz no dice "murió por una caída"» venía de wow_errores_forever).
+    sys.path.insert(0, carpeta)
+    sys.modules.pop("efectos", None)
     capa = F.cargar()
     if not capa:
         print("  (sin efectos.py: sin chequeo de narración)")
@@ -282,6 +287,29 @@ def sonidos():
         print("  regla: docs/estilo_secuencia_yt.md § Sonido original → «Si la voz nombra un sonido»")
 
 
+CITA = re.compile(r"(\buesp\b|\bwiki\w*|fandom|wowhead|fextralife|\bign\b|seg[uú]n (la|las|los|el) (fuentes?|p[aá]ginas?|gu[ií]as?|"
+                  r"comunidad|foros?|datamine\w*)|lo (le[ií]|revis[eé]|investigu[eé]) en|revis[eé] los videos)", re.I)
+
+
+def fuentes():
+    """REGLA (el usuario, 12-nov-2026, tes_builds_rotas dijo «UESP» 11 veces): la voz NO cita sus fuentes («según UESP», «la wiki
+    dice»); suena a que no sabemos y solo leemos. Se narra como experiencia propia o el dato se dice a secas; las fuentes, en la
+    descripción. Solo texto de guion.py (corre antes de `voz` y en `chequeo`)."""
+    try:
+        import guion
+    except Exception:
+        return
+    malas = [(e.get("id", "?"), re.sub(r"\[[^\]]*\]\s*", "", tx)) for e in getattr(guion, "ESCENAS", [])
+             for tx in e.get("frases", []) if isinstance(tx, str) and CITA.search(re.sub(r"\[[^\]]*\]", "", tx))]
+    if not malas:
+        return
+    print(f"FUENTE CITADA EN LA VOZ: {len(malas)} frases («según UESP», «la wiki»…): reescribir como experiencia propia "
+          "o el dato a secas; las fuentes van en la descripción")
+    for k, tx in malas:
+        print(f"  ⚠ {k}: {tx[:110]}")
+    print("  regla: docs/estilo_secuencia_yt.md § «La voz no cita fuentes»")
+
+
 def idioma(carpeta):
     """REGLA (10-nov-2026): ninguna oración de la voz en otro idioma. Corre/lee nucleo/idioma_voz.py."""
     import subprocess
@@ -315,6 +343,7 @@ def main():
         return
     if sys.argv[1:] == ["sonidos"]:
         sonidos()
+        fuentes()
         return
     carpeta = os.getcwd()
     densidad(carpeta)
@@ -322,6 +351,7 @@ def main():
     narracion(carpeta)
     otro_juego()
     sonidos()
+    fuentes()
     idioma(carpeta)
     print("Lista completa de capas: docs/estilo_secuencia_yt.md § LISTA DE CONTROL")
 

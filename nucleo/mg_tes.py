@@ -48,6 +48,12 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   versiones(titulo, izq, der, veredicto, remate)   dos testimonios enfrentados con retrato, «PRUEBAS: 0» y sello «SIN PRUEBAS»
   fragmentos(titulo, padre, objeto, [(ruta, nombre, lugar)], bono, remate)   un objeto que se parte entre varios: los trozos
                                                vuelan a cada uno, vuelven, se recompone y los portadores se tachan (Gauldur)
+  tes_sentinel_teaser (3-nov-2026):
+  cifrado(titulo, pares, palabra, remate)      números que giran y dejan su letra (Starfield 19 05 14… = SENTINEL)
+  ceguera(titulo, retrato, [(texto, i)], remate)   la barra VISTA de un Sacerdote de la Polilla baja lectura a lectura
+  lecturas(titulo, cita, [(nombre, texto, i)]) una cita y sus interpretaciones, la activa encendida y las demás en gris
+  narrador(nombre, lema, n=None, de=None)      placa pequeña «NARRA» + nombre de la voz (videos a varias voces; n/de = turno)
+  votacion(titulo, nombres, remate)            papeleta: cada marca i enciende el nombre i (quien pide el voto); el remate al final
 """
 import math
 import os
@@ -2271,5 +2277,311 @@ def vela(titulo, antes, despues, ancho=1000):
         _texto(d, (cx - 250, M + 530), (despues if v > .5 else antes).upper(), fuente("Bold Condensed", 58), SANGRE if v > .5 else HUESO, "mm", 255, track=4)
         if v > 0:
             _sello(im, cx + 250, M + 220, "VAMPIRO", v)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ tes_sentinel_teaser (3-nov-2026)
+def cifrado(titulo, pares, palabra, remate=None, ancho=1640):
+    """Número que se descifra. pares = ["19", "05", ...]; palabra = letras resultantes (mismo largo). marca 0: los pares entran en
+    fila · entre las marcas 1 y 2 cada par gira y deja su letra debajo · marca 3: la palabra queda en oro. Primer uso: el número
+    de empleado de Starfield (19 05 14 20 09 14 05 12 = SENTINEL)."""
+    n = len(pares)
+    h = 110 + 330 + (80 if remate else 20)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 6
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        paso = (ancho - 160) / n
+        fn_, fl = fuente("Bold Condensed", 74), fuente("Bold Condensed", 110)
+        oro = dt >= mk[3]
+        for k, (p, l) in enumerate(zip(pares, palabra)):
+            x = M + 80 + paso * (k + .5)
+            a = _eo((dt - mk[0] - k * .12) / .3)
+            if a <= .01:
+                continue
+            t_l = mk[1] + (mk[2] - mk[1]) * k / max(1, n)
+            u = _eo((dt - t_l) / .35)
+            _texto(d, (x, M + 175), p, fn_, GRIS if u > .5 else HUESO, "mm", 255 * a)
+            if u > .01:
+                d.line((x - 18, M + 230, x + 18, M + 230), fill=HUESO + (int(150 * u),), width=2)
+                _texto(d, (x, M + 312 - 20 * (1 - u)), l, fl, ORO if oro else BLANCO, "mm", 255 * u)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def ceguera(titulo, retrato, lecturas_, remate=None, ancho=1300):
+    """La vista de un Sacerdote de la Polilla: retrato que se va apagando y un ojo que se cierra. lecturas_ = [(texto, i_marca)]:
+    cada lectura aparece en su marca y quita un tramo de la barra «VISTA» (la última la deja a cero y el retrato en negro)."""
+    RW, RH = 300, 380
+    n = len(lecturas_)
+    h = 110 + 440 + (80 if remate else 20)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 8
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        hechas = sum(1 for _, i in lecturas_ if dt >= mk[i])
+        u_ult = max([_eo((dt - mk[i]) / .6) for _, i in lecturas_ if dt >= mk[i]] or [0])
+        vista = max(0.0, 1 - (hechas - 1 + u_ult) / n) if hechas else 1.0
+        r = _retrato(retrato, RW, RH, gris=1 - vista)
+        a = np.array(r).astype(np.float32)
+        a[..., :3] *= .25 + .75 * vista
+        im.alpha_composite(Image.fromarray(a.astype(np.uint8)), (M + 50, M + 120))
+        cx, cy = M + 50 + RW // 2, M + 120 + RH + 0
+        x0 = M + 420
+        _texto(d, (x0, M + 150), "VISTA", fuente("SemiBold Condensed", 38), HUESO, "lm", track=4)
+        bw = ancho - 520
+        d.rectangle((x0, M + 185, x0 + bw, M + 215), outline=HUESO + (160,), width=2)
+        d.rectangle((x0 + 3, M + 188, x0 + 3 + int((bw - 6) * vista), M + 212), fill=(SANGRE if vista < .34 else HUESO) + (230,))
+        for k, (txt, i) in enumerate(lecturas_):
+            al = _eo((dt - mk[i]) / .35)
+            if al > .01:
+                _texto(d, (x0, M + 270 + k * 64), f"{k + 1}.  {txt}", fuente("Condensed", 40), SANGRE if k == n - 1 else HUESO, "lm", 255 * al)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def lecturas(titulo, cita, opciones, ancho=1760):
+    """La misma frase leída de varias maneras. cita = [líneas] (entra en la marca 0) · opciones = [(nombre, texto, i_marca)]:
+    cada lectura entra en su marca y queda encendida mientras las anteriores se apagan a gris."""
+    n = len(opciones)
+    h = 110 + 70 * len(cita) + 330
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 8
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        a0 = _eo((dt - mk[0]) / .5)
+        for j, ln in enumerate(cita):
+            _texto(d, (M + ancho / 2, M + 140 + j * 64), ln, fuente("Light Condensed", 52), HUESO, "mm", 255 * a0)
+        y = M + 140 + 64 * len(cita) + 30
+        separador(d, M + ancho / 2, y, ancho * .4, 255 * a0)
+        col = (ancho - 120) / n
+        activa = max([k for k, (_, _, i) in enumerate(opciones) if dt >= mk[i]] or [-1])
+        for k, (nom, txt, i) in enumerate(opciones):
+            al = _eo((dt - mk[i]) / .4)
+            if al <= .01:
+                continue
+            x = M + 60 + col * (k + .5)
+            c = (SANGRE if k == n - 1 else ORO) if k == activa else GRIS
+            _texto(d, (x, y + 60), nom.upper(), fuente("Bold Condensed", 50), c, "mm", 255 * al, track=3)
+            for j, ln in enumerate(_partir(d, txt, fuente("Condensed", 36), col - 50)):
+                _texto(d, (x, y + 120 + j * 42), ln, fuente("Condensed", 36), HUESO if k == activa else GRIS, "mm", 255 * al)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ varias voces (tes_sentinel_teaser, 3-nov-2026)
+def narrador(nombre, lema, n=None, de=None, ancho=600):
+    """Placa pequeña de quién narra (videos con varias voces que compiten): «NARRA · VOZ 3 DE 7» chico y gris, el nombre grande que
+    entra cerrando el espaciado y un lema en gris debajo. Panel de humo; va abajo a la izquierda para no tapar el clip."""
+    h = 200
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h)
+        d = ImageDraw.Draw(im)
+        cx = M + ancho / 2
+        arriba = "NARRA" + (f"  ·  VOZ {n} DE {de}" if n else "")
+        _texto(d, (cx, M + 42), arriba, fuente("Condensed", 28), GRIS, "mm", track=5)
+        tr = 3 + 20 * (1 - _eo(dt / .8))
+        _texto(d, (cx, M + 96), nombre.upper(), fuente("SemiBold Condensed", 62), ORO, "mm", track=tr)
+        separador(d, cx, M + 136, ancho * .32)
+        _texto(d, (cx, M + 166), lema, fuente("Condensed", 30), (205, 200, 190), "mm", 255 * _eo((dt - .4) / .5))
+        return _salida(im, dt)
+    return fn
+
+
+def votacion(titulo, nombres, remate=None, ancho=1180):
+    """Papeleta de la votación: los nombres en dos columnas con su casilla; la marca k enciende el nombre k (dorado, casilla
+    marcada con un golpe) cuando esa voz pide el voto, en cualquier orden; los ya marcados quedan en hueso. Con `remate`, la marca
+    len(nombres) lo saca."""
+    filas = (len(nombres) + 1) // 2
+    h = 150 + filas * 92 + (90 if remate else 30)
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ms = list(marcas[:len(nombres)]) + [None] * max(0, len(nombres) - len(marcas))
+        on_ = [m is not None and dt >= m for m in ms]
+        activa = max((k for k in range(len(nombres)) if on_[k]), key=lambda k: ms[k], default=-1)
+        f = fuente("SemiBold Condensed", 50)
+        for k, nom in enumerate(nombres):
+            col, fila = k // filas, k % filas
+            x = M + (ancho * .14 if col == 0 else ancho * .58)
+            y = M + 150 + fila * 92
+            on = on_[k]
+            c = ORO if k == activa else HUESO if on else GRIS
+            d.rectangle((x, y - 22, x + 44, y + 22), outline=c + (255,), width=3)
+            if on:
+                u = _pop(dt - marcas[k], .35)
+                r = 18 * u
+                d.line([(x + 22 - r, y), (x + 22 - r * .3, y + r * .8), (x + 22 + r, y - r)], fill=c + (255,), width=6)
+            _texto(d, (x + 70, y), nom.upper(), f, c, "lm", track=3)
+        mr = marcas[len(nombres)] if remate and len(marcas) > len(nombres) else None
+        if mr is not None and dt >= mr:
+            _texto(d, (M + ancho / 2, M + h - 52), remate, fuente("Condensed", 38), BLANCO, "mm", 255 * _eo((dt - mr) / .5))
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ destello (la desaparición de los dwemer, 4-nov-2026)
+def destello(titulo, n=60, remate=None, cols=20, ancho=1400):
+    """n siluetas de bronce. marca 0: aparecen en barrido · marca 1: destello blanco que llena el panel y TODAS se borran a la
+    vez; donde estaban queda ceniza que cae y se apaga. remate = (texto, i_marca). Primer uso: los dwemer en 1E 700."""
+    T = 56
+    filas_ = math.ceil(n / cols)
+    h = 110 + filas_ * (T + 18) + (100 if remate else 30)
+    rng = np.random.default_rng(700)
+    ceniza = [(rng.uniform(.1, .9), rng.uniform(.2, 1.0), rng.uniform(.6, 1.6)) for _ in range(n * 4)]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        x0 = M + (ancho - cols * (T + 6)) / 2
+        t1 = mk[1]
+        for k in range(n):
+            x, y = x0 + k % cols * (T + 6), M + 112 + k // cols * (T + 18)
+            if dt < t1:
+                a = _eo((dt - mk[0] - k * .012) / .25)
+                if a > .01:
+                    _silueta(d, x, y, T, ORO, 235 * a)
+            else:
+                v = dt - t1
+                for j in range(4):
+                    fx, fy, vel = ceniza[k * 4 + j]
+                    cy = y + T * fy + v * 26 * vel
+                    a = 200 * max(0.0, 1 - v / 2.6)
+                    if a > 4:
+                        r = 2.2
+                        d.ellipse((x + T * fx - r, cy - r, x + T * fx + r, cy + r), fill=GRIS + (int(a),))
+        if dt >= t1:
+            v = dt - t1
+            fl = max(0.0, 1 - v / .45)
+            if fl > 0:
+                capa = Image.new("RGBA", im.size, BLANCO + (int(235 * fl),))
+                im.alpha_composite(capa)
+                d = ImageDraw.Draw(im)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ escalera y cosmología («Los 20 seres más poderosos», 5-nov-2026)
+def escalera(titulo, peldanos, ancho=760):
+    """Escala de poder vertical. peldanos = [etiqueta, ...] de abajo arriba. La marca k lleva el rombo dorado al peldaño k (sube
+    con rebote): los de abajo quedan en hueso, el actual en oro con su etiqueta grande, los de arriba en gris. Sin marcas: peldaño 0."""
+    n = len(peldanos)
+    PH = 74
+    h = 110 + n * PH + 30
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ms = [m for m in marcas if m is not None]
+        k = max([i for i, m in enumerate(ms) if dt >= m] or [0])
+        prev = max([i for i, m in enumerate(ms) if dt >= m][:-1] or [0]) if k else 0
+        u = _eo((dt - ms[k]) / .6) if ms and dt >= ms[k] else 1.0
+        pos = prev + (k - prev) * u
+        xl, xr = M + 70, M + ancho - 50
+        for i, et in enumerate(peldanos):
+            y = M + 110 + (n - 1 - i) * PH + PH / 2
+            c = ORO if i == k else HUESO if i < k else GRIS
+            a = 255 * _eo((dt - i * .06) / .3)
+            d.line([(xl, y + 26), (xr, y + 26)], fill=c + (int(a * .5),), width=2)
+            _texto(d, (xl + 46, y), et.upper(), fuente("SemiBold Condensed" if i == k else "Condensed", 44 if i == k else 34),
+                   c, "lm", a, track=3)
+        yy = M + 110 + (n - 1 - pos) * PH + PH / 2
+        r = 15
+        d.polygon([(xl, yy - r), (xl + r, yy), (xl, yy + r), (xl - r, yy)], fill=ORO + (255,))
+        d.line([(xl, M + 120), (xl, M + 110 + n * PH - 20)], fill=HUESO + (90,), width=2)
+        return _salida(im, dt)
+    return fn
+
+
+def cosmologia(titulo, anillos, ancho=1500):
+    """Cosmología en anillos concéntricos. anillos = [(nombre, sub), ...] de dentro afuera (Mundus → Oblivion → Aetherius → el
+    vacío → el Soñador). La marca k dibuja el anillo k (círculo que se cierra) con su nombre a la derecha; el último encendido va en
+    oro y los anteriores en hueso tenue. El centro late como un punto de luz (Nirn)."""
+    n = len(anillos)
+    h = 110 + 640
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        cx, cy = M + ancho * .34, M + 110 + 320
+        R0, paso = 46, 270 / max(1, n)
+        ms = list(marcas[:n]) + [None] * max(0, n - len(marcas))
+        on = [m is not None and dt >= m for m in ms]
+        act = max([i for i in range(n) if on[i]] or [-1])
+        pul = .5 + .5 * math.sin(dt * 3.2)
+        d.ellipse((cx - 14 - 4 * pul, cy - 14 - 4 * pul, cx + 14 + 4 * pul, cy + 14 + 4 * pul), fill=BLANCO + (230,))
+        for i, (nom, sub) in enumerate(anillos):
+            if not on[i]:
+                continue
+            u = _eo((dt - ms[i]) / .9)
+            r = R0 + (i + 1) * paso
+            c = ORO if i == act else HUESO
+            a = 255 if i == act else 120
+            d.arc((cx - r, cy - r, cx + r, cy + r), -90, -90 + 360 * u, fill=c + (a,), width=6 if i == act else 3)
+            ty = M + 150 + i * (520 / max(1, n))
+            tx = M + ancho * .66
+            aa = 255 * _eo((dt - ms[i] - .3) / .5) * (1 if i == act else .55)
+            dy = max(-r * .96, min(r * .96, ty - cy))
+            d.line([(cx + math.sqrt(r * r - dy * dy), cy + dy), (tx - 20, ty)], fill=c + (int(aa * .5),), width=2)
+            _texto(d, (tx, ty), nom.upper(), fuente("SemiBold Condensed", 46 if i == act else 36), c, "lm", aa, track=4)
+            if sub:
+                _texto(d, (tx, ty + 42), sub, fuente("Condensed", 30), (205, 200, 190), "lm", aa)
+        return _salida(im, dt)
+    return fn
+
+
+def bucle(titulo, pasos, valores, unidad="%", remate=None, ancho=1100):
+    """Bucle que se alimenta solo (tes_builds_rotas, 10-nov-2026: Reforzar restauración y el crafteo encadenado). pasos = [texto]
+    (3-4) en círculo; un rombo dorado da la vuelta sin parar y cada nodo se enciende al pasar. valores = [número] por marca: el
+    contador del centro corre al valor de la marca alcanzada (crece a saltos, en oro; el último en rojo sangre si hay remate).
+    remate = (texto, i_marca) debajo del círculo. Sin marcas: valores[0]."""
+    n = len(pasos)
+    R = 300
+    h = 140 + 2 * R + 140 + (90 if remate else 0)
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ms = [m for m in marcas if m is not None]
+        k = max([i for i, m in enumerate(ms) if dt >= m] or [0])
+        cx, cy = M + ancho / 2, M + 120 + R + 40
+        d.ellipse([cx - R, cy - R, cx + R, cy + R], outline=HUESO + (110,), width=3)
+        vel = 1.0 + .5 * k                                    # cada vuelta más rápida
+        ang = (dt * vel * 2 * math.pi / 2.6) % (2 * math.pi)
+        for i, t in enumerate(pasos):
+            a_i = -math.pi / 2 + i * 2 * math.pi / n
+            x, y = cx + R * math.cos(a_i), cy + R * math.sin(a_i)
+            dif = abs(((ang - (a_i + math.pi / 2)) + math.pi) % (2 * math.pi) - math.pi)
+            c = ORO if dif < .5 else HUESO
+            al = 255 * _eo((dt - i * .12) / .35)
+            d.ellipse([x - 14, y - 14, x + 14, y + 14], fill=c + (int(al),))
+            ox = 0 if abs(math.cos(a_i)) < .3 else (40 if math.cos(a_i) > 0 else -40)
+            oy = -46 if math.sin(a_i) < -.5 else (46 if math.sin(a_i) > .5 else 0)
+            anc = "mm" if ox == 0 else ("lm" if ox > 0 else "rm")
+            _texto(d, (x + ox, y + oy), t.upper(), fuente("SemiBold Condensed", 38), c, anc, al, track=2)
+        a_r = ang - math.pi / 2
+        rx, ry = cx + R * math.cos(a_r), cy + R * math.sin(a_r)
+        r = 16
+        d.polygon([(rx, ry - r), (rx + r, ry), (rx, ry + r), (rx - r, ry)], fill=ORO + (255,))
+        v0 = valores[k - 1] if k and dt >= ms[k] else 0
+        v1 = valores[min(k, len(valores) - 1)]
+        u = _eo((dt - ms[k]) / .8) if ms and dt >= ms[k] else _eo(dt / .8)
+        v = v0 + (v1 - v0) * u
+        txt = f"{v:,.0f}".replace(",", ".") + unidad
+        rojo = remate and k >= remate[1]
+        _texto(d, (cx, cy), txt, fuente("Bold Condensed", 120), SANGRE if rojo else ORO, "mm", 255)
+        if remate and k >= remate[1]:
+            _texto(d, (cx, cy + R + 120), remate[0].upper(), fuente("SemiBold Condensed", 46), SANGRE, "mm",
+                   255 * _eo((dt - ms[remate[1]]) / .4), track=4)
         return _salida(im, dt)
     return fn

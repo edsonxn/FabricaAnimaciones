@@ -167,3 +167,8 @@
   (los jugadores del 4-nov ya andan en 25-35; prepara las raids del 9-dic), recomendada · (2) «20 trucos para NUNCA quedarte sin oro
   en WoW Forever» — cambia el tema (Vuxxy ×8,7; ojo Overgear: nada contra comprar oro) · (3) «La clase que DEBES jugar en Forever
   según cómo juegas» — Bellular ×3,6 / WillE ×6,8, pero choca con «9 clases» y con clases ocultas del 14-nov.
+
+## Campaña Overgear 3 (correo de Alice del 12-nov-2026, confirmada por el usuario el mismo día)
+- 5 integraciones entre el 23-nov y el 18-dic: **mié 25-nov, dom 29-nov, vie 4-dic, mié 9-dic y mié 16-dic** (9-dic = abren las bandas de Forever).
+- Brief de las dos primeras: lun 16-nov; contenido para revisión de Alice: mar 17-nov (antes de sus vacaciones); ella manda los enlaces s.gy.
+- `wow_forever_experiencia` (lun 23-nov) va SIN Overgear (el usuario, 12-nov).

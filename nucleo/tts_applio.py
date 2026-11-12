@@ -27,16 +27,29 @@ LOTE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "applio_lote.py"
 async def _edge(trabajos, voz, rate, carpeta):
     """Paso 1 con el edge-tts de la Fábrica (el de Applio, 7.2.8, ya recibe 403 de Microsoft): mp3 crudo por frase."""
     import edge_tts
-    for t in trabajos:
-        t["crudo"] = os.path.join(carpeta, t["key"] + ".mp3")
-        for intento in range(4):
-            try:
-                await edge_tts.Communicate(t["texto"], voz, rate=f"{rate:+d}%").save(t["crudo"])
-                break
-            except Exception as e:   # cortes de red de Microsoft: reintentar
-                if intento == 3:
-                    raise SystemExit(f"Edge TTS falló en {t['key']}: {e}")
-                await asyncio.sleep(3 * (intento + 1))
+    import hashlib
+    sem = asyncio.Semaphore(4)   # 12-nov: en serie iba a ~15 s por frase (225 frases ≈ 1 h); 4 a la vez
+
+    async def una(t):
+        # caché por TEXTO (no solo por frase): un reintento no rehace lo bajado y un texto cambiado no reusa el mp3 viejo
+        h = hashlib.md5(f"{voz}|{rate}|{t['texto']}".encode("utf-8")).hexdigest()[:10]
+        t["crudo"] = os.path.join(carpeta, f"{t['key']}_{h}.mp3")
+        if os.path.exists(t["crudo"]) and os.path.getsize(t["crudo"]) > 1000:
+            return
+        async with sem:
+            for intento in range(8):
+                try:
+                    # timeout: el 12-nov Edge se quedó colgado 9 min en una frase sin error (mp3 de 0 bytes);
+                    # se escribe a .part y se renombra al terminar: un corte no deja un mp3 a medias en la caché
+                    parte = t["crudo"] + ".part"
+                    await asyncio.wait_for(edge_tts.Communicate(t["texto"], voz, rate=f"{rate:+d}%").save(parte), 90)
+                    os.replace(parte, t["crudo"])
+                    return
+                except Exception as e:   # cortes de red de Microsoft: reintentar
+                    if intento == 7:
+                        raise SystemExit(f"Edge TTS falló en {t['key']}: {e}")
+                    await asyncio.sleep(4 * (intento + 1))
+    await asyncio.gather(*(una(t) for t in trabajos))
 
 
 def ruta_pth(rvc):
@@ -77,7 +90,8 @@ def generar(frases, seeds, solo, out, voz=None):
                pitch=int(v.get("pitch", 0)), index_rate=v.get("index_rate", 0.75), protect=v.get("protect", 0.5),
                pth=pth, trabajos=trabajos)
     print(f"Applio: {len(trabajos)} frases con {os.path.basename(pth)} sobre {job['tts_voice']}", flush=True)
-    tmp = tempfile.mkdtemp(prefix="applio_edge_")
+    tmp = os.path.abspath(os.path.join(out, "_edge"))   # 12-nov: persistente (antes temp): un corte de Edge no pierde lo hecho
+    os.makedirs(tmp, exist_ok=True)
     asyncio.run(_edge(trabajos, job["tts_voice"], job["rate"], tmp))
     fd, jp = tempfile.mkstemp(suffix=".json", prefix="applio_")
     with os.fdopen(fd, "w", encoding="utf-8") as f:

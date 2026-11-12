@@ -26,6 +26,13 @@ for _e in ESCENAS:
 # FONETICA = {"Overgear": "Óverguir", ...} en guion.py (Applio/Edge TTS, 13-oct-2026): la voz multilingüe cambia de idioma
 # al ver palabras en inglés; el TTS lee la grafía fonética y ESCENAS conserva la real (.srt, Montaje, apoyos, YouTube).
 FONETICA = getattr(_g, "FONETICA", {})
+# Diccionario del CANAL (12-nov-2026, el usuario: «que lo pronuncien bien el narrador y todos»): FONETICA_CANAL = "tes" en guion.py
+# carga nucleo/datos/fonetica/tes.json para TODAS las voces del video; la FONETICA del propio video manda sobre la del canal.
+FONETICA_CANAL = getattr(_g, "FONETICA_CANAL", None)
+if FONETICA_CANAL:
+    import json as _json
+    _ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)), "datos", "fonetica", f"{FONETICA_CANAL}.json")
+    FONETICA = {**_json.load(open(_ruta, encoding="utf-8"))["fonetica"], **FONETICA}
 if FONETICA:
     _FON = re.compile(r"(?<![\wÁÉÍÓÚáéíóúñÑ])(" + "|".join(re.escape(k) for k in sorted(FONETICA, key=len, reverse=True))
                       + r")(?![\wÁÉÍÓÚáéíóúñÑ])")

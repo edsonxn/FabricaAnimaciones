@@ -99,6 +99,17 @@ dato («este dato es mío», «tú ya tuviste tu mito»), y **el Profeta se burl
 «no va a pasar»). El resultado de la votación se dice tras 1-2 datos, con `mg_tes.votacion`; placa automática en cada relevo
 (bloque v3 al final de su efectos.py). Lo de abajo (7 voces compitiendo) queda para especiales.
 
+## DICCIONARIO DE PRONUNCIACIÓN: CON ELEVENLABS GANA EL TEXTO TAL CUAL (el usuario, 12-nov-2026)
+Pidió que «Tamriel» y los demás nombres los pronuncien bien todas las voces. Prueba A/B con el Profeta, Johnny, MariCarmen y Hope
+leyendo el mismo texto (Skyrim, Alduin, Paarthurnax, Sheogorath, Miraak, Volkihar, Vivec, Daggerfall…) **tal cual** y con fonética
+española: **eligió la versión TAL CUAL**. Regla: con voces de ElevenLabs, nombres con su grafía real y SIN `FONETICA`; solo se añade
+una entrada a un nombre concreto que se oiga mal al revisar (y se comprueba oyéndolo). Las tablas viejas de los videos de Tamriel
+(hechas para Chatterbox: «Escairim», «Támriel»…) NO se copian a los videos con ElevenLabs. «Tamriel» se escribe tal cual (UESP:
+«tamri-EL»; el español sin tilde lo lee igual). Audio de la prueba: `videos/tes_builds_rotas/salida/pronunciacion_prueba.mp3`.
+Queda el mecanismo para voces que SÍ lo necesitan (Applio, Chatterbox): `nucleo/datos/fonetica/tes.json` (338 nombres unificados,
+sin los 14 choques que había entre videos) + `FONETICA_CANAL = "tes"` en guion.py; la `FONETICA` del video manda encima. **No se
+declara en videos narrados con ElevenLabs.**
+
 ## VARIAS VOCES QUE COMPITEN + el público vota (el usuario, 3-nov-2026, `videos/tes_sentinel_teaser/`)
 «La voz no termina de convencerme: varias voces, una narrando 2 datos cada una y compitiendo entre ellas, y que el público vote».
 - **Elegir:** muestras de 8 voces con la MISMA frase del guion (`audio/muestras_voces/_generar.py`, cuenta con más saldo, ≈ 67 créditos
@@ -197,3 +208,7 @@ Antes de generar voz, revisa esta lista. Cada punto costó una ronda completa (~
   (suma de `voz/cands`) y preguntar al usuario antes de seguir: velocidad natural (rebajar clips) o acelerar.
 
 - **`silenciar_arranque` borraba una 1.ª palabra corta seguida de pausa** («Hoy, Jalisco…», historia_jalisco 22-oct-2026; `verificar` dio CER 3,9 % en la mezcla). Arreglado en `tts_select.py`: tras silenciar, Whisper vuelve a oír la toma y, si ya no aparece la primera palabra del guion, la toma se deja entera. Para rehacer una frase ya elegida: borra `voz/final/<clave>.wav` y corre `seleccionar` (la duración no cambia: basta `mezcla` + `final`).
+
+## Voz de Edson PLANA en los reels de Juchipila (12-nov-2026)
+- El usuario eligió la «opción A» para `jch_gorditas`: su voz clonada `GUEeiSJYQQdbv0NJ86Im` (cuenta 2; en la 3 `hCU4QZdzzUliy58ezPBz`, `VOZ["por_cuenta"]`), `eleven_v4_turbo`, stability 1.0, style 0, SIN corchetes de emoción (`sin_etiquetas` con laugh/amused/warm/serious/calm). Muestra: `videos/jch_gorditas/audio/prueba_voz_edson_A_plana.mp3`.
+- Con stability 1.0 cada toma sale igual: si `seleccionar` la rechaza, regenerar no sirve; o se ajusta `CER_MAX_POR_FRASE`/`TAIL_MAX_POR_FRASE` tras revisar la transcripción, o se reescribe la frase («Aquí te esperamos» → «Aquí te estamos esperando»).

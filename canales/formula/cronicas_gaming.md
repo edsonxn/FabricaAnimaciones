@@ -117,3 +117,9 @@ _Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 1
 5. **P5 (con visto bueno del usuario, es contenido público)**: republicar 5-8 largos viejos de lore de Zelda que seguían trayendo
    búsquedas (Navi, Saria, carrera imposible, Gerudo, Link sin hada) para recuperar ese tráfico de cola larga.
 Registro a 7 días de cada prueba: (pendiente).
+
+## 11-nov-2026 — P1 CONFIRMADA: `oot_remake_eliminado` despega
+- 1 088 vistas en ~2,5 días, 43 % visto y retención plana del 20 % al 80 % (0,46): ×4 el siguiente mejor (remake_cambios 267, Majora 259) y ×15 los Banjo/Rare. Hipótesis (> ×3 la mediana a 7 días) superada en 3 días.
+- Búsqueda n.º 1 del canal: «zelda ocarina of time remake». Afuera (semana, ES): «30 nuevos secretos del remake» N Deluxe ×3 (95 k), «Así se CREÓ el remake: TODOS sus SECRETOS» ×2,7, «OBRA MAESTRA… pero con un problema» KarussoTV ×6, «es vandalismo cultural» 405 k; Shorts de detalles ocultos (Link sonríe 86 k, 5.ª botella 51 k, ReDeads 116 k, jefe secreto de Skull Kid).
+- Decisión: el siguiente video sigue en el remake, cambia SOLO el ángulo (lo eliminado → lo AÑADIDO en secreto); cola recorrida un hueco para meterlo el jue 12-nov 18:00.
+- Comentarios (11-nov): 3 quejas de la voz IA (la de «usa Loquendo» con ♥5) → se le reporta al usuario, no se cambia sola; @mantequill4 extraña la primera persona y movimientos de Link (sirve de crítica justa para un video «lo que hizo mal»).

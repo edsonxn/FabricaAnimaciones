@@ -9739,7 +9739,487 @@
    "prompt": "Back seat of a taxi driving in a city at night in the rain: engine hum, tires on wet asphalt, rain on the roof, no music",
    "dur": 20.0,
    "canal": "logia"
+  },
+  "cod_misterios__cod_fallida": {
+   "id": "cod_misterios__cod_fallida",
+   "video": "cod_misterios",
+   "nombre": "cod_fallida",
+   "archivo": "cod_misterios__cod_fallida.mp3",
+   "md5": "394088fbd19f9d1b2622fcaf73270652",
+   "prompt": "",
+   "dur": 4.92,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__cod_puesto": {
+   "id": "cod_misterios__cod_puesto",
+   "video": "cod_misterios",
+   "nombre": "cod_puesto",
+   "archivo": "cod_misterios__cod_puesto.mp3",
+   "md5": "399f6fb2bda59534c011cbd25bbb7f88",
+   "prompt": "",
+   "dur": 1.29,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__cod_sello": {
+   "id": "cod_misterios__cod_sello",
+   "video": "cod_misterios",
+   "nombre": "cod_sello",
+   "archivo": "cod_misterios__cod_sello.mp3",
+   "md5": "94fc276959d7c85e92426578683b2cde",
+   "prompt": "",
+   "dur": 5.93,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__s_chillido": {
+   "id": "cod_misterios__s_chillido",
+   "video": "cod_misterios",
+   "nombre": "s_chillido",
+   "archivo": "cod_misterios__s_chillido.mp3",
+   "md5": "10f4e8b46511f72f79e73e456784e594",
+   "prompt": "",
+   "dur": 1.95,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__s_riff": {
+   "id": "cod_misterios__s_riff",
+   "video": "cod_misterios",
+   "nombre": "s_riff",
+   "archivo": "cod_misterios__s_riff.mp3",
+   "md5": "3ae9efbb1de1280cf1edacb89af0f14f",
+   "prompt": "",
+   "dur": 4.5,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__s_ruso": {
+   "id": "cod_misterios__s_ruso",
+   "video": "cod_misterios",
+   "nombre": "s_ruso",
+   "archivo": "cod_misterios__s_ruso.mp3",
+   "md5": "53e1bf2ac77f799c84c64cb1148ece1d",
+   "prompt": "",
+   "dur": 4.6,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__s_sam1": {
+   "id": "cod_misterios__s_sam1",
+   "video": "cod_misterios",
+   "nombre": "s_sam1",
+   "archivo": "cod_misterios__s_sam1.mp3",
+   "md5": "541b423837a64d4069fee06eabe8df3e",
+   "prompt": "",
+   "dur": 7.3,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__s_sam2": {
+   "id": "cod_misterios__s_sam2",
+   "video": "cod_misterios",
+   "nombre": "s_sam2",
+   "archivo": "cod_misterios__s_sam2.mp3",
+   "md5": "78f2d4302b75ff034e821059a67a5252",
+   "prompt": "",
+   "dur": 6.3,
+   "canal": "cronicas_cod"
+  },
+  "cod_misterios__s_sanct": {
+   "id": "cod_misterios__s_sanct",
+   "video": "cod_misterios",
+   "nombre": "s_sanct",
+   "archivo": "cod_misterios__s_sanct.mp3",
+   "md5": "a11df3a9d220feff94b6418d2ba26ff5",
+   "prompt": "",
+   "dur": 7.0,
+   "canal": "cronicas_cod"
+  },
+  "er_godrick_atrocidades__s_branch": {
+   "id": "er_godrick_atrocidades__s_branch",
+   "video": "er_godrick_atrocidades",
+   "nombre": "s_branch",
+   "archivo": "er_godrick_atrocidades__s_branch.mp3",
+   "md5": "1e5294b29ec4603283bbd1931863973e",
+   "prompt": "",
+   "dur": 8.5,
+   "canal": "runa_caida"
+  },
+  "er_godrick_atrocidades__s_caceria": {
+   "id": "er_godrick_atrocidades__s_caceria",
+   "video": "er_godrick_atrocidades",
+   "nombre": "s_caceria",
+   "archivo": "er_godrick_atrocidades__s_caceria.mp3",
+   "md5": "0f40c8b5926058f0010d912f09db1e13",
+   "prompt": "",
+   "dur": 12.4,
+   "canal": "runa_caida"
+  },
+  "er_godrick_atrocidades__s_faraon": {
+   "id": "er_godrick_atrocidades__s_faraon",
+   "video": "er_godrick_atrocidades",
+   "nombre": "s_faraon",
+   "archivo": "er_godrick_atrocidades__s_faraon.mp3",
+   "md5": "716baca5ec44002bbec1ce7238c5004e",
+   "prompt": "",
+   "dur": 11.83,
+   "canal": "runa_caida"
+  },
+  "er_godrick_atrocidades__s_kneel": {
+   "id": "er_godrick_atrocidades__s_kneel",
+   "video": "er_godrick_atrocidades",
+   "nombre": "s_kneel",
+   "archivo": "er_godrick_atrocidades__s_kneel.mp3",
+   "md5": "d25be0425cc5f621410d6107279043ed",
+   "prompt": "",
+   "dur": 11.4,
+   "canal": "runa_caida"
+  },
+  "er_mohg_atrocidades__s_maidenless": {
+   "id": "er_mohg_atrocidades__s_maidenless",
+   "video": "er_mohg_atrocidades",
+   "nombre": "s_maidenless",
+   "archivo": "er_mohg_atrocidades__s_maidenless.mp3",
+   "md5": "99910b066c4f04aa6509d98801c3191b",
+   "prompt": "",
+   "dur": 5.75,
+   "canal": "runa_caida"
+  },
+  "er_mohg_atrocidades__s_mohgwyn": {
+   "id": "er_mohg_atrocidades__s_mohgwyn",
+   "video": "er_mohg_atrocidades",
+   "nombre": "s_mohgwyn",
+   "archivo": "er_mohg_atrocidades__s_mohgwyn.mp3",
+   "md5": "ae2203f0a4c4fce37b91c5362f647679",
+   "prompt": "",
+   "dur": 2.8,
+   "canal": "runa_caida"
+  },
+  "er_mohg_atrocidades__s_nihil": {
+   "id": "er_mohg_atrocidades__s_nihil",
+   "video": "er_mohg_atrocidades",
+   "nombre": "s_nihil",
+   "archivo": "er_mohg_atrocidades__s_nihil.mp3",
+   "md5": "da14a781ba6ac4d0f82dd0b32ffd6ba0",
+   "prompt": "",
+   "dur": 11.4,
+   "canal": "runa_caida"
+  },
+  "er_mohg_atrocidades__s_scream": {
+   "id": "er_mohg_atrocidades__s_scream",
+   "video": "er_mohg_atrocidades",
+   "nombre": "s_scream",
+   "archivo": "er_mohg_atrocidades__s_scream.mp3",
+   "md5": "129e627b37116536f708725d27f03f5d",
+   "prompt": "",
+   "dur": 5.6,
+   "canal": "runa_caida"
+  },
+  "er_mohg_atrocidades__s_welcome": {
+   "id": "er_mohg_atrocidades__s_welcome",
+   "video": "er_mohg_atrocidades",
+   "nombre": "s_welcome",
+   "archivo": "er_mohg_atrocidades__s_welcome.mp3",
+   "md5": "97c7699c7b685a55a4d6d4e994ddc9db",
+   "prompt": "",
+   "dur": 10.1,
+   "canal": "runa_caida"
+  },
+  "jch_carrera_moyahua__balanza": {
+   "id": "jch_carrera_moyahua__balanza",
+   "video": "jch_carrera_moyahua",
+   "nombre": "balanza",
+   "archivo": "jch_carrera_moyahua__balanza.mp3",
+   "md5": "0cde6c4987e7d83dfda7f6d4a4a94a48",
+   "prompt": "Old metal balance scale creaking and swinging gently, small metallic squeaks",
+   "dur": 4.0,
+   "canal": "ninguno"
+  },
+  "jch_carrera_moyahua__caida": {
+   "id": "jch_carrera_moyahua__caida",
+   "video": "jch_carrera_moyahua",
+   "nombre": "caida",
+   "archivo": "jch_carrera_moyahua__caida.mp3",
+   "md5": "efb9758777a0a90c0a108ed6e80539ec",
+   "prompt": "Motorcycle sliding and crashing on asphalt, metal scraping, short, realistic",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_carrera_moyahua__moto_pasa": {
+   "id": "jch_carrera_moyahua__moto_pasa",
+   "video": "jch_carrera_moyahua",
+   "nombre": "moto_pasa",
+   "archivo": "jch_carrera_moyahua__moto_pasa.mp3",
+   "md5": "7d263c6f983590f74e924a816a09690e",
+   "prompt": "A sport motorcycle passing by fast on a mountain road, loud engine roar doppler, realistic",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_carrera_moyahua__sirena": {
+   "id": "jch_carrera_moyahua__sirena",
+   "video": "jch_carrera_moyahua",
+   "nombre": "sirena",
+   "archivo": "jch_carrera_moyahua__sirena.mp3",
+   "md5": "21012343d2e80e126a6c93df8ffe771c",
+   "prompt": "Short distant ambulance siren wail, two cycles, realistic, outdoors",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_carrera_moyahua__tic": {
+   "id": "jch_carrera_moyahua__tic",
+   "video": "jch_carrera_moyahua",
+   "nombre": "tic",
+   "archivo": "jch_carrera_moyahua__tic.mp3",
+   "md5": "80705bfaebf1398b3fb66a12259bd037",
+   "prompt": "Stopwatch ticking fast, crisp clock ticks, dry",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__campana": {
+   "id": "jch_gorditas__campana",
+   "video": "jch_gorditas",
+   "nombre": "campana",
+   "archivo": "jch_gorditas__campana.mp3",
+   "md5": "16fa637b6847cb9574b1fa29eea16a9e",
+   "prompt": "Small Mexican town church bell ringing twice in the distance, outdoor",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__cruje": {
+   "id": "jch_gorditas__cruje",
+   "video": "jch_gorditas",
+   "nombre": "cruje",
+   "archivo": "jch_gorditas__cruje.mp3",
+   "md5": "7ad81939b38c3aa4edb95e2eab206b1d",
+   "prompt": "Biting into a crispy fried tortilla, loud satisfying crunch, close up",
+   "dur": 1.48,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__datos": {
+   "id": "jch_gorditas__datos",
+   "video": "jch_gorditas",
+   "nombre": "datos",
+   "archivo": "jch_gorditas__datos.mp3",
+   "md5": "1455de1f4e81fb33e54167409cceebed",
+   "prompt": "Old mechanical counter flipping numbers quickly, short ratchet clicks",
+   "dur": 1.48,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__fritura": {
+   "id": "jch_gorditas__fritura",
+   "video": "jch_gorditas",
+   "nombre": "fritura",
+   "archivo": "jch_gorditas__fritura.mp3",
+   "md5": "c60a2345c3957d2516876c73965e906a",
+   "prompt": "Corn dough frying in a pot of hot oil, strong crackling sizzle, close up, realistic kitchen",
+   "dur": 4.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__golpe": {
+   "id": "jch_gorditas__golpe",
+   "video": "jch_gorditas",
+   "nombre": "golpe",
+   "archivo": "jch_gorditas__golpe.mp3",
+   "md5": "281b7d91c1d4927bc77ad3fa2d7c866e",
+   "prompt": "Deep warm drum hit with a short wooden knock, punchy impact",
+   "dur": 1.48,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__moto_pasa": {
+   "id": "jch_gorditas__moto_pasa",
+   "video": "jch_gorditas",
+   "nombre": "moto_pasa",
+   "archivo": "jch_gorditas__moto_pasa.mp3",
+   "md5": "bcb3419cf3ebbb74e6d9dc712c2ffb7c",
+   "prompt": "A sport motorcycle passing by fast on a mountain road, loud engine roar doppler, realistic",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__motor_acelera": {
+   "id": "jch_gorditas__motor_acelera",
+   "video": "jch_gorditas",
+   "nombre": "motor_acelera",
+   "archivo": "jch_gorditas__motor_acelera.mp3",
+   "md5": "d86b6c5e1daf2536c35df54e16a6b346",
+   "prompt": "Motorcycle engine revving up hard to the red line, two revs, realistic",
+   "dur": 3.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__pop": {
+   "id": "jch_gorditas__pop",
+   "video": "jch_gorditas",
+   "nombre": "pop",
+   "archivo": "jch_gorditas__pop.mp3",
+   "md5": "ea055d7de102f5e602b2927e7203b055",
+   "prompt": "Light wooden spoon tap on a clay pot, short bright pop",
+   "dur": 1.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__sello": {
+   "id": "jch_gorditas__sello",
+   "video": "jch_gorditas",
+   "nombre": "sello",
+   "archivo": "jch_gorditas__sello.mp3",
+   "md5": "d074412a8474340ff920849834ae9923",
+   "prompt": "Heavy rubber stamp slammed on a wooden table, single thump",
+   "dur": 1.0,
+   "canal": "ninguno"
+  },
+  "jch_gorditas__whoosh": {
+   "id": "jch_gorditas__whoosh",
+   "video": "jch_gorditas",
+   "nombre": "whoosh",
+   "archivo": "jch_gorditas__whoosh.mp3",
+   "md5": "d6017a75ec163c28fb22f237b42e9fac",
+   "prompt": "Quick airy swoosh transition, soft and clean, short",
+   "dur": 1.0,
+   "canal": "ninguno"
+  },
+  "wow_addons_forever__cmp_mio_lobos": {
+   "id": "wow_addons_forever__cmp_mio_lobos",
+   "video": "wow_addons_forever",
+   "nombre": "cmp_mio_lobos",
+   "archivo": "wow_addons_forever__cmp_mio_lobos.mp3",
+   "md5": "9db5ad220f9240ea0f8ddf4121122241",
+   "prompt": "",
+   "dur": 5.8,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__cmp_mio_willem": {
+   "id": "wow_addons_forever__cmp_mio_willem",
+   "video": "wow_addons_forever",
+   "nombre": "cmp_mio_willem",
+   "archivo": "wow_addons_forever__cmp_mio_willem.mp3",
+   "md5": "d0b3f4e215100fc492dc04d7deb509fa",
+   "prompt": "",
+   "dur": 7.7,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__cmp_spoken_lobos": {
+   "id": "wow_addons_forever__cmp_spoken_lobos",
+   "video": "wow_addons_forever",
+   "nombre": "cmp_spoken_lobos",
+   "archivo": "wow_addons_forever__cmp_spoken_lobos.mp3",
+   "md5": "76ec5be6e49ab436091e794c4c6c619d",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__cmp_spoken_willem": {
+   "id": "wow_addons_forever__cmp_spoken_willem",
+   "video": "wow_addons_forever",
+   "nombre": "cmp_spoken_willem",
+   "archivo": "wow_addons_forever__cmp_spoken_willem.mp3",
+   "md5": "2c988179a1f934518cbce19e249a63a6",
+   "prompt": "",
+   "dur": 6.3,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__mision_aceptada": {
+   "id": "wow_addons_forever__mision_aceptada",
+   "video": "wow_addons_forever",
+   "nombre": "mision_aceptada",
+   "archivo": "wow_addons_forever__mision_aceptada.mp3",
+   "md5": "791ca715f58a412967a0e33170285cb1",
+   "prompt": "",
+   "dur": 1.52,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__mision_completada": {
+   "id": "wow_addons_forever__mision_completada",
+   "video": "wow_addons_forever",
+   "nombre": "mision_completada",
+   "archivo": "wow_addons_forever__mision_completada.mp3",
+   "md5": "0c98dd330040443e65d5ffd477da39a2",
+   "prompt": "",
+   "dur": 5.28,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__oye_gornek": {
+   "id": "wow_addons_forever__oye_gornek",
+   "video": "wow_addons_forever",
+   "nombre": "oye_gornek",
+   "archivo": "wow_addons_forever__oye_gornek.mp3",
+   "md5": "1adcbed6f15e0d8cee902535b753abb1",
+   "prompt": "",
+   "dur": 10.5,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__oye_kaltunk": {
+   "id": "wow_addons_forever__oye_kaltunk",
+   "video": "wow_addons_forever",
+   "nombre": "oye_kaltunk",
+   "archivo": "wow_addons_forever__oye_kaltunk.mp3",
+   "md5": "cb07172d724ffeef961378dc11a9a314",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__oye_lore": {
+   "id": "wow_addons_forever__oye_lore",
+   "video": "wow_addons_forever",
+   "nombre": "oye_lore",
+   "archivo": "wow_addons_forever__oye_lore.mp3",
+   "md5": "e42de1e31b10b99ad095dd8cae23355a",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__oye_mortero": {
+   "id": "wow_addons_forever__oye_mortero",
+   "video": "wow_addons_forever",
+   "nombre": "oye_mortero",
+   "archivo": "wow_addons_forever__oye_mortero.mp3",
+   "md5": "cac25ecea2cad8ab17ab6193f0575e96",
+   "prompt": "",
+   "dur": 13.0,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__oye_spoken": {
+   "id": "wow_addons_forever__oye_spoken",
+   "video": "wow_addons_forever",
+   "nombre": "oye_spoken",
+   "archivo": "wow_addons_forever__oye_spoken.mp3",
+   "md5": "3477d50b9a2e9a261f9595dbabbe6a77",
+   "prompt": "",
+   "dur": 4.4,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__oye_willem": {
+   "id": "wow_addons_forever__oye_willem",
+   "video": "wow_addons_forever",
+   "nombre": "oye_willem",
+   "archivo": "wow_addons_forever__oye_willem.mp3",
+   "md5": "1a541d908364e561a13b2faef19b0431",
+   "prompt": "",
+   "dur": 4.9,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__subasta": {
+   "id": "wow_addons_forever__subasta",
+   "video": "wow_addons_forever",
+   "nombre": "subasta",
+   "archivo": "wow_addons_forever__subasta.mp3",
+   "md5": "0256d10af3a4d86c0ee4e580580b0972",
+   "prompt": "",
+   "dur": 1.84,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_addons_forever__subir_nivel": {
+   "id": "wow_addons_forever__subir_nivel",
+   "video": "wow_addons_forever",
+   "nombre": "subir_nivel",
+   "archivo": "wow_addons_forever__subir_nivel.mp3",
+   "md5": "7fa6a86d2881faf49fbbbc156976d56f",
+   "prompt": "",
+   "dur": 3.82,
+   "canal": "cronicas_warcraft"
+  },
+  "wow_secretos_primeros_niveles__oye_crematoria": {
+   "id": "wow_secretos_primeros_niveles__oye_crematoria",
+   "video": "wow_secretos_primeros_niveles",
+   "nombre": "oye_crematoria",
+   "archivo": "wow_secretos_primeros_niveles__oye_crematoria.mp3",
+   "md5": "2e8c4fb8c44a600c9f8b97c8322fdbe7",
+   "prompt": "",
+   "dur": 12.7,
+   "canal": "cronicas_warcraft"
   }
  },
- "actualizado": "2026-11-06 15:20"
+ "actualizado": "2026-11-12 10:08"
 }

@@ -1,7 +1,7 @@
 {
  "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
  "nombre": "Runa Caída",
- "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz Chatterbox Faraon; ~6-7 min.",
+ "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz ElevenLabs «el Profeta» plana desde el 11-nov-2026 (antes Chatterbox Faraon); duración la que pida el usuario (25 min el 11-nov).",
  "horario": {
   "zona": "America/Mexico_City",
   "hora_local": "10:00",
@@ -33,6 +33,17 @@
   ]
  },
  "publicados": [
+  {
+   "video": "er_godrick_atrocidades",
+   "id": "B7UTTAwu6sc",
+   "titulo": "Las 5 peores atrocidades de Godrick QUE IGNORASTE",
+   "subido": "2026-11-12",
+   "visibilidad": "programado",
+   "publicar": "2026-11-14T16:00:00Z",
+   "programado": "2026-11-14T16:00:00Z",
+   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt_25min_voz_profeta",
+   "nota": "24:55; voz nueva el Profeta (ElevenLabs, plana) con votación narrador anterior / nuevo profeta; medir ≈ 21-nov"
+  },
   {
    "video": "er_mohg_atrocidades",
    "id": "G6C2R0X_oCo",

@@ -1,0 +1,145 @@
+# -*- coding: utf-8 -*-
+"""Plan de clips POR FRASE (11-nov-2026), hecho mirando hojas de contacto a 240p de cada fuente
+(E:\\FabricaAnimaciones\\_tmp_hojas_godrick\\h_*.jpg / f_*.jpg / zz_*.jpg). Escribe plan_frases.json (lo lee asignar_clips.py).
+Fuentes limpias: SourceSpy91 4K sin comentarios (HUD normal), Full Game 60 fps, capturas cortas sin comentarista verificadas.
+    python _plan.py
+Ojo: SC/SG llevan marca SHIRRAKO abajo a la derecha (recortar); BD tiene gradación verdosa y a partir de 470 s es OTRO juego (no pasar de 440);
+CH1 enseña mapa desde 54 s; ED muestra «INVADER VANQUISHED» a los 70 s; KE/P1 (Varré)/P5 (Irina)/P6 (Edgar)/P8 (Gostoc)/P9 (Enia, Roderika) llevan subtítulos del juego en inglés.
+"""
+import json
+
+F = {  # alias: (id, nota)
+    "P1": ("eG7fOBSQMes", "SS91 Part 1: Necrolimbo (intro, Capilla de la espera, Varré, Lago de Agheel)"),
+    "P2": ("wBp1Br0773o", "SS91 Part 2: Colina Tormentosa (cabaña de Roderika)"),
+    "P3": ("wKPmbLmoHhA", "SS91 Part 3: Fuerte de Haight (3850-4000)"),
+    "P5": ("dEeH4J4nBes", "SS91 Part 5: Irina junto al Puente del Sacrificio (340-410, subtítulos)"),
+    "P6": ("IkesCV_PYwI", "SS91 Part 6: Castillo de Morne, Edgar, celdas, Bastardo leonino, Irina muerta"),
+    "P7": ("aw0k-em6sZs", "SS91 Part 7: Colina Tormentosa de noche, Margit, puerta de Velo, Mesa Redonda"),
+    "P8": ("vjgNUcwhopI", "SS91 Part 8: Velo Tormentoso (Gostoc, Vástago, trol crucificado, pila, comedor, Rogier)"),
+    "P9": ("Huip3TdEOdU", "SS91 Part 9: Godrick (intro, brazo, muerte), Gran Runa, Roderika, Enia, Rogier"),
+    "P26": ("bm8-3T8Gu8o", "SS91 Part 26: Godefroy el Injertado"),
+    "FG": ("6CdGWTHqMq0", "Full Game 60fps: Radahn, Malenia, Leyndell, Farum Azula, Godfrey, Liurnia"),
+    "SC": ("BYSgy6UllRw", "[SHIRRAKO] Vástago en la Capilla de la espera (marca abajo a la derecha: recortar)"),
+    "SG": ("c9akEr9y7XA", "[SHIRRAKO] Godrick 4K (marca abajo a la derecha: recortar)"),
+    "BD": ("tdUT7vdciSc", "Boredom Defense Network: Godrick 4K (gradación verde; no pasar de 440 s)"),
+    "MV": ("yRzy2vEY2MQ", "Soul Cat: cofre del Velo de imitador (HUD)"),
+    "WH": ("RVBWw-J2rA0", "Soul Cat: celda de Morne, ratas y el Látigo (HUD)"),
+    "CH1": ("q_fz0HWb2yk", "Akerhon: capucha carmesí en la pila bajo el trol (mapa desde 54 s)"),
+    "CH2": ("6ADBuyq4g48", "PlaystationSaurus: pila de cadáveres y trol crucificado (HUD)"),
+    "FH": ("1Cb3QmPPtuY", "PanyapiN: Fuerte de Haight y el caballero con Tajo sangriento (HUD)"),
+    "KE": ("uJkR1zFji7Q", "Soul Cat: Kenneth Haight (diálogo con subtítulos)"),
+    "ED": ("8tqCDM7ikOc", "Night Cricket: invasión de Edgar el Vengador (rótulo a los 70 s)"),
+    "DR": ("ITB5e24faWg", "RoseIsCursed: sala oscura con el Caballero proscrito (HUD)"),
+    "RO": ("AROr1i42zrc", "Soul Cat: Rogier en la capilla de Velo Tormentoso (subtítulos)"),
+}
+
+P = {
+    "intro_0": "P1 350, SC 80, SC 104", "intro_1": "SG 100, P9 162", "intro_2": "P9 230, BD 180, P9 380",
+    "intro_3": "P8 2876, P8 2892, P6 975", "intro_4": "P7 216, P9 194",
+    "voto_0": "P8 3225", "voto_1": "P1 1080, P2 300, P1 1325", "voto_2": "SG 60, P9 1860",
+    "voto2_0": "P8 1350, P1 1360", "voto2_1": "P2 364, P9 1875, P9 1845", "voto2_2": "P2 384, P1 1395, P8 7530",
+    "p5_0": "P9 130",
+    "p5_1": "P1 100, P1 30, FG 44065",
+    "p5_2": "P9 400, KE 171, FG 67504",
+    "p5_3": "P8 2700, MV 255, FG 67534",
+    "p5_4": "P8 2470, P8 4050, P8 4935",
+    "p5_5": "P9 2340, P9 2490",
+    "p5_6": "FG 72637, P9 300, BD 62",
+    "p5b_0": "KE 186, FG 86369",
+    "p5b_1": "FG 86339, FG 86389",
+    "p5b_2": "P1 13356, P1 12960",
+    "p5b_3": "P1 13392, P1 1274",
+    "p5b_4": "P1 13416, P9 440, BD 200",
+    "p5b_5": "FG 44185, FG 86469",
+    "p5b_6": "FG 44110, FG 44140, P9 700",
+    "p5b_7": "KE 201, FG 72707",
+    "p5b_8": "P7 864, P8 3540, P8 1230",
+    "p4_0": "P6 228",
+    "p4_1": "P6 135, P6 1210, P6 165",
+    "p4_2": "P6 300, P6 495, P6 1226",
+    "p4_3": "WH 231, P6 1530, P6 1922",
+    "p4_4": "WH 246",
+    "p4_5": "P6 1545, P6 2370, P6 2445",
+    "p4_6": "P6 2550, P6 2415, P6 2490",
+    "p4_7": "BD 100, P9 250",
+    "p4b_0": "P5 340, P5 370",
+    "p4b_1": "P6 1255, P6 3080",
+    "p4b_2": "ED 20, ED 40, FG 23107",
+    "p4b_3": "P3 3880, FH 21, KE 96",
+    "p4b_4": "KE 112, FH 175",
+    "p4b_5": "FH 196, P3 3960, FH 217",
+    "p4b_6": "FH 63, P3 3988",
+    "p4b_7": "FH 150, P3 3910, FH 133",
+    "p4b_8": "P6 960, FH 232, P5 395",
+    "p3_0": "BD 245",
+    "p3_1": "P1 1160, P1 1190",
+    "p3_2": "P9 66, SG 12",
+    "p3_3": "P9 82, SG 27, P9 98",
+    "p3_4": "BD 46, SG 44, P9 114",
+    "p3b_0": "P9 476, P9 456",
+    "p3b_1": "P9 492, P9 508, SG 144",
+    "p3b_2": "P9 524, P9 542, BD 260",
+    "p3b_3": "BD 230, P9 590, SG 160",
+    "p3b_4": "SG 180, BD 30, P9 620",
+    "p3b_5": "P9 1030, FG 72667",
+    "p3c_0": "P26 5960, P26 6010, P26 6040",
+    "p3c_1": "P26 6230, P26 6260",
+    "p3c_2": "FG 67284, P26 6300",
+    "p3c_3": "P26 6340, FG 72747",
+    "p3c_4": "FG 72807, P9 640",
+    "p2_0": "P2 144",
+    "p2_1": "P2 96, P2 159",
+    "p2_2": "P2 174, P9 1965",
+    "p2_3": "P8 2715, SC 32",
+    "p2_4": "P2 189, P9 1980",
+    "p2_5": "P1 365, SC 56, P8 2730",
+    "p2_6": "P2 204, P9 1995",
+    "p2_7": "P9 2010, P2 252",
+    "p2b_0": "P8 2590, P8 2745, CH2 96",
+    "p2b_1": "P8 2760, P8 2775, P8 2790",
+    "p2b_2": "P9 1645",
+    "p2b_3": "CH2 128, P8 1365, P8 1950",
+    "p2b_4": "P9 2130, FG 87444, FG 87468",
+    "p2b_5": "CH1 38, P9 2160",
+    "p2b_6": "P8 3555, P8 0",
+    "p2b_7": "P1 1345, P2 316, P7 1120",
+    "p1_0": "SG 120",
+    "p1_1": "P1 1220, P2 234, P1 1095",
+    "p1_2": "P7 168, P2 332",
+    "p1_3": "KE 156, P8 4080",
+    "p1_4": "RO 175, P8 3345, RO 210",
+    "p1_5": "BD 215, P8 4950, P9 270",
+    "p1b_0": "P9 1712, P8 450",
+    "p1b_1": "P8 186, DR 28, DR 44",
+    "p1b_2": "P8 5786, P8 2850, DR 2",
+    "p1b_3": "P8 218, BD 120, P9 210",
+    "p1b_4": "P8 5814, P8 202",
+    "p1c_0": "P8 3705, P9 1690",
+    "p1c_1": "P9 178, BD 150",
+    "p1c_2": "P8 2830, P9 560, P9 2175",
+    "p1c_3": "P1 320, SC 136, P1 420",
+    "p1c_4": "SC 184, P1 440",
+    "p1c_5": "P9 1012, P8 1290, P9 1750",
+    "cierre_0": "FG 86409, P6 1937, BD 275, SC 232, P8 7560",
+    "cierre_1": "P9 146, P9 330",
+    "cierre_2": "BD 340, P8 3240",
+    "cierre_3": "P1 74, P1 59, P7 1104",
+    "cierre_4": "P2 348, P8 7545",
+    "cierre_5": "P8 3720",
+    "cierre_6": "FG 72847, FG 23137",
+    "cierre_7": "FG 44215, FG 86539",
+    "cierre_8": "P1 335, SC 208",
+}
+
+out = {}
+for k, v in P.items():
+    ops = []
+    for t in v.split(","):
+        a, s = t.split()
+        vid, nota = F[a]
+        ops.append({"url": f"https://youtu.be/{vid}", "desde": int(s), "nota": nota})
+    out[k] = ops
+json.dump(out, open("plan_frases.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+import guion
+claves = [f"{e['id']}_{i}" for e in guion.ESCENAS for i in range(len(e["frases"]))]
+print(len(out), "frases con plan; faltan:", [c for c in claves if c not in out], "sobran:", [c for c in out if c not in claves])

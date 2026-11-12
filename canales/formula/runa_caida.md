@@ -71,3 +71,12 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
   sola. La crítica de @manuelramos7867 se contesta en el cierre con burla disfrazada.
 - Comparar a los 7 días con Radahn (24 min) y Miquella/Melina (20 min): vistas, % visto, subs por 1 000 (campaña: 3 de 100 → meta 500).
 
+
+## «Las 5 peores atrocidades de Godrick QUE IGNORASTE» (`er_godrick_atrocidades`, 11-nov-2026, elegido por el usuario de 3)
+- Tema pedido por @JustinRivera-c9l ♥3 y @Ádolf777-t5u. Duración 25 min pedida por el usuario (24:35 + pantalla final).
+- **HIPÓTESIS (variable cambiada: la VOZ):** narrador nuevo «el Profeta» de ElevenLabs, PLANO, por las quejas de voz IA
+  (@MadolcheCap ♥34, @pablofernandez893 ♥8, «Miqueya y Mojé»), con VOTACIÓN al inicio y en el cierre («narrador anterior» o «nuevo
+  profeta»; se oye la toma real de Faraon). Medir a 7 días (≈ 21-nov): votos de cada opción en los comentarios, quejas de voz,
+  % visto y retención del primer minuto frente a Mohg (24 min, Faraon) y Radahn; subs por 1 000 (campaña: menos de 5 de 100, 753 → 1 000).
+- Contraburla (regla del 11-nov, mínimo 2-3): José (Malenia «de hija», p5b), Gonzalo (Mohg «ni tan mal», p4b), Madrizu (Ranni / IA, cierre).
+- Siguen pedidos: Godfrey/Godwyn (John, Carl), Messmer (Santiago, Alphonse), Rennala, Bayle.

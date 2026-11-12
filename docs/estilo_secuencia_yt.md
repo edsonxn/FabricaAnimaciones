@@ -105,6 +105,15 @@ descarga comprobada (infobox: especie, mundo, juego). Detalle y pasos: `docs/reg
    escribir `efectos.py`, recorrer `capa.fx` y avisar de toda marca con `_marcas` < 0 o > duración. Plantilla: `videos/wow_secretos_primeros_niveles/_promesas.py`
    (promesas con cuadro real) y `_peg_check.py`.
 
+### La voz no cita fuentes (el usuario, 12-nov-2026, TODOS los canales)
+«Dices mucho UESP… debes narrar más como si fuera experiencia propia o simplemente no decirlo; "según UESP" se escucha como que
+no sabemos y nos guiamos solo de eso». Fallo: `tes_builds_rotas` dijo «UESP» 12 veces («según UESP», «UESP lo midió», «literal de UESP»).
+- La voz habla como quien lo jugó y lo comprobó: «lo probé y…», «haz la cuenta: …», «el juego no lo cuenta como crimen», o el dato a secas.
+- Nada de «según UESP / la wiki / Wowhead / Fextralife / la guía / los foros», ni «revisé los videos». Las fuentes van en la descripción.
+- Un mito se desmiente con autoridad propia: «La pantalla de carga dice que duplica tu magia. Mentira: duplica lo rápido que vuelve».
+- Excepción: un comentario o un datamine famoso que ES la noticia («un minero de datos encontró…») puede nombrarse una vez.
+- `chequeo_yt` (antes de `voz` y en `chequeo`) avisa de cada frase con la fuente citada → reescribir antes de generar la voz.
+
 ### TODO LO QUE SE NOMBRA SE MUESTRA, CON VIDEO DE PREFERENCIA (el usuario, 10-nov-2026, TODOS los canales; OBLIGATORIO en secretos y huevos de pascua)
 «Siempre lo que hables se tiene que mostrar con imágenes o videos de preferencia, sobre todo objetos, personajes o locaciones.
 En secretos y huevos de pascua nos tenemos que apoyar con videos e imágenes obligatoriamente.» Fallos en `wow_secretos_primeros_niveles`:
@@ -261,6 +270,13 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   cierre), de los canales oficiales «<compositor> - Topic» (Elden Ring: Yuka Kitamura, Shoi Miyazawa, Tai Tomisawa, Tsukasa Saitoh),
   `yt-dlp -x --audio-format wav` a `audio/ost/`, cada tramo igualado a la misma sonoridad, fundidos cruzados de 2 s y escrito en
   `audio/musica.wav` (lo que lee `mezcla`; ducking bajo la voz como siempre). Primer uso: `er_malenia_atrocidades` (lista en su ESTADO).
+  **OST SIN CANTO bajo la voz (el usuario, 12-nov-2026: en `tes_builds_rotas` «pusiste música cantada» en el puesto 6 = Age of
+  Oppression, coro entero):** antes de `armar_musica_ost.py`, `python nucleo/ost_canto.py <v>` (Demucs mide la voz humana de cada
+  pista en ventanas de 5 s → `audio/ost/_canto.json`) y ninguna sección usa un tramo con canto (Skyrim: Age of Oppression entera,
+  Ancient Stones 65 s y 115-205 s, Solitude 30-45 s). Solo si la voz NOMBRA la canción, con la voz callada.
+  **Pantallas finales de youtubers en los clips (12-nov-2026, el 4:10 de la misma v2: «THANKS FOR WATCHING / SUBSCRIBE FOR MORE»):**
+  la hoja de medios no ve el último segundo → `_ultimos.py` (primer y último cuadro de CADA clip, `videos/tes_builds_rotas/`) y se
+  rehace todo clip con logo, cuenta atrás, texto del youtuber o fundido a negro.
   Lo de abajo sobre Lyria queda para videos viejos. Riesgo: Content ID del OST (reclamo de monetización): anotarlo si llega. **Reclamos vistos:** Viva Piñata «Oven-Fresh Day» (TEOSTO_TONO_STEF_CS, `rare_auge_caida`, 28-oct): no usar la OST de Viva Piñata. Si llega un reclamo antes de publicar: cambiar la pista en `armar_musica_ost.py` → `mezcla` → `final` (solo audio, la imagen se copia) → resubir al mismo hueco y borrar el viejo.
 - **Lyria**: `LYRIA` con `tramos` (cada uno <= 175 s) y `fab.py <v> musica` llama a `lyria_tramos.py`. En `estilo` NO pongas el
   nombre del juego («in the style of World of Warcraft»): el filtro rechaza nombres propios. Usa «classic high-fantasy MMORPG soundtrack».
@@ -968,7 +984,13 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;
   el usuario descartó el piso viejo de 12 min del sistema anterior) · gema del canal · sin patrocinio · puente al video de Márika.
-- **Voz Chatterbox `Faraon.mp3`** (`exaggeration=.55, cfg_weight=.3, temperature=.75`): lee a ~180 palabras/min (1 227 palabras =
+- **VOZ NUEVA desde el 11-nov-2026 (el usuario): «el Profeta» de ElevenLabs** (`HNSF1CTQmub252yhXROX`, `eleven_v4_turbo`, stability .5)
+  **PLANA**: nada de risas ni emociones alegres (`sin_etiquetas` con laugh/amused/chuckl/cheer/happy/excit/whisper…); a veces
+  `[annoyed]`/`[growls]`. Escritura normal, sin FONETICA. Muestras en `canales/muestras_voz/runa_profeta/` (eligió la B). En el 1.er
+  video (`er_godrick_atrocidades`) hay VOTACIÓN en comentarios «narrador anterior» o «nuevo profeta» (el que tenga más comentarios se
+  queda): se OYE la toma real de Faraon (PISTA voz=True) con el MG `votacion` de mg_er. Medir a 7 días (comentarios de cada opción,
+  % visto, subs por 1 000) antes de decidir. Lo de abajo (Faraon) queda como referencia del narrador anterior.
+- **(Anterior) Voz Chatterbox `Faraon.mp3`** (`exaggeration=.55, cfg_weight=.3, temperature=.75`): lee a ~180 palabras/min (1 227 palabras =
   409 s de voz, video 7:22 con pausas). `voz --seeds 1 2` tarda ~25 min para 56 frases.
 - **«Radagon» al INICIO de frase o tras pausa sale «Dradagón/Gradagón»** (la R inicial con FONETICA «Rádagon»): poner el nombre a
   media frase tras una vocal («Dice que Radagon…», «La forjó el propio Radagon…»). «Márika» en frase corta: Whisper escribe
@@ -1078,6 +1100,22 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   tomas que apartas a `_descartes/`: podarlo (solo las que existen en `cands/`) o truena con `FileNotFoundError`. Cambiar UNA toma
   tras el render sin rehacer tiempos: rellenar la toma nueva con silencio hasta la duración exacta de la vieja → `mezcla` → `final`.
   `video --rehacer` con 4 tramos volvió a renderizar TODO (32 min). Créditos: `yt-dlp --print "%(channel)s"` por id de `fuentes.json`.
+- **`er_godrick_atrocidades` (11-nov-2026, ~24:35, 172 beats, 196 FX, voz nueva «el Profeta»):** MG nuevos en `mg_er`:
+  `votacion(a, b, titulo, caja, remate)` (dos cartas de voz con onda; la que habla brilla; caja de comentario que se escribe sola y
+  balanza SIN cifras), `injerto(centro, sub, miembros, remate)` (torso al que vuelan miembros uno por marca y se cosen con puntadas
+  rojas; las marcas repetidas con la misma ancla dejan los miembros previos ya puestos) y `linaje(raiz, hijos, medio, remate)` (corona
+  de Godfrey, tronco que se apaga de oro a gris, hijos que brotan miembros cosidos). Plan por frase de un subagente con hojas a 240p:
+  245 opciones; rehechos 22 de 172 (13 %). **El FULL GAME de 28 h (`6CdGWTHqMq0`) falla al cortar pasados ~72 000 s** («Output file
+  does not contain any stream»): usar la parte suelta (SS91 Part 50 `rTz4PyJYphw` para Godfrey, Veloketh `AHMiDYPUrH4` para Malenia).
+  `fab.py <v> fx` (sin `hoja`), tras escribir `audio/fx.wav`, sigue con el MONTAJE del panel (66 tramos × ~70 s): si no se va a mirar
+  en el panel, cortarlo en cuanto salga «audio/fx.wav: …». `fx hoja` falla si un clip se está volviendo a bajar («moov atom not
+  found»): no lanzarlos a la vez. `peg_estilos.silueta(lado=…)` = dónde VA el personaje; los Closeup de PNJ anchos (Edgar agachado)
+  ocupan media pantalla y chocan con la ficha: mejor pegatina grande. Rótulo «CONTENIDO CORTADO» = `puesto` arriba (y=.10) y la ficha
+  de ese tramo en y=.40; abajo choca con el mensaje del suelo y el borde lo corta. Etiquetas del abanico ≤ 12 letras (se cortan).
+  **Render:** el de una pieza murió 3 veces por memoria (MemoryError en `mg_er._brillo` / `cv2.blendLinear`, 72-76 %, con otras
+  sesiones usando RAM) y una vez el MASTER salió roto por lanzar `final` mientras el proceso `video` seguía vivo tras «listo». Con
+  ≥ 20 min y ~200 FX: DIRECTO por tramos de 250 s (`video --tramo 500-750`, uno tras otro, ~7-10 min c/u) + `ffmpeg -f concat -c copy`
+  → `video_sin_audio.mp4`, `ffmpeg -f null` para comprobar, y luego `final`.
 - **NUNCA `bajar` dentro de `while read … <<EOF`**: los procesos hijos se comen el stdin y la siguiente vuelta lee basura como id;
   `bajar --q` sin ids rehízo los 51 beats (se recuperó todo de `medios/_respaldo/`). Desde el 14-oct el motor se niega a `--q`/`--url`
   sin ids; en bucles, `< /dev/null`.

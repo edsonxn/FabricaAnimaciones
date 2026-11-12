@@ -49,6 +49,10 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   reclutamiento(pasos, remate)                   escalera de sangre (Varré, dedo, paño, medalla); arriba, Mohg no responde
   dinastia(cabeza, sub, filas, arriba, remate)   organigrama de la dinastía; la sangre de todas las ramas sube a la Madre Informe
   trono_vacio(nombres, remate)                   nombres que buscan el trono y se tachan; crece el muro de espinas
+  votacion(a, b, titulo, caja, remate)           dos voces con su onda (la que habla brilla), caja de comentario que se escribe
+                                                 sola y balanza SIN cifras (er_godrick_atrocidades, 11-nov-2026)
+  injerto(centro, sub, miembros, remate)         torso al que vuelan miembros uno por marca y se cosen con puntadas rojas
+  linaje(raiz, hijos, medio, remate)             corona de Godfrey; el tronco se apaga de oro a gris; los hijos brotan miembros cosidos
   cadena(eslabones, preso, amo, remate)          eslabones de la Orden al preso que se encienden en rojo por marca
 """
 import math
@@ -2045,5 +2049,217 @@ def dinastia(cabeza="Mohg", sub_cabeza="Señor de la Sangre", filas=(), arriba="
         u_r = _eo((dt - mk[n + 2]) / .5)
         if u_r > 0:
             _texto(d, (cx - 150, M + 150), remate, fs, PERGAMINO, "rm", 255 * u_r)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+
+# ───────────── er_godrick_atrocidades (11-nov-2026): votación de voces, injerto y linaje dorado ─────────────
+def _onda(d, x0, cy, ancho, alto, t, color, a, activa=True, n=34):
+    """Forma de onda de barras (una voz que habla); quieta y baja si no está activa."""
+    paso = ancho / n
+    for k in range(n):
+        if activa:
+            h = alto * (.18 + .82 * abs(math.sin(t * 7.3 + k * .61) * math.sin(t * 2.1 + k * .23)))
+        else:
+            h = alto * .08
+        x = x0 + k * paso
+        d.rounded_rectangle((x, cy - h / 2, x + paso * .55, cy + h / 2), 3, fill=color + (int(a),))
+
+
+def votacion(a=("Narrador anterior", "la voz de siempre"), b=("Nuevo profeta", "la voz de hoy"), titulo="Tú decides",
+             caja="Escríbelo en los comentarios", remate="El que tenga más comentarios se queda", w=1500, h=680):
+    """La votación de voces. Marca 0: carta A con su onda (habla). Marca 1: carta B con su onda; la A se calla.
+    Marca 2: caja de comentario donde se escribe «narrador anterior» / «nuevo profeta» con cursor, y una barra de balanza
+    que oscila entre las dos SIN cifras (aún no hay votos). Marca 3: `remate` y las dos cartas hablan a la vez."""
+    ftit, fn_, fs, fc = fuente("r", 40), fuente("r", 50), fuente("i", 30), fuente("r", 34)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 5
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cw, ch = w * .38, 250
+        for i, (nom, sub) in enumerate((a, b)):
+            u = _eo((dt - mk[i]) / .5)
+            if u <= 0:
+                continue
+            x0 = M + (w * .07 if i == 0 else w * .55)
+            y0 = M + 120 + 30 * (1 - u)
+            hablando = (mk[i] <= dt < mk[i + 1]) or dt >= mk[3]
+            col = AMBAR if hablando else ORO
+            d.rounded_rectangle((x0, y0, x0 + cw, y0 + ch), 18, fill=(16, 13, 9, int(235 * u)), outline=col + (int(255 * u),),
+                                width=3 if hablando else 2)
+            _texto(d, (x0 + cw / 2, y0 + 52), nom, fn_, col, "mm", 255 * u)
+            _texto(d, (x0 + cw / 2, y0 + 96), sub, fs, GRIS, "mm", 255 * u)
+            _onda(d, x0 + 40, y0 + 175, cw - 80, 90, dt + i * 3, col, 230 * u, hablando)
+        u_c = _eo((dt - mk[2]) / .5)
+        if u_c > 0:
+            bx, by, bw, bh = M + w * .12, M + 430, w * .76, 74
+            d.rounded_rectangle((bx, by, bx + bw, by + bh), 12, fill=(24, 20, 14, int(240 * u_c)), outline=GRIS + (int(200 * u_c),),
+                                width=2)
+            _texto(d, (bx + 16, by - 12), caja, fs, GRIS, "lb", 255 * u_c)
+            opciones = [a[0].lower(), b[0].lower()]
+            ciclo = (dt - mk[2]) % 5.0
+            txt = opciones[int((dt - mk[2]) // 5.0) % 2]
+            vis = txt[:int(min(len(txt), max(0, ciclo - .3) * 14))] if ciclo < 4.2 else txt[:int(max(0, (5.0 - ciclo) * 30))]
+            _texto(d, (bx + 24, by + bh / 2), vis, fc, PERGAMINO, "lm", 255 * u_c)
+            if int(dt * 2.2) % 2 == 0:
+                cxp = bx + 28 + (d.textlength(vis, font=fc) if vis else 0)
+                d.rectangle((cxp, by + 18, cxp + 3, by + bh - 18), fill=PERGAMINO + (int(230 * u_c),))
+            yb = by + bh + 60                                   # balanza sin cifras: oscila entre las dos
+            d.rectangle((bx, yb, bx + bw, yb + 12), fill=(30, 26, 20, int(230 * u_c)), outline=ORO_OSC + (int(220 * u_c),), width=2)
+            p = .5 + .32 * math.sin((dt - mk[2]) * 1.7) * (0 if dt >= mk[3] else 1)
+            d.rectangle((bx + 2, yb + 2, bx + 2 + (bw - 4) * p, yb + 10), fill=AMBAR + (int(200 * u_c),))
+            d.ellipse((bx + bw * p - 13, yb - 7, bx + bw * p + 13, yb + 19), fill=ORO + (int(255 * u_c),))
+            _texto(d, (bx, yb + 26), a[0], fs, GRIS, "lt", 255 * u_c)
+            _texto(d, (bx + bw, yb + 26), b[0], fs, GRIS, "rt", 255 * u_c)
+        u_r = _eo((dt - mk[3]) / .5)
+        if u_r > 0:
+            _texto(d, (M + w / 2, M + h - 34), remate, fs, PERGAMINO, "mm", 255 * u_r)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def _puntadas(d, p0, p1, color, a, n=4, s=9):
+    """Puntadas en X a lo largo de la unión p0-p1 (costura de un injerto)."""
+    for k in range(n):
+        f = (k + .5) / n
+        x, y = p0[0] + (p1[0] - p0[0]) * f, p0[1] + (p1[1] - p0[1]) * f
+        d.line((x - s, y - s, x + s, y + s), fill=color + (int(a),), width=3)
+        d.line((x - s, y + s, x + s, y - s), fill=color + (int(a),), width=3)
+
+
+_ANG_INJ = [-150, -30, 165, 15, -110, -70, 140, 40]
+
+
+def injerto(centro="Godrick", sub_centro="el Injertado", miembros=(), remate=None, titulo="El injerto", w=1600, h=740):
+    """Un cuerpo central (torso dorado) al que vuelan miembros desde los bordes, uno por marca: cada miembro = (nombre, sub),
+    entra desde lejos, se clava en el torso y se cose con puntadas rojas (gotean); su etiqueta queda en el extremo.
+    Marcas 0..n-1 = miembros; marca n = `remate` y el cuerpo entero late en rojo."""
+    ftit, fn_, fs, fgr = fuente("r", 40), fuente("r", 34), fuente("i", 26), fuente("r", 50)
+    n = len(miembros)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 3)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, cy = M + w / 2, M + h / 2 + 60
+        u_r = _eo((dt - mk[n]) / .6)
+        lat = (.5 + .5 * math.sin((dt - mk[n]) * 5)) * u_r
+        col_c = tuple(int(ORO[j] + (ROJO[j] - ORO[j]) * lat) for j in range(3))
+        d.ellipse((cx - 95, cy - 115, cx + 95, cy + 115), fill=(26, 21, 14, int(a0)), outline=col_c + (int(a0),), width=4)
+        d.ellipse((cx - 40, cy - 195, cx + 40, cy - 118), fill=(26, 21, 14, int(a0)), outline=col_c + (int(a0),), width=4)
+        _texto(d, (cx, cy - 12), centro, fgr if len(centro) < 9 else fn_, col_c, "mm", a0)
+        _texto(d, (cx, cy + 38), sub_centro, fs, GRIS, "mm", a0)
+        for i, (nom, sub) in enumerate(miembros):
+            u = _eo((dt - mk[i]) / .55)
+            if u <= 0:
+                continue
+            ang = math.radians(_ANG_INJ[i % 8])
+            ux, uy = math.cos(ang), math.sin(ang)
+            off = 420 * (1 - u)
+            p0 = (cx + ux * (92 + off), cy + uy * (112 + off))
+            p1 = (p0[0] + ux * 190, p0[1] + uy * 190)
+            col = AMBAR if mk[i + 1] > dt >= mk[i] else PERGAMINO
+            d.line((p0, p1), fill=(70, 56, 36, int(255 * u)), width=26)
+            d.line((p0, p1), fill=col + (int(200 * u),), width=4)
+            d.ellipse((p1[0] - 20, p1[1] - 20, p1[0] + 20, p1[1] + 20), fill=(70, 56, 36, int(255 * u)), outline=col + (int(220 * u),),
+                      width=3)
+            cos_ = _eo((dt - mk[i] - .5) / .5)
+            if cos_ > 0:
+                px, py = -uy, ux
+                q0 = (p0[0] + px * 26 + ux * 6, p0[1] + py * 26 + uy * 6)
+                q1 = (p0[0] - px * 26 + ux * 6, p0[1] - py * 26 + uy * 6)
+                _puntadas(d, q0, q1, ROJO, 255 * cos_, n=3)
+                if dt - mk[i] < 1.6:
+                    for k in range(3):
+                        gx = p0[0] + (k - 1) * 10 + ux * 8
+                        gy = p0[1] + 10 + (dt - mk[i] - .5) * 60 * (1 + k * .25)
+                        d.ellipse((gx - 4, gy - 5, gx + 4, gy + 5), fill=ROJO + (int(200 * cos_),))
+            lx, ly = p1[0] + ux * 34, p1[1] + uy * 34
+            anc = "lm" if ux > .2 else ("rm" if ux < -.2 else "mm")
+            _texto(d, (lx, ly - 16), nom, fn_, col, anc, 255 * u)
+            if sub:
+                _texto(d, (lx, ly + 22), sub, fs, GRIS, anc, 255 * u)
+        if u_r > 0 and remate:
+            _texto(d, (M + w / 2, M + h - 34), remate, fs, PERGAMINO, "mm", 255 * u_r)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def linaje(raiz=("Godfrey", "primer Señor del Círculo"), hijos=(("Godrick", "el enclenque de la camada"),
+                                                                    ("Godefroy", "encerrado para siempre")),
+           medio="la sangre, cada vez más diluida", remate="El linaje dorado", titulo="La sangre de Godfrey", w=1500, h=740):
+    """Árbol del linaje dorado. Marca 0: la raíz (corona dorada que brilla). Marca 1: el tronco baja y se apaga de oro a gris
+    (`medio`, la sangre diluida, en trazos). Marcas 2..n+1: cada hijo cuelga del tronco y le brotan miembros cosidos con
+    puntadas rojas (se injerta). Marca n+2: `remate` y la corona pierde el brillo."""
+    ftit, fn_, fs, fgr = fuente("r", 40), fuente("r", 42), fuente("i", 28), fuente("r", 56)
+    n = len(hijos)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 4)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, ry = M + w / 2, M + 175
+        u0 = _eo((dt - mk[0]) / .5)
+        u_fin = _eo((dt - mk[n + 2]) / .8)
+        if u0 > 0:
+            capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dc = ImageDraw.Draw(capa)
+            pts = [(cx - 60, ry + 22), (cx - 60, ry - 20), (cx - 30, ry), (cx, ry - 38), (cx + 30, ry), (cx + 60, ry - 20),
+                   (cx + 60, ry + 22)]
+            dc.polygon(pts, fill=ORO + (int(255 * u0 * (1 - .5 * u_fin)),))
+            im.alpha_composite(_brillo(capa, 16.0, 1.6 * (1 - .8 * u_fin)))
+            d = ImageDraw.Draw(im)
+            _texto(d, (cx + 90, ry - 8), raiz[0], fgr, ORO, "lm", 255 * u0)
+            _texto(d, (cx + 92, ry + 38), raiz[1], fs, GRIS, "lm", 255 * u0)
+        u1 = _eo((dt - mk[1]) / 1.0)
+        yb = M + h - 250
+        if u1 > 0:
+            pasos = 18
+            for k in range(0, int(pasos * u1), 2):
+                f = k / pasos
+                y0_ = ry + 40 + (yb - 60 - ry - 40) * f
+                y1_ = ry + 40 + (yb - 60 - ry - 40) * (f + 1 / pasos)
+                col = tuple(int(ORO[j] + (GRIS[j] - ORO[j]) * f) for j in range(3))
+                d.line((cx, y0_, cx, y1_), fill=col + (int(255 * (1 - .5 * f)),), width=int(8 - 5 * f))
+            _texto(d, (cx - 28, (ry + yb) / 2 - 10), medio, fs, GRIS, "rm", 255 * u1)
+        sp = w * .5 / max(1, n - 1) if n > 1 else 0
+        for i, (nom, sub) in enumerate(hijos):
+            u = _eo((dt - mk[i + 2]) / .5)
+            if u <= 0:
+                continue
+            x = cx - w * .25 + sp * i if n > 1 else cx
+            _linea(d, (cx, yb - 60), (x, yb - 60), u, GRIS, 200 * u, 3)
+            _linea(d, (x, yb - 60), (x, yb - 14), u, GRIS, 200 * u, 3)
+            br = _eo((dt - mk[i + 2] - .4) / .9)
+            for k in range(5):
+                if br * 5 <= k:
+                    break
+                ang = math.radians(150 + k * 60) if k < 3 else math.radians(-30 + (k - 3) * 240)
+                ang = math.radians([160, 200, 20, -20, 90][k])
+                q0 = (x + math.cos(ang) * 38, yb + math.sin(ang) * 34)
+                q1 = (x + math.cos(ang) * 110, yb + math.sin(ang) * 90)
+                if k == 4:
+                    continue
+                d.line((q0, q1), fill=(110, 80, 50, int(230 * u)), width=14)
+                d.ellipse((q1[0] - 11, q1[1] - 11, q1[0] + 11, q1[1] + 11), fill=(110, 80, 50, int(230 * u)))
+                _puntadas(d, (q0[0] - 9, q0[1] - 9), (q0[0] + 9, q0[1] + 9), ROJO, 240 * u, n=1, s=9)
+            d.ellipse((x - 26, yb - 26, x + 26, yb + 26), fill=(16, 13, 9, int(255 * u)), outline=ORO_OSC + (int(255 * u),), width=4)
+            col = AMBAR if mk[i + 3] > dt >= mk[i + 2] else PERGAMINO
+            _texto(d, (x, yb + 76), nom, fn_, col, "mt", 255 * u)
+            _texto(d, (x, yb + 128), sub, fs, GRIS, "mt", 255 * u)
+        u_r = _eo((dt - mk[n + 2]) / .6)
+        if u_r > 0:
+            _texto(d, (M + w / 2, M + h - 34), remate, fs, PERGAMINO, "mm", 255 * u_r)
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

@@ -277,6 +277,12 @@ python fab.py <v> fx montaje        tramos con MG/videos pre-renderizados a 960 
   **Pantallas finales de youtubers en los clips (12-nov-2026, el 4:10 de la misma v2: «THANKS FOR WATCHING / SUBSCRIBE FOR MORE»):**
   la hoja de medios no ve el último segundo → `_ultimos.py` (primer y último cuadro de CADA clip, `videos/tes_builds_rotas/`) y se
   rehace todo clip con logo, cuenta atrás, texto del youtuber o fundido a negro.
+  **Tarjetas A MITAD del clip (12-nov-2026, el 2:07 de la v3: tarjeta blanca a pantalla completa «#8 Skeleton Dinner Party /
+  Top 10 Slo-Mo Bow Kills»; y en el 16:10 un recorte vertical sobre negro):** los videos «Top 10», «ranking», «compilation» y
+  «best of» meten una tarjeta de título ENTRE puesto y puesto, y `_ultimos.py` no la ve. → `_tarjetas.py` (`videos/tes_builds_rotas/`)
+  barre CADA clip entero a 3 cuadros/s (blanco dominante, fondo plano de un color, negro puro con texto o con un recorte) y hace
+  hoja de los sospechosos; mirarla antes del render. Mejor aún: no tomar clips de compilaciones «Top N» (`evitar_canales` en cuanto
+  salga una) y preferir gameplay continuo.
   Lo de abajo sobre Lyria queda para videos viejos. Riesgo: Content ID del OST (reclamo de monetización): anotarlo si llega. **Reclamos vistos:** Viva Piñata «Oven-Fresh Day» (TEOSTO_TONO_STEF_CS, `rare_auge_caida`, 28-oct): no usar la OST de Viva Piñata. Si llega un reclamo antes de publicar: cambiar la pista en `armar_musica_ost.py` → `mezcla` → `final` (solo audio, la imagen se copia) → resubir al mismo hueco y borrar el viejo.
 - **Lyria**: `LYRIA` con `tramos` (cada uno <= 175 s) y `fab.py <v> musica` llama a `lyria_tramos.py`. En `estilo` NO pongas el
   nombre del juego («in the style of World of Warcraft»): el filtro rechaza nombres propios. Usa «classic high-fantasy MMORPG soundtrack».
@@ -943,6 +949,17 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   `ambiente=0.0` general → `python fab.py <v> bajar 50,51 --rehacer` (con volumen > 0, `secuencia_yt._bajar_tramo` baja
   `bv+ba` y conserva el audio en AAC) → la OST se APARTA −14 dB en esos beats (`armar_musica_ost.py`, `APARTA_DB`, rampas de
   0,5 s) → `python fab.py <v> ambiente` (audio/ambiente.wav, nivelado) → `mezcla` lo pone bajo la voz con ducking de 5 dB.
+  **Volumen del clip de fondo (12-nov-2026, `tes_builds_rotas` v3, el usuario: «se escucha muy fuerte el sonido del video
+  original… se escucha mal»):** con la voz HABLANDO encima, 0,8 deja el clip al nivel de la voz (−18 dB frente a −16 de la mezcla).
+  0,8-0,9 solo con la voz CALLADA (`post`); con voz encima ≤ 0,45 (≈ 5 dB bajo la mezcla) y medir por segundo `audio/ambiente.wav`
+  contra `audio/final.wav` en cada beat con `ambiente_por`. Si el clip no aporta un sonido que la voz nombra, sin `ambiente_por`.
+  **QUÉ se sube en los silencios (el usuario, 12-nov-2026: «sí me gusta que subas la música de fondo cuando el narrador se guarda
+  silencio, pero en esta ocasión no es música, es como un tráiler o algo así, no se escucha chido»):** subir el clip con la voz
+  callada SIGUE valiendo, pero solo si lo que suena es MÚSICA del juego o SONIDO DEL JUEGO que valga la pena oír (grito, golpe,
+  diálogo del personaje). Audio de tráiler o de video EDITADO (narración, golpes y «whoosh» de edición, música ajena, voz de
+  youtuber, el montaje de un «Top 10») NO se sube: ese beat va sin `ambiente_por` y en el hueco suena la OST del canal. Revisar
+  TODOS los `ambiente_por` con ese criterio (oírlos o Whisper `_sonido_original.py habla` + mirar el título: «Top 10», «compilation»,
+  «trailer», «montage» = fuera).
 - **Narrador encima** (demos de desarrolladores, tráileres «overview», guías): Whisper sobre cada clip con audio; si habla
   alguien, Demucs `--two-stems vocals` y el clip se queda con `no_vocals` (`videos/oot_remake_cambios/quitar_narrador.py`),
   y Whisper otra vez (debe salir «sin habla»). En oot_remake_cambios 10 de 21 clips traían la voz en inglés de la demo.
@@ -986,7 +1003,7 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   el usuario descartó el piso viejo de 12 min del sistema anterior) · gema del canal · sin patrocinio · puente al video de Márika.
 - **VOZ NUEVA desde el 11-nov-2026 (el usuario): «el Profeta» de ElevenLabs** (`HNSF1CTQmub252yhXROX`, `eleven_v4_turbo`, stability .5)
   **PLANA**: nada de risas ni emociones alegres (`sin_etiquetas` con laugh/amused/chuckl/cheer/happy/excit/whisper…); a veces
-  `[annoyed]`/`[growls]`. Escritura normal, sin FONETICA. Muestras en `canales/muestras_voz/runa_profeta/` (eligió la B). En el 1.er
+  `[annoyed]`/`[growls]`. Escritura normal; **única FONETICA fija: `{"Miquella": "Miquéla"}`** (12-nov, el usuario: el Profeta decía «MÍ-que-lla»; el acento va en «que»: ミケラ, inglés mi-KEL-la). Arreglo sin re-render: regenerar SOLO esas frases con `voz --solo <keys>` (sin `--solo`, `voz` rehace la semilla 1 de TODA frase cuya s1 esté en `_descartes`: 11 tomas de más), `seleccionar`, estirar cada toma a la duración vieja con atempo (`videos/er_godrick_atrocidades/_ajustar_miquella.py`, ±3 %) y `mezcla` + `final`. Muestras en `canales/muestras_voz/runa_profeta/` (eligió la B). En el 1.er
   video (`er_godrick_atrocidades`) hay VOTACIÓN en comentarios «narrador anterior» o «nuevo profeta» (el que tenga más comentarios se
   queda): se OYE la toma real de Faraon (PISTA voz=True) con el MG `votacion` de mg_er. Medir a 7 días (comentarios de cada opción,
   % visto, subs por 1 000) antes de decidir. Lo de abajo (Faraon) queda como referencia del narrador anterior.

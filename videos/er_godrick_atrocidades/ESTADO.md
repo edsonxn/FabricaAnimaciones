@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: runa_caida · meta: hueco del canal (URGENTE: sin video desde sáb 14-11 10:00 CDMX; ciclo 3 d) → `canales --actualizar`
 - estilo: secuencia_yt (gameplay de Elden Ring por beat + PEGATINAS + pant() + MG NUEVOS `nucleo/mg_er.py` + mapas; sin patrocinio) · **voz NUEVA: ElevenLabs «el Profeta» `HNSF1CTQmub252yhXROX` PLANA** → doc: docs/estilo_secuencia_yt.md § Runa Caída
-- etapa: MASTER ✅ 12-nov (salida/er_godrick_atrocidades_MASTER.mp4, 24:55 con pantalla final, 1,8 GB; render por 5 tramos + concat; verificar CER 0,008) · SUBIDO privado y programado sáb 14-nov 10:00 CDMX: https://youtu.be/B7UTTAwu6sc (registrado en runa_caida.json + BITACORA)
+- etapa: MASTER ✅ 12-nov (salida/er_godrick_atrocidades_MASTER.mp4, 24:55 con pantalla final, 1,8 GB; render por 5 tramos + concat; verificar CER 0,008) · SUBIDO privado y programado sáb 14-nov 10:00 CDMX: https://youtu.be/8GB3iSozTCk (registrado en runa_caida.json + BITACORA)
 - siguiente: medir a 7 días (≈ 21-nov) la votación «narrador anterior / nuevo profeta» (canales/formula/runa_caida.md); `limpiar` al aprobar
 
 ## Sesiones (UNA sesión directo al MASTER; avance y MASTER a la tele sin preguntar)

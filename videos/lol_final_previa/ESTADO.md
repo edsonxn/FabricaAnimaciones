@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: Crónicas de ligoleyen (UCXU8DV4QJ24yhwXmrR_eLhw; subida por Studio en el navegador, NO está en la API) · publicar **jue 12-nov** (el usuario, 10-nov: deja respirar el resumen de semis del 10-nov); final sáb 14-nov 19:00 UTC (13:00 CDMX), Barclays Center, Bo5
 - estilo: análisis táctico (secuencia_yt + VOD + `mg_tactica` + `mg_lol` + 3D `nucleo/tactica3d`) → doc: docs/estilo_analisis_tactico.md § GUÍA RÁPIDA · copiar de `videos/lol_semana2/` y `videos/lol_worlds_2026/j6_3d.py`
-- etapa: ✅ SUBIDO por Studio y PROGRAMADO jue 12-nov-2026 10:00 CDMX · https://youtu.be/ukbNE_8zGwk (MASTER 23:11, 1 339 MB, desfase 0) · miniatura «GEN vs BLG · LA GRAN FINAL» (fórmula del canal), 22 etiquetas, no para niños, IA «No», sin promoción de pago, anuncios + mid-roll, idoneidad «Nada de lo anterior», .srt español PUBLICADO
+- etapa: ✅ SUBIDO por Studio y PROGRAMADO jue 12-nov-2026 10:00 CDMX · https://youtu.be/ukbNE_8zGwk (MASTER 23:11, 1 339 MB, desfase 0) · miniatura «GEN vs BLG / LA FINAL» (estilo de LETRAS ROJAS de las 3 últimas del canal, cambiada en Studio el 11-nov 18:55), 22 etiquetas, no para niños, IA «No», sin promoción de pago, anuncios + mid-roll, idoneidad «Nada de lo anterior», .srt español PUBLICADO
 - siguiente: nada de producción. Medir a 48 h (CTR, retención) en Studio; resumen de la final después del sáb 14-nov.
 
 ## Sesiones (protocolo docs/sesiones.md · «continúa el video lol_final_previa»)
@@ -111,6 +111,7 @@
   MINIATURA: el usuario rechazó la de caras (flow_a: «no me gustan… mejor como las últimas del canal, para que se reconozca»)
   → rehecha en Flow con la miniatura de IG-LYON (i.ytimg.com) como ingrediente: miniatura/canal_a.png → elegida.jpg; la rechazada
   queda en elegida_rechazada_t1.jpg. .srt cargado con el hook de HTMLInputElement.click (change en setTimeout) + SHA-256 = el local.
+- ✅ (11-nov 18:55) MINIATURA otra vez: el usuario no quería la de siglas dorado/cian («quiero una similar a las últimas tres: cayeron gigantes, pausa por pausa, solo quedan dos»). Rehecha en Flow con «SOLO QUEDAN 2» (o8FijKJGjlM) de ingrediente: letras condensadas blanco «GEN vs BLG» + rojo «LA FINAL», píldora WORLDS 2026, copa plateada bajo el foco con pedestal dorado y cian, humo rojo, sin caras. miniatura/rojo_3.png → elegida.jpg (variantes rojo_1-4, referencias en miniatura/ref/). Cambiada en Studio (Guardar; sigue PROGRAMADO 12 nov 2026). La anterior = canal_a.png.
 - FALTA (ya nada de investigación), pistas_j3/j6.json (ya están j6_baron.mp4 y j6_fin.mp4). Agente de
   RELLENO (de la sesión 23:20) cortando r_lyon2, r_ig1, r_ig2, r_ig3fin, r_dk2, r_dk3fin, r_t1g1, r_escenario → datos_relleno.md.
 - SIGUIENTE en orden: afinar j1, j3 (+ Barón 31:15), j4, j6 (Barón 29:25: «se le acaba el Barón»), j3_ctx/j3_fin/j6_ctx/j6_fin con los

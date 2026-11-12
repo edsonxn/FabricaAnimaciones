@@ -41,7 +41,7 @@ Clips: transmisión oficial de LoL Esports Latinoamérica / Riot Games.
 Worlds 2026, Mundial de League of Legends, final Worlds 2026, Gen.G vs BLG, Gen.G, Bilibili Gaming, BLG, T1, Faker, Ruler, Chovy, Knight, Viper, Canyon, Kiin, Bin, Xun, LoL Esports, League of Legends, previa de la final, jugadas analizadas, Barclays Center
 
 ## Miniatura
-miniatura/elegida.jpg (Flow, 11-nov, FÓRMULA DEL CANAL: «GEN vs BLG» dorado/cian + trofeo partido por un rayo + «LA GRAN FINAL»; ingrediente = la de IG-LYON). La de caras (elegida_rechazada_t1.jpg) la rechazó el usuario.
+miniatura/elegida.jpg (Flow, 11-nov, estilo de LETRAS ROJAS de las 3 últimas del canal: «GEN vs BLG» blanco + «LA FINAL» rojo, píldora WORLDS 2026, copa bajo el foco; ingrediente = «SOLO QUEDAN 2»). Rechazadas por el usuario: la de caras (elegida_rechazada_t1.jpg) y la de siglas dorado/cian (canal_a.png).
 
 ## Publicación
 PROGRAMADO jue 12-nov-2026 por Studio (Crónicas de ligoleyen, fuera de la API). No para niños; anuncios + mid-roll; idoneidad «Nada de lo

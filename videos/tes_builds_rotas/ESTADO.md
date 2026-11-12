@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_tamriel · meta: **jue 13-nov-2026 12:08 CDMX (18:08 UTC)**, pedido por el usuario (11 seres → 13 este → 16 cosas_nunca → 19 secretos_40, cada 3 días; separación del canal bajada a 72 h el 10-nov; 11→13 = 48 h → subir con `--forzar`, lo pidió él)
 - estilo: secuencia_yt (gameplay Skyrim por beat + MG `nucleo/mg_tes.py` + pegatinas `pv()` + presentaciones `nucleo/presenta.py` + mapas tema `tes`) · voz **el Profeta** (ElevenLabs, 8 de 10 datos; v3) + Johnny, MariCarmen y Hope peleándose por el resto (la v2 era Johnny + invitados) · OST oficial de Skyrim → doc: docs/estilo_secuencia_yt.md § Tamriel + § REGLA DE ORO + § CATÁLOGO + § PRESENTACIONES
-- etapa: **v3b SUBIDO y PROGRAMADO** jue 13-nov-2026 12:08 CDMX (**vuM2Pzgoin0**) · MASTER 20:00,7 con pantalla final · rfdmrXaAOvY (v3) y uMdEq4pHnqI (v2) privados SIN fecha (borrar solo con OK del usuario)
-- siguiente: Studio (monetización: anuncios + cuestionario, https://studio.youtube.com/video/vuM2Pzgoin0/edit) · borrar rfdmrXaAOvY y uMdEq4pHnqI si el usuario da el OK · medir a 7 días (≈ 20-nov: Profeta vs Johnny, campaña de suscripción, críticas con contraburla)
+- etapa: **v3b SUBIDO y PROGRAMADO** jue 13-nov-2026 12:08 CDMX (**vuM2Pzgoin0**) · MASTER 20:00,7 con pantalla final · rfdmrXaAOvY (v3) y uMdEq4pHnqI (v2) BORRADOS (12-nov, OK del usuario)
+- siguiente: Studio (monetización: anuncios + cuestionario, https://studio.youtube.com/video/vuM2Pzgoin0/edit) · medir a 7 días (≈ 20-nov: Profeta vs Johnny, campaña de suscripción, críticas con contraburla)
 
 ## Sesiones (una sesión, directo a MASTER, regla 5-nov · «continúa el video tes_builds_rotas» retoma aquí · protocolo docs/sesiones.md)
 - alias: builds rotas, builds de Skyrim, video de Tamriel del 13, guiño a Roirek

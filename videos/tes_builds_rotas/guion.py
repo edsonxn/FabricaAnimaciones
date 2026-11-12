@@ -35,12 +35,14 @@ SECUENCIA = dict(
     transicion="slideleft",
     fundido=0.35,
     ambiente=0.0,
-    ambiente_por={"scene-015": .8, "scene-060": .8},   # se re-indexa con _remapear.py: grito Ralentizar tiempo (p10b) y Úlfric (p6b)
+    ambiente_por={"scene-060": .45},   # 12-nov: scene-015 FUERA y 060 de .8 a .45 (el clip se oía fuerte y mal, el usuario: ningún clip al nivel de la voz)
+      # se re-indexa con _remapear.py: grito Ralentizar tiempo (p10b) y Úlfric (p6b)
     recorte_por={},
     yt=dict(sufijo="", min_s=40, max_min=240, alto=1080,
             evitar_canales=["BLUxCHEESE", "TIMENG", "The Glitch Report", "Swezz Cheese", "Barrett Knives",
                             "Saika", "Max Modded", "Ero-sama", "OrcCorp", "DCARR GAMING",
-                            "Spoiler Alert Theater", "PIXEL STORYZ", "Pixel Storyz", "Syzleaf", "RGR29", "Xander Rey Gaming", "AtariGen 75", "NOB NO13", "Zephyr", "A Bard's Ballad"]),
+                            "Spoiler Alert Theater", "PIXEL STORYZ", "Pixel Storyz", "Syzleaf", "RGR29", "Xander Rey Gaming", "AtariGen 75", "NOB NO13", "Zephyr", "A Bard's Ballad",
+                            "Cameron Marks"]),
 )
 
 TRANSICIONES = [("continua", 0.1)] * 40

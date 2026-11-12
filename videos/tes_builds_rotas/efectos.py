@@ -351,7 +351,7 @@ FX = [
          "Piedra: la del Amante", ("quince por ciento más rápido", .4), ["Piedra: la del Amante", "al noreste de Markarth"],
          "piedra Amante", entrada="pliegue"),
     mg(T.bucle("El bucle legal", ["Ropa de alquimia", "Poción de encantamiento", "Mejor ropa", "Y otra vez"], [0, 20, 32, 40],
-               unidad=" %"),
+               unidad=" %", ancho=1700),   # 12-nov: con 1100 «POCIÓN DE ENCANTAMIENTO» se cortaba en el borde del panel
        "con ropa de alquimia haces", ("el equipo de herrería", .3),
        ["con ropa de alquimia haces", "Con esa poción", "Y otra vez", "Hasta que deja de subir"], "bucle legal", y=.46),
     mg(T.niveles("Daño extra del arma", [("Legendario normal", 20), ("Calidad 29 · juego base", 52), ("Calidad 41 · Dragonborn", 73)],

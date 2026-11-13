@@ -1,0 +1,125 @@
+<title>Voces de La Reina Loba</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: una columna de pergamino; cada personaje es un bloque con sus voces candidatas y un Sí / No por voz */
+:root {
+  --bg: #f1ece2; --panel: #fbf8f2; --fg: #231d17; --muted: #6d6256; --line: #d8cdbd;
+  --accent: #7a1f1a; --si: #2f6b3a; --no: #9a2b22; --chip: #ebe3d6;
+  --display: "Cinzel", Georgia, serif; --body: "Inter", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #16130f; --panel: #201b16; --fg: #ece4d6; --muted: #a89a88; --line: #3a3128;
+  --accent: #d0574d; --si: #6fbf7c; --no: #e2675c; --chip: #2b241d; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #16130f; --panel: #201b16; --fg: #ece4d6; --muted: #a89a88; --line: #3a3128;
+  --accent: #d0574d; --si: #6fbf7c; --no: #e2675c; --chip: #2b241d; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 48px; }
+main { max-width: 760px; margin: 0 auto; display: grid; gap: 22px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 5vw, 36px); margin: 0; letter-spacing: .02em; text-wrap: balance; }
+.intro { color: var(--muted); margin: 6px 0 0; max-width: 62ch; }
+section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; }
+section h2 { font-family: var(--display); font-size: 20px; margin: 0; color: var(--accent); }
+section .rol { color: var(--muted); font-size: 13px; margin: -6px 0 0; }
+.voz { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; align-items: center; padding-top: 10px; border-top: 1px dashed var(--line); }
+.voz:first-of-type { border-top: 0; padding-top: 0; }
+.nombre { font-weight: 600; }
+.desc { color: var(--muted); font-size: 13px; }
+audio { grid-column: 1 / -1; width: 100%; height: 36px; }
+.elige { display: flex; gap: 6px; }
+.elige button { font: 600 13px var(--body); border: 1px solid var(--line); background: var(--chip); color: var(--fg); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.elige button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.elige button[aria-pressed="true"].si { background: var(--si); border-color: var(--si); color: var(--panel); }
+.elige button[aria-pressed="true"].no { background: var(--no); border-color: var(--no); color: var(--panel); }
+.salida { position: sticky; bottom: env(safe-area-inset-bottom, 0px); background: var(--panel); border: 1px solid var(--accent); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; }
+.salida p { margin: 0; font-size: 13px; color: var(--muted); }
+#resumen { width: 100%; box-sizing: border-box; min-height: 64px; font: 13px/1.4 ui-monospace, Consolas, monospace; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 8px; resize: vertical; }
+#copiar { justify-self: start; font: 600 14px var(--body); background: var(--accent); color: var(--panel); border: 0; border-radius: 8px; padding: 9px 18px; cursor: pointer; }
+#copiar:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+</style>
+
+<main>
+  <header>
+    <h1>Voces de La Reina Loba</h1>
+    <p class="intro">Ronda 2: voces DISEÑADAS por nosotros en ElevenLabs, grabación de estudio sin eco, en español latino. Cada personaje trae 3 diseñadas y, abajo, la de biblioteca que ya tenía (tus elecciones anteriores ya vienen en Sí). Marca Sí en la que quieras; si dejas varias en Sí, uso la de más arriba. Copia tu elección y pégala en el chat.</p>
+  </header>
+  <div id="lista"></div>
+  <div class="salida">
+    <p>Tu elección (se actualiza sola):</p>
+    <textarea id="resumen" readonly aria-label="Resumen de tu elección"></textarea>
+    <button id="copiar" type="button">Copiar elección</button>
+  </div>
+</main>
+
+<script>
+const ROLES = [
+  { id: "potema", nombre: "Potema, la Reina Loba", rol: "De niña ambiciosa a reina nigromante; unas 14 frases. Antes elegiste Victoria.", voces: [
+    ["d_potema_1", "Diseñada 1", "Contralto fría e imperial"], ["d_potema_2", "Diseñada 2", "Contralto fría e imperial"], ["d_potema_3", "Diseñada 3", "Contralto fría e imperial"],
+    ["potema_victoria", "Victoria", "Biblioteca · tu elección anterior"], ["potema_soraya", "Soraya", "Biblioteca · latina, grave"]] },
+  { id: "pelagio", nombre: "Pelagio III el Loco", rol: "El emperador loco: «¡Más vino!» (2 frases).", voces: [
+    ["d_pelagio_1", "Diseñada 1", "Aristócrata nervioso y paranoico"], ["d_pelagio_2", "Diseñada 2", "Aristócrata nervioso y paranoico"], ["d_pelagio_3", "Diseñada 3", "Aristócrata nervioso y paranoico"],
+    ["pelagio_bramante", "Bramante", "Biblioteca · delirante (Chile)"]] },
+  { id: "sheogorath", nombre: "Sheogorath", rol: "El príncipe de la locura que le sirve té a Pelly (2 frases).", voces: [
+    ["d_sheogorath_1", "Diseñada 1", "Teatral y caprichoso"], ["d_sheogorath_2", "Diseñada 2", "Teatral y caprichoso"], ["d_sheogorath_3", "Diseñada 3", "Teatral y caprichoso"],
+    ["pelagio_quirk", "Profesor Quirk", "Biblioteca · nasal y excéntrico"]] },
+  { id: "uriel", nombre: "Uriel III", rol: "El hijo de Potema que se corona emperador. Antes elegiste César.", voces: [
+    ["d_uriel_1", "Diseñada 1", "Joven, orgulloso y decidido"], ["d_uriel_2", "Diseñada 2", "Joven, orgulloso y decidido"], ["d_uriel_3", "Diseñada 3", "Joven, orgulloso y decidido"],
+    ["uriel_cesar", "César", "Biblioteca · tu elección anterior"]] },
+  { id: "kintyra", nombre: "Kintyra II", rol: "La emperatriz presa. Antes elegiste Natalia.", voces: [
+    ["d_kintyra_1", "Diseñada 1", "Joven digna con carácter"], ["d_kintyra_2", "Diseñada 2", "Joven digna con carácter"], ["d_kintyra_3", "Diseñada 3", "Joven digna con carácter"],
+    ["kintyra_natalia", "Natalia", "Biblioteca · tu elección anterior"]] },
+  { id: "viejo", nombre: "Emperadores viejos", rol: "Antíoco, Uriel II y Styrr, el sacerdote de Skyrim. Antes elegiste Arturo.", voces: [
+    ["d_viejo_1", "Diseñada 1", "Anciano grave y sarcástico"], ["d_viejo_2", "Diseñada 2", "Anciano grave y sarcástico"], ["d_viejo_3", "Diseñada 3", "Anciano grave y sarcástico"],
+    ["viejo_arturo", "Arturo", "Biblioteca · tu elección anterior"]] },
+  { id: "pelagio2", nombre: "Pelagio II", rol: "El padre que casa a Potema a los 13 (1 frase).", voces: [
+    ["d_pelagio2_1", "Diseñada 1", "Monarca viejo, seco y frío"], ["d_pelagio2_2", "Diseñada 2", "Monarca viejo, seco y frío"], ["d_pelagio2_3", "Diseñada 3", "Monarca viejo, seco y frío"],
+    ["cefor_joan", "Joan", "Biblioteca · grave, de misterio"]] },
+  { id: "cefor", nombre: "Hombres de la corte", rol: "Duque Mentin, Falk Barba de Fuego y el maestro del ritual nigromante.", voces: [
+    ["d_corte_1", "Diseñada 1", "Barítono grave y solemne"], ["d_corte_2", "Diseñada 2", "Barítono grave y solemne"], ["d_corte_3", "Diseñada 3", "Barítono grave y solemne"],
+    ["cefor_odran", "Odran", "Biblioteca · grave (Argentina)"]] },
+  { id: "mensajera", nombre: "La mensajera", rol: "Le anuncia a Potema que quemaron a su hijo (1 frase).", voces: [
+    ["d_mensajera_1", "Diseñada 1", "Joven, voz quebrada por la noticia"], ["d_mensajera_2", "Diseñada 2", "Joven, voz quebrada por la noticia"], ["d_mensajera_3", "Diseñada 3", "Joven, voz quebrada por la noticia"],
+    ["kintyra_daniela", "Daniela", "Biblioteca · joven y sofisticada"]] },
+];
+const ANTES = ["potema_victoria", "uriel_cesar", "kintyra_natalia", "viejo_arturo"];
+const estado = {};
+const lista = document.getElementById("lista");
+lista.style.display = "grid"; lista.style.gap = "22px";
+for (const r of ROLES) {
+  const s = document.createElement("section");
+  s.innerHTML = `<h2>${r.nombre}</h2><p class="rol">${r.rol}</p>`;
+  for (const [archivo, nombre, desc] of r.voces) {
+    const d = document.createElement("div");
+    d.className = "voz";
+    d.innerHTML = `<div><div class="nombre">${nombre}</div><div class="desc">${desc}</div></div>
+      <div class="elige" role="group" aria-label="${nombre}">
+        <button type="button" class="si" id="si_${archivo}" aria-pressed="false">Sí</button>
+        <button type="button" class="no" id="no_${archivo}" aria-pressed="false">No</button></div>
+      <audio controls preload="none" src="voz/${archivo}.mp3"></audio>`;
+    const si = d.querySelector(".si"), no = d.querySelector(".no");
+    const marca = v => { estado[archivo] = v; si.setAttribute("aria-pressed", v === "si"); no.setAttribute("aria-pressed", v === "no"); resumir(); };
+    si.onclick = () => marca(estado[archivo] === "si" ? null : "si");
+    no.onclick = () => marca(estado[archivo] === "no" ? null : "no");
+    s.appendChild(d);
+  }
+  lista.appendChild(s);
+}
+function resumir() {
+  const lin = ["Voces para La Reina Loba:"];
+  for (const r of ROLES) {
+    const si = r.voces.filter(v => estado[v[0]] === "si").map(v => v[1]);
+    const no = r.voces.filter(v => estado[v[0]] === "no").map(v => v[1]);
+    lin.push(`${r.nombre}: Sí ${si.join(", ") || "—"} · No ${no.join(", ") || "—"}`);
+  }
+  document.getElementById("resumen").value = lin.join("\n");
+}
+for (const a of ANTES) document.getElementById("si_" + a)?.click();
+resumir();
+document.getElementById("copiar").onclick = async () => {
+  const t = document.getElementById("resumen"), b = document.getElementById("copiar");
+  try { await navigator.clipboard.writeText(t.value); b.textContent = "Copiado"; }
+  catch (e) { t.select(); b.textContent = "Selecciona y copia con Ctrl+C"; }
+  setTimeout(() => b.textContent = "Copiar elección", 2500);
+};
+</script>

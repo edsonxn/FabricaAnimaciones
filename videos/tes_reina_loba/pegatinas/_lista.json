@@ -1,0 +1,131 @@
+{
+ "ala_pelagio": "Pelagius Wing",
+ "amuleto_reyes": {
+  "url": "https://images.uesp.net/9/9c/OB-item-Amulet_of_Kings.jpg"
+ },
+ "artaeum": "Artaeum",
+ "barco_katariah": {
+  "url": "https://images.uesp.net/e/ee/SR-place-The_Katariah.jpg"
+ },
+ "carga_guerra_diamante": {
+  "url": "https://images.uesp.net/e/e1/SR-load-The_War_of_the_Red_Diamond.jpg"
+ },
+ "carga_pelagio_1": {
+  "url": "https://images.uesp.net/5/5a/SR-load-Pelagius_III%2C_sometimes_called_Pelagius_the_Mad.jpg"
+ },
+ "carga_pelagio_2": {
+  "url": "https://images.uesp.net/3/3d/SR-load-Pelagius_III%2C_also_known_as_Pelagius_the_Mad.jpg"
+ },
+ "carga_reina_soledad": {
+  "url": "https://images.uesp.net/f/fa/SR-load-I_am_the_Queen_of_Solitude.jpg"
+ },
+ "carga_soledad_septim": {
+  "url": "https://images.uesp.net/b/ba/SR-load-Solitude_has_traditionally_had_strong_ties.jpg"
+ },
+ "catacumbas_potema": "Potema's Catacombs",
+ "ciudad_imperial": "Imperial City",
+ "cueva_wolfskull": "Wolfskull Cave",
+ "dervenin": {
+  "url": "https://images.uesp.net/4/43/SR-npc-Dervenin.jpg"
+ },
+ "draugr_skyrim": "Draugr (Skyrim)",
+ "elisif": "Elisif the Fair",
+ "emblema_potema_talla": {
+  "url": "https://static.wikia.nocookie.net/elderscrolls/images/2/26/Potemaicon.png"
+ },
+ "esqueleto_skyrim": "Skeleton (Skyrim)",
+ "estandarte_diamante_rojo": {
+  "url": "https://images.uesp.net/7/72/ON-texture-RedDiamondBanner.png"
+ },
+ "estandarte_potema": {
+  "url": "https://images.uesp.net/2/2f/SR-banner-Potema.png"
+ },
+ "falk_firebeard": "Falk Firebeard",
+ "gema_alma": {
+  "url": "https://images.uesp.net/2/2c/SR-item-Soul_Gem.jpg"
+ },
+ "glenpoint": {
+  "url": "https://images.uesp.net/9/98/DF-place-Glenpoint_%28city%29.png"
+ },
+ "hombre_lobo": {
+  "url": "https://images.uesp.net/d/dd/SR-creature-Werewolf.jpg"
+ },
+ "katariah_mascaron": {
+  "url": "https://images.uesp.net/2/20/LO-misc-Katariah_figurehead.jpg"
+ },
+ "libro_emblema_potema": {
+  "url": "https://static.wikia.nocookie.net/elderscrolls/images/0/08/TESV_Book_Potema.png"
+ },
+ "maormer": {
+  "url": "https://static.wikia.nocookie.net/elderscrolls/images/5/52/Maormer_Guard.png"
+ },
+ "mapa_bahia_iliaca": {
+  "archivo": "Iliac Anthology.jpg"
+ },
+ "mente_arcos": {
+  "url": "https://images.uesp.net/6/6d/SR-quest-The_Mind_of_Madness_04.jpg"
+ },
+ "mente_bosque": {
+  "url": "https://images.uesp.net/3/3d/SR-quest-The_Mind_of_Madness_02.jpg"
+ },
+ "mesa_te": {
+  "url": "https://static.wikia.nocookie.net/elderscrolls/images/6/69/Pelagius_III%27s_Mind_-_Main_Start_Point_%28Skyrim%29.png/revision/latest?cb=20191005220643"
+ },
+ "mesa_te_2": {
+  "url": "https://images.uesp.net/3/31/SR-quest-The_Mind_of_Madness.jpg"
+ },
+ "nigromante_skyrim": "Necromancer (Skyrim)",
+ "palacio_azul": {
+  "url": "https://images.uesp.net/b/ba/SR-place-Blue_Palace.jpg"
+ },
+ "pelagio_iii": "Pelagius Septim III",
+ "pelagio_nino": {
+  "url": "https://images.uesp.net/f/fb/SR-npc-Little_Pelagius.jpg"
+ },
+ "pelagio_suspicaz": {
+  "url": "https://images.uesp.net/6/66/SR-npc-Pelagius_the_Suspicious.jpg"
+ },
+ "pelvis_pelagio": {
+  "url": "https://images.uesp.net/e/ed/SR-icon-misc-Pelagius%27HipBone.png"
+ },
+ "potema_calavera": {
+  "url": "https://images.uesp.net/7/72/SR-icon-misc-Potema%27sSkull.png"
+ },
+ "potema_espiritu": {
+  "archivo": "Potema Septim.png"
+ },
+ "potema_espiritu_2": {
+  "url": "https://images.uesp.net/d/dc/SR-creature-Queen_Potema.jpg"
+ },
+ "potema_restos": {
+  "url": "https://images.uesp.net/d/da/SR-creature-Potema%27s_Remains.jpg"
+ },
+ "psijic_quaranir": {
+  "url": "https://images.uesp.net/5/53/SR-npc-Quaranir.jpg"
+ },
+ "salones_aullido": {
+  "url": "https://images.uesp.net/4/46/SI-place-Howling_Halls.jpg"
+ },
+ "sheogorath_skyrim": "Sheogorath (Skyrim)",
+ "soledad": "Solitude",
+ "styrr": {
+  "url": "https://images.uesp.net/5/5f/SR-npc-Styrr.jpg"
+ },
+ "templo_divinos": "Temple of the Divines (Skyrim)",
+ "tiber_septim": "Tiber Septim",
+ "torre_oro_blanco": "White-Gold Tower",
+ "trono_rubi": {
+  "url": "https://static.wikia.nocookie.net/elderscrolls/images/4/4d/Ruby_Throne.png"
+ },
+ "uriel_iii": "Uriel Septim III",
+ "uriel_iii_ob": {
+  "url": "https://images.uesp.net/5/52/OB-statue-Uriel_Septim_III.jpg"
+ },
+ "wabbajack": "Wabbajack (Skyrim)",
+ "atronach_llamas": {
+  "url": "https://images.uesp.net/5/5a/SR-creature-Flame_Atronach.jpg"
+ },
+ "sacerdote_dragon": "Dragon Priest",
+ "vampiro_skyrim": "Vampire Lord",
+ "libro_hechizos": "Spell Tomes (Skyrim)"
+}

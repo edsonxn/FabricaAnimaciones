@@ -828,6 +828,10 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
   ingredientes vuelan al medallón, que estalla en naranja) y `sorteo` (5 000 casillas de intentos y UNA dorada: 0,02 %).
 
 ## Crónicas del gaming con este motor (Nintendo/retro; primer video `banjo_tooie`, 19-oct-2026)
+- **VOZ desde el 12-nov-2026 (el usuario): ElevenLabs «Carlos Aguilar» `8MeTTgXVwMEhRVfblXOj`, grave y potente** (pidió una voz «grave
+  y profunda como la del Profeta» tras las quejas de la voz IA; muestras en `videos/_muestras_voz_gaming/`). El 1.er video con ella: tras
+  1-2 datos, placa «VOZ NUEVA» + un pedacito de Hope (~6-8 s) y «¿voz nueva o seguimos con Hope? vota en los comentarios»; se recuerda
+  en el cierre; contar votos a 7 días. Lo de abajo sobre Hope/Sarcastica es historial.
 - **El canal VUELVE a Nintendo/retro** (el usuario, 19-oct-2026; el terror CRT queda como especial) con la fórmula de Warcraft/Tamriel/
   Runa: historia + lore + lista de 10 secretos «QUE IGNORASTE», ~12-13 min, voz **Chatterbox `Sarcastica`** + `FONETICA` (Banjo →
   Bányo, Kazooie → Kazúi, Tooie → Túi, Jiggies → Yíguis, Jinjos → Yínyos, Gruntilda → Gruntílda…), `sufijo=""` y consultas completas.

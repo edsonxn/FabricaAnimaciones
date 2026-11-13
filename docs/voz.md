@@ -110,6 +110,12 @@ Queda el mecanismo para voces que SÍ lo necesitan (Applio, Chatterbox): `nucleo
 sin los 14 choques que había entre videos) + `FONETICA_CANAL = "tes"` en guion.py; la `FONETICA` del video manda encima. **No se
 declara en videos narrados con ElevenLabs.**
 
+## CRÓNICAS DEL GAMING: CARLOS AGUILAR (el usuario, 12-nov-2026)
+Pidió una voz «grave y profunda como la del Profeta» para Gaming. 8 candidatas graves latinas/españolas de la biblioteca (sin las de
+otros canales), misma frase, con Hope y el Profeta como referencia: `videos/_muestras_voz_gaming/` (`_generar.py` + `_armar.py` = mp4
+con cartela por opción, 53 créditos c/u en turbo). Eligió **Carlos Aguilar** `8MeTTgXVwMEhRVfblXOj`. El 1.er video pregunta al público
+con un pedacito de Hope (`canales/formula/cronicas_gaming.md` § 12-nov).
+
 ## VARIAS VOCES QUE COMPITEN + el público vota (el usuario, 3-nov-2026, `videos/tes_sentinel_teaser/`)
 «La voz no termina de convencerme: varias voces, una narrando 2 datos cada una y compitiendo entre ellas, y que el público vote».
 - **Elegir:** muestras de 8 voces con la MISMA frase del guion (`audio/muestras_voces/_generar.py`, cuenta con más saldo, ≈ 67 créditos
@@ -139,6 +145,7 @@ timbre ni reverb (`config.CADENA_VOZ="suave"`, automático). `guion.CADENA_VOZ="
 se quedó con la A). El loudness final sigue a -14 LUFS.
 
 ## REGLA: voz Applio (Crónicas de Warcraft) = FONÉTICA para el inglés (el usuario, 13-oct-2026)
+- **Nunca una oración de 1-2 palabras suelta (el usuario, 12-nov-2026, `wow_forever_experiencia`: «la palabra gratis la dice mal, en inglés»):** Applio (Edge multilingüe) lee en inglés las oraciones cortas sueltas aunque sean españolas («Gratis.», «Literalmente.», «Vívelo.», «Muere bien.», «Saluda.»), y `idioma_voz` no siempre lo caza. Se unen con coma o «y» a la oración vecina («siéntate y saluda», «gratis, gratis de verdad, y no cuesta…»). Antes de `voz`, busca en el guion toda oración de ≤ 2 palabras que no sea «Número N.» y reescríbela.
 Applio = Edge TTS `fr-FR-RemyMultilingualNeural` + RVC. La voz base es **multilingüe**: una palabra en inglés la hace cambiar de
 idioma («Overgear» leído como se escribe) y una frase suelta muy corta sale con acento de otro idioma («Oficialmente.» →
 portugués, «Guarda ese dato.» → italiano). Al revés que ElevenLabs, aquí SÍ hay fonética:

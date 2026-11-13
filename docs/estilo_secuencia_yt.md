@@ -4,6 +4,7 @@ Creado el 13-oct-2026 en la mudanza desde `C:\googleimagenes` (`docs/migracion_g
 Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beats y armado de siempre).
 
 ## REGLA DE ORO Y LISTA DE CONTROL (el usuario, 30-oct-2026; leer ANTES de escribir `efectos.py`)
+> **REGLA 9 · SIN PRISAS (el usuario, 12-nov-2026):** el video queda bien DESDE EL INICIO. Nada de coordenadas, nombres, rutas ni fotos de memoria o «para salir del paso»: cada dato visual con su fuente comprobada, y la hoja final mirada cuadro por cuadro (cada marcador de cada mapa) ANTES del render. Si se acerca el corte de contexto, checkpoint y la pieza la hace bien la sesión siguiente; improvisar y arreglar después (re-render, resubida, voz) cuesta más tokens. Caso: `wow_forever_experiencia` (mapas en el mar, ruta inventada, Mina de los Ecos, «Montes Crestagrana», voz en inglés).
 
 > **REGLA 11-nov-2026 (el usuario): REVISAR CADA ANIMACIÓN EN SU CUADRO FINAL ANTES DEL RENDER.** `FAB_FX_FINAL=1 python fab.py <v> fx hoja`
 > saca cada MG, mapa y pegatina justo antes de salir (todas las marcas disparadas). Errores que aparecieron en `wow_errores_30_60`:
@@ -29,6 +30,42 @@ Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beat
 > el texto oscuro. (12) La franja del pie de cada miniatura de la hoja TAPA 26 px de abajo: algo pegado al borde inferior (las
 > píldoras del `versus`) parece cortado y no lo está; en caso de duda, sacar el cuadro suelto. La hoja ya cierra cada clip (antes,
 > con ~100 efectos y otro render en paralelo, se quedaba sin RAM).
+> (13) **Opciones de una VOTACIÓN encimadas** (el usuario, 13-nov-2026, `tes_reina_loba`: «HISTORIAS DE LORE COMO ESTA» se montaba
+> sobre «SOLO LISTAS Y TOPS»): `mg_tes.votacion` ponía dos columnas con letra fija sin medir. ARREGLADO en el kit: mide cada opción;
+> dos columnas solo si todas caben (letra 50 → 40), si no, una columna. Mismo criterio para cualquier MG con textos lado a lado en
+> otros kits (`mg_wow`, `mg_er`, `mg_cod`): si coloca textos en columnas fijas, que MIDA. En la hoja, mirar que ningún texto toque al vecino.
+> (14) **`PE.banda` NEGRA o vacía** (mismo video: la pantalla de carga de la calavera de Potema, casi toda negra, con el `foco` por
+> defecto de cara `(.5, .3, 2.0)` dejó una tira negra con un pedazo de calavera cortado en la esquina). La banda es una tira 6:1:
+> el `foco` se pone SOBRE EL SUJETO de esa imagen (aquí `(.5, .47, 1.0)`), nunca el de por defecto a ciegas; con zoom 2 una imagen
+> 1920 solo enseña 960×160 px. ARREGLADO a medias en el kit: `banda` imprime «⚠ banda CASI VACÍA» si la parte visible no tiene
+> contenido — leer la salida de `fx hoja` buscando «⚠». Las pantallas de carga (`carga_*`) además traen TEXTO EN INGLÉS: el recorte
+> no debe enseñarlo.
+> (15) **CLIP DE FONDO CON TEXTO QUEMADO** (el usuario, 13-nov-2026, `tes_reina_loba`: «el video detrás tiene texto que no debe
+> ir» = subtítulos amarillos en inglés del youtuber, «and grab the… tombs key on him», asomando junto a un versus). `_hoja_clips.py`
+> mira 2 cuadros chicos por clip y los subtítulos van y vienen. AHORA: `python nucleo/texto_clips.py <v> -j 4` (OCR local
+> `rapidocr-onnxruntime`, 1 cuadro/s de cada clip → `previews/texto_clips.json`) justo tras `bajar` y otra vez tras cada
+> `--rehacer`; `chequeo` lo corre solo (sección 6). Subtítulos, rótulos o títulos de otro canal = `bajar N --rehacer` u otra fuente;
+> el HUD/menús del propio juego sí valen. En las búsquedas, evitar «guide/walkthrough with captions»; preferir longplays sin narrar.
+> (16) **VERSUS SOLO CON DUELO REAL** (el usuario, 13-nov-2026: «a veces pones el versus en situaciones donde no encajan… ponla
+> bien y no nada más porque sí»). `PR.versus` = dos lados que CHOCAN en el guion en ese momento (uno le pone una trampa al otro y
+> alguien gana, un combate, una rivalidad por lo mismo) y, si hay `ganador`, la voz lo dice. NO para dos cosas que solo se nombran
+> juntas, comparaciones sin conflicto o «A y B» (eso es `carrusel`/`tabl`/`podi`). Potema contra Antíoco por el trono sí encaja
+> (aprobado por el usuario). (17) **LA IMAGEN DEL PERSONAJE ES LA DE ESE MOMENTO DE LA HISTORIA**: en la misma pegatina, Potema
+> VIVA y joven salía como su CALAVERA de Skyrim (además una imagen de 512 px estirada a media pantalla = pixelada). En una
+> historia de lore, mientras el personaje vive va su retrato vivo; calavera, espíritu o estatua solo cuando la voz llega a eso.
+> En la hoja de pegatinas, mirar cada personaje contra la frase y la ÉPOCA de la frase.
+> (18) **EL CLIP DE FONDO DE UNA FRASE DE PERSONAJE ENSEÑA A ESE PERSONAJE** (el usuario, 13-nov-2026, `tes_reina_loba` min 30:15:
+> mientras hablaba el espíritu de Potema salía Falk Barba de Fuego, «es un hombre hablando»). Toda frase de `VOZ_POR_FRASE` se mira
+> contra su beat: nadie de otro sexo, edad o especie hablando en cuadro; mejor el personaje mismo (su pelea, su escena) o un plano sin
+> nadie que hable. Menús del juego (habilidades, trueque) tampoco van detrás de una cita.
+> (19) **ÁRBOL GENEALÓGICO EN HISTORIAS DE FAMILIA** (13-nov-2026: «para no perdernos»): `mg_tes.arbol` (genérico) + un `_arbol.py`
+> por video con personas, lazos y retratos; aparece 4-5 veces, CRECIENDO con la historia (ver/foco/tacha/nota por marca). Hoja del
+> cuadro final de cada aparición antes del render (`_arboles_hoja.py` de `tes_reina_loba`).
+> (20) **VOZ DE ESPÍRITU / MUERTO**: `VOZ_FX = {key: "espiritu"}` en guion.py (`nucleo/voz_fx.py`, en la mezcla: voz grave doblada,
+> metal, reverb de cripta y eco, tipo caballero de la muerte; aprobado por el usuario el 13-nov-2026). El mismo personaje VIVO va limpio.
+> (21) **MÚSICA QUE LA VOZ EVOCA, CON LA VOZ CALLADA**: «Sangre de Dragón» → el tema *Dragonborn* suena solo unos segundos (el usuario,
+> 13-nov-2026). Pausa en el timeline ya hecho con `_pausa.py T D scene-NNN` (corre timeline, beats y transiciones; beat nuevo con
+> su clip) y `DESTACADOS` en `armar_musica_ost.py`. Mejor decidirlo ANTES de `tiempo`/`beats` (un `tiempo` nuevo borra la pausa).
 `videos/tes_secretos_40/` es el nivel mínimo: el usuario lo aprobó con «la edición quedó perfecta, el guion perfecto, la burla perfecta» y
 pidió aplicarlo en todos los demás canales. Vale para Warcraft, Tamriel, Runa y Gaming con su kit y su interfaz; los canales con otro
 motor aplican las mismas ideas con el suyo (`docs/reglas_globales_completas.md` § «REGLA DE ORO»).
@@ -713,6 +750,12 @@ Un tramo puede salir negro (Kazzak a 203 s): mirar el clip armado. En la descrip
   aceptan con `CER_MAX_POR_FRASE` tras oírlos; «WoW» va en FONETICA como «uórld of uárcraft».
 
 ## MAPAS REALES CON RUTA (el usuario, 23-oct-2026: Warcraft, Runa Caída, Tamriel y Crónicas del gaming)
+- **COORDENADAS MEDIDAS EN LA REJILLA, NUNCA A OJO (el usuario, 12-nov-2026: en `wow_forever_experiencia` el mapa «AZEROTH · dónde empieza cada raza» ponía Dun Morogh en el mar, junto a la Vorágine, y Teldrassil en el mar del norte; mal en todos los mapas sobre `azeroth_eses`).** `P(x, y)` va en % de la imagen: en `mapas/azeroth_eses.jpg` Kalimdor está a la IZQUIERDA (x 13-37) y los Reinos del Este a la DERECHA (x 67-90). Mide sobre `videos/wow_errores_forever/mapas/azeroth_eses_rejilla.jpg` (hay rejillas de `reinos_este_eses`, `kalimdor_enus`, `entranas` y `ventormenta`) y COMPRUEBA dibujando los puntos sobre el mapa con PIL antes de `fx hoja`. Medidas buenas: Teldrassil 16.5,15 · Auberdine 20.5,25 · Orgrimmar 31,41 · Mulgore 22,52 · Theramore 31,61 · Entrañas 72,24 · Menethil 72.5,46 · Dun Morogh 75,53 · Elwynn 75,64 · Ocaso 75.5,69 · Grom'gol 73,74.
+- **CADA PUNTO CON SU COORDENADA COMPROBADA Y SU FUENTE, NUNCA DE MEMORIA (el usuario, 12-nov-2026: «revisa todos, te equivocaste en muchos y anótalo en el manual»).** En `wow_forever_experiencia` fallaron también los mapas de ZONA: Mina de los Ecos puesta sobre las murallas de Ventormenta (está en Villanorte y es de kobolds, no de gnolls), y una ruta «a pie» de Elwynn con un «puente» en la orilla de un lago, una «granja» que no existía y un final fuera del camino; además la escena de zepelines (Orgrimmar en los Reinos del Este, Entrañas en el mar). Reglas:
+  1. Toda `P(x, y)` lleva al lado un comentario con su fuente (Wowhead/Warcraft Wiki/UESP: «Hogger 25.0, 92.9 games.gg») o «medido en rejilla». Si no hay fuente, el punto no va.
+  2. El rótulo nombra lo que REALMENTE hay ahí (identidad, como con las pegatinas): ni un lugar con otro nombre, ni de otra criatura («campamento de gnolls» ≠ Mina de los Ecos).
+  3. Una ruta sigue el CAMINO REAL del juego (por dónde va la carretera, dónde cruza el río): se traza sobre la rejilla y solo con lugares que existen; nada de «puente», «granja» o «torre» genéricos puestos donde caiga. Si la voz enumera cosas genéricas del viaje, se enseñan con clips, no con marcadores inventados.
+  4. Antes del render, hoja de TODOS los cuadros de mapa (`FAB_FX_FINAL=1 fx hoja`) mirada marcador por marcador: cada punto en tierra, en su sitio y con su nombre correcto. Es parte de la regla 8 de la REGLA DE ORO.
 El usuario: «en ocasiones hay que mostrar mapas reales del juego con rutas cuando hablemos de misiones o cosas que el espectador
 quiera saber dónde es; tú decides en qué escenas y cómo… adaptados cada uno a su juego». Kit **`nucleo/mg_mapa.py`** (`mapa()`),
 helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo de ahí con `_MAP` y `TEMA_MAPA`).

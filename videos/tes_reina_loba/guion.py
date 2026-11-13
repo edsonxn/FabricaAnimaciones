@@ -18,6 +18,9 @@ BPM = 80
 VOZ = dict(motor="elevenlabs", voice_id="HNSF1CTQmub252yhXROX", modelo="eleven_v4_turbo", idioma="es", tomas=1, stability=0.5,
            sin_etiquetas=("whisper", "excit", "laugh", "amused", "chuckl", "cheer", "happy", "mischiev", "giggl", "joy"),
            referencia=r"C:\FabricaAnimaciones\canales\muestras_voz\runa_profeta\B_profeta.mp3")
+# Potema MUERTA (espíritu invocado y jefa de las catacumbas): voz de ultratumba tipo caballero de la muerte + eco, aplicada en la
+# mezcla (nucleo/voz_fx.py; el usuario, 13-nov-2026: «me gusta la voz espíritu de Potema»). Potema viva va limpia.
+VOZ_FX = {"intro_2": "espiritu", "c9_5": "espiritu", "c9_10": "espiritu", "c9_12": "espiritu"}
 FONETICA = {"Oblivion": "Oblívion", "jarl": "yarl", "Jarl": "Yarl", "Sheogorath": "Sheógorath"}
 
 CER_MAX_POR_FRASE = {"cierre_2": 0.029, "intro_5": 0.043, "c1_5": 0.023, "c1_6": 0.018, "c1_10": 0.004, "c2_6": 0.028, "c2_7": 0.018, "c2_8": 0.025, "c2_9": 0.022, "c3_2": 0.027, "c4_1": 0.03, "c4_4": 0.021, "c4_5": 0.027, "cr1_0": 0.04, "c5_1": 0.004, "c5_3": 0.028, "c5_5": 0.027, "c5_7": 0.045, "c5_10": 0.038, "c5_11": 0.031, "c5_17": 0.027, "c6_7": 0.011, "c6_8": 0.017, "c6_10": 0.029, "c6_11": 0.025, "c6_14": 0.029, "c6_15": 0.042, "ag1_0": 0.061, "ag1_1": 0.108, "ag1_2": 0.097, "ag1_4": 0.062, "cr2_0": 0.127, "c7_3": 0.004, "c7_4": 0.017, "c7_5": 0.004, "c7_6": 0.028, "cr3_0": 0.082, "c8_5": 0.016, "c8_6": 0.027, "c8_8": 0.018, "c8_9": 0.016, "c8_13": 0.027, "c9_3": 0.004, "c9_6": 0.022, "c9_8": 0.009, "c9b_2": 0.122, "c9b_3": 0.024, "c9b_5": 0.017, "c9b_6": 0.026, "cierre_1": 0.018}   # se rellena tras `seleccionar` con las falsas alarmas oídas (nombres de lore, @usuarios)
@@ -36,11 +39,15 @@ SECUENCIA = dict(
             evitar_palabras=["reaction", "react", "podcast", "tier list", "news", "shorts", "#shorts", "ai cine", "ai movie",
                              "ai generated", "elder scrolls online", "eso ", "(eso", "eso:", "keizaal", "mods", "mod:", "mod ", " mod",
                              "modded", "modlist", "enb", "reshade", "dlss", "4000", "lotd", "legacy of the dragonborn",
-                             "skywind", "skyblivion", "high isle", "cinematic trailer", "online"],
+                             "skywind", "skyblivion", "high isle", "cinematic trailer", "online", "showcase", "add-on", "next gen", "remake", "twitch", "stream", "vod", "cities:", "navigator"],
             evitar_canales=["BLUxCHEESE", "TIMENG", "The Glitch Report", "Swezz Cheese", "Barrett Knives",
                             "Saika", "Max Modded", "Ero-sama", "OrcCorp", "DCARR GAMING",
                             "Spoiler Alert Theater", "PIXEL STORYZ", "Pixel Storyz", "Syzleaf", "RGR29", "Xander Rey Gaming",
-                            "AtariGen 75", "NOB NO13", "Zephyr", "A Bard's Ballad", "Cameron Marks"]),
+                            "AtariGen 75", "NOB NO13", "Zephyr", "A Bard's Ballad", "Cameron Marks",
+                            # 13-nov: marca de agua, subtítulos de guía, mods o juego en otro idioma (nucleo/texto_clips.py)
+                            "Anarion Graphics", "GamerJustLikeYou", "MajorSlackAttack", "MajorSlackVideos", "Selene The Rebel Unchained",
+                            "Silenced Red Mage", "Sleep Scenery", "StStrife", "Typical Pirate", "slyellow2", "Delikuzz", "ItsJabo",
+                            "Farpoint Toys & Collectibles"]),
 )
 
 TRANSICIONES = [("continua", 0.1)] * 60

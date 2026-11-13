@@ -36,10 +36,19 @@ def pista_voz():
     if TL.get("audio_externo"):                  # audio ya grabado (guion.AUDIO_EXTERNO): va tal cual, sin la cadena de la voz sintética
         return cargar(TL["audio_externo"])
     v = np.zeros(N)
+    try:                                         # guion.VOZ_FX = {key: "espiritu"}: efecto por frase (nucleo/voz_fx.py, 13-nov-2026)
+        import guion as _g
+        vfx = getattr(_g, "VOZ_FX", {}) or {}
+    except ImportError:
+        vfx = {}
     for e in TL["escenas"]:
         for f in e["frases"]:
             x, sr = sf.read(f"voz/final/{f['key']}.wav")
             assert sr == SR
+            if f["key"] in vfx:
+                import voz_fx
+                x = voz_fx.aplicar(x, sr, vfx[f["key"]])
+                print(f"  voz_fx: {f['key']} → {vfx[f['key']]}")
             i = int(round(f["t0"] * SR))
             v[i:i + len(x)] += x[:N - i]
     # procesado de voz

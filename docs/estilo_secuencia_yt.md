@@ -66,6 +66,9 @@ Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beat
 > (21) **MÚSICA QUE LA VOZ EVOCA, CON LA VOZ CALLADA**: «Sangre de Dragón» → el tema *Dragonborn* suena solo unos segundos (el usuario,
 > 13-nov-2026). Pausa en el timeline ya hecho con `_pausa.py T D scene-NNN` (corre timeline, beats y transiciones; beat nuevo con
 > su clip) y `DESTACADOS` en `armar_musica_ost.py`. Mejor decidirlo ANTES de `tiempo`/`beats` (un `tiempo` nuevo borra la pausa).
+> (22) **RENDER POR TRAMOS = UNIR ANTES DE `final`**: `final` lee `salida/video_sin_audio.mp4`; si los tramos no se unen
+> (`ffmpeg -f concat … -c copy`), sale el MASTER con el render VIEJO (tes_reina_loba, 13-nov-2026). Tras `final`, mirar 3 cuadros
+> donde hubo cambios contra la ventana de su FX (`_ventanas.py`): un FX adelantado o atrasado = video viejo.
 `videos/tes_secretos_40/` es el nivel mínimo: el usuario lo aprobó con «la edición quedó perfecta, el guion perfecto, la burla perfecta» y
 pidió aplicarlo en todos los demás canales. Vale para Warcraft, Tamriel, Runa y Gaming con su kit y su interfaz; los canales con otro
 motor aplican las mismas ideas con el suyo (`docs/reglas_globales_completas.md` § «REGLA DE ORO»).

@@ -49,6 +49,12 @@ SECCIONES = [   # tes_reina_loba (12-nov-2026): pista = (archivo, desde) o (arch
 ]
 
 
+# DESTACADOS (el usuario, 13-nov-2026: «cuando dices usa Fuerza Implacable porque era Sangre de Dragón pon la música de Skyrim de
+# Dragonborn épica y déjala sonar unos segundos»): la voz CALLA (pausa metida con _pausa.py en timeline/beats) y suena la pista,
+# más fuerte que el fondo, que se aparta. (t = inicio de la pausa, pista, desde = segundo de la pista en t, dur, +dB, antes, cola)
+DESTACADOS = [(t["t"], "dragonborn", 33.0, t["d"], 5.0, 1.0, 2.5)
+              for t in json.load(open("timeline.json", encoding="utf-8")).get("pausas", []) if t.get("beat") == "scene-245"]
+
 _CJ = os.path.join("audio", "ost", "_canto.json")
 CANTO = json.load(open(_CJ, encoding="utf-8")) if os.path.exists(_CJ) else {}   # nucleo/ost_canto.py (12-nov-2026)
 
@@ -115,6 +121,17 @@ def main():
         out[i0:i0 + len(seg)] += seg[:len(out) - i0]
         print(f"{t0:7.1f}-{t1:7.1f}  {' + '.join(q[0] for q in pistas):24s}  {l:6.1f} LUFS -> {LUFS}")
     out = out[:int(total * SR)]
+    for t, n, desde, d, db, antes, cola in DESTACADOS:
+        i0, i1 = int((t - antes) * SR), int((t + d + cola) * SR)
+        x = cargar(n)[int((desde - antes) * SR):][:i1 - i0]
+        x = x * 10 ** ((LUFS - meter.integrated_loudness(x)) / 20) * 10 ** (db / 20)
+        env = np.ones(len(x))
+        ka, kc = int(antes * SR), int(cola * SR)
+        env[:ka] = np.sin(np.linspace(0, 1, ka) * np.pi / 2)
+        env[-kc:] = np.cos(np.linspace(0, 1, kc) * np.pi / 2)
+        out[i0:i0 + len(x)] *= (1 - .85 * env)[:, None]                  # el fondo se aparta
+        out[i0:i0 + len(x)] += x * env[:, None]
+        print(f"destacado {n} ({desde:.0f} s) en {t:.1f}-{t + d:.1f} (+{db} dB, voz callada)")
     # SONIDO ORIGINAL (el usuario, 26-oct-2026): en los beats con ambiente_por la banda sonora se aparta y se oye el juego
     import guion
     vols = guion.SECUENCIA.get("ambiente_por", {})

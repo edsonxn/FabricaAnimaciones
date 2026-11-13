@@ -2398,9 +2398,27 @@ def narrador(nombre, lema, n=None, de=None, ancho=600):
 def votacion(titulo, nombres, remate=None, ancho=1180):
     """Papeleta de la votación: los nombres en dos columnas con su casilla; la marca k enciende el nombre k (dorado, casilla
     marcada con un golpe) cuando esa voz pide el voto, en cualquier orden; los ya marcados quedan en hueso. Con `remate`, la marca
-    len(nombres) lo saca."""
-    filas = (len(nombres) + 1) // 2
-    h = 150 + filas * 92 + (90 if remate else 30)
+    len(nombres) lo saca.
+    MIDE cada nombre (13-nov-2026, tes_reina_loba: «HISTORIAS DE LORE COMO ESTA» se montaba sobre «SOLO LISTAS Y TOPS»):
+    en dos columnas solo si TODOS caben en su columna (letra 50 → 40); si no, una sola columna (y si aún no cabe, letra menor)."""
+    _d = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    UP = [n.upper() for n in nombres]
+    colw = ancho * .42 - 70                                   # de la casilla de la col. 0 (14 %) a la col. 1 (58 %), con aire
+    tam, cols = None, 2
+    if len(nombres) > 1:
+        for t_ in (50, 46, 42, 40):
+            if max(_ancho_track(_d, s, fuente("SemiBold Condensed", t_), 3) for s in UP) <= colw:
+                tam = t_
+                break
+    if tam is None:                                            # no caben en dos columnas: una sola, a lo ancho
+        cols = 1
+        for t_ in (50, 46, 42, 38, 34, 30):
+            tam = t_
+            if max(_ancho_track(_d, s, fuente("SemiBold Condensed", t_), 3) for s in UP) <= ancho * .80 - 70:
+                break
+    filas = (len(nombres) + 1) // 2 if cols == 2 else len(nombres)
+    paso = 92 if tam >= 46 else 80
+    h = 150 + filas * paso + (90 if remate else 30)
 
     def fn(dt, dur, marcas):
         im, M = _humo(ancho, h, titulo)
@@ -2408,11 +2426,11 @@ def votacion(titulo, nombres, remate=None, ancho=1180):
         ms = list(marcas[:len(nombres)]) + [None] * max(0, len(nombres) - len(marcas))
         on_ = [m is not None and dt >= m for m in ms]
         activa = max((k for k in range(len(nombres)) if on_[k]), key=lambda k: ms[k], default=-1)
-        f = fuente("SemiBold Condensed", 50)
+        f = fuente("SemiBold Condensed", tam)
         for k, nom in enumerate(nombres):
             col, fila = k // filas, k % filas
             x = M + (ancho * .14 if col == 0 else ancho * .58)
-            y = M + 150 + fila * 92
+            y = M + 150 + fila * paso
             on = on_[k]
             c = ORO if k == activa else HUESO if on else GRIS
             d.rectangle((x, y - 22, x + 44, y + 22), outline=c + (255,), width=3)
@@ -2583,5 +2601,185 @@ def bucle(titulo, pasos, valores, unidad="%", remate=None, ancho=1100):
         if remate and k >= remate[1]:
             _texto(d, (cx, cy + R + 120), remate[0].upper(), fuente("SemiBold Condensed", 46), SANGRE, "mm",
                    255 * _eo((dt - ms[remate[1]]) / .4), track=4)
+        return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ árbol genealógico (tes_reina_loba, 13-nov-2026)
+_arb = {}
+
+
+def _cara(ruta, D, foco):
+    """Medallón D×D de la cara: foco = (cx, cy, zoom) sobre la imagen (zoom 1 = el lado corto entero)."""
+    k = (ruta, D, foco)
+    if k not in _arb:
+        im = Image.open(ruta).convert("RGBA")
+        cx, cy, z = foco
+        lado = min(im.size) / max(1.0, z)
+        x0 = min(max(0, cx * im.width - lado / 2), im.width - lado)
+        y0 = min(max(0, cy * im.height - lado / 2), im.height - lado)
+        c = im.crop((int(x0), int(y0), int(x0 + lado), int(y0 + lado))).resize((D, D), Image.LANCZOS)
+        fondo = Image.new("RGBA", (D, D), (24, 22, 20, 255))
+        fondo.alpha_composite(c)
+        m = Image.new("L", (D * 4, D * 4), 0)
+        ImageDraw.Draw(m).ellipse((0, 0, D * 4 - 1, D * 4 - 1), fill=255)
+        fondo.putalpha(m.resize((D, D), Image.LANCZOS))
+        _arb[k] = fondo
+    return _arb[k]
+
+
+def _gris(im, k):
+    """k 0..1: desatura y oscurece (muerto o fuera de foco)."""
+    if k <= 0:
+        return im
+    a = np.array(im).astype(np.float32)
+    g = a[..., :3].mean(axis=2, keepdims=True)
+    a[..., :3] = (a[..., :3] * (1 - k) + g * k) * (1 - .35 * k)
+    return Image.fromarray(a.clip(0, 255).astype(np.uint8), "RGBA")
+
+
+def _polilinea(d, pts, u, color, ancho=3, punteado=False):
+    """Dibuja la fracción u (0..1) del recorrido pts; punteado = trazos de 12 px."""
+    largos = [math.dist(pts[i], pts[i + 1]) for i in range(len(pts) - 1)]
+    total = sum(largos) or 1
+    resta = total * max(0.0, min(1.0, u))
+    for (a, b), L in zip(zip(pts, pts[1:]), largos):
+        if resta <= 0:
+            break
+        f = min(1.0, resta / L) if L else 1
+        fin = (a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f)
+        if punteado:
+            n = max(1, int(L * f / 12))
+            for i in range(0, n, 2):
+                p0 = (a[0] + (fin[0] - a[0]) * i / n, a[1] + (fin[1] - a[1]) * i / n)
+                p1 = (a[0] + (fin[0] - a[0]) * min(n, i + 1) / n, a[1] + (fin[1] - a[1]) * min(n, i + 1) / n)
+                d.line([p0, p1], fill=color, width=ancho)
+        else:
+            d.line([a, fin], fill=color, width=ancho)
+        resta -= L
+
+
+def arbol(titulo, personas, lazos, pasos, ancho=1760, alto=950, D=124):
+    """ÁRBOL GENEALÓGICO con retratos en medallón, para no perderse en una historia de familia (el usuario, 13-nov-2026:
+    «pon un árbol genealógico… cuando se requiera para no perdernos en la historia»). Se usa VARIAS veces en el video,
+    creciendo con la historia: cada aparición enseña lo que ya se sabe y añade lo nuevo con sus marcas.
+      personas = {id: dict(n=nombre, s=subtítulo, img=ruta, x=0..1, fila=0..2, foco=(cx, cy, zoom))}
+      lazos = [dict(t="pareja", a=id, b=id) | dict(t="hijos", de=[id] o [id, id], a=[ids], punteado=False, nota=None,
+               lado=False (sale por el costado del padre: medio hermano de otra esposa), nivel=0 (px, separa barras))]
+      pasos = una entrada por marca: dict(ver=[ids], foco=[ids] (los demás se apagan; [] = nadie), tacha=[ids] (muertos),
+              nota="texto abajo"). La marca k aplica el paso k; lo visto, tachado y el último foco se acumulan.
+    Un lazo se dibuja cuando sus dos extremos ya se ven, creciendo en 0,6 s."""
+    top = 128
+    filah = (alto - top - 92) / 3                            # ≥ 240: nombre + subtítulo + barra sin cruzarse
+
+    def pos(pid):
+        p = personas[pid]
+        return (60 + p["x"] * ancho, 60 + top + p["fila"] * filah + D / 2)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas[:len(pasos)]) + [99.0] * max(0, len(pasos) - len(marcas))
+        visto, tachado, foco, nota = {}, {}, None, None
+        for m, p in zip(mk, pasos):
+            if dt < m:
+                break
+            for i in p.get("ver", []):
+                visto.setdefault(i, m)
+            for i in p.get("tacha", []):
+                tachado.setdefault(i, m)
+            if "foco" in p:
+                foco = (set(p["foco"]), m)
+            if p.get("nota"):
+                nota = (p["nota"], m)
+        im, M = _humo(ancho, alto, titulo)
+        d = ImageDraw.Draw(im)
+
+        def apag(pid):
+            if foco is None or not foco[0] or pid in foco[0]:
+                return 0.0
+            return min(1.0, (dt - foco[1]) / .4)
+
+        for lz in lazos:
+            # hijos: basta con los padres y UN hijo a la vista; se dibuja hacia los que ya se ven (13-nov: si no, Potema
+            # salía suelta en el árbol hasta que nacían Céforo y Magnus)
+            hv = [h for h in lz["a"] if h in visto] if lz["t"] == "hijos" else []
+            ids = [lz["a"], lz["b"]] if lz["t"] == "pareja" else list(lz["de"]) + hv
+            if not all(i in visto for i in ids) or (lz["t"] == "hijos" and not hv):
+                continue
+            t0 = max(visto[i] for i in ids)
+            u = _eo((dt - t0) / .6)
+            ap = min(apag(i) for i in ids)
+            col = tuple(int(c * (1 - .55 * ap)) for c in ORO) + (255,)
+            if lz["t"] == "pareja":
+                (xa, ya), (xb, yb) = pos(lz["a"]), pos(lz["b"])
+                xa, xb = min(xa, xb) + D / 2 + 4, max(xa, xb) - D / 2 - 4
+                xm = (xa + xb) / 2
+                _polilinea(d, [(xm, ya), (xa, ya)], u, col, 4)
+                _polilinea(d, [(xm, ya), (xb, ya)], u, col, 4)
+                if u > .6:                                       # anillos de boda
+                    for dx in (-7, 7):
+                        d.ellipse((xm + dx - 9, ya - 9, xm + dx + 9, ya + 9), outline=col, width=3)
+                continue
+            padres = [pos(i) for i in lz["de"]]
+            if len(padres) == 2:
+                x0, y0 = (padres[0][0] + padres[1][0]) / 2, padres[0][1]
+            elif lz.get("lado"):
+                x0, y0 = padres[0][0] - D / 2 - 4, padres[0][1]
+            else:
+                x0, y0 = padres[0][0], padres[0][1] + D / 2 + 64
+            for h in hv:
+                xh, yh = pos(h)
+                yt = yh - D / 2 - 6
+                if lz.get("lado"):
+                    pts = [(x0, y0), (xh, y0), (xh, yt)]
+                else:
+                    yb = yt - 34 - lz.get("nivel", 0)
+                    pts = [(x0, y0), (x0, yb), (xh, yb), (xh, yt)]
+                uh = _eo((dt - max(t0, visto[h])) / .6)
+                _polilinea(d, pts, uh, col, 3, lz.get("punteado", False))
+            if lz.get("nota") and u > .5 and lz["a"][0] in visto:
+                xh = pos(lz["a"][0])[0]
+                if lz.get("lado"):
+                    tx, ty = (x0 + xh) / 2, y0 - 18
+                else:
+                    tx, ty = (x0 + xh) / 2, pos(lz["a"][0])[1] - D / 2 - 62 - lz.get("nivel", 0)
+                _texto(d, (tx, ty), lz["nota"], fuente("Condensed", 22), GRIS, "mm", 255 * _eo((u - .5) / .5))
+
+        fN, fS = fuente("SemiBold Condensed", 30), fuente("Condensed", 22)
+        for pid, p in personas.items():
+            if pid not in visto:
+                continue
+            s = _pop(dt - visto[pid], .45)
+            if s <= .02:
+                continue
+            x, y = pos(pid)
+            ap = apag(pid)
+            mu = min(1.0, (dt - tachado[pid]) / .4) if pid in tachado else 0.0
+            en_foco = foco is not None and bool(foco[0]) and pid in foco[0]
+            med = _gris(_cara(p["img"], D, p.get("foco", (.5, .33, 2.4))), max(ap * .5, mu * .75))
+            anillo = Image.new("RGBA", (D + 16, D + 16), (0, 0, 0, 0))
+            if en_foco:                                          # halo
+                glow = Image.new("RGBA", (D + 16, D + 16), (0, 0, 0, 0))
+                ImageDraw.Draw(glow).ellipse((0, 0, D + 15, D + 15), fill=ORO + (150,))
+                anillo.alpha_composite(glow.filter(ImageFilter.GaussianBlur(6)))
+            anillo.alpha_composite(med, (8, 8))
+            da = ImageDraw.Draw(anillo)
+            cr = ORO if en_foco else HUESO
+            k_ap = 1 - .45 * ap
+            da.ellipse((6, 6, D + 9, D + 9), outline=tuple(int(c * k_ap) for c in cr) + (255,), width=4 if en_foco else 3)
+            if mu > 0:                                           # tachado: cruz roja
+                r = D * .30 * mu
+                c0 = D / 2 + 8
+                for sg in (1, -1):
+                    da.line([(c0 - r, c0 - r * sg), (c0 + r, c0 + r * sg)], fill=SANGRE + (230,), width=7)
+            if abs(s - 1) > .01:
+                anillo = anillo.resize((max(2, int(anillo.width * s)), max(2, int(anillo.height * s))), Image.BILINEAR)
+            im.alpha_composite(anillo, (int(x - anillo.width / 2), int(y - anillo.height / 2)))
+            a_t = 255 * min(1.0, s) * (1 - .4 * ap)
+            _texto(d, (x, y + D / 2 + 22), p["n"].upper(), fN, ORO if en_foco else HUESO, "mm", a_t, track=2)
+            if p.get("s"):
+                _texto(d, (x, y + D / 2 + 50), p["s"], fS, GRIS, "mm", a_t)
+        if nota:
+            _texto(d, (M + ancho / 2, M + alto - 34), nota[0], fuente("Condensed", 36), BLANCO, "mm",
+                   255 * _eo((dt - nota[1]) / .5))
         return _salida(im, dt)
     return fn

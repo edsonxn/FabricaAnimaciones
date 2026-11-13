@@ -1776,177 +1776,185 @@
   "clip_s": 8
  },
  {
-  "id": "scene-223",
+  "id": "scene-245",
   "t0": 1912.091,
-  "t1": 1922.141,
+  "t1": 1918.091,
+  "tipo": "video",
+  "texto": "(Dragonborn: la música suena sola)",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-223",
+  "t0": 1918.091,
+  "t1": 1928.141,
   "tipo": "video",
   "texto": "Al final, en un trono, solo queda su calavera. Se la llevas a Styrr, que la santifica. Y Falk te da las gracias, con una petición:",
   "clip_s": 8
  },
  {
   "id": "scene-224",
-  "t0": 1922.141,
-  "t1": 1928.752,
+  "t0": 1928.141,
+  "t1": 1934.752,
   "tipo": "video",
   "texto": "que nadie se entere. La jarl prefiere que el regreso de Potema siga en silencio.",
   "clip_s": 8
  },
  {
   "id": "scene-225",
-  "t0": 1928.752,
-  "t1": 1939.51,
+  "t0": 1934.752,
+  "t1": 1945.51,
   "tipo": "video",
   "texto": "Por eso casi nadie conoce esta historia. Hasta Skyrim la quiso callar. Pero en el Palacio Azul queda una puerta cerrada.",
   "clip_s": 8
  },
  {
   "id": "scene-226",
-  "t0": 1939.51,
-  "t1": 1946.78,
+  "t0": 1945.51,
+  "t1": 1952.78,
   "tipo": "video",
   "texto": "El ala suroeste. El Ala de Pelagio. Sellada desde poco después de su muerte.",
   "clip_s": 8
  },
  {
   "id": "scene-227",
-  "t0": 1946.78,
-  "t1": 1953.662,
+  "t0": 1952.78,
+  "t1": 1959.662,
   "tipo": "video",
   "texto": "Dicen que la ronda su fantasma. Una criada entra una vez al año, a quitar las telarañas.",
   "clip_s": 8
  },
  {
   "id": "scene-228",
-  "t0": 1953.662,
-  "t1": 1964.462,
+  "t0": 1959.662,
+  "t1": 1970.462,
   "tipo": "video",
   "texto": "Un mendigo loco de Soledad, Dervenin, te da un hueso: la pelvis de Pelagio. Y con ella entras en su mente. Un bosque con niebla,",
   "clip_s": 8
  },
  {
   "id": "scene-229",
-  "t0": 1964.462,
-  "t1": 1974.531,
+  "t0": 1970.462,
+  "t1": 1980.531,
   "tipo": "video",
   "texto": "arcos de piedra, y una mesa servida. Y ahí, tomando el té con el emperador muerto, está el Príncipe de la Locura.",
   "clip_s": 8
  },
  {
   "id": "scene-230",
-  "t0": 1974.531,
-  "t1": 1982.265,
+  "t0": 1980.531,
+  "t1": 1988.265,
   "tipo": "video",
   "texto": "¿Más té, Pelly, querido? Oh, no podría. Me pasa directo. Además, tengo tantas cosas que hacer.",
   "clip_s": 8
  },
  {
   "id": "scene-231",
-  "t0": 1982.265,
-  "t1": 1992.467,
+  "t0": 1988.265,
+  "t1": 1998.467,
   "tipo": "video",
   "texto": "Tantos indeseables. ¡Mi verdugo lleva tres días sin dormir! Bienvenido a la engañosamente verde mente del emperador Pelagio Tercero.",
   "clip_s": 8
  },
  {
   "id": "scene-232",
-  "t0": 1992.467,
-  "t1": 1999.787,
+  "t0": 1998.467,
+  "t1": 2005.787,
   "tipo": "video",
   "texto": "Sí, así es. Estás dentro de la cabeza de un monarca muerto y homicidamente demente.",
   "clip_s": 8
  },
  {
   "id": "scene-233",
-  "t0": 1999.787,
-  "t1": 2009.097,
+  "t0": 2005.787,
+  "t1": 2015.097,
   "tipo": "video",
   "texto": "Te da el Wabbajack. Y tienes que curar tres partes de esa mente. La Paranoia, donde Pelagio cree que cualquiera puede matarlo.",
   "clip_s": 8
  },
  {
   "id": "scene-234",
-  "t0": 2009.097,
-  "t1": 2015.937,
+  "t0": 2015.097,
+  "t1": 2021.937,
   "tipo": "video",
   "texto": "La Confianza, una figura diminuta aplastada por la Ira. Y los Terrores Nocturnos:",
   "clip_s": 8
  },
  {
   "id": "scene-235",
-  "t0": 2015.937,
-  "t1": 2022.411,
+  "t0": 2021.937,
+  "t1": 2028.411,
   "tipo": "video",
   "texto": "Pelagio duerme en una cama, en medio del bosque, y sus pesadillas lo rodean.",
   "clip_s": 8
  },
  {
   "id": "scene-236",
-  "t0": 2022.411,
-  "t1": 2032.471,
+  "t0": 2028.411,
+  "t1": 2038.471,
   "tipo": "video",
   "texto": "Con el Wabbajack conviertes cada pesadilla en algo inofensivo. Un sacerdote dragón, en un cofre. Un atronach de llamas, en una hoguera.",
   "clip_s": 8
  },
  {
   "id": "scene-237",
-  "t0": 2032.471,
-  "t1": 2041.639,
+  "t0": 2038.471,
+  "t1": 2047.639,
   "tipo": "video",
   "texto": "Un jefe bandido, en Pelagio de niño. Y la primera pesadilla de Pelagio el Loco. La primera que aparece junto a su cama.",
   "clip_s": 8
  },
  {
   "id": "scene-238",
-  "t0": 2041.639,
-  "t1": 2050.678,
+  "t0": 2047.639,
+  "t1": 2056.678,
   "tipo": "video",
   "texto": "Es un lobo. La Reina Loba nunca se sentó en el Trono Rubí.",
   "clip_s": 8
  },
  {
   "id": "scene-239",
-  "t0": 2050.678,
-  "t1": 2059.928,
+  "t0": 2056.678,
+  "t1": 2065.928,
   "tipo": "video",
   "texto": "Lo tuvo su hermano, que se rió de ella. Lo tuvo su sobrina, que la echó de un pasillo. Lo tuvo su hijo una sola noche,",
   "clip_s": 8
  },
  {
   "id": "scene-240",
-  "t0": 2059.928,
-  "t1": 2067.368,
+  "t0": 2065.928,
+  "t1": 2073.368,
   "tipo": "video",
   "texto": "y lo pagó con fuego. Y lo tuvo el niño al que le colgó una gema al cuello. Quinientos años después,",
   "clip_s": 8
  },
  {
   "id": "scene-241",
-  "t0": 2067.368,
-  "t1": 2077.868,
+  "t0": 2073.368,
+  "t1": 2083.868,
   "tipo": "video",
   "texto": "unos nigromantes intentaron usarla. Y ni muerta se dejó atar. Ahora te toca a ti. ¿Qué historia quieres que cuente el Profeta la próxima vez?",
   "clip_s": 8
  },
  {
   "id": "scene-242",
-  "t0": 2077.868,
-  "t1": 2083.788,
+  "t0": 2083.868,
+  "t1": 2089.788,
   "tipo": "video",
   "texto": "¿Los Sload, que pidió Exonik? ¿Olaf Ojo Único y el dragón que quizá nunca venció?",
   "clip_s": 8
  },
  {
   "id": "scene-243",
-  "t0": 2083.788,
-  "t1": 2092.282,
+  "t0": 2089.788,
+  "t1": 2098.282,
   "tipo": "video",
   "texto": "¿Los hijos de Gauldur? Déjalo en los comentarios. Y si te gustó este formato, dilo también. Suscríbete si aún no lo has hecho.",
   "clip_s": 8
  },
  {
   "id": "scene-244",
-  "t0": 2092.282,
-  "t1": 2102.25,
+  "t0": 2098.282,
+  "t1": 2108.25,
   "tipo": "video",
   "texto": "Y si encuentras una gema amarilla con un lobo adentro… no te la pongas. Nos vemos en Tamriel.",
   "clip_s": 8

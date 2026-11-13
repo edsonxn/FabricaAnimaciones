@@ -41,13 +41,13 @@ FONETICA_APPLIO = {
     "Mankrik": "Mánkrik", "JcJ": "jota ce jota", "add-on": "ádon", "VanCleef": "Van Clíf", "Edwin": "Édwin", "Mor'Ladim": "Mórladim",
     "Hogger": "Jóguer", "Durotar": "Durotár", "Dun Morogh": "Dun Mórog", "Defias": "Defías", "Darnassus": "Darnásus",
     "CurseForge": "Kérsforch", "Stalvan": "Estálvan", "Sayge": "Séich", "Mulgore": "Mulgór", "Loch Modan": "Loj Módan", "Tarren": "Tárren", "PNJ": "pe ene jota",
-    "Brogan": "Brógan", "Yorsh": "Yórsh", "Fetixe": "Fetíxe", "Arnold": "Árnold",
+    "Brogan": "Brógan", "Yorsh": "Yorch", "Fetixe": "Fetíxe", "Arnold": "Árnold",
     "Wowhead": "Uaujéd", "Spoken": "Spóuken", "Doan": "Dóan", "Morgan": "Mórgan",
 }
 FONETICA = FONETICA_APPLIO
 # Applio da siempre la misma toma: hipótesis de Whisper leídas el 10-nov (solo nombres propios/cifras)
 CER_MAX_POR_FRASE = {   # 12-nov: transcripciones leídas una a una (Acerot, Dumorog, Questy, JCJ, Mancric, cifras en número...)
-    "friccion_4": 0.08, "c30_2": 0.08, "c29_5": 0.08, "c28_4": 0.08, "c27b_0": 0.08, "burla1_2": 0.08, "c26_1": 0.08, "c25_1": 0.08, "c23_0": 0.08, "c23_1": 0.08, "c23_2": 0.08, "gracias1_1": 0.08, "gracias1_4": 0.08, "c20_5": 0.08, "c14_1": 0.08, "c12_0": 0.08, "gracias2_3": 0.08, "c10_4": 0.08, "c09_1": 0.08, "c08_3": 0.08, "c06_1": 0.08, "c05_2": 0.08, "c05_4": 0.08, "c04_1": 0.08, "c02_3": 0.08, "burla0_3": 0.05, "c11_0": 0.05, "c09_0": 0.05}
+    "friccion_4": 0.08, "c30_2": 0.08, "c29_5": 0.08, "c28_4": 0.08, "c27b_0": 0.08, "burla1_2": 0.08, "c26_1": 0.08, "c25_1": 0.08, "c23_0": 0.08, "c23_1": 0.08, "c23_2": 0.08, "gracias1_1": 0.08, "gracias1_4": 0.08, "c20_5": 0.08, "c14_1": 0.08, "c12_0": 0.08, "gracias2_3": 0.08, "c10_4": 0.08, "c09_1": 0.08, "c08_3": 0.08, "c06_1": 0.08, "c05_2": 0.08, "c05_4": 0.08, "c04_1": 0.08, "c02_3": 0.08, "burla0_3": 0.05, "c11_0": 0.05, "c09_0": 0.05, "gracias1_2": 0.05, "gracias1_1": 0.05}
 TAIL_MAX_POR_FRASE = {}
 
 SECUENCIA = dict(
@@ -124,7 +124,7 @@ ESCENAS = [
         'Si lo dejas en inglés, tu zona se llena de gente con la que no te entiendes. Si lo pones en español, el chat general cobra vida.',
         'Y ese chat es medio juego. Gente preguntando dónde está un PNJ, otro vendiendo agua, otro contando un chiste malísimo, y tres respondiéndole.',
         'Ojo, que el ajuste es de toda la cuenta y tiene un enfriamiento de veinticuatro horas. Así que no lo andes cambiando cada rato.',
-        'Y escribe. Saluda cuando entres a una zona, pregunta aunque lo puedas buscar en internet. Una pregunta en el chat es la forma más vieja de hacer amigos en Azeroth.',
+        'Y escribe: saluda cuando entres a una zona, pregunta aunque lo puedas buscar en internet. Una pregunta en el chat es la forma más vieja de hacer amigos en Azeroth.',
     ]},
     {"id": 'c28', "frases": [
         'Número veintiocho. Elige tu clase por la fantasía, no por la tabla de daño.',
@@ -138,11 +138,11 @@ ESCENAS = [
         'Y antes de seguir, alguien salió a defender a Marcos, el del video anterior.',
         'Arnold escribió: deja a Marcos en paz, tiene la razón. Qué tonto paga por que le enseñen a jugar.',
         'Arnold, me encanta que Marcos ya tenga abogado. Eso es lo más Forever que he visto: hacer grupo para una misión de élite en los comentarios.',
-        'Y fíjate en lo que acabas de hacer: viste a un compañero en problemas, y fuiste a ayudarlo sin que nadie te pagara. Eso es enseñar a jugar, Arnold. Gratis.',
+        'Y fíjate en lo que acabas de hacer: viste a un compañero en problemas, y fuiste a ayudarlo sin que nadie te pagara. Eso, Arnold, es enseñar a jugar sin cobrar nada.',
         'Le acabas de enseñar a Marcos a no estar solo. Lo vamos a anotar en la lista, porque es una de las treinta.',
     ]},
     {"id": 'c27', "frases": [
-        'Número veintisiete. Lee las misiones. De verdad.',
+        'Número veintisiete. Lee las misiones, pero de verdad.',
         'La mayoría le damos a aceptar sin leer, y vamos a matar diez arañas. Pero detrás de esas diez arañas casi siempre hay una historia.',
         'Una viuda en el Bosque del Ocaso, un granjero de los Páramos de Poniente que lo perdió todo, un orco en Durotar que no quiere volver a la guerra.',
         'En Forever hay más de mil misiones nuevas. Nadie las ha leído todavía. Tú puedes ser de los primeros en saber de qué van.',
@@ -154,7 +154,7 @@ ESCENAS = [
     {"id": 'burla1', "frases": [
         'Y aquí va otra crítica, de las que se contestan con cariño.',
         'Fetixe escribió: fomentando addons de paga, cuando el mismo juego prohíbe los addons de paga. La gente mata el mismo juego que juega.',
-        'Fetixe, tranquilo, que el add-on que hicimos es gratis. Gratis de verdad. No cuesta ni una moneda de cobre.',
+        'Fetixe, tranquilo, que el add-on que hicimos es gratis, gratis de verdad, y no cuesta ni una moneda de cobre.',
         'Lo único que pedimos es una donación voluntaria para doblar más misiones al español. Igual que el mendigo de Ventormenta, pero con un micrófono.',
         'Así que nadie está matando el juego. Lo estamos intentando hacer hablar.',
     ]},
@@ -185,7 +185,7 @@ ESCENAS = [
     {"id": 'c23', "frases": [
         'Número veintitrés. Sube al zepelín, o al barco, y no te desconectes.',
         'Entre Orgrimmar, Entrañas y la Vega de Tuercespina vuelan los zepelines de los goblins. Y entre Menethil, Theramore y Auberdine navegan los barcos.',
-        'Mucha gente aprovecha el viaje para ir por un café. Prueba quedarte. Ver aparecer otro continente en el horizonte es de los momentos más bonitos de Azeroth.',
+        'Mucha gente aprovecha el viaje para ir por un café, pero prueba quedarte. Ver aparecer otro continente en el horizonte es de los momentos más bonitos de Azeroth.',
         'Y no viajas solo: en la cubierta hay jugadores de todos los niveles. Alguien salta, alguien baila, alguien pregunta adónde va esto.',
         'Hay quien se sube a un zepelín sin saber a dónde va, solo para ver qué hay del otro lado. Y termina en un continente lleno de enemigos de nivel cuarenta.',
         'Eso, en Retail, sería un error. En Forever es una aventura.',
@@ -196,7 +196,7 @@ ESCENAS = [
         'Un cocinero enciende la hoguera, y cada jugador puede sumar un objeto de su profesión: una tienda de campamento, un estandarte, una vela, hasta una pecera. Y cada objeto da un beneficio.',
         'Pero aquí está la magia: para ganarlo, hay que quedarse sentado al menos un minuto junto al fuego. Y si hay más gente, mejor.',
         'O sea, Blizzard metió una mecánica para que la gente se siente a charlar. En un juego de dos mil veintiséis. Eso es lo más de aventura de fantasía que hay.',
-        'Así que cuando veas una hoguera con tres extraños, siéntate. Saluda. Pregunta de dónde vienen. Esa hoguera es la nueva posada.',
+        'Así que cuando veas una hoguera con tres extraños, siéntate y saluda. Pregunta de dónde vienen. Esa hoguera es la nueva posada.',
     ]},
     {"id": 'c21', "frases": [
         'Número veintiuno. Sube la pesca.',
@@ -208,8 +208,8 @@ ESCENAS = [
     ]},
     {"id": 'gracias1', "frases": [
         'Y antes de seguir, gracias por los comentarios de estos días.',
-        'Yorsh escribió que sigue el canal desde el suscriptor ochenta, que nunca había comentado, y que se nota que los guiones no son de una máquina.',
-        'Yorsh, ochenta suscriptores. Eso era cuando el canal cabía entero en una posada de Villadorada. Gracias por quedarte todo el viaje.',
+        'Un compañero, Yorsh, nos sigue desde el suscriptor ochenta, y dice que se nota que los guiones no son de una máquina.',
+        'Desde los ochenta suscriptores, compañero, cuando el canal cabía entero en una posada de Villadorada. Gracias por quedarte todo el viaje.',
         'Y Pablo escribió algo que me hizo mucha ilusión: yo ni juego WoW, pero siempre veo tus videos.',
         'Pablo, eso es justo lo que intento con este video: que hasta quien no juega entienda por qué tanta gente vuelve a Azeroth.',
         'Todos los comentarios se leen, y todos se toman en cuenta para mejorar el canal. Así que cuéntame en cuál de estas treinta te reconoces.',
@@ -218,16 +218,16 @@ ESCENAS = [
         'Número veinte. Vende algo hecho por ti.',
         'Mucha gente usa la casa de subastas para tirar lo que le sobra. Prueba lo contrario: hazte comerciante de tu propia zona.',
         'Cocina pescado y véndelo a los que pasan. Fabrica bolsas con sastrería y regálaselas a los novatos. Abre una tienda en la puerta de la posada.',
-        'Hay jugadores que se hicieron un personaje solo para vender comida y agua por una moneda de plata, y la gente hace fila para comprarles. Por diversión.',
+        'Hay jugadores que se hicieron un personaje solo para vender comida y agua por una moneda de plata, y la gente hace fila para comprarles por pura diversión.',
         'Y en Forever el comercio tiene su propio sistema: el Favor de comerciante. Lo ganas entregando cajas de materiales en el campamento de tu facción.',
-        'La Alianza tiene a la Autoridad Comercial de Azeroth en los Montes Crestagrana, y la Horda, Logística y suministros de Durotar, en Los Baldíos.',
+        'La Alianza tiene a la Autoridad Comercial de Azeroth en las Montañas Crestagrana, y la Horda, Logística y suministros de Durotar, en Los Baldíos.',
         'Ahí se compran más de seiscientas recetas nuevas. Así que ser el artesano del barrio en Forever no solo es bonito: también es negocio.',
     ]},
     {"id": 'c19', "frases": [
         'Número diecinueve. Camina hasta la mazmorra.',
         'En Forever no hay buscador de grupos que te teletransporta a la puerta. Hay que armar el grupo en el chat, y llegar caminando.',
         'Las Minas de la Muerte, en los Páramos de Poniente. Las Cuevas de los Lamentos, en Los Baldíos. Y cada una tiene su viaje antes de la primera pelea.',
-        'Escribes en el chat que buscas tanque. Alguien contesta. Se juntan en el pueblo, caminan juntos, y en el camino ya están charlando.',
+        'Escribes en el chat que buscas tanque, y alguien contesta. Se juntan en el pueblo, caminan juntos, y en el camino ya están charlando.',
         'Y dentro, nadie corre. Hay que controlar, esperar el maná, y avisar antes de jalar. Y si alguien muere, todos lo esperan.',
         'Una mazmorra así dura más, sí. Pero la recuerdas. Y a veces sales de ella con tres amigos nuevos en la lista.',
     ]},
@@ -286,7 +286,7 @@ ESCENAS = [
     ]},
     {"id": 'c11', "frases": [
         'Número once. Explora el mundo sin misiones.',
-        'Un día, en lugar de abrir el registro de misiones, elige una montaña en el horizonte y ve hacia ella. Sin objetivo.',
+        'Un día, en lugar de abrir el registro de misiones, elige una montaña en el horizonte y ve hacia ella, sin ningún objetivo.',
         'World of Warcraft tiene rincones que ninguna misión te pide visitar: ruinas, cuevas, islas, picos donde nadie debería poder subir.',
         'Y en Forever hay zonas y lugares nuevos, de los que nadie tiene todavía una guía completa. Lo que encuentres, lo encontraste tú.',
         'En dos mil cuatro, así se descubrían los secretos. Alguien se perdía, encontraba algo raro, y lo contaba en el foro. Puedes ser ese alguien.',
@@ -313,8 +313,8 @@ ESCENAS = [
         'Morir en este juego cuesta. Y por eso sobrevivir tiene mérito.',
     ]},
     {"id": 'c08', "frases": [
-        'Número ocho. Haz la búsqueda del tesoro del naufragio.',
-        'Esta es nueva de Forever. Hacia el nivel catorce, en un barco hundido de los Páramos de Poniente si eres Alianza, o de Los Baldíos si eres Horda, empieza una cacería.',
+        'Número ocho. Busca el tesoro de la bolsa de dormir.',
+        'Esta es nueva de Forever. Hacia el nivel catorce empieza una cacería que te lleva de una granja quemada en los Páramos de Poniente a una torre en ruinas de Los Baldíos.',
         'Nadie te pone el signo de exclamación encima. Hay que acercarse a los restos y hacer clic. Y de ahí, pistas que te llevan por varias zonas, hasta la presa de Loch Modan.',
         'Al final te espera la Bolsa de dormir acogedora: un poquito más de experiencia por cada enemigo, no se pierde al morir, y cuenta como zona de descanso.',
         'Pero lo mejor no es el premio. Es que se siente como una búsqueda de piratas de verdad: una pista, un mapa, otra zona. Como en los juegos de aventura de antes.',
@@ -337,7 +337,7 @@ ESCENAS = [
     {"id": 'burla2', "frases": [
         'Y antes del top cinco, volvamos con Alberto, el de Villa del Lago.',
         'Alberto, en serio: que no puedas salir de Villa del Lago no es un fracaso. Es que el juego por fin te está tratando como en dos mil cuatro.',
-        'Hay gente que se pasó una semana entera en los Montes Crestagrana, y hoy lo cuenta como su mejor recuerdo del juego.',
+        'Hay gente que se pasó una semana entera en las Montañas Crestagrana, y hoy lo cuenta como su mejor recuerdo del juego.',
         'Así que quédate ahí. Pesca en el lago, haz amigos en la posada, y cuando te sientas listo, cruza el puente. El nivel treinta no se va a ir a ningún lado.',
     ]},
     {"id": 'c05', "frases": [
@@ -365,7 +365,7 @@ ESCENAS = [
         'Número dos. Detente, y mira.',
         'Forever trae iluminación nueva. No cambia el arte original: lo hace ver como lo recordabas. Y si pones los gráficos en Bueno o más, se enciende la iluminación secundaria, y las noches se vuelven oscuras de verdad.',
         'Y el mundo tiene día y noche. El amanecer sobre el Bosque de Elwynn, la tormenta en los Páramos, la nieve cayendo en Dun Morogh.',
-        'Así que de vez en cuando, suelta el teclado. Gira la cámara. Quita la interfaz, si quieres. Y mira el lugar donde estás.',
+        'Así que de vez en cuando suelta el teclado, gira la cámara despacio, quita la interfaz si te apetece, y mira con calma el lugar donde estás.',
         'Ese mundo tiene más de veinte años, y sigue siendo de los más bonitos que se han hecho. Merece que lo mires al menos una vez.',
     ]},
     {"id": 'c01', "frases": [

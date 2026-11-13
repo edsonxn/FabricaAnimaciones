@@ -58,7 +58,7 @@ PROMESAS = [   # (frase ancla, + s, qué debería verse)
     ('Alexander escribió que no se pierde', 1.5, 'comentario de Alexander'),
     ('Vas a tener que subir al zepelín', 1.5, 'mapa Durotar → Elwynn'),
     ('Y mientras corres como fantasma', 1.5, 'mundo gris de fantasma (clip)'),
-    ('Hacia el nivel catorce, en un barco hundido', 1.5, 'mapa naufragio'),
+    ('Esta es nueva de Forever', 1.5, 'mapa Granja Alexston'),
     ('hasta la presa de Loch Modan', 0.5, 'mapa Loch Modan'),
     ('Al final te espera la Bolsa de dormir', 1.5, 'MG bolsa de dormir'),
     ('Número siete. Ve a la Feria', 1.5, 'Feria (clip) + boleto'),

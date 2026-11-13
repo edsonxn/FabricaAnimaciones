@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_warcraft · lun 23-nov-2026 09:00 CDMX (hueco de `canales --actualizar` del 12-nov) · **SIN Overgear (el usuario, 12-nov: «Sin Overgear, que sea así, sin promoción»)**
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas con ruta + Overgear con fondo de marca) → doc: docs/estilo_secuencia_yt.md · copiar de `videos/wow_errores_30_60/` (lo más nuevo)
-- etapa: SUBIDO y programado (https://youtu.be/RSDta9FSn9c, lun 23-nov 09:00 CDMX)
+- etapa: SUBIDO y programado (https://youtu.be/CKBm0KBaM60, mar 17-nov 09:00 CDMX; versión con los 8 arreglos del usuario)
 - siguiente: Studio (monetización + cuestionario de idoneidad); a los 7 días, métricas → `canales/formula/cronicas_warcraft.md`
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
@@ -93,6 +93,21 @@
      `musica_wow.py`: c17 posada, c13 Ocaso, c05 Baldíos, c04 Ventormenta) → sfx → mezcla → video → final → tele master → verificar →
      miniatura Flow (in-game real, texto de Nano Banana) → youtube.json (Overgear /CRONICAS/5, promoción pagada; crédito/inspiración no
      hace falta) → `yt subir … private --publicar 2026-11-23T15:00:00Z` → registrar → `canales --actualizar` → commit.
+
+## En curso (12-nov, tras la subida)
+- EL USUARIO MARCÓ UN ERROR: el mapa «AZEROTH · dónde empieza cada raza» (c28) pone Dun Morogh y Teldrassil en el mar. Las coordenadas de los mapas sobre `azeroth_eses` (c28, c23 ×2, c11, c10, c07 feria) se pusieron a ojo. Arreglo: medirlas en `videos/wow_errores_forever/mapas/azeroth_eses_rejilla.jpg` → `efectos.py` → `video` → `final` → `verificar` → subir en privado con la MISMA fecha (lun 23-nov 09:00 CDMX); RSDta9FSn9c queda en privado SIN fecha (no borrarlo) → registro → lección en docs/estilo_secuencia_yt.md § mapas.
+- ~19:00: 17 coordenadas de `azeroth_eses` medidas en la rejilla y corregidas (comprobadas en `previews/_azeroth_puntos.jpg`) · re-render LANZADO (`_render2.log`).
+
+- **~19:30: 7 ERRORES del usuario sobre el MASTER, TODO en una sola resubida (misma fecha; RSDta9FSn9c queda privado SIN fecha):**
+  1. Mapas de Azeroth con puntos en el mar → ✅ 17 coordenadas medidas en la rejilla. 2. «Gratis» de Arnold en inglés + oraciones de 1-2 palabras → ✅ 9 frases reescritas y regeneradas (duraciones viejas en `_dur_viejas.json`, tomas viejas en `voz/_final_v1/`); falta seleccionar.
+  3. Elwynn c26: «Mina de los Ecos» mal (es de kobolds, en Villanorte) → campamento gnoll Riverpaw real del Linde del Bosque. 4. Elwynn c24 «A PIE»: puente/granja/ruta falsos → ruta real Villadorada → Linde del Bosque → frontera de los Páramos (Granja Piedracampo, Viñedos Maclure, Guarnición de Arroyoeste), solo lugares reales.
+  5. Revisar TODOS los mapas de zona con fuente (Three Corners 9.5,71 Marcy Baker; esposa de Mankrik ~49,50; naufragios; Colina del Cuervo; etc.). 6. Yorsh (gracias1_1, gracias1_2): Applio pasa al inglés → reescribir sin abrir con el nombre; revisar con Whisper por ventanas de ~3 s todas las frases con nombres.
+  7. «Montes Crestagrana» → **Montañas Crestagrana** en voz, rótulos y youtube.json.
+  Plan de audio: regenerar las frases y AJUSTARLAS a su duración vieja (atempo) sin rehacer `tiempo`/beats → `mezcla` → `video` (mapas) → `final` → `verificar` → subir.
+
+- **13-nov ~00:30 CHECKPOINT de los 7 errores (+ c08 naufragio: en Forever NO hay naufragio, es una cadena Granja Alexston 37.1,50.1 → torre quemada de Los Baldíos 46.1,74.3 → … → presa de Loch Modan 49.5,12.9, según method.gg; c08_0/c08_1 reescritas):** voz ✅ (19 frases regeneradas, revisión de idioma por ventanas de 3 s ✅ con `_check_nombres.py`, idioma_voz ✅, ajustadas a su duración vieja con `_ajustar_duracion.py` sin rehacer `tiempo`/beats) · mapas ✅ (Azeroth medido en la rejilla; zonas con coordenadas con fuente de games.gg, warcraft.wiki.gg, method.gg y reinsofpain; revisados en `_hoja_mapas.py`) · Montañas Crestagrana ✅ · anclas de las frases cambiadas apuntan al texto VIEJO del timeline (a propósito) · LANZADO mezcla → video → final → verificar (`_render3.log`). Después: subir en privado con la misma fecha, dejar RSDta9FSn9c en privado SIN fecha, registro, commit.
+
+- **13-nov:** MASTER v2 ✅ (mapas + voz + Crestagrana + c08), .srt corregido con el texto nuevo, subido CKBm0KBaM60 y reprogramado al mar 17-nov 09:00 CDMX por orden del usuario (después del último programado, «20 SECRETOS» del 14-nov). RSDta9FSn9c ya no existe. Pendiente: Studio (monetización + cuestionario).
 
 ## Hecho
 - 12-nov: `nuevo --yt`, `canales --actualizar` (Warcraft BIEN, hueco 23-nov; canal que se queda antes sin video: Sapiens/Cuerpo en Neón atrasados), comentarios leídos.

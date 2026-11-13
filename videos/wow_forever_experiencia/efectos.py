@@ -105,7 +105,7 @@ EXP = "inv_misc_book_11"   # ícono de experiencia
 FX = [
     # =========================================================== gancho: Alberto + dos formas de jugar
     com("Hace unos días, Alberto nos escribió", "Ugzmf-vgaHwmGz-F4_J4AaABAg", dur=7.0, x=.32, y=.30),
-    pv("Nadie te está esperando en el nivel sesenta", "villa_lago", "Villa del Lago · Montes Crestagrana", dur=4.2, x=.74, y=.55, tam=560),
+    pv("Nadie te está esperando en el nivel sesenta", "villa_lago", "Villa del Lago · Montañas Crestagrana", dur=4.2, x=.74, y=.55, tam=560),
     mg(M.calendario("UNA SEMANA DE WOW FOREVER", 4, 3, 9, [(0, 0, "Lanzamiento", AMAR), (1, 4, "Rutas óptimas · listas de errores", ROJO),
                                                        (5, 8, "Ya hay gente en el 60", ROJO)], hoy=8),
        ("World of Warcraft Forever salió el cuatro", -.2), ("Y hoy vamos a hacer justo lo contrario|fin", .2),
@@ -146,12 +146,12 @@ FX = [
                                                ("o_fragmento", "Brujo: fragmentos de alma", "Y el brujo carga")], y=.64, tam=320, dur=5.4),
     filav("Pero el brujo también puede invocar", [("h_invocar", "Ritual de invocación", None), ("h_gato", "Druida: forma felina", "Y el druida se convierte en gato")],
           y=.64, tam=320, dur=5.0),
-    mapa("azeroth_eses", [P(48, 62, "Dun Morogh", "enanos y gnomos"), P(43, 13, "Teldrassil", "elfos de la noche")],
+    mapa("azeroth_eses", [P(75, 53, "Dun Morogh", "enanos y gnomos"), P(16.5, 15, "Teldrassil", "elfos de la noche")],
          ("Y la raza también cuenta", -.2), ("aunque juegues la misma clase|fin", .2), ["nieve de Dun Morogh", "en Teldrassil"], "AZEROTH", "dónde empieza cada raza"),
     # =========================================================== burla0 (Arnold)
     com("Arnold escribió: deja a Marcos", "UgzPrV6Ty2-aLcalmSF4AaABAg", dur=6.4, x=.32, y=.30),
     # =========================================================== 27 leer misiones + add-on
-    mapa("ocaso", [P(75, 45, "Villa Oscura", "una viuda", None)], ("Una viuda en el Bosque del Ocaso", -.2), ("Una viuda en el Bosque del Ocaso", 2.6),
+    mapa("ocaso", [P(74.4, 47.2, "Villa Oscura", "una viuda", None)], ("Una viuda en el Bosque del Ocaso", -.2), ("Una viuda en el Bosque del Ocaso", 2.6),
          [], "BOSQUE DEL OCASO", "cada misión, una historia"),
     mapa("poniente", [P(56, 31, "Granja Saldean", "un granjero que lo perdió todo")], ("un granjero de los Páramos de Poniente", -.4),
          ("un orco en Durotar", -.2), [], "PÁRAMOS DE PONIENTE", "cada misión, una historia"),
@@ -167,23 +167,23 @@ FX = [
        ("Lo único que pedimos es una donación", -.2), ("Lo estamos intentando hacer hablar|fin", .3), ["Lo único que pedimos", "Igual que el mendigo"], "enlaces", y=.56),
     # =========================================================== 26 sin flechas
     rel("Número veintiséis. Apaga las flechas", "o_garra", "Sin flechas en el mapa", "lee, mira el mapa, pregunta"),
-    mapa("elwynn", [P(42, 65, "Villadorada"), P(32, 50, "Mina de los Ecos", "campamento de gnolls")], ("Lee dónde dice el texto", -.2), ("sigue los postes del camino|fin", .3),
+    mapa("elwynn", [P(42.1, 65.9, "Villadorada"), P(26.5, 85, "Linde del Bosque", "campamento gnoll Riverpaw")], ("Lee dónde dice el texto", -.2), ("sigue los postes del camino|fin", .3),
          ["mira el mapa", "y sigue los postes"], "BOSQUE DE ELWYNN", "guíate por el texto y los postes"),
     # =========================================================== 25 Hogger
     sil("Hogger, el gnoll de élite", "hogger", "Hogger · élite nivel 11", "veinte años humillando humanos", dur=5.0, lado="der"),
-    mapa("elwynn", [P(42, 65, "Villadorada", "tres desconocidos"), P(27, 86, "Hogger", "el gnoll de élite", "hogger")], ("Si vas solo, Hogger te destroza", -.2),
+    mapa("elwynn", [P(42.1, 65.9, "Villadorada", "tres desconocidos"), P(25.5, 90, "Hogger", "el gnoll de élite", "hogger")], ("Si vas solo, Hogger te destroza", -.2),
          ("No hace falta decir mucho|fin", .3), ["Pero cuando ves a tres jugadores"], "BOSQUE DE ELWYNN", "Hogger, al suroeste", zmax=1.7),
     mg(M.grupos("EL GRUPO DE HOGGER", [(1, "ability_warrior_defensivestance", "tanque", AMAR), (1, "spell_holy_flashheal", "sanador", VERDE),
                                        (1, "ability_rogue_sprint", "cebo", ROJO)]),
        ("Y pasa algo muy curioso", -.2), ("el más valiente le hace de cebo|fin", .4), ["uno pone el cuerpo", "otro cura", "el más valiente"], "grupo de Hogger", y=.60),
     # =========================================================== 24 a pie
-    mapa("elwynn", [P(42, 65, "Villadorada"), P(30, 62, "puente"), P(24, 72, "granja"), P(10, 72, "hacia los Páramos")], ("Vas a pasar por un puente", -.3),
-         ("se te queda en la memoria|fin", .3), ["un puente", "una granja", "una torre en ruinas", "un río con múrlocs"], "A PIE", "cada lugar, un recuerdo"),
+    mapa("elwynn", [P(42.1, 65.9, "Villadorada"), P(24.2, 74.5, "Guarnición de Arroyoeste", "camino a los Páramos")], ("Vas a pasar por un puente", -.3),
+         ("se te queda en la memoria|fin", .3), ["una torre en ruinas"], "A PIE", "cada lugar, un recuerdo"),
     rel("Y cuando por fin llegas a un maestro de vuelo", "grifo", "Maestro de vuelo", "solo si descubriste la parada", x=.74),
     # =========================================================== 23 zepelín y barco
-    mapa("azeroth_eses", [P(71, 45, "Orgrimmar"), P(44, 35, "Entrañas"), P(48, 83, "Grom'gol", "Vega de Tuercespina")],
+    mapa("azeroth_eses", [P(31, 41, "Orgrimmar"), P(72, 24, "Entrañas"), P(73, 74, "Grom'gol", "Vega de Tuercespina")],
          ("Entre Orgrimmar, Entrañas y la Vega", -.2), ("navegan los barcos", -1.6), ["Entrañas", "y la Vega de Tuercespina"], "ZEPELINES DE LOS GOBLINS", "Horda"),
-    mapa("azeroth_eses", [P(47, 52, "Menethil"), P(66, 62, "Theramore"), P(25, 26, "Auberdine")],
+    mapa("azeroth_eses", [P(72.5, 46, "Menethil"), P(31, 61, "Theramore"), P(20.5, 25, "Auberdine")],
          ("Y entre Menethil, Theramore y Auberdine", -.2), ("ir por un café|fin", .2), ["Theramore", "y Auberdine"], "BARCOS", "Alianza"),
     # =========================================================== 22 campamento
     mg(M.experiencia("EL CAMPAMENTO DE FOREVER", [("spell_fire_fire", "Hoguera · Cocina"), ("inv_misc_bag_10", "Tienda · Peletería"),
@@ -199,24 +199,24 @@ FX = [
     mapa("tuercespina", [P(27, 77, "Bahía del Botín", "concurso de pesca · domingos")], ("Y el concurso de pesca de los domingos", -.2), ("se cambia en Bahía del Botín|fin", .3),
          [], "VEGA DE TUERCESPINA", "concurso de pesca · ganan los primeros 50"),
     # =========================================================== gracias1
-    com("Yorsh escribió que sigue el canal", "UgzR5v08f7FdbdXZmMV4AaABAg", dur=7.0, x=.32, y=.30),
+    com(("gracias por los comentarios de estos días|fin", .3), "UgzR5v08f7FdbdXZmMV4AaABAg", dur=7.0, x=.32, y=.30),
     com("Y Pablo escribió algo", "UgxbKVvAKhKBLZttjG94AaABAg", dur=6.0, x=.66, y=.34),
     # =========================================================== 20 comerciante
     mg(M.subasta("LA TIENDA DE LA POSADA", [("inv_misc_fish_02", "Pescado asado", "1 de plata", AMAR), ("inv_drink_18", "Agua fresca", "1 de plata", AMAR),
                                            ("inv_misc_bag_10", "Bolsa de lino", "regalo", VERDE)], "HECHO POR TI", cab=("PRODUCTO", "PRECIO")),
        ("Cocina pescado y véndelo", -.2), ("y la gente hace fila para comprarles|fin", .3), ["Fabrica bolsas", "Abre una tienda", "Hay jugadores que se hicieron"], "tienda", y=.56),
-    mapa("crestagrana", [P(18, 64, "Three Corners", "Autoridad Comercial de Azeroth")], ("La Alianza tiene a la Autoridad", -.2),
-         ("La Alianza tiene a la Autoridad", 3.4), [], "MONTES CRESTAGRANA", "Alianza · Favor de comerciante"),
-    mapa("baldios", [P(50.0, 29.2, "Dokimi", "Logística y suministros de Durotar")], ("y la Horda, Logística y suministros", -.2),
+    mapa("crestagrana", [P(9.7, 70.9, "Marcy Baker", "Autoridad Comercial de Azeroth")], ("La Alianza tiene a la Autoridad", -.2),
+         ("La Alianza tiene a la Autoridad", 3.4), [], "MONTAÑAS CRESTAGRANA", "Alianza · Favor de comerciante"),
+    mapa("baldios", [P(50.3, 30.0, "Dokimi", "Logística y suministros de Durotar")], ("y la Horda, Logística y suministros", -.2),
          ("también es negocio|fin", .2), [], "LOS BALDÍOS", "Horda · Favor de comerciante"),
     # =========================================================== 19 mazmorra a pie
-    mapa("poniente", [P(56, 47, "Colina del Centinela"), P(42, 72, "Arroyoplata", "entrada", "minas")], ("Las Minas de la Muerte, en los Páramos", -.2),
+    mapa("poniente", [P(42.4, 72.6, "Minas de la Muerte", "entrada", "minas")], ("Las Minas de la Muerte, en los Páramos", -.2),
          ("Las Cuevas de los Lamentos", -.2), [], "MINAS DE LA MUERTE", "Páramos de Poniente"),
-    mapa("baldios", [P(52, 30, "El Cruce"), P(46, 36, "Oasis", "entrada", "lamentos")], ("Las Cuevas de los Lamentos", -.2), ("antes de la primera pelea|fin", .3),
+    mapa("baldios", [P(51.5, 30.3, "El Cruce"), P(46.0, 36.3, "Cuevas de los Lamentos", "entrada", "lamentos")], ("Las Cuevas de los Lamentos", -.2), ("antes de la primera pelea|fin", .3),
          [], "CUEVAS DE LOS LAMENTOS", "Los Baldíos"),
     mg(M.chat([("[Buscar grupo] Thalia: ¡yo voy de tanque!", (255, 192, 160)), ("[Grupo] Thalia: nos vemos en la Colina del Centinela", (170, 170, 255)),
                ("[Grupo] Brogan: llevo comida para todos", (170, 170, 255))], "Busco tanque para las Minas de la Muerte"),
-       ("Escribes en el chat que buscas tanque", -.2), ("ya están charlando|fin", .3), ["Alguien contesta", "Se juntan en el pueblo"], "buscar grupo", x=.30, y=.60),
+       ("Escribes en el chat que buscas tanque", -.2), ("ya están charlando|fin", .3), ["Se juntan en el pueblo", "caminan juntos"], "buscar grupo", x=.30, y=.60),
     # =========================================================== 18 hermandad
     mg(M.capas("CAPAS DE FOREVER", "inv_shirt_guildtabard_01", "spell_holy_prayerofspirit", "TU HERMANDAD, EN TU CAPA"),
        ("Y en Forever esto tiene premio extra", -.2), ("es la gente que te vas a ir cruzando|fin", .3),
@@ -240,12 +240,12 @@ FX = [
     # =========================================================== 14 Defias
     mg(M.cadena("LA HERMANDAD DEFIAS", [(F("defias"), "Ladrones", "de pañuelo rojo", False), (F("ventormenta"), "Albañiles", "de Ventormenta", False),
                                         (F("vancleef"), "Edwin VanCleef", "Minas de la Muerte", True)], ("¿QUIÉN ERA EL LADRÓN?", 3)),
-       ("En los Páramos de Poniente, los granjeros", -.2), ("los nobles que no les pagaron|fin", .3),
-       ["eran los albañiles", "su líder, Edwin VanCleef", "quién era el verdadero ladrón"], "cadena Defias", y=.56),
-    mapa("poniente", [P(56, 47, "Colina del Centinela", "la cadena empieza"), P(42, 72, "Arroyoplata", "Minas de la Muerte", "vancleef")],
+       ("En los Páramos de Poniente, los granjeros", -.2), ("La historia te lleva por toda la zona", -.3),
+       ["eran los albañiles", "Y que la ciudad nunca les pagó"], "cadena Defias", y=.56),
+    mapa("poniente", [P(56.4, 47.5, "Colina del Centinela", "la cadena empieza"), P(42.4, 72.6, "Minas de la Muerte", "Edwin VanCleef", "vancleef")],
          ("La historia te lleva por toda la zona", -.2), ("un barco pirata escondido bajo tierra|fin", .3), ["hasta el corazón"], "PÁRAMOS DE PONIENTE", "la Hermandad Defias"),
     # =========================================================== 13 Bosque del Ocaso
-    mapa("ocaso", [P(75, 45, "Villa Oscura"), P(20, 50, "Colina del Cuervo", "cementerio", "colina_cuervo")], ("Un pueblo llamado Villa Oscura", -.2),
+    mapa("ocaso", [P(74.4, 47.2, "Villa Oscura"), P(20.8, 44.1, "Colina del Cuervo", "cementerio", "colina_cuervo")], ("Un pueblo llamado Villa Oscura", -.2),
          ("Siempre es de noche|fin", .3), ["un cementerio lleno de neblina"], "BOSQUE DEL OCASO", "siempre es de noche"),
     sil("la de Stalvan Mantoniebla", "stalvan", "Stalvan Mantoniebla", "La leyenda de Stalvan", dur=5.2, lado="der"),
     pant("colina_cuervo", ("Y hay un no-muerto de élite, Mor'Ladim", -.2), ("Para esa, mejor ve en grupo de tres|fin", .2)),   # su imagen de la wiki no es la del juego
@@ -254,33 +254,33 @@ FX = [
                  "RARO", "normal", "ATACA CON CUIDADO"),
        ("En cada zona hay enemigos especiales", -.2), ("a veces sueltan algo bueno|fin", .3), ["con un dragón plateado", "Aparecen pocas veces", "a veces sueltan"], "raro", y=.56),
     # =========================================================== 11 explorar
-    mapa("azeroth_eses", [P(48, 56, "Dun Morogh", "picos donde nadie debería subir"), P(62, 30, "ruinas"), P(30, 75, "islas")],
+    mapa("azeroth_eses", [P(75, 53, "Dun Morogh", "picos donde nadie debería subir"), P(36, 33, "ruinas"), P(54, 67, "islas")],
          ("World of Warcraft tiene rincones", -.2), ("Lo que encuentres, lo encontraste tú|fin", .3), ["ruinas, cuevas, islas", "Y en Forever hay zonas"],
          "SIN MISIONES", "elige una montaña y ve"),
     # =========================================================== gracias2
     com("Alexander escribió que no se pierde", "UgyvBJ9JPFjgLoNWZHZ4AaABAg", dur=5.6, x=.27, y=.25, tam=620),
     com("Y el sargento Sevilla", "Ugwt3ef0C43WJWZhAjp4AaABAg", dur=5.4, x=.73, y=.64, tam=620),
     # =========================================================== 10 cruzar el mundo
-    mapa("azeroth_eses", [P(71, 45, "Orgrimmar", "zepelín"), P(48, 83, "Grom'gol", "Vega de Tuercespina"), P(48, 70, "Bosque del Ocaso", "todo te mata"),
-                          P(44, 66, "Bosque de Elwynn", "llegaste", "hogger")],
+    mapa("azeroth_eses", [P(31, 41, "Orgrimmar", "zepelín"), P(73, 74, "Grom'gol", "Tuercespina · todo te mata"),
+                          P(75, 64, "Bosque de Elwynn", "llegaste")],
          ("Vas a tener que subir al zepelín", -.3), ("llegar se siente como una hazaña|fin", .3),
-         ["cruzar zonas donde todo te mata", "esconderte, morir", "Es una tontería"], "DE DUROTAR A ELWYNN", "con un personaje de nivel bajo", zmax=1.4),
+         ["cruzar zonas donde todo te mata", "Es una tontería"], "DE DUROTAR A ELWYNN", "con un personaje de nivel bajo", zmax=1.4),
     # =========================================================== 09 morir bien
     rel("Número nueve. Aprende a morir bien", "angel", "Ángel de la resurrección", "debilidad y reparaciones"),
     rel("Y si tu clase puede resucitar", "h_resurreccion", "Resurrección", "hazlo por otros", x=.24),
     # =========================================================== 08 naufragio
-    mapa("poniente", [P(30, 85, "naufragio", "Alianza · nivel 14")], ("Hacia el nivel catorce, en un barco hundido", -.2),
-         ("Hacia el nivel catorce, en un barco hundido", 4.2), [], "PÁRAMOS DE PONIENTE", "la búsqueda del tesoro"),
-    mapa("baldios", [P(63, 46, "naufragio", "Horda · nivel 14")], ("o de Los Baldíos si eres Horda", -.2), ("pistas que te llevan por varias zonas", .2),
+    mapa("poniente", [P(37.1, 50.1, "Granja Alexston", "la primera pista")], ("Esta es nueva de Forever", 1.4),
+         ("Esta es nueva de Forever", 5.0), [], "PÁRAMOS DE PONIENTE", "la búsqueda del tesoro"),
+    mapa("baldios", [P(46.1, 74.3, "torre quemada", "otra pista")], ("Esta es nueva de Forever", 5.1), ("pistas que te llevan por varias zonas", .2),
          [], "LOS BALDÍOS", "la búsqueda del tesoro"),
-    mapa("loch_modan", [P(47, 15, "la presa", "una pista en la cornisa")], ("hasta la presa de Loch Modan", -.6), ("hasta la presa de Loch Modan|fin", .2),
+    mapa("loch_modan", [P(49.5, 12.9, "la presa", "una pista en la cornisa")], ("hasta la presa de Loch Modan", -.6), ("hasta la presa de Loch Modan|fin", .2),
          [], "LOCH MODAN", "la pista de la presa"),
     mg(M.experiencia("BOLSA DE DORMIR ACOGEDORA", [("inv_misc_bag_10", "+1 % XP"), ("spell_holy_resurrection", "No se pierde"),
                                             ("spell_nature_sleep", "Descanso")], ("HASTA +3 %", 3)),
        ("Al final te espera la Bolsa de dormir", -.2), ("cuenta como zona de descanso|fin", .5), ["no se pierde al morir", "y cuenta como zona"], "bolsa de dormir", y=.56),
     # =========================================================== 07 libros
     rel("Número siete. Ve a la Feria de la Luna Negra", "o_boleto", "Feria de la Luna Negra", "una semana y se va", x=.76),
-    mapa("azeroth_eses", [P(44, 66, "Bosque de Elwynn", "la primera · 9 al 15 nov"), P(36, 60, "Mulgore", "7 de diciembre")],
+    mapa("azeroth_eses", [P(75, 64, "Bosque de Elwynn", "la primera · 9 al 15 nov"), P(22, 52, "Mulgore", "7 de diciembre")],
          ("La primera de Forever se instaló", -.2), ("dos días antes de que abran las bandas", -.7), ["Y la próxima llega"],
          "FERIA DE LA LUNA NEGRA", "va cambiando de lugar", zmax=1.3),
     pv("La primera de Forever se instaló", "silas", "Silas Luna Negra · el dueño de la feria", dur=4.4, x=.80, y=.36, tam=360),
@@ -288,14 +288,14 @@ FX = [
        ("dos días antes de que abran las bandas", -.5), ("Ahí está Sayge", -.3),
        ["dos días antes", "de que abran las bandas"], "feria diciembre", y=.56),
     # =========================================================== 06 guerra
-    mapa("trabalomas", [P(62, 20, "Molino Tarren", "Horda"), P(51, 55, "Costasur", "Alianza")], ("Como el Molino Tarren y Costasur", -.4),
+    mapa("trabalomas", [P(62, 20, "Molino Tarren", "Horda"), P(50, 57, "Costasur", "Alianza")], ("Como el Molino Tarren y Costasur", -.4),
          ("dos pueblos frente a frente|fin", .4), ["y Costasur"], "LADERAS DE TRABALOMAS", "la guerra de siempre"),
     mapa("tuercespina", [P(35.6, 10.6, "Expedición de Nesingwary", "emboscadas")], ("O la Vega de Tuercespina", -.2), ("tan viejas como el juego|fin", .3),
          [], "VEGA DE TUERCESPINA", "emboscadas"),
     # =========================================================== burla2 (Alberto)
     com("volvamos con Alberto", "Ugzmf-vgaHwmGz-F4_J4AaABAg", dur=5.6, x=.32, y=.30),
-    mapa("crestagrana", [P(29, 46, "Villa del Lago", "Alberto, quédate aquí")], ("Así que quédate ahí", -.2), ("no se va a ir a ningún lado|fin", .3),
-         ["Pesca en el lago", "cruza el puente"], "MONTES CRESTAGRANA", "Villa del Lago"),
+    mapa("crestagrana", [P(30, 44.5, "Villa del Lago", "Alberto, quédate aquí")], ("Así que quédate ahí", -.2), ("no se va a ir a ningún lado|fin", .3),
+         ["Pesca en el lago", "cruza el puente"], "MONTAÑAS CRESTAGRANA", "Villa del Lago"),
     # =========================================================== 05 Baldíos
     mg(M.chat([("[1. General] Grokk: ¿dónde está la esposa de Mankrik?", (255, 192, 160)), ("[1. General] Zul: ¿dónde está la esposa de Mankrik?", (255, 192, 160)),
                ("[1. General] Thrak: con Chuck Norris", (255, 192, 160)), ("[1. General] Moa: ¿dónde está la esposa de Mankrik?", (255, 192, 160))],
@@ -303,7 +303,7 @@ FX = [
        ("Ahí nació la pregunta más famosa", -.2), ("todavía se cuentan|fin", .3),
        ["La misión se llama Perdida", "Durante años, la gente preguntaba", "Y alrededor de esa pregunta"], "chat de los Baldíos", x=.30, y=.60),
     sil("La misión se llama Perdida en la batalla", "mankrik", "Mankrik", "el Cruce · Los Baldíos", dur=5.0, lado="der"),
-    mapa("baldios", [P(52, 30, "El Cruce", "Mankrik", "mankrik"), P(49, 61, "la esposa de Mankrik")], ("En Forever, Los Baldíos vuelven", -.2),
+    mapa("baldios", [P(51.5, 30.3, "El Cruce", "Mankrik", "mankrik"), P(49.2, 50.4, "la esposa de Mankrik")], ("En Forever, Los Baldíos vuelven", -.2),
          ("Es una tradición|fin", .3), ["Así que pregunta"], "LOS BALDÍOS", "¿dónde está?"),
     # =========================================================== 04 capital
     carr([("ventormenta", "Ventormenta"), ("forjaz", "Forjaz"), ("cima_trueno", "Cima del Trueno"), ("darnassus", "Darnassus")],

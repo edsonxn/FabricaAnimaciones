@@ -34,6 +34,7 @@ te dé una regla nueva («desde ahora…»), anótala ahí con fecha (no en este
 | Terror CRT (cuarto oscuro, gameplay dentro de una tele) | `documental` | `ejemplos/terror_ben_drowned/` | `docs/estilo_terror_crt.md` |
 | Acuarela pintada a mano (papel, lavados con borde húmedo, tinta que hierve, chibi, SFX sintetizados) | `documental` (kit `acuarela.py` del ejemplo) | `ejemplos/ballena_estomago/` | `docs/estilo_acuarela_pincel.md` |
 | Disección en vivo (vertical: grabación real en un monitor abierta con rayos X + la misma física simulada de verdad en plano tipo Kurzgesagt) | `kurzgesagt` (kit `nucleo/diseccion.py`) | `ejemplos/euphoria_robots/` | `docs/estilo_diseccion.md` |
+| Línea 3D (transmisión de lanzamiento: alambre blanco sobre negro, globo, cohete por partes, trayectorias, HUD con reloj T+) | `documental` (kit `nucleo/linea3d.py` + `linea3d_cohetes.py`) | `ejemplos/cohete_crs30/` | `docs/estilo_linea3d.md` |
 | Grabado de peste (tinta y buril en espacio 3D) | `documental` | `ejemplos/wow_tres_noches/` | `docs/estilo_grabado_peste.md` |
 | Boceto en bucle | `boceto` | `ejemplos/gota_bucle/` | `docs/estilo_boceto_gota.md` |
 | Guache / meme | `guache` | `ejemplos/pelea_meme/` | `docs/estilo_guache_meme.md` |

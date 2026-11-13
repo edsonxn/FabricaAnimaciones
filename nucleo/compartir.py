@@ -33,7 +33,7 @@ EJEMPLOS = [
     "neandertales", "un_dia_30mil", "voynich", "informante_2027", "secreto_ia", "jalpa", "bichos_invierno", "arana_techo",
     "wow_curiosidades_kalimdor", "er_radagon_atrocidades", "tes_misiones_daedricas", "banjo_tooie", "majora_mask", "freno_enojo",
     "guason_fumado", "sociedad_1200", "got_joffrey", "mods_ia_fusion", "terror_ben_drowned", "gota_bucle", "pelea_meme",
-    "gato_cobarde", "wow_tres_noches", "lol_worlds_2026", "ballena_estomago", "euphoria_robots",
+    "gato_cobarde", "wow_tres_noches", "lol_worlds_2026", "ballena_estomago", "euphoria_robots", "cohete_crs30",
     "lol_semana2", "ig_lyon_worlds", "cfo_kc_jugadas", "lol_worlds_tl_al",          # Crónicas de League of Legends (7-nov-2026)
 ]
 NO_EN_EJEMPLO = {"ESTADO.md", "youtube.json"}           # publicación y diario del canal
@@ -43,6 +43,7 @@ DOCS = [
     "voz.md",
 ] + [f"estilo_{e}.md" for e in (
     "acuarela_pincel", "analisis_tactico", "boceto_gota", "boceto_guache_mapa", "cartoon90", "diseccion", "documental", "grabado_peste", "guache_meme", "kurzgesagt",
+    "linea3d",
     "linea_neon", "noir", "noir_color", "pegatina_flow", "rayosx_tecno", "secuencia_flow", "secuencia_fx", "secuencia_yt",
     "terror_crt")]
 

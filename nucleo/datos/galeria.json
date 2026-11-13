@@ -374,6 +374,17 @@
     "euphoria_robots_MASTER.mp4"
    ],
    "desc": "Vertical: la grabación real en un monitor flotante que un barrido convierte en radiografía; debajo, lo mismo simulado de verdad en Python (Verlet, músculos, equilibrio) en plano tipo Kurzgesagt, con esqueleto, fuerzas y centro de masa a la vista."
+  },
+  {
+   "id": "linea3d",
+   "nombre": "Línea 3D — transmisión de lanzamiento en alambre blanco",
+   "estilo": "documental (kit linea3d)",
+   "canal": "sin canal (prueba de cohetería)",
+   "video": "cohete_crs30",
+   "archivos": [
+    "cohete_crs30_MASTER.mp4"
+   ],
+   "desc": "3D real de líneas blancas sobre negro como en las transmisiones de SpaceX: globo con costas, Falcon 9 por partes, trayectorias de ascenso y regreso, aterrizaje en el mapa OSM del Cabo y HUD de misión con reloj T+ anclado a la voz y tiempos oficiales de NASA."
   }
  ],
  "sin_ejemplo": [

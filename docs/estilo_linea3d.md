@@ -59,3 +59,17 @@ capa de aire denso, aterrizaje con patas y polvo, 9 KM en el mapa, SECO, Dragon 
 - Planos en 3 módulos (`planos1/2/3.py`, cada uno con `PLANOS` y `sfx()`) + `comun.py`: un video de 10 min sin un escenas.py de 3 000 líneas.
 - Errores de cámara de esta vez: objetos diminutos en tomas lejanas (acercar a 0,15-0,2 km para la torre), cámara que mira un punto medio
   entre el objeto lejano y el destino (el objeto sale por la orilla: seguir al objeto y abrir solo al final), dos torres alineadas con la cámara (se tapan).
+
+## REGLA: más video real, fotos y pegatinas (el usuario, 14-nov-2026, tras ver `starship_vuelo15`)
+«Estuvo bien el video. Lo único que le cambiaría: hubo más escenas donde pudiste haber puesto un video real, como la explosión de la
+etapa 1 en el mar, o cuando hablas de que en otras ocasiones sí se ha atrapado.» Para todos los videos de T Menos Cero:
+- **Todo suceso real que nombre la voz = su video real en ese segundo** (yt-dlp de la retransmisión oficial o de medios: CNN,
+  NASASpaceflight, VideoFromSpace…, con crédito). En `starship_vuelo15` faltaron: la explosión del B22 sobre el golfo (CNN
+  `Ob1oxxIPWzk` seg ≈ 186 = T+6:52) y las capturas anteriores del propulsor (vuelos 5, 7, 8…) cuando la voz dice «otras veces sí se atrapó».
+  El 3D explica el CÓMO; el video real prueba el QUÉ. Si la voz cuenta algo que pasó, va el video, y el 3D puede ir antes o encima.
+- **Fotos y pegatinas como en Tamriel/Warcraft/Runa, adaptadas al kit:** foto real de cada persona, cohete, nave, lugar u objeto
+  nombrado (Musk, Shotwell, el B22, la Ship 42, Starbase, Kennedy, la Luna de Artemis…) como pegatina en marco de alambre blanco
+  (esquinas del HUD, rótulo condensado, línea guía al objeto 3D), entrando y saliendo animada; fotos del transbordador, Apolo, Saturno V
+  cuando se comparan. Comprobadas por identidad (regla global).
+- Densidad orientativa: ≥ 1 clip real o foto por minuto además de los planos de retransmisión; nunca más de ~40 s seguidos de 3D puro.
+- La lista de PROMESAS se revisa también para esto: cada frase con un suceso real → ¿hay video real? Si no hay, foto; si no hay foto, Flow.

@@ -1,80 +1,88 @@
 {
- "canal_id": "UCJWoU8OmjIHlKZjKECRc5YQ",
- "nombre": "T Menos Cero",
- "handle": "@TMenosCero",
- "estilo": "Cohetes y exploración espacial explicados en 3D (alta 14-nov-2026, bajo la cuenta de Google de Edsonxn). Kit LÍNEA 3D (nucleo/linea3d.py + linea3d_cohetes.py Falcon 9 + linea3d_starship.py): alambre blanco sobre negro como transmisión de lanzamiento, HUD con reloj T+ anclado a la voz y tiempos oficiales. Videos largos (~12 min) que alternan 3D puro, diagramas, video/imagen REAL de la misión (yt-dlp) y combinaciones (video real con capas encima). Voz ElevenLabs Alberto Rodríguez (l1zE9xgNpUTaQCZzpNJa, prueba de cohete_crs30). Ver docs/estilo_linea3d.md y canales/formula/t_menos_cero.md",
- "horario": {
-  "zona": "America/Mexico_City",
-  "hora_local": "13:00",
-  "utc": "19:00",
-  "ciclo_dias": 7,
-  "separacion_min_horas": 72,
-  "nota": "Arranque: 1 por semana (videos de 12 min con 3D propio); las noticias de lanzamiento salen cuanto antes tras el vuelo. AJUSTABLE por Claude con datos.",
-  "historial": [
-   {
-    "fecha": "2026-11-14",
-    "ciclo_dias": 7,
+  "canal_id": "UCJWoU8OmjIHlKZjKECRc5YQ",
+  "nombre": "T Menos Cero",
+  "handle": "@TMenosCero",
+  "estilo": "Cohetes y exploración espacial explicados en 3D (alta 14-nov-2026, bajo la cuenta de Google de Edsonxn). Kit LÍNEA 3D (nucleo/linea3d.py + linea3d_cohetes.py Falcon 9 + linea3d_starship.py): alambre blanco sobre negro como transmisión de lanzamiento, HUD con reloj T+ anclado a la voz y tiempos oficiales. Videos largos (~12 min) que alternan 3D puro, diagramas, video/imagen REAL de la misión (yt-dlp) y combinaciones (video real con capas encima). Voz ElevenLabs Alberto Rodríguez (l1zE9xgNpUTaQCZzpNJa, prueba de cohete_crs30). Ver docs/estilo_linea3d.md y canales/formula/t_menos_cero.md",
+  "horario": {
+    "zona": "America/Mexico_City",
     "hora_local": "13:00",
-    "motivo": "alta del canal, sin datos propios"
-   }
-  ]
- },
- "publicados": [],
- "ideas": {
-  "idioma": "es",
-  "region": "MX",
-  "busquedas": [
-   "starship explicado",
-   "cohetes explicados",
-   "spacex starship vuelo",
-   "artemis nasa explicado",
-   "como funciona un cohete",
-   "por que explotan los cohetes",
-   "apolo 13 que paso",
-   "exploracion espacial noticias"
+    "utc": "19:00",
+    "ciclo_dias": 7,
+    "separacion_min_horas": 72,
+    "nota": "Arranque: 1 por semana (videos de 12 min con 3D propio); las noticias de lanzamiento salen cuanto antes tras el vuelo. AJUSTABLE por Claude con datos.",
+    "historial": [
+      {
+        "fecha": "2026-11-14",
+        "ciclo_dias": 7,
+        "hora_local": "13:00",
+        "motivo": "alta del canal, sin datos propios"
+      }
+    ]
+  },
+  "publicados": [
+    {
+      "video": "starship_vuelo15",
+      "id": "TJvawxDLQnE",
+      "titulo": "Starship ATRAPÓ su nave al volver del espacio: el vuelo 15 explicado en 3D",
+      "programado": "2026-11-15T01:00:00Z",
+      "formato": "noticia de vuelo explicada en 3D a las ~20 h (línea 3D + video real SpaceX), 10:10"
+    }
   ],
-  "competidores": [],
-  "dias": 60,
-  "min_vistas": 1000,
-  "filtro": [
-   "cohete",
-   "starship",
-   "spacex",
-   "nasa",
-   "artemis",
-   "falcon",
-   "apolo",
-   "luna",
-   "marte",
-   "espacial",
-   "lanzamiento",
-   "orbita"
-  ]
- },
- "estado": "14-nov-2026: canal creado por Claude en Studio (nombre, @TMenosCero, logo y banner del kit linea3d, descripción, palabras clave, país MX, idioma es-419, no es para niños). Verificado por SMS y conectado a la API por el usuario el mismo día (subidas largas permitidas). 1.er video: vuelo 15 de Starship (~12 min).",
- "descripcion": "Cohetes y exploración espacial, explicados en 3D. Cómo vuela cada misión etapa por etapa, por qué fallan los cohetes y qué viene después: Starship, Artemis, Falcon 9, la Luna y Marte. Animación de líneas sobre negro, como una transmisión de lanzamiento, con video real de cada misión y datos oficiales. Suscríbete para no perderte el próximo lanzamiento.",
- "palabras_clave": [
-  "cohetes",
-  "exploración espacial",
-  "SpaceX",
-  "Starship",
-  "NASA",
-  "Artemis",
-  "Falcon 9",
-  "lanzamientos",
-  "cohetes explicados",
-  "espacio en español",
-  "animación 3D",
-  "Luna",
-  "Marte"
- ],
- "idioma": "es-419",
- "pais": "MX",
- "banner": "canales/arte/t_menos_cero/BANNER_2560x1440.jpg",
- "logo": "canales/arte/t_menos_cero/LOGO_800.jpg",
- "voz": {
-  "motor": "elevenlabs",
-  "voice_id": "l1zE9xgNpUTaQCZzpNJa",
-  "nombre": "Alberto Rodríguez"
- }
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "starship explicado",
+      "cohetes explicados",
+      "spacex starship vuelo",
+      "artemis nasa explicado",
+      "como funciona un cohete",
+      "por que explotan los cohetes",
+      "apolo 13 que paso",
+      "exploracion espacial noticias"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "cohete",
+      "starship",
+      "spacex",
+      "nasa",
+      "artemis",
+      "falcon",
+      "apolo",
+      "luna",
+      "marte",
+      "espacial",
+      "lanzamiento",
+      "orbita"
+    ]
+  },
+  "estado": "14-nov-2026: canal creado por Claude en Studio (nombre, @TMenosCero, logo y banner del kit linea3d, descripción, palabras clave, país MX, idioma es-419, no es para niños). Verificado por SMS y conectado a la API por el usuario el mismo día (subidas largas permitidas). 1.er video: vuelo 15 de Starship (~12 min).",
+  "descripcion": "Cohetes y exploración espacial, explicados en 3D. Cómo vuela cada misión etapa por etapa, por qué fallan los cohetes y qué viene después: Starship, Artemis, Falcon 9, la Luna y Marte. Animación de líneas sobre negro, como una transmisión de lanzamiento, con video real de cada misión y datos oficiales. Suscríbete para no perderte el próximo lanzamiento.",
+  "palabras_clave": [
+    "cohetes",
+    "exploración espacial",
+    "SpaceX",
+    "Starship",
+    "NASA",
+    "Artemis",
+    "Falcon 9",
+    "lanzamientos",
+    "cohetes explicados",
+    "espacio en español",
+    "animación 3D",
+    "Luna",
+    "Marte"
+  ],
+  "idioma": "es-419",
+  "pais": "MX",
+  "banner": "canales/arte/t_menos_cero/BANNER_2560x1440.jpg",
+  "logo": "canales/arte/t_menos_cero/LOGO_800.jpg",
+  "voz": {
+    "motor": "elevenlabs",
+    "voice_id": "l1zE9xgNpUTaQCZzpNJa",
+    "nombre": "Alberto Rodríguez"
+  }
 }

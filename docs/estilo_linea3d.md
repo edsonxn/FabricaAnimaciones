@@ -47,3 +47,15 @@ HUD de misión (reloj T+, arco de eventos, estado de motores). Nada de colores, 
 `videos/cohete_crs30/promesas.md`: 22 frases con su segundo y la hoja `previews/promesas_a/b.jpg`. Todo lo que dice la voz se ve
 (9 motores con vista inferior, Max Q con conos de choque y gráfica, MECO, separación, media vuelta con flecha de giro, cae de cola,
 capa de aire denso, aterrizaje con patas y polvo, 9 KM en el mapa, SECO, Dragon que se suelta, Estación, 5 vuelos del B1080).
+
+## Video real con capas encima (14-nov-2026, `videos/starship_vuelo15/`, 1.er video de T Menos Cero)
+- `comun.real(t, clip, seg, lz, …)`: clip de la retransmisión a pantalla completa, recortado (zoom 1,2 quita el HUD de abajo),
+  un poco desaturado, banda negra arriba (tapa rótulos de la retransmisión como «VIEWS BY STARLINK»), marco de esquinas, «VIDEO: SPACEX»,
+  «RETRANSMISIÓN · T+…» con el tiempo de misión DEL CLIP (el reloj grande del HUD se oculta en esos planos: así nunca retrocede) y rótulo abajo.
+- Sincronía: tabla seg del clip ↔ tiempo de misión (leer el T+ del propio clip en una hoja de cuadros); `np.interp` para cámara lenta en la ignición.
+- «VIEWS BY STARLINK» = el video viaja por la red Starlink; NO son cámaras de los satélites.
+- Localizar momentos: bajar la retransmisión entera a 360p (≈ 115 MB) y hacer hojas cada N s; luego `--download-sections` a 1080p
+  solo de los tramos. No pasar URLs firmadas de googlevideo a ffmpeg (403 y la salida de error repite la URL kilométrica).
+- Planos en 3 módulos (`planos1/2/3.py`, cada uno con `PLANOS` y `sfx()`) + `comun.py`: un video de 10 min sin un escenas.py de 3 000 líneas.
+- Errores de cámara de esta vez: objetos diminutos en tomas lejanas (acercar a 0,15-0,2 km para la torre), cámara que mira un punto medio
+  entre el objeto lejano y el destino (el objeto sale por la orilla: seguir al objeto y abrir solo al final), dos torres alineadas con la cámara (se tapan).

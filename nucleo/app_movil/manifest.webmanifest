@@ -1,0 +1,16 @@
+{
+  "name": "Fábrica de Animaciones",
+  "short_name": "Fábrica",
+  "description": "Estatus en vivo de cada video y la fábrica en 3D",
+  "start_url": "/m",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090b12",
+  "theme_color": "#090b12",
+  "lang": "es",
+  "icons": [
+    {"src": "/v2/app/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/v2/app/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

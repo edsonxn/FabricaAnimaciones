@@ -43,7 +43,8 @@ ALIAS = {"AL": "h01_alexandros_hoja", "AD": "h02_alexandros_dk", "RE": "h03_rena
          "TV": "h09_tirion_viejo", "TH": "h10_tirion_highlord", "TA": "h11_taelan_hoja", "FA": "h12_familias_hoja",
          "EI": "h13_eitrigg_hoja", "IS": "h14_isillien_hoja", "VI": "h15_villanos_hoja", "CO": "h16_consejo_hoja",
          "MA": "h17_magni_hoja", "DK": "h18_dk_hoja", "CR": "h19_cruzados_hoja", "DF": "h20_defensores_hoja",
-         "PL": "h21_plaga_hoja", "UT": "h28_utileria", "U2": "h29_utileria2", "FX": "h30_fx_hoja"}
+         "PL": "h21_plaga_hoja", "UT": "h28_utileria", "U2": "h29_utileria2", "FX": "h30_fx_hoja",
+         "IJ": "h31_isillien_joven"}   # IJ = Isillien JOVEN (Mano de Plata, Costasur; 2-nov); IS = el Gran Inquisidor
 CICLOS = {"NEC": "h22_necrofago_corre", "ESQ": "h23_esqueleto_camina", "MIR": "h24_mirador_galope",
           "CAB": "h25_caballo_muerte_galope", "GAR": "h26_gargola_aleteo", "TGA": "h27_taelan_galope"}
 # a dónde MIRA cada pieza en su hoja (1 = derecha, -1 = izquierda): para voltearla según hacia dónde camina

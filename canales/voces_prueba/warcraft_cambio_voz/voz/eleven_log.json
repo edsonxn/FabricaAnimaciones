@@ -1,0 +1,92 @@
+[
+ {
+  "key": "cambio_voz_0",
+  "seed": 7,
+  "chars": 72,
+  "costo": 8,
+  "cuenta": 1,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_1",
+  "seed": 7,
+  "chars": 95,
+  "costo": 19,
+  "cuenta": 3,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_2",
+  "seed": 7,
+  "chars": 96,
+  "costo": 11,
+  "cuenta": 1,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_3",
+  "seed": 7,
+  "chars": 79,
+  "costo": 16,
+  "cuenta": 3,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_4",
+  "seed": 7,
+  "chars": 146,
+  "costo": 16,
+  "cuenta": 1,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_5",
+  "seed": 7,
+  "chars": 139,
+  "costo": 28,
+  "cuenta": 3,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_6",
+  "seed": 7,
+  "chars": 75,
+  "costo": 8,
+  "cuenta": 1,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:12"
+ },
+ {
+  "key": "cambio_voz_4",
+  "seed": 7,
+  "chars": 145,
+  "costo": 29,
+  "cuenta": 3,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:25"
+ },
+ {
+  "key": "cambio_voz_6",
+  "seed": 7,
+  "chars": 144,
+  "costo": 16,
+  "cuenta": 1,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:25"
+ },
+ {
+  "key": "cambio_voz_7",
+  "seed": 7,
+  "chars": 120,
+  "costo": 24,
+  "cuenta": 3,
+  "modelo": "eleven_v4_turbo",
+  "t": "2026-11-02 09:25"
+ }
+]

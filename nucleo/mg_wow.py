@@ -2253,8 +2253,24 @@ def narrador(nombre, lema, n=None, de=None, ico=None, ancho=620):
 def votacion(titulo, nombres, remate=None, icos=None, ancho=1240):
     """Papeleta de la votación con marco de WoW: los nombres en dos columnas con su casilla (o icono); la marca k enciende el
     nombre k (dorado, palomita con rebote) cuando esa voz pide el voto, en cualquier orden; los ya marcados quedan en blanco.
-    Con `remate`, la marca len(nombres) lo saca abajo."""
-    filas_ = (len(nombres) + 1) // 2
+    Con `remate`, la marca len(nombres) lo saca abajo.
+    MIDE los nombres (13-nov-2026, tes_reina_loba: opciones largas se encimaban): dos columnas solo si caben (letra 44 → 36);
+    si no, una columna."""
+    _d = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    UP = [n.upper() for n in nombres]
+    tam, cols = None, 2
+    if len(nombres) > 1:
+        for t_ in (44, 40, 36):
+            if max(_d.textlength(s, font=fuente("serif", t_)) for s in UP) <= ancho * .46 - 100:
+                tam = t_
+                break
+    if tam is None:
+        cols = 1
+        for t_ in (44, 40, 36, 32, 28):
+            tam = t_
+            if max(_d.textlength(s, font=fuente("serif", t_)) for s in UP) <= ancho * .86 - 100:
+                break
+    filas_ = (len(nombres) + 1) // 2 if cols == 2 else len(nombres)
     h = 150 + filas_ * 92 + (90 if remate else 30)
 
     def fn(dt, dur, marcas):
@@ -2263,7 +2279,7 @@ def votacion(titulo, nombres, remate=None, icos=None, ancho=1240):
         ms = list(marcas[:len(nombres)]) + [None] * max(0, len(nombres) - len(marcas))
         on_ = [m is not None and dt >= m for m in ms]
         activa = max((k for k in range(len(nombres)) if on_[k]), key=lambda k: ms[k], default=-1)
-        f = fuente("serif", 44)
+        f = fuente("serif", tam)
         for k, nom in enumerate(nombres):
             col, fila = k // filas_, k % filas_
             x = M + (ancho * .08 if col == 0 else ancho * .54)

@@ -17,7 +17,8 @@ Voz CLONADA en varias cuentas (2-nov-2026; p. ej. el clon de la voz Applio de Wa
 voice_id al mismo clon → VOZ["por_cuenta"] = {2: "<id en la 2>", 3: "<id en la 3>"}; post() pone el id de la cuenta en uso y
 salta las que no lo tienen. Sirve como narrador o en VOZ_POR_FRASE (lleva su propio puntero de cuenta: no saca al narrador
 de la cuenta 1). VOZ_POR_FRASE = "applio" no pasa por aquí: lo genera tts_applio (tts_gen.py).
-Etiquetas que NO van con una voz: VOZ["sin_etiquetas"] = ("whisper", "excit") → se quita toda [..] que contenga ese texto.
+Etiquetas que NO van: SIEMPRE_FUERA (susurros y excitación fuerte, regla del usuario del 2-nov-2026 para TODOS los canales)
++ VOZ["sin_etiquetas"] de cada voz → se quita toda [..] que contenga ese texto.
 """
 import io
 import json
@@ -140,11 +141,14 @@ def voz_de(key):
     return getattr(guion, "VOZ_POR_FRASE", {}).get(key) or config.VOZ["voice_id"]
 
 
+# Regla del usuario (2-nov-2026, TODOS los canales): nada de susurros ni emociones fuertes de excitado en la voz
+# («no me gustan mucho los susurros»). Se quitan siempre, aunque el guion las traiga; VOZ["sin_etiquetas"] suma más.
+SIEMPRE_FUERA = ("whisper", "excit", "shout", "yell", "scream", "ecstatic", "thrilled")
+
+
 def sin_etiquetas(texto):
-    """Quita las etiquetas que esta voz no lleva (VOZ["sin_etiquetas"]: trozos de texto, p. ej. "whisper" quita [whispers])."""
-    malas = config.VOZ.get("sin_etiquetas") or ()
-    if not malas:
-        return texto
+    """Quita las etiquetas que esta voz no lleva: SIEMPRE_FUERA + VOZ["sin_etiquetas"] (trozos de texto, "whisper" quita [whispers])."""
+    malas = tuple(SIEMPRE_FUERA) + tuple(config.VOZ.get("sin_etiquetas") or ())
     limpio = re.sub(r"\[([^\]]+)\]\s*", lambda m: "" if any(x in m.group(1).lower() for x in malas) else m.group(0), texto)
     if limpio != texto:
         print(f"  (etiquetas quitadas por VOZ['sin_etiquetas']: {texto[:60]}…)", flush=True)

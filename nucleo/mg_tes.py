@@ -54,12 +54,17 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   lecturas(titulo, cita, [(nombre, texto, i)]) una cita y sus interpretaciones, la activa encendida y las demás en gris
   narrador(nombre, lema, n=None, de=None)      placa pequeña «NARRA» + nombre de la voz (videos a varias voces; n/de = turno)
   votacion(titulo, nombres, remate)            papeleta: cada marca i enciende el nombre i (quien pide el voto); el remate al final
+  tes_reina_loba (13-nov-2026):
+  arbol(titulo, personas, lazos, pasos)        árbol genealógico con medallones; marcas que revelan, foco, tachado de muertos
+  red(titulo, personas, nexos, pasos)          RELACIONES E INTENCIONES: medallones con «QUIERE: …», nexos animados por tipo
+                                               (alianza, odio, traición con daga, manipula con hilo de títere, lealtad,
+                                               matrimonio), iconos, cámara que se acerca al foco, «rompe» y «cambia»
 """
 import math
 import os
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 HUESO, BLANCO, GRIS, SANGRE, ORO = (236, 230, 214), (255, 255, 255), (150, 146, 138), (196, 38, 30), (214, 186, 120)
 _fc, _bc = {}, {}
@@ -2782,4 +2787,689 @@ def arbol(titulo, personas, lazos, pasos, ancho=1760, alto=950, D=124):
             _texto(d, (M + ancho / 2, M + alto - 34), nota[0], fuente("Condensed", 36), BLANCO, "mm",
                    255 * _eo((dt - nota[1]) / .5))
         return _salida(im, dt)
+    return fn
+
+
+# ------------------------------------------------------------------ red de relaciones e intenciones (tes_reina_loba, 13-nov-2026)
+# El usuario (13-nov): «se pierde el hilo de la historia, sobre todo de los personajes, de saber quién es quién y las
+# intenciones de cada quien». Hermano de `arbol`: mismos medallones, pero lo que une a la gente no es la sangre sino lo que
+# quiere cada quien y lo que se hacen entre sí.
+MORADO, ACERO = (178, 122, 226), (134, 180, 226)
+_TIPOS = {   # tipo: (color, grosor, puntas (0 ninguna, 1 a→b, 2 ambas), trazo)
+    "alianza": (ORO, 4, 2, "linea"),
+    "odio": (SANGRE, 4, 2, "rayo"),
+    "rivalidad": (SANGRE, 4, 2, "rayo"),
+    "traicion": (SANGRE, 4, 1, "punteado"),
+    "manipula": (MORADO, 3, 1, "hilo"),
+    "lealtad": (ACERO, 3, 1, "linea"),
+    "matrimonio": (ORO, 3, 0, "doble"),
+    "hecho": (HUESO, 3, 1, "linea"),        # una acción sin bando: «la vigila», «le paga»
+}
+_ICONO_TIPO = {"traicion": "daga", "matrimonio": "anillos"}
+_silc = {}
+
+
+def _silueta_med(D):
+    """Medallón de quien no tiene imagen real (Lord Thone, el embajador): busto en sombra, nunca una cara inventada."""
+    if D not in _silc:
+        S = max(8, D * 4)
+        im = Image.new("RGBA", (S, S), (24, 22, 20, 255))
+        d = ImageDraw.Draw(im)
+        c = (66, 62, 57, 255)
+        d.ellipse((S * .35, S * .17, S * .65, S * .51), fill=c)
+        d.rectangle((S * .44, S * .45, S * .56, S * .62), fill=c)
+        d.ellipse((S * .13, S * .57, S * .87, S * 1.2), fill=c)
+        _texto(d, (S * .5, S * .34), "?", fuente("Bold Condensed", int(S * .2)), (28, 26, 24), "mm")
+        m = Image.new("L", (S, S), 0)
+        ImageDraw.Draw(m).ellipse((0, 0, S - 1, S - 1), fill=255)
+        im.putalpha(m)
+        _silc[D] = im.resize((D, D), Image.LANCZOS)
+    return _silc[D]
+
+
+def _rot(pts, ang, cx, cy, z):
+    c, s = math.cos(ang), math.sin(ang)
+    return [(cx + (x * c - y * s) * z, cy + (x * s + y * c) * z) for x, y in pts]
+
+
+def _ico(d, tipo, cx, cy, z, k=1.0):
+    """Iconos dibujados por código (z = lado en px; k = brillo 0..1 para lo apagado): daga, contrato, carta, moneda,
+    corona, anillos (boda), anillo (uno, con piedra), titere (la cruceta del titiritero)."""
+    def c(col):
+        return tuple(int(v * k) for v in col) + (255,)
+    w = max(1, int(z * .06))
+    if tipo == "daga":
+        g = math.radians(40)
+        d.polygon(_rot([(0, -.52), (-.08, .05), (.08, .05)], g, cx, cy, z), fill=c((218, 222, 230)), outline=c((110, 114, 124)))
+        d.line(_rot([(0, -.44), (0, .03)], g, cx, cy, z), fill=c((140, 144, 152)), width=max(1, w // 2))
+        d.polygon(_rot([(-.23, .05), (.23, .05), (.23, .13), (-.23, .13)], g, cx, cy, z), fill=c(ORO))
+        d.polygon(_rot([(-.05, .13), (.05, .13), (.05, .37), (-.05, .37)], g, cx, cy, z), fill=c((120, 34, 26)))
+        px, py = _rot([(0, .43)], g, cx, cy, z)[0]
+        r = z * .07
+        d.ellipse((px - r, py - r, px + r, py + r), fill=c(ORO))
+    elif tipo == "contrato":
+        d.rectangle((cx - z * .3, cy - z * .36, cx + z * .3, cy + z * .36), fill=c((228, 214, 182)))
+        for yy in (-.4, .4):
+            d.ellipse((cx - z * .36, cy + z * yy - z * .08, cx + z * .36, cy + z * yy + z * .08), fill=c((196, 176, 136)),
+                      outline=c((120, 96, 64)))
+        for i in range(4):
+            yy = cy - z * .2 + i * z * .1
+            d.line([(cx - z * .2, yy), (cx + z * (.2 if i < 3 else .02), yy)], fill=c((120, 104, 84)), width=max(1, w // 2))
+        d.ellipse((cx + z * .06, cy + z * .12, cx + z * .26, cy + z * .32), fill=c(SANGRE))
+    elif tipo == "carta":
+        d.rectangle((cx - z * .42, cy - z * .28, cx + z * .42, cy + z * .28), fill=c((228, 214, 182)), outline=c((120, 96, 64)))
+        d.line([(cx - z * .42, cy - z * .28), (cx, cy + z * .06), (cx + z * .42, cy - z * .28)], fill=c((120, 96, 64)), width=w)
+        d.ellipse((cx - z * .1, cy - z * .04, cx + z * .1, cy + z * .16), fill=c(SANGRE))
+    elif tipo == "moneda":
+        d.ellipse((cx - z * .4, cy - z * .4, cx + z * .4, cy + z * .4), fill=c(ORO), outline=c((130, 100, 50)), width=w)
+        d.ellipse((cx - z * .26, cy - z * .26, cx + z * .26, cy + z * .26), outline=c((150, 118, 60)), width=w)
+    elif tipo == "corona":
+        d.polygon([(cx - z * .42, cy + z * .28), (cx - z * .42, cy - z * .16), (cx - z * .21, cy + z * .04), (cx, cy - z * .34),
+                   (cx + z * .21, cy + z * .04), (cx + z * .42, cy - z * .16), (cx + z * .42, cy + z * .28)], fill=c(ORO))
+        d.rectangle((cx - z * .42, cy + z * .16, cx + z * .42, cy + z * .28), fill=c((170, 136, 70)))
+        d.ellipse((cx - z * .07, cy + z * .15, cx + z * .07, cy + z * .29), fill=c(SANGRE))
+    elif tipo == "anillos":
+        for dx in (-.13, .13):
+            d.ellipse((cx + z * (dx - .24), cy - z * .24, cx + z * (dx + .24), cy + z * .24), outline=c(ORO), width=max(2, w))
+    elif tipo == "anillo":
+        d.ellipse((cx - z * .3, cy - z * .16, cx + z * .3, cy + z * .44), outline=c(ORO), width=max(2, int(z * .1)))
+        d.polygon([(cx - z * .14, cy - z * .14), (cx, cy - z * .42), (cx + z * .14, cy - z * .14), (cx, cy - z * .02)], fill=c((214, 60, 40)))
+    elif tipo == "titere":
+        madera = c((168, 124, 78))
+        d.line([(cx - z * .44, cy), (cx + z * .44, cy)], fill=madera, width=max(2, int(z * .1)))
+        d.line([(cx, cy - z * .34), (cx, cy + z * .34)], fill=madera, width=max(2, int(z * .1)))
+
+
+def _bez(a, c, b, n=48):
+    return [((1 - t) ** 2 * a[0] + 2 * (1 - t) * t * c[0] + t * t * b[0], (1 - t) ** 2 * a[1] + 2 * (1 - t) * t * c[1] + t * t * b[1])
+            for t in (i / (n - 1) for i in range(n))]
+
+
+def _largos(pts):
+    acc = [0.0]
+    for p, q in zip(pts, pts[1:]):
+        acc.append(acc[-1] + math.dist(p, q))
+    return acc
+
+
+def _en(pts, acc, f):
+    """Punto y dirección a la fracción f (por longitud) del recorrido."""
+    L = acc[-1] * max(0.0, min(1.0, f))
+    for i in range(len(pts) - 1):
+        if acc[i + 1] >= L or i == len(pts) - 2:
+            seg = acc[i + 1] - acc[i] or 1
+            u = (L - acc[i]) / seg
+            p, q = pts[i], pts[i + 1]
+            dx, dy = q[0] - p[0], q[1] - p[1]
+            n = math.hypot(dx, dy) or 1
+            return (p[0] + dx * u, p[1] + dy * u), (dx / n, dy / n)
+    return pts[-1], (1.0, 0.0)
+
+
+def _tramo(pts, acc, f0, f1):
+    """Sub-recorrido entre las fracciones f0 y f1."""
+    if f1 <= f0:
+        return []
+    L0, L1 = acc[-1] * f0, acc[-1] * f1
+    out = [_en(pts, acc, f0)[0]]
+    out += [p for p, l in zip(pts, acc) if L0 < l < L1]
+    out.append(_en(pts, acc, f1)[0])
+    return out
+
+
+def _trazo(d, pts, col, ancho, raya=None):
+    """Línea gruesa con juntas redondas; raya = (lleno, hueco) en px para el punteado."""
+    if len(pts) < 2:
+        return
+    if not raya:
+        d.line(pts, fill=col, width=ancho, joint="curve")
+        return
+    acc = _largos(pts)
+    L, (a, b) = acc[-1], raya
+    s = 0.0
+    while s < L:
+        tr = _tramo(pts, acc, s / L, min(L, s + a) / L)
+        if len(tr) >= 2:
+            d.line(tr, fill=col, width=ancho, joint="curve")
+        s += a + b
+
+
+def _punta(d, p, v, col, z):
+    nx, ny = -v[1], v[0]
+    d.polygon([(p[0] + v[0] * z * .2, p[1] + v[1] * z * .2), (p[0] - v[0] * z + nx * z * .55, p[1] - v[1] * z + ny * z * .55),
+               (p[0] - v[0] * z * .62, p[1] - v[1] * z * .62), (p[0] - v[0] * z - nx * z * .55, p[1] - v[1] * z - ny * z * .55)],
+              fill=col)
+
+
+def _mezcla(a, b, k):
+    return tuple(int(x + (y - x) * k) for x, y in zip(a, b))
+
+
+def red(titulo, personas, nexos, pasos, ancho=1760, alto=950, D=128, zoom=1.35, rejilla=False):
+    """RED DE RELACIONES E INTENCIONES con retratos: quién es quién, qué QUIERE cada quien y qué se hacen entre sí
+    (alianzas, odios, traiciones, manipulaciones, lealtades, bodas). Mismo acabado que `arbol` (humo, medallones, oro).
+      personas = {id: dict(n=nombre, s=subtítulo, img=ruta|None (None = busto en sombra, nunca una cara inventada),
+                  x=0..1, y=0..1 (posición del medallón dentro del área útil), foco=(cx, cy, zoom) del retrato,
+                  q="el trono para Uriel" | ("TEME", "…")  → etiqueta de INTENCIÓN bajo el nombre (prefijo QUIERE por defecto))}
+      nexos = [dict(a=id, b=id, t=tipo, r="rótulo corto", icono="daga|contrato|carta|moneda|corona|anillos" o ruta PNG
+               (o (ruta, foco)), id="…" (por defecto «a-b»), curva=None (auto: esquiva medallones y textos) o -0.5..0.5,
+               rota="texto al quebrarse", punteado=False (trazo punteado en cualquier tipo: lo que solo se rumorea))]
+        tipos: alianza (oro, doble punta) · odio / rivalidad (rojo en rayo que vibra) · traicion (rojo punteado + daga)
+               manipula (morado, hilo de títere con su cruceta) · lealtad (acero) · matrimonio (doble línea + anillos)
+               hecho (hueso: una acción sin bando)
+      pasos = una entrada por marca (como `arbol`; lo visto, tachado, roto y cambiado se acumulan):
+        dict(ver=[ids de personas y de nexos], foco=[ids] (personas y/o nexos; [] = nadie), zoom=1.0 (tope de
+             acercamiento en ese paso; 1.0 = plano general), nota="texto abajo", tacha=[ids],
+             rompe=[ids de nexo] (el nexo se quiebra: chispas, grieta y se apaga), cambia={id: "nueva intención" | (PREF, txt)})
+      Un nexo SIN `id` (lo de fondo: familia, bandos) aparece solo en cuanto se ven sus dos extremos, salvo que un paso lo
+      nombre («a-b»); uno CON `id` (lo que pasa: la traición, el robo) sale únicamente cuando un paso lo pide en `ver`.
+    CÁMARA: en cada paso se acerca (hasta `zoom`) a lo que ya está en escena y se corre hacia el foco, siempre con
+    TODOS los visibles dentro del cuadro (con dos medallones va de cerca; al entrar más gente se abre).
+    La geometría (anclas, curvas y rótulos) se calcula UNA vez esquivando medallones, nombres y etiquetas; lo que no
+    cabe queda en `fn.avisos` (revisar antes del render). rejilla=True dibuja las huellas (solo para depurar)."""
+    top, pie = 122, 86
+    X0, Y0, X1, Y1 = 36.0, float(top), ancho - 36.0, float(alto - pie)
+    CX, CY = (X0 + X1) / 2, (Y0 + Y1) / 2
+    med = ImageDraw.Draw(Image.new("L", (8, 8)))
+    F = dict(n=("SemiBold Condensed", 30), s=("Condensed", 22), p=("SemiBold Condensed", 17), q=("Condensed", 23),
+             r=("SemiBold Condensed", 22))
+
+    def fnt(k, s=1.0):
+        e, t = F[k]
+        return fuente(e, max(8, int(round(t * s))))
+
+    R = D / 2 + 8
+    nexos = [dict(nx, id=nx.get("id", f"{nx['a']}-{nx['b']}"), _auto="id" not in nx) for nx in nexos]
+    NX = {nx["id"]: nx for nx in nexos}
+    for p_ in pasos:
+        for i in list(p_.get("ver", [])) + list(p_.get("foco", []) or []) + list(p_.get("tacha", [])) + list(p_.get("rompe", [])):
+            if i not in personas and i not in NX:
+                raise KeyError(f"red «{titulo}»: «{i}» no es persona ni nexo")
+
+    def _q(v):
+        if v is None:
+            return None
+        return ("QUIERE", v) if isinstance(v, str) else (v[0], v[1])
+
+    quiere = {pid: [_q(p.get("q"))] for pid, p in personas.items()}
+    for p_ in pasos:
+        for pid, v in (p_.get("cambia") or {}).items():
+            quiere[pid].append(_q(v))
+
+    _td, _tl, _gc, _glc = {}, {}, {}, {}                    # cachés por red (cada cuadro reusaba medidas y desenfoques)
+
+    def tag_dim(q, s=1.0):
+        if not q:
+            return 0, 0, []
+        if q not in _td:
+            lin = _partir(med, q[1], fnt("q"), 300)
+            w = max([_ancho_track(med, q[0].upper(), fnt("p"), 3)] + [med.textlength(l_, font=fnt("q")) for l_ in lin]) + 30
+            _td[q] = (w, 38 + 26 * len(lin), lin)
+        w, h, lin = _td[q]
+        return w * s, h * s, lin
+
+    def largo(t):
+        if t not in _tl:
+            _tl[t] = med.textlength(t, font=fnt("r"))
+        return _tl[t]
+
+    # ---------------- huella de cada persona (a escala 1, coordenadas del panel sin el margen M)
+    pos, huella, bloque = {}, {}, {}
+    for pid, p in personas.items():
+        tw = max(_ancho_track(med, p["n"].upper(), fnt("n"), 2), med.textlength(p.get("s", ""), font=fnt("s")),
+                 *[tag_dim(q)[0] for q in quiere[pid] if q], 2 * R)
+        th = max([tag_dim(q)[1] for q in quiere[pid] if q] + [0])
+        off = D / 2 + (70 if p.get("s") else 44)
+        bloque[pid] = off
+        abajo = off + th + 4 if th else D / 2 + (64 if p.get("s") else 40)
+        huella[pid] = (tw, abajo)
+    hw = max(v[0] for v in huella.values()) / 2 + 2       # columnas y filas alineadas: el más ancho y el más alto mandan
+    ab = max(v[1] for v in huella.values()) + 2
+    for pid, p in personas.items():
+        tw, abajo = huella[pid]
+        x = X0 + hw + p["x"] * (X1 - X0 - 2 * hw)
+        y = Y0 + R + 2 + p["y"] * (Y1 - ab - Y0 - R - 2)
+        pos[pid] = (x, y)
+        huella[pid] = [(x - R, y - R, x + R, y + R), (x - tw / 2, y + R - 2, x + tw / 2, y + abajo)]
+
+    def dentro(pt, rects, inf=10):
+        return any(r[0] - inf <= pt[0] <= r[2] + inf and r[1] - inf <= pt[1] <= r[3] + inf for r in rects)
+
+    def toca(pt, gente, inf=8):
+        """¿El punto pisa a alguien? El medallón es un CÍRCULO (no su caja) y el texto, su rectángulo."""
+        return any(math.dist(pt, pos[i]) < R + inf or dentro(pt, huella[i][1:], inf) for i in gente)
+
+    def choca(a, b, inf=8):
+        return a[0] - inf < b[2] and b[0] - inf < a[2] and a[1] - inf < b[3] and b[1] - inf < a[3]
+
+    avisos = []
+    ids = list(personas)
+    for i, a in enumerate(ids):
+        for b in ids[i + 1:]:
+            if any(choca(r1, r2, 14) for r1 in huella[a] for r2 in huella[b]):
+                avisos.append(f"personas encimadas: {a} / {b}")
+        bb = (min(r[0] for r in huella[a]), min(r[1] for r in huella[a]), max(r[2] for r in huella[a]), max(r[3] for r in huella[a]))
+        if bb[0] < X0 or bb[2] > X1 or bb[1] < Y0 - 2 or bb[3] > Y1:
+            avisos.append(f"{a} se sale del área útil {tuple(int(v) for v in bb)}")
+
+    def ancla(pid, hacia):
+        """Punto de salida del nexo: borde del medallón, debajo de la etiqueta o a un costado del texto, el que no cruce
+        el propio nombre ni la intención."""
+        (x, y), cir, txt = pos[pid], huella[pid][0], huella[pid][1]
+        cands = []
+        ang = math.atan2(hacia[1] - y, hacia[0] - x)
+        cands.append((x + math.cos(ang) * (R + 4), y + math.sin(ang) * (R + 4)))
+        cands.append((x, txt[3] + 22))
+        for sg in (-1, 1):                                # a un costado del texto, con aire para la punta de flecha
+            cands.append((x + sg * (txt[2] - x + 24), (txt[1] + txt[3]) / 2))
+        mejor, pm = None, 1e18
+        for c in cands:
+            n = 24
+            malos = sum(toca((c[0] + (hacia[0] - c[0]) * k / n, c[1] + (hacia[1] - c[1]) * k / n), [pid], 3)
+                        for k in range(1, n + 1))
+            pen = malos * 1000 + math.dist(c, hacia) + (0 if c is cands[0] else 90)
+            if pen < pm:
+                mejor, pm = c, pen
+        return mejor
+
+    # ---------------- recorrido de cada nexo (curva que esquiva) y lugar del rótulo
+    geo, rotulos, rutas = {}, [], []
+    for nx in nexos:
+        a, b = nx["a"], nx["b"]
+        col, gro, puntas, trazo = _TIPOS[nx["t"]]
+        icono = nx.get("icono", _ICONO_TIPO.get(nx["t"]))
+        par = [o for o in nexos if {o["a"], o["b"]} == {a, b}]
+        cands = [nx["curva"]] if nx.get("curva") is not None else [0, .14, -.14, .26, -.26, .38, -.38, .5, -.5]
+        if trazo == "hilo" and nx.get("curva") is None:
+            cands = [.18, -.18, .3, -.3, .42, -.42]
+        if len(par) > 1 and nx.get("curva") is None:          # dos nexos entre la misma pareja: el 1.º recto, el 2.º
+            cands = [0, .08, -.08] if par.index(nx) == 0 else [.24, -.24, .32, -.32, .42, -.42]   # se abre por el lado libre
+        mejor, pm = None, 1e18
+        for cv in cands:
+            A, B = ancla(a, pos[b]), ancla(b, pos[a])
+            for _ in range(2):
+                L = math.dist(A, B) or 1
+                nxv, nyv = -(B[1] - A[1]) / L, (B[0] - A[0]) / L
+                C = ((A[0] + B[0]) / 2 + nxv * cv * L, (A[1] + B[1]) / 2 + nyv * cv * L)
+                A, B = ancla(a, C), ancla(b, C)
+            pts = _bez(A, C, B)
+            pen = sum(toca(p_, [o for o in personas if o not in (a, b)], 8) for p_ in pts) * 50
+            pen += sum(toca(p_, [a, b], 1) for p_ in pts[2:-2]) * 50
+            pen += sum(not (X0 <= p_[0] <= X1 and Y0 - 4 <= p_[1] <= Y1) for p_ in pts) * 20
+            pen += sum(any(math.dist(p_, q_) < 16 for q_ in rr[::3]) for rr in rutas for p_ in pts[4:-4:2]) * 3
+            pen += abs(cv) * 6
+            if pen < pm:
+                mejor, pm = (pts, cv), pen
+        pts, cv = mejor
+        acc = _largos(pts)
+        if pm >= 50:
+            avisos.append(f"nexo {nx['id']}: el trazo pasa por encima de alguien (curva {cv})")
+        rutas.append(pts)
+        # rótulo: el más ancho de sus textos (normal / roto) y el icono
+        fr = fnt("r")
+        tw = max(med.textlength(nx.get("r", ""), font=fr), med.textlength(nx.get("rota", ""), font=fr))
+        png = isinstance(icono, (tuple, list)) or (isinstance(icono, str) and icono.lower().endswith(".png"))
+        hi = 58 if png else 36
+        wl = (tw + 26 if nx.get("r") or nx.get("rota") else 0) + (52 if png else 34 if icono else 0)
+        lab = None
+        if wl:
+            pr = None
+            for f in (.5, .42, .58, .34, .66, .27, .73, .2, .8):
+                (px, py), _ = _en(pts, acc, f)
+                rc = (px - wl / 2, py - hi / 2, px + wl / 2, py + hi / 2)
+                pen = sum(choca(rc, r, 10) for o in personas for r in huella[o]) * 100
+                pen += sum(choca(rc, r2, 8) for r2 in rotulos) * 100
+                pen += (rc[0] < X0 or rc[2] > X1 or rc[1] < Y0 or rc[3] > Y1) * 100
+                pen += sum(rc[0] - 4 < q_[0] < rc[2] + 4 and rc[1] - 4 < q_[1] < rc[3] + 4 for rr in rutas[:-1] for q_ in rr) * 2
+                pen += abs(f - .5) * 4
+                if pr is None or pen < pr[0]:
+                    pr = (pen, f, rc)
+            if pr[0] >= 100:
+                avisos.append(f"rótulo de {nx['id']} choca con algo")
+            lab = (pr[1], wl, hi, png)
+            rotulos.append(pr[2])
+        # punto de quiebre: lejos del rótulo y de las puntas, para que la grieta no pise el texto
+        fb, mejor_d = .5, -1.0
+        if lab:
+            (lx, ly), _ = _en(pts, acc, lab[0])
+            for f in (.3, .7, .24, .76, .36, .64, .18, .82):
+                (bx, by), _ = _en(pts, acc, f)
+                dd = min(abs(bx - lx) - lab[1] / 2, abs(by - ly) - lab[2] / 2) if abs(bx - lx) < lab[1] / 2 + 40 and abs(by - ly) < lab[2] / 2 + 40 else 99
+                if dd >= 40:
+                    fb = f
+                    break
+                if dd > mejor_d:
+                    fb, mejor_d = f, dd
+        geo[nx["id"]] = dict(pts=pts, acc=acc, lab=lab, icono=icono, col=col, gro=gro, puntas=puntas, trazo=trazo, fb=fb)
+
+    # ---------------- línea de tiempo de la cámara (se acerca al foco sin enseñar nada fuera del área útil)
+    def objetivo(vistos, fo, z):
+        """Cámara: se acerca a lo que hay en escena (al principio, con dos medallones, va de cerca; según entra gente se
+        abre) y se corre hacia el foco, pero SIEMPRE con todos los visibles dentro del cuadro: nada queda cortado."""
+        if not vistos:
+            return (CX, CY, 1.0)
+        rv = [r for i in vistos for r in huella[i]]
+        vx0, vy0 = min(r[0] for r in rv), min(r[1] for r in rv)
+        vx1, vy1 = max(r[2] for r in rv), max(r[3] for r in rv)
+        s = max(1.0, min(z, (X1 - X0) / (vx1 - vx0 + 70), (Y1 - Y0) / (vy1 - vy0 + 56)))
+        fp = [i for i in fo if i in personas and i in vistos]
+        rs = [r for i in fp for r in huella[i]] or rv
+        fx, fy = (min(r[0] for r in rs) + max(r[2] for r in rs)) / 2, (min(r[1] for r in rs) + max(r[3] for r in rs)) / 2
+        hw, hh = (X1 - X0) / (2 * s), (Y1 - Y0) / (2 * s)
+
+        def encaja(f, v0, v1, h, a0, a1):
+            lo, hi = v1 - h, v0 + h                       # todos los visibles dentro
+            c = min(max(f, lo), hi) if lo <= hi else (v0 + v1) / 2
+            return min(max(c, a0 + h), a1 - h)            # y sin enseñar fuera del área útil
+        return (encaja(fx, vx0, vx1, hw, X0, X1), encaja(fy, vy0, vy1, hh, Y0, Y1), s)
+
+    mascara = {}
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas[:len(pasos)]) + [99.0] * max(0, len(pasos) - len(marcas))
+        visto, vn, tachado, rotos, cambios = {}, {}, {}, {}, {}
+        foco, nota, camev = None, None, []
+        listados = {i for p_ in pasos for i in p_.get("ver", []) if i in NX}
+        for m, p_ in zip(mk, pasos):
+            if dt < m:
+                break
+            for i in p_.get("ver", []):
+                (vn if i in NX else visto).setdefault(i, m)
+            for i in p_.get("tacha", []):
+                tachado.setdefault(i, m)
+            for i in p_.get("rompe", []):
+                rotos.setdefault(i, m)
+            for pid, v in (p_.get("cambia") or {}).items():
+                cambios.setdefault(pid, []).append((m, _q(v)))
+            if "foco" in p_:
+                foco = (set(p_["foco"] or []), m)
+            camev.append((m, objetivo(set(visto), foco[0] if foco else (), p_.get("zoom", zoom))))
+            if p_.get("nota"):
+                nota = (p_["nota"], m)
+        # cámara
+        de_, a_, t_ = (CX, CY, 1.0), (CX, CY, 1.0), -99.0
+        for t_ev, obj in camev:
+            k = _eo((t_ev - t_) / .9)
+            de_, a_, t_ = tuple(u + (v - u) * k for u, v in zip(de_, a_)), obj, t_ev
+        k = _eo((dt - t_) / .9)
+        cx, cy, s = (u + (v - u) * k for u, v in zip(de_, a_))
+        im, M = _humo(ancho, alto, titulo)
+        lay = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+
+        def T(p):
+            return (M + CX + (p[0] - cx) * s, M + CY + (p[1] - cy) * s)
+
+        VX0, VY0, VX1, VY1 = M + X0, M + Y0, M + X1, M + Y1
+
+        def vis_rect(r):
+            a0, b0 = T((r[0], r[1]))
+            a1, b1 = T((r[2], r[3]))
+            sobra = max(0.0, VX0 - a0, a1 - VX1, VY0 - 6 - b0, b1 - VY1 - 6)
+            return max(0.0, 1 - sobra / 26)
+
+        def apag(pid):
+            if foco is None or not foco[0] or pid in foco[0]:
+                return 0.0
+            return min(1.0, (dt - foco[1]) / .4)
+
+        def apag_n(nid):
+            nx = NX[nid]
+            if foco is None or not foco[0] or nid in foco[0] or (nx["a"] in foco[0] and nx["b"] in foco[0]):
+                return 0.0
+            return min(1.0, (dt - foco[1]) / .4)
+
+        # ---- nexos
+        etiquetas = []
+        for nx in nexos:
+            nid, g = nx["id"], geo[nx["id"]]
+            if nx["a"] not in visto or nx["b"] not in visto:
+                continue
+            ext = max(visto[nx["a"]], visto[nx["b"]]) + .35
+            if not nx["_auto"] or nid in listados:
+                if nid not in vn:
+                    continue
+                tn = max(vn[nid], ext)
+            else:
+                tn = ext
+            if dt < tn:
+                continue
+            u = _eo((dt - tn) / .7)
+            ap = apag_n(nid)
+            ub = _eo((dt - rotos[nid]) / .5) if nid in rotos and dt >= rotos[nid] else 0.0
+            colb = _mezcla(g["col"], tuple(int(v * .62) for v in GRIS), ub)
+            col = tuple(int(v * (1 - .55 * ap)) for v in colb) + (255,)
+            w = max(2, int(round(g["gro"] * s)))
+            pts = [T(p) for p in g["pts"]]
+            if g["trazo"] == "rayo":                          # zigzag que vibra
+                acc0 = _largos(pts)
+                zz = []
+                for i, (p, l) in enumerate(zip(pts, acc0)):
+                    if 0 < i < len(pts) - 1:
+                        _, v = _en(pts, acc0, l / acc0[-1])
+                        amp = 6 * s * (1 + .3 * math.sin(dt * 13 + i)) * (1 if (i // 2) % 2 else -1) * (1 - ub)
+                        zz.append((p[0] - v[1] * amp, p[1] + v[0] * amp))
+                    else:
+                        zz.append(p)
+                pts = zz
+            elif g["trazo"] == "hilo":                        # el hilo se mece
+                acc0 = _largos(pts)
+                pts = [(p[0] + math.sin(math.pi * l / acc0[-1]) * math.sin(dt * 2.1) * 7 * s * (1 - ub),
+                        p[1] + math.sin(math.pi * l / acc0[-1]) * math.cos(dt * 1.7) * 4 * s * (1 - ub)) for p, l in zip(pts, acc0)]
+            acc = _largos(pts)
+            raya = (16 * s, 10 * s) if (g["trazo"] == "punteado" or nx.get("punteado")) else None
+            if g["trazo"] == "hilo":
+                w = max(2, int(round(2.4 * s)))
+            # quiebre: el tramo se parte lejos del rótulo
+            fb = g["fb"]
+            tramos = [(0.0, u)]
+            if ub > 0:
+                hueco = (14 + 20 * ub) * s / (acc[-1] or 1)
+                tramos = [(0.0, min(u, fb - hueco)), (fb + hueco, u)]
+            for f0, f1 in tramos:
+                tr = _tramo(pts, acc, f0, f1)
+                if ub > 0 and tr:                             # las mitades caen un poco
+                    pb, vb = _en(pts, acc, fb)
+                    tr = [(q[0], q[1] + 9 * s * ub * max(0.0, 1 - math.dist(q, pb) / (160 * s))) for q in tr]
+                if g["trazo"] == "doble":
+                    for sg in (-1, 1):
+                        trs = []
+                        for i, q in enumerate(tr):
+                            _, v = _en(tr, _largos(tr), i / max(1, len(tr) - 1))
+                            trs.append((q[0] - v[1] * 3.5 * s * sg, q[1] + v[0] * 3.5 * s * sg))
+                        _trazo(d, trs, col, max(2, w - 1))
+                else:
+                    _trazo(d, tr, col, w, raya)
+            if u < .999:                                      # la punta que dibuja
+                p, _ = _en(pts, acc, u)
+                r = 6 * s
+                d.ellipse((p[0] - r, p[1] - r, p[0] + r, p[1] + r), fill=_mezcla(col[:3], BLANCO, .55) + (255,))
+            else:
+                z = 20 * s
+                if g["puntas"] >= 1 and ub < 1:
+                    p, v = _en(pts, acc, 1.0)
+                    if g["trazo"] == "hilo":                  # el gancho del hilo, sin pisar el anillo del medallón
+                        r = 6 * s
+                        p = (p[0] - v[0] * 9 * s, p[1] - v[1] * 9 * s)
+                        d.ellipse((p[0] - r, p[1] - r, p[0] + r, p[1] + r), outline=col, width=max(2, int(2.5 * s)))
+                    else:
+                        _punta(d, p, v, col, z)
+                if g["puntas"] == 2 and ub < 1:
+                    p, v = _en(pts, acc, 0.0)
+                    _punta(d, p, (-v[0], -v[1]), col, z)
+                if ub == 0 and dt > tn + .9:                  # pulso que recorre el nexo
+                    ciclo = (dt - tn - .9) / 2.3
+                    f = ciclo % 1
+                    if g["puntas"] == 2 and int(ciclo) % 2:
+                        f = 1 - f
+                    if .03 < f < .97:
+                        p, _ = _en(pts, acc, f)
+                        for rr, kk in ((9 * s, .25), (5.5 * s, .75)):
+                            d.ellipse((p[0] - rr, p[1] - rr, p[0] + rr, p[1] + rr), fill=_mezcla(col[:3], BLANCO, kk) + (255,))
+            if g["trazo"] == "hilo" and u > .2:               # la cruceta del titiritero sobre quien manipula
+                p, v = _en(pts, acc, .1)
+                _ico(d, "titere", p[0] - v[1] * 22 * s, p[1] + v[0] * 22 * s - 6 * s, 38 * s, 1 - .5 * ap)
+                d.line([(p[0] - v[1] * 22 * s, p[1] + v[0] * 22 * s - 6 * s), p], fill=col, width=max(1, int(1.5 * s)))
+            if ub > 0:                                        # grieta y chispas
+                pb, vb = _en(pts, acc, fb)
+                nxv, nyv = -vb[1], vb[0]
+                if ub > .3:
+                    zz = [(pb[0] + nxv * k1 * s + vb[0] * k2 * s, pb[1] + nyv * k1 * s + vb[1] * k2 * s)
+                          for k1, k2 in ((-18, -4), (-6, 6), (6, -6), (18, 4))]
+                    d.line(zz, fill=SANGRE + (255,), width=max(2, int(4 * s)), joint="curve")
+                ks = (dt - rotos[nid]) / .7
+                if 0 < ks < 1:
+                    for i in range(10):
+                        an = i * 2 * math.pi / 10 + .3
+                        r0, r1 = (8 + 26 * ks) * s, (14 + 46 * ks) * s
+                        d.line([(pb[0] + math.cos(an) * r0, pb[1] + math.sin(an) * r0), (pb[0] + math.cos(an) * r1, pb[1] + math.sin(an) * r1)],
+                               fill=_mezcla(ORO, BLANCO, .5) + (int(255 * (1 - ks)),), width=max(1, int(3 * s)))
+            if g["lab"] and u > .55:
+                etiquetas.append((nx, g, tn, ap, ub))
+
+        # ---- rótulos de los nexos (sobre las líneas)
+        for nx, g, tn, ap, ub in etiquetas:
+            f, wl, hi, png = g["lab"]
+            sp = _pop(dt - tn - .4, .4)
+            if sp <= .02:
+                continue
+            (px, py), _ = _en(g["pts"], g["acc"], f)
+            rc = (px - wl / 2, py - hi / 2, px + wl / 2, py + hi / 2)
+            vi = vis_rect(rc)
+            if vi <= .02:
+                continue
+            k = s * sp
+            px, py = T((px, py))
+            texto = nx.get("rota") if (ub > .5 and nx.get("rota")) else nx.get("r", "")
+            wt = (largo(texto) + 26 if texto else 0) + (52 if png else 34 if g["icono"] else 0)
+            W_, H_ = wt * k, (36 if not png else 40) * k           # el ancho del texto que se ve (el roto puede ser otro)
+            x0 = px - W_ / 2
+            colr = _mezcla(g["col"], GRIS, ub)
+            colr = tuple(int(v * (1 - .5 * ap)) for v in colr)
+            a = int(255 * vi)
+            xi = x0
+            if png:
+                ruta, fo = (g["icono"] if isinstance(g["icono"], (tuple, list)) else (g["icono"], (.5, .5, 1.15)))
+                Di = max(8, int(56 * k) // 2 * 2)
+                th = _gris(_cara(ruta, Di, tuple(fo)), .5 * ap + .6 * ub)
+                if vi < 1:
+                    th = th.copy()
+                    th.putalpha(th.getchannel("A").point(lambda v: int(v * vi)))
+                if texto:
+                    d.rounded_rectangle((x0 + Di * .6, py - H_ / 2, x0 + W_, py + H_ / 2), int(10 * k), fill=(16, 13, 12, int(232 * vi)),
+                                        outline=colr + (a,), width=max(1, int(2 * k)))
+                lay.alpha_composite(th, (int(x0), int(py - Di / 2)))
+                ImageDraw.Draw(lay).ellipse((x0, py - Di / 2, x0 + Di - 1, py + Di / 2 - 1), outline=colr + (a,), width=max(2, int(3 * k)))
+                xi = x0 + Di + 6 * k
+            else:
+                d.rounded_rectangle((x0, py - H_ / 2, x0 + W_, py + H_ / 2), int(10 * k), fill=(16, 13, 12, int(232 * vi)),
+                                    outline=colr + (a,), width=max(1, int(2 * k)))
+                if g["icono"]:
+                    _ico(d, g["icono"], x0 + 19 * k, py, 28 * k, (1 - .5 * ap) * (1 - .4 * ub))
+                    xi = x0 + 36 * k
+                else:
+                    xi = x0 + 13 * k
+            if texto:
+                fr = fnt("r", k)
+                tcol = SANGRE if (ub > .5 and nx.get("rota")) else _mezcla(HUESO, GRIS, ub)
+                tcol = tuple(int(v * (1 - .4 * ap)) for v in tcol)
+                _texto(d, (xi, py + 1), texto, fr, tcol, "lm", a)
+                if ub > .5 and not nx.get("rota"):
+                    tw = d.textlength(texto, font=fr)
+                    d.line([(xi - 3, py + 1), (xi + (tw + 6) * min(1, (ub - .5) * 2), py + 1)], fill=SANGRE + (a,), width=max(2, int(3 * k)))
+
+        # ---- personas
+        for pid, p in personas.items():
+            if pid not in visto:
+                continue
+            sp = _pop(dt - visto[pid], .45)
+            if sp <= .02:
+                continue
+            bb = (min(r[0] for r in huella[pid]), min(r[1] for r in huella[pid]), max(r[2] for r in huella[pid]), max(r[3] for r in huella[pid]))
+            vi = vis_rect(bb)
+            if vi <= .02:
+                continue
+            x, y = T(pos[pid])
+            ap = apag(pid)
+            mu = min(1.0, (dt - tachado[pid]) / .4) if pid in tachado else 0.0
+            en_foco = foco is not None and bool(foco[0]) and pid in foco[0]
+            Ds = max(8, int(round(D * s / 2)) * 2)
+            pad = max(4, int(8 * s))
+            base = _cara(p["img"], Ds, tuple(p.get("foco", (.5, .33, 2.4)))) if p.get("img") else _silueta_med(Ds)
+            kg = round(max(ap * .5, mu * .75) * 24) / 24
+            kk = (pid, Ds, kg)
+            if kk not in _gc:
+                _gc[kk] = _gris(base, kg)
+            medl = _gc[kk]
+            anillo = Image.new("RGBA", (Ds + 2 * pad, Ds + 2 * pad), (0, 0, 0, 0))
+            if en_foco:
+                if anillo.size not in _glc:
+                    glow = Image.new("RGBA", anillo.size, (0, 0, 0, 0))
+                    ImageDraw.Draw(glow).ellipse((0, 0, anillo.width - 1, anillo.height - 1), fill=ORO + (150,))
+                    _glc[anillo.size] = glow.filter(ImageFilter.GaussianBlur(6))
+                anillo.alpha_composite(_glc[anillo.size])
+            anillo.alpha_composite(medl, (pad, pad))
+            da = ImageDraw.Draw(anillo)
+            cr = ORO if en_foco else HUESO
+            k_ap = 1 - .45 * ap
+            da.ellipse((pad - 2, pad - 2, pad + Ds + 1, pad + Ds + 1), outline=tuple(int(c * k_ap) for c in cr) + (255,),
+                       width=4 if en_foco else 3)
+            if mu > 0:
+                r = Ds * .30 * mu
+                c0 = Ds / 2 + pad
+                for sg in (1, -1):
+                    da.line([(c0 - r, c0 - r * sg), (c0 + r, c0 + r * sg)], fill=SANGRE + (230,), width=max(3, int(7 * s)))
+            if abs(sp - 1) > .01:
+                anillo = anillo.resize((max(2, int(anillo.width * sp)), max(2, int(anillo.height * sp))), Image.BILINEAR)
+            if vi < 1:
+                anillo.putalpha(anillo.getchannel("A").point(lambda v: int(v * vi)))
+            lay.alpha_composite(anillo, (int(x - anillo.width / 2), int(y - anillo.height / 2)))
+            a_t = 255 * min(1.0, sp) * (1 - .4 * ap) * vi
+            _texto(d, (x, y + (D / 2 + 24) * s), p["n"].upper(), fnt("n", s), ORO if en_foco else HUESO, "mm", a_t, track=max(1, int(2 * s)))
+            if p.get("s"):
+                _texto(d, (x, y + (D / 2 + 52) * s), p["s"], fnt("s", s), GRIS, "mm", a_t)
+            # etiqueta de intención (entra deslizándose; si cambia, la vieja sube y se va, la nueva cae, el borde destella)
+            hist = [(visto[pid], quiere[pid][0])] + cambios.get(pid, [])
+            tq, q = hist[-1]
+            q_prev = hist[-2][1] if len(hist) > 1 else None
+            kc = (dt - tq) / .6 if len(hist) > 1 else 1.0
+            mostrar, desp, a_q = q, 0.0, 1.0
+            if len(hist) == 1:
+                kq = _eo((dt - visto[pid] - .35) / .45)
+                desp, a_q = 14 * (1 - kq), kq
+            elif kc < .5:
+                mostrar, desp, a_q = q_prev, -12 * (kc * 2), 1 - kc * 2
+            elif kc < 1:
+                desp, a_q = 12 * (1 - (kc - .5) * 2), (kc - .5) * 2
+            if mostrar and a_q > .02:
+                tw, th, lin = tag_dim(mostrar, s)
+                ty = y + (bloque[pid] + desp) * s
+                flash = max(0.0, 1 - (dt - tq) / 1.4) if len(hist) > 1 else 0.0
+                bc = _mezcla(_mezcla(ORO, (120, 104, 76), .45), SANGRE, flash)
+                bc = tuple(int(c * (1 - .45 * ap)) for c in bc)
+                aa = a_t * a_q
+                d.rounded_rectangle((x - tw / 2, ty, x + tw / 2, ty + th), int(9 * s), fill=(14, 12, 12, int(220 * aa / 255)),
+                                    outline=bc + (int(aa),), width=max(1, int((2 + 2 * flash) * s)))
+                _texto(d, (x, ty + 18 * s), mostrar[0].upper(), fnt("p", s), _mezcla(ORO, SANGRE, flash), "mm", aa, track=max(1, int(3 * s)))
+                for i, l_ in enumerate(lin):
+                    _texto(d, (x, ty + (44 + 26 * i) * s), l_, fnt("q", s), BLANCO if en_foco else HUESO, "mm", aa)
+        if rejilla:
+            for pid in personas:
+                for r in huella[pid]:
+                    d.rectangle([*T(r[:2]), *T(r[2:])], outline=(0, 255, 0, 200))
+        # máscara del área útil: lo que la cámara saca del cuadro se desvanece en el borde, nunca se corta contra el título
+        km = lay.size
+        if km not in mascara:
+            m = Image.new("L", km, 0)
+            ImageDraw.Draw(m).rounded_rectangle((M + X0 - 26, M + Y0 - 16, M + X1 + 26, M + Y1 + 26), 30, fill=255)
+            mascara[km] = m.filter(ImageFilter.GaussianBlur(9))
+        lay.putalpha(ImageChops.multiply(lay.getchannel("A"), mascara[km]))
+        im.alpha_composite(lay)
+        if nota:
+            d2 = ImageDraw.Draw(im)
+            _texto(d2, (M + ancho / 2, M + alto - 38), nota[0], fuente("Condensed", 36), BLANCO, "mm", 255 * _eo((dt - nota[1]) / .5))
+        return _salida(im, dt)
+
+    fn.avisos = avisos
+    fn.geo, fn.huella = geo, huella
     return fn

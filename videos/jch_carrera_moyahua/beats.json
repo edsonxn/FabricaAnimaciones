@@ -1,0 +1,314 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.069,
+  "tipo": "video",
+  "texto": "Este domingo, la carretera que nos saca a Guadalajara va a estar cerrada.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.069,
+  "t1": 9.247,
+  "tipo": "video",
+  "texto": "Tres o cuatro horas. ¿Para qué?",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-003",
+  "t0": 9.247,
+  "t1": 14.83,
+  "tipo": "video",
+  "texto": "Para una carrera de motos. Y en el cañón ya hay pleito.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-004",
+  "t0": 14.83,
+  "t1": 19.805,
+  "tipo": "video",
+  "texto": "Se llama Caín Road Race. Es la primera vez que llega a Zacatecas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-005",
+  "t0": 19.805,
+  "t1": 22.585,
+  "tipo": "video",
+  "texto": "El evento va del trece al quince de noviembre,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-006",
+  "t0": 22.585,
+  "t1": 26.565,
+  "tipo": "video",
+  "texto": "y la carrera es el domingo quince, a partir del mediodía.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-007",
+  "t0": 26.565,
+  "t1": 31.745,
+  "tipo": "video",
+  "texto": "Veintisiete kilómetros y medio, desde la caseta de Jesús María, en el kilómetro setenta y ocho,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-008",
+  "t0": 31.745,
+  "t1": 37.015,
+  "tipo": "video",
+  "texto": "hasta Moyahua, en el ciento cinco. Noventa y siete curvas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-009",
+  "t0": 37.015,
+  "t1": 41.505,
+  "tipo": "video",
+  "texto": "Esperan a cien pilotos de dieciséis estados. Salen uno por uno,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-010",
+  "t0": 41.505,
+  "t1": 46.13,
+  "tipo": "video",
+  "texto": "cada treinta segundos, contra el reloj.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-011",
+  "t0": 46.13,
+  "t1": 50.818,
+  "tipo": "video",
+  "texto": "Y aquí es donde el pueblo se divide.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-012",
+  "t0": 50.818,
+  "t1": 54.962,
+  "tipo": "video",
+  "texto": "¿Y si alguien se pone grave ese domingo? ¿Por dónde lo sacamos?",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-013",
+  "t0": 54.962,
+  "t1": 61.882,
+  "tipo": "video",
+  "texto": "Protección Civil de Moyahua, Juchipila y Apozol dice que el Estado no los había incluido en la planeación.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-014",
+  "t0": 61.882,
+  "t1": 65.361,
+  "tipo": "video",
+  "texto": "Que entre los tres municipios tienen cuatro ambulancias.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-015",
+  "t0": 65.361,
+  "t1": 68.851,
+  "tipo": "video",
+  "texto": "Y que el hospital comunitario de Juchipila no tiene cirujano,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-016",
+  "t0": 68.851,
+  "t1": 74.958,
+  "tipo": "video",
+  "texto": "ni anestesiólogo, ni equipo de trauma. Calculan unos diez accidentes durante la carrera.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-017",
+  "t0": 74.958,
+  "t1": 78.558,
+  "tipo": "video",
+  "texto": "Y en Moyahua, sin carrera, ya atienden por lo menos tres",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-018",
+  "t0": 78.558,
+  "t1": 83.55,
+  "tipo": "video",
+  "texto": "accidentes de moto a la semana. De hecho, uno de los pilotos que ya venía llegando,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-019",
+  "t0": 83.55,
+  "t1": 86.73,
+  "tipo": "video",
+  "texto": "ya se cayó. Se lastimó las dos piernas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-020",
+  "t0": 86.73,
+  "t1": 92.64,
+  "tipo": "video",
+  "texto": "¿Y los taxis a Guadalajara y a Zacatecas? ¿Que se esperen? A ver, a ver.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-021",
+  "t0": 92.64,
+  "t1": 98.651,
+  "tipo": "video",
+  "texto": "Esas motos ya vienen cada fin de semana. Sin reglas y sin ambulancias.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-022",
+  "t0": 98.651,
+  "t1": 101.911,
+  "tipo": "video",
+  "texto": "Lo que dicen los organizadores: la carrera trae cincuenta",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-023",
+  "t0": 101.911,
+  "t1": 106.293,
+  "tipo": "video",
+  "texto": "marshals, ambulancias, Protección Civil y Guardia Nacional.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-024",
+  "t0": 106.293,
+  "t1": 110.413,
+  "tipo": "video",
+  "texto": "Revisan cada moto y cada piloto: traje de cuero completo,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-025",
+  "t0": 110.413,
+  "t1": 115.589,
+  "tipo": "video",
+  "texto": "casco certificado y seguro. Y trae gente. En Concordia, Sinaloa,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-026",
+  "t0": 115.589,
+  "t1": 121.872,
+  "tipo": "video",
+  "texto": "donde se corre desde dos mil dieciséis, una sola edición juntó a unos quince mil espectadores.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-027",
+  "t0": 121.872,
+  "t1": 124.942,
+  "tipo": "video",
+  "texto": "Gente que come, que duerme, que carga gasolina.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-028",
+  "t0": 124.942,
+  "t1": 131.242,
+  "tipo": "video",
+  "texto": "El hotel sede está en Apozol. Y los burritos de Moyahua no se van a vender solos.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-029",
+  "t0": 131.242,
+  "t1": 134.122,
+  "tipo": "video",
+  "texto": "¿Cuándo fue la última vez que alguien de Nuevo León o de",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-030",
+  "t0": 134.122,
+  "t1": 137.508,
+  "tipo": "video",
+  "texto": "Yucatán vino a gastar al cañón a propósito?",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-031",
+  "t0": 137.508,
+  "t1": 143.553,
+  "tipo": "video",
+  "texto": "Los organizadores quieren repetir en mayo de dos mil veintisiete. Si sale bien, el cañón de Juchipila",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-032",
+  "t0": 143.553,
+  "t1": 149.048,
+  "tipo": "video",
+  "texto": "queda en el mapa de las carreras. Las dos cosas son ciertas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-033",
+  "t0": 149.048,
+  "t1": 153.65,
+  "tipo": "video",
+  "texto": "Unas horas de carretera cerrada y un cañón que puede salir en el mapa.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-034",
+  "t0": 153.65,
+  "t1": 158.643,
+  "tipo": "video",
+  "texto": "Un riesgo real y cuatro ambulancias para tres municipios.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-035",
+  "t0": 158.643,
+  "t1": 161.596,
+  "tipo": "video",
+  "texto": "Si vas a viajar el domingo, sal temprano.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-036",
+  "t0": 161.596,
+  "t1": 165.716,
+  "tipo": "video",
+  "texto": "Y si vas a ir a verla, la entrada es gratis: llega antes de las diez,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-037",
+  "t0": 165.716,
+  "t1": 170.761,
+  "tipo": "video",
+  "texto": "no te pares en la salida de las curvas y no cruces la carretera.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-038",
+  "t0": 170.761,
+  "t1": 174.308,
+  "tipo": "video",
+  "texto": "Y tú, ¿de qué lado estás? Te leo en los comentarios.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-039",
+  "t0": 174.308,
+  "t1": 180.6,
+  "tipo": "video",
+  "texto": "Con respeto, que aquí todos somos vecinos.",
+  "clip_s": 4
+ }
+]

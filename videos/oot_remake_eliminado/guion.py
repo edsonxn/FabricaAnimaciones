@@ -35,8 +35,9 @@ SECUENCIA = dict(
     transicion="slideleft",
     fundido=0.35,
     ambiente=0.0,
+    # 7-nov: 015/021/045 con Demucs no_vocals (narrador del youtuber); 027 fuera (presentador de la demo de Aonuma, casi sin juego debajo)
     # plan_clips.py (6-nov): 026 = «Hey!» de Navi N64 en los 2,2 s callados; 057 = «I, the mighty Ganondorf» del remake en los 6 s callados
-    ambiente_por={'scene-015': 0.6, 'scene-019': 0.5, 'scene-021': 0.6, 'scene-026': 0.9, 'scene-027': 0.5, 'scene-031': 0.6, 'scene-045': 0.6,
+    ambiente_por={'scene-015': 0.6, 'scene-019': 0.5, 'scene-021': 0.6, 'scene-026': 0.9, 'scene-031': 0.6, 'scene-045': 0.6,
                   'scene-046': 0.6, 'scene-049': 0.5, 'scene-054': 0.6, 'scene-055': 0.6, 'scene-057': 0.9, 'scene-061': 0.5},
     recorte_por={'scene-001': 0.125, 'scene-008': 0.131, 'scene-011': 0.037, 'scene-012': (0.03, 0, 0.02, 0), 'scene-013': 0.037,
                  'scene-015': 0.125, 'scene-018': 0.131, 'scene-019': 0.131, 'scene-026': 0.131, 'scene-031': 0.131,

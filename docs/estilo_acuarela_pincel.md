@@ -83,3 +83,11 @@ del usuario: animación procedural, cada cuadro dibujado por código, con el est
 - Personitas grandes (`iconos_ia.personita` a escala ≥ 3) sin cara se leen como bolos: `plano_g.cara_p()` les pone ojos, cejas y boca.
 - Música sin Lyria: la biblioteca sugiere primero piezas del propio canal; elegir las de otros públicos (Plastitube, WND, Sapiens).
 - Render: 98 segmentos en 20 min con `--procs 4` y 15 GB libres (~0,3-0,9 s/cuadro).
+
+## Lecciones del 5.º video (`videos/amaya_independencia/`, 7-nov-2026, guía de estudio personal 6:34, 10 planos a-j)
+- **Variante «papá que explica»:** foto real del usuario como pegatina que abre la cabeza con su voz clonada (`kit_amaya.papa`, subclase de `Jefe` con el hueco de la boca recortado por la silueta); va chico abajo a la derecha (`papa(im, t, 1770, H + 30, alto=330)`) y NADA importante en x > 1500, y > 750. En el cierre crece (alto 760) y se encoge en la escena de noche para no tapar la luna.
+- **Guía de estudio:** «pausa y contesta» = escena con `post` de 3,2 s de silencio + `pausa()` + `cuenta()` 3-2-1 en el silencio (tictac + 3 fichas en los SFX); la respuesta voltea tarjetas con «?» como cartas (ancho × |cos|) y cierra con palomita + `acierto()`.
+- **Esconderse detrás de algo pintado:** máscara del frente (polígonos de las montañas delanteras + suelo, `cv2.fillPoly` + blur) y recomponer el fondo encima (`plano_g.tapa`). Pegar filas del fondo deja un corte recto horrible.
+- **Piezas compartidas por planos** en un módulo (`piezas_fj.py`: `base(TRAMOS, t)`, cabecera de etapa, pergamino, moneda, sobre, fuerte, montañas, bandera trigarante en diagonal, pastel, regalo, cama, luna, Zzz) en vez de copiar `_base` en cada plano.
+- **Pupitre:** el mueble va DELANTE de la niña (frente de 190 px que tapa las piernas), si no parece que está parada encima.
+- SFX: `sonidos_amaya.py` = `sonidos_base.py` (copia de `sonidos_chicle.py`) + campana de iglesia, fuego, cañonazo, cadena que se rompe, tambor de marcha, fanfarria, acierto, grillos, risita; un whoosh suave en cada cambio de plano. Música: 4 piezas de la biblioteca con `LYRIA` solo para definir los tramos.

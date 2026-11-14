@@ -260,6 +260,56 @@ Todo en `nucleo/app_movil/`, servido por `panel_v2.py` (se recarga solo: **no ha
   (instalar la app web). El dominio publica `fabrica/`, `panel/` y `juego/` (`DOMINIO_EXTRAS`; la página lleva `&ir=` al
   túnel). `--republicar` las sube aunque la URL del túnel no haya cambiado. Cambios en la puerta = relanzarla (no el panel).
 
+## Estudio Amaya: la app de su hija (10-nov-2026, pedido del usuario)
+
+App Android para **Amaya** (12 años, Galaxy S20 Ultra): habla con Claude desde su teléfono y la fábrica
+le hace el video, SIEMPRE con el estilo y la voz de su canal **Amaya Vibes** (scrapbook coquette + Regina). «Que se note que es para Amaya, hecha por su papá Edson». Todo en `nucleo/amaya/`; sus datos en
+`amaya_estudio/` (raíz, **fuera de git**: chats, fotos, audios, trabajos, `config.json`).
+- **Tutorial y «Reiniciar la app»** (el usuario, 10-nov-2026): la primera vez (clave `amaya_tuto_v1` del localStorage) sale
+  la carta de papá + 4 láminas que se pasan con un toque (escribir, 🎤/📷, la ficha y «🎬 ¡Crear mi video!», Mis videos).
+  Aprende → «🔄 Reiniciar la app» (hoja de confirmación propia, no `confirm()`): `POST /api/reiniciar` archiva `chat.json` en
+  `chats_viejos/`, sesión nueva de la guía, conserva `avances_vistos` (si no, los avances recientes volverían a llenar el chat);
+  borra las claves `amaya_*` del teléfono y vuelve a enseñar el tutorial. No toca videos, trabajos ni fotos. La APK no cambia
+  (la página va con `no-store`).
+- **Solo 3 pestañas: 💬 Crear (chat), 🎬 Mis videos, ✨ Aprende** (el usuario, 10-nov-2026: «ya no permitas nuevos estilos…
+  de la voz igual»). Sin pestañas Estilos ni Voces, sin estilos propios ni «Mi frase». Estilo y voz fijos en el servidor:
+  `ESTILO_CANAL` (coquette → `docs/estilo_scrapbook_coquette.md`, ejemplo `videos/amaya_navidad/`) y `config.json` → `canal`
+  (`alias`, `nombre`, `voz`, `voz_nombre`; se cambia ahí si algún día cambia su voz). `crear_trabajo` los fuerza en la ficha
+  aunque la guía mande otra cosa; `POST /api/estilos` responde error.
+
+- **Servidor** `nucleo/amaya/servidor.py` (127.0.0.1:**8795**, stdlib). `python fab.py amaya [--abrir]` lo lanza desacoplado si
+  no corre (también lo despierta la puerta sola). Registro: `amaya_estudio/servidor.log` y `servidor_salida.log`.
+  - **Guía** (el chat): `claude -p` con `modelo_guia` (sonnet), SIN herramientas, con `guia.md` + «Su canal» (estilo y voz fijos:
+    no los pregunta); contesta con `[[opciones:]]` y la `[[ficha]]` (idea, duración, formato) con «🎬 ¡Crear mi video!».
+  - **Producción** (botón Crear): `claude -p` completo en la raíz con `--append-system-prompt-file produccion.md`,
+    `--permission-mode bypassPermissions` y `--disallowedTools DENEGADOS` (sin git push/commit, sin `yt`, `panel`, `envivo`,
+    `limpiar`, `compartir`, Facebook, taskkill, ni editar `nucleo/`, `canales/`, `docs/`, `fab.py`, `CLAUDE.md`);
+    `FAB_CORTE_CONTEXTO=0`; cola de 1; avances a su app con `nucleo/amaya/avance.py <trabajo> "…"` / `--listo`; aviso a papá.
+  - **Avances = mensajes en su chat** (pedido del usuario, 10-nov-2026): `avance.py <trabajo> "🎨 …" [--imagen a.jpg b.png …] [--voz "frase corta"]`. Una imagen va tal cual; 2-9 se arman en una HOJA en cuadrícula (como el taller/lienzo). Solo imágenes de `videos/` o `amaya_estudio/` (comprobado con abspath: cada video es junction a E:). La nota de voz sale con la voz de SU video (ElevenLabs turbo, ≤ 160 letras, mp3 64 kbps; tope `limites.audios_por_video` = 5). Todo cae en `amaya_estudio/trabajos/media/`; el servidor (`avances_al_chat`, en cada sondeo y en el vigilante) los vuelve mensajes `avance: true` con burbuja rosa «🏭 Desde la fábrica · <título>», nota de voz con ondas y visor a pantalla completa (atrás lo cierra); los seguidos se agrupan. La guía no los recibe como respuestas suyas (solo el último en su nota de estado). Cuándo mandar cada cosa: regla 7 de `produccion.md`.
+    Los videos se llaman `videos/amaya_<tema>/`, son del canal `canal_amaya` pero **la producción NO los sube: los sube
+    papá desde su PC** cuando los revisa; versión 720p para el teléfono.
+  - **Límites por día** en `amaya_estudio/config.json` → `limites` (120 mensajes, 2 videos, 5 notas de voz por video); ahí mismo la
+    carta de papá (`carta`), la `firma` y `avisar_a_papa`. Se editan a mano; el servidor los lee en cada petición.
+  - `estilos.json`/`voces.json` y las rutas de estilos propios siguen en el código pero la app ya no los usa. Fotos (Pillow) y
+    notas de voz de ella (faster-whisper small, CPU) siguen igual.
+- **Puerta** (`nucleo/panel_remoto.py`): `/amaya/…` → 8795 quitando el prefijo (`app.html` usa rutas relativas). **Llave
+  propia** `clave_amaya` en `panel_remoto.json` (cookie `fab_amaya`, 1 año, `Path=/amaya`) que SOLO abre `/amaya/`; la de papá
+  también entra. `/entrar?k=<llave de Amaya>` siempre manda a `/amaya/`. Sin llave pasan `ping.png` (lo contesta la puerta y
+  despierta el estudio), el manifest y los iconos. Cambios en la puerta = relanzar SOLO la puerta (`taskkill` de
+  `puerta_pid` + `python fab.py panel --remoto --republicar`), nunca el panel.
+- **Dominio** `https://clicknbusiness.com.mx/amaya/` (página propia, se republica con las demás al cambiar el túnel): guarda la
+  llave del `#k=` en `localStorage["amaya_k"]`, hace ping (`fetch` con `ngrok-skip-browser-warning`; la puerta contesta el
+  preflight `OPTIONS`) y entra; si no contesta en 12 s: «La fábrica está dormida 😴 — pídele a papá que la despierte» con
+  Reintentar. En un navegador normal ngrok gratis enseña su aviso «Visit Site» una vez; la APK no (agente propio).
+- **APK** `python nucleo/amaya/android/construir_apk.py` → `nucleo/amaya/android/amaya.apk` (≈ 60 KB, fuera de git; receta y
+  llave de firma de `nucleo/app_movil/android/`). Paquete `mx.clicknbusiness.amaya`, «Estudio Amaya», icono de `icono.py`.
+  Lleva DENTRO la llave de Amaya (`#k=` en la URL de inicio): **nunca subirla al dominio**; se manda por Rayo. Agente
+  `AmayaApp/1.0` (ngrok sin aviso), selector de fotos, micrófono (permiso RECORD_AUDIO al primer audio), descargas con
+  DownloadManager + cookie → `Películas/Estudio Amaya/`, atrás = historial, pantalla propia «Sin conexión». Si cambia la
+  llave o `MainActivity.java`: recompilar e instalar encima (misma firma).
+- Si algo falla: ¿responde `http://127.0.0.1:8795/`? (`python fab.py amaya`) · ¿la puerta y el túnel? (`python fab.py panel
+  --remoto estado`) · en el teléfono, «dormida» = PC apagada o túnel caído.
+
 ## Pestaña «Canales» (8-oct-2026)
 El panel de estadísticas (`nucleo/estadisticas.py` + plantilla `nucleo/estadisticas.html`) vive dentro del panel como tercera pestaña: un `<iframe>` a `/canales`, que arma la misma plantilla con los datos de `canales/metricas/panel/<alias>.json` y los proyectos en producción. `python fab.py estadisticas` sigue generando la copia suelta (`canales/metricas/panel_canales.html`), sin botones que escriban.
 - **¿Qué canal se queda sin video?** (arriba): una fila por canal con sus videos programados sobre una línea de tiempo (14/30/60 días) y la fecha del primer hueco del ciclo sin video = último programado (o último público) + ciclo. Urgente ≤ 3 días, pronto ≤ 7. Filtros por urgencia y por canal (las fichas de arriba), orden, y clic en la fila para el detalle: programados, último publicado, siguientes huecos libres, privados sin fecha y proyectos en producción. Cálculo: `estadisticas.calendario()`; en consola, `python fab.py canales`. Además de la lectura de YouTube, cuenta lo

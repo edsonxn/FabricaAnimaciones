@@ -1,0 +1,450 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 4.726,
+  "tipo": "video",
+  "texto": "Este fin de semana, el cañón se llena de motos.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-002",
+  "t0": 4.726,
+  "t1": 8.464,
+  "tipo": "video",
+  "texto": "Llega la Caín Road Race, y tú ya vienes en camino.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-003",
+  "t0": 8.464,
+  "t1": 13.104,
+  "tipo": "video",
+  "texto": "Ya sea que traigas la moto o que vengas a ver la carrera, escucha bien:",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-004",
+  "t0": 13.104,
+  "t1": 18.892,
+  "tipo": "video",
+  "texto": "antes de irte, entra a Juchipila. Y ven con mucha hambre.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-005",
+  "t0": 18.892,
+  "t1": 21.922,
+  "tipo": "video",
+  "texto": "La carrera es el domingo quince, desde el mediodía,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-006",
+  "t0": 21.922,
+  "t1": 27.373,
+  "tipo": "video",
+  "texto": "de Jesús María a Moyahua. La meta queda a diecisiete kilómetros de Juchipila.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-007",
+  "t0": 27.373,
+  "t1": 29.735,
+  "tipo": "video",
+  "texto": "Unos veinte minutos.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-008",
+  "t0": 29.735,
+  "t1": 35.796,
+  "tipo": "video",
+  "texto": "Y si te quedas en el hotel sede, en Apozol, Juchipila te queda de paso. Todos los días.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-009",
+  "t0": 35.796,
+  "t1": 39.376,
+  "tipo": "video",
+  "texto": "Juchipila está en el corazón del cañón, entre cerros",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-010",
+  "t0": 39.376,
+  "t1": 44.122,
+  "tipo": "video",
+  "texto": "y palmas. Ahora sí, lo importante.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-011",
+  "t0": 44.122,
+  "t1": 49.155,
+  "tipo": "video",
+  "texto": "Aquí hay algo que no te puedes ir sin probar: las gorditas de Juchipila.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-012",
+  "t0": 49.155,
+  "t1": 54.168,
+  "tipo": "video",
+  "texto": "Una gordita de maíz que se fríe en aceite hasta que queda dorada y crujiente.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-013",
+  "t0": 54.168,
+  "t1": 57.448,
+  "tipo": "video",
+  "texto": "Y encima, lo que tú escojas: lomo, rajas,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-014",
+  "t0": 57.448,
+  "t1": 61.361,
+  "tipo": "video",
+  "texto": "queso o chorizo. Luego, la salsa: picante,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-015",
+  "t0": 61.361,
+  "t1": 66.001,
+  "tipo": "video",
+  "texto": "de jitomate, que no pica, o las dos juntas. Su queso, su cebolla,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-016",
+  "t0": 66.001,
+  "t1": 70.442,
+  "tipo": "video",
+  "texto": "y su chile verde frito a un lado. ¿No sabes cómo pedirla? Nomás di:",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-017",
+  "t0": 70.442,
+  "t1": 75.726,
+  "tipo": "video",
+  "texto": "sírvamela como se acostumbra. Y en el puesto te la van a servir como debe ser.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-018",
+  "t0": 75.726,
+  "t1": 79.246,
+  "tipo": "video",
+  "texto": "Y no te la lleves para el camino. Siéntate, pídela recién",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-019",
+  "t0": 79.246,
+  "t1": 84.1,
+  "tipo": "video",
+  "texto": "hecha y cómetela ahí, caliente, que truene. Una no alcanza.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-020",
+  "t0": 84.1,
+  "t1": 87.653,
+  "tipo": "video",
+  "texto": "Nadie pide una. Búscalas en el Callejón de los Jambados,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-021",
+  "t0": 87.653,
+  "t1": 91.643,
+  "tipo": "video",
+  "texto": "donde hay familias que llevan más de cuarenta años friéndolas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-022",
+  "t0": 91.643,
+  "t1": 96.163,
+  "tipo": "video",
+  "texto": "Y si el callejón está lleno, no te preocupes: hay gorditas en varios lugares.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-023",
+  "t0": 96.163,
+  "t1": 102.268,
+  "tipo": "video",
+  "texto": "Búscalas en Google Maps, o date una vuelta alrededor del centro: hay varios puestos muy buenos.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-024",
+  "t0": 102.268,
+  "t1": 106.048,
+  "tipo": "video",
+  "texto": "Son de almuerzo: salen desde temprano, y cuando se acaban,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-025",
+  "t0": 106.048,
+  "t1": 109.382,
+  "tipo": "video",
+  "texto": "se acaban. Y si te gustan rellenas, también las hay:",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-026",
+  "t0": 109.382,
+  "t1": 114.122,
+  "tipo": "video",
+  "texto": "de las que se abren y se rellenan. Otra opción más. Y para acompañar:",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-027",
+  "t0": 114.122,
+  "t1": 118.942,
+  "tipo": "video",
+  "texto": "un agua de horchata, un cafecito… o lo que no puede faltar:",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-028",
+  "t0": 118.942,
+  "t1": 123.303,
+  "tipo": "video",
+  "texto": "una coca de vidrio, bien fría. Gordita frita de lomo,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-029",
+  "t0": 123.303,
+  "t1": 128.163,
+  "tipo": "video",
+  "texto": "con su queso, su cebolla y su chile, y la coca bien helada:",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-030",
+  "t0": 128.163,
+  "t1": 131.892,
+  "tipo": "video",
+  "texto": "ese es el combo perfecto.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-031",
+  "t0": 131.892,
+  "t1": 136.579,
+  "tipo": "video",
+  "texto": "Y te lo advertimos de una vez: tú vienes por la carrera, pero vas",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-032",
+  "t0": 136.579,
+  "t1": 140.41,
+  "tipo": "video",
+  "texto": "a volver por las gorditas. Las motos que nos perdonen.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-033",
+  "t0": 140.41,
+  "t1": 145.17,
+  "tipo": "video",
+  "texto": "El próximo año ya no vas a preguntar a qué hora sale la carrera. Vas a preguntar a",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-034",
+  "t0": 145.17,
+  "t1": 149.272,
+  "tipo": "video",
+  "texto": "qué hora abren las gorditas. Si te quedas con hambre,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-035",
+  "t0": 149.272,
+  "t1": 153.921,
+  "tipo": "video",
+  "texto": "en el mismo callejón está la birria tatemada, de chivo y de borrego.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-036",
+  "t0": 153.921,
+  "t1": 158.163,
+  "tipo": "video",
+  "texto": "Para el antojo: chicharrones, churros y pan del pueblo.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-037",
+  "t0": 158.163,
+  "t1": 164.244,
+  "tipo": "video",
+  "texto": "Y llévate fruta. El cañón de Juchipila es de las principales zonas de guayaba de todo el país.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-038",
+  "t0": 164.244,
+  "t1": 167.344,
+  "tipo": "video",
+  "texto": "Pregúntale a la gente de los puestos: aquí todos tienen",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-039",
+  "t0": 167.344,
+  "t1": 171.199,
+  "tipo": "video",
+  "texto": "su lugar favorito, y te lo van a recomendar.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-040",
+  "t0": 171.199,
+  "t1": 175.594,
+  "tipo": "video",
+  "texto": "Ya comiste. Ahora camina. Siéntate un rato en el jardín,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-041",
+  "t0": 175.594,
+  "t1": 180.13,
+  "tipo": "video",
+  "texto": "entra al templo de San Francisco y piérdete en sus callejones.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-042",
+  "t0": 180.13,
+  "t1": 183.315,
+  "tipo": "video",
+  "texto": "Date una vuelta por el mercado y por sus puestos.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-043",
+  "t0": 183.315,
+  "t1": 189.661,
+  "tipo": "video",
+  "texto": "Y tómate la foto con las letras de Juchipila, para que se vea dónde estuviste.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-044",
+  "t0": 189.661,
+  "t1": 193.501,
+  "tipo": "video",
+  "texto": "A los bikers: deja la moto, quítate el casco y date",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-045",
+  "t0": 193.501,
+  "t1": 198.307,
+  "tipo": "video",
+  "texto": "la vuelta a pie. Aquí no hay curvas, pero hay sabor.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-046",
+  "t0": 198.307,
+  "t1": 201.727,
+  "tipo": "video",
+  "texto": "Y si vas a ver la carrera, recuerda llegar antes de las diez.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-047",
+  "t0": 201.727,
+  "t1": 207.093,
+  "tipo": "video",
+  "texto": "Así que almuerza temprano, en Juchipila. Y si la carretera se cierra unas horas,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-048",
+  "t0": 207.093,
+  "t1": 209.997,
+  "tipo": "video",
+  "texto": "mejor que te encuentre aquí, comiendo.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-049",
+  "t0": 209.997,
+  "t1": 215.045,
+  "tipo": "video",
+  "texto": "Y trae efectivo, que en muchos puestos se paga así.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-050",
+  "t0": 215.045,
+  "t1": 220.045,
+  "tipo": "video",
+  "texto": "Cada gordita, cada plato de birria, cada bolsa de guayaba que compras aquí se",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-051",
+  "t0": 220.045,
+  "t1": 224.255,
+  "tipo": "video",
+  "texto": "queda en una familia de Juchipila. Los organizadores quieren volver en",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-052",
+  "t0": 224.255,
+  "t1": 228.585,
+  "tipo": "video",
+  "texto": "mayo del dos mil veintisiete. Nosotros también queremos que vuelvas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-053",
+  "t0": 228.585,
+  "t1": 233.461,
+  "tipo": "video",
+  "texto": "Aunque ya sabemos que vas a volver por las gorditas.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-054",
+  "t0": 233.461,
+  "t1": 237.141,
+  "tipo": "video",
+  "texto": "Juchipila, Zacatecas. Aquí te estamos esperando.",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-055",
+  "t0": 237.141,
+  "t1": 241.921,
+  "tipo": "video",
+  "texto": "Y si eres de Juchipila y tienes un puesto de comida o un negocio, déjalo en los comentarios,",
+  "clip_s": 4
+ },
+ {
+  "id": "scene-056",
+  "t0": 241.921,
+  "t1": 246.3462,
+  "tipo": "video",
+  "texto": "para que todos sepan a dónde ir.",
+  "clip_s": 4
+ }
+]

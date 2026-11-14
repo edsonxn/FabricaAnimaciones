@@ -527,7 +527,9 @@ class Clip:
         self.vel = vel_clip(self.n / self.fps, self.dur)
         self.i, self.ult = -1, None
         c = cfg()
-        self.rec = float(c.get("recorte_por", {}).get(b["id"], c.get("recorte_clip", 0.0)))   # fracción que se recorta por lado
+        rec = c.get("recorte_por", {}).get(b["id"], c.get("recorte_clip", 0.0))   # fracción que se recorta por lado
+        # o (izq, arriba, der, abajo) para quitar una marca de una esquina (2-nov-2026, cod_mw4_secretos: «#3» de ThatWasAwesome)
+        self.rec = tuple(float(v) for v in rec) if isinstance(rec, (list, tuple)) else float(rec)
 
     def cuadro(self, t):
         import cv2
@@ -540,7 +542,11 @@ class Clip:
             self.i += 1
             self.ult = f
         f = self.ult
-        if self.rec > 0:                              # quita el marco de viñeta que Flow a veces dibuja en el borde
+        if isinstance(self.rec, tuple):               # recorte por lado: (izq, arriba, der, abajo)
+            h, w = f.shape[:2]
+            i, a, d, ab = self.rec
+            f = f[int(h * a):h - int(h * ab), int(w * i):w - int(w * d)]
+        elif self.rec > 0:                            # quita el marco de viñeta que Flow a veces dibuja en el borde
             h, w = f.shape[:2]
             dx, dy = int(w * self.rec), int(h * self.rec)
             f = f[dy:h - dy, dx:w - dx]

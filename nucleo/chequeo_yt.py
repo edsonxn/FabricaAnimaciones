@@ -337,6 +337,30 @@ def idioma(carpeta):
         print(f"  OK {len(datos)} frases, todas las oraciones en español")
 
 
+def texto_clips(carpeta):
+    """REGLA (13-nov-2026, tes_reina_loba): ningún clip de fondo con TEXTO QUEMADO (subtítulos del youtuber en inglés, rótulos de otro
+    canal). Corre/lee nucleo/texto_clips.py (OCR local, 1 cuadro por segundo)."""
+    import subprocess
+    clips = glob.glob(os.path.join(carpeta, "medios", "scene-*.mp4"))
+    if not clips:
+        return
+    j = os.path.join(carpeta, "previews", "texto_clips.json")
+    viejo = not os.path.exists(j) or os.path.getmtime(j) < max(os.path.getmtime(f) for f in clips)
+    print("\n== 6. TEXTO QUEMADO EN LOS CLIPS (OCR) ==")
+    if viejo:
+        print("  previews/texto_clips.json falta o es anterior a los clips: corriendo nucleo/texto_clips.py (varios minutos) …")
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "texto_clips.py"),
+                        os.path.basename(carpeta), "-j", "4"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+    datos = json.load(open(j, encoding="utf-8")) if os.path.exists(j) else {}
+    if datos:
+        for k, hall in sorted(datos.items()):
+            print(f"  ⚠ {k}: {len(hall)} s con texto → " + " | ".join(" / ".join(l) for _, l in hall[:2])[:120])
+        print("  ⚠ BLOQUEA LA ENTREGA si el texto se ve en el tramo usado (subtítulos, rótulos ajenos): `bajar N --rehacer` u otra "
+              "fuente; el HUD del propio juego (menús, misión) sí vale. Mirar el cuadro antes de decidir.")
+    else:
+        print(f"  OK {len(clips)} clips sin texto quemado")
+
+
 def main():
     if sys.argv[1:] == ["idioma"]:
         idioma(os.getcwd())
@@ -353,6 +377,7 @@ def main():
     sonidos()
     fuentes()
     idioma(carpeta)
+    texto_clips(carpeta)
     print("Lista completa de capas: docs/estilo_secuencia_yt.md § LISTA DE CONTROL")
 
 

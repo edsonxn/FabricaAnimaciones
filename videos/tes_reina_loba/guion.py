@@ -39,7 +39,11 @@ SECUENCIA = dict(
             evitar_palabras=["reaction", "react", "podcast", "tier list", "news", "shorts", "#shorts", "ai cine", "ai movie",
                              "ai generated", "elder scrolls online", "eso ", "(eso", "eso:", "keizaal", "mods", "mod:", "mod ", " mod",
                              "modded", "modlist", "enb", "reshade", "dlss", "4000", "lotd", "legacy of the dragonborn",
-                             "skywind", "skyblivion", "high isle", "cinematic trailer", "online", "showcase", "add-on", "next gen", "remake", "twitch", "stream", "vod", "cities:", "navigator"],
+                             "skywind", "skyblivion", "high isle", "cinematic trailer", "online", "showcase", "add-on", "next gen", "remake", "twitch", "stream", "vod", "cities:", "navigator",
+                             # 13-nov v3: glitches, builds, tops, mods y memes (previews/revision_v3_clips.md)
+                             "glitch", "manhole", "build guide", "build", "ranked", "ranking", "top 5", "top 10", "trick shot", "extravagant",
+                             "nolvus", "herika", "skyrim tales", "deepdream", "row boat", "sea dragon", "animated ship", "battles -", "vs 30",
+                             "shahvee", "pure argonian", "realistic", "funny", "meme", "when you have", "exploit", "speedrun", "out of bounds"],
             evitar_canales=["BLUxCHEESE", "TIMENG", "The Glitch Report", "Swezz Cheese", "Barrett Knives",
                             "Saika", "Max Modded", "Ero-sama", "OrcCorp", "DCARR GAMING",
                             "Spoiler Alert Theater", "PIXEL STORYZ", "Pixel Storyz", "Syzleaf", "RGR29", "Xander Rey Gaming",
@@ -47,7 +51,9 @@ SECUENCIA = dict(
                             # 13-nov: marca de agua, subtítulos de guía, mods o juego en otro idioma (nucleo/texto_clips.py)
                             "Anarion Graphics", "GamerJustLikeYou", "MajorSlackAttack", "MajorSlackVideos", "Selene The Rebel Unchained",
                             "Silenced Red Mage", "Sleep Scenery", "StStrife", "Typical Pirate", "slyellow2", "Delikuzz", "ItsJabo",
-                            "Farpoint Toys & Collectibles"]),
+                            "Farpoint Toys & Collectibles",
+                            # 13-nov v3
+                            "leopoldstotch711", "RedoranGuard", "Imperial Knowledge", "Anggiezzz", "Jade PG"]),
 )
 
 TRANSICIONES = [("continua", 0.1)] * 60

@@ -14,6 +14,10 @@ defecto; cloudflared si se pide). La puerta:
                                                     túnel de hoy (FTP de C:\CNB; se reescribe sola si cambia la URL)
     python fab.py panel --remoto estado | parar
 
+Estudio Amaya (10-nov-2026): /amaya/… -> nucleo/amaya/servidor.py (127.0.0.1:8795, se lanza solo si no corre) con su
+PROPIA llave (`clave_amaya`, cookie fab_amaya) que SOLO abre /amaya/ (la de papá también entra); en el dominio,
+clicknbusiness.com.mx/amaya/ (página propia con ping y pantalla «la fábrica está dormida»).
+
 App del teléfono (28-oct-2026): /m (o /movil) = panel de estatus, /juego = la fábrica en 3D; en el dominio,
 clicknbusiness.com.mx/panel/, /juego/ y /vivo/ (carpetas hermanas de /fabrica/, mismo reenvío).
 
@@ -51,6 +55,10 @@ ATAJOS = {"/m": "/v2/movil", "/movil": "/v2/movil", "/juego": "/v2/aldea", "/ald
 PUBLICO = re.compile(r"^/v2/app/[A-Za-z0-9_.-]+\.(png|webmanifest|js|json)$")
 DOMINIO_EXTRAS = {"panel": "/m", "juego": "/juego", "vivo": "/v2/vivo",    # carpetas del dominio además de la principal -> ruta del túnel
                   "envivo": "/envivo/movil"}
+AMAYA = 8795                           # Estudio Amaya (nucleo/amaya/servidor.py): /amaya/… con la llave de Amaya o la de papá
+COOKIE_AMAYA = "fab_amaya"
+AMAYA_PUBLICO = {"/ping.png", "/manifest.webmanifest", "/icono-192.png", "/icono-512.png", "/sw.js"}
+AMAYA_LOG = os.path.join(RAIZ, "amaya_estudio", "servidor_salida.log")
 ENVIVO = 8790                          # el directo (`fab.py envivo`): su control remoto va por /envivo/… con la misma clave
 SALTO = {"connection", "keep-alive", "proxy-authenticate", "proxy-authorization", "te", "trailers", "transfer-encoding",
          "upgrade", "host", "content-length", "accept-encoding", "cookie", "server", "date"}
@@ -85,6 +93,8 @@ def log(*a):
 
 # ======================================================================== la puerta
 CLAVE = ""
+CLAVE_AMAYA = ""
+_AMAYA_ARRANQUE = threading.Lock()
 PV_PUERTOS = set()                     # trabajadores de vista previa que el panel anunció en /api/preview
 FALLOS = {}                            # ip -> [instantes de claves equivocadas]
 _PANEL = {"p": None, "t": 0.0}
@@ -105,6 +115,28 @@ def panel_puerto(forzar=False):
             pass
     _PANEL.update(p=_PANEL["p"] or PANELES[0], t=time.time())
     return _PANEL["p"]
+
+
+def amaya_despierta(esperar=10.0):
+    """Si el Estudio Amaya no escucha en 8795, lo lanza desacoplado (una sola vez a la vez) y espera hasta `esperar` s."""
+    if escucha(AMAYA):
+        return True
+    with _AMAYA_ARRANQUE:
+        if escucha(AMAYA):
+            return True
+        os.makedirs(os.path.dirname(AMAYA_LOG), exist_ok=True)
+        log("lanzo el Estudio Amaya")
+        lanzar([sys.executable, os.path.join(AQUI, "amaya", "servidor.py")], AMAYA_LOG)
+        fin = time.time() + esperar
+        while time.time() < fin:
+            time.sleep(0.4)
+            if escucha(AMAYA):
+                return True
+    return escucha(AMAYA)
+
+
+PING_PNG = bytes.fromhex("89504e470d0a1a0a0000000d4948445200000001000000010806000000"
+                         "1f15c4890000000d49444154789c6360000002000154a24f5d0000000049454e44ae426082")
 
 
 PAGINA_ENTRAR = """<!doctype html><html lang="es"><head><meta charset="utf-8">
@@ -152,7 +184,25 @@ class Puerta(BaseHTTPRequestHandler):
         m = c.get(COOKIE)
         return bool(m and CLAVE and secrets.compare_digest(m.value.encode(), CLAVE.encode()))
 
+    def _con_llave_amaya(self):
+        if self._con_llave():
+            return True
+        c = SimpleCookie()
+        try:
+            c.load(self.headers.get("Cookie") or "")
+        except Exception:
+            return False
+        m = c.get(COOKIE_AMAYA)
+        return bool(m and CLAVE_AMAYA and secrets.compare_digest(m.value.encode(), CLAVE_AMAYA.encode()))
+
     def _pagina_entrar(self, codigo=401, err="", ir="/v2"):
+        if ir.startswith("/amaya"):
+            html = PAGINA_ENTRAR.replace("#8b74ff", "#ff5fa8").replace("#0b0d13", "#1a1033").replace("#151821", "#2a1650")                 .replace("#272c39", "#4a2f7d").replace("#1c202b", "#22123f").replace("#363c4d", "#5b3f8f").replace("<h1>Fábrica de Animaciones</h1>", "<h1>Estudio Amaya ✨</h1>") \
+                .replace("Panel remoto. Escribe la clave (o abre el enlace que te mandó Claude).",
+                         "Abre la app «Estudio Amaya» que te dio papá, o escribe tu clave.") \
+                .replace("<title>Fábrica · entrar</title>", "<title>Estudio Amaya</title>")
+            html = html.replace("{ir}", "/amaya/").replace("{err}", f'<p class="err">{err}</p>' if err else "")
+            return self._enviar(codigo, html.encode("utf-8"), "text/html; charset=utf-8")
         html = PAGINA_ENTRAR.replace("{ir}", ir.replace('"', "")).replace("{err}", f'<p class="err">{err}</p>' if err else "")
         self._enviar(codigo, html.encode("utf-8"), "text/html; charset=utf-8")
 
@@ -162,6 +212,15 @@ class Puerta(BaseHTTPRequestHandler):
         if len(recientes) >= 8:
             log("bloqueado", ip)
             return self._pagina_entrar(429, "Demasiados intentos. Espera 10 minutos.")
+        if k and CLAVE_AMAYA and secrets.compare_digest(k.encode(), CLAVE_AMAYA.encode()):   # solo abre su estudio
+            FALLOS.pop(ip, None)
+            log("entró Amaya", ip, self.headers.get("User-Agent", "")[:80])
+            self.send_response(303)
+            self.send_header("Location", "/amaya/")
+            self.send_header("Set-Cookie", f"{COOKIE_AMAYA}={CLAVE_AMAYA}; Max-Age=31536000; Path=/amaya; HttpOnly; SameSite=Lax"
+                             + ("; Secure" if self._https() else ""))
+            self.send_header("Content-Length", "0")
+            return self.end_headers()
         if not (k and CLAVE and secrets.compare_digest(k.encode(), CLAVE.encode())):
             FALLOS[ip] = recientes + [ahora]
             log("clave equivocada", ip)
@@ -195,6 +254,13 @@ class Puerta(BaseHTTPRequestHandler):
             self.send_header("Set-Cookie", f"{COOKIE}=; Max-Age=0; Path=/")
             self.send_header("Content-Length", "0")
             return self.end_headers()
+        if ruta == "/amaya":
+            self.send_response(301)
+            self.send_header("Location", "/amaya/" + (f"?{u.query}" if u.query else ""))
+            self.send_header("Content-Length", "0")
+            return self.end_headers()
+        if ruta.startswith("/amaya/"):
+            return self._amaya(ruta[len("/amaya"):], u.query)
         if PUBLICO.match(ruta) and self.command in ("GET", "HEAD"):
             return self._reenviar(panel_puerto(), self.path)
         if ruta.rstrip("/") in ATAJOS and self._con_llave():
@@ -224,11 +290,27 @@ class Puerta(BaseHTTPRequestHandler):
                 return self._reenviar(panel_puerto(), "/")
         return self._reenviar(panel_puerto(), self.path)
 
+    def _amaya(self, resto, query):
+        """Estudio Amaya: /amaya/<resto> -> 127.0.0.1:8795/<resto>. El ping lo contesta la puerta (y despierta el estudio)."""
+        if resto == "/ping.png" and self.command in ("GET", "HEAD"):
+            threading.Thread(target=amaya_despierta, daemon=True).start()
+            return self._enviar(200, PING_PNG, "image/png", [("Access-Control-Allow-Origin", "*")])
+        if not (resto in AMAYA_PUBLICO and self.command in ("GET", "HEAD")) and not self._con_llave_amaya():
+            if resto.startswith("/api/") or self.command != "GET":
+                return self._enviar(401, b'{"error":"sin llave: abre la app Estudio Amaya"}', "application/json")
+            return self._pagina_entrar(ir="/amaya/")
+        if not amaya_despierta():
+            return self._enviar(503, "El Estudio Amaya no arrancó. En la PC: python fab.py amaya".encode("utf-8"),
+                                "text/plain; charset=utf-8")
+        return self._reenviar(AMAYA, resto + (f"?{query}" if query else ""))
+
     def _reenviar(self, puerto, ruta, reintento=True):
         cuerpo = None
         if self.command == "POST":
-            n = int(self.headers.get("Content-Length") or 0)
-            cuerpo = self.rfile.read(n) if n else b""
+            if not hasattr(self, "_cuerpo_leido"):           # se lee una vez: un reintento reusa el mismo cuerpo
+                n = int(self.headers.get("Content-Length") or 0)
+                self._cuerpo_leido = self.rfile.read(n) if n else b""
+            cuerpo = self._cuerpo_leido
         cab = {k: v for k, v in self.headers.items() if k.lower() not in SALTO}
         cab["Host"] = f"127.0.0.1:{puerto}"
         try:
@@ -236,6 +318,11 @@ class Puerta(BaseHTTPRequestHandler):
             c.request(self.command, ruta, body=cuerpo, headers=cab)
             r = c.getresponse()
         except ConnectionRefusedError:
+            if puerto == AMAYA:
+                if reintento and amaya_despierta():
+                    return self._reenviar(AMAYA, ruta, False)
+                return self._enviar(503, "El Estudio Amaya está dormido. En la PC: python fab.py amaya".encode("utf-8"),
+                                    "text/plain; charset=utf-8")
             if puerto == ENVIVO:
                 return self._enviar(502, "El directo no está corriendo. En la PC: python fab.py envivo".encode("utf-8"), "text/plain; charset=utf-8")
             if reintento and puerto in PANELES:
@@ -295,12 +382,25 @@ class Puerta(BaseHTTPRequestHandler):
             except OSError:
                 pass
 
+    def do_OPTIONS(self):                    # preflight del ping del dominio (lleva ngrok-skip-browser-warning)
+        if urlparse(self.path).path == "/amaya/ping.png":
+            return self._enviar(204, b"", "text/plain", [("Access-Control-Allow-Origin", "*"),
+                                                         ("Access-Control-Allow-Methods", "GET"),
+                                                         ("Access-Control-Allow-Headers", "ngrok-skip-browser-warning"),
+                                                         ("Access-Control-Max-Age", "600")])
+        self._enviar(405, b"", "text/plain")
+
     do_GET = do_POST = do_HEAD = _seguro
 
 
 def servir(puerto):
-    global CLAVE
-    CLAVE = leer_cfg().get("clave", "")
+    global CLAVE, CLAVE_AMAYA
+    c = leer_cfg()
+    if c.get("clave") and not c.get("clave_amaya"):
+        c["clave_amaya"] = secrets.token_urlsafe(18)
+        guardar_cfg(c)
+    CLAVE = c.get("clave", "")
+    CLAVE_AMAYA = c.get("clave_amaya", "")
     if not CLAVE:
         sys.exit("sin clave en panel_remoto.json")
     ThreadingHTTPServer.request_queue_size = 128
@@ -406,6 +506,9 @@ def iniciar(a):
     if a.nueva_clave or not c.get("clave"):
         parar_pid(c.pop("puerta_pid", None))        # la puerta lee la clave al arrancar: hay que relanzarla
         c["clave"] = secrets.token_urlsafe(18)
+    if not c.get("clave_amaya"):                    # llave de Amaya: solo abre /amaya/
+        parar_pid(c.pop("puerta_pid", None))
+        c["clave_amaya"] = secrets.token_urlsafe(18)
     puerto = a.puerto or c.get("puerto") or PUERTO
     c["puerto"] = puerto
     guardar_cfg(c)
@@ -506,17 +609,45 @@ finally:
 '''
 
 
+PAGINA_AMAYA = """<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1a1033"><title>Estudio Amaya</title><style>
+*{box-sizing:border-box}body{margin:0;min-height:100dvh;display:grid;place-items:center;background:radial-gradient(120% 80% at 50% 0%,#3a1d6e,#1a1033 60%);
+color:#fff;font:17px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center;padding:24px}
+.c{width:min(360px,100%)}.e{font-size:72px;line-height:1;margin-bottom:10px;animation:f 3s ease-in-out infinite}
+@keyframes f{50%{transform:translateY(-8px) rotate(-4deg)}}h1{font-size:24px;margin:6px 0}p{color:#d7c9ff;margin:6px 0 20px}
+button{width:100%;height:52px;border:0;border-radius:16px;background:linear-gradient(90deg,#ff5fa8,#ffb35c);color:#2a0f3d;font:inherit;font-weight:800}
+small{display:block;margin-top:16px;color:#a996e0;font-size:13px}#z{display:none}.pt{display:inline-block;animation:p 1.2s infinite}
+@keyframes p{50%{opacity:.25}}</style></head><body><div class="c">
+<div id="a"><div class="e">✨</div><h1>Estudio Amaya</h1><p>Abriendo tu estudio<span class="pt">…</span></p></div>
+<div id="z"><div class="e">😴</div><h1>La fábrica está dormida</h1><p>La computadora de papá está apagada o descansando.<br>Pídele a papá que la despierte 💜</p>
+<button onclick="probar()">Reintentar</button><small>Hecha con cariño por papá Edson</small></div></div><script>
+const T=__T__;let k="";
+try{const h=new URLSearchParams(location.hash.slice(1));if(h.has("olvidar"))localStorage.removeItem("amaya_k");else if(h.get("k"))localStorage.setItem("amaya_k",h.get("k"));k=localStorage.getItem("amaya_k")||"";}catch(e){}
+history.replaceState(null,"",location.pathname);
+function entrar(){location.replace(k?T+"/entrar?k="+encodeURIComponent(k)+"&ir=%2Famaya%2F":T+"/amaya/");}
+function dormida(){document.getElementById("a").style.display="none";document.getElementById("z").style.display="block";}
+function probar(){document.getElementById("z").style.display="none";document.getElementById("a").style.display="block";
+ const c=new AbortController();const t=setTimeout(()=>c.abort(),12000);
+ fetch(T+"/amaya/ping.png?t="+Date.now(),{headers:{"ngrok-skip-browser-warning":"1"},signal:c.signal,cache:"no-store"})
+  .then(r=>{clearTimeout(t);(r.ok&&(r.headers.get("content-type")||"").startsWith("image/"))?entrar():dormida();})
+  .catch(()=>{clearTimeout(t);dormida();});}
+probar();
+</script></body></html>
+"""
+
+
 def publicar_dominio(c, forzar=False):
     """Sube <dominio>/<carpeta>/ (index.html que reenvía al túnel de hoy) si la URL del túnel cambió. Solo esa carpeta."""
     d = c.get("dominio")
     if not d or not c.get("url") or (d.get("publicado") == c["url"] and not forzar):
         return True
-    for carpeta, destino in [(d["carpeta"], "/v2")] + sorted(DOMINIO_EXTRAS.items()):
+    for carpeta, destino in [(d["carpeta"], "/v2")] + sorted(DOMINIO_EXTRAS.items()) + [("amaya", None)]:
         tmp = os.path.join(tempfile.gettempdir(), "fab_panel_remoto_dominio", carpeta)
         os.makedirs(tmp, exist_ok=True)
         u = json.dumps(c["url"])
         with open(os.path.join(tmp, "index.html"), "w", encoding="utf-8") as f:
-            f.write(PAGINA_DOMINIO % (u, json.dumps(destino), json.dumps(c["url"] + destino)))
+            f.write(PAGINA_AMAYA.replace("__T__", u) if destino is None else PAGINA_DOMINIO % (u, json.dumps(destino), json.dumps(c["url"] + destino)))
         with open(os.path.join(tmp, ".htaccess"), "w", encoding="utf-8", newline="\n") as f:
             f.write(HTACCESS_DOMINIO)
         apk = os.path.join(AQUI, "app_movil", "fabrica.apk")

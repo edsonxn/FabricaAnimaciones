@@ -953,7 +953,14 @@
     "dinamica": 0.83
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "sextob_ciencias",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-09"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "arana_techo__lyria_tramo4_con_silencio": {
@@ -3075,7 +3082,20 @@
     "dinamica": 0.66
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_estudio2",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    },
+    {
+     "video": "amaya_navidad",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "doce_animales__lyria_tramo1": {
@@ -3853,7 +3873,14 @@
     "dinamica": 0.73
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "sextob_ciencias",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-09"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "duo_promo_60__lyria_1": {
@@ -3975,7 +4002,14 @@
     "dinamica": 0.78
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_estudio2",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "duo_promo__lyria_1": {
@@ -4095,7 +4129,44 @@
     "dinamica": 0.83
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_estudio2",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    },
+    {
+     "video": "amaya_navidad",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    },
+    {
+     "video": "amaya_navidad",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    },
+    {
+     "video": "jch_gorditas",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-12"
+    },
+    {
+     "video": "jch_gorditas",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-12"
+    },
+    {
+     "video": "jch_gorditas",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-12"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "dos_lunas__lyria_tramo2": {
@@ -4369,6 +4440,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "sextob_ciencias",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-09"
     }
    ],
    "catalogado": "2026-10-21"
@@ -8174,7 +8251,14 @@
     "dinamica": 0.52
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_navidad",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-10-21"
   },
   "guia_ieez__lyria_tramo6": {
@@ -11453,6 +11537,12 @@
      "tramo": 1,
      "desde": 0.0,
      "fecha": "2026-10-26"
+    },
+    {
+     "video": "cohete_crs30",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-13"
     }
    ],
    "catalogado": "2026-10-21"
@@ -14181,6 +14271,12 @@
      "tramo": 3,
      "desde": 0.0,
      "fecha": "2026-11-05"
+    },
+    {
+     "video": "amaya_mate",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
     }
    ],
    "catalogado": "2026-10-21"
@@ -22578,6 +22674,8 @@
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3",
     "C:\\FabricaAnimaciones\\videos\\no_vuelve\\audio\\_lyria_tramo1_v1.mp3"
    ]
   },
@@ -23365,6 +23463,8 @@
    "usos": [],
    "catalogado": "2026-10-22",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
     "C:\\FabricaAnimaciones\\videos\\despertar_3am\\audio\\lyria_tramo3.mp3",
@@ -24214,7 +24314,14 @@
     "dinamica": 0.75
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "jch_carrera_moyahua",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "historia_jalisco__lyria_tramo3": {
@@ -26694,7 +26801,14 @@
     "dinamica": 0.83
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_mate",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "mariquitas_casa__lyria_tramo3": {
@@ -27308,7 +27422,14 @@
     "dinamica": 0.9
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_independencia",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "hormigas_cocina__lyria_tramo1": {
@@ -27396,7 +27517,14 @@
     "dinamica": 0.76
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_mate",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-10-22"
   },
   "hormigas_cocina_short__lyria_tramo1": {
@@ -29529,6 +29657,8 @@
    "copias": [
     "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\chicle_dentro\\audio\\lyria_tramo2.mp3"
    ]
   },
@@ -29709,7 +29839,14 @@
     "dinamica": 0.85
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "sextob_ciencias",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-09"
+    }
+   ],
    "catalogado": "2026-10-23"
   },
   "corn_flakes__lyria_tramo3": {
@@ -31787,6 +31924,12 @@
      "tramo": 5,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-27"
@@ -31880,6 +32023,12 @@
      "tramo": 5,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 9,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-27"
@@ -31974,6 +32123,12 @@
      "tramo": 14,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-27"
@@ -32188,6 +32343,12 @@
      "tramo": 13,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 10,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-27"
@@ -32423,6 +32584,12 @@
      "tramo": 7,
      "desde": 0.0,
      "fecha": "2026-10-29"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 5,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-27"
@@ -34764,6 +34931,12 @@
      "tramo": 10,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "jch_carrera_moyahua",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35090,6 +35263,12 @@
      "tramo": 3,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35334,6 +35513,12 @@
      "tramo": 4,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 8,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35589,6 +35774,12 @@
      "tramo": 9,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35902,6 +36093,12 @@
      "tramo": 12,
      "desde": 0.0,
      "fecha": "2026-10-31"
+    },
+    {
+     "video": "lol_final_previa",
+     "tramo": 7,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
     }
    ],
    "catalogado": "2026-10-28"
@@ -35979,7 +36176,11 @@
    },
    "variante": false,
    "usos": [],
-   "catalogado": "2026-10-28"
+   "catalogado": "2026-10-28",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo9.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo9.mp3"
+   ]
   },
   "t1_koi_worlds__lyria_tramo1": {
    "id": "t1_koi_worlds__lyria_tramo1",
@@ -36070,7 +36271,11 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
-    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3"
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo3.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo3.mp3"
    ]
   },
   "t1_koi_worlds__lyria_tramo3": {
@@ -36162,7 +36367,11 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
-    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3"
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo5.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo4.mp3"
    ]
   },
   "t1_koi_worlds__lyria_tramo6": {
@@ -36241,6 +36450,8 @@
    "usos": [],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\_antes_lyria_tramo7.mp3",
@@ -36335,9 +36546,20 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "lol_final_previa",
+     "tramo": 6,
+     "desde": 0.0,
+     "fecha": "2026-11-11"
+    }
+   ],
    "catalogado": "2026-10-28",
    "copias": [
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
+    "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
     "C:\\FabricaAnimaciones\\videos\\robotaller_mes1\\audio\\_antes_lyria_tramo2.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo7.mp3",
@@ -36464,6 +36686,9 @@
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
+    "C:\\FabricaAnimaciones\\videos\\cfo_kc_jugadas\\audio\\lyria_tramo6.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3",
     "C:\\FabricaAnimaciones\\videos\\lol_semana2\\audio\\lyria_tramo13.mp3"
    ]
   },
@@ -37308,7 +37533,11 @@
    },
    "variante": true,
    "usos": [],
-   "catalogado": "2026-10-30"
+   "catalogado": "2026-10-30",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\jch_carrera_moyahua\\audio\\_antes_lyria_tramo1.mp3",
+    "C:\\FabricaAnimaciones\\videos\\jch_carrera_moyahua\\audio\\_antes_lyria_tramo1.mp3"
+   ]
   },
   "cfo_kc_jugadas__lyria_tramo3": {
    "id": "cfo_kc_jugadas__lyria_tramo3",
@@ -38106,7 +38335,14 @@
     "dinamica": 0.85
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "jch_carrera_moyahua",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-11-01"
   },
   "lol_semana2__lyria_tramo1": {
@@ -39109,7 +39345,11 @@
    },
    "variante": false,
    "usos": [],
-   "catalogado": "2026-11-01"
+   "catalogado": "2026-11-01",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo2.mp3"
+   ]
   },
   "robotaller_n64__lyria_tramo1": {
    "id": "robotaller_n64__lyria_tramo1",
@@ -39844,7 +40084,26 @@
     "dinamica": 0.91
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "jch_gorditas",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-12"
+    },
+    {
+     "video": "jch_gorditas",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-12"
+    },
+    {
+     "video": "jch_gorditas",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-12"
+    }
+   ],
    "catalogado": "2026-11-04"
   },
   "lego_carpintero__lyria_tramo4": {
@@ -41211,7 +41470,14 @@
     "dinamica": 0.65
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_independencia",
+     "tramo": 2,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    }
+   ],
    "catalogado": "2026-11-04"
   },
   "ia_como_ve__lyria_tramo2": {
@@ -41297,7 +41563,14 @@
     "dinamica": 0.44
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_mate",
+     "tramo": 3,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-11-04"
   },
   "ia_como_ve__lyria_tramo3": {
@@ -41488,7 +41761,14 @@
     "dinamica": 0.84
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_independencia",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    }
+   ],
    "catalogado": "2026-11-04"
   },
   "ia_como_ve__lyria_tramo5": {
@@ -42010,7 +42290,20 @@
     "dinamica": 0.69
    },
    "variante": false,
-   "usos": [],
+   "usos": [
+    {
+     "video": "amaya_independencia",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    },
+    {
+     "video": "amaya_navidad",
+     "tramo": 4,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
    "catalogado": "2026-11-05"
   },
   "chicle_dentro__lyria_tramo3": {
@@ -42106,8 +42399,24 @@
     "dinamica": 0.52
    },
    "variante": false,
-   "usos": [],
-   "catalogado": "2026-11-05"
+   "usos": [
+    {
+     "video": "amaya_estudio2",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-07"
+    },
+    {
+     "video": "amaya_navidad",
+     "tramo": 1,
+     "desde": 0.0,
+     "fecha": "2026-11-10"
+    }
+   ],
+   "catalogado": "2026-11-05",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\amaya_mate\\audio\\lyria_tramo1.mp3"
+   ]
   },
   "robotaller_4apps__lyria_tramo2": {
    "id": "robotaller_4apps__lyria_tramo2",
@@ -43810,7 +44119,3795 @@
    "variante": false,
    "usos": [],
    "catalogado": "2026-11-06"
+  },
+  "amaya_estudio2__lyria_tramo4": {
+   "id": "amaya_estudio2__lyria_tramo4",
+   "video": "amaya_estudio2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_estudio2\\audio\\lyria_tramo4.mp3",
+   "archivo": "amaya_estudio2__lyria_tramo4.mp3",
+   "md5": "efc6d3862133e6c7445a4a127a13414e",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Español para su examen (sílabas, acentos, adverbios y textos)",
+   "tramo": 4,
+   "escenas": [
+    "preg4",
+    "resp4",
+    "repaso",
+    "cierre"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: duo_promo_60__lyria_2 (desde 0.0 s) — reutilizada el 2026-11-07\n\nWarm modern feel-good pop for a couples app commercial: bright plucked guitar and ukulele, soft hand claps and finger snaps, warm synth pads, playful marimba and glockenspiel accents, romantic and cheerful, 108 BPM, instrumental only, no vocals.\ngancho: sparse and a little tired, a lonely plucked guitar and a soft tick, then a hopeful lift\nmedida: the beat kicks in with claps and a bright catchy hook, warm and personal\njuegos: playful competitive groove, bouncy marimba, quick arcade-like glockenspiel blips, rising energy\nhogar: cozy and sweet, softer drums, warm pad, gentle growing arpeggio like plants sprouting\nciclo: tender and caring, light percussion, warm pad and glockenspiel\ncierre: full joyful chorus, big warm ending and a clean final note",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "pizzicato",
+     "sintetizador",
+     "ukulele"
+    ],
+    "animo": [
+     "cálido",
+     "esperanza",
+     "juguetón",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "retro videojuego"
+    ]
+   },
+   "medidas": {
+    "dur": 65.83,
+    "rms_db": -15.0,
+    "tempo": 103.4,
+    "brillo_hz": 1718,
+    "energia": [
+     0.22,
+     0.31,
+     0.44,
+     0.76,
+     0.92,
+     1.0,
+     0.61,
+     0.36,
+     0.83,
+     0.95,
+     0.98,
+     0.23
+    ],
+    "huecos": [],
+    "dinamica": 0.78
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_independencia__lyria_tramo4": {
+   "id": "amaya_independencia__lyria_tramo4",
+   "video": "amaya_independencia",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_independencia\\audio\\lyria_tramo4.mp3",
+   "archivo": "amaya_independencia__lyria_tramo4.mp3",
+   "md5": "d599554b3f9c11a7aa8d676664c210a1",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Amaya: la Independencia de México en 5 minutos (guía para tu examen)",
+   "tramo": 4,
+   "escenas": [
+    "repaso",
+    "preg2",
+    "resp2",
+    "preg3",
+    "resp3",
+    "cierre"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, soft guitar, music box, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: ia_como_ve__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-11-07\n\nBIBLIOTECA: sin_medicina__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-11-04\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:18 (138 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 1:14] Section 1: Intensity 5/10. Quiet mystery growing into awe: sparse flute and soft low drums, a patient build to one luminous, moving moment, then a calm human warmth.\n[1:14 - 1:52] Section 2: Intensity 3/10. Clear and friendly modern groove: light pizzicato and piano, marimba, a gentle smile in the music.\n[1:52 - 2:18] Section 3: Intensity 3/10. Return to the opening theme, now warm and resolved: celesta, felt piano and flute, a smile, then a calm slow fade.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 5,
+     "desc": "Quiet mystery growing into awe: sparse flute and soft low drums, a patient build to one luminous, moving moment, then a calm human warmth."
+    },
+    {
+     "t0": 74,
+     "t1": 112,
+     "intensidad": 3,
+     "desc": "Clear and friendly modern groove: light pizzicato and piano, marimba, a gentle smile in the music."
+    },
+    {
+     "t0": 112,
+     "t1": 138,
+     "intensidad": 3,
+     "desc": "Return to the opening theme, now warm and resolved: celesta, felt piano and flute, a smile, then a calm slow fade."
+    }
+   ],
+   "intensidad": [
+    5,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "guitarra",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "juguetón",
+     "misterio",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 74.1,
+    "rms_db": -15.5,
+    "tempo": 60.1,
+    "brillo_hz": 969,
+    "energia": [
+     0.28,
+     0.71,
+     0.58,
+     0.56,
+     0.8,
+     0.68,
+     0.74,
+     0.84,
+     0.81,
+     1.0,
+     0.86,
+     0.59
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_independencia__lyria_tramo3": {
+   "id": "amaya_independencia__lyria_tramo3",
+   "video": "amaya_independencia",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_independencia\\audio\\lyria_tramo3.mp3",
+   "archivo": "amaya_independencia__lyria_tramo3.mp3",
+   "md5": "a05ba0c90f802d82f4f02d5f787fee6c",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Amaya: la Independencia de México en 5 minutos (guía para tu examen)",
+   "tramo": 3,
+   "escenas": [
+    "resistencia",
+    "consumacion"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, soft guitar, music box, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: hormigas_cocina__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-07\n\nBIBLIOTECA: banjo_tooie__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWhimsical late-90s 3D platformer soundtrack: bouncy tuba and bassoon, plucked banjo, marimba, kazoo-like woodwinds, playful pizzicato strings, light percussion, instrumental only, no vocals, cheerful and unobtrusive under narration. Total length: exactly 1:47 (108 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a music box. End on a warm sustained chord.\n\n[0:00 - 0:50] Section 1: Intensity 5/10. mysterious music box twist on a cheerful tune, a secret hidden in a cartridge\n[0:50 - 1:47] Section 2: Intensity 4/10. cheerful bouncy opening, sunny mountain morning, tuba and banjo",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 5,
+     "desc": "mysterious music box twist on a cheerful tune, a secret hidden in a cartridge"
+    },
+    {
+     "t0": 50,
+     "t1": 107,
+     "intensidad": 4,
+     "desc": "cheerful bouncy opening, sunny mountain morning, tuba and banjo"
+    }
+   ],
+   "intensidad": [
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "banda de viento",
+     "cajita de música",
+     "cuerdas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "pizzicato"
+    ],
+    "animo": [
+     "cálido",
+     "juguetón",
+     "misterio"
+    ],
+    "genero": [
+     "cinematográfico"
+    ]
+   },
+   "medidas": {
+    "dur": 89.4,
+    "rms_db": -15.3,
+    "tempo": 117.5,
+    "brillo_hz": 1053,
+    "energia": [
+     0.1,
+     0.21,
+     0.19,
+     0.7,
+     0.79,
+     0.79,
+     0.83,
+     0.86,
+     1.0,
+     0.93,
+     0.92,
+     0.69
+    ],
+    "huecos": [],
+    "dinamica": 0.9
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_estudio2__lyria_tramo3": {
+   "id": "amaya_estudio2__lyria_tramo3",
+   "video": "amaya_estudio2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_estudio2\\audio\\lyria_tramo3.mp3",
+   "archivo": "amaya_estudio2__lyria_tramo3.mp3",
+   "md5": "14f9b82cf8346247c51c1b969f68e449",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Español para su examen (sílabas, acentos, adverbios y textos)",
+   "tramo": 3,
+   "escenas": [
+    "autobio",
+    "anecdota",
+    "carta"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: duo_promo__lyria_2 (desde 0.0 s) — reutilizada el 2026-11-07\n\nWarm modern feel-good pop for a couples app commercial: bright plucked guitar and ukulele, soft hand claps and finger snaps, warm synth pads, playful marimba and glockenspiel accents, romantic and cheerful, 105 BPM, instrumental only, no vocals.\ngancho: sparse and a little wistful, a lonely plucked guitar and a soft clock-like tick, waiting\napp: the beat kicks in with claps and a bright catchy hook, happy discovery\nbarra: building energy with a rising arpeggio, ends on a celebratory hit\ndetalle: tender and sweet, softer drums, warm pad and glockenspiel\najusta: light playful groove, curious and bouncy\ncierre: full joyful chorus, big warm ending and a clean final note",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "pizzicato",
+     "sintetizador",
+     "ukulele"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "fiesta",
+     "juguetón",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico"
+    ]
+   },
+   "medidas": {
+    "dur": 95.66,
+    "rms_db": -15.0,
+    "tempo": 103.4,
+    "brillo_hz": 1927,
+    "energia": [
+     0.17,
+     0.29,
+     0.68,
+     0.89,
+     0.95,
+     0.73,
+     0.44,
+     0.8,
+     0.94,
+     1.0,
+     0.99,
+     0.31
+    ],
+    "huecos": [],
+    "dinamica": 0.83
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo4.mp3",
+    "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo4.mp3"
+   ]
+  },
+  "amaya_estudio2__lyria_tramo1": {
+   "id": "amaya_estudio2__lyria_tramo1",
+   "video": "amaya_estudio2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_estudio2\\audio\\lyria_tramo1.mp3",
+   "archivo": "amaya_estudio2__lyria_tramo1.mp3",
+   "md5": "bdce3c6093ed71dcbfe5a01519a2a7da",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Español para su examen (sílabas, acentos, adverbios y textos)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "silabas",
+    "clasif",
+    "preg1",
+    "resp1"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: chicle_dentro__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-11-07\n\nBIBLIOTECA: sin_medicina__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-05\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:14] Section 1: Intensity 4/10. Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan.\n[1:14 - 1:55] Section 2: Intensity 3/10. Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato.\n[1:55 - 2:50] Section 3: Intensity 4/10. Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 4,
+     "desc": "Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan."
+    },
+    {
+     "t0": 74,
+     "t1": 115,
+     "intensidad": 3,
+     "desc": "Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato."
+    },
+    {
+     "t0": 115,
+     "t1": 170,
+     "intensidad": 4,
+     "desc": "Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 120.6,
+    "rms_db": -14.2,
+    "tempo": 123.0,
+    "brillo_hz": 875,
+    "energia": [
+     0.62,
+     0.59,
+     0.72,
+     0.75,
+     0.74,
+     0.89,
+     1.0,
+     0.78,
+     0.67,
+     0.65,
+     0.68,
+     0.47
+    ],
+    "huecos": [],
+    "dinamica": 0.53
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_independencia__lyria_tramo1": {
+   "id": "amaya_independencia__lyria_tramo1",
+   "video": "amaya_independencia",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_independencia\\audio\\lyria_tramo1.mp3",
+   "archivo": "amaya_independencia__lyria_tramo1.mp3",
+   "md5": "de2b1a918245ad8f5605a63d3b69c5e7",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Amaya: la Independencia de México en 5 minutos (guía para tu examen)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "causas",
+    "grito"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, soft guitar, music box, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: chicle_dentro__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-07\n\nBIBLIOTECA: corn_flakes__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-05\n\nWarm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 2:02 (122 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:22] Section 1: Intensity 3/10. A single questioning felt piano figure over a low held clarinet, curious and a little ironic. Almost empty.\n[0:22 - 0:42] Section 2: Intensity 4/10. A gentle marimba pulse begins, upright bass enters, the feeling of a family story about to unfold.\n[0:42 - 1:25] Section 3: Intensity 4/10. Orderly, slightly stiff routine: steady walking bass, tidy pizzicato, a polite old-fashioned waltz feeling.\n[1:25 - 2:02] Section 4: Intensity 4/10. Light comic trial and error: clumsy bassoon-like clarinet, plucked strings, small stumbles and a crunchy little stop.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 22,
+     "intensidad": 3,
+     "desc": "A single questioning felt piano figure over a low held clarinet, curious and a little ironic. Almost empty."
+    },
+    {
+     "t0": 22,
+     "t1": 42,
+     "intensidad": 4,
+     "desc": "A gentle marimba pulse begins, upright bass enters, the feeling of a family story about to unfold."
+    },
+    {
+     "t0": 42,
+     "t1": 85,
+     "intensidad": 4,
+     "desc": "Orderly, slightly stiff routine: steady walking bass, tidy pizzicato, a polite old-fashioned waltz feeling."
+    },
+    {
+     "t0": 85,
+     "t1": 122,
+     "intensidad": 4,
+     "desc": "Light comic trial and error: clumsy bassoon-like clarinet, plucked strings, small stumbles and a crunchy little stop."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 119.2,
+    "rms_db": -14.6,
+    "tempo": 184.6,
+    "brillo_hz": 1050,
+    "energia": [
+     0.34,
+     0.46,
+     0.45,
+     0.42,
+     0.67,
+     0.77,
+     0.8,
+     0.78,
+     0.89,
+     1.0,
+     0.95,
+     0.31
+    ],
+    "huecos": [],
+    "dinamica": 0.69
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo5.mp3"
+   ]
+  },
+  "amaya_independencia__lyria_tramo2": {
+   "id": "amaya_independencia__lyria_tramo2",
+   "video": "amaya_independencia",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_independencia\\audio\\lyria_tramo2.mp3",
+   "archivo": "amaya_independencia__lyria_tramo2.mp3",
+   "md5": "9565d04770aa99cd918386f503db24d6",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Amaya: la Independencia de México en 5 minutos (guía para tu examen)",
+   "tramo": 2,
+   "escenas": [
+    "preg1",
+    "resp1",
+    "truco",
+    "inicio",
+    "organizacion"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, soft guitar, music box, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: ia_como_ve__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-07\n\nBIBLIOTECA: arana_techo__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-04\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about a tiny house spider: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:16 (137 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:50] Section 1: Intensity 3/10. Late-night quiet: a single low bassoon note, sparse ticking pizzicato, a small mysterious celesta figure, then a bright twist.\n[0:50 - 1:28] Section 2: Intensity 4/10. Light and inquisitive: marimba ostinato starts, upright bass walks gently, a sense of introducing a character.\n[1:28 - 2:16] Section 3: Intensity 4/10. Delicate and intricate: celesta and harp-like pizzicato weaving patterns, curious and a little sneaky.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 50,
+     "intensidad": 3,
+     "desc": "Late-night quiet: a single low bassoon note, sparse ticking pizzicato, a small mysterious celesta figure, then a bright twist."
+    },
+    {
+     "t0": 50,
+     "t1": 88,
+     "intensidad": 4,
+     "desc": "Light and inquisitive: marimba ostinato starts, upright bass walks gently, a sense of introducing a character."
+    },
+    {
+     "t0": 88,
+     "t1": 136,
+     "intensidad": 4,
+     "desc": "Delicate and intricate: celesta and harp-like pizzicato weaving patterns, curious and a little sneaky."
+    }
+   ],
+   "intensidad": [
+    3,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "arpa",
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 133.88,
+    "rms_db": -15.4,
+    "tempo": 117.5,
+    "brillo_hz": 826,
+    "energia": [
+     0.35,
+     0.38,
+     0.49,
+     0.65,
+     0.72,
+     0.73,
+     0.79,
+     0.81,
+     0.82,
+     1.0,
+     0.64,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_estudio2__lyria_tramo2": {
+   "id": "amaya_estudio2__lyria_tramo2",
+   "video": "amaya_estudio2",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_estudio2\\audio\\lyria_tramo2.mp3",
+   "archivo": "amaya_estudio2__lyria_tramo2.mp3",
+   "md5": "d70eca06d6d978440332e89d29c5d7cd",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Español para su examen (sílabas, acentos, adverbios y textos)",
+   "tramo": 2,
+   "escenas": [
+    "reglas",
+    "preg2",
+    "resp2",
+    "adverbios",
+    "preg3",
+    "resp3"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: cinco_bichos__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-11-07\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about small house bugs: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:40 (161 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End on a sustained calm chord that can flow into the next piece.\n\n[0:00 - 1:09] Section 1: Intensity 5/10. Light and quick: bouncy pizzicato and celesta with little hops, curious and charming, a dreamy bar at the end.\n[1:09 - 2:40] Section 2: Intensity 6/10. Building comic suspense: low pulsing strings and bassoon, tiptoeing pizzicato, a triumphant playful chord near the end.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 69,
+     "intensidad": 5,
+     "desc": "Light and quick: bouncy pizzicato and celesta with little hops, curious and charming, a dreamy bar at the end."
+    },
+    {
+     "t0": 69,
+     "t1": 160,
+     "intensidad": 6,
+     "desc": "Building comic suspense: low pulsing strings and bassoon, tiptoeing pizzicato, a triumphant playful chord near the end."
+    }
+   ],
+   "intensidad": [
+    5,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 159.32,
+    "rms_db": -15.1,
+    "tempo": 80.7,
+    "brillo_hz": 1285,
+    "energia": [
+     0.34,
+     0.43,
+     0.9,
+     0.74,
+     0.63,
+     0.57,
+     0.68,
+     0.81,
+     0.6,
+     1.0,
+     0.94,
+     0.48
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11",
+   "copias": [
+    "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo2.mp3",
+    "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo2.mp3"
+   ]
+  },
+  "amaya_mate__lyria_tramo4": {
+   "id": "amaya_mate__lyria_tramo4",
+   "video": "amaya_mate",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_mate\\audio\\lyria_tramo4.mp3",
+   "archivo": "amaya_mate__lyria_tramo4.mp3",
+   "md5": "dce3a429576a77092df03fb039d6e69a",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Matemáticas para su examen (decimales, números grandes, triángulos, plano cartesiano y fracciones)",
+   "tramo": 4,
+   "escenas": [
+    "preg5",
+    "resp5",
+    "repaso",
+    "cierre"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: mariquitas_casa__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-10\n\nCozy, curious cartoon nature documentary score about ladybugs moving into a house for the winter: pizzicato strings, marimba, glockenspiel, soft clarinet, felt piano, light brushed percussion and upright bass. Warm, autumnal and a little mischievous. Never epic, never horror. Total length: exactly 1:19 (79 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 0:26] Section 1: Intensity 2/10. Sleepy and cozy: felt piano, soft strings, slow breathing rhythm, a winter lullaby.\n[0:26 - 0:55] Section 2: Intensity 3/10. Gentle confusion: a warm sunny melody that stumbles, then fades to a lonely quiet tone.\n[0:55 - 1:19] Section 3: Intensity 6/10. Funny and a bit gross: a squelchy bassoon, a sneaky pizzicato, a comic sting.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 26,
+     "intensidad": 2,
+     "desc": "Sleepy and cozy: felt piano, soft strings, slow breathing rhythm, a winter lullaby."
+    },
+    {
+     "t0": 26,
+     "t1": 55,
+     "intensidad": 3,
+     "desc": "Gentle confusion: a warm sunny melody that stumbles, then fades to a lonely quiet tone."
+    },
+    {
+     "t0": 55,
+     "t1": 79,
+     "intensidad": 6,
+     "desc": "Funny and a bit gross: a squelchy bassoon, a sneaky pizzicato, a comic sting."
+    }
+   ],
+   "intensidad": [
+    2,
+    3,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "emotivo",
+     "frío",
+     "juguetón",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "infantil",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 77.98,
+    "rms_db": -14.9,
+    "tempo": 161.5,
+    "brillo_hz": 1043,
+    "energia": [
+     0.45,
+     0.41,
+     0.45,
+     0.45,
+     0.83,
+     0.81,
+     1.0,
+     0.79,
+     0.78,
+     0.82,
+     0.93,
+     0.17
+    ],
+    "huecos": [],
+    "dinamica": 0.83
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_mate__lyria_tramo2": {
+   "id": "amaya_mate__lyria_tramo2",
+   "video": "amaya_mate",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_mate\\audio\\lyria_tramo2.mp3",
+   "archivo": "amaya_mate__lyria_tramo2.mp3",
+   "md5": "f3e57a22deaea0bd6f27a8e79b704688",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Matemáticas para su examen (decimales, números grandes, triángulos, plano cartesiano y fracciones)",
+   "tramo": 2,
+   "escenas": [
+    "preg2",
+    "resp2",
+    "triangulos",
+    "preg3",
+    "resp3"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: hormigas_cocina__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-10\n\nBIBLIOTECA: sin_medicina__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-22\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 1:43 (103 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence. End on a held suspenseful tone that can flow into the next piece. No loud ending.\n\n[0:00 - 0:57] Section 1: Intensity 3/10. Quiet modern morning feel turning to wonder: soft felt piano and pizzicato, then a gentle drum pulse arrives as the question is asked, a small mysterious flute figure.\n[0:57 - 1:43] Section 2: Intensity 4/10. Light debunking groove: marimba ostinato, walking upright bass and brushed percussion, a wink of humor, steady and confident.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 57,
+     "intensidad": 3,
+     "desc": "Quiet modern morning feel turning to wonder: soft felt piano and pizzicato, then a gentle drum pulse arrives as the question is asked, a small mysterious flute figure."
+    },
+    {
+     "t0": 57,
+     "t1": 103,
+     "intensidad": 4,
+     "desc": "Light debunking groove: marimba ostinato, walking upright bass and brushed percussion, a wink of humor, steady and confident."
+    }
+   ],
+   "intensidad": [
+    3,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 108.93,
+    "rms_db": -15.1,
+    "tempo": 117.5,
+    "brillo_hz": 1257,
+    "energia": [
+     0.24,
+     0.28,
+     0.49,
+     0.56,
+     0.8,
+     0.8,
+     0.9,
+     0.93,
+     0.96,
+     0.95,
+     1.0,
+     0.26
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_mate__lyria_tramo3": {
+   "id": "amaya_mate__lyria_tramo3",
+   "video": "amaya_mate",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_mate\\audio\\lyria_tramo3.mp3",
+   "archivo": "amaya_mate__lyria_tramo3.mp3",
+   "md5": "accb8f71cebfbd72cb6de580cd5477c5",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Matemáticas para su examen (decimales, números grandes, triángulos, plano cartesiano y fracciones)",
+   "tramo": 3,
+   "escenas": [
+    "plano",
+    "preg4",
+    "resp4",
+    "fracciones"
+   ],
+   "estilo": "Warm playful storybook score for a kid's study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: ia_como_ve__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-10\n\nBIBLIOTECA: cinco_bichos__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-04\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about small house bugs: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:19 (139 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:09] Section 1: Intensity 5/10. Sneaky night prowl: soft walking upright bass, muted marimba, a spooky-but-silly feeling that turns tender for the mother.\n[1:09 - 2:19] Section 2: Intensity 4/10. Mock-serious rumor: bassoon and low strings with a wink, then a warm tender felt piano for the devoted mother.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 69,
+     "intensidad": 5,
+     "desc": "Sneaky night prowl: soft walking upright bass, muted marimba, a spooky-but-silly feeling that turns tender for the mother."
+    },
+    {
+     "t0": 69,
+     "t1": 139,
+     "intensidad": 4,
+     "desc": "Mock-serious rumor: bassoon and low strings with a wink, then a warm tender felt piano for the devoted mother."
+    }
+   ],
+   "intensidad": [
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 137.77,
+    "rms_db": -14.8,
+    "tempo": 117.5,
+    "brillo_hz": 984,
+    "energia": [
+     0.57,
+     0.56,
+     0.65,
+     0.78,
+     0.84,
+     0.6,
+     0.68,
+     0.8,
+     0.86,
+     0.88,
+     1.0,
+     0.65
+    ],
+    "huecos": [],
+    "dinamica": 0.44
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_navidad__lyria_tramo3": {
+   "id": "amaya_navidad__lyria_tramo3",
+   "video": "amaya_navidad",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo3.mp3",
+   "archivo": "amaya_navidad__lyria_tramo3.mp3",
+   "md5": "2dd49bc6295dff60e17c4526242312da",
+   "canal": "canal_amaya",
+   "estilo_video": "documental",
+   "titulo_video": "Las MEJORES y las PEORES cosas que pedir en Navidad 🎀 (15 sí y 10 NO)",
+   "tramo": 3,
+   "escenas": [
+    "m7",
+    "p6",
+    "m6",
+    "p5"
+   ],
+   "estilo": "Sweet coquette bedroom-pop for a teen girl's Christmas wishlist: soft felt piano, music box, light pizzicato strings, gentle sleigh bells, brushed snaps and a warm lo-fi beat; cute, dreamy, playful, never loud; instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: guia_ieez__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-10\n\nCalm lo-fi study music: soft felt piano, warm electric piano chords, gentle brushed drums, mellow bass, steady and unobtrusive, focused and encouraging, 80 BPM, instrumental only, no vocals. Total length: exactly 2:42 (162 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Continue the same calm focused groove.\n\n[0:00 - 0:47] Section 1: Intensity 4/10. the underscore continues in the same mood\n[0:47 - 0:57] Section 2: Intensity 4/10. the underscore continues in the same mood\n[0:57 - 1:06] Section 3: Intensity 4/10. the underscore continues in the same mood\n[1:06 - 1:31] Section 4: Intensity 4/10. the underscore continues in the same mood\n[1:31 - 2:09] Section 5: Intensity 4/10. the underscore continues in the same mood\n[2:09 - 2:29] Section 6: Intensity 4/10. the underscore continues in the same mood\n[2:29 - 2:42] Section 7: Intensity 4/10. the underscore continues in the same mood",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 47,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 47,
+     "t1": 57,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 57,
+     "t1": 66,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 66,
+     "t1": 91,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 91,
+     "t1": 129,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 129,
+     "t1": 149,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    },
+    {
+     "t0": 149,
+     "t1": 162,
+     "intensidad": 4,
+     "desc": "the underscore continues in the same mood"
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "cuerdas",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "calma",
+     "cálido",
+     "juguetón",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 84.6,
+    "rms_db": -14.5,
+    "tempo": 80.7,
+    "brillo_hz": 824,
+    "energia": [
+     0.62,
+     0.67,
+     0.63,
+     0.73,
+     0.86,
+     0.91,
+     0.78,
+     0.86,
+     1.0,
+     0.94,
+     0.99,
+     0.83
+    ],
+    "huecos": [],
+    "dinamica": 0.38
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "amaya_navidad__lyria_tramo1": {
+   "id": "amaya_navidad__lyria_tramo1",
+   "video": "amaya_navidad",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\amaya_navidad\\audio\\lyria_tramo1.mp3",
+   "archivo": "amaya_navidad__lyria_tramo1.mp3",
+   "md5": "5c9ea43c36f73002f4e6ada4de13f33c",
+   "canal": "canal_amaya",
+   "estilo_video": "documental",
+   "titulo_video": "Las MEJORES y las PEORES cosas que pedir en Navidad 🎀 (15 sí y 10 NO)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "bienvenida",
+    "m15",
+    "m14",
+    "p10",
+    "m13",
+    "m12",
+    "p9",
+    "m11"
+   ],
+   "estilo": "Sweet coquette bedroom-pop for a teen girl's Christmas wishlist: soft felt piano, music box, light pizzicato strings, gentle sleigh bells, brushed snaps and a warm lo-fi beat; cute, dreamy, playful, never loud; instrumental only, no vocals.",
+   "prompt": "BIBLIOTECA: chicle_dentro__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-11-10\n\nBIBLIOTECA: sin_medicina__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-05\n\nWarm, curious, lightly humorous documentary score for a hand-drawn cartoon about prehistoric survival: marimba, wooden flute, soft hand drums, pizzicato strings, celesta, upright bass and brushed percussion. Playful and human, with moments of wonder and tenderness. Never epic, never horror, no modern electronics. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin softly with a low held tone. End on a sustained chord that can flow into the next piece.\n\n[0:00 - 1:14] Section 1: Intensity 4/10. Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan.\n[1:14 - 1:55] Section 2: Intensity 3/10. Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato.\n[1:55 - 2:50] Section 3: Intensity 4/10. Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 74,
+     "intensidad": 4,
+     "desc": "Forest and cave atmosphere: wooden flute over soft hand drums, curious celesta sparkles when the discovery is revealed, a little playful for the orangutan."
+    },
+    {
+     "t0": 74,
+     "t1": 115,
+     "intensidad": 3,
+     "desc": "Icy and mysterious then warm: a held celesta tone like frozen air, soft flute, a gentle curious groove with pizzicato."
+    },
+    {
+     "t0": 115,
+     "t1": 170,
+     "intensidad": 4,
+     "desc": "Slightly nervous and comic: tiptoeing pizzicato, muted marimba, a small wince, then relief and warmth."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "cajita de música",
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "flauta",
+     "laúd",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato"
+    ],
+    "animo": [
+     "curioso",
+     "cálido",
+     "frío",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "electrónica",
+     "naturaleza"
+    ]
+   },
+   "medidas": {
+    "dur": 170.76,
+    "rms_db": -14.5,
+    "tempo": 117.5,
+    "brillo_hz": 819,
+    "energia": [
+     0.68,
+     0.67,
+     0.81,
+     0.87,
+     1.0,
+     0.75,
+     0.71,
+     0.69,
+     0.61,
+     0.66,
+     0.79,
+     0.48
+    ],
+    "huecos": [],
+    "dinamica": 0.52
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "jch_carrera_moyahua__lyria_tramo1": {
+   "id": "jch_carrera_moyahua__lyria_tramo1",
+   "video": "jch_carrera_moyahua",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\jch_carrera_moyahua\\audio\\lyria_tramo1.mp3",
+   "archivo": "jch_carrera_moyahua__lyria_tramo1.mp3",
+   "md5": "b9266b0725ebc8abd9f672be46a788bf",
+   "canal": "ninguno",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "¿Cerrar la carretera por una carrera de motos?",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "que",
+    "pleito",
+    "contra"
+   ],
+   "estilo": "Tense modern documentary underscore for a vertical news reel: pulsing low synth bass, tight electronic percussion, subtle distorted guitar textures that evoke motorcycles, instrumental only, no vocals, steady under narration.",
+   "prompt": "BIBLIOTECA: lol_semana2__lyria_tramo10 (desde 0.0 s) — reutilizada el 2026-11-10\n\nBIBLIOTECA: ig_lyon_worlds__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-10-31\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:22 (83 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with an impact hit, driving pulse, then settle under the explanation.\n\n[0:00 - 0:45] Section 1: Intensity 7/10. cold open, dramatic hit then driving pulse, rivalry tension\n[0:45 - 1:22] Section 2: Intensity 4/10. steady informative groove, light arpeggios, stakes rising",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 45,
+     "intensidad": 7,
+     "desc": "cold open, dramatic hit then driving pulse, rivalry tension"
+    },
+    {
+     "t0": 45,
+     "t1": 82,
+     "intensidad": 4,
+     "desc": "steady informative groove, light arpeggios, stakes rising"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "guitarra",
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "acción",
+     "frío",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "electrónica",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 93.45,
+    "rms_db": -14.3,
+    "tempo": 117.5,
+    "brillo_hz": 1910,
+    "energia": [
+     0.15,
+     0.48,
+     0.87,
+     0.91,
+     0.91,
+     0.94,
+     0.91,
+     0.99,
+     0.98,
+     1.0,
+     0.75,
+     0.9
+    ],
+    "huecos": [],
+    "dinamica": 0.85
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "jch_carrera_moyahua__lyria_tramo2": {
+   "id": "jch_carrera_moyahua__lyria_tramo2",
+   "video": "jch_carrera_moyahua",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\jch_carrera_moyahua\\audio\\lyria_tramo2.mp3",
+   "archivo": "jch_carrera_moyahua__lyria_tramo2.mp3",
+   "md5": "43ead3db319a9a34a8dae8d214ce1a5b",
+   "canal": "ninguno",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "¿Cerrar la carretera por una carrera de motos?",
+   "tramo": 2,
+   "escenas": [
+    "favor",
+    "balanza",
+    "consejos",
+    "cierre"
+   ],
+   "estilo": "Tense modern documentary underscore for a vertical news reel: pulsing low synth bass, tight electronic percussion, subtle distorted guitar textures that evoke motorcycles, instrumental only, no vocals, steady under narration.",
+   "prompt": "BIBLIOTECA: arana_amarilla__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-11-10\n\nPlayful, sunny nature documentary score for a hand-drawn cartoon about a big garden spider: pizzicato strings, marimba, acoustic guitar, soft clarinet, celesta, felt piano, light brushed percussion and upright bass. Warm, curious and a little mischievous, with moments of comic suspense. Never epic, never horror. Total length: exactly 1:36 (96 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 0:36] Section 1: Intensity 4/10. Clear and focused: a simple two-part pizzicato and clarinet pattern, like a quick lesson.\n[0:36 - 1:04] Section 2: Intensity 3/10. Practical and friendly: light guitar and piano, calm and helpful.\n[1:04 - 1:36] Section 3: Intensity 3/10. Return to the opening summer theme, now warm and resolved: celesta and felt piano, a smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 36,
+     "intensidad": 4,
+     "desc": "Clear and focused: a simple two-part pizzicato and clarinet pattern, like a quick lesson."
+    },
+    {
+     "t0": 36,
+     "t1": 64,
+     "intensidad": 3,
+     "desc": "Practical and friendly: light guitar and piano, calm and helpful."
+    },
+    {
+     "t0": 64,
+     "t1": 96,
+     "intensidad": 3,
+     "desc": "Return to the opening summer theme, now warm and resolved: celesta and felt piano, a smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    4,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "guitarra",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "sintetizador"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "electrónica",
+     "fantasía medieval",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 92.4,
+    "rms_db": -14.7,
+    "tempo": 103.4,
+    "brillo_hz": 914,
+    "energia": [
+     0.72,
+     0.73,
+     0.8,
+     0.88,
+     1.0,
+     0.82,
+     0.84,
+     0.85,
+     0.88,
+     0.95,
+     0.75,
+     0.25
+    ],
+    "huecos": [],
+    "dinamica": 0.75
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "lol_final_previa__lyria_tramo1": {
+   "id": "lol_final_previa__lyria_tramo1",
+   "video": "lol_final_previa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo1.mp3",
+   "archivo": "lol_final_previa__lyria_tramo1.mp3",
+   "md5": "e05a279a44dc402f994b60661d7e1bd2",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Gen.G vs BLG: todo lo que debes saber antes de la GRAN FINAL",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "voz",
+    "final",
+    "final_publico"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-11-11\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 143.64,
+    "rms_db": -14.4,
+    "tempo": 117.5,
+    "brillo_hz": 2368,
+    "energia": [
+     0.89,
+     0.95,
+     0.98,
+     0.86,
+     0.98,
+     0.91,
+     1.0,
+     0.99,
+     0.91,
+     0.92,
+     0.74,
+     0.88
+    ],
+    "huecos": [],
+    "dinamica": 0.26
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "lol_final_previa__lyria_tramo10": {
+   "id": "lol_final_previa__lyria_tramo10",
+   "video": "lol_final_previa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo10.mp3",
+   "archivo": "lol_final_previa__lyria_tramo10.mp3",
+   "md5": "36a57a693d60c74f95bc8edd3e37b833",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Gen.G vs BLG: todo lo que debes saber antes de la GRAN FINAL",
+   "tramo": 10,
+   "escenas": [
+    "historia",
+    "claves",
+    "pronostico",
+    "cierre"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo8 (desde 0.0 s) — reutilizada el 2026-11-11\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:17 (137 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Patient tension, a bittersweet final hit, then a light curious groove.\n\n[0:00 - 1:44] Section 1: Intensity 7/10. analysis bed, patient tension, a final bittersweet hit\n[1:44 - 2:17] Section 2: Intensity 4/10. light curious groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 104,
+     "intensidad": 7,
+     "desc": "analysis bed, patient tension, a final bittersweet hit"
+    },
+    {
+     "t0": 104,
+     "t1": 137,
+     "intensidad": 4,
+     "desc": "light curious groove"
+    }
+   ],
+   "intensidad": [
+    7,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "curioso",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 151.82,
+    "rms_db": -14.8,
+    "tempo": 117.5,
+    "brillo_hz": 1802,
+    "energia": [
+     0.97,
+     0.97,
+     0.67,
+     0.41,
+     0.77,
+     0.79,
+     0.47,
+     0.63,
+     0.98,
+     1.0,
+     0.54,
+     0.34
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "lol_final_previa__lyria_tramo7": {
+   "id": "lol_final_previa__lyria_tramo7",
+   "video": "lol_final_previa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo7.mp3",
+   "archivo": "lol_final_previa__lyria_tramo7.mp3",
+   "md5": "bb57cc06bfef4a26a8b031284d6b6af2",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Gen.G vs BLG: todo lo que debes saber antes de la GRAN FINAL",
+   "tramo": 7,
+   "escenas": [
+    "j5",
+    "j6_ctx",
+    "j6"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: t1_koi_worlds__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-11-11\n\nBIBLIOTECA: ig_lyon_worlds__lyria_tramo3 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:13 (133 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Quiet minimal analysis pulse, a big hit near the middle, then a confident groove.\n\n[0:00 - 1:38] Section 1: Intensity 6/10. analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end\n[1:38 - 2:13] Section 2: Intensity 5/10. confident stat-card groove",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 98,
+     "intensidad": 6,
+     "desc": "analysis bed: minimal pulse, ticking hi-hats, suspense, big hit near the end"
+    },
+    {
+     "t0": 98,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "confident stat-card groove"
+    }
+   ],
+   "intensidad": [
+    6,
+    5
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 121.82,
+    "rms_db": -14.2,
+    "tempo": 117.5,
+    "brillo_hz": 2381,
+    "energia": [
+     0.88,
+     0.98,
+     0.93,
+     0.94,
+     0.9,
+     0.96,
+     0.91,
+     0.98,
+     1.0,
+     0.96,
+     0.88,
+     0.98
+    ],
+    "huecos": [],
+    "dinamica": 0.12
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "lol_final_previa__lyria_tramo8": {
+   "id": "lol_final_previa__lyria_tramo8",
+   "video": "lol_final_previa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo8.mp3",
+   "archivo": "lol_final_previa__lyria_tramo8.mp3",
+   "md5": "4571d3d5fa56f79c41c7095acf1f97e6",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Gen.G vs BLG: todo lo que debes saber antes de la GRAN FINAL",
+   "tramo": 8,
+   "escenas": [
+    "j6_fin",
+    "t1_com",
+    "numeros"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: cfo_kc_worlds__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-11-11\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 1:38 (98 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Uneasy analysis tension that suddenly collapses, then a sober afterglow.\n\n[0:00 - 1:16] Section 1: Intensity 6/10. analysis bed, uneasy tension, a sudden collapse\n[1:16 - 1:38] Section 2: Intensity 3/10. slow-motion replay, suspended, then a reflective resolve",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 76,
+     "intensidad": 6,
+     "desc": "analysis bed, uneasy tension, a sudden collapse"
+    },
+    {
+     "t0": 76,
+     "t1": 98,
+     "intensidad": 3,
+     "desc": "slow-motion replay, suspended, then a reflective resolve"
+    }
+   ],
+   "intensidad": [
+    6,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 106.55,
+    "rms_db": -14.2,
+    "tempo": 117.5,
+    "brillo_hz": 1648,
+    "energia": [
+     0.99,
+     0.91,
+     1.0,
+     0.73,
+     0.35,
+     0.35,
+     0.37,
+     0.75,
+     0.8,
+     0.87,
+     0.76,
+     0.89
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "lol_final_previa__lyria_tramo5": {
+   "id": "lol_final_previa__lyria_tramo5",
+   "video": "lol_final_previa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo5.mp3",
+   "archivo": "lol_final_previa__lyria_tramo5.mp3",
+   "md5": "6a2aff1d525022ea4e9f30c543a017a5",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Gen.G vs BLG: todo lo que debes saber antes de la GRAN FINAL",
+   "tramo": 5,
+   "escenas": [
+    "blg_suiza",
+    "blg_dk",
+    "j2",
+    "dk_p2",
+    "dk_p3"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: lol_worlds_2026__lyria_tramo7 (desde 0.0 s) — reutilizada el 2026-11-11\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:41 (161 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Confident analysis pulse with a climax, then darker serious drums.\n\n[0:00 - 1:31] Section 1: Intensity 7/10. analysis bed, cool confident pulse, climax\n[1:31 - 2:41] Section 2: Intensity 6/10. elimination day, darker serious drums",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 91,
+     "intensidad": 7,
+     "desc": "analysis bed, cool confident pulse, climax"
+    },
+    {
+     "t0": 91,
+     "t1": 161,
+     "intensidad": 6,
+     "desc": "elimination day, darker serious drums"
+    }
+   ],
+   "intensidad": [
+    7,
+    6
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "oscuro",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 174.18,
+    "rms_db": -14.3,
+    "tempo": 63.0,
+    "brillo_hz": 2294,
+    "energia": [
+     0.74,
+     0.74,
+     0.87,
+     0.97,
+     0.77,
+     0.83,
+     0.74,
+     0.91,
+     0.93,
+     1.0,
+     0.8,
+     0.97
+    ],
+    "huecos": [],
+    "dinamica": 0.26
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "lol_final_previa__lyria_tramo6": {
+   "id": "lol_final_previa__lyria_tramo6",
+   "video": "lol_final_previa",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\lol_final_previa\\audio\\lyria_tramo6.mp3",
+   "archivo": "lol_final_previa__lyria_tramo6.mp3",
+   "md5": "afaab72e7698e00efd2c8ae89e8023a0",
+   "canal": "",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Gen.G vs BLG: todo lo que debes saber antes de la GRAN FINAL",
+   "tramo": 6,
+   "escenas": [
+    "t1_ctx",
+    "t1_p1",
+    "j4",
+    "faker_p2"
+   ],
+   "estilo": "Modern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration.",
+   "prompt": "BIBLIOTECA: t1_koi_worlds__lyria_tramo2 (desde 0.0 s) — reutilizada el 2026-11-11\n\nBIBLIOTECA: lol_worlds_2026__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-10-28\n\nModern esports broadcast analysis score: tight electronic drums, pulsing synth bass, glassy arpeggios, stadium-sized hits and tension risers, instrumental only, no vocals, energetic but unobtrusive under narration. Total length: exactly 2:50 (170 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Recap groove, build stakes, analysis bed exploding into a climax at the end.\n\n[0:00 - 0:52] Section 1: Intensity 5/10. bouncy recap groove\n[0:52 - 1:11] Section 2: Intensity 6/10. high stakes build-up\n[1:11 - 2:50] Section 3: Intensity 8/10. analysis bed, tension rising to an explosive climax",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 52,
+     "intensidad": 5,
+     "desc": "bouncy recap groove"
+    },
+    {
+     "t0": 52,
+     "t1": 71,
+     "intensidad": 6,
+     "desc": "high stakes build-up"
+    },
+    {
+     "t0": 71,
+     "t1": 170,
+     "intensidad": 8,
+     "desc": "analysis bed, tension rising to an explosive climax"
+    }
+   ],
+   "intensidad": [
+    5,
+    6,
+    8
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "percusión",
+     "sintetizador"
+    ],
+    "animo": [
+     "emotivo",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "electrónica"
+    ]
+   },
+   "medidas": {
+    "dur": 169.69,
+    "rms_db": -14.6,
+    "tempo": 123.0,
+    "brillo_hz": 2783,
+    "energia": [
+     0.69,
+     0.92,
+     0.93,
+     0.82,
+     0.76,
+     0.75,
+     0.83,
+     0.76,
+     0.95,
+     0.97,
+     1.0,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "sextob_ciencias__lyria_tramo2": {
+   "id": "sextob_ciencias__lyria_tramo2",
+   "video": "sextob_ciencias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sextob_ciencias\\audio\\lyria_tramo2.mp3",
+   "archivo": "sextob_ciencias__lyria_tramo2.mp3",
+   "md5": "5401318b502beee5a4b9f3e090eb5835",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Ciencias para su examen (materia, gases, atmósfera y sistema inmunitario)",
+   "tramo": 2,
+   "escenas": [
+    "atmosfera",
+    "aire",
+    "preg2",
+    "resp2"
+   ],
+   "estilo": "Warm playful storybook score for a kid's science study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: corn_flakes__lyria_tramo5 (desde 0.0 s) — reutilizada el 2026-11-09\n\nWarm, handmade documentary score for a stop-motion story about two brothers and an accidental breakfast: pizzicato strings, marimba, soft clarinet, felt piano, glockenspiel, light brushed percussion and an upright bass, with a touch of old American ragtime piano. Curious and human, never epic. Total length: exactly 1:35 (95 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin very softly with solo piano. End with a natural slow fade-out to silence.\n\n[0:00 - 0:25] Section 1: Intensity 2/10. Tender and sad: solo felt piano, a few soft clarinet notes, silence between phrases.\n[0:25 - 1:02] Section 2: Intensity 6/10. Warm and wide: flowing piano arpeggios, sustained strings, glockenspiel sparkle, a sunny morning feeling.\n[1:02 - 1:35] Section 3: Intensity 4/10. Return to the opening piano figure, now warm and resolved, a small smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 25,
+     "intensidad": 2,
+     "desc": "Tender and sad: solo felt piano, a few soft clarinet notes, silence between phrases."
+    },
+    {
+     "t0": 25,
+     "t1": 62,
+     "intensidad": 6,
+     "desc": "Warm and wide: flowing piano arpeggios, sustained strings, glockenspiel sparkle, a sunny morning feeling."
+    },
+    {
+     "t0": 62,
+     "t1": 95,
+     "intensidad": 4,
+     "desc": "Return to the opening piano figure, now warm and resolved, a small smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    2,
+    6,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tierno",
+     "triste"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental"
+    ]
+   },
+   "medidas": {
+    "dur": 92.81,
+    "rms_db": -15.2,
+    "tempo": 129.2,
+    "brillo_hz": 1125,
+    "energia": [
+     0.35,
+     0.31,
+     0.44,
+     0.82,
+     0.78,
+     1.0,
+     0.81,
+     0.54,
+     0.73,
+     0.62,
+     0.68,
+     0.15
+    ],
+    "huecos": [],
+    "dinamica": 0.85
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "sextob_ciencias__lyria_tramo1": {
+   "id": "sextob_ciencias__lyria_tramo1",
+   "video": "sextob_ciencias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sextob_ciencias\\audio\\lyria_tramo1.mp3",
+   "archivo": "sextob_ciencias__lyria_tramo1.mp3",
+   "md5": "71f47ffecff6cb5b2a68356368be7b86",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Ciencias para su examen (materia, gases, atmósfera y sistema inmunitario)",
+   "tramo": 1,
+   "escenas": [
+    "gancho",
+    "materia",
+    "gas",
+    "jeringa",
+    "preg1",
+    "resp1"
+   ],
+   "estilo": "Warm playful storybook score for a kid's science study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: dos_lunas__lyria_tramo1 (desde 0.0 s) — reutilizada el 2026-11-09\n\nWonder-filled, curious yet slightly tense space-documentary score for a fast-paced animated science video: shimmering celesta and glockenspiel, soft analog synth pads, light pulsing pizzicato, a gentle deep bass, tiny sparkling synth arpeggios; modern, playful, cosmic. Keeps moving, with short stingers at changes. Melodies low and sparse so a narrator can speak over it. Instrumental only. Total length: exactly 2:43 (164 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin from near silence with a cosmic rise. Keep one consistent melodic theme throughout. End on a held, soft, dreamy tone that can flow into the next part.\n\n[0:00 - 0:21] Section 1: Intensity 5/10. Hook: a mysterious cosmic rise with a playful stinger on the question, then a curious ticking pulse.\n[0:21 - 0:41] Section 2: Intensity 4/10. Calm floating pads with a light heartbeat pulse, tides rolling softly in the low end.\n[0:41 - 1:22] Section 3: Intensity 6/10. Playful curious pizzicato, a tiny heist-like rhythm, bright glockenspiel stabs on each idea.\n[1:22 - 2:13] Section 4: Intensity 5/10. Orbital waltz feel: circling arpeggios, a precise ticking clock, delicate and elegant.\n[2:13 - 2:43] Section 5: Intensity 4/10. Dreamy night-sky pads with celesta twinkles, warm and magical, slow shimmer.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 21,
+     "intensidad": 5,
+     "desc": "Hook: a mysterious cosmic rise with a playful stinger on the question, then a curious ticking pulse."
+    },
+    {
+     "t0": 21,
+     "t1": 41,
+     "intensidad": 4,
+     "desc": "Calm floating pads with a light heartbeat pulse, tides rolling softly in the low end."
+    },
+    {
+     "t0": 41,
+     "t1": 82,
+     "intensidad": 6,
+     "desc": "Playful curious pizzicato, a tiny heist-like rhythm, bright glockenspiel stabs on each idea."
+    },
+    {
+     "t0": 82,
+     "t1": 133,
+     "intensidad": 5,
+     "desc": "Orbital waltz feel: circling arpeggios, a precise ticking clock, delicate and elegant."
+    },
+    {
+     "t0": 133,
+     "t1": 163,
+     "intensidad": 4,
+     "desc": "Dreamy night-sky pads with celesta twinkles, warm and magical, slow shimmer."
+    }
+   ],
+   "intensidad": [
+    5,
+    4,
+    6,
+    5,
+    4
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "marimba",
+     "pizzicato",
+     "sintetizador",
+     "ukulele"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "emotivo",
+     "juguetón",
+     "misterio",
+     "tenso",
+     "tierno"
+    ],
+    "genero": [
+     "ciencia ficción",
+     "cinematográfico",
+     "documental",
+     "vals"
+    ]
+   },
+   "medidas": {
+    "dur": 161.85,
+    "rms_db": -14.9,
+    "tempo": 123.0,
+    "brillo_hz": 1055,
+    "energia": [
+     0.45,
+     0.39,
+     0.46,
+     0.7,
+     0.95,
+     0.64,
+     0.73,
+     0.96,
+     1.0,
+     0.63,
+     0.61,
+     0.49
+    ],
+    "huecos": [],
+    "dinamica": 0.61
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "sextob_ciencias__lyria_tramo3": {
+   "id": "sextob_ciencias__lyria_tramo3",
+   "video": "sextob_ciencias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sextob_ciencias\\audio\\lyria_tramo3.mp3",
+   "archivo": "sextob_ciencias__lyria_tramo3.mp3",
+   "md5": "e336937a300f8669fa12ba5a8356c511",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Ciencias para su examen (materia, gases, atmósfera y sistema inmunitario)",
+   "tramo": 3,
+   "escenas": [
+    "defensa",
+    "leucocitos",
+    "linfocitos",
+    "preg3",
+    "resp3"
+   ],
+   "estilo": "Warm playful storybook score for a kid's science study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: doce_animales__lyria_tramo8 (desde 0.0 s) — reutilizada el 2026-11-09\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about the animals living around a house: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:42 (162 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 0:52] Section 1: Intensity 4/10. A sudden mood shift: a tense but playful march, muted brass-like low strings and snappy percussion, determined.\n[0:52 - 1:38] Section 2: Intensity 4/10. Careful and precise: quiet ticking pizzicato and a steady, focused rhythm, like a calm instruction.\n[1:38 - 2:12] Section 3: Intensity 3/10. Practical and friendly: light pizzicato and felt piano, calm and helpful.\n[2:12 - 2:42] Section 4: Intensity 3/10. Return to the opening night theme, now warm and resolved: celesta and felt piano, a smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 52,
+     "intensidad": 4,
+     "desc": "A sudden mood shift: a tense but playful march, muted brass-like low strings and snappy percussion, determined."
+    },
+    {
+     "t0": 52,
+     "t1": 98,
+     "intensidad": 4,
+     "desc": "Careful and precise: quiet ticking pizzicato and a steady, focused rhythm, like a calm instruction."
+    },
+    {
+     "t0": 98,
+     "t1": 132,
+     "intensidad": 3,
+     "desc": "Practical and friendly: light pizzicato and felt piano, calm and helpful."
+    },
+    {
+     "t0": 132,
+     "t1": 162,
+     "intensidad": 3,
+     "desc": "Return to the opening night theme, now warm and resolved: celesta and felt piano, a smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "metales",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 151.93,
+    "rms_db": -14.9,
+    "tempo": 161.5,
+    "brillo_hz": 907,
+    "energia": [
+     0.77,
+     0.92,
+     0.9,
+     0.85,
+     0.82,
+     0.92,
+     1.0,
+     0.85,
+     0.83,
+     0.97,
+     0.84,
+     0.27
+    ],
+    "huecos": [],
+    "dinamica": 0.73
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "sextob_ciencias__lyria_tramo4": {
+   "id": "sextob_ciencias__lyria_tramo4",
+   "video": "sextob_ciencias",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\sextob_ciencias\\audio\\lyria_tramo4.mp3",
+   "archivo": "sextob_ciencias__lyria_tramo4.mp3",
+   "md5": "75f2d6c9b34be6970962a170dd856d31",
+   "canal": "",
+   "estilo_video": "documental",
+   "titulo_video": "Sexto B: Ciencias para su examen (materia, gases, atmósfera y sistema inmunitario)",
+   "tramo": 4,
+   "escenas": [
+    "vacunas",
+    "autoinmune",
+    "preg4",
+    "resp4",
+    "repaso",
+    "cierre"
+   ],
+   "estilo": "Warm playful storybook score for a kid's science study guide: marimba, ukulele, glockenspiel, pizzicato; low in the mix.",
+   "prompt": "BIBLIOTECA: arana_techo__lyria_tramo4 (desde 0.0 s) — reutilizada el 2026-11-09\n\nPlayful, curious nature documentary score for a hand-drawn cartoon about a tiny house spider: pizzicato strings, marimba, soft bassoon, celesta, felt piano, light brushed percussion and upright bass. Mischievous and warm, with moments of comic suspense. Never epic, never horror. Total length: exactly 2:17 (137 seconds). Instrumental only, no vocals, no singing, no spoken words. It must leave room for a narrator: keep the middle frequencies calm, no lead melody competing with speech. Begin gently with a held tone. End with a natural slow fade-out to silence.\n\n[0:00 - 0:28] Section 1: Intensity 4/10. Thoughtful everyday groove: relaxed marimba and bass, a small revelation at the end.\n[0:28 - 1:07] Section 2: Intensity 4/10. Clear and focused: a simple two-part pizzicato and bassoon pattern, light and then a little serious, like a quick lesson.\n[1:07 - 1:19] Section 3: Intensity 3/10. A short worried turn: low muted strings and a hesitant bassoon, then hope returns.\n[1:19 - 1:52] Section 4: Intensity 3/10. Practical and friendly: light pizzicato and piano, calm and helpful.\n[1:52 - 2:17] Section 5: Intensity 3/10. Return to the opening night theme, now warm and resolved: celesta and felt piano, a smile, then a calm ending.",
+   "secciones": [
+    {
+     "t0": 0,
+     "t1": 28,
+     "intensidad": 4,
+     "desc": "Thoughtful everyday groove: relaxed marimba and bass, a small revelation at the end."
+    },
+    {
+     "t0": 28,
+     "t1": 67,
+     "intensidad": 4,
+     "desc": "Clear and focused: a simple two-part pizzicato and bassoon pattern, light and then a little serious, like a quick lesson."
+    },
+    {
+     "t0": 67,
+     "t1": 79,
+     "intensidad": 3,
+     "desc": "A short worried turn: low muted strings and a hesitant bassoon, then hope returns."
+    },
+    {
+     "t0": 79,
+     "t1": 112,
+     "intensidad": 3,
+     "desc": "Practical and friendly: light pizzicato and piano, calm and helpful."
+    },
+    {
+     "t0": 112,
+     "t1": 137,
+     "intensidad": 3,
+     "desc": "Return to the opening night theme, now warm and resolved: celesta and felt piano, a smile, then a calm ending."
+    }
+   ],
+   "intensidad": [
+    4,
+    4,
+    3,
+    3,
+    3
+   ],
+   "etiquetas": {
+    "instrumentos": [
+     "campanas",
+     "contrabajo",
+     "cuerdas",
+     "marimba",
+     "percusión",
+     "piano",
+     "pizzicato",
+     "ukulele"
+    ],
+    "animo": [
+     "calma",
+     "curioso",
+     "cálido",
+     "esperanza",
+     "juguetón",
+     "tenso"
+    ],
+    "genero": [
+     "cinematográfico",
+     "documental",
+     "naturaleza",
+     "thriller"
+    ]
+   },
+   "medidas": {
+    "dur": 126.22,
+    "rms_db": -14.9,
+    "tempo": 161.5,
+    "brillo_hz": 818,
+    "energia": [
+     0.7,
+     0.66,
+     0.78,
+     0.76,
+     0.91,
+     0.77,
+     0.72,
+     0.87,
+     1.0,
+     0.92,
+     0.84,
+     0.17
+    ],
+    "huecos": [],
+    "dinamica": 0.83
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo16": {
+   "id": "wow_errores_30_60__lyria_tramo16",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo16.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo16.mp3",
+   "md5": "0540672afa7b4676d1ba57805f47f21f",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 16,
+   "escenas": [
+    "cierre"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 49.13,
+    "rms_db": -21.2,
+    "tempo": 80.7,
+    "brillo_hz": 1051,
+    "energia": [
+     0.8,
+     0.26,
+     0.61,
+     0.85,
+     0.9,
+     1.0,
+     0.78,
+     0.77,
+     0.73,
+     0.95,
+     0.73,
+     0.57
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo11": {
+   "id": "wow_errores_30_60__lyria_tramo11",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo11.mp3",
+   "md5": "140c7480b13f7a23733d6070bfa165b2",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 11,
+   "escenas": [
+    "gracias2",
+    "c06"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nTierras de la Peste",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 86.0,
+    "rms_db": -23.3,
+    "tempo": 161.5,
+    "brillo_hz": 365,
+    "energia": [
+     0.71,
+     0.8,
+     0.83,
+     0.88,
+     0.84,
+     0.76,
+     0.76,
+     1.0,
+     0.93,
+     0.7,
+     0.35,
+     0.58
+    ],
+    "huecos": [],
+    "dinamica": 0.65
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo12": {
+   "id": "wow_errores_30_60__lyria_tramo12",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo12.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo12.mp3",
+   "md5": "648ae83c44588d16edcdf37ad88cc300",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 12,
+   "escenas": [
+    "c05",
+    "burla2"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nFeralas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 98.5,
+    "rms_db": -21.0,
+    "tempo": 136.0,
+    "brillo_hz": 1867,
+    "energia": [
+     1.0,
+     0.78,
+     0.66,
+     0.46,
+     0.26,
+     0.7,
+     0.58,
+     0.5,
+     0.78,
+     0.38,
+     0.45,
+     0.46
+    ],
+    "huecos": [],
+    "dinamica": 0.74
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo14": {
+   "id": "wow_errores_30_60__lyria_tramo14",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo14.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo14.mp3",
+   "md5": "15e9ef431e9d97a878b7ad6b24bb6ce1",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 14,
+   "escenas": [
+    "c02"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nTanaris",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 81.0,
+    "rms_db": -25.8,
+    "tempo": 172.3,
+    "brillo_hz": 671,
+    "energia": [
+     0.45,
+     0.48,
+     0.29,
+     0.07,
+     0.41,
+     0.92,
+     0.67,
+     0.26,
+     0.51,
+     1.0,
+     0.63,
+     0.8
+    ],
+    "huecos": [],
+    "dinamica": 0.93
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo10": {
+   "id": "wow_errores_30_60__lyria_tramo10",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo10.mp3",
+   "md5": "c64a0646f69ed68b96d27ffc257bc72d",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 10,
+   "escenas": [
+    "c08",
+    "c07"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nUn'Goro",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 118.5,
+    "rms_db": -22.9,
+    "tempo": 107.7,
+    "brillo_hz": 587,
+    "energia": [
+     0.45,
+     0.62,
+     0.74,
+     0.98,
+     1.0,
+     1.0,
+     1.0,
+     0.69,
+     0.16,
+     0.36,
+     0.66,
+     0.54
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo2": {
+   "id": "wow_errores_30_60__lyria_tramo2",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo2.mp3",
+   "md5": "936b2a23bf392acc86bb5b0f20f9af4c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 2,
+   "escenas": [
+    "c19"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nTuercespina",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 51.0,
+    "rms_db": -21.1,
+    "tempo": 136.0,
+    "brillo_hz": 1314,
+    "energia": [
+     0.8,
+     0.63,
+     0.61,
+     1.0,
+     0.76,
+     0.18,
+     0.5,
+     0.18,
+     0.37,
+     0.35,
+     0.24,
+     0.38
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo15": {
+   "id": "wow_errores_30_60__lyria_tramo15",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo15.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo15.mp3",
+   "md5": "dd69ded5f7d363deaa362c57753c72b5",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 15,
+   "escenas": [
+    "c01"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nNúcleo de Magma",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 123.5,
+    "rms_db": -21.5,
+    "tempo": 89.1,
+    "brillo_hz": 686,
+    "energia": [
+     0.76,
+     0.58,
+     0.46,
+     0.71,
+     0.69,
+     0.58,
+     0.68,
+     1.0,
+     0.98,
+     0.84,
+     0.99,
+     0.65
+    ],
+    "huecos": [],
+    "dinamica": 0.54
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo13": {
+   "id": "wow_errores_30_60__lyria_tramo13",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo13.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo13.mp3",
+   "md5": "a95163a726310014db74cf69f621f803",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 13,
+   "escenas": [
+    "c04",
+    "c03"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nCuna del Invierno",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 113.5,
+    "rms_db": -23.8,
+    "tempo": 117.5,
+    "brillo_hz": 1137,
+    "energia": [
+     0.82,
+     1.0,
+     0.44,
+     0.4,
+     0.45,
+     0.36,
+     0.16,
+     0.39,
+     0.72,
+     0.28,
+     0.27,
+     0.25
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo1": {
+   "id": "wow_errores_30_60__lyria_tramo1",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo1.mp3",
+   "md5": "1b05d1970e48097bca164a7ddff21ca8",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "c20"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 138.5,
+    "rms_db": -22.4,
+    "tempo": 172.3,
+    "brillo_hz": 1176,
+    "energia": [
+     0.96,
+     1.0,
+     0.93,
+     0.68,
+     0.89,
+     0.76,
+     0.69,
+     0.41,
+     0.64,
+     0.66,
+     0.88,
+     0.96
+    ],
+    "huecos": [],
+    "dinamica": 0.59
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo3": {
+   "id": "wow_errores_30_60__lyria_tramo3",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo3.mp3",
+   "md5": "77311008f1a2f4b45bd676af33896735",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 3,
+   "escenas": [
+    "overgear"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nForjaz",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 53.5,
+    "rms_db": -23.2,
+    "tempo": 69.8,
+    "brillo_hz": 1214,
+    "energia": [
+     0.54,
+     0.76,
+     0.34,
+     0.78,
+     0.58,
+     0.28,
+     0.23,
+     0.64,
+     0.76,
+     0.85,
+     0.88,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.77
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo4": {
+   "id": "wow_errores_30_60__lyria_tramo4",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo4.mp3",
+   "md5": "e8102ccc8026ef1148d41f82cf4452e4",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 4,
+   "escenas": [
+    "burla0",
+    "c18"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nTanaris",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 86.0,
+    "rms_db": -24.4,
+    "tempo": 129.2,
+    "brillo_hz": 1003,
+    "energia": [
+     0.32,
+     0.93,
+     1.0,
+     0.81,
+     0.34,
+     0.47,
+     0.46,
+     0.23,
+     0.7,
+     0.74,
+     0.44,
+     0.51
+    ],
+    "huecos": [],
+    "dinamica": 0.77
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo6": {
+   "id": "wow_errores_30_60__lyria_tramo6",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo6.mp3",
+   "md5": "03afd98ebc2da2302d3b7a77ec05dd41",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 6,
+   "escenas": [
+    "c15",
+    "gracias1"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nFeralas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 83.5,
+    "rms_db": -27.2,
+    "tempo": 136.0,
+    "brillo_hz": 1307,
+    "energia": [
+     0.43,
+     0.99,
+     1.0,
+     0.9,
+     0.91,
+     0.91,
+     0.78,
+     0.67,
+     0.56,
+     0.42,
+     0.33,
+     0.24
+    ],
+    "huecos": [],
+    "dinamica": 0.76
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo7": {
+   "id": "wow_errores_30_60__lyria_tramo7",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo7.mp3",
+   "md5": "ff3b306c669a802c0d8b8e767b0ca428",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 7,
+   "escenas": [
+    "c14",
+    "c13"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nOrgrimmar",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "oscuro",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 118.5,
+    "rms_db": -24.2,
+    "tempo": 129.2,
+    "brillo_hz": 610,
+    "energia": [
+     0.64,
+     0.67,
+     0.18,
+     0.15,
+     0.37,
+     0.37,
+     0.39,
+     0.35,
+     0.21,
+     0.34,
+     1.0,
+     0.98
+    ],
+    "huecos": [],
+    "dinamica": 0.85
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo5": {
+   "id": "wow_errores_30_60__lyria_tramo5",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo5.mp3",
+   "md5": "aa6a1c0546cd6ff07d3590d71a436e81",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 5,
+   "escenas": [
+    "c17",
+    "c16"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nTuercespina",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 113.5,
+    "rms_db": -23.2,
+    "tempo": 136.0,
+    "brillo_hz": 899,
+    "energia": [
+     0.39,
+     0.49,
+     0.4,
+     0.16,
+     0.32,
+     0.53,
+     0.46,
+     0.48,
+     0.2,
+     0.97,
+     1.0,
+     0.35
+    ],
+    "huecos": [],
+    "dinamica": 0.84
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo9": {
+   "id": "wow_errores_30_60__lyria_tramo9",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo9.mp3",
+   "md5": "7779c55f6419ae25ea97a1653f39bb13",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 9,
+   "escenas": [
+    "c10",
+    "c09"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nRoca Negra",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 128.5,
+    "rms_db": -21.8,
+    "tempo": 66.3,
+    "brillo_hz": 514,
+    "energia": [
+     0.48,
+     0.55,
+     0.48,
+     0.48,
+     0.49,
+     0.45,
+     0.21,
+     0.46,
+     0.47,
+     0.42,
+     0.61,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.79
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_errores_30_60__lyria_tramo8": {
+   "id": "wow_errores_30_60__lyria_tramo8",
+   "video": "wow_errores_30_60",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_errores_30_60\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_errores_30_60__lyria_tramo8.mp3",
+   "md5": "5db6b7d937e71a7af6ff0f774234ed75",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "Los 20 ERRORES del nivel 30 al 60 en WoW Forever (y cómo arreglarlos)",
+   "tramo": 8,
+   "escenas": [
+    "c12",
+    "c11",
+    "burla1"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nMil Agujas",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 148.5,
+    "rms_db": -24.7,
+    "tempo": 123.0,
+    "brillo_hz": 1117,
+    "energia": [
+     0.77,
+     0.89,
+     0.38,
+     0.34,
+     0.38,
+     0.81,
+     0.44,
+     0.44,
+     0.58,
+     1.0,
+     0.45,
+     0.61
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo1": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo1",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo1.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo1.mp3",
+   "md5": "dc34ce6e656702da8d3c3b171ce0c0c9",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 1,
+   "escenas": [
+    "intro",
+    "gaia",
+    "gaia2"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 158.5,
+    "rms_db": -22.2,
+    "tempo": 161.5,
+    "brillo_hz": 1156,
+    "energia": [
+     1.0,
+     0.93,
+     0.88,
+     0.74,
+     0.87,
+     0.72,
+     0.41,
+     0.65,
+     0.71,
+     0.93,
+     0.81,
+     0.85
+    ],
+    "huecos": [],
+    "dinamica": 0.59
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo10": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo10",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo10.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo10.mp3",
+   "md5": "2792bd0dd9eaeb0de25c50bdae038717",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 10,
+   "escenas": [
+    "s05",
+    "s04"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nPáramos",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 151.0,
+    "rms_db": -24.2,
+    "tempo": 123.0,
+    "brillo_hz": 1032,
+    "energia": [
+     0.64,
+     0.5,
+     0.74,
+     0.36,
+     0.68,
+     0.56,
+     0.43,
+     0.5,
+     1.0,
+     0.46,
+     0.89,
+     0.79
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo11": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo11",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo11.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo11.mp3",
+   "md5": "846c22317a73e15a1ee6501cad453b17",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 11,
+   "escenas": [
+    "s03",
+    "s02"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nBosque del Ocaso",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 141.0,
+    "rms_db": -26.4,
+    "tempo": 161.5,
+    "brillo_hz": 642,
+    "energia": [
+     0.74,
+     0.62,
+     0.57,
+     0.7,
+     0.58,
+     0.28,
+     0.12,
+     0.82,
+     1.0,
+     0.49,
+     0.58,
+     0.72
+    ],
+    "huecos": [
+     [
+      77.8,
+      79.3
+     ]
+    ],
+    "dinamica": 0.88
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo12": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo12",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo12.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo12.mp3",
+   "md5": "768b384e0a45e34c1fa0d55d94785940",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 12,
+   "escenas": [
+    "s01",
+    "cierre"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nLegends of Azeroth",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 158.5,
+    "rms_db": -22.3,
+    "tempo": 161.5,
+    "brillo_hz": 1145,
+    "energia": [
+     0.95,
+     0.91,
+     0.73,
+     0.82,
+     0.77,
+     0.42,
+     0.6,
+     0.66,
+     0.87,
+     0.96,
+     0.71,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.58
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo2": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo2",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo2.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo2.mp3",
+   "md5": "000010c2ca4ec19128ce34e33edcc034",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 2,
+   "escenas": [
+    "s20",
+    "overgear"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nElwynn",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 116.0,
+    "rms_db": -23.7,
+    "tempo": 129.2,
+    "brillo_hz": 1348,
+    "energia": [
+     0.28,
+     0.76,
+     0.71,
+     0.63,
+     0.81,
+     0.23,
+     0.26,
+     1.0,
+     0.43,
+     0.77,
+     0.87,
+     0.65
+    ],
+    "huecos": [],
+    "dinamica": 0.77
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo3": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo3",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo3.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo3.mp3",
+   "md5": "f5ffed3359f3b3ee773fdd53fef3a12d",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 3,
+   "escenas": [
+    "s19",
+    "s18"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nForjaz",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 136.0,
+    "rms_db": -23.6,
+    "tempo": 129.2,
+    "brillo_hz": 1153,
+    "energia": [
+     0.64,
+     0.65,
+     0.36,
+     0.85,
+     1.0,
+     0.84,
+     0.81,
+     0.44,
+     0.41,
+     0.51,
+     0.72,
+     0.6
+    ],
+    "huecos": [],
+    "dinamica": 0.64
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo4": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo4",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo4.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo4.mp3",
+   "md5": "3eb9ce5ce950a2327758223a595695f7",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 4,
+   "escenas": [
+    "s17",
+    "s16"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nBosque del Ocaso",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 126.0,
+    "rms_db": -26.8,
+    "tempo": 161.5,
+    "brillo_hz": 641,
+    "energia": [
+     0.54,
+     1.0,
+     0.56,
+     0.48,
+     0.52,
+     0.7,
+     0.28,
+     0.51,
+     0.52,
+     0.5,
+     0.44,
+     0.76
+    ],
+    "huecos": [],
+    "dinamica": 0.72
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo5": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo5",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo5.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo5.mp3",
+   "md5": "3b9563887f2ba8d81c2af4690d01dc4a",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 5,
+   "escenas": [
+    "s15",
+    "gracias1",
+    "s14"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nBaldíos",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 168.5,
+    "rms_db": -24.3,
+    "tempo": 143.6,
+    "brillo_hz": 1307,
+    "energia": [
+     0.21,
+     0.15,
+     0.16,
+     0.79,
+     0.7,
+     0.26,
+     0.4,
+     0.66,
+     0.26,
+     0.24,
+     0.14,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.86
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo9": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo9",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo9.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo9.mp3",
+   "md5": "df6c65ca4e172b783e0d2a7d2d7086fb",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 9,
+   "escenas": [
+    "s07",
+    "gracias2",
+    "s06"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nTaberna",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 168.5,
+    "rms_db": -25.3,
+    "tempo": 123.0,
+    "brillo_hz": 1501,
+    "energia": [
+     0.33,
+     0.75,
+     0.57,
+     0.5,
+     0.17,
+     0.49,
+     0.79,
+     0.74,
+     0.34,
+     0.38,
+     0.99,
+     1.0
+    ],
+    "huecos": [],
+    "dinamica": 0.83
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo7": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo7",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo7.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo7.mp3",
+   "md5": "1263cad7b343660201891cd3124021d7",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 7,
+   "escenas": [
+    "s11",
+    "burla1",
+    "s10"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nVentormenta",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 163.5,
+    "rms_db": -25.1,
+    "tempo": 80.7,
+    "brillo_hz": 1120,
+    "energia": [
+     1.0,
+     0.54,
+     0.52,
+     0.41,
+     0.4,
+     0.68,
+     0.62,
+     0.51,
+     0.49,
+     0.4,
+     0.47,
+     0.43
+    ],
+    "huecos": [],
+    "dinamica": 0.6
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo6": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo6",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo6.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo6.mp3",
+   "md5": "0abb5dada5e1239df1d03cb046fea7c6",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 6,
+   "escenas": [
+    "s13",
+    "s12"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nVallefresno",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 133.5,
+    "rms_db": -23.8,
+    "tempo": 136.0,
+    "brillo_hz": 1118,
+    "energia": [
+     0.4,
+     0.62,
+     0.94,
+     0.96,
+     0.57,
+     0.65,
+     0.71,
+     1.0,
+     0.82,
+     0.34,
+     0.79,
+     0.46
+    ],
+    "huecos": [],
+    "dinamica": 0.66
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
+  },
+  "wow_secretos_primeros_niveles__lyria_tramo8": {
+   "id": "wow_secretos_primeros_niveles__lyria_tramo8",
+   "video": "wow_secretos_primeros_niveles",
+   "archivo_origen": "C:\\FabricaAnimaciones\\videos\\wow_secretos_primeros_niveles\\audio\\lyria_tramo8.wav",
+   "archivo": "wow_secretos_primeros_niveles__lyria_tramo8.mp3",
+   "md5": "4b8abcf85a6d92791637b9e2fac2407c",
+   "canal": "cronicas_warcraft",
+   "estilo_video": "secuencia_yt",
+   "titulo_video": "20 SECRETOS ESCONDIDOS de los primeros niveles de WoW Forever",
+   "tramo": 8,
+   "escenas": [
+    "s09",
+    "s08"
+   ],
+   "estilo": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.",
+   "prompt": "Epic fantasy orchestral underscore like a classic high-fantasy MMORPG soundtrack, instrumental only, no vocals.\nNúcleo de Magma",
+   "secciones": [],
+   "intensidad": [],
+   "etiquetas": {
+    "instrumentos": [],
+    "animo": [
+     "misterio",
+     "épico"
+    ],
+    "genero": [
+     "cinematográfico",
+     "fantasía medieval"
+    ]
+   },
+   "medidas": {
+    "dur": 131.0,
+    "rms_db": -21.7,
+    "tempo": 89.1,
+    "brillo_hz": 672,
+    "energia": [
+     0.77,
+     0.53,
+     0.54,
+     0.73,
+     0.7,
+     0.4,
+     0.99,
+     1.0,
+     0.9,
+     0.99,
+     0.91,
+     0.18
+    ],
+    "huecos": [],
+    "dinamica": 0.82
+   },
+   "variante": false,
+   "usos": [],
+   "catalogado": "2026-11-11"
   }
  },
- "actualizado": "2026-11-06 15:20"
+ "actualizado": "2026-11-11 15:28"
 }

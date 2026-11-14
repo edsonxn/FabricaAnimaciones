@@ -268,9 +268,26 @@ def main():
     if a[0] == "avisar":              # aviso por voz autónomo (Chatterbox + bocinas), sin servidor ni puerto 3000
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "avisar.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "tele":                # el Google TV de la casa: avisos, avances, montajes, tablero y preguntas con botones (docs/tele.md)
+        env = dict(os.environ, PYTHONIOENCODING="utf-8", FAB_CWD=os.getcwd())   # rutas relativas de otro proyecto
+        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "tele.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "envivo":              # directo que se genera y se edita en tiempo real; cambia de tema al vuelo (docs/estilo_envivo.md)
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "envivo", "servidor.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
+    if a[0] == "amaya":               # Estudio Amaya (app de su hija; nucleo/amaya/, docs/panel.md § «Estudio Amaya»)
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.path.insert(0, NUCLEO)
+        import panel_remoto as _pr
+        ok = _pr.amaya_despierta(15)
+        print(f"Estudio Amaya {'corriendo' if ok else 'NO arrancó'} en http://127.0.0.1:{_pr.AMAYA}/ "
+              f"(registro: {_pr.AMAYA_LOG})")
+        c = _pr.leer_cfg()
+        print(f"  Puerta remota: {'sí' if _pr.es_puerta(c.get('puerto') or _pr.PUERTO) else 'no (python fab.py panel --remoto)'}"
+              " · en el teléfono: https://clicknbusiness.com.mx/amaya/ (o la app Estudio Amaya)")
+        if ok and "--abrir" in a:
+            import webbrowser
+            webbrowser.open(f"http://127.0.0.1:{_pr.AMAYA}/")
+        sys.exit(0 if ok else 1)
     if a[0] == "panel":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         if "--remoto" in a:          # el lienzo desde el celular: puerta con clave + túnel (nucleo/panel_remoto.py)

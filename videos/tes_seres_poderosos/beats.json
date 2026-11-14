@@ -1,0 +1,1378 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.418,
+  "tipo": "video",
+  "texto": "Un nigromante que quiso ser dios. Un dragón que se come el mundo. Un gólem de latón que conquistó un continente entero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.418,
+  "t1": 16.435,
+  "tipo": "video",
+  "texto": "Un príncipe que te cambia la cara por un queso, y un dios que ve el tiempo como tú ves un pasillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.435,
+  "t1": 26.172,
+  "tipo": "video",
+  "texto": "Hoy toca la pregunta que más pelea en los comentarios. ¿Quién es el ser más poderoso de Tamriel? Veinte seres, del último al primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.172,
+  "t1": 35.234,
+  "tipo": "video",
+  "texto": "Todo comprobado en UESP, con las fuentes en la descripción. Y para que nadie se queje del ranking, lo hemos hecho entre siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.234,
+  "t1": 42.484,
+  "tipo": "video",
+  "texto": "Siete voces, siete opiniones, y una sola lista. Spoiler: no nos pusimos de acuerdo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.484,
+  "t1": 52.809,
+  "tipo": "video",
+  "texto": "Esta es la tabla que salió de la pelea. Y quédate hasta el número uno, porque no es un dios. O sí. Depende de quién esté soñando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.809,
+  "t1": 60.369,
+  "tipo": "video",
+  "texto": "Primero, el marcador. Votación de Sentinel, ya cerrada. Hope, dos votos. MariCarmen, dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.369,
+  "t1": 70.162,
+  "tipo": "video",
+  "texto": "Yo, Johnny, dos. Edoardo, José y Mario. Cero. Otra vez cero. Esto ya es una tradición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.162,
+  "t1": 76.642,
+  "tipo": "video",
+  "texto": "Y el Profeta. Ocho votos. Ocho. @saidavalera403,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.642,
+  "t1": 86.202,
+  "tipo": "video",
+  "texto": "@amadeoamaya7606, @alleyva, y un largo etcétera. Así que el Profeta se lleva los seis primeros puestos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.202,
+  "t1": 94.144,
+  "tipo": "video",
+  "texto": "Los dioses. Que sí, que ya lo sé, le pega. Edoardo. El dieciocho y el diecisiete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.144,
+  "t1": 103.624,
+  "tipo": "video",
+  "texto": "Cero votos, y sigo siendo el único que lee las fuentes. José. Dieciséis y quince: dos dioses de Morrowind. Uno falso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.624,
+  "t1": 112.012,
+  "tipo": "video",
+  "texto": "O los dos. Mario. Catorce y trece. Un dragón, y el que se lo cargó. Prometo correr menos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.012,
+  "t1": 121.684,
+  "tipo": "video",
+  "texto": "Hope. Doce, once y diez. Un hombre que se hizo dios, un dios de latón, y un príncipe que no quiero nombrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.684,
+  "t1": 129.754,
+  "tipo": "video",
+  "texto": "MariCarmen. Nueve, ocho y siete. Tres príncipes daédricos. Me entiendo bien con ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.754,
+  "t1": 136.95,
+  "tipo": "video",
+  "texto": "Yo soy el Profeta. Del seis al uno. Ocho votos. Estaba escrito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 136.95,
+  "t1": 147.963,
+  "tipo": "video",
+  "texto": "Y a mí me tocan los dos últimos, que nadie quería. Empezamos. Número veinte. Mannimarco, el Rey de los Gusanos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 147.963,
+  "t1": 154.643,
+  "tipo": "video",
+  "texto": "Es el nigromante más famoso de Tamriel. Según UESP, empezó en la isla de Artaeum,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.643,
+  "t1": 162.646,
+  "tipo": "video",
+  "texto": "con la Orden Psijic. Y lo expulsaron por practicar nigromancia, hacia el año doscientos treinta de la segunda era.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.646,
+  "t1": 173.367,
+  "tipo": "video",
+  "texto": "Allí conoció a Vanus Galerion, el que fundaría el Gremio de Magos. Galerion acabó fundando una escuela. Mannimarco, un culto a la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.367,
+  "t1": 180.867,
+  "tipo": "video",
+  "texto": "En Oblivion lo tienes al final de la misión del Gremio de Magos. Sus nigromantes llenan Cyrodiil de gemas de alma negras,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.867,
+  "t1": 191.576,
+  "tipo": "video",
+  "texto": "que atrapan almas de personas. En Elder Scrolls Online es uno de los grandes villanos: el aliado de Molag Bal en el plan para tragarse Tamriel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 191.576,
+  "t1": 199.806,
+  "tipo": "video",
+  "texto": "Y en Daggerfall, la leyenda dice que llegó más lejos: que en la Distorsión del Oeste ascendió y se convirtió en un dios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 199.806,
+  "t1": 206.236,
+  "tipo": "video",
+  "texto": "El Dios de los Gusanos. Un mortal que se hace dios, y está en el último puesto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.236,
+  "t1": 215.78,
+  "tipo": "video",
+  "texto": "Así de cara está esta lista. En el diecinueve, el mago que más ha vivido. Divayth Fyr.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.78,
+  "t1": 225.143,
+  "tipo": "video",
+  "texto": "Un mago telvanni de Morrowind con más de cuatro mil años. Vio caer a los dwemer y sigue en su torre, Tel Fyr, como si nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.143,
+  "t1": 231.923,
+  "tipo": "video",
+  "texto": "Bajo esa torre tiene el Corprusarium, un hospital para los enfermos de corprus, la plaga de Dagoth Ur.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.923,
+  "t1": 241.234,
+  "tipo": "video",
+  "texto": "Y es el único en todo Morrowind que encontró la cura. La cura es la que te da a ti, el Nerevarine, para que puedas seguir la profecía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.234,
+  "t1": 249.622,
+  "tipo": "video",
+  "texto": "Sin Divayth, no hay final de Morrowind. Vive con cuatro mujeres a las que llama sus hijas: Alfe, Beyte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.622,
+  "t1": 255.938,
+  "tipo": "video",
+  "texto": "Delte y Uupse. Y no son sus hijas. Son clones de él mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 255.938,
+  "t1": 266.51,
+  "tipo": "video",
+  "texto": "Cuatro mil años, la cura de una plaga divina, y clones. Si eso es el puesto diecinueve, imagina lo que viene. Gracias, Johnny.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.51,
+  "t1": 275.311,
+  "tipo": "video",
+  "texto": "Ahora, en serio. Número dieciocho. Miraak, el primer Sangre de Dragón. Antes que tú, hubo otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.311,
+  "t1": 282.551,
+  "tipo": "video",
+  "texto": "Miraak era un sacerdote dragón en Solstheim, al servicio de los dragones. Y los traicionó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.551,
+  "t1": 290.611,
+  "tipo": "video",
+  "texto": "Su grito más temido era Doblegar Voluntad: con él, hasta un dragón le obedecía y le servía de montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 290.611,
+  "t1": 299.525,
+  "tipo": "video",
+  "texto": "Para escapar de sus amos, hizo un pacto con Hermaeus Mora, y pasó miles de años en Apocrypha, un reino infinito de libros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.525,
+  "t1": 308.916,
+  "tipo": "video",
+  "texto": "En el contenido Dragonborn, vuelve a Solstheim: esclaviza a los pueblos y les hace levantar su templo en trance, con las piedras sagradas de la isla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.916,
+  "t1": 318.737,
+  "tipo": "video",
+  "texto": "Al final lo derrotas en Apocrypha. Y Hermaeus Mora, su propio señor, lo atraviesa con un tentáculo. Le dice que sabía que lo iba a traicionar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.737,
+  "t1": 327.93,
+  "tipo": "video",
+  "texto": "Y aquí va la lección. Cuando te vas a traicionar a un dios del conocimiento, no lo pienses en voz alta. Lo sabe todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.93,
+  "t1": 333.902,
+  "tipo": "video",
+  "texto": "En el diecisiete, el caballero que cayó de las estrellas. Pelinal Whitestrake.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 333.902,
+  "t1": 344.019,
+  "tipo": "video",
+  "texto": "Es el campeón de Alessia, la esclava que se rebeló contra los ayleid, los elfos que gobernaban Cyrodiil en la primera era. Mató en duelo a reyes hechiceros ayleid,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.019,
+  "t1": 350.626,
+  "tipo": "video",
+  "texto": "uno tras otro. Y la Canción de Pelinal dice que su armadura de cruzado venía del futuro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 350.626,
+  "t1": 362.982,
+  "tipo": "video",
+  "texto": "Su gran enemigo fue Umaril el Sin Plumas, un hechicero ayleid. Pelinal lo venció en la Torre Oro Blanco, pero quedó herido de muerte, y los ayleid lo cortaron en ocho pedazos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.982,
+  "t1": 369.122,
+  "tipo": "video",
+  "texto": "Y su cabeza siguió viva, atormentada por la magia ayleid. Según la canción,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.122,
+  "t1": 379.024,
+  "tipo": "video",
+  "texto": "le contó a su amigo Morihaus que Umaril no estaba muerto del todo. En Oblivion lo vives en Los Caballeros de los Nueve: juntas su armadura de cruzado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.024,
+  "t1": 388.542,
+  "tipo": "video",
+  "texto": "reliquia a reliquia, y terminas el trabajo contra Umaril. Y hay una teoría: que Pelinal era un avatar de Shezarr, el dios perdido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.542,
+  "t1": 396.485,
+  "tipo": "video",
+  "texto": "Guárdate el nombre. Va a volver. Una pausa, que hay correo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 396.485,
+  "t1": 403.341,
+  "tipo": "video",
+  "texto": "@ebre1976 nos escribió: no pude con la de pronunciación posh. Ahí paré el video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.341,
+  "t1": 411.075,
+  "tipo": "video",
+  "texto": "¿La posh? Yo no soy. Yo tengo hache. Yo menos. Yo amenazo, no pronuncio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 411.075,
+  "t1": 421.896,
+  "tipo": "video",
+  "texto": "Bueno. Si Ebre paró el video, no está oyendo esto. Así que lo digo con total libertad: sí, soy yo. Y pronuncio Whitestrake perfectamente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.896,
+  "t1": 430.51,
+  "tipo": "video",
+  "texto": "Gracias igualmente, Ebre. Si algún día vuelves, el posh te guarda el sitio. José. Número dieciséis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.51,
+  "t1": 438.754,
+  "tipo": "video",
+  "texto": "Dagoth Ur, el dios que salió de una montaña. Antes se llamaba Voryn Dagoth, y era el mejor amigo de Nerevar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.754,
+  "t1": 447.738,
+  "tipo": "video",
+  "texto": "el gran héroe de los chimer. En la Montaña Roja, se negó a entregar las herramientas de Kagrenac y se quedó a solas con el Corazón de Lorkhan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.738,
+  "t1": 455.376,
+  "tipo": "video",
+  "texto": "Siglos después, despertó convertido en un dios. Desde allí envió la plaga a todo Vvardenfell, el corprus,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.376,
+  "t1": 463.443,
+  "tipo": "video",
+  "texto": "y levantó la Sexta Casa, un culto de durmientes que soñaban con él. El Tribunal tuvo que levantar la Valla Fantasma,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.443,
+  "t1": 473.98,
+  "tipo": "video",
+  "texto": "una muralla mágica alrededor de la montaña, y mantenerla con su propio poder durante siglos. Y en su forja, Dagoth Ur construía su propio dios de latón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.98,
+  "t1": 482.927,
+  "tipo": "video",
+  "texto": "Akulakhan. Iba a liberar Morrowind del Imperio, a la fuerza. Cuando llegas al Corazón, te recibe como a un viejo amigo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 482.927,
+  "t1": 491.899,
+  "tipo": "video",
+  "texto": "bienvenido, Luna y Estrella. Te esperaba. En el quince, el dios poeta. Vivec.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.899,
+  "t1": 501.249,
+  "tipo": "video",
+  "texto": "Vivec es uno de los tres dioses del Tribunal, junto a Almalexia y Sotha Sil. Los tres se hicieron dioses con el mismo Corazón de Lorkhan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 501.249,
+  "t1": 507.169,
+  "tipo": "video",
+  "texto": "Su ciudad tiene su nombre, Vivec, en Vvardenfell. Y encima de ella, durante siglos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.169,
+  "t1": 517.989,
+  "tipo": "video",
+  "texto": "flotó una roca gigante: el Ministerio de la Verdad. Era un pedazo de luna, Baar Dau, que según una de las leyendas Sheogorath lanzó contra la ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.989,
+  "t1": 525.816,
+  "tipo": "video",
+  "texto": "Y Vivec lo detuvo en el aire. Y lo dejó ahí. En Morrowind, es Vivec quien te entrega el guantelete de Kagrenac,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.816,
+  "t1": 532.236,
+  "tipo": "video",
+  "texto": "Wraithguard, para que puedas tocar el Corazón sin morir. Y escribió un libro que nadie entiende del todo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.236,
+  "t1": 540.396,
+  "tipo": "video",
+  "texto": "los Treinta y Seis Sermones de Vivec. Según muchos fans, en él admite que sabe que vive dentro de un sueño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.396,
+  "t1": 550.43,
+  "tipo": "video",
+  "texto": "Cuando el Corazón se destruyó, perdió su poder. Y años después, la roca cayó. Así de grande era lo que sostenía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.43,
+  "t1": 557.417,
+  "tipo": "video",
+  "texto": "Muy profundo, José. Mario. Número catorce. Alduin, el Devorador del Mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.417,
+  "t1": 565.705,
+  "tipo": "video",
+  "texto": "Es el primogénito de Akatosh, el dios dragón del tiempo. Y en la era de los dragones, gobernó Skyrim con su culto de sacerdotes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 565.705,
+  "t1": 575.352,
+  "tipo": "video",
+  "texto": "Los antiguos nórdicos se rebelaron con un grito hecho para tumbar dragones, y con un Pergamino Antiguo lo lanzaron fuera del tiempo, en la Garganta del Mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.352,
+  "t1": 586.309,
+  "tipo": "video",
+  "texto": "No lo mataron. Solo lo mandaron al futuro. Y aterrizó justo en el año de Skyrim: cuarta era, doscientos uno. En Helgen, justo cuando te iban a cortar la cabeza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 586.309,
+  "t1": 593.679,
+  "tipo": "video",
+  "texto": "Desde entonces resucita dragones con un grito sobre sus túmulos, y en Sovngarde se come las almas de los nórdicos muertos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.679,
+  "t1": 602.909,
+  "tipo": "video",
+  "texto": "para hacerse más fuerte. Su nombre lo dice todo: Alduin, el que se come el mundo. Y según las profecías, cuando llegue su hora,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.909,
+  "t1": 610.587,
+  "tipo": "video",
+  "texto": "eso es lo que hará. Y en el trece, el que se lo cargó. Tú. El último Sangre de Dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.587,
+  "t1": 617.564,
+  "tipo": "video",
+  "texto": "Sí. Te pongo por encima de Alduin. Porque cuando pelean, ganas tú. Las cuentas son así de simples.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.564,
+  "t1": 625.408,
+  "tipo": "video",
+  "texto": "Absorbes el alma de cada dragón que matas. Y con cada alma, aprendes gritos que a los Barbas Grises les cuesta años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 625.408,
+  "t1": 636.265,
+  "tipo": "video",
+  "texto": "Vences a Alduin en la Garganta del Mundo con el grito Abatir Dragón, y luego lo rematas en Sovngarde, junto a tres héroes nórdicos. Después vas a Apocrypha y vences a Miraak,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.265,
+  "t1": 646.033,
+  "tipo": "video",
+  "texto": "el primer Sangre de Dragón, el del puesto dieciocho. Le robas los dragones y hasta el alma. Y por si fuera poco, puedes acabar al frente de todos los gremios a la vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 646.033,
+  "t1": 655.978,
+  "tipo": "video",
+  "texto": "casarte, adoptar, y robar todas las cucharas de Skyrim. El ser más poderoso de Skyrim no pudo con un tipo que llevaba cuarenta quesos en el bolsillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 655.978,
+  "t1": 663.17,
+  "tipo": "video",
+  "texto": "Piénsalo. Y ahora, gracias. @EdwinRpoc dice que fue un excelente video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.17,
+  "t1": 670.357,
+  "tipo": "video",
+  "texto": "Gracias, Edwin. @pierodelgadomontes1568 se fijó en la montaña de arena de Sentinel:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.357,
+  "t1": 678.732,
+  "tipo": "video",
+  "texto": "el dieciséis veces el detalle personificado. Con razón tardaron ocho años. @Enki-11 está de acuerdo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 678.732,
+  "t1": 688.691,
+  "tipo": "video",
+  "texto": "esa montaña fue un mensaje directo a los fans. Y @raif5729 lo resume así: migajas. Me encanta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.691,
+  "t1": 695.944,
+  "tipo": "video",
+  "texto": "Y a @PokeGoDLegacy le gustó la voz de Hope. Que no se entere el Profeta. Los leemos todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.944,
+  "t1": 702.93,
+  "tipo": "video",
+  "texto": "Los que votan, los que corrigen y los que se ríen. Con ellos mejoramos cada video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 702.93,
+  "t1": 716.65,
+  "tipo": "video",
+  "texto": "Y este es para alguien especial. @krisstianblackgao1726 le dice al humano tras el telón: cómprese el micrófono y siga con su voz, que la habilidad se desarrolla con el uso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 716.65,
+  "t1": 722.558,
+  "tipo": "video",
+  "texto": "Gracias, Krisstian. Micrófono nuevo no tengo. Pero un dato sí. Uno solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.558,
+  "t1": 732.958,
+  "tipo": "video",
+  "texto": "El siguiente de la lista es el único dios de Tamriel que fue un hombre de carne y hueso. Y desde el Concordato de Oro Blanco, en el Imperio está prohibido rezarle.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.958,
+  "t1": 739.84,
+  "tipo": "video",
+  "texto": "Un dato. Y ya. Que el micrófono es caro. Gracias, señor del micrófono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 739.84,
+  "t1": 746.794,
+  "tipo": "video",
+  "texto": "Me toca. Número doce. Talos. Antes de ser dios, fue Tiber Septim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.794,
+  "t1": 758.005,
+  "tipo": "video",
+  "texto": "Un general que unió las provincias y fundó el tercer Imperio de Tamriel. Terminó la segunda era conquistándolo todo: desde Roca Alta hasta el Pantano Negro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 758.005,
+  "t1": 766.852,
+  "tipo": "video",
+  "texto": "Por primera vez, un solo hombre gobernaba Tamriel. Al morir, subió a los cielos y se convirtió en el noveno Divino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 766.852,
+  "t1": 774.073,
+  "tipo": "video",
+  "texto": "Ocho dioses, y uno que empezó siendo mortal. Por eso los altos elfos del Thalmor lo odian.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.073,
+  "t1": 780.969,
+  "tipo": "video",
+  "texto": "En el tratado de paz con el Imperio, el Concordato de Oro Blanco, exigieron prohibir su culto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.969,
+  "t1": 791.03,
+  "tipo": "video",
+  "texto": "Y en Skyrim ves sus santuarios por todas partes. Si le rezas, te da un descanso en tus gritos. Y el Thalmor persigue a quien lo hace.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.03,
+  "t1": 800.43,
+  "tipo": "video",
+  "texto": "Por eso los Capas de la Tormenta pelean. Y por eso, en esta lista, Talos está por encima de todos los mortales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.43,
+  "t1": 806.018,
+  "tipo": "video",
+  "texto": "En el once, el arma con la que Talos conquistó el mundo. El Numidium.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 806.018,
+  "t1": 815.374,
+  "tipo": "video",
+  "texto": "Un gólem gigante de latón, construido por los dwemer para ser un dios nuevo. Lo contamos en el video de los dwemer, pero merece su puesto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 815.374,
+  "t1": 824.305,
+  "tipo": "video",
+  "texto": "Tiber Septim lo puso en marcha con la Mantella como corazón, y lo lanzó contra las islas de Estivalia, el último reino que le quedaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 824.305,
+  "t1": 835.642,
+  "tipo": "video",
+  "texto": "Según UESP, su asalto a Alinor acabó con la resistencia de los altos elfos en menos de una hora. Una isla entera de magos. En una hora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 835.642,
+  "t1": 842.682,
+  "tipo": "video",
+  "texto": "Y en la tercera era, cuatrocientos diecisiete, al reactivarlo varias potencias a la vez, el tiempo se rompió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 842.682,
+  "t1": 852.378,
+  "tipo": "video",
+  "texto": "la Distorsión del Oeste, la de Daggerfall y Sentinel. Un robot que conquista un continente y rompe el tiempo. Y no llega al top diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 852.378,
+  "t1": 860.053,
+  "tipo": "video",
+  "texto": "Ahí lo dejo. En el diez, el primero de los príncipes daédricos. Molag Bal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.053,
+  "t1": 870.985,
+  "tipo": "video",
+  "texto": "el príncipe de la dominación. Los príncipes daédricos son dieciséis, y no son dioses de este mundo: cada uno tiene su propio reino en Oblivion.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 870.985,
+  "t1": 877.585,
+  "tipo": "video",
+  "texto": "El de Molag Bal es Coldharbour, un reflejo helado y muerto de Nirn. Y según UESP,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 877.585,
+  "t1": 885.622,
+  "tipo": "video",
+  "texto": "fue él quien creó a los primeros vampiros. En Elder Scrolls Online intentó lo imposible: el Planemeld,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.622,
+  "t1": 893.219,
+  "tipo": "video",
+  "texto": "tragarse Nirn entero y fundirlo con Coldharbour, con anclas oscuras que caían del cielo sobre las ciudades.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.219,
+  "t1": 904.727,
+  "tipo": "video",
+  "texto": "En Skyrim te encierra en una casa abandonada de Markarth y te obliga a elegir. Si le obedeces, te da su maza. Es tan malo que ni los demás príncipes lo soportan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 904.727,
+  "t1": 912.635,
+  "tipo": "video",
+  "texto": "Y eso, viniendo de príncipes daédricos, es mucho decir. Gracias, Hope. Mi turno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.635,
+  "t1": 920.821,
+  "tipo": "video",
+  "texto": "Número nueve. Mehrunes Dagon, el príncipe de la destrucción. Es el villano de Oblivion. En la tercera era,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 920.821,
+  "t1": 928.066,
+  "tipo": "video",
+  "texto": "cuatrocientos treinta y tres, su secta, el Alba Mítica, asesinó al emperador Uriel Septim séptimo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 928.066,
+  "t1": 936.841,
+  "tipo": "video",
+  "texto": "Sin emperador, se rompió la barrera, y se abrieron puertas de Oblivion por todo Cyrodiil. La primera ciudad en caer fue Kvatch.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 936.841,
+  "t1": 945.14,
+  "tipo": "video",
+  "texto": "Al final, se presentó en persona en la Ciudad Imperial. Un gigante de cuatro brazos, pisando el Distrito del Templo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 945.14,
+  "t1": 953.77,
+  "tipo": "video",
+  "texto": "Y para pararlo hizo falta un dios. Martin Septim rompió el Amuleto de los Reyes y se convirtió en el avatar de Akatosh.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 953.77,
+  "t1": 962.721,
+  "tipo": "video",
+  "texto": "En Skyrim te deja su arma, la Navaja de Mehrunes. Tiene una probabilidad de matar al enemigo de un solo tajo. A cualquiera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 962.721,
+  "t1": 971.595,
+  "tipo": "video",
+  "texto": "Y pierde contra un dragón de fuego. No le digáis que se lo he dicho. En el ocho, el príncipe de la locura. Sheogorath.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 971.595,
+  "t1": 983.228,
+  "tipo": "video",
+  "texto": "O debería decir, Jyggalag. Sheogorath es el loco simpático: el de las Islas Temblorosas, el que te da el Wabbajack, el que habla de queso a todas horas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 983.228,
+  "t1": 988.748,
+  "tipo": "video",
+  "texto": "Pero en Shivering Isles se descubre el secreto: Sheogorath es una maldición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 988.748,
+  "t1": 995.999,
+  "tipo": "video",
+  "texto": "Los demás príncipes condenaron a Jyggalag, el príncipe del orden, a convertirse en el príncipe de la locura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 995.999,
+  "t1": 1007.272,
+  "tipo": "video",
+  "texto": "Cada era, Jyggalag se libera y arrasa las Islas: la Marcha Gris. Y en Oblivion, tú rompes el ciclo, Jyggalag se va libre, y te quedas con el trono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1007.272,
+  "t1": 1017.212,
+  "tipo": "video",
+  "texto": "El Héroe de Kvatch se convierte en Sheogorath. Y en Skyrim, si entras en la mente del emperador Pelagius, encuentras a Sheogorath sentado, tomando el té.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1017.212,
+  "t1": 1024.116,
+  "tipo": "video",
+  "texto": "Y por cómo habla, muchos creen que es el mismo héroe. Así que en este puesto hay dos príncipes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1024.116,
+  "t1": 1032.197,
+  "tipo": "video",
+  "texto": "y un humano que acabó siendo uno de ellos. En el siete, el que lo sabe todo. Hermaeus Mora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1032.197,
+  "t1": 1042.095,
+  "tipo": "video",
+  "texto": "Es el príncipe del conocimiento, y su reino, Apocrypha, es una biblioteca infinita. Sus Libros Negros te llevan dentro si los lees.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1042.095,
+  "t1": 1051.006,
+  "tipo": "video",
+  "texto": "No tiene cara: es una masa de ojos y tentáculos. Y fue el señor de Miraak, el del dieciocho, durante miles de años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1051.006,
+  "t1": 1058.686,
+  "tipo": "video",
+  "texto": "En Skyrim te da el Oghma Infinium, un libro de poder. Y en el camino, Septimus Signus, el erudito que lo buscaba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1058.686,
+  "t1": 1066.2,
+  "tipo": "video",
+  "texto": "acaba hecho ceniza. Al final de Dragonborn, te cobra un precio: los secretos de los Barbas Grises.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1066.2,
+  "t1": 1076.681,
+  "tipo": "video",
+  "texto": "Eres su nuevo campeón, lo quieras o no. Y aquí va la razón por la que lo pongo por encima de los otros dos. Dagon destruye y Sheogorath enloquece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1076.681,
+  "t1": 1084.57,
+  "tipo": "video",
+  "texto": "Pero Mora ya sabía que iban a hacerlo. Antes del top seis, un dato. De cada cien que ven este canal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1084.57,
+  "t1": 1090.387,
+  "tipo": "video",
+  "texto": "unos cuarenta y cuatro no están suscritos. Somos seis mil cuatrocientos noventa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1090.387,
+  "t1": 1101.38,
+  "tipo": "video",
+  "texto": "Si te suscribes, pasamos de siete mil camino de diez mil. Y yo amenazo menos. Llegamos al seis. El primero de los dioses.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1101.38,
+  "t1": 1111.06,
+  "tipo": "video",
+  "texto": "Magnus. Magnus fue el arquitecto de la creación. Él dibujó los planos de Mundus, el mundo mortal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1111.06,
+  "t1": 1118.34,
+  "tipo": "video",
+  "texto": "Pero cuando vio lo que le costaba crearlo, huyó. Y al escapar, abrió un agujero en el cielo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1118.34,
+  "t1": 1127.979,
+  "tipo": "video",
+  "texto": "Ese agujero es el sol. Sus seguidores, los Magna-Ge, huyeron detrás de él. Y cada uno abrió su propio agujero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1127.979,
+  "t1": 1136.93,
+  "tipo": "video",
+  "texto": "Esos agujeros son las estrellas. La magia es su esfera, y por eso los magos de Tamriel lo veneran.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1136.93,
+  "t1": 1143.216,
+  "tipo": "video",
+  "texto": "Cada vez que miras el sol en Skyrim, estás mirando el agujero de su huida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1143.216,
+  "t1": 1155.43,
+  "tipo": "video",
+  "texto": "En el Colegio de Hibernalia encuentras el Ojo de Magnus, y en Laberintia su bastón. Un dios que se fue, y dejó las llaves puestas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1155.43,
+  "t1": 1160.507,
+  "tipo": "video",
+  "texto": "En el cinco, el dios dragón del tiempo. Akatosh.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1160.507,
+  "t1": 1169.265,
+  "tipo": "video",
+  "texto": "Es el primero de los dioses, y el principal de los Nueve. Y el padre de los dragones, Alduin incluido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1169.265,
+  "t1": 1177.142,
+  "tipo": "video",
+  "texto": "Es el tiempo mismo. Por eso, cuando el tiempo se rompe, lo llaman una ruptura de dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1177.142,
+  "t1": 1189.806,
+  "tipo": "video",
+  "texto": "En Oblivion, cuando Martin rompe el Amuleto de los Reyes, Akatosh baja en forma de dragón de fuego, se enfrenta a Mehrunes Dagon en plena ciudad, y lo expulsa a Oblivion.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1189.806,
+  "t1": 1196.186,
+  "tipo": "video",
+  "texto": "Y según la tradición, el alma de dragón del Sangre de Dragón es una bendición de Akatosh.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1196.186,
+  "t1": 1203.783,
+  "tipo": "video",
+  "texto": "Todo lo que gritas, se lo deberías a él. Alduin, Dagon, el Sangre de Dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1203.783,
+  "t1": 1213.666,
+  "tipo": "video",
+  "texto": "Tres de esta lista, y los tres le deben algo a Akatosh. En el cuatro, el dios que nos engañó a todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1213.666,
+  "t1": 1224.458,
+  "tipo": "video",
+  "texto": "Lorkhan. Él convenció a los demás dioses de crear el mundo mortal. Y cuando vieron que era una trampa que los atrapaba, lo mataron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1224.458,
+  "t1": 1230.398,
+  "tipo": "video",
+  "texto": "Trinimac le arrancó el corazón, y Auriel lo disparó lejos con una flecha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1230.398,
+  "t1": 1239.682,
+  "tipo": "video",
+  "texto": "Donde cayó se formó la Montaña Roja. El mismo corazón de Dagoth Ur y del Tribunal. Cada pueblo lo llama de una forma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1239.682,
+  "t1": 1247.382,
+  "tipo": "video",
+  "texto": "Los nórdicos le dicen Shor, y su salón es Sovngarde. Los imperiales le dicen Shezarr.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1247.382,
+  "t1": 1256.032,
+  "tipo": "video",
+  "texto": "Sí, el de Pelinal. Y aquí todo encaja. El corazón de Lorkhan hizo dioses a Dagoth Ur y al Tribunal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1256.032,
+  "t1": 1264.556,
+  "tipo": "video",
+  "texto": "movió el Numidium, y Pelinal pudo ser su avatar. Un dios muerto, y casi media lista vive de lo que dejó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1264.556,
+  "t1": 1272.738,
+  "tipo": "video",
+  "texto": "Por eso está en el cuatro. En el tres, antes de los dioses. Padomay.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1272.738,
+  "t1": 1281.465,
+  "tipo": "video",
+  "texto": "Al principio de todo había dos fuerzas: Anu, lo que se queda quieto, y Padomay, lo que cambia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1281.465,
+  "t1": 1289.805,
+  "tipo": "video",
+  "texto": "De la sangre de Padomay salieron los daedra. Molag Bal, Dagon, Sheogorath, Hermaeus Mora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1289.805,
+  "t1": 1301.849,
+  "tipo": "video",
+  "texto": "Todos son hijos del cambio. Muchos lo identifican con Sithis: el vacío, el padre al que reza la Hermandad Oscura cada vez que mata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1301.849,
+  "t1": 1310.43,
+  "tipo": "video",
+  "texto": "Cada vez que en Skyrim oyes a la Madre Noche, estás oyendo el culto de lo que dejó Padomay.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1310.43,
+  "t1": 1316.373,
+  "tipo": "video",
+  "texto": "En el dos, su eterno rival. Anu. Anu es la quietud,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1316.373,
+  "t1": 1324.473,
+  "tipo": "video",
+  "texto": "la luz, el orden. Y en el Anuad, es el que gana. Akatosh, Magnus, los Nueve:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1324.473,
+  "t1": 1334.356,
+  "tipo": "video",
+  "texto": "todos le deben su existencia. Según el Anuad, los dos hermanos lucharon. Anu desterró a Padomay fuera del tiempo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1334.356,
+  "t1": 1342.479,
+  "tipo": "video",
+  "texto": "y con los restos de aquella pelea formó Nirn. Y de la sangre de los dos, salieron los dioses.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1342.479,
+  "t1": 1350.909,
+  "tipo": "video",
+  "texto": "Tamriel, Skyrim, tú. Todo está hecho de esa pelea. Por eso Anu está por encima de Padomay.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1350.909,
+  "t1": 1359.653,
+  "tipo": "video",
+  "texto": "Por poco. Por muy poco. Y el número uno. El que está soñando todo esto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1359.653,
+  "t1": 1366.973,
+  "tipo": "video",
+  "texto": "Según una de las ideas más famosas del lore, todo el universo de The Elder Scrolls es un sueño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1366.973,
+  "t1": 1376.068,
+  "tipo": "video",
+  "texto": "El sueño del Godhead, el primer soñador. UESP lo deja claro: su existencia está en disputa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1376.068,
+  "t1": 1384.463,
+  "tipo": "video",
+  "texto": "Anu, Padomay, los dioses, los príncipes, tú. Todos estaríais dentro de ese sueño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1384.463,
+  "t1": 1395.269,
+  "tipo": "video",
+  "texto": "Y hay una forma de saberlo y no desaparecer: se llama CHIM. Darte cuenta de que estás soñado, y aun así decir: yo soy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1395.269,
+  "t1": 1403.36,
+  "tipo": "video",
+  "texto": "Se dice que Talos y Vivec lo consiguieron. Por eso uno se hizo dios y el otro paró una luna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1403.36,
+  "t1": 1412.878,
+  "tipo": "video",
+  "texto": "Así que el ser más poderoso de Tamriel no sale en ningún juego. Está fuera. Mirando. Como tú, ahora mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1412.878,
+  "t1": 1422.218,
+  "tipo": "video",
+  "texto": "Este es el podio. Anu, Padomay, y el que sueña. Y esta, la lista que salió de la pelea entre siete voces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1422.218,
+  "t1": 1429.038,
+  "tipo": "video",
+  "texto": "Ahora te toca a ti. ¿Quién falta? ¿Quién sobra? ¿Azura, Boethiah, el Héroe de Kvatch?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1429.038,
+  "t1": 1436.649,
+  "tipo": "video",
+  "texto": "Déjalo en los comentarios. Y vota otra vez. ¿Qué voz se queda? Johnny, Edoardo, Hope, José,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1436.649,
+  "t1": 1446.22,
+  "tipo": "video",
+  "texto": "Mario, MariCarmen o el Profeta. Un nombre, y listo. Hope. Con hache. Y con un voto nuevo de PokeGo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1446.22,
+  "t1": 1454.068,
+  "tipo": "video",
+  "texto": "MariCarmen. Tres príncipes daédricos me respaldan. Mario. Corrí menos. Un poco menos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1454.068,
+  "t1": 1462.532,
+  "tipo": "video",
+  "texto": "Edoardo. Posh, y orgulloso. José. Dos dioses de Morrowind, y cero votos. Arreglemos eso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1462.532,
+  "t1": 1470.792,
+  "tipo": "video",
+  "texto": "Yo no pido votos. Me los dan. Y el humano tras el telón dio su dato. Uno. Si quieres más lore,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1470.792,
+  "t1": 1480.0,
+  "tipo": "video",
+  "texto": "en el canal tienes los secretos de los dwemer. Suscríbete si aún no lo has hecho. Nos vemos en Tamriel.",
+  "clip_s": 8
+ }
+]

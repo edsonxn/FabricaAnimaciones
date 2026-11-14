@@ -103,3 +103,8 @@ nucleo/envivo/_cache/
 
 # APK del control remoto del EN VIVO (se construye con nucleo/envivo/android/construir_apk.py)
 nucleo/envivo/android/*.apk
+
+# Estudio Amaya (app de Amaya): sus datos, chats, fotos y videos nunca van a git
+amaya_estudio/
+nucleo/amaya/android/*.apk
+nucleo/amaya/android/build/

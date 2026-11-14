@@ -1,0 +1,1954 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.21,
+  "tipo": "video",
+  "texto": "Al oeste de Soledad, en la costa helada de Skyrim, hay una cueva. Afuera, dos esqueletos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.21,
+  "t1": 15.579,
+  "tipo": "video",
+  "texto": "Adentro, una luz azul, y voces que cantan el nombre de una mujer muerta hace quinientos años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.579,
+  "t1": 25.505,
+  "tipo": "video",
+  "texto": "Reina Loba. Escucha nuestra llamada y despierta. ¡Invocamos a Potema! ¡Sí! ¡Sí! Devuélvanme a este mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.505,
+  "t1": 35.845,
+  "tipo": "video",
+  "texto": "Si jugaste Skyrim, seguramente la venciste. Una calavera con diadema, sentada en un trono, en unas catacumbas debajo del Templo de los Divinos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.845,
+  "t1": 45.514,
+  "tipo": "video",
+  "texto": "Una misión secundaria más. Pero esa calavera fue una niña que a los doce años abrió la cerradura más difícil del palacio imperial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.514,
+  "t1": 50.084,
+  "tipo": "video",
+  "texto": "Una reina que hizo desaparecer a una emperatriz en una torre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.084,
+  "t1": 61.458,
+  "tipo": "video",
+  "texto": "Una madre que vio a su hijo morir quemado. Y una anciana que, según cuentan los libros, dejó una maldición que acabó con la cordura de un emperador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.458,
+  "t1": 69.565,
+  "tipo": "video",
+  "texto": "Hay una frase en Skyrim que casi nadie escucha. La dice Styrr, el sacerdote de Arkay de Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.565,
+  "t1": 77.344,
+  "tipo": "video",
+  "texto": "Irónicamente, si viviera hoy, sería la única Septim viva. Por derecho, ahora sería emperatriz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.344,
+  "t1": 86.874,
+  "tipo": "video",
+  "texto": "Esta es la historia de Potema Septim. La Reina Loba de Soledad. Y no es una historia de monstruos. Es peor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.874,
+  "t1": 95.419,
+  "tipo": "video",
+  "texto": "Es una historia de familia. Capítulo uno. La niña de las cerraduras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 95.419,
+  "t1": 104.039,
+  "tipo": "video",
+  "texto": "Todo empieza con un lobo. En el año sesenta y tres de la Tercera Era, la ciudad bretona de Camlorn, en Roca Alta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 104.039,
+  "t1": 112.978,
+  "tipo": "video",
+  "texto": "vive aterrada por un demonio hombre lobo. Un príncipe imperial, Pelagio, viudo y con un hijo llamado Antíoco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.978,
+  "t1": 121.138,
+  "tipo": "video",
+  "texto": "llega para cortejar a la princesa Quintila. Él con la espada y ella con la hechicería, matan a la bestia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.138,
+  "t1": 129.154,
+  "tipo": "video",
+  "texto": "Y Quintila encierra el alma del lobo dentro de una gema. Pelagio la convierte en anillo y se casa con ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.154,
+  "t1": 138.131,
+  "tipo": "video",
+  "texto": "Y los libros dicen algo que hay que recordar: que el alma del lobo se quedó con la pareja hasta que nació su primer hijo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.131,
+  "t1": 146.771,
+  "tipo": "video",
+  "texto": "Ese primer hijo nace cuatro años después, en el sesenta y siete. Una niña. Su abuelo, el emperador Uriel Segundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.771,
+  "t1": 153.751,
+  "tipo": "video",
+  "texto": "la mira en la cuna y dice que parece una loba a punto de saltar. La llaman Potema.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.751,
+  "t1": 161.461,
+  "tipo": "video",
+  "texto": "La niña crece en el Palacio Imperial de la Ciudad Imperial, bajo la Torre de Oro Blanco. Y crece aburrida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 161.461,
+  "t1": 172.926,
+  "tipo": "video",
+  "texto": "Tan aburrida que aprende a hacer lo único que de verdad le interesa: abrir lo que está cerrado. Chantajea a la doncella de su madre, una elfa del bosque,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.926,
+  "t1": 182.076,
+  "tipo": "video",
+  "texto": "para que le enseñe a forzar cerraduras. Le roba al archimago su libro de hechizos más antiguo. Al rey de Gilane, su corona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 182.076,
+  "t1": 189.145,
+  "tipo": "video",
+  "texto": "Y a su medio hermano Antíoco, una colección de grabados khajiitas que él prefería que nadie viera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.145,
+  "t1": 197.329,
+  "tipo": "video",
+  "texto": "Con eso último pagó un broche. Un broche con un diamante rojo. Recuerden ese diamante. Año ochenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.329,
+  "t1": 206.609,
+  "tipo": "video",
+  "texto": "Llueve sobre la Ciudad Imperial desde hace semanas. Nadie recuerda cuándo salió el sol. Potema, de doce años,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.609,
+  "t1": 213.537,
+  "tipo": "video",
+  "texto": "se esconde detrás de un tapiz, donde hay una piedra suelta en la pared. Y escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 213.537,
+  "t1": 225.357,
+  "tipo": "video",
+  "texto": "Del otro lado, su abuelo y su padre le explican al embajador de Soledad que la boda prometida con su tía no va a ocurrir. Y que el oro que debían devolver, tampoco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.357,
+  "t1": 230.944,
+  "tipo": "video",
+  "texto": "El embajador amenaza con el contrato firmado. Potema no espera al final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 230.944,
+  "t1": 243.184,
+  "tipo": "video",
+  "texto": "Corre al Salón de los Registros, donde se guardan hasta los Pergaminos Antiguos. Saca dos alfileres de su broche de diamante rojo, y abre la cerradura más difícil de su vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 243.184,
+  "t1": 249.619,
+  "tipo": "video",
+  "texto": "Tardó casi medio minuto. Cuando el paje llega a buscar el contrato, ya no está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.619,
+  "t1": 258.068,
+  "tipo": "video",
+  "texto": "Y como el documento no existe, el emperador tiene que ofrecer otra cosa a cambio. Ofrece a su nieta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.068,
+  "t1": 267.903,
+  "tipo": "video",
+  "texto": "Es, lo admito, por lo que veo de ella, muy tímida e inocente. Tiene trece años. Edad suficiente para casarse.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.903,
+  "t1": 276.903,
+  "tipo": "video",
+  "texto": "El novio es Mantiarco, rey de Soledad. Sesenta y dos años. Gordo. Y Soledad está lejos, y hace frío.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.903,
+  "t1": 282.198,
+  "tipo": "video",
+  "texto": "Potema llora. Pero se queda con el contrato. Por si acaso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.198,
+  "t1": 295.33,
+  "tipo": "video",
+  "texto": "Los libros lo cierran con una frase que lo dice todo: cuántas posibilidades, pensó Potema. Y se dio cuenta de que ya no estaba aburrida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 295.33,
+  "t1": 302.442,
+  "tipo": "video",
+  "texto": "Capítulo dos. La reina de Soledad. Se casa a los catorce años, en el ochenta y uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.442,
+  "t1": 309.382,
+  "tipo": "video",
+  "texto": "Al año siguiente muere su abuelo, y su padre se convierte en el emperador Pelagio Segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.382,
+  "t1": 320.36,
+  "tipo": "video",
+  "texto": "Hereda un tesoro vacío, y lo llena a su manera: disuelve el Consejo de Ancianos y obliga a cada consejero a volver a comprar su asiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.36,
+  "t1": 326.66,
+  "tipo": "video",
+  "texto": "Mientras tanto, en Soledad, la niña imperial descubre que los nórdicos no la quieren.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.66,
+  "t1": 335.0,
+  "tipo": "video",
+  "texto": "Las viejas casas de la ciudad desprecian a la forastera de Cyrodiil. Y el reino necesita un heredero que no llega.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.0,
+  "t1": 346.359,
+  "tipo": "video",
+  "texto": "Pierde un embarazo. Y otro. Y otro. Durante quince años. Hasta que a los veintinueve, en el noventa y siete, da a luz a un hijo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 346.359,
+  "t1": 353.499,
+  "tipo": "video",
+  "texto": "El curandero, Kelmeth, la ve enseñar los dientes durante el parto y piensa en una loba pariendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 353.499,
+  "t1": 362.784,
+  "tipo": "video",
+  "texto": "Ella le lanza un espejo a la cabeza. ¡Invoca a los daedra! ¡Cambio el alma de hasta el último de mis súbditos por un poco de alivio!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.784,
+  "t1": 371.334,
+  "tipo": "video",
+  "texto": "Pero mientras grita, no deja de trabajar. Entre contracción y contracción le da órdenes a Lord Vhokken, su mano derecha:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 371.334,
+  "t1": 379.694,
+  "tipo": "video",
+  "texto": "un gigante calvo con voz de trueno. El problema se llama Bathorgh. Es el hijo del primer matrimonio del rey,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.694,
+  "t1": 388.803,
+  "tipo": "video",
+  "texto": "dos años mayor que su madrastra, el heredero legítimo. En Soledad lo llaman el hombre al que no se puede golpear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.803,
+  "t1": 395.713,
+  "tipo": "video",
+  "texto": "Potema ya se había encargado del jefe guerrero del rey, Lord Thone, con pruebas falsas de traición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.713,
+  "t1": 405.043,
+  "tipo": "video",
+  "texto": "Ahora manda restaurar el viejo palacio de verano de la difunta reina. Y ahí, casualmente, aparecen cartas de amor entre la difunta",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 405.043,
+  "t1": 414.597,
+  "tipo": "video",
+  "texto": "reina y Lord Thone, fechadas justo cuando nació Bathorgh. Ese mismo día, Bathorgh gana el Torneo de Resistencia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 414.597,
+  "t1": 421.997,
+  "tipo": "video",
+  "texto": "Aguanta a nueve arqueros y a un escorpión gigante traído del Páramo del Martillo. Y esa misma noche,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.997,
+  "t1": 431.24,
+  "tipo": "video",
+  "texto": "Mantiarco, llorando, lo deshereda y lo destierra. El bebé de Potema se llamará Uriel, como su bisabuelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.24,
+  "t1": 438.863,
+  "tipo": "video",
+  "texto": "Ahora es el heredero de Soledad. Y aquí los libros aclaran algo que casi todos cuentan mal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.863,
+  "t1": 446.883,
+  "tipo": "video",
+  "texto": "Sus enemigos ya la llamaban la Reina Loba. Pero no por ningún parecido físico. Ni era mujer lobo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 446.883,
+  "t1": 457.116,
+  "tipo": "video",
+  "texto": "ni lo fue nunca. Un momento. Antes de seguir, una pregunta. Y la hago en serio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.116,
+  "t1": 464.876,
+  "tipo": "video",
+  "texto": "Esto es nuevo en el canal. Nada de listas, nada de tops. Una sola historia, contada de principio a fin,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.876,
+  "t1": 473.958,
+  "tipo": "video",
+  "texto": "con su voz, su música y sus escenas. Al canal le hace mucha ilusión esto: que el lore de Elder Scrolls se cuente",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.958,
+  "t1": 481.524,
+  "tipo": "video",
+  "texto": "con buena edición y buena voz, para que lo disfrutemos todos. Porque este juego es de todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.524,
+  "t1": 490.164,
+  "tipo": "video",
+  "texto": "Pero necesitamos saberlo de ustedes. ¿Les gusta este formato? Escríbanlo en los comentarios. Si quieren más historias así, las traemos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.164,
+  "t1": 502.33,
+  "tipo": "video",
+  "texto": "Si prefieren seguir solo con listas y tops, también lo vamos a saber. Y ahora, de vuelta a la familia. Que viene un funeral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 502.33,
+  "t1": 507.512,
+  "tipo": "video",
+  "texto": "Capítulo tres. La gema del lobo. Año noventa y ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.512,
+  "t1": 518.186,
+  "tipo": "video",
+  "texto": "El emperador Pelagio Segundo muere en plena fiesta, y el rumor dice que lo envenenó uno de los consejeros a los que obligó a pagar por su asiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 518.186,
+  "t1": 525.926,
+  "tipo": "video",
+  "texto": "Al funeral llegan sus hijos. Magnus, de diecinueve años, desde Almalexia. Céforo, de veintiuno,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.926,
+  "t1": 533.746,
+  "tipo": "video",
+  "texto": "desde Gilane, con su esposa, la reina redguard Bianki. Antíoco, el heredero, de cuarenta y tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.746,
+  "t1": 541.604,
+  "tipo": "video",
+  "texto": "Y la última en llegar, Potema, de treinta, radiante, con su viejo rey y su hijo de un año.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.604,
+  "t1": 550.384,
+  "tipo": "video",
+  "texto": "El Consejo de Ancianos retrasa seis semanas la coronación de Antíoco. Seis semanas en las que Potema está en la capital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.384,
+  "t1": 560.517,
+  "tipo": "video",
+  "texto": "Y Antíoco lo sabe: pone a su maestro de espías a vigilarla. En un balcón, su madre, Quintila, enferma y moribunda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 560.517,
+  "t1": 568.007,
+  "tipo": "video",
+  "texto": "le predice a Potema su propia muerte, y la de Mantiarco en menos de un año. Y le hace un regalo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 568.007,
+  "t1": 578.9,
+  "tipo": "video",
+  "texto": "un collar con una gema de alma amarilla. La gema del hombre lobo de Camlorn, encantada con magia de Ilusión para hechizar a quien la mire.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 578.9,
+  "t1": 585.87,
+  "tipo": "video",
+  "texto": "Potema la usa esa misma noche. Hechiza al espía de su hermano, entra en el estudio de Antíoco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.87,
+  "t1": 593.523,
+  "tipo": "video",
+  "texto": "usa su sello, y falsifica una carta en la que Antíoco confiesa ser hijo del mayordomo del palacio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.523,
+  "t1": 602.419,
+  "tipo": "video",
+  "texto": "A la mañana siguiente le da a elegir. O renuncia al trono, o el escándalo. Y Antíoco se ríe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.419,
+  "t1": 610.074,
+  "tipo": "video",
+  "texto": "¿Sabías que los hechizos de encanto, incluso los más poderosos, duran poco? Un buen sueldo motiva más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.074,
+  "t1": 618.554,
+  "tipo": "video",
+  "texto": "El espía seguía cobrando de Antíoco. Y Antíoco guardó la hoja donde Potema practicó su letra. Con eso, además,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.554,
+  "t1": 628.531,
+  "tipo": "video",
+  "texto": "la acusa de haber falsificado las cartas de la difunta reina de Soledad. En el futuro, querida Reina Loba, no pongas dos veces la misma trampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.531,
+  "t1": 636.994,
+  "tipo": "video",
+  "texto": "Yo seré emperador. Ahora vete. Sí, lo serás, hermano. Pero no por mucho tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.994,
+  "t1": 644.334,
+  "tipo": "video",
+  "texto": "Antíoco es coronado. Y la profecía de Quintila se cumple: Mantiarco muere al poco tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.334,
+  "t1": 655.33,
+  "tipo": "video",
+  "texto": "Potema queda como regente de Soledad, en nombre de un niño de dos años. Con un collar que hechiza a quien lo mira.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 655.33,
+  "t1": 663.645,
+  "tipo": "video",
+  "texto": "Capítulo cuatro. Los elfos del mar. Antíoco reina veintiún años. Enormemente gordo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.645,
+  "t1": 673.045,
+  "tipo": "video",
+  "texto": "y marcado, según los libros, por todas las enfermedades venéreas conocidas. En el ciento cuatro tiene una hija con su segunda esposa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 673.045,
+  "t1": 681.999,
+  "tipo": "video",
+  "texto": "Kintyra. Y el Palacio Azul de Soledad se convierte en el lugar de moda de todos los reyes resentidos con el emperador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 681.999,
+  "t1": 688.995,
+  "tipo": "video",
+  "texto": "Potema escucha a todos. Y no le promete nada a nadie. Año ciento diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.995,
+  "t1": 697.155,
+  "tipo": "video",
+  "texto": "Al puerto de Soledad llega un barco que nadie ha visto nunca. Casco de quitina, velas como membranas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 697.155,
+  "t1": 708.607,
+  "tipo": "video",
+  "texto": "y una tripulación de hombres sin color, como si su carne fuera una jalea blanca y transparente. Son maormer, los elfos del mar de Pyandonea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 708.607,
+  "t1": 715.007,
+  "tipo": "video",
+  "texto": "Viene su rey, Orgnum, a buscar aliados contra el Imperio. En el trono, Uriel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 715.007,
+  "t1": 721.561,
+  "tipo": "video",
+  "texto": "de once años, juega con su mascota. Y Potema hace lo que mejor sabe hacer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 721.561,
+  "t1": 731.201,
+  "tipo": "video",
+  "texto": "Humilla a los emisarios psijic del maestro Iachesis, los monjes de la isla de Artaeum, y les hace creer que va a aliarse con los maormer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 731.201,
+  "t1": 741.813,
+  "tipo": "video",
+  "texto": "Asustados, los psijic corren a aceptar el trato que les ofrecía Antíoco: defender la costa por doce millones. Antes pedían cincuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 741.813,
+  "t1": 749.613,
+  "tipo": "video",
+  "texto": "Al final lo hacen por ocho. Potema les paga los ocho, y le cobra los doce a su hermano. Y esa noche,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 749.613,
+  "t1": 758.289,
+  "tipo": "video",
+  "texto": "el rey de los elfos del mar duerme con la regente de Soledad. Los libros dicen que a ella le encantó descubrir que su capacidad",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 758.289,
+  "t1": 767.843,
+  "tipo": "video",
+  "texto": "para mentir funcionaba en muchas culturas distintas. A veces, hacer que la gente te odie… es como se gana dinero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 767.843,
+  "t1": 774.253,
+  "tipo": "video",
+  "texto": "Tres meses después, frente a Artaeum, una tormenta repentina hunde la flota entera de Orgnum.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.253,
+  "t1": 784.13,
+  "tipo": "video",
+  "texto": "Es la Guerra de la Isla. La gran victoria de Antíoco. Y la pagó él dos veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.13,
+  "t1": 791.29,
+  "tipo": "video",
+  "texto": "Un momento, que hay correo. @brandovelasquez957: «Ya basta, ya basta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.29,
+  "t1": 799.359,
+  "tipo": "video",
+  "texto": "¿Cómo pretenden que duerma si a cada rato me cambian las voces? Decidan, o dejaré de poner sus videos para dormir».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.359,
+  "t1": 807.47,
+  "tipo": "video",
+  "texto": "Decidimos. Hoy narra uno solo. Treinta y cinco minutos, la misma voz de principio a fin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.47,
+  "t1": 820.231,
+  "tipo": "video",
+  "texto": "Eso sí: con una reina que se acuesta con elfos de jalea, un hijo quemado vivo y un emperador loco… no te prometo que duermas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 820.231,
+  "t1": 826.498,
+  "tipo": "video",
+  "texto": "Capítulo cinco. La emperatriz de quince años. Año ciento diecinueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 826.498,
+  "t1": 835.518,
+  "tipo": "video",
+  "texto": "Potema y su hijo visitan a Antíoco en la Ciudad Imperial. Y durante esa visita, el emperador cae en coma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 835.518,
+  "t1": 844.136,
+  "tipo": "video",
+  "texto": "Muere al año siguiente. Nadie demostró nunca nada. Potema se viste de luto y se mira al espejo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 844.136,
+  "t1": 852.211,
+  "tipo": "video",
+  "texto": "Cincuenta y tres años. Una mecha plateada en el pelo caoba, y arrugas finas como una telaraña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 852.211,
+  "t1": 861.231,
+  "tipo": "video",
+  "texto": "Y entra al Consejo de Ancianos. Halaga a los consejeros. Alaba al difunto. Y luego, despacio, acusa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 861.231,
+  "t1": 870.097,
+  "tipo": "video",
+  "texto": "Kintyra no sería hija de Antíoco, sino de su esposa y del capitán de la guardia. O del chico que limpia la cisterna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 870.097,
+  "t1": 879.13,
+  "tipo": "video",
+  "texto": "La posteridad os juzgará. Sabéis lo que hay que hacer. El Consejo no la escucha. Esa noche, en la Sala de los Mapas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 879.13,
+  "t1": 887.926,
+  "tipo": "video",
+  "texto": "bajo una cúpula de cristal empapada por la lluvia, Kintyra, de quince años, le cierra el paso en el pasillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 887.926,
+  "t1": 893.596,
+  "tipo": "video",
+  "texto": "Tu presencia en la ceremonia no será bienvenida. Eso es todo. Adiós, tía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.596,
+  "t1": 904.856,
+  "tipo": "video",
+  "texto": "Kintyra Segunda es coronada el tres de Primera Semilla del año ciento veinte. Potema y Uriel son desterrados. Y Potema le dice a su cuñada, la reina Bianki,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 904.856,
+  "t1": 912.816,
+  "tipo": "video",
+  "texto": "lo que hace mejor que hablar. La guerra. Empiezan disturbios en Skyrim y en el norte de Roca Alta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.816,
+  "t1": 919.676,
+  "tipo": "video",
+  "texto": "En otoño, el duque Mentin de La Cañada pide auxilio, y la joven emperatriz va en persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 919.676,
+  "t1": 929.636,
+  "tipo": "video",
+  "texto": "Por el camino casi cae en una emboscada en las montañas Cola de Dragón, y la sorprende una ventisca mágica en una baronía donde nunca nieva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 929.636,
+  "t1": 940.476,
+  "tipo": "video",
+  "texto": "En la torre del castillo de La Cañada, Kintyra escribe una carta a su prometido. Y recibe una de él: ha recibido una petición de refuerzos con la letra de ella,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 940.476,
+  "t1": 947.054,
+  "tipo": "video",
+  "texto": "y sale con un segundo ejército. Kintyra nunca escribió esa carta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 947.054,
+  "t1": 957.036,
+  "tipo": "video",
+  "texto": "Desaparecen los guardias de la muralla. Se oye un forcejeo. Y cuando Kintyra se da vuelta, Potema y el duque ya están dentro de la habitación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 957.036,
+  "t1": 965.652,
+  "tipo": "video",
+  "texto": "¡Maldita seas, mírame! ¡Soy tu emperatriz! Míralo así: te paso de gobernante de quinta a mártir de primera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.652,
+  "t1": 973.317,
+  "tipo": "video",
+  "texto": "Cuando le preguntan al duque por qué traicionó al Imperio, si fue por miedo, responde con dos palabras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 973.317,
+  "t1": 981.54,
+  "tipo": "video",
+  "texto": "Y el oro. Y sobre los rumores de que Potema tenía un ejército de muertos, el duque dice algo que casi nadie cuenta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 981.54,
+  "t1": 991.476,
+  "tipo": "video",
+  "texto": "que no es verdad. Que ella fomenta ese rumor. Porque su mejor arma es el miedo. Kintyra muere en su celda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 991.476,
+  "t1": 999.306,
+  "tipo": "video",
+  "texto": "La fecha más aceptada es el veintitrés de Fuego Hogar del año ciento veintitrés, por orden del hijo de Potema.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 999.306,
+  "t1": 1009.323,
+  "tipo": "video",
+  "texto": "Y todavía hoy, en Roca Alta, ese día se guarda luto. Lo llaman Diamantes Rotos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1009.323,
+  "t1": 1017.226,
+  "tipo": "video",
+  "texto": "Capítulo seis. La guerra del Diamante Rojo. El diamante rojo es el emblema de la dinastía Septim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1017.226,
+  "t1": 1025.152,
+  "tipo": "video",
+  "texto": "Y ahora dos ramas de la misma familia se lo disputan. En el ciento veintiuno, Uriel asedia durante dos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1025.152,
+  "t1": 1034.989,
+  "tipo": "video",
+  "texto": "semanas una Ciudad Imperial mal defendida. Esa misma noche se pone la corona. Desde esta noche, soy Uriel Septim Tercero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1034.989,
+  "t1": 1042.978,
+  "tipo": "video",
+  "texto": "Emperador de Tamriel. Su apellido de verdad era Mantiarco. Pero el apellido Septim valía más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1042.978,
+  "t1": 1051.058,
+  "tipo": "video",
+  "texto": "Del otro lado quedan los dos hermanos menores de Potema. Céforo, rey de Gilane, en el Páramo del Martillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1051.058,
+  "t1": 1059.022,
+  "tipo": "video",
+  "texto": "Y Magnus, rey de Lilmoth, con un ejército de argonianos. Tamriel entero se parte en dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1059.022,
+  "t1": 1067.742,
+  "tipo": "video",
+  "texto": "En el ciento veinticinco Céforo recupera el oeste de Roca Alta. Los argonianos de Magnus cruzan Morrowind hasta Skyrim:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1067.742,
+  "t1": 1075.311,
+  "tipo": "video",
+  "texto": "pelean bien en verano y se retiran en invierno. Dos años de empate. Verano del ciento veintisiete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1075.311,
+  "t1": 1085.211,
+  "tipo": "video",
+  "texto": "Un amanecer en una pradera de Skyrim, en un lugar llamado Estrella del Halcón. Insectos, bandadas de pájaros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1085.211,
+  "t1": 1094.463,
+  "tipo": "video",
+  "texto": "Potema tiene sesenta años. Y llega un mensajero. Uriel ha sido derrotado y capturado por Céforo en la campiña de Ichidag,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1094.463,
+  "t1": 1101.215,
+  "tipo": "video",
+  "texto": "en el Páramo del Martillo. Ese torpe idiota. Pero no hay tiempo para llorar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1101.215,
+  "t1": 1111.915,
+  "tipo": "video",
+  "texto": "Magnus está atrincherado en las ruinas del castillo de Kogmenthist. Al oeste, fuego de magos. Al este, la ciénaga, el terreno de los argonianos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1111.915,
+  "t1": 1118.553,
+  "tipo": "video",
+  "texto": "Y Potema elige la ciénaga. Reúne a sus tropas, cyrodílicos, nórdicos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1118.553,
+  "t1": 1129.414,
+  "tipo": "video",
+  "texto": "bretones y elfos oscuros bajo el estandarte del diamante rojo, y les habla. Hijos míos. He visto juego sucio, puñaladas por la espalda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1129.414,
+  "t1": 1136.522,
+  "tipo": "video",
+  "texto": "salvajadas crueles y gratuitas. Y me complacen igual. Porque todos sois guerreros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1136.522,
+  "t1": 1144.171,
+  "tipo": "video",
+  "texto": "Pero hoy, no os equivoquéis… hoy sois la guerra. Lo mira desde un cerro, con Vhokken.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1144.171,
+  "t1": 1153.631,
+  "tipo": "video",
+  "texto": "Dos enjambres de insectos de dos colores peleando sobre un terrón. Bolas de fuego. Nubes de ácido sobre las ruinas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1153.631,
+  "t1": 1162.787,
+  "tipo": "video",
+  "texto": "Y entonces sube al cerro una jinete redguard con bandera blanca. Tu hijo está muerto. Lo quemaron dentro de su carruaje.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1162.787,
+  "t1": 1171.898,
+  "tipo": "video",
+  "texto": "Está muerto. Una turba asaltó la caravana que llevaba a Uriel Tercero a juicio, y le prendió fuego al carruaje con él adentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1171.898,
+  "t1": 1181.919,
+  "tipo": "video",
+  "texto": "Céforo es proclamado emperador. Ese día, el ejército de Potema gana la batalla de Estrella del Halcón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1181.919,
+  "t1": 1190.233,
+  "tipo": "video",
+  "texto": "Ella no mira a nadie. Antes de lo que viene, los comentarios de esta semana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1190.233,
+  "t1": 1198.137,
+  "tipo": "video",
+  "texto": "«El lore de Elder Scrolls es increíble», de @Motosauriorex. Por eso estamos aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1198.137,
+  "t1": 1206.487,
+  "tipo": "video",
+  "texto": "«Lore de primera», de @claudiopizarro9601. «Es el primer video que veo de ustedes, nuevo sub»,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1206.487,
+  "t1": 1212.851,
+  "tipo": "video",
+  "texto": "de @dsegurar. Bienvenido: escogiste buen día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1212.851,
+  "t1": 1224.314,
+  "tipo": "video",
+  "texto": "@JuAnK930111 dice que estos videos le dan ganas de volver a Skyrim por millonésima vez. Y @Exonik_Snk,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1224.314,
+  "t1": 1232.816,
+  "tipo": "video",
+  "texto": "que siempre vuelve a Skyrim por creadores así, y pide la voz con acento khajiita. El Profeta no hace acentos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1232.816,
+  "t1": 1240.615,
+  "tipo": "video",
+  "texto": "Los leemos todos. Los buenos, y los que duelen. Y se toman en cuenta para mejorar cada video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1240.615,
+  "t1": 1250.215,
+  "tipo": "video",
+  "texto": "Por ejemplo, @sinnombre5459 tiene razón: al final de Dragonborn, Hermaeus Mora te cobra con los secretos de los Skaal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1250.215,
+  "t1": 1257.19,
+  "tipo": "video",
+  "texto": "no de los Barbas Grises. Corregido. Y @rolfaso pregunta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1257.19,
+  "t1": 1266.86,
+  "tipo": "video",
+  "texto": "«Buenazo el video, pero ¿está hecha con IA la voz, o qué?». Te contesto como contestaría Potema: con otra pregunta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1266.86,
+  "t1": 1273.381,
+  "tipo": "video",
+  "texto": "Si la historia es verdad, ¿importa quién la cuenta? Ella tenía generales vampiros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1273.381,
+  "t1": 1282.973,
+  "tipo": "video",
+  "texto": "Y nadie les preguntó si eran naturales. Capítulo siete. La loba sola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1282.973,
+  "t1": 1292.493,
+  "tipo": "video",
+  "texto": "Después de Ichidag, los nobles de siete provincias se cambian de bando a cambio de más autonomía. A Potema solo le queda una ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1292.493,
+  "t1": 1300.73,
+  "tipo": "video",
+  "texto": "Soledad. Y es aquí, no antes, cuando el rumor se vuelve verdad. Durante diez años,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1300.73,
+  "t1": 1308.78,
+  "tipo": "video",
+  "texto": "la Reina Loba invoca daedra. Sus nigromantes levantan a los enemigos caídos y los ponen a pelear de su lado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1308.78,
+  "t1": 1319.513,
+  "tipo": "video",
+  "texto": "Sus aliados la abandonan, a medida que crece su locura. Soledad se convierte en una tierra de muerte. Doncellas que son esqueletos podridos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1319.513,
+  "t1": 1326.643,
+  "tipo": "video",
+  "texto": "Generales vampiros. Y en una cueva al oeste de la ciudad, rituales nigrománticos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1326.643,
+  "t1": 1336.439,
+  "tipo": "video",
+  "texto": "Esa cueva todavía lleva el nombre: Cráneo de Lobo. Año ciento treinta y siete. Céforo y Magnus sitian Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1336.439,
+  "t1": 1342.916,
+  "tipo": "video",
+  "texto": "Un mes entero contra el Palacio Azul. Los libros lo cuentan desde los ojos de un niño:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1342.916,
+  "t1": 1352.656,
+  "tipo": "video",
+  "texto": "Pel, el hijo de Magnus. No puede acercarse al foso sin vomitar. Hay un olor raro, dulzón, a muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1352.656,
+  "t1": 1363.272,
+  "tipo": "video",
+  "texto": "Podrían echar un millón de flores, dice, y no cambiaría nada. Todos sus primos han muerto en la guerra, o en las hambrunas por las cosechas quemadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1363.272,
+  "t1": 1370.783,
+  "tipo": "video",
+  "texto": "Magnus tiene cincuenta y ocho años. Céforo, sesenta. Y Potema, setenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1370.783,
+  "t1": 1378.423,
+  "tipo": "video",
+  "texto": "En la ciudad sitiada todavía funciona un gremio de magos. Pel le abre la puerta a una anciana con la cara como",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1378.423,
+  "t1": 1386.293,
+  "tipo": "video",
+  "texto": "una manzana podrida y un remolino de pelo blanquísimo. Al cuello lleva una gema amarilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1386.293,
+  "t1": 1393.48,
+  "tipo": "video",
+  "texto": "Y dentro, a la luz de las velas, se ve una bestia de cuatro patas que da vueltas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1393.48,
+  "t1": 1404.14,
+  "tipo": "video",
+  "texto": "La anciana le paga a un encantador nórdico, joven, para que le quite el encanto a la gema y le ponga otro. Una maldición. Un veneno lento,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1404.14,
+  "t1": 1413.857,
+  "tipo": "video",
+  "texto": "que le quita la sabiduría a quien la lleve, año tras año, hasta que pierde la razón. Y compra un anillo barato de resistencia al fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1413.857,
+  "t1": 1422.256,
+  "tipo": "video",
+  "texto": "Al niño le dice que es un anillo de levitación, para su tío Céforo. Por si alguna vez tiene que saltar de lugares altos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1422.256,
+  "t1": 1431.453,
+  "tipo": "video",
+  "texto": "Luego se agacha, y le cuelga la gema al cuello. Algún día serás emperador, muchacho. El emperador Pelagio Septim Tercero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1431.453,
+  "t1": 1436.345,
+  "tipo": "video",
+  "texto": "Y con esta gema como guía, la posteridad siempre te recordará.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1436.345,
+  "t1": 1450.262,
+  "tipo": "video",
+  "texto": "La anciana se va por un túnel, bajo un montón de piedras, hasta el corazón del castillo. Se acuesta en su cama. Y muere de vieja, mientras oye cómo se derrumba su castillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1450.262,
+  "t1": 1459.196,
+  "tipo": "video",
+  "texto": "Los libros dicen que, de haberla visto, se le habría notado una sonrisa sin dientes al dar su último aliento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1459.196,
+  "t1": 1463.676,
+  "tipo": "video",
+  "texto": "La Reina Loba no murió en batalla, ni la mató ningún héroe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1463.676,
+  "t1": 1471.423,
+  "tipo": "video",
+  "texto": "Murió en su cama, a los setenta años, durante el asedio. Las crónicas, al menos, coinciden en eso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1471.423,
+  "t1": 1481.683,
+  "tipo": "video",
+  "texto": "Tres años después, en el ciento cuarenta, el emperador Céforo muere al caerse de su caballo. Los libros no dicen si llevaba puesto un anillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1481.683,
+  "t1": 1492.47,
+  "tipo": "video",
+  "texto": "Tampoco hace falta. Y un último correo, de @Eme_4r, en el video de los Dwemer:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1492.47,
+  "t1": 1498.844,
+  "tipo": "video",
+  "texto": "«No hablaron del último Dwemer. ¿El Profeta está ciego?». Ciego, no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1498.844,
+  "t1": 1510.33,
+  "tipo": "video",
+  "texto": "Selectivo. Pero ya que preguntas por gente que se pierde en su propia cabeza, déjame presentarte al sobrino de Potema.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1510.33,
+  "t1": 1516.971,
+  "tipo": "video",
+  "texto": "Capítulo ocho. Pelagio el Loco. Ojo: hay dos versiones de su infancia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1516.971,
+  "t1": 1525.291,
+  "tipo": "video",
+  "texto": "En la novela es un niño de doce años en el asedio. En las crónicas, un joven de dieciocho, en su primera batalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1525.291,
+  "t1": 1533.988,
+  "tipo": "video",
+  "texto": "Lo que sí coincide es lo que vino después. De joven, Pelagio es guapo, simpático, le gustan el deporte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1533.988,
+  "t1": 1543.438,
+  "tipo": "video",
+  "texto": "la magia y la música. Pero desde pequeño sufre terrores nocturnos. Y tras el asedio, le dan la corona de Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1543.438,
+  "t1": 1549.201,
+  "tipo": "video",
+  "texto": "La misma ciudad. El mismo palacio. Primero, el peso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1549.201,
+  "t1": 1559.661,
+  "tipo": "video",
+  "texto": "Un diplomático de Corazón de Ébano escribe que es un alma robusta, con un corazón tan grande que le ensancha la cintura. Cinco meses después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1559.661,
+  "t1": 1567.939,
+  "tipo": "video",
+  "texto": "una princesa de Firsthold dice que abrazarlo fue como si la agarrara un esqueleto. Luego, lo raro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1567.939,
+  "t1": 1577.659,
+  "tipo": "video",
+  "texto": "Encierra en su cuarto a los príncipes y princesas de Silvenar, y no los deja salir hasta que le pasan, por debajo de la puerta, una declaración de guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1577.659,
+  "t1": 1584.449,
+  "tipo": "video",
+  "texto": "Sin firmar. Y en un discurso en una fiesta, se arranca la ropa delante de todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1584.449,
+  "t1": 1595.569,
+  "tipo": "video",
+  "texto": "En el ciento cuarenta y uno se casa con Katariah, una elfa oscura, duquesa de Vvardenfell. Y en el ciento cuarenta y cinco muere Magnus, dormido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1595.569,
+  "t1": 1603.632,
+  "tipo": "video",
+  "texto": "Hay quien acusa a Pelagio de matar a su padre. Nunca se probó. Pelagio es coronado emperador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1603.632,
+  "t1": 1609.703,
+  "tipo": "video",
+  "texto": "El rumor dice que se desmayó al recibir la corona, y que Katariah lo sostuvo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1609.703,
+  "t1": 1617.423,
+  "tipo": "video",
+  "texto": "Con el embajador argoniano de Rosanegra, solo habla con gruñidos y chillidos, porque cree que esa es su lengua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1617.423,
+  "t1": 1628.633,
+  "tipo": "video",
+  "texto": "Los invitados del palacio se despiertan al amanecer con el ruido de los criados fregando: está obsesionado con la limpieza. Al final de un gran baile imperial,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1628.633,
+  "t1": 1636.733,
+  "tipo": "video",
+  "texto": "intenta ahorcarse. Y cuando empieza a morder a las visitas, en el ciento cuarenta y siete, lo encierran en un asilo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1636.733,
+  "t1": 1644.984,
+  "tipo": "video",
+  "texto": "Katariah gobierna en su nombre. Hay un libro, El baile del asilo, que lo cuenta mejor que nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-192",
+  "t0": 1644.984,
+  "t1": 1656.064,
+  "tipo": "video",
+  "texto": "Pelagio organiza un baile en su asilo, con el oro de Katariah. Se viste con una túnica de seda negra, bordada con diamantes rojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-193",
+  "t0": 1656.064,
+  "t1": 1663.351,
+  "tipo": "video",
+  "texto": "Diamantes rojos. No llega nadie. La orquesta toca tres horas para un salón vacío.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-194",
+  "t0": 1663.351,
+  "t1": 1671.403,
+  "tipo": "video",
+  "texto": "Y al subir la escalera, Pelagio se tira al suelo. ¡Más vino! ¡Más vino! ¡Vino!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-195",
+  "t0": 1671.403,
+  "t1": 1681.123,
+  "tipo": "video",
+  "texto": "Se corta a sí mismo y a los celadores con los diamantes de su propia túnica. Años después, en el escritorio de una duquesa cleptómana,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-196",
+  "t0": 1681.123,
+  "t1": 1689.873,
+  "tipo": "video",
+  "texto": "aparecen cinco montones de invitaciones, firmadas con su letra de niño. Nadie las había recibido nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-197",
+  "t0": 1689.873,
+  "t1": 1698.733,
+  "tipo": "video",
+  "texto": "Pelagio Tercero muere en el ciento cincuenta y tres, de una fiebre corta, en su celda del templo de Kynareth, en una isla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-198",
+  "t0": 1698.733,
+  "t1": 1707.179,
+  "tipo": "video",
+  "texto": "Tenía treinta y cuatro años. Katariah se convierte en emperatriz, y gobierna casi medio siglo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-199",
+  "t0": 1707.179,
+  "t1": 1715.019,
+  "tipo": "video",
+  "texto": "¿Fue la gema de su tía? Los libros lo insinúan. Los bretones dicen que fue culpa de su estancia en Roca Alta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-200",
+  "t0": 1715.019,
+  "t1": 1723.479,
+  "tipo": "video",
+  "texto": "Y otra leyenda dice que la locura de Potema empapó las piedras del castillo de Soledad, y se le pegó al siguiente rey.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-201",
+  "t0": 1723.479,
+  "t1": 1731.31,
+  "tipo": "video",
+  "texto": "Elijan la que menos los deje dormir. Antes del final, un dato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-202",
+  "t0": 1731.31,
+  "t1": 1739.256,
+  "tipo": "video",
+  "texto": "De cada cien que ven este canal, solo trece están suscritos. Somos seis mil seiscientos sesenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-203",
+  "t0": 1739.256,
+  "t1": 1750.33,
+  "tipo": "video",
+  "texto": "Si te suscribes, nos acercas a diez mil. Y si quieres más historias como esta, ese botón también es tu voto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-204",
+  "t0": 1750.33,
+  "t1": 1757.381,
+  "tipo": "video",
+  "texto": "Capítulo nueve. Quinientos años después. Cuarta Era, año doscientos uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-205",
+  "t0": 1757.381,
+  "t1": 1764.081,
+  "tipo": "video",
+  "texto": "En el Palacio Azul de Soledad, un hombre de Puente del Dragón le suplica a la jarl Elisif:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-206",
+  "t0": 1764.081,
+  "t1": 1777.153,
+  "tipo": "video",
+  "texto": "de una cueva al oeste de la ciudad salen luces y ruidos extraños. La hechicera de la corte dice que son supersticiones. Y Falk Barba de Fuego, el administrador, te manda a ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-207",
+  "t0": 1777.153,
+  "t1": 1783.153,
+  "tipo": "video",
+  "texto": "Es la misión El hombre de la falsa alarma. Bajas a la Cueva Cráneo de Lobo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-208",
+  "t0": 1783.153,
+  "t1": 1790.853,
+  "tipo": "video",
+  "texto": "saltas a un pozo, y llegas a unas ruinas con rayos azules. Los nigromantes están en pleno ritual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-209",
+  "t0": 1790.853,
+  "t1": 1798.818,
+  "tipo": "video",
+  "texto": "Has dormido mucho tiempo el sueño sin sueños de la muerte, Potema. Ya no. ¡Escúchanos, Reina Loba!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-210",
+  "t0": 1798.818,
+  "t1": 1809.226,
+  "tipo": "video",
+  "texto": "Pero los nigromantes no quieren solo despertarla. Quieren atarla a su voluntad, con sangre de inocentes. Y ella se da cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-211",
+  "t0": 1809.226,
+  "t1": 1815.876,
+  "tipo": "video",
+  "texto": "¿Qué? ¿Qué están haciendo? ¡Necios! ¡Ustedes, hormigas, no tienen poder para atarme!",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-212",
+  "t0": 1815.876,
+  "t1": 1827.736,
+  "tipo": "video",
+  "texto": "Matas al maestro del ritual en lo alto de la torre. Y la luz azul se escapa por un agujero del techo. Rompiste la atadura. Y Potema quedó libre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-213",
+  "t0": 1827.736,
+  "t1": 1834.516,
+  "tipo": "video",
+  "texto": "¿Potema en persona? Por favor, dime que los detuviste. Tiempo después, llega una carta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-214",
+  "t0": 1834.516,
+  "t1": 1844.596,
+  "tipo": "video",
+  "texto": "Es El despertar de la Reina Loba. Styrr, el sacerdote del Salón de los Muertos, te explica que sigue en forma de espíritu.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-215",
+  "t0": 1844.596,
+  "t1": 1851.208,
+  "tipo": "video",
+  "texto": "Que si hubiera recuperado su cuerpo, ya estaríamos todos muertos. Y te da una llave.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-216",
+  "t0": 1851.208,
+  "t1": 1859.869,
+  "tipo": "video",
+  "texto": "La entrada está al fondo del Templo de los Divinos, detrás de una verja. Un siervo de Potema rompió la pared hace unos días.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-217",
+  "t0": 1859.869,
+  "t1": 1869.51,
+  "tipo": "video",
+  "texto": "Por fin has llegado. El héroe que impidió que me ataran vuelve a mi redil. Cuando mueras, te levantaré, y ocuparás tu sitio a mi lado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-218",
+  "t0": 1869.51,
+  "t1": 1879.83,
+  "tipo": "video",
+  "texto": "Las Catacumbas de Potema. Trampas de aceite, puertas de piedra que giran con palancas, una sala inundada de la que salen draugr del agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-219",
+  "t0": 1879.83,
+  "t1": 1887.83,
+  "tipo": "video",
+  "texto": "Y su voz acompañándote todo el camino. ¿Puedes contra mi consejo interno? Veamos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-220",
+  "t0": 1887.83,
+  "t1": 1895.66,
+  "tipo": "video",
+  "texto": "Su espíritu lanza rayos que giran. Las flechas la atraviesan. De las tumbas salen oleadas de draugr,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-221",
+  "t0": 1895.66,
+  "t1": 1904.23,
+  "tipo": "video",
+  "texto": "y ella los vuelve a levantar. Y cuando aparecen sus restos, un esqueleto con ropa fina y una diadema de piedra lunar,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-222",
+  "t0": 1904.23,
+  "t1": 1912.091,
+  "tipo": "video",
+  "texto": "usa la Voz. Fuerza Implacable. Porque también ella era Sangre de Dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-223",
+  "t0": 1912.091,
+  "t1": 1922.141,
+  "tipo": "video",
+  "texto": "Al final, en un trono, solo queda su calavera. Se la llevas a Styrr, que la santifica. Y Falk te da las gracias, con una petición:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-224",
+  "t0": 1922.141,
+  "t1": 1928.752,
+  "tipo": "video",
+  "texto": "que nadie se entere. La jarl prefiere que el regreso de Potema siga en silencio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-225",
+  "t0": 1928.752,
+  "t1": 1939.51,
+  "tipo": "video",
+  "texto": "Por eso casi nadie conoce esta historia. Hasta Skyrim la quiso callar. Pero en el Palacio Azul queda una puerta cerrada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-226",
+  "t0": 1939.51,
+  "t1": 1946.78,
+  "tipo": "video",
+  "texto": "El ala suroeste. El Ala de Pelagio. Sellada desde poco después de su muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-227",
+  "t0": 1946.78,
+  "t1": 1953.662,
+  "tipo": "video",
+  "texto": "Dicen que la ronda su fantasma. Una criada entra una vez al año, a quitar las telarañas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-228",
+  "t0": 1953.662,
+  "t1": 1964.462,
+  "tipo": "video",
+  "texto": "Un mendigo loco de Soledad, Dervenin, te da un hueso: la pelvis de Pelagio. Y con ella entras en su mente. Un bosque con niebla,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-229",
+  "t0": 1964.462,
+  "t1": 1974.531,
+  "tipo": "video",
+  "texto": "arcos de piedra, y una mesa servida. Y ahí, tomando el té con el emperador muerto, está el Príncipe de la Locura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-230",
+  "t0": 1974.531,
+  "t1": 1982.265,
+  "tipo": "video",
+  "texto": "¿Más té, Pelly, querido? Oh, no podría. Me pasa directo. Además, tengo tantas cosas que hacer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-231",
+  "t0": 1982.265,
+  "t1": 1992.467,
+  "tipo": "video",
+  "texto": "Tantos indeseables. ¡Mi verdugo lleva tres días sin dormir! Bienvenido a la engañosamente verde mente del emperador Pelagio Tercero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-232",
+  "t0": 1992.467,
+  "t1": 1999.787,
+  "tipo": "video",
+  "texto": "Sí, así es. Estás dentro de la cabeza de un monarca muerto y homicidamente demente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-233",
+  "t0": 1999.787,
+  "t1": 2009.097,
+  "tipo": "video",
+  "texto": "Te da el Wabbajack. Y tienes que curar tres partes de esa mente. La Paranoia, donde Pelagio cree que cualquiera puede matarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-234",
+  "t0": 2009.097,
+  "t1": 2015.937,
+  "tipo": "video",
+  "texto": "La Confianza, una figura diminuta aplastada por la Ira. Y los Terrores Nocturnos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-235",
+  "t0": 2015.937,
+  "t1": 2022.411,
+  "tipo": "video",
+  "texto": "Pelagio duerme en una cama, en medio del bosque, y sus pesadillas lo rodean.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-236",
+  "t0": 2022.411,
+  "t1": 2032.471,
+  "tipo": "video",
+  "texto": "Con el Wabbajack conviertes cada pesadilla en algo inofensivo. Un sacerdote dragón, en un cofre. Un atronach de llamas, en una hoguera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-237",
+  "t0": 2032.471,
+  "t1": 2041.639,
+  "tipo": "video",
+  "texto": "Un jefe bandido, en Pelagio de niño. Y la primera pesadilla de Pelagio el Loco. La primera que aparece junto a su cama.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-238",
+  "t0": 2041.639,
+  "t1": 2050.678,
+  "tipo": "video",
+  "texto": "Es un lobo. La Reina Loba nunca se sentó en el Trono Rubí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-239",
+  "t0": 2050.678,
+  "t1": 2059.928,
+  "tipo": "video",
+  "texto": "Lo tuvo su hermano, que se rió de ella. Lo tuvo su sobrina, que la echó de un pasillo. Lo tuvo su hijo una sola noche,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-240",
+  "t0": 2059.928,
+  "t1": 2067.368,
+  "tipo": "video",
+  "texto": "y lo pagó con fuego. Y lo tuvo el niño al que le colgó una gema al cuello. Quinientos años después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-241",
+  "t0": 2067.368,
+  "t1": 2077.868,
+  "tipo": "video",
+  "texto": "unos nigromantes intentaron usarla. Y ni muerta se dejó atar. Ahora te toca a ti. ¿Qué historia quieres que cuente el Profeta la próxima vez?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-242",
+  "t0": 2077.868,
+  "t1": 2083.788,
+  "tipo": "video",
+  "texto": "¿Los Sload, que pidió Exonik? ¿Olaf Ojo Único y el dragón que quizá nunca venció?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-243",
+  "t0": 2083.788,
+  "t1": 2092.282,
+  "tipo": "video",
+  "texto": "¿Los hijos de Gauldur? Déjalo en los comentarios. Y si te gustó este formato, dilo también. Suscríbete si aún no lo has hecho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-244",
+  "t0": 2092.282,
+  "t1": 2102.25,
+  "tipo": "video",
+  "texto": "Y si encuentras una gema amarilla con un lobo adentro… no te la pongas. Nos vemos en Tamriel.",
+  "clip_s": 8
+ }
+]

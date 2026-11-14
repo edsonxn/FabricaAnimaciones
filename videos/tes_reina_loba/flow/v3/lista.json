@@ -1,0 +1,562 @@
+[
+ {
+  "id": "009",
+  "frase80": "Irónicamente, si viviera hoy, sería la única Septim viva. Por derecho, ahora ser…",
+  "escena": "Trono Rubí vacío en el Palacio Imperial con el fantasma azulado de una reina anciana con diadema de piedra al lado; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "Irónicamente, si viviera hoy, sería la única Septim viva. Por derecho, ahora sería emperatriz.",
+  "t0": 69.565
+ },
+ {
+  "id": "011",
+  "frase80": "Es una historia de familia. Capítulo uno. La niña de las cerraduras.",
+  "escena": "niña de 12 años con vestido imperial rojo forzando con dos alfileres la cerradura de un cofre en un pasillo del Palacio Imperial de noche; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: pasillo del Palacio Imperial de Oblivion 2006 + ganzúas de Oblivion",
+  "frase": "Es una historia de familia. Capítulo uno. La niña de las cerraduras.",
+  "t0": 86.874
+ },
+ {
+  "id": "017",
+  "frase80": "Ese primer hijo nace cuatro años después, en el sesenta y siete. Una niña. Su ab…",
+  "escena": "el emperador Uriel II anciano (corona de oro, túnica roja imperial) mirando una cuna con una recién nacida en una alcoba del Palacio Imperial; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "Ese primer hijo nace cuatro años después, en el sesenta y siete. Una niña. Su abuelo, el emperador Uriel Segundo,",
+  "t0": 138.131
+ },
+ {
+  "id": "022",
+  "frase80": "Y a su medio hermano Antíoco, una colección de grabados khajiitas que él preferí…",
+  "escena": "mano de niña sacando de un cofre de Antíoco un legajo de grabados khajiitas atados con cinta, a la luz de una vela; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "Y a su medio hermano Antíoco, una colección de grabados khajiitas que él prefería que nadie viera.",
+  "t0": 182.076
+ },
+ {
+  "id": "023",
+  "frase80": "Con eso último pagó un broche. Un broche con un diamante rojo. Recuerden ese dia…",
+  "escena": "primer plano de un broche de oro con un gran diamante rojo sobre terciopelo, mostrador de joyero de la Ciudad Imperial; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "Con eso último pagó un broche. Un broche con un diamante rojo. Recuerden ese diamante. Año ochenta.",
+  "t0": 189.145
+ },
+ {
+  "id": "026",
+  "frase80": "Del otro lado, su abuelo y su padre le explican al embajador de Soledad que la b…",
+  "escena": "sala del Consejo con Uriel II y Pelagio frente a un embajador nórdico con capa de piel; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006 + nórdico de Skyrim",
+  "frase": "Del otro lado, su abuelo y su padre le explican al embajador de Soledad que la boda prometida con su tía no va a ocurrir. Y que el oro que debían devolver, tampoco.",
+  "t0": 213.537
+ },
+ {
+  "id": "027",
+  "frase80": "El embajador amenaza con el contrato firmado. Potema no espera al final.",
+  "escena": "el embajador nórdico golpeando la mesa con un pergamino lacrado; misma escena que 026 (contraplano)",
+  "frase": "El embajador amenaza con el contrato firmado. Potema no espera al final.",
+  "t0": 225.357
+ },
+ {
+  "id": "029",
+  "frase80": "Tardó casi medio minuto. Cuando el paje llega a buscar el contrato, ya no está.",
+  "escena": "paje con farol ante un estante vacío del Salón de los Registros, pergaminos alrededor; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: biblioteca de la Universidad Arcana de Oblivion 2006",
+  "frase": "Tardó casi medio minuto. Cuando el paje llega a buscar el contrato, ya no está.",
+  "t0": 243.184
+ },
+ {
+  "id": "030",
+  "frase80": "Y como el documento no existe, el emperador tiene que ofrecer otra cosa a cambio…",
+  "escena": "Potema de 13 años, tímida, delante del trono de su abuelo, cortesanos alrededor; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "Y como el documento no existe, el emperador tiene que ofrecer otra cosa a cambio. Ofrece a su nieta.",
+  "t0": 249.619
+ },
+ {
+  "id": "031",
+  "frase80": "Es, lo admito, por lo que veo de ella, muy tímida e inocente. Tiene trece años. …",
+  "escena": "retrato de Potema a los 13, tímida, con vestido imperial y velo, mirando al suelo; mismo estilo que el 030 (encuadre distinto)",
+  "frase": "Es, lo admito, por lo que veo de ella, muy tímida e inocente. Tiene trece años. Edad suficiente para casarse.",
+  "t0": 258.068
+ },
+ {
+  "id": "034",
+  "frase80": "Los libros lo cierran con una frase que lo dice todo: cuántas posibilidades, pen…",
+  "escena": "Potema adolescente leyendo el contrato a la luz de una vela, sonrisa leve; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "Los libros lo cierran con una frase que lo dice todo: cuántas posibilidades, pensó Potema. Y se dio cuenta de que ya no estaba aburrida.",
+  "t0": 282.198
+ },
+ {
+  "id": "036",
+  "frase80": "Al año siguiente muere su abuelo, y su padre se convierte en el emperador Pelagi…",
+  "escena": "coronación de Pelagio II ante el Trono Rubí, Consejo de Ancianos alrededor; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: pegatina pelagio_ii + ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "Al año siguiente muere su abuelo, y su padre se convierte en el emperador Pelagio Segundo.",
+  "t0": 302.442
+ },
+ {
+  "id": "037",
+  "frase80": "Hereda un tesoro vacío, y lo llena a su manera: disuelve el Consejo de Ancianos …",
+  "escena": "consejeros con túnica dejando bolsas de oro en la gran mesa redonda del Consejo de Ancianos; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "Hereda un tesoro vacío, y lo llena a su manera: disuelve el Consejo de Ancianos y obliga a cada consejero a volver a comprar su asiento.",
+  "t0": 309.382
+ },
+ {
+  "id": "038",
+  "frase80": "Mientras tanto, en Soledad, la niña imperial descubre que los nórdicos no la qui…",
+  "escena": "Potema de 15 años en el Palacio Azul, nobles nórdicos con pieles mirándola de reojo; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim",
+  "frase": "Mientras tanto, en Soledad, la niña imperial descubre que los nórdicos no la quieren.",
+  "t0": 320.36
+ },
+ {
+  "id": "039",
+  "frase80": "Las viejas casas de la ciudad desprecian a la forastera de Cyrodiil. Y el reino …",
+  "escena": "tres jefes de clan nórdicos murmurando en un pasillo del Palacio Azul (contraplano del 038)",
+  "frase": "Las viejas casas de la ciudad desprecian a la forastera de Cyrodiil. Y el reino necesita un heredero que no llega.",
+  "t0": 326.66
+ },
+ {
+  "id": "040",
+  "frase80": "Pierde un embarazo. Y otro. Y otro. Durante quince años. Hasta que a los veintin…",
+  "escena": "Potema sola junto a una cuna vacía en la alcoba del Palacio Azul, luz de vela, ventana con nieve; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim",
+  "frase": "Pierde un embarazo. Y otro. Y otro. Durante quince años. Hasta que a los veintinueve, en el noventa y siete, da a luz a un hijo.",
+  "t0": 335.0
+ },
+ {
+  "id": "043",
+  "frase80": "Pero mientras grita, no deja de trabajar. Entre contracción y contracción le da …",
+  "escena": "Potema en el parto, sudando, dando órdenes a Lord Vhokken (gigante calvo con armadura nórdica) junto a la cama, comadrona al lado; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim + retrato de Vhokken",
+  "frase": "Pero mientras grita, no deja de trabajar. Entre contracción y contracción le da órdenes a Lord Vhokken, su mano derecha:",
+  "t0": 362.784
+ },
+ {
+  "id": "044",
+  "frase80": "un gigante calvo con voz de trueno. El problema se llama Bathorgh. Es el hijo de…",
+  "escena": "retrato de Lord Vhokken de pie en el Palacio Azul (gigante calvo, barba, armadura de acero nórdico); luego pegatina bathorgh",
+  "frase": "un gigante calvo con voz de trueno. El problema se llama Bathorgh. Es el hijo del primer matrimonio del rey,",
+  "t0": 371.334
+ },
+ {
+  "id": "045",
+  "frase80": "dos años mayor que su madrastra, el heredero legítimo. En Soledad lo llaman el h…",
+  "escena": "Bathorgh, guerrero nórdico corpulento de 30 años, ante el trono de su padre Mantiarco; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim",
+  "frase": "dos años mayor que su madrastra, el heredero legítimo. En Soledad lo llaman el hombre al que no se puede golpear.",
+  "t0": 379.694
+ },
+ {
+  "id": "046",
+  "frase80": "Potema ya se había encargado del jefe guerrero del rey, Lord Thone, con pruebas …",
+  "escena": "Lord Thone encadenado entre guardias de Soledad, Potema entregando cartas; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: Castillo Dour",
+  "frase": "Potema ya se había encargado del jefe guerrero del rey, Lord Thone, con pruebas falsas de traición.",
+  "t0": 388.803
+ },
+ {
+  "id": "047",
+  "frase80": "Ahora manda restaurar el viejo palacio de verano de la difunta reina. Y ahí, cas…",
+  "escena": "obreros restaurando un palacio de verano en ruinas; uno encuentra un cofre con cartas atadas; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB)",
+  "frase": "Ahora manda restaurar el viejo palacio de verano de la difunta reina. Y ahí, casualmente, aparecen cartas de amor entre la difunta",
+  "t0": 395.713
+ },
+ {
+  "id": "048",
+  "frase80": "reina y Lord Thone, fechadas justo cuando nació Bathorgh. Ese mismo día, Bathorg…",
+  "escena": "primer plano de cartas de amor lacradas con fecha; o adelantar flow_torneo al inicio del beat",
+  "frase": "reina y Lord Thone, fechadas justo cuando nació Bathorgh. Ese mismo día, Bathorgh gana el Torneo de Resistencia.",
+  "t0": 405.043
+ },
+ {
+  "id": "050",
+  "frase80": "Mantiarco, llorando, lo deshereda y lo destierra. El bebé de Potema se llamará U…",
+  "escena": "el rey Mantiarco anciano, gordo, llorando en el trono del Palacio Azul mientras Bathorgh se va; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim + pegatina mantiarco",
+  "frase": "Mantiarco, llorando, lo deshereda y lo destierra. El bebé de Potema se llamará Uriel, como su bisabuelo.",
+  "t0": 421.997
+ },
+ {
+  "id": "051",
+  "frase80": "Ahora es el heredero de Soledad. Y aquí los libros aclaran algo que casi todos c…",
+  "escena": "Potema con el bebé Uriel en brazos en el balcón del Palacio Azul; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB)",
+  "frase": "Ahora es el heredero de Soledad. Y aquí los libros aclaran algo que casi todos cuentan mal.",
+  "t0": 431.24
+ },
+ {
+  "id": "052",
+  "frase80": "Sus enemigos ya la llamaban la Reina Loba. Pero no por ningún parecido físico. N…",
+  "escena": "Potema de perfil con su sombra en la pared en forma de loba, nobles susurrando; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB)",
+  "frase": "Sus enemigos ya la llamaban la Reina Loba. Pero no por ningún parecido físico. Ni era mujer lobo,",
+  "t0": 438.863
+ },
+ {
+  "id": "064",
+  "frase80": "El Consejo de Ancianos retrasa seis semanas la coronación de Antíoco. Seis seman…",
+  "escena": "el Consejo de Ancianos alrededor de la mesa redonda, Potema conversando en las sombras con un consejero; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "El Consejo de Ancianos retrasa seis semanas la coronación de Antíoco. Seis semanas en las que Potema está en la capital.",
+  "t0": 541.604
+ },
+ {
+  "id": "068",
+  "frase80": "Potema la usa esa misma noche. Hechiza al espía de su hermano, entra en el estud…",
+  "escena": "Potema con el collar de gema amarilla brillando ante un espía hechizado en un pasillo del Palacio Imperial; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: pegatina gema_lobo",
+  "frase": "Potema la usa esa misma noche. Hechiza al espía de su hermano, entra en el estudio de Antíoco,",
+  "t0": 578.9
+ },
+ {
+  "id": "069",
+  "frase80": "usa su sello, y falsifica una carta en la que Antíoco confiesa ser hijo del mayo…",
+  "escena": "mano estampando el sello de Antíoco en lacre rojo sobre una carta, escritorio con velas; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "usa su sello, y falsifica una carta en la que Antíoco confiesa ser hijo del mayordomo del palacio.",
+  "t0": 585.87
+ },
+ {
+  "id": "070",
+  "frase80": "A la mañana siguiente le da a elegir. O renuncia al trono, o el escándalo. Y Ant…",
+  "escena": "Antíoco (gordo, corona) riéndose en el Trono Rubí, Potema de pie delante; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006 + pegatina antioco",
+  "frase": "A la mañana siguiente le da a elegir. O renuncia al trono, o el escándalo. Y Antíoco se ríe.",
+  "t0": 593.523
+ },
+ {
+  "id": "071",
+  "frase80": "¿Sabías que los hechizos de encanto, incluso los más poderosos, duran poco? Un b…",
+  "escena": "el espía contando monedas de Antíoco en una taberna oscura; o clip ambiente de la Ciudad Imperial a nivel de calle (Oblivion 2006)",
+  "frase": "¿Sabías que los hechizos de encanto, incluso los más poderosos, duran poco? Un buen sueldo motiva más.",
+  "t0": 602.419
+ },
+ {
+  "id": "072",
+  "frase80": "El espía seguía cobrando de Antíoco. Y Antíoco guardó la hoja donde Potema pract…",
+  "escena": "Antíoco guardando en un cofre la hoja donde Potema practicó su letra; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "El espía seguía cobrando de Antíoco. Y Antíoco guardó la hoja donde Potema practicó su letra. Con eso, además,",
+  "t0": 610.074
+ },
+ {
+  "id": "073",
+  "frase80": "la acusa de haber falsificado las cartas de la difunta reina de Soledad. En el f…",
+  "escena": "Antíoco señalando a Potema con las cartas falsas en la mano, salón del trono; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "la acusa de haber falsificado las cartas de la difunta reina de Soledad. En el futuro, querida Reina Loba, no pongas dos veces la misma trampa.",
+  "t0": 618.554
+ },
+ {
+  "id": "074",
+  "frase80": "Yo seré emperador. Ahora vete. Sí, lo serás, hermano. Pero no por mucho tiempo.",
+  "escena": "Potema saliendo del salón del trono de espaldas, Antíoco al fondo (contraplano del 070)",
+  "frase": "Yo seré emperador. Ahora vete. Sí, lo serás, hermano. Pero no por mucho tiempo.",
+  "t0": 628.531
+ },
+ {
+  "id": "075",
+  "frase80": "Antíoco es coronado. Y la profecía de Quintila se cumple: Mantiarco muere al poc…",
+  "escena": "coronación de Antíoco en el Templo del Único; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: Templo del Único de Oblivion 2006",
+  "frase": "Antíoco es coronado. Y la profecía de Quintila se cumple: Mantiarco muere al poco tiempo.",
+  "t0": 636.994
+ },
+ {
+  "id": "076",
+  "frase80": "Potema queda como regente de Soledad, en nombre de un niño de dos años. Con un c…",
+  "escena": "Potema regente en el trono del Palacio Azul con Uriel de 2 años en las rodillas, el collar brillando; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim",
+  "frase": "Potema queda como regente de Soledad, en nombre de un niño de dos años. Con un collar que hechiza a quien lo mira.",
+  "t0": 644.334
+ },
+ {
+  "id": "077",
+  "frase80": "Capítulo cuatro. Los elfos del mar. Antíoco reina veintiún años. Enormemente gor…",
+  "escena": "Antíoco obeso en el Trono Rubí con copa de vino; o pegatina antioco grande sobre clip del salón del trono",
+  "frase": "Capítulo cuatro. Los elfos del mar. Antíoco reina veintiún años. Enormemente gordo,",
+  "t0": 655.33
+ },
+ {
+  "id": "078",
+  "frase80": "y marcado, según los libros, por todas las enfermedades venéreas conocidas. En e…",
+  "escena": "Antíoco y su esposa con la bebé Kintyra; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "y marcado, según los libros, por todas las enfermedades venéreas conocidas. En el ciento cuatro tiene una hija con su segunda esposa:",
+  "t0": 663.645
+ },
+ {
+  "id": "079",
+  "frase80": "Kintyra. Y el Palacio Azul de Soledad se convierte en el lugar de moda de todos …",
+  "escena": "banquete en el Palacio Azul con reyes de Roca Alta y Skyrim alrededor de Potema; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim",
+  "frase": "Kintyra. Y el Palacio Azul de Soledad se convierte en el lugar de moda de todos los reyes resentidos con el emperador.",
+  "t0": 673.045
+ },
+ {
+  "id": "083",
+  "frase80": "Viene su rey, Orgnum, a buscar aliados contra el Imperio. En el trono, Uriel,",
+  "escena": "el rey Orgnum (elfo de piel translúcida) ante el trono del Palacio Azul; Uriel de 11 años jugando con su mascota en las gradas; ingrediente: flow_barco_maormer + pegatina maormer",
+  "frase": "Viene su rey, Orgnum, a buscar aliados contra el Imperio. En el trono, Uriel,",
+  "t0": 708.607
+ },
+ {
+  "id": "086",
+  "frase80": "Asustados, los psijic corren a aceptar el trato que les ofrecía Antíoco: defende…",
+  "escena": "monjes psijic firmando un contrato en la costa con galeras al fondo; ingrediente: artaeum_flow",
+  "frase": "Asustados, los psijic corren a aceptar el trato que les ofrecía Antíoco: defender la costa por doce millones. Antes pedían cincuenta.",
+  "t0": 731.201
+ },
+ {
+  "id": "087",
+  "frase80": "Al final lo hacen por ocho. Potema les paga los ocho, y le cobra los doce a su h…",
+  "escena": "Potema contando bolsas de oro sobre una mesa con dos recibos; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB)",
+  "frase": "Al final lo hacen por ocho. Potema les paga los ocho, y le cobra los doce a su hermano. Y esa noche,",
+  "t0": 741.813
+ },
+ {
+  "id": "088",
+  "frase80": "el rey de los elfos del mar duerme con la regente de Soledad. Los libros dicen q…",
+  "escena": "silueta de Orgnum y Potema en un balcón del Palacio Azul de noche (sugerente, nada explícito)",
+  "frase": "el rey de los elfos del mar duerme con la regente de Soledad. Los libros dicen que a ella le encantó descubrir que su capacidad",
+  "t0": 749.613
+ },
+ {
+  "id": "089",
+  "frase80": "para mentir funcionaba en muchas culturas distintas. A veces, hacer que la gente…",
+  "escena": "Potema sonriendo sobre un cofre de oro; o reusar el 087",
+  "frase": "para mentir funcionaba en muchas culturas distintas. A veces, hacer que la gente te odie… es como se gana dinero.",
+  "t0": 758.289
+ },
+ {
+  "id": "096",
+  "frase80": "Capítulo cinco. La emperatriz de quince años. Año ciento diecinueve.",
+  "escena": "Kintyra II de 15 años con corona en la Ciudad Imperial; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: pegatina kintyra_ii",
+  "frase": "Capítulo cinco. La emperatriz de quince años. Año ciento diecinueve.",
+  "t0": 820.231
+ },
+ {
+  "id": "103",
+  "frase80": "bajo una cúpula de cristal empapada por la lluvia, Kintyra, de quince años, le c…",
+  "escena": "Kintyra de 15 años cerrando el paso a Potema en un pasillo bajo una cúpula de cristal empapada por la lluvia; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster); ingrediente: captura del Palacio Imperial / Consejo de Ancianos de Oblivion 2006",
+  "frase": "bajo una cúpula de cristal empapada por la lluvia, Kintyra, de quince años, le cierra el paso en el pasillo.",
+  "t0": 879.13
+ },
+ {
+  "id": "105",
+  "frase80": "Kintyra Segunda es coronada el tres de Primera Semilla del año ciento veinte. Po…",
+  "escena": "coronación de Kintyra II en el Templo del Único, Potema y Uriel saliendo al fondo; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "Kintyra Segunda es coronada el tres de Primera Semilla del año ciento veinte. Potema y Uriel son desterrados. Y Potema le dice a su cuñada, la reina Bianki,",
+  "t0": 893.596
+ },
+ {
+  "id": "109",
+  "frase80": "En la torre del castillo de La Cañada, Kintyra escribe una carta a su prometido.…",
+  "escena": "Kintyra escribiendo una carta junto a la ventana de una torre (ingrediente: pegatina torre_cañada)",
+  "frase": "En la torre del castillo de La Cañada, Kintyra escribe una carta a su prometido. Y recibe una de él: ha recibido una petición de refuerzos con la letra de ella,",
+  "t0": 929.636
+ },
+ {
+  "id": "113",
+  "frase80": "Cuando le preguntan al duque por qué traicionó al Imperio, si fue por miedo, res…",
+  "escena": "el duque Mentin interrogado en una sala de piedra; ingrediente: Castillo Dour",
+  "frase": "Cuando le preguntan al duque por qué traicionó al Imperio, si fue por miedo, responde con dos palabras.",
+  "t0": 965.652
+ },
+ {
+  "id": "114",
+  "frase80": "Y el oro. Y sobre los rumores de que Potema tenía un ejército de muertos, el duq…",
+  "escena": "cofre de oro abierto y, al fondo, sombras de esqueletos (rumor)",
+  "frase": "Y el oro. Y sobre los rumores de que Potema tenía un ejército de muertos, el duque dice algo que casi nadie cuenta:",
+  "t0": 973.317
+ },
+ {
+  "id": "115",
+  "frase80": "que no es verdad. Que ella fomenta ese rumor. Porque su mejor arma es el miedo. …",
+  "escena": "celda vacía con la corona de Kintyra en el suelo",
+  "frase": "que no es verdad. Que ella fomenta ese rumor. Porque su mejor arma es el miedo. Kintyra muere en su celda.",
+  "t0": 981.54
+ },
+ {
+  "id": "116",
+  "frase80": "La fecha más aceptada es el veintitrés de Fuego Hogar del año ciento veintitrés,…",
+  "escena": "decreto con el sello de Uriel III; o pegatina de calendario",
+  "frase": "La fecha más aceptada es el veintitrés de Fuego Hogar del año ciento veintitrés, por orden del hijo de Potema.",
+  "t0": 991.476
+ },
+ {
+  "id": "117",
+  "frase80": "Y todavía hoy, en Roca Alta, ese día se guarda luto. Lo llaman Diamantes Rotos.",
+  "escena": "bretones de luto en una plaza de Roca Alta con diamantes rotos sobre un altar; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "Y todavía hoy, en Roca Alta, ese día se guarda luto. Lo llaman Diamantes Rotos.",
+  "t0": 999.306
+ },
+ {
+  "id": "127",
+  "frase80": "Potema tiene sesenta años. Y llega un mensajero. Uriel ha sido derrotado y captu…",
+  "escena": "mensajero a caballo llegando al campamento de Potema al amanecer",
+  "frase": "Potema tiene sesenta años. Y llega un mensajero. Uriel ha sido derrotado y capturado por Céforo en la campiña de Ichidag,",
+  "t0": 1085.211
+ },
+ {
+  "id": "128",
+  "frase80": "en el Páramo del Martillo. Ese torpe idiota. Pero no hay tiempo para llorar.",
+  "escena": "Potema de 60 años furiosa en su tienda de campaña con Vhokken",
+  "frase": "en el Páramo del Martillo. Ese torpe idiota. Pero no hay tiempo para llorar.",
+  "t0": 1094.463
+ },
+ {
+  "id": "137",
+  "frase80": "Céforo es proclamado emperador. Ese día, el ejército de Potema gana la batalla d…",
+  "escena": "Céforo coronado; o alargar flow_batalla_cienaga",
+  "frase": "Céforo es proclamado emperador. Ese día, el ejército de Potema gana la batalla de Estrella del Halcón.",
+  "t0": 1171.898
+ },
+ {
+  "id": "149",
+  "frase80": "Y nadie les preguntó si eran naturales. Capítulo siete. La loba sola.",
+  "escena": "Potema anciana sola en el trono del Palacio Azul en penumbra; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB); ingrediente: captura del salón del trono del Palacio Azul de Skyrim",
+  "frase": "Y nadie les preguntó si eran naturales. Capítulo siete. La loba sola.",
+  "t0": 1273.381
+ },
+ {
+  "id": "150",
+  "frase80": "Después de Ichidag, los nobles de siete provincias se cambian de bando a cambio …",
+  "escena": "nobles quitándose el broche del diamante rojo ante Céforo",
+  "frase": "Después de Ichidag, los nobles de siete provincias se cambian de bando a cambio de más autonomía. A Potema solo le queda una ciudad.",
+  "t0": 1282.973
+ },
+ {
+  "id": "158",
+  "frase80": "Podrían echar un millón de flores, dice, y no cambiaría nada. Todos sus primos h…",
+  "escena": "niño de 10 años tapándose la nariz junto a un foso con flores, murallas de Soledad sitiadas; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB)",
+  "frase": "Podrían echar un millón de flores, dice, y no cambiaría nada. Todos sus primos han muerto en la guerra, o en las hambrunas por las cosechas quemadas.",
+  "t0": 1352.656
+ },
+ {
+  "id": "163",
+  "frase80": "La anciana le paga a un encantador nórdico, joven, para que le quite el encanto …",
+  "escena": "anciana de pelo blanco pagando a un joven encantador nórdico junto a una mesa de encantamiento de Skyrim; ingrediente: mesa arcana de Skyrim + flow_anciana_gema",
+  "frase": "La anciana le paga a un encantador nórdico, joven, para que le quite el encanto a la gema y le ponga otro. Una maldición. Un veneno lento,",
+  "t0": 1393.48
+ },
+ {
+  "id": "165",
+  "frase80": "Al niño le dice que es un anillo de levitación, para su tío Céforo. Por si algun…",
+  "escena": "la anciana dándole un anillo barato al niño Pel",
+  "frase": "Al niño le dice que es un anillo de levitación, para su tío Céforo. Por si alguna vez tiene que saltar de lugares altos.",
+  "t0": 1413.857
+ },
+ {
+  "id": "172",
+  "frase80": "Tres años después, en el ciento cuarenta, el emperador Céforo muere al caerse de…",
+  "escena": "caballo encabritado y la corona de Céforo en el barro",
+  "frase": "Tres años después, en el ciento cuarenta, el emperador Céforo muere al caerse de su caballo. Los libros no dicen si llevaba puesto un anillo.",
+  "t0": 1471.423
+ },
+ {
+  "id": "177",
+  "frase80": "En la novela es un niño de doce años en el asedio. En las crónicas, un joven de …",
+  "escena": "díptico Pelagio niño de 12 años en el asedio / joven de 18 con armadura en su primera batalla; captura real de Skyrim 2011 (Creation Engine, texturas vanilla, sin mods ni ENB)",
+  "frase": "En la novela es un niño de doce años en el asedio. En las crónicas, un joven de dieciocho, en su primera batalla.",
+  "t0": 1516.971
+ },
+ {
+  "id": "178",
+  "frase80": "Lo que sí coincide es lo que vino después. De joven, Pelagio es guapo, simpático…",
+  "escena": "Pelagio joven y apuesto con laúd y espada de práctica en el Palacio Azul",
+  "frase": "Lo que sí coincide es lo que vino después. De joven, Pelagio es guapo, simpático, le gustan el deporte,",
+  "t0": 1525.291
+ },
+ {
+  "id": "179",
+  "frase80": "la magia y la música. Pero desde pequeño sufre terrores nocturnos. Y tras el ase…",
+  "escena": "Pelagio niño despertando gritando en su cama del Palacio Azul, sombras de lobo en la pared",
+  "frase": "la magia y la música. Pero desde pequeño sufre terrores nocturnos. Y tras el asedio, le dan la corona de Soledad.",
+  "t0": 1533.988
+ },
+ {
+  "id": "181",
+  "frase80": "Un diplomático de Corazón de Ébano escribe que es un alma robusta, con un corazó…",
+  "escena": "Pelagio III corpulento, sonriente, en una recepción con un diplomático argoniano",
+  "frase": "Un diplomático de Corazón de Ébano escribe que es un alma robusta, con un corazón tan grande que le ensancha la cintura. Cinco meses después,",
+  "t0": 1549.201
+ },
+ {
+  "id": "182",
+  "frase80": "una princesa de Firsthold dice que abrazarlo fue como si la agarrara un esquelet…",
+  "escena": "Pelagio flaquísimo abrazando a una princesa altmer incómoda",
+  "frase": "una princesa de Firsthold dice que abrazarlo fue como si la agarrara un esqueleto. Luego, lo raro.",
+  "t0": 1559.661
+ },
+ {
+  "id": "183",
+  "frase80": "Encierra en su cuarto a los príncipes y princesas de Silvenar, y no los deja sal…",
+  "escena": "príncipes bosmer encerrados en un cuarto, Pelagio sonriendo en la puerta",
+  "frase": "Encierra en su cuarto a los príncipes y princesas de Silvenar, y no los deja salir hasta que le pasan, por debajo de la puerta, una declaración de guerra.",
+  "t0": 1567.939
+ },
+ {
+  "id": "184",
+  "frase80": "Sin firmar. Y en un discurso en una fiesta, se arranca la ropa delante de todos.",
+  "escena": "Pelagio de espaldas desgarrándose la túnica ante invitados escandalizados (sin desnudo)",
+  "frase": "Sin firmar. Y en un discurso en una fiesta, se arranca la ropa delante de todos.",
+  "t0": 1577.659
+ },
+ {
+  "id": "185",
+  "frase80": "En el ciento cuarenta y uno se casa con Katariah, una elfa oscura, duquesa de Vv…",
+  "escena": "boda de Pelagio y Katariah (elfa oscura) en el Templo; ingrediente: pegatina katariah",
+  "frase": "En el ciento cuarenta y uno se casa con Katariah, una elfa oscura, duquesa de Vvardenfell. Y en el ciento cuarenta y cinco muere Magnus, dormido.",
+  "t0": 1584.449
+ },
+ {
+  "id": "190",
+  "frase80": "intenta ahorcarse. Y cuando empieza a morder a las visitas, en el ciento cuarent…",
+  "escena": "puerta de una celda de asilo con la sombra de Pelagio",
+  "frase": "intenta ahorcarse. Y cuando empieza a morder a las visitas, en el ciento cuarenta y siete, lo encierran en un asilo.",
+  "t0": 1628.633
+ },
+ {
+  "id": "191",
+  "frase80": "Katariah gobierna en su nombre. Hay un libro, El baile del asilo, que lo cuenta …",
+  "escena": "Katariah en el Trono Rubí + pegatina del libro «El baile del asilo»",
+  "frase": "Katariah gobierna en su nombre. Hay un libro, El baile del asilo, que lo cuenta mejor que nadie.",
+  "t0": 1636.733
+ },
+ {
+  "id": "195",
+  "frase80": "Se corta a sí mismo y a los celadores con los diamantes de su propia túnica. Año…",
+  "escena": "túnica negra con diamantes rojos y una mano ensangrentada (sin gore)",
+  "frase": "Se corta a sí mismo y a los celadores con los diamantes de su propia túnica. Años después, en el escritorio de una duquesa cleptómana,",
+  "t0": 1671.403
+ },
+ {
+  "id": "196",
+  "frase80": "aparecen cinco montones de invitaciones, firmadas con su letra de niño. Nadie la…",
+  "escena": "escritorio con cinco montones de invitaciones con letra de niño",
+  "frase": "aparecen cinco montones de invitaciones, firmadas con su letra de niño. Nadie las había recibido nunca.",
+  "t0": 1681.123
+ },
+ {
+  "id": "197",
+  "frase80": "Pelagio Tercero muere en el ciento cincuenta y tres, de una fiebre corta, en su …",
+  "escena": "Pelagio febril en una cama de celda del templo de Kynareth",
+  "frase": "Pelagio Tercero muere en el ciento cincuenta y tres, de una fiebre corta, en su celda del templo de Kynareth, en una isla.",
+  "t0": 1689.873
+ },
+ {
+  "id": "198",
+  "frase80": "Tenía treinta y cuatro años. Katariah se convierte en emperatriz, y gobierna cas…",
+  "escena": "coronación de Katariah (o pegatina katariah grande sobre el Trono Rubí)",
+  "frase": "Tenía treinta y cuatro años. Katariah se convierte en emperatriz, y gobierna casi medio siglo.",
+  "t0": 1698.733
+ },
+ {
+  "id": "199",
+  "frase80": "¿Fue la gema de su tía? Los libros lo insinúan. Los bretones dicen que fue culpa…",
+  "escena": "la gema amarilla brillando sobre un retrato de Pelagio",
+  "frase": "¿Fue la gema de su tía? Los libros lo insinúan. Los bretones dicen que fue culpa de su estancia en Roca Alta.",
+  "t0": 1707.179
+ },
+ {
+  "id": "200",
+  "frase80": "Y otra leyenda dice que la locura de Potema empapó las piedras del castillo de S…",
+  "escena": "muros del Palacio Azul con una sombra de loba que se filtra por las piedras",
+  "frase": "Y otra leyenda dice que la locura de Potema empapó las piedras del castillo de Soledad, y se le pegó al siguiente rey.",
+  "t0": 1715.019
+ },
+ {
+  "id": "227",
+  "frase80": "Dicen que la ronda su fantasma. Una criada entra una vez al año, a quitar las te…",
+  "escena": "criada con plumero entrando al Ala de Pelagio a oscuras",
+  "frase": "Dicen que la ronda su fantasma. Una criada entra una vez al año, a quitar las telarañas.",
+  "t0": 1952.78
+ },
+ {
+  "id": "239",
+  "frase80": "Lo tuvo su hermano, que se rió de ella. Lo tuvo su sobrina, que la echó de un pa…",
+  "escena": "el Trono Rubí vacío con las sombras de Antíoco, Kintyra y Uriel; captura real del Oblivion ORIGINAL de 2006 (Gamebryo, caras redondeadas de Oblivion, bloom suave; NO el remaster)",
+  "frase": "Lo tuvo su hermano, que se rió de ella. Lo tuvo su sobrina, que la echó de un pasillo. Lo tuvo su hijo una sola noche,",
+  "t0": 2056.678
+ },
+ {
+  "id": "240",
+  "frase80": "y lo pagó con fuego. Y lo tuvo el niño al que le colgó una gema al cuello. Quini…",
+  "escena": "el niño Pel con la gema amarilla al cuello (ingrediente: flow_anciana_gema)",
+  "frase": "y lo pagó con fuego. Y lo tuvo el niño al que le colgó una gema al cuello. Quinientos años después,",
+  "t0": 2065.928
+ }
+]

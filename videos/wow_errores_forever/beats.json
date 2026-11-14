@@ -1,0 +1,1314 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.399,
+  "tipo": "video",
+  "texto": "World of Warcraft Forever salió el cuatro de noviembre, y fue de los lanzamientos más tranquilos que se recuerdan: colas de minutos y casi nadie desconectado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.399,
+  "t1": 19.317,
+  "tipo": "video",
+  "texto": "El problema no son los servidores. El problema somos nosotros: en la beta se crearon casi nueve millones de personajes, y más de un millón murió por una caída.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 19.317,
+  "t1": 27.657,
+  "tipo": "video",
+  "texto": "Y ahora mismo, mientras ves esto, miles de jugadores venden al vendedor lo que mañana vale oro, o juegan sin las habilidades que ya pagaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.657,
+  "t1": 33.127,
+  "tipo": "video",
+  "texto": "Como nos escribió un espectador, estos videos valen oro antes de meter la pata en Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.127,
+  "t1": 41.072,
+  "tipo": "video",
+  "texto": "Así que hoy te traigo los veinticinco errores que estás cometiendo en World of Warcraft Forever, y cómo arreglar cada uno, del veinticinco al uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 41.072,
+  "t1": 50.43,
+  "tipo": "video",
+  "texto": "Algunos te cuestan oro, otros experiencia, y el número uno casi no tiene arreglo: si lo cometiste, te toca empezar de cero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.43,
+  "t1": 56.814,
+  "tipo": "video",
+  "texto": "Número veinticinco. Eres brujo, y dejas que tu mascota tanquee como en el Classic de siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 56.814,
+  "t1": 67.775,
+  "tipo": "video",
+  "texto": "En las notas del lanzamiento, la vida que gana la mascota del brujo por cada punto de aguante bajó de siete coma cinco a dos. O sea, tu abisario ahora aguanta como una cortina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.775,
+  "t1": 75.317,
+  "tipo": "video",
+  "texto": "Y encima, los enemigos de nivel alto tienen más vida que en la beta: las peleas duran más, y tu mascota no llega al final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 75.317,
+  "t1": 87.761,
+  "tipo": "video",
+  "texto": "El arreglo: usa al abisario o al manáfago como apoyo, no como muro, y reparte la amenaza antes de que el élite te mire a ti. Lo sé. A mí tampoco me gusta trabajar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 87.761,
+  "t1": 93.978,
+  "tipo": "video",
+  "texto": "Número veinticuatro. Montar la fogata en cualquier sitio. En Forever la fogata no es decoración:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.978,
+  "t1": 101.537,
+  "tipo": "video",
+  "texto": "es parte del campamento, y en los reinos de JcJ es un faro para los enemigos. Y además quema. En la beta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.537,
+  "t1": 110.929,
+  "tipo": "video",
+  "texto": "un trol de la Horda puso una justo donde aparecen los personajes nuevos. Los novatos morían durante la cinemática de inicio. Un jugador lo resumió así:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.929,
+  "t1": 120.72,
+  "tipo": "video",
+  "texto": "me mató durante la introducción. No se sabe si Blizzard lo corrigió para el lanzamiento, así que el arreglo es sencillo: acampa en zonas seguras, o con tu grupo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.72,
+  "t1": 127.93,
+  "tipo": "video",
+  "texto": "Y no te quedes parado encima del fuego. Eso ya no es un error de Forever. Es un error de vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 127.93,
+  "t1": 136.352,
+  "tipo": "video",
+  "texto": "Y ahora, una noticia: hoy no narro solo. Siete voces de Crónicas de Tamriel compiten por mi puesto, y la que tú votes se queda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 136.352,
+  "t1": 144.547,
+  "tipo": "video",
+  "texto": "Edoardo. Me tocan el veintitrés y el veinte. José. El veintidós y el veintiuno, que yo también cometí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 144.547,
+  "t1": 155.614,
+  "tipo": "video",
+  "texto": "Mario. Diecisiete, dieciséis y quince. Sin correr. Casi. Soy Hope, con hache. El doce, el once y el diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.614,
+  "t1": 163.958,
+  "tipo": "video",
+  "texto": "MariCarmen. Nueve, ocho y siete, con las cuentas hechas. El Profeta. Los tres últimos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.958,
+  "t1": 172.786,
+  "tipo": "video",
+  "texto": "Así está escrito. Y alguien pidió una voz propia. Aquí estoy: el humano tras el telón. Me toca el seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.786,
+  "t1": 180.43,
+  "tipo": "video",
+  "texto": "El resto me lo quedo yo, que para eso juego en casa. Escucha a cada uno, y vota en los comentarios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.43,
+  "t1": 188.256,
+  "tipo": "video",
+  "texto": "Número veintitrés. Esperar en la Piedra de encuentro a que alguien te invoque. En Forever no hay buscador de mazmorras:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.256,
+  "t1": 197.605,
+  "tipo": "video",
+  "texto": "ni cola automática, ni grupo automático, ni teletransporte a la entrada. Y las Piedras de encuentro no invocan. Puedes quedarte ahí toda la tarde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.605,
+  "t1": 206.509,
+  "tipo": "video",
+  "texto": "Es una piedra. Lo único que trae a alguien es el Ritual de invocación del brujo, y necesita a dos ayudantes más junto a él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.509,
+  "t1": 214.196,
+  "tipo": "video",
+  "texto": "Lo que sí hay es el tablón de Buscar grupo del Classic, ahora con una opción obligatoria de estilo de juego. El arreglo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.196,
+  "t1": 222.93,
+  "tipo": "video",
+  "texto": "anuncia tu grupo en el tablón, ve caminando a la entrada, o hazte amigo de un brujo. Para algo están.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.93,
+  "t1": 231.885,
+  "tipo": "video",
+  "texto": "Número veintidós. Elegir el preajuste Clásico sin saber lo que te quitas. La primera vez que entras, Forever te pide elegir entre dos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.885,
+  "t1": 239.52,
+  "tipo": "video",
+  "texto": "Mejorado o Clásico. Mejorado te marca en el mapa las misiones y sus objetivos, junta tus bolsas en una sola,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 239.52,
+  "t1": 247.355,
+  "tipo": "video",
+  "texto": "y trae transfiguración y modelos en alta definición. Clásico lo apaga todo: sin zonas de misión en el mapa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 247.355,
+  "t1": 260.045,
+  "tipo": "video",
+  "texto": "las teclas vuelven a girar la cámara, y los modelos son los de dos mil cuatro. Mucha gente eligió Clásico por nostalgia, y ahora lleva media hora buscando cinco jabalíes en el bosque de Elwynn.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 260.045,
+  "t1": 265.865,
+  "tipo": "video",
+  "texto": "El arreglo está en Opciones, Sistema, Preajuste: cambiarlo no toca a tu personaje,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.865,
+  "t1": 274.13,
+  "tipo": "video",
+  "texto": "solo la presentación. Y Blizzard lo dice claro: si dudas, Mejorado. Número veintiuno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.13,
+  "t1": 282.575,
+  "tipo": "video",
+  "texto": "Llenar el juego de addons sin mirar quién los hizo. Forever ya trae de serie un medidor de daño y un gestor de reutilizaciones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.575,
+  "t1": 291.462,
+  "tipo": "video",
+  "texto": "en las Opciones avanzadas, y una guía de misiones. Y los addons tienen en combate las mismas restricciones que el World of Warcraft moderno:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.462,
+  "t1": 299.48,
+  "tipo": "video",
+  "texto": "muchos de los viejos ya no hacen lo que prometen. Encima, salieron cientos de addons para Forever hechos con inteligencia artificial,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.48,
+  "t1": 309.955,
+  "tipo": "video",
+  "texto": "y en Reddit los jugadores ya piden que los limiten. Sí, lo dice una voz hecha con inteligencia artificial. Por eso te lo digo con conocimiento de causa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.955,
+  "t1": 316.595,
+  "tipo": "video",
+  "texto": "El arreglo: primero lo que trae el juego, y después solo addons conocidos y mantenidos, como Questie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.595,
+  "t1": 325.647,
+  "tipo": "video",
+  "texto": "Auctionator o Details. Y antes de seguir, gracias por comentarios como estos, que nos dejan en cada video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 325.647,
+  "t1": 333.602,
+  "tipo": "video",
+  "texto": "Bruno dice que soy la mejor voz por inteligencia artificial que ha escuchado. Gracias, Bruno, que conste en el acta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 333.602,
+  "t1": 342.79,
+  "tipo": "video",
+  "texto": "Eso lo dijo antes de oírnos a nosotros. Todos se leen, y todos se toman en cuenta para mejorar el canal. Y a los malos comentarios les hacemos caso,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.79,
+  "t1": 351.249,
+  "tipo": "video",
+  "texto": "pero a nuestra manera. Número veinte. Pelear o perseguir a alguien justo en la frontera entre dos zonas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.249,
+  "t1": 359.43,
+  "tipo": "video",
+  "texto": "En Forever no hay reinos: hay megarreinos divididos en capas, y dos zonas vecinas pueden estar en capas distintas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 359.43,
+  "t1": 367.569,
+  "tipo": "video",
+  "texto": "Si cruzas la línea en plena pelea, el enemigo que perseguías desaparece, y la banda de tu facción que venía a ayudarte también.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.569,
+  "t1": 376.152,
+  "tipo": "video",
+  "texto": "El día del lanzamiento, un periodista de Kotaku vio otro fallo: veía a los jugadores de otra capa, pero no a sus monstruos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 376.152,
+  "t1": 385.908,
+  "tipo": "video",
+  "texto": "O sea, sabía que algo le estaba pegando, pero no sabía qué era. El arreglo: no pelees en las fronteras y, al salir de una capital,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.908,
+  "t1": 394.997,
+  "tipo": "video",
+  "texto": "comprueba que tus amigos siguen a tu lado. Número diecinueve. Subir al barco o al zepelín sin estar en grupo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.997,
+  "t1": 405.699,
+  "tipo": "video",
+  "texto": "En la beta, un viaje de Kalimdor a los Reinos del Este cambió de capa a mitad del mar. El veintitrés de octubre, Blizzard prometió que los grupos que viajen juntos ya no se separarían.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 405.699,
+  "t1": 412.877,
+  "tipo": "video",
+  "texto": "Pero también avisó que siempre habrá algo de capas, y el día del lanzamiento se reportaron barcos y zepelines que no llegaban al muelle.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.877,
+  "t1": 418.673,
+  "tipo": "video",
+  "texto": "Si viajas con tus amigos, formen el grupo antes de embarcar, y no lo cambien en una zona llena.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 418.673,
+  "t1": 430.605,
+  "tipo": "video",
+  "texto": "Y si el barco no llega, no es que lo hayas perdido: está en otra capa, con otra gente esperándolo. Número dieciocho. Ir a Kalimdor por la carrera de la muerte de Los Humedales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.605,
+  "t1": 438.074,
+  "tipo": "video",
+  "texto": "Cualquier veterano de la Alianza se acuerda: para coger el barco a Auberdine había que cruzar Los Humedales a pie hasta el Puerto de Menethil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.074,
+  "t1": 445.431,
+  "tipo": "video",
+  "texto": "En Forever hay una ruta nueva: un barco directo del puerto de Ventormenta a Auberdine, en Costa Oscura. Y hay más rutas nuevas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 445.431,
+  "t1": 452.711,
+  "tipo": "video",
+  "texto": "un circuito entre Menethil, Costasur y Auberdine, otra de Tanaris a Riverglades, y otra a la Isla Zephras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 452.711,
+  "t1": 465.32,
+  "tipo": "video",
+  "texto": "Así que si vas a Costa Oscura con un personaje de nivel doce, ya no tienes que morir seis veces por el camino. Toma el barco en Ventormenta. Los cocodrilos de Los Humedales no te van a extrañar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.32,
+  "t1": 471.502,
+  "tipo": "video",
+  "texto": "Y ya que hablamos de descubrir el mundo, aquí va una opinión con mucha pasión. Totalmente de acuerdo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 471.502,
+  "t1": 479.381,
+  "tipo": "video",
+  "texto": "descubrir es lo mejor de Forever, y por eso nunca te decimos dónde están los secretos. Solo te avisamos de que el barco no te espera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 479.381,
+  "t1": 490.559,
+  "tipo": "video",
+  "texto": "Descubrirlo a las tres de la mañana en un muelle vacío es una experiencia que preferimos ahorrarte. Número diecisiete. Matar monstruos verdes y grises para subir más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.559,
+  "t1": 499.678,
+  "tipo": "video",
+  "texto": "En Forever, Blizzard bajó a propósito la experiencia de los enemigos de menor nivel. Los jugadores calculan entre un cuatro y un veinte por ciento menos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.678,
+  "t1": 506.455,
+  "tipo": "video",
+  "texto": "Y los grises, como siempre, no dan nada. Ni las gracias. El diseñador Aidan Moon lo explicó:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.455,
+  "t1": 512.513,
+  "tipo": "video",
+  "texto": "ahora hay bonos de comida y de campamento, y no querían que el camino fácil fuera el más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 512.513,
+  "t1": 523.917,
+  "tipo": "video",
+  "texto": "Además, antes del lanzamiento subieron la vida de los monstruos de nivel alto. Limpiar un campamento de verdes tampoco es tan rápido. El arreglo: pelea con enemigos de tu nivel, y come antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 523.917,
+  "t1": 531.522,
+  "tipo": "video",
+  "texto": "Bien alimentado te da un cinco por ciento más de experiencia durante unos quince minutos. Número dieciséis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 531.522,
+  "t1": 542.5,
+  "tipo": "video",
+  "texto": "Hacer grupo para las misiones de recoger cosas. En Forever, los objetos de misión no se comparten: si son cinco recogiendo plumas, cada uno tiene que encontrar las suyas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 542.5,
+  "t1": 549.166,
+  "tipo": "video",
+  "texto": "Cinco jugadores alrededor del mismo cofre es la forma más lenta de subir de nivel jamás inventada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.166,
+  "t1": 555.635,
+  "tipo": "video",
+  "texto": "Aggrend dijo que nunca digan nunca a compartir el botín, pero de momento no hay nada anunciado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 555.635,
+  "t1": 566.379,
+  "tipo": "video",
+  "texto": "Al revés, hay misiones pensadas para grupo, como el tiburón Bruce de Los Baldíos, que da unos dos mil puntos de experiencia. El arreglo: en grupo, misiones de matar y de élite;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.379,
+  "t1": 574.05,
+  "tipo": "video",
+  "texto": "las de recoger, en solitario. Y a Bruce, entre varios, que muerde. Número quince.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 574.05,
+  "t1": 584.144,
+  "tipo": "video",
+  "texto": "Entrar a una mazmorra sin las misiones. En las notas del uno de octubre, las misiones de mazmorra pasaron a dar un cincuenta por ciento menos de experiencia extra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.144,
+  "t1": 591.928,
+  "tipo": "video",
+  "texto": "Y la experiencia de los monstruos de mazmorra subió alrededor de un veinte por ciento. Parece que da igual. No da igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 591.928,
+  "t1": 599.942,
+  "tipo": "video",
+  "texto": "Las misiones siguen siendo lo que más experiencia da: en la beta, una vuelta a Brazanegra sin misiones dio unas tres barras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.942,
+  "t1": 607.661,
+  "tipo": "video",
+  "texto": "Y en Forever hay nueve mazmorras nuevas, como las Ruinas de Lordaeron, cuyas misiones empiezan al nivel quince. El arreglo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 607.661,
+  "t1": 615.43,
+  "tipo": "video",
+  "texto": "recoge todas las misiones antes de entrar. Lo de correr por correr, déjamelo a mí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 615.43,
+  "t1": 626.398,
+  "tipo": "video",
+  "texto": "Y si sientes que vas cometiendo errores sin saber cuáles, para eso existe el patrocinador de hoy. Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.398,
+  "t1": 632.831,
+  "tipo": "video",
+  "texto": "Es self-play: juegas tú con tu personaje todo el tiempo, y un profesional verificado te guía por voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 632.831,
+  "t1": 643.495,
+  "tipo": "video",
+  "texto": "Casi nadie se atasca por ser malo, sino porque nadie le dijo qué estaba haciendo mal, y en Forever los vicios de las primeras semanas se quedan. Talentos, rotación, mazmorras nuevas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.495,
+  "t1": 649.996,
+  "tipo": "video",
+  "texto": "el plan para las bandas del nueve de diciembre o duelos: tú eliges, y pagas solo las horas que necesites.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 649.996,
+  "t1": 662.93,
+  "tipo": "video",
+  "texto": "El enlace está en la descripción, y por el lanzamiento de Forever hay un código para ti. Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 662.93,
+  "t1": 669.029,
+  "tipo": "video",
+  "texto": "Número catorce. Ser mago, brujo o sacerdote y seguir usando equipo del Águila.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 669.029,
+  "t1": 677.309,
+  "tipo": "video",
+  "texto": "En Forever bajaron el daño base de los hechizos, y subieron cuánto aprovechan el poder con hechizos. Traducido: sin poder con hechizos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 677.309,
+  "t1": 686.757,
+  "tipo": "video",
+  "texto": "pegas menos que en el Classic de siempre. Un jugador lo calculó en los foros: un veinticinco por ciento menos en la mayoría de los hechizos de daño directo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.757,
+  "t1": 694.414,
+  "tipo": "video",
+  "texto": "Por eso las armas de lanzador traen daño o sanación desde el nivel diez, y el equipo de sanador ahora también trae poder con hechizos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 694.414,
+  "t1": 702.93,
+  "tipo": "video",
+  "texto": "El arreglo: compara cada pieza nueva, y quédate con la que tenga poder con hechizos aunque la del Águila tenga más intelecto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 702.93,
+  "t1": 711.698,
+  "tipo": "video",
+  "texto": "Número trece. Pasar al lado de los libros de la biblioteca sin recogerlos. En la Temporada de Descubrimiento solo los magos podían recogerlos;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 711.698,
+  "t1": 720.337,
+  "tipo": "video",
+  "texto": "en Forever los recoge cualquier clase. Hay unos cuarenta libros únicos repartidos por posadas, ruinas y torres de todo el mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.337,
+  "t1": 728.067,
+  "tipo": "video",
+  "texto": "Se entregan a Garon Wendell, en lo alto del Barrio de los Magos de Ventormenta, o a Owen Thadd, en el Barrio de la Magia de Entrañas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 728.067,
+  "t1": 734.548,
+  "tipo": "video",
+  "texto": "Con diez libros te dan un collar, con veinte un anillo, y con veinticinco un arma o un objeto de mano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 734.548,
+  "t1": 744.19,
+  "tipo": "video",
+  "texto": "Y un detalle: el libro de Rumi de Gnomeregan aparece en Loch Modan y en los Páramos de Poniente, pero solo cuenta una vez. Número doce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 744.19,
+  "t1": 755.319,
+  "tipo": "video",
+  "texto": "Saltarte la Bolsa de dormir acogedora del nivel catorce. Al nivel catorce empieza una búsqueda del tesoro en un naufragio: en los Páramos de Poniente para la Alianza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.319,
+  "t1": 763.953,
+  "tipo": "video",
+  "texto": "y en Los Baldíos para la Horda. Aquí hay que hacer clic en los restos del barco, no matar monstruos esperando a que suelten algo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.953,
+  "t1": 771.902,
+  "tipo": "video",
+  "texto": "La cadena te lleva por varias zonas, como Loch Modan o las Laderas de Trabalomas, y al final te llevas la bolsa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 771.902,
+  "t1": 778.81,
+  "tipo": "video",
+  "texto": "Da hasta tres acumulaciones de un uno por ciento más de experiencia por muerte, y no se pierden al morir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 778.81,
+  "t1": 787.93,
+  "tipo": "video",
+  "texto": "Y cuenta como zona de descanso cuando te desconectas. Una cama portátil. Lo que siempre quisimos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 787.93,
+  "t1": 797.867,
+  "tipo": "video",
+  "texto": "Número once. No usar el campamento. Hacia el nivel cinco, un aventurero a las afueras del primer pueblo te da la misión The Great Outdoors,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.867,
+  "t1": 805.918,
+  "tipo": "video",
+  "texto": "y con ella se abre el campamento. Cada profesión tiene sus objetos de campamento: Sastrería pone un estandarte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 805.918,
+  "t1": 813.99,
+  "tipo": "video",
+  "texto": "Herboristería una vela de incienso, y Pesca, una pecera. Cada uno da un beneficio parecido a los de las clases,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 813.99,
+  "t1": 825.281,
+  "tipo": "video",
+  "texto": "aunque no se acumula con el mismo beneficio de clase. La mejor es la tienda de Peletería: una hora de experiencia descansada que tampoco se pierde al morir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 825.281,
+  "t1": 831.101,
+  "tipo": "video",
+  "texto": "El arreglo: haz la misión, enciende tu fogata y siéntate un minuto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 831.101,
+  "t1": 840.774,
+  "tipo": "video",
+  "texto": "Lejos del punto de aparición, por favor. Número diez. Gastar los puntos de Legado sin leer la letra pequeña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.774,
+  "t1": 849.802,
+  "tipo": "video",
+  "texto": "El sistema de legado es nuevo en Forever: es de toda la cuenta, y cada personaje puede gastar dieciséis puntos en el lanzamiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 849.802,
+  "t1": 856.202,
+  "tipo": "video",
+  "texto": "Primera trampa: la ventaja Talento pide Bien descansado al máximo, cinco de cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 856.202,
+  "t1": 866.709,
+  "tipo": "video",
+  "texto": "así que en realidad cuesta diez puntos, no cinco. Segunda: Regateo te rebaja los vendedores, pero no el instructor de equitación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 866.709,
+  "t1": 873.738,
+  "tipo": "video",
+  "texto": "Tercera: Emoción de la aventura no hace nada dentro de mazmorras, bandas ni campos de batalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 873.738,
+  "t1": 882.93,
+  "tipo": "video",
+  "texto": "El arreglo: planea los dieciséis puntos antes de tocar nada. Como en la vida real, pero con más dragones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 882.93,
+  "t1": 892.777,
+  "tipo": "video",
+  "texto": "Y antes del número nueve, otra tanda de comentarios que nos alegraron la semana. Nos pidieron seguir añadiendo mapas, y por eso este video va lleno de ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 892.777,
+  "t1": 897.832,
+  "tipo": "video",
+  "texto": "Gracias: todos se leen, y todos se toman en cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 897.832,
+  "t1": 911.367,
+  "tipo": "video",
+  "texto": "Número nueve. Llevar dos profesiones de recolección en tu personaje principal. El Legado da puntos por llegar a ciento cincuenta, doscientos veinticinco y trescientos en las seis profesiones de fabricación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.367,
+  "t1": 917.367,
+  "tipo": "video",
+  "texto": "Alquimia, Herrería, Encantamiento, Ingeniería, Peletería y Sastrería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.367,
+  "t1": 925.618,
+  "tipo": "video",
+  "texto": "Dieciocho puntos en total. La recolección no da ninguno. Ni la minería, ni la herboristería, ni el desuello.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 925.618,
+  "t1": 935.314,
+  "tipo": "video",
+  "texto": "Según un cálculo con los datos de la beta, subir del uno al sesenta con dos de fabricación te da hasta once puntos. Con dos de recolección, cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 935.314,
+  "t1": 945.43,
+  "tipo": "video",
+  "texto": "El arreglo: si tu principal es recolector, que un alternativo suba fabricación. O al menos una de fabricación hasta doscientos veinticinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 945.43,
+  "t1": 950.911,
+  "tipo": "video",
+  "texto": "Número ocho. Pagar la montura del nivel cuarenta siendo brujo o paladín.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 950.911,
+  "t1": 962.991,
+  "tipo": "video",
+  "texto": "La equitación de aprendiz cuesta cien de oro al nivel cuarenta, con la primera montura incluida. Pero los brujos de las dos facciones la consiguen con una misión de Strahad Farsan, en Trinquete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 962.991,
+  "t1": 970.472,
+  "tipo": "video",
+  "texto": "Y los paladines de la Alianza, con la misión del Tomo de la Nobleza, en Forjaz o en la Catedral de la Luz de Ventormenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 970.472,
+  "t1": 976.994,
+  "tipo": "video",
+  "texto": "Si ya pagaste los cien, felicidades: tienes dos caballos. Uno de ellos, gratis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 976.994,
+  "t1": 987.93,
+  "tipo": "video",
+  "texto": "El arreglo: haz tu misión de clase antes de ir al instructor. Y si eres honorable con tu facción, la equitación te sale un diez por ciento más barata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 987.93,
+  "t1": 994.862,
+  "tipo": "video",
+  "texto": "Número siete. Gastarte el oro antes de tiempo. Entrenar tu clase del uno al sesenta cuesta",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 994.862,
+  "t1": 1002.504,
+  "tipo": "video",
+  "texto": "unos doscientos siete de oro en todas las clases: el pase del lanzamiento lo igualó. Súmale la montura del cuarenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1002.504,
+  "t1": 1009.771,
+  "tipo": "video",
+  "texto": "la equitación de oficial y la montura épica: con los precios de la beta, unos mil trescientos de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1009.771,
+  "t1": 1021.159,
+  "tipo": "video",
+  "texto": "Y en Forever no hay Ficha de World of Warcraft para cambiar dinero real por oro dentro del juego. Así que esa capa morada de la tienda de Ventormenta, déjala donde está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1021.159,
+  "t1": 1030.43,
+  "tipo": "video",
+  "texto": "El arreglo: recolecta, vende en la subasta, y no compres caprichos en las capitales hasta tener la montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1030.43,
+  "t1": 1036.155,
+  "tipo": "video",
+  "texto": "Y hablando de pagar, alguien nos dejó una reflexión muy profunda. Tienes razón en algo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1036.155,
+  "t1": 1045.192,
+  "tipo": "video",
+  "texto": "aprender a jugar es lo más bonito de este juego, y por eso este video es gratis. Y si algún día quieres que alguien te lo enseñe en directo, tampoco pasa nada:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1045.192,
+  "t1": 1056.254,
+  "tipo": "video",
+  "texto": "hasta el Rey Exánime tenía a alguien que le hablaba al oído. Número seis. Me toca a mí. No poner el idioma preferido en línea en español.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1056.254,
+  "t1": 1061.929,
+  "tipo": "video",
+  "texto": "Como en Forever no hay reinos, el juego intenta juntarte con gente que eligió el mismo idioma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1061.929,
+  "t1": 1068.891,
+  "tipo": "video",
+  "texto": "Está en Opciones, Idiomas y redes sociales, Idioma preferido en línea. Y es de toda la cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1068.891,
+  "t1": 1081.926,
+  "tipo": "video",
+  "texto": "Si lo dejas en inglés, tus capas se llenan de gente que no te entiende cuando pides ayuda con el tiburón Bruce. Y ojo, que tiene un enfriamiento de veinticuatro horas: si lo cambias mal, esperas un día entero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1081.926,
+  "t1": 1090.43,
+  "tipo": "video",
+  "texto": "El arreglo: ponlo en español hoy mismo. Y luego vota por mí, que soy el único humano de esta lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1090.43,
+  "t1": 1096.27,
+  "tipo": "video",
+  "texto": "Número cinco. No entrar a una hermandad, y luego quejarte de que el mundo está vacío.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1096.27,
+  "t1": 1104.841,
+  "tipo": "video",
+  "texto": "El sistema de capas de Forever tiene una pieza llamada Familiar Faces, caras conocidas: intenta que los miembros de una hermandad siempre se vean.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1104.841,
+  "t1": 1114.771,
+  "tipo": "video",
+  "texto": "Y también te junta con la gente con la que ya te cruzaste por el camino. En el lanzamiento hubo zonas que se vaciaron a la media hora, y capitales con un puñado de jugadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1114.771,
+  "t1": 1122.6,
+  "tipo": "video",
+  "texto": "Aggrend reconoció en los foros que algunas zonas no se sienten tan pobladas como deberían, y Blizzard anunció ajustes para el seis de noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1122.6,
+  "t1": 1132.918,
+  "tipo": "video",
+  "texto": "El arreglo: entra a una hermandad de tu idioma cuanto antes. Y para juntarte con amigos, formen el grupo y acepten el aviso de refrescar el mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1132.918,
+  "t1": 1138.846,
+  "tipo": "video",
+  "texto": "Número cuatro. Venderle al vendedor las cajas interceptadas, las Waylaid Crates.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1138.846,
+  "t1": 1150.986,
+  "tipo": "video",
+  "texto": "Son unas cajas que sueltan los enemigos, y que también se compran y se venden en la subasta. Si las llenas con los materiales que piden, te dan Favor de comerciante: entre cinco y veinte, según la caja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1150.986,
+  "t1": 1158.179,
+  "tipo": "video",
+  "texto": "Y la primera caja que llenas puede traer una etiqueta de envío, que inicia una misión con cincuenta de favor y dos mil de reputación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1158.179,
+  "t1": 1164.321,
+  "tipo": "video",
+  "texto": "Eso pasa una sola vez por personaje, así que esa primera caja vale mucho más de lo que te paga el vendedor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1164.321,
+  "t1": 1174.085,
+  "tipo": "video",
+  "texto": "El arreglo: guárdalas y llénalas con una de las pilas que piden. Y para saber para qué sirve el favor, pasa al número tres. Número tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1174.085,
+  "t1": 1181.688,
+  "tipo": "video",
+  "texto": "Ignorar el Favor de comerciante. El sistema más grande que trae Forever a las profesiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1181.688,
+  "t1": 1189.711,
+  "tipo": "video",
+  "texto": "Hay más de seiscientas recetas nuevas, y las mejores se compran con Favor, en los campamentos de comerciantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1189.711,
+  "t1": 1198.508,
+  "tipo": "video",
+  "texto": "La Alianza tiene el suyo en Three Corners, en las Montañas Crestagrana. La Horda, al oeste del Cruce, en Los Baldíos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1198.508,
+  "t1": 1206.931,
+  "tipo": "video",
+  "texto": "Las recetas iniciales cuestan entre treinta y cuarenta y cinco de favor. Las de ingeniería, hasta trescientos sesenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1206.931,
+  "t1": 1217.805,
+  "tipo": "video",
+  "texto": "Y la montura del campamento, el Kodo de carga, cuesta seis mil de favor, reputación exaltada y nivel sesenta. Así está escrito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1217.805,
+  "t1": 1225.985,
+  "tipo": "video",
+  "texto": "El arreglo: desde el nivel diez, lleva tus cajas llenas al campamento. Marcy Baker, en Crestagrana, para la Alianza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1225.985,
+  "t1": 1234.125,
+  "tipo": "video",
+  "texto": "Dokimi, en Los Baldíos, para la Horda. Número dos. Lo que ya no se pone solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1234.125,
+  "t1": 1242.773,
+  "tipo": "video",
+  "texto": "En las notas del dos de noviembre, dos días antes del lanzamiento, Blizzard cambió dos cosas pequeñas que cuestan mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1242.773,
+  "t1": 1251.589,
+  "tipo": "video",
+  "texto": "Los hechizos que aprendes ya no se colocan solos en las barras de acción. Pagas al entrenador, y sigues jugando con lo de antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1251.589,
+  "t1": 1261.607,
+  "tipo": "video",
+  "texto": "Y además movieron niveles: la Furia justa del paladín se entrena ahora al nivel diez, y el pícaro aprende un ataque nuevo al veinticuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1261.607,
+  "t1": 1270.266,
+  "tipo": "video",
+  "texto": "Las bolsas tampoco se equipan solas. Y Forever añade una quinta ranura, solo para una bolsa de componentes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1270.266,
+  "t1": 1276.336,
+  "tipo": "video",
+  "texto": "El arreglo: después de cada entrenador, abre el libro de hechizos y arrastra lo nuevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1276.336,
+  "t1": 1288.494,
+  "tipo": "video",
+  "texto": "Y cada bolsa que saquees, clic derecho. Lo vi venir. Número uno. Elegir conjunto de reglas o facción sin tus amigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1288.494,
+  "t1": 1295.174,
+  "tipo": "video",
+  "texto": "En Forever no hay reinos: hay cinco megarreinos por región. Normal, JcJ,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1295.174,
+  "t1": 1301.694,
+  "tipo": "video",
+  "texto": "Juego de rol, Juego de rol JcJ, y Extremo, que llegará más adelante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1301.694,
+  "t1": 1311.815,
+  "tipo": "video",
+  "texto": "Y según Blizzard, no puedes cambiar libremente de conjunto de reglas. Para cambiarte, hay que crear un personaje nuevo. En JcJ, además,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1311.815,
+  "t1": 1322.64,
+  "tipo": "video",
+  "texto": "solo puedes tener personajes de una facción por cuenta. Y agruparte, entrar a mazmorras y a bandas, solo se puede con tus mismas reglas y tu misma facción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1322.64,
+  "t1": 1328.88,
+  "tipo": "video",
+  "texto": "Un espectador nos lo preguntó: si empieza en JcJ y sus amigos están en Normal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1328.88,
+  "t1": 1336.82,
+  "tipo": "video",
+  "texto": "¿podrá pasarse? No. Así está escrito. El arreglo: antes de pasar del nivel diez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1336.82,
+  "t1": 1347.937,
+  "tipo": "video",
+  "texto": "confirma con tu grupo las reglas y la facción. Y si te equivocaste, empieza ya: el legado y las colecciones son de toda la cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1347.937,
+  "t1": 1355.362,
+  "tipo": "video",
+  "texto": "Y esos son los veinticinco errores que estás cometiendo en World of Warcraft Forever, de una mascota de cartón a un reino sin vuelta atrás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1355.362,
+  "t1": 1362.707,
+  "tipo": "video",
+  "texto": "Cuéntame en los comentarios cuál cometiste tú. Y ahora lo importante: vota. ¿Qué voz se queda en este canal?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1362.707,
+  "t1": 1372.072,
+  "tipo": "video",
+  "texto": "Edoardo. Te saqué de la Piedra de encuentro. Vota con gratitud. José. Yo también elegí el modo Clásico. Vótame por honesto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1372.072,
+  "t1": 1379.691,
+  "tipo": "video",
+  "texto": "Mario. No corrí. Casi nada. Vótame. Hope. Con hache, y con campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1379.691,
+  "t1": 1389.584,
+  "tipo": "video",
+  "texto": "MariCarmen. Te ahorré cien de oro. Haz cuentas. Yo no pido votos. El número uno ya era mío antes de que empezara el video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1389.584,
+  "t1": 1397.484,
+  "tipo": "video",
+  "texto": "Y yo, el humano tras el telón. La única voz de esta lista que de verdad juega. Y yo soy la de siempre, y aquí sigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1397.484,
+  "t1": 1406.25,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen. Nos vemos en la próxima crónica, y nos vemos en Azeroth.",
+  "clip_s": 8
+ }
+]

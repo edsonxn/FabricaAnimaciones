@@ -83,6 +83,7 @@ Descartados por falta de demanda: chicle de Santa Anna, píldora de Miramontes, 
 | fecha | vistas canal (90 d) | lo nuevo que rindió / no rindió | fuera (Nexlev / búsquedas) | mejora que entra en el siguiente video |
 |---|---|---|---|---|
 | 23-oct | 4 666 · 27 subs | Play-Doh 7 y paleta 3 vistas (13-14 s de vista media); la mitad de las vistas sigue llegando de los Shorts de septiembre | marcas con giro humano de 150 K a 1,1 M; Cuestión de Dinero ×95 con 795 subs; inventos genéricos de «orgullo mexicano» ≤ 1 K | títulos con el objeto en teflón, Play-Doh y paleta (prueba abajo); fórmula y tanda nuevas |
+| 3-nov | 4 993 · 29 subs | sopa 88 vistas en su 1.er día (casi la mediana de 94 de un golpe: mejor arranque de la tanda); corn flakes 62 en 5 d (48 % visto) pero su Short 204; teflón 27 en 9 d (56 % visto); el título nuevo NO revivió Play-Doh (10) ni paleta (5). Búsqueda sigue en 218/90 d; Shorts = 59 % de las vistas | El Genio Sabelotodo (19,5 K) sigue rompiendo con historias de inventor de 17-24 min (aire acondicionado 424 K, Coca-Cola 196 K, Wright 175 K); Adam Armas (1,1 K subs) ×19 con 42 min | sacar el Short de la sopa YA; 3.º de la tanda (LEGO) a 10-12 min; tanda de Shorts con marca para no cortar el embudo |
 
 ## Prueba en curso (23-oct-2026): objeto en el título
 Títulos cambiados el 23-oct para medir si el objeto nombrado trae búsqueda e impresiones (comparar vistas/día y tráfico YT_SEARCH en ~7 días):
@@ -100,7 +101,7 @@ Títulos cambiados el 23-oct para medir si el objeto nombrado trae búsqueda e i
 ## Hipótesis a probar (una por video)
 | # | hipótesis | cómo se mide | estado |
 |---|---|---|---|
-| 1 | El objeto en el título trae búsqueda e impresiones | YT_SEARCH y vistas/día de teflón, Play-Doh y paleta a 7 días | en curso desde el 23-oct |
+| 1 | El objeto en el título trae búsqueda e impresiones | YT_SEARCH y vistas/día de teflón, Play-Doh y paleta a 7 días | ✗ en videos viejos (3-nov: Play-Doh 10, paleta 5; cambiar el título no reactiva un video que YouTube ya no impulsa); sigue en los nuevos |
 | 2 | Una marca que el público consume rinde más que un invento genérico | vistas/día de `corn_flakes` y `sopa_instantanea` contra la mediana (100) | pendiente |
 | 3 | La miniatura con el producto real + el nombre sube el CTR | CTR de Studio (Alcance) contra los anteriores | pendiente (falta leer el CTR en Studio) |
 | 4 | 12-15 min con este público de 35+ en TV da más minutos vistos | minutos vistos y % visto del 3.º de la tanda | pendiente |

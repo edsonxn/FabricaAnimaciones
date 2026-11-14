@@ -18,6 +18,9 @@ La interfaz aquí es la del reboot de Modern Warfare (2019-2026):
   linea(titulo, hitos)                línea de tiempo con años; un hito por marca; el último en ámbar
   espejo(titulo, izq, der, centro)    dos columnas enfrentadas (2007 | 2026) con un vínculo al centro; una columna por marca
   balanza(titulo, filas)              «lo que se permite / lo que se castiga»: filas con ✓ verde o ✗ rojo; una por marca
+  fusion(izq, der, resultado)         (13-nov-2026, cod_mandela2) DOS RECUERDOS REALES que se funden en uno FALSO: dos tarjetas
+                                      con su imagen se acercan (marca 0, marca 1), chocan con un fallo de señal (marca 2) y queda
+                                      una sola tarjeta «TU MEMORIA» con el recuerdo mezclado tachado en rojo
   pegatina(ruta, titulo, tam)         imagen REAL con borde blanco; nombre en placa táctica con filo ámbar
 Probar SIEMPRE con una hoja de cuadros antes de `fx`.
 """
@@ -674,9 +677,10 @@ def contador(valor, unidad="", titulo="", desde=0, decimales=0, w=760):
 # ------------------------------------------------------------------ MG nuevos de `cod_misterios` (9-nov-2026)
 def caso(estado, titulo, sub=None, w=900):
     """Estado del CASO de un misterio: la barra de escaneo recorre el panel («ANALIZANDO…») y se estampa el veredicto.
-    estado = "resuelto" (verde) | "sin_resolver" (ámbar) | "falso" (rojo) | "verdad" (verde); `sub` = p. ej. «Tardaron 4 años»."""
+    estado = "resuelto" (verde) | "sin_resolver" (ámbar) | "falso" (rojo) | "verdad" (verde) | "a_medias" (ámbar, 13-nov-2026);
+    `sub` = p. ej. «Tardaron 4 años»."""
     col, rot = {"resuelto": (VERDE, "RESUELTO"), "sin_resolver": (AMBAR, "SIN RESOLVER"), "falso": (ROJO, "FALSO"),
-                "verdad": (VERDE, "ERA VERDAD")}[estado]
+                "verdad": (VERDE, "ERA VERDAD"), "a_medias": (AMBAR, "A MEDIAS")}[estado]
     h = 300 if sub else 250
     ft = ajustar(titulo.upper(), "mb", 28, w - 90)
     fv = fuente("b", 108, "Bold Condensed")
@@ -748,5 +752,82 @@ def descifra(cifrado, claro, titulo="DESCIFRANDO", sub=None, w=None):
             x += _ancho(c, fm)
         if k >= n and sub:
             _txt(d, (M + w / 2, M + h - 44), sub, fs, VERDE, "mm", 255 * _eo((dt - t0 - n / 14) / .3), track=2)
+        return _salida(im, dt, dur)
+    return fn
+
+
+
+# ------------------------------------------------------------------ fusión: dos recuerdos reales → un recuerdo falso (13-nov-2026)
+def fusion(izq, der, resultado, titulo="ASÍ SE FABRICA UN EFECTO MANDELA", w=1500, h=640):
+    """izq/der = (ruta_imagen, rótulo, sub) = dos cosas REALES (p. ej. Weaver + cuchillo · Pyle + cigarro); resultado = el recuerdo
+    FALSO que sale de juntarlas («Weaver + puro»). Marca 0: entra la izquierda · marca 1: entra la derecha · marca 2: se acercan,
+    chocan con un fallo de señal (franjas RGB) y aparece la tarjeta central «TU MEMORIA» con el resultado tachado en rojo."""
+    fT = ajustar(titulo.upper(), "b", 40, w - 140, peso="Bold Condensed")
+    fR = fuente("b", 36, "Bold Condensed")
+    fS = fuente("mb", 22)
+    fM = fuente("mb", 24)
+    fX = ajustar(resultado.upper(), "b", 54, 520, peso="Bold Condensed")
+    imgs = []
+    for lado in (izq, der):
+        p_ = Image.open(lado[0]).convert("RGBA")
+        p_.thumbnail((330, 300))
+        imgs.append(p_)
+
+    def tarjeta(im, d, img, rot, sub, cx, cy, alfa):
+        a = int(255 * alfa)
+        if a <= 0:
+            return
+        bw, bh = 380, 420
+        x0, y0 = int(cx - bw / 2), int(cy - bh / 2)
+        d.rectangle((x0, y0, x0 + bw, y0 + bh), fill=OSCURO + (int(150 * alfa),))
+        _escuadras(d, x0, y0, x0 + bw, y0 + bh, a, L=26)
+        t = img.copy()
+        if alfa < 1:
+            t.putalpha(t.getchannel("A").point(lambda v: int(v * alfa)))
+        im.alpha_composite(t, (int(cx - t.width / 2), y0 + 20))
+        _txt(d, (cx, y0 + bh - 74), rot.upper(), fR, BLANCO, "mm", a, track=2)
+        _txt(d, (cx, y0 + bh - 34), sub.upper(), fS, AMBAR, "mm", a, track=2)
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.60)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220)
+        _txt(d, (M + w / 2, M + 52), titulo.upper(), fT, BLANCO, "mm", 255, track=2)
+        mk = list(marcas or [.3, 1.4, 2.8])
+        while len(mk) < 3:
+            mk.append(mk[-1] + 1.3)
+        cy = M + h / 2 + 30
+        junta = _eo((dt - mk[2]) / .45) if dt >= mk[2] else 0.0
+        sep = (w * .30) * (1 - junta)
+        for k, (lado, img) in enumerate(zip((izq, der), imgs)):
+            if dt < mk[k]:
+                continue
+            u = _eo((dt - mk[k]) / .35)
+            cx = M + w / 2 + (-1 if k == 0 else 1) * (sep + 40 * (1 - u))
+            tarjeta(im, d, img, lado[1], lado[2], cx, cy, u * (1 - junta))
+        if dt >= mk[1] and junta < 1:
+            _txt(d, (M + w / 2, cy), "+", fuente("b", 110, "Bold Condensed"), AMBAR, "mm", 255 * (1 - junta))
+        if dt >= mk[2]:
+            u = dt - mk[2]
+            if .35 < u < .75:                                       # fallo de señal al chocar
+                rng = np.random.default_rng(int(u * 40))
+                for _ in range(7):
+                    yy = int(M + 100 + rng.random() * (h - 160))
+                    c = (ROJO, VERDE, (80, 160, 255))[int(rng.random() * 3)]
+                    d.rectangle((M + 20, yy, M + w - 20, yy + int(4 + rng.random() * 14)), fill=c + (110,))
+            if u > .55:
+                v = _eo((u - .55) / .35)
+                bw, bh = 640, 300
+                x0, y0 = int(M + w / 2 - bw / 2), int(cy - bh / 2)
+                d.rectangle((x0, y0, x0 + bw, y0 + bh), fill=OSCURO + (int(200 * v),))
+                d.rectangle((x0, y0, x0 + bw, y0 + bh), outline=ROJO + (int(230 * v),), width=4)
+                _txt(d, (x0 + bw / 2, y0 + 48), "TU MEMORIA", fM, ROJO, "mm", 255 * v, track=6)
+                _txt(d, (x0 + bw / 2, y0 + 150), resultado.upper(), fX, BLANCO, "mm", 255 * v, track=2)
+                if u > 1.1:                                         # tachón rojo
+                    z = _eo((u - 1.1) / .3)
+                    x1 = x0 + 50 + (bw - 100) * z
+                    d.line([(x0 + 50, y0 + 172), (x1, y0 + 128)], fill=ROJO + (240,), width=9)
+                    if z >= 1:
+                        _txt(d, (x0 + bw / 2, y0 + bh - 44), "NUNCA PASÓ", fM, ROJO, "mm", 255, track=6)
         return _salida(im, dt, dur)
     return fn

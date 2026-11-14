@@ -1,0 +1,69 @@
+{
+ "hitmarker": {
+  "id": "o5p80IIyn-I",
+  "titulo": "Mlg gaming hitmarker greenscreen + sound effect.",
+  "canal": "mr.mister",
+  "dur": 2,
+  "nota": "recortado a mano 0,6-1,05 s"
+ },
+ "mision_fallida": {
+  "id": "gxQpL3RWBtQ",
+  "titulo": "Call of Duty Mission Failed sound effect",
+  "canal": "Toasty",
+  "dur": 6,
+  "nota": "VOZ «Mission failed, we'll get them next time» (meme de MW2019): no usar bajo la narración"
+ },
+ "subir_nivel": {
+  "id": "HodEXnUqUYU",
+  "titulo": "Call of Duty 4/Modern Warfare Remastered - Level Up Sound Effect",
+  "canal": "Mati Blaster",
+  "dur": 7
+ },
+ "intel": {
+  "id": "8BedqCJrykc",
+  "titulo": "latest Intel..ahah sounds nerdy",
+  "canal": "thegiantTofu",
+  "dur": 15,
+  "nota": "VOZ «Hey!»: no es un sonido de intel; no usar"
+ },
+ "killstreak": {
+  "id": "yjlelOgBHNE",
+  "titulo": "Tactical Nuke Ready For Launch MW2 - Sound Effect",
+  "canal": "WhiteFox",
+  "dur": 5,
+  "nota": "VOZ «Tactical Nuke ready for launch»"
+ },
+ "menu": {
+  "id": "tc0ONhrJB94",
+  "titulo": "Modern Warfare chatter menu noises",
+  "canal": "NinesNX",
+  "dur": 6,
+  "nota": "VOZ «Roger.»"
+ },
+ "uav": {
+  "id": "9hdW7Sj9DQA",
+  "titulo": "UAV Online Sound effect (Call of Duty Modern Warfare 2)",
+  "canal": "Nine to Five Moments",
+  "dur": 5,
+  "nota": "VOZ «UAV online»"
+ },
+ "nuke": {
+  "id": "7olVDwbX8ao",
+  "titulo": "Tactical Nuke Incoming Sound Effect",
+  "canal": "Sath Buttons",
+  "dur": 10,
+  "nota": "VOZ «Tactical nuke incoming»"
+ },
+ "logro": {
+  "id": "yijhJSUghqs",
+  "titulo": "Call of Duty : Modern Warfare III - Level Up Sound Effect",
+  "canal": "CODEINEFROSTY88",
+  "dur": 5
+ },
+ "radio": {
+  "id": "3AAz24vWtOY",
+  "titulo": "Walkie Talkie Sound Effects",
+  "canal": "All Sound Effects",
+  "dur": 12
+ }
+}

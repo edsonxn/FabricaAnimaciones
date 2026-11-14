@@ -185,6 +185,13 @@ def main():
     texto = " ".join(a.texto)
     os.makedirs(DIR, exist_ok=True)
     if a.esperar or a.hijo:
+        try:                                             # REGLA (el usuario, 4-nov-2026): primero el Google TV si está disponible;
+            import tele                                  # solo si no, la voz de la PC como antes (nucleo/tele.py)
+            if tele.espejo_avisar(texto):
+                log(f"en la tele: {texto[:80]}")
+                return
+        except Exception as e:
+            log(f"tele: {str(e)[:120]}")
         decir(texto, a.chatterbox)
         return
     flags = getattr(subprocess, "DETACHED_PROCESS", 0) | getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0) | SIN_VENTANA

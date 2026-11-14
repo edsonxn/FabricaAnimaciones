@@ -1,0 +1,31 @@
+# Sexto B: Ciencias para el examen (guía de estudio 3) — ESTADO
+<!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
+- canal: NINGUNO — video para el grupo SEXTO B de la primaria Benito Juárez de Juchipila, Zac. NO se sube a YouTube. Al terminar: tele + aviso + Rayo al celular.
+- estilo: el MISMO de `videos/amaya_estudio2/` (acuarela por código, «el profe Tilde» = `kit_amaya.papa()`, voz Alberto Rodríguez `l1zE9xgNpUTaQCZzpNJa`, eleven_v4_turbo). Kit copiado de ahí.
+- etapa: guion ✅ · voz ✅ (51/51, 504,9 s) · tiempo ✅ · planos a-h ✅ · promesas ✅ · SFX ✅ (sonidos_ci.py, 232) · música ✅ (biblioteca: dos_lunas t1, corn_flakes t5, doce_animales t8, arana_techo t4) · mezcla ✅ (−14,5 LUFS) · render ✅ · MASTER ✅ 9-nov (8:25, 410 MB) · verificar ✅ · tele ✗ (apagada: aviso por voz) · Rayo enviado
+- siguiente: esperar el visto bueno del usuario. Detalles menores vistos en `previews/final_hoja.jpg`: a los 47,6 s el «TRUCO» entra solo un instante antes que su contenido; a los 503 s un corazón tapa la «QU» de «¡YO SÉ QUE PUEDEN!» (`plano_h.cierre3`, se arregla con `video --rehacer 500-505` + `final`). Al aprobar: `python fab.py sextob_ciencias limpiar`.
+
+## Sesiones
+- alias: sextob_ciencias, el video 3 de sexto B, Ciencias de sexto B
+- vista previa: NO (una sesión directo al MASTER)
+| # | Tramo | Estado | Nota |
+|---|---|---|---|
+| 1 | guion, voz, tiempo, planos a-d | ◐ 9-nov | cortada por contexto (180 mil) |
+| 2 | planos d-h, promesas, SFX, música, MASTER | ✅ 9-nov | MASTER entregado; arreglada la cuenta 3-2-1 (número en ROJO, salía mancha negra) |
+
+## Hallazgos
+- 6 fotos (9-nov) en `fuente/` (vienen de lado; enderezadas con ROTATE_90_COUNTERCLOCKWISE en `propios/cuaderno/`): materia, aire, atmosfera, jeringa, inmune1 (preg. 1-7), inmune2 (13-19). Faltan las preguntas 8-12 (monocitos, linfocitos T): se cubren con dato de libro de texto.
+- Sin errores graves en el cuaderno. La respuesta de la jeringa («las partículas no se pueden juntar más») se completa: se aprietan hasta un punto y empujan de regreso.
+
+## Lecciones (sesión 2)
+- `rotulo` con col=TINTA y tinta=True sale como MANCHA NEGRA (pasó en la cuenta 3-2-1 de `kit_amaya.cuenta`, en «O» y «CONTRA UN»): usar MORADO/ROJO o `tinta=False`.
+- `celula()` tiene `tipo="gato"` por defecto: para un glóbulo sin truco pasar `tipo=""`.
+- `ww(esc, frase, "t")` empata con cualquier palabra que empiece con t (p. ej. «tipos»): usar secuencias («linfocitos t», «es como»).
+
+## Histórico (checkpoint 9-nov, sesión 1 cortada por contexto)
+- HECHO: `guion.py` (21 escenas, 504,9 s), voz + `timeline.json`, `kit_amaya.papa` con BATA blanca, bolsillo con plumas y goggles en la frente (la voz dice «traigo bata de científico»).
+- Piezas nuevas: `piezas_ci.py` (globo, balanza, banca, vaso, piedra, `particulas` en caja, tanque de gas con gas que sale, `jeringa(emb, jala, dedo, ay)` → (pos, mango), `flecha_empuje`, `tierra(atm, cobija)`, castillo, virus(flojo), bacteria, hongo, `celula(tipo gato|mono|leon, granos, come, letra T|B)`, anticuerpo en Y, calcomanía, cancha, portería, balón, plato, corredor) · `comun_ci.py` (titulo, cartel con palomita/tache, `pantalla_pregunta`, `opciones(ops)`).
+- Planos: a gancho ✅ · b materia+gas ✅ · c jeringa+preg1+resp1 ✅ · d atmósfera+aire(% que cuentan solos, barra)+salón de 100+preg2/resp2 (trampa nitrógeno) ESCRITO, falta hoja.
+- Patrón: `T_INI = T0(esc)`, `TRAMOS [(t0, f)]` con `piezas_fj.base`, `papa(im, t, 1770, H + 30, alto=330)`; nada importante en x > 1500 con y > 750. Anclas `ww(esc, frase, palabra, n)`; palabras con su segundo: imprimir timeline.json. OJO: `rotulo` con col=TINTA y contorno sale mancha negra (usar otro color o tinta=False).
+- FALTA, en orden: plano_e defensa (232,8-273,6: SISTEMA INMUNITARIO = INMUNOLÓGICO = DE DEFENSA + foto `inmune1`; cuerpo con bacterias/hongos/virus/sustancias extrañas (calavera); CASTILLO con murallas PIEL·VELLOS·SUDOR·LÁGRIMAS·MOCO (moco con capa de HÉROE 264,9); INMUNIDAD INNATA = NACES CON ELLA, bebé) · plano_f leucocitos (273,6-313,2: virus brinca la muralla 275,1; GLÓBULOS BLANCOS soldados 278,1; LEUCOCITOS / LEUCO = BLANCO; GRANULOCITOS·MONOCITOS·LINFOCITOS → orejas de gato/mono/melena de león en «gatos, monos y leones» 294,4-296,2; gato con granitos suelta ENZIMAS a un virus 301,6; mono crece → MACRÓFAGO se come una bacteria 307,9, «COME MUCHO») + linfocitos (313,2-360: león T destruye célula infectada 320,1; león B fabrica anticuerpos Y 326,9 y CÉLULAS B DE MEMORIA 329,7; ANTÍGENO = lo de fuera: toxinas, bacterias, virus, pedacitos 337,9-339,8; «ANTÍGENO rima con AJENO» 342,7-343,9; anticuerpos se pegan al virus + calcomanía «¡ESTE ES!» 348,0-349,2 y lo destruyen 352,5; ANTI-CUERPO con CUERPO resaltado 354,3-356,4) · plano_g preg3/resp3 (360-382,8: otro nombre + 3 tipos; LEUCOCITOS, gatos-monos-leones) + vacunas (382,8-404,4: ACTIVA + MEMORIA; VIRUS DEBILITADOS (virus flojo con curita) O PARTES; cancha: partido de práctica contra rival flojito 400,2; llega el de verdad 401,4 y ya se lo sabe) + autoinmune (404,4-428,4: SE CONFUNDE, ataca células buenas 410,4; AUTO = UNO MISMO, como AUTOBIOGRAFÍA; ¡AUTOGOL! 419,4 balón a la propia portería; plato saludable 423,5, corredor 424,9, cama+zzz 426,5) + preg4/resp4 (428,4-445,2: ¿de qué están elaboradas las vacunas? → virus debilitados o partes; memoria) · plano_h repaso (445,2-486: tarjetas por palabra en 3 columnas MATERIA / ATMÓSFERA / DEFENSA) + cierre (486-504,9: LOGRO DESBLOQUEADO con trofeo, repásenlo antes de dormir (cama, luna), ¡ÉCHENLE GANAS!, ¡MUCHO ÉXITO, SEXTO B! con corazones).
+- Luego: `promesas.md` · SFX: `sonidos_es.py`/`sonidos_amaya.py` copiados como modelo → escribir `sonidos_ci.py` con pistas ancladas a ESTE guion y cambiar `sfx_proc.pistas()` para importarlo (aplausos no; sí: siseo del gas que se escapa 92,9, «¡zas!» del émbolo 110,7, pop de partículas, ñam del macrófago, silbato y gol en la cancha 397-403/419,4) · música: `python fab.py biblioteca sugerir sextob_ciencias` (DISTINTA de la de amaya_independencia y amaya_estudio2) → `usar` por tramo (4 tramos en LYRIA) → armar · `python fab.py sextob_ciencias comprobar` · `mezcla` · `video --procs 3` · `final` · `verificar` · `python fab.py tele video sextob_ciencias master` (en 2.º plano) · `python fab.py avisar "..."` · Rayo al celular. NO se sube.

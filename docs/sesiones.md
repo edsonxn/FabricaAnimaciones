@@ -12,10 +12,13 @@ Cuando el usuario diga «continúa el video de las 1200», «sigue con el video 
 3. Haz **ese tramo** completo, con el rigor de siempre (revisar con la vista). Si el usuario pide «haz dos tramos», haz dos.
 4. Al terminar (o si la conversación se alarga demasiado, con muchas imágenes o errores): **cierra el tramo** (punto 3).
 
-## 2. Video NUEVO: proponer el plan de sesiones ANTES de producir
-Después del protocolo de video nuevo (canal → métricas/ideas → tema, estilo y duración; `docs/publicacion.md`), estima las
-sesiones y **pregúntale al usuario cuántas quiere** (AskUserQuestion, tu recomendación primero y una línea de por qué: cuántos
-minutos y escenas lleva cada tramo). Luego escribe el plan en la sección «## Sesiones» de su `ESTADO.md`.
+## 2. Video NUEVO: UNA sesión, directo al MASTER (el usuario, 5-nov-2026)
+**Por defecto, si el usuario no dice otra cosa al empezar, el video se hace completo en una sola sesión hasta el MASTER**
+(`final` + `verificar` → aviso → subir y programar). Ya no se estima ni se pregunta cuántas sesiones, ni si quiere ver el
+principio renderizado: la regla de tramos del 12-oct-2026 era para ahorrar tokens y quedó obsoleta con el plan MAX («no son los
+tokens»). La duración, si no la dice, la decide Claude según el canal. Solo se pregunta lo que no esté claro en el mensaje.
+Los checkpoints en `ESTADO.md` siguen (un corte o cambio de cuenta puede pasar: § 6-7).
+**Solo si el usuario pide tramos** (o un video concreto lo exige y él lo acepta), se usa lo de abajo: tabla de ritmos y plan en «## Sesiones».
 
 ### Cómo estimarlo
 `sesiones ≈ 1 (guion + voz + tiempo) + ⌈minutos dibujados ÷ ritmo⌉ + 1 (cierre)`, con estos ritmos por sesión:
@@ -34,12 +37,12 @@ quita la primera. El cierre (sonido → mezcla → render → final → verifica
 en privado) va siempre en su propia sesión: el render corre solo y deja margen para corregir con `video --rehacer`.
 Ejemplo real: «Las 1.200», 15:47 en noir_color denso, voz hecha → 6 tramos de escenas + 1 de cierre = 7.
 
-## 2b. VER EL PRINCIPIO ANTES DE SEGUIR: render PARCIAL (regla del usuario, 12-oct-2026; videos dibujados por código)
+## 2b. Render PARCIAL (solo si el usuario lo pide; antes regla del 12-oct-2026, retirada el 5-nov-2026)
 Origen: en «Las 1.200» (15:47 en 7 tramos) el usuario quiso ver lo ya hecho (los primeros 9 min) antes de decidir si se hacían las
-demás escenas. **Al proponer el plan de sesiones (punto 2) pregunta TAMBIÉN, en el mismo AskUserQuestion:** «¿Quieres ver el principio
+demás escenas. **Ya NO se pregunta por defecto (5-nov-2026).** Antes, al proponer el plan de sesiones se preguntaba: «¿Quieres ver el principio
 del video antes de hacer el resto? ¿Después del primer minuto, de los 2 primeros, de cada tramo, o solo al final?». Anota la
 respuesta en la sección «## Sesiones» del `ESTADO.md` (línea `- vista previa: ...`) y, en cada punto acordado, **cierra el tramo con
-el render parcial ya lanzado** y espera a que el usuario lo vea y diga si se continúa. Si no se acordó, ofrécelo igual al cerrar un tramo.
+el render parcial ya lanzado** y espera a que el usuario lo vea y diga si se continúa. Hoy solo se hace si el usuario lo pide.
 - **SIEMPRE CON AUDIO COMPLETO (regla del usuario, 13-oct-2026, al ver el avance mudo de `sonic_exe`):** «los preview con audio, sonido,
   música, todo, porque es parte importante». Antes de lanzar el parcial deja hecho `voz`, `sfx`/`fx_audio`, `musica` (Lyria) y `mezcla`
   (`audio/final.wav`); el parcial lo recorta y lo une. Si el plan era ver el primer minuto en el tramo de escenas, el audio de ESE
@@ -136,6 +139,10 @@ de ~100 mil sale MÁS caro (se paga el arranque una y otra vez). Script: `nucleo
      («no esperes mi mensaje, termínalo todo», 29-oct), y reintenta el relevo en el siguiente turno del usuario.
   4. **Quien recibe la nota de una sesión cortada NO abre su continuación:** la abre ella misma (y, si la app se lo impide, sigue
      trabajando ella, punto 3). La sesión principal solo avisa al usuario y detiene duplicados si los ve.
+- **Con la regla «una sesión, directo al MASTER» (5-nov-2026) se queda igual, a 180 mil de trabajo** (decisión de Claude, el
+  usuario: «lo que sea mejor para ahorrar»). Subirlo sale más caro: hoy ya corta hacia los ~280 mil totales (≈ 34 % de ahorro
+  según la simulación de arriba) y el óptimo (150-200 mil totales, ~40 %) obligaba a saltar de hilo a cada rato. El relevo NO
+  rompe la regla: la sesión nueva sigue sola y sin preguntar hasta el MASTER (el brief lo dice), para el usuario es el mismo video.
 - **Ajustes:** variable de entorno `FAB_CORTE_CONTEXTO` (tokens de trabajo; `0` = apagado). Medir un hilo: `python nucleo/hook_contexto.py --medir <transcrito.jsonl>`.
 - **La otra palanca:** los ~83 mil del arranque se pagan en cada llamada de cada sesión; recortar `CLAUDE.md`/`MEMORY.md` y los
   conectores que la Fábrica no usa ahorra en todo.

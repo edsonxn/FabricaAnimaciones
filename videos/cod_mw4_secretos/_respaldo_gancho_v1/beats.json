@@ -1,0 +1,938 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.853,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Clasificación: secreto. Asunto: Modern Warfare 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.853,
+  "t1": 17.456,
+  "tipo": "video",
+  "texto": "Le disparas a un cuadro en Corea del Norte, y tu propio compañero te ejecuta. Te asomas a una tele en Nueva York, y alguien está jugando GTA seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.456,
+  "t1": 26.602,
+  "tipo": "video",
+  "texto": "Sí. Antes que tú. Infinity Ward escondió todo esto en el último capítulo de la saga, que salió hace apenas unas semanas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.602,
+  "t1": 34.645,
+  "tipo": "video",
+  "texto": "Hoy abrimos veinticinco secretos. Todos comprobados, y con sus fuentes en la descripción. Y el número uno no se ve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.645,
+  "t1": 44.534,
+  "tipo": "video",
+  "texto": "Se oye. Así que quédate hasta el final, soldado. Número veinticinco. La tele que nadie mira.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 44.534,
+  "t1": 52.438,
+  "tipo": "video",
+  "texto": "En la segunda misión persigues a Makarov por un edificio de Nueva York. Y en una pantalla está la guía de televisión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.438,
+  "t1": 59.358,
+  "tipo": "video",
+  "texto": "La programación es inventada: Princess Starfish dos, el regreso al trono. Operation Saber tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.358,
+  "t1": 68.808,
+  "tipo": "video",
+  "texto": "Y Excessive Cakes, o sea, Pasteles excesivos. Y al final de la misión hay una pizzería de parodia, Joe's Pizza House.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.808,
+  "t1": 77.93,
+  "tipo": "video",
+  "texto": "Alguien escribió una programación entera para una pantalla que ves medio segundo. Mientras persigues a un terrorista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.93,
+  "t1": 85.854,
+  "tipo": "video",
+  "texto": "En el veinticuatro, pulsa E para despedirte. En la misión Atrapados, en el norte nevado, el soldado Chow se",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.854,
+  "t1": 96.242,
+  "tipo": "video",
+  "texto": "desangra en el refugio mientras tú sales a explorar. Cuando vuelves, ya murió. Y el juego te deja acercarte y pulsar E para despedirte de él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 96.242,
+  "t1": 103.662,
+  "tipo": "video",
+  "texto": "Es el famoso Press F to pay respects de Advanced Warfare, el meme del que se rio internet entero en dos mil catorce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.662,
+  "t1": 111.468,
+  "tipo": "video",
+  "texto": "Solo que esta vez nadie se ríe. Número veintitrés. El pato armado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.468,
+  "t1": 120.825,
+  "tipo": "video",
+  "texto": "En DMZ, dentro de un departamento de Hajan River Heights, hay un patito de goma. Con un cuchillo. Nadie sabe por qué está ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.825,
+  "t1": 130.43,
+  "tipo": "video",
+  "texto": "Nadie lo explica. En Modern Warfare 4, hasta los patos van armados. Si lo encuentras, no le des la espalda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.43,
+  "t1": 137.336,
+  "tipo": "video",
+  "texto": "En el veintidós, la física que nunca habíamos tenido. Dispara a través de una granada de humo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.336,
+  "t1": 145.653,
+  "tipo": "video",
+  "texto": "y las balas le abren agujeros. Se ve el túnel de cada tiro. Agáchate a disparar junto al barro, y el arma se salpica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.653,
+  "t1": 155.43,
+  "tipo": "video",
+  "texto": "Y si te disparan, se mancha de sangre. Son detalles que la saga nunca tuvo. Y casi todos los pasamos corriendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.43,
+  "t1": 163.138,
+  "tipo": "video",
+  "texto": "Número veintiuno. Las armas que se acuerdan de dos mil nueve. En la misión de Bombay, el Patriot XMR,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.138,
+  "t1": 170.647,
+  "tipo": "video",
+  "texto": "la versión de este juego del ACR, recarga casi igual que el ACR del Modern Warfare dos original.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.647,
+  "t1": 180.615,
+  "tipo": "video",
+  "texto": "Y en la misión final, el AK setenta y cuatro u lleva camuflaje de cinta blanca. Como la FAMAS de cinta blanca de la misión en la nieve de dos mil nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.615,
+  "t1": 187.93,
+  "tipo": "video",
+  "texto": "Si eso no te dice nada, eres muy joven. Y nosotros, muy viejos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 187.93,
+  "t1": 198.52,
+  "tipo": "video",
+  "texto": "En el veinte, tu soldado hace de Neo. Si haces la animación de inspeccionar el arma con las manos vacías, a veces el personaje se inventa otra cosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.52,
+  "t1": 205.935,
+  "tipo": "video",
+  "texto": "Esquiva balas echándose hacia atrás como en Matrix, hace el gesto de Neo con la mano, o se truena el cuello.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.935,
+  "t1": 215.43,
+  "tipo": "video",
+  "texto": "Es la tradición de Modern Warfare dos Remastered, donde tu soldado jugaba piedra, papel o tijera. Él solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.43,
+  "t1": 223.742,
+  "tipo": "video",
+  "texto": "Número diecinueve. Un periódico con la caja mágica. En la misión Cumpliendo órdenes juegas como soldado norcoreano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.742,
+  "t1": 234.003,
+  "tipo": "video",
+  "texto": "Y bajo los pies de la primera familia hay un periódico. En la foto sale la caja mágica de Zombies, la de Infinite Warfare, de dos mil dieciséis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 234.003,
+  "t1": 242.792,
+  "tipo": "video",
+  "texto": "Detalle: Modern Warfare 4 no tiene modo Zombies. Pero el periódico de la aldea, por lo visto, sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 242.792,
+  "t1": 251.799,
+  "tipo": "video",
+  "texto": "En el dieciocho, no te tumbes. En la última misión, Price persigue al Arquero con un trozo de metal clavado en el estómago.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 251.799,
+  "t1": 257.179,
+  "tipo": "video",
+  "texto": "Si te tiras al suelo, Price recibe daño. Lo probaron en dificultad Realismo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.179,
+  "t1": 265.712,
+  "tipo": "video",
+  "texto": "duele, pero no te mata. Alguien en Infinity Ward pensó en el jugador que se tira al piso por costumbre. Y decidió castigarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.712,
+  "t1": 272.052,
+  "tipo": "video",
+  "texto": "Un poco. Número diecisiete. El contrabando de Occidente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 272.052,
+  "t1": 282.931,
+  "tipo": "video",
+  "texto": "Al registrar casas en Cumpliendo órdenes encuentras lo prohibido: una novela occidental, un reproductor con música de fuera. Y la medicina del corazón de un hombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.931,
+  "t1": 293.564,
+  "tipo": "video",
+  "texto": "Él dice que morirá sin ella. Y la respuesta es que morirá por eso de todos modos. Son los mismos objetos que se castigan de verdad en Corea del Norte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.564,
+  "t1": 302.726,
+  "tipo": "video",
+  "texto": "Y una caja de herramientas con candado, código dos, uno, cuatro, guarda otro más, con una nota para un logro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.726,
+  "t1": 308.766,
+  "tipo": "video",
+  "texto": "En el dieciséis, los trucos de los desarrolladores. En la primera misión, tras el apagón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.766,
+  "t1": 315.509,
+  "tipo": "video",
+  "texto": "la pantalla se va a negro. Y en ese segundo te teletransportan a una copia destruida del barrio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 315.509,
+  "t1": 323.663,
+  "tipo": "video",
+  "texto": "Si miras bien, una camioneta que tapaba un callejón desaparece, y de pronto se ve un mapa abierto que no debías ver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 323.663,
+  "t1": 334.696,
+  "tipo": "video",
+  "texto": "En la misión del tren, los rehenes se esfuman en cuanto dejas de mirarlos. Y si retrocedes en las trincheras, te aparecen granadas a los pies, como los morteros invisibles de CoD 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.696,
+  "t1": 345.202,
+  "tipo": "video",
+  "texto": "El juego no tiene muros invisibles. Tiene castigos invisibles. Número quince. Los dos de relleno que no son de relleno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.202,
+  "t1": 352.693,
+  "tipo": "video",
+  "texto": "En Bombay, Gaz va con dos soldados del SAS: Wallcroft y Griffin. Parecen genéricos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.693,
+  "t1": 360.293,
+  "tipo": "video",
+  "texto": "No lo son. Pelearon a tu lado en el metro de Londres, en Modern Warfare 3, de dos mil once. Y Griffin, según los fans,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.293,
+  "t1": 369.105,
+  "tipo": "video",
+  "texto": "ya estaba en el entrenamiento de CoD 4. Personajes de la saga original, metidos en el reboot, que es otra línea temporal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.105,
+  "t1": 379.208,
+  "tipo": "video",
+  "texto": "Diecinueve años de servicio. Y siguen sin ascenso. En el catorce, no puedes perdonar a Graves.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.208,
+  "t1": 387.307,
+  "tipo": "video",
+  "texto": "En la misión Hired Gun derribas el helicóptero de Phillip Graves, el de Shadow Company. Y Graves te suplica por su vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.307,
+  "t1": 394.125,
+  "tipo": "video",
+  "texto": "No hay botón para perdonarlo. Y si tardas en rematarlo, aprovecha la duda, y te mata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.125,
+  "t1": 404.155,
+  "tipo": "video",
+  "texto": "En Modern Warfare, la piedad es una mecánica. Y es una trampa. Número trece. La estatua que puedes escalar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.155,
+  "t1": 411.61,
+  "tipo": "video",
+  "texto": "En el norte nevado hay una estatua gigante del Líder Supremo. Márcala por radio, y alguien te cuenta su leyenda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 411.61,
+  "t1": 422.345,
+  "tipo": "video",
+  "texto": "Que derrotó él solo a un batallón japonés entero. Imposible, admite el propio personaje. Pero ahí se habrían bebido la tierra como agua si él lo decía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.345,
+  "t1": 430.28,
+  "tipo": "video",
+  "texto": "Y se puede escalar. Arriba hay suministros y la nota de un ciudadano que se pregunta si en el Sur alguien hace lo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.28,
+  "t1": 437.818,
+  "tipo": "video",
+  "texto": "Acuérdate de esta estatua. Porque en el puesto tres, al mismo Líder, mejor ni tocarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.818,
+  "t1": 444.798,
+  "tipo": "video",
+  "texto": "En el doce, el fideo de Spider-Man. Primera misión, una tienda de Hajin, en Corea del Sur.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 444.798,
+  "t1": 457.93,
+  "tipo": "video",
+  "texto": "Antes del primer disparo de la guerra, el cabo Dunn te lanza un bol de fideos instantáneos. Si lo atrapas, te dice que se te activó el sentido arácnido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.93,
+  "t1": 465.281,
+  "tipo": "video",
+  "texto": "Si lo dejas caer, te regaña por dejar eso tirado. Y si tardas en recogerlo, te lo vuelve a reclamar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.281,
+  "t1": 472.93,
+  "tipo": "video",
+  "texto": "Diálogo distinto para un bol de fideos. En un juego de guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.93,
+  "t1": 481.11,
+  "tipo": "video",
+  "texto": "Número once. Soap no sale en el juego. Soap MacTavish, el de siempre, no aparece en la campaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.11,
+  "t1": 491.174,
+  "tipo": "video",
+  "texto": "Pero lo escondieron dos veces. Un grafiti con una pastilla de jabón azul y la palabra SOAP, con un símbolo radiactivo en la O.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.174,
+  "t1": 497.684,
+  "tipo": "video",
+  "texto": "Y un letrero digital en una ciudad nevada que dice KR-SOAP. Y junto a él,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.684,
+  "t1": 505.43,
+  "tipo": "video",
+  "texto": "ciento cuarenta y uno. El número de la Task Force. Y el de este canal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 505.43,
+  "t1": 515.349,
+  "tipo": "video",
+  "texto": "En el diez, la impresora 3D de Cachette. Pasamos al multijugador. En el mapa Cachette, en el piso de arriba de la Armería, tras un cristal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 515.349,
+  "t1": 526.693,
+  "tipo": "video",
+  "texto": "hay una impresora 3D. Si en vez de usarla la golpeas, rompes la pantalla, y sale un arma completa, con cinco accesorios y aspecto de resina impresa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 526.693,
+  "t1": 532.613,
+  "tipo": "video",
+  "texto": "Cambia en cada partida. La descubrió un usuario de Reddit, muggs, uno dos uno tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.613,
+  "t1": 540.43,
+  "tipo": "video",
+  "texto": "Y la impresora es una mecánica de DMZ, colada en el multijugador como secreto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.43,
+  "t1": 549.678,
+  "tipo": "video",
+  "texto": "Número nueve. La radio de dos mil siete. En el contraataque en la costa de Hajin, los vehículos aliados usan indicativos que ya conoces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.678,
+  "t1": 557.063,
+  "tipo": "video",
+  "texto": "Si jugaste en dos mil siete. War Pig, el tanque atascado en el pantano de CoD 4. Y Gold Eagle,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.063,
+  "t1": 565.43,
+  "tipo": "video",
+  "texto": "el indicativo del general Shepherd. Escucha la radio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 565.43,
+  "t1": 574.48,
+  "tipo": "video",
+  "texto": "Y en Decapitation entras disparando desde un helicóptero con indicativo Outlaw dos cinco. El mismo helicóptero de Jackson en CoD 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 574.48,
+  "t1": 582.93,
+  "tipo": "video",
+  "texto": "Solo se oyen por radio. Y si los reconociste, ya tienes edad para que te duela la espalda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 582.93,
+  "t1": 593.169,
+  "tipo": "video",
+  "texto": "En el ocho, Ghost muere si eres curioso. En la misión Huida ves por una ventana cómo dos soldados interrogan y golpean a Ghost.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.169,
+  "t1": 599.961,
+  "tipo": "video",
+  "texto": "Si te quedas mirando en vez de entrar, uno le dispara en la cabeza. Y la misión fracasa al instante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.961,
+  "t1": 607.909,
+  "tipo": "video",
+  "texto": "El personaje más querido de la saga, muerto porque te quedaste mirando. Muévete, soldado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 607.909,
+  "t1": 617.708,
+  "tipo": "video",
+  "texto": "Número siete. La comandante Ri no perdona. Volvemos a Cumpliendo órdenes. Si le apuntas demasiado tiempo a la comandante Ri Ju-Young,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.708,
+  "t1": 626.347,
+  "tipo": "video",
+  "texto": "la hermana del Líder, ella y sus soldados te disparan. Si escondes a la familia del sótano y dices que en esa casa no hay nadie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.347,
+  "t1": 635.176,
+  "tipo": "video",
+  "texto": "más tarde Ri lo descubre. Y ordena preparar otra soga. Para el que mintió. Y si al final te niegas a ahorcar al desertor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.176,
+  "t1": 642.93,
+  "tipo": "video",
+  "texto": "Ri te ejecuta por traidor. El juego no te deja ser el bueno. Ni con la mirada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 642.93,
+  "t1": 652.848,
+  "tipo": "video",
+  "texto": "En el seis, pixel art en París. En la misión Tráfico, en las esquinas de los edificios de París, hay mosaicos de pixel art.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.848,
+  "t1": 663.087,
+  "tipo": "video",
+  "texto": "Price con su sombrero clásico. Ghost. Y un pastor alemán con chaleco y gafas: Riley, el perro de Call of Duty Ghosts, de dos mil trece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 663.087,
+  "t1": 669.147,
+  "tipo": "video",
+  "texto": "Es un homenaje a Invader, el artista callejero francés que llena París de mosaicos de videojuegos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 669.147,
+  "t1": 679.122,
+  "tipo": "video",
+  "texto": "Riley no sale en esta saga. Pero tiene su pared. Número cinco. Los perros de Prípiat.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.122,
+  "t1": 685.482,
+  "tipo": "video",
+  "texto": "En el garaje de Huida, unos perros atacan a Price y a Ghost. Y después Price suelta una frase:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 685.482,
+  "t1": 696.714,
+  "tipo": "video",
+  "texto": "no son nada comparados con los de Prípiat. Es la misión All Ghillied Up de CoD 4. Price joven y MacMillan cruzando Prípiat en mil novecientos noventa y seis,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.714,
+  "t1": 704.144,
+  "tipo": "video",
+  "texto": "con perros salvajes encima. El reboot es otra línea temporal. Pero Price se acuerda de Prípiat.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 704.144,
+  "t1": 713.31,
+  "tipo": "video",
+  "texto": "O sea: la misión favorita de media saga sigue siendo canon. En el cuatro, GTA seis salió primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.31,
+  "t1": 722.464,
+  "tipo": "video",
+  "texto": "Dentro de Call of Duty. En la segunda misión persigues a Makarov por las azoteas de Nueva York, atravesando departamentos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.464,
+  "t1": 729.744,
+  "tipo": "video",
+  "texto": "Si te detienes antes del pasillo y miras la tele, alguien está jugando algo idéntico a GTA seis. El personaje,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 729.744,
+  "t1": 738.332,
+  "tipo": "video",
+  "texto": "los autos, el minimapa abajo a la izquierda. En una consola falsa de Activision, con guiños a Pitfall, su clásico de los ochenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.332,
+  "t1": 746.83,
+  "tipo": "video",
+  "texto": "Para verlo, tienes que dejar que Makarov se aleje. Prioridades, soldado. Número tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.83,
+  "t1": 758.0,
+  "tipo": "video",
+  "texto": "Dispárale al retrato del Líder. En Cumpliendo órdenes buscas a un desertor casa por casa. Puedes disparar tiros de advertencia a los civiles, y no pasa nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 758.0,
+  "t1": 765.045,
+  "tipo": "video",
+  "texto": "Pero si le disparas al retrato del Líder Supremo colgado en la pared, tu compañero te elimina al instante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 765.045,
+  "t1": 774.723,
+  "tipo": "video",
+  "texto": "Y la pantalla de muerte lo explica: deshonraste a tu país dañando un retrato del Líder Supremo. Con el botón de reintentar, en coreano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 774.723,
+  "t1": 781.983,
+  "tipo": "video",
+  "texto": "Y no es del todo un chiste: en Corea del Norte, dañar un retrato del líder es un delito político real.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 781.983,
+  "t1": 787.93,
+  "tipo": "video",
+  "texto": "La estatua la puedes escalar. El cuadro, ni lo mires feo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 787.93,
+  "t1": 800.43,
+  "tipo": "video",
+  "texto": "Alto ahí. Lo que sigue es el final de la campaña. Si no lo has terminado, este es tu momento de retirarte. Los que se quedan, conmigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.43,
+  "t1": 807.3,
+  "tipo": "video",
+  "texto": "Número dos. La caída de Gaz. En Bombay, Gaz, ya capitán de la ciento cuarenta y uno,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.3,
+  "t1": 815.287,
+  "tipo": "video",
+  "texto": "aterriza en una azotea para cazar a Price. Y dice esto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 815.287,
+  "t1": 823.177,
+  "tipo": "video",
+  "texto": "Bravo seis, going dark. Es la frase de Price en el tráiler de Modern Warfare de dos mil diecinueve. La primera que le oímos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 823.177,
+  "t1": 831.889,
+  "tipo": "video",
+  "texto": "Ahora la usa Gaz, para cazar al hombre que la dijo. Y hay más. En dos mil diecinueve, Price conoció a Gaz con una pregunta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 831.889,
+  "t1": 841.175,
+  "tipo": "video",
+  "texto": "¿estás roto? La frase se repitió en las dos entregas siguientes. En Modern Warfare 4, cuando los capturan, es Gaz quien se la grita",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 841.175,
+  "t1": 851.39,
+  "tipo": "video",
+  "texto": "a Price. El roto, ahora, es Price. Y Gaz se lo echa en cara con sus propias frases:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 851.39,
+  "t1": 857.946,
+  "tipo": "video",
+  "texto": "cortamos cabezas de serpiente, no nos unimos al nido. Al inicio de Huida, el Arquero,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 857.946,
+  "t1": 866.582,
+  "tipo": "video",
+  "texto": "el villano de Mads Mikkelsen, ejecuta a Gaz. Igual que Zakhaev mató a Gaz en el final de CoD 4, en dos mil siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 866.582,
+  "t1": 877.182,
+  "tipo": "video",
+  "texto": "Y aquí está el secreto. En la prisión, una nota dice que lo confiscado va a una caja fuerte. Otra nota, en una recepción que cruzas desarmado, da el código:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 877.182,
+  "t1": 886.915,
+  "tipo": "video",
+  "texto": "ocho, cuatro, uno, cero. Dentro están las chapas de identificación de Gaz. Y el logro se llama Jamás te olvidaremos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 886.915,
+  "t1": 895.204,
+  "tipo": "video",
+  "texto": "Si no abres esa caja, puedes seguir creyendo que Gaz está vivo. El juego te deja elegir no saberlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 895.204,
+  "t1": 901.423,
+  "tipo": "video",
+  "texto": "Y el número uno. El secreto que no se ve. La saga termina en un lago helado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 901.423,
+  "t1": 909.603,
+  "tipo": "video",
+  "texto": "Price mata al Arquero, y muere junto a Ghost. Sus últimas palabras: mantén la línea. Pero no acaba ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 909.603,
+  "t1": 917.012,
+  "tipo": "video",
+  "texto": "Después de los créditos, Kate Laswell borra con una USB los archivos de la Task Force ciento cuarenta y uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.012,
+  "t1": 925.43,
+  "tipo": "video",
+  "texto": "Y de fondo suena esto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 925.43,
+  "t1": 932.89,
+  "tipo": "video",
+  "texto": "Es una versión nueva de la música del final de CoD 4. La del puente, cuando Price, herido, acaba de matar a Zakhaev.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 932.89,
+  "t1": 942.704,
+  "tipo": "video",
+  "texto": "Así sonaba en dos mil siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 942.704,
+  "t1": 951.733,
+  "tipo": "video",
+  "texto": "La música de CoD 4 la escribió Stephen Barton junto a Harry Gregson-Williams. Y Stephen Barton compuso también Modern Warfare 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 951.733,
+  "t1": 961.663,
+  "tipo": "video",
+  "texto": "La misma persona cerró las dos sagas, diecinueve años después, con la misma música. Y el último detalle. En el tráiler de dos mil diecinueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 961.663,
+  "t1": 968.992,
+  "tipo": "video",
+  "texto": "Laswell usaba el indicativo Watcher seis. Aquí recluta a una mujer a la que nunca le vemos la cara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 968.992,
+  "t1": 978.188,
+  "tipo": "video",
+  "texto": "Y le dice: bienvenida al programa Watcher. La saga empieza y termina con el mismo nombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 978.188,
+  "t1": 986.469,
+  "tipo": "video",
+  "texto": "Y la que sigue no tiene rostro. Expediente cerrado. Por ahora. Este es el primer expediente del canal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 986.469,
+  "t1": 994.129,
+  "tipo": "video",
+  "texto": "Si quieres el siguiente, suscríbete: aquí abrimos los archivos de Call of Duty que nadie te contó, en español.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 994.129,
+  "t1": 1004.375,
+  "tipo": "video",
+  "texto": "Y dime en los comentarios cuál de los veinticinco no conocías. Yo apuesto por el pato. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

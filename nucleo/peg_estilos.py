@@ -294,6 +294,13 @@ def banda(ruta, nombre=None, sub=None, foco=(.5, .25, 2.0), alto=340, lado="der"
     W = 1920
     base = _encuadre(Image.open(ruta).convert("RGB"), foco, W + 120, alto)
     base = base.resize((W + 120, alto), Image.LANCZOS).filter(ImageFilter.UnsharpMask(2, 60, 2))
+    # 13-nov-2026 (tes_reina_loba): una pantalla de carga casi toda negra con el foco de cara por defecto dejó una banda NEGRA
+    # con un pedazo de calavera cortado en la esquina. La parte que se ve (la que no tapa el rótulo) debe tener contenido.
+    _l = np.asarray(base.convert("L"), np.float32)
+    _vis = _l[:, : int(_l.shape[1] * .55)] if (nombre and lado == "der") else _l[:, int(_l.shape[1] * .45):] if nombre else _l
+    if (_vis > 45).mean() < .07:                                    # el foco viejo dio 5 %; la calavera bien encuadrada, 9 %
+        print(f"⚠ banda CASI VACÍA ({(_vis > 45).mean():.0%} con contenido): {ruta} foco={foco} → mueve el foco al sujeto "
+              f"o usa otra imagen (mira su cuadro en `FAB_FX_FINAL=1 fx hoja`)")
     tira = base.convert("RGBA")
     if nombre:
         g = np.zeros((alto, W + 120, 4), np.uint8)

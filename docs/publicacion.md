@@ -23,9 +23,9 @@ _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 3. **Preguntas** (AskUserQuestion, con tu recomendación primero): tema (3 ideas sacadas del informe de `ideas`,
    cada una con el video de referencia y su × mediana), estilo visual, duración, formato (largo o Short vertical), voz (Dan por defecto) y cuándo
    publicar (por defecto el siguiente hueco del horario del canal, abajo). Nunca versiones para WhatsApp.
-3b. **Plan de sesiones** (regla del 12-oct-2026, `docs/sesiones.md`): con la duración y el estilo ya elegidos, estima en cuántas
-   conversaciones conviene hacerlo (tabla de ritmos de `docs/sesiones.md`), pregúntale al usuario cuántas quiere (tu recomendación
-   primero) y escribe la sección «## Sesiones» del `ESTADO.md` con su `alias`. Luego el usuario solo dice «continúa el video <alias>».
+3b. **Una sesión, directo al MASTER** (el usuario, 5-nov-2026; sustituye el plan de sesiones del 12-oct): si no dice otra
+   cosa, se produce entero en esta sesión. La duración la decide Claude según el canal si él no la da; solo se pregunta lo que
+   no esté claro (p. ej. el canal). Tramos solo si él los pide (`docs/sesiones.md`).
 4. **Producir** (flujo de abajo) → miniatura (2-3 variantes) → `youtube.json` (título ≤ 50 caracteres con
    la palabra clave al inicio; descripción con capítulos reales del timeline, fuentes, enlace a otro video
    del canal y 3 hashtags; 15-25 etiquetas ≤ 450 caracteres) → `yt subir <v> <canal> private --publicar <ISO del hueco>`.
@@ -127,6 +127,22 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
    Claude la genera en Flow (navegador integrado, Nano Banana 2.1, x2, texto dentro, ingredientes reales pegados) con el estilo
    de cada canal; prompt en `videos/<v>/prompt_miniatura.md`. La de código (punto 8) es SOLO respaldo provisional para no frenar
    una subida: antes de la fecha de publicación se cambia por la de Flow con `yt aplicar` (ej. `n64_secretos`).
+   **Miniaturas de WoW = QUE PAREZCA EL JUEGO (el usuario, 6-nov-2026, al rechazar la de `wow_errores_forever`: «que sí parezca el
+   juego, y no de una película de Pixar»; vale para todos los canales de videojuegos con su juego).** Cuatro capas, siempre:
+   (1) **fondo real del juego**: captura in-game de una zona o ciudad sacada de `medios/` (nunca un cuadro de cinemática o tráiler);
+   (2) **1-2 personajes reales**: modelo in-game (captura, pantalla de creación, render de Wowhead) o arte oficial de ese personaje
+   (las antiguas del usuario: Arthas, Alamuerte, el huargen; `C:\googleimagenes\thumbnails\*_usuario.jpeg`);
+   (3) **interfaz real**: ítems con su ícono y tooltip, un cuadro de misión, la barra de acciones, el error rojo, marcos de unidad, según
+   el tema (buen ejemplo: `wow_clases_ocultas`); (4) logo real + 1-3 palabras amarillas y blancas con contorno negro.
+   Flow combina el fondo y los personajes con el prompt «keep the exact in-game World of Warcraft graphics of the ingredients (game
+   screenshot look, painted textures, in-game character models); NOT a 3D animated movie, NOT Pixar, NOT clay, NOT cinematic CGI, do not
+   redraw the faces». Los cinemáticos/tráileres no sirven de base para los personajes: Flow los vuelve plastilina. La interfaz (un
+   tooltip con las estadísticas de un ítem raro/épico del video, un cuadro de misión, el error rojo) va como ingrediente real en Flow o
+   pegada encima; el logo puede pegarse con PIL. **EL TEXTO LO ESCRIBE NANO BANANA, NUNCA PIL (el usuario, 6-nov-2026, TODOS los
+   canales: «los textos los tienes que hacer con Nano Banana… el font que tú usas no está tan adecuado a la miniatura»):** se pide en el
+   prompt con «bold, eye-catching YouTube thumbnail lettering» y el texto exacto deletreado; solo se corrige por código si un acento sale
+   mal tras dos intentos. Antes de subir, compárala
+   en una hoja con las antiguas del usuario: si no parece el juego, se rehace.
 8. (Respaldo provisional) Miniatura por código: `videos/<nombre>/miniaturas.py` con `VARIANTES = {nombre: fn(lz) -> fondo}` (ejemplo en
    `videos/40mil_anos/miniaturas.py`) → `python fab.py <nombre> miniatura` → `salida/*_mini_<variante>.jpg`
    (1280x720) y `previews/miniaturas.jpg` (MÍRALA: incluye la vista a tamaño de celular). En el nicho funciona:

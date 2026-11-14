@@ -1,0 +1,33 @@
+{
+ "_nota": "Voces que el Estudio de Amaya le recomienda (10-nov-2026), de las cuentas de ElevenLabs de la fábrica. El servidor solo enseña las que existen en una cuenta con saldo; las clonadas (papá, mamá, Warcraft) NUNCA salen. grupo: chicas | chicos | personajes | narradores.",
+ "recomendadas": [
+  {"id": "tnSpp4vdxKPjI9w0GnoV", "nombre": "Hope", "grupo": "chicas", "desc": "Alegre y clarita. La de Crónicas del gaming.", "emoji": "☀️"},
+  {"id": "CPv3Zr3CQCqE4ZzuCgBP", "nombre": "Lulú", "grupo": "personajes", "desc": "Adorable, brillante y juguetona. Perfecta para una mascota o un personaje tierno.", "emoji": "🐣"},
+  {"id": "VmejBeYhbrcTPwDniox7", "nombre": "Lina", "grupo": "chicas", "desc": "Fresca y despreocupada, colombiana.", "emoji": "🌺"},
+  {"id": "z1ngDYs2H24Xsd8ts3az", "nombre": "Adri Chilanga", "grupo": "chicas", "desc": "Chilanga, platicadora, como amiga contándote un chisme.", "emoji": "🌮"},
+  {"id": "0TMU0XAYky7JI2rdHId5", "nombre": "Laura D", "grupo": "chicas", "desc": "Mexicana, expresiva y amigable.", "emoji": "💬"},
+  {"id": "akOBlaKhFd59YlK6xz9u", "nombre": "Lucía", "grupo": "chicas", "desc": "Mexicana, cálida, para contar con calma.", "emoji": "🕯️"},
+  {"id": "ay4iqk10DLwc8KGSrf2t", "nombre": "Azucena", "grupo": "chicas", "desc": "Mexicana, voz bonita de narradora.", "emoji": "🌸"},
+  {"id": "hHjbwzYZW17oh0p05AKv", "nombre": "Gabriela", "grupo": "narradores", "desc": "Mexicana, profesional, como de documental.", "emoji": "🎙️"},
+  {"id": "m7yTemJqdIqrcNleANfX", "nombre": "Ana María", "grupo": "narradores", "desc": "Tranquila y natural. Buena para explicar.", "emoji": "📘"},
+  {"id": "WJvDlvlNQAsEW1JX0xFc", "nombre": "Bárbara", "grupo": "chicas", "desc": "Mexicana, segura y simpática.", "emoji": "💜"},
+  {"id": "BkOojM1ZhtSAHgsAkMx2", "nombre": "Carolina", "grupo": "chicas", "desc": "De España, cálida y expresiva.", "emoji": "🇪🇸"},
+  {"id": "p7AwDmKvTdoHTBuueGvP", "nombre": "Malena", "grupo": "chicas", "desc": "Argentina, dinámica, rapidita.", "emoji": "🧉"},
+  {"id": "cgSgspJ2msm6clMCkdW9", "nombre": "Jessica", "grupo": "chicas", "desc": "Juguetona y brillante (es gringa, pero también habla español).", "emoji": "✨"},
+  {"id": "p7cwnUviDFhhX9y8sG2Q", "nombre": "Sebastián", "grupo": "chicos", "desc": "Adolescente alegre y divertido.", "emoji": "🛹"},
+  {"id": "I1n8B4pOly0qmOu46LFX", "nombre": "Alejandro", "grupo": "chicos", "desc": "Mexicano, con energía, buena onda.", "emoji": "⚡"},
+  {"id": "qRUgOhnxGASxirG4fKjv", "nombre": "David C", "grupo": "chicos", "desc": "Mexicano, cuenta historias como en los videos virales.", "emoji": "📱"},
+  {"id": "tomkxGQGz4b1kE0EM722", "nombre": "Mario", "grupo": "chicos", "desc": "Voz perfecta para redes sociales.", "emoji": "🎧"},
+  {"id": "4XUsiqPDK4UACIM2BILe", "nombre": "JC", "grupo": "narradores", "desc": "Como locutor de noticias.", "emoji": "📺"},
+  {"id": "l1zE9xgNpUTaQCZzpNJa", "nombre": "Alberto", "grupo": "narradores", "desc": "Narrador latino neutro. El de Cronopapel.", "emoji": "🗺️"},
+  {"id": "2rigMbVWLdqtBSCahJFX", "nombre": "Tatiana", "grupo": "narradores", "desc": "Sabia y calmada, como una maestra que sabe mucho.", "emoji": "🦉"},
+  {"id": "lU5yLpewxvOqG75Vc6Jr", "nombre": "Athena", "grupo": "personajes", "desc": "Épica y profunda, como una diosa o una reina.", "emoji": "👑"},
+  {"id": "LRpNiUBlcqgIsKUzcrlN", "nombre": "Georg", "grupo": "personajes", "desc": "Chistoso y emotivo.", "emoji": "🤡"},
+  {"id": "HMCmDsbKeaSZp5LMOYKR", "nombre": "Johnny", "grupo": "personajes", "desc": "Burlón y sarcástico, de España. El de Crónicas de Warcraft.", "emoji": "😏"},
+  {"id": "ljo9gAlSqKOvF6D8sOsX", "nombre": "Bjorn", "grupo": "personajes", "desc": "Un vikingo enorme.", "emoji": "🪓"},
+  {"id": "3VkFsBHdRPqWKsitgYhJ", "nombre": "Azgar", "grupo": "personajes", "desc": "Un orco gruñón (habla en inglés con acento de monstruo).", "emoji": "👹"},
+  {"id": "PRfCKe8kdrG3nuXOAnoH", "nombre": "Gork", "grupo": "personajes", "desc": "Criatura oscura y miedosa, para un villano.", "emoji": "🐉"},
+  {"id": "9TcPbUAhHnAV8mzFDAWU", "nombre": "El Faraón", "grupo": "narradores", "desc": "Poderoso y resonante, para historias de misterio.", "emoji": "🏺"},
+  {"id": "N2HSRirbsHTZ8DE2WqjB", "nombre": "Don Arturo", "grupo": "personajes", "desc": "Un señor mayor que cuenta historias.", "emoji": "👴"}
+ ]
+}

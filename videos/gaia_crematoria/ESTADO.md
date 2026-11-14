@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: gaia_eterna (alta 29-oct-2026; falta `yt conectar` con la cuenta de la esposa) · sábado 10:00 CDMX, primer hueco tras el MASTER
 - estilo: pegatina_flow (formato «Pamela») → docs/estilo_pegatina_flow.md § 8 · ejemplo: videos/wow_darrowshire/ · mapas: nucleo/mg_mapa.py tema "wow"
-- etapa: voz ✅ · OST ✅ · Flow 192 imágenes ✅ · recorte ✅ · reales/mapas/SFX ✅ · escenas (plan.py, ~300 tomas) ✅ · mezcla ✅ · RENDER en marcha (10:14, 865 segmentos) · miniatura ✅ · youtube.json ✅
-- siguiente: tramo 7a (revisión de los primeros ~10 min, ver «En curso») → visto bueno → render completo → `final` → `verificar` → aviso → `yt conectar` (cuenta de la esposa) → subir y programar
+- etapa: SUBIDO a mano por el usuario el 10-nov-2026 (https://youtu.be/8ZNkFTfOJTI, oculto mientras procesa; registrado en canales/gaia_eterna.json) · el usuario lo publica él mismo
+- siguiente: nada de producción; el usuario lo publica. Medir a 7 días; `limpiar` al aprobar. Lo anuncia el Warcraft `wow_secretos_primeros_niveles` (escena gaia).
 
 ## Sesiones (plan de tramos · «continúa el video gaia_crematoria» retoma aquí · protocolo docs/sesiones.md)
 - alias: gaia_crematoria, la Crematoria, el de Gaia Eterna, el de Tirion y los Mograine, el de la Ashbringer
@@ -15,7 +15,7 @@
 | 2 | Voz (narradora + personajes) + seleccionar + tiempo + OST | ✅ 29-oct | 367 frases (~6 000 créditos); 1 bloqueada por el filtro (reescrita); 8 regeneradas; 43:14; OST 15 pistas |
 | 3 | Flow (escenarios + hojas con ciclos + utilería) + recorte + profundidad + reales + mapas + SFX del juego | ✅ 29-oct | 96 prompts x2 (proyecto Flow «oct 29 - 09:33»), 30 hojas, 37 reales + 8 iconos + 8 medallones, 10 mapas, 93 SFX |
 | 4-6 | Escenas por actos + sfx + mezcla | ✅ 29-oct | MOTOR POR DATOS: `escenas.py` dibuja y `plan.py` describe ~300 tomas; muestras cada 40 s revisadas (`_muestras.py`) |
-| 7a | Revisión de los primeros ~10 min (mapas sin pixelar, fotos reales del juego, escena de la posada de Costasur) → avance → visto bueno | ◐ correcciones 7a (Eitrigg ✅, espada ✅, fotos reales pendiente) | 29-oct 14:05 render 0-798 s ✅ (sin errores; los 6 clips comprobados en el AVANCE); `salida/gaia_crematoria_AVANCE.mp4` + `AVANCE_ligero.mp4`; avisado |
+| 7a | Revisión de los primeros ~10 min (mapas sin pixelar, fotos reales del juego, escena de la posada de Costasur) → avance → visto bueno | ◐ esperando visto bueno del avance con hojas reales (2-nov) | 29-oct 14:05 render 0-798 s ✅ (sin errores; los 6 clips comprobados en el AVANCE); `salida/gaia_crematoria_AVANCE.mp4` + `AVANCE_ligero.mp4`; avisado |
 | 7 | Render → MASTER → aviso al usuario → miniatura → youtube.json | ◐ 217/865 | render ≈ 2,5 h; detenido hasta el visto bueno del 7a |
 | 8 | Subir (tras `yt conectar`) + registro + cierre | pendiente | |
 
@@ -23,6 +23,31 @@
 - `audio/` pasado a carpeta REAL en C: (E: dio Ntfs 55 el 28-oct; ver memoria disco-e-fallando). `voz/` sigue en E:.
 
 ## En curso (29-oct, tramo 7)
+- ▶ 2-nov: RETOMADO por el usuario. Disco conciliado (266 segmentos = acto 1, AVANCE 16:02, 18 hojas en `hojas_reales/`,
+  hojas/ y piezas/ sin tocar; E: 60 GB libres). Enviada otra vez `previews/hojas_reales_elegidas.jpg`: esperando su visto
+  bueno para aplicarlas (+ regenerar h04 RS pelirrojo; h14 joven como hoja aparte IJ) antes del render completo.
+  ✅ 2-nov el usuario: «Sí, aplícalas». HECHO: `_aplicar_hojas_reales.py` (respaldos en `hojas/_respaldo_2nov/` y
+  `piezas/_respaldo/2nov/<hoja>/`) → h01 h03 h08 h11 h13 h15 h16 h17 + hoja nueva **h31_isillien_joven** (alias `IJ` en
+  escenas.ALIAS; costasur_1/2/5 usan IJ0/IJ3; IS sigue para el Gran Inquisidor). h17: fila de nombres borrada (blanco desde
+  y=0,825). `recortar` + MIRAR índices (`previews/indices_2nov.jpg`): h16 y h31 salían con figuras pegadas → recortadas con
+  `_recorte_columnas.py` (franjas por valle de alfa; ¡no relanzar `recortar` de h16/h31!). h13 Eitrigg: 8 piezas reordenadas al
+  orden viejo (0-5 igual; 06 = sentado herido nuevo; **07 = hoguera suelta**, añadida en eitrigg_9/10). ¡No relanzar `recortar`
+  de h13/h04 (reordenadas a mano)! h04 Renault Escarlata regenerada en Flow (Chrome, proyecto «nov 02 - 13:55», ingredientes
+  `ref_renault_comandante.jpg` + `ref_renault_joven_flow.jpg`; elegida la b; 3↔4 intercambiadas al orden viejo; RS3 tendido
+  ahora plano → culpa_4 alto 0.16). Tomas afectadas: `previews/_tomas_2nov.txt` (65 en acto 1, 95 después); segmentos del
+  acto 1 a borrar: `previews/_segs_2nov.txt` (185). ⚠ Pendiente de consistencia: h27 Taelan galope (TGA) sigue con el Taelan
+  viejo plateado; h02/h06/h10 (AL caballero de la muerte, Darion DK, Tirion highlord) sin regenerar.
+  ✅ muestras `previews/m2nov_a|b|c.jpg` revisadas (hoguera EI7 acercada y agrandada). ✅ 185 segmentos borrados (quedan 81).
+  ◐ ~14:30 `fab.py gaia_crematoria video --hasta 798` en segundo plano (log `render_2nov_log.txt`; ~185 seg ≈ 30-35 min).
+  ✅ render acabado 15:08 (64 min, 266/266, sin Traceback) → cuadros revisados (`previews/avance_2nov_hoja.jpg`) →
+  `salida/AVANCE_ligero.mp4` (720p nvenc, 408 MB, 13:18) → avisado por voz.
+  ✅ 2-nov el usuario: «Sí, render completo». Muestras de las 95 tomas de actos 2-3 (`previews/m2nov_d|e|f.jpg`) revisadas;
+  cuerpos tendidos subidos para que no se corten abajo: testigo_4 y 6 (CO4 y 0.88 / 0.86), epilogo_6 (VI2 y 0.86).
+  ◐ ~16:20 `fab.py gaia_crematoria video` COMPLETO en segundo plano (log `render_completo_2nov_log.txt`, ~600 segmentos ≈ 3 h).
+  ▶ SIGUIENTE: al acabar → `final` → `verificar` → cuadros del MASTER → aviso → `yt conectar` (cuenta de la esposa) → subir.
+  (antes) el usuario ve el avance → (1) visto bueno → `fab.py gaia_crematoria video` COMPLETO (~2,5 h; los actos 2-3
+  usan también AL/RE/RS/TA/VI/CO/MA nuevos: revisar con `_muestras.py` las 95 tomas de `previews/_tomas_2nov.txt` antes, p. ej.
+  culpa_4 RS3 tendido) → `final` → `verificar` → aviso → `yt conectar` → subir. (2) cambios → rehacer solo esos segmentos.
 - ⏸ 29-oct (noche) PAUSADO por el usuario: «pausemos lo de gaia hasta terminar lo de la worlds» (cfo_kc_jugadas). No lanzar nada de
   este video hasta que el usuario lo retome. Estado al pausar: avance del acto 1 corregido (16:03, `salida/AVANCE_ligero.mp4`)
   esperando su veredicto; render completo NO lanzado; 0 procesos de render.

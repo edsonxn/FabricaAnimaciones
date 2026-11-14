@@ -1,0 +1,31 @@
+{
+  "canal_id": "",
+  "nombre": "Amaya Vibes",
+  "handle": "",
+  "estilo": "SCRAPBOOK COQUETTE fusionado con el estilo de Amaya: vichy rosa-rojo/crema y rayas pastel, letras recortadas PASTEL que caen, papel rasgado y periódico en las esquinas, stickers de productos dibujados en Flow (contorno blanco), SU AVATAR de presentadora que reacciona, notitas adhesivas, sellos «¡SÍ PÍDELO!» / «NI SE TE OCURRA», etiquetas $/$$/$$$, listón «HAPPY WATCHING!!», final de suscripción con botón rojo + campana + mano. Escenas por código (kit nucleo/coquette.py), plano secuencia. Doc: docs/estilo_scrapbook_coquette.md · ejemplo videos/amaya_navidad/.",
+  "nota": "Canal de Amaya (12 años), hija del usuario; alta en la fábrica el 10-nov-2026. El canal de YouTube lo CREA EL USUARIO: no subir nada hasta que exista y él lo diga. Listas de cosas y productos para preadolescentes en México (11-15 años). Narradora = Amaya («Soy Amaya»), voz ElevenLabs Regina 9Godp7dNohUvXk6qp0gS (la eligió ella; cuenta 2). Música: Lyria coquette (referencia de carácter: «Coquette playlist» de Valentine, nunca esa pista); SFX sintetizados por código. Humor: pocos chistes, de observación, sin memes dudosos.",
+  "horario": {
+    "zona": "America/Mexico_City",
+    "hora_local": "16:00",
+    "ciclo_dias": 7,
+    "separacion_min_horas": 24,
+    "nota": "provisional hasta tener datos del canal"
+  },
+  "publicados": [],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "mejores y peores regalos de navidad",
+      "cosas que pedir en navidad 2026",
+      "lista de navidad aesthetic",
+      "regalos para niñas de 12 años"
+    ]
+  },
+  "historial": [
+    {
+      "fecha": "2026-11-10",
+      "nota": "Canal dado de alta en la fábrica; 1.er video amaya_navidad (15 mejores y 10 peores cosas que pedir en Navidad, 8:56). Sin canal de YouTube todavía."
+    }
+  ]
+}

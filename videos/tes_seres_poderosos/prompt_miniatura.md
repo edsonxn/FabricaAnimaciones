@@ -1,0 +1,7 @@
+# Miniatura de «Los 20 seres más PODEROSOS de Tamriel» (Flow, Nano Banana 2.1, 5-nov-2026, s3) — elegida la variante B (ojo dorado más visible)
+Estilo PROPIO de Tamriel (pergamino + título blanco + píldoras). Ingredientes (pegado sintético): 1 miniatura del canal «8 dragones»
+(i.ytimg.com fKPDEaOYMxQ, composición), 2 Alduin REAL de la wiki de Fandom (Alduin_over_Helgen.png). A la primera, texto perfecto.
+Nota: Flow tomó el dragón de la referencia 1 más que el Alduin de la 2 (sigue siendo un dragón negro de Skyrim).
+
+Prompt:
+YouTube thumbnail, 16:9, exactly the same layout, style and typography as image 1: an old aged parchment map of a fantasy land as the background, warm brown and gold tones. On the left, huge bold white sans-serif text with a thick black outline in two lines: "20 SERES". Under it, a rounded bright yellow pill label with bold black text: "MÁS PODEROSOS" (spelled exactly M-Á-S with an acute accent on the A). Under that, a smaller rounded black pill label with bold white text: "TAMRIEL". On the right, the giant black dragon Alduin from image 2, faithful to image 2 (black scales, huge horned head, glowing red eyes, spread wings), roaring toward the viewer, and behind him in the sky a colossal golden cosmic eye made of stars watching everything, as if someone is dreaming the whole world; dramatic warm backlight, Alduin's glowing red eyes and the golden eye are the brightest elements. High contrast, crisp, readable at small size. Spell the text exactly: "20 SERES", "MÁS PODEROSOS", "TAMRIEL". No other text, no watermark, no border.

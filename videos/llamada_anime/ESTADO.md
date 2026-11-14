@@ -4,7 +4,8 @@
 - estilo: ANIME VIVO (nuevo, 6-nov): imágenes de Flow (0 pts) en anime seinen de película + animación limitada por código
   (`nucleo/anime_vivo.py`: bocas por la voz, parpadeos, respiración, recorte con parallax, cámara, polvo/rayos/lluvia/fluor/bloom)
 - etapa: ✅ Flow completo (A, B, E) · ✅ MASTER salida/llamada_de_domingo_anime_MASTER.mp4 (14:00, 1080p30, audio final del original intacto; 7-nov ~09:30)
-- siguiente: nada; medir a 7 días contra el original (be1zS17rxxI). Opcional: rehacer los 22 planos ui con fondos anime y `yt aplicar`
+- siguiente: ◐ V2 PEDIDA POR EL USUARIO (7-nov): TODO en anime (los 22 planos ui aún usan fotos realistas del original) y MÁS
+  animación 2D en los planos estáticos → ver «## En curso — sesión 4». La v1 está subida (ZbgBSvK4bLw, programada 13-nov).
 
 ## Pedido (el usuario, 6-nov-2026)
 - «Me gustó mucho el capítulo de Black Mirror de los clones… el guion está perfecto. Remake, lo mismo, pero como no hay puntos
@@ -25,6 +26,40 @@
   Edición (boca/ojos): ingrediente = la base por uuid (opción del buscador con su miniatura), prompt «Edit this exact image…
   ONLY change: mouth open…» → x2 da DOS aperturas (media y abierta). Probado en flow/prueba (r1a + r1_boca1/2 + r1_ojos1/2).
 - Prueba: previews/prueba_005.mp4 (10 s, Ramón) mandada a la tele con pregunta (6-nov ~16:45).
+
+## En curso — sesión 4 (7-nov ~10:30-11:30, cortada por contexto) — V2
+Pedido del usuario: «el video mantiene muchas imágenes del original; la idea era sustituir todo por el nuevo estilo y animar
+todo en 2D; hay escenas MUY estáticas que hace falta animar más con 2D».
+- ✅ Los planos ui (22: notif, keynote, anuncio, onboard, montaje, dashboard, noticiero, historial, timbre, final…) salen de
+  `../llamada_domingo/ui.py` (`render_pieza(uid)`), que solo usa FOTOS FIJAS + interfaz por código: `foto("bg/x")` =
+  ../llamada_domingo/flow/bg/*.jpg (23 fotorrealistas, hoja flow/_hojas/bg_original.jpg), `esc/x` = flow/esc/*.jpg,
+  `medios/scene-045|050` (.jpg) y `cara(quien)` con cajas en píxeles de esas fotos.
+- ✅ ENVIADAS a Flow (~11:00-11:25) las 23 ediciones anime (x2) de flow/bg: original como ingrediente (buscado en la galería
+  por su prompt, variante elegida por firma 8x8) + retrato anime de Daniel (laptop_noche, fiesta, oficina_dia,
+  telefono_puerta) o Ramón (mon_1..5). Prompt: «Redraw the first image as a hand-drawn 2D anime… Keep EXACTLY the same
+  composition, framing… blank screens stay blank…». Helpers en flow/_helpers_ui.js. Una generación es BASURA (key_valeria +
+  key_publico juntas con el prompt doble): descartarla. key_sala ya se vio bien.
+- FALTA, en orden:
+  1. Recoger las ~48 imágenes nuevas (las más recientes de la galería, src flow-content firmado → curl) y asignarlas POR
+     CONTENIDO a su original (firma/diferencia contra flow/bg); elegir variante y guardar en flow/bg_anime/<nombre>.jpg AL
+     TAMAÑO DEL ORIGINAL (ui.py usa coordenadas en píxeles: quads de teléfonos/pantallas y cajas de caras). Hoja para mirar.
+  2. `ui_anime.py`: importar ../llamada_domingo/ui con `_ruta_img` redirigido (bg/x → flow/bg_anime/x.jpg; esc/x →
+     flow/a/esc_x_a.jpg redimensionado; medios/scene-045|050 → cuadro de medios/scene-045|050.mp4), `cara()` → retratos
+     flow/a/pj_*_a.jpg (como `envolver_llamada` en tomas.py), MEDIOS/PREV/CACHE → este video; render de los 22 planos ui a
+     medios/scene-NNN.mp4. Revisar en hoja que teléfonos/pantallas sigan alineados.
+  3. `tomas.ensamblar`: los planos ui desde medios/ (ya no recortes del MASTER original).
+  4. MÁS ANIMACIÓN 2D en los planos estáticos (movimiento medio por plano, menor = más quieto): 021 1.4, 049 1.8, 017 1.8,
+     081 2.0, 033 2.3, 052 2.6, 057 2.7, 077 2.7, 041 2.7, 061 2.7, 076 2.9, 073 2.9, 056 3.1, 070 3.1, 004 3.2, 036 3.3,
+     023 3.3, 005 3.3, 044 3.4 (los mejores > 7: 026, 011, 031, 047, 032). Idea principal: POSES EXTRA con Flow (editar la
+     misma imagen: baja la cabeza, gira, mueve la mano, se lleva el teléfono a la oreja…) y cambiarlas como cels en las
+     pausas del audio (animación limitada de verdad), + movimiento secundario por código (pelo/ropa, manos, vapor, luces
+     de autos, péndulos, gotas) y cámaras con dos tiempos. Ampliar `nucleo/anime_vivo.py` y doc.
+  5. Re-render de lo cambiado (PROCS=4), hojas, `python tomas.py ensamblar` → MASTER v2 → `fab.py tele video llamada_anime
+     master` en 2.º plano → `fab.py avisar`.
+  6. YouTube: la v1 (ZbgBSvK4bLw) está programada vie 13-nov 10:00. PEDIR PERMISO para borrarla (o dejarla privada sin
+     fecha) y subir la v2 en el mismo hueco (`yt subir llamada_anime logia private --publicar 2026-11-13T16:00:00Z`);
+     actualizar canales/logia.json y BITACORA.
+- Ojo: el primer `<input>` de Flow es el NOMBRE del proyecto (lo renombré sin querer y lo restauré a «nov 06 - 13:12»).
 
 ## En curso — sesión 3 (7-nov ~08:50) — ✅ MASTER
 - 63/63 planos (hojas flow/_hojas/hoja_render1-3.jpg, hoja_master.jpg). Negros a 259, 641, 775 y 830 s = planos ui del
@@ -98,6 +133,7 @@
 |---|---|---|---|
 | 1 | estilo, kit anime_vivo, Flow A/B/E, render, MASTER | ◐ parcial | 6-nov: estilo aprobado en la tele, kit, fase A bajada, _B.js listo |
 | 2 | fase B en Flow | ◐ parcial | 6-nov: 122 imágenes bajadas, 36/61 variantes elegidas; Flow cambió (asb), disco E: colgado |
+| 4 | V2: ui en anime + más animación | ◐ parcial | 7-nov: 23 ediciones anime de flow/bg enviadas a Flow; falta recoger, ui_anime.py, poses extra, MASTER v2 |
 | 3 | render de planos, MASTER, subida | ✅ 7-nov | 56 planos en ~35 min con 4 procesos; MASTER 14:00; tele apagada → pregunta en chat; el usuario: «subirlo aparte en LogIA»; miniatura Flow (prompt_miniatura.md, 2/2 bien) |
 
 ## Lecciones

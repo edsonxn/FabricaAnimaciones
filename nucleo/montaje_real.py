@@ -163,7 +163,12 @@ class Montaje:
 
     def clip(self, ruta):
         if ruta not in self._clips:
+            while len(self._clips) >= 8:          # 25 grabaciones de 2400 px abiertas a la vez agotan la memoria (robotaller_4apps, 5-nov)
+                viejo = self._clips.pop(next(iter(self._clips)))
+                viejo.cap.release()
             self._clips[ruta] = _Clip(ruta)
+        else:
+            self._clips[ruta] = self._clips.pop(ruta)   # al final: el más reciente
         return self._clips[ruta]
 
     def camara(self, de, a, esquina="ad", fuente="medios/token.mp4", caja=(0, .3, .42, .7), ancho=420):

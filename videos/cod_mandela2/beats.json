@@ -1,0 +1,866 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.36,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Asunto: tu memoria. Otra vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.36,
+  "t1": 18.77,
+  "tipo": "video",
+  "texto": "En el expediente anterior les pedí sus efectos Mandela. Y me llegaron estos: la AUG en la granja de Zombies, una frase de Alex Mason, y un Black Ops que salió en dos mil siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.77,
+  "t1": 25.66,
+  "tipo": "video",
+  "texto": "Los revisé todos, con el juego en pantalla. Y uno de ustedes tiene razón. A medias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.66,
+  "t1": 35.43,
+  "tipo": "video",
+  "texto": "Pero antes, escucha al sargento Gaz, en el primer entrenamiento de Call of Duty 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.43,
+  "t1": 44.131,
+  "tipo": "video",
+  "texto": "¿Cómo termina esa frase? Seguro que lo sabes. Medio internet también cree saberlo. Te lo enseño en el número uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 44.131,
+  "t1": 52.93,
+  "tipo": "video",
+  "texto": "Veinte efectos Mandela de Call of Duty, parte dos. Y esta vez, cuatro me los mandaste tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.93,
+  "t1": 59.715,
+  "tipo": "video",
+  "texto": "Número veinte. La bomba que nunca desactivaste. Call of Duty 4, dos mil siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.715,
+  "t1": 67.477,
+  "tipo": "video",
+  "texto": "Misión Shock and Awe: los marines entran en la capital de Al-Asad, y aparece una bomba nuclear en la ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.477,
+  "t1": 79.344,
+  "tipo": "video",
+  "texto": "Mucha gente recuerda una misión para desactivarla a tiempo. No existe. El helicóptero despega, la bomba explota, y el sargento Jackson muere arrastrándose entre las ruinas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 79.344,
+  "t1": 86.704,
+  "tipo": "video",
+  "texto": "Lo que sí desactivas es otra cosa, al final del juego: en la penúltima misión, la del cuarto de control de los misiles,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.704,
+  "t1": 94.584,
+  "tipo": "video",
+  "texto": "subes los códigos de aborto, y los misiles nucleares de Zakhaev se destruyen en el aire. Tu cabeza juntó las dos misiones,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.584,
+  "t1": 101.575,
+  "tipo": "video",
+  "texto": "y salvó a Jackson. En el diecinueve, la mira de la Intervention.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.575,
+  "t1": 109.781,
+  "tipo": "video",
+  "texto": "Modern Warfare 2, dos mil nueve. El francotirador de los montajes, de los quickscopes, de los vídeos con dubstep.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.781,
+  "t1": 119.951,
+  "tipo": "video",
+  "texto": "En dos mil veintidós alguien publicó esta imagen: un semicírculo negro debajo de la mira. Y miles juraron que eso no estaba en el original.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 119.951,
+  "t1": 129.081,
+  "tipo": "video",
+  "texto": "Siempre estuvo. Es la sombra del soporte de la mira, y aparece en cada partida de dos mil nueve. Miraste por ese visor miles de veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.081,
+  "t1": 136.94,
+  "tipo": "video",
+  "texto": "Y nunca miraste el visor. Número dieciocho. El uniforme de Richtofen.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 136.94,
+  "t1": 146.73,
+  "tipo": "video",
+  "texto": "Edward Richtofen, el doctor loco de los Zombies originales, el que habla con las voces de su cabeza. Mucha gente lo recuerda de uniforme verde militar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.73,
+  "t1": 155.92,
+  "tipo": "video",
+  "texto": "Pero en World at War y en Black Ops, su uniforme es caqui, tirando a marrón. Con su gorra de oficial y sus guantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.92,
+  "t1": 162.93,
+  "tipo": "video",
+  "texto": "Lo tuviste delante en cada partida. Y tu memoria lo pintó de otro color.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.93,
+  "t1": 171.416,
+  "tipo": "video",
+  "texto": "En el diecisiete, el césped de Nuketown. Nuketown dos mil veinticinco, Black Ops 2: dos casas, un autobús,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.416,
+  "t1": 181.335,
+  "tipo": "video",
+  "texto": "y maniquíes por todas partes. Casi todos lo recuerdan como un jardín de verdad. Pero junto a la casa amarilla el césped está enrollado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.335,
+  "t1": 189.501,
+  "tipo": "video",
+  "texto": "como una alfombra. Es césped artificial. En dos mil veinticinco ya no quedaba césped de verdad en el pueblo nuclear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.501,
+  "t1": 196.945,
+  "tipo": "video",
+  "texto": "Ni vecinos de verdad. Número dieciséis. Double Tap, segunda parte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.945,
+  "t1": 206.279,
+  "tipo": "video",
+  "texto": "En el expediente anterior te enseñé que en Origins no había máquina de Double Tap. Pues hay más. Ascension, Black Ops, dos mil diez:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.279,
+  "t1": 213.854,
+  "tipo": "video",
+  "texto": "la base soviética de los cohetes y los monos espaciales. Muchos recuerdan Double Tap junto a Mule Kick.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 213.854,
+  "t1": 221.484,
+  "tipo": "video",
+  "texto": "En el Ascension original no hay Double Tap. Ese mapa trajo dos perks nuevas: PhD Flopper y Stamin-Up.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 221.484,
+  "t1": 231.94,
+  "tipo": "video",
+  "texto": "Double Tap solo llegó con la versión de Black Ops 3, y dentro de Der Wunderfizz. En el quince, la montaña que nunca volvió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.94,
+  "t1": 240.11,
+  "tipo": "video",
+  "texto": "Downhill, Black Ops 2: una estación de esquí en los Alpes franceses, con góndolas que cruzan el mapa por el aire.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.11,
+  "t1": 248.12,
+  "tipo": "video",
+  "texto": "Hay quien jura haberlo jugado remasterizado en un Call of Duty más nuevo. Downhill solo existe en Black Ops 2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.12,
+  "t1": 257.18,
+  "tipo": "video",
+  "texto": "Lo que tienes en la cabeza probablemente es Alpine, de Cold War: otra estación de esquí, con nieve y cabañas. Mismo frío.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.18,
+  "t1": 264.207,
+  "tipo": "video",
+  "texto": "Otro mapa. Número catorce. La cámara del Pack-a-Punch.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 264.207,
+  "t1": 273.38,
+  "tipo": "video",
+  "texto": "En el teatro de Kino der Toten, cuando mejoras un arma, en las teles del cuarto de proyección te ves a ti mismo, esperando junto a la máquina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 273.38,
+  "t1": 282.741,
+  "tipo": "video",
+  "texto": "Unos juran que esa cámara nunca existió. Otros juran que siempre estuvo. Y los dos tienen razón. La cámara está en el juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 282.741,
+  "t1": 292.93,
+  "tipo": "video",
+  "texto": "Pero en pantalla dividida se apaga, y en la versión de iPhone ni siquiera existe. Depende de con quién jugabas, y en qué pantalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.93,
+  "t1": 298.821,
+  "tipo": "video",
+  "texto": "En el trece, devolver la granada. Call of Duty 2, dos mil cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 298.821,
+  "t1": 308.719,
+  "tipo": "video",
+  "texto": "Normandía, el norte de África, y granadas de palo alemanas cayendo a tus pies. Mucha gente recuerda agarrarlas y devolverlas. En Call of Duty 2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.719,
+  "t1": 316.209,
+  "tipo": "video",
+  "texto": "eso no se podía hacer. Solo te quedaba correr, o tirarte al suelo. Devolver la granada llegó después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.209,
+  "t1": 327.055,
+  "tipo": "video",
+  "texto": "Si alguna vez se la devolviste a un alemán en Call of Duty 2, fue en otro juego. Número doce. Los perros de World at War.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.055,
+  "t1": 335.215,
+  "tipo": "video",
+  "texto": "Zombies no, multijugador. Cuando un rival consigue los perros, el anunciador japonés te avisa. Y muchos recuerdan que decía:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.215,
+  "t1": 342.713,
+  "tipo": "video",
+  "texto": "los cobardes mandan perros. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.713,
+  "t1": 350.25,
+  "tipo": "video",
+  "texto": "Los salvajes mandan perros a hacer su trabajo. Ni cobardes, ni nada. Salvajes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 350.25,
+  "t1": 360.183,
+  "tipo": "video",
+  "texto": "En el once, el armario del primer mapa de los zombis. Nacht der Untoten, de World at War, dos mil ocho: un búnker, cuatro ventanas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.183,
+  "t1": 367.804,
+  "tipo": "video",
+  "texto": "y en el piso de arriba, un armario en la pared. Muchos recuerdan que de ese armario salía el PTRS-41,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.804,
+  "t1": 375.924,
+  "tipo": "video",
+  "texto": "el antitanque que tumba a cualquier zombi. Del armario sale un Kar98k con mira, por mil quinientos puntos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 375.924,
+  "t1": 386.884,
+  "tipo": "video",
+  "texto": "El PTRS solo salía de la caja misteriosa. Y ya que hablamos de mapas alemanes: un espectador me escribió que digo Kino der Toten con acento francés,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.884,
+  "t1": 394.615,
+  "tipo": "video",
+  "texto": "y que mi voz suena victimista y manipuladora. Lo de victimista, no lo sé. Lo de manipuladora, sí:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.615,
+  "t1": 402.93,
+  "tipo": "video",
+  "texto": "te manipulé para que vieras este armario durante treinta segundos. Y te voy a manipular para que veas los otros diez. Merci.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 402.93,
+  "t1": 414.31,
+  "tipo": "video",
+  "texto": "Número diez. La canción que no era de Kino. Lullaby of a Deadman. Mucha gente la recuerda sonando en Kino der Toten, al perder la partida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 414.31,
+  "t1": 419.97,
+  "tipo": "video",
+  "texto": "Pero esa canción es de Verrückt, el manicomio. Y para oírla había que hacer esto:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.97,
+  "t1": 423.85,
+  "tipo": "video",
+  "texto": "tirar tres veces de la cadena del retrete, en el baño del lado",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 423.85,
+  "t1": 437.223,
+  "tipo": "video",
+  "texto": "alemán. La canción de Kino es otra:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.223,
+  "t1": 445.43,
+  "tipo": "video",
+  "texto": "Ciento quince. Lo de Lullaby en el teatro venía de los montajes de YouTube de dos mil diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 445.43,
+  "t1": 457.394,
+  "tipo": "video",
+  "texto": "En el nueve, la Wunderwaffe. La Wunderwaffe DG-2, el arma de rayos de Der Riese. Un disparo, y la electricidad salta de zombi en zombi.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.394,
+  "t1": 463.474,
+  "tipo": "video",
+  "texto": "La leyenda dice que con Pack-a-Punch mataba veinticuatro zombis de un tiro. Mata hasta diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.474,
+  "t1": 471.576,
+  "tipo": "video",
+  "texto": "Con Pack-a-Punch o sin él: la mejora solo le da más munición. ¿Y de dónde sale el veinticuatro? De dos sitios:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 471.576,
+  "t1": 481.076,
+  "tipo": "video",
+  "texto": "la Wunderwaffe trae veinticuatro cargas de reserva. Y en los mapas de World at War, nunca hay más de veinticuatro zombis a la vez. El número era real.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.076,
+  "t1": 488.824,
+  "tipo": "video",
+  "texto": "Lo pegaste en el sitio equivocado. Número ocho. Este me lo mandó Andrés.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 488.824,
+  "t1": 498.164,
+  "tipo": "video",
+  "texto": "Me escribió que Black Ops salió en dos mil siete, y que tenía trece misiones. Andrés, gracias. Acabas de hacer un efecto Mandela en vivo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.164,
+  "t1": 504.859,
+  "tipo": "video",
+  "texto": "en los comentarios de un video de efectos Mandela. Black Ops salió el nueve de noviembre de dos mil diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 504.859,
+  "t1": 514.553,
+  "tipo": "video",
+  "texto": "Y la campaña tiene quince misiones, de Operación cuarenta a Redención. En dos mil siete salió Call of Duty 4. Y lo mejor:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 514.553,
+  "t1": 522.987,
+  "tipo": "video",
+  "texto": "la fecha está escrita en el propio juego. En la intro, junto al logo de Treyarch, se lee once, nueve, diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 522.987,
+  "t1": 530.43,
+  "tipo": "video",
+  "texto": "El juego te dijo cuándo salió en el primer segundo. Y aun así lo mandaste tres años atrás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 530.43,
+  "t1": 540.69,
+  "tipo": "video",
+  "texto": "En el siete, el reencuentro de Mason y Woods. Black Ops 2, misión Victoria pírrica. Mason y Hudson abren un contenedor en Angola,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.69,
+  "t1": 549.05,
+  "tipo": "video",
+  "texto": "y dentro está Frank Woods, amarrado y destrozado. Rafa recuerda que Mason le decía: Frank, soy yo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.05,
+  "t1": 557.93,
+  "tipo": "video",
+  "texto": "Mason, ¿me recuerdas? Escucha lo que dice de verdad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.93,
+  "t1": 566.02,
+  "tipo": "video",
+  "texto": "Frank, soy yo, Mason. Y ya. Ni en el doblaje latino, ni en inglés, hay un me recuerdas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.02,
+  "t1": 573.89,
+  "tipo": "video",
+  "texto": "Lo que tu cabeza añadió tiene sentido: Woods llevaba años preso, y Mason no sabía si su amigo lo iba a reconocer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 573.89,
+  "t1": 584.282,
+  "tipo": "video",
+  "texto": "Pero eso lo pensaste tú. El juego no lo dice. Número seis. La perk de Moon, otra vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.282,
+  "t1": 592.282,
+  "tipo": "video",
+  "texto": "En el expediente anterior dije que en las plataformas de Moon nunca te regalaban una perk. Y metal me escribió que tenía dudas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.282,
+  "t1": 600.478,
+  "tipo": "video",
+  "texto": "Que recordaba a gente consiguiéndola. Tiene razón en algo. Encima de las plataformas del biodomo sí aparecen potenciadores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 600.478,
+  "t1": 608.83,
+  "tipo": "video",
+  "texto": "que cambian cada pocos segundos: doble puntos, carpintero, nuke, insta-kill. Y se agarran saltando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 608.83,
+  "t1": 617.802,
+  "tipo": "video",
+  "texto": "Y en dos mil once alguien subió este video: un destello verde, borroso, que según su amigo se convertía en una botella de perk.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.802,
+  "t1": 626.302,
+  "tipo": "video",
+  "texto": "Ese recuerdo existe por una razón: en Shangri-La, el mapa anterior, si un mono roba un Max Ammo, el potenciador va cambiando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.302,
+  "t1": 632.462,
+  "tipo": "video",
+  "texto": "Y durante una fracción de segundo, se convierte en esto: una botella de perk.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 632.462,
+  "t1": 642.93,
+  "tipo": "video",
+  "texto": "Así que no, en Moon no había perk gratis en las plataformas. Pero no lo soñaste: lo viste. En otro mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 642.93,
+  "t1": 651.394,
+  "tipo": "video",
+  "texto": "En el cinco, el M1911 de Alcatraz. Mob of the Dead, Black Ops 2: la prisión de Alcatraz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 651.394,
+  "t1": 661.648,
+  "tipo": "video",
+  "texto": "cuatro gánsteres y Brutus, el guardia que te bloquea la caja y las máquinas. Mucha gente recuerda haber sacado el M1911 de la caja misteriosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 661.648,
+  "t1": 669.731,
+  "tipo": "video",
+  "texto": "Y aquí está, girando dentro de la caja. Pero no se puede sacar. Sale en la ruleta, solo para verse.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 669.731,
+  "t1": 677.741,
+  "tipo": "video",
+  "texto": "Hay jugadores que han gastado millones de puntos sin conseguirlo. Los que lo vieron, lo vieron de verdad. Los que lo sacaron,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 677.741,
+  "t1": 687.048,
+  "tipo": "video",
+  "texto": "no. Número cuatro. El director Hoover. Black Ops 2, multijugador, el mapa Raid.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.048,
+  "t1": 695.185,
+  "tipo": "video",
+  "texto": "Muchos recuerdan al anunciador del FBI diciendo al ganar: Buen trabajo, equipo. El director Hoover estará complacido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.185,
+  "t1": 702.615,
+  "tipo": "video",
+  "texto": "El FBI no tiene esa frase. La que existe es de otro bando: el SDC, el ejército chino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 702.615,
+  "t1": 713.54,
+  "tipo": "video",
+  "texto": "Escucha. Nuestros generales estarán complacidos. Generales, no Hoover.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.54,
+  "t1": 722.62,
+  "tipo": "video",
+  "texto": "Y hay otro detalle: J. Edgar Hoover murió en mil novecientos setenta y dos. El multijugador de Black Ops 2 pasa en dos mil veinticinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.62,
+  "t1": 729.328,
+  "tipo": "video",
+  "texto": "Habría sido complacido desde la tumba. Un dato antes del podio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 729.328,
+  "t1": 738.004,
+  "tipo": "video",
+  "texto": "De cada cien personas que ven estos expedientes, ni una está suscrita al canal. Si llegaste hasta aquí, ya eres de la unidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.004,
+  "t1": 746.597,
+  "tipo": "video",
+  "texto": "Suscríbete, y el siguiente expediente te llega a ti primero. Número tres. La AUG en la granja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.597,
+  "t1": 755.618,
+  "tipo": "video",
+  "texto": "Este me lo mandó brexxy: recuerda perfectamente la AUG en la Granja de Black Ops 2. Y sus hermanos también la recuerdan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.618,
+  "t1": 762.298,
+  "tipo": "video",
+  "texto": "La Granja, el mapa de Zombies con el granero, la casa y el tractor. Esta es la lista de la caja:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 762.298,
+  "t1": 771.999,
+  "tipo": "video",
+  "texto": "pistolas, la MTAR, la Galil, la Ray Gun. La AUG no está. Y no está en ningún modo de Black Ops 2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 771.999,
+  "t1": 779.969,
+  "tipo": "video",
+  "texto": "¿Entonces de dónde sale? De Black Ops 1. Ahí la AUG salía de la caja en todos los mapas, con mira Swarovski.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 779.969,
+  "t1": 788.608,
+  "tipo": "video",
+  "texto": "Y con Pack-a-Punch se convertía en la AUG-50M3, con escopeta debajo. Y en la Granja sí está la MTAR:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 788.608,
+  "t1": 797.468,
+  "tipo": "video",
+  "texto": "un fusil compacto, con el cargador detrás del gatillo, que de lejos parece una AUG. Tú y tus hermanos no están locos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.468,
+  "t1": 805.208,
+  "tipo": "video",
+  "texto": "Jugaron mucho Black Ops 1. En el dos, el ojo de Weaver. Black Ops, dos mil diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 805.208,
+  "t1": 816.169,
+  "tipo": "video",
+  "texto": "Grigori Weaver, el agente ruso del parche en el ojo. En Baikonur, Kravchenko lo tiene en el suelo. Mucha gente recuerda que Kravchenko le apagó un puro en el ojo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 816.169,
+  "t1": 824.271,
+  "tipo": "video",
+  "texto": "Fue un cuchillo. Y el cigarro existe, pero en otro juego: World at War, dos mil ocho. La primera misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 824.271,
+  "t1": 831.233,
+  "tipo": "video",
+  "texto": "Un oficial japonés interroga al soldado Pyle, le da una calada al cigarro, y se lo apaga en el ojo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 831.233,
+  "t1": 840.344,
+  "tipo": "video",
+  "texto": "Dos juegos de Treyarch, dos ojos, dos años de diferencia. Y tu memoria los fusionó en una sola tortura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 840.344,
+  "t1": 848.668,
+  "tipo": "video",
+  "texto": "Y el número uno. La frase de Gaz. Call of Duty 4, el campo de tiro, el primer minuto de la saga moderna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 848.668,
+  "t1": 860.43,
+  "tipo": "video",
+  "texto": "Medio internet la cita así: cambiar a tu sidearm siempre es más rápido que recargar. Escucha el final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.43,
+  "t1": 868.25,
+  "tipo": "video",
+  "texto": "La palabra que dice Gaz es pistol, o sea, pistola. No dice sidearm, y tampoco dice arma secundaria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 868.25,
+  "t1": 875.511,
+  "tipo": "video",
+  "texto": "Dice pistola. Y no acaba ahí: Gaz sigue diciendo que el cuchillo es todavía más rápido,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 875.511,
+  "t1": 883.001,
+  "tipo": "video",
+  "texto": "y te manda a acuchillar una sandía. La primera lección de Call of Duty moderno. La oíste cien veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 883.001,
+  "t1": 893.464,
+  "tipo": "video",
+  "texto": "Y la recuerdas con otra palabra. Expediente cerrado. Veinte efectos Mandela, y cuatro me los dieron ustedes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.464,
+  "t1": 902.574,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen, y se toman en cuenta para el siguiente expediente. Como el de lycanroc, que todavía guarda la carta física de Pawn Takes Pawn.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 902.574,
+  "t1": 909.784,
+  "tipo": "video",
+  "texto": "O el que dijo que los jugadores de Black Ops 2 cumplieron dieciocho años y encontraron chamba. Ahora te toca a ti:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 909.784,
+  "t1": 916.784,
+  "tipo": "video",
+  "texto": "¿qué recuerdas de Call of Duty que nadie más recuerda? Escríbelo. Si es bueno, sale en la parte tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 916.784,
+  "t1": 926.875,
+  "tipo": "video",
+  "texto": "En el canal tienes la parte uno, y los treinta misterios más raros de la saga. Suscríbete. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

@@ -4,17 +4,23 @@
   "estilo": "Call of Duty en español (alta 2-nov-2026, objetivo: patrocinio de Overgear). Fórmula de Warcraft/Tamriel = motor SECUENCIA YT (gameplay por beat con yt-dlp) + pegatinas reales + fichas translúcidas con la interfaz de CoD + MG nuevos por guion + mapas reales con ruta + sonido original del juego + OST oficial. Ejes con datos: listas de lo ELIMINADO/secretos de Zombies, personajes y villanos explicados, recopilaciones largas «para dormir». Voz: Damián de ElevenLabs (BPwS5yO6aXvwg8auqNwS, biblioteca, eleven_v4_turbo con corchetes, tono de sargento), elegida por el usuario el 2-nov-2026. Ver canales/formula/cronicas_cod.md",
   "horario": {
     "zona": "America/Mexico_City",
-    "hora_local": "18:00",
-    "utc": "00:00",
+    "hora_local": "13:00",
+    "utc": "19:00",
     "ciclo_dias": 3,
     "separacion_min_horas": 72,
-    "nota": "Provisional (sin datos propios): ciclo de 3 días ≈ 2 videos por semana para arrancar; 18:00 CDMX = 00:00 UTC (MX 18:00, CO 19:00, AR 21:00), como Crónicas del gaming. AJUSTABLE por Claude con datos: docs/publicacion.md § «Frecuencia y hora».",
+    "nota": "13:00 CDMX = 19:00 UTC (MX 13:00, CO 14:00, AR 16:00, ES 20:00 en invierno / 21:00 en verano): decisión del usuario del 11-nov-2026 para cubrir también a España a buena hora (antes 18:00 CDMX). Ciclo de 3 días. AJUSTABLE por Claude con datos: docs/publicacion.md § «Frecuencia y hora».",
     "historial": [
       {
         "fecha": "2026-11-02",
         "ciclo_dias": 3,
         "hora_local": "18:00",
         "motivo": "alta del canal; ritmo de arranque de 2 por semana por criterio, sin datos propios"
+      },
+      {
+        "fecha": "2026-11-11",
+        "ciclo_dias": 3,
+        "hora_local": "13:00",
+        "motivo": "el usuario: publicar a la 1 de la tarde (antes 18:00) para cubrir también al público de España a buena hora"
       }
     ]
   },
@@ -37,19 +43,34 @@
       "id": "XL3MZ4Oj7Ko",
       "titulo": "Los 20 EFECTOS MANDELA más raros de Call of Duty",
       "subido": "2026-11-03",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "programado": "2026-11-07T00:00:00Z",
       "formato": "lista de 20 efectos Mandela (cuenta regresiva), 14:20, SECUENCIA YT, voz Damián; misma fórmula que MW4 cambiando el tema",
-      "nota": "referencia Fellow ×41,6 (MUHIbSFqEyg); 7 sonidos nombrados audibles; miniatura Flow «EFECTO MANDELA / NUNCA PASÓ»"
+      "nota": "referencia Fellow ×41,6 (MUHIbSFqEyg); 7 sonidos nombrados audibles; miniatura Flow «EFECTO MANDELA / NUNCA PASÓ»",
+      "publicado": "2026-11-07T00:00:34Z",
+      "estado": "publicado"
     },
     {
       "video": "cod_misterios",
       "id": "-4fHC9P5Hw0",
       "titulo": "Los 30 MISTERIOS más raros de Call of Duty",
-      "visibilidad": "private",
-      "programado": "2026-11-12T00:00:00Z",
+      "visibilidad": "public",
       "formato": "lista 30 misterios ~24 min (familia Mandela)",
-      "nota": "miniatura Flow «30 MISTERIOS / SIN RESOLVER» (hombre de traje de MW3 + cara de Alcatraz) aplicada el 10-nov"
+      "nota": "miniatura Flow «30 MISTERIOS / SIN RESOLVER» (hombre de traje de MW3 + cara de Alcatraz) aplicada el 10-nov; salió antes de lo programado: el usuario lo publicó a mano el 11-nov 15:51 CDMX (estaba para las 18:00); la métrica usa la fecha real",
+      "publicado": "2026-11-11T21:51:26Z",
+      "estado": "publicado",
+      "programado_original": "2026-11-12T00:00:00Z"
+    },
+    {
+      "video": "cod_mandela2",
+      "id": "8xOoO4YwA2c",
+      "titulo": "Los 20 EFECTOS MANDELA de Call of Duty que TÚ recordaste (parte 2)",
+      "subido": "2026-11-14",
+      "visibilidad": "private",
+      "programado": "2026-11-14T22:00:00Z",
+      "estado": "programado",
+      "formato": "lista de 20 efectos Mandela (cuenta regresiva), 15:27, SECUENCIA YT, voz Damián; parte 2 de la serie: misma fórmula cambiando UNA variable (4 efectos mandados por la gente, con su comentario en pantalla)",
+      "nota": "miniatura Flow «EFECTO MANDELA 2 / NUNCA PASÓ» con Gaz in-game + M1911; medir a 7 días contra la parte 1 (XL3MZ4Oj7Ko)"
     }
   ],
   "ideas": {

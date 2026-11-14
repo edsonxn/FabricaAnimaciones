@@ -6,6 +6,14 @@ Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beat
 ## REGLA DE ORO Y LISTA DE CONTROL (el usuario, 30-oct-2026; leer ANTES de escribir `efectos.py`)
 > **REGLA 9 · SIN PRISAS (el usuario, 12-nov-2026):** el video queda bien DESDE EL INICIO. Nada de coordenadas, nombres, rutas ni fotos de memoria o «para salir del paso»: cada dato visual con su fuente comprobada, y la hoja final mirada cuadro por cuadro (cada marcador de cada mapa) ANTES del render. Si se acerca el corte de contexto, checkpoint y la pieza la hace bien la sesión siguiente; improvisar y arreglar después (re-render, resubida, voz) cuesta más tokens. Caso: `wow_forever_experiencia` (mapas en el mar, ruta inventada, Mina de los Ecos, «Montañas Crestagrana», voz en inglés).
 
+> **REGLA 13-nov-2026 (el usuario) · HISTORIAS DE LORE: CADA CLIP ENCAJA CON LA FRASE.** En `tes_reina_loba` v2 había clips que no contaban la línea,
+> un glitch de Skyrim a los 6:10 y textos de youtubers (tops, rótulos). Arreglo de la v3: (1) cada beat revisado contra su frase; glitch, mod, meme, top o
+> marca de agua = fuera (`texto_clips.py` + `_texto_visible.py`, que lista los segundos con texto quemado NO tapados por una pantalla); (2) MUCHAS escenas
+> de Flow (98 en 35 min) a cuadro entero con parallax (`fl3()` en `videos/tes_reina_loba/efectos.py`, plan cruzado con `_flow3_plan.py`), con ingredientes
+> reales y fieles a Skyrim vanilla o al Oblivion de 2006 (no el remaster); (3) redes de intenciones (quién quiere qué, quién paga a quién) repetidas a lo
+> largo de la historia para no perder el hilo; (4) las placas «narra» no caen sobre los nombres de un versus; (5) un bloque nuevo de FX va AL FINAL de
+> `efectos.py` (`_ajustes.json` se aplica por índice); (6) a la tele, copia ligera NVENC ~3,2 Mbps (el MASTER de 2 GB corta la conexión).
+
 > **REGLA 11-nov-2026 (el usuario): REVISAR CADA ANIMACIÓN EN SU CUADRO FINAL ANTES DEL RENDER.** `FAB_FX_FINAL=1 python fab.py <v> fx hoja`
 > saca cada MG, mapa y pegatina justo antes de salir (todas las marcas disparadas). Errores que aparecieron en `wow_errores_30_60`:
 > (1) `mg_wow.filas` con la etiqueta debajo de las casillas (ARREGLADO en el kit: ahora mide la etiqueta); (2) MG que nunca sale

@@ -575,6 +575,11 @@ FLOW3 = [
     dict(fl3("206", "scene-001", ("scene-001:fin", .3), zoom=(1.0, 1.16), pan=(-.4, .2, .3, -.1), oscuro=.08), nombre="pantalla flow3_206 gancho"),
     # 244 (cierre): bandido con flechas → la gema amarilla con el lobo dentro, la que «no te pongas» (ya salió en el 164)
     dict(fl3("164", "scene-244", "scene-244:fin", zoom=(1.18, 1.0), pan=(.2, 0, 0, 0), oscuro=.05), nombre="pantalla flow3_164 cierre"),
+    # 118: capítulo seis sobre un combate borroso con texto de misión → la aldea en llamas bajo estandartes del diamante rojo (ya en el 106)
+    dict(fl3("106", "scene-118", "scene-118:fin", zoom=(1.22, 1.30), pan=(-.6, -.4, -.2, -.6), oscuro=.12), nombre="pantalla flow3_106 diamante"),
+    # recortes del clip (zoom anclado arriba / arriba-izquierda): subtítulos del dremora y del draugr (152-153), marca de agua (221)
+    dict(zoom("scene-152", "scene-153:fin", .25, 0.0, -1.0), entra=.05, sale=.05),
+    dict(zoom("scene-221", "scene-221:fin", .18, -1.0, -1.0), entra=.05, sale=.05),
     # 175: sala de guerra con subtítulos de Galmar → el Palacio Azul de Soledad, otro encuadre (en el 180 «la misma ciudad, el mismo palacio»)
     dict(fl3("180", "scene-175", ("scene-175:fin", 0.0), zoom=(1.30, 1.38), pan=(.7, .5, .4, .3), oscuro=.10), nombre="pantalla flow3_180 sobrino"),
     fl3("003", ("scene-003", 0.00), ("scene-003:fin", 0.00), zoom=(1.0, 1.1), pan=(0, 0, 0, 0), oscuro=0.08),
@@ -587,7 +592,7 @@ FLOW3 = [
     fl3("027", ("scene-027", 0.00), ("scene-027:fin", 0.00), zoom=(1.1, 1.0), pan=(0, 0, 0, 0), oscuro=0.22),
     fl3("029", ("scene-029", 2.50), ("scene-029:fin", 0.50), zoom=(1.04, 1.12), pan=(-0.6, 0, 0.6, 0), oscuro=0.22),
     fl3("030", ("scene-030", 0.00), ("scene-030:fin", 0.50), zoom=(1.06, 1.14), pan=(0.5, 0.3, -0.5, -0.3), oscuro=0.22),
-    fl3("031", ("scene-031", 0.00), ("scene-031:fin", 0.00), zoom=(1.12, 1.03), pan=(0, -0.5, 0, 0.5), oscuro=0.22),
+    fl3("031", ("scene-031", 0.00), ("scene-031:fin", 3.00), zoom=(1.12, 1.03), pan=(0, -0.5, 0, 0.5), oscuro=0.22),
     fl3("034", ("scene-034", 0.00), ("scene-034:fin", 0.00), zoom=(1.03, 1.12), pan=(0.6, 0, -0.6, 0), oscuro=0.08),
     fl3("036", ("scene-036", 0.00), ("scene-036:fin", 0.50), zoom=(1.0, 1.1), pan=(0, 0, 0, 0), oscuro=0.08),
     fl3("037", ("scene-037", 0.00), ("scene-037:fin", 0.50), zoom=(1.1, 1.0), pan=(0, 0, 0, 0), oscuro=0.08),
@@ -705,7 +710,7 @@ for _e in _G.ESCENAS:
 # v3 (13-nov): placa que cae DENTRO de una red de relaciones → arriba a la derecha (x=.84, y=.09), donde la red solo tiene humo.
 # Rango de cada red por sus anclas de/a (sin el desfase en segundos); las demás placas no se tocan.
 _REDES_RANGO = [("Del otro lado, su abuelo", "Corre al Salón de los Registros"), ("Cuando el paje llega", "Sesenta y dos años"),
-                ("Potema ya se había encargado", "Ese mismo día, Bathorgh"), ("Potema la usa esa misma noche", "A la mañana siguiente"),
+                ("Potema ya se había encargado", "Ese mismo día, Bathorgh"), ("Potema la usa esa misma noche", "A la mañana siguiente"), ("A la mañana siguiente", "Antíoco es coronado"),
                 ("Antes pedían cincuenta", "Tres meses después, frente a Artaeum"), ("Cuando le preguntan al duque", "Kintyra muere en su celda"),
                 ("Céforo es proclamado emperador", "Antes de lo que viene"), ("Tres años después, en el ciento cuarenta", "Y un último correo")]
 

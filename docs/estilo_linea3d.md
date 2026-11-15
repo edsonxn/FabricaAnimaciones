@@ -73,3 +73,15 @@ etapa 1 en el mar, o cuando hablas de que en otras ocasiones sí se ha atrapado.
   cuando se comparan. Comprobadas por identidad (regla global).
 - Densidad orientativa: ≥ 1 clip real o foto por minuto además de los planos de retransmisión; nunca más de ~40 s seguidos de 3D puro.
 - La lista de PROMESAS se revisa también para esto: cada frase con un suceso real → ¿hay video real? Si no hay, foto; si no hay foto, Flow.
+
+## Explicador con video real en cada suceso (14-nov-2026, `videos/starship_sin_patas/`, 2.º video de T Menos Cero)
+- Primer video hecho con la REGLA de arriba: 30 planos de video real (SpaceX, VideoFromSpace, CNN, Space.com) de 12 clips + 8 fotos de
+  Commons, alternados con 3D; ninguna racha de 3D pasa de ~30 s. Los clips oficiales cortos de SpaceX («Starship's Fifth/Sixth/Seventh Flight Test»,
+  «How Not to Land an Orbital Rocket Booster», recaps de SN10/SN15) traen casi todos los sucesos sin HUD: buscarlos primero en `@SpaceX/videos`.
+- Mundo LOCAL en metros (z arriba, `esc=1`, `cerca=0.5`) para explicadores sin geografía: mucho más simple que el marco ENU en km del vuelo 15.
+- `comun.foto()` = pegatina de foto en marco de alambre con 4 entradas (barrido, zoom desde un ancla, deslizar, apertura con mira) y `con_foto(plano, …)`
+  para pegarla sobre un plano 3D o de video. Cargar las fotos REDUCIDAS (≤ 1 400 px): a resolución completa en float32 el render se quedó sin memoria.
+- La fuente Bahnschrift no tiene «≈» ni «→» (salen cajas): escribir «UNOS», «CASI», «>».
+- `rp(clip, s0, ta, rot, sub, vel, tfin)` en `planos1.py`: plano de video real con su segundo inicial y tope (`tfin`) para no congelar el último cuadro.
+- Render: máx. 2 `VideoCapture` abiertos por proceso (LRU en `frame_clip`) o se queda sin memoria con muchos clips; tras `final`, `blackdetect`
+  sobre el MASTER: una lectura lenta del disco E: («Stream timeout» de OpenCV) dejó 3 s NEGROS sin ningún error (se rehízo con `video --rehacer`).

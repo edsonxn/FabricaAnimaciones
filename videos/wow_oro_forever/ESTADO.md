@@ -3,14 +3,15 @@
 - canal: cronicas_warcraft · **vie 20-nov-2026 09:00 CDMX** (hueco de `canales` del 15-nov) · **SIN Overgear (el usuario, 15-nov)**; aun así NADA contra comprar oro (campaña 3 de Overgear arranca el 25-nov)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas con ruta) → doc: docs/estilo_secuencia_yt.md · copiar de `videos/wow_forever_experiencia/` (30 min, sin Overgear) y `videos/wow_errores_30_60/`
 - etapa: ✅ SUBIDO y PROGRAMADO vie 20-nov-2026 09:00 CDMX → https://youtu.be/WZQBgTB3HNw (privado hasta entonces; MASTER 29:22, .srt, SIN Overgear)
-- siguiente: (1) miniatura de Flow (bloqueada por «actividad inusual»; proyecto e981dbe2…, receta en prompt_miniatura.md) → `yt aplicar` ANTES del 20-nov · (2) Studio: monetización + cuestionario (https://studio.youtube.com/video/WZQBgTB3HNw/edit) · (3) métricas a 7 días → formula · al aprobar: `fab.py wow_oro_forever limpiar`
+- siguiente: (1) ✅ miniatura de Flow aplicada el 16-nov (`salida/miniatura.jpg`, opción B de `miniatura_ing/opciones/`) · (2) Studio: monetización + cuestionario (https://studio.youtube.com/video/WZQBgTB3HNw/edit) · (3) métricas a 7 días → formula · al aprobar: `fab.py wow_oro_forever limpiar`
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
 - alias: oro de Forever, los 30 trucos de oro, nunca sin oro
 - leer al empezar: este ESTADO.md · `videos/_investigacion_wow_oro_forever.md` · docs/estilo_secuencia_yt.md (grep)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | canal + comentarios + investigación + guion + MG nuevos (`nucleo/mg_oro.py`) + voz + clips + efectos + revisión + render + subida | ✅ 15-nov | WZQBgTB3HNw, vie 20-nov 09:00 (miniatura provisional) |
+| 1 | canal + comentarios + investigación + guion + MG nuevos (`nucleo/mg_oro.py`) + voz + clips + efectos + revisión + render + subida | ✅ 15-nov | WZQBgTB3HNw, vie 20-nov 09:00 |
+| 2 | miniatura de Flow (relevo) | ✅ 16-nov | reintento único sin bloqueo; B elegida (logo grande, más oro); `yt aplicar` conserva privado + publishAt |
 
 ## Decisiones del episodio (el usuario, 15-nov-2026)
 - Tema: opción 1 de `canales/formula/cronicas_warcraft.md` (conclusión del 15-nov): una variable sobre «20 errores del 30 al 60» = el tema (oro). Referencia fuera: Vuxxy «never go broke» ×8,7.

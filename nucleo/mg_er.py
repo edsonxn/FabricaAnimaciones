@@ -54,6 +54,11 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   injerto(centro, sub, miembros, remate)         torso al que vuelan miembros uno por marca y se cosen con puntadas rojas
   linaje(raiz, hijos, medio, remate)             corona de Godfrey; el tronco se apaga de oro a gris; los hijos brotan miembros cosidos
   cadena(eslabones, preso, amo, remate)          eslabones de la Orden al preso que se encienden en rojo por marca
+  expediente(acusado, sub, cargos, ya, sello)    ficha de acusación recurrente: un cargo por marca con palomita roja y sello
+                                                 CULPABLE (er_sinluz_atrocidades, 16-nov-2026)
+  audiencia(campeones, tu, remate)               campeones que entran en las fauces de la serpiente; «Tú», el siguiente
+  uvas(etiquetas, remate)                        racimo de uvas que giran y son ojos; etiquetas a sus dueños; remate rojo
+  paciencia(n, umbral, quien, basta, remate)     9 raíces: doradas hasta la 4.ª, sello «Basta», luego rojas hasta la 9.ª
 """
 import math
 
@@ -2261,5 +2266,316 @@ def linaje(raiz=("Godfrey", "primer Señor del Círculo"), hijos=(("Godrick", "e
         u_r = _eo((dt - mk[n + 2]) / .6)
         if u_r > 0:
             _texto(d, (M + w / 2, M + h - 34), remate, fs, PERGAMINO, "mm", 255 * u_r)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+
+# ============================================================ er_sinluz_atrocidades (16-nov-2026)
+def _sello_txt(im, cx, cy, txt, f, color, a, giro=-12, escala=1.0):
+    """Sello de tinta rotado (rectángulo doble + texto) pegado sobre `im`; `escala` > 1 al caer (golpe)."""
+    if a <= 0:
+        return
+    d0 = ImageDraw.Draw(im)
+    tw = d0.textlength(txt, font=f)
+    W, H = int(tw + 70), int(f.size * 1.6)
+    s = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ds = ImageDraw.Draw(s)
+    ds.rectangle((3, 3, W - 4, H - 4), outline=color + (int(a),), width=6)
+    ds.rectangle((12, 12, W - 13, H - 13), outline=color + (int(a * .7),), width=2)
+    ds.text((W / 2, H / 2), txt, font=f, fill=color + (int(a),), anchor="mm")
+    if escala != 1.0:
+        s = s.resize((max(1, int(W * escala)), max(1, int(H * escala))))
+    s = s.rotate(giro, expand=True, resample=Image.BICUBIC)
+    im.alpha_composite(s, (int(cx - s.width / 2), int(cy - s.height / 2)))
+
+
+def _palomita(d, x, y, s, color, a):
+    d.line((x - 22 * s, y, x - 6 * s, y + 18 * s), fill=color + (int(a),), width=7)
+    d.line((x - 6 * s, y + 18 * s, x + 26 * s, y - 22 * s), fill=color + (int(a),), width=7)
+
+
+def expediente(acusado="El Sinluz", sub="sin doncella, sin runas, sin nada", cargos=(), ya=0, sello="CULPABLE",
+               titulo="Expediente", w=1400, h=None):
+    """Ficha de acusación del juicio al jugador (recurrente: una por puesto). Los `ya` primeros cargos ya están escritos y
+    sellados al entrar; marca k (k = 0..) escribe el cargo `ya + k` letra a letra en ámbar y le cae una palomita roja al
+    lado; la marca siguiente al último cargo deja caer el sello grande `sello` en diagonal (None = sin sello final)."""
+    ftit, fac, fs, fc, fn_, fse = fuente("r", 40), fuente("b", 58), fuente("i", 30), fuente("r", 38), fuente("b", 40), fuente("b", 92)
+    n = len(cargos)
+    h = h or int(320 + 82 * n + (60 if sello else 0))
+
+    def fn(dt, dur, marcas):
+        mk = [-9.0] * ya + list(marcas) + [99] * (n + 3)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        _texto(d, (M + 80, M + 150), acusado, fac, ORO, "lm", a0)
+        _texto(d, (M + 84, M + 205), sub, fs, GRIS, "lm", a0)
+        d.line((M + 80, M + 240, M + w - 80, M + 240), fill=ORO_OSC + (int(a0 * .8),), width=2)
+        paso = 82
+        for i, c in enumerate(cargos):
+            tesc = max(.6, len(c) * .035)
+            u = (dt - mk[i]) / tesc
+            if u <= 0:
+                continue
+            y = M + 300 + i * paso
+            vis = c[:int(len(c) * min(1, u))]
+            act = mk[i + 1] > dt >= mk[i]
+            _texto(d, (M + 80, y), f"{i + 1}.", fn_, ROJO, "lm", a0)
+            _texto(d, (M + 140, y), vis, fc, AMBAR if act else PERGAMINO, "lm", a0)
+            v = _eo((dt - mk[i] - tesc) / .25)
+            if v > 0:
+                _palomita(d, M + w - 120, y, 1 + 1.2 * (1 - v), ROJO, 255 * v * a0 / 255)
+        if sello:
+            u = _eo((dt - mk[n]) / .35)
+            if u > 0:
+                _sello_txt(im, M + w * .68, M + 160, sello, fse, ROJO, 235 * u, giro=-10, escala=1 + .8 * (1 - u))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def _fauces(d, cx, cy, r, ab, color, a):
+    """Cabeza de serpiente de perfil con la boca hacia la izquierda: cráneo a la derecha con el ojo, mandíbulas que giran
+    sobre la bisagra; colmillos en el borde interior. `ab` 0..1 = apertura."""
+    if a <= 0:
+        return
+    bx, by = cx + r * .35, cy
+    d.ellipse((bx - r * .05, by - r * .55, bx + r * .95, by + r * .5), fill=(34, 22, 14, int(a)), outline=color + (int(a),), width=5)
+    ang = math.radians(6 + 30 * ab)
+    L = r * 1.55
+    if ab > .08:
+        tipu = (bx - L * math.cos(ang), by - L * math.sin(ang))
+        tipd = (bx - L * math.cos(ang), by + L * math.sin(ang))
+        d.polygon([(bx, by), tipu, tipd], fill=(80, 10, 8, int(a * .85)))
+    for s in (-1, 1):
+        tip = (bx - L * math.cos(ang), by + s * L * math.sin(ang))
+        ex = (-math.sin(ang) * s * 0, 0)
+        g = r * .42
+        out_h = (bx + r * .1, by + s * g)
+        out_t = (tip[0] - 4, tip[1] + s * g * .25)
+        d.polygon([(bx, by), tip, out_t, out_h], fill=(34, 22, 14, int(a)), outline=color + (int(a),), width=5)
+        for k in range(1, 7):
+            f = k / 7
+            px = bx + (tip[0] - bx) * f
+            py = by + (tip[1] - by) * f
+            largo = (38 if k == 6 else 16) * (.35 + .65 * ab)
+            d.polygon([(px - 7, py), (px + 7, py), (px - 3, py - s * largo)], fill=PERGAMINO + (int(a),))
+    d.ellipse((bx + r * .38, by - r * .4, bx + r * .62, by - r * .2), fill=AMBAR + (int(a),))
+    d.line((bx + r * .5, by - r * .39, bx + r * .5, by - r * .21), fill=(10, 8, 6, int(a)), width=4)
+
+
+def _figura(d, x, cy, esc, col, a, ancho=4):
+    """Campeón encapuchado (silueta rellena con filete) con su espada al costado."""
+    if a <= 2:
+        return
+    s = esc
+    d.polygon([(x - 34 * s, cy + 95 * s), (x - 20 * s, cy - 30 * s), (x, cy - 48 * s), (x + 20 * s, cy - 30 * s),
+               (x + 34 * s, cy + 95 * s)], fill=(30, 25, 18, int(a)), outline=col + (int(a),))
+    d.pieslice((x - 26 * s, cy - 100 * s, x + 26 * s, cy - 30 * s), 180, 360, fill=(30, 25, 18, int(a)), outline=col + (int(a),),
+               width=max(1, ancho - 1))
+    d.rectangle((x - 22 * s, cy - 66 * s, x + 22 * s, cy - 36 * s), fill=(30, 25, 18, int(a)))
+    d.line((x - 22 * s, cy - 66 * s, x - 22 * s, cy - 36 * s), fill=col + (int(a),), width=max(1, ancho - 1))
+    d.line((x + 22 * s, cy - 66 * s, x + 22 * s, cy - 36 * s), fill=col + (int(a),), width=max(1, ancho - 1))
+    d.ellipse((x - 12 * s, cy - 60 * s, x + 12 * s, cy - 40 * s), fill=(6, 5, 4, int(a)))
+    d.line((x + 40 * s, cy - 10 * s, x + 40 * s, cy + 100 * s), fill=col + (int(a),), width=ancho)
+    d.line((x + 30 * s, cy + 2 * s, x + 50 * s, cy + 2 * s), fill=col + (int(a),), width=ancho)
+
+
+def audiencia(campeones=("Campeón", "Campeón", "Campeón"), tu="Tú", sub_tu="el siguiente", remate="Eras el siguiente menú",
+              titulo="La audiencia con el señor", w=1600, h=640):
+    """Fila de campeones encapuchados que avanza hacia las fauces de la serpiente (der). Marca k (0..n-1): el campeón k
+    entra en las fauces (se encoge y se apaga) y las mandíbulas se cierran de golpe. Marca n: los demás rótulos se van,
+    aparece «Tú» al principio de la fila en ámbar, flechas rojas lo llevan a las fauces abiertas y sale `remate` en rojo."""
+    ftit, fn_, fs, fr = fuente("r", 40), fuente("r", 34), fuente("i", 28), fuente("i", 50)
+    n = len(campeones)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cy = M + h * .5
+        fx = M + w - 300
+        ab = .3 + .1 * math.sin(dt * 2)
+        for k in range(n):
+            e = dt - mk[k]
+            if 0 <= e < .9:
+                ab = max(0.0, .3 + .7 * e / .45 if e < .45 else 1.0 - (e - .45) / .45)
+        u_fin = _eo((dt - mk[n]) / .6)
+        ab = ab * (1 - u_fin) + (1.0 + .05 * math.sin(dt * 4)) * u_fin
+        capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        _fauces(ImageDraw.Draw(capa), fx, cy, 140, ab, ORO_OSC if u_fin < .5 else ROJO, a0)
+        im.alpha_composite(_brillo(capa, 8, 1.0))
+        d = ImageDraw.Draw(im)
+        x0, paso = M + 150, (fx - 260 - (M + 150)) / max(1, n)
+        for k, nom in enumerate(campeones):
+            e = _eo((dt - mk[k]) / .45)
+            xi = x0 + paso * (k + .5)
+            x = xi + (fx - 90 - xi) * e
+            _figura(d, x, cy, 1 - .85 * e, PERGAMINO, a0 * (1 - e))
+            _texto(d, (xi, cy + 130), nom, fn_, GRIS if e > .5 else PERGAMINO, "mt", a0 * (1 - .6 * e) * (1 - u_fin))
+        if u_fin > 0:
+            x = x0 + paso * .5
+            lat = .5 + .5 * math.sin(dt * 5)
+            _figura(d, x, cy, 1.0, AMBAR, 255 * u_fin, 5)
+            _texto(d, (x, cy + 126), tu, fuente("b", 46), AMBAR, "mt", 255 * u_fin)
+            _texto(d, (x, cy + 180), sub_tu, fs, GRIS, "mt", 255 * u_fin)
+            for j in range(6):
+                xx = x + 110 + j * ((fx - 200 - x - 110) / 5)
+                d.polygon([(xx, cy - 14), (xx + 26, cy), (xx, cy + 14)], fill=ROJO + (int((110 + 130 * lat) * u_fin),))
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 46), remate, fr, ROJO, "mm", 255 * u_fin, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+_UVAS = [(0, -120), (-70, -60), (70, -60), (-120, 10), (0, 0), (120, 10), (-70, 75), (70, 75), (0, 145)]
+
+
+def uvas(etiquetas=(), remate="Los dueños de los ojos", titulo="La Uva Shabriri", w=1500, h=740):
+    """Racimo de uvas amarillentas colgando de un tallo. Marca 0: las uvas giran una a una y son OJOS (iris ámbar, pupila
+    negra, venitas rojas) que parpadean y miran. Marcas 1..n: `etiquetas` (texto, i_uva): una línea sale de esa uva hasta su
+    rótulo a los lados. Marca n+1: `remate` en rojo y todos los ojos miran al frente."""
+    ftit, fl, fr = fuente("r", 40), fuente("r", 32), fuente("i", 46)
+    n = len(etiquetas)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 3)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, cy = M + w / 2, M + h / 2 + 40
+        bal = 6 * math.sin(dt * 1.3)
+        d.line((cx, cy - 250, cx + bal, cy - 165), fill=(90, 70, 40, int(a0)), width=10)
+        d.polygon([(cx + bal, cy - 210), (cx + 70 + bal, cy - 240), (cx + 40 + bal, cy - 200)], fill=(70, 90, 40, int(a0)))
+        R = 52
+        fin = _eo((dt - mk[n + 1]) / .5)
+        for i, (ox, oy) in enumerate(_UVAS):
+            x, y = cx + ox + bal * (1 - (oy + 150) / 300), cy + oy
+            u = _eo((dt - mk[0] - i * .18) / .45)
+            d.ellipse((x - R, y - R, x + R, y + R), fill=(196, 178, 84, int(a0)), outline=(120, 96, 40, int(a0)), width=3)
+            if u > 0:
+                for k in range(4):
+                    ang = k * 1.7 + i
+                    d.line((x + math.cos(ang) * R * .95, y + math.sin(ang) * R * .95, x + math.cos(ang) * R * .58,
+                            y + math.sin(ang) * R * .58), fill=ROJO + (int(170 * u),), width=2)
+                mira_x = (1 - fin) * 10 * math.sin(dt * .9 + i * 1.3)
+                mira_y = (1 - fin) * 6 * math.cos(dt * .7 + i)
+                ir = R * .5 * u
+                parp = abs(math.sin(dt * .8 + i * 2.1))
+                cierre = 1.0 if parp > .06 else .15
+                ex, ey = x + mira_x, y + mira_y
+                d.ellipse((ex - ir, ey - ir * cierre, ex + ir, ey + ir * cierre), fill=(214, 140, 40, int(255 * u)))
+                d.ellipse((ex - ir * .45, ey - ir * .45 * cierre, ex + ir * .45, ey + ir * .45 * cierre), fill=(10, 8, 6, int(255 * u)))
+                if cierre > .5:
+                    d.ellipse((ex - ir * .5 + 4, ey - ir * .5, ex - ir * .5 + 11, ey - ir * .5 + 7), fill=(255, 250, 230, int(220 * u)))
+            else:
+                d.ellipse((x - R * .5, y - R * .6, x - R * .2, y - R * .3), fill=(240, 230, 160, int(a0 * .7)))
+        izq = der = 0
+        for k, (txt, iu) in enumerate(etiquetas):
+            ox, oy = _UVAS[iu % len(_UVAS)]
+            lado = -1 if ox < 0 or (ox == 0 and k % 2 == 0) else 1
+            fila = izq if lado < 0 else der
+            if lado < 0:
+                izq += 1
+            else:
+                der += 1
+            u = _eo((dt - mk[k + 1]) / .5)
+            if u <= 0:
+                continue
+            x, y = cx + ox, cy + oy
+            tx = cx + lado * (w * .5 - 90)
+            ty = M + 190 + fila * 150
+            act = mk[k + 2] > dt >= mk[k + 1]
+            col = AMBAR if act else PERGAMINO
+            lineas = _partir(d, txt, fl, 380)[:2]
+            ancho_t = max(d.textlength(l, font=fl) for l in lineas)
+            fin_l = (tx - lado * (ancho_t + 16), ty)
+            _linea(d, (x + lado * R, y), fin_l, u, col, 200 * u, 3)
+            for j, ln in enumerate(lineas):
+                _texto(d, (tx, ty - 14 + j * 36), ln, fl, col, "rm" if lado > 0 else "lm", 255 * u)
+        if fin > 0:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 36), remate, fr, ROJO, "mm", 255 * fin, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def _raiz(d, x, y, s, color, a):
+    """Raíz mortuoria esquemática: tubérculo con raicillas retorcidas."""
+    if a <= 0:
+        return
+    d.ellipse((x - 16 * s, y - 26 * s, x + 16 * s, y + 18 * s), fill=(28, 22, 16, int(a)), outline=color + (int(a),), width=3)
+    for k, (dx, l) in enumerate(((-10, 46), (0, 58), (10, 42), (-4, 50))):
+        pts = [(x + dx * s, y + 14 * s)]
+        for j in range(1, 5):
+            pts.append((x + dx * s + 6 * s * math.sin(j * 1.9 + k), y + 14 * s + l * s * j / 4))
+        d.line(pts, fill=color + (int(a),), width=3)
+
+
+def paciencia(n=9, umbral=4, quien="Gurranq", basta="«Basta»", remate="Y le llevaste cinco más", titulo="Raíz mortuoria",
+              icono=None, w=1600, h=500):
+    """Fila de `n` raíces que se entregan a `quien`. Marca 0: se encienden en dorado de la 1 a la `umbral` (escalonadas).
+    Marca 1: después de la `umbral` cae el sello `basta` en rojo y la fila se estremece. Marca 2: se encienden en rojo de la
+    umbral+1 a la n, cada una con su número. Marca 3: `remate`. `icono` = PNG con alfa del objeto real (se dibuja en cada
+    casilla con un halo dorado o rojo; apagado = oscuro); sin icono, raíz esquemática."""
+    ftit, fq, fnum, fb, fr = fuente("r", 40), fuente("b", 44), fuente("b", 30), fuente("b", 64), fuente("i", 46)
+    ico = None
+    if icono:
+        ico = Image.open(icono).convert("RGBA")
+        bb = ico.getbbox()
+        ico = ico.crop(bb) if bb else ico
+        k = 150 / max(ico.size)
+        ico = ico.resize((max(1, int(ico.width * k)), max(1, int(ico.height * k))), Image.LANCZOS)
+        ico_osc = Image.fromarray((np.array(ico) * np.array([.35, .35, .35, 1])).astype(np.uint8))
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 5
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        _texto(d, (M + 70, M + 44), quien, fq, PERGAMINO, "lm", a0)
+        cy = M + h * .55
+        x0, paso = M + 130, (w - 260) / (n - 1)
+        tiemb = 6 * math.sin(dt * 40) * max(0, 1 - (dt - mk[1]) / .5) if dt >= mk[1] else 0
+        for i in range(n):
+            x = x0 + paso * i + tiemb
+            if i < umbral:
+                u = _eo((dt - mk[0] - i * .35) / .35)
+                col = tuple(int(GRIS[c] * (1 - u) + ORO[c] * u) for c in range(3))
+            else:
+                u = _eo((dt - mk[2] - (i - umbral) * .4) / .35)
+                col = tuple(int(GRIS[c] * (1 - u) + ROJO[c] * u) for c in range(3))
+            if ico is not None:
+                if u > 0:
+                    halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                    ImageDraw.Draw(halo).ellipse((x - 60, cy - 105, x + 60, cy + 15), fill=col + (int(150 * u * a0 / 255),))
+                    im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(22)))
+                im.alpha_composite(ico_osc if u < .5 else ico, (int(x - ico.width / 2), int(cy - 45 - ico.height / 2)))
+                d = ImageDraw.Draw(im)
+            else:
+                _raiz(d, x, cy - 40, 1.25, col, a0 * (.45 + .55 * u))
+            if u > 0:
+                _texto(d, (x, cy + 70), str(i + 1), fnum, col, "mt", 255 * u)
+        ub = _eo((dt - mk[1]) / .3)
+        if ub > 0:
+            xm = x0 + paso * (umbral - .5)
+            d.line((xm, cy - 110, xm, cy + 120), fill=ROJO + (int(200 * ub),), width=4)
+            _sello_txt(im, xm, cy - 150, basta, fb, ROJO, 240 * ub, giro=-8, escala=1 + .8 * (1 - ub))
+        ur = _eo((dt - mk[3]) / .5)
+        if ur > 0:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 40), remate, fr, AMBAR, "mm", 255 * ur, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

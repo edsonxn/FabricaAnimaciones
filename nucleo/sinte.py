@@ -276,11 +276,18 @@ def envolvente(x, ataque=0.005, liberacion=0.15):
 
 
 def compresor(x, umbral_db=-18, ratio=3.0, ataque=0.005, liberacion=0.12, makeup_db=0.0):
-    env = envolvente(x, ataque, liberacion)
-    lvl = 20 * np.log10(env + 1e-9)
-    sobre = np.maximum(0, lvl - umbral_db)
-    gr = -sobre * (1 - 1 / ratio)
-    g = 10 ** ((gr + makeup_db) / 20)
+    # 15-nov-2026: mismas cuentas, pero en un solo arreglo float32 y en el sitio (wow_oro_forever, 29 min: la versión
+    # anterior creaba 5 arreglos float64 de 645 MiB y la mezcla caía por memoria con 10 GB de commit libre)
+    g = np.asarray(envolvente(x, ataque, liberacion), dtype=np.float32).copy()
+    g += 1e-9
+    np.log10(g, out=g)
+    g *= 20
+    g -= umbral_db
+    np.maximum(g, 0, out=g)
+    g *= -(1 - 1 / ratio)
+    g += makeup_db
+    g /= 20
+    np.power(10, g, out=g)
     return x * g
 
 

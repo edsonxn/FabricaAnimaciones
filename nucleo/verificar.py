@@ -55,9 +55,9 @@ info = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_
 print("MASTER:", M, "\n", info)
 tmp = "previews/_audio_master.wav"
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", M, "-vn", "-ac", "1", "-ar", "48000", tmp], check=True)
-a, _ = sf.read("audio/final.wav")
-b, _ = sf.read(tmp)
-a = a.mean(1)
+a, _ = sf.read("audio/final.wav", dtype="float32")   # float32: con 29 min el float64 no cabía (15-nov-2026)
+b, _ = sf.read(tmp, dtype="float32")
+a = a.mean(1, dtype=np.float32)
 seg = slice(int(20 * 48000), int(30 * 48000))
 from scipy.signal import correlate
 c = correlate(b[seg], a[seg], mode="full", method="fft")

@@ -172,3 +172,19 @@
 - 5 integraciones entre el 23-nov y el 18-dic: **mié 25-nov, dom 29-nov, vie 4-dic, mié 9-dic y mié 16-dic** (9-dic = abren las bandas de Forever).
 - Brief de las dos primeras: lun 16-nov; contenido para revisión de Alice: mar 17-nov (antes de sus vacaciones); ella manda los enlaces s.gy.
 - `wow_forever_experiencia` (lun 23-nov) va SIN Overgear (el usuario, 12-nov).
+
+## Conclusión del 15-nov-2026 — video de ~30 min de Forever
+- **Lo propio:** lo ÚTIL para quien ya juega sigue mandando: «20 ERRORES del 30 al 60» 10 720 en < 7 días (lo mejor de la etapa
+  Fábrica junto a «25 errores» y «primera semana» ×4,9); «20 secretos de los primeros niveles» 5 672 y «20 add-ons» 2 843 (flojo).
+  Las listas largas de ~25-31 min aguantan 42-47 % visto (62 curiosidades ×2,05 a 31 min).
+- **Fuera (60 días):** MadSeason «Everything We Know» ×8,0 (32,7 min) y ×7,1 (54 min) = el formato largo funciona en Forever;
+  Vuxxy ×8,7 oro; WillE ×6,8 guía de clase; Blizzard ×2,2 «leveling past 30»; Uncas ×6,1 «lo que viene».
+- **Comentarios (25 nuevos desde el 12-nov):** pide ayuda «inventario lleno de objetos de misión» (@rafaelmartinezsantana7055, en
+  errores 30-60); un secreto de Ventormenta hallado por @Erzulin (63.4 42.4, cama que brilla a las 09:00 del servidor); @robindecretk3307
+  corrige el brazo de Terminator (estaba en WotLK y lo quitaron); @Jorge_alvarez_ «la doble especialización cuesta 50 g, no 10 g» (queja
+  justa → corregir); @Daniel-us3jp Gilneas/Garrosh. Voz: la competencia de voces no gusta («cualquiera menos Maricarmen», «voces…»),
+  piden «la voz de siempre» o la voz real → se le reporta al usuario, no se cambia sola.
+- **Propuesta (una variable cada una sobre «20 errores del 30 al 60»):** (1) «30 trucos para NUNCA quedarte sin ORO en WoW Forever»
+  — cambia el tema (Vuxxy ×8,7), encaja con Overgear sin decir nada contra comprar oro · (2) «La RUTA 1-60 de WoW Forever zona por zona»
+  — cambia el formato a ruta con mapa en cada zona (Blizzard ×2,2) · (3) «Antes de las BANDAS del 9-dic: 25 cosas que necesitas al 60»
+  — cambia la etapa (30-60 → 60) y prepara la campaña Overgear del 9-dic.

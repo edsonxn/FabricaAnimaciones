@@ -153,6 +153,13 @@ def main():
         lg = meter.integrated_loudness(golpes[:, np.abs(golpes).max(0) > 1e-4].T)
         golpes *= 10 ** ((config.MEZCLA.get("susto", -9.0) - lg) / 20)
     mix = voz + musica + sfx + amb + golpes
+    # 15-nov-2026 (wow_oro_forever, 29 min): soltar las pistas antes del compresor y el limitador; cada una es (2, N) float64
+    # (~1,35 GB a 29 min) y la mezcla caía por memoria con 10 GB de commit libre: pasarlas a float32 y soltar las demás
+    # (se usan después solo para el informe de relaciones: basta float32)
+    voz, musica, sfx, amb = (a.astype(np.float32) for a in (voz, musica, sfx, amb))
+    del golpes, fx, fxv
+    import gc
+    gc.collect()
     mix = compresor(mix, -12, 1.8, 0.01, 0.2, 0.0)
 
     # fundido final (coincide con el fundido a negro del video)

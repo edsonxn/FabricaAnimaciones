@@ -308,3 +308,4 @@ Al terminar un video o sesión: actualiza `videos/<v>/ESTADO.md` (etapa + siguie
 - 14-nov-2026: T Menos Cero — starship_vuelo15 «Starship ATRAPÓ su nave al volver del espacio» (10:10) subido TJvawxDLQnE, programado sáb 14-nov 19:00 CDMX (1.er video del canal).
 - 14-nov-2026: T Menos Cero — TJvawxDLQnE publicado a mano por el usuario antes de las 19:00 (ya público, miniatura E «¡LA ATRAPÓ!»).
 - 14-nov-2026: T Menos Cero — starship_sin_patas «¿Por qué Starship NO tiene patas? La verdadera razón de los palillos» (9:26) subido KinwPPlHKpg, programado sáb 21-nov 17:37 CDMX (2.º video; primero con la regla de más video real y fotos).
+- 15-nov-2026 · **Crónicas de Warcraft**: «30 trucos para NUNCA quedarte sin ORO en WoW Forever» (29:22, SIN Overgear) subido y programado vie 20-nov 09:00 CDMX (15:00 UTC): https://youtu.be/WZQBgTB3HNw. Miniatura provisional (Flow bloqueó por «actividad inusual»): cambiar antes del 20-nov.

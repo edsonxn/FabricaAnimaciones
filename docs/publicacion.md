@@ -143,6 +143,10 @@ Plastitube semanal martes 19:00 UTC, etc.) eran puntos de partida, no leyes: tú
    prompt con «bold, eye-catching YouTube thumbnail lettering» y el texto exacto deletreado; solo se corrige por código si un acento sale
    mal tras dos intentos. Antes de subir, compárala
    en una hoja con las antiguas del usuario: si no parece el juego, se rehace.
+   **«Hemos detectado actividad inusual» en Flow (15/16-nov-2026, `wow_oro_forever`):** es pasajero; no se salta ni se reintenta en
+   bucle: miniatura provisional y UN reintento otro día (al día siguiente salió a la primera). Ingredientes ya subidos al proyecto se
+   añaden con el botón «Añadir ingredientes» del cuadro del prompt (lista del proyecto → «Añadir a petición», en el orden del prompt),
+   sin volver a pegarlos.
 8. (Respaldo provisional) Miniatura por código: `videos/<nombre>/miniaturas.py` con `VARIANTES = {nombre: fn(lz) -> fondo}` (ejemplo en
    `videos/40mil_anos/miniaturas.py`) → `python fab.py <nombre> miniatura` → `salida/*_mini_<variante>.jpg`
    (1280x720) y `previews/miniaturas.jpg` (MÍRALA: incluye la vista a tamaño de celular). En el nicho funciona:

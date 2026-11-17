@@ -2,7 +2,7 @@
   "canal_id": "UClZr07HzwBSQbMgOvdSej_w",
   "nombre": "Radio Yermo",
   "handle": "@RadioYermo",
-  "estilo": "Fallout con la MISMA receta que Crónicas de Tamriel (alta 17-nov-2026, bajo la cuenta de Google de Edsonxn): motor SECUENCIA YT (gameplay real por beat con yt-dlp), listas con cuenta regresiva (NUNCA hagas / secretos / lo más ROTO / inútil), pegatinas reales, MG nuevos por guion con interfaz de Pip-Boy por código (kit nucleo/mg_fo.py, pendiente del 1.er video), mapas reales con ruta (tema 'fo' de mg_mapa), OST oficial y sonido original del juego, comentarios con agradecimientos y contraburla, campaña de suscripción. Narrador = «el Locutor» de Radio Yermo (voz ElevenLabs por elegir en videos/_muestras_voz_fallout/). Ver canales/formula/radio_yermo.md",
+  "estilo": "Fallout con la MISMA receta que Crónicas de Tamriel (alta 17-nov-2026, bajo la cuenta de Google de Edsonxn): motor SECUENCIA YT (gameplay real por beat con yt-dlp), listas con cuenta regresiva (NUNCA hagas / secretos / lo más ROTO / inútil), pegatinas reales, MG nuevos por guion con interfaz de Pip-Boy por código (kit nucleo/mg_fo.py, pendiente del 1.er video), mapas reales con ruta (tema 'fo' de mg_mapa), OST oficial y sonido original del juego, comentarios con agradecimientos y contraburla, campaña de suscripción. Narrador = «el Locutor» de Radio Yermo: voz del Profeta de ElevenLabs (HNSF1CTQmub252yhXROX) con el filtro de radio del Yermo en modo B (nucleo/fx_radio.py), elegida por el usuario el 17-nov-2026. Ver canales/formula/radio_yermo.md",
   "horario": {
     "zona": "America/Mexico_City",
     "hora_local": "17:00",
@@ -82,8 +82,11 @@
   "canal_hermano": "cronicas_tamriel",
   "voz": {
     "motor": "elevenlabs",
-    "voice_id": null,
-    "nombre": "el Locutor (por elegir)",
-    "muestras": "videos/_muestras_voz_fallout/voces_radio_yermo_muestras.mp4"
+    "voice_id": "HNSF1CTQmub252yhXROX",
+    "nombre": "el Profeta como «el Locutor» de Radio Yermo",
+    "modelo": "eleven_v4_turbo",
+    "filtro": "modo B de nucleo/fx_radio.py: el saludo, los remates y la despedida salen por la radio del Yermo (radio + sintonía); los datos, con el narrador cerca del micrófono (tinte)",
+    "elegida": "2026-11-17, el usuario («opción profeta B») tras oír 6 locutores y el Profeta en A/B/C",
+    "muestras": "videos/_muestras_voz_fallout/voces_radio_yermo_brianB_profetaABC.mp4"
   }
 }

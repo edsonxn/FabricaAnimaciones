@@ -1220,8 +1220,13 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   campaña de suscripción en cuanto haya base. Todas las reglas de oro aplican desde el 1.er video.
 - **Identidad:** el narrador es «el Locutor» de Radio Yermo (una radio que transmite desde lo que queda del mundo): saludo de radio
   corto («Buenos días, Yermo»), sarcasmo seco, nunca imita ni nombra a los locutores reales de los juegos como si fueran él.
-  Voz ElevenLabs por elegir con `videos/_muestras_voz_fallout/voces_radio_yermo_muestras.mp4` (6 locutores + el Profeta de
-  referencia); hasta que el usuario elija, el 1.er video lo pregunta antes de `voz`.
+  **Voz (el usuario, 17-nov-2026: «opción profeta B»): el Profeta de ElevenLabs `HNSF1CTQmub252yhXROX`, el mismo de Tamriel y Runa
+  Caída, con el filtro de radio en MODO B:** el saludo, los remates sarcásticos, la llamada a suscribirse y la despedida salen por la
+  radio del Yermo (`fx_radio.radio`, con `sintonia` al abrir la transmisión); los datos, con el narrador cerca del micrófono
+  (`fx_radio.tinte`), y el paso de uno a otro con fundido (`fx_radio.mezcla`). Que la radio se oiga en ≥ 1 momento por puesto
+  sin tapar datos. Integración en el pipeline (1.er video): marcar las frases de radio en `guion.py` (p. ej. `RADIO_POR_FRASE`)
+  y aplicar el filtro sobre la toma elegida después de `seleccionar` y antes de `mezcla`; `idioma_voz.py` corre sobre la voz SIN
+  filtro. Sin `[whispers]` ni `[excited]` (regla global).
 - **Filtro de radio del Yermo (idea del usuario, 17-nov-2026: «que se escuche como la radio del juego, con esos filtros»):**
   `nucleo/fx_radio.py` sobre la voz ya grabada (sin créditos): `radio` (banda de AM 320-3300 Hz, válvula saturada, siseo,
   chasquidos, zumbido de 60 Hz), `mezcla` (radio y luego el narrador se acerca al micrófono), `tinte` (narrador con un toque de

@@ -14,8 +14,10 @@
   ROTO/PODEROSO», «lo más INÚTIL», «secretos que te perdiste» de 12-20 min; luego lore largo «para dormir» (Calm Loremaster /
   Wasteland Sleep Protocol). Cambiar UNA variable cada video.
 - **Frecuencia y hora (provisional):** ciclo 4 días, 17:00 CDMX; se ajusta con datos tras los primeros 3 videos.
-- **Voz:** «el Locutor», por elegir entre 6 locutores de ElevenLabs (`videos/_muestras_voz_fallout/`). Muestras con la misma frase
-  (el Refugio 108 de los Gary, Fallout 3), 52 créditos c/u (cuenta 4).
+- **Voz (elegida por el usuario el 17-nov-2026): el Profeta con el filtro de radio del Yermo en modo B** (`nucleo/fx_radio.py`): idea
+  suya, «que se escuche como la radio del juego, con esos filtros». Probó 6 locutores (Jose, Zabra, Juan Pablo, Brian C, Bardo, Carlos
+  Pro) y dudó con Brian C en modo B. A vigilar: si en Tamriel se reconoce la voz (comentarios «es el mismo de Tamriel») y si el
+  filtro cansa (quejas de audio); el modo C queda de respaldo.
 - **Falta (el usuario):** verificación por SMS (miniaturas personalizadas y videos > 15 min) y `python fab.py yt conectar` eligiendo
   Radio Yermo en la pantalla de Google, para que `yt subir` pueda publicar.
 - **Falta (1.er video):** `python fab.py ideas radio_yermo` → 3 temas con video de referencia y ×; kit `nucleo/mg_fo.py` con capturas

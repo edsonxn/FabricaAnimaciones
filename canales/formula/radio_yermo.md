@@ -18,8 +18,7 @@
   suya, «que se escuche como la radio del juego, con esos filtros». Probó 6 locutores (Jose, Zabra, Juan Pablo, Brian C, Bardo, Carlos
   Pro) y dudó con Brian C en modo B. A vigilar: si en Tamriel se reconoce la voz (comentarios «es el mismo de Tamriel») y si el
   filtro cansa (quejas de audio); el modo C queda de respaldo.
-- **Falta (el usuario):** verificación por SMS (miniaturas personalizadas y videos > 15 min) y `python fab.py yt conectar` eligiendo
-  Radio Yermo en la pantalla de Google, para que `yt subir` pueda publicar.
+- **Conectado (17-nov-2026):** el usuario lo verificó y lo conectó a la API; idioma es-419 puesto por API. `yt subir` ya puede publicar.
 - **Falta (1.er video):** `python fab.py ideas radio_yermo` → 3 temas con video de referencia y ×; kit `nucleo/mg_fo.py` con capturas
   reales del Pip-Boy; ajustar el tema `fo` de `mg_mapa`.
 - **A vigilar:** % visto ≥ 35 y vistas/día de los 3 primeros largos; subs que llegan desde Tamriel (fuente de tráfico).

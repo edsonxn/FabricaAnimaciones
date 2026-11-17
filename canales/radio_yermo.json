@@ -52,7 +52,7 @@
       "commonwealth"
     ]
   },
-  "estado": "17-nov-2026: canal creado por Claude en Studio (nombre, @RadioYermo, logo y banner por código en fósforo verde, descripción, enlace a Crónicas de Tamriel, palabras clave, país MX, no es para niños). FALTA: verificación por SMS (el usuario, para miniaturas y videos > 15 min) y `python fab.py yt conectar` eligiendo Radio Yermo. 1.er video: por elegir con `ideas radio_yermo`.",
+  "estado": "17-nov-2026: canal creado por Claude en Studio (nombre, @RadioYermo, logo y banner por código en fósforo verde, descripción, enlace a Crónicas de Tamriel, palabras clave, país MX, no es para niños). El usuario lo verificó y lo CONECTÓ a la API el mismo día; idioma es-419 puesto por API. Voz: el Profeta con filtro de radio en modo B. 1.er video: por elegir con `ideas radio_yermo`.",
   "descripcion": "Radio Yermo transmite desde el fin del mundo. Secretos, historia, misiones, personajes y locuras de Fallout explicados en español: Fallout 3, New Vegas, Fallout 4, Fallout 76, los clásicos y la serie. Listas con gameplay real, mapas del Yermo, los objetos de cada historia y la música de cada juego. Sintoniza, suscríbete y no salgas del Refugio sin escucharnos.",
   "palabras_clave": [
     "Fallout",

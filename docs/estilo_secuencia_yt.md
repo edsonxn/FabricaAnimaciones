@@ -1222,6 +1222,12 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   corto («Buenos días, Yermo»), sarcasmo seco, nunca imita ni nombra a los locutores reales de los juegos como si fueran él.
   Voz ElevenLabs por elegir con `videos/_muestras_voz_fallout/voces_radio_yermo_muestras.mp4` (6 locutores + el Profeta de
   referencia); hasta que el usuario elija, el 1.er video lo pregunta antes de `voz`.
+- **Filtro de radio del Yermo (idea del usuario, 17-nov-2026: «que se escuche como la radio del juego, con esos filtros»):**
+  `nucleo/fx_radio.py` sobre la voz ya grabada (sin créditos): `radio` (banda de AM 320-3300 Hz, válvula saturada, siseo,
+  chasquidos, zumbido de 60 Hz), `mezcla` (radio y luego el narrador se acerca al micrófono), `tinte` (narrador con un toque de
+  radio, para 15 min), `sintonia` (estática con silbido del dial). Muestras A/B/C de cada voz:
+  `videos/_muestras_voz_fallout/voces_radio_yermo_filtro.mp4` (`_radio.py`). Cuál modo y dónde (saludo, remates, cierre) se fija
+  con la elección del usuario.
 - **Kit de interfaz `nucleo/mg_fo.py` (PENDIENTE, lo hace el 1.er video con capturas reales de referencia, regla de oro 9):**
   Pip-Boy en fósforo verde con líneas de barrido: ficha de objeto (DAÑ/PESO/VAL como la pantalla de inventario), aviso de misión,
   tarjeta S.P.E.C.I.A.L./ventaja, terminal de texto que se teclea, porcentaje de V.A.T.S., contador Geiger/rads, rejilla de

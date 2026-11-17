@@ -1306,6 +1306,23 @@ Metas públicas (en `campana_subs` de `canales/<alias>.json`): Runa **500 → 1 
 - **Hoja de rigor:** extraer cuadros con `-ss`; `fps` + `tile` sobre el MASTER con pantalla final anexada solo entrega esa pantalla.
 - **SFX de WoW:** banco en `nucleo/datos/sfx_juego/wow/` (misión aceptada y completada, subir de nivel, subasta), copiado a `sfx/<n>.mp3`. La búsqueda automática trajo una moneda de Mario y otro audio ajeno: comprobar el título de cada fuente.
 
+## Short de COMPILACIÓN vertical con zoom a la cara (`tes_embry_short`, 17-nov-2026)
+Short 1080x1920 hecho de gameplay PROPIO (serie «Skyrim con IA», Mantella): yo hablo, el NPC contesta algo gracioso, golpe de zoom a la
+cara de quien lo dice + edición meme. Sin voz nueva; todo en `videos/tes_embry_short/montar.py` (no usa el motor de beats). Plantilla:
+- **Elegir momentos con datos:** comentarios con minuto + risa (`candidatos.py`) y subtítulos automáticos de YouTube con tiempo por
+  palabra (`texto_yt.py`, sin Whisper si la GPU está ocupada); los `[ __ ]` de YouTube = bip de 1 kHz de la palabra a la siguiente.
+- **Ventana 4:5 (1080x1350) en el centro**, fondo = el mismo cuadro desenfocado; arriba título + barra de vida de Skyrim como «EGO DE
+  EDSON» que se encoge en cada remate (el cierre lo deja en 0 → «¿PARTE 2?»). Chip `#n/13`, burbuja «YO: …» antes del golpe, placa con
+  el nombre del NPC y remate grande con pop; emoji junto a la cara (del lado con más espacio, separado medio ancho de cara + 165 px).
+- **La cara NO se detecta sola:** el Haar de OpenCV falla con caras del juego (cascos, perfiles, poca luz): cortaba a Lemkil y a Tulio y
+  hacía zoom al PLATO en vez de a Maven. Se marcan a mano (`MANO` = (s, x %, y %, alto %) cada ~0,5 s sobre una hoja de cuadros con
+  rejilla) y se suaviza poco (σ 0,09 s). Donde la cámara del juego salta, claves más densas y alto mayor (zoom más abierto); si el salto
+  cae al final del trozo, se recorta el trozo.
+- **Franja esmerilada** (desenfoque + 42 % de brillo) desde el nombre hasta el borde inferior de la ventana: tapa el «E Hablar <NPC>» y
+  los subtítulos del juego, que si no chocan con el remate.
+- **Revisión:** hoja de 6 cuadros por momento (inicio, mitad, golpe +0,15, +0,7, mitad del zoom, final) ANTES del render; el zoom
+  pequeño (alto de ventana 330-640 px del cuadro original) no perdona ±10 % de error en la posición.
+
 ## Pendiente del estilo
 «Cambiar clip» desde el bloque del Montaje; dos apoyos a la vez en el mismo instante (hoy se pueden, pero se enciman).
 

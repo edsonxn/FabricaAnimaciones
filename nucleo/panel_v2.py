@@ -18,6 +18,7 @@ Solo lee, salvo las miniaturas (previews/_v2/), el audio liviano para el navegad
   /v2/mini/<v>/<ruta>?w=320    miniatura cacheada (cuadro del clip o imagen reducida; PNG si tiene transparencia)
   /v2/oir/<v>/<ruta>           .wav grande -> .m4a liviano cacheado (música/mezclas float32 de cientos de MB)
   POST /api/v2/revelar         {video, ruta}: abre el Explorador con ese archivo seleccionado
+  POST /api/v2/archivar        {video, archivado, motivo}: da por terminado un proyecto (filtro «Archivados»; no borra nada)
   /v2/movil · /v2/aldea · /v2/juego   app del teléfono (28-oct-2026): panel de estatus, la Aldea (RTS) y la Fábrica 3D
   /v2/app/<archivo>            sus archivos sueltos (manifest, service worker, iconos, APK)
 """
@@ -622,6 +623,26 @@ def oir(nombre, rel):
     return m4a
 
 
+def archivar(nombre, archivado, motivo=""):
+    """Da por terminado un proyecto (el usuario, 17-nov-2026: «un botón para dar por terminado un video», pruebas o ya
+    subidos): `archivado` + `motivo` en videos/<v>/panel.json, que panel.analizar ya lee (lo pendiente pasa a «no aplica»).
+    El lienzo lo saca de todos los filtros salvo «Archivados». No borra nada; desarchivar lo deja como estaba."""
+    if nombre.startswith("_") or not _car(nombre):
+        raise ValueError("proyecto desconocido")
+    ruta = os.path.join(P.VIDEOS, nombre, "panel.json")
+    meta = P.leer_json(ruta, {}) or {}
+    if archivado:
+        meta.update(archivado=True, motivo=(motivo or meta.get("motivo") or "terminado")[:120],
+                    archivado_t=time.strftime("%Y-%m-%d %H:%M"))
+    else:
+        for k in ("archivado", "motivo", "archivado_t", "reemplazado_por"):
+            meta.pop(k, None)
+    with open(ruta, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    P._est["t"] = 0.0          # que el siguiente estado ya lo refleje (sin el candado: espera al escaneo, que tarda ~20 s)
+    return dict(video=nombre, archivado=bool(archivado), motivo=meta.get("motivo"))
+
+
 def revelar(nombre, rel):
     real = _real(nombre, rel) if rel else _car(nombre)
     if not real:
@@ -770,4 +791,6 @@ def get(h, ruta):
 def post(h, ruta, datos):
     if ruta == "/api/v2/revelar":
         return _json(h, revelar(str(datos.get("video", "")), str(datos.get("ruta", ""))))
+    if ruta == "/api/v2/archivar":
+        return _json(h, archivar(str(datos.get("video", "")), bool(datos.get("archivado", True)), str(datos.get("motivo", ""))))
     h._enviar(404, b"", "text/plain")

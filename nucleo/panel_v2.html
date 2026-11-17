@@ -210,6 +210,8 @@ body.sin-lado #vista{left:0}
 .bp{height:30px;padding:0 10px;border-radius:9px;border:1px solid var(--line);background:var(--panel2);cursor:pointer;font-size:12.5px;display:inline-flex;align-items:center;gap:5px}
 .bp:hover{border-color:var(--line2);background:var(--hover)}
 .bp small{color:var(--mut)}
+.arch-menu{display:inline-flex;gap:6px;flex-wrap:wrap;padding:2px 6px;border-radius:10px;background:var(--hover)}
+#aviso-arch{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:9999;display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:12px;background:var(--panel2);border:1px solid var(--line2);box-shadow:0 8px 30px rgba(0,0,0,.4);font-size:13px}
 .bp.prim{background:var(--txt);color:var(--bg);border-color:var(--txt)}
 a.bp{color:var(--txt);text-decoration:none}
 .portada{position:relative;margin:0 14px;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--panel2);cursor:pointer}
@@ -590,12 +592,15 @@ const ICO={listo:"✓",en_curso:"●",parcial:"◐",atencion:"!",omitido:"–",p
 const CMD={beats:"python fab.py {v} beats",prompts:"python fab.py {v} prompts",flow:"python fab.py {v} servir  (y lanzar el lote en Flow)",guion:"editar videos/{v}/guion.py",voz:"python fab.py {v} voz",
   seleccion:"python fab.py {v} seleccionar",tiempo:"python fab.py {v} tiempo",escenas:"python fab.py {v} comprobar",musica:"python fab.py {v} musica",sfx:"python fab.py {v} sfx",mezcla:"python fab.py {v} mezcla",
   video:"python fab.py {v} video",final:"python fab.py {v} final",verificar:"python fab.py {v} verificar",miniatura:"python fab.py {v} miniatura",metadatos:"escribir videos/{v}/youtube.json",subida:"python fab.py yt subir {v} <canal> private"};
-const FILTROS=[["trabajo","En trabajo"],["activos","Activos"],["pend","Sin terminar"],["listos","Terminados"],["todos","Todos"],["ocultos","Ocultos"]];
+const FILTROS=[["trabajo","En trabajo"],["activos","Activos"],["pend","Sin terminar"],["listos","Terminados"],["todos","Todos"],["ocultos","Ocultos"],["archivados","Archivados"]];
 // «Activos» = algo corriendo (voz, render, Flow…) o un archivo del proyecto editado en las últimas 2 h; sale aunque esté oculto (p. ej. re-editar un video ya subido)
-const ACTIVO_S=2*3600, activo=p=>!!p.etapa_actual||Date.now()/1e3-(p.editado||0)<ACTIVO_S;
-const visible=p=>!p.oculto||activo(p);                                  // lo oculto vuelve a la lista mientras tenga trabajo vivo
-const FILTRA={trabajo:p=>activo(p)||!p.oculto&&p.progreso<1,activos:activo,   // «En trabajo» (por defecto) = activos + sin terminar; los activos van primero
-pend:p=>visible(p)&&!activo(p)&&p.progreso<1,listos:p=>visible(p)&&!activo(p)&&p.progreso>=1,todos:visible,ocultos:p=>p.oculto};
+// «Archivado» (el usuario, 17-nov-2026: botón 📦 para dar por terminado un video, prueba o ya subido): fuera de todos los filtros salvo
+// «Archivados»; solo vuelve si algo corre de verdad en él (voz, render…), no por editar un archivo
+const arch=p=>!!(p.archivado||p.reemplazado_por);
+const ACTIVO_S=2*3600, activo=p=>!!p.etapa_actual||!arch(p)&&Date.now()/1e3-(p.editado||0)<ACTIVO_S;
+const visible=p=>!arch(p)&&!p.oculto||activo(p);                                  // lo oculto vuelve a la lista mientras tenga trabajo vivo
+const FILTRA={trabajo:p=>activo(p)||!p.oculto&&!arch(p)&&p.progreso<1,activos:activo,   // «En trabajo» (por defecto) = activos + sin terminar; los activos van primero
+pend:p=>visible(p)&&!activo(p)&&p.progreso<1,listos:p=>visible(p)&&!activo(p)&&p.progreso>=1,todos:visible,ocultos:p=>p.oculto&&!arch(p),archivados:arch};
 const SIN_ESTILO="(sin estilo)";
 const REMOTO=document.documentElement.classList.contains("remoto"),TACTIL=document.documentElement.classList.contains("tactil");
 const CLASICO=REMOTO?"/?clasico":"/";                                  // por la puerta, «/» lleva al lienzo
@@ -603,7 +608,7 @@ const CLASICO=REMOTO?"/?clasico":"/";                                  // por la
 // ====================================================== estado
 const S={D:null,SIS:null,POR:{},GAL:null,rec:{},abiertos:new Set(LS.get("v2ab",[])),filtro:({curso:"trabajo",todos:"trabajo"})[LS.get("v2f","trabajo")]||LS.get("v2f","trabajo"),fCanal:LS.get("v2fc",""),fEstilo:LS.get("v2fe",""),q:"",
   verEst:LS.get("v2est",false),rueda:LS.get("v2rueda","zoom"),sel:null,mas:{},orden:null,cajas:[],lim:{x:0,y:0,w:1000,h:800},hist:{cpu:[],ram:[],gpu:[],vram:[]},
-  ultimo:0,sinClic:false,caja:null,volarA:null,firmaSel:"",ultimaAv:Date.now()/1000,ocultoLocal:{},plegados:new Set(LS.get("v2pleg",[]))};
+  ultimo:0,sinClic:false,caja:null,volarA:null,firmaSel:"",ultimaAv:Date.now()/1000,ocultoLocal:{},archLocal:{},plegados:new Set(LS.get("v2pleg",[]))};
 const PRIMERA_VEZ=!LS.get("v2vista",null), V=Object.assign({x:80,y:60,z:.55},LS.get("v2vista",{}));
 const vista=$("#vista"), mundo=$("#mundo"), TABS=new Map(), CARR=new Map();
 const porNombre=n=>S.D&&S.D.proyectos.find(p=>p.nombre===n);
@@ -902,7 +907,7 @@ vista.addEventListener("mousemove",e=>{
 vista.addEventListener("mouseleave",()=>{TIP.style.display="none";});
 const reproduciendo=el=>$$("video",el).some(v=>!v.paused&&!v.muted);
 function firmaSup(p,ab){
-  return JSON.stringify([ab,p.titulo,p.canal,p.estilo,p.formato,p.duracion,p.publicado,p.oculto,p.master,Math.round((p.progreso||0)*200),p.etapa_actual,p.error,
+  return JSON.stringify([ab,p.titulo,p.canal,p.estilo,p.formato,p.duracion,p.publicado,p.oculto,p.archivado,p.master,Math.round((p.progreso||0)*200),p.etapa_actual,p.error,
     Object.entries(p.etapas||{}).map(([k,e])=>[k,e.estado,e.detalle]),p.montaje,p.secuencia&&[p.secuencia.hechos,p.secuencia.total],Math.floor((Date.now()/1e3-(p.actividad||0))/600)]);
 }
 function pintarTab(n){
@@ -977,6 +982,8 @@ function pieHTML(p,ab,enTablero){            // enTablero: sin «abrir», que en
   if(p.etapas.tiempo&&p.etapas.tiempo.estado==="listo"&&!p.secuencia)h+=b("previa","🔍 Vista previa","Cuadros exactos del motor del render final, escenas fluidas y clips");
   if(p.etapas.escenas&&p.etapas.escenas.estado==="listo"&&!(p.etapas.tiempo&&p.etapas.tiempo.estado==="listo"))h+=b("muestra","👁 Ver estilo","Dibuja 10 cuadros para juzgar el estilo (sin voz ni «tiempo»)");
   h+=b("carpeta","📂","Abrir la carpeta del video en el Explorador");
+  h+=p.archivado?b("desarchivar","↩ Desarchivar","Volver a ponerlo en el lienzo"+(p.nota?" (archivado: "+p.nota+")":""))
+    :b("archivar","📦 Archivar","Dar por terminado (prueba o ya subido): sale del lienzo y queda en el filtro «Archivados». No borra nada");
   h+=b("ocultar",p.oculto?"👁":"🙈",p.oculto?"Volver a mostrar este video":"Ocultar del panel (no borra nada)",` data-valor="${p.oculto?0:1}"`);
   return h;
 }
@@ -1245,12 +1252,16 @@ function abrirEmb(tipo,v){
   const f=document.createElement("iframe");f.id="emb";f.title=tipo;f.src=`/?embed=${tipo}&v=${enc(v)}`;
   f.addEventListener("load",()=>{try{f.contentWindow.focus();}catch(e){}});document.body.appendChild(f);
 }
+// aviso abajo con «Deshacer» al archivar (son varios seguidos: que un clic de más no cueste ir a buscarlo)
+function avisoArch(txt,v){let a=$("#aviso-arch");if(a)a.remove();a=document.createElement("div");a.id="aviso-arch";
+  a.innerHTML=`<span>${esc(txt)}</span>`+(v?`<button class="bp" data-acc="desarchivar" data-v="${esc(v)}">↶ Deshacer</button>`:"");document.body.appendChild(a);
+  clearTimeout(avisoArch.t);avisoArch.t=setTimeout(()=>a.remove(),7000);}
 function cerrarEmb(){const f=$("#emb");if(f)f.remove();}
 window.addEventListener("message",e=>{if(e.data&&e.data.fab==="cerrar")cerrarEmb();});
 
 // ====================================================== barra lateral
 function pintaSelects(){
-  const todos=S.D.proyectos.filter(p=>!p.suspendido||S.filtro==="ocultos"||activo(p)),vis=FILTRA[S.filtro]||visible;
+  const todos=S.D.proyectos.filter(p=>!p.suspendido||S.filtro==="ocultos"||S.filtro==="archivados"||activo(p)),vis=FILTRA[S.filtro]||visible;
   const cuenta=(f,y)=>{const m=new Map();todos.forEach(p=>{const k=f(p);m.set(k,(m.get(k)||0)+(vis(p)&&y(p)?1:0));});return m;};
   const cs=cuenta(p=>p.canal||"experimento",p=>!S.fEstilo||(p.estilo||SIN_ESTILO)===S.fEstilo),es=cuenta(p=>p.estilo||SIN_ESTILO,p=>!S.fCanal||(p.canal||"experimento")===S.fCanal);
   const nom={};todos.forEach(p=>{nom[p.canal||"experimento"]=p.canal_nombre||p.canal;});
@@ -1366,6 +1377,7 @@ async function cargarEstado(){
   try{
     const R=await pedir("/api/v2/estado"+(S.D&&S.D.h?"?si="+S.D.h:""));
     const D=R.igual&&S.D?Object.assign(S.D,{avisos:R.avisos,voz:R.voz,sistema:R.sistema,edad:R.edad}):R;S.D=D;S.ultimo=Date.now()-(D.edad||0)*1000;S.errEstado=null;encolarAvisos();
+    for(const p of D.proyectos)if(p.nombre in S.archLocal){if(!!p.archivado===S.archLocal[p.nombre])delete S.archLocal[p.nombre];else p.archivado=S.archLocal[p.nombre];}   // «archivar» al instante
     for(const p of D.proyectos)if(p.nombre in S.ocultoLocal){if(p.oculto===S.ocultoLocal[p.nombre])delete S.ocultoLocal[p.nombre];else p.oculto=S.ocultoLocal[p.nombre];}   // «ocultar» al instante aunque el estado llegue viejo
     const ps=filtrados(),ahora=new Set(ps.map(p=>p.nombre)),antes=new Set((S.orden||[]).filter(l=>l.id!=="__est").flatMap(l=>l.ns));
     if(!S.orden||ahora.size!==antes.size||[...ahora].some(n=>!antes.has(n)))construir();
@@ -1432,6 +1444,14 @@ function accion(acc,v,el){
     case "carpeta":postJSON("/api/v2/revelar",{video:v,ruta:""});break;
     case "revelar":if(S.sel)postJSON("/api/v2/revelar",{video:S.sel.v,ruta:S.sel.r||""});break;
     case "caja-revelar":if(S.caja)postJSON("/api/v2/revelar",{video:S.caja.v,ruta:S.caja.lista[S.caja.i]});break;
+    case "archivar":{const p=porNombre(v);if(!p)break;$$(".arch-menu").forEach(m=>m.remove());
+      const m=document.createElement("span");m.className="arch-menu";
+      m.innerHTML=[["✅","Ya subido"],["🧪","Era prueba"],["✔","Terminado"]].map(([i,t])=>`<button class="bp" data-acc="archivar-si" data-v="${esc(v)}" data-motivo="${t}">${i} ${t}</button>`).join("")+`<button class="bp" data-acc="archivar-no" title="Cancelar">✕</button>`;
+      el.after(m);break;}
+    case "archivar-no":$$(".arch-menu").forEach(m=>m.remove());break;
+    case "archivar-si":case "desarchivar":{const val=el.dataset.acc==="archivar-si",p=porNombre(v),mot=el.dataset.motivo||"";if(p){p.archivado=val;p.nota=val?mot:null;}S.archLocal[v]=val;
+      postJSON("/api/v2/archivar",{video:v,archivado:val,motivo:mot}).then(cargarEstado);construir();if(S.sel&&S.sel.tipo==="proy")pintarInspSiCambio();
+      avisoArch(val?`📦 «${(p&&p.titulo)||v}» archivado · ${mot.toLowerCase()}`:`↩ «${(p&&p.titulo)||v}» de vuelta en el lienzo`,val?v:null);break;}
     case "ocultar":{const val=el.dataset.valor==="1",p=porNombre(v);if(p)p.oculto=val;S.ocultoLocal[v]=val;postJSON("/api/ocultar",{video:v,oculto:val}).then(cargarEstado);construir();break;}
     case "caja":if(S.sel&&S.sel.tipo==="arch")abrirCaja(S.sel.v,S.sel.r);break;
     case "caja-x":cerrarCaja();break;

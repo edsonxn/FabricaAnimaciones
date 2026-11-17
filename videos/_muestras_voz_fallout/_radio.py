@@ -18,7 +18,7 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 FF = r"C:\ffmpeg\bin\ffmpeg.exe"
 FUENTE = "C\:/Windows/Fonts/arialbd.ttf"
 SR = 44100
-NOM = {"01_jose": "Jose", "02_zabra": "Zabra", "03_juan_pablo": "Juan Pablo", "04_brian": "Brian C",
+NOM = {"00_profeta_ref": "el Profeta", "01_jose": "Jose", "02_zabra": "Zabra", "03_juan_pablo": "Juan Pablo", "04_brian": "Brian C",
        "05_bardo": "Bardo Limon", "06_carlos_pro": "Carlos Pro"}
 MODOS = {"A": "radio completa", "B": "combinacion radio + narrador", "C": "narrador con toque de radio"}
 
@@ -41,11 +41,14 @@ def corte(mp3):
     return 6.3
 
 
+SEL = [a.split(":") for a in sys.argv[1:]]   # p. ej. 04_brian:B 00_profeta_ref:ABC (vacío = las 6 voces en A, B y C)
+if not SEL:
+    SEL = [(os.path.splitext(os.path.basename(p))[0], "ABC") for p in sorted(glob.glob(os.path.join(AQUI, "0[1-9]_*.mp3")))]
 partes = []
-for mp3 in sorted(glob.glob(os.path.join(AQUI, "0[1-9]_*.mp3"))):
-    n = os.path.splitext(os.path.basename(mp3))[0]
+for n, ks in SEL:
+    mp3 = os.path.join(AQUI, n + ".mp3")
     x = leer(mp3)
-    for k, modo in MODOS.items():
+    for k, modo in ((k, MODOS[k]) for k in ks):
         if k == "A":
             y = np.concatenate([R.sintonia(SR), R.radio(x, SR)])
         elif k == "B":
@@ -54,7 +57,7 @@ for mp3 in sorted(glob.glob(os.path.join(AQUI, "0[1-9]_*.mp3"))):
             y = R.tinte(x, SR)
         wav = os.path.join(AQUI, f"_{n}_{k}.wav")
         sf.write(wav, np.concatenate([y, np.zeros(int(0.8 * SR), np.float32)]), SR)
-        num = n[:2].lstrip("0")
+        num = n[:2].lstrip("0") or "P"
         out = os.path.join(AQUI, f"_seg_{n}_{k}.mp4")
         vf = (f"drawtext=fontfile='{FUENTE}':text='OPCION {num}{k}':fontsize=74:fontcolor=0x3CFF8C:x=(w-tw)/2:y=h/2-115,"
               f"drawtext=fontfile='{FUENTE}':text='{NOM[n]}':fontsize=48:fontcolor=white:x=(w-tw)/2:y=h/2-8,"
@@ -66,7 +69,7 @@ for mp3 in sorted(glob.glob(os.path.join(AQUI, "0[1-9]_*.mp3"))):
         partes.append(out)
 lista = os.path.join(AQUI, "_lista.txt")
 open(lista, "w").write("".join(f"file '{p}'\n" for p in partes))
-final = os.path.join(AQUI, "voces_radio_yermo_filtro.mp4")
+final = os.path.join(AQUI, "voces_radio_yermo_filtro.mp4" if len(sys.argv) < 2 else "voces_radio_yermo_" + "_".join(a.split(":")[0].split("_")[1] + a.split(":")[1] for a in sys.argv[1:]) + ".mp4")
 subprocess.run([FF, "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lista, "-c", "copy", final], check=True)
 for p in partes:
     os.remove(p)

@@ -15,12 +15,12 @@ import re
 import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROTEGIDOS = ("cronicas_warcraft", "cronicas_tamriel", "runa_caida")
+PROTEGIDOS = ("cronicas_warcraft", "cronicas_tamriel", "runa_caida", "radio_yermo")
 SENALES = ("crónicas de warcraft", "cronicas de warcraft", "crónicas de tamriel", "cronicas de tamriel", "runa caída", "runa caida", "warcraft", "world of warcraft",
-           "azeroth", "tamriel", "skyrim", "elder scrolls", "elden ring", "malenia", "radagon", "miquella", "ranni", "márika", "marika", "darrowshire",
+           "azeroth", "tamriel", "skyrim", "elder scrolls", "elden ring", "radio yermo", "fallout", "malenia", "radagon", "miquella", "ranni", "márika", "marika", "darrowshire",
            "virus sencillo", "server-troyano", "troyano", "programa espia", "programa espía", "cambiar icono a un virus", "gaia_crematoria", "la crematoria", "gaia_eterna", "gaia eterna",   # historias de WoW: su arte delata
            "overgear", "cronicas10", "clicknbusiness", "panel_remoto", "ngrok", "client_secret", "elevenlabs_api", "pagina.py")
-PREFIJOS = ("wow_", "tes_", "er_")
+PREFIJOS = ("wow_", "tes_", "er_", "fo_")   # fo_ = Radio Yermo (Fallout, 17-nov-2026)
 PATRONES = (("correo", r"[\w.+-]+@[\w-]+\.\w{2,}"),
             ("clave", r"\b(?:sk|pk|AIza|ghp|ya29)[-_][\w-]{12,}"),
             ("enlace", r"https?://(?!youtu\.be|www\.youtube\.com)\S+"),

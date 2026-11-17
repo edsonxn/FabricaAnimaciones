@@ -27,6 +27,7 @@ TEMAS = {"tes": dict(luz=T.ORO, texto=T.HUESO, rojo=T.SANGRE, papel=(214, 194, 1
          "n64": dict(luz=(250, 200, 24), texto=(250, 250, 248), rojo=(226, 38, 48), papel=(214, 216, 222), tinta=(24, 26, 32)),
          "pokemon": dict(luz=(248, 208, 48), texto=(248, 248, 232), rojo=(232, 56, 48), papel=(224, 236, 200), tinta=(15, 56, 15)),
          "cod": dict(luz=(246, 190, 52), texto=(244, 244, 238), rojo=(226, 54, 46), papel=(200, 196, 178), tinta=(20, 24, 26)),
+         "fo": dict(luz=(60, 255, 140), texto=(200, 255, 216), rojo=(255, 96, 64), papel=(206, 200, 170), tinta=(4, 13, 7)),
          "plasti": dict(luz=(255, 205, 0), texto=(250, 244, 228), rojo=(214, 32, 40), papel=(238, 228, 204), tinta=(40, 30, 24))}
 _rec = {}
 

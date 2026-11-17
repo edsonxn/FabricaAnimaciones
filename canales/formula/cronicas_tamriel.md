@@ -69,3 +69,8 @@
 - **Calendario (el usuario):** 11 seres · 13 builds · 16 cosas_nunca · 19 secretos_40 → ciclo 3 días, separación 72 h.
 - **Sugerencias guardadas:** Orden Psíquica (@cristoferyosuhamartinezsal87), mejores esposas/os (@janival2559).
 - **Ojo:** `tes_seres_poderosos` dijo en la campaña «cuarenta y cuatro de cada cien no están suscritos»; la cifra real era ~87 % no suscritos (se confundió con el % visto). En este: «solo trece de cada cien están suscritos».
+
+## Canal hermano: Radio Yermo (el usuario, 17-nov-2026)
+- Desde hoy cada video nuevo de Tamriel recomienda **Radio Yermo** (@RadioYermo, Fallout con la misma receta): tramo de 6-10 s
+  lejos de la campaña de suscripción + línea automática en la descripción (`promo_canal`). Reglas: `docs/estilo_secuencia_yt.md`
+  § «CANAL HERMANO». Medir a 7 días los subs que llegan a Radio Yermo (`canales/formula/radio_yermo.md`).

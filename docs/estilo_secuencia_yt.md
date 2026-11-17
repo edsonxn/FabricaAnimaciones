@@ -1213,6 +1213,23 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   poca RAM libre (saltado). **Tele** (6-nov): la app cortó la subida (`ConnectionResetError` 10054) con el MASTER de 1,5 GB (al 50 %) Y con
   una copia 720p de 423 MB, 3 intentos: no es el tamaño, es Puente TV (revisar la app/espacio de la tele).
 
+## Radio Yermo con este motor (Fallout; alta del canal 17-nov-2026, sin video aún)
+- **La MISMA receta que Crónicas de Tamriel, todo igual, con Fallout** (el usuario, 17-nov-2026): listas con cuenta regresiva,
+  gameplay real por beat, pegatinas de TODO lo nombrado, MG nuevos por guion, mapas reales con ruta (≥ mitad de los puestos en
+  listas de misiones), OST oficial y sonido original del juego, comentarios (agradecimientos + 2-3 críticas con contraburla) y
+  campaña de suscripción en cuanto haya base. Todas las reglas de oro aplican desde el 1.er video.
+- **Identidad:** el narrador es «el Locutor» de Radio Yermo (una radio que transmite desde lo que queda del mundo): saludo de radio
+  corto («Buenos días, Yermo»), sarcasmo seco, nunca imita ni nombra a los locutores reales de los juegos como si fueran él.
+  Voz ElevenLabs por elegir con `videos/_muestras_voz_fallout/voces_radio_yermo_muestras.mp4` (6 locutores + el Profeta de
+  referencia); hasta que el usuario elija, el 1.er video lo pregunta antes de `voz`.
+- **Kit de interfaz `nucleo/mg_fo.py` (PENDIENTE, lo hace el 1.er video con capturas reales de referencia, regla de oro 9):**
+  Pip-Boy en fósforo verde con líneas de barrido: ficha de objeto (DAÑ/PESO/VAL como la pantalla de inventario), aviso de misión,
+  tarjeta S.P.E.C.I.A.L./ventaja, terminal de texto que se teclea, porcentaje de V.A.T.S., contador Geiger/rads, rejilla de
+  suscriptores. Mismo diseño translúcido de `mg_tes` (nunca carteles opacos). Tema `fo` ya existe en `mg_mapa` (base provisional)
+  y en `peg_estilos.TEMAS`. Logo/banner: `canales/arte/radio_yermo/arte.py` (mismo verde, para que el canal se reconozca).
+- **Juegos:** Fallout 3, New Vegas, 4, 76, 1/2 y la serie de Amazon. Clips solo del juego que se nombra (regla 3); los mods y el
+  arte de fans se evitan como en Tamriel. Datos de Fallout Wiki/Nukapedia comprobados, nunca de memoria; la voz no cita la fuente.
+
 ## COMENTARIOS de la gente (el usuario, 27-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 **SOLO COMENTARIOS RECIENTES EN PANTALLA (el usuario, 3-nov-2026, `tes_sentinel_teaser`: «pusiste un comentario de hace 8 meses… solo comentarios recientes máximo 1 semana y media»):** toda captura de comentario (agradecimiento, crítica o el que pidió el tema) tiene ≤ 10 días el día que se hace el video; `nucleo/comentarios.py` (`MAX_DIAS = 10`) se niega a hacer la pegatina de uno más viejo. Si no hay ≥ 4 agradecimientos recientes, se ponen los que haya; nunca se rellena con viejos. Lo viejo puede inspirar el guion (una corrección, un tema), pero no sale en pantalla.
 
@@ -1298,6 +1315,24 @@ Metas públicas (en `campana_subs` de `canales/<alias>.json`): Runa **500 → 1 
    los subs por 1 000 no suben, cambiar UNA variable (lugar o texto).
 6. **Límites:** cifras siempre reales, sin sub4sub, sin sorteos ni recompensas por suscribirse, sin prometer temas que el usuario no
    haya decidido. En las respuestas a comentarios sigue sin pedirse (filtro de spam, § COMENTARIOS).
+
+## CANAL HERMANO: Tamriel recomienda Radio Yermo (el usuario, 17-nov-2026, todo video nuevo de Crónicas de Tamriel)
+«Hay que darle promoción en los próximos videos de Crónicas de Tamriel… como una recomendación al público para que, si les gusta
+Fallout, vayan y vean y visiten ese canal.» Radio Yermo (`radio_yermo`, @RadioYermo) es el canal de Fallout con la MISMA receta.
+1. **Dónde:** UN tramo de 6-10 s, distinto del de la campaña de suscripción y lejos de él (p. ej. tras un puesto fuerte hacia el
+   40-60 %, o en el cierre si el video es corto). Nunca en el gancho. Una frase extra en el cierre es opcional.
+2. **Qué dice la voz:** recomendación natural, en el tono del canal y con un puente con Skyrim/Bethesda (mismo estudio, misma
+   «física» de los objetos, los Refugios contra las ruinas dwemer…), redacción distinta en cada video. Ej.: «Si lo tuyo también es
+   salir de un Refugio a un mundo que ya se acabó, tenemos un canal hermano: Radio Yermo, todo Fallout, con la misma receta que
+   este. El enlace está abajo.» Si narra el Profeta, que lo diga desde arriba («hasta yo escucho esa radio»). Sin decir que es
+   nuestro «otro canal de IA» ni nombres del Humano tras el Telón.
+3. **Qué sale en pantalla:** interfaz de Skyrim, nunca un botón de plantilla: `T.mision("Misión nueva", "Sintoniza Radio Yermo")`
+   + el LOGO del canal (`canales/arte/radio_yermo/LOGO_800.jpg`) como pegatina/camafeo y, si hay hueco, una ventana con 2-3 s de
+   gameplay de Fallout (pantalla verde del Pip-Boy). Cuando Radio Yermo tenga videos, enseñar la miniatura del más reciente.
+4. **Descripción, automático:** `promo_canal` de `canales/cronicas_tamriel.json` → `yt subir`/`yt aplicar` ponen tras el primer
+   párrafo «¿Te gusta Fallout? Visita Radio Yermo…» con el enlace. No escribirlo en `youtube.json`.
+5. **Medir a 7 días** (anotar en `canales/formula/radio_yermo.md`): subs de Radio Yermo el día de cada video de Tamriel y fuente de
+   tráfico «Canales externos/YouTube» del canal nuevo. Si tras 3 videos no llega nada, cambiar UNA variable (lugar o pantalla).
 
 ## Lecciones de `wow_objetos_secretos_forever` (1-nov-2026)
 - **Anclas repetidas:** un ancla casa con la PRIMERA aparición; un cierre que repite palabras del gancho deja el efecto minutos en pantalla. Usar `#2` y revisar `fx hoja`.

@@ -258,12 +258,19 @@ def _cfg_canal(cid):
 def _con_campana(m, cid):
     """Campaña de suscripción (el usuario, 30-oct-2026): «campana_subs» en canales/<alias>.json mete tras el primer párrafo de
     la descripción una línea con el enlace que abre el aviso de suscribirse. Ver docs/estilo_secuencia_yt.md § CAMPAÑA."""
-    c = _cfg_canal(cid).get("campana_subs")
-    if not c or "sub_confirmation" in m["descripcion"]:
+    cfg = _cfg_canal(cid)
+    lineas = []
+    c = cfg.get("campana_subs")
+    if c and "sub_confirmation" not in m["descripcion"]:
+        lineas.append(f"{c['linea']}: https://www.youtube.com/channel/{cid}?sub_confirmation=1")
+    # Canal hermano (el usuario, 17-nov-2026: Tamriel recomienda Radio Yermo, el canal de Fallout): «promo_canal» = {linea, url}
+    p = cfg.get("promo_canal")
+    if p and p["url"] not in m["descripcion"]:
+        lineas.append(f"{p['linea']}: {p['url']}")
+    if not lineas:
         return m
     intro, _, resto = m["descripcion"].partition("\n\n")
-    linea = f"{c['linea']}: https://www.youtube.com/channel/{cid}?sub_confirmation=1"
-    return dict(m, descripcion=f"{intro}\n\n{linea}" + (f"\n\n{resto}" if resto else ""))
+    return dict(m, descripcion=f"{intro}\n\n" + "\n".join(lineas) + (f"\n\n{resto}" if resto else ""))
 
 
 def _snippet(m, previo=None):

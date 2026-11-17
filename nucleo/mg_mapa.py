@@ -13,6 +13,7 @@ Cada juego tiene su TEMA (trazo, marcadores, letra y título como en su propia i
             anillo que late; Garamond pergamino sobre banda negra difusa; título dorado entre dos filetes (rótulo de región).
   "tes"     puntos hueso con sombra; marcador de misión de Skyrim (triángulo invertido que flota) en la meta; Bahnschrift Condensed
             en MAYÚSCULAS espaciadas sobre humo negro; título con separadores de rombo (como mg_tes).
+  "fo"      (Fallout, Radio Yermo) base provisional: fósforo verde de Pip-Boy, rayas verdes, marcadores cuadrados; ajustar en el 1.er video.
   "gaming"  (Nintendo/plataformas de Rare) bolitas miel que brotan con rebote como el mapa de un plataformas; pines de colores;
             Arial Rounded en píldora chocolate; título Cooper Black.
   "zelda"   (aventura de fantasía) puntos dorados, triángulo dorado en la meta, Engravers MT grabado sobre banda azul noche.
@@ -129,6 +130,12 @@ TEMAS = {
     "cod": dict(trazo="rayas", color=(246, 190, 52), borde=(14, 16, 18), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
                 texto=(244, 244, 238), contorno=None, titulo=("bahnschrift.ttf", 86, "Bold Condensed"),
                 subt=("bahnschrift.ttf", 36, "SemiBold Condensed"), tinte=(.80, .84, .80, .10), fondo=(10, 12, 12)),
+    # Fallout (Radio Yermo, alta 17-nov-2026): BASE PROVISIONAL en fósforo verde de Pip-Boy (rayas verdes, marcadores cuadrados
+    # como cod, letra condensada en mayúsculas). El 1.er video la ajusta a la interfaz REAL del Pip-Boy con capturas de referencia
+    # (regla de oro 9: nada de memoria) y la documenta aquí.
+    "fo": dict(trazo="rayas", color=(60, 255, 140), borde=(4, 16, 8), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
+               texto=(170, 255, 196), contorno=None, titulo=("bahnschrift.ttf", 86, "Bold Condensed"),
+               subt=("bahnschrift.ttf", 36, "SemiBold Condensed"), tinte=(.70, .95, .75, .12), fondo=(4, 13, 7)),
 }
 
 
@@ -248,8 +255,9 @@ def _marcador(tema, tipo):
                 d.polygon(pts, fill=(255, 240, 120))
             else:
                 d.ellipse((c - 9, c - 61, c + 9, c - 43), fill=(255, 250, 235))
-        elif tema == "cod":
-            col = {"meta": (226, 54, 46), "peligro": (226, 54, 46)}.get(tipo, T["color"])
+        elif tema in ("cod", "fo"):
+            col = ({"meta": (226, 54, 46), "peligro": (226, 54, 46)} if tema == "cod" else
+                   {"meta": (190, 255, 210), "peligro": (255, 196, 60)}).get(tipo, T["color"])
             r = 20 if tipo in ("meta", "inicio") else 15
             im.alpha_composite(_halo(26, col, 120), (int(c - 52), int(c - 52)))
             d.rectangle((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=(10, 12, 12, 210))
@@ -324,7 +332,7 @@ def _etiqueta(tema, texto, tipo):
         T = TEMAS[tema]
         nom, tam, var = T["letra"]
         f = _fuente(nom, tam, var)
-        s = texto.upper() if tema in ("tes", "zelda", "cod") else texto
+        s = texto.upper() if tema in ("tes", "zelda", "cod", "fo") else texto
         track = 3 if tema == "tes" else (2 if tema == "zelda" else 0)
         dd = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
         tw = int(_track(dd, s, f, track))
@@ -336,7 +344,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon", "cod"):    # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon", "cod", "fo"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))

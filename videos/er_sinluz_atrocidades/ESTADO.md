@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: runa_caida · hueco mar 17-nov-2026 10:00 CDMX (saldrá ~1 día tarde: tokens semanales al 96 % el 16-nov)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG `nucleo/mg_er.py` + mapas tema `er`, OST oficial, SIN Overgear) → doc: docs/estilo_secuencia_yt.md § «Runa Caída»
-- etapa: MASTER ✅ 16-nov (salida/er_sinluz_atrocidades_MASTER.mp4, 27:57 con pantalla final, 1,5 GB; 7 tramos + concat; verificar OK) · SUBIDO privado y programado mar 17-nov 10:00 CDMX: https://youtu.be/FPYOPJgXx_g (registrado en runa_caida.json + BITACORA) · FALTA: miniatura de Flow (ahora va una provisional de código) → `yt aplicar` ANTES de las 10:00 del 17-nov; tele no respondió (aviso por voz)
-- siguiente: MINIATURA FLOW (receta videos/er_radagon_atrocidades/prompt_miniatura.md: pergamino + caja amarilla «ATROCIDADES / DEL SINLUZ» + píldora ELDEN RING + el Sinluz con capa raída y la llama frenética; ingredientes: ref de Márika de videos/er_godrick_atrocidades/miniatura_ing/ + un cuadro real del Sinluz de medios/) → salida/miniatura.jpg → `python fab.py yt aplicar er_sinluz_atrocidades runa_caida` · luego `biblioteca catalogar`
+- etapa: MASTER ✅ 16-nov (salida/er_sinluz_atrocidades_MASTER.mp4, 27:57 con pantalla final, 1,5 GB; 7 tramos + concat; verificar OK) · SUBIDO privado y programado mar 17-nov 10:00 CDMX: https://youtu.be/FPYOPJgXx_g (registrado en runa_caida.json + BITACORA) · MINIATURA FLOW ✅ 17-nov 09:48 aplicada con `yt aplicar` (salida/miniatura.jpg = el Sinluz encapuchado con la llama frenética + Melina ardiendo; alt en salida/miniatura_alt.jpg; la de código quedó en miniatura_codigo_provisional.jpg; prompt en prompt_miniatura.md)
+- siguiente: `biblioteca catalogar` + hallazgos en formula/runa_caida.md (cierre). Hecho: MINIATURA FLOW (receta videos/er_radagon_atrocidades/prompt_miniatura.md: pergamino + caja amarilla «ATROCIDADES / DEL SINLUZ» + píldora ELDEN RING + el Sinluz con capa raída y la llama frenética; ingredientes: ref de Márika de videos/er_godrick_atrocidades/miniatura_ing/ + un cuadro real del Sinluz de medios/) → salida/miniatura.jpg → `python fab.py yt aplicar er_sinluz_atrocidades runa_caida` · luego `biblioteca catalogar`
 
 ## Sesiones (UNA SESIÓN DIRECTO A MASTER; cortada por límite semanal)
 - alias: «el Sinluz», «las atrocidades del Sinluz», «er_sinluz»
@@ -78,5 +78,5 @@ python fab.py er_sinluz_atrocidades bajar | medios | fx hoja | chequeo | video |
 ```
 
 ## Cierre (regla del 12-oct-2026)
-- [ ] subido y PROGRAMADO en el hueco, miniatura Flow, registrado (`canales/runa_caida.json`, BITACORA)
+- [x] subido y PROGRAMADO en el hueco, miniatura Flow (17-nov), registrado (`canales/runa_caida.json`, BITACORA)
 - [ ] HALLAZGOS documentados (formula/runa_caida.md: sujeto = el espectador)

@@ -1,0 +1,8 @@
+# Miniatura de «Las 5 peores atrocidades del SINLUZ (tú) QUE IGNORASTE» (Flow, 17-nov-2026)
+
+Estilo de la ganadora del canal (Márika, KKxhcwon2kg), cambiando el personaje por el Sinluz con la Llama Frenética.
+Ingredientes (en orden): 1 `../er_godrick_atrocidades/miniatura_ing/ref_marika.jpg` (composición y tipografía) ·
+2 `pegatinas/sello_frenetico.png` (la llama frenética amarilla real) · 3 `pegatinas/melina_fuego.png` (Melina ardiendo, el puesto 1).
+
+Prompt:
+YouTube thumbnail, 16:9, exactly the same layout, style and typography as image 1: an old aged parchment map of a fantasy land as the background, warm brown and gold tones. On the left, a bright yellow rectangular box with a thin black border and huge bold black condensed sans-serif text in two lines: "ATROCIDADES" and "DEL SINLUZ". Under it, a smaller black box with a white outline and bold white text: "ELDEN RING". On the right, a dramatic painted dark fantasy character in the same epic illustrated style as image 1: the Tarnished from Elden Ring, a lone knight in a tattered dark hooded cloak over worn steel armor, face hidden in the shadow of the hood except two eyes burning with chaotic yellow flame, holding up in one gauntlet the swirling yellow Flame of Frenzy from image 2, the same yellow flame crackling around his head like a crown; behind him, small and faint, a cloaked woman engulfed in orange fire like image 3 and a giant golden tree burning on the horizon. Menacing, guilty, high contrast, crisp, readable at small size. Spell the text exactly: "ATROCIDADES", "DEL SINLUZ", "ELDEN RING". No other text, no watermark, no border.

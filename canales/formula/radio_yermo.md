@@ -3,7 +3,9 @@
 ## Alta del 17-nov-2026 (canal nuevo, 0 subs; creado por Claude bajo la cuenta de Google de Edsonxn)
 - **Pedido del usuario:** «similar al de Crónicas de Tamriel, pero de Fallout. Misma receta, todo igual… ponle un nombre
   interesante, no hay que repetirlo de "Crónicas de"». Promoción desde los próximos videos de Tamriel (`docs/estilo_secuencia_yt.md`
-  § «CANAL HERMANO»; la línea de la descripción la pone `yt subir` sola con `promo_canal`).
+  § «CANAL HERMANO»; la línea de la descripción la pone `yt subir` sola con `promo_canal`). **18-nov-2026: la mención va AL FINAL
+  de los videos de Tamriel (cierre + pantalla final «Canal») y solo desde que aquí haya ≥ 2 videos públicos; nunca a la mitad.**
+  Lo que se mide aquí: subs el día de cada video de Tamriel y fuentes «pantallas finales» / «canales de YouTube» / sugeridos.
 - **Nombre:** «Radio Yermo» (@RadioYermo, UClZr07HzwBSQbMgOvdSej_w). «El Yermo» es como los Fallout en español llaman a *the
   Wasteland*, y el canal es una radio que transmite desde el fin del mundo, como las radios de los propios juegos. Sin «Crónicas».
 - **Por qué Fallout en español (NexLev, 17-nov):** los 15 canales que más se parecen a lo que haremos (listas, secretos, lore de

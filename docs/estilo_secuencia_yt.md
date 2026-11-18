@@ -1344,23 +1344,37 @@ Metas públicas (en `campana_subs` de `canales/<alias>.json`): Runa **500 → 1 
 6. **Límites:** cifras siempre reales, sin sub4sub, sin sorteos ni recompensas por suscribirse, sin prometer temas que el usuario no
    haya decidido. En las respuestas a comentarios sigue sin pedirse (filtro de spam, § COMENTARIOS).
 
-## CANAL HERMANO: Tamriel recomienda Radio Yermo (el usuario, 17-nov-2026, todo video nuevo de Crónicas de Tamriel)
+## CANAL HERMANO: Tamriel recomienda Radio Yermo (el usuario, 17-nov-2026; AL FINAL, no a la mitad, desde el 18-nov-2026)
 «Hay que darle promoción en los próximos videos de Crónicas de Tamriel… como una recomendación al público para que, si les gusta
 Fallout, vayan y vean y visiten ese canal.» Radio Yermo (`radio_yermo`, @RadioYermo) es el canal de Fallout con la MISMA receta.
-1. **Dónde:** UN tramo de 6-10 s, distinto del de la campaña de suscripción y lejos de él (p. ej. tras un puesto fuerte hacia el
-   40-60 %, o en el cierre si el video es corto). Nunca en el gancho. Una frase extra en el cierre es opcional.
-2. **Qué dice la voz:** recomendación natural, en el tono del canal y con un puente con Skyrim/Bethesda (mismo estudio, misma
-   «física» de los objetos, los Refugios contra las ruinas dwemer…), redacción distinta en cada video. Ej.: «Si lo tuyo también es
-   salir de un Refugio a un mundo que ya se acabó, tenemos un canal hermano: Radio Yermo, todo Fallout, con la misma receta que
-   este. El enlace está abajo.» Si narra el Profeta, que lo diga desde arriba («hasta yo escucho esa radio»). Sin decir que es
-   nuestro «otro canal de IA» ni nombres del Humano tras el Telón.
-3. **Qué sale en pantalla:** interfaz de Skyrim, nunca un botón de plantilla: `T.mision("Misión nueva", "Sintoniza Radio Yermo")`
-   + el LOGO del canal (`canales/arte/radio_yermo/LOGO_800.jpg`) como pegatina/camafeo y, si hay hueco, una ventana con 2-3 s de
-   gameplay de Fallout (pantalla verde del Pip-Boy). Cuando Radio Yermo tenga videos, enseñar la miniatura del más reciente.
-4. **Descripción, automático:** `promo_canal` de `canales/cronicas_tamriel.json` → `yt subir`/`yt aplicar` ponen tras el primer
-   párrafo «¿Te gusta Fallout? Visita Radio Yermo…» con el enlace. No escribirlo en `youtube.json`.
-5. **Medir a 7 días** (anotar en `canales/formula/radio_yermo.md`): subs de Radio Yermo el día de cada video de Tamriel y fuente de
-   tráfico «Canales externos/YouTube» del canal nuevo. Si tras 3 videos no llega nada, cambiar UNA variable (lugar o pantalla).
+**Por qué así (investigación del 18-nov-2026, aprobada por el usuario):** YouTube recomienda VIDEOS A ESPECTADORES, no canales a
+canales («no promociona videos a tu público, busca videos para tu público», FAQ oficial de rendimiento): recomendar Fallout no
+confunde al algoritmo sobre Tamriel, y a Radio Yermo le enseña quién es su público (fans hispanos de los RPG de Bethesda, que se
+cruzan mucho con Skyrim). Lo que SÍ cuesta es un tramo a mitad del video: retención que cae en un «anuncio» y espectadores que se
+van de un canal MONETIZADO (menos tiempo de visualización y menos mid-roll), sumado al tramo de la campaña de suscripción. Por eso
+la recomendación va donde ya no le quita nada a Tamriel: el final.
+1. **Cuándo empieza:** solo cuando Radio Yermo tenga **≥ 2 videos públicos** (el 1.º sale el 22-nov-2026); antes, solo la línea
+   de la descripción. Mandar gente a un canal vacío desperdicia el clic.
+2. **Dónde:** **en el CIERRE** (últimos ~20 s, después del último puesto y de la frase de suscripción), **nunca a la mitad ni en el
+   gancho**, y ya no hay tramo propio de 6-10 s. Una o dos frases, ≤ 6 s.
+3. **Qué dice la voz:** recomendación natural, en el tono del canal y con un puente con Skyrim/Bethesda (mismo estudio, misma
+   «física» de los objetos, los Refugios contra las ruinas dwemer…), redacción distinta en cada video. Ej.: «Y si lo tuyo también es
+   salir de un Refugio a un mundo que ya se acabó, Radio Yermo, nuestro canal hermano, es todo Fallout. Te lo dejo aquí al final.»
+   Si narra el Profeta, que lo diga desde arriba («hasta yo escucho esa radio»). Sin decir que es nuestro «otro canal de IA» ni
+   nombres del Humano tras el Telón.
+4. **Qué sale en pantalla:** interfaz de Skyrim, nunca un botón de plantilla: `T.mision("Misión nueva", "Sintoniza Radio Yermo")`
+   + el LOGO del canal (`canales/arte/radio_yermo/LOGO_800.jpg`) como camafeo, o la miniatura del video más reciente de Radio Yermo.
+5. **Pantalla final de YouTube (Studio, navegador, en la MISMA visita que la monetización):** elemento **«Canal» = Radio Yermo** (o
+   «Video» = su video más reciente) en los últimos 5-20 s, al lado del video siguiente de Tamriel. La API no lo expone.
+6. **Descripción, automático:** `promo_canal` de `canales/cronicas_tamriel.json` → `yt subir`/`yt aplicar` ponen tras el primer
+   párrafo «¿Te gusta Fallout? Visita Radio Yermo…» con el enlace. No escribirlo en `youtube.json`. Se queda siempre (no cuesta).
+7. **Extras sin costo para Tamriel:** comentario fijado o publicación de comunidad en Tamriel cuando un video de Radio Yermo
+   destaque. **Lo más fuerte: un video en COLABORACIÓN** (función Collaborations de YouTube: el video sale a nombre de los dos
+   canales y se recomienda a ambos públicos), p. ej. un cruce «Skyrim contra Fallout»; antes, comprobar en Studio si la función ya
+   está disponible para estos canales (en 2025 estaba en prueba; la prensa no coincide sobre si ya abrió).
+8. **Medir a 7 días** (anotar en `canales/formula/radio_yermo.md`): subs de Radio Yermo el día de cada video de Tamriel, sus
+   fuentes de tráfico (pantallas finales, canales de YouTube, sugeridos junto a Tamriel) y la retención de Tamriel en el cierre. Si
+   tras 3 videos no llega nada, cambiar UNA variable (texto, pantalla final de canal ↔ de video, o la colaboración).
 
 ## Lecciones de `wow_objetos_secretos_forever` (1-nov-2026)
 - **Anclas repetidas:** un ancla casa con la PRIMERA aparición; un cierre que repite palabras del gancho deja el efecto minutos en pantalla. Usar `#2` y revisar `fx hoja`.

@@ -73,6 +73,10 @@
 - **Ojo:** `tes_seres_poderosos` dijo en la campaña «cuarenta y cuatro de cada cien no están suscritos»; la cifra real era ~87 % no suscritos (se confundió con el % visto). En este: «solo trece de cada cien están suscritos».
 
 ## Canal hermano: Radio Yermo (el usuario, 17-nov-2026)
-- Desde hoy cada video nuevo de Tamriel recomienda **Radio Yermo** (@RadioYermo, Fallout con la misma receta): tramo de 6-10 s
-  lejos de la campaña de suscripción + línea automática en la descripción (`promo_canal`). Reglas: `docs/estilo_secuencia_yt.md`
-  § «CANAL HERMANO». Medir a 7 días los subs que llegan a Radio Yermo (`canales/formula/radio_yermo.md`).
+- Desde hoy cada video nuevo de Tamriel recomienda **Radio Yermo** (@RadioYermo, Fallout con la misma receta) + línea automática
+  en la descripción (`promo_canal`). **Cambio del 18-nov-2026 (investigación aprobada por el usuario): AL FINAL, no a la mitad** —
+  1-2 frases en el cierre + elemento de pantalla final «Canal» en Studio, y solo desde que Radio Yermo tenga ≥ 2 videos públicos;
+  el tramo de 6-10 s a mitad del video le quitaba retención y mid-roll a Tamriel (monetizado). YouTube recomienda videos a
+  espectadores, no canales a canales: a Tamriel no lo «confunde» y a Radio Yermo le enseña su público. Reglas:
+  `docs/estilo_secuencia_yt.md` § «CANAL HERMANO». Medir a 7 días los subs que llegan a Radio Yermo y la retención de Tamriel en
+  el cierre (`canales/formula/radio_yermo.md`).

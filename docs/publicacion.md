@@ -55,7 +55,14 @@ integrado y gestiona todos los canales. Tras cada `yt subir`, en Studio:
   y el campo no aparece hasta que YouTube termina de procesar el Short: si el largo sale más tarde, se pone cuando salga (anotarlo en
   «siguiente» del `ESTADO.md`). La Data API no tiene este campo. **3-nov-2026 (`sopa_short`):** con el Short aún privado/programado
   Studio deja elegir el largo y «Guardar» se apaga, pero al recargar vuelve a «Ninguno»: ponerlo cuando el SHORT ya sea público.
-- **Canales monetizados (`"monetizado": true` en `canales/<alias>.json`; al 21-oct: Crónicas de Warcraft y Crónicas de Tamriel):
+- **Canales monetizados (`"monetizado": true` en `canales/<alias>.json`; al 17-nov-2026: Crónicas de Warcraft, Crónicas de Tamriel y Runa Caída):
+  **REGLA DE ORO (el usuario, 17-nov-2026): CADA video subido se deja con la monetización ACTIVADA y la casilla de anuncios MID-ROLL marcada, en la
+  misma sesión de la subida, sin que el usuario tenga que hacerlo** («a veces subes videos y no activas la monetización y luego yo la tengo que
+  activar… activa la casilla de mostrar anuncios en mid-roll, que a veces no se ponen»). `yt subir` apunta el video en
+  `canales/monetizacion_pendiente.json`; `canales --actualizar` y `yt monetizacion` lo listan; al terminar y comprobarlo (recargar la pestaña:
+  «Activada» y mid-roll marcado) → `python fab.py yt monetizado <id>`. Si la versión SD aún no deja guardar, se espera y se vuelve en la misma sesión;
+  si la sesión se acaba antes, queda en la lista y en «siguiente» del `ESTADO.md` (la siguiente sesión lo hace primero). Canal nuevo que entre al
+  Programa de Socios → `"monetizado": true` en su json el mismo día.
   pestaña «Monetización» del video → Anuncios **Activado** + todos los tipos de anuncio (pre/mid/post-roll; mid-rolls automáticos
   en videos ≥ 8 min) y el **cuestionario de idoneidad para anunciantes** respondido con verdad → Guardar. La API no lo expone.
   Studio no deja guardarlo hasta que termina de procesar la versión SD. No hay interruptor de anuncios por canal (Configuración >

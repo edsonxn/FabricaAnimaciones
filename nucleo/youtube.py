@@ -20,6 +20,7 @@ Uso (desde C:\\FabricaAnimaciones):
                                                   país y banner (el nombre y la foto de perfil solo se cambian en Studio)
   python fab.py yt aplicar <video> <canal> <id>   aplica videos/<video>/youtube.json a un video ya subido
   python fab.py yt subir <video> <canal> [private|unlisted|public] [--publicar 2026-10-01T15:00:00Z]
+  python fab.py yt monetizacion | monetizado <id>   pendientes de monetización en Studio (REGLA DE ORO 17-nov) | marcar uno hecho
   python fab.py yt publicar <canal> <id> [public|unlisted|private] [--programar 2026-10-01T15:00:00Z]
 """
 import glob
@@ -253,6 +254,43 @@ def _meta(carpeta):
 def _cfg_canal(cid):
     return next((c for c in (json.load(open(p, encoding="utf-8")) for p in glob.glob(os.path.join(CANALES, "*.json")))
                  if isinstance(c, dict) and c.get("canal_id") == cid), {})
+
+
+MONET_PEND = os.path.join(CANALES, "monetizacion_pendiente.json")
+
+
+def _monet_lista():
+    try:
+        return json.load(open(MONET_PEND, encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+
+
+def _monet_pendiente(vid, canal, carpeta):
+    """REGLA DE ORO (el usuario, 17-nov-2026): todo video subido a un canal con «monetizado»: true queda con la monetización
+    ACTIVADA y la casilla de anuncios MID-ROLL marcada, en la misma sesión (Studio, navegador; la API no lo expone). La subida
+    lo apunta aquí y `canales --actualizar` lo recuerda hasta que se marque con `yt monetizado <id>`."""
+    lista = [x for x in _monet_lista() if x.get("id") != vid]
+    lista.append({"id": vid, "canal": canal, "video": os.path.basename(os.path.normpath(carpeta)),
+                  "subido": time.strftime("%Y-%m-%d %H:%M")})
+    json.dump(lista, open(MONET_PEND, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+
+def monetizacion(marcar=None):
+    """Sin argumento: lista los videos con la monetización pendiente. Con <id>: lo da por hecho (anuncios activados + mid-roll)."""
+    lista = _monet_lista()
+    if marcar:
+        quedan = [x for x in lista if x.get("id") != marcar]
+        json.dump(quedan, open(MONET_PEND, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        print(f"monetización de {marcar} marcada como HECHA (anuncios activados + mid-roll). Quedan {len(quedan)} pendientes.")
+        return
+    if not lista:
+        print("Monetización: sin pendientes.")
+        return
+    print(f"⚠ MONETIZACIÓN PENDIENTE EN STUDIO ({len(lista)}): REGLA DE ORO, activar anuncios + casilla MID-ROLL + cuestionario")
+    for x in lista:
+        print(f"  - {x['canal']}: {x['video']} → https://studio.youtube.com/video/{x['id']}/monetization  (subido {x['subido']})")
+    print("  al terminar cada uno: python fab.py yt monetizado <id>")
 
 
 def _con_campana(m, cid):
@@ -533,7 +571,10 @@ def subir(carpeta, cid, privacidad="private", publicar=None, forzar=False):
     # lo que la API no hace se hace en Studio con el navegador integrado (el usuario, 21-oct-2026; docs/publicacion.md)
     cfg = _cfg_canal(cid)
     pend =(["«Vídeo relacionado» = su largo (cuando el largo ya sea público)"] if "#shorts" in m["titulo"].lower() else []) + (
-        ["Monetización: anuncios activados + cuestionario de idoneidad"] if cfg.get("monetizado") else [])
+        ["MONETIZACIÓN (REGLA DE ORO, 17-nov-2026): Anuncios ACTIVADO + casilla de anuncios MID-ROLL marcada (pre/mid/post) "
+         "+ cuestionario de idoneidad → Guardar; al terminar: python fab.py yt monetizado " + vid] if cfg.get("monetizado") else [])
+    if cfg.get("monetizado"):
+        _monet_pendiente(vid, cfg.get("nombre", cid), carpeta)
     if pend:
         print(f"PENDIENTE EN STUDIO (navegador integrado, canal {cfg.get('nombre', cid)}): https://studio.youtube.com/video/{vid}/edit\n  - "
               + "\n  - ".join(pend))
@@ -569,6 +610,10 @@ def main():
         pub = a[a.index("--programar") + 1] if "--programar" in a else None
         priv = next((x for x in a[3:] if x in ("private", "unlisted", "public")), "public")
         cambiar_visibilidad(resolver_canal(a[1]), a[2], priv, pub, "--forzar" in a)
+    elif cmd == "monetizado":          # REGLA DE ORO 17-nov-2026: da por hecha la monetización (anuncios + mid-roll) de un video
+        monetizacion(a[1])
+    elif cmd == "monetizacion":        # lista los videos subidos con la monetización aún pendiente en Studio
+        monetizacion()
     elif cmd == "subir":
         pub = a[a.index("--publicar") + 1] if "--publicar" in a else None
         priv = next((x for x in a[3:] if x in ("private", "unlisted", "public")), "private")

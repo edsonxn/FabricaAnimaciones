@@ -1,184 +1,192 @@
 {
- "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
- "nombre": "Runa Caída",
- "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz ElevenLabs «el Profeta» plana desde el 11-nov-2026 (antes Chatterbox Faraon); duración la que pida el usuario (25 min el 11-nov).",
- "horario": {
-  "zona": "America/Mexico_City",
-  "hora_local": "10:00",
-  "utc": "16:00",
-  "ciclo_dias": 3,
-  "separacion_min_horas": 66,
-  "nota": "Ciclo de 3 días pedido por el usuario el 5-nov-2026 (videos de 20 min mínimo). Separación 66 h para que quepa el ciclo con margen para publicaciones manuales.",
-  "historial": [
-   {
-    "fecha": "2026-10-13",
-    "ciclo_dias": 7,
+  "monetizado": true,
+  "canal_id": "UCQi_vcDu2EBmWy0U2I6pUDg",
+  "nombre": "Runa Caída",
+  "estilo": "Secretos y lore de Elden Ring: SECUENCIA YT (gameplay por beat, yt-dlp) + fichas de interfaz de Elden Ring (nucleo/mg_er.py); voz ElevenLabs «el Profeta» plana desde el 11-nov-2026 (antes Chatterbox Faraon); duración la que pida el usuario (25 min el 11-nov).",
+  "horario": {
+    "zona": "America/Mexico_City",
     "hora_local": "10:00",
-    "motivo": "registro inicial; provisional"
-   },
-   {
-    "fecha": "2026-10-24",
-    "ciclo_dias": 4,
-    "hora_local": "10:00",
-    "separacion_min_horas": 90,
-    "motivo": "el usuario publicó Ranni a mano a las 11:03 CDMX; con 96 h el siguiente ciclo de 4 días a las 10:00 no cabía (95 h). 90 h deja margen para publicaciones manuales sin mover la hora del canal"
-   },
-   {
-    "fecha": "2026-11-05",
+    "utc": "16:00",
     "ciclo_dias": 3,
-    "hora_local": "10:00",
     "separacion_min_horas": 66,
-    "motivo": "el usuario: «bajar la frecuencia de publicación a 3 días»; siguientes videos de 20 min mínimo. 66 h (antes 90) para que el ciclo de 72 h no choque con la separación mínima"
-   }
-  ]
- },
- "publicados": [
-  {
-   "video": "er_godrick_atrocidades",
-   "id": "8GB3iSozTCk",
-   "titulo": "Las 5 peores atrocidades de Godrick QUE IGNORASTE",
-   "subido": "2026-11-12",
-   "visibilidad": "programado",
-   "publicar": "2026-11-14T16:00:00Z",
-   "programado": "2026-11-14T16:00:00Z",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt_25min_voz_profeta",
-   "nota": "24:55; voz nueva el Profeta (ElevenLabs, plana) con votación narrador anterior / nuevo profeta; medir ≈ 21-nov; resubido el 12-nov con «Miquella» corregido (Mi-QUÉ-la); la 1.ª subida B7UTTAwu6sc quedó privada SIN fecha (borrarla, pendiente del usuario)"
+    "nota": "Ciclo de 3 días pedido por el usuario el 5-nov-2026 (videos de 20 min mínimo). Separación 66 h para que quepa el ciclo con margen para publicaciones manuales.",
+    "historial": [
+      {
+        "fecha": "2026-10-13",
+        "ciclo_dias": 7,
+        "hora_local": "10:00",
+        "motivo": "registro inicial; provisional"
+      },
+      {
+        "fecha": "2026-10-24",
+        "ciclo_dias": 4,
+        "hora_local": "10:00",
+        "separacion_min_horas": 90,
+        "motivo": "el usuario publicó Ranni a mano a las 11:03 CDMX; con 96 h el siguiente ciclo de 4 días a las 10:00 no cabía (95 h). 90 h deja margen para publicaciones manuales sin mover la hora del canal"
+      },
+      {
+        "fecha": "2026-11-05",
+        "ciclo_dias": 3,
+        "hora_local": "10:00",
+        "separacion_min_horas": 66,
+        "motivo": "el usuario: «bajar la frecuencia de publicación a 3 días»; siguientes videos de 20 min mínimo. 66 h (antes 90) para que el ciclo de 72 h no choque con la separación mínima"
+      }
+    ]
   },
-  {
-   "video": "er_mohg_atrocidades",
-   "id": "G6C2R0X_oCo",
-   "titulo": "Las 5 peores atrocidades de Mohg QUE IGNORASTE",
-   "subido": "2026-11-10",
-   "visibilidad": "programado",
-   "publicar": "2026-11-11T16:00:00Z",
-   "programado": "2026-11-11T16:00:00Z",
-   "duracion": "PT24M12S",
-   "formato": "atrocidades_5_largo: sujeto Mohg (pedido por @zoharysakiyamablue471), ~24 min, OST oficial, voz Faraon, 11 comentarios reales, 5 sonidos originales audibles, petición de suscripción antes del min 5 + campaña 4 de 100 → meta 1 000",
-   "nota": "miniatura Flow y .srt cargados por API (token force-ssl desde el 10-nov); PENDIENTE en Studio: monetización y video relacionado"
+  "publicados": [
+    {
+      "video": "er_godrick_atrocidades",
+      "id": "8GB3iSozTCk",
+      "titulo": "Las 5 peores atrocidades de Godrick QUE IGNORASTE",
+      "subido": "2026-11-12",
+      "visibilidad": "public",
+      "publicar": "2026-11-14T16:00:00Z",
+      "programado": "2026-11-14T16:00:00Z",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt_25min_voz_profeta",
+      "nota": "24:55; voz nueva el Profeta (ElevenLabs, plana) con votación narrador anterior / nuevo profeta; medir ≈ 21-nov; resubido el 12-nov con «Miquella» corregido (Mi-QUÉ-la); la 1.ª subida B7UTTAwu6sc quedó privada SIN fecha (borrarla, pendiente del usuario)",
+      "publicado": "2026-11-14T16:00:35Z"
+    },
+    {
+      "video": "er_mohg_atrocidades",
+      "id": "G6C2R0X_oCo",
+      "titulo": "Las 5 peores atrocidades de Mohg QUE IGNORASTE",
+      "subido": "2026-11-10",
+      "visibilidad": "public",
+      "publicar": "2026-11-11T16:00:00Z",
+      "programado": "2026-11-11T16:00:00Z",
+      "duracion": "PT24M12S",
+      "formato": "atrocidades_5_largo: sujeto Mohg (pedido por @zoharysakiyamablue471), ~24 min, OST oficial, voz Faraon, 11 comentarios reales, 5 sonidos originales audibles, petición de suscripción antes del min 5 + campaña 4 de 100 → meta 1 000",
+      "nota": "miniatura Flow y .srt cargados por API (token force-ssl desde el 10-nov); PENDIENTE en Studio: monetización y video relacionado",
+      "publicado": "2026-11-11T16:00:34Z"
+    },
+    {
+      "video": "er_morgott_atrocidades",
+      "id": "fMBEJI5FjaY",
+      "titulo": "Las 5 peores atrocidades de Morgott QUE IGNORASTE",
+      "subido": "2026-11-06",
+      "visibilidad": "public",
+      "publicar": "2026-11-08T16:00:00Z",
+      "duracion": "PT21M7S",
+      "formato": "atrocidades_5_largo: sujeto Morgott (pedido por @ConkerLord22), 21:07, OST oficial, voz Faraon, 11 comentarios reales, campaña de suscripción 3 de 100 → meta 500",
+      "nota": "miniatura Flow aplicada; .srt sin cargar (token sin force-ssl): subirlo a mano en Studio; PENDIENTE en Studio: monetización y video relacionado",
+      "publicado": "2026-11-08T16:00:15Z"
+    },
+    {
+      "video": "er_radahn_atrocidades",
+      "id": "Uuj8Bw45-fs",
+      "titulo": "Las 5 peores atrocidades de Radahn QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-29T08:00:00Z",
+      "nota": "~24:38 con la pantalla final (el usuario pidió >= 22 min, todo en UNA sesión); tema pedido en comentarios; gancho con el comentario de @zoharysakiyamablue471 y 9 tarjetas de comentarios reales (≥ 4 de agradecimiento); FONETICA Miquella «Mikéla» (corrige la queja «Micuela»); OST oficial; MG nuevos lanzas/cielo_sujeto/balanza/espejo; PROGRAMADO 96 h tras Melina; .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-11-05T16:00:00Z",
+      "publicado": "2026-11-05T16:00:24Z"
+    },
+    {
+      "video": "er_melina_atrocidades",
+      "id": "U4reFaDG6Vg",
+      "titulo": "Las 5 peores atrocidades de Melina QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-28T06:00:00Z",
+      "nota": "~20 min (20:31 con la pantalla final; el usuario pidió >= 18) copiando a Miquella (x18) y el gancho de Ranni; OST oficial; MG nuevos acuerdo/ecos/arbol_arde/muerte_suelta; subido en privado con miniatura y PROGRAMADO en el hueco del canal (96 h tras Malenia); .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-11-01T16:00:00Z",
+      "publicado": "2026-11-01T16:00:09Z"
+    },
+    {
+      "video": "er_malenia_atrocidades",
+      "id": "3qrJnRE6ol4",
+      "titulo": "Las 5 peores atrocidades de Malenia QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-23T22:00:00Z",
+      "nota": "~19 min (19:34 con la pantalla final) copiando a Miquella (×48); MÚSICA = OST OFICIAL de Elden Ring (regla nueva del usuario, 23-oct); subido en privado con miniatura y PROGRAMADO en el hueco del canal; .srt sin cargar (token sin youtube.force-ssl); ADELANTADO el 24-oct al mié 28-oct 10:00 CDMX al publicar el usuario Ranni antes de tiempo",
+      "programado": "2026-10-28T16:00:00Z",
+      "publicado": "2026-10-28T16:00:40Z"
+    },
+    {
+      "video": "er_ranni_atrocidades",
+      "id": "ZamBFBDZ6OI",
+      "titulo": "Las 5 peores atrocidades de Ranni QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-22T14:10:00Z",
+      "nota": "~12 min (12:16 con la pantalla final) pedidos por el usuario; subido en privado con miniatura y PROGRAMADO para el 25-oct; el usuario lo PUBLICÓ a mano antes, el sáb 24-oct 11:03 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-10-25T16:00:00Z",
+      "publicado": "2026-10-24T17:03:34Z"
+    },
+    {
+      "video": "er_miquella_atrocidades",
+      "id": "vUaTbbI9yiM",
+      "titulo": "Las 5 peores atrocidades de Miquella QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-19T17:01:00Z",
+      "nota": "PRUEBA de duración (~20 min, 20:15 con la pantalla final) pedida por el usuario; subido en privado con miniatura el 19-oct y PROGRAMADO por orden del usuario para mar 20-oct 10:00 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
+      "programado": "2026-10-20T16:00:00Z",
+      "publicado": "2026-10-20"
+    },
+    {
+      "video": "er_radagon_atrocidades",
+      "id": "L0HTszG4ycM",
+      "titulo": "Las 5 peores atrocidades de Radagon QUE IGNORASTE",
+      "visibilidad": "public",
+      "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
+      "subido": "2026-10-14T17:18:14Z",
+      "publicado": "2026-10-14T17:18:14Z",
+      "nota": "subido en privado y publicado a mano por el usuario el mismo día (14-oct 11:18 CDMX)"
+    },
+    {
+      "video": null,
+      "id": "5qjNn7U-Vy4",
+      "titulo": "Los 5 secretos perturbadores de las Tierras Intermedias que CAMBIARÁN tu juego",
+      "visibilidad": "public",
+      "publicado": "2026-10-05T16:58:26Z"
+    },
+    {
+      "video": null,
+      "id": "B3VjwOzO3as",
+      "titulo": "Los secretos más perturbadores de la Aldea Bonny QUE IGNORASTE",
+      "visibilidad": "public",
+      "publicado": "2026-09-22T14:11:07Z"
+    },
+    {
+      "video": "er_sinluz_atrocidades",
+      "id": "FPYOPJgXx_g",
+      "titulo": "Las 5 peores atrocidades del SINLUZ (tú) QUE IGNORASTE",
+      "visibilidad": "public",
+      "programado": "2026-11-17T16:00:00Z",
+      "formato": "atrocidades · sujeto = el espectador (pedido en comentarios) · 27:57",
+      "publicado": "2026-11-17T16:00:21Z"
+    }
+  ],
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "elden ring secretos",
+      "elden ring lore",
+      "elden ring nightreign"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 2000,
+    "filtro": [
+      "elden ring",
+      "tierras intermedias",
+      "marika",
+      "fromsoftware",
+      "nightreign"
+    ]
   },
-  {
-   "video": "er_morgott_atrocidades",
-   "id": "fMBEJI5FjaY",
-   "titulo": "Las 5 peores atrocidades de Morgott QUE IGNORASTE",
-   "subido": "2026-11-06",
-   "visibilidad": "programado",
-   "publicar": "2026-11-08T16:00:00Z",
-   "duracion": "PT21M7S",
-   "formato": "atrocidades_5_largo: sujeto Morgott (pedido por @ConkerLord22), 21:07, OST oficial, voz Faraon, 11 comentarios reales, campaña de suscripción 3 de 100 → meta 500",
-   "nota": "miniatura Flow aplicada; .srt sin cargar (token sin force-ssl): subirlo a mano en Studio; PENDIENTE en Studio: monetización y video relacionado"
-  },
-  {
-   "video": "er_radahn_atrocidades",
-   "id": "Uuj8Bw45-fs",
-   "titulo": "Las 5 peores atrocidades de Radahn QUE IGNORASTE",
-   "visibilidad": "private",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-   "subido": "2026-10-29T08:00:00Z",
-   "nota": "~24:38 con la pantalla final (el usuario pidió >= 22 min, todo en UNA sesión); tema pedido en comentarios; gancho con el comentario de @zoharysakiyamablue471 y 9 tarjetas de comentarios reales (≥ 4 de agradecimiento); FONETICA Miquella «Mikéla» (corrige la queja «Micuela»); OST oficial; MG nuevos lanzas/cielo_sujeto/balanza/espejo; PROGRAMADO 96 h tras Melina; .srt sin cargar (token sin youtube.force-ssl)",
-   "programado": "2026-11-05T16:00:00Z"
-  },
-  {
-   "video": "er_melina_atrocidades",
-   "id": "U4reFaDG6Vg",
-   "titulo": "Las 5 peores atrocidades de Melina QUE IGNORASTE",
-   "visibilidad": "private",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-   "subido": "2026-10-28T06:00:00Z",
-   "nota": "~20 min (20:31 con la pantalla final; el usuario pidió >= 18) copiando a Miquella (x18) y el gancho de Ranni; OST oficial; MG nuevos acuerdo/ecos/arbol_arde/muerte_suelta; subido en privado con miniatura y PROGRAMADO en el hueco del canal (96 h tras Malenia); .srt sin cargar (token sin youtube.force-ssl)",
-   "programado": "2026-11-01T16:00:00Z"
-  },
-  {
-   "video": "er_malenia_atrocidades",
-   "id": "3qrJnRE6ol4",
-   "titulo": "Las 5 peores atrocidades de Malenia QUE IGNORASTE",
-   "visibilidad": "private",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-   "subido": "2026-10-23T22:00:00Z",
-   "nota": "~19 min (19:34 con la pantalla final) copiando a Miquella (×48); MÚSICA = OST OFICIAL de Elden Ring (regla nueva del usuario, 23-oct); subido en privado con miniatura y PROGRAMADO en el hueco del canal; .srt sin cargar (token sin youtube.force-ssl); ADELANTADO el 24-oct al mié 28-oct 10:00 CDMX al publicar el usuario Ranni antes de tiempo",
-   "programado": "2026-10-28T16:00:00Z"
-  },
-  {
-   "video": "er_ranni_atrocidades",
-   "id": "ZamBFBDZ6OI",
-   "titulo": "Las 5 peores atrocidades de Ranni QUE IGNORASTE",
-   "visibilidad": "public",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-   "subido": "2026-10-22T14:10:00Z",
-   "nota": "~12 min (12:16 con la pantalla final) pedidos por el usuario; subido en privado con miniatura y PROGRAMADO para el 25-oct; el usuario lo PUBLICÓ a mano antes, el sáb 24-oct 11:03 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
-   "programado": "2026-10-25T16:00:00Z",
-   "publicado": "2026-10-24T17:03:34Z"
-  },
-  {
-   "video": "er_miquella_atrocidades",
-   "id": "vUaTbbI9yiM",
-   "titulo": "Las 5 peores atrocidades de Miquella QUE IGNORASTE",
-   "visibilidad": "public",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-   "subido": "2026-10-19T17:01:00Z",
-   "nota": "PRUEBA de duración (~20 min, 20:15 con la pantalla final) pedida por el usuario; subido en privado con miniatura el 19-oct y PROGRAMADO por orden del usuario para mar 20-oct 10:00 CDMX; .srt sin cargar (token sin youtube.force-ssl)",
-   "programado": "2026-10-20T16:00:00Z",
-   "publicado": "2026-10-20"
-  },
-  {
-   "video": "er_radagon_atrocidades",
-   "id": "L0HTszG4ycM",
-   "titulo": "Las 5 peores atrocidades de Radagon QUE IGNORASTE",
-   "visibilidad": "public",
-   "formato": "lista_5_atrocidades_que_ignoraste_secuencia_yt",
-   "subido": "2026-10-14T17:18:14Z",
-   "publicado": "2026-10-14T17:18:14Z",
-   "nota": "subido en privado y publicado a mano por el usuario el mismo día (14-oct 11:18 CDMX)"
-  },
-  {
-   "video": null,
-   "id": "5qjNn7U-Vy4",
-   "titulo": "Los 5 secretos perturbadores de las Tierras Intermedias que CAMBIARÁN tu juego",
-   "visibilidad": "public",
-   "publicado": "2026-10-05T16:58:26Z"
-  },
-  {
-   "video": null,
-   "id": "B3VjwOzO3as",
-   "titulo": "Los secretos más perturbadores de la Aldea Bonny QUE IGNORASTE",
-   "visibilidad": "public",
-   "publicado": "2026-09-22T14:11:07Z"
-  },
-  {
-   "video": "er_sinluz_atrocidades",
-   "id": "FPYOPJgXx_g",
-   "titulo": "Las 5 peores atrocidades del SINLUZ (tú) QUE IGNORASTE",
-   "visibilidad": "private",
-   "programado": "2026-11-17T16:00:00Z",
-   "formato": "atrocidades · sujeto = el espectador (pedido en comentarios) · 27:57"
+  "estado": "mudado a la Fábrica el 14-oct-2026 (primer video: er_radagon_atrocidades)",
+  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\runa_caida.mp4",
+  "campana_subs": {
+    "desde": "2026-10-30",
+    "metas": [
+      500,
+      1000
+    ],
+    "linea": "Suscríbete a Runa Caída para no perderte la siguiente atrocidad"
   }
- ],
- "ideas": {
-  "idioma": "es",
-  "region": "MX",
-  "busquedas": [
-   "elden ring secretos",
-   "elden ring lore",
-   "elden ring nightreign"
-  ],
-  "competidores": [],
-  "dias": 60,
-  "min_vistas": 2000,
-  "filtro": [
-   "elden ring",
-   "tierras intermedias",
-   "marika",
-   "fromsoftware",
-   "nightreign"
-  ]
- },
- "estado": "mudado a la Fábrica el 14-oct-2026 (primer video: er_radagon_atrocidades)",
- "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\runa_caida.mp4",
- "campana_subs": {
-  "desde": "2026-10-30",
-  "metas": [
-   500,
-   1000
-  ],
-  "linea": "Suscríbete a Runa Caída para no perderte la siguiente atrocidad"
- }
 }

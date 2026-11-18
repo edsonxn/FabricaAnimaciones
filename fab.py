@@ -302,7 +302,10 @@ def main():
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "estadisticas.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "canales":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
-        sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "estadisticas.py"), "calendario", *a[1:]], cwd=RAIZ, env=env).returncode)
+        rc = subprocess.run([sys.executable, os.path.join(NUCLEO, "estadisticas.py"), "calendario", *a[1:]], cwd=RAIZ, env=env).returncode
+        # REGLA DE ORO (17-nov-2026): monetización + mid-roll de cada video subido a un canal monetizado
+        subprocess.run([sys.executable, os.path.join(NUCLEO, "youtube.py"), "monetizacion"], cwd=RAIZ, env=env)
+        sys.exit(rc)
     if a[0] == "buenosdias":
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "buenosdias.py"), *a[1:]], cwd=RAIZ, env=env).returncode)

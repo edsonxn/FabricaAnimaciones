@@ -1,0 +1,168 @@
+{
+ "modo": "mesa",
+ "de": 627.58,
+ "a": 631.39,
+ "fondo": "/videos/lol_final_previa/tactica3d/mesa_j2b_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Xun": {
+   "jugador": "Xun",
+   "campeon": "Naafiri",
+   "equipo": "A",
+   "icono": "/videos/lol_final_previa/iconos/Naafiri.png",
+   "puntos": [
+    [
+     0,
+     0.51,
+     0.33
+    ]
+   ],
+   "de": 627.98,
+   "sale": 630.39
+  },
+  "ShowMaker": {
+   "jugador": "ShowMaker",
+   "campeon": "Akali",
+   "equipo": "R",
+   "icono": "/videos/lol_final_previa/iconos/Akali.png",
+   "puntos": [
+    [
+     0,
+     0.505,
+     0.65
+    ]
+   ],
+   "de": 628.06,
+   "sale": 630.39
+  }
+ },
+ "camara": [
+  [
+   627.58,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   627.88,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   628.342,
+   -95,
+   30,
+   44,
+   0.51,
+   0.48
+  ],
+  [
+   629.2945,
+   0,
+   22,
+   38,
+   0.51,
+   0.48
+  ],
+  [
+   630.247,
+   95,
+   30,
+   44,
+   0.51,
+   0.48
+  ],
+  [
+   630.49,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   631.39,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "pers",
+   "pts": [
+    [
+     0.51,
+     0.36
+    ],
+    [
+     0.51,
+     0.5
+    ],
+    [
+     0.505,
+     0.62
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.9,
+   "guion": true,
+   "alto": 2.5,
+   "grosor": 1.4,
+   "en": 628.48,
+   "sale": 630.39
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.505,
+   "v": 0.65,
+   "alto": 0,
+   "texto": "SHOWMAKER",
+   "sub": "ESCAPA CON POCA VIDA",
+   "color": "rojo",
+   "dx": -190,
+   "dy": 40,
+   "de": 628.28,
+   "a": 630.39
+  },
+  {
+   "flecha": "pers",
+   "texto": "XUN · NAAFIRI",
+   "sub": "LO PERSIGUE HASTA LA JUNGLA DE BLG",
+   "color": "azul",
+   "dx": 200,
+   "dy": -30,
+   "de": 629.08,
+   "a": 630.39
+  },
+  {
+   "u": 0.51,
+   "v": 0.33,
+   "alto": 0,
+   "texto": "3 ASESINATOS DE XUN",
+   "sub": "LUCID · CAREER · SHOWMAKER",
+   "color": "azul",
+   "dx": -230,
+   "dy": -70,
+   "de": 627.88,
+   "a": 630.39
+  }
+ ]
+}

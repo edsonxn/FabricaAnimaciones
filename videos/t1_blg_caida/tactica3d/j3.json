@@ -1,0 +1,1213 @@
+{
+ "de": 438.686,
+ "a": 450.599,
+ "titulo": "LA JUGADA EN 3D · DATOS DEL MINIMAPA",
+ "reloj": [
+  [
+   438.686,
+   1815.0
+  ],
+  [
+   446.896,
+   1823.0
+  ],
+  [
+   449.199,
+   1823.0
+  ],
+  [
+   450.599,
+   1824.4
+  ]
+ ],
+ "fundido": 0,
+ "equipos": [
+  {
+   "id": "IG",
+   "color": "azul",
+   "logo": "/videos/lol_final_previa/iconos/equipos/IG.png"
+  },
+  {
+   "id": "GEN",
+   "color": "rojo",
+   "logo": "/videos/lol_final_previa/iconos/equipos/GEN.png"
+  }
+ ],
+ "fichas": {
+  "TheShy": {
+   "jugador": "TheShy",
+   "campeon": "Gnar",
+   "equipo": "IG",
+   "icono": "/videos/lol_final_previa/iconos/Gnar.png",
+   "puntos": [
+    [
+     1813.3,
+     0.515,
+     0.583
+    ],
+    [
+     1823.3,
+     0.427,
+     0.605
+    ],
+    [
+     1829.3,
+     0.557,
+     0.621
+    ],
+    [
+     1832.3,
+     0.589,
+     0.665
+    ],
+    [
+     1834.3,
+     0.612,
+     0.689
+    ],
+    [
+     1848.3,
+     0.447,
+     0.537
+    ],
+    [
+     1857.3,
+     0.538,
+     0.44
+    ],
+    [
+     1865.3,
+     0.36,
+     0.323
+    ]
+   ],
+   "sale": 450.599
+  },
+  "Wei": {
+   "jugador": "Wei",
+   "campeon": "Naafiri",
+   "equipo": "IG",
+   "icono": "/videos/lol_final_previa/iconos/Naafiri.png",
+   "puntos": [
+    [
+     1817.3,
+     0.677,
+     0.647
+    ],
+    [
+     1820.3,
+     0.673,
+     0.663
+    ],
+    [
+     1823.3,
+     0.696,
+     0.654
+    ],
+    [
+     1826.3,
+     0.683,
+     0.6
+    ],
+    [
+     1829.3,
+     0.594,
+     0.6
+    ],
+    [
+     1832.3,
+     0.513,
+     0.643
+    ],
+    [
+     1834.3,
+     0.512,
+     0.623
+    ]
+   ],
+   "de": 440.533,
+   "sale": 450.599
+  },
+  "Rookie": {
+   "jugador": "Rookie",
+   "campeon": "Locke",
+   "equipo": "IG",
+   "icono": "/videos/lol_final_previa/iconos/Locke.png",
+   "puntos": [
+    [
+     1823.3,
+     0.404,
+     0.522
+    ],
+    [
+     1829.3,
+     0.527,
+     0.636
+    ],
+    [
+     1832.3,
+     0.589,
+     0.697
+    ],
+    [
+     1840.3,
+     0.551,
+     0.575
+    ],
+    [
+     1845.3,
+     0.623,
+     0.482
+    ],
+    [
+     1848.3,
+     0.518,
+     0.45
+    ],
+    [
+     1852.3,
+     0.584,
+     0.424
+    ],
+    [
+     1857.3,
+     0.473,
+     0.32
+    ],
+    [
+     1865.3,
+     0.41,
+     0.377
+    ]
+   ],
+   "de": 444.33
+  },
+  "JiaQi": {
+   "jugador": "JiaQi",
+   "campeon": "Ezreal",
+   "equipo": "IG",
+   "icono": "/videos/lol_final_previa/iconos/Ezreal.png",
+   "puntos": [
+    [
+     1805.3,
+     0.568,
+     0.564
+    ],
+    [
+     1813.3,
+     0.606,
+     0.608
+    ],
+    [
+     1817.3,
+     0.668,
+     0.626
+    ],
+    [
+     1820.3,
+     0.691,
+     0.644
+    ],
+    [
+     1823.3,
+     0.773,
+     0.646
+    ],
+    [
+     1826.3,
+     0.706,
+     0.661
+    ],
+    [
+     1881.3,
+     0.27,
+     0.93,
+     "salto"
+    ]
+   ],
+   "sale": 450.599
+  },
+  "Meiko": {
+   "jugador": "Meiko",
+   "campeon": "Alistar",
+   "equipo": "IG",
+   "icono": "/videos/lol_final_previa/iconos/Alistar.png",
+   "puntos": [
+    [
+     1805.3,
+     0.653,
+     0.526
+    ],
+    [
+     1813.3,
+     0.662,
+     0.573
+    ],
+    [
+     1820.3,
+     0.661,
+     0.54
+    ],
+    [
+     1865.3,
+     0.42,
+     0.73,
+     "salto"
+    ],
+    [
+     1869.3,
+     0.5,
+     0.66
+    ],
+    [
+     1873.3,
+     0.6,
+     0.57
+    ],
+    [
+     1881.3,
+     0.64,
+     0.55
+    ]
+   ],
+   "sale": 445.87
+  },
+  "Canyon": {
+   "jugador": "Canyon",
+   "campeon": "MonkeyKing",
+   "equipo": "GEN",
+   "icono": "/videos/lol_final_previa/iconos/MonkeyKing.png",
+   "puntos": [
+    [
+     1805.3,
+     0.542,
+     0.451
+    ],
+    [
+     1813.3,
+     0.629,
+     0.507
+    ],
+    [
+     1820.3,
+     0.694,
+     0.591
+    ],
+    [
+     1823.3,
+     0.778,
+     0.539
+    ],
+    [
+     1829.3,
+     0.765,
+     0.533
+    ],
+    [
+     1832.3,
+     0.693,
+     0.63
+    ],
+    [
+     1834.3,
+     0.656,
+     0.598
+    ],
+    [
+     1852.3,
+     0.289,
+     0.308
+    ],
+    [
+     1857.3,
+     0.302,
+     0.253
+    ],
+    [
+     1865.3,
+     0.331,
+     0.266
+    ],
+    [
+     1869.3,
+     0.344,
+     0.236
+    ],
+    [
+     1873.3,
+     0.243,
+     0.237
+    ]
+   ]
+  },
+  "Chovy": {
+   "jugador": "Chovy",
+   "campeon": "Taliyah",
+   "equipo": "GEN",
+   "icono": "/videos/lol_final_previa/iconos/Taliyah.png",
+   "puntos": [
+    [
+     1813.3,
+     0.446,
+     0.477
+    ],
+    [
+     1823.3,
+     0.707,
+     0.561
+    ],
+    [
+     1826.3,
+     0.707,
+     0.599
+    ],
+    [
+     1829.3,
+     0.661,
+     0.587
+    ],
+    [
+     1832.3,
+     0.647,
+     0.599
+    ],
+    [
+     1834.3,
+     0.591,
+     0.596
+    ],
+    [
+     1840.3,
+     0.478,
+     0.501
+    ],
+    [
+     1845.3,
+     0.356,
+     0.485
+    ],
+    [
+     1848.3,
+     0.318,
+     0.444
+    ],
+    [
+     1852.3,
+     0.297,
+     0.354
+    ],
+    [
+     1857.3,
+     0.258,
+     0.261
+    ],
+    [
+     1865.3,
+     0.303,
+     0.282
+    ],
+    [
+     1869.3,
+     0.291,
+     0.259
+    ],
+    [
+     1873.3,
+     0.239,
+     0.22
+    ]
+   ]
+  },
+  "Ruler": {
+   "jugador": "Ruler",
+   "campeon": "Yunara",
+   "equipo": "GEN",
+   "icono": "/videos/lol_final_previa/iconos/Yunara.png",
+   "puntos": [
+    [
+     1805.3,
+     0.466,
+     0.496
+    ],
+    [
+     1813.3,
+     0.523,
+     0.497
+    ],
+    [
+     1817.3,
+     0.637,
+     0.546
+    ],
+    [
+     1820.3,
+     0.653,
+     0.532
+    ],
+    [
+     1823.3,
+     0.726,
+     0.565
+    ],
+    [
+     1826.3,
+     0.735,
+     0.625
+    ],
+    [
+     1829.3,
+     0.698,
+     0.595
+    ],
+    [
+     1832.3,
+     0.614,
+     0.589
+    ],
+    [
+     1834.3,
+     0.531,
+     0.591
+    ],
+    [
+     1840.3,
+     0.439,
+     0.493
+    ],
+    [
+     1845.3,
+     0.358,
+     0.491
+    ],
+    [
+     1848.3,
+     0.327,
+     0.454
+    ],
+    [
+     1852.3,
+     0.323,
+     0.339
+    ],
+    [
+     1857.3,
+     0.302,
+     0.272
+    ],
+    [
+     1865.3,
+     0.312,
+     0.305
+    ],
+    [
+     1869.3,
+     0.304,
+     0.292
+    ],
+    [
+     1873.3,
+     0.258,
+     0.258
+    ]
+   ]
+  },
+  "Duro": {
+   "jugador": "Duro",
+   "campeon": "Nautilus",
+   "equipo": "GEN",
+   "icono": "/videos/lol_final_previa/iconos/Nautilus.png",
+   "puntos": [
+    [
+     1805.3,
+     0.532,
+     0.476
+    ],
+    [
+     1813.3,
+     0.533,
+     0.484
+    ],
+    [
+     1817.3,
+     0.61,
+     0.57
+    ],
+    [
+     1820.3,
+     0.672,
+     0.557
+    ],
+    [
+     1823.3,
+     0.71,
+     0.589
+    ],
+    [
+     1826.3,
+     0.719,
+     0.617
+    ],
+    [
+     1829.3,
+     0.686,
+     0.578
+    ],
+    [
+     1832.3,
+     0.609,
+     0.596
+    ],
+    [
+     1834.3,
+     0.608,
+     0.619
+    ],
+    [
+     1840.3,
+     0.55,
+     0.515
+    ],
+    [
+     1845.3,
+     0.455,
+     0.432
+    ],
+    [
+     1857.3,
+     0.418,
+     0.263
+    ],
+    [
+     1865.3,
+     0.366,
+     0.309
+    ],
+    [
+     1869.3,
+     0.299,
+     0.342
+    ],
+    [
+     1873.3,
+     0.239,
+     0.255
+    ]
+   ]
+  },
+  "Kiin_torre": {
+   "jugador": "Kiin",
+   "campeon": "Camille",
+   "equipo": "GEN",
+   "icono": "/videos/lol_final_previa/iconos/Camille.png",
+   "puntos": [
+    [
+     1817.3,
+     0.86,
+     0.21
+    ]
+   ],
+   "de": 440.533,
+   "sale": 444.638
+  },
+  "Kiin": {
+   "jugador": "Kiin",
+   "campeon": "Camille",
+   "equipo": "GEN",
+   "icono": "/videos/lol_final_previa/iconos/Camille.png",
+   "puntos": [
+    [
+     1823.3,
+     0.464,
+     0.518
+    ],
+    [
+     1829.3,
+     0.511,
+     0.563
+    ],
+    [
+     1832.3,
+     0.524,
+     0.638
+    ],
+    [
+     1834.3,
+     0.509,
+     0.636
+    ],
+    [
+     1840.3,
+     0.44,
+     0.521
+    ],
+    [
+     1845.3,
+     0.363,
+     0.507
+    ],
+    [
+     1848.3,
+     0.425,
+     0.437
+    ],
+    [
+     1852.3,
+     0.36,
+     0.327
+    ],
+    [
+     1857.3,
+     0.345,
+     0.251
+    ],
+    [
+     1865.3,
+     0.351,
+     0.309
+    ],
+    [
+     1869.3,
+     0.363,
+     0.317
+    ],
+    [
+     1873.3,
+     0.465,
+     0.286
+    ]
+   ],
+   "de": 446.178
+  }
+ },
+ "estructuras": [
+  {
+   "tipo": "inhibidor",
+   "u": 0.075,
+   "v": 0.775,
+   "equipo": "IG"
+  },
+  {
+   "tipo": "inhibidor",
+   "u": 0.21,
+   "v": 0.795,
+   "equipo": "IG"
+  },
+  {
+   "tipo": "inhibidor",
+   "u": 0.235,
+   "v": 0.925,
+   "equipo": "IG"
+  },
+  {
+   "tipo": "nexo",
+   "u": 0.115,
+   "v": 0.885,
+   "equipo": "IG"
+  },
+  {
+   "tipo": "inhibidor",
+   "u": 0.765,
+   "v": 0.07,
+   "equipo": "GEN"
+  },
+  {
+   "tipo": "inhibidor",
+   "u": 0.79,
+   "v": 0.205,
+   "equipo": "GEN"
+  },
+  {
+   "tipo": "inhibidor",
+   "u": 0.925,
+   "v": 0.225,
+   "equipo": "GEN"
+  },
+  {
+   "tipo": "nexo",
+   "u": 0.885,
+   "v": 0.115,
+   "equipo": "GEN"
+  }
+ ],
+ "objetivos": [
+  {
+   "nombre": "dragón de montaña",
+   "u": 0.66,
+   "v": 0.65,
+   "img": "/videos/lol_final_previa/tactica3d/j3_montana.png",
+   "color": "#c99a5a",
+   "r": 0.035,
+   "muere": 441.765,
+   "gana": "rojo",
+   "vida": [
+    [
+     439.712,
+     2223
+    ],
+    [
+     440.688,
+     2223
+    ],
+    [
+     440.738,
+     1813
+    ],
+    [
+     441.685,
+     1813
+    ],
+    [
+     441.765,
+     0
+    ]
+   ],
+   "numeros_desde": 439.712
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.86,
+   "v": 0.21,
+   "r": 0.03,
+   "color": "amarillo",
+   "en": 440.944,
+   "sale": 444.638
+  },
+  {
+   "u": 0.66,
+   "v": 0.65,
+   "r": 0.05,
+   "color": "rojo",
+   "en": 441.559,
+   "sale": 444.023
+  },
+  {
+   "u": 0.43,
+   "v": 0.55,
+   "r": 0.065,
+   "color": "azul",
+   "en": 447.096,
+   "sale": 449.79900000000004
+  },
+  {
+   "u": 0.735,
+   "v": 0.65,
+   "r": 0.06,
+   "color": "azul",
+   "en": 447.296,
+   "sale": 449.79900000000004
+  }
+ ],
+ "focos": [
+  {
+   "quien": "Canyon",
+   "de": 441.149,
+   "a": 444.228
+  },
+  {
+   "quien": "Kiin",
+   "de": 446.28,
+   "a": 449.199
+  },
+  {
+   "quien": "Ruler",
+   "de": 445.254,
+   "a": 446.178
+  },
+  {
+   "quien": "Ruler",
+   "de": 449.399,
+   "a": 450.599
+  }
+ ],
+ "rastros": [
+  {
+   "quien": "TheShy",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Wei",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Rookie",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "JiaQi",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Meiko",
+   "de": 438.686,
+   "a": 445.87,
+   "ventana": 8
+  },
+  {
+   "quien": "Canyon",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Chovy",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Ruler",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Duro",
+   "de": 438.686,
+   "a": 450.599,
+   "ventana": 8
+  },
+  {
+   "quien": "Kiin",
+   "de": 449.599,
+   "a": 450.599,
+   "ventana": 8
+  }
+ ],
+ "niebla": [
+  {
+   "de": 444.023,
+   "a": 446.846,
+   "ve": "IG",
+   "oculta": "GEN",
+   "radio": 0.075,
+   "fuerza": 1.0,
+   "dur": 0.8
+  }
+ ],
+ "hud": [
+  {
+   "de": 440.328,
+   "a": 445.72,
+   "texto": "13 - 6 EN ASESINATOS",
+   "sub": "IG VA ARRIBA",
+   "color": "azul",
+   "tam": 32
+  },
+  {
+   "de": 446.02,
+   "a": 450.449,
+   "texto": "13 - 7 EN ASESINATOS",
+   "sub": "CAE MEIKO",
+   "color": "rojo",
+   "tam": 32
+  },
+  {
+   "de": 450.74899999999997,
+   "a": 450.449,
+   "texto": "13 - 8 EN ASESINATOS",
+   "sub": "CAE JIAQI",
+   "color": "rojo",
+   "tam": 32
+  },
+  {
+   "de": 450.74899999999997,
+   "a": 451.599,
+   "texto": "13 - 9 EN ASESINATOS",
+   "sub": "CAE WEI",
+   "color": "rojo",
+   "tam": 32
+  },
+  {
+   "de": 441.149,
+   "a": 445.72,
+   "texto": "IG +2,9K DE ORO",
+   "sub": "VENTAJA DE IG",
+   "color": "azul",
+   "tam": 32
+  },
+  {
+   "de": 446.02,
+   "a": 450.449,
+   "texto": "IG +2,5K DE ORO",
+   "sub": "SE ACHICA",
+   "color": "azul",
+   "tam": 32
+  },
+  {
+   "de": 450.74899999999997,
+   "a": 450.449,
+   "texto": "IG +1,8K DE ORO",
+   "sub": "SE ACHICA",
+   "color": "azul",
+   "tam": 32
+  },
+  {
+   "de": 450.74899999999997,
+   "a": 451.599,
+   "texto": "IG +0,7K DE ORO",
+   "sub": "CASI EMPATE",
+   "color": "amarillo",
+   "tam": 32
+  },
+  {
+   "de": 441.97,
+   "a": 441.615,
+   "texto": "3 - 1 EN DRAGONES",
+   "sub": "UNO MÁS Y IG TIENE EL ALMA",
+   "color": "azul",
+   "tam": 32
+  },
+  {
+   "de": 441.91499999999996,
+   "a": 451.599,
+   "texto": "3 - 2 EN DRAGONES",
+   "sub": "GEN.G LE QUITA EL ALMA",
+   "color": "rojo",
+   "tam": 32
+  }
+ ],
+ "etiquetas": [
+  {
+   "de": 438.686,
+   "a": 438.686,
+   "quien": "JiaQi",
+   "texto": "INVICTUS GAMING",
+   "color": "azul",
+   "dx": 110,
+   "dy": 60,
+   "tam": 28
+  },
+  {
+   "de": 438.686,
+   "a": 438.686,
+   "quien": "Ruler",
+   "texto": "GEN.G",
+   "color": "rojo",
+   "dx": -110,
+   "dy": -50,
+   "tam": 28
+  },
+  {
+   "de": 438.686,
+   "a": 441.354,
+   "u": 0.66,
+   "v": 0.65,
+   "alto": 7,
+   "texto": "DRAGÓN DE MONTAÑA",
+   "sub": "EL DEL ALMA PARA IG",
+   "color": "amarillo",
+   "dx": 170,
+   "dy": 40
+  },
+  {
+   "de": 441.149,
+   "a": 444.433,
+   "quien": "Kiin_torre",
+   "texto": "KIIN, EN SU TORRE",
+   "sub": "AL OTRO LADO DEL MAPA",
+   "color": "rojo",
+   "dx": 150,
+   "dy": 60,
+   "icono": "/videos/lol_final_previa/iconos/Camille.png"
+  },
+  {
+   "de": 441.765,
+   "a": 444.125,
+   "quien": "Canyon",
+   "texto": "CANYON ROBA EL DRAGÓN DEL ALMA",
+   "sub": "3 - 2 EN DRAGONES",
+   "color": "rojo",
+   "dx": -160,
+   "dy": -40,
+   "icono": "/videos/lol_final_previa/iconos/MonkeyKing.png"
+  },
+  {
+   "de": 445.77,
+   "a": 447.096,
+   "u": 0.66,
+   "v": 0.54,
+   "alto": 2.5,
+   "texto": "CAE MEIKO",
+   "sub": "LA MATA RULER",
+   "color": "rojo",
+   "dx": 150,
+   "dy": -60,
+   "icono": "/videos/lol_final_previa/iconos/Alistar.png"
+  },
+  {
+   "de": 446.28,
+   "a": 447.587,
+   "quien": "Kiin",
+   "texto": "KIIN APARECE POR LA ESPALDA",
+   "sub": "SOBRE ROOKIE Y THESHY",
+   "color": "rojo",
+   "dx": 120,
+   "dy": -60,
+   "icono": "/videos/lol_final_previa/iconos/Camille.png"
+  },
+  {
+   "de": 447.196,
+   "a": 449.79900000000004,
+   "u": 0.58,
+   "v": 0.57,
+   "alto": 3,
+   "texto": "IG PARTIDO EN DOS",
+   "sub": "2 LEJOS · 2 EN EL DRAGÓN",
+   "color": "azul",
+   "dx": 0,
+   "dy": 120,
+   "tam": 34
+  },
+  {
+   "de": 450.49899999999997,
+   "a": 452.599,
+   "u": 0.706,
+   "v": 0.661,
+   "alto": 2.5,
+   "texto": "DOUBLE KILL",
+   "sub": "RULER MATA A JIAQI",
+   "color": "rojo",
+   "dx": 150,
+   "dy": -40,
+   "icono": "/videos/lol_final_previa/iconos/Ezreal.png"
+  },
+  {
+   "de": 450.599,
+   "a": 450.599,
+   "quien": "Wei",
+   "texto": "WEI ENTRA SOLO",
+   "color": "azul",
+   "dx": 140,
+   "dy": -50
+  },
+  {
+   "de": 450.599,
+   "a": 450.599,
+   "quien": "Rookie",
+   "texto": "ROOKIE Y THESHY LLEGAN TARDE",
+   "color": "azul",
+   "dx": 150,
+   "dy": 60
+  },
+  {
+   "de": 450.49899999999997,
+   "a": 452.599,
+   "u": 0.512,
+   "v": 0.623,
+   "alto": 2.5,
+   "texto": "TRIPLE KILL",
+   "sub": "RULER MATA A WEI · SHUT DOWN",
+   "color": "rojo",
+   "dx": -150,
+   "dy": -40,
+   "icono": "/videos/lol_final_previa/iconos/Naafiri.png"
+  },
+  {
+   "de": 450.599,
+   "a": 450.599,
+   "quien": "Ruler",
+   "texto": "RULER · YUNARA",
+   "sub": "3 ASESINATOS EN 13 SEGUNDOS",
+   "color": "rojo",
+   "dx": 150,
+   "dy": 70,
+   "icono": "/videos/lol_final_previa/iconos/Yunara.png"
+  }
+ ],
+ "carteles": [
+  {
+   "de": 444.125,
+   "a": 446.796,
+   "texto": "LA VISIÓN DE IG · APROXIMADA",
+   "sub": "CALCULADA CON LAS POSICIONES",
+   "color": "azul",
+   "tam": 46,
+   "y": 170
+  },
+  {
+   "de": 446.99600000000004,
+   "a": 449.099,
+   "texto": "30:23 · PAUSA",
+   "color": "amarillo",
+   "tam": 46,
+   "y": 170
+  }
+ ],
+ "destellos": [
+  441.765
+ ],
+ "camara": [
+  [
+   438.686,
+   0.66,
+   0.65,
+   30,
+   56,
+   0,
+   40
+  ],
+  [
+   441.765,
+   0.68,
+   0.44,
+   96,
+   60,
+   -12,
+   37
+  ],
+  [
+   444.228,
+   0.62,
+   0.56,
+   84,
+   62,
+   -48,
+   37
+  ],
+  [
+   446.896,
+   0.59,
+   0.58,
+   78,
+   46,
+   -90,
+   37
+  ],
+  [
+   448.0475,
+   0.59,
+   0.58,
+   74,
+   40,
+   0,
+   37
+  ],
+  [
+   449.199,
+   0.59,
+   0.58,
+   78,
+   46,
+   90,
+   37
+  ],
+  [
+   450.599,
+   0.66,
+   0.65,
+   30,
+   56,
+   0,
+   40
+  ]
+ ]
+}

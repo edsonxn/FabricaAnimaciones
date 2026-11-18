@@ -1,0 +1,355 @@
+{
+ "modo": "mesa",
+ "de": 447.95,
+ "a": 451.72,
+ "fondo": "/videos/t1_blg_caida/tactica3d/mesa_j5a_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Doran": {
+   "jugador": "Doran",
+   "campeon": "Ambessa",
+   "equipo": "R",
+   "icono": "/videos/t1_blg_caida/iconos/Ambessa.png",
+   "puntos": [
+    [
+     0,
+     0.365,
+     0.21
+    ]
+   ],
+   "de": 448.35,
+   "sale": 450.72
+  },
+  "Keria": {
+   "jugador": "Keria",
+   "campeon": "Karma",
+   "equipo": "R",
+   "icono": "/videos/t1_blg_caida/iconos/Karma.png",
+   "puntos": [
+    [
+     0,
+     0.3,
+     0.28
+    ]
+   ],
+   "de": 448.43,
+   "sale": 450.72
+  },
+  "Peyz": {
+   "jugador": "Peyz",
+   "campeon": "Sivir",
+   "equipo": "R",
+   "icono": "/videos/t1_blg_caida/iconos/Sivir.png",
+   "puntos": [
+    [
+     0,
+     0.31,
+     0.45
+    ]
+   ],
+   "de": 448.51,
+   "sale": 450.72
+  },
+  "Oner": {
+   "jugador": "Oner",
+   "campeon": "JarvanIV",
+   "equipo": "R",
+   "icono": "/videos/t1_blg_caida/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.35,
+     0.5
+    ]
+   ],
+   "de": 448.59,
+   "sale": 450.72
+  },
+  "Faker": {
+   "jugador": "Faker",
+   "campeon": "Ahri",
+   "equipo": "R",
+   "icono": "/videos/t1_blg_caida/iconos/Ahri.png",
+   "puntos": [
+    [
+     0,
+     0.13,
+     0.64
+    ]
+   ],
+   "de": 448.67,
+   "sale": 450.72
+  },
+  "Knight": {
+   "jugador": "Knight",
+   "campeon": "Taliyah",
+   "equipo": "A",
+   "icono": "/videos/t1_blg_caida/iconos/Taliyah.png",
+   "puntos": [
+    [
+     0,
+     0.6,
+     0.15
+    ]
+   ],
+   "de": 448.75,
+   "sale": 450.72
+  },
+  "Viper": {
+   "jugador": "Viper",
+   "campeon": "Ezreal",
+   "equipo": "A",
+   "icono": "/videos/t1_blg_caida/iconos/Ezreal.png",
+   "puntos": [
+    [
+     0,
+     0.52,
+     0.4
+    ]
+   ],
+   "de": 448.83,
+   "sale": 450.72
+  },
+  "Xun": {
+   "jugador": "Xun",
+   "campeon": "Pantheon",
+   "equipo": "A",
+   "icono": "/videos/t1_blg_caida/iconos/Pantheon.png",
+   "puntos": [
+    [
+     0,
+     0.49,
+     0.49
+    ]
+   ],
+   "de": 448.91,
+   "sale": 450.72
+  },
+  "ON": {
+   "jugador": "ON",
+   "campeon": "Nami",
+   "equipo": "A",
+   "icono": "/videos/t1_blg_caida/iconos/Nami.png",
+   "puntos": [
+    [
+     0,
+     0.59,
+     0.47
+    ]
+   ],
+   "de": 448.99,
+   "sale": 450.72
+  },
+  "Bin": {
+   "jugador": "Bin",
+   "campeon": "Gnar",
+   "equipo": "A",
+   "icono": "/videos/t1_blg_caida/iconos/Gnar.png",
+   "puntos": [
+    [
+     0,
+     0.57,
+     0.64
+    ]
+   ],
+   "de": 449.07,
+   "sale": 450.72
+  }
+ },
+ "camara": [
+  [
+   447.95,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   448.3,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   449.1564,
+   -18,
+   36,
+   50,
+   0.43,
+   0.43
+  ],
+  [
+   450.2874,
+   14,
+   40,
+   47.5,
+   0.43,
+   0.43
+  ],
+  [
+   450.82000000000005,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   451.72,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "anillos": [
+  {
+   "u": 0.36,
+   "v": 0.47,
+   "r": 0.07,
+   "color": "amarillo",
+   "en": 448.55,
+   "sale": 450.72
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.62,
+     0.48
+    ],
+    [
+     0.6166,
+     0.5325
+    ],
+    [
+     0.6066,
+     0.5799
+    ],
+    [
+     0.5911,
+     0.6175
+    ],
+    [
+     0.5716,
+     0.6417
+    ],
+    [
+     0.55,
+     0.65
+    ],
+    [
+     0.5284,
+     0.6417
+    ],
+    [
+     0.5089,
+     0.6175
+    ],
+    [
+     0.4934,
+     0.5799
+    ],
+    [
+     0.4834,
+     0.5325
+    ],
+    [
+     0.48,
+     0.48
+    ],
+    [
+     0.4834,
+     0.4275
+    ],
+    [
+     0.4934,
+     0.3801
+    ],
+    [
+     0.5089,
+     0.3425
+    ],
+    [
+     0.5284,
+     0.3183
+    ],
+    [
+     0.55,
+     0.31
+    ],
+    [
+     0.5716,
+     0.3183
+    ],
+    [
+     0.5911,
+     0.3425
+    ],
+    [
+     0.6066,
+     0.3801
+    ],
+    [
+     0.6166,
+     0.4275
+    ]
+   ],
+   "color": "azul",
+   "alfa": 0.14,
+   "en": 448.25,
+   "sale": 450.72
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.33,
+   "v": 0.36,
+   "alto": 0,
+   "texto": "T1, EN EL FOSO DEL DRAGÓN",
+   "sub": "SIN VISIÓN ALREDEDOR",
+   "color": "rojo",
+   "dx": -210,
+   "dy": -50,
+   "de": 448.75,
+   "a": 450.72
+  },
+  {
+   "u": 0.55,
+   "v": 0.48,
+   "alto": 0,
+   "texto": "BILIBILI LO ESPERA EN EL RÍO",
+   "color": "azul",
+   "dx": -40,
+   "dy": 120,
+   "de": 448.25,
+   "a": 450.72
+  },
+  {
+   "u": 0.6,
+   "v": 0.15,
+   "alto": 0,
+   "texto": "KNIGHT · TALIYAH",
+   "sub": "EL MURO",
+   "color": "azul",
+   "dx": 190,
+   "dy": -20,
+   "de": 449.75,
+   "a": 450.72
+  }
+ ]
+}

@@ -72,5 +72,14 @@ FIJOS = {"scene-052": ("4td2SqKyxmI", 760), "scene-102": ("DjvSDpjxz7E", 150), "
 for k, (v, d) in FIJOS.items():   # rehechos tras mirar las hojas de medios (negro, menú de pausa, botón de youtuber, otro juego)
     out[k] = {"url": "https://youtu.be/" + v, "desde": d}
 out["scene-108"] = {"url": "https://youtu.be/q-U95qZzk9U", "desde": 141.4}   # «Gary» del clon a los 7,2 s, con la voz callada
+# ESCENAS IMPORTANTES (18-nov, escenas.md): el momento real que cuenta la voz. 058, 117 y 118 se cortaron a mano
+# (058: keyframe de yt-dlp desplazado → corte HD exacto; 117/118: Tactics solo tiene 480p 4:3 → relleno difuminado + zoom).
+ESCENAS = {"scene-046": ("rJefnNa0aa0", 90), "scene-049": ("7Gu0AqAMVTY", 3219), "scene-058": ("4td2SqKyxmI", 4125),
+           "scene-060": ("FxX7-P4w4is", 108), "scene-067": ("63NqNwe1H8Y", 734.8), "scene-078": ("2Is2DJaE3Jc", 3),
+           "scene-117": ("YPrEhhTmwjk", 2588), "scene-118": ("YPrEhhTmwjk", 2497), "scene-164": ("PA6PzUrob4k", 12),
+           "scene-166": ("PZlv9_eJfI8", 1036), "scene-264": ("gK4AlHIDd3A", 3522), "scene-265": ("gK4AlHIDd3A", 4862),
+           "scene-268": ("gK4AlHIDd3A", 5160)}
+for k, (v, d) in ESCENAS.items():
+    out[k] = {"url": "https://youtu.be/" + v, "desde": d}
 json.dump(out, open("busquedas.json", "w", encoding="utf-8"), indent=1)
 print(len(out), "beats con url+desde;", {e: len(v) for e, v in por.items()})

@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
 - canal: radio_yermo (2.º video) · hueco sáb 21-nov-2026 09:15 CDMX (horario = el de Tamriel desde hoy: 3 d, 09:15)
 - estilo: secuencia_yt (receta de Tamriel; regla de oro `videos/tes_secretos_40/`) · kit `nucleo/mg_fo.py` · voz el Profeta + filtro radio modo B (`VOZ_FX`, como `videos/fo_nunca_f4/guion.py`) · OST oficial de cada juego → doc: docs/estilo_secuencia_yt.md § Radio Yermo
-- etapa: ✅ SUBIDO Y PROGRAMADO (18-nov): https://youtu.be/iyLkHK3mpoI, privado → público dom 22-nov 09:15 CDMX (2026-11-22T15:15Z); MASTER 39:29 1080p30, miniatura y .srt aplicados; título «Los 25 refugios más MALVADOS de Fallout»
-- siguiente: nada. Medir a 7 días (vistas, retención en el tramo de suscripción). `verificar` no corrió (RAM ocupada por otra sesión): hoja manual de 24 cuadros `previews/master_hoja.jpg` sin bloqueos. `python fab.py fo_refugios_25 limpiar` cuando el usuario lo apruebe.
+- etapa: SUBIDO XU_OkLlxV7o (programado dom 22-nov 09:15 CDMX) = reemplazo con las 13 ESCENAS IMPORTANTES con su clip real (`escenas.md`, `previews/escenas_01/02.jpg`). El viejo iyLkHK3mpoI quedó privado y SIN programación.
+- siguiente: BORRAR iyLkHK3mpoI en YouTube SOLO con el OK del usuario (pedido); luego `fab.py fo_refugios_25 limpiar` cuando él apruebe el video.
 
 ## Sesiones («continúa el video fo_refugios_25» retoma aquí · protocolo docs/sesiones.md)
 - alias: top 25 refugios, refugios malvados de Fallout · UNA sesión directo al MASTER (relevos por corte de 180k)
@@ -11,6 +11,7 @@
 |---|---|---|---|
 | 1 | investigación, guion, voz (lanzada), Flow abierto | ◐ 17-nov parcial | corte por contexto 180k; relevo en sesión nueva |
 | 2 | resto hasta MASTER subido y programado | ✅ 18-nov | render, subida, título cambiado por la regla nueva |
+| 3 | escenas importantes con clip real (pedido del usuario 18-nov) | ✅ 18-nov | 13/13 con clip real (ninguno de Flow); video completo re-renderizado, final, resubido XU_OkLlxV7o |
 
 ## Decisiones (17-nov-2026, pedido del usuario)
 - Top 25 «refugios más malvados / hardcore / raros» de Fallout, ≥ 30 min, el n.º 1 = el PEOR refugio (el más malvado), lore oficial.
@@ -19,6 +20,8 @@
 - Comentarios: 0 (el 1.er video sale el 18-nov) → sin agradecimientos ni críticas. Suscripción: se pide sin cifra.
 
 ## En curso
+- 18-nov ~12:40 (corte por contexto) · ARREGLO DE ESCENAS IMPORTANTES (pedido del usuario: «cuando hables de algo interesante de ver, busca ese clip; última opción Flow video 4-6 s en 360p y reescalar»). Hecho: regla escrita (docs/estilo_secuencia_yt.md § «LAS ESCENAS IMPORTANTES SE VEN», CLAUDE.md, memoria); auditoría → `escenas.md` (13 beats; 10 con clip real localizado y comprobado con cuadros: url@seg en la tabla). Falta, en orden: (1) buscar 058 Jonas (4td2SqKyxmI 3700-4100), 118 cerebro (YPrEhhTmwjk 2400-2560), 166 cápsulas momificadas (3ZyBc6UfuVg); Flow video 4-6 s 360p → «720p mejorada» solo si no hay clip; (2) `python fab.py fo_refugios_25 bajar <N> --rehacer --url <url> --desde <s>` por beat; mirar un cuadro de cada medio; (3) `video --rehacer t0-t1` de cada tramo (tiempos en beats.json) → `final` → `verificar` (con ≥ 3 GB de RAM libres); (4) subir el MASTER nuevo `yt subir fo_refugios_25 radio_yermo private --publicar 2026-11-22T15:15:00Z` (FAB: el registro actual de iyLkHK3mpoI en canales/radio_yermo.json choca con la separación: quitarle la programación antes o usar `--forzar` solo para ese reemplazo) y pedirle al usuario el OK para BORRAR iyLkHK3mpoI; actualizar publicados/BITACORA; commit.
+- 18-nov ~13:10 (sesión de relevo) · MEDIOS NUEVOS PUESTOS: 12 de 13 beats de `escenas.md` en `medios/` y mirados (`previews/escenas_medios.jpg`); 058 cortado a mano (keyframe desplazado), 117/118 a mano (Tactics solo 480p 4:3: relleno difuminado; 118 con acercamiento), 166 = PZlv9_eJfI8@1036 (inglés). scene-006 se pisó por error y se RESTAURÓ (respaldo + fuentes). Falta el 067: 7Ijy7vBzxzY era una mantis → buscando portador de esporas en 63NqNwe1H8Y. Luego: `video` COMPLETO (aquí `--rehacer` no sirve) → `final` → `verificar` → hoja de escenas → `yt publicar radio_yermo iyLkHK3mpoI private` (quitarle la programación) → `yt subir … --publicar 2026-11-22T15:15:00Z` → pedir OK para borrar iyLkHK3mpoI.
 - LISTA (cuenta atrás): 25 R55+56 · 24 R21 · 23 R118 · 22 R43 · 21 R88 · 20 R101 · 19 R22 · 18 R106 · 17 R63 · 16 R81 · 15 R108 (Gary, post) · 14 R0 · 13 R77 · 12 R94 · 11 R68+69 · 10 R95 · 9 R111 · 8 R12 · 7 R92 (ruido blanco, post) · 6 R87 · subs · 5 R96 · 4 R51 · 3 R11 (4 disparos, post) · 2 R75 · 1 R112. Hilo Braun (88 → 75 → 112).
 - Agentes en marcha (17-nov tarde): mapas (`mapas/`), pegatinas (`_pegatinas.py`, `pegatinas/_lista.md`), OST (`_bajar_ost.py`, `audio/ost/_ids.json`).
 - Investigación en `_investigacion_A.md` (FO3/FNV), `_B.md` (FO4/FO76), `_C.md` (clásicos y lore); mapas en `mapas/` (`_coords.json`, hojas `previews/_coords_check_*.jpg`).
@@ -58,6 +61,10 @@
 - `fx hoja` FINAL MIRADA (13 hojas): arreglados ancla de la pantera (cogía el intro y tapaba 42-320 s → «Y una pantera viva»), muro de Braun (4.ª foto en «?» → orden de la voz, 4 marcas, destaca=2), clips de la suscripción 201-203 (deslumbre blanco → 4td2SqKyxmI 4720-4790). Mapas recortados en disco (`mapas/_cache/`, `_recorte_disco`: sin eso la hoja se quedaba sin RAM). El «?» en los rótulos de la hoja es solo su fuente; en el video las tildes salen bien.
 - `youtube.json` (`_youtube.py`), `promesas.md`, `salida/miniatura.jpg` HECHOS.
 - En marcha (~09:00): bajar 201-203 → fx → ambiente → mezcla. Luego: comprobar que no corre otro render → `video` → `final` → `verificar` → `tele video fo_refugios_25 master` → subir.
+
+## Checkpoint 18-nov ~15:00 (cierre de la sesión 3)
+- HECHO: 067 = 63NqNwe1H8Y@734.8 (Spore Carrier Brute, corte HD a mano, gamma 1.15; la mantis en `medios/_respaldo/`). `video` completo (2011 s) → `final` → MASTER 1080p 30 fps 39:29, desfase 0 ms; hoja de las 13 escenas sacada del MASTER (`previews/escenas_01.jpg`, `_02.jpg`): todas muestran lo que dice la voz. `verificar`: Whisper sin memoria de GPU 2 veces (CUDA OOM con 1,2 GB usados); la voz y la mezcla no cambiaron, así que el CER del MASTER anterior sigue valiendo; duración y desfase comprobados aparte. `yt publicar radio_yermo iyLkHK3mpoI private` (sin programación) → `yt subir … --publicar 2026-11-22T15:15:00Z` = XU_OkLlxV7o con miniatura y .srt.
+- LECCIÓN: `yt-dlp --download-sections` puede empezar en un keyframe anterior (058 salía la taquilla): si el cuadro no cuadra, bajar un tramo más largo en HD y cortar con `-ss` exacto. Tactics solo tiene 480p 4:3: relleno difuminado + acercamiento.
 
 ## Falta
 - NOTA: `fx` normal se queda sin RAM con 259 efectos (los borradores de Montaje): usar `fx --sin-montaje`.

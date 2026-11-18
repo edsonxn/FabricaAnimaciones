@@ -35,13 +35,6 @@
   "canal": "",
   "q": ""
  },
- "scene-006": {
-  "video": "CPQ0BeLKchE",
-  "desde": 180.0,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "scene-007": {
   "video": "4td2SqKyxmI",
   "desde": 4655.0,
@@ -315,23 +308,9 @@
   "canal": "",
   "q": ""
  },
- "scene-046": {
-  "video": "rJefnNa0aa0",
-  "desde": 934.0,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "scene-048": {
   "video": "rJefnNa0aa0",
   "desde": 1386.0,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-049": {
-  "video": "rJefnNa0aa0",
-  "desde": 1612.0,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -360,13 +339,6 @@
  "scene-056": {
   "video": "4td2SqKyxmI",
   "desde": 2265.1,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-058": {
-  "video": "4td2SqKyxmI",
-  "desde": 3043.6,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -420,13 +392,6 @@
   "canal": "",
   "q": ""
  },
- "scene-060": {
-  "video": "4td2SqKyxmI",
-  "desde": 3822.2,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "scene-064": {
   "video": "63NqNwe1H8Y",
   "desde": 271.1,
@@ -451,13 +416,6 @@
  "scene-066": {
   "video": "63NqNwe1H8Y",
   "desde": 753.3,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-067": {
-  "video": "63NqNwe1H8Y",
-  "desde": 994.4,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -528,13 +486,6 @@
  "scene-077": {
   "video": "6-j7LGWoeys",
   "desde": 1767.1,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-078": {
-  "video": "6-j7LGWoeys",
-  "desde": 1965.3,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -763,23 +714,9 @@
   "canal": "",
   "q": ""
  },
- "scene-117": {
-  "video": "UPfqMC-lJGM",
-  "desde": 1069.5,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "scene-115": {
   "video": "UPfqMC-lJGM",
   "desde": 772.5,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-118": {
-  "video": "w5j6vsT7XrY",
-  "desde": 18.0,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -1015,23 +952,9 @@
   "canal": "",
   "q": ""
  },
- "scene-164": {
-  "video": "k814jGI1fI0",
-  "desde": 192.0,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "scene-165": {
   "video": "k814jGI1fI0",
   "desde": 291.5,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-166": {
-  "video": "k814jGI1fI0",
-  "desde": 391.0,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -1540,13 +1463,6 @@
   "canal": "",
   "q": ""
  },
- "scene-264": {
-  "video": "gK4AlHIDd3A",
-  "desde": 3701.4,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "scene-266": {
   "video": "gK4AlHIDd3A",
   "desde": 4111.1,
@@ -1564,13 +1480,6 @@
  "scene-269": {
   "video": "gK4AlHIDd3A",
   "desde": 4725.5,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
- "scene-268": {
-  "video": "gK4AlHIDd3A",
-  "desde": 4520.7,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""
@@ -1743,13 +1652,6 @@
   "canal": "",
   "q": ""
  },
- "scene-265": {
-  "video": "gK4AlHIDd3A",
-  "desde": 3906.2,
-  "titulo": "(fijado a mano)",
-  "canal": "",
-  "q": ""
- },
  "_rechazados": {
   "scene-108": [
    "q-U95qZzk9U"
@@ -1826,6 +1728,47 @@
    "4td2SqKyxmI",
    "4td2SqKyxmI",
    "4td2SqKyxmI"
+  ],
+  "scene-046": [
+   "rJefnNa0aa0"
+  ],
+  "scene-058": [
+   "4td2SqKyxmI"
+  ],
+  "scene-067": [
+   "63NqNwe1H8Y"
+  ],
+  "scene-117": [
+   "UPfqMC-lJGM",
+   "UPfqMC-lJGM"
+  ],
+  "scene-118": [
+   "w5j6vsT7XrY"
+  ],
+  "scene-164": [
+   "k814jGI1fI0"
+  ],
+  "scene-265": [
+   "gK4AlHIDd3A"
+  ],
+  "scene-049": [
+   "rJefnNa0aa0"
+  ],
+  "scene-060": [
+   "4td2SqKyxmI",
+   "4td2SqKyxmI"
+  ],
+  "scene-078": [
+   "6-j7LGWoeys"
+  ],
+  "scene-166": [
+   "k814jGI1fI0"
+  ],
+  "scene-264": [
+   "gK4AlHIDd3A"
+  ],
+  "scene-268": [
+   "gK4AlHIDd3A"
   ]
  },
  "scene-108": {
@@ -1999,6 +1942,104 @@
  "scene-203": {
   "video": "4td2SqKyxmI",
   "desde": 4705.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-046": {
+  "video": "rJefnNa0aa0",
+  "desde": 90.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-058": {
+  "video": "4td2SqKyxmI",
+  "desde": 4125.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-067": {
+  "video": "63NqNwe1H8Y",
+  "desde": 734.8,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-118": {
+  "video": "YPrEhhTmwjk",
+  "desde": 2497.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-164": {
+  "video": "PA6PzUrob4k",
+  "desde": 12.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-006": {
+  "video": "CPQ0BeLKchE",
+  "desde": 180.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-265": {
+  "video": "gK4AlHIDd3A",
+  "desde": 4862.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-049": {
+  "video": "7Gu0AqAMVTY",
+  "desde": 3219.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-078": {
+  "video": "2Is2DJaE3Jc",
+  "desde": 3.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-166": {
+  "video": "PZlv9_eJfI8",
+  "desde": 1036.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-264": {
+  "video": "gK4AlHIDd3A",
+  "desde": 3522.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-268": {
+  "video": "gK4AlHIDd3A",
+  "desde": 5160.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-117": {
+  "video": "YPrEhhTmwjk",
+  "desde": 2588.0,
+  "titulo": "(fijado a mano)",
+  "canal": "",
+  "q": ""
+ },
+ "scene-060": {
+  "video": "FxX7-P4w4is",
+  "desde": 108.0,
   "titulo": "(fijado a mano)",
   "canal": "",
   "q": ""

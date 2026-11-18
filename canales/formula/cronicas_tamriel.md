@@ -1,5 +1,7 @@
 # Fórmula — Crónicas de Tamriel
 
+**SIN SHORTS EN TAMRIEL (el usuario, 18-nov-2026: «en Tamriel no debería haber short»; ya había borrado `tes_embry_short` el 17-nov):** no se proponen, producen ni suben Shorts para este canal; solo largos. Las propuestas viejas de «+ Short vertical» de abajo quedan anuladas.
+
 ## Conclusión del 13-oct-2026 (informe `canales/metricas/ideas/cronicas_tamriel.md`)
 - **Lo propio:** 271 largos, mediana 2 244 vistas; 6 290 subs. Lo más alto del histórico son tutoriales de Skyrim con IA
   (×16-×25, de hace > 670 días; otro nicho) y «¿Por qué nadie quiere a los ORCOS?» (×10,7, 45 % visto, hace 952 días).

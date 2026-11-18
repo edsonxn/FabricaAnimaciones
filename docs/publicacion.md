@@ -26,12 +26,48 @@ _Extraído de CLAUDE.md (1-oct-2026). Se lee solo cuando el video lo necesita._
 3b. **Una sesión, directo al MASTER** (el usuario, 5-nov-2026; sustituye el plan de sesiones del 12-oct): si no dice otra
    cosa, se produce entero en esta sesión. La duración la decide Claude según el canal si él no la da; solo se pregunta lo que
    no esté claro (p. ej. el canal). Tramos solo si él los pide (`docs/sesiones.md`).
-4. **Producir** (flujo de abajo) → miniatura (2-3 variantes) → `youtube.json` (título ≤ 50 caracteres con
-   la palabra clave al inicio; descripción con capítulos reales del timeline, fuentes, enlace a otro video
+4. **Producir** (flujo de abajo) → miniatura (2-3 variantes) → `youtube.json` (título con la **REGLA DE TÍTULOS** de abajo:
+   40-55 caracteres, palabra clave al inicio, SIN paréntesis; descripción con capítulos reales del timeline, fuentes, enlace a otro video
    del canal y 3 hashtags; 15-25 etiquetas ≤ 450 caracteres) → `yt subir <v> <canal> private --publicar <ISO del hueco>`.
    **Render terminado = subir y programar SIN preguntar (regla abajo, 20-oct-2026).** Hacer público YA sigue siendo del usuario.
 5. **Cierre (regla del 12-oct-2026):** registrar en `canales/<alias>.json` (`publicados`, con `formato`), BITACORA y `ESTADO.md`, y DOCUMENTAR hallazgos y
    mejoras en el manual/estilo del video (CLAUDE.md «CIERRE DE VIDEO»). Verificar los DOI de las fuentes con Crossref antes de subir.
+
+## REGLA IMPORTANTE: TÍTULOS (el usuario, 18-nov-2026, TODOS los canales y videos)
+«Eso de poner entre paréntesis creo que no es una buena práctica… no solamente quedó muy largo, sino que se ve medio raro»
+(`fo_refugios_25` salió con «Los 25 REFUGIOS más MALVADOS de Fallout (el n.º 1 es el peor de la saga)», 72 caracteres; se cambió
+a «Los 25 refugios más MALVADOS de Fallout», 39). Investigado el mismo día. Los estudios externos son de blogs de herramientas, con
+evidencia floja; lo sólido es lo que dice YouTube y lo que miden nuestros propios canales:
+- **Nuestros datos (yt-dlp, 18-nov-2026):** los 6 videos más vistos de Warcraft miden **41-51 caracteres** y ninguno lleva
+  paréntesis (Kungen 272 mil, Angwe 88 mil, «¿Realmente es TAN Mala la Película de Warcraft?» 76 mil). En Runa Caída, la fórmula
+  «Las 5 peores atrocidades de X que IGNORASTE» rinde de 39 a 50 caracteres; la única con paréntesis y 62 caracteres («…TARNISHED (You)
+  THAT YOU IGNORED») está entre las de menos vistas. En Tamriel, los títulos con emoji son los de menos vistas (310-355). Los títulos
+  largos de tutorial de Tamriel (73-93 caracteres) funcionaron por BÚSQUEDA: no se copian para listas ni para lore.
+- **Fuera:** YouTube permite 100 caracteres, pero en el celular se ve como mucho ~50-60 (depende del aparato y del ancho de las
+  letras); la mayoría de las guías piden 50-60 y lo importante en los primeros ~40. Los paréntesis no muestran ninguna ventaja
+  medible (solo ~8 % de los títulos con más de 1 M de vistas los usa). El empaque es título + miniatura juntos (Paddy Galloway):
+  se complementan, no se repiten. El A/B de Studio («Probar y comparar», hasta 3 títulos) elige por TIEMPO DE VISUALIZACIÓN, no por CTR.
+
+**Reglas (se cumplen siempre; `yt subir`/`yt aplicar` RECHAZAN el título que rompa las dos primeras):**
+1. **Sin paréntesis ni corchetes** `( ) [ ]`. El dato extra («el n.º 1 es el peor») va en la MINIATURA o en la descripción.
+2. **Largo: 40-55 caracteres; tope duro 60** (Shorts: ≤ 40 sin contar `#Shorts`). Leerlo como se ve en el celular: lo de después
+   del carácter 50 casi nadie lo ve.
+3. **Una sola frase limpia:** sin `|` ni guiones separadores, sin emoji. Los dos puntos SÍ valen tras un nombre propio
+   («Angwe: el villano más temido de la historia de WoW», «Hydra: El Sacerdote Que Humilló a Todos en WoW», de los más vistos de
+   Warcraft), nunca para colgar un segundo título detrás.
+4. **Palabra clave del público al principio o muy cerca** (Fallout, Skyrim, WoW, el nombre del personaje) y el número si es lista
+   («Los 25…», «Las 5…»): en las listas, el número va primero.
+5. **UNA o DOS palabras en MAYÚSCULAS**, la que carga la emoción (MALVADOS, NUNCA, IGNORASTE), nunca medio título.
+6. **Curiosidad sin mentira:** promete algo que el video cumple (lo dice la voz y se ve). Nada de «no creerás…» ni de clickbait
+   que el video no paga. Mejor una palabra fuerte concreta (peor, prohibido, nunca, oculto, malvado) que tres adjetivos.
+7. **Título y miniatura se reparten el trabajo:** la miniatura NO repite el título; añade lo que falta (en `fo_refugios_25`: el
+   título dice «Los 25 refugios más MALVADOS de Fallout» y la miniatura «EL PEOR REFUGIO»).
+8. **Repetir la fórmula que ya funciona en el canal** (`canales/formula/<alias>.md`) y cambiar UNA variable; anotar 2 alternativas
+   en `titulos_alternativos` de `youtube.json`. Cuando se pase por Studio (monetización, video relacionado), montar el A/B
+   «Probar y comparar» con el título y las 2 alternativas si el canal lo tiene; apuntar el ganador en la fórmula del canal.
+9. **Idioma natural del canal:** español latino neutro (Wild Next Door, en inglés); tildes y signos ¿¡ bien puestos.
+Cómo comprobar antes de subir: `python -c "import sys; sys.path.insert(0,'nucleo'); import youtube; print(youtube.revisar_titulo('<título>'))"`.
+Saltarse el rechazo solo con el OK expreso del usuario: `FAB_TITULO_OK=1`.
 
 ## REGLA: render terminado = SUBIR Y PROGRAMAR en el hueco (el usuario, 20-oct-2026, CUALQUIER canal)
 «Súbelo y prográmalo en el hueco que se necesite, y documéntalo para que así sea siempre: cuando rendericemos hay que subir y dejar

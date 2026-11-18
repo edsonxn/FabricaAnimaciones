@@ -61,10 +61,27 @@ def espiritu(x, sr):
     return y.astype(np.float64)
 
 
-EFECTOS = {"espiritu": espiritu}
+def _radio(x, sr):
+    import fx_radio
+    return fx_radio.radio(np.asarray(x, np.float64), sr).astype(np.float64)
+
+
+def _tinte(x, sr):
+    import fx_radio
+    return fx_radio.tinte(np.asarray(x, np.float64), sr).astype(np.float64)
+
+
+# Radio Yermo (17-nov-2026, modo B elegido por el usuario): «radio» = sale por la radio del Yermo (saludo, remates,
+# suscripción, despedida); «radio+sintonia» = igual y además mezcla.py pone 0,9 s de estática con silbido de dial JUSTO
+# ANTES de la frase; «mezcla:<s>» = radio hasta <s> segundos de la frase y luego el narrador se acerca al micrófono;
+# «tinte» = narrador cerca con un toque de radio (los datos; guion.VOZ_FX_DEFECTO = "tinte").
+EFECTOS = {"espiritu": espiritu, "radio": _radio, "radio+sintonia": _radio, "tinte": _tinte}
 
 
 def aplicar(x, sr, efecto):
+    if efecto.startswith("mezcla:"):
+        import fx_radio
+        return fx_radio.mezcla(np.asarray(x, np.float64), sr, float(efecto.split(":")[1])).astype(np.float64)
     if efecto not in EFECTOS:
         raise SystemExit(f"VOZ_FX: efecto desconocido «{efecto}» (hay: {', '.join(EFECTOS)})")
     return EFECTOS[efecto](x, sr)

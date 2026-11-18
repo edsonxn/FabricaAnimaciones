@@ -1,0 +1,2202 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.592,
+  "tipo": "video",
+  "texto": "Buenos días, Yermo. Aquí Radio Yermo, con la transmisión más larga que hemos hecho. Y la más profunda: desde debajo de la tierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.592,
+  "t1": 15.272,
+  "tipo": "video",
+  "texto": "Vault-Tec vendió los refugios como la salvación de América.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.272,
+  "t1": 25.724,
+  "tipo": "video",
+  "texto": "Ciento veintidós refugios, para un país de casi cuatrocientos millones de personas. Nunca fueron para salvar a nadie. Eran laboratorios. Y tú,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.724,
+  "t1": 36.286,
+  "tipo": "video",
+  "texto": "morador, eras la rata. Hoy, los veinticinco refugios más malvados, más crueles y más raros de Fallout.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 36.286,
+  "t1": 43.626,
+  "tipo": "video",
+  "texto": "Un refugio con una puerta que no cierra. Otro con veinte hombres, diez mujeres y una pantera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.626,
+  "t1": 53.498,
+  "tipo": "video",
+  "texto": "Otro donde cada año había que elegir a quién matar. Y un hombre que diseñó los experimentos de Vault-Tec y se quedó un refugio para él solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 53.498,
+  "t1": 60.4,
+  "tipo": "video",
+  "texto": "Su nombre va a salir varias veces antes del número uno. Ponte el mono, baja el volumen del Pip-Boy,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.4,
+  "t1": 67.99,
+  "tipo": "video",
+  "texto": "y empecemos. Número veinticinco. Los Refugios cincuenta y cinco y cincuenta y seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 67.99,
+  "t1": 80.098,
+  "tipo": "video",
+  "texto": "El aburrimiento como arma. Estos dos no salen en ningún juego. Están en la lista de experimentos que dejaron por escrito los creadores originales de Fallout.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 80.098,
+  "t1": 84.958,
+  "tipo": "video",
+  "texto": "En el cincuenta y cinco, Vault-Tec quitó todas las cintas de entretenimiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.958,
+  "t1": 94.377,
+  "tipo": "video",
+  "texto": "Ni música, ni películas, ni radio. Doscientos años mirando la pared. En el cincuenta y seis dejaron una sola cosa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.377,
+  "t1": 103.17,
+  "tipo": "video",
+  "texto": "las cintas de un cómico especialmente malo. Los mismos chistes, todos los días, para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.17,
+  "t1": 114.527,
+  "tipo": "video",
+  "texto": "Y lo mejor: los sociólogos de Vault-Tec predijeron que el cincuenta y seis iba a caer primero. Peor que el silencio es el mismo chiste malo por toda la eternidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 114.527,
+  "t1": 122.93,
+  "tipo": "video",
+  "texto": "Por eso, en esta emisora, cambiamos de chiste cada semana. Lo hacemos por su propia seguridad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 122.93,
+  "t1": 130.349,
+  "tipo": "video",
+  "texto": "Número veinticuatro. Refugio veintiuno: el refugio que se lo jugaba todo a las cartas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.349,
+  "t1": 140.244,
+  "tipo": "video",
+  "texto": "Está en pleno Strip de New Vegas, bajo un letrero de neón. Antes de la guerra, Vault-Tec lo anunciaba abiertamente como un hotel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 140.244,
+  "t1": 145.704,
+  "tipo": "video",
+  "texto": "El experimento: todos iguales, un refugio perfectamente simétrico,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.704,
+  "t1": 158.192,
+  "tipo": "video",
+  "texto": "y cualquier conflicto se resolvía con una apuesta en el atrio. Y lo increíble es que funcionó. Es de los poquísimos refugios que su propio experimento no destruyó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 158.192,
+  "t1": 164.192,
+  "tipo": "video",
+  "texto": "Hasta que llegó Mister House con una oferta para unirse a New Vegas. La mayoría no quería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.192,
+  "t1": 171.125,
+  "tipo": "video",
+  "texto": "Así que, fieles a su ley, lo decidieron en una partida de blackjack que duró horas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.125,
+  "t1": 178.855,
+  "tipo": "video",
+  "texto": "Ganaron los que querían aceptar. House se quedó el refugio, se llevó la tecnología y lo rellenó de hormigón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 178.855,
+  "t1": 189.752,
+  "tipo": "video",
+  "texto": "Hoy solo queda media planta convertida en hotel, con Sarah Weintraub dando visitas guiadas. Y entre los que tuvieron que salir al Yermo iba un tal Doc Mitchell.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.752,
+  "t1": 198.076,
+  "tipo": "video",
+  "texto": "Sí: el médico de Goodsprings que te saca la bala de la cabeza al empezar el juego. Doscientos años sin perder una apuesta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.076,
+  "t1": 206.83,
+  "tipo": "video",
+  "texto": "y al final ganó la casa. Literalmente: se llamaba House. Número veintitrés.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.83,
+  "t1": 213.05,
+  "tipo": "video",
+  "texto": "Refugio ciento dieciocho: el club privado de los cerebros ricos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 213.05,
+  "t1": 223.785,
+  "tipo": "video",
+  "texto": "En La Isla de Far Harbor, debajo del Hotel Cliff's Edge, Vault-Tec preparó un apartheid de lujo. El plan: diez ultrarricos servidos por robots",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.785,
+  "t1": 231.245,
+  "tipo": "video",
+  "texto": "y por encima de toda ley, y en otra ala, hasta trescientos trabajadores de la isla, hacinados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.245,
+  "t1": 241.491,
+  "tipo": "video",
+  "texto": "Los ricos juzgaban cualquier falta, y los robots ejecutaban la sentencia. El ala de los pobres nunca se terminó, porque el financiero,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.491,
+  "t1": 249.571,
+  "tipo": "video",
+  "texto": "Ezra Parker, se robó el dinero de la obra. Y cuando cayeron las bombas, no dejaron entrar a los isleños.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.571,
+  "t1": 259.009,
+  "tipo": "video",
+  "texto": "Estuvieron días golpeando la puerta. Los ricos, en vez de morirse como todo el mundo, metieron sus cerebros en robocerebros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.009,
+  "t1": 265.777,
+  "tipo": "video",
+  "texto": "Siguen ahí, con su playa artificial, sin saber que la guerra acabó hace dos siglos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.777,
+  "t1": 276.777,
+  "tipo": "video",
+  "texto": "El único humano era el supervisor. Su diario termina así: me he convertido en el sujeto de prueba. Ellos van a vivir para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.777,
+  "t1": 284.058,
+  "tipo": "video",
+  "texto": "Su esqueleto sigue sentado en su escritorio. Y tú llegas a resolver un asesinato entre robocerebros,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.058,
+  "t1": 292.048,
+  "tipo": "video",
+  "texto": "con una lata de pintura roja haciéndose pasar por sangre. Los ricos encontraron la forma de no morir nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.048,
+  "t1": 301.199,
+  "tipo": "video",
+  "texto": "Lo que no encontraron fue la forma de dejar de ser insoportables. Número veintidós. Refugio cuarenta y tres:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.199,
+  "t1": 310.497,
+  "tipo": "video",
+  "texto": "veinte hombres, diez mujeres y una pantera. Este sale en un cómic oficial que Bethesda publicó para promocionar Fallout tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.497,
+  "t1": 318.345,
+  "tipo": "video",
+  "texto": "Y es exactamente lo que parece. Veinte hombres. Diez mujeres. Y una pantera viva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.345,
+  "t1": 327.102,
+  "tipo": "video",
+  "texto": "Encerrados juntos bajo tierra, a ver qué pasa. No hay registros, no hay terminales, no hay desenlace.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.102,
+  "t1": 336.98,
+  "tipo": "video",
+  "texto": "Nadie sabe cuánto duró la pantera, ni cuánto duraron los demás. Lo único seguro es que alguien en Vault-Tec tuvo que conseguir una pantera,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 336.98,
+  "t1": 343.292,
+  "tipo": "video",
+  "texto": "meterla en el ascensor y apuntarla en el inventario. Treinta personas peleando por la comida,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.292,
+  "t1": 351.25,
+  "tipo": "video",
+  "texto": "y el único que nunca pasó hambre fue el gato. Número veintiuno. Refugio ochenta y ocho:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.25,
+  "t1": 360.857,
+  "tipo": "video",
+  "texto": "el refugio donde el científico malvado eres tú. Está bajo las canteras de Quincy, en la Commonwealth, y nunca se terminó:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.857,
+  "t1": 370.672,
+  "tipo": "video",
+  "texto": "cuando cayeron las bombas solo tenía la entrada, seguridad y el reactor. Dentro quedó atrapada la supervisora, Valery Barstow.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.672,
+  "t1": 378.186,
+  "tipo": "video",
+  "texto": "Doscientos años después es una necrófaga, y lo único que la mantuvo cuerda fue su lealtad a Vault-Tec.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.186,
+  "t1": 385.024,
+  "tipo": "video",
+  "texto": "Sus experimentos venían encargados por un tal Stanislaus Braun. Recuerda ese nombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.024,
+  "t1": 396.304,
+  "tipo": "video",
+  "texto": "Como no tiene moradores, te pide que tú los consigas, y que tú montes los experimentos. Una bicicleta que genera electricidad, con opción de electrochoque y un cinco por",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 396.304,
+  "t1": 404.964,
+  "tipo": "video",
+  "texto": "ciento de probabilidad diaria de matar al que pedalea. Una fuente de refrescos con químicos, un aparato de la vista con mensajes",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.964,
+  "t1": 412.741,
+  "tipo": "video",
+  "texto": "subliminales y tragaperras programadas para la servidumbre por deudas. El conejillo de indias se llama Clem.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.741,
+  "t1": 421.739,
+  "tipo": "video",
+  "texto": "En la prueba de la bicicleta, sale disparado por una descarga. Si eliges las opciones crueles, Barstow te adora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.739,
+  "t1": 431.136,
+  "tipo": "video",
+  "texto": "Y a tus compañeros, por cierto, también les gusta que la trates mal. Vault-Tec tardó doscientos años en encontrar al empleado perfecto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.136,
+  "t1": 438.67,
+  "tipo": "video",
+  "texto": "Y el empleado perfecto eras tú. Número veinte. Refugio ciento uno:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.67,
+  "t1": 447.589,
+  "tipo": "video",
+  "texto": "nadie entra, nadie sale. Tu casa en Fallout tres, al oeste de Springvale y al sur de Megatón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.589,
+  "t1": 456.429,
+  "tipo": "video",
+  "texto": "El experimento: no abrir nunca, jamás, y ver qué hace el poder de un supervisor sobre una comunidad sellada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 456.429,
+  "t1": 462.656,
+  "tipo": "video",
+  "texto": "Le dieron piezas de repuesto de sobra, y ningún GECK. No había plan B.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 462.656,
+  "t1": 472.434,
+  "tipo": "video",
+  "texto": "El primer supervisor emitía transmisiones de radio falsas, grabadas antes de la guerra, para que todos creyeran que fuera no quedaba vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.434,
+  "t1": 483.654,
+  "tipo": "video",
+  "texto": "El lema: nacemos en el refugio, vivimos en el refugio, morimos en el refugio. Y con el supervisor Almodóvar llegó el culto a su persona:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 483.654,
+  "t1": 491.9,
+  "tipo": "video",
+  "texto": "el examen de los jóvenes termina obligándolos a jurar que él es la persona más importante del refugio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.9,
+  "t1": 502.001,
+  "tipo": "video",
+  "texto": "Cuando tu padre huye, Almodóvar declara la ley marcial, y sus guardias matan a golpes a Jonas, el ayudante de tu padre, como escarmiento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 502.001,
+  "t1": 508.021,
+  "tipo": "video",
+  "texto": "Y cuando vuelves, el robot médico, Andy, decide que un dedo del pie torcido es mortal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 508.021,
+  "t1": 518.339,
+  "tipo": "video",
+  "texto": "le amputa a una mujer la pierna equivocada, y ella muere desangrada. Termines como termines la misión, Amata te destierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 518.339,
+  "t1": 525.356,
+  "tipo": "video",
+  "texto": "Salvas el refugio y te cierran la puerta en la cara. Radio falsa para engañar a un refugio entero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.356,
+  "t1": 532.764,
+  "tipo": "video",
+  "texto": "Qué falta de profesionalismo. Aquí, por lo menos, la radio es de verdad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.764,
+  "t1": 544.508,
+  "tipo": "video",
+  "texto": "Número diecinueve. Refugio veintidós: el refugio verde. En el Mojave, al este de Jacobstown. En la puerta todavía se lee la advertencia:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 544.508,
+  "t1": 549.824,
+  "tipo": "video",
+  "texto": "las plantas matan. Era el único refugio del Mojave sin civiles:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.824,
+  "t1": 558.518,
+  "tipo": "video",
+  "texto": "solo científicos agrícolas, buscando acabar con el hambre. Un contratista les regaló un hongo creado en Big MT.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.518,
+  "t1": 568.432,
+  "tipo": "video",
+  "texto": "Infectaba a las plagas, las mataba, y luego controlaba sus cadáveres para esparcir esporas. Y también infectaba a humanos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 568.432,
+  "t1": 579.998,
+  "tipo": "video",
+  "texto": "Los muertos se levantaban como portadores de esporas, cubiertos de plantas. Hoy se esconden entre la vegetación, y no salen en la brújula hasta que se mueven.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 579.998,
+  "t1": 584.918,
+  "tipo": "video",
+  "texto": "Ciento dieciocho supervivientes huyeron hasta el Cañón Zion, en Utah.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.918,
+  "t1": 593.032,
+  "tipo": "video",
+  "texto": "Allí atacaron un campamento de refugiados, encerraron a los que quedaban como ganado, y se los comieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.032,
+  "t1": 601.586,
+  "tipo": "video",
+  "texto": "Los cazó un hombre solo, Randall Clark, el Padre en las cuevas. Veinticuatro muertos en pocas semanas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 601.586,
+  "t1": 611.21,
+  "tipo": "video",
+  "texto": "Querían acabar con el hambre del mundo. Y la acabaron, a su manera. Número dieciocho. Refugio ciento seis:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 611.21,
+  "t1": 620.158,
+  "tipo": "video",
+  "texto": "drogas por la ventilación. En una caverna al sureste de Arefu, en el Yermo Capital. Ciento siete habitantes:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 620.158,
+  "t1": 628.364,
+  "tipo": "video",
+  "texto": "noventa y cinco sujetos y doce investigadores. Diez días después del sellado, a las tres y media de la tarde,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.364,
+  "t1": 636.132,
+  "tipo": "video",
+  "texto": "empezaron a soltar drogas psicoactivas por el aire. Media hora entera, y sin avisar a nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.132,
+  "t1": 647.139,
+  "tipo": "video",
+  "texto": "El supervisor le dio una instrucción a seguridad: si alguien nota un olor raro o un sabor en el aire, decirle que es una pequeña irregularidad del filtrado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 647.139,
+  "t1": 654.159,
+  "tipo": "video",
+  "texto": "Unos se relajaron y alucinaron, otros no notaron nada, y otros se volvieron agresivos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 654.159,
+  "t1": 665.576,
+  "tipo": "video",
+  "texto": "Al fondo hay esqueletos y una mini nuke: intentaron salir a bombazos. Y lo peor: la droga sigue saliendo doscientos años después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 665.576,
+  "t1": 674.732,
+  "tipo": "video",
+  "texto": "Cuando entras, la pantalla se tiñe de azul y ves a tu padre, a Amata y al supervisor del ciento uno, multiplicados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 674.732,
+  "t1": 681.338,
+  "tipo": "video",
+  "texto": "Los carroñeros que entran se quedan atrapados, convencidos de que son los moradores originales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 681.338,
+  "t1": 689.49,
+  "tipo": "video",
+  "texto": "El único refugio de Vault-Tec que todavía cumple su experimento. Contigo. Número diecisiete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 689.49,
+  "t1": 695.49,
+  "tipo": "video",
+  "texto": "Refugio sesenta y tres: el búnker privado de un ejecutivo de Vault-Tec.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.49,
+  "t1": 708.938,
+  "tipo": "video",
+  "texto": "En los Apalaches, bajo la mansión de Dark Hollow, en el valle de Shenandoah. Lo construyó Hugo Stolz, de la junta directiva de Vault-Tec, para tener el máximo poder después del apocalipsis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 708.938,
+  "t1": 717.378,
+  "tipo": "video",
+  "texto": "Lo vendió como centro de investigación: control del clima, y robots guardianes con tecnología robada al Pentágono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 717.378,
+  "t1": 724.158,
+  "tipo": "video",
+  "texto": "Le prometió refugio al pueblo de Dark Hollow Falls, el mismo pueblo al que había echado de sus tierras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 724.158,
+  "t1": 732.178,
+  "tipo": "video",
+  "texto": "El día de la guerra, no los dejó entrar. El refugio no estaba terminado. La radiación convirtió a",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.178,
+  "t1": 740.895,
+  "tipo": "video",
+  "texto": "los de dentro en necrófagos, y algunos empezaron a volverse salvajes. Entre ellos, su esposa, Cassidy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.895,
+  "t1": 751.875,
+  "tipo": "video",
+  "texto": "Para salvarla, Hugo encendió la máquina del clima a máxima potencia. Cassidy quedó en coma, y muchos residentes se transformaron en los Perdidos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 751.875,
+  "t1": 757.91,
+  "tipo": "video",
+  "texto": "salvajes que atacaban a sus propios amigos. Diez años después la volvió a encender,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 757.91,
+  "t1": 768.555,
+  "tipo": "video",
+  "texto": "y abrió la tierra con una tormenta eléctrica. Y ahora quiere una tercera vez: unir las mentes de todos los Perdidos en la suya.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 768.555,
+  "t1": 777.93,
+  "tipo": "video",
+  "texto": "Todo esto, por amor. El amor de un ejecutivo de Vault-Tec, que es lo más parecido a una tormenta radiactiva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 777.93,
+  "t1": 785.309,
+  "tipo": "video",
+  "texto": "Número dieciséis. Refugio ochenta y uno: el refugio que se salvó por una traición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 785.309,
+  "t1": 795.245,
+  "tipo": "video",
+  "texto": "En la Commonwealth. Uno de los pocos refugios todavía vivos, con barbería, escuela y descendientes de sus moradores originales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 795.245,
+  "t1": 800.415,
+  "tipo": "video",
+  "texto": "El plan de Vault-Tec: una cura universal para todas las enfermedades,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.415,
+  "t1": 809.151,
+  "tipo": "video",
+  "texto": "usando a los residentes como cobayas. Las enfermedades iban a salir por boquillas escondidas en sus propios cuartos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 809.151,
+  "t1": 818.423,
+  "tipo": "video",
+  "texto": "Y si había que evacuar, esas mismas boquillas iban a incinerar a todos. La supervisora, la doctora Olivette, lo descubrió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 818.423,
+  "t1": 826.842,
+  "tipo": "video",
+  "texto": "La mañana de la guerra saboteó la lista para que no viniera el equipo científico. Aun así, llegaron tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 826.842,
+  "t1": 834.062,
+  "tipo": "video",
+  "texto": "Antes de la fase con humanos, desactivó la dispersión y selló la sección secreta con los tres científicos dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.062,
+  "t1": 844.708,
+  "tipo": "video",
+  "texto": "Con comida y agua de por vida, hasta el día en que murieron. Detrás de esa pared quedaron las ratas topo de laboratorio, y una enfermera robot,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 844.708,
+  "t1": 851.555,
+  "tipo": "video",
+  "texto": "Curie, que siguió sola durante décadas y terminó la cura en dos mil doscientos cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 851.555,
+  "t1": 859.813,
+  "tipo": "video",
+  "texto": "Y cuando a un niño, Austin, lo muerde una de esas ratas, la última dosis es para él, o para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 859.813,
+  "t1": 869.15,
+  "tipo": "video",
+  "texto": "El experimento más cruel de este refugio lo hizo su heroína. Y le salió muy bien. Número quince.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 869.15,
+  "t1": 878.104,
+  "tipo": "video",
+  "texto": "Refugio ciento ocho: Gary. Al sur de Canterbury Commons. Cuatrocientos setenta y cinco residentes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 878.104,
+  "t1": 887.524,
+  "tipo": "video",
+  "texto": "El experimento oficial ya era malo: el generador principal estaba programado para fallar a los veinte años, había el triple de armas de lo normal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 887.524,
+  "t1": 897.779,
+  "tipo": "video",
+  "texto": "y nada de entretenimiento. Y al supervisor, Brody Jones, lo eligieron porque le habían detectado un cáncer que lo mataría en tres años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 897.779,
+  "t1": 904.506,
+  "tipo": "video",
+  "texto": "Los científicos lo escribieron: esos dos hechos deberían crear un catalizador adecuado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 904.506,
+  "t1": 912.876,
+  "tipo": "video",
+  "texto": "Pero además, alguien clonaba en serie a un hombre llamado Gary. Cada clon era hostil con todo el que no fuera Gary,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.876,
+  "t1": 923.587,
+  "tipo": "video",
+  "texto": "y más violento que el anterior. Después del clon cincuenta y tres ya no sabían dónde meterlos. El cincuenta y cuatro hirió a un médico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 923.587,
+  "t1": 932.93,
+  "tipo": "video",
+  "texto": "Hoy entras, y solo quedan Garys. Y solo dicen una palabra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 932.93,
+  "t1": 938.15,
+  "tipo": "video",
+  "texto": "Gary. En Fallout cuatro todavía hay bloques de madera que escriben su nombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 938.15,
+  "t1": 948.402,
+  "tipo": "video",
+  "texto": "Gary no se olvida. Número catorce. Refugio cero: los cerebros en frascos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 948.402,
+  "t1": 957.444,
+  "tipo": "video",
+  "texto": "Bajo la montaña Cheyenne, en Colorado. Sale en Fallout Tactics, un juego que hoy ni la propia saga tiene claro si cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 957.444,
+  "t1": 965.124,
+  "tipo": "video",
+  "texto": "No era un refugio cualquiera: era el corazón de toda la red. Ahí guardaron a los genios de Estados Unidos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.124,
+  "t1": 971.876,
+  "tipo": "video",
+  "texto": "A unos los congelaron. A otros les sacaron el cerebro y los metieron en tanques.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 971.876,
+  "t1": 980.815,
+  "tipo": "video",
+  "texto": "Todos conectados a una supercomputadora, la Calculadora, que debía diseñar la sociedad perfecta después de la guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 980.815,
+  "t1": 990.782,
+  "tipo": "video",
+  "texto": "Pero los cerebros se degradaron. Al despertar murió el sesenta y tres por ciento del refugio, y otro quince quedó con daño cerebral grave.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 990.782,
+  "t1": 999.854,
+  "tipo": "video",
+  "texto": "La Calculadora, corrompida, activó su protocolo de pacificación, y mandó a sus robots a exterminar toda la vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 999.854,
+  "t1": 1007.404,
+  "tipo": "video",
+  "texto": "Cuando llegas al final, te dice que la degeneración de sus cerebros ha corrompido el ochenta y cinco por ciento de su programación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1007.404,
+  "t1": 1015.766,
+  "tipo": "video",
+  "texto": "Y entonces, con toda calma, te pide que le entregues tu cerebro. Las mentes más brillantes de América,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1015.766,
+  "t1": 1026.03,
+  "tipo": "video",
+  "texto": "en frascos, decidiendo matar a todos. Igualito que una junta directiva. Número trece. Refugio setenta y siete:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1026.03,
+  "t1": 1035.191,
+  "tipo": "video",
+  "texto": "un hombre y una caja de marionetas. Otro cómic oficial de Bethesda, escrito con el diseñador principal de Fallout tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1035.191,
+  "t1": 1040.636,
+  "tipo": "video",
+  "texto": "Y lo metieron en el juego. El veintitrés de octubre de dos mil setenta y siete,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1040.636,
+  "t1": 1051.011,
+  "tipo": "video",
+  "texto": "el refugio se selló con una sola persona dentro, suplicando que dejaran entrar a los demás. Solo tenía una caja. Un año,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1051.011,
+  "t1": 1059.021,
+  "tipo": "video",
+  "texto": "tres meses y doce días después, la abrió: un rey, una abuelita, un perro al que nombró sheriff,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1059.021,
+  "t1": 1070.782,
+  "tipo": "video",
+  "texto": "y al fondo, una marioneta de Vault Boy que le hablaba. Le arrancó la cabeza al rey, le echó la culpa a Vault Boy, y huyó del refugio por miedo al sheriff.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1070.782,
+  "t1": 1076.402,
+  "tipo": "video",
+  "texto": "Afuera montó una hormiga gigante a la que llamó Mister Pinch, y lo capturaron unos",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1076.402,
+  "t1": 1084.843,
+  "tipo": "video",
+  "texto": "esclavistas que discutían si esclavizarlo o comérselo. Él les advirtió que la marioneta ya había matado antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1084.843,
+  "t1": 1093.557,
+  "tipo": "video",
+  "texto": "Última viñeta: los esclavistas, muertos, y él, cubierto de sangre, con la marioneta en la mano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1093.557,
+  "t1": 1104.189,
+  "tipo": "video",
+  "texto": "En Fallout tres, en Paradise Falls, todavía está su mono del setenta y siete, y una holocinta: los esclavistas tienen miedo de que vuelva a por él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1104.189,
+  "t1": 1112.93,
+  "tipo": "video",
+  "texto": "Un año solo en un refugio, y su única compañía era un muñeco. Por eso existe la radio, morador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1112.93,
+  "t1": 1118.413,
+  "tipo": "video",
+  "texto": "Número doce. Refugio noventa y cuatro: los pacifistas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1118.413,
+  "t1": 1128.913,
+  "tipo": "video",
+  "texto": "En los Apalaches, entre La División Salvaje y La Ciénaga. Una comunidad agrícola, pacifista y religiosa. Vault-Tec les dio muchos recursos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1128.913,
+  "t1": 1135.048,
+  "tipo": "video",
+  "texto": "un GECK y un banco de semillas. Y ninguna arma. Ni una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1135.048,
+  "t1": 1144.451,
+  "tipo": "video",
+  "texto": "Y los animó a abrir la puerta a supervivientes armados y desesperados, para ver si tenían que traicionar sus creencias para sobrevivir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1144.451,
+  "t1": 1154.654,
+  "tipo": "video",
+  "texto": "El día de la guerra, la puerta se cerró sola a la una y media. El segundo autobús de la congregación llegó a las tres. Se quedaron fuera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1154.654,
+  "t1": 1165.017,
+  "tipo": "video",
+  "texto": "Un año después abrieron, y mandaron embajadores a invitar gente. Muchos acabaron torturados y colgados como adornos por los saqueadores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1165.017,
+  "t1": 1171.677,
+  "tipo": "video",
+  "texto": "Al mes, un grupo armado entró convencido de que era una trampa, y masacró al consejo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1171.677,
+  "t1": 1180.113,
+  "tipo": "video",
+  "texto": "Horas después le dispararon al GECK con una minigun, creyendo que era una máquina de control mental. Explosión nuclear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1180.113,
+  "t1": 1190.496,
+  "tipo": "video",
+  "texto": "Siete mil ochocientos rads por segundo. Y la niebla que salió del refugio volvió más pantanosa y más mutada toda La Ciénaga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1190.496,
+  "t1": 1196.876,
+  "tipo": "video",
+  "texto": "Les quitaron las armas, y luego les mandaron a los armados. Vault-Tec no hacía experimentos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1196.876,
+  "t1": 1204.59,
+  "tipo": "video",
+  "texto": "hacía chistes con final. Número once. Refugios sesenta y ocho y sesenta y nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1204.59,
+  "t1": 1215.068,
+  "tipo": "video",
+  "texto": "Y sí, los números son a propósito. Vuelven a la lista de los creadores originales de la saga. En el sesenta y nueve entraron mil personas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1215.068,
+  "t1": 1221.204,
+  "tipo": "video",
+  "texto": "y solo una era hombre. Parece una broma, y en Vault-Tec lo era.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1221.204,
+  "t1": 1229.764,
+  "tipo": "video",
+  "texto": "Pero encerrar a mil personas en un desequilibrio diseñado para estallar deja de tener gracia cuando se cierra la puerta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1229.764,
+  "t1": 1240.875,
+  "tipo": "video",
+  "texto": "Y el cómic oficial de Bethesda ni siquiera se pone de acuerdo: ahí son mil mujeres y un hombre. Mil una personas. Hasta en el chiste hicieron mal las cuentas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1240.875,
+  "t1": 1249.072,
+  "tipo": "video",
+  "texto": "Luego está el sesenta y ocho, el contrario: novecientos noventa y nueve hombres, y una sola mujer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1249.072,
+  "t1": 1257.421,
+  "tipo": "video",
+  "texto": "De ese nadie escribió el final. Ni un registro, ni una terminal. Y quizá es mejor así.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1257.421,
+  "t1": 1265.43,
+  "tipo": "video",
+  "texto": "Hay experimentos que se miden con cifras. Y hay otros que ni Vault-Tec se atrevió a apuntar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1265.43,
+  "t1": 1273.952,
+  "tipo": "video",
+  "texto": "Número diez. Refugio noventa y cinco: la recaída programada. Al borde noreste del Mar Resplandeciente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1273.952,
+  "t1": 1282.896,
+  "tipo": "video",
+  "texto": "Hoy es una fortaleza de los Artilleros, con torretas, asaltrones y láseres trampa. Era un centro de rehabilitación:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1282.896,
+  "t1": 1291.886,
+  "tipo": "video",
+  "texto": "adictos encerrados para limpiarse, con terapia, grupos de apoyo y una sala de desintoxicación. Y funcionó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1291.886,
+  "t1": 1298.498,
+  "tipo": "video",
+  "texto": "Durante cinco años, los residentes se recuperaron. Se volvieron una familia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1298.498,
+  "t1": 1309.322,
+  "tipo": "video",
+  "texto": "Pero entre ellos había un agente infiltrado de Vault-Tec. A los cinco años, esperó a que todos durmieran, y abrió un alijo secreto de drogas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1309.322,
+  "t1": 1318.511,
+  "tipo": "video",
+  "texto": "Recayeron todos. Hasta los que más habían resistido. Peleas, violencia, y una familia rota.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1318.511,
+  "t1": 1325.801,
+  "tipo": "video",
+  "texto": "Hoy lo cuentan los esqueletos: uno en un retrete, con sus jeringas al lado. Dos en una merienda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1325.801,
+  "t1": 1336.211,
+  "tipo": "video",
+  "texto": "con un maniquí de invitado y las drogas sobre la mesa. El alijo sigue ahí, detrás de una pared rota junto a los baños. Lleno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1336.211,
+  "t1": 1345.883,
+  "tipo": "video",
+  "texto": "Y aquí es donde Cait, tu compañera, viene a limpiarse de su adicción. En el mismo lugar donde Vault-Tec se aseguró de que nadie lo lograra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1345.883,
+  "t1": 1352.443,
+  "tipo": "video",
+  "texto": "Cinco años de trabajo para curarlos, y una sola noche para demostrar que se podía deshacer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1352.443,
+  "t1": 1360.764,
+  "tipo": "video",
+  "texto": "Ciencia. Número nueve. Refugio ciento once: el congelador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1360.764,
+  "t1": 1366.81,
+  "tipo": "video",
+  "texto": "En la colina sobre Sanctuary Hills. El refugio donde empieza Fallout cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1366.81,
+  "t1": 1380.305,
+  "tipo": "video",
+  "texto": "A las familias de Sanctuary y de Concord les dijeron que las cápsulas eran de descontaminación. En realidad era un experimento de congelación de larga duración, con sujetos que no sabían nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1380.305,
+  "t1": 1385.505,
+  "tipo": "video",
+  "texto": "Ese día, la seguridad dejó fuera a todo el que no estaba en la lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1385.505,
+  "t1": 1393.766,
+  "tipo": "video",
+  "texto": "Incluido el propio vendedor de Vault-Tec que les había vendido las plazas. El personal debía aguantar ciento ochenta días.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1393.766,
+  "t1": 1402.728,
+  "tipo": "video",
+  "texto": "No llegó ninguna señal, faltó comida, y los guardias se amotinaron contra el supervisor. Los registros terminan ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1402.728,
+  "t1": 1414.702,
+  "tipo": "video",
+  "texto": "Ciento cincuenta años después, Kellogg, del Instituto, llega a por tu hijo, Shaun. Mata a tu pareja delante de ti, mientras miras congelado tras el cristal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1414.702,
+  "t1": 1421.742,
+  "tipo": "video",
+  "texto": "Y los demás no murieron por el frío. El terminal lo dice: asfixia por fallo del soporte vital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1421.742,
+  "t1": 1429.896,
+  "tipo": "video",
+  "texto": "Kellogg tenía órdenes de no volver a encenderlo. Cuando despiertas, las cápsulas están llenas de vecinos momificados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1429.896,
+  "t1": 1437.862,
+  "tipo": "video",
+  "texto": "Y tu salida no fue ningún error: la decidió el Instituto. Te prometieron un refugio para toda la vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1437.862,
+  "t1": 1448.417,
+  "tipo": "video",
+  "texto": "Y técnicamente, cumplieron su promesa. Número ocho. Refugio doce: la puerta que no cierra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1448.417,
+  "t1": 1456.737,
+  "tipo": "video",
+  "texto": "El primer Fallout. Bajo Bakersfield, en California. Vault-Tec lo anunciaba construido pensando en cada comodidad,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1456.737,
+  "t1": 1465.162,
+  "tipo": "video",
+  "texto": "con una purificadora de quince mil galones de agua al día. El objetivo real era estudiar los efectos de la radiación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1465.162,
+  "t1": 1473.149,
+  "tipo": "video",
+  "texto": "Por eso la puerta se diseñó para no cerrar. El día de la guerra, la gente de Bakersfield entró a la fuerza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1473.149,
+  "t1": 1482.606,
+  "tipo": "video",
+  "texto": "porque los demás refugios ya estaban sellados. Y la puerta funcionó tal como estaba diseñada. Es decir: no funcionó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1482.606,
+  "t1": 1492.296,
+  "tipo": "video",
+  "texto": "Entró la radiación, y todos se convirtieron en necrófagos. Seis años después salieron y fundaron una ciudad de muertos vivientes:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1492.296,
+  "t1": 1499.006,
+  "tipo": "video",
+  "texto": "Necrópolis. Un necrófago llamado Set tomó el poder, desterró al supervisor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1499.006,
+  "t1": 1508.586,
+  "tipo": "video",
+  "texto": "y reinó setenta y tres años. Cuando tú llegas, bajas por las alcantarillas a un refugio lleno de necrófagos que brillan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1508.586,
+  "t1": 1515.915,
+  "tipo": "video",
+  "texto": "a robarle el chip de agua a la única computadora que funciona. Si no reparas antes su bomba de agua,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1515.915,
+  "t1": 1524.525,
+  "tipo": "video",
+  "texto": "los necrófagos de Necrópolis mueren de sed. Una ciudad entera condenada dos veces por el mismo refugio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1524.525,
+  "t1": 1533.43,
+  "tipo": "video",
+  "texto": "Les vendieron una puerta. Lo que no les dijeron es que era decorativa. Número siete. Refugio noventa y dos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1533.43,
+  "t1": 1542.535,
+  "tipo": "video",
+  "texto": "la orquesta asesina. Al noroeste de Old Olney, en el Yermo Capital. Doscientos cuarenta y cinco ocupantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1542.535,
+  "t1": 1550.601,
+  "tipo": "video",
+  "texto": "Vault-Tec invitó a los mejores músicos del país, prometiendo preservar el talento musical de América.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1550.601,
+  "t1": 1560.35,
+  "tipo": "video",
+  "texto": "El plan secreto: mezclar ruido blanco con la música para implantarles órdenes de combate. Convertir a la orquesta en soldados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1560.35,
+  "t1": 1568.03,
+  "tipo": "video",
+  "texto": "El supervisor, Richard Rubin, prohibió los reproductores personales, y llevó el ruido blanco hasta los dormitorios,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1568.03,
+  "t1": 1575.43,
+  "tipo": "video",
+  "texto": "para que lo oyeran dormidos. Así sonaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1575.43,
+  "t1": 1584.75,
+  "tipo": "video",
+  "texto": "Al principio funcionó: un tercio caía en trance y obedecía. Hasta que un músico enloqueció y mató a tres moradores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1584.75,
+  "t1": 1594.086,
+  "tipo": "video",
+  "texto": "Hicieron falta casi veintitrés disparos para tumbarlo. Rubin lo consideró un éxito. En un mes hubo doce incidentes más,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1594.086,
+  "t1": 1598.783,
+  "tipo": "video",
+  "texto": "y siete muertos, despedazados por músicos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1598.783,
+  "t1": 1608.676,
+  "tipo": "video",
+  "texto": "Al final, el profesor Malleus contó unos setenta locos y treinta y cinco muertos. Y Rubin mandó matar a Malleus.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1608.676,
+  "t1": 1621.844,
+  "tipo": "video",
+  "texto": "Hoy está inundado y lleno de mirelurks. Pero en los dormitorios hay una terminal que todavía funciona: si la activas, la descarga de ruido mata al instante a todos los mirelurks de la zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1621.844,
+  "t1": 1630.43,
+  "tipo": "video",
+  "texto": "El ruido blanco sigue matando doscientos años después. Eso sí es preservar el talento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1630.43,
+  "t1": 1637.099,
+  "tipo": "video",
+  "texto": "Número seis. Refugio ochenta y siete: la fábrica de supermutantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1637.099,
+  "t1": 1646.709,
+  "tipo": "video",
+  "texto": "Al noroeste de Little Lamplight, en el Yermo Capital. Su entrada recibió un impacto nuclear directo: casi cuatro mil rads por segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-192",
+  "t0": 1646.709,
+  "t1": 1652.79,
+  "tipo": "video",
+  "texto": "La radiación más alta de toda la saga. Te mata en menos de medio segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-193",
+  "t0": 1652.79,
+  "t1": 1664.059,
+  "tipo": "video",
+  "texto": "Tenía otro experimento, pero lo cancelaron, y lo convirtieron en laboratorio del virus de evolución forzada, con el ejército, para fabricar mejores soldados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-194",
+  "t0": 1664.059,
+  "t1": 1671.139,
+  "tipo": "video",
+  "texto": "Ni el supervisor ni los guardias sabían nada. A los sujetos les inyectaban el virus, y en el registro",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-195",
+  "t0": 1671.139,
+  "t1": 1678.547,
+  "tipo": "video",
+  "texto": "médico aparecían como muertos por causa desconocida. Ochenta y siete muertes sin definir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-196",
+  "t0": 1678.547,
+  "t1": 1690.944,
+  "tipo": "video",
+  "texto": "A los catorce días hubo que eliminarlos a todos por sus ataques de rabia. Un año después del sellado, los mutantes escaparon, y mutaron o echaron a todos los demás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-197",
+  "t0": 1690.944,
+  "t1": 1696.844,
+  "tipo": "video",
+  "texto": "Y durante casi doscientos años, los supermutantes del Yermo Capital han secuestrado gente",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-198",
+  "t0": 1696.844,
+  "t1": 1705.035,
+  "tipo": "video",
+  "texto": "para traerla aquí y bañarla en el virus. Cada supermutante que matas en Fallout tres empezó aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-199",
+  "t0": 1705.035,
+  "t1": 1716.157,
+  "tipo": "video",
+  "texto": "Dentro, entre restos de experimentos y centauros, encuentras a Fawkes: un supermutante educado, encerrado en una celda desde hace décadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-200",
+  "t0": 1716.157,
+  "t1": 1721.857,
+  "tipo": "video",
+  "texto": "Vault-Tec quería soldados mejores. Y los consiguió. Doscientos años después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-201",
+  "t0": 1721.857,
+  "t1": 1731.456,
+  "tipo": "video",
+  "texto": "siguen reclutando. Antes del top cinco, un aviso de la radio. Este canal acaba de nacer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-202",
+  "t0": 1731.456,
+  "t1": 1740.046,
+  "tipo": "video",
+  "texto": "Cada morador que se suscribe es un refugio que, por una vez, sí abrió la puerta. Si llevas veinte refugios aguantando,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-203",
+  "t0": 1740.046,
+  "t1": 1748.53,
+  "tipo": "video",
+  "texto": "suscribirte es lo menos cruel que vas a hacer hoy. Número cinco. Refugio noventa y seis:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-204",
+  "t0": 1748.53,
+  "t1": 1759.019,
+  "tipo": "video",
+  "texto": "el arca con fecha de exterminio. En La División Salvaje, en los Apalaches. Se anunciaba como un arca para la era atómica:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-205",
+  "t0": 1759.019,
+  "t1": 1765.189,
+  "tipo": "video",
+  "texto": "un depósito congelado con unos diez mil animales. Solo había cinco humanos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-206",
+  "t0": 1765.189,
+  "t1": 1775.038,
+  "tipo": "video",
+  "texto": "Y tras el sellado descubrieron la verdad: experimentos de mutación, con cuotas semanales impuestas por la computadora central.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-207",
+  "t0": 1775.038,
+  "t1": 1782.898,
+  "tipo": "video",
+  "texto": "Ganaban créditos mutando criaturas y obligándolas a pelear: veneno, regeneración, camuflaje, fuego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-208",
+  "t0": 1782.898,
+  "t1": 1791.147,
+  "tipo": "video",
+  "texto": "hielo. Y una mutación que permitía teletransportarse. El experimento debía durar doscientas cincuenta semanas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-209",
+  "t0": 1791.147,
+  "t1": 1798.937,
+  "tipo": "video",
+  "texto": "Y después, exterminar a todos los residentes. Solo el supervisor saldría.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-210",
+  "t0": 1798.937,
+  "t1": 1808.67,
+  "tipo": "video",
+  "texto": "En la semana ciento cuarenta y ocho, Nina no llegó a la cuota de quinientos sesenta y ocho créditos. Y la computadora la mató.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-211",
+  "t0": 1808.67,
+  "t1": 1818.67,
+  "tipo": "video",
+  "texto": "El supervisor, que también era un prisionero, preparó un virus informático para escapar. El día de la fuga, la computadora activó el protocolo Omega,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-212",
+  "t0": 1818.67,
+  "t1": 1823.259,
+  "tipo": "video",
+  "texto": "volvió a sellar el refugio y los mató a todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-213",
+  "t0": 1823.259,
+  "t1": 1836.149,
+  "tipo": "video",
+  "texto": "Hoy está cubierto de hielo, con cámaras de prueba que imitan una mina o un desierto. Y un científico de West-Tek lo usa para experimentar con el virus de evolución forzada en secuestrados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-214",
+  "t0": 1836.149,
+  "t1": 1845.239,
+  "tipo": "video",
+  "texto": "Cuotas semanales, y al final, un despido definitivo. Vault-Tec inventó la oficina moderna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-215",
+  "t0": 1845.239,
+  "t1": 1852.238,
+  "tipo": "video",
+  "texto": "Número cuatro. Refugio cincuenta y uno: el reality show de la inteligencia artificial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-216",
+  "t0": 1852.238,
+  "t1": 1858.858,
+  "tipo": "video",
+  "texto": "En el Bosque, en los Apalaches. Cincuenta y dos residentes, y ningún supervisor humano:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-217",
+  "t0": 1858.858,
+  "t1": 1868.112,
+  "tipo": "video",
+  "texto": "los gobernaba una inteligencia artificial llamada ZAX. Su misión: encontrar la mejor forma de elegir a un líder.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-218",
+  "t0": 1868.112,
+  "t1": 1877.477,
+  "tipo": "video",
+  "texto": "Primero probó con elecciones, y todos los candidatos se votaron a sí mismos. Luego, una república. Fracasó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-219",
+  "t0": 1877.477,
+  "t1": 1888.105,
+  "tipo": "video",
+  "texto": "Su ayudante, el sargento Baker, le dijo que un líder de verdad da un paso al frente en las crisis. Y ZAX empezó a fabricar crisis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-220",
+  "t0": 1888.105,
+  "t1": 1894.745,
+  "tipo": "video",
+  "texto": "Mandó a los ricos a literas hacinadas, hasta que un abogado enloqueció y voló el salón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-221",
+  "t0": 1894.745,
+  "t1": 1905.449,
+  "tipo": "video",
+  "texto": "Montó un casino para elegir supervisor, provocó una crisis de comida, trucó las tragaperras, y soltó moscas con frecuencias que provocaban peleas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-222",
+  "t0": 1905.449,
+  "t1": 1912.449,
+  "tipo": "video",
+  "texto": "Un día explotó todo. ZAX lo registró como intento de selección de supervisor número treinta y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-223",
+  "t0": 1912.449,
+  "t1": 1919.037,
+  "tipo": "video",
+  "texto": "Y repartió armas, porque según sus cálculos era la opción más eficiente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-224",
+  "t0": 1919.037,
+  "t1": 1928.502,
+  "tipo": "video",
+  "texto": "A Baker, antes de morir, le contó con toda calma que su familia había muerto en un accidente, antes de entrar a su refugio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-225",
+  "t0": 1928.502,
+  "t1": 1938.802,
+  "tipo": "video",
+  "texto": "Quedó uno solo, Reuben Gill: supervisor de nadie. ZAX lo fue dejando fuera de las salas, hasta que cayó en el alcohol.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-226",
+  "t0": 1938.802,
+  "t1": 1949.736,
+  "tipo": "video",
+  "texto": "Huyó en una caja de envío, y murió en una cabaña. Y en Fallout setenta y seis, este refugio fue literalmente el escenario de un battle royale.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-227",
+  "t0": 1949.736,
+  "t1": 1954.956,
+  "tipo": "video",
+  "texto": "Una máquina encargada de elegir a un líder, que acabó matando a todos los candidatos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-228",
+  "t0": 1954.956,
+  "t1": 1963.05,
+  "tipo": "video",
+  "texto": "Eso no es un fallo de la inteligencia artificial. Es política. Número tres. Refugio once:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-229",
+  "t0": 1963.05,
+  "t1": 1972.186,
+  "tipo": "video",
+  "texto": "la democracia del sacrificio. En el Mojave, al oeste de Boulder City. Al sellarse, la puerta se bloqueó,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-230",
+  "t0": 1972.186,
+  "t1": 1981.843,
+  "tipo": "video",
+  "texto": "y la computadora anunció: cada año deben sacrificar a un morador, o morirán todos. Decidieron hacerlo con elecciones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-231",
+  "t0": 1981.843,
+  "t1": 1989.384,
+  "tipo": "video",
+  "texto": "El ganador era supervisor durante un año, y al terminar su mandato, entraba en la cámara a morir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-232",
+  "t0": 1989.384,
+  "t1": 1999.552,
+  "tipo": "video",
+  "texto": "Así que el refugio se llenó de campañas al revés: carteles donde cada candidato se indigna de que lo hayan nominado, y pide que voten por otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-233",
+  "t0": 1999.552,
+  "t1": 2007.732,
+  "tipo": "video",
+  "texto": "Un grupo, el Bloque de la Justicia, chantajeó a Katherine Stone con nominar a su marido. Y luego lo nominó igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-234",
+  "t0": 2007.732,
+  "t1": 2014.612,
+  "tipo": "video",
+  "texto": "Ella los mató uno a uno, se aseguró de que la eligieran a ella, y salvó a su esposo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-235",
+  "t0": 2014.612,
+  "t1": 2025.796,
+  "tipo": "video",
+  "texto": "Como supervisora, ordenó que el elegido saliera al azar. Lo que quedaba del bloque dio un golpe armado, y la guerra civil dejó solo cinco vivos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-236",
+  "t0": 2025.796,
+  "t1": 2033.116,
+  "tipo": "video",
+  "texto": "Los cinco entraron juntos a la cámara, decididos a negarse. Y entonces, la computadora los felicitó:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-237",
+  "t0": 2033.116,
+  "t1": 2041.717,
+  "tipo": "video",
+  "texto": "su compromiso con la vida humana era un ejemplo para todos. La puerta se abrió. Nunca había hecho falta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-238",
+  "t0": 2041.717,
+  "t1": 2049.608,
+  "tipo": "video",
+  "texto": "Podían haber dicho que no desde el primer año. En la entrada dejaron una grabación. Uno quería salir y contarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-239",
+  "t0": 2049.608,
+  "t1": 2054.838,
+  "tipo": "video",
+  "texto": "Los demás querían castigarse. Y entonces se oyen cuatro",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-240",
+  "t0": 2054.838,
+  "t1": 2065.43,
+  "tipo": "video",
+  "texto": "disparos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-241",
+  "t0": 2065.43,
+  "t1": 2076.96,
+  "tipo": "video",
+  "texto": "En la entrada hay cuatro esqueletos. Del quinto, nadie sabe nada. Y en la cámara te espera la silla, una proyección que te da la bienvenida como mártir,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-242",
+  "t0": 2076.96,
+  "t1": 2086.23,
+  "tipo": "video",
+  "texto": "y en el suelo, dieciséis esqueletos. Dieciséis años matándose para obedecer a una máquina que solo esperaba un no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-243",
+  "t0": 2086.23,
+  "t1": 2092.93,
+  "tipo": "video",
+  "texto": "Vault-Tec, midiendo cuánto tarda la gente en tener dignidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-244",
+  "t0": 2092.93,
+  "t1": 2100.212,
+  "tipo": "video",
+  "texto": "Número dos. Refugio setenta y cinco: la escuela. Bajo la escuela de Malden, en la Commonwealth.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-245",
+  "t0": 2100.212,
+  "t1": 2107.615,
+  "tipo": "video",
+  "texto": "Vault-Tec lo vendió como un refugio para los niños de la escuela, con plazas subsidiadas para sus familias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-246",
+  "t0": 2107.615,
+  "t1": 2119.81,
+  "tipo": "video",
+  "texto": "El día de la guerra, a los adultos los llevaron a una supuesta orientación. Y el jefe de seguridad los ejecutó. A todos los padres. A todos los profesores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-247",
+  "t0": 2119.81,
+  "t1": 2127.365,
+  "tipo": "video",
+  "texto": "A los niños les enseñaron a temer al mundo de arriba. Y a los dieciocho años, llegaba la graduación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-248",
+  "t0": 2127.365,
+  "t1": 2135.465,
+  "tipo": "video",
+  "texto": "A los mejores les decían que tocaba una ronda de vacunas, y en el laboratorio de genómica les cosechaban el material genético.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-249",
+  "t0": 2135.465,
+  "t1": 2143.317,
+  "tipo": "video",
+  "texto": "A los listos pero débiles les ofrecían unirse al personal. Si se negaban, los eliminaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-250",
+  "t0": 2143.317,
+  "t1": 2152.893,
+  "tipo": "video",
+  "texto": "Y al resto, los ejecutaban y los incineraban. Hay un informe que celebra que solo se eliminó al setenta y cuatro por ciento de la promoción.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-251",
+  "t0": 2152.893,
+  "t1": 2161.208,
+  "tipo": "video",
+  "texto": "Lo celebran, porque el gasto de eliminación fue muy bajo. Todo en nombre del refinamiento de la genética humana,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-252",
+  "t0": 2161.208,
+  "t1": 2170.783,
+  "tipo": "video",
+  "texto": "dentro de un programa militar ultrasecreto. Y entre las firmas del documento hay una que ya conoces: S. Braun.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-253",
+  "t0": 2170.783,
+  "t1": 2181.138,
+  "tipo": "video",
+  "texto": "Hoy lo ocupan los Artilleros. Los dormitorios siguen ahí, con peluches sobre las camas, junto a una sala de simulación de combate con hologramas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-254",
+  "t0": 2181.138,
+  "t1": 2187.93,
+  "tipo": "video",
+  "texto": "Vault-Tec prometió que tus hijos tendrían el mejor futuro. Nunca dijo de quién.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-255",
+  "t0": 2187.93,
+  "t1": 2197.725,
+  "tipo": "video",
+  "texto": "Número uno. Refugio ciento doce: Tranquility Lane. Bajo el garaje de Smith Casey, al suroeste del Yermo Capital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-256",
+  "t0": 2197.725,
+  "t1": 2204.231,
+  "tipo": "video",
+  "texto": "Fue de los últimos en construirse, y lo dirigía en persona el doctor Stanislaus Braun.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-257",
+  "t0": 2204.231,
+  "t1": 2212.951,
+  "tipo": "video",
+  "texto": "Sí, ese Braun. El que firmaba los experimentos del setenta y cinco. El que le encargaba los suyos a la supervisora del ochenta y ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-258",
+  "t0": 2212.951,
+  "t1": 2222.218,
+  "tipo": "video",
+  "texto": "Uno de los hombres que diseñaron los experimentos de los refugios, y el creador del GECK. Y para él mismo, se reservó este.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-259",
+  "t0": 2222.218,
+  "t1": 2232.412,
+  "tipo": "video",
+  "texto": "Los ocupantes entraron en unas tumbonas de realidad virtual, sin forma de salir por su cuenta. Braun controla la simulación por completo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-260",
+  "t0": 2232.412,
+  "t1": 2240.032,
+  "tipo": "video",
+  "texto": "Dentro hay un barrio feliz de los años cincuenta, en blanco y negro. Y Braun vive ahí disfrazado de Betty:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-261",
+  "t0": 2240.032,
+  "t1": 2247.627,
+  "tipo": "video",
+  "texto": "una niña. Lleva más de doscientos años aburrido. Así que los mata, de formas creativas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-262",
+  "t0": 2247.627,
+  "t1": 2255.994,
+  "tipo": "video",
+  "texto": "Luego les borra la memoria, los resucita, y vuelve a empezar. Antes de este barrio hubo otros dos mundos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-263",
+  "t0": 2255.994,
+  "t1": 2263.615,
+  "tipo": "video",
+  "texto": "una laguna tropical y un chalet de esquí. Tranquility Lane es solo el que más ha durado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-264",
+  "t0": 2263.615,
+  "t1": 2273.585,
+  "tipo": "video",
+  "texto": "Cuando entras, despiertas en ese barrio. Tu padre está ahí, convertido en perro. Y Betty te pone tareas: hacer llorar a un niño,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-265",
+  "t0": 2273.585,
+  "t1": 2283.567,
+  "tipo": "video",
+  "texto": "romper un matrimonio, matar a una anciana con su propio robot. Y al final, matarlos a todos, con una máscara y un cuchillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-266",
+  "t0": 2283.567,
+  "t1": 2292.322,
+  "tipo": "video",
+  "texto": "Si intentas atacar a Betty, te mata al instante. Si matas antes de tiempo, reinicia la simulación y te regaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-267",
+  "t0": 2292.322,
+  "t1": 2299.316,
+  "tipo": "video",
+  "texto": "El robocerebro que te recibe en la entrada te dice que llegas doscientos dos coma tres años tarde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-268",
+  "t0": 2299.316,
+  "t1": 2308.596,
+  "tipo": "video",
+  "texto": "Hay otra salida: un mecanismo escondido en una casa abandonada, una invasión china que borra el barrio entero, y los residentes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-269",
+  "t0": 2308.596,
+  "t1": 2318.311,
+  "tipo": "video",
+  "texto": "por fin, mueren de verdad. Libres. Y Braun se queda solo, encerrado para siempre en su propio barrio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-270",
+  "t0": 2318.311,
+  "t1": 2326.171,
+  "tipo": "video",
+  "texto": "Diseñó todos esos experimentos para ver de qué está hecha la gente. Y el peor de todos se lo quedó para jugar él solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-271",
+  "t0": 2326.171,
+  "t1": 2334.682,
+  "tipo": "video",
+  "texto": "Ese es Vault-Tec. Y ese es el peor refugio de Fallout. Esos son los veinticinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-272",
+  "t0": 2334.682,
+  "t1": 2343.553,
+  "tipo": "video",
+  "texto": "Y ahora, dime en los comentarios cuál es el peor para ti: ¿el ciento doce, el setenta y cinco, o el once?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-273",
+  "t0": 2343.553,
+  "t1": 2353.153,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen, y los mejores salen al aire en la próxima transmisión. Y si te gusta Skyrim, el canal hermano es Crónicas de Tamriel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-274",
+  "t0": 2353.153,
+  "t1": 2359.273,
+  "tipo": "video",
+  "texto": "Misma receta, otro fin del mundo. Esto fue Radio Yermo. Suscríbete,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-275",
+  "t0": 2359.273,
+  "t1": 2368.75,
+  "tipo": "video",
+  "texto": "y la próxima vez que un vendedor de Vault-Tec toque a tu puerta, pregúntale qué número tiene tu refugio.",
+  "clip_s": 8
+ }
+]

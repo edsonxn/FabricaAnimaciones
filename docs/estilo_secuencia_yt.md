@@ -1221,7 +1221,7 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   poca RAM libre (saltado). **Tele** (6-nov): la app cortó la subida (`ConnectionResetError` 10054) con el MASTER de 1,5 GB (al 50 %) Y con
   una copia 720p de 423 MB, 3 intentos: no es el tamaño, es Puente TV (revisar la app/espacio de la tele).
 
-## Radio Yermo con este motor (Fallout; alta del canal 17-nov-2026, sin video aún)
+## Radio Yermo con este motor (Fallout; alta del canal 17-nov-2026; horario = el de Tamriel desde el 2.º video)
 - **La MISMA receta que Crónicas de Tamriel, todo igual, con Fallout** (el usuario, 17-nov-2026): listas con cuenta regresiva,
   gameplay real por beat, pegatinas de TODO lo nombrado, MG nuevos por guion, mapas reales con ruta (≥ mitad de los puestos en
   listas de misiones), OST oficial y sonido original del juego, comentarios (agradecimientos + 2-3 críticas con contraburla) y
@@ -1234,18 +1234,27 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   (`fx_radio.tinte`), y el paso de uno a otro con fundido (`fx_radio.mezcla`). Que la radio se oiga en ≥ 1 momento por puesto
   sin tapar datos. Integración en el pipeline (1.er video): marcar las frases de radio en `guion.py` (p. ej. `RADIO_POR_FRASE`)
   y aplicar el filtro sobre la toma elegida después de `seleccionar` y antes de `mezcla`; `idioma_voz.py` corre sobre la voz SIN
-  filtro. Sin `[whispers]` ni `[excited]` (regla global).
+  filtro. **HECHO (17-nov-2026):** `guion.VOZ_FX = {key: "radio" | "radio+sintonia" | "mezcla:<s>"}` + `VOZ_FX_DEFECTO = "tinte"`; lo aplica `nucleo/mezcla.py` vía `nucleo/voz_fx.py` (la sintonía, 0,9 s de estática con silbido, va JUSTO ANTES de la frase). `voz/final` queda limpia. Ejemplo: `videos/fo_nunca_f4/guion.py` (saludo, remate de cada puesto, suscripción y despedida por radio). Sin `[whispers]` ni `[excited]` (regla global).
 - **Filtro de radio del Yermo (idea del usuario, 17-nov-2026: «que se escuche como la radio del juego, con esos filtros»):**
   `nucleo/fx_radio.py` sobre la voz ya grabada (sin créditos): `radio` (banda de AM 320-3300 Hz, válvula saturada, siseo,
   chasquidos, zumbido de 60 Hz), `mezcla` (radio y luego el narrador se acerca al micrófono), `tinte` (narrador con un toque de
   radio, para 15 min), `sintonia` (estática con silbido del dial). Muestras A/B/C de cada voz:
   `videos/_muestras_voz_fallout/voces_radio_yermo_filtro.mp4` (`_radio.py`). Cuál modo y dónde (saludo, remates, cierre) se fija
   con la elección del usuario.
-- **Kit de interfaz `nucleo/mg_fo.py` (PENDIENTE, lo hace el 1.er video con capturas reales de referencia, regla de oro 9):**
+- **Kit de interfaz `nucleo/mg_fo.py` (HECHO el 17-nov-2026 en `fo_nunca_f4`, desde capturas REALES del Fallout 4 en español guardadas en `nucleo/datos/ref_fo/`: DATOS>MISIONES, FORMULARIO DE REGISTRO, V.A.T.S., trueque, botín, +1 RAD.):** `puesto` (fila elegida de DATOS con pestañas EST·INV·DATOS·MAPA·RADIO), `ficha` (cajitas Daño/Peso/Valor), `objetivo` (casilla que se marca y se apaga), `special`, `terminal` RobCo, `vats`, `enemigo` (nombre rojo con barra), `rads`, `radio` (pestaña RADIO con onda: identidad del canal), `botin`, `aviso`, `rejilla`, `contador`, `pegatina`; entrada = encendido de CRT. Prueba: `videos/fo_nunca_f4/_prueba_mg.py`. Plan original:
   Pip-Boy en fósforo verde con líneas de barrido: ficha de objeto (DAÑ/PESO/VAL como la pantalla de inventario), aviso de misión,
   tarjeta S.P.E.C.I.A.L./ventaja, terminal de texto que se teclea, porcentaje de V.A.T.S., contador Geiger/rads, rejilla de
   suscriptores. Mismo diseño translúcido de `mg_tes` (nunca carteles opacos). Tema `fo` ya existe en `mg_mapa` (base provisional)
   y en `peg_estilos.TEMAS`. Logo/banner: `canales/arte/radio_yermo/arte.py` (mismo verde, para que el canal se reconozca).
+- **1.er video HECHO (`fo_nunca_f4`, 17-nov-2026):** mapa = Pip-Boy real de la wiki sin rejilla (`mapas/commonwealth.png`), lugares por `_ubicar3.py` (ícono junto a su rótulo en el recorte `FO4_map_*` + registro del recorte entero) y recorte por FX (`_recorta` en su efectos.py); tema `fo` de `mg_mapa` = escuadras de selección del Pip-Boy. OST: 16 pistas de Inon Zur (`_bajar_ost.py`, álbum comprobado en metadatos; «Behemoth» es de FO3). SFX: banco `nucleo/datos/sfx_juego/fallout4/`. Densidad lograda: MG 6/min, pegatinas 4/min, mapas 0,9/min. Lecciones en su ESTADO.
+- **2.º video HECHO (`fo_refugios_25`, 18-nov-2026: top 25 de refugios, ~40 min, horario ya el de Tamriel):** varios juegos en un video = un mapa por juego (`mapas/<juego>.png` + `_coords.json` por juego; el refugio sin mapa conocido va a una franja «puerta norte»), recreaciones de Flow con ingrediente real del juego (FO3/FO4) para lo que no tiene imagen (refugios 43, 55/56, 68/69, 77, escenas de lore), marcadas RECREACIÓN. Lecciones que valen para cualquier canal:
+  - **Mapas grandes (4096 px) + muchos FX → sin RAM en `fx hoja`:** recortar a disco cada encuadre (`_recorte_disco` en su `efectos.py`, ≤ 1600 px en `mapas/_cache/`), nunca pasar el mapa entero a cada FX.
+  - **Con > ~250 FX, `fx` normal (que también arma los borradores del Montaje) se queda sin RAM:** `fx --sin-montaje`.
+  - **Anclas cortas chocan con el gancho:** «Y una pantera» aparecía primero en el intro y el `pant()` cubrió 42-320 s; en videos largos ancla con la frase entera del puesto y revisa el segundo de inicio en `fx --seco`.
+  - **Clips por tramo: comprobar la DURACIÓN de la fuente** (`yt-dlp --print duration`): un `desde` pasado del final deja un .mp4 de 261 bytes que `bajar` da por bueno y `video` falla al final con «Faltan N medios».
+  - **Longplays de Fallout 1/2 en ruso o con el juego traducido:** mirar la hoja de medios; cambiar de fuente (regla de idioma también en pantalla).
+  - **Flow rechaza la imagen si sale un niño** (Betty de Tranquility Lane): usar al adulto (Braun) en la miniatura.
+  - **El sonido nombrado se oye con material real:** grabación del Refugio 11 con los disparos en una pausa (`post` 8,6 s), «Gary» con el audio del clip (`ambiente_por`), ruido blanco del 92 como SFX en la pausa.
 - **Juegos:** Fallout 3, New Vegas, 4, 76, 1/2 y la serie de Amazon. Clips solo del juego que se nombra (regla 3); los mods y el
   arte de fans se evitan como en Tamriel. Datos de Fallout Wiki/Nukapedia comprobados, nunca de memoria; la voz no cita la fuente.
 

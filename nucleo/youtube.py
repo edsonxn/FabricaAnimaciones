@@ -247,8 +247,38 @@ def configurar_canal(cid, cfg):
     print("canal actualizado: descripción, palabras clave, idioma" + (", país" if cfg.get("pais") else ""))
 
 
+def revisar_titulo(t):
+    """REGLA DE TÍTULOS (el usuario, 18-nov-2026; docs/publicacion.md § «TÍTULOS»). Devuelve (errores, avisos)."""
+    limpio = re.sub(r"#\w+", "", t).strip()
+    short = "#shorts" in t.lower()
+    tope, ideal = (40, 40) if short else (60, 55)
+    err, avi = [], []
+    if re.search(r"[()\[\]{}]", limpio):
+        err.append("lleva paréntesis o corchetes: se ve raro y alarga; el dato extra va en la miniatura o en la descripción")
+    if len(limpio) > tope:
+        err.append(f"mide {len(limpio)} caracteres (tope {tope}; en el celular se corta hacia los 50-55)")
+    elif len(limpio) > ideal:
+        avi.append(f"mide {len(limpio)} caracteres: ideal ≤ {ideal}")
+    if "|" in limpio or " – " in limpio or " - " in limpio:
+        avi.append("lleva '|' o guion separador: suena a SEO viejo; mejor una sola frase")
+    if re.search(r"[\U0001F300-\U0001FAFF☀-➿]", limpio):
+        avi.append("lleva emoji: en nuestros canales los títulos con emoji son de los que menos rinden")
+    mayus = [w for w in re.findall(r"[A-ZÁÉÍÓÚÑ]{3,}", limpio)]
+    if len(mayus) > 2:
+        avi.append(f"{len(mayus)} palabras en MAYÚSCULAS: como mucho 1-2")
+    return err, avi
+
+
 def _meta(carpeta):
-    return json.load(open(os.path.join(carpeta, "youtube.json"), encoding="utf-8"))
+    m = json.load(open(os.path.join(carpeta, "youtube.json"), encoding="utf-8"))
+    err, avi = revisar_titulo(m.get("titulo", ""))
+    for a in avi:
+        print("  (título) aviso:", a)
+    if err and os.environ.get("FAB_TITULO_OK") != "1":
+        print(f"✗ TÍTULO RECHAZADO «{m.get('titulo')}»:\n   - " + "\n   - ".join(err) +
+              "\n   Reescríbelo en youtube.json (docs/publicacion.md § «TÍTULOS»). Solo con el OK del usuario: FAB_TITULO_OK=1")
+        sys.exit(2)
+    return m
 
 
 def _cfg_canal(cid):

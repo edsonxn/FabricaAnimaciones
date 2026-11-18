@@ -39,18 +39,33 @@ def pista_voz():
     try:                                         # guion.VOZ_FX = {key: "espiritu"}: efecto por frase (nucleo/voz_fx.py, 13-nov-2026)
         import guion as _g
         vfx = getattr(_g, "VOZ_FX", {}) or {}
+        vfx_def = getattr(_g, "VOZ_FX_DEFECTO", None)        # Radio Yermo: "tinte" en todas las frases sin efecto propio
     except ImportError:
-        vfx = {}
+        vfx, vfx_def = {}, None
+    n_def = 0
     for e in TL["escenas"]:
         for f in e["frases"]:
             x, sr = sf.read(f"voz/final/{f['key']}.wav")
             assert sr == SR
-            if f["key"] in vfx:
+            if x.ndim > 1:
+                x = x.mean(axis=1)
+            efx = vfx.get(f["key"], vfx_def)
+            if efx:
                 import voz_fx
-                x = voz_fx.aplicar(x, sr, vfx[f["key"]])
-                print(f"  voz_fx: {f['key']} → {vfx[f['key']]}")
+                x = voz_fx.aplicar(x, sr, efx)
+                if f["key"] in vfx:
+                    print(f"  voz_fx: {f['key']} → {efx}")
+                else:
+                    n_def += 1
             i = int(round(f["t0"] * SR))
+            if efx == "radio+sintonia":                    # estática con silbido de dial que acaba donde empieza la frase
+                import fx_radio
+                s = fx_radio.sintonia(sr).astype(np.float64) * 0.8
+                j = max(0, i - len(s))
+                v[j:i] += s[len(s) - (i - j):]
             v[i:i + len(x)] += x[:N - i]
+    if n_def:
+        print(f"  voz_fx: {n_def} frases con el efecto por defecto «{vfx_def}»")
     # procesado de voz
     if config.CADENA_VOZ == "suave":             # Applio: ya viene procesada por RVC (A/B del usuario, 13-oct-2026)
         v = butter_hp(v, 70, 2)

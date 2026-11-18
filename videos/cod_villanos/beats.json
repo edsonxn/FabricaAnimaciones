@@ -1,0 +1,978 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.07,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Asunto: los villanos de Call of Duty. Y cómo murieron de verdad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.07,
+  "t1": 16.93,
+  "tipo": "video",
+  "texto": "Uno murió a puñetazos en un callejón de Nueva York. Otro, colgado de un cable en un hotel de Dubái. Y otro sigue vivo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.93,
+  "t1": 27.45,
+  "tipo": "video",
+  "texto": "aunque le dispararon con un Magnum. Y a otro lo viste morir con tus propios ojos. Y aun así, el juego te mintió sobre quién lo mató.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.45,
+  "t1": 34.07,
+  "tipo": "video",
+  "texto": "Veinte villanos, cada muerte con el juego en pantalla. Aviso: hay spoilers de Modern Warfare 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.07,
+  "t1": 44.508,
+  "tipo": "video",
+  "texto": "Y en el número uno, un villano que tuvo que morir dos veces. Número veinte. El general Heinrich Amsel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 44.508,
+  "t1": 51.148,
+  "tipo": "video",
+  "texto": "World at War, dos mil ocho. Stalingrado, misión Vendetta: Reznov y Dimitri Petrenko,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.148,
+  "t1": 62.489,
+  "tipo": "video",
+  "texto": "dos francotiradores rusos, cazan al general alemán que manda en la ciudad. Amsel huye de su cuartel con su escolta, y Petrenko lo derriba con el Mosin-Nagant que le dio Reznov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 62.489,
+  "t1": 69.197,
+  "tipo": "video",
+  "texto": "Reznov se ríe a carcajadas. ¿Y por qué no disparó Reznov, si la venganza era suya?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.197,
+  "t1": 78.219,
+  "tipo": "video",
+  "texto": "Porque los alemanes le habían volado el dedo índice. El del gatillo. En el diecinueve, Khaled Al-Asad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.219,
+  "t1": 87.646,
+  "tipo": "video",
+  "texto": "Call of Duty 4, dos mil siete. El hombre que ejecutó al presidente Al-Fulani delante de una cámara: atado a una silla, y de un tiro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 87.646,
+  "t1": 92.466,
+  "tipo": "video",
+  "texto": "En la misión Casa franca, Price lo tiene atado a una silla y lo interroga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 92.466,
+  "t1": 104.49,
+  "tipo": "video",
+  "texto": "Entonces suena el teléfono de Al-Asad. Del otro lado está Imran Zakhaev. Price acaba con Al-Asad con su M1911.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 104.49,
+  "t1": 110.02,
+  "tipo": "video",
+  "texto": "Murió exactamente como mató al presidente. Atado a una silla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.02,
+  "t1": 120.43,
+  "tipo": "video",
+  "texto": "Y la bomba que mató a treinta mil marines la detonó él. Por orden de Makarov. Eso no lo supimos hasta Modern Warfare 3.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.43,
+  "t1": 129.222,
+  "tipo": "video",
+  "texto": "Número dieciocho. Victor Zakhaev, el hijo del ultranacionalista. Misión Los pecados del padre. Soap,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.222,
+  "t1": 135.554,
+  "tipo": "video",
+  "texto": "Gaz y Price persiguen a Victor por las afueras de Volgogrado, hasta la azotea de un edificio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 135.554,
+  "t1": 145.514,
+  "tipo": "video",
+  "texto": "Acorralado, Victor saca su M1911. Y la usa contra sí mismo, antes de que Soap se la pueda quitar. Pero en Modern Warfare 2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.514,
+  "t1": 154.854,
+  "tipo": "video",
+  "texto": "la versión oficial del Pentágono es otra: que Victor Zakhaev murió en un accidente de coche, a las afueras de Volgogrado. Un accidente de coche.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.854,
+  "t1": 164.07,
+  "tipo": "video",
+  "texto": "En una azotea. En el diecisiete, Omar Sulaman. El Lobo. En el Modern Warfare de dos mil diecinueve,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.07,
+  "t1": 170.279,
+  "tipo": "video",
+  "texto": "es el terrorista más buscado de Urzikstán, al que culpan de robar el gas de Kastovia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.279,
+  "t1": 181.319,
+  "tipo": "video",
+  "texto": "En La guarida del Lobo lo encuentras grabando un mensaje frente a una cámara, con un chaleco bomba puesto. Levanta el detonador, y un disparo lo detiene. El chaleco sigue contando,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.319,
+  "t1": 189.625,
+  "tipo": "video",
+  "texto": "y hay que cortar el cable verde. Lo que pocos recuerdan: el robo del gas no lo planeó el Lobo. Lo planeó Hadir,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.625,
+  "t1": 199.625,
+  "tipo": "video",
+  "texto": "el hermano de Farah. El Lobo murió con el crimen de otro en su ficha. Número dieciséis. El general Roman Barkov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 199.625,
+  "t1": 206.14,
+  "tipo": "video",
+  "texto": "El general ruso que invadió Urzikstán, y al que al final Moscú deja de contestarle por radio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.14,
+  "t1": 215.615,
+  "tipo": "video",
+  "texto": "En la misión En el horno, Barkov escapa en su propio helicóptero. Pero el piloto es Nikolai, y Farah sube a bordo con un cuchillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.615,
+  "t1": 225.729,
+  "tipo": "video",
+  "texto": "Sus últimas palabras: que el país de Farah cría terroristas, y que debió hacer más. Si todavía respira, Farah lo patea fuera del helicóptero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.729,
+  "t1": 231.849,
+  "tipo": "video",
+  "texto": "Y un detalle del expediente: en los hombros lleva charreteras de coronel, no de general.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.849,
+  "t1": 241.551,
+  "tipo": "video",
+  "texto": "Murió sin el ascenso. En el quince, Jonathan Irons. Advanced Warfare. El dueño de Atlas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.551,
+  "t1": 250.461,
+  "tipo": "video",
+  "texto": "el ejército privado más grande del mundo. El hombre que le dio a Jack Mitchell un brazo nuevo, después de que perdiera el suyo en Seúl.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.461,
+  "t1": 259.081,
+  "tipo": "video",
+  "texto": "Misión final, Terminal. Una explosión tira a Irons del edificio, y se agarra del brazo de Mitchell. Del brazo artificial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.081,
+  "t1": 266.84,
+  "tipo": "video",
+  "texto": "Escucha. Yo te di ese brazo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.84,
+  "t1": 276.3,
+  "tipo": "video",
+  "texto": "Y Mitchell se lo corta con su propio cuchillo. Irons cae con el brazo de Atlas en la mano. En el expediente anterior, thefert escribió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.3,
+  "t1": 285.157,
+  "tipo": "video",
+  "texto": "la voz es IA, nomás para que sepan, papus. Gracias por el aviso, thefert. Mitchell también tenía un brazo artificial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 285.157,
+  "t1": 292.702,
+  "tipo": "video",
+  "texto": "Y con ese brazo artificial acabó con el villano. Lo artificial también hace el trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.702,
+  "t1": 302.198,
+  "tipo": "video",
+  "texto": "Número catorce. El almirante Salen Kotch. Infinite Warfare, dos mil dieciséis. El villano del Frente de Defensa de los Asentamientos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.198,
+  "t1": 307.073,
+  "tipo": "video",
+  "texto": "interpretado por Kit Harington, el Jon Snow de Juego de Tronos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 307.073,
+  "t1": 317.938,
+  "tipo": "video",
+  "texto": "En la Operación Bandera Negra, Reyes lo acorrala en el puente de la nave Olympus Mons. Kotch, herido, le suelta el discurso: matarme no es ganar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.938,
+  "t1": 328.724,
+  "tipo": "video",
+  "texto": "Si le cortas el discurso con el cuchillo antes de que termine, el juego te da un logro que se llama No sabes nada. La frase que le decían a Jon Snow en Juego de Tronos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 328.724,
+  "t1": 337.429,
+  "tipo": "video",
+  "texto": "Y lo raro: Kotch no es el jefe final. Muere en la sexta operación de siete, y el juego termina sin él, en Marte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.429,
+  "t1": 344.989,
+  "tipo": "video",
+  "texto": "Como qtdrox, que escribió que no llevaba ni la mitad del video anterior, que todo era IA,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.989,
+  "t1": 352.72,
+  "tipo": "video",
+  "texto": "y que no lo iba a terminar. Kotch tampoco terminó su juego. Y se perdió el final en Marte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.72,
+  "t1": 361.583,
+  "tipo": "video",
+  "texto": "En el trece, Hassan Zyani. Modern Warfare 2, dos mil veintidós. Misión Countdown, un rascacielos de Chicago.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.583,
+  "t1": 369.453,
+  "tipo": "video",
+  "texto": "Hassan arrastra a Soap hacia una ventana que acaba de volar, para tirarlo al vacío. Y le suelta su amenaza final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.453,
+  "t1": 378.73,
+  "tipo": "video",
+  "texto": "Escucha. No estamos atacando. Estamos invadiendo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.73,
+  "t1": 386.62,
+  "tipo": "video",
+  "texto": "Ghost no lo deja decir nada más: lo derriba con un francotirador desde el edificio de enfrente. Lo mejor:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.62,
+  "t1": 395.407,
+  "tipo": "video",
+  "texto": "Hassan amenaza a la nación de Soap creyendo que es estadounidense. Soap es escocés.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.407,
+  "t1": 407.007,
+  "tipo": "video",
+  "texto": "Número doce. Gabriel Rorke, el cazador de Ghosts. En Call of Duty Ghosts, de dos mil trece, es el antiguo líder de los Ghosts, que se pasó a la Federación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 407.007,
+  "t1": 413.587,
+  "tipo": "video",
+  "texto": "En la última misión, el tren descarrila y cae al agua. Hesh lo sujeta, y Logan le dispara",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 413.587,
+  "t1": 423.693,
+  "tipo": "video",
+  "texto": "con un Magnum que tiene una sola bala. Lo dan por muerto. Pero en la orilla, Rorke se levanta, le rompe el brazo a Logan y se lo lleva a rastras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 423.693,
+  "t1": 430.875,
+  "tipo": "video",
+  "texto": "Después de los créditos, Logan está en un pozo en el Amazonas, recibiendo la misma tortura que sufrió Rorke.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.875,
+  "t1": 437.93,
+  "tipo": "video",
+  "texto": "Y nunca salió una segunda parte. Rorke no murió. Se quedó vivo para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.93,
+  "t1": 446.936,
+  "tipo": "video",
+  "texto": "En el once, Edward Richtofen. El doctor de los Zombies. Murió más de una vez. En The Giant, de Black Ops 3,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 446.936,
+  "t1": 457.101,
+  "tipo": "video",
+  "texto": "su versión de Primis sale del teletransportador y le dispara a su versión de Ultimis. Pero el final de verdad es Tag der Toten, en Black Ops 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.101,
+  "t1": 464.231,
+  "tipo": "video",
+  "texto": "Todos alrededor de una fogata, envenenados. Richtofen dice: lo sé, y lo siento mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.231,
+  "t1": 475.31,
+  "tipo": "video",
+  "texto": "Y Nikolai, su amigo, lo remata con su revólver, para cerrar la paradoja del multiverso. No lo mató un zombi. Lo mató su amigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 475.31,
+  "t1": 480.427,
+  "tipo": "video",
+  "texto": "Número diez. Perseus. Black Ops Cold War, dos mil veinte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.427,
+  "t1": 492.185,
+  "tipo": "video",
+  "texto": "El espía soviético que esconde bombas nucleares por toda Europa. En ningún final lo matas. En el bueno, los bombarderos arrasan su base antes de que detone las bombas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 492.185,
+  "t1": 498.623,
+  "tipo": "video",
+  "texto": "y Perseus escapa. En el malo, se burla del cadáver de Adler. ¿Cómo murió entonces?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.623,
+  "t1": 509.437,
+  "tipo": "video",
+  "texto": "De cáncer, en mil novecientos ochenta y tres. Lo revela la cinemática de la temporada seis: Adler encuentra a Stitch junto a una tumba en los bosques de Verdansk.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 509.437,
+  "t1": 518.237,
+  "tipo": "video",
+  "texto": "Perseus era una idea, y Stitch la heredó. Y leukojb me preguntó si Bell está muerto, o si hay pistas de que sigue con vida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 518.237,
+  "t1": 525.259,
+  "tipo": "video",
+  "texto": "Buena pregunta. Esa da para un expediente entero. En el nueve, Jane Harrow.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.259,
+  "t1": 534.508,
+  "tipo": "video",
+  "texto": "Black Ops 6, dos mil veinticuatro. La espía que traicionó al equipo de Adler y se unió al Panteón. En la última misión, Jaque mate,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 534.508,
+  "t1": 543.748,
+  "tipo": "video",
+  "texto": "el helicóptero de la fuga se hunde en el mar Negro. Case la sujeta bajo el agua, con la toxina Cradle en la cabeza, y una voz le dice:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 543.748,
+  "t1": 553.51,
+  "tipo": "video",
+  "texto": "termínalo. Ella suplica, y la pantalla se va a negro. Nunca ves el final. Su muerte es deducida, no confirmada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 553.51,
+  "t1": 559.27,
+  "tipo": "video",
+  "texto": "Y lo más triste: justo antes, Harrow descubre que Adler no mató a sus padres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.27,
+  "t1": 569.305,
+  "tipo": "video",
+  "texto": "Todo su odio venía de un error. Número ocho. Lev Kravchenko, el hombre que sobrevivió a sus propias granadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 569.305,
+  "t1": 577.825,
+  "tipo": "video",
+  "texto": "Black Ops, dos mil diez. Misión Venganza, en Laos. Woods lo apuñala, Kravchenko tira de las granadas de su cinturón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.825,
+  "t1": 586.94,
+  "tipo": "video",
+  "texto": "y Woods se lanza con él por la ventana. Mason los da por muertos a los dos. Pero el cinturón se soltó en la caída, y explotó lejos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 586.94,
+  "t1": 594.826,
+  "tipo": "video",
+  "texto": "Los dos sobrevivieron, y Kravchenko se llevó a Woods preso a Vietnam. Su muerte de verdad llega en Black Ops 2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.826,
+  "t1": 603.176,
+  "tipo": "video",
+  "texto": "misión Viejas heridas, Afganistán, mil novecientos ochenta y seis. Lo interrogan en una cueva, suelta que Menéndez tiene",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 603.176,
+  "t1": 612.93,
+  "tipo": "video",
+  "texto": "gente dentro de la CIA, y Woods lo ejecuta. Dieciocho años después, Woods cobró la deuda en persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.93,
+  "t1": 620.31,
+  "tipo": "video",
+  "texto": "En el siete, Phillip Graves. Modern Warfare 2, dos mil veintidós. El jefe de Shadow Company,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 620.31,
+  "t1": 629.235,
+  "tipo": "video",
+  "texto": "el que traiciona a la Fuerza Operativa 141. Soap revienta el tanque desde el que los ataca, y todos lo dan por muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 629.235,
+  "t1": 636.353,
+  "tipo": "video",
+  "texto": "Graves nunca estuvo dentro del tanque. Y sobrevive a todo Modern Warfare 3.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.353,
+  "t1": 647.553,
+  "tipo": "video",
+  "texto": "Muere en Modern Warfare 4, en la misión Hired Gun, en París. Price derriba su helicóptero, Graves sale con una armadura, Price se la perfora y lo acorrala en un taller.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 647.553,
+  "t1": 655.487,
+  "tipo": "video",
+  "texto": "Graves lo reta a disparar. Y si dudas más de dos segundos, Graves te quita el arma, y el que muere es Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 655.487,
+  "t1": 666.475,
+  "tipo": "video",
+  "texto": "Aquí, dudar es perder la partida. Número seis. El ultranacionalista Imran Zakhaev, el que empezó todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 666.475,
+  "t1": 672.175,
+  "tipo": "video",
+  "texto": "El villano de Call of Duty 4. En mil novecientos noventa y seis, en Prípiat, Price",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.175,
+  "t1": 680.68,
+  "tipo": "video",
+  "texto": "le vuela el brazo izquierdo con una Barrett, a casi novecientos metros. Y el brazo se queda tirado en el suelo el resto de la misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 680.68,
+  "t1": 690.8,
+  "tipo": "video",
+  "texto": "Quince años después, en el puente de Fin del juego, Zakhaev ejecuta a Gaz. Price, herido, le desliza a Soap su M1911 por el suelo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 690.8,
+  "t1": 698.375,
+  "tipo": "video",
+  "texto": "y Soap acaba con él. Ahora, el detalle: ¿dónde le dio Soap? En la intro de Modern Warfare 2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.375,
+  "t1": 707.93,
+  "tipo": "video",
+  "texto": "en el torso. En el flashback de Modern Warfare 3, en la cabeza. La saga no se pone de acuerdo con su propio disparo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 707.93,
+  "t1": 715.423,
+  "tipo": "video",
+  "texto": "En el cinco, Nikita Dragovich. Black Ops. El general soviético de los números y del gas Nova 6.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 715.423,
+  "t1": 724.688,
+  "tipo": "video",
+  "texto": "En Baikonur, el equipo destruye su limusina, y Woods jura que quedó hecho carbón. Pero Dragovich había fingido su muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 724.688,
+  "t1": 732.938,
+  "tipo": "video",
+  "texto": "Su final real es en Redención, en una estación de números bajo el mar. Mason le echa en cara que intentó obligarlo a matar a Kennedy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.938,
+  "t1": 740.43,
+  "tipo": "video",
+  "texto": "Y Dragovich responde con una sola palabra. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.43,
+  "t1": 752.93,
+  "tipo": "video",
+  "texto": "¿Intentado? Con esa palabra deja la duda de si Mason participó en el asesinato de Kennedy. Y Mason lo ahoga en el agua que sube.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 752.93,
+  "t1": 758.309,
+  "tipo": "video",
+  "texto": "Número cuatro. El general Shepherd. Modern Warfare 2, dos mil nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 758.309,
+  "t1": 766.447,
+  "tipo": "video",
+  "texto": "El general que traicionó a la 141: mató a Ghost y a Roach, y le clavó un cuchillo en el pecho a Soap.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 766.447,
+  "t1": 776.147,
+  "tipo": "video",
+  "texto": "Misión final, Fin de partida, en Afganistán. Price derriba su helicóptero, caen por una cascada, y Shepherd va a rematar a Soap con un Magnum,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 776.147,
+  "t1": 784.685,
+  "tipo": "video",
+  "texto": "hasta que Price se le echa encima. Y mientras pelean, Soap se saca del pecho el cuchillo de Shepherd, y se lo lanza. Al ojo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.685,
+  "t1": 792.275,
+  "tipo": "video",
+  "texto": "Lo más amargo: Shepherd fue enterrado en Arlington como héroe de guerra, y Price y Soap quedaron como fugitivos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 792.275,
+  "t1": 800.276,
+  "tipo": "video",
+  "texto": "Y en el reinicio, Price lo vuelve a matar, de un tiro en la frente, en su propia oficina del Pentágono.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.276,
+  "t1": 810.608,
+  "tipo": "video",
+  "texto": "Un dato antes del podio. De cada mil personas que ven estos expedientes, solo seis están suscritas al canal. Si llegaste hasta aquí, ya eres de la unidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 810.608,
+  "t1": 818.4,
+  "tipo": "video",
+  "texto": "Suscríbete, y el siguiente expediente te llega a ti primero. En el tres, Raúl Menéndez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 818.4,
+  "t1": 827.58,
+  "tipo": "video",
+  "texto": "Black Ops 2, el villano de los tres finales. En Haití, Section le cae encima, lo apuñala y le apunta con su propia pistola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 827.58,
+  "t1": 835.43,
+  "tipo": "video",
+  "texto": "Menéndez le pide que lo convierta en mártir. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 835.43,
+  "t1": 844.04,
+  "tipo": "video",
+  "texto": "Si lo matas, se activa un video grabado para su muerte, y Cordis Die incendia la Casa Blanca. Si lo capturas y Chloe vive,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 844.04,
+  "t1": 853.129,
+  "tipo": "video",
+  "texto": "un año después Menéndez estrella la cabeza contra una tele. Y luego se ríe. Y si lo capturas y Chloe murió, escapa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 853.129,
+  "t1": 862.049,
+  "tipo": "video",
+  "texto": "mata a Woods con el colgante de su hermana, y se prende fuego sobre la tumba de Josefina. En ese final, el villano se elimina a sí mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 862.049,
+  "t1": 871.767,
+  "tipo": "video",
+  "texto": "Y aun así gana. Número dos. El doctor Friedrich Steiner, y la muerte que el juego te contó al revés.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 871.767,
+  "t1": 879.027,
+  "tipo": "video",
+  "texto": "Black Ops. El científico nazi del gas Nova 6, escondido en la isla Renacimiento. Jugando como Mason,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 879.027,
+  "t1": 889.323,
+  "tipo": "video",
+  "texto": "ves a Reznov entrar en la sala y ejecutarlo. Pero luego juegas como Hudson. Y a través de un cristal blindado que no se rompe ni a balazos, ves la verdad:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 889.323,
+  "t1": 897.887,
+  "tipo": "video",
+  "texto": "el que mata a Steiner es Mason. Gritando esto. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 897.887,
+  "t1": 904.587,
+  "tipo": "video",
+  "texto": "Mi nombre es Viktor Reznov. Pero Reznov nunca estuvo ahí: llevaba cinco años muerto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 904.587,
+  "t1": 914.289,
+  "tipo": "video",
+  "texto": "desde Vorkuta. Y Hudson lo dice clarito: nunca estuvo aquí. Y FABIAN me escribió que no reconoce ninguno de mis efectos Mandela,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 914.289,
+  "t1": 920.72,
+  "tipo": "video",
+  "texto": "que él lo recuerda todo tal como es. Fabian, una pregunta: ¿quién mató a Steiner?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 920.72,
+  "t1": 930.81,
+  "tipo": "video",
+  "texto": "Si tu respuesta fue Reznov, el juego te engañó. Y lo viste con tus propios ojos. Y el número uno. Vladimir Makarov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 930.81,
+  "t1": 940.23,
+  "tipo": "video",
+  "texto": "El villano que tuvo que morir dos veces. El original, en Modern Warfare 3, dos mil once. Hotel Oasis, Dubái.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 940.23,
+  "t1": 945.417,
+  "tipo": "video",
+  "texto": "Makarov le quita a Price la Desert Eagle, y mata a Yuri delante de él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 945.417,
+  "t1": 956.277,
+  "tipo": "video",
+  "texto": "Price se le echa encima, le enrolla un cable dos veces al cuello, y los dos atraviesan el techo de cristal. Price cae. Makarov se queda colgado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 956.277,
+  "t1": 965.537,
+  "tipo": "video",
+  "texto": "Price enciende un puro, al tercer intento del encendedor. Y empiezan los créditos de la trilogía. Doce años después llega el reinicio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.537,
+  "t1": 972.145,
+  "tipo": "video",
+  "texto": "En Modern Warfare 3 de dos mil veintitrés, el nuevo Makarov mata a Soap, y escapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 972.145,
+  "t1": 982.594,
+  "tipo": "video",
+  "texto": "Y muere en Modern Warfare 4, en la primera misión en orden cronológico: un callejón nevado de Nueva York. Sin armas. Price lo mata a puñetazos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 982.594,
+  "t1": 990.43,
+  "tipo": "video",
+  "texto": "Después, Laswell le pregunta dónde está Makarov. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 990.43,
+  "t1": 1000.45,
+  "tipo": "video",
+  "texto": "Fuera de la lista. Dos Makarov, dos finales, y el mismo hombre cerrando el expediente: John Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 1000.45,
+  "t1": 1006.406,
+  "tipo": "video",
+  "texto": "Expediente cerrado. Veinte villanos, y casi ninguno murió como lo recuerdas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1006.406,
+  "t1": 1019.082,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen, y se toman en cuenta para el siguiente expediente. Como el de Prophet, que encontró la entrevista donde el animador de Modern Warfare 3 cuenta que el hombre de la sombra era él mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1019.082,
+  "t1": 1026.902,
+  "tipo": "video",
+  "texto": "O el de Daan, al que el cartel de Standoff le hizo wah. O el de almidon, que recuerda la misión de Chernóbil en cooperativo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1026.902,
+  "t1": 1036.449,
+  "tipo": "video",
+  "texto": "Ese, para la parte tres de los efectos Mandela. Y v5x777 aclaró que la voz sonaba forzada en los momentos tristes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1036.449,
+  "t1": 1041.389,
+  "tipo": "video",
+  "texto": "Tenías razón. Este expediente va sin drama. Ahora te toca a ti:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1041.389,
+  "t1": 1051.25,
+  "tipo": "video",
+  "texto": "¿qué villano de Call of Duty merece su propio expediente? Escríbelo. Suscríbete. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

@@ -993,6 +993,14 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 - **Recreaciones Flow** (regla del 5-nov) con helper `recre()` en efectos.py: pantalla completa + ficha + marca «RECREACIÓN»; y `promesas.md` antes del render (147 promesas, 18 arregladas).
 - 25 min con Hope ≈ 3 650 palabras. `_bordes.py` suelta memoria por FX (MemoryError con 300+ FX).
 
+### Lecciones de `cod_villanos` (17-nov-2026, 122 beats, 17:31, «Cómo murió REALMENTE cada villano de Call of Duty», Expediente 141)
+- **`video --rehacer` en SECUENCIA re-renderiza el video ENTERO** (no hay `segmentos/`): cada «tramo» tardó ~25 min. Para corregir varios encimados, un solo `video` completo.
+- **Bucle de etapas en segundo plano = cortar al primer error** (`|| exit`; plantilla `videos/cod_villanos/_render_final.sh`, que además espera con `esperar_libre.py`). Un `video` que cayó por RAM borró `video_sin_audio.mp4` y el `final` siguiente pisó el MASTER bueno con 73 s de video.
+- **`bajar` sigue truncando los clips con `ambiente_por`** (4 de 7 citas: la del teléfono de Al-Asad, 2,8 s para un beat de 12 s). Tras `bajar`, comparar duración de cada clip con su beat y rehacer los cortos con `dl_amb.py` (copiado al video; el formato de video ahora cae a `bv*[height<=1080]` si no hay 720-1080 en avc1). Y `ambiente_por` va ANTES de `bajar` (si no, bajan sin audio).
+- **Al alargar una cita, mirar la COLA** (`previews/citas_cola.jpg`): el tramo nuevo puede llegar al disparo. Aquí no: Al-Asad sigue sentado al final del beat.
+- **Promesas: medir el SEGUNDO de cada una con el timeline** (`ancla()` sobre `timeline.json`) y sacar 5 cuadros desde ahí; la hoja con el «s» aproximado de `promesas.md` dio 6 falsos ✓. Fallaban porque el clip era de la misión correcta pero del MOMENTO equivocado (Endgame en la tormenta en vez de la cascada, Dust to Dust en el helicóptero en vez del cristal, One Shot One Kill en la huida en vez de la mira). Arreglo: bajar 360p del video fuente, hoja cada 3-5 s y `bajar N --url … --desde` al segundo exacto. Si el momento trae algo que no se enseña (el cuerpo colgado de Makarov), recorte con ffmpeg a la zona que sí (el encendedor).
+- **MG nuevos de `mg_cod`:** `C.acta` (acta de defunción con foto, causa, filas y sello por estado) y `C.bajas` (tablero de villanos por saga que se van tachando). El helper `acta()` de `efectos.py` calcula sus marcas desde su ancla (una fila cada 0,45 s), así el sello nunca cae fuera del tramo; el acta empieza en una frase POSTERIOR a la de la ficha/espejo anterior para no encimarse (hoja final: acta de Irons sobre «Artificial»).
+
 ## SONIDO ORIGINAL del juego (el usuario, 26-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
 «Cuando sea necesario mete sonidos de Zelda original y música… cuando salen partes donde conviene escuchar la música, o los gritos
 de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa Caída.» Primer uso: `videos/oot_remake_cambios/`.

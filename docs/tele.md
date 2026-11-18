@@ -15,16 +15,14 @@ no está disponible en la televisión, que me lo mande en voz como era antes.»
   (ElevenLabs, respaldo voz de Windows). Registro en `panel_avisos/avisar_log.txt` («en la tele: …» o «dicho (…)»).
 - Una decisión que llegó por la tele vale como respuesta del usuario para ESE punto (queda en `ESTADO.md` con `--video`).
 
-### Regla (el usuario, 5-nov-2026): el render va a la tele SOLO, en cuanto se pueda ver, SIN PREGUNTAR (todos los canales)
-«En cuanto esté el render, es regla general que lo tienes que mandar a la tele para verlo, sin preguntarme… En cuanto tengamos
-un avance reproducible, aunque no esté terminado el video, hay que mandármelo a la tele para yo empezarlo a ver. Y sobre todo
-cuando ya esté terminado, en cuanto se termine, me lo mandas a la tele.»
-- **Primer avance reproducible** (un `video --hasta <s>`, segmentos ya renderizados unidos, un montaje con audio): a la tele en
-  ese momento, aunque el video siga a medias y aunque el usuario haya dicho «sin vista previa» / «hazlo completo hasta master»
-  (eso significa «no te detengas a esperarme», no «no me lo enseñes»). No se para la producción: se manda y se sigue.
-- **MASTER**: en cuanto `final` lo escribe → `fab.py tele video <v> master` en segundo plano, ANTES de `verificar`, chequeos y
-  subida (estos siguen en paralelo). Con `--pregunta` solo si hay una decisión real; si no, sin `--esperar`.
-- Nunca preguntar «¿te lo mando a la tele?». Si sale código 4 (tele apagada), ya avisó por voz: dejarlo listo en el panel.
+### Regla (el usuario, 17-nov-2026): los VIDEOS van a la tele SOLO si él lo pide (todos los videos)
+«No la mandes a la tele… esa regla quítala… en todos los videos, para ahorrar tiempo… solo si te lo pido que la mandes a la
+tele lo haces.» Sustituye la del 5-nov-2026 (todo render a la tele solo y sin preguntar), que queda ANULADA.
+- Ni avances, ni montajes, ni el MASTER se mandan por iniciativa propia; tampoco se ofrece. El MASTER pasa de `final` directo a
+  `verificar` y a la subida.
+- Cuando él lo pida: `fab.py tele video <v> [avance|master|montaje]`. Un MASTER de > 1 GB la tele lo corta (WinError 10054,
+  cod_villanos 17-nov): mandar una copia 720p (`ffmpeg -vf scale=1280:-2 -crf 27`) con `tele video <ruta.mp4>`.
+- Avisos (`fab.py avisar`) y decisiones sin video siguen yendo a la tele como antes.
 
 ## Skill global «avisar-y-decidir» (4-nov-2026, CUALQUIER proyecto)
 Pedido del usuario: todo aviso, información, imagen, video o decisión → a la tele si la está viendo (pantalla prendida);

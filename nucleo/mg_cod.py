@@ -22,6 +22,11 @@ La interfaz aquí es la del reboot de Modern Warfare (2019-2026):
                                       con su imagen se acercan (marca 0, marca 1), chocan con un fallo de señal (marca 2) y queda
                                       una sola tarjeta «TU MEMORIA» con el recuerdo mezclado tachado en rojo
   pegatina(ruta, titulo, tam)         imagen REAL con borde blanco; nombre en placa táctica con filo ámbar
+  acta(nombre, foto, filas, estado)   (17-nov-2026, cod_villanos) ACTA DE DEFUNCIÓN: retrato con la cara visible + filas
+                                      (CAUSA/AUTOR/LUGAR…) una por marca; la marca n+1 estampa «MUERTE CONFIRMADA» (X roja, retrato
+                                      a B/N) | «SOBREVIVIÓ» | «DEPENDE DEL FINAL» | «SIN CUERPO»
+  bajas(sagas, tachados, foco)        (17-nov-2026) TABLERO DE BAJAS por saga: retratos en columnas; los ya muertos en B/N con
+                                      X; el `foco` en ámbar recibe su X en la marca 0 (abre cada puesto de una lista de villanos)
 Probar SIEMPRE con una hoja de cuadros antes de `fx`.
 """
 import math
@@ -829,5 +834,170 @@ def fusion(izq, der, resultado, titulo="ASÍ SE FABRICA UN EFECTO MANDELA", w=15
                     d.line([(x0 + 50, y0 + 172), (x1, y0 + 128)], fill=ROJO + (240,), width=9)
                     if z >= 1:
                         _txt(d, (x0 + bw / 2, y0 + bh - 44), "NUNCA PASÓ", fM, ROJO, "mm", 255, track=6)
+        return _salida(im, dt, dur)
+    return fn
+
+
+# ------------------------------------------------------------------ 17-nov-2026 (cod_villanos): MG de VILLANOS
+def _retrato(ruta, lado, bn=False):
+    """Retrato cuadrado con la CARA visible: recorta por arriba (las fichas de la wiki son de cuerpo entero)."""
+    im = Image.open(ruta).convert("RGBA")
+    w, h = im.size
+    if h > w * 1.05:
+        im = im.crop((0, 0, w, int(w * 1.05)))
+    elif w > h * 1.3:
+        c = (w - int(h * 1.2)) // 2
+        im = im.crop((c, 0, c + int(h * 1.2), h))
+    fondo = Image.new("RGBA", im.size, OSCURO + (255,))
+    fondo.alpha_composite(im)
+    fondo = fondo.resize((lado, max(1, int(lado * fondo.height / fondo.width))), Image.LANCZOS)
+    if fondo.height > lado:
+        fondo = fondo.crop((0, 0, lado, lado))
+    elif fondo.height < lado:
+        lien = Image.new("RGBA", (lado, lado), OSCURO + (255,))
+        lien.alpha_composite(fondo, (0, (lado - fondo.height) // 2))
+        fondo = lien
+    if bn:
+        g = fondo.convert("L").convert("RGBA")
+        fondo = Image.blend(fondo, g, .85)
+    return fondo
+
+
+def acta(nombre, foto, filas, estado="confirmado", sub=None, cabecera="INFORME FORENSE / EXPEDIENTE 141", w=1180):
+    """ACTA DE DEFUNCIÓN del villano: retrato a la izquierda (cara visible) y filas de datos que se escriben una por marca
+    (`filas` = [(«CAUSA», «Disparo a la cabeza»), («AUTOR», «Soap MacTavish»), …]). La marca n+1 (tras la última fila)
+    estampa el sello: estado = "confirmado" (rojo, «MUERTE CONFIRMADA», X sobre el retrato, que pasa a B/N) |
+    "sobrevivio" (ámbar, «SOBREVIVIÓ») | "depende" (ámbar, «DEPENDE DEL FINAL») | "sin_cuerpo" (gris, «SIN CUERPO»).
+    `sub` sale bajo el retrato tras el sello. Sin marcas: una fila cada 0,6 s desde 0,5 s."""
+    col, rot = {"confirmado": (ROJO, "MUERTE CONFIRMADA"), "sobrevivio": (AMBAR, "SOBREVIVIÓ"),
+                "depende": (AMBAR, "DEPENDE DEL FINAL"), "sin_cuerpo": (GRIS, "SIN CUERPO")}[estado]
+    R = 330
+    ret_bn = _retrato(foto, R, bn=True)
+    ret = _retrato(foto, R)
+    in_x = R + 90
+    in_w = w - in_x - 50
+    filas = [(k.upper(), v) for k, v in filas]
+    fK = fuente("mb", 22)
+    fV = [ajustar(v, "b", 38, in_w - 10, minimo=20, peso="SemiBold Condensed") for _, v in filas]
+    fN = ajustar(nombre.upper(), "b", 62, in_w, peso="Bold Condensed")
+    fC = fuente("mb", 22)
+    fs2 = ajustar(sub or "", "mb", 24, R + 40, minimo=14)
+    filah = 74
+    h = max(R + 150, 170 + filah * len(filas) + 110)
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.66)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220)
+        _txt(d, (M + 40, M + 36), cabecera, fC, GRIS, "lm", 230, track=2)
+        n = len(filas)
+        mk = list(marcas or [])
+        while len(mk) < n + 1:
+            mk.append((mk[-1] + .6) if mk else .5)
+        t_sello = mk[n]
+        sellado = dt >= t_sello
+        u = _eo(dt / .35)
+        rx, ry = M + 40, M + 74
+        if u > 0:
+            rr = (ret_bn if (sellado and estado == "confirmado") else ret).copy()
+            rr.putalpha(rr.getchannel("A").point(lambda v: int(v * u)))
+            im.alpha_composite(rr, (rx, ry))
+            d.rectangle((rx, ry, rx + R, ry + R), outline=BLANCO + (int(200 * u),), width=3)
+        _txt(d, (M + in_x, M + 100), nombre.upper(), fN, BLANCO, "lm", 255 * _eo((dt - .15) / .3), track=1)
+        k = _eo((dt - .3) / .4)
+        d.line([(M + in_x, M + 142), (M + in_x + in_w * k, M + 142)], fill=AMBAR + (200,), width=2)
+        y = M + 160 + filah / 2
+        for i, ((clave, val), fv) in enumerate(zip(filas, fV)):
+            t0 = mk[i]
+            if dt >= t0:
+                a = _eo((dt - t0) / .25)
+                _txt(d, (M + in_x, y - 18), clave, fK, AMBAR, "lm", 255 * a, track=3)
+                vis = val[:int(max(0, (dt - t0) * 60))]
+                _txt(d, (M + in_x, y + 14), vis + ("_" if _cursor(dt) and len(vis) < len(val) else ""), fv, HUESO, "lm", 255)
+            y += filah
+        if sellado:
+            u = dt - t_sello
+            if estado == "confirmado":                       # X roja sobre el retrato
+                for j, t_ in enumerate((0.0, .12)):
+                    z = _eo((u - t_) / .25)
+                    if z <= 0:
+                        continue
+                    if j == 0:
+                        d.line([(rx + 20, ry + 20), (rx + 20 + (R - 40) * z, ry + 20 + (R - 40) * z)], fill=ROJO + (235,), width=14)
+                    else:
+                        d.line([(rx + R - 20, ry + 20), (rx + R - 20 - (R - 40) * z, ry + 20 + (R - 40) * z)],
+                               fill=ROJO + (235,), width=14)
+            s = 1.5 - .5 * _eo(u / .18)
+            f = fuente("b", int(60 * s), "Bold Condensed")
+            f1 = fuente("b", 60, "Bold Condensed")
+            tw = _ancho(rot, f1) + 70
+            sy = M + h - 66
+            sx = min(M + in_x + tw / 2, M + w - 30 - tw / 2)
+            a = 255 * _eo(u / .12)
+            d.rectangle((sx - tw / 2, sy - 42, sx + tw / 2, sy + 42), outline=col + (int(a),), width=5)
+            _txt(d, (sx, sy), rot, f, col, "mm", a, track=3)
+            if sub and u > .3:
+                vis = sub[:int((u - .3) * 55)]
+                _txt(d, (rx + R / 2, ry + R + 32), vis, fs2, col, "mm", 240)
+        return _salida(im, dt, dur)
+    return fn
+
+
+def bajas(sagas, tachados=(), foco=None, titulo="LISTA DE OBJETIVOS", w=1700, lado=150):
+    """TABLERO DE BAJAS por saga (el «árbol» de villanos): columnas = sagas [(«MODERN WARFARE», [(ruta, nombre), …]), …],
+    retratos en B/N con X roja los ya `tachados`, a color los vivos. `foco` = nombre resaltado en ámbar que, en la
+    marca 0 (o a los 1,2 s), recibe su X roja con un golpe. Sirve para el gancho (foco=None) y para abrir cada puesto."""
+    tach = set(tachados)
+    fT = ajustar(titulo.upper(), "b", 46, w - 120, peso="Bold Condensed")
+    fS = fuente("mb", 22)
+    cols = []
+    for nom_saga, fotos in sagas:
+        cols.append((nom_saga, [(n, _retrato(r, lado), _retrato(r, lado, bn=True)) for r, n in fotos]))
+    gap = 22
+    colw = (w - 80) / len(cols)
+    per_fila = max(1, int((colw - 10) // (lado + gap)))
+    filas = max(-(-len(c[1]) // per_fila) for c in cols)
+    fnom = ajustar("X" * 13, "b", 24, lado + gap - 4, minimo=14, peso="SemiBold Condensed")
+    h = int(130 + filas * (lado + 56) + 30)
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.62)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220)
+        _txt(d, (M + w / 2, M + 44), titulo.upper(), fT, BLANCO, "mm", 255, track=3)
+        t_foco = (list(marcas)[0] if marcas else 1.2)
+        k_ent = 0
+        for ci, (nom_saga, fotos) in enumerate(cols):
+            x0 = M + 40 + ci * colw
+            _txt(d, (x0 + colw / 2, M + 98), nom_saga.upper(), fS, AMBAR, "mm", 255, track=3)
+            if ci:
+                d.line([(x0, M + 90), (x0, M + h - 30)], fill=(255, 255, 255, 40), width=1)
+            for j, (nom, rc, rb) in enumerate(fotos):
+                fi, cj = divmod(j, per_fila)
+                en_fila = min(per_fila, len(fotos) - fi * per_fila)
+                cx = x0 + colw / 2 + (cj - (en_fila - 1) / 2) * (lado + gap)
+                y = int(M + 125 + fi * (lado + 56))
+                u = _eo((dt - .06 * k_ent) / .3)
+                k_ent += 1
+                if u <= 0:
+                    continue
+                es_foco = (nom == foco)
+                muerto = nom in tach or (es_foco and dt >= t_foco)
+                r = (rb if muerto else rc).copy()
+                r.putalpha(r.getchannel("A").point(lambda v: int(v * u)))
+                xx = int(cx - lado / 2)
+                im.alpha_composite(r, (xx, y))
+                colm = AMBAR if es_foco else (GRIS if muerto else BLANCO)
+                d.rectangle((xx, y, xx + lado, y + lado), outline=colm + (int(230 * u),), width=5 if es_foco else 2)
+                fN = ajustar(nom.upper(), "b", 24, lado + gap - 4, minimo=14, peso="SemiBold Condensed")
+                _txt(d, (cx, y + lado + 20), nom.upper(), fN, colm, "mm", 255 * u)
+                if muerto:
+                    z = 1.0 if nom in tach else _eo((dt - t_foco) / .22)
+                    m = 14
+                    d.line([(xx + m, y + m), (xx + m + (lado - 2 * m) * z, y + m + (lado - 2 * m) * z)], fill=ROJO + (235,), width=9)
+                    d.line([(xx + lado - m, y + m), (xx + lado - m - (lado - 2 * m) * z, y + m + (lado - 2 * m) * z)],
+                           fill=ROJO + (235,), width=9)
+                    if es_foco and nom not in tach and dt - t_foco < .2:
+                        d.rectangle((xx - 8, y - 8, xx + lado + 8, y + lado + 8), outline=ROJO + (200,), width=6)
         return _salida(im, dt, dur)
     return fn

@@ -1,0 +1,786 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.203,
+  "tipo": "video",
+  "texto": "Buenos días, Yermo. Aquí Radio Yermo, transmitiendo desde lo que queda de la Commonwealth. Hoy, un servicio a la comunidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.203,
+  "t1": 15.337,
+  "tipo": "video",
+  "texto": "Las quince cosas que nunca, jamás, debes hacer en Fallout cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.337,
+  "t1": 25.147,
+  "tipo": "video",
+  "texto": "Un niño del Refugio ochenta y uno que muere por diez puntos de vida. Una servoarmadura que se queda en el fondo de un pozo para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.147,
+  "t1": 35.281,
+  "tipo": "video",
+  "texto": "Un viejo con corona encerrado desde mil ochocientos noventa y ocho, y un pueblo entero que desaparece en la niebla por un código en una terminal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.281,
+  "t1": 42.761,
+  "tipo": "video",
+  "texto": "Todo comprobado en el juego. Y el número uno no tiene arreglo: quédate hasta el final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.761,
+  "t1": 50.779,
+  "tipo": "video",
+  "texto": "Número quince. Dejar a un enemigo legendario a medias. Ves la estrella junto al nombre, le pegas fuerte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.779,
+  "t1": 60.939,
+  "tipo": "video",
+  "texto": "le bajas más de la mitad de la vida y piensas que ya casi está. Error. En cuanto un golpe lo deja por debajo del cincuenta por ciento sin matarlo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.939,
+  "t1": 68.688,
+  "tipo": "video",
+  "texto": "muta. Recupera toda la vida y se envuelve en un aura. Si es una criatura, pega el doble.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.688,
+  "t1": 77.807,
+  "tipo": "video",
+  "texto": "Si es humano o supermutante, más daño y puntería perfecta. Solo pasa una vez, pero esa vez duele.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.807,
+  "t1": 86.046,
+  "tipo": "video",
+  "texto": "Lo correcto es guardar el golpe gordo para después de la mutación. Primero lo provocas, luego lo rematas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.046,
+  "t1": 94.065,
+  "tipo": "video",
+  "texto": "Es como gastar todas las balas en el primer acto. El segundo acto también existe. Número catorce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.065,
+  "t1": 105.48,
+  "tipo": "video",
+  "texto": "Entrar al Mar Resplandeciente sin protección. El suroeste de la Commonwealth es un desierto verde, con tormentas radiactivas casi constantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.48,
+  "t1": 113.11,
+  "tipo": "video",
+  "texto": "En Fallout cuatro, cada diez rads te quitan un uno por ciento de tu vida máxima, y esa vida no vuelve sola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 113.11,
+  "t1": 120.59,
+  "tipo": "video",
+  "texto": "Con mil rads, mueres. Un personaje de nivel bajo o medio, sin traje ni servoarmadura,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.59,
+  "t1": 129.676,
+  "tipo": "video",
+  "texto": "dura menos de dos minutos ahí dentro. Y en el centro del Cráter del Átomo la radiación llega a trescientos rads por segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.676,
+  "t1": 137.141,
+  "tipo": "video",
+  "texto": "Lleva un traje Hazmat o servoarmadura, Rad-X antes de entrar y RadAway en el bolsillo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.141,
+  "t1": 148.449,
+  "tipo": "video",
+  "texto": "El mar brilla. Tú también vas a brillar. Una sola vez. Número trece. Dejar que el supermutante suicida llegue hasta ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 148.449,
+  "t1": 154.525,
+  "tipo": "video",
+  "texto": "Es un supermutante que viene corriendo hacia ti con una minibomba encendida en la mano derecha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.525,
+  "t1": 163.725,
+  "tipo": "video",
+  "texto": "Si detona, son cuatrocientos cincuenta de daño de golpe. De cerca, sin servoarmadura, es casi imposible sobrevivir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.725,
+  "t1": 170.425,
+  "tipo": "video",
+  "texto": "La salida es dispararle al brazo de la bomba cuando todavía está lejos, para que reviente él solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.425,
+  "t1": 180.904,
+  "tipo": "video",
+  "texto": "Y si lo matas sin tocar el brazo, la minibomba es tuya. En el hospital de Medford te espera uno en la entrada y otro sentado en el vestíbulo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.904,
+  "t1": 190.43,
+  "tipo": "video",
+  "texto": "Y sí, hay un logro por dejar que uno te mate, y ese logro, que se llama Touchdown, te premia hasta por morir mal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 190.43,
+  "t1": 196.595,
+  "tipo": "video",
+  "texto": "Número doce. Caer desde lo alto con servoarmadura junto a gente amiga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.595,
+  "t1": 205.192,
+  "tipo": "video",
+  "texto": "La servoarmadura anula todo el daño por caída. Puedes saltar desde un edificio y aterrizar como un héroe de película.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.192,
+  "t1": 216.589,
+  "tipo": "video",
+  "texto": "El problema es el aterrizaje. El impacto daña mucho a quien esté cerca, amigo o neutral, y ese personaje, o toda su facción, se vuelve hostil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.589,
+  "t1": 223.874,
+  "tipo": "video",
+  "texto": "Y a tus compañeros la servoarmadura no los protege de la caída. Ellos sí se rompen las piernas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.874,
+  "t1": 232.93,
+  "tipo": "video",
+  "texto": "Aterrizaje heroico, tres tenderos muertos y una ciudad entera disparándote. Bienvenido a Diamond City.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.93,
+  "t1": 238.34,
+  "tipo": "video",
+  "texto": "Número once. Guardar tus cosas en un baúl que no es tuyo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 238.34,
+  "t1": 249.104,
+  "tipo": "video",
+  "texto": "Encuentras una caja fuerte en una casa abandonada y dejas ahí tu munición, tus armas y tu chatarra, porque total, por esa casa nunca pasa nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.104,
+  "t1": 258.194,
+  "tipo": "video",
+  "texto": "Pues los objetos que dejas en un contenedor fuera de tus asentamientos desaparecen con el tiempo. El juego reinicia esas cajas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.194,
+  "t1": 265.091,
+  "tipo": "video",
+  "texto": "Solo están a salvo los contenedores de los asentamientos que controlas, como el taller de Sanctuary Hills.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.091,
+  "t1": 275.593,
+  "tipo": "video",
+  "texto": "El Yermo no roba. El Yermo hace limpieza. Número diez. Recoger un cabezón de Vault-Tec antes de tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.593,
+  "t1": 285.135,
+  "tipo": "video",
+  "texto": "Hay un cabezón por cada atributo de S.P.E.C.I.A.L., fuerza, percepción, resistencia y el resto, y cada uno te sube un punto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 285.135,
+  "t1": 292.779,
+  "tipo": "video",
+  "texto": "Si recoges el cabezón cuando ya tienes ese atributo en diez, sube a once. Por encima del máximo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.779,
+  "t1": 300.059,
+  "tipo": "video",
+  "texto": "Pero si lo recoges antes, cuenta como una subida normal, y luego ya no puedes llevar ese atributo por encima de diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.059,
+  "t1": 309.242,
+  "tipo": "video",
+  "texto": "El once lo perdiste. El de fuerza, por ejemplo, está en el edificio de Mass Fusion, sobre la cabeza de una estatua de metal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.242,
+  "t1": 320.421,
+  "tipo": "video",
+  "texto": "cinco pisos por encima del mostrador. Un muñequito de plástico que castiga la impaciencia, una idea muy propia de la empresa de los refugios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.421,
+  "t1": 325.977,
+  "tipo": "video",
+  "texto": "Número nueve. Darle a la vidente, Mamá Murphy, su quinta dosis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 325.977,
+  "t1": 333.614,
+  "tipo": "video",
+  "texto": "Mamá Murphy vive en Sanctuary Hills, en su sillón, y a cambio de drogas tiene visiones de tu futuro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 333.614,
+  "t1": 346.285,
+  "tipo": "video",
+  "texto": "Y funcionan: te da la contraseña de la banda de Skinny Malone, te dice dónde está la llave de Kellogg y hasta te da una ventaja, porque en la pelea Kellogg te hace un veinticinco por ciento menos de daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 346.285,
+  "t1": 354.685,
+  "tipo": "video",
+  "texto": "Pero solo tiene cinco visiones. La quinta dosis es una sobredosis, y Mamá Murphy muere en su sillón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 354.685,
+  "t1": 359.693,
+  "tipo": "video",
+  "texto": "Los colonos de Sanctuary se juntan a llorarla. Hay otra salida:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 359.693,
+  "t1": 367.15,
+  "tipo": "video",
+  "texto": "dos pruebas difíciles de carisma para convencerla de que lo deje. Pierde la visión, pero vive.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.15,
+  "t1": 378.452,
+  "tipo": "video",
+  "texto": "La única vidente del Yermo y no vio venir la quinta dosis. Número ocho. Dejar la servoarmadura con el núcleo de fusión puesto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.452,
+  "t1": 385.897,
+  "tipo": "video",
+  "texto": "Aparcas tu armadura en el asentamiento, te vas de viaje y vuelves. Y la armadura no está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.897,
+  "t1": 398.196,
+  "tipo": "video",
+  "texto": "Los colonos y los compañeros se llevan cualquier servoarmadura que tenga un núcleo puesto. La usan en los ataques de saqueadores y luego la dejan donde se acuestan o donde hacen guardia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 398.196,
+  "t1": 403.916,
+  "tipo": "video",
+  "texto": "La estación de servoarmadura solo frena a los colonos ociosos. Y un colono con láser",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.916,
+  "t1": 412.778,
+  "tipo": "video",
+  "texto": "Gatling le saca el núcleo a su propia arma para meterse en tu armadura. La regla es sencilla: al bajarte, saca el núcleo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.778,
+  "t1": 422.93,
+  "tipo": "video",
+  "texto": "Sin núcleo, nadie la mueve. Comunismo de asentamiento. Lo tuyo es de todos, sobre todo si tiene batería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 422.93,
+  "t1": 427.478,
+  "tipo": "video",
+  "texto": "Número siete. Matar a Sinjin de un disparo furtivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 427.478,
+  "t1": 437.037,
+  "tipo": "video",
+  "texto": "En la misión de la Mortaja Plateada, en Goodneighbor, el saqueador Sinjin secuestra a Kent Connolly y te espera en el hospital Milton General.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.037,
+  "t1": 449.317,
+  "tipo": "video",
+  "texto": "Lo lógico es esconderte y darle un tiro a la cabeza. Y es lo peor que puedes hacer: si matas a Sinjin con un disparo furtivo, sus saqueadores se giran y matan a Kent.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 449.317,
+  "t1": 457.177,
+  "tipo": "video",
+  "texto": "Si Sinjin te descubre y lo pierdes de vista, también lo mata. Salvarlo a tiros es casi imposible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 457.177,
+  "t1": 464.487,
+  "tipo": "video",
+  "texto": "La salida segura es intimidarlo con carisma, o entrar en V.A.T.S. Si Kent muere,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.487,
+  "t1": 472.068,
+  "tipo": "video",
+  "texto": "pierdes las tres mejoras del traje y su radio se apaga. El héroe de la radio, con la radio apagada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.068,
+  "t1": 480.903,
+  "tipo": "video",
+  "texto": "Eso sí que no lo perdono. Número seis. Volar el Instituto sin dar la orden de evacuación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.903,
+  "t1": 491.379,
+  "tipo": "video",
+  "texto": "En la misión final, La opción nuclear, hay un objetivo opcional que mucha gente se salta: dar la orden de evacuación desde la terminal del director.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.379,
+  "t1": 496.86,
+  "tipo": "video",
+  "texto": "Si no lo haces, todos los que siguen dentro mueren con la explosión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 496.86,
+  "t1": 506.876,
+  "tipo": "video",
+  "texto": "Y la próxima vez que te vea el Ferrocarril, toda la facción se vuelve hostil. Preston te reprocha haber bajado a los Minutemen al nivel del Instituto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.876,
+  "t1": 515.43,
+  "tipo": "video",
+  "texto": "Por un objetivo opcional pierdes una facción entera, así que lee la lista de tareas, que para eso está.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 515.43,
+  "t1": 526.38,
+  "tipo": "video",
+  "texto": "Número cinco. Quedarte la cura del Refugio ochenta y uno. En la sección secreta del Refugio ochenta y uno te muerde una rata topo y te contagias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 526.38,
+  "t1": 531.775,
+  "tipo": "video",
+  "texto": "Al mismo tiempo, un niño, Austin, se está muriendo de lo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 531.775,
+  "t1": 541.425,
+  "tipo": "video",
+  "texto": "Curie solo puede hacer una dosis de la cura. Una. Si no se la das a Austin, Austin muere, y todo el refugio te culpa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.425,
+  "t1": 549.982,
+  "tipo": "video",
+  "texto": "Le ponen un pequeño memorial en el aula: una vela, un cochecito, un guante de béisbol y un osito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 549.982,
+  "t1": 558.692,
+  "tipo": "video",
+  "texto": "Pierdes el rifle de jeringas y tu habitación en el refugio. ¿Y qué te curaste? Diez puntos de vida máxima. Diez puntos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.692,
+  "t1": 567.21,
+  "tipo": "video",
+  "texto": "Hay estimulantes que curan más que eso. Una pausa en la transmisión. Radio Yermo acaba de encender la antena,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.21,
+  "t1": 574.859,
+  "tipo": "video",
+  "texto": "y cada suscripción es un watt más de señal. Si te está sirviendo, suscríbete y activa la campana,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 574.859,
+  "t1": 584.072,
+  "tipo": "video",
+  "texto": "porque todavía quedan cuatro puestos y los que vienen duelen mucho más. Número cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.072,
+  "t1": 596.105,
+  "tipo": "video",
+  "texto": "Hacerte jefe de los saqueadores de Nuka-World. Nuka-World te ofrece ser el jefe de sus bandas de saqueadores, y luego te pide conquistar asentamientos en la Commonwealth.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 596.105,
+  "t1": 602.675,
+  "tipo": "video",
+  "texto": "En cuanto montas tu primer puesto de saqueadores, Preston Garvey pasa a odiarte en ese mismo instante,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.675,
+  "t1": 610.611,
+  "tipo": "video",
+  "texto": "aunque tengas su afinidad al máximo. Deja de trabajar contigo, y aunque luego te vuelvas contra los saqueadores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 610.611,
+  "t1": 619.935,
+  "tipo": "video",
+  "texto": "su confianza se pierde para siempre. Y el hombre que te mandaba a defender cada asentamiento de la Commonwealth por fin deja de pedírtelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 619.935,
+  "t1": 629.392,
+  "tipo": "video",
+  "texto": "Era la única forma. Número tres. Bajar con servoarmadura al pozo inundado de Dunwich Borers.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 629.392,
+  "t1": 636.032,
+  "tipo": "video",
+  "texto": "Al fondo de la cantera, en el noreste del mapa, hay un pozo inundado, y en un túnel bajo el agua",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.032,
+  "t1": 644.689,
+  "tipo": "video",
+  "texto": "está el Diente de Kremvh, un arma única, junto a dos minibombas en un altar. Con servoarmadura no puedes nadar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.689,
+  "t1": 652.918,
+  "tipo": "video",
+  "texto": "Te hundes y caminas por el fondo. Y las paredes del pozo son verticales: no hay forma de subir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.918,
+  "t1": 661.818,
+  "tipo": "video",
+  "texto": "Tienes que salirte de la armadura bajo el agua, y el armazón se queda ahí para siempre. Solo lo recuperas si un compañero se mete dentro",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 661.818,
+  "t1": 672.021,
+  "tipo": "video",
+  "texto": "y luego viajas rápido, o cargando la partida. Y aunque el casco te deja respirar unos minutos bajo el agua, después te ahogas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.021,
+  "t1": 679.21,
+  "tipo": "video",
+  "texto": "Un arma por una servoarmadura. Negocio redondo para el pozo. Número dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.21,
+  "t1": 687.924,
+  "tipo": "video",
+  "texto": "Liberar a Lorenzo Cabot. En el sótano del Manicomio Estatal Parsons hay un hombre encerrado por su propio hijo desde",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.924,
+  "t1": 696.429,
+  "tipo": "video",
+  "texto": "mil ochocientos noventa y ocho. Lorenzo Cabot, con una corona en la cabeza y poderes que desvían granadas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.429,
+  "t1": 702.749,
+  "tipo": "video",
+  "texto": "Jack Cabot te pide activar cuatro interruptores para inundar la celda con radiación y acabar con él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 702.749,
+  "t1": 712.2,
+  "tipo": "video",
+  "texto": "Si en vez de eso abres la puerta y te pones de su lado, Lorenzo va a la Casa Cabot y mata a Jack, a Wilhelmina y a Emogene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 712.2,
+  "t1": 721.02,
+  "tipo": "video",
+  "texto": "A cambio te promete suero misterioso de por vida: más fuerza, más resistencia y menos radiación durante una hora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 721.02,
+  "t1": 732.016,
+  "tipo": "video",
+  "texto": "Pero te da uno cada vez, y no se puede vender. Y pierdes para siempre el Artefacto de Lorenzo, el arma que Jack te da si haces lo correcto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.016,
+  "t1": 740.43,
+  "tipo": "video",
+  "texto": "Una familia entera por un suero que te dan de uno en uno. Ni el Instituto hace tratos tan malos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.43,
+  "t1": 746.021,
+  "tipo": "video",
+  "texto": "Número uno. Meter el código en la terminal del parque eólico de La Isla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.021,
+  "t1": 754.815,
+  "tipo": "video",
+  "texto": "En Far Harbor, el pueblo sobrevive gracias a los condensadores de niebla, que mantienen lejos la Niebla y a sus criaturas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 754.815,
+  "t1": 765.302,
+  "tipo": "video",
+  "texto": "En los recuerdos de DiMA está el código para apagar las turbinas del parque eólico, y Tektus, el líder de los Hijos del Átomo, quiere que lo uses.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 765.302,
+  "t1": 771.652,
+  "tipo": "video",
+  "texto": "Si lo metes, se corta la electricidad de los condensadores, y la Niebla se traga Far Harbor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 771.652,
+  "t1": 779.541,
+  "tipo": "video",
+  "texto": "El pueblo queda en ruinas y casi todos sus habitantes mueren. El Viejo Longfellow se vuelve tu enemigo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 779.541,
+  "t1": 792.066,
+  "tipo": "video",
+  "texto": "Fallan todas sus misiones, y la recompensa de los Hijos del Átomo es un objeto único y una ventaja. Un pueblo entero, por un objeto y una ventaja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 792.066,
+  "t1": 798.406,
+  "tipo": "video",
+  "texto": "Así se borra un pueblo entero en Fallout cuatro: con una sola línea de código,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 798.406,
+  "t1": 808.117,
+  "tipo": "video",
+  "texto": "y sin disparar ni una bala. Esas son las quince. Y ahora dime en los comentarios cuál de estas hiciste tú,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 808.117,
+  "t1": 816.043,
+  "tipo": "video",
+  "texto": "porque alguien dejó morir a Austin y alguien sigue buscando su servoarmadura en el fondo de un pozo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 816.043,
+  "t1": 825.303,
+  "tipo": "video",
+  "texto": "Todos los comentarios se leen, y los mejores salen en la próxima transmisión. Y si te gusta Skyrim, el canal hermano es Crónicas de Tamriel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 825.303,
+  "t1": 834.103,
+  "tipo": "video",
+  "texto": "Misma receta, otro fin del mundo. Esto fue Radio Yermo. Suscríbete, no salgas del refugio sin escucharnos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.103,
+  "t1": 842.5,
+  "tipo": "video",
+  "texto": "y recuerda: en el Yermo, el que no lee la lista de tareas, la repite.",
+  "clip_s": 8
+ }
+]

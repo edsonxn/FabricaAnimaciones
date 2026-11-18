@@ -13,7 +13,7 @@ Cada juego tiene su TEMA (trazo, marcadores, letra y título como en su propia i
             anillo que late; Garamond pergamino sobre banda negra difusa; título dorado entre dos filetes (rótulo de región).
   "tes"     puntos hueso con sombra; marcador de misión de Skyrim (triángulo invertido que flota) en la meta; Bahnschrift Condensed
             en MAYÚSCULAS espaciadas sobre humo negro; título con separadores de rombo (como mg_tes).
-  "fo"      (Fallout, Radio Yermo) base provisional: fósforo verde de Pip-Boy, rayas verdes, marcadores cuadrados; ajustar en el 1.er video.
+  "fo"      (Fallout, Radio Yermo) fósforo verde de Pip-Boy, rayas verdes, marcadores = escuadras de selección del mapa del Pip-Boy.
   "gaming"  (Nintendo/plataformas de Rare) bolitas miel que brotan con rebote como el mapa de un plataformas; pines de colores;
             Arial Rounded en píldora chocolate; título Cooper Black.
   "zelda"   (aventura de fantasía) puntos dorados, triángulo dorado en la meta, Engravers MT grabado sobre banda azul noche.
@@ -130,7 +130,7 @@ TEMAS = {
     "cod": dict(trazo="rayas", color=(246, 190, 52), borde=(14, 16, 18), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
                 texto=(244, 244, 238), contorno=None, titulo=("bahnschrift.ttf", 86, "Bold Condensed"),
                 subt=("bahnschrift.ttf", 36, "SemiBold Condensed"), tinte=(.80, .84, .80, .10), fondo=(10, 12, 12)),
-    # Fallout (Radio Yermo, alta 17-nov-2026): BASE PROVISIONAL en fósforo verde de Pip-Boy (rayas verdes, marcadores cuadrados
+    # Fallout (Radio Yermo, 17-nov-2026): fósforo verde de Pip-Boy sobre el mapa REAL del Pip-Boy (wiki, sin rejilla); marcadores = las cuatro ESCUADRAS de selección del mapa del juego (fo_nunca_f4)
     # como cod, letra condensada en mayúsculas). El 1.er video la ajusta a la interfaz REAL del Pip-Boy con capturas de referencia
     # (regla de oro 9: nada de memoria) y la documenta aquí.
     "fo": dict(trazo="rayas", color=(60, 255, 140), borde=(4, 16, 8), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
@@ -255,9 +255,25 @@ def _marcador(tema, tipo):
                 d.polygon(pts, fill=(255, 240, 120))
             else:
                 d.ellipse((c - 9, c - 61, c + 9, c - 43), fill=(255, 250, 235))
-        elif tema in ("cod", "fo"):
-            col = ({"meta": (226, 54, 46), "peligro": (226, 54, 46)} if tema == "cod" else
-                   {"meta": (190, 255, 210), "peligro": (255, 196, 60)}).get(tipo, T["color"])
+        elif tema == "fo":
+            # Pip-Boy (fo_nunca_f4, 17-nov-2026, de las capturas REALES del mapa de FO4 en la wiki: el lugar elegido va dentro de
+            # cuatro ESCUADRAS de fósforo, sin caja): escuadras + cuadrito central; meta más grande con doble escuadra; peligro ámbar.
+            col = {"meta": (190, 255, 210), "peligro": (255, 196, 60)}.get(tipo, T["color"])
+            r = 30 if tipo == "meta" else (24 if tipo == "inicio" else 18)
+            im.alpha_composite(_halo(26, col, 110), (int(c - 52), int(c - 52)))
+            L = max(9, r // 2)
+            for sx in (-1, 1):
+                for sy in (-1, 1):
+                    x0, y0 = c + sx * r, c + sy * r
+                    for w, cc in ((9, (4, 14, 8, 200)), (4, col)):
+                        d.line([(x0, y0), (x0 - sx * L, y0)], fill=cc, width=w)
+                        d.line([(x0, y0), (x0, y0 - sy * L)], fill=cc, width=w)
+            if tipo == "meta":
+                d.rectangle((c - r - 9, c - r - 9, c + r + 9, c + r + 9), outline=col + (90,), width=2)
+            d.rectangle((c - 7, c - 7, c + 7, c + 7), fill=(4, 14, 8, 220))
+            d.rectangle((c - 5, c - 5, c + 5, c + 5), fill=col)
+        elif tema == "cod":
+            col = {"meta": (226, 54, 46), "peligro": (226, 54, 46)}.get(tipo, T["color"])
             r = 20 if tipo in ("meta", "inicio") else 15
             im.alpha_composite(_halo(26, col, 120), (int(c - 52), int(c - 52)))
             d.rectangle((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=(10, 12, 12, 210))

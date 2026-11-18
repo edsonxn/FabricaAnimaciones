@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
 - canal: radio_yermo (2.º video) · hueco sáb 21-nov-2026 09:15 CDMX (horario = el de Tamriel desde hoy: 3 d, 09:15)
 - estilo: secuencia_yt (receta de Tamriel; regla de oro `videos/tes_secretos_40/`) · kit `nucleo/mg_fo.py` · voz el Profeta + filtro radio modo B (`VOZ_FX`, como `videos/fo_nunca_f4/guion.py`) · OST oficial de cada juego → doc: docs/estilo_secuencia_yt.md § Radio Yermo
-- etapa: SUBIDO XU_OkLlxV7o (programado dom 22-nov 09:15 CDMX) = reemplazo con las 13 ESCENAS IMPORTANTES con su clip real (`escenas.md`, `previews/escenas_01/02.jpg`). El viejo iyLkHK3mpoI quedó privado y SIN programación.
-- siguiente: BORRAR iyLkHK3mpoI en YouTube SOLO con el OK del usuario (pedido); luego `fab.py fo_refugios_25 limpiar` cuando él apruebe el video.
+- etapa: SUBIDO XU_OkLlxV7o (programado dom 22-nov 09:15 CDMX) = reemplazo con las 13 ESCENAS IMPORTANTES con su clip real (`escenas.md`, `previews/escenas_01/02.jpg`). El viejo iyLkHK3mpoI BORRADO de YouTube (OK del usuario, 18-nov).
+- siguiente: nada pendiente; `fab.py fo_refugios_25 limpiar` cuando él apruebe el video.
 
 ## Sesiones («continúa el video fo_refugios_25» retoma aquí · protocolo docs/sesiones.md)
 - alias: top 25 refugios, refugios malvados de Fallout · UNA sesión directo al MASTER (relevos por corte de 180k)

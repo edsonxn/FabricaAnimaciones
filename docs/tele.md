@@ -137,5 +137,5 @@ la tele se instala sola en ~15 s (`GET /estado` → `version` nueva). No actuali
   conexión por `adb mdns services`). Detalle: `D:\PuenteTV\obra\LEEME.md`.
 - **fps de «La obra» con el ocio de Flow (19-nov-2026, 15:40):** app `com.puente.obra` (`am start -S -n com.puente.obra/.MainActivity`,
   ADB `192.168.0.187:37341`), `dumpsys gfxinfo com.puente.obra` tras `reset` + 60 s: 2698 cuadros ≈ **45 fps**, 26 % con
-  tirones, p50 25 ms, p90 38 ms (GPU p50 10 ms). Antes de las hojas de ocio y las burbujas daba 54-55: revisar qué cuesta
+  tirones, p50 25 ms, p90 38 ms (GPU p50 10 ms). Los 54-55 de antes eran con UNA obra (ahora 2). Las burbujas no eran (49d59d0: pintadas una vez, sigue 45,7 fps, GPU p50 10 ms → CPU/compositor); revisar por bloques qué cuesta
   (tintas nuevas a canvas reducido, burbujas «z»/«…» con texto cada cuadro, 10 aldeanos y 2 obras en pantalla).

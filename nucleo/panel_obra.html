@@ -990,9 +990,9 @@ function moverMenu(d) { do { tmSel = (tmSel + d + tmItems.length) % tmItems.leng
 // ---- visor de recursos (opcional: solo se abre desde el menú)
 const encR = r => r.split('/').map(encodeURIComponent).join('/');
 const CATS = [
-  ['Pegatinas', g => /^pegatinas/.test(g)], ['Clips', g => g === 'medios'], ['Voces', null], ['Música', g => /^(audio|musica)(\/(?!_citas).*)?$/.test(g)],
+  ['Pegatinas', g => /^pegatinas/.test(g)], ['Clips', g => g === 'medios'], ['Previews', g => /^previews/.test(g) && !/^previews\/_v2$/.test(g)], ['Voces', null], ['Música', g => /^(audio|musica)(\/(?!_citas).*)?$/.test(g)],
   ['Citas', g => g === 'audio/_citas'], ['Efectos', g => /^sfx/.test(g)], ['Mapas', g => /^mapas/.test(g)], ['Fotos', g => /^(fotos|img|imagenes|retratos)/.test(g)],
-  ['Pruebas', g => /^previews/.test(g)], ['Entrega', g => g === 'salida' || /^miniatura/.test(g)]];
+  ['Entrega', g => g === 'salida' || /^miniatura/.test(g)]];   // y al final «Más»: todo lo visual que no cayó en otra pestaña
 async function abrirVisor(o) {
   cerrarMenu(); tmModo = 'visor';
   tv = {v: o.video, titulo: (o.d && o.d.titulo) || o.video, cats: [], ci: 0, sel: 0, enTabs: true, grande: false};
@@ -1005,14 +1005,14 @@ async function abrirVisor(o) {
     rec = a.ok ? await a.json() : null; gui = b.ok ? await b.json() : null;
   } catch (e) {}
   if (!tv || tv.v !== o.video) return;
-  const grupos = (rec && rec.grupos) || [];
+  const grupos = (rec && rec.grupos) || [], usados = new Set();
   for (const [nombre, prueba] of CATS) {
     const items = [];
     if (!prueba) {
       if (rec && rec.n_voz) for (const e of (gui && gui.escenas) || []) for (const f of e.frases || []) if (f.voz)
         items.push({t: 'a', r: 'voz/final/' + f.key + '.wav', n: String(f.texto || '').replace(/\[[^\]]*\]\s*/g, ''), b: 0, k: f.key});
     } else {
-      for (const g of grupos) if (prueba(g.id)) items.push(...g.items.filter(i => i.t !== 'x'));
+      for (const g of grupos) if (prueba(g.id)) { usados.add(g.id); items.push(...g.items.filter(i => i.t !== 'x')); }
     }
     if (items.length) tv.cats.push({nombre, items, lista: !prueba});
   }
@@ -1126,6 +1126,9 @@ if (MENU) {
   hud(); minimapa(); pausar();
   setInterval(cargarDatos, TELE ? 60000 : 30000);
 })();
+  const mas = [];                                                 // el resto de lo visual (Flow, respaldos, piezas…), sin la caché de miniaturas
+  for (const g of grupos) if (!usados.has(g.id) && !/(^|\/)_v2$/.test(g.id)) mas.push(...g.items.filter(i => i.t === 'i' || i.t === 'v'));
+  if (mas.length) tv.cats.push({nombre: 'Más', items: mas, lista: false});
 </script>
 </body>
 </html>

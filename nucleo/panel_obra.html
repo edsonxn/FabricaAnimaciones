@@ -210,16 +210,79 @@ const BOSQUE = {x: 330, y: 880, r: 250};                         // el bosque de
 const LIBRE_POS = [[700, 1500], [1300, 1600], [1950, 1630], [3010, 1260], [880, 430], [2240, 420]];
 const ETAPAS = ['cimientos', 'armazon', 'taller'], ESCALA = [0.72, 0.9, 1];
 let DATOS = null, OBRAS = [], ALD = [], ESCENA = [], ARB = [], LIBRES = [], PART = [], CAMINOS = [], LETREROS = [];
-let SUELO = null, MINIBASE = null, CLAVE = '';
+let SUELO = null, MINIBASE = null, CLAVE = '', QUITADOS = 0;
 const FLOT = [];                                                 // «+12 Voz» que sube sobre la pila al llegar material real
 const etapaDe = p => p < 0.3 ? 0 : p < 0.7 ? 1 : 2;
 
-function curva(a, b, c, n = 26) {
-  const p = [];
-  for (let i = 0; i <= n; i++) { const t = i / n, u = 1 - t; p.push([u * u * a[0] + 2 * u * t * b[0] + t * t * c[0], u * u * a[1] + 2 * u * t * b[1] + t * t * c[1]]); }
+function medir(p) {
   const acc = [0]; for (let i = 1; i < p.length; i++) acc.push(acc[i - 1] + Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]));
   return {p, acc, L: acc[acc.length - 1]};
 }
+function curva(a, b, c, n = 26) {
+  const p = [];
+  for (let i = 0; i <= n; i++) { const t = i / n, u = 1 - t; p.push([u * u * a[0] + 2 * u * t * b[0] + t * t * c[0], u * u * a[1] + 2 * u * t * b[1] + t * t * c[1]]); }
+  return medir(p);
+}
+// ---- capas (19-nov-2026, «aldeanos que caminan sobre árboles o detrás de los cimientos»): nadie cruza la planta de un
+// edificio. La planta es un rombo (medido de la silueta de armazon/taller); una ruta que la cruzaría la rodea por un costado.
+const HUE = {rx: 228, ry: 92, dy: -62};
+const enHuella = (o, x, y, m = 1) => Math.abs(x - o.x) / (HUE.rx * m) + Math.abs(y - o.y - HUE.dy) / (HUE.ry * m) < 1;
+function ruta(o, b, ini, fin, prof = 0) {                       // o: la obra de donde sale; rodea la suya y cualquier otra
+  const d = curva(ini, b, fin);
+  if (prof > 4) return d;
+  let X = null, i0 = -1;
+  for (let i = 0; i < d.p.length && !X; i++) { X = OBRAS.find(q => enHuella(q, d.p[i][0], d.p[i][1], 1.1)); i0 = i; }
+  if (!X) return d;
+  const mid = (a, c) => [(a[0] + c[0]) / 2, (a[1] + c[1]) / 2];
+  let w, b1, b2;
+  if (X === o) {                                                 // la propia: sale por el frente y sube por un costado, tras las pilas
+    w = [X.x + (fin[0] >= X.x ? 340 : -340), X.y + 30];
+    b1 = [(ini[0] + w[0]) / 2, Math.max(ini[1], w[1]) + 12]; b2 = [w[0], fin[1]];
+  } else {                                                       // otra: pasa por delante (frente a sus pilas) o por detrás
+    let i1 = i0; while (i1 + 1 < d.p.length && enHuella(X, d.p[i1 + 1][0], d.p[i1 + 1][1], 1.1)) i1++;
+    w = (d.p[i0][1] + d.p[i1][1]) / 2 > X.y + HUE.dy ? [X.x, X.y + 140] : [X.x, X.y - 215];
+    b1 = mid(ini, w); b2 = mid(w, fin);
+  }
+  const r1 = ruta(o, b1, ini, w, prof + 1), r2 = ruta(o, b2, w, fin, prof + 1);
+  return medir(r1.p.concat(r2.p.slice(1)));
+}
+// PASO: rejilla con todos los puntos por donde puede caminar un aldeano (rutas a los sitios y vuelta de los constructores).
+// Sirve para decidir qué árbol o cosa del suelo se dibuja ordenada con ellos y cuál estorba (se quita).
+const PC = 64;
+let PASO = new Map();
+function pasoPon(x, y) { const k = (Math.floor(y / PC) + 20) * 400 + Math.floor(x / PC) + 20; let v = PASO.get(k); if (!v) PASO.set(k, v = []); v.push(x, y); }
+function pasoHay(x0, x1, y0, y1) {                               // ¿alguien pasa por este rectángulo?
+  for (let cy = Math.floor(y0 / PC); cy <= Math.floor(y1 / PC); cy++) for (let cx = Math.floor(x0 / PC); cx <= Math.floor(x1 / PC); cx++) {
+    const v = PASO.get((cy + 20) * 400 + cx + 20); if (!v) continue;
+    for (let i = 0; i < v.length; i += 2) if (v[i] > x0 && v[i] < x1 && v[i + 1] > y0 && v[i + 1] < y1) return true;
+  }
+  return false;
+}
+function sitiosTrabajo(r) {                                      // dónde se para a trabajar quien va a ese sitio (nuevoViaje)
+  if (r === 'madera') return REC.madera.tala.map(tr => [tr.x + 33, tr.y + 7]);
+  const R0 = REC[r], rad = r === 'silicio' ? 88 : 80, out = [];
+  for (let i = 0; i <= 6; i++) { const ang = (0.15 + 0.7 * i / 6) * Math.PI; out.push([R0.x + Math.cos(ang) * rad, R0.y + 18 + Math.sin(ang) * 34]); }
+  return out;
+}
+function trazarPaso() {
+  PASO = new Map();
+  const dxs = [...new Set([...Object.values(DEPM), ...Object.values(DEP)])];
+  OBRAS.forEach((o, oi) => {
+    for (const r of RECS) {
+      const k = CAMINOS.find(c => c.o === oi && c.r === r);
+      for (const fin of sitiosTrabajo(r)) for (const dx of dxs) for (const j of [-8, 8]) {
+        const rt = ruta(o, k.b, [o.x + dx + j, o.y + 66], fin);
+        for (let s = 0; s <= rt.L; s += 8) { const [x, y] = enCurva(rt, s); pasoPon(x, y); }
+      }
+    }
+    for (let i = 1; i < PERIM.length; i++) {                     // la vuelta de los constructores
+      const a = PERIM[i - 1], b = PERIM[i], n = Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 8);
+      for (let s = 0; s <= n; s++) pasoPon(o.x + lerp(a[0], b[0], s / n), o.y + lerp(a[1], b[1], s / n));
+    }
+  });
+}
+const pisado = (x, y, rx) => pasoHay(x - rx, x + rx, y - 12, y + 12);          // alguien caminaría a través de su base
+const tapado = (x, y, w, h) => pasoHay(x - w * 0.4 - 12, x + w * 0.4 + 12, y - h + 10, y - 2);   // alguien pasaría por detrás
 function enCurva(r, s) {
   s = clamp(s, 0, r.L); let i = 1; while (i < r.acc.length - 1 && r.acc[i] < s) i++;
   const t = (s - r.acc[i - 1]) / Math.max(1e-6, r.acc[i] - r.acc[i - 1]), a = r.p[i - 1], b = r.p[i];
@@ -251,13 +314,16 @@ function construir() {
     const a = [o.x + DEP[r], o.y + 58], c = [REC[r].x + (r === 'madera' ? 150 : 0), REC[r].y + (r === 'madera' ? 40 : 60)];
     CAMINOS.push({o: oi, r, a, b: control(a, c, (ri % 2 ? 1 : -1) * (oi % 2 ? -1 : 1)), c, curva: null});
   }));
-  for (const k of CAMINOS) k.curva = curva(k.a, k.b, k.c);
-  // edificios y su utilería
+  for (const k of CAMINOS) k.curva = ruta(OBRAS[k.o], k.b, k.a, k.c);
+  // edificios y su utilería. Los cimientos (planos) se pintan como suelo y su letrero flotante va aparte, ordenado por
+  // donde se amarran las cuerdas; armazón y taller sí tapan a quien pasa por detrás (capas, 19-nov-2026).
+  const COSAS = [];                                              // utilería que se quita si alguien tendría que atravesarla
   for (const o of OBRAS) {
-    ESCENA.push({x: o.x, y: o.y - 30, dib: t => dibObra(o, t)});
+    ESCENA.push({x: o.x, y: o.y - 30, dib: t => { if (o.etapa) dibObra(o, t); }});
+    ESCENA.push({x: o.x, y: o.y - 10, dib: t => { if (!o.etapa) dibObra(o, t, 'cartel'); }});
     for (const id in DEPM) ESCENA.push({x: o.x + DEPM[id], y: o.y + 86, dib: () => dibPila(o, id)});
-    const ad = [['cajas', 222, 30, .8], ['barril', 248, 62, .8], ['carretilla', -238, 44, .75], ['costal', -205, 78, .9], ['cerca', -300, -40, .9], ['cerca', -262, -60, .9], ['barril', 210, -70, .7], ['piedras', 160, 95, .9]];
-    for (const [n, dx, dy, s] of ad) ESCENA.push(cosa(n, o.x + dx, o.y + dy, s));
+    const ad = [['cajas', 250, 0, .8], ['barril', 248, 62, .8], ['carretilla', -250, 90, .75], ['costal', -205, 78, .9], ['cerca', -300, -40, .9], ['cerca', -262, -60, .9], ['barril', 210, -70, .7], ['piedras', 160, 112, .9]];
+    for (const [n, dx, dy, s] of ad) COSAS.push(cosa(n, o.x + dx, o.y + dy, s));
     if (o.sin) LETREROS.push({x: o.x + 250, y: o.y + 70, txt: ['Sin obras', 'ningún video en producción']});
   }
   for (const r of RECS) {
@@ -266,24 +332,31 @@ function construir() {
   }
   letrerosSitio();
   for (const L of LETREROS) ESCENA.push({x: L.x, y: L.y, dib: () => dibLetrero(L)});
-  // recursos
-  ESCENA.push(cosa('silicio', REC.silicio.x, REC.silicio.y, 1), cosa('silicio', REC.silicio.x - 95, REC.silicio.y - 30, .6), cosa('roca', REC.silicio.x + 105, REC.silicio.y - 25, .9),
+  // recursos (el sprite principal de cada sitio nunca se quita)
+  const fija = k => { k.fija = true; return k; };
+  COSAS.push(fija(cosa('silicio', REC.silicio.x, REC.silicio.y, 1)), cosa('silicio', REC.silicio.x - 95, REC.silicio.y - 30, .6), cosa('roca', REC.silicio.x + 105, REC.silicio.y - 25, .9),
     cosa('piedras', REC.silicio.x - 40, REC.silicio.y + 50, 1), cosa('roca', REC.silicio.x - 150, REC.silicio.y + 20, .6));
-  ESCENA.push(cosa('componentes', REC.componentes.x, REC.componentes.y, 1), cosa('cajas', REC.componentes.x + 100, REC.componentes.y - 10, .9),
+  COSAS.push(fija(cosa('componentes', REC.componentes.x, REC.componentes.y, 1)), cosa('cajas', REC.componentes.x + 100, REC.componentes.y - 10, .9),
     cosa('barril', REC.componentes.x - 95, REC.componentes.y - 20, .9), cosa('costal', REC.componentes.x + 70, REC.componentes.y + 40, .9));
-  ESCENA.push(cosa('pelicula', REC.pelicula.x, REC.pelicula.y, 1), cosa('cajas', REC.pelicula.x + 95, REC.pelicula.y - 15, .8), cosa('barril', REC.pelicula.x - 85, REC.pelicula.y + 10, .8));
-  ESCENA.push(cosa('madera', 620, 965, .8), cosa('tocon', 560, 1040, .55), cosa('tocon', 690, 880, .45), cosa('carretilla', 700, 1000, .7));
+  COSAS.push(fija(cosa('pelicula', REC.pelicula.x, REC.pelicula.y, 1)), cosa('cajas', REC.pelicula.x + 95, REC.pelicula.y - 15, .8), cosa('barril', REC.pelicula.x - 85, REC.pelicula.y + 10, .8));
+  COSAS.push(fija(cosa('madera', 620, 965, .8)), cosa('tocon', 560, 1040, .55), cosa('tocon', 690, 880, .45), cosa('carretilla', 700, 1000, .7));
   // el bosque de los leñadores
   const rb = rnd(99);
   for (let k = 0; k < 60 && ARB.length < 17; k++) {
     const a = rb() * TAU, d = Math.sqrt(rb()) * BOSQUE.r, x = BOSQUE.x + Math.cos(a) * d * 1.15, y = BOSQUE.y + Math.sin(a) * d * 0.95;
     if (ARB.some(t => Math.hypot(t.x - x, (t.y - y) * 1.6) < 85) || Math.hypot(x - 620, y - 965) < 90) continue;
     const n = ['roble', 'pino', 'castano', 'abedul', 'arce', 'pino'][rb() * 6 | 0];
-    const t = {x, y, n, s: 0.85 + rb() * 0.25, sac: 0, dib(tt) { dibArbol(ctx, this, tt); }};
-    ARB.push(t); ESCENA.push(t);
+    const t = {x, y, n, s: 0.85 + rb() * 0.25, sac: 0, sb: true, dib(tt) { dibArbol(ctx, this, tt); }};   // sb: sombra horneada
+    ARB.push(t);
   }
   const tala = ARB.filter(t => t.x > BOSQUE.x - 40).sort((a, b) => b.x - a.x).slice(0, 4);
   REC.madera.tala = tala.length ? tala : ARB.slice(0, 2);
+  // capas: con todas las rutas trazadas, fuera los árboles y la utilería que alguien tendría que atravesar
+  trazarPaso();
+  QUITADOS = 0;
+  ARB = ARB.filter(t => REC.madera.tala.includes(t) || !pisado(t.x, t.y, 22) || (QUITADOS++, false));
+  for (const t of ARB) ESCENA.push(t);
+  for (const k of COSAS) if (k.fija || !pisado(k.x, k.y, ancho(k.n, k.s) * 0.3 + 8)) ESCENA.push(k); else QUITADOS++;
   // huecos por llenar: uno por canal, los más cercanos
   const vistos = new Set(); LIBRES = [];
   for (const h of DATOS.libres || []) {
@@ -332,7 +405,7 @@ function asignar(a) {                                            // al volver de
     const ocup = new Set(ALD.filter(b => b !== a && b.tipo === 'con' && b.oi === a.oi).map(b => b.lugar));
     const li = CON_LUG.map((_, i) => i).find(i => !ocup.has(i));
     a.lugar = li == null ? azar() * CON_LUG.length | 0 : li;
-    lugarCon(a, a.lugar); a.est = 'camina'; a.carga = false; return false;
+    lugarCon(a, a.lugar, perimCerca(a), true); a.est = 'camina'; a.carga = false; return false;
   }
   const m = falta[azar() * falta.length | 0]; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; return true;
 }
@@ -364,18 +437,21 @@ function dibPila(o, id) {
   c.fillStyle = n >= m.total ? '#9af46e' : '#ffe9b8'; c.textAlign = 'center'; c.fillText(txt, x, y + 19);
 }
 function cosa(n, x, y, s = 1) {
-  return {x, y, dib() { const w = ancho(n, s); sombra(ctx, x + w * 0.1, y, w * 0.42, w * 0.13, .2); spr(ctx, n, x, y + 4, s); }};
+  return {x, y, n, s, dib() { const w = ancho(n, s); sombra(ctx, x + w * 0.1, y, w * 0.42, w * 0.13, .2); spr(ctx, n, x, y + 4, s); }};
 }
 function dibArbol(c, t, tt) {
   const w = ancho(t.n, t.s);
-  sombra(c, t.x + w * 0.16, t.y + 2, w * 0.34, w * 0.12, .26);
+  if (!t.sb) sombra(c, t.x + w * 0.16, t.y + 2, w * 0.34, w * 0.12, .26);   // sb: la sombra ya está en el suelo horneado
   if (t.sac > 0.01) { c.save(); c.translate(t.x, t.y); c.rotate(Math.sin(tt * 38) * 0.035 * t.sac); spr(c, t.n, 0, 6, t.s); c.restore(); }
   else spr(c, t.n, t.x, t.y + 6, t.s);
 }
 
 // ================================================================ suelo (se dibuja UNA vez)
 function despejado(x, y) {
-  for (const o of OBRAS) { const dx = (x - o.x) / 390, dy = (y - o.y + 40) / 270; if (dx * dx + dy * dy < 1) return false; }
+  for (const o of OBRAS) {
+    const dx = (x - o.x) / 390, dy = (y - o.y + 40) / 270; if (dx * dx + dy * dy < 1) return false;
+    if (Math.abs(x - o.x) < 300 && y > o.y && y < o.y + 330) return false;   // un árbol aquí taparía las pilas y sus cuentas
+  }
   for (const r of RECS) if (Math.hypot(x - REC[r].x, (y - REC[r].y) * 1.3) < (r === 'madera' ? 120 : 190)) return false;
   if (Math.hypot(x - 620, y - 965) < 170) return false;
   for (const L of LIBRES) if (Math.hypot(x - L.x, (y - L.y) * 1.3) < 150) return false;
@@ -409,9 +485,10 @@ function hornearSuelo(rr) {
     mc.fillStyle = gr; mc.beginPath(); mc.arc(0, 0, r, 0, TAU); mc.fill(); mc.restore();
   };
   mc.lineCap = 'round'; mc.lineJoin = 'round';
+  const trazo = (cc, k, d = 0) => { cc.beginPath(); k.curva.p.forEach((p, i) => i ? cc.lineTo(p[0] + d, p[1]) : cc.moveTo(p[0] + d, p[1])); cc.stroke(); };
   for (const [w, a] of [[78, .22], [56, .45], [38, .9]]) {
     mc.strokeStyle = `rgba(255,255,255,${a})`; mc.lineWidth = w;
-    for (const k of CAMINOS) { mc.beginPath(); mc.moveTo(k.a[0], k.a[1]); mc.quadraticCurveTo(k.b[0], k.b[1], k.c[0], k.c[1]); mc.stroke(); }
+    for (const k of CAMINOS) trazo(mc, k);                       // el camino real (rodea los edificios)
   }
   for (const o of OBRAS) claro(o.x, o.y - 30, 340);
   claro(REC.silicio.x, REC.silicio.y + 20, 200); claro(REC.componentes.x, REC.componentes.y + 20, 180); claro(REC.pelicula.x, REC.pelicula.y + 20, 170);
@@ -425,7 +502,7 @@ function hornearSuelo(rr) {
   c.save(); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(t, 0, 0); c.restore();
   // huellas de rueda en los caminos
   c.strokeStyle = 'rgba(60,40,20,.13)'; c.lineWidth = 3; c.setLineDash([18, 10]);
-  for (const k of CAMINOS) for (const d of [-9, 9]) { c.beginPath(); c.moveTo(k.a[0] + d, k.a[1]); c.quadraticCurveTo(k.b[0] + d, k.b[1], k.c[0] + d, k.c[1]); c.stroke(); }
+  for (const k of CAMINOS) for (const d of [-9, 9]) trazo(c, k, d);
   c.setLineDash([]);
   // orillas oscuras (sotobosque)
   const vi = c.createRadialGradient(MW / 2, MH / 2, Math.min(MW, MH) * 0.45, MW / 2, MH / 2, MW * 0.62);
@@ -439,9 +516,22 @@ function hornearSuelo(rr) {
     if (rr() > p || !despejado(px, py)) { if (rr() < 0.05 && despejado(px, py)) cosas.push({x: px, y: py, n: ['arbusto', 'arbusto_flor', 'piedras', 'roca', 'tocon'][rr() * 5 | 0], s: 0.6 + rr() * 0.4}); continue; }
     cosas.push({x: px, y: py, n: ARBOLES[rr() * ARBOLES.length | 0], s: 0.8 + rr() * 0.4, arbol: true});
   }
+  // Capas (19-nov-2026): lo horneado queda SIEMPRE debajo de los aldeanos. Si alguien pasaría por detrás de un árbol o
+  // una piedra, ese no se hornea: su sombra sí, y el sprite se dibuja en ESCENA ordenado por y; si alguien tendría que
+  // atravesar su base, se quita.
   cosas.sort((a, b) => a.y - b.y);
-  for (const k of cosas) { if (k.arbol) dibArbol(c, k, 0); else { const w = ancho(k.n, k.s); sombra(c, k.x + w * .1, k.y, w * .4, w * .12, .2); spr(c, k.n, k.x, k.y + 4, k.s); } }
-  SUELO = {c: g, gs};
+  const vivas = [];
+  for (const k of cosas) {
+    const w = ancho(k.n, k.s), h = alto(k.n, k.s);
+    if (pisado(k.x, k.y, k.arbol ? 22 : w * 0.3 + 8)) { QUITADOS++; k.capa = 'fuera'; continue; }
+    const viva = tapado(k.x, k.y, w, h); k.capa = viva ? 'viva' : 'horno';
+    if (k.arbol) sombra(c, k.x + w * 0.16, k.y + 2, w * 0.34, w * 0.12, .26); else sombra(c, k.x + w * .1, k.y, w * .4, w * .12, .2);
+    if (viva) { k.sb = true; vivas.push(k); continue; }
+    if (k.arbol) { k.sb = true; dibArbol(c, k, 0); } else spr(c, k.n, k.x, k.y + 4, k.s);
+  }
+  for (const k of vivas) ESCENA.push({x: k.x, y: k.y, k, dib() { if (k.arbol) dibArbol(ctx, k, 0); else spr(ctx, k.n, k.x, k.y + 4, k.s); }});
+  for (const t of ARB) { const w = ancho(t.n, t.s); sombra(c, t.x + w * 0.16, t.y + 2, w * 0.34, w * 0.12, .26); }
+  SUELO = {c: g, gs, cosas, vivas: vivas.length};
   const mb = document.createElement('canvas'); mb.width = 228; mb.height = 127;
   mb.getContext('2d').drawImage(g, 0, 0, 228, 127); MINIBASE = mb;
 }
@@ -468,13 +558,26 @@ function nuevoViaje(a) {
     spot = [R0.x + Math.cos(ang) * rad, R0.y + 18 + Math.sin(ang) * 34]; mira = spot[0] > R0.x ? -1 : 1;
   }
   const dx = a.mat && DEPM[a.mat] != null ? DEPM[a.mat] : DEP[a.r];
-  a.ruta = curva([o.x + dx + (azar() - .5) * 16, o.y + 66 + (azar() - .5) * 10], k.b, spot); a.mira = mira;
+  a.ruta = ruta(o, k.b, [o.x + dx + (azar() - .5) * 16, o.y + 66 + (azar() - .5) * 10], spot); a.mira = mira;
   a.vuelta = (a.vuelta || 0) + 1;
 }
-const CON_LUG = [[-150, 38], [-58, 50], [72, 48], [168, 32], [-212, -38], [214, -48]];
-function lugarCon(a, k) {
-  const o = OBRAS[a.oi], [dx, dy] = CON_LUG[k % CON_LUG.length];
+// Lugares de los constructores (4 al frente, 2 a los costados, fuera de la planta) y la vuelta por el FRENTE que los une:
+// para ir de un lugar a otro se camina por PERIM, nunca a través del edificio (capas, 19-nov-2026).
+const CON_LUG = [[-150, 38], [-58, 50], [72, 48], [168, 32], [-226, -40], [228, -46]];
+const PERIM = [[-226, -40], [-222, 10], [-150, 38], [-58, 50], [72, 48], [168, 32], [222, 4], [228, -46]];
+const LUG_P = [2, 3, 4, 5, 0, 7];                                // CON_LUG[i] = PERIM[LUG_P[i]]
+function lugarCon(a, k, desde = null, incluir = false) {         // desde: posición en PERIM de donde sale
+  const o = OBRAS[a.oi], [dx, dy] = CON_LUG[k % CON_LUG.length], p1 = LUG_P[k % CON_LUG.length];
   a.lx = o.x + dx + (azar() - .5) * 14; a.ly = o.y + dy + (azar() - .5) * 8; a.mira = dx > 0 ? -1 : 1;
+  a.wp = [];
+  if (desde == null || desde === p1) return;
+  const paso = p1 > desde ? 1 : -1;
+  for (let p = incluir ? desde : desde + paso; p !== p1; p += paso) a.wp.push([o.x + PERIM[p][0], o.y + PERIM[p][1]]);
+}
+function perimCerca(a) {                                         // el punto del frente más cercano (al dejar de acarrear)
+  const o = OBRAS[a.oi]; let mejor = 2, dm = 1e9;
+  for (let p = 1; p <= 6; p++) { const d = Math.abs(o.x + PERIM[p][0] - a.x); if (d < dm) { dm = d; mejor = p; } }
+  return mejor;
 }
 function golpe(a) {
   const tipo = a.herr, hx = a.x + a.dir * 18, hy = a.y - 10;
@@ -525,9 +628,12 @@ function actAld(a, dt, t) {
       if (a.t <= 0) {
         const ocup = new Set(ALD.filter(b => b !== a && b.tipo === 'con' && b.oi === a.oi).map(b => b.lugar));
         const libres = CON_LUG.map((_, i) => i).filter(i => !ocup.has(i) && i !== a.lugar);
+        const antes = a.lugar;
         if (libres.length) a.lugar = libres[azar() * libres.length | 0];
-        lugarCon(a, a.lugar); a.est = 'camina';
+        lugarCon(a, a.lugar, LUG_P[antes % CON_LUG.length]); a.est = 'camina';
       }
+    } else if (a.wp && a.wp.length) {                             // rodeando el edificio por el frente
+      if (moverHacia(a, a.wp[0][0], a.wp[0][1], dt)) { a.wp.shift(); a.anda = true; }
     } else {
       if (moverHacia(a, a.lx, a.ly, dt)) { a.est = 'trab'; a.t = 7 + azar() * 7; }
     }
@@ -629,10 +735,13 @@ function vistazo(c, o, W, H) {
   else if (!o.vist.length) { c.fillStyle = '#e9d7a8'; c.font = 'bold 14px Georgia'; c.textAlign = 'center'; c.fillText(o.sin ? 'Fábrica' : 'en obra', W / 2, H / 2 + 5); }
   const g = c.createLinearGradient(0, 0, W, H); g.addColorStop(0, 'rgba(255,255,255,.14)'); g.addColorStop(.5, 'rgba(255,255,255,0)'); c.fillStyle = g; c.fillRect(0, 0, W, H);
 }
-function dibObra(o, t) {
+function dibObra(o, t, parte = 'todo') {                        // parte: 'suelo' (cimientos, bajo todo) · 'cartel' (su letrero) · 'todo'
   const c = ctx, n = ETAPAS[o.etapa], s = ESCALA[o.etapa], w = ancho(n, s), h = alto(n, s), x0 = o.x - w / 2, y0 = o.y + 20 - h;
-  sombra(c, o.x + 24, o.y + 6, w * 0.5, 46, .22);
-  spr(c, n, o.x, o.y + 20, s);
+  if (parte !== 'cartel') {
+    sombra(c, o.x + 24, o.y + 6, w * 0.5, 46, .22);
+    spr(c, n, o.x, o.y + 20, s);
+    if (parte === 'suelo') return;
+  }
   let barraY;
   if (o.etapa === 2) {
     c.save(); c.translate(x0, y0); c.scale(w / 758, h / 800); c.transform(1.83, -0.91, 0, 1.42, 416, 172);
@@ -854,6 +963,7 @@ function dibujar(t) {
     const gs = SUELO.gs, sx = clamp(L, 0, MW), sy = clamp(T, 0, MH), ex = clamp(Rr, 0, MW), ey = clamp(B, 0, MH);
     if (ex > sx && ey > sy) ctx.drawImage(SUELO.c, sx * gs, sy * gs, (ex - sx) * gs, (ey - sy) * gs, sx, sy, ex - sx, ey - sy);
   }
+  for (const o of OBRAS) if (!o.etapa && o.x > L - 260 && o.x < Rr + 260 && o.y > T - 60 && o.y < B + 260) dibObra(o, t, 'suelo');   // cimientos = suelo
   const io = obraInfo();                                         // elipse de selección (estilo RTS) bajo la obra que describe el panel
   if (io && !io.sin) { ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 2 / cam.z + 1; ctx.setLineDash([10, 7]); ctx.lineDashOffset = -t * 12; ctx.beginPath(); ctx.ellipse(io.x, io.y - 35, 250, 112, 0, 0, TAU); ctx.stroke(); ctx.setLineDash([]); }
   lista.length = 0;
@@ -1016,6 +1126,9 @@ async function abrirVisor(o) {
     }
     if (items.length) tv.cats.push({nombre, items, lista: !prueba});
   }
+  const mas = [];                                                 // el resto de lo visual (Flow, respaldos, piezas…), sin la caché de miniaturas
+  for (const g of grupos) if (!usados.has(g.id) && !/(^|\/)_v2$/.test(g.id)) mas.push(...g.items.filter(i => i.t === 'i' || i.t === 'v'));
+  if (mas.length) tv.cats.push({nombre: 'Más', items: mas, lista: false});
   if (!tv.cats.length) { el.innerHTML = `<div class="cab"><b>${escH(tv.titulo)}</b></div><div class="vacio">${rec ? 'Este proyecto todavía no tiene recursos.' : 'La PC no mandó los recursos.'}</div>`; return; }
   pintaVisor();
 }
@@ -1126,9 +1239,6 @@ if (MENU) {
   hud(); minimapa(); pausar();
   setInterval(cargarDatos, TELE ? 60000 : 30000);
 })();
-  const mas = [];                                                 // el resto de lo visual (Flow, respaldos, piezas…), sin la caché de miniaturas
-  for (const g of grupos) if (!usados.has(g.id) && !/(^|\/)_v2$/.test(g.id)) mas.push(...g.items.filter(i => i.t === 'i' || i.t === 'v'));
-  if (mas.length) tv.cats.push({nombre: 'Más', items: mas, lista: false});
 </script>
 </body>
 </html>

@@ -770,6 +770,15 @@ function aldPose(a) {
   if (a.herr === 'hacha' || a.herr === 'pico') return [a.herr === 'pico' && ALD_META.pico ? 'pico' : 'hacha', GOLPE(f)];
   return ['martillo', GOLPE(f)];                                // martillo y sierra
 }
+const BURB = {};
+function burbuja(txt) {                                          // «…» / «z» ya dibujadas, a 4x para que se vean nítidas
+  if (BURB[txt]) return BURB[txt];
+  const c = document.createElement('canvas'); c.width = 80; c.height = 60; const g = c.getContext('2d'); g.scale(4, 4);
+  g.fillStyle = 'rgba(255,250,235,.92)'; g.strokeStyle = 'rgba(40,25,10,.7)'; g.lineWidth = 1;
+  g.beginPath(); g.ellipse(10, 7.5, 9, 6.5, 0, 0, TAU); g.fill(); g.stroke();
+  g.fillStyle = '#3a2410'; g.font = 'bold 10px Georgia'; g.textAlign = 'center'; g.fillText(txt, 10, 11);
+  return (BURB[txt] = c);
+}
 function dibAld(a) {
   const [an, k] = aldPose(a), m = ALD_META[an], im = m && aldTira(an, a.ci);
   if (!im) return;
@@ -784,9 +793,7 @@ function dibAld(a) {
     const ph = (RELOJ + a.fase * 9) % 3.4, txt = oc.k === 'charla' && ph < 1.8 ? '…' : oc.k === 'dormir' && ph < 2.2 ? 'z' : '';
     if (txt) {
       const sube = oc.k === 'dormir' ? ph * 7 : 0, bx = a.x + a.dir * (oc.k === 'dormir' ? 14 + sube * .4 : 8), by = a.y - (oc.k === 'dormir' ? 30 + sube : 50);   // la «z» sube
-      c.fillStyle = 'rgba(255,250,235,.92)'; c.strokeStyle = 'rgba(40,25,10,.7)'; c.lineWidth = 1;
-      c.beginPath(); c.ellipse(bx, by, 9, 6.5, 0, 0, TAU); c.fill(); c.stroke();
-      c.fillStyle = '#3a2410'; c.font = 'bold 10px Georgia'; c.textAlign = 'center'; c.fillText(txt, bx, by + 3.5);
+      c.drawImage(burbuja(txt), bx - 10, by - 7.5, 20, 15);     // pintada una sola vez (en la tele, fillText por cuadro cuesta)
     }
   }
 }

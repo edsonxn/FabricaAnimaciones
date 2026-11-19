@@ -4,6 +4,8 @@ Creado el 13-oct-2026 en la mudanza desde `C:\googleimagenes` (`docs/migracion_g
 Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beats y armado de siempre).
 
 ## REGLA DE ORO Y LISTA DE CONTROL (el usuario, 30-oct-2026; leer ANTES de escribir `efectos.py`)
+> **REGLA 10 · LO QUE LA VOZ MANDA ESCUCHAR SE OYE (el usuario, 19-nov-2026, TODOS los canales):** en `cod_mandela3` ninguna cita de audio original se oía (elevador de No Russian original y japonés, y otras), aunque estaban en `PISTAS`. Tras `mezcla`/`final` y ANTES de subir: cada tramo que la voz manda escuchar se extrae de la MEZCLA FINAL, se pasa por Whisper y se mide contra la música; música agachada o en silencio, sin voz encima. Todas juntas en `previews/citas_audio.mp3` para oírlas. Detalle: RGC §R04 (10) y §R17.
+
 > **REGLA 9 · SIN PRISAS (el usuario, 12-nov-2026):** el video queda bien DESDE EL INICIO. Nada de coordenadas, nombres, rutas ni fotos de memoria o «para salir del paso»: cada dato visual con su fuente comprobada, y la hoja final mirada cuadro por cuadro (cada marcador de cada mapa) ANTES del render. Si se acerca el corte de contexto, checkpoint y la pieza la hace bien la sesión siguiente; improvisar y arreglar después (re-render, resubida, voz) cuesta más tokens. Caso: `wow_forever_experiencia` (mapas en el mar, ruta inventada, Mina de los Ecos, «Montañas Crestagrana», voz en inglés).
 
 > **REGLA 13-nov-2026 (el usuario) · HISTORIAS DE LORE: CADA CLIP ENCAJA CON LA FRASE.** En `tes_reina_loba` v2 había clips que no contaban la línea,

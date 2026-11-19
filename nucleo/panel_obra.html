@@ -26,6 +26,15 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
 #barra .r img{height:26px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.6))}
 #barra .r b{color:#fff3cf;min-width:2ch}
 #barra .r small{color:#d9c08a;font-size:12px}
+#mats{display:flex;align-items:center;gap:14px;min-width:0;overflow:hidden}
+#mats .r.ok b{color:#9af46e}
+#mats .r em{font-style:normal;color:#e8d2a0;font-size:13px}
+#mats .r .v{color:#d9c08a;font-size:12px;font-weight:400}
+.ml{display:flex;flex-wrap:wrap;gap:2px 14px;margin:2px 0 3px;font-size:12px;color:#3b2a14}
+.ml span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.ml u{width:54px;height:6px;background:#3b2a14;border:1px solid #1d1208;display:inline-block;text-decoration:none}
+.ml u i{display:block;height:100%;background:linear-gradient(#8ef06a,#2f9a1e)}
+.ml .ok{color:#1f6a12;font-weight:700}
 #barra .sep{width:1px;height:24px;background:rgba(255,220,150,.25)}
 #barra .tit{margin-left:auto;letter-spacing:.08em;font-variant:small-caps;color:var(--oro);font-size:17px;text-shadow:0 1px 2px #000}
 #son,#pc{background:linear-gradient(#7a5226,#4b2f16);border:1px solid #c59a52;color:#fff;border-radius:4px;font-size:16px;
@@ -59,10 +68,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
 <body>
 <canvas id="c"></canvas>
 <div id="barra">
-  <span class="r" title="Madera entregada"><img src="/v2/obra/img/madera.png" alt=""><b id="nMadera">0</b><small>madera</small></span>
-  <span class="r" title="Silicio entregado"><img src="/v2/obra/img/silicio.png" alt=""><b id="nSilicio">0</b><small>silicio</small></span>
-  <span class="r" title="Componentes entregados"><img src="/v2/obra/img/componentes.png" alt=""><b id="nComponentes">0</b><small>componentes</small></span>
-  <span class="r" title="Rollos de película entregados"><img src="/v2/obra/img/pelicula.png" alt=""><b id="nPelicula">0</b><small>película</small></span>
+  <span id="mats"></span>
   <span class="sep"></span>
   <span class="r opc" title="Videos en producción">🏗️ <b id="nObras">0</b><small>obras</small></span>
   <span class="r opc" title="Aldeanos trabajando">👷 <b id="nAld">0</b><small>aldeanos</small></span>
@@ -73,7 +79,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
 </div>
 <div id="mini" class="perg"><canvas id="mc" width="228" height="127"></canvas></div>
 <div id="info" class="perg"><img id="iImg" alt=""><div class="tx"><h2 id="iTit">…</h2><div class="sub" id="iSub"></div>
-  <div class="pb"><i id="iPb" style="width:0"></i></div><div class="sale" id="iSale"></div></div></div>
+  <div class="pb"><i id="iPb" style="width:0"></i></div><div class="ml" id="iMats"></div><div class="sale" id="iSale"></div></div></div>
 <div id="toca" class="perg">🔈 Toca para sonido</div>
 <div id="aviso" class="perg">La fábrica no contesta</div>
 <div id="carga">Levantando la obra…</div>
@@ -191,12 +197,16 @@ const REC = {
 };
 const RECS = Object.keys(REC);
 const DEP = {madera: -115, silicio: -40, componentes: 40, pelicula: 115};   // dónde descarga cada recurso, frente a la obra
+// Materiales REALES del video (de /api/v2/obra → obras[i].materiales, sacados de las etapas; el usuario, 19-nov-2026):
+// cada uno se consigue en un sitio del mapa y se apila frente a la obra; la pila crece con lo que de verdad lleva hecho.
+const DEPM = {guion: -195, musica: -108, voz: -22, clips: 64, efectos: 150};
+const SITIO_N = {madera: 'Bosque', silicio: 'Mina', componentes: 'Taller de piezas', pelicula: 'Carreta de película'};
 const BOSQUE = {x: 330, y: 880, r: 250};                         // el bosque de los leñadores (árboles que se dibujan cada cuadro)
 const LIBRE_POS = [[700, 1500], [1300, 1600], [1950, 1630], [3010, 1260], [880, 430], [2240, 420]];
 const ETAPAS = ['cimientos', 'armazon', 'taller'], ESCALA = [0.72, 0.9, 1];
 let DATOS = null, OBRAS = [], ALD = [], ESCENA = [], ARB = [], LIBRES = [], PART = [], CAMINOS = [], LETREROS = [];
 let SUELO = null, MINIBASE = null, CLAVE = '';
-const ENT = {madera: 0, silicio: 0, componentes: 0, pelicula: 0};
+const FLOT = [];                                                 // «+12 Voz» que sube sobre la pila al llegar material real
 const etapaDe = p => p < 0.3 ? 0 : p < 0.7 ? 1 : 2;
 
 function curva(a, b, c, n = 26) {
@@ -224,8 +234,9 @@ function construir() {
     const v = d ? viejas[d.video] : null;
     const o = {d, video: d ? d.video : '', x: pos[i][0], y: pos[i][1], prog: d ? d.progreso : 1, sin: !d,
       col: d ? COL[d.color % 8] : '#8a6a3a', vist: d ? d.vistazos || [] : [], vi: 0, vt: 2 + i * 1.3, prev: null, cache: {},
-      ent: v ? v.ent : {madera: 0, silicio: 0, componentes: 0, pelicula: 0}};
-    o.etapa = etapaDe(o.prog);
+      vis: v ? v.vis : null, camino: v ? v.camino : {}};
+    o.etapa = etapaDe(o.prog); ponMateriales(o, d);
+    if (!v) for (const m of o.mats) o.vis[m.id] = m.hecho;       // al abrir, lo ya hecho está apilado
     return o;
   });
   const rr = rnd(hash(CLAVE) || 7);
@@ -239,11 +250,16 @@ function construir() {
   // edificios y su utilería
   for (const o of OBRAS) {
     ESCENA.push({x: o.x, y: o.y - 30, dib: t => dibObra(o, t)});
-    for (const r of RECS) ESCENA.push({x: o.x + DEP[r], y: o.y + 80, dib: () => { const n = o.ent[r]; if (n > 0) { sombra(ctx, o.x + DEP[r] + 4, o.y + 80, 20, 6, .2); spr(ctx, r, o.x + DEP[r], o.y + 84, 0.2 + Math.min(0.14, n * 0.006)); } }});
+    for (const id in DEPM) ESCENA.push({x: o.x + DEPM[id], y: o.y + 86, dib: () => dibPila(o, id)});
     const ad = [['cajas', 222, 30, .8], ['barril', 248, 62, .8], ['carretilla', -238, 44, .75], ['costal', -205, 78, .9], ['cerca', -300, -40, .9], ['cerca', -262, -60, .9], ['barril', 210, -70, .7], ['piedras', 160, 95, .9]];
     for (const [n, dx, dy, s] of ad) ESCENA.push(cosa(n, o.x + dx, o.y + dy, s));
     if (o.sin) LETREROS.push({x: o.x + 250, y: o.y + 70, txt: ['Sin obras', 'ningún video en producción']});
   }
+  for (const r of RECS) {
+    const L = {x: REC[r].x + (r === 'madera' ? 260 : r === 'silicio' ? 175 : -150), y: REC[r].y + (r === 'madera' ? 150 : 95), sitio: r, txt: ['', '']};
+    LETREROS.push(L);
+  }
+  letrerosSitio();
   for (const L of LETREROS) ESCENA.push({x: L.x, y: L.y, dib: () => dibLetrero(L)});
   // recursos
   ESCENA.push(cosa('silicio', REC.silicio.x, REC.silicio.y, 1), cosa('silicio', REC.silicio.x - 95, REC.silicio.y - 30, .6), cosa('roca', REC.silicio.x + 105, REC.silicio.y - 25, .9),
@@ -275,14 +291,72 @@ function construir() {
   ALD = [];
   const n = OBRAS.length, por = TELE ? Math.max(3, Math.floor(10 / n)) : Math.max(5, Math.min(8, Math.floor(36 / n)));
   OBRAS.forEach((o, oi) => {
-    const nrec = o.sin ? por - 1 : Math.ceil(por * 0.6);
+    const falta = faltan(o), nrec = o.sin ? por - 1 : falta.length ? Math.ceil(por * 0.6) : 0;   // todo listo: solo construyen
     for (let k = 0; k < por; k++) {
-      if (k < nrec) ALD.push(aldeano('rec', oi, RECS[(k + oi) % 4]));
-      else ALD.push(aldeano('con', oi, null, (k - nrec) % 3 === 2 ? 'sierra' : 'martillo', k - nrec));
+      if (k < nrec) {
+        const m = o.sin ? null : falta[(k + oi) % falta.length];
+        ALD.push(aldeano('rec', oi, m ? m.sitio : RECS[(k + oi) % 4], null, 0, m ? m.id : null));
+      } else ALD.push(aldeano('con', oi, null, (k - nrec) % 3 === 2 ? 'sierra' : 'martillo', k - nrec));
     }
   });
   for (const a of ALD) ESCENA.push(a);
   hornearSuelo(rr);
+}
+function ponMateriales(o, d) {                                   // o.mats = materiales del video; o.vis = lo apilado a la vista
+  o.mats = (d && d.materiales || []).filter(m => DEPM[m.id] != null);
+  if (!o.vis) o.vis = {};
+}
+const faltan = o => o.mats.filter(m => m.hecho < m.total);
+function letrerosSitio() {                                       // «Mina · Voz» y, abajo, cómo va la obra enfocada
+  const f = obraFoco() || OBRAS.find(o => !o.sin);
+  for (const L of LETREROS) {
+    if (!L.sitio) continue;
+    const ms = [], vis = new Set();
+    for (const o of OBRAS) for (const m of o.mats || []) if (m.sitio === L.sitio && !vis.has(m.id)) { vis.add(m.id); ms.push(m.nombre); }
+    const mf = f ? f.mats.filter(m => m.sitio === L.sitio) : [];
+    L.txt = [SITIO_N[L.sitio] + (ms.length ? ' · ' + ms.join(' y ') : ''),
+      mf.length ? mf.map(m => m.hecho >= m.total ? `${m.nombre}: listo` : `${m.nombre}: ${m.hecho}/${m.total}`).join(' · ') : ms.length ? '' : 'nada que traer'];
+  }
+}
+function asignar(a) {                                            // al volver de un viaje: ¿qué material sigue faltando?
+  const o = OBRAS[a.oi]; if (o.sin || a.trae) return true;
+  const falta = faltan(o);
+  if (a.mat && falta.some(m => m.id === a.mat)) return true;
+  if (!falta.length) {                                           // ya no falta nada: se pone a construir
+    a.tipo = 'con'; a.mat = null; a.herr = azar() < .3 ? 'sierra' : 'martillo'; a.per = 0.62 + azar() * 0.2;
+    const ocup = new Set(ALD.filter(b => b !== a && b.tipo === 'con' && b.oi === a.oi).map(b => b.lugar));
+    const li = CON_LUG.map((_, i) => i).find(i => !ocup.has(i));
+    a.lugar = li == null ? azar() * CON_LUG.length | 0 : li;
+    lugarCon(a, a.lugar); a.est = 'camina'; a.carga = false; return false;
+  }
+  const m = falta[azar() * falta.length | 0]; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; return true;
+}
+function llegaReal(o, m, n) {                                     // subió una cuenta real: unos aldeanos traen ese material
+  const oi = OBRAS.indexOf(o);
+  let cands = ALD.filter(a => a.oi === oi && a.tipo === 'rec' && a.mat === m.id && a.est !== 'desc' && !a.trae);
+  if (!cands.length) cands = ALD.filter(a => a.oi === oi && !a.trae && a.est !== 'desc');
+  if (!cands.length) { o.vis[m.id] = (o.vis[m.id] || 0) + n; return; }
+  cands.sort((p, q) => (q.est === 'vuelta') - (p.est === 'vuelta') || (q.est === 'trab') - (p.est === 'trab'));
+  const k = Math.max(1, Math.min(3, cands.length, n));
+  for (let i = 0; i < k; i++) {
+    const a = cands[i], parte = Math.floor(n / k) + (i < n % k ? 1 : 0);
+    if (a.tipo !== 'rec' || a.mat !== m.id) {                     // lo manda por él: sale cerca del sitio, ya de vuelta
+      a.tipo = 'rec'; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; nuevoViaje(a); a.s = a.ruta.L * (0.35 + azar() * 0.2);
+      [a.x, a.y] = enCurva(a.ruta, a.s); a.est = 'vuelta';
+    } else if (a.est === 'ida') a.est = 'vuelta';
+    else if (a.est === 'trab') a.t = 0;
+    a.carga = a.est === 'vuelta'; a.trae = parte; o.camino[m.id] = (o.camino[m.id] || 0) + parte;
+  }
+}
+function dibPila(o, id) {
+  const m = o.mats.find(x => x.id === id); if (!m) return;
+  const n = Math.min(m.total, o.vis[id] || 0), f = n / m.total, x = o.x + DEPM[id], y = o.y + 86;
+  if (n > 0) { sombra(ctx, x + 4, y, 14 + 12 * f, 5 + 2 * f, .2); spr(ctx, m.sitio, x, y + 4, 0.12 + 0.2 * f); }
+  if (cam.z < 0.75 * ZB) return;                                 // de lejos, solo las pilas
+  const c = ctx, txt = `${m.nombre} ${n}/${m.total}`;
+  c.font = 'bold 11px Georgia'; const w = c.measureText(txt).width + 10;
+  c.fillStyle = 'rgba(30,18,8,.78)'; c.fillRect(x - w / 2, y + 8, w, 15);
+  c.fillStyle = n >= m.total ? '#9af46e' : '#ffe9b8'; c.textAlign = 'center'; c.fillText(txt, x, y + 19);
 }
 function cosa(n, x, y, s = 1) {
   return {x, y, dib() { const w = ancho(n, s); sombra(ctx, x + w * 0.1, y, w * 0.42, w * 0.13, .2); spr(ctx, n, x, y + 4, s); }};
@@ -368,12 +442,12 @@ function hornearSuelo(rr) {
 }
 
 // ================================================================ aldeanos
-function aldeano(tipo, oi, r, herr, k = 0) {
+function aldeano(tipo, oi, r, herr, k = 0, mat = null) {
   const o = OBRAS[oi];
   const a = {tipo, oi, r, x: o.x + (azar() - .5) * 200, y: o.y + 60, dir: 1, paso: azar() * 6, anda: false,
     col: o.col, ci: COL.indexOf(o.col), carga: false,
     vel: 42 + azar() * 12, fase: azar(), est: 'ida', t: 0, s: 0, ruta: null, herr: herr || (r ? REC[r].herr : 'martillo'),
-    per: 0.85, dib(t) { dibAld(this, t); }};
+    per: 0.85, mat, trae: 0, dib(t) { dibAld(this, t); }};
   if (tipo === 'rec') { nuevoViaje(a); a.s = azar() * a.ruta.L; a.est = azar() < .5 ? 'ida' : 'vuelta'; a.carga = a.est === 'vuelta'; }
   else { a.lugar = k; a.per = a.herr === 'sierra' ? 0.55 : 0.62 + azar() * 0.2; lugarCon(a, k); a.x = a.lx; a.y = a.ly; a.est = 'trab'; a.t = 6 + azar() * 8; }
   return a;
@@ -388,7 +462,8 @@ function nuevoViaje(a) {
     const ang = 0.15 * Math.PI + azar() * 0.7 * Math.PI, rad = a.r === 'silicio' ? 88 : 80;
     spot = [R0.x + Math.cos(ang) * rad, R0.y + 18 + Math.sin(ang) * 34]; mira = spot[0] > R0.x ? -1 : 1;
   }
-  a.ruta = curva([o.x + DEP[a.r] + (azar() - .5) * 26, o.y + 58 + (azar() - .5) * 10], k.b, spot); a.mira = mira;
+  const dx = a.mat && DEPM[a.mat] != null ? DEPM[a.mat] : DEP[a.r];
+  a.ruta = curva([o.x + dx + (azar() - .5) * 16, o.y + 66 + (azar() - .5) * 10], k.b, spot); a.mira = mira;
   a.vuelta = (a.vuelta || 0) + 1;
 }
 const CON_LUG = [[-150, 38], [-58, 50], [72, 48], [168, 32], [-212, -38], [214, -48]];
@@ -422,15 +497,22 @@ function actAld(a, dt, t) {
       if (Math.abs(x - ant) > 0.01) a.dir = x > ant ? 1 : -1;
       if (a.est === 'ida' && a.s >= a.ruta.L) { a.est = 'trab'; a.t = 3 + azar() * 2; a.anda = false; a.dir = a.mira; }
       if (a.est === 'vuelta' && a.s <= 0) {
-        a.est = 'desc'; a.t = 0.7; a.anda = false; a.carga = false; ENT[a.r]++; OBRAS[a.oi].ent[a.r]++;
-        sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .6); polvito(a.x + a.dir * 8, a.y);
+        a.est = 'desc'; a.t = 0.7; a.anda = false; a.carga = false;
+        const o = OBRAS[a.oi];
+        if (a.trae && a.mat) {                                    // material real: sube la pila y el contador
+          const m = o.mats.find(x => x.id === a.mat);
+          o.vis[a.mat] = (o.vis[a.mat] || 0) + a.trae; o.camino[a.mat] = Math.max(0, (o.camino[a.mat] || 0) - a.trae);
+          if (m) FLOT.push({x: o.x + DEPM[a.mat], y: o.y + 40, txt: `+${a.trae} ${m.nombre}`, vida: 2.4});
+          sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .85, .35); a.trae = 0; infoClave = '';
+        } else sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .35);
+        polvito(a.x + a.dir * 8, a.y);
       }
     } else if (a.est === 'trab') {
       swing(); a.t -= dt;
       if (a.t <= 0) { a.est = 'vuelta'; a.carga = true; }
     } else if (a.est === 'desc') {
       a.t -= dt;
-      if (a.t <= 0) { nuevoViaje(a); a.s = 0; a.est = 'ida'; }
+      if (a.t <= 0 && asignar(a)) { nuevoViaje(a); a.s = 0; a.est = 'ida'; }
     }
   } else {                                                      // constructor
     if (a.est === 'trab') {
@@ -502,6 +584,7 @@ function polvo(o) {
 }
 function humo(x, y) { if (PART.length < MAXP) PART.push({x, y, h: 0, vx: 6 + azar() * 5, vy: 0, vh: 16 + azar() * 6, g: 0, vida: 3.2, max: 3.2, col: '120,118,112', r: 5, tipo: 'h'}); }
 function actPart(dt) {
+  for (let i = FLOT.length - 1; i >= 0; i--) { const f = FLOT[i]; f.vida -= dt; f.y -= dt * 18; if (f.vida <= 0) FLOT.splice(i, 1); }
   for (let i = PART.length - 1; i >= 0; i--) {
     const p = PART[i]; p.vida -= dt; if (p.vida <= 0) { PART.splice(i, 1); continue; }
     p.x += p.vx * dt; p.y += p.vy * dt; p.vh -= p.g * dt; p.h = Math.max(0, p.h + p.vh * dt);
@@ -512,6 +595,11 @@ function dibPart() {
   for (const p of PART) {
     if (p.tipo === 'c') { ctx.globalAlpha = Math.min(1, p.vida * 3); ctx.fillStyle = p.col; ctx.fillRect(p.x - p.r / 2, p.y - p.h - p.r / 2, p.r, p.r); }
     else { const a = (p.vida / p.max) * (p.tipo === 'h' ? .32 : .45); ctx.globalAlpha = 1; ctx.fillStyle = `rgba(${p.col},${a})`; ctx.beginPath(); ctx.arc(p.x, p.y - p.h, p.r, 0, TAU); ctx.fill(); }
+  }
+  ctx.globalAlpha = 1;
+  for (const f of FLOT) {                                       // «+12 Voz»: llegó material real
+    ctx.globalAlpha = Math.min(1, f.vida); ctx.font = 'bold 16px Georgia'; ctx.textAlign = 'center';
+    ctx.lineWidth = 4; ctx.strokeStyle = 'rgba(20,12,4,.85)'; ctx.strokeText(f.txt, f.x, f.y); ctx.fillStyle = '#9af46e'; ctx.fillText(f.txt, f.x, f.y);
   }
   ctx.globalAlpha = 1;
 }
@@ -683,13 +771,15 @@ function obraInfo() {
   return dm < 900 / cam.z ? mejor : obraFoco() || mejor;
 }
 function hud() {
-  $('nMadera').textContent = ENT.madera; $('nSilicio').textContent = ENT.silicio; $('nComponentes').textContent = ENT.componentes; $('nPelicula').textContent = ENT.pelicula;
   $('nObras').textContent = DATOS.obras.length; $('nAld').textContent = ALD.length; $('nLibres').textContent = (DATOS.libres || []).length;
   const o = obraInfo(); if (!o) return;
-  const im = o.vist[o.vi] || '', clave = o.video + '|' + o.prog + '|' + im;
+  const im = o.vist[o.vi] || '', clave = o.video + '|' + o.prog + '|' + im + '|' + (o.mats || []).map(m => m.id + (o.vis[m.id] || 0) + '/' + m.total).join();
   if (clave === infoClave) return; infoClave = clave;
+  const ms = o.mats || [], vis = m => Math.min(m.total, o.vis[m.id] || 0);
+  $('mats').innerHTML = ms.map(m => `<span class="r ${vis(m) >= m.total ? 'ok' : ''}" title="${esc(m.nombre)}: ${vis(m)} de ${m.total} ${esc(m.unidad)} (se consigue en: ${esc(SITIO_N[m.sitio])})"><img src="/v2/obra/img/${m.sitio}.png" alt=""><em>${esc(m.nombre)}</em><b>${vis(m)}<span class="v">/${m.total}</span></b></span>`).join('');
+  $('iMats').innerHTML = ms.map(m => `<span class="${vis(m) >= m.total ? 'ok' : ''}">${esc(m.nombre)} <u><i style="width:${(vis(m) / m.total * 100).toFixed(0)}%"></i></u> ${vis(m)}/${m.total}</span>`).join('');
   if (o.sin) {
-    $('iTit').textContent = 'Sin obras: ningún video en producción';
+    $('iTit').textContent = 'Sin obras: ningún video en producción'; $('mats').innerHTML = ''; $('iMats').innerHTML = '';
     $('iSub').innerHTML = ''; $('iPb').style.width = '0';
     const L = (DATOS.libres || [])[0];
     $('iSale').textContent = L ? `Siguiente hueco por llenar: ${L.canal_nombre}, ${flarga(L.sale)}` : '';
@@ -769,7 +859,6 @@ async function cargarDatos() {
     const antes = new Set(OBRAS.filter(o => !o.sin).map(o => o.video)); CLAVE = clave; construir();
     if (!primera) for (const o of OBRAS) if (!o.sin && !antes.has(o.video)) { polvo(o); sonar('listo', o.x, o.y, .8, .5); }
     if (primera) {
-      for (const o of OBRAS) for (const r of RECS) { const n = Math.round(o.prog * 18 * (0.6 + azar() * 0.8)); o.ent[r] += n; ENT[r] += n; }
       const f = obraFoco(); toma = null; tomaK = 0;
       if (f) { toma = {t: 'obra', o: f, dur: 9}; tomaHasta = performance.now() + 9000; }
       else if (TELE) { toma = {t: 'gen', dur: 6}; tomaHasta = performance.now() + 6000; }
@@ -780,10 +869,17 @@ async function cargarDatos() {
       const n = d.obras.find(x => x.video === o.video); if (!n) continue;
       const e = etapaDe(n.progreso);
       if (e > o.etapa) { polvo(o); sonar('listo', o.x, o.y, .8, .5); }
-      o.d = n; o.prog = n.progreso; o.etapa = e;
+      o.d = n; o.prog = n.progreso; o.etapa = e; ponMateriales(o, n);
+      for (const m of o.mats) {
+        const ya = (o.vis[m.id] || 0) + (o.camino[m.id] || 0), dn = m.hecho - ya;
+        if (dn > 0) llegaReal(o, m, dn);
+        else if (m.hecho < (o.vis[m.id] || 0)) { o.vis[m.id] = m.hecho; o.camino[m.id] = 0; }   // se rehízo: la pila baja
+      }
+      infoClave = '';
       if ((n.vistazos || []).join() !== o.vist.join()) { o.vist = n.vistazos || []; o.vi = 0; o.prev = null; o.vt = 0; }
     }
   }
+  letrerosSitio();
   return true;
 }
 (async () => {

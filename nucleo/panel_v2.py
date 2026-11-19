@@ -22,7 +22,7 @@ Solo lee, salvo las miniaturas (previews/_v2/), el audio liviano para el navegad
   /v2/movil · /v2/aldea · /v2/juego   app del teléfono (28-oct-2026): panel de estatus, la Aldea (RTS) y la Fábrica 3D
   /v2/app/<archivo>            sus archivos sueltos (manifest, service worker, iconos, APK)
   /v2/obra[?video=X|?tele=1]   «La obra» (19-nov-2026): vista RTS de lo que se produce (pop-up de «Canales» y vista 1 de la tele)
-  /api/v2/obra                 {obras: [video, titulo, canal, progreso, etapa_n, sale, vistazos…], libres: [huecos por llenar]}
+  /api/v2/obra                 {obras: [video, titulo, canal, progreso, etapa_n, sale, vistazos, materiales…], libres: [huecos por llenar]}
   /v2/obra/img/<n> · /v2/obra/sonido/<n>   sprites y sonidos de nucleo/obra/ (lista blanca de nombres)
 """
 import hashlib
@@ -736,13 +736,62 @@ def _vistazos(video, mini_media=None, n=12):
     return out[:n]
 
 
+# Materiales de cada obra = lo que de verdad necesita el video (el usuario, 19-nov-2026: «los recursos como los segmentos de
+# voz, clips, efectos… con su contador, y los aldeanos los van a conseguir a la mina, bosque, etc.»).
+# (id, nombre, unidad, etapas de donde sale la cuenta, sitio del mapa, total fijo si la etapa no trae cifras)
+OBRA_MATERIALES = (
+    ("guion", "Guion", "frases", ("guion",), "madera", None),
+    ("voz", "Voz", "tomas", ("voz",), "silicio", None),
+    ("clips", "Clips", "clips", ("flow",), "pelicula", None),
+    ("efectos", "Efectos", "efectos", ("sfx",), "componentes", 24),
+    ("musica", "Música", "pistas", ("musica",), "madera", 8),
+)
+_NUM_DE = re.compile(r"(\d+)\s*/\s*(\d+)")
+_NUM = re.compile(r"(\d+)")
+
+
+def obra_materiales(p):
+    """[{id, nombre, unidad, hecho, total, progreso, sitio}] de un proyecto de /api/v2/estado (etapas omitidas fuera)."""
+    et = p.get("etapas") or {}
+    frases = int(p.get("frases") or 0)
+    beats = _NUM.match((et.get("beats") or {}).get("detalle") or "")
+    out = []
+    for mid, nom, uni, ids, sitio, fijo in OBRA_MATERIALES:
+        e = next((et[i] for i in ids if i in et), None)
+        if not e or e.get("estado") == "omitido":
+            continue
+        prog = max(0.0, min(1.0, float(e.get("progreso") or 0)))
+        det = e.get("detalle") or ""
+        m = _NUM_DE.search(det)
+        if m:                                                    # «45/116 tomas», «80/116 clips»
+            hecho, total = int(m.group(1)), int(m.group(2))
+        else:
+            n = _NUM.match(det)                                  # «116 tomas», «116 clips… bajados», «32 escenas · 104 frases»
+            if mid == "guion":
+                total = frases or (int(n.group(1)) if n else 0)
+            elif mid == "clips":
+                total = int(beats.group(1)) if beats else (int(n.group(1)) if n and prog >= 1 else frases)
+            elif n and prog >= 1 and mid != "efectos" and fijo is None:
+                total = int(n.group(1))
+            else:
+                total = fijo or frases
+            total = max(1, total)
+            hecho = total if prog >= 1 else int(round(prog * total))
+        total = max(1, total)
+        out.append(dict(id=mid, nombre=nom, unidad=uni, hecho=min(hecho, total), total=total,
+                        progreso=round(min(hecho, total) / total, 3), sitio=sitio))
+    return out
+
+
 def obra_datos():
     """{obras: [...], libres: [...]} para /api/v2/obra (caché de 20 s: la tele y el pop-up la piden a la vez)."""
     with _obra_lock:
         if _obra_cache["v"] is not None and time.time() - _obra_cache["t"] < 20:
             return _obra_cache["v"]
         import estadisticas as ES
-        d = ES.datos_panel(P.estado_cache(30)["proyectos"])
+        proys = P.estado_cache(30)["proyectos"]
+        d = ES.datos_panel(proys)
+        por_nombre = {x.get("nombre"): x for x in proys}
         obras, libres = [], []
         for c in d.get("canales", []):
             for p in c.get("prod") or []:
@@ -750,7 +799,8 @@ def obra_datos():
                                   canal_nombre=c.get("nombre") or c.get("alias"), color=c.get("color", 0),
                                   progreso=p.get("progreso") or 0, etapa_n=p.get("etapa_n") or "", sale=p.get("sale"),
                                   atrasado=bool(p.get("atrasado")), logo=c.get("logo"),
-                                  vistazos=_vistazos(p["video"], p.get("mini"))))
+                                  vistazos=_vistazos(p["video"], p.get("mini")),
+                                  materiales=obra_materiales(por_nombre.get(p["video"]) or {})))
             for hh in c.get("libres") or []:
                 libres.append(dict(canal=c.get("alias"), canal_nombre=c.get("nombre") or c.get("alias"), logo=c.get("logo"),
                                    color=c.get("color", 0), sale=hh.get("sale"), atrasado=bool(hh.get("atrasado"))))

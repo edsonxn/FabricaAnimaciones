@@ -486,3 +486,14 @@ terreno con estacas y el logo del canal. Plan y detalle: `nucleo/obra/LEEME.md`.
   en `.82` = cuadro 4), `dibAld` = una `drawImage` espejada a la izquierda; la tinta se pide al primer uso y mientras
   llega va la túnica azul de base; en la tele cada tira se reduce una vez a canvas, cuadro por cuadro. Costo medido en la
   PC (`?tele=1`, 10 aldeanos): 0,17 ms por cuadro para todos los aldeanos, 1 ms el cuadro completo.
+- **Materiales reales del video (19-nov, el usuario: «los recursos como los segmentos de voz, clips, efectos… con su
+  contador»):** `obra_materiales(p)` en `panel_v2.py` saca de las etapas de `/api/v2/estado` cada material con
+  `{id, nombre, unidad, hecho, total, progreso, sitio}` (`OBRA_MATERIALES`): Guion (frases) y Música (8 pistas fijas) →
+  bosque; Voz (tomas, «a/b tomas» o la cifra de «listo») → mina de silicio; Clips (`flow`, total = «N beats») → carreta
+  de película; Efectos (`sfx`, 24 fijos; fuera si está omitido) → taller de piezas. Sin cifra en `detalle`: progreso ×
+  total. En el motor: la barra de arriba y el panel de la obra muestran los materiales de la obra enfocada con su cuenta y
+  barrita; letrero en cada sitio («Mina · Voz» + «Voz: 40/116»); pila de cada material frente al edificio (`DEPM`,
+  `dibPila`) que crece con lo entregado. Los recolectores solo van por lo que falta (`faltan`, `asignar`); con todo
+  completo se vuelven constructores. Al refrescar (30 s; 60 en la tele), si una cuenta sube, `llegaReal` manda hasta 3
+  aldeanos de vuelta con esa cantidad (`a.trae`): al descargar sube la pila, sale «+N Voz» y suena la descarga más
+  fuerte. Los viajes normales no mueven el contador. Si una cuenta baja (se rehízo), la pila baja sola.

@@ -96,3 +96,8 @@ Siguiente, en orden:
 - Pendiente: (1) `flow/ald_pico.jpg` (6 cuadros, mismo aldeano con pico) → correr `preparar_arte.py aldeanos` y el minero
   la usa solo; (2) medir fps en la tele: ADB no conectaba (activar depuración inalámbrica y `adb connect`), luego
   `bash D:/PuenteTV/tablero/medir_fps.sh "tv?vista=1"`.
+
+## Sesión 3b (19-nov): materiales reales ✔
+Recursos = materiales del video (guion, voz, clips, efectos, música) con su contador, de `obra_materiales()` en
+`panel_v2.py`; pilas frente a la obra, letreros en cada sitio, aldeanos solo por lo que falta y llegada al subir una cuenta
+real. Detalle en `docs/panel.md` § «Vista «La obra»». Probado con `wow_ruta_forever` (y cuentas simuladas que suben y se completan).

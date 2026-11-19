@@ -783,12 +783,25 @@ def obra_materiales(p):
     return out
 
 
+def _estadisticas():
+    """(módulo estadisticas, se_recargó): el panel lo importa una vez; si cambió su archivo se recarga aquí, sin detener el
+    panel (19-nov-2026). Lo usan la pestaña «Canales» y «La obra»."""
+    import importlib
+    import estadisticas as ES
+    t = os.path.getmtime(ES.__file__)
+    nuevo = getattr(ES, "_cargado", 0) != t
+    if nuevo:
+        ES = importlib.reload(ES)
+        ES._cargado = t
+    return ES, nuevo
+
+
 def obra_datos():
     """{obras: [...], libres: [...]} para /api/v2/obra (caché de 20 s: la tele y el pop-up la piden a la vez)."""
     with _obra_lock:
         if _obra_cache["v"] is not None and time.time() - _obra_cache["t"] < 20:
             return _obra_cache["v"]
-        import estadisticas as ES
+        ES = _estadisticas()[0]
         proys = P.estado_cache(30)["proyectos"]
         d = ES.datos_panel(proys)
         por_nombre = {x.get("nombre"): x for x in proys}
@@ -884,14 +897,7 @@ def get(h, ruta):
     if ruta == "/api/v2/canales/recargar":
         # La pestaña «Canales» la arma nucleo/estadisticas.py, que el panel importa una vez: si cambió su archivo, se
         # recarga aquí (este módulo sí se recarga solo) y la página se vuelve a pedir, sin detener el panel (19-nov-2026)
-        import importlib
-        import estadisticas as ES
-        t = os.path.getmtime(ES.__file__)
-        nuevo = getattr(ES, "_cargado", 0) != t
-        if nuevo:
-            ES = importlib.reload(ES)
-            ES._cargado = t
-        return _json(h, dict(recargado=nuevo))
+        return _json(h, dict(recargado=_estadisticas()[1]))
     if ruta == "/api/v2/sistema":
         return _json(h, sistema())
     if ruta == "/api/v2/estado":

@@ -347,17 +347,24 @@ def datos_panel(proyectos=None):
     orden = alias_conocidos(con_suspendidos=True)    # el color sale de la lista completa: suspender uno no recolorea a los demás
     for alias in alias_conocidos():
         ruta = os.path.join(DATOS, alias + ".json")
+        cfg = json.load(open(os.path.join(yt.CANALES, alias + ".json"), encoding="utf-8"))
         if os.path.isfile(ruta):
             d = json.load(open(ruta, encoding="utf-8"))
-            d["color"] = orden.index(alias) % 8
-            cfg = json.load(open(os.path.join(yt.CANALES, alias + ".json"), encoding="utf-8"))
-            d["cal"] = calendario(d, cfg)
-            # `"sin_seguimiento"` = canal que no estamos moviendo: fuera del calendario, sus estadísticas siguen (el usuario, 19-nov-2026)
-            d["seguimiento"] = not cfg.get("sin_seguimiento")
-            d["minis"] = miniaturas_locales(d, cfg)
-            d["prod"] = huecos_produccion(sorted(prod.get(alias, []), key=lambda x: -x["progreso"]), d["cal"], cfg)
-            d["libres"] = huecos_libres(d["cal"], cfg, len(d["prod"])) if d["seguimiento"] else []
-            canales.append(d)
+        else:
+            # Canal nuevo sin `canales --actualizar` todavía (Mil por Minuto, 19-nov-2026): sin métricas, pero sus videos en
+            # producción y su calendario (de canales/<alias>.json → horario/publicados) sí salen en la ruleta y en «La obra»
+            # (el usuario, 19-nov-2026: «hay 2 proyectos activos en construcción y solo puedo ver 1»)
+            d = dict(alias=alias, canal_id=cfg.get("canal_id"), nombre=cfg.get("nombre") or alias, actualizado=None,
+                     suscriptores=0, vistas_totales=0, videos_totales=0, avisos=["Sin estadísticas todavía: python fab.py canales --actualizar"],
+                     dias=[], dias_s=[], videos=[], sin_datos=True)
+        d["color"] = orden.index(alias) % 8
+        d["cal"] = calendario(d, cfg)
+        # `"sin_seguimiento"` = canal que no estamos moviendo: fuera del calendario, sus estadísticas siguen (el usuario, 19-nov-2026)
+        d["seguimiento"] = not cfg.get("sin_seguimiento")
+        d["minis"] = miniaturas_locales(d, cfg)
+        d["prod"] = huecos_produccion(sorted(prod.get(alias, []), key=lambda x: -x["progreso"]), d["cal"], cfg)
+        d["libres"] = huecos_libres(d["cal"], cfg, len(d["prod"])) if d["seguimiento"] else []
+        canales.append(d)
     return dict(generado=dt.datetime.now().isoformat(timespec="minutes"), periodos=list(PERIODOS), canales=canales)
 
 
@@ -380,7 +387,7 @@ def tabla_calendario():
         prod = ", ".join(f"{p['video']} {p['progreso'] * 100:.0f}%" for p in c["prod"][:3]) or "—"
         print(f"{c['nombre'][:18]:18s} {nivel(k['dias']).upper():9s} {DIA[v.weekday()]} {v.strftime('%d-%m %H:%M'):12s} {falta:>7s}  "
               f"{k['ciclo']:>4g}d  {len(k['programados']):>4d}   {prod}")
-    viejo = min(c["actualizado"] for c in cs)
+    viejo = min((c["actualizado"] for c in cs if c.get("actualizado")), default="—")
     print(f"\nDatos de YouTube del {viejo.replace('T', ' ')} (hora local). «Sin video desde» = último programado/publicado + ciclo."
           "\nFrescos: python fab.py canales --actualizar   ·   Interactivo: python fab.py panel --abrir, pestaña «Canales».")
 

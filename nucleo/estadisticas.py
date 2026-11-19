@@ -228,11 +228,60 @@ def en_produccion(proyectos=None):
             # los Shorts (verticales) son extras: no cuentan como «en producción» del calendario (el usuario, 21-oct-2026)
             if p.get("canal") and p.get("formato") != "vertical" and not (
                     p.get("publicado") or p.get("archivado") or p.get("oculto") or p.get("error")):
+                E = p.get("etapas") or {}
+                etapa = p.get("etapa_actual") or next((k for k in E if E[k].get("estado") not in ("listo", "omitido")), None)
+                mini, final = mini_obra(p["nombre"])
                 out.setdefault(p["canal"], []).append(dict(video=p["nombre"], titulo=p.get("titulo") or p["nombre"],
-                                                           progreso=round(min(1, p.get("progreso") or 0), 2), etapa=p.get("etapa_actual")))
+                                                           progreso=round(min(1, p.get("progreso") or 0), 2), etapa=p.get("etapa_actual"),
+                                                           etapa_n=ETAPA_N.get(etapa, etapa or ""), mini=mini, mini_final=final))
         return out
     except Exception:                                # el calendario no depende de esto
         return {}
+
+
+ETAPA_N = {"guion": "Guion", "voz": "Voz", "seleccion": "Selección", "tiempo": "Tiempo", "escenas": "Escenas", "beats": "Beats",
+           "prompts": "Prompts", "flow": "Flow", "musica": "Música", "sfx": "Efectos", "mezcla": "Mezcla", "video": "Render",
+           "final": "Final", "verificar": "Verificar", "miniatura": "Miniatura", "metadatos": "Metadatos", "subida": "Subida"}
+
+
+def mini_obra(video):
+    """(ruta /media/…, es_la_final) de la imagen que «se construye» en la ruleta de producción: la miniatura de
+    youtube.json o salida/, y si todavía no existe, un boceto (previews/_mini, luego cualquier cuadro de previews/)."""
+    car = os.path.join(RAIZ_VIDEOS, video)
+    try:
+        m = (json.load(open(os.path.join(car, "youtube.json"), encoding="utf-8")).get("miniatura") or "").replace("\\", "/")
+    except Exception:
+        m = ""
+    finales = ([m] if m.split("/")[0] in ("salida", "previews") else []) + ["salida/miniatura.jpg"] + sorted(
+        os.path.relpath(x, car).replace("\\", "/") for x in glob.glob(os.path.join(car, "salida", "*_mini_*.jpg")))
+    for f in finales:
+        if os.path.isfile(os.path.join(car, f)):
+            return f"/media/{video}/{f}", True
+    bocetos = sorted(glob.glob(os.path.join(car, "previews", "_mini", "*.jpg"))) + sorted(
+        glob.glob(os.path.join(car, "previews", "*.jpg")), key=lambda x: (not re.search(r"(medios|promesas|fx)_\d", x), x))
+    for x in bocetos:
+        return "/media/{}/{}".format(video, os.path.relpath(x, car).replace("\\", "/")), False
+    return None, False
+
+
+def huecos_produccion(prod, cal, cfg, ahora=None):
+    """A cada video en producción (el más avanzado primero) le toca el siguiente hueco del canal: el primero sin video
+    largo (`cal.vacio`) y después uno por ciclo, a la hora de `horario.utc`. Si el hueco ya pasó (canal atrasado), el
+    siguiente horario a partir de ahora. Es lo que la ruleta de producción cuelga sobre la de publicaciones (19-nov-2026)."""
+    ahora = ahora or dt.datetime.now(dt.timezone.utc)
+    hm = re.match(r"(\d{1,2}):(\d{2})", str((cfg.get("horario") or {}).get("utc") or ""))
+    t = _f(cal["vacio"])
+    for i, x in enumerate(prod):
+        s = t + dt.timedelta(days=cal["ciclo"] * i)
+        atrasado = s < ahora
+        if atrasado:
+            s = ahora
+        if hm:                                       # a la hora del canal ese mismo día; si ya pasó, al día siguiente
+            h = s.replace(hour=int(hm[1]), minute=int(hm[2]), second=0, microsecond=0)
+            s = h if h > ahora and (h >= s or not atrasado) else h + dt.timedelta(days=1)
+        x["sale"] = s.strftime("%Y-%m-%dT%H:%M:%SZ")
+        x["atrasado"] = atrasado
+    return prod
 
 
 def miniaturas_locales(d, cfg, dias=4):
@@ -269,7 +318,7 @@ def datos_panel(proyectos=None):
             # `"sin_seguimiento"` = canal que no estamos moviendo: fuera del calendario, sus estadísticas siguen (el usuario, 19-nov-2026)
             d["seguimiento"] = not cfg.get("sin_seguimiento")
             d["minis"] = miniaturas_locales(d, cfg)
-            d["prod"] = sorted(prod.get(alias, []), key=lambda x: -x["progreso"])
+            d["prod"] = huecos_produccion(sorted(prod.get(alias, []), key=lambda x: -x["progreso"]), d["cal"], cfg)
             canales.append(d)
     return dict(generado=dt.datetime.now().isoformat(timespec="minutes"), periodos=list(PERIODOS), canales=canales)
 

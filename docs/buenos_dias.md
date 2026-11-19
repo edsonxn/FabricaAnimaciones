@@ -27,3 +27,6 @@ Una vez por semana (lunes), 1 pregunta extra de estrategia: qué canal le import
 - Ritmo = semanal% / % de semana transcurrida. > 1,3 → aviso y solo lo urgente; < 0,7 en las 3 → hay margen ocioso.
 - **Revisión mensual (día 1):** con `canales/uso_tokens.csv`, si el promedio de fin de semana de las 3 cuentas queda < ~60 %, proponer bajar a 2 cuentas; si 2 o más llegan a 100 % antes del reinicio, mantener 3 (o comparar con un plan mayor: precios actuales en claude.ai, no de memoria).
 - Ahorros de proceso que siempre aplican: una tarea por sesión; no sesiones en paralelo sin necesidad; cerrar las terminadas; correcciones en lote; renders sin vigilancia (`avisar-por-voz`).
+
+## 4. «Buenos días Juchipila» (el usuario, 19-nov-2026)
+Rutina aparte para la página de Facebook «Noticias de Juchipila» (`E:\PaginaFace`): skill `buenos-dias-juchipila` (en `~/.claude/skills/`, sirve desde cualquier proyecto). Tablero: `python fab.py buenosdias juchipila` (= `E:\PaginaFace\buenosdias_jch.py`; `validar` y `previa` para la cola de piezas listas). No se mezcla con el «buenos días» de los canales: va en su propia sesión.

@@ -82,6 +82,11 @@ def tablero(extra):
 
 def main():
     a = sys.argv[1:]
+    if a[:1] == ["juchipila"]:  # 19-nov-2026: «buenos días Juchipila» = tablero de la página Noticias de Juchipila
+        raiz = r"E:\PaginaFace"
+        if not os.path.isdir(raiz):
+            sys.exit("E: no está conectado: no hay PaginaFace (E:\\PaginaFace).")
+        sys.exit(subprocess.run([sys.executable, "buenosdias_jch.py", *a[1:]], cwd=raiz).returncode)
     if a[:1] == ["--uso"] and len(a) == 5:
         anotar_uso(*a[1:])
     elif a[:1] == ["--feedback"] and len(a) >= 4:

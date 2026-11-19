@@ -1,0 +1,882 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.537,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Asunto: tu memoria. Tercera parte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.537,
+  "t1": 15.501,
+  "tipo": "video",
+  "texto": "Uno de ustedes me escribió que de niño un zombi lo perseguía por el Nuketown de colores. Uno solo. Y que nadie le cree.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.501,
+  "t1": 26.028,
+  "tipo": "video",
+  "texto": "Otro jura que Mason perdonó a Menéndez, y que Black Ops 2 terminaba con Menéndez en una celda. Y alguien más me dejó esto: «estoy esperando la parte tres,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.028,
+  "t1": 33.05,
+  "tipo": "video",
+  "texto": "a ver si es mi memoria la que falló». Lo revisé todo, con el juego en pantalla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.05,
+  "t1": 42.2,
+  "tipo": "video",
+  "texto": "Hay un helicóptero que cambió en dos mil dieciséis, una frase que en Japón decía lo contrario, y una Ray Gun que llegó antes de tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.2,
+  "t1": 52.93,
+  "tipo": "video",
+  "texto": "Veinte efectos Mandela de Call of Duty, parte tres. Y en el número uno, Black Ops 7 te mintió en la cara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.93,
+  "t1": 59.74,
+  "tipo": "video",
+  "texto": "Número veinte. ¿Gaz estaba en Modern Warfare 2? Hoy Gaz es del ciento cuarenta y uno:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.74,
+  "t1": 66.87,
+  "tipo": "video",
+  "texto": "el de la gorra, el del reinicio de dos mil diecinueve, al lado de Price, Soap y Ghost.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 66.87,
+  "t1": 78.08,
+  "tipo": "video",
+  "texto": "Pero en el Modern Warfare 2 original, el de dos mil nueve, Gaz ya estaba muerto. Zakhaev lo mata con una Desert Eagle en el puente, al final de Call of Duty 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.08,
+  "t1": 86.55,
+  "tipo": "video",
+  "texto": "Y aun así sale. Tres segundos, en el video de introducción, el que repasa lo que pasó en Rusia. Gaz no estaba en Modern Warfare 2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.55,
+  "t1": 93.225,
+  "tipo": "video",
+  "texto": "Solo en sus recuerdos. En el diecinueve, Max Ammo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.225,
+  "t1": 103.802,
+  "tipo": "video",
+  "texto": "La lata verde de munición que cae de un zombi, con el letrero de Max Ammo en medio de la pantalla. Mucha gente jura que siempre te llenaba también el cargador que llevabas puesto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.802,
+  "t1": 111.05,
+  "tipo": "video",
+  "texto": "En los zombis de World at War y en los de los tres primeros Black Ops, no lo hacía: solo llenaba la reserva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 111.05,
+  "t1": 120.02,
+  "tipo": "video",
+  "texto": "El cambio llegó con Black Ops 4, en dos mil dieciocho. Por eso hay veteranos que todavía recargan antes de agarrarla. El juego cambió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.02,
+  "t1": 127.004,
+  "tipo": "video",
+  "texto": "La costumbre, no. Número dieciocho. La nuke de Call of Duty 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 127.004,
+  "t1": 137.499,
+  "tipo": "video",
+  "texto": "Veinticinco bajas sin morir, una cuenta atrás de diez segundos, y el mapa entero se pone blanco. Si tú la pones en Call of Duty 4, mira sus rachas:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.499,
+  "t1": 145.153,
+  "tipo": "video",
+  "texto": "tres bajas para el UAV, cinco para el ataque aéreo, siete para el helicóptero. Y ahí se acaba la lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.153,
+  "t1": 153.433,
+  "tipo": "video",
+  "texto": "La nuke táctica nació en Modern Warfare 2, en dos mil nueve. Lo que tenía Call of Duty 4 era una bomba nuclear en la campaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.433,
+  "t1": 163.171,
+  "tipo": "video",
+  "texto": "Y tu memoria la metió en el multijugador. En el diecisiete, un caso abierto. El hombre del menú de Black Ops.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.171,
+  "t1": 171.545,
+  "tipo": "video",
+  "texto": "El menú de Black Ops, dos mil diez: el cuarto de interrogatorio, las teles, la silla, y alguien detrás del cristal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.545,
+  "t1": 182.638,
+  "tipo": "video",
+  "texto": "Unos juran que al entrar en Zombies, un zombi aparecía y se comía al hombre de la ventana. Otros dicen que el hombre sale de la sala, y vuelve golpeando el cristal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 182.638,
+  "t1": 188.488,
+  "tipo": "video",
+  "texto": "Yo entré a ese menú, y lo que veo son las teles. Este expediente se queda abierto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.488,
+  "t1": 195.336,
+  "tipo": "video",
+  "texto": "Si tienes la grabación, ya sabes dónde mandarla. Antes de seguir, una corrección del público.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 195.336,
+  "t1": 205.788,
+  "tipo": "video",
+  "texto": "Jesús escribió que el de Shepherd en la parte uno está raro, que todos sabemos que Shepherd mata a Ghost, que es icónico. Tienes toda la razón, Jesús.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.788,
+  "t1": 214.088,
+  "tipo": "video",
+  "texto": "Lo sabemos todos. Todos menos los miles que escribieron que fue Makárov. Felicidades: tu memoria funciona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.088,
+  "t1": 223.312,
+  "tipo": "video",
+  "texto": "Quédate un rato más, a ver cuánto te dura. Número dieciséis. Speed Cola en el balcón. TranZit, Black Ops 2:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.312,
+  "t1": 232.033,
+  "tipo": "video",
+  "texto": "el autobús, la niebla, y la granja con su granero rojo. Hay quien recuerda la máquina de Speed Cola en el balcón de la granja, arriba,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.033,
+  "t1": 240.125,
+  "tipo": "video",
+  "texto": "junto al granero rojo. Pero en TranZit, arriba del granero, la máquina es de Double Tap. La Speed Cola de la granja existe,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.125,
+  "t1": 250.43,
+  "tipo": "video",
+  "texto": "pero en otro modo, el de Supervivencia, y abajo, dentro de la casa. Dos mapas en el mismo sitio. Una sola granja en tu cabeza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.43,
+  "t1": 255.814,
+  "tipo": "video",
+  "texto": "En el quince, la carne. Uno de los recuerdos más raros de Black Ops 2:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 255.814,
+  "t1": 266.422,
+  "tipo": "video",
+  "texto": "un trozo de carne cruda que lanzabas, y todos los zombis se iban detrás de él, como con el mono, pero sin explosión. Quien lo cuenta pregunta si se lo inventó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 266.422,
+  "t1": 274.607,
+  "tipo": "video",
+  "texto": "Y no. Existe. Se llama Zombie Flesh, y solo sale en el modo Grief, el de dos equipos contra los zombis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.607,
+  "t1": 285.43,
+  "tipo": "video",
+  "texto": "Se la tiras a un rival, y los zombis lo persiguen treinta segundos. Esta vez la memoria no mintió. Solo nadie más jugaba Grief.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 285.43,
+  "t1": 289.996,
+  "tipo": "video",
+  "texto": "Número catorce. Extinction no era de Battlefield.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 289.996,
+  "t1": 300.958,
+  "tipo": "video",
+  "texto": "Cuatro jugadores, un taladro, y unos aliens enormes llamados Cryptids, saliendo del suelo. Hay quien jura que Extinction era el modo de Battlefield 4,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.958,
+  "t1": 308.054,
+  "tipo": "video",
+  "texto": "su respuesta a los zombis de Call of Duty. Es de Call of Duty: Ghosts, dos mil trece, de Infinity Ward.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 308.054,
+  "t1": 318.64,
+  "tipo": "video",
+  "texto": "El único modo de aliens de la saga. Y se lo regalaste a la competencia. En el trece, la frase de Reznov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.64,
+  "t1": 326.73,
+  "tipo": "video",
+  "texto": "En el World at War del año dos mil ocho, Viktor Reznov, el sargento del Ejército Rojo, en Stalingrado, entre las ruinas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.73,
+  "t1": 337.92,
+  "tipo": "video",
+  "texto": "Muchos recuerdan una sola frase. Escucha la primera parte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.92,
+  "t1": 343.56,
+  "tipo": "video",
+  "texto": "Eso es en Stalingrado, en la primera misión. Y la segunda parte llega años después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 343.56,
+  "t1": 352.93,
+  "tipo": "video",
+  "texto": "ya en Alemania, en la misión que lleva su nombre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.93,
+  "t1": 361.28,
+  "tipo": "video",
+  "texto": "Su tierra, su gente, su sangre. Son dos frases, en dos misiones, con años de guerra en medio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.28,
+  "t1": 367.93,
+  "tipo": "video",
+  "texto": "Y tu memoria las juntó en un solo discurso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.93,
+  "t1": 377.327,
+  "tipo": "video",
+  "texto": "Número doce. El modo de una sola bala. Black Ops, dos mil diez, las partidas de apuestas. Se llamaba One in the Chamber:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.327,
+  "t1": 387.039,
+  "tipo": "video",
+  "texto": "una pistola, una bala, y un cuchillo. Hay quien lo recuerda como un todos contra todos a treinta bajas, sin vidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.039,
+  "t1": 394.069,
+  "tipo": "video",
+  "texto": "Desde el primer día tenía tres vidas. Mueres tres veces y estás fuera. Una bala, tres vidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.069,
+  "t1": 404.135,
+  "tipo": "video",
+  "texto": "Y tu memoria te dio infinitas. En el once, la bufanda de Ghost. Simon Ghost Riley, Modern Warfare 2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 404.135,
+  "t1": 410.08,
+  "tipo": "video",
+  "texto": "dos mil nueve: el pasamontañas de calavera, las gafas, los auriculares.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 410.08,
+  "t1": 421.535,
+  "tipo": "video",
+  "texto": "Media generación lo recuerda con una bufanda de cuadros blancos y negros al cuello. Uno lo descubrió en una foto suya, disfrazado de niño. En ninguna misión del original la lleva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 421.535,
+  "t1": 430.43,
+  "tipo": "video",
+  "texto": "La bufanda salió de los disfraces y de las fotos de los fans. Te disfrazaste de un Ghost que nunca existió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.43,
+  "t1": 438.055,
+  "tipo": "video",
+  "texto": "Número diez. Los dos capitanes Price. Bigote enorme, boina, la Segunda Guerra Mundial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.055,
+  "t1": 447.119,
+  "tipo": "video",
+  "texto": "El Capitán Price de Call of Duty 1 y 2. Mucha gente cree que es el mismo Price de Call of Duty 4, el del gorro militar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.119,
+  "t1": 455.574,
+  "tipo": "video",
+  "texto": "Hay hasta quien dice que los alemanes lo hicieron inmortal. No es el mismo. El Price de la Segunda Guerra muere en mil novecientos cuarenta y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.574,
+  "t1": 463.489,
+  "tipo": "video",
+  "texto": "cuatro, saboteando el acorazado Tirpitz, en la última misión británica del primer juego. ¿Son familia?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 463.489,
+  "t1": 473.72,
+  "tipo": "video",
+  "texto": "Nunca se confirmó. Lo único seguro es que el bigote se heredó. En el nueve, el poste de Piccadilly.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.72,
+  "t1": 483.25,
+  "tipo": "video",
+  "texto": "Modern Warfare, dos mil diecinueve. Piccadilly, en Londres: los autobuses rojos de dos pisos, y un semáforo entre ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 483.25,
+  "t1": 488.11,
+  "tipo": "video",
+  "texto": "En abril de dos mil veinte, medio Call of Duty juró que ese poste era nuevo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 488.11,
+  "t1": 499.98,
+  "tipo": "video",
+  "texto": "Hasta un jugador profesional dijo que nunca había tenido que esquivarlo. El poste estaba desde el principio. Sale en las partidas del lanzamiento, y en el tráiler de seis meses antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.98,
+  "t1": 505.43,
+  "tipo": "video",
+  "texto": "El letrero de Standoff tiene un primo en Londres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 505.43,
+  "t1": 516.572,
+  "tipo": "video",
+  "texto": "Número ocho. La tercera arma en el primer mapa. El mapa donde empezó todo, con la casa en ruinas, las ventanas con tablas y la caja misteriosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.572,
+  "t1": 524.943,
+  "tipo": "video",
+  "texto": "Unos juran que en Nacht no había ni una sola perk. Otros, que tenía Mule Kick, la máquina verde de la tercera arma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.943,
+  "t1": 533.483,
+  "tipo": "video",
+  "texto": "Los dos tienen razón. En World at War, ninguna. En Black Ops, un parche de dos mil once puso Mule Kick en la sala del principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.483,
+  "t1": 541.223,
+  "tipo": "video",
+  "texto": "Pero solo si estabas conectado a internet. Sin conexión, tu Nacht no tenía perks. Con conexión, sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 541.223,
+  "t1": 548.56,
+  "tipo": "video",
+  "texto": "Mismo mapa. Dos memorias. En el siete, la frase de Prípiat.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 548.56,
+  "t1": 559.78,
+  "tipo": "video",
+  "texto": "Call of Duty 4, All Ghillied Up. El capitán MacMillan y Price, con trajes de camuflaje, cruzan la ciudad abandonada de Chernóbil. Y MacMillan dice algo que todos citan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.78,
+  "t1": 567.93,
+  "tipo": "video",
+  "texto": "Así suena en el menú del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.93,
+  "t1": 575.91,
+  "tipo": "video",
+  "texto": "Cincuenta mil, no cuarenta y cinco mil, como recuerdan muchos. Y sin palabrota. Y esa versión es la del video del menú,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.91,
+  "t1": 587.93,
+  "tipo": "video",
+  "texto": "la que ves antes del título. En la misión es otra. Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 587.93,
+  "t1": 592.36,
+  "tipo": "video",
+  "texto": "«En esta ciudad». Y la palabrota que tantos le ponen ni siquiera es suya:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.36,
+  "t1": 602.93,
+  "tipo": "video",
+  "texto": "es del general Shepherd, en Modern Warfare 2. Dos juegos, dos personajes. Una sola frase en tu cabeza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.93,
+  "t1": 609.755,
+  "tipo": "video",
+  "texto": "Número seis. El mapa soleado que no existe. Hay quien recuerda un mapa de Zombies de día,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 609.755,
+  "t1": 618.315,
+  "tipo": "video",
+  "texto": "soleado, con campos de hierba, bosques y pueblitos, y un portal que te llevaba a otra zona. Su amigo no tenía ni idea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.315,
+  "t1": 627.32,
+  "tipo": "video",
+  "texto": "Y en internet no lo encontraba. Ese mapa existe. Se llama Outbreak, y es de Black Ops Cold War: Zombies en los mapas abiertos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 627.32,
+  "t1": 635.175,
+  "tipo": "video",
+  "texto": "como el pueblo de Golova, en pleno otoño. Él ni siquiera tenía Cold War: lo jugó un fin de semana de prueba gratis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.175,
+  "t1": 643.941,
+  "tipo": "video",
+  "texto": "Un fin de semana. Y años buscándolo. En el cinco, la Ray Gun Mark II.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.941,
+  "t1": 652.873,
+  "tipo": "video",
+  "texto": "La Ray Gun de tres disparos, la de Black Ops 2. Mucha gente la recuerda en la caja desde el primer día, en noviembre de dos mil doce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.873,
+  "t1": 661.134,
+  "tipo": "video",
+  "texto": "Llegó ocho meses después, con el paquete Vengeance y el mapa Buried, en julio de dos mil trece. Pero hay un detalle.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 661.134,
+  "t1": 670.304,
+  "tipo": "video",
+  "texto": "Unos días antes, un parche la coló por error en todos los mapas, y la quitaron enseguida. Si la sacaste de la caja antes de tiempo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.304,
+  "t1": 678.75,
+  "tipo": "video",
+  "texto": "no lo soñaste. Fuiste testigo de un error. Número cuatro. La frase del ascensor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 678.75,
+  "t1": 690.285,
+  "tipo": "video",
+  "texto": "Modern Warfare 2, el ascensor del aeropuerto. Makárov carga su arma y dice la frase más famosa de la saga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 690.285,
+  "t1": 695.395,
+  "tipo": "video",
+  "texto": "Mucha gente entendió «que no quede ningún ruso vivo». Significa otra cosa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.395,
+  "t1": 702.765,
+  "tipo": "video",
+  "texto": "nada de ruso. No hablen ruso. Que parezca un ataque de estadounidenses. Y en el doblaje japonés,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 702.765,
+  "t1": 713.46,
+  "tipo": "video",
+  "texto": "la frase salió así. «Mátenlos, son rusos». Justo lo contrario. Se corrigió once años después,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.46,
+  "t1": 722.46,
+  "tipo": "video",
+  "texto": "en la versión remasterizada. Y otro detalle: la misión no te obliga a disparar. Tu único objetivo es seguir a Makárov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 722.46,
+  "t1": 731.206,
+  "tipo": "video",
+  "texto": "El juego nunca te lo pidió. Fue tu memoria. En el tres, el brazo de Jackson.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 731.206,
+  "t1": 740.411,
+  "tipo": "video",
+  "texto": "Call of Duty 4, Shock and Awe. Explota la bomba, el helicóptero se ladea, y el teniente Volker sale volando por la rampa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.411,
+  "t1": 746.711,
+  "tipo": "video",
+  "texto": "Muchos recuerdan al sargento Jackson estirando el brazo para salvarlo. Otros juran que no hace nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 746.711,
+  "t1": 757.27,
+  "tipo": "video",
+  "texto": "Mira el original, de dos mil siete. Ni un gesto. Ahora el remasterizado, de dos mil dieciséis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 757.27,
+  "t1": 765.32,
+  "tipo": "video",
+  "texto": "Ahí Jackson sí estira el brazo. Los dos bandos tienen razón. Solo jugaron juegos distintos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 765.32,
+  "t1": 772.93,
+  "tipo": "video",
+  "texto": "Infinity Ward le dio a Jackson nueve años después lo que tu memoria le dio desde el principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.93,
+  "t1": 780.94,
+  "tipo": "video",
+  "texto": "Número dos. Este viene de los comentarios. Dice que de niño jugaba en el Nuketown normal, el colorido de Black Ops 1,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.94,
+  "t1": 791.209,
+  "tipo": "video",
+  "texto": "con un solo zombi que lo seguía por todo el mapa. Primero lo malo: el Nuketown de Black Ops 1 nunca tuvo zombis. Su secreto era otro:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.209,
+  "t1": 798.759,
+  "tipo": "video",
+  "texto": "volarles la cabeza a todos los maniquíes, uno por uno, por toda la colonia. Pero no te lo inventaste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 798.759,
+  "t1": 808.119,
+  "tipo": "video",
+  "texto": "En Black Ops 4 está Alpha Omega: Nuketown antes de la bomba, con sus casas de colores y su sol. Si les cortas la cabeza a los maniquíes robot,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 808.119,
+  "t1": 813.883,
+  "tipo": "video",
+  "texto": "aparece uno solo, que te sigue por todo el mapa. Y se congela cuando lo miras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 813.883,
+  "t1": 826.712,
+  "tipo": "video",
+  "texto": "Y en Black Ops 3, en Nuk3town, los maniquíes también cobran vida y te persiguen. Un Nuketown brillante, y un maniquí que te sigue. Lo viste. Solo que no era Black Ops 1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 826.712,
+  "t1": 833.432,
+  "tipo": "video",
+  "texto": "Félix tiene una teoría para todo esto: posiblemente los mods afectan a los recursos. Puede ser, Félix.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 833.432,
+  "t1": 842.93,
+  "tipo": "video",
+  "texto": "Pero aquí no hizo falta ningún mod. Treyarch lo metió dos veces. El único mod de esta historia es la memoria.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 842.93,
+  "t1": 849.574,
+  "tipo": "video",
+  "texto": "Y el número uno. Menéndez en la celda. Este me lo mandó Rafael: antes de Black Ops 7,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 849.574,
+  "t1": 859.498,
+  "tipo": "video",
+  "texto": "juraba que Mason había perdonado a Menéndez, y que Black Ops 2 terminaba con él encerrado en prisión. Primera sorpresa: ese final existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 859.498,
+  "t1": 867.808,
+  "tipo": "video",
+  "texto": "En la última misión, el que decide no es Alex, es su hijo, David Mason. Si le perdonas la vida, se lo llevan detenido,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 867.808,
+  "t1": 875.808,
+  "tipo": "video",
+  "texto": "y un año después lo ves en su celda, con el uniforme naranja, mirando la tele. Segunda sorpresa: no es el oficial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 875.808,
+  "t1": 887.412,
+  "tipo": "video",
+  "texto": "En la línea de tiempo oficial de Treyarch, Menéndez muere el diecinueve de junio de dos mil veinticinco, al intentar escapar. Y lo mata el mismo David que lo había perdonado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 887.412,
+  "t1": 893.522,
+  "tipo": "video",
+  "texto": "Y la tercera: Black Ops 7 lo trae de vuelta. Menéndez sale amenazando al mundo otra vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.522,
+  "t1": 901.456,
+  "tipo": "video",
+  "texto": "diez años después. Y no es él. Es un deepfake, una inteligencia artificial que imita su cara y su voz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 901.456,
+  "t1": 909.357,
+  "tipo": "video",
+  "texto": "Tú no te inventaste ese final, Rafael. Lo que se inventaron fue a Menéndez. Expediente cerrado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 909.357,
+  "t1": 918.497,
+  "tipo": "video",
+  "texto": "Veinte efectos Mandela, y otra vez, varios me los dieron ustedes. Todos los comentarios se leen, y se toman en cuenta para el siguiente expediente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 918.497,
+  "t1": 926.947,
+  "tipo": "video",
+  "texto": "Como el de papelotes, que dice que sigamos así. O el de Hilda, que lo dijo todo con dos confetis. Ahora te toca a ti:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 926.947,
+  "t1": 936.427,
+  "tipo": "video",
+  "texto": "¿qué recuerdas de Call of Duty que nadie más recuerda? Escríbelo. Si es bueno, sale en la parte cuatro. En el canal tienes la parte uno, la parte dos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 936.427,
+  "t1": 945.0,
+  "tipo": "video",
+  "texto": "y cómo murió de verdad cada villano de la saga. Suscríbete. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

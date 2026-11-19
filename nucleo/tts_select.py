@@ -169,8 +169,12 @@ palabras = {}
 _prev = json.load(open("voz/palabras.json", encoding="utf-8")) if os.path.exists("voz/palabras.json") else {}
 for key, (n, m) in elegidas.items():
     _fin = f"voz/final/{key}.wav"
+    # ...y solo si el TEXTO alineado es el del guion de ahora (19-nov-2026, cod_mandela3: 11 frases reescritas y regeneradas
+    # con el mismo nombre de toma conservaban las palabras del texto viejo, y las anclas de efectos.py no casaban)
+    _txt_prev = normaliza(" ".join(w["w"] for w in _prev.get(key, {}).get("words", [])))
     if (_prev.get(key, {}).get("take") == n and os.path.exists(_fin)
-            and os.path.getmtime(_fin) >= os.path.getmtime(f"voz/cands/{n}")):
+            and os.path.getmtime(_fin) >= os.path.getmtime(f"voz/cands/{n}")
+            and _txt_prev == normaliza(textos[key])):
         palabras[key] = _prev[key]
         continue
     y, sr = librosa.load(f"voz/cands/{n}", sr=None)

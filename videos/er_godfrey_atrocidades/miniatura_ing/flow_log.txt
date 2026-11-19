@@ -1,0 +1,10 @@
+[flow] 2 imagen(es) -> C:\FabricaAnimaciones\videos\er_godfrey_atrocidades\miniatura_ing\flow
+[flow] modo: 🍌 Nano Banana 2.1 crop_16_9 x2
+  [flow] los ingredientes ya estan en el proyecto; no se vuelven a subir
+[flow] 3 ingrediente(s) agregado(s)
+  [1/2] godfrey_v1                                     FALLO: no aparecio imagen nueva en 300s
+  [2/2] godfrey_v2                                     FALLO: Locator.type: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[contenteditabl
+
+0 generada(s), 2 fallo(s) en 396s

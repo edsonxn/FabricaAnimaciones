@@ -1007,10 +1007,11 @@ def repudio(madre, hijas, titulo="Las hijas de la flor", remate="Como hizo tu ma
 
 
 # ------------------------------------------------------------------ er_melina_atrocidades (27-oct-2026)
-def acuerdo(da, pides, letra=None, titulo="El acuerdo", remate="Deber", w=1500, h=660):
+def acuerdo(da, pides, letra=None, titulo="El acuerdo", remate="Deber", w=1500, h=660, cab=("Ella te da", "Tú la llevas")):
     """El trato de Melina como un contrato de dos columnas: «Ella te da» (una línea por marca, con un rombo dorado) y
     «Tú la llevas» (marca len(da)). Con `letra`, la marca siguiente hace crecer la letra pequeña abajo en rojo, los
-    regalos se tiñen de carmín (eran un préstamo) y la siguiente estampa el sello `remate`. Pensado para salir dos veces."""
+    regalos se tiñen de carmín (eran un préstamo) y la siguiente estampa el sello `remate`. Pensado para salir dos veces.
+    `cab` = las dos cabeceras de columna (19-nov-2026, Godfrey: «Ella os da» / «Vosotros pagáis»)."""
     ftit, fc = fuente("r", 40), fuente("r", 42)
     fs = fuente("b", 60)
     n = len(da)
@@ -1024,8 +1025,8 @@ def acuerdo(da, pides, letra=None, titulo="El acuerdo", remate="Deber", w=1500, 
         _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
         xm = M + w * .60
         d.line([(xm, M + 120), (xm, M + h - 170)], fill=ORO_OSC + (int(a0 * .7),), width=2)
-        _texto(d, (M + 80, M + 130), "ELLA TE DA", fuente("r", 32), GRIS, "lm", a0, track=4)
-        _texto(d, (xm + 50, M + 130), "TÚ LA LLEVAS", fuente("r", 32), GRIS, "lm", a0, track=4)
+        _texto(d, (M + 80, M + 130), cab[0].upper(), fuente("r", 32), GRIS, "lm", a0, track=4)
+        _texto(d, (xm + 50, M + 130), cab[1].upper(), fuente("r", 32), GRIS, "lm", a0, track=4)
         u_l = _eo((dt - mk[n + 1]) / .9) if letra else 0.0
         for k, s in enumerate(da):
             u = _eo((dt - mk[k]) / .5)
@@ -2200,10 +2201,12 @@ def injerto(centro="Godrick", sub_centro="el Injertado", miembros=(), remate=Non
 
 def linaje(raiz=("Godfrey", "primer Señor del Círculo"), hijos=(("Godrick", "el enclenque de la camada"),
                                                                     ("Godefroy", "encerrado para siempre")),
-           medio="la sangre, cada vez más diluida", remate="El linaje dorado", titulo="La sangre de Godfrey", w=1500, h=740):
+           medio="la sangre, cada vez más diluida", remate="El linaje dorado", titulo="La sangre de Godfrey", w=1500, h=740,
+           injertos=None):
     """Árbol del linaje dorado. Marca 0: la raíz (corona dorada que brilla). Marca 1: el tronco baja y se apaga de oro a gris
     (`medio`, la sangre diluida, en trazos). Marcas 2..n+1: cada hijo cuelga del tronco y le brotan miembros cosidos con
-    puntadas rojas (se injerta). Marca n+2: `remate` y la corona pierde el brillo."""
+    puntadas rojas (se injerta). Marca n+2: `remate` y la corona pierde el brillo.
+    `injertos` = índices de los hijos que se injertan (None = todos; () = ninguno, p. ej. los hijos de Godfrey y Márika)."""
     ftit, fn_, fs, fgr = fuente("r", 40), fuente("r", 42), fuente("i", 28), fuente("r", 56)
     n = len(hijos)
 
@@ -2246,7 +2249,7 @@ def linaje(raiz=("Godfrey", "primer Señor del Círculo"), hijos=(("Godrick", "e
             x = cx - w * .25 + sp * i if n > 1 else cx
             _linea(d, (cx, yb - 60), (x, yb - 60), u, GRIS, 200 * u, 3)
             _linea(d, (x, yb - 60), (x, yb - 14), u, GRIS, 200 * u, 3)
-            br = _eo((dt - mk[i + 2] - .4) / .9)
+            br = _eo((dt - mk[i + 2] - .4) / .9) if injertos is None or i in injertos else 0.0
             for k in range(5):
                 if br * 5 <= k:
                     break
@@ -2576,6 +2579,174 @@ def paciencia(n=9, umbral=4, quien="Gurranq", basta="«Basta»", remate="Y le ll
         if ur > 0:
             t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
             _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 40), remate, fr, AMBAR, "mm", 255 * ur, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+# ============================================================ er_godfrey_atrocidades (19-nov-2026)
+def estandartes(nombres, remate="", titulo="Reinos conquistados", ya=0, w=1600, h=540):
+    """Fila de estandartes con el nombre de cada pueblo vencido. Marca i: el estandarte i se apaga a gris y lo cruza un tajo
+    rojo. Marca len(nombres): `remate` en ámbar. `ya` = cuántos salen ya tachados desde el principio (reapariciones)."""
+    ftit, fn_, fr = fuente("r", 40), fuente("b", 34), fuente("i", 46)
+    n = len(nombres)
+
+    def fn(dt, dur, marcas):
+        mk = [-9] * ya + list(marcas)[: n + 1 - ya] + [99] * (n + 2)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 46), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 84, w * .3, alfa=a0)
+        paso = (w - 160) / n
+        bw, bh, top = min(170, paso * .62), 250, M + 120
+        for i, nom in enumerate(nombres):
+            cx = M + 80 + paso * (i + .5)
+            ui = _eo((dt - .15 - i * .18) / .35)
+            if ui <= 0:
+                continue
+            ut = _eo((dt - mk[i]) / .45)
+            col = tuple(int(ORO_OSC[c] * (1 - ut) + (70, 66, 58)[c] * ut) for c in range(3))
+            sway = 3 * math.sin(dt * 2.2 + i) * (1 - ut)
+            x0, x1, y1 = cx - bw / 2, cx + bw / 2, top + bh * ui
+            d.line((cx, top - 18, cx, top + bh + 10), fill=ORO + (int(a0 * ui),), width=4)
+            poly = [(x0 + sway, top), (x1 + sway, top), (x1, y1), (cx, y1 - 46 * ui), (x0, y1)]
+            d.polygon(poly, fill=col + (int(230 * ui),), outline=ORO + (int(200 * ui * (1 - .6 * ut)),))
+            d.ellipse((cx - 22, top + 70, cx + 22, top + 114), outline=PERGAMINO + (int(160 * ui * (1 - .7 * ut)),), width=3)
+            colt = tuple(int(PERGAMINO[c] * (1 - ut) + GRIS[c] * ut) for c in range(3))
+            for k, linea in enumerate(_partir(d, nom, fn_, paso - 16)[:2]):
+                _texto(d, (cx, top + bh + 46 + k * 38), linea, fn_, colt, "mm", 255 * ui)
+            if ut > 0:
+                d.line((x0 - 10, top + 20, x0 - 10 + (bw + 20) * ut, top + 20 + (bh - 40) * ut), fill=ROJO + (235,), width=9)
+        ur = _eo((dt - mk[n]) / .5)
+        if ur > 0 and remate:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 34), remate, fr, AMBAR, "mm", 255 * ur, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def contencion(barra="Sed de batalla", freno="Serosh", grito="Hoarah Loux", remate="", icono=None, w=1500, h=460):
+    """Barra de `barra` que se llena en rojo y se detiene en un broche dorado (`freno`, con el icono real si se da).
+    Marca 0: se llena hasta el broche y aguanta. Marca 1: el broche se pone rojo y tiembla. Marca 2: el broche estalla, la
+    barra llega al 100 % y aparece `grito` en grande. Marca 3: `remate`."""
+    ftit, fb, fg, fr = fuente("r", 40), fuente("b", 34), fuente("b", 92), fuente("i", 44)
+    ico = None
+    if icono:
+        ico = Image.open(icono).convert("RGBA")
+        bb = ico.getbbox()
+        ico = ico.crop(bb) if bb else ico
+        ico.thumbnail((112, 112), Image.LANCZOS)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 5
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + 70, M + 52), barra.upper(), ftit, PERGAMINO, "lm", a0, track=5)
+        x0, x1, cy, bh = M + 70, M + w - 70, M + h * .46, 56
+        xf = x0 + (x1 - x0) * .78
+        d.rounded_rectangle((x0, cy - bh / 2, x1, cy + bh / 2), 14, outline=ORO + (int(a0),), width=3,
+                            fill=(20, 16, 12, int(a0 * .9)))
+        u0 = _eo((dt - mk[0]) / 1.6)
+        u2 = _eo((dt - mk[2]) / .5)
+        xe = x0 + 6 + (xf - 30 - x0) * u0 + (x1 - 36 - xf) * u2
+        if xe > x0 + 8:
+            pul = .5 + .5 * math.sin(dt * 9)
+            capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ImageDraw.Draw(capa).rounded_rectangle((x0 + 6, cy - bh / 2 + 6, xe, cy + bh / 2 - 6), 10,
+                                                   fill=(int(150 + 60 * pul), 30, 26, 255))
+            im.alpha_composite(_brillo(capa, 8, 1.0 + u2))
+            d = ImageDraw.Draw(im)
+        u1 = _eo((dt - mk[1]) / .3)
+        tiemb = 7 * math.sin(dt * 45) * u1 * (1 - u2)
+        r = 62
+        if u2 < 1:
+            col = tuple(int(ORO[c] * (1 - u1) + ROJO[c] * u1) for c in range(3))
+            a_b = 255 * (1 - u2) * _eo((dt - .2) / .4)
+            fx = xf + tiemb
+            halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ImageDraw.Draw(halo).ellipse((fx - r - 18, cy - r - 18, fx + r + 18, cy + r + 18), fill=col + (int(110 * a_b / 255),))
+            im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(16)))
+            d = ImageDraw.Draw(im)
+            d.ellipse((fx - r, cy - r, fx + r, cy + r), fill=(16, 12, 9, int(a_b)), outline=col + (int(a_b),), width=5)
+            if ico is not None and a_b > 0:
+                ic = ico.copy()
+                ic.putalpha(Image.fromarray((np.array(ic.split()[3]) * (a_b / 255)).astype(np.uint8)))
+                im.alpha_composite(ic, (int(fx - ic.width / 2), int(cy - ic.height / 2)))
+                d = ImageDraw.Draw(im)
+            if u1 > 0:
+                for k in range(3):
+                    ang = -1.1 + k * 1.05
+                    d.line((fx, cy, fx + r * math.cos(ang) * u1, cy + r * math.sin(ang) * u1), fill=ROJO + (int(a_b),), width=3)
+            _texto(d, (fx, cy + r + 32), freno, fb, col, "mm", a_b)
+        if u2 > 0:
+            for k in range(10):
+                ang = k * .63
+                dist = 40 + 260 * u2
+                px, py = xf + dist * math.cos(ang), cy + dist * math.sin(ang) * .7 + 90 * u2 * u2
+                d.polygon([(px, py - 12), (px + 12, py), (px, py + 12), (px - 12, py)], fill=ORO + (int(230 * (1 - u2 * .8)),))
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + h * .80), grito.upper(), fg, ROJO, "mm", 255 * u2, track=8,
+                   sombra=False)
+            im.alpha_composite(_brillo(t2, 14, 2.0))
+            d = ImageDraw.Draw(im)
+        ur = _eo((dt - mk[3]) / .5)
+        if ur > 0 and remate:
+            _texto(d, (M + w / 2, M + h - 24), remate, fr, AMBAR, "mm", 255 * ur)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def gracia_perdida(enemigos, remate="Cuando cayó su último enemigo", titulo="La gracia en sus ojos", w=1600, h=560):
+    """Dos ojos con el iris dorado de la gracia y una lista de enemigos a la izquierda. Marca i (< n): se tacha el enemigo i.
+    Marca n: el iris se apaga de oro a gris ceniza. Marca n+1: `remate`."""
+    ftit, fn_, fr = fuente("r", 40), fuente("b", 38), fuente("i", 46)
+    n = len(enemigos)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 3)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 46), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 84, w * .3, alfa=a0)
+        lx, ly = M + 90, M + 150
+        paso = min(70, (h - 230) / max(1, n))
+        for i, e in enumerate(enemigos):
+            ui = _eo((dt - .2 - i * .15) / .35)
+            ut = _eo((dt - mk[i]) / .35)
+            col = tuple(int(PERGAMINO[c] * (1 - ut) + GRIS[c] * ut) for c in range(3))
+            y = ly + i * paso
+            _texto(d, (lx, y), e, fn_, col, "lm", 255 * ui)
+            if ut > 0:
+                ancho = _ancho(d, e, fn_, 0)
+                d.line((lx - 6, y + 2, lx - 6 + (ancho + 12) * ut, y + 2), fill=ROJO + (235,), width=5)
+        ua = _eo((dt - mk[n]) / 1.4)
+        cy = M + h * .52
+        for cx in (M + w * .60, M + w * .82):
+            rx, ry = 150, 78
+            ojo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            o = ImageDraw.Draw(ojo)
+            o.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), fill=(226, 216, 190, int(a0 * .9)))
+            iris = tuple(int(ORO[c] * (1 - ua) + (84, 80, 74)[c] * ua) for c in range(3))
+            o.ellipse((cx - 62, cy - 62, cx + 62, cy + 62), fill=iris + (int(a0),))
+            o.ellipse((cx - 22, cy - 22, cx + 22, cy + 22), fill=(10, 8, 6, int(a0)))
+            msk = Image.new("L", im.size, 0)
+            ImageDraw.Draw(msk).ellipse((cx - rx, cy - ry, cx + rx, cy + ry), fill=255)
+            ojo.putalpha(Image.fromarray(np.minimum(np.array(ojo.split()[3]), np.array(msk))))
+            if ua < 1:
+                hal = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                ImageDraw.Draw(hal).ellipse((cx - 90, cy - 90, cx + 90, cy + 90), fill=ORO + (int(120 * (1 - ua) * a0 / 255),))
+                im.alpha_composite(hal.filter(ImageFilter.GaussianBlur(26)))
+            im.alpha_composite(ojo)
+            d = ImageDraw.Draw(im)
+            d.ellipse((cx - rx, cy - ry, cx + rx, cy + ry), outline=ORO + (int(a0),), width=4)
+        ur = _eo((dt - mk[n + 1]) / .5)
+        if ur > 0 and remate:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w * .71, M + h - 40), remate, fr, AMBAR, "mm", 255 * ur, sombra=False)
             im.alpha_composite(_brillo(t2, 10, 1.5))
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

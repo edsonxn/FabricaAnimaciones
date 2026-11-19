@@ -21,6 +21,9 @@ Solo lee, salvo las miniaturas (previews/_v2/), el audio liviano para el navegad
   POST /api/v2/archivar        {video, archivado, motivo}: da por terminado un proyecto (filtro «Archivados»; no borra nada)
   /v2/movil · /v2/aldea · /v2/juego   app del teléfono (28-oct-2026): panel de estatus, la Aldea (RTS) y la Fábrica 3D
   /v2/app/<archivo>            sus archivos sueltos (manifest, service worker, iconos, APK)
+  /v2/obra[?video=X|?tele=1]   «La obra» (19-nov-2026): vista RTS de lo que se produce (pop-up de «Canales» y vista 1 de la tele)
+  /api/v2/obra                 {obras: [video, titulo, canal, progreso, etapa_n, sale, vistazos…], libres: [huecos por llenar]}
+  /v2/obra/img/<n> · /v2/obra/sonido/<n>   sprites y sonidos de nucleo/obra/ (lista blanca de nombres)
 """
 import hashlib
 import json
@@ -701,6 +704,79 @@ def proyecto_vivo(nombre):
                         for e in v.get("etapas") or [] if e["id"] in E])
 
 
+# ======================================================================== «La obra» (nucleo/panel_obra.html, 19-nov-2026)
+# Vista RTS de lo que se está produciendo: pop-up de la ruleta «En producción» (pestaña «Canales») y vista 1 de la tele.
+OBRA = os.path.join(AQUI, "obra")
+OBRA_IMG = re.compile(r"^[a-z_0-9]+\.(?:png|jpg)$")
+OBRA_SON = re.compile(r"^[a-z_0-9]+\.mp3$")
+_obra_cache = {"t": 0, "v": None}
+_obra_lock = threading.Lock()
+
+
+def _mini_url(video, rel, w=480):
+    from urllib.parse import quote
+    return f"/v2/mini/{quote(video)}/{quote(rel)}?w={w}"
+
+
+def _vistazos(video, mini_media=None, n=12):
+    """Lo que se ve en la pantalla del techo del taller: la miniatura (o su boceto) y los últimos cuadros de previews/."""
+    out = []
+    if mini_media and mini_media.startswith(f"/media/{video}/"):
+        out.append(_mini_url(video, mini_media[len(f"/media/{video}/"):]))
+    car = os.path.join(P.VIDEOS, video, "previews")
+    try:
+        fs = [e for e in os.scandir(car) if e.is_file() and e.name.lower().endswith((".jpg", ".jpeg", ".png"))]
+    except OSError:
+        fs = []
+    fs.sort(key=lambda e: -e.stat().st_mtime)
+    for e in fs[:n]:
+        u = _mini_url(video, "previews/" + e.name)
+        if u not in out:
+            out.append(u)
+    return out[:n]
+
+
+def obra_datos():
+    """{obras: [...], libres: [...]} para /api/v2/obra (caché de 20 s: la tele y el pop-up la piden a la vez)."""
+    with _obra_lock:
+        if _obra_cache["v"] is not None and time.time() - _obra_cache["t"] < 20:
+            return _obra_cache["v"]
+        import estadisticas as ES
+        d = ES.datos_panel(P.estado_cache(30)["proyectos"])
+        obras, libres = [], []
+        for c in d.get("canales", []):
+            for p in c.get("prod") or []:
+                obras.append(dict(video=p["video"], titulo=p.get("titulo") or p["video"], canal=c.get("alias"),
+                                  canal_nombre=c.get("nombre") or c.get("alias"), color=c.get("color", 0),
+                                  progreso=p.get("progreso") or 0, etapa_n=p.get("etapa_n") or "", sale=p.get("sale"),
+                                  atrasado=bool(p.get("atrasado")), logo=c.get("logo"),
+                                  vistazos=_vistazos(p["video"], p.get("mini"))))
+            for hh in c.get("libres") or []:
+                libres.append(dict(canal=c.get("alias"), canal_nombre=c.get("nombre") or c.get("alias"), logo=c.get("logo"),
+                                   color=c.get("color", 0), sale=hh.get("sale"), atrasado=bool(hh.get("atrasado"))))
+        obras.sort(key=lambda x: -x["progreso"])
+        libres.sort(key=lambda x: x["sale"] or "")
+        v = dict(generado=d.get("generado"), obras=obras, libres=libres)
+        _obra_cache.update(t=time.time(), v=v)
+        return v
+
+
+def _obra_get(h, ruta):
+    if ruta.rstrip("/") == "/v2/obra":
+        return h._enviar(200, open(os.path.join(AQUI, "panel_obra.html"), "rb").read(), "text/html; charset=utf-8", cache="no-cache")
+    if ruta == "/api/v2/obra":
+        return _json(h, obra_datos())
+    for pref, sub, patron, tipo in (("/v2/obra/img/", "img", OBRA_IMG, None), ("/v2/obra/sonido/", "sonido", OBRA_SON, "audio/mpeg")):
+        if ruta.startswith(pref):
+            n = ruta[len(pref):]
+            real = os.path.join(OBRA, sub, n)
+            if not patron.match(n) or not os.path.isfile(real):
+                return h._enviar(404, b"", "text/plain")
+            return h._enviar(200, open(real, "rb").read(), tipo or ("image/png" if n.endswith(".png") else "image/jpeg"),
+                             cache="max-age=3600")
+    return h._enviar(404, b"", "text/plain")
+
+
 def _json(h, d, cache="no-store"):
     h._enviar(200, json.dumps(d, ensure_ascii=False).encode("utf-8"), "application/json; charset=utf-8", cache=cache)
 
@@ -712,6 +788,8 @@ def get(h, ruta):
         return h._enviar(200, open(HTML, "rb").read(), "text/html; charset=utf-8")
     if ruta.rstrip("/") == "/v2/vivo":
         return h._enviar(200, open(os.path.join(AQUI, "panel_vivo.html"), "rb").read(), "text/html; charset=utf-8", cache="no-cache")
+    if ruta.rstrip("/") == "/v2/obra" or ruta.startswith("/v2/obra/") or ruta == "/api/v2/obra":
+        return _obra_get(h, ruta)
     if ruta == "/api/v2/agente":
         try:
             desde = int(arg("desde", "0"))

@@ -459,3 +459,30 @@ Las 12 ideas que eligió el usuario, en un módulo aparte: entran por `Taller.Ca
 **En el teléfono (30-oct-2026):** dirección fija **`clicknbusiness.com.mx/vivo/`** (carpeta de `DOMINIO_EXTRAS`, mismo reenvío al túnel que `/panel/`), botón 🤖 en la cabecera del panel móvil y otro en la ficha de cada video.
 `nucleo/panel_vivo_movil.js` (+ el CSS `max-width:900px, max-height:500px` de `panel_vivo.html`): una sola pantalla sin desplazar: taller arriba y pestañas Ahora / Historial / Plan; pausa y línea de tiempo al pie, Sonido, Repetir y velocidad en «⋯»; acostado, taller a la izquierda.
 Por el túnel (`REMOTO`) pregunta cada 5/8/30 s en vez de 2,2/3/8: unas 1 300 peticiones por hora abierta, ~1 KB cada una sin novedades, y nada con la pestaña oculta. La vuelta `←` lleva a `/v2/movil`.
+
+## Vista «La obra» (`/v2/obra`, 19-nov-2026, pedido del usuario)
+Escena tipo estrategia en tiempo real (vista 3/4, bosque, arte ORIGINAL de Flow estilo RTS medieval de fines de los 90, nada
+copiado de ningún juego) con lo que se está produciendo: cada video en obra es un edificio que crece por etapas
+(cimientos < 30 % · armazón < 70 % · taller), con vistazos de sus `previews/` en la pantalla del techo; aldeanos con la
+túnica del color del canal acarrean madera, silicio, componentes y película, y otros martillan. Huecos «por llenar» =
+terreno con estacas y el logo del canal. Plan y detalle: `nucleo/obra/LEEME.md`.
+- **Dónde:** clic en una obra de la ruleta «En producción» (pestaña «Canales», `estadisticas.html` → `abrirObra(v)`,
+  pop-up con iframe; ✕, Esc o clic fuera cierran) y vista 1 de la tele (`?tele=1`). Rutas en `panel_v2.py`
+  (`_obra_get`, `obra_datos` con caché de 20 s): `/v2/obra[?video=X|?tele=1]`, `/api/v2/obra`, `/v2/obra/img/<n>`,
+  `/v2/obra/sonido/<n>` (lista blanca `[a-z_0-9]`).
+- **Motor:** `nucleo/panel_obra.html` (canvas 2D, mundo 3200x1800, suelo horneado, cámara RTS con recorrido automático y
+  mano en el pop-up, HUD, minimapa, sonido WebAudio de ElevenLabs en `nucleo/obra/sonido/`, fuera de git).
+- **Arte:** `python nucleo/obra/preparar_arte.py` recorta `nucleo/obra/flow/*.jpg` (fondo magenta, fuera de git) en
+  `nucleo/obra/img/*.png`. **Aldeanos = hojas de animación de Flow** (19-nov, el usuario: «secuencia de imágenes… en 1
+  imagen una hoja de varias imágenes»): `preparar_arte.py aldeanos` segmenta `flow/ald_<anim>.jpg` por la túnica azul
+  (#1f4fff; cada pedazo suelto —hacha, caja, costal— va con su túnica), escala por la túnica (de pie = 80 px en el archivo,
+  40 en pantalla), ancla = centro de la túnica y piso mediano de las botas por fila, y saca tiras de cuadros iguales
+  `img/ald_<anim>.png` + 8 tintas `img/ald_<anim>_<0-7>.png` (túnica teñida en HSV con los `COL` del motor),
+  `img/aldeanos.json`, `img/hoja_aldeanos.jpg` (revisión) y reescribe la línea `ALD_META` de `panel_obra.html`.
+  Animaciones: caminar 12, cargar 8 (costal al hombro, al volver), hacha 6, martillo 6 (también la sierra), recoger 6
+  (componentes/película y al descargar, al revés). `pico` aún no tiene hoja (Flow marcó actividad inusual): el minero usa
+  `hacha` hasta que exista `flow/ald_pico.jpg` (se toma sola al correr `aldeanos`). En el motor: `aldPose(a)` elige
+  animación y cuadro (caminar por distancia, `ALD_PASO` = 46 px por ciclo; herramienta por `a.fase`, el golpe con sonido
+  en `.82` = cuadro 4), `dibAld` = una `drawImage` espejada a la izquierda; la tinta se pide al primer uso y mientras
+  llega va la túnica azul de base; en la tele cada tira se reduce una vez a canvas, cuadro por cuadro. Costo medido en la
+  PC (`?tele=1`, 10 aldeanos): 0,17 ms por cuadro para todos los aldeanos, 1 ms el cuadro completo.

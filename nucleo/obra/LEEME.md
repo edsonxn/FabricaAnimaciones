@@ -53,3 +53,46 @@ martillan, la cámara se mueve sola como en un RTS y arriba del edificio se ven 
    fluidez con `bash D:/PuenteTV/tablero/medir_fps.sh "tv?vista=1"` (robotaller daba ~32 fps). Título del chip de la vista 1.
 5. Probar en el panel (navegador integrado, `http://127.0.0.1:8765/canales` → clic en una obra) y en la tele; commit
    (sin `sonido/` ni `flow/`, ya en .gitignore); documentar en `docs/panel.md` y `docs/tele.md`.
+
+## Sesión 2 (19-nov) — hecho; la sesión 3 terminó los aldeanos (abajo)
+Hecho y probado en el navegador integrado:
+- `nucleo/panel_obra.html` (motor completo: suelo horneado, obras por etapa con pantalla en el techo / letrero flotante,
+  barra RTS, recursos, huecos por llenar, aldeanos dibujados POR CÓDIGO, partículas, cámara RTS + mano, HUD, minimapa,
+  sonido WebAudio, `?tele=1`, `__pausa`). Rutas en `panel_v2.py` (`_obra_get`, `obra_datos` con caché de 20 s,
+  vistazos = `/v2/mini/<v>/previews/*.jpg?w=480`). `/v2/obra?video=cod_mandela3` se ve bien.
+- Pop-up en `estadisticas.html` (`data-video` en `.tl-p`, `abrirObra`, ✕/Esc/clic fuera; Esc dentro del iframe llega por
+  postMessage `obra:cerrar`). Probado: clic en la obra de la ruleta abre la escena.
+- Tele: `D:\PuenteTV	ablero	v.html` → `/v2/obra?tele=1` (chip, pestaña y NOMBRES = «La obra»); `servidor.py` con
+  `/v2/obra`, `/api/v2/obra`, `/v2/obra/(img|sonido)/…`, `/media/<v>/(previews|salida)/…` en la lista blanca; servidor 8741
+  reiniciado y probado con curl (200 en todo). Respaldos: `servidor.py.bak_obra`, `tv.html.bak_obra`. FALTA medir fps.
+
+PEDIDO NUEVO del usuario (19-nov): «los aldeanos hazlos con secuencia de imágenes de Flow para que parezca de age of
+empire, en 1 imagen una hoja de varias imágenes para la animación» (arte ORIGINAL, estilo RTS de fines de los 90).
+- Hojas de Flow ya bajadas en `flow/` (mismo aldeano, túnica azul pura #1f4fff para teñirla con el color del canal):
+  `ald_caminar.jpg` (12 cuadros en 2 filas), `ald_cargar.jpg` (8, costal al hombro), `ald_hacha.jpg` (6: reposo, sube,
+  arriba, baja, golpe abajo, recupera), `ald_martillo.jpg` (6), `ald_recoger.jpg` (6: se agacha por una caja y la levanta).
+- FALTA `ald_pico.jpg`: existe en el proyecto Flow «nov 19 - 12:54» (media df06d431-aa1c-4b29-bff3-7c41dd215fcb, 2.ª fila
+  de la lista), pero su URL `lh3.googleusercontent.com/asb/…` pide cookies; la regeneración dio PUBLIC_ERROR_UNUSUAL_ACTIVITY
+  (no insistir en seguida). Bajarla con el botón Descargar desde Chrome o regenerarla más tarde; si no, el minero usa `hacha`.
+  Truco que sí funcionó: gancho en `window.fetch` que saca `image/<uuid>?Expires…Signature…` de las respuestas
+  `batchexecute` (ogiZ0b) y curl sin cookies a `https://flow-content.google/image/<uuid>?Expires=…&KeyName=labs-flow-prod-cdn-key&Signature=…`.
+Siguiente, en orden:
+1. `preparar_arte.py aldeanos`: segmentar cada hoja por las manchas de túnica (una por cuadro, en orden de filas), juntar a
+   cada una sus pedazos (herramienta, caja, costal), escalar por la altura mediana de la túnica (aldeano ~40 px en
+   pantalla → 80 px en el archivo), ancla = centro de la túnica y fila más baja de las botas; celdas iguales por animación
+   → `img/ald_<anim>.png` + `img/aldeanos.json` {anim: {n, w, h, ax, ay}}; teñir la túnica (HSV: tono del canal, V/S
+   escalados) para las 8 tintas de `COL` → `img/ald_<anim>_<0-7>.png`. Ampliar `OBRA_IMG` si hace falta (ya acepta `[a-z_0-9]`).
+2. En `panel_obra.html` cambiar `dibAld` por los sprites (espejo con scale(-1,1) al ir a la izquierda): caminar por
+   distancia (`a.paso`), `cargar` al volver, `hacha`/`martillo`/`pico` por `a.fase` con el golpe (sonido) en el cuadro del
+   impacto, `recoger` en componentes/película y al descargar; la sierra usa `martillo`. Quitar la carga dibujada encima.
+3. Medir fps en la tele: `bash D:/PuenteTV/tablero/medir_fps.sh "tv?vista=1"` (robotaller ~32).
+4. Docs (`docs/panel.md`, `docs/tele.md`), commit en español sin `sonido/` ni `flow/` y push.
+
+## Sesión 3 (19-nov): aldeanos con sprites de Flow ✔
+- `preparar_arte.py aldeanos` → `img/ald_<anim>.png` + `img/ald_<anim>_<0-7>.png` (8 tintas) + `img/aldeanos.json` +
+  `img/hoja_aldeanos.jpg`, y reescribe `ALD_META` en `panel_obra.html`. caminar 12 · cargar 8 · hacha 6 · martillo 6 · recoger 6.
+- `panel_obra.html`: `dibAld` dibuja los sprites (`aldPose`, `aldTira`); se quitaron el aldeano por código y `herramienta`.
+  Probado en el navegador integrado (`/v2/obra?video=cod_mandela3`, pop-up `abrirObra` de `/canales`, `?tele=1`), sin errores.
+- Pendiente: (1) `flow/ald_pico.jpg` (6 cuadros, mismo aldeano con pico) → correr `preparar_arte.py aldeanos` y el minero
+  la usa solo; (2) medir fps en la tele: ADB no conectaba (activar depuración inalámbrica y `adb connect`), luego
+  `bash D:/PuenteTV/tablero/medir_fps.sh "tv?vista=1"`.

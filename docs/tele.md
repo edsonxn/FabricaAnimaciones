@@ -119,3 +119,11 @@ opcion, indice}` · `GET /respuestas` · `POST /cerrar[?todo=1]` · `POST /contr
 `app\build\outputs\apk\release\app-release.apk` a **`D:\PuenteTV\PuenteTV.apk`**: PuenteTV.exe ve el cambio y se lo manda;
 la tele se instala sola en ~15 s (`GET /estado` → `version` nueva). No actualizar mientras la tele muestra una pregunta
 (la app se reinicia y la pregunta se pierde).
+
+- **«La obra» en la vista 1 del tablero (19-nov-2026, pedido del usuario):** `D:\PuenteTV	ablero	v.html` abre
+  `/v2/obra?tele=1` en lugar del robotaller (chip, pestaña y nombre = «La obra»); `servidor.py` (8741) deja pasar `/v2/obra`,
+  `/api/v2/obra`, `/v2/obra/(img|sonido)/…` (incluye los sprites de aldeanos `ald_<anim>_<n>.png`) y
+  `/media/<v>/(previews|salida)/…`. Respaldos `servidor.py.bak_obra`, `tv.html.bak_obra`. Detalle en `docs/panel.md`
+  § «Vista «La obra»». **fps sin medir** (19-nov): `medir_fps.sh` necesita ADB y la tele no lo aceptaba
+  (`adb connect 192.168.0.187:5555` rechazado, mDNS sin servicios); al reactivar la depuración inalámbrica en la tele,
+  `bash D:/PuenteTV/tablero/medir_fps.sh "tv?vista=1"` (el robotaller daba ~32).

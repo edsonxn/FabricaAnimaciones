@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La obra</title>
+<!--
+  «La obra» (19-nov-2026): vista de estrategia en tiempo real de lo que se está produciendo en la fábrica.
+  Servida por nucleo/panel_v2.py en /v2/obra · datos de /api/v2/obra · arte en nucleo/obra/img · sonido en nucleo/obra/sonido.
+  ?video=<v>  enfoca esa obra (pop-up de la ruleta «En producción» de la pestaña «Canales»)
+  ?tele=1     tele (tablero de Puente TV): sin sonido, media resolución, menos aldeanos; window.__pausa(si) la detiene.
+  Arte y sonidos ORIGINALES (Flow + ElevenLabs), «en el espíritu de» los RTS medievales de fines de los 90: nada copiado.
+-->
+<style>
+:root{--madera:#4b2f16;--madera2:#2e1c0c;--oro:#ffd88a;--perg1:#ecdcae;--perg2:#d3b97e;--tinta:#2b1d0e}
+html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Georgia,"Palatino Linotype","Book Antiqua",serif;color:var(--tinta);-webkit-user-select:none;user-select:none}
+#c{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+#c.arr{cursor:grabbing}
+.tele #c{cursor:none}
+.perg{background:linear-gradient(var(--perg1),var(--perg2));border:2px solid #5a3b1a;border-radius:4px;
+  box-shadow:inset 0 0 0 2px rgba(255,248,220,.55),inset 0 0 14px rgba(90,59,26,.45),0 3px 12px rgba(0,0,0,.5)}
+#barra{position:absolute;left:0;right:0;top:0;height:40px;display:flex;align-items:center;gap:16px;padding:0 12px;
+  background:linear-gradient(#5a391b,var(--madera2));border-bottom:3px solid #a57c3a;color:#f3e2b5;font-size:15px;
+  box-shadow:0 2px 10px rgba(0,0,0,.55);white-space:nowrap;overflow:hidden}
+#barra .r{display:flex;align-items:center;gap:5px;font-variant-numeric:tabular-nums}
+#barra .r img{height:26px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.6))}
+#barra .r b{color:#fff3cf;min-width:2ch}
+#barra .r small{color:#d9c08a;font-size:12px}
+#barra .sep{width:1px;height:24px;background:rgba(255,220,150,.25)}
+#barra .tit{margin-left:auto;letter-spacing:.08em;font-variant:small-caps;color:var(--oro);font-size:17px;text-shadow:0 1px 2px #000}
+#son{background:linear-gradient(#7a5226,#4b2f16);border:1px solid #c59a52;color:#fff;border-radius:4px;font-size:16px;
+  width:34px;height:28px;cursor:pointer;padding:0}
+#mini{position:absolute;left:10px;bottom:10px;width:236px;height:135px;padding:4px}
+#mini canvas{width:100%;height:100%;display:block;cursor:crosshair;image-rendering:auto}
+#info{position:absolute;left:262px;bottom:10px;max-width:660px;right:10px;min-height:70px;padding:8px 14px 8px 8px;display:flex;gap:12px;align-items:center}
+#info img{width:124px;height:70px;object-fit:cover;border:2px solid #5a3b1a;background:#2a1a0c;flex:none}
+#info .tx{min-width:0;flex:1}
+#info h2{margin:0 0 2px;font-size:17px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#info .sub{font-size:13px;color:#4a3418;display:flex;gap:6px;align-items:center;white-space:nowrap;overflow:hidden}
+#info .sub i{width:10px;height:10px;border-radius:2px;display:inline-block;border:1px solid rgba(0,0,0,.4)}
+#info .pb{height:11px;margin:5px 0 3px;background:#3b2a14;border:1px solid #1d1208;border-radius:2px;overflow:hidden}
+#info .pb i{display:block;height:100%;background:linear-gradient(#8ef06a,#2f9a1e);transition:width .8s}
+#info .sale{font-size:12.5px;color:#4a3418}
+#info .late{color:#a3201a;font-weight:700}
+#toca{position:absolute;top:52px;left:50%;transform:translateX(-50%);padding:6px 16px;cursor:pointer;display:none;font-size:14px}
+#carga{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#1d2a18;color:var(--oro);font-size:20px;letter-spacing:.05em;transition:opacity .6s}
+#carga.fuera{opacity:0;pointer-events:none}
+#aviso{position:absolute;top:50px;right:12px;padding:4px 10px;font-size:12px;display:none}
+.tele #son,.tele #toca{display:none}
+.enmarco #barra{padding-right:52px}
+.tele #barra{font-size:17px;height:44px}
+.tele #info h2{font-size:19px}
+@media(max-width:700px){#mini{display:none}#info{left:10px}#barra .r small,#barra .opc{display:none}}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="barra">
+  <span class="r" title="Madera entregada"><img src="/v2/obra/img/madera.png" alt=""><b id="nMadera">0</b><small>madera</small></span>
+  <span class="r" title="Silicio entregado"><img src="/v2/obra/img/silicio.png" alt=""><b id="nSilicio">0</b><small>silicio</small></span>
+  <span class="r" title="Componentes entregados"><img src="/v2/obra/img/componentes.png" alt=""><b id="nComponentes">0</b><small>componentes</small></span>
+  <span class="r" title="Rollos de película entregados"><img src="/v2/obra/img/pelicula.png" alt=""><b id="nPelicula">0</b><small>película</small></span>
+  <span class="sep"></span>
+  <span class="r opc" title="Videos en producción">🏗️ <b id="nObras">0</b><small>obras</small></span>
+  <span class="r opc" title="Aldeanos trabajando">👷 <b id="nAld">0</b><small>aldeanos</small></span>
+  <span class="r opc" title="Huecos del calendario que nadie está produciendo">📜 <b id="nLibres">0</b><small>por llenar</small></span>
+  <span class="tit">La obra</span>
+  <button id="son" title="Sonido">🔊</button>
+</div>
+<div id="mini" class="perg"><canvas id="mc" width="228" height="127"></canvas></div>
+<div id="info" class="perg"><img id="iImg" alt=""><div class="tx"><h2 id="iTit">…</h2><div class="sub" id="iSub"></div>
+  <div class="pb"><i id="iPb" style="width:0"></i></div><div class="sale" id="iSale"></div></div></div>
+<div id="toca" class="perg">🔈 Toca para sonido</div>
+<div id="aviso" class="perg">La fábrica no contesta</div>
+<div id="carga">Levantando la obra…</div>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const Q = new URLSearchParams(location.search), TELE = Q.get('tele') === '1', FOCO = Q.get('video') || '';
+if (TELE) document.documentElement.classList.add('tele');
+if (window.parent !== window && !TELE) document.documentElement.classList.add('enmarco');   // dentro del pop-up: la ✕ va arriba a la derecha
+const MW = 3200, MH = 1800;                                     // el mundo, en px «de pantalla» (los sprites vienen al doble)
+const R = TELE ? 0.5 : Math.min(1.5, window.devicePixelRatio || 1);
+const COL = ['#2a78d6', '#eb6834', '#1baf7a', '#eda100', '#e87ba4', '#008300', '#4a3aa7', '#e34948'];
+const TAU = Math.PI * 2;
+const clamp = (v, a, b) => v < a ? a : v > b ? b : v, lerp = (a, b, t) => a + (b - a) * t;
+const cv = $('c'), ctx = cv.getContext('2d');
+let VW = 1, VH = 1, ZB = 1;
+function tam() {
+  VW = innerWidth; VH = innerHeight; ZB = clamp(Math.min(VW / 1300, VH / 760), 0.55, 1.7);
+  cv.width = Math.max(1, Math.round(VW * R)); cv.height = Math.max(1, Math.round(VH * R));
+}
+addEventListener('resize', tam); tam();
+function rnd(seed) { let a = seed >>> 0; return () => { a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+const azar = Math.random;
+function hash(s) { let h = 2166136261; for (const ch of s) h = Math.imul(h ^ ch.charCodeAt(0), 16777619); return h >>> 0; }
+function oscuro(hex, f) { const n = parseInt(hex.slice(1), 16); const r = (n >> 16) * f | 0, g = (n >> 8 & 255) * f | 0, b = (n & 255) * f | 0; return `rgb(${r},${g},${b})`; }
+
+// ================================================================ arte
+const NOMBRES = ['cimientos', 'armazon', 'taller', 'madera', 'silicio', 'componentes', 'pelicula', 'roca', 'piedras', 'arbusto',
+  'arbusto_flor', 'tocon', 'barril', 'cajas', 'carretilla', 'costal', 'cerca', 'roble', 'pino', 'abedul', 'castano', 'pino_chico', 'arce'];
+const ARBOLES = ['roble', 'pino', 'abedul', 'castano', 'pino_chico', 'arce'];
+const IMG = {};
+const cargaImg = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(null); i.src = src; });
+async function cargarArte() {
+  await Promise.all([...NOMBRES.map(n => cargaImg('/v2/obra/img/' + n + '.png').then(i => { IMG[n] = i; })),
+    cargaImg('/v2/obra/img/pasto.jpg').then(i => { IMG.pasto = i; }), cargaImg('/v2/obra/img/tierra.jpg').then(i => { IMG.tierra = i; })]);
+  for (const n of NOMBRES) {
+    const i = IMG[n]; if (!i) continue;
+    i._k = 0.5;                                                 // px en pantalla por px del archivo (vienen al doble)
+    if (TELE) {                                                 // en la tele, sprites ya reducidos: el GPU del Chromecast no los achica cada cuadro
+      const f = 0.65, c = document.createElement('canvas');
+      c.width = Math.max(1, Math.round(i.width * 0.5 * f)); c.height = Math.max(1, Math.round(i.height * 0.5 * f));
+      c.getContext('2d').drawImage(i, 0, 0, c.width, c.height); c._k = 1 / f; IMG[n] = c;
+    }
+  }
+}
+function spr(c, n, x, y, s = 1, ax = 0.5, ay = 1) {
+  const i = IMG[n]; if (!i) return;
+  const w = i.width * i._k * s, h = i.height * i._k * s;
+  c.drawImage(i, x - w * ax, y - h * ay, w, h);
+}
+const ancho = (n, s = 1) => IMG[n] ? IMG[n].width * IMG[n]._k * s : 0;
+const alto = (n, s = 1) => IMG[n] ? IMG[n].height * IMG[n]._k * s : 0;
+function sombra(c, x, y, rx, ry, a = 0.24) { c.fillStyle = `rgba(0,0,0,${a})`; c.beginPath(); c.ellipse(x, y, rx, ry, 0, 0, TAU); c.fill(); }
+
+// ================================================================ sonido (WebAudio; nunca en la tele)
+let AC = null, MASTER = null, SON = true, VOCES = 0, ULT_SON = 0;
+const BUF = {};
+const SONIDOS = ['martillo_1', 'martillo_2', 'martillo_3', 'hacha_1', 'hacha_2', 'pico_1', 'pico_2', 'deposito_1', 'deposito_2', 'sierra', 'listo', 'ambiente'];
+try { SON = localStorage.getItem('obra_son') !== '0'; } catch (e) {}
+function audioIniciar() {
+  if (TELE || AC) return;
+  try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { AC = null; return; }
+  MASTER = AC.createGain(); MASTER.gain.value = SON ? 1 : 0; MASTER.connect(AC.destination);
+  for (const n of SONIDOS) fetch('/v2/obra/sonido/' + n + '.mp3').then(r => r.ok ? r.arrayBuffer() : Promise.reject())
+    .then(b => AC.decodeAudioData(b)).then(b => { BUF[n] = b; if (n === 'ambiente') ambiente(); }).catch(() => {});
+  AC.onstatechange = botonesSon;
+  botonesSon();
+}
+function ambiente() {
+  const b = BUF.ambiente; if (!b || !AC) return;
+  const s = AC.createBufferSource(), g = AC.createGain(); s.buffer = b; s.loop = true; g.gain.value = 0.35;
+  s.connect(g).connect(MASTER); s.start();
+}
+function sonar(n, x, y, vol = 1, minimo = 0) {
+  if (!AC || !SON || pausado || AC.state !== 'running') return;
+  const b = BUF[n]; if (!b) return;
+  const ahora = performance.now(); if (ahora - ULT_SON < 45 || VOCES > 9) return;
+  const hw = VW / (2 * cam.z), d = Math.hypot(x - cam.x, (y - cam.y) * 1.4);
+  let g = vol * Math.max(minimo, 1 - d / (hw * 1.5)) * clamp(cam.z / ZB, 0.35, 1);
+  if (g < 0.04) return;
+  ULT_SON = ahora; VOCES++;
+  const s = AC.createBufferSource(), ga = AC.createGain(); s.buffer = b; s.playbackRate.value = 0.93 + azar() * 0.14; ga.gain.value = g;
+  let nodo = s.connect(ga);
+  if (AC.createStereoPanner) { const p = AC.createStereoPanner(); p.pan.value = clamp((x - cam.x) / hw, -1, 1) * 0.75; nodo = nodo.connect(p); }
+  nodo.connect(MASTER); s.onended = () => { VOCES--; }; s.start();
+}
+function botonesSon() {
+  $('son').textContent = SON ? '🔊' : '🔇';
+  $('toca').style.display = !TELE && SON && AC && AC.state !== 'running' && !pausado ? 'block' : 'none';
+}
+$('son').onclick = e => {
+  e.stopPropagation(); SON = !SON; try { localStorage.setItem('obra_son', SON ? '1' : '0'); } catch (er) {}
+  if (MASTER) MASTER.gain.value = SON ? 1 : 0; if (SON && AC) AC.resume(); botonesSon();
+};
+const despertar = () => { if (AC && SON && AC.state !== 'running' && !pausado) AC.resume().then(botonesSon, () => {}); };
+addEventListener('pointerdown', despertar, true); addEventListener('keydown', despertar, true);
+$('toca').onclick = despertar;
+addEventListener('keydown', e => { if (e.key === 'Escape' && window.parent !== window) window.parent.postMessage('obra:cerrar', location.origin); });
+
+// ================================================================ mundo
+const POS = {0: [[1600, 950]], 1: [[1600, 950]], 2: [[1150, 900], [2100, 1000]], 3: [[1000, 1000], [1700, 800], [2350, 1100]]};
+const POS_MAS = [[1000, 1000], [1700, 800], [2350, 1100], [1380, 1400], [2050, 1430], [2800, 1020]];
+const REC = {
+  madera: {x: 470, y: 900, n: 'Madera', herr: 'hacha', son: 'hacha'},
+  silicio: {x: 1500, y: 330, n: 'Silicio', herr: 'pico', son: 'pico'},
+  componentes: {x: 2750, y: 600, n: 'Componentes', herr: 'mano'},
+  pelicula: {x: 2600, y: 1500, n: 'Película', herr: 'mano'},
+};
+const RECS = Object.keys(REC);
+const DEP = {madera: -115, silicio: -40, componentes: 40, pelicula: 115};   // dónde descarga cada recurso, frente a la obra
+const BOSQUE = {x: 330, y: 880, r: 250};                         // el bosque de los leñadores (árboles que se dibujan cada cuadro)
+const LIBRE_POS = [[700, 1500], [1300, 1600], [1950, 1630], [3010, 1260], [880, 430], [2240, 420]];
+const ETAPAS = ['cimientos', 'armazon', 'taller'], ESCALA = [0.72, 0.9, 1];
+let DATOS = null, OBRAS = [], ALD = [], ESCENA = [], ARB = [], LIBRES = [], PART = [], CAMINOS = [], LETREROS = [];
+let SUELO = null, MINIBASE = null, CLAVE = '';
+const ENT = {madera: 0, silicio: 0, componentes: 0, pelicula: 0};
+const etapaDe = p => p < 0.3 ? 0 : p < 0.7 ? 1 : 2;
+
+function curva(a, b, c, n = 26) {
+  const p = [];
+  for (let i = 0; i <= n; i++) { const t = i / n, u = 1 - t; p.push([u * u * a[0] + 2 * u * t * b[0] + t * t * c[0], u * u * a[1] + 2 * u * t * b[1] + t * t * c[1]]); }
+  const acc = [0]; for (let i = 1; i < p.length; i++) acc.push(acc[i - 1] + Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]));
+  return {p, acc, L: acc[acc.length - 1]};
+}
+function enCurva(r, s) {
+  s = clamp(s, 0, r.L); let i = 1; while (i < r.acc.length - 1 && r.acc[i] < s) i++;
+  const t = (s - r.acc[i - 1]) / Math.max(1e-6, r.acc[i] - r.acc[i - 1]), a = r.p[i - 1], b = r.p[i];
+  return [lerp(a[0], b[0], t), lerp(a[1], b[1], t)];
+}
+function control(a, c, k) {                                       // punto de control de la curva obra → recurso
+  const mx = (a[0] + c[0]) / 2, my = (a[1] + c[1]) / 2, dx = c[0] - a[0], dy = c[1] - a[1], L = Math.hypot(dx, dy) || 1;
+  return [mx - dy / L * L * 0.13 * k, my + dx / L * L * 0.13 * k];
+}
+
+function construir() {
+  const obras = DATOS.obras.slice(0, 6);
+  if (FOCO && !obras.some(o => o.video === FOCO)) { const f = DATOS.obras.find(o => o.video === FOCO); if (f) obras[obras.length - 1] = f; }
+  const pos = obras.length <= 3 ? POS[obras.length] : POS_MAS;
+  const viejas = Object.fromEntries(OBRAS.map(o => [o.video, o]));
+  OBRAS = (obras.length ? obras : [null]).map((d, i) => {
+    const v = d ? viejas[d.video] : null;
+    const o = {d, video: d ? d.video : '', x: pos[i][0], y: pos[i][1], prog: d ? d.progreso : 1, sin: !d,
+      col: d ? COL[d.color % 8] : '#8a6a3a', vist: d ? d.vistazos || [] : [], vi: 0, vt: 2 + i * 1.3, prev: null, cache: {},
+      ent: v ? v.ent : {madera: 0, silicio: 0, componentes: 0, pelicula: 0}};
+    o.etapa = etapaDe(o.prog);
+    return o;
+  });
+  const rr = rnd(hash(CLAVE) || 7);
+  ESCENA = []; ARB = []; CAMINOS = []; LETREROS = [];
+  // caminos de tierra de cada obra a cada recurso
+  OBRAS.forEach((o, oi) => RECS.forEach((r, ri) => {
+    const a = [o.x + DEP[r], o.y + 58], c = [REC[r].x + (r === 'madera' ? 150 : 0), REC[r].y + (r === 'madera' ? 40 : 60)];
+    CAMINOS.push({o: oi, r, a, b: control(a, c, (ri % 2 ? 1 : -1) * (oi % 2 ? -1 : 1)), c, curva: null});
+  }));
+  for (const k of CAMINOS) k.curva = curva(k.a, k.b, k.c);
+  // edificios y su utilería
+  for (const o of OBRAS) {
+    ESCENA.push({x: o.x, y: o.y - 30, dib: t => dibObra(o, t)});
+    for (const r of RECS) ESCENA.push({x: o.x + DEP[r], y: o.y + 80, dib: () => { const n = o.ent[r]; if (n > 0) { sombra(ctx, o.x + DEP[r] + 4, o.y + 80, 20, 6, .2); spr(ctx, r, o.x + DEP[r], o.y + 84, 0.2 + Math.min(0.14, n * 0.006)); } }});
+    const ad = [['cajas', 222, 30, .8], ['barril', 248, 62, .8], ['carretilla', -238, 44, .75], ['costal', -205, 78, .9], ['cerca', -300, -40, .9], ['cerca', -262, -60, .9], ['barril', 210, -70, .7], ['piedras', 160, 95, .9]];
+    for (const [n, dx, dy, s] of ad) ESCENA.push(cosa(n, o.x + dx, o.y + dy, s));
+    if (o.sin) LETREROS.push({x: o.x + 250, y: o.y + 70, txt: ['Sin obras', 'ningún video en producción']});
+  }
+  for (const L of LETREROS) ESCENA.push({x: L.x, y: L.y, dib: () => dibLetrero(L)});
+  // recursos
+  ESCENA.push(cosa('silicio', REC.silicio.x, REC.silicio.y, 1), cosa('silicio', REC.silicio.x - 95, REC.silicio.y - 30, .6), cosa('roca', REC.silicio.x + 105, REC.silicio.y - 25, .9),
+    cosa('piedras', REC.silicio.x - 40, REC.silicio.y + 50, 1), cosa('roca', REC.silicio.x - 150, REC.silicio.y + 20, .6));
+  ESCENA.push(cosa('componentes', REC.componentes.x, REC.componentes.y, 1), cosa('cajas', REC.componentes.x + 100, REC.componentes.y - 10, .9),
+    cosa('barril', REC.componentes.x - 95, REC.componentes.y - 20, .9), cosa('costal', REC.componentes.x + 70, REC.componentes.y + 40, .9));
+  ESCENA.push(cosa('pelicula', REC.pelicula.x, REC.pelicula.y, 1), cosa('cajas', REC.pelicula.x + 95, REC.pelicula.y - 15, .8), cosa('barril', REC.pelicula.x - 85, REC.pelicula.y + 10, .8));
+  ESCENA.push(cosa('madera', 620, 965, .8), cosa('tocon', 560, 1040, .55), cosa('tocon', 690, 880, .45), cosa('carretilla', 700, 1000, .7));
+  // el bosque de los leñadores
+  const rb = rnd(99);
+  for (let k = 0; k < 60 && ARB.length < 17; k++) {
+    const a = rb() * TAU, d = Math.sqrt(rb()) * BOSQUE.r, x = BOSQUE.x + Math.cos(a) * d * 1.15, y = BOSQUE.y + Math.sin(a) * d * 0.95;
+    if (ARB.some(t => Math.hypot(t.x - x, (t.y - y) * 1.6) < 85) || Math.hypot(x - 620, y - 965) < 90) continue;
+    const n = ['roble', 'pino', 'castano', 'abedul', 'arce', 'pino'][rb() * 6 | 0];
+    const t = {x, y, n, s: 0.85 + rb() * 0.25, sac: 0, dib(tt) { dibArbol(ctx, this, tt); }};
+    ARB.push(t); ESCENA.push(t);
+  }
+  const tala = ARB.filter(t => t.x > BOSQUE.x - 40).sort((a, b) => b.x - a.x).slice(0, 4);
+  REC.madera.tala = tala.length ? tala : ARB.slice(0, 2);
+  // huecos por llenar: uno por canal, los más cercanos
+  const vistos = new Set(); LIBRES = [];
+  for (const h of DATOS.libres || []) {
+    if (vistos.has(h.canal) || LIBRES.length >= (TELE ? 4 : 6)) continue; vistos.add(h.canal);
+    const [x, y] = LIBRE_POS[LIBRES.length], L = {x, y, d: h, col: COL[h.color % 8], logo: null};
+    if (h.logo) cargaImg(h.logo).then(i => { L.logo = i; });
+    LIBRES.push(L); ESCENA.push({x, y: y + 12, dib: () => dibLibre(L)});
+  }
+  // aldeanos
+  ALD = [];
+  const n = OBRAS.length, por = TELE ? Math.max(3, Math.floor(10 / n)) : Math.max(5, Math.min(8, Math.floor(36 / n)));
+  OBRAS.forEach((o, oi) => {
+    const nrec = o.sin ? por - 1 : Math.ceil(por * 0.6);
+    for (let k = 0; k < por; k++) {
+      if (k < nrec) ALD.push(aldeano('rec', oi, RECS[(k + oi) % 4]));
+      else ALD.push(aldeano('con', oi, null, (k - nrec) % 3 === 2 ? 'sierra' : 'martillo', k - nrec));
+    }
+  });
+  for (const a of ALD) ESCENA.push(a);
+  hornearSuelo(rr);
+}
+function cosa(n, x, y, s = 1) {
+  return {x, y, dib() { const w = ancho(n, s); sombra(ctx, x + w * 0.1, y, w * 0.42, w * 0.13, .2); spr(ctx, n, x, y + 4, s); }};
+}
+function dibArbol(c, t, tt) {
+  const w = ancho(t.n, t.s);
+  sombra(c, t.x + w * 0.16, t.y + 2, w * 0.34, w * 0.12, .26);
+  if (t.sac > 0.01) { c.save(); c.translate(t.x, t.y); c.rotate(Math.sin(tt * 38) * 0.035 * t.sac); spr(c, t.n, 0, 6, t.s); c.restore(); }
+  else spr(c, t.n, t.x, t.y + 6, t.s);
+}
+
+// ================================================================ suelo (se dibuja UNA vez)
+function despejado(x, y) {
+  for (const o of OBRAS) { const dx = (x - o.x) / 390, dy = (y - o.y + 40) / 270; if (dx * dx + dy * dy < 1) return false; }
+  for (const r of RECS) if (Math.hypot(x - REC[r].x, (y - REC[r].y) * 1.3) < (r === 'madera' ? 120 : 190)) return false;
+  if (Math.hypot(x - 620, y - 965) < 170) return false;
+  for (const L of LIBRES) if (Math.hypot(x - L.x, (y - L.y) * 1.3) < 150) return false;
+  if (Math.hypot(x - BOSQUE.x, (y - BOSQUE.y) * 1.1) < BOSQUE.r + 60) return false;
+  for (const k of CAMINOS) for (let i = 0; i < k.curva.p.length; i += 2) { const p = k.curva.p[i]; if (Math.abs(p[0] - x) < 70 && Math.abs(p[1] - y) < 55) return false; }
+  return true;
+}
+function hornearSuelo(rr) {
+  const gs = TELE ? 0.5 : 1, W = MW * gs | 0, H = MH * gs | 0;
+  const g = document.createElement('canvas'); g.width = W; g.height = H;
+  const c = g.getContext('2d'); c.scale(gs, gs);
+  // pasto
+  if (IMG.pasto) {
+    const pat = c.createPattern(IMG.pasto, 'repeat');
+    try { pat.setTransform(new DOMMatrix().scale(0.75)); } catch (e) {}
+    c.fillStyle = pat;
+  } else c.fillStyle = '#5d7a3a';
+  c.fillRect(0, 0, MW, MH);
+  for (let i = 0; i < 90; i++) {                                // manchas de pasto más oscuro / más seco
+    const x = rr() * MW, y = rr() * MH, r = 80 + rr() * 220, oscura = rr() < 0.6;
+    const gr = c.createRadialGradient(x, y, 0, x, y, r);
+    gr.addColorStop(0, oscura ? 'rgba(25,50,15,.22)' : 'rgba(170,170,80,.16)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+    c.fillStyle = gr; c.beginPath(); c.ellipse(x, y, r, r * 0.7, 0, 0, TAU); c.fill();
+  }
+  // tierra: máscara de degradados (claros de las obras, los recursos y los caminos)
+  const m = document.createElement('canvas'); m.width = W; m.height = H;
+  const mc = m.getContext('2d'); mc.scale(gs, gs);
+  const claro = (x, y, r, sy = 0.68) => {
+    mc.save(); mc.translate(x, y); mc.scale(1, sy);
+    const gr = mc.createRadialGradient(0, 0, 0, 0, 0, r); gr.addColorStop(0, 'rgba(255,255,255,1)'); gr.addColorStop(.62, 'rgba(255,255,255,.95)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    mc.fillStyle = gr; mc.beginPath(); mc.arc(0, 0, r, 0, TAU); mc.fill(); mc.restore();
+  };
+  mc.lineCap = 'round'; mc.lineJoin = 'round';
+  for (const [w, a] of [[78, .22], [56, .45], [38, .9]]) {
+    mc.strokeStyle = `rgba(255,255,255,${a})`; mc.lineWidth = w;
+    for (const k of CAMINOS) { mc.beginPath(); mc.moveTo(k.a[0], k.a[1]); mc.quadraticCurveTo(k.b[0], k.b[1], k.c[0], k.c[1]); mc.stroke(); }
+  }
+  for (const o of OBRAS) claro(o.x, o.y - 30, 340);
+  claro(REC.silicio.x, REC.silicio.y + 20, 200); claro(REC.componentes.x, REC.componentes.y + 20, 180); claro(REC.pelicula.x, REC.pelicula.y + 20, 170);
+  claro(640, 975, 150); claro(BOSQUE.x + 140, BOSQUE.y + 30, 130, .8);
+  for (const L of LIBRES) claro(L.x, L.y, 125);
+  const t = document.createElement('canvas'); t.width = W; t.height = H;
+  const tc = t.getContext('2d'); tc.scale(gs, gs);
+  if (IMG.tierra) { const p = tc.createPattern(IMG.tierra, 'repeat'); try { p.setTransform(new DOMMatrix().scale(0.6)); } catch (e) {} tc.fillStyle = p; } else tc.fillStyle = '#8a6a44';
+  tc.fillRect(0, 0, MW, MH);
+  tc.setTransform(1, 0, 0, 1, 0, 0); tc.globalCompositeOperation = 'destination-in'; tc.drawImage(m, 0, 0);
+  c.save(); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(t, 0, 0); c.restore();
+  // huellas de rueda en los caminos
+  c.strokeStyle = 'rgba(60,40,20,.13)'; c.lineWidth = 3; c.setLineDash([18, 10]);
+  for (const k of CAMINOS) for (const d of [-9, 9]) { c.beginPath(); c.moveTo(k.a[0] + d, k.a[1]); c.quadraticCurveTo(k.b[0] + d, k.b[1], k.c[0] + d, k.c[1]); c.stroke(); }
+  c.setLineDash([]);
+  // orillas oscuras (sotobosque)
+  const vi = c.createRadialGradient(MW / 2, MH / 2, Math.min(MW, MH) * 0.45, MW / 2, MH / 2, MW * 0.62);
+  vi.addColorStop(0, 'rgba(10,25,8,0)'); vi.addColorStop(1, 'rgba(10,25,8,.55)');
+  c.fillStyle = vi; c.fillRect(0, 0, MW, MH);
+  // árboles, arbustos y piedras de la orilla, «horneados»
+  const cosas = [];
+  for (let y = -40; y < MH + 120; y += 78) for (let x = -40; x < MW + 60; x += 84) {
+    const px = x + (rr() - .5) * 70, py = y + (rr() - .5) * 60, e = Math.min(px, MW - px, py, MH - py);
+    let p = e < 150 ? 0.92 : e < 330 ? 0.5 : e < 520 ? 0.14 : 0.035;
+    if (rr() > p || !despejado(px, py)) { if (rr() < 0.05 && despejado(px, py)) cosas.push({x: px, y: py, n: ['arbusto', 'arbusto_flor', 'piedras', 'roca', 'tocon'][rr() * 5 | 0], s: 0.6 + rr() * 0.4}); continue; }
+    cosas.push({x: px, y: py, n: ARBOLES[rr() * ARBOLES.length | 0], s: 0.8 + rr() * 0.4, arbol: true});
+  }
+  cosas.sort((a, b) => a.y - b.y);
+  for (const k of cosas) { if (k.arbol) dibArbol(c, k, 0); else { const w = ancho(k.n, k.s); sombra(c, k.x + w * .1, k.y, w * .4, w * .12, .2); spr(c, k.n, k.x, k.y + 4, k.s); } }
+  SUELO = {c: g, gs};
+  const mb = document.createElement('canvas'); mb.width = 228; mb.height = 127;
+  mb.getContext('2d').drawImage(g, 0, 0, 228, 127); MINIBASE = mb;
+}
+
+// ================================================================ aldeanos
+function aldeano(tipo, oi, r, herr, k = 0) {
+  const o = OBRAS[oi];
+  const a = {tipo, oi, r, x: o.x + (azar() - .5) * 200, y: o.y + 60, dir: 1, paso: azar() * 6, anda: false,
+    col: o.col, ci: COL.indexOf(o.col), carga: false,
+    vel: 42 + azar() * 12, fase: azar(), est: 'ida', t: 0, s: 0, ruta: null, herr: herr || (r ? REC[r].herr : 'martillo'),
+    per: 0.85, dib(t) { dibAld(this, t); }};
+  if (tipo === 'rec') { nuevoViaje(a); a.s = azar() * a.ruta.L; a.est = azar() < .5 ? 'ida' : 'vuelta'; a.carga = a.est === 'vuelta'; }
+  else { a.lugar = k; a.per = a.herr === 'sierra' ? 0.55 : 0.62 + azar() * 0.2; lugarCon(a, k); a.x = a.lx; a.y = a.ly; a.est = 'trab'; a.t = 6 + azar() * 8; }
+  return a;
+}
+function nuevoViaje(a) {
+  const o = OBRAS[a.oi], k = CAMINOS.find(c => c.o === a.oi && c.r === a.r), R0 = REC[a.r];
+  let spot, mira;
+  if (a.r === 'madera') {
+    const tr = R0.tala[(ALD.length + (a.vuelta || 0)) % R0.tala.length] || {x: R0.x, y: R0.y};
+    a.arbol = tr; spot = [tr.x + 30 + azar() * 6, tr.y + 4 + azar() * 6]; mira = -1;
+  } else {
+    const ang = 0.15 * Math.PI + azar() * 0.7 * Math.PI, rad = a.r === 'silicio' ? 88 : 80;
+    spot = [R0.x + Math.cos(ang) * rad, R0.y + 18 + Math.sin(ang) * 34]; mira = spot[0] > R0.x ? -1 : 1;
+  }
+  a.ruta = curva([o.x + DEP[a.r] + (azar() - .5) * 26, o.y + 58 + (azar() - .5) * 10], k.b, spot); a.mira = mira;
+  a.vuelta = (a.vuelta || 0) + 1;
+}
+const CON_LUG = [[-150, 38], [-58, 50], [72, 48], [168, 32], [-212, -38], [214, -48]];
+function lugarCon(a, k) {
+  const o = OBRAS[a.oi], [dx, dy] = CON_LUG[k % CON_LUG.length];
+  a.lx = o.x + dx + (azar() - .5) * 14; a.ly = o.y + dy + (azar() - .5) * 8; a.mira = dx > 0 ? -1 : 1;
+}
+function golpe(a) {
+  const tipo = a.herr, hx = a.x + a.dir * 18, hy = a.y - 10;
+  if (tipo === 'hacha') { if (a.arbol) a.arbol.sac = 1; chispas(hx, hy, '#c8a06a', 5, 1); sonar(azar() < .5 ? 'hacha_1' : 'hacha_2', a.x, a.y, .75); }
+  else if (tipo === 'pico') { chispas(hx, hy, '#cfe8ff', 6, 1.3); sonar(azar() < .5 ? 'pico_1' : 'pico_2', a.x, a.y, .65); }
+  else if (tipo === 'martillo') { chispas(hx, hy - 4, '#d9b98a', 2, .8); sonar('martillo_' + (1 + (azar() * 3 | 0)), a.x, a.y, .55); }
+}
+function moverHacia(a, x, y, dt) {
+  const dx = x - a.x, dy = y - a.y, d = Math.hypot(dx, dy);
+  if (d < 1.5) { a.anda = false; return true; }
+  const v = Math.min(d, a.vel * dt); a.x += dx / d * v; a.y += dy / d * v; a.dir = dx >= 0 ? 1 : -1; a.anda = true; a.paso += v * 0.34;
+  return false;
+}
+function actAld(a, dt, t) {
+  const swing = () => {
+    const f0 = a.fase % 1; a.fase += dt / a.per; const f = a.fase % 1;
+    if (a.herr === 'sierra') { if (f < f0) { if ((a.fase | 0) % 5 === 0) sonar('sierra', a.x, a.y, .4); chispas(a.x + a.dir * 16, a.y - 9, '#e8d4a0', 1, .5); } return; }
+    if (a.herr === 'mano') { a.fase -= dt / a.per * 0.5; return; }   // recoger: medio ritmo
+    if (f0 < .82 && (f >= .82 || f < f0)) golpe(a);
+  };
+  if (a.tipo === 'rec') {
+    if (a.est === 'ida' || a.est === 'vuelta') {
+      const ant = a.x; a.s += (a.est === 'ida' ? 1 : -0.85) * a.vel * dt;
+      const [x, y] = enCurva(a.ruta, a.s); a.paso += Math.hypot(x - a.x, y - a.y) * 0.34; a.x = x; a.y = y; a.anda = true;
+      if (Math.abs(x - ant) > 0.01) a.dir = x > ant ? 1 : -1;
+      if (a.est === 'ida' && a.s >= a.ruta.L) { a.est = 'trab'; a.t = 3 + azar() * 2; a.anda = false; a.dir = a.mira; }
+      if (a.est === 'vuelta' && a.s <= 0) {
+        a.est = 'desc'; a.t = 0.7; a.anda = false; a.carga = false; ENT[a.r]++; OBRAS[a.oi].ent[a.r]++;
+        sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .6); polvito(a.x + a.dir * 8, a.y);
+      }
+    } else if (a.est === 'trab') {
+      swing(); a.t -= dt;
+      if (a.t <= 0) { a.est = 'vuelta'; a.carga = true; }
+    } else if (a.est === 'desc') {
+      a.t -= dt;
+      if (a.t <= 0) { nuevoViaje(a); a.s = 0; a.est = 'ida'; }
+    }
+  } else {                                                      // constructor
+    if (a.est === 'trab') {
+      a.dir = a.mira; a.anda = false; swing(); a.t -= dt;
+      if (a.t <= 0) {
+        const ocup = new Set(ALD.filter(b => b !== a && b.tipo === 'con' && b.oi === a.oi).map(b => b.lugar));
+        const libres = CON_LUG.map((_, i) => i).filter(i => !ocup.has(i) && i !== a.lugar);
+        if (libres.length) a.lugar = libres[azar() * libres.length | 0];
+        lugarCon(a, a.lugar); a.est = 'camina';
+      }
+    } else {
+      if (moverHacia(a, a.lx, a.ly, dt)) { a.est = 'trab'; a.t = 7 + azar() * 7; }
+    }
+  }
+}
+// Aldeanos = hojas de animación de Flow (arte original estilo RTS de fines de los 90), recortadas por
+// nucleo/obra/preparar_arte.py aldeanos en tiras img/ald_<anim>_<tinta>.png (túnica teñida con el color del canal).
+// Todas miran a la derecha; a la izquierda se espejean. La línea ALD_META la reescribe preparar_arte.py.
+const ALD_META = {"caminar":{"n":12,"w":48,"h":85,"ax":23,"ay":82},"cargar":{"n":8,"w":48,"h":87,"ax":27,"ay":84},"hacha":{"n":6,"w":67,"h":122,"ax":27,"ay":120},"martillo":{"n":6,"w":70,"h":95,"ax":27,"ay":94},"recoger":{"n":6,"w":57,"h":82,"ax":19,"ay":80}}; // ALD_META
+const ALD_K = 0.5;                                              // px en pantalla por px del archivo (de pie ≈ 40 px)
+const ALD_PASO = 46;                                            // px recorridos por ciclo completo de caminar
+const ALDS = {};                                                // 'anim_tinta' -> tira (imagen o canvas reducido en la tele)
+function aldTira(an, ci) {
+  const key = an + '_' + ci;
+  if (!(key in ALDS)) {
+    ALDS[key] = null;
+    cargaImg('/v2/obra/img/ald_' + an + (ci >= 0 ? '_' + ci : '') + '.png').then(i => {
+      if (!i) return;
+      const m = ALD_META[an]; i._f = 1;
+      if (TELE) {                                               // reducida una vez, cuadro por cuadro (sin sangrado entre cuadros)
+        const f = ALD_K * 0.65, cw = Math.max(1, Math.round(m.w * f)), ch = Math.max(1, Math.round(m.h * f)), c = document.createElement('canvas');
+        c.width = cw * m.n; c.height = ch; const g = c.getContext('2d');
+        for (let k = 0; k < m.n; k++) g.drawImage(i, k * m.w, 0, m.w, m.h, k * cw, 0, cw, ch);
+        c._f = cw / m.w; ALDS[key] = c;
+      } else ALDS[key] = i;
+    });
+  }
+  return ALDS[key] || (ci >= 0 ? aldTira(an, -1) : null);       // mientras llega la tinta, la túnica azul de base
+}
+const GOLPE = f => f < .2 ? 0 : f < .45 ? 1 : f < .68 ? 2 : f < .82 ? 3 : f < .93 ? 4 : 5;   // el impacto (golpe) cae en .82 = cuadro 4
+function aldPose(a) {
+  if (a.anda) { const an = a.carga ? 'cargar' : 'caminar', n = ALD_META[an].n; return [an, Math.floor(a.paso / 0.34 / ALD_PASO * n) % n]; }
+  if (a.est === 'desc') return ['recoger', Math.max(0, Math.min(5, Math.floor(a.t / 0.7 * 6)))];       // baja la carga
+  if (a.est !== 'trab') return ['caminar', 0];
+  const f = a.fase % 1;
+  if (a.herr === 'mano') return ['recoger', Math.round((1 - Math.cos(f * TAU)) / 2 * 5)];
+  if (a.herr === 'hacha' || a.herr === 'pico') return [a.herr === 'pico' && ALD_META.pico ? 'pico' : 'hacha', GOLPE(f)];
+  return ['martillo', GOLPE(f)];                                // martillo y sierra
+}
+function dibAld(a) {
+  const [an, k] = aldPose(a), m = ALD_META[an], im = m && aldTira(an, a.ci);
+  if (!im) return;
+  const c = ctx, f = im._f, s = ALD_K;
+  c.save(); c.translate(a.x, a.y);
+  sombra(c, 0, 0, 11, 3.8, .3);
+  if (a.dir < 0) c.scale(-1, 1);
+  c.drawImage(im, k * Math.round(m.w * f), 0, Math.round(m.w * f), Math.round(m.h * f), -m.ax * s, -m.ay * s, m.w * s, m.h * s);
+  c.restore();
+}
+
+// ================================================================ partículas
+const MAXP = TELE ? 50 : 320;
+function chispas(x, y, col, n, v) {
+  for (let i = 0; i < n && PART.length < MAXP; i++) PART.push({x, y, h: 0, vx: (azar() - .5) * 60 * v, vy: (azar() - .5) * 20, vh: 40 + azar() * 50 * v, g: 160, vida: .5 + azar() * .3, max: .8, col, r: 1.3 + azar(), tipo: 'c'});
+}
+function polvito(x, y) { for (let i = 0; i < 4 && PART.length < MAXP; i++) PART.push({x: x + (azar() - .5) * 10, y, h: 2, vx: (azar() - .5) * 18, vy: 0, vh: 6, g: 0, vida: .9, max: .9, col: '196,170,120', r: 4 + azar() * 3, tipo: 'p'}); }
+function polvo(o) {
+  for (let i = 0; i < (TELE ? 24 : 70); i++) { const a = azar() * TAU, d = azar() * 200; PART.push({x: o.x + Math.cos(a) * d, y: o.y - 20 + Math.sin(a) * d * .45, h: azar() * 60, vx: Math.cos(a) * (20 + azar() * 40), vy: Math.sin(a) * 12, vh: 10 + azar() * 20, g: 0, vida: 1.6 + azar() * 1.4, max: 3, col: '200,178,130', r: 18 + azar() * 26, tipo: 'p'}); }
+}
+function humo(x, y) { if (PART.length < MAXP) PART.push({x, y, h: 0, vx: 6 + azar() * 5, vy: 0, vh: 16 + azar() * 6, g: 0, vida: 3.2, max: 3.2, col: '120,118,112', r: 5, tipo: 'h'}); }
+function actPart(dt) {
+  for (let i = PART.length - 1; i >= 0; i--) {
+    const p = PART[i]; p.vida -= dt; if (p.vida <= 0) { PART.splice(i, 1); continue; }
+    p.x += p.vx * dt; p.y += p.vy * dt; p.vh -= p.g * dt; p.h = Math.max(0, p.h + p.vh * dt);
+    if (p.tipo !== 'c') { p.vx *= 1 - dt * .8; p.vy *= 1 - dt * .8; p.r += dt * (p.tipo === 'h' ? 5 : 8); }
+  }
+}
+function dibPart() {
+  for (const p of PART) {
+    if (p.tipo === 'c') { ctx.globalAlpha = Math.min(1, p.vida * 3); ctx.fillStyle = p.col; ctx.fillRect(p.x - p.r / 2, p.y - p.h - p.r / 2, p.r, p.r); }
+    else { const a = (p.vida / p.max) * (p.tipo === 'h' ? .32 : .45); ctx.globalAlpha = 1; ctx.fillStyle = `rgba(${p.col},${a})`; ctx.beginPath(); ctx.arc(p.x, p.y - p.h, p.r, 0, TAU); ctx.fill(); }
+  }
+  ctx.globalAlpha = 1;
+}
+
+// ================================================================ obras, letreros y vistazos
+function imgVist(o, i) {
+  const u = o.vist[i]; if (!u) return null;
+  let im = o.cache[u]; if (!im) { im = new Image(); im.decoding = 'async'; im.src = u; o.cache[u] = im; }
+  return im.complete && im.naturalWidth ? im : null;
+}
+function pintarVist(c, im, W, H) {                               // la imagen recortada para llenar W×H
+  const r = W / H, ir = im.naturalWidth / im.naturalHeight;
+  let sw = im.naturalWidth, sh = im.naturalHeight, sx = 0, sy = 0;
+  if (ir > r) { sw = sh * r; sx = (im.naturalWidth - sw) / 2; } else { sh = sw / r; sy = (im.naturalHeight - sh) / 2; }
+  c.drawImage(im, sx, sy, sw, sh, 0, 0, W, H);
+}
+function vistazo(c, o, W, H) {
+  const cur = imgVist(o, o.vi), prev = o.prev != null ? imgVist(o, o.prev) : null, a = clamp(o.vt / 0.7, 0, 1);
+  c.fillStyle = '#15110c'; c.fillRect(0, 0, W, H);
+  if (prev && a < 1) pintarVist(c, prev, W, H);
+  if (cur) { c.globalAlpha = prev ? a : 1; pintarVist(c, cur, W, H); c.globalAlpha = 1; }
+  else if (!o.vist.length) { c.fillStyle = '#e9d7a8'; c.font = 'bold 14px Georgia'; c.textAlign = 'center'; c.fillText(o.sin ? 'Fábrica' : 'en obra', W / 2, H / 2 + 5); }
+  const g = c.createLinearGradient(0, 0, W, H); g.addColorStop(0, 'rgba(255,255,255,.14)'); g.addColorStop(.5, 'rgba(255,255,255,0)'); c.fillStyle = g; c.fillRect(0, 0, W, H);
+}
+function dibObra(o, t) {
+  const c = ctx, n = ETAPAS[o.etapa], s = ESCALA[o.etapa], w = ancho(n, s), h = alto(n, s), x0 = o.x - w / 2, y0 = o.y + 20 - h;
+  sombra(c, o.x + 24, o.y + 6, w * 0.5, 46, .22);
+  spr(c, n, o.x, o.y + 20, s);
+  let barraY;
+  if (o.etapa === 2) {
+    c.save(); c.translate(x0, y0); c.scale(w / 758, h / 800); c.transform(1.83, -0.91, 0, 1.42, 416, 172);
+    vistazo(c, o, 100, 100); c.strokeStyle = '#2a1a0c'; c.lineWidth = 2.5; c.strokeRect(0, 0, 100, 100);
+    c.restore();
+    if (o.prog < 0.97 && !o.sin) andamio(c, x0, y0, w, h);
+    if (Math.floor(t * 2.2) !== o.hum && !TELE || (TELE && Math.floor(t) !== o.hum)) { o.hum = TELE ? Math.floor(t) : Math.floor(t * 2.2); humo(x0 + 216 * w / 758, y0 + 112 * h / 800); }
+    barraY = y0 - 6;
+  } else {                                                      // letrero de obra flotante, con cuerdas
+    const cx = o.x, cy = y0 - 40 + Math.sin(t * 1.3 + o.x) * 4, rot = Math.sin(t * .9 + o.x) * .025, W = 160, H = 94;
+    c.strokeStyle = 'rgba(60,40,20,.75)'; c.lineWidth = 1.4;
+    c.beginPath(); c.moveTo(cx - W / 2 + 6, cy + H / 2); c.lineTo(o.x - w * .38, o.y - 10); c.moveTo(cx + W / 2 - 6, cy + H / 2); c.lineTo(o.x + w * .38, o.y - 10); c.stroke();
+    c.save(); c.translate(cx, cy); c.rotate(rot);
+    c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(-W / 2 + 5, -H / 2 + 6, W, H);
+    c.fillStyle = '#6b4422'; c.fillRect(-W / 2, -H / 2, W, H); c.strokeStyle = '#2a1a0c'; c.lineWidth = 2; c.strokeRect(-W / 2, -H / 2, W, H);
+    c.translate(-W / 2 + 6, -H / 2 + 6); vistazo(c, o, W - 12, H - 12); c.restore();
+    barraY = cy - H / 2 - 12;
+  }
+  if (!o.sin) barra(c, o, barraY);
+}
+function andamio(c, x0, y0, w, h) {
+  c.save(); c.strokeStyle = '#7a5530'; c.lineWidth = 3.2; c.lineCap = 'round';
+  const xs = [0.06, 0.24, 0.42].map(f => x0 + w * f), top = y0 + h * 0.5, bot = y0 + h * 0.97;
+  c.beginPath(); for (const x of xs) { c.moveTo(x, top); c.lineTo(x, bot); } c.stroke();
+  c.lineWidth = 4.5; c.strokeStyle = '#9a7040';
+  c.beginPath(); for (const f of [0.64, 0.81]) { c.moveTo(xs[0] - 4, y0 + h * f); c.lineTo(xs[2] + 4, y0 + h * f + 6); } c.stroke();
+  c.lineWidth = 2; c.strokeStyle = '#6b4a26'; c.beginPath(); c.moveTo(xs[0], bot); c.lineTo(xs[1], top + 10); c.moveTo(xs[1], bot); c.lineTo(xs[2], top + 10); c.stroke();
+  c.restore();
+}
+function barra(c, o, y) {
+  const W = 150, x = o.x - W / 2;
+  c.font = 'bold 14px Georgia'; c.textAlign = 'center';
+  const nom = o.d.canal_nombre || '', tw = Math.min(260, c.measureText(nom).width + 22);
+  c.fillStyle = 'rgba(30,18,8,.82)'; c.fillRect(o.x - tw / 2, y - 34, tw, 20);
+  c.fillStyle = o.col; c.fillRect(o.x - tw / 2, y - 34, 5, 20);
+  c.fillStyle = '#ffe9b8'; c.fillText(nom, o.x + 2, y - 19);
+  c.fillStyle = '#140c05'; c.fillRect(x - 2, y - 12, W + 4, 12);
+  c.fillStyle = '#3a2a14'; c.fillRect(x, y - 10, W, 8);
+  const g = c.createLinearGradient(0, y - 10, 0, y - 2); g.addColorStop(0, '#9af46e'); g.addColorStop(1, '#2c9a1c');
+  c.fillStyle = g; c.fillRect(x, y - 10, W * clamp(o.prog, 0, 1), 8);
+}
+function dibLetrero(L) {
+  const c = ctx;
+  sombra(c, L.x + 6, L.y, 30, 7, .25);
+  c.fillStyle = '#5a3a1c'; c.fillRect(L.x - 3, L.y - 62, 6, 62);
+  c.font = 'bold 15px Georgia'; const w = Math.max(...L.txt.map((s, i) => { c.font = (i ? '12px' : 'bold 15px') + ' Georgia'; return c.measureText(s).width; })) + 26;
+  c.fillStyle = '#c9a66a'; c.strokeStyle = '#3a2410'; c.lineWidth = 2;
+  c.fillRect(L.x - w / 2, L.y - 104, w, 46); c.strokeRect(L.x - w / 2, L.y - 104, w, 46);
+  c.textAlign = 'center'; c.fillStyle = '#2b1a0a';
+  c.font = 'bold 15px Georgia'; c.fillText(L.txt[0], L.x, L.y - 84); c.font = '12px Georgia'; c.fillText(L.txt[1], L.x, L.y - 67);
+}
+const fcorta = iso => { try { return new Date(iso).toLocaleDateString('es-MX', {weekday: 'short', day: 'numeric', month: 'short'}); } catch (e) { return ''; } };
+const flarga = iso => { try { return new Date(iso).toLocaleString('es-MX', {weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit'}); } catch (e) { return ''; } };
+function dibLibre(L) {
+  const c = ctx, x = L.x, y = L.y;
+  const es = [[x - 80, y], [x, y - 44], [x + 80, y], [x, y + 44]];
+  c.strokeStyle = 'rgba(235,220,180,.85)'; c.lineWidth = 1.4; c.beginPath();
+  es.forEach((p, i) => { i ? c.lineTo(p[0], p[1] - 11) : c.moveTo(p[0], p[1] - 11); }); c.closePath(); c.stroke();
+  for (const [px, py] of es) { c.fillStyle = '#7a5530'; c.fillRect(px - 2, py - 15, 4, 16); c.fillStyle = L.col; c.fillRect(px - 2, py - 16, 4, 4); }
+  // poste y letrero
+  c.fillStyle = '#5a3a1c'; c.fillRect(x - 3, y - 54, 6, 58);
+  const W = 150, H = 54, bx = x - W / 2, by = y - 108;
+  c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(bx + 4, by + 5, W, H);
+  c.fillStyle = '#e4cf9c'; c.strokeStyle = '#3a2410'; c.lineWidth = 2; c.fillRect(bx, by, W, H); c.strokeRect(bx, by, W, H);
+  c.fillStyle = L.col; c.fillRect(bx, by, 5, H);
+  if (L.logo) { c.save(); c.beginPath(); c.arc(bx + 27, by + H / 2, 17, 0, TAU); c.clip(); c.drawImage(L.logo, bx + 10, by + H / 2 - 17, 34, 34); c.restore(); }
+  c.textAlign = 'left'; c.fillStyle = '#7a1a10'; c.font = 'bold 12px Georgia'; c.fillText(L.d.atrasado ? 'ATRASADO' : 'POR LLENAR', bx + 50, by + 17);
+  c.fillStyle = '#2b1a0a'; c.font = 'bold 12px Georgia'; c.fillText(recorta(c, L.d.canal_nombre, W - 56), bx + 50, by + 32);
+  c.font = '11px Georgia'; c.fillText(fcorta(L.d.sale), bx + 50, by + 46);
+}
+function recorta(c, s, w) { s = s || ''; if (c.measureText(s).width <= w) return s; while (s.length > 3 && c.measureText(s + '…').width > w) s = s.slice(0, -1); return s + '…'; }
+
+// ================================================================ cámara (recorrido de RTS + manual)
+const cam = {x: 1600, y: 900, z: 0.9, vx: 0, vy: 0, vz: 0};
+let toma = null, tomaHasta = 0, tomaK = 0, manualHasta = 0, mano = null;
+const PLAN = ['obra', 'ald', 'rec', 'obra', 'gen', 'ald', 'obra', 'rec'];
+const zmin = () => Math.max(VW / MW, VH / MH);
+function obraFoco() { return OBRAS.find(o => o.video === FOCO) || null; }
+function nuevaToma(ahora) {
+  const tipo = PLAN[tomaK++ % PLAN.length], f = obraFoco();
+  let o = f && azar() < 0.65 ? f : OBRAS[(tomaK >> 1) % OBRAS.length];
+  if (tipo === 'obra') toma = {t: 'obra', o, dur: 9};
+  else if (tipo === 'ald') {
+    const cand = ALD.filter(a => OBRAS[a.oi] === o && a.tipo === 'rec' && a.est !== 'trab'); const a = (cand.length ? cand : ALD)[azar() * (cand.length || ALD.length) | 0];
+    toma = a ? {t: 'ald', a, dur: 6} : {t: 'gen', dur: 7};
+  } else if (tipo === 'rec') toma = {t: 'rec', r: REC[RECS[azar() * 4 | 0]], dur: 6.5};
+  else toma = {t: 'gen', dur: 7};
+  tomaHasta = ahora + toma.dur * 1000;
+}
+function objetivo() {
+  if (mano) return mano;
+  if (!toma) return {x: MW / 2, y: MH / 2, z: zmin() * 1.08};
+  if (toma.t === 'obra') return {x: toma.o.x, y: toma.o.y - (toma.o.etapa === 2 ? 170 : 140), z: 1.1 * ZB};
+  if (toma.t === 'ald') return {x: toma.a.x, y: toma.a.y - 25, z: 1.6 * ZB};
+  if (toma.t === 'rec') return {x: toma.r.x + (toma.r === REC.madera ? 100 : 0), y: toma.r.y, z: 1.15 * ZB};
+  return {x: MW / 2, y: MH / 2 + 20, z: Math.max(zmin() * 1.06, 0.5 * ZB)};
+}
+function limitarCam() {
+  cam.z = clamp(cam.z, zmin(), 2.4 * ZB);
+  const hw = VW / (2 * cam.z), hh = VH / (2 * cam.z);
+  cam.x = hw * 2 >= MW ? MW / 2 : clamp(cam.x, hw, MW - hw);
+  cam.y = hh * 2 >= MH ? MH / 2 : clamp(cam.y, hh - 40 / cam.z, MH - hh);
+}
+function actCam(dt, ahora) {
+  const manual = ahora < manualHasta;
+  if (!manual) { mano = null; if (!toma || ahora > tomaHasta) nuevaToma(ahora); }
+  if (manual && !mano) { cam.vx = cam.vy = cam.vz = 0; limitarCam(); return; }
+  const o = objetivo(), k = 1.5, kz = 1.1, c1 = 2 * Math.sqrt(k), cz = 2 * Math.sqrt(kz);
+  cam.vx += (k * (o.x - cam.x) - c1 * cam.vx) * dt; cam.vy += (k * (o.y - cam.y) - c1 * cam.vy) * dt;
+  cam.vz += (kz * (o.z - cam.z) - cz * cam.vz) * dt;
+  cam.x += cam.vx * dt; cam.y += cam.vy * dt; cam.z += cam.vz * dt;
+  limitarCam();
+}
+// mano: arrastrar, rueda y minimapa (solo en el pop-up)
+if (!TELE) {
+  let arr = null;
+  cv.addEventListener('pointerdown', e => { arr = {x: e.clientX, y: e.clientY, cx: cam.x, cy: cam.y}; cv.classList.add('arr'); try { cv.setPointerCapture(e.pointerId); } catch (er) {} manualHasta = performance.now() + 10000; mano = null; });
+  cv.addEventListener('pointermove', e => { if (!arr) return; cam.x = arr.cx - (e.clientX - arr.x) / cam.z; cam.y = arr.cy - (e.clientY - arr.y) / cam.z; manualHasta = performance.now() + 10000; });
+  const fin = () => { arr = null; cv.classList.remove('arr'); };
+  cv.addEventListener('pointerup', fin); cv.addEventListener('pointercancel', fin);
+  cv.addEventListener('wheel', e => {
+    e.preventDefault(); mano = null; manualHasta = performance.now() + 10000;
+    const wx = cam.x + (e.clientX - VW / 2) / cam.z, wy = cam.y + (e.clientY - VH / 2) / cam.z;
+    cam.z = clamp(cam.z * Math.exp(-e.deltaY * 0.0015), zmin(), 2.4 * ZB);
+    cam.x = wx - (e.clientX - VW / 2) / cam.z; cam.y = wy - (e.clientY - VH / 2) / cam.z;
+  }, {passive: false});
+  $('mc').addEventListener('pointerdown', e => {
+    const b = $('mc').getBoundingClientRect();
+    mano = {x: (e.clientX - b.left) / b.width * MW, y: (e.clientY - b.top) / b.height * MH, z: cam.z};
+    manualHasta = performance.now() + 10000; e.stopPropagation();
+  });
+}
+
+// ================================================================ HUD
+let infoClave = '', hudT = 0, miniT = 0;
+function obraInfo() {
+  if (toma && toma.t === 'obra') return toma.o;
+  if (toma && toma.t === 'ald') return OBRAS[toma.a.oi];
+  let mejor = obraFoco() || OBRAS[0], dm = 1e9;
+  for (const o of OBRAS) { const d = Math.hypot(o.x - cam.x, o.y - cam.y); if (d < dm) { dm = d; mejor = o; } }
+  return dm < 900 / cam.z ? mejor : obraFoco() || mejor;
+}
+function hud() {
+  $('nMadera').textContent = ENT.madera; $('nSilicio').textContent = ENT.silicio; $('nComponentes').textContent = ENT.componentes; $('nPelicula').textContent = ENT.pelicula;
+  $('nObras').textContent = DATOS.obras.length; $('nAld').textContent = ALD.length; $('nLibres').textContent = (DATOS.libres || []).length;
+  const o = obraInfo(); if (!o) return;
+  const im = o.vist[o.vi] || '', clave = o.video + '|' + o.prog + '|' + im;
+  if (clave === infoClave) return; infoClave = clave;
+  if (o.sin) {
+    $('iTit').textContent = 'Sin obras: ningún video en producción';
+    $('iSub').innerHTML = ''; $('iPb').style.width = '0';
+    const L = (DATOS.libres || [])[0];
+    $('iSale').textContent = L ? `Siguiente hueco por llenar: ${L.canal_nombre}, ${flarga(L.sale)}` : '';
+    $('iImg').style.visibility = 'hidden'; return;
+  }
+  const d = o.d, et = ['Cimientos', 'Armazón', 'Taller'][o.etapa];
+  $('iTit').textContent = d.titulo; $('iTit').title = d.video;
+  $('iSub').innerHTML = `<i style="background:${o.col}"></i>${esc(d.canal_nombre)} · <b>${Math.round(o.prog * 100)} %</b> · ${esc(d.etapa_n || 'en obra')} · ${et}`;
+  $('iPb').style.width = (o.prog * 100).toFixed(1) + '%';
+  $('iSale').innerHTML = d.sale ? `${d.atrasado ? '<span class="late">canal atrasado</span> · ' : ''}sale ${esc(flarga(d.sale))}` : '';
+  if (im) { $('iImg').src = im; $('iImg').style.visibility = 'visible'; } else $('iImg').style.visibility = 'hidden';
+}
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, ch => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[ch]));
+function minimapa() {
+  const m = $('mc').getContext('2d'), sx = 228 / MW, sy = 127 / MH;
+  if (MINIBASE) m.drawImage(MINIBASE, 0, 0); else { m.fillStyle = '#3d5a28'; m.fillRect(0, 0, 228, 127); }
+  for (const L of LIBRES) { m.strokeStyle = L.col; m.lineWidth = 1.5; m.strokeRect(L.x * sx - 3, L.y * sy - 3, 6, 6); }
+  for (const r of RECS) { m.fillStyle = {madera: '#8a5a2a', silicio: '#bfe3ff', componentes: '#5ad16a', pelicula: '#333'}[r]; m.fillRect(REC[r].x * sx - 2.5, REC[r].y * sy - 2.5, 5, 5); }
+  for (const o of OBRAS) { m.fillStyle = '#000'; m.fillRect(o.x * sx - 5, o.y * sy - 6, 10, 10); m.fillStyle = o.col; m.fillRect(o.x * sx - 4, o.y * sy - 5, 8, 8); }
+  for (const a of ALD) { m.fillStyle = a.col; m.fillRect(a.x * sx - 1, a.y * sy - 1, 2.2, 2.2); }
+  const hw = VW / (2 * cam.z), hh = VH / (2 * cam.z);
+  m.strokeStyle = '#fff'; m.lineWidth = 1.2; m.strokeRect((cam.x - hw) * sx, (cam.y - hh) * sy, hw * 2 * sx, hh * 2 * sy);
+}
+
+// ================================================================ bucle
+let raf = 0, tPrev = 0, pausado = false, oculto = false;
+const lista = [];
+function cuadro(ts) {
+  raf = requestAnimationFrame(cuadro);
+  const t = ts / 1000, dt = tPrev ? clamp(t - tPrev, 0, 0.05) : 0.016; tPrev = t;
+  for (const a of ALD) actAld(a, dt, t);
+  for (const tr of ARB) if (tr.sac > 0) tr.sac = Math.max(0, tr.sac - dt * 2.2);
+  for (const o of OBRAS) {
+    o.vt += dt;
+    if (o.vt > 4 && o.vist.length > 1) { o.prev = o.vi; o.vi = (o.vi + 1) % o.vist.length; o.vt = 0; imgVist(o, (o.vi + 1) % o.vist.length); }
+  }
+  actPart(dt); actCam(dt, ts);
+  dibujar(t);
+  if (ts - hudT > 500) { hudT = ts; hud(); }
+  if (ts - miniT > (TELE ? 500 : 200)) { miniT = ts; minimapa(); }
+}
+function dibujar(t) {
+  const z = cam.z * R;
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#16210f'; ctx.fillRect(0, 0, cv.width, cv.height);
+  const hw = VW / (2 * cam.z), hh = VH / (2 * cam.z), L = cam.x - hw, T = cam.y - hh, Rr = cam.x + hw, B = cam.y + hh;
+  ctx.setTransform(z, 0, 0, z, -L * z, -T * z);
+  if (SUELO) {
+    const gs = SUELO.gs, sx = clamp(L, 0, MW), sy = clamp(T, 0, MH), ex = clamp(Rr, 0, MW), ey = clamp(B, 0, MH);
+    if (ex > sx && ey > sy) ctx.drawImage(SUELO.c, sx * gs, sy * gs, (ex - sx) * gs, (ey - sy) * gs, sx, sy, ex - sx, ey - sy);
+  }
+  const io = obraInfo();                                         // elipse de selección (estilo RTS) bajo la obra que describe el panel
+  if (io && !io.sin) { ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 2 / cam.z + 1; ctx.setLineDash([10, 7]); ctx.lineDashOffset = -t * 12; ctx.beginPath(); ctx.ellipse(io.x, io.y - 35, 250, 112, 0, 0, TAU); ctx.stroke(); ctx.setLineDash([]); }
+  lista.length = 0;
+  for (const s of ESCENA) if (s.x > L - 330 && s.x < Rr + 330 && s.y > T - 70 && s.y < B + 460) lista.push(s);
+  lista.sort((a, b) => a.y - b.y);
+  for (const s of lista) s.dib(t);
+  dibPart();
+}
+function pausar() {
+  const p = pausado || oculto;
+  if (p && raf) { cancelAnimationFrame(raf); raf = 0; if (AC) AC.suspend().catch(() => {}); }
+  else if (!p && !raf && SUELO) { tPrev = 0; raf = requestAnimationFrame(cuadro); if (AC && SON) AC.resume().then(botonesSon, () => {}); }
+  botonesSon();
+}
+window.__pausa = si => { pausado = !!si; pausar(); };
+window.__tablero = {ocultar: si => window.__pausa(si)};      // el tablero de la tele llama a las dos
+document.addEventListener('visibilitychange', () => { oculto = document.hidden; pausar(); });
+
+// ================================================================ datos
+async function cargarDatos() {
+  let d;
+  try { const r = await fetch('/api/v2/obra', {cache: 'no-store'}); if (!r.ok) throw 0; d = await r.json(); $('aviso').style.display = 'none'; }
+  catch (e) { $('aviso').style.display = DATOS ? 'block' : 'none'; return false; }
+  const clave = d.obras.slice(0, 6).map(o => o.video).join('|') + '#' + (d.libres || []).map(h => h.canal).join('|');
+  const primera = !DATOS; DATOS = d;
+  if (clave !== CLAVE) {
+    const antes = new Set(OBRAS.filter(o => !o.sin).map(o => o.video)); CLAVE = clave; construir();
+    if (!primera) for (const o of OBRAS) if (!o.sin && !antes.has(o.video)) { polvo(o); sonar('listo', o.x, o.y, .8, .5); }
+    if (primera) {
+      for (const o of OBRAS) for (const r of RECS) { const n = Math.round(o.prog * 18 * (0.6 + azar() * 0.8)); o.ent[r] += n; ENT[r] += n; }
+      const f = obraFoco(); toma = null; tomaK = 0;
+      if (f) { toma = {t: 'obra', o: f, dur: 9}; tomaHasta = performance.now() + 9000; }
+      else if (TELE) { toma = {t: 'gen', dur: 6}; tomaHasta = performance.now() + 6000; }
+      const ob = objetivo(); cam.x = ob.x; cam.y = ob.y; cam.z = ob.z; limitarCam();
+    }
+  } else {
+    for (const o of OBRAS) {
+      const n = d.obras.find(x => x.video === o.video); if (!n) continue;
+      const e = etapaDe(n.progreso);
+      if (e > o.etapa) { polvo(o); sonar('listo', o.x, o.y, .8, .5); }
+      o.d = n; o.prog = n.progreso; o.etapa = e;
+      if ((n.vistazos || []).join() !== o.vist.join()) { o.vist = n.vistazos || []; o.vi = 0; o.prev = null; o.vt = 0; }
+    }
+  }
+  return true;
+}
+(async () => {
+  audioIniciar();
+  await cargarArte();
+  while (!(await cargarDatos())) { $('carga').textContent = 'La fábrica no contesta… reintentando'; await new Promise(r => setTimeout(r, 4000)); }
+  $('carga').classList.add('fuera');
+  hud(); minimapa(); pausar();
+  setInterval(cargarDatos, TELE ? 60000 : 30000);
+})();
+</script>
+</body>
+</html>

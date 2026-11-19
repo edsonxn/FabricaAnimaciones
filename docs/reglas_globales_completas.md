@@ -369,6 +369,7 @@ Al «buenos días»: `python fab.py buenosdias` y propones el plan del día (can
 ### R34 · Todo lo que se nombra se muestra
 
 - **TODO LO QUE SE NOMBRA SE MUESTRA, CON VIDEO DE PREFERENCIA (el usuario, 10-nov-2026, TODOS los canales; OBLIGATORIO en secretos y huevos de pascua):** objeto, personaje (el que habla, con su cara), lugar o paso del secreto = clip que lo enseña en ese segundo; si no hay, captura nítida a pantalla completa (`pant()`) o pegatina GRANDE; el mapa solo dice dónde, no basta. Pegatina borrosa = no cuenta. La voz habla como quien estuvo ahí, nunca «revisé los videos». Fallo: `wow_secretos_primeros_niveles` (brazo de Terminator, caja de pesca de Loch Modan, Ruinas de Lordaeron). Detalle: `docs/estilo_secuencia_yt.md` § «TODO LO QUE SE NOMBRA SE MUESTRA».
+- **EFECTOS FUNCIONANDO (el usuario, 19-nov-2026, TODOS los canales; regla de oro):** cuando la voz nombra un hechizo, encantamiento, poder, efecto de una armadura o arma, o una escena, se ve **funcionando** en ese segundo, no solo el objeto quieto. Orden: (1) clip donde se vea el efecto activo (búsqueda «<objeto> effect / in action / showcase»); (2) si no hay clip, foto o captura real del efecto activo (`pant()` o pegatina GRANDE); (3) último recurso, Flow con los gráficos del juego, como captura real, marcado RECREACIÓN (R35/R36). Se suma a lo que ya hay. Fallo: `tes_armaduras_poderosas` p20, el Semblante de Mzund sin el chorro de vapor. Va en `promesas.md`/`escenas.md`.
 
 ### R35 · Las escenas importantes se ven en movimiento
 

@@ -19,7 +19,7 @@ Pipeline propio (Python, todo local) que produce videos animados 2D con narraci�
 
 ## Reglas globales (una línea cada una; detalle en RGC)
 **Lo que se ve**
-- **Todo lo que se nombra se muestra, con video de preferencia (10-nov):** clip; si no, `pant()` o pegatina GRANDE nítida; el mapa no basta; la voz habla como quien estuvo ahí. → RGC §R34
+- **Todo lo que se nombra se muestra, con video de preferencia (10-nov):** clip; si no, `pant()` o pegatina GRANDE nítida; el mapa no basta; la voz habla como quien estuvo ahí; hechizos/efectos/escenas se ven FUNCIONANDO: clip → foto real → Flow con gráficos del juego (19-nov). → RGC §R34
 - **Promesas visuales comprobadas (5-nov):** `promesas.md` + `previews/promesas_NN.jpg` antes del render. → RGC §R33
 - **Escenas importantes en movimiento (18-nov):** suceso contado = clip real de ese momento; último recurso Flow video 4-6 s marcado RECREACIÓN; `escenas.md`. → RGC §R35
 - **Cada imagen por IDENTIDAD, no por nombre (6-nov):** contra la infobox; hoja `previews/pegatinas_check.jpg` mirada a mano. → RGC §R32

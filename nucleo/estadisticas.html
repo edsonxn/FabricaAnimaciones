@@ -421,7 +421,7 @@ const faltan = d => d < 0 ? `atrasado ${lapso(d)}` : `en ${lapso(d)}`;
 const cicloTxt = x => `${+x.toFixed(1)} d`;
 
 function pintaCal() {
-  const base = activos(), H = K.h;
+  const base = activos().filter(c => c.seguimiento !== false), H = K.h;   // `"sin_seguimiento"` en canales/<alias>.json: fuera del calendario
   const grupos = [['', 'Todos'], ['urgente', 'Urgentes'], ['pronto', 'Pronto'], ['bien', 'Bien']];
   $('cal-nivel').innerHTML = grupos.map(([g, t]) => `<button data-n="${g}" class="${K.nivel === g ? 'on' : ''}">${t} · ${base.filter(c => !g || NIV[c.cal.n][2] === g).length}</button>`).join('');
   $('cal-h').innerHTML = [14, 30, 60].map(h => `<button data-h="${h}" class="${h === H ? 'on' : ''}">${h} días</button>`).join('');

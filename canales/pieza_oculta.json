@@ -36,46 +36,50 @@
       "id": "HOSUWAa-L4k",
       "titulo": "La Sopa Instantánea Nació Mirando a su Esposa Freír TEMPURA #Shorts",
       "subido": "2026-11-03",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-11-05T01:00:00Z",
       "duracion": "PT48S",
       "short": true,
       "formato": "Short del largo sopa_instantanea (iJ7QsuU1nUA), 48 s, 18 imágenes 9:16 Nano Banana 2.1, 4 vivas, Lyria nueva; miniatura vertical Flow con la taza real",
-      "nota": "PENDIENTE en Studio: «Vídeo relacionado» = iJ7QsuU1nUA; .srt a mano (token sin force-ssl)"
+      "nota": "PENDIENTE en Studio: «Vídeo relacionado» = iJ7QsuU1nUA; .srt a mano (token sin force-ssl)",
+      "publicado": "2026-11-05T01:00:35Z"
     },
     {
       "video": "sopa_instantanea",
       "id": "iJ7QsuU1nUA",
       "titulo": "Lo Perdió TODO y a los 48 Años Inventó la Sopa Instantánea en su Patio",
       "subido": "2026-10-23",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-11-02T19:00:00Z",
       "duracion": "PT8M13S",
       "formato": "origen de MARCA con giro humano (Momofuku Ando / Cup Noodles), edad en el título, miniatura con el producto REAL de ingrediente + plastilina (fórmula 23-oct, tanda #2: solo cambia el tema)",
-      "nota": "2 min de clips (12 combinados) + 80 imágenes Nano Banana 2.1; Lyria nueva 5 tramos; .srt pendiente a mano en Studio"
+      "nota": "2 min de clips (12 combinados) + 80 imágenes Nano Banana 2.1; Lyria nueva 5 tramos; .srt pendiente a mano en Studio",
+      "publicado": "2026-11-02T19:00:10Z"
     },
     {
       "video": "corn_flakes_short",
       "id": "bSRbiTItbTc",
       "titulo": "Los Corn Flakes Nacieron de un Trigo OLVIDADO #Shorts",
       "subido": "2026-10-23",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-30T19:00:00Z",
       "duracion": "PT41S",
       "short": true,
       "formato": "Short del largo corn_flakes (4GLQgAKPQBg), 41 s, 16 imágenes 9:16 Nano Banana 2.1, Lyria nueva",
-      "nota": "PENDIENTE en Studio cuando el largo sea público (29-oct): «Vídeo relacionado» = 4GLQgAKPQBg"
+      "nota": "PENDIENTE en Studio cuando el largo sea público (29-oct): «Vídeo relacionado» = 4GLQgAKPQBg",
+      "publicado": "2026-10-30T19:00:19Z"
     },
     {
       "video": "corn_flakes",
       "id": "4GLQgAKPQBg",
       "titulo": "Los Corn Flakes Nacieron de un ERROR (Y Separaron a Dos Hermanos Para Siempre)",
       "subido": "2026-10-23",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-10-29T19:00:00Z",
       "duracion": "PT8M10S",
       "formato": "origen de MARCA con giro humano, objeto en el título, miniatura con retratos reales en medallón + plastilina (fórmula 23-oct, tanda #1)",
-      "nota": "primer video de la fórmula nueva; 1 min de clips + 94 imágenes Nano Banana 2.1; Lyria nueva 5 tramos"
+      "nota": "primer video de la fórmula nueva; 1 min de clips + 94 imágenes Nano Banana 2.1; Lyria nueva 5 tramos",
+      "publicado": "2026-10-29T19:00:22Z"
     },
     {
       "video": "teflon_sarten",
@@ -223,11 +227,12 @@
       "id": "wCQ8VVbcbgk",
       "titulo": "El Carpintero que lo Perdió TODO… e Inventó LEGO",
       "subido": "2026-11-04",
-      "visibilidad": "programado",
+      "visibilidad": "public",
       "publicar": "2026-11-06T19:00:00Z",
       "duracion": "PT9M13S",
       "formato": "origen de MARCA con giro humano (Ole Kirk Christiansen / LEGO), 3 incendios; tanda #3: 3 min de clips (18 combinados de 10 s, 720p) + 76 imágenes Nano Banana 2.1, capa de pegatinas reales ligera en clips y densa en imágenes (kit mg_plasti), Lyria nueva 5 tramos; miniatura Flow con Ole Kirk + ladrillo 2x4 reales de ingrediente",
-      "nota": "PENDIENTE en Studio: .srt a mano (token sin force-ssl). Promoción pagada marcada por error y quitada el 4-nov"
+      "nota": "PENDIENTE en Studio: .srt a mano (token sin force-ssl). Promoción pagada marcada por error y quitada el 4-nov",
+      "publicado": "2026-11-06T19:00:32Z"
     }
   ],
   "ideas": {
@@ -262,5 +267,6 @@
       "marca",
       "origen"
     ]
-  }
+  },
+  "sin_seguimiento": "19-nov-2026: el usuario — canal que no estamos moviendo; fuera del calendario (sus estadísticas siguen)"
 }

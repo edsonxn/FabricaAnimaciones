@@ -125,12 +125,13 @@
       "video": "duelo_cuerpo_short",
       "id": "xw4uMsggHa4",
       "titulo": "¿Se puede romper un corazón de verdad? #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-23",
       "formato": "Short vertical derivado de `duelo_cuerpo`: síndrome del corazón roto (takotsubo), 0:53, imágenes del largo reencuadradas 9:16, 4 tomas de voz del largo + gancho/cierre nuevos",
       "programado": "2026-10-29T01:05:00Z",
       "short": true,
-      "largo": "duelo_cuerpo"
+      "largo": "duelo_cuerpo",
+      "publicado": "2026-10-29T01:05:05Z"
     },
     {
       "video": "despertar_3am",
@@ -148,12 +149,13 @@
       "video": "despertar_3am_short",
       "id": "aJFzF3I0bBc",
       "titulo": "¿Por qué a las 3 de la mañana todo parece peor? #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "subido": "2026-10-23",
       "formato": "Short vertical derivado de `despertar_3am`: la mente después de medianoche (Tubbs 2022), 0:54, imágenes del largo reencuadradas 9:16, 5 tomas de voz del largo + gancho/cierre nuevos",
       "programado": "2026-10-31T01:05:00Z",
       "short": true,
-      "largo": "despertar_3am"
+      "largo": "despertar_3am",
+      "publicado": "2026-10-31T01:05:15Z"
     }
   ],
   "ideas": {
@@ -207,5 +209,6 @@
       "nota": "Canal reconvertido de «Cuentas Pendientes» (historias de herencias) a «Cuerpo en Neón» (@cuerpoenneon): 5 videos viejos a privado por API; nombre, handle, icono, banner, descripción y palabras clave puestos por el usuario en Studio; idioma es por API."
     }
   ],
-  "handle": "@cuerpoenneon"
+  "handle": "@cuerpoenneon",
+  "sin_seguimiento": "19-nov-2026: el usuario — canal que no estamos moviendo; fuera del calendario (sus estadísticas siguen)"
 }

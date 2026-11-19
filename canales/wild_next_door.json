@@ -123,127 +123,139 @@
       "video": "mariquitas_casa",
       "id": "zEq5GKLUNMo",
       "titulo": "What Happens to the Ladybugs Hiding in Your House This Winter?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-10-28T16:05:00Z",
-      "prueba": "fórmula nueva, 4:11, temporada (mariquitas asiáticas oct-nov), miniatura «WHY HERE?» (B «ALL WINTER?»)"
+      "prueba": "fórmula nueva, 4:11, temporada (mariquitas asiáticas oct-nov), miniatura «WHY HERE?» (B «ALL WINTER?»)",
+      "publicado": "2026-10-28T16:05:12Z"
     },
     {
       "video": "chinche_invierno",
       "id": "ScnMG05QH6s",
       "titulo": "What Happens If You Let a Stink Bug Live in Your House All Winter?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-10-30T16:05:00Z",
-      "prueba": "fórmula nueva, 4:13, temporada (chinche apestosa oct-nov), ángulo «compañero de cuarto»; miniatura A/B"
+      "prueba": "fórmula nueva, 4:13, temporada (chinche apestosa oct-nov), ángulo «compañero de cuarto»; miniatura A/B",
+      "publicado": "2026-10-30T16:05:33Z"
     },
     {
       "video": "mariquitas_casa_short",
       "id": "jvxJ7pXGtZU",
       "titulo": "Where Do the Ladybugs in Your House Go? #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "formato": "short_vertical",
       "subido": "2026-10-22",
       "programado": "2026-10-29T04:05:00Z",
-      "prueba": "Short del largo zEq5GKLUNMo (47 s)"
+      "prueba": "Short del largo zEq5GKLUNMo (47 s)",
+      "publicado": "2026-10-29T04:05:38Z"
     },
     {
       "video": "chinche_invierno_short",
       "id": "Ygkbz_2BVD8",
       "titulo": "What If You Let a Stink Bug Stay All Winter? #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "formato": "short_vertical",
       "subido": "2026-10-22",
       "programado": "2026-10-31T04:05:00Z",
-      "prueba": "Short del largo ScnMG05QH6s (37 s)"
+      "prueba": "Short del largo ScnMG05QH6s (37 s)",
+      "publicado": "2026-10-31T04:05:21Z"
     },
     {
       "video": "hormigas_cocina",
       "id": "1ytJhwFjptY",
       "titulo": "What Happens to the Colony After You Squish the Ants on Your Counter?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-11-01T16:05:00Z",
-      "prueba": "fórmula nueva, 3:53, hormiga de casa (todo el año), ángulo «repartidores de comida»; miniatura A/B"
+      "prueba": "fórmula nueva, 3:53, hormiga de casa (todo el año), ángulo «repartidores de comida»; miniatura A/B",
+      "publicado": "2026-11-01T16:05:11Z"
     },
     {
       "video": "telarana_rota",
       "id": "cS1E3faIDbs",
       "titulo": "What Happens to a Spider After You Knock Down Its Web?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-11-03T16:05:00Z",
-      "prueba": "fórmula nueva, 3:31, «casa destruida» (esquema Zyka), ángulo «casa, refri y trabajo»; miniatura A/B"
+      "prueba": "fórmula nueva, 3:31, «casa destruida» (esquema Zyka), ángulo «casa, refri y trabajo»; miniatura A/B",
+      "publicado": "2026-11-03T16:05:07Z"
     },
     {
       "video": "polilla_foco",
       "id": "G22Fo2UVhXo",
       "titulo": "What Happens to a Moth That Circles Your Porch Light All Night?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-11-05T16:05:00Z",
-      "prueba": "fórmula nueva, 3:44, pregunta universal sin dueño (Nature Comm. 2024), ángulo «GPS atascado»; miniatura A/B"
+      "prueba": "fórmula nueva, 3:44, pregunta universal sin dueño (Nature Comm. 2024), ángulo «GPS atascado»; miniatura A/B",
+      "publicado": "2026-11-05T16:05:06Z"
     },
     {
       "video": "hormigas_cocina_short",
       "id": "14mdyYdAwNU",
       "titulo": "Why Squishing Ants Never Works #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "formato": "short_vertical",
       "subido": "2026-10-22",
       "programado": "2026-11-02T04:05:00Z",
-      "prueba": "Short del largo 1ytJhwFjptY"
+      "prueba": "Short del largo 1ytJhwFjptY",
+      "publicado": "2026-11-02T04:05:11Z"
     },
     {
       "video": "telarana_rota_short",
       "id": "BX67PPN2538",
       "titulo": "What a Spider Does After You Wreck Its Web #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "formato": "short_vertical",
       "subido": "2026-10-22",
       "programado": "2026-11-04T04:05:00Z",
-      "prueba": "Short del largo cS1E3faIDbs"
+      "prueba": "Short del largo cS1E3faIDbs",
+      "publicado": "2026-11-04T04:05:39Z"
     },
     {
       "video": "polilla_foco_short",
       "id": "asvhFbua08c",
       "titulo": "Moths Aren't Attracted to Light. They're Trapped #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "formato": "short_vertical",
       "subido": "2026-10-22",
       "programado": "2026-11-06T04:05:00Z",
-      "prueba": "Short del largo G22Fo2UVhXo"
+      "prueba": "Short del largo G22Fo2UVhXo",
+      "publicado": "2026-11-06T04:05:38Z"
     },
     {
       "video": "arana_crias",
       "id": "YsNXuTVIzjw",
       "titulo": "What Happens If You Squish a Spider Carrying Babies?",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "formato": "what_happens",
       "subido": "2026-10-22",
       "programado": "2026-11-07T16:05:00Z",
-      "prueba": "fórmula nueva, 3:40, araña lobo con crías (ref. viral 23 M), ángulo «mamá sin carriola»; miniatura A/B"
+      "prueba": "fórmula nueva, 3:40, araña lobo con crías (ref. viral 23 M), ángulo «mamá sin carriola»; miniatura A/B",
+      "publicado": "2026-11-07T16:05:05Z"
     },
     {
       "video": "arana_crias_short",
       "id": "_DxVsEkyikw",
       "titulo": "Never Stomp a Spider With a Lumpy Back #Shorts",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "short": true,
       "formato": "short_vertical",
       "subido": "2026-10-22",
       "programado": "2026-11-08T04:05:00Z",
-      "prueba": "Short del largo YsNXuTVIzjw"
+      "prueba": "Short del largo YsNXuTVIzjw",
+      "publicado": "2026-11-08T04:05:01Z"
     }
   ],
   "ideas": {
@@ -283,5 +295,6 @@
     "banner": "canales/arte/wild_next_door_banner.jpg",
     "aplicado": "2026-10-29",
     "nota": "Flow (Nano Banana 2.1): araña de ojos saltones sobre amarillo + casa en corte con un bicho por cuarto y «What really happens to the bugs in your house»; reemplaza zorro/atardecer (viejos: *_viejo.jpg)"
-  }
+  },
+  "sin_seguimiento": "19-nov-2026: el usuario — canal que no estamos moviendo; fuera del calendario (sus estadísticas siguen)"
 }

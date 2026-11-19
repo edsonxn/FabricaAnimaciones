@@ -105,22 +105,24 @@
       "id": "H3B9BIiN33E",
       "titulo": "La Guerra del Mixtón, contada por un caxcán",
       "subido": "2026-10-22T05:47:57Z",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "nota": "18:00, novela animada de la Guerra del Mixtón (1525-1541) narrada por un padre caxcán + bando español y Valladolid 1555. Proyecto sin canal; el usuario eligió Bitácora Perdida el 21-oct. Miniatura Flow «MAÑANA SUBEN», .srt y 17 capítulos. Programado jue 29-oct 14:00 CDMX (ciclo de 5 días tras Jalpa).",
       "formato": "novela animada larga · pegatina Flow cinematográfica · narrador-personaje + diálogos (20 voces) · ~18 min",
       "programado": "2026-10-29T20:00:00Z",
-      "publicar": "2026-10-29T20:00:00Z"
+      "publicar": "2026-10-29T20:00:00Z",
+      "publicado": "2026-10-29T20:00:17Z"
     },
     {
       "video": "ramses_ii",
       "id": "6kPyIjnHOYk",
       "titulo": "Ramsés II: el faraón que se fabricó a sí mismo",
       "subido": "2026-11-05T14:40:00Z",
-      "visibilidad": "private",
+      "visibilidad": "public",
       "nota": "9:36, piloto de la segunda línea del canal: DOCUMENTAL DE PERSONAJE ANTIGUO (kit docu_antiguo + túnel de capas, 40 láminas, 94 capas). Voz Hugo M (ElevenLabs), miniatura Flow «PROFESIÓN: REY» + sello «FALLECIDO», .srt y 9 capítulos. Programado jue 5-nov 14:00 CDMX (canal atrasado desde el 3-nov).",
       "formato": "documental de personaje antiguo · cine Flow + grafismos sobre negro + artefactos reales · túnel de capas · ~9,5 min",
       "programado": "2026-11-05T20:00:00Z",
-      "publicar": "2026-11-05T20:00:00Z"
+      "publicar": "2026-11-05T20:00:00Z",
+      "publicado": "2026-11-05T20:00:23Z"
     }
   ],
   "ideas": {
@@ -141,5 +143,6 @@
     ],
     "dias": 60,
     "min_vistas": 1000
-  }
+  },
+  "sin_seguimiento": "19-nov-2026: el usuario — canal que no estamos moviendo; fuera del calendario (sus estadísticas siguen)"
 }

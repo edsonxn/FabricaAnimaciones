@@ -242,7 +242,10 @@ def datos_panel(proyectos=None):
         if os.path.isfile(ruta):
             d = json.load(open(ruta, encoding="utf-8"))
             d["color"] = orden.index(alias) % 8
-            d["cal"] = calendario(d, json.load(open(os.path.join(yt.CANALES, alias + ".json"), encoding="utf-8")))
+            cfg = json.load(open(os.path.join(yt.CANALES, alias + ".json"), encoding="utf-8"))
+            d["cal"] = calendario(d, cfg)
+            # `"sin_seguimiento"` = canal que no estamos moviendo: fuera del calendario, sus estadísticas siguen (el usuario, 19-nov-2026)
+            d["seguimiento"] = not cfg.get("sin_seguimiento")
             d["prod"] = sorted(prod.get(alias, []), key=lambda x: -x["progreso"])
             canales.append(d)
     return dict(generado=dt.datetime.now().isoformat(timespec="minutes"), periodos=list(PERIODOS), canales=canales)
@@ -256,7 +259,7 @@ def html_panel(proyectos=None):
 
 def tabla_calendario():
     """Lo que se mira al empezar el día: canales ordenados por quién se queda antes sin video."""
-    cs = sorted(datos_panel()["canales"], key=lambda c: c["cal"]["dias"])
+    cs = sorted((c for c in datos_panel()["canales"] if c["seguimiento"]), key=lambda c: c["cal"]["dias"])
     if not cs:
         sys.exit("Todavía no hay datos: corre  python fab.py canales --actualizar")
     DIA = ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"]

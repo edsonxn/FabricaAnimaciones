@@ -511,7 +511,7 @@ terreno con estacas y el logo del canal. Plan y detalle: `nucleo/obra/LEEME.md`.
   reales de `m.hecho` (`marcaAvance` en `llegaReal`). Material activo (`activo`) = falta y subió hace menos de 3 veces su
   intervalo entre subidas (90 s a 10 min; reloj `RELOJ`). Al abrir nada está activo: recolectores en el campamento
   frente a las pilas (`campo`, y = o.y+135…185) y constructores en su lugar, en ocio al azar (`nuevoOcio`/`actOcio`:
-  parado girando, sentado = cuadro 1 de `recoger` con burbuja «z», charla con el ocioso más cercano y burbuja «…»,
+  parado girando, sentado comiendo pan (hoja `sentado`, 0→5→0 y pausa), charla con el ocioso más cercano (hoja `platicar` y burbuja «…»), dormir (hoja `dormir` y «z» que sube), estirarse (hoja `estirarse`, una vez),
   mira la obra, paseo corto en el campamento). Al subir algo real: hasta 3 salen por él (`salir`: estado `arranca`,
   pasando entre las pilas por `HUECOS`), los demás ociosos van a trabajar lo que avanza (`repartir`), el recorrido
   automático sigue al que carga (`seguirCarga`), y la cifra de la barra brilla al subir (clase `sube`). Si deja de

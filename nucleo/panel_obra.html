@@ -401,8 +401,10 @@ function marcaAvance(o, m) { o.act = o.act || {}; const p = o.act[m.id]; o.act[m
 // Ocio vivo y al azar (el usuario: «parece una animación en bucle»): sin herramientas ni viajes, cada quien a su ritmo.
 function campo(a) { const o = OBRAS[a.oi]; a.cx = o.x + (azar() - .5) * 460; a.cy = o.y + 135 + azar() * 50; }
 function nuevoOcio(a, primero = false) {
-  const r = azar(), k = r < .28 ? 'parado' : r < .5 ? 'sentado' : r < .72 ? 'charla' : r < .86 ? 'mira' : a.tipo === 'rec' ? 'paseo' : 'parado';
-  const oc = {k, t: (k === 'sentado' ? 9 + azar() * 20 : 3 + azar() * 8) * (primero ? 0.2 + azar() * 0.8 : 1), giro: 1 + azar() * 4, con: null};
+  // hojas de ocio de Flow (otra sesión, 19-nov): sentado (come pan), platicar, dormir, estirarse
+  const r = azar(), k = r < .2 ? 'parado' : r < .38 ? 'sentado' : r < .54 ? 'charla' : r < .64 ? 'mira' : r < .74 ? 'dormir' : r < .86 ? 'estira' : a.tipo === 'rec' ? 'paseo' : 'parado';
+  const dur = k === 'sentado' ? 9 + azar() * 20 : k === 'dormir' ? 15 + azar() * 25 : k === 'estira' ? 1.25 : 3 + azar() * 8;
+  const oc = {k, t: dur * (primero && k !== 'estira' ? 0.2 + azar() * 0.8 : 1), giro: 1 + azar() * 4, con: null, t0: RELOJ};
   if (k === 'charla') {                                          // con el ocioso más cercano; si no hay, se queda parado
     let d0 = 80; for (const b of ALD) if (b !== a && b.oi === a.oi && (b.est === 'ocio' || b.est === 'quieto')) { const d = Math.hypot(b.x - a.x, b.y - a.y); if (d < d0) { d0 = d; oc.con = b; } }
     if (!oc.con) oc.k = 'parado';
@@ -729,7 +731,7 @@ function actAld(a, dt, t) {
 // Aldeanos = hojas de animación de Flow (arte original estilo RTS de fines de los 90), recortadas por
 // nucleo/obra/preparar_arte.py aldeanos en tiras img/ald_<anim>_<tinta>.png (túnica teñida con el color del canal).
 // Todas miran a la derecha; a la izquierda se espejean. La línea ALD_META la reescribe preparar_arte.py.
-const ALD_META = {"caminar":{"n":12,"w":48,"h":85,"ax":23,"ay":82},"cargar":{"n":8,"w":48,"h":87,"ax":27,"ay":84},"hacha":{"n":6,"w":67,"h":122,"ax":27,"ay":120},"martillo":{"n":6,"w":70,"h":95,"ax":27,"ay":94},"recoger":{"n":6,"w":57,"h":82,"ax":19,"ay":80}}; // ALD_META
+const ALD_META = {"caminar":{"n":12,"w":48,"h":85,"ax":23,"ay":82},"cargar":{"n":8,"w":48,"h":87,"ax":27,"ay":84},"hacha":{"n":6,"w":67,"h":122,"ax":27,"ay":120},"martillo":{"n":6,"w":70,"h":95,"ax":27,"ay":94},"recoger":{"n":6,"w":57,"h":82,"ax":19,"ay":80},"pico":{"n":6,"w":65,"h":105,"ax":25,"ay":104},"dormir":{"n":6,"w":62,"h":69,"ax":32,"ay":67},"sentado":{"n":6,"w":51,"h":71,"ax":16,"ay":70},"estirarse":{"n":6,"w":42,"h":94,"ax":23,"ay":93},"platicar":{"n":6,"w":41,"h":83,"ax":15,"ay":82}}; // ALD_META
 const ALD_K = 0.5;                                              // px en pantalla por px del archivo (de pie ≈ 40 px)
 const ALD_PASO = 46;                                            // px recorridos por ciclo completo de caminar
 const ALDS = {};                                                // 'anim_tinta' -> tira (imagen o canvas reducido en la tele)
@@ -754,7 +756,14 @@ const GOLPE = f => f < .2 ? 0 : f < .45 ? 1 : f < .68 ? 2 : f < .82 ? 3 : f < .9
 function aldPose(a) {
   if (a.anda) { const an = a.carga ? 'cargar' : 'caminar', n = ALD_META[an].n; return [an, Math.floor(a.paso / 0.34 / ALD_PASO * n) % n]; }
   if (a.est === 'desc') return ['recoger', Math.max(0, Math.min(5, Math.floor(a.t / 0.7 * 6)))];       // baja la carga
-  if (a.ocio && a.ocio.k === 'sentado' && (a.est === 'ocio' || a.est === 'quieto')) return ['recoger', 1];   // en cuclillas junto a una caja
+  const oc = a.ocio;
+  if (oc && (a.est === 'ocio' || a.est === 'quieto')) {          // poses de ocio, cada una a su ritmo y desde su propio inicio
+    const e = RELOJ - oc.t0;
+    if (oc.k === 'sentado') { const c = e % 4.5, f = Math.min(10, Math.floor(c / 0.25)); return ['sentado', c > 2.5 ? 0 : f <= 5 ? f : 10 - f]; }   // 0→5→0 y pausa
+    if (oc.k === 'charla') return ['platicar', Math.floor(e / 0.2) % 6];
+    if (oc.k === 'dormir') return ['dormir', Math.floor(e / 0.5) % 6];
+    if (oc.k === 'estira') return ['estirarse', Math.min(5, Math.floor(e / 0.2))];
+  }
   if (a.est !== 'trab') return ['caminar', 0];
   const f = a.fase % 1;
   if (a.herr === 'mano') return ['recoger', Math.round((1 - Math.cos(f * TAU)) / 2 * 5)];
@@ -772,9 +781,9 @@ function dibAld(a) {
   c.restore();
   const oc = a.ocio;                                             // burbuja: «…» al platicar, «z» si descansa un buen rato
   if (oc && (a.est === 'ocio' || a.est === 'quieto') && cam.z > 0.8 * ZB) {
-    const ph = (RELOJ + a.fase * 9) % 3.4, txt = oc.k === 'charla' && ph < 1.8 ? '…' : oc.k === 'sentado' && ph < 1.2 ? 'z' : '';
+    const ph = (RELOJ + a.fase * 9) % 3.4, txt = oc.k === 'charla' && ph < 1.8 ? '…' : oc.k === 'dormir' && ph < 2.2 ? 'z' : '';
     if (txt) {
-      const bx = a.x + a.dir * 8, by = a.y - (oc.k === 'sentado' ? 38 : 50);
+      const sube = oc.k === 'dormir' ? ph * 7 : 0, bx = a.x + a.dir * (oc.k === 'dormir' ? 14 + sube * .4 : 8), by = a.y - (oc.k === 'dormir' ? 30 + sube : 50);   // la «z» sube
       c.fillStyle = 'rgba(255,250,235,.92)'; c.strokeStyle = 'rgba(40,25,10,.7)'; c.lineWidth = 1;
       c.beginPath(); c.ellipse(bx, by, 9, 6.5, 0, 0, TAU); c.fill(); c.stroke();
       c.fillStyle = '#3a2410'; c.font = 'bold 10px Georgia'; c.textAlign = 'center'; c.fillText(txt, bx, by + 3.5);

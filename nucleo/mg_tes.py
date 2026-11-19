@@ -3473,3 +3473,120 @@ def red(titulo, personas, nexos, pasos, ancho=1760, alto=950, D=128, zoom=1.35, 
     fn.avisos = avisos
     fn.geo, fn.huella = geo, huella
     return fn
+
+
+# ------------------------------------------------------------------ armaduras (tes_armaduras_poderosas, 18-nov-2026)
+def tope(titulo, filas, tope_=567, maximo=900, remate=None, ancho=1600):
+    """Tope de armadura de Skyrim: barras horizontales de valor de armadura (0..maximo) con una línea vertical en `tope_`
+    («TOPE · 80 %»). filas = [(nombre, valor, texto_derecha)], una por marca. Lo que pasa del tope se pinta en rojo rayado
+    («DESPERDICIO») y el texto de la derecha (p. ej. «80 %») se queda en oro. remate = (texto, i_marca)."""
+    n = len(filas)
+    fila_h = 96
+    top = 150
+    h = top + n * fila_h + 70 + (90 if remate else 0)
+    _d = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    _lab = max(_ancho_track(_d, f[0].upper(), fuente("SemiBold Condensed", 36), 2) for f in filas)
+    x0r, x1r = max(330, int(_lab) + 90), ancho - 230   # tramo de las barras: mide la etiqueta más larga
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ms = [m for m in marcas if m is not None] or [0.0]
+        mk = ms + [ms[-1]] * (n + 2)
+        X = lambda v: M + x0r + (x1r - x0r) * min(v, maximo) / maximo
+        xt = X(tope_)
+        a0 = 255 * _eo(dt / .4)
+        for yy in range(int(M + top - 20), int(M + top + n * fila_h), 14):     # línea del tope, punteada
+            d.line([(xt, yy), (xt, yy + 7)], fill=ORO + (int(a0),), width=4)
+        _texto(d, (xt, M + top - 34), f"TOPE {tope_} · 80 %", fuente("SemiBold Condensed", 34), ORO, "mm", a0, track=3)
+        for i, (nom, val, der) in enumerate(filas):
+            t0 = mk[i]
+            if dt < t0:
+                continue
+            u = _eo((dt - t0) / 1.1)
+            y = M + top + i * fila_h + 18
+            al = 255 * _eo((dt - t0) / .3)
+            _texto(d, (M + x0r - 24, y + 24), nom.upper(), fuente("SemiBold Condensed", 36), HUESO, "rm", al, track=2)
+            d.rounded_rectangle([M + x0r, y, M + x1r, y + 48], 8, outline=HUESO + (int(al * .45),), width=2)
+            v = val * u
+            xb = X(v)
+            d.rounded_rectangle([M + x0r + 3, y + 3, min(xb, xt), y + 45], 6, fill=HUESO + (int(al * .9),))
+            if xb > xt:                                  # lo que sobra: rojo rayado
+                d.rectangle([xt, y + 3, xb, y + 45], fill=SANGRE + (int(al * .85),))
+                for xx in range(int(xt), int(xb), 18):
+                    d.line([(xx, y + 45), (min(xx + 18, xb), y + 3)], fill=(20, 8, 8, int(al * .6)), width=5)
+                if u > .95 and xb - xt > 200:
+                    _texto(d, ((xt + xb) / 2, y + 24), "DESPERDICIO", fuente("Bold Condensed", 30), BLANCO, "mm",
+                           255 * _eo((dt - t0 - 1.0) / .3), track=3)
+            _texto(d, (M + x1r + 20, y + 24), f"{v:,.0f}".replace(",", "."), fuente("Bold Condensed", 44),
+                   SANGRE if val > tope_ and u > .95 else ORO, "lm", al)
+            if der and u > .95:
+                _texto(d, (M + x1r + 130, y + 24), der.upper(), fuente("SemiBold Condensed", 32), HUESO, "lm",
+                       255 * _eo((dt - t0 - 1.0) / .3), track=2)
+        _remate(d, M, ancho, h, remate, dt, mk)
+        return _salida(im, dt)
+    return fn
+
+
+def conjunto(titulo, piezas, bonus=None, ancho=1500):
+    """Conjunto pieza a pieza: silueta de guerrero en el centro y una casilla por pieza a los lados, unida con un hilo a su
+    sitio del cuerpo. piezas = [(ranura, nombre, ruta_imagen|None)], ranuras: casco, coraza, guanteletes, botas, escudo, anillo,
+    amuleto; una pieza se enciende por marca (icono real + nombre). bonus = (texto, i_marca) en oro bajo la silueta (bonus de
+    conjunto) cuando llega su marca."""
+    h = 900
+    cx = ancho / 2
+    PUNTO = {"casco": (0, -300), "amuleto": (0, -205), "coraza": (0, -110), "guanteletes": (-150, -30), "anillo": (150, -30),
+             "botas": (-45, 270), "escudo": (165, 40)}
+    izq = [p for p in piezas if p[0] in ("casco", "guanteletes", "botas")]
+    der = [p for p in piezas if p not in izq]
+    W, H = 300, 150
+
+    def caja(lado, j, nlado):
+        paso = (h - 260) / max(1, nlado)
+        y = 170 + paso * j + (paso - H) / 2
+        x = 70 if lado == 0 else ancho - 70 - W
+        return x, y
+
+    def fn(dt, dur, marcas):
+        im, M = _humo(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        ms = [m for m in marcas if m is not None] or [0.0]
+        mk = ms + [ms[-1]] * (len(piezas) + 2)
+        oy = M + 500
+        a0 = int(150 * _eo(dt / .4))
+        X = lambda dx: M + cx + dx
+        d.ellipse([X(-48), oy - 360, X(48), oy - 255], outline=HUESO + (a0,), width=5)           # cabeza
+        d.polygon([(X(-120), oy - 240), (X(120), oy - 240), (X(90), oy + 40), (X(-90), oy + 40)], outline=HUESO + (a0,), width=5)
+        d.line([(X(-120), oy - 235), (X(-175), oy + 10)], fill=HUESO + (a0,), width=5)
+        d.line([(X(120), oy - 235), (X(175), oy + 10)], fill=HUESO + (a0,), width=5)
+        d.line([(X(-60), oy + 40), (X(-60), oy + 300)], fill=HUESO + (a0,), width=6)
+        d.line([(X(60), oy + 40), (X(60), oy + 300)], fill=HUESO + (a0,), width=6)
+        for i, (ran, nom, ruta) in enumerate(piezas):
+            t0 = mk[i]
+            lado, lista = (0, izq) if (ran, nom, ruta) in izq else (1, der)
+            x, y = caja(lado, lista.index((ran, nom, ruta)), len(lista))
+            x, y = M + x, M + y
+            on = dt >= t0
+            al = 255 * (_eo((dt - t0) / .35) if on else .35)
+            d.rounded_rectangle([x, y, x + W, y + H], 14, outline=(ORO if on else HUESO) + (int(al),), width=3)
+            px, py = PUNTO.get(ran, (0, 0))
+            px, py = X(px), oy + py
+            ex = x + W if lado == 0 else x
+            if on:
+                u = _eo((dt - t0) / .5)
+                d.line([(ex, y + H / 2), (ex + (px - ex) * u, y + H / 2 + (py - y - H / 2) * u)], fill=ORO + (int(al),), width=3)
+                if u > .98:
+                    d.ellipse([px - 12, py - 12, px + 12, py + 12], fill=ORO + (255,))
+                if ruta and os.path.exists(ruta):
+                    ic = _icono(ruta, 120, 120)
+                    _pega(im, ic, int(x + 14), int(y + 15), _eo((dt - t0) / .35))
+                    _texto(d, (x + 150, y + H / 2), nom.upper(), fuente("SemiBold Condensed", 30), HUESO, "lm", al, track=1)
+                else:
+                    _texto(d, (x + W / 2, y + H / 2), nom.upper(), fuente("SemiBold Condensed", 32), HUESO, "mm", al, track=1)
+            else:
+                _texto(d, (x + W / 2, y + H / 2), ran.upper(), fuente("SemiBold Condensed", 30), GRIS, "mm", al, track=3)
+        if bonus and dt >= mk[bonus[1]]:
+            s = _pop(dt - mk[bonus[1]], .35)
+            _texto(d, (M + cx, M + h - 46), bonus[0].upper(), fuente("Bold Condensed", max(8, int(46 * s))), ORO, "mm", track=3)
+        return _salida(im, dt)
+    return fn

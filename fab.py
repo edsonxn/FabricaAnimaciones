@@ -325,6 +325,8 @@ def main():
         env = dict(os.environ, PYTHONIOENCODING="utf-8")
         sys.exit(subprocess.run([sys.executable, os.path.join(NUCLEO, "limpiar_publicados.py"), *a[1:]], cwd=RAIZ, env=env).returncode)
     if a[0] == "nuevo":
+        if len(a) < 2 or a[1].startswith("-"):   # 18-nov-2026: `nuevo --help` creaba videos/--help
+            sys.exit("Uso: python fab.py nuevo <video> [--secuencia | --yt]")
         destino = os.path.join(VIDEOS, a[1])
         if os.path.exists(destino):
             sys.exit(f"Ya existe {destino}")

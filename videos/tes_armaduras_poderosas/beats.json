@@ -1,0 +1,1562 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.892,
+  "tipo": "video",
+  "texto": "Una máscara que, cuando estás a punto de morir, invoca a un sacerdote dragón para que pelee por ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.892,
+  "t1": 17.926,
+  "tipo": "video",
+  "texto": "Una coraza que solo te dan si sacrificas a tu propio seguidor en un altar. Y un casco que escupe vapor y manda a volar a tus enemigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.926,
+  "t1": 27.028,
+  "tipo": "video",
+  "texto": "Un pirata que enterró su armadura en cuatro cofres por toda una isla. Y una túnica que hace brotar tentáculos del suelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.028,
+  "t1": 34.908,
+  "tipo": "video",
+  "texto": "Hoy, las veinte armaduras más poderosas de Escairim. Cascos, escudos, túnicas y conjuntos enteros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.908,
+  "t1": 39.759,
+  "tipo": "video",
+  "texto": "Con sus cifras, dónde se consiguen y la trampa de cada una.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 39.759,
+  "t1": 50.43,
+  "tipo": "video",
+  "texto": "Y quédate hasta el final, porque te voy a enseñar por qué una armadura de hierro puede protegerte exactamente igual que la mejor del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 50.43,
+  "t1": 60.019,
+  "tipo": "video",
+  "texto": "Número veinte. El Semblante de Mzund. Un casco dwemer de Drágon-born. Veinticuatro de armadura, doce de peso y",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.019,
+  "t1": 69.22,
+  "tipo": "video",
+  "texto": "más sesenta de aguante, que ya es casi lo máximo que da un encantamiento. Pero lo importante es su poder: el Aliento de Nchuak.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.22,
+  "t1": 74.973,
+  "tipo": "video",
+  "texto": "Una ráfaga de vapor abrasador que quita quince puntos de vida por segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 74.973,
+  "t1": 84.175,
+  "tipo": "video",
+  "texto": "Y a veces, los enemigos que mata el vapor salen volando por los aires. Como en una tetera. Una tetera con cuernos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.175,
+  "t1": 96.752,
+  "tipo": "video",
+  "texto": "Está en el Gran Salón de Fahlbtharz, en Sólsteim. Primero el puzle de la caldera. Luego llenas tres accionadores con núcleos dinamo, y despiertan dos centuriones guardianes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 96.752,
+  "t1": 101.892,
+  "tipo": "video",
+  "texto": "Tras la reja, el casco. Y una palanca que te sube directo a la nieve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 101.892,
+  "t1": 110.43,
+  "tipo": "video",
+  "texto": "Los dwemer: desaparecieron hace miles de años, pero el ascensor funciona mejor que los de mi edificio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.43,
+  "t1": 120.56,
+  "tipo": "video",
+  "texto": "Número diecinueve. La Máscara de Clavicus Vile. Veintitrés de armadura y solo siete de peso. Precios un veinte por ciento mejores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.56,
+  "t1": 129.03,
+  "tipo": "video",
+  "texto": "más persuasión y la magia regenerándose más rápido. Para tenerla, la misión El mejor amigo de un daedra,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.03,
+  "t1": 137.209,
+  "tipo": "video",
+  "texto": "desde el nivel diez. En Fálkriz te mandan a buscar a un perro. El perro habla. Se llama Barbas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.209,
+  "t1": 144.889,
+  "tipo": "video",
+  "texto": "Barbas te lleva a Vergüenza de Jáemar, el santuario de Clávicus Vail. El príncipe quiere el Hacha pesarosa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 144.889,
+  "t1": 152.884,
+  "tipo": "video",
+  "texto": "Y al final te da a elegir: la máscara, o matar al perro y quedarte el hacha. Las dos cosas no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 152.884,
+  "t1": 164.096,
+  "tipo": "video",
+  "texto": "Es un daedra del trato, no una tienda de descuentos. Y una trampa visual: si te la pones con la Cota de ébano, a tu personaje le puede desaparecer la cabeza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 164.096,
+  "t1": 170.233,
+  "tipo": "video",
+  "texto": "Precios mejores, eso sí. Sin cabeza, pero con descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.233,
+  "t1": 180.862,
+  "tipo": "video",
+  "texto": "Número dieciocho. El Escudo de Ísgramor. Treinta de armadura. Un veinte por ciento de resistencia a la magia y más veinte de salud.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.862,
+  "t1": 185.782,
+  "tipo": "video",
+  "texto": "Llega al final de los Compañeros, en La gloria de los muertos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 185.782,
+  "t1": 198.005,
+  "tipo": "video",
+  "texto": "Éorlund Melena Gris repara el hacha Úuzrad en la Forja del Cielo, y la llevas hasta la Tumba de Ísgramor. El escudo está en el cofre del jefe, cerca del final de la tumba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.005,
+  "t1": 206.213,
+  "tipo": "video",
+  "texto": "Y ojo: si entras antes de tiempo con algún truco, el cofre estará vacío. Solo aparece durante la misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.213,
+  "t1": 215.43,
+  "tipo": "video",
+  "texto": "Y en primera persona, al bloquear, tapa más de un tercio de la pantalla. Te protege de los hechizos. Y de ver lo que te ataca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.43,
+  "t1": 221.71,
+  "tipo": "video",
+  "texto": "Un momento, que hay correo. @frankortiz7101, con nueve likes:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 221.71,
+  "t1": 229.012,
+  "tipo": "video",
+  "texto": "«Abusas mucho con las voces de IA, algunas me dan hasta grima, es mejor como estaba antes».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 229.012,
+  "t1": 240.326,
+  "tipo": "video",
+  "texto": "Y Lagartija Vaquera: «Qué molesto cómo cambia la voz constantemente, no consigo relajarme». Mensaje recibido. Hoy la voz no cambia ni una vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.326,
+  "t1": 248.418,
+  "tipo": "video",
+  "texto": "Una sola, de principio a fin. La mala noticia es que es la mía. Relájate, Lagartija.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 248.418,
+  "t1": 256.73,
+  "tipo": "video",
+  "texto": "Ponte una de estas armaduras. Así, por lo menos, algo te protege de mí. Número diecisiete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 256.73,
+  "t1": 265.081,
+  "tipo": "video",
+  "texto": "La Piel del salvador. Una coraza ligera de Írsin. Veintiséis de armadura y solo seis de peso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.081,
+  "t1": 275.233,
+  "tipo": "video",
+  "texto": "Quince por ciento de resistencia a la magia y la mitad de daño del veneno. La misión es Emboscada nocturna, desde el nivel uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.233,
+  "t1": 283.073,
+  "tipo": "video",
+  "texto": "En la cárcel de Fálkriz conoces a Síndin, que se convirtió en lobo y mató a una niña. Cazas al Ciervo blanco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.073,
+  "t1": 291.601,
+  "tipo": "video",
+  "texto": "y Írsin te da su reto. En la Gruta del Hombre Hinchado decides: si matas y desuellas a Síndin, la Piel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.601,
+  "t1": 301.537,
+  "tipo": "video",
+  "texto": "Si lo perdonas, el Anillo de Írsin. Y sí: la Piel del salvador es, literalmente, la piel de un hombre lobo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.537,
+  "t1": 309.158,
+  "tipo": "video",
+  "texto": "Moda sostenible, versión Escairim. Y el truco: perdona a Síndin, mata a los cazadores con él,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.158,
+  "t1": 315.948,
+  "tipo": "video",
+  "texto": "termina la misión y recibe el anillo. Después, mátalo. Írsin te da también la Piel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 315.948,
+  "t1": 324.894,
+  "tipo": "video",
+  "texto": "Un dios de la caza que no lleva la cuenta. Número dieciséis. La Armadura real de vampiro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 324.894,
+  "t1": 335.447,
+  "tipo": "video",
+  "texto": "Treinta de armadura, nueve de peso, y un solo encantamiento que lo dice todo: la magia se regenera un ciento veinticinco por ciento más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.447,
+  "t1": 341.947,
+  "tipo": "video",
+  "texto": "Está en el Castillo Vólkijar, en las Ruinas de Vólkijar, durante Persiguiendo ecos con Serana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 341.947,
+  "t1": 351.148,
+  "tipo": "video",
+  "texto": "En la sala de los ataúdes, sobre un armario, junto a una espada de plata. Y esa sala es la única fuente que reaparece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.148,
+  "t1": 360.148,
+  "tipo": "video",
+  "texto": "Si se te pierde, vuelves y está otra vez ahí. Hay una versión todavía más elegante, la del Señor vampiro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.148,
+  "t1": 367.93,
+  "tipo": "video",
+  "texto": "Esa no te la puedes poner. Es para los que mandan. Tú solo eres el invitado que recoge cosas de los armarios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.93,
+  "t1": 376.235,
+  "tipo": "video",
+  "texto": "Número quince. El Escudo de Áuriel. Treinta y dos de armadura. Y no tiene un encantamiento normal:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 376.235,
+  "t1": 385.924,
+  "tipo": "video",
+  "texto": "guarda la energía de cada golpe que bloqueas. A los cinco bloqueos empieza a brillar. A los quince está cargado del todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 385.924,
+  "t1": 393.292,
+  "tipo": "video",
+  "texto": "Y un golpe con escudo potente suelta una onda que se parece al grito Fuerza implacable.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.292,
+  "t1": 401.812,
+  "tipo": "video",
+  "texto": "Se consigue en el Valle Olvidado de Don-gard. Le quitas el Modelo de perfección de rubí a un gigante de escarcha, abres el portal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 401.812,
+  "t1": 408.888,
+  "tipo": "video",
+  "texto": "y en el bosque un Belígero falmer pelea contra los trols. Él lleva el escudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 408.888,
+  "t1": 420.43,
+  "tipo": "video",
+  "texto": "Y la trampa: si usas la onda cargada en una pelea a puñetazos, cuenta como agresión. Te ponen recompensa. Por pegar demasiado bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.43,
+  "t1": 427.99,
+  "tipo": "video",
+  "texto": "Número catorce. Las reliquias de Azídal. Siete piezas de un antiguo sacerdote dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 427.99,
+  "t1": 438.33,
+  "tipo": "video",
+  "texto": "La armadura de castigo: un cinco por ciento de dejar paralizado siete segundos a quien te golpee. Las botas: caminar sobre el agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.33,
+  "t1": 447.31,
+  "tipo": "video",
+  "texto": "Los guanteletes: absorben la mitad de la magia de los hechizos. Y la máscara de Azídal: más daño de fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.31,
+  "t1": 454.86,
+  "tipo": "video",
+  "texto": "Con cuatro reliquias puestas, el Genio de Azídal: más diez a Encantamiento. Solo con cuatro, eh.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 454.86,
+  "t1": 464.601,
+  "tipo": "video",
+  "texto": "Con cinco se apaga. Un genio con problemas de matemáticas. La misión es Desenterrado, en el Túmulo de Kólbiorn.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.601,
+  "t1": 472.021,
+  "tipo": "video",
+  "texto": "Financias la excavación de Rális Sedáris en cuatro pagos: mil, dos mil, tres mil y cinco mil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.021,
+  "t1": 480.221,
+  "tipo": "video",
+  "texto": "Once mil de oro en total. Y al final, el propio Azídal sale a pelear. Le pagas once mil a un arqueólogo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.221,
+  "t1": 488.721,
+  "tipo": "video",
+  "texto": "para que te desentierre al dueño enfadado. Inversión segura. Ah, y con las botas, el salto sobre el agua es más alto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 488.721,
+  "t1": 497.724,
+  "tipo": "video",
+  "texto": "y puedes coger peces con la mano. Antes del top trece, los comentarios de esta semana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.724,
+  "t1": 507.497,
+  "tipo": "video",
+  "texto": "@zaarondarklord6196: «Qué maravilla de narración y datos, por primera vez en años aprendí algo nuevo en Escairim».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.497,
+  "t1": 515.547,
+  "tipo": "video",
+  "texto": "@Reyes3019, que encontró el canal por casualidad, se enganchó desde el primer minuto y se acaba de suscribir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 515.547,
+  "t1": 525.007,
+  "tipo": "video",
+  "texto": "Te damos la bienvenida. Y @Ivan-g9l2n: «Con este video ya sé qué hacer en mi siguiente partida».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.007,
+  "t1": 533.204,
+  "tipo": "video",
+  "texto": "Ahora ya sabes qué ponerte. @RelatorNoctambulo, con diez likes, nos dejó su build antimagia:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.204,
+  "t1": 540.064,
+  "tipo": "video",
+  "texto": "bretón, piedra del Señor, piel de dragón, y armadura pesada con resistencias. Buen gusto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.064,
+  "t1": 550.471,
+  "tipo": "video",
+  "texto": "Hoy le toca a esa armadura. Y @CarlosLopez-x9j dice que el profeta tiene mucha aura y que por eso tiene su voto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.471,
+  "t1": 559.755,
+  "tipo": "video",
+  "texto": "Lo sé. Pero gracias por decirlo en voz alta. Número trece. La Armadura de maestre del gremio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.755,
+  "t1": 566.265,
+  "tipo": "video",
+  "texto": "Cuatro piezas de cuero, setenta y seis de armadura y diecisiete de peso. Y cada pieza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 566.265,
+  "t1": 574.574,
+  "tipo": "video",
+  "texto": "un encantamiento de ladrón. La armadura: más cincuenta de capacidad de carga. Botas: carterista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 574.574,
+  "t1": 581.218,
+  "tipo": "video",
+  "texto": "Guantes: ganzúas. Y la capucha: precios un veinte por ciento mejores.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 581.218,
+  "t1": 590.351,
+  "tipo": "video",
+  "texto": "Te la entrega Tonília en Una nueva dirección, cuando te nombran maestre del Gremio de Ladrones, en la Ratonera bajo Ríften.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 590.351,
+  "t1": 601.708,
+  "tipo": "video",
+  "texto": "Más carga, mejores precios, ganzúa y carterista. Es la única armadura del juego diseñada para el trabajo de oficina. Si tu oficina es la casa de otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 601.708,
+  "t1": 608.168,
+  "tipo": "video",
+  "texto": "Mercer Frey llevaba una versión con más armadura, pero sin encantar. Y no te la puedes poner.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 608.168,
+  "t1": 617.179,
+  "tipo": "video",
+  "texto": "Mercer siempre se quedaba con la mejor parte. Número doce. La Armadura etérea antigua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.179,
+  "t1": 627.425,
+  "tipo": "video",
+  "texto": "La de la Hermandad Oscura, pero la buena. Setenta y dos de armadura y apenas siete y medio de peso: el conjunto más ligero de esta lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 627.425,
+  "t1": 635.645,
+  "tipo": "video",
+  "texto": "Inmunidad total al veneno. Botas silenciosas. La capucha, un treinta y cinco por ciento más de daño con arco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.645,
+  "t1": 644.278,
+  "tipo": "video",
+  "texto": "Y los guantes, doble daño en ataques furtivos con armas de una mano. Para encontrarla, Gabriella te da la Ficha de Olava.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.278,
+  "t1": 651.708,
+  "tipo": "video",
+  "texto": "Olava la Débil te lee el futuro en Carrera Blanca. Y entonces, detrás del trono de Punta de la Arpía,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 651.708,
+  "t1": 660.07,
+  "tipo": "video",
+  "texto": "aparece una palanca que antes no existía. Una palanca que solo existe cuando una adivina dice que existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 660.07,
+  "t1": 669.39,
+  "tipo": "video",
+  "texto": "En Escairim, hasta la arquitectura se cree el horóscopo. Otro correo. @stratosincaster4500,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 669.39,
+  "t1": 679.742,
+  "tipo": "video",
+  "texto": "sobre las builds: «Tres treinta y tres: “Y nadie te pone recompensa”, cuando aparece un mensaje que dice mil de recompensa en La Grieta».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 679.742,
+  "t1": 689.59,
+  "tipo": "video",
+  "texto": "Tienes toda la razón, el veneno no es crimen. Lo que de verdad es crimen es que te vean con la mano metida en el bolsillo del guardia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 689.59,
+  "t1": 695.93,
+  "tipo": "video",
+  "texto": "El del clip no era yo. Era un aficionado. Los profesionales llevan la armadura de maestre del gremio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 695.93,
+  "t1": 704.207,
+  "tipo": "video",
+  "texto": "Con carterista al treinta y cinco por ciento. Número once. El Anulador de hechizos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 704.207,
+  "t1": 713.217,
+  "tipo": "video",
+  "texto": "El escudo de Périait. Treinta y ocho de armadura. Y al bloquear crea una custodia que absorbe hasta cincuenta puntos de daño mágico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.217,
+  "t1": 720.97,
+  "tipo": "video",
+  "texto": "Sin gemas de alma, sin gastar magia. La misión es La única cura, desde el nivel doce.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.97,
+  "t1": 729.57,
+  "tipo": "video",
+  "texto": "En la Capilla de Périait, Kesh el Aseado te pide ingredientes para el incienso. Périait te manda a la ruina dwemer de Btárdamz,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 729.57,
+  "t1": 737.976,
+  "tipo": "video",
+  "texto": "a matar a Órkendor. Y un detalle que casi nadie ve: la custodia es cóncava. Sigue la forma del escudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 737.976,
+  "t1": 745.146,
+  "tipo": "video",
+  "texto": "Todas las demás son al revés. Contra un mago muy fuerte, la custodia se rompe y te tambalea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 745.146,
+  "t1": 752.93,
+  "tipo": "video",
+  "texto": "Pero contra el aliento de un dragón, levantas el escudo y el dragón se queda pensando qué hizo mal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 752.93,
+  "t1": 763.72,
+  "tipo": "video",
+  "texto": "Antes del top diez, dos menciones de honor que se quedaron fuera por muy poco. La Corona dentada. Veintitrés de armadura, sin encantamiento,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.72,
+  "t1": 772.74,
+  "tipo": "video",
+  "texto": "y no se puede templar. Pero ocupa la ranura del pelo, así que la puedes llevar a la vez que una máscara de sacerdote dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.74,
+  "t1": 780.41,
+  "tipo": "video",
+  "texto": "Dos cascos en una cabeza. Y la armadura falmer pesada, con el casco de cascarudo de Don-gard:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 780.41,
+  "t1": 789.53,
+  "tipo": "video",
+  "texto": "noventa y siete de armadura por cincuenta y tres de peso. Mejor que la de ébano en las dos cosas. Hecha con caparazones de bicho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.53,
+  "t1": 799.451,
+  "tipo": "video",
+  "texto": "La mejor armadura de ébano, superada por un insecto. Número diez. La Túnica de archimago.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.451,
+  "t1": 804.571,
+  "tipo": "video",
+  "texto": "No tiene armadura. Pesa uno. Y aun así está en esta lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 804.571,
+  "t1": 814.592,
+  "tipo": "video",
+  "texto": "Todos los hechizos de cinco escuelas cuestan un quince por ciento menos, más cincuenta de magia, y la magia se regenera el doble de rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 814.592,
+  "t1": 824.85,
+  "tipo": "video",
+  "texto": "Es tu premio al terminar El Ojo de Magnus en el Colegio de Hibernalia. Derrotas a Ancáno en la Sala de los Elementos y te nombran archimago.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 824.85,
+  "t1": 833.87,
+  "tipo": "video",
+  "texto": "Y un fallo que vale oro: la túnica no ocupa la ranura de la diadema. Así que puedes llevarla con una máscara de sacerdote dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 833.87,
+  "t1": 841.221,
+  "tipo": "video",
+  "texto": "Con Morokéi, otro cien por ciento de regeneración. A veces el juego te da dos o tres túnicas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 841.221,
+  "t1": 850.392,
+  "tipo": "video",
+  "texto": "por si acaso. Y hay un héroe en Sóvengard que lleva una copia. No se la puedes robar. Lo intenté.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.392,
+  "t1": 858.793,
+  "tipo": "video",
+  "texto": "Número nueve. La Armadura de Ruiseñor. Cuero negro y morado, capa y una capucha que te tapa la cara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.793,
+  "t1": 866.419,
+  "tipo": "video",
+  "texto": "Sesenta y nueve de armadura, dieciocho de peso, y más veinticinco de armadura con las cuatro piezas puestas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 866.419,
+  "t1": 877.145,
+  "tipo": "video",
+  "texto": "Aguante y resistencia a la escarcha, botas silenciosas, ganzúa y más daño a una mano en los guantes, e Ilusión más barata en la capucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 877.145,
+  "t1": 885.185,
+  "tipo": "video",
+  "texto": "La recibes en La vuelta del triunvirato, con Kárlia y Brynjolf, en el Salón de los Ruiseñores, al sur de Ríften.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 885.185,
+  "t1": 892.274,
+  "tipo": "video",
+  "texto": "Te la pones, y le juras lealtad a Nocturnal. Y aquí está la trampa que arruina miles de partidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 892.274,
+  "t1": 901.184,
+  "tipo": "video",
+  "texto": "La versión de la armadura se fija con tu nivel al EMPEZAR la misión. No al recibirla. Si la empiezas antes del nivel treinta y dos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 901.184,
+  "t1": 910.367,
+  "tipo": "video",
+  "texto": "te quedas con la versión débil para siempre. Nocturnal, diosa de la suerte. La tuya, no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 910.367,
+  "t1": 917.459,
+  "tipo": "video",
+  "texto": "Número ocho. Konájrik. La máscara del Señor de la guerra. Veinticuatro de armadura:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 917.459,
+  "t1": 927.339,
+  "tipo": "video",
+  "texto": "el casco con más armadura base de todo el juego original. Y su encantamiento solo despierta cuando tu salud baja del quince por ciento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 927.339,
+  "t1": 935.619,
+  "tipo": "video",
+  "texto": "Con un quince por ciento de probabilidad: una explosión que empuja todo, una capa de llamas y una gran curación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 935.619,
+  "t1": 944.702,
+  "tipo": "video",
+  "texto": "Y con un tres por ciento, además, aparece un sacerdote dragón espectral que pelea a tu lado durante sesenta segundos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 944.702,
+  "t1": 953.712,
+  "tipo": "video",
+  "texto": "Para tenerla, reúnes las ocho máscaras de los sacerdotes dragón. En Laberintia te pones la Máscara de madera, viajas al pasado,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 953.712,
+  "t1": 960.513,
+  "tipo": "video",
+  "texto": "al Santuario de Bromyúnar, y colocas las ocho en sus bustos. Ahora las malas noticias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 960.513,
+  "t1": 971.873,
+  "tipo": "video",
+  "texto": "La máscara de Nákrin solo se consigue en Skúldafn, durante la misión principal. Si no la recoges, no hay segunda oportunidad. Konájrik, imposible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 971.873,
+  "t1": 979.636,
+  "tipo": "video",
+  "texto": "Y colocarlas en los bustos borra el templado que les hayas hecho. Todo el trabajo de herrería, a la basura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 979.636,
+  "t1": 987.416,
+  "tipo": "video",
+  "texto": "Y si vendes cualquiera de las ocho a un mercader, también. Un dios de la guerra que depende de que no vendas tus cosas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 987.416,
+  "t1": 996.463,
+  "tipo": "video",
+  "texto": "Como un coleccionista. Con fuego. Y un dato de los creadores: el Santuario de Bromyúnar iba a ser una casa para el jugador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 996.463,
+  "t1": 1003.81,
+  "tipo": "video",
+  "texto": "No llegó a tiempo. Te quedaste con una sala de bustos y una máscara de madera. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1003.81,
+  "t1": 1012.643,
+  "tipo": "video",
+  "texto": "El equipo de Mirák. La túnica absorbe el quince por ciento de la magia de los hechizos y del aliento de los dragones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1012.643,
+  "t1": 1019.081,
+  "tipo": "video",
+  "texto": "Las botas y los guantes, un cinco cada uno. Un veinticinco por ciento en total.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1019.081,
+  "t1": 1030.268,
+  "tipo": "video",
+  "texto": "Y cuando te golpean, a veces brotan del suelo los tentáculos de Apócrifa. Te rodean y explotan: cien de daño de veneno a todo lo que esté cerca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1030.268,
+  "t1": 1040.391,
+  "tipo": "video",
+  "texto": "Su máscara es nivelada. A nivel sesenta llega a veintisiete de armadura: el casco más protector del juego, ligero o pesado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1040.391,
+  "t1": 1044.931,
+  "tipo": "video",
+  "texto": "Lo consigues matando a Mirák en En la cima de Apócrifa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1044.931,
+  "t1": 1056.564,
+  "tipo": "video",
+  "texto": "Lees los libros negros, cruzas los capítulos, doblegas a Sajrotár y subes a la cima. Y con la túnica, la piedra del Atronach y la ventaja Atronach,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1056.564,
+  "t1": 1063.654,
+  "tipo": "video",
+  "texto": "llegas al cien por ciento de absorción. Inmune a los hechizos. Eso sí, los tentáculos salen igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1063.654,
+  "t1": 1072.183,
+  "tipo": "video",
+  "texto": "Inmune, pero con tentáculos. Número seis. La Armadura de Estigma Mortal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1072.183,
+  "t1": 1081.368,
+  "tipo": "video",
+  "texto": "Ligera, de stáljrim. Setenta y ocho y medio de armadura, trece de peso. Y crece con cada pieza que te pones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1081.368,
+  "t1": 1089.948,
+  "tipo": "video",
+  "texto": "Aguante, carga, y daño con dos armas a la vez. Y el yelmo: respiras bajo el agua y, con las cuatro piezas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1089.948,
+  "t1": 1097.138,
+  "tipo": "video",
+  "texto": "más cien de armadura. Más que toda la armadura del conjunto junto. Desde el nivel treinta y seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1097.138,
+  "t1": 1109.191,
+  "tipo": "video",
+  "texto": "El pirata Jáknir Estigma Mortal mandó enterrar su armadura en cuatro cofres por todo Sólsteim. Y no hay marcadores: hay que leer el mapa del tesoro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1109.191,
+  "t1": 1116.671,
+  "tipo": "video",
+  "texto": "Uno en el Bajío de Jáknir. Otro junto a Tel Mithryn. Otro al suroeste de Roca del Cuervo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1116.671,
+  "t1": 1124.636,
+  "tipo": "video",
+  "texto": "Y el último, en una charca de marea al noroeste. Y el último cofre trae la llave del Túmulo de Guíldenjul,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1124.636,
+  "t1": 1133.989,
+  "tipo": "video",
+  "texto": "en la Isla de los horkers: ochenta montones de oro y el fantasma de Jáknir. Con sus dos cimitarras únicas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1133.989,
+  "t1": 1139.303,
+  "tipo": "video",
+  "texto": "En total, por lo menos seis mil cuatrocientas monedas de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1139.303,
+  "t1": 1148.403,
+  "tipo": "video",
+  "texto": "Dice la leyenda que el primero que abrió un cofre se puso el yelmo y empezó a gritar. Y que aún se le oye en el bajío. Normal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1148.403,
+  "t1": 1158.21,
+  "tipo": "video",
+  "texto": "Yo también grito cuando me pruebo la ropa de un muerto. Número cinco. La Cota de ébano. Una coraza pesada de Boétia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1158.21,
+  "t1": 1167.99,
+  "tipo": "video",
+  "texto": "Cuarenta y cinco de armadura y veintiocho de peso. Es la coraza pesada más ligera del juego. La daédrica protege solo tres puntos más,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1167.99,
+  "t1": 1177.52,
+  "tipo": "video",
+  "texto": "y pesa veintidós más. Te mueves en silencio, y todo enemigo que se acerca recibe cinco de daño de veneno por segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1177.52,
+  "t1": 1183.645,
+  "tipo": "video",
+  "texto": "Tu cuerpo se vuelve una sombra negra con humo verde. Y hasta funciona como radar:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1183.645,
+  "t1": 1191.307,
+  "tipo": "video",
+  "texto": "el humo sale en cuanto alguien se vuelve hostil. El veneno daña incluso a los draugr y a los vampiros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1191.307,
+  "t1": 1201.007,
+  "tipo": "video",
+  "texto": "El precio: La llamada de Boétia, desde el nivel treinta. En el Próstilo de Boétia sacrificas a tu propio seguidor en el altar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1201.007,
+  "t1": 1208.041,
+  "tipo": "video",
+  "texto": "Luego, en la Cresta de Punta del Cuchillo, matas al Campeón de Boétia, que la lleva puesta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1208.041,
+  "t1": 1217.175,
+  "tipo": "video",
+  "texto": "Y en los archivos del juego quedan restos de una segunda misión que se cortó: Boétia te iba a mandar a matar a la yarla Elisif.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1217.175,
+  "t1": 1227.93,
+  "tipo": "video",
+  "texto": "Tu seguidor te cargó la mochila doscientas horas. Y tú lo cambiaste por una coraza. A Boétia le encanta. Y a mí también, para qué mentir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1227.93,
+  "t1": 1235.687,
+  "tipo": "video",
+  "texto": "Antes del top cuatro, un dato. De cada cien que ven este canal, solo trece están suscritos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1235.687,
+  "t1": 1247.93,
+  "tipo": "video",
+  "texto": "Ya somos casi siete mil, y vamos camino de diez mil. Suscribirte es un botón, y cuesta mucho menos que un seguidor sacrificado en un altar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1247.93,
+  "t1": 1253.897,
+  "tipo": "video",
+  "texto": "Número cuatro. La Armadura de stáljrim. Pesada y ligera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1253.897,
+  "t1": 1262.607,
+  "tipo": "video",
+  "texto": "El stáljrim es hielo nórdico encantado. La pesada: ciento dos de armadura, lo mismo que las placas de dragón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1262.607,
+  "t1": 1269.777,
+  "tipo": "video",
+  "texto": "con cinco menos de peso. Es la armadura forjable que más protege por cada unidad de peso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1269.777,
+  "t1": 1280.92,
+  "tipo": "video",
+  "texto": "La ligera: setenta y ocho y medio con solo trece de peso. Y sobre stáljrim, los encantamientos de escarcha son un veinticinco por ciento más fuertes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1280.92,
+  "t1": 1287.38,
+  "tipo": "video",
+  "texto": "Para forjarla necesitas Herrería de ébano y terminar Un nuevo yacimiento de stáljrim:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1287.38,
+  "t1": 1296.779,
+  "tipo": "video",
+  "texto": "Déor Tallador, en la Aldea Skaal, te manda a buscar al herrero Baldor Hierro Forjado. Y se mina con el pico nórdico antiguo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1296.779,
+  "t1": 1305.159,
+  "tipo": "video",
+  "texto": "Y la trampa: si Déor Tallador muere antes de terminar la misión, nunca podrás forjar stáljrim. Ni una pieza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1305.159,
+  "t1": 1314.215,
+  "tipo": "video",
+  "texto": "Para siempre. Toda una isla de hielo mágico, y el futuro de tu armadura depende de un anciano con muy mala salud.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1314.215,
+  "t1": 1322.93,
+  "tipo": "video",
+  "texto": "Y el nombre tiene truco: stál hrím, en islandés, significa escarcha de acero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1322.93,
+  "t1": 1330.219,
+  "tipo": "video",
+  "texto": "Número tres. La Armadura de escamas de dragón. La mejor armadura ligera del juego original.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1330.219,
+  "t1": 1339.123,
+  "tipo": "video",
+  "texto": "Ochenta y dos de armadura y solo veinte de peso. Con escudo, ciento once. Se forja con escamas de dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1339.123,
+  "t1": 1347.577,
+  "tipo": "video",
+  "texto": "Y para eso, la ventaja Armadura de dragón: Herrería cien y todas las ventajas de una rama.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1347.577,
+  "t1": 1355.487,
+  "tipo": "video",
+  "texto": "Con Armadura ligera al máximo y todas las ventajas, sin escudo, llega a trescientos sesenta y dos de armadura en el menú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1355.487,
+  "t1": 1363.79,
+  "tipo": "video",
+  "texto": "Un cincuenta y cinco por ciento menos de daño. Y templada, es la única ligera que llega al tope sin escudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1363.79,
+  "t1": 1374.35,
+  "tipo": "video",
+  "texto": "Y un secreto: puedes forjarla antes de que existan los dragones. En una colina al noreste del Paraje de Rórik hay un santuario de Akatosh con una escama de dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1374.35,
+  "t1": 1382.732,
+  "tipo": "video",
+  "texto": "Y reaparece cada diez días. Akatosh, dios del tiempo, dejándote escamas gratis cada diez días.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1382.732,
+  "t1": 1392.148,
+  "tipo": "video",
+  "texto": "Es la única suscripción de Escairim que no te cobran. Número dos. La Armadura de placas de dragón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1392.148,
+  "t1": 1399.968,
+  "tipo": "video",
+  "texto": "Placas de hueso, y un yelmo con forma de cráneo de dragón. Ciento dos de armadura y sesenta y cuatro de peso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1399.968,
+  "t1": 1407.273,
+  "tipo": "video",
+  "texto": "Con escudo, ciento treinta y seis. Se forja con huesos y escamas de los dragones que matas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1407.273,
+  "t1": 1416.457,
+  "tipo": "video",
+  "texto": "Y el templado, con hueso de dragón para la coraza y el escudo. Con todo al máximo, sin tocar la herrería y con escudo:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1416.457,
+  "t1": 1425.739,
+  "tipo": "video",
+  "texto": "quinientos veinticinco de armadura en el menú. Un setenta y ocho por ciento menos de daño. A dos puntos del máximo del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1425.739,
+  "t1": 1433.129,
+  "tipo": "video",
+  "texto": "Y una vez templada, llega al tope pesando menos que la daédrica. Setenta y nueve contra noventa y seis con escudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1433.129,
+  "t1": 1444.096,
+  "tipo": "video",
+  "texto": "Y sus materiales son más fáciles de juntar. Y con Don-gard hay un hueso de dragón en el laboratorio de Valérica. Para forjar antes de que haya dragones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1444.096,
+  "t1": 1449.136,
+  "tipo": "video",
+  "texto": "Matas al dragón, te pones su cráneo de sombrero, y sales a pedir trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1449.136,
+  "t1": 1456.712,
+  "tipo": "video",
+  "texto": "Así es Escairim. Número uno. La Armadura daédrica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1456.712,
+  "t1": 1468.052,
+  "tipo": "video",
+  "texto": "Negra, con vetas rojas que brillan, y un yelmo con cuernos. Ciento ocho de armadura y ochenta y uno de peso. Con escudo, ciento cuarenta y cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1468.052,
+  "t1": 1475.944,
+  "tipo": "video",
+  "texto": "La armadura pesada más fuerte del juego. Cada pieza lleva un corazón de daedra. Lo sueltan los drémora,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1475.944,
+  "t1": 1486.225,
+  "tipo": "video",
+  "texto": "y hay algunos fijos: uno en Jorrvaskr, otro en las Ruinas de Vólkijar. Necesitas Herrería daédrica: Herrería noventa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1486.225,
+  "t1": 1493.505,
+  "tipo": "video",
+  "texto": "La otra vía es la Fragua del atronach, bajo el Colegio de Hibernalia: una pieza de ébano, un corazón,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1493.505,
+  "t1": 1503.284,
+  "tipo": "video",
+  "texto": "un núcleo dinamo y una gema de alma negra. Hace todas las piezas. Menos las botas sin encantar. Porque sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1503.284,
+  "t1": 1511.144,
+  "tipo": "video",
+  "texto": "Y la razón del número uno. Con Armadura pesada al máximo y todas las ventajas, sin tocar la herrería,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1511.144,
+  "t1": 1519.933,
+  "tipo": "video",
+  "texto": "con su escudo, llega a quinientos sesenta de armadura. Y eso ya es el máximo: un ochenta por ciento menos de daño.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1519.933,
+  "t1": 1527.931,
+  "tipo": "video",
+  "texto": "Es la única armadura del juego que llega al tope solo con ventajas. Sin forja. Sin trucos. La única.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1527.931,
+  "t1": 1535.771,
+  "tipo": "video",
+  "texto": "Y los drémora, que van vestidos de daédrica de pies a cabeza, no te dejan saquearla. Te dan el corazón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1535.771,
+  "t1": 1545.725,
+  "tipo": "video",
+  "texto": "La armadura, no. Y un fallo de toda la vida: las botas, los guanteletes de mujer y el escudo no tienen el brillo rojo del resto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1545.725,
+  "t1": 1553.83,
+  "tipo": "video",
+  "texto": "Bethesda nos dio la mejor armadura del juego, y se le olvidó enchufar los pies.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1553.83,
+  "t1": 1561.098,
+  "tipo": "video",
+  "texto": "Y ahora, lo que prometí. Por qué la armadura de hierro puede protegerte igual que la daédrica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1561.098,
+  "t1": 1569.178,
+  "tipo": "video",
+  "texto": "Cada punto de armadura reduce el daño físico. Solo el físico: contra la magia, la armadura no hace nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1569.178,
+  "t1": 1579.015,
+  "tipo": "video",
+  "texto": "Y el máximo del juego es un ochenta por ciento. Pero cada pieza que llevas puesta te da armadura oculta, que el menú no te enseña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1579.015,
+  "t1": 1588.059,
+  "tipo": "video",
+  "texto": "Por eso, con escudo, al tope te bastan quinientos cuarenta y dos en el menú. Ahora la sorpresa. Con la herrería al máximo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1588.059,
+  "t1": 1595.419,
+  "tipo": "video",
+  "texto": "cualquier armadura pesada templada llega al tope con su escudo. Hasta la de hierro: quinientos cuarenta y siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1595.419,
+  "t1": 1604.874,
+  "tipo": "video",
+  "texto": "El mismo ochenta por ciento que la daédrica. Y todo lo que pasa del tope, no te sirve de nada contra un golpe normal. Es desperdicio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1604.874,
+  "t1": 1613.245,
+  "tipo": "video",
+  "texto": "Solo cuenta contra las armas que atraviesan armadura: ahí harían falta más de dos mil. Así que, una vez en el tope,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1613.245,
+  "t1": 1620.775,
+  "tipo": "video",
+  "texto": "lo único que importa es el peso. Y con la ventaja Condicionamiento, la armadura pesada no pesa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1620.775,
+  "t1": 1629.92,
+  "tipo": "video",
+  "texto": "A partir de ahí, la armadura que elijas es pura moda. La daédrica es la mejor de Escairim. Hasta que aprendes a forjar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1629.92,
+  "t1": 1639.033,
+  "tipo": "video",
+  "texto": "Después, hasta el hierro te salva igual. Y la daédrica solo te sirve para verte bien en la foto. Este es el top.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-192",
+  "t0": 1639.033,
+  "t1": 1648.04,
+  "tipo": "video",
+  "texto": "De un casco que escupe vapor, al conjunto que llega solo al máximo del juego. Ahora te toca a ti. ¿Cuál falta?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-193",
+  "t0": 1648.04,
+  "t1": 1655.039,
+  "tipo": "video",
+  "texto": "¿Cuál te pones tú, y en qué nivel la conseguiste? Déjalo en los comentarios: los leo todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-194",
+  "t0": 1655.039,
+  "t1": 1664.749,
+  "tipo": "video",
+  "texto": "Y suscríbete, que vamos camino de diez mil. Y si en vez de placas de dragón prefieres una armadura que funciona con núcleos de fusión, Radio Yermo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-195",
+  "t0": 1664.749,
+  "t1": 1673.75,
+  "tipo": "video",
+  "texto": "nuestro canal hermano, es todo Fallout. Hasta yo escucho esa radio. Nos vemos en Tamriel.",
+  "clip_s": 8
+ }
+]

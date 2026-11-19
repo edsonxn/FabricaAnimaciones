@@ -1,8 +1,8 @@
 # Los jefes de Banjo-Tooie, del PEOR al MEJOR — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: cronicas_gaming · hueco jue 26-nov-2026 18:00 CDMX (canales --actualizar del 5-nov; confirmar antes de subir)
+- canal: cronicas_gaming · hueco sáb 21-nov-2026 18:08 CDMX = 2026-11-22T00:08Z (REPROGRAMADO 19-nov: el canal pasó a cada 3 días, pedido del usuario)
 - estilo: secuencia_yt (Crónicas del gaming, kit `nucleo/mg_banjo.py`, voz Hope, OST del juego) → doc: docs/estilo_secuencia_yt.md § «Crónicas del gaming» + § REGLA DE ORO
-- etapa: SUBIDO privado y programado jue 26-nov-2026 18:00 CDMX (https://youtu.be/yL1D3oGvTJQ), miniatura Flow aplicada
+- etapa: SUBIDO privado y PROGRAMADO sáb 21-nov-2026 18:08 CDMX = 2026-11-22T00:08Z (https://youtu.be/8z4Il8X272U); reprogramado 19-nov-2026 por el ciclo de 3 días
 - 6-nov: v2 HECHA (empalmar_tramos.py, 5 tramos; v1 en salida/_bt_jefes_ranking_MASTER_v1.mp4) y SUBIDA privada sin fecha: https://youtu.be/8z4Il8X272U. FALTA: que el usuario confirme borrar yL1D3oGvTJQ → borrarla y programar 8z4Il8X272U el 2026-11-27T00:00:00Z.
 - (hecho) CORRECCIÓN pedida por el usuario (6-nov): «Moggies» salía con el osito Moggy (hijo de Boggy) → pegatina cambiada al Moggy enemigo; agente auditando TODAS las pegatinas (pegatinas_check.md, tramos a rehacer) → `video --tramo a-b --salida salida/_t.mp4` + empalme sobre el MASTER (lección de bt_50_secretos) → subir de nuevo y retirar yL1D3oGvTJQ (borrarlo lo confirma el usuario)
 

@@ -1,8 +1,8 @@
 # Los 30 SECRETOS de la Nintendo 64 QUE IGNORASTE — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: cronicas_gaming · hueco mar 17-nov-2026 18:00 CDMX (ciclo 3 d; confirmar con `canales --actualizar`)
+- canal: cronicas_gaming · hueco mar 24-nov-2026 18:10 CDMX = 2026-11-25T00:10Z (REPROGRAMADO 19-nov: el canal pasó a cada 3 días, pedido del usuario)
 - estilo: secuencia_yt (Crónicas del gaming) → doc: docs/estilo_secuencia_yt.md § «REGLA DE ORO», § «Crónicas del gaming», § SONIDO ORIGINAL y § MAPAS REALES
-- etapa: ✅ SUBIDO privado y PROGRAMADO mar 17-nov-2026 18:00 CDMX (https://youtu.be/mw2-4rNFs50) con miniatura de Flow «REPARTIÓ GUANTES» (1-nov) y .srt; registrado y documentado
+- etapa: SUBIDO privado y PROGRAMADO mar 24-nov-2026 18:10 CDMX = 2026-11-25T00:10Z (https://youtu.be/mw2-4rNFs50); reprogramado 19-nov-2026 por el ciclo de 3 días
 - siguiente: al aprobarlo, `python fab.py n64_secretos limpiar`
 
 

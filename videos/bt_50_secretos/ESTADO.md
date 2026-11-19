@@ -1,8 +1,8 @@
 # Los 50 SECRETOS de Banjo-Tooie QUE IGNORASTE — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
-- canal: cronicas_gaming · hueco lun 23-nov-2026 18:00 CDMX = 2026-11-24T00:00:00Z (pokemon_rojo_azul ya ocupa el 20-nov, aviso de su sesión 3-nov; confirmar con `canales --actualizar` antes de subir)
+- canal: cronicas_gaming · hueco vie 27-nov-2026 18:12 CDMX = 2026-11-28T00:12Z (REPROGRAMADO 19-nov: el canal pasó a cada 3 días, pedido del usuario)
 - estilo: secuencia_yt (Crónicas del gaming, kit `nucleo/mg_banjo.py`, voz Hope, OST del juego) → doc: docs/estilo_secuencia_yt.md § «Crónicas del gaming» + § REGLA DE ORO
-- etapa: SUBIDO y programado lun 23-nov-2026 18:00 CDMX (https://youtu.be/waVn1g8VltA, privado)
+- etapa: SUBIDO privado y PROGRAMADO vie 27-nov-2026 18:12 CDMX = 2026-11-28T00:12Z (https://youtu.be/waVn1g8VltA); reprogramado 19-nov-2026 por el ciclo de 3 días
 - siguiente: revisión del usuario del MASTER; medir a 7 días; `limpiar` al aprobar
 
 

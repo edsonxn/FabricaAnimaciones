@@ -7,15 +7,27 @@
     "zona": "America/Mexico_City",
     "hora_local": "13:00",
     "utc": "19:00",
-    "ciclo_dias": 7,
-    "separacion_min_horas": 72,
-    "nota": "Arranque: 1 por semana (videos de 12 min con 3D propio); las noticias de lanzamiento salen cuanto antes tras el vuelo. AJUSTABLE por Claude con datos.",
+    "ciclo_dias": 5,
+    "separacion_min_horas": 48,
+    "nota": "Desde el 19-nov-2026: cada 5 días (lo cambió el usuario en el panel). Las noticias de lanzamiento salen cuanto antes tras el vuelo. AJUSTABLE por Claude con datos.",
     "historial": [
       {
         "fecha": "2026-11-14",
         "ciclo_dias": 7,
         "hora_local": "13:00",
         "motivo": "alta del canal, sin datos propios"
+      },
+      {
+        "fecha": "2026-11-17",
+        "ciclo_dias": 3,
+        "hora_local": "13:00",
+        "motivo": "el usuario pidió subir cada 3 días en vez de cada semana"
+      },
+      {
+        "fecha": "2026-11-19",
+        "ciclo_dias": 5,
+        "hora_local": "13:00",
+        "motivo": "el usuario lo cambió a cada 5 días"
       }
     ]
   },
@@ -33,8 +45,11 @@
       "video": "starship_sin_patas",
       "id": "KinwPPlHKpg",
       "titulo": "¿Por qué Starship NO tiene patas? La verdadera razón de los palillos",
-      "programado": "2026-11-21T23:37:00Z",
-      "formato": "explicador atemporal en 3D (línea 3D) con VIDEO REAL en cada suceso y fotos en marcos de alambre, 9:26"
+      "formato": "explicador atemporal en 3D (línea 3D) con VIDEO REAL en cada suceso y fotos en marcos de alambre, 9:26",
+      "visibilidad": "public",
+      "publicado": "2026-11-16T16:59:29Z",
+      "nota": "17-nov-2026: el usuario lo publicó antes de lo programado",
+      "programado_original": "2026-11-21T23:37:00Z"
     }
   ],
   "ideas": {

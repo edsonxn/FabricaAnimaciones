@@ -31,6 +31,9 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
 #barra .r small{color:#d9c08a;font-size:12px}
 #mats{display:flex;align-items:center;gap:14px;min-width:0;overflow:hidden}
 #mats .r.ok b{color:#9af46e}
+#mats .r b{display:inline-block}
+#mats .r.sube b{animation:sube 1.8s ease-out}
+@keyframes sube{0%{color:#fff;transform:scale(1.45);text-shadow:0 0 10px #9af46e,0 0 4px #fff}100%{transform:scale(1)}}
 #mats .r em{font-style:normal;color:#e8d2a0;font-size:13px}
 #mats .r .v{color:#d9c08a;font-size:12px;font-weight:400}
 .ml{display:flex;flex-wrap:wrap;gap:2px 14px;margin:2px 0 3px;font-size:12px;color:#3b2a14}
@@ -388,6 +391,57 @@ const faltan = o => o.mats.filter(m => m.hecho < m.total);
 // o.trabajo = segundos de trabajo real pendientes para los constructores de esa obra: los da el material que de verdad
 // llega a la pila y el avance real de la obra; se gasta mientras martillan (19-nov-2026).
 function darTrabajo(o, seg) { const antes = o.trabajo > 0; o.trabajo = Math.min(90, (o.trabajo || 0) + seg); if (!antes) infoClave = ''; }
+// Solo se trabaja un material que AVANZA de verdad (el usuario, 19-nov-2026: «si no se están descargando clips esos
+// aldeanos no deberían de trabajar en eso»). La API no dice qué corre: se deduce de las subidas reales de m.hecho.
+// Activo = falta y subió hace menos de 3 veces su intervalo entre subidas (entre 90 s y 10 min). Al abrir, nada lo está.
+let RELOJ = 0;                                                   // segundos de vista (lo suma cuadro)
+function activo(o, m) { const a = o.act && o.act[m.id]; return !!a && m.hecho < m.total && RELOJ < a.t + clamp(3 * a.iv, 90, 600); }
+const activos = o => o.mats.filter(m => activo(o, m));
+function marcaAvance(o, m) { o.act = o.act || {}; const p = o.act[m.id]; o.act[m.id] = {t: RELOJ, iv: p ? clamp(RELOJ - p.t, 20, 200) : 120}; }
+// Ocio vivo y al azar (el usuario: «parece una animación en bucle»): sin herramientas ni viajes, cada quien a su ritmo.
+function campo(a) { const o = OBRAS[a.oi]; a.cx = o.x + (azar() - .5) * 460; a.cy = o.y + 135 + azar() * 50; }
+function nuevoOcio(a, primero = false) {
+  const r = azar(), k = r < .28 ? 'parado' : r < .5 ? 'sentado' : r < .72 ? 'charla' : r < .86 ? 'mira' : a.tipo === 'rec' ? 'paseo' : 'parado';
+  const oc = {k, t: (k === 'sentado' ? 9 + azar() * 20 : 3 + azar() * 8) * (primero ? 0.2 + azar() * 0.8 : 1), giro: 1 + azar() * 4, con: null};
+  if (k === 'charla') {                                          // con el ocioso más cercano; si no hay, se queda parado
+    let d0 = 80; for (const b of ALD) if (b !== a && b.oi === a.oi && (b.est === 'ocio' || b.est === 'quieto')) { const d = Math.hypot(b.x - a.x, b.y - a.y); if (d < d0) { d0 = d; oc.con = b; } }
+    if (!oc.con) oc.k = 'parado';
+  }
+  if (k === 'paseo') { const o = OBRAS[a.oi]; a.cx = clamp(a.x + (azar() - .5) * 140, o.x - 240, o.x + 240); a.cy = clamp(a.y + (azar() - .5) * 40, o.y + 130, o.y + 190); }
+  a.ocio = oc;
+}
+function actOcio(a, dt) {
+  const oc = a.ocio || (nuevoOcio(a, true), a.ocio); oc.t -= dt;
+  if (oc.k === 'paseo') { if (moverHacia(a, a.cx, a.cy, dt * 0.45)) { a.anda = false; oc.k = 'parado'; } }
+  else {
+    a.anda = false;
+    if (oc.k === 'charla' && oc.con) a.dir = oc.con.x >= a.x ? 1 : -1;
+    else if (oc.k === 'mira') a.dir = OBRAS[a.oi].x >= a.x ? 1 : -1;
+    else if (oc.k === 'parado' && (oc.giro -= dt) <= 0) { a.dir = -a.dir; oc.giro = 1.5 + azar() * 5; }
+  }
+  if (oc.t <= 0) nuevoOcio(a);
+}
+const HUECOS = [-151, -65, 21, 107];
+const hueco = (o, x) => HUECOS.reduce((b, h) => Math.abs(o.x + h - x) < Math.abs(o.x + b - x) ? h : b, HUECOS[0]);
+function alCampo(a) {                                            // vuelve a su lugar del campamento, pasando entre las pilas
+  const o = OBRAS[a.oi]; campo(a); a.carga = false; a.anda = true;
+  a.wp = a.y < o.y + 95 ? [[o.x + hueco(o, a.x), o.y + 92], [a.cx, a.cy]] : [[a.cx, a.cy]]; a.est = 'alcampo';
+}                              // entre las pilas: por ahí se pasa del campamento a la ruta
+function salir(a, m, trae = 0) {                                 // un ocioso va a trabajar ese material (o a traerlo)
+  const o = OBRAS[a.oi];
+  a.tipo = 'rec'; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; a.trae = trae; a.carga = false; a.ocio = null;
+  nuevoViaje(a); a.s = 0;
+  const [x0, y0] = a.ruta.p[0], hx = hueco(o, x0);
+  a.wp = a.y > o.y + 95 ? [[o.x + hx, o.y + 92], [x0, y0]] : [[x0, y0]]; a.est = 'arranca';
+}
+function repartir(o) {                                           // reparte a los recolectores ociosos entre lo que avanza
+  const act = activos(o); if (!act.length) return;
+  const oi = OBRAS.indexOf(o), libres = ALD.filter(a => a.oi === oi && a.tipo === 'rec' && a.est === 'ocio');
+  for (const a of libres) {
+    const cuenta = m => ALD.filter(b => b.oi === oi && b.tipo === 'rec' && b.mat === m.id && b.est !== 'ocio').length;
+    salir(a, act.reduce((p, q) => cuenta(q) < cuenta(p) ? q : p));
+  }
+}
 function letrerosSitio() {                                       // «Mina · Voz» y, abajo, cómo va la obra enfocada
   const f = obraFoco() || OBRAS.find(o => !o.sin);
   for (const L of LETREROS) {
@@ -396,13 +450,16 @@ function letrerosSitio() {                                       // «Mina · Vo
     for (const o of OBRAS) for (const m of o.mats || []) if (m.sitio === L.sitio && !vis.has(m.id)) { vis.add(m.id); ms.push(m.nombre); }
     const mf = f ? f.mats.filter(m => m.sitio === L.sitio) : [];
     L.txt = [SITIO_N[L.sitio] + (ms.length ? ' · ' + ms.join(' y ') : ''),
-      mf.length ? mf.map(m => m.hecho >= m.total ? `${m.nombre}: listo` : `${m.nombre}: ${m.hecho}/${m.total}`).join(' · ') : ms.length ? '' : 'nada que traer'];
+      mf.length ? mf.map(m => m.hecho >= m.total ? `${m.nombre}: listo` : `${m.nombre}: ${m.hecho}/${m.total} · ${activo(f, m) ? 'en marcha' : 'parado'}`).join(' · ') : ms.length ? '' : 'nada que traer'];
   }
 }
-function asignar(a) {                                            // al volver de un viaje: ¿qué material sigue faltando?
-  const o = OBRAS[a.oi]; if (o.sin || a.trae) return true;
-  const falta = faltan(o);
-  if (a.mat && falta.some(m => m.id === a.mat)) return true;
+function asignar(a) {                                            // al volver de un viaje: ¿hay material avanzando? si no, al campamento
+  const o = OBRAS[a.oi]; if (a.trae) return true;
+  if (o.sin) { alCampo(a); return false; }
+  const falta = faltan(o), act = activos(o);
+  if (a.mat && act.some(m => m.id === a.mat)) return true;
+  if (falta.length && !act.length) { alCampo(a); a.mat = null; return false; }
+  if (act.length) { const m = act[azar() * act.length | 0]; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; return true; }
   if (!falta.length) {                                           // ya no falta nada: se pone a construir
     a.tipo = 'con'; a.mat = null; a.herr = azar() < .3 ? 'sierra' : 'martillo'; a.per = 0.62 + azar() * 0.2;
     const ocup = new Set(ALD.filter(b => b !== a && b.tipo === 'con' && b.oi === a.oi).map(b => b.lugar));
@@ -414,20 +471,29 @@ function asignar(a) {                                            // al volver de
 }
 function llegaReal(o, m, n) {                                     // subió una cuenta real: unos aldeanos traen ese material
   const oi = OBRAS.indexOf(o);
-  let cands = ALD.filter(a => a.oi === oi && a.tipo === 'rec' && a.mat === m.id && a.est !== 'desc' && !a.trae);
-  if (!cands.length) cands = ALD.filter(a => a.oi === oi && !a.trae && a.est !== 'desc');
-  if (!cands.length) { o.vis[m.id] = (o.vis[m.id] || 0) + n; return; }
-  cands.sort((p, q) => (q.est === 'vuelta') - (p.est === 'vuelta') || (q.est === 'trab') - (p.est === 'trab'));
+  marcaAvance(o, m);
+  // primero quien ya está en ese material (trabajando o yendo); si no, un ocioso sale por él (recolector, o constructor quieto)
+  let cands = ALD.filter(a => a.oi === oi && a.tipo === 'rec' && a.mat === m.id && (a.est === 'trab' || a.est === 'ida' || a.est === 'arranca') && !a.trae);
+  if (!cands.length) cands = ALD.filter(a => a.oi === oi && !a.trae && (a.est === 'ocio' || (a.est === 'quieto' && !(o.trabajo > 0))));
+  if (!cands.length) {                                           // nadie libre: se apila directo, pero se nota
+    o.vis[m.id] = (o.vis[m.id] || 0) + n; FLOT.push({x: o.x + DEPM[m.id], y: o.y + 40, txt: `+${n} ${m.nombre}`, vida: 2.4}); infoClave = ''; return;
+  }
+  cands.sort((p, q) => (q.est === 'trab') - (p.est === 'trab') || (q.est === 'ida') - (p.est === 'ida') || (q.tipo === 'rec') - (p.tipo === 'rec'));
   const k = Math.max(1, Math.min(3, cands.length, n));
   for (let i = 0; i < k; i++) {
     const a = cands[i], parte = Math.floor(n / k) + (i < n % k ? 1 : 0);
-    if (a.tipo !== 'rec' || a.mat !== m.id) {                     // lo manda por él: sale cerca del sitio, ya de vuelta
-      a.tipo = 'rec'; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; nuevoViaje(a); a.s = a.ruta.L * (0.35 + azar() * 0.2);
-      [a.x, a.y] = enCurva(a.ruta, a.s); a.est = 'vuelta';
-    } else if (a.est === 'trab') a.t = 0.5 + azar() * 0.8;     // termina el golpe y sale cargado
-    // (si va de ida, llega, da unos golpes y vuelve con él: ver 'trab' en actAld)
-    a.carga = a.est === 'vuelta'; a.trae = parte; o.camino[m.id] = (o.camino[m.id] || 0) + parte;
+    if (a.est === 'trab') { a.trae = parte; a.t = 0.5 + azar() * 0.8; }   // termina el golpe y sale cargado
+    else if (a.est === 'ida' || a.est === 'arranca') a.trae = parte;   // llega, da unos golpes y vuelve con él
+    else salir(a, m, parte);
+    o.camino[m.id] = (o.camino[m.id] || 0) + parte;
+    if (i === 0) seguirCarga(a);
   }
+  repartir(o);
+}
+function seguirCarga(a) {                                        // que se note: el recorrido automático sigue al que va por él
+  if (MENU && seguirV) return;
+  if (performance.now() < manualHasta) return;
+  toma = {t: 'ald', a, dur: 12}; tomaHasta = performance.now() + 12000;
 }
 function dibPila(o, id) {
   const m = o.mats.find(x => x.id === id); if (!m) return;
@@ -546,13 +612,11 @@ function aldeano(tipo, oi, r, herr, k = 0, mat = null) {
     col: o.col, ci: COL.indexOf(o.col), carga: false,
     vel: 42 + azar() * 12, fase: azar(), est: 'ida', t: 0, s: 0, ruta: null, herr: herr || (r ? REC[r].herr : 'martillo'),
     per: 0.85, mat, trae: 0, dib(t) { dibAld(this, t); }};
-  // Al ritmo de lo real (19-nov-2026): nadie carga nada inventado. Al abrir, los recolectores ya están en su sitio
-  // trabajando (o llegando) y los constructores quietos hasta que les llegue material.
-  if (tipo === 'rec') {
-    nuevoViaje(a);
-    if (azar() < .7) { a.s = a.ruta.L; [a.x, a.y] = enCurva(a.ruta, a.s); a.est = 'trab'; a.dir = a.mira; a.fase = azar(); }
-    else { a.s = azar() * a.ruta.L * 0.8; a.est = 'ida'; }
-  } else { a.lugar = k; a.per = a.herr === 'sierra' ? 0.55 : 0.62 + azar() * 0.2; lugarCon(a, k); a.x = a.lx; a.y = a.ly; a.est = 'quieto'; a.dir = a.mira; a.t = 0; }
+  // Al ritmo de lo real (19-nov-2026): nadie trabaja ni carga nada inventado. Al abrir no se sabe qué avanza: los
+  // recolectores esperan en el campamento (frente a las pilas) y los constructores en su lugar, ociosos, hasta que algo
+  // real suba (llegaReal → repartir).
+  if (tipo === 'rec') { a.mat = null; campo(a); a.x = a.cx; a.y = a.cy; a.est = 'ocio'; a.dir = azar() < .5 ? 1 : -1; nuevoOcio(a, true); }
+  else { a.lugar = k; a.per = a.herr === 'sierra' ? 0.55 : 0.62 + azar() * 0.2; lugarCon(a, k); a.x = a.lx; a.y = a.ly; a.est = 'quieto'; a.dir = a.mira; a.t = 0; }
   return a;
 }
 function nuevoViaje(a) {
@@ -629,19 +693,23 @@ function actAld(a, dt, t) {
       // entonces termina el golpe y lo lleva a la obra. Si su material se completó, vuelve vacío para que lo reasignen.
       swing();
       if (a.trae) { a.t -= dt; if (a.t <= 0) { a.est = 'vuelta'; a.carga = true; } }
-      else if (!OBRAS[a.oi].sin && !(a.mat && faltan(OBRAS[a.oi]).some(m => m.id === a.mat))) { a.est = 'vuelta'; a.carga = false; }
+      else { const o = OBRAS[a.oi], m = o.mats.find(x => x.id === a.mat); if (!m || !activo(o, m)) { a.est = 'vuelta'; a.carga = false; } }   // dejó de avanzar: vuelve vacío
     } else if (a.est === 'desc') {
       a.t -= dt;
       if (a.t <= 0 && asignar(a)) { nuevoViaje(a); a.s = 0; a.est = 'ida'; }
-    }
+    } else if (a.est === 'arranca' || a.est === 'alcampo') {   // del campamento a la ruta, o de vuelta al campamento
+      if (!a.wp || !a.wp.length) { if (a.est === 'arranca') { a.est = 'ida'; a.s = 0; } else { a.est = 'ocio'; a.anda = false; nuevoOcio(a); } }
+      else if (moverHacia(a, a.wp[0][0], a.wp[0][1], dt)) { a.wp.shift(); a.anda = true; }
+    } else actOcio(a, dt);                                        // 'ocio': descansa, platica, se sienta, mira, pasea
+
   } else {                                                      // constructor
     // Solo trabaja mientras su obra tiene trabajo real (material entregado o la obra avanzando de verdad: o.trabajo);
     // si no, se queda quieto en su lugar.
     const hay = OBRAS[a.oi].trabajo > 0;
     if (a.est === 'quieto') {
-      a.anda = false; a.dir = a.mira;
-      if (hay) { a.est = 'trab'; a.t = 4 + azar() * 6; a.fase = azar(); }
-    } else if (a.est === 'trab' && !hay) { a.est = 'quieto'; a.anda = false; a.dir = a.mira; }
+      if (hay) { a.est = 'trab'; a.t = 4 + azar() * 6; a.fase = azar(); a.ocio = null; }
+      else actOcio(a, dt);                                        // ocio en su lugar (sin pasear)
+    } else if (a.est === 'trab' && !hay) { a.est = 'quieto'; a.anda = false; nuevoOcio(a); }
     else if (a.est === 'trab') {
       a.dir = a.mira; a.anda = false; swing(); a.t -= dt;
       if (a.t <= 0) {
@@ -686,6 +754,7 @@ const GOLPE = f => f < .2 ? 0 : f < .45 ? 1 : f < .68 ? 2 : f < .82 ? 3 : f < .9
 function aldPose(a) {
   if (a.anda) { const an = a.carga ? 'cargar' : 'caminar', n = ALD_META[an].n; return [an, Math.floor(a.paso / 0.34 / ALD_PASO * n) % n]; }
   if (a.est === 'desc') return ['recoger', Math.max(0, Math.min(5, Math.floor(a.t / 0.7 * 6)))];       // baja la carga
+  if (a.ocio && a.ocio.k === 'sentado' && (a.est === 'ocio' || a.est === 'quieto')) return ['recoger', 1];   // en cuclillas junto a una caja
   if (a.est !== 'trab') return ['caminar', 0];
   const f = a.fase % 1;
   if (a.herr === 'mano') return ['recoger', Math.round((1 - Math.cos(f * TAU)) / 2 * 5)];
@@ -701,6 +770,16 @@ function dibAld(a) {
   if (a.dir < 0) c.scale(-1, 1);
   c.drawImage(im, k * Math.round(m.w * f), 0, Math.round(m.w * f), Math.round(m.h * f), -m.ax * s, -m.ay * s, m.w * s, m.h * s);
   c.restore();
+  const oc = a.ocio;                                             // burbuja: «…» al platicar, «z» si descansa un buen rato
+  if (oc && (a.est === 'ocio' || a.est === 'quieto') && cam.z > 0.8 * ZB) {
+    const ph = (RELOJ + a.fase * 9) % 3.4, txt = oc.k === 'charla' && ph < 1.8 ? '…' : oc.k === 'sentado' && ph < 1.2 ? 'z' : '';
+    if (txt) {
+      const bx = a.x + a.dir * 8, by = a.y - (oc.k === 'sentado' ? 38 : 50);
+      c.fillStyle = 'rgba(255,250,235,.92)'; c.strokeStyle = 'rgba(40,25,10,.7)'; c.lineWidth = 1;
+      c.beginPath(); c.ellipse(bx, by, 9, 6.5, 0, 0, TAU); c.fill(); c.stroke();
+      c.fillStyle = '#3a2410'; c.font = 'bold 10px Georgia'; c.textAlign = 'center'; c.fillText(txt, bx, by + 3.5);
+    }
+  }
 }
 
 // ================================================================ partículas
@@ -844,7 +923,7 @@ function nuevaToma(ahora) {
   let o = f && azar() < 0.65 ? f : OBRAS[(tomaK >> 1) % OBRAS.length];
   if (tipo === 'obra') toma = {t: 'obra', o, dur: 9};
   else if (tipo === 'ald') {
-    const cand = ALD.filter(a => OBRAS[a.oi] === o && a.tipo === 'rec' && a.est !== 'trab'); const a = (cand.length ? cand : ALD)[azar() * (cand.length || ALD.length) | 0];
+    const cand = ALD.filter(a => OBRAS[a.oi] === o && (a.carga || a.est === 'ida' || a.est === 'arranca')); const a = cand.length ? cand[azar() * cand.length | 0] : null;   // solo viajes reales
     toma = a ? {t: 'ald', a, dur: 6} : {t: 'gen', dur: 7};
   } else if (tipo === 'rec') toma = {t: 'rec', r: REC[RECS[azar() * 4 | 0]], dur: 6.5};
   else toma = {t: 'gen', dur: 7};
@@ -928,7 +1007,8 @@ function hud() {
   const im = o.vist[o.vi] || '', clave = o.video + '|' + o.prog + '|' + (o.trabajo > 0) + '|' + im + '|' + (o.mats || []).map(m => m.id + (o.vis[m.id] || 0) + '/' + m.total).join();
   if (clave === infoClave) return; infoClave = clave;
   const ms = o.mats || [], vis = m => Math.min(m.total, o.vis[m.id] || 0);
-  $('mats').innerHTML = ms.map(m => `<span class="r ${vis(m) >= m.total ? 'ok' : ''}" title="${esc(m.nombre)}: ${vis(m)} de ${m.total} ${esc(m.unidad)} (se consigue en: ${esc(SITIO_N[m.sitio])})"><img src="/v2/obra/img/${m.sitio}.png" alt=""><em>${esc(m.nombre)}</em><b>${vis(m)}<span class="v">/${m.total}</span></b></span>`).join('');
+  const ant = o.hudAnt || (o.hudAnt = {}), sube = m => { const v = vis(m), s0 = ant[m.id] != null && v > ant[m.id]; ant[m.id] = v; return s0 ? ' sube' : ''; };
+  $('mats').innerHTML = ms.map(m => `<span class="r ${vis(m) >= m.total ? 'ok' : ''}${sube(m)}" title="${esc(m.nombre)}: ${vis(m)} de ${m.total} ${esc(m.unidad)} (se consigue en: ${esc(SITIO_N[m.sitio])})"><img src="/v2/obra/img/${m.sitio}.png" alt=""><em>${esc(m.nombre)}</em><b>${vis(m)}<span class="v">/${m.total}</span></b></span>`).join('');
   $('iMats').innerHTML = ms.map(m => `<span class="${vis(m) >= m.total ? 'ok' : ''}">${esc(m.nombre)} <u><i style="width:${(vis(m) / m.total * 100).toFixed(0)}%"></i></u> ${vis(m)}/${m.total}</span>`).join('');
   if (o.sin) {
     $('iTit').textContent = 'Sin obras: ningún video en producción'; $('mats').innerHTML = ''; $('iMats').innerHTML = '';
@@ -961,7 +1041,7 @@ let raf = 0, tPrev = 0, pausado = false, oculto = false;
 const lista = [];
 function cuadro(ts) {
   raf = requestAnimationFrame(cuadro);
-  const t = ts / 1000, dt = tPrev ? clamp(t - tPrev, 0, 0.05) : 0.016; tPrev = t;
+  const t = ts / 1000, dt = tPrev ? clamp(t - tPrev, 0, 0.05) : 0.016; tPrev = t; RELOJ += dt;
   for (const a of ALD) actAld(a, dt, t);
   for (const tr of ARB) if (tr.sac > 0) tr.sac = Math.max(0, tr.sac - dt * 2.2);
   for (const o of OBRAS) {

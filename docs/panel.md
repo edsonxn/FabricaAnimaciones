@@ -506,6 +506,17 @@ terreno con estacas y el logo del canal. Plan y detalle: `nucleo/obra/LEEME.md`.
   unidad de progreso, entre 10 y 40); se gastan mientras martillan (tope 90). Sin trabajo: estado `quieto`, de pie en su
   lugar. Al abrir, 70 % de los recolectores ya trabajando en su sitio y los constructores quietos. El panel de la obra
   dice «🔨 construyendo» o «esperando material».
+- **Solo lo que avanza + ocio vivo (19-nov, el usuario: «si no se están descargando clips esos aldeanos no deberían de
+  trabajar en eso» · «parece una animación en bucle»):** la API no dice qué corre; la página lo deduce de las subidas
+  reales de `m.hecho` (`marcaAvance` en `llegaReal`). Material activo (`activo`) = falta y subió hace menos de 3 veces su
+  intervalo entre subidas (90 s a 10 min; reloj `RELOJ`). Al abrir nada está activo: recolectores en el campamento
+  frente a las pilas (`campo`, y = o.y+135…185) y constructores en su lugar, en ocio al azar (`nuevoOcio`/`actOcio`:
+  parado girando, sentado = cuadro 1 de `recoger` con burbuja «z», charla con el ocioso más cercano y burbuja «…»,
+  mira la obra, paseo corto en el campamento). Al subir algo real: hasta 3 salen por él (`salir`: estado `arranca`,
+  pasando entre las pilas por `HUECOS`), los demás ociosos van a trabajar lo que avanza (`repartir`), el recorrido
+  automático sigue al que carga (`seguirCarga`), y la cifra de la barra brilla al subir (clase `sube`). Si deja de
+  avanzar, vuelven vacíos al campamento (`alCampo`). El letrero de cada sitio dice «en marcha» o «parado». Probado en
+  el navegador con datos simulados: 0 golpes y 0 cargas sin avance real.
 - **Capas (19-nov):** cimientos = capa de suelo y su letrero aparte; las rutas (`ruta`) rodean cualquier edificio (la
   propia obra por un costado, las ajenas por delante o por detrás), los constructores se mueven por el frente (`PERIM`),
   y lo horneado junto a una ruta (`PASO`, `pisado`, `tapado`) se ordena por y o se quita.

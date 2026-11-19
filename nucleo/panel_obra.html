@@ -302,7 +302,7 @@ function construir() {
     const v = d ? viejas[d.video] : null;
     const o = {d, video: d ? d.video : '', x: pos[i][0], y: pos[i][1], prog: d ? d.progreso : 1, sin: !d,
       col: d ? COL[d.color % 8] : '#8a6a3a', vist: d ? d.vistazos || [] : [], vi: 0, vt: 2 + i * 1.3, prev: null, cache: {},
-      vis: v ? v.vis : null, camino: v ? v.camino : {}};
+      vis: v ? v.vis : null, camino: v ? v.camino : {}, trabajo: v ? v.trabajo : 0};
     o.etapa = etapaDe(o.prog); ponMateriales(o, d);
     if (!v) for (const m of o.mats) o.vis[m.id] = m.hecho;       // al abrir, lo ya hecho está apilado
     return o;
@@ -385,6 +385,9 @@ function ponMateriales(o, d) {                                   // o.mats = mat
   if (!o.vis) o.vis = {};
 }
 const faltan = o => o.mats.filter(m => m.hecho < m.total);
+// o.trabajo = segundos de trabajo real pendientes para los constructores de esa obra: los da el material que de verdad
+// llega a la pila y el avance real de la obra; se gasta mientras martillan (19-nov-2026).
+function darTrabajo(o, seg) { const antes = o.trabajo > 0; o.trabajo = Math.min(90, (o.trabajo || 0) + seg); if (!antes) infoClave = ''; }
 function letrerosSitio() {                                       // «Mina · Voz» y, abajo, cómo va la obra enfocada
   const f = obraFoco() || OBRAS.find(o => !o.sin);
   for (const L of LETREROS) {
@@ -421,8 +424,8 @@ function llegaReal(o, m, n) {                                     // subió una 
     if (a.tipo !== 'rec' || a.mat !== m.id) {                     // lo manda por él: sale cerca del sitio, ya de vuelta
       a.tipo = 'rec'; a.mat = m.id; a.r = m.sitio; a.herr = REC[m.sitio].herr; nuevoViaje(a); a.s = a.ruta.L * (0.35 + azar() * 0.2);
       [a.x, a.y] = enCurva(a.ruta, a.s); a.est = 'vuelta';
-    } else if (a.est === 'ida') a.est = 'vuelta';
-    else if (a.est === 'trab') a.t = 0;
+    } else if (a.est === 'trab') a.t = 0.5 + azar() * 0.8;     // termina el golpe y sale cargado
+    // (si va de ida, llega, da unos golpes y vuelve con él: ver 'trab' en actAld)
     a.carga = a.est === 'vuelta'; a.trae = parte; o.camino[m.id] = (o.camino[m.id] || 0) + parte;
   }
 }
@@ -543,8 +546,13 @@ function aldeano(tipo, oi, r, herr, k = 0, mat = null) {
     col: o.col, ci: COL.indexOf(o.col), carga: false,
     vel: 42 + azar() * 12, fase: azar(), est: 'ida', t: 0, s: 0, ruta: null, herr: herr || (r ? REC[r].herr : 'martillo'),
     per: 0.85, mat, trae: 0, dib(t) { dibAld(this, t); }};
-  if (tipo === 'rec') { nuevoViaje(a); a.s = azar() * a.ruta.L; a.est = azar() < .5 ? 'ida' : 'vuelta'; a.carga = a.est === 'vuelta'; }
-  else { a.lugar = k; a.per = a.herr === 'sierra' ? 0.55 : 0.62 + azar() * 0.2; lugarCon(a, k); a.x = a.lx; a.y = a.ly; a.est = 'trab'; a.t = 6 + azar() * 8; }
+  // Al ritmo de lo real (19-nov-2026): nadie carga nada inventado. Al abrir, los recolectores ya están en su sitio
+  // trabajando (o llegando) y los constructores quietos hasta que les llegue material.
+  if (tipo === 'rec') {
+    nuevoViaje(a);
+    if (azar() < .7) { a.s = a.ruta.L; [a.x, a.y] = enCurva(a.ruta, a.s); a.est = 'trab'; a.dir = a.mira; a.fase = azar(); }
+    else { a.s = azar() * a.ruta.L * 0.8; a.est = 'ida'; }
+  } else { a.lugar = k; a.per = a.herr === 'sierra' ? 0.55 : 0.62 + azar() * 0.2; lugarCon(a, k); a.x = a.lx; a.y = a.ly; a.est = 'quieto'; a.dir = a.mira; a.t = 0; }
   return a;
 }
 function nuevoViaje(a) {
@@ -603,27 +611,38 @@ function actAld(a, dt, t) {
       const ant = a.x; a.s += (a.est === 'ida' ? 1 : -0.85) * a.vel * dt;
       const [x, y] = enCurva(a.ruta, a.s); a.paso += Math.hypot(x - a.x, y - a.y) * 0.34; a.x = x; a.y = y; a.anda = true;
       if (Math.abs(x - ant) > 0.01) a.dir = x > ant ? 1 : -1;
-      if (a.est === 'ida' && a.s >= a.ruta.L) { a.est = 'trab'; a.t = 3 + azar() * 2; a.anda = false; a.dir = a.mira; }
+      if (a.est === 'ida' && a.s >= a.ruta.L) { a.est = 'trab'; a.t = a.trae ? 1.5 + azar() : 0; a.anda = false; a.dir = a.mira; }
       if (a.est === 'vuelta' && a.s <= 0) {
         a.est = 'desc'; a.t = 0.7; a.anda = false; a.carga = false;
         const o = OBRAS[a.oi];
-        if (a.trae && a.mat) {                                    // material real: sube la pila y el contador
+        if (a.trae && a.mat) {                                    // material real: sube la pila y el contador, y da trabajo
           const m = o.mats.find(x => x.id === a.mat);
           o.vis[a.mat] = (o.vis[a.mat] || 0) + a.trae; o.camino[a.mat] = Math.max(0, (o.camino[a.mat] || 0) - a.trae);
           if (m) FLOT.push({x: o.x + DEPM[a.mat], y: o.y + 40, txt: `+${a.trae} ${m.nombre}`, vida: 2.4});
-          sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .85, .35); a.trae = 0; infoClave = '';
-        } else sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .35);
-        polvito(a.x + a.dir * 8, a.y);
+          sonar(azar() < .5 ? 'deposito_1' : 'deposito_2', a.x, a.y, .85, .35);
+          darTrabajo(o, clamp(6 + a.trae * 1.5, 6, 30)); a.trae = 0; infoClave = '';
+          polvito(a.x + a.dir * 8, a.y);
+        } else a.t = 0;                                           // volvió vacío (su material ya está completo): no descarga nada
       }
     } else if (a.est === 'trab') {
-      swing(); a.t -= dt;
-      if (a.t <= 0) { a.est = 'vuelta'; a.carga = true; }
+      // Pica o tala SIN PARAR hasta que de verdad se genera o descarga su material (llegaReal le pone a.trae);
+      // entonces termina el golpe y lo lleva a la obra. Si su material se completó, vuelve vacío para que lo reasignen.
+      swing();
+      if (a.trae) { a.t -= dt; if (a.t <= 0) { a.est = 'vuelta'; a.carga = true; } }
+      else if (!OBRAS[a.oi].sin && !(a.mat && faltan(OBRAS[a.oi]).some(m => m.id === a.mat))) { a.est = 'vuelta'; a.carga = false; }
     } else if (a.est === 'desc') {
       a.t -= dt;
       if (a.t <= 0 && asignar(a)) { nuevoViaje(a); a.s = 0; a.est = 'ida'; }
     }
   } else {                                                      // constructor
-    if (a.est === 'trab') {
+    // Solo trabaja mientras su obra tiene trabajo real (material entregado o la obra avanzando de verdad: o.trabajo);
+    // si no, se queda quieto en su lugar.
+    const hay = OBRAS[a.oi].trabajo > 0;
+    if (a.est === 'quieto') {
+      a.anda = false; a.dir = a.mira;
+      if (hay) { a.est = 'trab'; a.t = 4 + azar() * 6; a.fase = azar(); }
+    } else if (a.est === 'trab' && !hay) { a.est = 'quieto'; a.anda = false; a.dir = a.mira; }
+    else if (a.est === 'trab') {
       a.dir = a.mira; a.anda = false; swing(); a.t -= dt;
       if (a.t <= 0) {
         const ocup = new Set(ALD.filter(b => b !== a && b.tipo === 'con' && b.oi === a.oi).map(b => b.lugar));
@@ -635,7 +654,7 @@ function actAld(a, dt, t) {
     } else if (a.wp && a.wp.length) {                             // rodeando el edificio por el frente
       if (moverHacia(a, a.wp[0][0], a.wp[0][1], dt)) { a.wp.shift(); a.anda = true; }
     } else {
-      if (moverHacia(a, a.lx, a.ly, dt)) { a.est = 'trab'; a.t = 7 + azar() * 7; }
+      if (moverHacia(a, a.lx, a.ly, dt)) { a.est = hay ? 'trab' : 'quieto'; a.t = 7 + azar() * 7; a.dir = a.mira; }
     }
   }
 }
@@ -906,7 +925,7 @@ function obraInfo() {
 function hud() {
   $('nObras').textContent = DATOS.obras.length; $('nAld').textContent = ALD.length; $('nLibres').textContent = (DATOS.libres || []).length;
   const o = obraInfo(); if (!o) return;
-  const im = o.vist[o.vi] || '', clave = o.video + '|' + o.prog + '|' + im + '|' + (o.mats || []).map(m => m.id + (o.vis[m.id] || 0) + '/' + m.total).join();
+  const im = o.vist[o.vi] || '', clave = o.video + '|' + o.prog + '|' + (o.trabajo > 0) + '|' + im + '|' + (o.mats || []).map(m => m.id + (o.vis[m.id] || 0) + '/' + m.total).join();
   if (clave === infoClave) return; infoClave = clave;
   const ms = o.mats || [], vis = m => Math.min(m.total, o.vis[m.id] || 0);
   $('mats').innerHTML = ms.map(m => `<span class="r ${vis(m) >= m.total ? 'ok' : ''}" title="${esc(m.nombre)}: ${vis(m)} de ${m.total} ${esc(m.unidad)} (se consigue en: ${esc(SITIO_N[m.sitio])})"><img src="/v2/obra/img/${m.sitio}.png" alt=""><em>${esc(m.nombre)}</em><b>${vis(m)}<span class="v">/${m.total}</span></b></span>`).join('');
@@ -920,7 +939,7 @@ function hud() {
   }
   const d = o.d, et = ['Cimientos', 'Armazón', 'Taller'][o.etapa];
   $('iTit').textContent = d.titulo; $('iTit').title = d.video;
-  $('iSub').innerHTML = `<i style="background:${o.col}"></i>${esc(d.canal_nombre)} · <b>${Math.round(o.prog * 100)} %</b> · ${esc(d.etapa_n || 'en obra')} · ${et}`;
+  $('iSub').innerHTML = `<i style="background:${o.col}"></i>${esc(d.canal_nombre)} · <b>${Math.round(o.prog * 100)} %</b> · ${esc(d.etapa_n || 'en obra')} · ${et} · ${o.trabajo > 0 ? '🔨 construyendo' : 'esperando material'}`;
   $('iPb').style.width = (o.prog * 100).toFixed(1) + '%';
   $('iSale').innerHTML = d.sale ? `${d.atrasado ? '<span class="late">canal atrasado</span> · ' : ''}sale ${esc(flarga(d.sale))}` : '';
   if (im) { $('iImg').src = im; $('iImg').style.visibility = 'visible'; } else $('iImg').style.visibility = 'hidden';
@@ -946,6 +965,7 @@ function cuadro(ts) {
   for (const a of ALD) actAld(a, dt, t);
   for (const tr of ARB) if (tr.sac > 0) tr.sac = Math.max(0, tr.sac - dt * 2.2);
   for (const o of OBRAS) {
+    if (o.trabajo > 0) { o.trabajo -= dt; if (o.trabajo <= 0) { o.trabajo = 0; infoClave = ''; } }
     o.vt += dt;
     if (o.vt > 4 && o.vist.length > 1) { o.prev = o.vi; o.vi = (o.vi + 1) % o.vist.length; o.vt = 0; imgVist(o, (o.vi + 1) % o.vist.length); }
   }
@@ -1003,6 +1023,7 @@ async function cargarDatos() {
       const n = d.obras.find(x => x.video === o.video); if (!n) continue;
       const e = etapaDe(n.progreso);
       if (e > o.etapa) { polvo(o); sonar('listo', o.x, o.y, .8, .5); }
+      if (n.progreso > o.prog + 1e-4) darTrabajo(o, clamp((n.progreso - o.prog) * 400, 10, 40));   // la obra avanzó de verdad
       o.d = n; o.prog = n.progreso; o.etapa = e; ponMateriales(o, n);
       for (const m of o.mats) {
         const ya = (o.vis[m.id] || 0) + (o.camino[m.id] || 0), dn = m.hecho - ya;
@@ -1237,7 +1258,7 @@ if (MENU) {
   while (!(await cargarDatos())) { $('carga').textContent = 'La fábrica no contesta… reintentando'; await new Promise(r => setTimeout(r, 4000)); }
   $('carga').classList.add('fuera'); setTimeout(() => { $('carga').style.display = 'none'; }, 900);
   hud(); minimapa(); pausar();
-  setInterval(cargarDatos, TELE ? 60000 : 30000);
+  setInterval(cargarDatos, 20000);                               // = caché del servidor (obra_datos, 20 s): el material sale a tiempo
 })();
 </script>
 </body>

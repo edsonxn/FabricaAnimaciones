@@ -494,6 +494,18 @@ terreno con estacas y el logo del canal. Plan y detalle: `nucleo/obra/LEEME.md`.
   total. En el motor: la barra de arriba y el panel de la obra muestran los materiales de la obra enfocada con su cuenta y
   barrita; letrero en cada sitio («Mina · Voz» + «Voz: 40/116»); pila de cada material frente al edificio (`DEPM`,
   `dibPila`) que crece con lo entregado. Los recolectores solo van por lo que falta (`faltan`, `asignar`); con todo
-  completo se vuelven constructores. Al refrescar (30 s; 60 en la tele), si una cuenta sube, `llegaReal` manda hasta 3
-  aldeanos de vuelta con esa cantidad (`a.trae`): al descargar sube la pila, sale «+N Voz» y suena la descarga más
-  fuerte. Los viajes normales no mueven el contador. Si una cuenta baja (se rehízo), la pila baja sola.
+  completo se vuelven constructores. Al refrescar (cada 20 s = caché de `obra_datos`), si una cuenta sube, `llegaReal`
+  manda hasta 3 aldeanos de vuelta con esa cantidad (`a.trae`): al descargar sube la pila, sale «+N Voz» y suena la
+  descarga más fuerte. Si una cuenta baja (se rehízo), la pila baja sola.
+- **Al ritmo de lo real (19-nov, el usuario: «hasta que de verdad se genere o descargue es cuando sacan el recurso…
+  mientras no haya recursos… no se mueven»):** no hay viajes de mentira. El recolector llega a su sitio y pica, tala o
+  recoge SIN PARAR (`trab` sin plazo) hasta que `llegaReal` le pone `a.trae`; entonces termina el golpe y vuelve cargado.
+  Si va de ida, llega, da unos golpes y vuelve con él. Si su material se completa, vuelve vacío y `asignar` lo reasigna
+  (o lo vuelve constructor). Los constructores solo trabajan con `o.trabajo > 0`: segundos de trabajo que da cada
+  entrega real (`darTrabajo`, 6 + 1,5 por unidad, máx. 30) y cada avance real del `progreso` de la obra (400 s por
+  unidad de progreso, entre 10 y 40); se gastan mientras martillan (tope 90). Sin trabajo: estado `quieto`, de pie en su
+  lugar. Al abrir, 70 % de los recolectores ya trabajando en su sitio y los constructores quietos. El panel de la obra
+  dice «🔨 construyendo» o «esperando material».
+- **Capas (19-nov):** cimientos = capa de suelo y su letrero aparte; las rutas (`ruta`) rodean cualquier edificio (la
+  propia obra por un costado, las ajenas por delante o por detrás), los constructores se mueven por el frente (`PERIM`),
+  y lo horneado junto a una ruta (`PASO`, `pisado`, `tapado`) se ordena por y o se quita.

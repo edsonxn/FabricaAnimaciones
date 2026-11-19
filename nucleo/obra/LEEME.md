@@ -101,3 +101,40 @@ Siguiente, en orden:
 Recursos = materiales del video (guion, voz, clips, efectos, música) con su contador, de `obra_materiales()` en
 `panel_v2.py`; pilas frente a la obra, letreros en cada sitio, aldeanos solo por lo que falta y llegada al subir una cuenta
 real. Detalle en `docs/panel.md` § «Vista «La obra»». Probado con `wow_ruta_forever` (y cuentas simuladas que suben y se completan).
+
+## Sesión 4 (19-nov): animaciones de OCIO ✔ (abajo, el cierre)
+Pedido (el usuario vía la sesión «App de Google TV para ver La obra»): «cuando un aldeano esté inactivo ponlo dormido o
+sentado con alguna animación, genera las animaciones nuevas para que no se vean solo ahí congelados».
+NO tocar `nucleo/panel_obra.html` (lo edita la sesión «Continúa La obra — capas», local_a6e54548-cb50-47c1-880b-8336c648d887).
+Hecho:
+- `flow/ald_pico.jpg` bajada (6 cuadros: listo, sube, medio, arriba, baja, GOLPE). Su golpe es el cuadro 5; para igualar
+  el convenio del hacha (golpe = cuadro 4, recupera = 5) reordenar en `preparar_arte.py` a [0, 2, 3, 4, 5, 1].
+  Al bajarla sin gancho se abrió una descarga del navegador integrado (`E:\Downloads_jaire98ff3b5-….tmp`): borrar ese .tmp.
+Falta, en orden:
+1. En Flow (navegador integrado, proyecto «nov 19 - 12:54», https://flow.google.com/project/a63ef11e-8d97-4e33-951b-7ad35eac75cb)
+   generar con Nano Banana 2.1, 16:9, x1, una por una (Flow ya dio «actividad inusual» con prisas), con la MISMA plantilla
+   de las otras hojas (leerla en el proyecto: «Game art sprite sheet in the style of classic late-1990s isometric medieval
+   real-time strategy games… pure blue (#1f4fff) wool tunic… facing right. Animation frames: … All frames evenly spaced in
+   ONE horizontal row… Solid flat pure magenta (#FF00FF) background…»), cambiando solo «Animation frames»:
+   - dormir: 6 frames, lying asleep on his side on the ground, head to the right resting on his bent arm, eyes closed,
+     chest and shoulder rising and falling slightly (bucle); la «z» la dibuja el motor (sin texto en la hoja).
+   - sentado: 6 frames, sitting cross-legged on the ground eating a small loaf of bread (sube, muerde, mastica, baja).
+   - estirarse: 6 frames, standing, big lazy stretch with both arms over the head and a yawn, then back to rest.
+   - platicar: 6 frames, standing, talking and gesturing with the open right hand, small nods.
+   Prompt: editor `.ProseMirror` → `focus()` + `document.execCommand('insertText', false, prompt)` + tecla Return REAL.
+   Bajar SIN ventanas: antes de cualquier clic de descarga, gancho en `window.fetch`/XHR que junte
+   `flow-content.google/image/<uuid>?Expires…` de las respuestas `batchexecute` y `HTMLAnchorElement.prototype.click`
+   anulado; luego `curl` sin cookies a `flow/ald_<anim>.jpg`. (En JS no escribir «&»: usar «\u0026».)
+2. `preparar_arte.py`: agregar dormir 6, sentado 6, estirarse 6, platicar 6 (y pico con el reorden) a `ALDEANOS`, y un
+   modo que NO reescriba `panel_obra.html` (p. ej. `aldeanos --sin-html`). Para el acostado, el piso = fila más baja del cuerpo.
+   Correr, mirar `img/hoja_aldeanos.jpg` y cada bucle (que el primer y el último cuadro empaten).
+3. Mandar a la sesión de capas (SendMessage a local_a6e54548-…): nombres, n, w, h, ax, ay de `img/aldeanos.json`, que se
+   cargan como las demás (`/v2/obra/img/ald_<anim>_<tinta>.png`, `ALD_META[anim]`), qué cuadros van en bucle y que pico
+   ya existe con golpe en el cuadro 4.
+4. Commit en español solo de `preparar_arte.py`, `img/ald_*` nuevos, `img/aldeanos.json`, `img/hoja_aldeanos.jpg`, este LEEME; push.
+
+Cierre sesión 4: `flow/ald_dormir|sentado|estirarse|platicar.jpg` (Flow, Nano Banana 2.1) y `ald_pico.jpg` → recortadas con
+`preparar_arte.py aldeanos --sin-html` (no toca `panel_obra.html`; el pico reordenado a golpe = cuadro 4; dormir y sentado
+escalados por el ÁREA de la túnica, `POR_AREA`). Medidas en `img/aldeanos.json`; enviadas a la sesión de capas para el ocio.
+Bajar de Flow sin ventanas: el gancho `__scan2` (quita las barras invertidas y luego cambia `u003d`/`u0026`) saca la URL
+firmada de la respuesta `ogiZ0b` al terminar cada imagen; `curl` sin cookies.

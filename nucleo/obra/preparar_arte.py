@@ -3,7 +3,7 @@
 transparencia y hace las texturas de suelo repetibles.
 
   python nucleo/obra/preparar_arte.py           flow/*.jpg  ->  img/*.png  (+ img/hoja.jpg para revisarlos)
-  python nucleo/obra/preparar_arte.py aldeanos  flow/ald_<anim>.jpg -> img/ald_<anim>[_0-7].png + aldeanos.json
+  python nucleo/obra/preparar_arte.py aldeanos [--sin-html]  flow/ald_<anim>.jpg -> img/ald_<anim>[_0-7].png + aldeanos.json
                                                 (+ img/hoja_aldeanos.jpg; escribe ALD_META en panel_obra.html)
 
 Los originales de Flow (Nano Banana 2.1, 19-nov-2026; prompts en el docstring de abajo) viven en flow/. Estilo pedido:
@@ -82,7 +82,12 @@ def repetible(ruta, lado=512):
 
 # ------------------------------------------------------------------ aldeanos (hojas de animación de Flow, 19-nov-2026)
 # Cada hoja: el mismo aldeano mirando a la derecha, túnica azul pura (#1f4fff) para teñirla con el color del canal.
-ALDEANOS = {"caminar": 12, "cargar": 8, "hacha": 6, "martillo": 6, "recoger": 6, "pico": 6}
+ALDEANOS = {"caminar": 12, "cargar": 8, "hacha": 6, "martillo": 6, "recoger": 6, "pico": 6,
+            # ocio (19-nov, el usuario: «cuando un aldeano esté inactivo ponlo dormido o sentado con alguna animación»)
+            "dormir": 6, "sentado": 6, "estirarse": 6, "platicar": 6}
+# cuadros reordenados para que todas las herramientas sigan el convenio del hacha: golpe = cuadro 4, recupera = 5
+ORDEN = {"pico": [0, 2, 3, 4, 5, 1]}
+POR_AREA = ("dormir", "sentado")
 ALD_ALTO = 80            # alto del aldeano de pie en el archivo (en pantalla, la mitad)
 # los 8 colores de canal de panel_obra.html (const COL)
 COL = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
@@ -143,6 +148,7 @@ def cuadros(hoja):
     cen = ndimage.center_of_mass(tun, lt, ids)                 # (y, x) de cada túnica
     bb = ndimage.find_objects(lt)
     alt_t = np.median([bb[i - 1][0].stop - bb[i - 1][0].start for i in ids])
+    area_t = float(np.median([tam[i - 1] for i in ids]))       # para acostado/sentado (la túnica cambia de forma)
     filas = []                                                 # agrupar túnicas en filas por su y
     for j in sorted(range(len(ids)), key=lambda j: cen[j][0]):
         if filas and abs(cen[j][0] - np.mean([cen[q][0] for q in filas[-1]])) < alt_t:
@@ -196,10 +202,10 @@ def cuadros(hoja):
         p = rgba[y0:y1, x0:x1].copy()
         p[..., 3] = np.where(msk[y0:y1, x0:x1], p[..., 3], 0)
         out.append((p, cx[j] - x0, piso[j] - y0 + 1))
-    return out, k, alt_t
+    return out, k, (alt_t, area_t)
 
 
-def aldeanos():
+def aldeanos(escribir_html=True):
     """flow/ald_<anim>.jpg -> img/ald_<anim>.png (tira de cuadros iguales) + 8 tintas + img/aldeanos.json."""
     import json
     datos, hechas = {}, {}
@@ -212,10 +218,15 @@ def aldeanos():
         if len(cs) != n:
             print(f"  ¡ald_{anim}: salieron {len(cs)} cuadros y esperaba {n}!")
         if k is not None and k_ref is None:
-            k_ref, t_ref = k, alt_t
-        hechas[anim] = (cs, alt_t)
-    for anim, (cs, alt_t) in hechas.items():
-        esc = k_ref * t_ref / alt_t                            # misma túnica = mismo tamaño en todas las hojas
+            k_ref, t_ref, a_ref = k, alt_t[0], alt_t[1]
+        if anim in ORDEN and len(cs) == len(ORDEN[anim]):
+            cs = [cs[i] for i in ORDEN[anim]]
+        hechas[anim] = (cs, alt_t[0], alt_t[1])
+    for anim, (cs, alt_t, area_t) in hechas.items():
+        if anim in POR_AREA:                                   # acostado o sentado: misma cantidad de túnica
+            esc = k_ref * (a_ref / area_t) ** 0.5
+        else:
+            esc = k_ref * t_ref / alt_t                        # misma túnica = mismo tamaño en todas las hojas
         izq = max(ax for _, ax, _ in cs) * esc
         der = max(p.shape[1] - ax for p, ax, _ in cs) * esc
         arr = max(ay for _, _, ay in cs) * esc
@@ -239,7 +250,7 @@ def aldeanos():
     html = os.path.join(os.path.dirname(AQUI), "panel_obra.html")
     t = open(html, encoding="utf-8").read()
     t2 = re.sub(r"const ALD_META = .*?; // ALD_META", "const ALD_META = " + json.dumps(datos, separators=(",", ":")) + "; // ALD_META", t)
-    if t2 != t:
+    if escribir_html and t2 != t:
         open(html, "w", encoding="utf-8", newline="").write(t2)
         print("  panel_obra.html: ALD_META al día")
     # hoja de revisión: cada tira en 2 tintas sobre pasto gris
@@ -256,8 +267,8 @@ def aldeanos():
 def main():
     import sys
     os.makedirs(IMG, exist_ok=True)
-    if sys.argv[1:] == ["aldeanos"]:
-        aldeanos()
+    if sys.argv[1:2] == ["aldeanos"]:
+        aldeanos(escribir_html="--sin-html" not in sys.argv)
         return
     hechos = []
     for hoja, (nombres, alto) in HOJAS.items():

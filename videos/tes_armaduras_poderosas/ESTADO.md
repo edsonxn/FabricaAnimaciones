@@ -11,7 +11,7 @@
 - leer al empezar: docs/estilo_secuencia_yt.md § REGLA DE ORO, § Crónicas de Tamriel; ejemplo `videos/tes_builds_rotas/` (guion.py, efectos.py, armar_musica_ost.py, _bordes.py, _render_tramos.sh) y `videos/tes_secretos_40/efectos.py`
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | TODO: investigación + guion + voz + beats + clips + pegatinas + MG + mapas + OST + mezcla + render + miniatura + subida | ◐ 19-nov parcial (s3) | s1: investigación, guion, OST, MG, pegatinas, coords; voz. s2: pegatinas 76, coords corregidas, comentarios, efectos.py escrito, seleccionar en CPU; corte por contexto |
+| 1 | TODO: investigación + guion + voz + beats + clips + pegatinas + MG + mapas + OST + mezcla + render + miniatura + subida | ✔ 19-nov (s3): MASTER + subido CN-dlZmQ-Ag (25-nov 18:08Z) | s1: investigación, guion, OST, MG, pegatinas, coords; voz. s2: pegatinas 76, coords corregidas, comentarios, efectos.py escrito, seleccionar en CPU; corte por contexto |
 
 ## Decisiones del episodio (18-nov-2026)
 - tema elegido por Claude («tú elige el tema según lo que mejor vaya a funcionar», 28 min): secuela de `tes_armas_poderosas` (×4,26, 53 % visto). Lo que el jugador USA gana en el canal (inútiles ×5,7/55 %, armas 53 %, builds 12,3 mil); el lore largo rinde la mitad (Reina Loba 3,3 mil, Dwemer 6,9 mil). Ref. de fuera: «60 Useless Skyrim Facts» ×86, SmackerUnknown (objetos concretos).
@@ -50,11 +50,24 @@
 - 19-nov 09:20 (s3, 2.º aviso de contexto): chequeo OK (idioma 156/156; densidad MG 2,1/min vs 3,7 del canal; OCR = interfaz del juego salvo la marca SKYRIMGAMES de qFgT0Ek-0IA → `recorte_por` .10 en 001/108/109). `FAB_FX_FINAL=1 fx hoja` HECHO → previews/fx_01..12.jpg SIN MIRAR. SIGUE: mirar fx_01..12 → `fx` (montaje) → render por tramos (`_render_tramos.sh` con V=tes_armaduras_poderosas, tramos 0-560 560-1120 1120-1674) → concat → `FAB_CONSERVAR=1 final` → verificar → avisar → miniatura → subida 25-nov 18:08Z → monetización → registro → commit. Pendiente opcional: 019 cabeza invisible en Flow RECREACIÓN.
 - 19-nov (s3): fx_01..12 MIRADAS (todo dentro, sin encimados; MG ébano/daédrica con +1,4 s para que la barra llegue a 50). **RENDER LANZADO** `bash _render_tramos.sh > _render.log` (tramos 0-560, 560-1120, 1120-1674 → salida/tramo_*.mp4; termina con FIN). SIGUE: concat → `FAB_CONSERVAR=1 fab.py <v> final` → verificar → avisar → miniatura → subida.
 - 19-nov 09:10 (s3): MINIATURA HECHA en Flow (salida/miniatura.jpg, variante A; detalle en prompt_miniatura.md). `_tras_render.sh` en 2.º plano (espera FIN de `_render.log` → concat → final → verificar → avisar; log `_tras_render.log`, TRAS_FIN). SIGUE: al TRAS_FIN → `python _youtube.py` → `fab.py yt subir tes_armaduras_poderosas cronicas_tamriel private --publicar 2026-11-25T18:08:00Z` → monetización Studio → registro → commit.
+- 19-nov 10:20 (s3): ◐ MASTER HECHO y verificado (salida/tes_armaduras_poderosas_MASTER.mp4, 1 827 MB, 1693 s, 1080p30, pantalla final anexada; hoja previews/final_hoja.jpg MIRADA, nombres reales). `yt subir … private --publicar 2026-11-25T18:08:00Z` EN CURSO (log `_subida.log`). SIGUE: id del video → Studio monetización (Anuncios + mid-roll + cuestionario) + pantalla final (Canal = Radio Yermo) → `yt monetizado <id>` → registro → commit.
 ## Hecho
 - video creado (`nuevo --yt`); comentarios leídos (85 nuevos); métricas 90 d guardadas; candado en `fab.py nuevo` contra nombres «-…».
 
 ## Falta
-- [ ] guion → voz → seleccionar → idioma_voz → tiempo → beats → busquedas → bajar → hojas/texto_clips → pegatinas → mapas → efectos.py → OST → ambiente/fx/mezcla → chequeo → promesas → bordes → fx hoja → render → final → verificar → miniatura Flow → youtube.json → subir 25-nov 18:08Z → monetización Studio → registrar
+- [x] (19-nov s3) todo hasta la subida: CN-dlZmQ-Ag, privado, programado 25-nov 18:08Z, miniatura + .srt aplicados; registrado en canales/cronicas_tamriel.json y BITACORA.
+- [ ] ~~guion → voz → seleccionar → idioma_voz → tiempo → beats → busquedas → bajar → hojas/texto_clips → pegatinas → mapas → efectos.py → OST → ambiente/fx/mezcla → chequeo → promesas → bordes → fx hoja → render → final → verificar → miniatura Flow → youtube.json → subir 25-nov 18:08Z → monetización Studio → registrar~~
+- [x] (19-nov ~11:00) Monetización en Studio: Anuncios Activada + mid-roll marcado + cuestionario (Violencia 1.ª, Desagradable 1.ª → «Adecuado para anuncios»), al recargar «Comprobando» con mid-roll; `yt monetizado` hecho (0 pendientes). Pantalla final (20 s): Vídeo «Mejor opción» + Suscribirse + Canal Radio Yermo («Sintoniza Radio Yermo: Fallout»).
+- [ ] Opcional: 019 cabeza invisible en Flow RECREACIÓN (hoy solo ficha roja + clip neutro).
+
+## Lecciones (19-nov, s3)
+- Las búsquedas automáticas `--q` de efectos traen menús de otro objeto, mods (Overlord, daédrica blanca), marcas de agua (majorstuck, GAMEPLAY ONLY, SKYRIMGAMES), facecam y texto quemado: los beats donde la voz nombra un EFECTO se eligen a mano por URL + segundo exacto (`_efectos_vivos.txt` → `bajar --url --desde`), mirando antes la hoja de `_buscar_efecto.py`/`_fino.py`.
+- `bajar --url` a veces «se queda con el clip anterior» (001, 058): probar otra URL/segundo.
+- Una marca de agua de otro canal se tapa con `recorte_por` en guion.SECUENCIA (.10 por lado bastó).
+- Display de efectos.py con nombres REALES del juego (Konahrik, Miraak, Ysgramor); las ANCLAS se quedan con la grafía fonética de la voz. Cambiarlo con script rompe las anclas de PISTAS: tocar solo los textos que se ven.
+- `_sonido_original.py` truena con clips sin pista de audio (scene-046): parche `_wav` → None.
+- Studio con el panel del navegador OCULTO: el `.click()` por JS en el diálogo de monetización NO abre el cuestionario y «Guardar» queda gris; con clics reales (`computer left_click` por ref) sí sale el cuestionario → Enviar → Guardar.
+- Studio abre en Edsonxn: `youtube.com/account` → clic en «Cronicas de Tamriel» y luego la URL del video.
 
 ## Cómo retomar (comandos)
 ```

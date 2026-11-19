@@ -3,6 +3,7 @@
 
   python fab.py limpiar --publicados            simulación: qué se borraría y cuánto libera
   python fab.py limpiar --publicados --borrar   lo borra de verdad (sin papelera) y lo anota en el registro
+  ... --conservar-master                         no toca los *_MASTER.mp4 (el usuario, 19-nov-2026)
 
 Público = en canales/<alias>.json → publicados tiene `id` y es «public» o su fecha
 (publicado / programado / publicar) ya pasó. Los subidos a futuro y las reservas privadas no se tocan.
@@ -19,6 +20,7 @@ import sys
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VIDEOS = os.path.join(RAIZ, "videos")
 VIDEO_EXT = {".mp4", ".webm", ".mkv", ".mov", ".m4a", ".avi"}
+CONSERVAR_MASTER = "--conservar-master" in sys.argv
 REGISTRO = r"E:\FabricaAnimaciones\_limpieza_publicados.txt"
 
 
@@ -48,6 +50,8 @@ def pesados(video):
         for x in fs:
             ext = os.path.splitext(x)[1].lower()
             if ext in VIDEO_EXT or (ext == ".wav" and top != "voz"):
+                if CONSERVAR_MASTER and x.endswith("_MASTER.mp4"):
+                    continue
                 p = os.path.join(r, x)
                 try:
                     yield p, os.path.getsize(p)

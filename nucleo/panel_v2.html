@@ -585,7 +585,7 @@ const LS={get(k,d){try{const x=localStorage.getItem(k);return x==null?d:JSON.par
 const postJSON=(u,d)=>fetch(u,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d||{})});
 const pedir=async u=>{const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status===404?"el panel aún no tiene el lienzo: reinícialo una vez (python fab.py panel)":r.status+" "+(await r.text()).slice(0,200));return r.json()};
 const COLOR={bitacora_perdida:"#e0703a",cronopapel:"#c8623c",sapiens_con_wifi:"#c2185b",kuriox:"#40c4be",edsonxn:"#e0323c",logia:"#a9a9b8",wild_next_door:"#e8b923",
-  pieza_oculta:"#c97b4a",experimento:"#6f87d8",cronicas_warcraft:"#3d7bd9",cronicas_tamriel:"#a8844e",runa_caida:"#c9a43a",cronicas_gaming:"#8a5cf6",cuerpo_en_neon:"#d6d23a",radio_yermo:"#3cff8c"};
+  pieza_oculta:"#c97b4a",experimento:"#6f87d8",cronicas_warcraft:"#3d7bd9",cronicas_tamriel:"#a8844e",runa_caida:"#c9a43a",cronicas_gaming:"#8a5cf6",cuerpo_en_neon:"#d6d23a",radio_yermo:"#3cff8c",mil_por_minuto:"#ff6a1a"};
 const FONDOS=new Set(["bitacora_perdida","cronopapel","edsonxn","experimento","kuriox","logia","sapiens_con_wifi"]);
 const colorDe=c=>{if(COLOR[c])return COLOR[c];let h=0;for(const ch of String(c))h=(h*31+ch.charCodeAt(0))%360;return `hsl(${h} 55% 56%)`};
 const ICO={listo:"✓",en_curso:"●",parcial:"◐",atencion:"!",omitido:"–",pendiente:""};

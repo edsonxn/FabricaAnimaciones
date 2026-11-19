@@ -14,6 +14,7 @@ Cada juego tiene su TEMA (trazo, marcadores, letra y título como en su propia i
   "tes"     puntos hueso con sombra; marcador de misión de Skyrim (triángulo invertido que flota) en la meta; Bahnschrift Condensed
             en MAYÚSCULAS espaciadas sobre humo negro; título con separadores de rombo (como mg_tes).
   "fo"      (Fallout, Radio Yermo) fósforo verde de Pip-Boy, rayas verdes, marcadores = escuadras de selección del mapa del Pip-Boy.
+  "planta"  (Mil por Minuto, fábricas) naranja de seguridad sobre acero, rayas, marcadores = cuadro de planta con mira; meta amarilla.
   "gaming"  (Nintendo/plataformas de Rare) bolitas miel que brotan con rebote como el mapa de un plataformas; pines de colores;
             Arial Rounded en píldora chocolate; título Cooper Black.
   "zelda"   (aventura de fantasía) puntos dorados, triángulo dorado en la meta, Engravers MT grabado sobre banda azul noche.
@@ -136,6 +137,12 @@ TEMAS = {
     "fo": dict(trazo="rayas", color=(60, 255, 140), borde=(4, 16, 8), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
                texto=(170, 255, 196), contorno=None, titulo=("bahnschrift.ttf", 86, "Bold Condensed"),
                subt=("bahnschrift.ttf", 36, "SemiBold Condensed"), tinte=(.70, .95, .75, .12), fondo=(4, 13, 7)),
+    # Mil por Minuto (fábricas, alta 19-nov-2026): BASE PROVISIONAL con los colores del logo/banner (naranja de seguridad
+    # (255,106,26), acero (15,18,22), amarillo de peligro (255,196,0)): ruta a RAYAS naranja (ruta de camiones planta → tiendas),
+    # marcadores = cuadro de planta como cod (meta amarilla = tienda/destino), Bahnschrift condensada en mayúsculas. Ajustar en el 1.er video.
+    "planta": dict(trazo="rayas", color=(255, 106, 26), borde=(15, 18, 22), grueso=6, letra=("bahnschrift.ttf", 42, "Bold Condensed"),
+                   texto=(246, 242, 236), contorno=None, titulo=("bahnschrift.ttf", 86, "Bold Condensed"),
+                   subt=("bahnschrift.ttf", 36, "SemiBold Condensed"), tinte=(.86, .86, .88, .10), fondo=(15, 18, 22)),
 }
 
 
@@ -272,11 +279,12 @@ def _marcador(tema, tipo):
                 d.rectangle((c - r - 9, c - r - 9, c + r + 9, c + r + 9), outline=col + (90,), width=2)
             d.rectangle((c - 7, c - 7, c + 7, c + 7), fill=(4, 14, 8, 220))
             d.rectangle((c - 5, c - 5, c + 5, c + 5), fill=col)
-        elif tema == "cod":
-            col = {"meta": (226, 54, 46), "peligro": (226, 54, 46)}.get(tipo, T["color"])
+        elif tema in ("cod", "planta"):
+            col = ({"meta": (226, 54, 46), "peligro": (226, 54, 46)} if tema == "cod" else
+                   {"meta": (255, 196, 0), "peligro": (226, 54, 46)}).get(tipo, T["color"])
             r = 20 if tipo in ("meta", "inicio") else 15
             im.alpha_composite(_halo(26, col, 120), (int(c - 52), int(c - 52)))
-            d.rectangle((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=(10, 12, 12, 210))
+            d.rectangle((c - r - 4, c - r - 4, c + r + 4, c + r + 4), fill=((10, 12, 12) if tema == "cod" else T["borde"]) + (210,))
             d.rectangle((c - r, c - r, c + r, c + r), outline=col, width=4)
             if tipo == "meta":                              # mira: cruz que sale del cuadro
                 for a, b in (((c - r - 14, c), (c - r + 6, c)), ((c + r - 6, c), (c + r + 14, c)),
@@ -348,7 +356,7 @@ def _etiqueta(tema, texto, tipo):
         T = TEMAS[tema]
         nom, tam, var = T["letra"]
         f = _fuente(nom, tam, var)
-        s = texto.upper() if tema in ("tes", "zelda", "cod", "fo") else texto
+        s = texto.upper() if tema in ("tes", "zelda", "cod", "fo", "planta") else texto
         track = 3 if tema == "tes" else (2 if tema == "zelda" else 0)
         dd = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
         tw = int(_track(dd, s, f, track))
@@ -360,7 +368,7 @@ def _etiqueta(tema, texto, tipo):
         col = (226, 70, 56) if tipo == "peligro" else T["texto"]
         if tema == "wow":
             _escribe(d, x0, cy, s, f, (255, 120, 90) if tipo == "peligro" else col, stroke=4, stroke_color=(0, 0, 0))
-        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon", "cod", "fo"):    # banda/humo negro difuso detrás
+        elif tema in ("er", "tes", "majora", "mario64", "spyro", "n64", "pokemon", "cod", "fo", "planta"):    # banda/humo negro difuso detrás
             m = Image.new("L", im.size, 0)
             ImageDraw.Draw(m).rounded_rectangle((P - 6, P - 2, w - P + 6, h - P + 2), 20, fill=200)
             m = m.filter(ImageFilter.GaussianBlur(14))

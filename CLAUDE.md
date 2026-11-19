@@ -72,6 +72,7 @@ Pipeline propio (Python, todo local) que produce videos animados 2D con narraci�
 | T Menos Cero (`t_menos_cero`) §C17 | Línea 3D cohetes (14-nov) | `cohete_crs30/` | `estilo_linea3d.md` |
 | Radio Yermo (`radio_yermo`) §C18 | Fallout = receta de Tamriel, Profeta con filtro de radio (17-nov) | `tes_secretos_40/` | `formula/radio_yermo.md` |
 | Amaya Vibes (`canal_amaya`) §C19 | Scrapbook coquette, voz Regina (10-nov; no subir sin su OK) | `amaya_navidad/` | `estilo_scrapbook_coquette.md` |
+| Mil por Minuto (`mil_por_minuto`) §C20 | Cómo se fabrican las marcas + el negocio, SECUENCIA YT + plano de la línea y contador, voz Brian C (19-nov) | `tes_secretos_40/` | `formula/mil_por_minuto.md` |
 
 (Docs en `docs/`, ejemplos en `videos/`, fórmulas en `canales/formula/`.) **Reels «Que pasa en Juchipila»** = secuencia vertical `jch_<tema>`, no van a YouTube. → RGC §R38
 **Video sin canal: preguntar antes** (AskUserQuestion): secuencia con efectos tipo Flow o animación por código; catálogo de otros estilos (noir color, rayos X, terror CRT, anuncio de app, grabado de peste, línea neón, anime vivo, pegatina Flow, línea 3D, análisis táctico…); toda lámina con profundidad, nunca «página web» (14-oct). → RGC §R39 · arranque rápido por código → RGC §R40

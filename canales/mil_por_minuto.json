@@ -1,0 +1,86 @@
+{
+ "canal_id": "UCszgmM9dLbLQBl0kfLIM-Ag",
+ "nombre": "Mil por Minuto",
+ "handle": "@MilPorMinutoMX",
+ "estilo": "Cómo se fabrican las marcas conocidas + el NEGOCIO detrás (alta 19-nov-2026, bajo la cuenta de Google de Edsonxn; referencia JPaniagua Docs, Maruchan ×19,7). Motor SECUENCIA YT (clip real por beat: videos oficiales de planta y anuncios de la marca, tours, noticias, con yt-dlp), regla de oro de tes_secretos_40. Firma propia: CONTADOR de producción en una esquina, PLANO animado de la línea estación por estación (kit nucleo/mg_planta.py, pendiente del 1.er video), cifras gigantes de dinero y volumen, mapa real con ruta planta → tiendas (tema 'planta' de mg_mapa), pegatinas de productos y fundadores, Flow marcado RECREACIÓN para el interior de máquinas. Estructura 15-18 min: gancho con la cifra → origen → proceso en 8-12 estaciones → suscripción (~4:30) → trivia (~9:00) → escala → mitos con datos → logística/mapa → el negocio → cierre circular. Música Lyria (no es canal de juegos), SFX de máquinas. Ver canales/formula/mil_por_minuto.md",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "18:37",
+  "utc": "00:37",
+  "ciclo_dias": 4,
+  "separacion_min_horas": 96,
+  "nota": "Provisional (alta 19-nov-2026): público general, tarde-noche; ningún otro canal sube a esa hora. 00:37 UTC = día siguiente. AJUSTABLE por Claude con datos.",
+  "historial": [
+   {
+    "fecha": "2026-11-19",
+    "ciclo_dias": 4,
+    "hora_local": "18:37",
+    "motivo": "alta del canal, sin datos propios"
+   }
+  ]
+ },
+ "publicados": [],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "como se fabrica",
+   "asi se fabrican",
+   "como se hacen",
+   "dentro de la fabrica",
+   "como se hace por dentro",
+   "proceso de fabricacion",
+   "fabrica de takis",
+   "como se hace la coca cola"
+  ],
+  "competidores": [],
+  "dias": 60,
+  "min_vistas": 1000,
+  "filtro": [
+   "fabrica",
+   "fábrica",
+   "fabrican",
+   "se hace",
+   "se hacen",
+   "planta",
+   "producción",
+   "produccion",
+   "negocio",
+   "por dentro"
+  ]
+ },
+ "estado": "19-nov-2026: canal creado por Claude en Studio (nombre, @MilPorMinutoMX, logo por código, descripción, palabras clave, país MX, no es para niños). PENDIENTE del usuario: verificar por SMS (youtube.com/verify con Mil por Minuto activo) y conectarlo a la API; después Claude sube el banner (el navegador integrado no abre el selector de archivos) e idioma es-419 por API. 1.er video: Takis, Coca-Cola en México o Bimbo/Gansito (fórmula).",
+ "descripcion": "¿Cómo se fabrican las marcas que compras todos los días? En Mil por Minuto entramos a la planta: Takis, Coca-Cola, Bimbo, Maruchan, Sabritas, Lego y más, explicados en español paso a paso, de la materia prima al anaquel. Planos animados de cada línea de producción, mapas de las plantas y las rutas, cifras reales y el NEGOCIO detrás de cada producto: cuánto vende, cuánto fabrica por minuto y por qué es tan barato (o tan caro). Nuevo video cada semana. Suscríbete y no vuelvas a ver el súper igual.",
+ "palabras_clave": [
+  "cómo se fabrica",
+  "cómo se hace",
+  "así se fabrica",
+  "dentro de la fábrica",
+  "fábricas",
+  "línea de producción",
+  "proceso de fabricación",
+  "Takis",
+  "Coca-Cola",
+  "Bimbo",
+  "Maruchan",
+  "Sabritas",
+  "marcas",
+  "negocios",
+  "documental"
+ ],
+ "idioma": "es-419",
+ "pais": "MX",
+ "banner": "canales/arte/mil_por_minuto/BANNER_2560x1440.jpg",
+ "banner_subido": false,
+ "logo": "canales/arte/mil_por_minuto/LOGO_800.jpg",
+ "enlaces": [],
+ "voz": {
+  "motor": "elevenlabs",
+  "voice_id": "Czw3Dn181ypdrCOnPfif",
+  "nombre": "Brian C («Clean, professional, warm», Latinoamérica)",
+  "modelo": "eleven_v4_turbo",
+  "filtro": null,
+  "elegida": "2026-11-19, Claude (finalista del casting de Radio Yermo; ningún otro canal la usa)",
+  "muestras": "videos/_muestras_voz_fallout/04_brian.mp3"
+ }
+}

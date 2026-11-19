@@ -502,6 +502,12 @@ Al «buenos días»: `python fab.py buenosdias` y propones el plan del día (can
 |---|---|---|---|
 | **Amaya Vibes** (`canal_amaya`, canal de Amaya, la hija del usuario, 12 años; alta 10-nov-2026; el YouTube lo crea el usuario: no subir sin su OK) | **SCRAPBOOK COQUETTE** (listas para preadolescentes: «15 sí y 10 NO»): vichy/rayas pastel, letras recortadas pastel, stickers de productos de Flow + dibujados por código, SU AVATAR de presentadora, sellos ¡SÍ PÍDELO!/NI SE TE OCURRA, etiquetas $; voz ElevenLabs Regina (narra Amaya: «Soy Amaya»); Lyria coquette; SFX por código; sin memes dudosos | `videos/amaya_navidad/` | `docs/estilo_scrapbook_coquette.md` |
 
+### C20 · Canal Mil por Minuto
+
+| Canal (alias) | Estilo | Copiar de | Doc |
+|---|---|---|---|
+| **Mil por Minuto** (`mil_por_minuto`, @MilPorMinutoMX, UCszgmM9dLbLQBl0kfLIM-Ag, alta 19-nov-2026 bajo la cuenta de Edsonxn; arte por código en `canales/arte/mil_por_minuto/`; el usuario solo verifica) | **Cómo se fabrican las marcas conocidas + el NEGOCIO** (público general; ref. JPaniagua Docs, Maruchan ×19,7): SECUENCIA YT con clip real por beat (planta y anuncios oficiales) + firma propia: **CONTADOR de producción** en una esquina, **PLANO animado de la línea** estación por estación (`nucleo/mg_planta.py`, pendiente del 1.er video, de fotos reales de las máquinas), cifras gigantes, mapa con ruta planta → tiendas (tema `planta` de `mg_mapa`/`peg_estilos`), Flow «RECREACIÓN» para el interior de máquinas; 15-18 min con suscripción ~4:30 y trivia ~9:00; voz ElevenLabs **Brian C** `Czw3Dn181ypdrCOnPfif` sin filtro; Lyria (no es canal de juegos) + SFX de máquinas; protegido en `filtro_canal.py` (prefijo `mpm_`); horario provisional cada 4 días 18:37 CDMX | `videos/tes_secretos_40/` (regla de oro) | `canales/formula/mil_por_minuto.md` · `docs/estilo_secuencia_yt.md` |
+
 ### R38 · Reels de Facebook «Que pasa en Juchipila»
 
 Reels de Facebook «Que pasa en Juchipila»: secuencia con efectos VERTICAL (`jch_<tema>`), receta en `E:\PaginaFace\CLAUDE.md` § «hazme un reel»; no van a YouTube.

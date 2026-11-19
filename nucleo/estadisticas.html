@@ -204,7 +204,7 @@ tbody tr:hover{background:var(--hover)}
 .tl-cx circle{fill:var(--c)}
 @keyframes tl-flujo{to{stroke-dashoffset:-20}}
 .tl-p{position:absolute;top:1.3rem;width:212px;z-index:1;opacity:calc(.4 + .6 * var(--o, 1))}
-.tl-p-h{display:flex;align-items:baseline;gap:.4rem;margin:0 0 .35rem;font-size:.74rem;color:var(--muted);white-space:nowrap}
+.tl-p-h{display:flex;align-items:baseline;gap:.4rem;margin:0 0 .35rem;font-size:.74rem;color:var(--muted);white-space:nowrap;overflow:hidden}
 .tl-p-h b{font-size:1rem;font-weight:750;color:var(--ink);font-variant-numeric:tabular-nums}
 .tl-p-h .late{color:var(--red);font-weight:700}
 .obra{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);
@@ -241,6 +241,19 @@ tbody tr:hover{background:var(--hover)}
 .tl-h b{display:block;margin-top:.55rem;font-size:.86rem;font-weight:750;font-variant-numeric:tabular-nums}
 .tl-h span{display:block;font-size:.68rem;color:var(--muted);line-height:1.25}
 .tl-h.late .caja{border-color:var(--red)}
+/* Hueco por llenar: nadie lo está produciendo; logo del canal sobre una de sus miniaturas, como terreno con estacas */
+.tl-p.libre{width:176px}
+.tl-p.libre .tl-p-h b{font-size:.9rem}
+.obra.vacia{background:#1b2030;outline:2px dashed color-mix(in srgb,var(--c) 75%,#fff);outline-offset:-2px}
+.obra.vacia .fondo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(1.5px) brightness(.6) saturate(1.15);transform:scale(1.06);pointer-events:none}
+.obra.vacia::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 88%,#000) 0,color-mix(in srgb,var(--c) 70%,transparent) 38%,transparent 85%)}
+.obra.vacia .logo{position:absolute;left:9px;top:50%;width:48px;height:48px;margin-top:-24px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 3px 10px rgba(0,0,0,.5);background:#fff}
+.obra.vacia .txt{position:absolute;left:66px;right:6px;top:50%;transform:translateY(-50%);color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.7);line-height:1.15}
+.obra.vacia .txt b{display:block;font-size:.86rem;font-weight:800;letter-spacing:.02em;text-transform:uppercase}
+.obra.vacia .txt span{display:block;font-size:.7rem;font-weight:600;opacity:.92;margin-top:.15rem}
+.obra.vacia .estaca{position:absolute;width:5px;height:12px;background:#e2b259;border-radius:1px;box-shadow:0 1px 2px rgba(0,0,0,.5)}
+.tl-h.libre .caja{border-style:dotted;background:var(--panel)}
+.tl-h.libre b{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){.tl-cx path,.obra .bloques i.w,.obra .grua .gancho,.obra .chispa{animation:none}}
 @media(max-width:760px){.tl-p{width:176px}}
 
@@ -287,7 +300,7 @@ if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListen
     </div>
     <div class="tl-box"><span class="tl-lab" id="tl-lab-p" hidden>En producción</span><span class="tl-lab" id="tl-lab-v" hidden>Publicaciones</span>
       <div class="tl" id="tl"><div class="tl-pista" id="tl-pista"></div></div></div>
-    <p class="note">Abajo, todos los canales en orden de salida (largos y Shorts programados, más lo que salió en los últimos 3 días, en gris). Arriba, lo que está en producción: cuelga del hueco donde saldría (el siguiente del ciclo del canal, a su hora) y su miniatura se va construyendo según avanza; con boceto si aún no tiene la final. Gira la rueda del ratón o arrastra para moverte; clic en un video lo abre en Studio.</p>
+    <p class="note">Abajo, todos los canales en orden de salida (largos y Shorts programados, más lo que salió en los últimos 3 días, en gris). Arriba, lo que está en producción: cuelga del hueco donde saldría (el siguiente del ciclo del canal, a su hora) y su miniatura se va construyendo según avanza; con boceto si aún no tiene la final. Los «Por llenar» (logo del canal, línea punteada) son huecos de los próximos 10 días que nadie está produciendo todavía. Gira la rueda del ratón o arrastra para moverte; clic en un video lo abre en Studio.</p>
   </section>
 
   <section class="card" id="cal-card">
@@ -591,7 +604,10 @@ function videosTl() {
 }
 function obrasTl() {                                        // videos en producción con el hueco donde saldrían (estadisticas.py)
   const vs = [];
-  activos().forEach(c => (c.prod || []).forEach(p => { const t = Date.parse(p.sale); if (t) vs.push({c, p, t, hueco: true}); }));
+  activos().forEach(c => {
+    (c.prod || []).forEach(p => { const t = Date.parse(p.sale); if (t) vs.push({c, p, t, hueco: true}); });
+    (c.libres || []).forEach(h => { const t = Date.parse(h.sale); if (t) vs.push({c, p: {...h, titulo: 'Falta un video de ' + c.nombre}, t, hueco: true, libre: true}); });
+  });
   return vs.sort((a, b) => a.t - b.t);
 }
 // Orden de obra: de abajo hacia arriba, piso por piso, con un poco de desorden fijo por video (como albañiles de verdad)
@@ -633,7 +649,8 @@ function pintaTl() {
   const tl = $('tl'), pista = $('tl-pista'), obras = obrasTl(), vs = videosTl().concat(obras).sort((a, b) => a.t - b.t), ahora = Date.now(), fut = vs.filter(x => x.t > ahora && !x.hueco);
   const hoy = claveDia(ahora), man = claveDia(ahora + DIA);
   $('tl-sum').textContent = (fut.length ? `${fut.length} programado${fut.length === 1 ? '' : 's'} · el siguiente sale ${cuenta(fut[0].t)}` : 'Nada programado')
-    + (obras.length ? ` · ${obras.length} en producción` : '');
+    + (obras.some(x => !x.libre) ? ` · ${obras.filter(x => !x.libre).length} en producción` : '')
+    + (obras.some(x => x.libre) ? ` · ${obras.filter(x => x.libre).length} huecos por llenar` : '');
   pista.classList.toggle('con-prod', !!obras.length); $('tl-lab-p').hidden = $('tl-lab-v').hidden = !obras.length;
   if (!vs.length) { pista.innerHTML = '<div class="empty">No hay videos programados en los canales elegidos.</div>'; return; }
   const dias = [];
@@ -647,8 +664,8 @@ function pintaTl() {
       <div class="tl-img"><img loading="lazy" alt="" draggable="false" src="${esc(SERVIDO && c.minis?.[v.id] || 'https://i.ytimg.com/vi/' + v.id + '/mqdefault.jpg')}" data-yt="https://i.ytimg.com/vi/${esc(v.id)}/mqdefault.jpg" onload="if(this.naturalWidth<=120)this.onerror()" onerror="if(this.dataset.yt&amp;&amp;this.src!==this.dataset.yt){this.src=this.dataset.yt}else{this.outerHTML='<span class=sin>Sin miniatura todavía</span>'}">${short ? '<span class="tag">Short</span>' : ''}</div>
       <div class="tl-t">${esc(v.titulo)}</div>
       <div class="tl-c"><i class="dot"></i>${esc(c.nombre)}</div></a>`;
-  const hueco = ({c, p, t}, i) => `<div class="tl-h ${p.atrasado ? 'late' : ''}" data-o="${i}" style="--c:${color(c)}" title="Aquí saldría «${esc(p.titulo)}» (${esc(c.nombre)})${p.atrasado ? ': el canal ya va atrasado' : ''}">
-      <i class="caja"></i><b>${fhora(t)}</b><span>${p.atrasado ? 'atrasado' : 'hueco'}<br>${esc(c.nombre)}</span></div>`;
+  const hueco = ({c, p, t, libre}, i) => `<div class="tl-h ${p.atrasado ? 'late' : ''} ${libre ? 'libre' : ''}" data-o="${i}" style="--c:${color(c)}" title="${libre ? 'Hueco por llenar de ' + esc(c.nombre) + ': nadie está produciendo este video' : 'Aquí saldría «' + esc(p.titulo) + '» (' + esc(c.nombre) + ')'}${p.atrasado ? ': el canal ya va atrasado' : ''}">
+      <i class="caja"></i><b>${fhora(t)}</b><span>${p.atrasado ? 'atrasado' : libre ? 'por llenar' : 'hueco'}<br>${esc(c.nombre)}</span></div>`;
   const item = x => x.hueco ? hueco(x, obras.indexOf(x)) : tarjeta(x);
   const marca = `<div class="tl-ahora" id="tl-ahora"><span>Ahora ${fhora(ahora)}</span></div>`;
   pista.innerHTML = dias.map(d => {
@@ -657,7 +674,7 @@ function pintaTl() {
     if (d.k === hoy) fila += marca;
     fila += d.xs.filter(x => x.t > ahora).map(item).join('');
     return `<div class="tl-dia ${d.k === hoy ? 'hoy' : ''}"><h4>${nombre}</h4><div class="tl-fila">${fila}</div></div>`;
-  }).join('') + obras.map(({c, p, t}, i) => `<div class="tl-p" data-o="${i}" style="--c:${color(c)}" title="${esc(p.titulo)} — ${esc(c.nombre)} · ${Math.round(p.progreso * 100)} % (${esc(p.etapa_n || 'sin etapa')}) · saldría ${fdiaLargo(t)} ${fhora(t)}">
+  }).join('') + obras.map(({c, p, t, libre}, i) => libre ? libreTl(c, p, t, i) : `<div class="tl-p" data-o="${i}" style="--c:${color(c)}" title="${esc(p.titulo)} — ${esc(c.nombre)} · ${Math.round(p.progreso * 100)} % (${esc(p.etapa_n || 'sin etapa')}) · saldría ${fdiaLargo(t)} ${fhora(t)}">
       <div class="tl-p-h">${p.atrasado ? '<span class="late">canal atrasado ·</span>' : 'quedaría'} <b>${fdiaLargo(t)} ${fhora(t)}</b><span>${cuenta(t)}</span></div>
       ${obra(p, c)}
       <div class="tl-t">${esc(p.titulo)}</div>
@@ -667,16 +684,30 @@ function pintaTl() {
   if (!TL.listo) { TL.listo = true; requestAnimationFrame(() => irAhora(false)); }
   ruleta();
 }
+// Hueco que nadie está llenando: logo del canal sobre su miniatura más reciente, con estacas de terreno por construir
+function libreTl(c, p, t, i) {
+  const ult = c.videos.filter(v => v.estado === 'public' && !v.short && !/#shorts/i.test(v.titulo) && v.fecha).sort((a, b) => a.fecha < b.fecha ? 1 : -1)[0];
+  const fondo = ult ? `<img class="fondo" alt="" draggable="false" loading="lazy" src="https://i.ytimg.com/vi/${esc(ult.id)}/mqdefault.jpg" onerror="this.remove()">` : '';
+  const logo = c.logo ? `<img class="logo" alt="" draggable="false" loading="lazy" src="${esc(c.logo)}" onerror="this.remove()">` : '';
+  const estacas = [[6, 5], [null, 5], [6, null], [null, null]].map(([l, tp]) => `<i class="estaca" style="${l === null ? 'right:6px' : 'left:6px'};${tp === null ? 'bottom:5px' : 'top:5px'}"></i>`).join('');
+  return `<div class="tl-p libre" data-o="${i}" style="--c:${color(c)}" title="Hueco por llenar: ${esc(c.nombre)} necesita un video para ${fdiaLargo(t)} ${fhora(t)} y nadie lo está produciendo">
+      <div class="tl-p-h">${p.atrasado ? '<span class="late">atrasado</span>' : ''}<b>${fdiaLargo(t).split(' ').slice(0, 2).join(' ')} · ${fhora(t)}</b><span>${cuenta(t)}</span></div>
+      <div class="obra vacia">${fondo}${logo}<div class="txt"><b>Por llenar</b><span>${esc(c.nombre)}</span></div>${estacas}</div>
+      <div class="tl-t">Sin video en producción</div></div>`;
+}
 // Cada obra va encima de su hueco; si dos huecos caen juntos, la de la derecha se recorre y su línea dobla en escuadra
 function colocaObras() {
   const pista = $('tl-pista'), svg = $('tl-cx'); if (!svg) return;
   const pb = pista.getBoundingClientRect(), gap = 14;
-  let der = -Infinity, rutas = '';
+  let der = -Infinity, rutas = '', cadena = 0, base = 0;
+  pista.querySelectorAll('.tl-p').forEach(el => { base = Math.max(base, el.offsetTop + el.offsetHeight + 4); });
   pista.querySelectorAll('.tl-p').forEach(el => {
     const h = pista.querySelector(`.tl-h[data-o="${el.dataset.o}"] .caja`); if (!h) return;
     const hb = h.getBoundingClientRect(), cx = hb.left - pb.left + hb.width / 2, w = el.offsetWidth;
     const x = Math.max(cx - w / 2, der + gap, 8); el.style.left = x + 'px'; der = x + w;
-    const y0 = el.offsetTop + el.offsetHeight + 4, y1 = hb.top - pb.top, xm = x + w / 2, ym = y0 + Math.max(10, (y1 - y0) * .45);
+    // en una racha de tarjetas recorridas, cada codo baja un escalón: así ninguna línea cruza a la de al lado
+    cadena = x > cx - w / 2 + 2 ? cadena + 1 : 0;
+    const y0 = el.offsetTop + el.offsetHeight + 4, y1 = hb.top - pb.top, xm = x + w / 2, ym = Math.min(y1 - 8, base + 6 + cadena * 9);
     const c = getComputedStyle(el).getPropertyValue('--c');
     rutas += `<g style="--c:${c}"><path d="${Math.abs(xm - cx) < 2 ? `M${cx} ${y1}V${y0}` : `M${cx} ${y1}V${ym}H${xm}V${y0}`}"/><circle cx="${xm}" cy="${y0}" r="3"/></g>`;
   });

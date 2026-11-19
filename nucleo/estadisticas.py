@@ -68,6 +68,28 @@ def _es_short(vid):
         return None
 
 
+def _logo(snippet):
+    th = snippet.get("thumbnails") or {}
+    return (th.get("medium") or th.get("high") or th.get("default") or {}).get("url")
+
+
+def poner_logos():
+    """Agrega `logo` a canales/metricas/panel/<alias>.json sin pedir todo lo demás (una lectura de /channels por canal)."""
+    for alias in alias_conocidos(con_suspendidos=True):
+        ruta = os.path.join(DATOS, alias + ".json")
+        if not os.path.isfile(ruta):
+            continue
+        d = json.load(open(ruta, encoding="utf-8"))
+        try:
+            ch = yt.api(d["canal_id"], "GET", "/channels", params=dict(part="snippet", id=d["canal_id"]))["items"][0]
+        except Exception as e:
+            print(f"  {alias}: sin logo ({e})")
+            continue
+        d["logo"] = _logo(ch["snippet"])
+        json.dump(d, open(ruta, "w", encoding="utf-8"), ensure_ascii=False)
+        print(f"  {alias}: {d['logo']}")
+
+
 def actualizar(alias):
     cfg = json.load(open(os.path.join(yt.CANALES, alias + ".json"), encoding="utf-8"))
     cid = cfg["canal_id"]
@@ -80,7 +102,8 @@ def actualizar(alias):
     s = ch["statistics"]
     out = dict(alias=alias, canal_id=cid, nombre=ch["snippet"]["title"], actualizado=dt.datetime.now().isoformat(timespec="minutes"),
                suscriptores=int(s.get("subscriberCount", 0)), vistas_totales=int(s.get("viewCount", 0)),
-               videos_totales=int(s.get("videoCount", 0)), avisos=[])
+               videos_totales=int(s.get("videoCount", 0)), avisos=[],
+               logo=_logo(ch["snippet"]))     # foto de perfil: la usan los huecos por llenar de la ruleta del panel
 
     dias = yt._reporte(cid, (hoy - dt.timedelta(days=DIAS_SERIE)).isoformat(), hasta, metrics=MET_DIA, dimensions="day", sort="day")
     if dias and "error" in dias[0]:
@@ -264,24 +287,38 @@ def mini_obra(video):
     return None, False
 
 
-def huecos_produccion(prod, cal, cfg, ahora=None):
-    """A cada video en producción (el más avanzado primero) le toca el siguiente hueco del canal: el primero sin video
-    largo (`cal.vacio`) y después uno por ciclo, a la hora de `horario.utc`. Si el hueco ya pasó (canal atrasado), el
-    siguiente horario a partir de ahora. Es lo que la ruleta de producción cuelga sobre la de publicaciones (19-nov-2026)."""
+def huecos(cal, cfg, n, ahora=None):
+    """Los siguientes `n` huecos del canal sin video largo: el primero es `cal.vacio` (o, si ya pasó, el siguiente horario a
+    partir de ahora = canal atrasado) y luego uno por ciclo, a la hora de `horario.utc`. [(datetime, atrasado), …]"""
     ahora = ahora or dt.datetime.now(dt.timezone.utc)
     hm = re.match(r"(\d{1,2}):(\d{2})", str((cfg.get("horario") or {}).get("utc") or ""))
-    t = _f(cal["vacio"])
-    for i, x in enumerate(prod):
-        s = t + dt.timedelta(days=cal["ciclo"] * i)
-        atrasado = s < ahora
-        if atrasado:
-            s = ahora
-        if hm:                                       # a la hora del canal ese mismo día; si ya pasó, al día siguiente
-            h = s.replace(hour=int(hm[1]), minute=int(hm[2]), second=0, microsecond=0)
-            s = h if h > ahora and (h >= s or not atrasado) else h + dt.timedelta(days=1)
+    s = _f(cal["vacio"])
+    atrasado = s < ahora
+    if atrasado:
+        s = ahora
+    if hm:                                           # a la hora del canal ese mismo día; si ya pasó, al día siguiente
+        h = s.replace(hour=int(hm[1]), minute=int(hm[2]), second=0, microsecond=0)
+        s = h if h > ahora and (h >= s or not atrasado) else h + dt.timedelta(days=1)
+    return [(s + dt.timedelta(days=cal["ciclo"] * i), atrasado and i == 0) for i in range(n)]
+
+
+def huecos_produccion(prod, cal, cfg, ahora=None):
+    """A cada video en producción (el más avanzado primero) le toca el siguiente hueco del canal (`huecos`). Es lo que la
+    ruleta de producción cuelga sobre la de publicaciones (19-nov-2026)."""
+    for x, (s, tarde) in zip(prod, huecos(cal, cfg, len(prod), ahora)):
         x["sale"] = s.strftime("%Y-%m-%dT%H:%M:%SZ")
-        x["atrasado"] = atrasado
+        x["atrasado"] = tarde
     return prod
+
+
+def huecos_libres(cal, cfg, n_prod, dias=10, maximo=3, ahora=None):
+    """Huecos que NADIE está llenando (ni programado ni en producción) en los próximos `dias`, al menos el primero: la
+    ruleta los cuelga con el logo del canal para ver qué canal necesita un video nuevo (el usuario, 19-nov-2026)."""
+    ahora = ahora or dt.datetime.now(dt.timezone.utc)
+    hs = huecos(cal, cfg, n_prod + maximo, ahora)[n_prod:]
+    out = [dict(sale=s.strftime("%Y-%m-%dT%H:%M:%SZ"), atrasado=tarde) for k, (s, tarde) in enumerate(hs)
+           if k == 0 or s <= ahora + dt.timedelta(days=dias)]
+    return out
 
 
 def miniaturas_locales(d, cfg, dias=4):
@@ -319,6 +356,7 @@ def datos_panel(proyectos=None):
             d["seguimiento"] = not cfg.get("sin_seguimiento")
             d["minis"] = miniaturas_locales(d, cfg)
             d["prod"] = huecos_produccion(sorted(prod.get(alias, []), key=lambda x: -x["progreso"]), d["cal"], cfg)
+            d["libres"] = huecos_libres(d["cal"], cfg, len(d["prod"])) if d["seguimiento"] else []
             canales.append(d)
     return dict(generado=dt.datetime.now().isoformat(timespec="minutes"), periodos=list(PERIODOS), canales=canales)
 

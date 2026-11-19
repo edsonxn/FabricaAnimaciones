@@ -1733,7 +1733,12 @@ _can_lock = threading.Lock()
 
 def canales_html():
     """Calendario (qué canal se queda sin video) + estadísticas, con los datos guardados en canales/metricas/panel/."""
+    import importlib
     import estadisticas as ES
+    t = mt(ES.__file__)
+    if getattr(ES, "_cargado", t) != t:             # editar estadisticas.py no exige reiniciar el panel
+        ES = importlib.reload(ES)
+    ES._cargado = t
     return ES.html_panel(estado_cache(30)["proyectos"])
 
 

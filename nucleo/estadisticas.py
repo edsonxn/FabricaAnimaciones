@@ -28,6 +28,7 @@ import requests
 import youtube as yt
 
 DATOS = os.path.join(yt.CANALES, "metricas", "panel")
+RAIZ_VIDEOS = os.path.join(os.path.dirname(yt.CANALES), "videos")
 SALIDA = os.path.join(yt.CANALES, "metricas", "panel_canales.html")
 PLANTILLA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "estadisticas.html")
 PERIODOS = (7, 28, 90)
@@ -234,6 +235,27 @@ def en_produccion(proyectos=None):
         return {}
 
 
+def miniaturas_locales(d, cfg, dias=4):
+    """{id: "/media/<video>/salida/miniatura.jpg"} de lo programado o recién salido: la ruleta de publicaciones del panel
+    las enseña porque YouTube no da la miniatura de un video que sigue en privado (el usuario, 19-nov-2026)."""
+    desde = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=dias)).isoformat()
+    ids = {v["id"] for v in d.get("videos", []) if v.get("estado") == "programado" or (v.get("fecha") or "") >= desde}
+    out = {}
+    for x in cfg.get("publicados", []):
+        f = x.get("programado") or x.get("publicado") or ""
+        if not (x.get("id") and x.get("video")) or (x["id"] not in ids and f < desde):
+            continue
+        carpeta = os.path.join(RAIZ_VIDEOS, x["video"])
+        try:
+            m = json.load(open(os.path.join(carpeta, "youtube.json"), encoding="utf-8")).get("miniatura") or "salida/miniatura.jpg"
+        except Exception:
+            m = "salida/miniatura.jpg"
+        m = m.replace("\\", "/")
+        if m.split("/")[0] in ("salida", "previews") and os.path.isfile(os.path.join(carpeta, m)):
+            out[x["id"]] = f"/media/{x['video']}/{m}"
+    return out
+
+
 def datos_panel(proyectos=None):
     canales, prod = [], en_produccion(proyectos)
     orden = alias_conocidos(con_suspendidos=True)    # el color sale de la lista completa: suspender uno no recolorea a los demás
@@ -246,6 +268,7 @@ def datos_panel(proyectos=None):
             d["cal"] = calendario(d, cfg)
             # `"sin_seguimiento"` = canal que no estamos moviendo: fuera del calendario, sus estadísticas siguen (el usuario, 19-nov-2026)
             d["seguimiento"] = not cfg.get("sin_seguimiento")
+            d["minis"] = miniaturas_locales(d, cfg)
             d["prod"] = sorted(prod.get(alias, []), key=lambda x: -x["progreso"])
             canales.append(d)
     return dict(generado=dt.datetime.now().isoformat(timespec="minutes"), periodos=list(PERIODOS), canales=canales)

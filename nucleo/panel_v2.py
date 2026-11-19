@@ -753,6 +753,17 @@ def get(h, ruta):
         if ext == ".apk":
             return P._servir_rango(h, real, APP_TIPOS[ext])
         return h._enviar(200, open(real, "rb").read(), APP_TIPOS[ext], cache="no-cache")
+    if ruta == "/api/v2/canales/recargar":
+        # La pestaña «Canales» la arma nucleo/estadisticas.py, que el panel importa una vez: si cambió su archivo, se
+        # recarga aquí (este módulo sí se recarga solo) y la página se vuelve a pedir, sin detener el panel (19-nov-2026)
+        import importlib
+        import estadisticas as ES
+        t = os.path.getmtime(ES.__file__)
+        nuevo = getattr(ES, "_cargado", 0) != t
+        if nuevo:
+            ES = importlib.reload(ES)
+            ES._cargado = t
+        return _json(h, dict(recargado=nuevo))
     if ruta == "/api/v2/sistema":
         return _json(h, sistema())
     if ruta == "/api/v2/estado":

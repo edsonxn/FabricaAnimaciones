@@ -159,6 +159,41 @@ tbody tr:hover{background:var(--hover)}
 .cal-d .pb i{display:block;height:100%;background:var(--brand)}
 @media(max-width:760px){.cal-eje{display:none}.cal-r{grid-template-columns:1fr auto}.cal-t{grid-column:1/-1;order:3}.cal-r>.step,.cal-r>.cal-c{display:none}}
 
+/* Ruleta de publicaciones: línea de tiempo horizontal de todos los canales (rueda o arrastre del ratón) */
+.tl-sum{font-size:.8rem;color:var(--muted)}
+.tl-nav{display:flex;gap:.25rem}
+.tl-nav button{border:1px solid var(--line);background:var(--panel);border-radius:8px;height:28px;min-width:28px;padding:0 .55rem;font-weight:700;cursor:pointer;color:var(--muted)}
+.tl-nav button:hover{border-color:var(--brand);color:var(--brand)}
+.tl{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;cursor:grab;user-select:none;-webkit-user-select:none;
+  -webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.tl.arrastra{cursor:grabbing}
+.tl-pista{display:flex;width:max-content;padding:0 40vw 0 3rem}
+.tl-dia{position:relative;padding-right:1.4rem}
+.tl-dia::after{content:"";position:absolute;left:0;right:0;top:2.35rem;height:2px;background:var(--line)}
+.tl-dia h4{position:sticky;left:0;display:inline-block;margin:0 0 .55rem;padding:.12rem .6rem;border-radius:999px;background:var(--sunk);font-size:.74rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.tl-dia.hoy h4{background:var(--brand-soft);color:var(--brand)}
+.tl-fila{display:flex;gap:1rem;align-items:flex-start}
+.tl-v{--k:1;position:relative;width:224px;flex:none;padding-top:1.1rem;text-decoration:none;transform:scale(var(--k));transform-origin:50% 0;opacity:calc(.35 + .65 * var(--o, 1));transition:transform .08s linear}
+.tl-v::before{content:"";position:absolute;top:.08rem;left:12px;width:14px;height:14px;border-radius:50%;background:var(--c);border:3px solid var(--panel);box-shadow:0 0 0 1px var(--line);z-index:1}
+.tl-v.sh::before{border-radius:4px}
+.tl-hora{display:flex;align-items:baseline;gap:.45rem;margin:0 0 .35rem}
+.tl-hora b{font-size:1.15rem;font-weight:750;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.tl-hora span{font-size:.76rem;font-weight:650;color:var(--brand)}
+.tl-img{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 55%,var(--sunk)),var(--sunk));box-shadow:var(--shadow);outline:2px solid transparent;transition:outline-color .15s}
+.tl-v:hover .tl-img{outline-color:var(--c)}
+.tl-img img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.tl-img .sin{position:absolute;inset:0;display:grid;place-items:center;padding:.8rem;text-align:center;font-size:.8rem;font-weight:700;color:var(--ink)}
+.tl-img .tag{position:absolute;top:.4rem;right:.4rem;background:rgba(0,0,0,.65);color:#fff}
+.tl-t{margin:.45rem 0 .15rem;font-size:.84rem;font-weight:650;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em}
+.tl-v:hover .tl-t{text-decoration:underline}
+.tl-c{display:flex;align-items:center;gap:.35rem;font-size:.76rem;color:var(--muted)}
+.tl-c .dot{width:7px;height:7px;background:var(--c)}
+.tl-v.ya{filter:grayscale(.65)}
+.tl-v.ya .tl-hora span{color:var(--faint)}
+.tl-ahora{position:relative;flex:none;width:2px;align-self:stretch;margin:0 .2rem;background:var(--red);border-radius:2px}
+.tl-ahora span{position:absolute;top:1.85rem;left:50%;transform:translateX(-50%);padding:.05rem .45rem;border-radius:999px;background:var(--red);color:#fff;font-size:.68rem;font-weight:700;white-space:nowrap;z-index:2}
+@media(max-width:760px){.tl-v{width:176px}.tl-pista{padding-right:30vw}}
+
 /* Dentro del panel de producción (pestaña «Canales»): sin cabecera pegada y con la paleta del panel */
 html.emb{--bg:#f3f4fb;--panel:#ffffff;--sunk:#eceef9;--hover:#f6f7fd;--ink:#1c1f3d;--muted:#6b708f;--faint:#9a9fbd;--line:#dcdff0;
   --brand:#2f6bff;--brand-soft:rgba(47,107,255,.10);--grid:#e6e8f5;--axis:#c5c9e2}
@@ -194,7 +229,17 @@ if (EMB) { document.documentElement.classList.add('emb'); tema(); addEventListen
 <div class="wrap">
   <nav class="chips" id="chips" aria-label="Canales"></nav>
 
-  <section class="card" id="cal-card" style="margin-top:1rem">
+  <section class="card" id="tl-card" style="margin-top:1rem">
+    <div class="card-h">
+      <h2>Próximas publicaciones</h2>
+      <span class="tl-sum" id="tl-sum"></span>
+      <span class="tl-nav"><button id="tl-izq" aria-label="Anteriores">‹</button><button id="tl-hoy">Ahora</button><button id="tl-der" aria-label="Siguientes">›</button></span>
+    </div>
+    <div class="tl" id="tl"><div class="tl-pista" id="tl-pista"></div></div>
+    <p class="note">Todos los canales, en orden de salida (largos y Shorts programados, más lo que salió en los últimos 3 días, en gris). Gira la rueda del ratón o arrastra para moverte; clic en un video lo abre en Studio.</p>
+  </section>
+
+  <section class="card" id="cal-card">
     <div class="card-h">
       <h2>¿Qué canal se queda sin video?</h2>
       <nav class="seg" id="cal-nivel" aria-label="Urgencia"></nav>
@@ -475,6 +520,108 @@ $('cal').onclick = e => {
   guardaK(); pintaCal();
 };
 
+// ---- Ruleta de publicaciones: todos los programados (largos y Shorts) de los canales elegidos, más lo que salió en 3 días
+const TL = {listo: false, meta: 0, anim: 0, mov: false};
+const fdiaLargo = t => new Date(t).toLocaleDateString('es-MX', {weekday: 'short', day: 'numeric', month: 'short'}).replace(/[.,]/g, '');
+const claveDia = t => new Date(t).toLocaleDateString('en-CA');
+function cuenta(t) {
+  const m = Math.round((t - Date.now()) / 6e4), a = Math.abs(m), d = Math.floor(a / 1440), h = Math.floor(a % 1440 / 60), mi = a % 60;
+  const txt = d ? `${d} d${h ? ' ' + h + ' h' : ''}` : h ? `${h} h${mi && h < 6 ? ' ' + mi + ' min' : ''}` : `${Math.max(1, mi)} min`;
+  return m >= 0 ? 'en ' + txt : 'hace ' + txt;
+}
+function videosTl() {
+  const ahora = Date.now(), desde = ahora - 3 * DIA, vs = [], vistos = new Set();
+  activos().forEach(c => {
+    const add = (v, short) => { const t = Date.parse(v.fecha); if (vistos.has(v.id) || !(t >= desde)) return; vistos.add(v.id); vs.push({c, v, t, short}); };
+    c.videos.forEach(v => { if (v.fecha && (v.estado === 'programado' || v.estado === 'public')) add(v, !!v.short || /#shorts/i.test(v.titulo)); });
+    (c.cal?.programados || []).forEach(v => add(v, !!v.short));    // lo registrado en publicados que YouTube aún no devolvió
+  });
+  return vs.sort((a, b) => a.t - b.t);
+}
+function pintaTl() {
+  const tl = $('tl'), pista = $('tl-pista'), vs = videosTl(), ahora = Date.now(), fut = vs.filter(x => x.t > ahora);
+  const hoy = claveDia(ahora), man = claveDia(ahora + DIA);
+  $('tl-sum').textContent = fut.length ? `${fut.length} programado${fut.length === 1 ? '' : 's'} · el siguiente sale ${cuenta(fut[0].t)}` : 'Nada programado';
+  if (!vs.length) { pista.innerHTML = '<div class="empty">No hay videos programados en los canales elegidos.</div>'; return; }
+  const dias = [];
+  vs.forEach(x => { const k = claveDia(x.t); (dias.length && dias[dias.length - 1].k === k ? dias[dias.length - 1] : (dias.push({k, t: x.t, xs: []}), dias[dias.length - 1])).xs.push(x); });
+  if (!dias.some(d => d.k === hoy)) {                       // sin nada hoy: el día de hoy aparece igual, solo con la marca «Ahora»
+    const i = dias.findIndex(d => d.k > hoy); dias.splice(i < 0 ? dias.length : i, 0, {k: hoy, t: ahora, xs: []});
+  }
+  const tarjeta = ({c, v, t, short}) => `<a class="tl-v ${short ? 'sh' : ''} ${t <= ahora ? 'ya' : ''}" draggable="false" style="--c:${color(c)}"
+      href="https://studio.youtube.com/video/${esc(v.id)}/edit" target="_blank" rel="noopener" title="${esc(v.titulo)} — ${esc(c.nombre)} · ${fdiaLargo(t)} ${fhora(t)}">
+      <div class="tl-hora"><b>${fhora(t)}</b><span>${t <= ahora ? 'salió ' : ''}${cuenta(t)}</span></div>
+      <div class="tl-img"><img loading="lazy" alt="" draggable="false" src="${esc(SERVIDO && c.minis?.[v.id] || 'https://i.ytimg.com/vi/' + v.id + '/mqdefault.jpg')}" data-yt="https://i.ytimg.com/vi/${esc(v.id)}/mqdefault.jpg" onload="if(this.naturalWidth<=120)this.onerror()" onerror="if(this.dataset.yt&amp;&amp;this.src!==this.dataset.yt){this.src=this.dataset.yt}else{this.outerHTML='<span class=sin>Sin miniatura todavía</span>'}">${short ? '<span class="tag">Short</span>' : ''}</div>
+      <div class="tl-t">${esc(v.titulo)}</div>
+      <div class="tl-c"><i class="dot"></i>${esc(c.nombre)}</div></a>`;
+  const marca = `<div class="tl-ahora" id="tl-ahora"><span>Ahora ${fhora(ahora)}</span></div>`;
+  pista.innerHTML = dias.map(d => {
+    const nombre = d.k === hoy ? 'Hoy · ' + fdiaLargo(d.t) : d.k === man ? 'Mañana · ' + fdiaLargo(d.t) : fdiaLargo(d.t);
+    let fila = d.xs.filter(x => x.t <= ahora).map(tarjeta).join('');
+    if (d.k === hoy) fila += marca;
+    fila += d.xs.filter(x => x.t > ahora).map(tarjeta).join('');
+    return `<div class="tl-dia ${d.k === hoy ? 'hoy' : ''}"><h4>${nombre}</h4><div class="tl-fila">${fila}</div></div>`;
+  }).join('');
+  if (!TL.listo) { TL.listo = true; requestAnimationFrame(() => irAhora(false)); }
+  ruleta();
+}
+// La tarjeta que pasa por el centro crece y se ilumina; las de las orillas se encogen (efecto ruleta)
+function ruleta() {
+  const tl = $('tl'), b = tl.getBoundingClientRect(), cx = b.left + b.width / 2, r = b.width / 2;
+  tl.querySelectorAll('.tl-v').forEach(el => {
+    const e = el.getBoundingClientRect(), d = Math.min(1, Math.abs(e.left + e.width / 2 - cx) / r);
+    el.style.setProperty('--k', (1 - .1 * d * d).toFixed(3)); el.style.setProperty('--o', (1 - d * d).toFixed(3));
+  });
+}
+function irA(x, suave = true) {
+  const tl = $('tl'); TL.meta = Math.max(0, Math.min(tl.scrollWidth - tl.clientWidth, x));
+  if (!suave) { tl.scrollLeft = TL.meta; return; }
+  if (!TL.anim) TL.anim = requestAnimationFrame(function paso() {
+    const dx = TL.meta - tl.scrollLeft;
+    if (Math.abs(dx) < .5) { tl.scrollLeft = TL.meta; TL.anim = 0; return; }
+    tl.scrollLeft += dx * .18; TL.anim = requestAnimationFrame(paso);
+  });
+}
+function irAhora(suave = true) {
+  const tl = $('tl'), m = $('tl-ahora'); if (!m) return;
+  irA(tl.scrollLeft + m.getBoundingClientRect().left - tl.getBoundingClientRect().left - tl.clientWidth * .3, suave);
+}
+(() => {
+  const tl = $('tl');
+  tl.addEventListener('scroll', () => requestAnimationFrame(ruleta), {passive: true});
+  addEventListener('resize', () => requestAnimationFrame(ruleta));
+  tl.addEventListener('wheel', e => {                       // rueda vertical = giro horizontal; en las orillas deja bajar la página
+    const d = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY, px = e.deltaMode === 1 ? d * 40 : e.deltaMode === 2 ? d * tl.clientWidth : d;
+    const base = TL.anim ? TL.meta : tl.scrollLeft, max = tl.scrollWidth - tl.clientWidth;
+    if ((px < 0 && base <= 0) || (px > 0 && base >= max - 1)) return;
+    e.preventDefault(); irA(base + px * 1.6);
+  }, {passive: false});
+  let x0 = 0, s0 = 0, ult = [], id = null;
+  tl.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    id = e.pointerId; x0 = e.clientX; s0 = tl.scrollLeft; ult = [[e.clientX, e.timeStamp]]; TL.mov = false;
+    cancelAnimationFrame(TL.anim); TL.anim = 0;
+  });
+  tl.addEventListener('pointermove', e => {
+    if (e.pointerId !== id) return;
+    if (!TL.mov && Math.abs(e.clientX - x0) > 5) { TL.mov = true; tl.classList.add('arrastra'); try { tl.setPointerCapture(id); } catch (e) {} }
+    if (TL.mov) { tl.scrollLeft = s0 - (e.clientX - x0); ult.push([e.clientX, e.timeStamp]); if (ult.length > 5) ult.shift(); }
+  });
+  const suelta = e => {
+    if (e.pointerId !== id) return; id = null; tl.classList.remove('arrastra');
+    if (TL.mov && ult.length > 1) {                          // inercia: sigue girando según la velocidad del arrastre
+      const [a, b] = [ult[0], ult[ult.length - 1]], v = (b[0] - a[0]) / Math.max(1, b[1] - a[1]);
+      irA(tl.scrollLeft - v * 320);
+    }
+  };
+  tl.addEventListener('pointerup', suelta); tl.addEventListener('pointercancel', suelta);
+  tl.addEventListener('click', e => { if (TL.mov) { e.preventDefault(); e.stopPropagation(); TL.mov = false; } }, true);
+  $('tl-izq').onclick = () => irA((TL.anim ? TL.meta : tl.scrollLeft) - tl.clientWidth * .7);
+  $('tl-der').onclick = () => irA((TL.anim ? TL.meta : tl.scrollLeft) + tl.clientWidth * .7);
+  $('tl-hoy').onclick = () => irAhora();
+  setInterval(() => { const s = tl.scrollLeft; pintaTl(); tl.scrollLeft = s; }, 6e4);   // la cuenta regresiva y la marca «Ahora» avanzan solas
+})();
+
 // ---- Actualizar datos: el panel de producción los pide a YouTube (solo lectura) y la página se recarga sola
 function aviso(html, error) { const m = $('act-msg'); m.innerHTML = html; m.classList.toggle('err', !!error); }
 async function sigueActualizando(lanzado) {
@@ -491,13 +638,18 @@ $('act').onclick = async () => {
   try { const r = await fetch('/api/canales/actualizar', {method: 'POST'}); if (!r.ok) throw 0; sigueActualizando(true); }
   catch (e) { $('act').disabled = false; aviso('Este panel es de antes de la pestaña «Canales»: reinícialo con <code>python fab.py panel</code>.', true); }
 };
+if (SERVIDO && C.some(c => !('minis' in c))) {         // el panel trae estadisticas.py viejo en memoria: que lo recargue y volver a pedir la página
+  fetch('/api/v2/canales/recargar', {cache: 'no-store'}).then(r => r.json()).then(r => {
+    try { if (r.recargado && !sessionStorage.getItem('recargado')) { sessionStorage.setItem('recargado', '1'); location.reload(); } } catch (e) {}
+  }).catch(() => {});
+}
 if (SERVIDO) {
   try { const e = sessionStorage.getItem('act-err'); sessionStorage.removeItem('act-err'); if (e) aviso('No se actualizó: ' + esc(e), true); } catch (e) {}
   sigueActualizando(false);
 }
 if (EMB) new ResizeObserver(() => { try { frameElement.style.height = document.body.scrollHeight + 'px'; } catch (e) {} }).observe(document.body);
 
-function todo() { pintaCabecera(); pintaCal(); pintaKpis(); pintaGrafica(); pintaCanales(); pintaVideos(); }
+function todo() { pintaCabecera(); pintaTl(); pintaCal(); pintaKpis(); pintaGrafica(); pintaCanales(); pintaVideos(); }
 
 $('periodo').onclick = e => { const p = e.target.dataset.p; if (p) { S.periodo = +p; todo(); } };
 $('chips').onclick = e => {

@@ -28,7 +28,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
 #barra .r small{color:#d9c08a;font-size:12px}
 #barra .sep{width:1px;height:24px;background:rgba(255,220,150,.25)}
 #barra .tit{margin-left:auto;letter-spacing:.08em;font-variant:small-caps;color:var(--oro);font-size:17px;text-shadow:0 1px 2px #000}
-#son{background:linear-gradient(#7a5226,#4b2f16);border:1px solid #c59a52;color:#fff;border-radius:4px;font-size:16px;
+#son,#pc{background:linear-gradient(#7a5226,#4b2f16);border:1px solid #c59a52;color:#fff;border-radius:4px;font-size:16px;
   width:34px;height:28px;cursor:pointer;padding:0}
 #mini{position:absolute;left:10px;bottom:10px;width:236px;height:135px;padding:4px}
 #mini canvas{width:100%;height:100%;display:block;cursor:crosshair;image-rendering:auto}
@@ -46,11 +46,14 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
 #carga{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#1d2a18;color:var(--oro);font-size:20px;letter-spacing:.05em;transition:opacity .6s}
 #carga.fuera{opacity:0;pointer-events:none}
 #aviso{position:absolute;top:50px;right:12px;padding:4px 10px;font-size:12px;display:none}
-.tele #son,.tele #toca{display:none}
+.tele #son,.tele #toca,.tele #pc{display:none}
 .enmarco #barra{padding-right:52px}
 .tele #barra{font-size:17px;height:44px}
 .tele #info h2{font-size:19px}
-@media(max-width:700px){#mini{display:none}#info{left:10px}#barra .r small,#barra .opc{display:none}}
+#barra .tit,#son,#pc{flex:none}
+@media(max-width:1180px){#barra .r small{display:none}#barra{gap:12px}}
+@media(max-width:820px){#barra .opc,#barra .sep{display:none}}
+@media(max-width:700px){#mini{display:none}#info{left:10px}#barra .tit{display:none}}
 </style>
 </head>
 <body>
@@ -66,6 +69,7 @@ html,body{margin:0;height:100%;overflow:hidden;background:#1d2a18;font-family:Ge
   <span class="r opc" title="Huecos del calendario que nadie está produciendo">📜 <b id="nLibres">0</b><small>por llenar</small></span>
   <span class="tit">La obra</span>
   <button id="son" title="Sonido">🔊</button>
+  <button id="pc" title="Pantalla completa (F)">⛶</button>
 </div>
 <div id="mini" class="perg"><canvas id="mc" width="228" height="127"></canvas></div>
 <div id="info" class="perg"><img id="iImg" alt=""><div class="tx"><h2 id="iTit">…</h2><div class="sub" id="iSub"></div>
@@ -167,6 +171,13 @@ $('son').onclick = e => {
 const despertar = () => { if (AC && SON && AC.state !== 'running' && !pausado) AC.resume().then(botonesSon, () => {}); };
 addEventListener('pointerdown', despertar, true); addEventListener('keydown', despertar, true);
 $('toca').onclick = despertar;
+// pantalla completa (la vista se abre en pestaña nueva desde «Canales»; el usuario, 19-nov-2026)
+function pantallaCompleta() {
+  try { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); } catch (e) {}
+}
+$('pc').onclick = e => { e.stopPropagation(); pantallaCompleta(); };
+addEventListener('keydown', e => { if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey && !e.altKey) pantallaCompleta(); });
+document.addEventListener('fullscreenchange', () => { $('pc').textContent = document.fullscreenElement ? '🗗' : '⛶'; });
 addEventListener('keydown', e => { if (e.key === 'Escape' && window.parent !== window) window.parent.postMessage('obra:cerrar', location.origin); });
 
 // ================================================================ mundo
@@ -779,7 +790,7 @@ async function cargarDatos() {
   audioIniciar();
   await cargarArte();
   while (!(await cargarDatos())) { $('carga').textContent = 'La fábrica no contesta… reintentando'; await new Promise(r => setTimeout(r, 4000)); }
-  $('carga').classList.add('fuera');
+  $('carga').classList.add('fuera'); setTimeout(() => { $('carga').style.display = 'none'; }, 900);
   hud(); minimapa(); pausar();
   setInterval(cargarDatos, TELE ? 60000 : 30000);
 })();

@@ -269,15 +269,9 @@ html.emb{color-scheme:light dark}                     /* igual que el panel: si 
 .emb .top{position:static;border:1px solid var(--line);border-radius:var(--r);margin-bottom:.9rem;box-shadow:var(--shadow)}
 .emb .brand-mark,.emb .brand h1{display:none}
 .emb .wrap{max-width:none;padding:0 0 1rem}
-/* «La obra»: pop-up con la vista RTS del video en producción (nucleo/panel_obra.html, 19-nov-2026) */
+/* «La obra»: clic en un video en producción abre la vista RTS en pestaña nueva (nucleo/panel_obra.html, 19-nov-2026) */
 .tl-p:not(.libre){cursor:pointer}
 .tl-p:not(.libre):hover .tl-t{text-decoration:underline}
-#obra-capa{position:fixed;inset:0;z-index:9999;background:rgba(8,6,3,.72);display:flex;align-items:center;justify-content:center;animation:obra-in .18s ease-out}
-#obra-capa .caja{position:relative;width:min(1440px,96vw);height:min(840px,90vh);border:3px solid #a57c3a;border-radius:6px;overflow:hidden;box-shadow:0 12px 50px rgba(0,0,0,.7);background:#1d2a18}
-#obra-capa iframe{width:100%;height:100%;border:0;display:block}
-#obra-capa .x{position:absolute;top:-2px;right:-2px;z-index:2;width:40px;height:40px;border:0;border-radius:0 0 0 8px;background:#2e1c0c;color:#ffd88a;font-size:20px;cursor:pointer}
-#obra-capa .x:hover{background:#7a1a10}
-@keyframes obra-in{from{opacity:0}to{opacity:1}}
 </style>
 <script>
 // Dentro del panel de producción: mismo tema (claro/oscuro) que el panel
@@ -683,7 +677,7 @@ function pintaTl() {
     if (d.k === hoy) fila += marca;
     fila += d.xs.filter(x => x.t > ahora).map(item).join('');
     return `<div class="tl-dia ${d.k === hoy ? 'hoy' : ''}"><h4>${nombre}</h4><div class="tl-fila">${fila}</div></div>`;
-  }).join('') + obras.map(({c, p, t, libre}, i) => libre ? libreTl(c, p, t, i) : `<div class="tl-p" data-o="${i}" data-video="${esc(p.video)}" style="--c:${color(c)}" title="${esc(p.titulo)} — ${esc(c.nombre)} · ${Math.round(p.progreso * 100)} % (${esc(p.etapa_n || 'sin etapa')}) · saldría ${fdiaLargo(t)} ${fhora(t)} · clic: ver la obra">
+  }).join('') + obras.map(({c, p, t, libre}, i) => libre ? libreTl(c, p, t, i) : `<div class="tl-p" data-o="${i}" data-video="${esc(p.video)}" style="--c:${color(c)}" title="${esc(p.titulo)} — ${esc(c.nombre)} · ${Math.round(p.progreso * 100)} % (${esc(p.etapa_n || 'sin etapa')}) · saldría ${fdiaLargo(t)} ${fhora(t)} · clic: ver la obra en pestaña nueva">
       <div class="tl-p-h">${p.atrasado ? '<span class="late">canal atrasado ·</span>' : 'quedaría'} <b>${fdiaLargo(t)} ${fhora(t)}</b><span>${cuenta(t)}</span></div>
       ${obra(p, c)}
       <div class="tl-t">${esc(p.titulo)}</div>
@@ -831,24 +825,15 @@ $('tipodia').onchange = e => {
 $('more').onclick = () => { S.limite += 50; pintaVideos(); };
 todo();
 
-// «La obra» (19-nov-2026): clic en un video en producción de la ruleta → pop-up con la escena RTS (/v2/obra?video=<v>)
-function abrirObra(v) {
-  cerrarObra();
-  const capa = document.createElement('div'); capa.id = 'obra-capa';
-  capa.innerHTML = `<div class="caja"><button class="x" title="Cerrar (Esc)">✕</button><iframe allow="autoplay" title="La obra"></iframe></div>`;
-  capa.querySelector('iframe').src = '/v2/obra?video=' + encodeURIComponent(v);
-  capa.addEventListener('click', e => { if (e.target === capa || e.target.closest('.x')) cerrarObra(); });
-  document.body.appendChild(capa);
-  setTimeout(() => { try { capa.querySelector('iframe').focus(); } catch (e) {} }, 300);
-}
-function cerrarObra() { const c = document.getElementById('obra-capa'); if (c) c.remove(); }
+// «La obra» (19-nov-2026): clic en un video en producción de la ruleta → la escena RTS en una PESTAÑA NUEVA
+// (/v2/obra?video=<v>). Antes era un pop-up, pero dentro del panel esta página va incrustada (.emb, overflow:hidden) y la
+// capa no se veía; en pestaña aparte además se puede poner a pantalla completa (el usuario, 19-nov-2026).
 document.addEventListener('click', e => {
   const el = e.target.closest && e.target.closest('.tl-p'); if (!el || el.classList.contains('libre') || !el.dataset.video) return;
   if (location.protocol === 'file:') return;                    // el HTML suelto (sin panel) no tiene /v2/obra
-  e.preventDefault(); abrirObra(el.dataset.video);
+  e.preventDefault();
+  window.open(location.origin + '/v2/obra?video=' + encodeURIComponent(el.dataset.video), '_blank');
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrarObra(); });
-window.addEventListener('message', e => { if (e.origin === location.origin && e.data === 'obra:cerrar') cerrarObra(); });
 </script>
 </body>
 </html>

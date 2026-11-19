@@ -127,3 +127,11 @@ la tele se instala sola en ~15 s (`GET /estado` → `version` nueva). No actuali
   § «Vista «La obra»». **fps sin medir** (19-nov): `medir_fps.sh` necesita ADB y la tele no lo aceptaba
   (`adb connect 192.168.0.187:5555` rechazado, mDNS sin servicios); al reactivar la depuración inalámbrica en la tele,
   `bash D:/PuenteTV/tablero/medir_fps.sh "tv?vista=1"` (el robotaller daba ~32).
+- **App «La obra» (`com.puente.obra`, 19-nov-2026, pedido del usuario):** abre «La obra» a pantalla completa cuando se quiera, sin
+  esperar al protector. App aparte de Puente TV (fuente `D:\PuenteTV\obra`, APK `D:\PuenteTV\LaObra.apk`, banner con el taller).
+  Siempre en vivo desde la PC por el 8741 (`/v2/obra?tele=1&son=1&menu=1&res=2`); encuentra sola a la PC (Puente TV →
+  última IP → barrido de la red); indicador «conectado a la PC» / «buscando la PC…»; reintento cada 10 s; recarga cada 3 h.
+  Control: ◀ ▶ proyectos, ▲ ▼ acercar, OK menú (proyectos, recursos del proyecto, cámara a mano, silenciar), ⏯ silenciar,
+  Atrás cerrar/salir. **fps medidos** con `dumpsys gfxinfo com.puente.obra`: ~54 a res 2 (nítido), ~58 a res 1. No se
+  actualiza sola: cada cambio va por ADB (`adb install -r`). ADB re-vinculado el 19-nov (la tele lo había olvidado; puerto de
+  conexión por `adb mdns services`). Detalle: `D:\PuenteTV\obra\LEEME.md`.

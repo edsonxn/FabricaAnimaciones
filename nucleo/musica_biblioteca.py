@@ -170,7 +170,8 @@ def leer_canal(carpeta):
     v = os.path.basename(os.path.normpath(carpeta))
     for a in sorted(alias):
         try:
-            pub = json.load(open(os.path.join(CANALES, a + ".json"), encoding="utf-8")).get("publicados", [])
+            d = json.load(open(os.path.join(CANALES, a + ".json"), encoding="utf-8"))
+            pub = d.get("publicados", []) if isinstance(d, dict) else []   # 20-nov-2026: hay canales/*.json que son listas
         except (ValueError, OSError):
             continue
         if any(x.get("video") == v for x in pub):

@@ -489,6 +489,12 @@
      "canal": "ninguno",
      "nombre": "whoosh_d",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "tes_embry_short",
+     "canal": "cronicas_tamriel",
+     "nombre": "whoosh_3",
+     "fecha": "2026-11-17"
     }
    ]
   },
@@ -1866,7 +1872,15 @@
    "md5": "a930bc09263fe07709a58fa2d2162ec5",
    "prompt": "Massive cartoon explosion with debris falling and a long rumble",
    "dur": 5.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "starship_vuelo15",
+     "canal": "t_menos_cero",
+     "nombre": "explosion",
+     "fecha": "2026-11-14"
+    }
+   ]
   },
   "guason_fumado__fanfarria": {
    "id": "guason_fumado__fanfarria",
@@ -2011,6 +2025,12 @@
      "canal": "",
      "nombre": "scratch",
      "fecha": "2026-10-26"
+    },
+    {
+     "video": "tes_embry_short",
+     "canal": "cronicas_tamriel",
+     "nombre": "scratch",
+     "fecha": "2026-11-17"
     }
    ]
   },
@@ -2032,7 +2052,15 @@
    "md5": "ac3d4c9e70231ee0dd6b32d00f0fbdc9",
    "prompt": "Sad trombone wah wah wah fail sound",
    "dur": 3.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "tes_embry_short",
+     "canal": "cronicas_tamriel",
+     "nombre": "bruh",
+     "fecha": "2026-11-17"
+    }
+   ]
   },
   "guason_fumado__vomito": {
    "id": "guason_fumado__vomito",
@@ -2298,7 +2326,15 @@
    "md5": "cd6d88d416602f8ff5fb133ea9eba4aa",
    "prompt": "Punchy dynamite explosion boom with debris, short",
    "dur": 2.0,
-   "canal": ""
+   "canal": "",
+   "usos": [
+    {
+     "video": "starship_sin_patas",
+     "canal": "t_menos_cero",
+     "nombre": "explosion",
+     "fecha": "2026-11-14"
+    }
+   ]
   },
   "mods_ia_fusion__glitch": {
    "id": "mods_ia_fusion__glitch",
@@ -2399,6 +2435,12 @@
      "canal": "cronopapel",
      "nombre": "sello_2",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "starship_33_motores",
+     "canal": "t_menos_cero",
+     "nombre": "sello_2",
+     "fecha": "2026-11-20"
     }
    ]
   },
@@ -2445,6 +2487,12 @@
      "canal": "ninguno",
      "nombre": "whoosh_a",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "tes_embry_short",
+     "canal": "cronicas_tamriel",
+     "nombre": "whoosh_2",
+     "fecha": "2026-11-17"
     }
    ]
   },
@@ -2873,6 +2921,12 @@
      "canal": "bitacora_perdida",
      "nombre": "golpe_grave_1",
      "fecha": "2026-11-04"
+    },
+    {
+     "video": "starship_vuelo15",
+     "canal": "t_menos_cero",
+     "nombre": "pulso",
+     "fecha": "2026-11-14"
     }
    ]
   },
@@ -3009,6 +3063,12 @@
      "canal": "cronopapel",
      "nombre": "sello_1",
      "fecha": "2026-10-22"
+    },
+    {
+     "video": "starship_33_motores",
+     "canal": "t_menos_cero",
+     "nombre": "sello_1",
+     "fecha": "2026-11-20"
     }
    ]
   },
@@ -3117,6 +3177,12 @@
      "canal": "bitacora_perdida",
      "nombre": "golpe_grave_2",
      "fecha": "2026-11-04"
+    },
+    {
+     "video": "starship_sin_patas",
+     "canal": "t_menos_cero",
+     "nombre": "pulso_1",
+     "fecha": "2026-11-14"
     }
    ]
   },
@@ -6790,7 +6856,15 @@
    "md5": "89c1413e59a1015005489a87e0f6a1c7",
    "prompt": "Rubber stamp slammed on paper with a firm comedic thump",
    "dur": 1.0,
-   "canal": "cronicas_gaming"
+   "canal": "cronicas_gaming",
+   "usos": [
+    {
+     "video": "starship_sin_patas",
+     "canal": "t_menos_cero",
+     "nombre": "sello_1",
+     "fecha": "2026-11-14"
+    }
+   ]
   },
   "bt_jiggies_crueles__zumbido": {
    "id": "bt_jiggies_crueles__zumbido",
@@ -10058,7 +10132,15 @@
    "md5": "d074412a8474340ff920849834ae9923",
    "prompt": "Heavy rubber stamp slammed on a wooden table, single thump",
    "dur": 1.0,
-   "canal": "ninguno"
+   "canal": "ninguno",
+   "usos": [
+    {
+     "video": "starship_sin_patas",
+     "canal": "t_menos_cero",
+     "nombre": "sello_2",
+     "fecha": "2026-11-14"
+    }
+   ]
   },
   "jch_gorditas__whoosh": {
    "id": "jch_gorditas__whoosh",
@@ -10068,7 +10150,15 @@
    "md5": "d6017a75ec163c28fb22f237b42e9fac",
    "prompt": "Quick airy swoosh transition, soft and clean, short",
    "dur": 1.0,
-   "canal": "ninguno"
+   "canal": "ninguno",
+   "usos": [
+    {
+     "video": "tes_embry_short",
+     "canal": "cronicas_tamriel",
+     "nombre": "whoosh_1",
+     "fecha": "2026-11-17"
+    }
+   ]
   },
   "wow_addons_forever__cmp_mio_lobos": {
    "id": "wow_addons_forever__cmp_mio_lobos",
@@ -10219,7 +10309,1567 @@
    "prompt": "",
    "dur": 12.7,
    "canal": "cronicas_warcraft"
+  },
+  "cod_mandela2__s_115": {
+   "id": "cod_mandela2__s_115",
+   "video": "cod_mandela2",
+   "nombre": "s_115",
+   "archivo": "cod_mandela2__s_115.mp3",
+   "md5": "7253b045461f830a87c62c7a15f34fc0",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela2__s_frank": {
+   "id": "cod_mandela2__s_frank",
+   "video": "cod_mandela2",
+   "nombre": "s_frank",
+   "archivo": "cod_mandela2__s_frank.mp3",
+   "md5": "82fcf59859073f70687ffa0f789a6e43",
+   "prompt": "",
+   "dur": 3.1,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela2__s_gaz": {
+   "id": "cod_mandela2__s_gaz",
+   "video": "cod_mandela2",
+   "nombre": "s_gaz",
+   "archivo": "cod_mandela2__s_gaz.mp3",
+   "md5": "afb8f56222daa43947e24bc26f0e1727",
+   "prompt": "",
+   "dur": 4.2,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela2__s_gaz_corto": {
+   "id": "cod_mandela2__s_gaz_corto",
+   "video": "cod_mandela2",
+   "nombre": "s_gaz_corto",
+   "archivo": "cod_mandela2__s_gaz_corto.mp3",
+   "md5": "1c3b56e705b7e273d216fd9fa6e5e211",
+   "prompt": "",
+   "dur": 2.26,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela2__s_lullaby": {
+   "id": "cod_mandela2__s_lullaby",
+   "video": "cod_mandela2",
+   "nombre": "s_lullaby",
+   "archivo": "cod_mandela2__s_lullaby.mp3",
+   "md5": "b25aae3b3c911cfbe56fd0ae380d7c1d",
+   "prompt": "",
+   "dur": 8.75,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela2__s_savages": {
+   "id": "cod_mandela2__s_savages",
+   "video": "cod_mandela2",
+   "nombre": "s_savages",
+   "archivo": "cod_mandela2__s_savages.mp3",
+   "md5": "3b4fef221b93fe9c2225009e3457e92b",
+   "prompt": "",
+   "dur": 2.96,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela2__s_sdc": {
+   "id": "cod_mandela2__s_sdc",
+   "video": "cod_mandela2",
+   "nombre": "s_sdc",
+   "archivo": "cod_mandela2__s_sdc.mp3",
+   "md5": "5fd4d193bda7999c1cf4fdfaa1a07b17",
+   "prompt": "",
+   "dur": 3.25,
+   "canal": "cronicas_cod"
+  },
+  "cohete_crs30__apagado": {
+   "id": "cohete_crs30__apagado",
+   "video": "cohete_crs30",
+   "nombre": "apagado",
+   "archivo": "cohete_crs30__apagado.mp3",
+   "md5": "ba2f8d7d8d10141485b9bd75108a2351",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": ""
+  },
+  "cohete_crs30__caida": {
+   "id": "cohete_crs30__caida",
+   "video": "cohete_crs30",
+   "nombre": "caida",
+   "archivo": "cohete_crs30__caida.mp3",
+   "md5": "550c9de58eb69a5fe06b1436ee07373d",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": ""
+  },
+  "cohete_crs30__campana": {
+   "id": "cohete_crs30__campana",
+   "video": "cohete_crs30",
+   "nombre": "campana",
+   "archivo": "cohete_crs30__campana.mp3",
+   "md5": "4948059be3a7488122381f1de7cb2c74",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "cohete_crs30__corte": {
+   "id": "cohete_crs30__corte",
+   "video": "cohete_crs30",
+   "nombre": "corte",
+   "archivo": "cohete_crs30__corte.mp3",
+   "md5": "57ed3aa27389267f30425c09cb411eec",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "cohete_crs30__despegue": {
+   "id": "cohete_crs30__despegue",
+   "video": "cohete_crs30",
+   "nombre": "despegue",
+   "archivo": "cohete_crs30__despegue.mp3",
+   "md5": "d393f6134e4db9e8c6ad8ff0f26876e7",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": ""
+  },
+  "cohete_crs30__encendido_1": {
+   "id": "cohete_crs30__encendido_1",
+   "video": "cohete_crs30",
+   "nombre": "encendido_1",
+   "archivo": "cohete_crs30__encendido_1.mp3",
+   "md5": "a45e2c269446b49f7c569d63e5d9bf9c",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": ""
+  },
+  "cohete_crs30__encendido_2": {
+   "id": "cohete_crs30__encendido_2",
+   "video": "cohete_crs30",
+   "nombre": "encendido_2",
+   "archivo": "cohete_crs30__encendido_2.mp3",
+   "md5": "c59b5bf1f96f9a2250685729cadd76a1",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": ""
+  },
+  "cohete_crs30__estampido": {
+   "id": "cohete_crs30__estampido",
+   "video": "cohete_crs30",
+   "nombre": "estampido",
+   "archivo": "cohete_crs30__estampido.mp3",
+   "md5": "e8c65bf736db20e5e38bb86d85fb575e",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "cohete_crs30__hud_1": {
+   "id": "cohete_crs30__hud_1",
+   "video": "cohete_crs30",
+   "nombre": "hud_1",
+   "archivo": "cohete_crs30__hud_1.mp3",
+   "md5": "0aa913ee2b1e9f29372336326a381902",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "cohete_crs30__hud_2": {
+   "id": "cohete_crs30__hud_2",
+   "video": "cohete_crs30",
+   "nombre": "hud_2",
+   "archivo": "cohete_crs30__hud_2.mp3",
+   "md5": "3bec79e6357bfd5d0bf89b6b16bd8fb8",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "cohete_crs30__hud_3": {
+   "id": "cohete_crs30__hud_3",
+   "video": "cohete_crs30",
+   "nombre": "hud_3",
+   "archivo": "cohete_crs30__hud_3.mp3",
+   "md5": "a73ac6d9cab6e9c680d5d247404bc74c",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "cohete_crs30__ignicion": {
+   "id": "cohete_crs30__ignicion",
+   "video": "cohete_crs30",
+   "nombre": "ignicion",
+   "archivo": "cohete_crs30__ignicion.mp3",
+   "md5": "e43cb6d06ed2038bf7ec3fddb1062714",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": ""
+  },
+  "cohete_crs30__rcs": {
+   "id": "cohete_crs30__rcs",
+   "video": "cohete_crs30",
+   "nombre": "rcs",
+   "archivo": "cohete_crs30__rcs.mp3",
+   "md5": "7812be2a2853b598f25a168c65e83531",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": ""
+  },
+  "cohete_crs30__separacion": {
+   "id": "cohete_crs30__separacion",
+   "video": "cohete_crs30",
+   "nombre": "separacion",
+   "archivo": "cohete_crs30__separacion.mp3",
+   "md5": "978ddb7ecf3aec77221126b6ad8307b8",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "cohete_crs30__suelta": {
+   "id": "cohete_crs30__suelta",
+   "video": "cohete_crs30",
+   "nombre": "suelta",
+   "archivo": "cohete_crs30__suelta.mp3",
+   "md5": "fdb516f812a80b367c56b1747420bd6e",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": ""
+  },
+  "cohete_crs30__tic_1": {
+   "id": "cohete_crs30__tic_1",
+   "video": "cohete_crs30",
+   "nombre": "tic_1",
+   "archivo": "cohete_crs30__tic_1.mp3",
+   "md5": "4755975a4398d35af61244623e1889d3",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "cohete_crs30__tic_2": {
+   "id": "cohete_crs30__tic_2",
+   "video": "cohete_crs30",
+   "nombre": "tic_2",
+   "archivo": "cohete_crs30__tic_2.mp3",
+   "md5": "b9ef1d662f749841a8981b8f0e814ced",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": ""
+  },
+  "cohete_crs30__toque": {
+   "id": "cohete_crs30__toque",
+   "video": "cohete_crs30",
+   "nombre": "toque",
+   "archivo": "cohete_crs30__toque.mp3",
+   "md5": "ca74b9edb26ee2e28d94ab3fccfb8451",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "cohete_crs30__viento": {
+   "id": "cohete_crs30__viento",
+   "video": "cohete_crs30",
+   "nombre": "viento",
+   "archivo": "cohete_crs30__viento.mp3",
+   "md5": "64e80bd11afc09b13d0804eac3bb6d38",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": ""
+  },
+  "cohete_crs30__whoosh_1": {
+   "id": "cohete_crs30__whoosh_1",
+   "video": "cohete_crs30",
+   "nombre": "whoosh_1",
+   "archivo": "cohete_crs30__whoosh_1.mp3",
+   "md5": "a1db809daece07b8c188346711798e00",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": ""
+  },
+  "cohete_crs30__whoosh_2": {
+   "id": "cohete_crs30__whoosh_2",
+   "video": "cohete_crs30",
+   "nombre": "whoosh_2",
+   "archivo": "cohete_crs30__whoosh_2.mp3",
+   "md5": "978ce8a9bfa434674600da851392118e",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": ""
+  },
+  "starship_sin_patas__alarma": {
+   "id": "starship_sin_patas__alarma",
+   "video": "starship_sin_patas",
+   "nombre": "alarma",
+   "archivo": "starship_sin_patas__alarma.mp3",
+   "md5": "59ca42b0aea2dfeb47f3837ed95cdc18",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__aterriza": {
+   "id": "starship_sin_patas__aterriza",
+   "video": "starship_sin_patas",
+   "nombre": "aterriza",
+   "archivo": "starship_sin_patas__aterriza.mp3",
+   "md5": "c1fb43e60095c5f792370df6c80b4fe2",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__brazos_1": {
+   "id": "starship_sin_patas__brazos_1",
+   "video": "starship_sin_patas",
+   "nombre": "brazos_1",
+   "archivo": "starship_sin_patas__brazos_1.mp3",
+   "md5": "e6490f6b7844e0bfac70c3f307b81bf0",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__brazos_2": {
+   "id": "starship_sin_patas__brazos_2",
+   "video": "starship_sin_patas",
+   "nombre": "brazos_2",
+   "archivo": "starship_sin_patas__brazos_2.mp3",
+   "md5": "b16ea435fad0843ff6f03fd6b9b1513e",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__cabrestante": {
+   "id": "starship_sin_patas__cabrestante",
+   "video": "starship_sin_patas",
+   "nombre": "cabrestante",
+   "archivo": "starship_sin_patas__cabrestante.mp3",
+   "md5": "d1d6a9f21df05a2ccb1c1fee54702e7a",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__caida": {
+   "id": "starship_sin_patas__caida",
+   "video": "starship_sin_patas",
+   "nombre": "caida",
+   "archivo": "starship_sin_patas__caida.mp3",
+   "md5": "e8d029b6405e6b0c4cbdbddc0f73fdca",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__campana": {
+   "id": "starship_sin_patas__campana",
+   "video": "starship_sin_patas",
+   "nombre": "campana",
+   "archivo": "starship_sin_patas__campana.mp3",
+   "md5": "b10c9fd8ea20d05a69ebc6ff42a2b675",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__encendido_1": {
+   "id": "starship_sin_patas__encendido_1",
+   "video": "starship_sin_patas",
+   "nombre": "encendido_1",
+   "archivo": "starship_sin_patas__encendido_1.mp3",
+   "md5": "f29baae1886e0a77de46b370dbb12e5d",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__encendido_2": {
+   "id": "starship_sin_patas__encendido_2",
+   "video": "starship_sin_patas",
+   "nombre": "encendido_2",
+   "archivo": "starship_sin_patas__encendido_2.mp3",
+   "md5": "670a7247c55e2bdef6f60ba996339578",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__hud_1": {
+   "id": "starship_sin_patas__hud_1",
+   "video": "starship_sin_patas",
+   "nombre": "hud_1",
+   "archivo": "starship_sin_patas__hud_1.mp3",
+   "md5": "6eb672f3918ccef3b8c28feef5dc2bce",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__hud_2": {
+   "id": "starship_sin_patas__hud_2",
+   "video": "starship_sin_patas",
+   "nombre": "hud_2",
+   "archivo": "starship_sin_patas__hud_2.mp3",
+   "md5": "22d592c1ad7717f6631d81672c84b3b8",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__hud_3": {
+   "id": "starship_sin_patas__hud_3",
+   "video": "starship_sin_patas",
+   "nombre": "hud_3",
+   "archivo": "starship_sin_patas__hud_3.mp3",
+   "md5": "db7c8f0ca10264c50249cb7745b95ce5",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__hud_4": {
+   "id": "starship_sin_patas__hud_4",
+   "video": "starship_sin_patas",
+   "nombre": "hud_4",
+   "archivo": "starship_sin_patas__hud_4.mp3",
+   "md5": "70e5f9bf548f6c935e87b3e197babea2",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__patas": {
+   "id": "starship_sin_patas__patas",
+   "video": "starship_sin_patas",
+   "nombre": "patas",
+   "archivo": "starship_sin_patas__patas.mp3",
+   "md5": "9456dd5b10e95f513ae4911eebfb6963",
+   "prompt": "",
+   "dur": 1.76,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__pesa": {
+   "id": "starship_sin_patas__pesa",
+   "video": "starship_sin_patas",
+   "nombre": "pesa",
+   "archivo": "starship_sin_patas__pesa.mp3",
+   "md5": "a4f1683ac769f3d59a2717f0e70b24a7",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__pulso_2": {
+   "id": "starship_sin_patas__pulso_2",
+   "video": "starship_sin_patas",
+   "nombre": "pulso_2",
+   "archivo": "starship_sin_patas__pulso_2.mp3",
+   "md5": "3d5e72ab8370094f605a430cd3a68cbd",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__tic_1": {
+   "id": "starship_sin_patas__tic_1",
+   "video": "starship_sin_patas",
+   "nombre": "tic_1",
+   "archivo": "starship_sin_patas__tic_1.mp3",
+   "md5": "ffff13c7b43ee7d87b7952b72e992900",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__tic_2": {
+   "id": "starship_sin_patas__tic_2",
+   "video": "starship_sin_patas",
+   "nombre": "tic_2",
+   "archivo": "starship_sin_patas__tic_2.mp3",
+   "md5": "863d4d36f4fde823c1f544465a7b46bc",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__tic_3": {
+   "id": "starship_sin_patas__tic_3",
+   "video": "starship_sin_patas",
+   "nombre": "tic_3",
+   "archivo": "starship_sin_patas__tic_3.mp3",
+   "md5": "9d7f0980bfa4f6d299877b035145052e",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__toque": {
+   "id": "starship_sin_patas__toque",
+   "video": "starship_sin_patas",
+   "nombre": "toque",
+   "archivo": "starship_sin_patas__toque.mp3",
+   "md5": "a0cc6f7e81e44c01d6c73f836ccd45b8",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__vuelco": {
+   "id": "starship_sin_patas__vuelco",
+   "video": "starship_sin_patas",
+   "nombre": "vuelco",
+   "archivo": "starship_sin_patas__vuelco.mp3",
+   "md5": "fec0ffc31fd8b6a743837fc2de699f17",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__whoosh_1": {
+   "id": "starship_sin_patas__whoosh_1",
+   "video": "starship_sin_patas",
+   "nombre": "whoosh_1",
+   "archivo": "starship_sin_patas__whoosh_1.mp3",
+   "md5": "05b03753cb7d64597938ec26a01d13a1",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__whoosh_2": {
+   "id": "starship_sin_patas__whoosh_2",
+   "video": "starship_sin_patas",
+   "nombre": "whoosh_2",
+   "archivo": "starship_sin_patas__whoosh_2.mp3",
+   "md5": "580a2ae497f1ee2c147755b29db89226",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_sin_patas__whoosh_3": {
+   "id": "starship_sin_patas__whoosh_3",
+   "video": "starship_sin_patas",
+   "nombre": "whoosh_3",
+   "archivo": "starship_sin_patas__whoosh_3.mp3",
+   "md5": "6f9f40fb2f14e0583c8c2666dfbc8def",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__alarma": {
+   "id": "starship_vuelo15__alarma",
+   "video": "starship_vuelo15",
+   "nombre": "alarma",
+   "archivo": "starship_vuelo15__alarma.mp3",
+   "md5": "ba2d654884b1d7416e1a9efa2d6fbc4b",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__apagado": {
+   "id": "starship_vuelo15__apagado",
+   "video": "starship_vuelo15",
+   "nombre": "apagado",
+   "archivo": "starship_vuelo15__apagado.mp3",
+   "md5": "6d22d11463e35ce9dd43d9423b714d36",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__brazos": {
+   "id": "starship_vuelo15__brazos",
+   "video": "starship_vuelo15",
+   "nombre": "brazos",
+   "archivo": "starship_vuelo15__brazos.mp3",
+   "md5": "aaab8624f9f2818d28305edb6d403ebe",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__caida": {
+   "id": "starship_vuelo15__caida",
+   "video": "starship_vuelo15",
+   "nombre": "caida",
+   "archivo": "starship_vuelo15__caida.mp3",
+   "md5": "fdcc19089cc299b13aff2b3bd4665dcf",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__caliente": {
+   "id": "starship_vuelo15__caliente",
+   "video": "starship_vuelo15",
+   "nombre": "caliente",
+   "archivo": "starship_vuelo15__caliente.mp3",
+   "md5": "0afd36e5506eddf5685bf60c5cc4b29c",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__campana": {
+   "id": "starship_vuelo15__campana",
+   "video": "starship_vuelo15",
+   "nombre": "campana",
+   "archivo": "starship_vuelo15__campana.mp3",
+   "md5": "e90ea80d20b4ff720fb2d0468cc86a42",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__compuerta": {
+   "id": "starship_vuelo15__compuerta",
+   "video": "starship_vuelo15",
+   "nombre": "compuerta",
+   "archivo": "starship_vuelo15__compuerta.mp3",
+   "md5": "b7c6ec56dec33d7a3b6db67fb85ca62e",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__corte": {
+   "id": "starship_vuelo15__corte",
+   "video": "starship_vuelo15",
+   "nombre": "corte",
+   "archivo": "starship_vuelo15__corte.mp3",
+   "md5": "250e264d5d993d16e807b4af0930e493",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__despegue": {
+   "id": "starship_vuelo15__despegue",
+   "video": "starship_vuelo15",
+   "nombre": "despegue",
+   "archivo": "starship_vuelo15__despegue.mp3",
+   "md5": "dd3e2331bfcc58fa3da14627638f2155",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__encendido_1": {
+   "id": "starship_vuelo15__encendido_1",
+   "video": "starship_vuelo15",
+   "nombre": "encendido_1",
+   "archivo": "starship_vuelo15__encendido_1.mp3",
+   "md5": "066b27e528c683c338e86d9eb8ace144",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__encendido_2": {
+   "id": "starship_vuelo15__encendido_2",
+   "video": "starship_vuelo15",
+   "nombre": "encendido_2",
+   "archivo": "starship_vuelo15__encendido_2.mp3",
+   "md5": "c74a3925c8f17d677c73709de7011abf",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__encendido_3": {
+   "id": "starship_vuelo15__encendido_3",
+   "video": "starship_vuelo15",
+   "nombre": "encendido_3",
+   "archivo": "starship_vuelo15__encendido_3.mp3",
+   "md5": "b63c053ec30cd28f2b3cdf8e9a90f4d1",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__estampido": {
+   "id": "starship_vuelo15__estampido",
+   "video": "starship_vuelo15",
+   "nombre": "estampido",
+   "archivo": "starship_vuelo15__estampido.mp3",
+   "md5": "5ec112c703ecf47df18ccee944a3f450",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__falla": {
+   "id": "starship_vuelo15__falla",
+   "video": "starship_vuelo15",
+   "nombre": "falla",
+   "archivo": "starship_vuelo15__falla.mp3",
+   "md5": "e1384af27e8a35ff2c11965ad26b1a93",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__hud_1": {
+   "id": "starship_vuelo15__hud_1",
+   "video": "starship_vuelo15",
+   "nombre": "hud_1",
+   "archivo": "starship_vuelo15__hud_1.mp3",
+   "md5": "860a4d6c6e8ccee0e02e9587637e1117",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__hud_2": {
+   "id": "starship_vuelo15__hud_2",
+   "video": "starship_vuelo15",
+   "nombre": "hud_2",
+   "archivo": "starship_vuelo15__hud_2.mp3",
+   "md5": "25e578f131ed4ec48b381d1832a5e0fa",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__hud_3": {
+   "id": "starship_vuelo15__hud_3",
+   "video": "starship_vuelo15",
+   "nombre": "hud_3",
+   "archivo": "starship_vuelo15__hud_3.mp3",
+   "md5": "49f108209023a7adef8c62601badb213",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__hud_4": {
+   "id": "starship_vuelo15__hud_4",
+   "video": "starship_vuelo15",
+   "nombre": "hud_4",
+   "archivo": "starship_vuelo15__hud_4.mp3",
+   "md5": "368b8b5fd0fd955c05684ce1520fceb7",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__ignicion": {
+   "id": "starship_vuelo15__ignicion",
+   "video": "starship_vuelo15",
+   "nombre": "ignicion",
+   "archivo": "starship_vuelo15__ignicion.mp3",
+   "md5": "1be0318c1469c8732283255b41f87b7b",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__plasma": {
+   "id": "starship_vuelo15__plasma",
+   "video": "starship_vuelo15",
+   "nombre": "plasma",
+   "archivo": "starship_vuelo15__plasma.mp3",
+   "md5": "42a361efa5c81ce6852ba7753040b2b8",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__rcs_1": {
+   "id": "starship_vuelo15__rcs_1",
+   "video": "starship_vuelo15",
+   "nombre": "rcs_1",
+   "archivo": "starship_vuelo15__rcs_1.mp3",
+   "md5": "db154d0b920c7b1c1d2dee1c993ee4a0",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__rcs_2": {
+   "id": "starship_vuelo15__rcs_2",
+   "video": "starship_vuelo15",
+   "nombre": "rcs_2",
+   "archivo": "starship_vuelo15__rcs_2.mp3",
+   "md5": "faa743f0188561c842fdd4ed349ee4b6",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__satelite_1": {
+   "id": "starship_vuelo15__satelite_1",
+   "video": "starship_vuelo15",
+   "nombre": "satelite_1",
+   "archivo": "starship_vuelo15__satelite_1.mp3",
+   "md5": "24e802d10c781b015b6baeaea271ad6b",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__satelite_2": {
+   "id": "starship_vuelo15__satelite_2",
+   "video": "starship_vuelo15",
+   "nombre": "satelite_2",
+   "archivo": "starship_vuelo15__satelite_2.mp3",
+   "md5": "376d5e578fc45fa699e27d307a7374ce",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__satelite_3": {
+   "id": "starship_vuelo15__satelite_3",
+   "video": "starship_vuelo15",
+   "nombre": "satelite_3",
+   "archivo": "starship_vuelo15__satelite_3.mp3",
+   "md5": "99b0eab72f7e8760f8e0e36181e18347",
+   "prompt": "",
+   "dur": 0.8,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__tic_1": {
+   "id": "starship_vuelo15__tic_1",
+   "video": "starship_vuelo15",
+   "nombre": "tic_1",
+   "archivo": "starship_vuelo15__tic_1.mp3",
+   "md5": "b4198792f31bfae0eab1287e3bcd27b6",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__tic_2": {
+   "id": "starship_vuelo15__tic_2",
+   "video": "starship_vuelo15",
+   "nombre": "tic_2",
+   "archivo": "starship_vuelo15__tic_2.mp3",
+   "md5": "481be0dbd2c49533098adc4028a989c5",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__tic_3": {
+   "id": "starship_vuelo15__tic_3",
+   "video": "starship_vuelo15",
+   "nombre": "tic_3",
+   "archivo": "starship_vuelo15__tic_3.mp3",
+   "md5": "2c2b9f753210c57e89397cae5469e544",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__toque": {
+   "id": "starship_vuelo15__toque",
+   "video": "starship_vuelo15",
+   "nombre": "toque",
+   "archivo": "starship_vuelo15__toque.mp3",
+   "md5": "b36f854ce9247ef2c57eb73a5ac4762a",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__viento": {
+   "id": "starship_vuelo15__viento",
+   "video": "starship_vuelo15",
+   "nombre": "viento",
+   "archivo": "starship_vuelo15__viento.mp3",
+   "md5": "59b8a44a9c16cde64da33ad3ef478371",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__whoosh_1": {
+   "id": "starship_vuelo15__whoosh_1",
+   "video": "starship_vuelo15",
+   "nombre": "whoosh_1",
+   "archivo": "starship_vuelo15__whoosh_1.mp3",
+   "md5": "46c999b70af56b0354c0caef1f78d73a",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__whoosh_2": {
+   "id": "starship_vuelo15__whoosh_2",
+   "video": "starship_vuelo15",
+   "nombre": "whoosh_2",
+   "archivo": "starship_vuelo15__whoosh_2.mp3",
+   "md5": "473b6fe6eebc6a8b0bc534971ae29a81",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_vuelo15__whoosh_3": {
+   "id": "starship_vuelo15__whoosh_3",
+   "video": "starship_vuelo15",
+   "nombre": "whoosh_3",
+   "archivo": "starship_vuelo15__whoosh_3.mp3",
+   "md5": "be6becfbb76d0cfd8a5dd3381e161410",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "er_sinluz_atrocidades__s_hyetta": {
+   "id": "er_sinluz_atrocidades__s_hyetta",
+   "video": "er_sinluz_atrocidades",
+   "nombre": "s_hyetta",
+   "archivo": "er_sinluz_atrocidades__s_hyetta.mp3",
+   "md5": "d51fa6852b0eadfa76f2abbf3be4637e",
+   "prompt": "",
+   "dur": 9.55,
+   "canal": "runa_caida"
+  },
+  "er_sinluz_atrocidades__s_melina": {
+   "id": "er_sinluz_atrocidades__s_melina",
+   "video": "er_sinluz_atrocidades",
+   "nombre": "s_melina",
+   "archivo": "er_sinluz_atrocidades__s_melina.mp3",
+   "md5": "b356805d7eb5d22e00588349d21b4b41",
+   "prompt": "",
+   "dur": 9.4,
+   "canal": "runa_caida"
+  },
+  "tes_embry_short__boom_1": {
+   "id": "tes_embry_short__boom_1",
+   "video": "tes_embry_short",
+   "nombre": "boom_1",
+   "archivo": "tes_embry_short__boom_1.mp3",
+   "md5": "bae6b4f41ec57af5f5652a5e4e3180ab",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_embry_short__boom_2": {
+   "id": "tes_embry_short__boom_2",
+   "video": "tes_embry_short",
+   "nombre": "boom_2",
+   "archivo": "tes_embry_short__boom_2.mp3",
+   "md5": "76282966fdccd8ab549bb3682c928aa6",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_embry_short__ding": {
+   "id": "tes_embry_short__ding",
+   "video": "tes_embry_short",
+   "nombre": "ding",
+   "archivo": "tes_embry_short__ding.mp3",
+   "md5": "3cca023346927681f84973951d93d5ab",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_embry_short__risas": {
+   "id": "tes_embry_short__risas",
+   "video": "tes_embry_short",
+   "nombre": "risas",
+   "archivo": "tes_embry_short__risas.mp3",
+   "md5": "b49ed274d58402367384ba85060cad58",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "cronicas_tamriel"
+  },
+  "fo_nunca_f4__geiger": {
+   "id": "fo_nunca_f4__geiger",
+   "video": "fo_nunca_f4",
+   "nombre": "geiger",
+   "archivo": "fo_nunca_f4__geiger.mp3",
+   "md5": "dffacc66f9a9368cf65ff182d34810e4",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__logro": {
+   "id": "fo_nunca_f4__logro",
+   "video": "fo_nunca_f4",
+   "nombre": "logro",
+   "archivo": "fo_nunca_f4__logro.mp3",
+   "md5": "565e198148872f2eebecf6d92232352a",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__lugar_descubierto": {
+   "id": "fo_nunca_f4__lugar_descubierto",
+   "video": "fo_nunca_f4",
+   "nombre": "lugar_descubierto",
+   "archivo": "fo_nunca_f4__lugar_descubierto.mp3",
+   "md5": "c7f7c6da6da9d1128349dd7797516826",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__mision_completada": {
+   "id": "fo_nunca_f4__mision_completada",
+   "video": "fo_nunca_f4",
+   "nombre": "mision_completada",
+   "archivo": "fo_nunca_f4__mision_completada.mp3",
+   "md5": "127130ea5f219df4a00c23bf5987f6cf",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__pipboy": {
+   "id": "fo_nunca_f4__pipboy",
+   "video": "fo_nunca_f4",
+   "nombre": "pipboy",
+   "archivo": "fo_nunca_f4__pipboy.mp3",
+   "md5": "884b4288b940c76b316804991c7f0879",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__subir_nivel": {
+   "id": "fo_nunca_f4__subir_nivel",
+   "video": "fo_nunca_f4",
+   "nombre": "subir_nivel",
+   "archivo": "fo_nunca_f4__subir_nivel.mp3",
+   "md5": "161a34193631d3a458137b7ebfd99a9f",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__terminal": {
+   "id": "fo_nunca_f4__terminal",
+   "video": "fo_nunca_f4",
+   "nombre": "terminal",
+   "archivo": "fo_nunca_f4__terminal.mp3",
+   "md5": "c584fb76e5f2407aa5610665b87107fd",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_nunca_f4__vats": {
+   "id": "fo_nunca_f4__vats",
+   "video": "fo_nunca_f4",
+   "nombre": "vats",
+   "archivo": "fo_nunca_f4__vats.mp3",
+   "md5": "3b5790aba9f2d39e37701e767b3507bd",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "radio_yermo"
+  },
+  "fo_refugios_25__r11_grabacion": {
+   "id": "fo_refugios_25__r11_grabacion",
+   "video": "fo_refugios_25",
+   "nombre": "r11_grabacion",
+   "archivo": "fo_refugios_25__r11_grabacion.mp3",
+   "md5": "99727c55da30bd1d689fee4df25eedc5",
+   "prompt": "",
+   "dur": 8.5,
+   "canal": "radio_yermo"
+  },
+  "fo_refugios_25__ruido_blanco": {
+   "id": "fo_refugios_25__ruido_blanco",
+   "video": "fo_refugios_25",
+   "nombre": "ruido_blanco",
+   "archivo": "fo_refugios_25__ruido_blanco.mp3",
+   "md5": "80791a5736b16b76e8b00863c03e1d2b",
+   "prompt": "",
+   "dur": 2.4,
+   "canal": "radio_yermo"
+  },
+  "cod_mandela3__cod_killstreak": {
+   "id": "cod_mandela3__cod_killstreak",
+   "video": "cod_mandela3",
+   "nombre": "cod_killstreak",
+   "archivo": "cod_mandela3__cod_killstreak.mp3",
+   "md5": "54f36b26a173fe294b093328ba00f8f4",
+   "prompt": "",
+   "dur": 1.57,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__cod_nuke": {
+   "id": "cod_mandela3__cod_nuke",
+   "video": "cod_mandela3",
+   "nombre": "cod_nuke",
+   "archivo": "cod_mandela3__cod_nuke.mp3",
+   "md5": "210019aca0016a346c377ff0bd46b275",
+   "prompt": "",
+   "dur": 6.0,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__micro_arrebatado": {
+   "id": "cod_mandela3__micro_arrebatado",
+   "video": "cod_mandela3",
+   "nombre": "micro_arrebatado",
+   "archivo": "cod_mandela3__micro_arrebatado.mp3",
+   "md5": "4914cb77c3394ba6d981255310d9a895",
+   "prompt": "",
+   "dur": 1.76,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__micro_arrebatado_2": {
+   "id": "cod_mandela3__micro_arrebatado_2",
+   "video": "cod_mandela3",
+   "nombre": "micro_arrebatado_2",
+   "archivo": "cod_mandela3__micro_arrebatado_2.mp3",
+   "md5": "6ba053cec8b4d3661c36bb70ec993290",
+   "prompt": "",
+   "dur": 1.76,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__micro_devuelto": {
+   "id": "cod_mandela3__micro_devuelto",
+   "video": "cod_mandela3",
+   "nombre": "micro_devuelto",
+   "archivo": "cod_mandela3__micro_devuelto.mp3",
+   "md5": "e0de971878eade0f5676c1e8ad0032d6",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__micro_devuelto_2": {
+   "id": "cod_mandela3__micro_devuelto_2",
+   "video": "cod_mandela3",
+   "nombre": "micro_devuelto_2",
+   "archivo": "cod_mandela3__micro_devuelto_2.mp3",
+   "md5": "babb23c89e796a27f569f08bfc249fd3",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__s_japones": {
+   "id": "cod_mandela3__s_japones",
+   "video": "cod_mandela3",
+   "nombre": "s_japones",
+   "archivo": "cod_mandela3__s_japones.mp3",
+   "md5": "da4dd5d1cbdefbf8fd02e41de395328c",
+   "prompt": "",
+   "dur": 2.5,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__s_menu50": {
+   "id": "cod_mandela3__s_menu50",
+   "video": "cod_mandela3",
+   "nombre": "s_menu50",
+   "archivo": "cod_mandela3__s_menu50.mp3",
+   "md5": "4de6429cbe285b64a5df3cfce25f47b8",
+   "prompt": "",
+   "dur": 5.0,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__s_mision50": {
+   "id": "cod_mandela3__s_mision50",
+   "video": "cod_mandela3",
+   "nombre": "s_mision50",
+   "archivo": "cod_mandela3__s_mision50.mp3",
+   "md5": "3e6a2f424cc47eb5b619341bea94a4cc",
+   "prompt": "",
+   "dur": 4.8,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__s_norussian": {
+   "id": "cod_mandela3__s_norussian",
+   "video": "cod_mandela3",
+   "nombre": "s_norussian",
+   "archivo": "cod_mandela3__s_norussian.mp3",
+   "md5": "5a19d8459670d508658f0cd54d9e79bd",
+   "prompt": "",
+   "dur": 3.1,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__s_reznov1": {
+   "id": "cod_mandela3__s_reznov1",
+   "video": "cod_mandela3",
+   "nombre": "s_reznov1",
+   "archivo": "cod_mandela3__s_reznov1.mp3",
+   "md5": "0f09346eab43260a454ebd6f9f64358f",
+   "prompt": "",
+   "dur": 5.85,
+   "canal": "cronicas_cod"
+  },
+  "cod_mandela3__s_reznov2": {
+   "id": "cod_mandela3__s_reznov2",
+   "video": "cod_mandela3",
+   "nombre": "s_reznov2",
+   "archivo": "cod_mandela3__s_reznov2.mp3",
+   "md5": "569ce676b19c1ab9ad6549f20b5eea4e",
+   "prompt": "",
+   "dur": 4.9,
+   "canal": "cronicas_cod"
+  },
+  "er_godfrey_atrocidades__s_hoarah": {
+   "id": "er_godfrey_atrocidades__s_hoarah",
+   "video": "er_godfrey_atrocidades",
+   "nombre": "s_hoarah",
+   "archivo": "er_godfrey_atrocidades__s_hoarah.mp3",
+   "md5": "e45e032185dba56d7d588c650aafd1a6",
+   "prompt": "",
+   "dur": 8.1,
+   "canal": "runa_caida"
+  },
+  "er_godfrey_atrocidades__s_morgott": {
+   "id": "er_godfrey_atrocidades__s_morgott",
+   "video": "er_godfrey_atrocidades",
+   "nombre": "s_morgott",
+   "archivo": "er_godfrey_atrocidades__s_morgott.mp3",
+   "md5": "a3a5af4c4ac25fef86c5ddfc86208f77",
+   "prompt": "",
+   "dur": 6.1,
+   "canal": "runa_caida"
+  },
+  "jchn_261119_pino_azul__nj_cama": {
+   "id": "jchn_261119_pino_azul__nj_cama",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_cama",
+   "archivo": "jchn_261119_pino_azul__nj_cama.mp3",
+   "md5": "93542efefb9e0a9aead5c95da6c71d04",
+   "prompt": "Calm warm acoustic documentary background music, soft nylon guitar arpeggios and light strings, gentle and hopeful, seamless loop, instrumental",
+   "dur": 22.0,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_contador": {
+   "id": "jchn_261119_pino_azul__nj_contador",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_contador",
+   "archivo": "jchn_261119_pino_azul__nj_contador.mp3",
+   "md5": "6b2b5e6568d7fe1d8430467046158a72",
+   "prompt": "Fast soft mechanical counter ticking, numbers rolling, short",
+   "dur": 1.48,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_fuego": {
+   "id": "jchn_261119_pino_azul__nj_fuego",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_fuego",
+   "archivo": "jchn_261119_pino_azul__nj_fuego.mp3",
+   "md5": "3ba9ac65be9015a5b25d984ffd9c000b",
+   "prompt": "Crackling brush fire flames, short",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_golpe": {
+   "id": "jchn_261119_pino_azul__nj_golpe",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_golpe",
+   "archivo": "jchn_261119_pino_azul__nj_golpe.mp3",
+   "md5": "fc4ea6190e1a5d9dacfbe1ab66f703cd",
+   "prompt": "Deep soft cinematic boom hit, short warm low impact",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_pop": {
+   "id": "jchn_261119_pino_azul__nj_pop",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_pop",
+   "archivo": "jchn_261119_pino_azul__nj_pop.mp3",
+   "md5": "3c34ffbc91f77491484240b29eec66aa",
+   "prompt": "Small soft UI pop click, clean, subtle",
+   "dur": 0.6,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_sello": {
+   "id": "jchn_261119_pino_azul__nj_sello",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_sello",
+   "archivo": "jchn_261119_pino_azul__nj_sello.mp3",
+   "md5": "c8275e9a9676d66eb7eaa91ca0982527",
+   "prompt": "Rubber stamp slammed hard on paper on a wooden desk, single thud",
+   "dur": 1.2,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_tension": {
+   "id": "jchn_261119_pino_azul__nj_tension",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_tension",
+   "archivo": "jchn_261119_pino_azul__nj_tension.mp3",
+   "md5": "b2b0165a695433fc805174f8728e113c",
+   "prompt": "Low dark cinematic drone with a slow tense pulse, ominous, no melody",
+   "dur": 6.0,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_vaca": {
+   "id": "jchn_261119_pino_azul__nj_vaca",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_vaca",
+   "archivo": "jchn_261119_pino_azul__nj_vaca.mp3",
+   "md5": "d9dc643a73314dd46b8248b0f80143b5",
+   "prompt": "A single cow mooing in an open field, distant, realistic",
+   "dur": 2.0,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_viento": {
+   "id": "jchn_261119_pino_azul__nj_viento",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_viento",
+   "archivo": "jchn_261119_pino_azul__nj_viento.mp3",
+   "md5": "14d12fe58a746a6bc6b996166638c903",
+   "prompt": "Gentle mountain wind through pine needles, distant birds chirping, calm natural ambience, no music",
+   "dur": 22.0,
+   "canal": ""
+  },
+  "jchn_261119_pino_azul__nj_whoosh": {
+   "id": "jchn_261119_pino_azul__nj_whoosh",
+   "video": "jchn_261119_pino_azul",
+   "nombre": "nj_whoosh",
+   "archivo": "jchn_261119_pino_azul__nj_whoosh.mp3",
+   "md5": "8854b4a1f13c3d9bf1953d2a913302f8",
+   "prompt": "Quick soft airy whoosh transition, clean",
+   "dur": 1.2,
+   "canal": ""
+  },
+  "mpm_takis__caja": {
+   "id": "mpm_takis__caja",
+   "video": "mpm_takis",
+   "nombre": "caja",
+   "archivo": "mpm_takis__caja.mp3",
+   "md5": "98c5fa32d13af4747117d2d00722243c",
+   "prompt": "Cash register ka-ching, bright and short",
+   "dur": 2.0,
+   "canal": "mil_por_minuto"
+  },
+  "mpm_takis__freidora": {
+   "id": "mpm_takis__freidora",
+   "video": "mpm_takis",
+   "nombre": "freidora",
+   "archivo": "mpm_takis__freidora.mp3",
+   "md5": "f1911a64e1c65c8b91d3cf85176d0bf4",
+   "prompt": "Deep fryer sizzling, hot oil bubbling vigorously, close and crisp",
+   "dur": 6.0,
+   "canal": "mil_por_minuto"
+  },
+  "mpm_takis__golpe_metal": {
+   "id": "mpm_takis__golpe_metal",
+   "video": "mpm_takis",
+   "nombre": "golpe_metal",
+   "archivo": "mpm_takis__golpe_metal.mp3",
+   "md5": "5ebf854f41f1c9b2fe2d3f01630f1827",
+   "prompt": "Heavy industrial metal clank, a factory press stamping once, short",
+   "dur": 2.0,
+   "canal": "mil_por_minuto"
+  },
+  "mpm_takis__maquina": {
+   "id": "mpm_takis__maquina",
+   "video": "mpm_takis",
+   "nombre": "maquina",
+   "archivo": "mpm_takis__maquina.mp3",
+   "md5": "9d9262a9809af905400bdb0f5ec4520b",
+   "prompt": "Factory production line ambience, conveyor belts rolling and machines humming, steady loop",
+   "dur": 10.0,
+   "canal": "mil_por_minuto"
+  },
+  "mpm_takis__sello": {
+   "id": "mpm_takis__sello",
+   "video": "mpm_takis",
+   "nombre": "sello",
+   "archivo": "mpm_takis__sello.mp3",
+   "md5": "38d124fd9624f73fb1d1be830d78fab1",
+   "prompt": "Rubber stamp hitting paper hard, single thud",
+   "dur": 1.0,
+   "canal": "mil_por_minuto"
+  },
+  "starship_33_motores__alarma": {
+   "id": "starship_33_motores__alarma",
+   "video": "starship_33_motores",
+   "nombre": "alarma",
+   "archivo": "starship_33_motores__alarma.mp3",
+   "md5": "123b020496c222cdd088af4a7eaa4df7",
+   "prompt": "",
+   "dur": 1.2,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__apagado": {
+   "id": "starship_33_motores__apagado",
+   "video": "starship_33_motores",
+   "nombre": "apagado",
+   "archivo": "starship_33_motores__apagado.mp3",
+   "md5": "8e607490aa84d515d5fb0593c4d5fffa",
+   "prompt": "",
+   "dur": 1.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__brazos": {
+   "id": "starship_33_motores__brazos",
+   "video": "starship_33_motores",
+   "nombre": "brazos",
+   "archivo": "starship_33_motores__brazos.mp3",
+   "md5": "56a14e0130b192cfcdc84376982dbc2b",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__campana": {
+   "id": "starship_33_motores__campana",
+   "video": "starship_33_motores",
+   "nombre": "campana",
+   "archivo": "starship_33_motores__campana.mp3",
+   "md5": "75acf528a0d0a45574c8b3bf55c59ef6",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__explosion": {
+   "id": "starship_33_motores__explosion",
+   "video": "starship_33_motores",
+   "nombre": "explosion",
+   "archivo": "starship_33_motores__explosion.mp3",
+   "md5": "52939c13608fb79df5112c6e082144c3",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__fabrica": {
+   "id": "starship_33_motores__fabrica",
+   "video": "starship_33_motores",
+   "nombre": "fabrica",
+   "archivo": "starship_33_motores__fabrica.mp3",
+   "md5": "ed69c145de3c628d3292349e81d2c2af",
+   "prompt": "",
+   "dur": 3.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__gira_1": {
+   "id": "starship_33_motores__gira_1",
+   "video": "starship_33_motores",
+   "nombre": "gira_1",
+   "archivo": "starship_33_motores__gira_1.mp3",
+   "md5": "138e804604bc3de7b6805fddc3a3a6ef",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__gira_2": {
+   "id": "starship_33_motores__gira_2",
+   "video": "starship_33_motores",
+   "nombre": "gira_2",
+   "archivo": "starship_33_motores__gira_2.mp3",
+   "md5": "202a5e53a2b1b2beea091a4021c3ae4f",
+   "prompt": "",
+   "dur": 1.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__hud_1": {
+   "id": "starship_33_motores__hud_1",
+   "video": "starship_33_motores",
+   "nombre": "hud_1",
+   "archivo": "starship_33_motores__hud_1.mp3",
+   "md5": "39db57c21f88c99da31a2bb2f0d4663b",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__hud_2": {
+   "id": "starship_33_motores__hud_2",
+   "video": "starship_33_motores",
+   "nombre": "hud_2",
+   "archivo": "starship_33_motores__hud_2.mp3",
+   "md5": "7ca9516ab55eb57525c6c65da55b65be",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__hud_3": {
+   "id": "starship_33_motores__hud_3",
+   "video": "starship_33_motores",
+   "nombre": "hud_3",
+   "archivo": "starship_33_motores__hud_3.mp3",
+   "md5": "4f14fc41c5e499fe4f423eb5f57b735d",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__hud_4": {
+   "id": "starship_33_motores__hud_4",
+   "video": "starship_33_motores",
+   "nombre": "hud_4",
+   "archivo": "starship_33_motores__hud_4.mp3",
+   "md5": "6403639933a07fa77bdf0279fd853005",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__ignicion_1": {
+   "id": "starship_33_motores__ignicion_1",
+   "video": "starship_33_motores",
+   "nombre": "ignicion_1",
+   "archivo": "starship_33_motores__ignicion_1.mp3",
+   "md5": "7fee85c91d3d2bbb09ede47fe8609fdd",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__ignicion_2": {
+   "id": "starship_33_motores__ignicion_2",
+   "video": "starship_33_motores",
+   "nombre": "ignicion_2",
+   "archivo": "starship_33_motores__ignicion_2.mp3",
+   "md5": "a9e5a3108280d564c8716de100966e03",
+   "prompt": "",
+   "dur": 2.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__pulso_1": {
+   "id": "starship_33_motores__pulso_1",
+   "video": "starship_33_motores",
+   "nombre": "pulso_1",
+   "archivo": "starship_33_motores__pulso_1.mp3",
+   "md5": "b9f0768f7de68f763f721e8bc7a76773",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__pulso_2": {
+   "id": "starship_33_motores__pulso_2",
+   "video": "starship_33_motores",
+   "nombre": "pulso_2",
+   "archivo": "starship_33_motores__pulso_2.mp3",
+   "md5": "f01ee931ee3ac1b161e55273df3a2ab4",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__rugido": {
+   "id": "starship_33_motores__rugido",
+   "video": "starship_33_motores",
+   "nombre": "rugido",
+   "archivo": "starship_33_motores__rugido.mp3",
+   "md5": "c06b71ff2d875f8e1c055ff7910542db",
+   "prompt": "",
+   "dur": 4.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__tic_1": {
+   "id": "starship_33_motores__tic_1",
+   "video": "starship_33_motores",
+   "nombre": "tic_1",
+   "archivo": "starship_33_motores__tic_1.mp3",
+   "md5": "a23132c26a88a3eb6b2f50e868c4c6ed",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__tic_2": {
+   "id": "starship_33_motores__tic_2",
+   "video": "starship_33_motores",
+   "nombre": "tic_2",
+   "archivo": "starship_33_motores__tic_2.mp3",
+   "md5": "0e585289b3860cc7737b7354e871c7db",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__tic_3": {
+   "id": "starship_33_motores__tic_3",
+   "video": "starship_33_motores",
+   "nombre": "tic_3",
+   "archivo": "starship_33_motores__tic_3.mp3",
+   "md5": "dce9515d847f2b23f3ae5bd15f432dcf",
+   "prompt": "",
+   "dur": 0.48,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__vibra": {
+   "id": "starship_33_motores__vibra",
+   "video": "starship_33_motores",
+   "nombre": "vibra",
+   "archivo": "starship_33_motores__vibra.mp3",
+   "md5": "f77fd6aad985ab17985cd16eab8bdfd5",
+   "prompt": "",
+   "dur": 2.0,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__whoosh_1": {
+   "id": "starship_33_motores__whoosh_1",
+   "video": "starship_33_motores",
+   "nombre": "whoosh_1",
+   "archivo": "starship_33_motores__whoosh_1.mp3",
+   "md5": "b9b5d6b5f5afafcd7d3d7d2a95a3ea84",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__whoosh_2": {
+   "id": "starship_33_motores__whoosh_2",
+   "video": "starship_33_motores",
+   "nombre": "whoosh_2",
+   "archivo": "starship_33_motores__whoosh_2.mp3",
+   "md5": "6f9c71887b7cbf34783e669de9f44fe2",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "starship_33_motores__whoosh_3": {
+   "id": "starship_33_motores__whoosh_3",
+   "video": "starship_33_motores",
+   "nombre": "whoosh_3",
+   "archivo": "starship_33_motores__whoosh_3.mp3",
+   "md5": "c12c4fb492a4ed1e107ca910532da485",
+   "prompt": "",
+   "dur": 1.28,
+   "canal": "t_menos_cero"
+  },
+  "tes_armaduras_poderosas__grito_bajio": {
+   "id": "tes_armaduras_poderosas__grito_bajio",
+   "video": "tes_armaduras_poderosas",
+   "nombre": "grito_bajio",
+   "archivo": "tes_armaduras_poderosas__grito_bajio.mp3",
+   "md5": "e1002ca8650d38e63a39b2b4a5c913f7",
+   "prompt": "Distant ghostly man screaming in terror, echoing over a cold icy sea shore, eerie wind, no music",
+   "dur": 3.0,
+   "canal": "cronicas_tamriel"
+  },
+  "tes_armaduras_poderosas__radio_yermo": {
+   "id": "tes_armaduras_poderosas__radio_yermo",
+   "video": "tes_armaduras_poderosas",
+   "nombre": "radio_yermo",
+   "archivo": "tes_armaduras_poderosas__radio_yermo.mp3",
+   "md5": "fe1a2fb7e374cab55c8b8c3e285d2d34",
+   "prompt": "Old 1950s tube radio tuning static crackle, brief swing music fragment through static, no vocals",
+   "dur": 2.0,
+   "canal": "cronicas_tamriel"
   }
  },
- "actualizado": "2026-11-12 10:08"
+ "actualizado": "2026-11-20 08:09"
 }

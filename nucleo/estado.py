@@ -141,7 +141,7 @@ def _ya_subido(v, etapa, registrados):
     (el usuario vio en el tablero Mohg y Sinluz ya subidos). Excepción: una corrección abierta (◐) en la etapa."""
     if "◐" in etapa:
         return False
-    return v in registrados or bool(re.search(r"SUBIDO|PUBLICADO|PROGRAMADO|PÚBLICO", etapa))
+    return v in registrados or bool(re.search(r"SUBIDO|PUBLICADO|PROGRAMADO|PÚBLICO|ARCHIVADO", etapa))
 
 
 def _master_listo(etapa):

@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: página de Facebook «Lágrimas y Venganza» (`novelas_ia`, creada el 23-oct-2026; arte y datos en canales/arte/novelas_ia/LEEME.md; token listo para publicar por API) · meta: publicar antes del 1-nov-2026 (Día de Muertos)
 - estilo: novela con IA = secuencia Flow realista con diálogo y lipsync → docs: docs/formato_novela_ia.md + docs/estilo_secuencia_flow.md
-- etapa: prompts 10/10 · hojas de personaje en Flow
+- etapa: ARCHIVADO 20-nov-2026 (decisión del usuario en «buenos días»: no se termina) · prompts 10/10 · hojas de personaje en Flow
 - siguiente: en Flow (navegador integrado) mirar saldo, hacer hojas de los 5 personajes + sala con ofrenda (imágenes, 0 pts), luego clip de prueba 1
 
 ## Sesiones (plan de tramos · «continúa el video novela_altar» retoma aquí · protocolo docs/sesiones.md)
@@ -11,9 +11,9 @@
 - leer al empezar: este ESTADO + docs/formato_novela_ia.md
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | guion, PLANOS, prompts; hojas de personaje; clip de prueba | ◐ parcial | 23-oct: guion y prompts listos |
-| 2 | 10 clips Veo/Omni 360p con diálogo → revisión → voces fijas (STS) | pendiente | |
-| 3 | música (biblioteca/Lyria), SFX, rótulos, mezcla, render, final | pendiente | |
+| 1 | guion, PLANOS, prompts; hojas de personaje; clip de prueba | ✅ archivado 20-nov (no se termina) | 23-oct: guion y prompts listos |
+| 2 | 10 clips Veo/Omni 360p con diálogo → revisión → voces fijas (STS) | ✅ archivado 20-nov (no se termina) | |
+| 3 | música (biblioteca/Lyria), SFX, rótulos, mezcla, render, final | ✅ archivado 20-nov (no se termina) | |
 
 ## Decisiones del episodio (el usuario, 23-oct-2026)
 - duración ~92 s · TODO video (10 clips: 4 de 8 s + 6 de 10 s) · 360p + descarga «720p mejorada» · vertical 9:16

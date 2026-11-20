@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: edsonxn · meta: mar 20-oct-2026 14:00 CDMX (20:00 UTC; ciclo 6 d tras `polybius` 14-oct) · hipótesis: título NUMERADO con promesa de veredicto (`canales/formula/edsonxn.md`)
 - estilo: documental → docs/estilo_documental.md § «Tablero de detective VIVO» · ejemplo copiado: videos/polybius/ (kit `tablero.py`, `piezas.py`, `portal_base.py`, `mg*.py`, `coreo_comun.py`, `kit.py`) · voz Faraon · Lyria · SIN subtítulos
-- etapa: voz ✓ (51/51, 351 s) · tiempo ✓ (389,4 s = 6:29, 8 escenas) · comprobar ✓ · kit copiado · escenas 0/8 (tramo 2 siguiente)
+- etapa: ARCHIVADO 20-nov-2026 (decisión del usuario en «buenos días»: no se termina) · voz ✓ (51/51, 351 s) · tiempo ✓ (389,4 s = 6:29, 8 escenas) · comprobar ✓ · kit copiado · escenas 0/8 (tramo 2 siguiente)
 - siguiente: tramo 2 → escribir `escenas.py` + `coreo_*.py` + `portales.py` (gancho, carlssin, fentz) y render parcial `python fab.py viajeros_tiempo video --hasta 60`
 
 ## Sesiones (plan de tramos · «continúa el video <alias>» retoma aquí · protocolo docs/sesiones.md)
@@ -12,9 +12,9 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | guion verificado + voz + tiempo + kit copiado de polybius | ✅ 12-oct-2026 | 5 casos (Carlssin, Fentz, Chaplin, Titor, Goddard) con veredicto y origen; hechos con fuente en el docstring de `guion.py` |
-| 2 | escenas del tablero: gancho + carlssin + fentz (0:00-2:27) + render parcial `--hasta 60` | ⏳ siguiente | el usuario ve el primer minuto antes de seguir |
-| 3 | escenas chaplin, titor, goddard, patron, cierre (2:27-6:29) + música Lyria | pendiente | portales NUEVOS por caso (nada reciclado de polybius/satoshi) |
-| 4 | cierre: sfx → mezcla → render → final → verificar → hoja del MASTER → miniatura → youtube.json → subida PRIVADA | pendiente | programar mar 20-oct 14:00 CDMX solo si el usuario lo pide |
+| 2 | escenas del tablero: gancho + carlssin + fentz (0:00-2:27) + render parcial `--hasta 60` | ✅ archivado 20-nov (no se termina) | el usuario ve el primer minuto antes de seguir |
+| 3 | escenas chaplin, titor, goddard, patron, cierre (2:27-6:29) + música Lyria | ✅ archivado 20-nov (no se termina) | portales NUEVOS por caso (nada reciclado de polybius/satoshi) |
+| 4 | cierre: sfx → mezcla → render → final → verificar → hoja del MASTER → miniatura → youtube.json → subida PRIVADA | ✅ archivado 20-nov (no se termina) | programar mar 20-oct 14:00 CDMX solo si el usuario lo pide |
 
 ## Tiempos por escena (s): gancho 0-32,5 · carlssin -82,5 · fentz -147,5 · chaplin -200 · titor -262,5 · goddard -327,5 · patron -357,5 · cierre -389,4
 Ideas de portales (una ventana dibujada por caso, estilo polybius): carlssin = pantalla de bolsa con cifras que suben + tabloide;

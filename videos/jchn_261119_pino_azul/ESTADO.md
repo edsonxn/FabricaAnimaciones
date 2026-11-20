@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
 - canal: SIN CANAL · reel diario n.º 1 de la página de Facebook «Noticias de Juchipila» (noticias_jch, E:\PaginaFace) · sale hoy 19-nov-2026 19:00-20:00
 - estilo: secuencia vertical con efectos (fotos reales de Commons + kit propio `kit_nj.py`) → docs/estilo_secuencia_fx.md + E:\PaginaFace\reel_diario.md
-- etapa: PROGRAMADO en Meta para el 19-nov 19:00 (fb 1839179620463556, post 2026-11-19_1900_pino-azul-reel)
+- etapa: PUBLICADO 19-nov 19:02 en Noticias de Juchipila (fb 1839179620463556, facebook.com/reel/1839179620463556; post 2026-11-19_1900_pino-azul-reel)
 - siguiente: nada; revisar mañana vistas y compartidas (tablero de buenos días Juchipila)
 
 ## Sesiones

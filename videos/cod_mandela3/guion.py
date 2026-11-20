@@ -17,7 +17,16 @@ FONETICA = {}
 # Nombres que Whisper escribe distinto (Gas, Max Amo, Shepard, Transit, Goes Riley, Pripyat, Nook Town, Nuketown por Nuk3town;
 # transcripciones completas comprobadas en voz/eval.json, 19-nov) y colas > 1,0 con la frase entera (p18_2, p06_1, p11_1)
 CER_MAX_POR_FRASE = {k: 0.06 for k in "p20_0 p19_0 p19_1 jesus_0 p16_1 p14_3 p11_1 p07_0 p07c_0 p02_1 p02_4 p19_2".split()}
-TAIL_MAX_POR_FRASE = {"p18_2": 1.2, "p06_1": 1.2, "p11_1": 1.2}
+TAIL_MAX_POR_FRASE = {"p12_0": 1.3, "p18_2": 1.2, "p06_1": 1.2, "p11_1": 1.2}
+
+# El intruso «Turbo» = H1 (Voice Design, solo en la CUENTA 4; receta de canales/voces_prueba/energia_diseno/h1_sonidos.py)
+H1 = "Ialdmnw0yv1TAYIolfxE"
+VOZ["por_cuenta"] = {4: H1}
+VOZ["ajustes_por_voz"] = {H1: dict(stability=0.0, tomas=3, gritos=True, sin_etiquetas=("whisper", "excit", "ecstatic", "thrilled"))}
+TURBO = ["p12_1", "p12_2", "p12_3", "p12_4", "p12_5", "p12p_1"]
+VOZ_POR_FRASE = {k: H1 for k in TURBO}
+SONIDO_INICIAL = ["p12_1", "p12_5", "p12p_1"]
+TAIL_MAX_POR_FRASE.update({k: 1.6 for k in TURBO})   # Turbo termina sus frases GRITANDO: la «cola» fuerte es a propósito   # arrancan con un sonido de boca: no se silencia
 
 SECUENCIA = dict(
     fuente="yt",
@@ -106,11 +115,22 @@ ESCENAS = [
     {"id": "p13c", "frases": [
         "Su tierra, su gente, su sangre. Son dos frases, en dos misiones, con años de guerra en medio. [short pause] Y tu memoria las juntó en un solo discurso.",
     ]},
+    # PRUEBA DEL INTRUSO (el usuario, 19-nov-2026): «Turbo» (voz H1 de Voice Design, cuenta 4) le arrebata el micrófono a Damián,
+    # narra el puesto 12 con LOS MISMOS datos verificados (investigacion.md § 12) y se pelean 10-15 s. Gritos y resoplidos SOLO en
+    # sus frases (VOZ["ajustes_por_voz"], excepción a SIEMPRE_FUERA); Damián sigue plano. 19-nov, 2.ª toma: el usuario quiere UN
+    # solo resoplido de cerdo (fuera caballo/jabalí/toro) y más gritón y enérgico (stability 0.0 ya es el máximo de ElevenLabs). Pregunta al público: ¿se queda el intruso?
     {"id": "p12", "frases": [
-        "Número doce. El modo de una sola bala.",
-        "Black Ops, dos mil diez, las partidas de apuestas. Se llamaba One in the Chamber: una pistola, una bala, y un cuchillo.",
-        "Hay quien lo recuerda como un todos contra todos a treinta bajas, sin vidas.",
-        "Desde el primer día tenía tres vidas. Mueres tres veces y estás fuera. [deadpan] Una bala, tres vidas. Y tu memoria te dio infinitas.",
+        "Número doce. El modo de una sola bala. Black Ops, dos mil diez, las partidas de...",
+        "[inhales sharply through the nose] ¡DAME ESO, DAME ESO! [shouts] ¡SUÉLTALO! [clears throat loudly] Ya, ya. [laughs] ¿Qué es esto, un funeral? ¡HOLA, BANDA! [shouts] ¡AHORA NARRO YO!",
+        "Black Ops, dos mil diez, ¡las partidas de apuestas! [snorts like a pig] ¡El modo se llamaba One in the Chamber, señores! Te dan una pistola... ¡UNA BALA! [shouts] ¡UNA! Y un cuchillo. ¡Y YA! [laughs] ¡Suerte, campeón!",
+        "Y la gente... [inhales loudly and ugly] ¡LA GENTE JURA que era un todos contra todos a treinta bajas, SIN VIDAS! [shouts with a raspy voice] ¡Revives, revives, revives, PARA SIEMPRE! [laughs]",
+        "¡MENTIRA! [screams hoarsely] ¡TRES VIDAS! [coughs] [clears throat] ¡Desde el primer día, banda! Te mueres tres veces y te vas a mirar la partida desde afuera... [laughs harder] ¡LLORANDO!",
+        "[laughs harder] Una bala, tres vidas. [shouts] ¡Y TU MEMORIA TE DIO INFINITAS! [wheezes]",
+    ]},
+    {"id": "p12p", "frases": [
+        "[deadpan] ¿Ya terminaste? Gracias. Fue como escuchar una licuadora con conexión a internet.",
+        "[groans] Ya, ya, toma tu micrófono, abuelo. [shouts] ¡PERO ME VAN A EXTRAÑAR! [laughs] ¡COMENTEN SI ME QUEDO!",
+        "[deadpan] No lo hagan. [short pause] Sigamos.",
     ]},
     {"id": "p11", "frases": [
         "En el once, la bufanda de Ghost.",

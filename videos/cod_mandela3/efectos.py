@@ -293,14 +293,29 @@ FX = [
        nombre="fusion reznov", y=.50),
     caso(("en un solo discurso|fin", 0), "falso", "El discurso de Reznov", "Son dos frases", dur=2.4),
 
-    # ---------------- 12 · One in the Chamber
-    puesto("Número doce", 12, "One in the Chamber", "PARTIDAS DE APUESTAS / BLACK OPS"),
-    rel("las partidas de apuestas", "oitc", "One in the Chamber", "Black Ops · 2010", dur=3.2, x=.77, y=.52, tam=420),
-    mg_en(C.contador(1, "BALA", "UNA PISTOLA · UN CUCHILLO"), "una pistola, una bala", 2.6, "contador bala", x=.30, y=.30),
-    mg_en(C.objetivo("30 bajas, sin vidas", "Lo que recuerdan"), "Hay quien lo recuerda como", 2.8, "objetivo oitc", x=.30, y=.82),
-    mg_en(C.contador(3, "VIDAS", "DESDE EL PRIMER DÍA"), "Desde el primer día tenía", 2.6, "contador vidas", x=.70, y=.30),
-    mg_en(C.fallida("Fuera de la partida", "Tres muertes y fuera"), "Mueres tres veces", 2.2, "fallida oitc"),
-    caso("tu memoria te dio infinitas", "falso", "OITC sin vidas", "Siempre fueron tres", dur=2.6),
+    # ---------------- 12 · One in the Chamber — ENTRA EL INTRUSO «Turbo» (voz H1, prueba pedida por el usuario el 19-nov-2026)
+    puesto("Número doce", 12, "One in the Chamber", "PARTIDAS DE APUESTAS / BLACK OPS", dur=3.4),
+    pv("El modo de una sola bala", "c_bo1", "Black Ops · 2010", dur=2.2, tam=300, **_D),
+    mg_en(C.radio("TURBO · EL INTRUSO", "«¡Ahora narro yo!»", "SEÑAL INTERCEPTADA / MICRÓFONO ROBADO"), ("DAME ESO, DAME ESO", -.15), 4.4,
+          "radio turbo entra", x=.5, y=.26),
+    mg_en(C.sello("MICRÓFONO ROBADO", "EXPEDIENTE 141"), "Qué es esto, un funeral", 2.4, "sello micro", x=.58, y=.60),
+    rel("las partidas de apuestas!", "oitc", "One in the Chamber", "Black Ops · 2010", dur=3.2, x=.77, y=.52, tam=420),
+    mg_en(C.contador(1, "BALA", "UNA PISTOLA · UN CUCHILLO"), "Te dan una pistola", 2.8, "contador bala", x=.30, y=.30),
+    pv("Y un cuchillo", "m1911", "Una pistola, una bala", dur=2.6, x=.18, y=.64, tam=280),
+    mg_en(C.objetivo("30 bajas, sin vidas", "Lo que jura la gente"), "LA GENTE JURA", 3.0, "objetivo oitc", x=.30, y=.82),
+    pv("Revives, revives, revives", "oitc", "¿Sin vidas?", x=.80, y=.62, tam=280),
+    mg_en(C.contador(3, "VIDAS", "DESDE EL PRIMER DÍA"), "TRES VIDAS!", 2.8, "contador vidas", x=.70, y=.30),
+    ficha("Desde el primer día, banda", "One in the Chamber", "*Tres vidas*.", "INTEL / APUESTAS", dur=1.5),
+    mg_en(C.fallida("Fuera de la partida", "Tres muertes y fuera"), "Te mueres tres veces", 2.4, "fallida oitc"),
+    caso("Y TU MEMORIA TE DIO INFINITAS", "falso", "OITC sin vidas", "Siempre fueron tres", dur=2.8),
+    # pelea: el narrador recupera el micro, Turbo se va, «Sigamos»
+    mg_en(C.radio("EL NARRADOR", "«¿Ya terminaste?»", "FRECUENCIA RECUPERADA / EXPEDIENTE 141"), ("Ya terminaste", -.15), 3.4,
+          "radio vuelve narrador", x=.5, y=.26),
+    mg_en(C.logro("Licuadora con internet", "Insulto desbloqueado"), "una licuadora con conexión", 2.6, "logro licuadora", x=.72, y=.72),
+    mg_en(C.radio("TURBO · EL INTRUSO", "«¡Comenten si me quedo!»", "SEÑAL PERDIDA"), "toma tu micrófono, abuelo", 3.8,
+          "radio turbo sale", x=.5, y=.26),
+    mg_en(C.objetivo("¿Se queda el intruso?", "Vota en los comentarios"), "COMENTEN SI ME QUEDO", 3.0, "objetivo voto", x=.30, y=.82),
+    mg_en(C.sello("NO LO HAGAN", "EXPEDIENTE 141"), "No lo hagan", 1.8, "sello no lo hagan", x=.5, y=.46),
 
     # ---------------- 11 · la bufanda de Ghost
     puesto("En el once", 11, "La bufanda de Ghost", "CAMPAÑA / MODERN WARFARE 2", dur=3.0),
@@ -491,6 +506,8 @@ PISTAS = [
     dict(sfx="cod_logro", en="Felicidades: tu memoria funciona", vol=.26),
     dict(sfx="cod_logro", en="Y no. Existe", vol=.24),
     dict(sfx="cod_puesto", en="Número doce", vol=.22),
+    dict(sfx="micro_arrebatado", en=("las partidas de...|fin", -.25), vol=.55),   # Turbo arrebata el micro
+    dict(sfx="micro_devuelto", en=("Ya terminaste", -.55), vol=.50),            # el narrador lo recupera
     dict(sfx="cod_fallida", en="En ninguna misión del original", vol=.24),
     dict(sfx="cod_puesto", en="Número ocho", vol=.22),
     dict(sfx="cod_fallida", en="Y en internet no lo encontraba", vol=.24),
@@ -520,7 +537,6 @@ FX += [
     pv("Se la tiras a un rival", "grief", "Grief", **_I2),
     pv("Muchos recuerdan una sola frase", "reznov", "Reznov", **_I2),
     pv("Eso es en Stalingrado", "c_waw", "Stalingrado", **_D2),
-    pv("Hay quien lo recuerda como un todos", "oitc", "¿Sin vidas?", **_D2),
     pv("Uno lo descubrió en una foto", "ghost", "La foto del disfraz", **_D2),
     pv("¿Son familia?", "price", "¿Familia?", **_D2),
     pv("En abril de dos mil veinte", "c_mw19", "Abril de 2020", **_D2),
@@ -537,7 +553,6 @@ FX += [
     ficha("Yo entré a ese menú", "Menú de Black Ops", "Teles, silla y *el cristal*.", "INTEL / BLACK OPS", dur=3.0),
     ficha("Hay quien recuerda la máquina", "Speed Cola", "La perk que *recarga más rápido*.", "INTEL / PERKS", dur=3.0),
     ficha("Es de Call of Duty: Ghosts", "Extinction", "Ghosts · *2013* · Infinity Ward.", "INTEL / COOPERATIVO", dur=3.0),
-    ficha("Desde el primer día tenía", "One in the Chamber", "*3 vidas* desde el lanzamiento.", "INTEL / APUESTAS", dur=3.0),
     ficha("La bufanda salió de", "La bufanda", "De *disfraces* y fotos de fans.", "INTEL / FANS", dur=3.0),
     ficha("No es el mismo. El Price", "Capitán Price · 1944", "Muere *saboteando el Tirpitz*.", "INTEL / CALL OF DUTY 1", dur=3.2, x=.73),
     ficha("Él ni siquiera tenía Cold War", "Fin de semana gratis", "Lo jugó *en una prueba*.", "INTEL / COLD WAR", dur=3.0, x=.73),

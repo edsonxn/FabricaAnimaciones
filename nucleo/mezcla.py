@@ -99,6 +99,14 @@ def pico_verdadero_db(x):
 
 
 def main():
+    # 19-nov-2026 (cod_mandela3): `cargar` cambia un archivo que falta por silencio, y la mezcla salió sin audio/fx.wav ni
+    # audio/fx_voz.wav (`fx --seco` solo lista): ni un SFX ni una cita del juego en el MASTER. Con efectos.py, fx.wav es obligatorio.
+    if os.path.isfile("efectos.py"):
+        if not os.path.isfile("audio/fx.wav"):
+            raise SystemExit("mezcla DETENIDA: hay efectos.py pero falta audio/fx.wav -> corre antes `python fab.py <v> fx` "
+                             "(sin --seco); sin él no suena ningún SFX ni ninguna cita (PISTAS voz=True).")
+        if os.path.getmtime("efectos.py") > os.path.getmtime("audio/fx.wav"):
+            print("AVISO: efectos.py cambió después de audio/fx.wav: rehaz `python fab.py <v> fx` antes de mezclar.")
     voz = pista_voz()
     musica = cargar("audio/musica.wav")
     sfx = cargar("audio/sfx.wav")

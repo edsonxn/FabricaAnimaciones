@@ -146,9 +146,19 @@ def voz_de(key):
 SIEMPRE_FUERA = ("whisper", "excit", "shout", "yell", "scream", "ecstatic", "thrilled")
 
 
-def sin_etiquetas(texto):
-    """Quita las etiquetas que esta voz no lleva: SIEMPRE_FUERA + VOZ["sin_etiquetas"] (trozos de texto, "whisper" quita [whispers])."""
-    malas = tuple(SIEMPRE_FUERA) + tuple(config.VOZ.get("sin_etiquetas") or ())
+def ajustes_de(voice_id):
+    """VOZ["ajustes_por_voz"] = {"<voice_id>": dict(stability=0.0, tomas=3, gritos=True, sin_etiquetas=(...))}: receta propia de una
+    voz de VOZ_POR_FRASE (19-nov-2026, el intruso H1 de cod_mandela3: stability 0.0 y GRITOS permitidos solo en SUS frases, excepción
+    a SIEMPRE_FUERA pedida por el usuario; el narrador sigue con su receta y sin gritos)."""
+    return ((config.VOZ.get("ajustes_por_voz") or {}).get(voice_id) or {}) if config else {}
+
+
+def sin_etiquetas(texto, voice_id=None):
+    """Quita las etiquetas que esta voz no lleva: SIEMPRE_FUERA + VOZ["sin_etiquetas"] (trozos de texto, "whisper" quita [whispers]).
+    Una voz con ajustes_por_voz(gritos=True) conserva shout/yell/scream; con su propio sin_etiquetas, ese reemplaza al del narrador."""
+    aj = ajustes_de(voice_id)
+    fuera = tuple(x for x in SIEMPRE_FUERA if not (aj.get("gritos") and x in ("shout", "yell", "scream")))
+    malas = fuera + tuple(aj["sin_etiquetas"] if "sin_etiquetas" in aj else (config.VOZ.get("sin_etiquetas") or ()))
     limpio = re.sub(r"\[([^\]]+)\]\s*", lambda m: "" if any(x in m.group(1).lower() for x in malas) else m.group(0), texto)
     if limpio != texto:
         print(f"  (etiquetas quitadas por VOZ['sin_etiquetas']: {texto[:60]}…)", flush=True)
@@ -160,7 +170,8 @@ def tts(texto, seed, prev="", sig="", voice_id=None):
     if es_v3():
         # eleven_v3 / eleven_v4: entienden etiquetas entre corchetes; stability solo 0.0 (creativa) / 0.5 (natural) / 1.0 (robusta)
         # y no se les manda previous_text/next_text
-        body = dict(text=texto, model_id=modelo(), seed=int(seed), voice_settings=dict(stability=v.get("stability", 0.5)))
+        stab = ajustes_de(voice_id).get("stability", v.get("stability", 0.5))
+        body = dict(text=texto, model_id=modelo(), seed=int(seed), voice_settings=dict(stability=stab))
         prev = sig = ""
     else:
         body = dict(text=texto, model_id=modelo(), seed=int(seed),
@@ -179,6 +190,7 @@ def tts(texto, seed, prev="", sig="", voice_id=None):
 
 
 def generar(frases, seeds, solo, out):
+    todas = list(seeds)
     seeds = seeds[:config.VOZ.get("tomas", 1)]
     textos = [t for _, _, t in frases]
     pend = []
@@ -186,7 +198,8 @@ def generar(frases, seeds, solo, out):
         key = f"{esc}_{idx}"
         if solo and key not in solo:
             continue
-        for seed in seeds:
+        aj = ajustes_de(voz_de(key))
+        for seed in (todas[:aj["tomas"]] if "tomas" in aj else seeds):
             path = f"{out}/{key}_s{seed}.wav"
             if not os.path.exists(path):
                 pend.append((n, key, texto, seed, path))
@@ -218,7 +231,7 @@ def generar(frases, seeds, solo, out):
             prev = " ".join(textos[max(0, n - 2):n])
             sig = textos[n + 1] if n + 1 < len(textos) else ""
             if es_v3():
-                texto = sin_etiquetas(config.FRASES_TTS.get(key, texto))   # con las etiquetas [..] que config quitó del guion
+                texto = sin_etiquetas(config.FRASES_TTS.get(key, texto), voz_de(key))   # con las etiquetas [..] que config quitó del guion
             mp3, costo = tts(texto, seed, prev, sig, voice_id=voz_de(key))
             y, sr = librosa.load(io.BytesIO(mp3), sr=None, mono=True)
             sf.write(path, y, sr)

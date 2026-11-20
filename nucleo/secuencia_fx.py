@@ -656,6 +656,9 @@ def hoja():
     ev += [(d["de"] + min(0.8, (d["a"] - d["de"]) * .6), d["texto"][:22]) for d in capa.rot]
     ev += [((b["t0"] + b["t1"]) / 2, "cámara") for b in capa.bs if b["id"] in capa.camaras]
     ev.sort()
+    if os.environ.get("FAB_FX_TRAMO"):   # «366-460»: solo ese tramo (un pedazo rehecho, 19-nov-2026) → previews/fx_tramo_NN.jpg
+        a, b_ = (float(x) for x in os.environ["FAB_FX_TRAMO"].split("-"))
+        ev = [e for e in ev if a <= e[0] <= b_]
     os.makedirs("previews", exist_ok=True)
     minis = []
     mw, mh, cols, letra = 480, 270, 4, .55
@@ -678,7 +681,7 @@ def hoja():
     n = cols * 5
     for h in range(0, len(minis), n):
         g = minis[h:h + n] + [np.zeros_like(minis[0])] * (-len(minis[h:h + n]) % cols)
-        ruta = f"previews/fx_{h // n + 1:02d}.jpg"
+        ruta = f"previews/fx_{'tramo_' if os.environ.get('FAB_FX_TRAMO') else ''}{h // n + 1:02d}.jpg"
         cv2.imwrite(ruta, np.vstack([np.hstack(g[i:i + cols]) for i in range(0, len(g), cols)]))
         print(ruta)
     capa.lista()

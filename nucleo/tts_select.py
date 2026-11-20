@@ -35,8 +35,12 @@ try:
     _CER_POR_FRASE = dict(getattr(_g, "CER_MAX_POR_FRASE", {}))   # nombres propios que Whisper escribe distinto (Geoffrey -> Jeffrey)
     _IDIOMA_LIBRE = set(getattr(_g, "IDIOMA_LIBRE", []))           # frases oídas y aceptadas aunque Whisper dude del idioma
     _GAP_POR_FRASE = dict(getattr(_g, "GAP_MAX_POR_FRASE", {}))    # pausa larga a propósito tras un punto («…nada. La era…»)
+    # frases que ARRANCAN con un sonido de boca a propósito ([clears throat], [snorts]…, el intruso H1 de cod_mandela3, 19-nov-2026):
+    # silenciar_arranque lo tomaría por el chasquido de Chatterbox y lo borraría
+    _SONIDO_INICIAL = set(getattr(_g, "SONIDO_INICIAL", ()))
 except Exception:
     _TAIL_POR_FRASE, _CER_POR_FRASE, _IDIOMA_LIBRE, _GAP_POR_FRASE = {}, {}, set(), {}
+    _SONIDO_INICIAL = set()
 # Applio (Edge TTS multilingüe) puede leer una frase entera con acento de otro idioma (13-oct-2026: «Oficialmente.» en
 # portugués, «Guarda ese dato.» en italiano): Whisper sin idioma forzado; p(idioma del guion) < P_IDIOMA_MIN = se reescribe
 P_IDIOMA_MIN = 0.90
@@ -185,7 +189,7 @@ for key, (n, m) in elegidas.items():
     b = min(len(y), iv[-1][1] + int(0.12 * SR_OUT))
     y = y[a:b].astype(np.float64)
     y_entera = y.copy()
-    y, mudo = silenciar_arranque(y, SR_OUT)           # sonido suelto antes de la 1.ª palabra (Whisper no lo ve)
+    y, mudo = (y, 0.0) if key in _SONIDO_INICIAL else silenciar_arranque(y, SR_OUT)   # sonido suelto antes de la 1.ª palabra
     if mudo:
         # una 1.ª palabra corta seguida de pausa («Hoy, Jalisco…», historia_jalisco 22-oct-2026) parece un sonido suelto:
         # si sin ese bloque Whisper ya no oye la primera palabra del guion, no se silencia

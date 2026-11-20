@@ -55,6 +55,14 @@ ORDEN = [e["id"] for e in TL["escenas"]]
 TOTAL = TL["total"]
 CFG = cargar_cfg()
 TRAMOS = CFG["tramos"]
+# CORTES (mpm_takis, 19-nov-2026): una escena más larga que MAX_TRAMO se parte en sub-escenas «<id>_2», «<id>_3»… desde esos
+# segundos del video: LYRIA = dict(..., cortes={"proceso": [335.0]}, escenas={"proceso_2": (...)}, tramos=[(["proceso"], …), (["proceso_2"], …)])
+for _id, _ts in CFG.get("cortes", {}).items():
+    _j = ORDEN.index(_id)
+    for _k, _t in enumerate(sorted(_ts), 2):
+        _n = f"{_id}_{_k}"
+        ESC[_n] = dict(ESC[_id], id=_n, t0=float(_t))
+        ORDEN.insert(_j + _k - 1, _n)
 
 
 def fin(i):

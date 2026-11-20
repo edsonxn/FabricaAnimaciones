@@ -1,0 +1,914 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 9.494,
+  "tipo": "video",
+  "texto": "Una bolsa morada. Un rollito de maíz del tamaño de tu dedo. Y ese polvo rojo que se te queda pegado en las uñas toda la tarde.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-002",
+  "t0": 9.494,
+  "t1": 15.164,
+  "tipo": "video",
+  "texto": "Parece la botana más simple del mundo. Pero solo en Estados Unidos, en un año,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.164,
+  "t1": 23.898,
+  "tipo": "video",
+  "texto": "se vendieron mil cien millones de dólares de Takis. Mil cien millones. De rollitos de tortilla.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-004",
+  "t0": 23.898,
+  "t1": 28.588,
+  "tipo": "video",
+  "texto": "Para llegar a esa bolsa, el maíz pasa por una olla con cal, un molino,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-005",
+  "t0": 28.588,
+  "t1": 36.968,
+  "tipo": "video",
+  "texto": "una máquina patentada que lo enrolla con mallas que cuelgan como cortina, aceite hirviendo y una nube de chile en polvo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-006",
+  "t0": 36.968,
+  "t1": 45.178,
+  "tipo": "video",
+  "texto": "Y detrás está una de las historias de negocios más raras de México: la de una empresa de pan que no quiso comprar Sabritas,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-007",
+  "t0": 45.178,
+  "t1": 51.028,
+  "tipo": "video",
+  "texto": "se arrepintió, y terminó inventando la botana que hoy le pelea el anaquel a Doritos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-008",
+  "t0": 51.028,
+  "t1": 58.148,
+  "tipo": "video",
+  "texto": "Así que hoy entramos a la planta. ¿Cómo se fabrica realmente un Taki? Mira la esquina de tu pantalla:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-009",
+  "t0": 58.148,
+  "t1": 68.256,
+  "tipo": "video",
+  "texto": "ese contador va sumando los dólares de Takis que se venden en Estados Unidos desde que empezó este video. Al final te digo cuánto juntó.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-010",
+  "t0": 68.256,
+  "t1": 75.883,
+  "tipo": "video",
+  "texto": "Para entender los Takis primero hay que entender quién los hace: Barcel, la división de botanas de Grupo Bimbo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-011",
+  "t0": 75.883,
+  "t1": 81.469,
+  "tipo": "video",
+  "texto": "Sí, Bimbo. El del osito y el pan de caja. Y aquí viene la primera ironía.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-012",
+  "t0": 81.469,
+  "t1": 89.809,
+  "tipo": "video",
+  "texto": "Roberto Servitje, uno de los fundadores de Bimbo, lo contó así en una entrevista: a Bimbo le ofrecieron comprar Sabritas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-013",
+  "t0": 89.809,
+  "t1": 96.538,
+  "tipo": "video",
+  "texto": "Y no la compraron. Él mismo lo llamó un error. Sabritas terminó en manos de PepsiCo,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-014",
+  "t0": 96.538,
+  "t1": 104.694,
+  "tipo": "video",
+  "texto": "y Bimbo tuvo que construir sus propias botanas desde cero. En los años setenta, Lorenzo y Roberto Servitje metieron",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-015",
+  "t0": 104.694,
+  "t1": 113.124,
+  "tipo": "video",
+  "texto": "a Barcel en el grupo para vender botanas y dulces, y pocos años después Barcel se separó para dedicarse solo a lo salado.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-016",
+  "t0": 113.124,
+  "t1": 120.103,
+  "tipo": "video",
+  "texto": "Durante años, Barcel fue la competencia chica. Nada que le quitara el sueño a Sabritas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-017",
+  "t0": 120.103,
+  "t1": 129.043,
+  "tipo": "video",
+  "texto": "Hasta 1999. Lorenzo Servitje participaba en un grupo de creación de productos que cada semana votaba ideas nuevas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-018",
+  "t0": 129.043,
+  "t1": 134.526,
+  "tipo": "video",
+  "texto": "Un día llegó una que parecía un chiste: un totopo enrollado.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-019",
+  "t0": 134.526,
+  "t1": 142.313,
+  "tipo": "video",
+  "texto": "Un taquito de tortilla, frito y bañado en chile y limón. Algo que cualquier mexicano reconoce en un segundo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-020",
+  "t0": 142.313,
+  "t1": 151.459,
+  "tipo": "video",
+  "texto": "¿Y el nombre? Según Roberto Servitje, salió de la suegra de Lorenzo, que decía que los mexicanos siempre andan comiendo taquis y tortis.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-021",
+  "t0": 151.459,
+  "t1": 156.979,
+  "tipo": "video",
+  "texto": "Al principio se escribía con Q: en 2001 Grupo Bimbo pidió en Estados Unidos",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-022",
+  "t0": 156.979,
+  "t1": 163.006,
+  "tipo": "video",
+  "texto": "el registro de la marca TAQUIS. Con el tiempo, la Q se volvió K.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-023",
+  "t0": 163.006,
+  "t1": 170.376,
+  "tipo": "video",
+  "texto": "Y en 2006 llegó el sabor que lo cambió todo, los Takis Fuego, de chile y limón, en su bolsa morada.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-024",
+  "t0": 170.376,
+  "t1": 179.543,
+  "tipo": "video",
+  "texto": "Ese mismo año empezó a venderse en Estados Unidos. Antes de entrar a la planta: este es el primer video de Mil por Minuto.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-025",
+  "t0": 179.543,
+  "t1": 186.378,
+  "tipo": "video",
+  "texto": "Aquí vamos a desarmar, pieza por pieza, cómo se fabrican las marcas que compras todos los días.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-026",
+  "t0": 186.378,
+  "t1": 196.082,
+  "tipo": "video",
+  "texto": "Si te gusta saber qué hay detrás de las cosas, suscríbete. Es gratis, y me ayuda más de lo que crees.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-027",
+  "t0": 196.082,
+  "t1": 201.741,
+  "tipo": "video",
+  "texto": "Ahora sí. Estación uno: el maíz. Todo empieza con maíz.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-028",
+  "t0": 201.741,
+  "t1": 210.581,
+  "tipo": "video",
+  "texto": "No con harina de trigo ni con papa: maíz, como una tortilla. La etiqueta de los Takis en Estados Unidos lo dice clarito:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-029",
+  "t0": 210.581,
+  "t1": 218.147,
+  "tipo": "video",
+  "texto": "harina de maíz procesada con cal. Y esa palabra, cal, es la clave de todo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-030",
+  "t0": 218.147,
+  "t1": 224.986,
+  "tipo": "video",
+  "texto": "Estación dos: la nixtamalización. El grano se cuece en agua con cal y se deja reposar.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-031",
+  "t0": 224.986,
+  "t1": 229.866,
+  "tipo": "video",
+  "texto": "Es la misma técnica que usaban en Mesoamérica hace miles de años.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-032",
+  "t0": 229.866,
+  "t1": 238.466,
+  "tipo": "video",
+  "texto": "La cal afloja la cáscara del grano, le cambia la química a la masa y la vuelve elástica. Sin nixtamal no hay tortilla.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-033",
+  "t0": 238.466,
+  "t1": 246.607,
+  "tipo": "video",
+  "texto": "Y sin tortilla, no hay Taki. Estación tres: el molino. El maíz cocido se muele hasta volverse masa,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-034",
+  "t0": 246.607,
+  "t1": 254.086,
+  "tipo": "video",
+  "texto": "la misma masa de la tortillería de tu colonia, pero por toneladas. Aquí la masa no tiene que ser bonita.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-035",
+  "t0": 254.086,
+  "t1": 261.619,
+  "tipo": "video",
+  "texto": "Tiene que ser predecible. Si un lote sale más húmedo que otro, todo lo que viene después se descompone.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-036",
+  "t0": 261.619,
+  "t1": 268.939,
+  "tipo": "video",
+  "texto": "Estación cuatro: el laminado. La masa entra a una tolva y unos rodillos de acero la aplanan hasta",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-037",
+  "t0": 268.939,
+  "t1": 276.475,
+  "tipo": "video",
+  "texto": "dejarla en una lámina delgada y continua. Estación cinco: el corte. Un rodillo cortador le da",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-038",
+  "t0": 276.475,
+  "t1": 282.595,
+  "tipo": "video",
+  "texto": "a cada pieza su forma, su tamaño y su grosor exactos. Todas iguales.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-039",
+  "t0": 282.595,
+  "t1": 292.235,
+  "tipo": "video",
+  "texto": "Y aquí hay un truco que casi nadie conoce. Las piezas recién cortadas pasan a una banda que va más rápido que la anterior. ¿Por qué?",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-040",
+  "t0": 292.235,
+  "t1": 298.356,
+  "tipo": "video",
+  "texto": "Para separarlas, porque la masa cruda se pega. Estación seis: el enrollado.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-041",
+  "t0": 298.356,
+  "t1": 306.345,
+  "tipo": "video",
+  "texto": "Y esta es la parte que hace a un Taki ser un Taki. En 2001, una empresa de Grupo Bimbo pidió la patente",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-042",
+  "t0": 306.345,
+  "t1": 313.431,
+  "tipo": "video",
+  "texto": "de una máquina que enrolla en crudo trozos de masa de maíz nixtamalizado en forma de taco. Sin parar.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-043",
+  "t0": 313.431,
+  "t1": 320.781,
+  "tipo": "video",
+  "texto": "Primero, unas mallas de pre-enrollado le doblan una orilla a la pieza. Después, unas mallas de enrollado final,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-044",
+  "t0": 320.781,
+  "t1": 326.778,
+  "tipo": "video",
+  "texto": "colgadas como una cortina, la van girando sobre sí misma hasta cerrar el rollito.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-045",
+  "t0": 326.778,
+  "t1": 335.958,
+  "tipo": "video",
+  "texto": "Imagínalo: miles de pedacitos de masa pasando bajo una cortina de malla que los enrolla uno por uno, como alguien enrollando taquitos a mano,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-046",
+  "t0": 335.958,
+  "t1": 342.873,
+  "tipo": "video",
+  "texto": "pero a la velocidad de una fábrica. Los inventores registrados son dos ingenieros mexicanos:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-047",
+  "t0": 342.873,
+  "t1": 352.533,
+  "tipo": "video",
+  "texto": "Espiridión Valdés Rodríguez y Efraín Joel Peña Sánchez. Estación siete: la freidora. Los rollitos caen al aceite caliente.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-048",
+  "t0": 352.533,
+  "t1": 357.359,
+  "tipo": "video",
+  "texto": "La etiqueta habla de aceite de palma, de soya o de canola.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-049",
+  "t0": 357.359,
+  "t1": 366.898,
+  "tipo": "video",
+  "texto": "Ahí el agua de la masa se escapa en burbujas, el rollo se endurece y se fija para siempre. Lo que entró blando, sale crujiente.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-050",
+  "t0": 366.898,
+  "t1": 376.357,
+  "tipo": "video",
+  "texto": "Y como freír cuesta muchísima energía, la planta de Barcel en Texas tiene un intercambiador que recupera el calor del aceite para volver a usarlo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-051",
+  "t0": 376.357,
+  "t1": 382.256,
+  "tipo": "video",
+  "texto": "Estación ocho: el sazonado. Y aquí es donde nace el famoso polvo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-052",
+  "t0": 382.256,
+  "t1": 388.256,
+  "tipo": "video",
+  "texto": "En este tipo de botanas, las piezas todavía calientes y con aceite entran a un tambor que gira,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-053",
+  "t0": 388.256,
+  "t1": 395.155,
+  "tipo": "video",
+  "texto": "y una lluvia de sazonador las cubre por todos lados. ¿Qué hay en ese polvo?",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-054",
+  "t0": 395.155,
+  "t1": 405.31,
+  "tipo": "video",
+  "texto": "Sal, maltodextrina, ácido cítrico, que es lo que te da el sabor a limón, azúcar, glutamato monosódico, cebolla, extracto de levadura, chile.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-055",
+  "t0": 405.31,
+  "t1": 410.89,
+  "tipo": "video",
+  "texto": "Y el color. En la bolsa de Estados Unidos dice Rojo 40 y Amarillo 6.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-056",
+  "t0": 410.89,
+  "t1": 418.609,
+  "tipo": "video",
+  "texto": "En la de México, además, Amarillo 5. Ese rojo que se queda en tus dedos no es solo chile.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-057",
+  "t0": 418.609,
+  "t1": 427.532,
+  "tipo": "video",
+  "texto": "Estación nueve: el empaque. Una máquina forma la bolsa, la llena y la sella, todo en un solo movimiento.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-058",
+  "t0": 427.532,
+  "t1": 433.712,
+  "tipo": "video",
+  "texto": "Y ojo con el aire. En 2018, un consumidor de Nueva York demandó a Barcel:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-059",
+  "t0": 433.712,
+  "t1": 441.508,
+  "tipo": "video",
+  "texto": "alegaba que más de la mitad de la bolsa venía vacía. Ese aire, en este tipo de empaques, no está ahí para engañarte:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-060",
+  "t0": 441.508,
+  "t1": 450.434,
+  "tipo": "video",
+  "texto": "es un colchón que protege a los rollitos para que no lleguen hechos polvo. Aunque, siendo honestos, a veces el colchón es generoso.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-061",
+  "t0": 450.434,
+  "t1": 454.984,
+  "tipo": "video",
+  "texto": "Estación diez: las cajas y los camiones. De la línea,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-062",
+  "t0": 454.984,
+  "t1": 463.758,
+  "tipo": "video",
+  "texto": "las bolsas van a cajas, las cajas a tarimas y las tarimas a la red de distribución de Bimbo, la misma que reparte el pan.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-063",
+  "t0": 463.758,
+  "t1": 472.513,
+  "tipo": "video",
+  "texto": "Esa red es el arma secreta: el camión que deja el pan en la tiendita de la esquina, deja también los Takis.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-064",
+  "t0": 472.513,
+  "t1": 476.505,
+  "tipo": "video",
+  "texto": "Vamos con una pregunta, y la respuesta te la doy al final.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-065",
+  "t0": 476.505,
+  "t1": 486.098,
+  "tipo": "video",
+  "texto": "Los Takis Fuego que se venden en Europa no usan el mismo color que los de México. ¿Con qué se pintan allá? ¿A, con Rojo 40? ¿B,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-066",
+  "t0": 486.098,
+  "t1": 493.473,
+  "tipo": "video",
+  "texto": "con pimentón y cúrcuma? ¿O C, con betabel? Déjalo en los comentarios.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-067",
+  "t0": 493.473,
+  "t1": 501.341,
+  "tipo": "video",
+  "texto": "Ahora, el negocio. Porque fabricar un rollito es una cosa. Venderlo por miles de millones es otra.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-068",
+  "t0": 501.341,
+  "t1": 508.512,
+  "tipo": "video",
+  "texto": "Durante años, todos los Takis que se comían en Estados Unidos se hacían en México y cruzaban la frontera.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-069",
+  "t0": 508.512,
+  "t1": 517.283,
+  "tipo": "video",
+  "texto": "En 2011 Barcel abrió una planta en Mexicali, la planta número cien de Grupo Bimbo, pensada sobre todo para exportar.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-070",
+  "t0": 517.283,
+  "t1": 524.023,
+  "tipo": "video",
+  "texto": "Y en 2012 dio el salto: una planta en Coppell, Texas, de unos veintiocho mil metros cuadrados,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-071",
+  "t0": 524.023,
+  "t1": 531.094,
+  "tipo": "video",
+  "texto": "donde hoy se hace buena parte de los Takis de Estados Unidos. Pero lo interesante no es dónde los hicieron.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-072",
+  "t0": 531.094,
+  "t1": 537.465,
+  "tipo": "video",
+  "texto": "Es dónde los vendieron. Mientras las grandes marcas peleaban por el pasillo del supermercado,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-073",
+  "t0": 537.465,
+  "t1": 547.356,
+  "tipo": "video",
+  "texto": "los Takis se metieron por la puerta de atrás: tiendas de conveniencia y gasolineras, justo donde un adolescente gasta lo que trae en el bolsillo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-074",
+  "t0": 547.356,
+  "t1": 554.376,
+  "tipo": "video",
+  "texto": "Ya en 2013 un periódico de Houston escribía que en la primaria todavía mandaban los Flamin' Hot Cheetos,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-075",
+  "t0": 554.376,
+  "t1": 558.287,
+  "tipo": "video",
+  "texto": "pero que en muchas secundarias ya mandaban los Takis.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-076",
+  "t0": 558.287,
+  "t1": 569.407,
+  "tipo": "video",
+  "texto": "Un año después, Takis ganó el premio de Nielsen a la innovación en Estados Unidos. De más de diecisiete mil productos nuevos, solo catorce empresas lo ganaron.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-077",
+  "t0": 569.407,
+  "t1": 573.447,
+  "tipo": "video",
+  "texto": "Y la marca habló como hablan los adolescentes: con un reto.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-078",
+  "t0": 573.447,
+  "t1": 582.209,
+  "tipo": "video",
+  "texto": "¿Eres lo bastante valiente para aguantar unos Takis? No era un anuncio. Era un desafío. Los números hablan solos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-079",
+  "t0": 582.209,
+  "t1": 589.56,
+  "tipo": "video",
+  "texto": "En 2020, Takis vendía más de cuatrocientos millones de dólares al año en Estados Unidos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-080",
+  "t0": 589.56,
+  "t1": 597.34,
+  "tipo": "video",
+  "texto": "Cuatro años después, mil cien millones. Casi el triple. Para que lo dimensiones: en ese mismo año,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-081",
+  "t0": 597.34,
+  "t1": 602.92,
+  "tipo": "video",
+  "texto": "Doritos vendió tres mil novecientos millones y Tostitos mil seiscientos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-082",
+  "t0": 602.92,
+  "t1": 612.607,
+  "tipo": "video",
+  "texto": "Un rollito mexicano ya juega en la misma liga que las marcas de PepsiCo. Tanto, que Doritos sacó en 2012 sus propios rollitos picantes,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-083",
+  "t0": 612.607,
+  "t1": 618.918,
+  "tipo": "video",
+  "texto": "los Doritos Dinamita, y en 2024 los relanzó con un anuncio en el Super Bowl.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-084",
+  "t0": 618.918,
+  "t1": 625.849,
+  "tipo": "video",
+  "texto": "Y en todo el mundo, la propia marca dice que Takis ya vende más de dos mil millones de dólares al año.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-085",
+  "t0": 625.849,
+  "t1": 635.436,
+  "tipo": "video",
+  "texto": "Roberto Servitje lo resumió en 2024 con una frase: los Takis son el producto que más vende Bimbo. Número uno.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-086",
+  "t0": 635.436,
+  "t1": 642.169,
+  "tipo": "video",
+  "texto": "La empresa que no compró Sabritas terminó inventando su propia estrella.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-087",
+  "t0": 642.169,
+  "t1": 648.193,
+  "tipo": "video",
+  "texto": "Pero con tanto picante, también llegaron los rumores. Vamos a separarlos con datos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-088",
+  "t0": 648.193,
+  "t1": 657.102,
+  "tipo": "video",
+  "texto": "Primero: ¿los Takis causan úlceras o cáncer? Los verificadores de datos lo calificaron como falso.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-089",
+  "t0": 657.102,
+  "t1": 665.102,
+  "tipo": "video",
+  "texto": "Lo que sí es real es el dolor de estómago cuando te comes de más. Un médico de un hospital infantil de Memphis dijo en 2018",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-090",
+  "t0": 665.102,
+  "t1": 672.309,
+  "tipo": "video",
+  "texto": "que atendían fácilmente cien niños al mes con problemas de estómago ligados a botanas muy picantes.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-091",
+  "t0": 672.309,
+  "t1": 679.143,
+  "tipo": "video",
+  "texto": "La respuesta de Barcel fue corta: los Takis son seguros, pero hay que disfrutarlos con moderación.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-092",
+  "t0": 679.143,
+  "t1": 687.083,
+  "tipo": "video",
+  "texto": "Segundo: el famoso reto del chip más picante del mundo, el One Chip Challenge. No era de Takis.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-093",
+  "t0": 687.083,
+  "t1": 692.22,
+  "tipo": "video",
+  "texto": "Era de otra marca, Paqui, que retiró el producto en 2023.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-094",
+  "t0": 692.22,
+  "t1": 701.168,
+  "tipo": "video",
+  "texto": "Tercero: en 2025 circularon videos que decían que los Takis eran mortales. Los verificadores lo desmintieron.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-095",
+  "t0": 701.168,
+  "t1": 709.05,
+  "tipo": "video",
+  "texto": "Y cuarto, los colorantes. Aquí sí hay historia. California aprobó una ley que saca el Rojo 40,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-096",
+  "t0": 709.05,
+  "t1": 717.53,
+  "tipo": "video",
+  "texto": "el Amarillo 5 y el Amarillo 6, entre otros, de la comida de las escuelas públicas a partir de finales de 2027.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-097",
+  "t0": 717.53,
+  "t1": 724.607,
+  "tipo": "video",
+  "texto": "Ojo: no prohíbe venderlos en las tiendas. Y en 2026 Barcel empezó a quitar los colorantes",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-098",
+  "t0": 724.607,
+  "t1": 733.644,
+  "tipo": "video",
+  "texto": "artificiales de los Takis Fuego en Estados Unidos. Grupo Bimbo prometió hacerlo con todo su portafolio para finales de 2026.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-099",
+  "t0": 733.644,
+  "t1": 739.364,
+  "tipo": "video",
+  "texto": "Así que el Taki rojo de toda la vida está cambiando de receta mientras ves este video.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-100",
+  "t0": 739.364,
+  "t1": 746.384,
+  "tipo": "video",
+  "texto": "Y en otro lugar del mundo, ya la cambiaron. Eso te lo cuento en la respuesta de la trivia.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-101",
+  "t0": 746.384,
+  "t1": 755.714,
+  "tipo": "video",
+  "texto": "Hagamos el mapa completo. En el Estado de México, la planta de Lerma: la dirección que viene impresa en la bolsa de Takis Fuego mexicana.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-102",
+  "t0": 755.714,
+  "t1": 761.706,
+  "tipo": "video",
+  "texto": "En Sonora, Hermosillo, abierta en 2006, la misma temporada del Fuego.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-103",
+  "t0": 761.706,
+  "t1": 769.613,
+  "tipo": "video",
+  "texto": "En Baja California, Mexicali, la planta de exportación, a minutos de la frontera. En Jalisco, Guadalajara,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-104",
+  "t0": 769.613,
+  "t1": 778.228,
+  "tipo": "video",
+  "texto": "abierta en 2013. Cruzando la frontera, en el estado de Texas, la planta de Coppell, desde 2012.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-105",
+  "t0": 778.228,
+  "t1": 784.328,
+  "tipo": "video",
+  "texto": "Y del otro lado del océano, en Inglaterra, una planta nueva en Rotherham, construida entre 2024",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-106",
+  "t0": 784.328,
+  "t1": 791.839,
+  "tipo": "video",
+  "texto": "y 2025 para hacer Takis en Europa. De una olla con cal en México a una bolsa morada en una",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-107",
+  "t0": 791.839,
+  "t1": 799.14,
+  "tipo": "video",
+  "texto": "gasolinera de Texas o una tienda de Londres. Así que la próxima vez que abras una bolsa morada,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-108",
+  "t0": 799.14,
+  "t1": 807.151,
+  "tipo": "video",
+  "texto": "piensa en todo lo que pasó para llegar ahí. Maíz cocido con cal como hace miles de años. Una masa predecible.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-109",
+  "t0": 807.151,
+  "t1": 814.441,
+  "tipo": "video",
+  "texto": "Una cortina de malla que enrolla taquitos sin parar. Aceite, polvo rojo y aire.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-110",
+  "t0": 814.441,
+  "t1": 821.498,
+  "tipo": "video",
+  "texto": "Y una familia que no compró Sabritas. La respuesta de la trivia: la B. En Europa,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-111",
+  "t0": 821.498,
+  "t1": 828.258,
+  "tipo": "video",
+  "texto": "los Takis Fuego se colorean con pimentón y cúrcuma. En México, con Rojo 40 y Amarillo 6.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-112",
+  "t0": 828.258,
+  "t1": 839.078,
+  "tipo": "video",
+  "texto": "La misma bolsa, dos recetas. Y el contador de la esquina: mientras veías este video, en Estados Unidos se vendieron casi treinta mil dólares de Takis.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-113",
+  "t0": 839.078,
+  "t1": 843.258,
+  "tipo": "video",
+  "texto": "Si quieres que entremos a la fábrica de otra marca, dime cuál en los comentarios.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-114",
+  "t0": 843.258,
+  "t1": 851.7391,
+  "tipo": "video",
+  "texto": "Y suscríbete a Mil por Minuto: aquí desarmamos lo que compras todos los días.",
+  "clip_s": 7
+ }
+]

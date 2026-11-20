@@ -482,7 +482,17 @@ def ver(idp):
 
 
 def _tl(video):
-    return json.load(open(os.path.join(VIDEOS, video, "timeline.json"), encoding="utf-8"))
+    tl = json.load(open(os.path.join(VIDEOS, video, "timeline.json"), encoding="utf-8"))
+    cortes = (leer_guion(os.path.join(VIDEOS, video)).get("LYRIA") or {}).get("cortes") or {}
+    for _id, ts in cortes.items():                  # LYRIA cortes (lyria_tramos.py, 19-nov-2026): sub-escenas «<id>_2»…
+        L = tl["escenas"]
+        j = next(k for k, e in enumerate(L) if e["id"] == _id)
+        fin = L[j]["t1"]
+        ts = sorted(float(x) for x in ts)
+        L[j] = dict(L[j], t1=ts[0])
+        for k, t in enumerate(ts, 2):
+            L.insert(j + k - 1, dict(L[j], id=f"{_id}_{k}", t0=t, t1=ts[k - 1] if k - 1 < len(ts) else fin))
+    return tl
 
 
 def tramos_video(video):

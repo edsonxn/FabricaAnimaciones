@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_cod = «Expediente 141» (6.º largo) · meta: sáb 21-nov-2026 13:00 CDMX = 2026-11-21T19:00:00Z (horario 13:00, ciclo 3 d)
 - estilo: secuencia_yt (gameplay de YouTube por beat + pegatinas + MG `nucleo/mg_cod.py` + mapas + sonido original + OST oficial) → doc: docs/estilo_secuencia_yt.md
-- etapa: ◐ REHACIENDO con el intruso Turbo (sesión 4); versión vieja subida en https://youtu.be/qCdZuB3iCs8 (privado, sale sáb 21-nov 13:01 CDMX = 2026-11-21T19:01Z)
+- etapa: ✅ SUBIDO con el intruso Turbo → https://youtu.be/zgg3JwjyAjg (privado, sale sáb 21-nov 13:01 CDMX = 2026-11-21T19:01Z; el viejo qCdZuB3iCs8, borrado)
 - siguiente: nada; medir a 7 días (≈ 28-nov) contra Mandela 1 y 2; `fab.py cod_mandela3 limpiar` cuando ya esté público
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov) — «continúa el video cod_mandela3» solo para leer comentarios de Turbo (≈ 28-nov)

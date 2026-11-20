@@ -11,7 +11,7 @@
 - leer al empezar: este ESTADO.md, docs/estilo_secuencia_yt.md § REGLA DE ORO, videos/wow_oro_forever/ESTADO.md (lecciones de RAM/Applio)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | todo hasta el MASTER y la subida | ◐ parcial (19-nov: guion + voz lanzada; relevo 1) | tema elegido por el usuario el 19-nov: opción 2 de la conclusión del 15-nov |
+| 1 | todo hasta el MASTER y la subida | ✅ 19-nov: MASTER, subido, monetizado, registrado y commit 2d8c1e4 | tema elegido por el usuario el 19-nov: opción 2 de la conclusión del 15-nov |
 
 ## Decisiones del episodio
 - tema: «La RUTA 1-60 de WoW Forever zona por zona» (el usuario, 19-nov; recomendado por Claude). Una variable sobre «20 errores del 30 al 60»: el formato (guía-ruta con mapa real en cada zona). Referencia: Blizzard «leveling past 30» ×2,2.
@@ -73,5 +73,5 @@
 - ...
 
 ## Cierre (regla del 12-oct-2026)
-- [ ] subido y PROGRAMADO, monetización activada, registrado (`canales/cronicas_warcraft.json`, BITACORA)
+- [x] subido y PROGRAMADO (Rcu_3ztFANk, 23-nov 15:00Z), monetización activada (mid-roll + cuestionario), registrado (`canales/cronicas_warcraft.json`, BITACORA), commit 2d8c1e4
 - [ ] HALLAZGOS documentados en el manual/estilo

@@ -15,9 +15,9 @@
 | 2 | Voz (narradora + personajes) + seleccionar + tiempo + OST | ✅ 29-oct | 367 frases (~6 000 créditos); 1 bloqueada por el filtro (reescrita); 8 regeneradas; 43:14; OST 15 pistas |
 | 3 | Flow (escenarios + hojas con ciclos + utilería) + recorte + profundidad + reales + mapas + SFX del juego | ✅ 29-oct | 96 prompts x2 (proyecto Flow «oct 29 - 09:33»), 30 hojas, 37 reales + 8 iconos + 8 medallones, 10 mapas, 93 SFX |
 | 4-6 | Escenas por actos + sfx + mezcla | ✅ 29-oct | MOTOR POR DATOS: `escenas.py` dibuja y `plan.py` describe ~300 tomas; muestras cada 40 s revisadas (`_muestras.py`) |
-| 7a | Revisión de los primeros ~10 min (mapas sin pixelar, fotos reales del juego, escena de la posada de Costasur) → avance → visto bueno | ◐ esperando visto bueno del avance con hojas reales (2-nov) | 29-oct 14:05 render 0-798 s ✅ (sin errores; los 6 clips comprobados en el AVANCE); `salida/gaia_crematoria_AVANCE.mp4` + `AVANCE_ligero.mp4`; avisado |
-| 7 | Render → MASTER → aviso al usuario → miniatura → youtube.json | ◐ 217/865 | render ≈ 2,5 h; detenido hasta el visto bueno del 7a |
-| 8 | Subir (tras `yt conectar`) + registro + cierre | pendiente | |
+| 7a | Revisión de los primeros ~10 min (mapas sin pixelar, fotos reales del juego, escena de la posada de Costasur) → avance → visto bueno | ✅ cerrado 20-nov (el video ya está subido) | 29-oct 14:05 render 0-798 s ✅ (sin errores; los 6 clips comprobados en el AVANCE); `salida/gaia_crematoria_AVANCE.mp4` + `AVANCE_ligero.mp4`; avisado |
+| 7 | Render → MASTER → aviso al usuario → miniatura → youtube.json | ✅ cerrado 20-nov (el video ya está subido) | render ≈ 2,5 h; detenido hasta el visto bueno del 7a |
+| 8 | Subir (tras `yt conectar`) + registro + cierre | ✅ cerrado 20-nov (el video ya está subido) | |
 
 
 - `audio/` pasado a carpeta REAL en C: (E: dio Ntfs 55 el 28-oct; ver memoria disco-e-fallando). `voz/` sigue en E:.

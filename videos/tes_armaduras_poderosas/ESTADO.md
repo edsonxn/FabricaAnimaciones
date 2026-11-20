@@ -11,7 +11,7 @@
 - leer al empezar: docs/estilo_secuencia_yt.md § REGLA DE ORO, § Crónicas de Tamriel; ejemplo `videos/tes_builds_rotas/` (guion.py, efectos.py, armar_musica_ost.py, _bordes.py, _render_tramos.sh) y `videos/tes_secretos_40/efectos.py`
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | TODO: investigación + guion + voz + beats + clips + pegatinas + MG + mapas + OST + mezcla + render + miniatura + subida | ✔ 19-nov (s3): MASTER + subido CN-dlZmQ-Ag (25-nov 18:08Z) | s1: investigación, guion, OST, MG, pegatinas, coords; voz. s2: pegatinas 76, coords corregidas, comentarios, efectos.py escrito, seleccionar en CPU; corte por contexto |
+| 1 | TODO: investigación + guion + voz + beats + clips + pegatinas + MG + mapas + OST + mezcla + render + miniatura + subida | ✅ cerrado 20-nov (el video ya está subido) | s1: investigación, guion, OST, MG, pegatinas, coords; voz. s2: pegatinas 76, coords corregidas, comentarios, efectos.py escrito, seleccionar en CPU; corte por contexto |
 
 ## Decisiones del episodio (18-nov-2026)
 - tema elegido por Claude («tú elige el tema según lo que mejor vaya a funcionar», 28 min): secuela de `tes_armas_poderosas` (×4,26, 53 % visto). Lo que el jugador USA gana en el canal (inútiles ×5,7/55 %, armas 53 %, builds 12,3 mil); el lore largo rinde la mitad (Reina Loba 3,3 mil, Dwemer 6,9 mil). Ref. de fuera: «60 Useless Skyrim Facts» ×86, SmackerUnknown (objetos concretos).

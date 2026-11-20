@@ -13,8 +13,8 @@
 - leer al empezar: <archivos además de este ESTADO.md: guía del kit, plan de tomas…>
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | <guion, voz, tiempo + kit + escenas …> | ⏳ siguiente | <plan propuesto al usuario y elegido por él> |
-| 2 | <cierre: sfx → mezcla → render → final → verificar → miniatura → youtube.json> | pendiente | |
+| 1 | <guion, voz, tiempo + kit + escenas …> | ✅ cerrado 20-nov (el video ya está subido) | <plan propuesto al usuario y elegido por él> |
+| 2 | <cierre: sfx → mezcla → render → final → verificar → miniatura → youtube.json> | ✅ cerrado 20-nov (el video ya está subido) | |
 
 ## Decisiones del episodio (preguntadas al usuario al empezar)
 - duración total: · minutos iniciales en video: · duración de clip: · resolución de clip:

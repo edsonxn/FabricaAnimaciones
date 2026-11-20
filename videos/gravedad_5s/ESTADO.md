@@ -11,7 +11,7 @@
 - leer al empezar: `docs/estilo_kurzgesagt.md`, `videos/gravedad_5s/escenas.py`
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | 1 sesión completa: guion (~2 min) + voz + tiempo + Lyria + escenas plano secuencia + SFX/mezcla + vista previa `--hasta 25` + MASTER | ✓ hecho | `salida/gravedad_5_segundos_MASTER.mp4` (150,0 s, 126,3 MB), CER mezcla 0,0011, desfase 0,00 ms, 9 hojas 2×3 revisadas |
+| 1 | 1 sesión completa: guion (~2 min) + voz + tiempo + Lyria + escenas plano secuencia + SFX/mezcla + vista previa `--hasta 25` + MASTER | ✅ cerrado 20-nov (el video ya está subido) | `salida/gravedad_5_segundos_MASTER.mp4` (150,0 s, 126,3 MB), CER mezcla 0,0011, desfase 0,00 ms, 9 hojas 2×3 revisadas |
 
 ## Hecho
 - Creado `videos/gravedad_5s` y actualizado el panel (`python fab.py canales --actualizar`: Crónicas de Tamriel se queda primero sin video el dom 18-oct 12:05).

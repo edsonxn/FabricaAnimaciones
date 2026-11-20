@@ -11,7 +11,7 @@
 - leer al empezar: este ESTADO.md · `videos/_investigacion_wow_forever_experiencia.md` · guion de referencia en el scratchpad (Joseju)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | referencia + canal + comentarios + investigación + guion v1 + voz lanzada + pegatinas/mapas + borrador de efectos | ◐ 12-nov (corte a 180 mil) | sigue en la sesión de relevo |
+| 1 | referencia + canal + comentarios + investigación + guion v1 + voz lanzada + pegatinas/mapas + borrador de efectos | ✅ cerrado 20-nov (el video ya está subido) | sigue en la sesión de relevo |
 | 2 | correcciones + sin Overgear + voz + clips (60 rehechos) + chequeos + fx hoja + OST + render + miniatura Flow + subida | ✅ 12-nov | RSDta9FSn9c, lun 23-nov 09:00 |
 
 ## Decisiones del episodio (el usuario, 12-nov-2026)

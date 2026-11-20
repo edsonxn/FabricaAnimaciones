@@ -11,7 +11,7 @@
 - leer al empezar: este ESTADO.md · `guion.py` (datos y frases) · docs/estilo_acuarela_pincel.md
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | guion + voz + tiempo + kit + planos a, b (c, d escritos) | ◐ parcial | 4-nov: voz CER 0; Whisper dio OOM/bad allocation intermitente: reintentar `seleccionar` basta |
+| 1 | guion + voz + tiempo + kit + planos a, b (c, d escritos) | ✅ cerrado 20-nov (el video ya está subido) | 4-nov: voz CER 0; Whisper dio OOM/bad allocation intermitente: reintentar `seleccionar` basta |
 | 2 | kit horizontal + planos c-k + música biblioteca + SFX + mezcla + render + subida | ✅ 4-nov | Todo seguido en una sesión (tramos 3-6 absorbidos); Lyria API sin saldo → biblioteca |
 | 3 | planos neurona, capas (2:10-4:10) | ✅ 4-nov | dentro de la sesión 2 |
 | 4 | planos aprender, ImageNet, parches (4:10-7:00) | ✅ 4-nov | dentro de la sesión 2 |

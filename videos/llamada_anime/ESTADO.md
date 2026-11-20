@@ -131,9 +131,9 @@ todo en 2D; hay escenas MUY estáticas que hace falta animar más con 2D».
 ## Sesiones
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | estilo, kit anime_vivo, Flow A/B/E, render, MASTER | ◐ parcial | 6-nov: estilo aprobado en la tele, kit, fase A bajada, _B.js listo |
-| 2 | fase B en Flow | ◐ parcial | 6-nov: 122 imágenes bajadas, 36/61 variantes elegidas; Flow cambió (asb), disco E: colgado |
-| 4 | V2: ui en anime + más animación | ◐ parcial | 7-nov: 23 ediciones anime de flow/bg enviadas a Flow; falta recoger, ui_anime.py, poses extra, MASTER v2 |
+| 1 | estilo, kit anime_vivo, Flow A/B/E, render, MASTER | ✅ cerrado 20-nov (el video ya está subido) | 6-nov: estilo aprobado en la tele, kit, fase A bajada, _B.js listo |
+| 2 | fase B en Flow | ✅ cerrado 20-nov (el video ya está subido) | 6-nov: 122 imágenes bajadas, 36/61 variantes elegidas; Flow cambió (asb), disco E: colgado |
+| 4 | V2: ui en anime + más animación | ✅ cerrado 20-nov (el video ya está subido) | 7-nov: 23 ediciones anime de flow/bg enviadas a Flow; falta recoger, ui_anime.py, poses extra, MASTER v2 |
 | 3 | render de planos, MASTER, subida | ✅ 7-nov | 56 planos en ~35 min con 4 procesos; MASTER 14:00; tele apagada → pregunta en chat; el usuario: «subirlo aparte en LogIA»; miniatura Flow (prompt_miniatura.md, 2/2 bien) |
 
 ## Lecciones

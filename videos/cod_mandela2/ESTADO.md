@@ -10,7 +10,7 @@
 - leer al empezar: este ESTADO.md · plantilla `videos/cod_mandela/` (guion.py, efectos.py, armar_musica_ost.py, bajar_pegatinas.py) y `videos/cod_misterios/` (lo más nuevo: _mosaico.py, _escribir_busquedas.py, efectos.py) · `canales/formula/cronicas_cod.md`
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | investigación → guion → voz → pegatinas → OST → sonidos nombrados → MG nuevos | ◐ parcial 13-nov | cortada por contexto (180 mil) tras la voz |
+| 1 | investigación → guion → voz → pegatinas → OST → sonidos nombrados → MG nuevos | ✅ cerrado 20-nov (el video ya está subido) | cortada por contexto (180 mil) tras la voz |
 | 2 | tiempo → beats → busquedas → bajar → efectos → promesas → fx hoja → música → render → MASTER → miniatura → subir | ✅ 14-nov | MASTER 15:27 revisado (promesas 33/33, ◐ 7 y 8), miniatura Flow (Gaz + M1911 + «2»), subido y programado |
 
 ## Decisiones del episodio (13-nov-2026)

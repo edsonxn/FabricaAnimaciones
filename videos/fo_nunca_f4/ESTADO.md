@@ -2,15 +2,16 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
 - canal: radio_yermo (1.er video del canal) · PROGRAMADO mié 18-nov-2026 17:00 CDMX (z_YrsxSbIFg, privado)
 - estilo: secuencia_yt (receta de Tamriel; regla de oro `videos/tes_secretos_40/`) · kit NUEVO `nucleo/mg_fo.py` (Pip-Boy) · voz el Profeta + filtro radio modo B (`nucleo/fx_radio.py`) · OST oficial de Fallout 4 → doc: docs/estilo_secuencia_yt.md § Radio Yermo
-- etapa: SUBIDO Y PROGRAMADO · MASTER `salida/fo_nunca_f4_MASTER.mp4` (14:02, 1080p) + .srt cargado · miniatura Flow `salida/miniatura.jpg` PENDIENTE de aplicar (canal sin permiso de miniaturas: verificar y `yt aplicar`)
-- siguiente: el usuario verifica el canal (youtube.com/verify) → `python fab.py yt aplicar fo_nunca_f4 radio_yermo` para poner la miniatura antes del 18-nov 17:00; medir a 7 días
+- etapa: SUBIDO Y PROGRAMADO · MASTER `salida/fo_nunca_f4_MASTER.mp4` (14:02, 1080p) + .srt cargado · miniatura Flow `salida/miniatura.jpg` APLICADA el 18-nov (canal verificado)
+- siguiente: medir a 7 días (25-nov) y empezar el 2.º video de Radio Yermo
 
 ## Sesiones («continúa el video fo_nunca_f4» retoma aquí · protocolo docs/sesiones.md)
 - alias: nunca fallout 4, primer video de Radio Yermo · UNA sesión directo al MASTER (relevos por corte de 180k)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | TODO hasta MASTER subido y programado | ◐ 17-nov parcial | tema elegido; investigación + kit mg_fo + filtro radio hechos; corte por contexto antes del guion |
+| 1 | TODO hasta MASTER subido y programado | ✅ cerrado 20-nov (el video ya está subido) | tema elegido; investigación + kit mg_fo + filtro radio hechos; corte por contexto antes del guion |
 | 2 | clips + mapa + efectos + OST + render + subida | ✅ 17-nov | MASTER subido y programado; miniatura sin aplicar (permiso del canal) |
+| 3 | aplicar miniatura | ✅ 18-nov (canal verificado por el usuario; miniatura Flow aplicada) — antes ◐ 08:13 | `yt aplicar fo_nunca_f4 radio_yermo z_YrsxSbIFg`: metadatos OK, sigue programado 23:00Z; miniatura otra vez HTTP 403 (canal sin verificar) → falta que el usuario verifique y repetir el comando |
 
 ## En curso (checkpoint 17-nov, corte por contexto de la sesión 1)
 - HECHO: investigación verificada en `_investigacion_A.md` (misiones) y `_investigacion_B.md` (mecánicas), con URL, nombres es, imágenes, búsquedas/clips.

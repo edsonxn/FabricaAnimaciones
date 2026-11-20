@@ -11,7 +11,7 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | guion | ✅ 22-oct | fuentes en el docstring (UK ENTFACT-416, Clemson, UMaine, Ohio State) |
-| 2 | voz, prompts, Flow, fotos, música, armado, rigor, Short, subir | pendiente | |
+| 2 | voz, prompts, Flow, fotos, música, armado, rigor, Short, subir | ✅ cerrado 20-nov (el video ya está subido) | |
 
 ## Decisiones del episodio (22-oct-2026)
 - Mascota: mariquita asiática naranja con bufanda tejida roja y blanca (FICHA «beetle»); humana = señora de lentes y cárdigan lavanda (público 35-54).

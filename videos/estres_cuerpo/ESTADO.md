@@ -12,7 +12,7 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | guion → voz → beats → prompts → Flow → efectos → SFX → Lyria → mezcla → render lanzado | ✅ 20-oct (2 cuentas) | el render sobrevivió al corte de cuenta y acabó a las 10:46 |
-| 2 | rigor del MASTER → miniatura → youtube.json → subida (preguntar) → cierre (hallazgos en docs/estilo_linea_neon.md) | ◐ parcial 20-oct | rigor + 12 rótulos movidos + miniatura + youtube.json hechos; falta subir y cerrar |
+| 2 | rigor del MASTER → miniatura → youtube.json → subida (preguntar) → cierre (hallazgos en docs/estilo_linea_neon.md) | ✅ cerrado 20-nov (el video ya está subido) | rigor + 12 rótulos movidos + miniatura + youtube.json hechos; falta subir y cerrar |
 
 ## Decisiones del episodio (20-oct-2026)
 - el usuario pidió ~12 min cubriendo VARIOS temas (variable nueva frente a freno_enojo/agotado: duración + recopilatorio)

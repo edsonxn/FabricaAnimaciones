@@ -9,7 +9,7 @@
 - alias: top 25 refugios, refugios malvados de Fallout · UNA sesión directo al MASTER (relevos por corte de 180k)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | investigación, guion, voz (lanzada), Flow abierto | ◐ 17-nov parcial | corte por contexto 180k; relevo en sesión nueva |
+| 1 | investigación, guion, voz (lanzada), Flow abierto | ✅ cerrado 20-nov (el video ya está subido) | corte por contexto 180k; relevo en sesión nueva |
 | 2 | resto hasta MASTER subido y programado | ✅ 18-nov | render, subida, título cambiado por la regla nueva |
 | 3 | escenas importantes con clip real (pedido del usuario 18-nov) | ✅ 18-nov | 13/13 con clip real (ninguno de Flow); video completo re-renderizado, final, resubido XU_OkLlxV7o |
 

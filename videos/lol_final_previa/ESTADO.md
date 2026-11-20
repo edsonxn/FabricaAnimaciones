@@ -10,8 +10,8 @@
 - vista previa: ninguna; directo al MASTER (regla 5-nov) y a la tele
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | investigación feed + guion + recursos | ◐ 10-nov | feed_*.txt (13 partidas), guion.py borrador, recursos.py (fotos/logos/arte), 10 tarjetas de comentarios |
-| 2 | (elige formas de presentación §) jugadas (agentes) → guion final → voz → efectos (2D + 3D) → música/SFX → render → final | ◐ 10-nov 23:22 | relevo: formas 1, 2, 4, 5, 10 (recomendadas; el usuario no eligió); voz de 46 frases fijas hecha y aceptada (voz_aceptada.json); `nucleo/mg_lol_pelea.py` (marcador NFL + oro en vivo); oro cada 10 s en investigacion/oro_125/130.json; subagente de RELLENO cortando r_*.mp4 → datos_relleno.md |
+| 1 | investigación feed + guion + recursos | ✅ cerrado 20-nov (el video ya está subido) | feed_*.txt (13 partidas), guion.py borrador, recursos.py (fotos/logos/arte), 10 tarjetas de comentarios |
+| 2 | (elige formas de presentación §) jugadas (agentes) → guion final → voz → efectos (2D + 3D) → música/SFX → render → final | ✅ cerrado 20-nov (el video ya está subido) | relevo: formas 1, 2, 4, 5, 10 (recomendadas; el usuario no eligió); voz de 46 frases fijas hecha y aceptada (voz_aceptada.json); `nucleo/mg_lol_pelea.py` (marcador NFL + oro en vivo); oro cada 10 s en investigacion/oro_125/130.json; subagente de RELLENO cortando r_*.mp4 → datos_relleno.md |
 
 ## Decisiones (el usuario, 10-nov-2026)
 - ~25 min; VARIAS jugadas convertidas a 3D (Grieta 3D / mesa / capas 3D con flechas, rutas, intenciones).

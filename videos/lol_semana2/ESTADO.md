@@ -13,8 +13,8 @@
 |---|---|---|---|
 | 1 | investigación 6 series + recursos + guion acto A + voz | ✅ 31-oct | 76 frases, 15:19 |
 | 2 | efectos acto A (jugadas con pausas, rutas, mesas 3D) + audio + vista previa acto A | ✅ 31-oct | rehecho sin cámara rápida: 19:16 en salida/lol_semana2_ACTO_A.mp4 |
-| 3 | ACTO B: 3 series de hoy, premios, cuartos, cierre (tras HLE-BLG) | ◐ parcial | guion, voz y efectos COMPLETOS (31:35); falta VOD de la P2 de HLE-BLG para hlbl_g2, música 13-15, revisión |
-| 4 | fx → mezcla → render → final → verificar → aviso → Studio → cierre | pendiente | |
+| 3 | ACTO B: 3 series de hoy, premios, cuartos, cierre (tras HLE-BLG) | ✅ cerrado 20-nov (el video ya está subido) | guion, voz y efectos COMPLETOS (31:35); falta VOD de la P2 de HLE-BLG para hlbl_g2, música 13-15, revisión |
+| 4 | fx → mezcla → render → final → verificar → aviso → Studio → cierre | ✅ cerrado 20-nov (el video ya está subido) | |
 
 ## Decisiones (el usuario, 31-oct-2026)
 - «uno igual» a «El favorito cayó»: resumen semanal de todas las mejores jugadas, jugadores, equipos y lo peor, con análisis de jugada incluyendo el MOVIMIENTO DE CÁMARA 3D sobre el video con flechas y rutas; libre para añadir animaciones y kit.

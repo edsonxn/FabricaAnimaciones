@@ -11,8 +11,8 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | elección de tema + `nuevo` + checkpoint | ✅ 16-nov | tema elegido por el usuario de 4 (Sinluz/Godfrey/Maliketh-Messmer/Rykard) |
-| 2 | investigación + guion + OST + pegatinas + comentarios + voz (en curso) + plan de clips (en curso) | ◐ parcial 16-nov | cortada por contexto (180 mil) |
-| 3 | voz → seleccionar → MG nuevos → efectos.py (103 frases) | ◐ parcial 16-nov | cortada por contexto; guion +5 min y plan de clips en subagentes |
+| 2 | investigación + guion + OST + pegatinas + comentarios + voz (en curso) + plan de clips (en curso) | ✅ cerrado 20-nov (el video ya está subido) | cortada por contexto (180 mil) |
+| 3 | voz → seleccionar → MG nuevos → efectos.py (103 frases) | ✅ cerrado 20-nov (el video ya está subido) | cortada por contexto; guion +5 min y plan de clips en subagentes |
 | 4 | voz → tiempo → clips → fx → render → subir | ✅ 16-nov | misma sesión de relevo; falta miniatura Flow |
 
 ## Decisiones del episodio (16-nov-2026, el usuario)

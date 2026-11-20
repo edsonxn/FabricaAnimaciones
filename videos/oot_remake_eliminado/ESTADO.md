@@ -22,8 +22,8 @@
 - vista previa: ninguna; directo al MASTER (regla 5-nov)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | TODO en una sesión | ◐ 6-nov | estrategia del canal + cola reordenada + investigación + guion + voz + beats + OST; corte a 180 k |
-| 2 | clips, medios, OST, MG, efectos, chequeo | ◐ 7-nov | 68/68 clips, 4 MG nuevos, efectos.py, promesas.md; corte a 180 k antes de fx hoja/render |
+| 1 | TODO en una sesión | ✅ cerrado 20-nov (el video ya está subido) | estrategia del canal + cola reordenada + investigación + guion + voz + beats + OST; corte a 180 k |
+| 2 | clips, medios, OST, MG, efectos, chequeo | ✅ cerrado 20-nov (el video ya está subido) | 68/68 clips, 4 MG nuevos, efectos.py, promesas.md; corte a 180 k antes de fx hoja/render |
 | 3 | fx hoja, promesas, render, miniatura, subida | ✅ 7-nov | promesas 21/21; arreglos: corte 046/047 y blanco del clip 038; MASTER a la tele; subido WjDK78u1ZO0 |
 
 ## Historial de la producción (cerrado el 7-nov)

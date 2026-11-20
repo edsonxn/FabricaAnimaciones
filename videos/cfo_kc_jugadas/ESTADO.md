@@ -11,8 +11,8 @@
 - leer al empezar: este ESTADO, docs/estilo_analisis_tactico.md (§ «Errores corregidos» y § «Análisis de un partido YA JUGADO»), guion.py (docstring = datos)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | investigación G1 + guion de la G1 + estructura para G2/G3 | ◐ parcial | 29-oct 14:50-15:40 feed/VOD/desfase/Whisper/fuentes; 15:50 K medido + datos_g1.md; falta guion.py (corte por contexto) |
-| 2 | G2 + guion + voz + tiempos | ◐ parcial | 29-oct 16:15-16:45 (sesión 3, cortada por contexto): guion, voz 85/85, tiempo 1039 s, beats 121 |
+| 1 | investigación G1 + guion de la G1 + estructura para G2/G3 | ✅ cerrado 20-nov (el video ya está subido) | 29-oct 14:50-15:40 feed/VOD/desfase/Whisper/fuentes; 15:50 K medido + datos_g1.md; falta guion.py (corte por contexto) |
+| 2 | G2 + guion + voz + tiempos | ✅ cerrado 20-nov (el video ya está subido) | 29-oct 16:15-16:45 (sesión 3, cortada por contexto): guion, voz 85/85, tiempo 1039 s, beats 121 |
 | 3 | efectos.py (jugadas con pausas/3D, boleta) → capas 3D → render_par → vivos_audio → mezcla → final → verificar → Studio | ✅ 29-oct | 17:00-18:12 (sesión 5): correcciones G2 + voz, medios, efectos.py, boleta, capas 3D, MASTER 17:30 · 18:25-18:50 (sesión 6): Studio → https://youtu.be/6wVhlBKp5yA programado 20:00 CDMX |
 
 ## Lecciones de la subida (29-oct, sesión 6)

@@ -114,6 +114,40 @@ def _hecho(estado):
     return "✅" in estado or estado.lower().startswith(("hecho", "listo", "ok"))
 
 
+def _registrados():
+    """Videos que ya figuran en algún canales/<alias>.json (clave "video" en cualquier nivel) = ya subidos."""
+    import json
+    vistos = set()
+
+    def walk(o):
+        if isinstance(o, dict):
+            if isinstance(o.get("video"), str):
+                vistos.add(o["video"])
+            for x in o.values():
+                walk(x)
+        elif isinstance(o, list):
+            for x in o:
+                walk(x)
+    for f in glob.glob(os.path.join(RAIZ, "canales", "*.json")):
+        try:
+            walk(json.load(open(f, encoding="utf-8")))
+        except (OSError, ValueError):
+            pass
+    return vistos
+
+
+def _ya_subido(v, etapa, registrados):
+    """20-nov-2026: un video subido no es «pendiente» aunque su tabla de tramos se haya quedado sin cerrar
+    (el usuario vio en el tablero Mohg y Sinluz ya subidos). Excepción: una corrección abierta (◐) en la etapa."""
+    if "◐" in etapa:
+        return False
+    return v in registrados or bool(re.search(r"SUBIDO|PUBLICADO|PROGRAMADO|PÚBLICO", etapa))
+
+
+def _master_listo(etapa):
+    return bool(re.search(r"MASTER\s*(✅|ENTREGADO|listo)|✅\s*MASTER", etapa, re.I))
+
+
 def sin_registrar(carpeta, max_n=10):
     """Archivos del video más nuevos que su ESTADO.md: trabajo de una sesión que se cortó (tokens agotados o cambio de cuenta)
     antes de anotarlo. Devuelve (total, [(mtime, ruta relativa)]) de más nuevo a más viejo."""
@@ -146,13 +180,22 @@ def continuar(texto):
             cands.append((v, t, ses))
     if not q:
         print("Videos con tramos pendientes (di «continúa el video <nombre>»):")
+        registrados, listos = _registrados(), []
         for v in sorted(os.listdir(VIDEOS)):
             t = _leer(os.path.join(VIDEOS, v, "ESTADO.md"))
             ses = sesiones(t) if t else None
             if ses and any(not _hecho(f[2]) for f in ses[2]):
+                etapa = campos(t).get("etapa", "")
+                if not v.startswith("_") and _ya_subido(v, etapa, registrados):
+                    continue
+                if _master_listo(etapa):
+                    listos.append(v)
+                    continue
                 hechos = sum(_hecho(f[2]) for f in ses[2])
                 sig = next(f for f in ses[2] if not _hecho(f[2]))
                 print(f"  {v:22} {hechos}/{len(ses[2])} tramos · siguiente: #{sig[0]} {sig[1]}" + (f"  (alias: {ses[0]})" if ses[0] else ""))
+        if listos:
+            print("  — MASTER listo, falta tu visto bueno o subirlo: " + ", ".join(listos))
         return
     if not cands:
         sys.exit(f"No encontré ningún video para «{texto}». Mira `python fab.py estado` y usa el nombre de la carpeta.")

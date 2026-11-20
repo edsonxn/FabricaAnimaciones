@@ -10,7 +10,7 @@
 - leer al empezar: este ESTADO.md · `videos/_investigacion_wow_errores_30_60.md` · docs/estilo_secuencia_yt.md (grep)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | canal + comentarios + investigación + guion + voz + pegatinas + mapas + candidatos | ◐ parcial 10-nov 22:50 | corte a 180 mil; voz corriendo |
+| 1 | canal + comentarios + investigación + guion + voz + pegatinas + mapas + candidatos | ✅ cerrado 20-nov (el video ya está subido) | corte a 180 mil; voz corriendo |
 | 2 | seleccionar → … → MASTER → miniatura Flow → subir | ✅ 11-nov | zjlg0jWvpXA, 12:00 CDMX |
 | 3 | correcciones del usuario (MG, mapas, caras, rótulos) → fx hoja final → video → final → subir | ✅ 11-nov | xuFNyR7ntHU privado sin fecha (lo publica él) |
 

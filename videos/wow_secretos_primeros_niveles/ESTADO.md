@@ -10,13 +10,13 @@
 - leer al empezar: este ESTADO.md · `videos/_investigacion_wow_secretos_primeros_niveles.md` (fuentes) · docs/estilo_secuencia_yt.md (grep) · ESTADO de `wow_addons_forever` (cómo se hizo el tramo con audio propio: `_obs.py`, PISTA `oye_*`, `post`)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | canal + comentarios + investigación + guion v1 | ◐ 10-nov | corte a 180 mil tokens; falta alargar guion |
-| 2 | ◐ 10-nov (sesión 2, cortada) guion 250 ✅ · pegatinas/mapas/búsquedas ✅ · voz en curso → voz → tiempo → beats → búsquedas → bajar → pegatinas/mapas/MG → tramo Crematoria → efectos → promesas → chequeo → OST → SFX → mezcla → video → final → verificar → tele → miniatura Flow → subir | pendiente | |
+| 1 | canal + comentarios + investigación + guion v1 | ✅ cerrado 20-nov (el video ya está subido) | corte a 180 mil tokens; falta alargar guion |
+| 2 | ◐ 10-nov (sesión 2, cortada) guion 250 ✅ · pegatinas/mapas/búsquedas ✅ · voz en curso → voz → tiempo → beats → búsquedas → bajar → pegatinas/mapas/MG → tramo Crematoria → efectos → promesas → chequeo → OST → SFX → mezcla → video → final → verificar → tele → miniatura Flow → subir | ✅ cerrado 20-nov (el video ya está subido) | |
 
-| 4 | regla «todo lo nombrado se muestra»: Terminator + 4 propuestas A-D integradas, audio rehecho | ◐ 10-nov (sesión 4, corte 180 mil) | falta chequeo, Flow ×3, render |
+| 4 | regla «todo lo nombrado se muestra»: Terminator + 4 propuestas A-D integradas, audio rehecho | ✅ cerrado 20-nov (el video ya está subido) | falta chequeo, Flow ×3, render |
 | 6 | voz en otro idioma (intro_4, s05_0, gaia_4) → rehacer y resubir | ✅ 10-nov (sesión 6b) | dRL_oOxTnbs programado 14-nov; también Thandol, personas opacas, mapa s01 |
 | 5 | promesas + pegatinas_check + render + subida | ✅ 10-nov (sesión 5) | programado 18-nov, fizzPSvUHyA; adelantado al 11-nov por el usuario |
-| 3 | lista v3 de 20 + guion + búsquedas + pegatinas + comentarios; voz lanzada | ◐ 10-nov (sesión 3, corte 180 mil) | falta efectos.py v3 y el resto |
+| 3 | lista v3 de 20 + guion + búsquedas + pegatinas + comentarios; voz lanzada | ✅ cerrado 20-nov (el video ya está subido) | falta efectos.py v3 y el resto |
 
 ## Decisiones del episodio (el usuario, 10-nov-2026)
 - Tema: 25 secretos/easter eggs que ya puedes hacer en tus primeros niveles de WoW Forever (ej. el huevo de gallina de los Páramos = ¡CLOC!, #4). **28 min.** «Primeros niveles» = 1-30 (Blizzard apagó esos secretos en la beta).

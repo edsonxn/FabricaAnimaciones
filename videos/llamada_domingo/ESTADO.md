@@ -10,7 +10,7 @@
 - leer al empezar: este ESTADO + guion.py (docstring = biblia) + docs/formato_novela_ia.md § «NOVELA, NO TRÁILER»
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | guion, Flow (personajes, imágenes, 48 clips), ui.py, voces Eleven, música, mezcla, MASTER, subir | ◐ parcial | 6-nov: guion listo |
+| 1 | guion, Flow (personajes, imágenes, 48 clips), ui.py, voces Eleven, música, mezcla, MASTER, subir | ✅ cerrado 20-nov (el video ya está subido) | 6-nov: guion listo |
 | 2 | Flow (17 esc, 38 img, 48 clips), ui.py, música biblioteca, efectos, MASTER, subida | ✅ 6-nov | MASTER 840 s, diálogo/música 19,4 dB, -15,3 LUFS; be1zS17rxxI sáb 7-nov 10:00 |
 
 ## Decisiones (el usuario, 6-nov-2026)

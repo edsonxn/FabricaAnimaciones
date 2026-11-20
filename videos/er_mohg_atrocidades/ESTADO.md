@@ -11,7 +11,7 @@
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
 | 1 | datos + tema + investigación + guion | ✅ 10-nov | sesión 1 (cortada por contexto a los 180 mil) |
-| 2 | voz (lanzada) + OST + sonidos + plan de clips | ◐ parcial 10-nov | sesión 2 (corte por contexto): ver «En curso» |
+| 2 | voz (lanzada) + OST + sonidos + plan de clips | ✅ 10-nov | sesión 2 (corte por contexto); lo pendiente se terminó en el tramo 3 (cerrado 20-nov) |
 | 3 | seleccionar + tiempo + beats + clips + pegatinas + MG + mapas + mezcla + chequeo + render + tele + miniatura + subir | ✅ 10-nov | MASTER 24:12, verificar CER 0,010; tele con copia 720p (el de 1,8 GB cortó la conexión al 40 %); subido G6C2R0X_oCo |
 
 ## Decisiones del episodio (10-nov-2026)

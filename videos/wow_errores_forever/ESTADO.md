@@ -11,7 +11,7 @@
 - leer al empezar: este ESTADO.md · docs/voz.md § «VARIAS VOCES QUE COMPITEN» · copiar de `videos/tes_dwemer_desaparicion/` (voces) y `videos/wow_objetos_secretos_forever/` (Overgear, mapas, MG)
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | investigación + guion + voz + tiempo | ◐ parcial 5-nov | guion ✅; voz lanzada ~23:00 (corte a 180 mil) |
+| 1 | investigación + guion + voz + tiempo | ✅ cerrado 20-nov (el video ya está subido) | guion ✅; voz lanzada ~23:00 (corte a 180 mil) |
 | 2 | beats + búsquedas + bajar + pegatinas + mapas + efectos + chequeo | ✅ 6-nov | 45 clips rehechos, promesas.md |
 | 3 | OST + SFX + mezcla + render + final + verificar + miniatura Flow + subir 7-nov + mover clases_ocultas | ✅ 6-nov | MASTER, subido ju5Tc0pqtbg, clases_ocultas → 12-nov |
 

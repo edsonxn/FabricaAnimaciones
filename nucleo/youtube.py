@@ -405,6 +405,7 @@ def aplicar(carpeta, cid, vid):
         json=dict(id=vid, snippet=_snippet(m, v["snippet"]), status=st))
     print(f"metadatos aplicados a {vid} (visibilidad: {st['privacyStatus']})")
     miniatura_y_subtitulos(cid, vid, carpeta, m)
+    refrescar_panel(cid)
 
 
 def _reporte(cid, desde, hasta, **p):
@@ -544,6 +545,20 @@ def comprobar_separacion(cid, cuando=None, vid=None, forzar=False, short=False):
              "--publicar <ISO UTC>) o, solo si el usuario lo pidió expresamente para este video, repite con --forzar.")
 
 
+def refrescar_panel(cid):
+    """Relee de YouTube el canal recién tocado para que el panel («En obra y próximas publicaciones», ruleta, tele) lo
+    muestre al instante (el usuario, 22-nov-2026: «actualiza esto cada que publiquemos algo»). Nunca rompe la subida."""
+    try:
+        import estadisticas
+        alias = next((os.path.basename(r)[:-5] for r in glob.glob(os.path.join(CANALES, "*.json"))
+                      if isinstance(j := json.load(open(r, encoding="utf-8")), dict) and j.get("canal_id") == cid), None)
+        if alias:
+            estadisticas.actualizar_seguro(alias)
+            print(f"panel actualizado: {alias}")
+    except Exception as e:
+        print(f"AVISO: el panel no se pudo refrescar ({str(e)[:120]}); corre: python fab.py canales --actualizar")
+
+
 def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None, forzar=False):
     """Hace público (o no listado / privado) un video ya subido, o lo programa con publicar=ISO (UTC)."""
     v = api(cid, "GET", "/videos", params=dict(part="snippet,status,contentDetails", id=vid))["items"][0]
@@ -558,6 +573,7 @@ def cambiar_visibilidad(cid, vid, privacidad="public", publicar=None, forzar=Fal
     r = api(cid, "PUT", "/videos", params=dict(part="status"), json=dict(id=vid, status=st))
     print(f"{vid}: {r['status']['privacyStatus']}" + (f", se publica {publicar}" if publicar else "")
           + f"  https://youtu.be/{vid}")
+    refrescar_panel(cid)
 
 
 def subir(carpeta, cid, privacidad="private", publicar=None, forzar=False):
@@ -596,8 +612,9 @@ def subir(carpeta, cid, privacidad="private", publicar=None, forzar=False):
     print(f"video subido: https://youtu.be/{vid} ({status['privacyStatus']}"
           + (f", se publica {publicar}" if publicar else "") + ")")
     miniatura_y_subtitulos(cid, vid, carpeta, m)
-    print("Regla (13-oct-2026): registra el video en canales/<alias>.json → publicados y BITACORA, y actualiza el panel de "
-          "canales: python fab.py canales --actualizar")
+    refrescar_panel(cid)
+    print("Regla (13-oct / 22-nov-2026): registra el video en canales/<alias>.json → publicados y BITACORA (el panel ya se "
+          "refrescó solo)")
     # lo que la API no hace se hace en Studio con el navegador integrado (el usuario, 21-oct-2026; docs/publicacion.md)
     cfg = _cfg_canal(cid)
     pend =(["«Vídeo relacionado» = su largo (cuando el largo ya sea público)"] if "#shorts" in m["titulo"].lower() else []) + (

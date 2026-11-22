@@ -218,6 +218,13 @@ def calendario(d, cfg, ahora=None):
     # registrado en canales/<alias>.json → publicados (regla del usuario, 13-oct-2026: el panel se actualiza al empezar y
     # al terminar cada video)
     vistos = {v["id"] for v in d.get("videos", [])}
+    # Y si la última lectura lo vio PRIVADO sin fecha pero después se publicó o programó (registrado en publicados), gana el
+    # registro (el usuario, 22-nov-2026: mpm_takis salía «atrasado» en el panel ya público)
+    reg = {x["id"]: x for x in cfg.get("publicados", []) if x.get("id")}
+    for v in largos:
+        x = reg.get(v["id"])
+        if x and v.get("estado") == "private" and (x.get("programado") or (x.get("publicado") and x.get("visibilidad") == "public")):
+            v.update(fecha=x.get("programado") or x["publicado"], estado="programado" if x.get("programado") else "public", registro=True)
     for x in cfg.get("publicados", []):
         f = x.get("programado") or x.get("publicado")
         if x.get("id") and x["id"] not in vistos and f and not x.get("short") and "#shorts" not in (x.get("titulo") or "").lower():

@@ -38,7 +38,7 @@ Pipeline propio (Python, todo local) que produce videos animados 2D con narraci�
 - **Música (12-oct; biblioteca 21-oct; SFX 22-oct):** canales de juegos = OST oficial, nunca Lyria (23-oct); resto = Lyria apegada al guion, primero `fab.py biblioteca sugerir <v>`; SFX en `SFX_ELEVEN`. → RGC §R19 §R20 · `docs/musica_biblioteca.md`
 
 **Canales y publicación**
-- **Qué canal toca (8-oct) + panel al empezar y al terminar cada video (13-oct):** `fab.py canales --actualizar`; registrar en `publicados`; Shorts no cuentan (21-oct). → RGC §R09 §R10
+- **Qué canal toca (8-oct) + panel SIEMPRE al día (13-oct; 22-nov):** cada publicación, programación o video que entra a producción se ve en el panel al momento: `yt subir/publicar/aplicar` lo refrescan solos, registrar en `publicados` con la hora real, `TITULO` provisional al crear, comprobar `/api/v2/obra`; Shorts no cuentan (21-oct). → RGC §R09 §R10
 - **Siguiente video con datos (8/11-oct):** `fab.py ideas <alias>` + `docs/que_funciona.md` → 3 temas con referencia. → RGC §R11
 - **Cierre de video (12-oct):** hallazgos a `docs/manual_*`/`estilo_*`, lecciones en `ESTADO.md`, DOI con Crossref. → RGC §R12
 - **Comentarios (27-oct; 28-oct; 3/5/11-nov):** leer NUEVOS antes de cada video; ≥ 4 agradecimientos; MÍNIMO 2-3 críticas con contraburla (del comentario, no de la persona); solo ≤ 10 días; ninguno dos veces; nunca inventar. → RGC §R18 · `docs/estilo_secuencia_yt.md` § «COMENTARIOS»

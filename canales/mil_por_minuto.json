@@ -19,7 +19,19 @@
    }
   ]
  },
- "publicados": [],
+ "publicados": [
+  {
+   "video": "mpm_takis",
+   "id": "KwjDkJf79ME",
+   "titulo": "Cómo se HACEN los Takis dentro de la fábrica",
+   "subido": "2026-11-20",
+   "visibilidad": "public",
+   "programado": null,
+   "formato": "cómo se fabrica + negocio (~14:12), secuencia YT con contador $ de esquina y plano de línea, voz Brian C",
+   "nota": "1.er video del canal. PÚBLICO desde dom 22-nov-2026 ~13:45 CDMX (el usuario verificó el canal y pidió publicarlo). Miniatura Flow 1 (río de Takis, sin texto) + título nuevo; el anterior («Así se FABRICAN los Takis: un negocio de 1,100 millones», miniatura $1,100 MILLONES) queda de alternativa para prueba A/B.",
+   "publicado": "2026-11-22T19:45:00Z"
+  }
+ ],
  "ideas": {
   "idioma": "es",
   "region": "MX",
@@ -49,7 +61,7 @@
    "por dentro"
   ]
  },
- "estado": "19-nov-2026: canal creado por Claude en Studio (nombre, @MilPorMinutoMX, logo por código, descripción, palabras clave, país MX, no es para niños). PENDIENTE del usuario: verificar por SMS (youtube.com/verify con Mil por Minuto activo) y conectarlo a la API; después Claude sube el banner (el navegador integrado no abre el selector de archivos) e idioma es-419 por API. 1.er video: Takis, Coca-Cola en México o Bimbo/Gansito (fórmula).",
+ "estado": "20-nov-2026: API conectada, banner subido, idioma es-419. 1.er video mpm_takis subido PRIVADO SIN FECHA (espera verificación). PENDIENTE: verificar el canal (teléfono nuevo o verificación con video/ID en Studio) para la miniatura personalizada.",
  "descripcion": "¿Cómo se fabrican las marcas que compras todos los días? En Mil por Minuto entramos a la planta: Takis, Coca-Cola, Bimbo, Maruchan, Sabritas, Lego y más, explicados en español paso a paso, de la materia prima al anaquel. Planos animados de cada línea de producción, mapas de las plantas y las rutas, cifras reales y el NEGOCIO detrás de cada producto: cuánto vende, cuánto fabrica por minuto y por qué es tan barato (o tan caro). Nuevo video cada semana. Suscríbete y no vuelvas a ver el súper igual.",
  "palabras_clave": [
   "cómo se fabrica",
@@ -71,7 +83,7 @@
  "idioma": "es-419",
  "pais": "MX",
  "banner": "canales/arte/mil_por_minuto/BANNER_2560x1440.jpg",
- "banner_subido": false,
+ "banner_subido": true,
  "logo": "canales/arte/mil_por_minuto/LOGO_800.jpg",
  "enlaces": [],
  "voz": {

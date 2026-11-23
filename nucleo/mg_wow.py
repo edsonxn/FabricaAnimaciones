@@ -2434,8 +2434,8 @@ def meta(titulo, etapas, hecho, remate=None, ancho=1640):
         d.rounded_rectangle((xs[0], y - 9, xs[-1], y + 9), 9, fill=(4, 6, 18, 235), outline=(95, 82, 45, 255), width=2)
         tks = [None] * hecho + [_mk(marcas, i - hecho, 1e9) for i in range(hecho, n)]
         on = [i < hecho or dt >= tks[i] for i in range(n)]
-        last = max(i for i in range(n) if on[i])
-        frac = xs[last] - xs[0]
+        last = max((i for i in range(n) if on[i]), default=-1)   # hecho=0 antes de la 1.ª marca: nada encendido (22-nov-2026)
+        frac = xs[last] - xs[0] if last >= 0 else 0
         if last >= hecho and last > 0:
             prev = xs[last - 1] - xs[0]
             frac = prev + (frac - prev) * _eo((dt - tks[last]) / .8)

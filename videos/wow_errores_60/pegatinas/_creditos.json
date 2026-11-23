@@ -1,0 +1,1099 @@
+{
+ "anthion": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/96/15968.webp",
+  "identidad": "Anthion Harmon (npc 16016), Stratholme: carrera de 45 min; displayId 15968 (mapa mundial de Wowhead Forever)",
+  "escena": "c01",
+  "pegatina": "300x586"
+ },
+ "archimonde": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Archimonde-BC.jpg",
+  "url": "https://warcraft.wiki.gg/images/Archimonde-BC.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Archimonde-BC.jpg",
+  "identidad": "páginas Archimonde y Archimonde (tactics): el jefe de la Cima Hyjal de The Burning Crusade",
+  "usado_en": [
+   "Archimonde (tactics)",
+   "Archimonde"
+  ],
+  "escena": "c18",
+  "original": "942x1012",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "838x900",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "bancal_creador": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Dungeon ShaperTerrace 068.jpg",
+  "url": "https://warcraft.wiki.gg/images/Dungeon_ShaperTerrace_068.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Dungeon_ShaperTerrace_068.jpg",
+  "identidad": "«Shaper Terrace dungeon» (galería de Forever) = Bancal del Creador",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "c15 c05",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "bastion_faucenegra": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Dungeon TimbermawHold 057.jpg",
+  "url": "https://warcraft.wiki.gg/images/Dungeon_TimbermawHold_057.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Dungeon_TimbermawHold_057.jpg",
+  "identidad": "Blizzard lo llamó «Timbermaw Hold dungeon»; la wiki lo usa en «Blackmaw Hold (instance)»",
+  "usado_en": [
+   "World of Warcraft: Forever",
+   "Blackmaw Hold (instance)"
+  ],
+  "escena": "c17 c16 c12",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": true,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "bodley": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/122/15994.webp",
+  "identidad": "Bodley (npc 16033), fantasma de la Montaña Roca Negra (cadena 0.5); displayId 15994 (mapa mundial de Wowhead Forever)",
+  "escena": "c01",
+  "pegatina": "364x492"
+ },
+ "brasaliza": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Emberstrife.jpg",
+  "url": "https://warcraft.wiki.gg/images/Emberstrife.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Emberstrife.jpg",
+  "identidad": "archivo «Emberstrife» (página Emberstrife = Brasaliza)",
+  "usado_en": [
+   "Emberstrife"
+  ],
+  "escena": "c04",
+  "original": "519x573",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "519x573",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "cavernas_tumulo": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Raid BarrowDeeps 082.jpg",
+  "url": "https://warcraft.wiki.gg/images/Raid_BarrowDeeps_082.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Raid_BarrowDeeps_082.jpg",
+  "identidad": "«Raid in Barrow Deeps» (galería de Forever) = Cavernas del Túmulo",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "intro c17 c08",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": true,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "cavernas_tumulo_2": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Raid BarrowDeeps 077.jpg",
+  "url": "https://warcraft.wiki.gg/images/Raid_BarrowDeeps_077.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Raid_BarrowDeeps_077.jpg",
+  "identidad": "«Raid in Barrow Deeps» (galería de Forever)",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "c17",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": true,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "cavernas_tumulo_3": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Raid BarrowDeeps 104.jpg",
+  "url": "https://warcraft.wiki.gg/images/Raid_BarrowDeeps_104.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Raid_BarrowDeeps_104.jpg",
+  "identidad": "«Raid in Barrow Deeps» (galería de Forever)",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "c17 c03",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": true,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "cima_hyjal": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Raid Hyjal 085.jpg",
+  "url": "https://warcraft.wiki.gg/images/Raid_Hyjal_085.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Raid_Hyjal_085.jpg",
+  "identidad": "«Raid in Mount Hyjal» (galería de Forever) = Cima Hyjal",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "intro c18 c13 c08",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "cima_hyjal_2": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Raid Hyjal 086.jpg",
+  "url": "https://warcraft.wiki.gg/images/Raid_Hyjal_086.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Raid_Hyjal_086.jpg",
+  "identidad": "«Raid in Mount Hyjal» (galería de Forever) = Cima Hyjal",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "c18",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "cria_onyxia": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Onyxian Whelp.jpg",
+  "url": "https://warcraft.wiki.gg/images/Onyxian_Whelp.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Onyxian_Whelp.jpg",
+  "identidad": "Onyxian Whelp (licencia Mob, categoría Onyxia's Lair mobs) = cría de Onyxia",
+  "usado_en": [
+   "Onyxian Whelp"
+  ],
+  "escena": "c23",
+  "original": "500x267",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "500x267",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "cumbre_superior": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Upper Blackrock Spire loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Upper_Blackrock_Spire_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Upper_Blackrock_Spire_loading_screen.jpg",
+  "identidad": "pantalla de carga de la Cumbre de Roca Negra superior (Classic)",
+  "usado_en": [
+   "Upper Blackrock Spire",
+   "Loading screen",
+   "Blackrock Mountain",
+   "Blackrock Spire"
+  ],
+  "escena": "c11 c04",
+  "original": "1280x1024",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "900x400",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "cuna_invierno": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Everlook.jpg",
+  "url": "https://warcraft.wiki.gg/images/Everlook.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Everlook.jpg",
+  "identidad": "imagen de la página Everlook (Vista Eterna, Cuna del Invierno)",
+  "usado_en": [
+   "Everlook",
+   "Winterspring",
+   "Winterspring (Classic)"
+  ],
+  "escena": "c17",
+  "original": "1545x1061",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x618",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "deliana": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/93/15965.webp",
+  "identidad": "Deliana (npc 16013), Forjaz: empieza la cadena del conjunto 0.5 (A); displayId 15965 (mapa mundial de Wowhead Forever)",
+  "escena": "c01",
+  "pegatina": "258x580"
+ },
+ "drakkisath": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:General Drakkisath.jpg",
+  "url": "https://warcraft.wiki.gg/images/General_Drakkisath.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:General_Drakkisath.jpg",
+  "identidad": "archivo «General Drakkisath» (captura del juego)",
+  "usado_en": [
+   "Dragonspawn",
+   "General Drakkisath"
+  ],
+  "escena": "c04 c01",
+  "original": "934x831",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x801",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "espiritu": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Spirit Healer.jpg",
+  "url": "https://warcraft.wiki.gg/images/Spirit_Healer.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Spirit_Healer.jpg",
+  "identidad": "página Spirit Healer (ángel de la resurrección, captura del juego)",
+  "usado_en": [
+   "Veil",
+   "Angel",
+   "Spirit Healer",
+   "Kyrian"
+  ],
+  "escena": "c19",
+  "original": "1544x826",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x481",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "feria_luna_negra": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Darkmoon.jpg",
+  "url": "https://warcraft.wiki.gg/images/Darkmoon.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Darkmoon.jpg",
+  "identidad": "archivo «Darkmoon» (Feria de la Luna Negra, captura vieja)",
+  "usado_en": [
+   "Darkmoon Faire (Classic)",
+   "Darkmoon Faire"
+  ],
+  "escena": "c02",
+  "original": "750x563",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "750x563",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "gandling": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:DarkmasterGandling.jpg",
+  "url": "https://warcraft.wiki.gg/images/DarkmasterGandling.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:DarkmasterGandling.jpg",
+  "identidad": "archivo «DarkmasterGandling» (Maestro oscuro Gandling, Scholomance)",
+  "usado_en": [
+   "Darkmaster Gandling (Classic)"
+  ],
+  "escena": "c01",
+  "original": "350x650",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "350x650",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "garganta_grito_guerra": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Warsong Gulch loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Warsong_Gulch_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Warsong_Gulch_loading_screen.jpg",
+  "identidad": "pantalla de carga de la Garganta Grito de Guerra (Classic)",
+  "usado_en": [
+   "Loading screen",
+   "List of battlegrounds",
+   "Warsong Gulch",
+   "World of Warcraft endgame and patch storylines"
+  ],
+  "escena": "c24",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "776x345",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "guarida_onyxia": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Onyxia's Lair loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Onyxia%27s_Lair_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Onyxia%27s_Lair_loading_screen.jpg",
+  "identidad": "pantalla de carga de la Guarida de Onyxia (Classic)",
+  "usado_en": [
+   "Onyxia's Lair",
+   "Loading screen",
+   "Onyxia's Lair (Classic)",
+   "User:MaxWilder/Tank Notes",
+   "World of Warcraft endgame and patch storylines",
+   "Onyxia's Lair (Season of Discovery)"
+  ],
+  "escena": "intro c23 c10 c08",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "776x345",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "islas_lanza_negra": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Darkspear Islands loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Darkspear_Islands_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Darkspear_Islands_loading_screen.jpg",
+  "identidad": "«Darkspear Islands (battleground) loading screen in Forever»",
+  "usado_en": [
+   "Loading screen",
+   "Darkspear Islands (battleground)"
+  ],
+  "escena": "c21",
+  "original": "2992x1684",
+  "recorte": "carga_blanca",
+  "aclarada": false,
+  "pegatina": "900x334",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "la_masacre": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Dire Maul loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Dire_Maul_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Dire_Maul_loading_screen.jpg",
+  "identidad": "pantalla de carga de La Masacre (Classic)",
+  "usado_en": [
+   "Capital Gardens",
+   "Warpwood Quarter",
+   "Dire Maul",
+   "Loading screen",
+   "Gordok Commons",
+   "World of Warcraft endgame and patch storylines"
+  ],
+  "escena": "c02",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "776x345",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "mathrengyl": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/213/2261.webp",
+  "identidad": "Mathrengyl Bearwalker / Mathrengyl Caminaosos (npc 4217), Darnassus: 1.ª misión del Bastión (A); displayId 2261 (mapa mundial de Wowhead Forever)",
+  "escena": "c16",
+  "pegatina": "278x568"
+ },
+ "mokvar": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/94/15966.webp",
+  "identidad": "Mokvar (npc 16012), Orgrimmar: empieza la cadena del conjunto 0.5 (H); displayId 15966 (mapa mundial de Wowhead Forever)",
+  "escena": "c01",
+  "pegatina": "434x548"
+ },
+ "monte_hyjal": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Zones Hyjal 025.png",
+  "url": "https://warcraft.wiki.gg/images/Zones_Hyjal_025.png",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Zones_Hyjal_025.png",
+  "identidad": "Mount Hyjal (galería de Forever; página Mount Hyjal (Forever))",
+  "usado_en": [
+   "World of Warcraft: Forever",
+   "Mount Hyjal (Forever)"
+  ],
+  "escena": "c18 c06",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "monte_hyjal_2": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Zones Hyjal 032.jpg",
+  "url": "https://warcraft.wiki.gg/images/Zones_Hyjal_032.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Zones_Hyjal_032.jpg",
+  "identidad": "Mount Hyjal (galería de Forever)",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "c06",
+  "original": "3840x2160",
+  "recorte": null,
+  "aclarada": true,
+  "pegatina": "900x506",
+  "autor": "Blizzard, capturas oficiales de Forever (blizzard.gamespress.com/wowforeverreveal)"
+ },
+ "mux": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/126/15998.webp",
+  "identidad": "Mux Manascrambler / Mux Malamaná (npc 16014), Gadgetzan: detector de fantasmas del conjunto 0.5; displayId 15998 (mapa mundial de Wowhead Forever)",
+  "escena": "c01",
+  "pegatina": "454x584"
+ },
+ "nara_wildmane": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/161/4513.webp",
+  "identidad": "Nara Wildmane / Nara Melena Salvaje (npc 5770), Cima del Trueno: 1.ª misión del Bastión (H); displayId 4513 (mapa mundial de Wowhead Forever)",
+  "escena": "c16",
+  "pegatina": "336x592"
+ },
+ "nordrassil": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Nordrassil above pre-cata.jpg",
+  "url": "https://warcraft.wiki.gg/images/Nordrassil_above_pre-cata.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Nordrassil_above_pre-cata.jpg",
+  "identidad": "página Nordrassil: el Árbol del Mundo visto desde arriba, antes de Cataclysm",
+  "usado_en": [
+   "Nordrassil",
+   "Mount Hyjal"
+  ],
+  "escena": "c18 c06",
+  "original": "1280x960",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "900x675",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "o_aliento_onyxia": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_fire_fire.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=17086",
+  "identidad": "spell 17086: Breath / es-ES «Respiración» — Respiración = aliento de Onyxia (fase 2)",
+  "escena": "c23",
+  "pegatina": "320x320"
+ },
+ "o_amuleto_pirodraco": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_11.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=16309",
+  "identidad": "item 16309: Drakefire Amulet / es-ES «Amuleto Pirodraco» — Amuleto Pirodraco (+15 res. Fuego en Forever)",
+  "escena": "c10 c09",
+  "pegatina": "320x320"
+ },
+ "o_anillo_canalizador": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_24.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=272406",
+  "identidad": "item 272406: Channeler's Ring / es-ES «Anillo de canalizador» — Anillo de canalizador",
+  "escena": "c25",
+  "pegatina": "320x320"
+ },
+ "o_arma_inutil": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_13.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=274560",
+  "identidad": "item 274560: Hyjal Summit Trash Weapon / es-ES «Arma inútil de la Cima Hyjal» — Arma inútil de la Cima Hyjal",
+  "escena": "c18",
+  "pegatina": "320x320"
+ },
+ "o_barrido_cola": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterscales_05.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=15847",
+  "identidad": "spell 15847: Tail Sweep / es-ES «Barrido de cola» — Barrido de cola de Onyxia (el coletazo)",
+  "escena": "c23",
+  "pegatina": "320x320"
+ },
+ "o_baston_montana": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_staff_25.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=267079",
+  "identidad": "item 267079: Staff of the Mountain / es-ES «Bastón de la montaña» — Bastón de la montaña (cadena de Tiala)",
+  "escena": "c06",
+  "pegatina": "320x320"
+ },
+ "o_bendicion_jefe": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_teleportorgrimmar.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=16609",
+  "identidad": "spell 16609: Warchief's Blessing / es-ES «Bendición de Jefe de Guerra» — Bendición del Jefe de Guerra",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_berrido": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_dragon_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=22888",
+  "identidad": "spell 22888: Rallying Cry of the Dragonslayer / es-ES «Recobrar el llanto del cazadragones» — Berrido de convocación del matadragones (beneficio de la cabeza de Onyxia)",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_bola_fuego_onyxia": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_fire_flamebolt.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=18392",
+  "identidad": "spell 18392: Fireball / es-ES «Bola de Fuego» — Bola de Fuego de Onyxia (fase 2)",
+  "escena": "c23",
+  "pegatina": "320x320"
+ },
+ "o_bolas_masa": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_64.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=20452",
+  "identidad": "item 20452: Smoked Desert Dumplings / es-ES «Bolas de masa del desierto ahumadas» — Bolas de masa del desierto ahumadas (comida con +5 % de experiencia)",
+  "escena": "c20",
+  "pegatina": "320x320"
+ },
+ "o_brasero_sagrado": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_enggizmos_21.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=22014",
+  "identidad": "item 22014: Hallowed Brazier / es-ES «Brazal Sagrado» — Brazal Sagrado (= brasero; pide Alba Argenta Honorable)",
+  "escena": "c01",
+  "pegatina": "320x320"
+ },
+ "o_cabeza_onyxia": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_dragon_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=18423",
+  "identidad": "item 18423: Head of Onyxia / es-ES «Cabeza de Onyxia» — Cabeza de Onyxia",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_cabeza_rend": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_orc_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12630",
+  "identidad": "item 12630: Head of Rend Blackhand / es-ES «Cabeza de Rend Puño Negro» — Cabeza de Rend Puño Negro",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_capa_onyxia": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_05.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=15138",
+  "identidad": "item 15138: Onyxia Scale Cloak / es-ES «Capa de escamas de Onyxia» — Capa de escamas de Onyxia",
+  "escena": "c09",
+  "pegatina": "320x320"
+ },
+ "o_cristal_amarillo": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_topaz_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11188",
+  "identidad": "item 11188: Yellow Power Crystal / es-ES «Cristal de poder amarillo» — Cristal de poder amarillo (Bolt)",
+  "escena": "c15",
+  "pegatina": "320x320"
+ },
+ "o_cristal_azul": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_sapphire_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11184",
+  "identidad": "item 11184: Blue Power Crystal / es-ES «Cristal de poder azul» — Cristal de poder azul (Snowtalon)",
+  "escena": "c15",
+  "pegatina": "320x320"
+ },
+ "o_cristal_rojo": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_ruby_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11186",
+  "identidad": "item 11186: Red Power Crystal / es-ES «Cristal de poder rojo» — Cristal de poder rojo (Cinder)",
+  "escena": "c15",
+  "pegatina": "320x320"
+ },
+ "o_cristal_verde": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_emerald_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11185",
+  "identidad": "item 11185: Green Power Crystal / es-ES «Cristal de poder verde» — Cristal de poder verde (Vitrix)",
+  "escena": "c15",
+  "pegatina": "320x320"
+ },
+ "o_desencantar": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_removecurse.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=13262",
+  "identidad": "spell 13262: Disenchant / es-ES «Desencantar» — Desencantar",
+  "escena": "c03",
+  "pegatina": "320x320"
+ },
+ "o_elixir_mangosta": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_32.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=13452",
+  "identidad": "item 13452: Elixir of the Mongoose / es-ES «Elixir de la mangosta» — Elixir de la mangosta",
+  "escena": "c20",
+  "pegatina": "320x320"
+ },
+ "o_encantamiento": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/trade_engraving.jpg",
+  "identidad": "ícono de la profesión Encantamiento (el encantador)",
+  "escena": "c07 c03",
+  "pegatina": "320x320"
+ },
+ "o_equitacion": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_swiftness.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=33391",
+  "identidad": "spell 33391: Journeyman Riding / es-ES «Oficial jinete» — Oficial jinete (equitación del 60)",
+  "escena": "c14",
+  "pegatina": "320x320"
+ },
+ "o_escama_onyxia": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterscales_07.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=15410",
+  "identidad": "item 15410: Scale of Onyxia / es-ES «Escama de Onyxia» — Escama de Onyxia",
+  "escena": "c09",
+  "pegatina": "320x320"
+ },
+ "o_esencia_maleable": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/ability_druid_cyclone.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=274030",
+  "identidad": "item 274030: Malleable Essence of Nature / es-ES «Esencia maleable de la Naturaleza» — Esencia maleable de la Naturaleza",
+  "escena": "c07 c03",
+  "pegatina": "320x320"
+ },
+ "o_gema_cumbrerroca": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_diamond_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12336",
+  "identidad": "item 12336: Gemstone of Spirestone / es-ES «Gema de Cumbrerroca» — Gema de Cumbrerroca (gemas de los generales)",
+  "escena": "c04",
+  "pegatina": "320x320"
+ },
+ "o_gema_espina_ahumada": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_opal_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12335",
+  "identidad": "item 12335: Gemstone of Smolderthorn / es-ES «Gema de Espina Ahumada» — Gema de Espina Ahumada (general Omokk… gemas de los generales)",
+  "escena": "c04",
+  "pegatina": "320x320"
+ },
+ "o_gema_hacha_sangre": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_bloodstone_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12337",
+  "identidad": "item 12337: Gemstone of Bloodaxe / es-ES «Gema de Hacha de Sangre» — Gema de Hacha de Sangre (gemas de los generales)",
+  "escena": "c04",
+  "pegatina": "320x320"
+ },
+ "o_herreria": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/trade_blacksmithing.jpg",
+  "identidad": "ícono de la profesión Herrería",
+  "escena": "c07",
+  "pegatina": "320x320"
+ },
+ "o_interrogacion": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg",
+  "identidad": "ícono de objeto desconocido (botín oculto)",
+  "escena": "c13",
+  "pegatina": "320x320"
+ },
+ "o_lacre_ascension": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12344",
+  "identidad": "item 12344: Seal of Ascension / es-ES «[Seal of Ascension]» — Lacre de Ascensión (Seal of Ascension; +10 res. Fuego/Naturaleza/Escarcha en Forever)",
+  "escena": "c11 c09 c04",
+  "pegatina": "320x320"
+ },
+ "o_lacre_cabeza": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_41.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=275241",
+  "identidad": "item 275241: Premier Emboldened Head Seal / es-ES «Lacre de cabeza envalentonado de gran calidad» — Lacre de cabeza envalentonado de gran calidad (rango 13)",
+  "escena": "c22",
+  "pegatina": "320x320"
+ },
+ "o_lacre_muneca": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_bracer_24.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=275240",
+  "identidad": "item 275240: Premier Emboldened Wrist Seal / es-ES «Lacre de muñeca envalentonado de gran calidad» — Lacre de muñeca envalentonado de gran calidad (rango 8)",
+  "escena": "c22",
+  "pegatina": "320x320"
+ },
+ "o_lacre_sin_adornar": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/racial_dwarf_findtreasure.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12219",
+  "identidad": "item 12219: Unadorned Seal of Ascension / es-ES «Lacre de ascensión sin adornar» — Lacre de ascensión sin adornar",
+  "escena": "c04",
+  "pegatina": "320x320"
+ },
+ "o_marca_alterac": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_21.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=20560",
+  "identidad": "item 20560: Alterac Valley Mark of Honor / es-ES «Marca de Honor del Valle de Alterac» — Marca de Honor del Valle de Alterac",
+  "escena": "c21",
+  "pegatina": "320x320"
+ },
+ "o_marca_garganta": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_rune_07.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=20558",
+  "identidad": "item 20558: Warsong Gulch Mark of Honor / es-ES «Marca de Honor del Barranco Grito de Guerra» — Marca de Honor de la Garganta Grito de Guerra (tareas semanales)",
+  "escena": "c24",
+  "pegatina": "320x320"
+ },
+ "o_marca_lanza_negra": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_rune_14.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=274895",
+  "identidad": "item 274895: Darkspear Islands Mark of Honor / es-ES «Marca de honor de las Islas Lanza Negra» — Marca de honor de las Islas Lanza Negra",
+  "escena": "c21",
+  "pegatina": "320x320"
+ },
+ "o_moneda_sonya": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_coin_17.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=286300",
+  "identidad": "item 286300: Sonya Darkhallow's Gold Coin / es-ES «Moneda de oro de Sonya Sombrasanto» — Moneda de oro de Sonya Sombrasanto",
+  "escena": "c17",
+  "pegatina": "320x320"
+ },
+ "o_montura_epica": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/ability_mount_ridinghorse.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=18776",
+  "identidad": "item 18776: Swift Palomino / es-ES «Palomino veloz» — Palomino veloz (una montura épica racial de vendedor)",
+  "escena": "c14",
+  "pegatina": "320x320"
+ },
+ "o_oro": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_coin_01.jpg",
+  "identidad": "ícono de monedas de oro",
+  "escena": "c19 c14 c12",
+  "pegatina": "320x320"
+ },
+ "o_peleteria": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/trade_leatherworking.jpg",
+  "identidad": "ícono de la profesión Peletería",
+  "escena": "c07",
+  "pegatina": "320x320"
+ },
+ "o_peto_forjaluz": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_chest_plate03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=16726",
+  "identidad": "item 16726: Lightforge Breastplate / es-ES «Peto Forjaluz» — Peto Forjaluz (peto del Conjunto de mazmorra; Drakkisath)",
+  "escena": "c01",
+  "pegatina": "320x320"
+ },
+ "o_pocion_curacion": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_54.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=13446",
+  "identidad": "item 13446: Major Healing Potion / es-ES «Poción de curación sublime» — Poción de curación sublime",
+  "escena": "c20",
+  "pegatina": "320x320"
+ },
+ "o_pocion_fuego": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_24.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=13457",
+  "identidad": "item 13457: Greater Fire Protection Potion / es-ES «Poción de protección de Fuego superior» — Poción de protección de Fuego superior",
+  "escena": "c20 c09",
+  "pegatina": "320x320"
+ },
+ "o_pocion_mana": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_76.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=13444",
+  "identidad": "item 13444: Major Mana Potion / es-ES «Poción de maná sublime» — Poción de maná sublime",
+  "escena": "c20",
+  "pegatina": "320x320"
+ },
+ "o_poderio_ventormenta": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_arcane_teleportstormwind.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=460939",
+  "identidad": "spell 460939: Might of Stormwind / es-ES «Poderío de Ventormenta» — Poderío de Ventormenta",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_quijotes_forjaluz": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_pants_04.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=16728",
+  "identidad": "item 16728: Lightforge Legplates / es-ES «Quijotes Forjaluz» — Quijotes Forjaluz (piernas del Conjunto de mazmorra; Barón Osahendido)",
+  "escena": "c01",
+  "pegatina": "320x320"
+ },
+ "o_reloj": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pocketwatch_01.jpg",
+  "identidad": "ícono de reloj (tope de 5 por hora)",
+  "escena": "c05",
+  "pegatina": "320x320"
+ },
+ "o_reparar": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/ability_repair.jpg",
+  "identidad": "ícono de reparar",
+  "escena": "c19",
+  "pegatina": "320x320"
+ },
+ "o_reubicador": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_enggizmos_21.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=184937",
+  "identidad": "item 184937: Chronoboon Displacer / es-ES «Reubicador cronológico» — Reubicador cronológico",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_sastreria": {
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/trade_tailoring.jpg",
+  "identidad": "ícono de la profesión Sastrería",
+  "escena": "c07",
+  "pegatina": "320x320"
+ },
+ "o_serenata": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_holy_mindvision.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=15366",
+  "identidad": "spell 15366: Songflower Serenade / es-ES «Serenata Cantaflor» — Serenata Cantaflor (Frondavil)",
+  "escena": "c02",
+  "pegatina": "320x320"
+ },
+ "o_sortija_luz": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_60.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=272407",
+  "identidad": "item 272407: Blessed Band of Light / es-ES «Sortija de la Luz bendita» — Sortija de la Luz bendita",
+  "escena": "c25",
+  "pegatina": "320x320"
+ },
+ "o_tabardo_guardianes": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_tabard_guardiansofhyjal.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=274025",
+  "identidad": "item 274025: Guardians of Hyjal Tabard / es-ES «Tabardo de los Guardianes de Hyjal» — Tabardo de los Guardianes de Hyjal",
+  "escena": "c06",
+  "pegatina": "320x320"
+ },
+ "o_vaina_semilla": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_farm_herbseed.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=274379",
+  "identidad": "item 274379: Rousing Seed Pod / es-ES «Vaina de semilla reanimadora» — Vaina de semilla reanimadora",
+  "escena": "c06",
+  "pegatina": "320x320"
+ },
+ "o_yelmo_forjaluz": {
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_08.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=16727",
+  "identidad": "item 16727: Lightforge Helm / es-ES «Yelmo Forjaluz» — Yelmo Forjaluz (casco del Conjunto de mazmorra, paladín; lo suelta Gandling)",
+  "escena": "c09 c01",
+  "pegatina": "320x320"
+ },
+ "onyxia": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Onyxia.jpg",
+  "url": "https://warcraft.wiki.gg/images/Onyxia.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Onyxia.jpg",
+  "identidad": "archivo «Onyxia» (captura del juego, Guarida)",
+  "usado_en": [
+   "Onyxia",
+   "Onyxia (Classic)",
+   "Onyxia (Season of Discovery)"
+  ],
+  "escena": "c23 c09",
+  "original": "640x480",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "640x480",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "osahendido": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Rivendare2.jpg",
+  "url": "https://warcraft.wiki.gg/images/Rivendare2.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Rivendare2.jpg",
+  "identidad": "archivo «Rivendare2» (usado en Baron Rivendare (Classic)) = Barón Osahendido en Stratholme",
+  "usado_en": [
+   "Death knight",
+   "Baron Rivendare (Classic)",
+   "Dead Man's Plea",
+   "Baron Rivendare"
+  ],
+  "escena": "c01",
+  "original": "773x1018",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "683x900",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "pix_xizzix": {
+  "fuente": "Wowhead Forever (modelo 3D)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/241/121329.webp",
+  "identidad": "Pix Xizzix (npc 227853), vendedor del cambio de anillos (Bahía del Botín en el mapa de Forever); displayId 121329 (mapa mundial de Wowhead Forever)",
+  "escena": "c25",
+  "pegatina": "346x526"
+ },
+ "profundidades_roca_negra": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Blackrock Depths loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Blackrock_Depths_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Blackrock_Depths_loading_screen.jpg",
+  "identidad": "pantalla de carga de Profundidades de Roca Negra (Classic)",
+  "usado_en": [
+   "Blackrock Depths",
+   "Loading screen",
+   "Blackrock Depths (Timewalking)"
+  ],
+  "escena": "c16",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "776x345",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "refugio_mariscales": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Marshals Refuge.jpg",
+  "url": "https://warcraft.wiki.gg/images/Marshals_Refuge.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Marshals_Refuge.jpg",
+  "identidad": "página Marshal's Refuge (Refugio de los Mariscales, captura de Classic)",
+  "usado_en": [
+   "Un'Goro Crater (Classic)",
+   "Marshal's Refuge"
+  ],
+  "escena": "c15",
+  "original": "600x450",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "600x450",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "rend": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Rend.jpg",
+  "url": "https://warcraft.wiki.gg/images/Rend.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Rend.jpg",
+  "identidad": "archivo «Rend» de la página Dal'rend Blackhand (Jefe de Guerra Rend en la Cumbre)",
+  "usado_en": [
+   "User talk:Mr.X8",
+   "Dark Horde",
+   "Blackrock clan",
+   "Rend Blackhand (tactics)",
+   "Dal'rend Blackhand"
+  ],
+  "escena": "c04 c02",
+  "original": "748x768",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "748x768",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "scholomance": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Scholomance loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Scholomance_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Scholomance_loading_screen.jpg",
+  "identidad": "pantalla de carga de Scholomance (Classic)",
+  "usado_en": [
+   "Scholomance",
+   "Loading screen"
+  ],
+  "escena": "c05 c01",
+  "original": "1280x1024",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "900x400",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "stratholme": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Stratholme loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Stratholme_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Stratholme_loading_screen.jpg",
+  "identidad": "pantalla de carga de Stratholme (Classic)",
+  "usado_en": [
+   "Stratholme",
+   "Loading screen",
+   "Stratholme Main Gate",
+   "Stratholme (Classic)",
+   "Stratholme Service Entrance"
+  ],
+  "escena": "c05 c01",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "776x345",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "tiala": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Tiala Whitemane.jpg",
+  "url": "https://warcraft.wiki.gg/images/Tiala_Whitemane.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Tiala_Whitemane.jpg",
+  "identidad": "imagen de la página Tiala Whitemane (Tiala Melenablanca, Monte Hyjal)",
+  "usado_en": [
+   "Tiala Whitemane"
+  ],
+  "escena": "c06",
+  "original": "769x990",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "699x900",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "ungoro": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Un'Goro Crater.jpg",
+  "url": "https://warcraft.wiki.gg/images/Un%27Goro_Crater.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Un%27Goro_Crater.jpg",
+  "identidad": "página Un'Goro Crater (captura vieja)",
+  "usado_en": [
+   "Un'Goro Crater",
+   "Un'Goro Crater (Classic)"
+  ],
+  "escena": "c15",
+  "original": "600x450",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "600x450",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "vaelan": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Vaelan.jpg",
+  "url": "https://warcraft.wiki.gg/images/Vaelan.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Vaelan.jpg",
+  "identidad": "«Vaelan in human form» (página Vaelastrasz): el que empieza el Lacre en la Cumbre inferior",
+  "usado_en": [
+   "Vaelastrasz"
+  ],
+  "escena": "c04",
+  "original": "444x648",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "444x648",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "valle_alterac": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Alterac Valley loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Alterac_Valley_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Alterac_Valley_loading_screen.jpg",
+  "identidad": "pantalla de carga del Valle de Alterac (Classic)",
+  "usado_en": [
+   "Loading screen",
+   "List of battlegrounds",
+   "Alterac Valley",
+   "World of Warcraft endgame and patch storylines"
+  ],
+  "escena": "c21",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "aclarada": false,
+  "pegatina": "776x345",
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "valthalak": {
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Lord Valthalak.jpg",
+  "url": "https://warcraft.wiki.gg/images/Lord_Valthalak.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Lord_Valthalak.jpg",
+  "identidad": "archivo «Lord Valthalak» (página Lord Valthalak)",
+  "usado_en": [
+   "Lord Valthalak"
+  ],
+  "escena": "c04 c01",
+  "original": "677x735",
+  "recorte": null,
+  "aclarada": false,
+  "pegatina": "677x735",
+  "autor": "captura/arte de Blizzard en la wiki"
+ }
+}

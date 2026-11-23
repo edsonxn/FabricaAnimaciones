@@ -172,6 +172,29 @@
 - 5 integraciones entre el 23-nov y el 18-dic: **mié 25-nov, dom 29-nov, vie 4-dic, mié 9-dic y mié 16-dic** (9-dic = abren las bandas de Forever).
 - Brief de las dos primeras: lun 16-nov; contenido para revisión de Alice: mar 17-nov (antes de sus vacaciones); ella manda los enlaces s.gy.
 - `wow_forever_experiencia` (lun 23-nov) va SIN Overgear (el usuario, 12-nov).
+- **Brief recibido el lun 16-nov** («Overgear Brief — WoW Forever · Coaching (Creator)», Google Doc 1Cp8QZUrhxCtHJhRDz4SdDx5Z8ooUQn-bj_WGxo8ex1s);
+  Alice manda el CONTRATO el 17-nov y espera el video de la integración para aprobarlo (ella sale de vacaciones del 19 al 30-nov).
+  Campaña del brief: 23-nov → 13-dic (el 16-dic queda fuera de esa ventana: confirmarlo con el brief de diciembre, que llega el 1-dic).
+  Lo NUEVO frente a nuestro anuncio de `wow_errores_30_60`: sesiones por **voz o por texto** (decíamos solo voz), −5 % desde 2 h,
+  lealtad hasta 50 %, 1 % de cashback, bono de bienvenida; **captura de pantalla de overgear.com/games/wow-forever/coaching**
+  (obligatoria; no estaba en el anuncio anterior); creativo personalizado con nombre y código lo manda Alice (usar ESE, sin sustituir);
+  assets = la misma carpeta «WoW - Forever (nov)» que ya usamos. Reglas de palabras (§7): «WoW Forever», nunca «Classic»; no es
+  temporada ni modo temporal; NADA de tier lists / «mejor clase» / «top DPS»; nada de Heroico, Mítico, M+, arenas ni flex
+  (bandas fijas de 10/20/40); Cumbre Hyjal ≠ la de TBC (20 jugadores, 13 jefes); no prometer objetos de banda ni BiS; nunca
+  «subir de nivel es aburrido» ni «sáltate el grind». Bandas del 9-dic: Barrow Deeps (10, 8 jefes), Cumbre Hyjal (20, 13), Onyxia (40).
+  Tono neutral o positivo sobre Overgear 30 días tras publicar (también en comentarios y burlas).
+- **Promo EN para la aprobación de Alice (16-nov):** `videos/overgear_promo_en_c3/` (74,8 s; `salida/overgear_promo_EN_c3_ligero.mp4`
+  16 MB para el correo). Sigue con CRONICAS10 hasta que Alice mande otro creativo (se le pregunta en el correo).
+- **Corte de la campaña 2 (1-9 nov) al 16-nov, para la factura de PayPal:** 5 integraciones × 75 = 375 US$ + 80 000 vistas × 20/1 000
+  = 1 600 US$ → **1 825 US$, factura 0009** (el usuario: el acuerdo son 3 × 75, no 5; PayPal USYRMPHMGT7M32XN, emitida el 16-nov,
+  vence el 15-ene-2027). Respuesta a Alice con el promo (copia de 9 MB, aclarando que el publicado va en 1080p) y la factura: ENVIADA por el usuario
+  el 16-nov. Pendiente: aprobación del promo, contrato (17-nov), enlaces s.gy de las integraciones del 25 y 29-nov y si sigue CRONICAS10. Vistas: /1 primera_semana 25 126 · /2 objetos_secretos
+  7 873 · /3 jugadores_rompieron 7 903 · /4 errores_forever 16 019 · /5 addons 3 019 + errores_30_60 12 687 + secretos_primeros_niveles
+  7 624 (total real 80 251). clases_ocultas (/4) y pistas_futuro (/5) salieron con 2 y 0 vistas: no se cobran.
+- **Cerrado el 18/19-nov (correo de Alice):** integración APROBADA (`videos/overgear_promo_en_c3/`), contrato firmado, código
+  sigue **CRONICAS10**, factura 0009 recibida (fecha de pago pendiente). Enlaces (con http, si no YouTube no los hace clicables):
+  **25-nov http://overgear.s.gy/CRONICAS/6 · 29-nov /7 · 4-dic /8 · 9-dic /9 · 16-dic /10.** Punto 1.8 del contrato: si una
+  integración no llega al 50 % de la mediana, se sube otro video con el MISMO enlace y se suman las vistas (confirmado por Alice).
 
 ## Conclusión del 15-nov-2026 — video de ~30 min de Forever
 - **Lo propio:** lo ÚTIL para quien ya juega sigue mandando: «20 ERRORES del 30 al 60» 10 720 en < 7 días (lo mejor de la etapa

@@ -755,6 +755,49 @@ repetir `hilos` ni ningún MG ya hecho; cada oportunidad pide un diseño propio 
 - (15-nov-2026, `wow_oro_forever`) **MG de ECONOMÍA, módulo nuevo `nucleo/mg_oro.py`** (`import mg_oro as O`; panel de mg_wow): `factura` (ticket que se imprime línea a línea y suma el TOTAL), `desplome` (gráfica de un precio que cae punto a punto: lo que todos farmean se hunde), `balanza` (vendedor contra subasta: se inclina al más caro), `escalera` (costes que suben, p. ej. reespecializar, contra un pago único en verde), `techo` (barra de precio contra un tope fijo, p. ej. el mercado negro a 50 de oro) y `dia_noche` (precio de noche contra precio de mañana). Prueba en su cuadro final: `python nucleo/mg_oro.py` → %TEMP%/_mg_oro_prueba.jpg. Ojo: `mapa(..., objeto=)` pide el NOMBRE de ícono de Wowhead, no una ruta.
 - Lecciones de memoria (15-nov, 29 min con 10 GB de commit libre): `nucleo/sinte.compresor` ahora en float32 en el sitio, `nucleo/mezcla.py` pasa las pistas a float32 antes del compresor y `nucleo/verificar.py` lee el audio en float32; antes caían con ArrayMemoryError en videos largos.
 
+## KIT DE 4 ESTILOS (22-nov-2026) — Crónicas de Warcraft
+**Regla del usuario (22-nov-2026): cada video de Warcraft COMBINA los 4 estilos del kit, repartidos por todo el video** — unos mapas,
+fichas, tarjetas, rótulos y pegatinas salen en un estilo y otros en otro. No es un estilo por video: es la mezcla en el MISMO video.
+Eligió 3 estilos nuevos de las 5 propuestas (los otros dos, «táctico plano» y «cuaderno de explorador», NO entran):
+
+| Estilo (`estilo=`) | Qué es | Demo de 30 s y hoja |
+|---|---|---|
+| `original` | el kit de siempre: `mg_wow.ruta` (mapa), panel azul noche y borde dorado (ficha, rótulo), `peg_estilos.reliquia` (tarjeta), `peg_anim.variado` (pegatina) | — (wow_errores_60 y anteriores) |
+| `pergamino` | CARTÓGRAFO DE PERGAMINO: pergamino quemado sobre mesa, mapa en sepia, Corsiva, sellos de lacre numerados que caen, ruta de pluma punteada que se entinta, fotos pegadas; fichas entre rodillos; salen quemándose | `videos/_kit_wow_estilos/estilo_1/` |
+| `oro` | RELIQUIA DE ORO Y PIEDRA: piedra tallada, molduras de oro, gemas engastadas (marcadores), cadena de oro con runas que se encienden, destellos y polvo dorado; Castellar/Constantia | `videos/_kit_wow_estilos/estilo_2/` |
+| `holograma` | HOLOGRAMA ARCANO: proyección azul-violeta con rejilla y círculos rúnicos, haz de energía con partículas, anillos que pulsan, cristal translúcido con neón, texto que se descifra | `videos/_kit_wow_estilos/estilo_3/` |
+
+- **Módulo:** `nucleo/mg_wow_estilos.py` (API, reparto y helpers; la plantilla de uso está en su docstring). Motores de los 3 nuevos:
+  `nucleo/wow_estilos/{pergamino,oro,holograma}.py` (código adaptado de las demos, sin depender de esas carpetas) y
+  `nucleo/wow_estilos/comun.py` (marcas, cámara que encuadra los pasos vistos, colocación sin choques con lado fijo). Fuentes: todas
+  de `C:\Windows\Fonts` (MTCORSVA, BOOKOSB, CASTELAR, constanb/constanz, bahnschrift, consolab). El original NO se tocó.
+- **Piezas** (las 4 en los 4 estilos; firma de los MG del motor `fn(dt, dur, marcas) -> BGRA`):
+  `mapa(estilo, imagen_mapa, puntos, titulo, sub, zmin, zmax, objeto)` (cuadro entero, FX `pantalla`; puntos = los mismos
+  `(x %, y %, rótulo, sub, foto)` de `mapa()` de efectos.py y `_coords.md`; paso k en la marca k, ruta del paso k-1 al k, la foto
+  de cada paso se va cuando entra el siguiente) · `ficha(estilo, titulo, iconos, cuentas, total, etiquetas)` (ícono k en la marca
+  k con su «×N» y el contador acumulado hasta `total`) · `tarjeta(estilo, imagen, titulo, subtitulo, tam, **extra)` (holograma:
+  `pie=`, `fases=4` = barra de vida por fases; oro: `elementos=[colores]`; pergamino: `letra=` del lacre; un «:» en el título
+  del oro lo parte en dos líneas) · `rotulo(estilo, texto, sello=None)` (sello = cifra o letra corta) ·
+  `pegatina(estilo, imagen, titulo, tam)` (pergamino = foto pegada con lacre; oro = relicario de oro, círculo si es ícono de
+  objeto; holograma = ficha de cristal con neón; original = `peg_anim.variado`).
+- **Helpers para efectos.py** (devuelven el FX listo; buscan `mapas/<nom>.jpg` y `pegatinas/<slug>.png` junto a efectos.py):
+  `E.mapa_e(nom, puntos, de, a, marcas, titulo, sub)` · `E.ficha_e(titulo, iconos, de, a, marcas, cuentas=[15]*4)` ·
+  `E.tarjeta_e(en, slug, titulo, sub)` · `E.rotulo_e(en, texto, sello="5")` (sin `x`, su borde izquierdo queda a 110 px) ·
+  `E.peg_e(en, slug, titulo, x=, y=)` · `E.P(x, y, rótulo, sub, slug_foto)` para los puntos.
+- **Reparto:** `ESTILOS_WOW = ("original", "pergamino", "oro", "holograma")`. Con `estilo=None` cada helper toma el SIGUIENTE
+  estilo de su pieza en rotación equilibrada (dos mapas seguidos nunca repiten estilo; cada pieza va desfasada para que el mapa,
+  la ficha, la tarjeta y el rótulo de un mismo puesto no coincidan). `E.estilo_para(n, "mapa")` da el estilo fijo del puesto n
+  (o de un id de texto). Se reinicia solo cada vez que el motor recarga efectos.py: mismo efectos.py = mismos estilos, así el
+  montaje por tramos no rehace nada (la firma de cada pieza incluye sus datos: si cambias un punto o una foto, solo ese tramo se
+  rehace). Para fijar uno: `estilo="oro"`. Mezclar sin miedo con los MG propios de cada video (mg_wow, mg_wow60, mg_oro…): esos
+  siguen en el original.
+- **Revisión:** como siempre, `FAB_FX_FINAL=1 python fab.py <v> fx hoja` (los nuevos salen y se queman/recogen en los últimos
+  0,7 s, después del cuadro FINAL). Coste: mapa nuevo ≈ 0,1-0,35 s por cuadro; fichas y tarjetas 0,05-0,2 s.
+- **Prueba de la mezcla:** `videos/_kit_wow_estilos/prueba_mezcla/prueba.py` compone cada pieza sobre gameplay de wow_errores_60
+  con `secuencia_fx.Capa.aplicar` (el mismo camino que `fx hoja` y el render): `hoja_mezcla.jpg` (filas = pieza, columnas =
+  estilo, en el cuadro FINAL), `hoja_mezcla_anim.jpg` (a media animación) y `--clip` → `clip_mezcla.mp4` (~43 s con el reparto
+  automático).
+
 ## METRAJE DE ARCHIVO < 720p (27-oct-2026, `wow_jugadores_rompieron`)
 Los videos originales de 2005-2006 (Kazzak en Ventormenta 240p, el gong de Medivh 480p, la exploración de Hyjal 256p, el récord de
 Joana 360p, la «Reckoning Bomb» 480p) son lo más valioso de un video de jugadores REALES, pero `bajar` los rechaza («Requested

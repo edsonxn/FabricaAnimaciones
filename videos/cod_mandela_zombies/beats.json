@@ -1,0 +1,866 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 6.909,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Asunto: tu memoria. Esta vez, en los zombis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 6.909,
+  "t1": 18.409,
+  "tipo": "video",
+  "texto": "Uno de ustedes me escribió que usó la Ray Gun en la campaña de World at War. Otro, que la Thundergun salía en una misión de Black Ops. A los dos les dijeron que estaban locos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.409,
+  "t1": 25.289,
+  "tipo": "video",
+  "texto": "Y todos crecimos con la misma regla: si caes, no te arrastres, que te desangras más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.289,
+  "t1": 33.549,
+  "tipo": "video",
+  "texto": "Lo revisé todo, con el juego en pantalla, y hasta con su código. Hay un puente que sí se rompe, un arma que nunca existió,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 33.549,
+  "t1": 45.33,
+  "tipo": "video",
+  "texto": "y una pistola de rayos que casi le cuesta el trabajo a quien la escondió. Veinte efectos Mandela de los zombis de Call of Duty. Y el número uno te lo mandó un suscriptor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.33,
+  "t1": 51.638,
+  "tipo": "video",
+  "texto": "Número veinte. Nixon, convertido en zombi. Black Ops, el mapa Five,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.638,
+  "t1": 61.385,
+  "tipo": "video",
+  "texto": "el Pentágono. La intro en blanco y negro: Kennedy, Castro, McNamara y Nixon, encerrados en una sala, mientras se oyen ruidos afuera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 61.385,
+  "t1": 66.605,
+  "tipo": "video",
+  "texto": "Hay quien recuerda que Nixon se transformaba ahí mismo, delante de los otros tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 66.605,
+  "t1": 77.907,
+  "tipo": "video",
+  "texto": "Escucha cómo termina en realidad. Nixon grita, y se desmaya del susto. Nadie se transforma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.907,
+  "t1": 85.341,
+  "tipo": "video",
+  "texto": "Un segundo después sale de la armería con dos escopetas, igual que los demás. Nixon no se convirtió en zombi.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.341,
+  "t1": 94.158,
+  "tipo": "video",
+  "texto": "Solo se desmayó en el momento más dramático de su vida. En el diecinueve, las últimas palabras de Nikolai.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.158,
+  "t1": 103.185,
+  "tipo": "video",
+  "texto": "Black Ops 3, el final de Gorod Krovi. El Nikolai de los cuatro originales, frente al grupo nuevo, con su propio Nikolai joven.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.185,
+  "t1": 115.43,
+  "tipo": "video",
+  "texto": "Hay quien jura que gritaba «tenías que ser tú». La frase real es esta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 115.43,
+  "t1": 121.59,
+  "tipo": "video",
+  "texto": "Algunas cosas se olvidan, por una razón. Y tu memoria se lo tomó al pie de la letra:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.59,
+  "t1": 129.785,
+  "tipo": "video",
+  "texto": "olvidó hasta la frase. Número dieciocho. El mapa de zombis en llamas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.785,
+  "t1": 139.045,
+  "tipo": "video",
+  "texto": "Alguien recuerda un mapa de zombis de Black Ops 1 dentro de un edificio que ardía: ventanas rotas, muros derrumbados, fuego por todas partes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 139.045,
+  "t1": 146.362,
+  "tipo": "video",
+  "texto": "No lo encuentra en ninguna lista. No lo va a encontrar. Ningún mapa de zombis de Black Ops 1 es así.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.362,
+  "t1": 153.927,
+  "tipo": "video",
+  "texto": "Lo más parecido es una misión de la campaña: The Defector, la ciudad de Hue, mil novecientos sesenta y ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.927,
+  "t1": 163.297,
+  "tipo": "video",
+  "texto": "Mason y Woods entran rompiendo una ventana, y todo arde alrededor. Había fuego, había ventanas, y había gente queriendo matarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.297,
+  "t1": 172.065,
+  "tipo": "video",
+  "texto": "Solo que eran vietnamitas, no zombis. En el diecisiete, el zombi misterioso de Verrückt.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 172.065,
+  "t1": 182.445,
+  "tipo": "video",
+  "texto": "En World at War, en el manicomio alemán. Hay quien recuerda, de niño, un zombi especial que lo seguía por todo el mapa haciendo ruidos raros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 182.445,
+  "t1": 188.775,
+  "tipo": "video",
+  "texto": "No existe ningún zombi especial. Lo que tiene Verrückt son sonidos que se disparan según dónde estés.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.775,
+  "t1": 199.019,
+  "tipo": "video",
+  "texto": "Si activas la silla del dentista, suena un taladro, y un paciente que grita. Y sus zombis son más rápidos y más listos que los del primer mapa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 199.019,
+  "t1": 205.43,
+  "tipo": "video",
+  "texto": "No te seguía un zombi especial. Te seguían todos, y más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.43,
+  "t1": 216.75,
+  "tipo": "video",
+  "texto": "Número dieciséis. La escopeta del banco de Town. Black Ops 2, Town. Un jugador recordaba una Remington ochocientos setenta colgada en la pared del banco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.75,
+  "t1": 223.93,
+  "tipo": "video",
+  "texto": "Se dio cuenta de que no estaba en una partida sin la caja misteriosa. El banco de Town no tiene ni un arma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 223.93,
+  "t1": 232.04,
+  "tipo": "video",
+  "texto": "Solo una máquina: Speed Cola. La Remington sí existe, pero en TranZit: en el granero de la Granja,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 232.04,
+  "t1": 240.228,
+  "tipo": "video",
+  "texto": "y fuera de la estación de autobuses. La escopeta era real. El banco, no tanto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.228,
+  "t1": 251.784,
+  "tipo": "video",
+  "texto": "Antes del quince, una pausa. En el primer expediente, alguien dejó esto: que el top lo armó una inteligencia artificial que alucinó, y que seguramente ni he jugado un Call of Duty.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 251.784,
+  "t1": 258.174,
+  "tipo": "video",
+  "texto": "Gracias por el reporte. Por eso este expediente trae el clip del juego en cada efecto: la estatua,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 258.174,
+  "t1": 265.191,
+  "tipo": "video",
+  "texto": "el arma, el código. La memoria se puede discutir. El clip, no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.191,
+  "t1": 275.506,
+  "tipo": "video",
+  "texto": "Número quince. Quick Revive, dos a la vez. Black Ops 1, jugando solo. La máquina azul de Quick Revive, que en solitario te levanta tú mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.506,
+  "t1": 283.91,
+  "tipo": "video",
+  "texto": "Un jugador recuerda haber tenido dos Quick Revive a la vez. Nunca fueron dos a la vez. En solitario se compra hasta tres veces,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.91,
+  "t1": 291.602,
+  "tipo": "video",
+  "texto": "una por una. Y a la tercera, la máquina desaparece del mapa. Tres vidas, una detrás de otra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.602,
+  "t1": 299.283,
+  "tipo": "video",
+  "texto": "Tu memoria las juntó en una sola compra. En el catorce, el subfusil japonés de World at War.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.283,
+  "t1": 310.128,
+  "tipo": "video",
+  "texto": "Un jugador recordaba una Type 100 en los zombis de World at War, y le dijeron que estaba loco. No lo estaba. La Type 100 se compra en la pared, y sale en la caja,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.128,
+  "t1": 316.672,
+  "tipo": "video",
+  "texto": "en dos mapas: Shi No Numa, el pantano japonés, y Der Riese, la fábrica.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 316.672,
+  "t1": 326.567,
+  "tipo": "video",
+  "texto": "Esta vez el loco era el que lo corrigió. Número trece. El escudo de Richtofen. En el mapa Origins, de Black Ops 2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.567,
+  "t1": 336.19,
+  "tipo": "video",
+  "texto": "En las partidas con amigos alguien siempre gritaba: que no construyeras tú el escudo, que lo armara Richtofen, porque el suyo aguantaba más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 336.19,
+  "t1": 345.077,
+  "tipo": "video",
+  "texto": "Es un mito de patio de recreo. El escudo es el mismo, lo construya quien lo construya. Lo único que cambia es la animación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.077,
+  "t1": 352.93,
+  "tipo": "video",
+  "texto": "Richtofen sabía muchas cosas. Construir escudos especiales no era una de ellas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.93,
+  "t1": 361.363,
+  "tipo": "video",
+  "texto": "En el doce, un recuerdo que es correcto: la Thundergun no mataba siempre. El cañón de aire de Kino der Toten.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.363,
+  "t1": 367.916,
+  "tipo": "video",
+  "texto": "Hay quien recuerda que no tenía daño infinito, y que algunos zombis salían volando y se levantaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.916,
+  "t1": 379.961,
+  "tipo": "video",
+  "texto": "Tiene razón. De cerca, el impacto directo mata siempre. Pero de media y larga distancia solo hace quince de daño: los tumba, y a los pocos segundos se levantan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.961,
+  "t1": 387.93,
+  "tipo": "video",
+  "texto": "Guárdala en la memoria. La Thundergun vuelve en el número tres, en un lugar donde no debería estar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.93,
+  "t1": 395.826,
+  "tipo": "video",
+  "texto": "Número once. Tirarte al suelo frente a las máquinas. Unos juran que en Black Ops 1 y 2 te daban puntos por",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.826,
+  "t1": 403.787,
+  "tipo": "video",
+  "texto": "tirarte cuerpo a tierra frente a las máquinas de perks. Otros, que eso llegó con Black Ops 3. Los dos tienen algo de razón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.787,
+  "t1": 412.227,
+  "tipo": "video",
+  "texto": "En los juegos viejos solo funcionaba en dos mapas, Der Riese y Origins, los de las máquinas antiguas: veinticinco puntos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.227,
+  "t1": 420.827,
+  "tipo": "video",
+  "texto": "como quien encuentra monedas debajo de una máquina. En Black Ops 3 y en Cold War pasó a todas las máquinas, y ya daba cien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.827,
+  "t1": 430.83,
+  "tipo": "video",
+  "texto": "La inflación también llegó a los zombis. Y aquí, dos comentarios que se agradecen. Markitos dice que estos videos le preocupan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.83,
+  "t1": 439.256,
+  "tipo": "video",
+  "texto": "porque desmentía los de Modern Warfare antes de la explicación. Eso es buena memoria, Markitos. Aquí te tocan los zombis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 439.256,
+  "t1": 447.256,
+  "tipo": "video",
+  "texto": "Y Rafael, el del final de Menéndez, volvió a escribir: que no creía que su recuerdo fuera tan interesante como para salir en un video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.256,
+  "t1": 455.43,
+  "tipo": "video",
+  "texto": "Lo era. Todos los comentarios se leen, y se toman en cuenta para el siguiente expediente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.43,
+  "t1": 465.276,
+  "tipo": "video",
+  "texto": "Número diez. ¿Cuántos golpes aguantas con Juggernog? La máquina roja. Unos dicen que caes al cuarto golpe. Otros, que aguantas cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.276,
+  "t1": 471.543,
+  "tipo": "video",
+  "texto": "Otros, que caes al sexto. La discusión llegó a una guerra de ediciones en la wiki.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 471.543,
+  "t1": 478.951,
+  "tipo": "video",
+  "texto": "Con Juggernog aguantas cuatro golpes de zombi, y caes con el quinto. Sin ella, caes mucho antes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 478.951,
+  "t1": 492.831,
+  "tipo": "video",
+  "texto": "Pero en Verrückt y Shi No Numa, la de World at War funcionaba distinto. Y en TranZit, con la mejora permanente, aguantabas hasta seis. Los tres bandos jugaron partidas distintas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 492.831,
+  "t1": 501.35,
+  "tipo": "video",
+  "texto": "En el nueve, el filtro en blanco y negro. Un jugador recuerda que Moon empezaba en blanco y negro hasta que encendías la luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 501.35,
+  "t1": 506.429,
+  "tipo": "video",
+  "texto": "Lo jugó el día del estreno con su hermana, y los dos lo recuerdan igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.429,
+  "t1": 516.935,
+  "tipo": "video",
+  "texto": "Moon empieza a todo color. El mapa en blanco y negro es Ascension, el anterior, la base soviética de cohetes: todo gris hasta que das la luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.935,
+  "t1": 525.125,
+  "tipo": "video",
+  "texto": "Y un detalle de Ascension: si tienes Quick Revive y caes, el sol sale en color. Dos personas, el mismo recuerdo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.125,
+  "t1": 532.304,
+  "tipo": "video",
+  "texto": "el mapa equivocado. Número ocho. El avión del primer mapa de zombis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.304,
+  "t1": 542.839,
+  "tipo": "video",
+  "texto": "La intro de los zombis de World at War. Mucha gente recuerda que empezaba con el avión cayendo, y después el soldado que despierta y ve al zombi correr hacia él.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 542.839,
+  "t1": 550.739,
+  "tipo": "video",
+  "texto": "La intro no enseña ningún choque. Empieza con el avión ya destrozado, entre niebla y fuego, unas siluetas al fondo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.739,
+  "t1": 560.315,
+  "tipo": "video",
+  "texto": "y un zombi que corre hacia la cámara. El choque que recuerdas está en la campaña: el búnker de Nacht sale del aeródromo de la misión Hard Landing,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 560.315,
+  "t1": 570.43,
+  "tipo": "video",
+  "texto": "y ahí sí ves caer un bombardero. La historia oficial dice que el avión se estrelló. Solo que nunca te lo enseñaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 570.43,
+  "t1": 575.19,
+  "tipo": "video",
+  "texto": "En el siete, Rebirth, el mapa de zombis de Black Ops 1.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.19,
+  "t1": 586.159,
+  "tipo": "video",
+  "texto": "Alguien recuerda un mapa de zombis llamado Rebirth, que empezaba atado a la silla de las teles. Ese mapa no existe. Rebirth es una misión de la campaña de Black Ops 1:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 586.159,
+  "t1": 593.428,
+  "tipo": "video",
+  "texto": "una isla en el mar de Aral, el gas Nova 6, enemigos con máscara. La silla sí es real:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 593.428,
+  "t1": 600.106,
+  "tipo": "video",
+  "texto": "en el menú de Black Ops te puedes soltar y usar el ordenador. Ahí estaba Dead Ops Arcade.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 600.106,
+  "t1": 612.93,
+  "tipo": "video",
+  "texto": "Y el giro: en dos mil veinticuatro sí hubo zombis en la isla de Rebirth, en Warzone, con Zombie Royale. Tu memoria no se equivocó. Solo se adelantó catorce años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.93,
+  "t1": 618.86,
+  "tipo": "video",
+  "texto": "Otro comentario del primer expediente. Ryuzaki dice que lo de Advanced Warfare es una fumada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.86,
+  "t1": 628.92,
+  "tipo": "video",
+  "texto": "que nadie tuvo ese efecto Mandela, porque todos saben que la F era de PC. Tienes toda la razón, Ryuzaki. Todos lo sabían.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.92,
+  "t1": 636.54,
+  "tipo": "video",
+  "texto": "Por eso medio mundo en consola sigue escribiendo una F cuando muere alguien. Número seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.54,
+  "t1": 646.528,
+  "tipo": "video",
+  "texto": "Tombstone, jugando solo en Town. Unos recuerdan comprar Tombstone en solitario, en Black Ops 2, y enojarse porque no servía para nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 646.528,
+  "t1": 653.668,
+  "tipo": "video",
+  "texto": "Otros juran que en solitario ni aparece. Los dos tienen razón. En solitario no está disponible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.668,
+  "t1": 662.036,
+  "tipo": "video",
+  "texto": "Pero si empiezas una partida con más gente, y todos se van, te quedas solo con las reglas de solitario. Y la puedes comprar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 662.036,
+  "t1": 670.43,
+  "tipo": "video",
+  "texto": "Es tirar dos mil puntos: con las reglas de solitario, no hace nada. No la soñaste. La pagaste.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.43,
+  "t1": 677.856,
+  "tipo": "video",
+  "texto": "En el cinco, la Thundergat. Mob of the Dead, Alcatraz. La Blundergat, el trabuco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 677.856,
+  "t1": 689.563,
+  "tipo": "video",
+  "texto": "Hay quien jura que tenía una tercera mejora, la Thundergat: morada en la punta, disparando rayos. Nunca existió. La Blundergat tiene la Sweeper con Pack a Punch,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 689.563,
+  "t1": 696.963,
+  "tipo": "video",
+  "texto": "la Acid Gat verde con el kit de ácido, y en el mapa de Blood of the Dead, la Magmagat, que es de color naranja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.963,
+  "t1": 707.329,
+  "tipo": "video",
+  "texto": "Ninguna eléctrica. La explicación más votada: Electric Cherry. La Blundergat recarga a cada disparo, y cada recarga suelta chispas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 707.329,
+  "t1": 713.81,
+  "tipo": "video",
+  "texto": "Viste rayos. Solo que salían de una perk. Número cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.81,
+  "t1": 725.038,
+  "tipo": "video",
+  "texto": "La regla de oro: si caes, no te arrastres. «¡No te muevas, que te desangras más rápido!». Lo gritamos todos, en todas las partidas con amigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 725.038,
+  "t1": 731.918,
+  "tipo": "video",
+  "texto": "Es falso, y está en el código del juego. En Black Ops 2, al caer, el juego toma un tiempo fijo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 731.918,
+  "t1": 740.884,
+  "tipo": "video",
+  "texto": "y le resta uno cada segundo. A la mitad cambia la vista, y en cero, mueres. En ninguna parte mira si te mueves.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 740.884,
+  "t1": 748.66,
+  "tipo": "video",
+  "texto": "Años quedándonos quietos, por nada. En el tres, la Thundergun en la campaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 748.66,
+  "t1": 759.284,
+  "tipo": "video",
+  "texto": "Esteban lo recuerda así: la Thundergun salía en una misión de Black Ops 1. Y es verdad. Es un secreto de la misión Numbers, en Kowloon, Hong Kong.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 759.284,
+  "t1": 764.464,
+  "tipo": "video",
+  "texto": "Disparas a seis bombonas blancas hasta que sale el gas rosa, el Nova 6.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.464,
+  "t1": 772.308,
+  "tipo": "video",
+  "texto": "Sacas una cinta de un casete, y la metes en otro, en el escondite de armas de Clarke. Y ahí está, colgada en la pared.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 772.308,
+  "t1": 782.388,
+  "tipo": "video",
+  "texto": "Y en la campaña se podía recargar a medio cargador, algo que en los zombis nunca se pudo. Esteban, tu recuerdo es real. Y no es el único:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 782.388,
+  "t1": 792.009,
+  "tipo": "video",
+  "texto": "falta la pistola de rayos. Número dos. El puente de TranZit. Black Ops 2. Alguien recuerda a su hermano jugando,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 792.009,
+  "t1": 800.033,
+  "tipo": "video",
+  "texto": "hacia la ronda veinte: el autobús entra al puente, el puente se rompe, el autobús cae y mueren todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 800.033,
+  "t1": 807.282,
+  "tipo": "video",
+  "texto": "Y hasta hay videos que lo desmienten diciendo que ese puente nunca se rompe. Los dos se equivocan a medias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.282,
+  "t1": 817.182,
+  "tipo": "video",
+  "texto": "El puente que une Town con la estación sí se derrumba: la primera vez que el autobús pasa por encima, se hunde. Pero el autobús sigue pasando por el tramo roto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.182,
+  "t1": 827.75,
+  "tipo": "video",
+  "texto": "y los escombros pueden tirar a quien vaya en el techo. El puente cayó. El autobús, nunca. Los que caían eran los del techo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 827.75,
+  "t1": 834.871,
+  "tipo": "video",
+  "texto": "Y el número uno. La Ray Gun en la campaña de World at War. Este lo mandó Sargento Caboose:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.871,
+  "t1": 843.931,
+  "tipo": "video",
+  "texto": "recuerda usar la Ray Gun en la campaña de World at War, de dos mil ocho. Y es verdad. Misión Little Resistance, Peleliu, la playa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.931,
+  "t1": 850.311,
+  "tipo": "video",
+  "texto": "Después del bombardeo bajas a la arena y te paras en tres charcos, unos segundos en cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.311,
+  "t1": 860.622,
+  "tipo": "video",
+  "texto": "Escucha. Tiembla el suelo, y salen de la arena cuatro estatuas, perros león de Okinawa,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.622,
+  "t1": 869.51,
+  "tipo": "video",
+  "texto": "cada una con una Ray Gun. Revienta un tanque con dos disparos. Esa voz rara es un mensaje de radio de un soldado japonés,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 869.51,
+  "t1": 877.407,
+  "tipo": "video",
+  "texto": "puesto al revés. En dos mil dieciséis la comunidad lo dio la vuelta, y un jugador japonés lo tradujo. Y lo mejor:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 877.407,
+  "t1": 886.007,
+  "tipo": "video",
+  "texto": "Jesse Snyder, de Treyarch, la escondió ahí sin consultar a nadie, y casi lo despiden por eso. No te lo inventaste, Sargento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 886.007,
+  "t1": 897.366,
+  "tipo": "video",
+  "texto": "La escondió un tipo que casi pierde su trabajo por ti. Expediente cerrado. Veinte efectos Mandela de los zombis, y los dos mejores me los dieron ustedes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 897.366,
+  "t1": 903.586,
+  "tipo": "video",
+  "texto": "Como Heckgüne, que vio la edición y escribió una sola palabra: cine. O el de Aholic,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 903.586,
+  "t1": 911.093,
+  "tipo": "video",
+  "texto": "que nunca había visto a nadie hablar de estos efectos. Y el mismo Sargento Caboose, que fue el suscriptor ciento seis.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.093,
+  "t1": 919.918,
+  "tipo": "video",
+  "texto": "Ahora te toca a ti: ¿qué recuerdas de los zombis que nadie más recuerda? Escríbelo. Si es bueno, sale en el siguiente expediente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 919.918,
+  "t1": 929.375,
+  "tipo": "video",
+  "texto": "En el canal tienes las tres partes de los efectos Mandela de Call of Duty. Suscríbete. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

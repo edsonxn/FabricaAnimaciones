@@ -1001,3 +1001,133 @@ def bajas(sagas, tachados=(), foco=None, titulo="LISTA DE OBJETIVOS", w=1700, la
                         d.rectangle((xx - 8, y - 8, xx + lado + 8, y + lado + 8), outline=ROJO + (200,), width=6)
         return _salida(im, dt, dur)
     return fn
+
+
+# ------------------------------------------------------------------ MG nuevo de `cod_mandela3` (19-nov-2026)
+def rachas(titulo, filas, fantasma=None, nota="NO EXISTE EN ESTE JUEGO", w=760):
+    """Escalera de RACHAS DE BAJAS del multijugador: filas (bajas, nombre) que se encienden una a una (una por marca, o
+    repartidas en el 60 % del tiempo) y, si hay `fantasma` = (bajas, nombre), una última fila que aparece en gris,
+    PARPADEA como un recuerdo y se tacha en rojo con `nota` (la nuke en CoD 4). Marcas: una por fila + la del fantasma."""
+    n = len(filas) + (1 if fantasma else 0)
+    fila_h = 74
+    h = 96 + n * fila_h + (54 if fantasma else 0)
+    ft = fuente("mb", 24)
+    fnum = fuente("b", 46, "Bold Condensed")
+    fnom = fuente("b", 40, "SemiBold Condensed")
+    fno = fuente("mb", 22)
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.66)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220 * _eo(dt / .3))
+        _txt(d, (M + 34, M + 44), titulo.upper()[:int(max(0, (dt - .05) * 60))], ft, AMBAR, "lm", 255, track=3)
+        ts = list(marcas) if marcas else [dur * .6 * (k + 1) / n for k in range(n)]
+        while len(ts) < n:
+            ts.append(ts[-1] + .5 if ts else .3)
+        for k, (bajas, nombre) in enumerate(filas):
+            y = M + 96 + k * fila_h + fila_h / 2
+            u = _eo((dt - ts[k]) / .3)
+            if u <= 0:
+                d.rectangle((M + 30, y - 26, M + w - 30, y + 26), outline=GRIS + (90,), width=2)
+                continue
+            d.rectangle((M + 30, y - 26, M + w - 30, y + 26), fill=AMBAR + (int(40 * u),), outline=AMBAR + (int(220 * u),), width=3)
+            _txt(d, (M + 90, y), str(bajas), fnum, AMBAR, "mm", 255 * u)
+            _txt(d, (M + 150, y), nombre.upper(), fnom, BLANCO, "lm", 255 * u, track=1)
+        if fantasma:
+            k = len(filas)
+            y = M + 96 + k * fila_h + fila_h / 2
+            t0 = ts[k]
+            u = _eo((dt - t0) / .3)
+            if u > 0:
+                parp = .55 + .45 * math.sin((dt - t0) * 14) if dt - t0 < .9 else .75
+                a = 255 * u * parp
+                d.rectangle((M + 30, y - 26, M + w - 30, y + 26), outline=HUESO + (int(a * .7),), width=2)
+                _txt(d, (M + 90, y), str(fantasma[0]), fnum, HUESO, "mm", a)
+                _txt(d, (M + 150, y), fantasma[1].upper(), fnom, HUESO, "lm", a, track=1)
+                c = _eo((dt - t0 - .9) / .35)                      # tachón rojo + nota
+                if c > 0:
+                    x1 = M + 40 + (w - 80) * c
+                    d.line((M + 40, y + 4, x1, y - 4), fill=ROJO + (255,), width=7)
+                    _txt(d, (M + w / 2, y + 58), nota, fno, ROJO, "mm", 255 * c, track=2)
+        return _salida(im, dt, dur)
+    return fn
+
+
+# ------------------------------------------------------------------ consola = el CÓDIGO del juego (22-nov-2026, cod_mandela_zombies)
+def consola(titulo, lineas, resalta=(), nota=None, w=1180):
+    """Ventana de CÓDIGO FUENTE (script .gsc): las `lineas` se escriben en monoespaciada verde, una por marca (o repartidas
+    en el 60 % del tiempo); las de índice en `resalta` se iluminan con barra ámbar al aparecer. `nota` (opcional) sale abajo
+    en rojo con la última marca extra. Para demostrar un mito con el propio código (el desangrado de BO2)."""
+    n = len(lineas)
+    lh = 50
+    h = 110 + n * lh + (70 if nota else 30)
+    ft = fuente("mb", 24)
+    fc = fuente("m", 30)
+    fno = fuente("b", 34, "Bold Condensed")
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.74)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220 * _eo(dt / .3))
+        _txt(d, (M + 34, M + 44), titulo[:int(max(0, (dt - .05) * 60))], ft, AMBAR, "lm", 255, track=2)
+        d.line((M + 30, M + 76, M + w - 30, M + 76), fill=GRIS + (110,), width=1)
+        k = n + (1 if nota else 0)
+        ts = list(marcas) if marcas else [dur * .6 * (i + 1) / k for i in range(k)]
+        while len(ts) < k:
+            ts.append(ts[-1] + .6 if ts else .3)
+        for i, ln in enumerate(lineas):
+            y = M + 110 + i * lh
+            vis = ln[:int(max(0, (dt - ts[i]) * 55))]
+            if not vis:
+                continue
+            if i in resalta:
+                u = _eo((dt - ts[i] - len(ln) / 55) / .3)
+                d.rectangle((M + 24, y - 22, M + w - 24, y + 22), fill=AMBAR + (int(46 * u),), outline=AMBAR + (int(200 * u),), width=2)
+            _txt(d, (M + 40, y), f"{i + 1:>2}", fc, GRIS, "lm", 200)
+            escribiendo = len(vis) < len(ln)
+            _txt(d, (M + 100, y), vis + ("_" if escribiendo and _cursor(dt) else ""), fc, VERDE, "lm", 255)
+        if nota:
+            u = _eo((dt - ts[n]) / .35)
+            if u > 0:
+                _txt(d, (M + w / 2, M + h - 40), nota.upper(), fno, ROJO, "mm", 255 * u, track=2)
+        return _salida(im, dt, dur)
+    return fn
+
+
+# ------------------------------------------------------------------ golpes = cuántos golpes aguantas (22-nov-2026)
+def golpes(titulo, aguanta, sub=None, w=1000):
+    """Contador de GOLPES: casillas que se tiñen de rojo una por marca (o repartidas); la casilla aguanta+1 cae con una
+    calavera y el rótulo «CAES». `aguanta` = golpes que resistes (Juggernog = 4, caes con el 5.º)."""
+    n = aguanta + 1
+    lado, gap = 120, 26
+    h = 230 + (40 if sub else 0)
+    ft = fuente("mb", 24)
+    fnum = fuente("b", 64, "Bold Condensed")
+    fsub = fuente("b", 30, "SemiLight Condensed")
+    x0 = (w - (n * lado + (n - 1) * gap)) / 2
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.66)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220 * _eo(dt / .3))
+        _txt(d, (M + 34, M + 44), titulo.upper()[:int(max(0, (dt - .05) * 60))], ft, AMBAR, "lm", 255, track=3)
+        ts = list(marcas) if marcas else [dur * .65 * (k + 1) / n for k in range(n)]
+        while len(ts) < n:
+            ts.append(ts[-1] + .5 if ts else .3)
+        for k in range(n):
+            x = M + x0 + k * (lado + gap)
+            y = M + 86
+            u = _eo((dt - ts[k]) / .25)
+            ultimo = k == n - 1
+            col = ROJO if ultimo else AMBAR
+            d.rectangle((x, y, x + lado, y + lado), outline=(col if u > 0 else GRIS) + (int(110 + 140 * u),), width=4,
+                        fill=col + (int((120 if ultimo else 60) * u),))
+            txt = "✕" if ultimo and u > .5 else str(k + 1)
+            _txt(d, (x + lado / 2, y + lado / 2), txt if u > 0 else str(k + 1), fnum, BLANCO if u > 0 else GRIS, "mm",
+                 255 if u > 0 else 120)
+            if ultimo and u > 0:
+                _txt(d, (x + lado / 2, y + lado + 24), "CAES", fuente("mb", 26), ROJO, "mm", 255 * u, track=3)
+        if sub:
+            _txt(d, (M + w / 2, M + h - 30), sub, fsub, HUESO, "mm", 230 * _eo((dt - .4) / .4))
+        return _salida(im, dt, dur)
+    return fn

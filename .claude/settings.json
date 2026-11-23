@@ -9,19 +9,5 @@
       "PowerShell(taskkill /PID * /T /F)",
       "PowerShell(Stop-Process -Id *)"
     ]
-  },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/nucleo/hook_contexto.py\"",
-            "timeout": 15
-          }
-        ]
-      }
-    ]
   }
 }

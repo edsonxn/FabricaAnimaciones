@@ -9,6 +9,11 @@ Desde el 29-oct-2026 (el usuario: «cámbialo») cuenta solo el TRABAJO: los 180
 con la que arranca la sesión (herramientas, memoria, instrucciones: ~100 000), así que corta hacia los ~280 000.
 Y un CANDADO por video evita dos continuaciones a la vez (la sesión cortada y la que la lanzó abrían una cada una).
 
+APAGADO el 22-nov-2026 (el usuario: «apágalo»): Claude Code ya compacta solo los hilos largos, la mayor parte del hilo se
+relee desde caché (la simulación del 29-oct contaba todo igual) y el relevo fallaba cuando el turno lo despertaba un aviso (la
+app solo abre sesiones desde un turno del usuario): ese día los tres videos se cortaron y al menos dos se quedaron parados.
+El hook ya no está en .claude/settings.json ni en .codex/hooks.json; para volver: re-añadirlo y FAB_CORTE_CONTEXTO=180000.
+
 Umbral: variable FAB_CORTE_CONTEXTO (tokens de trabajo; 0 = apagado). Repite el aviso cada +40 000 si sigue.
 Prueba: python nucleo/hook_contexto.py --medir <transcrito.jsonl>
 Candado: python nucleo/hook_contexto.py candado <v>   → «OK» (abre tú) o «YA …» (otra sesión la abrió; no abras)
@@ -19,7 +24,7 @@ import sys
 import tempfile
 import time
 
-UMBRAL = int(os.environ.get("FAB_CORTE_CONTEXTO", "180000"))
+UMBRAL = int(os.environ.get("FAB_CORTE_CONTEXTO", "0"))  # APAGADO desde el 22-nov-2026 (ver docstring)
 REPETIR = 40000
 CANDADO_MIN = 30  # minutos en los que una continuación ya abierta bloquea otra del mismo video
 ESTADO_DIR = os.path.join(tempfile.gettempdir(), "fab_contexto")

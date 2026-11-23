@@ -117,7 +117,8 @@ Esa conversación nueva **no sabe nada** de la anterior: solo existe lo que est�
    No rehagas lo hecho y no confíes en `- etapa:`/`- siguiente:` si hay trabajo sin registrar: pueden estar viejos.
 4. Nunca dos cuentas sobre el mismo video a la vez (comparten carpeta, GPU y RAM; `chatterbox_server.py` y los renders no se mezclan).
 
-## 7. Corte AUTOMÁTICO por contexto: checkpoint + hilo nuevo a los 180 mil tokens (el usuario, 29-oct-2026; todo el proyecto)
+## 7. [APAGADO 22-nov-2026] Corte AUTOMÁTICO por contexto: checkpoint + hilo nuevo a los 180 mil tokens (el usuario, 29-oct-2026; todo el proyecto)
+**APAGADO el 22-nov-2026 (el usuario: «apágalo»):** Claude Code ya compacta solo los hilos largos; la mayor parte del hilo se relee desde caché (la simulación del 29-oct contaba todos los tokens igual, así que el ahorro real era menor) y el relevo fallaba cuando el turno lo despertaba un aviso (la app solo abre sesiones desde un turno del usuario): ese día er_rykard_atrocidades, wow_errores_60 y cod_mandela_zombies se cortaron y al menos dos se quedaron parados. Hook quitado de `.claude/settings.json` y `.codex/hooks.json`; `hook_contexto.py` queda con umbral 0. El video sigue en el mismo hilo hasta el MASTER; checkpoints en `ESTADO.md` igual (§6). Medir el uso 2-3 días con `get_usage` para comparar. Lo de abajo es historia.
 Por qué: cada paso de Claude vuelve a leer TODO el hilo, así que un hilo largo cobra su tamaño en cada llamada. Simulación sobre
 228 sesiones reales (21 días): la sesión típica llegaba a ~383 mil tokens (p90 714 mil) y cada hilo arranca ya con ~83 mil
 (CLAUDE.md + MEMORY.md + herramientas). Reiniciar a 150-200 mil ahorra **~40 %** del gasto; al 30 % (300 mil) solo ~34 %; por debajo

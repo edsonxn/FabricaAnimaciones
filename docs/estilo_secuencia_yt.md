@@ -54,7 +54,10 @@ Motor: `nucleo/secuencia_yt.py` (fuente de medios) + `nucleo/secuencia.py` (beat
 > ir» = subtítulos amarillos en inglés del youtuber, «and grab the… tombs key on him», asomando junto a un versus). `_hoja_clips.py`
 > mira 2 cuadros chicos por clip y los subtítulos van y vienen. AHORA: `python nucleo/texto_clips.py <v> -j 4` (OCR local
 > `rapidocr-onnxruntime`, 1 cuadro/s de cada clip → `previews/texto_clips.json`) justo tras `bajar` y otra vez tras cada
-> `--rehacer`; `chequeo` lo corre solo (sección 6). Subtítulos, rótulos o títulos de otro canal = `bajar N --rehacer` u otra fuente;
+> `--rehacer`; `chequeo` lo corre solo (sección 6). **22-nov-2026: solo marca texto con forma de AJENO** (subtítulo centrado
+> abajo, rótulo centrado ancho o título grande, con frase de ≥ 12 letras): antes marcaba 168/210 clips de wow_errores_60, casi todo
+> HUD, y la lista no servía. Guarda las cajas en `previews/texto_clips_cajas.json` → `--refiltrar` re-filtra sin OCR; `--todo` = lo
+> de antes. Una marca de agua CHICA en una esquina ya no la ve (es igual que el HUD): esa sale en las hojas de `medios`. Subtítulos, rótulos o títulos de otro canal = `bajar N --rehacer` u otra fuente;
 > el HUD/menús del propio juego sí valen. En las búsquedas, evitar «guide/walkthrough with captions»; preferir longplays sin narrar.
 > (16) **VERSUS SOLO CON DUELO REAL** (el usuario, 13-nov-2026: «a veces pones el versus en situaciones donde no encajan… ponla
 > bien y no nada más porque sí»). `PR.versus` = dos lados que CHOCAN en el guion en ese momento (uno le pone una trampa al otro y

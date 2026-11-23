@@ -166,6 +166,15 @@
       "visibilidad": "private",
       "programado": "2026-11-20T16:00:00Z",
       "formato": "atrocidades · pedido en comentarios (@iRyans) · 25:03 · promo Tamriel al final"
+    },
+    {
+      "video": "er_rykard_atrocidades",
+      "id": "TQzVTYfpc80",
+      "titulo": "Las 5 peores atrocidades de Rykard QUE IGNORASTE",
+      "visibilidad": "private",
+      "programado": "2026-11-23T16:00:00Z",
+      "subido": "2026-11-22T20:00:00-06:00",
+      "formato": "atrocidades · pedido en comentarios (@hectorsocarras3030, @uueee-gt3ci, @zoharysakiyamablue471) · 26:48 · cierra la trilogía de los hijos de Rennala · promo Tamriel al final"
     }
   ],
   "ideas": {
@@ -192,9 +201,15 @@
   "campana_subs": {
     "desde": "2026-10-30",
     "metas": [
-      500,
-      1000
+      1000,
+      2000
     ],
     "linea": "Suscríbete a Runa Caída para no perderte la siguiente atrocidad"
+  },
+  "promo_canal": {
+    "desde": "2026-11-22",
+    "canal": "cronicas_tamriel",
+    "linea": "¿Te gustan los mundos donde hasta los dioses tienen las manos sucias? Visita Crónicas de Tamriel, nuestro canal hermano de Skyrim",
+    "url": "https://www.youtube.com/channel/UCWeCfdm8py6dYKHq7HwUIXw"
   }
 }

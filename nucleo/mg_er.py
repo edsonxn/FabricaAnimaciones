@@ -59,6 +59,13 @@ Uso desde videos/<v>/efectos.py (FX `mg` de nucleo/secuencia_fx.py; acepta de/a 
   audiencia(campeones, tu, remate)               campeones que entran en las fauces de la serpiente; «Tú», el siguiente
   uvas(etiquetas, remate)                        racimo de uvas que giran y son ojos; etiquetas a sus dueños; remate rojo
   paciencia(n, umbral, quien, basta, remate)     9 raíces: doradas hasta la 4.ª, sello «Basta», luego rojas hasta la 9.ª
+  estandartes / contencion / gracia_perdida      (er_godfrey_atrocidades, 19-nov-2026)
+  inquisicion(instrumentos, remate, titulo)      archivo de la inquisición: una ficha (icono + nombre) por marca y sello rojo
+                                                 final (er_rykard_atrocidades, 22-nov-2026)
+  red_secuestro(origenes, destino, remate)       lugares que se encienden por marca; líneas punteadas rojas convergen en la placa
+  estandarte_caido(emblema, quien, remate)       estandarte con emblema dorado que se agrieta, se tacha en X y cae
+  incubadora(etiqueta, sub, remate)              bolsa amniótica húmeda que gotea; serpiente enroscada dentro; etiqueta escrita
+  recibo(concepto, pagador, cobrador, pago, sello)   recibo en pergamino, una línea por marca, sello rojo «COBRADO»
 """
 import math
 
@@ -149,6 +156,19 @@ def puesto(arriba, titulo, ancho=1920, color=ORO):
     espaciado (como el aviso de jefe derrotado). Sale fundiéndose."""
     h = 250
     f1, f2 = fuente("r", 40), fuente("r", 92)
+    # MIDE (22-nov-2026, er_rykard: «IGLESIA DE LA CIUDAD DE LOS PENADOS» se salía por los dos lados): la letra baja hasta que
+    # el texto (con el espaciado final) cabe en el 86 % del ancho; los títulos cortos quedan igual que antes.
+    _tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    t2, t1 = 92, 40
+    while t2 > 50 and _ancho(_tmp, titulo.upper(), f2, 6) > ancho * .86:
+        t2 -= 4
+        f2 = fuente("r", t2)
+    while t1 > 26 and _ancho(_tmp, arriba.upper(), f1, 8) > ancho * .86:
+        t1 -= 2
+        f1 = fuente("r", t1)
+    # el espaciado de entrada (6 → 36) tampoco puede sacar el título del cuadro: se limita a lo que cabe en el 94 %
+    _n = max(1, len(titulo) - 1)
+    _extra = max(0.0, min(30.0, (ancho * .94 - _ancho(_tmp, titulo.upper(), f2, 6)) / _n))
 
     def fn(dt, dur, marcas):
         im = Image.new("RGBA", (ancho, h), (0, 0, 0, 0))
@@ -161,7 +181,7 @@ def puesto(arriba, titulo, ancho=1920, color=ORO):
         d = ImageDraw.Draw(txt)
         a = 255 * _eo(dt / .6)
         _texto(d, (ancho / 2, 72), arriba.upper(), f1, PERGAMINO, "mm", a * .9, track=8)
-        tr = 6 + 30 * (1 - _eo(dt / 1.1))
+        tr = 6 + _extra * (1 - _eo(dt / 1.1))
         _texto(d, (ancho / 2, 152), titulo.upper(), f2, color, "mm", a, track=tr, sombra=False)
         im.alpha_composite(_brillo(txt, 9, 1.3))
         return _bgra(im, min(1.0, (dur - dt) / .5))
@@ -2748,5 +2768,678 @@ def gracia_perdida(enemigos, remate="Cuando cayó su último enemigo", titulo="L
             t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
             _texto(ImageDraw.Draw(t2), (M + w * .71, M + h - 40), remate, fr, AMBAR, "mm", 255 * ur, sombra=False)
             im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+# ============================================================ er_rykard_atrocidades (22-nov-2026)
+def _ajustar(d, s, estilo, tam, ancho, max_lineas=2, minimo=20):
+    """Fuente y líneas para que `s` quepa en `ancho` px en ≤ `max_lineas` líneas: baja el cuerpo de 2 en 2 hasta que
+    quepa (tampoco deja que una palabra sola se salga)."""
+    t = tam
+    while True:
+        f = fuente(estilo, t)
+        ls = _partir(d, s, f, ancho) or [""]
+        if (len(ls) <= max_lineas and max(d.textlength(x, font=f) for x in ls) <= ancho) or t <= minimo:
+            return f, ls
+        t -= 2
+
+
+def _f_sello(d, txt, ancho, tam=92):
+    """Fuente negrita para un sello de `_sello_txt` que no pase de `ancho` px (texto + marco)."""
+    t = tam
+    while t > 24 and d.textlength(txt, font=fuente("b", t)) + 70 > ancho:
+        t -= 4
+    return fuente("b", t)
+
+
+def _icono(ruta, lado):
+    """PNG con alfa recortado a su contenido y escalado a que su lado mayor mida `lado`."""
+    if not ruta:
+        return None
+    ic = Image.open(ruta).convert("RGBA")
+    bb = ic.getbbox()
+    ic = ic.crop(bb) if bb else ic
+    k = lado / max(ic.size)
+    return ic.resize((max(1, int(ic.width * k)), max(1, int(ic.height * k))), Image.LANCZOS)
+
+
+def _con_alfa(ic, a):
+    if a >= 255:
+        return ic
+    c = ic.copy()
+    c.putalpha(Image.fromarray((np.array(ic.split()[3]) * (max(0, a) / 255)).astype(np.uint8)))
+    return c
+
+
+def _mezcla(c0, c1, u):
+    return tuple(int(c0[i] * (1 - u) + c1[i] * u) for i in range(3))
+
+
+def _pua(d, cx, cy, r, color, a):
+    """Instrumento esquemático (sin icono): estrella de púas con un aro."""
+    if a <= 0:
+        return
+    pts = []
+    for k in range(16):
+        rr = r if k % 2 == 0 else r * .45
+        ang = math.pi * k / 8
+        pts.append((cx + rr * math.cos(ang), cy + rr * math.sin(ang)))
+    d.polygon(pts, fill=(34, 26, 18, int(a)), outline=color + (int(a),))
+    d.ellipse((cx - r * .3, cy - r * .3, cx + r * .3, cy + r * .3), outline=color + (int(a),), width=3)
+
+
+def inquisicion(instrumentos, remate="En secreto · contra nobles", titulo="Archivo de la inquisición", w=1600, h=None):
+    """Archivo de la inquisición: una ficha por instrumento de tortura. Cada elemento = «texto», (texto, icono) o
+    (texto, icono, sub); icono = ruta de PNG con alfa (None = púas esquemáticas). Marca k (< n): entra la ficha k (sube y
+    se enciende; su icono late en ámbar mientras es la activa). Marca n: los iconos se tiñen de rojo y cae el sello `remate`
+    en su franja de abajo. Espera n + 1 marcas."""
+    items = []
+    for it in instrumentos:
+        it = (it,) if isinstance(it, str) else tuple(it)
+        items.append((it[0], it[1] if len(it) > 1 else None, it[2] if len(it) > 2 else None))
+    n = max(1, len(items))
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    pad, gap = 70, 34
+    cw = (w - 2 * pad - gap * (n - 1)) / n
+    lado = int(min(210, cw - 40))
+    icos = [_icono(ic, lado - 30) for _, ic, _ in items]
+    noms = [_ajustar(tmp, t, "b", 38, cw - 28, 2) for t, _, _ in items]
+    subs = [_ajustar(tmp, s, "i", 28, cw - 28, 2) if s else None for _, _, s in items]
+    alto_txt = max(len(ls) * int(f.size * 1.12) + (len(ss[1]) * int(ss[0].size * 1.15) + 10 if ss else 0)
+                   for (f, ls), ss in zip(noms, subs))
+    ch = 24 + lado + 22 + alto_txt + 22
+    ftit, fnum = fuente("r", 40), fuente("b", 30)
+    fse = _f_sello(tmp, remate.upper(), w * .62, 70) if remate else None
+    banda = 190 if remate else 30
+    top = 120
+    h = h or int(top + ch + banda)
+    ys = top + ch + banda / 2
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        us = _eo((dt - mk[n]) / .35)
+        lat = .5 + .5 * math.sin(dt * 4)
+        for i, (texto, _, _) in enumerate(items):
+            u = _eo((dt - mk[i]) / .45)
+            if u <= 0:
+                continue
+            act = mk[i + 1] > dt >= mk[i] and i < n
+            x0 = M + pad + i * (cw + gap)
+            y0 = M + top + 40 * (1 - u)
+            cx = x0 + cw / 2
+            col = ROJO if us > .5 else AMBAR if act else ORO_OSC
+            d.rectangle((x0, y0, x0 + cw, y0 + ch), fill=(18, 15, 11, int(235 * u)), outline=col + (int(255 * u),), width=2)
+            bx0, by0 = cx - lado / 2, y0 + 24
+            d.rectangle((bx0, by0, bx0 + lado, by0 + lado), fill=(28, 24, 18, int(255 * u)), outline=ORO_OSC + (int(200 * u),))
+            if act or us > 0:
+                k = (.55 + .45 * lat) * (us if not act else max(us, 1.0))
+                hc = ROJO if us > .5 else AMBAR
+                halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                ImageDraw.Draw(halo).ellipse((cx - lado * .38, by0 + lado * .12, cx + lado * .38, by0 + lado * .88),
+                                             fill=hc + (int(130 * k * u),))
+                im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(20)))
+                d = ImageDraw.Draw(im)
+            ic = icos[i]
+            if ic is not None:
+                im.alpha_composite(_con_alfa(ic, 255 * u), (int(cx - ic.width / 2), int(by0 + (lado - ic.height) / 2)))
+                d = ImageDraw.Draw(im)
+            else:
+                _pua(d, cx, by0 + lado / 2, lado * .32, col, 255 * u)
+            _texto(d, (bx0 + 10, by0 + 8), str(i + 1), fnum, ROJO, "lt", 255 * u)
+            f, ls = noms[i]
+            y = by0 + lado + 22
+            for ln in ls:
+                _texto(d, (cx, y), ln, f, AMBAR if act else PERGAMINO, "mt", 255 * u)
+                y += int(f.size * 1.12)
+            if subs[i]:
+                fs_, ss = subs[i]
+                y += 10
+                for ln in ss:
+                    _texto(d, (cx, y), ln, fs_, GRIS, "mt", 255 * u)
+                    y += int(fs_.size * 1.15)
+        if remate and us > 0:
+            _sello_txt(im, M + w / 2, M + ys, remate.upper(), fse, ROJO, 240 * us, giro=-4, escala=1 + .7 * (1 - us))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def _punteada(d, p0, p1, u, fase, color, a, guion=18, hueco=12, ancho=4):
+    """Línea punteada de p0 a p1 dibujada hasta la fracción `u`; `fase` (px) hace correr los guiones hacia p1."""
+    if u <= 0 or a <= 0:
+        return
+    L = math.hypot(p1[0] - p0[0], p1[1] - p0[1])
+    if L < 1:
+        return
+    ux, uy = (p1[0] - p0[0]) / L, (p1[1] - p0[1]) / L
+    fin, per = L * min(1, u), guion + hueco
+    s = (fase % per) - per
+    while s < fin:
+        s0, s1 = max(0, s), min(fin, s + guion)
+        if s1 > s0:
+            d.line([(p0[0] + ux * s0, p0[1] + uy * s0), (p0[0] + ux * s1, p0[1] + uy * s1)], fill=color + (int(a),), width=ancho)
+        s += per
+
+
+def _jaula(d, cx, cy, s, color, a):
+    """Celda esquemática: arco con barrotes."""
+    if a <= 0:
+        return
+    w_, h_ = 26 * s, 34 * s
+    d.rectangle((cx - w_, cy - h_ * .4, cx + w_, cy + h_), fill=(20, 14, 10, int(a)), outline=color + (int(a),), width=3)
+    d.pieslice((cx - w_, cy - h_ * 1.2, cx + w_, cy + h_ * .4), 180, 360, fill=(20, 14, 10, int(a)), outline=color + (int(a),),
+               width=3)
+    for k in (-2, -1, 0, 1, 2):
+        x = cx + k * w_ / 2.6
+        d.line((x, cy - h_ * .55 + abs(k) * 4 * s, x, cy + h_), fill=color + (int(a),), width=3)
+
+
+def red_secuestro(origenes, destino="Cámara de la inquisición", remate="", titulo="Red de secuestro", sub_destino=None,
+                  w=1600, h=760):
+    """Red de vírgenes raptoras: los `origenes` (lugares) rodean una placa central `destino` (celda + nombre). Todos salen
+    apagados en gris. Marca k (< n): se enciende el origen k (onda ámbar) y sale de él una línea punteada roja que corre
+    hasta la placa, por la que viajan «pasajeros»; la placa enrojece con cada línea. Marca n: `remate` abajo y la placa
+    late. Espera n + 1 marcas (n si no hay remate)."""
+    n = max(1, len(origenes))
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    ftit = fuente("r", 40)
+    labs = [_ajustar(tmp, o, "b", 34, 400, 2) for o in origenes]
+    fd_, lds = _ajustar(tmp, destino, "b", 38, w * .26, 2)
+    fsd_, lsd = _ajustar(tmp, sub_destino, "i", 28, w * .26, 1) if sub_destino else (None, [])
+    tw = max([tmp.textlength(x, font=fd_) for x in lds] + [tmp.textlength(x, font=fsd_) for x in lsd])
+    th = len(lds) * int(fd_.size * 1.1) + (len(lsd) * int(fsd_.size * 1.2) + 6 if lsd else 0)
+    pw, ph = 30 + 70 + 22 + tw + 34, max(130, th + 44)
+    fr_, lr = _ajustar(tmp, remate, "i", 46, w - 160, 1) if remate else (None, [])
+    off = 0 if n % 2 else 180 / n
+    angs = [math.radians(180 + 360 * i / n + off) for i in range(n)]
+    ss = [math.sin(a) for a in angs]
+    alto_lab = [len(ls) * int(f.size * 1.1) for f, ls in labs]
+    lab_top = max([a for a, s in zip(alto_lab, ss) if s <= .35] or [0])
+    lab_bot = max([a for a, s in zip(alto_lab, ss) if s > .35] or [0])
+    ytop, ybot = 110 + lab_top + 40, h - (104 if remate else 30) - lab_bot - 40
+    smin, smax = min(ss), max(ss)
+    if smax - smin < .3:
+        ry, cyr = 0, (ytop + ybot) / 2
+    else:
+        ry = (ybot - ytop) / (smax - smin)
+        cyr = ytop - smin * ry
+    rx = w / 2 - 230
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        cx, cy = M + w / 2, M + cyr
+        conectadas = sum(_eo((dt - mk[i] - .7) / .5) for i in range(n))
+        ur = _eo((dt - mk[n]) / .5) if remate else 0
+        roj = min(1.0, conectadas / max(1, n))
+        capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dc = ImageDraw.Draw(capa)
+        for i in range(n):
+            u = _eo((dt - mk[i]) / .35)
+            if u <= 0:
+                continue
+            px, py = cx + rx * math.cos(angs[i]), cy + ry * math.sin(angs[i])
+            vx, vy = cx - px, cy - py
+            L = math.hypot(vx, vy) or 1
+            hw, hh = pw / 2 + 10, ph / 2 + 10
+            sx = hw / abs(vx) if abs(vx) > 1e-6 else 9e9
+            sy = hh / abs(vy) if abs(vy) > 1e-6 else 9e9
+            s_ = 1 - min(sx, sy)
+            p0 = (px + vx / L * 20, py + vy / L * 20)
+            p1 = (px + vx * s_, py + vy * s_)
+            ul = _eo((dt - mk[i] - .15) / .7)
+            _punteada(dc, p0, p1, ul, dt * 60, ROJO, 230 * a0 / 255, ancho=5)
+            if ul >= 1:
+                for j in range(2):
+                    f_ = ((dt - mk[i]) * .45 + j * .5) % 1
+                    qx, qy = p0[0] + (p1[0] - p0[0]) * f_, p0[1] + (p1[1] - p0[1]) * f_
+                    dc.ellipse((qx - 8, qy - 8, qx + 8, qy + 8), fill=(235, 90, 70, int(230 * a0 / 255)))
+        im.alpha_composite(_brillo(capa, 6, .9))
+        d = ImageDraw.Draw(im)
+        for i in range(n):
+            px, py = cx + rx * math.cos(angs[i]), cy + ry * math.sin(angs[i])
+            u = _eo((dt - mk[i]) / .35)
+            act = mk[i + 1] > dt >= mk[i] and i < n
+            col = _mezcla(GRIS, AMBAR if act else ORO, u)
+            e = dt - mk[i]
+            if 0 <= e < 1.2:
+                r = 16 + 14 * e
+                d.ellipse((px - r, py - r, px + r, py + r), outline=AMBAR + (int(230 * (1 - e / 1.2) * a0 / 255),), width=3)
+            d.ellipse((px - 14, py - 14, px + 14, py + 14), fill=(14, 12, 9, int(a0)), outline=col + (int(a0 * (.55 + .45 * u)),),
+                      width=4)
+            d.ellipse((px - 5, py - 5, px + 5, py + 5), fill=col + (int(a0 * (.4 + .6 * u)),))
+            f, ls = labs[i]
+            lw = max(d.textlength(x, font=f) for x in ls)
+            lx = min(max(px, M + 30 + lw / 2), M + w - 30 - lw / 2)
+            lh = int(f.size * 1.1)
+            abajo = math.sin(angs[i]) > .35
+            y = py + 36 if abajo else py - 36 - lh * len(ls)
+            for ln in ls:
+                _texto(d, (lx, y), ln, f, col, "mt", a0 * (.6 + .4 * u))
+                y += lh
+        lat = .5 + .5 * math.sin(dt * 5)
+        cpl = _mezcla(ORO_OSC, ROJO, roj)
+        halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        k = roj * (.6 + .4 * lat * (1 if ur > 0 else .5))
+        ImageDraw.Draw(halo).rounded_rectangle((cx - pw / 2 - 30, cy - ph / 2 - 30, cx + pw / 2 + 30, cy + ph / 2 + 30), 30,
+                                               fill=ROJO + (int(170 * k * a0 / 255),))
+        im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(22)))
+        d = ImageDraw.Draw(im)
+        x0, y0 = cx - pw / 2, cy - ph / 2
+        d.rectangle((x0, y0, x0 + pw, y0 + ph), fill=(16, 12, 9, int(a0)), outline=cpl + (int(a0),), width=4)
+        d.rectangle((x0 + 7, y0 + 7, x0 + pw - 7, y0 + ph - 7), outline=cpl + (int(a0 * .45),), width=1)
+        _jaula(d, x0 + 30 + 35, cy + 4, 1.15, cpl, a0)
+        y = cy - th / 2
+        tx = x0 + 30 + 70 + 22
+        for ln in lds:
+            _texto(d, (tx, y), ln, fd_, _mezcla(PERGAMINO, (240, 120, 100), roj), "lt", a0)
+            y += int(fd_.size * 1.1)
+        if lsd:
+            y += 6
+            for ln in lsd:
+                _texto(d, (tx, y), ln, fsd_, GRIS, "lt", a0)
+                y += int(fsd_.size * 1.2)
+        if ur > 0:
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(t2), (M + w / 2, M + h - 44), lr[0], fr_, AMBAR, "mm", 255 * ur, sombra=False)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def _blason(d, cx, cy, r, color, a):
+    """Emblema heráldico genérico (sin pretender ser el del juego): aro doble, rombo y estrella de ocho puntas."""
+    if a <= 0:
+        return
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(40, 14, 12, int(a)), outline=color + (int(a),), width=6)
+    d.ellipse((cx - r * .84, cy - r * .84, cx + r * .84, cy + r * .84), outline=color + (int(a * .7),), width=2)
+    pts = []
+    for k in range(16):
+        rr = r * (.72 if k % 2 == 0 else .3)
+        ang = math.pi * k / 8 - math.pi / 2
+        pts.append((cx + rr * math.cos(ang), cy + rr * math.sin(ang)))
+    d.polygon(pts, fill=color + (int(a),))
+    d.polygon([(cx, cy - r * .26), (cx + r * .2, cy), (cx, cy + r * .26), (cx - r * .2, cy)], fill=(40, 14, 12, int(a)))
+
+
+def estandarte_caido(emblema="Caballeros de Gelmir", quien="", remate="Un emblema que ya nadie usa", icono=None, titulo="",
+                     w=1500, h=640):
+    """Estandarte carmesí con un emblema dorado (icono = PNG con alfa del emblema real; None = blasón genérico) y a la
+    derecha el nombre `emblema` y `quien` (a quién representa). Marca 0: el emblema se agrieta (grietas que crecen y el oro
+    se apaga a gris). Marca 1: tajo rojo en X, el estandarte se ladea y cae un poco; el nombre se tacha. Marca 2: `remate`.
+    Espera 3 marcas."""
+    import random
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    ftit = fuente("r", 40)
+    col_x0 = w * .50
+    col_w = w - col_x0 - 70
+    fe_, les = _ajustar(tmp, emblema, "b", 60, col_w, 2)
+    fq_, lqs = _ajustar(tmp, quien, "i", 36, col_w, 3) if quien else (None, [])
+    fr_, lrs = _ajustar(tmp, remate, "i", 46, col_w, 2) if remate else (None, [])
+    top = 120 if titulo else 70
+    bw, bh = 300, h - top - 70
+    px = w * .25
+    ecy = top + 30 + bh * .40
+    er = 92
+    ico = _icono(icono, er * 1.5)
+    rng = random.Random(7)
+    grietas = []
+    for k in range(8):
+        ang = k * math.pi / 4 + rng.uniform(-.3, .3)
+        pts, x, y = [(0.0, 0.0)], 0.0, 0.0
+        for j in range(7):
+            ang += rng.uniform(-.5, .5)
+            paso = rng.uniform(16, 30)
+            x, y = x + paso * math.cos(ang), y + paso * math.sin(ang)
+            pts.append((x, y))
+        grietas.append(pts)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        if titulo:
+            _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+            _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        ug = _eo((dt - mk[0]) / 1.4)
+        ux = _eo((dt - mk[1]) / .5)
+        uc = _eo((dt - mk[1] - .2) / .9)
+        ur = _eo((dt - mk[2]) / .5)
+        ban = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        db = ImageDraw.Draw(ban)
+        cx, y0 = M + px, M + top + 30
+        x0, x1, y1 = cx - bw / 2, cx + bw / 2, y0 + bh - 40
+        ue = _eo(dt / .7)
+        db.line((x0 - 26, y0 - 6, x1 + 26, y0 - 6), fill=ORO + (int(a0),), width=8)
+        for xx in (x0 - 26, x1 + 26):
+            db.ellipse((xx - 9, y0 - 15, xx + 9, y0 + 3), fill=ORO + (int(a0),))
+        yb = y0 + (y1 - y0) * ue
+        ola = 7 * math.sin(dt * 2.1) * (1 - .6 * uc)
+        poly = [(x0, y0), (x1, y0), (x1 + ola, yb), (cx + ola, yb - 70 * ue), (x0 + ola, yb)]
+        tela = _mezcla((112, 26, 22), (64, 30, 26), uc)
+        db.polygon(poly, fill=tela + (int(a0),), outline=ORO + (int(a0),))
+        db.line([(x0 + 14, y0 + 8), (x0 + 14 + ola, yb - 8)], fill=ORO_OSC + (int(a0),), width=3)
+        db.line([(x1 - 14, y0 + 8), (x1 - 14 + ola, yb - 8)], fill=ORO_OSC + (int(a0),), width=3)
+        ecx, ecy_ = cx + ola * .4, M + ecy
+        if ue > .6:
+            ae = 255 * _eo((ue - .6) / .4)
+            col = _mezcla(ORO, (110, 104, 92), ug)
+            if ug < 1:
+                halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                ImageDraw.Draw(halo).ellipse((ecx - er - 30, ecy_ - er - 30, ecx + er + 30, ecy_ + er + 30),
+                                             fill=ORO + (int(110 * (1 - ug) * ae / 255),))
+                ban.alpha_composite(halo.filter(ImageFilter.GaussianBlur(20)))
+                db = ImageDraw.Draw(ban)
+            if ico is not None:
+                db.ellipse((ecx - er, ecy_ - er, ecx + er, ecy_ + er), fill=(40, 14, 12, int(ae)), outline=col + (int(ae),), width=6)
+                ic = ico
+                if ug > 0:
+                    g = np.array(ic).astype(np.float32)
+                    gris = g[..., :3].mean(axis=2, keepdims=True) * .6
+                    g[..., :3] = g[..., :3] * (1 - ug) + gris * ug
+                    ic = Image.fromarray(g.astype(np.uint8))
+                ban.alpha_composite(_con_alfa(ic, ae), (int(ecx - ic.width / 2), int(ecy_ - ic.height / 2)))
+                db = ImageDraw.Draw(ban)
+            else:
+                _blason(db, ecx, ecy_, er, col, ae)
+            if ug > 0:
+                for pts in grietas:
+                    m = max(2, int(len(pts) * ug + .999))
+                    pp = [(ecx + x * (er / 100) * 1.25, ecy_ + y * (er / 100) * 1.25) for x, y in pts[:m]]
+                    db.line(pp, fill=(10, 7, 5, int(ae)), width=4)
+                    db.line([(x + 2, y + 1) for x, y in pp], fill=PERGAMINO + (int(70 * ae / 255),), width=1)
+        if ux > 0:
+            db.line((x0 - 16, y0 + 10, x0 - 16 + (bw + 32) * min(1, ux * 2), y0 + 10 + (bh - 60) * min(1, ux * 2)),
+                    fill=ROJO + (240,), width=13)
+            if ux > .5:
+                v = (ux - .5) * 2
+                db.line((x1 + 16, y0 + 10, x1 + 16 - (bw + 32) * v, y0 + 10 + (bh - 60) * v), fill=ROJO + (240,), width=13)
+        if uc > 0:
+            ban = ban.rotate(-9 * uc, resample=Image.BICUBIC, center=(x0 - 26, y0 - 6), translate=(0, 26 * uc))
+        im.alpha_composite(ban)
+        d = ImageDraw.Draw(im)
+        d.line((cx - bw / 2 - 26, M + top + 18, cx - bw / 2 - 26, M + h - 40), fill=ORO_OSC + (int(a0),), width=6)
+        if uc > 0:
+            for k in range(14):
+                t_ = (dt * .35 + k * .137) % 1
+                ax = M + px - bw / 2 + (k * 53) % (bw + 60) + 10 * math.sin(dt + k)
+                ay = M + top + t_ * (h - top - 60)
+                d.ellipse((ax - 3, ay - 3, ax + 3, ay + 3), fill=(150, 142, 126, int(160 * uc * math.sin(t_ * math.pi))))
+        cxl = M + col_x0
+        alto = len(les) * int(fe_.size * 1.1) + (16 + len(lqs) * int(fq_.size * 1.18) if lqs else 0) + \
+            (40 + len(lrs) * int(fr_.size * 1.18) if lrs else 0)
+        y = M + top + 30 + (bh - 40 - alto) / 2
+        cole = _mezcla(ORO, GRIS, uc)
+        for ln in les:
+            _texto(d, (cxl, y), ln, fe_, cole, "lt", a0)
+            if ux > 0:
+                lw = d.textlength(ln, font=fe_)
+                yy = y + fe_.size * .55
+                d.line((cxl - 8, yy, cxl - 8 + (lw + 16) * ux, yy), fill=ROJO + (235,), width=6)
+            y += int(fe_.size * 1.1)
+        if lqs:
+            y += 16
+            for ln in lqs:
+                _texto(d, (cxl, y), ln, fq_, GRIS if uc < .5 else (120, 114, 102), "lt", a0)
+                y += int(fq_.size * 1.18)
+        if lrs and ur > 0:
+            y += 40
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dt2 = ImageDraw.Draw(t2)
+            for ln in lrs:
+                _texto(dt2, (cxl, y), ln, fr_, AMBAR, "lt", 255 * ur, sombra=False)
+                y += int(fr_.size * 1.18)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def _bolsa(bx, by, rx, ry):
+    """Contorno de bolsa amniótica: óvalo con cuello atado arriba y punta de goteo abajo."""
+    pts = []
+    for k in range(120):
+        p = 2 * math.pi * k / 120
+        ancho = 1 - .62 * math.exp(-(p / .55) ** 2) - .62 * math.exp(-((2 * math.pi - p) / .55) ** 2)
+        x = bx + rx * math.sin(p) * ancho
+        y = by - ry * math.cos(p) + 46 * math.exp(-((p - math.pi) / .32) ** 2)
+        pts.append((x, y))
+    return pts
+
+
+def incubadora(etiqueta="Vástago no deseado", sub="fruto de un repulsivo ritual de parto", remate="Jamás llegará a secarse",
+               titulo="Amnios de serpiente", w=1500, h=700):
+    """Bolsa amniótica translúcida y húmeda colgando (gotas que caen sin parar a un charco que crece) con una etiqueta de
+    pergamino atada a la derecha. Marca 0: dentro se dibuja una serpiente enroscada que se mueve y la bolsa late en rojo.
+    Marca 1: la etiqueta se escribe letra a letra (`etiqueta`) y luego aparece `sub`. Marca 2: `remate` bajo la etiqueta.
+    Espera 3 marcas."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    ftit = fuente("r", 40)
+    col_x0, col_x1 = w * .55, w - 70
+    tag_w = col_x1 - col_x0
+    fe_, les = _ajustar(tmp, etiqueta, "b", 54, tag_w - 90, 2)
+    fs_, lss = _ajustar(tmp, sub, "i", 32, tag_w - 90, 2) if sub else (None, [])
+    fr_, lrs = _ajustar(tmp, remate, "i", 44, tag_w, 2) if remate else (None, [])
+    tag_h = 50 + len(les) * int(fe_.size * 1.1) + (14 + len(lss) * int(fs_.size * 1.2) if lss else 0) + 40
+    bx, rx = w * .29, 170
+    top = 110
+    ry = min(200, (h - top - 150) / 2 - 20)
+    by = top + 50 + ry
+    tip = by + ry + 46
+    pool = h - 50
+    rem_h = (36 + len(lrs) * int(fr_.size * 1.18)) if lrs else 0
+    tag_y = max(top + 20, (h - tag_h - rem_h) / 2 + 10)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = 255 * _eo(dt / .4)
+        _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
+        _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
+        us = _eo((dt - mk[0]) / .9)
+        ue = dt - mk[1]
+        ur = _eo((dt - mk[2]) / .5)
+        lat = max(0.0, math.sin(dt * 2 * math.pi * .9)) ** 6 if us > 0 else 0
+        resp = 1 + .025 * math.sin(dt * 2.3) + .03 * lat
+        X, Y, TIP = M + bx, M + by, M + tip
+        cuerpo = _bolsa(X, Y, rx * resp, ry * resp)
+        d.line((X, M + top - 10, X, Y - ry * resp + 12), fill=ORO_OSC + (int(a0),), width=4)
+        d.ellipse((X - 10, Y - ry * resp, X + 10, Y - ry * resp + 18), fill=(120, 60, 46, int(a0)))
+        if us > 0:
+            halo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ImageDraw.Draw(halo).polygon(_bolsa(X, Y, rx * 1.12, ry * 1.1), fill=ROJO + (int((50 + 120 * lat) * us * a0 / 255),))
+            im.alpha_composite(halo.filter(ImageFilter.GaussianBlur(26)))
+        bol = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dbo = ImageDraw.Draw(bol)
+        dbo.polygon(cuerpo, fill=(156, 74, 52, int(120 * a0 / 255)))
+        dbo.polygon(_bolsa(X, Y + 10, rx * .8 * resp, ry * .8 * resp), fill=(176, 92, 62, int(70 * a0 / 255)))
+        for k in range(5):
+            ang0 = -2.4 + k * .9
+            pts = [(X + rx * .9 * math.sin(ang0 + j * .12) * (1 - j * .07), Y - ry * .7 * math.cos(ang0 + j * .1) + j * 14)
+                   for j in range(8)]
+            dbo.line(pts, fill=(110, 30, 26, int(110 * a0 / 255)), width=2)
+        if us > 0:
+            ser = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ds = ImageDraw.Draw(ser)
+            ond = .18 * math.sin(dt * 1.6)
+            esc = (.7 + .3 * us) * resp
+            tmax = 3.0 * math.pi
+            prev = None
+            for j in range(140):
+                t = tmax * j / 139
+                r = (16 + 23 * t / math.pi) * esc
+                ang = t + ond + dt * .35
+                x, y = X + r * math.cos(ang), Y + 16 + r * math.sin(ang) * .92
+                g = (8 + 22 * t / tmax) * esc
+                ds.ellipse((x - g, y - g, x + g, y + g), fill=(34, 14, 10, int(225 * us)))
+                prev = (x, y, g, ang)
+            x, y, g, ang = prev
+            hx, hy = x + math.cos(ang + 1.3) * g * 1.4, y + math.sin(ang + 1.3) * g * 1.4
+            ds.ellipse((hx - g * 1.5, hy - g * 1.15, hx + g * 1.5, hy + g * 1.15), fill=(34, 14, 10, int(225 * us)))
+            ds.ellipse((hx - 5, hy - 6, hx + 5, hy + 2), fill=AMBAR + (int(255 * us),))
+            msk = Image.new("L", im.size, 0)
+            ImageDraw.Draw(msk).polygon(_bolsa(X, Y, rx * .93 * resp, ry * .93 * resp), fill=255)
+            ser.putalpha(Image.fromarray(np.minimum(np.array(ser.split()[3]), np.array(msk))))
+            bol.alpha_composite(ser)
+            dbo = ImageDraw.Draw(bol)
+        brillo = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dbr = ImageDraw.Draw(brillo)
+        dbr.arc((X - rx * .78, Y - ry * .82, X + rx * .5, Y + ry * .6), 200, 250, fill=(255, 236, 214, int(150 * a0 / 255)), width=10)
+        for k in range(6):
+            f_ = (dt * .18 + k / 6) % 1
+            p = -1.9 + k * .62
+            sx = X + rx * .82 * math.sin(p)
+            sy = Y - ry * .55 + f_ * ry * 1.2
+            dbr.ellipse((sx - 4, sy - 6, sx + 4, sy + 6), fill=(255, 240, 225, int(170 * math.sin(f_ * math.pi) * a0 / 255)))
+        bol.alpha_composite(brillo.filter(ImageFilter.GaussianBlur(2)))
+        dbo = ImageDraw.Draw(bol)
+        dbo.line(cuerpo + [cuerpo[0]], fill=(214, 140, 104, int(210 * a0 / 255)), width=3)
+        im.alpha_composite(bol)
+        d = ImageDraw.Draw(im)
+        PO = M + pool
+        prx = min(150, 36 + 14 * dt)
+        d.ellipse((X - prx, PO - prx * .16, X + prx, PO + prx * .16), fill=(120, 54, 40, int(200 * a0 / 255)),
+                  outline=(190, 110, 84, int(160 * a0 / 255)), width=2)
+        per = .85
+        for k in range(3):
+            t_ = (dt + k * per / 3) % per / per
+            cae = TIP + 4 + (PO - TIP - 4) * t_ ** 2
+            if t_ < .93:
+                d.ellipse((X - 6, cae - 10, X + 6, cae + 8), fill=(196, 104, 80, int(220 * a0 / 255)))
+            else:
+                v = (t_ - .93) / .07
+                rr = 10 + 40 * v
+                d.ellipse((X - rr, PO - rr * .22, X + rr, PO + rr * .22), outline=(230, 150, 120, int(200 * (1 - v))), width=2)
+        if ue > 0:
+            ut = _eo(ue / .45)
+            tx0, ty0 = M + col_x0, M + tag_y + 20 * (1 - ut)
+            hx, hy = tx0 + 40, ty0 + 40
+            d.line([(X + rx * .9, Y - ry * .2), ((X + rx + tx0) / 2, Y - ry * .2 + 60), (hx, hy)],
+                   fill=(200, 180, 140, int(220 * ut)), width=3)
+            pap = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dp = ImageDraw.Draw(pap)
+            dp.polygon([(tx0, ty0 + 30), (tx0 + 30, ty0), (tx0 + tag_w, ty0), (tx0 + tag_w, ty0 + tag_h), (tx0 + 30, ty0 + tag_h),
+                        (tx0, ty0 + tag_h - 30)], fill=(214, 198, 158, int(255 * ut)), outline=ORO_OSC + (int(255 * ut),))
+            dp.ellipse((hx - 11, hy - 11, hx + 11, hy + 11), fill=(60, 44, 30, int(255 * ut)), outline=ORO_OSC + (int(255 * ut),),
+                       width=2)
+            tot = sum(len(x) for x in les)
+            nv = int(tot * min(1, max(0, ue - .3) / max(.6, tot * .05)) + .999)
+            y = ty0 + 50
+            for ln in les:
+                vis = ln[:max(0, nv)]
+                nv -= len(ln)
+                _texto(dp, (tx0 + 70, y), vis, fe_, CARMIN, "lt", 255 * ut, sombra=False)
+                y += int(fe_.size * 1.1)
+            usub = _eo((ue - .3 - max(.6, tot * .05)) / .5)
+            if lss and usub > 0:
+                y += 14
+                for ln in lss:
+                    _texto(dp, (tx0 + 70, y), ln, fs_, TINTA, "lt", 255 * usub, sombra=False)
+                    y += int(fs_.size * 1.2)
+            im.alpha_composite(pap)
+            d = ImageDraw.Draw(im)
+        if lrs and ur > 0:
+            y = M + tag_y + tag_h + 36
+            t2 = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dt2 = ImageDraw.Draw(t2)
+            for ln in lrs:
+                _texto(dt2, (M + col_x0, y), ln, fr_, AMBAR, "lt", 255 * ur, sombra=False)
+                y += int(fr_.size * 1.18)
+            im.alpha_composite(_brillo(t2, 10, 1.5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def recibo(concepto, pagador, cobrador, pago, sello="COBRADO", titulo="Recibo",
+           etiquetas=("Pagado a", "Por", "Concepto", "Pago"), w=1240, h=None):
+    """Recibo en pergamino con bordes dentados que se despliega. Una línea por marca, escrita a pluma letra a letra:
+    marca 0 «Pagado a: `cobrador`», 1 «Por: `pagador`», 2 «Concepto: `concepto`», 3 «Pago: `pago`»; marca 4: cae el sello
+    rojo `sello` en su franja de abajo (None = sin sello). Etiquetas medidas: la columna de valores empieza tras la más ancha
+    y cada valor se parte en líneas si no cabe. Espera 5 marcas (4 sin sello)."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    filas = list(zip(etiquetas, (cobrador, pagador, concepto, pago)))
+    ftit, fl_ = fuente("b", 50), fuente("b", 30)
+    pad = 70
+    x0r, x1r = 60, w - 60
+    lab_w = max(_ancho(tmp, (e + ":").upper(), fl_, 3) for e, _ in filas)
+    xv = x0r + pad + lab_w + 34
+    val_w = x1r - pad - xv
+    vals = [_ajustar(tmp, v, "i", 46, val_w, 2) for _, v in filas]
+    alt = [max(56, len(ls) * int(f.size * 1.12)) + 34 for f, ls in vals]
+    fse = _f_sello(tmp, sello.upper(), (x1r - x0r) * .55, 84) if sello else None
+    banda = 200 if sello else 40
+    cab = 150
+    h = h or int(30 + cab + sum(alt) + banda + 40)
+    y0r, y1r = 30, h - 30
+    n = len(filas)
+
+    def dentado(x0, y0, x1, y1):
+        pts, dz = [], 22
+        k = int((x1 - x0) / dz)
+        for i in range(k + 1):
+            pts.append((x0 + i * (x1 - x0) / k, y0 + (8 if i % 2 else 0)))
+        for i in range(k, -1, -1):
+            pts.append((x0 + i * (x1 - x0) / k, y1 - (8 if i % 2 else 0)))
+        return pts
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 2)
+        im, M = _panel(w, h)
+        a0 = 255 * _eo(dt / .4)
+        bob = 2 * math.sin(dt * 1.4)
+        X0, X1, Y0, Y1 = M + x0r, M + x1r, M + y0r + bob, M + y1r + bob
+        pap = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        dp = ImageDraw.Draw(pap)
+        dp.polygon(dentado(X0, Y0, X1, Y1), fill=(218, 202, 162, 255))
+        dp.rectangle((X0 + 16, Y0 + 22, X1 - 16, Y1 - 22), outline=ORO_OSC + (200,), width=2)
+        _texto(dp, ((X0 + X1) / 2, Y0 + 66), titulo.upper(), ftit, TINTA, "mm", 255, track=10, sombra=False)
+        _filete(dp, (X0 + X1) / 2, Y0 + 108, (X1 - X0) * .3, color=ORO_OSC)
+        y = Y0 + cab
+        for i, (et, _) in enumerate(filas):
+            f, ls = vals[i]
+            act = mk[i + 1] > dt >= mk[i]
+            ue = dt - mk[i]
+            ua = _eo(ue / .3)
+            colet = _mezcla((150, 124, 92), CARMIN, ua if act else 0)
+            yc = y + 28
+            _texto(dp, (X0 + pad, yc), (et + ":").upper(), fl_, colet, "lm", 255, track=3, sombra=False)
+            if act:
+                dp.polygon([(X0 + pad - 34, yc - 10), (X0 + pad - 18, yc), (X0 + pad - 34, yc + 10)], fill=CARMIN + (int(255 * ua),))
+            lh = int(f.size * 1.12)
+            for j in range(len(ls)):
+                yy = yc + j * lh + f.size * .5
+                xb = X1 - pad
+                k_ = X0 + (xv - x0r)
+                while k_ < xb:
+                    dp.line((k_, yy, min(xb, k_ + 6), yy), fill=(150, 124, 92, 170), width=2)
+                    k_ += 14
+            if ue > 0:
+                tot = sum(len(x) for x in ls)
+                nv = int(tot * min(1, ue / max(.5, tot * .045)) + .999)
+                for j, ln in enumerate(ls):
+                    _texto(dp, (X0 + (xv - x0r), yc + j * lh), ln[:max(0, nv)], f, TINTA, "lm", 255, sombra=False)
+                    nv -= len(ln)
+            y += alt[i]
+        if sello:
+            us = _eo((dt - mk[n]) / .35)
+            if us > 0:
+                _sello_txt(pap, (X0 + X1) / 2 + (X1 - X0) * .12, Y1 - 30 - banda / 2, sello.upper(), fse, CARMIN, 235 * us,
+                           giro=-6, escala=1 + .8 * (1 - us))
+        uabre = _eo(dt / .55)
+        if uabre < 1:
+            msk = Image.new("L", im.size, 0)
+            ImageDraw.Draw(msk).rectangle((0, 0, im.width, Y0 + (Y1 - Y0 + 12) * uabre), fill=255)
+            pap.putalpha(Image.fromarray(np.minimum(np.array(pap.split()[3]), np.array(msk))))
+        im.alpha_composite(_con_alfa(pap, a0))
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

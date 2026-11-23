@@ -35,7 +35,8 @@ def _alias(cid):
     for f in os.listdir(yt.CANALES):
         if f.endswith(".json"):
             try:
-                if json.load(open(os.path.join(yt.CANALES, f), encoding="utf-8")).get("canal_id") == cid:
+                d = json.load(open(os.path.join(yt.CANALES, f), encoding="utf-8"))
+                if isinstance(d, dict) and d.get("canal_id") == cid:   # algunos canales/*.json son listas
                     return f[:-5]
             except (ValueError, OSError):
                 pass

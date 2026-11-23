@@ -39,3 +39,8 @@
 ## 2.º video `fo_refugios_25` (17-nov-2026, pedido directo del usuario)
 - «Top 25 de los refugios más raros/malvados/hardcore de Fallout», ≥ 30 min, el n.º 1 = el peor refugio. Cambia DOS variables respecto al 1.º (largo y lore en vez de «NUNCA»): pedido del usuario, no elección por datos. Lo que no tenga imagen/video se recrea en Flow con gráficos de FO3/FO4 (marcado RECREACIÓN).
 - Comentarios: el 1.er video aún no sale (18-nov) → 0 comentarios; este va sin agradecimientos ni críticas.
+
+## 3.er video `fo_enemigos_ocultos` (23-nov-2026, Claude con datos; OK del usuario en «buenos días»)
+- «15 ENEMIGOS ocultos de Fallout que casi nadie vio» (15:23, f2zKynItV6U, mié 25-nov 09:16): referencia Wastelander «Hidden Fallout NV/3/4 Enemies» ×7,3/×6,5/×3,4; vuelve a ~15 min y cambia el tema a «ocultos/secretos» en tres juegos.
+- MAPAS: las coords salen del mapa interactivo de la wiki (`Map:FO3 World Map`, `Map:FNV World Map`, `Map:Fo4 Commonwealth`, y de DLC `Map:FO3PL…`, `Map:FNVOWB…`, `Map:FNVLR…` con su imagen base): misma textura que `mapas/<juego>.png` → sin template matching. Script: `videos/fo_enemigos_ocultos/mapas/_wiki/busca.py`. Nuka-World y la Isla: la imagen base de la wiki no está como archivo → sin mapa.
+- A vigilar: % visto y vistas/día frente a los dos primeros; si «ocultos» rinde más que «NUNCA», repetir con FO76 o con la serie.

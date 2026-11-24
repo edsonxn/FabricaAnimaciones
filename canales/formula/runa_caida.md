@@ -80,3 +80,22 @@ Repetir «Los 5 … QUE IGNORASTE» cambiando UNA variable (el sujeto: personaje
   % visto y retención del primer minuto frente a Mohg (24 min, Faraon) y Radahn; subs por 1 000 (campaña: menos de 5 de 100, 753 → 1 000).
 - Contraburla (regla del 11-nov, mínimo 2-3): José (Malenia «de hija», p5b), Gonzalo (Mohg «ni tan mal», p4b), Madrizu (Ranni / IA, cierre).
 - Siguen pedidos: Godfrey/Godwyn (John, Carl), Messmer (Santiago, Alphonse), Rennala, Bayle.
+
+## RESULTADO de la votación de voz (medido el 24-nov-2026, 10 días tras Godrick)
+- Comentarios del video de Godrick (8GB3iSozTCk) que votan: **«nuevo profeta» ≈ 22** · «narrador anterior» 4 (@cirouuu, @carlramonescch,
+  @MrArancian, @jonathanvillamil9854; + 1 broma y 1 ambiguo). En Rykard siguen votando por el Profeta sin que se pregunte (@lksdmn1,
+  @ulicesruvalcabajimenez6622, @leere2586: «su calidad aumentó muchísimo con el cambio de voz»). **Se queda el Profeta.**
+- Métricas: Godrick 50,7 % visto (Mohg con Faraon 48,5 %), Godfrey 53,2 % (el mejor de los largos); retención al 10 % 0,61 (Mohg 0,62:
+  empate). Las quejas de «voz IA» bajaron a 2-3 por video (@xanguro1, @BNETDOWN) y ya hay comentarios que se ríen de los quejosos
+  (@dany00g1 ♥7). Canal: 1 300 subs; de cada 100 vistas, ~9 son de suscritos.
+
+## «Las 5 peores atrocidades de Messmer QUE IGNORASTE» (`er_messmer_atrocidades`, 24-nov-2026, elegido por el usuario de 3)
+- Descartados ese día: Rennala, Maliketh. Variable cambiada: el SUJETO → primer jefe del DLC con la fórmula (el Messmer viejo sin
+  fórmula dio ×0,26). Pedido ≤ 10 días por @Stormycthulhu, @sergiojahazielortizcoronad8091, @Quaerens_veritatem, @RickGonzalez-tc7jq,
+  @LuisGutierrez-iw4vd, @ViveTVRD (los de Santiago 11-nov y Alphonse 8-nov ya pasaron los 10 días: se nombran en voz, sin tarjeta).
+- Subido el 24-nov-2026 (https://youtu.be/YYeaK_q5wuM, 24:55), programado jue 26-nov 10:00 CDMX. 3 298 palabras = 1 372 s de voz
+  (≈ 2,4 palabras/s con pausas; 24:34 + pantalla final). Comparar a los 7 días con Rykard (26:48) y Godfrey (53 % visto): vistas,
+  % visto, subs por 1 000 (1 310 → meta 2 000) y si el público del DLC llega por búsqueda («messmer»).
+- Lecciones de producción: la fuente «Stride» (PoTk3y9244M, Messmer sin HUD) lleva una marca tenue «KINGDOMKEY JT» abajo a la derecha
+  (recorte_por .075); «Dan Allen Gaming» lleva logo arriba a la derecha; el tráiler oficial va con franjas (recorte .125). Revisar
+  ESQUINAS a tamaño real de un clip por fuente (las hojas de 240 px no lo ven). Los subtítulos del juego en inglés (diálogos) se aceptan.

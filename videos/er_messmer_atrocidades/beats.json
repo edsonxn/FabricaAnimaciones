@@ -1,0 +1,1370 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.603,
+  "tipo": "video",
+  "texto": "Messmer el Empalador. Hijo de la reina Márika, señor del Reino de las Sombras, y el jefe que te espera en",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.603,
+  "t1": 15.66,
+  "tipo": "video",
+  "texto": "lo más alto de la Fortaleza sombría, con una lanza en llamas y una serpiente dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.66,
+  "t1": 25.92,
+  "tipo": "video",
+  "texto": "Antes de pelear, te mira desde arriba y te suelta una frase que resume su vida entera. La dice en inglés, con esa voz que no se olvida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.92,
+  "t1": 39.43,
+  "tipo": "video",
+  "texto": "Escúchalo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 39.43,
+  "t1": 45.95,
+  "tipo": "video",
+  "texto": "En español: quienes se ven despojados del don del oro deberán hacer frente a la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 45.95,
+  "t1": 51.52,
+  "tipo": "video",
+  "texto": "En el abrazo de la llama de Messmer. Casi todo el mundo cree que lo peor",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.52,
+  "t1": 59.2,
+  "tipo": "video",
+  "texto": "de Messmer es que quemó a un pueblo entero, los cornamentados. Y es verdad. El propio juego lo anuncia:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.2,
+  "t1": 68.408,
+  "tipo": "video",
+  "texto": "un reino purgado en una batalla olvidada, y calcinado por la llama de Messmer. Pero eso ya lo sabe todo el mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.408,
+  "t1": 76.008,
+  "tipo": "video",
+  "texto": "Hoy va lo otro. Lo que les hizo a sus propios caballeros. Lo que hizo con los dioses de otro pueblo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.008,
+  "t1": 85.509,
+  "tipo": "video",
+  "texto": "Una sopa fría que lleva años esperando en una mesa. Y en el número uno, una frase en la que también estabas tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.509,
+  "t1": 94.109,
+  "tipo": "video",
+  "texto": "Este video lo pidieron ustedes, y con ganas. Stormy escribió que se va a volver loco esperando las atrocidades de Messmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.109,
+  "t1": 105.003,
+  "tipo": "video",
+  "texto": "Sergio las pidió dos veces, con las manos juntas. Y Luis lo dijo claro: es hora de empezar con el DLC, Messmer es el siguiente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.003,
+  "t1": 110.763,
+  "tipo": "video",
+  "texto": "Rick dice que es de sus personajes favoritos. Y Santiago y Alphonse lo pidieron hace semanas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.763,
+  "t1": 120.896,
+  "tipo": "video",
+  "texto": "cuando aquí todavía íbamos por Godrick. Stormy, ya puedes recuperar la cordura. Aunque después de este video, no te la garantizo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.896,
+  "t1": 129.955,
+  "tipo": "video",
+  "texto": "Y antes de empezar, un comentario sobre el título. Rico nos preguntó: ¿por qué supones que lo ignoré, y no lo disfruté?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.955,
+  "t1": 136.395,
+  "tipo": "video",
+  "texto": "Tienes toda la razón, Rico. No todo el mundo lo ignoró. Algunos lo disfrutaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 136.395,
+  "t1": 145.45,
+  "tipo": "video",
+  "texto": "Para ellos, el ejército de Messmer mandó hacer una medalla. Sale en el número uno. Número cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.45,
+  "t1": 154.461,
+  "tipo": "video",
+  "texto": "Su propia gente, a la tumba. Antes de quemar a nadie de fuera, Messmer ya había quemado lo de dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.461,
+  "t1": 163.294,
+  "tipo": "video",
+  "texto": "Empecemos por sus caballeros más famosos, los de la armadura roja: los Caballeros de Fuego. Su casco lo cuenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.294,
+  "t1": 171.684,
+  "tipo": "video",
+  "texto": "Todos los caballeros provenían de alguna importante familia de los niveles superiores del Árbol Áureo, pero fueron marginados,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.684,
+  "t1": 181.226,
+  "tipo": "video",
+  "texto": "perseguidos y expulsados de sus hogares tras jurar lealtad a Messmer como su señor. Jurarle lealtad te costaba la casa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 181.226,
+  "t1": 189.096,
+  "tipo": "video",
+  "texto": "Y su armadura añade lo que recibían a cambio: solo ellos llegaron a conocer de verdad a Messmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 189.096,
+  "t1": 197.977,
+  "tipo": "video",
+  "texto": "Sus llamas son como serpientes. Ese era el secreto del ejército. Su señor llevaba una serpiente dentro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 197.977,
+  "t1": 206.897,
+  "tipo": "video",
+  "texto": "Su Recuerdo lo dice sin rodeos: una serpiente malévola se retorcía dentro de Messmer, por lo que su madre le arrancó el",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.897,
+  "t1": 216.31,
+  "tipo": "video",
+  "texto": "ojo y lo sustituyó por un sello de Gracia. Y aun así, con eso dentro, su madre lo puso al frente de una guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 216.31,
+  "t1": 225.252,
+  "tipo": "video",
+  "texto": "El Escudo con blasón de serpiente se forjó para conmemorar los inicios de la cruzada iniciada por Messmer, hijo de Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.252,
+  "t1": 234.43,
+  "tipo": "video",
+  "texto": "Un ojo arrancado y un sello encima. Y no todos sus hombres lo aceptaron cuando se enteraron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 234.43,
+  "t1": 241.15,
+  "tipo": "video",
+  "texto": "Los Caballeros Negros eran la fuerza principal del ejército de Messmer. Su comandante, Andreas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.15,
+  "t1": 250.783,
+  "tipo": "video",
+  "texto": "había seguido a su señor desde el Árbol Áureo, y le era devoto. Hasta que se enteró. Su ceniza de espíritu lo cuenta así:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.783,
+  "t1": 259.658,
+  "tipo": "video",
+  "texto": "se rebeló tras conocer la naturaleza reptiliana de su señor. Por ello, fue encarcelado en una tumba subterránea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.658,
+  "t1": 267.178,
+  "tipo": "video",
+  "texto": "Y no fue solo. Su hijo Huw, capitán de los Caballeros Negros, siguió a su padre en la rebelión contra Messmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.178,
+  "t1": 277.91,
+  "tipo": "video",
+  "texto": "Y al igual que él, fue encarcelado en una tumba subterránea. Un padre y un hijo, encerrados bajo tierra por descubrir lo que era su señor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 277.91,
+  "t1": 286.286,
+  "tipo": "video",
+  "texto": "Y la descripción de Huw termina con una línea preciosa: Messmer lloró la pérdida de un hermano de armas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 286.286,
+  "t1": 291.646,
+  "tipo": "video",
+  "texto": "Lloró. Pero no lo sacó de la tumba. Los sacaste tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 291.646,
+  "t1": 299.446,
+  "tipo": "video",
+  "texto": "Sus cenizas son invocaciones, y los pusiste a pelear por ti. Los soldados rasos lo tenían peor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 299.446,
+  "t1": 309.789,
+  "tipo": "video",
+  "texto": "Las Cenizas de soldado de Messmer cuentan que pertenecían al vil batallón penitenciario, y que fueron enterrados fuera de la vista del Árbol Umbrío.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.789,
+  "t1": 318.589,
+  "tipo": "video",
+  "texto": "Su armadura lleva un grabado de oro. Un pequeño consuelo, dice, para quienes están obligados a combatir sin gracia ni honor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.589,
+  "t1": 327.629,
+  "tipo": "video",
+  "texto": "Y el casco de los Caballeros Negros todavía apesta. Quizá a la sangre que lo salpicó. O al alma ennegrecida de su portador,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.629,
+  "t1": 336.276,
+  "tipo": "video",
+  "texto": "tras una matanza sin fin. Por el Reino de las Sombras quedan almas de esos soldados, rezándole a Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 336.276,
+  "t1": 345.671,
+  "tipo": "video",
+  "texto": "Una le pide a la reina que abrace a su hijo y les mande una señal. Y le pregunta cuánto más tiene que durar esta guerra santa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.671,
+  "t1": 352.77,
+  "tipo": "video",
+  "texto": "Nadie le contestó. Ni la madre, ni el hijo. Número cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 352.77,
+  "t1": 361.104,
+  "tipo": "video",
+  "texto": "El sabio que quemó más que nadie. Entre los Caballeros de Fuego había un sabio. Se llamaba Salza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.104,
+  "t1": 370.635,
+  "tipo": "video",
+  "texto": "y era discípulo del sabio Wego. Un hombre de libros en un ejército de antorchas. Su hechizo, la Lluvia de fuego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.635,
+  "t1": 378.115,
+  "tipo": "video",
+  "texto": "lo describe con una frase que empieza como un elogio. Salza siempre mantuvo su desdén al barbarismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.115,
+  "t1": 388.759,
+  "tipo": "video",
+  "texto": "Incluso a pesar de quemar más aldeas y calcinar más tierras que nadie. Más que nadie en todo su ejército. En el ejército del Empalador,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.759,
+  "t1": 395.802,
+  "tipo": "video",
+  "texto": "el que más quemó fue el que despreciaba la barbarie. Imagina cómo eran los demás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.802,
+  "t1": 402.462,
+  "tipo": "video",
+  "texto": "Porque en el Árbol Áureo el fuego estaba prohibido. La Chispa aromática lo recuerda:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 402.462,
+  "t1": 414.302,
+  "tipo": "video",
+  "texto": "aunque el fuego estaba prohibido entre aquellos que servían al Árbol Áureo, con el avance de la guerra esta regla fue dejándose de lado. La Grasa de fuego de Messmer lo confirma:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 414.302,
+  "t1": 420.572,
+  "tipo": "video",
+  "texto": "el fuego era un símbolo de la cruzada, e incluso los soldados rasos de Messmer lo usaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.572,
+  "t1": 432.246,
+  "tipo": "video",
+  "texto": "Y la Botella de perfume ígneo dice que hasta los perfumistas fueron. No a curar: la cruzada fue una purga violenta en la que participaron como guerreros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 432.246,
+  "t1": 440.506,
+  "tipo": "video",
+  "texto": "Y aun así, hubo una cosa que no quiso quemar. Su capucha lo cuenta: se negó a quemar unas ruinas antiguas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 440.506,
+  "t1": 449.222,
+  "tipo": "video",
+  "texto": "incluso a pesar de jugarse la vida. Jugarse la vida. Alguien quería esas ruinas convertidas en ceniza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 449.222,
+  "t1": 459.482,
+  "tipo": "video",
+  "texto": "y decir que no podía costarte la cabeza. El juego no dice quién lo ordenó. Dice para quién quemaba Salza las aldeas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 459.482,
+  "t1": 465.872,
+  "tipo": "video",
+  "texto": "Las ruinas más famosas del reino son las Antiguas ruinas de Rauh: gigantescas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 465.872,
+  "t1": 473.575,
+  "tipo": "video",
+  "texto": "inundadas y divididas en dos por un abismo. Y la llama de Messmer acabó llegando a ellas igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.575,
+  "t1": 482.836,
+  "tipo": "video",
+  "texto": "La Yesca de Messmer, la llama que arde en su interior, sirve justo para eso: quema el árbol sellado que se dice que se encuentra en",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 482.836,
+  "t1": 491.15,
+  "tipo": "video",
+  "texto": "las antiguas ruinas de Rauh. ¿Y quién le prendió fuego? Tú. Salza no estaba solo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.15,
+  "t1": 499.92,
+  "tipo": "video",
+  "texto": "La Caballera de Fuego Hilde era una gran amiga del sabio Salza, y se unió a quienes insistieron en preservar los especímenes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.92,
+  "t1": 510.874,
+  "tipo": "video",
+  "texto": "Sus cenizas se consagraron como amuleto para proteger el almacén. Ese almacén es el Almacén de especímenes, dentro de la Fortaleza sombría.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 510.874,
+  "t1": 516.66,
+  "tipo": "video",
+  "texto": "Unos caballeros tuvieron que insistir para que lo que guardaba no acabara en la hoguera.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.66,
+  "t1": 526.32,
+  "tipo": "video",
+  "texto": "Hasta una iglesia acabó en llamas. La santa del brote, Romina, alzó una vez el brote en silencio, en una iglesia que ardía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 526.32,
+  "t1": 534.71,
+  "tipo": "video",
+  "texto": "Ojo: el juego no dice quién quemó esa iglesia. Solo dice que ardía, en un reino que, según el propio juego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 534.71,
+  "t1": 540.454,
+  "tipo": "video",
+  "texto": "fue calcinado por la llama de Messmer. Y antes de seguir, dos comentarios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.454,
+  "t1": 553.484,
+  "tipo": "video",
+  "texto": "David escribe que, a su edad y con sus responsabilidades, ya no puede jugar leyendo descripciones de objetos e interpretándolas. Que así es como entiende la historia, y que lo agradece.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 553.484,
+  "t1": 561.517,
+  "tipo": "video",
+  "texto": "Y Quixilero dice que diez videos de este canal le han enseñado más de Elden Ring que el propio Elden Ring.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 561.517,
+  "t1": 568.817,
+  "tipo": "video",
+  "texto": "David, para eso estamos: nosotros leemos las descripciones, tú pones las responsabilidades.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 568.817,
+  "t1": 579.393,
+  "tipo": "video",
+  "texto": "Y Quixilero, eso no se lo digas a Miyazaki. Bastante tiene con la descripción de cierta sopa de escorpión. Ya llegaremos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 579.393,
+  "t1": 584.294,
+  "tipo": "video",
+  "texto": "Número tres. Los dioses colgados de sus lanzas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.294,
+  "t1": 592.911,
+  "tipo": "video",
+  "texto": "Quaerens nos escribió que de Messmer tenía que haber mucho de qué hablar, porque su propio apodo lo dice: el Empalador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.911,
+  "t1": 602.571,
+  "tipo": "video",
+  "texto": "Tiene razón. Y casi nadie sabe de dónde sale el apodo. No sale de empalar soldados. Sale de lo que hizo con los dioses de otro pueblo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.571,
+  "t1": 612.479,
+  "tipo": "video",
+  "texto": "En el tráiler de la expansión, Leda lo resume así: una purga sin Gracia ni honor. La tiranía de la llama de Messmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 612.479,
+  "t1": 620.639,
+  "tipo": "video",
+  "texto": "Los cornamentados tenían bestias divinas, mensajeras de los cielos. Y en Belurat, el asentamiento de la torre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 620.639,
+  "t1": 628.532,
+  "tipo": "video",
+  "texto": "todavía queda una. La Bestia divina León Danzante. Cuando la vences, te deja un hechizo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.532,
+  "t1": 635.57,
+  "tipo": "video",
+  "texto": "el Tornado de bestia divina. Y la descripción de ese hechizo dice exactamente esto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.57,
+  "t1": 644.29,
+  "tipo": "video",
+  "texto": "La mayoría de las bestias divinas fueron destripadas y colgadas en las lanzas de Messmer, antes de ser calcinadas en sus llamas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.29,
+  "t1": 654.651,
+  "tipo": "video",
+  "texto": "Quienes lo vieron lo comparan con una pira funeraria para la propia torre. Las destripaban, las colgaban y después las quemaban.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 654.651,
+  "t1": 664.471,
+  "tipo": "video",
+  "texto": "Y en japonés, el verbo de esa descripción es empalar, el mismo de su título. Messmer no es el Empalador por sus enemigos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 664.471,
+  "t1": 672.44,
+  "tipo": "video",
+  "texto": "Es el Empalador por los dioses de los demás. El León que tú mataste fue de los que quedaron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 672.44,
+  "t1": 682.267,
+  "tipo": "video",
+  "texto": "Su Recuerdo lo cuenta: al asaltar la torre el ejército del Empalador, el ritual de la danza del león tomó tintes marciales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 682.267,
+  "t1": 687.567,
+  "tipo": "video",
+  "texto": "Una danza sagrada que tuvo que aprender a pelear. Y no bailaba sola.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 687.567,
+  "t1": 698.276,
+  "tipo": "video",
+  "texto": "Antes del combate, una anciana cornamentada le canta a la bestia. Le pide que eche raíces en los guardianes esculpidos de la torre. Que baile,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.276,
+  "t1": 707.053,
+  "tipo": "video",
+  "texto": "y que limpie todo lo que atormenta a la torre. Que limpie a la vil progenie de la ramera. La ramera es Márika.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 707.053,
+  "t1": 716.949,
+  "tipo": "video",
+  "texto": "Y su progenie, los hijos de Márika. La bestia que te tocó matar era la plegaria de una anciana contra el Empalador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 716.949,
+  "t1": 723.089,
+  "tipo": "video",
+  "texto": "Y cuando te llevas su máscara, la Cabeza de bestia divina, su descripción termina así:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 723.089,
+  "t1": 735.43,
+  "tipo": "video",
+  "texto": "ya no responde a las sinceras plegarias de la anciana. Messmer colgó a sus dioses de las lanzas. Y tú te llevaste la cabeza del último.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 735.43,
+  "t1": 741.11,
+  "tipo": "video",
+  "texto": "Y hablando de cosas que no son lo que parecen, un comentario. Pascual nos escribió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 741.11,
+  "t1": 750.68,
+  "tipo": "video",
+  "texto": "con tanto uso de ejemplos modernos, no me cabe duda de que este texto lo elaboró una IA. Tienes toda la razón del mundo, Pascual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 750.68,
+  "t1": 759.44,
+  "tipo": "video",
+  "texto": "En este canal hay inteligencia artificial, y nunca se lo hemos escondido a nadie. Y lo de los ejemplos modernos, anotado:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 759.44,
+  "t1": 768.733,
+  "tipo": "video",
+  "texto": "desde hoy, nada de comparaciones de este siglo. Así que no diremos que Messmer era un jefe tóxico con su plantilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 768.733,
+  "t1": 777.336,
+  "tipo": "video",
+  "texto": "Diremos que era un señor feudal con una política de recursos humanos muy subterránea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 777.336,
+  "t1": 786.886,
+  "tipo": "video",
+  "texto": "Número dos. La sopa fría de la abuela. De todo el pueblo que quemó Messmer, el juego solo te deja hablar con una víctima.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 786.886,
+  "t1": 794.857,
+  "tipo": "video",
+  "texto": "Es la anciana del canto, la Anciana cornamentada. Y la encuentras encerrada en un almacén de Belurat.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 794.857,
+  "t1": 801.137,
+  "tipo": "video",
+  "texto": "Cuando entras, te confunde. Por tu aspecto, cree que eres otro peón de Messmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.137,
+  "t1": 810.148,
+  "tipo": "video",
+  "texto": "Te pregunta si los tuyos nunca se cansan. Qué les sigue fascinando de sus viejos huesos. Y luego lo suelta todo de una vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 810.148,
+  "t1": 817.488,
+  "tipo": "video",
+  "texto": "Que sus tierras fueron incendiadas por los tuyos. Que su torre quedó cubierta de sombra por los tuyos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.488,
+  "t1": 828.195,
+  "tipo": "video",
+  "texto": "Que vinisteis a robarlo todo y a arruinarlo todo. Y que si no os habéis regodeado ya bastante. Por esa ciudad encuentras un objeto de comida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 828.195,
+  "t1": 835.875,
+  "tipo": "video",
+  "texto": "El Potaje de escorpión: escorpión cocido en una sopa negra, receta típica de los cornamentados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 835.875,
+  "t1": 844.605,
+  "tipo": "video",
+  "texto": "Y su descripción termina así. Antaño la preparaban con mimo las abuelas de la familia. Al haberse enfriado hace tiempo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 844.605,
+  "t1": 855.346,
+  "tipo": "video",
+  "texto": "esta sopa desprende un olor rancio y agrio. Una sopa que alguien hizo con cariño para una familia. Y que se enfrió hace mucho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 855.346,
+  "t1": 861.43,
+  "tipo": "video",
+  "texto": "El juego no dice por qué nadie llegó a comérsela. No le hace falta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 861.43,
+  "t1": 870.41,
+  "tipo": "video",
+  "texto": "La anciana tenía un hijo. Es el Cornamentado, el guerrero de los cuernos del grupo de Miquella. En aquel video le llamamos Cornudo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 870.41,
+  "t1": 879.877,
+  "tipo": "video",
+  "texto": "Mal. Se llama el Cornamentado, y lo único que busca es venganza. La anciana te pide que su hijo te acompañe a la guerra,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 879.877,
+  "t1": 889.137,
+  "tipo": "video",
+  "texto": "y que te vengues de Messmer y de los suyos. Y si ayudas al Cornamentado a llegar hasta él, entra en la arena diciéndole esto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 889.137,
+  "t1": 900.43,
+  "tipo": "video",
+  "texto": "Escúchalo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 900.43,
+  "t1": 907.649,
+  "tipo": "video",
+  "texto": "Messmer, enemigo de mi amado pueblo. En venganza por las llamas empuño mi espada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 907.649,
+  "t1": 913.969,
+  "tipo": "video",
+  "texto": "Y en plena pelea le pregunta si ahora lo entiende: el sufrimiento de su clan, su dolor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 913.969,
+  "t1": 922.862,
+  "tipo": "video",
+  "texto": "todo lo que sintieron. Tu fealdad, le dice. Cuando Messmer cae, el Cornamentado te cuenta que le vio la cara,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 922.862,
+  "t1": 931.772,
+  "tipo": "video",
+  "texto": "y que era una maraña de serpientes. Y que cómo se atrevió a llamarlos salvajes, si él era el más vil de todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 931.772,
+  "t1": 941.639,
+  "tipo": "video",
+  "texto": "En japonés no dice salvajes. Dice inmundicia. Y si no llega a vengarse, sus últimas palabras son para su familia:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 941.639,
+  "t1": 946.29,
+  "tipo": "video",
+  "texto": "oh madre, oh amadísima esposa e hijo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 946.29,
+  "t1": 958.06,
+  "tipo": "video",
+  "texto": "En la Llanura de las Tumbas, junto a las Ruinas calcinadas, queda el alma de alguien de ese pueblo. Dice que todos ardieron, que los quemaron Messmer y los suyos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 958.06,
+  "t1": 965.548,
+  "tipo": "video",
+  "texto": "Que qué hicieron para merecer eso, si solo vivían su vida en paz. Ojo, que aquí no hay santos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.548,
+  "t1": 975.068,
+  "tipo": "video",
+  "texto": "La caballera Leda te lo recuerda: fue la reina Márika la que ordenó a Messmer purgar al pueblo de la torre, una limpieza por fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 975.068,
+  "t1": 983.008,
+  "tipo": "video",
+  "texto": "Pero también te dice que los cornamentados nunca fueron santos. Simplemente quedaron del lado perdedor de una guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 983.008,
+  "t1": 991.648,
+  "tipo": "video",
+  "texto": "Aun así, la sopa se enfrió. Y el Mayal de serpiente, un arma de su ejército, deja claro el método:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 991.648,
+  "t1": 1000.394,
+  "tipo": "video",
+  "texto": "algunos del ejército de Messmer usaron estos mayales para quemar a los cornamentados y marcarlos con agonía y miedo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 1000.394,
+  "t1": 1007.264,
+  "tipo": "video",
+  "texto": "Y en la torre encuentras la Túnica de cordón trenzado, la ropa de los cornamentados en busca de venganza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1007.264,
+  "t1": 1017.43,
+  "tipo": "video",
+  "texto": "El cordón trenzado une el juramento del vengador al rencor de las víctimas. Jamás debe deshacerse.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1017.43,
+  "t1": 1026.87,
+  "tipo": "video",
+  "texto": "Antes del número uno, varios comentarios que se ganaron su sitio. Shiro buscaba algo que ver para hacerse wey en el trabajo, y nos da las gracias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1026.87,
+  "t1": 1033.405,
+  "tipo": "video",
+  "texto": "Runita, nos llama. Shiro, tu jefe no se va a enterar por nosotros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1033.405,
+  "t1": 1044.881,
+  "tipo": "video",
+  "texto": "Ulises entró a escuchar música mientras trabajaba, y en cinco días ya se vio todos los videos del canal. Y Daniel nos sigue desde el primer video que subimos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1044.881,
+  "t1": 1050.261,
+  "tipo": "video",
+  "texto": "A día de hoy ya somos mil trescientos suscriptores en el canal. Gracias de corazón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1050.261,
+  "t1": 1059.255,
+  "tipo": "video",
+  "texto": "Aun así, de cada cien vistas de estos videos, menos de nueve son de gente suscrita. El siguiente objetivo son dos mil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1059.255,
+  "t1": 1069.115,
+  "tipo": "video",
+  "texto": "A los Caballeros de Fuego, jurarle lealtad a Messmer les costó la casa. Aquí solo es un botón. Y todos los comentarios se leen,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1069.115,
+  "t1": 1078.465,
+  "tipo": "video",
+  "texto": "uno por uno: con ellos se decide lo que viene. Número uno. La medalla que llevaste colgada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1078.465,
+  "t1": 1086.09,
+  "tipo": "video",
+  "texto": "Las otras cuatro las hizo él. Esta la llevaste tú. En Belurat, la misma ciudad de la anciana,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1086.09,
+  "t1": 1096.38,
+  "tipo": "video",
+  "texto": "te invade un espíritu rojo: el Caballero de Fuego Queelign. Cuando te mata, le grita a la reina Márika que mire, que ha extirpado a otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1096.38,
+  "t1": 1104.695,
+  "tipo": "video",
+  "texto": "Otro cáncer de su alegría. El cáncer eras tú. Queelign quería ser como su señor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1104.695,
+  "t1": 1112.082,
+  "tipo": "video",
+  "texto": "Reforjó su espadón con la forma de la lanza de su soberano, con la esperanza de ser un segundo empalador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1112.082,
+  "t1": 1123.472,
+  "tipo": "video",
+  "texto": "Y si le entregas el Iris de la Gracia, te regala sus cenizas de espíritu. Dicen que empala al enemigo en fuego para alejar a la bella madre Márika de la impureza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1123.472,
+  "t1": 1129.133,
+  "tipo": "video",
+  "texto": "Y que, una vez salvado, lo único que le quedaba era la guerra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1129.133,
+  "t1": 1139.699,
+  "tipo": "video",
+  "texto": "Cuando lo vences, te deja un talismán. Casi todo el mundo se lo puso sin leerlo, porque el efecto es muy bueno. La Insignia de cruzada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1139.699,
+  "t1": 1148.339,
+  "tipo": "video",
+  "texto": "Talismán con una lanza alzada sobre un fondo llameante, en recuerdo de los caídos en la cruzada sagrada liderada por Messmer.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1148.339,
+  "t1": 1155.331,
+  "tipo": "video",
+  "texto": "Aumenta la potencia de ataque tras derrotar a un enemigo. Y sigue. Los cruzados olvidaron el honor",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1155.331,
+  "t1": 1161.471,
+  "tipo": "video",
+  "texto": "y la piedad para empalar y quemar sin misericordia a quienes consideraban impuros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1161.471,
+  "t1": 1171.95,
+  "tipo": "video",
+  "texto": "Quienes se sentían estimulados por los gritos de muerte eran los mismos que abogaban por la santidad de la campaña. Léelo otra vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1171.95,
+  "t1": 1180.77,
+  "tipo": "video",
+  "texto": "Aumenta el ataque tras derrotar a un enemigo. El efecto del talismán es la frase: cada vez que matas, te crece la fuerza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1180.77,
+  "t1": 1188.9,
+  "tipo": "video",
+  "texto": "Como a ellos con los gritos. Rico, esta era la medalla. Y ahora la pregunta importante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1188.9,
+  "t1": 1197.511,
+  "tipo": "video",
+  "texto": "¿Quiénes eran los impuros? Messmer te lo dice a la cara en cuanto entras en su sala. Te llama intruso sarnoso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1197.511,
+  "t1": 1207.651,
+  "tipo": "video",
+  "texto": "Dice que eres un Sinluz, según parece. Y le pregunta a su madre si su verdadero señorío sanciona a alguien tan despojado de luz.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1207.651,
+  "t1": 1218.43,
+  "tipo": "video",
+  "texto": "Escúchalo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1218.43,
+  "t1": 1224.29,
+  "tipo": "video",
+  "texto": "Te llama despojado de luz. Y ahora vuelve a la frase del principio:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1224.29,
+  "t1": 1232.501,
+  "tipo": "video",
+  "texto": "quienes se ven despojados del don del oro deberán hacer frente a la muerte. La cruzada no era solo contra un pueblo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1232.501,
+  "t1": 1241.561,
+  "tipo": "video",
+  "texto": "Era contra todo el que no tuviera la gracia del oro. Y tú eres un Sinluz: la definición exacta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1241.561,
+  "t1": 1252.374,
+  "tipo": "video",
+  "texto": "Llevabas al cuello la medalla de una cruzada que existía para matarte. Y para rematarlo. Por el Reino de las Sombras recoges la Runa de Márika:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1252.374,
+  "t1": 1260.274,
+  "tipo": "video",
+  "texto": "restos dorados de la Gracia concedida personalmente por la reina Márika a los héroes que se unieron a la cruzada por ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1260.274,
+  "t1": 1267.837,
+  "tipo": "video",
+  "texto": "Y tú la rompiste para cobrar ochenta mil runas. Messmer lo dejó escrito en su propia armadura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1267.837,
+  "t1": 1276.017,
+  "tipo": "video",
+  "texto": "Por deseo de su madre, se convirtió en un símbolo aterrador para llevar a cabo la cruzada purificadora que ella ansiaba.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1276.017,
+  "t1": 1286.688,
+  "tipo": "video",
+  "texto": "Y debajo, una frase entre comillas: centra en mí, y solo en mí, tus maldiciones, tu ira y tu pesar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1286.688,
+  "t1": 1291.508,
+  "tipo": "video",
+  "texto": "Y aquí va el último comentario de hoy. Retos nos escribió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1291.508,
+  "t1": 1302.82,
+  "tipo": "video",
+  "texto": "sinceramente, el juego me parece malísimo, junto con Nightreign, aunque el lore está bien. Coincidimos en lo importante, Retos: el lore está bien.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1302.82,
+  "t1": 1311.78,
+  "tipo": "video",
+  "texto": "Para todo lo demás, no hace falta que lo juegues; ya nos lo pasamos nosotros por ti. Y Messmer te daría la razón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1311.78,
+  "t1": 1318.55,
+  "tipo": "video",
+  "texto": "Él tampoco quería que nadie entrara en su reino. Esa es la lista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1318.55,
+  "t1": 1328.76,
+  "tipo": "video",
+  "texto": "Sus propios caballeros, encerrados en una tumba por descubrir que su señor era una serpiente. Un sabio que quemó más aldeas que nadie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1328.76,
+  "t1": 1335.71,
+  "tipo": "video",
+  "texto": "Los dioses de otro pueblo, colgados de sus lanzas. Una sopa que se enfrió esperando a una familia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1335.71,
+  "t1": 1344.667,
+  "tipo": "video",
+  "texto": "Y una medalla para los que disfrutaban los gritos, que te colgaste tú. Pero hay una última cosa que llevaste en el inventario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1344.667,
+  "t1": 1354.007,
+  "tipo": "video",
+  "texto": "La Bendición de Márika: una medicina especial bendecida por la reina, que te cura todo de golpe. En inglés y en japonés,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1354.007,
+  "t1": 1361.878,
+  "tipo": "video",
+  "texto": "su descripción termina así: Márika hizo varias de estas medicinas para Messmer. Y nunca más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1361.878,
+  "t1": 1372.338,
+  "tipo": "video",
+  "texto": "La madre que le arrancó el ojo y lo escondió en el Reino de las Sombras le hizo medicinas una vez. Y después de eso, nunca más volvió a hacerlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1372.338,
+  "t1": 1379.266,
+  "tipo": "video",
+  "texto": "Y te las bebiste tú. Su Recuerdo lo cierra así: oculto junto al pecado original,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1379.266,
+  "t1": 1388.556,
+  "tipo": "video",
+  "texto": "su odio fue creciendo. Y cuando por fin lo vences, su último aliento no es para ti. Es para ella.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1388.556,
+  "t1": 1398.415,
+  "tipo": "video",
+  "texto": "Escúchalo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1398.415,
+  "t1": 1403.615,
+  "tipo": "video",
+  "texto": "Madre. Márika. Una maldición caerá sobre ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1403.615,
+  "t1": 1415.335,
+  "tipo": "video",
+  "texto": "Es la única vez en todo el combate que la llama por su nombre. Messmer quemó un reino entero por su madre. Y lo último que le dejó fue una maldición.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1415.335,
+  "t1": 1421.875,
+  "tipo": "video",
+  "texto": "Santiago, que nos pidió a Messmer hace semanas, ya está votando por el siguiente: Bayle el Temible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1421.875,
+  "t1": 1431.955,
+  "tipo": "video",
+  "texto": "Ulises lleva días pidiéndolo también. Y en los comentarios siguen Rennala, Maliketh, Parches, y el Zampaheces con Gideon. Dinos cuál quieres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1431.955,
+  "t1": 1438.495,
+  "tipo": "video",
+  "texto": "En el canal tienes las atrocidades de Márika y Radagon, de Miquella, Malenia, Ranni, Melina,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1438.495,
+  "t1": 1447.292,
+  "tipo": "video",
+  "texto": "Radahn, Morgott, Mohg, Godrick, Godfrey, Rykard, y las tuyas. Suscríbete, que vamos por los dos mil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1447.292,
+  "t1": 1456.662,
+  "tipo": "video",
+  "texto": "Y si te gustan los mundos donde hasta los dioses tienen las manos sucias, Crónicas de Tamriel, nuestro canal hermano, cuenta los secretos de Skyrim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1456.662,
+  "t1": 1467.424,
+  "tipo": "video",
+  "texto": "Te lo dejo aquí al final. Y la próxima vez que un talismán te dé más fuerza por cada enemigo que matas, léelo antes de ponértelo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1467.424,
+  "t1": 1474.5,
+  "tipo": "video",
+  "texto": "A lo mejor la medalla es de los que te estaban buscando.",
+  "clip_s": 8
+ }
+]

@@ -1,0 +1,922 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.08,
+  "tipo": "video",
+  "texto": "Expediente ciento cuarenta y uno. Asunto: los protagonistas. El capitán Price, el sargento Soap, Gaz y el teniente Ghost.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.08,
+  "t1": 18.97,
+  "tipo": "video",
+  "texto": "El agente Mason, el sargento Woods y el viejo Reznov. Los manejaste a todos. Les salvaste la vida cien veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 18.97,
+  "t1": 27.19,
+  "tipo": "video",
+  "texto": "Y casi ninguno terminó como crees. Uno estaba muerto desde la segunda misión. Otro murió de viejo, con ciento cuatro años.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 27.19,
+  "t1": 32.93,
+  "tipo": "video",
+  "texto": "Y al capitán Price lo mataron este mismo año.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 32.93,
+  "t1": 42.94,
+  "tipo": "video",
+  "texto": "Revisé el destino de cada uno, juego por juego, con la escena en pantalla. Aviso: hay spoilers de Modern Warfare 4 y de Black Ops 7.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 42.94,
+  "t1": 52.805,
+  "tipo": "video",
+  "texto": "Veinte protagonistas de Call of Duty, y cómo acabó realmente cada uno. Empezamos por el que llegó más lejos: al espacio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.805,
+  "t1": 62.918,
+  "tipo": "video",
+  "texto": "Número veinte. Nick Reyes, Infinite Warfare. Capitán de la nave Retribution, y el personaje jugable de mayor rango de toda la saga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 62.918,
+  "t1": 71.094,
+  "tipo": "video",
+  "texto": "En la última operación, sobre Marte, se queda dentro del astillero enemigo, y le ordena a Salter que dispare de todos modos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 71.094,
+  "t1": 78.624,
+  "tipo": "video",
+  "texto": "Sale despedido al vacío. Ve explotar el astillero. Y tres trozos de metralla le van rompiendo el visor del casco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.624,
+  "t1": 86.5,
+  "tipo": "video",
+  "texto": "hasta que la pantalla se va a negro. Antes ya se había salvado dos veces: en la Luna, y a la deriva sobre Titán.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.5,
+  "t1": 94.266,
+  "tipo": "video",
+  "texto": "A la tercera, nadie fue a buscarlo. En el diecinueve, Logan Walker, de Ghosts.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.266,
+  "t1": 102.846,
+  "tipo": "video",
+  "texto": "El final: un tren que cae al agua, una sola bala, y Rorke en el suelo. Logan saca a su hermano Hesh a la orilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 102.846,
+  "t1": 110.894,
+  "tipo": "video",
+  "texto": "Empiezan los créditos. Y la escena vuelve. Rorke está vivo, le rompe el brazo a Logan y se lo lleva arrastrando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.894,
+  "t1": 120.364,
+  "tipo": "video",
+  "texto": "Logan despierta en un pozo, bajo la lluvia. Han pasado trece años. No hubo secuela. Logan sigue en ese pozo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.364,
+  "t1": 129.184,
+  "tipo": "video",
+  "texto": "Keengan lo dijo así: que Rorke era muy buen villano, y quedó en el olvido por el hype de Modern Warfare 4. Rorke ganó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.184,
+  "t1": 139.762,
+  "tipo": "video",
+  "texto": "Y ni siquiera le dieron el crédito. Número dieciocho. Alex Keller, el agente de la CIA de Modern Warfare dos mil diecinueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 139.762,
+  "t1": 148.441,
+  "tipo": "video",
+  "texto": "En la fábrica de Barkov, en Georgia, el detonador se rompe. Alex le pide la orden a Farah, y entra solo a volar el horno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 148.441,
+  "t1": 154.941,
+  "tipo": "video",
+  "texto": "Todos lo dieron por muerto. No lo estaba. Sobrevivió a la explosión sin la pierna izquierda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 154.941,
+  "t1": 165.43,
+  "tipo": "video",
+  "texto": "pasó cinco meses escondido, y volvió con una prótesis. El sacrificio más heroico de la saga, y le costó una pierna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 165.43,
+  "t1": 170.573,
+  "tipo": "video",
+  "texto": "En el diecisiete, el sargento Paul Jackson, de Call of Duty 4.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.573,
+  "t1": 182.263,
+  "tipo": "video",
+  "texto": "El helicóptero está en el aire cuando estalla la bomba nuclear. Despiertas entre los restos, sales arrastrándote, y caminas entre ruinas rojas, con el hongo al fondo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 182.263,
+  "t1": 187.379,
+  "tipo": "video",
+  "texto": "Te desplomas. Sin cinemática. Todo en primera persona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 187.379,
+  "t1": 196.999,
+  "tipo": "video",
+  "texto": "Pero en el código del juego quedaron tres objetivos cortados: buscar equipo contra la radiación, localizar al oficial al mando, y ponerte a cubierto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.999,
+  "t1": 206.24,
+  "tipo": "video",
+  "texto": "Jackson iba a sobrevivir. Alguien decidió que no. Número dieciséis. El presidente Al-Fulani,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.24,
+  "t1": 214.723,
+  "tipo": "video",
+  "texto": "la primera misión de Call of Duty 4. Lo controlas, pero no puedes hacer nada. Te llevan en el asiento de atrás de un coche,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.723,
+  "t1": 220.908,
+  "tipo": "video",
+  "texto": "por una ciudad en pleno golpe de Estado, hasta un poste en un patio lleno de soldados.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 220.908,
+  "t1": 230.581,
+  "tipo": "video",
+  "texto": "Y el que va de copiloto, dándole órdenes al chofer, es Victor Zakhaev, el hijo del villano, el mismo al que acorralan en una azotea misiones después.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 230.581,
+  "t1": 239.81,
+  "tipo": "video",
+  "texto": "El primer protagonista del Modern Warfare original duró una misión, y la pasó sentado. Antes del quince, un comentario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 239.81,
+  "t1": 250.735,
+  "tipo": "video",
+  "texto": "Andrés vio el expediente de Modern Warfare 4 y escribió: lo único que rescato es que Riley sí existe: el perro de una familia, en una misión encubierta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.735,
+  "t1": 257.895,
+  "tipo": "video",
+  "texto": "Gracias, Andrés. Es un buen dato. Y de todo el expediente, lo único que se salvó fue el perro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 257.895,
+  "t1": 265.812,
+  "tipo": "video",
+  "texto": "Como en las películas. Número quince. Joseph Allen, el ranger de Modern Warfare 2.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 265.812,
+  "t1": 276.613,
+  "tipo": "video",
+  "texto": "Entra encubierto con la banda de Makarov, con otro nombre, a la misión del aeropuerto. Al final, en el estacionamiento, Makarov le tiende la mano para subirlo a la ambulancia.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 276.613,
+  "t1": 281.195,
+  "tipo": "video",
+  "texto": "Y ya sabía quién era. Makarov lo supo desde el principio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 281.195,
+  "t1": 292.849,
+  "tipo": "video",
+  "texto": "El cuerpo de un estadounidense en ese aeropuerto era justo el mensaje que necesitaba para empezar la guerra. Allen no fue el infiltrado. Fue la carta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.849,
+  "t1": 302.475,
+  "tipo": "video",
+  "texto": "En el catorce, Yuri, de Modern Warfare 3. En la misión Blood Brothers, con sus recuerdos, descubres que Yuri estuvo en todas partes:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.475,
+  "t1": 310.826,
+  "tipo": "video",
+  "texto": "en Prípiat en mil novecientos noventa y seis, viendo la bomba nuclear desde lejos, y en el aeropuerto, intentando detener a Makarov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.826,
+  "t1": 320.699,
+  "tipo": "video",
+  "texto": "Muere en la última misión, en el hotel de Dubái. Atravesado por una barra de hierro, le grita a Price que lo deje y que no deje escapar a Makarov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 320.699,
+  "t1": 326.099,
+  "tipo": "video",
+  "texto": "Y aun así se levanta, y le dispara a Makarov justo cuando iba a matar a Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.099,
+  "t1": 334.851,
+  "tipo": "video",
+  "texto": "Le salvó la vida, y le costó la suya. Número trece. Case, el protagonista de Black Ops 6.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 334.851,
+  "t1": 344.511,
+  "tipo": "video",
+  "texto": "El final: el helicóptero de Jane Harrow cae al mar Negro. Case, con una voz en la cabeza que le dice que termine, pelea con ella bajo el agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 344.511,
+  "t1": 351.889,
+  "tipo": "video",
+  "texto": "Corte a negro. Por la radio, Marshall grita que lo lograron. Y nadie dice qué pasó con Case.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.889,
+  "t1": 362.93,
+  "tipo": "video",
+  "texto": "Lo responde Black Ops 7: diez años después, el villano recupera una muestra de sus restos. El final abierto se cerró con una muestra de laboratorio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 362.93,
+  "t1": 368.866,
+  "tipo": "video",
+  "texto": "En el doce, David Mason, Section, de Black Ops 2 y Black Ops 7.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 368.866,
+  "t1": 377.195,
+  "tipo": "video",
+  "texto": "El final bueno de Black Ops 2: Section deja su pistola frente a la tumba de su padre, y le dice a Woods que ya terminó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.195,
+  "t1": 386.475,
+  "tipo": "video",
+  "texto": "No terminó. En Black Ops 7 vuelve a mandar un equipo, en dos mil treinta y cinco. Y ese juego volvió oficial el final de Black Ops 2:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.475,
+  "t1": 393.891,
+  "tipo": "video",
+  "texto": "Harper vivo, Karma viva, y Alex Mason muerto. Section sobrevive a todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 393.891,
+  "t1": 402.97,
+  "tipo": "video",
+  "texto": "Lo que no sobrevive es su familia. Ya lo verás en el número cinco. Número once. Roach y Ghost,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 402.97,
+  "t1": 411.812,
+  "tipo": "video",
+  "texto": "los originales, de Modern Warfare 2. Roach acaba de cargar el disco con la información de Makarov. Ghost lo arrastra,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 411.812,
+  "t1": 419.175,
+  "tipo": "video",
+  "texto": "herido, hasta el helicóptero del general Shepherd. Shepherd le pregunta si lo tienen. Ghost dice que sí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.175,
+  "t1": 428.858,
+  "tipo": "video",
+  "texto": "Escucha lo que contesta Shepherd. Un cabo suelto menos. Un disparo, una zanja,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 428.858,
+  "t1": 436.764,
+  "tipo": "video",
+  "texto": "gasolina, y el puro de Shepherd. En el remaster agregaron dos detalles: Ghost mira a Roach confundido,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 436.764,
+  "t1": 447.93,
+  "tipo": "video",
+  "texto": "y Roach intenta agarrarle la muñeca a Shepherd. Lo que nunca le dieron a Roach fue voz: su único grito en todo el juego es si te caes de un acantilado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.93,
+  "t1": 455.509,
+  "tipo": "video",
+  "texto": "En el diez, el otro Ghost: el del reinicio. Modern Warfare dos mil diecinueve, Modern Warfare 2,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.509,
+  "t1": 464.728,
+  "tipo": "video",
+  "texto": "3 y 4. Y al final de Modern Warfare 4, es el único de la fuerza ciento cuarenta y uno que sigue vivo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.728,
+  "t1": 472.108,
+  "tipo": "video",
+  "texto": "TMPLR5 lo vio venir: escribió que, como Ghost quedó vivo, seguramente iba a dirigir su propio equipo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.108,
+  "t1": 480.646,
+  "tipo": "video",
+  "texto": "Casi. Al final de Modern Warfare 4, Laswell borra su expediente. Oficialmente, Ghost ya no existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.646,
+  "t1": 487.93,
+  "tipo": "video",
+  "texto": "De la fuerza ciento cuarenta y uno, el que nunca enseñó la cara es el único que sigue de pie.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 487.93,
+  "t1": 498.127,
+  "tipo": "video",
+  "texto": "Número nueve. Viktor Reznov, de World at War y Black Ops. Vorkuta, mil novecientos sesenta y tres. La fuga de la prisión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.127,
+  "t1": 507.714,
+  "tipo": "video",
+  "texto": "Reznov se queda atrás para que Mason pueda subir al tren. Escucha su despedida.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.714,
+  "t1": 516.354,
+  "tipo": "video",
+  "texto": "Muere en Vorkuta. Y todo el Reznov que acompaña a Mason después, en Vietnam, en la isla Rebirth, nunca estuvo ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.354,
+  "t1": 525.233,
+  "tipo": "video",
+  "texto": "Era una alucinación del condicionamiento. Hudson se lo dice a Mason en el interrogatorio: Reznov llevaba cinco años muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.233,
+  "t1": 532.93,
+  "tipo": "video",
+  "texto": "Y aun así se vengó de Dragovich, de Kravchenko y de Steiner. Muerto, y a través de otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 532.93,
+  "t1": 540.1,
+  "tipo": "video",
+  "texto": "En el ocho, John Soap MacTavish. El original. Mataste a Zakhaev con él en Call of Duty 4,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.1,
+  "t1": 550.75,
+  "tipo": "video",
+  "texto": "y sobreviviste a un cuchillo en el pecho en Modern Warfare 2. En Modern Warfare 3, en Praga, Makarov vuela el edificio donde estaba de francotirador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.75,
+  "t1": 557.83,
+  "tipo": "video",
+  "texto": "Soap empuja a Yuri por un hueco para salvarlo. Lo tienden sobre una mesa, y Price le pide que aguante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.83,
+  "t1": 567.93,
+  "tipo": "video",
+  "texto": "Estas son sus últimas palabras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.93,
+  "t1": 575.88,
+  "tipo": "video",
+  "texto": "Makarov sabe. Yuri. Y muere. Price le deja sobre el pecho la misma pistola M1911",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.88,
+  "t1": 583.11,
+  "tipo": "video",
+  "texto": "con la que Soap mató a Zakhaev. Solo lo controlaste en la primera misión de Modern Warfare 3. El resto,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 583.11,
+  "t1": 592.212,
+  "tipo": "video",
+  "texto": "solo pudiste verlo morir. Número siete. Frank Woods. Murió tres veces.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.212,
+  "t1": 602.213,
+  "tipo": "video",
+  "texto": "En Black Ops 1 se lanza por una ventana con Kravchenko y un cinturón de granadas. Sobrevive. En Black Ops 2, en un final, Menéndez lo mata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.213,
+  "t1": 609.655,
+  "tipo": "video",
+  "texto": "En Cold War, en otro, lo ejecuta Bell. Ninguna de las dos cuenta. Black Ops 7 cerró la cuenta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 609.655,
+  "t1": 618.155,
+  "tipo": "video",
+  "texto": "Woods murió en dos mil treinta y cuatro, de viejo, con ciento cuatro años, y está enterrado en Arlington. Sobrevivió a Vietnam,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.155,
+  "t1": 625.43,
+  "tipo": "video",
+  "texto": "a Kravchenko, a Menéndez y a Bell. Lo único que lo pudo matar fue el calendario.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 625.43,
+  "t1": 634.97,
+  "tipo": "video",
+  "texto": "En el seis, Bell, el protagonista de Black Ops Cold War. Lo creas tú: nombre, origen, todo. Y al final eliges.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 634.97,
+  "t1": 643.207,
+  "tipo": "video",
+  "texto": "Si dices la verdad, salvas Europa, y Adler te lleva a un acantilado. Los dos sacan la pistola, cámara lenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 643.207,
+  "t1": 652.93,
+  "tipo": "video",
+  "texto": "y todo se va a negro antes del disparo. Antes, Adler le dice esto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.93,
+  "t1": 662.38,
+  "tipo": "video",
+  "texto": "En el juego nunca se sabe quién disparó. En dos mil veinticuatro, Treyarch lo dijo en su podcast oficial: disparó Adler primero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 662.38,
+  "t1": 670.476,
+  "tipo": "video",
+  "texto": "Elegiste el final bueno. El final bueno también te mata. Número cinco. Alex Mason.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.476,
+  "t1": 678.736,
+  "tipo": "video",
+  "texto": "Black Ops 2, Panamá, mil novecientos ochenta y nueve. Juegas como Woods. Noriega te entrega a un hombre con una bolsa en la cabeza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 678.736,
+  "t1": 686.269,
+  "tipo": "video",
+  "texto": "y Hudson te ordena dispararle. Tú decides dónde apuntar. Woods le quita la bolsa, y es Mason.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 686.269,
+  "t1": 696.79,
+  "tipo": "video",
+  "texto": "El juego te dejaba salvarlo. Pero en dos mil veinticuatro, Treyarch eligió: Mason está muerto. Lo mató Woods. Y Hudson, también muerto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.79,
+  "t1": 702.918,
+  "tipo": "video",
+  "texto": "Durante años, Woods le dijo a David que a su padre lo había matado un vagabundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 702.918,
+  "t1": 711.528,
+  "tipo": "video",
+  "texto": "En el cuatro, el protagonista de Black Ops 3. El que no tiene nombre. En la segunda misión te operan para ponerte implantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 711.528,
+  "t1": 719.303,
+  "tipo": "video",
+  "texto": "Falla el soporte vital, y mueres en la camilla. Taylor se conecta a tu cerebro, y tu conciencia pasa al suyo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 719.303,
+  "t1": 730.192,
+  "tipo": "video",
+  "texto": "Todo lo que juegas después es una simulación, hecha con los recuerdos de Taylor. Y en esa misma operación, el doctor dice que el paciente puede quedar con muerte cerebral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 730.192,
+  "t1": 738.202,
+  "tipo": "video",
+  "texto": "El protagonista contesta que de todos modos es hombre muerto. Hablaba de sí mismo, y no lo sabía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.202,
+  "t1": 745.43,
+  "tipo": "video",
+  "texto": "Al final, en blanco y negro, un soldado le pregunta su nombre. Y responde: Taylor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 745.43,
+  "t1": 757.011,
+  "tipo": "video",
+  "texto": "Antes del tres, un comentario del expediente de los villanos. Tres palabras: ¿y Archer? Es el reporte más corto que ha llegado a este canal, y el más justo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 757.011,
+  "t1": 763.83,
+  "tipo": "video",
+  "texto": "Faltó. Hoy sí sale. Y no le va a gustar cómo. Número tres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.83,
+  "t1": 773.131,
+  "tipo": "video",
+  "texto": "Gaz. Los dos. Modern Warfare 4, Corea del Norte. Price, Ghost y Gaz, atados a unas sillas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 773.131,
+  "t1": 778.631,
+  "tipo": "video",
+  "texto": "Gaz ya es capitán, y le reprocha a Price haberse vuelto un fugitivo. Escucha lo que",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 778.631,
+  "t1": 789.36,
+  "tipo": "video",
+  "texto": "le dice. Entra el Archer, el ministro ruso, el padre de Makarov.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.36,
+  "t1": 799.987,
+  "tipo": "video",
+  "texto": "Se burla de Gaz, y pasa por detrás de su silla. Lo ejecuta delante de Price. Y el Gaz original, el de Call of Duty 4, murió igual:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.987,
+  "t1": 807.717,
+  "tipo": "video",
+  "texto": "herido, desarmado, en el puente, a manos de Zakhaev. Dos Gaz, dos villanos, la misma muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.717,
+  "t1": 815.65,
+  "tipo": "video",
+  "texto": "Y en las dos, lo vengó Price. En el dos, Johnny Soap MacTavish.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 815.65,
+  "t1": 823.022,
+  "tipo": "video",
+  "texto": "El del reinicio. Modern Warfare 3, dos mil veintitrés. El túnel bajo el canal de la Mancha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 823.022,
+  "t1": 833.258,
+  "tipo": "video",
+  "texto": "Soap, herido, sostiene la bomba y guía a Price para cortar los cables. Entra Makarov. Soap se levanta y le clava un cuchillo en el hombro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 833.258,
+  "t1": 838.998,
+  "tipo": "video",
+  "texto": "Makarov lo remata. Después, en las montañas de Escocia, Ghost esparce",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 838.998,
+  "t1": 850.365,
+  "tipo": "video",
+  "texto": "sus cenizas. El reinicio mató a Soap. Murió salvando a Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 850.365,
+  "t1": 858.935,
+  "tipo": "video",
+  "texto": "Y fue su muerte la que llevó a Price a matar a Shepherd en su propia oficina. La comunidad se lo tomó tan mal que un aspecto del juego dice:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 858.935,
+  "t1": 867.26,
+  "tipo": "video",
+  "texto": "yo no estaba en ese túnel. Y el número uno. El capitán John Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 867.26,
+  "t1": 875.24,
+  "tipo": "video",
+  "texto": "Modern Warfare 4, la última misión. Price va preso en un convoy con el Archer. Ghost lo embosca, el camión choca,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 875.24,
+  "t1": 883.511,
+  "tipo": "video",
+  "texto": "y una varilla de acero le atraviesa el abdomen. Herido, persigue al Archer por un bosque nevado, hasta un lago helado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 883.511,
+  "t1": 893.748,
+  "tipo": "video",
+  "texto": "Y ahí acaba con él, con la misma varilla. El Archer, el que preguntaba Hdad. Llega Ghost. Le pregunta si valió la pena.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 893.748,
+  "t1": 905.43,
+  "tipo": "video",
+  "texto": "Escucha lo que contesta Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 905.43,
+  "t1": 912.568,
+  "tipo": "video",
+  "texto": "Gaz tenía razón. Hay que mantener la línea. Ghost le toma la mano, y le cierra los ojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.568,
+  "t1": 918.328,
+  "tipo": "video",
+  "texto": "Y a mitad de los créditos, Laswell borra los expedientes de Gaz, de Ghost y de Price.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 918.328,
+  "t1": 928.567,
+  "tipo": "video",
+  "texto": "Bienvenidos al programa Watcher. Maibel lo notó: Watcher 2 es la que da las órdenes en el modo DMZ, sin nombre, solo con su cara.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 928.567,
+  "t1": 933.945,
+  "tipo": "video",
+  "texto": "El programa sigue. Price, no. Y hay tres Price en la saga.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 933.945,
+  "t1": 944.515,
+  "tipo": "video",
+  "texto": "El de la Segunda Guerra Mundial murió en el primer Call of Duty, en un acorazado alemán. El del reinicio, en un lago helado. El único que sobrevive es el del puro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 944.515,
+  "t1": 953.541,
+  "tipo": "video",
+  "texto": "El de dos mil siete. Expediente cerrado. Veinte protagonistas, y la mayoría no salió viva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 953.541,
+  "t1": 961.101,
+  "tipo": "video",
+  "texto": "Gracias a Keengan, a TMPLR5, a Maibel, a Andrés y a Hdad por los datos de este expediente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 961.101,
+  "t1": 969.681,
+  "tipo": "video",
+  "texto": "Y v5x777 votó que se quede el intruso: el voto está anotado, y la votación sigue abierta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 969.681,
+  "t1": 978.781,
+  "tipo": "video",
+  "texto": "Ahora te toca a ti: ¿qué protagonista crees que merecía otro final? Escríbelo. Los mejores comentarios salen en el siguiente expediente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 978.781,
+  "t1": 987.5,
+  "tipo": "video",
+  "texto": "Y si te gustó, en el canal tienes cómo murió cada villano. Suscríbete. Retírate, soldado.",
+  "clip_s": 8
+ }
+]

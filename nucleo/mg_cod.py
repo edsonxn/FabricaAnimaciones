@@ -27,6 +27,11 @@ La interfaz aquí es la del reboot de Modern Warfare (2019-2026):
                                       a B/N) | «SOBREVIVIÓ» | «DEPENDE DEL FINAL» | «SIN CUERPO»
   bajas(sagas, tachados, foco)        (17-nov-2026) TABLERO DE BAJAS por saga: retratos en columnas; los ya muertos en B/N con
                                       X; el `foco` en ámbar recibe su X en la marca 0 (abre cada puesto de una lista de villanos)
+  placa(nombre, lineas, estado)       (24-nov-2026, cod_protagonistas) PLACA DE IDENTIFICACIÓN metálica con cadena: el nombre y
+                                      las `lineas` se graban una por marca; la marca n+1 estampa el estado (vivo | kia | mia |
+                                      depende | retcon | vuelve | desconocido | retirado | preso)
+  servicio(nombre, foto, filas)       (24-nov-2026) HOJA DE SERVICIO: retrato + una fila por juego (juego, año, estado, nota) con
+                                      píldora de color; la última fila (el destino final) en ámbar
 Probar SIEMPRE con una hoja de cuadros antes de `fx`.
 """
 import math
@@ -1129,5 +1134,140 @@ def golpes(titulo, aguanta, sub=None, w=1000):
                 _txt(d, (x + lado / 2, y + lado + 24), "CAES", fuente("mb", 26), ROJO, "mm", 255 * u, track=3)
         if sub:
             _txt(d, (M + w / 2, M + h - 30), sub, fsub, HUESO, "mm", 230 * _eo((dt - .4) / .4))
+        return _salida(im, dt, dur)
+    return fn
+
+
+# ------------------------------------------------------------------ 24-nov-2026 (cod_protagonistas): placa y hoja de servicio
+_ESTADOS = {"vivo": (VERDE, "VIVO"), "kia": (ROJO, "K.I.A."), "mia": (GRIS, "M.I.A."), "depende": (AMBAR, "DEPENDE DE TI"),
+            "retcon": (AMBAR, "RETCON"), "vuelve": (VERDE, "REGRESA"), "desconocido": (GRIS, "DESCONOCIDO"),
+            "retirado": (HUESO, "RETIRADO"), "preso": (AMBAR, "PRESO")}
+
+
+def placa(nombre, lineas, estado="vivo", sub=None, w=640):
+    """PLACA DE IDENTIFICACIÓN (dog tag) del protagonista: chapa metálica con la cadena, el NOMBRE grabado y `lineas`
+    (rango, unidad, juego…) que se graban una por marca; la marca n+1 estampa el ESTADO (vivo | kia | mia | depende | retcon |
+    vuelve | desconocido | retirado | preso). `sub` sale bajo la placa tras el sello. Sin marcas: una línea cada 0,5 s."""
+    col, rot = _ESTADOS[estado]
+    pw = w - 60
+    ph = 250 + 46 * max(0, len(lineas) - 2)
+    h = ph + 170 + (50 if sub else 0)
+    fN = ajustar(nombre.upper(), "mb", 48, pw - 140)
+    fL = [ajustar(s.upper(), "mb", 28, pw - 140, minimo=15) for s in lineas]
+    fS = fuente("b", 76, "Bold Condensed")
+    fs2 = ajustar(sub or "", "mb", 26, w - 20, minimo=14)
+    chapa = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+    grad = np.linspace(0, 1, ph)[:, None] * np.ones((1, pw)) + np.linspace(0, .35, pw)[None, :]
+    base = (150 + 70 * np.cos(grad * 3.1 + .6)).clip(0, 255)
+    arr = np.dstack([base * .96, base, base * 1.02, np.full_like(base, 235)]).clip(0, 255).astype(np.uint8)
+    met = Image.fromarray(arr, "RGBA")
+    m = Image.new("L", (pw, ph), 0)
+    ImageDraw.Draw(m).rounded_rectangle((0, 0, pw - 1, ph - 1), radius=58, fill=255)
+    ImageDraw.Draw(m).ellipse((30, ph / 2 - 20, 70, ph / 2 + 20), fill=0)        # agujero de la cadena
+    chapa.paste(met, (0, 0), m)
+    ImageDraw.Draw(chapa).rounded_rectangle((8, 8, pw - 9, ph - 9), radius=52, outline=(255, 255, 255, 90), width=3)
+    W_, H_ = w + 80, h + 80
+
+    def fn(dt, dur, marcas):
+        im = Image.new("RGBA", (W_, H_), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        n = len(lineas)
+        mk = list(marcas or [])
+        while len(mk) < n + 1:
+            mk.append((mk[-1] + .5) if mk else .55)
+        u = _eo(dt / .4)
+        x0, y0 = 40 + (w - pw) / 2, 40 + 60 - 50 * (1 - u)
+        for k in range(16):                                    # cadena de bolitas
+            cx = x0 + 50 - 6 * k
+            cy = y0 + ph / 2 - 8 - 5.5 * k
+            d.ellipse((cx - 5, cy - 5, cx + 5, cy + 5), fill=(205, 205, 210, int(220 * u)), outline=(90, 90, 95, int(200 * u)))
+        cc = chapa.copy()
+        cc.putalpha(cc.getchannel("A").point(lambda v: int(v * u)))
+        im.alpha_composite(cc, (int(x0), int(y0)))
+        tx = x0 + 100
+        grab = (34, 36, 38)
+        vis = nombre.upper()[:int(max(0, (dt - .2) * 40))]
+        d.text((tx + 2, y0 + 62 + 2), vis, font=fN, fill=(255, 255, 255, 120), anchor="lm")
+        d.text((tx, y0 + 62), vis, font=fN, fill=grab + (255,), anchor="lm")
+        for i, (s, f) in enumerate(zip(lineas, fL)):
+            if dt < mk[i]:
+                continue
+            vs = s.upper()[:int((dt - mk[i]) * 45)]
+            yy = y0 + 126 + i * 46
+            d.text((tx + 2, yy + 2), vs, font=f, fill=(255, 255, 255, 110), anchor="lm")
+            d.text((tx, yy), vs, font=f, fill=grab + (255,), anchor="lm")
+        t_s = mk[n]
+        if dt >= t_s:
+            v = dt - t_s
+            s = 1.5 - .5 * _eo(v / .18)
+            f = fuente("b", int(76 * s), "Bold Condensed")
+            tw = _ancho(rot, fS) + 60
+            sx, sy = x0 + pw - tw / 2 - 10, y0 + ph + 8
+            a = 255 * _eo(v / .12)
+            capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            dc = ImageDraw.Draw(capa)
+            dc.rectangle((sx - tw / 2, sy - 46, sx + tw / 2, sy + 46), outline=col + (int(a),), width=6,
+                         fill=(0, 0, 0, int(a * .55)))
+            _txt(dc, (sx, sy), rot, f, col, "mm", a, track=3)
+            capa = capa.rotate(5, center=(sx, sy), resample=Image.BICUBIC)
+            im.alpha_composite(capa)
+            if sub and v > .3:
+                _txt(d, (W_ / 2, y0 + ph + 92), sub[:int((v - .3) * 55)], fs2, col, "mm", 240)
+        return _bgra(im, min(1.0, (dur - dt) / .35))
+    return fn
+
+
+def servicio(nombre, foto, filas, titulo="HOJA DE SERVICIO", w=1240):
+    """HOJA DE SERVICIO: retrato (cara visible) y una fila por JUEGO que entra por marca: (juego, año, estado, nota), con el
+    estado como píldora de color (claves de `placa`: vivo | kia | mia | depende | retcon | vuelve | desconocido | retirado | preso).
+    La última fila queda resaltada en ámbar: el destino final. Sin marcas: una fila cada 0,7 s desde 0,5 s."""
+    R = 300
+    ret = _retrato(foto, R)
+    in_x = R + 80
+    in_w = w - in_x - 50
+    filah = 78
+    h = max(R + 110, 150 + filah * len(filas) + 30)
+    fT = fuente("mb", 22)
+    fN = ajustar(nombre.upper(), "b", 58, in_w, peso="Bold Condensed")
+    fJ = [ajustar(j.upper(), "b", 34, in_w - 330, minimo=18, peso="SemiBold Condensed") for j, _, _, _ in filas]
+    fA = fuente("mb", 22)
+    fE = fuente("b", 28, "Bold Condensed")
+    fNo = [ajustar(no or "", "mb", 20, in_w - 330, minimo=12) for _, _, _, no in filas]
+
+    def fn(dt, dur, marcas):
+        im, M = _cristal(w, h, alfa=.66)
+        d = ImageDraw.Draw(im)
+        _escuadras(d, M, M, M + w, M + h, 220)
+        _txt(d, (M + 40, M + 36), titulo + " / EXPEDIENTE 141", fT, GRIS, "lm", 230, track=2)
+        u = _eo(dt / .35)
+        rx, ry = M + 40, M + 70
+        rr = ret.copy()
+        rr.putalpha(rr.getchannel("A").point(lambda v: int(v * u)))
+        im.alpha_composite(rr, (rx, ry))
+        d.rectangle((rx, ry, rx + R, ry + R), outline=BLANCO + (int(200 * u),), width=3)
+        _txt(d, (M + in_x, M + 96), nombre.upper(), fN, BLANCO, "lm", 255 * _eo((dt - .15) / .3), track=1)
+        d.line([(M + in_x, M + 134), (M + in_x + in_w * _eo((dt - .3) / .4), M + 134)], fill=AMBAR + (200,), width=2)
+        mk = list(marcas or [])
+        while len(mk) < len(filas):
+            mk.append((mk[-1] + .7) if mk else .5)
+        y = M + 150 + filah / 2
+        for i, ((jg, an, est, no), fj, fno) in enumerate(zip(filas, fJ, fNo)):
+            if dt >= mk[i]:
+                a = _eo((dt - mk[i]) / .25)
+                ult = i == len(filas) - 1
+                if ult:
+                    d.rectangle((M + in_x - 14, y - filah / 2 + 4, M + w - 30, y + filah / 2 - 4), fill=AMBAR + (int(34 * a),),
+                                outline=AMBAR + (int(150 * a),), width=2)
+                _txt(d, (M + in_x, y - (12 if no else 0)), jg.upper(), fj, AMBAR if ult else BLANCO, "lm", 255 * a)
+                if no:
+                    _txt(d, (M + in_x, y + 22), no, fno, HUESO, "lm", 220 * a)
+                _txt(d, (M + w - 270, y), str(an), fA, GRIS, "mm", 230 * a)
+                col, rot = _ESTADOS[est]
+                pw_ = _ancho(rot, fE) + 34
+                px = M + w - 40 - pw_ / 2
+                d.rounded_rectangle((px - pw_ / 2, y - 22, px + pw_ / 2, y + 22), radius=8, fill=col + (int(60 * a),),
+                                    outline=col + (int(240 * a),), width=3)
+                _txt(d, (px, y), rot, fE, col, "mm", 255 * a, track=1)
+            y += filah
         return _salida(im, dt, dur)
     return fn

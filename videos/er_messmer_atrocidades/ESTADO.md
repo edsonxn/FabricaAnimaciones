@@ -3,7 +3,7 @@
 - canal: runa_caida · hueco jue 26-nov-2026 10:00 CDMX (2026-11-26T16:00:00Z = Rykard 23-nov 16:00Z + ciclo 3 d; runa_caida.json)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG `nucleo/mg_er.py` + mapas tema `er`, OST oficial, SIN Overgear) → doc: docs/estilo_secuencia_yt.md § «Runa Caída»
 - etapa: SUBIDO y PROGRAMADO (https://youtu.be/YYeaK_q5wuM, jue 26-nov 10:00 CDMX) · 24-nov · anuncios ACTIVADOS + cuestionario
-- siguiente: Studio cuando termine la versión SD → casilla MID-ROLL + pantalla final (importar de Rykard TQzVTYfpc80) → `yt monetizado YYeaK_q5wuM`; medir ≈ 3-dic
+- siguiente: VIDEO TERMINADO · medir ≈ 3-dic (`fab.py yt metricas runa_caida 90`); `limpiar` al aprobar
 
 ## Sesiones (UNA SESIÓN DIRECTO AL MASTER, regla 5-nov)
 - alias: «Messmer», «las atrocidades de Messmer», «er_messmer»
@@ -36,10 +36,10 @@
 - ✅ REGLA 10 (mezcla y MASTER, `_citas_master.py`, Whisper en inglés): s_despojados 26,9-38,9 · s_cornamentado 889,9-898,1 · s_madre_sanciona 1208,7-1217,6 · s_maldicion 1389,5-1397,6, −17 a −19 LUFS con la voz callada → previews/citas_audio.mp3.
 - ✅ render por 6 tramos de 250 s (15:31-16:25, 55 min) + concat comprobado 1 474,5 s · `final` → salida/er_messmer_atrocidades_MASTER.mp4 1 778 MB, 1080p, 24:55 con pantalla final + .srt · `verificar` CER 0,0073 (12 avisos = nombres), desfase 21 ms · blackdetect 0 · freezedetect solo la pantalla final · final_hoja MIRADA · marca de Stride comprobada fuera en el MASTER.
 - ✅ SUBIDO https://youtu.be/YYeaK_q5wuM privado, se publica jue 26-nov 10:00 CDMX (2026-11-26T16:00Z), miniatura Flow + .srt · registrado en runa_caida.json + BITACORA + fórmula.
-- ✅ Studio (navegador integrado): Anuncios ACTIVADA + cuestionario (Violencia 1.ª, Desagradable 1.ª, resto Nada → «Adecuado para anuncios») + Guardar, comprobado al recargar. MID-ROLL y pantalla final esperan la versión SD.
+- ✅ Studio (navegador integrado): Anuncios ACTIVADA + cuestionario (Violencia 1.ª, Desagradable 1.ª, resto Nada → «Adecuado para anuncios») + Guardar, comprobado al recargar. Tras la SD (≈ 17:15): MID-ROLL marcada y guardada (anuncios «Comprobando») · pantalla final IMPORTADA de Rykard (TQzVTYfpc80) 24:34-24:54 = Suscribirse Runa · Mejor opción · Último vídeo · Canal Crónicas de Tamriel, comprobada al recargar · `yt monetizado YYeaK_q5wuM` ✅ (0 pendientes).
 
 ## Sesiones
 - 24-nov (UNA sesión, «buenos días»): investigación → guion → voz → clips → efectos → render → MASTER → subida → monetización. Para seguir: «continúa el video messmer».
 
 ## Falta
-- [ ] MID-ROLL + pantalla final en Studio (tras SD) → `python fab.py yt monetizado YYeaK_q5wuM` · `limpiar` al aprobar
+- [ ] `limpiar` al aprobar (segmentos/ y tramos en salida/)

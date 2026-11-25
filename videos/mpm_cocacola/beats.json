@@ -1,0 +1,954 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.151,
+  "tipo": "video",
+  "texto": "Una botella con cintura. Una etiqueta roja. Y ese chasquido del gas cuando le quitas la tapa.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.151,
+  "t1": 15.071,
+  "tipo": "video",
+  "texto": "En mayo de 1886, en una farmacia de Atlanta, esta bebida se vendía a cinco centavos el vaso.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-003",
+  "t0": 15.071,
+  "t1": 22.762,
+  "tipo": "video",
+  "texto": "Y en todo su primer año, el promedio fue de nueve vasos al día. Nueve. Hoy, en el mundo,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-004",
+  "t0": 22.762,
+  "t1": 29.018,
+  "tipo": "video",
+  "texto": "se sirven más de dos mil doscientos millones de bebidas de esta compañía cada día.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-005",
+  "t0": 29.018,
+  "t1": 39.883,
+  "tipo": "video",
+  "texto": "Y aquí viene lo raro: la empresa dueña de Coca-Cola casi no embotella Coca-Cola. Vende un concentrado. El trabajo pesado lo hacen otras empresas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-006",
+  "t0": 39.883,
+  "t1": 45.643,
+  "tipo": "video",
+  "texto": "La más grande de todas es mexicana. Y solo en México, en 2025,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-007",
+  "t0": 45.643,
+  "t1": 51.228,
+  "tipo": "video",
+  "texto": "vendió nueve mil quinientos cincuenta y tres millones de botellas y latas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-008",
+  "t0": 51.228,
+  "t1": 61.008,
+  "tipo": "video",
+  "texto": "Para llegar a cada una, hay una bóveda con una fórmula secreta, agua de pozo que se limpia una y otra vez, una preforma que se infla como globo,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-009",
+  "t0": 61.008,
+  "t1": 68.494,
+  "tipo": "video",
+  "texto": "gas a presión y una máquina que llena botellas sin parar. Así que hoy entramos a la planta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-010",
+  "t0": 68.494,
+  "t1": 73.28,
+  "tipo": "video",
+  "texto": "¿Cómo se fabrica realmente una Coca-Cola? Mira la esquina de tu pantalla:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-011",
+  "t0": 73.28,
+  "t1": 82.18,
+  "tipo": "video",
+  "texto": "ese contador va sumando las botellas y latas que vende Coca-Cola FEMSA en México desde que empezó este video. Son unas trescientas por segundo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-012",
+  "t0": 82.18,
+  "t1": 90.677,
+  "tipo": "video",
+  "texto": "Al final te digo cuántas juntó. Todo empezó con un farmacéutico de Atlanta: John Pemberton.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-013",
+  "t0": 90.677,
+  "t1": 97.524,
+  "tipo": "video",
+  "texto": "Preparó un jarabe y lo llevó a la Farmacia Jacobs, en el centro de la ciudad. El nombre no fue idea suya.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-014",
+  "t0": 97.524,
+  "t1": 104.988,
+  "tipo": "video",
+  "texto": "Fue de su socio y contador, Frank Robinson, que además escribió el logo a mano, con su propia letra.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-015",
+  "t0": 104.988,
+  "t1": 114.31,
+  "tipo": "video",
+  "texto": "Pemberton murió en 1888 sin ver el negocio crecer. Y el que se quedó con todo fue un empresario llamado Asa Candler.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-016",
+  "t0": 114.31,
+  "t1": 120.281,
+  "tipo": "video",
+  "texto": "¿Cuánto pagó por quedarse con todo? En total, dos mil trescientos dólares.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-017",
+  "t0": 120.281,
+  "t1": 127.221,
+  "tipo": "video",
+  "texto": "En 1892 fundó The Coca-Cola Company. Y dos años después, en Vicksburg, Mississippi,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-018",
+  "t0": 127.221,
+  "t1": 135.316,
+  "tipo": "video",
+  "texto": "Joseph Biedenharn hizo algo nuevo: la metió en botellas. Y aquí viene la decisión que todavía mueve el negocio.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-019",
+  "t0": 135.316,
+  "t1": 142.316,
+  "tipo": "video",
+  "texto": "En 1899, dos empresarios de Chattanooga, Tennessee, le pidieron a Candler los derechos para",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-020",
+  "t0": 142.316,
+  "t1": 149.307,
+  "tipo": "video",
+  "texto": "embotellarla en casi todo Estados Unidos. Y Candler les vendió esos derechos por un dólar.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-021",
+  "t0": 149.307,
+  "t1": 158.647,
+  "tipo": "video",
+  "texto": "Un dólar. Con el tiempo, la compañía tuvo que volver a comprar esos derechos. Pero de ese trato nació el modelo que hoy usa en todo el mundo:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-022",
+  "t0": 158.647,
+  "t1": 164.228,
+  "tipo": "video",
+  "texto": "Coca-Cola hace el concentrado, y los embotelladores hacen todo lo demás.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-023",
+  "t0": 164.228,
+  "t1": 173.281,
+  "tipo": "video",
+  "texto": "En 1915 se patentó la botella con cintura. Y su inspiración no fue la hoja de coca: fue una vaina de cacao.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-024",
+  "t0": 173.281,
+  "t1": 180.161,
+  "tipo": "video",
+  "texto": "Y en 1926 la Coca-Cola llegó a México. Las primeras concesiones para embotellarla fueron para",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-025",
+  "t0": 180.161,
+  "t1": 187.227,
+  "tipo": "video",
+  "texto": "Manuel Barragán en Monterrey, y para Herman Fleishman en Tampico. De la planta de Barragán, la de Topo Chico,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-026",
+  "t0": 187.227,
+  "t1": 195.221,
+  "tipo": "video",
+  "texto": "nació con los años Arca Continental, hoy el segundo embotellador de Coca-Cola más grande de las Américas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-027",
+  "t0": 195.221,
+  "t1": 202.421,
+  "tipo": "video",
+  "texto": "Y en Monterrey había otra empresa, una cervecería fundada en 1890: la Cervecería Cuauhtémoc.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-028",
+  "t0": 202.421,
+  "t1": 211.342,
+  "tipo": "video",
+  "texto": "En 1979 compró embotelladoras de refresco en la Ciudad de México. De ahí salió Coca-Cola FEMSA.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-029",
+  "t0": 211.342,
+  "t1": 216.702,
+  "tipo": "video",
+  "texto": "Hoy FEMSA es el embotellador de Coca-Cola más grande del mundo por volumen.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-030",
+  "t0": 216.702,
+  "t1": 224.635,
+  "tipo": "video",
+  "texto": "Una cervecería de Monterrey terminó siendo la mano más grande de la marca más famosa del planeta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-031",
+  "t0": 224.635,
+  "t1": 233.576,
+  "tipo": "video",
+  "texto": "Antes de entrar a la planta: en Mil por Minuto desarmamos, pieza por pieza, cómo se fabrican las marcas que compras todos los días.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-032",
+  "t0": 233.576,
+  "t1": 243.039,
+  "tipo": "video",
+  "texto": "Si te gusta saber qué hay detrás de las cosas, suscríbete. Es gratis, y la mayoría de quienes ven estos videos todavía no lo está.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-033",
+  "t0": 243.039,
+  "t1": 247.308,
+  "tipo": "video",
+  "texto": "Ahora sí. Estación uno: el concentrado.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-034",
+  "t0": 247.308,
+  "t1": 256.676,
+  "tipo": "video",
+  "texto": "La embotelladora no puede comprarle el concentrado a nadie más. Se lo vende The Coca-Cola Company, y la fórmula no sale de sus manos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-035",
+  "t0": 256.676,
+  "t1": 261.516,
+  "tipo": "video",
+  "texto": "Esa fórmula pasó ochenta y seis años guardada en la bóveda de un banco.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-036",
+  "t0": 261.516,
+  "t1": 271.234,
+  "tipo": "video",
+  "texto": "En 1919 sirvió de garantía para un préstamo, y en 2011 se mudó a una bóveda dentro del museo de la marca, en Atlanta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-037",
+  "t0": 271.234,
+  "t1": 277.444,
+  "tipo": "video",
+  "texto": "La compañía dice que solo dos personas conocen la receta completa y que nunca viajan juntas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-038",
+  "t0": 277.444,
+  "t1": 283.882,
+  "tipo": "video",
+  "texto": "Puede ser leyenda. Pero la leyenda también vende. Estación dos: el agua.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-039",
+  "t0": 283.882,
+  "t1": 290.111,
+  "tipo": "video",
+  "texto": "Y es más importante de lo que parece, porque una Coca-Cola es casi toda agua.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-040",
+  "t0": 290.111,
+  "t1": 300.091,
+  "tipo": "video",
+  "texto": "En México, las embotelladoras la sacan sobre todo de pozos propios, con permiso del gobierno. Y antes de usarla, se trata: se filtra, se pule,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-041",
+  "t0": 300.091,
+  "t1": 309.181,
+  "tipo": "video",
+  "texto": "y en las plantas nuevas pasa por ósmosis inversa. ¿Por qué tanto? Porque una Coca de Toluca tiene que saber igual que una de Mérida.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-042",
+  "t0": 309.181,
+  "t1": 314.046,
+  "tipo": "video",
+  "texto": "El agua de cada pozo es distinta. La bebida no puede serlo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-043",
+  "t0": 314.046,
+  "t1": 323.895,
+  "tipo": "video",
+  "texto": "Hoy Coca-Cola FEMSA usa un litro con treinta y cinco de agua por cada litro de bebida. En 2018 usaba casi quince por ciento más.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-044",
+  "t0": 323.895,
+  "t1": 329.435,
+  "tipo": "video",
+  "texto": "Estación tres: el jarabe. Primero se disuelve el azúcar en agua tratada:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-045",
+  "t0": 329.435,
+  "t1": 336.028,
+  "tipo": "video",
+  "texto": "eso es el jarabe simple. Luego se le agrega el concentrado, y queda el jarabe terminado.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-046",
+  "t0": 336.028,
+  "t1": 345.076,
+  "tipo": "video",
+  "texto": "Ese jarabe se mezcla con agua tratada en una proporción exacta. Siempre la misma. Ahí está la Coca-Cola, todavía sin gas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-047",
+  "t0": 345.076,
+  "t1": 351.596,
+  "tipo": "video",
+  "texto": "Estación cuatro: la botella. Y aquí hay un truco que casi nadie conoce.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-048",
+  "t0": 351.596,
+  "t1": 360.586,
+  "tipo": "video",
+  "texto": "La botella de plástico no llega a la planta como botella. Llega como esto: una preforma, un tubito grueso del tamaño de un dedo,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-049",
+  "t0": 360.586,
+  "t1": 369.321,
+  "tipo": "video",
+  "texto": "con la rosca ya hecha. La preforma se calienta, una varilla la estira hacia abajo, y aire a presión la infla contra un molde.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-050",
+  "t0": 369.321,
+  "t1": 373.479,
+  "tipo": "video",
+  "texto": "En una fracción de segundo, el tubito se vuelve botella.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-051",
+  "t0": 373.479,
+  "t1": 383.395,
+  "tipo": "video",
+  "texto": "Al estirarse en dos direcciones, el plástico se acomoda y se vuelve más resistente. Por eso una botella tan delgada aguanta la presión del gas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-052",
+  "t0": 383.395,
+  "t1": 390.112,
+  "tipo": "video",
+  "texto": "En la planta de Toluca, una sola máquina por línea sopla la botella, la llena y la etiqueta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-053",
+  "t0": 390.112,
+  "t1": 398.742,
+  "tipo": "video",
+  "texto": "Estación cinco: las retornables. Las botellas de vidrio y de plástico grueso que regresas a la tienda vuelven a la planta,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-054",
+  "t0": 398.742,
+  "t1": 403.44,
+  "tipo": "video",
+  "texto": "se lavan por dentro y por fuera, y se revisan una por una.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-055",
+  "t0": 403.44,
+  "t1": 412.604,
+  "tipo": "video",
+  "texto": "Una de plástico retornable se usa de veinte a veinticinco veces. Una de vidrio, de treinta y cinco a cincuenta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-056",
+  "t0": 412.604,
+  "t1": 419.834,
+  "tipo": "video",
+  "texto": "Vamos con una pregunta, y la respuesta te la doy al final. ¿Qué es más ácido? ¿A, la Coca-Cola?",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-057",
+  "t0": 419.834,
+  "t1": 428.149,
+  "tipo": "video",
+  "texto": "¿B, el jugo de limón? ¿O C, son igual de ácidos? Déjalo en los comentarios.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-058",
+  "t0": 428.149,
+  "t1": 435.104,
+  "tipo": "video",
+  "texto": "Estación seis: el gas. La bebida se enfría antes de recibir el dióxido de carbono.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-059",
+  "t0": 435.104,
+  "t1": 445.563,
+  "tipo": "video",
+  "texto": "¿Por qué fría? Porque el agua fría atrapa mucho más gas. Si estuviera tibia, el gas se escaparía y la botella saldría llena de espuma.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-060",
+  "t0": 445.563,
+  "t1": 452.679,
+  "tipo": "video",
+  "texto": "Estación siete: el llenado. Y esta es la máquina más impresionante de toda la planta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-061",
+  "t0": 452.679,
+  "t1": 457.599,
+  "tipo": "video",
+  "texto": "Es un carrusel. Las botellas entran por una banda, se suben a una rueda",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-062",
+  "t0": 457.599,
+  "t1": 464.79,
+  "tipo": "video",
+  "texto": "que gira sin parar, y cada una queda debajo de su propia válvula. Antes de que caiga una sola gota,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-063",
+  "t0": 464.79,
+  "t1": 470.965,
+  "tipo": "video",
+  "texto": "la válvula llena la botella con gas a presión. Se llama llenado a contrapresión.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-064",
+  "t0": 470.965,
+  "t1": 479.935,
+  "tipo": "video",
+  "texto": "Así, cuando el refresco entra, no encuentra diferencia de presión, el gas no se escapa, y la botella se llena sin espuma.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-065",
+  "t0": 479.935,
+  "t1": 487.787,
+  "tipo": "video",
+  "texto": "Todo eso pasa mientras la rueda da media vuelta. En Toluca, una sola línea llena cuarenta mil botellas por hora.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-066",
+  "t0": 487.787,
+  "t1": 494.072,
+  "tipo": "video",
+  "texto": "Y la de latas, mil ochocientas por minuto. Estación ocho: la tapa.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-067",
+  "t0": 494.072,
+  "t1": 502.187,
+  "tipo": "video",
+  "texto": "Apenas sale del carrusel, una tapadora le enrosca la tapa a cada botella, antes de que el gas tenga tiempo de escapar.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-068",
+  "t0": 502.187,
+  "t1": 509.707,
+  "tipo": "video",
+  "texto": "Estación nueve: la revisión y la etiqueta. Se revisa el nivel, la tapa y el código del lote.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-069",
+  "t0": 509.707,
+  "t1": 514.9,
+  "tipo": "video",
+  "texto": "La botella que sale mal, se va de la línea. Y no solo revisan máquinas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-070",
+  "t0": 514.9,
+  "t1": 525.476,
+  "tipo": "video",
+  "texto": "En el laboratorio de Toluca hay cuarenta catadores por turno probando que la Coca sepa como debe saber. Estación diez: las tarimas y los camiones.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-071",
+  "t0": 525.476,
+  "t1": 533.391,
+  "tipo": "video",
+  "texto": "Las botellas se agrupan en paquetes, los paquetes en tarimas, y las tarimas suben a los camiones.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-072",
+  "t0": 533.391,
+  "t1": 543.039,
+  "tipo": "video",
+  "texto": "Toluca, una de las plantas más grandes de todo el sistema Coca-Cola en el mundo, saca unas setecientas mil cajas al día.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-073",
+  "t0": 543.039,
+  "t1": 547.579,
+  "tipo": "video",
+  "texto": "Ahora, el negocio. Porque fabricar una Coca es una cosa.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-074",
+  "t0": 547.579,
+  "t1": 553.672,
+  "tipo": "video",
+  "texto": "Venderla en cada esquina es otra. ¿Recuerdas el concentrado? Su precio no es fijo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-075",
+  "t0": 553.672,
+  "t1": 563.037,
+  "tipo": "video",
+  "texto": "La compañía lo cobra como un porcentaje de lo que pagas tú en la tienda. Si la Coca sube de precio en la tiendita, el concentrado también.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-076",
+  "t0": 563.037,
+  "t1": 569.301,
+  "tipo": "video",
+  "texto": "Y en México, ese porcentaje subió en 2021 y otra vez en 2022.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-077",
+  "t0": 569.301,
+  "t1": 576.401,
+  "tipo": "video",
+  "texto": "Es un negocio muy elegante: la compañía cuida la marca y la fórmula. Las fábricas, los camiones,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-078",
+  "t0": 576.401,
+  "t1": 587.888,
+  "tipo": "video",
+  "texto": "los pozos y los refrigeradores los pone el embotellador. En México hay ocho grupos embotelladores, setenta y tres plantas y más de trece mil rutas de reparto.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-079",
+  "t0": 587.888,
+  "t1": 592.848,
+  "tipo": "video",
+  "texto": "Y su terreno no es el supermercado. Es la tiendita. Coca-Cola FEMSA",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-080",
+  "t0": 592.848,
+  "t1": 597.918,
+  "tipo": "video",
+  "texto": "vende en México sobre todo por el canal tradicional, el de la tienda de la esquina.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-081",
+  "t0": 597.918,
+  "t1": 607.701,
+  "tipo": "video",
+  "texto": "El sistema dice llegar a más de un millón doscientos mil pequeños comercios en todo el país. En 2025, solo el negocio de Coca-Cola FEMSA",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-082",
+  "t0": 607.701,
+  "t1": 613.804,
+  "tipo": "video",
+  "texto": "en México facturó ciento treinta y seis mil millones de pesos. Y México pesa:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-083",
+  "t0": 613.804,
+  "t1": 622.908,
+  "tipo": "video",
+  "texto": "es más del cuarenta por ciento de todo lo que la compañía vende en América Latina. Tanto, que en febrero de 2026 se anunció",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-084",
+  "t0": 622.908,
+  "t1": 630.343,
+  "tipo": "video",
+  "texto": "una inversión de seis mil millones de dólares de The Coca-Cola Company en México. Pero ojo: en 2025,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-085",
+  "t0": 630.343,
+  "t1": 638.993,
+  "tipo": "video",
+  "texto": "Coca-Cola FEMSA vendió en México cinco por ciento menos que el año anterior. Y para 2026 le esperaba otro golpe:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-086",
+  "t0": 638.993,
+  "t1": 646.789,
+  "tipo": "video",
+  "texto": "los impuestos. Con una bebida tan famosa, también llegaron los mitos y las polémicas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-087",
+  "t0": 646.789,
+  "t1": 652.529,
+  "tipo": "video",
+  "texto": "Vamos a separarlos con datos. Primero: ¿la Coca-Cola lleva cocaína?",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-088",
+  "t0": 652.529,
+  "t1": 661.269,
+  "tipo": "video",
+  "texto": "Hoy no. La receta original usaba un extracto de hoja de coca. A partir de 1903 se usó hoja sin cocaína,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-089",
+  "t0": 661.269,
+  "t1": 668.872,
+  "tipo": "video",
+  "texto": "y hacia 1929 ya no quedaba ni rastro. Segundo: ¿la Coca-Cola era verde?",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-090",
+  "t0": 668.872,
+  "t1": 674.775,
+  "tipo": "video",
+  "texto": "No. Siempre fue café. Lo verde era el vidrio de las botellas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-091",
+  "t0": 674.775,
+  "t1": 683.005,
+  "tipo": "video",
+  "texto": "Tercero: ¿disuelve un clavo? No. El ácido fosfórico le quita el óxido, y el clavo queda brillante.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-092",
+  "t0": 683.005,
+  "t1": 689.066,
+  "tipo": "video",
+  "texto": "Pero entero. Cuarto: ¿la Coca mexicana es de azúcar de caña?",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-093",
+  "t0": 689.066,
+  "t1": 696.393,
+  "tipo": "video",
+  "texto": "La que se vende en México lleva las dos cosas: azúcar y jarabe de alta fructosa. Lo dice la etiqueta.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-094",
+  "t0": 696.393,
+  "t1": 705.693,
+  "tipo": "video",
+  "texto": "La famosa Coca mexicana de vidrio que se vende en Estados Unidos, esa sí va con caña. Y en 2025, después de un mensaje del presidente Trump,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-095",
+  "t0": 705.693,
+  "t1": 712.602,
+  "tipo": "video",
+  "texto": "la compañía anunció allá una versión extra con azúcar de caña. Quinto, los impuestos.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-096",
+  "t0": 712.602,
+  "t1": 720.382,
+  "tipo": "video",
+  "texto": "En 2014, México le puso un peso por litro a las bebidas azucaradas. Ese año, las compras bajaron seis",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-097",
+  "t0": 720.382,
+  "t1": 728.346,
+  "tipo": "video",
+  "texto": "por ciento en promedio, y en los hogares de menos ingresos, nueve. En 2026, el impuesto casi se duplicó:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-098",
+  "t0": 728.346,
+  "t1": 734.1,
+  "tipo": "video",
+  "texto": "pasó a tres pesos con ocho centavos por litro. Y desde octubre de 2020,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-099",
+  "t0": 734.1,
+  "t1": 742.014,
+  "tipo": "video",
+  "texto": "la botella lleva los sellos negros de advertencia. Uno dice: contiene cafeína, evitar en niños.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-100",
+  "t0": 742.014,
+  "t1": 749.914,
+  "tipo": "video",
+  "texto": "Y sexto, el agua. En San Cristóbal de las Casas, en Chiapas, hay una planta embotelladora desde 1994,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-101",
+  "t0": 749.914,
+  "t1": 757.736,
+  "tipo": "video",
+  "texto": "y vecinos que reciben agua unas horas cada dos días. La autoridad del agua dice que la planta tiene permiso",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-102",
+  "t0": 757.736,
+  "t1": 765.235,
+  "tipo": "video",
+  "texto": "para menos del uno y medio por ciento del agua disponible de su acuífero, y que el problema está en la red de la ciudad.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-103",
+  "t0": 765.235,
+  "t1": 772.535,
+  "tipo": "video",
+  "texto": "Los críticos acusan que saca más de lo que dice el permiso. Las dos versiones siguen ahí, y la planta,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-104",
+  "t0": 772.535,
+  "t1": 779.052,
+  "tipo": "video",
+  "texto": "también. Hagamos el mapa completo. En Nuevo León, Monterrey:",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-105",
+  "t0": 779.052,
+  "t1": 788.051,
+  "tipo": "video",
+  "texto": "la concesión de 1926 y la cervecería de 1890. El lugar donde empezaron los dos gigantes.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-106",
+  "t0": 788.051,
+  "t1": 794.983,
+  "tipo": "video",
+  "texto": "En Tamaulipas, Tampico y Altamira, donde sigue la planta La Pureza. En el Estado de México,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-107",
+  "t0": 794.983,
+  "t1": 804.703,
+  "tipo": "video",
+  "texto": "Toluca: la planta gigante, y a su lado, la que se considera la recicladora de botellas de plástico para uso alimenticio más grande del mundo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-108",
+  "t0": 804.703,
+  "t1": 808.942,
+  "tipo": "video",
+  "texto": "Procesa más de ciento veinte mil toneladas al año.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-109",
+  "t0": 808.942,
+  "t1": 815.641,
+  "tipo": "video",
+  "texto": "En Tlaxcala, Apizaco. En Guanajuato, León. En Michoacán, Morelia.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-110",
+  "t0": 815.641,
+  "t1": 825.98,
+  "tipo": "video",
+  "texto": "En Chiapas, San Cristóbal de las Casas, la planta de la polémica. Y en Yucatán, Valladolid: una planta inaugurada en septiembre de 2026,",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-111",
+  "t0": 825.98,
+  "t1": 834.06,
+  "tipo": "video",
+  "texto": "la primera planta nueva de refrescos con gas en México en más de veinte años. Solo para botellas retornables.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-112",
+  "t0": 834.06,
+  "t1": 840.336,
+  "tipo": "video",
+  "texto": "De un pozo en Toluca a una tiendita en cualquier esquina del país.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-113",
+  "t0": 840.336,
+  "t1": 846.932,
+  "tipo": "video",
+  "texto": "Así que la próxima vez que le quites la tapa a una Coca, piensa en todo lo que pasó para llegar ahí.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-114",
+  "t0": 846.932,
+  "t1": 854.372,
+  "tipo": "video",
+  "texto": "Una fórmula en una bóveda. Agua de pozo tratada. Una preforma que se infló en una fracción de segundo.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-115",
+  "t0": 854.372,
+  "t1": 862.311,
+  "tipo": "video",
+  "texto": "Gas que solo entra si está frío. Y un carrusel que no se detiene. La respuesta de la trivia: la B.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-116",
+  "t0": 862.311,
+  "t1": 871.391,
+  "tipo": "video",
+  "texto": "El jugo de limón es un poquito más ácido que la Coca-Cola. Así que, si la Coca disolviera un clavo, el limón también lo haría.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-117",
+  "t0": 871.391,
+  "t1": 880.331,
+  "tipo": "video",
+  "texto": "Y el contador de la esquina: mientras veías este video, Coca-Cola FEMSA vendió en México más de doscientas cincuenta mil botellas y latas.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-118",
+  "t0": 880.331,
+  "t1": 884.511,
+  "tipo": "video",
+  "texto": "Si quieres que entremos a la fábrica de otra marca, dime cuál en los comentarios.",
+  "clip_s": 7
+ },
+ {
+  "id": "scene-119",
+  "t0": 884.511,
+  "t1": 892.8261,
+  "tipo": "video",
+  "texto": "Y suscríbete a Mil por Minuto: aquí desarmamos lo que compras todos los días.",
+  "clip_s": 7
+ }
+]

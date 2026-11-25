@@ -228,14 +228,84 @@ def _icono(d, tipo, cx, cy, s, col, a, t):
         d.rectangle((cx + s * .12, cy - s * .05, cx + s * .4, cy + s * .2), outline=c, width=lw)
         for xx in (cx - s * .3, cx + s * .25):
             d.ellipse((xx - s * .08, cy + s * .14, xx + s * .08, cy + s * .3), outline=c, width=lw)
+    # --- embotelladora (mpm_cocacola, 24-nov-2026) ---
+    elif tipo == "agua":           # gota sobre capas de filtro
+        d.polygon([(cx, cy - s * .45), (cx + s * .2, cy - s * .12), (cx - s * .2, cy - s * .12)], outline=c, width=lw)
+        d.arc((cx - s * .2, cy - s * .3, cx + s * .2, cy + s * .02), 0, 180, fill=c, width=lw)
+        for k in range(3):
+            yy = cy + s * (.12 + k * .11)
+            d.line((cx - s * .4, yy, cx + s * .4, yy), fill=c, width=max(1, lw - 1))
+        yy = cy + s * .1 + ((t * 40) % (s * .34))
+        d.ellipse((cx - 4, yy - 4, cx + 4, yy + 4), fill=c)
+    elif tipo == "tanque":         # tanque de jarabe con aspas
+        d.rounded_rectangle((cx - s * .3, cy - s * .4, cx + s * .3, cy + s * .38), 14, outline=c, width=lw)
+        d.line((cx, cy - s * .55, cx, cy + s * .15), fill=c, width=lw)
+        ang = t * 5
+        for k in (-1, 1):
+            d.line((cx, cy + s * .15, cx + k * s * .2 * math.cos(ang), cy + s * .15 + s * .06 * math.sin(ang)), fill=c, width=lw)
+    elif tipo == "co2":            # carbonatador: burbujas que suben
+        d.rounded_rectangle((cx - s * .26, cy - s * .42, cx + s * .26, cy + s * .4), 18, outline=c, width=lw)
+        for k in range(6):
+            bx = cx - s * .16 + (k % 3) * s * .16
+            by = cy + s * .32 - ((t * 45 + k * 13) % (s * .66))
+            r = 3 + (k % 2) * 3
+            d.ellipse((bx - r, by - r, bx + r, by + r), outline=c, width=2)
+    elif tipo == "soplado":        # preforma → botella
+        d.rounded_rectangle((cx - s * .4, cy - s * .1, cx - s * .26, cy + s * .3), 6, outline=c, width=lw)
+        d.line((cx - s * .2, cy + s * .1, cx - s * .06, cy + s * .1), fill=c, width=lw)
+        d.polygon([(cx - s * .1, cy + s * .04), (cx - s * .02, cy + s * .1), (cx - s * .1, cy + s * .16)], fill=c)
+        bw = s * (.1 + .04 * abs(math.sin(t * 3)))
+        x0 = cx + s * .22
+        d.line((x0 - s * .04, cy - s * .4, x0 + s * .04, cy - s * .4), fill=c, width=lw)
+        d.polygon([(x0 - s * .04, cy - s * .4), (x0 - bw, cy - s * .15), (x0 - bw, cy + s * .38), (x0 + bw, cy + s * .38),
+                   (x0 + bw, cy - s * .15), (x0 + s * .04, cy - s * .4)], outline=c, width=lw)
+    elif tipo == "llenadora":      # carrusel rotativo de válvulas
+        r = s * .36
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=c, width=lw)
+        for k in range(8):
+            a2 = t * 1.6 + k * math.pi / 4
+            px, py = cx + r * math.cos(a2), cy + r * math.sin(a2)
+            d.rectangle((px - 5, py - 9, px + 5, py + 9), outline=c, width=2)
+        d.ellipse((cx - 6, cy - 6, cx + 6, cy + 6), fill=c)
+    elif tipo == "tapa":           # cabezal que baja sobre la botella
+        d.rectangle((cx - s * .1, cy - s * .02, cx + s * .1, cy + s * .42), outline=c, width=lw)
+        yy = cy - s * .42 + s * .26 * abs(math.sin(t * 4))
+        d.rectangle((cx - s * .18, yy, cx + s * .18, yy + s * .12), outline=c, width=lw)
+        d.line((cx, cy - s * .55, cx, yy), fill=c, width=lw)
+    elif tipo == "etiqueta":       # botella con banda de etiqueta que gira
+        d.polygon([(cx - s * .06, cy - s * .45), (cx - s * .16, cy - s * .2), (cx - s * .16, cy + s * .42),
+                   (cx + s * .16, cy + s * .42), (cx + s * .16, cy - s * .2), (cx + s * .06, cy - s * .45)], outline=c, width=lw)
+        d.rectangle((cx - s * .16, cy - s * .02, cx + s * .16, cy + s * .2), fill=c)
+        xx = cx - s * .16 + ((t * 30) % (s * .32))
+        d.line((xx, cy - s * .02, xx, cy + s * .2), fill=AZUL + (a,), width=3)
+    elif tipo == "lavadora":       # botellas bajo regaderas
+        for k in (-1, 0, 1):
+            bx = cx + k * s * .24
+            d.rectangle((bx - s * .07, cy, bx + s * .07, cy + s * .4), outline=c, width=lw)
+            for j in range(2):
+                yy = cy - s * .3 + ((t * 50 + j * 14 + k * 7) % (s * .3))
+                d.line((bx, yy, bx, yy + 6), fill=c, width=2)
+        d.line((cx - s * .45, cy - s * .38, cx + s * .45, cy - s * .38), fill=c, width=lw)
+    elif tipo == "tarima":         # tarima con cajas apiladas
+        d.rectangle((cx - s * .42, cy + s * .3, cx + s * .42, cy + s * .38), outline=c, width=lw)
+        for fila in range(2):
+            for k in range(3 - fila):
+                x0 = cx - s * .4 + k * s * .27 + fila * s * .135
+                y0 = cy + s * .3 - (fila + 1) * s * .25
+                d.rectangle((x0, y0, x0 + s * .25, y0 + s * .23), outline=c, width=lw)
+    elif tipo == "botella":
+        d.polygon([(cx - s * .06, cy - s * .45), (cx - s * .17, cy - s * .18), (cx - s * .12, cy + s * .05),
+                   (cx - s * .17, cy + s * .42), (cx + s * .17, cy + s * .42), (cx + s * .12, cy + s * .05),
+                   (cx + s * .17, cy - s * .18), (cx + s * .06, cy - s * .45)], outline=c, width=lw)
     else:                          # máquina genérica
         d.rectangle((cx - s * .38, cy - s * .3, cx + s * .38, cy + s * .3), outline=c, width=lw)
         d.line((cx - s * .38, cy, cx + s * .38, cy), fill=c, width=lw)
 
 
-def plano(estaciones, activa=None, titulo="LÍNEA DE PRODUCCIÓN", sub=None, w=1920, h=1080):
+def plano(estaciones, activa=None, titulo="LÍNEA DE PRODUCCIÓN", sub=None, w=1920, h=1080, pieza="bolsa"):
     """Plano de la línea a pantalla completa. estaciones = [(nombre, icono)] (íconos: silo olla molino laminadora corte
-    enrollado freidora tambor bolsa caja ojo camion). `activa` = índice que se enciende (la pieza viaja hasta ahí);
+    enrollado freidora tambor bolsa caja ojo camion · embotelladora: agua tanque co2 soplado llenadora tapa etiqueta lavadora
+    tarima botella). `pieza` = lo que viaja por la banda: "bolsa" (rectángulo) o "botella". `activa` = índice que se enciende (la pieza viaja hasta ahí);
     None = recorrido completo de la primera a la última con las marcas de la voz (una marca por estación).
     Las estaciones van en dos filas (serpentina) si son más de 6."""
     n = len(estaciones)
@@ -344,7 +414,13 @@ def plano(estaciones, activa=None, titulo="LÍNEA DE PRODUCCIÓN", sub=None, w=1
             else:
                 px, py = xs[0], ys[0]
             py += 95 - 22
-            d.rounded_rectangle((px - 16, py - 20, px + 16, py + 20), 5, fill=NARANJA + (255,), outline=BLANCO + (255,), width=2)
+            if pieza == "botella":
+                py -= 8
+                d.polygon([(px - 5, py - 30), (px - 13, py - 12), (px - 10, py), (px - 13, py + 28), (px + 13, py + 28),
+                           (px + 10, py), (px + 13, py - 12), (px + 5, py - 30)], fill=NARANJA + (255,), outline=BLANCO + (255,))
+                d.rectangle((px - 6, py - 36, px + 6, py - 30), fill=BLANCO + (255,))
+            else:
+                d.rounded_rectangle((px - 16, py - 20, px + 16, py + 20), 5, fill=NARANJA + (255,), outline=BLANCO + (255,), width=2)
         return _bgra(im, min(_eo(dt / .35), max(0.0, (dur - dt) / .35)))
     return fn
 

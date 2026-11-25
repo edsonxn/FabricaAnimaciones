@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: runa_caida · hueco jue 26-nov-2026 10:00 CDMX (2026-11-26T16:00:00Z = Rykard 23-nov 16:00Z + ciclo 3 d; runa_caida.json)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG `nucleo/mg_er.py` + mapas tema `er`, OST oficial, SIN Overgear) → doc: docs/estilo_secuencia_yt.md § «Runa Caída»
-- etapa: SUBIDO y PROGRAMADO (https://youtu.be/YYeaK_q5wuM, jue 26-nov 10:00 CDMX) · 24-nov · anuncios ACTIVADOS + cuestionario
+- etapa: SUBIDO y PROGRAMADO (https://youtu.be/YYeaK_q5wuM, jue 26-nov 12:00 CDMX; reprogramado el 25-nov desde 10:00 por el nuevo horario del canal) · 24-nov · anuncios ACTIVADOS + cuestionario
 - siguiente: VIDEO TERMINADO · medir ≈ 3-dic (`fab.py yt metricas runa_caida 90`); `limpiar` al aprobar
 
 ## Sesiones (UNA SESIÓN DIRECTO AL MASTER, regla 5-nov)

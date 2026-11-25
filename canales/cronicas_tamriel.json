@@ -1,234 +1,240 @@
 {
-  "monetizado": true,
-  "canal_id": "UCWeCfdm8py6dYKHq7HwUIXw",
-  "nombre": "Crónicas de Tamriel",
-  "estilo": "Listas de Skyrim/Elder Scrolls; secuencia de clips de gameplay (yt-dlp) como Warcraft; voz Johnny de ElevenLabs desde el 2-nov-2026 (el original de Sarcastica, sin [whispers] ni [excited]; docs/voz.md); antes Chatterbox Sarcastica. Pendiente de mudar (después de Warcraft).",
-  "horario": {
-    "zona": "America/Mexico_City",
+ "monetizado": true,
+ "canal_id": "UCWeCfdm8py6dYKHq7HwUIXw",
+ "nombre": "Crónicas de Tamriel",
+ "estilo": "Listas de Skyrim/Elder Scrolls; secuencia de clips de gameplay (yt-dlp) como Warcraft; voz Johnny de ElevenLabs desde el 2-nov-2026 (el original de Sarcastica, sin [whispers] ni [excited]; docs/voz.md); antes Chatterbox Sarcastica. Pendiente de mudar (después de Warcraft).",
+ "horario": {
+  "zona": "America/Mexico_City",
+  "hora_local": "12:00",
+  "utc": "18:00",
+  "ciclo_dias": 3,
+  "separacion_min_horas": 72,
+  "nota": "12:00 CDMX = 18:00 UTC desde el 25-nov-2026 (antes 09:15). Studio «Horas de actividad» (28 d, 25-nov-2026): pico («la mayoría») 15:00-18:00 CDMX entre semana y 11:00-18:00 en fin de semana; 09:15 salía ~6 h antes. 12:00 = ~3 h antes del pico (aprobado por el usuario). Nota anterior: Leído con yt-dlp el 13-oct-2026: cadencia irregular (26-sep, 30-sep, 10-oct). Provisional hasta analizar el canal.",
+  "historial": [
+   {
+    "fecha": "2026-10-13",
+    "ciclo_dias": 7,
     "hora_local": "09:15",
-    "utc": "15:15",
+    "motivo": "registro inicial; provisional"
+   },
+   {
+    "fecha": "2026-11-10",
     "ciclo_dias": 3,
     "separacion_min_horas": 72,
-    "nota": "Leído con yt-dlp el 13-oct-2026: cadencia irregular (26-sep, 30-sep, 10-oct). Provisional hasta analizar el canal.",
-    "historial": [
-      {
-        "fecha": "2026-10-13",
-        "ciclo_dias": 7,
-        "hora_local": "09:15",
-        "motivo": "registro inicial; provisional"
-      },
-      {
-        "fecha": "2026-11-10",
-        "ciclo_dias": 3,
-        "separacion_min_horas": 72,
-        "motivo": "el usuario: publicar cada 3 dias (11, 13, 16, 19 nov)"
-      }
-    ]
+    "motivo": "el usuario: publicar cada 3 dias (11, 13, 16, 19 nov)"
+   },
+   {
+    "fecha": "2026-11-25",
+    "ciclo_dias": 3,
+    "hora_local": "12:00",
+    "motivo": "Studio «Horas de actividad» (28 d, 25-nov-2026): pico («la mayoría») 15:00-18:00 CDMX entre semana y 11:00-18:00 en fin de semana; 09:15 salía ~6 h antes. 12:00 = ~3 h antes del pico (aprobado por el usuario)."
+   }
+  ]
+ },
+ "publicados": [
+  {
+   "video": "tes_cosas_nunca",
+   "id": "GDT4s9U9kPs",
+   "titulo": "Las 20 cosas que NUNCA debes hacer en Skyrim",
+   "visibilidad": "private",
+   "programado": "2026-11-22T17:00:00Z",
+   "formato": "lista_20_nunca_hacer_secuencia_yt",
+   "nota": "17-nov-2026: el usuario lo reprogramó en Studio"
   },
-  "publicados": [
-    {
-      "video": "tes_cosas_nunca",
-      "id": "GDT4s9U9kPs",
-      "titulo": "Las 20 cosas que NUNCA debes hacer en Skyrim",
-      "visibilidad": "private",
-      "programado": "2026-11-22T17:00:00Z",
-      "formato": "lista_20_nunca_hacer_secuencia_yt",
-      "nota": "17-nov-2026: el usuario lo reprogramó en Studio"
-    },
-    {
-      "video": "tes_misiones_nunca",
-      "id": "R4nzGhWuTmo",
-      "titulo": "Las 15 misiones de Skyrim que NUNCA debes hacer",
-      "visibilidad": "public",
-      "programado": "2026-10-22T18:07:00Z",
-      "formato": "lista_15_misiones_nunca_secuencia_yt",
-      "publicado": "2026-10-22"
-    },
-    {
-      "video": "tes_exploits_rotos",
-      "id": "GMJE7dyiV_k",
-      "titulo": "Los 8 exploits más ROTOS de Skyrim",
-      "visibilidad": "public",
-      "programado": "2026-10-18T18:06:00Z",
-      "formato": "lista_8_exploits_secuencia_yt",
-      "publicado": "2026-10-18"
-    },
-    {
-      "video": "tes_misiones_daedricas",
-      "id": "O2ZsE2AFGYc",
-      "titulo": "Las 8 misiones daédricas PROHIBIDAS de Skyrim",
-      "visibilidad": "public",
-      "programado": "2026-10-15T15:15:00Z",
-      "formato": "lista_8_daedrico_secuencia_yt",
-      "publicado": "2026-10-14",
-      "nota": "salió antes de lo programado (14-oct 18:05 UTC en vez de 15-oct 15:15 UTC)"
-    },
-    {
-      "video": null,
-      "id": "fKPDEaOYMxQ",
-      "titulo": "Los 8 dragones más PODEROSOS de Skyrim",
-      "visibilidad": "public",
-      "publicado": "2026-10-10T15:15:00Z"
-    },
-    {
-      "video": null,
-      "id": "i31mjVpNSiA",
-      "titulo": "Los 8 hechizos más ROTOS de Skyrim",
-      "visibilidad": "public",
-      "publicado": "2026-10-01T00:20:14Z"
-    },
-    {
-      "video": null,
-      "id": "KKjWjznbV_4",
-      "titulo": "Los 7 jefes más peligrosos de Skyrim",
-      "visibilidad": "public",
-      "publicado": "2026-09-26T19:30:37Z"
-    },
-    {
-      "video": "tes_cosas_inutiles",
-      "id": "uz1kE1BI4w8",
-      "titulo": "Las 15 cosas más INÚTILES de Skyrim",
-      "visibilidad": "public",
-      "programado": "2026-10-26T18:08:00Z",
-      "formato": "lista_15_inutiles_secuencia_yt",
-      "publicado": "2026-10-26T18:08:28Z"
-    },
-    {
-      "video": "tes_armas_poderosas",
-      "id": "m6Pk4FLQGuc",
-      "titulo": "Las 15 armas más PODEROSAS de Skyrim",
-      "visibilidad": "public",
-      "programado": "2026-10-30T18:08:00Z",
-      "formato": "lista_15_armas_secuencia_yt",
-      "publicado": "2026-10-30T18:08:33Z"
-    },
-    {
-      "video": "tes_misiones_imperdibles",
-      "id": "C16mqQHbK08",
-      "titulo": "Las 25 misiones de Skyrim que NUNCA debes saltarte",
-      "visibilidad": "public",
-      "programado": "2026-11-07T18:08:00Z",
-      "formato": "lista_25_misiones_imperdibles_secuencia_yt",
-      "nota": "29-oct: resubido con 15 mapas y pantalla final; xnOdTqaZWrM (versión vieja) queda privado sin programar",
-      "publicado": "2026-11-09T18:08:16Z"
-    },
-    {
-      "video": "tes_secretos_40",
-      "id": "-o9sopVzR0o",
-      "titulo": "Los 40 SECRETOS de Skyrim que nadie te contó",
-      "visibilidad": "private",
-      "programado": "2026-11-19T18:08:00Z",
-      "formato": "lista_40_secretos_secuencia_yt",
-      "nota": "31-oct: resubido rehecho (18:42, regla de oro); nlMINAT_6UI (versión vieja) queda privado sin programar, para borrar en Studio | 10-nov: movido al 19-nov por el usuario"
-    },
-    {
-      "video": "tes_sentinel_teaser",
-      "id": "TM5ivAWiF0o",
-      "titulo": "Los 15 SECRETOS del teaser de The Elder Scrolls VI: Sentinel",
-      "visibilidad": "public",
-      "programado": null,
-      "formato": "lista_15_secretos_noticia_siete_voces_secuencia_yt",
-      "nota": "3-nov: PRIVADO sin fecha para que el usuario lo revise y lo publique; 22:18; siete voces de ElevenLabs que compiten + el Humano tras el Telón (voz clonada); el público vota la voz en los comentarios",
-      "publicado": "2026-11-03T22:31:12Z"
-    },
-    {
-      "video": "tes_dwemer_desaparicion",
-      "id": "b0iLKv6r2Tw",
-      "titulo": "¿Qué pasó con los DWEMER? Los 20 secretos de su desaparición que Skyrim te esconde",
-      "programado": null,
-      "fecha": null,
-      "formato": "lore largo 27 min, 20 secretos, siete voces ronda 2",
-      "visibilidad": "public",
-      "publicado": "2026-11-06T18:08:14Z"
-    },
-    {
-      "video": "tes_seres_poderosos",
-      "id": "xCPo5bzKUv0",
-      "titulo": "Los 20 seres más PODEROSOS de Tamriel",
-      "visibilidad": "public",
-      "programado": "2026-11-11T18:08:00Z",
-      "fecha": null,
-      "formato": "ranking 20 seres, lore 24:40, siete voces ronda 3 (Profeta gana Sentinel) + Humano en un dato; presentaciones (tier/vs/carrusel/muro/tablero/podio) y mapas con entrada",
-      "publicado": "2026-11-11T18:08:21Z"
-    },
-    {
-      "titulo": "Las 10 builds más ROTAS de Skyrim",
-      "id": "vuM2Pzgoin0",
-      "programado": "2026-11-13T18:08:00Z",
-      "video": "tes_builds_rotas",
-      "fecha": null,
-      "formato": "lista de 10 builds (raza+piedra+ventajas+equipo con mapa); narra el Profeta 8/10 (ganó la votación) y Johnny, MariCarmen y Hope se pelean por el resto; 3 críticas con contraburla; sin citar fuentes en la voz",
-      "visibilidad": "public",
-      "reemplaza": "rfdmrXaAOvY (v3) y uMdEq4pHnqI (v2): BORRADOS el 12-nov con OK del usuario",
-      "publicado": "2026-11-13T18:08:20Z"
-    },
-    {
-      "titulo": "La Reina Loba de Soledad: la Septim que casi se queda con Tamriel",
-      "id": "is6t-ASJKsM",
-      "video": "tes_reina_loba",
-      "fecha": null,
-      "visibilidad": "public",
-      "formato": "FORMATO NUEVO: historia de lore completa (35 min, Potema la Reina Loba) narrada solo por el Profeta + voces de personajes diseñadas en ElevenLabs Voice Design; escenas antiguas recreadas en Flow con gráficos de Skyrim; pregunta al público sobre el formato; 3 críticas con contraburla",
-      "reemplaza": "AcBHKQzTtUg (v2, privada SIN fecha desde el 14-nov) y 5BWpjIbCwbM (v1, privada SIN fecha desde el 13-nov); se borran solo con OK del usuario. v3 (14-nov): más escenas de Flow (98), clips que encajan, redes de intenciones",
-      "publicado": "2026-11-16T17:00:22Z",
-      "nota": "17-nov-2026: el usuario lo publicó antes de lo programado",
-      "programado_original": "2026-11-22T18:08:00Z"
-    },
-    {
-      "titulo": "Le di IA a los NPC de Skyrim y me humillaron 💀 #Shorts",
-      "id": "aVWHrbiiXl4",
-      "programado": "2026-11-21T01:30:00Z",
-      "video": "tes_embry_short",
-      "fecha": null,
-      "visibilidad": "borrado",
-      "formato": "short compilación vertical (gameplay propio Skyrim con IA, zoom a la cara + meme)",
-      "short": true,
-      "nota": "17-nov-2026: ya no existe en YouTube (borrado en Studio)"
-    },
-    {
-      "titulo": "Las 20 ARMADURAS más poderosas de Skyrim",
-      "id": "CN-dlZmQ-Ag",
-      "programado": "2026-11-25T18:08:00Z",
-      "video": "tes_armaduras_poderosas",
-      "fecha": null,
-      "visibilidad": "private",
-      "formato": "top 20 armaduras (28 min, SECUENCIA YT, solo el Profeta); cada efecto se ve FUNCIONANDO en clip (vapor de Mzund, tentáculos de Miraak, humo de la Cota de ébano…, regla 19-nov); MG nuevos tope y conjunto; 5 agradecimientos + 3 críticas; promo Radio Yermo al final"
-    }
-  ],
-  "ideas": {
-    "idioma": "es",
-    "region": "MX",
-    "busquedas": [
-      "skyrim secretos",
-      "elder scrolls lore",
-      "skyrim lo mas poderoso"
-    ],
-    "competidores": [],
-    "dias": 60,
-    "min_vistas": 2000,
-    "filtro": [
-      "skyrim",
-      "elder scrolls",
-      "tamriel",
-      "oblivion",
-      "morrowind"
-    ]
+  {
+   "video": "tes_misiones_nunca",
+   "id": "R4nzGhWuTmo",
+   "titulo": "Las 15 misiones de Skyrim que NUNCA debes hacer",
+   "visibilidad": "public",
+   "programado": "2026-10-22T18:07:00Z",
+   "formato": "lista_15_misiones_nunca_secuencia_yt",
+   "publicado": "2026-10-22"
   },
-  "estado": "primer video hecho en la Fábrica: tes_misiones_daedricas (14-oct-2026), motor SECUENCIA YT + Chatterbox Sarcastica",
-  "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_tamriel.mp4",
-  "campana_subs": {
-    "desde": "2026-10-30",
-    "metas": [
-      7000,
-      10000
-    ],
-    "linea": "Suscríbete a Crónicas de Tamriel para no perderte la siguiente lista"
+  {
+   "video": "tes_exploits_rotos",
+   "id": "GMJE7dyiV_k",
+   "titulo": "Los 8 exploits más ROTOS de Skyrim",
+   "visibilidad": "public",
+   "programado": "2026-10-18T18:06:00Z",
+   "formato": "lista_8_exploits_secuencia_yt",
+   "publicado": "2026-10-18"
   },
-  "promo_canal": {
-    "desde": "2026-11-17",
-    "canal": "radio_yermo",
-    "linea": "¿Te gusta Fallout? Visita Radio Yermo, nuestro canal hermano de Fallout",
-    "url": "https://www.youtube.com/@RadioYermo",
-    "nota": "El usuario (17-nov-2026): en los próximos videos de Tamriel, recomendar Radio Yermo a quien le guste Fallout. youtube.py la pone sola en la descripción; el tramo en el video: docs/estilo_secuencia_yt.md § «Crónicas de Tamriel» → «Canal hermano: Radio Yermo»."
+  {
+   "video": "tes_misiones_daedricas",
+   "id": "O2ZsE2AFGYc",
+   "titulo": "Las 8 misiones daédricas PROHIBIDAS de Skyrim",
+   "visibilidad": "public",
+   "programado": "2026-10-15T15:15:00Z",
+   "formato": "lista_8_daedrico_secuencia_yt",
+   "publicado": "2026-10-14",
+   "nota": "salió antes de lo programado (14-oct 18:05 UTC en vez de 15-oct 15:15 UTC)"
+  },
+  {
+   "video": null,
+   "id": "fKPDEaOYMxQ",
+   "titulo": "Los 8 dragones más PODEROSOS de Skyrim",
+   "visibilidad": "public",
+   "publicado": "2026-10-10T15:15:00Z"
+  },
+  {
+   "video": null,
+   "id": "i31mjVpNSiA",
+   "titulo": "Los 8 hechizos más ROTOS de Skyrim",
+   "visibilidad": "public",
+   "publicado": "2026-10-01T00:20:14Z"
+  },
+  {
+   "video": null,
+   "id": "KKjWjznbV_4",
+   "titulo": "Los 7 jefes más peligrosos de Skyrim",
+   "visibilidad": "public",
+   "publicado": "2026-09-26T19:30:37Z"
+  },
+  {
+   "video": "tes_cosas_inutiles",
+   "id": "uz1kE1BI4w8",
+   "titulo": "Las 15 cosas más INÚTILES de Skyrim",
+   "visibilidad": "public",
+   "programado": "2026-10-26T18:08:00Z",
+   "formato": "lista_15_inutiles_secuencia_yt",
+   "publicado": "2026-10-26T18:08:28Z"
+  },
+  {
+   "video": "tes_armas_poderosas",
+   "id": "m6Pk4FLQGuc",
+   "titulo": "Las 15 armas más PODEROSAS de Skyrim",
+   "visibilidad": "public",
+   "programado": "2026-10-30T18:08:00Z",
+   "formato": "lista_15_armas_secuencia_yt",
+   "publicado": "2026-10-30T18:08:33Z"
+  },
+  {
+   "video": "tes_misiones_imperdibles",
+   "id": "C16mqQHbK08",
+   "titulo": "Las 25 misiones de Skyrim que NUNCA debes saltarte",
+   "visibilidad": "public",
+   "programado": "2026-11-07T18:08:00Z",
+   "formato": "lista_25_misiones_imperdibles_secuencia_yt",
+   "nota": "29-oct: resubido con 15 mapas y pantalla final; xnOdTqaZWrM (versión vieja) queda privado sin programar",
+   "publicado": "2026-11-09T18:08:16Z"
+  },
+  {
+   "video": "tes_secretos_40",
+   "id": "-o9sopVzR0o",
+   "titulo": "Los 40 SECRETOS de Skyrim que nadie te contó",
+   "visibilidad": "private",
+   "programado": "2026-11-19T18:08:00Z",
+   "formato": "lista_40_secretos_secuencia_yt",
+   "nota": "31-oct: resubido rehecho (18:42, regla de oro); nlMINAT_6UI (versión vieja) queda privado sin programar, para borrar en Studio | 10-nov: movido al 19-nov por el usuario"
+  },
+  {
+   "video": "tes_sentinel_teaser",
+   "id": "TM5ivAWiF0o",
+   "titulo": "Los 15 SECRETOS del teaser de The Elder Scrolls VI: Sentinel",
+   "visibilidad": "public",
+   "programado": null,
+   "formato": "lista_15_secretos_noticia_siete_voces_secuencia_yt",
+   "nota": "3-nov: PRIVADO sin fecha para que el usuario lo revise y lo publique; 22:18; siete voces de ElevenLabs que compiten + el Humano tras el Telón (voz clonada); el público vota la voz en los comentarios",
+   "publicado": "2026-11-03T22:31:12Z"
+  },
+  {
+   "video": "tes_dwemer_desaparicion",
+   "id": "b0iLKv6r2Tw",
+   "titulo": "¿Qué pasó con los DWEMER? Los 20 secretos de su desaparición que Skyrim te esconde",
+   "programado": null,
+   "fecha": null,
+   "formato": "lore largo 27 min, 20 secretos, siete voces ronda 2",
+   "visibilidad": "public",
+   "publicado": "2026-11-06T18:08:14Z"
+  },
+  {
+   "video": "tes_seres_poderosos",
+   "id": "xCPo5bzKUv0",
+   "titulo": "Los 20 seres más PODEROSOS de Tamriel",
+   "visibilidad": "public",
+   "programado": "2026-11-11T18:08:00Z",
+   "fecha": null,
+   "formato": "ranking 20 seres, lore 24:40, siete voces ronda 3 (Profeta gana Sentinel) + Humano en un dato; presentaciones (tier/vs/carrusel/muro/tablero/podio) y mapas con entrada",
+   "publicado": "2026-11-11T18:08:21Z"
+  },
+  {
+   "titulo": "Las 10 builds más ROTAS de Skyrim",
+   "id": "vuM2Pzgoin0",
+   "programado": "2026-11-13T18:08:00Z",
+   "video": "tes_builds_rotas",
+   "fecha": null,
+   "formato": "lista de 10 builds (raza+piedra+ventajas+equipo con mapa); narra el Profeta 8/10 (ganó la votación) y Johnny, MariCarmen y Hope se pelean por el resto; 3 críticas con contraburla; sin citar fuentes en la voz",
+   "visibilidad": "public",
+   "reemplaza": "rfdmrXaAOvY (v3) y uMdEq4pHnqI (v2): BORRADOS el 12-nov con OK del usuario",
+   "publicado": "2026-11-13T18:08:20Z"
+  },
+  {
+   "titulo": "La Reina Loba de Soledad: la Septim que casi se queda con Tamriel",
+   "id": "is6t-ASJKsM",
+   "video": "tes_reina_loba",
+   "fecha": null,
+   "visibilidad": "public",
+   "formato": "FORMATO NUEVO: historia de lore completa (35 min, Potema la Reina Loba) narrada solo por el Profeta + voces de personajes diseñadas en ElevenLabs Voice Design; escenas antiguas recreadas en Flow con gráficos de Skyrim; pregunta al público sobre el formato; 3 críticas con contraburla",
+   "reemplaza": "AcBHKQzTtUg (v2, privada SIN fecha desde el 14-nov) y 5BWpjIbCwbM (v1, privada SIN fecha desde el 13-nov); se borran solo con OK del usuario. v3 (14-nov): más escenas de Flow (98), clips que encajan, redes de intenciones",
+   "publicado": "2026-11-16T17:00:22Z",
+   "nota": "17-nov-2026: el usuario lo publicó antes de lo programado",
+   "programado_original": "2026-11-22T18:08:00Z"
+  },
+  {
+   "titulo": "Le di IA a los NPC de Skyrim y me humillaron 💀 #Shorts",
+   "id": "aVWHrbiiXl4",
+   "programado": "2026-11-21T01:30:00Z",
+   "video": "tes_embry_short",
+   "fecha": null,
+   "visibilidad": "borrado",
+   "formato": "short compilación vertical (gameplay propio Skyrim con IA, zoom a la cara + meme)",
+   "short": true,
+   "nota": "17-nov-2026: ya no existe en YouTube (borrado en Studio)"
+  },
+  {
+   "titulo": "Las 20 ARMADURAS más poderosas de Skyrim",
+   "id": "CN-dlZmQ-Ag",
+   "programado": "2026-11-25T18:08:00Z",
+   "video": "tes_armaduras_poderosas",
+   "fecha": null,
+   "visibilidad": "private",
+   "formato": "top 20 armaduras (28 min, SECUENCIA YT, solo el Profeta); cada efecto se ve FUNCIONANDO en clip (vapor de Mzund, tentáculos de Miraak, humo de la Cota de ébano…, regla 19-nov); MG nuevos tope y conjunto; 5 agradecimientos + 3 críticas; promo Radio Yermo al final"
   }
+ ],
+ "ideas": {
+  "idioma": "es",
+  "region": "MX",
+  "busquedas": [
+   "skyrim secretos",
+   "elder scrolls lore",
+   "skyrim lo mas poderoso"
+  ],
+  "competidores": [],
+  "dias": 60,
+  "min_vistas": 2000,
+  "filtro": [
+   "skyrim",
+   "elder scrolls",
+   "tamriel",
+   "oblivion",
+   "morrowind"
+  ]
+ },
+ "estado": "primer video hecho en la Fábrica: tes_misiones_daedricas (14-oct-2026), motor SECUENCIA YT + Chatterbox Sarcastica",
+ "pantalla_final": "E:\\FabricaAnimaciones\\pantallas_finales\\cronicas_tamriel.mp4",
+ "campana_subs": {
+  "desde": "2026-10-30",
+  "metas": [
+   7000,
+   10000
+  ],
+  "linea": "Suscríbete a Crónicas de Tamriel para no perderte la siguiente lista"
+ },
+ "promo_canal": {
+  "desde": "2026-11-17",
+  "canal": "radio_yermo",
+  "linea": "¿Te gusta Fallout? Visita Radio Yermo, nuestro canal hermano de Fallout",
+  "url": "https://www.youtube.com/@RadioYermo",
+  "nota": "El usuario (17-nov-2026): en los próximos videos de Tamriel, recomendar Radio Yermo a quien le guste Fallout. youtube.py la pone sola en la descripción; el tramo en el video: docs/estilo_secuencia_yt.md § «Crónicas de Tamriel» → «Canal hermano: Radio Yermo»."
+ }
 }

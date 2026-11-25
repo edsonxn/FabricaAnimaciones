@@ -16,7 +16,7 @@
   ROTO/PODEROSO», «lo más INÚTIL», «secretos que te perdiste» de 12-20 min; luego lore largo «para dormir» (Calm Loremaster /
   Wasteland Sleep Protocol). Cambiar UNA variable cada video.
 - **Frecuencia y hora (provisional):** ciclo 4 días, 17:00 CDMX; se ajusta con datos tras los primeros 3 videos.
-  **17-nov-2026 (el usuario): desde el 2.º video, los MISMOS tiempos que Crónicas de Tamriel = ciclo 3 días, 09:15 CDMX.**
+  **17-nov-2026 (el usuario): desde el 2.º video, los MISMOS tiempos que Crónicas de Tamriel = ciclo 3 días, 09:15 CDMX.** **25-nov-2026: Tamriel pasó a 12:00 CDMX (gráfica de horas de Studio) y Radio Yermo con él.**
 - **Voz (elegida por el usuario el 17-nov-2026): el Profeta con el filtro de radio del Yermo en modo B** (`nucleo/fx_radio.py`): idea
   suya, «que se escuche como la radio del juego, con esos filtros». Probó 6 locutores (Jose, Zabra, Juan Pablo, Brian C, Bardo, Carlos
   Pro) y dudó con Brian C en modo B. A vigilar: si en Tamriel se reconoce la voz (comentarios «es el mismo de Tamriel») y si el

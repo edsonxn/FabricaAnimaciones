@@ -2,7 +2,7 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
 - canal: radio_yermo (3.er video) · hueco mié 25-nov-2026 09:15 CDMX (ciclo 3 d, 09:15 = el de Tamriel)
 - estilo: secuencia_yt (receta de Tamriel; regla de oro `videos/tes_secretos_40/`) · kit `nucleo/mg_fo.py` · voz el Profeta + filtro radio modo B (`VOZ_FX`, como `videos/fo_nunca_f4/guion.py`) · OST oficial de cada juego → doc: docs/estilo_secuencia_yt.md § Radio Yermo
-- etapa: SUBIDO f2zKynItV6U (privado, programado mié 25-nov 09:16 CDMX = 15:16Z) · MASTER `salida/fo_enemigos_ocultos_MASTER.mp4` 15:23 1080p, −14 LUFS, desfase 0 ms; miniatura y .srt cargados
+- etapa: SUBIDO f2zKynItV6U (privado, programado mié 25-nov 12:00 CDMX = 18:00Z; reprogramado el 25-nov desde 09:16 por el nuevo horario del canal) · MASTER `salida/fo_enemigos_ocultos_MASTER.mp4` 15:23 1080p, −14 LUFS, desfase 0 ms; miniatura y .srt cargados
 - siguiente: nada pendiente; `fab.py fo_enemigos_ocultos limpiar` cuando él apruebe el video. Medir ≈ 2-dic.
 
 ## Sesiones («continúa el video fo_enemigos_ocultos» retoma aquí · protocolo docs/sesiones.md)

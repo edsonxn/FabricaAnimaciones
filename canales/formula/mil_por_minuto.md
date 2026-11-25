@@ -36,6 +36,16 @@
   amarillo/verde con contorno, palabras clave en mayúsculas sobre el plano («REVISADAS»); cortes de 1-2 s; voz humana cálida, sin prisa.
 
 ## Nuestra receta (regla de oro de `videos/tes_secretos_40/` aplicada a fábricas)
+- **MENOS TEXTO, MÁS VISUAL (el usuario, 25-nov-2026, tras ver `mpm_cocacola`; ese video se queda como está):** «hay mucho texto,
+  muchos cuadros de texto… a veces el cuadro es tan grande que tapa lo visual que sí importa». Caso: estación 4, el cuadro
+  «SOPLADO · calentar / estirar / inflar» tapaba casi toda la animación 3D. Desde el 3.er video:
+  1. **Sobre una escena 3D no va nada** salvo el contador de esquina (y, si acaso, una etiqueta mínima en un borde): los pasos los
+     cuentan la animación y la voz.
+  2. **Cada lista o cuadro de texto (`P.cuenta`, etiquetas largas) se cambia por algo que se ve:** íconos, una mini animación 2D que
+     haga lo que dice el texto (termómetro que sube, varilla que baja, botella que se infla, paquete → tarima → camión), la foto o
+     pegatina del objeto. Texto solo cuando importa (cifras clave, nombres propios, trivia) y corto.
+  3. **Nada grande en el centro tapando lo que describe la voz**; si va texto, chico y contra un borde. En `fx hoja`, comprobar
+     que cada 3D y cada máquina se vean completos.
 - **Motor:** SECUENCIA YT (`docs/estilo_secuencia_yt.md`): clip real por beat (videos oficiales de planta y anuncios de la marca, tours de
   fábrica, noticias) con yt-dlp, recortes cortos y transformados; lo que la voz dice SE VE en ese momento; lista de PROMESAS VISUALES.
 - **Firma propia (lo que nos separa de los canales de metraje reciclado):**

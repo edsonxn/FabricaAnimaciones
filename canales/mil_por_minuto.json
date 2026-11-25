@@ -5,17 +5,23 @@
  "estilo": "Cómo se fabrican las marcas conocidas + el NEGOCIO detrás (alta 19-nov-2026, bajo la cuenta de Google de Edsonxn; referencia JPaniagua Docs, Maruchan ×19,7). Motor SECUENCIA YT (clip real por beat: videos oficiales de planta y anuncios de la marca, tours, noticias, con yt-dlp), regla de oro de tes_secretos_40. Firma propia: CONTADOR de producción en una esquina, PLANO animado de la línea estación por estación (kit nucleo/mg_planta.py, pendiente del 1.er video), cifras gigantes de dinero y volumen, mapa real con ruta planta → tiendas (tema 'planta' de mg_mapa), pegatinas de productos y fundadores, Flow marcado RECREACIÓN para el interior de máquinas. Estructura 15-18 min: gancho con la cifra → origen → proceso en 8-12 estaciones → suscripción (~4:30) → trivia (~9:00) → escala → mitos con datos → logística/mapa → el negocio → cierre circular. Música Lyria (no es canal de juegos), SFX de máquinas. Ver canales/formula/mil_por_minuto.md",
  "horario": {
   "zona": "America/Mexico_City",
-  "hora_local": "18:37",
-  "utc": "00:37",
+  "hora_local": "15:00",
+  "utc": "21:00",
   "ciclo_dias": 4,
   "separacion_min_horas": 96,
-  "nota": "Provisional (alta 19-nov-2026): público general, tarde-noche; ningún otro canal sube a esa hora. 00:37 UTC = día siguiente. AJUSTABLE por Claude con datos.",
+  "nota": "15:00 CDMX = 21:00 UTC (25-nov-2026, el usuario pidió adelantarlo). Sin gráfica de horas en Studio («No hay suficientes datos»): decisión por criterio con datos indirectos: 77 % de las vistas en TELEVISIÓN, 100 % México, 90 % por videos sugeridos; la TV se ve de tarde-noche, así que sale ~3-4 h antes de ese pico para que YouTube lo pruebe antes. Revisar cuando Studio muestre «Horas de actividad de tus usuarios».",
   "historial": [
    {
     "fecha": "2026-11-19",
     "ciclo_dias": 4,
     "hora_local": "18:37",
     "motivo": "alta del canal, sin datos propios"
+   },
+   {
+    "fecha": "2026-11-25",
+    "ciclo_dias": 4,
+    "hora_local": "15:00",
+    "motivo": "el usuario pidió más temprano; TV 77 %, MX 100 %, sugeridos 90 %; publicar 3-4 h antes del pico de TV de la noche"
    }
   ]
  },
@@ -37,9 +43,9 @@
    "titulo": "Así se FABRICA la Coca-Cola: 9,553 millones al año",
    "subido": "2026-11-25",
    "visibilidad": "private",
-   "programado": "2026-11-27T00:37:00Z",
+   "programado": "2026-11-26T21:00:00Z",
    "formato": "cómo se fabrica + negocio (~14:53), secuencia YT con contador de esquina, plano de línea y escenas 3D (arcilla + realista), voz Brian C",
-   "nota": "2.º video del canal. Programado jue 26-nov-2026 18:37 CDMX (ciclo 4 d tras Takis). Miniatura Flow «9,553 MILLONES»; alternativa A/B «FÓRMULA SECRETA» (mini_v3/v4). No monetizado."
+   "nota": "2.º video del canal. Programado jue 26-nov-2026 15:00 CDMX (ciclo 4 d tras Takis). Miniatura Flow «9,553 MILLONES»; alternativa A/B «FÓRMULA SECRETA» (mini_v3/v4). No monetizado. Reprogramado el 25-nov de 18:37 a 15:00 CDMX (nuevo horario del canal)."
   }
  ],
  "ideas": {

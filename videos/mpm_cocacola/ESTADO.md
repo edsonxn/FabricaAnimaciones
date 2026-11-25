@@ -1,8 +1,8 @@
 # mpm_cocacola — «Así se FABRICA la Coca-Cola: 9,553 millones al año» (Mil por Minuto, 2.º video del canal) — ESTADO
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. -->
-- canal: mil_por_minuto · hueco jue 26-nov-2026 18:37 CDMX (`--publicar 2026-11-27T00:37:00Z`, ciclo 4 d tras Takis)
+- canal: mil_por_minuto · hueco jue 26-nov-2026 15:00 CDMX (2026-11-26T21:00Z; reprogramado el 25-nov desde 18:37, nuevo horario del canal)
 - estilo: SECUENCIA YT + kit `nucleo/mg_planta.py` + ESCENAS 3D `nucleo/fabrica3d.py` (arcilla + realista) → `canales/formula/mil_por_minuto.md` · modelo `videos/mpm_takis/`
-- etapa: ✅ CERRADO 25-nov — MASTER 1080p 14:53 (732 MB) + .srt + miniatura Flow SUBIDOS → https://youtu.be/BYNSPBgnG_k, privado y programado jue 26-nov 18:37 CDMX (2026-11-27T00:37Z); no monetizado
+- etapa: ✅ CERRADO 25-nov — MASTER 1080p 14:53 (732 MB) + .srt + miniatura Flow SUBIDOS → https://youtu.be/BYNSPBgnG_k, privado y programado jue 26-nov 15:00 CDMX (2026-11-26T21:00Z; antes 18:37); no monetizado
 - siguiente: medir ≈ 3-dic contra Takis (retención, % TV, sugeridos); A/B de miniatura «FÓRMULA SECRETA» (mini_v3/v4) si el CTR sale bajo; `fab.py mpm_cocacola limpiar` cuando esté aprobado
 
 ## Sesiones

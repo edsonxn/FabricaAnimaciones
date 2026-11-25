@@ -55,7 +55,7 @@
 - **Miniaturas:** Flow (Nano Banana escribe el texto): el producto gigante + la máquina + cifra o palabra en MAYÚSCULAS.
 - **Comentarios:** canal sin videos → el 1.º va sin agradecimientos ni críticas; suscripción sin cifra.
 - **Protegido en `nucleo/filtro_canal.py`** como Tamriel/Radio Yermo (prefijo de videos `mpm_`). Sin promo cruzada hasta que tenga ≥ 2 públicos.
-- **Frecuencia y hora (provisional):** ciclo 4 días, 18:37 CDMX (público general, tarde-noche; ningún canal sube a esa hora). Ajustar con datos.
+- **Frecuencia y hora:** ciclo 4 días, **15:00 CDMX** desde el 25-nov-2026 (antes 18:37; el usuario pidió más temprano). TV 77 %, MX 100 %, sugeridos 90 %: salir 3-4 h antes del pico de TV de la noche. Revisar con «Horas de actividad» de Studio cuando haya datos.
 
 ## Primeros temas (los 3 con referencia ×; elegir con `fab.py ideas mil_por_minuto` cuando haya datos)
 1. **Takis** (mexicano, Barcel/Bimbo; ref. JPaniagua ×6,8) · 2. **Coca-Cola en México** (FEMSA) · 3. **Bimbo / Gansito** · reserva:

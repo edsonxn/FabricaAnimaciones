@@ -1,6 +1,6 @@
 """«Buenos días»: datos mínimos para que Claude proponga el plan del día sin explorar el proyecto.
 
-  python fab.py buenosdias [--actualizar]                      tablero del día (canales, tramos pendientes, feedback, uso)
+  python fab.py buenosdias [--actualizar]                      tablero del día (canales, tramos pendientes, feedback, uso, disco)
   python fab.py buenosdias --uso <cuenta> <semanal%> <5h%> <resetsAt ISO>   anota el uso de tokens de una cuenta (get_usage)
   python fab.py buenosdias --feedback <video> <aprobado|ajustes|rehacer> "<nota>"   anota el veredicto del usuario
 
@@ -10,6 +10,7 @@ import csv
 import datetime as dt
 import json
 import os
+import shutil
 import subprocess
 import sys
 
@@ -78,6 +79,25 @@ def tablero(extra):
     if os.path.exists(USO):
         print("\n--- Uso de tokens (últimas filas) ---")
         print("".join(open(USO, encoding="utf-8").readlines()[-6:]).rstrip())
+    disco()
+
+
+def disco():
+    """25-nov-2026 (el usuario): cada «buenos días» borra solo los pesados de los videos públicos hace ≥ 2 días
+    (renders y mezclas; conserva MASTER, voz, guion e imágenes) para que E: no se vuelva a llenar."""
+    print("\n--- Disco ---")
+    if os.path.isdir("E:\\"):
+        salida = correr(os.path.join(RAIZ, "nucleo", "limpiar_publicados.py"), "--borrar", "--conservar-master", "--dias", "2")
+        total = [l for l in salida.splitlines() if l.startswith("TOTAL") or "Traceback" in l or "Error" in l]
+        print("  Limpieza de publicados: " + (total[-1] if total else salida.strip()[-300:]))
+    else:
+        print("  E: no está conectado: limpieza de publicados omitida")
+    for u in "CDE":
+        try:
+            libre = shutil.disk_usage(u + ":\\").free / 2**30
+        except OSError:
+            continue
+        print(f"  {u}: {libre:6.1f} GB libres" + ("  ← poco espacio" if libre < 20 else ""))
 
 
 def main():

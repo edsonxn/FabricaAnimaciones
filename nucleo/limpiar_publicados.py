@@ -4,6 +4,7 @@
   python fab.py limpiar --publicados            simulación: qué se borraría y cuánto libera
   python fab.py limpiar --publicados --borrar   lo borra de verdad (sin papelera) y lo anota en el registro
   ... --conservar-master                         no toca los *_MASTER.mp4 (el usuario, 19-nov-2026)
+  ... --dias N                                   solo los públicos hace ≥ N días (buenosdias usa 2; 25-nov-2026)
 
 Público = en canales/<alias>.json → publicados tiene `id` y es «public» o su fecha
 (publicado / programado / publicar) ya pasó. Los subidos a futuro y las reservas privadas no se tocan.
@@ -21,11 +22,14 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VIDEOS = os.path.join(RAIZ, "videos")
 VIDEO_EXT = {".mp4", ".webm", ".mkv", ".mov", ".m4a", ".avi"}
 CONSERVAR_MASTER = "--conservar-master" in sys.argv
+DIAS = int(sys.argv[sys.argv.index("--dias") + 1]) if "--dias" in sys.argv else 0
 REGISTRO = r"E:\FabricaAnimaciones\_limpieza_publicados.txt"
 
 
 def publicos():
-    ahora = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M")
+    utc = datetime.datetime.now(datetime.timezone.utc)
+    ahora = utc.strftime("%Y-%m-%dT%H:%M")
+    umbral = (utc - datetime.timedelta(days=DIAS)).strftime("%Y-%m-%dT%H:%M")
     pub = {}
     for f in glob.glob(os.path.join(RAIZ, "canales", "*.json")):
         try:
@@ -37,6 +41,8 @@ def publicos():
             if not (v and p.get("id")):
                 continue
             fecha = p.get("publicado") or p.get("programado") or p.get("publicar") or ""
+            if fecha and fecha > umbral:   # --dias: margen tras publicar (correcciones por comentarios)
+                continue
             if p.get("visibilidad") == "public" or (fecha and fecha <= ahora):
                 pub[v] = (os.path.basename(f)[:-5], fecha)
     return pub, ahora

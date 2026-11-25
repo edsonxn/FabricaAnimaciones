@@ -539,7 +539,7 @@ python fab.py biblioteca sugerir <v> | buscar <texto> | usar <id> <v> <tramo> | 
 python fab.py <v> escena <id> t1 t2 ...   hoja de prueba (previews/esc_<id>.jpg; MÍRALA)
 python fab.py <v> video --hasta <s> | --rehacer 270-280   luego `final`; antes de --rehacer tras editar código: «conservar» en el panel
 python fab.py nuevo <v> [--secuencia]  |  <v> fx [--seco|hoja]  |  <v> limpiar (al aprobar)
-python fab.py limpiar --publicados [--borrar]   disco: borra videos y mezclas .wav de los YA públicos (conserva proyecto, imágenes, Lyria y voz; registro en E:\FabricaAnimaciones\_limpieza_publicados.txt; 22-oct)
+python fab.py limpiar --publicados [--borrar]   disco: borra videos y mezclas .wav de los YA públicos (conserva proyecto, imágenes, Lyria y voz; registro en E:\FabricaAnimaciones\_limpieza_publicados.txt; 22-oct; `--conservar-master`, `--dias N`; corre sola en cada `buenosdias` con `--dias 2`, 25-nov)
 python fab.py yt canales | metricas <alias> 90 | videos <canal> | subir <v> <canal> private | aplicar | publicar
 python fab.py envivo [canal] [--tema "…"] [--modelo sonnet|haiku]   DIRECTO que se genera solo (clips, pegatinas, fichas del kit del canal, voz de Windows) y cambia de tema al vuelo: pantalla :8790/?auto=1 (OBS) + panel :8790/admin (chat en vivo que la IA clasifica y contesta, comentar como espectador, el chat cambia el tema cada 3 min; ≈ 6-8 US$/h equivalentes del plan MAX con sonnet) (4-nov-2026; docs/estilo_envivo.md)
 python fab.py tele [aviso "t" | video <v> [avance|master|montaje] [--pregunta "¿…?" --opciones "A|B" --esperar 900] | preguntar | tablero | respuestas]

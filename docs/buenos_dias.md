@@ -5,6 +5,7 @@ El usuario arranca cada día con «buenos días». Claude propone el plan del d�
 ## 1. Al recibir «buenos días» (una sola sesión de gestión, barata)
 1. `get_usage` → `python fab.py buenosdias --uso <cuenta> <semanal%> <5h%> <resetsAt>` (cuenta = parte local del correo del usuario de esa sesión).
 2. `python fab.py buenosdias` (añade `--actualizar` si los datos de canales tienen > 1 día). No leas más archivos salvo el `ESTADO.md` del video elegido.
+   - **Disco (25-nov-2026):** el tablero corre solo `limpiar --publicados --borrar --conservar-master --dias 2` (borra renders y mezclas de los públicos hace ≥ 2 días; conserva MASTER, voz, guion e imágenes) y muestra los GB libres de C:/D:/E:. Si un disco sale «← poco espacio», dilo en el plan.
 3. Responde con el plan en ≤ 12 líneas:
    - **Canal urgente** (ATRASADO o el primer hueco) y **qué hacer**: terminar un video en producción antes que empezar otro.
    - **Tema** si hay que empezar uno: los 3 candidatos salen de `canales/metricas/ideas/<alias>.md` + `canales/formula/<alias>.md` (no los inventes; si el informe tiene > 7 días, `fab.py ideas <alias> --actualizar`).

@@ -259,6 +259,16 @@ de Liquid en `videos/lol_worlds_2026/` (`j6_3d.py` → `tactica3d/j6.json` → `
    17 s) y el motor los estira (0,6×), voz incluida. Tras `bajar`, comparar la duración de cada clip con su beat; los tramos en
    vivo se cortan de la fuente local de la jugada (`medios/_fuente/j*.mp4`, imagen y narración alineadas) con ffmpeg.
 
+## Jugadas sin cortes: plan 3D + órbita + flechas parabólicas + rutas (el usuario, 25/26-nov-2026, `tl_josedeodo`)
+- La forma aprobada de cada jugada: VOD seguido a x1 (`SYNC2`/`CADENA`, pausa con chip si la voz es más larga, nunca salto) → mesa
+  «plan» en 3D antes de la pelea → **órbita de 360°** (`cam="orbita"` en `mesas_3d.py`) en el cuadro exacto del momento clave, con
+  flechas en arco (`alto`) y rutas medidas (`ruta()` + `investigacion/cam_<n>.json`). Nada de tableros 2D.
+- La mesa (`MESA2`) va ENCIMA del VOD: un `SYNC2`/`CADENA` añadido después en la lista la tapa (pasó en 3 de 8 mesas). `efectos.py` de
+  `tl_josedeodo` ya sube cada mesa tras el último video que se le cruza: copiar ese bloque. En la hoja de cuadros, mirar CADA mesa.
+- Los silencios de `ESPACIOS_VOZ` solo en pausas reales ≥ 120 ms (`cortes_voz.py`; `render_par` aborta si no). Sin pausa: ponerlo en
+  la frontera anterior que sí la tenga (el ancla de la palabra no se mueve) y quitar de la cadena el ancla intermedia que quede desfasada.
+- Al crecer el video aparecen beats nuevos: correr `medios_locales.py` antes de `render_par` y borrar los `par_*.ok` viejos.
+
 ## Nunca cámara rápida en una jugada (el usuario, 31-oct-2026, `lol_semana2`)
 Tras explicar, «les das play pero en cámara rápida y no se alcanzan a ver bien»: la acción va SIEMPRE a x1 o más lenta. `CLIP(n, de, a, t0, t1)` estira el video para llenar
 la frase y por eso aceleraba (109 tramos > x1,05, hasta x10). Si la acción no cabe en la frase: `"post"` en la escena con la narración original, o saltar por corte entre momentos.

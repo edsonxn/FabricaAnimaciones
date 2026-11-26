@@ -152,6 +152,17 @@
       "prueba": "primer Short vertical de 3 min de un pueblo del Bajío (sorteo), con Google Maps en la descripción y la frase en la narración",
       "nota": "mapa vertical de Querétaro 700 px/°, 8 hojas Flow, 19 fotos de Commons, música de la biblioteca (no_vuelve + la_sena; Lyria API sin saldo); .srt pendiente por cuota",
       "publicado": "2026-10-24T16:00:19Z"
+    },
+    {
+      "video": "historia_aztecas",
+      "id": "K_k3xRVcjao",
+      "titulo": "Los AZTECAS: 200 años de historia en 18 minutos",
+      "subido": "2026-11-25",
+      "visibilidad": "private",
+      "publicar": "2026-11-26T20:00:00Z",
+      "formato": "historia_completa_larga_boceto_mapa_personaje_fijo_xolo",
+      "prueba": "primera historia COMPLETA larga (18:20) con la fórmula «Menuda Historia» (revisión 23-nov): personaje fijo Xolo (xoloitzcuintle) con chiste recurrente, miniatura limpia «200 AÑOS / AZTECAS»",
+      "nota": "25 hojas Flow + 74 fotos de Commons, mapa Valle de México con lagos de 1519, voz ElevenLabs Alberto (cuenta 4), música de la biblioteca (Lyria API sin saldo), 551 SFX; render con --procs 4 (12 por defecto agotaba la RAM)"
     }
   ],
   "ideas": {

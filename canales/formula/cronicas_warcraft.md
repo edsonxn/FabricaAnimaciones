@@ -253,3 +253,8 @@
   todos los niveles, no solo a los de 60; la pantalla final manda a KBjKYFGR05k.
 - **16-dic:** esperar el brief de diciembre (llega el 1-dic); si salen los reworks de clase, los cambios de cada clase SIN tier list.
 - **Calendario:** nada de video normal 2 días antes de una integración (la RUTA, del 23-nov, se comió al de errores del 25-nov). El 2-dic queda libre.
+- **Meta del usuario para la campaña 3 (25-nov):** ≥ 10 000 vistas por integración y ≥ 80 000 en total (la campaña 2 hizo 80 251).
+  El trato permite que varios videos con el mismo enlace sumen vistas (18-sep; en la campaña 2, /5 se usó en 3 videos). Decisión: NO hacer
+  video el vie 27-nov con /6: quedaría 2 días antes de PROFESIONES /7 (le quitaría vistas, como la RUTA a errores 60) y habría que
+  hacerlo con prisas en 36 h. Repesca de /6 solo si el 2-dic la proyección queda bajo 10 mil → sáb 12 o dom 13-dic (lejos del 9 y el 16).
+  Proyección al 25-nov: /6 ~8-12 mil (más el empujón del 9-dic) · /7 ~20-30 mil (formato RUTA) · /8, /9 y /10 ~15-20 mil cada uno → 75-110 mil.

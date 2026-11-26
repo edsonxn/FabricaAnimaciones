@@ -238,3 +238,18 @@
   sigue corriendo, «Detener y fijar» la que gane antes de cambiar el título. (3) La palanca grande no es la miniatura vieja: es un video NUEVO
   de Onyxia o Hyjal que salga el 7 u 8-dic (le llega la página de inicio de los suscriptores) y mande a este con la pantalla final y un
   comentario fijado. (4) Medir búsquedas «onyxia», «bandas» y «60» del 5 al 12-dic.
+
+## Propuesta del 25-nov-2026 — integraciones Overgear que faltan (vie 4-dic /8 · mié 9-dic /9 · mié 16-dic /10)
+- **Datos:** audiencia en el tramo 30-45 (censo 4,6 % en 60; comentarios 18-48). Lo propio que gana: guía útil para quien
+  YA juega con empaque nuevo (RUTA 1→60 CTR 8,5 %, ORO 34 mil). Fuera (ideas del 26-nov 03:13 UTC): RageGaming «Leveling Just
+  Got 10x Harder» ×8,9 (118 mil/día), oro ×7,5 y TheAllianceFootman oro ×30 en cortos, Bellular «Tricks That Save You HOURS» ×3,4
+  (168 mil/día), Blizzard «Leveling Journey Past 30» ×4,5. Cambios recientes: 14-nov, mazmorras sin experiencia si vas 12+ niveles
+  arriba; 17-nov, Cumbre Roca Negra Superior más difícil; los reworks grandes de clase, «en 5 semanas» desde el 10-nov (~mediados de dic).
+- **4-dic (recomendado):** «18 MAZMORRAS de WoW Forever: cuál hacer a cada nivel» (contar las mazmorras con fuente antes de fijar el
+  número). Una variable sobre la guía-ruta: el tema (zonas → mazmorras). Empaque NUEVO: sin «RUTA» ni mapa en la miniatura; un
+  jefe de mazmorra in-game. El coaching encaja (tu papel en el grupo, la rotación). Alternativas: oro del 30 al 50 (secuela del ganador)
+  · trucos que ahorran tiempo (cuidado con la regla de Overgear «sáltate el grind»).
+- **9-dic:** «TODO lo que llega el 9 de DICIEMBRE a WoW Forever» (formato «Everything We Know», MadSeason ×6,8-8): le sirve a
+  todos los niveles, no solo a los de 60; la pantalla final manda a KBjKYFGR05k.
+- **16-dic:** esperar el brief de diciembre (llega el 1-dic); si salen los reworks de clase, los cambios de cada clase SIN tier list.
+- **Calendario:** nada de video normal 2 días antes de una integración (la RUTA, del 23-nov, se comió al de errores del 25-nov). El 2-dic queda libre.

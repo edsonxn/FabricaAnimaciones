@@ -23,6 +23,7 @@ Pipeline propio (Python, todo local) que produce videos animados 2D con narraci�
 
 ## Reglas globales (una línea cada una; detalle en RGC)
 **Lo que se ve**
+- **Secretos y mitos DE VERDAD (26-nov):** en listas de secretos/mitos/«que ignoraste» solo entra lo que el jugador normal NO sabía ni comprobó jugando (versión, texto escondido, código/beta, truco raro, entrevista); nada obvio como los cucos que se vengan; filtro «¿lo sabía el jugador normal?» en cada investigación. → RGC §R46
 - **Todo lo que se nombra se muestra, con video de preferencia (10-nov):** clip; si no, `pant()` o pegatina GRANDE nítida; el mapa no basta; la voz habla como quien estuvo ahí; hechizos/efectos/escenas se ven FUNCIONANDO: clip → foto real → Flow con gráficos del juego (19-nov). → RGC §R34
 - **Promesas visuales comprobadas (5-nov):** `promesas.md` + `previews/promesas_NN.jpg` antes del render. → RGC §R33
 - **Escenas importantes en movimiento (18-nov):** suceso contado = clip real de ese momento; último recurso Flow video 4-6 s marcado RECREACIÓN; `escenas.md`. → RGC §R35

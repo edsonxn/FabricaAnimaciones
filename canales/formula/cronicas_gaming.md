@@ -54,7 +54,14 @@ Hipótesis de la siguiente: con título corto y 10-14 min, cualquiera de las 3 s
 **Aviso de la cola:** `bt_50_secretos` (24:50, Banjo-Tooie, lista larga) sale el 28-nov: según estos datos es el formato que peor
 rinde. No se toca sin el usuario; se mide a 7 días y, si confirma, «lista larga de un juego frío» pasa a «Evitar».
 
+**Registro de la fórmula del 26-nov:** `oot_mitos_reales` «12 MITOS de Ocarina of Time que eran REALES» (10:52, iXjyP-mUvH8) sale
+lun 30-nov 18:15 CDMX. Variable: ángulo «mito verificado» con el juego ganador. Hipótesis ≥ ×3 la mediana (≥ 380 vistas) a 7 días.
+Registro a 7 días: (pendiente, ~8-dic).
+
 ## Evitar (26-nov-2026)
+- Puestos «obvios» en listas de secretos o mitos (RGC §R46): lo que cualquiera ve jugando normal (los cucos vengadores de
+  oot_mitos_reales). El usuario: «no lo consideraría mito… cuida más ese tipo de cosas».
+- Votaciones o menciones de la voz anterior: Carlos Aguilar es la voz por defecto del canal (el usuario, 26-nov-2026).
 - «X: su historia y los N secretos QUE IGNORASTE» de 20-25 min con un juego sin noticia (Spyro 2 ×0,5, Pokémon ×0,6).
 - Dos Banjo-Tooie seguidos; más de un Banjo cada ~3 semanas.
 

@@ -1,7 +1,7 @@
 {
   "canal_id": "UCJpxLWrreWjuTffcjUgDi5Q",
   "nombre": "Crónicas del gaming",
-  "estilo": "Nintendo/retro (VUELVE el 19-oct-2026 por decisión del usuario; el terror CRT del 13-oct queda como especial): fórmula de Warcraft/Tamriel/Runa = motor SECUENCIA YT (gameplay por beat) + pegatinas reales + fichas + MG nuevos por guion (kit nucleo/mg_gaming.py, estilo N64), voz Chatterbox Sarcastica; docs/estilo_secuencia_yt.md § Crónicas del gaming",
+  "estilo": "Nintendo/retro (VUELVE el 19-oct-2026 por decisión del usuario; el terror CRT del 13-oct queda como especial): fórmula de Warcraft/Tamriel/Runa = motor SECUENCIA YT (gameplay por beat) + pegatinas reales + fichas + MG nuevos por guion (kit nucleo/mg_gaming.py, estilo N64), voz ElevenLabs Carlos Aguilar (por defecto desde el 26-nov-2026, sin mencionar la anterior); docs/estilo_secuencia_yt.md § Crónicas del gaming",
   "horario": {
     "zona": "America/Mexico_City",
     "hora_local": "18:00",
@@ -231,6 +231,18 @@
       "formato": "anadido_en_secreto_remake_secuencia_yt",
       "nota": "10:24, voz ElevenLabs Hope (turbo); sigue a oot_remake_eliminado (1 088 vistas en 2,5 d), cambia SOLO el ángulo (lo añadido); OST oficial + audio original de Ganondorf y Darunia; 117 FX, 4 mapas de Hyrule, 3 críticas con contraburla + 1 agradecimiento; miniatura Flow «LO ESCONDIERON»",
       "publicado": "2026-11-13T00:01:20Z"
+    },
+    {
+      "video": "oot_mitos_reales",
+      "id": "iXjyP-mUvH8",
+      "titulo": "12 MITOS de Ocarina of Time que eran REALES",
+      "subido": "2026-11-26",
+      "visibilidad": "private",
+      "programado": "2026-12-01T00:15:00Z",
+      "publicar": "2026-12-01T00:15:00Z",
+      "formato": "mitos_reales_verificados_secuencia_yt",
+      "prueba": "ángulo mito verificado (Robe ×4,1) con el mismo juego del ganador oot_remake_eliminado; 10:52; título con número al inicio",
+      "nota": "primer video con la voz Carlos Aguilar como voz por defecto (sin votación, el usuario 26-nov); investigación R45 del 26-nov; MASTER 10:52, miniatura Flow B"
     }
   ],
   "ideas": {

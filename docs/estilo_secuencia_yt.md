@@ -933,9 +933,11 @@ helper `mapa()` en `videos/_plantilla_yt/efectos.py` (en videos viejos, copiarlo
 
 ## Crónicas del gaming con este motor (Nintendo/retro; primer video `banjo_tooie`, 19-oct-2026)
 - **VOZ desde el 12-nov-2026 (el usuario): ElevenLabs «Carlos Aguilar» `8MeTTgXVwMEhRVfblXOj`, grave y potente** (pidió una voz «grave
-  y profunda como la del Profeta» tras las quejas de la voz IA; muestras en `videos/_muestras_voz_gaming/`). El 1.er video con ella: tras
-  1-2 datos, placa «VOZ NUEVA» + un pedacito de Hope (~6-8 s) y «¿voz nueva o seguimos con Hope? vota en los comentarios»; se recuerda
-  en el cierre; contar votos a 7 días. Lo de abajo sobre Hope/Sarcastica es historial.
+  y profunda como la del Profeta» tras las quejas de la voz IA; muestras en `videos/_muestras_voz_gaming/`). **ES LA VOZ POR DEFECTO DEL
+  CANAL, SIN VOTACIÓN NI MENCIÓN DE LA ANTERIOR (el usuario, 26-nov-2026, al ver `oot_mitos_reales`: «ya mejor vamos a dejar en el canal
+  esta nueva voz, ya sin mencionar la anterior»).** Nada de placa «VOZ NUEVA», pedacito de Hope ni «¿voz nueva o la de antes?» (el plan
+  de votación del 12-nov queda anulado). Referencia para `tts_select`: `videos/_muestras_voz_gaming/05_carlos_aguilar.mp3`. Primer video:
+  `videos/oot_mitos_reales/`. Lo de abajo sobre Hope/Sarcastica es historial.
 - **El canal VUELVE a Nintendo/retro** (el usuario, 19-oct-2026; el terror CRT queda como especial) con la fórmula de Warcraft/Tamriel/
   Runa: historia + lore + lista de 10 secretos «QUE IGNORASTE», ~12-13 min, voz **Chatterbox `Sarcastica`** + `FONETICA` (Banjo →
   Bányo, Kazooie → Kazúi, Tooie → Túi, Jiggies → Yíguis, Jinjos → Yínyos, Gruntilda → Gruntílda…), `sufijo=""` y consultas completas.
@@ -1158,6 +1160,7 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
     calidad (correlación 1,00 = punto exacto) y normalizar el corte a −18 LUFS.
 
 ## Runa Caída con este motor (primer video `er_radagon_atrocidades`, 14-oct-2026)
+> **EMPAQUE NUEVO desde el 26-nov-2026 (caída de CTR de la serie: Malenia 6,0 % → Rykard 3,9 %):** miniatura = escena del juego + 2-3 palabras del gancho de un puesto, color distinto al video anterior, 2 variantes y «Probar y comparar» desde el estreno; títulos rotando la forma. Detalle y datos: `canales/formula/runa_caida.md` § «PLANTILLA NUEVA» y § «DIAGNÓSTICO».
 - **Fórmula del ×24,6** (`canales/formula/runa_caida.md`): «Las 5 … QUE IGNORASTE», **~6-7 min** (el ganador de Márika duraba 5:54;
   el usuario descartó el piso viejo de 12 min del sistema anterior) · gema del canal · sin patrocinio · puente al video de Márika.
 - **VOZ NUEVA desde el 11-nov-2026 (el usuario): «el Profeta» de ElevenLabs** (`HNSF1CTQmub252yhXROX`, `eleven_v4_turbo`, stability .5)

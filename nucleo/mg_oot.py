@@ -510,3 +510,90 @@ def ofrendas(items, rupia=None, titulo="Ofrenda a las Grandes Hadas", antes="Ant
             _txt(d, (cx, cy + 92), lugar, fl, CREMA, "mm", a)
         return _bgra(im, min(_eo(dt / .25), (dur - dt) / .4))
     return fn
+
+
+# ------------------------------------------------------------------ mitos: sello del veredicto (oot_mitos_reales, 26-nov-2026)
+SELLOS = {"REAL": (70, 205, 95), "A MEDIAS": (250, 190, 40), "FALSO": (235, 55, 50)}
+
+
+def sello(veredicto="REAL", sub=None, giro=-9.0, ancho=620):
+    """Sello de tinta que CAE con golpe (escala 1,7 -> 1 con rebote y temblor): doble filo redondeado, VEREDICTO en grande y una
+    línea `sub` debajo («Versiones 1.0 y 1.1»). Tinta con poros (máscara de ruido fija) y sombra suave; sin caja opaca."""
+    col = SELLOS.get(veredicto.upper(), BLANCO)
+    f = fuente("d", 118 if len(veredicto) <= 5 else 92)
+    fs = fuente("d", 34)
+    tw = M._ancho(veredicto.upper(), f)
+    w = max(ancho, int(tw + 120))
+    h = 250 if sub else 190
+    P = 40
+    tinta = Image.new("RGBA", (w + 2 * P, h + 2 * P), (0, 0, 0, 0))
+    d = ImageDraw.Draw(tinta)
+    d.rounded_rectangle((P, P, P + w, P + h), 26, outline=col + (255,), width=11)
+    d.rounded_rectangle((P + 20, P + 20, P + w - 20, P + h - 20), 16, outline=col + (255,), width=4)
+    _txt(d, (P + w / 2, P + (96 if sub else h / 2)), veredicto.upper(), f, col, "mm", 255, track=4)
+    if sub:
+        d.line((P + 70, P + 168, P + w - 70, P + 168), fill=col + (200,), width=3)
+        _txt(d, (P + w / 2, P + 204), sub, fs, col, "mm", 255, track=1)
+    rng = np.random.default_rng(7)                          # poros de la tinta: siempre los mismos
+    a = np.asarray(tinta).copy()
+    ruido = rng.random(a.shape[:2])
+    a[..., 3] = (a[..., 3] * np.where(ruido < .16, .35, 1.0)).astype(np.uint8)
+    tinta = Image.fromarray(a, "RGBA").rotate(giro, resample=Image.BICUBIC, expand=True)
+    sombra = Image.new("RGBA", tinta.size, (0, 0, 0, 0))
+    sombra.putalpha(tinta.getchannel("A").point(lambda v: int(v * .55)))
+    sombra = sombra.filter(ImageFilter.GaussianBlur(10))
+    base = Image.new("RGBA", (tinta.width + 24, tinta.height + 24), (0, 0, 0, 0))
+    base.alpha_composite(sombra, (14, 16))
+    base.alpha_composite(tinta, (4, 4))
+
+    def fn(dt, dur, marcas):
+        u = dt / .32
+        k = 1.7 - .7 * _eo(min(1, u)) if u < 1 else 1 + .05 * math.exp(-(dt - .32) * 9) * math.cos((dt - .32) * 40)
+        im = base.resize((max(2, int(base.width * k)), max(2, int(base.height * k))), Image.BICUBIC)
+        if .32 < dt < .6:                                   # temblor del golpe
+            off = int(6 * math.sin(dt * 90) * (1 - (dt - .32) / .28))
+            c = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            c.alpha_composite(im, (off, 0))
+            im = c
+        return _bgra(im, min(_eo(dt / .12), (dur - dt) / .35))
+    return fn
+
+
+# ------------------------------------------------------------------ votación de voz (oot_mitos_reales, 26-nov-2026)
+def votacion(opciones=("VOZ NUEVA", "LA DE ANTES"), titulo="¿Con qué voz seguimos?", remate="VOTA EN LOS COMENTARIOS", w=1200):
+    """Dos casillas translúcidas lado a lado con su onda de voz; la marca k enciende la opción k (amarillo, la onda se mueve);
+    la marca len(opciones) saca el `remate` latiendo abajo."""
+    n = len(opciones)
+    h = 380
+    base, Mg = _humo(w, h, alfa=.6)
+    ft, fo = fuente("d", 34), fuente("d", 44)
+
+    def fn(dt, dur, marcas):
+        im = base.copy()
+        d = ImageDraw.Draw(im)
+        _txt(d, (Mg + w / 2, Mg + 42), titulo.upper(), ft, AMARILLO, "mm", 255 * _eo(dt / .3), track=2)
+        _filete(d, Mg + 120, Mg + w - 120, Mg + 78, 255 * _eo(dt / .4))
+        mk = list(marcas)
+        for k, op in enumerate(opciones):
+            on = len(mk) > k and dt >= mk[k]
+            cx = Mg + w * (k + .5) / n
+            cy = Mg + 175
+            a = 255 * _eo(dt / .4)
+            col = AMARILLO if on else CREMA
+            d.rounded_rectangle((cx - 255, cy - 62, cx + 255, cy + 62), 22, outline=col + (int(a * (1 if on else .5)),),
+                                width=5 if on else 3, fill=(0, 0, 0, 70))
+            _txt(d, (cx + 40, cy), op, fo, col, "mm", a, track=2)
+            for b in range(5):                              # onda de voz: se mueve solo si está encendida
+                amp = (10 + 22 * abs(math.sin(dt * 7 + b * 1.3))) if on else 8
+                x = cx - 228 + b * 15
+                d.rounded_rectangle((x, cy - amp, x + 8, cy + amp), 4, fill=col + (int(a),))
+        if len(mk) > n and dt >= mk[n]:
+            u = _eo((dt - mk[n]) / .4)
+            p = 1 + .05 * math.sin((dt - mk[n]) * 6)
+            fp = fuente("d", int(40 * p))
+            _txt(d, (Mg + w / 2, Mg + h - 50), remate, fp, VERDE, "mm", 255 * u, track=2, borde=2)
+        k_ = _reb(dt / .45)
+        if k_ < .999:
+            im = M.G._escala(im, k_)
+        return _bgra(im, min(_eo(dt / .2), (dur - dt) / .35))
+    return fn

@@ -582,6 +582,13 @@ python fab.py panel --remoto   el lienzo en el celular fuera de casa: puerta con
 - **Prohibido** arrancar guion, voz o Flow de un video nuevo sin este paso hecho en los últimos 7 días para ese canal (el § «FÓRMULA VIGENTE» lleva la fecha). Si una herramienta de fuera no responde (límite, créditos), se dice y se sigue con `ideas`; no se inventan cifras.
 - Primera aplicación: `canales/formula/cronicas_gaming.md` § «FÓRMULA VIGENTE — investigación del 26-nov-2026».
 
+### R46 · Secretos y mitos DE VERDAD (26-nov-2026)
+
+- **SECRETOS Y MITOS DE VERDAD, TODOS LOS CANALES (el usuario, 26-nov-2026, al ver `oot_mitos_reales`):** «cuando hables de secretos o este tipo de cosas, que sean secretos de verdad o mitos de verdad… ese de las gallinas no es como tal un secreto, un mito, porque es algo que todo el mundo comprobó, es como algo muy obvio». Un puesto de una lista de **secretos / mitos / cosas que ignoraste / curiosidades ocultas** solo entra si la mayoría de los jugadores **NO lo sabía o NO lo comprobó jugando normal**: hace falta una versión concreta (1.0 frente a 1.2), un texto o diálogo escondido, datos del código o de una beta, un truco poco conocido, una entrevista o un libro oficial, o algo que la comunidad debatió años sin resolver.
+- **No cuentan:** mecánicas que cualquiera ve en su primera partida (los cucos que se vengan, Navi que dice «¡Hey!», el reloj de 3 días), datos de la caja o del tráiler, y lo que sale en un tutorial. Si el tema pide un dato así para dar contexto, va como contexto, no como puesto numerado.
+- **Cómo se aplica:** en el encargo de investigación (agente o propio) se pide explícitamente este filtro, y cada candidato lleva una línea «¿lo sabía el jugador normal?» con su respuesta y por qué; los que respondan «sí» se descartan antes del guion. Al revisar el guion, preguntarse por cada puesto: «¿alguien que jugó el juego de principio a fin se sorprendería?». Si no, fuera.
+- Primer caso: puesto 11 de `oot_mitos_reales` (los cucos vengadores). Se quedó en ese video porque ya estaba montado; no se repite.
+
 ### R44 · Tarjetas con cara y mapas originales con íconos (25-nov-2026)
 
 - **PERSONAJE EN TARJETA = SE LE VE LA CARA (REGLA IMPORTANTE, el usuario, 25-nov-2026, todos los canales):** «cuando muestres personajes así en tarjeta asegúrate siempre que se le vea la cara, ponlo como regla importante» (tarjeta del Señor gólem Argelmach cortada en el torso en `wow_ruta_profesiones`). Retrato de cuerpo entero → recorte de cara y hombros (`caras/<slug>.png`, helper `Fc()` en los efectos de Warcraft); los motores del kit (oro, madera, mapas) recortan desde arriba. Se revisa cada tarjeta de personaje en la hoja de `FAB_FX_FINAL=1 fab.py <v> fx hoja` antes del render.

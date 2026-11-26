@@ -1,0 +1,610 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.122,
+  "tipo": "video",
+  "texto": "En 1998 no había internet en casa. Los secretos de Ocarina of Time se contaban en el recreo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.122,
+  "t1": 16.657,
+  "tipo": "video",
+  "texto": "Que en un templo se oía un rezo de verdad. Que Ganon sangraba rojo. Que el búho pesado era un sabio disfrazado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 16.657,
+  "t1": 25.708,
+  "tipo": "video",
+  "texto": "Y tú pensabas que eran inventos del niño que decía que su tío trabajaba en Nintendo. Pues hoy revisé 12 de esos mitos, uno por uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 25.708,
+  "t1": 34.04,
+  "tipo": "video",
+  "texto": "Y casi todos eran verdad. Las reglas son simples. Cada mito se lleva un sello.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.04,
+  "t1": 43.962,
+  "tipo": "video",
+  "texto": "Real, a medias, o falso. Y donde se pueda, te enseño qué pasa en el remake de Switch 2, el que salió el 5 de noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.962,
+  "t1": 52.192,
+  "tipo": "video",
+  "texto": "Empezamos por el más inofensivo. Y terminamos con uno que Nintendo prefirió no explicar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.192,
+  "t1": 60.664,
+  "tipo": "video",
+  "texto": "Número 12. El pez imposible del estanque. Se decía que en el estanque de pesca del Lago Hylia vivía un pez enorme,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.664,
+  "t1": 69.733,
+  "tipo": "video",
+  "texto": "que casi nadie lograba sacar. Real. Es la locha hyliana, y no sale todas las veces que pagas por pescar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 69.733,
+  "t1": 78.41,
+  "tipo": "video",
+  "texto": "Lo mejor es cómo se pesca. Solo muerde el señuelo hundido, que el dueño del estanque considera trampa. Si lo usas, te regaña.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.41,
+  "t1": 87.612,
+  "tipo": "video",
+  "texto": "O sea, el pez legendario solo se deja atrapar si haces trampa. Y en el remake sigue ahí, esperando a los tramposos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 87.612,
+  "t1": 94.368,
+  "tipo": "video",
+  "texto": "Número 11. La venganza de las gallinas. En el recreo alguien siempre juraba que si",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 94.368,
+  "t1": 105.441,
+  "tipo": "video",
+  "texto": "le pegabas mucho a un cuco, llegaba un ejército de gallinas a matarte. Real. Golpea a un cuco varias veces, y aparece una bandada que no puedes derrotar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.441,
+  "t1": 110.334,
+  "tipo": "video",
+  "texto": "Te atacan sin parar, hasta que sales de la zona o te metes en una casa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.334,
+  "t1": 120.43,
+  "tipo": "video",
+  "texto": "El enemigo más peligroso de Hyrule no es Ganondorf. Es una gallina con rencor. Y en el remake siguen igual de rencorosas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.43,
+  "t1": 128.266,
+  "tipo": "video",
+  "texto": "Número 10. Montar a Epona de niño. Este lo juró media generación. Que con un truco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 128.266,
+  "t1": 137.828,
+  "tipo": "video",
+  "texto": "Link niño podía subirse a Epona en el Rancho Lon Lon. Falso. De niño, Epona es una potranca, demasiado joven para cargarte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.828,
+  "t1": 146.369,
+  "tipo": "video",
+  "texto": "La montas hasta siete años después. Todos los videos donde Link niño cabalga usan códigos de trucos o mods.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.369,
+  "t1": 155.885,
+  "tipo": "video",
+  "texto": "Link niño sí monta a Epona. Pero en Majora's Mask. Tu primo te mintió, aunque se adelantó un juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.885,
+  "t1": 161.85,
+  "tipo": "video",
+  "texto": "En el 9, el corredor de la pradera. Es un hombre que corre por Hyrule sin parar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 161.85,
+  "t1": 171.827,
+  "tipo": "video",
+  "texto": "Y el mito decía que nadie le podía ganar, por más rápido que fueras. Real. El juego está programado para que siempre llegue antes que tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.827,
+  "t1": 180.036,
+  "tipo": "video",
+  "texto": "Por exactamente un segundo. Hagas lo que hagas. Lo han probado con códigos, con atajos y con todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.036,
+  "t1": 188.612,
+  "tipo": "video",
+  "texto": "No hay forma. Es el único personaje de Hyrule que hace más trampa que tú con la locha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.612,
+  "t1": 195.238,
+  "tipo": "video",
+  "texto": "Alguien escribió en el video de los jefes de Banjo-Tooie: buen trabajo, tienes mi apoyo total.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 195.238,
+  "t1": 205.814,
+  "tipo": "video",
+  "texto": "Gracias. Todos los comentarios se leen, y se toman en cuenta para mejorar cada video. Número 8. Los esqueletos que crecen.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 205.814,
+  "t1": 214.554,
+  "tipo": "video",
+  "texto": "De noche, en la pradera de Hyrule, salen del suelo unos esqueletos pequeños, los Stalchildren. Y el rumor decía que si matabas muchos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 214.554,
+  "t1": 224.334,
+  "tipo": "video",
+  "texto": "salía uno gigante. Real. Si vas de niño y derrotas a 10, sale uno más grande. Y al llegar a 20, uno enorme.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.334,
+  "t1": 230.571,
+  "tipo": "video",
+  "texto": "El contador se borra al amanecer. Y si caminas por el sendero de tierra, ni siquiera salen.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 230.571,
+  "t1": 240.43,
+  "tipo": "video",
+  "texto": "O sea, un jefe secreto que solo aparece si te pasas la noche entera matando esqueletos sin ningún motivo. Que es justo lo que hacíamos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.43,
+  "t1": 247.629,
+  "tipo": "video",
+  "texto": "En el 7, el Zelda secreto. Las revistas hablaban de un Zelda escondido para el 64DD,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 247.629,
+  "t1": 255.997,
+  "tipo": "video",
+  "texto": "el lector de discos de la Nintendo 64, con mazmorras distintas. Real. Se llamaba Ura Zelda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 255.997,
+  "t1": 264.231,
+  "tipo": "video",
+  "texto": "Eiji Aonuma contó en Iwata Asks que ya hablaban de hacerlo para el 64DD, reutilizando las mazmorras de Ocarina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 264.231,
+  "t1": 275.121,
+  "tipo": "video",
+  "texto": "El 64DD fracasó, y ese Zelda salió años después en GameCube, como Master Quest, en un disco de regalo. Y de rebote nació otro juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.121,
+  "t1": 283.956,
+  "tipo": "video",
+  "texto": "Aonuma no quería rehacer mazmorras, y empezó a diseñar unas nuevas. Esas terminaron en Majora's Mask.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.956,
+  "t1": 290.041,
+  "tipo": "video",
+  "texto": "Número 6. El búho que nadie dejaba hablar. Kaepora Gaebora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 290.041,
+  "t1": 302.282,
+  "tipo": "video",
+  "texto": "Aparece cada dos pasos, habla sin parar, y al final te pregunta si quieres oírlo otra vez. Y el mito decía que no era un búho cualquiera, sino un sabio disfrazado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 302.282,
+  "t1": 307.572,
+  "tipo": "video",
+  "texto": "Real. Una piedra chismosa del juego ya decía que el búho era un sabio antiguo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 307.572,
+  "t1": 317.362,
+  "tipo": "video",
+  "texto": "Y el libro oficial Hyrule Historia lo confirmó en 2011. Es Rauru, el sabio de la luz, uno de los que construyeron el Templo del Tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.362,
+  "t1": 324.975,
+  "tipo": "video",
+  "texto": "Así que durante años le saltamos el diálogo a un sabio milenario. Por eso nos repetía todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 324.975,
+  "t1": 333.652,
+  "tipo": "video",
+  "texto": "Y una corrección justa. En el video de lo que añadió el remake, alguien preguntó: ¿cuál granja del puente? No entendí nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 333.652,
+  "t1": 342.672,
+  "tipo": "video",
+  "texto": "Tienes razón, faltó contexto. En el juego de 1998, Link niño trepaba por la cadena del puente levadizo de la Ciudadela,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.672,
+  "t1": 349.23,
+  "tipo": "video",
+  "texto": "y ahí había tres rupias rojas escondidas, que volvían a salir cada vez que entrabas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 349.23,
+  "t1": 360.27,
+  "tipo": "video",
+  "texto": "En el remake, Link resbala en la cadena y esas rupias ya no existen. Lo conté en el video de lo que Nintendo eliminó. El chiste solo se entendía si viste ese.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.27,
+  "t1": 367.641,
+  "tipo": "video",
+  "texto": "Anotado. Número 5. La historia sangrienta de Kakariko.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 367.641,
+  "t1": 378.003,
+  "tipo": "video",
+  "texto": "El rumor decía que debajo de Kakariko, en el pozo y en el Templo de las Sombras, había salas de tortura. La entrada del templo lo dice con todas sus letras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 378.003,
+  "t1": 383.845,
+  "tipo": "video",
+  "texto": "Aquí se reúne la historia sangrienta de Hyrule, de codicia y de odio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 383.845,
+  "t1": 394.244,
+  "tipo": "video",
+  "texto": "Dentro hay guillotinas, potros de tortura, manchas de sangre y huesos por todas partes. Pero quién torturaba a quién, el juego nunca lo dice.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.244,
+  "t1": 401.369,
+  "tipo": "video",
+  "texto": "Lo de los sheikah interrogando a los enemigos de la familia real es teoría de fans. Así que, a medias.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 401.369,
+  "t1": 412.248,
+  "tipo": "video",
+  "texto": "Y en el remake, las manchas rojas ahora son oscuras y secas. Nintendo escribió historia sangrienta en la puerta, y luego le pasó el trapeador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.248,
+  "t1": 420.941,
+  "tipo": "video",
+  "texto": "En el 4, los que se pierden en el bosque. Se decía que quien se perdía en el Bosque Perdido se convertía en un monstruo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.941,
+  "t1": 428.811,
+  "tipo": "video",
+  "texto": "Real, y lo dice el propio juego. Fado, una de las kokiri, cuenta que todo el que entra al bosque, menos los kokiri,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 428.811,
+  "t1": 438.76,
+  "tipo": "video",
+  "texto": "se pierde y se vuelve Stalfos. Y pone un ejemplo. Grog, el muchacho que encuentras en el bosque durante el intercambio de la espada de Biggoron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 438.76,
+  "t1": 443.96,
+  "tipo": "video",
+  "texto": "Cuando regresas a buscarlo, ya no está. Y Fado te explica qué le pasó.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 443.96,
+  "t1": 455.885,
+  "tipo": "video",
+  "texto": "El muchacho al que le hiciste un favor terminó convertido en esqueleto. Lo de que los niños perdidos se vuelven Skull Kids, eso el juego solo lo insinúa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.885,
+  "t1": 462.996,
+  "tipo": "video",
+  "texto": "Número 3. Ganon sangraba rojo. En el recreo se peleaban. Unos juraban que,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 462.996,
+  "t1": 470.559,
+  "tipo": "video",
+  "texto": "en el final, Ganondorf escupía sangre roja. Otros, que era verde. Y tenían razón los dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 470.559,
+  "t1": 479.871,
+  "tipo": "video",
+  "texto": "Los primeros cartuchos, las versiones 1.0 y 1.1, traen sangre roja. Desde la 1.2, es verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 479.871,
+  "t1": 487.651,
+  "tipo": "video",
+  "texto": "Y no fue lo único que se borró. El símbolo Gerudo era una media luna con una estrella, en el Escudo Espejo y en los bloques.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 487.651,
+  "t1": 499.521,
+  "tipo": "video",
+  "texto": "En las versiones de GameCube, Nintendo lo cambió por otro. Pero se le olvidaron algunas lunas en la tumba de Dampé. Ahí siguen, como si nada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.521,
+  "t1": 506.628,
+  "tipo": "video",
+  "texto": "Número 2. El mito más famoso de todos. La Trifuerza se puede conseguir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 506.628,
+  "t1": 516.416,
+  "tipo": "video",
+  "texto": "En 1999, una jugadora aseguró en internet que la había conseguido, en un Templo de la Luz, tocando una canción secreta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 516.416,
+  "t1": 521.606,
+  "tipo": "video",
+  "texto": "Falso. Nunca dio los pasos, y semanas después reconoció que era mentira.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 521.606,
+  "t1": 533.665,
+  "tipo": "video",
+  "texto": "El código se ha revisado de arriba abajo, y no hay Trifuerza. Pero en 2022, en el maratón benéfico Summer Games Done Quick, un grupo de fans lo hizo realidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 533.665,
+  "t1": 540.545,
+  "tipo": "video",
+  "texto": "Con TASBot, un robot que presiona los botones, metieron código nuevo a través de los mandos, en un cartucho original,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.545,
+  "t1": 548.277,
+  "tipo": "video",
+  "texto": "en una Nintendo 64 real. Y Link tomó la Trifuerza en vivo. En tu partida sigue siendo falso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 548.277,
+  "t1": 558.752,
+  "tipo": "video",
+  "texto": "Pero tardó 23 años en dejar de ser mentira. Y el número 1. El rezo del Templo del Fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.752,
+  "t1": 567.785,
+  "tipo": "video",
+  "texto": "El mito decía que en la música del Templo del Fuego se oía a alguien rezando, de verdad. Y que Nintendo la cambió a escondidas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 567.785,
+  "t1": 575.325,
+  "tipo": "video",
+  "texto": "Y sí, es real. En las primeras versiones del cartucho, la música trae una voz que canta un rezo islámico real.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 575.325,
+  "t1": 584.066,
+  "tipo": "video",
+  "texto": "Escucha.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.066,
+  "t1": 592.265,
+  "tipo": "video",
+  "texto": "Esa voz salió de un CD comercial de sonidos para músicos. Koji Kondo, el compositor, no sabía lo que decía.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 592.265,
+  "t1": 599.805,
+  "tipo": "video",
+  "texto": "Desde la versión 1.2, esa música cambió por otra, sin la voz. Y así siguió en GameCube, en 3DS,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.805,
+  "t1": 606.943,
+  "tipo": "video",
+  "texto": "y hasta en la aplicación Nintendo Music. Lo de que la quitaron por las quejas de alguien, eso es falso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 606.943,
+  "t1": 618.362,
+  "tipo": "video",
+  "texto": "Todo apunta a que fue la propia norma de Nintendo contra las referencias religiosas reales. Y si quieres saber cuál tienes, mira detrás del cartucho. Si los números llevan una letra B,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 618.362,
+  "t1": 625.656,
+  "tipo": "video",
+  "texto": "el tuyo ya no reza. Y para cerrar. En el ranking de mundos de Banjo-Tooie,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 625.656,
+  "t1": 635.206,
+  "tipo": "video",
+  "texto": "alguien escribió que el nivel que más disfruta es la laguna, pero que el que más le gusta por su diseño son los picos fuego helados. Gracias por contarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.206,
+  "t1": 641.41,
+  "tipo": "video",
+  "texto": "Ahora te toca a ti. ¿Cuál de estos mitos te contaron en el recreo? Te leo en los comentarios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 641.41,
+  "t1": 651.8182,
+  "tipo": "video",
+  "texto": "Si quieres ver lo que Nintendo quitó del remake, aquí lo tienes. Suscríbete, que todavía quedan mitos. Nos vemos pronto.",
+  "clip_s": 8
+ }
+]

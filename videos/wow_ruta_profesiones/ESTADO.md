@@ -3,7 +3,7 @@
 - canal: cronicas_warcraft · **dom 29-nov-2026 09:00 CDMX (2026-11-29T15:00:00Z)** · Overgear campaña 3, integración 2: **http://overgear.s.gy/CRONICAS/7**, código CRONICAS10
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG + mapas con ruta + KIT DE 4 ESTILOS + Overgear con fondo de marca) → doc: docs/estilo_secuencia_yt.md · copiar de `videos/wow_errores_60/` (bloque Overgear, helpers) y `videos/wow_ruta_forever/` (formato ruta)
 - etapa: ✅ SUBIDO Y PROGRAMADO 25-nov → **https://youtu.be/NPB46LhvBPw** (privado, sale dom 29-nov 09:00 CDMX), MASTER 31:39 + .srt + miniatura Flow, promoción pagada
-- siguiente: MID-ROLL (Studio no lo deja hasta que procese la versión SD; anuncios ya ACTIVADOS + cuestionario «Adecuado para anuncios») → `yt monetizado NPB46LhvBPw`
+- siguiente: nada; sale solo el 29-nov. Monetización ✅ (anuncios «Comprobando» + mid-roll marcado tras la versión SD, comprobado al recargar; `yt monetizado` hecho)
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov)
 - 25-nov (una sesión): investigación → guion → voz → visuales (3 subagentes) → chequeo → render por tramos → verificar → subida → monetización. Para retomar: «continúa el video wow_ruta_profesiones»

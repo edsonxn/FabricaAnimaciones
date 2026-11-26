@@ -268,3 +268,10 @@
   Khylen «Consigue tu Montura con estos Farmeos de ORO» ×13,3; guías de clase largas (NowYouPlay 39 min ×16, Cras ×14,6).
 - **Lectura:** el «secreto» suelto rinde poco en español (×1,0), salvo atado a ganar algo (oro, un objeto). Lo RARO y el
   «consigue X» sí pegan. Las guías de mazmorras sueltas rinden poco → el 4-dic va como mazmorras + su objeto más raro.
+- **CORRECCIÓN 25-nov (noche), con los datos en español:** las MAZMORRAS salen de las integraciones (×1,15 en español; las guías
+  sueltas ×1,0-2,4). Reparto recomendado, todo con las fechas pactadas: 29-nov /7 PROFESIONES (sigue; ×2,5 en español, formato RUTA) ·
+  **4-dic /8 «15 FARMEOS de ORO del 30 al 50 en WoW Forever»** (ORO propio 34 mil; español ×4,0 con Khylen ×13; inglés ×7,5;
+  sin repetir lo de profesiones: farmeos de monstruos/zonas + el oro de las misiones desde el 48, hotfix del 10-nov que hay que
+  verificar) · 9-dic /9 «Lo que CAMBIA el 9 de DICIEMBRE (aunque no seas 60)» → empuja a /6 · 12-13 dic, si hace falta repescar
+  /6: AJUSTES y ADDONS (la categoría más fuerte en español, ×6,8; la nuestra del 9-nov salió floja con 9 resubidas y título con
+  paréntesis) · 16-dic /10: los cambios de las clases, si salen los reworks (guía de clase ×4,4; encaja con el coaching; SIN tier list).

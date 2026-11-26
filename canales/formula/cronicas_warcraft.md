@@ -230,3 +230,11 @@
   canal (11-24 nov, top 25): ninguna de «60», «Onyxia» ni «bandas»; manda «wow forever» (1 284). **Regla:** antes de un tema de
   nivel 60, mirar el censo (60.tools/population); el grueso hoy está en 30-45 → temas de ese tramo (montura al 40, mazmorras
   30-45, zonas 30-50, profesiones). Los de 60/bandas, 1-3 días antes del 9-dic y cuando el censo suba.
+- **Plan del 9-dic para KBjKYFGR05k (25-nov):** cambiar título/miniatura no castiga ni «reinicia» nada; YouTube solo reacciona a
+  cómo responde la gente (CTR y tiempo de visualización), y sirve cuando todavía hay impresiones y el CTR está bajo (consenso de
+  creadores, sin dato oficial; no hay casos propios medidos). Cambiar algo durante la prueba A/B la DETIENE (ayuda oficial de YouTube).
+  Pasos: (1) dejar correr la A/B; leer el informe el 2-dic. (2) Vie 4 o sáb 5-dic: si la A/B ya terminó, poner el título de
+  búsqueda «ONYXIA en WoW Forever: 25 ERRORES antes de la BANDA» (51 caracteres) y la miniatura ganadora con «9 DIC»; si la A/B
+  sigue corriendo, «Detener y fijar» la que gane antes de cambiar el título. (3) La palanca grande no es la miniatura vieja: es un video NUEVO
+  de Onyxia o Hyjal que salga el 7 u 8-dic (le llega la página de inicio de los suscriptores) y mande a este con la pantalla final y un
+  comentario fijado. (4) Medir búsquedas «onyxia», «bandas» y «60» del 5 al 12-dic.

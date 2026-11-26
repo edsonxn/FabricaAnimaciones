@@ -6,6 +6,7 @@
 - siguiente: nada; sale solo el 25-nov. Monetización ✅ (Activada + mid-roll, comprobado al recargar; `yt monetizado` hecho)
 
 ## Sesiones (UNA sesión directo al MASTER, regla 5-nov; relevo si corta a 180 mil)
+- ✅ 25-nov ~20:55: publicado 09:00; arranque flojo (2 690 vistas a 11,6 h, CTR 5,9 %) → diagnóstico en `canales/formula/cronicas_warcraft.md` · miniatura B en Flow (Onyxia, «¿LISTO? NIVEL 60», `salida/miniatura_b_onyxia.jpg`, prompt en `prompt_miniatura.md`) · prueba A/B «Título y miniatura» EN CURSO en Studio (original · «BANDAS de WoW Forever: 25 ERRORES que te dejan fuera» + Onyxia · título original + Onyxia). FALTA: leer el informe el 2-dic y anotar la ganadora en la fórmula.
 - alias: «errores del 60», «el de Overgear del 25-nov», «25 errores al 60»
 - leer al empezar: este ESTADO.md · `videos/_investigacion_wow_errores_60.md` · docs/estilo_secuencia_yt.md (grep REGLA DE ORO, Overgear) · `videos/wow_ruta_forever/ESTADO.md` (orden de pasos y lecciones)
 | # | Tramo | Estado | Nota |

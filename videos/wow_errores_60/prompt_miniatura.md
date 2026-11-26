@@ -23,3 +23,21 @@ YouTube thumbnail 16:9 for a World of Warcraft Classic video about the mistakes 
 - `miniatura_ing/opciones/flow_b.jpg` ← **ELEGIDA**: «25» amarillo con X roja, «ERRORES» blanco, insignia «NIVEL 60», error rojo
   «¡No puedes entrar a la banda!» arriba, orco de la aprobada con la boca abierta y la mano alzada, Monte Hyjal de fondo, logo Forever.
 - `salida/miniatura.jpg` = B a 1280x720.
+
+## Miniatura B para la prueba A/B (25-nov-2026, tras el arranque flojo: CTR 5,9 % a 11,6 h)
+Cambio de concepto: fuera el orco con el número tachado (tercera miniatura igual en 18 días). Onyxia in-game echando fuego,
+marcos de banda con «Muerto», «¿LISTO? NIVEL 60» y el error rojo «¡Necesitas resistencia al fuego!». Generada en Chrome (Claude in
+Chrome): ingredientes pegados con `Clipboard.SetImage` + Ctrl+V; descarga con `fetch(src '=s0')` → blob → `<a download>` (sin diálogo).
+Ingredientes: 1. `miniatura_ing/ing3_onyxia.jpg` (= pegatinas/onyxia.png, in-game) · 2. `miniatura_ing/ing3_raid_ui.jpg` (captura de banda con UI).
+
+```
+YouTube thumbnail 16:9 for a World of Warcraft Classic video about getting ready for the first raids at level 60. Keep the exact in-game World of Warcraft Classic graphics of the ingredients (game screenshot look, painted textures, in-game models); NOT a 3D animated movie, NOT Pixar, NOT clay, NOT cinematic CGI, NOT modern retail WoW. BACKGROUND and MAIN CHARACTER = image 1: the real in-game black dragon Onyxia in her lava lair, exact same in-game model, made HUGE and filling the right two thirds of the frame, head lowered toward the camera, jaws wide open, a big wave of orange fire breath coming out of her mouth toward the left, lava glow, dramatic contrast. INTERFACE from image 2: on the far left edge a small World of Warcraft raid frame panel with five player health bars, three of them empty and grey (dead), two red and almost empty. TEXT (bold, eye-catching YouTube thumbnail lettering, thick black outline and drop shadow), exact, render perfectly, no extra words: on the left, huge yellow (#FFE21E) "¿LISTO?" and right under it big white "NIVEL 60". At the top left, one line of red World of Warcraft error-message text with black outline, exactly: "¡Necesitas resistencia al fuego!". No logo, no watermark, no other text, no spelling mistakes, sharp text, Spanish accents and the inverted question mark correct.
+```
+- x2 a la primera, 1376x768. `opciones/flow_ony_0.jpg` ← ELEGIDA (texto inclinado, marcos «Muerto» legibles) · `flow_ony_1.jpg` (texto recto, marcos vacíos).
+- `salida/miniatura_b_onyxia.jpg` (1280x720).
+
+## Prueba A/B en Studio («Título y miniatura», EN CURSO desde el 25-nov-2026 ~20:55 CDMX)
+1. Los 25 ERRORES al llegar al nivel 60 en WoW Forever + miniatura original (orco «25 ✗ ERRORES»)
+2. BANDAS de WoW Forever: 25 ERRORES que te dejan fuera + miniatura Onyxia
+3. Los 25 ERRORES al llegar al nivel 60 en WoW Forever + miniatura Onyxia (aísla el efecto de la miniatura)
+YouTube elige la ganadora por tiempo de visualización y la aplica sola. Leer el informe a los 7 días y anotar en la fórmula.

@@ -211,3 +211,16 @@
   — cambia el tema (Vuxxy ×8,7), encaja con Overgear sin decir nada contra comprar oro · (2) «La RUTA 1-60 de WoW Forever zona por zona»
   — cambia el formato a ruta con mapa en cada zona (Blizzard ×2,2) · (3) «Antes de las BANDAS del 9-dic: 25 cosas que necesitas al 60»
   — cambia la etapa (30-60 → 60) y prepara la campaña Overgear del 9-dic.
+
+## Conclusión del 25-nov-2026 — por qué «25 ERRORES al llegar al 60» (`wow_errores_60`, KBjKYFGR05k) arrancó flojo
+- **Datos a 11,6 h (Studio):** 2 690 vistas · 12,8 mil impresiones · **CTR 5,9 %** · 11:16 de media (≈ 37 %, la retención NO es
+  el problema) · exploración 79,6 %, búsqueda solo 2,5 %. Comparación: «RUTA 1→60» (Rcu_3ztFANk) 12 724 el día 1, CTR 8,5 %,
+  búsqueda 13,2 % («wow forever», «guia leveo»); «30 trucos ORO» CTR 7,0 %, búsqueda 7,9 %. Notificaciones push = 0 en los tres (no es eso).
+- **Por qué:** (1) **empaque repetido:** tercera miniatura casi idéntica (mismo orco, «25/20 ✗ ERRORES», mismo diseño) en 18 días;
+  quien ya vio «25 ERRORES» (7-nov) cree que ya lo vio → CTR baja → YouTube reparte menos impresiones. La serie se gasta: día 1
+  6 044 (7-nov) → 3 804 (11-nov) → ~2,7 mil en 11,6 h. (2) **tema adelantado:** las bandas abren el 9-dic; hoy casi nadie es 60
+  y nadie busca «errores al 60» (búsqueda 2,5 % vs 13 % de la ruta). (3) **canibalización:** la RUTA 1→60 sigue en su pico
+  (canal 24 288 vistas el 23-nov) y ocupa la página de inicio de los mismos suscriptores.
+- **Evitar:** otra miniatura del orco con número tachado; «ERRORES» como palabra principal hasta enero; temas de nivel 60 antes
+  de que el servidor llegue ahí (meterlos 1-3 días antes del 9-dic, con «BANDAS» en el título).
+- **Sigue funcionando:** guía-ruta con mapa (CTR 8,5 %, búsqueda) → «RUTA de PROFESIONES» del 29-nov va bien encaminada.

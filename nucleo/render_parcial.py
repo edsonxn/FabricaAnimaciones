@@ -17,6 +17,8 @@ import sys
 import time
 
 import render as R
+import render_seguro  # noqa: E402  supervisor de memoria (no entra en la firma de cache_escenas)
+render_seguro.instalar()
 
 
 def main():

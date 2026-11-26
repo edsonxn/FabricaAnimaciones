@@ -40,7 +40,7 @@ PASOS = [
 ]
 MODULOS = {"voz": ["-m", "tts_gen"], "seleccionar": ["-m", "tts_select"], "tiempo": ["-m", "linea_tiempo"],
            "comprobar": ["-m", "comprobar"], "musica": ["-m", "musica"], "sfx": ["-m", "sfx"], "mezcla": ["-m", "mezcla"],
-           "video": ["-m", "render", "video"], "final": ["-m", "final"]}
+           "video": ["-m", "render_seguro", "video"], "final": ["-m", "final"]}
 
 
 def entorno(carpeta):

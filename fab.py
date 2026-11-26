@@ -49,7 +49,7 @@ VIDEOS = os.path.join(RAIZ, "videos")
 
 ETAPAS = {
     "voz": ["-m", "tts_gen"], "seleccionar": ["-m", "tts_select"], "tiempo": ["-m", "linea_tiempo"],
-    "escena": ["-m", "prueba_escena"], "prueba": ["-m", "render", "prueba"], "video": ["-m", "render", "video"],
+    "escena": ["-m", "prueba_escena"], "prueba": ["-m", "render", "prueba"], "video": ["-m", "render_seguro", "video"],
     "musica": ["-m", "musica"], "sfx": ["-m", "sfx"], "mezcla": ["-m", "mezcla"], "final": ["-m", "final"],
     "estilos": ["-m", "muestra_estilos"], "catalogo": ["-m", "catalogo"], "verificar": ["-m", "verificar"],
     "comprobar": ["-m", "comprobar"], "miniatura": ["-m", "miniatura"],

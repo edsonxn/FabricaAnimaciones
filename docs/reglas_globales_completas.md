@@ -555,7 +555,7 @@ python fab.py panel --remoto   el lienzo en el celular fuera de casa: puerta con
 
 ## Disco, git y entorno
 - Lo pesado vive en `E:\FabricaAnimaciones` (junctions; E: debe estar conectado). C: casi lleno: un video de 3 min ≈ 1,5 GB temporales. `final` conserva `segmentos/`.
-- Antes de un render largo pide cerrar `chatterbox_server.py` y `app.py` (~8 GB c/u); 12 procesos por defecto. Voz (Chatterbox) y render NO a la vez.
+- Antes de un render largo pide cerrar `chatterbox_server.py` y `app.py` (~8 GB c/u). `fab.py <v> video` usa `nucleo/render_seguro.py` (26-nov): arranca con ≤ 4 procesos, sube hasta `--procs` (12) según lo que mide, se pausa si falta RAM y repite segmentos trabados; detalle en `docs/flujo_produccion.md` § Optimización. Voz (Chatterbox) y render NO a la vez.
 - Git: solo código/config; NUNCA `canales/youtube_client_secrets.json`, `canales/tokens/`, métricas, voz/audio/render. `git status` antes de commit; commit en español; `git push`.
 - Comandos largos (> ~8 KB) fallan en Windows: escribe archivos con Write/Edit.
 - Python 3.10, Chatterbox `C:\chatterbox\repo`, voces `C:\chatterbox_voices`, ffmpeg `C:\ffmpeg\bin`, RTX 4060 8 GB. No borrar `~/.cache/huggingface/hub`.

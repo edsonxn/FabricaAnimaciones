@@ -105,6 +105,15 @@ Tras cambiar el núcleo: `python fab.py api` y re-verificar `videos/40mil_anos` 
   **Procesos dinámicos (6-oct-2026, `render._repartir`)**: arranca con los procesos que caben y cada ~30 s, si se libera memoria
   (otro render o app terminó), agrega uno hasta `--procs`. Si un proceso se queda sin memoria, su segmento vuelve a la cola y baja
   un proceso (antes tumbaba todo el render). Cambiar `render.py` cambia la firma del código: tras tocarlo, `conservar` en el panel.
+  **Supervisor de memoria (26-nov-2026, `nucleo/render_seguro.py`; `fab.py <v> video` lo usa en vez de `-m render video`):**
+  historia_aztecas se colgó 1,5 h cuando otra sesión ocupó 10 GB de RAM: la falta de memoria llegó como `SystemError` de OpenCV
+  (no como MemoryError), se trató como error fatal y el proceso principal se quedó colgado esperando a vaciar la cola. Ahora:
+  arranca con ≤ 4 procesos (`FAB_PROCS_INICIO`) y sube de a uno con lo que MIDE que gasta cada proceso (~2 GB en boceto,
+  2-3 GB con mapas grandes); SystemError/Errno 22/32/«Unable to allocate» = sin memoria → el segmento se repite; con RAM libre
+  bajo la reserva quita un proceso y, si no cabe ni uno, escribe «PAUSA» en el log y sigue solo cuando se libera; un segmento
+  sin terminar en `FAB_ATASCO_S` (600 s) se mata y se repite. Vive FUERA de `render.py` a propósito: así mejorarlo no cambia la
+  firma de `cache_escenas` (tocar `render.py` borró los segmentos de historia_aztecas el 25-nov). **No metas en `render.py`
+  nada que no decida píxeles.** `render_parcial.py` también lo usa (`render_seguro.instalar()`).
 - El render evita que Windows se suspenda mientras corre (`SetThreadExecutionState`; no cambia la configuración de
   energía). El render v3 de independencia_mx perdió ~13 h con la PC dormida (6 tramos de 48 000 s a la vez en el log).
 - Probado y descartado: `FAB_SS=1` (solo −21 % y líneas peores).

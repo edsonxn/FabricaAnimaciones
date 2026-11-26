@@ -167,6 +167,25 @@ no sabemos y nos guiamos solo de eso». Fallo: `tes_builds_rotas` dijo «UESP» 
 - Excepción: un comentario o un datamine famoso que ES la noticia («un minero de datos encontró…») puede nombrarse una vez.
 - `chequeo_yt` (antes de `voz` y en `chequeo`) avisa de cada frase con la fuente citada → reescribir antes de generar la voz.
 
+### LAS ESCENAS IMPORTANTES SE VEN EN MOVIMIENTO (el usuario, 18-nov-2026, TODOS los canales)
+«Hay partes donde el guion menciona una escena o algo importante que podría ser interesante de ver… sí busques ese clip, para que
+el espectador vea la escena importante. Y como última opción, si no existe, la generes con Flow, un video cortito de 4 o 6 segundos,
+en baja calidad para luego reescalarlo. No en todo el video, solo donde sí sea realmente necesario.» Fallo: `fo_refugios_25`, la
+bicicleta del Refugio 88 (5 % de probabilidad de electrocutarse) iba con pegatina y un clip de otra cosa; pasaba igual en otros puestos.
+1. **Qué cuenta como ESCENA IMPORTANTE:** un suceso que la voz cuenta y que el espectador querría VER pasar: una muerte, una descarga,
+   una explosión, una traición, una puerta que se abre, una reacción, el remate de una misión o de un experimento. No los datos
+   sueltos (fechas, cifras, quién lo diseñó). Al terminar el guion: lista `escenas.md` (frase, segundo, qué debería verse) junto a
+   `promesas.md`; en un video de lista, ≈ 1-3 por puesto.
+2. **Orden:** (a) el clip REAL del juego con ESE momento en ese segundo: buscarlo con los subtítulos automáticos de las guías
+   (`yt-dlp --write-auto-subs --skip-download`, grep de la palabra clave) o por capítulos, y comprobar el cuadro; (b) otra guía,
+   otro idioma de búsqueda (en inglés suele haber más), cinemáticas o «all endings»; (c) **último recurso: video de Flow de 4-6 s**
+   desde un cuadro clave de Nano Banana con ingredientes reales del juego (mismo estilo gráfico, el personaje real), generado en
+   **360p** y descargado como **«720p · Resolución mejorada»** (gratis; `docs/estilo_secuencia_flow.md` § «Clips de video»),
+   prompt con «Sin diálogo, sin voces audibles», marcado RECREACIÓN como las imágenes de Flow.
+3. **Cómo entra:** como medio del beat (`bajar N --url --desde` o el .mp4 de Flow en `medios/scene-NNN.mp4`), a pantalla
+   completa en el segundo en que la voz lo cuenta; la pegatina va ENCIMA o después, nunca en lugar de la escena.
+4. **Comprobación:** cada fila de `escenas.md` con su cuadro del MASTER (hoja `previews/escenas_NN.jpg`) antes de entregar.
+
 ### TODO LO QUE SE NOMBRA SE MUESTRA, CON VIDEO DE PREFERENCIA (el usuario, 10-nov-2026, TODOS los canales; OBLIGATORIO en secretos y huevos de pascua)
 «Siempre lo que hables se tiene que mostrar con imágenes o videos de preferencia, sobre todo objetos, personajes o locaciones.
 En secretos y huevos de pascua nos tenemos que apoyar con videos e imágenes obligatoriamente.» Fallos en `wow_secretos_primeros_niveles`:
@@ -765,7 +784,7 @@ Eligió 3 estilos nuevos de las 5 propuestas (los otros dos, «táctico plano» 
 | `original` | el kit de siempre: `mg_wow.ruta` (mapa), panel azul noche y borde dorado (ficha, rótulo), `peg_estilos.reliquia` (tarjeta), `peg_anim.variado` (pegatina) | — (wow_errores_60 y anteriores) |
 | `pergamino` | CARTÓGRAFO DE PERGAMINO: pergamino quemado sobre mesa, mapa en sepia, Corsiva, sellos de lacre numerados que caen, ruta de pluma punteada que se entinta, fotos pegadas; fichas entre rodillos; salen quemándose | `videos/_kit_wow_estilos/estilo_1/` |
 | `oro` | RELIQUIA DE ORO Y PIEDRA: piedra tallada, molduras de oro, gemas engastadas (marcadores), cadena de oro con runas que se encienden, destellos y polvo dorado; Castellar/Constantia | `videos/_kit_wow_estilos/estilo_2/` |
-| `holograma` | HOLOGRAMA ARCANO: proyección azul-violeta con rejilla y círculos rúnicos, haz de energía con partículas, anillos que pulsan, cristal translúcido con neón, texto que se descifra | `videos/_kit_wow_estilos/estilo_3/` |
+| ~~`holograma`~~ → `madera` (25-nov) | MADERA Y PERGAMINO: las MISMAS animaciones del holograma (panel que se abre desde una línea, aros rúnicos que giran, hexágonos de los íconos, texto que se descifra, barra, sello; en mapas: haz que cae, anillos que pulsan, ruta con chispas) con piel cálida: tabla de madera con veta y filo de pergamino, oro viejo, ámbar, rojo lacre y marfil, Georgia; sin rejilla, sin scanlines, sin glitch, brillo suave. El holograma azul-violeta quedó FUERA («se sale del estilo… parece incluso futurista») | `nucleo/wow_estilos/madera.py` (motor = holograma.py parcheado al cargar) |
 
 - **Módulo:** `nucleo/mg_wow_estilos.py` (API, reparto y helpers; la plantilla de uso está en su docstring). Motores de los 3 nuevos:
   `nucleo/wow_estilos/{pergamino,oro,holograma}.py` (código adaptado de las demos, sin depender de esas carpetas) y
@@ -797,6 +816,28 @@ Eligió 3 estilos nuevos de las 5 propuestas (los otros dos, «táctico plano» 
   con `secuencia_fx.Capa.aplicar` (el mismo camino que `fx hoja` y el render): `hoja_mezcla.jpg` (filas = pieza, columnas =
   estilo, en el cuadro FINAL), `hoja_mezcla_anim.jpg` (a media animación) y `--clip` → `clip_mezcla.mp4` (~43 s con el reparto
   automático).
+
+### CAMBIOS DEL USUARIO AL KIT (25-nov-2026, al ver `wow_ruta_profesiones`) — mandan sobre lo de arriba
+1. **Holograma → madera** (tabla de arriba). `estilo="holograma"`, `"holo"` y `"arcano"` llevan a `madera`; ningún video nuevo
+   usa el azul-violeta. `ESTILOS_WOW = ("original", "pergamino", "oro", "madera")`.
+2. **MAPAS = SIEMPRE EL MAPA ORIGINAL A TODO COLOR** («no me convence ese cambio radical de estilo… mejor mostrar siempre el mapa
+   original, solo cambiando trazos, líneas, pines y cuadros de texto»). Pergamino (sepia) y holograma (azul) NO van en mapas. Sí el
+   **oro** («esa sí me gusta: el mapa original con ese estilo nuevo de íconos y trazos»). `E.mapa_e` rota 5 presentaciones, todas
+   sobre el mapa real: original → oro → madera (animación mágica) → original variante 1 (línea continua dorada con brillo, pin
+   rombo, placa negra con barra dorada) → original variante 2 (puntos claros tipo huellas, sello de tinta, etiqueta de
+   pergamino). Variantes en `mg_wow.ruta(variante=0/1/2)`. `estilo=` solo acepta original/oro/madera; lo demás se ignora.
+3. **ÍCONO EN CADA PUNTO DEL MAPA** («siempre que hables de ítems, personajes… en un mapa pon su ícono para identificar mejor las
+   cosas: flores, menas, personajes»). El 5.º campo de cada punto es OBLIGATORIO: `o_*` (pegatina), `"ico:<ícono Wowhead>"`
+   (p. ej. `ico:inv_misc_herb_15` = espina de oro) o la cara de un PNJ. El ícono queda pegado al rótulo mientras se vea el rótulo
+   (`mg_wow._con_icono`; en oro, `_en_fila` con marco de oro); la foto grande sigue entrando y saliendo como antes.
+4. **TARJETA DE PERSONAJE = SE LE VE LA CARA** (regla importante, RGC §R44): `Fc(slug)` → `caras/<slug>.png`; crear la cara de
+   toda pegatina de personaje que no la tenga (Argelmach salía cortado en el torso). Oro, madera y mapas recortan desde arriba.
+5. **Objetos con su TOOLTIP REAL de Wowhead** («muestra a un lado el objeto real, con sus estadísticas, y si se puede una foto de
+   cómo se ve puesto»): `_wowhead_ids.json` (slug → `forever/<id>` comprobado en nether.wowhead.com) y el helper `tarj()` de
+   efectos.py añade solo el APOYO `wowhead=` al otro lado de la tarjeta; si el objeto se equipa, `pegatinas/eq_<slug>.jpg`
+   (captura de usuario de Wowhead o imagen del visor 3D) con el rótulo «Así se ve puesto».
+6. **Legibilidad**: nada de letra negra chica sobre amarillo (barra de `mg_prof.habilidad`: barra más gruesa y cifra 27 px azul
+   noche). Placas de oro sin el surco tallado que se leía «[TEXTO_CON_GUION]».
 
 ## METRAJE DE ARCHIVO < 720p (27-oct-2026, `wow_jugadores_rompieron`)
 Los videos originales de 2005-2006 (Kazzak en Ventormenta 240p, el gong de Medivh 480p, la exploración de Hyjal 256p, el récord de
@@ -1307,6 +1348,7 @@ de Link y SFX de Zelda; aplica esas reglas también en Tamriel, Warcraft o Runa 
   arte de fans se evitan como en Tamriel. Datos de Fallout Wiki/Nukapedia comprobados, nunca de memoria; la voz no cita la fuente.
 
 ## COMENTARIOS de la gente (el usuario, 27-oct-2026: Warcraft, Tamriel, Runa Caída y Crónicas del gaming)
+**REGLA DE ORO · NINGÚN COMENTARIO DOS VECES, NI EN LA VOZ (el usuario, 26-nov-2026, RGC §R46):** ni el mismo comentario, ni la misma corrección (la de los Skaal de @sinnombre5459 ya se dijo en `tes_reina_loba` y se volvió a proponer), ni agradecer otra vez a la misma persona. `yt comentarios` marca ✗ lo ya usado; `python fab.py yt repetidos <v>` antes de `voz` (y en `chequeo`).
 **SOLO COMENTARIOS RECIENTES EN PANTALLA (el usuario, 3-nov-2026, `tes_sentinel_teaser`: «pusiste un comentario de hace 8 meses… solo comentarios recientes máximo 1 semana y media»):** toda captura de comentario (agradecimiento, crítica o el que pidió el tema) tiene ≤ 10 días el día que se hace el video; `nucleo/comentarios.py` (`MAX_DIAS = 10`) se niega a hacer la pegatina de uno más viejo. Si no hay ≥ 4 agradecimientos recientes, se ponen los que haya; nunca se rellena con viejos. Lo viejo puede inspirar el guion (una corrección, un tema), pero no sale en pantalla.
 
 **NINGÚN COMENTARIO SE ENSEÑA DOS VECES (el usuario, 5-nov-2026, `tes_dwemer_desaparicion`: repitió la crítica «kyrim» de @jhonfeddiszabalamoreno9056 que ya se había contestado en `tes_secretos_40`, y un agradecimiento ya enseñado en `tes_cosas_nunca`):** antes de elegir comentarios para un video, revisar los que el canal YA enseñó: críticas contestadas y agradecimientos, en todos sus videos. Ni la misma crítica ni el mismo comentario bueno vuelven a salir, ni se recuerda en la voz («como nos dijo en otro video…»). Cómo saberlo: las tarjetas `videos/*/pegatinas/com_<id>.png` y la línea «Comentarios» de cada `ESTADO.md` del canal; `nucleo/comentarios.py` se niega a hacer la pegatina de un `<id>` que ya existe en otro video. Si no quedan críticas nuevas que valgan la pena, ese video va sin crítica; si quedan pocos agradecimientos nuevos, van los que haya (nunca se rellena con repetidos). Tampoco repetir a la misma persona criticada (punto 2c).

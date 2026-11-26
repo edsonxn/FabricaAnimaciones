@@ -646,6 +646,9 @@ def main():
     elif cmd == "comentario":
         import comentarios
         comentarios.pegatina(a[1], a[2], a[3])
+    elif cmd == "repetidos":           # REGLA DE ORO 26-nov-2026: ningún comentario dos veces (pantalla ni voz)
+        import comentarios
+        sys.exit(0 if comentarios.repetidos(a[1]) else 1)
     elif cmd == "canal":
         cfg = json.load(open(os.path.join(CANALES, a[1] + ".json"), encoding="utf-8"))
         configurar_canal(resolver_canal(a[1]), cfg)

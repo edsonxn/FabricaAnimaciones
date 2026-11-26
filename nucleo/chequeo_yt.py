@@ -378,6 +378,12 @@ def main():
     fuentes()
     idioma(carpeta)
     texto_clips(carpeta)
+    try:   # REGLA DE ORO 26-nov-2026: ningún comentario se usa dos veces (ni en pantalla ni en la voz)
+        import comentarios
+        print("\n== Comentarios repetidos ==")
+        comentarios.repetidos(os.path.basename(carpeta))
+    except Exception as e:
+        print(f"(no pude revisar comentarios repetidos: {e})")
     print("Lista completa de capas: docs/estilo_secuencia_yt.md § LISTA DE CONTROL")
 
 

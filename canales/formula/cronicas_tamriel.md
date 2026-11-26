@@ -2,6 +2,47 @@
 
 **SIN SHORTS EN TAMRIEL (el usuario, 18-nov-2026: «en Tamriel no debería haber short»; ya había borrado `tes_embry_short` el 17-nov):** no se proponen, producen ni suben Shorts para este canal; solo largos. Las propuestas viejas de «+ Short vertical» de abajo quedan anuladas.
 
+## FÓRMULA VIGENTE — investigación del 26-nov-2026 (RGC §R45: lo nuestro × el mundo abierto)
+Fuentes: `yt metricas cronicas_tamriel 90` (`canales/metricas/cronicas_tamriel_2026-11-26.json`) e `ideas --actualizar` con 10
+búsquedas (7 nuevas en español) + KriK como competidor fijo (`canales/metricas/ideas/cronicas_tamriel.md`, 26-nov, ~1 400 de cuota).
+Nexlev/vidIQ no usados (límite semanal / sin créditos).
+
+**Lo nuestro (90 d: 260 848 vistas, 45,8 % visto medio, +865 subs netos → 7 120; 53 % de las vistas de suscritos, búsqueda 7 %, sugeridos 5 %;
+público 77 % hombres 25-44; MX 61 k, ES 53 k, AR 40 k, CL 30 k):**
+| video | × mediana (2 473) | % visto | lectura |
+|---|---:|---:|---|
+| 15 misiones que NUNCA debes hacer | ×15,5 (38 466) | 48 | el filón: advertencia al jugador |
+| 20 cosas que NUNCA debes hacer | 13 448 en < 7 d | **53** | el eje NUNCA aguanta una 2.ª vuelta |
+| 10 builds más ROTAS | ×6,3 | 40 | buen clic, retención media |
+| 15 cosas más INÚTILES | ×5,7 | **56** | burla + utilidad = la mejor retención |
+| 8 daédricas / 25 imperdibles / 20 seres / 15 armas / 40 secretos | ×5,0 / ×5,1 / ×4,3 / ×4,3 / ×3,9 | 52 / 46 / 40 / 53 / 53 | listas de cosas que el jugador USA |
+| Dwemer (lore 27 min) / Sentinel / Reina Loba (35 min) | ×2,9 / ×2,6 / ×1,8 | 42 / 39 / 37 | lore puro y noticia = lo más flojo |
+- **Duración:** las listas de 9-20 min (dur. media 8-10 min) retienen 46-56 %; lore de 27-35 min, 37-42 %.
+- **Búsquedas que nos encuentran:** «skyrim» 806, «skyrim con ia/mantella» ~760 (catálogo viejo), «the elder scrolls 6» 73,
+  «thalmor» 67, «serana skyrim» 62, «skyrim builds» 62.
+
+**El mundo abierto (60 d, × sobre la mediana de cada canal):**
+- **«Lo peor / lo estás haciendo mal» (señal de TEMA y FORMATO, ≥ 3 canales):** Dareloth «The Worst Questline in Skyrim» ×26,4 (827 k,
+  https://youtu.be/HNTWeSTUkmU) + «College of Winterhold is Actual Garbage»; SmackerUnknown «You've Been Moving WRONG» ×3,6, «…Almost
+  COMPLETELY Useless» ×2,1, «Wasting Perk Points on This»; = nuestra polaridad NUNCA/INÚTIL.
+- **«Lo que te perdiste para siempre» (señal de TEMA, ≥ 3 canales, el único en ESPAÑOL):** KriK (24,5 k) «El bastón que casi todos pierden
+  para siempre» ×5,4, «No te vayas de Dawnguard sin coger esta diadema» ×3,7, «7 pociones donde casi nadie mira» ×2,6; UltraConner
+  «INFINITE Potion You Probably Missed» ×3,4; SmackerUnknown «You Probably Missed This Strange Creature». Solo en Shorts: en largo y en
+  español nadie lo junta = hueco.
+- **«X no tiene sentido» (señal de FORMATO, un canal lo repite):** Nox's Library vampiros ×4,3 (436 k, https://youtu.be/OL9mkf2GoOg),
+  hombres lobo, redguards, Vivec ×2,1. En español no existe.
+- **Builds/retos:** JustMeegz «Skyrim But I Become THE STRONGEST X» ×10-24 (50-75 min): confirma nuestro ×6,3 de builds.
+- **TES VI Sentinel:** FudgeMuppet, EpicNate, UltraConner, Nulozi (×15, portugués) siguen con el tema, pero nuestro Sentinel fue ×2,6: solo con noticia nueva.
+- **Español en largo:** en 10 búsquedas no apareció NINGÚN canal de TES en español que rompiera su media en 60 días; el único fijo es KriK
+  (Shorts). Somos el canal de listas largas en español del nicho; los competidores se buscan en inglés y portugués (hueco = traducir el formato).
+
+**Fórmula del cruce:** lista de 15-20 puestos de algo que el jugador USA, PIERDE o HACE MAL en Skyrim, polaridad de advertencia
+(NUNCA / PARA SIEMPRE / INÚTIL / PEOR), 15-18 min, Profeta 8 de 10 con burla, clave + número al inicio del título.
+**Evitar:** lore puro de 25+ min, noticias sin novedad, enemigos/jefes, repetir puestos de `tes_cosas_nunca`, `tes_misiones_nunca`,
+`tes_misiones_imperdibles` y `tes_secretos_40` (R28).
+**Hipótesis siguiente:** si «para siempre» (tema nuevo, misma polaridad) iguala al NUNCA (≥ 50 % visto, ×5 a 7 días), la polaridad de
+advertencia es el motor del canal y no el tema; si cae, el NUNCA estaba agotando su tema.
+
 ## Conclusión del 13-oct-2026 (informe `canales/metricas/ideas/cronicas_tamriel.md`)
 - **Lo propio:** 271 largos, mediana 2 244 vistas; 6 290 subs. Lo más alto del histórico son tutoriales de Skyrim con IA
   (×16-×25, de hace > 670 días; otro nicho) y «¿Por qué nadie quiere a los ORCOS?» (×10,7, 45 % visto, hace 952 días).

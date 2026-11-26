@@ -90,8 +90,84 @@ def _tiene(c, pistas):
     return bool(pistas.search(c["texto"]))
 
 
-def _ver(c):
-    return f"  ♥{c['likes']:<3} {'  ' if c['contestado'] else '· '}{c['id']}  {c['autor']}: {c['texto'][:110].replace(chr(10), ' ')}"
+_ID = re.compile(r"Ug[A-Za-z0-9_-]{20,}")
+_ARROBA = re.compile(r"@[A-Za-z0-9_.\-]{3,}")
+
+
+def usos(excluir=None):
+    """REGLA DE ORO (el usuario, 26-nov-2026): NINGÚN comentario se usa dos veces, ni en pantalla ni en la VOZ.
+    Devuelve ({id: [videos]}, {@autor en minúsculas: [videos]}) de todo lo ya usado en videos/*: pegatinas com_<id>.png,
+    ids escritos en guion.py / efectos.py / ESTADO.md y @autores que nombra el guion.py (la voz los cita sin pegatina: caso
+    @sinnombre5459, la corrección de los Skaal ya dicha en tes_reina_loba y vuelta a proponer en tes_pierdes_siempre)."""
+    raiz = os.path.join(yt.RAIZ, "videos")
+    ids, autores = {}, {}
+    for v in sorted(os.listdir(raiz)):
+        car = os.path.join(raiz, v)
+        if v == excluir or not os.path.isdir(car):
+            continue
+        peg = os.path.join(car, "pegatinas")
+        if os.path.isdir(peg):
+            for f in os.listdir(peg):
+                if f.startswith("com_") and f.endswith(".png"):
+                    ids.setdefault(f[4:-4], []).append(v)
+        for nom in ("guion.py", "efectos.py", "ESTADO.md"):
+            try:
+                txt = open(os.path.join(car, nom), encoding="utf-8", errors="ignore").read()
+            except OSError:
+                continue
+            for i in set(_ID.findall(txt)):
+                ids.setdefault(i, []).append(v)
+            if nom == "guion.py":
+                for a in set(_ARROBA.findall(txt)):
+                    autores.setdefault(a.lower().rstrip("."), []).append(v)
+    ids = {k: sorted(set(x)) for k, x in ids.items()}
+    return ids, {k: sorted(set(x)) for k, x in autores.items()}
+
+
+def ya_usado(c, u=None):
+    """'' si el comentario no se ha usado; si no, dónde (por id) o «¿mismo?» (por autor ya citado en la voz)."""
+    ids, autores = u or usos()
+    if c["id"] in ids:
+        return "USADO en " + ", ".join(ids[c["id"]])
+    a = (c.get("autor") or "").lower().rstrip(".")
+    if a in autores:
+        return "autor YA citado en " + ", ".join(autores[a]) + " (¿mismo comentario? mirar el guion)"
+    return ""
+
+
+def repetidos(video):
+    """Revisa los comentarios que usa <video> (ids y @autores de su guion.py/efectos.py + pegatinas com_) contra todos los
+    demás videos. Sale con código 1 si alguno ya se usó. `python fab.py yt repetidos <video>` (también lo corre `chequeo`)."""
+    car = os.path.join(yt.RAIZ, "videos", video)
+    ids, autores = usos(excluir=video)
+    mios, arrobas = set(), set()
+    peg = os.path.join(car, "pegatinas")
+    if os.path.isdir(peg):
+        mios |= {f[4:-4] for f in os.listdir(peg) if f.startswith("com_") and f.endswith(".png")}
+    for nom in ("guion.py", "efectos.py"):
+        try:
+            txt = open(os.path.join(car, nom), encoding="utf-8", errors="ignore").read()
+        except OSError:
+            continue
+        mios |= set(_ID.findall(txt))
+        if nom == "guion.py":
+            arrobas |= {a.lower().rstrip(".") for a in _ARROBA.findall(txt)}
+    malos = [f"  ✗ comentario {i} ya usado en {', '.join(ids[i])}" for i in sorted(mios) if i in ids]
+    dudas = [f"  ? {a} ya citado en {', '.join(autores[a])}: confirmar que es OTRO comentario suyo" for a in sorted(arrobas) if a in autores]
+    print(f"Comentarios de {video}: {len(mios)} ids, {len(arrobas)} @autores en el guion")
+    for l in malos + dudas:
+        print(l)
+    if malos:
+        print("REGLA DE ORO 26-nov-2026: ningún comentario se usa dos veces (ni en pantalla ni en la voz). Cámbialo.")
+    elif not dudas:
+        print("  OK: ninguno repetido")
+    return not malos
+
+
+def _ver(c, u=None):
+    marca = ya_usado(c, u) if u else ""
+    return (f"  ♥{c['likes']:<3} {'  ' if c['contestado'] else '· '}{c['id']}  {c['autor']}: {c['texto'][:110].replace(chr(10), ' ')}"
+            + (f"   ✗ {marca}" if marca else ""))
 
 
 def guardar(canal, dias=21):
@@ -112,11 +188,13 @@ def guardar(canal, dias=21):
     print(f"{alias}: {len(cs)} comentarios en {dias} d, {len(pend)} sin contestar, "
           f"{len(nuevos)} nuevos desde {previo.get('fecha', 'siempre')} -> {ruta}")
     porlikes = lambda xs: sorted(xs, key=lambda c: -c["likes"])
+    u = usos()   # REGLA DE ORO 26-nov-2026: marca con ✗ lo ya usado en otro video (pantalla o voz)
+    print("✗ = ya usado en otro video (por id, o su autor ya citado en la voz): NO se vuelve a usar")
     for titulo, grupo, n in (("NUEVOS", nuevos, 25), ("QUEJAS (de qué se queja la gente)", [c for c in cs if _tiene(c, QUEJA)], 15),
                              ("SUGERENCIAS (lo que piden)", [c for c in cs if _tiene(c, SUGERENCIA)], 15)):
         print(f"\n{titulo}: {len(grupo)}")
         for c in porlikes(grupo)[:n]:
-            print(_ver(c))
+            print(_ver(c, u))
     return cs
 
 
@@ -215,9 +293,11 @@ def pegatina(video, canal, id_com):
     if dias > MAX_DIAS:     # el usuario, 3-nov-2026: en pantalla solo comentarios recientes, como mucho semana y media
         sys.exit(f"El comentario {id_com} es de hace {dias} días (> {MAX_DIAS}): en pantalla solo van comentarios recientes. Elige otro.")
     # el usuario, 5-nov-2026: ningún comentario (crítica ni agradecimiento) se enseña dos veces
-    ya = [d for d in os.listdir(os.path.join(yt.RAIZ, "videos")) if d != video
-          and os.path.isfile(os.path.join(yt.RAIZ, "videos", d, "pegatinas", f"com_{id_com}.png"))]
-    if ya:
-        sys.exit(f"El comentario {id_com} ya se enseñó en {', '.join(ya)}: no se repite. Elige otro.")
+    # REGLA DE ORO 26-nov-2026: tampoco si solo lo dijo la VOZ (id o @autor en el guion.py de otro video)
+    marca = ya_usado(c, usos(excluir=video))
+    if marca.startswith("USADO"):
+        sys.exit(f"El comentario {id_com} ya se {marca}: no se repite. Elige otro.")
+    if marca:
+        print(f"⚠ {c['autor']}: {marca}")
     sal = tarjeta(c, os.path.join(yt.RAIZ, "videos", video, "pegatinas", f"com_{id_com}.png"))
     print(f"pegatina -> {sal}\n  en efectos.py: peg(<seg>, \"com_{id_com}\", \"\", tam=760, x=.30, y=.30)")

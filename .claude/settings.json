@@ -1,4 +1,5 @@
 {
+  "autoCompactWindow": 350000,
   "permissions": {
     "allow": [
       "Bash(python fab.py *)",
@@ -8,6 +9,20 @@
       "PowerShell(Get-Process*)",
       "PowerShell(taskkill /PID * /T /F)",
       "PowerShell(Stop-Process -Id *)"
+    ]
+  },
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/nucleo/hook_precompact.py\"",
+            "timeout": 10
+          }
+        ]
+      }
     ]
   }
 }

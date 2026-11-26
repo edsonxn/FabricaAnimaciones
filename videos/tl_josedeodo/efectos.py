@@ -482,6 +482,13 @@ for _sec in ("fx_escenas.py", "fx_jugadas.py"):
     if os.path.exists(_p):
         exec(compile(open(_p, encoding="utf-8").read(), _p, "exec"))
 
+# la MESA 3D siempre ENCIMA del VOD que corre debajo (26-nov: un SYNC2/CADENA añadido después la tapaba en al1_orb y cfo_plan):
+# cada mesa pasa justo después del último FX de video que se le cruza; lo que se añadió después (tarjetas, chips) sigue encima
+for _mz in [f_ for f_ in FX if f_.get("tipo") == "video" and "mesa_" in f_.get("ruta", "")]:
+    FX.remove(_mz)
+    _i = max((i for i, f_ in enumerate(FX) if f_.get("tipo") == "video" and f_["de"] < _mz["a"] and _mz["de"] < f_["a"]), default=-1)
+    FX.insert(_i + 1, _mz)
+
 # narración ORIGINAL donde la voz calla y el VOD corre a x1 (los ESPACIOS_VOZ y los `post`): vivos_audio.py la corta de aquí
 _pal = sorted((w["s"], w["e"]) for f_ in _FR.values() for w in f_["words"])
 _ya = [(x[3], x[4]) for x in AUD_VIVOS]

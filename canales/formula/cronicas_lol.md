@@ -62,4 +62,5 @@ lo decía ElMillor (60 mil). El análisis pausa por pausa sirve para PROBAR la t
 ## Videos con esta fórmula (anotar vistas a 48 h y 7 días)
 | Fecha | Video | Variable | 48 h | 7 d |
 |---|---|---|---|---|
-| jue 26-nov-2026 10:00 | ¿Culpa de JOSEDEODO? Revisé sus 7 partidas (rbKmPGQ9x4M, 10:38) | veta latina + tesis con datos (como el de T1) | | |
+| (borrado 25-nov) | ¿Culpa de JOSEDEODO? Revisé sus 7 partidas (rbKmPGQ9x4M) — se rehace sin cortes | veta latina + tesis con datos | | |
+| jue 26-nov 18:00 | ¿Culpa de JOSEDEODO? Revisé sus 7 partidas (OAqFkuVfQx8, v2 12:42) | veta latina + tesis con datos + jugadas SIN cortes (plan 3D, órbita, flechas parabólicas, rutas) | | |

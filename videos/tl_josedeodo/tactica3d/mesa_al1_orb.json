@@ -1,0 +1,352 @@
+{
+ "modo": "mesa",
+ "de": 275.49,
+ "a": 280.77,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_al1_orb_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "LeeSin",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/LeeSin.png",
+   "puntos": [
+    [
+     0,
+     0.383,
+     0.483
+    ]
+   ],
+   "de": 275.89,
+   "sale": 279.77
+  },
+  "Morgan": {
+   "jugador": "Morgan",
+   "campeon": "Camille",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Camille.png",
+   "puntos": [
+    [
+     0,
+     0.494,
+     0.628
+    ]
+   ],
+   "de": 275.97,
+   "sale": 279.77
+  },
+  "Yeon": {
+   "jugador": "Yeon",
+   "campeon": "Lucian",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Lucian.png",
+   "puntos": [
+    [
+     0,
+     0.5625,
+     0.22
+    ]
+   ],
+   "de": 276.05,
+   "sale": 279.77
+  },
+  "CoreJJ": {
+   "jugador": "CoreJJ",
+   "campeon": "Nami",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Nami.png",
+   "puntos": [
+    [
+     0,
+     0.71,
+     0.239
+    ]
+   ],
+   "de": 276.13,
+   "sale": 279.77
+  },
+  "Quid": {
+   "jugador": "Quid",
+   "campeon": "Galio",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Galio.png",
+   "puntos": [
+    [
+     0,
+     0.826,
+     0.367
+    ]
+   ],
+   "de": 276.21,
+   "sale": 279.77
+  },
+  "Hope": {
+   "jugador": "Hope",
+   "campeon": "Yunara",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Yunara.png",
+   "puntos": [
+    [
+     0,
+     0.458,
+     0.583
+    ]
+   ],
+   "de": 276.29,
+   "sale": 279.77
+  },
+  "Kael": {
+   "jugador": "Kael",
+   "campeon": "Lulu",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.484,
+     0.33
+    ]
+   ],
+   "de": 276.37,
+   "sale": 279.77
+  },
+  "Shanks": {
+   "jugador": "Shanks",
+   "campeon": "Orianna",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Orianna.png",
+   "puntos": [
+    [
+     0,
+     0.65,
+     0.511
+    ]
+   ],
+   "de": 276.45,
+   "sale": 279.77
+  },
+  "Tarzan": {
+   "jugador": "Tarzan",
+   "campeon": "Skarner",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Skarner.png",
+   "puntos": [
+    [
+     0,
+     0.763,
+     0.502
+    ]
+   ],
+   "de": 276.53,
+   "sale": 279.77
+  }
+ },
+ "camara": [
+  [
+   275.49,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   275.79,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   276.65160000000003,
+   90,
+   34,
+   46,
+   0.5,
+   0.45
+  ],
+  [
+   277.8132,
+   180,
+   26,
+   40,
+   0.5,
+   0.45
+  ],
+  [
+   278.9748,
+   270,
+   34,
+   46,
+   0.5,
+   0.45
+  ],
+  [
+   279.87,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   280.77,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "patada",
+   "pts": [
+    [
+     0.383,
+     0.483
+    ],
+    [
+     0.42,
+     0.53
+    ],
+    [
+     0.458,
+     0.583
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.7,
+   "alto": 2.0,
+   "grosor": 1.0,
+   "en": 277.29,
+   "sale": 279.77
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.535,
+     0.6
+    ],
+    [
+     0.5313,
+     0.6201
+    ],
+    [
+     0.5207,
+     0.6382
+    ],
+    [
+     0.5041,
+     0.6526
+    ],
+    [
+     0.4832,
+     0.6618
+    ],
+    [
+     0.46,
+     0.665
+    ],
+    [
+     0.4368,
+     0.6618
+    ],
+    [
+     0.4159,
+     0.6526
+    ],
+    [
+     0.3993,
+     0.6382
+    ],
+    [
+     0.3887,
+     0.6201
+    ],
+    [
+     0.385,
+     0.6
+    ],
+    [
+     0.3887,
+     0.5799
+    ],
+    [
+     0.3993,
+     0.5618
+    ],
+    [
+     0.4159,
+     0.5474
+    ],
+    [
+     0.4368,
+     0.5382
+    ],
+    [
+     0.46,
+     0.535
+    ],
+    [
+     0.4832,
+     0.5382
+    ],
+    [
+     0.5041,
+     0.5474
+    ],
+    [
+     0.5207,
+     0.5618
+    ],
+    [
+     0.5313,
+     0.5799
+    ]
+   ],
+   "color": "rojo",
+   "alfa": 0.16,
+   "en": 276.19,
+   "sale": 279.77
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.383,
+   "v": 0.483,
+   "alto": 0,
+   "texto": "JOSEDEODO · LEE SIN",
+   "sub": "ENTRA POR DETRÁS, CON LA PATADA",
+   "color": "rojo",
+   "dx": -430,
+   "dy": -80,
+   "de": 276.59,
+   "a": 279.77
+  },
+  {
+   "u": 0.458,
+   "v": 0.583,
+   "alto": 0,
+   "texto": "HOPE, ATRAPADA",
+   "sub": "LA DEFINITIVA DE MORGAN (CAMILLE)",
+   "color": "azul",
+   "dx": -60,
+   "dy": 150,
+   "de": 277.39,
+   "a": 279.77
+  }
+ ]
+}

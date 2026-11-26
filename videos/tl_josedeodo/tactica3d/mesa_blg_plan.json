@@ -1,0 +1,279 @@
+{
+ "modo": "mesa",
+ "de": 172.12,
+ "a": 178.54,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_blg_plan_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "JarvanIV",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.24,
+     0.46
+    ]
+   ],
+   "de": 172.52,
+   "sale": 177.54
+  },
+  "Yeon": {
+   "jugador": "Yeon",
+   "campeon": "Ezreal",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Ezreal.png",
+   "puntos": [
+    [
+     0,
+     0.34,
+     0.45
+    ]
+   ],
+   "de": 172.6,
+   "sale": 177.54
+  },
+  "CoreJJ": {
+   "jugador": "CoreJJ",
+   "campeon": "Karma",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Karma.png",
+   "puntos": [
+    [
+     0,
+     0.4,
+     0.55
+    ]
+   ],
+   "de": 172.68,
+   "sale": 177.54
+  },
+  "ON": {
+   "jugador": "ON",
+   "campeon": "Nautilus",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Nautilus.png",
+   "puntos": [
+    [
+     0,
+     0.76,
+     0.52
+    ]
+   ],
+   "de": 172.76,
+   "sale": 177.54
+  }
+ },
+ "camara": [
+  [
+   172.12,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   172.47,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   174.1744,
+   -18,
+   36,
+   50,
+   0.42,
+   0.45
+  ],
+  [
+   176.1004,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.45
+  ],
+  [
+   177.64,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   178.54,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "on",
+   "pts": [
+    [
+     0.76,
+     0.52
+    ],
+    [
+     0.6,
+     0.48
+    ],
+    [
+     0.42,
+     0.44
+    ]
+   ],
+   "color": "rojo",
+   "dur": 1.0,
+   "alto": 3.0,
+   "grosor": 1.1,
+   "en": 174.32,
+   "sale": 177.54
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.2,
+   "v": 0.36,
+   "r": 0.05,
+   "color": "amarillo",
+   "en": 172.72,
+   "sale": 177.54
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.34,
+     0.38
+    ],
+    [
+     0.3356,
+     0.4109
+    ],
+    [
+     0.3228,
+     0.4388
+    ],
+    [
+     0.3029,
+     0.4609
+    ],
+    [
+     0.2778,
+     0.4751
+    ],
+    [
+     0.25,
+     0.48
+    ],
+    [
+     0.2222,
+     0.4751
+    ],
+    [
+     0.1971,
+     0.4609
+    ],
+    [
+     0.1772,
+     0.4388
+    ],
+    [
+     0.1644,
+     0.4109
+    ],
+    [
+     0.16,
+     0.38
+    ],
+    [
+     0.1644,
+     0.3491
+    ],
+    [
+     0.1772,
+     0.3212
+    ],
+    [
+     0.1971,
+     0.2991
+    ],
+    [
+     0.2222,
+     0.2849
+    ],
+    [
+     0.25,
+     0.28
+    ],
+    [
+     0.2778,
+     0.2849
+    ],
+    [
+     0.3029,
+     0.2991
+    ],
+    [
+     0.3228,
+     0.3212
+    ],
+    [
+     0.3356,
+     0.3491
+    ]
+   ],
+   "color": "azul",
+   "alfa": 0.18,
+   "en": 172.92,
+   "sale": 177.54
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.25,
+   "v": 0.38,
+   "alto": 0,
+   "texto": "LIQUID: HACER EL DRAGÓN",
+   "sub": "JOSEDEODO, YEON Y COREJJ",
+   "color": "azul",
+   "dx": 60,
+   "dy": 190,
+   "de": 173.12,
+   "a": 177.54
+  },
+  {
+   "u": 0.76,
+   "v": 0.52,
+   "alto": 0,
+   "texto": "BILIBILI: VIENE A DISPUTARLO",
+   "sub": "ON LLEGA · XUN DETRÁS",
+   "color": "rojo",
+   "dx": -470,
+   "dy": 150,
+   "de": 174.52,
+   "a": 177.54
+  }
+ ]
+}

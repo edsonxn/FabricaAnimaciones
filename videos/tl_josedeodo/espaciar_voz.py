@@ -71,12 +71,14 @@ def pausa(env, hop, umbral, e_ant, s_sig):
 def espaciar(key, spec, pal):
     ruta, copia = os.path.join(D, "voz", "final", key + ".wav"), os.path.join(ORIG, key + ".wav")
     p = pal[key]
+    src = copia
     if p.get("espaciado"):                        # ya espaciada: se rehace desde el original y sus tiempos
         p.update(p.pop("espaciado"))
     else:
-        shutil.copy2(ruta, copia)
-    x, sr = sf.read(copia, always_2d=True)
-    sub = sf.info(copia).subtype
+        src = ruta                                # el original se guarda AL FINAL (si algo aborta, no se toca nada: 25-nov)
+        PEND.append(("copia", ruta, copia))
+    x, sr = sf.read(src, always_2d=True)
+    sub = sf.info(src).subtype
     words = p["words"]
     env, hop, umbral = envolvente(x, sr)
     pos = []                                      # (índice de palabra, muestra, segundos)
@@ -87,8 +89,15 @@ def espaciar(key, spec, pal):
             pos.append((len(words), len(x), seg, None))
         else:
             i = indice(words, palabra, n)
-            c, ancho = pausa(env, hop, umbral, *(t * 2 or (words[i - 1]["e"], words[i]["s"])))
-            if ancho < ANCHO_MIN:                 # nunca dentro de una palabra: mover el corte a una pausa natural de la frase
+            c, ancho = pausa(env, hop, umbral, *((t[0] - .08, t[0] + .08) if t else (words[i - 1]["e"], words[i]["s"])))
+            j = i
+            while ancho < .03 and not t and j > 1:       # sin micro-pausa: el silencio va a la frontera anterior que sí la tenga
+                j -= 1
+                c, ancho = pausa(env, hop, umbral, words[j - 1]["e"], words[j]["s"])
+            if j != i:
+                print(f"  {key}: «{palabra}» sin pausa; el silencio va antes de «{words[j]['w']}»")
+                i = j
+            if ancho < .03:                               # (con punto a mano o sin él) basta una micro-pausa de 30 ms; nunca dentro de una palabra
                 raise SystemExit(f"{key}: sin pausa real antes de «{palabra}» ({ancho * 1000:.0f} ms); elige otro punto en ESPACIOS_VOZ")
             pos.append((i, int(c * sr), seg, (c - ancho / 2, c + ancho / 2)))
     pos.sort(key=lambda q: q[:2])
@@ -104,7 +113,7 @@ def espaciar(key, spec, pal):
     if len(tr) > f:
         tr[:f] *= np.linspace(0, 1, f)[:, None]
     trozos.append(tr)
-    sf.write(ruta, np.concatenate(trozos), sr, subtype=sub)
+    PEND.append(("wav", ruta, np.concatenate(trozos), sr, sub))
     guarda = dict(dur=p["dur"], words=[dict(w) for w in words])
     extra = [0.0] * (len(words) + 1)
     for i, _, seg, pz in pos:
@@ -122,6 +131,9 @@ def espaciar(key, spec, pal):
     print(f"{key}: +{sum(q[2] for q in pos):.2f} s")
 
 
+PEND = []
+
+
 def main():
     pal = json.load(open(PAL, encoding="utf-8"))
     for key, p in pal.items():                    # frase que ya no lleva espacios: vuelve a su original
@@ -130,6 +142,12 @@ def main():
             shutil.copy2(os.path.join(ORIG, key + ".wav"), os.path.join(D, "voz", "final", key + ".wav"))
     for key, spec in ESPACIOS_VOZ.items():
         espaciar(key, spec, pal)
+    for op in PEND:                               # todo o nada
+        if op[0] == "copia":
+            shutil.copy2(op[1], op[2])
+    for op in PEND:
+        if op[0] == "wav":
+            sf.write(op[1], op[2], op[3], subtype=op[4])
     json.dump(pal, open(PAL, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print("total", round(sum(q[2] for spec in ESPACIOS_VOZ.values() for q in spec), 1), "s de silencios")
 

@@ -1,0 +1,288 @@
+{
+ "modo": "mesa",
+ "de": 348.35,
+ "a": 353.25,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_cfo_orb_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "LeeSin",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/LeeSin.png",
+   "puntos": [
+    [
+     0,
+     0.341,
+     0.515
+    ]
+   ],
+   "de": 348.75,
+   "sale": 352.25
+  },
+  "Yeon": {
+   "jugador": "Yeon",
+   "campeon": "Jhin",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Jhin.png",
+   "puntos": [
+    [
+     0,
+     0.339,
+     0.37
+    ]
+   ],
+   "de": 348.83,
+   "sale": 352.25
+  },
+  "Rest": {
+   "jugador": "Rest",
+   "campeon": "Rumble",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Rumble.png",
+   "puntos": [
+    [
+     0,
+     0.394,
+     0.522
+    ]
+   ],
+   "de": 348.91,
+   "sale": 352.25
+  },
+  "Kino": {
+   "jugador": "Kino",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.529,
+     0.437
+    ]
+   ],
+   "de": 348.99,
+   "sale": 352.25
+  },
+  "Doggo": {
+   "jugador": "Doggo",
+   "campeon": "Aphelios",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Aphelios.png",
+   "puntos": [
+    [
+     0,
+     0.458,
+     0.474
+    ]
+   ],
+   "de": 349.07,
+   "sale": 352.25
+  },
+  "POUT": {
+   "jugador": "POUT",
+   "campeon": "Viktor",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Viktor.png",
+   "puntos": [
+    [
+     0,
+     0.524,
+     0.31
+    ]
+   ],
+   "de": 349.15,
+   "sale": 352.25
+  },
+  "Shadow": {
+   "jugador": "Shadow",
+   "campeon": "Qiyana",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Qiyana.png",
+   "puntos": [
+    [
+     0,
+     0.568,
+     0.757
+    ]
+   ],
+   "de": 349.23,
+   "sale": 352.25
+  }
+ },
+ "camara": [
+  [
+   348.35,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   348.65000000000003,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   349.428,
+   90,
+   34,
+   46,
+   0.45,
+   0.5
+  ],
+  [
+   350.50600000000003,
+   180,
+   26,
+   40,
+   0.45,
+   0.5
+  ],
+  [
+   351.584,
+   270,
+   34,
+   46,
+   0.45,
+   0.5
+  ],
+  [
+   352.35,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   353.25,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "kino",
+   "pts": [
+    [
+     0.612,
+     0.577
+    ],
+    [
+     0.5,
+     0.52
+    ],
+    [
+     0.382,
+     0.467
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 3.0,
+   "grosor": 1.1,
+   "en": 349.25,
+   "sale": 352.25
+  },
+  {
+   "id": "lanzado",
+   "pts": [
+    [
+     0.437,
+     0.519
+    ],
+    [
+     0.39,
+     0.52
+    ],
+    [
+     0.341,
+     0.515
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.6,
+   "alto": 2.2,
+   "grosor": 0.9,
+   "en": 350.05,
+   "sale": 352.25
+  },
+  {
+   "id": "rest",
+   "pts": [
+    [
+     0.5954,
+     0.7216
+    ],
+    [
+     0.4434,
+     0.5947
+    ],
+    [
+     0.394,
+     0.522
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 1.6,
+   "grosor": 1.0,
+   "en": 350.65,
+   "sale": 352.25
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.625,
+   "v": 0.73,
+   "r": 0.055,
+   "color": "amarillo",
+   "en": 348.85,
+   "sale": 352.25
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.382,
+   "v": 0.467,
+   "alto": 0,
+   "texto": "KINO LO LEVANTA",
+   "sub": "ALISTAR · LO SACA DEL FOSO",
+   "color": "rojo",
+   "dx": 110,
+   "dy": -120,
+   "de": 349.35,
+   "a": 352.25
+  },
+  {
+   "u": 0.341,
+   "v": 0.515,
+   "alto": 0,
+   "texto": "JOSEDEODO CAE · 34:24",
+   "sub": "REST LO REMATA",
+   "color": "azul",
+   "dx": -470,
+   "dy": 60,
+   "de": 350.35,
+   "a": 352.25
+  }
+ ]
+}

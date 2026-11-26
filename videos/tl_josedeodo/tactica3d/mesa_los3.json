@@ -1,0 +1,380 @@
+{
+ "modo": "mesa",
+ "de": 645.75,
+ "a": 650.74,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_los3_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "Sejuani",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Sejuani.png",
+   "puntos": [
+    [
+     0,
+     0.43,
+     0.66
+    ]
+   ],
+   "de": 646.15,
+   "sale": 649.74
+  },
+  "Yeon": {
+   "jugador": "Yeon",
+   "campeon": "Yunara",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Yunara.png",
+   "puntos": [
+    [
+     0,
+     0.34,
+     0.58
+    ]
+   ],
+   "de": 646.23,
+   "sale": 649.74
+  },
+  "CoreJJ": {
+   "jugador": "CoreJJ",
+   "campeon": "Lulu",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Lulu.png",
+   "puntos": [
+    [
+     0,
+     0.38,
+     0.23
+    ]
+   ],
+   "de": 646.31,
+   "sale": 649.74
+  },
+  "Quid": {
+   "jugador": "Quid",
+   "campeon": "Viktor",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Viktor.png",
+   "puntos": [
+    [
+     0,
+     0.55,
+     0.26
+    ]
+   ],
+   "de": 646.39,
+   "sale": 649.74
+  },
+  "Ackerman": {
+   "jugador": "Ackerman",
+   "campeon": "RenataGlasc",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/RenataGlasc.png",
+   "puntos": [
+    [
+     0,
+     0.44,
+     0.49
+    ]
+   ],
+   "de": 646.47,
+   "sale": 649.74
+  },
+  "Feisty": {
+   "jugador": "Feisty",
+   "campeon": "Taliyah",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Taliyah.png",
+   "puntos": [
+    [
+     0,
+     0.59,
+     0.43
+    ]
+   ],
+   "de": 646.55,
+   "sale": 649.74
+  },
+  "Zest": {
+   "jugador": "Zest",
+   "campeon": "Tristana",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Tristana.png",
+   "puntos": [
+    [
+     0,
+     0.62,
+     0.52
+    ]
+   ],
+   "de": 646.63,
+   "sale": 649.74
+  },
+  "Duduhh": {
+   "jugador": "Duduhh",
+   "campeon": "Kalista",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Kalista.png",
+   "puntos": [
+    [
+     0,
+     0.62,
+     0.58
+    ]
+   ],
+   "de": 646.71,
+   "sale": 649.74
+  }
+ },
+ "camara": [
+  [
+   645.75,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   646.05,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   646.748,
+   -95,
+   30,
+   44,
+   0.47,
+   0.48
+  ],
+  [
+   647.9955,
+   0,
+   22,
+   38,
+   0.47,
+   0.48
+  ],
+  [
+   649.243,
+   95,
+   30,
+   44,
+   0.47,
+   0.48
+  ],
+  [
+   649.84,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   650.74,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.06,
+     0.253
+    ],
+    [
+     0.2,
+     0.243
+    ],
+    [
+     0.32,
+     0.243
+    ],
+    [
+     0.44,
+     0.238
+    ],
+    [
+     0.56,
+     0.22299999999999998
+    ],
+    [
+     0.66,
+     0.208
+    ],
+    [
+     0.66,
+     0.232
+    ],
+    [
+     0.56,
+     0.247
+    ],
+    [
+     0.44,
+     0.262
+    ],
+    [
+     0.32,
+     0.267
+    ],
+    [
+     0.2,
+     0.267
+    ],
+    [
+     0.06,
+     0.277
+    ]
+   ],
+   "color": "rojo",
+   "alfa": 0.5,
+   "en": 646.35,
+   "sale": 649.74
+  },
+  {
+   "pts": [
+    [
+     0.49,
+     0.62
+    ],
+    [
+     0.4856,
+     0.6416
+    ],
+    [
+     0.4728,
+     0.6611
+    ],
+    [
+     0.4529,
+     0.6766
+    ],
+    [
+     0.4278,
+     0.6866
+    ],
+    [
+     0.4,
+     0.69
+    ],
+    [
+     0.3722,
+     0.6866
+    ],
+    [
+     0.3471,
+     0.6766
+    ],
+    [
+     0.3272,
+     0.6611
+    ],
+    [
+     0.3144,
+     0.6416
+    ],
+    [
+     0.31,
+     0.62
+    ],
+    [
+     0.3144,
+     0.5984
+    ],
+    [
+     0.3272,
+     0.5789
+    ],
+    [
+     0.3471,
+     0.5634
+    ],
+    [
+     0.3722,
+     0.5534
+    ],
+    [
+     0.4,
+     0.55
+    ],
+    [
+     0.4278,
+     0.5534
+    ],
+    [
+     0.4529,
+     0.5634
+    ],
+    [
+     0.4728,
+     0.5789
+    ],
+    [
+     0.4856,
+     0.5984
+    ]
+   ],
+   "color": "azul",
+   "alfa": 0.14,
+   "en": 646.95,
+   "sale": 649.74
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.47,
+   "v": 0.24,
+   "alto": 0,
+   "texto": "EL MURO DE FEISTY",
+   "sub": "TALIYAH · CRUZA EL RÍO",
+   "color": "rojo",
+   "dx": 60,
+   "dy": -90,
+   "de": 646.75,
+   "a": 649.74
+  },
+  {
+   "u": 0.46,
+   "v": 0.25,
+   "alto": 0,
+   "texto": "COREJJ Y QUID",
+   "sub": "DEL OTRO LADO",
+   "color": "azul",
+   "dx": -260,
+   "dy": -40,
+   "de": 647.35,
+   "a": 649.74
+  },
+  {
+   "u": 0.4,
+   "v": 0.63,
+   "alto": 0,
+   "texto": "JOSEDEODO Y YEON",
+   "sub": "DENTRO DEL FOSO, CON 4 ENCIMA",
+   "color": "azul",
+   "dx": -260,
+   "dy": 90,
+   "de": 647.95,
+   "a": 649.74
+  }
+ ]
+}

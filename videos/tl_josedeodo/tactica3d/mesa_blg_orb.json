@@ -1,0 +1,190 @@
+{
+ "modo": "mesa",
+ "de": 186.9,
+ "a": 192.4,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_blg_orb_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "JarvanIV",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/JarvanIV.png",
+   "puntos": [
+    [
+     0,
+     0.239,
+     0.389
+    ]
+   ],
+   "de": 187.3,
+   "sale": 191.4
+  },
+  "Xun": {
+   "jugador": "Xun",
+   "campeon": "LeeSin",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/LeeSin.png",
+   "puntos": [
+    [
+     0,
+     0.406,
+     0.389
+    ]
+   ],
+   "de": 187.38,
+   "sale": 191.4
+  },
+  "ON": {
+   "jugador": "ON",
+   "campeon": "Nautilus",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Nautilus.png",
+   "puntos": [
+    [
+     0,
+     0.548,
+     0.497
+    ]
+   ],
+   "de": 187.46,
+   "sale": 191.4
+  }
+ },
+ "camara": [
+  [
+   186.9,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   187.20000000000002,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   188.11,
+   90,
+   34,
+   46,
+   0.36,
+   0.42
+  ],
+  [
+   189.32,
+   180,
+   26,
+   40,
+   0.36,
+   0.42
+  ],
+  [
+   190.53,
+   270,
+   34,
+   46,
+   0.36,
+   0.42
+  ],
+  [
+   191.5,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   192.4,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "xun",
+   "pts": [
+    [
+     0.6538,
+     0.3253
+    ],
+    [
+     0.583,
+     0.3822
+    ],
+    [
+     0.5491,
+     0.4099
+    ],
+    [
+     0.4181,
+     0.4059
+    ],
+    [
+     0.406,
+     0.389
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 2.8,
+   "grosor": 1.2,
+   "en": 187.8,
+   "sale": 191.4
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.29,
+   "v": 0.35,
+   "r": 0.05,
+   "color": "amarillo",
+   "en": 187.4,
+   "sale": 191.4
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.406,
+   "v": 0.389,
+   "alto": 0,
+   "texto": "XUN · LEE SIN",
+   "sub": "ENTRA Y LO ROBA CON EL CASTIGO",
+   "color": "rojo",
+   "dx": 120,
+   "dy": -90,
+   "de": 188.1,
+   "a": 191.4
+  },
+  {
+   "u": 0.239,
+   "v": 0.389,
+   "alto": 0,
+   "texto": "JOSEDEODO · JARVAN IV",
+   "sub": "SE QUEDA SIN EL DRAGÓN",
+   "color": "azul",
+   "dx": -40,
+   "dy": 150,
+   "de": 188.9,
+   "a": 191.4
+  }
+ ]
+}

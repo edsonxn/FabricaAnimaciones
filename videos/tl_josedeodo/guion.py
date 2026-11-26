@@ -59,13 +59,27 @@ LYRIA = dict(
             (["rival", "mejor", "los2", "criticas"], "Su mejor partida: sube, luminoso."),
             (["dragones", "duelo", "los3"], "El río decide: tensión, golpe final."),
             (["numeros", "veredicto", "futuro", "cierre"], "Veredicto: reflexivo y luego firme.")])
-ESPACIOS_VOZ = {}
+# 25-nov (2.ª versión): silencios de las ÓRBITAS a mano (al1_2 $ini 2,5 · cfo_2 «El» 18,9 · los2_1 «Y»(1) 3,5) + investigacion/huecos.py
+ESPACIOS_VOZ = {
+    "gancho_0": [('y', 0, 2.64, 8.96)],
+    "blg_0": [('y', 2, 4.66)],
+    "blg_1": [('Y', 0, 2.0), ('el', 3, 5.82, 8.445)],
+    "al1_2": [('$ini', 0, 10.2), ('Anyone', 0, 1.46), ('pero', 0, 5.12)],
+    "al1_1": [('Morgan', 0, 7.79), ('Josedeodo', 1, 0.82)],
+    "al1_3": [('alma', 0, 0.96)],
+    "cfo_2": [('El', 0, 18.9), ('Pero', 0, 2.42), ('Rest', 0, 0.84), ('Liquid', 0, 1.38)],
+    "los2_1": [('Y', 1, 3.5), ('$ini', 0, 7.92), ('persigue', 0, 6.34), ('y', 2, 3.84)],
+    "los2_3": [('Liquid', 0, 0.9), ('cae', 0, 0.52), ('Josedeodo', 0, 5.84), ('y', 2, 18.72)],
+    "los3_1": [('Y', 0, 2.9, 2.19)],
+    "los3_3": [('Ackerman', 0, 0.84), ('Zest', 0, 0.32), ('doble', 0, 1.2), ('triple', 0, 0.84)],
+    "los3_4": [("$ini", 0, 0.56)],
+}
 
 ESCENAS = [
     # ── GANCHO: LOS G1 (datos_los2.md § B, los1_curse: HUD = t + 690,5): 11:59 definitiva de Nocturne sobre Zest · 12:03 Josedeodo mata a
     #   Zest · 12:06 Curse mata a Morgan · 12:11 Curse (nivel 9 vs 8) gana el 1 contra 1: DOUBLE KILL · narración «José no tiene destello y
     #   ñam ñam ñam» (post de 5,5 s: se oye la narración original). NO decir «Curse lo invadió».
-    {"id": "gancho", "pre": 3.0, "post": 5.5, "frases": [
+    {"id": "gancho", "pre": 3.0, "post": 9.5, "frases": [
         "Viernes treinta de octubre. Team Liquid juega su vida en el Mundial. Minuto doce: su jungla argentino, Josedeodo, mata a Zest… y se queda solo frente a Curse.",
     ]},
     {"id": "gancho2", "pre": 0.3, "frases": [
@@ -98,7 +112,7 @@ ESCENAS = [
     # ── BLG (datos_blg.md, blg_j1: HUD = t + 643,7): 10:52 TL empieza el 1.er dragón (Josedeodo, Yeon, CoreJJ) · Xun y ON por el este ·
     #   11:06 «Red team has stolen the Mountain Drake!» (retrato Lee Sin) · narración «era 50-50» · larvas, Heraldo: de Xun ·
     #   blg_j2 (HUD = t + 1038,6): 17:54 «BLG Xun has slain TLAW Josedeodo!» (ON lo enraíza) · final 2-17, Josedeodo 0/4/2
-    {"id": "blg", "pre": 4.0, "post": 2.0, "frases": [
+    {"id": "blg", "pre": 6.2, "post": 2.0, "frases": [
         "Josedeodo juega Jarvan. Minuto once: con Yeon y CoreJJ empieza el primer dragón. Xun entra por el otro lado… y con el castigo, se lo roba.",
         "Con el Lee Sin que Liquid le dejó. Y no fue lo único: las larvas y el Heraldo también fueron de Xun. En el minuto diecisiete, el que mata a Josedeodo es él.",
         "Liquid hace dos asesinatos en toda la partida. Bilibili, diecisiete. Josedeodo termina sin un solo asesinato y con cuatro muertes.",

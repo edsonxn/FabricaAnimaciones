@@ -1,0 +1,153 @@
+{
+ "modo": "mesa",
+ "de": 16.73,
+ "a": 20.73,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_gancho_orb_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "Nocturne",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Nocturne.png",
+   "puntos": [
+    [
+     0,
+     0.444,
+     0.398
+    ]
+   ],
+   "de": 17.13,
+   "sale": 19.73
+  },
+  "Curse": {
+   "jugador": "Curse",
+   "campeon": "Trundle",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Trundle.png",
+   "puntos": [
+    [
+     0,
+     0.447,
+     0.342
+    ]
+   ],
+   "de": 17.21,
+   "sale": 19.73
+  }
+ },
+ "camara": [
+  [
+   16.73,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   17.03,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   17.61,
+   90,
+   34,
+   46,
+   0.45,
+   0.38
+  ],
+  [
+   18.490000000000002,
+   180,
+   26,
+   40,
+   0.45,
+   0.38
+  ],
+  [
+   19.37,
+   270,
+   34,
+   46,
+   0.45,
+   0.38
+  ],
+  [
+   19.830000000000002,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   20.73,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "jose",
+   "pts": [
+    [
+     0.4386,
+     0.459
+    ],
+    [
+     0.444,
+     0.398
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 2.8,
+   "grosor": 1.2,
+   "en": 17.73,
+   "sale": 19.73
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.447,
+   "v": 0.342,
+   "alto": 0,
+   "texto": "CURSE · NIVEL 9",
+   "sub": "TRUNDLE",
+   "color": "azul",
+   "dx": 110,
+   "dy": -100,
+   "de": 17.73,
+   "a": 19.73
+  },
+  {
+   "u": 0.444,
+   "v": 0.398,
+   "alto": 0,
+   "texto": "JOSEDEODO · NIVEL 8",
+   "sub": "NOCTURNE · SIN DESTELLO",
+   "color": "rojo",
+   "dx": -460,
+   "dy": 60,
+   "de": 18.33,
+   "a": 19.73
+  }
+ ]
+}

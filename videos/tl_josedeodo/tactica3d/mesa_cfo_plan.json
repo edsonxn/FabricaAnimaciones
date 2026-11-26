@@ -1,0 +1,280 @@
+{
+ "modo": "mesa",
+ "de": 330.07,
+ "a": 339.87,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_cfo_plan_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "LeeSin",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/LeeSin.png",
+   "puntos": [
+    [
+     0,
+     0.294,
+     0.433
+    ]
+   ],
+   "de": 330.47,
+   "sale": 338.87
+  },
+  "Yeon": {
+   "jugador": "Yeon",
+   "campeon": "Jhin",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Jhin.png",
+   "puntos": [
+    [
+     0,
+     0.265,
+     0.53
+    ]
+   ],
+   "de": 330.55,
+   "sale": 338.87
+  },
+  "Morgan": {
+   "jugador": "Morgan",
+   "campeon": "Galio",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Galio.png",
+   "puntos": [
+    [
+     0,
+     0.392,
+     0.21
+    ]
+   ],
+   "de": 330.63,
+   "sale": 338.87
+  },
+  "Kino": {
+   "jugador": "Kino",
+   "campeon": "Alistar",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Alistar.png",
+   "puntos": [
+    [
+     0,
+     0.462,
+     0.513
+    ]
+   ],
+   "de": 330.71,
+   "sale": 338.87
+  },
+  "Rest": {
+   "jugador": "Rest",
+   "campeon": "Rumble",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Rumble.png",
+   "puntos": [
+    [
+     0,
+     0.445,
+     0.657
+    ]
+   ],
+   "de": 330.79,
+   "sale": 338.87
+  },
+  "Doggo": {
+   "jugador": "Doggo",
+   "campeon": "Aphelios",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Aphelios.png",
+   "puntos": [
+    [
+     0,
+     0.543,
+     0.606
+    ]
+   ],
+   "de": 330.87,
+   "sale": 338.87
+  },
+  "Shadow": {
+   "jugador": "Shadow",
+   "campeon": "Qiyana",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Qiyana.png",
+   "puntos": [
+    [
+     0,
+     0.452,
+     0.746
+    ]
+   ],
+   "de": 330.95,
+   "sale": 338.87
+  },
+  "POUT": {
+   "jugador": "POUT",
+   "campeon": "Viktor",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Viktor.png",
+   "puntos": [
+    [
+     0,
+     0.626,
+     0.324
+    ]
+   ],
+   "de": 331.03,
+   "sale": 338.87
+  }
+ },
+ "camara": [
+  [
+   330.07,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   330.42,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   333.206,
+   -18,
+   36,
+   50,
+   0.42,
+   0.5
+  ],
+  [
+   336.146,
+   14,
+   40,
+   47.5,
+   0.42,
+   0.5
+  ],
+  [
+   338.97,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   339.87,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "robo",
+   "pts": [
+    [
+     0.294,
+     0.433
+    ],
+    [
+     0.35,
+     0.55
+    ],
+    [
+     0.39,
+     0.64
+    ]
+   ],
+   "color": "azul",
+   "dur": 0.8,
+   "alto": 2.5,
+   "grosor": 0.9,
+   "en": 331.67,
+   "sale": 338.87
+  },
+  {
+   "id": "kino",
+   "pts": [
+    [
+     0.462,
+     0.513
+    ],
+    [
+     0.2321,
+     0.4029
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 2.8,
+   "grosor": 1.2,
+   "en": 332.67,
+   "sale": 338.87
+  }
+ ],
+ "anillos": [
+  {
+   "u": 0.395,
+   "v": 0.66,
+   "r": 0.055,
+   "color": "amarillo",
+   "en": 330.57,
+   "sale": 338.87
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.395,
+   "v": 0.66,
+   "alto": 0,
+   "texto": "DRAGÓN ANCESTRAL",
+   "sub": "CTBC LO EMPIEZA · 5 CONTRA 4",
+   "color": "amarillo",
+   "dx": 120,
+   "dy": 60,
+   "de": 330.97,
+   "a": 338.87
+  },
+  {
+   "u": 0.294,
+   "v": 0.433,
+   "alto": 0,
+   "texto": "JOSEDEODO ESPERA AL LADO",
+   "sub": "PARA ROBARLO CON EL CASTIGO",
+   "color": "azul",
+   "dx": 40,
+   "dy": -150,
+   "de": 331.67,
+   "a": 338.87
+  },
+  {
+   "u": 0.462,
+   "v": 0.513,
+   "alto": 0,
+   "texto": "KINO · ALISTAR",
+   "sub": "SU TRABAJO: SACARLO DEL FOSO",
+   "color": "rojo",
+   "dx": 110,
+   "dy": -60,
+   "de": 332.87,
+   "a": 338.87
+  }
+ ]
+}

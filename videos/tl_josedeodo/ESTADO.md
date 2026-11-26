@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: Crónicas de ligoleyen (UCXU8DV4QJ24yhwXmrR_eLhw; subida por Studio en el navegador, NO está en la API) · publicar ≥ jue 26-nov (el 25-nov ya salió New Dawn)
 - estilo: análisis táctico (secuencia_yt + VOD + mg_tactica + mg_lol + 3D) → docs/estilo_analisis_tactico.md § GUÍA RÁPIDA · copiar de `videos/t1_blg_caida/` (tesis con datos, 11:31, 10 mil vistas)
-- etapa: ✅ SUBIDO por Studio y PROGRAMADO jue 26-nov-2026 10:00 CDMX · https://youtu.be/rbKmPGQ9x4M (MASTER 10:38, 452 MB, desfase 0, −14,05 LUFS) · miniatura Flow, .srt es-419, anuncios + mid-roll («Nada de lo anterior»), 20 etiquetas, IA «No», pantalla final 1 video + suscribirse
-- siguiente: nada de producción. Medir a 48 h (vistas vs Eco Nooni y vs el de T1). MASTER NO mandado a la tele (regla 17-nov).
+- etapa: ✅ RESUBIDO v2 por Studio y PROGRAMADO jue 26-nov 18:00 CDMX: https://youtu.be/OAqFkuVfQx8 (12:42; monetización + mid-roll, .srt, pantalla final). El 1.º (rbKmPGQ9x4M) lo borró el usuario el 25-nov por los cortes
+- siguiente: a 7 días (3-dic) medir vistas, % visto y retención en las jugadas contra t1_blg_caida → registro en canales/formula/cronicas_lol.md. Fórmula de jugadas aprobada: plan 3D + VOD x1 con pausas + órbita + flechas parabólicas + rutas
 
 ## Sesiones
 - alias: «Josedeodo», «el de Liquid», «tl josedeodo»
@@ -52,6 +52,15 @@
 - medios_locales.py copiado pedía r_escenario.mp4 (de otro video): cambiar el relleno a una fuente local.
 
 ## En curso
+- ✅ (26-nov) MASTER v2 = **12:42** (762,5 s), 8 mesas 3D visibles, CFO muere a las 34:24 en vivo + órbita. Arreglos: 7 silencios movidos a pausas
+  reales ≥ 120 ms (cortes_voz 0 MAL; Whisper oye los 25 cortes entre palabras); medios_locales para scene-075…089; efectos.py sube cada
+  MESA encima del último video que se le cruza (SYNC2/CADENA posteriores tapaban al1_orb, cfo_plan y los2_orb). ▶ Visto bueno del usuario
+  → Studio (capítulos NUEVOS por los tiempos de 12:42) → BITACORA + formula/cronicas_lol.md + commit.
+- ◐ (25-nov noche) 2.ª VERSIÓN DE LAS JUGADAS (combinar tanda 1 de tl_pres): voz espaciada (ESPACIOS_VOZ + huecos.py, 0 saltos dentro de
+  peleas; velocidades --cortes OK), 7 mesas nuevas en mesas_3d.py (blg_plan, blg_orb, al1_orb, cfo_plan, cfo_orb, los2_orb, gancho_orb;
+  cam="orbita" = vuelta de 360°; posiciones = barras nombradas a mano; rutas con cam_<n>.json; cam_cfo_j1.json sale de investigacion/rastros/cfo.json).
+  fx_jugadas.py reescrito (copia vieja en el scratchpad). espaciar_voz.py ahora es todo-o-nada (antes un aborto dañaba final_orig).
+  Video = 12:40. ▶ mesas render → música → fx → vivos → mezcla → revisar mesas → render_par → final → verificar → Studio.
 - (25-nov tarde) ✅ investigación completa (agentes): datos_blg.md (Xun roba el dragón 11:06; K blg_j1 643,7 / blg_j2 1038,6), datos_al.md (ACE 29:02;
   K al_j1 1696), datos_los2.md (G2 Heraldo + Duduhh + Feisty 16:23-16:45, Anciano 36:09; K los2_j1 955,8 / los2_j2 2105,8; G1 12:11 Curse
   1 contra 1, K los1_curse 690,5). CFO = cfo_kc_worlds/j1 (K 2000). LOS G3 = lotl_j1 (copiado; REPETICIÓN t 96 para pausa y mesa «los3»).

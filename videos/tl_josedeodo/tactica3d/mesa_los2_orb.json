@@ -1,0 +1,318 @@
+{
+ "modo": "mesa",
+ "de": 439.66,
+ "a": 444.08,
+ "fondo": "/videos/tl_josedeodo/tactica3d/mesa_los2_orb_fondo.png",
+ "equipos": [
+  {
+   "id": "A",
+   "color": "azul"
+  },
+  {
+   "id": "R",
+   "color": "rojo"
+  }
+ ],
+ "fichas": {
+  "Josedeodo": {
+   "jugador": "Josedeodo",
+   "campeon": "XinZhao",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/XinZhao.png",
+   "puntos": [
+    [
+     0,
+     0.457,
+     0.644
+    ]
+   ],
+   "de": 440.06,
+   "sale": 443.08
+  },
+  "Morgan": {
+   "jugador": "Morgan",
+   "campeon": "Ornn",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Ornn.png",
+   "puntos": [
+    [
+     0,
+     0.519,
+     0.582
+    ]
+   ],
+   "de": 440.14,
+   "sale": 443.08
+  },
+  "CoreJJ": {
+   "jugador": "CoreJJ",
+   "campeon": "Nami",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Nami.png",
+   "puntos": [
+    [
+     0,
+     0.631,
+     0.53
+    ]
+   ],
+   "de": 440.22,
+   "sale": 443.08
+  },
+  "Quid": {
+   "jugador": "Quid",
+   "campeon": "Orianna",
+   "equipo": "R",
+   "icono": "/videos/tl_josedeodo/iconos/Orianna.png",
+   "puntos": [
+    [
+     0,
+     0.391,
+     0.306
+    ]
+   ],
+   "de": 440.3,
+   "sale": 443.08
+  },
+  "Feisty": {
+   "jugador": "Feisty",
+   "campeon": "Galio",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Galio.png",
+   "puntos": [
+    [
+     0,
+     0.295,
+     0.457
+    ]
+   ],
+   "de": 440.38,
+   "sale": 443.08
+  },
+  "Ackerman": {
+   "jugador": "Ackerman",
+   "campeon": "Karma",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Karma.png",
+   "puntos": [
+    [
+     0,
+     0.25,
+     0.728
+    ]
+   ],
+   "de": 440.46,
+   "sale": 443.08
+  },
+  "Zest": {
+   "jugador": "Zest",
+   "campeon": "Rumble",
+   "equipo": "A",
+   "icono": "/videos/tl_josedeodo/iconos/Rumble.png",
+   "puntos": [
+    [
+     0,
+     0.492,
+     0.784
+    ]
+   ],
+   "de": 440.54,
+   "sale": 443.08
+  }
+ },
+ "camara": [
+  [
+   439.66,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   439.96000000000004,
+   0,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   440.6324,
+   90,
+   34,
+   46,
+   0.45,
+   0.55
+  ],
+  [
+   441.6048,
+   180,
+   26,
+   40,
+   0.45,
+   0.55
+  ],
+  [
+   442.5772,
+   270,
+   34,
+   46,
+   0.45,
+   0.55
+  ],
+  [
+   443.18,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ],
+  [
+   444.08,
+   360,
+   56.07,
+   62.73,
+   0.5,
+   0.5
+  ]
+ ],
+ "flechas": [
+  {
+   "id": "caza",
+   "pts": [
+    [
+     0.457,
+     0.644
+    ],
+    [
+     0.5328,
+     0.7718
+    ]
+   ],
+   "color": "rojo",
+   "dur": 0.9,
+   "alto": 2.8,
+   "grosor": 1.2,
+   "en": 441.26,
+   "sale": 443.08
+  }
+ ],
+ "zonas": [
+  {
+   "pts": [
+    [
+     0.56,
+     0.62
+    ],
+    [
+     0.5551,
+     0.6447
+    ],
+    [
+     0.5409,
+     0.667
+    ],
+    [
+     0.5188,
+     0.6847
+    ],
+    [
+     0.4909,
+     0.6961
+    ],
+    [
+     0.46,
+     0.7
+    ],
+    [
+     0.4291,
+     0.6961
+    ],
+    [
+     0.4012,
+     0.6847
+    ],
+    [
+     0.3791,
+     0.667
+    ],
+    [
+     0.3649,
+     0.6447
+    ],
+    [
+     0.36,
+     0.62
+    ],
+    [
+     0.3649,
+     0.5953
+    ],
+    [
+     0.3791,
+     0.573
+    ],
+    [
+     0.4012,
+     0.5553
+    ],
+    [
+     0.4291,
+     0.5439
+    ],
+    [
+     0.46,
+     0.54
+    ],
+    [
+     0.4909,
+     0.5439
+    ],
+    [
+     0.5188,
+     0.5553
+    ],
+    [
+     0.5409,
+     0.573
+    ],
+    [
+     0.5551,
+     0.5953
+    ]
+   ],
+   "color": "rojo",
+   "alfa": 0.14,
+   "en": 440.26,
+   "sale": 443.08
+  }
+ ],
+ "etiquetas": [
+  {
+   "u": 0.457,
+   "v": 0.644,
+   "alto": 0,
+   "texto": "DUDUHH, FUERA · 16:32",
+   "sub": "LA DEFINITIVA DE XIN ZHAO",
+   "color": "rojo",
+   "dx": 110,
+   "dy": 60,
+   "de": 440.56,
+   "a": 443.08
+  },
+  {
+   "u": 0.295,
+   "v": 0.457,
+   "alto": 0,
+   "texto": "FEISTY · GALIO",
+   "sub": "EL SIGUIENTE: LO PERSIGUE",
+   "color": "azul",
+   "dx": -60,
+   "dy": -120,
+   "de": 441.66,
+   "a": 443.08
+  }
+ ]
+}

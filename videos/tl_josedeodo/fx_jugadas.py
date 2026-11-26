@@ -163,31 +163,67 @@ def tramos_de(lista):
 
 
 
+# ───────────────────────── 2.ª versión (25-nov-2026): jugadas SIN cortes (cadenas de investigacion/huecos.py; voz espaciada) + PLAN 3D +
+# ÓRBITAS 360° (mesas_3d.py, cam="orbita") con flechas en arco y rutas medidas. El usuario: «combinando todas, sobre todo cámara 3D rotando y
+# flechas parabólicas, rutas». Una pausa = dos anclas al mismo segundo de la fuente (SYNC2 congela y la mesa va encima).
+import sys as _sys
+
+_sys.path.insert(0, os.path.join(_D, "investigacion"))
+import huecos as _H  # noqa: E402
+
+CAD = _H.CADENAS
+
+
+def anc(a):
+    tipo, k, pal, i, _ = a
+    if tipo == "esc":
+        return ESC(k)[0]
+    if tipo == "ini":
+        return T0(k)
+    return W(k, pal, i)
+
+
+def CADENA(nom, fin=None, extra=()):
+    """los tramos del VOD de una cadena: x1; si la voz es más larga, PAUSA en el cuadro (chip); nunca salta (SYNC2)"""
+    pares = []
+    for a in CAD[nom]:
+        s = a[4]
+        if isinstance(s, tuple):
+            s = s[2] + anc(a) - ESC(s[1])[0]
+        pares.append((anc(a), s))
+    pares += list(extra)
+    if fin is not None:
+        pares.append((fin, None))
+    return SYNC2(n, pares)
+
+
+def pausa_de(t_a, s_a, t_b, s_b):
+    """lo que dura la pausa que SYNC2 pone al empezar el intervalo (si la voz es más larga que la fuente)"""
+    return max(0.0, (t_b - t_a) - (s_b - s_a))
+
+
 # ================================================================== BLG · TLAW azul (datos_blg.md; blg_j1 HUD = t + 643,7; blg_j2 HUD = t + 1038,6)
 AZUL = {"TLAW"}
 g = "blg_"
 e0, e1 = ESC("blg")
 k0, k1, k2 = (g + str(i) for i in range(3))
 n = "blg_j1"
-tv = max(0.0, 9.0 - (T0(k0) - e0))          # la voz arranca cuando TL empieza el dragón (t 9 = 10:52)
+tv = 15.0 - (T0(k0) - e0)                   # en vivo de 10:52 a 10:58 (Liquid empieza el dragón) y ahí el PLAN 3D
 FX += VIVO("blg", n, tv, "Partida 2 · Liquid vs Bilibili", "BLG", H(n, tv))
+xu = W(k0, "Xun")
+FX += [J(n, T0(k0), xu, 15.0, 0)] + MESA2("blg_plan", T0(k0), xu, H(n, 15.0))
+FX += CADENA("blg_a")                        # 10:58 → 11:06 seguido (la voz espera en «… y con el castigo»)
 rb = W(k0, "roba")
-FX += SYNC2(n, [(T0(k0), 9.0), (W(k0, "Xun"), 19.5), (rb, 23.0)])
+yy = W(k1, "Y")
+FX += [J(n, rb, yy, 23.0, 0)] + MESA2("blg_orb", rb, yy, H(n, 23.0))        # ÓRBITA en el robo
 FX += [tar(W(k0, "Jarvan"), W(k0, "Minuto"), "Josedeodo · Jarvan IV", "Contra Xun · Lee Sin", A, icono="JarvanIV", x=.27, y=.27, tam=40),
-       tar(W(k0, "Minuto"), W(k0, "Xun"), "Minuto 11 · el primer dragón", "Josedeodo, Yeon y CoreJJ", A, logo="TLAW", x=.27, y=.27, tam=40),
-       cam(W(k0, "Xun"), "Xun", "Xun · Lee Sin", dur=rb - W(k0, "Xun") + .2, x=.08, y=.3, tam=190),
+       cam(xu, "Xun", "Xun · Lee Sin", dur=rb - xu + .2, x=.08, y=.3, tam=190),
+       tar(rb, yy, "¡Dragón robado! · 11:06", "Xun · con el castigo", R, logo="BLG", x=.5, y=.12, tam=40),
        dict(tipo="destello", en=rb, fuerza=.45)]
-pz = T0(k1) + 1.0
-FX += PZ(n, rb, pz, 23.0, [
-    texto("¡DRAGÓN ROBADO!", "XUN · CON EL CASTIGO · 11:06", .52, .14, rb + .1, color=R, tam=34, icono="SummonerSmite"),
-    an(.39, .37, "Xun", "LEE SIN · LO ROBA", "BLG", rb + .2, "LeeSin", lado="der"),
-    an(.23, .40, "Josedeodo", "JARVAN IV · SE QUEDA SIN ÉL", "TLAW", rb + .5, "JarvanIV", lado="izq"),
-    an(.55, .48, "ON", "NAUTILUS", "BLG", rb + .8, "Nautilus", lado="der", r=38),
-])
-FX += [*LENTA(n, pz, W(k1, "minuto"), 54.0, vel=.6, sub="Repetición · «era 50-50», narradores"),
+FX += [*LENTA(n, yy, W(k1, "minuto"), 54.0, vel=.6, sub="Repetición · «era 50-50», narradores"),
        tar(W(k1, "larvas"), W(k1, "minuto"), "Larvas y Heraldo", "También de Xun", R, logo="BLG", x=.5, y=.84, tam=46)]
 n = "blg_j2"
-FX += SYNC2(n, [(W(k1, "minuto"), 30.0), (W(k1, "mata"), 36.0), (T0(k2), 38.0)])
+FX += CADENA("blg_b")
 FX += [tar(W(k1, "minuto"), W(k1, "mata"), "Minuto 17", "Josedeodo salta sobre Viper", A, icono="JarvanIV", x=.27, y=.27, tam=40),
        tar(W(k1, "mata"), T0(k2) + .2, "17:54 · Xun mata a Josedeodo", "ON lo inmoviliza · BLG +2,4K", R, logo="BLG", x=.27, y=.27, tam=40),
        dict(tipo="destello", en=W(k1, "mata"), fuerza=.35)]
@@ -208,27 +244,22 @@ FX += VIVO("al1", n, 0.0, "Partida 1 · Anyone's Legend vs Liquid", "TLAW", H(n,
 FX += [J(n, T0(k0), T0(k1), T0(k0) - e0, 1.0),
        peg(W(k0, "Lee"), CARGA("LeeSin"), "Lee Sin", R, "TLAW", "1.ª selección de Liquid · Josedeodo", dur=T0(k1) - W(k0, "Lee") + .1,
            x=.2, y=.5, tam=380)]
-cur = T0(k1) - e0
-FX += SYNC2(n, [(T0(k1), cur), (W(k1, "teleportacion"), 12.0), (W(k1, "flanco"), 23.5)])
+FX += CADENA("al1_a")
 fl = W(k1, "flanco")
-FX += PZ(n, fl, W(k1, "atrapa"), 23.5, [
+FX += PZ(n, fl, W(k1, "atrapa"), 23.5, [                                       # PASO A PASO: la pausa con telestrador
     an(.21, .24, "Morgan y Josedeodo", "POR EL FLANCO", "TLAW", fl + .1, "Camille", lado="der"),
     flecha([(.21, .24), (.30, .36), (.38, .47)], R, fl + .5, "ENTRAN POR DETRÁS", off=(120, -10), guion=True, dur=.7),
     texto("LOS 5 DE ANYONE'S LEGEND", "FRENTE A YEON, COREJJ Y QUID", .50, .88, fl + .3, color=A, tam=28),
 ])
-at = W(k1, "atrapa")
-FX += SYNC2(n, [(at, 25.0), (W(k1, "Josedeodo", 1), 26.4)])
+FX += CADENA("al1_b")
 jp = W(k1, "Josedeodo", 1)
-FX += PZ(n, jp, T0(k2), 26.4, [
-    zona(.44, .575, .12, .125, R, jp + .05, alfa=.12),
-    an(.46, .58, "Hope", "ATRAPADA · AIRBORNE", "AL", jp + .1, "Yunara", lado="der"),
-    an(.38, .47, "Josedeodo", "LEE SIN · LA PATADA", "TLAW", jp + .3, "LeeSin", lado="izq"),
-    texto("ULTIMÁTUM HEXTECH", "LA DEFINITIVA DE CAMILLE · 28:42", .5, .14, jp + .1, color=R, tam=30, icono="Camille"),
-])
+ye = W(k2, "Yeon")
+orb = pausa_de(jp, 26.4, ye, 34.4)
+FX += MESA2("al1_orb", jp, jp + orb, H(n, 26.4))                              # ÓRBITA: la patada sobre Hope
+FX += SYNC2(n, [(jp, 26.4)] + [(anc(a), a[4]) for a in CAD["al1_c"]])
 _ma = [W(k2, "Yeon"), W(k2, "triple") - .4, W(k2, "triple"), W(k2, "Yeon", 1), W(k2, "CoreJJ"), W(k2, "pero"), W(k2, "Breathe")]
-FX += SYNC2(n, [(T0(k2), 26.4), (W(k2, "triple"), 35.0), (W(k2, "Yeon", 1), 37.0), (W(k2, "CoreJJ"), 39.0), (W(k2, "Breathe"), 46.0),
-                (T0(k3), 47.0), (W(k3, "alma"), 72.0), (e1, None)])
-FX += [marcador(T0(k2) - .2, T0(k3) - .2, "TLAW", "AL", [("der", 3), ("der", 1), ("der", 4), ("izq", 3), ("izq", 4), ("der", 2), ("der", 0)],
+FX += CADENA("al1_d", fin=e1)
+FX += [marcador(jp + orb + .2, T0(k3) - .2, "TLAW", "AL", [("der", 3), ("der", 1), ("der", 4), ("izq", 3), ("izq", 4), ("der", 2), ("der", 0)],
                 _ma, titulo="28:44 · el ACE"),
        tar(W(k2, "triple"), W(k2, "Anyone"), "Triple de Yeon", "Hope, Tarzan y Kael", R, icono="Lucian", x=.27, y=.27, tam=40),
        tar(W(k2, "Breathe"), T0(k3) + .2, "¡ACE! · 29:02", "Josedeodo remata a Breathe", R, logo="TLAW", dato="5-2", x=.5, y=.17, tam=46),
@@ -240,39 +271,44 @@ FX += [marcador(T0(k2) - .2, T0(k3) - .2, "TLAW", "AL", [("der", 3), ("der", 1),
           W(k3, "Josedeodo"), e1 + .2, [W(k3, "tres"), W(k3, "dieciseis")], y=.5, nombre="premio al1")]
 
 # ================================================================== CFO · TLAW azul, Lee Sin con 1.ª selección (datos_cfo.md; cfo_j1 HUD = t + 2000)
+# Josedeodo muere a las 34:24 (t 64,3; «CFO Rest has slain TLAW Josedeodo»), no 34:29: se ve entera, a x1, y la órbita sale de ese cuadro
 AZUL = {"TLAW"}
 g = "cfo_"
 e0, e1 = ESC("cfo")
 k0, k1, k2 = (g + str(i) for i in range(3))
 n = "cfo_j1"
-FX += VIVO("cfo", n, 20.0, "Partida 1 · Liquid vs CTBC Flying Oyster", "CFO", H(n, 20.0))
-FX += [J(n, T0(k0), T0(k1), 20.0 + T0(k0) - e0, 1.0),
+tv = 56.0 - (T0(k1) - e0)                    # en vivo hasta 34:16 y ahí el PLAN 3D
+FX += VIVO("cfo", n, tv, "Partida 1 · Liquid vs CTBC Flying Oyster", "CFO", H(n, tv))
+FX += [J(n, T0(k0), T0(k1), tv + T0(k0) - e0, 1.0),
        peg(W(k0, "Lee"), CARGA("LeeSin"), "Lee Sin", A, "TLAW", "1.ª selección de Liquid · y perdió", dur=T0(k1) - W(k0, "Lee") + .1,
            x=.2, y=.5, tam=380)]
-FX += SYNC2(n, [(T0(k1), 41.0), (W(k1, "ancestral"), 56.0), (T0(k2), 58.0), (W(k2, "Kino"), 66.0), (W(k2, "remata"), 69.0),
-                (W(k2, "ancestral"), 79.0), (W(k2, "Baron"), 116.0), (e1, None)])
-_mc = [W(k2, "remata"), W(k2, "remata") + .5, W(k2, "remata") + 1.0]
+FX += MESA2("cfo_plan", T0(k1), T0(k2), H(n, 56.0))                           # PLAN: Josedeodo espera; Kino lo va a sacar
+rm = W(k2, "remata")
+el = W(k2, "El")
+orb = pausa_de(rm, 64.3, el, 79.4)
+FX += CADENA("cfo_a", extra=[(el, 79.4)])
+FX += MESA2("cfo_orb", rm, rm + orb, H(n, 64.3))                              # ÓRBITA en la muerte (34:24)
+FX += SYNC2(n, [(el, 79.4)] + [(anc(a), a[4]) for a in CAD["cfo_b"]] + [(e1, None)])
+_mc = [W(k2, "Kino") + .8, rm, rm + .4]
 FX += [tar(W(k1, "Minuto"), W(k1, "Pero"), "Minuto 34 · Liquid 10 - 5", "Pero CTBC: 4 dragones y el alma de montaña", A, logo="TLAW",
-           x=.27, y=.27, tam=40),
-       tar(W(k1, "ancestral"), T0(k2) + .2, "Dragón ancestral", "El que lo tome, se lleva la partida", "oro", x=.76, y=.17, tam=40),
-       cam(W(k2, "Josedeodo"), "Josedeodo", "Josedeodo · espera el robo", dur=W(k2, "remata") - W(k2, "Josedeodo") + .3, x=.08, y=.3, tam=190),
-       marcador(W(k2, "Kino") - .2, W(k2, "ancestral") - .2, "TLAW", "CFO", [("izq", 1), ("der", 1), ("izq", 2)], _mc, titulo="34:29 · el ancestral"),
-       peg(W(k2, "remata"), "Josedeodo", "Josedeodo", A, "TLAW", "Kino lo levanta · Rest lo remata · 34:29", dur=2.6, x=.12, y=.62, tam=200,
-           gris=True),
-       dict(tipo="destello", en=W(k2, "remata"), fuerza=.4),
-       tar(W(k2, "ancestral"), W(k2, "Baron"), "Ancestral para CTBC", "34:39", R, logo="CFO", x=.5, y=.17, tam=44),
+           x=.27, y=.12, tam=36),
+       cam(W(k2, "Josedeodo"), "Josedeodo", "Josedeodo · espera el robo", dur=rm - W(k2, "Josedeodo") + .3, x=.08, y=.3, tam=190),
+       marcador(W(k2, "Kino") - .2, rm + orb - .1, "TLAW", "CFO", [("izq", 1), ("der", 1), ("izq", 2)], _mc, titulo="34:24 · el ancestral"),
+       dict(tipo="destello", en=rm, fuerza=.4),
+       tar(rm + orb, el, "Josedeodo, fuera · 34:24", "Y CTBC sigue con el ancestral", R, logo="CFO", x=.5, y=.84, tam=40),
+       tar(el, W(k2, "Baron"), "Ancestral para CTBC", "34:39", R, logo="CFO", x=.5, y=.17, tam=44),
        tar(W(k2, "Baron"), W(k2, "Liquid"), "Y el Barón", "35:16", R, logo="CFO", x=.5, y=.17, tam=44),
        tar(W(k2, "Liquid"), e1 + .2, "CTBC 12 - 11 Liquid", "1.ª derrota · con el Lee Sin", R, logo="CFO", dato="12-11", x=.5, y=.17, tam=44)]
 
 # ================================================================== LOS G3 · TLAW azul (datos_lotl.md J1, lotl_j1 HUD = t + 2063): la pelea del muro
-# lol_semana2 pausó en t 14 y 17,6 (en vivo) con mesa en 17,6: aquí la pausa y la mesa salen de la REPETICIÓN (t 96, otra toma), foco Josedeodo
+# la pausa y la mesa (bullet) salen de la REPETICIÓN (t 96, otra toma); luego vuelve al directo en el mismo segundo (34:41)
 AZUL = {"TLAW"}
 g = "los3_"
 e0, e1 = ESC("los3")
 k0, k1, k2, k3, k4, k5 = (g + str(i) for i in range(6))
 n = "lotl_j1"
 FX += VIVO("los3", n, 0.0, "Partida 3 · la de la eliminación", "LOS", H(n, 0.0))
-FX += SYNC2(n, [(T0(k0), T0(k0) - e0), (T0(k1), 10.0), (W(k1, "Josedeodo"), 15.0), (T0(k2), 17.0)])
+FX += CADENA("los3_a")
 FX += [tar(W(k0, "recortado"), T0(k1), "De -7 000 a -3 300", "Y el Barón encima · 34:2x", A, logo="TLAW", x=.27, y=.27, tam=40),
        tar(W(k1, "infernal"), T0(k2), "Dragón infernal", "Los Grandes ya tiene 3", "oro", x=.76, y=.17, tam=40)]
 mu = W(k2, "muro")
@@ -289,15 +325,14 @@ FX += PZ(nr, mu, jo, 96.0, [
 ])
 FX += MESA2("los3", jo, T0(k3), H(nr, 96.0))
 _ml = [W(k3, "Ackerman"), W(k3, "Zest")]
-FX += SYNC2(nr, [(T0(k3), 96.0), (W(k3, "Ackerman"), 101.5), (W(k3, "Zest"), 104.5), (W(k3, "doble") - .1, 106.5)])
-FX += SYNC2(n, [(W(k3, "doble") - .1, 27.4), (W(k3, "triple"), 29.0), (T0(k4), 30.5)])
+FX += CADENA("los3_b")
 FX += [tar(W(k3, "dragon"), W(k3, "Ackerman"), "Liquid gana el dragón", "34:41", A, logo="TLAW", x=.27, y=.27, tam=40),
        marcador(W(k3, "Ackerman") - .3, T0(k4), "TLAW", "LOS", [("izq", 3), ("izq", 1)], _ml, titulo="34:44 · dentro del foso"),
        peg(W(k3, "Zest"), "Josedeodo", "Josedeodo", A, "TLAW", "Lo mata Zest · 34:46", dur=T0(k4) - W(k3, "Zest") + .2, x=.12, y=.62, tam=200,
            gris=True),
        tar(W(k3, "doble"), T0(k4) + .2, "Triple de Zest", "Tristana · 4 - 11", R, icono="Tristana", x=.5, y=.17, tam=44),
        dict(tipo="destello", en=W(k3, "triple"), fuerza=.4)]
-FX += [*FZ(n, T0(k4), T0(k5), 30.5, 1.14), velo(T0(k4), T0(k5), .35),
+FX += [*FZ(n, T0(k4), T0(k5), 30.1, 1.14), velo(T0(k4), T0(k5), .35),
        tar(T0(k4) + .1, T0(k5) + .2, "«Ya la tenía en las manos»", "Narradores, en vivo · «y se equivocan garrafal»", "oro", x=.5, y=.84, tam=48)]
 FX += [J("lotl_j2", T0(k5), W(k5, "fuera"), 22.0, 1.0),
        tar(W(k5, "alma"), W(k5, "fuera"), "Alma, ancestral y partida", "Los Grandes 2 - 1 Liquid", R, logo="LOS", dato="2-1", x=.5, y=.17, tam=44),
@@ -313,19 +348,22 @@ g = "gancho_"
 e0, e1 = ESC("gancho")
 k0 = g + "0"
 n = "los1_curse"
-FX += SYNC2(n, [(e0, 22.0), (W(k0, "Zest"), 32.6), (W(k0, "Curse"), 37.0), (e1, None)])
+FX += CADENA("gancho")
+yg = W(k0, "y")
+x0 = yg + 1.9                                # 12:08 (t 37,5): el 1 contra 1 → ÓRBITA; luego sigue a x1 hasta el DOUBLE KILL (12:11, t 40,5)
+FX += [J(n, yg, x0, 35.6, 1.0), J(n, x0, x0 + 4.0, 37.5, 0)] + MESA2("gancho_orb", x0, x0 + 4.0, H(n, 37.5)) + [J(n, x0 + 4.0, e1, 37.5, 1.0)]
+dk = x0 + 4.0 + 3.0
 FX += [mg(L.apertura("¿CULPA DE JOSEDEODO?", "Sus 7 partidas del Mundial · pausa por pausa"), e0, W(k0, "Viernes") + .3, x=.5, y=.5,
           nombre="apertura"),
        dict(tipo="destello", en=.15, fuerza=.7),
        tar(W(k0, "Viernes") + .3, W(k0, "Minuto"), "Viernes 30 de octubre", "Liquid vs Los Grandes · el que pierde, se va", "oro", logo="TLAW",
            x=.27, y=.17, tam=44),
-       cam(W(k0, "Josedeodo"), "Josedeodo", "Josedeodo · Nocturne", dur=W(k0, "Curse") - W(k0, "Josedeodo") + .2, x=.08, y=.3, tam=190),
-       tar(W(k0, "Zest"), W(k0, "Curse"), "12:03 · Josedeodo mata a Zest", "Con la definitiva de Nocturne", R, icono="Nocturne", x=.27, y=.17, tam=40),
-       cam(W(k0, "Curse"), "Curse", "Curse · Trundle · nivel 9", dur=T1(k0) - W(k0, "Curse") + 1.0, x=.92, y=.3, tam=190),
-       tar(W(k0, "Curse") + .3, T1(k0) + 1.5, "1 contra 1", "Josedeodo nivel 8 · Curse nivel 9", "oro", x=.5, y=.17, tam=44),
-       tar(T1(k0) + 2.4, e1 + .2, "12:11 · DOUBLE KILL de Curse", "«José no tiene destello… y ñam, ñam, ñam» · narradores", R, logo="LOS",
+       cam(W(k0, "Josedeodo"), "Josedeodo", "Josedeodo · Nocturne", dur=x0 - W(k0, "Josedeodo"), x=.08, y=.3, tam=190),
+       tar(W(k0, "Zest"), x0, "12:03 · Josedeodo mata a Zest", "Con la definitiva de Nocturne", R, icono="Nocturne", x=.27, y=.17, tam=40),
+       tar(x0 + 4.0, dk, "1 contra 1", "Josedeodo nivel 8 · Curse nivel 9", "oro", x=.5, y=.17, tam=44),
+       tar(dk, e1 + .2, "12:11 · DOUBLE KILL de Curse", "«José no tiene destello… y ñam, ñam, ñam» · narradores", R, logo="LOS",
            x=.5, y=.84, tam=44),
-       dict(tipo="destello", en=T1(k0) + 2.4, fuerza=.45)]
+       dict(tipo="destello", en=dk, fuerza=.45)]
 
 # ================================================================== GANCHO 2 · la acusación y el menú
 g = "gancho2_"
@@ -369,29 +407,26 @@ n = "los2_j1"
 tv = max(0.0, 24.0 - (T0(k0) - e0))
 FX += VIVO("los2", n, tv, "Partida 2 · Los Grandes vs Liquid", "TLAW", H(n, tv))
 hz = W(k0, "Heraldo")
-FX += SYNC2(n, [(T0(k0), 24.0), (hz, 27.5), (W(k0, "Curse"), 28.0)])
-FX += PZ(n, W(k0, "Curse"), T0(k1), 27.0, [
+FX += CADENA("los2_a", extra=[(W(k0, "Curse"), 27.0)])
+FX += PZ(n, W(k0, "Curse"), T0(k1), 27.0, [                                    # PASO A PASO: el Heraldo, con Curse debajo
     texto("HERALDO PARA LIQUID", "JOSEDEODO · 16:23", .5, .14, hz + .1, color=R, tam=30, icono="SummonerSmite"),
     an(.33, .37, "Josedeodo", "XIN ZHAO · SE LO LLEVA", "TLAW", W(k0, "Curse") + .1, "XinZhao", lado="izq"),
     an(.45, .65, "Curse", "JARVAN IV · JUSTO DEBAJO", "LOS", W(k0, "Curse") + .4, "JarvanIV", lado="der"),
 ])
+FX += CADENA("los2_b")
 du = W(k1, "Duduhh")
-FX += SYNC2(n, [(T0(k1), 27.0), (W(k1, "definitiva"), 35.5), (du, 36.5)])
-FX += PZ(n, du, W(k1, "Y", 1), 36.5, [
-    zona(.47, .60, .12, .1, R, du + .05, alfa=.14),
-    an(.47, .635, "Josedeodo", "LA DEFINITIVA DE XIN ZHAO", "TLAW", du + .1, "XinZhao", lado="izq"),
-    texto("DUDUHH, FUERA", "16:32 · Y QUID SE LLEVA A CURSE", .72, .2, du + .4, color=R, tam=28, icono="Ezreal"),
-])
+y1 = W(k1, "Y", 1)
+FX += MESA2("los2_orb", du, y1, H(n, 36.5))                                   # ÓRBITA: cae Duduhh; la ruta de la caza a Feisty
+FX += SYNC2(n, [(du, 36.5)] + [(anc(a), a[4]) for a in CAD["los2_c"]])
 _m2 = [du, du + .5, W(k1, "mata", 1)]
-FX += SYNC2(n, [(W(k1, "Y", 1), 36.5), (W(k1, "persigue"), 44.0), (W(k1, "mata", 1), 49.7), (T0(k2), 51.0)])
-FX += [marcador(W(k1, "definitiva") - .2, T0(k2), "TLAW", "LOS", [("der", 3), ("der", 1), ("der", 2)], _m2, titulo="16:32 · la pelea del Heraldo"),
+FX += [marcador(y1, T0(k2), "TLAW", "LOS", [("der", 3), ("der", 1), ("der", 2)], [y1 + .2, y1 + .6, W(k1, "mata", 1)], titulo="16:32 · la pelea del Heraldo"),
+       tar(y1, W(k1, "mata", 1), "16:32 · Duduhh, fuera", "Y Josedeodo va por Feisty", R, logo="TLAW", x=.27, y=.27, tam=40),
        tar(W(k1, "mata", 1), T0(k2) + .2, "16:45 · Josedeodo mata a Feisty", "«Is on a rampage» · Liquid +3,0K", R, logo="TLAW", x=.27, y=.27, tam=40),
        dict(tipo="destello", en=W(k1, "mata", 1), fuerza=.35)]
 FX += [J(n, T0(k2), T0(k3), 72.0, 1.0), *repeticion(T0(k2), T0(k2) + 3.0, "La repetición de la transmisión"),
        tar(T0(k2) + .3, T0(k3) + .2, "«Josedeodo, demostrando por qué…»", "«…es el mejor jugador de su equipo» · narradores", "oro", x=.5, y=.84, tam=46)]
 n = "los2_j2"
-FX += SYNC2(n, [(T0(k3), 29.0), (W(k3, "Cataclismo"), 34.0), (W(k3, "cae"), 35.7), (W(k3, "Feisty"), 43.0), (W(k3, "ancestral"), 64.0),
-                (T0(k4), 66.0)])
+FX += CADENA("los2_d")
 FX += [tar(W(k3, "Minuto"), W(k3, "cae"), "Minuto 35 · el Anciano", "Curse, dentro de su propio Cataclismo", R, icono="JarvanIV", x=.27, y=.27, tam=40),
        tar(W(k3, "cae"), W(k3, "Feisty"), "35:41 · CoreJJ mata a Curse", "Liquid 10 - 8", R, logo="TLAW", x=.27, y=.27, tam=40),
        tar(W(k3, "Feisty"), W(k3, "ancestral"), "35:48 · Josedeodo mata a Feisty", "Otra vez", R, icono="XinZhao", x=.27, y=.27, tam=40),

@@ -1,0 +1,1746 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 10.322,
+  "tipo": "video",
+  "texto": "En World of Warcraft Forever, el alquimista ya no hace pociones de sanación. Ahora las puede hacer cualquiera, con la profesión que casi todos dejan para el final.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 10.322,
+  "t1": 17.902,
+  "tipo": "video",
+  "texto": "Hay una mena nueva en Monte Hyjal que no se puede fundir en ninguna forja de Azeroth. Y una profesión que, para llegar al trescientos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.902,
+  "t1": 26.606,
+  "tipo": "video",
+  "texto": "te pide un telar que solo se fabrica con trescientos. En la primera semana, los jugadores pusieron más de veintiocho millones de objetos de campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.606,
+  "t1": 34.345,
+  "tipo": "video",
+  "texto": "Y sin campamento, te faltan las estaciones de media lista de recetas. Hace unos días hicimos la ruta del uno al sesenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.345,
+  "t1": 41.107,
+  "tipo": "video",
+  "texto": "zona por zona. Hoy toca la otra ruta, la que vas subiendo al mismo tiempo: la de las profesiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 41.107,
+  "t1": 51.805,
+  "tipo": "video",
+  "texto": "Son doce profesiones, y cada una tiene su camino del uno al trescientos, en cuatro tramos. Para la Alianza y para la Horda, con el mapa de dónde entrenar y dónde recoger.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 51.805,
+  "t1": 59.873,
+  "tipo": "video",
+  "texto": "Y en cada parada, lo que cambió en Forever: recetas nuevas, materiales nuevos, y lo que la guía que te sabías de memoria ya no sabe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 59.873,
+  "t1": 70.193,
+  "tipo": "video",
+  "texto": "Empezamos por lo que alimenta a todas las demás, la recolección, y terminamos con la profesión que más cambió. Te adelanto que no es la que imaginas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.193,
+  "t1": 77.393,
+  "tipo": "video",
+  "texto": "Primero, las reglas del juego. Hay nueve profesiones principales y tres secundarias, y no hay joyería ni inscripción:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 77.393,
+  "t1": 86.497,
+  "tipo": "video",
+  "texto": "son exactamente doce. Puedes llevar dos principales por personaje. Las tres secundarias, cocina, pesca y primeros auxilios,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 86.497,
+  "t1": 93.601,
+  "tipo": "video",
+  "texto": "van aparte, y esas no se pueden olvidar. Entrenar cuesta diez de cobre el primer rango, cinco de plata el segundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 93.601,
+  "t1": 105.617,
+  "tipo": "video",
+  "texto": "cincuenta de plata el tercero y cinco de oro el de artesano. Unas cinco de oro y media por profesión. El rango de oficial pide nivel diez, el de experto nivel veinte y el de artesano nivel treinta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 105.617,
+  "t1": 110.912,
+  "tipo": "video",
+  "texto": "Y el artesano no te lo enseña cualquiera: muchas veces hay que viajar a buscarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 110.912,
+  "t1": 120.298,
+  "tipo": "video",
+  "texto": "Novedad de Forever: cada zona inicial tiene entrenadores júnior de minería, herboristería y desuello, que te enseñan hasta el setenta y cinco sin pisar la capital.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 120.298,
+  "t1": 131.46,
+  "tipo": "video",
+  "texto": "Las profesiones tienen ventana propia, con la tecla K, con buscador, filtros y un botón de crear todo. Y la mochila tiene una quinta ranura, solo para la bolsa de componentes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 131.46,
+  "t1": 138.24,
+  "tipo": "video",
+  "texto": "Y ninguna profesión da un bonus pasivo. Su valor está en lo que fabricas, y en algo nuevo que vas a ver en cada parada:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 138.24,
+  "t1": 146.68,
+  "tipo": "video",
+  "texto": "el campamento. Y antes de la primera parada, algo que ninguna profesión te enseña: cómo sacarle más a tu personaje en combate.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 146.68,
+  "t1": 155.082,
+  "tipo": "video",
+  "texto": "Para eso existe el patrocinador de hoy. Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.082,
+  "t1": 161.992,
+  "tipo": "video",
+  "texto": "Son sesiones individuales por horas, por voz o por texto. Y juegas tú con tu personaje todo el tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 161.992,
+  "t1": 170.717,
+  "tipo": "video",
+  "texto": "Un coach mira tus talentos, tu rotación y tus propios errores, con la versión del juego que está activa hoy. Porque las guías no siempre van al día.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 170.717,
+  "t1": 180.247,
+  "tipo": "video",
+  "texto": "Una rama de talentos escrita antes del último ajuste ya puede estar desfasada. Y si todavía vas camino del sesenta, también te ayudan con eso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.247,
+  "t1": 188.944,
+  "tipo": "video",
+  "texto": "Y para las bandas del nueve de diciembre: resistencia al fuego para la Guarida de Onyxia, consumibles, y qué equipo previo a la banda vale la pena buscar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.944,
+  "t1": 199.686,
+  "tipo": "video",
+  "texto": "Muchos de esos consumibles, por cierto, salen de las profesiones de este video. Si reservas dos horas o más, ahorras un cinco por ciento, con reembolso en cada pedido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 199.686,
+  "t1": 207.279,
+  "tipo": "video",
+  "texto": "Y lo que aprendes se queda contigo para el siguiente ajuste. El enlace está en la descripción, y hay un código para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 207.279,
+  "t1": 215.43,
+  "tipo": "video",
+  "texto": "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.43,
+  "t1": 224.927,
+  "tipo": "video",
+  "texto": "Parada uno. Minería, la profesión que alimenta a la herrería y a la ingeniería. Del uno al sesenta y cinco, cobre, en cualquier zona inicial.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 224.927,
+  "t1": 230.947,
+  "tipo": "video",
+  "texto": "En Forever hay vetas de cobre pobres en los valles de inicio, y un entrenador júnior en cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 230.947,
+  "t1": 240.471,
+  "tipo": "video",
+  "texto": "Los elfos de la noche, que no tenían cobre en Teldrassil, ahora pican fragmentos de ámbar. Dan mena de cobre, aunque solo suben la habilidad hasta veinte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.471,
+  "t1": 249.548,
+  "tipo": "video",
+  "texto": "En Mulgore hay una cueva con cinco vetas de cobre que reaparecen tan rápido que casi no hace falta salir. La forja más cerca está en la Excavación de Bael'dun.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.548,
+  "t1": 261.035,
+  "tipo": "video",
+  "texto": "Del sesenta y cinco al ciento veinticinco, estaño y plata. La Alianza, en una cueva de Los Humedales llena de estaño, y la Horda, en el Bosque de Argénteos o en Laderas de Trabalomas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 261.035,
+  "t1": 267.871,
+  "tipo": "video",
+  "texto": "Del ciento veinticinco al ciento setenta y cinco, hierro y oro, en las Tierras Altas de Arathi o en Las Mil Agujas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.871,
+  "t1": 274.856,
+  "tipo": "video",
+  "texto": "Y ojo, que la zona nueva de Claros del Río tiene más vetas de hierro que ninguna otra zona del mapa, unas ciento treinta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 274.856,
+  "t1": 284.647,
+  "tipo": "video",
+  "texto": "Del ciento setenta y cinco al doscientos cuarenta y cinco, mitril y veraplata, en Tierras del Interior o en Tanaris. Aprende el rango de artesano antes de salir.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.647,
+  "t1": 293.072,
+  "tipo": "video",
+  "texto": "Y para cerrar, torio pequeño en Un'Goro o en Frondavil, y torio rico en Cuna del Invierno, en la Peste del Este o en Las Estepas Ardientes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.072,
+  "t1": 301.668,
+  "tipo": "video",
+  "texto": "Si vas con prisa, existe la opción de fundir mena comprada en la subasta: unas ciento cuarenta de cobre y setenta de estaño te llevan hasta el ciento cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.668,
+  "t1": 312.644,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: la mena se apila de veinte en veinte, y al picar salen materiales escasos: pirita, bauxita y pecblenda. Con la pecblenda se funde la barra de azerotio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 312.644,
+  "t1": 318.344,
+  "tipo": "video",
+  "texto": "Y en Monte Hyjal está la única mena nueva: la mena de torio pesada, en unas ciento veinte vetas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 318.344,
+  "t1": 327.905,
+  "tipo": "video",
+  "texto": "Pero esa no se funde en ninguna forja de Azeroth. Para fundirla necesitas una fundición de magma, un objeto de campamento cuyo plano suelta el Embajador Latifuego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 327.905,
+  "t1": 335.884,
+  "tipo": "video",
+  "texto": "en Profundidades de Roca Negra. Los otros dos objetos de campamento del minero son la magnetita, que da poder de ataque a todo el campamento,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.884,
+  "t1": 345.735,
+  "tipo": "video",
+  "texto": "y el jardín rocoso, que hace crecer una veta con el tiempo. Y un dato para el final de la ruta: Monte Hyjal tiene, además, más de cien vetas de torio rico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 345.735,
+  "t1": 351.99,
+  "tipo": "video",
+  "texto": "Para los últimos puntos, es el sitio. Parada dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 351.99,
+  "t1": 361.377,
+  "tipo": "video",
+  "texto": "Herrería, la que se come casi todo lo que pica el minero. Del uno al setenta y cinco, piedras de afilar y piedras de pulir. Y un ajuste del diez de noviembre:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.377,
+  "t1": 370.855,
+  "tipo": "video",
+  "texto": "la piedra de pulir burda ahora da puntos hasta el noventa. Del setenta y cinco al ciento cuarenta, bronce: varas de plata, leotardos y brazales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 370.855,
+  "t1": 379.713,
+  "tipo": "video",
+  "texto": "Calcula unas trescientas barras de bronce hasta el ciento cincuenta. Para el rango de experto vas a la capital: en Orgrimmar lo enseña Saru Steelfury,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 379.713,
+  "t1": 388.094,
+  "tipo": "video",
+  "texto": "y en Forjaz, un enano, Bengus Deepforge, junto a la gran fragua. Y la Alianza tiene una opción nueva: Alard Schmied, en Dalaran,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 388.094,
+  "t1": 395.935,
+  "tipo": "video",
+  "texto": "enseña hasta el doscientos veinticinco. En Darnassus, en cambio, no hay herrero: los elfos entrenan en Auberdine.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 395.935,
+  "t1": 403.698,
+  "tipo": "video",
+  "texto": "Del ciento cuarenta al doscientos diez, cuarenta brazales de hierro verde, brazales de escamas doradas y pantalones de placas de mitril.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.698,
+  "t1": 414.095,
+  "tipo": "video",
+  "texto": "El rango de artesano lo enseña Brikk Finoficio, en Bahía del Botín, a los dos bandos. Y en Tanaris, Derotain Sorbelodo te da misiones de piezas imperiales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 414.095,
+  "t1": 424.076,
+  "tipo": "video",
+  "texto": "Y aquí viene el golpe: del doscientos setenta al trescientos, calcula entre quinientas y mil doscientas barras de torio. La diferencia es si encuentras o no un par de planos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 424.076,
+  "t1": 431.066,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: ocho planos de placas bendecidas que suben del doscientos cuarenta al trescientos, y caen de criaturas del mundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 431.066,
+  "t1": 439.544,
+  "tipo": "video",
+  "texto": "El peto, de unas arpías de Monte Hyjal. Y aquí entra el Favor de comerciante, el sistema nuevo más grande de las profesiones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 439.544,
+  "t1": 447.607,
+  "tipo": "video",
+  "texto": "Se gana llenando cajones de materiales para dos campamentos de mercaderes. La Horda lo tiene al oeste de El Cruce, en Los Baldíos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 447.607,
+  "t1": 456.505,
+  "tipo": "video",
+  "texto": "y la Alianza en Tres Caminos, al oeste de Crestagrana. Y los dos venden las mismas recetas. Para la herrería hay sesenta y una recetas de Favor:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 456.505,
+  "t1": 464.504,
+  "tipo": "video",
+  "texto": "conjuntos de malla y de placas para cada papel del grupo. En el campamento, el herrero pone una rueda de afilar, que da fuerza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.504,
+  "t1": 474.178,
+  "tipo": "video",
+  "texto": "Luego un yunque, y al llegar a trescientos, la forja maestra, que piden muchas recetas. El plano del yunque lo suelta Gilnid, en Las Minas de la Muerte,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 474.178,
+  "t1": 481.958,
+  "tipo": "video",
+  "texto": "y el de la forja maestra, el Señor gólem Argelmach, en Profundidades de Roca Negra. Y un detalle de combate: en Forever,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 481.958,
+  "t1": 490.56,
+  "tipo": "video",
+  "texto": "las piedras de afilar ya se acumulan con los venenos y con Viento Furioso. Y aquí va un espectador de esta misma pareja.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 490.56,
+  "t1": 499.46,
+  "tipo": "video",
+  "texto": "Nos contó Julsikakku que, jugando dos o tres horas al día, llevaba minería ciento cuarenta y cinco y herrería ciento veinte en cinco días.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 499.46,
+  "t1": 507.3,
+  "tipo": "video",
+  "texto": "A su ritmo, sin correr. Y en otro comentario ya iba por el treinta y seis, como minero y herrero, rumbo a la zona nueva.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 507.3,
+  "t1": 517.599,
+  "tipo": "video",
+  "texto": "Gracias por enseñarnos que la ruta se hace al paso de cada quien. Parada tres. Ingeniería, el otro destino del mineral.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.599,
+  "t1": 524.759,
+  "tipo": "video",
+  "texto": "Del uno al cincuenta y seis, polvo explosivo tosco y tornillos de cobre, y no te olvides de la llave inglesa de arco voltaico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 524.759,
+  "t1": 536.383,
+  "tipo": "video",
+  "texto": "Empieza en Orgrimmar o en Forjaz, porque ahí está también el experto. Del cincuenta y seis al ciento cincuenta, bombas de cobre, dinamita, tubos de bronce y cacharros zumbones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 536.383,
+  "t1": 542.513,
+  "tipo": "video",
+  "texto": "Del ciento cincuenta al doscientos, con Roxxik en Orgrimmar o con Springspindle en Forjaz: marcos de bronce,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 542.513,
+  "t1": 551.386,
+  "tipo": "video",
+  "texto": "granadas de hierro, y quince ovejas explosivas. El rango de artesano lo enseña, en el pueblo goblin de Gadgetzan, Buzzek Giracorchete,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 551.386,
+  "t1": 558.511,
+  "tipo": "video",
+  "texto": "a los dos bandos. Y, novedad de Forever, también Kayleena Encantaflores, en Monte Hyjal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 558.511,
+  "t1": 569.153,
+  "tipo": "video",
+  "texto": "Y para el final, trastos y tubos de torio: unas ciento ochenta y seis barras de torio. El esquema del tubo se compra en Cuna del Invierno, o con Kor'gar, en Claros del Río.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 569.153,
+  "t1": 576.601,
+  "tipo": "video",
+  "texto": "Y un aviso para la Horda: en Cima del Trueno no hay ingeniero. Y en la Alianza, tampoco lo hay en Darnassus.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.601,
+  "t1": 584.54,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: el gnomo ya no recibe sus quince puntos gratis de ingeniería. A cambio, sus cacharros fallan menos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 584.54,
+  "t1": 594.773,
+  "tipo": "video",
+  "texto": "Hay veintiséis recetas de Favor, y la más curiosa es la versión segura de los explosivos: dinamita y bombas que puede lanzar quien no es ingeniero. También hay un arma arrojadiza nueva,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.773,
+  "t1": 601.531,
+  "tipo": "video",
+  "texto": "una bolsa de bombas que no gasta munición. Y al trescientos, el parapente goblin ultraliviano.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 601.531,
+  "t1": 611.016,
+  "tipo": "video",
+  "texto": "Y sus objetos de campamento son los únicos que no dan un beneficio, sino un servicio: un robot que vende componentes a todo el campamento, y un robot de reparación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 611.016,
+  "t1": 622.701,
+  "tipo": "video",
+  "texto": "El plano del robot de reparación lo suelta Sneed, en Las Minas de la Muerte. Y al trescientos, el banco de trabajo de anarquista, que suelta Ezra Grimm en Stratholme.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.701,
+  "t1": 629.431,
+  "tipo": "video",
+  "texto": "Y antes de seguir, un comentario. En la ruta del uno al sesenta, un espectador, Goca, nos escribió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 629.431,
+  "t1": 637.085,
+  "tipo": "video",
+  "texto": "era mejor hacer un video para cada facción, me enredaste más de lo que me ayudaste. Pues hoy, Goca, tengo buenas noticias:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 637.085,
+  "t1": 644.674,
+  "tipo": "video",
+  "texto": "un lingote de cobre de la Alianza pesa exactamente lo mismo que uno de la Horda. Las profesiones casi no saben de facciones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.674,
+  "t1": 655.281,
+  "tipo": "video",
+  "texto": "Y donde sí cambian, que es en los entrenadores, te lo digo separado y con el mapa de cada bando. Si aun así te enredo, por lo menos ya sabes dónde comprar vendas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 655.281,
+  "t1": 666.176,
+  "tipo": "video",
+  "texto": "Y gracias a quienes nos escriben. Jesús, que juega desde dos mil cinco, nos dice que Forever le devolvió la nostalgia de sus inicios, y que el canal le sirve a veteranos y a nuevos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 666.176,
+  "t1": 673.326,
+  "tipo": "video",
+  "texto": "Óscar volvió al juego después de un descanso y nos dio las gracias por la ruta, porque llevaba semanas peleándose con Crestagrana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 673.326,
+  "t1": 681.146,
+  "tipo": "video",
+  "texto": "Y Barón Rata ya va por el treinta, y subiendo. Y un espectador, Steven, que ni siquiera juega, nos dejó algo muy bonito:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 681.146,
+  "t1": 690.43,
+  "tipo": "video",
+  "texto": "que le alegra ver que World of Warcraft sigue vivo. Gracias a los cuatro. Todos los comentarios se leen, y muchos acaban aquí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 690.43,
+  "t1": 697.833,
+  "tipo": "video",
+  "texto": "Parada cuatro. Herboristería, la que alimenta a la alquimia y, en Forever, también a los primeros auxilios.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 697.833,
+  "t1": 707.001,
+  "tipo": "video",
+  "texto": "Del uno al setenta, flor de paz y hojaplata en cualquier zona inicial. Ahí hay también versiones marchitas y atrofiadas, y su entrenador júnior.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 707.001,
+  "t1": 713.887,
+  "tipo": "video",
+  "texto": "Del setenta al ciento quince, marregal y brezospina en el Bosque de Argénteos, en Loch Modan o en Costa Oscura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 713.887,
+  "t1": 723.827,
+  "tipo": "video",
+  "texto": "Del ciento quince al ciento setenta, Laderas de Trabalomas o Sierra Espolón: hierba cardenal, acérita salvaje y sangrerregia. Del ciento setenta al doscientos cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 723.827,
+  "t1": 733.845,
+  "tipo": "video",
+  "texto": "la Vega de Tuercespina o Arathi, con pálida, espina de oro y mostacho de Khadgar. Y Claros del Río es una alternativa nueva, llena de espina de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 733.845,
+  "t1": 742.757,
+  "tipo": "video",
+  "texto": "Del doscientos cinco al doscientos treinta, Tanaris o La Garganta de Fuego. Aprende el rango de artesano antes de ir, que allí no hay entrenador.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 742.757,
+  "t1": 752.507,
+  "tipo": "video",
+  "texto": "Y al final, Tierras del Interior con solea y champiñón fantasma, y Frondavil, con hojasueño, salviargenta de montaña y flor de plaga, hasta el trescientos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 752.507,
+  "t1": 759.979,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: en Monte Hyjal hay tres hierbas nuevas, la hojapesadilla, la salvia demoníaca y el loto de la muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 759.979,
+  "t1": 767.606,
+  "tipo": "video",
+  "texto": "El loto de la muerte no se ve en el mapa: sale de cualquier hierba de Hyjal, pero solo si llevas un encantamiento especial en los guantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 767.606,
+  "t1": 776.38,
+  "tipo": "video",
+  "texto": "Y algo que nunca habíamos tenido: semillas. Al recoger salen semillas de cuatro rangos, que se plantan en un invernadero del campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 776.38,
+  "t1": 784.871,
+  "tipo": "video",
+  "texto": "Hay también un injertador de semillas. Volvió el diecinueve de noviembre, pero ahora puede fallar, y ya no acepta las semillas escasas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 784.871,
+  "t1": 792.791,
+  "tipo": "video",
+  "texto": "El primer objeto de campamento del herbolario es una vela de incienso, que da intelecto. Y el plano del invernadero lo suelta Shadetooth,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 792.791,
+  "t1": 801.045,
+  "tipo": "video",
+  "texto": "en Los Humedales. Parada cinco, la alquimia. Y aquí empieza el cambio más grande de todo el video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 801.045,
+  "t1": 808.638,
+  "tipo": "video",
+  "texto": "Del uno al cincuenta y cinco, una receta nueva de Forever, el elixir de fuerza menor, y después el elixir de defensa menor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 808.638,
+  "t1": 818.732,
+  "tipo": "video",
+  "texto": "Del cincuenta y cinco al ciento cincuenta, pociones de maná menores, elixires de entereza y de sabiduría, y aceite de fuego. Del ciento cincuenta al doscientos veinticinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 818.732,
+  "t1": 828.678,
+  "tipo": "video",
+  "texto": "elixir de poder de fuego, pociones de maná y pociones de protección contra la naturaleza. Esa receta se compra en Feralas, en Tuercespina o en Tanaris.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 828.678,
+  "t1": 838.224,
+  "tipo": "video",
+  "texto": "Del doscientos veinticinco al trescientos, más protección contra la naturaleza, transmutaciones de paso, aceite escama pétrea y elixir de defensa superior.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 838.224,
+  "t1": 845.759,
+  "tipo": "video",
+  "texto": "En total, del uno al trescientos, alrededor de mil hierbas. Por eso tanta gente la combina con la herboristería.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 845.759,
+  "t1": 854.008,
+  "tipo": "video",
+  "texto": "El rango de artesano lo enseñan Rogvar, en el Pantano de las Penas, para la Horda, y Kylanna, en Feralas, para la Alianza.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 854.008,
+  "t1": 860.908,
+  "tipo": "video",
+  "texto": "Y hay un tercero para los dos bandos: Shurome, en el Santuario Esmeralda de Frondavil, enseña del uno al trescientos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.908,
+  "t1": 871.037,
+  "tipo": "video",
+  "texto": "Y por ahora te deja aprender el artesano sin pedirte doscientos. Ahora viene el cambio de verdad. En Forever, las pociones de sanación ya no son del alquimista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 871.037,
+  "t1": 878.172,
+  "tipo": "video",
+  "texto": "Se fueron a otra profesión, y te lo cuento al final del video. Lo que ganó a cambio son tintes: tinte cerúleo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 878.172,
+  "t1": 884.971,
+  "tipo": "video",
+  "texto": "magenta y verde esmeralda, que piden la sastrería y la peletería. El alquimista tiene clientes nuevos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 884.971,
+  "t1": 896.162,
+  "tipo": "video",
+  "texto": "Y veintiocho recetas de Favor, desde pociones de treinta segundos hasta el elixir del oso pardo, que pide trescientos y reputación honorable. En el campamento, el alquimista pone un pozo de maná,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 896.162,
+  "t1": 904.652,
+  "tipo": "video",
+  "texto": "luego un fermentador, y al trescientos, un laboratorio de alquimia. Con el laboratorio, los frascos ya no se hacen solo dentro de Scholomance:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 904.652,
+  "t1": 912.79,
+  "tipo": "video",
+  "texto": "se hacen junto a la hoguera. Su plano lo suelta allí Ras Levescarcha, el mismo jefe del frasco de poder supremo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 912.79,
+  "t1": 921.78,
+  "tipo": "video",
+  "texto": "Y otro comentario, porque nos lo merecemos. En el video del oro, un espectador, Crisis, nos escribió: el video dice tómatelo con calma,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 921.78,
+  "t1": 931.119,
+  "tipo": "video",
+  "texto": "y el mismo video dice vende esto ya, ya, ya. Tiene toda la razón, Crisis, y te aviso que hoy va a ser peor. Con calma subes de nivel,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 931.119,
+  "t1": 940.43,
+  "tipo": "video",
+  "texto": "pero una veta de torio libre no espera a nadie. Así que tómatelo con calma, eso sí, y luego corre a la veta antes de que llegue otro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 940.43,
+  "t1": 947.072,
+  "tipo": "video",
+  "texto": "Parada número seis, el desuello, la recolección que va pegada a la peletería. La regla es sencilla:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 947.072,
+  "t1": 957.761,
+  "tipo": "video",
+  "texto": "puedes desollar a un bicho si tienes cinco veces su nivel. Uno de nivel treinta pide ciento cincuenta. Y en Forever, los bichos de las zonas iniciales dan puntos hasta el setenta y cinco:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 957.761,
+  "t1": 965.801,
+  "tipo": "video",
+  "texto": "jabalíes en Durotar, o lobos en el Bosque de Elwynn. Para el tramo del setenta y cinco al ciento cincuenta, la Horda va a Los Baldíos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 965.801,
+  "t1": 972.907,
+  "tipo": "video",
+  "texto": "raptores y zancudos al oeste de Fuerte del Norte. Y la Alianza, a Loch Modan y luego a Los Humedales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 972.907,
+  "t1": 983.215,
+  "tipo": "video",
+  "texto": "Del ciento cincuenta al doscientos veinticinco, la cueva de yetis de Laderas de Trabalomas: reaparecen tan rápido que te puedes quedar dentro. O los huargos del Bosque del Ocaso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 983.215,
+  "t1": 993.245,
+  "tipo": "video",
+  "texto": "Del doscientos veinticinco al doscientos ochenta, los yetis de la Vega Cicatriz Feral, en Feralas. Y el final, los diemetradones y pterrordáctilos de Un'Goro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 993.245,
+  "t1": 1000.458,
+  "tipo": "video",
+  "texto": "Y la Horda tiene un regalo: el cuchillo para desollar afilado, que suma tres puntos, de una misión en Los Baldíos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 1000.458,
+  "t1": 1008.83,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: cada criatura se desuella una sola vez. Lo que otro jugador mata y no desuella, eso sí, es tuyo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1008.83,
+  "t1": 1017.53,
+  "tipo": "video",
+  "texto": "Y hay materiales escasos nuevos: cuero prístino, pellejo prístino y escama prístina. En la beta, el cuero prístino pasaba de una de oro;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1017.53,
+  "t1": 1024.848,
+  "tipo": "video",
+  "texto": "en la primera semana bajó a unas cinco platas. Claros del Río también sirve: tiene bestias que dan mucho cuero pesado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1024.848,
+  "t1": 1033.937,
+  "tipo": "video",
+  "texto": "Y en Monte Hyjal, cuero basto. En el campamento, el desollador pone una silla de campamento, que da crítico. Y al ciento cuarenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1033.937,
+  "t1": 1042.371,
+  "tipo": "video",
+  "texto": "una guía de campo con la que cualquiera aprende a rastrear bestias. El plano de la guía lo suelta Lady Anacondra, en las Cuevas de los Lamentos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1042.371,
+  "t1": 1049.47,
+  "tipo": "video",
+  "texto": "Y al trescientos llega un banco de trabajo de trampero. Parada siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1049.47,
+  "t1": 1059.335,
+  "tipo": "video",
+  "texto": "Peletería, y el objeto de campamento que más agradece quien sube de nivel. Del uno al sesenta, cuero ligero, pellejo ligero curtido y guantes de cuero repujado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1059.335,
+  "t1": 1068.678,
+  "tipo": "video",
+  "texto": "Del sesenta al ciento treinta, pantalones, cinturones de cuero oscuro y pellejo medio curtido. El rango de experto lo enseñan Una en Cima del Trueno,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1068.678,
+  "t1": 1076.439,
+  "tipo": "video",
+  "texto": "Telonis en Darnassus, o Jarael en Shen'dralas, la zona nueva que es casi de la Horda. Del ciento treinta al doscientos cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1076.439,
+  "t1": 1085.69,
+  "tipo": "video",
+  "texto": "hombreras bárbaras, guantes de guardián y cintas. El artesano está fuera de las capitales: Hahrana Pielférrea, en Feralas, para la Horda,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1085.69,
+  "t1": 1094.753,
+  "tipo": "video",
+  "texto": "y Drakk Stonehand, en Tierras del Interior, para la Alianza. Del doscientos cinco al trescientos, unos quinientos cueros gruesos solo para el primer tramo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1094.753,
+  "t1": 1102.278,
+  "tipo": "video",
+  "texto": "y luego cientos de cueros bastos y paño rúnico. Y hay un patrón nuevo con nombre de canción de Elvis: los zapatos de gamuza azul.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1102.278,
+  "t1": 1112.286,
+  "tipo": "video",
+  "texto": "Sirven para subir del doscientos treinta y cinco al doscientos sesenta y cinco. Hay también brazales y un sombrero de gamuza azul. El sombrero, eso sí,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1112.286,
+  "t1": 1120.739,
+  "tipo": "video",
+  "texto": "necesita una máquina de coser. Lo nuevo de Forever: ochenta y una recetas de Favor, conjuntos de cuero y de malla para cada papel del grupo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1120.739,
+  "t1": 1129.618,
+  "tipo": "video",
+  "texto": "Y las especializaciones ya no dan resistencias. Muchas recetas piden un expositor de curtido. Blizzard lo bajó el seis de noviembre:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1129.618,
+  "t1": 1137.246,
+  "tipo": "video",
+  "texto": "ahora se aprende con ciento veinticinco. Y aquí está la joya: la tienda de campamento. Da experiencia de descanso,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1137.246,
+  "t1": 1144.702,
+  "tipo": "video",
+  "texto": "hasta el cinco por ciento de un nivel, una vez por hora. Por eso la peletería es de las profesiones que más ayudan a subir de nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1144.702,
+  "t1": 1154.751,
+  "tipo": "video",
+  "texto": "Y por eso, en un campamento, el peletero siempre es bienvenido. La máquina de coser, al trescientos, la suelta Vectus, en Scholomance.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1154.751,
+  "t1": 1164.5,
+  "tipo": "video",
+  "texto": "Y ojo: solo se coloca con trescientos, aunque la compres hecha. Parada ocho. Sastrería, la que no necesita recolección:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1164.5,
+  "t1": 1170.774,
+  "tipo": "video",
+  "texto": "la tela te cae de los enemigos. Del uno al cincuenta y cinco, madejas de lino y cinturones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1170.774,
+  "t1": 1182.16,
+  "tipo": "video",
+  "texto": "Del cincuenta y cinco al ciento cuarenta, lana y seda: capas, capuchas y mochilas pequeñas. El rango de experto lo enseñan Josef Gregorian en Entrañas y Georgio Bolero en Ventormenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1182.16,
+  "t1": 1189.322,
+  "tipo": "video",
+  "texto": "La Alianza tiene además a Charles Worth en Dalaran, y en Shen'dralas está Melanori. Del ciento cuarenta al doscientos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1189.322,
+  "t1": 1197.43,
+  "tipo": "video",
+  "texto": "tejido mágico, y chalecos y pantalones de seda carmesí. El artesano: Daryl Stack, en el Molino Tarren de Laderas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1197.43,
+  "t1": 1206.744,
+  "tipo": "video",
+  "texto": "para la Horda, y Timothy Worthington, en Theramore, para la Alianza. Compra el hilo rúnico antes de ir. Entre el doscientos y el doscientos veinticinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1206.744,
+  "t1": 1214.66,
+  "tipo": "video",
+  "texto": "diecisiete bolsas de tejido mágico rojas, que en Forever ya son de catorce casillas. Del doscientos cincuenta al doscientos ochenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1214.66,
+  "t1": 1223.887,
+  "tipo": "video",
+  "texto": "un patrón nuevo, los puños de paño rúnico. Lo vende Pexmit, en Monte Hyjal, por diez de oro, o la Horda lo saca con una misión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1223.887,
+  "t1": 1231.472,
+  "tipo": "video",
+  "texto": "Calcula unos mil cuatrocientos paños rúnicos solo para ese tramo. La sastrería se paga en tela. Lo nuevo de Forever:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1231.472,
+  "t1": 1241.235,
+  "tipo": "video",
+  "texto": "las bolsas de componentes, para esa quinta ranura. De lino de seis casillas, de lana de ocho, y las grandes de doce y catorce, con Favor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1241.235,
+  "t1": 1248.254,
+  "tipo": "video",
+  "texto": "Y la de lana pide tinte cerúleo, que hace el alquimista. Aquí se conecta la parada cinco con la parada ocho.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1248.254,
+  "t1": 1258.589,
+  "tipo": "video",
+  "texto": "Hay sesenta y siete recetas de Favor, conjuntos de tela para cada escuela de magia. Y en el campamento, el sastre pone un estandarte de su facción, que da espíritu.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1258.589,
+  "t1": 1267.693,
+  "tipo": "video",
+  "texto": "Al ciento cuarenta, una rueca, obligatoria para muchas recetas. Su plano lo suelta un centinela inestable, en la Ciudad de Dalaran.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1267.693,
+  "t1": 1276.444,
+  "tipo": "video",
+  "texto": "Y la trampa: las recetas que llevan del doscientos ochenta y cinco al trescientos piden un telar. Y el telar solo lo fabrica quien ya tiene trescientos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1276.444,
+  "t1": 1282.284,
+  "tipo": "video",
+  "texto": "O encuentras un campamento donde otro sastre ya puso su telar, o subes esos últimos puntos por otro camino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1282.284,
+  "t1": 1292.976,
+  "tipo": "video",
+  "texto": "El plano del telar es de la Baronesa Anastari, en Stratholme. Parada nueve. Encantamiento, que desencanta todo lo que cose el sastre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1292.976,
+  "t1": 1302.888,
+  "tipo": "video",
+  "texto": "Del uno al setenta, con un reactivo nuevo de vendedor, la mota de magia: una vara de cobre rúnica y encantamientos de brazal. Y desencantar también da puntos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1302.888,
+  "t1": 1311.807,
+  "tipo": "video",
+  "texto": "Forever añadió recetas de nivel bajo, así que los primeros setenta puntos salen más baratos que antes. Hay hasta una varita de práctica de novato.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1311.807,
+  "t1": 1319.883,
+  "tipo": "video",
+  "texto": "Del setenta al ciento cincuenta, con polvo extraño o esencia mágica inferior: absorción menor, vara de plata rúnica y varitas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1319.883,
+  "t1": 1327.493,
+  "tipo": "video",
+  "texto": "El rango de experto tiene un solo entrenador por bando, y está escondido. Hgarth, en un risco sobre el Refugio Roca del Sol,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1327.493,
+  "t1": 1338.004,
+  "tipo": "video",
+  "texto": "en Sierra Espolón. Y Kitta Vientofuego, en lo alto de la Torre de Azora, en el Bosque de Elwynn. La Alianza tiene además a Vanessa Sellers, en Dalaran.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1338.004,
+  "t1": 1346.486,
+  "tipo": "video",
+  "texto": "El artesano, para los dos bandos, solo lo enseña Annora, en Uldaman. Y aparece cuando limpias todo lo que hay a su alrededor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1346.486,
+  "t1": 1354.333,
+  "tipo": "video",
+  "texto": "Del doscientos veinticinco al trescientos, guantes de agilidad, aceites de maná y de zahorí, y la vara rúnica de arcanita para cerrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1354.333,
+  "t1": 1361.513,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: los collares por fin se encantan. Pero la fórmula no la enseña ningún entrenador: se compra con Favor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1361.513,
+  "t1": 1370.155,
+  "tipo": "video",
+  "texto": "entre treinta y nueve recetas. También hay encantamientos de arma nuevos, reliquias, y bastones y orbes para lanzadores de hechizos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1370.155,
+  "t1": 1379.436,
+  "tipo": "video",
+  "texto": "En el campamento, el encantador pone un laúd encantado. Y al ciento cuarenta, un recuperador arcano, que mejora lo que sacas al desencantar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1379.436,
+  "t1": 1386.696,
+  "tipo": "video",
+  "texto": "El plano del recuperador lo suelta la Sombra del archimago, en la Ciudad de Dalaran. Y la forja arcana, al trescientos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1386.696,
+  "t1": 1395.783,
+  "tipo": "video",
+  "texto": "sale de Nanaya, en el Bancal del Creador. Y un aviso para las bandas: la esencia maleable de la naturaleza solo se consigue desencantando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1395.783,
+  "t1": 1404.17,
+  "tipo": "video",
+  "texto": "Sin un encantador en el grupo, ese material no existe. Y con el encantamiento cerramos las seis profesiones de fabricación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1404.17,
+  "t1": 1412.648,
+  "tipo": "video",
+  "texto": "Cada una te da un punto de Legado al llegar a ciento cincuenta, a doscientos veinticinco y a trescientos. Son dieciocho puntos en total.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1412.648,
+  "t1": 1421.901,
+  "tipo": "video",
+  "texto": "La recolección y las secundarias no dan ninguno, así que si tu personaje principal lleva dos de recolección, que un alternativo suba la fabricación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1421.901,
+  "t1": 1432.819,
+  "tipo": "video",
+  "texto": "Y en el árbol de Legado de profesiones hay mejoras como horas extra, que sube la probabilidad de ganar puntos, o cosecha abundante, que da más materiales escasos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1432.819,
+  "t1": 1439.659,
+  "tipo": "video",
+  "texto": "Y un último comentario, con cariño. En el video del oro, un espectador, SoyoyoS, nos escribió:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1439.659,
+  "t1": 1448.014,
+  "tipo": "video",
+  "texto": "este video está lleno de imprecisiones, basura, saludos. Fíjate qué educación: nos llamó basura, pero se despidió.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1448.014,
+  "t1": 1456.267,
+  "tipo": "video",
+  "texto": "En Azeroth, eso ya es nivel de embajador de Ventormenta. Y lo digo en serio: si ves una imprecisión, dinos el minuto y el dato,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1456.267,
+  "t1": 1464.23,
+  "tipo": "video",
+  "texto": "que las correcciones justas salen en el siguiente video. El saludo, te lo devolvemos. Parada diez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1464.23,
+  "t1": 1473.22,
+  "tipo": "video",
+  "texto": "Cocina, la primera de las tres secundarias. Y en Forever, la que enciende el campamento. Porque la cocina ya no empieza con una receta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1473.22,
+  "t1": 1480.274,
+  "tipo": "video",
+  "texto": "empieza con una hoguera que llevas en la mochila. La hoguera básica se aprende con cocina uno y se hace con madera simple.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1480.274,
+  "t1": 1489.516,
+  "tipo": "video",
+  "texto": "Y aquí te explico el campamento, que hemos visto en cada parada. Alguien enciende la hoguera, y cada jugador alrededor pone un objeto de su profesión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1489.516,
+  "t1": 1499.622,
+  "tipo": "video",
+  "texto": "Te sientas un minuto y recibes los beneficios del campamento durante una hora, con todo lo que aporten esos objetos. La hoguera básica admite tres objetos, la de oficial cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1499.622,
+  "t1": 1507.436,
+  "tipo": "video",
+  "texto": "y la de experto diez. Y en la primera semana, los jugadores pusieron más de veintiocho millones de objetos de campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-176",
+  "t0": 1507.436,
+  "t1": 1518.567,
+  "tipo": "video",
+  "texto": "La ruta: del uno al cincuenta, pececitos luminosos o caballa. Del cincuenta al ciento cincuenta, pargo de lodo, atún blanco, y después el siluro mostacherizo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-177",
+  "t0": 1518.567,
+  "t1": 1525.887,
+  "tipo": "video",
+  "texto": "El experto es un libro: lo vende Wulan en Aldea Cazasombras, en Desolace, para la Horda, y Shandrina en el Lago Mystral,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-178",
+  "t0": 1525.887,
+  "t1": 1536.369,
+  "tipo": "video",
+  "texto": "en Vallefresno, para la Alianza. Y el artesano es una misión en Gadgetzan: doce huevos gigantes, diez carnes de almeja sabrosa y veinte quesos curados de Alterac.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-179",
+  "t0": 1536.369,
+  "t1": 1543.68,
+  "tipo": "video",
+  "texto": "Del doscientos veinticinco al trescientos, serviolas moteadas o branquirrojos, y la sopa de pargo nocturno para terminar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-180",
+  "t0": 1543.68,
+  "t1": 1553.03,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: la comida cocinada da un cinco por ciento más de experiencia por muertes. Y hay seis recetas de Favor, todas batidos de espíritu.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-181",
+  "t0": 1553.03,
+  "t1": 1559.38,
+  "tipo": "video",
+  "texto": "Y la receta más rara de todas: un plato de un pez nuevo, la descarrioaleta, que solo se pesca en Crestagrana.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-182",
+  "t0": 1559.38,
+  "t1": 1567.793,
+  "tipo": "video",
+  "texto": "Y su descripción dice, literalmente, cómeme. La hoguera de oficial sale de Lord Serpentis, en las Cuevas de los Lamentos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-183",
+  "t0": 1567.793,
+  "t1": 1580.216,
+  "tipo": "video",
+  "texto": "y el festín de Cocinitas, del mismísimo Cocinitas, en Las Minas de la Muerte. Y Cocinitas suelta también una varilla de remover que te hace cocinar un veinticinco por ciento más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-184",
+  "t0": 1580.216,
+  "t1": 1586.68,
+  "tipo": "video",
+  "texto": "Parada número once, la pesca, que no ocupa hueco, y que hasta sin habilidad da cofres en mar abierto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-185",
+  "t0": 1586.68,
+  "t1": 1595.219,
+  "tipo": "video",
+  "texto": "Del uno al setenta y cinco, en cualquier zona inicial, con un adorno lustroso. Todos los entrenadores de inicio están junto al agua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-186",
+  "t0": 1595.219,
+  "t1": 1602.894,
+  "tipo": "video",
+  "texto": "Del setenta y cinco al ciento cincuenta, en las capitales o en Los Baldíos, Costa Oscura, Loch Modan o los Páramos de Poniente.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-187",
+  "t0": 1602.894,
+  "t1": 1611.134,
+  "tipo": "video",
+  "texto": "El experto es un libro que vende el Viejo Heming, en Bahía del Botín. Con adornos brillantes, pescas en el Marjal Revolcafango.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-188",
+  "t0": 1611.134,
+  "t1": 1622.511,
+  "tipo": "video",
+  "texto": "El artesano es la misión de Nat Pagle, en el Marjal: cuatro peces en cuatro costas. Tuercespina, Desolace, el Pantano de las Penas y el Río Verdantis, en Feralas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-189",
+  "t0": 1622.511,
+  "t1": 1629.732,
+  "tipo": "video",
+  "texto": "Y para cerrar, Frondavil, Feralas, Tierras del Interior, Tanaris o Un'Goro, hasta el trescientos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-190",
+  "t0": 1629.732,
+  "t1": 1639.444,
+  "tipo": "video",
+  "texto": "Lo nuevo de Forever: el objeto de campamento del pescador es una pecera. Y da un ocho por ciento a todas las estadísticas, casi como una Bendición de reyes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-191",
+  "t0": 1639.444,
+  "t1": 1645.844,
+  "tipo": "video",
+  "texto": "Al ciento cuarenta, un expositor de pesca, que desde el dieciséis de noviembre da señuelos a todo el campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-192",
+  "t0": 1645.844,
+  "t1": 1656.287,
+  "tipo": "video",
+  "texto": "Su plano lo suelta Gelihast, en las Cavernas de Brazanegra. Y al trescientos, una cabaña de pesca, que suelta el profeta Jammal'an, en el Templo Sumergido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-193",
+  "t0": 1656.287,
+  "t1": 1662.887,
+  "tipo": "video",
+  "texto": "Hay peces poco comunes y raros nuevos, con sus propios beneficios. Y el concurso de pesca de Tuercespina,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-194",
+  "t0": 1662.887,
+  "t1": 1672.749,
+  "tipo": "video",
+  "texto": "desde el trece de noviembre, tiene muchos más ganadores. Y en la costa de Azshara hay más de trescientos cincuenta bancos de almejas de boca grande y de langostas pinza oscura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-195",
+  "t0": 1672.749,
+  "t1": 1680.59,
+  "tipo": "video",
+  "texto": "Para el pescador que ya llegó al final, ahí está la siguiente parada. Parada número doce, los primeros auxilios:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-196",
+  "t0": 1680.59,
+  "t1": 1687.695,
+  "tipo": "video",
+  "texto": "la profesión que casi todos dejan para el final, y la que más cambió en Forever. Porque aquí está la sorpresa de la parada cinco:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-197",
+  "t0": 1687.695,
+  "t1": 1697.162,
+  "tipo": "video",
+  "texto": "las pociones de sanación ya no son del alquimista. Ahora son de primeros auxilios, y esa la puede subir cualquier personaje. Del uno al setenta y cinco,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-198",
+  "t0": 1697.162,
+  "t1": 1705.196,
+  "tipo": "video",
+  "texto": "dos caminos: vendas de lino, u ochenta y seis pociones de sanación menores, con flor de paz, especias y viales.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-199",
+  "t0": 1705.196,
+  "t1": 1714.959,
+  "tipo": "video",
+  "texto": "Del setenta y cinco al ciento cincuenta, vendas de lana, o un curativo nuevo, la cataplasma simple, y treinta y una pociones de sanación. El experto es un libro:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-200",
+  "t0": 1714.959,
+  "t1": 1725.629,
+  "tipo": "video",
+  "texto": "lo vende Deneb Camino en Arathi para la Alianza, y Balai Lok'Wein en el Marjal para la Horda. Del ciento cincuenta al doscientos veinticinco, vendas de seda y de tejido mágico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-201",
+  "t0": 1725.629,
+  "t1": 1734.633,
+  "tipo": "video",
+  "texto": "Y el artesano es la misión de atenciones médicas: el doctor Gregory Victor en Sentencia, en Arathi, o el doctor Gustaf VanHowzen, en Theramore.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-202",
+  "t0": 1734.633,
+  "t1": 1742.287,
+  "tipo": "video",
+  "texto": "Salvas a quince heridos, los críticos primero, y la entregas en cuanto llegas a quince. No te quedes a ver qué pasa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-203",
+  "t0": 1742.287,
+  "t1": 1749.547,
+  "tipo": "video",
+  "texto": "Luego, vendas de tejido mágico y de paño rúnico. Y la alternativa nueva: del doscientos setenta y cinco al trescientos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-204",
+  "t0": 1749.547,
+  "t1": 1757.653,
+  "tipo": "video",
+  "texto": "pociones de sanación sublimes. El manual lo vende Pexmit, en Monte Hyjal, por ocho de oro, y no es fácil de encontrar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-205",
+  "t0": 1757.653,
+  "t1": 1766.74,
+  "tipo": "video",
+  "texto": "La Horda también lo consigue con una misión de Ortak Lomgok, en Flora Antigua. Además hay curativos nuevos: un torniquete de lana para los sangrados,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-206",
+  "t0": 1766.74,
+  "t1": 1774.044,
+  "tipo": "video",
+  "texto": "y recetas contra las enfermedades. En el campamento, el sanador pone un equipo de primeros auxilios que da aguante.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-207",
+  "t0": 1774.044,
+  "t1": 1784.305,
+  "tipo": "video",
+  "texto": "Luego un estudio de toxinas, y al trescientos, el laboratorio de médico de la peste. Piénsalo así: la profesión que no ocupa hueco, y que puede llevar cualquiera,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-208",
+  "t0": 1784.305,
+  "t1": 1795.43,
+  "tipo": "video",
+  "texto": "ahora fabrica pociones de sanación sublimes. Si tu personaje no tiene alquimia, ya no tiene excusa. Las pociones para la banda las puedes hacer tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-209",
+  "t0": 1795.43,
+  "t1": 1801.83,
+  "tipo": "video",
+  "texto": "Y antes de despedirnos, la pregunta de siempre: qué dos profesiones llevo. No hay una respuesta única,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-210",
+  "t0": 1801.83,
+  "t1": 1810.592,
+  "tipo": "video",
+  "texto": "pero sí parejas que tienen sentido en Forever. Minería con herrería o con ingeniería, porque el último tramo de herrería se come cientos de barras de torio,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-211",
+  "t0": 1810.592,
+  "t1": 1820.483,
+  "tipo": "video",
+  "texto": "y las barras nuevas salen de la minería. Herboristería con alquimia, porque son unas mil hierbas, y ahora el alquimista vende tintes a sastres y peleteros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-212",
+  "t0": 1820.483,
+  "t1": 1826.791,
+  "tipo": "video",
+  "texto": "Desuello con peletería, por el expositor de curtido y por esa tienda que da descanso a todo el campamento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-213",
+  "t0": 1826.791,
+  "t1": 1836.401,
+  "tipo": "video",
+  "texto": "Sastrería con encantamiento, porque ninguna pide recolección: lo que coses, lo desencantas. Y esa pareja te hace las bolsas de componentes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-214",
+  "t0": 1836.401,
+  "t1": 1845.369,
+  "tipo": "video",
+  "texto": "Y las tres secundarias, para todo el mundo: no ocupan hueco, una enciende el campamento, y otra ya hace tus pociones.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-215",
+  "t0": 1845.369,
+  "t1": 1855.082,
+  "tipo": "video",
+  "texto": "Y esa es la ruta de profesiones del uno al trescientos en World of Warcraft Forever, parada por parada, de la mena que no se funde en ninguna forja a la poción que ya no es del alquimista.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-216",
+  "t0": 1855.082,
+  "t1": 1863.382,
+  "tipo": "video",
+  "texto": "Ahora cuéntame en los comentarios qué dos profesiones llevas, y en qué número vas. Todos se leen, y muchos acaban en el siguiente video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-217",
+  "t0": 1863.382,
+  "t1": 1872.151,
+  "tipo": "video",
+  "texto": "Si este video te sirvió, suscríbete y compártelo con tu hermandad. Y si tu hermandad no tiene encantador, ya sabes a quién mandarle el video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-218",
+  "t0": 1872.151,
+  "t1": 1878.75,
+  "tipo": "video",
+  "texto": "Nos vemos en la próxima crónica. Y nos vemos en Azeroth.",
+  "clip_s": 8
+ }
+]

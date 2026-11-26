@@ -224,3 +224,9 @@
 - **Evitar:** otra miniatura del orco con número tachado; «ERRORES» como palabra principal hasta enero; temas de nivel 60 antes
   de que el servidor llegue ahí (meterlos 1-3 días antes del 9-dic, con «BANDAS» en el título).
 - **Sigue funcionando:** guía-ruta con mapa (CTR 8,5 %, búsqueda) → «RUTA de PROFESIONES» del 29-nov va bien encaminada.
+- **Confirmado (25-nov, noche): casi nadie es 60 todavía.** Censo de 60.tools al 25-nov: 33 140 de 723 226 personajes nivel 10+
+  = **4,6 %** en 60 (otros rastreadores 1,4-5 %). Comentarios del canal 17-25 nov que dicen su nivel: 18, 22, 22, 26, 30, 33, 36,
+  36, 37, 41, 48; en el propio video: «Soy nivel 36 no creo que llegue al 60 para guarida de onixia». Búsquedas que trajeron al
+  canal (11-24 nov, top 25): ninguna de «60», «Onyxia» ni «bandas»; manda «wow forever» (1 284). **Regla:** antes de un tema de
+  nivel 60, mirar el censo (60.tools/population); el grueso hoy está en 30-45 → temas de ese tramo (montura al 40, mazmorras
+  30-45, zonas 30-50, profesiones). Los de 60/bandas, 1-3 días antes del 9-dic y cuando el censo suba.

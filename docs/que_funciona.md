@@ -4,6 +4,16 @@ _Pedido del usuario (11-oct-2026): antes de cada video nuevo se revisa qué est�
 fórmula en los siguientes y mejorar poco a poco. No basta la tabla de `ideas`: hay que llegar a una explicación y
 dejarla escrita. Primera aplicación: Wild Next Door (`canales/formula/wild_next_door.md`)._
 
+**REGLA DE ORO desde el 26-nov-2026 (RGC §R45):** este proceso es obligatorio ANTES de cada video nuevo y cada vez que el
+usuario diga «hagamos un video», combinando SIEMPRE las dos columnas: lo que nos funciona en el canal y lo que despega en
+otros canales en español del mismo nicho (el «mundo abierto»). Sin él, no se escribe guion. Ejemplo completo:
+`canales/formula/cronicas_gaming.md` § «FÓRMULA VIGENTE — investigación del 26-nov-2026».
+- **Competidores fijos:** cada canal con ≥ 5 `competidores` en español en `canales/<alias>.json` → `ideas` (sus videos entran
+  siempre); se sacan de la sección 3 del informe («Canales que se repiten»). Búsquedas que cubran TODO el nicho, no solo el
+  último tema (en Gaming estaban cargadas a Banjo/Rare y no salían Robe ni Nachotaro).
+- **Herramientas de fuera extra:** Nexlev (plan gratis: 50 llamadas por semana) y vidIQ (créditos); si no responden, se dice y
+  se sigue con `ideas`, que usa nuestra cuota de la API.
+
 ## Cuándo
 - **Antes de proponer el tema de cada video nuevo**, en cualquier canal. Toma ~10 min y ~400 de cuota.
 - **A los 7 días de publicar cada video** (y otra vez a los 28): se mide y se anota el resultado en el registro de la

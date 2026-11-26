@@ -1,7 +1,67 @@
-# Fórmula de Crónicas del gaming (terror y sucesos raros en videojuegos) — qué funciona y por qué
-_Documento vivo (procedimiento: `docs/que_funciona.md`). Canal reconvertido el 13-oct-2026; aún SIN datos propios. Fuente: `canales/metricas/ideas/cronicas_gaming.md` (13-oct-2026)._
+# Fórmula de Crónicas del gaming (Nintendo/retro, SECUENCIA YT) — qué funciona y por qué
+_Documento vivo (procedimiento: `docs/que_funciona.md`; REGLA DE ORO de investigación: RGC §R45). La fórmula VIGENTE es la del
+26-nov-2026 (justo abajo); lo de más abajo es el histórico, en orden de fecha._
 
-## Fórmula vigente (hipótesis hasta tener datos propios)
+## FÓRMULA VIGENTE — investigación del 26-nov-2026 (RGC §R45: lo nuestro × el mundo abierto)
+Fuentes: `yt metricas cronicas_gaming 90` (`canales/metricas/cronicas_gaming_2026-11-26.json`) y `ideas --actualizar` con
+búsquedas ampliadas + 5 competidores fijos en español (`canales/metricas/ideas/cronicas_gaming.md`, 26-nov). Nexlev (límite
+semanal agotado hasta el 30-nov) y vidIQ (sin créditos) no se pudieron usar.
+
+**Lo nuestro (13 largos maduros, mediana 127 vistas; 812 subs; público 82 % hombres 25-44, 41 % México):**
+| video | × mediana | % visto | min | lectura |
+|---|---:|---:|---:|---|
+| Lo que Nintendo ELIMINÓ del REMAKE de Ocarina | ×15,3 (1 942) | 42 | 9:47 | actualidad en su pico + verbo fuerte + título corto |
+| Majora's Mask: historia y 12 secretos | ×2,4 | 40 | 15 | Zelda arrastrado por la ola del remake |
+| OoT REMAKE: 15 CAMBIOS frente al original | ×2,3 | 38 | 12 | actualidad |
+| Mario 64: historia y 20 secretos | ×1,8 | **16** | 21 | buen tema, se caen a la mitad |
+| Spyro 2 30 secretos / Pokémon 20 secretos | ×0,5 / ×0,6 | 14 / 18 | 25 / 15 | lista larga de un juego sin ola = fracaso |
+| Banjo-Tooie (historia, jiggies, mundos, jefes) | ×0,4-1,6 | 22-39 | 11-24 | nicho chico; 5 videos de Banjo en 6 semanas |
+- **Duración:** los de 10-12 min retienen 32-42 %; los de 21-25 min, 14-30 %. Más minutos NO dio más vistas.
+- **Búsquedas que AÚN llegan:** «navi zelda» 38, «saria» 19, «navi ocarina of time» 16, «doom en prueba de embarazo» 27, «suigi» 10:
+  son del catálogo viejo (privado desde el 13-oct). El público busca **personajes de Zelda con pregunta** y curiosidades raras.
+- Fuente de tráfico: suscriptores 59 %, búsqueda 27 %, sugeridos 9 %. El algoritmo todavía no empuja: hay que ganar búsquedas.
+
+**El mundo abierto (60 días, español, × sobre la mediana de cada canal):**
+- **Ola del remake de Ocarina (señal de TEMA, ≥ 4 canales):** Nintendúo «25 Secretos INCREÍBLES… Remake» ×5 (388 k) y «NO ES un
+  Remake» ×2,5; Shorts: Nintendúo «el truco más random» 1,5 M, Eme X «El Cofre IMPOSIBLE» ×4,3 (1 M), «Secreto del Lago Hylia» ×2,1,
+  «Este truco HUMILLA a los ReDead» ×3,6; Darunia baila (Luu, 6 690 subs) ×53.
+- **Mitos verificados (señal de FORMATO):** Robe «DESMENTÍ los MITOS más PERTURBADORES de MARIO 64 que son Reales» ×4,1 (716 k) y
+  «…ESCALOFRIANTES…» ×2,6 (445 k). Nuestro `sonic_exe` era este formato con un juego frío; con Mario 64/Zelda es otra cosa.
+- **«¿Por qué X NO vuelve?» (FORMATO pregunta):** Nachotaro «¿Por qué Zelda Twilight Princess NO vuelve?» ×5,4 (94 k);
+  «¿Por qué Metal Gear Twin Snakes NUNCA volverá?» ×1,6.
+- **Varios juegos, un secreto cada uno:** Marvelous Gamers (inglés, 57 k subs) «12 SNES Games With Secret Endings…» ×16,
+  «…Secret Levels…» ×18, «12 SNES Secrets That Sound Fake…» ×9. En español nadie lo hace todavía = hueco.
+- **Shorts que despegan en canales chicos:** DuoPixel (1 080 subs) secretos de Mario Bros ×4-6 (37-53 k); Nachotaro curiosidades de
+  hardware («botones de PS2 más fuerte sí servía» ×19,7, «GameCube de cabeza» ×5,2, «cartuchos de colores» ×2,5).
+- Competidores fijos en `canales/cronicas_gaming.json` → `ideas.competidores`: Nintendúo, Nachotaro, Eme X, Robe, DuoPixel.
+
+**Fórmula (el cruce de las dos columnas):**
+1. **Tema:** Zelda / Mario 64 / clásico con NOTICIA viva (remake, aniversario, relanzamiento) > clásico frío. Banjo-Tooie solo de
+   vez en cuando (ya hay 5 videos).
+2. **Ángulo:** lo ELIMINADO / lo OCULTO / el MITO comprobado / la PREGUNTA («¿por qué…?», «¿qué fue de…?»). Nunca «su historia y
+   los N secretos» a secas: ese envoltorio ya no rinde (×0,5-1,8, 14-27 % visto en los largos).
+3. **Título:** ≤ 55 caracteres, verbo fuerte en MAYÚSCULAS (ELIMINÓ, DESMENTÍ, NO vuelve), el nombre del juego entero (es la búsqueda).
+4. **Duración:** 10-14 min. Más de 15 min solo si el tema ya demostró demanda.
+5. **Shorts:** volver (P2 del 6-nov sigue sin hacerse): 1 Short por largo con la mejor curiosidad, título-pregunta.
+
+**3 temas propuestos (cada uno cambia UNA variable respecto a `oot_remake_eliminado`):**
+1. **«Los MITOS de Ocarina of Time que eran REALES»** — mismo juego y ola; cambia el ángulo a mito verificado (Robe ×4,1 + ×2,6).
+2. **«¿Por qué Nintendo NO rehace Majora's Mask?»** — misma ola, la secuela; cambia el formato a pregunta (Nachotaro ×5,4).
+3. **«¿Qué fue de Navi?»** (lore de personaje + su papel en el remake) — la búsqueda que más nos llega sin video público
+   («navi zelda» 38 + 3 variantes); cambia el tema a personaje.
+Hipótesis de la siguiente: con título corto y 10-14 min, cualquiera de las 3 supera ×3 la mediana (≥ 380 vistas a 7 días).
+
+**Aviso de la cola:** `bt_50_secretos` (24:50, Banjo-Tooie, lista larga) sale el 28-nov: según estos datos es el formato que peor
+rinde. No se toca sin el usuario; se mide a 7 días y, si confirma, «lista larga de un juego frío» pasa a «Evitar».
+
+## Evitar (26-nov-2026)
+- «X: su historia y los N secretos QUE IGNORASTE» de 20-25 min con un juego sin noticia (Spyro 2 ×0,5, Pokémon ×0,6).
+- Dos Banjo-Tooie seguidos; más de un Banjo cada ~3 semanas.
+
+---
+# HISTÓRICO
+
+## Fórmula del 13-oct (terror, hipótesis hasta tener datos propios)
 - **Tema:** leyenda/creepypasta de un juego famoso con gancho de objeto físico (disco, cartucho) y un giro «es ficción, pero…».
   Evidencia fuera: Short «Sonic.exe: El Cartucho Maldito…» ×8,7 en un canal de 51 subs; «historia de terror de un juego»
   (Monblu, Roblox) ×123 y ×35 en un canal de 6 740 subs; «leyendas de videojuegos» ×1,6 (Games Specter).

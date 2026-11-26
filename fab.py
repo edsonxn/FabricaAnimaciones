@@ -336,6 +336,8 @@ def main():
         asegurar_taller()
         print(f"Creado {destino}. Edita guion.py y ESTADO.md y luego: python fab.py {a[1]} todo")
         print("Regla (13-oct-2026): actualiza el panel de canales ahora y al terminar el video: python fab.py canales --actualizar")
+        print("REGLA DE ORO (26-nov-2026, RGC §R45): antes del guion, investigación lo nuestro × el mundo abierto: "
+              "yt metricas <canal> 90 + ideas <canal> --actualizar -> «FÓRMULA VIGENTE» con fecha en canales/formula/<canal>.md")
         return
     video, etapa, extra = a[0], a[1], a[2:]
     if etapa == "todo":

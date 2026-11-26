@@ -258,3 +258,13 @@
   video el vie 27-nov con /6: quedaría 2 días antes de PROFESIONES /7 (le quitaría vistas, como la RUTA a errores 60) y habría que
   hacerlo con prisas en 36 h. Repesca de /6 solo si el 2-dic la proyección queda bajo 10 mil → sáb 12 o dom 13-dic (lejos del 9 y el 16).
   Proyección al 25-nov: /6 ~8-12 mil (más el empujón del 9-dic) · /7 ~20-30 mil (formato RUTA) · /8, /9 y /10 ~15-20 mil cada uno → 75-110 mil.
+
+## Canales de WoW en ESPAÑOL (25-nov-2026; 125 largos de Forever desde el 25-oct, × = vistas ÷ mediana de los últimos largos del canal)
+- Datos: `canales/metricas/ideas/cronicas_warcraft_es_2026-11-25.json` (YouTube API, relevanceLanguage=es, 10 búsquedas).
+- **Mediana × por tipo:** addons/interfaz ×6,8 (11) · guía de clase ×4,4 (17) · oro ×4,0 (16) · leveo/ruta ×3,3 (22) · objetos
+  ×3,3 (5) · profesiones ×2,5 (7) · noticias ×1,6 (12) · mazmorras ×1,15 (16, dominan los directos de streamers) · secretos ×1,0 (8).
+- **Lo más fuerte:** Kadrath (68 mil subs) «Los ÍTEMS MÁS RAROS de WoW Forever son una LOCURA» ×2,6, 192 mil (20 mil/día) y «El
+  Negocio SECRETO de WoW Forever que Nadie Está Usando» ×2,5, 186 mil; TR4MUNT4N4 «CONSIGUE FÁCIL el SACO de DORMIR» ×18,6;
+  Khylen «Consigue tu Montura con estos Farmeos de ORO» ×13,3; guías de clase largas (NowYouPlay 39 min ×16, Cras ×14,6).
+- **Lectura:** el «secreto» suelto rinde poco en español (×1,0), salvo atado a ganar algo (oro, un objeto). Lo RARO y el
+  «consigue X» sí pegan. Las guías de mazmorras sueltas rinden poco → el 4-dic va como mazmorras + su objeto más raro.

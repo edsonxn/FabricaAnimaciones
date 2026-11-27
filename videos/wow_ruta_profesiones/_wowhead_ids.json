@@ -1,0 +1,371 @@
+{
+ "o_barra_azerotio": {
+  "ref": "forever/249726",
+  "tipo": "item",
+  "nombre_tooltip": "Barra de azerotio",
+  "nombre_en": "Azerothium Bar",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/249726",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_fundicion_magma": {
+  "ref": "forever/279952",
+  "tipo": "item",
+  "nombre_tooltip": "Fundición de magma",
+  "nombre_en": "Molten Foundry",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279952",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Objeto colocable; el plano es forever/273122."
+ },
+ "o_barra_bronce": {
+  "ref": "forever/2841",
+  "tipo": "item",
+  "nombre_tooltip": "Barra de bronce",
+  "nombre_en": "Bronze Bar",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/2841",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_diseno_peto_bendecidas": {
+  "ref": "forever/251446",
+  "tipo": "item",
+  "nombre_tooltip": "Diseño: peto de placas bendecidas",
+  "nombre_en": "Plans: Blessed Plate Chest",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/251446",
+  "equipado": "pegatinas/eq_o_diseno_peto_bendecidas.jpg",
+  "fuente_equipado": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/item/30/740638.png",
+  "nota_equipado": "visor 3D de Wowhead Forever del objeto que crea el plano: Peto de placas bendecidas (item 250594, displayId 740638)",
+  "nota": "Objeto creado: Peto de placas bendecidas = forever/250594."
+ },
+ "o_cajon_arrebatado": {
+  "ref": "forever/248683",
+  "tipo": "item",
+  "nombre_tooltip": "Cajón arrebatado: Mena de aprendiz",
+  "nombre_en": "Waylaid Crate: Apprentice Ore",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/248683",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Hay 31 cajones (248682-248713: Hierbas/Mena/Textiles/Curiosidades/Tejidos/Lingotes/Piezas x Aprendiz/Oficial/Experto/Artesano); elegido Mena de aprendiz. Ej.: 248703 Lingotes de aprendiz, 248684 Textiles de aprendiz."
+ },
+ "o_tubo_torio": {
+  "ref": "forever/16000",
+  "tipo": "item",
+  "nombre_tooltip": "Tubo de torio",
+  "nombre_en": "Thorium Tube",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/16000",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_dinamita_saft": {
+  "ref": "forever/260792",
+  "tipo": "item",
+  "nombre_tooltip": "Dinamita C-GUR",
+  "nombre_en": "SAF-T Dynamite",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/260792",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Nombre oficial es-MX: «Dinamita C-GUR» (SAF-T = C-GUR). Familia: Bomba de cobre SAF-T 260793, Bomba SAF-T 260805."
+ },
+ "o_parapente_goblin": {
+  "ref": "forever/260825",
+  "tipo": "item",
+  "nombre_tooltip": "Parapente goblin ultraliviano",
+  "nombre_en": "Ultralight Goblin Glider",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/260825",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Objeto; la receta es spell 1266938."
+ },
+ "o_invernadero": {
+  "ref": "forever/279964",
+  "tipo": "item",
+  "nombre_tooltip": "Invernadero",
+  "nombre_en": "Greenhouse",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279964",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273106."
+ },
+ "o_vela_incienso": {
+  "ref": "forever/279962",
+  "tipo": "item",
+  "nombre_tooltip": "Vela de incienso",
+  "nombre_en": "Incense Candle",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279962",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_elixir_oso_pardo": {
+  "ref": "forever/250351",
+  "tipo": "item",
+  "nombre_tooltip": "Elixir del oso pardo",
+  "nombre_en": "Elixir of the Grizzly",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/250351",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_cuchillo_afilado": {
+  "ref": "forever/269716",
+  "tipo": "item",
+  "nombre_tooltip": "Cuchillo para desollar afilado",
+  "nombre_en": "Keen Skinning Knife",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/269716",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_zapatos_gamuza": {
+  "ref": "forever/252467",
+  "tipo": "item",
+  "nombre_tooltip": "Zapatos de gamuza azul",
+  "nombre_en": "Blue Suede Shoes",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/252467",
+  "equipado": "pegatinas/eq_o_zapatos_gamuza.jpg",
+  "fuente_equipado": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/item/66/746818.png",
+  "nota_equipado": "visor 3D de Wowhead Forever (displayId 746818), render del modelo real sobre maniquí",
+  "nota": "Patrón: zapatos de gamuza azul = forever/252859 (slug o_patron_zapatos_gamuza en efectos.py)."
+ },
+ "o_expositor_curtido": {
+  "ref": "forever/279941",
+  "tipo": "item",
+  "nombre_tooltip": "Expositor de curtido",
+  "nombre_en": "Tanning Rack",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279941",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273096."
+ },
+ "o_tienda_campamento": {
+  "ref": "forever/279978",
+  "tipo": "item",
+  "nombre_tooltip": "Tienda de campamento",
+  "nombre_en": "Camp Tent",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279978",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Objeto; la receta es spell 1229432."
+ },
+ "o_estandarte_faccion": {
+  "ref": "forever/279972",
+  "tipo": "item",
+  "nombre_tooltip": "Estandarte de facción",
+  "nombre_en": "Faction Banner",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279972",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "279972 = Horda; 279973 = Alianza (mismo nombre)."
+ },
+ "o_mota_magia": {
+  "ref": "forever/247786",
+  "tipo": "item",
+  "nombre_tooltip": "Mota de magia",
+  "nombre_en": "Mote of Magic",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/247786",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_encantar_collar": {
+  "ref": "forever/spell/1249059",
+  "tipo": "spell",
+  "nombre_tooltip": "Encantar collar: agilidad",
+  "nombre_en": "Enchant Necklace - Agility",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/spell/1249059",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Es un hechizo (receta de Favor), no objeto: tooltip en /spell/. Variantes de collar con ids vecinos."
+ },
+ "o_forja_arcana": {
+  "ref": "forever/279987",
+  "tipo": "item",
+  "nombre_tooltip": "Forja arcana",
+  "nombre_en": "Arcane Forge",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279987",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273116."
+ },
+ "o_esencia_maleable": {
+  "ref": "forever/274030",
+  "tipo": "item",
+  "nombre_tooltip": "Esencia de la Naturaleza maleable",
+  "nombre_en": "Malleable Essence of Nature",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/274030",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Nombre oficial es-MX: «Esencia de la Naturaleza maleable»."
+ },
+ "o_hoguera_basica": {
+  "ref": "forever/279981",
+  "tipo": "item",
+  "nombre_tooltip": "Hoguera básica",
+  "nombre_en": "Basic Campfire Kit",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279981",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_delicia_whimsyfin": {
+  "ref": "forever/251525",
+  "tipo": "item",
+  "nombre_tooltip": "Delicia de descarrioaleta sabrosa",
+  "nombre_en": "Savory Whimsyfin Delight",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/251525",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Receta: forever/251526. Tooltip dice «Cómeme.»"
+ },
+ "o_cuenco_pescado": {
+  "ref": "forever/279967",
+  "tipo": "item",
+  "nombre_tooltip": "Cuenco de pescado",
+  "nombre_en": "Fish Bowl",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279967",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Nombre oficial es-MX: «Cuenco de pescado» (el video dice Pecera)."
+ },
+ "o_pocion_sanacion_sublime": {
+  "ref": "forever/13446",
+  "tipo": "item",
+  "nombre_tooltip": "Poción de sanación sublime",
+  "nombre_en": "Major Healing Potion",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/13446",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_torniquete_lana": {
+  "ref": "forever/255720",
+  "tipo": "item",
+  "nombre_tooltip": "Torniquete de lana",
+  "nombre_en": "Woolen Tourniquet",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/255720",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_brazales_hierro_verde": {
+  "ref": "forever/3835",
+  "tipo": "item",
+  "nombre_tooltip": "Brazales de hierro verdes",
+  "nombre_en": "Green Iron Bracers",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/3835",
+  "equipado": "pegatinas/eq_o_brazales_hierro_verde.jpg",
+  "fuente_equipado": "https://wow.zamimg.com/uploads/screenshots/normal/219747-green-iron-bracers.jpg",
+  "nota_equipado": "captura de usuario en Wowhead (item 3835, screenshot 219747, 2011), puestos en el personaje",
+  "nota": "Nombre oficial es-MX con «verdes»: «Brazales de hierro verdes»."
+ },
+ "o_oveja_explosiva": {
+  "ref": "forever/4384",
+  "tipo": "item",
+  "nombre_tooltip": "Oveja explosiva",
+  "nombre_en": "Explosive Sheep",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/4384",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_barra_torio": {
+  "ref": "forever/12359",
+  "tipo": "item",
+  "nombre_tooltip": "Barra de torio",
+  "nombre_en": "Thorium Bar",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/12359",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_laboratorio_alquimia": {
+  "ref": "forever/279990",
+  "tipo": "item",
+  "nombre_tooltip": "Laboratorio de alquimia",
+  "nombre_en": "Alchemy Laboratory",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279990",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273112."
+ },
+ "o_banco_trampero": {
+  "ref": "forever/279938",
+  "tipo": "item",
+  "nombre_tooltip": "Banco de trabajo de trampero",
+  "nombre_en": "Trapper's Workbench",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279938",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273109."
+ },
+ "o_maquina_coser": {
+  "ref": "forever/279945",
+  "tipo": "item",
+  "nombre_tooltip": "Máquina de coser",
+  "nombre_en": "Sewing Machine",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279945",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273121."
+ },
+ "o_patron_punos_runicos": {
+  "ref": "forever/254124",
+  "tipo": "item",
+  "nombre_tooltip": "Patrón: puños de paño rúnico",
+  "nombre_en": "Pattern: Runecloth Cuffs",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/254124",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_rueca": {
+  "ref": "forever/279943",
+  "tipo": "item",
+  "nombre_tooltip": "Rueca",
+  "nombre_en": "Spinning Wheel",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279943",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273099."
+ },
+ "o_festin_cocinitas": {
+  "ref": "forever/279957",
+  "tipo": "item",
+  "nombre_tooltip": "Festín de Cocinitas",
+  "nombre_en": "Cookie's Feast",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279957",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273102."
+ },
+ "o_expositor_pesca": {
+  "ref": "forever/279965",
+  "tipo": "item",
+  "nombre_tooltip": "Expositor de pesca",
+  "nombre_en": "Fishing Rack",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279965",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Plano: forever/273141."
+ },
+ "o_mena_torio_pesada": {
+  "ref": "forever/248815",
+  "tipo": "item",
+  "nombre_tooltip": "Mena de torio pesada",
+  "nombre_en": "Heavy Thorium Ore",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/248815",
+  "equipado": null,
+  "fuente_equipado": null
+ },
+ "o_semillas": {
+  "ref": "forever/268415",
+  "tipo": "item",
+  "nombre_tooltip": "Semillas de hierbas comunes",
+  "nombre_en": "Commonplace Herb Seeds",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/268415",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Semillas de hierbas comunes; rangos: 268416 poco comunes, 268417 inusuales, 268418 escasas."
+ },
+ "o_injertador": {
+  "ref": "forever/279947",
+  "tipo": "item",
+  "nombre_tooltip": "Injertador de semillas",
+  "nombre_en": "Seed Hybridizer",
+  "tooltip_url": "https://nether.wowhead.com/forever/mx/tooltip/item/279947",
+  "equipado": null,
+  "fuente_equipado": null,
+  "nota": "Nombre EN: Seed Hybridizer. Plano: forever/273120."
+ }
+}

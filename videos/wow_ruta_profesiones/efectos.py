@@ -12,7 +12,7 @@ Modelos: videos/wow_errores_60/efectos.py (helpers y bloque Overgear) y videos/w
   (las pociones de sanación se mudan de la alquimia a primeros auxilios), bolsas (6/8/12/14 casillas).
 - Comentarios (≤ 10 días, ninguno repetido): julsi Julsikakku · gracias1 Jesús, Óscar, Barón Rata, Steven · burla0 Goca ·
   burla1 Crisis · burla2 SoyoyoS (tarjetas en pegatinas/_comentarios.txt).
-- Overgear (escena overgear, 140-215 s): fondo de marca DEBAJO de reseñas, packshot y código; logo blanco; capturas FRESCAS de la página
+- Overgear (escena overgear, 280-355 s desde el 25-nov, entre minería y herrería): fondo de marca DEBAJO de reseñas, packshot y código; logo blanco; capturas FRESCAS de la página
   de coaching (25-nov: pantallas/og_coaching_hero.jpg «Voice or text», og_coaching_precio.jpg «Save 5 %» + «Cashback from 1 %»).
   python fab.py wow_ruta_profesiones fx --seco | FAB_FX_FINAL=1 python fab.py wow_ruta_profesiones fx hoja | fx
 """
@@ -32,7 +32,7 @@ OG = r"medios\_overgear" + "\\"
 OGF = OG + "forever\\"
 CREATIVO = OG + "CRONICAS10_forever.mp4"
 CODIGO = ("Usa el código CRONICAS10", -0.4)   # el código del creativo sale ~3 s después de entrar: así coincide con la voz
-FIN_OG = ("Parada uno. Minería", -.4)
+FIN_OG = ("Parada dos. Herrería", -.4)   # 25-nov: la promo va entre minería y herrería
 TEMA_PEG = "wow"
 AMAR, ROJO, VERDE, BLANCO, NAR = (255, 255, 160), (255, 70, 60), (40, 210, 90), (240, 240, 240), (255, 150, 60)
 AZUL = (70, 140, 255)
@@ -99,9 +99,24 @@ def mapa(nom, puntos, de, a, marcas, titulo, sub=None, estilo=None, zmax=1.5):
                     estilo=estilo, zmax=zmax)
 
 
+import json as _json
+_WH = _json.load(open(os.path.join(_D, "_wowhead_ids.json"), encoding="utf-8")) if os.path.exists(os.path.join(_D, "_wowhead_ids.json")) else {}
+_TIPS = []
+
+
 def tarj(en, slug, *a, **k):
-    """E.tarjeta_e con el retrato recortado a la cara."""
-    return E.tarjeta_e(en, Fc(slug), *a, **k)
+    """E.tarjeta_e con el retrato recortado a la cara. Si es un objeto con ID de Wowhead Forever (_wowhead_ids.json), al
+    otro lado sale su TOOLTIP REAL con estadísticas (APOYO wowhead) y, si se pone en el personaje, la foto de cómo se ve
+    equipado (pedido del usuario, 25-nov-2026)."""
+    out = [E.tarjeta_e(en, Fc(slug), *a, **k)]
+    w = _WH.get(slug) or {}
+    if w.get("ref"):
+        lado = .45 if k.get("x", .76) > .5 else .55      # junto a la tarjeta, fuera del sitio de las pegatinas (x .07-.27)
+        _TIPS.append(dict(en=en, wowhead=w["ref"], dur=k.get("dur", 5.0), x=lado, y=.46, size=.28))
+        if w.get("equipado"):
+            out.append(pv(en, os.path.join(_PEG, "eq_" + slug + ".jpg"), "Así se ve puesto", dur=k.get("dur", 5.0), x=.12 if lado < .5 else .88, y=.27,
+                          tam=290))
+    return out
 
 
 def mg(fn, de, a, marcas, nombre, y=.56, x=.5):
@@ -253,11 +268,11 @@ FX = [
     mapa("durotar", [(53.1, 25.5, "Cobre", "1-65", "o_mena_cobre"), (43.8, 64.7, "Vetas de cobre pobres", "Valle de los Retos", "o_mena_cobre")],
          ("Del uno al sesenta y cinco, cobre", -.2), ("y un entrenador júnior en cada uno|fin", .4),
          [("cobre, en cualquier zona inicial", .1), "hay vetas de cobre pobres"], "DUROTAR", "minería · del 1 al 65"),
-    mapa("teldrassil", [(56.9, 27.6, "Fragmentos de ámbar", "dan mena de cobre", None), (53.0, 51.1, "Fragmentos de ámbar grandes", "solo hasta 20", None)],
+    mapa("teldrassil", [(56.9, 27.6, "Fragmentos de ámbar", "dan mena de cobre", "o_mena_cobre"), (53.0, 51.1, "Fragmentos de ámbar grandes", "solo hasta 20", "o_mena_cobre")],
          ("Los elfos de la noche, que", -.2), ("suben la habilidad hasta veinte|fin", .4),
          [("ahora pican fragmentos de ámbar", .1), ("Dan mena de cobre, aunque", .3)], "TELDRASSIL", "elfos de la noche · sin cobre"),
     mapa("mulgore", [(56.7, 53.4, "Cueva de cobre", "5 vetas · reaparecen rápido", "o_mena_cobre"),
-                     (34.6, 53.2, "Excavación de Bael'dun", "la forja más cerca", None)],
+                     (34.6, 53.2, "Excavación de Bael'dun", "la forja más cerca", "o_yunque")],
          ("En Mulgore hay una cueva", -.2), ("está en la Excavación de Bael'dun|fin", .4),
          [("En Mulgore hay una cueva", .3), "La forja más cerca está"], "MULGORE", "una cueva con cinco vetas"),
     mapa("humedales", [(47.3, 62.2, "Cueva de estaño", "Alianza · 65-125", "o_mena_estano")],
@@ -296,8 +311,8 @@ FX = [
 ] + filav("pirita, bauxita y pecblenda", [("o_pirita", "Pirita", None), ("o_bauxita", "Bauxita", ("bauxita y pecblenda. Con", 0)),
                                           ("o_pecblenda", "Pecblenda", ("y pecblenda. Con la", 0))], y=.62, tam=300, dur=4.4) + [
     tarj(("Con la pecblenda se funde", .2), "o_barra_azerotio", "Barra de azerotio", "se funde con la pecblenda", dur=3.0, x=.74, tam=420),
-    mapa("hyjal", [(35.6, 83.3, "Torio pesado", "la mena nueva", "o_mena_torio_pesada"), (35.8, 47.6, "Torio pesado", None, None),
-                   (64.5, 86.0, "Torio pesado", "unas 120 vetas", None)],
+    mapa("hyjal", [(35.6, 83.3, "Torio pesado", "la mena nueva", "o_mena_torio_pesada"), (35.8, 47.6, "Torio pesado", None, "o_mena_torio_pesada"),
+                   (64.5, 86.0, "Torio pesado", "unas 120 vetas", "o_mena_torio_pesada")],
          ("Y en Monte Hyjal está la", -.2), ("Pero esa no se funde", -.1),
          [("Y en Monte Hyjal está la", .4), "la mena de torio pesada, en", "en unas ciento veinte vetas"], "MONTE HYJAL", "la única mena nueva"),
     E.rotulo_e(("Pero esa no se funde", 0), "No se funde en ninguna forja de Azeroth", sello="!", dur=3.4),
@@ -308,7 +323,7 @@ FX = [
     E.ficha_e("CAMPAMENTO DEL MINERO", ["o_fundicion_magma", "o_magnetita", "o_jardin_rocoso"], ("Los otros dos objetos de campamento del", -.2),
               ("que hace crecer una veta|fin", .6), [("Los otros dos objetos de campamento del", .3), "son la magnetita, que da",
                                                     "y el jardín rocoso, que"], etiquetas=["magma", "ataque", "veta"]),
-    mapa("hyjal", [(63.6, 86.7, "Torio rico", "más de 100 vetas", "o_mena_torio"), (76.3, 75.4, "Torio rico", "los últimos puntos", None)],
+    mapa("hyjal", [(63.6, 86.7, "Torio rico", "más de 100 vetas", "o_mena_torio"), (76.3, 75.4, "Torio rico", "los últimos puntos", "o_mena_torio")],
          ("Y un dato para el final", -.2), ("es el sitio|fin", .6),
          [("Monte Hyjal tiene, además, más", .3), "Para los últimos puntos"], "MONTE HYJAL", "torio rico · del 275 al 300"),
     # =========================================================== P02 · HERRERÍA (350-486 s)
@@ -326,7 +341,7 @@ FX = [
     mapa("forjaz", [(52.4, 41.2, "Bengus Deepforge", "junto a la gran fragua (A)", "bengus_deepforge")],
          ("y en Forjaz, un enano", -.1), ("Y la Alianza tiene una opción", -.2),
          [("y en Forjaz, un enano", .4)], "FORJAZ", "el experto de la Alianza"),
-    mapa("alterac", [(16.7, 68.8, "Ciudad de Dalaran", None, None), (19.7, 63.4, "Alard Schmied", "herrería hasta el 225 (A)", None)],
+    mapa("alterac", [(16.7, 68.8, "Ciudad de Dalaran", None, "ciudad_dalaran"), (19.7, 63.4, "Alard Schmied", "herrería hasta el 225 (A)", "o_prof_herreria")],
          ("Y la Alianza tiene una opción", -.2), ("En Darnassus, en cambio, no", -.1),
          [("Y la Alianza tiene una opción", .5), ("Alard Schmied, en Dalaran, enseña", .2)], "MONTAÑAS DE ALTERAC", "Dalaran · opción nueva"),
     E.rotulo_e(("En Darnassus, en cambio, no", 0), "Darnassus: sin herrero · los elfos, a Auberdine", sello="!", dur=4.2),
@@ -376,7 +391,7 @@ FX = [
     par(3, "INGENIERÍA", "o_prof_ingenieria", [(1, 56, "polvo y tornillos"), (56, 150, "bombas y dinamita"), (150, 200, "granadas y ovejas")],
         "Parada tres. Ingeniería", ("Del uno al cincuenta y seis", -.2), "el final: trastos y tubos de torio", ("Parada tres. Ingeniería", 2.2)),
     E.ficha_e("DEL 1 AL 56", ["o_polvo_explosivo_tosco", "inv_misc_gear_06", "o_llave_arco_voltaico"], ("Del uno al cincuenta y seis", -.2),
-              ("Empieza en Orgrimmar o en", -.2), ["polvo explosivo tosco y tornillos", "y tornillos de cobre, y", "la llave inglesa de arco"],
+              ("Empieza en Orgrimmar o en", -.2), ["polvo explosivo tosco y tornillos", "y tornillos de cobre, y", "la llave de tuerca arcoluz"],
               etiquetas=["polvo", "tornillos", "llave"]),
     E.rotulo_e(("Empieza en Orgrimmar o en", 0), "Empieza en Orgrimmar o en Forjaz", sello="!", dur=4.0),
     E.ficha_e("DEL 56 AL 150", ["inv_misc_bomb_09", "inv_misc_bomb_06", "inv_gizmo_pipe_01", "inv_gizmo_02"], ("Del cincuenta y seis al ciento", -.2),
@@ -395,12 +410,12 @@ FX = [
     mapa("hyjal", [(60.2, 61.4, "Kayleena Encantaflores", "artesano · novedad de Forever", "kayleena")],
          ("también Kayleena Encantaflores, en", -.4), ("Y para el final, trastos", -.1),
          [("también Kayleena Encantaflores, en", .2)], "MONTE HYJAL", "el otro artesano"),
-    tarj(("Y para el final, trastos", 0), "o_tubo_torio", "Tubo de torio", "unas 186 barras de torio", dur=4.6, x=.74, tam=420),
-    pv(("unas ciento ochenta y seis barras", -.9), "o_barra_torio", "Barra de torio ×186", dur=3.0, x=.17, y=.62),
-    mapa("cuna_invierno", [(61.2, 38.2, "Vista Eterna", "esquema del tubo de torio", None)],
+    tarj(("Y para el final, trastos", 0), "o_tubo_torio", "Tubo de torio", "unas 175 barras de torio", dur=4.6, x=.74, tam=420),
+    pv(("unas ciento setenta y cinco barras", -.9), "o_barra_torio", "Barra de torio ×175", dur=3.0, x=.17, y=.62),
+    mapa("cuna_invierno", [(61.2, 38.2, "Vista Eterna", "esquema del tubo de torio", "o_tubo_torio")],
          ("El esquema del tubo se compra", -.6), ("o con Kor'gar, en Claros", .2),
          [("El esquema del tubo se compra", -.1)], "CUNA DEL INVIERNO", "el esquema del tubo"),
-    mapa("riverglades", [(77.6, 50.8, "Kor'gar", "esquema del tubo de torio", None)],
+    mapa("riverglades", [(77.6, 50.8, "Kor'gar", "esquema del tubo de torio", "o_tubo_torio")],
          ("o con Kor'gar, en Claros", .2), ("en Cima del Trueno no hay", 0),
          [("o con Kor'gar, en Claros", .5)], "CLAROS DEL RÍO", "o con Kor'gar"),
     E.rotulo_e(("en Cima del Trueno no hay", 0), "Cima del Trueno y Darnassus: sin ingeniero", sello="0", dur=5.6),
@@ -425,7 +440,7 @@ FX = [
     com(("Y antes de seguir, un comentario", 0), "goca912", dur=11.0, x=.32, y=.32),
     E.peg_e(("un lingote de cobre de", -.2), "o_barra_cobre", "Barra de cobre · Alianza", dur=5.0, x=.26, y=.52, tam=340),
     E.peg_e(("lo mismo que uno de la Horda", -.2), "o_barra_cobre", "Barra de cobre · Horda", dur=4.0, x=.74, y=.52, tam=340),
-    mapa("mundo", [(71.8, 77.3, "Elwynn", "Alianza", None), (34.3, 44.1, "Durotar", "Horda", None)],
+    mapa("mundo", [(71.8, 77.3, "Elwynn", "Alianza", "o_cuero_ligero"), (34.3, 44.1, "Durotar", "Horda", "o_cuero_ligero")],
          ("te lo digo separado y", -.2), ("por lo menos ya sabes dónde", 0),
          [("te lo digo separado y", .3), "con el mapa de cada bando"], "AZEROTH", "cada bando, su mapa", zmax=1.2),
     pv(("ya sabes dónde comprar vendas", -.3), "o_venda_lino", "Venda de lino", dur=4.0, x=.76, y=.50, tam=340),
@@ -451,21 +466,21 @@ FX = [
     mapa("laderas", [(36.5, 56.1, "Sangrerregia", "115-170", "o_sangrerregia")],
          ("Del ciento quince al ciento setenta", -.2), ("o Sierra Espolón: hierba cardenal", .4),
          [("Del ciento quince al ciento setenta", 1.0)], "LADERAS DE TRABALOMAS", "115-170"),
-    mapa("sierra_espolon", [(35.0, 64.2, "Hierba cardenal", "115-170", None)],
+    mapa("sierra_espolon", [(35.0, 64.2, "Hierba cardenal", "115-170", "ico:inv_misc_herb_01")],
          ("o Sierra Espolón: hierba cardenal", .4), ("Del ciento setenta al doscientos cinco", -.2),
          [("o Sierra Espolón: hierba cardenal", .8)], "SIERRA ESPOLÓN", "hierba cardenal, acérita salvaje"),
-    mapa("tuercespina", [(35.1, 15.2, "Mostacho de Khadgar", "170-205", "o_mostacho_khadgar"), (45.7, 35.9, "Espina de oro", "170-205", None)],
+    mapa("tuercespina", [(35.1, 15.2, "Mostacho de Khadgar", "170-205", "o_mostacho_khadgar"), (45.7, 35.9, "Espina de oro", "170-205", "ico:inv_misc_herb_15")],
          ("Del ciento setenta al doscientos cinco", -.2), ("Y Claros del Río es una", -.1),
          [("la Vega de Tuercespina o Arathi", .2), ("pálida, espina de oro y", .3)], "VEGA DE TUERCESPINA", "o Arathi"),
     pv(("Y Claros del Río es una", -.1), "claros_del_rio_2", "Claros del Río · llena de espina de oro", dur=4.2, x=.74, y=.46, tam=540),
-    mapa("tanaris", [(44.9, 34.7, "Flor de fuego", "205-230", None), (46.9, 65.5, "Loto cárdeno", "205-230", None)],
+    mapa("tanaris", [(44.9, 34.7, "Flor de fuego", "205-230", "ico:inv_misc_herb_19"), (46.9, 65.5, "Loto cárdeno", "205-230", "ico:inv_misc_herb_17")],
          ("Del doscientos cinco al doscientos treinta", -.2), ("Aprende el rango de artesano antes de ir", -.1),
          [("Tanaris o La Garganta de", .1), ("Tanaris o La Garganta de", 1.1)], "TANARIS", "o La Garganta de Fuego"),
     E.rotulo_e(("Aprende el rango de artesano antes de ir", 0), "El artesano, antes de ir: allí no hay entrenador", sello="!", dur=4.2),
     mapa("interior", [(65.4, 47.4, "Solea", "230-270", "o_solea"), (57.6, 42.6, "Champiñón fantasma", "cueva · 230-270", "o_champinon_fantasma")],
          ("Y al final, Tierras del", -.2), ("y Frondavil, con hojasueño", .6),
          [("Tierras del Interior con solea", .3), "y champiñón fantasma"], "TIERRAS DEL INTERIOR", "solea y champiñón fantasma"),
-    mapa("frondavil", [(53.6, 14.9, "Hojasueño", "270-300", "o_hojasueno"), (42.9, 43.6, "Flor de plaga", "270-300", None)],
+    mapa("frondavil", [(53.6, 14.9, "Hojasueño", "270-300", "o_hojasueno"), (42.9, 43.6, "Flor de plaga", "270-300", "ico:inv_misc_herb_plaguebloom")],
          ("y Frondavil, con hojasueño", .6), ("Lo nuevo de Forever: en Monte", -.1),
          [("y Frondavil, con hojasueño", .8), "y flor de plaga, hasta"], "FRONDAVIL", "hasta el 300"),
     mapa("hyjal", [(44.3, 75.2, "Hojapesadilla", "hierba nueva", "o_hojapesadilla"), (45.2, 86.8, "Salvia demoníaca", "hierba nueva", "o_salvia_demoniaca")],
@@ -508,16 +523,16 @@ FX = [
         ["Se compra en Feralas", "En Tuercespina", "O en Tanaris"], calidad="verde", dur=5.0),
     tar("Del doscientos veinticinco al trescientos, más", "Del 225 al 300", "trade_alchemy",
         ["Protección contra la naturaleza", "Transmutaciones de paso", "Aceite escama pétrea", dict(t="Elixir de defensa superior", c=V)], dur=8.4),
-    mg(M.contadores("ALQUIMIA DEL 1 AL 300", [("trade_herbalism", "hierbas, más o menos", 1000, 0, 1)], ("POR ESO, CON HERBORISTERÍA", 2)),
+    mg(M.contadores("ALQUIMIA DEL 1 AL 300", [("trade_herbalism", "hierbas, más o menos", 620, 0, 1)], ("POR ESO, CON HERBORISTERÍA", 2)),
        ("En total, del uno al", -.2), ("combina con la herboristería|fin", .6),
-       [("alrededor de mil hierbas", 0), ("alrededor de mil hierbas|fin", 0), "Por eso tanta gente la"], "mil hierbas", y=.52),
+       [("más de seiscientas hierbas", 0), ("más de seiscientas hierbas|fin", 0), "Por eso tanta gente la"], "620 hierbas", y=.52),
     mapa("pantano", [(48.5, 55.8, "Rogvar", "alquimia · artesano (H)", "rogvar")],
          ("El rango de artesano lo enseñan Rogvar", -.2), ("y Kylanna, en Feralas, para", -.1),
          [("lo enseñan Rogvar, en el", .1)], "PANTANO DE LAS PENAS", "la Horda"),
     mapa("feralas", [(32.6, 43.8, "Kylanna", "alquimia · artesano (A)", "kylanna")],
          ("y Kylanna, en Feralas, para", -.1), ("Y hay un tercero para los", -.1),
          [("y Kylanna, en Feralas, para", .3)], "FERALAS", "la Alianza"),
-    mapa("frondavil", [(50.9, 81.3, "Santuario Esmeralda", None, None),
+    mapa("frondavil", [(50.9, 81.3, "Santuario Esmeralda", None, "shurome"),
                        (51.5, 82.0, "Maestro micólogo Shurome", "del 1 al 300 · los dos bandos", "shurome")],
          ("Y hay un tercero para los", -.1), ("Y por ahora te deja", -.1),
          [("Y hay un tercero para los", .4), ("Shurome, en el Santuario Esmeralda", .2)], "FRONDAVIL", "un tercero, para los dos bandos"),
@@ -557,7 +572,7 @@ FX = [
     mapa("mundo", [(33.1, 43.8, "Durotar", "jabalíes · 1-75 (H)", "o_prof_desuello"), (72.0, 76.8, "Bosque de Elwynn", "lobos · 1-75 (A)", "o_prof_desuello")],
          ("Y en Forever, los bichos", -.1), ("Para el tramo del setenta", -.1),
          ["jabalíes en Durotar", "o lobos en el Bosque"], "AZEROTH", "desuello · hasta el 75", zmax=1.2),
-    mapa("baldios", [(60.2, 33.8, "Zancudos", "75-150 (H)", "o_prof_desuello"), (61.2, 54.7, "Fuerte del Norte", "raptores al oeste", None)],
+    mapa("baldios", [(60.2, 33.8, "Zancudos", "75-150 (H)", "o_prof_desuello"), (61.2, 54.7, "Fuerte del Norte", "raptores al oeste", "ico:inv_misc_leatherscrap_05")],
          ("Para el tramo del setenta", -.1), ("Y la Alianza, a Loch", .5),
          [("la Horda va a Los", .2), ("al oeste de Fuerte del", .2)], "LOS BALDÍOS", "la Horda · 75-150"),
     mapa("loch_modan", [(63.2, 40.8, "Cocodrilos, osos y jabalíes", "75-130 (A)", "o_prof_desuello")],
@@ -566,13 +581,13 @@ FX = [
     mapa("alterac", [(36.5, 85.9, "Cueva de yetis", "150-225 · entrada desde Laderas", "o_prof_desuello")],
          ("Del ciento cincuenta al doscientos veinticinco, la", -.2), ("O los huargos del Bosque", -.5),
          [("la cueva de yetis de Laderas", .1)], "MONTAÑAS DE ALTERAC", "la cueva de yetis"),
-    mapa("bosque_ocaso", [(62.8, 68.2, "Huargos", "150-225", "o_prof_desuello"), (64.6, 35.6, "Huargos", None, None)],
+    mapa("bosque_ocaso", [(62.8, 68.2, "Huargos", "150-225", "o_prof_desuello"), (64.6, 35.6, "Huargos", None, "o_cuero_pesado")],
          ("O los huargos del Bosque", -.5), ("Del doscientos veinticinco al doscientos ochenta", .3),
          [("O los huargos del Bosque", .4), ("O los huargos del Bosque", 1.4)], "BOSQUE DEL OCASO", "los huargos"),
     mapa("feralas", [(54.6, 56.5, "Vega Cicatriz Feral", "yetis · 225-280", "o_cuero_grueso")],
          ("Del doscientos veinticinco al doscientos ochenta", .3), ("Y el final, los diemetradones", -.1),
          [("los yetis de la Vega", .1)], "FERALAS", "225-280"),
-    mapa("ungoro", [(36.0, 35.2, "Diemetradones y pterrordáctilos", "280-300", "o_cuero_basto"), (35.5, 46.0, "Diemetradones", None, None)],
+    mapa("ungoro", [(36.0, 35.2, "Diemetradones y pterrordáctilos", "280-300", "o_cuero_basto"), (35.5, 46.0, "Diemetradones", None, "o_cuero_basto")],
          ("Y el final, los diemetradones", -.1), ("Y la Horda tiene un regalo", -.1),
          [("Y el final, los diemetradones", .5), ("y pterrordáctilos de Un'Goro", .2)], "CRÁTER DE UN'GORO", "280-300"),
     tarj(("el cuchillo para desollar afilado", -.3), "o_cuchillo_afilado", "Cuchillo para desollar afilado",
@@ -608,7 +623,7 @@ FX = [
         ["Pellejo ligero curtido", "Guantes de cuero repujado", "60-130: pantalones y cinturones", dict(t="Pellejo medio curtido", c=V)], dur=7.0),
 ] + filav("lo enseñan Una en Cima", [(Fc("una"), "Una · Cima del Trueno", None), (Fc("telonis"), "Telonis · Darnassus", "Telonis en Darnassus, o")],
           y=.56, tam=380, dur=3.0, xs=(.18, .42)) + [
-    mapa("shendralas", [(42.6, 78.1, "Jarael", "peletería · experto", None)],
+    mapa("shendralas", [(42.6, 78.1, "Jarael", "peletería · experto", "o_prof_peleteria")],
          ("o Jarael en Shen'dralas, la", -1.6), ("Del ciento treinta al doscientos cinco", .4),
          [("o Jarael en Shen'dralas, la", .3)], "SHEN'DRALAS", "zona nueva, casi de la Horda"),
     E.rotulo_e(("Del ciento treinta al doscientos cinco", .4), "Del 130 al 205", sello="!", dur=4.4),
@@ -647,7 +662,7 @@ FX = [
          ("y Georgio Bolero en Ventormenta", -.3), ("y en Shen'dralas está Melanori", -.8),
          [("y Georgio Bolero en Ventormenta", .3)], "VENTORMENTA", "el experto de la Alianza"),
     E.rotulo_e(("La Alianza tiene además a Charles", 0), "Alianza: también Charles Worth, en Dalaran", sello="!", dur=3.0),
-    mapa("shendralas", [(43.4, 77.8, "Melanori", "sastrería · experto", None)],
+    mapa("shendralas", [(43.4, 77.8, "Melanori", "sastrería · experto", "o_prof_sastreria")],
          ("y en Shen'dralas está Melanori", -.8), ("Del ciento cuarenta al doscientos, tejido", .3),
          [("y en Shen'dralas está Melanori", .4)], "SHEN'DRALAS", "y Melanori"),
     pv(("Del ciento cuarenta al doscientos, tejido", .3), "o_tejido_magico", "Tejido mágico · del 140 al 200", dur=4.6, x=.17, y=.62),
@@ -656,7 +671,7 @@ FX = [
     mapa("laderas", [(63.7, 20.8, "Daryl Stack", "Molino Tarren · artesano (H)", "daryl_stack")],
          ("El artesano: Daryl Stack, en", -.2), ("y Timothy Worthington, en Theramore", -.2),
          [("El artesano: Daryl Stack, en", .4)], "LADERAS DE TRABALOMAS", "el artesano de la Horda"),
-    mapa("marjal", [(65.0, 47.1, "Theramore", None, None), (66.2, 51.8, "Timothy Worthington", "artesano (A)", "timothy_worthington")],
+    mapa("marjal", [(65.0, 47.1, "Theramore", None, "o_pano_runico"), (66.2, 51.8, "Timothy Worthington", "artesano (A)", "timothy_worthington")],
          ("y Timothy Worthington, en Theramore", -.2), ("Compra el hilo rúnico antes", -.1),
          [("y Timothy Worthington, en Theramore", .2), ("y Timothy Worthington, en Theramore", 1.0)], "MARJAL REVOLCAFANGO", "el artesano de la Alianza"),
     pv(("Compra el hilo rúnico antes", -.1), "o_hilo_runico", "Hilo rúnico · cómpralo antes", dur=3.2, x=.17, y=.62),
@@ -665,12 +680,12 @@ FX = [
        ("Entre el doscientos y el doscientos veinticinco", .5), ("ya son de catorce casillas|fin", .7),
        ["diecisiete bolsas de tejido mágico", "ya son de catorce casillas"], "bolsas rojas", y=.50),
     pv(("un patrón nuevo, los puños", -.2), "o_patron_punos_runicos", "Patrón: puños de paño rúnico", dur=4.4, x=.17, y=.62),
-    mapa("hyjal", [(48.2, 33.6, "Pexmit", "patrón de los puños · 10 de oro", "pexmit"), (13.6, 53.0, "Kal'tinzan", "misión de la Horda", None)],
-         ("Lo vende Pexmit, en Monte Hyjal, por diez", -.2), ("Calcula unos mil cuatrocientos paños", -.1),
+    mapa("hyjal", [(48.2, 33.6, "Pexmit", "patrón de los puños · 10 de oro", "pexmit"), (13.6, 53.0, "Kal'tinzan", "misión de la Horda", "o_patron_punos_runicos")],
+         ("Lo vende Pexmit, en Monte Hyjal, por diez", -.2), ("Del doscientos veinticinco al doscientos ochenta, calcula", -.1),
          [("Lo vende Pexmit, en Monte Hyjal, por diez", .3), "o la Horda lo saca"], "MONTE HYJAL", "los puños de paño rúnico"),
-    mg(M.contadores("SOLO DEL 250 AL 280", [("inv_fabric_purplefire_01", "paños rúnicos", 1400, 0, 1)], ("LA SASTRERÍA SE PAGA EN TELA", 2)),
-       ("Calcula unos mil cuatrocientos paños", -.1), ("se paga en tela|fin", .7),
-       ["unos mil cuatrocientos paños", "solo para ese tramo", "La sastrería se paga"], "1400 paños", y=.52),
+    mg(M.contadores("DEL 225 AL 280", [("inv_fabric_purplefire_01", "paños rúnicos", 1400, 0, 1)], ("LA SASTRERÍA SE PAGA EN TELA", 2)),
+       ("Del doscientos veinticinco al doscientos ochenta, calcula", -.1), ("se paga en tela|fin", .7),
+       ["unos mil cuatrocientos paños", "unos mil cuatrocientos paños|fin", "La sastrería se paga"], "1400 paños", y=.52),
     mg(P.bolsas("BOLSAS DE COMPONENTES · LA QUINTA RANURA", [(F("o_bolsa_componentes_lino"), "De lino", 6), (F("o_bolsa_componentes_lino"), "De lana", 8),
                                                          (F("o_bolsa_componentes_lino"), "Grande", 12), (F("o_bolsa_componentes_lino"), "Grande", 14)],
                 "las grandes, con Favor"),
@@ -711,7 +726,7 @@ FX = [
     mapa("elwynn", [(65.8, 68.1, "Torre de Azora", None, "torre_azora"), (64.8, 70.6, "Kitta Vientofuego", "experto (A) · en lo alto", "kitta")],
          ("Y Kitta Vientofuego, en lo", -.1), ("La Alianza tiene además a Vanessa", -.1),
          [("en lo alto de la Torre", .2), ("Y Kitta Vientofuego, en lo", 2.2)], "BOSQUE DE ELWYNN", "la Torre de Azora"),
-    mapa("alterac", [(16.8, 62.3, "Vanessa Sellers", "encantamiento (A) · Dalaran", None)],
+    mapa("alterac", [(16.8, 62.3, "Vanessa Sellers", "encantamiento (A) · Dalaran", "o_prof_encantamiento")],
          ("La Alianza tiene además a Vanessa", -.1), ("El artesano, para los dos bandos", -.1),
          [("La Alianza tiene además a Vanessa", .5)], "MONTAÑAS DE ALTERAC", "Dalaran"),
     mapa("inhospitas", [(44.2, 12.2, "Annora", "Uldaman · artesano, los dos bandos", "annora")],
@@ -765,7 +780,7 @@ FX = [
     mapa("desolace", [(26.2, 69.8, "Wulan", "Aldea Cazasombras · libro de cocina (H)", "wulan")],
          ("El experto es un libro: lo vende Wulan", -.2), ("y Shandrina en el Lago", -.1),
          [("El experto es un libro: lo vende Wulan", .5)], "DESOLACE", "el libro de la Horda"),
-    mapa("vallefresno", [(51.7, 73.4, "Lago Mystral", None, None), (49.4, 67.0, "Shandrina", "libro de cocina de experto (A)", "shandrina")],
+    mapa("vallefresno", [(51.7, 73.4, "Lago Mystral", None, "o_libro_cocina_expertos"), (49.4, 67.0, "Shandrina", "libro de cocina de experto (A)", "shandrina")],
          ("y Shandrina en el Lago", -.1), ("Y el artesano es una misión en Gadgetzan", -.1),
          [("y Shandrina en el Lago", .5), ("en Vallefresno, para la Alianza", 0)], "VALLEFRESNO", "el libro de la Alianza"),
 ] + filav("doce huevos gigantes, diez carnes", [("o_huevo_gigante", "12 huevos gigantes", None),
@@ -880,7 +895,7 @@ FX = [
        "combo minería", y=.50),
     E.ficha_e("HERBORISTERÍA + ALQUIMIA", ["o_prof_herboristeria", "o_prof_alquimia"], ("Herboristería con alquimia, porque", -.2),
               ("a sastres y peleteros|fin", .4), [("Herboristería con alquimia, porque", .1), ("Herboristería con alquimia, porque", .7)],
-              etiquetas=["~1000 hierbas", "tintes"]),
+              etiquetas=["600+ hierbas", "tintes"]),
     E.ficha_e("DESUELLO + PELETERÍA", ["o_prof_desuello", "o_prof_peleteria", "o_tienda_campamento"], ("Desuello con peletería, por", -.2),
               ("da descanso a todo el campamento|fin", .4), [("Desuello con peletería, por", .1), ("Desuello con peletería, por", .7), "por esa tienda que da"],
               etiquetas=["desuello", "peletería", "tienda"]),
@@ -898,6 +913,27 @@ FX = [
     E.peg_e(("Y si tu hermandad no", -.2), "o_prof_encantamiento", "¿Tu hermandad no tiene encantador?", dur=4.6, x=.76, y=.50),
     E.rotulo_e(("Nos vemos en la próxima crónica", 0), "Nos vemos en Azeroth", sello="!", dur=3.6),
 ]
+# LISTA DE COMPRAS de cada parada (pedido del usuario, 25-nov-2026): en la pausa de 6,5 s que cierra cada parada ("post"
+# en guion.py), tramos 1-75 / 75-150 / 150-225 / 225-300; datos con fuentes en _listas_compras.json (wow-professions Forever,
+# nombres de Wowhead Forever es-MX); en las de recolección, «LO QUE RECOGES».
+_LC = _json.load(open(os.path.join(_D, "_listas_compras.json"), encoding="utf-8"))
+_LC_ICO = dict(p01="o_prof_mineria", p02="o_prof_herreria", p03="o_prof_ingenieria", p04="o_prof_herboristeria",
+               p05="o_prof_alquimia", p06="o_prof_desuello", p07="o_prof_peleteria", p08="o_prof_sastreria",
+               p09="o_prof_encantamiento", p10="o_prof_cocina", p11="o_prof_pesca", p12="o_prof_primeros_auxilios")
+_LC_FIN = {"p01": "Para los últimos puntos, es",
+           "p02": "Y un detalle de combate",
+           "p03": "Y al trescientos, el banco",
+           "p04": "Y el plano del invernadero",
+           "p05": "Su plano lo suelta allí",
+           "p06": "Y al trescientos llega un",
+           "p07": "Y ojo: solo se coloca",
+           "p08": "El plano del telar es",
+           "p09": "Sin un encantador en el",
+           "p10": "Y Cocinitas suelta también una",
+           "p11": "Para el pescador que ya",
+           "p12": "Las pociones para la banda"}
+FX += [mg(P.lista_compras(_LC[k]["prof"], F(_LC_ICO[k]), _LC[k]["tramos"], _LC[k].get("tipo", "fabricacion")),
+          (_LC_FIN[k] + "|fin", .25), (_LC_FIN[k] + "|fin", 6.4), [], f"lista de compras {k}", y=.5) for k in _LC_ICO]
 FX = [d for x in FX for d in (x if isinstance(x, list) else [x])]
 _TAR = [d for d in FX if "tarjeta" in d and "tipo" not in d]      # las fichas de interfaz (tar) van a APOYOS
 FX = [d for d in FX if not ("tarjeta" in d and "tipo" not in d)]
@@ -947,4 +983,4 @@ APOYOS = [
         ["Tecla K", "Buscador y filtros", dict(t="Botón «Crear todo»", c=V)], dur=5.0),
     tar("Una rama de talentos escrita", "Rama de talentos de una guía", "inv_misc_book_09",
         ["Escrita antes del último ajuste", dict(t="Puede estar desfasada", c=RJ), dict(t="El coach mira la versión de hoy", c=V)], dur=5.6),
-] + _TAR
+] + _TAR + _TIPS

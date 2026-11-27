@@ -1,0 +1,918 @@
+{
+ "scene-001": {
+  "viejo": "scene-001",
+  "parte": 0
+ },
+ "scene-002": {
+  "viejo": "scene-002",
+  "parte": 0
+ },
+ "scene-003": {
+  "viejo": "scene-003",
+  "parte": 0
+ },
+ "scene-004": {
+  "viejo": "scene-004",
+  "parte": 0
+ },
+ "scene-005": {
+  "viejo": "scene-005",
+  "parte": 0
+ },
+ "scene-006": {
+  "viejo": "scene-006",
+  "parte": 0
+ },
+ "scene-007": {
+  "viejo": "scene-007",
+  "parte": 0
+ },
+ "scene-008": {
+  "viejo": "scene-008",
+  "parte": 0
+ },
+ "scene-009": {
+  "viejo": "scene-009",
+  "parte": 0
+ },
+ "scene-010": {
+  "viejo": "scene-010",
+  "parte": 0
+ },
+ "scene-011": {
+  "viejo": "scene-011",
+  "parte": 0
+ },
+ "scene-012": {
+  "viejo": "scene-012",
+  "parte": 0
+ },
+ "scene-013": {
+  "viejo": "scene-013",
+  "parte": 0
+ },
+ "scene-014": {
+  "viejo": "scene-014",
+  "parte": 0
+ },
+ "scene-015": {
+  "viejo": "scene-015",
+  "parte": 0
+ },
+ "scene-016": {
+  "viejo": "scene-016",
+  "parte": 0
+ },
+ "scene-017": {
+  "viejo": "scene-017",
+  "parte": 0
+ },
+ "scene-018": {
+  "viejo": "scene-026",
+  "parte": 0
+ },
+ "scene-019": {
+  "viejo": "scene-027",
+  "parte": 0
+ },
+ "scene-020": {
+  "viejo": "scene-028",
+  "parte": 0
+ },
+ "scene-021": {
+  "viejo": "scene-029",
+  "parte": 0
+ },
+ "scene-022": {
+  "viejo": "scene-030",
+  "parte": 0
+ },
+ "scene-023": {
+  "viejo": "scene-031",
+  "parte": 0
+ },
+ "scene-024": {
+  "viejo": "scene-032",
+  "parte": 0
+ },
+ "scene-025": {
+  "viejo": "scene-033",
+  "parte": 0
+ },
+ "scene-026": {
+  "viejo": "scene-034",
+  "parte": 0
+ },
+ "scene-027": {
+  "viejo": "scene-035",
+  "parte": 0
+ },
+ "scene-028": {
+  "viejo": "scene-036",
+  "parte": 0
+ },
+ "scene-029": {
+  "viejo": "scene-037",
+  "parte": 0
+ },
+ "scene-030": {
+  "viejo": "scene-038",
+  "parte": 0
+ },
+ "scene-031": {
+  "viejo": "scene-039",
+  "parte": 0
+ },
+ "scene-032": {
+  "viejo": "scene-040",
+  "parte": 0
+ },
+ "scene-033": {
+  "viejo": "scene-041",
+  "parte": 0
+ },
+ "scene-034": {
+  "viejo": "scene-017",
+  "parte": 1
+ },
+ "scene-035": {
+  "viejo": "scene-018",
+  "parte": 0
+ },
+ "scene-036": {
+  "viejo": "scene-019",
+  "parte": 0
+ },
+ "scene-037": {
+  "viejo": "scene-020",
+  "parte": 0
+ },
+ "scene-038": {
+  "viejo": "scene-021",
+  "parte": 0
+ },
+ "scene-039": {
+  "viejo": "scene-022",
+  "parte": 0
+ },
+ "scene-040": {
+  "viejo": "scene-023",
+  "parte": 0
+ },
+ "scene-041": {
+  "viejo": "scene-024",
+  "parte": 0
+ },
+ "scene-042": {
+  "viejo": "scene-025",
+  "parte": 0
+ },
+ "scene-043": {
+  "viejo": "scene-041",
+  "parte": 1
+ },
+ "scene-044": {
+  "viejo": "scene-042",
+  "parte": 0
+ },
+ "scene-045": {
+  "viejo": "scene-043",
+  "parte": 0
+ },
+ "scene-046": {
+  "viejo": "scene-044",
+  "parte": 0
+ },
+ "scene-047": {
+  "viejo": "scene-045",
+  "parte": 0
+ },
+ "scene-048": {
+  "viejo": "scene-046",
+  "parte": 0
+ },
+ "scene-049": {
+  "viejo": "scene-047",
+  "parte": 0
+ },
+ "scene-050": {
+  "viejo": "scene-048",
+  "parte": 0
+ },
+ "scene-051": {
+  "viejo": "scene-049",
+  "parte": 0
+ },
+ "scene-052": {
+  "viejo": "scene-050",
+  "parte": 0
+ },
+ "scene-053": {
+  "viejo": "scene-051",
+  "parte": 0
+ },
+ "scene-054": {
+  "viejo": "scene-052",
+  "parte": 0
+ },
+ "scene-055": {
+  "viejo": "scene-053",
+  "parte": 0
+ },
+ "scene-056": {
+  "viejo": "scene-054",
+  "parte": 0
+ },
+ "scene-057": {
+  "viejo": "scene-055",
+  "parte": 0
+ },
+ "scene-058": {
+  "viejo": "scene-056",
+  "parte": 0
+ },
+ "scene-059": {
+  "viejo": "scene-057",
+  "parte": 0
+ },
+ "scene-060": {
+  "viejo": "scene-057",
+  "parte": 1
+ },
+ "scene-061": {
+  "viejo": "scene-058",
+  "parte": 0
+ },
+ "scene-062": {
+  "viejo": "scene-059",
+  "parte": 0
+ },
+ "scene-063": {
+  "viejo": "scene-060",
+  "parte": 0
+ },
+ "scene-064": {
+  "viejo": "scene-060",
+  "parte": 1
+ },
+ "scene-065": {
+  "viejo": "scene-061",
+  "parte": 0
+ },
+ "scene-066": {
+  "viejo": "scene-062",
+  "parte": 0
+ },
+ "scene-067": {
+  "viejo": "scene-063",
+  "parte": 0
+ },
+ "scene-068": {
+  "viejo": "scene-064",
+  "parte": 0
+ },
+ "scene-069": {
+  "viejo": "scene-065",
+  "parte": 0
+ },
+ "scene-070": {
+  "viejo": "scene-066",
+  "parte": 0
+ },
+ "scene-071": {
+  "viejo": "scene-067",
+  "parte": 0
+ },
+ "scene-072": {
+  "viejo": "scene-068",
+  "parte": 0
+ },
+ "scene-073": {
+  "viejo": "scene-069",
+  "parte": 0
+ },
+ "scene-074": {
+  "viejo": "scene-070",
+  "parte": 0
+ },
+ "scene-075": {
+  "viejo": "scene-071",
+  "parte": 0
+ },
+ "scene-076": {
+  "viejo": "scene-072",
+  "parte": 0
+ },
+ "scene-077": {
+  "viejo": "scene-073",
+  "parte": 0
+ },
+ "scene-078": {
+  "viejo": "scene-074",
+  "parte": 0
+ },
+ "scene-079": {
+  "viejo": "scene-075",
+  "parte": 0
+ },
+ "scene-080": {
+  "viejo": "scene-076",
+  "parte": 0
+ },
+ "scene-081": {
+  "viejo": "scene-077",
+  "parte": 0
+ },
+ "scene-082": {
+  "viejo": "scene-078",
+  "parte": 0
+ },
+ "scene-083": {
+  "viejo": "scene-079",
+  "parte": 0
+ },
+ "scene-084": {
+  "viejo": "scene-080",
+  "parte": 0
+ },
+ "scene-085": {
+  "viejo": "scene-081",
+  "parte": 0
+ },
+ "scene-086": {
+  "viejo": "scene-082",
+  "parte": 0
+ },
+ "scene-087": {
+  "viejo": "scene-083",
+  "parte": 0
+ },
+ "scene-088": {
+  "viejo": "scene-084",
+  "parte": 0
+ },
+ "scene-089": {
+  "viejo": "scene-085",
+  "parte": 0
+ },
+ "scene-090": {
+  "viejo": "scene-086",
+  "parte": 0
+ },
+ "scene-091": {
+  "viejo": "scene-087",
+  "parte": 0
+ },
+ "scene-092": {
+  "viejo": "scene-088",
+  "parte": 0
+ },
+ "scene-093": {
+  "viejo": "scene-089",
+  "parte": 0
+ },
+ "scene-094": {
+  "viejo": "scene-090",
+  "parte": 0
+ },
+ "scene-095": {
+  "viejo": "scene-091",
+  "parte": 0
+ },
+ "scene-096": {
+  "viejo": "scene-092",
+  "parte": 0
+ },
+ "scene-097": {
+  "viejo": "scene-093",
+  "parte": 0
+ },
+ "scene-098": {
+  "viejo": "scene-093",
+  "parte": 1
+ },
+ "scene-099": {
+  "viejo": "scene-094",
+  "parte": 0
+ },
+ "scene-100": {
+  "viejo": "scene-095",
+  "parte": 0
+ },
+ "scene-101": {
+  "viejo": "scene-096",
+  "parte": 0
+ },
+ "scene-102": {
+  "viejo": "scene-097",
+  "parte": 0
+ },
+ "scene-103": {
+  "viejo": "scene-098",
+  "parte": 0
+ },
+ "scene-104": {
+  "viejo": "scene-099",
+  "parte": 0
+ },
+ "scene-105": {
+  "viejo": "scene-100",
+  "parte": 0
+ },
+ "scene-106": {
+  "viejo": "scene-101",
+  "parte": 0
+ },
+ "scene-107": {
+  "viejo": "scene-102",
+  "parte": 0
+ },
+ "scene-108": {
+  "viejo": "scene-103",
+  "parte": 0
+ },
+ "scene-109": {
+  "viejo": "scene-104",
+  "parte": 0
+ },
+ "scene-110": {
+  "viejo": "scene-105",
+  "parte": 0
+ },
+ "scene-111": {
+  "viejo": "scene-106",
+  "parte": 0
+ },
+ "scene-112": {
+  "viejo": "scene-107",
+  "parte": 0
+ },
+ "scene-113": {
+  "viejo": "scene-108",
+  "parte": 0
+ },
+ "scene-114": {
+  "viejo": "scene-109",
+  "parte": 0
+ },
+ "scene-115": {
+  "viejo": "scene-110",
+  "parte": 0
+ },
+ "scene-116": {
+  "viejo": "scene-111",
+  "parte": 0
+ },
+ "scene-117": {
+  "viejo": "scene-112",
+  "parte": 0
+ },
+ "scene-118": {
+  "viejo": "scene-113",
+  "parte": 0
+ },
+ "scene-119": {
+  "viejo": "scene-114",
+  "parte": 0
+ },
+ "scene-120": {
+  "viejo": "scene-115",
+  "parte": 0
+ },
+ "scene-121": {
+  "viejo": "scene-116",
+  "parte": 0
+ },
+ "scene-122": {
+  "viejo": "scene-117",
+  "parte": 0
+ },
+ "scene-123": {
+  "viejo": "scene-118",
+  "parte": 0
+ },
+ "scene-124": {
+  "viejo": "scene-119",
+  "parte": 0
+ },
+ "scene-125": {
+  "viejo": "scene-120",
+  "parte": 0
+ },
+ "scene-126": {
+  "viejo": "scene-121",
+  "parte": 0
+ },
+ "scene-127": {
+  "viejo": "scene-122",
+  "parte": 0
+ },
+ "scene-128": {
+  "viejo": "scene-122",
+  "parte": 1
+ },
+ "scene-129": {
+  "viejo": "scene-123",
+  "parte": 0
+ },
+ "scene-130": {
+  "viejo": "scene-124",
+  "parte": 0
+ },
+ "scene-131": {
+  "viejo": "scene-125",
+  "parte": 0
+ },
+ "scene-132": {
+  "viejo": "scene-126",
+  "parte": 0
+ },
+ "scene-133": {
+  "viejo": "scene-127",
+  "parte": 0
+ },
+ "scene-134": {
+  "viejo": "scene-128",
+  "parte": 0
+ },
+ "scene-135": {
+  "viejo": "scene-129",
+  "parte": 0
+ },
+ "scene-136": {
+  "viejo": "scene-130",
+  "parte": 0
+ },
+ "scene-137": {
+  "viejo": "scene-131",
+  "parte": 0
+ },
+ "scene-138": {
+  "viejo": "scene-132",
+  "parte": 0
+ },
+ "scene-139": {
+  "viejo": "scene-133",
+  "parte": 0
+ },
+ "scene-140": {
+  "viejo": "scene-134",
+  "parte": 0
+ },
+ "scene-141": {
+  "viejo": "scene-135",
+  "parte": 0
+ },
+ "scene-142": {
+  "viejo": "scene-135",
+  "parte": 1
+ },
+ "scene-143": {
+  "viejo": "scene-136",
+  "parte": 0
+ },
+ "scene-144": {
+  "viejo": "scene-137",
+  "parte": 0
+ },
+ "scene-145": {
+  "viejo": "scene-138",
+  "parte": 0
+ },
+ "scene-146": {
+  "viejo": "scene-139",
+  "parte": 0
+ },
+ "scene-147": {
+  "viejo": "scene-140",
+  "parte": 0
+ },
+ "scene-148": {
+  "viejo": "scene-141",
+  "parte": 0
+ },
+ "scene-149": {
+  "viejo": "scene-142",
+  "parte": 0
+ },
+ "scene-150": {
+  "viejo": "scene-143",
+  "parte": 0
+ },
+ "scene-151": {
+  "viejo": "scene-144",
+  "parte": 0
+ },
+ "scene-152": {
+  "viejo": "scene-145",
+  "parte": 0
+ },
+ "scene-153": {
+  "viejo": "scene-146",
+  "parte": 0
+ },
+ "scene-154": {
+  "viejo": "scene-147",
+  "parte": 0
+ },
+ "scene-155": {
+  "viejo": "scene-148",
+  "parte": 0
+ },
+ "scene-156": {
+  "viejo": "scene-149",
+  "parte": 0
+ },
+ "scene-157": {
+  "viejo": "scene-150",
+  "parte": 0
+ },
+ "scene-158": {
+  "viejo": "scene-150",
+  "parte": 1
+ },
+ "scene-159": {
+  "viejo": "scene-151",
+  "parte": 0
+ },
+ "scene-160": {
+  "viejo": "scene-152",
+  "parte": 0
+ },
+ "scene-161": {
+  "viejo": "scene-153",
+  "parte": 0
+ },
+ "scene-162": {
+  "viejo": "scene-154",
+  "parte": 0
+ },
+ "scene-163": {
+  "viejo": "scene-155",
+  "parte": 0
+ },
+ "scene-164": {
+  "viejo": "scene-156",
+  "parte": 0
+ },
+ "scene-165": {
+  "viejo": "scene-157",
+  "parte": 0
+ },
+ "scene-166": {
+  "viejo": "scene-158",
+  "parte": 0
+ },
+ "scene-167": {
+  "viejo": "scene-159",
+  "parte": 0
+ },
+ "scene-168": {
+  "viejo": "scene-160",
+  "parte": 0
+ },
+ "scene-169": {
+  "viejo": "scene-161",
+  "parte": 0
+ },
+ "scene-170": {
+  "viejo": "scene-162",
+  "parte": 0
+ },
+ "scene-171": {
+  "viejo": "scene-163",
+  "parte": 0
+ },
+ "scene-172": {
+  "viejo": "scene-163",
+  "parte": 1
+ },
+ "scene-173": {
+  "viejo": "scene-164",
+  "parte": 0
+ },
+ "scene-174": {
+  "viejo": "scene-165",
+  "parte": 0
+ },
+ "scene-175": {
+  "viejo": "scene-166",
+  "parte": 0
+ },
+ "scene-176": {
+  "viejo": "scene-167",
+  "parte": 0
+ },
+ "scene-177": {
+  "viejo": "scene-168",
+  "parte": 0
+ },
+ "scene-178": {
+  "viejo": "scene-169",
+  "parte": 0
+ },
+ "scene-179": {
+  "viejo": "scene-170",
+  "parte": 0
+ },
+ "scene-180": {
+  "viejo": "scene-170",
+  "parte": 1
+ },
+ "scene-181": {
+  "viejo": "scene-171",
+  "parte": 0
+ },
+ "scene-182": {
+  "viejo": "scene-172",
+  "parte": 0
+ },
+ "scene-183": {
+  "viejo": "scene-173",
+  "parte": 0
+ },
+ "scene-184": {
+  "viejo": "scene-174",
+  "parte": 0
+ },
+ "scene-185": {
+  "viejo": "scene-175",
+  "parte": 0
+ },
+ "scene-186": {
+  "viejo": "scene-176",
+  "parte": 0
+ },
+ "scene-187": {
+  "viejo": "scene-177",
+  "parte": 0
+ },
+ "scene-188": {
+  "viejo": "scene-178",
+  "parte": 0
+ },
+ "scene-189": {
+  "viejo": "scene-179",
+  "parte": 0
+ },
+ "scene-190": {
+  "viejo": "scene-180",
+  "parte": 0
+ },
+ "scene-191": {
+  "viejo": "scene-181",
+  "parte": 0
+ },
+ "scene-192": {
+  "viejo": "scene-182",
+  "parte": 0
+ },
+ "scene-193": {
+  "viejo": "scene-183",
+  "parte": 0
+ },
+ "scene-194": {
+  "viejo": "scene-184",
+  "parte": 0
+ },
+ "scene-195": {
+  "viejo": "scene-185",
+  "parte": 0
+ },
+ "scene-196": {
+  "viejo": "scene-186",
+  "parte": 0
+ },
+ "scene-197": {
+  "viejo": "scene-187",
+  "parte": 0
+ },
+ "scene-198": {
+  "viejo": "scene-188",
+  "parte": 0
+ },
+ "scene-199": {
+  "viejo": "scene-189",
+  "parte": 0
+ },
+ "scene-200": {
+  "viejo": "scene-190",
+  "parte": 0
+ },
+ "scene-201": {
+  "viejo": "scene-191",
+  "parte": 0
+ },
+ "scene-202": {
+  "viejo": "scene-192",
+  "parte": 0
+ },
+ "scene-203": {
+  "viejo": "scene-193",
+  "parte": 0
+ },
+ "scene-204": {
+  "viejo": "scene-194",
+  "parte": 0
+ },
+ "scene-205": {
+  "viejo": "scene-195",
+  "parte": 0
+ },
+ "scene-206": {
+  "viejo": "scene-195",
+  "parte": 1
+ },
+ "scene-207": {
+  "viejo": "scene-196",
+  "parte": 0
+ },
+ "scene-208": {
+  "viejo": "scene-197",
+  "parte": 0
+ },
+ "scene-209": {
+  "viejo": "scene-198",
+  "parte": 0
+ },
+ "scene-210": {
+  "viejo": "scene-199",
+  "parte": 0
+ },
+ "scene-211": {
+  "viejo": "scene-200",
+  "parte": 0
+ },
+ "scene-212": {
+  "viejo": "scene-201",
+  "parte": 0
+ },
+ "scene-213": {
+  "viejo": "scene-202",
+  "parte": 0
+ },
+ "scene-214": {
+  "viejo": "scene-203",
+  "parte": 0
+ },
+ "scene-215": {
+  "viejo": "scene-204",
+  "parte": 0
+ },
+ "scene-216": {
+  "viejo": "scene-205",
+  "parte": 0
+ },
+ "scene-217": {
+  "viejo": "scene-206",
+  "parte": 0
+ },
+ "scene-218": {
+  "viejo": "scene-207",
+  "parte": 0
+ },
+ "scene-219": {
+  "viejo": "scene-208",
+  "parte": 0
+ },
+ "scene-220": {
+  "viejo": "scene-209",
+  "parte": 0
+ },
+ "scene-221": {
+  "viejo": "scene-210",
+  "parte": 0
+ },
+ "scene-222": {
+  "viejo": "scene-211",
+  "parte": 0
+ },
+ "scene-223": {
+  "viejo": "scene-212",
+  "parte": 0
+ },
+ "scene-224": {
+  "viejo": "scene-213",
+  "parte": 0
+ },
+ "scene-225": {
+  "viejo": "scene-214",
+  "parte": 0
+ },
+ "scene-226": {
+  "viejo": "scene-215",
+  "parte": 0
+ },
+ "scene-227": {
+  "viejo": "scene-216",
+  "parte": 0
+ },
+ "scene-228": {
+  "viejo": "scene-217",
+  "parte": 0
+ },
+ "scene-229": {
+  "viejo": "scene-218",
+  "parte": 0
+ }
+}

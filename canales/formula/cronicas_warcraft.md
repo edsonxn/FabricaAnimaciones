@@ -275,3 +275,21 @@
   verificar) · 9-dic /9 «Lo que CAMBIA el 9 de DICIEMBRE (aunque no seas 60)» → empuja a /6 · 12-13 dic, si hace falta repescar
   /6: AJUSTES y ADDONS (la categoría más fuerte en español, ×6,8; la nuestra del 9-nov salió floja con 9 resubidas y título con
   paréntesis) · 16-dic /10: los cambios de las clases, si salen los reworks (guía de clase ×4,4; encaja con el coaching; SIN tier list).
+
+## Cambios de estilo pedidos por el usuario (25-nov-2026, revisión de `wow_ruta_profesiones` NPB46LhvBPw → rehecho)
+Valen para TODO video del canal desde hoy (detalle técnico: `docs/estilo_secuencia_yt.md` § «CAMBIOS DEL USUARIO AL KIT»).
+- **Promo de Overgear entre el 1.º y el 2.º punto (≈ min 4-5)**, nunca a los 2-3 min: «la promo entra muy temprano… primero narrar
+  1 o 2 puntos para conservar retención». Datos: con la promo a los 3-4 min los videos perdían ~12 puntos de audiencia en ~50 s;
+  a los 10:15 no perdió nada. Los briefs de Overgear no fijan minuto. La primera frase de la promo enlaza con lo recién narrado.
+- **Mapas: siempre el mapa original a todo color**, con un ícono en cada punto (material, hierba, personaje). Variedad solo en
+  trazos, pines y cuadros de texto (original y sus 2 variantes, oro, madera). Nada de mapas en sepia ni azules.
+- **El holograma arcano azul queda fuera**; sus animaciones siguen en el estilo «madera» (madera, pergamino y oro).
+- **Personajes en tarjeta: siempre se les ve la cara.**
+- **Objetos: tooltip real de Wowhead al lado** (estadísticas del juego) y foto de cómo se ve puesto si es equipable.
+- **Guías (profesiones, rutas, equipo): LISTA DE COMPRAS por tramo** («para cada profesión… la lista completa de materiales del
+  1-75, 75-150, al 225 y al 300, aproximada, con variaciones según tus recetas»): `mg_prof.lista_compras` en una pausa de 6,5 s
+  al cierre de cada parada; cifras con fuente en `videos/<v>/_listas_compras.json` (wow-professions Forever, nombres de Wowhead
+  Forever es-MX). La voz no puede dar otra cifra que la de la lista (se corrigieron 175 barras de torio, 600+ hierbas, 1400
+  paños del 225 al 280 y «llave de tuerca arcoluz»).
+- **Texto legible**: nada de letra negra chica sobre amarillo.
+

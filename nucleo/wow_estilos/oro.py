@@ -300,7 +300,7 @@ def placa_oro(tam, seed=0):
 
 
 def marco(w, h, borde=40, radio=16, tipo='rect', interior='piedra', seed=1, inlay=True, oscuro=.58,
-          sombra=14, adornos=False, base=PIEDRA):
+          sombra=14, adornos=False, base=PIEDRA, surco=True):
     """Marco tallado: moldura de oro · banda de piedra biselada (con hilo de oro) · moldura interior · fondo.
     interior='piedra' (tablilla) o 'hueco' (ventana transparente con sombra interior para meter mapa/foto)."""
     w, h = int(w), int(h)
@@ -333,7 +333,7 @@ def marco(w, h, borde=40, radio=16, tipo='rect', interior='piedra', seed=1, inla
         ao = np.clip(d / 24, 0, 1) * .4 + .6
         rgb = rgb + st2 * (rec * ao)[..., None] * c3[..., None]
         gi = borde * .45 + 4
-        if gi * 2 + 20 < min(w, h) - 2 * (g1 + b + g2) and borde >= 14:
+        if surco and gi * 2 + 20 < min(w, h) - 2 * (g1 + b + g2) and borde >= 14:
             ga, gb = M(g1 + b + g2 + gi), M(g1 + b + g2 + gi + 2.2)
             surco = np.clip(ga - gb, 0, 1)
             luz = np.clip(np.roll(np.roll(surco, 2, 0), 2, 1) - surco, 0, 1)
@@ -608,7 +608,9 @@ def placa(txt, tam=30, ruta=F_GRAB, estilo='oro', borde=12, padx=None, gemas=Non
     padx = padx if padx is not None else int(tam * .9) + (int(tam * .7) if gemas else 0)
     w = tx.w - 2 * tx.pad + 2 * padx + 2 * borde
     h = int(tam * 1.25) + 2 * borde + 10
-    pl = marco(w, h, borde=borde, radio=borde * .7, interior='piedra', seed=seed, inlay=False, oscuro=oscuro, sombra=8)
+    # sin surco (25-nov-2026): en placas bajas el surco tallado quedaba pegado al texto y se leía «[TEXTO_CON_GUION]»
+    pl = marco(w, h, borde=borde, radio=borde * .7, interior='piedra', seed=seed, inlay=False, oscuro=oscuro, sombra=8,
+               surco=False)
     cx, cy = pl.w / 2, pl.h / 2
     pegar_spr(pl, tx, cx, cy + 1)
     if gemas:
@@ -647,7 +649,8 @@ def foto_enmarcada(ruta, w, h, borde=16, seed=8, tipo='rect'):
     im = (ruta if isinstance(ruta, Image.Image) else Image.open(ruta)).convert('RGB')
     s = max(iw / im.width, ih / im.height)
     im = im.resize((int(math.ceil(im.width * s)), int(math.ceil(im.height * s))), Image.LANCZOS)
-    x0, y0 = (im.width - iw) // 2, (im.height - ih) // 2
+    # recorte desde arriba (regla del usuario 25-nov-2026: en las tarjetas de personaje SIEMPRE se le ve la cara)
+    x0, y0 = (im.width - iw) // 2, int((im.height - ih) * .15)
     ph = np.asarray(im.crop((x0, y0, x0 + iw, y0 + ih))).astype(np.float32)
     lum = ph @ np.array([.299, .587, .114], np.float32)
     ph = (lum[..., None] + (ph - lum[..., None]) * .9) * np.array([1.04, 1.0, .9], np.float32)
@@ -820,6 +823,16 @@ def _foto_img(fuente_img, w=400, h=400):
     bg = Image.new('RGBA', im.size, FONDO_FOTO + (255,))
     bg.alpha_composite(im)
     return bg.convert('RGB')
+
+
+def _en_fila(a, b, gap=-6):
+    """Dos sprites lado a lado (a a la izquierda), centrados en vertical."""
+    w = a.w + b.w + gap
+    h = max(a.h, b.h)
+    out = Spr(np.zeros((h, w, 3), np.float32), np.zeros((h, w), np.float32))
+    pegar_spr(out, b, a.w + gap + b.w / 2, h / 2)
+    pegar_spr(out, a, a.w / 2, h / 2)
+    return out
 
 
 def _apilar(sprs, gap=-10):
@@ -1181,7 +1194,7 @@ class Pegatina:
         s = max(w / foto.width, h / foto.height)
         foto = foto.resize((max(w, int(math.ceil(foto.width * s))), max(h, int(math.ceil(foto.height * s)))), Image.LANCZOS)
         x0 = (foto.width - w) // 2
-        y0 = (foto.height - h) // 2 if tipo != 'arco' else int((foto.height - h) * .2)
+        y0 = int((foto.height - h) * .15) if tipo != 'arco' else int((foto.height - h) * .2)   # cara (25-nov-2026)
         ph = np.asarray(foto.crop((x0, y0, x0 + w, y0 + h))).astype(np.float32)
         lum = ph @ np.array([.299, .587, .114], np.float32)
         ph = (lum[..., None] + (ph - lum[..., None]) * .92) * np.array([1.04, 1.0, .92], np.float32)
@@ -1293,6 +1306,10 @@ class Mapa:
             nom = placa(p[2], 28 if i == ult else 24, borde=14, seed=7 + i) if len(p) > 2 and p[2] else None
             sb = texto(p[3], 24, F_SERIF_I, 'marfil', 3, 3) if len(p) > 3 and p[3] else None
             rot = _apilar([nom, sb]) if (nom is not None or sb is not None) else None
+            f_ico = p[4] if len(p) > 4 and p[4] else None
+            if rot is not None and f_ico is not None:     # ícono fijo junto al nombre (regla del usuario, 25-nov-2026)
+                ico = foto_enmarcada(_foto_img(f_ico, 104, 104), 104, 104, borde=9, seed=31 + i)
+                rot = _en_fila(ico, rot)
             self.pts.append(dict(d=d, gem=g, rot=rot, hc=g.ancla[1] * g.h - g.centro[1]))
         fotos = [p[4] if len(p) > 4 and p[4] else None for p in puntos]
         if objeto and n and fotos[-1] is None:

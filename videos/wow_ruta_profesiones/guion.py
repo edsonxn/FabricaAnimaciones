@@ -81,20 +81,7 @@ ESCENAS = [
         'Las profesiones tienen ventana propia, con la tecla K, con buscador, filtros y un botón de crear todo. Y la mochila tiene una quinta ranura, solo para la bolsa de componentes.',
         'Y ninguna profesión da un bonus pasivo. Su valor está en lo que fabricas, y en algo nuevo que vas a ver en cada parada: el campamento.',
     ]},
-    {"id": 'overgear', "post": 2.6, "frases": [
-        'Y antes de la primera parada, algo que ninguna profesión te enseña: cómo sacarle más a tu personaje en combate. Para eso existe el patrocinador de hoy.',
-        'Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever.',
-        'Son sesiones individuales por horas, por voz o por texto. Y juegas tú con tu personaje todo el tiempo.',
-        'Un coach mira tus talentos, tu rotación y tus propios errores, con la versión del juego que está activa hoy.',
-        'Porque las guías no siempre van al día. Una rama de talentos escrita antes del último ajuste ya puede estar desfasada.',
-        'Y si todavía vas camino del sesenta, también te ayudan con eso.',
-        'Y para las bandas del nueve de diciembre: resistencia al fuego para la Guarida de Onyxia, consumibles, y qué equipo previo a la banda vale la pena buscar.',
-        'Muchos de esos consumibles, por cierto, salen de las profesiones de este video.',
-        'Si reservas dos horas o más, ahorras un cinco por ciento, con reembolso en cada pedido. Y lo que aprendes se queda contigo para el siguiente ajuste.',
-        'El enlace está en la descripción, y hay un código para ti.',
-        'Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.',
-    ]},
-    {"id": 'p01', "frases": [
+    {"id": 'p01', "post": 6.5, "frases": [
         'Parada uno. Minería, la profesión que alimenta a la herrería y a la ingeniería.',
         'Del uno al sesenta y cinco, cobre, en cualquier zona inicial. En Forever hay vetas de cobre pobres en los valles de inicio, y un entrenador júnior en cada uno.',
         'Los elfos de la noche, que no tenían cobre en Teldrassil, ahora pican fragmentos de ámbar. Dan mena de cobre, aunque solo suben la habilidad hasta veinte.',
@@ -111,7 +98,20 @@ ESCENAS = [
         'Los otros dos objetos de campamento del minero son la magnetita, que da poder de ataque a todo el campamento, y el jardín rocoso, que hace crecer una veta con el tiempo.',
         'Y un dato para el final de la ruta: Monte Hyjal tiene, además, más de cien vetas de torio rico. Para los últimos puntos, es el sitio.',
     ]},
-    {"id": 'p02', "frases": [
+    {"id": 'overgear', "post": 2.6, "frases": [
+        'Y antes de la segunda parada, algo que ninguna profesión te enseña: cómo sacarle más a tu personaje en combate. Para eso existe el patrocinador de hoy.',
+        'Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever.',
+        'Son sesiones individuales por horas, por voz o por texto. Y juegas tú con tu personaje todo el tiempo.',
+        'Un coach mira tus talentos, tu rotación y tus propios errores, con la versión del juego que está activa hoy.',
+        'Porque las guías no siempre van al día. Una rama de talentos escrita antes del último ajuste ya puede estar desfasada.',
+        'Y si todavía vas camino del sesenta, también te ayudan con eso.',
+        'Y para las bandas del nueve de diciembre: resistencia al fuego para la Guarida de Onyxia, consumibles, y qué equipo previo a la banda vale la pena buscar.',
+        'Muchos de esos consumibles, por cierto, salen de las profesiones de este video.',
+        'Si reservas dos horas o más, ahorras un cinco por ciento, con reembolso en cada pedido. Y lo que aprendes se queda contigo para el siguiente ajuste.',
+        'El enlace está en la descripción, y hay un código para ti.',
+        'Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.',
+    ]},
+    {"id": 'p02', "post": 6.5, "frases": [
         'Parada dos. Herrería, la que se come casi todo lo que pica el minero.',
         'Del uno al setenta y cinco, piedras de afilar y piedras de pulir. Y un ajuste del diez de noviembre: la piedra de pulir burda ahora da puntos hasta el noventa.',
         'Del setenta y cinco al ciento cuarenta, bronce: varas de plata, leotardos y brazales. Calcula unas trescientas barras de bronce hasta el ciento cincuenta.',
@@ -132,13 +132,13 @@ ESCENAS = [
         'Y aquí va un espectador de esta misma pareja. Nos contó Julsikakku que, jugando dos o tres horas al día, llevaba minería ciento cuarenta y cinco y herrería ciento veinte en cinco días.',
         'A su ritmo, sin correr. Y en otro comentario ya iba por el treinta y seis, como minero y herrero, rumbo a la zona nueva. Gracias por enseñarnos que la ruta se hace al paso de cada quien.',
     ]},
-    {"id": 'p03', "frases": [
+    {"id": 'p03', "post": 6.5, "frases": [
         'Parada tres. Ingeniería, el otro destino del mineral.',
-        'Del uno al cincuenta y seis, polvo explosivo tosco y tornillos de cobre, y no te olvides de la llave inglesa de arco voltaico. Empieza en Orgrimmar o en Forjaz, porque ahí está también el experto.',
+        'Del uno al cincuenta y seis, polvo explosivo tosco y tornillos de cobre, y no te olvides de la llave de tuerca arcoluz. Empieza en Orgrimmar o en Forjaz, porque ahí está también el experto.',
         'Del cincuenta y seis al ciento cincuenta, bombas de cobre, dinamita, tubos de bronce y cacharros zumbones.',
         'Del ciento cincuenta al doscientos, con Roxxik en Orgrimmar o con Springspindle en Forjaz: marcos de bronce, granadas de hierro, y quince ovejas explosivas.',
         'El rango de artesano lo enseña, en el pueblo goblin de Gadgetzan, Buzzek Giracorchete, a los dos bandos. Y, novedad de Forever, también Kayleena Encantaflores, en Monte Hyjal.',
-        'Y para el final, trastos y tubos de torio: unas ciento ochenta y seis barras de torio. El esquema del tubo se compra en Cuna del Invierno, o con Kor\'gar, en Claros del Río.',
+        'Y para el final, trastos y tubos de torio: unas ciento setenta y cinco barras de torio. El esquema del tubo se compra en Cuna del Invierno, o con Kor\'gar, en Claros del Río.',
         'Y un aviso para la Horda: en Cima del Trueno no hay ingeniero. Y en la Alianza, tampoco lo hay en Darnassus.',
         'Lo nuevo de Forever: el gnomo ya no recibe sus quince puntos gratis de ingeniería. A cambio, sus cacharros fallan menos.',
         'Hay veintiséis recetas de Favor, y la más curiosa es la versión segura de los explosivos: dinamita y bombas que puede lanzar quien no es ingeniero.',
@@ -157,7 +157,7 @@ ESCENAS = [
         'Y Barón Rata ya va por el treinta, y subiendo. Y un espectador, Steven, que ni siquiera juega, nos dejó algo muy bonito: que le alegra ver que World of Warcraft sigue vivo.',
         'Gracias a los cuatro. Todos los comentarios se leen, y muchos acaban aquí.',
     ]},
-    {"id": 'p04', "frases": [
+    {"id": 'p04', "post": 6.5, "frases": [
         'Parada cuatro. Herboristería, la que alimenta a la alquimia y, en Forever, también a los primeros auxilios.',
         'Del uno al setenta, flor de paz y hojaplata en cualquier zona inicial. Ahí hay también versiones marchitas y atrofiadas, y su entrenador júnior.',
         'Del setenta al ciento quince, marregal y brezospina en el Bosque de Argénteos, en Loch Modan o en Costa Oscura.',
@@ -171,13 +171,13 @@ ESCENAS = [
         'Hay también un injertador de semillas. Volvió el diecinueve de noviembre, pero ahora puede fallar, y ya no acepta las semillas escasas.',
         'El primer objeto de campamento del herbolario es una vela de incienso, que da intelecto. Y el plano del invernadero lo suelta Shadetooth, en Los Humedales.',
     ]},
-    {"id": 'p05', "frases": [
+    {"id": 'p05', "post": 6.5, "frases": [
         'Parada cinco, la alquimia. Y aquí empieza el cambio más grande de todo el video.',
         'Del uno al cincuenta y cinco, una receta nueva de Forever, el elixir de fuerza menor, y después el elixir de defensa menor.',
         'Del cincuenta y cinco al ciento cincuenta, pociones de maná menores, elixires de entereza y de sabiduría, y aceite de fuego.',
         'Del ciento cincuenta al doscientos veinticinco, elixir de poder de fuego, pociones de maná y pociones de protección contra la naturaleza. Esa receta se compra en Feralas, en Tuercespina o en Tanaris.',
         'Del doscientos veinticinco al trescientos, más protección contra la naturaleza, transmutaciones de paso, aceite escama pétrea y elixir de defensa superior.',
-        'En total, del uno al trescientos, alrededor de mil hierbas. Por eso tanta gente la combina con la herboristería.',
+        'En total, del uno al trescientos, más de seiscientas hierbas. Por eso tanta gente la combina con la herboristería.',
         'El rango de artesano lo enseñan Rogvar, en el Pantano de las Penas, para la Horda, y Kylanna, en Feralas, para la Alianza.',
         'Y hay un tercero para los dos bandos: Shurome, en el Santuario Esmeralda de Frondavil, enseña del uno al trescientos. Y por ahora te deja aprender el artesano sin pedirte doscientos.',
         'Ahora viene el cambio de verdad. En Forever, las pociones de sanación ya no son del alquimista. Se fueron a otra profesión, y te lo cuento al final del video.',
@@ -191,7 +191,7 @@ ESCENAS = [
         'Tiene toda la razón, Crisis, y te aviso que hoy va a ser peor. Con calma subes de nivel, pero una veta de torio libre no espera a nadie.',
         'Así que tómatelo con calma, eso sí, y luego corre a la veta antes de que llegue otro.',
     ]},
-    {"id": 'p06', "frases": [
+    {"id": 'p06', "post": 6.5, "frases": [
         'Parada número seis, el desuello, la recolección que va pegada a la peletería.',
         'La regla es sencilla: puedes desollar a un bicho si tienes cinco veces su nivel. Uno de nivel treinta pide ciento cincuenta.',
         'Y en Forever, los bichos de las zonas iniciales dan puntos hasta el setenta y cinco: jabalíes en Durotar, o lobos en el Bosque de Elwynn.',
@@ -205,7 +205,7 @@ ESCENAS = [
         'En el campamento, el desollador pone una silla de campamento, que da crítico. Y al ciento cuarenta, una guía de campo con la que cualquiera aprende a rastrear bestias.',
         'El plano de la guía lo suelta Lady Anacondra, en las Cuevas de los Lamentos. Y al trescientos llega un banco de trabajo de trampero.',
     ]},
-    {"id": 'p07', "frases": [
+    {"id": 'p07', "post": 6.5, "frases": [
         'Parada siete. Peletería, y el objeto de campamento que más agradece quien sube de nivel.',
         'Del uno al sesenta, cuero ligero, pellejo ligero curtido y guantes de cuero repujado. Del sesenta al ciento treinta, pantalones, cinturones de cuero oscuro y pellejo medio curtido.',
         'El rango de experto lo enseñan Una en Cima del Trueno, Telonis en Darnassus, o Jarael en Shen\'dralas, la zona nueva que es casi de la Horda.',
@@ -220,7 +220,7 @@ ESCENAS = [
         'Por eso la peletería es de las profesiones que más ayudan a subir de nivel. Y por eso, en un campamento, el peletero siempre es bienvenido.',
         'La máquina de coser, al trescientos, la suelta Vectus, en Scholomance. Y ojo: solo se coloca con trescientos, aunque la compres hecha.',
     ]},
-    {"id": 'p08', "frases": [
+    {"id": 'p08', "post": 6.5, "frases": [
         'Parada ocho. Sastrería, la que no necesita recolección: la tela te cae de los enemigos.',
         'Del uno al cincuenta y cinco, madejas de lino y cinturones. Del cincuenta y cinco al ciento cuarenta, lana y seda: capas, capuchas y mochilas pequeñas.',
         'El rango de experto lo enseñan Josef Gregorian en Entrañas y Georgio Bolero en Ventormenta. La Alianza tiene además a Charles Worth en Dalaran, y en Shen\'dralas está Melanori.',
@@ -228,7 +228,7 @@ ESCENAS = [
         'El artesano: Daryl Stack, en el Molino Tarren de Laderas, para la Horda, y Timothy Worthington, en Theramore, para la Alianza. Compra el hilo rúnico antes de ir.',
         'Entre el doscientos y el doscientos veinticinco, diecisiete bolsas de tejido mágico rojas, que en Forever ya son de catorce casillas.',
         'Del doscientos cincuenta al doscientos ochenta, un patrón nuevo, los puños de paño rúnico. Lo vende Pexmit, en Monte Hyjal, por diez de oro, o la Horda lo saca con una misión.',
-        'Calcula unos mil cuatrocientos paños rúnicos solo para ese tramo. La sastrería se paga en tela.',
+        'Del doscientos veinticinco al doscientos ochenta, calcula unos mil cuatrocientos paños rúnicos. La sastrería se paga en tela.',
         'Lo nuevo de Forever: las bolsas de componentes, para esa quinta ranura. De lino de seis casillas, de lana de ocho, y las grandes de doce y catorce, con Favor.',
         'Y la de lana pide tinte cerúleo, que hace el alquimista. Aquí se conecta la parada cinco con la parada ocho.',
         'Hay sesenta y siete recetas de Favor, conjuntos de tela para cada escuela de magia. Y en el campamento, el sastre pone un estandarte de su facción, que da espíritu.',
@@ -236,7 +236,7 @@ ESCENAS = [
         'Y la trampa: las recetas que llevan del doscientos ochenta y cinco al trescientos piden un telar. Y el telar solo lo fabrica quien ya tiene trescientos.',
         'O encuentras un campamento donde otro sastre ya puso su telar, o subes esos últimos puntos por otro camino. El plano del telar es de la Baronesa Anastari, en Stratholme.',
     ]},
-    {"id": 'p09', "frases": [
+    {"id": 'p09', "post": 6.5, "frases": [
         'Parada nueve. Encantamiento, que desencanta todo lo que cose el sastre.',
         'Del uno al setenta, con un reactivo nuevo de vendedor, la mota de magia: una vara de cobre rúnica y encantamientos de brazal. Y desencantar también da puntos.',
         'Forever añadió recetas de nivel bajo, así que los primeros setenta puntos salen más baratos que antes. Hay hasta una varita de práctica de novato.',
@@ -261,7 +261,7 @@ ESCENAS = [
         'Fíjate qué educación: nos llamó basura, pero se despidió. En Azeroth, eso ya es nivel de embajador de Ventormenta.',
         'Y lo digo en serio: si ves una imprecisión, dinos el minuto y el dato, que las correcciones justas salen en el siguiente video. El saludo, te lo devolvemos.',
     ]},
-    {"id": 'p10', "frases": [
+    {"id": 'p10', "post": 6.5, "frases": [
         'Parada diez. Cocina, la primera de las tres secundarias. Y en Forever, la que enciende el campamento.',
         'Porque la cocina ya no empieza con una receta: empieza con una hoguera que llevas en la mochila. La hoguera básica se aprende con cocina uno y se hace con madera simple.',
         'Y aquí te explico el campamento, que hemos visto en cada parada. Alguien enciende la hoguera, y cada jugador alrededor pone un objeto de su profesión.',
@@ -276,7 +276,7 @@ ESCENAS = [
         'La hoguera de oficial sale de Lord Serpentis, en las Cuevas de los Lamentos, y el festín de Cocinitas, del mismísimo Cocinitas, en Las Minas de la Muerte.',
         'Y Cocinitas suelta también una varilla de remover que te hace cocinar un veinticinco por ciento más rápido.',
     ]},
-    {"id": 'p11', "frases": [
+    {"id": 'p11', "post": 6.5, "frases": [
         'Parada número once, la pesca, que no ocupa hueco, y que hasta sin habilidad da cofres en mar abierto.',
         'Del uno al setenta y cinco, en cualquier zona inicial, con un adorno lustroso. Todos los entrenadores de inicio están junto al agua.',
         'Del setenta y cinco al ciento cincuenta, en las capitales o en Los Baldíos, Costa Oscura, Loch Modan o los Páramos de Poniente.',
@@ -289,7 +289,7 @@ ESCENAS = [
         'Hay peces poco comunes y raros nuevos, con sus propios beneficios. Y el concurso de pesca de Tuercespina, desde el trece de noviembre, tiene muchos más ganadores.',
         'Y en la costa de Azshara hay más de trescientos cincuenta bancos de almejas de boca grande y de langostas pinza oscura. Para el pescador que ya llegó al final, ahí está la siguiente parada.',
     ]},
-    {"id": 'p12', "frases": [
+    {"id": 'p12', "post": 6.5, "frases": [
         'Parada número doce, los primeros auxilios: la profesión que casi todos dejan para el final, y la que más cambió en Forever.',
         'Porque aquí está la sorpresa de la parada cinco: las pociones de sanación ya no son del alquimista. Ahora son de primeros auxilios, y esa la puede subir cualquier personaje.',
         'Del uno al setenta y cinco, dos caminos: vendas de lino, u ochenta y seis pociones de sanación menores, con flor de paz, especias y viales.',
@@ -308,7 +308,7 @@ ESCENAS = [
     {"id": 'combos', "frases": [
         'Y antes de despedirnos, la pregunta de siempre: qué dos profesiones llevo. No hay una respuesta única, pero sí parejas que tienen sentido en Forever.',
         'Minería con herrería o con ingeniería, porque el último tramo de herrería se come cientos de barras de torio, y las barras nuevas salen de la minería.',
-        'Herboristería con alquimia, porque son unas mil hierbas, y ahora el alquimista vende tintes a sastres y peleteros.',
+        'Herboristería con alquimia, porque son más de seiscientas hierbas, y ahora el alquimista vende tintes a sastres y peleteros.',
         'Desuello con peletería, por el expositor de curtido y por esa tienda que da descanso a todo el campamento.',
         'Sastrería con encantamiento, porque ninguna pide recolección: lo que coses, lo desencantas. Y esa pareja te hace las bolsas de componentes.',
         'Y las tres secundarias, para todo el mundo: no ocupan hueco, una enciende el campamento, y otra ya hace tus pociones.',
@@ -328,8 +328,8 @@ LYRIA = dict(
     escenas={},
     tramos=[   # OST de WoW (musica_wow.py): nota = tema; cada tramo <= 175 s (timeline del 25-nov, 1878,75 s)
         (['intro', 'reglas'], 'Legends of Azeroth'),       # 0-140
-        (['overgear'], 'Posada'),                          # 140-215 (suena la música de Overgear)
-        (['p01'], 'Dun Morogh'),                           # 215-350 minería (enanos, cobre, Forjaz)
+        (['p01'], 'Dun Morogh'),                           # 140-275 minería (enanos, cobre, Forjaz)
+        (['overgear'], 'Posada'),                          # 275-350 (suena la música de Overgear; entre minería y herrería, 25-nov)
         (['p02'], 'Roca Negra'),                           # 350-487,5 herrería (forja, Profundidades de Roca Negra)
         (['julsi', 'p03'], 'Tanaris'),                     # 487,5-622,5 ingeniería (Gadgetzan)
         (['burla0', 'gracias1'], 'Taberna orca'),          # 622,5-690

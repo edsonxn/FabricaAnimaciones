@@ -289,12 +289,12 @@
    "video": "wow_ruta_profesiones",
    "id": "NPB46LhvBPw",
    "titulo": "La RUTA de PROFESIONES del 1 al 300 en WoW Forever",
-   "visibilidad": "private",
+   "visibilidad": "reemplazado",
    "programado": "2026-11-29T15:00:00Z",
    "subido": "2026-11-25T20:00:00-06:00",
    "formato": "guía-ruta de las 12 profesiones del 1 al 300 en cuatro tramos (una variable sobre «La RUTA del 1 al 60»: el tema) · 31:39 · secuencia_yt + Applio Remy + 38 mapas con ruta (Wowhead Forever) + kit de 4 estilos + MG nuevos (nucleo/mg_prof.py) + 8 comentarios (3 burlas) · OST de WoW",
    "patrocinio": "Overgear campaña 3, integración 2: http://overgear.s.gy/CRONICAS/7, código CRONICAS10, promoción pagada",
-   "nota": "25-nov-2026: subido y programado dom 29-nov 09:00 CDMX con miniatura Flow y .srt; anuncios ACTIVADOS + cuestionario (Adecuado para anuncios); mid-roll marcado y comprobado tras la versión SD; yt monetizado hecho."
+   "nota": "25-nov-2026: subido y programado dom 29-nov 09:00 CDMX con miniatura Flow y .srt; anuncios ACTIVADOS + cuestionario (Adecuado para anuncios); mid-roll marcado y comprobado tras la versión SD; yt monetizado hecho. 26-nov-2026: REEMPLAZADO por MGJ5EV8bi1U tras la revisión del usuario (promo tras minería, listas de compras, mapas originales con íconos, tooltips de Wowhead); el usuario lo borra en Studio."
   },
   {
    "video": "wow_oro_30_50",
@@ -305,6 +305,17 @@
    "formato": "lista cuenta regresiva 15 puestos · 25:22 · FARMEOS de oro de mundo abierto del 30 al 50 (una variable sobre «30 trucos de ORO»: trucos → lugares) · secuencia_yt + Applio Remy + kit de 4 estilos con los cambios del 25-nov (mapas originales con ícono, madera, caras, tooltips Wowhead) + FICHA DEL FARMEO por puesto + 11 MG nuevos (nucleo/mg_oro.py) + 7 recreaciones Flow + 10 comentarios (2 burlas, 1 queja justa) · OST de WoW por zona · Overgear /CRONICAS/8 tras el #14 (4:32)",
    "prueba": "tema: farmeos por lugar y nivel para el tramo 30-50 (donde está la audiencia); empaque nuevo sin el orco (miniatura «40 ORO POR HORA» con el destripador negro)",
    "nota": "26-nov-2026: subido y programado vie 4-dic 09:00 CDMX con miniatura Flow A (B en salida/miniatura_b.jpg), .srt, promoción pagada. Overgear campaña 3, integración 3 (http://overgear.s.gy/CRONICAS/8, CRONICAS10). Monetización activada («Comprobando») + mid-roll + cuestionario (solo Violencia 1.ª = «Adecuado para anuncios»)."
+  },
+  {
+   "video": "wow_ruta_profesiones",
+   "id": "MGJ5EV8bi1U",
+   "titulo": "La RUTA de PROFESIONES del 1 al 300 en WoW Forever",
+   "visibilidad": "private",
+   "programado": "2026-11-29T15:00:00Z",
+   "subido": "2026-11-26T20:50:00-06:00",
+   "formato": "guía-ruta de las 12 profesiones del 1 al 300 · 32:52 · secuencia_yt + Applio Remy + mapas originales con ícono en cada punto (original v0/v1/v2, oro, madera) + LISTA DE COMPRAS por tramo en cada parada + tooltips reales de Wowhead Forever + MG nuevos (nucleo/mg_prof.py) + 8 comentarios · OST de WoW",
+   "patrocinio": "Overgear campaña 3, integración 2: http://overgear.s.gy/CRONICAS/7, código CRONICAS10, promoción pagada; promo entre la parada 1 (minería) y la 2 (4:40-5:55)",
+   "nota": "26-nov-2026: rehecho tras la revisión del usuario y subido como video nuevo; programado dom 29-nov 09:00 CDMX con miniatura Flow y .srt; anuncios ACTIVADOS + cuestionario (Adecuado para anuncios) + mid-roll comprobado al recargar; yt monetizado hecho."
   }
  ],
  "ideas": {

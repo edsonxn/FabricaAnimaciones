@@ -91,14 +91,14 @@ def habilidad(n, nombre, ico, tramos, nota=None, ancho=1560):
         _texto(d, (cx - tw / 2 + 0, M + 104), nombre, f, BLANCO, "lm", 255 * a0)
         x0, x1, yb = M + 90, M + ancho - 90, M + 300
         X = lambda v: x0 + (x1 - x0) * (v - 1) / 299
-        d.rounded_rectangle((x0, yb - 16, x1, yb + 16), 14, fill=(6, 8, 22, 240), outline=ORO + (200,), width=2)
+        d.rounded_rectangle((x0, yb - 23, x1, yb + 23), 18, fill=(6, 8, 22, 240), outline=ORO + (200,), width=2)
         for k, (rn, ra, rb) in enumerate(RANGOS):       # los 4 rangos debajo de la barra
             xa, xb = X(ra), X(rb)
             if k:
-                d.line([(xa, yb - 22), (xa, yb + 22)], fill=ORO_T + (230,), width=3)
-            _texto(d, ((xa + xb) / 2, yb + 44), rn, fuente("sans", 24), GRIS, "mm", 230 * a0)
+                d.line([(xa, yb - 29), (xa, yb + 29)], fill=ORO_T + (230,), width=3)
+            _texto(d, ((xa + xb) / 2, yb + 52), rn, fuente("sans", 24), GRIS, "mm", 230 * a0)
         for v in (1, 75, 150, 225, 300):
-            _texto(d, (X(v), yb + 76), str(v), fuente("serif", 24), ORO_T, "mm", 220 * a0)
+            _texto(d, (X(v), yb + 84), str(v), fuente("serif", 24), ORO_T, "mm", 220 * a0)
         t0 = _mk(marcas, 0, .4)
         for k, (a, b, s) in enumerate(tramos):
             tk = _mk(marcas, 1 + k, t0 + .8 + k * .9)
@@ -108,16 +108,17 @@ def habilidad(n, nombre, ico, tramos, nota=None, ancho=1560):
             q = _eo(u / .6)
             xa, xb = X(a), X(b)
             col = ORO_T if k % 2 == 0 else (240, 170, 40)
-            d.rounded_rectangle((xa + 1, yb - 13, xa + max(8, (xb - xa) * q) - 1, yb + 13), 11, fill=col + (255,))
+            d.rounded_rectangle((xa + 1, yb - 20, xa + max(8, (xb - xa) * q) - 1, yb + 20), 16, fill=col + (255,))
             fila = k % 2
-            yt = yb - 50 - fila * 44
+            yt = yb - 58 - fila * 44
             w_max = max(150, (xb - xa) * 2.0)
             ft = _encaja(d, s, "negra", 28, w_max)
             xm = min(max((xa + xb) / 2, x0 + d.textlength(s, font=ft) / 2), x1 - d.textlength(s, font=ft) / 2)
-            d.line([((xa + xb) / 2, yb - 16), ((xa + xb) / 2, yt + 16)], fill=col + (int(200 * q),), width=2)
+            d.line([((xa + xb) / 2, yb - 23), ((xa + xb) / 2, yt + 16)], fill=col + (int(200 * q),), width=2)
             _texto(d, (xm, yt), s, ft, BLANCO if k == len(tramos) - 1 or dt < _mk(marcas, 2 + k, 1e9) else (200, 200, 210),
                    "mm", 255 * q)
-            _texto(d, ((xa + xb) / 2, yb), f"{a}-{b}", fuente("negra", 18), (30, 22, 8), "mm", 255 * _eo((u - .4) / .3))
+            # 25-nov-2026 (el usuario: «esas letras negras no se ven bien»): barra más gruesa y cifra más grande, azul noche
+            _texto(d, ((xa + xb) / 2, yb + 1), f"{a}-{b}", fuente("sans", 27), (10, 14, 40), "mm", 255 * _eo((u - .4) / .3))
         tn = _mk(marcas, 1 + len(tramos), 1e9)
         if nota and dt >= tn:
             _texto(d, (cx, M + h - 44), nota, _encaja(d, nota, "serif", 34, ancho - 120), VERDE, "mm", 255 * _eo((dt - tn) / .3))
@@ -572,3 +573,85 @@ if __name__ == "__main__":
         r = os.path.join(tempfile.gettempdir(), f"_mg_prof_prueba{i}.jpg")
         f.resize((960, 540)).save(r, quality=85)
         print(r, im.size)
+
+
+# ------------------------------------------------------------------ lista de compras por tramo (pedido del usuario, 25-nov)
+def _partir(d, s, f, ancho):
+    """Parte s en ≤ 2 líneas que quepan en `ancho` (la 2.ª se recorta con «…» si aún no cabe)."""
+    if d.textlength(s, font=f) <= ancho:
+        return [s]
+    pal, l1 = s.split(), ""
+    for i, w in enumerate(pal):
+        c = (l1 + " " + w).strip()
+        if d.textlength(c, font=f) > ancho and l1:
+            l2 = " ".join(pal[i:])
+            while d.textlength(l2, font=f) > ancho and len(l2) > 3:
+                l2 = l2[:-2].rstrip() + "…"
+            return [l1, l2]
+        l1 = c
+    return [l1]
+
+
+def lista_compras(prof, ico, tramos, tipo="fabricacion", nota="Aproximado: varía según tus recetas", ancho=1720):
+    """LISTA DE COMPRAS de una profesión (el usuario, 25-nov-2026: «para cada profesión… la lista completa de materiales
+    para subirla, del 1-75, 75-150, al 225 y al 300, como una lista de compras, aproximada»). tramos = {"1-75": [[nombre,
+    cantidad|None|"500-1220"], …], …} en el orden 1-75, 75-150, 150-225, 225-300 (≤ 6 líneas cada uno; datos de
+    videos/<v>/_listas_compras.json, con fuentes). tipo="recoleccion" → «LO QUE RECOGES» (cantidad None = sin cifra).
+    Marcas: 0..3 = cada columna (sus líneas entran escalonadas); 4 = nota. Sin marcas: una columna cada 0,8 s."""
+    claves = ["1-75", "75-150", "150-225", "225-300"]
+    cols = [tramos.get(k, []) for k in claves]
+    filas = max(len(c) for c in cols) if cols else 1
+    h = 300 + filas * 82 + 70
+    titulo = "LO QUE RECOGES" if tipo == "recoleccion" else "LISTA DE COMPRAS"
+
+    def fn(dt, dur, marcas):
+        im, M = _base(ancho, h, titulo)
+        d = ImageDraw.Draw(im)
+        cx = M + ancho / 2
+        a0 = _eo(dt / .35)
+        f = _encaja(d, prof, "negra", 54, ancho - 400)
+        tw = d.textlength(prof, font=f)
+        _pegar(im, _img(ico, 64), cx - tw / 2 - 48, M + 100, _pop(dt, .4))
+        d = ImageDraw.Draw(im)
+        _texto(d, (cx - tw / 2, M + 100), prof, f, BLANCO, "lm", 255 * a0)
+        x0, gap = M + 46, 22
+        wc = (ancho - 92 - 3 * gap) / 4
+        fn_, fq = fuente("sans", 25), fuente("negra", 30)
+        for k, (clave, items) in enumerate(zip(claves, cols)):
+            tk = _mk(marcas, k, .5 + k * .8)
+            if dt < tk:
+                continue
+            u = dt - tk
+            q = _eo(u / .35)
+            xa = x0 + k * (wc + gap)
+            y = M + 168
+            d.rounded_rectangle((xa, y, xa + wc, h + M - 74), 12, fill=(6, 8, 22, int(200 * q)), outline=ORO + (int(170 * q),),
+                                width=2)
+            d.rounded_rectangle((xa, y, xa + wc, y + 56), 12, fill=ORO_T + (int(255 * q),))
+            _texto(d, (xa + wc / 2, y + 29), f"DEL {clave.replace('-', ' AL ')}", fuente("sans", 31), (10, 14, 40), "mm",
+                   255 * q)
+            yy = y + 78
+            for j, it in enumerate(items):
+                aj = _eo((u - .15 - j * .12) / .3)
+                if aj <= 0:
+                    break
+                nombre, cant = it[0], (it[1] if len(it) > 1 else None)
+                otros = str(nombre).lower().startswith("y otros") or cant is None and "depende" in str(nombre).lower()
+                cq = "" if cant in (None, "") else (f"×{cant}" if isinstance(cant, (int, float)) else str(cant))
+                wq = d.textlength(cq, font=fq) + 14 if cq else 0
+                lin = _partir(d, str(nombre), fn_, wc - 30 - wq)
+                col = (175, 175, 190) if otros else BLANCO
+                if len(lin) == 1:
+                    _texto(d, (xa + 18, yy + 22), lin[0], fn_, col, "lm", 255 * aj)
+                else:
+                    _texto(d, (xa + 18, yy + 8), lin[0], fn_, col, "lm", 255 * aj)
+                    _texto(d, (xa + 18, yy + 38), lin[1], fn_, col, "lm", 255 * aj)
+                if cq:
+                    _texto(d, (xa + wc - 16, yy + 22), cq, fq, ORO_T, "rm", 255 * aj)
+                d.line([(xa + 14, yy + 66), (xa + wc - 14, yy + 66)], fill=ORO + (int(60 * aj),), width=1)
+                yy += 82
+        tn = _mk(marcas, 4, 4.2)
+        if nota and dt >= tn:
+            _texto(d, (cx, M + h - 38), nota, _encaja(d, nota, "serif", 32, ancho - 120), VERDE, "mm", 255 * _eo((dt - tn) / .3))
+        return _salida(im, dt)
+    return fn

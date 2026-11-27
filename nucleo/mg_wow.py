@@ -610,6 +610,91 @@ def _panel_rotulo(l1, l2=None, color=ORO_T):
     return im
 
 
+def _mini_icono(fuente_img, lado=80):
+    """Ícono cuadrado de lo que nombra un paso del mapa: «ico:<Wowhead>» entero; foto (pegatina o cara) recortada desde
+    arriba (se le ve la cara). None si no hay."""
+    if not fuente_img:
+        return None
+    try:
+        if str(fuente_img).startswith("ico:"):
+            return icono(fuente_img[4:], lado).convert("RGBA").resize((lado, lado), Image.LANCZOS)
+        if str(fuente_img).startswith("ficha:"):
+            fuente_img = fuente_img[6:]
+        im = Image.open(fuente_img).convert("RGBA")
+    except Exception:
+        return None
+    q = min(im.width, im.height)
+    x0 = (im.width - q) // 2
+    y0 = int((im.height - q) * .12)
+    im = im.crop((x0, y0, x0 + q, y0 + q)).resize((lado, lado), Image.LANCZOS)
+    fondo = Image.new("RGBA", (lado, lado), (8, 10, 26, 255))
+    fondo.alpha_composite(im)
+    return fondo
+
+
+def _con_icono(panel, ico, variante=0):
+    """REGLA DEL USUARIO (25-nov-2026): «siempre que hables de items, personajes, etc. en un mapa pon su ícono para
+    identificar mejor las cosas, como flores, menas, personajes». El ícono va pegado a la izquierda del rótulo, con marco
+    del color de la variante, y se queda mientras se vea el rótulo (la foto grande sigue saliendo y yéndose como antes)."""
+    if ico is None:
+        return panel
+    borde = {0: ORO, 1: ORO_T, 2: (92, 58, 28)}.get(variante, ORO)
+    L = ico.width
+    f = Image.new("RGBA", (L + 10, L + 10), (0, 0, 0, 0))
+    sh = Image.new("RGBA", (L + 18, L + 22), (0, 0, 0, 0))
+    ImageDraw.Draw(sh).rounded_rectangle((6, 10, L + 12, L + 16), 6, fill=(0, 0, 0, 170))
+    d = ImageDraw.Draw(f)
+    f.paste(ico, (5, 5))
+    d.rounded_rectangle((1, 1, L + 8, L + 8), 6, outline=borde + (255,), width=4)
+    W_ = f.width + panel.width - 6
+    H_ = max(f.height + 8, panel.height)
+    out = Image.new("RGBA", (W_, H_), (0, 0, 0, 0))
+    out.alpha_composite(sh.filter(ImageFilter.GaussianBlur(4)), (0, (H_ - f.height) // 2 - 2))
+    out.alpha_composite(panel, (f.width - 6, (H_ - panel.height) // 2))
+    out.alpha_composite(f, (0, (H_ - f.height) // 2 - 2))
+    return out
+
+
+def _panel_rotulo_v(l1, l2=None, variante=0):
+    """Rótulo de un paso del mapa ORIGINAL en sus variantes (regla del usuario, 25-nov-2026: «me gusta el original pero
+    podemos variar el tipo de trazo de ruta y cuadros de texto un poco pero que conserve el mapa original»).
+    0 = panel azul con borde dorado (el de siempre) · 1 = placa negra translúcida con barra dorada a la izquierda, línea 1
+    blanca gruesa y línea 2 dorada · 2 = etiqueta de pergamino claro con borde café, texto tinta."""
+    if not variante:
+        return _panel_rotulo(l1, l2)
+    dd = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+    if variante == 1:
+        f1, f2 = fuente("negra", 32), fuente("sans", 25)
+        w = int(max(dd.textlength(l1, font=f1), dd.textlength(l2 or "", font=f2))) + 52
+        h = 56 + (32 if l2 else 0)
+        im = Image.new("RGBA", (w + 16, h + 18), (0, 0, 0, 0))
+        sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(sh).rectangle((8, 12, w + 6, h + 12), fill=(0, 0, 0, 150))
+        im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(6)))
+        d = ImageDraw.Draw(im)
+        d.rectangle((4, 4, w + 4, h + 4), fill=(6, 8, 14, 205))
+        d.rectangle((4, 4, 13, h + 4), fill=ORO_T + (255,))
+        d.line((14, h + 4, w + 4, h + 4), fill=ORO + (200,), width=2)
+        _texto(d, (32, 31), l1, f1, BLANCO, "lm")
+        if l2:
+            _texto(d, (32, 67), l2, f2, ORO_T, "lm")
+        return im
+    f1, f2 = fuente("serif", 33), fuente("sans", 24)
+    w = int(max(dd.textlength(l1, font=f1), dd.textlength(l2 or "", font=f2))) + 44
+    h = 56 + (32 if l2 else 0)
+    im = Image.new("RGBA", (w + 16, h + 18), (0, 0, 0, 0))
+    sh = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh).rounded_rectangle((8, 12, w + 6, h + 12), 4, fill=(0, 0, 0, 160))
+    im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(5)))
+    d = ImageDraw.Draw(im)
+    d.rounded_rectangle((4, 4, w + 4, h + 4), 4, fill=(238, 224, 190, 248), outline=(92, 58, 28, 255), width=3)
+    d.rounded_rectangle((10, 10, w - 2, h - 2), 2, outline=(150, 110, 60, 200), width=1)
+    _texto(d, (24, 31), l1, f1, (62, 34, 14), "lm")
+    if l2:
+        _texto(d, (24, 67), l2, f2, (96, 62, 30), "lm")
+    return im
+
+
 def _foto(fuente_img, alto=280, giro=0.0):
     """Foto de lo que nombra la voz en ese paso del mapa (regla del 23-oct-2026): personaje/lugar = imagen real (pegatina de
     Wowpedia, ruta a .png/.jpg) recortada a 4:5 desde arriba; objeto = 'ico:<ícono de Wowhead>' ampliado. Marco dorado, sombra
@@ -651,7 +736,7 @@ def _foto(fuente_img, alto=280, giro=0.0):
     return out.rotate(giro, expand=True, resample=Image.BICUBIC) if giro else out
 
 
-def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, objeto=None, W=1920, H=1080):
+def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, objeto=None, W=1920, H=1080, variante=0):
     """Ruta de una cadena de misiones (o dónde cae un objeto) sobre el MAPA REAL de la zona, a cuadro entero (FX `pantalla`).
     mapa = ruta local del mapa de Wowhead Classic (zona o continente; coordenadas 0-100 como las del juego).
     puntos = [(x, y, rótulo, subrótulo|None, foto|None), ...]; el paso k aparece en la marca k y la línea punteada va del paso
@@ -659,14 +744,17 @@ def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, obj
     zmin..zmax) y se mueve suave en 1,1 s. objeto = ícono de Wowhead del premio: el ÚLTIMO paso es un medallón grande con ese
     ícono y halo que late, que se vuelve verde en la marca extra len(puntos). titulo/sub = cartela arriba a la izquierda.
     foto (regla del 23-oct-2026, TODO mapa de cualquier canal): la imagen de lo que la voz nombra en ese paso (personaje,
-    lugar u objeto; `_foto`) sale junto al pin con rebote y se va cuando entra el paso siguiente (la del último se queda)."""
+    lugar u objeto; `_foto`) sale junto al pin con rebote y se va cuando entra el paso siguiente (la del último se queda).
+    variante (25-nov-2026, mismo mapa real): 0 = trazos dorados + pin rojo + panel azul · 1 = línea continua dorada con
+    brillo + pin rombo dorado + placa negra con barra · 2 = huellas de puntos claros + pin de tinta + etiqueta de pergamino."""
     import cv2
     base = _mapa(mapa, W, H, zmax)
     bh, bw = base.shape[:2]
     P = [(p[0] / 100 * bw, p[1] / 100 * bh) for p in puntos]
-    rot = [_panel_rotulo(p[2], p[3] if len(p) > 3 else None) for p in puntos]
+    rot = [_con_icono(_panel_rotulo_v(p[2], p[3] if len(p) > 3 else None, variante),
+                      _mini_icono(p[4] if len(p) > 4 else None) if p[2] else None, variante) for p in puntos]
     fotos = [_foto(p[4], giro=(-4 if k % 2 else 4)) if len(p) > 4 and p[4] else None for k, p in enumerate(puntos)]
-    cart = _panel_rotulo(titulo, sub) if titulo else None
+    cart = _panel_rotulo_v(titulo, sub, variante) if titulo else None
     tramos = [_bezier(P[k - 1], P[k], curva * (1 if k % 2 else -1)) for k in range(1, len(P))]
     ico = icono(objeto, 112) if objeto else None
     s_min = max(W / bw, H / bh)                        # píxeles de salida por píxel de la base con el mapa entero
@@ -767,13 +855,27 @@ def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, obj
             q = np.array([pant(p) for p in tr])
             L = np.concatenate([[0], np.cumsum(np.hypot(*np.diff(q, axis=0).T))])
             lim, pos = L[-1] * u, 0.0
-            while pos < lim:                           # trazos de 15 px cada 26 px
-                b_ = min(pos + 15, lim)
-                pa = (np.interp(pos, L, q[:, 0]), np.interp(pos, L, q[:, 1]))
-                pb = (np.interp(b_, L, q[:, 0]), np.interp(b_, L, q[:, 1]))
-                d.line([(pa[0] + 2, pa[1] + 3), (pb[0] + 2, pb[1] + 3)], fill=(0, 0, 0, 255), width=8)
-                d.line([pa, pb], fill=ORO_T + (255,), width=6)
-                pos += 26
+            if variante == 1:                          # línea continua con brillo
+                n_ = max(2, int(lim / 6) + 1)
+                pts = [(float(np.interp(v, L, q[:, 0])), float(np.interp(v, L, q[:, 1]))) for v in np.linspace(0, lim, n_)]
+                cd.line(pts, fill=(255, 200, 60, 150), width=22, joint="curve")
+                d.line([(x + 2, y + 3) for x, y in pts], fill=(0, 0, 0, 255), width=10, joint="curve")
+                d.line(pts, fill=ORO_T + (255,), width=7, joint="curve")
+                d.line(pts, fill=(255, 246, 200, 255), width=2, joint="curve")
+            elif variante == 2:                        # huellas: puntos claros cada 22 px
+                while pos < lim:
+                    px, py = np.interp(pos, L, q[:, 0]), np.interp(pos, L, q[:, 1])
+                    d.ellipse((px - 5, py - 4, px + 9, py + 10), fill=(0, 0, 0, 255))
+                    d.ellipse((px - 7, py - 7, px + 7, py + 7), fill=(246, 236, 210, 255), outline=(70, 40, 18, 255), width=2)
+                    pos += 22
+            else:
+                while pos < lim:                       # trazos de 15 px cada 26 px
+                    b_ = min(pos + 15, lim)
+                    pa = (np.interp(pos, L, q[:, 0]), np.interp(pos, L, q[:, 1]))
+                    pb = (np.interp(b_, L, q[:, 0]), np.interp(b_, L, q[:, 1]))
+                    d.line([(pa[0] + 2, pa[1] + 3), (pb[0] + 2, pb[1] + 3)], fill=(0, 0, 0, 255), width=8)
+                    d.line([pa, pb], fill=ORO_T + (255,), width=6)
+                    pos += 26
             if u < 1:
                 mx, my = np.interp(lim, L, q[:, 0]), np.interp(lim, L, q[:, 1])
                 for rr, aa in ((30, 50), (20, 90), (11, 220)):
@@ -804,6 +906,18 @@ def ruta(mapa, puntos, titulo=None, sub=None, zmax=1.7, zmin=1.0, curva=.12, obj
                 _pegar(im, ico, x, y, sp)
                 d = ImageDraw.Draw(im)
                 d.ellipse((x - r, y - r, x + r, y + r), outline=col + (255,), width=6)
+            elif variante == 1:                        # rombo dorado con número oscuro
+                r = 34 * sp
+                d.polygon([(x + 3, y - r + 5), (x + r + 3, y + 5), (x + 3, y + r + 5), (x - r + 3, y + 5)], fill=(0, 0, 0, 255))
+                d.polygon([(x, y - r), (x + r, y), (x, y + r), (x - r, y)], fill=ORO_T + (255,), outline=(60, 40, 6, 255), width=4)
+                if sp > .6:
+                    _texto(d, (x, y + 1), str(i + 1), fuente("negra", 28), (20, 14, 4), "mm")
+            elif variante == 2:                        # sello de tinta con número claro
+                r = 28 * sp
+                d.ellipse((x - r + 3, y - r + 5, x + r + 3, y + r + 5), fill=(0, 0, 0, 255))
+                d.ellipse((x - r, y - r, x + r, y + r), fill=(52, 30, 16, 255), outline=(246, 236, 210, 255), width=4)
+                if sp > .6:
+                    _texto(d, (x, y + 1), str(i + 1), fuente("serif", 30), (246, 236, 210), "mm")
             else:
                 r = 30 * sp
                 d.ellipse((x - r + 3, y - r + 5, x + r + 3, y + r + 5), fill=(0, 0, 0, 255))

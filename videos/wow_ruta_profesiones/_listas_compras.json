@@ -1,0 +1,152 @@
+{
+  "p01": {
+    "prof": "Minería",
+    "tipo": "recoleccion",
+    "tramos": {
+      "1-75": [["Mena de cobre", null], ["Mena de estaño (desde 65)", null], ["Pico de minero", 1], ["Opción subasta: mena de cobre para fundir", 140], ["Opción subasta: mena de estaño para fundir", 70]],
+      "75-150": [["Mena de estaño", null], ["Mena de plata (desde 75)", null], ["Mena de hierro (desde 125)", null], ["Pirita (escasa)", null], ["Opción subasta: mena de plata para fundir", 45], ["Opción subasta: mena de hierro para fundir", 20]],
+      "150-225": [["Mena de hierro", null], ["Mena de oro (desde 155)", null], ["Mena de mitril (desde 175)", null], ["Bauxita (escasa, del mitril)", null], ["Opción subasta: mena de oro para fundir", 25]],
+      "225-300": [["Mena de mitril", null], ["Mena de veraplata (desde 230)", null], ["Mena de torio (245 pequeña, 275 rica)", null], ["Pecblenda (escasa, del torio)", null], ["Mena de torio pesada (Monte Hyjal, rara)", null]]
+    },
+    "nota": "Se gana 1 punto la primera vez que picas cada veta; la guía no da cuántas vetas por tramo. Las cantidades con número son la opción de fundir mena de la subasta (hasta 175; de 140 a 155 hay que picar)."
+  },
+  "p02": {
+    "prof": "Herrería",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Piedra férrea", 90], ["Piedra burda", 70], ["Martillo de herrero", 1]],
+      "75-150": [["Barra de bronce", 300], ["Piedra burda", 60], ["Piedra pesada", 60], ["Barra de hierro", 60], ["Barra de plata", 20], ["Tinte verde (vendedor)", 10]],
+      "150-225": [["Barra de mitril", 265], ["Barra de hierro", 180], ["Piedra sólida", 180], ["Barra de acero", 100], ["Piedra pesada", 60], ["Tinte verde (vendedor)", 30]],
+      "225-300": [["Barra de torio (245-270)", 560], ["Barra de torio (270-300, según planos)", "500-1220"], ["Piedra sólida", 335], ["Barra de mitril", 110], ["Rubí estrella", 27], ["Y otros: piedra densa, corazones de fuego o cristales de poder rojos", null]]
+    },
+    "nota": "Aprox., varía según tus recetas. Ruta con Diseño: espuelas de mitril (210-245); sin él, unas 130 barras de torio y 150 de mitril más. Las 20 barras de torio de cada misión imperial de Derotain ya están sumadas."
+  },
+  "p03": {
+    "prof": "Ingeniería",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Barra de cobre", 60], ["Piedra férrea", 55], ["Paño de lino", 30], ["Martillo de herrero", 1]],
+      "75-150": [["Barra de bronce", 80], ["Piedra burda", 50], ["Piedra pesada", 40], ["Flujo débil (vendedor)", 25], ["Ágata musgosa", 10], ["Y otros: paño de lino y de lana, barras de plata", null]],
+      "150-225": [["Piedra sólida", 120], ["Barra de mitril", 75], ["Paño de lana", 45], ["Barra de bronce", 30], ["Paño de tejido mágico", 20], ["Y otros: cuero medio, barras de acero y de hierro, paño de seda", null]],
+      "225-300": [["Barra de torio", 175], ["Piedra densa", 90], ["Barra de mitril", 85], ["Paño rúnico", 30], ["Esquema: trasto de torio", 1], ["Esquema: tubo de torio", 1]]
+    },
+    "nota": "Aprox., varía según tus recetas. La herramienta (Llave de tuerca arcoluz) se fabrica en el 55 con 6 barras de cobre, ya sumadas."
+  },
+  "p04": {
+    "prof": "Herboristería",
+    "tipo": "recoleccion",
+    "tramos": {
+      "1-75": [["Flor de paz", null], ["Hojaplata", null], ["Raíz de tierra (desde 15)", null], ["Flor de paz marchita y hojaplata atrofiada (zonas iniciales)", null]],
+      "75-150": [["Marregal", null], ["Brezospina", null], ["Alga estranguladora (desde 85)", null], ["Hierba cardenal", null], ["Acérita salvaje", null], ["Sangrerregia (desde 125)", null]],
+      "150-225": [["Vidarraíz (desde 150)", null], ["Pálida", null], ["Espina de oro", null], ["Mostacho de Khadgar (desde 185)", null], ["Loto cárdeno", null], ["Flor de fuego", null]],
+      "225-300": [["Solea", null], ["Champiñón fantasma (desde 245)", null], ["Sansam dorado", null], ["Hojasueño", null], ["Salviargenta de montaña", null], ["Y otros: flor de plaga, gromsanguina; en Monte Hyjal, hojapesadilla y salvia demoníaca", null]]
+    },
+    "nota": "No necesita herramienta. Las guías no dan cuántas hierbas por tramo. Escasos al recoger: Liquen con volantes y Rosínea."
+  },
+  "p05": {
+    "prof": "Alquimia",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Flor de paz", 65], ["Hojaplata", 55], ["Raíz de tierra", 20], ["Marregal", 10], ["Vial vacío (vendedor)", 75]],
+      "75-150": [["Brezospina", 60], ["Marregal", 40], ["Pargo de fuego", 40], ["Raíz de tierra", 35], ["Y otros: flor de paz, alga estranguladora", 30], ["Vial vacío (vendedor)", 80]],
+      "150-225": [["Alga estranguladora", 70], ["Sangrerregia", 50], ["Vidarraíz", 35], ["Vial emplomado (vendedor)", 85]],
+      "225-300": [["Anguila escama pétrea", 45], ["Solea", 45], ["Vidarraíz", 25], ["Alga estranguladora", 25], ["Mostacho de Khadgar y carolina, de cada una", 25], ["Viales emplomados y de cristal (vendedor)", 140]]
+    },
+    "nota": "Aprox., varía según tus recetas. La piedra filosofal (4 barras de hierro, 1 vitriolo negro, 4 loto cárdeno, 4 flor de fuego) solo hace falta para transmutar."
+  },
+  "p06": {
+    "prof": "Desuello",
+    "tipo": "recoleccion",
+    "tramos": {
+      "1-75": [["Cuero ligero", null], ["Cuchillo para desollar", 1]],
+      "75-150": [["Cuero ligero", null], ["Cuero medio (Los Humedales, 130-150)", null], ["Cuero prístino (escaso)", null], ["Cuchillo para desollar afilado (Horda, +3)", 1]],
+      "150-225": [["Cuero medio", null], ["Cuero pesado", null], ["Cuero prístino (escaso)", null]],
+      "225-300": [["Cuero grueso", null], ["Cuero pesado", null], ["Cuero basto", null], ["Pellejo prístino (escaso)", null]]
+    },
+    "nota": "Cada criatura se desuella una vez y pide 5 veces su nivel. Las guías no dan cuántas pieles por tramo; el tipo de cuero sale de las criaturas de la ruta."
+  },
+  "p07": {
+    "prof": "Peletería",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Restos de cuero estropeado", 105], ["Cuero ligero", 85], ["Hilo burdo (vendedor)", 70], ["Pellejo ligero", 10], ["Sal (vendedor)", 10]],
+      "75-150": [["Cuero ligero", 160], ["Cuero medio", 150], ["Sal (vendedor)", 95], ["Pellejo pesado", 25], ["Pellejo medio", 20], ["Y otros: hilo burdo y refinado, tinte gris", null]],
+      "150-225": [["Cuero grueso", 390], ["Cuero pesado", 290], ["Hilo de seda (vendedor)", 200], ["Hilo refinado (vendedor)", 50], ["Hebilla de hierro", 10]],
+      "225-300": [["Cuero basto", 975], ["Paño rúnico", 490], ["Cuero grueso", 225], ["Hilo rúnico (vendedor)", 85], ["Tinte negro (o azul, con los zapatos de gamuza azul)", 36]]
+    },
+    "nota": "Aprox., varía según tus recetas. Del 265 al 300 la guía da de 410 a 686 cueros bastos y de 50 a 490 paños rúnicos según el patrón que consigas (aquí, la cinta de cuero rúnico)."
+  },
+  "p08": {
+    "prof": "Sastrería",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Paño de lana", 90], ["Paño de lino", 60], ["Hilo burdo (vendedor)", 28]],
+      "75-150": [["Paño de seda", 220], ["Paño de tejido mágico", 115], ["Hilo refinado (vendedor)", 80], ["Cuero pesado", 30], ["Paño de lana", 20], ["Tinte azul (vendedor)", 10]],
+      "150-225": [["Paño de tejido mágico", 605], ["Paño de seda", 590], ["Paño rúnico", 115], ["Tinte rojo (vendedor)", 110], ["Hilo de seda (vendedor)", 100], ["Y otros: hilo refinado e hilo de seda grueso", 85]],
+      "225-300": [["Paño rúnico (hasta el 280)", 1440], ["Hilo rúnico (vendedor)", 75], ["Cuero basto", 44], ["Seda de araña Tejehierro", 39], ["Patrón: puños de paño rúnico", 1], ["280-300: depende del patrón que consigas", null]]
+    },
+    "nota": "Aprox., varía según tus recetas. La guía corta la lista en el 280; con los sobrehombros de paño rúnico, del 280 al 300 son 406 madejas de paño rúnico más."
+  },
+  "p09": {
+    "prof": "Encantamiento",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Polvo extraño", 55], ["Mota de magia (vendedor)", 19], ["Vara de cobre (vendedor)", 1]],
+      "75-150": [["Polvo extraño", 200], ["Esencia mágica inferior", 4], ["Vara de plata", 1], ["Gema de las Sombras", 1]],
+      "150-225": [["Polvo de alma", 61], ["Semilla Tuercespina (vendedor)", 50], ["Vial emplomado (vendedor)", 41], ["Semillas de arce (vendedor)", 32], ["Polvo de visión", 31], ["Y otros: varas dorada y de veraplata, perlas, esencias", null]],
+      "225-300": [["Polvo onírico", 105], ["Polvo de ilusión", 90], ["Flor de fuego", 52], ["Polvo de visión", 34], ["Loto cárdeno", 26], ["Y otros: 52 viales de cristal, vara de arcanita", null]]
+    },
+    "nota": "Aprox., varía según tus recetas. Camino con polvo extraño; el otro camino (esencia mágica inferior) pide unas 293 esencias y 23 maderas simples del 1 al 150."
+  },
+  "p10": {
+    "prof": "Cocina",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Pececito luminoso crudo (o caballa de piel escurridiza)", 55], ["Pargo de lodo boquilargo crudo (o atún blanco arco iris)", 25], ["Madera simple y sílex y yesca (hoguera básica)", null]],
+      "75-150": [["Siluro mostacherizo crudo", 55], ["Pargo de lodo boquilargo crudo (o atún blanco arco iris)", 30]],
+      "150-225": [["Especias picantes (vendedor)", 85], ["Carne de raptor (o trucha cabeza de mitril cruda)", 55], ["Carne de almeja ácida", 30], ["Libro de cocina para expertos", 1]],
+      "225-300": [["Serviola moteada cruda (o branquirrojo crudo)", 70], ["Queso curado de Alterac (misión)", 20], ["Pargo nocturno crudo", 18], ["Agua de manantial refrescante (vendedor)", 18], ["Huevo gigante (misión)", 12], ["Carne de almeja sabrosa (misión)", 10]]
+    },
+    "nota": "Aprox., varía según tus recetas. Huevos, almejas y queso son para la misión de artesano de Gadgetzan."
+  },
+  "p11": {
+    "prof": "Pesca",
+    "tipo": "recoleccion",
+    "tramos": {
+      "1-75": [["Pececito luminoso crudo", 45], ["Pargo de lodo boquilargo crudo", 30], ["O en Durotar: caballa de piel escurridiza cruda", 70], ["Caña de pescar", 1], ["Adorno lustroso (cebo)", null]],
+      "75-150": [["Pargo de lodo boquilargo crudo", 85], ["Siluro mostacherizo crudo", 70], ["Pececito luminoso crudo", 20], ["Reptadores nocturnos (cebo)", 2]],
+      "150-225": [["Siluro mostacherizo crudo", 105], ["Pargo de lodo boquilargo crudo", 70], ["Trucha cabeza de mitril cruda (Marjal Revolcafango)", null], ["Adornos brillantes o reptadores nocturnos (cebo)", 5], ["Pesca para expertos: La lubina y tú", 1]],
+      "225-300": [["Peces de Nat Pagle: latipinia azul, artillero Sar'theris, mahi mahi Juncobruma, ahi de Feralas", 4], ["Trucha cabeza de mitril cruda (Marjal, hasta 255)", null], ["Branquirrojo crudo y pargo nocturno crudo (Feralas)", null], ["Adornos brillantes (cebo)", 12]]
+    },
+    "nota": "Capturas aproximadas de la guía de pesca y cocina; del 205 al 300 la guía no da cuántos peces. El pargo nocturno no pica de 12:00 a 18:00 (hora del juego)."
+  },
+  "p12": {
+    "prof": "Primeros auxilios",
+    "tipo": "fabricacion",
+    "tramos": {
+      "1-75": [["Paño de lino (camino de vendas)", 145], ["O pociones: flor de paz", 86], ["Especias suaves (vendedor)", 86], ["Vial vacío (vendedor)", 86]],
+      "75-150": [["Paño de lana (camino de vendas)", 155], ["Paño de lino", 25], ["O curativos: icor de araña (cataplasma simple)", 54], ["Botella de Dalaran Noir (vendedor)", 54], ["Hierba cardenal (poción de sanación)", 31], ["Y otros: especias suaves y picantes, viales emplomados", null]],
+      "150-225": [["Paño de seda", 130], ["Paño de tejido mágico", 20], ["Primeros auxilios para expertos: Entre vendas", 1], ["Manuales: venda de seda gruesa y venda de tejido mágico", 2]],
+      "225-300": [["Paño de tejido mágico", 85], ["Paño rúnico", 70], ["O de 275 a 300: sansam dorado", 30], ["Especias calmantes (vendedor)", 90], ["Vial de cristal (vendedor)", 30], ["Manual: Poción de sanación sublime", 1]]
+    },
+    "nota": "Aprox., varía según tus recetas. Con el camino de pociones (75-150 y 275-300) gastas mucha menos tela: solo 12 paños de lana en el 80-90 y menos paño rúnico al final."
+  },
+  "_fuentes": {
+    "comun": [
+      "https://nether.wowhead.com/forever/tooltip/item/<id>?locale=11 (nombres es-MX de Wowhead Forever, leídos el 25-nov-2026 para cada objeto)",
+      "https://worldofwarcraft.blizzard.com/news/24315281 (hotfixes de Forever hasta el 23-nov)"
+    ],
+    "p01": ["https://www.wow-professions.com/forever/mining-leveling-guide", "https://www.warcrafttavern.com/forever/guides/mining/", "https://www.wow-professions.com/forever/mining-changes"],
+    "p02": ["https://www.wow-professions.com/forever/blacksmithing-leveling-guide"],
+    "p03": ["https://www.wow-professions.com/forever/engineering-leveling-guide"],
+    "p04": ["https://www.wow-professions.com/forever/herbalism-leveling-guide", "https://www.warcrafttavern.com/forever/guides/herbalism/", "https://www.wow-professions.com/forever/herbalism-changes"],
+    "p05": ["https://www.wow-professions.com/forever/alchemy-leveling-guide"],
+    "p06": ["https://www.wow-professions.com/forever/skinning-leveling-guide", "https://www.warcrafttavern.com/forever/guides/skinning/", "https://nether.wowhead.com/forever/data/world-map (cuero por criatura)"],
+    "p07": ["https://www.wow-professions.com/forever/leatherworking-leveling-guide"],
+    "p08": ["https://www.wow-professions.com/forever/tailoring-leveling-guide"],
+    "p09": ["https://www.wow-professions.com/forever/enchanting-leveling-guide"],
+    "p10": ["https://www.wow-professions.com/forever/cooking-leveling-guide"],
+    "p11": ["https://www.wow-professions.com/forever/fishing-leveling-guide", "https://www.wow-professions.com/forever/fishing-and-cooking-leveling-guide"],
+    "p12": ["https://www.wow-professions.com/forever/first-aid-leveling-guide"]
+  }
+}

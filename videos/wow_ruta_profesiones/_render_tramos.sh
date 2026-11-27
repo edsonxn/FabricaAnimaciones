@@ -6,25 +6,46 @@ cd /c/FabricaAnimaciones
 V=wow_ruta_profesiones
 D=videos/$V
 otro() {
-  powershell -c "Get-CimInstance Win32_Process | Where-Object { \$_.Name -match 'python|bash' } | Select -Expand CommandLine" 2>/dev/null \
-    | grep -v "$V" | grep -q " video$\| video --tramo\|-m render\|_render_tramos.sh\| final$\| mezcla$"
+  # otro render, o la voz/selección (GPU) de otra sesión (aviso de la sesión de wow_oro_30_50, 25-nov); sin contarse a sí mismo
+  powershell -c "Get-CimInstance Win32_Process | Where-Object { \$_.Name -match 'python' } | Select -Expand CommandLine" 2>/dev/null     | grep -v "$V" | grep -E -q " video$| video --tramo|-m render| final$| mezcla$| voz$| seleccionar$|tts_gen|tts_select"
 }
 while otro; do sleep 60; done
 sleep 30
 while otro; do sleep 60; done
 echo "INICIO $(date +%H:%M)"
+# hoja de efectos para revisarla mientras sigue el render (25-nov: falló dos veces por memoria con otras sesiones corriendo)
+# (ya mirada) FAB_FX_FINAL=1 python fab.py $V fx hoja > $D/_prep4.log 2>&1; echo "hoja codigo $? $(date +%H:%M)" >> $D/_prep4.log
+# echo hoja
+holgura() {   # GB de memoria comprometida libre (la máquina se queda sin commit cuando varias sesiones trabajan a la vez)
+  powershell -c "\$o=Get-CimInstance Win32_OperatingSystem; [int](\$o.FreeVirtualMemory/1MB)" 2>/dev/null | tr -d '
+'
+}
 for e in fx sfx mezcla; do
-  python fab.py $V $e > $D/_render_$e.log 2>&1 || { echo "FALLÓ $e $(date +%H:%M)"; exit 1; }
+  ok=0
+  for intento in 1 2 3 4 5 6; do
+    while [ "$(holgura)" -lt 10 ]; do sleep 60; done
+    if python fab.py $V $e > $D/_render_$e.log 2>&1; then ok=1; break; fi
+    echo "  $e intento $intento falló $(date +%H:%M): $(grep -o 'MemoryError\|Error[^:]*' $D/_render_$e.log | tail -1)"
+    sleep 120
+  done
+  [ $ok = 1 ] || { echo "FALLÓ $e $(date +%H:%M)"; exit 1; }
   echo "$e ok $(date +%H:%M)"
 done
-T=(0 250 500 750 1000 1250 1500 1750 1878.75)
+# cortes cada 250 s hasta el total del timeline (25-nov: el total cambia al mover la promo y sumar las listas)
+T=($(python -c "import json;t=json.load(open('$D/timeline.json',encoding='utf-8'))['total'];c=list(range(0,int(t),250));print(' '.join(map(str,c+[t])))"))
+N=$(( ${#T[@]} - 1 ))
 : > $D/salida/_lista.txt
-for i in 0 1 2 3 4 5 6 7; do
+for i in $(seq 0 $((N-1))); do
   a=${T[$i]}; b=${T[$((i+1))]}
   f=$(ls $D/salida/ | grep "^tramo_${a}_" | head -1)
   if [ -z "$f" ] || ! /c/ffmpeg/bin/ffprobe -v error -show_entries format=duration -of csv=p=0 "$D/salida/$f" >/dev/null 2>&1; then
-    python fab.py $V video --tramo $a-$b > $D/_render_video_$i.log 2>&1
-    f=$(ls $D/salida/ | grep "^tramo_${a}_" | head -1)
+    for intento in 1 2 3; do
+      while [ "$(holgura)" -lt 10 ]; do sleep 60; done
+      python fab.py $V video --tramo $a-$b > $D/_render_video_$i.log 2>&1
+      f=$(ls $D/salida/ | grep "^tramo_${a}_" | head -1)
+      [ -n "$f" ] && break
+      echo "  tramo $a-$b intento $intento falló $(date +%H:%M)"; sleep 120
+    done
   fi
   [ -z "$f" ] && { echo "FALLÓ tramo $a-$b $(date +%H:%M)"; exit 1; }
   echo "tramo $a-$b fin $(date +%H:%M) $f $(/c/ffmpeg/bin/ffprobe -v error -show_entries format=duration -of csv=p=0 $D/salida/$f)"

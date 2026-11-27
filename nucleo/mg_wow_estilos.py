@@ -5,7 +5,7 @@ original del kit (mg_wow / peg_estilos / peg_anim, azul noche y oro) con tres es
              (tarjeta), peg_anim.variado (pegatina)
   pergamino  CARTÓGRAFO DE PERGAMINO: pergamino quemado, tinta sepia, Corsiva, sellos de lacre, ruta de pluma, fotos pegadas
   oro        RELIQUIA DE ORO Y PIEDRA: piedra tallada, molduras de oro, gemas engastadas, cadena de runas, polvo dorado
-  holograma  HOLOGRAMA ARCANO: proyección azul-violeta, rejilla, círculos rúnicos, haz con partículas, cristal con neón
+  madera     MADERA Y PERGAMINO (25-nov; sustituye al holograma arcano): mismas animaciones con madera, pergamino y oro
 Demos de 30 s y hojas: videos/_kit_wow_estilos/estilo_1 (pergamino), estilo_2 (oro), estilo_3 (holograma); prueba de la
 mezcla: videos/_kit_wow_estilos/prueba_mezcla/ (hoja_mezcla.jpg). Motores: nucleo/wow_estilos/. Doc: docs/estilo_secuencia_yt.md
 § «KIT DE 4 ESTILOS (22-nov-2026)».
@@ -25,7 +25,10 @@ PIEZAS (todas devuelven fn(dt, dur, marcas) -> BGRA, la firma de los FX `mg`/`pa
         marco para pegatinas sueltas: original = peg_anim.variado (anim = entrada/estancia/salida/marco); pergamino = foto
         pegada con lacre; oro = relicario de oro; holograma = ficha de cristal translúcido con borde de neón.
 
-REPARTO (no pensarlo puesto a puesto): ESTILOS_WOW = ("original", "pergamino", "oro", "holograma"). Con estilo=None cada
+CAMBIO DEL USUARIO (25-nov-2026, wow_ruta_profesiones): el «holograma» arcano (azul-violeta, neón) se salía del estilo
+visual → ahora es «madera» (wow_estilos/madera.py: el MISMO motor y animaciones con piel de madera, pergamino y oro;
+«holo», «holograma» y «arcano» llevan ahí). Los MAPAS van SIEMPRE con el mapa original sin teñir (ver mapa_e).
+REPARTO (no pensarlo puesto a puesto): ESTILOS_WOW = ("original", "pergamino", "oro", "madera"). Con estilo=None cada
 helper toma el SIGUIENTE estilo de su pieza en rotación (dos mapas seguidos nunca repiten estilo; cada pieza arranca
 desfasada para que mapa, ficha, tarjeta y rótulo del mismo puesto no coincidan). estilo_para(indice_o_id, pieza) da el
 estilo fijo de un puesto (int = número de puesto; str = id, en orden de aparición). El contador se reinicia solo cada vez
@@ -55,12 +58,12 @@ from PIL import Image, ImageDraw, ImageFilter
 
 from wow_estilos import comun as C
 
-ESTILOS_WOW = ("original", "pergamino", "oro", "holograma")
+ESTILOS_WOW = ("original", "pergamino", "oro", "madera")
 NUEVOS = ESTILOS_WOW[1:]
 PIEZAS = ("mapa", "ficha", "tarjeta", "rotulo", "pegatina")
 _DESFASE = dict(mapa=0, ficha=1, tarjeta=2, rotulo=3, pegatina=1)
 _ALIAS = {"perg": "pergamino", "pergamino": "pergamino", "cartografo": "pergamino", "oro": "oro", "reliquia": "oro",
-          "piedra": "oro", "holo": "holograma", "holograma": "holograma", "arcano": "holograma", "original": "original",
+          "piedra": "oro", "holo": "madera", "holograma": "madera", "arcano": "madera", "madera": "madera", "original": "original",
           "clasico": "original"}
 
 
@@ -217,16 +220,16 @@ def _firmar(fn, *datos):
     return pieza
 
 
-def mapa(estilo, imagen_mapa, puntos, titulo=None, sub=None, zmin=1.0, zmax=1.5, objeto=None):
-    return _firmar(_mapa(estilo, imagen_mapa, puntos, titulo, sub, zmin, zmax, objeto),
-                   "mapa", _est(estilo), imagen_mapa, list(puntos), titulo, sub, zmin, zmax, objeto)
+def mapa(estilo, imagen_mapa, puntos, titulo=None, sub=None, zmin=1.0, zmax=1.5, objeto=None, variante=0):
+    return _firmar(_mapa(estilo, imagen_mapa, puntos, titulo, sub, zmin, zmax, objeto, variante),
+                   "mapa", _est(estilo), imagen_mapa, list(puntos), titulo, sub, zmin, zmax, objeto, variante)
 
 
-def _mapa(estilo, imagen_mapa, puntos, titulo, sub, zmin, zmax, objeto):
+def _mapa(estilo, imagen_mapa, puntos, titulo, sub, zmin, zmax, objeto, variante=0):
     e = _est(estilo)
     if e == "original":
         import mg_wow as M
-        return M.ruta(imagen_mapa, puntos, titulo, sub, zmax=zmax, zmin=zmin, objeto=objeto)
+        return M.ruta(imagen_mapa, puntos, titulo, sub, zmax=zmax, zmin=zmin, objeto=objeto, variante=variante)
     return _motor(e).Mapa(imagen_mapa, puntos, titulo, sub, zmin=zmin, zmax=zmax, objeto=objeto).fn()
 
 
@@ -361,9 +364,26 @@ def _icono_e(s):
 
 def mapa_e(nom, puntos, de, a, marcas, titulo, sub=None, objeto=None, zmax=1.5, zmin=1.0, estilo=None):
     """FX `pantalla` con el mapa (mapas/<nom>.jpg). Mismos argumentos que mapa() de efectos.py + estilo."""
-    est = _est(estilo) if estilo else siguiente("mapa")
-    return dict(tipo="pantalla", fn=mapa(est, _ruta(nom, "mapas", ".jpg"), puntos, titulo, sub, zmin, zmax, objeto),
-                de=de, a=a, marcas=list(marcas), entra=.5, sale=.5, nombre=f"mapa {est} {titulo}", ver=1.0)
+    # REGLA DEL USUARIO (25-nov-2026, `wow_ruta_profesiones`): los MAPAS van SIEMPRE con el mapa ORIGINAL a todo color
+    # («no me convence ese cambio radical de estilo… mejor mostrar siempre el mapa original igual, solo tal vez cambiando
+    # los trazos y líneas, pero siempre el mapa original mostrando el ícono del material, personaje, etc. en el mapa»).
+    # Pergamino y holograma ya NO se usan en mapas (tiñen el mapa de sepia o de azul). Sí el ORO («esa sí me gusta: el
+    # mapa original con ese estilo nuevo de íconos y trazos»: marco de oro y piedra, gemas de pin, placas). Rotación:
+    # original → oro → original variante 1 (línea continua, rombo, placa negra) → original variante 2 (puntos, sello de
+    # tinta, etiqueta de pergamino) y «madera» = la animación del viejo holograma (haz que cae, anillos rúnicos, ruta con
+    # chispas, título que se descifra) en oro cálido SOBRE EL MAPA ORIGINAL sin filtro ni rejilla. Rotación de 5:
+    # original → oro → madera → original v1 → original v2. Cada paso lleva su foto o ícono (material, personaje, lugar).
+    # `estilo` fija uno de los tres motores ("original"/"oro"/"madera"); pergamino se ignora a propósito.
+    _vigilar_dueno()
+    k = _rep["cuenta"].get("mapa", 0)
+    _rep["cuenta"]["mapa"] = k + 1
+    est, var = (("original", 0), ("oro", 0), ("madera", 0), ("original", 1), ("original", 2))[k % 5]
+    if estilo and _est(estilo) in ("original", "oro", "madera"):
+        est = _est(estilo)
+        var = 0 if est == "oro" else var
+    return dict(tipo="pantalla", fn=mapa(est, _ruta(nom, "mapas", ".jpg"), puntos, titulo, sub, zmin, zmax, objeto,
+                                         variante=var),
+                de=de, a=a, marcas=list(marcas), entra=.5, sale=.5, nombre=f"mapa {est} v{var} {titulo}", ver=1.0)
 
 
 def ficha_e(titulo, iconos, de, a, marcas, cuentas=None, total=None, etiquetas=None, x=.5, y=.55, estilo=None):

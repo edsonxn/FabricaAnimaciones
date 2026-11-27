@@ -1245,7 +1245,8 @@ def arbol_arde(etapas, titulo="El pecado capital", w=1500, h=760):
     return fn
 
 
-def muerte_suelta(nombres, titulo="La Runa de la Muerte", remate="Indiscriminada", w=1500, h=660):
+def muerte_suelta(nombres, titulo="La Runa de la Muerte", remate="Indiscriminada", w=1500, h=660,
+                  origen=("arrancada del", "Orden Áureo")):
     """La Runa de la Muerte (hoja negra con filo rojo que late) presa en un anillo de eslabones dorados (el sello de
     Maliketh). Marca 0: «arrancada del Orden Áureo» · marca 1: los eslabones se rompen uno a uno («sello roto») · marca
     2: ondas negras y rojas se expanden, cada nombre de la fila de abajo se apaga en gris y se tacha, y sale `remate`."""
@@ -1293,8 +1294,8 @@ def muerte_suelta(nombres, titulo="La Runa de la Muerte", remate="Indiscriminada
         _texto(d, (M + w / 2, M + 44), titulo.upper(), ftit, PERGAMINO, "mm", a0, track=6)
         _filete(d, M + w / 2, M + 80, w * .3, alfa=a0)
         if u0 > 0:
-            _texto(d, (cx + 280, cy - 60), "arrancada del", fs, GRIS, "lm", 255 * u0 * (1 - .6 * u2))
-            _texto(d, (cx + 280, cy - 18), "Orden Áureo", fuente("r", 44), ORO, "lm", 255 * u0 * (1 - .6 * u2))
+            _texto(d, (cx + 280, cy - 60), origen[0], fs, GRIS, "lm", 255 * u0 * (1 - .6 * u2))
+            _texto(d, (cx + 280, cy - 18), origen[1], fuente("r", 44), ORO, "lm", 255 * u0 * (1 - .6 * u2))
         if u1 > 0:
             _texto(d, (cx - 280, cy - 40), "sello roto", fuente("i", 44), ROJO, "rm", 255 * u1 * (1 - .6 * u2))
         for i, s in enumerate(nombres):
@@ -2325,10 +2326,12 @@ def _palomita(d, x, y, s, color, a):
 
 
 def expediente(acusado="El Sinluz", sub="sin doncella, sin runas, sin nada", cargos=(), ya=0, sello="CULPABLE",
-               titulo="Expediente", w=1400, h=None):
+               titulo="Expediente", w=1400, h=None, ritmo=.035, tmin=.6):
     """Ficha de acusación del juicio al jugador (recurrente: una por puesto). Los `ya` primeros cargos ya están escritos y
     sellados al entrar; marca k (k = 0..) escribe el cargo `ya + k` letra a letra en ámbar y le cae una palomita roja al
-    lado; la marca siguiente al último cargo deja caer el sello grande `sello` en diagonal (None = sin sello final)."""
+    lado; la marca siguiente al último cargo deja caer el sello grande `sello` en diagonal (None = sin sello final).
+    `ritmo` = segundos por letra y `tmin` = mínimo por cargo (27-nov-2026: ficha corta → ritmo=.015, tmin=.3, para que el
+    cargo termine de escribirse antes de salir)."""
     ftit, fac, fs, fc, fn_, fse = fuente("r", 40), fuente("b", 58), fuente("i", 30), fuente("r", 38), fuente("b", 40), fuente("b", 92)
     n = len(cargos)
     h = h or int(320 + 82 * n + (60 if sello else 0))
@@ -2345,7 +2348,7 @@ def expediente(acusado="El Sinluz", sub="sin doncella, sin runas, sin nada", car
         d.line((M + 80, M + 240, M + w - 80, M + 240), fill=ORO_OSC + (int(a0 * .8),), width=2)
         paso = 82
         for i, c in enumerate(cargos):
-            tesc = max(.6, len(c) * .035)
+            tesc = max(tmin, len(c) * ritmo)
             u = (dt - mk[i]) / tesc
             if u <= 0:
                 continue
@@ -3805,5 +3808,348 @@ def despojados(dentro="La gracia del oro", fuera=("Los cornamentados", "Sus best
         d = ImageDraw.Draw(im)
         if remate:
             _texto(d, (M + w / 2, M + h - 40), remate, frem, CARMIN, "mm", 255 * _eo((dt - mk[n + 1]) / .4), track=2)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+# ---------------------------------------------------------------- er_maliketh_atrocidades (27-nov-2026)
+def retal(n_col=5, n_fil=3, etiqueta="campeón", marca="Adipocira ennegrecida",
+          sub="La marca de quienes sirven a Maliketh", remate="", titulo="El retal de los campeones", w=1500, h=680, semilla=7):
+    """Cuerpo de gárgola hecho de parches (rejilla de cuadriláteros con vértices compartidos y costuras). Marca 0: aparecen los
+    parches de piedra y el `titulo` · marca 1: cada parche se rellena de cera pálida con `etiqueta` (en cascada, ~2 s) ·
+    marca 2: la cera se ennegrece, las costuras brillan en oro y salen `marca` + `sub` · marca 3 (opcional): `remate` en
+    carmín. Espera 3 marcas (+1 con remate)."""
+    rng = np.random.default_rng(semilla)
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    ftit = _ajustar(tmp, titulo.upper(), "b", 42, w - 200, 1)[0]
+    fet = fuente("i", 24)
+    fma = _ajustar(tmp, marca.upper(), "b", 44, w - 200, 1)[0]
+    fsu = _ajustar(tmp, sub, "i", 36, w - 200, 1)[0]
+    fre = _ajustar(tmp, remate or " ", "b", 38, w - 200, 1)[0]
+    x0, x1, y0, y1 = 170, w - 170, 130, h - 190
+    P = np.zeros((n_fil + 1, n_col + 1, 2))
+    for i in range(n_fil + 1):
+        for j in range(n_col + 1):
+            jx = 0 if j in (0, n_col) else rng.uniform(-.28, .28)
+            jy = 0 if i in (0, n_fil) else rng.uniform(-.28, .28)
+            P[i, j] = (x0 + (j + jx) * (x1 - x0) / n_col, y0 + (i + jy) * (y1 - y0) / n_fil)
+    orden = list(rng.permutation(n_fil * n_col))
+    PIEDRA, CERA, NEGRA = (92, 90, 86), (222, 212, 184), (26, 23, 21)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 5
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = _eo((dt - mk[0]) / .5)
+        _texto(d, (M + w / 2, M + 60), titulo.upper(), ftit, ORO, "mm", 255 * a0, track=5)
+        un = _eo((dt - mk[2]) / 1.2)
+        for q in range(n_fil * n_col):
+            i, j = divmod(q, n_col)
+            pts = [tuple(P[i, j] + M), tuple(P[i, j + 1] + M), tuple(P[i + 1, j + 1] + M), tuple(P[i + 1, j] + M)]
+            k = orden.index(q)
+            uc = _eo((dt - mk[1] - k * 2.0 / (n_fil * n_col)) / .5)
+            col = _mezcla(_mezcla(PIEDRA, CERA, uc), NEGRA, un)
+            d.polygon(pts, fill=col + (int(250 * a0),))
+            cs = _mezcla((60, 58, 54), ORO, un)
+            d.line(pts + [pts[0]], fill=cs + (int(255 * a0),), width=3 + int(2 * un))
+            for e in range(4):          # puntadas cortas perpendiculares a cada costura
+                p, r = np.array(pts[e]), np.array(pts[(e + 1) % 4])
+                v = (r - p) / (np.linalg.norm(r - p) + 1e-6)
+                nrm = np.array((-v[1], v[0])) * 7
+                for t in np.linspace(.15, .85, 5):
+                    c = p + (r - p) * t
+                    d.line((tuple(c - nrm), tuple(c + nrm)), fill=cs + (int(220 * a0),), width=2)
+            if uc > 0:
+                cx, cy = np.mean(pts, axis=0)
+                _texto(d, (cx, cy), etiqueta, fet, _mezcla((70, 60, 44), (150, 130, 90), un), "mm", 255 * uc * (1 - .4 * un), sombra=False)
+        if un > 0:
+            g = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ImageDraw.Draw(g).rectangle((M + x0, M + y0, M + x1, M + y1), outline=ORO + (int(120 * un),), width=8)
+            im.alpha_composite(_brillo(g, 12, 1.0))
+            d = ImageDraw.Draw(im)
+            _texto(d, (M + w / 2, M + h - 120), marca.upper(), fma, ORO, "mm", 255 * un, track=4)
+            _texto(d, (M + w / 2, M + h - 68), sub, fsu, PERGAMINO, "mm", 255 * _eo((dt - mk[2] - .5) / .5))
+        if remate:
+            _texto(d, (M + w / 2, M + h - 24), remate, fre, CARMIN, "mm", 255 * _eo((dt - mk[3]) / .4), track=2)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def recambio(cadena=(("Gurranq", "la bestia"), ("D", "cazador de los muertos"), ("Tú", "el recambio")),
+             cita="D: la propia bestia quiere que alguien ocupe su lugar", flujo="raíz mortuoria", iconos=(None, None, None),
+             w=1600, h=620, comillas=False):
+    """Fila de tarjetas: la bestia a la izquierda y sus cazadores. Marca 0: tarjeta de la bestia + `cita` que se escribe ·
+    marca 1: aparece el cazador y raíces (puntos ámbar con `flujo`) viajan hacia la bestia · marca 2: el cazador se apaga
+    en gris, se tacha, y la última tarjeta (`Tú`) entra deslizándose y late en carmín; el flujo sale ahora de ella.
+    `comillas=True` solo si `cita` es una cita en español VERIFICADA (la de D solo existe en inglés: paráfrasis, 27-nov-2026).
+    Espera 3 marcas."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    fci, lci = _ajustar(tmp, "«" + cita + "»" if comillas else cita, "i", 40, w - 200, 2)
+    fno = fuente("b", 50)
+    fsb = fuente("i", 30)
+    ffl = fuente("i", 26)
+    ics = [_icono(r, 200) for r in iconos]
+    bw, bh = 360, 340
+
+    def tarjeta(im, cx, cy, nom, sb, ic, col, a):
+        d = ImageDraw.Draw(im)
+        d.rounded_rectangle((cx - bw / 2, cy - bh / 2, cx + bw / 2, cy + bh / 2), 16, fill=(18, 14, 11, int(240 * a)), outline=col + (int(255 * a),), width=4)
+        if ic is not None:
+            im.alpha_composite(_con_alfa(ic, 255 * a), (int(cx - ic.width / 2), int(cy - bh / 2 + 16)))
+            d = ImageDraw.Draw(im)
+        yy = cy + (bh / 2 - 92 if ic is not None else -10)
+        _texto(d, (cx, yy), nom.upper(), fno, _mezcla(PERGAMINO, col, .25), "mm", 255 * a, track=4)
+        _texto(d, (cx, yy + 50), sb, fsb, (190, 182, 166), "mm", 230 * a)
+        return d
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        uc = dt - mk[0]
+        if uc > 0:
+            nv = int(uc * 38)
+            for j, ln in enumerate(lci):
+                _texto(d, (M + w / 2, M + 56 + j * int(fci.size * 1.12)), ln[:max(0, nv)], fci, PERGAMINO, "mm", 255)
+                nv -= len(ln)
+        cy = M + h / 2 + 60
+        xs = [M + 260, M + w / 2 + 60, M + w - 260]
+        a0 = _eo((dt - mk[0]) / .5)
+        d = tarjeta(im, xs[0], cy, *cadena[0], ics[0], ORO, a0)
+        u1 = _eo((dt - mk[1]) / .5)
+        u2 = _eo((dt - mk[2]) / .7)
+        if u1 > 0:
+            col = _mezcla(AMBAR, GRIS, u2)
+            d = tarjeta(im, xs[1], cy, *cadena[1], ics[1], col, u1 * (1 - .55 * u2))
+            if u2 > 0:
+                d.line((xs[1] - bw / 2 + 20, cy - bh / 2 + 20, xs[1] + bw / 2 - 20, cy + bh / 2 - 20), fill=CARMIN + (int(220 * u2),), width=5)
+        if u2 > 0:
+            late = .5 + .5 * math.sin(dt * 5)
+            d = tarjeta(im, xs[2] + 300 * (1 - u2), cy, *cadena[2], ics[2], _mezcla(CARMIN, (255, 100, 90), late * .5), u2)
+        src = xs[2] if u2 > .5 else xs[1]
+        if u1 > 0:
+            xa, xb = src - bw / 2 - 10, xs[0] + bw / 2 + 10
+            d.line((xa, cy, xb, cy), fill=AMBAR + (int(90 * u1),), width=3)
+            for k in range(7):
+                t = (dt * .35 + k / 7) % 1
+                x = xa + (xb - xa) * t
+                d.ellipse((x - 7, cy - 7, x + 7, cy + 7), fill=AMBAR + (int(230 * u1 * math.sin(math.pi * t)),))
+            _texto(d, ((xa + xb) / 2, cy - bh / 2 - 26), flujo, ffl, AMBAR, "mm", 220 * u1)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def nombre_bestia(nombre="Gurranq", significado="Muerte de los Semidioses",
+                  temen=("Godfrey", "Radagon", "Godwyn", "Morgott", "Malenia", "Radahn", "Rykard", "Mohg"),
+                  remate="No había ni un solo semidiós que no lo temiese", w=1600, h=640):
+    """Marca 0: el `nombre` grande en oro · marca 1: las letras se deshacen en ceniza y en su sitio brilla `significado` en
+    carmín · marca 2: arriba y abajo aparecen los `temen`, tiemblan y se apagan a gris · marca 3: `remate` abajo.
+    Espera 4 marcas."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    fno = _ajustar(tmp, nombre.upper(), "b", 150, w - 300, 1)[0]
+    fsi = _ajustar(tmp, significado.upper(), "b", 84, w - 200, 1)[0]
+    fte = fuente("r", 34)
+    fre = _ajustar(tmp, remate, "i", 40, w - 200, 1)[0]
+    n = len(temen)
+    mitad = (n + 1) // 2
+    rng = np.random.default_rng(3)
+    cen = [(rng.uniform(-1, 1), rng.uniform(-1, 1), rng.uniform(0, 6.28)) for _ in range(40)]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 5
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        cx, cy = M + w / 2, M + h / 2 - 20
+        a0 = _eo((dt - mk[0]) / .5)
+        u1 = _eo((dt - mk[1]) / 1.0)
+        _texto(d, (cx, cy - 40 * u1), nombre.upper(), fno, ORO, "mm", 255 * a0 * (1 - u1), track=12)
+        if u1 > 0:
+            t = (dt - mk[1]) * .6
+            for (rx, ry, ph) in cen:
+                x, y = cx + rx * 380 + 40 * math.sin(ph + t), cy + ry * 70 - 140 * min(1, t)
+                al = 200 * (1 - min(1, t * .8))
+                if al > 0:
+                    d.ellipse((x - 3, y - 3, x + 3, y + 3), fill=(120, 110, 100, int(al)))
+            us = _eo((dt - mk[1] - .9) / .8)
+            g = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            _texto(ImageDraw.Draw(g), (cx, cy), significado.upper(), fsi, CARMIN, "mm", 200 * us, track=4, sombra=False)
+            im.alpha_composite(_brillo(g, 10, .8))
+            d = ImageDraw.Draw(im)
+            _texto(d, (cx, cy), significado.upper(), fsi, (236, 70, 70), "mm", 255 * us, track=4)
+        for i, nom in enumerate(temen):
+            ui = _eo((dt - mk[2] - i * .18) / .4)
+            if ui <= 0:
+                continue
+            fila, col_i = (0, i) if i < mitad else (1, i - mitad)
+            cnt = mitad if fila == 0 else n - mitad
+            x = M + 180 + col_i * (w - 360) / max(1, cnt - 1)
+            y = M + 150 if fila == 0 else M + h - 160
+            tb = 6 * (1 - _eo((dt - mk[2] - 1.6) / 1.5)) * ui
+            x += tb * math.sin(dt * 40 + i)
+            col = _mezcla(PERGAMINO, GRIS, _eo((dt - mk[2] - 1.2) / 1.2))
+            _texto(d, (x, y), nom, fte, col, "mm", 230 * ui)
+        _texto(d, (cx, M + h - 60), remate, fre, PERGAMINO, "mm", 255 * _eo((dt - mk[3]) / .5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def jaula_orden(dentro="Muerte Escrita", arriba="La Orden Dorada", carcelero="Su carcelero: Maliketh",
+                cita="La Orden Dorada se creó tras confinar a la Muerte Escrita", suelta="La Muerte, libre", w=1500, h=760):
+    """Marca 0: una jaula con un orbe negro-rojo dentro (`dentro`) y la `cita` arriba · marca 1: el Árbol Áureo crece
+    ENCIMA de la jaula con `arriba` · marca 2: `carcelero` a un lado con la hoja negra · marca 3 (opcional): los barrotes
+    saltan, el orbe sale y el árbol se apaga; `suelta` en carmín. Espera 3 marcas (4 para soltarla)."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    fci, lci = _ajustar(tmp, "«" + cita + "»", "i", 36, w - 200, 2)
+    fde = fuente("b", 34)
+    far = fuente("b", 40)
+    fca = fuente("i", 36)
+    fsu = fuente("b", 44)
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 5
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        a0 = _eo((dt - mk[0]) / .5)
+        for j, ln in enumerate(lci):
+            _texto(d, (M + w / 2, M + 52 + j * int(fci.size * 1.12)), ln, fci, PERGAMINO, "mm", 255 * a0)
+        cx, base = M + w / 2, M + h - 80
+        jw, jh = 220, 220
+        top = base - jh
+        us = _eo((dt - mk[3]) / 1.0)
+        oy = (top + base) / 2 - us * 150
+        ox = cx - us * 420
+        g = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        ImageDraw.Draw(g).ellipse((ox - 70, oy - 70, ox + 70, oy + 70), fill=(150, 20, 30, int(160 * a0 * (.8 + .2 * math.sin(dt * 3)))))
+        im.alpha_composite(_brillo(g, 26, 1.0))
+        d = ImageDraw.Draw(im)
+        d.ellipse((ox - 52, oy - 52, ox + 52, oy + 52), fill=(14, 6, 8, int(250 * a0)), outline=(200, 40, 50, int(255 * a0)), width=3)
+        _texto(d, (cx, base + 30), dentro.upper(), fde, (230, 90, 90), "mm", 255 * a0, track=3)
+        d.rectangle((cx - jw / 2, top, cx + jw / 2, base), outline=ORO_OSC + (int(255 * a0 * (1 - .8 * us)),), width=5)
+        for k in range(7):
+            x = cx - jw / 2 + k * jw / 6
+            dx = us * (k - 3) * 60
+            dy = us * (abs(k - 3) * 20 + 40)
+            d.line((x + dx, top - dy, x + dx * 1.2, base - dy * .3), fill=ORO_OSC + (int(255 * a0 * (1 - .7 * us)),), width=5)
+        u1 = _eo((dt - mk[1]) / 1.2)
+        if u1 > 0:
+            apag = 1 - .75 * us
+            col = _mezcla(GRIS, ORO, apag)
+            tr = top - 10
+            alto = 230 * u1
+            gl = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ImageDraw.Draw(gl).ellipse((cx - 300, tr - alto - 110, cx + 300, tr - alto * .2), fill=col + (int(70 * u1 * apag),))
+            im.alpha_composite(gl.filter(ImageFilter.GaussianBlur(30)))
+            d = ImageDraw.Draw(im)
+            d.line((cx, tr, cx, tr - alto), fill=col + (int(255 * u1),), width=14)
+            for k in range(9):
+                t = k / 8
+                ang = math.radians(-165 + 150 * t)
+                L = (90 + 60 * math.sin(t * 3.1)) * u1
+                py = tr - alto * .55
+                d.line((cx, py, cx + L * math.cos(ang) * 1.9, py + L * math.sin(ang) * 1.3), fill=col + (int(230 * u1),), width=6)
+            _texto(d, (cx + 320, tr - alto * .7), arriba.upper(), far, col, "lm", 255 * _eo((dt - mk[1] - .6) / .5), track=3)
+        u2 = _eo((dt - mk[2]) / .5)
+        if u2 > 0:
+            bx = cx + jw / 2 + 130
+            d.polygon([(bx, top - 40), (bx + 16, top - 40), (bx + 10, base - 10), (bx + 6, base - 10)], fill=(20, 10, 10, int(255 * u2)), outline=(190, 40, 40, int(255 * u2)))
+            _texto(d, (bx + 40, (top + base) / 2), carcelero, fca, PERGAMINO, "lm", 255 * u2)
+        if us > 0:
+            _texto(d, (ox, oy + 100), suelta.upper(), fsu, CARMIN, "mm", 255 * us, track=4)
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def pruebas(objetos=(("Aojo de puñal negro", "oculta la verdad de la conspiración", None),
+                     ("Armadura de Cuchillo Negro", "númenes vinculadas a la propia Márika", None),
+                     ("Recuerdo de la Hoja Negra", "Aun así, ella lo traicionó", None)),
+            centro="Márika", pregunta="¿Le robaron la Muerte… o se la hizo robar?", w=1600, h=720):
+    """Tablero de pruebas. Marcas 0..n-1: cada objeto (icono + nombre + frase clave) aparece arriba · marca n: hilos rojos
+    bajan de cada prueba al nodo `centro` con un «?» que late · marca n+1: `pregunta` abajo. Espera n+2 marcas."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    n = len(objetos)
+    cw = (w - 140) / n
+    fno = [_ajustar(tmp, o[0].upper(), "b", 30, cw - 50, 2) for o in objetos]
+    ffr = [_ajustar(tmp, "«" + o[1] + "»", "i", 30, cw - 50, 3) for o in objetos]
+    ics = [_icono(o[2], 140) for o in objetos]
+    fce = fuente("b", 52)
+    fpr = _ajustar(tmp, pregunta, "b", 46, w - 160, 1)[0]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * (n + 3)
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        ncx, ncy = M + w / 2, M + h - 190
+        u3 = _eo((dt - mk[n]) / .8)
+        for i in range(n):
+            ui = _eo((dt - mk[i]) / .5)
+            if ui <= 0:
+                continue
+            cx = M + 70 + cw * (i + .5)
+            y0 = M + 40
+            d.rounded_rectangle((cx - cw / 2 + 16, y0, cx + cw / 2 - 16, y0 + 360), 14, fill=(20, 16, 12, int(240 * ui)), outline=ORO_OSC + (int(255 * ui),), width=3)
+            if ics[i] is not None:
+                im.alpha_composite(_con_alfa(ics[i], 255 * ui), (int(cx - ics[i].width / 2), int(y0 + 14)))
+                d = ImageDraw.Draw(im)
+            f_, ls = fno[i]
+            yy = y0 + (178 if ics[i] is not None else 60)
+            for j, ln in enumerate(ls):
+                _texto(d, (cx, yy + j * f_.size * 1.1), ln, f_, ORO, "mm", 255 * ui, track=2)
+            yy += len(ls) * f_.size * 1.1 + 16
+            f2, l2 = ffr[i]
+            for j, ln in enumerate(l2):
+                _texto(d, (cx, yy + j * f2.size * 1.12), ln, f2, PERGAMINO, "mm", 255 * _eo((dt - mk[i] - .4) / .5))
+            if u3 > 0:
+                p0 = (cx, y0 + 362)
+                p1 = (cx + (ncx - cx) * u3, p0[1] + (ncy - 62 - p0[1]) * u3)
+                d.line((p0, p1), fill=CARMIN + (230,), width=4)
+                d.ellipse((p0[0] - 8, p0[1] - 8, p0[0] + 8, p0[1] + 8), fill=CARMIN + (255,))
+        if u3 > 0:
+            late = .5 + .5 * math.sin(dt * 4)
+            g = Image.new("RGBA", im.size, (0, 0, 0, 0))
+            ImageDraw.Draw(g).ellipse((ncx - 95, ncy - 95, ncx + 95, ncy + 95), fill=(200, 40, 50, int(90 * u3 * (.6 + .4 * late))))
+            im.alpha_composite(g.filter(ImageFilter.GaussianBlur(20)))
+            d = ImageDraw.Draw(im)
+            d.ellipse((ncx - 62, ncy - 62, ncx + 62, ncy + 62), fill=(16, 10, 10, int(250 * u3)), outline=CARMIN + (int(255 * u3),), width=4)
+            _texto(d, (ncx, ncy), "?", fce, (240, 90, 90), "mm", 255 * u3)
+            _texto(d, (ncx + 90, ncy), centro.upper(), fce, PERGAMINO, "lm", 255 * u3, track=5)
+        _texto(d, (M + w / 2, M + h - 48), pregunta, fpr, CARMIN, "mm", 255 * _eo((dt - mk[n + 1]) / .5))
+        return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
+    return fn
+
+
+def dos_muertes(izq=("Si nunca le diste raíces", "«¿Para matar a quién?»", "te desprecia"),
+                der=("Si terminaste su misión", "«Perdóname, Márika»", "le pide perdón a ella"),
+                remate="Cada jugador oyó una sola", titulo="Las dos muertes de Maliketh", w=1600, h=620):
+    """Pantalla partida. Marca 0: mitad izquierda (condición, cita, lectura) · marca 1: mitad derecha y la izquierda se
+    atenúa · marca 2: `remate` abajo y una línea dorada une las dos. Espera 3 marcas."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    half = w / 2 - 80
+    ftit = _ajustar(tmp, titulo.upper(), "b", 40, w - 200, 1)[0]
+    fco = _ajustar(tmp, max(izq[0], der[0], key=len).upper(), "b", 36, half - 40, 1)[0]
+    fci = [_ajustar(tmp, s[1], "i", 48, half - 40, 2) for s in (izq, der)]
+    fle = fuente("i", 32)
+    fre = _ajustar(tmp, remate, "b", 42, w - 200, 1)[0]
+
+    def fn(dt, dur, marcas):
+        mk = list(marcas) + [99] * 4
+        im, M = _panel(w, h)
+        d = ImageDraw.Draw(im)
+        _texto(d, (M + w / 2, M + 50), titulo.upper(), ftit, ORO, "mm", 255 * _eo(dt / .4), track=5)
+        d.line((M + w / 2, M + 100, M + w / 2, M + h - 110), fill=ORO_OSC + (int(200 * _eo(dt / .4)),), width=3)
+        for k, (s, (f_, ls)) in enumerate(zip((izq, der), fci)):
+            uk = _eo((dt - mk[k]) / .5)
+            if uk <= 0:
+                continue
+            aten = 1 - .45 * _eo((dt - mk[1]) / .6) if k == 0 else 1
+            cx = M + w / 4 + k * w / 2
+            col = (150, 170, 200) if k == 0 else ORO
+            _texto(d, (cx, M + 150), s[0].upper(), fco, col, "mm", 255 * uk * aten, track=3)
+            for j, ln in enumerate(ls):
+                _texto(d, (cx, M + 270 + j * f_.size * 1.12 - (len(ls) - 1) * f_.size * .55), ln, f_, PERGAMINO, "mm", 255 * uk * aten)
+            _texto(d, (cx, M + 400), s[2], fle, (190, 182, 166), "mm", 255 * _eo((dt - mk[k] - .6) / .5) * aten)
+        ur = _eo((dt - mk[2]) / .5)
+        if ur > 0:
+            d.line((M + w / 4, M + 450, M + w / 4 + (w / 2) * ur, M + 450), fill=ORO + (220,), width=3)
+            _texto(d, (M + w / 2, M + h - 52), remate, fre, CARMIN, "mm", 255 * ur, track=2)
         return _bgra(im, min(_eo(dt / .35), (dur - dt) / .4))
     return fn

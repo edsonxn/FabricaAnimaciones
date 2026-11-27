@@ -1,147 +1,180 @@
 {
- "canal_id": "UClZr07HzwBSQbMgOvdSej_w",
- "nombre": "Radio Yermo",
- "handle": "@RadioYermo",
- "estilo": "Fallout con la MISMA receta que Crónicas de Tamriel (alta 17-nov-2026, bajo la cuenta de Google de Edsonxn): motor SECUENCIA YT (gameplay real por beat con yt-dlp), listas con cuenta regresiva (NUNCA hagas / secretos / lo más ROTO / inútil), pegatinas reales, MG nuevos por guion con interfaz de Pip-Boy por código (kit nucleo/mg_fo.py, pendiente del 1.er video), mapas reales con ruta (tema 'fo' de mg_mapa), OST oficial y sonido original del juego, comentarios con agradecimientos y contraburla, campaña de suscripción. Narrador = «el Locutor» de Radio Yermo: voz del Profeta de ElevenLabs (HNSF1CTQmub252yhXROX) con el filtro de radio del Yermo en modo B (nucleo/fx_radio.py), elegida por el usuario el 17-nov-2026. Ver canales/formula/radio_yermo.md",
- "horario": {
-  "zona": "America/Mexico_City",
-  "hora_local": "12:00",
-  "utc": "18:00",
-  "ciclo_dias": 3,
-  "separacion_min_horas": 72,
-  "nota": "12:00 CDMX = 18:00 UTC desde el 25-nov-2026 (antes 09:15). Sigue a Crónicas de Tamriel (orden del usuario del 17-nov-2026): Tamriel pasó a 12:00 el 25-nov-2026 con su gráfica de horas de Studio (pico 15-18 CDMX). Radio Yermo aún sin gráfica propia. Nota anterior: Desde el 2.º video, los MISMOS tiempos que Crónicas de Tamriel (el usuario, 17-nov-2026): cada 3 días a las 09:15 CDMX. AJUSTABLE por Claude con datos.",
-  "historial": [
-   {
-    "fecha": "2026-11-17",
-    "ciclo_dias": 4,
-    "hora_local": "17:00",
-    "motivo": "alta del canal, sin datos propios"
-   },
-   {
-    "fecha": "2026-11-17",
-    "ciclo_dias": 3,
-    "hora_local": "09:15",
-    "separacion_min_horas": 72,
-    "motivo": "el usuario: subir con los mismos tiempos que Crónicas de Tamriel"
-   },
-   {
-    "fecha": "2026-11-25",
-    "ciclo_dias": 3,
+  "canal_id": "UClZr07HzwBSQbMgOvdSej_w",
+  "nombre": "Radio Yermo",
+  "handle": "@RadioYermo",
+  "estilo": "Fallout con la MISMA receta que Crónicas de Tamriel (alta 17-nov-2026, bajo la cuenta de Google de Edsonxn): motor SECUENCIA YT (gameplay real por beat con yt-dlp), listas con cuenta regresiva (NUNCA hagas / secretos / lo más ROTO / inútil), pegatinas reales, MG nuevos por guion con interfaz de Pip-Boy por código (kit nucleo/mg_fo.py, pendiente del 1.er video), mapas reales con ruta (tema 'fo' de mg_mapa), OST oficial y sonido original del juego, comentarios con agradecimientos y contraburla, campaña de suscripción. Narrador = «el Locutor» de Radio Yermo: voz del Profeta de ElevenLabs (HNSF1CTQmub252yhXROX) con el filtro de radio del Yermo en modo B (nucleo/fx_radio.py), elegida por el usuario el 17-nov-2026. Ver canales/formula/radio_yermo.md",
+  "horario": {
+    "zona": "America/Mexico_City",
     "hora_local": "12:00",
-    "motivo": "Sigue a Crónicas de Tamriel (orden del usuario del 17-nov-2026): Tamriel pasó a 12:00 el 25-nov-2026 con su gráfica de horas de Studio (pico 15-18 CDMX). Radio Yermo aún sin gráfica propia."
-   }
-  ]
- },
- "publicados": [
-  {
-   "titulo": "Las 15 cosas que NUNCA debes hacer en Fallout 4",
-   "id": "z_YrsxSbIFg",
-   "programado": "2026-11-18T23:00:00Z",
-   "video": "fo_nunca_f4",
-   "fecha": null,
-   "visibilidad": "private",
-   "formato": "lista «15 NUNCA» (cuenta atrás, 14:02, Locutor = Profeta con filtro de radio modo B, mapas del Pip-Boy, OST Inon Zur)",
-   "nota": "1.er video del canal; miniatura de Flow NO aplicada: el canal aún no tiene permiso de miniaturas personalizadas (verificar en youtube.com/verify y luego `yt aplicar`)"
+    "utc": "18:00",
+    "ciclo_dias": 3,
+    "separacion_min_horas": 72,
+    "nota": "12:00 CDMX = 18:00 UTC desde el 25-nov-2026 (antes 09:15). Sigue a Crónicas de Tamriel (orden del usuario del 17-nov-2026): Tamriel pasó a 12:00 el 25-nov-2026 con su gráfica de horas de Studio (pico 15-18 CDMX). Radio Yermo aún sin gráfica propia. Nota anterior: Desde el 2.º video, los MISMOS tiempos que Crónicas de Tamriel (el usuario, 17-nov-2026): cada 3 días a las 09:15 CDMX. AJUSTABLE por Claude con datos.",
+    "historial": [
+      {
+        "fecha": "2026-11-17",
+        "ciclo_dias": 4,
+        "hora_local": "17:00",
+        "motivo": "alta del canal, sin datos propios"
+      },
+      {
+        "fecha": "2026-11-17",
+        "ciclo_dias": 3,
+        "hora_local": "09:15",
+        "separacion_min_horas": 72,
+        "motivo": "el usuario: subir con los mismos tiempos que Crónicas de Tamriel"
+      },
+      {
+        "fecha": "2026-11-25",
+        "ciclo_dias": 3,
+        "hora_local": "12:00",
+        "motivo": "Sigue a Crónicas de Tamriel (orden del usuario del 17-nov-2026): Tamriel pasó a 12:00 el 25-nov-2026 con su gráfica de horas de Studio (pico 15-18 CDMX). Radio Yermo aún sin gráfica propia."
+      }
+    ]
   },
-  {
-   "video": "fo_refugios_25",
-   "id": "iyLkHK3mpoI",
-   "titulo": "Los 25 refugios más MALVADOS de Fallout",
-   "subido": "2026-11-18",
-   "visibilidad": "borrado",
-   "programado": null,
-   "formato": "top 25 largo (~39:29), refugios de todos los Fallout, recreaciones Flow, voz Profeta con radio modo B",
-   "nota": "2.º video; 1.º con el horario de Tamriel (09:15). Título cambiado el mismo día por la regla de títulos (antes 72 caracteres con paréntesis). 18-nov tarde: REEMPLAZADO por XU_OkLlxV7o (escenas importantes con su clip real, escenas.md); BORRADO de YouTube el 18-nov con el OK del usuario.",
-   "reemplazado_por": "XU_OkLlxV7o"
-  },
-  {
-   "video": "fo_refugios_25",
-   "id": "XU_OkLlxV7o",
-   "titulo": "Los 25 refugios más MALVADOS de Fallout",
-   "subido": "2026-11-18",
-   "visibilidad": "private",
-   "programado": "2026-11-22T15:15:00Z",
-   "formato": "top 25 largo (~39:29), refugios de todos los Fallout, recreaciones Flow, voz Profeta con radio modo B",
-   "nota": "2.º video (reemplazo de iyLkHK3mpoI, 18-nov tarde): mismas voz y mezcla, 13 escenas importantes con el clip real del momento (escenas.md). 1.º con el horario de Tamriel (09:15)."
-  },
-  {
-   "video": "fo_enemigos_ocultos",
-   "id": "f2zKynItV6U",
-   "titulo": "15 ENEMIGOS ocultos de Fallout que casi nadie vio",
-   "subido": "2026-11-23",
-   "visibilidad": "private",
-   "programado": "2026-11-25T18:00:00Z",
-   "formato": "top 15 (~15:23), enemigos ocultos de FO3/NV/FO4, voz Profeta con radio modo B, mapas reales de la wiki (también DLC)",
-   "nota": "3.er video. Hueco 09:16 CDMX (no 09:15: la separación de 72 h con XU_OkLlxV7o, público 15:15:38Z, lo exige). Referencia Wastelander «Hidden Fallout Enemies» ×7,3/×6,5/×3,4. Reprogramado el 25-nov a 12:00 CDMX (nuevo horario del canal; antes 09:15)."
-  }
- ],
- "ideas": {
-  "idioma": "es",
-  "region": "MX",
-  "busquedas": [
-   "fallout secretos",
-   "fallout 4 cosas que no sabias",
-   "fallout new vegas secretos",
-   "fallout lore español",
-   "fallout 3 curiosidades",
-   "fallout 76 secretos",
-   "refugios de fallout",
-   "fallout serie temporada 2"
+  "publicados": [
+    {
+      "titulo": "Las 15 cosas que NUNCA debes hacer en Fallout 4",
+      "id": "z_YrsxSbIFg",
+      "programado": "2026-11-18T23:00:00Z",
+      "video": "fo_nunca_f4",
+      "fecha": null,
+      "visibilidad": "private",
+      "formato": "lista «15 NUNCA» (cuenta atrás, 14:02, Locutor = Profeta con filtro de radio modo B, mapas del Pip-Boy, OST Inon Zur)",
+      "nota": "1.er video del canal; miniatura de Flow NO aplicada: el canal aún no tiene permiso de miniaturas personalizadas (verificar en youtube.com/verify y luego `yt aplicar`)"
+    },
+    {
+      "video": "fo_refugios_25",
+      "id": "iyLkHK3mpoI",
+      "titulo": "Los 25 refugios más MALVADOS de Fallout",
+      "subido": "2026-11-18",
+      "visibilidad": "borrado",
+      "programado": null,
+      "formato": "top 25 largo (~39:29), refugios de todos los Fallout, recreaciones Flow, voz Profeta con radio modo B",
+      "nota": "2.º video; 1.º con el horario de Tamriel (09:15). Título cambiado el mismo día por la regla de títulos (antes 72 caracteres con paréntesis). 18-nov tarde: REEMPLAZADO por XU_OkLlxV7o (escenas importantes con su clip real, escenas.md); BORRADO de YouTube el 18-nov con el OK del usuario.",
+      "reemplazado_por": "XU_OkLlxV7o"
+    },
+    {
+      "video": "fo_refugios_25",
+      "id": "XU_OkLlxV7o",
+      "titulo": "Los 25 refugios más MALVADOS de Fallout",
+      "subido": "2026-11-18",
+      "visibilidad": "private",
+      "programado": "2026-11-22T15:15:00Z",
+      "formato": "top 25 largo (~39:29), refugios de todos los Fallout, recreaciones Flow, voz Profeta con radio modo B",
+      "nota": "2.º video (reemplazo de iyLkHK3mpoI, 18-nov tarde): mismas voz y mezcla, 13 escenas importantes con el clip real del momento (escenas.md). 1.º con el horario de Tamriel (09:15)."
+    },
+    {
+      "video": "fo_enemigos_ocultos",
+      "id": "f2zKynItV6U",
+      "titulo": "15 ENEMIGOS ocultos de Fallout que casi nadie vio",
+      "subido": "2026-11-23",
+      "visibilidad": "private",
+      "programado": "2026-11-25T18:00:00Z",
+      "formato": "top 15 (~15:23), enemigos ocultos de FO3/NV/FO4, voz Profeta con radio modo B, mapas reales de la wiki (también DLC)",
+      "nota": "3.er video. Hueco 09:16 CDMX (no 09:15: la separación de 72 h con XU_OkLlxV7o, público 15:15:38Z, lo exige). Referencia Wastelander «Hidden Fallout Enemies» ×7,3/×6,5/×3,4. Reprogramado el 25-nov a 12:00 CDMX (nuevo horario del canal; antes 09:15)."
+    },
+    {
+      "video": "fo_short_gary",
+      "id": "Mim1FgNOLcI",
+      "titulo": "Fallout 3: el refugio de puros GARY #Shorts",
+      "subido": "2026-11-26",
+      "visibilidad": "private",
+      "programado": "2026-11-28T01:00:00Z",
+      "short": true,
+      "formato": "Short vertical recortado del largo (fo_refugios_25 #15 Refugio 108 (869,48-941,10 s), 71,6 s); videos/fo_shorts/hacer.py",
+      "nota": "Short de arranque (26-nov, OK del usuario): Radio Yermo sin impresiones (63 en 28 d). PENDIENTE en Studio cuando sea público: «Vídeo relacionado» = XU_OkLlxV7o."
+    },
+    {
+      "video": "fo_short_ruzka",
+      "id": "dBmlWMwYNwg",
+      "titulo": "Fallout 3: la osa de circo OLVIDADA #Shorts",
+      "subido": "2026-11-26",
+      "visibilidad": "private",
+      "programado": "2026-12-01T01:00:00Z",
+      "short": true,
+      "formato": "Short vertical recortado del largo (fo_enemigos_ocultos #12 Ruzka (209,45-261,80 s), 52,4 s); videos/fo_shorts/hacer.py",
+      "nota": "Short de arranque (26-nov, OK del usuario): Radio Yermo sin impresiones (63 en 28 d). PENDIENTE en Studio cuando sea público: «Vídeo relacionado» = f2zKynItV6U."
+    },
+    {
+      "video": "fo_short_cura81",
+      "id": "pnqZ8Sd5itk",
+      "titulo": "Fallout 4: NUNCA te quedes esta cura #Shorts",
+      "subido": "2026-11-26",
+      "visibilidad": "private",
+      "programado": "2026-12-04T01:00:00Z",
+      "short": true,
+      "formato": "Short vertical recortado del largo (fo_nunca_f4 #5 cura del Refugio 81 (517,05-562,35 s), 45,3 s); videos/fo_shorts/hacer.py",
+      "nota": "Short de arranque (26-nov, OK del usuario): Radio Yermo sin impresiones (63 en 28 d). PENDIENTE en Studio cuando sea público: «Vídeo relacionado» = z_YrsxSbIFg."
+    }
   ],
-  "competidores": [],
-  "dias": 60,
-  "min_vistas": 1000,
-  "filtro": [
-   "fallout",
-   "refugio",
-   "vault",
-   "new vegas",
-   "yermo",
-   "wasteland",
-   "pip-boy",
-   "hermandad del acero",
-   "nuka",
-   "deathclaw",
-   "sanguinario",
-   "mojave",
-   "commonwealth"
-  ]
- },
- "estado": "17-nov-2026: canal creado por Claude en Studio (nombre, @RadioYermo, logo y banner por código en fósforo verde, descripción, enlace a Crónicas de Tamriel, palabras clave, país MX, no es para niños). El usuario lo verificó y lo CONECTÓ a la API el mismo día; idioma es-419 puesto por API. Voz: el Profeta con filtro de radio en modo B. 1.er video: por elegir con `ideas radio_yermo`.",
- "descripcion": "Radio Yermo transmite desde el fin del mundo. Secretos, historia, misiones, personajes y locuras de Fallout explicados en español: Fallout 3, New Vegas, Fallout 4, Fallout 76, los clásicos y la serie. Listas con gameplay real, mapas del Yermo, los objetos de cada historia y la música de cada juego. Sintoniza, suscríbete y no salgas del Refugio sin escucharnos.",
- "palabras_clave": [
-  "Fallout",
-  "Fallout 4",
-  "Fallout New Vegas",
-  "Fallout 3",
-  "Fallout 76",
-  "Fallout en español",
-  "secretos de Fallout",
-  "lore de Fallout",
-  "curiosidades de Fallout",
-  "serie de Fallout",
-  "Refugio",
-  "Yermo",
-  "videojuegos"
- ],
- "idioma": "es-419",
- "pais": "MX",
- "banner": "canales/arte/radio_yermo/BANNER_2560x1440.jpg",
- "logo": "canales/arte/radio_yermo/LOGO_800.jpg",
- "enlaces": [
-  {
-   "titulo": "Crónicas de Tamriel (Skyrim)",
-   "url": "https://www.youtube.com/channel/UCWeCfdm8py6dYKHq7HwUIXw"
+  "ideas": {
+    "idioma": "es",
+    "region": "MX",
+    "busquedas": [
+      "fallout secretos",
+      "fallout 4 cosas que no sabias",
+      "fallout new vegas secretos",
+      "fallout lore español",
+      "fallout 3 curiosidades",
+      "fallout 76 secretos",
+      "refugios de fallout",
+      "fallout serie temporada 2"
+    ],
+    "competidores": [],
+    "dias": 60,
+    "min_vistas": 1000,
+    "filtro": [
+      "fallout",
+      "refugio",
+      "vault",
+      "new vegas",
+      "yermo",
+      "wasteland",
+      "pip-boy",
+      "hermandad del acero",
+      "nuka",
+      "deathclaw",
+      "sanguinario",
+      "mojave",
+      "commonwealth"
+    ]
+  },
+  "estado": "17-nov-2026: canal creado por Claude en Studio (nombre, @RadioYermo, logo y banner por código en fósforo verde, descripción, enlace a Crónicas de Tamriel, palabras clave, país MX, no es para niños). El usuario lo verificó y lo CONECTÓ a la API el mismo día; idioma es-419 puesto por API. Voz: el Profeta con filtro de radio en modo B. 1.er video: por elegir con `ideas radio_yermo`.",
+  "descripcion": "Radio Yermo transmite desde el fin del mundo. Secretos, historia, misiones, personajes y locuras de Fallout explicados en español: Fallout 3, New Vegas, Fallout 4, Fallout 76, los clásicos y la serie. Listas con gameplay real, mapas del Yermo, los objetos de cada historia y la música de cada juego. Sintoniza, suscríbete y no salgas del Refugio sin escucharnos.",
+  "palabras_clave": [
+    "Fallout",
+    "Fallout 4",
+    "Fallout New Vegas",
+    "Fallout 3",
+    "Fallout 76",
+    "Fallout en español",
+    "secretos de Fallout",
+    "lore de Fallout",
+    "curiosidades de Fallout",
+    "serie de Fallout",
+    "Refugio",
+    "Yermo",
+    "videojuegos"
+  ],
+  "idioma": "es-419",
+  "pais": "MX",
+  "banner": "canales/arte/radio_yermo/BANNER_2560x1440.jpg",
+  "logo": "canales/arte/radio_yermo/LOGO_800.jpg",
+  "enlaces": [
+    {
+      "titulo": "Crónicas de Tamriel (Skyrim)",
+      "url": "https://www.youtube.com/channel/UCWeCfdm8py6dYKHq7HwUIXw"
+    }
+  ],
+  "canal_hermano": "cronicas_tamriel",
+  "voz": {
+    "motor": "elevenlabs",
+    "voice_id": "HNSF1CTQmub252yhXROX",
+    "nombre": "el Profeta como «el Locutor» de Radio Yermo",
+    "modelo": "eleven_v4_turbo",
+    "filtro": "modo B de nucleo/fx_radio.py: el saludo, los remates y la despedida salen por la radio del Yermo (radio + sintonía); los datos, con el narrador cerca del micrófono (tinte)",
+    "elegida": "2026-11-17, el usuario («opción profeta B») tras oír 6 locutores y el Profeta en A/B/C",
+    "muestras": "videos/_muestras_voz_fallout/voces_radio_yermo_brianB_profetaABC.mp4"
   }
- ],
- "canal_hermano": "cronicas_tamriel",
- "voz": {
-  "motor": "elevenlabs",
-  "voice_id": "HNSF1CTQmub252yhXROX",
-  "nombre": "el Profeta como «el Locutor» de Radio Yermo",
-  "modelo": "eleven_v4_turbo",
-  "filtro": "modo B de nucleo/fx_radio.py: el saludo, los remates y la despedida salen por la radio del Yermo (radio + sintonía); los datos, con el narrador cerca del micrófono (tinte)",
-  "elegida": "2026-11-17, el usuario («opción profeta B») tras oír 6 locutores y el Profeta en A/B/C",
-  "muestras": "videos/_muestras_voz_fallout/voces_radio_yermo_brianB_profetaABC.mp4"
- }
 }

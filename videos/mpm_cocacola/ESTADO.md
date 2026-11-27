@@ -3,7 +3,7 @@
 - canal: mil_por_minuto · hueco jue 26-nov-2026 15:00 CDMX (2026-11-26T21:00Z; reprogramado el 25-nov desde 18:37, nuevo horario del canal)
 - estilo: SECUENCIA YT + kit `nucleo/mg_planta.py` + ESCENAS 3D `nucleo/fabrica3d.py` (arcilla + realista) → `canales/formula/mil_por_minuto.md` · modelo `videos/mpm_takis/`
 - etapa: ✅ CERRADO 25-nov — MASTER 1080p 14:53 (732 MB) + .srt + miniatura Flow SUBIDOS → https://youtu.be/BYNSPBgnG_k, privado y programado jue 26-nov 15:00 CDMX (2026-11-26T21:00Z; antes 18:37); no monetizado
-- siguiente: medir ≈ 3-dic contra Takis (retención, % TV, sugeridos); A/B de miniatura «FÓRMULA SECRETA» (mini_v3/v4) si el CTR sale bajo; `fab.py mpm_cocacola limpiar` cuando esté aprobado
+- siguiente: A/B de miniatura EN CURSO desde 26-nov ~21:15 CDMX (Studio › Experimentos A/B › Solo miniatura: 1 = «9,553 MILLONES» actual · 2 = mini_v4_formula «FÓRMULA SECRETA»); leer el ganador en Studio y medir ≈ 3-dic contra Takis (retención, % TV, sugeridos); `fab.py mpm_cocacola limpiar` cuando esté aprobado
 
 ## Sesiones
 - alias: «el video de Coca-Cola», «el siguiente de Mil por Minuto», «mpm_cocacola»
@@ -11,6 +11,8 @@
 - leer al empezar: este ESTADO, `canales/formula/mil_por_minuto.md`, `videos/mpm_takis/ESTADO.md` (lecciones)
 - 24-nov (1): tema, investigación (agente), metraje (agente), guion 90 frases, voz 90/90, 119 beats, clips, 3D (5 estilos → elegidos arcilla + realista), efectos (225), hojas fx 01-12 revisadas, música biblioteca (8 tramos), SFX, chequeo, miniatura Flow, youtube.json, render. Corte de la sesión durante `video --rehacer`.
 - 25-nov (2): `video --rehacer 358-376 500-516 && final` (lanzado por la sesión anterior; 1 510 s) → hoja de los dos tramos mirada (contador visible, paneles ya no tapan la etiquetadora) · `verificar` CER 0,39 % (3 frases «altas» = cifras en dígitos), desfase 0 ms · regla 10 con `_sfx_regla10.py` sobre el MASTER: chasquido del gancho −6 dB del total y siseo >5 kHz +19 dB → se oye; `previews/citas_audio.mp3` · avisar · `yt subir` (miniatura + .srt) · publicados, BITÁCORA, panel (`/api/v2/obra`: ya no atrasado). Video cerrado.
+
+- 26-nov (3): revisión de alcance (usuario: «no levantó»): a las 6 h, 0 impresiones y 0 vistas (Takis llevaba ~95 el día 1); sin avisos ni restricciones. Con el OK del usuario, A/B de miniatura activado en Studio (Chrome, file_upload). Juzgar a 24-48 h.
 
 ## Decisiones (Claude, 24-nov-2026)
 - Tema con datos (`fab.py ideas mil_por_minuto`): Coca-Cola se repite en 3 canales (×399, ×356, ×190) y es el n.º 2 de la fórmula.

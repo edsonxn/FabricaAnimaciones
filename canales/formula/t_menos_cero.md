@@ -37,3 +37,29 @@ Sin lanzamiento grande del 18 al 25-nov (solo Ariane 6 Leo NET 23-nov). Explicad
    (B12 vuelo 5, B13, B14…, S42) y de las patas del Falcon 9. (Recomendado.)
 2. **«Todas las veces que Starship EXPLOTÓ… y qué aprendió SpaceX»**: ref. Scientia Plus «Booster Collapse» ×10,6, HotCut corto ×2,6; casi todo video real.
 3. **«18 000 losetas: cómo Starship sobrevive a 1 400 °C»**: ref. «Losetas de Starship» 57 K en canal de 2,3 K subs (×23, en español).
+
+## FÓRMULA VIGENTE — investigación del 26-nov-2026 (R45; para el video del vie 27-nov 13:00)
+**Lo nuestro (`yt metricas 90` + `ideas`, 26-nov; canal de 12 días, 0 subs, 31 vistas: pistas, no conclusiones):**
+
+| video | formato | vistas | % visto | × mediana |
+|---|---|---:|---:|---:|
+| starship_vuelo15 (10:10) | NOTICIA de vuelo explicada en 3D a ~20 h | 28 | 53 | ×1.87 |
+| starship_sin_patas (9:26) | explicador atemporal + video real | 2 | 35-74 | ×0.13 |
+| starship_33_motores (9:00) | explicador atemporal + video real | 2 | 7 | < 7 días |
+
+- Nos encuentran por BÚSQUEDA (15 de 31; «starship») y por relacionados; TV = 12 de 31 vistas (pantalla grande: el 3D se lee bien).
+- La noticia fresca rinde 10-15× más que el explicador atemporal. Los dos atemporales de Starship no despegaron.
+
+**El mundo abierto (`ideas --actualizar` 26-nov, ~851 cuota + búsquedas de 7 días con nuestra API; NexLev agotado hasta el 30-nov):**
+- El vuelo 15 de Starship arrasó 12-14 días atrás (VideoFromSpace ×31, Scientia Plus ×16, CNET ×16; en español El Próximo Framework ×3,5, CDM Extra ×2,3, Anatomía del Porqué corto ×141). Ya está viejo y ya lo hicimos.
+- **Noticia de esta semana con señal en ≥ 2 canales y varios idiomas: Hera llega al asteroide de DART y muestra el CRÁTER (imágenes del 25-nov).**
+  tagesschau 237 K en 2 días, ESA 136 K, Scott Manley corto 82 K, NASASpaceNews 42 K (8 min), **Hoy en el Cosmos 48 K en 1 día (11 min, en español)**, Olhar Digital 49 K. Nadie en español lo explica en 3D.
+- Vulcan (falla del 15-nov, 40 Amazon Leo): fuerte en ruso/alemán, débil en español (Epicentro 1 K). BepiColombo en Mercurio: cortos virales, Hoy en el Cosmos 32 K.
+- Competidores fijos en español añadidos a `canales/t_menos_cero.json` (Hoy en el Cosmos, CDM Extra, Control de Misión, Manuel Mazzanti, El Próximo Framework, Anatomía del Porqué).
+
+**Fórmula del cruce:** NOTICIA de la semana (≤ 3 días) explicada en LÍNEA 3D + video/imagen real de cada suceso, 9-11 min; título «suceso concreto + 1 palabra en MAYÚSCULAS»; el 3D explica el CÓMO (geometría, órbitas) que los canales de noticias no pueden enseñar.
+**Evitar:** explicadores atemporales de Starship sin gancho de actualidad (×0.13); temas solo con señal en otros idiomas.
+**Hipótesis siguiente:** ampliar de Starship a «espacio de la semana» (sondas, asteroides) sube vistas por búsqueda. Medir `hera_dart_crater` a 7 días (≈ 4-dic).
+
+**3 temas (26-nov):** 1. **Hera ve el cráter de DART** (ref. nuestra vuelo15 ×1.87 noticia; fuera Hoy en el Cosmos 48 K/1 día, tagesschau 237 K) — variable: tema fuera de Starship. **ELEGIDO.**
+2. Por qué falló el Vulcan (ref. vuelo15; fuera Space WeeX 321 K ruso, débil en español). 3. BepiColombo: 8 años para llegar a Mercurio (fuera ASTRO ALEXANDRA corto 379 K, DW 47 K).

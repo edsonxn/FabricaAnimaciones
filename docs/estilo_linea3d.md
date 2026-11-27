@@ -14,6 +14,13 @@ HUD de misión (reloj T+, arco de eventos, estado de motores). Nada de colores, 
 - `nucleo/linea3d_cohetes.py`: Falcon 9 por partes en metros (etapa 1 con 9 motores, aletas de rejilla y patas; etapa 2 con MVac;
   Dragon con morro), Estación Espacial, torre, zona de aterrizaje. `Z_S2`, `Z_DRAGON` para piezas sueltas.
 - Mundo en KM con el centro de la Tierra en el origen; el cohete en metros × 0,001.
+- `nucleo/linea3d_espacio.py` (26-nov-2026, `videos/hera_dart_crater/`): `asteroide(lz, C, R, ejes, rot, sol, forma="huevo"|"trompo",
+  semilla, crater=(dir local), aplanar, crater_r, crater_prof, rocas)` (malla de alambre con rocas sueltas, cráter y cara aplanada),
+  `rot_ypr`, `caja`, `dart(lz, C, Rm, esc, rosa)` (paneles que se desenrollan con `rosa` 0→1), `hera(lz, C, Rm, esc, alas)`,
+  `estrellas`, `eyeccion(lz, P, dir, t, largo, ancho, n, ritmo)` (chorro de material tras un choque). Mundo LOCAL en metros.
+  Planos de ese video para copiar: sistema doble con reloj de la órbita, curva de luz (bajadas de brillo antes/después), barras
+  de cifra mínima vs real, retroceso tipo cañón, ruta interplanetaria esquemática, antes/ahora del asteroide, anillo de satélites
+  geoestacionarios con un asteroide que pasa por dentro (Apophis).
 
 ## Cómo se arma un video (copiar de `videos/cohete_crs30/`)
 - `escenas.py` dibuja el cuadro entero en función del tiempo global (`cuadro(t)`), con planos (`PLANOS`) encadenados por fundidos

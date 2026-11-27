@@ -57,6 +57,13 @@
       "titulo": "Starship tiene 33 MOTORES y esta es la razón",
       "programado": "2026-11-21T19:00:00Z",
       "formato": "explicador atemporal en 3D (línea 3D) con video real en cada suceso y fotos en marcos de alambre, 9:00"
+    },
+    {
+      "video": "hera_dart_crater",
+      "id": "su3KWFK1xH0",
+      "titulo": "La NASA chocó contra un asteroide: este es el CRÁTER",
+      "programado": "2026-11-27T19:00:00Z",
+      "formato": "noticia explicada en 3D (línea 3D) con video real de cada suceso, fotos oficiales de la ESA del 25-nov y marcos de alambre, 9:37"
     }
   ],
   "ideas": {
@@ -70,9 +77,19 @@
       "como funciona un cohete",
       "por que explotan los cohetes",
       "apolo 13 que paso",
-      "exploracion espacial noticias"
+      "exploracion espacial noticias",
+      "asteroide nasa",
+      "defensa planetaria",
+      "sonda espacial noticias"
     ],
-    "competidores": [],
+    "competidores": [
+      "UCBZi8bpN1DG8IqaDnWpNNZQ",
+      "UCuCeO7D60_urvIFmaax22NQ",
+      "UCch5At0S1Q-qqCM3iilFI5w",
+      "UCtcUKKBhYEf7lX5UkF7279Q",
+      "UCFo-n0PskBbe_fMh2j_DvXQ",
+      "UCdgetqkom0SDD-uRq-9-gRQ"
+    ],
     "dias": 60,
     "min_vistas": 1000,
     "filtro": [

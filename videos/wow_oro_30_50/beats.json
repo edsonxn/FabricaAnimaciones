@@ -1,0 +1,1402 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 8.812,
+  "tipo": "video",
+  "texto": "Llegas al nivel cuarenta en World of Warcraft Forever, corres al instructor de equitación y abres la bolsa. La montura cuesta cien de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 8.812,
+  "t1": 17.588,
+  "tipo": "video",
+  "texto": "Y tu instructor de clase te recuerda que la doble especialización son otros cincuenta. Ciento cincuenta de oro, de golpe, en el mismo nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.588,
+  "t1": 26.242,
+  "tipo": "video",
+  "texto": "A un jugador le pasó justo eso: llegó al treinta y nueve con sesenta y siete de oro, y se puso a probar farmeos con cronómetro, media hora cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.242,
+  "t1": 35.792,
+  "tipo": "video",
+  "texto": "Mientras tanto, en un cráter negro de Las Tierras Devastadas, aparece cada pocos minutos un buitre que deja, en promedio, casi una moneda de oro por muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 35.792,
+  "t1": 43.416,
+  "tipo": "video",
+  "texto": "Y en una cueva de Alterac que ninguna guía de subida pisa, hay vetas de cinco minerales distintos y un vendedor encerrado en una jaula.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.416,
+  "t1": 52.79,
+  "tipo": "video",
+  "texto": "Hoy van quince farmeos de oro del treinta al cincuenta. Lugares concretos: qué matar, dónde, a qué nivel, cuánto da y a quién vendérselo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.79,
+  "t1": 60.271,
+  "tipo": "video",
+  "texto": "Del que menos rinde al que más. Y el número uno, te adelanto, no necesita ninguna profesión.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.271,
+  "t1": 70.274,
+  "tipo": "video",
+  "texto": "Antes, dos comentarios que nos dieron la idea. En el video de los treinta trucos de oro, un espectador nos contó que llegó al cuarenta con montura y doble especialización.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 70.274,
+  "t1": 76.754,
+  "tipo": "video",
+  "texto": "Y se quedó con tres de oro. Ahora va en el cuarenta y ocho con cien de oro, y esos cien ya tienen dueño:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 76.754,
+  "t1": 84.892,
+  "tipo": "video",
+  "texto": "entrenamientos y profesiones. Y otro espectador, Azazel, nos escribió que sí hay farmeos ocultos: va en el treinta y tres con trescientos de oro,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 84.892,
+  "t1": 95.268,
+  "tipo": "video",
+  "texto": "farmeando una hora al día un solo objeto, en una zona vacía. No nos dijo cuál. Así que hoy te damos quince, y si el suyo está en la lista, que nos avise.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 95.268,
+  "t1": 103.238,
+  "tipo": "video",
+  "texto": "Tres reglas antes de empezar. Primera: desde el veinte de noviembre, cada mazmorra se puede reiniciar como mucho cinco veces por hora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.238,
+  "t1": 109.872,
+  "tipo": "video",
+  "texto": "El oro del treinta al cincuenta está en el mundo abierto. Segunda: lo que todos farmean se hunde en días.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 109.872,
+  "t1": 122.187,
+  "tipo": "video",
+  "texto": "Los huevos gigantes pasaron de un oro a unas quince platas en una semana. Y aquí un espectador, Carlo, nos escribió que la subasta no paga mucho, y que muchas cosas valen lo mismo que en el vendedor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 122.187,
+  "t1": 129.064,
+  "tipo": "video",
+  "texto": "Tiene razón, y por eso en cada farmeo te digo primero lo que paga el vendedor. Porque el vendedor nunca te baja el precio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 129.064,
+  "t1": 137.627,
+  "tipo": "video",
+  "texto": "Y tercera regla: cualquier clase puede hacer los quince. Unas matan más rápido que otras, pero el buitre no pregunta qué eres.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 137.627,
+  "t1": 145.327,
+  "tipo": "video",
+  "texto": "Y al final de cada farmeo vas a tener su ficha: el nivel, la zona, lo que se lleva, cuánto da y dónde venderlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 145.327,
+  "t1": 155.108,
+  "tipo": "video",
+  "texto": "Número quince. Los centauros del Poblado Magram, en Desolace, del treinta y tres al treinta y ocho. Es un campamento grande de centauros, con retadores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 155.108,
+  "t1": 162.599,
+  "tipo": "video",
+  "texto": "cazavientos y corremanadas, repartidos en varios grupos al sureste de la zona. Y está en la lista por una razón muy concreta:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 162.599,
+  "t1": 173.622,
+  "tipo": "video",
+  "texto": "el veinticinco de noviembre, Blizzard anunció que los centauros del Poblado Magram ahora reaparecen más rápido. Más centauros por hora para quien hace sus misiones y para quien se queda a farmear.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 173.622,
+  "t1": 178.802,
+  "tipo": "video",
+  "texto": "Todavía nadie ha medido cuánto oro dan con el cambio, así que serías de los primeros.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 178.802,
+  "t1": 188.245,
+  "tipo": "video",
+  "texto": "Son humanoides, así que sueltan monedas y paño de seda, que el vendedor paga a una plata y media. Y hacia el treinta y cinco empieza a caer el tejido mágico.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 188.245,
+  "t1": 196.857,
+  "tipo": "video",
+  "texto": "Ojo con sus hienas, las Zarpósea, que ya son del treinta y siete. Si vas justo de nivel, quédate en los grupos del borde del poblado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 196.857,
+  "t1": 202.717,
+  "tipo": "video",
+  "texto": "No pide profesión ni ruta: entras al poblado, matas, y cuando la bolsa se llena, sales a",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 202.717,
+  "t1": 215.46,
+  "tipo": "video",
+  "texto": "vender. Número catorce. Las arañas de la Cueva Niebla Negra, en el Marjal Revolcafango,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 215.46,
+  "t1": 222.825,
+  "tipo": "video",
+  "texto": "del treinta y cinco al treinta y ocho. Están fuera y dentro de la cueva, al norte del marjal, muy juntas y sin pegar fuerte:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 222.825,
+  "t1": 231.383,
+  "tipo": "video",
+  "texto": "arañas Niebla Negra y ermitañas Niebla Negra. Sueltan dos grises que se apilan: la mandíbula de araña chorreando, a casi seis platas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 231.383,
+  "t1": 240.754,
+  "tipo": "video",
+  "texto": "y la punta de pata de araña dura, a casi cinco. Pero lo bueno son las dos sedas. La seda de araña espesa, a siete platas y media en el vendedor,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 240.754,
+  "t1": 250.499,
+  "tipo": "video",
+  "texto": "y la seda de las Sombras, a diez. Y esas dos mejor no las vendas al vendedor: las piden los sastres para subir, y para piezas con daño de las Sombras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 250.499,
+  "t1": 259.284,
+  "tipo": "video",
+  "texto": "Hay pocas apariciones, unas cuarenta en total. Si encuentras gente afuera, métete a la cueva, que dentro hay un raro que suelta un verde.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 259.284,
+  "t1": 264.464,
+  "tipo": "video",
+  "texto": "La Horda vende al lado, en el Poblado Murohelecho. La Alianza, en la Isla",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 264.464,
+  "t1": 272.93,
+  "tipo": "video",
+  "texto": "Theramore.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 272.93,
+  "t1": 283.265,
+  "tipo": "video",
+  "texto": "Y antes del número trece, algo que ningún buitre suelta: saber jugar tu personaje, para matar más rápido y morir menos. Para eso existe el patrocinador de hoy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 283.265,
+  "t1": 292.016,
+  "tipo": "video",
+  "texto": "Este video lo patrocina Overgear, con su coaching para World of Warcraft Forever. Son sesiones individuales por horas, por voz o por texto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 292.016,
+  "t1": 301.893,
+  "tipo": "video",
+  "texto": "Y juegas tú con tu personaje todo el tiempo. Un coach mira tus talentos, tu rotación y tus propios errores, con la versión del juego que está activa hoy.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 301.893,
+  "t1": 309.284,
+  "tipo": "video",
+  "texto": "Porque las guías no siempre van al día. Una rama de talentos escrita antes del último ajuste ya puede estar desfasada.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 309.284,
+  "t1": 317.85,
+  "tipo": "video",
+  "texto": "Y si todavía vas camino del sesenta, también te ayudan con eso. Y para las bandas del nueve de diciembre: resistencia al fuego para la Guarida de Onyxia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 317.85,
+  "t1": 326.295,
+  "tipo": "video",
+  "texto": "consumibles, y qué equipo previo a la banda vale la pena buscar. En un video de farmeos, esto cuenta doble: cuanto más rápido matas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.295,
+  "t1": 335.311,
+  "tipo": "video",
+  "texto": "más oro por hora te deja cada uno de estos quince lugares. Si reservas dos horas o más, ahorras un cinco por ciento, con reembolso en cada pedido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 335.311,
+  "t1": 342.796,
+  "tipo": "video",
+  "texto": "Y lo que aprendes se queda contigo para el siguiente ajuste. El enlace está en la descripción, y hay un código para ti.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.796,
+  "t1": 350.298,
+  "tipo": "video",
+  "texto": "Usa el código CRONICAS10 y te llevas un diez por ciento de descuento.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 350.298,
+  "t1": 360.696,
+  "tipo": "video",
+  "texto": "Número trece. Los gorilas Velo de Bruma, en la Vega de Tuercespina, del treinta y dos al treinta y cinco, y sus ancianos al cuarenta. Tienen una ventaja que casi nadie ve:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 360.696,
+  "t1": 368.516,
+  "tipo": "video",
+  "texto": "no hay misión de matarlos, ni para la Alianza ni para la Horda. Así que casi siempre están vivos, y sin nadie alrededor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 368.516,
+  "t1": 377.138,
+  "tipo": "video",
+  "texto": "Los jóvenes viven al oeste del Lago Nazferiti, en el norte de la selva. Los ancianos, en el Valle del Velo de Bruma, más al sur.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 377.138,
+  "t1": 386.138,
+  "tipo": "video",
+  "texto": "Sueltan pelo de gorila para el vendedor, y el colmillo de gorila, que el vendedor te paga a sesenta y siete cobres. Pero la subasta paga bastante más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 386.138,
+  "t1": 396.13,
+  "tipo": "video",
+  "texto": "Porque una misión, La fiebre de Tuercespina, pide colmillos para invocar a Mokk el Salvaje en oleadas. Quien la intenta solo suele fallar, y vuelve a comprarlos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 396.13,
+  "t1": 403.136,
+  "tipo": "video",
+  "texto": "A un jugador le salieron entre cinco y seis de oro por hora, solo matando gorilas, con los precios del doce de noviembre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 403.136,
+  "t1": 411.536,
+  "tipo": "video",
+  "texto": "Un aviso: los gorilas del norte son pocos, unas catorce apariciones, así que el farmeo rinde cuando estás solo. Y si llega alguien más,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 411.536,
+  "t1": 420.43,
+  "tipo": "video",
+  "texto": "baja a los ancianos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 420.43,
+  "t1": 429.816,
+  "tipo": "video",
+  "texto": "Y aquí va un comentario. En el video de los treinta trucos de oro, un espectador, Lalo, nos escribió: clip bait, todos saben eso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 429.816,
+  "t1": 437.136,
+  "tipo": "video",
+  "texto": "Tienes toda la razón, Lalo, todos lo saben. Por eso los huevos gigantes pasaron de un oro a quince platas en una semana:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 437.136,
+  "t1": 446.629,
+  "tipo": "video",
+  "texto": "porque todos lo sabían. Así que hoy hicimos lo contrario: quince lugares que casi nadie farmea. Y si también te los sabes todos, avísanos,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 446.629,
+  "t1": 455.341,
+  "tipo": "video",
+  "texto": "que te contratamos. Número doce. Las tortugas brillavalva del Desierto de Sal, en Las Mil Agujas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 455.341,
+  "t1": 464.76,
+  "tipo": "video",
+  "texto": "del treinta al treinta y seis. Y no, no son las tortugas de Tanaris del video anterior: es otra zona, otro nivel, y otro objeto para el vendedor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 464.76,
+  "t1": 473.764,
+  "tipo": "video",
+  "texto": "Son lentas, no pegan fuerte, y en un tercio de las muertes sueltan el fragmento de caparazón moteado. El vendedor te lo paga a nueve platas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 473.764,
+  "t1": 480.604,
+  "tipo": "video",
+  "texto": "Además caen carne de tortuga y cola escamosa espesa. La carne de tortuga la compra la gente para una misión de cocina,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 480.604,
+  "t1": 491.046,
+  "tipo": "video",
+  "texto": "y en la subasta vale más que en el vendedor. En promedio son unas cuatro platas por tortuga. A unas cien muertes por hora, cuatro de oro de botín, más las monedas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.046,
+  "t1": 497.066,
+  "tipo": "video",
+  "texto": "Los mordedores brillavalva están al este de las salinas, junto al Cráter de la Comadreja. Y para vender,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 497.066,
+  "t1": 505.652,
+  "tipo": "video",
+  "texto": "el Circuito del Espejismo, ahí mismo. Un jugador lo resumió así: unas cuantas tardes de tortugas, y tienes la montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 505.652,
+  "t1": 512.612,
+  "tipo": "video",
+  "texto": "Y si ya vas por el cuarenta y dos, la alternativa son los cavapozos Fangorroca del Marjal Revolcafango, a unas seis platas",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 512.612,
+  "t1": 523.83,
+  "tipo": "video",
+  "texto": "por muerte. Y gracias a quienes nos escriben: un espectador, Alexander,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 523.83,
+  "t1": 529.037,
+  "tipo": "video",
+  "texto": "nos dice que estos videos le ayudan a aprovechar el poco tiempo que tiene para jugar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 529.037,
+  "t1": 540.466,
+  "tipo": "video",
+  "texto": "Otro, David, está seguro de que esta información le va a ahorrar a mucha gente tiempo y sufrimiento, y a él ya le sirvió. Y para otro, Rolazabal, estos sí son videos de calidad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.466,
+  "t1": 548.866,
+  "tipo": "video",
+  "texto": "Gracias a los tres. Todos los comentarios se leen, y muchos acaban en el siguiente video. Y si este te está sirviendo, suscríbete,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 548.866,
+  "t1": 557.95,
+  "tipo": "video",
+  "texto": "que lo que viene paga más. Número once. Los reptadores de arena de Claros del Río, la zona nueva de Forever,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 557.95,
+  "t1": 568.873,
+  "tipo": "video",
+  "texto": "del treinta y seis al cuarenta y uno. Son los cangrejos de la costa, al sur del Puerto Polvomecha. Y sueltan carne de cangrejo tierna en cuatro de cada diez muertes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 568.873,
+  "t1": 576.013,
+  "tipo": "video",
+  "texto": "El vendedor te paga poco más de una plata por esa carne. Pero el doce de noviembre se vendía a catorce platas en la subasta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 576.013,
+  "t1": 583.718,
+  "tipo": "video",
+  "texto": "Así que esta no va al vendedor. La compran los cocineros, que prefieren pagar antes que pasar la tarde en la playa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 583.718,
+  "t1": 591.361,
+  "tipo": "video",
+  "texto": "Y si tienes la cocina en doscientos, la puedes guisar tú: a un jugador le dejaba unas veinticinco platas por cada guiso vendido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 591.361,
+  "t1": 599.692,
+  "tipo": "video",
+  "texto": "De paso, en el mismo puerto hay una misión con estos cangrejos, Sabores de mar, que pide carne de reptador de arena y ojos de múrloc.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 599.692,
+  "t1": 607.252,
+  "tipo": "video",
+  "texto": "Y si ya vas por el cuarenta, los reptadores del sur de Tuercespina, cerca de Bahía del Botín, sueltan además almejas de boca grande.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 607.252,
+  "t1": 617.708,
+  "tipo": "video",
+  "texto": "Y dentro de las almejas hay perlas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 617.708,
+  "t1": 626.522,
+  "tipo": "video",
+  "texto": "Número diez. Las crías del Barranco Lethlor, en Tierras Inhóspitas, del cuarenta al cuarenta y cuatro. Son crías de dragón que escupen fuego,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 626.522,
+  "t1": 635.103,
+  "tipo": "video",
+  "texto": "al este de la zona, alrededor del barranco. Y como son dragones, también sueltan monedas. Sueltan la glándula de llamas pequeña,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 635.103,
+  "t1": 644.14,
+  "tipo": "video",
+  "texto": "que va en el ají aliento de dragón: la comida que te hace escupir fuego, muy usada en mazmorras. El vendedor te paga la glándula a dos platas y media.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.14,
+  "t1": 652.766,
+  "tipo": "video",
+  "texto": "En la subasta llegó a valer unas diez. Y sueltan una mascota, el Vástago oscuro, una cría de dragón negro que te sigue a todas partes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 652.766,
+  "t1": 661.716,
+  "tipo": "video",
+  "texto": "El vendedor la paga a veinticinco platas, y la subasta, más. Además, una misión pide el corazón de draco negro, que cae muy poco:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 661.716,
+  "t1": 669.65,
+  "tipo": "video",
+  "texto": "hay gente que mata más de cien crías por un solo corazón. Y a un jugador le daban unos treinta mil puntos de experiencia por hora al cuarenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 669.65,
+  "t1": 676.041,
+  "tipo": "video",
+  "texto": "Oro y nivel a la vez, con vetas de mitril alrededor. Cuidado con los élites en el centro del barranco:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 676.041,
+  "t1": 685.43,
+  "tipo": "video",
+  "texto": "las crías se farmean por los bordes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 685.43,
+  "t1": 696.064,
+  "tipo": "video",
+  "texto": "Y otro comentario. Un espectador, Pkponcho, nos escribió: buen video, pero qué pereza que te picas con tus haters, cada dos minutos hablando de ellos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 696.064,
+  "t1": 705.423,
+  "tipo": "video",
+  "texto": "Tienes toda la razón, Pkponcho, y para demostrártelo, en este video solo le contestamos a dos. Tú eres el segundo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.423,
+  "t1": 711.369,
+  "tipo": "video",
+  "texto": "Número nueve. Los múrlocs del Pantano de las Penas, del cuarenta y uno al cuarenta y cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 711.369,
+  "t1": 720.563,
+  "tipo": "video",
+  "texto": "Hay cuatro tipos en la mitad sur de la playa, y un grupo grande hacia la Cueva Stagalbog: múrlocs de marisma, vomitatintas, comecarnes y oráculos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 720.563,
+  "t1": 729.006,
+  "tipo": "video",
+  "texto": "Todos pueden soltar la almeja de boca grande. Al abrirla siempre salen de una a tres carnes de almeja sabrosa, y a veces, una perla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 729.006,
+  "t1": 738.2,
+  "tipo": "video",
+  "texto": "La perla buena es la perla de oro. El veintidós de noviembre, un jugador la vendía a un oro con treinta platas. El vendedor solo te da un oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.2,
+  "t1": 745.224,
+  "tipo": "video",
+  "texto": "Las demás perlas valen menos, la negra unas doce platas y la iridiscente unas ocho. Pero se van sumando.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 745.224,
+  "t1": 755.004,
+  "tipo": "video",
+  "texto": "Además sueltan monedas, serviola moteada cruda, aceite de pescado, y verdes y azules ligados al equiparse. A ese jugador le cayeron unas botas épicas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 755.004,
+  "t1": 763.446,
+  "tipo": "video",
+  "texto": "que vendió en unos trece de oro. Y los oráculos sueltan una receta nueva de Forever, el té soleado, para la cocina en doscientos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 763.446,
+  "t1": 771.678,
+  "tipo": "video",
+  "texto": "Y la carne de almeja no la tires: desde el veintitrés de noviembre, sus recetas cuentan como comida de aguante. Empieza por la playa al cuarenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 771.678,
+  "t1": 777.458,
+  "tipo": "video",
+  "texto": "junto al Puesto Juncobruma. La parte de la cueva, mejor más tarde, que ahí hay demasiados",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 777.458,
+  "t1": 789.14,
+  "tipo": "video",
+  "texto": "juntos. Número ocho. Las hienas Llagapata de las Arenas Abisales,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 789.14,
+  "t1": 797.881,
+  "tipo": "video",
+  "texto": "en Tanaris, del cuarenta y cuatro al cuarenta y seis. En las Arenas Abisales hay tantos rocs de fuego, que son de misión, como hienas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 797.881,
+  "t1": 806.456,
+  "tipo": "video",
+  "texto": "Y casi nadie mata a las hienas. Sueltan la melena espesa, a ocho platas en el vendedor, y la pata de trofeo grande, a nueve.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 806.456,
+  "t1": 814.738,
+  "tipo": "video",
+  "texto": "Además, cuero grueso, carne de lobo rojo y carne de lobo tierna. Esa carne de lobo tierna la piden las guías de cocina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 814.738,
+  "t1": 822.452,
+  "tipo": "video",
+  "texto": "Un jugador la vendía a casi un oro el montón, el veintitrés de noviembre. El vendedor solo te da diecisiete platas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 822.452,
+  "t1": 831.339,
+  "tipo": "video",
+  "texto": "La ruta es un triángulo por los tres esqueletos de dinosaurio de las dunas. Y si pasa un roc, mátalo también, que suelta huevos gigantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 831.339,
+  "t1": 838.893,
+  "tipo": "video",
+  "texto": "Ese mismo día, los huevos valían poco más de veinte platas. Ya no es el farmeo de antes, pero de paso suma.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 838.893,
+  "t1": 848.28,
+  "tipo": "video",
+  "texto": "Para vender, Gadgetzan, al norte de las dunas, que es neutral para los dos bandos. Y la melena espesa también la sueltan los coyotes del número cuatro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 848.28,
+  "t1": 860.214,
+  "tipo": "video",
+  "texto": "Si estas dunas están llenas, ya sabes dónde más buscarla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 860.214,
+  "t1": 865.824,
+  "tipo": "video",
+  "texto": "Y gracias también a Brasil: un espectador, Lunatic, nos escribió en portugués que le gustó el video,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 865.824,
+  "t1": 875.687,
+  "tipo": "video",
+  "texto": "que ganamos un suscriptor, y nos mandó un abrazo de los brasileños. Un abrazo de vuelta para Lunatic y para todo Brasil. Y otro espectador, BiNWinslou,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 875.687,
+  "t1": 883.89,
+  "tipo": "video",
+  "texto": "nos dice que estos videos son muy buenos, con mucha información útil. Gracias, de verdad. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 883.89,
+  "t1": 892.859,
+  "tipo": "video",
+  "texto": "Los gorilas y los osos del norte de Feralas, del cuarenta y siete al cincuenta. Tronadores Groddoc y patriarcas Cueracero, en la misma zona,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 892.859,
+  "t1": 900.893,
+  "tipo": "video",
+  "texto": "alrededor de Los Dos Colosos. Aquí no hace falta ninguna profesión, porque los grises que sueltan los paga bien el vendedor.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 900.893,
+  "t1": 908.713,
+  "tipo": "video",
+  "texto": "El hueso de oso grande, casi quince platas, y hasta cuenta como una maza gris. El mechón de pelo de gorila, más de once.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 908.713,
+  "t1": 918.826,
+  "tipo": "video",
+  "texto": "La mandíbula de oso, casi nueve. Y luego el pelo de gorila burdo, la garra de oso indómito y el costillar de oso, de cinco a seis platas cada uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 918.826,
+  "t1": 925.64,
+  "tipo": "video",
+  "texto": "Los gorilas son de la misión previa al Templo Sumergido, así que cuando hay gente haciéndola, reaparecen más rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 925.64,
+  "t1": 933.18,
+  "tipo": "video",
+  "texto": "Si vas por el cuarenta y uno, los simios Groddoc y los osos Cueracero del centro de la zona sueltan casi lo mismo, a menos nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 933.18,
+  "t1": 945.309,
+  "tipo": "video",
+  "texto": "La Horda vende en el Campamento Mojache, y la Alianza en el Bastión Plumaluna.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 945.309,
+  "t1": 954.834,
+  "tipo": "video",
+  "texto": "Número seis. Los jaguares del Pantano de las Penas, del treinta y seis al treinta y nueve. Probablemente el farmeo de montura más famoso de todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 954.834,
+  "t1": 961.884,
+  "tipo": "video",
+  "texto": "Sueltan colas y bigotes de felino: la cola blanda larga, a ocho platas, y el bigote de cerdas, a más de siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 961.884,
+  "t1": 972.418,
+  "tipo": "video",
+  "texto": "Y además, cuero y carne. Con desuello rinde más. Y como el pantano está lleno de hierbas, hay quien aprovecha para subir la herboristería al mismo tiempo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 972.418,
+  "t1": 977.008,
+  "tipo": "video",
+  "texto": "La Horda vende en Rocal, en medio del pantano. Y un aviso para la Alianza:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 977.008,
+  "t1": 989.228,
+  "tipo": "video",
+  "texto": "por ahí patrullan guardias de la Horda que te marcan para el combate entre jugadores. Si hay mucha gente, tienes el plan B en Claros del Río: las cazadoras llanagreste, al sur de Rog'mar, sueltan lo mismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 989.228,
+  "t1": 994.448,
+  "tipo": "video",
+  "texto": "A un jugador le dejaban justo por encima de diez de oro por hora. Y si una zona está llena,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 994.448,
+  "t1": 1003.89,
+  "tipo": "video",
+  "texto": "vas a la otra. Número cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1003.89,
+  "t1": 1011.709,
+  "tipo": "video",
+  "texto": "Los elementales de roca de Tierras Inhóspitas, del treinta y siete al cuarenta y cuatro. El clásico de siempre para la montura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1011.709,
+  "t1": 1020.635,
+  "tipo": "video",
+  "texto": "Y en Forever trae un empujón oficial: desde el trece de noviembre, los elementales de roca inferiores aparecen más seguido. Hay tres franjas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1020.635,
+  "t1": 1029.725,
+  "tipo": "video",
+  "texto": "Los inferiores, del treinta y siete al treinta y nueve, junto a Kargath. Los normales, al sur, junto a la Explanada del Espejismo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1029.725,
+  "t1": 1038.722,
+  "tipo": "video",
+  "texto": "Y los superiores, del cuarenta y dos, al suroeste. Sueltan grises de piedra que el vendedor paga bien: trozos de piedra lisa y dentada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1038.722,
+  "t1": 1047.419,
+  "tipo": "video",
+  "texto": "piedra inerte y sal de roca. Y tierra elemental, en una de cada diez muertes. Ahora vale poco, pero cuando empiezan las bandas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1047.419,
+  "t1": 1054.999,
+  "tipo": "video",
+  "texto": "la piden para piedras de afilar y pociones de protección. A un jugador le salían unos diez de oro por hora, solo en grises.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1054.999,
+  "t1": 1064.101,
+  "tipo": "video",
+  "texto": "Otro dijo que con ellos te garantizas la montura, y que el único problema es la gente. Para vender, la Horda tiene a Kargath, al oeste de la zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1064.101,
+  "t1": 1071.671,
+  "tipo": "video",
+  "texto": "Y la Alianza, los campamentos goblin del centro. Si llegas y está lleno, guarda la tierra elemental en el banco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1071.671,
+  "t1": 1082.798,
+  "tipo": "video",
+  "texto": "Y el nueve de diciembre, mira qué precio tiene.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1082.798,
+  "t1": 1088.189,
+  "tipo": "video",
+  "texto": "Número cuatro. Los coyotes de Claros del Río, del treinta y seis al cuarenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1088.189,
+  "t1": 1098.514,
+  "tipo": "video",
+  "texto": "Están al sur del Cortijo de Wheeler, en la zona nueva. Y reaparecen a lo loco: siempre hay unos cuatro vivos, así que matas, das la vuelta, y ya volvieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1098.514,
+  "t1": 1108.449,
+  "tipo": "video",
+  "texto": "Sueltan la cola tupida suave, a más de siete platas, y la melena espesa, a ocho. Además, colmillos, carne de lobo rojo y cuero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1108.449,
+  "t1": 1114.95,
+  "tipo": "video",
+  "texto": "Y la cola tupida suave tiene un segundo comprador: es uno de los objetos que se canjean en la Feria de la Luna Negra.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1114.95,
+  "t1": 1124.438,
+  "tipo": "video",
+  "texto": "Un jugador lo midió con cronómetro, media hora, el veinte de noviembre: seis de oro con ochenta y cuatro platas. Entre trece y catorce de oro por hora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1124.438,
+  "t1": 1131.738,
+  "tipo": "video",
+  "texto": "Era el jugador del treinta y nueve con sesenta y siete de oro. Y de los farmeos que probó, este fue de los que más le dieron.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1131.738,
+  "t1": 1140.879,
+  "tipo": "video",
+  "texto": "Hay un coyote con nombre, Sootfur, de una misión de Benjy Wheeler, el granjero. Y la zona se puede farmear en grupo, con el botín libre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1140.879,
+  "t1": 1152.727,
+  "tipo": "video",
+  "texto": "Y desde ahí pasas directo a Tierras Inhóspitas, a los elementales del número cinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1152.727,
+  "t1": 1157.607,
+  "tipo": "video",
+  "texto": "Número tres. La pesca de valijas en la costa de Tuercespina. Y sí,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1157.607,
+  "t1": 1167.366,
+  "tipo": "video",
+  "texto": "en el video de los treinta trucos ya hablamos de pescar en los restos flotantes. Pero desde entonces cambiaron dos cosas, y un jugador encontró cómo duplicarlo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1167.366,
+  "t1": 1173.928,
+  "tipo": "video",
+  "texto": "Las valijas reforzadas con mitril salen de los restos flotantes, y también de los bancos de anguila escama pétrea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1173.928,
+  "t1": 1182.186,
+  "tipo": "video",
+  "texto": "Dentro hay tejido mágico, cuero, paño rúnico, objetos verdes, alguna receta, y hasta bolsas de catorce casillas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1182.186,
+  "t1": 1193.297,
+  "tipo": "video",
+  "texto": "El truco nuevo es un talento de Legado, el Maestro del cebo. Con sus dos rangos, cada pez que sacas con señuelo tiene la mitad de probabilidad de dar uno extra, también las valijas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1193.297,
+  "t1": 1200.728,
+  "tipo": "video",
+  "texto": "Y se puede encadenar: a ese jugador le salieron cuatro valijas en un solo lance. Unos cuatro de oro por sacar un pez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1200.728,
+  "t1": 1210.298,
+  "tipo": "video",
+  "texto": "Sin el talento sacaba unas quince valijas por hora. Con él, unas cuarenta. Y cada valija vale, en promedio, unas setenta platas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1210.298,
+  "t1": 1219.088,
+  "tipo": "video",
+  "texto": "Resultado: ciento setenta de oro en tres horas y media, mientras subía la pesca del ciento cincuenta al doscientos veinticinco. Dos detalles más.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1219.088,
+  "t1": 1228.81,
+  "tipo": "video",
+  "texto": "Desde el dieciséis de noviembre, el expositor de pesca del campamento da señuelos a todos. Y el jarabe de caminar sobre el agua te deja pescar lejos de la orilla.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1228.81,
+  "t1": 1235.2,
+  "tipo": "video",
+  "texto": "La ruta: sales del Campamento Grom'Gol, bajas por toda la costa oeste hasta Bahía del Botín, y vuelves.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-145",
+  "t0": 1235.2,
+  "t1": 1245.43,
+  "tipo": "video",
+  "texto": "Las valijas se abren, y todo va al buzón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-146",
+  "t0": 1245.43,
+  "t1": 1253.267,
+  "tipo": "video",
+  "texto": "Número dos. Las cuevas de ogros de las Montañas de Alterac, para quien va del treinta y cuatro al treinta y ocho, más o menos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-147",
+  "t0": 1253.267,
+  "t1": 1261.316,
+  "tipo": "video",
+  "texto": "Junto a los Dominios de los Aplastacresta, la fortaleza de los ogros, hay ogros normales y dos cuevas, una al norte y otra al sur.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-148",
+  "t0": 1261.316,
+  "t1": 1271.126,
+  "tipo": "video",
+  "texto": "Y dentro hay vetas de hierro, de mitril, de veraplata, de oro y de plata, que reaparecen rápido. Con minería, aquí subes casi hasta el torio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-149",
+  "t0": 1271.126,
+  "t1": 1279.474,
+  "tipo": "video",
+  "texto": "En un solo rincón del mapa hay treinta y ocho vetas: once de oro, ocho de hierro, siete de plata, seis de mitril y seis de veraplata.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-150",
+  "t0": 1279.474,
+  "t1": 1287.534,
+  "tipo": "video",
+  "texto": "Los ogros sueltan plata, paño de seda, grises y verdes. Y no hace falta irse a vender: cerca de la cueva del norte hay un vendedor",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-151",
+  "t0": 1287.534,
+  "t1": 1295.916,
+  "tipo": "video",
+  "texto": "gnomo, Rizz Tornillosuelto, encerrado en una jaula. Y en la misma zona de las vetas ronda un raro, Lo'Grosh, que suelta una maza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-152",
+  "t0": 1295.916,
+  "t1": 1304.051,
+  "tipo": "video",
+  "texto": "El pacificador, que en la subasta vale mucho. Un jugador encontró las cuevas vacías, porque ninguna guía de subida manda ahí.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-153",
+  "t0": 1304.051,
+  "t1": 1312.663,
+  "tipo": "video",
+  "texto": "Con minería, montura y botas de velocidad, le salieron unos treinta de oro por hora. Sin montura ni botas, de veinte a veinticinco.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-154",
+  "t0": 1312.663,
+  "t1": 1318.403,
+  "tipo": "video",
+  "texto": "Un aviso: cerca de la fortaleza están los aplastadores y los magos, que son élite.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-155",
+  "t0": 1318.403,
+  "t1": 1327.93,
+  "tipo": "video",
+  "texto": "Quédate en las cuevas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-156",
+  "t0": 1327.93,
+  "t1": 1339.035,
+  "tipo": "video",
+  "texto": "Y número uno. Los destripadores negros de Las Tierras Devastadas, del cuarenta y seis al cincuenta. Son buitres carroñeros que viven entre el Alto de los Rapiñadores y la Serpiente Enroscada,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-157",
+  "t0": 1339.035,
+  "t1": 1346.522,
+  "tipo": "video",
+  "texto": "en un paisaje de cráteres negros. Y sueltan la molleja de buitre. A un jugador le cayó en cuatro de cada diez muertes,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-158",
+  "t0": 1346.522,
+  "t1": 1355.624,
+  "tipo": "video",
+  "texto": "y el veintitrés de noviembre la vendía a más de dos de oro cada una. Tan cara porque la piden dos misiones de la misma zona: El vigor del buitre, que pide diez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-159",
+  "t0": 1355.624,
+  "t1": 1363.301,
+  "tipo": "video",
+  "texto": "y El golpe decisivo, que pide dos. Ese jugador lo midió media hora: noventa y dos objetos, unos veintiún de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-160",
+  "t0": 1363.301,
+  "t1": 1373.208,
+  "tipo": "video",
+  "texto": "Unos cuarenta y uno de oro por hora, antes de la comisión de la subasta. Seis mollejas fueron la mitad de todo ese oro. Y sin ninguna molleja le habrían quedado",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-161",
+  "t0": 1373.208,
+  "t1": 1381.493,
+  "tipo": "video",
+  "texto": "unos diecisiete de oro por hora, que sigue siendo más que casi toda la lista. En promedio, casi noventa platas cada vez que matas un buitre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-162",
+  "t0": 1381.493,
+  "t1": 1390.194,
+  "tipo": "video",
+  "texto": "Y no hace falta ninguna profesión para sacarlo. Dos avisos. Solo hay unos treinta y dos puntos de aparición, así que hay competencia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-163",
+  "t0": 1390.194,
+  "t1": 1401.553,
+  "tipo": "video",
+  "texto": "y gana quien está encima. Y el precio de la molleja puede caer como cayó el de los huevos. De paso puedes desollar a los aguijoneros Scorpok y a las hienas risitas famélicas de la zona.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-164",
+  "t0": 1401.553,
+  "t1": 1407.133,
+  "tipo": "video",
+  "texto": "La Alianza llega volando al Castillo de Nethergarde. Y la Horda, desde el vuelo del Pantano de",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-165",
+  "t0": 1407.133,
+  "t1": 1415.43,
+  "tipo": "video",
+  "texto": "las Penas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-166",
+  "t0": 1415.43,
+  "t1": 1426.229,
+  "tipo": "video",
+  "texto": "Y si los juntas, te queda una ruta del oro por nivel. Del treinta al treinta y cinco: las tortugas del Desierto de Sal, los gorilas de Tuercespina y los centauros de Desolace.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-167",
+  "t0": 1426.229,
+  "t1": 1436.132,
+  "tipo": "video",
+  "texto": "Del treinta y cinco al cuarenta: las arañas del marjal, las cuevas de Alterac, los jaguares del pantano, los coyotes de Claros del Río y los primeros elementales de roca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-168",
+  "t0": 1436.132,
+  "t1": 1441.112,
+  "tipo": "video",
+  "texto": "Del cuarenta al cuarenta y cinco: las crías del Barranco Lethlor, los elementales superiores,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-169",
+  "t0": 1441.112,
+  "t1": 1450.946,
+  "tipo": "video",
+  "texto": "los cangrejos del sur de Tuercespina y los múrlocs del Pantano de las Penas. Y del cuarenta y cinco al cincuenta: las hienas de Tanaris, los gorilas y osos de Feralas,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-170",
+  "t0": 1450.946,
+  "t1": 1458.381,
+  "tipo": "video",
+  "texto": "y los buitres de Las Tierras Devastadas. La pesca de valijas, en cualquier momento. Y un consejo para todos:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-171",
+  "t0": 1458.381,
+  "t1": 1467.846,
+  "tipo": "video",
+  "texto": "antes de guardar algo para la subasta, mira lo que paga el vendedor. A veces la diferencia son dos cobres, y a veces son dos de oro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-172",
+  "t0": 1467.846,
+  "t1": 1476.829,
+  "tipo": "video",
+  "texto": "Y esos son los quince farmeos de oro del treinta al cincuenta en World of Warcraft Forever, del centauro que Blizzard acaba de acelerar al buitre que deja casi un oro por muerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-173",
+  "t0": 1476.829,
+  "t1": 1485.113,
+  "tipo": "video",
+  "texto": "Ahora cuéntame en los comentarios en qué nivel vas, cuánto oro llevas, y cuál es tu farmeo secreto, Azazel incluido, que nos debe uno.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-174",
+  "t0": 1485.113,
+  "t1": 1495.322,
+  "tipo": "video",
+  "texto": "Si este video te ahorra una tarde de farmeo, suscríbete y compártelo con tu hermandad. Y si alguien de tu hermandad llegó al cuarenta sin montura, ya sabes a quién mandárselo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-175",
+  "t0": 1495.322,
+  "t1": 1501.875,
+  "tipo": "video",
+  "texto": "Nos vemos en la próxima crónica. Y nos vemos en Azeroth.",
+  "clip_s": 8
+ }
+]

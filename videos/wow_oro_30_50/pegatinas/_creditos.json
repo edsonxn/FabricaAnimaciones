@@ -1,0 +1,1821 @@
+{
+ "aguijonero_scorpok": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/180/6068.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5988",
+  "identidad": "Aguijonero Scorpok / Scorpok Stinger (npc 5988): escórpido (50-51); displayId 6068 (página de Wowhead Forever, 25-nov)",
+  "escena": "p01",
+  "pegatina": "478x470",
+  "cara": "caras/aguijonero_scorpok.png"
+ },
+ "alto_rapinadores": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Rise of the Defiler.jpg",
+  "url": "https://warcraft.wiki.gg/images/Rise_of_the_Defiler.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Rise_of_the_Defiler.jpg",
+  "identidad": "imagen de la página Rise of the Defiler (Alto de los Rapiñadores, Las Tierras Devastadas)",
+  "usado_en": [
+   "Blasted Lands",
+   "Rise of the Defiler",
+   "Blasted Lands (Classic)"
+  ],
+  "escena": "p01 intro",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "alto_rapinadores_2": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Defiler's Peak.jpg",
+  "url": "https://warcraft.wiki.gg/images/Defiler%27s_Peak.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Defiler%27s_Peak.jpg",
+  "identidad": "archivo «Defiler's Peak» (página Rise of the Defiler: suelo rojo con círculos del Alto de los Rapiñadores)",
+  "usado_en": [
+   "Rise of the Defiler"
+  ],
+  "escena": "p01",
+  "original": "977x635",
+  "recorte": null,
+  "pegatina": "900x585",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "aplastador_aplastacresta": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/143/655.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2254",
+  "identidad": "Aplastador Aplastacresta / Crushridge Mauler (npc 2254): ogro élite (36-37) junto a la fortaleza; displayId 655 (página de Wowhead Forever, 25-nov)",
+  "escena": "p02",
+  "pegatina": "424x600",
+  "cara": "caras/aplastador_aplastacresta.png"
+ },
+ "arana_niebla_negra": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/33/545.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4376",
+  "identidad": "Araña Niebla Negra / Darkmist Spider (npc 4376): araña (35-36), Cueva Niebla Negra; displayId 545 (página de Wowhead Forever, 25-nov)",
+  "escena": "p14",
+  "pegatina": "538x430",
+  "cara": "caras/arana_niebla_negra.png"
+ },
+ "arenas_abisales": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Abyssal Sands.jpg",
+  "url": "https://warcraft.wiki.gg/images/Abyssal_Sands.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Abyssal_Sands.jpg",
+  "identidad": "imagen de la página Abyssal Sands (Arenas Abisales, Tanaris; dunas con esqueleto de dinosaurio)",
+  "usado_en": [
+   "Abyssal Sands"
+  ],
+  "escena": "p08",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "bahia_botin": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Booty Bay.jpg",
+  "url": "https://warcraft.wiki.gg/images/Booty_Bay.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Booty_Bay.jpg",
+  "identidad": "imagen «Booty Bay» (páginas Booty Bay y Stranglethorn Vale (Classic))",
+  "usado_en": [
+   "Stranglethorn Vale (Classic)",
+   "Goblin",
+   "Booty Bay",
+   "Blackwater Cartel",
+   "Stranglethorn Vale",
+   "Steamwheedle Cartel",
+   "Errands for Kravel quest chain",
+   "User:Terradon/Goblin Project"
+  ],
+  "escena": "p03 p11",
+  "original": "1920x1080",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "barranco_lethlor": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Lethlor Ravine.jpg",
+  "url": "https://warcraft.wiki.gg/images/Lethlor_Ravine.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Lethlor_Ravine.jpg",
+  "identidad": "imagen de la página Lethlor Ravine (Barranco Lethlor, Tierras Inhóspitas; página Badlands (Classic); se ven las crías volando). La otra de la página (Lethlor-Ravine.jpg) es de Cataclysm: descartada",
+  "usado_en": [
+   "Badlands (Classic)",
+   "Lethlor Ravine"
+  ],
+  "escena": "p10",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "bastion_plumaluna": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Feathermoon Stronghold.jpg",
+  "url": "https://warcraft.wiki.gg/images/Feathermoon_Stronghold.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Feathermoon_Stronghold.jpg",
+  "identidad": "archivo «Feathermoon Stronghold» (Bastión Plumaluna en la isla, como en Classic; la «New-feathermoon» de la página es la de Cataclysm: descartada)",
+  "usado_en": [
+   "User:Takji",
+   "Feathermoon Stronghold (Classic)",
+   "User:Zzzach467"
+  ],
+  "escena": "p07",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "benjy_wheeler": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/157/140701.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=258317",
+  "identidad": "Benjy Wheeler (npc 258317): granjero del Cortijo de Wheeler, da Coyote Huntin' (PNJ nuevo de Forever); displayId 140701 (página de Wowhead Forever, 25-nov)",
+  "escena": "p04",
+  "pegatina": "294x600",
+  "cara": "caras/benjy_wheeler.png"
+ },
+ "campamento_mojache": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Camp Mojache.jpg",
+  "url": "https://warcraft.wiki.gg/images/Camp_Mojache.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Camp_Mojache.jpg",
+  "identidad": "imagen de la página Camp Mojache (Campamento Mojache, Feralas; página Feralas (Classic))",
+  "usado_en": [
+   "Feralas (Classic)",
+   "Camp Mojache",
+   "Feralas",
+   "United tauren tribes"
+  ],
+  "escena": "p07",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "castillo_nethergarde": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Nethergarde.jpg",
+  "url": "https://warcraft.wiki.gg/images/Nethergarde.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Nethergarde.jpg",
+  "identidad": "archivo «Nethergarde» (página Nethergarde Keep = Castillo de Nethergarde, Las Tierras Devastadas; el castillo entero, antes de la Legión)",
+  "usado_en": [
+   "Dalaran (kingdom)",
+   "Blasted Lands",
+   "Blasted Lands (Classic)"
+  ],
+  "escena": "p01",
+  "original": "1024x768",
+  "recorte": null,
+  "pegatina": "900x675",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "cavapozos_fangorroca": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/160/7840.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4399",
+  "identidad": "Cavapozos Fangorroca / Mudrock Borer (npc 4399): tortuga (42-43), Marjal Revolcafango; displayId 7840 (página de Wowhead Forever, 25-nov)",
+  "escena": "p12",
+  "pegatina": "456x420",
+  "cara": "caras/cavapozos_fangorroca.png"
+ },
+ "cazadora_llanagreste": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/141/1933.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=259055",
+  "identidad": "Cazadora llanagreste / Wildplains Huntress (npc 259055): felino (38-39), Claros del Río (PNJ nuevo de Forever); displayId 1933 (página de Wowhead Forever, 25-nov)",
+  "escena": "p06",
+  "pegatina": "344x342",
+  "cara": "caras/cazadora_llanagreste.png"
+ },
+ "cazavientos_magram": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/213/9429.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4641",
+  "identidad": "Cazavientos Magram / Magram Windchaser (npc 4641): centauro (33-34), Poblado Magram; displayId 9429 (página de Wowhead Forever, 25-nov)",
+  "escena": "p15",
+  "pegatina": "286x600",
+  "cara": "caras/cazavientos_magram.png"
+ },
+ "circuito_espejismo": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Mirage Raceway.jpg",
+  "url": "https://warcraft.wiki.gg/images/Mirage_Raceway.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Mirage_Raceway.jpg",
+  "identidad": "imagen de la página Mirage Raceway (Circuito del Espejismo, El Desierto de Sal)",
+  "usado_en": [
+   "Mirage Raceway",
+   "Goblin Sponsorship quest chain",
+   "Thousand Needles (Classic)",
+   "Errands for Kravel quest chain"
+  ],
+  "escena": "p12",
+  "original": "1920x1080",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "claros_del_rio": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Zones Riverglades 035.jpg",
+  "url": "https://warcraft.wiki.gg/images/Zones_Riverglades_035.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Zones_Riverglades_035.jpg",
+  "identidad": "«Zones Riverglades» (galería de Forever) = Claros del Río; imagen principal de la página Riverglades",
+  "usado_en": [
+   "World of Warcraft: Forever",
+   "Riverglades"
+  ],
+  "escena": "p11 p04 p06",
+  "original": "3840x2160",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "Blizzard, capturas oficiales de Forever (galería de prensa de WoW Forever)"
+ },
+ "claros_del_rio_2": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Zones Riverglades 040.jpg",
+  "url": "https://warcraft.wiki.gg/images/Zones_Riverglades_040.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Zones_Riverglades_040.jpg",
+  "identidad": "«Zones Riverglades» (galería de Forever) = Claros del Río (río al atardecer)",
+  "usado_en": [
+   "World of Warcraft: Forever"
+  ],
+  "escena": "p11 p04",
+  "original": "3840x2160",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "Blizzard, capturas oficiales de Forever (galería de prensa de WoW Forever)"
+ },
+ "comecarnes_marisma": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/135/391.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=751",
+  "identidad": "Comecarnes de marisma / Marsh Flesheater (npc 751): múrloc (43-44); displayId 391 (página de Wowhead Forever, 25-nov)",
+  "escena": "p09",
+  "pegatina": "470x600",
+  "cara": "caras/comecarnes_marisma.png"
+ },
+ "corremanadas_magram": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/214/9430.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4643",
+  "identidad": "Corremanadas Magram / Magram Pack Runner (npc 4643): centauro (34-35), Poblado Magram; displayId 9430 (página de Wowhead Forever, 25-nov)",
+  "escena": "p15",
+  "pegatina": "266x600",
+  "cara": "caras/corremanadas_magram.png"
+ },
+ "cortijo_wheeler": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Wheeler's Grange.jpg",
+  "url": "https://warcraft.wiki.gg/images/Wheeler%27s_Grange.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Wheeler%27s_Grange.jpg",
+  "identidad": "archivo «Wheeler's Grange» = Cortijo de Wheeler (rótulo en inglés del mapa de Wowhead Forever en 54.8, 75.8 de Claros del Río; subido el 20-oct-2026)",
+  "usado_en": [
+   "Wheeler's Grange"
+  ],
+  "escena": "p04",
+  "original": "1632x939",
+  "recorte": null,
+  "pegatina": "900x518",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "coyote_llanuras": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/161/161.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=259267",
+  "identidad": "Coyote de las llanuras / Plains Coyote (npc 259267): coyote (36-37), sur del Cortijo de Wheeler (PNJ nuevo de Forever); displayId 161 (página de Wowhead Forever, 25-nov)",
+  "escena": "p04",
+  "pegatina": "378x402",
+  "cara": "caras/coyote_llanuras.png"
+ },
+ "cria_lethlor": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/203/715.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2725",
+  "identidad": "Scalding Whelp (sin es-MX) = las crías del Barranco Lethlor (npc 2725): cría de dragón (41-43); displayId 715 (página de Wowhead Forever, 25-nov)",
+  "escena": "p10",
+  "pegatina": "214x410",
+  "cara": "caras/cria_lethlor.png"
+ },
+ "cueva_niebla_negra": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Darkmist Cavern.jpg",
+  "url": "https://warcraft.wiki.gg/images/Darkmist_Cavern.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Darkmist_Cavern.jpg",
+  "identidad": "imagen de la página Darkmist Cavern (Cueva Niebla Negra, Marjal Revolcafango; se ve una araña Niebla Negra y telarañas)",
+  "usado_en": [
+   "Darkmist Cavern",
+   "Dustwallow Marsh (Classic)",
+   "Dustwallow Marsh"
+  ],
+  "escena": "p14",
+  "original": "1024x768",
+  "recorte": null,
+  "pegatina": "900x675",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "cueva_stagalbog": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Stagalbog Cave.jpg",
+  "url": "https://warcraft.wiki.gg/images/Stagalbog_Cave.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Stagalbog_Cave.jpg",
+  "identidad": "archivo «Stagalbog Cave» (página Stagalbog Cave, Pantano de las Penas)",
+  "usado_en": [
+   "Stagalbog Cave"
+  ],
+  "escena": "p09",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "desierto_sal": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Shimmering Flats.jpg",
+  "url": "https://warcraft.wiki.gg/images/Shimmering_Flats.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Shimmering_Flats.jpg",
+  "identidad": "imagen de la página Shimmering Flats (El Desierto de Sal, Las Mil Agujas; página Thousand Needles (Classic))",
+  "usado_en": [
+   "Thousand Needles (Classic)",
+   "Shimmering Flats",
+   "Thousand Needles"
+  ],
+  "escena": "p12",
+  "original": "700x525",
+  "recorte": null,
+  "pegatina": "700x525",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "destripador_negro": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/72/10824.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5982",
+  "identidad": "Destripador negro / Black Slayer (npc 5982): carroñero (46-48), Las Tierras Devastadas; displayId 10824 (página de Wowhead Forever, 25-nov)",
+  "escena": "intro p01",
+  "pegatina": "336x372",
+  "cara": "caras/destripador_negro.png"
+ },
+ "dominios_aplastacresta": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Crushridge Hold.jpg",
+  "url": "https://warcraft.wiki.gg/images/Crushridge_Hold.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Crushridge_Hold.jpg",
+  "identidad": "imagen de la página Crushridge Hold (Dominios de los Aplastacresta, Montañas de Alterac)",
+  "usado_en": [
+   "Crushridge Hold"
+  ],
+  "escena": "p02 intro",
+  "original": "1920x1056",
+  "recorte": null,
+  "pegatina": "900x495",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "dos_colosos": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:The Twin Colossals.jpg",
+  "url": "https://warcraft.wiki.gg/images/The_Twin_Colossals.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:The_Twin_Colossals.jpg",
+  "identidad": "archivo «The Twin Colossals» (página Twin Colossals = Los Dos Colosos, Feralas)",
+  "usado_en": [
+   "Feralas (Classic)",
+   "Twin Colossals",
+   "Feralas"
+  ],
+  "escena": "p07",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "drazial": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/230/6630.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=7505",
+  "identidad": "Mago sangriento Drazial / Bloodmage Drazial (npc 7505): da El golpe decisivo (2 mollejas); displayId 6630 (página de Wowhead Forever, 25-nov)",
+  "escena": "p01",
+  "pegatina": "272x586",
+  "cara": "caras/drazial.png"
+ },
+ "elemental_roca": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/171/171.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=92",
+  "identidad": "Elemental de roca / Rock Elemental (npc 92): elemental (39-40), sur de Tierras Inhóspitas; displayId 171 (página de Wowhead Forever, 25-nov)",
+  "escena": "p05",
+  "pegatina": "600x566",
+  "cara": "caras/elemental_roca.png"
+ },
+ "elemental_roca_inferior": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/137/1161.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2735",
+  "identidad": "Elemental de roca inferior / Lesser Rock Elemental (npc 2735): elemental (37-39), junto a Kargath; displayId 1161 (página de Wowhead Forever, 25-nov)",
+  "escena": "p05",
+  "pegatina": "600x566",
+  "cara": "caras/elemental_roca_inferior.png"
+ },
+ "elemental_roca_superior": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/248/14328.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2736",
+  "identidad": "Elemental de roca superior / Greater Rock Elemental (npc 2736): elemental (42-44), suroeste; displayId 14328 (página de Wowhead Forever, 25-nov)",
+  "escena": "p05",
+  "pegatina": "600x552",
+  "cara": "caras/elemental_roca_superior.png"
+ },
+ "ermitana_niebla_negra": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/234/2538.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4378",
+  "identidad": "Ermitaña Niebla Negra / Darkmist Recluse (npc 4378): araña (36-37), Cueva Niebla Negra; displayId 2538 (página de Wowhead Forever, 25-nov)",
+  "escena": "p14",
+  "pegatina": "538x430",
+  "cara": "caras/ermitana_niebla_negra.png"
+ },
+ "explanada_espejismo": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Mirage Flats.jpg",
+  "url": "https://warcraft.wiki.gg/images/Mirage_Flats.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Mirage_Flats.jpg",
+  "identidad": "imagen de la página Mirage Flats (Explanada del Espejismo, Tierras Inhóspitas)",
+  "usado_en": [
+   "Mirage Flats"
+  ],
+  "escena": "p05",
+  "original": "566x424",
+  "recorte": null,
+  "pegatina": "566x424",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "fimbo": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/31/142111.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=259962",
+  "identidad": "Fimbo Grasapuños / Fimbo Greasemitz (npc 259962): PNJ de Puerto Polvomecha, misión Sabores de mar (PNJ nuevo de Forever); displayId 142111 (página de Wowhead Forever, 25-nov)",
+  "escena": "p11",
+  "pegatina": "452x600",
+  "cara": "caras/fimbo.png"
+ },
+ "gadgetzan": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Gadgetzan.jpg",
+  "url": "https://warcraft.wiki.gg/images/Gadgetzan.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Gadgetzan.jpg",
+  "identidad": "imagen «Gadgetzan» (páginas Gadgetzan y Tanaris (Classic))",
+  "usado_en": [
+   "Goblin Sponsorship quest chain",
+   "Tanaris (Classic)",
+   "User:Kraljevic Marko",
+   "Gadgetzan",
+   "User:Gorvar",
+   "Tanaris"
+  ],
+  "escena": "p08",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "gorila_velo_bruma": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/75/843.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=1108",
+  "identidad": "Gorila Velo de Bruma / Mistvale Gorilla (npc 1108): gorila (32-33), oeste del Lago Nazferiti; displayId 843 (página de Wowhead Forever, 25-nov)",
+  "escena": "p13",
+  "pegatina": "596x584",
+  "cara": "caras/gorila_velo_bruma.png"
+ },
+ "gorila_velo_bruma_anciano": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/70/838.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=1557",
+  "identidad": "Gorila Velo de Bruma anciano / Elder Mistvale Gorilla (npc 1557): gorila (40-41), Valle del Velo de Bruma; displayId 838 (página de Wowhead Forever, 25-nov)",
+  "escena": "p13",
+  "pegatina": "596x584",
+  "cara": "caras/gorila_velo_bruma_anciano.png"
+ },
+ "gromgol": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Grom'Gol Base Camp beach side.jpg",
+  "url": "https://warcraft.wiki.gg/images/Grom%27Gol_Base_Camp_beach_side.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Grom%27Gol_Base_Camp_beach_side.jpg",
+  "identidad": "archivo «Grom'Gol Base Camp beach side» (página Grom'gol Base Camp = Campamento Grom'Gol)",
+  "usado_en": [
+   "Grom'gol Base Camp"
+  ],
+  "escena": "p03",
+  "original": "1920x1080",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "guarida_onyxia": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Onyxia's Lair loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Onyxia%27s_Lair_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Onyxia%27s_Lair_loading_screen.jpg",
+  "identidad": "pantalla de carga de la Guarida de Onyxia (Classic)",
+  "usado_en": [],
+  "escena": "overgear",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "pegatina": "776x345",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "hiena_llagapata": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/0/1536.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5426",
+  "identidad": "Hiena Llagapata / Blisterpaw Hyena (npc 5426): hiena (44-45), Arenas Abisales; displayId 1536 (página de Wowhead Forever, 25-nov)",
+  "escena": "p08",
+  "pegatina": "446x486",
+  "cara": "caras/hiena_llagapata.png"
+ },
+ "hiena_risitas": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/114/8050.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5984",
+  "identidad": "Hiena risitas famélica / Starving Snickerfang (npc 5984): hiena (45-46); displayId 8050 (página de Wowhead Forever, 25-nov)",
+  "escena": "p01",
+  "pegatina": "446x486",
+  "cara": "caras/hiena_risitas.png"
+ },
+ "jaguar_pantano": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/120/632.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=767",
+  "identidad": "Jaguar del pantano / Swamp Jaguar (npc 767): felino (36-37), Pantano de las Penas; displayId 632 (página de Wowhead Forever, 25-nov)",
+  "escena": "p06",
+  "pegatina": "344x342",
+  "cara": "caras/jaguar_pantano.png"
+ },
+ "kargath": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Kargath.jpg",
+  "url": "https://warcraft.wiki.gg/images/Kargath.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Kargath.jpg",
+  "identidad": "archivo «Kargath» (página Kargath, Tierras Inhóspitas; captura antigua)",
+  "usado_en": [
+   "Template:User Server/NYI",
+   "Badlands (Classic)",
+   "Kargath"
+  ],
+  "escena": "p05",
+  "original": "566x424",
+  "recorte": null,
+  "pegatina": "566x424",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "lago_nazferiti": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Lake Nazferiti.jpg",
+  "url": "https://warcraft.wiki.gg/images/Lake_Nazferiti.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Lake_Nazferiti.jpg",
+  "identidad": "imagen de la página Lake Nazferiti (Lago Nazferiti, Vega de Tuercespina). CONFIANZA MEDIA: sin fecha; hierba y agua con detalle moderno, puede ser captura de retail (el lago no cambió)",
+  "usado_en": [
+   "Lake Nazferiti"
+  ],
+  "escena": "p13",
+  "original": "1920x1080",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "lo_grosh": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/46/11566.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2453",
+  "identidad": "Lo'Grosh (npc 2453): ogro raro (39) de Alterac; displayId 11566 (página de Wowhead Forever, 25-nov)",
+  "escena": "p02",
+  "pegatina": "424x600",
+  "cara": "caras/lo_grosh.png"
+ },
+ "lynnore": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/231/6631.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=7506",
+  "identidad": "Maga sangrienta Lynnore / Bloodmage Lynnore (npc 7506): da El vigor del buitre (10 mollejas); displayId 6631 (página de Wowhead Forever, 25-nov)",
+  "escena": "p01",
+  "pegatina": "220x560",
+  "cara": "caras/lynnore.png"
+ },
+ "mago_aplastacresta": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/49/6705.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2255",
+  "identidad": "Mago Aplastacresta / Crushridge Mage (npc 2255): ogro élite (37-38) junto a la fortaleza; displayId 6705 (página de Wowhead Forever, 25-nov)",
+  "escena": "p02",
+  "pegatina": "424x600",
+  "cara": "caras/mago_aplastacresta.png"
+ },
+ "merodeador_coyote": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/161/161.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=259263",
+  "identidad": "Merodeador coyote / Coyote Prowler (npc 259263): coyote (36-37); MISMO modelo que el Coyote de las llanuras (displayId 161); displayId 161 (página de Wowhead Forever, 25-nov)",
+  "escena": "p04",
+  "pegatina": "378x402",
+  "cara": "caras/merodeador_coyote.png"
+ },
+ "mokk": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/72/840.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=1514",
+  "identidad": "Mokk el Salvaje / Mokk the Savage (npc 1514): gorila jefe (44) que se invoca en oleadas con la misión La fiebre de Tuercespina; displayId 840 (página de Wowhead Forever, 25-nov)",
+  "escena": "p13",
+  "pegatina": "600x570",
+  "cara": "caras/mokk.png"
+ },
+ "mordedor_brillavalva": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/4/2308.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4143",
+  "identidad": "Mordedor brillavalva / Sparkleshell Snapper (npc 4143): tortuga (34-35), El Desierto de Sal; displayId 2308 (página de Wowhead Forever, 25-nov)",
+  "escena": "p12",
+  "pegatina": "456x420",
+  "cara": "caras/mordedor_brillavalva.png"
+ },
+ "murloc_marisma": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/250/506.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=747",
+  "identidad": "Múrloc de marisma / Marsh Murloc (npc 747): múrloc (41-42), Pantano de las Penas; displayId 506 (página de Wowhead Forever, 25-nov)",
+  "escena": "p09",
+  "pegatina": "470x600",
+  "cara": "caras/murloc_marisma.png"
+ },
+ "o_aceite_pescado": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_64.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=17058",
+  "identidad": "item 17058: Fish Oil / es-MX «Aceite de pescado» — Aceite de pescado",
+  "icono": "inv_potion_64",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_adornos_brillantes": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_variety_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=6532",
+  "identidad": "item 6532: Bright Baubles / es-MX «Adornos brillantes» — Adornos brillantes (el señuelo de pesca)",
+  "icono": "inv_misc_gem_variety_02",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_aji_aliento": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_drink_17.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12217",
+  "identidad": "item 12217: Dragonbreath Chili / es-MX «Ají aliento de dragón» — Ají aliento de dragón",
+  "icono": "inv_drink_17",
+  "escena": "p10",
+  "pegatina": "320x320"
+ },
+ "o_almeja_boca_grande": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_shell_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=7973",
+  "identidad": "item 7973: Big-mouth Clam / es-MX «Almeja de boca grande» — Almeja de boca grande",
+  "icono": "inv_misc_shell_03",
+  "escena": "p11 p09",
+  "pegatina": "320x320"
+ },
+ "o_anguila_petrea": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_fish_11.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=13422",
+  "identidad": "item 13422: Stonescale Eel / es-MX «Anguila escama pétrea» — Anguila escama pétrea",
+  "icono": "inv_misc_fish_11",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_bigote_cerdas": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monstertail_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=1686",
+  "identidad": "item 1686: Bristly Whisker / es-MX «Bigote de cerdas» — Bigote de cerdas",
+  "icono": "inv_misc_monstertail_03",
+  "escena": "p06",
+  "pegatina": "320x320"
+ },
+ "o_carne_almeja": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_51.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=7974",
+  "identidad": "item 7974: Zesty Clam Meat / es-MX «Carne de almeja sabrosa» — Carne de almeja sabrosa",
+  "icono": "inv_misc_food_51",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_carne_cangrejo": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_51.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12206",
+  "identidad": "item 12206: Tender Crab Meat / es-MX «Carne de cangrejo tierna» — Carne de cangrejo tierna",
+  "icono": "inv_misc_food_51",
+  "escena": "p11",
+  "pegatina": "320x320"
+ },
+ "o_carne_lobo_rojo": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_71.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12203",
+  "identidad": "item 12203: Red Wolf Meat / es-MX «Carne de lobo rojo» — Carne de lobo rojo",
+  "icono": "inv_misc_food_71",
+  "escena": "p08 p04",
+  "pegatina": "320x320"
+ },
+ "o_carne_lobo_tierna": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_14.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12208",
+  "identidad": "item 12208: Tender Wolf Meat / es-MX «Carne de lobo tierna» — Carne de lobo tierna",
+  "icono": "inv_misc_food_14",
+  "escena": "p08",
+  "pegatina": "320x320"
+ },
+ "o_carne_reptador": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_126_clammeat.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=268345",
+  "identidad": "item 268345: Sand Crawler Meat / es-MX «Carne de reptador de arena» — Carne de reptador de arena (misión Sabores de mar)",
+  "icono": "inv_misc_food_126_clammeat",
+  "escena": "p11",
+  "pegatina": "320x320"
+ },
+ "o_carne_tortuga": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_70.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=3712",
+  "identidad": "item 3712: Turtle Meat / es-MX «Carne de tortuga» — Carne de tortuga",
+  "icono": "inv_misc_food_70",
+  "escena": "p12",
+  "pegatina": "320x320"
+ },
+ "o_cola_blanda": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monstertail_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=1688",
+  "identidad": "item 1688: Long Soft Tail / es-MX «Cola blanda larga» — Cola blanda larga",
+  "icono": "inv_misc_monstertail_01",
+  "escena": "p06",
+  "pegatina": "320x320"
+ },
+ "o_cola_escamosa": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterscales_04.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4555",
+  "identidad": "item 4555: Thick Scaly Tail / es-MX «Cola escamosa espesa» — Cola escamosa espesa",
+  "icono": "inv_misc_monsterscales_04",
+  "escena": "p12",
+  "pegatina": "320x320"
+ },
+ "o_cola_tupida": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monstertail_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4582",
+  "identidad": "item 4582: Soft Bushy Tail / es-MX «Cola tupida suave» — Cola tupida suave",
+  "icono": "inv_misc_monstertail_02",
+  "escena": "p04",
+  "pegatina": "320x320"
+ },
+ "o_colmillo_gorila": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterfang_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=2799",
+  "identidad": "item 2799: Gorilla Fang / es-MX «Colmillo de gorila» — Colmillo de gorila",
+  "icono": "inv_misc_monsterfang_01",
+  "escena": "p13",
+  "pegatina": "320x320"
+ },
+ "o_colmillo_grande": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bone_08.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=5637",
+  "identidad": "item 5637: Large Fang / es-MX «Colmillo grande» — Colmillo grande (los «colmillos» de los coyotes)",
+  "icono": "inv_misc_bone_08",
+  "escena": "p04",
+  "pegatina": "320x320"
+ },
+ "o_corazon_draco": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_organ_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4612",
+  "identidad": "item 4612: Black Drake's Heart / es-MX «Corazón de draco negro» — Corazón de draco negro (misión)",
+  "icono": "inv_misc_organ_01",
+  "escena": "p10",
+  "pegatina": "320x320"
+ },
+ "o_costillar_oso": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_13.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11409",
+  "identidad": "item 11409: Bear Flank / es-MX «Costillar de oso» — Costillar de oso",
+  "icono": "inv_misc_food_13",
+  "escena": "p07",
+  "pegatina": "320x320"
+ },
+ "o_cuero_grueso": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_08.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4304",
+  "identidad": "item 4304: Thick Leather / es-MX «Cuero grueso» — Cuero grueso",
+  "icono": "inv_misc_leatherscrap_08",
+  "escena": "p08 p03",
+  "pegatina": "320x320"
+ },
+ "o_cuero_pesado": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_leatherscrap_07.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4234",
+  "identidad": "item 4234: Heavy Leather / es-MX «Cuero pesado» — Cuero pesado (el «cuero» de jaguares y coyotes)",
+  "icono": "inv_misc_leatherscrap_07",
+  "escena": "p06 p04",
+  "pegatina": "320x320"
+ },
+ "o_equitacion": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_swiftness.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=33388",
+  "identidad": "spell 33388: Apprentice Riding / es-MX «Aprendiz jinete» — Aprendiz jinete (equitación de aprendiz, la montura del 40)",
+  "icono": "spell_nature_swiftness",
+  "escena": "intro",
+  "pegatina": "320x320"
+ },
+ "o_expositor_pesca": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_2h_draenorfishingpole_a_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=279965",
+  "identidad": "item 279965: Fishing Rack / es-MX «Expositor de pesca» — Expositor de pesca (objeto de campamento)",
+  "icono": "inv_misc_2h_draenorfishingpole_a_01",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_fragmento_caparazon": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterscales_07.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4556",
+  "identidad": "item 4556: Speckled Shell Fragment / es-MX «Fragmento de caparazón moteado» — Fragmento de caparazón moteado",
+  "icono": "inv_misc_monsterscales_07",
+  "escena": "p12",
+  "pegatina": "320x320"
+ },
+ "o_garra_oso": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterclaw_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11410",
+  "identidad": "item 11410: Savage Bear Claw / es-MX «Garra de oso indómito» — Garra de oso indómito",
+  "icono": "inv_misc_monsterclaw_03",
+  "escena": "p07",
+  "pegatina": "320x320"
+ },
+ "o_glandula_llamas": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_organ_06.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4402",
+  "identidad": "item 4402: Small Flame Sac / es-MX «Glándula de llamas pequeña» — Glándula de llamas pequeña",
+  "icono": "inv_misc_organ_06",
+  "escena": "p10",
+  "pegatina": "320x320"
+ },
+ "o_hueso_oso": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bone_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11411",
+  "identidad": "item 11411: Large Bear Bone / es-MX «Hueso de oso grande» — Hueso de oso grande (también es una maza gris)",
+  "icono": "inv_misc_bone_01",
+  "escena": "p07",
+  "pegatina": "320x320",
+  "equipado": "pegatinas/eq_o_hueso_oso.jpg",
+  "fuente_equipado": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/item/235/1515.png",
+  "nota_equipado": "Hueso de oso grande = maza de una mano gris (displayId 1515, página item=11411 de Wowhead Forever)"
+ },
+ "o_huevo_gigante": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_egg_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=12207",
+  "identidad": "item 12207: Giant Egg / es-MX «Huevo gigante» — Huevo gigante",
+  "icono": "inv_egg_03",
+  "escena": "reglas burla0 p08",
+  "pegatina": "320x320"
+ },
+ "o_jarabe_agua": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_potion_15.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=8827",
+  "identidad": "item 8827: Draught of Water Walking / es-MX «Jarabe de caminar sobre el agua» — Jarabe de caminar sobre el agua",
+  "icono": "inv_potion_15",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_luremaster": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_basket_04.jpg",
+  "tooltip": "https://www.wowhead.com/forever/spell=1225455",
+  "identidad": "spell 1225455: Luremaster / es-MX «Maestro del cebo» — Luremaster = «Maestro del cebo» en es-MX (talento de Legado)",
+  "icono": "inv_misc_basket_04",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_mandibula_arana": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterspidercarapace_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4585",
+  "identidad": "item 4585: Dripping Spider Mandible / es-MX «Mandíbula de araña chorreando» — Mandíbula de araña chorreando",
+  "icono": "inv_misc_monsterspidercarapace_01",
+  "escena": "p14",
+  "pegatina": "320x320"
+ },
+ "o_mandibula_oso": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bone_09.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=11408",
+  "identidad": "item 11408: Bear Jaw / es-MX «Mandíbula de oso» — Mandíbula de oso",
+  "icono": "inv_misc_bone_09",
+  "escena": "p07",
+  "pegatina": "320x320"
+ },
+ "o_mechon_gorila": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pelt_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4099",
+  "identidad": "item 4099: Tuft of Gorilla Hair / es-MX «Mechón de pelo de gorila» — Mechón de pelo de gorila",
+  "icono": "inv_misc_pelt_03",
+  "escena": "p07",
+  "pegatina": "320x320"
+ },
+ "o_melena_espesa": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pelt_bear_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4583",
+  "identidad": "item 4583: Thick Furry Mane / es-MX «Melena espesa» — Melena espesa",
+  "icono": "inv_misc_pelt_bear_01",
+  "escena": "p08 p04",
+  "pegatina": "320x320"
+ },
+ "o_mena_hierro": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_iron_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=2772",
+  "identidad": "item 2772: Iron Ore / es-MX «Mena de hierro» — Mena de hierro",
+  "icono": "inv_ore_iron_01",
+  "escena": "p02",
+  "pegatina": "320x320"
+ },
+ "o_mena_mitril": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_mithril_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=3858",
+  "identidad": "item 3858: Mithril Ore / es-MX «Mena de mitril» — Mena de mitril",
+  "icono": "inv_ore_mithril_02",
+  "escena": "p02 p10",
+  "pegatina": "320x320"
+ },
+ "o_mena_oro": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_gold_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=2776",
+  "identidad": "item 2776: Gold Ore / es-MX «Mena de oro» — Mena de oro",
+  "icono": "inv_ore_gold_01",
+  "escena": "p02",
+  "pegatina": "320x320"
+ },
+ "o_mena_plata": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_16.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=2775",
+  "identidad": "item 2775: Silver Ore / es-MX «Mena de plata» — Mena de plata",
+  "icono": "inv_stone_16",
+  "escena": "p02",
+  "pegatina": "320x320"
+ },
+ "o_mena_veraplata": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_truesilver_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=7911",
+  "identidad": "item 7911: Truesilver Ore / es-MX «Mena de veraplata» — Mena de veraplata",
+  "icono": "inv_ore_truesilver_01",
+  "escena": "p02",
+  "pegatina": "320x320"
+ },
+ "o_molleja_buitre": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_organ_05.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=8396",
+  "identidad": "item 8396: Vulture Gizzard / es-MX «Molleja de buitre» — Molleja de buitre",
+  "icono": "inv_misc_organ_05",
+  "escena": "intro p01",
+  "pegatina": "320x320"
+ },
+ "o_ojo_murloc": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_shadow_evileye.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=268344",
+  "identidad": "item 268344: Saltwater Murloc Eye / es-MX «Ojo de múrloc marino» — Ojo de múrloc de agua salada (misión Sabores de mar)",
+  "icono": "spell_shadow_evileye",
+  "escena": "p11",
+  "pegatina": "320x320"
+ },
+ "o_oro": {
+  "tipo": "objeto",
+  "fuente": "Wowhead (ícono genérico por nombre)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_coin_01.jpg",
+  "identidad": "ícono de monedas de oro (montura de 100, oro por hora; puntos de venta en los mapas)",
+  "icono": "inv_misc_coin_01",
+  "escena": "intro reglas fichas mapas",
+  "pegatina": "320x320"
+ },
+ "o_pacificador": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_mace_09.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=6327",
+  "identidad": "item 6327: The Pacifier / es-MX «[The Pacifier]» — The Pacifier = «El pacificador» (es-MX de Wowhead Classic; Forever no lo trae): LA MAZA de Lo'Grosh, a dos manos, azul, velocidad 4,00, nivel 36 en Forever; botín propio 3 de 104 en Wowhead Forever",
+  "icono": "inv_mace_09",
+  "escena": "p02",
+  "pegatina": "320x320",
+  "equipado": "pegatinas/eq_o_pacificador.jpg",
+  "fuente_equipado": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/item/16/5136.png",
+  "nota_equipado": "El pacificador = maza a dos manos (displayId 5136, botín de Lo'Grosh en la página npc=2453 de Wowhead Forever)"
+ },
+ "o_pano_runico": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_purplefire_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=14047",
+  "identidad": "item 14047: Runecloth / es-MX «Paño rúnico» — Paño rúnico (dentro de las valijas)",
+  "icono": "inv_fabric_purplefire_01",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_pano_seda": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_silk_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4306",
+  "identidad": "item 4306: Silk Cloth / es-MX «Paño de seda» — Paño de seda",
+  "icono": "inv_fabric_silk_01",
+  "escena": "p15 p02",
+  "pegatina": "320x320"
+ },
+ "o_papada_hiena": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_food_16.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=8391",
+  "identidad": "item 8391: Snickerfang Jowl / es-MX «Papada de hiena risitas» — Papada de hiena risitas (misión El vigor del buitre)",
+  "icono": "inv_misc_food_16",
+  "escena": "p01",
+  "pegatina": "320x320"
+ },
+ "o_pata_trofeo": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterclaw_04.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4584",
+  "identidad": "item 4584: Large Trophy Paw / es-MX «Pata de trofeo grande» — Pata de trofeo grande",
+  "icono": "inv_misc_monsterclaw_04",
+  "escena": "p08",
+  "pegatina": "320x320"
+ },
+ "o_pelo_gorila_burdo": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monstertail_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4096",
+  "identidad": "item 4096: Coarse Gorilla Hair / es-MX «Pelo de gorila burdo» — Pelo de gorila burdo",
+  "icono": "inv_misc_monstertail_03",
+  "escena": "p13 p07",
+  "pegatina": "320x320"
+ },
+ "o_perla_iridiscente": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_pearl_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=5500",
+  "identidad": "item 5500: Iridescent Pearl / es-MX «Perla iridiscente» — Perla iridiscente",
+  "icono": "inv_misc_gem_pearl_02",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_perla_negra": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_pearl_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=7971",
+  "identidad": "item 7971: Black Pearl / es-MX «Perla negra» — Perla negra",
+  "icono": "inv_misc_gem_pearl_01",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_perla_oro": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_gem_pearl_04.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=13926",
+  "identidad": "item 13926: Golden Pearl / es-MX «Perla de oro» — Perla de oro",
+  "icono": "inv_misc_gem_pearl_04",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_piedra_dentada": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_13.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4553",
+  "identidad": "item 4553: Jagged Piece of Stone / es-MX «Trozo de piedra dentado» — Trozo de piedra dentado",
+  "icono": "inv_stone_13",
+  "escena": "p05",
+  "pegatina": "320x320"
+ },
+ "o_piedra_inerte": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_10.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4784",
+  "identidad": "item 4784: Lifeless Stone / es-MX «Piedra inerte» — Piedra inerte",
+  "icono": "inv_stone_10",
+  "escena": "p05",
+  "pegatina": "320x320"
+ },
+ "o_piedra_lisa": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_stone_10.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4552",
+  "identidad": "item 4552: Smooth Stone Chip / es-MX «Trozo de piedra lisa» — Trozo de piedra lisa",
+  "icono": "inv_stone_10",
+  "escena": "p05",
+  "pegatina": "320x320"
+ },
+ "o_pinza_scorpok": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_birdbeck_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=8393",
+  "identidad": "item 8393: Scorpok Pincer / es-MX «Pinza de scorpok» — Pinza de scorpok (misión El golpe decisivo)",
+  "icono": "inv_misc_birdbeck_02",
+  "escena": "p01",
+  "pegatina": "320x320"
+ },
+ "o_punta_pata_arana": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_monsterspidercarapace_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=1074",
+  "identidad": "item 1074: Hard Spider Leg Tip / es-MX «Punta de pata de araña dura» — Punta de pata de araña dura",
+  "icono": "inv_misc_monsterspidercarapace_01",
+  "escena": "p14",
+  "pegatina": "320x320"
+ },
+ "o_receta_te_soleado": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_scroll_03.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=249883",
+  "identidad": "item 249883: Recipe: Sunny Tea / es-MX «Receta: té soleado» — Receta: té soleado (receta nueva de Forever)",
+  "icono": "inv_scroll_03",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_sal_roca": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_dust_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=8150",
+  "identidad": "item 8150: Deeprock Salt / es-MX «Sal de roca» — Sal de roca",
+  "icono": "inv_misc_dust_02",
+  "escena": "p05",
+  "pegatina": "320x320"
+ },
+ "o_seda_arana_espesa": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_web.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4337",
+  "identidad": "item 4337: Thick Spider's Silk / es-MX «Seda de araña espesa» — Seda de araña espesa",
+  "icono": "spell_nature_web",
+  "escena": "p14",
+  "pegatina": "320x320"
+ },
+ "o_seda_sombras": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/spell_nature_web.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=10285",
+  "identidad": "item 10285: Shadow Silk / es-MX «Seda de las Sombras» — Seda de las Sombras",
+  "icono": "spell_nature_web",
+  "escena": "p14",
+  "pegatina": "320x320"
+ },
+ "o_serviola": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_fish_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4603",
+  "identidad": "item 4603: Raw Spotted Yellowtail / es-MX «Serviola moteada cruda» — Serviola moteada cruda",
+  "icono": "inv_misc_fish_01",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_te_soleado": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_drink_15.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=249869",
+  "identidad": "item 249869: Sunny Tea / es-MX «Té soleado» — Té soleado (lo que crea la receta)",
+  "icono": "inv_drink_15",
+  "escena": "p09",
+  "pegatina": "320x320"
+ },
+ "o_tejido_magico": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_fabric_mageweave_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=4338",
+  "identidad": "item 4338: Mageweave Cloth / es-MX «Paño de tejido mágico» — Paño de tejido mágico",
+  "icono": "inv_fabric_mageweave_01",
+  "escena": "p15 p03",
+  "pegatina": "320x320"
+ },
+ "o_tierra_elemental": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_ore_iron_01.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=7067",
+  "identidad": "item 7067: Elemental Earth / es-MX «Tierra elemental» — Tierra elemental",
+  "icono": "inv_ore_iron_01",
+  "escena": "p05",
+  "pegatina": "320x320"
+ },
+ "o_valija_mitril": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_box_02.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=21228",
+  "identidad": "item 21228: Mithril Bound Trunk / es-MX «Valija reforzada con mitril» — Valija reforzada con mitril",
+  "icono": "inv_box_02",
+  "escena": "p03",
+  "pegatina": "320x320"
+ },
+ "o_vastago_oscuro": {
+  "tipo": "objeto",
+  "fuente": "Wowhead Forever (ícono)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_head_dragon_black.jpg",
+  "tooltip": "https://www.wowhead.com/forever/item=10822",
+  "identidad": "item 10822: Dark Whelpling / es-MX «Vástago oscuro» — Vástago oscuro (mascota)",
+  "icono": "inv_misc_head_dragon_black",
+  "escena": "p10",
+  "pegatina": "320x320"
+ },
+ "ogro_aplastacresta": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/47/11567.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2252",
+  "identidad": "Ogro Aplastacresta / Crushridge Ogre (npc 2252): ogro (34-35), cuevas de Alterac; displayId 11567 (página de Wowhead Forever, 25-nov)",
+  "escena": "p02",
+  "pegatina": "424x600",
+  "cara": "caras/ogro_aplastacresta.png"
+ },
+ "oraculo_marisma": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/130/386.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=752",
+  "identidad": "Oráculo de marisma / Marsh Oracle (npc 752): múrloc (44-45); suelta la receta del té soleado; displayId 386 (página de Wowhead Forever, 25-nov)",
+  "escena": "p09",
+  "pegatina": "470x600",
+  "cara": "caras/oraculo_marisma.png"
+ },
+ "oso_cueracero": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/129/3201.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5268",
+  "identidad": "Oso Cueracero / Ironfur Bear (npc 5268): oso (41-42), centro de Feralas; displayId 3201 (página de Wowhead Forever, 25-nov)",
+  "escena": "p07",
+  "pegatina": "472x494",
+  "cara": "caras/oso_cueracero.png"
+ },
+ "pantano_penas": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Swamp of Sorrows.jpg",
+  "url": "https://warcraft.wiki.gg/images/Swamp_of_Sorrows.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Swamp_of_Sorrows.jpg",
+  "identidad": "imagen de la página Swamp of Sorrows (Pantano de las Penas; página Swamp of Sorrows (Classic))",
+  "usado_en": [
+   "Swamp of Sorrows",
+   "Swamp of Sorrows (Classic)"
+  ],
+  "escena": "p06 p09",
+  "original": "1792x1120",
+  "recorte": null,
+  "pegatina": "900x563",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "patriarca_cueracero": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/128/3200.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5274",
+  "identidad": "Patriarca Cueracero / Ironfur Patriarch (npc 5274): oso (48-49), norte de Feralas; displayId 3200 (página de Wowhead Forever, 25-nov)",
+  "escena": "p07",
+  "pegatina": "470x494",
+  "cara": "caras/patriarca_cueracero.png"
+ },
+ "poblado_magram": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Magram Village.jpg",
+  "url": "https://warcraft.wiki.gg/images/Magram_Village.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Magram_Village.jpg",
+  "identidad": "imagen de la página Magram Village (Poblado Magram, Desolace)",
+  "usado_en": [
+   "Magram Village",
+   "Magram clan"
+  ],
+  "escena": "p15",
+  "original": "1920x988",
+  "recorte": null,
+  "pegatina": "900x463",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "poblado_murohelecho": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Brackenwall Village.jpg",
+  "url": "https://warcraft.wiki.gg/images/Brackenwall_Village.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Brackenwall_Village.jpg",
+  "identidad": "imagen de la página Brackenwall Village (Poblado Murohelecho, Marjal Revolcafango; vendedores de la Horda)",
+  "usado_en": [
+   "Dustwallow Marsh (Classic)",
+   "Dustwallow Marsh",
+   "Brackenwall Village",
+   "Stonemaul clan"
+  ],
+  "escena": "p14",
+  "original": "1919x1009",
+  "recorte": null,
+  "pegatina": "900x473",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "puerto_polvomecha": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Powderfuse Port.jpg",
+  "url": "https://warcraft.wiki.gg/images/Powderfuse_Port.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Powderfuse_Port.jpg",
+  "identidad": "imagen de la página Powderfuse Port (Puerto Polvomecha, Claros del Río; zona de Forever)",
+  "usado_en": [
+   "Powderfuse Port"
+  ],
+  "escena": "p11",
+  "original": "2560x1369",
+  "recorte": null,
+  "pegatina": "900x481",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "puesto_juncobruma": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Misty Reed Post.jpg",
+  "url": "https://warcraft.wiki.gg/images/Misty_Reed_Post.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Misty_Reed_Post.jpg",
+  "identidad": "imagen de la página Misty Reed Post (Puesto Juncobruma, Pantano de las Penas)",
+  "usado_en": [
+   "Misty Reed Post"
+  ],
+  "escena": "p09",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "reptador_arena": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/181/5557.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=255901",
+  "identidad": "Reptador de arena / Sand Crawler (npc 255901): cangrejo (36-37) de Claros del Río (PNJ nuevo de Forever); displayId 5557 (página de Wowhead Forever, 25-nov)",
+  "escena": "p11",
+  "pegatina": "600x342",
+  "cara": "caras/reptador_arena.png"
+ },
+ "reptador_arenas_sur": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/101/9573.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2544",
+  "identidad": "Reptador de las arenas del sur / Southern Sand Crawler (npc 2544): cangrejo (40-41), sur de Tuercespina; displayId 9573 (página de Wowhead Forever, 25-nov)",
+  "escena": "p11",
+  "pegatina": "600x422",
+  "cara": "caras/reptador_arenas_sur.png"
+ },
+ "retador_magram": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/245/2293.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4640",
+  "identidad": "Retador Magram / Magram Wrangler (npc 4640): centauro (33-34), Poblado Magram; displayId 2293 (página de Wowhead Forever, 25-nov)",
+  "escena": "p15",
+  "pegatina": "266x600",
+  "cara": "caras/retador_magram.png"
+ },
+ "rizz": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/149/3733.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2684",
+  "identidad": "Rizz Tornillosuelto / Rizz Loosebolt (npc 2684): vendedor gnomo encerrado en una jaula, cueva del norte; displayId 3733 (página de Wowhead Forever, 25-nov)",
+  "escena": "p02",
+  "pegatina": "356x464",
+  "cara": "caras/rizz.png"
+ },
+ "roc": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/176/3248.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5428",
+  "identidad": "Roc (npc 5428): roc (41-43), Tanaris; displayId 3248 (página de Wowhead Forever, 25-nov)",
+  "escena": "p08",
+  "pegatina": "336x374",
+  "cara": "caras/roc.png"
+ },
+ "roc_fuego": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/180/7348.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5429",
+  "identidad": "Roc de fuego / Fire Roc (npc 5429): roc (43-45), Arenas Abisales; displayId 7348 (página de Wowhead Forever, 25-nov)",
+  "escena": "p08",
+  "pegatina": "336x374",
+  "cara": "caras/roc_fuego.png"
+ },
+ "rocal": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Stonard.jpg",
+  "url": "https://warcraft.wiki.gg/images/Stonard.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Stonard.jpg",
+  "identidad": "archivo «Stonard» (página Stonard = Rocal, Pantano de las Penas; vendedores de la Horda)",
+  "usado_en": [
+   "Swamp of Sorrows",
+   "Swamp of Sorrows (Classic)",
+   "Stonard"
+  ],
+  "escena": "p06",
+  "original": "1920x1080",
+  "recorte": null,
+  "pegatina": "900x506",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "simio_groddoc": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/114/3186.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5260",
+  "identidad": "Simio Groddoc / Groddoc Ape (npc 5260): gorila (42-43), centro de Feralas; displayId 3186 (página de Wowhead Forever, 25-nov)",
+  "escena": "p07",
+  "pegatina": "596x584",
+  "cara": "caras/simio_groddoc.png"
+ },
+ "sootfur": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/171/7339.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=258522",
+  "identidad": "Sootfur (sin es-MX) (npc 258522): coyote con nombre (38) de la misión Coyote Huntin'; displayId 7339 (página de Wowhead Forever, 25-nov)",
+  "escena": "p04",
+  "pegatina": "244x360",
+  "cara": "caras/sootfur.png"
+ },
+ "templo_sumergido": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Temple of Atal'Hakkar loading screen.jpg",
+  "url": "https://warcraft.wiki.gg/images/Temple_of_Atal%27Hakkar_loading_screen.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Temple_of_Atal%27Hakkar_loading_screen.jpg",
+  "identidad": "pantalla de carga del Templo de Atal'Hakkar = Templo Sumergido (Classic)",
+  "usado_en": [
+   "Loading screen",
+   "Temple of Atal'Hakkar (Classic)",
+   "User:Jaberwaki/Sanctuary of the Corrupt",
+   "Temple of Atal'Hakkar",
+   "Temple of Atal'Hakkar (Season of Discovery)"
+  ],
+  "escena": "p07",
+  "original": "800x600",
+  "recorte": "carga_classic",
+  "pegatina": "776x345",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "theramore": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Theramore.jpg",
+  "url": "https://warcraft.wiki.gg/images/Theramore.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Theramore.jpg",
+  "identidad": "archivo «Theramore» («Theramore skyline at sunset», página Theramore Isle: la isla intacta, antes de su destrucción en MoP; vendedores de la Alianza). CONFIANZA MEDIA: cielo rojizo del atardecer",
+  "usado_en": [
+   "Theramore Isle"
+  ],
+  "escena": "p14",
+  "original": "1280x910",
+  "recorte": null,
+  "pegatina": "900x640",
+  "pantalla": true,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "tortuga_brillavalva": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/188/5052.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4142",
+  "identidad": "Tortuga brillavalva / Sparkleshell Tortoise (npc 4142): tortuga (30-31), El Desierto de Sal; displayId 5052 (página de Wowhead Forever, 25-nov)",
+  "escena": "p12",
+  "pegatina": "456x420",
+  "cara": "caras/tortuga_brillavalva.png"
+ },
+ "tosco_aplastacresta": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/98/610.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=2253",
+  "identidad": "Tosco Aplastacresta / Crushridge Brute (npc 2253): ogro (35-36); displayId 610 (página de Wowhead Forever, 25-nov)",
+  "escena": "p02",
+  "pegatina": "424x600",
+  "cara": "caras/tosco_aplastacresta.png"
+ },
+ "tronador_groddoc": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/116/3188.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=5262",
+  "identidad": "Tronador Groddoc / Groddoc Thunderer (npc 5262): gorila (49-50), norte de Feralas; displayId 3188 (página de Wowhead Forever, 25-nov)",
+  "escena": "p07",
+  "pegatina": "596x584",
+  "cara": "caras/tronador_groddoc.png"
+ },
+ "unbagwa": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/53/4661.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=1449",
+  "identidad": "Médico brujo Unbagwa / Witch Doctor Unbagwa (npc 1449): PNJ de la misión La fiebre de Tuercespina (invoca a Mokk); displayId 4661 (página de Wowhead Forever, 25-nov)",
+  "escena": "p13",
+  "pegatina": "350x600",
+  "cara": "caras/unbagwa.png"
+ },
+ "valle_velo_bruma": {
+  "tipo": "lugar",
+  "fuente": "warcraft.wiki.gg",
+  "archivo": "File:Mistvale Valley.jpg",
+  "url": "https://warcraft.wiki.gg/images/Mistvale_Valley.jpg",
+  "pagina_archivo": "https://warcraft.wiki.gg/wiki/File:Mistvale_Valley.jpg",
+  "identidad": "imagen de la página Mistvale Valley (Valle del Velo de Bruma, Vega de Tuercespina; captura antigua)",
+  "usado_en": [
+   "Mistvale Valley"
+  ],
+  "escena": "p13",
+  "original": "600x450",
+  "recorte": null,
+  "pegatina": "600x450",
+  "pantalla": false,
+  "autor": "captura/arte de Blizzard en la wiki"
+ },
+ "vomitatintas_marisma": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/203/1995.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=750",
+  "identidad": "Vomitatintas de marisma / Marsh Inkspewer (npc 750): múrloc (42-43); displayId 1995 (página de Wowhead Forever, 25-nov)",
+  "escena": "p09",
+  "pegatina": "470x600",
+  "cara": "caras/vomitatintas_marisma.png"
+ },
+ "zarposea_magram": {
+  "tipo": "criatura",
+  "fuente": "Wowhead Forever (modelo 3D, webthumb classicplus)",
+  "url": "https://wow.zamimg.com/modelviewer/classicplus/webthumbs/npc/156/2716.webp",
+  "pagina": "https://www.wowhead.com/forever/npc=4662",
+  "identidad": "Zarpósea Magram / Magram Bonepaw (npc 4662): hiena (37-38) de los centauros; displayId 2716 (página de Wowhead Forever, 25-nov)",
+  "escena": "p15",
+  "pegatina": "444x486",
+  "cara": "caras/zarposea_magram.png"
+ },
+ "flow_restos_flotantes": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "restos flotantes de pesca, costa de Tuercespina (ingrediente: Bahía del Botín)",
+  "rotulo": "RECREACIÓN"
+ },
+ "flow_cuatro_valijas": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "cuatro Valijas reforzadas con mitril en la playa (ingrediente: ícono de Wowhead)",
+  "rotulo": "RECREACIÓN"
+ },
+ "flow_cueva_alterac_vetas": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "cueva de ogros de Alterac con vetas (ingrediente: Dominios de los Aplastacresta)",
+  "rotulo": "RECREACIÓN"
+ },
+ "flow_jaula_rizz": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "Rizz Tornillosuelto en su jaula (ingrediente: modelo de Wowhead)",
+  "rotulo": "RECREACIÓN"
+ },
+ "flow_esqueletos_tanaris": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "esqueletos de dinosaurio de las Arenas Abisales con hienas (ingrediente: Arenas Abisales)",
+  "rotulo": "RECREACIÓN"
+ },
+ "o_ico_reloj": {
+  "tipo": "icono",
+  "fuente": "Wowhead (ícono genérico de la interfaz)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pocketwatch_01.jpg",
+  "identidad": "inv_misc_pocketwatch_01: reloj de bolsillo: el cronómetro de media hora de los jugadores (subagente C, 26-nov)",
+  "escena": "intro",
+  "icono": "inv_misc_pocketwatch_01",
+  "pegatina": "320x320"
+ },
+ "o_ico_pregunta": {
+  "tipo": "icono",
+  "fuente": "Wowhead (ícono genérico de la interfaz)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg",
+  "identidad": "inv_misc_questionmark: signo de interrogación: el farmeo secreto de Azazel / el número uno (subagente C, 26-nov)",
+  "escena": "intro reglas cierre",
+  "icono": "inv_misc_questionmark",
+  "pegatina": "320x320"
+ },
+ "o_ico_desuello": {
+  "tipo": "icono",
+  "fuente": "Wowhead (ícono genérico de la interfaz)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_pelt_wolf_01.jpg",
+  "identidad": "inv_misc_pelt_wolf_01: ícono de la profesión de desuello (subagente C, 26-nov)",
+  "escena": "p06",
+  "icono": "inv_misc_pelt_wolf_01",
+  "pegatina": "320x320"
+ },
+ "o_ico_herboristeria": {
+  "tipo": "icono",
+  "fuente": "Wowhead (ícono genérico de la interfaz)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/trade_herbalism.jpg",
+  "identidad": "trade_herbalism: ícono de la profesión de herboristería (subagente C, 26-nov)",
+  "escena": "p06",
+  "icono": "trade_herbalism",
+  "pegatina": "320x320"
+ },
+ "o_ico_bolsa": {
+  "tipo": "icono",
+  "fuente": "Wowhead (ícono genérico de la interfaz)",
+  "url": "https://wow.zamimg.com/images/wow/icons/large/inv_misc_bag_10.jpg",
+  "identidad": "inv_misc_bag_10: bolsa genérica: «lo que se lleva» (subagente C, 26-nov)",
+  "escena": "reglas",
+  "icono": "inv_misc_bag_10",
+  "pegatina": "320x320"
+ },
+ "flow_reptadores_playa": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "reptadores de arena en la playa de Claros del Río, Puerto Polvomecha al fondo (ing. Claros del Río + modelo de Wowhead)",
+  "rotulo": "RECREACIÓN"
+ },
+ "flow_jaguar_pantano": {
+  "tipo": "recreacion",
+  "fuente": "Google Flow (Nano Banana 2.1), 26-nov-2026",
+  "identidad": "jaguares del Pantano de las Penas (ing. Pantano de las Penas + modelo de Wowhead)",
+  "rotulo": "RECREACIÓN"
+ }
+}

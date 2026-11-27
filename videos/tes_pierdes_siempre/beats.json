@@ -1,0 +1,1154 @@
+[
+ {
+  "id": "scene-001",
+  "t0": 0.0,
+  "t1": 7.671,
+  "tipo": "video",
+  "texto": "Un bastón que vale mil cuatrocientas monedas de oro. Y lo usas una sola vez: de llave.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-002",
+  "t0": 7.671,
+  "t1": 17.378,
+  "tipo": "video",
+  "texto": "Un fuerte entero, con cuatro maestros, dos perros y un trol con armadura. Y lo pierdes por decirle que sí a un vampiro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-003",
+  "t0": 17.378,
+  "t1": 26.051,
+  "tipo": "video",
+  "texto": "Y una tormenta de rayos a la que le falta la última palabra, porque el muro estaba en un templo al que ya nunca vas a volver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-004",
+  "t0": 26.051,
+  "t1": 34.151,
+  "tipo": "video",
+  "texto": "Hoy, las quince cosas de Skyrim que pierdes para siempre. Sin consola, sin trucos y sin vuelta atrás.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-005",
+  "t0": 34.151,
+  "t1": 43.212,
+  "tipo": "video",
+  "texto": "Dónde están, cómo se pierden, y cómo no caer. Y quédate hasta el final, porque te voy a enseñar el único lugar",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-006",
+  "t0": 43.212,
+  "t1": 52.032,
+  "tipo": "video",
+  "texto": "de Skyrim que te roba tres cosas de golpe. Número quince. Las colmenas de Brillo Dorado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-007",
+  "t0": 52.032,
+  "t1": 60.279,
+  "tipo": "video",
+  "texto": "Es un encargo del Gremio de Ladrones. Brynjolf te manda a la Hacienda Brillo Dorado, una isla al oeste de Riften.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-008",
+  "t0": 60.279,
+  "t1": 68.984,
+  "tipo": "video",
+  "texto": "La hacienda le da miel a Maven Black-Briar, la mujer que manda en Riften. Y el gremio quiere darle un susto. La orden:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-009",
+  "t0": 68.984,
+  "t1": 78.238,
+  "tipo": "video",
+  "texto": "quemar tres colmenas, abrir la caja fuerte, y volver. Y aquí cae media humanidad. Si quemas más de tres,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-010",
+  "t0": 78.238,
+  "t1": 85.631,
+  "tipo": "video",
+  "texto": "Brynjolf te dice que te olvides de tu parte. Cero monedas. Y el fuego se contagia de casa en casa:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-011",
+  "t0": 85.631,
+  "t1": 95.868,
+  "tipo": "video",
+  "texto": "con un solo hechizo de área o un grito de fuego, ya quemaste a cinco sin querer. Si obedeces, la paga es oro que crece con tu nivel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-012",
+  "t0": 95.868,
+  "t1": 103.985,
+  "tipo": "video",
+  "texto": "Si no, ni una moneda. Cómo no caer: nada de hechizos de área ni gritos de fuego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-013",
+  "t0": 103.985,
+  "t1": 112.15,
+  "tipo": "video",
+  "texto": "Una colmena, otra, otra, y te vas. Es la única vez en todo Skyrim que el juego te pide moderación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-014",
+  "t0": 112.15,
+  "t1": 121.384,
+  "tipo": "video",
+  "texto": "Y justo con el fuego. Y esto va para Eliana Lera, que me preguntó si no me gusta hacer nada divertido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-015",
+  "t0": 121.384,
+  "t1": 130.286,
+  "tipo": "video",
+  "texto": "Quemar una isla entera es muy divertido. Pero en Skyrim, la diversión te la cobran. Por eso existe este video.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-016",
+  "t0": 130.286,
+  "t1": 139.344,
+  "tipo": "video",
+  "texto": "Número catorce. La Embajada de Thalmor. En la misión principal te cuelas en la fiesta de Elenwen, al noroeste de Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-017",
+  "t0": 139.344,
+  "t1": 147.289,
+  "tipo": "video",
+  "texto": "Un elfo del servicio, Malborn, te mete el equipo a escondidas. Es la única vez que entras al edificio por la puerta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-018",
+  "t0": 147.289,
+  "t1": 153.656,
+  "tipo": "video",
+  "texto": "Si vuelves después, puedes pisar el patio y el cuartel. El edificio, no.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-019",
+  "t0": 153.656,
+  "t1": 163.43,
+  "tipo": "video",
+  "texto": "Así que lo que no saqueaste esa noche se queda ahí para siempre, y no hay ningún truco raro que lo arregle. Hay trucos para volver a entrar:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-020",
+  "t0": 163.43,
+  "t1": 171.667,
+  "tipo": "video",
+  "texto": "con un caballo, un árbol, o un plato bien colocado. Pero eso ya es escalar paredes, no jugar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-021",
+  "t0": 171.667,
+  "t1": 180.377,
+  "tipo": "video",
+  "texto": "El solar de Elenwen, sus despachos, cada cofre del edificio. Esa noche, o nunca. ¿Y Malborn?",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-022",
+  "t0": 180.377,
+  "t1": 187.607,
+  "tipo": "video",
+  "texto": "Se juega la vida por ti, te paga, sale corriendo hacia el este, y desaparece del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-023",
+  "t0": 187.607,
+  "t1": 198.88,
+  "tipo": "video",
+  "texto": "Arriesga el cuello por ti, y su premio es evaporarse. Así se trata a los aliados en Skyrim. Número trece. Sven, o Faendal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-024",
+  "t0": 198.88,
+  "t1": 206.702,
+  "tipo": "video",
+  "texto": "Uno de los dos. En Cauce Boscoso hay un triángulo amoroso: Camilla, y dos pretendientes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-025",
+  "t0": 206.702,
+  "t1": 211.924,
+  "tipo": "video",
+  "texto": "Sven, el bardo. Y Faendal, el elfo arquero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-026",
+  "t0": 211.924,
+  "t1": 225.256,
+  "tipo": "video",
+  "texto": "Uno de ellos te pide que le entregues a Camilla una carta de amor falsa, firmada por el otro. Y tú decides a quién traicionar. Hagas lo que hagas, Camilla se queda con uno de los dos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-027",
+  "t0": 225.256,
+  "t1": 234.852,
+  "tipo": "video",
+  "texto": "El que gana te aprecia y se puede ir contigo como seguidor, el traicionado te odia, y tener a los dos de amigos es imposible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-028",
+  "t0": 234.852,
+  "t1": 241.312,
+  "tipo": "video",
+  "texto": "Y no son iguales. Faendal, además, entrena Arquería. Y para un arquero que empieza,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-029",
+  "t0": 241.312,
+  "t1": 249.037,
+  "tipo": "video",
+  "texto": "eso vale oro. Cómo no caer: decide antes de tocar la carta a quién quieres a tu lado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-030",
+  "t0": 249.037,
+  "t1": 260.369,
+  "tipo": "video",
+  "texto": "Después, ya no hay marcha atrás. La primera decisión moral de muchos en Skyrim: arruinarle una cita a alguien por veinticinco monedas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-031",
+  "t0": 260.369,
+  "t1": 267.877,
+  "tipo": "video",
+  "texto": "Número doce. El salón de Thirsk, en Solstheim. Dos misiones en el mismo salón de aguamiel.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-032",
+  "t0": 267.877,
+  "t1": 275.482,
+  "tipo": "video",
+  "texto": "En una, ayudas a los nórdicos a recuperarlo. En la otra, ayudas a los rieklings que lo ocupan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-033",
+  "t0": 275.482,
+  "t1": 284.682,
+  "tipo": "video",
+  "texto": "Y solo puedes terminar una: completar una hace fallar la otra. No hay forma diplomática de dejar contentos a todos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-034",
+  "t0": 284.682,
+  "t1": 293.362,
+  "tipo": "video",
+  "texto": "Con los nórdicos ganas un entrenador maestro de Armadura pesada, y la forja del salón. Con los rieklings, ganas un riekling.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-035",
+  "t0": 293.362,
+  "t1": 300.742,
+  "tipo": "video",
+  "texto": "De seguidor. Hay una salida a medias: puedes hacer los dos primeros encargos del jefe riekling,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-036",
+  "t0": 300.742,
+  "t1": 310.311,
+  "tipo": "video",
+  "texto": "y cambiarte de bando antes del tercero. Un maestro de Armadura pesada, o un duende azul con lanza. Y hay gente que elige al duende.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-037",
+  "t0": 310.311,
+  "t1": 321.089,
+  "tipo": "video",
+  "texto": "Yo la respeto. Antes de seguir, gracias a los que comentan. Los leo todos, y muchos ya cambiaron cómo hacemos estos videos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-038",
+  "t0": 321.089,
+  "t1": 326.349,
+  "tipo": "video",
+  "texto": "Un veterano, SrUnknown, volvió a jugar Skyrim por cuarta vez,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-039",
+  "t0": 326.349,
+  "t1": 337.087,
+  "tipo": "video",
+  "texto": "y dice que todavía aprende cosas nuevas. Y Josué Alejandro, lo mismo: después de tanto tiempo, el juego aún tiene algo que enseñar.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-040",
+  "t0": 337.087,
+  "t1": 342.487,
+  "tipo": "video",
+  "texto": "Otro de ustedes, que se llama Creepy Noodles, sigue el canal desde sus inicios;",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-041",
+  "t0": 342.487,
+  "t1": 355.356,
+  "tipo": "video",
+  "texto": "Sebastián Merino nos pone de fondo mientras trabaja, y achezeta se acaba de suscribir hace poco. Sebastián, si tu jefe pregunta, esto es capacitación.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-042",
+  "t0": 355.356,
+  "t1": 361.505,
+  "tipo": "video",
+  "texto": "Número once. La paz de Alto Hrothgar. En la misión principal sientas",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-043",
+  "t0": 361.505,
+  "t1": 369.572,
+  "tipo": "video",
+  "texto": "a imperiales y capas de la tormenta en la misma mesa, para firmar una tregua. Y en esa mesa se reparten comarcas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-044",
+  "t0": 369.572,
+  "t1": 376.821,
+  "tipo": "video",
+  "texto": "Según cómo quede el reparto, un logro, el de conquistar un fuerte, puede volverse imposible.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-045",
+  "t0": 376.821,
+  "t1": 387.121,
+  "tipo": "video",
+  "texto": "El logro pide tomar el Fuerte Sungard, si vas con los capas, o el Fuerte Greenwall, si vas con el Imperio. Y si la Cuenca pasa a los capas de la tormenta,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-046",
+  "t0": 387.121,
+  "t1": 394.171,
+  "tipo": "video",
+  "texto": "muere Ondolemar, el justiciar thalmor de Markarth. Aunque sea por la tregua.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-047",
+  "t0": 394.171,
+  "t1": 401.7,
+  "tipo": "video",
+  "texto": "La recompensa de la tregua es un grito, Llamar dragón. Pero el precio lo decide la mesa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-048",
+  "t0": 401.7,
+  "t1": 412.522,
+  "tipo": "video",
+  "texto": "Para no perder nada, toma el fuerte de tu bando antes de la reunión, y mira bien qué comarca se entrega. Firmas la paz, y alguien muere igual.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-049",
+  "t0": 412.522,
+  "t1": 419.514,
+  "tipo": "video",
+  "texto": "Diplomacia nórdica. Número diez. El Salón de los Vigilantes.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-050",
+  "t0": 419.514,
+  "t1": 430.757,
+  "tipo": "video",
+  "texto": "Es el refugio de los Vigilantes de Stendarr, en El Pálido, al sur de Lucero del Alba. Ahí está Custodia Carcette, que entrena Restauración a nivel experto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-051",
+  "t0": 430.757,
+  "t1": 440.457,
+  "tipo": "video",
+  "texto": "Pero tiene fecha de caducidad. Con Dawnguard instalado, cuando llegas a nivel diez, o cuando empiezas Dawnguard, los vampiros lo arrasan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-052",
+  "t0": 440.457,
+  "t1": 448.575,
+  "tipo": "video",
+  "texto": "Todos mueren. El salón queda en ruinas. Y no hay forma de salvarlos: está escrito.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-053",
+  "t0": 448.575,
+  "t1": 454.331,
+  "tipo": "video",
+  "texto": "Y con ellos se va todo: sus cofres, sus libros, y su entrenadora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-054",
+  "t0": 454.331,
+  "t1": 462.283,
+  "tipo": "video",
+  "texto": "Ojo: sin Dawnguard instalado, el salón sigue en pie para siempre. El problema es el DLC.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-055",
+  "t0": 462.283,
+  "t1": 472.809,
+  "tipo": "video",
+  "texto": "Está en el camino entre Lucero del Alba y Carrera Blanca, y casi nadie pasa por ahí a tiempo para encontrarla. Si quieres su entrenamiento, o lo que guardan,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-056",
+  "t0": 472.809,
+  "t1": 482.915,
+  "tipo": "video",
+  "texto": "tienes que ir antes del nivel diez. Es el único edificio de Skyrim que caduca según tu nivel. Como un yogur.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-057",
+  "t0": 482.915,
+  "t1": 491.081,
+  "tipo": "video",
+  "texto": "Número nueve. Los encargos de los jarls. En la guerra civil, cada comarca que conquistas cambia de jarl.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-058",
+  "t0": 491.081,
+  "t1": 498.979,
+  "tipo": "video",
+  "texto": "Y el jarl que cae se va. Con sus encargos. Igmund en Markarth, Korir en Hibernalia,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-059",
+  "t0": 498.979,
+  "t1": 508.426,
+  "tipo": "video",
+  "texto": "Skald en Lucero del Alba, y otros más: si los destierran antes de que hagas sus misiones, esas misiones desaparecen.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-060",
+  "t0": 508.426,
+  "t1": 517.238,
+  "tipo": "video",
+  "texto": "Y el que sube también pierde lo suyo: Dengeir y Brunwulf, al convertirse en jarls, dejan de darte sus encargos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-061",
+  "t0": 517.238,
+  "t1": 525.569,
+  "tipo": "video",
+  "texto": "Y con cada jarl se va su corte. En Morthal, Gorm e Idgrod la Joven también dejan de darte trabajo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-062",
+  "t0": 525.569,
+  "t1": 534.305,
+  "tipo": "video",
+  "texto": "Y hay dos que mueren en las batallas, sí o sí: Severo Pelagia en Carrera Blanca, y el capitán Aldis en Soledad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-063",
+  "t0": 534.305,
+  "t1": 540.705,
+  "tipo": "video",
+  "texto": "La regla es simple: antes de cada batalla, termina los encargos del jarl de esa ciudad.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-064",
+  "t0": 540.705,
+  "t1": 550.43,
+  "tipo": "video",
+  "texto": "Después, ya no hay a quién entregárselos. Liberas Skyrim, y lo primero que pierdes es tu trabajo de recadero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-065",
+  "t0": 550.43,
+  "t1": 559.345,
+  "tipo": "video",
+  "texto": "Por cierto, Adons me dejó un comentario muy profundo: «¿Sabes qué? Eres un llorón». Tiene toda la razón.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-066",
+  "t0": 559.345,
+  "t1": 570.202,
+  "tipo": "video",
+  "texto": "Por eso hoy te traigo quince cosas para llorar. Espera a ver el número tres, y luego hablamos de quién llora.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-067",
+  "t0": 570.202,
+  "t1": 577.64,
+  "tipo": "video",
+  "texto": "Número ocho. La forja de stalhrim. El stalhrim es el hielo encantado de Solstheim.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-068",
+  "t0": 577.64,
+  "t1": 585.3,
+  "tipo": "video",
+  "texto": "Para forjarlo tú mismo hace falta la ventaja Herrería de ébano, y una misión de la Aldea Skaal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-069",
+  "t0": 585.3,
+  "t1": 594.56,
+  "tipo": "video",
+  "texto": "Esa misión depende de dos personas: Deor Tallador y Fanari Voz Fuerte. Si cualquiera de los dos muere antes de terminarla,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-070",
+  "t0": 594.56,
+  "t1": 602.929,
+  "tipo": "video",
+  "texto": "nunca aprenderás a forjar stalhrim. Y están protegidos: nadie puede matarlos, menos tú.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-071",
+  "t0": 602.929,
+  "t1": 611.295,
+  "tipo": "video",
+  "texto": "Un rayo mal apuntado, un grito en medio de la aldea, y se acabó. Y ojo, que tus seguidores también cuentan.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-072",
+  "t0": 611.295,
+  "t1": 622.81,
+  "tipo": "video",
+  "texto": "Un compañero con un hacha, y Deor no vuelve. Cómo no caer: haz la misión pronto, y nunca pelees con gritos de área dentro de la aldea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-073",
+  "t0": 622.81,
+  "t1": 628.551,
+  "tipo": "video",
+  "texto": "Las piezas se siguen vendiendo en Solstheim. Pero forjarlas tú, nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-074",
+  "t0": 628.551,
+  "t1": 636.33,
+  "tipo": "video",
+  "texto": "La única forja de hielo del mundo, y la pierdes por un Fus Ro Dah con mala puntería. Número siete.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-075",
+  "t0": 636.33,
+  "t1": 644.523,
+  "tipo": "video",
+  "texto": "La Corona dentada. Está en Korvanjund, en El Pálido, en un sarcófago al fondo de la ruina.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-076",
+  "t0": 644.523,
+  "t1": 653.736,
+  "tipo": "video",
+  "texto": "Un casco pesado de veintitrés de armadura, que vale cinco mil monedas. Y de paso, Korvanjund tiene un muro de palabras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-077",
+  "t0": 653.736,
+  "t1": 665.491,
+  "tipo": "video",
+  "texto": "Ya que vas, llévatelo. Y tiene un truco muy bueno: va en el hueco del pelo, así que se lleva a la vez que una máscara de sacerdote dragón o una diadema.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-078",
+  "t0": 665.491,
+  "t1": 670.591,
+  "tipo": "video",
+  "texto": "Pero en la guerra civil tienes que entregarla, ya sea a Tullius o a Ulfric,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-079",
+  "t0": 670.591,
+  "t1": 681.333,
+  "tipo": "video",
+  "texto": "y ellos se la quedan para siempre. Si vas con el Imperio, ni siquiera hay recompensa. Un «buen trabajo, soldado», y a casa.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-080",
+  "t0": 681.333,
+  "t1": 688.202,
+  "tipo": "video",
+  "texto": "Lo bueno: esa misión se puede posponer sin consecuencias. Así que úsala mientras tanto.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-081",
+  "t0": 688.202,
+  "t1": 698.455,
+  "tipo": "video",
+  "texto": "Y existe un fallo para quedártela: meterla en el bolsillo de Hadvar o de Ralof antes de salir de la ruina. Pero eso ya es hacer trampa con estilo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-082",
+  "t0": 698.455,
+  "t1": 705.418,
+  "tipo": "video",
+  "texto": "El casco más caro de su tipo, cambiado por una palmadita en la espalda.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-083",
+  "t0": 705.418,
+  "t1": 714.377,
+  "tipo": "video",
+  "texto": "Número seis. Serana, como vampira. Al final de Dawnguard puedes curarla: Falion, el mago de Morthal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-084",
+  "t0": 714.377,
+  "t1": 721.617,
+  "tipo": "video",
+  "texto": "se encarga, y tres días después Serana vuelve a ser humana, y hasta le cambia el color de los ojos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-085",
+  "t0": 721.617,
+  "t1": 732.436,
+  "tipo": "video",
+  "texto": "Pero curada, ya no puede convertir tus flechas élficas en flechas malditas de sangre, las del Arco de Auriel. Ni convertirte a ti en Señor vampiro.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-086",
+  "t0": 732.436,
+  "t1": 738.741,
+  "tipo": "video",
+  "texto": "Y la cura solo es posible si tú no eres vampiro. Si lo eres, ni se plantea.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-087",
+  "t0": 738.741,
+  "t1": 748.781,
+  "tipo": "video",
+  "texto": "Y hay algo peor: una pregunta a destiempo. Si cuando lleva su Pergamino Antiguo al Fuerte Guardia del Alba le preguntas si siempre ha sido vampira,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-088",
+  "t0": 748.781,
+  "t1": 759.252,
+  "tipo": "video",
+  "texto": "y sacas lo de curarse... ...ella lo llama un don, y nunca más quiere hablar del tema. La cura queda bloqueada para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-089",
+  "t0": 759.252,
+  "t1": 764.772,
+  "tipo": "video",
+  "texto": "Cómo no caer: decide qué quieres de ella antes de hablar de la cura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-090",
+  "t0": 764.772,
+  "t1": 775.43,
+  "tipo": "video",
+  "texto": "Y si piensas curarla, guarda flechas malditas antes. Una charla de pasillo, y adiós al final más bonito de Dawnguard.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-091",
+  "t0": 775.43,
+  "t1": 785.037,
+  "tipo": "video",
+  "texto": "Y antonigirii me escribió: «ChatGPT, hazme un video con secretos de Skyrim que TODOS conocen, y de paso nárralo».",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-092",
+  "t0": 785.037,
+  "t1": 791.857,
+  "tipo": "video",
+  "texto": "Encargo recibido. Pero si todos los conocen, explícame por qué hay tanta gente que quemó cinco",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-093",
+  "t0": 791.857,
+  "t1": 799.537,
+  "tipo": "video",
+  "texto": "colmenas. Número cinco. La armadura de maestre del gremio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-094",
+  "t0": 799.537,
+  "t1": 807.1,
+  "tipo": "video",
+  "texto": "Erikur es un thane de Soledad, bastante desagradable. Y es tentador quitárselo de en medio.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-095",
+  "t0": 807.1,
+  "t1": 817.737,
+  "tipo": "video",
+  "texto": "Pero es el objetivo de un encargo especial del Gremio de Ladrones: El Sload delicado. Y solo es esencial hasta cierta misión de la Hermandad Oscura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-096",
+  "t0": 817.737,
+  "t1": 826.528,
+  "tipo": "video",
+  "texto": "Delvin Mallory te lo encarga, y premia con una mejora para el gremio. Pero si Erikur ya está muerto, el encargo no existe.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-097",
+  "t0": 826.528,
+  "t1": 834.048,
+  "tipo": "video",
+  "texto": "Y si muere antes de ese encargo, el gremio se atasca y no llegas al final: adiós a la armadura de maestre,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-098",
+  "t0": 834.048,
+  "t1": 843.038,
+  "tipo": "video",
+  "texto": "a la llave del cofre de tributos, y al Amuleto de Articulación. Y de propina, se va también un logro. Cómo no caer:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-099",
+  "t0": 843.038,
+  "t1": 851.165,
+  "tipo": "video",
+  "texto": "haz El Sload delicado antes de meterte con la Hermandad Oscura. O, simplemente, no toques a Erikur.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-100",
+  "t0": 851.165,
+  "t1": 861.124,
+  "tipo": "video",
+  "texto": "Matas a un noble pesado por gusto, y ya nunca serás el jefe de los ladrones. Número cuatro. Ser hombre lobo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-101",
+  "t0": 861.124,
+  "t1": 868.664,
+  "tipo": "video",
+  "texto": "La forma bestial: una vez al día, ciento cincuenta segundos. Más aguante que se regenera rápido.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-102",
+  "t0": 868.664,
+  "t1": 879.147,
+  "tipo": "video",
+  "texto": "Y los aullidos de los Tótems de Hircine. Si te curas, con Dawnguard, Aela puede devolverte la licantropía. Pero una sola vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-103",
+  "t0": 879.147,
+  "t1": 888.01,
+  "tipo": "video",
+  "texto": "Si te curas otra vez, con la cabeza de una bruja o haciéndote Señor vampiro, Aela ya no tiene nada que ofrecerte.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-104",
+  "t0": 888.01,
+  "t1": 895.317,
+  "tipo": "video",
+  "texto": "Y ojo: hacerte Señor vampiro también cuenta como cura. Morder cuello, y adiós lobo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-105",
+  "t0": 895.317,
+  "t1": 903.131,
+  "tipo": "video",
+  "texto": "Y curado, no terminas los Tótems de Hircine, ni la misión de los cazadores de Dragonborn. Cómo no caer:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-106",
+  "t0": 903.131,
+  "t1": 911.036,
+  "tipo": "video",
+  "texto": "termina los Tótems de Hircine antes de pensar siquiera en curarte. Y si te curas, que sea una sola vez.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-107",
+  "t0": 911.036,
+  "t1": 921.34,
+  "tipo": "video",
+  "texto": "Aela perdona una vez. La segunda, te ve como lo que eres: un indeciso. Un momento. De cada cien personas que ven este canal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-108",
+  "t0": 921.34,
+  "t1": 928.341,
+  "tipo": "video",
+  "texto": "solo trece están suscritas. Somos siete mil cien, y vamos camino de diez mil.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-109",
+  "t0": 928.341,
+  "t1": 937.682,
+  "tipo": "video",
+  "texto": "Si estos videos te ahorran una partida arruinada, suscribirte es gratis. Y eso no lo pierdes nunca.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-110",
+  "t0": 937.682,
+  "t1": 946.552,
+  "tipo": "video",
+  "texto": "Número tres. La Guardia del Alba entera. En Dawnguard, Harkon te ofrece su don de sangre. Si dices que sí,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-111",
+  "t0": 946.552,
+  "t1": 954.523,
+  "tipo": "video",
+  "texto": "eliges a los vampiros Volkihar, y la Guardia del Alba pasa a ser tu enemiga. Pierdes la Tecnología antigua:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-112",
+  "t0": 954.523,
+  "t1": 964.343,
+  "tipo": "video",
+  "texto": "la ballesta mejorada, la ballesta enana y los virotes explosivos. Y los hechizos de luz solar, el hacha y el martillo rúnicos.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-113",
+  "t0": 964.343,
+  "t1": 973.503,
+  "tipo": "video",
+  "texto": "Pierdes cuatro entrenadores maestros: Sorine, de Arquería. Isran, de Armadura pesada. Florentius, de Restauración.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-114",
+  "t0": 973.503,
+  "t1": 982.728,
+  "tipo": "video",
+  "texto": "Y Gunmar, de Herrería, con su forja. Y pierdes seguidores, los perros Bran y Sceolang, y los trols con armadura.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-115",
+  "t0": 982.728,
+  "t1": 989.956,
+  "tipo": "video",
+  "texto": "En la ruta vampira, hasta acabas matando a Isran. Y también pierdes para siempre a los cinco reclutas",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-116",
+  "t0": 989.956,
+  "t1": 998.313,
+  "tipo": "video",
+  "texto": "de la Guardia que te podían acompañar como seguidores, de Agmaer hasta Ingjard, todos de una vez y sin ningún aviso.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-117",
+  "t0": 998.313,
+  "t1": 1007.797,
+  "tipo": "video",
+  "texto": "A cambio, te dan el Cáliz de sangre, y unos perros de la muerte. Cómo no caer: aquí no hay doble ruta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-118",
+  "t0": 1007.797,
+  "t1": 1017.808,
+  "tipo": "video",
+  "texto": "Elige con esta lista en la mano. Cuatro maestros, dos perros y un trol con armadura. Por morderle el cuello al vecino.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-119",
+  "t0": 1017.808,
+  "t1": 1022.764,
+  "tipo": "video",
+  "texto": "Número dos. La tercera palabra de Invocar tormenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-120",
+  "t0": 1022.764,
+  "t1": 1033.718,
+  "tipo": "video",
+  "texto": "Con las tres palabras es una tormenta de tres minutos, con rayos de ochenta de daño que caen cada pocos segundos. El grito con más daño bruto del juego.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-121",
+  "t0": 1033.718,
+  "t1": 1039.878,
+  "tipo": "video",
+  "texto": "Con una sola palabra, la tormenta dura sesenta segundos, con rayos de cuarenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-122",
+  "t0": 1039.878,
+  "t1": 1050.817,
+  "tipo": "video",
+  "texto": "Con dos, ciento veinte segundos, y rayos de sesenta. Y es el grito con el enfriamiento más largo de todos. Se lo ha ganado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-123",
+  "t0": 1050.817,
+  "t1": 1059.533,
+  "tipo": "video",
+  "texto": "La primera palabra está en Forelhost, la segunda en otras ruinas del norte. Esas no se van a ningún lado.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-124",
+  "t0": 1059.533,
+  "t1": 1069.85,
+  "tipo": "video",
+  "texto": "Pero la última palabra está en el Templo de Skuldafn. Y ahí solo llegas una vez, a lomos de Odahviing, en la misión principal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-125",
+  "t0": 1069.85,
+  "t1": 1075.15,
+  "tipo": "video",
+  "texto": "Es el único grito con un muro de palabras en un lugar al que no puedes volver.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-126",
+  "t0": 1075.15,
+  "t1": 1085.336,
+  "tipo": "video",
+  "texto": "Si no lo lees al pasar, nunca. Cómo no caer: en Skuldafn, antes del portal, barre el templo entero.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-127",
+  "t0": 1085.336,
+  "t1": 1093.724,
+  "tipo": "video",
+  "texto": "Y ojo: sus rayos también les pegan a tus aliados. El grito más poderoso de Skyrim, a dos palabras.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-128",
+  "t0": 1093.724,
+  "t1": 1101.563,
+  "tipo": "video",
+  "texto": "Porque tenías prisa por morir en Sovngarde. Número uno. El bastón de Nahkriin.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-129",
+  "t0": 1101.563,
+  "t1": 1110.323,
+  "tipo": "video",
+  "texto": "En lo alto de Skuldafn derrotas al sacerdote dragón Nahkriin. Su bastón crea un muro de rayos de cincuenta de daño por segundo,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-130",
+  "t0": 1110.323,
+  "t1": 1120.068,
+  "tipo": "video",
+  "texto": "y vale mil cuatrocientas treinta y una monedas. Pero es la llave: lo pones en el sello dragón, se abre el portal a Sovngarde...",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-131",
+  "t0": 1120.068,
+  "t1": 1128.041,
+  "tipo": "video",
+  "texto": "y el bastón se queda ahí. Y como a Skuldafn no se puede volver, casi todos lo pierden para siempre.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-132",
+  "t0": 1128.041,
+  "t1": 1135.87,
+  "tipo": "video",
+  "texto": "La mayoría ni se entera de que era un arma. El truco: si llegas rápido, puedes cruzar el portal ya",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-133",
+  "t0": 1135.87,
+  "t1": 1144.623,
+  "tipo": "video",
+  "texto": "abierto sin usar el bastón, y entonces te lo quedas para siempre. Cómo no caer: en cuanto se abra el portal,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-134",
+  "t0": 1144.623,
+  "t1": 1151.885,
+  "tipo": "video",
+  "texto": "no esperes a nadie. Corre. El único llavero de Skyrim que vale mil cuatrocientas monedas.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-135",
+  "t0": 1151.885,
+  "t1": 1162.09,
+  "tipo": "video",
+  "texto": "Y lo dejas pegado en la puerta. Y ahora, lo que prometí: el templo de Skuldafn, en lo alto de la montaña,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-136",
+  "t0": 1162.09,
+  "t1": 1171.267,
+  "tipo": "video",
+  "texto": "el lugar de Skyrim que te roba tres cosas de golpe. El bastón de Nahkriin. La última palabra de Invocar tormenta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-137",
+  "t0": 1171.267,
+  "t1": 1179.781,
+  "tipo": "video",
+  "texto": "Y la máscara de Nahkriin, la que te conté en el video de las armaduras: sin ella, nunca habrá Konahrik.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-138",
+  "t0": 1179.781,
+  "t1": 1190.247,
+  "tipo": "video",
+  "texto": "Así que, antes de subirte a Odahviing, haz la lista: lee el muro, saquea a Nahkriin, quédate su bastón, y corre al portal.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-139",
+  "t0": 1190.247,
+  "t1": 1197.147,
+  "tipo": "video",
+  "texto": "Y ya que estás: entra a la embajada con los bolsillos vacíos, habla con Aela antes de la segunda cura,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-140",
+  "t0": 1197.147,
+  "t1": 1204.876,
+  "tipo": "video",
+  "texto": "y piénsalo dos veces antes de decirle que sí a Harkon. Skyrim es un juego donde puedes hacerlo todo.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-141",
+  "t0": 1204.876,
+  "t1": 1215.027,
+  "tipo": "video",
+  "texto": "Una vez. Este es el top. De unas colmenas quemadas de más, a un bastón que se queda pegado en una puerta.",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-142",
+  "t0": 1215.027,
+  "t1": 1221.427,
+  "tipo": "video",
+  "texto": "Ahora te toca a ti. ¿Cuál perdiste tú? ¿Y cuál no sabías? Déjalo en los comentarios:",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-143",
+  "t0": 1221.427,
+  "t1": 1230.717,
+  "tipo": "video",
+  "texto": "los leo todos. Y suscríbete, que vamos camino de diez mil. Y si prefieres un mundo donde lo que se perdió fue el planeta entero,",
+  "clip_s": 8
+ },
+ {
+  "id": "scene-144",
+  "t0": 1230.717,
+  "t1": 1239.375,
+  "tipo": "video",
+  "texto": "Radio Yermo, nuestro canal hermano, es todo Fallout. Nos vemos en Tamriel.",
+  "clip_s": 8
+ }
+]

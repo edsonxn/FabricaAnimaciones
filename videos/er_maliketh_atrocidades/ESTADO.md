@@ -2,8 +2,8 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: runa_caida · hueco dom 29-nov-2026 12:00 CDMX (2026-11-29T18:00:00Z = Messmer 26-nov 18:00Z + ciclo 3 d; runa_caida.json)
 - estilo: secuencia_yt (gameplay por beat + pegatinas + MG `nucleo/mg_er.py` + mapas tema `er`, OST oficial, SIN Overgear) → doc: docs/estilo_secuencia_yt.md § «Runa Caída»
-- etapa: SUBIDO y PROGRAMADO 27-nov → https://youtu.be/bwpSvLHDhlE (private, sale dom 29-nov 12:00 CDMX) · anuncios ACTIVADOS + cuestionario
-- siguiente: Studio cuando termine el procesado SD → casilla MID-ROLL + pantalla final (importar de Messmer) + «Probar y comparar» (salida/miniatura.jpg vs miniatura_B.jpg) → `fab.py yt monetizado bwpSvLHDhlE` · medir ≈ 2-dic
+- etapa: SUBIDO y PROGRAMADO 27-nov → https://youtu.be/bwpSvLHDhlE (sale dom 29-nov 12:00 CDMX) · MONETIZADO (anuncios + MID-ROLL) · pantalla final · A/B de miniatura armado
+- siguiente: dom 29-nov tras el estreno: comprobar en Studio que el A/B («No cumple los requisitos: no es público» mientras sea privado) arrancó; si no, volver a montarlo · medir ≈ 2-dic y apuntar la miniatura ganadora en canales/formula/runa_caida.md
 
 ## Sesiones (UNA SESIÓN DIRECTO AL MASTER, regla 5-nov)
 - alias: «Maliketh», «las atrocidades de Maliketh», «er_maliketh»
@@ -34,7 +34,8 @@
 - ✅ REGLA 10 en el MASTER: las 5 citas se oyen (−16,8 a −19,4 LUFS) y Whisper las reconoce · previews/citas_audio.mp3
 - ✅ `yt subir … --publicar 2026-11-29T18:00:00Z` → bwpSvLHDhlE (miniatura A + .srt) · runa_caida.json publicados + BITACORA · panel /api/v2/obra OK
 - ✅ Studio: Anuncios «Activada» + cuestionario (Violencia y Desagradable = 1.ª opción → «Adecuado para anuncios») GUARDADO
-- ◐ MID-ROLL, pantalla final y Probar y comparar: bloqueados por «primero se debe procesar la versión SD»; sigue en canales/monetizacion_pendiente.json
+- ✅ tras el procesado SD (~20 min): MID-ROLL marcado y guardado → `yt monetizado` (0 pendientes) · pantalla final importada de Messmer (Suscribirse Runa · Mejor opción · Último vídeo · canal Tamriel), guardada con Studio EN EL CANAL Runa Caída (el buscador de «Importar» solo ve el canal activo)
+- ◐ A/B «Solo miniatura» (1 = A «ELLA LO TRAICIONÓ», 2 = B «ERAS TÚ»; subida por Chrome file_upload) GUARDADO, pero Studio dice que no corre hasta que el video sea público
 
 ## Sesiones
 - 27-nov (UNA sesión, «buenos días»): investigación R45 → dossier → guion → voz → clips → FX → mezcla → MASTER → subido y programado → anuncios. Para seguir: «continúa el video maliketh» (solo falta lo de Studio que espera el procesado).
@@ -44,7 +45,9 @@
 - idioma_voz: leer el log ENTERO (las « X »), no `tail`; la medición es estable entre pasadas.
 - flow_thumb puede decir FALLO y sí haber generado: bajar las imágenes por CDP (playwright, 9222).
 - Clips de canales con marca de agua (Khonziel): recorte_por con tupla (0,0,.14,0).
-- Studio tras subir 1,6 GB: el mid-roll y la pantalla final no se pueden poner hasta que termina la versión SD; dejarlo anotado y volver.
+- Studio tras subir 1,6 GB: el mid-roll y la pantalla final no se pueden poner hasta que termina la versión SD (~20 min); esperar en segundo plano y volver.
+- «Importar de un vídeo» (pantalla final) busca en el canal ACTIVO de Studio: cambiar de cuenta a Runa Caída antes.
+- El A/B de miniatura no corre con el video privado/programado: se arma antes, pero hay que comprobarlo tras el estreno.
 
 ## Falta
-- [ ] MID-ROLL + pantalla final + Probar y comparar (tras el procesado SD) · `yt monetizado bwpSvLHDhlE` · medir ≈ 2-dic
+- [ ] dom 29-nov: A/B arrancado · medir ≈ 2-dic

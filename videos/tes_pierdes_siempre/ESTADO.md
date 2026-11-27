@@ -2,16 +2,17 @@
 <!-- Máx. 60 líneas. Las 4 primeras viñetas las lee `python fab.py estado`. Actualízalo al terminar cada sesión. -->
 - canal: cronicas_tamriel · meta: **sáb 28-nov-2026 12:08 CDMX (2026-11-28T18:08:00Z)** (25 armaduras 18:08Z → 28, 72 h) · ~16-18 min (Claude, fórmula 26-nov)
 - estilo: secuencia_yt (gameplay Skyrim por beat + MG `nucleo/mg_tes.py` + pegatinas `pv()` + presentaciones `nucleo/presenta.py` + mapas tema `tes`) · voz **SOLO el Profeta** (ElevenLabs cuenta 4) · OST oficial de Skyrim sin canto → doc: docs/estilo_secuencia_yt.md § Tamriel + § REGLA DE ORO
-- etapa: SUBIDO T61QyUVeabo (privado, programado sáb 28-nov 12:09 CDMX = 2026-11-28T18:09Z); MASTER 20:58 verificado; monetización ACTIVADA + cuestionario
-- siguiente: cuando YouTube procese la SD: casilla MID-ROLL (Studio > Ingresos) + pantalla final (video + suscribirse + canal Radio Yermo) → `python fab.py yt monetizado T61QyUVeabo`
+- etapa: CERRADO 26-nov: SUBIDO T61QyUVeabo (privado, programado sáb 28-nov 12:09 CDMX = 2026-11-28T18:09Z); monetización Activada + MID-ROLL + cuestionario; pantalla final (2 videos + suscribirse + canal Radio Yermo)
+- siguiente: nada; tras publicarse, métricas a 7 días (fuentes de tráfico de la promo Radio Yermo, R06)
 
 ## Sesiones (una sesión, directo a MASTER, regla 5-nov · «continúa el video tes_pierdes_siempre» retoma aquí)
+- 26-nov: sesión única, de la investigación a la subida + monetización. Retomar: «continúa el video tes_pierdes_siempre».
 - alias: pierdes para siempre, perdibles, cosas que pierdes, video de Tamriel del 28
 - vista previa: ninguna (directo a MASTER)
 - leer al empezar: docs/estilo_secuencia_yt.md § REGLA DE ORO, § Crónicas de Tamriel; ejemplo `videos/tes_armaduras_poderosas/` (ESTADO.md = la receta completa paso a paso, efectos.py, _busquedas.py, _efectos_vivos.*, _render_tramos.sh) y `videos/tes_cosas_nunca/`
 | # | Tramo | Estado | Nota |
 |---|---|---|---|
-| 1 | TODO: investigación + guion + voz + beats + clips + pegatinas + MG + mapas + OST + mezcla + render + miniatura + subida | ✅ 26-nov | subido T61QyUVeabo; falta mid-roll + pantalla final al terminar el procesado |
+| 1 | TODO: investigación + guion + voz + beats + clips + pegatinas + MG + mapas + OST + mezcla + render + miniatura + subida | ✅ 26-nov | subido T61QyUVeabo, monetizado, pantalla final |
 
 ## Decisiones del episodio (26-nov-2026)
 - Tema elegido por el usuario entre 3 (R45, `canales/formula/cronicas_tamriel.md` § FÓRMULA VIGENTE 26-nov): «PIERDES para siempre». Ref. nuestra: 15 misiones NUNCA ×15,5 / 20 cosas NUNCA 53 % visto; fuera: KriK ×5,4 («el bastón que casi todos pierden para siempre»), ×3,7 diadema de Dawnguard; UltraConner ×3,4. Cambia UNA variable: el tema (misma polaridad de advertencia).
@@ -25,6 +26,7 @@
 - OST: `_bajar_ost.py` con 22 pistas que NO usó armaduras → `_bajar_ost.log`. Scripts de apoyo copiados de tes_armaduras_poderosas (adaptar nombres: _render_tramos.sh, _tras_render.sh, _youtube.py, _promesas.py, _busquedas.py, armar_musica_ost.py) + sfx/ + mapas/.
 
 ## Hecho
+- 26-nov 20:15: Studio tras procesar la SD: mid-roll marcado y guardado; pantalla final con plantilla «2 vídeos» (mejor opción + subida más reciente, cuadran con RECOMENDADO / VIDEO ANTERIOR de la tarjeta) + suscribirse al centro + canal Radio Yermo («Fallout, con la misma receta») debajo. «Importar de un vídeo» no encuentra nada (Studio queda en la cuenta de Warcraft aunque se entre por el canal de Tamriel) → se arma a mano. `yt monetizado` hecho.
 - 26-nov 19:45: MASTER (render 3 tramos ~26 min; 1311 MB, 1258,8 s, verificar OK: solo nombres propios en Whisper). `yt subir` → https://youtu.be/T61QyUVeabo, miniatura + .srt; 18:08Z chocaba por 4 s con las 72 h de armaduras (25-nov 18:08:04Z) → 18:09Z. Studio: Anuncios Activada + cuestionario (Violencia 1.ª, Desagradable 1.ª → «Adecuado para anuncios») guardado. Registrado en canales/cronicas_tamriel.json y BITACORA.
 - 26-nov 19:00: hoja fx CERRADA. Cartas a busto (R44: isran, deor, fanari, sorine, florentius, igmund, faendal, aldis, gunmar, skald, korir, severo, serana, harkon, sven; originales en pegatinas/_viejas). Marcas de agua fuera: 012 (gato de Samyoline → PS3ndPn3a10@599), 128 («GG LIFE/NICHSTARONI» → JU48m03bg1k@138), 083 («STARTED: PROPHET» bajo el aviso → uSndoDhbwuc@838, Fuerte Guardia del Alba). evita() a y=.27 (a .80 tapaba subtítulos, a .70 nombres de NPC). Pergaminos ilegibles → marco="carta" (Harkon, trol, Serana, Salón de los Vigilantes). Podio alargado hasta «a un bastón» (no se veía el n.º 1). aela/odahviing reubicadas. _bordes 0 fuera / 1 encimado aceptado. Render lanzado.
 - 26-nov 18:00: chequeo OK (idioma 148/148, sin comentarios repetidos; OCR = subtítulos del juego). Rehechos por el chequeo/promesas: 063 (marca de agua «F2 Walkthrough» → qkHi7HpLMxM), 085 (firma «PrettyTigerlilly» → pPxv8nYtdLg, Arco de Auriel al sol); ambos canales a evitar_canales. 071 con audio (Fus Ro Dah) → ambiente_por 071/074/120/127; música + ambiente + mezcla rehechas (-14,10 LUFS, voz +13,4 dB). _bordes: harkon/trol achicados, caducidad/deor/maestre acortados, arco y flechas a la esquina (17-22 % «encima» del panel vacío de la bifurcación: mirado, se ve limpio). `FAB_FX_FINAL=1 fx hoja` → previews/fx_01..08 (revisión por subagente). Render en espera: otra sesión corre `verificar` de wow_ruta_profesiones.
@@ -37,7 +39,7 @@
 
 
 ## Falta
-- [x] investigación → guion → voz → seleccionar → idioma_voz → tiempo → beats → busquedas → bajar → hojas → efectos vivos → pegatinas → mapas → efectos.py → OST → ambiente/fx/mezcla → chequeo → promesas → bordes → fx hoja → render → final → verificar → miniatura Flow → youtube.json → subir 28-nov 18:08Z → monetización Studio (falta mid-roll + pantalla final) → registrar → commit
+- [x] investigación → guion → voz → seleccionar → idioma_voz → tiempo → beats → busquedas → bajar → hojas → efectos vivos → pegatinas → mapas → efectos.py → OST → ambiente/fx/mezcla → chequeo → promesas → bordes → fx hoja → render → final → verificar → miniatura Flow → youtube.json → subir 28-nov 18:08Z → monetización Studio → registrar → commit
 
 ## Cómo retomar (comandos)
 ```

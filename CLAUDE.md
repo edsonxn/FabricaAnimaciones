@@ -30,6 +30,7 @@ Pipeline propio (Python, todo local) que produce videos animados 2D con narraci�
 - **Cada imagen por IDENTIDAD, no por nombre (6-nov):** contra la infobox; hoja `previews/pegatinas_check.jpg` mirada a mano. → RGC §R32
 - **Personaje en tarjeta = SE LE VE LA CARA (25-nov, regla importante):** recorte desde arriba o `caras/`, nunca el pecho; mirarlo en `fx hoja`. **Mapas de juegos = mapa ORIGINAL con ícono en cada punto (25-nov).** → RGC §R44
 - **Lo que no existe → Flow como captura real (5-nov):** ingredientes reales y estilo del juego; beta = «BETA / RECREACIÓN»; también para enriquecer. → RGC §R36
+- **Prompts de Flow (27-nov, TODOS los proyectos):** Omni 1.2 a 360p (1 pto/s) y reescalar gratis; ingredientes RENOMBRADOS y citados con `@nombre` diciendo su papel; bloques `[0-3s]`, diálogo entre comillas, `SFX:`/`No music`/«Do not add subtitles»; consistencia = Ampliar (mismo plano) o Guardar cuadro → Fotogramas (otro plano) + mismas referencias de cara/vestuario. → RGC §R47 · `docs/flow_prompts.md`
 - **Mapas reales con ruta + SFX del mismo juego (23/29-oct):** ≥ mitad de puestos en listas de misiones; coordenadas UESP. → RGC §R30 · **Fotos en el mapa (23-oct):** foto real de lo nombrado junto a su marcador. → RGC §R31
 - **Rigor (30-sep):** cuadro cada ~3 s; lista de bloqueos; densidad ≥ 3 planos; al crear un estilo, actualizar doc, esta tabla, `api_kz` y galería. → RGC §R27 · `docs/estilo_kurzgesagt.md` § «ERRORES»
 - **No reciclar escenas entre videos.** → RGC §R28 · **Sin subtítulos quemados (30-sep).** → RGC §R13 · **Estilo por canal fijo (30-sep):** no cambiar de motor sin preguntar. → RGC §R37
@@ -78,6 +79,7 @@ Pipeline propio (Python, todo local) que produce videos animados 2D con narraci�
 | Radio Yermo (`radio_yermo`) §C18 | Fallout = receta de Tamriel, Profeta con filtro de radio (17-nov) | `tes_secretos_40/` | `formula/radio_yermo.md` |
 | Amaya Vibes (`canal_amaya`) §C19 | Scrapbook coquette, voz Regina (10-nov; no subir sin su OK) | `amaya_navidad/` | `estilo_scrapbook_coquette.md` |
 | Mil por Minuto (`mil_por_minuto`) §C20 | Cómo se fabrican las marcas + el negocio, SECUENCIA YT + plano de la línea y contador, voz Brian C (19-nov) | `tes_secretos_40/` | `formula/mil_por_minuto.md` |
+| **Campaña Daniel Cervantes** (proyecto, NO canal; `campana_dc_*`) §C21 | Demos verticales 90 s de propuestas para Juchipila: maqueta de arcilla 3D del valle real + datos con fuente; voz CLONADA de Daniel en 1.ª persona (cuenta 4, v4 sobria); sin seguridad ni nóminas; nada se publica sin OK; entrega por Rayo (27-nov) | `campana_dc_agua/` | `campana_daniel_cervantes.md` |
 
 (Docs en `docs/`, ejemplos en `videos/`, fórmulas en `canales/formula/`.) **Reels «Que pasa en Juchipila»** = secuencia vertical `jch_<tema>`, no van a YouTube. → RGC §R38
 **Video sin canal: preguntar antes** (AskUserQuestion): secuencia con efectos tipo Flow o animación por código; catálogo de otros estilos (noir color, rayos X, terror CRT, anuncio de app, grabado de peste, línea neón, anime vivo, pegatina Flow, línea 3D, análisis táctico…); toda lámina con profundidad, nunca «página web» (14-oct). → RGC §R39 · arranque rápido por código → RGC §R40

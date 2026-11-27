@@ -511,6 +511,12 @@ Al «buenos días»: `python fab.py buenosdias` y propones el plan del día (can
 |---|---|---|---|
 | **Mil por Minuto** (`mil_por_minuto`, @MilPorMinutoMX, UCszgmM9dLbLQBl0kfLIM-Ag, alta 19-nov-2026 bajo la cuenta de Edsonxn; arte por código en `canales/arte/mil_por_minuto/`; el usuario solo verifica) | **Cómo se fabrican las marcas conocidas + el NEGOCIO** (público general; ref. JPaniagua Docs, Maruchan ×19,7): SECUENCIA YT con clip real por beat (planta y anuncios oficiales) + firma propia: **CONTADOR de producción** en una esquina, **PLANO animado de la línea** estación por estación (`nucleo/mg_planta.py`, pendiente del 1.er video, de fotos reales de las máquinas), cifras gigantes, mapa con ruta planta → tiendas (tema `planta` de `mg_mapa`/`peg_estilos`), Flow «RECREACIÓN» para el interior de máquinas; 15-18 min con suscripción ~4:30 y trivia ~9:00; voz ElevenLabs **Brian C** `Czw3Dn181ypdrCOnPfif` sin filtro; Lyria (no es canal de juegos) + SFX de máquinas; protegido en `filtro_canal.py` (prefijo `mpm_`); horario provisional cada 4 días 18:37 CDMX | `videos/tes_secretos_40/` (regla de oro) | `canales/formula/mil_por_minuto.md` · `docs/estilo_secuencia_yt.md` |
 
+### C21 · Proyecto Campaña Daniel Cervantes (no es canal de YouTube)
+
+| Proyecto (alias) | Estilo | Copiar de | Doc |
+|---|---|---|---|
+| **Campaña Daniel Cervantes** (27-nov-2026; `videos/campana_dc_<tema>/`; sin canal, sin `yt subir`, sin panel de publicación; el usuario y un amigo quieren llevar la campaña digital de Daniel Cervantes, PAN, Juchipila) | Demos VERTICALES 1080×1920 de ~90 s, una propuesta por video (agua, basura, alumbrado, salud): maqueta de **arcilla 3D** del valle real (Copernicus + OSM) con plan JSON + escenas de estudio transparentes, cortinilla azul/cian, foto de Daniel en duotono, tarjetas de propuesta; cada dato con fuente oficial en `guion.md`. **Voz clonada de Daniel con su permiso** (cuenta 4 `U6S3DHgp2HdE70osCRov`, `eleven_v4_turbo`, sin corchetes, estabilidad .65) narrando en PRIMERA PERSONA. Prohibido: seguridad y «a dónde va tu dinero»/nóminas. `voz_clon/original.ogg` = conversación privada (en `.gitignore`, nunca transcribir ni compartir). Nada se publica sin OK; entrega por Rayo | `videos/campana_dc_agua/` | `docs/campana_daniel_cervantes.md` |
+
 ### R38 · Reels de Facebook «Que pasa en Juchipila»
 
 Reels de Facebook «Que pasa en Juchipila»: secuencia con efectos VERTICAL (`jch_<tema>`), receta en `E:\PaginaFace\CLAUDE.md` § «hazme un reel»; no van a YouTube.
@@ -594,3 +600,15 @@ python fab.py panel --remoto   el lienzo en el celular fuera de casa: puerta con
 - **PERSONAJE EN TARJETA = SE LE VE LA CARA (REGLA IMPORTANTE, el usuario, 25-nov-2026, todos los canales):** «cuando muestres personajes así en tarjeta asegúrate siempre que se le vea la cara, ponlo como regla importante» (tarjeta del Señor gólem Argelmach cortada en el torso en `wow_ruta_profesiones`). Retrato de cuerpo entero → recorte de cara y hombros (`caras/<slug>.png`, helper `Fc()` en los efectos de Warcraft); los motores del kit (oro, madera, mapas) recortan desde arriba. Se revisa cada tarjeta de personaje en la hoja de `FAB_FX_FINAL=1 fab.py <v> fx hoja` antes del render.
 - **MAPAS DE JUEGOS = EL MAPA ORIGINAL, CON ÍCONO EN CADA PUNTO (el usuario, 25-nov-2026):** «mostrar siempre el mapa original, solo cambiando trazos, líneas, pines y cuadros de texto» y «siempre que hables de ítems, personajes… en un mapa pon su ícono (flores, menas, personajes)». Nada de filtros que tiñan el mapa (sepia, azul holograma); la variedad va en trazo, pin y cuadro de texto (`mg_wow.ruta(variante=…)`, oro, madera). Detalle del kit: `nucleo/mg_wow_estilos.py` (mapa_e).
 
+
+### R47 · Prompts y consistencia en Google Flow (27-nov-2026, TODOS los proyectos con Flow)
+
+Pedido del usuario: «investiga cómo estructurar el prompt para aprovechar al máximo Flow… para que lo apliques en este y los
+demás proyectos». Receta completa con fuentes oficiales en `docs/flow_prompts.md`. Resumen: video con **Omni 1.2 Flash a 360p**
+(1 punto/s; Veo 3.1 Fast/Quality y Omni 1.1 se retiran el 5-dic) y reescalado gratis a 1080p; cada ingrediente subido se
+**renombra** en Flow y se cita en el texto con **`@nombre`** diciendo su papel («@x is the face», «@y is the real location»);
+estructura cámara+sujeto+acción+contexto+estilo con bloques `[0-3s]`, diálogo entre comillas con idioma y tono, `SFX:`,
+`Ambient noise:`, `No music`, «Do not add subtitles, captions, on-screen text»; **consistencia**: Ampliar para seguir el mismo
+plano, «Guardar cuadro» → Fotogramas para cortar a otro plano (idea del usuario), primer+último cuadro para transformaciones, y
+las mismas imágenes de cara/vestuario en cada clip (un cuadro limpio del propio clip 1 sirve de referencia de vestuario).
+Primera aplicación: `videos/campana_dc_superdaniel/`.
